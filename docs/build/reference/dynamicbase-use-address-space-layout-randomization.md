@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 47d23ac6f9234e095a1733a8d4078840318cce4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3495de3ec72bcac78cdee2f5f3265864e7a2932
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512397"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807753"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Address Space Layout Randomization verwenden)
 
@@ -21,7 +21,7 @@ Gibt an, ob ein ausführbares Image generiert werden, das nach dem Zufallsprinzi
 
 ## <a name="syntax"></a>Syntax
 
-> **/ DYNAMICBASE**[**: NO**]
+> **/DYNAMICBASE**[**:NO**]
 
 ## <a name="remarks"></a>Hinweise
 
@@ -31,7 +31,7 @@ In der Standardeinstellung **/DynamicBase** aktiviert ist. Verwenden Sie zum Dea
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>So legen Sie diese Linkeroption in Visual Studio fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **erweitert** Eigenschaftenseite.
 
@@ -43,7 +43,7 @@ In der Standardeinstellung **/DynamicBase** aktiviert ist. Verwenden Sie zum Dea
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)
-- [Linkeroptionen](../../build/reference/linker-options.md)
+- [MSVC-Linker-Referenz](linking.md)
+- [MSVC-Linkeroptionen](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
 - [Windows ISV-Softwaresicherheitsmaßnahmen](https://msdn.microsoft.com/library/bb430720.aspx)

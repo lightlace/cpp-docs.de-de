@@ -2,12 +2,12 @@
 title: Übersicht über ARM-ABI-Konventionen
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: d25cba2800348ca1ae45c5bb59163816a4eefa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436022"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810457"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Übersicht über die ABI-Konventionen ARM32
 
@@ -23,7 +23,7 @@ Die Unterstützung für die Division von ganzen Zahlen (UDIV/SDIV) wird wärmste
 
 ## <a name="endianness"></a>Endianness
 
-Windows on ARM wird im Little-Endian-Modus ausgeführt. Der Visual C++-Compiler und die Windows-Laufzeit erwarten jederzeit Little-Endian-Daten. Auch wenn die SETEND-Instruktion in der ARM-Instruktionssatz-Architektur (ISA) es sogar dem Benutzermodus-Code ermöglicht, die aktuelle Endianness zu ändern, wird davon dringend abgeraten, da es für eine Anwendung gefährlich sein kann. Wenn im Big-Endian-Modus eine Ausnahme generiert wird, ist das Verhalten unvorhersehbar und kann zu einem Anwendungsfehler im Benutzermodus oder zu einer Fehlerprüfung im Kernel-Modus führen.
+Windows on ARM wird im Little-Endian-Modus ausgeführt. Der MSVC-Compiler und die Windows-Runtime erwarten jederzeit little-Endian-Daten. Auch wenn die SETEND-Instruktion in der ARM-Instruktionssatz-Architektur (ISA) es sogar dem Benutzermodus-Code ermöglicht, die aktuelle Endianness zu ändern, wird davon dringend abgeraten, da es für eine Anwendung gefährlich sein kann. Wenn im Big-Endian-Modus eine Ausnahme generiert wird, ist das Verhalten unvorhersehbar und kann zu einem Anwendungsfehler im Benutzermodus oder zu einer Fehlerprüfung im Kernel-Modus führen.
 
 ## <a name="alignment"></a>Ausrichtung
 
@@ -149,7 +149,7 @@ Die Initialisierung wird genau einmal durchgeführt, bevor die Argumentsverarbei
 
 1. Wenn eine Funktion aufgerufen wird, die ein Ergebnis im Speicher zurückgibt, wird die Adresse für das Ergebnis in r0 platziert und die NCRN wird auf r1 gesetzt.
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Schritt B: vorab-Padding und Erweiterung von Argumenten
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Schritt B: Vorab-padding und Erweiterung von Argumenten
 
 Auf jedes Argument in der Liste wird die erste übereinstimmende Regel aus der folgenden Liste angewendet:
 
@@ -159,7 +159,7 @@ Auf jedes Argument in der Liste wird die erste übereinstimmende Regel aus der f
 
 1. Wenn das Argument ein zusammengesetzter Typ ist, wird die Größe auf das nächste Vielfache von 4 aufgerundet.
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Phase "c:"-Zuweisung von Argumenten zu Registern und zum stack
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Phase "c:" Zuweisung von Argumenten zu Registern und zum stack
 
 Auf jedes Argument in der Liste werden die folgenden Regeln abwechselnd angewendet, bis das Argument zugeordnet wurde:
 
@@ -205,13 +205,13 @@ Enumerationen sind 32-Bit-Ganzzahl-Typen, es sei denn mindestens ein Wert in der
 
 ## <a name="stack-walking"></a>Durchlaufen von Stapeln
 
-Windows-Code wird mit aktivierten Frame-Pointern kompiliert ([/Oy (Framezeiger unterdrücken)](../build/reference/oy-frame-pointer-omission.md)) zum schnellen Stackwalk zu ermöglichen. Im Allgemeinen verweist das r11-Register auf den nächsten Link in der Kette, bei dem es sich um ein {r11, lr}-Paar handelt, das den Pointer zum vorherigen Frame im Stack und die Rückgabeadresse spezifiziert. Für eine verbesserte Profilerstellung und Ablaufverfolgung empfehlen wir, dass Ihr Code auch Frame-Pointer aktiviert.
+Windows-Code wird mit aktivierten Frame-Pointern kompiliert ([/Oy (Framezeiger unterdrücken)](reference/oy-frame-pointer-omission.md)) zum schnellen Stackwalk zu ermöglichen. Im Allgemeinen verweist das r11-Register auf den nächsten Link in der Kette, bei dem es sich um ein {r11, lr}-Paar handelt, das den Pointer zum vorherigen Frame im Stack und die Rückgabeadresse spezifiziert. Für eine verbesserte Profilerstellung und Ablaufverfolgung empfehlen wir, dass Ihr Code auch Frame-Pointer aktiviert.
 
 ## <a name="exception-unwinding"></a>Ausnahmeentladung
 
 Die Stackentladung während der Ausnahmebehandlung wird durch den Einsatz von Entladecodes aktiviert. Bei den Entladecodes handelt es sich um Bytesequenzen, die im Abschnitt .xdata des ausführbaren Bildes gespeichert sind. Sie beschreiben die Operation des Prolog- und Epilogcodes der Funktion auf abstrakte Weise, sodass die Effekte eines Funktionsprologs als Vorbereitung für die Entladung im Stack-Frame des Aufrufers rückgängig gemacht werden.
 
-Die ARM EABI gibt ein Ausnahmeentladungsmodell an, das Entladecodes verwendet. Diese Spezifikation ist jedoch nicht ausreichend zum Entladen unter Windows, wobei Fälle behandelt werden müssen, in denen der Prozessor sich in der Mitte des Prologs oder Epilogs einer Funktion befindet. Weitere Informationen zu Windows auf ARM-Ausnahmedaten und das entladen, finden Sie unter [ARM-Ausnahmebehandlung](../build/arm-exception-handling.md).
+Die ARM EABI gibt ein Ausnahmeentladungsmodell an, das Entladecodes verwendet. Diese Spezifikation ist jedoch nicht ausreichend zum Entladen unter Windows, wobei Fälle behandelt werden müssen, in denen der Prozessor sich in der Mitte des Prologs oder Epilogs einer Funktion befindet. Weitere Informationen zu Windows auf ARM-Ausnahmedaten und das entladen, finden Sie unter [ARM-Ausnahmebehandlung](arm-exception-handling.md).
 
 Wir empfehlen, dass dynamisch generierter Code mithilfe von dynamischen Funktionstabellen beschrieben wird, die in Aufrufen von `RtlAddFunctionTable` und zugewiesenen Funktionen angegeben sind, damit der generierte Code sich an der Ausnahmebehandlung beteiligen kann.
 
@@ -223,5 +223,5 @@ Der Counter ist ein wahrer Zyklus-Counter und keine Uhr, daher variiert die Zäh
 
 ## <a name="see-also"></a>Siehe auch
 
-[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[ARM-Ausnahmebehandlung](../build/arm-exception-handling.md)
+[Häufig auftretende ARM-Migrationsprobleme bei Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM-Ausnahmebehandlung](arm-exception-handling.md)

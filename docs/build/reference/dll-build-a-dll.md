@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [C++], building
 - DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-ms.openlocfilehash: edad85b2890679e4247c7d34b4e19534e871f4dd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5f7907d659ee3bedc590b88320df03edce005b06
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420062"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820506"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (DLL erstellen)
 
@@ -29,9 +29,9 @@ Die/DLL-Option erstellt eine DLL als Hauptausgabedatei. Eine DLL-Datei enthält 
 
 1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) im Quellcode
 
-1. Ein [EXPORTE](../../build/reference/exports.md) -Anweisung in DEF-Datei
+1. Ein [EXPORTE](exports.md) -Anweisung in DEF-Datei
 
-1. Ein [/EXPORT](../../build/reference/export-exports-a-function.md) Spezifikation in einem LINK-Befehl
+1. Ein [/EXPORT](export-exports-a-function.md) Spezifikation in einem LINK-Befehl
 
 Ein Programm kann mehr als eine Methode verwenden.
 
@@ -43,7 +43,7 @@ Beachten Sie, dass wenn Sie die Importbibliothek in einem vorherigen Schritt ers
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf die **Konfigurationseigenschaften** Ordner.
 
@@ -57,5 +57,5 @@ Beachten Sie, dass wenn Sie die Importbibliothek in einem vorherigen Schritt ers
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

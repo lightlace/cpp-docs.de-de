@@ -7,16 +7,16 @@ helpviewer_keywords:
 - delayed loading of DLLs, specifying
 - /DELAYLOAD linker option
 ms.assetid: 94cbecfe-7a42-40d1-a618-9f2786bac0d8
-ms.openlocfilehash: b1ca214d8c840d9e993d5a89823b63868a664bec
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2b6737abd76c03186881e83bbd2bf286be6ffe2f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424885"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813226"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Festlegen von DLLs für verzögertes Laden
 
-Sie können angeben, die DLLs für verzögertes Laden der [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md):`dllname` -Linkeroption. Wenn Sie nicht beabsichtigen, Ihre eigene Version einer Hilfsfunktion zu verwenden, müssen Sie auch das Programm mit "delayimp.lib" (für Desktopanwendungen) oder "dloadhelper.lib" (für Store-Apps) verknüpfen.
+Sie können angeben, die DLLs für verzögertes Laden der [/DELAYLOAD](delayload-delay-load-import.md):`dllname` -Linkeroption. Wenn Sie nicht beabsichtigen, Ihre eigene Version einer Hilfsfunktion zu verwenden, müssen Sie auch das Programm mit "delayimp.lib" (für Desktopanwendungen) oder "dloadhelper.lib" (für Store-Apps) verknüpfen.
 
 Im Folgenden finden Sie ein einfaches Beispiel für das verzögerte Laden einer DLL:
 
@@ -37,4 +37,4 @@ Erstellen Sie die Debugversion des Projekts. Durchlaufen Sie den Code mithilfe d
 
 ## <a name="see-also"></a>Siehe auch
 
-[Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Linkerunterstützung für verzögertes Laden von DLLs](linker-support-for-delay-loaded-dlls.md)

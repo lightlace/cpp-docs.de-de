@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: bea51c7af41df666fd441555daa0d8d8387377ac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f1edcc6d29a5b84106b3a5fd91d2446c34e0f7b9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414134"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807467"
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (Aktivieren der OpenMP 2.0-Unterstützung)
 
@@ -29,7 +29,7 @@ Bewirkt, dass der Compiler verarbeiten `#pragma` [Omp](../../preprocessor/omp.md
 
 `#pragma omp` Dient zur Angabe [Direktiven](../../parallel/openmp/reference/openmp-directives.md) und [Klauseln](../../parallel/openmp/reference/openmp-clauses.md). Wenn **/OpenMP** nicht angegeben ist in einer Kompilierung der Compiler ignoriert OpenMP-Klauseln und -Direktiven. [OpenMP-Funktion](../../parallel/openmp/reference/openmp-functions.md) Aufrufe werden verarbeitet, die Compiler selbst dann durch **/OpenMP** nicht angegeben ist.
 
-Anwendungen mit kompiliert **/OpenMP** und **"/ CLR"** kann nur in einer einzelnen Domäne Anwendungsprozess ausgeführt werden, mehrere Anwendungsdomänen werden nicht unterstützt. D. h. wenn die Modulkonstruktor (.cctor) ausgeführt wird, erkennt der Prozess wird mit kompiliert **/OpenMP** und wenn die Anwendung in eine nicht standardmäßige-Laufzeit geladen wird. Weitere Informationen finden Sie unter [Appdomain](../../cpp/appdomain.md), [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md), und [Initialization of Mixed Assemblies](../../dotnet/initialization-of-mixed-assemblies.md).
+Anwendungen mit kompiliert **/OpenMP** und **"/ CLR"** kann nur in einer einzelnen Domäne Anwendungsprozess ausgeführt werden, mehrere Anwendungsdomänen werden nicht unterstützt. D. h. wenn die Modulkonstruktor (.cctor) ausgeführt wird, erkennt der Prozess wird mit kompiliert **/OpenMP** und wenn die Anwendung in eine nicht standardmäßige-Laufzeit geladen wird. Weitere Informationen finden Sie unter [Appdomain](../../cpp/appdomain.md), [/CLR (Common Language Runtime Compilation)](clr-common-language-runtime-compilation.md), und [Initialization of Mixed Assemblies](../../dotnet/initialization-of-mixed-assemblies.md).
 
 Wenn Sie versuchen, eine Anwendung mit kompiliert laden **/OpenMP** und **"/ CLR"** in eine nicht standardmäßige Anwendungsdomäne eine <xref:System.TypeInitializationException> Ausnahme außerhalb des Debuggers ausgelöst und ein OpenMPWithMultipleAppdomainsException Ausnahme wird im Debugger ausgelöst werden.
 
@@ -45,7 +45,7 @@ Microsoft empfiehlt, dass Sie keine schreiben **/OpenMP** Anwendungen, die ermö
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Erweitern Sie den Knoten **Konfigurationseigenschaften**.
 
@@ -113,5 +113,5 @@ int main(int argc, char* argv[]) {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

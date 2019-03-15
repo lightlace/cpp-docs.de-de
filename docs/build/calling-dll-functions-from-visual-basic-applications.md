@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 88705b2a33e3eb82043d93c534477fce96849502
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1e4f1a538da2394c6cead6ea011faf126b022a3f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417597"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814968"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Aufrufen von DLL-Funktionen aus Visual Basic-Anwendungen heraus
 
@@ -33,7 +33,7 @@ wird als ergänzt `_func@12` in der Ausgabe.
 
 Durch die C-Aufrufkonvention (`__cdecl`) wird der Name mit `_func` ergänzt.
 
-Verwenden Sie zum Abrufen des ergänzten Namens [/MAP](../build/reference/map-generate-mapfile.md). Verwenden von **__declspec(dllexport)** bewirkt Folgendes:
+Verwenden Sie zum Abrufen des ergänzten Namens [/MAP](reference/map-generate-mapfile.md). Verwenden von **__declspec(dllexport)** bewirkt Folgendes:
 
 - Wenn die Funktion der C-Aufrufkonvention exportiert wird (`__cdecl`), entfernt den führenden Unterstrich ( **\_** ) Wenn der Name wird exportiert.
 
@@ -58,18 +58,18 @@ Damit DLLs durch Programme in Visual Basic aufgerufen werden können, wird die 
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
 
-- [Exportieren aus einer DLL](../build/exporting-from-a-dll.md)
+- [Exportieren aus einer DLL](exporting-from-a-dll.md)
 
-- [Exportieren aus einer DLL. DEF-Dateien](../build/exporting-from-a-dll-using-def-files.md)
+- [Exportieren aus einer DLL. DEF-Dateien](exporting-from-a-dll-using-def-files.md)
 
-- [Exportieren aus einer DLL mithilfe von __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportieren aus einer DLL mithilfe von __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportieren von C++-Funktionen für die Verwendung in ausführbaren c-Dateien](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportieren von C++-Funktionen für die Verwendung in ausführbaren c-Dateien](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Bestimmen der geeigneten Exportmethode verwendet](../build/determining-which-exporting-method-to-use.md)
+- [Bestimmen Sie die Exportmethode verwendet werden](determining-which-exporting-method-to-use.md)
 
-- [Ergänzte Namen](../build/reference/decorated-names.md)
+- [Ergänzte Namen](reference/decorated-names.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[DLLs in Visual C++](../build/dlls-in-visual-cpp.md)
+[DLLs in Visual C++](dlls-in-visual-cpp.md)

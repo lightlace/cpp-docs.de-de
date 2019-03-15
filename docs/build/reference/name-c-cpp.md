@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - NAME .def file statement
 ms.assetid: 5c9b6bd8-9275-46a5-afba-f17a5936dc26
-ms.openlocfilehash: c4888b8f9b6dba4b826f2ee7dda7529a4bdf1586
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d0813befc622db72e095c449794405fc5d58465b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414498"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812186"
 ---
 # <a name="name-cc"></a>NAME (C/C++)
 
@@ -23,10 +23,10 @@ NAME [application][BASE=address]
 
 ## <a name="remarks"></a>Hinweise
 
-Alternativ können Sie einen Ausgabedateinamen angeben ist, mit der [/OUT](../../build/reference/out-output-file-name.md) -Linkeroption, und eine entsprechende Methode zum Festlegen der Basisadresse wird mit der [/BASE](../../build/reference/base-base-address.md) (Linkeroption). Wenn beide angegeben sind "," / OUT überschreibt **Namen**.
+Alternativ können Sie einen Ausgabedateinamen angeben ist, mit der [/OUT](out-output-file-name.md) -Linkeroption, und eine entsprechende Methode zum Festlegen der Basisadresse wird mit der [/BASE](base-base-address.md) (Linkeroption). Wenn beide angegeben sind "," / OUT überschreibt **Namen**.
 
 Wenn Sie eine DLL-Datei erstellen, wirkt sich NAME nur den Namen der DLL.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Regeln für Moduldefinitionsanweisungen](../../build/reference/rules-for-module-definition-statements.md)
+[Regeln für Moduldefinitionsanweisungen](rules-for-module-definition-statements.md)

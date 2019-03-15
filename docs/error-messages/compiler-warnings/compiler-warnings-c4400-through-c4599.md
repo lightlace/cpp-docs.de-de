@@ -30,7 +30,6 @@ f1_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -99,7 +98,6 @@ helpviewer_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -140,12 +138,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 14195271fa0e5e399b801fd36803db4731e690f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491298"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816619"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Compilerwarnungen C4400 durch C4599
 
@@ -186,10 +184,10 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 1) C4426|die optimierungskennzeichnungen wurden nach dem einschließen des Headers, möglicherweise aufgrund von #pragma optimize() geändert|
 |Compilerwarnung (Stufe 1) C4427|"*Operator*": Überlauf in konstantendivision, nicht definiertes Verhalten|
 |[Compilerwarnung (Ebene 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|Mögliche unvollständig oder falsch formatiert. Universelle Zeichennamen|
-|[Compilerwarnung (Fehler) C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|Fehlender Typspezifizierer - int wird angenommen. Hinweis: C++ unterstützt keine Standard-int|
-|[Compilerwarnung (Ebene 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|Fehlender Typspezifizierer - int wird angenommen. Hinweis: default-int wird von C++ nicht unterstützt|
+|[Compilerwarnung (Fehler) C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|Fehlender Typspezifizierer - int wird angenommen. Hinweis: C++ unterstützt nicht die Standard-int|
+|[Compilerwarnung (Ebene 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|Fehlender Typspezifizierer - int wird angenommen. Hinweis: C# unterstützt nicht mehr standardmäßig-int|
 |[Compilerwarnung (Ebene 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|ein statischer Konstruktor muss private zugriffsmöglichkeiten aufweisen; in privaten Zugriff geändert|
-|[Compilerwarnung (Ebene 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|"*Derived_class*': das Objektlayout unter" / vd2 "ändert sich aufgrund der virtuellen Basis '*Base_class*"|
+|[Compilerwarnung (Ebene 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|"*Derived_class*": Das Objektlayout unter "/ vd2" ändert sich aufgrund der virtuellen Basis '*Base_class*"|
 |[Compilerwarnung (Ebene 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dynamische\_Umwandeln einer virtuellen Basis '*Base_class*'to'*Derived_class*' konnte im Konstruktor oder Destruktor mit teilweise konstruierten Objekt fehl|
 |[Compilerwarnung (Ebene 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dynamische\_Umwandeln einer virtuellen Basis '*Base_class*'to'*Derived_class*' kann in einigen Kontexten fehl|
 |Compilerwarnung C4438|"*Funktion*": kann nicht problemlos aufgerufen werden, im / await: Clrcompat-Modus. Wenn "*Funktion*" Aufrufe in die CLR, die sie möglicherweise CLR-Beschädigung|
@@ -205,9 +203,9 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung C4448|"*Typ*1" verfügt nicht über eine Standardschnittstelle, die in den Metadaten angegeben. Auswählen: "*Typ2*", die zur Laufzeit fehlschlagen.|
 |Compilerwarnung C4449|"*Typ*' nicht versiegelter Typ als"[WebHostHidden]"gekennzeichnet werden soll|
 |Compilerwarnung C4450|"*type1*"als gekennzeichnet werden soll "[WebHostHidden]", weil sie abgeleitet"*Typ2*"|
-|Compilerwarnung (Stufe 4) C4451|"classname1::member": Verwenden der Verweisklasse "classname2::member" in diesem Kontext kann zu ungültigem Marshalling des Objekts in Kontexten führen|
+|Compilerwarnung (Stufe 4) C4451|'classname1::member': Verwenden der Verweisklasse "classname2::member" in diesem Kontext kann zu ungültigem Marshalling des Objekts in Kontexten führen|
 |Compilerwarnung (Stufe 1) C4452|"*Bezeichner*': öffentliche Typ kann nicht im globalen Gültigkeitsbereich sein. Er muss in einem Namespace sein, die ein untergeordnetes Element des Namens der winmd-Ausgabedatei ist.|
-|Compilerwarnung (Stufe 1) C4453|"*Typ*": ein "[WebHostHidden]" sollte nicht verwendet werden, auf der veröffentlichten Oberfläche eines öffentlichen Typs, der nicht "[WebHostHidden]"|
+|Compilerwarnung (Stufe 1) C4453|"*Typ*": Ein "[WebHostHidden]" sollte nicht verwendet werden, auf der veröffentlichten Oberfläche eines öffentlichen Typs, der nicht "[WebHostHidden]"|
 |Compilerwarnung (Stufe 1) C4454|"*Funktion*" wird von mehr als die Anzahl der Eingabeparameter überladen, ohne dass [DefaultOverload] angegeben. Auswahl "*Deklaration*" als standardüberladung|
 |Compilerwarnung (Stufe 1) C4455|' Operator *Operator*": LiteralSuffix-Bezeichnern, die nicht mit einem Unterstrich beginnen sind reserviert.|
 |[Compilerwarnung (Ebene 4) C4456](compiler-warning-level-4-c4456.md)|Deklaration von "*Bezeichner*" Blendet vorherige lokale Deklaration|
@@ -242,7 +240,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 1) C4491|"*Namen*": wurde ein ungültiges Format der IDL-Version|
 |Compilerwarnung (Ebene 1, Fehler) C4492|"*function1*': Übereinstimmungen Basismethode der Verweisklasse"*Funktion2*", aber nicht"override"markiert ist|
 |Compilerwarnung (Stufe 3, Fehler) c4493 aus|Delete-Ausdruck hat keine Auswirkungen, da der Destruktor von "*Typ*' hat keinen 'öffentlichen' Zugriff|
-|Compilerwarnung (Stufe 1) C4494|"*Funktion*": __declspec(allocator) wird ignoriert, da der Funktionsrückgabetyp ist kein Zeiger oder Verweis|
+|Compilerwarnung (Stufe 1) C4494|"*Funktion*": __Declspec(allocator) wird ignoriert, da der Funktionsrückgabetyp ist kein Zeiger oder Verweis|
 |Compilerwarnung C4495|nicht dem Standard entsprechende Erweiterung "__super": Ersetzen Sie dies durch explizite Basisklassennamen|
 |Compilerwarnung C4496|nicht dem Standard entsprechende Erweiterung 'for each' verwendet: Ersetzen Sie dies durch die bereichsbasierte for-Anweisung|
 |Compilerwarnung C4497|nicht dem Standard entsprechende Erweiterung'sealed' verwendet: durch 'Final' ersetzen|
@@ -273,7 +271,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|"continue": Aussprung aus ' __finally/finally-Block hat ein undefiniertes Verhalten während der Abbruchbehandlung|
 |[Compilerwarnung (Ebene 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|Initialisierung von "*Variable*"wird übersprungen, indem Sie"*Goto Label*"|
 |[Compilerwarnung (Ebene 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|"*Konstruktor*'können nicht auf ein Standardkonstruktor für"-Klasse/Struct"'*Bezeichner*' aufgrund von das Standardargument|
-|[Compilerwarnung (Ebene 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|Calling _set_se_translator() erfordert/EHa|
+|[Compilerwarnung (Ebene 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|calling _set_se_translator() requires /EHa|
 |[Compilerwarnung (Ebene 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|"*Typename*': Typ größer als das Metadatenlimit von"*Character_limit*' Zeichen|
 |[Compilerwarnung (Ebene 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|"*Objekt*': '.' auf nicht-UDT-Typ angewendet wird|
 |[Compilerwarnung (Ebene 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|"*Typ*': Const/Volatile-Qualifizierer für diesen Typ werden nicht unterstützt.|
@@ -306,7 +304,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 3) C4569|"*Funktion*": keine Elemente mit der Signatur der expliziten Überschreibung überein.|
 |[Compilerwarnung (Ebene 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|"*Typ*": ist nicht explizit als abstrakte jedoch abstrakte Funktionen weist deklariert|
 |[Compilerwarnung (Ebene 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Information: catch(...)-Semantik Visual C++ 7.1 geändert; strukturierte Ausnahmen (SEH) werden nicht mehr abgefangen.|
-|[Compilerwarnung (Ebene 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|/ CLR [ParamArray]-Attribut ist veraltet, verwenden Sie '...' stattdessen|
+|[Compilerwarnung (Ebene 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|[ParamArray]-Attribut ist unter "/ CLR", und verwenden als veraltet markiert "..." Stattdessen|
 |Compilerwarnung (Stufe 1) C4573|die Verwendung von "*Lambda-Funktion*" muss der Compiler "this" aber Erfassen der aktuelle standarderfassungsmodus lässt nicht zu|
 |Compilerwarnung (Stufe 4) C4574|"*Bezeichner*"ist gemäß Definition "0": wollten Sie '#if Identifier' zu verwenden?|
 |Compilerwarnung (Stufe 1) C4575|"__vectorcall" nicht kompatibel mit der "/ Clr" Option: Konvertierung nach "__stdcall"erfolgt.|
@@ -318,8 +316,8 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 4) C4582|"*Typ*": Konstruktor wird nicht implizit aufgerufen.|
 |Compilerwarnung (Stufe 4) C4583|"*Typ*": Destruktor wird nicht implizit aufgerufen.|
 |[Compilerwarnung (Ebene 1) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|"*class1*": Basisklasse*Klasse2*"ist bereits eine Basisklasse von"*class3*"|
-|Compilerwarnung (Ebene 1, Fehler) C4585|"*Klasse*': eine WinRT"public Ref Class"muss entweder versiegelt werden, oder leiten Sie von einem vorhandenen nicht versiegelten Klasse|
-|Compilerwarnung (Ebene 1, Fehler) C4586|"*Typ*": ein öffentlicher Typ kann nicht in einem Namespace oberster Ebene namens "Windows" deklariert werden|
+|Compilerwarnung (Ebene 1, Fehler) C4585|"*Klasse*": Eine WinRT "public Ref Class" muss entweder versiegelt sein oder von einer vorhandenen unversiegelten Klasse abgeleitet werden|
+|Compilerwarnung (Ebene 1, Fehler) C4586|"*Typ*": Ein öffentlicher Typ kann nicht in einem Namespace oberster Ebene namens "Windows" deklariert werden|
 |Compilerwarnung (Stufe 1) C4587|"*Anonymous_structure*": verhaltensänderung: Konstruktor wird nicht mehr implizit aufgerufen.|
 |Compilerwarnung (Stufe 1) C4588|"*Anonymous_structure*": verhaltensänderung: Destruktor wird nicht mehr implizit aufgerufen.|
 |Compilerwarnung (Stufe 1) C4591|"Constexpr" Aufruftiefe Grenzwert von *Anzahl* überschritten (/-aufruftiefenlimit\<Anzahl >)|

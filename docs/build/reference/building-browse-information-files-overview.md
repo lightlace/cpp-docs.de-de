@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 02f2107469e2fbbc4ea3591e1211e600d16fb9e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413016"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820613"
 ---
 # <a name="building-browse-information-files-overview"></a>Erstellen von Browseinformationsdateien: Übersicht
 
@@ -20,18 +20,18 @@ Zum Durchsuchen von Informationen für die Symbolsuche zu erstellen, erstellt de
 
 SBR- und BSC-Dateien generieren nimmt Zeit in Anspruch, damit Visual C++ diese Funktionen standardmäßig deaktiviert. Wenn Sie aktuelle Informationen durchsuchen möchten, müssen Sie die Durchsuchen-Optionen aktivieren und das Projekt erneut erstellen.
 
-Verwendung [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) oder [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) um den Compiler SBR-Dateien zu erstellen. Sie können zum Erstellen von BSC-Dateien aufrufen [BSCMAKE](../../build/reference/bscmake-command-line.md) über die Befehlszeile. Mithilfe von BSCMAKE über die Befehlszeile, bietet Ihnen eine präzisere Kontrolle über die Bearbeitung von Browserinformationsdateien. Finden Sie unter [BSCMAKE-Referenz](../../build/reference/bscmake-reference.md) für Weitere Informationen.
+Verwendung [/FR](fr-fr-create-dot-sbr-file.md) oder [/FR](fr-fr-create-dot-sbr-file.md) um den Compiler SBR-Dateien zu erstellen. Sie können zum Erstellen von BSC-Dateien aufrufen [BSCMAKE](bscmake-command-line.md) über die Befehlszeile. Mithilfe von BSCMAKE über die Befehlszeile, bietet Ihnen eine präzisere Kontrolle über die Bearbeitung von Browserinformationsdateien. Finden Sie unter [BSCMAKE-Referenz](bscmake-reference.md) für Weitere Informationen.
 
 > [!TIP]
 >  Sie können einschalten SBR-Datei generieren jedoch BSC-Datei generieren, die deaktiviert. Dadurch schnell erstellt, aber auch können Sie schnell eine neue .bsc-Datei erstellen, durch das Aktivieren der Generierung von BSC-Dateien und beim Erstellen des Projekts.
 
 Sie können die Zeit, Arbeitsspeicher und Speicherplatz erforderlich, um eine BSC-Datei zu erstellen, durch die Reduzierung der BSC-Datei reduzieren.
 
-Finden Sie unter [Eigenschaftenseite "Allgemein" (Projekt)](../../ide/general-property-page-project.md) für Informationen über das eine Browserdatei in der Entwicklungsumgebung zu erstellen.
+Finden Sie unter [Eigenschaftenseite "Allgemein" (Projekt)](general-property-page-project.md) für Informationen über das eine Browserdatei in der Entwicklungsumgebung zu erstellen.
 
 ### <a name="to-create-a-smaller-bsc-file"></a>Um eine kleinere BSC-Datei zu erstellen.
 
-1. Verwendung [BSCMAKE-Befehlszeilenoptionen](../../build/reference/bscmake-options.md) Ausschließen von Informationen aus der Browserinformationsdatei aus.
+1. Verwendung [BSCMAKE-Befehlszeilenoptionen](bscmake-options.md) Ausschließen von Informationen aus der Browserinformationsdatei aus.
 
 1. Lassen Sie die lokalen Symbole in eine oder mehrere .sbr-Dateien beim Kompilieren oder assemblieren.
 
@@ -45,5 +45,5 @@ Finden Sie unter [Eigenschaftenseite "Allgemein" (Projekt)](../../ide/general-pr
 
 ## <a name="see-also"></a>Siehe auch
 
-[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)<br/>
-[BSCMAKE-Referenz](../../build/reference/bscmake-reference.md)
+[Zusätzliche MSVC-Buildtools](c-cpp-build-tools.md)<br/>
+[BSCMAKE-Referenz](bscmake-reference.md)

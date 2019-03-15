@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mapfiles, specifying file name
 - /MAP linker option
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
-ms.openlocfilehash: 769fdc6a3980be34d92fc722099fde11ab677dc8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9a45fd5ea44b8908e77f847275bde42b86385cdb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417891"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817945"
 ---
 # <a name="map-generate-mapfile"></a>/MAP (Zuordnungsdatei generieren)
 
@@ -51,11 +51,11 @@ Eine MAP-Datei ist eine Textdatei, die die folgende Informationen zu der zu verk
 
 - Der Einstiegspunkt (als *Abschnitt*:*Offset*)
 
-Die [/MapInfo](../../build/reference/mapinfo-include-information-in-mapfile.md) Option gibt an, zusätzliche Informationen, die in die Zuordnungsdatei eingeschlossen werden.
+Die [/MapInfo](mapinfo-include-information-in-mapfile.md) Option gibt an, zusätzliche Informationen, die in die Zuordnungsdatei eingeschlossen werden.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf die **Linker** Ordner.
 
@@ -69,5 +69,5 @@ Die [/MapInfo](../../build/reference/mapinfo-include-information-in-mapfile.md) 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414754"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816450"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Binary für den Kernelmodus erstellen)
 
@@ -46,7 +46,7 @@ Die folgende Tabelle enthält die Änderungen im Compilerverhalten beim **/Kerne
 |LAUFZEITTYPINFORMATIONEN|Deaktiviert. Alle Instanzen der `dynamic_cast` und `typeid` Schlüsselwörter einen Compilerfehler, ausgeben, es sei denn, `dynamic_cast` statisch verwendet wird.|
 |`new` und `delete`|Sie müssen explizit definieren die `new()` oder `delete()` Operator; weder die Laufzeit als auch der Compiler stellt eine Default-Definition bereit.|
 
-Benutzerdefinierte Aufrufkonventionen, die [/GS](../../build/reference/gs-buffer-security-check.md) Buildoption und alle Optimierungen sind zulässig, bei der Verwendung der **/Kernel** Option. Inlining ist größtenteils nicht betroffen, von **/Kernel**, mit der gleichen Semantik, die vom Compiler berücksichtigt. Sollten Sie sicherstellen, dass die `__forceinline` inlining Qualifizierer wird berücksichtigt, stellen Sie sicher, dass die Warnung [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) aktiviert ist, damit Sie wissen, wenn eine bestimmte `__forceinline` Funktion ist nicht inline ersetzt.
+Benutzerdefinierte Aufrufkonventionen, die [/GS](gs-buffer-security-check.md) Buildoption und alle Optimierungen sind zulässig, bei der Verwendung der **/Kernel** Option. Inlining ist größtenteils nicht betroffen, von **/Kernel**, mit der gleichen Semantik, die vom Compiler berücksichtigt. Sollten Sie sicherstellen, dass die `__forceinline` inlining Qualifizierer wird berücksichtigt, stellen Sie sicher, dass die Warnung [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) aktiviert ist, damit Sie wissen, wenn eine bestimmte `__forceinline` Funktion ist nicht inline ersetzt.
 
 Wenn der Compiler übergeben wird die **/Kernel** Switch sind ein Präprozessormakro mit dem Namen vordefiniert `_KERNEL_MODE` und hat den Wert **1**. Sie können dies verwenden, zur bedingten Kompilierung von Code je nachdem, ob die ausführungsumgebung im Benutzermodus oder Kernelmodus ist. Der folgende Code gibt beispielsweise, dass die Klasse in einem Segment nicht verwendete nicht ausgelagerte Arbeitsspeicher sein soll, wenn sie für Kernelmodus kompiliert wird.
 
@@ -88,7 +88,7 @@ Die **/Kernel** Option und die **/Driver** Option unabhängig voneinander ausgef
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>So legen Sie die Compileroption "/ Kernel" in Visual Studio fest
 
-1. Öffnen der **Eigenschaftenseiten** im Dialogfeld für das Projekt. Weitere Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen der **Eigenschaftenseiten** im Dialogfeld für das Projekt. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **C/C++-** Ordner.
 
@@ -98,5 +98,5 @@ Die **/Kernel** Option und die **/Driver** Option unabhängig voneinander ausgef
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426523"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808000"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Änderungen an der Hilfsfunktion für das verzögerte Laden von DLLs seit Visual C++ 6.0
 
@@ -33,7 +33,7 @@ Wenn Sie über mehrere Versionen von Visual C++ auf Ihrem Computer oder wenn Sie
 
 Wenn Sie mehrere Versionen von Visual C++ auf Ihrem Computer verfügen, stellen Sie sicher, dass der Linker "delayimp.lib" entspricht. Wenn ein Konflikt vorliegt, erhalten Sie einen Linkerfehler entweder `___delayLoadHelper2@8` oder `___delayLoadHelper@8` als ein nicht aufgelöstes externes Symbol. Dies bedeutet einen neuen Linker mit einer alten "delayimp.lib" ein, und die zweite bedeutet eine alte Linker mit einer neuen "delayimp.lib".
 
-Wenn Sie einen nicht aufgelösten Linkerfehler erhalten, führen Sie [Dumpbin/linkermember](../../build/reference/linkermember.md): 1 auf die "delayimp.lib", die Sie erwarten, enthält die Hilfsfunktion, um festzustellen, welche Hilfsfunktion stattdessen definiert ist. Die Hilfsfunktion kann auch in einer Objektdatei definiert werden. Führen Sie [Dumpbin/Symbols](../../build/reference/symbols.md) und suchen Sie nach `delayLoadHelper(2)`.
+Wenn Sie einen nicht aufgelösten Linkerfehler erhalten, führen Sie [Dumpbin/linkermember](linkermember.md): 1 auf die "delayimp.lib", die Sie erwarten, enthält die Hilfsfunktion, um festzustellen, welche Hilfsfunktion stattdessen definiert ist. Die Hilfsfunktion kann auch in einer Objektdatei definiert werden. Führen Sie [Dumpbin/Symbols](symbols.md) und suchen Sie nach `delayLoadHelper(2)`.
 
 Wenn Sie wissen, müssen Sie dann den Linker Visual C++ 6.0:
 
@@ -51,7 +51,7 @@ Wenn Sie eine eigene Hilfsfunktion definiert und die aktuelle Version von Visual
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Laden Sie aller Importe für eine verzögert geladene DLL
 
-Der Linker kann alle Importe aus einer DLL geladen werden, die Sie angegeben, um die verzögert geladen werden. Finden Sie unter [Laden aller Importe für eine verzögert geladene DLL](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md) für Weitere Informationen.
+Der Linker kann alle Importe aus einer DLL geladen werden, die Sie angegeben, um die verzögert geladen werden. Finden Sie unter [Laden aller Importe für eine verzögert geladene DLL](loading-all-imports-for-a-delay-loaded-dll.md) für Weitere Informationen.
 
 ## <a name="see-also"></a>Siehe auch
 

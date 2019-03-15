@@ -17,39 +17,39 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 360baf479f9100483fe694ca8860dfc1d7ebfe11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d51f599dfb81dfa860e1bdba86c4372e80379fb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502465"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822443"
 ---
 # <a name="reserved-words"></a>Reservierte Wörter
 
-Die folgenden Wörter sind vom Linker reserviert. Diese Namen können verwendet werden, als Argumente in [moduldefinitionsanweisungen](../../build/reference/module-definition-dot-def-files.md) nur dann, wenn der Name in doppelte Anführungszeichen eingeschlossen wird ("").
+Die folgenden Wörter sind vom Linker reserviert. Diese Namen können verwendet werden, als Argumente in [moduldefinitionsanweisungen](module-definition-dot-def-files.md) nur dann, wenn der Name in doppelte Anführungszeichen eingeschlossen wird ("").
 
 ||||
 |-|-|-|
 |**APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**VORAB LADEN**|
-|**BASIS**|**IOPL**|**PRIVATE**|
+|**BASE**|**IOPL**|**PRIVATE**|
 |**CODE**|**BIBLIOTHEK**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
 |**ENTSPRECHEN**|**LOADONCALL**<sup>1</sup>|**REINE**<sup>1</sup>|
-|**DATEN**|**LONGNAMES**<sup>2</sup>|**READONLY**|
-|**BESCHREIBUNG**|**VERSCHIEBBARE**<sup>1</sup>|**"READWRITE"**|
+|**DATA**|**LONGNAMES**<sup>2</sup>|**READONLY**|
+|**BESCHREIBUNG**|**MOVABLE**<sup>1</sup>|**READWRITE**|
 |**DEV386**|**MOVEABLE**<sup>1</sup>|**REALMODE**<sup>1</sup>|
-|**ENTFERNBARE**|**MEHRERE**|**RESIDENTE**|
-|**DYNAMISCHE**|**NAME**|**RESIDENTNAME**<sup>1</sup>|
+|**ENTFERNBARE**|**MULTIPLE**|**RESIDENT**|
+|**DYNAMIC**|**NAME**|**RESIDENTNAME**<sup>1</sup>|
 |**NUR AUSFÜHREN**|**NEWFILES**<sup>2</sup>|**ABSCHNITTE**|
-|**EXECUTEONLY**|**"NODATA"**<sup>1</sup>|**SEGMENTE**|
+|**EXECUTEONLY**|**NODATA**<sup>1</sup>|**SEGMENTE**|
 |**AUSFÜHRENLESEN**|**NOIOPL**<sup>1</sup>|**FREIGEGEBENE**|
 |**EXETYPE**|**NONAME**|**EINZELNE**|
 |**EXPORTE**|**NICHT KONFORME**<sup>1</sup>|**STACKSIZE**|
 |**FESTE**<sup>1</sup>|**NONDISCARDABLE**|**STUB**|
-|**FUNKTIONEN**<sup>2</sup>|**KEINE**|**VERSION**|
+|**FUNKTIONEN**<sup>2</sup>|**NONE**|**VERSION**|
 |**HEAPSIZE**|**NICHT FREIGEGEBENE**|**WINDOWAPI**|
-|**IMPORTE**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
+|**IMPORTS**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
 |**UNSAUBEREN**<sup>1</sup>|**OBJEKTE**|**WINDOWS**|
-|**UMFASSEN**<sup>2</sup>|**ALTE**<sup>1</sup>||
+|**UMFASSEN**<sup>2</sup>|**OLD**<sup>1</sup>||
 
 <sup>1</sup> der Linker eine Warnung ("ignoriert") gibt, wenn dieser Begriff gefunden. Das Wort ist jedoch weiterhin reserviert.
 
@@ -57,5 +57,5 @@ Die folgenden Wörter sind vom Linker reserviert. Diese Namen können verwendet 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)
-- [Linkeroptionen](../../build/reference/linker-options.md)
+- [MSVC-Linker-Referenz](linking.md)
+- [MSVC-Linkeroptionen](linker-options.md)

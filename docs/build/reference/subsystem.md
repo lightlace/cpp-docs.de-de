@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: 5fda93951918357de5441022f1cc6ea81a522ef6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415135"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820493"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -65,10 +65,10 @@ Mit den optionalen `major` und `minor`-Werten werden die Mindestanforderungen in
 
 - Die Werte für `major` und `minor` müssen in einem Bereich von 0 bis 65.535 liegen.
 
-Die Wahl des Subsystems wirkt sich auf die Standardstartadresse des Programms aus. Weitere Informationen finden Sie unter [/Entry (Symbol für Einstiegspunkt)](../../build/reference/entry-entry-point-symbol.md), der Linkeroption/Entry:*Funktion* Option.
+Die Wahl des Subsystems wirkt sich auf die Standardstartadresse des Programms aus. Weitere Informationen finden Sie unter [/Entry (Symbol für Einstiegspunkt)](entry-entry-point-symbol.md), der Linkeroption/Entry:*Funktion* Option.
 
-Weitere Informationen, einschließlich der Minimum- und Standardversionsnummern Werte für die Haupt-und Nebenversionsnummern Zahlen für jedes Subsystem, finden Sie unter den [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) -Linkeroption.
+Weitere Informationen, einschließlich der Minimum- und Standardversionsnummern Werte für die Haupt-und Nebenversionsnummern Zahlen für jedes Subsystem, finden Sie unter den [/Subsystem](subsystem-specify-subsystem.md) -Linkeroption.
 
 ## <a name="see-also"></a>Siehe auch
 
-[EDITBIN-Optionen](../../build/reference/editbin-options.md)
+[EDITBIN-Optionen](editbin-options.md)

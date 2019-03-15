@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 02e678f98773f9ae7bb4f611210329a7a1116f17
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749112"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816031"
 ---
 # <a name="how-to-migrate-to-clr"></a>Vorgehensweise: Migrieren auf/CLR
 
@@ -98,7 +98,7 @@ Dieser Schritt hat auf Projekte, die Makefiles verwenden, unterschiedliche Auswi
 **"/ CLR"** in der Entwicklungsumgebung ausgewählt werden kann, um mithilfe der Anweisungen in [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md). Wie bereits erwähnt, werden in diesem Schritt automatisch sich widersprechende Projekteinstellungen deaktiviert.
 
 > [!NOTE]
->  Beim Upgrade von einer verwalteten Bibliothek oder eines Webdienstprojekts von Visual C++ 2003 die **/Zl** Compiler-Option wird hinzugefügt, die **Befehlszeile** Eigenschaftenseite. Dadurch wird LNK2001 verursacht. Entfernen Sie **/Zl** aus der **Befehlszeile** Eigenschaftenseite, um Sie zu beheben. Finden Sie unter [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) und [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md) für Weitere Informationen. Oder, um des Linkers msvcrt.lib und msvcmrt.lib hinzuzufügen **zusätzliche Abhängigkeiten** Eigenschaft.
+>  Beim Upgrade von einer verwalteten Bibliothek oder eines Webdienstprojekts von Visual C++ 2003 die **/Zl** Compiler-Option wird hinzugefügt, die **Befehlszeile** Eigenschaftenseite. Dadurch wird LNK2001 verursacht. Entfernen Sie **/Zl** aus der **Befehlszeile** Eigenschaftenseite, um Sie zu beheben. Finden Sie unter [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) und [Compiler festgelegt und Buildeigenschaften](../build/working-with-project-properties.md) für Weitere Informationen. Oder, um des Linkers msvcrt.lib und msvcmrt.lib hinzuzufügen **zusätzliche Abhängigkeiten** Eigenschaft.
 
 Bei mit Makefiles erstellten Projekten, nicht kompatible Compileroptionen müssen deaktiviert werden einmal manuell **"/ CLR"** hinzugefügt wird. Finden Sie unter /[/CLR Einschränkungen](../build/reference/clr-restrictions.md) für Informationen über Compileroptionen, die nicht kompatibel mit **"/ CLR"**.
 

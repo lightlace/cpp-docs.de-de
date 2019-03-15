@@ -2,12 +2,12 @@
 title: Häufig auftretende ARM-Migrationsprobleme bei Visual C++
 ms.date: 11/04/2016
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 6aea623bc9f096265decbe91ccdc5d5f1f6ecef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618512"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816255"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Häufig auftretende ARM-Migrationsprobleme bei Visual C++
 
@@ -92,7 +92,7 @@ Und es eine Abhängigkeit zwischen `operator->(memory_handle)` und `operator*(p)
 
 ### <a name="volatile-keyword-default-behavior"></a>Schlüsselwort "volatile" Standardverhalten
 
-Der MSVC-Compiler unterstützt zwei verschiedene Interpretationen der der `volatile` Storage-Qualifizierer, die Sie angeben können, indem Sie mithilfe von Compilerschaltern. Die [angegebenem](../build/reference/volatile-volatile-keyword-interpretation.md) Switch wählt Microsoft erweitert der traditionelle Fall für X86 und X64 aufgrund das strenge Speichermodell für diese Architekturen wurde volatile-Semantik, die starke Reihenfolge garantiert. Die [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) Switch wählt die strikte C++ standard flüchtige Semantik, die starke Sortierung garantiert nicht.
+Der MSVC-Compiler unterstützt zwei verschiedene Interpretationen der der `volatile` Storage-Qualifizierer, die Sie angeben können, indem Sie mithilfe von Compilerschaltern. Die [angegebenem](reference/volatile-volatile-keyword-interpretation.md) Switch wählt Microsoft erweitert der traditionelle Fall für X86 und X64 aufgrund das strenge Speichermodell für diese Architekturen wurde volatile-Semantik, die starke Reihenfolge garantiert. Die [/volatile:iso](reference/volatile-volatile-keyword-interpretation.md) Switch wählt die strikte C++ standard flüchtige Semantik, die starke Sortierung garantiert nicht.
 
 Auf der ARM-Architektur und der Standardwert ist **/volatile:iso** da ARM-Prozessoren mit wöchentlichem haben sortiert Memory-Modell und ARM-Software mit eine älteren von der vertrauenden Seite, auf die erweiterten Semantik der keine **angegebenem**  und nicht in der Regel für die Kommunikation mit Software, die ausführt. Allerdings es ist trotzdem manchmal sogar erforderlich zum Kompilieren eines Programms ARM, um die erweiterten Semantik verwendet wird. Z. B. möglicherweise zu kostspielig So portieren Sie ein Programm, um die ISO C++-Semantik verwendet wird, oder Treibersoftware möglicherweise zu der herkömmlichen Semantik zum ordnungsgemäßen entsprechen. In diesen Fällen können Sie die **angegebenem** switch; jedoch um die herkömmlichen volatile-Semantik für ARM-Ziele neu zu erstellen, der Compiler muss einfügen Arbeitsspeicherbarrieren um jede Lese- oder Schreibvorgang für eine `volatile` Variable, um zu erzwingen starke Sortierung, die sich negativ auf die Leistung aufweisen kann.
 
@@ -100,4 +100,4 @@ Auf der X86- und X64-Architekturen, die der Standardwert ist **angegebenem** da 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Konfigurieren von Visual C++ für ARM-Prozessoren](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+[Konfigurieren von Visual C++ für ARM-Prozessoren](configuring-programs-for-arm-processors-visual-cpp.md)

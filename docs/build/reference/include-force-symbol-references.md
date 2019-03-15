@@ -12,12 +12,12 @@ helpviewer_keywords:
 - symbols, add to symbol table
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-ms.openlocfilehash: 389bd16829c2466b02cb879c8bc8d43c9efa6fb4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f7a443e32ed20550e3017c7e6ce70f4adf5137d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421219"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810977"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (Symbolverweise erzwingen)
 
@@ -38,11 +38,11 @@ Um mehrere Symbole anzugeben, geben Sie ein Komma (,), ein Semikolon (;) oder ei
 
 Der Linker löst `symbol` durch Hinzufügen des Objekts, das die Definition des Symbols für das Programm enthält. Diese Funktion ist nützlich für die Einbindung eines Bibliotheksobjekts, das andernfalls nicht zu dem Programm verknüpft werden.
 
-Ein Symbol angeben, wenn diese Option überschreibt das Entfernen dieses Symbols durch [/OPT: REF](../../build/reference/opt-optimizations.md).
+Ein Symbol angeben, wenn diese Option überschreibt das Entfernen dieses Symbols durch [/OPT: REF](opt-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf die **Linker** Ordner.
 
@@ -56,5 +56,5 @@ Ein Symbol angeben, wenn diese Option überschreibt das Entfernen dieses Symbols
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

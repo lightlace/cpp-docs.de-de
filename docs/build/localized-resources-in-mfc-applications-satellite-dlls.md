@@ -12,16 +12,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: d479599acceac29f0f2ee54857c663c81a919acf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c593d0bae6fc23cfd765116c44b07caa2a6d8ccf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420400"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821325"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Lokalisierte Ressourcen in MFC-Anwendungen: Satelliten-DLLs
 
-MFC-Version 7.0 und höher bietet erweiterte Unterstützung für Satelliten-DLLs, ein Feature, können beim Erstellen von Anwendungen, die für mehrere Sprachen lokalisiert. Eine Satelliten-DLL ist eine [reine Ressourcen-DLL](../build/creating-a-resource-only-dll.md) , enthält die Ressourcen einer Anwendung für eine bestimmte Sprache lokalisiert. Wenn die Anwendung die Ausführung beginnt, lädt MFC automatisch die lokalisierte Ressourcen für die Umgebung am besten geeignet. Beispielsweise könnten Sie eine Anwendung mit Sprachressourcen für Englisch und zwei Satelliten-DLL-Dateien, enthält eine französische Übersetzung Ihrer Ressourcen und der andere eine deutsche Übersetzung enthält haben. Wenn die Anwendung auf einem System für die englische Sprache ausgeführt wird, wird die englischen Ressourcen. Wenn auf einem französischen System ausgeführt wird, verwendet es die französischen Ressourcen. Wenn auf einem deutschen System ausgeführt wird, wird die Ressourcen für Deutsch.
+MFC-Version 7.0 und höher bietet erweiterte Unterstützung für Satelliten-DLLs, ein Feature, können beim Erstellen von Anwendungen, die für mehrere Sprachen lokalisiert. Eine Satelliten-DLL ist eine [reine Ressourcen-DLL](creating-a-resource-only-dll.md) , enthält die Ressourcen einer Anwendung für eine bestimmte Sprache lokalisiert. Wenn die Anwendung die Ausführung beginnt, lädt MFC automatisch die lokalisierte Ressourcen für die Umgebung am besten geeignet. Beispielsweise könnten Sie eine Anwendung mit Sprachressourcen für Englisch und zwei Satelliten-DLL-Dateien, enthält eine französische Übersetzung Ihrer Ressourcen und der andere eine deutsche Übersetzung enthält haben. Wenn die Anwendung auf einem System für die englische Sprache ausgeführt wird, wird die englischen Ressourcen. Wenn auf einem französischen System ausgeführt wird, verwendet es die französischen Ressourcen. Wenn auf einem deutschen System ausgeführt wird, wird die Ressourcen für Deutsch.
 
 In einer bestimmten Sprache lokalisiert, die Ressourcen enthält, zur Unterstützung von lokalisierter Ressourcen in einer MFC-Anwendung MFC versucht, eine Satelliten-DLL zu laden. Satelliten-DLLs werden mit dem Namen *AnwendungsnameXXX*.dll, wobei *ApplicationName* ist der Name der .exe oder .dll, die unter Verwendung von MFC, und *XXX* ist der drei Buchstaben bestehenden Code für die Sprache der Ressourcen (z. B. "ENU" oder "DEU").
 
@@ -53,5 +53,5 @@ Wenn keine dieser DLLs gefunden werden, verwendet MFC die Ressourcen in LangExam
 
 ## <a name="see-also"></a>Siehe auch
 
-[DLLs in Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[DLLs in Visual C++](dlls-in-visual-cpp.md)<br/>
 [TN057: Lokalisierung von MFC-Komponenten](../mfc/tn057-localization-of-mfc-components.md)

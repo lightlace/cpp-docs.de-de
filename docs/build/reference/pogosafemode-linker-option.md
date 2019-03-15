@@ -3,12 +3,12 @@ title: / POGOSAFEMODE (PGO im abgesicherten Threadmodus ausgeführt)
 ms.date: 03/14/2018
 f1_keywords:
 - POGOSAFEMODE
-ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbb328bf67d7823305a43f1d61252747cf5ea29e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544429"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821286"
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (PGO im abgesicherten Threadmodus ausgeführt)
 
@@ -26,11 +26,11 @@ Die **/POGOSAFEMODE** Option wird das instrumentierte Build im abgesicherten Mod
 
 Standardmäßig wird PGO-Profilerstellung im schnellen Modus ausgeführt. **/ POGOSAFEMODE** ist nur erforderlich, wenn Sie den abgesicherten Modus verwenden möchten.
 
-Um PGO-profilerstellung im abgesicherten Modus auszuführen, müssen Sie verwenden entweder **/genprofile: genaue** (bevorzugt), oder verwenden Sie die Umgebungsvariable [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) oder den Linkerschalter **/POGOSAFEMODE**, je nachdem, auf dem System. Wenn Sie die Profilerstellung auf einem x64-Computer ausführen, müssen Sie den Linkerschalter verwenden. Wenn Sie während der profilerstellung auf x X86 ausführen-Computer können Sie den Linkerschalter verwenden oder die Umgebungsvariable auf einen beliebigen Wert definieren, bevor Sie beginnen, dass der Prozess der PGO-Instrumentation.
+Um PGO-profilerstellung im abgesicherten Modus auszuführen, müssen Sie verwenden entweder **/genprofile: genaue** (bevorzugt), oder verwenden Sie die Umgebungsvariable [PogoSafeMode](../environment-variables-for-profile-guided-optimizations.md) oder den Linkerschalter **/POGOSAFEMODE**, je nachdem, auf dem System. Wenn Sie die Profilerstellung auf einem x64-Computer ausführen, müssen Sie den Linkerschalter verwenden. Wenn Sie während der profilerstellung auf x X86 ausführen-Computer können Sie den Linkerschalter verwenden oder die Umgebungsvariable auf einen beliebigen Wert definieren, bevor Sie beginnen, dass der Prozess der PGO-Instrumentation.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Optimierung** Eigenschaftenseite.
 
@@ -38,7 +38,7 @@ Um PGO-profilerstellung im abgesicherten Modus auszuführen, müssen Sie verwend
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
 
-1. Geben Sie die **/POGOSAFEMODE** option in der **zusätzliche Optionen** Feld. Wählen Sie **OK** zum Speichern der Änderungen.
+1. Geben Sie die **/POGOSAFEMODE** option in der **zusätzliche Optionen** Feld. Klicken Sie auf **OK**, um die Änderungen zu speichern.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 
@@ -48,5 +48,5 @@ Um PGO-profilerstellung im abgesicherten Modus auszuführen, müssen Sie verwend
 
 [/ GENPROFILE und/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Profilgesteuerte Optimierungen](../../build/reference/profile-guided-optimizations.md)<br/>
-[Umgebungsvariablen für profilgesteuerte Optimierungen](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[Profilgesteuerte Optimierungen](../profile-guided-optimizations.md)<br/>
+[Umgebungsvariablen für profilgesteuerte Optimierungen](../environment-variables-for-profile-guided-optimizations.md)<br/>

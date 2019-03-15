@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d1821d8dc5eab202a918893a1e7895151629b551
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627526"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807688"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Ausrichten des Strukturmembers)
 
@@ -24,7 +24,7 @@ Steuert, wie die Member einer Struktur im Speicher abgelegt werden, und gibt die
 
 ## <a name="syntax"></a>Syntax
 
-> **/ Zp**[**1**|**2**|**4**|**8** | **16**]
+> **/Zp**[**1**|**2**|**4**|**8**|**16**]
 
 ## <a name="remarks"></a>Hinweise
 
@@ -53,11 +53,11 @@ Sie können auch [Pack](../../preprocessor/pack.md) Ausrichten von Strukturen. W
 
 - [__unaligned](../../cpp/unaligned.md)
 
-- [Beispiele für die Strukturausrichtung](../../build/x64-software-conventions.md#examples-of-structure-alignment) (X64 bestimmte)
+- [/ALIGN (Abschnittsausrichtung)](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **C/C++-** > **Codegenerierung** Eigenschaftenseite.
 
@@ -69,5 +69,5 @@ Sie können auch [Pack](../../preprocessor/pack.md) Ausrichten von Strukturen. W
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Compileroptionen](../../build/reference/compiler-options.md)
-- [Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+- [MSVC-Compiler-Optionen](compiler-options.md)
+- [MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

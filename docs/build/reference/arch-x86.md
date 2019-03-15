@@ -2,16 +2,16 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a429824a7c22aa9aba460481394785d31b92a5ef
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421806"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812251"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
-Gibt die Architektur für die Codegenerierung auf x86 an. Siehe auch [/arch (x64)](../../build/reference/arch-x64.md) und [/arch (ARM)](../../build/reference/arch-arm.md).
+Gibt die Architektur für die Codegenerierung auf x86 an. Siehe auch [/arch (x64)](arch-x64.md) und [/arch (ARM)](arch-arm.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,9 +48,9 @@ Neben den SSE- und SSE2-Anweisungen verwendet der Compiler weitere Anweisungen, 
 
 Da der Compiler generiert X86, die SSE2-Anweisungen verwendet standardmäßig code, müssen Sie angeben **/arch:IA32** zum Deaktivieren der Generierung von SSE- und SSE2-Anweisungen für X86 Prozessoren.
 
-**/ arch** nur wirkt sich auf die codegenerierung für systemeigene Funktionen Codes. Bei Verwendung von ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md) kompiliert werden, **/arch** hat keine Auswirkungen auf die codegenerierung für verwaltete Funktionen.
+**/ arch** nur wirkt sich auf die codegenerierung für systemeigene Funktionen Codes. Bei Verwendung von ["/ CLR"](clr-common-language-runtime-compilation.md) kompiliert werden, **/arch** hat keine Auswirkungen auf die codegenerierung für verwaltete Funktionen.
 
-**/ arch** und [/QIfist](../../build/reference/qifist-suppress-ftol.md) kann nicht in derselben Kompiliereinheit verwendet werden. Insbesondere wenn Sie das FP-Steuerwort nicht mithilfe von `_controlfp` ändern, legt der Laufzeitstartcode das x87 FPU-Steuerwort-Genauigkeitskontrollfeld auf 53 Bits fest. Daher verwendet jeder Vorgang vom Typ "float" und "double" in einem Ausdruck einen 53-Bit-Signifikanden und einen 15-Bit-Exponenten. Alle SSE-Operationen mit einfacher Genauigkeit verwenden jedoch 24-Bit-Signifikanden und einen 8-Bit-Exponenten, und SSE2-Operationen mit doppelter Genauigkeit verwenden 53-Bit-Signifikanden und einen 11-Bit-Exponenten. Weitere Informationen finden Sie unter [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Diese Unterschiede können in einer Ausdrucksbaumstruktur auftreten. Dies gilt jedoch nicht, wenn nach jedem untergeordneten Ausdruck eine Benutzerzuordnung stattfindet. Nehmen wir einmal die folgende Situation:
+**/ arch** und [/QIfist](qifist-suppress-ftol.md) kann nicht in derselben Kompiliereinheit verwendet werden. Insbesondere wenn Sie das FP-Steuerwort nicht mithilfe von `_controlfp` ändern, legt der Laufzeitstartcode das x87 FPU-Steuerwort-Genauigkeitskontrollfeld auf 53 Bits fest. Daher verwendet jeder Vorgang vom Typ "float" und "double" in einem Ausdruck einen 53-Bit-Signifikanden und einen 15-Bit-Exponenten. Alle SSE-Operationen mit einfacher Genauigkeit verwenden jedoch 24-Bit-Signifikanden und einen 8-Bit-Exponenten, und SSE2-Operationen mit doppelter Genauigkeit verwenden 53-Bit-Signifikanden und einen 11-Bit-Exponenten. Weitere Informationen finden Sie unter [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Diese Unterschiede können in einer Ausdrucksbaumstruktur auftreten. Dies gilt jedoch nicht, wenn nach jedem untergeordneten Ausdruck eine Benutzerzuordnung stattfindet. Nehmen wir einmal die folgende Situation:
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
@@ -66,7 +66,7 @@ r = t + d;     // This should produce the same overall result
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-ia32-sse-or-sse2-in-visual-studio"></a>So legen Sie diese Compileroption für AVX, AVX2, IA32, SSE oder SSE2 in Visual Studio fest
 
-1. Öffnen der **Eigenschaftenseiten** im Dialogfeld für das Projekt. Weitere Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen der **Eigenschaftenseiten** im Dialogfeld für das Projekt. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften**, **C/C++-** Ordner.
 
@@ -80,6 +80,6 @@ r = t + d;     // This should produce the same overall result
 
 ## <a name="see-also"></a>Siehe auch
 
-[/arch (Mindestanforderungen an die CPU-Architektur)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[/arch (Mindestanforderungen an die CPU-Architektur)](arch-minimum-cpu-architecture.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

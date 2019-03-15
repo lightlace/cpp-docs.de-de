@@ -11,12 +11,12 @@ helpviewer_keywords:
 - module definition files
 - /DEF linker option
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
-ms.openlocfilehash: 4b6490186e2faf289844f7fb6b84f5a1c27b10a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c08412fb50835485e7941b2bb1db088943387b71
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423503"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807441"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (Moduldefinitionsdatei festlegen)
 
@@ -31,11 +31,11 @@ Der Name des eine Moduldefinitionsdatei (.def) an den Linker übergeben werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die/DEF-Option übergibt eine Moduldefinitionsdatei (.def) an den Linker an. Link kann nur eine DEF-Datei angegeben werden. Weitere Informationen über die DEF-Dateien, finden Sie unter [Moduldefinitionsdateien](../../build/reference/module-definition-dot-def-files.md).
+Die/DEF-Option übergibt eine Moduldefinitionsdatei (.def) an den Linker an. Link kann nur eine DEF-Datei angegeben werden. Weitere Informationen über die DEF-Dateien, finden Sie unter [Moduldefinitionsdateien](module-definition-dot-def-files.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf die **Linker** Ordner.
 
@@ -51,5 +51,5 @@ Um eine DEF-Datei aus, in der Entwicklungsumgebung anzugeben, sollten Sie das Pr
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

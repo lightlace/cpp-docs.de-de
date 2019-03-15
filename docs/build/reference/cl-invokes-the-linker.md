@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f8d8c5e1b0ca4d2a35a57683fea2e6de12747860
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412730"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821482"
 ---
 # <a name="cl-invokes-the-linker"></a>CL: Starten des Linkers
 
@@ -28,7 +28,7 @@ CL Ruft den Linker automatisch nach dem Kompilieren, es sei denn, die/c-Option v
 |/Zg|Funktionsprototypen generieren|
 |/Zs|Überprüfen der Syntax|
 
-Weitere Informationen zum Verknüpfen, finden Sie unter [Optionen des Linkers](../../build/reference/linker-options.md).
+Weitere Informationen zum Verknüpfen, finden Sie unter [MSVC-Linkeroptionen](linker-options.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -46,7 +46,7 @@ Um dieses Programm zu erstellen, kompilieren Sie mit der folgenden Befehlszeile 
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib
 ```
 
-CL zuerst die C-Quelldateien kompiliert und erstellt die Objektdateien MAIN.obj MOD1.obj und MOD2.obj. Der Compiler fügt den Namen der Standardbibliothek in jeder OBJ-Datei. Weitere Informationen finden Sie unter [Use Run-Time Library](../../build/reference/md-mt-ld-use-run-time-library.md).
+CL zuerst die C-Quelldateien kompiliert und erstellt die Objektdateien MAIN.obj MOD1.obj und MOD2.obj. Der Compiler fügt den Namen der Standardbibliothek in jeder OBJ-Datei. Weitere Informationen finden Sie unter [Use Run-Time Library](md-mt-ld-use-run-time-library.md).
 
 CL übergibt die Namen OBJ-Dateien, zusammen mit dem Namen MYGRAPH.lib, an dem Linker an. Der Linker löst die externe Verweise wie folgt aus:
 
@@ -58,5 +58,5 @@ CL übergibt die Namen OBJ-Dateien, zusammen mit dem Namen MYGRAPH.lib, an dem L
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[Festlegen von Compileroptionen](compiler-command-line-syntax.md)

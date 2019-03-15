@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: 0be2c9e0681018bb61f433f77df8fdd77ba741a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e37890fcd757a52ddeff0ccd79289bbc0c35e042
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420491"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816580"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Beschränkungen für das verzögerte Laden von DLLs
 
@@ -21,7 +21,7 @@ Es gibt Einschränkungen hinsichtlich des verzögerten Ladens von Importen.
 
 - Ein verzögertes Laden von Kernel32.dll wird nicht unterstützt. Diese DLL ist erforderlich, damit die Routinen der Hilfsfunktion für das verzögerte Laden das verzögerte Laden durchführen können.
 
-- [Binden von](../../build/reference/binding-imports.md) des Eintrags an, die weitergeleitet werden, wird nicht unterstützt.
+- [Binden von](binding-imports.md) des Eintrags an, die weitergeleitet werden, wird nicht unterstützt.
 
 - Das verzögerte Laden einer DLL führt möglicherweise nicht zum selben Verwalten des Prozesses, wenn pro Prozess stattfindende Initialisierungen vorhanden sind, die am Einstiegspunkt der verzögert geladenen DLL stattfinden. Anderen Fällen gehört der statische TLS (Thread local Storage), die mithilfe von deklariert [__declspec(thread)](../../cpp/thread.md), die nicht behandelt, wenn die DLL, über geladen wird `LoadLibrary`. Der dynamische TLS ist über `TlsAlloc`, `TlsFree`, `TlsGetValue` und `TlsSetValue` immer noch zur Verwendung in statischen oder verzögert geladenen DLLs verfügbar.
 
@@ -33,7 +33,7 @@ Es gibt Einschränkungen hinsichtlich des verzögerten Ladens von Importen.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Linkerunterstützung für verzögertes Laden von DLLs](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
+[Linkerunterstützung für verzögertes Laden von DLLs](linker-support-for-delay-loaded-dlls.md)<br/>
 [LoadLibrary-Funktion](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
 [GetModuleHandle-Funktion](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
 [GetProcAddress-Funktion](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>

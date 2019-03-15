@@ -14,16 +14,16 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: a0610ae901b817a1c8f7707d9ba87c15d634e134
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46da8fc0cb98406bdf97285d7c6f824afd61c4bb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298060"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808351"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Vom Anwendungs-Assistenten erstellte Rahmenfensterklassen
 
-Bei Verwendung der [Anwendungs-Assistent](../ide/creating-desktop-projects-by-using-application-wizards.md) zum Erstellen einer Skelett-Anwendung, zusätzlich zur Anwendung, Dokument und Ansichtsklassen, die Anwendungs-Assistent erstellt eine Klasse abgeleiteten Rahmenfenster für das Hauptrahmenfenster Ihrer Anwendung. Die Klasse wird aufgerufen, `CMainFrame` standardmäßig, und die Dateien, die es enthalten bezeichnet. H und MAINFRM. CPP.
+Wenn Ihnen die Erstellung einer neuen MFC Projekt aus der **neues Projekt** Dialogfeld zusätzlich zur Anwendung, Dokument- und Ansichtsklassen, die Anwendungs-Assistent erstellt eine Klasse abgeleiteten Rahmenfenster für das Hauptrahmenfenster Ihrer Anwendung. Die Klasse wird aufgerufen, `CMainFrame` standardmäßig, und die Dateien, die es enthalten bezeichnet. H und MAINFRM. CPP.
 
 Wenn Ihre Anwendung SDI, ist Ihre `CMainFrame` abgeleitete Klasse wird von Klasse [CFrameWnd](../mfc/reference/cframewnd-class.md).
 
@@ -36,4 +36,5 @@ Diese Klassen für Rahmenfenster können nach dem Erstellen, aber um ihre Funkti
 ## <a name="see-also"></a>Siehe auch
 
 [Rahmenfensterklassen](../mfc/frame-window-classes.md)<br/>
-[MFC-Programm oder Steuern von Quell- und Headerdateien](../ide/mfc-program-or-control-source-and-header-files.md)
+[MFC-Programm oder Steuern von Quell- und Headerdateien](../build/reference/mfc-program-or-control-source-and-header-files.md)
+

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '@ linker option'
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
-ms.openlocfilehash: 32c100a5b7388c71081c46200ec8aea047ccf0d4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9e595857a6089c59aa6638ed51acacae3a0eb5e9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412470"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816502"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Festlegen von Linker-Antwortdateien)
 
@@ -32,7 +32,7 @@ Eine Textdatei Linkerbefehle angeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Finden Sie unter [@ (Geben Sie Compiler-Antwortdateien)](../../build/reference/at-specify-a-compiler-response-file.md) für Weitere Informationen.
+Finden Sie unter [@ (Geben Sie Compiler-Antwortdateien)](at-specify-a-compiler-response-file.md) für Weitere Informationen.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
@@ -44,5 +44,5 @@ Finden Sie unter [@ (Geben Sie Compiler-Antwortdateien)](../../build/reference/a
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: b273ad71c3c6eaed69fc715401219200f26f87eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434982"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815878"
 ---
 # <a name="attribute-programming-faq"></a>Fragen und Antworten zur attributierten Programmierung
 
@@ -43,16 +43,16 @@ Ein HRESULT ist ein einfacher Datentyp, der häufig als Rückgabewert von Attrib
 |name|Beschreibung|Wert|
 |----------|-----------------|-----------|
 |S_OK|Vorgang erfolgreich|0x00000000|
-|E_UNEXPECTED|Unerwarteter Fehler|0x8000ffff|
-|E_NOTIMPL|Nicht implementiert.|0 x 80004001|
+|E_UNEXPECTED|Unerwarteter Fehler|0x8000FFFF|
+|E_NOTIMPL|Nicht implementiert.|0x80004001|
 |E_OUTOFMEMORY|Fehler beim belegen von ausreichend Arbeitsspeichers|0x8007000E|
-|E_INVALIDARG|Ein oder mehrere Argumente sind ungültig|0 x 80070057|
-|E_NOINTERFACE|Schnittstelle nicht unterstützt|0 x 80004002|
-|E_POINTER|Ungültiger Zeiger|0 x 80004003|
+|E_INVALIDARG|Ein oder mehrere Argumente sind ungültig|0x80070057|
+|E_NOINTERFACE|Schnittstelle nicht unterstützt|0x80004002|
+|E_POINTER|Ungültiger Zeiger|0x80004003|
 |E_HANDLE|Ungültiges handle|0x80070006|
-|E_ABORT|Vorgang wurde abgebrochen|0 x 80004004|
-|E_FAIL|Nicht angegebener Fehler.|0 x 80004005|
-|E_ACCESSDENIED|Allgemeiner Zugriffsfehler|0 x 80070005|
+|E_ABORT|Vorgang wurde abgebrochen|0x80004004|
+|E_FAIL|Nicht angegebener Fehler.|0x80004005|
+|E_ACCESSDENIED|Allgemeiner Zugriffsfehler|0x80070005|
 
 ##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Wenn habe ich den Parameternamen für ein Attribut angeben?
 
@@ -122,7 +122,7 @@ Möglicherweise ein nicht attributierte ATL-Projekt, das verfügt über eine IDL
 
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Wie kann ich eine IDL-Datei in einem attributierten Projekt verwenden?
 
-Sie möglicherweise eine IDL-Datei, die Sie in Ihrem attributierten ATL-Projekt verwenden möchten. In diesem Fall würden Sie verwenden die [Importidl](importidl.md) Attribut, kompilieren Sie die IDL-Datei in eine .h-Datei (finden Sie unter den [Eigenschaftenseiten "MIDL"](../../ide/midl-property-pages.md) des Projekts **Eigenschaftenseiten** Dialogfeld), und Schließen Sie dann die .h-Datei in Ihr Projekt.
+Sie möglicherweise eine IDL-Datei, die Sie in Ihrem attributierten ATL-Projekt verwenden möchten. In diesem Fall würden Sie verwenden die [Importidl](importidl.md) Attribut, kompilieren Sie die IDL-Datei in eine .h-Datei (finden Sie unter den [Eigenschaftenseiten "MIDL"](../../build/reference/midl-property-pages.md) des Projekts **Eigenschaftenseiten** Dialogfeld), und Schließen Sie dann die .h-Datei in Ihr Projekt.
 
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Kann ich Code ändern, die von einem Attribut eingefügt wird?
 

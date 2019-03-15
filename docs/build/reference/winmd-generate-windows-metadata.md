@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 83d22a0114b26f53fa9df9d2470c71cd80465d64
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 93db20d14d3477734e35d33111246f9459310b90
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426684"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810366"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (Windows-Metadaten generieren)
 
@@ -32,11 +32,11 @@ Der Linker wird nur die winmd-Datei, aber nicht die binäre ausführbare Datei g
 
 Die **/WINMD** -Linkeroption wird für UWP-apps und Windows-Runtime-Komponenten verwendet, um die Erstellung einer Windows-Runtime-Metadatendatei (.winmd) zu steuern. Eine winmd-Datei ist eine Art von DLL, die Metadaten für Windows-Runtime-Typen und im Fall von Runtime-Komponenten, die Implementierungen dieser Typen enthält. Die Metadaten folgen der [ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
 
-Standardmäßig den Namen der Ausgabedatei hat das Format *Binaryname*winmd. Um einen anderen Dateinamen anzugeben, verwenden die [/winmdfile](../../build/reference/winmdfile-specify-winmd-file.md) Option.
+Standardmäßig den Namen der Ausgabedatei hat das Format *Binaryname*winmd. Um einen anderen Dateinamen anzugeben, verwenden die [/winmdfile](winmdfile-specify-winmd-file.md) Option.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Windows-Metadaten** Eigenschaftenseite.
 
@@ -50,5 +50,5 @@ Standardmäßig den Namen der Ausgabedatei hat das Format *Binaryname*winmd. Um 
 [/WINMDKEYFILE (WINMD-Schlüsseldatei angeben)](winmdkeyfile-specify-winmd-key-file.md)<br/>
 [/WINMDKEYCONTAINER (Schlüsselcontainer angeben)](winmdkeycontainer-specify-key-container.md)<br/>
 [/WINMDDELAYSIGN (WINMD-Datei teilweise signieren)](winmddelaysign-partially-sign-a-winmd.md)<br/>
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

@@ -29,24 +29,24 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bf4c3648079dff16481dbdd56b9a70093fd22d8d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415408"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812056"
 ---
 # <a name="bscmake-options"></a>BSCMAKE-Optionen
 
 In diesem Abschnitt werden die Optionen beschrieben, die zur Steuerung von BSCMAKE zur Verfügung stehen. Der Inhalt der Browserinformationsdatei lässt sich durch Ausschließen oder Einschließen bestimmter Informationen mithilfe verschiedener Optionen steuern. Die Ausschlussoptionen ermöglichen eine schnellere Ausführung von BSCMAKE und können eine kleinere BSC-Datei zur Folge haben. Optionsnamen Groß-/Kleinschreibung (mit Ausnahme von **/HELP** und **/nologo**).
 
-Nur **/nologo** und **/o** stehen in der Visual Studio-Entwicklungsumgebung.  Finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md) Zugriff auf Informationen zu Eigenschaftenseiten des Projekts.
+Nur **/nologo** und **/o** stehen in der Visual Studio-Entwicklungsumgebung.  Finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md) Zugriff auf Informationen zu Eigenschaftenseiten des Projekts.
 
 **/Ei (** *filename*...**)**<br/>
 Schließt den Inhalt der angegebenen Includedateien aus der Browserinformationsdatei aus. Bei der Angabe mehrerer Dateien müssen deren Namen durch ein Leerzeichen getrennt und die Liste muss in runde Klammern eingeschlossen werden. Klammern sind nicht erforderlich, wenn Sie nur einen angeben *Filename*. Verwendung **Ei** zusammen mit den **/es einsetzen** Option zum Ausschließen von Dateien, die nicht von ausgeschlossen **/es einsetzen**.
 
 **/El**<br/>
-Schließt lokale Symbole aus. Standardmäßig werden lokale Symbole eingeschlossen. Weitere Informationen über lokale Symbole finden Sie unter [Erstellen einer SBR-Datei](../../build/reference/creating-an-dot-sbr-file.md).
+Schließt lokale Symbole aus. Standardmäßig werden lokale Symbole eingeschlossen. Weitere Informationen über lokale Symbole finden Sie unter [Erstellen einer SBR-Datei](creating-an-dot-sbr-file.md).
 
 **/Em**<br/>
 Schließt Symbole in Makros aus. Verwendung **/em** um nur die Namen von Makros in der Browserinformationsdatei einzuschließen. Standardmäßig werden Makronamen und das Ergebnis der Makroerweiterungen eingeschlossen.
@@ -60,7 +60,7 @@ Schließt die Includedateien, die mit einem absoluten Pfad angegeben oder in ein
 **/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 Ermöglicht das Senden von Informationen in Bezug auf interne Fehler in bscmake.exe an Microsoft.
 
-Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (interne Compilerfehler Bericht)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Weitere Informationen zu **/errorreport**, finden Sie unter [/errorreport (interne Compilerfehler Bericht)](errorreport-report-internal-compiler-errors.md).
 
 **/HELP**<br/>
 Zeigt eine Zusammenfassung der Befehlszeilensyntax von BSCMAKE an.
@@ -69,7 +69,7 @@ Zeigt eine Zusammenfassung der Befehlszeilensyntax von BSCMAKE an.
 Schließt Symbole ein, auf die nicht verwiesen wird. Standardmäßig zeichnet BSCMAKE keine Symbole auf, die zwar definiert sind, auf die aber nicht verwiesen wird. Wenn eine SBR-Datei komprimiert wurde, hat diese Option für diese Eingabedatei keine Auswirkungen, da der Compiler bereits die Symbole entfernt hat, auf die nicht verwiesen wird.
 
 **/n**<br/>
-Erzwingt ein nicht inkrementelles Erstellen. Verwendung **/n** um eine vollständige Erstellung der Browserinformationsdatei zu erzwingen, und zwar unabhängig davon, ob eine BSC-Datei vorhanden ist, und um zu verhindern, dass SBR-Dateien abgeschnitten wird. Finden Sie unter [wie eine BSC-Datei mit BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md).
+Erzwingt ein nicht inkrementelles Erstellen. Verwendung **/n** um eine vollständige Erstellung der Browserinformationsdatei zu erzwingen, und zwar unabhängig davon, ob eine BSC-Datei vorhanden ist, und um zu verhindern, dass SBR-Dateien abgeschnitten wird. Finden Sie unter [wie eine BSC-Datei mit BSCMAKE](how-bscmake-builds-a-dot-bsc-file.md).
 
 **/NOLOGO**<br/>
 Unterdrückt die Copyrightmeldung von BSCMAKE.
@@ -94,4 +94,4 @@ BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr
 
 ## <a name="see-also"></a>Siehe auch
 
-[BSCMAKE-Referenz](../../build/reference/bscmake-reference.md)
+[BSCMAKE-Referenz](bscmake-reference.md)

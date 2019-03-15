@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 6855773c6ec807a7488fa5604ddee7fd43983135
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bdb3300aae88c6c4c8f7e66af658f47548ac5a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441235"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820519"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (unreferenzierte COMDAT entfernen)
 
@@ -27,7 +27,7 @@ Entfernt unreferenzierte Funktionen oder Daten, die COMDATs sind oder nur eine i
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn **/Zc: Inline** angegeben ist, wird der Compiler gibt keine Symbolinformationen für Unreferenzierte COMDAT-Funktionen oder Daten oder für Funktionen oder Daten, die nur eine internen Bindung haben. Diese Optimierung vereinfacht einen Teil der Aufgaben, die der Linker in Releasebuilds oder wenn die Linkeroption [/OPT: REF](../../build/reference/opt-optimizations.md) angegeben ist. Wenn der Compiler diese Optimierung durchführt, kann er die Größe der .obj-Datei deutlich verringern und Linkergeschwindigkeiten verbessern. Diese Compileroption ist nicht aktiviert, wenn Optimierungen deaktiviert sind ([/Od](../../build/reference/od-disable-debug.md)) oder wenn [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md) angegeben ist.
+Wenn **/Zc: Inline** angegeben ist, wird der Compiler gibt keine Symbolinformationen für Unreferenzierte COMDAT-Funktionen oder Daten oder für Funktionen oder Daten, die nur eine internen Bindung haben. Diese Optimierung vereinfacht einen Teil der Aufgaben, die der Linker in Releasebuilds oder wenn die Linkeroption [/OPT: REF](opt-optimizations.md) angegeben ist. Wenn der Compiler diese Optimierung durchführt, kann er die Größe der .obj-Datei deutlich verringern und Linkergeschwindigkeiten verbessern. Diese Compileroption ist nicht aktiviert, wenn Optimierungen deaktiviert sind ([/Od](od-disable-debug.md)) oder wenn [/GL (Whole Program Optimization)](gl-whole-program-optimization.md) angegeben ist.
 
 Diese Option ist standardmäßig deaktiviert (**/Zc:inline-**). Die [/ PERMISSIVE--](permissive-standards-conformance.md) Option ermöglicht keine **/Zc: Inline**.
 
@@ -123,7 +123,7 @@ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Sprache** Eigenschaftenseite.
 
@@ -131,4 +131,4 @@ Weitere Informationen über Konformitätsprobleme in Visual C++ finden Sie unter
 
 ## <a name="see-also"></a>Siehe auch
 
-[/Zc (Übereinstimmung)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Übereinstimmung)](zc-conformance.md)<br/>

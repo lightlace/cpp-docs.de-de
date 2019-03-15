@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Od compiler option [C++]
 - disable (debug) compiler option [C++]
 ms.assetid: b1ac31b7-e086-4eeb-be5e-488f7513f5f5
-ms.openlocfilehash: 386113c7926085aa7e82e23768556372014a8cc8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 83ece0865eb74a4e9e292b78733df9d24602fe1d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426250"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57806765"
 ---
 # <a name="od-disable-debug"></a>/Od (Deaktivieren (Debuggen))
 
@@ -31,11 +31,11 @@ Deaktiviert alle Optimierungen im Programm und beschleunigt die Kompilierung.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Option ist die Standardeinstellung. Da **/Od** unterdrückt die Verschiebung von Code, es vereinfacht das Debuggen. Weitere Informationen zu Compileroptionen für das Debuggen, finden Sie unter [/Z7, / Zi, / Zi (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md).
+Diese Option ist die Standardeinstellung. Da **/Od** unterdrückt die Verschiebung von Code, es vereinfacht das Debuggen. Weitere Informationen zu Compileroptionen für das Debuggen, finden Sie unter [/Z7, / Zi, / Zi (Debuginformationsformat)](z7-zi-zi-debug-information-format.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
@@ -49,7 +49,7 @@ Diese Option ist die Standardeinstellung. Da **/Od** unterdrückt die Verschiebu
 
 ## <a name="see-also"></a>Siehe auch
 
-[/O-Optionen (Code optimieren)](../../build/reference/o-options-optimize-code.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)<br/>
-[/Z7, /Zi, /ZI (Debuginformationsformat)](../../build/reference/z7-zi-zi-debug-information-format.md)
+[/O-Optionen (Code optimieren)](o-options-optimize-code.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[/Z7, /Zi, /ZI (Debuginformationsformat)](z7-zi-zi-debug-information-format.md)

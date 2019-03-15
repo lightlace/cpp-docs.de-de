@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: cb21165e51960c0ca2f728381413c1a7260c9f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494977"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807505"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Unicode-Unterstützung im Compiler und Linker
 
@@ -45,8 +45,8 @@ Antwortdateien und DEF-Dateien können entweder UTF-16 mit einer Bytereihenfolge
 
 ## <a name="asm-and-cod-dumps"></a>ASM- und COD-Dumps
 
-ASM- und COD-Dumps müssen standardmäßig in ANSI sein, damit die Kompatibilität mit MASM gewährleistet ist. Verwendung [/FAu](../../build/reference/fa-fa-listing-file.md) zur Ausgabe von UTF-8. Beachten Sie, dass bei Angabe von **/FAS**, die vermischte Quelle einfach direkt ausgegeben und verstümmelt aussehen kann, z. B. wenn Quellcode UTF-8 ist und Sie nicht angeben, **/FAsu**.
+ASM- und COD-Dumps müssen standardmäßig in ANSI sein, damit die Kompatibilität mit MASM gewährleistet ist. Verwendung [/FAu](fa-fa-listing-file.md) zur Ausgabe von UTF-8. Beachten Sie, dass bei Angabe von **/FAS**, die vermischte Quelle einfach direkt ausgegeben und verstümmelt aussehen kann, z. B. wenn Quellcode UTF-8 ist und Sie nicht angeben, **/FAsu**.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen von C/C++-Code in der Befehlszeile](../../build/building-on-the-command-line.md)
+[Verwenden Sie das MSVC-Toolset, über die Befehlszeile](../building-on-the-command-line.md)

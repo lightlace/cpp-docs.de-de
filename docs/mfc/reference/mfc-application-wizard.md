@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 3cdaba750060290fa25007d4097b6782d6f20fbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258631"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822664"
 ---
 # <a name="mfc-application-wizard"></a>MFC-Anwendungs-Assistent
 
 Der MFC-Anwendungs-Assistent erstellt eine Anwendung, die beim Kompilieren die grundlegenden Funktionen einer ausführbaren Windows-Anwendung (.exe) implementiert. Die MFC-Startanwendung umfasst C++-Quelldateien (.cpp), Ressourcendateien (.rc), Headerdateien (.h) sowie eine Projektdatei (.vcxproj). Der in diesen Startdateien generierte Code basiert auf MFC.
 
 > [!NOTE]
->  Abhängig von den ausgewählten Optionen kann der Assistent zusätzliche Projektdateien erstellen. Wenn Sie auswählen, z. B. **kontextbezogene Hilfe** auf die [erweiterte Features](../../mfc/reference/advanced-features-mfc-application-wizard.md) Seite der Assistent erstellt die Dateien, die zum Kompilieren des Projekts Hilfedateien erforderlich sind. Weitere Informationen zu den Dateien, die der Assistent erstellt, finden Sie unter [für Visual C++-Projekte erstellte Dateitypen](../../ide/file-types-created-for-visual-cpp-projects.md), und finden Sie in der Datei "Readme.txt" im Projekt.
+>  Abhängig von den ausgewählten Optionen kann der Assistent zusätzliche Projektdateien erstellen. Wenn Sie auswählen, z. B. **kontextbezogene Hilfe** auf die [erweiterte Features](../../mfc/reference/advanced-features-mfc-application-wizard.md) Seite der Assistent erstellt die Dateien, die zum Kompilieren des Projekts Hilfedateien erforderlich sind. Weitere Informationen zu den Dateien, die der Assistent erstellt, finden Sie unter [für Visual C++-Projekte erstellte Dateitypen](../../build/reference/file-types-created-for-visual-cpp-projects.md), und finden Sie in der Datei "Readme.txt" im Projekt.
 
 ## <a name="overview"></a>Übersicht
 

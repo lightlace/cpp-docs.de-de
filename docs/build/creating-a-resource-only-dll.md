@@ -5,16 +5,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], creating
 - DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-ms.openlocfilehash: d2854c9ca993e9f1f27cab60cdd09e28ce2985f1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7f0bad94cf3f126d27cc29567bd4f6c4a846bf1e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412646"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814383"
 ---
 # <a name="creating-a-resource-only-dll"></a>Erstellen einer DLL als reine Ressource
 
-Eine reine Ressourcen-DLL ist eine DLL, die ausschließlich Ressourcen enthält, z. B. Symbole, Bitmaps, Zeichenfolgen und Dialogfelder. Die Verwendung einer reinen Ressourcen-DLL bietet eine gute Möglichkeit, dieselben Ressourcen von mehreren Programmen gemeinsam nutzen zu lassen. Es ist auch eine gute Möglichkeit, eine Anwendung mit mehreren Sprachen lokalisierte Ressourcen bereitstellen (siehe [lokalisierte Ressourcen in MFC-Anwendungen: Satelliten-DLLs](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).
+Eine reine Ressourcen-DLL ist eine DLL, die ausschließlich Ressourcen enthält, z. B. Symbole, Bitmaps, Zeichenfolgen und Dialogfelder. Die Verwendung einer reinen Ressourcen-DLL bietet eine gute Möglichkeit, dieselben Ressourcen von mehreren Programmen gemeinsam nutzen zu lassen. Es ist auch eine gute Möglichkeit, eine Anwendung mit mehreren Sprachen lokalisierte Ressourcen bereitstellen (siehe [lokalisierte Ressourcen in MFC-Anwendungen: Satelliten-DLLs](localized-resources-in-mfc-applications-satellite-dlls.md)).
 
 Um eine reine Ressourcen-DLL zu erstellen, erstellen Sie ein neues Win32-DLL-Projekt (MFC-fremd) und fügen dem Projekt die Ressourcen hinzu.
 
@@ -24,11 +24,11 @@ Um eine reine Ressourcen-DLL zu erstellen, erstellen Sie ein neues Win32-DLL-Pro
 
 - Auf der **Projekt** Menü klicken Sie auf **vorhandenes Element hinzufügen**, und klicken Sie dann die neuen RC-Datei in das Projekt einfügen.
 
-- Geben Sie die [/NOENTRY](../build/reference/noentry-no-entry-point.md) -Linkeroption. / NOENTRY verhindert, dass den Linker einen Verweis auf `_main` in die DLL; diese Option muss eine reine Ressourcen-DLL zu erstellen.
+- Geben Sie die [/NOENTRY](reference/noentry-no-entry-point.md) -Linkeroption. / NOENTRY verhindert, dass den Linker einen Verweis auf `_main` in die DLL; diese Option muss eine reine Ressourcen-DLL zu erstellen.
 
 - Erstellen Sie die DLL.
 
-Die Anwendung, die reine Ressourcen-DLL verwendet, sollten Aufrufen [LoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) explizit auf die DLL verknüpfen. Um die Ressourcen zuzugreifen, rufen Sie die generischen Funktionen `FindResource` und `LoadResource`, die für jede Art von Ressource zu arbeiten, oder rufen Sie eine der folgenden ressourcenspezifischen Funktionen:
+Die Anwendung, die reine Ressourcen-DLL verwendet, sollten Aufrufen [LoadLibrary](loadlibrary-and-afxloadlibrary.md) explizit auf die DLL verknüpfen. Um die Ressourcen zuzugreifen, rufen Sie die generischen Funktionen `FindResource` und `LoadResource`, die für jede Art von Ressource zu arbeiten, oder rufen Sie eine der folgenden ressourcenspezifischen Funktionen:
 
 - `FormatMessage`
 
@@ -49,4 +49,4 @@ Die Anwendung sollte Aufrufen `FreeLibrary` nach Abschluss die Ressourcen verwen
 ## <a name="see-also"></a>Siehe auch
 
 [Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)<br/>
-[DLLs in Visual C++](../build/dlls-in-visual-cpp.md)
+[DLLs in Visual C++](dlls-in-visual-cpp.md)

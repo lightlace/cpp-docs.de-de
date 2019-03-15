@@ -2,12 +2,12 @@
 title: /HIGHENTROPYVA (Unterstützung für 64-Bit ASLR)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: a8bd1b2231530c0f1632b244edaf36ee14ed65b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ecbbf8bbd8e74f80f2f5b2d7df0d2ef544112fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534796"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822001"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (Unterstützung für 64-Bit ASLR)
 
@@ -15,7 +15,7 @@ Gibt an, ob das ausführbare Image 64-bit-ASLR mit hoher Entropie unterstützt.
 
 ## <a name="syntax"></a>Syntax
 
-> **/ HIGHENTROPYVA**[**: NO**]
+> **/HIGHENTROPYVA**[**:NO**]
 
 ## <a name="remarks"></a>Hinweise
 
@@ -27,7 +27,7 @@ Für **/highentropyva** wirksam zur Ladezeit [/DynamicBase](dynamicbase-use-addr
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>So legen Sie diese Linkeroption in Visual Studio fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
 
@@ -35,8 +35,8 @@ Für **/highentropyva** wirksam zur Ladezeit [/DynamicBase](dynamicbase-use-addr
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)
-- [Linkeroptionen](../../build/reference/linker-options.md)
+- [MSVC-Linker-Referenz](linking.md)
+- [MSVC-Linkeroptionen](linker-options.md)
 - [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
 - [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
 - [Windows ISV-Softwaresicherheitsmaßnahmen](https://msdn.microsoft.com/library/bb430720.aspx)

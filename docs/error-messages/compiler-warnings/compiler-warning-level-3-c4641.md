@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4641
 ms.assetid: 28fe5c3e-6039-42da-9100-1312b5b15aea
-ms.openlocfilehash: eea1f28c55c8beef5fada10080ebaac9371c94e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9357088106a45026eae543f8627ea59988e73995
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477479"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818504"
 ---
 # <a name="compiler-warning-level-3-c4641"></a>Compilerwarnung (Stufe 3) C4641
 
@@ -19,7 +19,7 @@ XML-Dokumentkommentar enthält einen mehrdeutigen Querverweis
 
 Der Compiler konnte einen Verweis eindeutig zu beheben. Um diese Warnung zu beheben, geben Sie die erforderlichen Parameterinformationen für den Verweis eindeutig zu machen.
 
-Weitere Informationen finden Sie unter [XML Documentation](../../ide/xml-documentation-visual-cpp.md).
+Weitere Informationen finden Sie unter [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md).
 
 ## <a name="example"></a>Beispiel
 

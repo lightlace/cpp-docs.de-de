@@ -1,13 +1,13 @@
 ---
-title: Microsoft Visual C++-gleitkommaoptimierung
+title: MSVC floating-Point-Optimierung
 ms.date: 03/09/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6e297cebb4982b293e86885815436c4120d903cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78c5c310f2f348b5cfa5a92feb65e265d28560d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504298"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814370"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual C++-Gleitkomma-Optimierung
 
@@ -36,11 +36,11 @@ Diese Funktion fügt n **"float"** Werte im Array Vektor `A`. Innerhalb der Schl
 
 Ein naive-C++-Compiler könnten annehmen, dass der Gleitkommaarithmetik algebraischen dieselben Regeln wie für reelle Zahl arithmetische folgt. Solchen Compiler kann dann fälschlicherweise dazu aufgefordert, die daraus schließen
 
-> C = T - Sum - Y == > (Summe + Y) - Sum - Y == > 0;
+> C = T - sum - Y ==> (sum+Y)-sum-Y ==> 0;
 
 D. h., dass der wahrgenommene Wert des C immer eine Konstante 0 (null) ist. Wenn dieser Konstante Wert dann in nachfolgenden Ausdrücke weitergegeben wird, wird der Inhalt der Schleife auf eine einfache Summe reduziert. Um genau zu sein:
 
-> Y = [i] - C == > Y = eine [i]<br/>T = Summe + Y == > T = Summe + eine [i]<br/>SUM = T == > Sum = Summe + eine [i]
+> Y = [i] - C == > Y = eine [i]<br/>T = sum + Y ==> T = sum + A[i]<br/>sum = T ==> sum = sum + A[i]
 
 Daher an den naive-Compiler, eine logische Transformation des der `KahanSum` Funktion wäre:
 
@@ -951,12 +951,12 @@ Die Befehlszeilenoptionen werden in der Tat Kurzschreibweise zum Festlegen der v
 
 ||||||
 |-|-|-|-|-|
-||float_control(precise)|float_control(EXCEPT)|fp_contract|fenv_access|
-|/ fp: strict|an|an|Ausschalten|an|
-|/ fp: strict/fp: mit Ausnahme von:|an|Ausschalten|Ausschalten|an|
-|/ fp: präzise|an|Ausschalten|an|Ausschalten|
-|/ fp: precise/fp: mit Ausnahme|an|an|an|Ausschalten|
-|fast|Ausschalten|Ausschalten|an|Ausschalten|
+||float_control(precise)|float_control(except)|fp_contract|fenv_access|
+|/fp:strict|an|an|Ausschalten|an|
+|/fp:strict /fp:except-|an|Ausschalten|Ausschalten|an|
+|/fp:precise|an|Ausschalten|an|Ausschalten|
+|/fp:precise /fp:except|an|an|an|Ausschalten|
+|/fp:fast|Ausschalten|Ausschalten|an|Ausschalten|
 
 Beispielsweise kann die folgenden explizit fp: fast-Semantik.
 
@@ -1088,4 +1088,4 @@ catch(float_exception)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Codeoptimierung](optimizing-your-code.md)<br/>
+[Codeoptimierung](../optimizing-your-code.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: 409c40986068475299c95f1be0dff5f15d022520
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e7338c6a45d74aa8efac1b72683cca7661c62e0a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424326"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820103"
 ---
 # <a name="editbin-options"></a>EDITBIN-Optionen
 
@@ -23,28 +23,28 @@ EDITBIN enthält die folgenden Optionen:
 
 |Option|Zweck|
 |------------|-------------|
-|[/ALLOWBIND](../../build/reference/allowbind.md)|Gibt an, ob eine DLL gebunden werden kann.|
-|[/ALLOWISOLATION](../../build/reference/allowisolation.md)|Gibt an, DLL oder ausführbare Datei Manifestsuche Verhalten.|
-|[/APPCONTAINER](../../build/reference/appcontainer.md)|Gibt an, ob die app in einer AppContainer ausgeführt werden muss, z. B. eine UWP-app.|
-|[/BIND](../../build/reference/bind.md)|Legt die Adressen für die Einstiegspunkte in die angegebenen Objekte zur Ladezeit Geschwindigkeit fest.|
-|[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Gibt an, ob die DLL oder ausführbaren Images nach dem Zufallsprinzip zur Ladezeit ein REBASE ausgeführt werden kann mit der Adresse Space Layout Randomization (ASLR).|
-|[/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Berichte von internen Fehlern an Microsoft.|
-|[/HEAP](../../build/reference/heap.md)|Legt die Größe des Heaps für das ausführbare Image in Bytes fest.|
-|[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Gibt an, ob die DLL oder ausführbaren Images mit hoher Entropie (64-Bit) Adresse Space Layout Randomization (ASLR) unterstützt.|
-|[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Gibt an, ob die digitale Signatur beim Laden der überprüft werden soll.|
-|[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Gibt an, ob das Objekt Adressen unterstützt, die größer als 2 GB sind.|
-|[/NOLOGO](../../build/reference/nologo-editbin.md)|Unterdrückt den Startbanner EDITBIN an.|
-|[/NXCOMPAT](../../build/reference/nxcompat.md)|Gibt an, ob das ausführbare Image mit Windows-Datenausführungsverhinderung kompatibel ist.|
-|[/REBASE](../../build/reference/rebase.md)|Legt fest, die Basisadressen für den angegebenen Objekten.|
-|[/RELEASE](../../build/reference/release.md)|Legt die Prüfsumme im Header fest.|
-|[/SECTION](../../build/reference/section-editbin.md)|Überschreibt die Attribute eines Abschnitts.|
-|[/STACK](../../build/reference/stack.md)|Legt das ausführbare Image Stapelgröße in Bytes fest.|
-|[/SUBSYSTEM](../../build/reference/subsystem.md)|Gibt an, der die ausführungsumgebung.|
-|[/SWAPRUN](../../build/reference/swaprun.md)|Gibt an, dass das ausführbare Image in die Auslagerungsdatei kopiert, und klicken Sie dann von dort aus ausgeführt werden muss.|
-|[/TSAWARE](../../build/reference/tsaware.md)|Gibt an, dass die app in einer Umgebung mit mehreren Benutzern ausgeführt werden sollen.|
-|[/VERSION](../../build/reference/version.md)|Legt die Versionsnummer im Header fest.|
+|[/ALLOWBIND](allowbind.md)|Gibt an, ob eine DLL gebunden werden kann.|
+|[/ALLOWISOLATION](allowisolation.md)|Gibt an, DLL oder ausführbare Datei Manifestsuche Verhalten.|
+|[/APPCONTAINER](appcontainer.md)|Gibt an, ob die app in einer AppContainer ausgeführt werden muss, z. B. eine UWP-app.|
+|[/BIND](bind.md)|Legt die Adressen für die Einstiegspunkte in die angegebenen Objekte zur Ladezeit Geschwindigkeit fest.|
+|[/DYNAMICBASE](dynamicbase.md)|Gibt an, ob die DLL oder ausführbaren Images nach dem Zufallsprinzip zur Ladezeit ein REBASE ausgeführt werden kann mit der Adresse Space Layout Randomization (ASLR).|
+|[/ERRORREPORT](errorreport-editbin-exe.md)|Berichte von internen Fehlern an Microsoft.|
+|[/HEAP](heap.md)|Legt die Größe des Heaps für das ausführbare Image in Bytes fest.|
+|[/HIGHENTROPYVA](highentropyva.md)|Gibt an, ob die DLL oder ausführbaren Images mit hoher Entropie (64-Bit) Adresse Space Layout Randomization (ASLR) unterstützt.|
+|[/INTEGRITYCHECK](integritycheck.md)|Gibt an, ob die digitale Signatur beim Laden der überprüft werden soll.|
+|[/LARGEADDRESSAWARE](largeaddressaware.md)|Gibt an, ob das Objekt Adressen unterstützt, die größer als 2 GB sind.|
+|[/NOLOGO](nologo-editbin.md)|Unterdrückt den Startbanner EDITBIN an.|
+|[/NXCOMPAT](nxcompat.md)|Gibt an, ob das ausführbare Image mit Windows-Datenausführungsverhinderung kompatibel ist.|
+|[/REBASE](rebase.md)|Legt fest, die Basisadressen für den angegebenen Objekten.|
+|[/RELEASE](release.md)|Legt die Prüfsumme im Header fest.|
+|[/SECTION](section-editbin.md)|Überschreibt die Attribute eines Abschnitts.|
+|[/STACK](stack.md)|Legt das ausführbare Image Stapelgröße in Bytes fest.|
+|[/SUBSYSTEM](subsystem.md)|Gibt an, der die ausführungsumgebung.|
+|[/SWAPRUN](swaprun.md)|Gibt an, dass das ausführbare Image in die Auslagerungsdatei kopiert, und klicken Sie dann von dort aus ausgeführt werden muss.|
+|[/TSAWARE](tsaware.md)|Gibt an, dass die app in einer Umgebung mit mehreren Benutzern ausgeführt werden sollen.|
+|[/VERSION](version.md)|Legt die Versionsnummer im Header fest.|
 
 ## <a name="see-also"></a>Siehe auch
 
-[C/C++-Buildtools](../../build/reference/c-cpp-build-tools.md)<br/>
-[EDITBIN-Referenz](../../build/reference/editbin-reference.md)
+[Zusätzliche MSVC-Buildtools](c-cpp-build-tools.md)<br/>
+[EDITBIN-Referenz](editbin-reference.md)

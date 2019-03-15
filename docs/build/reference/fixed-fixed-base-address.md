@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -FIXED linker option
 - FIXED linker option
 ms.assetid: 929bba5e-b7d8-40ed-943e-056aa3710fc5
-ms.openlocfilehash: ccb89b7dfed78ddebf73aaf6e2a1a8529b065042
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6cc89df76e48ee258a7c6608aab12573ab11729b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423039"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811523"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (Feste Basisadresse)
 
@@ -25,7 +25,7 @@ ms.locfileid: "57423039"
 
 ## <a name="remarks"></a>Hinweise
 
-Weist das Betriebssystem an, das Programm nur an seine bevorzugte Basisadresse zu laden. Wenn diese Basisadresse nicht zur Verfügung steht, lädt das Betriebssystem die Datei nicht. Weitere Informationen finden Sie unter [/BASE (Basisadresse)](../../build/reference/base-base-address.md).
+Weist das Betriebssystem an, das Programm nur an seine bevorzugte Basisadresse zu laden. Wenn diese Basisadresse nicht zur Verfügung steht, lädt das Betriebssystem die Datei nicht. Weitere Informationen finden Sie unter [/BASE (Basisadresse)](base-base-address.md).
 
 Für eine DLL ist "/FIXED:NO" die Standardeinstellung; bei anderen Projekttypen lautet die Standardeinstellung "/FIXED".
 
@@ -35,7 +35,7 @@ Bei Angabe von "/FIXED:NO" wird ein Verschiebungsabschnitt im Programm generiert
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Linker** Ordner.
 
@@ -49,5 +49,5 @@ Bei Angabe von "/FIXED:NO" wird ein Verschiebungsabschnitt im Programm generiert
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

@@ -2,16 +2,16 @@
 title: Auswählen des Formats von .netmodule-Eingabedateien
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-ms.openlocfilehash: ed492e47c09c05fc8ce2af3e19822cc5dde47b63
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420049"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807324"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Auswählen des Formats von .netmodule-Eingabedateien
 
-Eine MSIL-OBJ-Datei (kompiliert mit ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md)) kann auch als eine NETMODULE-Datei verwendet werden.  OBJ-Dateien enthalten die Metadaten und systemeigene Symbole.  NETMODULE-Dateien enthalten nur Metadaten.
+Eine MSIL-OBJ-Datei (kompiliert mit ["/ CLR"](clr-common-language-runtime-compilation.md)) kann auch als eine NETMODULE-Datei verwendet werden.  OBJ-Dateien enthalten die Metadaten und systemeigene Symbole.  NETMODULE-Dateien enthalten nur Metadaten.
 
 Sie können eine MSIL-OBJ-Datei an einem beliebigen anderen Visual Studio-Compiler übergeben, über die/addmodule-Compileroption (aber beachten Sie, dass die OBJ-Datei der resultierenden Assembly Teil, und mit der Assembly geliefert werden muss.)  Beispielsweise haben in Visual c# und Visual Basic/addmodule-Compileroption.
 
@@ -22,11 +22,11 @@ OBJ-Dateien, zusammen mit ihren zugeordneten h-Dateien, die, die Sie über verwe
 
 Andere Visual Studio-Compiler können nur mit verwaltete Typen aus einem Modul nutzen.
 
-Verwenden Sie Folgendes, um zu bestimmen, ob Sie eine NETMODULE-Datei oder eine OBJ-Datei als Moduleingabe für den Visual C++-Linker verwenden müssen:
+Verwenden Sie Folgendes, um zu bestimmen, ob Sie eine NETMODULE-Datei oder eine OBJ-Datei als Moduleingabe für den MSVC-Linker verwenden möchten:
 
 - Wenn Sie mit einem Visual Studio-Compiler als Visual C++ erstellen, erstellen Sie einer NETMODULE-Datei, und verwenden Sie die NETMODULE-Datei als Eingabe für den Linker.
 
-- Wenn Sie Visual C++-Compiler zum Erzeugen von Modulen und verwenden Wenn die Module verwendet werden soll, um etwas anderes als eine Bibliothek erstellen, verwenden Sie die OBJ-Dateien, die vom Compiler als Moduleingabe für den Linker erstellt; Verwenden Sie nicht die NETMODULE-Datei als Eingabe.
+- Wenn Sie den MSVC-Compiler mithilfe erzeugen Module und wenn die Module verwendet werden soll, um etwas anderes als eine Bibliothek, zu erstellen, verwenden die OBJ-Dateien, die vom Compiler als Moduleingabe für den Linker erstellt; Verwenden Sie nicht die NETMODULE-Datei als Eingabe.
 
 - Wenn Ihre Module zur Erstellung einer systemeigenen (keine verwaltete)-Bibliothek verwendet werden, verwenden Sie die OBJ-Dateien als Moduleingabe für den Linker aus, und generieren Sie eine LIB-Datei für Bibliothek.
 
@@ -36,4 +36,4 @@ Verwenden Sie Folgendes, um zu bestimmen, ob Sie eine NETMODULE-Datei oder eine 
 
 ## <a name="see-also"></a>Siehe auch
 
-[.NETMODULE-Dateien als Eingabe für den Linker](../../build/reference/netmodule-files-as-linker-input.md)
+[.NETMODULE-Dateien als Eingabe für den Linker](netmodule-files-as-linker-input.md)

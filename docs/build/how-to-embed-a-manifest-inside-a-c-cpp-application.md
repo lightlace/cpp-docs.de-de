@@ -6,16 +6,16 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: b1bff23c91b465d697cc52a2b893ece5be3764b1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412899"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809781"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Vorgehensweise: Einbetten eines Manifests in eine C/C++-Anwendung
 
-Es wird empfohlen, dass eine C/C++-Anwendung (oder Bibliothek) haben das Manifest in die endgültige Binärdatei eingebettet werden, da so gewährleistet, dass richtige Laufzeitverhalten führen konnte in den meisten Szenarien. Standardmäßig versucht Visual Studio das Manifest eingebettet, wenn es sich um ein Projekt aus Quelldateien erstellt. finden Sie unter [Manifest Generation in Visual Studio](../build/manifest-generation-in-visual-studio.md) für Weitere Informationen. Wenn eine Anwendung mithilfe von Nmake erstellt wird, gibt jedoch einige Änderungen an der vorhandenen Makefile erforderlich. In diesem Abschnitt wird veranschaulicht, wie vorhandene Makefiles zum Einbetten von des Manifests in die endgültige Binärdatei automatisch geändert wird.
+Es wird empfohlen, dass eine C/C++-Anwendung (oder Bibliothek) haben das Manifest in die endgültige Binärdatei eingebettet werden, da so gewährleistet, dass richtige Laufzeitverhalten führen konnte in den meisten Szenarien. Standardmäßig versucht Visual Studio das Manifest eingebettet, wenn es sich um ein Projekt aus Quelldateien erstellt. finden Sie unter [Manifest Generation in Visual Studio](manifest-generation-in-visual-studio.md) für Weitere Informationen. Wenn eine Anwendung mithilfe von Nmake erstellt wird, gibt jedoch einige Änderungen an der vorhandenen Makefile erforderlich. In diesem Abschnitt wird veranschaulicht, wie vorhandene Makefiles zum Einbetten von des Manifests in die endgültige Binärdatei automatisch geändert wird.
 
 ## <a name="two-approaches"></a>Zwei Ansätze
 
@@ -255,4 +255,4 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 
 ## <a name="see-also"></a>Siehe auch
 
-[Manifestgenerierung für C/C++-Programme](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Manifestgenerierung für C/C++-Programme](understanding-manifest-generation-for-c-cpp-programs.md)

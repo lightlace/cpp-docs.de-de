@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], options for full linking
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-ms.openlocfilehash: 60cec41173afc9955bddf9df0bd6796b5df6285c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414082"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816138"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (inkrementell verknüpfen)
 
@@ -54,7 +54,7 @@ Die meisten Programme können inkrementell verknüpft werden. Einige Änderungen
 
 - "/ORDER" wurde ausgewählt.
 
-/ INCREMENTAL wird impliziert, wenn [/DEBUG](../../build/reference/debug-generate-debug-info.md) angegeben ist.
+/ INCREMENTAL wird impliziert, wenn [/DEBUG](debug-generate-debug-info.md) angegeben ist.
 
 Außerdem führt "LINK" einen vollständigen Verknüpfungsvorgang durch, wenn eine der folgenden Situationen eintritt:
 
@@ -72,7 +72,7 @@ Außerdem führt "LINK" einen vollständigen Verknüpfungsvorgang durch, wenn ei
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Linker** Ordner.
 
@@ -86,5 +86,5 @@ Außerdem führt "LINK" einen vollständigen Verknüpfungsvorgang durch, wenn ei
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)
+[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkeroptionen](linker-options.md)

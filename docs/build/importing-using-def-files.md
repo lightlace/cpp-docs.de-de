@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: f6e553a85e6c17a3ea914365ad29ad5136e50629
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424776"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815332"
 ---
 # <a name="importing-using-def-files"></a>Importieren mithilfe von DEF-Dateien
 
@@ -59,8 +59,8 @@ if (ulDataInDll == 0L)   /*sample code fragment*/
 
 Konstante riskanter ist, da Sie vergessen, die zusätzliche Ebene der Dereferenzierung, Sie möglicherweise die Importadresstabelle Zeiger auf die Variable zugreifen könnten, nicht auf die Variable selbst. Diese Art von Problem kann häufig als eine zugriffsverletzung Ergebnissen führen, da die Importadresstabelle derzeit durch den Compiler und Linker schreibgeschützt ist.
 
-Die aktuelle Visual C++-Linker gibt eine Warnung, solche Konstante in der DEF-Datei für diesen Fall berücksichtigen. Der einzige wirkliche Grund für die Konstante ist, wenn Sie eine Objektdatei, wo die Header-Datei nicht aufgeführt neu kompilieren können **von "__declspec(dllimport)" "** für den Prototyp.
+Der aktuelle MSVC-Linker gibt eine Warnung, solche Konstante in der DEF-Datei für diesen Fall berücksichtigen. Der einzige wirkliche Grund für die Konstante ist, wenn Sie eine Objektdatei, wo die Header-Datei nicht aufgeführt neu kompilieren können **von "__declspec(dllimport)" "** für den Prototyp.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Importieren in eine Anwendung](../build/importing-into-an-application.md)
+[Importieren in eine Anwendung](importing-into-an-application.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 17255a5671880063f030ed0087c1fa839c5a14ef
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 21c812efd101c64e250a545d2a40df6adc31c414
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421371"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813954"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Vorgehensweise: Konfigurieren von Visual C++-Projekte für 64-Bit-X64 Plattformen
 
@@ -21,7 +21,7 @@ Sie können die Projektkonfigurationen in Visual Studio-IDE verwenden, C++-Anwen
 
 1. Öffnen Sie das C++-Projekt, das Sie konfigurieren möchten.
 
-1. Öffnen Sie die Eigenschaftenseiten für das betreffende Projekt. Weitere Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).
+1. Öffnen Sie die Eigenschaftenseiten für das betreffende Projekt. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](working-with-project-properties.md).
 
    > [!NOTE]
    > Für .NET-Projekte, stellen sicher, dass die **Konfigurationseigenschaften** Knotens oder einer seiner Unterknoten ausgewählt ist der  **\<Projectname > Property Pages** Dialogfeld ist, andernfalls die  **Konfigurations-Manager** Schaltfläche ist weiterhin nicht verfügbar.
@@ -43,21 +43,20 @@ Sie können die Projektkonfigurationen in Visual Studio-IDE verwenden, C++-Anwen
 
 - Wenn das Dialogfeld **Neue Projektmappenplattform** geöffnet ist, während Sie ein Projekt für eine 64-Bit-Zielplattform einrichten, wählen Sie in der Dropdownliste **Einstellungen kopieren von** den Wert **Win32**aus. Diese Projekteinstellungen werden auf der Projektebene automatisch aktualisiert:
 
-  - Die Linkeroption [/MACHINE](../build/reference/machine-specify-target-platform.md) wird auf **/MACHINE:X64**festgelegt.
+  - Die Linkeroption [/MACHINE](reference/machine-specify-target-platform.md) wird auf **/MACHINE:X64**festgelegt.
 
-  - **Ausgabe registrieren** ist deaktiviert. Weitere Informationen finden Sie unter [Linker Property Pages](../ide/linker-property-pages.md).
+  - **Ausgabe registrieren** ist deaktiviert. Weitere Informationen finden Sie unter [Linker Property Pages](reference/linker-property-pages.md).
 
-  - **Zielumgebung** wird auf **/env x64**festgelegt. Weitere Informationen finden Sie unter [Eigenschaftenseiten "MIDL": Allgemeine](../ide/midl-property-pages-general.md).
+  - **Zielumgebung** wird auf **/env x64**festgelegt. Weitere Informationen finden Sie unter [Eigenschaftenseiten "MIDL": Allgemeine](reference/midl-property-pages-general.md).
 
-  - **Parameter überprüfen** wird deaktiviert und auf den Standardwert zurückgesetzt. Weitere Informationen finden Sie unter [Eigenschaftenseiten "MIDL": Erweiterte](../ide/midl-property-pages-advanced.md).
+  - **Parameter überprüfen** wird deaktiviert und auf den Standardwert zurückgesetzt. Weitere Informationen finden Sie unter [Eigenschaftenseiten "MIDL": Erweiterte](reference/midl-property-pages-advanced.md).
 
-  - Wenn **Debuginformationsformat** in der Win32-Projektkonfiguration auf **/ZI** festgelegt war, wird der Wert in der 64-Bit-Projektkonfiguration auf **/Zi** festgelegt. Weitere Informationen finden Sie unter [/Z7, /Zi, /ZI (Debuginformationsformat)](../build/reference/z7-zi-zi-debug-information-format.md).
+  - Wenn **Debuginformationsformat** in der Win32-Projektkonfiguration auf **/ZI** festgelegt war, wird der Wert in der 64-Bit-Projektkonfiguration auf **/Zi** festgelegt. Weitere Informationen finden Sie unter [/Z7, /Zi, /ZI (Debuginformationsformat)](reference/z7-zi-zi-debug-information-format.md).
 
   > [!NOTE]
   > Keine dieser Projekteigenschaften wird geändert, wenn sie auf der Dateiebene überschrieben werden.
 
 ## <a name="see-also"></a>Siehe auch
 
-[.NET Framework-64-Bit-Anwendungen](/dotnet/framework/64-bit-apps)<br/>
-[Konfigurieren von Visual C++ für 64-Bit-x64-Ziele](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Konfigurieren von C++-Projekten für 64-Bit-X64 Ziele](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Debuggen von 64-Bit-Anwendungen](/visualstudio/debugger/debug-64-bit-applications)

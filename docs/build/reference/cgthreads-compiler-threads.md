@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -CGTHREADS linker option
 - CGTHREADS linker option
 ms.assetid: 4b52cfdb-3702-470b-9580-fabeb1417488
-ms.openlocfilehash: e2e1a51dcff46601034ed18292e9c4dcf4bd7d5c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b778802d3fffcaafc0cf01ac46ae85c4efbef95c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413939"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809534"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (Compilerthreads)
 
@@ -30,13 +30,13 @@ Die maximale Anzahl von Threads zur Verwendung für cl.exe, im Bereich von 1 bis
 
 ## <a name="remarks"></a>Hinweise
 
-Die **/cgthreads** Option gibt die maximale Anzahl von Threads cl.exe verwendet parallel an, für die Optimierung und codegenerierung Phasen der Kompilierung verwendet, wenn die Link-Time code Generation (["/ LTCG"](../../build/reference/ltcg-link-time-code-generation.md)) ist angegeben. Standardmäßig verwendet cl.exe vier Threads, als ob **/CGTHREADS:4** wurden angegeben. Wenn mehr Prozessorkerne verfügbar sind, kann ein höherer `number`-Wert die Builderstellung beschleunigen.
+Die **/cgthreads** Option gibt die maximale Anzahl von Threads cl.exe verwendet parallel an, für die Optimierung und codegenerierung Phasen der Kompilierung verwendet, wenn die Link-Time code Generation (["/ LTCG"](ltcg-link-time-code-generation.md)) ist angegeben. Standardmäßig verwendet cl.exe vier Threads, als ob **/CGTHREADS:4** wurden angegeben. Wenn mehr Prozessorkerne verfügbar sind, kann ein höherer `number`-Wert die Builderstellung beschleunigen.
 
-Für einen Build können mehrere Stufen der Parallelität angegeben werden. Der msbuild.exe-Switch **maxcpucount** gibt die Anzahl der MSBuild-Prozesse, die parallel ausgeführt werden können. Die [/MP (erstellen mit mehreren Prozessen)](../../build/reference/mp-build-with-multiple-processes.md) -Compilerflag gibt die Anzahl der cl.exe-Prozesse, die die Quelldateien gleichzeitig zu kompilieren. Die [/cgthreads](../../build/reference/cgthreads-code-generation-threads.md) Compileroption gibt die Anzahl der Threads, die von jedem cl.exe-Prozess verwendet. Da der Prozessor nur so viele Threads gleichzeitig ausführen kann, wie Prozessorkerne vorhanden sind, ist es nicht sinnvoll, größere Werte für all diese Optionen gleichzeitig anzugeben. Das kann sogar kontraproduktiv sein. Weitere Informationen zum Erstellen von Projekten parallel, finden Sie unter [Erstellen von mehreren Projekten gleichzeitig](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
+Für einen Build können mehrere Stufen der Parallelität angegeben werden. Der msbuild.exe-Switch **maxcpucount** gibt die Anzahl der MSBuild-Prozesse, die parallel ausgeführt werden können. Die [/MP (erstellen mit mehreren Prozessen)](mp-build-with-multiple-processes.md) -Compilerflag gibt die Anzahl der cl.exe-Prozesse, die die Quelldateien gleichzeitig zu kompilieren. Die [/cgthreads](cgthreads-code-generation-threads.md) Compileroption gibt die Anzahl der Threads, die von jedem cl.exe-Prozess verwendet. Da der Prozessor nur so viele Threads gleichzeitig ausführen kann, wie Prozessorkerne vorhanden sind, ist es nicht sinnvoll, größere Werte für all diese Optionen gleichzeitig anzugeben. Das kann sogar kontraproduktiv sein. Weitere Informationen zum Erstellen von Projekten parallel, finden Sie unter [Erstellen von mehreren Projekten gleichzeitig](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften**, **Linker** Ordner.
 
@@ -50,5 +50,5 @@ Für einen Build können mehrere Stufen der Parallelität angegeben werden. Der 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Linkeroptionen](../../build/reference/linker-options.md)<br/>
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)
+[MSVC-Linkeroptionen](linker-options.md)<br/>
+[MSVC-Linker-Referenz](linking.md)

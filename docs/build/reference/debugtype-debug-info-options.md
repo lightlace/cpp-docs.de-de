@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-ms.openlocfilehash: c4a24d79295c1f7dbbe645c4a6e52f58b4a08807
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 00e3cb61f8ec9aa707bb72aa9ff05a64f98d4e47
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423495"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820051"
 ---
 # <a name="debugtype-debug-info-options"></a>/ DEBUGTYPE (Debuginformationsoptionen)
 
@@ -40,11 +40,11 @@ Argumente für **/DEBUGTYPE** kann in einer beliebigen Reihenfolge kombiniert we
 
 Verwenden der **/DEBUGTYPE** Option aus, um die Einbindung der Verschiebung-Tabelle-Daten oder der pdata- und XData-Headerinformationen im Debugstream anzugeben. Dadurch schließt der Linker Informationen über Benutzermoduscode mit ein, der in einem Kerneldebugger sichtbar ist, wenn die Aufschlüsselung in einen Kernelmoduscode erfolgt. Wenn Debugsymbole zur Verfügung stellen **FIXUP** wird angegeben, umfassen die **CV** Argument.
 
-So debuggen Sie Code im Benutzermodus, der für Anwendungen typisch ist, die **/DEBUGTYPE** Option ist nicht erforderlich. In der Standardeinstellung die Compilerschaltern, die angeben, Debuggen von Ausgabe ([/Z7, / Zi, / Zi](../../build/reference/z7-zi-zi-debug-information-format.md)) alle die Informationen vom Visual Studio debugger benötigt-ausgeben. Verwendung **/DEBUGTYPE:PDATA** oder **/DEBUGTYPE:CV, PDATA, FIXUP** , Code zu debuggen, der Benutzermodus- und Kernelmodus-Komponenten, z. B. eine Konfigurations-app für einen Gerätetreiber kombiniert. Weitere Informationen über kernelmodusdebugger finden Sie unter [Debugging-Tools für Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)
+So debuggen Sie Code im Benutzermodus, der für Anwendungen typisch ist, die **/DEBUGTYPE** Option ist nicht erforderlich. In der Standardeinstellung die Compilerschaltern, die angeben, Debuggen von Ausgabe ([/Z7, / Zi, / Zi](z7-zi-zi-debug-information-format.md)) alle die Informationen vom Visual Studio debugger benötigt-ausgeben. Verwendung **/DEBUGTYPE:PDATA** oder **/DEBUGTYPE:CV, PDATA, FIXUP** , Code zu debuggen, der Benutzermodus- und Kernelmodus-Komponenten, z. B. eine Konfigurations-app für einen Gerätetreiber kombiniert. Weitere Informationen über kernelmodusdebugger finden Sie unter [Debugging-Tools für Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)
 
 ## <a name="see-also"></a>Siehe auch
 
-[/DEBUG (Debuginfo generieren)](../../build/reference/debug-generate-debug-info.md)<br/>
-[/DRIVER (Windows NT-Kernelmodustreiber)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)<br/>
-[/PROFILE (Leistungstoolprofiler)](../../build/reference/profile-performance-tools-profiler.md)<br/>
+[/DEBUG (Debuginfo generieren)](debug-generate-debug-info.md)<br/>
+[/DRIVER (Windows NT-Kernelmodustreiber)](driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE (Leistungstoolprofiler)](profile-performance-tools-profiler.md)<br/>
 [Debugtools für Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)

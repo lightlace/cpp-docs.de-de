@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416448"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813967"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Exemplarische Vorgehensweise: Erstellen Sie und verwenden Sie Ihren eigenen Dynamic Link Library (C++)
 
@@ -29,11 +29,11 @@ In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben behandelt:
 
 - Führen Sie die fertige app.
 
-Wie Sie eine statisch verknüpfte Bibliothek, eine DLL _exportiert_ Variablen, Funktionen und Ressourcen nach Namen und Ihre app _importiert_ diesen Namen verwenden Sie diese Variablen, Funktionen und Ressourcen. Im Gegensatz zu einer statisch verknüpften Bibliothek Windows die Importe in Ihrer app eine Verbindung mit her die Exporte in einer DLL zur Ladezeit oder zur Laufzeit statt zum Zeitpunkt der Verknüpfung verbinden. Windows ist zusätzlichen Informationen, der Teil des Modells, standard C++ Kompilierung dieser Verbindungen ist nicht erforderlich. Visual C++-Compiler implementiert einige Microsoft-spezifische Erweiterungen für C++, um diese zusätzlichen Informationen bereitzustellen. Diese Erweiterungen wird erläutert, wie wir wechseln.
+Wie Sie eine statisch verknüpfte Bibliothek, eine DLL _exportiert_ Variablen, Funktionen und Ressourcen nach Namen und Ihre app _importiert_ diesen Namen verwenden Sie diese Variablen, Funktionen und Ressourcen. Im Gegensatz zu einer statisch verknüpften Bibliothek Windows die Importe in Ihrer app eine Verbindung mit her die Exporte in einer DLL zur Ladezeit oder zur Laufzeit statt zum Zeitpunkt der Verknüpfung verbinden. Windows ist zusätzlichen Informationen, der Teil des Modells, standard C++ Kompilierung dieser Verbindungen ist nicht erforderlich. Der MSVC-Compiler implementiert einige Microsoft-spezifische Erweiterungen für C++, um diese zusätzlichen Informationen bereitzustellen. Diese Erweiterungen wird erläutert, wie wir wechseln.
 
 In dieser exemplarischen Vorgehensweise erstellt zwei Visual Studio-Projektmappen. eine, die die DLL erstellt, und eine, die die Client-app erstellt. Die DLL verwendet der C-Aufrufkonvention, damit sie kann, von apps aufgerufen werden mithilfe von anderen Sprachen erstellt werden, solange der Plattform und das Aufrufen und Verknüpfen von Konventionen übereinstimmen. Der Client-app verwendet _implizite Verknüpfung_, wobei Windows die app auf die DLL zur Ladezeit verknüpft ist. Diese Verknüpfung können die app, die die bereitgestellte DLL-Funktionen wie die Funktionen in einer statisch verknüpften Bibliothek aufrufen.
 
-In dieser exemplarischen Vorgehensweise behandelt nicht allgemeinen Situationen. Die Verwendung von C++-DLLs von anderen Programmiersprachen nicht angezeigt. Es erläutert nicht zum Erstellen einer reinen Ressourcen DLL. Es zeigt auch nicht die Verwendung der expliziten Verknüpfung zum Laden von DLLs zur Laufzeit anstatt zur Ladezeit an. Das beruhigende Gefühl, Visual C++ können Sie all diese Aufgaben können. Links zu weiteren Informationen über DLLs finden Sie [-DLLs in Visual C++](../build/dlls-in-visual-cpp.md). Weitere Informationen über implizite Verknüpfen und explizites verknüpfen, finden Sie unter [Bestimmen der geeigneten Verknüpfungsmethode](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Weitere Informationen zum Erstellen von C++-DLLs für die Verwendung mit Programmiersprachen zu vergleichen, die Konventionen der Programmiersprache C-Verknüpfung verwenden, finden Sie unter [Exportieren von C++-Funktionen für die Verwendung in ausführbaren c-Dateien](../build/exporting-cpp-functions-for-use-in-c-language-executables.md). Weitere Informationen zum Erstellen von DLLs für die Verwendung mit Sprachen für .NET finden Sie unter [Aufrufen von DLL-Funktionen von Visual Basic-Anwendungen](../build/calling-dll-functions-from-visual-basic-applications.md).
+In dieser exemplarischen Vorgehensweise behandelt nicht allgemeinen Situationen. Die Verwendung von C++-DLLs von anderen Programmiersprachen nicht angezeigt. Es erläutert nicht zum Erstellen einer reinen Ressourcen DLL. Es zeigt auch nicht die Verwendung der expliziten Verknüpfung zum Laden von DLLs zur Laufzeit anstatt zur Ladezeit an. Das beruhigende Gefühl, Visual C++ können Sie all diese Aufgaben können. Links zu weiteren Informationen über DLLs finden Sie [-DLLs in Visual C++](dlls-in-visual-cpp.md). Weitere Informationen über implizite Verknüpfen und explizites verknüpfen, finden Sie unter [Bestimmen der geeigneten Verknüpfungsmethode](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Weitere Informationen zum Erstellen von C++-DLLs für die Verwendung mit Programmiersprachen zu vergleichen, die Konventionen der Programmiersprache C-Verknüpfung verwenden, finden Sie unter [Exportieren von C++-Funktionen für die Verwendung in ausführbaren c-Dateien](exporting-cpp-functions-for-use-in-c-language-executables.md). Weitere Informationen zum Erstellen von DLLs für die Verwendung mit Sprachen für .NET finden Sie unter [Aufrufen von DLL-Funktionen von Visual Basic-Anwendungen](calling-dll-functions-from-visual-basic-applications.md).
 
 In dieser exemplarischen Vorgehensweise wird Visual Studio 2017 verwendet, aber der Code und die meisten Anweisungen gelten für frühere Versionen. Die Schritte zum Erstellen von neuer Projekten geändert in Visual Studio 2017 Version 15.3 ab. In dieser exemplarischen Vorgehensweise wird beschrieben, wie zum Erstellen von Projekten für neuere und ältere Versionen. Suchen Sie nach den Schritten, die der Visual Studio-Version entsprechen.
 
@@ -400,7 +400,4 @@ Wenn Sie Ihre app bereitstellen, müssen Sie auch die DLLs bereitstellen, verwen
 
 ## <a name="see-also"></a>Siehe auch
 
-[DLLs in Visual C++](../build/dlls-in-visual-cpp.md)<br/>
-[Deploying Desktop Applications (Bereitstellen von Desktopanwendungen)](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[Exemplarische Vorgehensweise: Bereitstellen des Programms (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
-[Aufrufen von DLL-Funktionen aus Visual Basic-Anwendungen heraus](../build/calling-dll-functions-from-visual-basic-applications.md)
+[Aufrufen von DLL-Funktionen aus Visual Basic-Anwendungen heraus](calling-dll-functions-from-visual-basic-applications.md)
