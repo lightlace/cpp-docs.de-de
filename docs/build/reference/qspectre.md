@@ -5,12 +5,12 @@ f1_keywords:
 - /Qspectre
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: af04a905fdb3b509a90249c6d55a28ccdaa39318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507314"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812459"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -36,7 +36,7 @@ Wenn Ihr Code ausgeführt wird, auf Daten, die eine Vertrauensgrenze gekreuzt em
 
 ### <a name="availability"></a>Verfügbarkeit
 
-Die **"/ qspectre"** Option ist verfügbar in Visual Studio 2017 Version 15.5.5 und alle Updates für Microsoft Visual C++-Compiler (MSVC) vorgenommen werden, am oder nach dem 23. Januar 2018. Verwenden Sie Visual Studio-Installer, um den Compiler zu aktualisieren und die Bibliotheken mit Spectre-verringert als einzelne Komponenten zu installieren. Die **"/ qspectre"** Option steht auch in Visual Studio 2015 Update 3 über einen Patch. Weitere Informationen finden Sie unter [KB 4338871](https://support.microsoft.com/help/4338871).
+Die **"/ qspectre"** Option ist verfügbar in Visual Studio 2017 Version 15.5.5 und alle Updates für Microsoft-MSVC-Compiler (MSVC) vorgenommen werden, am oder nach dem 23. Januar 2018. Verwenden Sie Visual Studio-Installer, um den Compiler zu aktualisieren und die Bibliotheken mit Spectre-verringert als einzelne Komponenten zu installieren. Die **"/ qspectre"** Option steht auch in Visual Studio 2015 Update 3 über einen Patch. Weitere Informationen finden Sie unter [KB 4338871](https://support.microsoft.com/help/4338871).
 
 Alle Versionen von Visual Studio 2017 Version 15.5 und alle Preview-Versionen von Visual Studio 2017 Version 15.6 enthalten eine nicht dokumentierte Option, **/d2guardspecload**, entspricht das ursprüngliche Verhalten der **"/ qspectre"**. Sie können **/d2guardspecload** auf die gleichen Schutzmaßnahmen auf den Code in diesen Versionen des Compilers anwenden. Aktualisieren Sie Ihren Build mit **"/ qspectre"** im Compiler, die die Option; unterstützen die **"/ qspectre"** Option kann auch neue Lösungen unterstützen, in höheren Versionen des Compilers.
 
@@ -66,7 +66,7 @@ Weitere Informationen finden Sie den offiziellen [Microsoft Security Advisory AD
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Befehlszeile** Eigenschaftenseite.
 
@@ -78,6 +78,6 @@ Weitere Informationen finden Sie den offiziellen [Microsoft Security Advisory AD
 
 ## <a name="see-also"></a>Siehe auch
 
-[/Q-Optionen (Vorgänge auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[/Q-Optionen (Vorgänge auf niedriger Ebene)](q-options-low-level-operations.md)<br/>
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
