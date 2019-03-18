@@ -5,15 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e189ead864fe2be6e0ccb3bc76a58f2441740076
+ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651372"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58142554"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Compiler-Warnungen, die standardmäßig deaktiviert sind
-Der Compiler schließt Warnungen, die in der Standardeinstellung deaktiviert werden, da die meisten Entwickler nicht, um sie anzuzeigen möchten. In einigen Fällen stellen eine Auswahl im dar, sie oder allgemeine Idiome in älterem Code sind, oder profitieren Sie von einer Microsoft-Erweiterung für die Sprache. In anderen Fällen geben sie einen Bereich, in denen Programmierer oft falsche Annahmen zu machen die zu unerwarteten oder nicht definierten Verhalten führen können. Einige Warnungen möglicherweise großen abweichungen in der Bibliothek-Header. Die C-Runtime-Bibliotheken und die C++-Standardbibliotheken sollen keine Warnungen nur auf der Warnebene ausgegeben [/W4](../build/reference/compiler-option-warning-level.md).
+
+Der Compiler unterstützt Warnungen, die standardmäßig deaktiviert sind, da die meisten Entwickler diese nützliche nicht finden. In einigen Fällen warnen sie über eine Form Auswahl oder das allgemeine Idiome in älterem Code. Andere Warnungen sind zur Verwendung einer Microsoft-Erweiterung in der Sprache. In anderen Fällen geben sie einen Bereich, in denen Programmierer oft falsche Annahmen zu machen die zu unerwarteten oder nicht definierten Verhalten führen können. Wenn aktiviert, können einige Warnungen oft in der Bibliothek-Header angezeigt. Die C-Runtime-Bibliotheken und die C++-Standardbibliotheken sollen keine Warnungen nur auf der Warnebene ausgegeben [/W4](../build/reference/compiler-option-warning-level.md).
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>Aktivieren von Warnungen, die standardmäßig deaktiviert sind
 
@@ -31,9 +32,9 @@ Sie können Warnungen aktivieren, die normalerweise standardmäßig deaktiviert 
 
    `/Wall` aktiviert alle Warnungen, die standardmäßig deaktiviert sind. Wenn Sie diese Option verwenden, Sie können Deaktivieren einzelner Warnungen mithilfe der [/WD](../build/reference/compiler-option-warning-level.md) Option.
 
-- [/ w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
+- [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-   Dadurch können die Warnung *Nnnn* Ebene *L*.
+   Mit dieser Option können die Warnung *Nnnn* Ebene *L*.
 
 ## <a name="warnings-that-are-off-by-default"></a>Warnungen, die standardmäßig deaktiviert sind
 
@@ -43,7 +44,8 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höher standardmäßig de
 |-|-|
 |[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (Ebene 4)|Enumerator '*Bezeichner*"in einem Schalter der Enumeration'*Enumeration*" wird nicht von einer Case-Bezeichnung explizit behandelt|
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (Ebene 4)|Enumerator '*Bezeichner*"in einem Schalter der Enumeration'*Enumeration*" wird nicht verarbeitet|
-|C4191 (Ebene 3)|"*Operator*": unsichere Konvertierung von '*Type_of_expression*'to'*Type_required*"|
+| [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md) (Ebene 1) | "HRESULT" wird in "Bool" konvertiert werden sind Sie sicher, dass dies gewünscht ist? |
+| [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md) (Ebene 3)|"*Operator*": unsichere Konvertierung von '*Type_of_expression*'to'*Type_required*"|
 |[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) (Ebene 4)|"*Bezeichner*': Konvertierung von '*type1*'to'*Typ2*", möglicher Datenverlust|
 |[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md) (Ebene 4)|"*Operator*': Konvertierung von '*type1*'to'*Typ2*", möglicher Datenverlust|
 |[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) (Ebene 4)|"*Funktion*': Kein Funktionsprototyp angegeben: '()" zu "(void)" konvertiert|
@@ -64,7 +66,7 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höher standardmäßig de
 |C4388 (Ebene 4)|Konflikt zwischen 'signed' und 'unsigned'|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (Ebene 2)|"*Funktion*': Funktionssignatur enthält Typ '*Typ*'; C++-Objekte sind nicht sicher zwischen reinem Code übergeben und gemischtem bzw. systemeigenem|
 |C4426 (Ebene 1)|die optimierungskennzeichnungen wurden geändert, nachdem das Einschließen des Headers, möglicherweise aufgrund von #pragma optimize() <sup>14.1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (Ebene 4)|"*class1*': das Objektlayout unter" / vd2 "ändert sich aufgrund der virtuellen Basis '*Klasse2*"|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (Ebene 4)|"*class1*": Das Objektlayout unter "/ vd2" ändert sich aufgrund der virtuellen Basis '*Klasse2*"|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (Ebene 4)|Dynamic_cast von virtueller Basis '*class1*'to'*Klasse2*' kann in einigen Kontexten fehl|
 |C4444 (Ebene 3)|Höchste Ebene '__unaligned' ist in diesem Kontext nicht implementiert|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (Ebene 4)|Relative Includepfad enthält '..'|
@@ -97,6 +99,7 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höher standardmäßig de
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (Ebene 4)|'Abgeleitete Klasse': Der Zuweisungsoperator konnte nicht generiert werden, da auf einen Basisklassen-Zuweisungsoperator nicht zugegriffen werden kann|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (Ebene 1)|'digraphs' werden mit '-Ze' nicht unterstützt. Zeichenfolge '*Digraph*"nicht als alternatives Token für interpretiert"*Char*"|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (Ebene 3)|"*Instanz*": Erstellen eines lokalen static-Objekts ist nicht threadsicher|
+| C4643 (Ebene 4) | Deklarieren von Vorwärts "*Bezeichner*' im Namespace std ist nicht vom C++-Standard zulässig. <sup>15.8</sup> |
 |C4647 (Ebene 3)|Verändertes Programmverhalten: __is_pod (*Typ*) verfügt über unterschiedliche Wert in früheren Versionen|
 |C4654 (Ebene 4)|Einschließen von Code, die vor platziert der vorkompilierten Headerdatei wird, wird ignoriert. Fügen Sie dem vorkompilierten Header Code hinzu. <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (Ebene 4)|"*Symbol*"ist nicht definiert als ein Präprozessormakro, und Ersetzen Sie dabei mit "0" für"*Direktiven*"|
@@ -112,14 +115,18 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höher standardmäßig de
 |C4774 (Ebene 4)|"*Zeichenfolge*": im Argument erwartet Formatzeichenfolge *Anzahl* ist kein Zeichenfolgenliteral|
 |C4777 (Ebene 4)|"*Funktion*': Formatzeichenfolge"*Zeichenfolge*"erfordert ein Argument vom Typ"*type1*', Variadic-Argument, aber *Anzahl* weist den Typ "*Typ2*"|
 |C4786 (Ebene 3)|"*Symbol*': Objektname wurde gekürzt, um"*Anzahl*"Zeichen in den Informationen zum Debuggen|
+| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (Ebene 4) | Implizite Konvertierung von '*Typ*"in" bool ". Möglichen Informationsverlust <sup>16.0</sup> |
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (Ebene 4)|"*Bytes*'Bytes Abstand hinzugefügten nach dem Konstrukt'*Member_name*"|
+| [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) (Ebene 1) | "*Member*": Lokale Klassenmemberfunktion keinen Text enthalten. |
 |C4826 (Ebene 2)|Konvertierung von '*type1*'to'*Typ2*' ist signaturerweitert. Dies kann zu unerwartetem Laufzeitverhalten führen.|
 |C4837 (Ebene 4)|Trigraph gefunden: "?? *Zeichen*"ersetzt durch"*Zeichen*"|
 |C4841 (Ebene 4)|nicht standardmäßige Erweiterung verwendet: zusammengesetzter memberkennzeichner in Offsetof verwendeter Bezeichner|
 |C4842 (Ebene 4)|Das Ergebnis von 'Offsetof' wird auf einen Typ mit mehrfacher Vererbung ist nicht garantiert konsistent Compiler-Versionen|
 |[C4868](../error-messages/compiler-warnings/compiler-warning-c4868.md) (Ebene 4)|"_Datei_(*Line_number*)" erzwingen Compiler möglicherweise nicht die Reihenfolge der Auswertung von links nach rechts in der Initialisierungsliste|
-|[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md) (Ebene 1)|Breites Zeichenfolgenliteral umgewandelt zu "LPSTR"|
-|[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md) (Ebene 1)|Zeichenfolgenliteral umgewandelt zu "LPWSTR"|
+|[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md) (Ebene 1)|
+  Breites Zeichenfolgenliteral umgewandelt zu "LPSTR"|
+|[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md) (Ebene 1)|
+  Zeichenfolgenliteral umgewandelt zu "LPWSTR"|
 |[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (Ebene 1)|"*Deklarator*': eine GUID kann nur eine Klasse, Schnittstelle oder Namespace zugeordnet werden|
 |[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) (Ebene 1)|Unzulässige Kopierinitialisierung. Mehrere benutzerdefinierte Konvertierungen wurden implizit übernommen|
 |[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) (Ebene 4)|Es wird angenommen, dass die Typbibliothek für Anzahl-Bit-Pointer erstellt wurde|
@@ -141,7 +148,7 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höher standardmäßig de
 |C5035|Verwenden des Features "*Feature*' bewirkt, dass Funktion *Funktion* als gastcode kompiliert <sup>15.3</sup>|
 |C5036 (Ebene 1)|VarArgs-Funktion zeigerkonvertierung beim Kompilieren mit/Hybrid: x86arm64 "*type1*'to'*Typ2*" <sup>15.3</sup>|
 |[C5038](../error-messages/compiler-warnings/c5038.md) (Ebene 4)|Datenmember "*member1*"wird nach Datenmember initialisiert werden"*member2*" <sup>15.3</sup>|
-|C5039 (Ebene 4)|"*Funktion*': Zeiger oder Verweis auf die möglicherweise auslösende Funktion übergeben" extern "C-Funktion unter - EHc übergeben. Nicht definiertes Verhalten kann auftreten, wenn diese Funktion eine Ausnahme auslöst. <sup>Version 15.5</sup>|
+|C5039 (Ebene 4)|"*Funktion*': Zeiger oder Verweis auf die möglicherweise auslösende Funktion übergeben" extern "C-Funktion unter - EHc übergeben. Nicht definiertes Verhalten kann auftreten, wenn diese Funktion eine Ausnahme auslöst. <sup>15.5</sup>|
 |C5042 (Ebene 3)|"*Funktion*": Funktionsdeklarationen im Blockbereich können nicht "Inline" angegeben werden, in Standard-c++, entfernen Sie 'Inline'-Spezifizierer <sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Compiler fügt die Spectre-Entschärfung für die Auslastung des Arbeitsspeichers, wenn "/ qspectre" Schalter angegeben <sup>15.7</sup>|
 
@@ -150,6 +157,10 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höher standardmäßig de
 <sup>15.3</sup> diese Warnung ist verfügbar in Visual Studio 2017 Version 15.3.<br/>
 <sup>15.5</sup> diese Warnung ist verfügbar in Visual Studio 2017 Version 15.5.<br/>
 <sup>15.7</sup> diese Warnung wird in Visual Studio 2017 Version 15.7 ab.<br/>
+<sup>15.8</sup> diese Warnung wird in Visual Studio 2017 Version 15.8 ab.<br/>
+::: moniker range=">= vs-2019"
+<sup>16.0</sup> diese Warnung ist verfügbar in Visual Studio 2019 RTM.<br/>
+::: moniker-end
 <sup>Perm</sup> diese Warnung ist deaktiviert, es sei denn, die [/ PERMISSIVE--](../build/reference/permissive-standards-conformance.md) Compiler-Option festgelegt ist.<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Warnungen deaktivieren, wird standardmäßig in früheren Versionen
@@ -167,7 +178,7 @@ Diese Warnung wurde deaktiviert, wird standardmäßig in Versionen des Compilers
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (Ebene 4)|Fehlender Typspezifizierer - int wird angenommen. Hinweis: default-int wird von C++ nicht unterstützt|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (Ebene 4)|Fehlender Typspezifizierer - int wird angenommen. Hinweis: C# unterstützt nicht mehr standardmäßig-int|
 
 ## <a name="see-also"></a>Siehe auch
 
