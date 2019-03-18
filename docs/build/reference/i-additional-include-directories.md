@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6ec8b15e77fec5214013c484e617904ed29e8197
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412847"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807636"
 ---
 # <a name="i-additional-include-directories"></a>/ I (Zusätzliche Includeverzeichnisse)
 
@@ -38,7 +38,7 @@ Das Verzeichnis in der Liste der Verzeichnisse hinzugefügt werden, die nach Inc
 
 Um mehr als ein Verzeichnis hinzuzufügen, verwenden Sie diese Option mehr als einmal. Verzeichnisse werden durchsucht, nur bis zum angegebenen Includedatei gefunden wird.
 
-Können Sie diese Option mit dem ([/x (ignorieren Sie Include-Standardpfad)](../../build/reference/x-ignore-standard-include-paths.md)) Option.
+Können Sie diese Option mit dem ([/x (ignorieren Sie Include-Standardpfad)](x-ignore-standard-include-paths.md)) Option.
 
 Der Compiler sucht Verzeichnisse, in der folgenden Reihenfolge:
 
@@ -50,7 +50,7 @@ Der Compiler sucht Verzeichnisse, in der folgenden Reihenfolge:
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **allgemeine** Eigenschaftenseite.
 
@@ -70,5 +70,5 @@ CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
 
 ## <a name="see-also"></a>Siehe auch
 
-[Compileroptionen](../../build/reference/compiler-options.md)<br/>
-[Festlegen von Compileroptionen](../../build/reference/setting-compiler-options.md)
+[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
