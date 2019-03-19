@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: dcbec57c75b4dc6fb72a3b35040e12cab0e7111e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8848dca10a75bec6f5ff6251a3af5be8e9a7b6e6
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740879"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57816372"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Aktualisieren von Projekten von früheren Versionen von Visual C++
 
@@ -33,9 +33,18 @@ Datenquellen sind in einem getrennten Datenbankprojekt enthalten, sodass Sie die
 
 Weitere Informationen zum Aktualisieren der entsprechenden Windows-Versionen finden Sie unter [Ändern von WINVER und _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md).
 
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[Aktualisieren Ihres Codes auf die Universal CRT](upgrade-your-code-to-the-universal-crt.md)<br/>
+[Ändern von WINVER und _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
+[Fix your dependencies on library internals (Beheben Ihrer Abhängigkeiten auf bibliotheksinternen Elementen)](fix-your-dependencies-on-library-internals.md)<br/>
+[Gleitkomma-Migrationsprobleme](floating-point-migration-issues.md)<br/>
+[Verwenden von nativen Zielversionen in Visual Studio, um alte Projekte zu erstellen](use-native-multi-targeting.md)<br/>
+[In Visual Studio 2019 Preview veraltete Visual C++-Features](features-deprecated-in-visual-studio.md)<br/>
+[Buildsystemänderungen](build-system-changes.md)<br/>
+
 ## <a name="see-also"></a>Siehe auch
 
-[Buildsystemänderungen](../build/build-system-changes.md)<br/>
 [Neues bei Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Änderungsverlauf von Visual C++ von 2003 bis 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Nicht dem Standard entsprechendes Verhalten](../cpp/nonstandard-behavior.md)
