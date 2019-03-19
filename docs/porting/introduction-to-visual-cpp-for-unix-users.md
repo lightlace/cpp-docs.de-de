@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0cffdc2be00b4af9badbbbc80bcfef48b3f76e19
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747007"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57818374"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Einführung in Visual C++ für UNIX-Benutzer
 
@@ -37,7 +37,7 @@ Eine Anwendung, die aus mehreren Bibliotheken und ausführbaren Dateien besteht,
 
 ## <a name="importing-your-existing-code"></a>Importieren von vorhandenem Code
 
-Sie können den C++-Compiler verwenden, um vorhandenen Code zu erstellen, der für die Kompilierung mit oder ohne Makefile eingerichtet wurde. Sie können ihn außerdem in ein Visual Studio-Projekt einfügen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md).
+Sie können den C++-Compiler verwenden, um vorhandenen Code zu erstellen, der für die Kompilierung mit oder ohne Makefile eingerichtet wurde. Sie können ihn außerdem in ein Visual Studio-Projekt einfügen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../build/how-to-create-a-cpp-project-from-existing-code.md).
 
 ## <a name="creating-a-new-project"></a>Erstellen eines neuen Projekts
 
@@ -57,7 +57,7 @@ Sie können alle Microsoft-spezifischen Erweiterungen von C++ deaktivieren, inde
 
 Die Microsoft C- und C++-Compiler stellen Optionen für das Vorkompilieren von beliebigem C- oder C++-Code bereit, einschließlich Inlinecode. Mithilfe dieser leistungsstarken Funktion können Sie einen stabilen Codeabschnitt kompilieren, den Code im kompilierten Zustand in einer Datei speichern und bei nachfolgenden Kompilierungen den vorkompilierten Code mit dem noch in Entwicklung befindlichen Code kombinieren. So können nachfolgende Kompilierungen beschleunigt werden, da der bereits stabile Code nicht neu kompiliert werden muss.
 
-Sämtlicher vorkompilierter Code wird standardmäßig in den Dateien „stdafx.h“ und „stdafx.cpp“ angegeben. Der **Assistent für neue Projekte** erstellt diese Dateien automatisch, sofern Sie die Option **Vorkompilierte Headerdatei** nicht deaktivieren. Weitere Informationen zu vorkompilierten Headern finden Sie unter [Erstellen vorkompilierter Headerdateien](../build/reference/creating-precompiled-header-files.md).
+Sämtlicher vorkompilierter Code wird standardmäßig in den Dateien „stdafx.h“ und „stdafx.cpp“ angegeben. Der **Assistent für neue Projekte** erstellt diese Dateien automatisch, sofern Sie die Option **Vorkompilierte Headerdatei** nicht deaktivieren. Weitere Informationen zu vorkompilierten Headern finden Sie unter [Erstellen vorkompilierter Headerdateien](../build/creating-precompiled-header-files.md).
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
@@ -65,4 +65,4 @@ Weitere Informationen finden Sie unter [Portieren von UNIX auf Win32](../porting
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)
+[Projekte und Buildsysteme](../build/projects-and-build-systems-cpp.md)
