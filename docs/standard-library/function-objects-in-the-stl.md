@@ -1,18 +1,18 @@
 ---
 title: Funktionsobjekte in der C++-Standardbibliothek
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 helpviewer_keywords:
 - functors
 - C++ Standard Library, functors
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 7af56f52b59b03dfed9e1233473239274a0dcbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437118"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172958"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Funktionsobjekte in der C++-Standardbibliothek
 
@@ -33,9 +33,17 @@ public:
         return a < b;
     }
 };
+
+int main()
+{
+    Functor f;
+    int a = 5;
+    int b = 7;
+    int ans = f(a, b);
+}
 ```
 
-Die letzte Zeile der `main` -Funktion zeigt, wie Sie das Funktionsobjekt aufrufen. Dieser Aufruf ähnelt einem Aufruf einer Funktion. Tatsächlich wird aber „operator()“ des Typs „Funktionselement“ aufgerufen. Diese Ähnlichkeit zwischen dem Aufruf eines Funktionsobjekts und einer Funktion hat zum Begriff „Funktionsobjekt“ geführt.
+Die letzte Zeile der `main` -Funktion zeigt, wie Sie das Funktionsobjekt aufrufen. Dieser Aufruf ähnelt einem Aufruf einer Funktion, aber es tatsächlich aufrufende operator() des Typs "Funktionselement" aus. Diese Ähnlichkeit zwischen dem Aufruf eines Funktionsobjekts und einer Funktion hat zum Begriff „Funktionsobjekt“ geführt.
 
 ## <a name="function-objects-and-containers"></a>Funktionsobjekte und Container
 
@@ -48,7 +56,7 @@ template <class Key,
 class set
 ```
 
-Das zweite Vorlagenargument ist das Funktionsobjekt „ `less`“. Dieses Funktionsobjekt gibt **"true"** , wenn der erste Parameter zu übergeben. dieser Wert ist kleiner als der zweite Parameter übergeben. Da einige Container ihre Elemente sortieren, benötigt der Container eine Möglichkeit zum Vergleich von zwei Elementen, und dies wird mithilfe des Funktionsobjekts erreicht. Sie können eigene Sortierungskriterien für Container definieren, indem Sie ein Funktionsobjekt erstellen und es in der Vorlagenliste für den Container angeben.
+Das zweite Vorlagenargument ist das Funktionsobjekt „ `less`“. Dieses Funktionsobjekt gibt **"true"** , wenn der erste Parameter kleiner ist als der zweite Parameter. Da einige Container ihre Elemente sortieren, benötigt der Container eine Möglichkeit zum Vergleichen von zwei Elementen. Der Vergleich erfolgt mithilfe der Function-Objekt. Sie können eigene Sortierungskriterien für Container definieren, indem Sie ein Funktionsobjekt erstellen und es in der Vorlagenliste für den Container angeben.
 
 ## <a name="function-objects-and-algorithms"></a>Funktionsobjekte und Algorithmen
 
