@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289298"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278533"
 ---
 # <a name="task-class-concurrency-runtime"></a>task-Klasse (Concurrency Runtime)
 
@@ -112,7 +112,7 @@ Das Ergebnis der Aufgabe.
 Wenn die Aufgabe abgebrochen wird, einen Aufruf von `get` löst eine [Task_canceled](task-canceled-class.md) Ausnahme. Wenn die Aufgabe eine Ausnahme während der Ausführung feststellt oder an sie eine Ausnahme aus einer vorherigen Aufgabe weitergegeben wurde, löst ein Aufruf von `get` diese Ausnahme aus.
 
 > [!IMPORTANT]
->  Rufen Sie in einer app (Universelle Windows Plattform) nicht [Concurrency:: Task::](#wait) oder `get` ( `wait` Aufrufe `get`) im Code, der auf dem STA ausgeführt wird. Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) daran, dass diese Methoden den aktuellen Thread blockieren, und dazu führen, die app dass kann reagiert. Sie können jedoch die `get`-Methode aufrufen, um das Ergebnis der vorangegangenen Aufgabe in einer aufgabenbasierten Fortsetzung zu erhalten, da das Ergebnis sofort verfügbar ist.
+>  Rufen Sie in einer app (Universelle Windows Plattform) nicht [Concurrency:: Task::](#wait) oder `get` ( `wait` Aufrufe `get`) im Code, der auf dem UI-Thread ausgeführt wird. Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) daran, dass diese Methoden den aktuellen Thread blockieren, und dazu führen, die app dass kann reagiert. Sie können jedoch die `get`-Methode aufrufen, um das Ergebnis der vorangegangenen Aufgabe in einer aufgabenbasierten Fortsetzung zu erhalten, da das Ergebnis sofort verfügbar ist.
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
@@ -344,7 +344,7 @@ Ein `task_status`-Wert, der entweder `completed` oder `canceled` ist. Wenn die A
 ### <a name="remarks"></a>Hinweise
 
 > [!IMPORTANT]
->  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait` im Code, der auf dem STA ausgeführt wird. Andernfalls löst die Laufzeit [concurrency::invalid_operation](invalid-operation-class.md) aus, da diese Methode den aktuellen Thread blockiert und die App dadurch möglicherweise nicht mehr reagiert. Sie können jedoch die [concurrency::task::get](#get) -Methode aufrufen, um das Ergebnis der Vorgängeraufgabe in einer aufgabenbasierten Fortsetzung zu erhalten.
+>  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait` im Code, der auf dem UI-Thread ausgeführt wird. Andernfalls löst die Laufzeit [concurrency::invalid_operation](invalid-operation-class.md) aus, da diese Methode den aktuellen Thread blockiert und die App dadurch möglicherweise nicht mehr reagiert. Sie können jedoch die [concurrency::task::get](#get) -Methode aufrufen, um das Ergebnis der Vorgängeraufgabe in einer aufgabenbasierten Fortsetzung zu erhalten.
 
 ## <a name="see-also"></a>Siehe auch
 
