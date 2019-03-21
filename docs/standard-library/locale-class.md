@@ -1,6 +1,6 @@
 ---
 title: locale-Klasse
-ms.date: 11/04/2016
+ms.date: 03/19/2019
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 888aeff3e8661338d1a017c06325108a4240ace3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677915"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278514"
 ---
 # <a name="locale-class"></a>locale-Klasse
 
@@ -403,8 +403,14 @@ The previous locale was: C
 
 Die Memberklasse stellt eine einzigartige Facetidentifikation bereit, die als Index zum Suchen von Facets in einem Gebietsschema verwendet wird.
 
-Klasse id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };
-
+```cpp
+class id 
+{
+   protected:    id();
+   private:      id(const id&)
+   void operator=(const id&)  // not defined    
+};
+```
 ### <a name="remarks"></a>Hinweise
 
 Die Memberklasse beschreibt das statische Memberobjekt, das von jedem Gebietsschemafacet benötigt wird. Beachten Sie, dass Sie nicht kopieren oder Zuweisen von einem Objekt der Klasse `id`.
@@ -440,7 +446,7 @@ Ein Gebietsschema für die Auswahl einer Kategorie.
 *CAT*<br/>
 Die Kategorie, die im erstellten Gebietsschema ersetzt werden soll.
 
-*FAc*<br/>
+*Fac*<br/>
 Das Facet, das im erstellten Gebietsschema ersetzt werden soll.
 
 ### <a name="remarks"></a>Hinweise

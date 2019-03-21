@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f14b21c97e5a36d5107e7db526e4153446ae2a01
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293445"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278531"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager-Klasse
 
@@ -617,7 +617,7 @@ Die RGB-Darstellung der HLS-Farbe, die bereitgestellt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](/windows/desktop/uxguide/vis-color).
 
 Diese Methode und die `CDrawingManager::HLStoRGB_TWO` Methode führen Sie den gleichen Vorgang, sondern erfordern andere Werte für die *H* Parameter. Bei dieser Methode *H* ist ein Prozentsatz des Kreises. In der `CDrawingManager::HLStoRGB_TWO` Methode *H* ist ein Grad an Wert zwischen 0 und 360 liegen, die beide Rot darstellen. Z. B. mit `HLStoRGB_ONE`, 0,25 für *H* entspricht der Wert 90 mit `HLStoRGB_TWO`.
 
@@ -649,7 +649,7 @@ Die RGB-Darstellung der HLS-Farbe, die bereitgestellt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](/windows/desktop/uxguide/vis-color).
 
 Diese Methode und die [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) Methode führen Sie den gleichen Vorgang, sondern erfordern andere Werte für die *H* Parameter. Bei dieser Methode *H* ist ein Grad an Wert zwischen 0 und 360 liegen, die beide Rot darstellen. In der [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) Methode *H* ist ein Prozentsatz des Kreises. Z. B. mit `HLStoRGB_ONE`, 0,25 für *H* entspricht der Wert 90 mit `HLStoRGB_TWO`.
 
@@ -679,7 +679,7 @@ Die RGB-Darstellung der Farbe HSV bereitgestellt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](/windows/desktop/uxguide/vis-color).
 
 ##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB
 
@@ -864,7 +864,7 @@ static void __stdcall RGBtoHSL(
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](/windows/desktop/uxguide/vis-color).
 
 Der zurückgegebene Wert für *H* wird dargestellt, als Bruchzahl zwischen 0 und 1, wobei sowohl 0 und 1 rot darstellen. Die zurückgegebenen Werte für *S* und *L* sind Zahlen zwischen 0 und 1.
 
@@ -896,7 +896,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Eine Farbe kann als HSV (Farbton, Sättigung und Wert), HSL (Farbton, Sättigung und Helligkeit) oder RGB (Rot, Grün und Blau) dargestellt werden. Weitere Informationen zu den verschiedenen Darstellungen der Farbe, finden Sie unter [Farbe](/windows/desktop/uxguide/vis-color).
 
 Der zurückgegebene Wert für *H* ist eine Zahl zwischen 0 und 360, in denen sowohl 0 und 360 Rot anzugeben. Die Rückgabe Werte für *S* und *V* sind Zahlen zwischen 0 und 1.
 

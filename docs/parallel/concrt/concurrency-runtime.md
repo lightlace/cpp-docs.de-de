@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258332"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278553"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 
@@ -99,7 +99,6 @@ Referenzdokumentation finden Sie unter [Verweis](../../parallel/concrt/reference
 |||
 |-|-|
 |[Muster und Tipps für die asynchrone Programmierung in Hilo (Windows Store-Apps mit C++ und XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Erfahren Sie, wie wir die Concurrency Runtime verwendet, um asynchrone Vorgänge in Hilo, einer Windows-Runtime-app, die mit C++ und XAML implementiert.|
-|[Code samples for the Concurrency Runtime and Parallel Pattern Library in Visual Studio 2010 (Codebeispiele für die Concurency Runtime und Parallel Pattern Library in Visual Studio 2010)](http://go.microsoft.com/fwlink/p/?linkid=183875)|Bietet Beispielanwendungen und Hilfsprogramme zur Veranschaulichung der Concurrency Runtime.|
 |[Parallel Programming in Native Code blog (Blog zum Thema paralleles Programmieren in nativem Code)](http://go.microsoft.com/fwlink/p/?linkid=183873)|Bietet zusätzliche ausführliche Blogartikel zur parallelen Programmierung in der Concurrency Runtime.|
 |[Parallel Computing in C++ and Native Code forum (Forum zum Thema paralleles Computing in C++ und nativem Code)](http://go.microsoft.com/fwlink/p/?linkid=183874)|Ermöglicht Ihnen die Teilnahme an Communitydiskussionen über die Concurrency Runtime.|
 |[Parallele Programmierung](/dotnet/standard/parallel-programming/index)|Erfahren Sie, das parallel-Programmiermodell, das in .NET Framework verfügbar ist.|

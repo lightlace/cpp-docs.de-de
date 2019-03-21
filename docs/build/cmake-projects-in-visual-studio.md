@@ -4,12 +4,12 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 67bf20248933b28e9c7c0d87c598c0449d6bed0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b055a1e3ca1d43cc0a1633401c1a08a3d54c1a31
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825654"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278449"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>CMake-Projekte in Visual Studio
 
@@ -80,7 +80,7 @@ Nicht der gesamte Inhalt des Caches wird importiert.  Eigenschaften wie der Gene
 
 Folgende Optionen stehen Ihnen zum Erstellen eines CMake-Projekts zur Verfügung:
 
-1. Wählen Sie das Ziel aus der Dropdownliste **Debuggen** aus, und drücken Sie **F5**, oder klicken Sie auf die Schaltfläche **Ausführen** (grünes Dreieck). Das Projekt wird genau wie eine Visual Studio-Projektmappe zunächst erstellt.
+1. Suchen Sie in der Symbolleiste des Allgemeinen der **Konfigurationen** Dropdownliste; es ist wahrscheinlich "Linux-Debug" oder "X64-Debug" standardmäßig anzeigt wird. Wählen Sie die gewünschte Konfiguration, und drücken Sie **F5**, oder klicken Sie auf die **ausführen** auf der Symbolleiste die Schaltfläche (grüne Dreieck). Das Projekt wird genau wie eine Visual Studio-Projektmappe zunächst erstellt.
 
 1. Klicken Sie mit der rechten Maustaste auf CMakeLists.txt, und wählen Sie im Kontextmenü **Erstellen** aus. Wenn mehrere Ziele in Ihrer Ordnerstruktur vorhanden sind, können Sie auswählen, den Build für alle oder nur für ein bestimmtes Ziel durchzuführen.
 

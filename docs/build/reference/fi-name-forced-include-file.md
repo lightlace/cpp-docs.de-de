@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: 2e85706a0266696b83fe1a1a6cdc45ba3399fc21
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e047ecc5266a898f2c6dc24be3c204f8ddf94386
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809222"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278371"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Name der expliziten Includedatei)
 
@@ -41,7 +41,7 @@ Diese Option hat dieselbe Wirkung wie die Datei angeben, in doppelte Anführungs
 
 1. Klicken Sie auf die **erweitert** Eigenschaftenseite.
 
-1. Ändern der **Includes erzwingen** Eigenschaft.
+1. Ändern der **Includedatei** Eigenschaft.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 
@@ -50,6 +50,6 @@ Diese Option hat dieselbe Wirkung wie die Datei angeben, in doppelte Anführungs
 ## <a name="see-also"></a>Siehe auch
 
 [Ausgabedatei (/F) Optionen](output-file-f-options.md)<br/>
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)<br/>
 [Festlegen des Pfadnamens](specifying-the-pathname.md)
