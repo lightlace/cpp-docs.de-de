@@ -17,7 +17,7 @@ ms.locfileid: "50532616"
 
 "Typargument": Ungültiges Typargument für den generischen Parameter "Param" von "generischer_Typ" (generisch). Muss ein Referenztyp sein.
 
-Ein generischer Typ wurde fehlerhaft instanziiert.  Überprüfen Sie die Typdefinition.  Weitere Informationen finden Sie unter [Generika](../../windows/generics-cpp-component-extensions.md).
+Ein generischer Typ wurde fehlerhaft instanziiert.  Überprüfen Sie die Typdefinition.  Weitere Informationen finden Sie unter [Generics](../../windows/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 

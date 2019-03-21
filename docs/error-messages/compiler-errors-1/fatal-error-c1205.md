@@ -15,8 +15,8 @@ ms.locfileid: "50499134"
 ---
 # <a name="fatal-error-c1205"></a>Schwerwiegender Fehler C1205
 
-Generika werden von der installierten Laufzeitversion nicht unterstützt.
+Generics werden von der installierten Laufzeitversion nicht unterstützt.
 
-Die vom Compiler verwendete Version der Common Language Runtime ist keine Version der Laufzeit, die vom aktuellen Compiler unterstützt wird.  Beispielsweise erfordert die Generika-Funktion eine Laufzeit, die auf den Compiler zugeschnitten ist.
+Die vom Compiler verwendete Version der Common Language Runtime ist keine Version der Laufzeit, die vom aktuellen Compiler unterstützt wird.  Beispielsweise erfordert das Genericsfeature eine Laufzeit, die auf den Compiler zugeschnitten ist.
 
 Die Pfadangabe muss möglicherweise geändert werden.

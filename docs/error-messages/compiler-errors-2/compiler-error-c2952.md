@@ -40,7 +40,7 @@ template <class T1>
 void S<T>::S1<T1>::f() {}
 ```
 
-C2952 kann auch auftreten, wenn Generika verwendet werden:
+C2952 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2952b.cpp

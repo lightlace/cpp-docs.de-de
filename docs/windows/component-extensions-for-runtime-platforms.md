@@ -58,9 +58,9 @@ Sie können die folgenden Schlüsselwörter verwenden, um das Überschreibungsve
 |**override**|Ja|Gibt an, dass eine Methode eine Überschreibung einer Basisklassenversion sein muss.|[override](../windows/override-cpp-component-extensions.md)|
 |**sealed**|Ja|Verhindert, dass Klassen als Basisklassen verwendet werden.|[sealed](../windows/sealed-cpp-component-extensions.md)|
 
-## <a name="keywords-for-generics"></a>Schlüsselwörter für Generika
+## <a name="keywords-for-generics"></a>Schlüsselwörter für Generics
 
-Die folgenden Schlüsselwörter wurden hinzugefügt, um generische Typen zu unterstützen. Weitere Informationen finden Sie unter [Generika](../windows/generics-cpp-component-extensions.md).
+Die folgenden Schlüsselwörter wurden hinzugefügt, um generische Typen zu unterstützen. Weitere Informationen finden Sie unter [Generics](../windows/generics-cpp-component-extensions.md).
 
 |Stichwort|Kontextbezogen|Zweck|
 |-------------|-----------------------|-------------|

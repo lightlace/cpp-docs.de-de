@@ -17,7 +17,7 @@ ms.locfileid: "50491506"
 
 generischer Parameter, die Listen können nur verwendet werden, auf verwalteten oder WinRTclasses, Strukturen oder -Funktionen
 
-Eine generische Parameterliste wurde falsch verwendet.  Weitere Informationen finden Sie unter [Generika](../../windows/generics-cpp-component-extensions.md).
+Eine generische Parameterliste wurde falsch verwendet.  Weitere Informationen finden Sie unter [Generics](../../windows/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 

@@ -33,7 +33,7 @@ struct MyStruct {
 };
 ```
 
-C2932 kann auch auftreten, wenn Generika verwendet werden:
+C2932 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2932b.cpp

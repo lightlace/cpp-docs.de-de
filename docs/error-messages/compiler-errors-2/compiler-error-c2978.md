@@ -15,7 +15,7 @@ ms.locfileid: "50428105"
 ---
 # <a name="compiler-error-c2978"></a>Compilerfehler C2978
 
-Syntaxfehler: 'Schlüsselwort1' oder 'Schlüsselwort2' wurde erwartet, der Typ 'Schlüsselwort3' wurde gefunden. Nichttypparameter werden für Generika nicht unterstützt.
+Syntaxfehler: 'Schlüsselwort1' oder 'Schlüsselwort2' wurde erwartet, der Typ 'Schlüsselwort3' wurde gefunden. Nichttypparameter werden für Generics nicht unterstützt.
 
 Eine generische Klasse wurde falsch deklariert. Finden Sie unter [Generika](../../windows/generics-cpp-component-extensions.md)für Weitere Informationen.
 

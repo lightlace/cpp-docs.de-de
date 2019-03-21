@@ -17,7 +17,7 @@ ms.locfileid: "50428248"
 
 'Funktion': Das Vorlagentypargument für 'Vorlage' kann keinen generischen Typparameter enthalten: 'param'
 
-Vorlagen werden zur Kompilierzeit, aber Generika zur Laufzeit instanziiert. Daher ist es nicht möglich, generischen Code zu generieren, der die Vorlage aufrufen kann, da die Vorlage nicht zur Laufzeit instanziiert werden kann, wenn der generische Typ schließlich bekannt ist.
+Vorlagen werden zur Kompilierzeit, aber Generics zur Laufzeit instanziiert. Daher ist es nicht möglich, generischen Code zu generieren, der die Vorlage aufrufen kann, da die Vorlage nicht zur Laufzeit instanziiert werden kann, wenn der generische Typ schließlich bekannt ist.
 
 Im folgenden Beispiel wird C3230 generiert:
 

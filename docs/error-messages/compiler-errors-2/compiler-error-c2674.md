@@ -17,7 +17,7 @@ ms.locfileid: "50456809"
 
 eine generische Deklaration ist in diesem Kontext nicht zulässig.
 
-Eine generische wurde falsch deklariert. Weitere Informationen finden Sie unter [Generika](../../windows/generics-cpp-component-extensions.md).
+Eine generische wurde falsch deklariert. Weitere Informationen finden Sie unter [Generics](../../windows/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 

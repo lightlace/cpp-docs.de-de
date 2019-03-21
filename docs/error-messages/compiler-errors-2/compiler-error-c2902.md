@@ -37,7 +37,7 @@ void f() {
 }
 ```
 
-C2902 kann auch auftreten, wenn Generika verwendet werden:
+C2902 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2902b.cpp

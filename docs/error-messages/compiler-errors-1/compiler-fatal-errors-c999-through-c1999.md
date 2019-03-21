@@ -279,7 +279,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Schwerwiegender Fehler C1197](../../error-messages/compiler-errors-1/fatal-error-c1197.md)|Auf „*file*“ kann nicht verwiesen werden, da das Programm bereits auf „*file*“ verweist.|
 |Schwerwiegender Fehler C1201|Fortfahren nach einem Syntaxfehler in der Klassenvorlagendefinition nicht möglich.|
 |Schwerwiegender Fehler C1202|Der Kontext für einen rekursiven Typ oder eine Funktionsabhängigkeit ist zu komplex|
-|Schwerwiegender Fehler C1205|Generika werden von der installierten Laufzeitversion nicht unterstützt.|
+|Schwerwiegender Fehler C1205|Generics werden von der installierten Laufzeitversion nicht unterstützt.|
 |Schwerwiegender Fehler C1206|Anwendungsdomänenspezifische Daten werden von der installierten Laufzeitversion nicht unterstützt.|
 |Schwerwiegender Fehler C1207|Verwaltete Vorlagen werden von der installierten Laufzeitversion nicht unterstützt.|
 |Schwerwiegender Fehler C1208|Das Zuordnen von Verweisklassen im Stapel wird von der installierten Laufzeitversion nicht unterstützt.|

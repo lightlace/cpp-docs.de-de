@@ -65,7 +65,7 @@ class C3 {};
 typedef C3<S1<int> > MyC12;
 ```
 
-C3203 kann auch auftreten, wenn Generika verwendet werden:
+C3203 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C3203_c.cpp

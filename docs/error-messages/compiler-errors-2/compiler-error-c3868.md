@@ -17,7 +17,7 @@ ms.locfileid: "50529193"
 
 "Type": Einschränkungen für den generischen Parameter 'Parameter' unterscheiden sich von denen die Deklaration
 
-Mehrere Deklarationen müssen dieselben generischen Einschränkungen verfügen.  Weitere Informationen finden Sie unter [Generika](../../windows/generics-cpp-component-extensions.md).
+Mehrere Deklarationen müssen dieselben generischen Einschränkungen verfügen.  Weitere Informationen finden Sie unter [Generics](../../windows/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 

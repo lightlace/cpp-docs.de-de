@@ -19,7 +19,7 @@ generisches Typargument für "Arg" kann nicht 'Typ', es muss ein Werttyp oder ei
 
 Das generische Typargument hatte nicht den richtigen Typ.
 
-Weitere Informationen finden Sie unter [Generika](../../windows/generics-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [Generics](../../windows/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 

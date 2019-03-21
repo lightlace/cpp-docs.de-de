@@ -33,7 +33,7 @@ int main() {
 }
 ```
 
-C2939 kann auch auftreten, wenn Generika verwendet werden:
+C2939 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2939b.cpp

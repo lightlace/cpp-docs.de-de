@@ -31,7 +31,7 @@ int main() {
 }
 ```
 
-C2923 kann auch auftreten, wenn Generika verwendet werden:
+C2923 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2923b.cpp

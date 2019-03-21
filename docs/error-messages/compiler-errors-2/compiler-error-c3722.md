@@ -17,7 +17,7 @@ ms.locfileid: "50450998"
 
 ein generisches Ereignis ist nicht zulässig.
 
-Der Compiler lässt nur die generischen Klassen, Strukturen und Funktionen.  Weitere Informationen finden Sie unter [Generika](../../windows/generics-cpp-component-extensions.md).
+Der Compiler lässt nur die generischen Klassen, Strukturen und Funktionen.  Weitere Informationen finden Sie unter [Generics](../../windows/generics-cpp-component-extensions.md).
 
 Im folgende Beispiel wird die C3722 generiert:
 

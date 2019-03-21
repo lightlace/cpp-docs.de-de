@@ -168,7 +168,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerfehler C2976](compiler-error-c2976.md)|"*Typ*": zu wenige Vorlagen-/generische Argumente|
 |[Compilerfehler C2977](compiler-error-c2977.md)|"*Typ*": zu viele Vorlagen-/generische Argumente|
 |[Compilerfehler C2978](compiler-error-c2978.md)|Syntaxfehler: erwartet "*Schlüsselwort1*'oder'*Schlüsselwort2*"; gefunden wurde der Typ"*Typ*"; Nichttyp-Parameter werden in Generika nicht unterstützt.|
-|[Compilerfehler C2979](compiler-error-c2979.md)|Explizite Spezialisierungen werden für Generika nicht unterstützt.|
+|[Compilerfehler C2979](compiler-error-c2979.md)|Explizite Spezialisierungen werden für Generics nicht unterstützt.|
 |Compilerfehler Fehler C2980|C++-Ausnahmebehandlung wird mit/Kernel nicht unterstützt.|
 |Compilerfehler Fehler C2981|die dynamische Form von "*Schlüsselwort*" wird mit/Kernel nicht unterstützt|
 |Compilerfehler Fehler C2982|"*Deklaration*': anderer __declspec(code_seg(...)) wird verwendet: war"*Bezeichner1*"jetzt"*Bezeichner2*"|

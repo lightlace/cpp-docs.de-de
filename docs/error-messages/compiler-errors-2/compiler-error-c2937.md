@@ -30,7 +30,7 @@ typedef int TC<int>;   // C2937
 typedef TC<int> c;   // OK
 ```
 
-C2937 kann auch auftreten, wenn Generika verwendet werden:
+C2937 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2937b.cpp

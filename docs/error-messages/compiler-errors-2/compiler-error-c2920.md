@@ -30,7 +30,7 @@ struct TC1 {};   // C2920
 struct TC2 {};   // OK - fix by using a different name
 ```
 
-C2920 kann auch auftreten, wenn Generika verwendet werden:
+C2920 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2920b.cpp

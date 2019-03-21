@@ -17,7 +17,7 @@ ms.locfileid: "50559925"
 
 "constraint": Die Einschränkungsliste enthält den privaten Assemblytyp "type".
 
-Eine Einschränkungsliste enthält einen privaten Assemblytyp, ist also nicht verfügbar, wenn auf den Typ von außerhalb der Assembly zugegriffen wird. Weitere Informationen finden Sie unter [Generika](../../windows/generics-cpp-component-extensions.md).
+Eine Einschränkungsliste enthält einen privaten Assemblytyp, ist also nicht verfügbar, wenn auf den Typ von außerhalb der Assembly zugegriffen wird. Weitere Informationen finden Sie unter [Generics](../../windows/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 
