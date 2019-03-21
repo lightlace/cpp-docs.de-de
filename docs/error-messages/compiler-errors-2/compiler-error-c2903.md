@@ -34,7 +34,7 @@ void g() {
 }
 ```
 
-C2903 kann auch auftreten, wenn Generika verwendet werden:
+C2903 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2903b.cpp

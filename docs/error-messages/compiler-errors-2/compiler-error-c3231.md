@@ -17,7 +17,7 @@ ms.locfileid: "50571963"
 
 'Arg': Template-Typargument kann keinen generischen Typparameter verwenden
 
-Vorlagen werden zur Kompilierzeit, aber Generika zur Laufzeit instanziiert. Daher ist es nicht möglich, generischen Code zu generieren, der die Vorlage aufrufen kann, da die Vorlage nicht zur Laufzeit instanziiert werden kann, wenn der generische Typ schließlich bekannt ist.
+Vorlagen werden zur Kompilierzeit, aber Generics zur Laufzeit instanziiert. Daher ist es nicht möglich, generischen Code zu generieren, der die Vorlage aufrufen kann, da die Vorlage nicht zur Laufzeit instanziiert werden kann, wenn der generische Typ schließlich bekannt ist.
 
 Im folgende Beispiel wird die C3231 generiert:
 

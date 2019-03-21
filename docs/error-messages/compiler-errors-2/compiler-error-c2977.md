@@ -31,7 +31,7 @@ template MyClass< int , 1, 1 >;   // C2977
 template MyClass< int , 1 >;   // OK
 ```
 
-C2977 kann auch auftreten, wenn Generika verwendet werden:
+C2977 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2977b.cpp

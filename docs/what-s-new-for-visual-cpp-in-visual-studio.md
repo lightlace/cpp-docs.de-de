@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 062052faf85b342629506a41c39b99a1b59502b9
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b75a1903b3e0767f8aa009134a2b37a7d1a8e0d0
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809788"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57810470"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Neuerungen bei Visual C++ in Visual Studio 2017
 
@@ -315,7 +315,7 @@ C++ unterstützt jetzt STRG+Klick-**GoTo-Definition**, was die Navigation mit de
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>Nicht-MSBuild-Projekte mit „Ordner öffnen“
 
-In Visual Studio 2017 wurde das Feature **Ordner öffnen** eingeführt, das Ihnen das Programmieren, Erstellen von Builds und Debuggen in einem Ordner mit Quellcode ermöglicht, ohne dass Projektmappen oder Projekte erstellt werden müssen. Dadurch wird der Einstieg in Visual Studio wesentlich einfacher, selbst wenn Ihr Projekt kein auf MSBuild basierendes Projekt ist. Mit **Ordner öffnen** erhalten Sie Zugang zu den Funktionen zum Verstehen, Bearbeiten, Erstellen und Debuggen von Code, die Visual Studio bereits für MSBuild-Projekte bietet. Weitere Informationen finden Sie unter [Ordner öffnen-Projekte in Visual C++](ide/non-msbuild-projects.md).
+In Visual Studio 2017 wurde das Feature **Ordner öffnen** eingeführt, das Ihnen das Programmieren, Erstellen von Builds und Debuggen in einem Ordner mit Quellcode ermöglicht, ohne dass Projektmappen oder Projekte erstellt werden müssen. Dadurch wird der Einstieg in Visual Studio wesentlich einfacher, selbst wenn Ihr Projekt kein auf MSBuild basierendes Projekt ist. Mit **Ordner öffnen** erhalten Sie Zugang zu den Funktionen zum Verstehen, Bearbeiten, Erstellen und Debuggen von Code, die Visual Studio bereits für MSBuild-Projekte bietet. Weitere Informationen finden Sie unter [Open Folder projects for C++ (Verwenden von „Ordner öffnen“ mit Projekten in Visual C++)](build/open-folder-projects-cpp.md).
 
 - Verbesserungen in der Benutzeroberfläche „Ordner öffnen“. Sie können die Oberfläche über diese JSON-Dateien anpassen:
   - CppProperties.json zum Anpassen des IntelliSense- und Browsererlebnisses.
@@ -330,7 +330,7 @@ In Visual Studio 2017 wurde das Feature **Ordner öffnen** eingeführt, das Ihne
 
 ## <a name="cmake-support-via-open-folder"></a>Unterstützung von CMake über „Ordner öffnen“
 
-Visual Studio 2017 führt die Unterstützung für die Verwendung von CMake-Projekten ohne Konvertierung in MSBuild-Projektdateien (.vcxproj) ein. Weitere Informationen finden Sie unter [CMake-Projekte in Visual C++](ide/cmake-tools-for-visual-cpp.md). Durch Öffnen von CMake-Projekten mit **Ordner öffnen** wird die Umgebung für die Bearbeitung, Erstellung und das Debuggen von C++ automatisch konfiguriert.
+Visual Studio 2017 führt die Unterstützung für die Verwendung von CMake-Projekten ohne Konvertierung in MSBuild-Projektdateien (.vcxproj) ein. Weitere Informationen finden Sie unter [CMake-Projekte in Visual C++](build/cmake-projects-in-visual-studio.md). Durch Öffnen von CMake-Projekten mit **Ordner öffnen** wird die Umgebung für die Bearbeitung, Erstellung und das Debuggen von C++ automatisch konfiguriert.
 
 - C++-IntelliSense funktioniert, ohne dass Sie eine „CppProperties.json“-Datei im Stammordner erstellen müssen. Darüber hinaus haben wir ein neues Dropdownmenü hinzugefügt, sodass Benutzer einfach zwischen von CMake - und CppProperties.json-Dateien bereitgestellten Konfigurationen wechseln können.
 
@@ -342,7 +342,7 @@ Visual Studio 2017 führt die Unterstützung für die Verwendung von CMake-Proje
 
 **Visual Studio 2017 Version 15.5**: Unterstützung für das Importieren von vorhandenen CMake-Caches wurde hinzugefügt.
 
-**Visual Studio 2017-Version 15.7:** Unterstützung für CMake 3.11, die Codeanalyse in CMake-Projekten, die Ansicht „Ziele“ im Projektmappen-Explorer, die Optionen zur Cachegenerierung und die Kompilierung von Einzeldateien wurde hinzugefügt. Weitere Informationen finden Sie im Blogbeitrag [CMake Support in Visual Studio – Targets View, Single File Compilation, and Cache Generation Settings (CMake-Unterstützung in Visual Studio: Ansicht „Ziele“, Kompilierung von Einzeldateien und Einstellungen für Cachegenerierung)](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) und [CMake-Projekte in Visual C++](ide/cmake-tools-for-visual-cpp.md).
+**Visual Studio 2017-Version 15.7:** Unterstützung für CMake 3.11, die Codeanalyse in CMake-Projekten, die Ansicht „Ziele“ im Projektmappen-Explorer, die Optionen zur Cachegenerierung und die Kompilierung von Einzeldateien wurde hinzugefügt. Weitere Informationen finden Sie im Blogbeitrag [CMake Support in Visual Studio – Targets View, Single File Compilation, and Cache Generation Settings (CMake-Unterstützung in Visual Studio: Ansicht „Ziele“, Kompilierung von Einzeldateien und Einstellungen für Cachegenerierung)](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) und [CMake-Projekte in Visual C++](build/cmake-projects-in-visual-studio.md).
 
 ## <a name="windows-desktop-development-with-c"></a>Windows Desktop-Entwicklung mit C++
 

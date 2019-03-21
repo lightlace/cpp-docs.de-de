@@ -34,7 +34,7 @@ class y{};
 enum SomeEnum { y };
 ```
 
-C2930 kann auch auftreten, wenn Generika verwendet werden:
+C2930 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2930c.cpp

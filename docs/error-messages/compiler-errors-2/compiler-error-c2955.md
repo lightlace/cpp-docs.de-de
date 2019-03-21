@@ -52,7 +52,7 @@ template <class T>
 void CT<T>::CTFunc2() {}
 ```
 
-C2955 kann auch auftreten, wenn Generika verwendet werden:
+C2955 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2955_c.cpp

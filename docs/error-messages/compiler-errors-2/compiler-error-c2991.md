@@ -29,7 +29,7 @@ template<class T, class T> struct TC {};   // C2991
 // template<class T, class T2> struct TC {};
 ```
 
-C2991 kann auch auftreten, wenn Generika verwendet werden:
+C2991 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2991b.cpp

@@ -32,7 +32,7 @@ template <int TC<int> > struct X1 { };   // C2944
 template <class T > struct X2 {};
 ```
 
-C2944 kann auch auftreten, wenn Generika verwendet werden:
+C2944 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2944b.cpp

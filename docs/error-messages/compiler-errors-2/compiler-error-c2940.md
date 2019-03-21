@@ -31,7 +31,7 @@ int main() {
 }
 ```
 
-C2940 kann auch auftreten, wenn Generika verwendet werden:
+C2940 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2940b.cpp

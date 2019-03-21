@@ -106,7 +106,7 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-C2039 kann auch auftreten, wenn Sie Generika verwenden. Im folgende Beispiel wird die C2039 generiert.
+C2039 kann auch auftreten, wenn Sie Generics verwenden. Im folgende Beispiel wird die C2039 generiert.
 
 ```
 // C2039_f.cpp

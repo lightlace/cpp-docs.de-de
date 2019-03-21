@@ -70,7 +70,7 @@
 ### [Einschränkungen für generische Typparameter (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
 ### [Verwenden von Generika (C++/CLI)](consuming-generics-cpp-cli.md)
 ### [Generika und Vorlagen (C++/CLI)](generics-and-templates-visual-cpp.md)
-### [Vorgehensweise: Verbessern der Leistung mit Generika (C++/CLI)](how-to-improve-performance-with-generics-visual-cpp.md)
+### [Vorgehensweise: Verbessern der Leistung mit Generics (C++/CLI)](how-to-improve-performance-with-generics-visual-cpp.md)
 ## [interface-Klasse (C++/CLI und C++/CX)](interface-class-cpp-component-extensions.md)
 ## [literal (C++/CLI und C++/CX)](literal-cpp-component-extensions.md)
 ## [Windows-Runtime und verwaltete Vorlagen (C++/CLI und C++/CX)](windows-runtime-and-managed-templates-cpp-component-extensions.md)

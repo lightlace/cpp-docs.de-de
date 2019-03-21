@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Generika (C++/CLI)
+title: Verwenden von Generics (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -12,7 +12,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50551735"
 ---
-# <a name="consuming-generics-ccli"></a>Verwenden von Generika (C++/CLI)
+# <a name="consuming-generics-ccli"></a>Verwenden von Generics (C++/CLI)
 
 Generika, die in einer Sprache für .NET (oder UWP) erstellt wurden, möglicherweise in anderen Sprachen verwendet werden. Im Gegensatz zu Vorlagen bleibt noch eine generische in einer kompilierten Assembly generische. Daher kann eine instanziieren Sie den generischen Typ in einer anderen Assembly und sogar in einer anderen Sprache als die Assembly, in der der generische Typ definiert wurde.
 

@@ -34,7 +34,7 @@ struct TC2 {};
 void f(TC2 i) {}
 ```
 
-C2942 kann auch auftreten, wenn Generika verwendet werden:
+C2942 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2942b.cpp

@@ -30,7 +30,7 @@ typedef int TC2;   // C2921
 // typedef struct TC2<int> x;   // OK - declare a template instance
 ```
 
-C2921 kann auch auftreten, wenn Generika verwendet werden:
+C2921 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C2921b.cpp

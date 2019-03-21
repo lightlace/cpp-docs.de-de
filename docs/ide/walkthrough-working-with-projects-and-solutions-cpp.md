@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Arbeiten mit Projekten und Lösungen (C++)'
+title: 'Exemplarische Vorgehensweise: Arbeiten mit Projekten und Projektmappen (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - solutions [C++]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 968e4981a28d646b75335ee380635fd8f8e863e3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519230"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57820064"
 ---
-# <a name="walkthrough-working-with-projects-and-solutions-c"></a>Exemplarische Vorgehensweise: Arbeiten mit Projekten und Lösungen (C++)
+# <a name="walkthrough-working-with-projects-and-solutions-c"></a>Exemplarische Vorgehensweise: Arbeiten mit Projekten und Projektmappen (C++)
 
 In diesem Abschnitt lesen Sie, wie Sie ein C++-Projekt in Visual Studio erstellen, Code hinzufügen und dann das Projekt erstellen und ausführen. Bei dem Projekt in dieser exemplarischen Vorgehensweise handelt es sich um ein Programm, das nachverfolgt, wie viele Spieler verschiedene Kartenspiele spielen.
 
@@ -22,7 +22,7 @@ In Visual Studio wird die Arbeit in Projekten und Projektmappen organisiert. Ein
 
 ## <a name="before-you-start"></a>Vor der Installation
 
-Sie benötigen Visual Studio 2017 Version 15.3 oder höher, um diese exemplarische Vorgehensweise abzuschließen. Wenn Sie eine Kopie benötigen, finden Sie eine kurze Anleitung unter [Installieren der C++-Unterstützung in Visual Studio](../build/vscpp-step-0-installation.md). Wenn Sie dies noch nicht durchgeführt haben, befolgen Sie nach der Installation die nächsten Schritte im Tutorial „Hallo Welt“, um sicherzustellen, dass Visual C++ ordnungsgemäß installiert wurde und alles funktioniert.
+Sie benötigen Visual Studio 2017 Version 15.3 oder höher, um diese exemplarische Vorgehensweise abzuschließen. Wie Sie eine Kopie erhalten, erfahren Sie in der folgenden Anleitung: [Install C++ support in Visual Studio (Installieren der C++-Unterstützung in Visual Studio)](../build/vscpp-step-0-installation.md). Wenn Sie dies noch nicht durchgeführt haben, befolgen Sie nach der Installation die nächsten Schritte im Tutorial „Hallo Welt“, um sicherzustellen, dass Visual C++ ordnungsgemäß installiert wurde und alles funktioniert.
 
 Es ist hilfreich, die Grundlagen von C++ zu verstehen und zu wissen, wofür der Compiler, der Linker und der Debugger verwendet werden. Im Tutorial wird ebenfalls davon ausgegangen, dass Sie mit Windows vertraut sind und wissen, wie Sie z.B. Menüs und Dialogfelder verwenden.
 
@@ -83,11 +83,13 @@ In diesem Teil der exemplarischen Vorgehensweise wird gezeigt, wie dem Projekt e
 
       Ändern Sie den Konstruktor so, dass er einen Parameter des Typs `int` namens *players* annimmt.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]--> `Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
+      `Cardgame(int players);`
 
    - Fügen Sie nach dem Standarddestruktor eine Inline-Deklaration für eine `static int`-Memberfunktion namens *GetParticipants* hinzu, die keine Parameter übernimmt und den Wert `totalParticipants` zurückgibt.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]--> `static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
+      `static int GetParticipants() { return totalParticipants; }`
 
    Die Datei „Cardgame.h“ sieht nach der Änderung ungefähr wie der folgende Code aus:
 
@@ -221,4 +223,4 @@ Glückwunsch, Sie haben erfolgreich ein App-Projekt und eine Projektmappe erstel
 ## <a name="see-also"></a>Siehe auch
 
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
-[Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)<br/>
+[Projekte und Buildsysteme](../build/projects-and-build-systems-cpp.md)<br/>

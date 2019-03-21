@@ -52,7 +52,7 @@ void f1() {
 }
 ```
 
-C3206 kann auch auftreten, wenn Generika verwendet werden:
+C3206 kann auch auftreten, wenn Generics verwendet werden:
 
 ```
 // C3206c.cpp

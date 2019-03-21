@@ -15,7 +15,7 @@ ms.locfileid: "50531031"
 ---
 # <a name="compiler-error-c2979"></a>Compilerfehler C2979
 
-Explizite Spezialisierungen werden für Generika nicht unterstützt.
+Explizite Spezialisierungen werden für Generics nicht unterstützt.
 
 Eine generische Klasse wurde falsch deklariert.  Finden Sie unter [Generika](../../windows/generics-cpp-component-extensions.md) für Weitere Informationen.
 
