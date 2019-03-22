@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: cd2f05b4944e26d8a96b3f96e4e39fda0ad8ee48
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562834"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328388"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Vorgehensweise: Einfügen von Ressourcen zur Kompilierungszeit (C++)
 
@@ -48,7 +48,7 @@ Wenn Sie über Abschnitte in Ihren vorhandenen RC-Dateien, die eine der folgende
 
 Sie können Ressourcen hinzufügen von anderen Dateien zu Ihrem Projekt zum Zeitpunkt der Kompilierung durch Auflisten der in der **Kompilierzeitdirektiven** im Feld der **Ressourcenincludes** Dialogfeld. Verwenden der **Ressourcenincludes** Dialogfeld so ändern Sie die normale arbeitsanordnung der Umgebung des Projekts zum Speichern aller Ressourcen in der RC-Datei des Projekts und alle [Symbole](../windows/symbols-resource-identifiers.md) in `Resource.h`.
 
-Öffnen Sie zum Einstieg die **Ressourcenincludes** mit der rechten Maustaste einer RC-Datei in das Dialogfeld [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources), wählen **Ressourcenincludes** und notieren Sie die folgenden Eigenschaften:
+Öffnen Sie zum Einstieg die **Ressourcenincludes** mit der rechten Maustaste einer RC-Datei in das Dialogfeld [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), wählen **Ressourcenincludes** und notieren Sie die folgenden Eigenschaften:
 
 | Eigenschaft | Beschreibung |
 |---|---|
@@ -65,7 +65,7 @@ Sobald Änderungen an Ihrer Ressourcendatei mithilfe vorgenommen werden die **Re
 
 1. Platzieren Sie die Ressourcen in einer Ressourcenskriptdatei mit einem eindeutigen Dateinamen. Verwenden Sie keine *projectname.rc*, da dies der Name der für die Haupt-Ressourcenskriptdatei verwendeten Datei ist.
 
-1. Mit der rechten Maustaste die *RC* Datei [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources) , und wählen Sie **Ressourcenincludes**.
+1. Mit der rechten Maustaste die *RC* Datei [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources) , und wählen Sie **Ressourcenincludes**.
 
 1. In der **Kompilierzeitdirektiven** hinzu, und die [#include](../preprocessor/hash-include-directive-c-cpp.md) Compilerdirektive, um die neue Ressourcendatei in der Hauptressourcendatei in der Entwicklungsumgebung enthalten.
 
