@@ -1,14 +1,14 @@
 ---
 title: Konfigurieren von CMake-Debugsitzungen in Visual Studio
-ms.date: 03/05/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 9a4dd009544a4590c336697ba2162eec45718869
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826078"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356165"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurieren von CMake-Debugsitzungen
 
@@ -20,7 +20,7 @@ Sie können eine Debugsitzung ebenfalls über die CMake-Menüs starten.
 
 ## <a name="customize-debugger-settings"></a>Anpassen von Debuggereinstellungen
 
-Wenn Sie die Debugeinstellungen für ein beliebiges ausführbares CMake-Ziel in Ihrem Projekt anpassen möchten, klicken Sie mit der rechten Maustaste auf die entsprechende CMakeLists.txt-Datei, und wählen Sie **Debug- und Starteinstellungen** aus. Wenn Sie im Untermenü ein CMake-Ziel auswählen, wird eine Datei namens `launch.vs.json` erstellt. Die Datei wird vorab mit Informationen zum ausgewählten CMake-Ziel aufgefüllt, und Sie können zusätzliche Parameter wie Programmargumente oder den Debuggertyp angeben. Wenn Sie in einer `CMakeSettings.json`-Datei auf einen Schlüssel verweisen möchten, stellen Sie diesem `cmake.` in `launch.vs.json` voran. In folgendem Beispiel wird eine einfache `launch.vs.json`-Datei dargestellt, die den Wert des Schlüssels `remoteCopySources` aus der Datei `CMakeSettings.json` für die derzeit ausgewählte Konfiguration abruft:
+Wenn Sie die Debugeinstellungen für ein beliebiges ausführbares CMake-Ziel in Ihrem Projekt anpassen möchten, klicken Sie mit der rechten Maustaste auf die entsprechende CMakeLists.txt-Datei, und wählen Sie **Debug- und Starteinstellungen** aus. (Oder wählen Sie ein Ziel im **Zielansicht** in **Projektmappen-Explorer**.) Wenn Sie ein CMake-Ziel im Untermenü auswählen, wird eine Datei namens **"Launch.VS.JSON"** erstellt wird. Die Datei wird vorab mit Informationen zum ausgewählten CMake-Ziel aufgefüllt, und Sie können zusätzliche Parameter wie Programmargumente oder den Debuggertyp angeben. Auf eine beliebige Taste in einem **"cmakesettings.JSON"** Datei, leiten Sie ihn mit `cmake.` in **"Launch.VS.JSON"**. Das folgende Beispiel zeigt eine einfache **"Launch.VS.JSON"** Datei, die im Wert des bezieht die `remoteCopySources` -Schlüssel in der **"cmakesettings.JSON"** -Datei für die aktuell ausgewählte Konfiguration:
 
 ```json
 {
@@ -38,11 +38,11 @@ Wenn Sie die Debugeinstellungen für ein beliebiges ausführbares CMake-Ziel in 
 }
 ```
 
-Sobald Sie die Datei `launch.vs.json` speichern, wird ein Eintrag mit dem neuen Namen in der Dropdownliste **Startelement** erstellt. Indem Sie die Datei `launch.vs.json` bearbeiten, können Sie beliebig viele Debugkonfigurationen für beliebig viele CMake-Ziele erstellen.
+Sobald Sie speichern die **"Launch.VS.JSON"** -Datei, in dem ein Eintrag erstellt wird die **Startelement** Dropdownliste mit den neuen Namen. Durch Bearbeiten der **"Launch.VS.JSON"** -Datei können Sie so viele Debugkonfigurationen zu, wie Sie eine beliebige Anzahl von CMake-Ziele erstellen.
 
 ## <a name="support-for-cmakesettings-variables"></a>Unterstützung für CMakeSettings-Variablen
 
- `Launch.vs.json` unterstützt Variablen, die in `CMakeSettings.json` (siehe unten) deklariert werden und auf die aktuell ausgewählte Konfiguration angewendet werden können. Sie verfügt ebenfalls über einen Schlüssel namens `currentDir`, der das aktuelle Verzeichnis der gestarteten App festlegt:
+ **"Launch.VS.JSON"** unterstützt Variablen die im deklarierten **"cmakesettings.JSON"** (siehe unten) und gilt für die aktuell ausgewählte Konfiguration sind. Sie verfügt ebenfalls über einen Schlüssel namens `currentDir`, der das aktuelle Verzeichnis der gestarteten App festlegt:
 
 ```json
 {
@@ -61,7 +61,7 @@ C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
 ## <a name="see-also"></a>Siehe auch
 
-[CMake-Projekte in Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[CMake Projects in Visual Studio (CMake-Projekte in Visual Studio)](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurieren eines Linux CMake-Projekts](../linux/cmake-linux-project.md)<br/>
 [Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Anpassen von CMake-Buildeinstellungen](customize-cmake-settings.md)<br/>

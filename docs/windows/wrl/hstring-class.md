@@ -37,12 +37,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 9d660f507f50c00c8ccd6f19505f09285ede9e60
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893599"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356230"
 ---
 # <a name="hstring-class"></a>HString-Klasse
 
@@ -83,7 +83,7 @@ Name                                     | Beschreibung
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-Name                                         | Beschreibung
+name                                         | Beschreibung
 -------------------------------------------- | ----------------------------------------------------------------------------
 [HString::operator=](#operator-assign)       | Verschiebt den Wert eines anderen `HString` -Objekt mit dem aktuellen `HString` Objekt.
 [HString::operator==](#operator-equality)    | Gibt an, ob die zwei Parameter gleich sind.
@@ -187,7 +187,7 @@ Nach diesem Vorgang wird der Zeichenfolgenwert, der das zugrunde liegende HSTRIN
 Initialisiert eine neue Instanz der `HString`-Klasse.
 
 ```cpp
-HString(HSTRING hstr = nullptr) throw();
+HString() throw();
 HString(HString&& other) throw();
 ```
 

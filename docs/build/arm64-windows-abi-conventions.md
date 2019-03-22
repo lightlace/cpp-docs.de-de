@@ -1,12 +1,12 @@
 ---
 title: Übersicht über die ARM64-ABI-Konventionen
-ms.date: 07/11/2018
-ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.date: 03/22/2019
+ms.openlocfilehash: 5dddc26285606b771a3939be19dff5b9ad53f3c7
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816541"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356191"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Übersicht über die ARM64-ABI-Konventionen
 
@@ -191,7 +191,7 @@ Für die Rückgabe-von-Wert, der über Register übergeben werden kann, muss der
 
 Nach der ABI, die vom ARM muss der Stapel bleiben, 16-Byte-ausgerichtet. AArch64 enthält eine Hardwarefunktion, die Ausrichtung der Stapel, die Fehler generiert, wenn eine Relative SP Lade- oder erfolgt und gespeicherten Prozedur nicht auf 16-Byte ist-ausgerichtet. Windows führt diese Funktion immer aktiviert.
 
-Funktionen auf, die Zuordnen von 4 k oder mehr lohnt des Stapels müssen stellen Sie sicher, dass jede Seite vor der letzten Seite in der Reihenfolge verwendet wird, wodurch sichergestellt wird kein Code kann "leap über" die Schutzseiten, die Windows zur Erweiterung des Stacks verwendet. In der Regel erfolgt dies durch die `__chkstk` Hilfsmethode, die benutzerdefinierte Aufrufkonvention verfügt, die die gesamte stapelzuordnung geteilt durch 16 X8 übergibt.
+Funktionen auf, die Zuordnen von 4 k oder mehr lohnt des Stapels müssen stellen Sie sicher, dass jede Seite vor der letzten Seite in der Reihenfolge verwendet wird, wodurch sichergestellt wird kein Code kann "leap über" die Schutzseiten, die Windows zur Erweiterung des Stacks verwendet. In der Regel erfolgt dies durch die `__chkstk` Hilfsmethode, die benutzerdefinierte Aufrufkonvention verfügt, die die gesamte stapelzuordnung geteilt durch 16 X15 übergibt.
 
 ## <a name="red-zone"></a>Rote zone
 

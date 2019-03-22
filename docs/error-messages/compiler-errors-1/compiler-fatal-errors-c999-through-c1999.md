@@ -52,12 +52,12 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 6809ef1640c324e247bd20c83d4622fe27987ae6
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 17c456f6ab248964cbd19cd9695da290254ccf1b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328245"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356217"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Schwerwiegende Compilerfehler C999 bis C1999
 
@@ -70,7 +70,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Fehler|Meldung|
 |-----------|-------------|
 |[Schwerwiegender Fehler C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|UNBEKANNTE MELDUNG Wählen Sie den technischen Supportbefehl im Visual C++-Hilfemenü, oder öffnen Sie die Hilfedatei für weitere Informationen.|
-|[Schwerwiegender Fehler C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Ein interner Fehler ist im Compiler aufgetreten.<br /><br /> (Compilerdatei „*file*“, Zeile *number*)<br /><br /> Vereinfachen oder ändern Sie das Programm im Umfeld der oben aufgeführten Positionen, um dieses Problem zu umgehen. Wählen Sie den technischen Supportbefehl im Visual C++-Hilfemenü, oder öffnen Sie die Hilfedatei für weitere Informationen.|
+|[Schwerwiegender Fehler C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Ein interner Fehler ist im Compiler aufgetreten.<br /> (Compilerdatei „*file*“, Zeile *number*)<br /> Vereinfachen oder ändern Sie das Programm im Umfeld der oben aufgeführten Positionen, um dieses Problem zu umgehen. Wählen Sie den technischen Supportbefehl im Visual C++-Hilfemenü, oder öffnen Sie die Hilfedatei für weitere Informationen.|
 |[Schwerwiegender Fehler C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|Im 2. Durchlauf ist kein Heapspeicher mehr für den Compiler verfügbar.|
 |[Schwerwiegender Fehler C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|Mehr als *number*Fehler gefunden; Kompilierung wird abgebrochen.|
 |[Schwerwiegender Fehler C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|Unerwartetes Dateiende gefunden.|
@@ -78,7 +78,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Schwerwiegender Fehler C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|Unbekanntes Flag „*string*“ in „*option*“.|
 |[Schwerwiegender Fehler C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|Keine Quelldatei angegeben|
 |[Schwerwiegender Fehler C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|Compilerlimit: zu tiefe Schachtelung von Makros|
-|[Schwerwiegender Fehler C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie vergessen, hinzufügen ' #include <*Datei*>' Quellcode?|
+|[Schwerwiegender Fehler C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie vergessen, hinzufügen ' #include \< *Datei*>' Quellcode?|
 |[Schwerwiegender Fehler C1012](fatal-error-c1012.md)|Fehlende zugehörige Klammer: „*character*“ fehlt.|
 |[Schwerwiegender Fehler C1013](fatal-error-c1013.md)|Compilerlimit: zu viele geöffnete Klammern|
 |[Schwerwiegender Fehler C1014](fatal-error-c1014.md)|Zu viele Includedateien: Tiefe = *number*|
