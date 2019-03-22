@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 92eac69e6802a824c4b6e107d2ff3393e931a542
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563055"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328492"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Vorgehensweise: Erstellen eines Symbols oder anderen Bilds
 
@@ -167,7 +167,7 @@ Verwenden der **öffnen &lt;Gerät&gt; Image** Dialogfeld zum Öffnen von Gerät
 
 #### <a name="to-create-a-new-icon-or-cursor"></a>Erstellen Sie ein neues Symbol oder cursor
 
-1. In [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources), mit der rechten Maustaste Ihre *RC* -Datei, und wählen Sie **Ressource einfügen**. Wenn Sie eine vorhandene imageressource bereits in haben Ihrer *RC* -Datei, z. B. einen Cursor, Sie können mit der rechten Maustaste die **Cursor** Ordner, und wählen **Cursor einfügen**.
+1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), mit der rechten Maustaste Ihre *RC* -Datei, und wählen Sie **Ressource einfügen**. Wenn Sie eine vorhandene imageressource bereits in haben Ihrer *RC* -Datei, z. B. einen Cursor, Sie können mit der rechten Maustaste die **Cursor** Ordner, und wählen **Cursor einfügen**.
 
 1. In der [Ressource einfügen (Dialogfeld)](../windows/add-resource-dialog-box.md)Option **Symbol** oder **Cursor** , und wählen Sie **neu**. Für Symbole erstellt diese Aktion eine Symbolressource mit 32 × 32 Pixel, 16 Farben. Bei Cursorn 32 × 32 Pixel, wird die Monochrome (2 Farben)-Abbild erstellt.
 
@@ -228,7 +228,7 @@ Mithilfe der **Bildbearbeitung**, Symbole und Cursor aus mit einem 256-Farben-Pa
 
 #### <a name="to-create-a-256-color-icon-or-cursor"></a>Erstellen eines 256-Farben-Symbols oder Cursors
 
-1. In [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources), mit der rechten Maustaste Ihre *RC* -Datei, und wählen Sie **Ressource einfügen**. Wenn Sie eine vorhandene imageressource bereits in haben Ihrer *RC* -Datei, z. B. einen Cursor, Sie können mit der rechten Maustaste die **Cursor** Ordner, und wählen **Cursor einfügen**.
+1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), mit der rechten Maustaste Ihre *RC* -Datei, und wählen Sie **Ressource einfügen**. Wenn Sie eine vorhandene imageressource bereits in haben Ihrer *RC* -Datei, z. B. einen Cursor, Sie können mit der rechten Maustaste die **Cursor** Ordner, und wählen **Cursor einfügen**.
 
 1. In der [Ressource einfügen (Dialogfeld)](../windows/add-resource-dialog-box.md)Option **Symbol** oder **Cursor** , und wählen Sie **neu**.
 
@@ -295,7 +295,7 @@ Sie öffnen können, GIF- oder JPEG-Bilder in der **Bildbearbeitung** und speich
 
 ### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Beim Hinzufügen einer neuen imageressource zu einem nicht verwalteten C++-Projekt
 
-1. In [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources), mit der rechten Maustaste Ihre *RC* -Datei, und wählen Sie **Ressource einfügen**. Wenn Sie eine vorhandene imageressource bereits in haben Ihrer *RC* -Datei, z. B. einen Cursor, Sie können einfach mit der rechten Maustaste die **Cursor** Ordner, und wählen **Cursor einfügen**.
+1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), mit der rechten Maustaste Ihre *RC* -Datei, und wählen Sie **Ressource einfügen**. Wenn Sie eine vorhandene imageressource bereits in haben Ihrer *RC* -Datei, z. B. einen Cursor, Sie können einfach mit der rechten Maustaste die **Cursor** Ordner, und wählen **Cursor einfügen**.
 
 1. In der [Ressource einfügen (Dialogfeld)](../windows/add-resource-dialog-box.md), wählen Sie den Typ der Bildressource, die Sie erstellen möchten (**Bitmap**, z. B.) Wählen Sie dann **neu**.
 
@@ -315,7 +315,7 @@ Sie öffnen können, GIF- oder JPEG-Bilder in der **Bildbearbeitung** und speich
 
 ## <a name="requirements"></a>Anforderungen
 
-Keine
+Keiner
 
 ## <a name="see-also"></a>Siehe auch
 

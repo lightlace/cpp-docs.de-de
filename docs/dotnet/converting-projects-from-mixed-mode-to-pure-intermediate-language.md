@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 46a12e6204113b00c209696bbdfd1093232d7521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559674"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328583"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Konvertieren von Projekten im gemischten Modus in reine intermediate language
 
@@ -80,7 +80,7 @@ Bei Verwendung eine frühere Version von Visual C++-Compiler-Toolsets, die unter
    |[Boolean](/dotnet/api/system.boolean)|Stellt einen booleschen Wert dar.|
    |[Byte](/dotnet/api/system.byte)|Stellt eine ganze 8-Bit-Zahl ohne Vorzeichen dar.|
    |[Char](/dotnet/api/system.char)|Stellt ein Unicode-Zeichen dar.|
-   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|Stellt einen Zeitpunkt dar, der normalerweise durch Datum und Uhrzeit dargestellt wird.|
+   |[DateTime](/dotnet/api/system.datetime)|Stellt einen Zeitpunkt dar, der normalerweise durch Datum und Uhrzeit dargestellt wird.|
    |[Decimal](/dotnet/api/system.decimal)|Stellt eine Dezimalzahl dar.|
    |[Double](/dotnet/api/system.double)|Stellt eine Gleitkommazahl mit doppelter Genauigkeit dar.|
    |[Guid](/dotnet/api/system.guid)|Stellt eine GUID dar (Globally Unique Identifier, globaler eindeutiger Bezeichner).|
@@ -88,11 +88,11 @@ Bei Verwendung eine frühere Version von Visual C++-Compiler-Toolsets, die unter
    |[Int32](/dotnet/api/system.int32)|Stellt eine 32-Bit-Ganzzahl mit Vorzeichen dar.|
    |[Int64](/dotnet/api/system.int64)|Stellt eine 64-Bit-Ganzzahl mit Vorzeichen dar.|
    |[IntPtr](/dotnet/api/system.intptr)|Ein plattformabhängiger Typ zur Darstellung von Zeigern und Handles.|
-   |[SByte](/dotnet/api/system.byte.aspx)|Stellt eine ganze 8-Bit-Zahl mit Vorzeichen dar.|
-   |[Single](/dotnet/api/system.single.aspx)|Stellt eine Gleitkommazahl mit einfacher Genauigkeit dar.|
+   |[SByte](/dotnet/api/system.byte)|Stellt eine ganze 8-Bit-Zahl mit Vorzeichen dar.|
+   |[Single](/dotnet/api/system.single)|Stellt eine Gleitkommazahl mit einfacher Genauigkeit dar.|
    |[TimeSpan](/dotnet/api/system.timespan)|Stellt ein Zeitintervall dar.|
    |[UInt16](/dotnet/api/system.uint16)|Stellt eine vorzeichenlose 16-Bit-Ganzzahl dar.|
    |[UInt32](/dotnet/api/system.uint32)|Stellt eine vorzeichenlose 32-Bit-Ganzzahl dar.|
    |[UInt64](/dotnet/api/system.uint64)|Stellt eine vorzeichenlose 64-Bit-Ganzzahl dar.|
    |[UIntPtr](/dotnet/api/system.uintptr)|Ein plattformabhängiger Typ zur Darstellung von Zeigern und Handles.|
-   |["Void"](/dotnet/api/system.void)|Zeigt eine Methode, die keinen Wert zurückgibt. Das heißt, hat die Methode der void-Rückgabetyp.|
+   |[Void](/dotnet/api/system.void)|Zeigt eine Methode, die keinen Wert zurückgibt. Das heißt, hat die Methode der void-Rückgabetyp.|

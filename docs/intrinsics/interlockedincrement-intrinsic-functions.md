@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 3054a9eab21f6f7ec149f7f1c23c3c40fca3b9e1
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 91e9c6dac1b6f13997bb7e4f2727a743a9177083
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626931"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328609"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedIncrement“
 
 **Microsoft-spezifisch**
 
-Geben Sie die systeminterne Compiler-Unterstützung für das Win32-Windows-SDK [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement) Funktion.
+Geben Sie die systeminterne Compiler-Unterstützung für das Win32-Windows-SDK [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement) Funktion.
 
 ## <a name="syntax"></a>Syntax
 
@@ -111,7 +111,7 @@ Der Rückgabewert ist der resultierende erhöhte Wert.
 
 |Systemintern|Architektur|Header|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|X86, ARM, x64|\<intrin.h>|
+|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
 
 ## <a name="remarks"></a>Hinweise
@@ -120,7 +120,7 @@ Es gibt mehrere Varianten von `_InterlockedIncrement`, die sich basierend auf de
 
 Während die `_InterlockedIncrement`-Funktion mit 32-Bit-Ganzzahlwerten arbeitet, verwendet `_InterlockedIncrement16`16-Bit-Ganzzahlwerte und `_InterlockedIncrement64` 64-Bit-Ganzzahlwerte.
 
-Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken abrufen und freigeben müssen, beispielsweise am Anfang und Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit dem Suffix `_nf` („keine Umgrenzung“) fungieren nicht als Arbeitsspeicherbarriere.
+Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken zum Abrufen bzw. Freigeben benötigen, wie am Anfang und Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit dem Suffix `_nf` („keine Umgrenzung“) fungieren nicht als Arbeitsspeicherbarriere.
 
 Die Variable, auf die der `lpAddend`-Parameter zeigt, muss an einer 32-Bit-Grenze ausgerichtet sein; andernfalls schlägt diese Funktion auf x86-Multiprozessorsystemen und allen Nicht-x86-Systemen fehl. Weitere Informationen finden Sie unter [ausrichten](../cpp/align-cpp.md).
 

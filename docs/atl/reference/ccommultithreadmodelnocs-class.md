@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComMultiThreadModelNoCS class
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
-ms.openlocfilehash: 9b1622525635a4ea852dec9095fcd479b21044c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ef2038a203b6cbfb2564bbe11d508ee43df0fd1b
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261556"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328661"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS-Klasse
 
@@ -35,7 +35,7 @@ class CComMultiThreadModelNoCS
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
-|Name|Beschreibung|
+|name|Beschreibung|
 |----------|-----------------|
 |[CComMultiThreadModelNoCS::AutoCriticalSection](#autocriticalsection)|Verweist auf Klasse [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).|
 |[CComMultiThreadModelNoCS::CriticalSection](#criticalsection)|Verweist auf Klasse `CComFakeCriticalSection`.|
@@ -117,7 +117,7 @@ Finden Sie unter [CComMultiThreadModel::AutoCriticalSection](../../atl/reference
 
 ##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement
 
-Diese statischen Funktion ruft die Win32-Funktion [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), welche dekrementiert der Wert der Variablen auf *p*.
+Diese statischen Funktion ruft die Win32-Funktion [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement), welche dekrementiert der Wert der Variablen auf *p*.
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -138,7 +138,7 @@ Wenn das Ergebnis dem Dekrementieren 0 (null), dann ist `Decrement` gibt 0 zurü
 
 ##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment
 
-Diese statischen Funktion ruft die Win32-Funktion [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), die inkrementiert des Wert der Variable verweist *p*.
+Diese statischen Funktion ruft die Win32-Funktion [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement), die inkrementiert des Wert der Variable verweist *p*.
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();

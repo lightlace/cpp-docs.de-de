@@ -14,18 +14,18 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: c05dd9da5dd17b0e06ace750d34f2c5abcf94380
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825838"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327580"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Für Visual Studio C++-Projekte erstellte Dateitypen
 
 Dieses Thema beschreibt alle Typen von Dateien, die mit Visual Studio-Projekten für klassische desktopcomputeranwendungen verknüpft sind. Die in Ihrem Projekt tatsächlich enthaltenen Dateien sind vom Projekttyp und von Ihnen mithilfe eines Assistenten ausgewählten Optionen abhängig.
 
-- [Projekt- und Projektmappendateien]()
+- [Projekt- und Projektmappendateien](project-and-solution-files.md)
 
 - [CLR Projects (CLR-Projekte)](files-created-for-clr-projects.md)
 
@@ -54,7 +54,7 @@ In der folgende Tabelle wird gemeinsame Dateien in einem Visual Studio-Projekt, 
 |.atp|Projekt|Anwendungsvorlagen-Projektdatei.|
 |.bmp, .dib, .gif, .jpg, .jpeg, .png|Ressource|Allgemeine Bilddateien.|
 |.bsc|Kompilieren|Browsercodedatei.|
-|.cpp; .c|Source|Haupt-Quellcodedateien für Ihre Anwendung.|
+|.cpp, .c|Source|Haupt-Quellcodedateien für Ihre Anwendung.|
 |.cur|Ressource|Cursorbitmap-Grafikdatei.|
 |.dbp|Projekt|Datenbankprojektdatei.|
 |.disco|Source|Dynamische Ermittlungsdokumentdatei. Verarbeitet die XML-Webdienstermittlung.|
@@ -78,8 +78,8 @@ In der folgende Tabelle wird gemeinsame Dateien in einem Visual Studio-Projekt, 
 |.vap|Projekt|Eine Visual Studio Analyzer-Projektdatei.|
 |.vbg|Lösung|Eine kompatible Projektgruppendatei.|
 |.vbp, .vip, .vbproj|Projekt|Die Visual Basic-Projektdatei.|
-|.vcxitems|Projekt|Ein Projekt mit freigegebenen Elementen zum Freigeben von Codedateien zwischen mehreren C++-Projekten. Weitere Informationen finden Sie unter [Projektdateien und Makefiles]() .|
-|.vcxproj|Projekt|Die Visual Studio-Projektdatei. Weitere Informationen finden Sie unter [Projektdateien und Makefiles]() .|
+|.vcxitems|Projekt|Ein Projekt mit freigegebenen Elementen zum Freigeben von Codedateien zwischen mehreren C++-Projekten. Finden Sie unter [Projekt- und Projektmappendateien](project-and-solution-files.md) für Weitere Informationen.|
+|.vcxproj|Projekt|Die Visual Studio-Projektdatei. Finden Sie unter [Projekt- und Projektmappendateien](project-and-solution-files.md) für Weitere Informationen.|
 |.vcxproj.filters|Projekt|Wenn der Projektmappen-Explorer verwendet wird, um einem Projekt eine Datei hinzuzufügen, definiert die Filterdatei auf Grundlage der entsprechenden Dateinamenserweiterung, wo in der Projektmappen-Explorer-Gesamtstrukturansicht die Datei hinzugefügt wird.|
 |.vdproj|Projekt|Die Visual Studio-Bereitstellungsprojektdatei.|
 |.vmx|Projekt|Die Makro-Projektdatei.|

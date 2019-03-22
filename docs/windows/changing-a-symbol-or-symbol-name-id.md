@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 0de53b102cf06d8b4541f54f961f84408664caed
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: f2edafb0b60cfafcf7ad53b8402ffc39a6fc2f7c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562795"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328843"
 ---
 # <a name="how-to-manage-symbols"></a>Vorgehensweise: Verwaltung von Symbolen
 
@@ -85,7 +85,7 @@ Symbolnamen weisen beschreibende Präfixe auf, die die Art der Ressource oder de
 
 ### <a name="to-change-a-symbol-name-id"></a>So ändern Sie eine Symbolnamens (ID)
 
-1. In [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources), wählen Sie die Ressource.
+1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), wählen Sie die Ressource.
 
 1. In der **Eigenschaften** Fenster, geben Sie einen neuen Symbolnamen ein, oder wählen Sie aus der Liste der vorhandenen Symbole im der **ID** Feld.
 
@@ -129,7 +129,7 @@ Einige Beschränkungen für Symbolwerte sind:
 
 ### <a name="to-change-a-symbol-value"></a>So ändern Sie den Wert eines Symbols
 
-1. In [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources), wählen Sie die Ressource.
+1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), wählen Sie die Ressource.
 
 1. In der **Eigenschaften** geben den Symbolnamen, gefolgt von einem Gleichheitszeichen und einer ganzen Zahl in die **ID** Feld, z. B.:
 
@@ -185,7 +185,7 @@ Die Umgebung interpretiert diese berechneten Symbole ordnungsgemäß, sofern Fol
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>So beziehen Sie freigegebene (schreibgeschützte) Symbole in Ihrer Ressourcendatei ein
 
-1. In [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources), mit der rechten Maustaste Ihre *RC* und wählen Sie [Ressourcenincludes](../windows/resource-includes-dialog-box.md).
+1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), mit der rechten Maustaste Ihre *RC* und wählen Sie [Ressourcenincludes](../windows/resource-includes-dialog-box.md).
 
 1. In der **Anweisungen für schreibgeschützte Symbole** können Sie über die `#include` Compilerdirektive, um die Datei angeben, werden die schreibgeschützten Symbole beibehalten werden soll.
 
@@ -204,7 +204,7 @@ Die Umgebung interpretiert diese berechneten Symbole ordnungsgemäß, sofern Fol
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>So ändern Sie den Namen den Symbolheaderdatei für die Ressource
 
-1. In [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources), mit der rechten Maustaste Ihre *RC* Datei, und wählen [Ressourcenincludes](../windows/resource-includes-dialog-box.md).
+1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), mit der rechten Maustaste Ihre *RC* Datei, und wählen [Ressourcenincludes](../windows/resource-includes-dialog-box.md).
 
 1. In der **Symbolheaderdatei** geben den neuen Namen für die Include-Datei.
 

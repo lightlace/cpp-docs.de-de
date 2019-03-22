@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563250"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328856"
 ---
 # <a name="toolbar-editor-c"></a>Symbolleisten-Editor (C++)
 
@@ -128,7 +128,7 @@ Die **Symbolleisten-Editor** können Sie:
 
 #### <a name="to-create-a-new-toolbar-button"></a>Erstellen Sie eine neue Symbolleisten-Schaltfläche
 
-1. In [Ressourcenansicht](../windows/resource-view-window.md) erweitern Sie den Ressourcenordner (z. B. *Projekt1.rc*).
+1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources) erweitern Sie den Ressourcenordner (z. B. *Projekt1.rc*).
 
 1. Erweitern Sie die **Symbolleiste** Ordner, und wählen Sie eine Symbolleiste zu bearbeiten, führen Sie dann eine der folgenden:
 
@@ -138,7 +138,7 @@ Die **Symbolleisten-Editor** können Sie:
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Hinzufügen eines Bilds zu einer Symbolleiste als Schaltfläche
 
-1. In [Ressourcenansicht](../windows/resource-view-window.md), öffnen Sie die Symbolleiste, indem Sie darauf doppelklicken.
+1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), öffnen Sie die Symbolleiste, indem Sie darauf doppelklicken.
 
 1. Öffnen Sie als Nächstes das Bild, das Sie hinzufügen, klicken Sie auf der Symbolleiste möchten.
 

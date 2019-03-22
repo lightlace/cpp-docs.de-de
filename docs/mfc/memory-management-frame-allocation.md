@@ -18,12 +18,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: bcd691f8e99b558fcadfc1cf51990b673c5b760c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1acf2ce89e18dd64c166103b59b5eb7007214efd
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262206"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328453"
 ---
 # <a name="memory-management-frame-allocation"></a>Speicherverwaltung: Rahmenzuordnung
 
@@ -37,7 +37,7 @@ Für lokale Variablen erfolgt dieser Übergang Bereich auf, wenn die Funktion be
 
 Wenn ein Objekt als Framevariable definiert ist, wird seinem Konstruktor automatisch an der Stelle aufgerufen, in dem die Definition gefunden wird. Wenn das Objekt den Gültigkeitsbereich verlässt, wird dessen Destruktor automatisch aufgerufen, bevor der Speicher für das Objekt freigegeben wird. Diese automatische Konstruktion und Zerstörung können sehr nützlich sein, aber Sie müssen über die automatische Aufrufe, insbesondere der Destruktor sein.
 
-Der Hauptvorteil der Zuweisung von Objekten im Frame ist, dass sie automatisch gelöscht werden. Wenn Sie Ihre Objekte im Bereich zuordnen, müssen Sie kümmern vergessen haben Objekte einen Speicherverlust verursacht. (Ausführliche Informationen zu Speicherverlusten, finden Sie im Artikel [feststellen von Speicherverlusten in MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476).) Ein Nachteil von rahmenzuordnung ist Framevariablen außerhalb ihres Bereichs können nicht verwendet werden. Ein weiterer Faktor bei der Auswahl rahmenzuordnung im Vergleich zu Heapzuordnung ist, dass große Strukturen und-Objekten es oft besser ist, den Heap anstatt des Stapels für den Speicher verwenden, da Stapelspeicher häufig beschränkt ist.
+Der Hauptvorteil der Zuweisung von Objekten im Frame ist, dass sie automatisch gelöscht werden. Wenn Sie Ihre Objekte im Bereich zuordnen, müssen Sie kümmern vergessen haben Objekte einen Speicherverlust verursacht. (Ausführliche Informationen zu Speicherverlusten, finden Sie im Artikel [feststellen von Speicherverlusten in MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476(v=vs.100)).) Ein Nachteil von rahmenzuordnung ist Framevariablen außerhalb ihres Bereichs können nicht verwendet werden. Ein weiterer Faktor bei der Auswahl rahmenzuordnung im Vergleich zu Heapzuordnung ist, dass große Strukturen und-Objekten es oft besser ist, den Heap anstatt des Stapels für den Speicher verwenden, da Stapelspeicher häufig beschränkt ist.
 
 ## <a name="see-also"></a>Siehe auch
 

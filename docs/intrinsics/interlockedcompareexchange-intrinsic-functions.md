@@ -1,5 +1,5 @@
 ---
-title: Intrinsische Funktionen „_InterlockedCompareExchange“
+title: Systeminterne Funktionen "_InterlockedCompareExchange"
 ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedCompareExchange_HLERelease
@@ -48,14 +48,14 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 545bbeec545b37324ff9c15512b27073f5ffc1c7
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 840a7e63bb9b98cfb46ea36e30b3439168688c87
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627294"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328311"
 ---
-# <a name="interlockedcompareexchange-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedCompareExchange“
+# <a name="interlockedcompareexchange-intrinsic-functions"></a>Systeminterne Funktionen "_InterlockedCompareExchange"
 
 **Microsoft-spezifisch**
 
@@ -179,13 +179,13 @@ __int64 _InterlockedCompareExchange64_rel(
 #### <a name="parameters"></a>Parameter
 
 *Ziel*<br/>
-[in, out] Zeiger auf den Zielwert. Die Zeichen wird ignoriert.
+[in, out] Zeiger auf den Zielwert. Das Zeichen wird ignoriert.
 
 *Exchange*<br/>
-[in] Exchange-Wert. Die Zeichen wird ignoriert.
+[in] Exchange-Wert. Das Zeichen wird ignoriert.
 
-*Comparand-Parameter*<br/>
-[in] Wert, der Vergleich mit dem Ziel. Die Zeichen wird ignoriert.
+*Comparand*<br/>
+[in] Wert, der Vergleich mit dem Ziel. Das Zeichen wird ignoriert.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -195,7 +195,7 @@ Der Rückgabewert ist der Anfangswert des `Destination`-Zeigers.
 
 |Systemintern|Architektur|Header|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|X86, ARM, x64|\<intrin.h>|
+|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
 |`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|x64|\<intrin.h>|
 |`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, x64|\<immintrin.h>|
@@ -204,7 +204,7 @@ Der Rückgabewert ist der Anfangswert des `Destination`-Zeigers.
 
 `_InterlockedCompareExchange` führt einen atomaren Vergleich des `Destination`-Werts mit dem `Comparand`-Wert durch. Wenn der `Destination`-Wert gleich dem `Comparand`-Wert ist, wird der `Exchange`-Wert in der von `Destination` angegebenen Adresse gespeichert. Andernfalls wird kein Vorgang ausgeführt.
 
-`_InterlockedCompareExchange` bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [InterlockedCompareExchange](/windows/desktop/api/winbase/nf-winbase-interlockedcompareexchange) Funktion.
+`_InterlockedCompareExchange` bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) Funktion.
 
 Es gibt mehrere Varianten von `_InterlockedCompareExchange`, die sich basierend auf den beinhalteten Datentypen und in Abhängigkeit davon unterscheiden, ob prozessorspezifische Semantiken zum Abrufen bzw. Freigeben verwendet werden.
 

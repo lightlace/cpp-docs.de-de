@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 8c60469747c24b4c295348a14cb569c4118c76d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1e730125e47609f0bf87814b32962336cb752b04
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260477"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328258"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Beispiel: Anzeigen eines Dialogfelds mit einem Menübefehl
 
@@ -50,11 +50,16 @@ Die Verfahren verwenden Sie die folgenden Namen und Werte:
 
 1. Fügen Sie die folgenden include-Anweisung, um CDisplayDialogDoc.cpp (oder CDisplayDialogApp.cpp) nach den vorhandenen Anweisungen einschließen:
 
-   [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   ```cpp
+   #include "TestDialog.h"
+   ```
 
 1. Fügen Sie den folgenden Code `OnViewTest` der Funktion implementiert wird:
 
-   [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
+   ```cpp
+   CTestDialog testdlg;
+   testdlg.DoModal();  
+   ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Ein nicht modales Dialogfeld angezeigt.
 
@@ -64,29 +69,46 @@ Die Verfahren verwenden Sie die folgenden Namen und Werte:
 
    - Die Dialogfeldklasse, die vor der Deklaration der ersten Klasse zu deklarieren:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#44](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_3.h)]
+   ```cpp
+   class CTestDialog;
+   ```
 
    - Einen Zeiger auf das Dialogfeld nach dem öffentlichen Abschnitt der Attribute zu deklarieren:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#45](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_4.h)]
+   ```cpp
+   CTestDialog* m_pTestDlg;
+   ```
 
 1. Edit DisplayDialogView.cpp:
 
    - Fügen Sie die folgende Anweisung einschließen, nach den vorhandenen include-Anweisungen hinzu:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   ```cpp
+   #include "TestDialog.h"
+   ```
 
    - Fügen Sie dem Konstruktor den folgenden Code hinzu:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#46](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_5.cpp)]
+   ```cpp
+   m_pTestDlg = NULL;
+   ```
 
    - Fügen Sie den folgenden Code, der Destruktor:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#47](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_6.cpp)]
+   ```cpp
+   delete m_pTestDlg;
+   ```
 
    - Fügen Sie den folgenden Code `OnViewTest` der Funktion implementiert wird:
 
-         [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
+   ```cpp
+   if (NULL == m_pTestDlg)
+   {
+      m_pTestDlg = new CTestDialog(this);
+      m_pTestDlg->Create(CTestDialog::IDD, this);
+   }
+   m_pTestDlg->ShowWindow(SW_SHOW); 
+   ```
 
 ## <a name="see-also"></a>Siehe auch
 

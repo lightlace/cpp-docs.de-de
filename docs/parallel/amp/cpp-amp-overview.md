@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4bd8546ba551ee37b9c03b5965a4079a3bd9f98
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269642"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328882"
 ---
 # <a name="c-amp-overview"></a>Übersicht über C++ AMP
 
@@ -21,11 +21,15 @@ C++ Accelerated Massive Parallelism (C++ AMP) beschleunigt die Ausführung von C
 
 ## <a name="system-requirements"></a>Systemanforderungen
 
-- Windows 7, Windows 8, Windows Server 2008 R2 oder WindowsServer 2012
+- Windows 7 oder höher
+
+- Windows Server 2008 R2 oder höher
 
 - DirectX 11-Funktionsebene 11.0 oder aktuellere Hardware
 
 - Für das Debuggen im Softwareemulator ist Windows 8 oder Windows Server 2012 erforderlich. Für das Debuggen auf der Hardware müssen Sie die Treiber für Ihre Grafikkarte installieren. Weitere Informationen finden Sie unter [Debuggen von GPU-Code](/visualstudio/debugger/debugging-gpu-code).
+
+- Hinweis: AMP werden auf ARM64 ist derzeit nicht unterstützt.
 
 ## <a name="introduction"></a>Einführung
 

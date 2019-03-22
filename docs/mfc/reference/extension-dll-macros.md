@@ -4,12 +4,12 @@ ms.date: 04/03/2017
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 1d0cbd1f702a1d26dd2eaafd88efcfd61f52ff78
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 863350067c39fbc9cdb3d9d3a6c4448348d977de
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850215"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328765"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makros und Funktionen für die Verwaltung von DLLs
 
@@ -21,9 +21,9 @@ ms.locfileid: "55850215"
 |[AfxNetInitModule](#afxnetinitmodule)|Bietet MFC-Sockets aus einer regulären MFC-DLL, die dynamisch mit MFC verknüpft wird.|
 |[AfxGetAmbientActCtx](#afxgetambientactctx)|Ruft den aktuellen Status des pro-Module-Status-Flags ab.|
 |[AfxGetStaticModuleState](#afxgetstaticmodulestate)|Legt den Zustand vor der Initialisierung bzw. den vorherigen Zustand nach der Bereinigung wiederherstellen.|
-|[AfxInitExtensionModule]()#afxinitextensionmodule|Initialisiert die DLL an.|
+|[AfxInitExtensionModule](#afxinitextensionmodule)|Initialisiert die DLL an.|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|Legen Sie das pro-Module-Status-Flag, das von MFC die WinSxS-Verhalten wirkt sich auf.|
-|[AfxTermExtensionModule]()#afxtermextensionmodule)|Ermöglicht es MFC so bereinigen Sie die MFC-Erweiterungs-DLL wird jeder Prozess von der DLL getrennt.|
+|[AfxTermExtensionModule](#afxtermextensionmodule)|Ermöglicht es MFC so bereinigen Sie die MFC-Erweiterungs-DLL wird jeder Prozess von der DLL getrennt.|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 
