@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: f57c09d549a4ceb92db21c06499b4f6e71fc6a52
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562938"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328401"
 ---
 # <a name="accelerator-editor-c"></a>Zugriffstasten-Editor (C++)
 
@@ -116,7 +116,7 @@ Die folgenden Verfahren beziehen sich auf die Verwendung von standard-Eigenschaf
 
 ### <a name="to-edit-in-an-accelerator-table"></a>So führen Sie die Bearbeitung in einer Zugriffstastentabelle durch
 
-1. Öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wählen Sie einen Eintrag in der Tabelle, und wählen Sie auf die um direkte Bearbeitung zu aktivieren.
 
@@ -132,7 +132,7 @@ Die folgenden Verfahren beziehen sich auf die Verwendung von standard-Eigenschaf
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>So suchen Sie einen Eintrag in einer geöffneten Zugriffstastentabelle
 
-1. Öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wählen Sie eine Spaltenüberschrift, um den Inhalt der Spalte alphabetisch zu sortieren. Wählen Sie z. B. **ID** , alle IDs, die in der Zugriffstastentabelle in alphabetischer Reihenfolge anzuzeigen.
 
@@ -140,7 +140,7 @@ Die folgenden Verfahren beziehen sich auf die Verwendung von standard-Eigenschaf
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>So fügen Sie einer Zugriffstastentabelle einen Eintrag hinzu
 
-1. Öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Mit der rechten Maustaste in die Zugriffstastentabelle, und wählen Sie **neue Zugriffstaste**, oder wählen Sie den Eintrag leere Zeile am unteren Rand der Tabelle.
 
@@ -155,7 +155,7 @@ Die folgenden Verfahren beziehen sich auf die Verwendung von standard-Eigenschaf
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>So löschen Sie einen Eintrag aus einer Zugriffstastentabelle
 
-1. Öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wählen Sie den Eintrag zu löschen, oder halten Sie die **STRG** oder **UMSCHALT** gedrückt, während Sie auswählen, um mehrere Einträge auszuwählen.
 
@@ -177,7 +177,7 @@ Die folgenden Verfahren beziehen sich auf die Verwendung von standard-Eigenschaf
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Zum Ändern der Eigenschaften mehrerer Zugriffstasten
 
-1. Öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Öffnen Sie die Zugriffstastentabelle durch Doppelklicken auf das Symbol im [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wählen Sie die Zugriffstasten, die Sie ändern, indem Sie sie gedrückt halten, möchten die **STRG** gedrückt, während Sie jede auswählen.
 

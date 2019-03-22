@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen 
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b81f6901e60f27ada27f14d7dbc7c10fa3faec34
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54335990"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328713"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Vorgehensweise: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen von .h-Dateien aus Windows-Metadaten
 
@@ -18,7 +18,7 @@ Sie verwenden diese Tools in zwei Hauptszenarien:
 
 - Erstellen von benutzerdefinierten IDL-Dateien und Headerdateien, sodass eine C++-App, die mithilfe der Vorlagenbibliothek für Windows-Runtime geschrieben wurde, eine benutzerdefinierte Komponente für Windows-Runtime verarbeiten kann
 
-- Generieren von Proxy- und Stub-Dateien für benutzerdefinierte Ereignistypen in einer Komponente für Windows-Runtime Weitere Informationen finden Sie unter [benutzerdefinierte Ereignisse und ereigniszugriffsmethoden in Windows-Runtime-Komponenten](/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
+- Generieren von Proxy- und Stub-Dateien für benutzerdefinierte Ereignistypen in einer Komponente für Windows-Runtime Weitere Informationen finden Sie unter [benutzerdefinierte Ereignisse und ereigniszugriffsmethoden in Windows-Runtime-Komponenten](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
 
 Diese Tools sind nur für das Analysieren von benutzerdefinierten WINMD-Dateien erforderlich. Die IDL- und H-Dateien für Komponenten des Windows-Betriebssystems sind bereits für Sie generiert. Wird standardmäßig in Windows 8.1, befinden sie sich die Dateien (x86) \Windows Kits\8.1\Include\winrt \Programme\\.
 
@@ -73,6 +73,6 @@ Anschließend wird "midlrt" auf der generierten IDL-Datei ausgeführt. Beachten 
 
 ## <a name="remarks"></a>Hinweise
 
-Die Ausgabedatei eines winmdidl-Vorgangs weist denselben Namen wie die Eingabedatei auf, hat aber die Dateinamenerweiterung IDL.
+Die Ausgabedatei eines winmdidl-Vorgangs weist denselben Namen wie die Eingabedatei auf, hat aber die Dateierweiterung IDL.
 
-Wenn Sie eine Komponente für Windows-Runtime entwickeln, auf die von WRL zugegriffen wird, können Sie "winmdidl.exe" und "midlrt.exe" angeben, um als Postbuildschritte ausgeführt zu werden, sodass die IDL- und H-Dateien für jedes Build erzeugt werden. Ein Beispiel finden Sie unter [Auslösen von Ereignissen in Windows-Runtime-Komponenten](/uwp/winrt-components/raising-events-in-windows-runtime-components).
+Wenn Sie eine Komponente für Windows-Runtime entwickeln, auf die von WRL zugegriffen wird, können Sie "winmdidl.exe" und "midlrt.exe" angeben, um als Postbuildschritte ausgeführt zu werden, sodass die IDL- und H-Dateien für jedes Build erzeugt werden. Ein Beispiel finden Sie unter [Auslösen von Ereignissen in Windows-Runtime-Komponenten](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).

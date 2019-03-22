@@ -3,7 +3,6 @@ title: Compilerwarnungs C4200 durch C4399
 ms.date: 11/17/2017
 f1_keywords:
 - C4203
-- C4274
 - C4277
 - C4279
 - C4298
@@ -12,7 +11,6 @@ f1_keywords:
 - C4303
 - C4314
 - C4315
-- C4316
 - C4317
 - C4318
 - C4321
@@ -22,22 +20,20 @@ f1_keywords:
 - C4328
 - C4330
 - C4338
-- C4343
 - C4352
 - C4362
 - C4367
 - C4370
-- C4373
 - C4380
 - C4387
 - C4388
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d79c9c12664f9920f03490b8cb53ec671d3d78a3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810509"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328264"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Compilerwarnungs C4200 durch C4399
 
@@ -103,7 +99,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|"*Bezeichner*': 'const' Automatische Daten, die mit dem vom Compiler generierten Standardkonstruktor initialisiert, verursachen unzuverlässige Ergebnisse|
 |[Compilerwarnung (Ebene 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|"*Funktion*": ist als __declspec(dllimport) markiert; systemeigene Aufrufkonvention muss angegeben werden, beim Importieren einer Funktion.|
 |[Compilerwarnung (Ebene 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|"*Funktion*": inkonsistente Dll-Bindung|
-|Compilerwarnung (Stufe 1) C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
+|[Compilerwarnung (Stufe 1) C4274](compiler-warning-level-1-c4274.md)|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
 |[Compilerwarnung (Ebene 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|keine Dll-Schnittstelle '*Classkey*' '*Bezeichner1*'verwendet als Basis für die Dll-Schnittstelle'*Classkey*' '*Bezeichner2*"|
 |[Compilerwarnung (Ebene 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|"*Funktion*': kein Prototyp gegeben; Annahme: keine Parameter|
 |Compilerwarnung (Stufe 1) C4277|importierte Element "*Classname*::*Member*" vorhanden ist, als Datenmember und Funktionsmember; Datenmember wird ignoriert|
@@ -140,7 +136,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|"*Funktion*': '*Format_specifier*"im Format Zeichenfolge steht in Konflikt mit dem Argument"*Argument_number*"vom Typ"*Typ*"|
 |Compilerwarnung C4314|Erwarteter Pragma-Parameter "32" oder "64" sein.|
 |Compilerwarnung (Stufe 4) C4315|"*Classname*": "this"-Zeiger für das Element "*Member*"möglicherweise nicht ausgerichtet sein"*Ausrichtung*" wie vom Konstruktor erwartet|
-|Compilerwarnung (Stufe 3) C4316|"*Bezeichner*':-Objekt, auf dem Heap reserviert nicht ausgerichtet werden kann '*Ausrichtung*"|
+|[Compilerwarnung (Stufe 3) C4316](compiler-warning-level-3-c4316.md)|"*Bezeichner*':-Objekt, auf dem Heap reserviert nicht ausgerichtet werden kann '*Ausrichtung*"|
 |Compilerwarnung (Stufe 1) C4317|"*Printf_family*': nicht genügend Argumente für Formatzeichenfolge übergeben|
 |Compilerwarnung C4318|Übergabe der Konstante Null als Länge an memset|
 |[Compilerwarnung (Ebene 1) C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|"*Operator*": Null erweitert "*type1*'to'*Typ2*" größeren|
@@ -163,7 +159,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|"*Typ*": Verwendung von undefiniertem Typ erkannt "WinRT&#124;CLR" - Metadaten verwenden dieses Typs führt möglicherweise zu einer Laufzeitausnahme|
 |[Compilerwarnung (Ebene 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|"*Wert*": Umschließen von positivem in negativen Wert des Werts|
 |[Compilerwarnung (Ebene 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|verhaltensänderung: '*Funktion*"aufgerufen wird, jedoch ein Memberoperator aufgerufen wurde, in früheren Versionen|
-|Compilerwarnung (Stufe 4) C4343|„#pragma optimize("g",off)“ überschreibt Option „/Og“.|
+|[Compilerwarnung (Stufe 4) C4343](compiler-warning-level-4-c4343.md)|„#pragma optimize("g",off)“ überschreibt Option „/Og“.|
 |[Compilerwarnung (Ebene 1) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|verhaltensänderung: Verwendung von expliziten Vorlagenargumenten löste im Aufruf von "*Funktion*"|
 |[Compilerwarnung (Ebene 1) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|"*Namen*": abhängiger Name ist kein Typ|
 |[Compilerwarnung (Ebene 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|"*Typ*": Neudefinition des Standardparameters: Parameter "*Parameter_number*"|
@@ -184,7 +180,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|"*Enumerator*': Enumeratorwert"*Wert*"kann nicht als dargestellt werden"*Typ*', Wert ist'*New_value*"|
 |Warnung C4370|"*Classname*': Layout der Klasse von einer früheren Version des Compilers aufgrund der besseren Komprimierung geändert hat|
 |[Compilerwarnung (Stufe 3) C4371](../../error-messages/compiler-warnings/c4371.md)|"*Classname*': Layout der Klasse möglicherweise von einer früheren Version des Compilers durch bessere Verpackung des Members geändert"*Member*"|
-|Compilerwarnung (Stufe 3) C4373|"*Derived_class*::*Funktion*": virtuelle Funktion überschreibt*Base_class*::*Funktion*', frühere Versionen des Compilers nicht überschrieben, wenn der Parameter nur durch Const/Volatile-Qualifizierer Compilerversionen|
+|[Compilerwarnung (Stufe 3) C4373](compiler-warning-level-3-c4373.md)|"*Derived_class*::*Funktion*": virtuelle Funktion überschreibt*Base_class*::*Funktion*', frühere Versionen des Compilers nicht überschrieben, wenn der Parameter nur durch Const/Volatile-Qualifizierer Compilerversionen|
 |[Compilerwarnung (Ebene 1) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|"*function1*": Schnittstellenmethode wird von nicht virtuellen Methode nicht implementiert '*Funktion2*"|
 |[Compilerwarnung (Ebene 1) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|nicht öffentliche Methode "*method2*"überschreibt nicht die"*method2*"|
 |[Compilerwarnung (Ebene 1) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|Zugriffsspezifizierer '*Old_specifier*: "wird nicht mehr unterstützt: Verwenden Sie '*New_specifier*:" stattdessen|
@@ -205,7 +201,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerwarnung (Ebene 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|"*Variable*': const hat keine Auswirkungen auf '*literal*" Datenmember; ignoriert|
 |[Compilerwarnung C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|"*Funktion*': anwendungsdomänenspezifisches Symbol sollte nicht mit __declspec('dllexport') markiert werden|
 |[Compilerwarnung (Ebene 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|"*Funktion*': Memberfunktion wird für eine Kopie des Initonly-Datenmembers aufgerufen werden kann '*Member*"|
-|Compilerwarnung (Stufe 2) C4396|"*Funktion*': Der Inlinespezifizierer kann nicht verwendet werden, wenn eine Friend-Deklaration auf die Spezialisierung einer Funktionsvorlage verweist.|
+|[Compilerwarnung (Stufe 2) C4396](compiler-warning-level-2-c4396.md)|"*Funktion*': Der Inlinespezifizierer kann nicht verwendet werden, wenn eine Friend-Deklaration auf die Spezialisierung einer Funktionsvorlage verweist.|
 |[Compilerwarnung (Ebene 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute wird ignoriert.|
 |[Compilerwarnung (Ebene 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|"*Variable*": Prozessspezifische globale Objekte möglicherweise funktionieren nicht ordnungsgemäß bei mehreren Anwendungsdomänen; verwenden Sie ggf. __declspec(appdomain)|
 |[Compilerwarnung (Ebene 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|"*Symbol*": Prozessspezifische Symbole sollten nicht gekennzeichnet werden, mit __declspec('dllimport') bei der Kompilierung mit/clr: pure|

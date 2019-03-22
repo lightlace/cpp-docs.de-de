@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 461322076e2de4e2cd89c6d39592989aecc75361
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563016"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328804"
 ---
 # <a name="resource-editors-c"></a>Ressourcen-Editoren (C++)
 
@@ -63,13 +63,13 @@ Ressourcen können auch werden außerhalb des Projekts bearbeitet, ohne das Proj
 > [!NOTE]
 > Eigenschaften einer Ressource können geändert werden, mithilfe der **Eigenschaften** Fenster.
 
-- So bearbeiten Sie die Eigenschaften einer Ressource in [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources), mit der rechten Maustaste in der Ressource, die Sie verwenden möchten, bearbeiten, und wählen **Eigenschaften**.  Klicken Sie auf die [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), ändern Sie die Eigenschaften der Ressource.
+- So bearbeiten Sie die Eigenschaften einer Ressource in [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), mit der rechten Maustaste in der Ressource, die Sie verwenden möchten, bearbeiten, und wählen **Eigenschaften**.  Klicken Sie auf die [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), ändern Sie die Eigenschaften der Ressource.
 
 - Um eine der Eigenschaften einer Ressource vorgenommene Änderung rückgängig zu machen, sicherzustellen, dass die Ressource den Fokus besitzt, im **Ressourcenansicht** , und wählen Sie **rückgängig machen** aus der **bearbeiten** Menü.
 
 ### <a name="win32-resources"></a>Win32-Ressourcen
 
-Sie erreichen die Win32-Ressourcen in der [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources) Bereich.
+Sie erreichen die Win32-Ressourcen in der [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources) Bereich.
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>So zeigen Sie eine Win32-Ressource in einem Ressourcen-Editor an
 
@@ -113,7 +113,7 @@ Die folgenden Ressourcen bieten keine Vorschau: Accelerator Zeichenfolgentabelle
 
 ### <a name="to-preview-resources"></a>Vorschau der Ressourcen
 
-1. In [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources) oder ein Dokumentfenster, und wählen Sie die Ressource ein, z. B. **IDD_ABOUTBOX**.
+1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources) oder ein Dokumentfenster, und wählen Sie die Ressource ein, z. B. **IDD_ABOUTBOX**.
 
 1. In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), wählen die **Eigenschaftenseiten** Schaltfläche.
 
@@ -124,7 +124,7 @@ Die folgenden Ressourcen bieten keine Vorschau: Accelerator Zeichenfolgentabelle
 
 ## <a name="requirements"></a>Anforderungen
 
-Keine
+Keiner
 
 ## <a name="see-also"></a>Siehe auch
 

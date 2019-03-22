@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 41ea20bcddc53142773d474af41021e9c71af1aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289857"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328947"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant-Klasse
 
@@ -216,7 +216,7 @@ Ein Zeiger auf ein Objekt des Typs TIMESTAMP_STRUCT gespeichert.
 
 Die `m_pdate` -Datenmember auf eine Union gehört. Vor dem Zugriff auf `m_pdate`, überprüfen Sie zunächst den Wert der [CDBVariant::m_dwType](#m_dwtype). Wenn `m_dwType` nastaven NA hodnotu DBVT_DATE, klicken Sie dann `m_pdate` enthält einen gültigen Zeiger; andernfalls den Zugriff auf `m_pdate` wird zu unzuverlässige Ergebnissen führen.
 
-Weitere Informationen zu den TIMESTAMP_STRUCT-Datentyp, finden Sie im Thema [C-Datentypen](/previous-versions/windows/desktop/ms714556) in Anhang D des der *ODBC Programmer's Reference* im Windows SDK.
+Weitere Informationen zu den TIMESTAMP_STRUCT-Datentyp, finden Sie im Thema [C-Datentypen](/sql/odbc/reference/appendixes/c-data-types) in Anhang D des der *ODBC Programmer's Reference* im Windows SDK.
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

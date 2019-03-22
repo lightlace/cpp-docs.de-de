@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 73fd4a8996bcfbaaf6fdd4018e524b66913d11cd
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563081"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328427"
 ---
 # <a name="image-editor-for-icons-c"></a>Bildbearbeitung für Symbole (C++)
 
@@ -60,7 +60,7 @@ Grafische Ressourcen sind die Images, die Sie für Ihre Anwendung zu definieren.
 
 Können Sie auch die **Bildbearbeitung** und [Binär-Editor](binary-editor.md) , Bearbeitung von Ressourcendateien in verwalteten Projekten möglich. Bei den zu bearbeitenden verwalteten Ressourcen muss es sich um verknüpfte Ressourcen handeln. Die Visual Studio-Ressourcen-Editoren unterstützt nicht das Bearbeiten eingebetteter Ressourcen.
 
-Zusätzlich zum Erstellen neuer grafische Ressourcen, können Sie [Importieren vorhandener Bilder](/windows/how-to-copy-resources#import-and-export-resources) zum Bearbeiten und diese dann zu Ihrem Projekt hinzufügen. Sie können auch öffnen, und Bearbeiten von Bildern, die nicht Teil eines Projekts für sind [unabhängig bearbeiten](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
+Zusätzlich zum Erstellen neuer grafische Ressourcen, können Sie [Importieren vorhandener Bilder](../windows/how-to-copy-resources.md#import-and-export-resources) zum Bearbeiten und diese dann zu Ihrem Projekt hinzufügen. Sie können auch öffnen, und Bearbeiten von Bildern, die nicht Teil eines Projekts für sind [unabhängig bearbeiten](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
 
 Informationen zu den **Bild-Editor**, finden Sie unter Vorgehensweise [erstellen Sie ein Symbol oder andere Bild](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [Bearbeiten eines Bildes](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [Verwenden eines Zeichentools](../windows/using-a-drawing-tool-image-editor-for-icons.md), [Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md), und [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md).
 
@@ -151,7 +151,7 @@ Um dieses Dialogfeld zuzugreifen, wählen die **Schriftart** Schaltfläche der *
 
 Hier ist ein Beispiel zum Hinzufügen von Text auf ein Symbol in einer Windows-Anwendung, und bearbeiten die Schriftart des Textes.
 
-1. Erstellen einer C++-Windows Forms-Anwendung. Weitere Informationen finden Sie unter [Erstellen eines Windows-Anwendungsprojekts](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). Ein *app.ico* Datei wird standardmäßig zum Projekt hinzugefügt.
+1. Erstellen einer C++-Windows Forms-Anwendung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Windows Forms-Anwendungen](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Ein *app.ico* Datei wird standardmäßig zum Projekt hinzugefügt.
 
 1. In **Projektmappen-Explorer**, doppelklicken Sie auf die Datei *app.ico*. Die **Bildbearbeitung** wird geöffnet.
 
@@ -215,7 +215,7 @@ Für alle **Bildbearbeitung** Bereiche mit einem Vergrößerungsfaktor von 4 ode
 
 ## <a name="requirements"></a>Anforderungen
 
-Keine
+Keiner
 
 ## <a name="see-also"></a>Siehe auch
 

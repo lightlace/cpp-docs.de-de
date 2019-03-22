@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6c855986d98f265f876f2acdd085eea46e057c93
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563302"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328895"
 ---
 # <a name="string-editor-c"></a>Zeichenfolgen-Editor (C++)
 
@@ -56,7 +56,7 @@ Die **Zeichenfolgen-Editor** können Sie:
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>Um eine Zeichenfolgenressource in der Zeichenfolgentabelle zu finden.
 
-1. Öffnen Sie durch Doppelklicken auf das Symbol in der Zeichenfolgentabelle [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Öffnen Sie durch Doppelklicken auf das Symbol in der Zeichenfolgentabelle [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wechseln Sie zum Menü **bearbeiten** > **suchen und Ersetzen** , und wählen Sie **finden**.
 
@@ -79,7 +79,7 @@ Die **Zeichenfolgen-Editor** stellt sicher, dass Sie keine ID, die bereits verwe
 
 #### <a name="to-add-a-string-table-entry"></a>Zum Hinzufügen eines Eintrags der Zeichenfolge-Tabelle
 
-1. Öffnen Sie durch Doppelklicken auf das Symbol in der Zeichenfolgentabelle [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Öffnen Sie durch Doppelklicken auf das Symbol in der Zeichenfolgentabelle [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Mit der rechten Maustaste in der Tabelle, und wählen Sie **neue Zeichenfolge**.
 
@@ -124,7 +124,7 @@ Sie können die direkte Bearbeitung verwenden, so ändern Sie die **ID**, **Wert
 
 #### <a name="to-change-a-string-or-its-identifier"></a>Eine Zeichenfolge oder den Bezeichner ändern.
 
-1. Öffnen Sie durch Doppelklicken auf das Symbol in der Zeichenfolgentabelle [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Öffnen Sie durch Doppelklicken auf das Symbol in der Zeichenfolgentabelle [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wählen Sie die Zeichenfolge, die Sie verwenden möchten, bearbeiten, und doppelklicken Sie auf die **ID**, **Wert**, oder **Beschriftung** Spalte, Sie können:
 
@@ -136,7 +136,7 @@ Sie können die direkte Bearbeitung verwenden, so ändern Sie die **ID**, **Wert
 
 #### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>So ändern Sie die Caption-Eigenschaft von mehreren Zeichenfolgenressourcen
 
-1. Öffnen Sie durch Doppelklicken auf das Symbol in der Zeichenfolgentabelle [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Öffnen Sie durch Doppelklicken auf das Symbol in der Zeichenfolgentabelle [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wählen Sie die Zeichenfolgen, die Sie ändern, indem Sie sie gedrückt halten, möchten die **STRG** gedrückt, während Sie jede auswählen.
 
@@ -146,7 +146,7 @@ Sie können die direkte Bearbeitung verwenden, so ändern Sie die **ID**, **Wert
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Zum Hinzufügen von Formatierung oder Sonderzeichen zu einer Zeichenfolgenressource
 
-1. Öffnen Sie durch Doppelklicken auf das Symbol in der Zeichenfolgentabelle [Ressourcenansicht](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Öffnen Sie durch Doppelklicken auf das Symbol in der Zeichenfolgentabelle [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Wählen Sie die Zeichenfolge, die Sie ändern möchten.
 

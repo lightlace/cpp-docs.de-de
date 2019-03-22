@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: f3b247660e65975630b9434685d0a12caf0fc257
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a93b0a48bc5996cbb96194762b9c03ea143556e2
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419170"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328724"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB-Consumervorlagen (C++)
 
@@ -24,7 +24,7 @@ Die OLE DB-Consumervorlagen unterstützen die Spezifikation der OLE DB Version 2
 
 - Systemeigene C/C++-Datentypen für die OLE DB-Programmierung.
 
-Sie sollten mit C++-Vorlagen, COM und den OLE DB-Schnittstellen vertraut sein, um OLE DB-Vorlagen verwenden zu können. Wenn Sie nicht mit OLE DB vertraut sind, finden Sie unter [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms718124(v=vs.85)).
+Sie sollten mit C++-Vorlagen, COM und den OLE DB-Schnittstellen vertraut sein, um OLE DB-Vorlagen verwenden zu können. Wenn Sie nicht mit OLE DB vertraut sind, finden Sie unter [Microsoft OLE DB-Treiber für SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server).
 
 Die OLE DB-Vorlagen unterstützen eher das vorhandene OLE DB-Objektmodell als das Hinzufügen eines neuen Objektmodells. Die Klassen der obersten Ebene in den OLE DB-Consumervorlagen gleichen den in der der OLE DB-Spezifikation definierten Komponenten. Das Design der OLE DB-Consumervorlagen umfasst erweiterte Features, z. B. mehrere Accessoren für ein Rowset. Durch die Verwendung von Vorlagen und der mehrfachen Vererbung ergibt sich eine kleine und flexible Bibliothek.
 
@@ -61,4 +61,4 @@ Weitere Informationen finden Sie unter den folgenden Themen:
 [OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)<br/>
 [Datenzugriff](../data-access-in-cpp.md)<br/>
 [OLE DB-SDK-Dokumentation](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
-[OLE DB-Programmierreferenz](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)
+[Microsoft OLE DB-Treiber für SQLServer](/sql/connect/oledb/oledb-driver-for-sql-server)
