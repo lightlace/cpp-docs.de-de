@@ -1,15 +1,15 @@
 ---
 title: „Ordner öffnen“-Unterstützung für C++-Buildsysteme in Visual Studio
-ms.date: 01/21/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: a7e352d7978ba5c973d779224639006fa984e4f0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 2dedd56759b6bb49260221e22218da6f4300a970
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825666"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356087"
 ---
 # <a name="open-folder-projects-for-c"></a>„Ordner öffnen“-Projekte für C++
 
@@ -49,7 +49,7 @@ IntelliSense und das Verhalten beim Durchsuchen hängen teilweise von der aktive
       "includePath": [ "include" ],
       "defines": [ "_DEBUG" ],
       "compilerSwitches": "/std:c++17",
-      "intelliSenseMode": "msvc-x64",
+      "intelliSenseMode": "windows-msvc-x64",
       "forcedInclude": [ "pch.h" ],
       "undefines": []
     }
@@ -64,7 +64,7 @@ Sie können Buildskripts oder andere externe Vorgänge in den Dateien automatisi
 
 ![Konfigurieren von Tasks für „Ordner öffnen“](media/open-folder-config-tasks.png)
 
-Dadurch wird die `tasks.vs.json`-Datei im Ordner „.vs“ erstellt oder geöffnet, die Visual Studio im Stammordner des Projekts erstellt. Sie können in dieser Datei einen beliebigen Task definieren und diesen dann über das Kontextmenü des **Projektmappen-Explorers** aufrufen. Das folgende Beispiel zeigt eine tasks.vs.json-Datei, die einen einzelnen Task definiert. `taskName` definiert den Namen, der im Kontextmenü angezeigt wird. `appliesTo` definiert, für welche Dateien der Befehl ausgeführt werden kann. Die `command`-Eigenschaft bezieht sich auf die Umgebungsvariable „COMSPEC“, die den Pfad für die Konsole („cmd.exe“ unter Windows) identifiziert. Sie können ebenfalls auf Umgebungsvariablen verweisen, die in „CppProperties.json“ oder „CMakeSettings.json“ definiert sind. Die `args`-Eigenschaft gibt die Befehlszeile an, die aufgerufen werden soll. Das `${file}`-Makro ruft die ausgewählte Datei im **Projektmappen-Explorer** ab. Im folgenden Beispiel wird der Dateiname der aktuell ausgewählten CPP-Datei angezeigt.
+Dies erstellt (oder geöffnet) die **"Tasks.VS.JSON"** Datei im VS-Ordner die Visual Studio im Stammordner des Projekts erstellt. Sie können in dieser Datei einen beliebigen Task definieren und diesen dann über das Kontextmenü des **Projektmappen-Explorers** aufrufen. Das folgende Beispiel zeigt eine tasks.vs.json-Datei, die einen einzelnen Task definiert. `taskName` definiert den Namen, der im Kontextmenü angezeigt wird. `appliesTo` definiert, für welche Dateien der Befehl ausgeführt werden kann. Die `command`-Eigenschaft bezieht sich auf die Umgebungsvariable „COMSPEC“, die den Pfad für die Konsole („cmd.exe“ unter Windows) identifiziert. Sie können ebenfalls auf Umgebungsvariablen verweisen, die in „CppProperties.json“ oder „CMakeSettings.json“ definiert sind. Die `args`-Eigenschaft gibt die Befehlszeile an, die aufgerufen werden soll. Das `${file}`-Makro ruft die ausgewählte Datei im **Projektmappen-Explorer** ab. Im folgenden Beispiel wird der Dateiname der aktuell ausgewählten CPP-Datei angezeigt.
 
 ```json
 {
@@ -87,7 +87,7 @@ Weitere Informationen finden Sie unter [Tasks.vs.json schema reference (Tasks.vs
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Konfigurieren von Parametern für das Debuggen mithilfe von „launch.vs.json“
 
-Wenn Sie die Befehlszeilenargumente Ihres Programms anpassen möchten, klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die ausführbare Datei, und wählen Sie **Debug- und Starteinstellungen** aus. Dadurch wird eine vorhandene `launch.vs.json`-Datei geöffnet. Wenn keine vorhanden ist, wird eine neue Datei erstellt, die mit vorab mit den von Ihnen festgelegten Informationen zum Programm aufgefüllt wird.
+Wenn Sie die Befehlszeilenargumente Ihres Programms anpassen möchten, klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die ausführbare Datei, und wählen Sie **Debug- und Starteinstellungen** aus. Dies öffnet ein vorhandenes **"Launch.VS.JSON"** -Datei, oder wenn keiner vorhanden ist, erstellen Sie eine neue Datei, die bereits mit den Informationen über das Programm, das Sie ausgewählt haben.
 
 Wenn Sie zusätzliche Argumente hinzufügen möchten, fügen Sie diese wie im folgenden Beispiel dargestellt im JSON-Array `args` hinzu:
 

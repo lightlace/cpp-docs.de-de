@@ -1,21 +1,21 @@
 ---
-title: / CETCOMPAT (ablaufsteuerung Erzwingungstechnologie kompatibel)
+title: / CETCOMPAT (kompatibel mit Schattenstapel MEZ)
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809846"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356014"
 ---
-# <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (ablaufsteuerung Erzwingungstechnologie kompatibel)
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/ CETCOMPAT (kompatibel mit Schattenstapel MEZ)
 
-Gibt an, ob ein ausführbares Image als kompatibel mit der ablaufsteuerung Erzwingung Technologie (MEZ) zu kennzeichnen.
+Gibt an, ob ein ausführbares Image als kompatibel mit der ablaufsteuerung Erzwingung-Technologie (MEZ) Schattenstapel zu markieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -24,13 +24,13 @@ Gibt an, ob ein ausführbares Image als kompatibel mit der ablaufsteuerung Erzwi
 ## <a name="arguments"></a>Argumente
 
 **NO**<br/>
-Gibt an, dass die ausführbare Datei nicht mit MEZ kompatibel gekennzeichnet werden soll.
+Gibt an, dass die ausführbare Datei nicht mit MEZ Schattenstapel kompatibel gekennzeichnet werden soll.
 
 ## <a name="remarks"></a>Hinweise
 
-Ablaufsteuerung Erzwingung Technologie (MEZ) ist ein Computer-Prozessor-Feature, das zur Verteidigung gegen bestimmte Arten von Angriffen durch Schadsoftware bietet. Weitere Informationen finden Sie unter [Intel ablaufsteuerung Erzwingung Technology Preview](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
+Ablaufsteuerung Erzwingung-Technologie (MEZ) Schattenstapel ist ein Computer-Prozessor-Feature, das bietet Funktionen zur Verteidigung gegen return objektorientierte Programmierung (ROP) Malware-Angriffe basierend. Weitere Informationen finden Sie unter [Intel ablaufsteuerung Erzwingung Technology Preview](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
 
-Die **/CETCOMPAT** Linkeroption weist den Linker an die Binärwerte als MEZ kompatible zu markieren. **/CETCOMPAT:No** die Binärdatei als nicht kompatibel mit der Uhr CET markiert. Wenn beide Optionen in der Befehlszeile angegeben werden, wird die letzte angegeben verwendet. Dieser Schalter ist derzeit nur für X86- und X64 Architekturen.
+Die **/CETCOMPAT** Linkeroption weist den Linker an die Binärwerte als MEZ Schatten Stack kompatible zu markieren. **/CETCOMPAT:No** die Binärdatei als nicht kompatibel mit der Uhr CET Schattenstapel markiert. Wenn beide Optionen in der Befehlszeile angegeben werden, wird die letzte angegeben verwendet. Dieser Schalter ist derzeit nur für X86- und X64 Architekturen.
 
 Die **/CETCOMPAT** Option ist verfügbar ab der im Toolset Visual Studio 2019 Vorschau 3.
 
