@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1ca69382591dc7d3afe9b5871dfdebd64aedce4
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289961"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417000"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -570,11 +570,11 @@ UINT GetLimitText() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der aktuelle Text Grenzwert in Bytes, der für diesen `CEdit` Objekt.
+Der aktuelle Text Grenzwert in TCHARs, dafür `CEdit` Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Text-Grenzwert ist die Höchstmenge des Textes in Bytes, die das Bearbeitungssteuerelement annehmen kann.
+Der Text-Grenzwert ist die Höchstmenge des Textes in TCHARs, der das Steuerelement zum Bearbeiten akzeptieren kann.
 
 > [!NOTE]
 >  Diese Memberfunktion wird ab, die mit Windows 95 und Windows NT 4.0 verfügbar.
@@ -606,14 +606,14 @@ int GetLine(
 Gibt an, die Nummer der Zeile aus einer mehrzeiligen Abrufen edit-Steuerelement. Zeilennummern sind nullbasiert. der Wert 0 gibt an, die erste Zeile. Dieser Parameter wird von einem Steuerelement für die einzelnen Zeile ignoriert.
 
 *lpszBuffer*<br/>
-Verweist auf den Puffer, der eine Kopie der Zeile empfängt. Das erste Wort des Puffers muss die maximale Anzahl von Zeichen angeben, die in den Puffer kopiert werden können.
+Verweist auf den Puffer, der eine Kopie der Zeile empfängt. Das erste Wort des Puffers muss die maximale Anzahl von TCHARs angeben, die in den Puffer kopiert werden können.
 
 *nMaxLength*<br/>
-Gibt die maximale Anzahl von Bytes, die in den Puffer kopiert werden können. `GetLine` stellt diesen Wert in das erste Wort *LpszBuffer* vor dem Aufruf von Windows.
+Gibt die maximale Anzahl von TCHAR-Zeichen, die in den Puffer kopiert werden können. `GetLine` stellt diesen Wert in das erste Wort *LpszBuffer* vor dem Aufruf von Windows.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der tatsächlich kopierter Bytes. Der Rückgabewert ist 0, wenn die Nummer der Zeile angegeben *nIndex* ist größer als die Anzahl der Zeilen im Bearbeitungssteuerelement.
+Die Anzahl der tatsächlich kopierten Zeichen. Der Rückgabewert ist 0, wenn die Nummer der Zeile angegeben *nIndex* ist größer als die Anzahl der Zeilen im Bearbeitungssteuerelement.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -800,7 +800,7 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>Parameter
 
 *nChars*<br/>
-Gibt die Länge (in Byte) des Texts, der der Benutzer eingeben kann. Wenn dieser Parameter 0 ist, wird die Textlänge UINT_MAX Bytes festgelegt. Dies ist das Standardverhalten.
+Gibt die Länge (in TCHARs) des Texts, der der Benutzer eingeben kann. Wenn dieser Parameter 0 ist, wird die Textlänge UINT_MAX Bytes festgelegt. Dies ist das Standardverhalten.
 
 ### <a name="remarks"></a>Hinweise
 
