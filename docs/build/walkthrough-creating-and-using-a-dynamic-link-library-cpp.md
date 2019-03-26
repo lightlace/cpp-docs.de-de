@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813967"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476928"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Exemplarische Vorgehensweise: Erstellen Sie und verwenden Sie Ihren eigenen Dynamic Link Library (C++)
 
@@ -296,9 +296,11 @@ Um die MathLibrary-Funktionen in Ihrem Quellcode aufzurufen, muss das Projekt al
 
 1. Doppelklicken Sie im oberen Bereich der **Additional Include Directories** im Dialogfeld, um ein Edit-Steuerelement zu aktivieren.
 
-1. Geben Sie im Bearbeitungssteuerelement, den Pfad zum Speicherort der der **MathLibrary.h** Headerdatei. In diesem Fall können Sie einen relativen Pfad verwenden:
+1. Geben Sie im Bearbeitungssteuerelement, den Pfad zum Speicherort der der **MathLibrary.h** Headerdatei. In diesem Fall können einen relativen Pfad vom Ordner Sie mit Ihrer cpp-Dateien in das Clientprojekt, zu dem Ordner, die die h-Datei in das DLL-Projekt enthält. Wenn Ihr Clientprojekt in einer separaten Projektmappe im selben Ordner wie die DLL-Lösung ist, sollte der relative Pfad wie folgt aussehen:
 
    `..\..\MathLibrary\MathLibrary`
+
+   Wenn Ihre DLL und dem Client-Projekte in der gleichen Projektmappe werden oder die Lösungen in anderen Ordnern sind, müssen Sie den relativen Pfad entsprechend anpassen.
 
    ![Fügen Sie den Speicherort für die Header, der Zusätzliche Includeverzeichnisse-Eigenschaft](media/mathclient-additional-include-directories.png "fügen Sie den Speicherort für die Header, der Zusätzliche Includeverzeichnisse-Eigenschaft")
 

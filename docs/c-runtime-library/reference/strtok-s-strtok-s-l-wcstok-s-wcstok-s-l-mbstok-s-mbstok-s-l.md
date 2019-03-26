@@ -1,6 +1,6 @@
 ---
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 0020d4944ffb379584a044023bc34169b4a5c983
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: e2c237927aa133d33085be40b88789c1024d6b34
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416974"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476889"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -137,13 +137,15 @@ Wenn *str* ist **NULL** aber *Kontext* ist ein Zeiger auf einen gültigen Kontex
 
 Die **Strtok_s** Funktionsreihe sucht das nächste Token in *str*. Der Satz von Zeichen im *Trennzeichen* gibt mögliche Trennzeichen des Tokens in zu suchenden *str* für den aktuellen Aufruf. **Wcstok_s** und **_mbstok_s** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strtok_s**. Die Argumente und Rückgabewerte von **Wcstok_s** und **_wcstok_s_l** sind Breitzeichen-Zeichenfolgen, die von **_mbstok_s** und **_mbstok_s_l**sind Multibyte Zeichenfolgen. Anderenfalls verhalten sich diese Funktionen identisch.
 
-Diese Funktion überprüft ihre Parameter. Wenn ein Fehlerzustand gemäß der Fehlerzustandstabelle auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameterüberprüfung)](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und zurückgeben **NULL**.
+Diese Funktion überprüft ihre Parameter. Wenn ein Fehlerzustand, wie in der Tabelle Fehlerbedingungen auftritt, wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und zurückgeben **NULL**.
 
-Beim ersten Aufruf von **Strtok_s** die Funktion vorangestellte Trennzeichen überspringt und gibt einen Zeiger auf das erste Token in *str*, beendet das Token mit einem Null-Zeichen. Weitere Token können in den restlichen geholt werden *str* durch eine Reihe von Aufrufen an **Strtok_s**. Jeder Aufruf von **Strtok_s** ändert *str* durch ein Null-Zeichen nach dem zurückgegebenen Token einfügt. Die *Kontext* -Zeiger erfasst, aus welcher Zeichenfolge gelesen wird und wo in der Zeichenfolge das nächste Token gelesen werden. Lesen Sie das nächste Token von *str*, rufen Sie **Strtok_s** mit eine **NULL** Wert für die *str* -Argument, und übergeben Sie den gleichen  *Kontext* Parameter. Die **NULL** *str* Argument bewirkt, dass **Strtok_s** , suchen Sie nach dem nächsten Token im geänderten *str*. Die *Trennzeichen* -Argument kann einen beliebigen Wert aus einem Aufruf an den nächsten annehmen, so, dass der Satz von Trennzeichen variieren kann.
+Beim ersten Aufruf von **Strtok_s**, die Funktion vorangestellte Trennzeichen überspringt und gibt einen Zeiger auf das erste Token in *str*, beendet das Token mit einem Null-Zeichen. Weitere Token können in den restlichen geholt werden *str* durch eine Reihe von Aufrufen an **Strtok_s**. Jeder Aufruf von **Strtok_s** ändert *str* durch ein Null-Zeichen nach dem zurückgegebenen Token einfügt. Die *Kontext* -Zeiger erfasst, aus welcher Zeichenfolge gelesen wird und wo in der Zeichenfolge das nächste Token gelesen werden. Lesen Sie das nächste Token von *str*, rufen Sie **Strtok_s** mit eine **NULL** Wert für die *str* -Argument, und übergeben Sie den gleichen  *Kontext* Parameter. Die **NULL** *str* Argument bewirkt, dass **Strtok_s** , suchen Sie nach dem nächsten Token im geänderten *str*. Die *Trennzeichen* -Argument kann einen beliebigen Wert aus einem Aufruf an den nächsten annehmen, so, dass der Satz von Trennzeichen variieren kann.
 
 Da die *Kontext* Parameter hat Vorrang vor den statischen Puffer verwendet **Strtok** und **_strtok_l**, es ist möglich, zwei Zeichenfolgen im gleichen Thread gleichzeitig analysiert.
 
-Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Threadgebietsschema für dieses vom Gebietsschema abhängige Verhalten. Die Versionen mit dem **_l** -Suffix sind beinahe identisch, verwenden sie stattdessen die *Gebietsschema* Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von der Einstellung beeinflusst die **LC_CTYPE** -kategorieeinstellung des Gebietsschemas. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md).
+
+Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Threadgebietsschema für dieses vom Gebietsschema abhängige Verhalten. Die Versionen mit dem **_l** -Suffix sind beinahe identisch, außer Sie verwenden jedoch stattdessen das Gebietsschema gemäß den *Gebietsschema* Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 

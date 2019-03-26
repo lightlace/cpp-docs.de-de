@@ -3,12 +3,12 @@ title: C++- Typsystem (Modern C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220672"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476902"
 ---
 # <a name="c-type-system-modern-c"></a>C++- Typsystem (Modern C++)
 
@@ -70,7 +70,7 @@ In der folgenden Tabelle werden die am häufigsten verwendeten grundlegenden Typ
 |bool|1 Byte|Stellt Werte dar, die entweder wahr oder falsch sein können.|
 |char|1 Byte|Verwenden Sie sie für ASCII-Zeichen in Zeichenfolgen im älteren C-Format oder in std::string Objekten, die nie in den UNICODE konvertiert werden müssen.|
 |wchar_t|2 Bytes|Stellt "breite" Zeichenwerte dar, die in den UNICODE-Format codiert werden (UTF-16 bei Windows, andere Betriebssysteme können abweichen). Dies ist der Zeichentyp, der in Zeichenfolgen des Typs `std::wstring` verwendet wird.|
-|nicht signierte&nbsp;Char|1 Byte|C++ verfügt über keine integrierten `byte`-Typen.  Verwenden Sie "char" ohne Vorzeichen, um einen Bytewert darzustellen.|
+|unsigned&nbsp;char|1 Byte|C++ verfügt über keine integrierten `byte`-Typen.  Verwenden Sie "char" ohne Vorzeichen, um einen Bytewert darzustellen.|
 |unsigned int|4 Bytes|Die Standardauswahl für Bitflags.|
 |long long|8 Bytes|Stellt sehr große ganzzahlige Werte dar.|
 
@@ -102,9 +102,7 @@ Beim Definieren einer **Klasse**, **Struktur**, **Union**, oder **Enum**, dieses
 
 - Der Compiler verfügt über kein integriertes Wissen zu einem benutzerdefinierten Typ. Er erfährt des Typs, wenn sie zuerst die Definition während der Kompilierung auftritt.
 
-- Sie geben an, welche Vorgänge auf dem Typ ausgeführt werden können und wie er in andere Typen konvertiert werden kann, indem Sie (durch Überladen) die entsprechenden Operatoren entweder als Klassenmember oder als Funktionen definieren. Weitere Informationen finden Sie unter [Funktionsüberladung](function-overloading.md).
-
-- Sie müssen nicht statisch typisiert werden (die Regel, das sich ein Objekttyp nie ändert trifft zu). Mithilfe der Mechanismen der *Vererbung* und *Polymorphie*, eine Variable deklariert, die als benutzerdefinierten Typ der Klasse (als Objektinstanz einer Klasse bezeichnet) möglicherweise einen anderen Typ zur Laufzeit als an Kompilierzeit. Weitere Informationen finden Sie unter [Vererbung](../cpp/inheritance-cpp.md).
+- Sie geben an, welche Vorgänge auf dem Typ ausgeführt werden können und wie er in andere Typen konvertiert werden kann, indem Sie (durch Überladen) die entsprechenden Operatoren entweder als Klassenmember oder als Funktionen definieren. Weitere Informationen finden Sie unter [beim Überladen von Funktionen](function-overloading.md)
 
 ## <a name="pointer-types"></a>Zeigertypen
 
