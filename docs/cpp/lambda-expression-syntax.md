@@ -1,15 +1,15 @@
 ---
 title: Lambdaausdruckssyntax
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 030960cf8a301575396231cec1a37ff7bed2667f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2df2c203024e1b50cffdcb15af834fe09effaae2
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577469"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476863"
 ---
 # <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax
 
@@ -23,7 +23,7 @@ Bei einem Lambda werden die Vorteile von Funktionszeigern und Funktionsobjekten 
 
 In den folgenden Beispielen wird die Verwendung eines Lambda-Ausdrucks mit der Verwendung eines Funktionsobjekts verglichen. Im ersten Beispiel wird ein Lambda-Ausdruck verwendet, um auf der Konsole auszugeben, ob jedes Element in einem `vector`-Objekt gerade oder ungerade ist. Im zweiten Beispiel wird für die gleiche Aufgabe ein Funktionsobjekt verwendet.
 
-## <a name="example-1-using-a-lambda"></a>Beispiel 1: Verwendung eines Lambda-Ausdrucks
+## <a name="example-1-using-a-lambda"></a>Beispiel 1: Verwenden eines Lambda-Ausdrucks
 
 In diesem Beispiel übergibt einen Lambda-Ausdruck die **For_each** Funktion. Lambda druckt ein Ergebnis, das besagt, ob jedes Element in einem `vector` -Objekt ist, gerade oder ungerade.
 
@@ -39,7 +39,7 @@ using namespace std;
 
 int main()
 {
-   // Create a vector object that contains 10 elements.
+   // Create a vector object that contains 9 elements.
    vector<int> v;
    for (int i = 1; i < 10; ++i) {
       v.push_back(i);
@@ -63,8 +63,6 @@ int main()
         << " even numbers in the vector." << endl;
 }
 ```
-
-### <a name="output"></a>Output
 
 ```Output
 1 is odd
@@ -129,7 +127,7 @@ private:
 
 int main()
 {
-    // Create a vector object that contains 10 elements.
+    // Create a vector object that contains 9 elements.
     vector<int> v;
     for (int i = 1; i < 10; ++i) {
         v.push_back(i);
@@ -145,8 +143,6 @@ int main()
         << " even numbers in the vector." << endl;
 }
 ```
-
-## <a name="output"></a>Output
 
 ```Output
 1 is odd

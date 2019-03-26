@@ -2,12 +2,12 @@
 title: ARM-Ausnahmebehandlung
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814539"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476941"
 ---
 # <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
@@ -220,7 +220,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Obwohl der Prolog und jeder Epilog einen Index in den Entladungscodes besitzt, teilen sich die beiden die Tabelle. Es ist nicht ungewöhnlich, dass alle denselben Entladungscode teilen. Wir empfehlen, dass Compiler-Autoren für diesen Fall optimieren, denn der größte Index, der festgelegt werden kann, ist 255 und das begrenzt die Gesamtzahl der Entladungscodes, die für eine bestimmte Funktion mögliche sind.
+Obwohl der Prolog und jeder Epilog einen Index in den entladungscodes sind in der Tabelle werden gemeinsam verwendet. Es ist nicht ungewöhnlich, dass alle denselben Entladungscode teilen. Wir empfehlen, dass Compiler-Autoren für diesen Fall optimieren, denn der größte Index, der festgelegt werden kann, ist 255 und das begrenzt die Gesamtzahl der Entladungscodes, die für eine bestimmte Funktion mögliche sind.
 
 ### <a name="unwind-codes"></a>Entladungscodes
 
@@ -239,20 +239,20 @@ Die folgende Tabelle zeigt die Zuordnung von Entladungscodes zu Opcodes. Die hä
 |Byte 1|Byte 2|Byte 3|Byte 4|Opsize|Erklärung|
 |------------|------------|------------|------------|------------|-----------------|
 |00-7F||||16|`add   sp,sp,#X`<br /><br /> wobei X ist (Code & 0x7F) \* 4|
-|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> wobei LR per pop ausgelesen wird, wenn Code & 0x2000 und r0-r12 per pop ausgelesen werden, falls das korrespondierende Bit in Code & 0x1FFF festgelegt wurde|
+|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> wobei LR per pop ausgelesen wird, wenn Code & 0 x 2000 und r0-r12 per pop ausgelesen werden, wenn das entsprechende Bit in Code & 0x1FFF festgelegt wurde|
 |C0-CF||||16|`mov   sp,rX`<br /><br /> wobei X Code & 0x0F ist|
-|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> wobei X (Code & 0x03) + 4 ist und LR per pop ausgelesen wird, wenn Code & 0x04|
-|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> wobei X (Code & 0x03) + 8 ist und LR per pop ausgelesen wird, wenn Code & 0x04|
-|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> wobei X (Code & 0x07) + 8 ist|
+|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> wobei X (Code & 0 x 03) + 4 ist und LR per pop ausgelesen wird Wenn Code & 0 x 04|
+|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> wobei X (Code & 0 x 03) + 8 ist und LR per pop ausgelesen wird Wenn Code & 0 x 04|
+|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> in denen X (Code & 0 x 07) + 8|
 |E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> wobei X ist (Code & 0x03FF) \* 4|
-|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> wobei LR per pop ausgelesen wird, wenn Code & 0x0100 und r0-r7 per pop ausgelesen werden, falls das korrespondierende Bit in Code & 0x00FF festgelegt wurde|
+|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> wobei LR per pop ausgelesen wird, wenn Code & 0 x 0100 und r0-r7 per pop ausgelesen werden, wenn das entsprechende Bit in Code & 0x00FF festgelegt wurde|
 |EE|00-0F|||16|Microsoft-spezifisch|
 |EE|10-FF|||16|Verfügbar|
 |EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> wobei X ist (Code & 0x000F) \* 4|
 |EF|10-FF|||32|Verfügbar|
 |F0-F4||||-|Verfügbar|
-|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> wobei S (Code & 0x00F0) >> 4 und E Code & 0x000F ist|
-|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> wobei S ((Code & 0x00F0) >> 4) + 16 und E (Code & 0x000F) + 16 ist|
+|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> Wenn S ist (Code & 0x00F0) >> wird von 4 und E Code & 0x000F|
+|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> Wenn S ist ((Code & 0x00F0) >> 4) + 16 und E (Code & 0x000F) + 16|
 |F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> wobei X ist (Code & 0x00FFFF) \* 4|
 |F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> wobei X ist (Code & 0x00FFFFFF) \* 4|
 |F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> wobei X ist (Code & 0x00FFFF) \* 4|
@@ -366,7 +366,7 @@ Die Beispielfunktion mit Shrink-Wrapping muss in drei Regionen aufgeteilt werden
 
 Die mittlere B-Region hat einen eigenen .pdata- oder .xdata-Datensatz, der beschreibt, dass ein Fragment weder Prolog noch Epilog hat. Allerdings müssen die Entladungscodes für diese Region immer noch vorhanden sein, denn sie wird als Funktionstext betrachtet. Die Codes müssen einen zusammengesetzten Prolog beschreiben, der sowohl die ursprünglichen Register darstellt, die im Region-A-Prolog gespeichert sind, als auch die zusätzlichen Register, die vor Eintritt in Region B gespeichert wurden, als wären sie von einer Vorgangssequenz produziert worden.
 
-Diese Registerspeicherung für Region B können nicht als "innerer Prolog" betrachtet werden, denn der für Region B beschriebene zusammengesetzte Prolog muss sowohl den Region-A-Prolog als auch die zusätzlichen, gespeicherten Register beschreiben. Würde man Fragment B so beschreiben, als hätte es einen Prolog, dann würden die Entladungscodes auch die Größe dieses Prologs implizieren und es gibt keine Möglichkeit, den zusammengesetzten Prolog so zu beschreiben, dass eine Eins-zu-Eins-Zuordnung mit den Opcodes möglich ist, die nur die zusätzlichen Register speichern.
+Diese Registerspeicherung für Region B können nicht als "innerer Prolog" betrachtet werden, denn der für Region B beschriebene zusammengesetzte Prolog muss sowohl den Region-A-Prolog als auch die zusätzlichen, gespeicherten Register beschreiben. Würde man Fragment B so beschreiben, als hätte es einen Prolog, dann würden die Entladungscodes auch die Größe dieses Prologs implizieren, und es gibt keine Möglichkeit, den zusammengesetzten Prolog so zu beschreiben, dass eine Eins-zu-Eins-Zuordnung mit den Opcodes möglich ist, die nur die zusätzlichen Register speichern.
 
 Die zusätzlichen Registerspeicherungen müssen als Teil von Region A betrachtet werden, denn ehe sie abgeschlossen sind, beschreibt der zusammengesetzte Prolog nicht genau den Zustand des Stapels.
 
@@ -570,7 +570,7 @@ Epilogues:
 
 - Entladungscodes, beginnend bei Wort 5: (gemeinsam von Prolog und Epilog genutzt)
 
-   - Entladungscode 0 = 0x06: sp += (6 << 2)
+   - Entladungscode 0 = 0 x 06: sp += (6 << 2)
 
    - Entladungscode 1 = 0xDE: pop {r4-r10, lr}
 
@@ -634,7 +634,7 @@ Epilogue:
 
    - Entladungscode 1 = 0xDC: pop {r4-r8, lr}
 
-   - Entladungscode 2 =0x04: sp += (4 << 2)
+   - Entladungscode 2 = 0 x 04: sp += (4 << 2)
 
    - Entladungscode 3 = 0xFD: Ende, zählt als 16-Bit-Anweisung für Epilog
 
@@ -688,7 +688,7 @@ Epilogue:
 
    - Entladungscode 0 = 0xC7: sp = r7
 
-   - Entladungscode 1 = 0x05: sp += (5 << 2)
+   - Unwind code 1 = 0x05: sp += (5 << 2)
 
    - Entladungscode 2 = 0xED/0x90: pop {r4, r7, lr}
 
