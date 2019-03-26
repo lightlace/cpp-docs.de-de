@@ -12,16 +12,16 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 2a519c0606a7df6e0ce55997a055d78865afafbf
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694412"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328960"
 ---
 # <a name="add-a-member-variable"></a>Hinzufügen einer Membervariable
 
-Mithilfe der Klassenansicht können Sie einer Klasse eine Membervariable hinzufügen. Membervariablen können generisch sein oder für [Datenaustausch und Datenvalidierung](../mfc/dialog-data-exchange-and-validation.md) verwendet werden. Der Assistent für Datenmembervariablen ist dafür ausgelegt, die relevanten Informationen zu verwenden, um Elemente an den entsprechenden Stellen in Quelldateien einzufügen. Sie können eine Membervariable aus dem [Dialog-Editor](../windows/dialog-editor.md) oder der [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code) der [Ressourcenansicht](../windows/resource-view-window.md) hinzufügen.
+Mithilfe der Klassenansicht können Sie einer Klasse eine Membervariable hinzufügen. Membervariablen können generisch sein oder für [Datenaustausch und Datenvalidierung](../mfc/dialog-data-exchange-and-validation.md) verwendet werden. Der Assistent für Datenmembervariablen ist dafür ausgelegt, die relevanten Informationen zu verwenden, um Elemente an den entsprechenden Stellen in Quelldateien einzufügen. Sie können eine Membervariable aus dem [Dialog-Editor](../windows/dialog-editor.md) oder der [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code) der [Ressourcenansicht](../windows/how-to-create-a-resource-script-file.md#create-resources) hinzufügen.
 
 > [!NOTE]
 > Wenn Sie ein Dialogfeld entwerfen und implementieren, kann es sich als effizienter erweisen, den Dialog-Editor zum Hinzufügen der Dialogfeld-Steuerelemente zu verwenden und dann die Membervariablen der Steuerelemente zu implementieren.
@@ -104,7 +104,7 @@ Dieser Assistent fügt der Headerdatei eine Membervariablendeklaration hinzu. Ab
 
   Legt die ID für die hinzugefügte Steuerelementvariable fest. Wählen Sie die ID für den Typ des Steuerelements, für den Sie die Membervariable hinzufügen, aus der Liste aus. Diese Liste ist nur aktiv, wenn das Kontrollkästchen **Steuerelementvariable** aktiviert und auf die Steuerelement-IDs beschränkt ist, die bereits zum Dialogfeld hinzugefügt wurden. Für die Standardschaltfläche **OK** entspricht die Steuerelement-ID beispielsweise **IDOK**.
 
-  |Option|Beschreibung |
+  |Option|Beschreibung|
   |------------|-----------------|
   |**Steuerelement**|Diese Option ist standardmäßig für den Steuerelementtyp festgelegt. Sie verwaltet das Steuerelement, nicht dessen Status oder Inhalte (wie es bei einem Listenfeld, einem Kombinationsfeld oder einem Bearbeitungsfeld möglicherweise gewünscht ist).|
   |**Wert**|Diese Option ist für Steuerelementtypen verfügbar, die einen Wert enthalten oder einen Status anzeigen können, z.B. ein Eingabefeld oder ein Kontrollkästchen. Sie ist auch verfügbar für Steuerelementtypen, für die Bereich, Inhalt oder Zustand verwaltet werden kann. Weitere Informationen finden Sie unter [Dialog Box Controls and Variable Types (Steuerelemente für Dialogfelder und Variablentypen)](#dialog-box-controls-and-variable-types).|
@@ -163,7 +163,7 @@ In der folgenden Tabelle werden alle Steuerelementtypen der Dialogfelder beschri
 |Rich Edit 2-Steuerelement|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|Maximale Zeichenanzahl|
 |Rich Edit-Steuerelement|RICHEDIT|`CRichEditCtrl`|`CString`|Maximale Zeichenanzahl|
 |Scrollleiste (vertikal oder horizontal)|SCROLLLEISTE|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|Minimalwert/Maximalwert|
-|Schiebereglersteuerung|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Minimalwert/Maximalwert|
+|Schieberegler-Steuerelement|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Minimalwert/Maximalwert|
 |Drehfeld-Steuerelement|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Keiner, nur Steuerelement|Nicht zutreffend|
 |Registersteuerelement|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Keiner, nur Steuerelement|Nicht zutreffend|
-|Struktursteuerelement|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Keiner, nur Steuerelement|Nicht zutreffend|
+|Baumsteuerelement|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Keiner, nur Steuerelement|Nicht zutreffend|

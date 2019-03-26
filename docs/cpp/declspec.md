@@ -1,18 +1,18 @@
 ---
 title: __declspec
-ms.date: 10/09/2018
+ms.date: 03/21/2019
 f1_keywords:
 - __declspec_cpp
 - __declspec
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 3ee83203cc992ba8c5d05b7bb6974d3576baf59c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e924f3e4a038f900e084dbf84d85430d815c8e8f
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645093"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416948"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -22,18 +22,19 @@ Die erweiterte Attributsyntax für die Angabe von Storage speicherklasseninforma
 
 ## <a name="grammar"></a>Grammatik
 
-*Decl-Specifiers*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***extended-Decl-Modifier-Seq***)** 
+*decl-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (**  *extended-decl-modifier-seq*  **)**
 
 *extended-decl-modifier-seq*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-Decl-Modifier* *extended-Decl-Modifier-Seq*
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier* *extended-decl-modifier-seq*
 
 *extended-decl-modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**align (** *#* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**zuordnen ("** *Segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**align(** *#* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**allocator**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**appdomain**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Code_seg ("** *Segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Als veraltet markiert**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
@@ -45,17 +46,17 @@ Die erweiterte Attributsyntax für die Angabe von Storage speicherklasseninforma
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Prozess**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Eigenschaft (** { **get =**_Get_func_name_ &#124; **, put =**_Put_func_name_ } **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Einschränken**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=**_get_func_name_ &#124; **,put=**_put_func_name_ } **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**restrict**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**UUID ("** *ComObjectGUID* **")**
+&nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**
 
 Die Deklarationsmodifizierersequenz ist durch Leerzeichen getrennt. Beispiele finden Sie in späteren Abschnitten.
 
-Erweitertes Attribut-Grammatik unterstützt diese Microsoft-spezifische Speicherklassen-Attribute: [ausrichten](../cpp/align-cpp.md), [zuordnen](../cpp/allocate.md), [Appdomain](../cpp/appdomain.md), [Code_seg](../cpp/code-seg-declspec.md), [veraltet](../cpp/deprecated-cpp.md), [Dllexport](../cpp/dllexport-dllimport.md), [Dllimport](../cpp/dllexport-dllimport.md), [Jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [Noalias](../cpp/noalias.md), [Noinline](../cpp/noinline.md), [Noreturn](../cpp/noreturn.md), [Nothrow](../cpp/nothrow-cpp.md), [Novtable](../cpp/novtable.md) , [Prozess](../cpp/process.md), [einschränken](../cpp/restrict.md), [Safebuffers](../cpp/safebuffers.md), [Selectany](../cpp/selectany.md), [Spectre](../cpp/spectre.md), und [Thread](../cpp/thread.md). Sie unterstützt auch diese COM-Objektattribute: [Eigenschaft](../cpp/property-cpp.md) und [Uuid](../cpp/uuid-cpp.md).
+Erweitertes Attribut-Grammatik unterstützt diese Microsoft-spezifische Speicherklassen-Attribute: [ausrichten](../cpp/align-cpp.md), [zuordnen](../cpp/allocate.md), [Allocator](../cpp/allocator.md), [Appdomain](../cpp/appdomain.md), [Code_seg](../cpp/code-seg-declspec.md), [veraltet](../cpp/deprecated-cpp.md), [Dllexport](../cpp/dllexport-dllimport.md), [Dllimport](../cpp/dllexport-dllimport.md), [Jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [Noalias](../cpp/noalias.md), [Noinline](../cpp/noinline.md), [Noreturn](../cpp/noreturn.md), [Nothrow](../cpp/nothrow-cpp.md), [Novtable](../cpp/novtable.md), [Prozess](../cpp/process.md), [einschränken](../cpp/restrict.md), [Safebuffers](../cpp/safebuffers.md), [Selectany](../cpp/selectany.md), [Spectre](../cpp/spectre.md), und [Thread](../cpp/thread.md). Sie unterstützt auch diese COM-Objektattribute: [Eigenschaft](../cpp/property-cpp.md) und [Uuid](../cpp/uuid-cpp.md).
 
 Die **Code_seg**, **Dllexport**, **Dllimport**, **naked**, **Noalias**, **Nothrow** , **Eigenschaft**, **einschränken**, **Selectany**, **Thread**, und **Uuid**Speicherklassen-Attribute sind Eigenschaften nur der Deklaration des Objekts oder der Funktion, die sie angewendet werden. Die **Thread** Attribut wirkt sich auf Daten und nur für die Objekte. Die **naked** und **Spectre** Attribute beeinflussen nur Funktionen. Die **Dllimport** und **Dllexport** Attribute beeinflussen, Funktionen, Daten und Objekte. Die **Eigenschaft**, **Selectany**, und **Uuid** Attribute beeinflussen COM-Objekte.
 
@@ -79,7 +80,7 @@ In diesem Fall wird das Attribut auf `X` angewendet.
 
 Die allgemeine Richtlinie für die Verwendung der **__declspec** -Attributs für einfache Deklarationen lautet wie folgt:
 
-*Decl-Specifier-Seq* *Init-Declarator-List*;
+*decl-specifier-seq* *init-declarator-list*;
 
 Die *Decl-Specifier-Seq* enthalten soll, unter anderem einen Basistyp (z. B. **Int**, **"float"**, **Typedef**, oder einen Klassennamen), Speicherklasse (z. B. **statische**, **"extern"**), oder die **__declspec** Erweiterung. Die *Init-Declarator-List* enthalten soll, unter anderem den zeigerteil von Deklarationen. Zum Beispiel:
 
