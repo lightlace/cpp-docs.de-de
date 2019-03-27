@@ -1,6 +1,6 @@
 ---
 title: vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-ms.openlocfilehash: 055b2279be923712528463cb23ab3fd6b52897d7
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 469a823d0f033a2f140d78a65cb0e69a3ef16d5c
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211029"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508790"
 ---
 # <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l
 
@@ -109,7 +109,7 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Vsprintf_s** und **Vswprintf_s** Zurückgeben der Anzahl der geschriebenen Zeichen nicht einschließlich des abschließenden Zeichens Null oder ein negativer Wert, wenn ein Ausgabefehler auftritt. Wenn *Puffer* oder *Format* ein null-Zeiger ist, wenn die Anzahl auf 0 (null) ist, oder wenn die Formatzeichenfolge ungültige Formatierungszeichen enthält, wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [ Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
+**Vsprintf_s** und **Vswprintf_s** Zurückgeben der Anzahl der geschriebenen Zeichen nicht einschließlich des abschließenden Zeichens Null oder ein negativer Wert, wenn ein Ausgabefehler auftritt. Wenn *Puffer* oder *Format* ein null-Zeiger ist, wenn *NumberOfElements* NULL ist, oder wenn Formatzeichenfolge ungültige Formatierung enthält Zeichen, die Handler für ungültige Parameter wird aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

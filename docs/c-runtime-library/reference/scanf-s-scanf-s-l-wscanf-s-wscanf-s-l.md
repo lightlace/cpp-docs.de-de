@@ -1,6 +1,6 @@
 ---
 title: scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 apiname:
 - wscanf_s
 - _wscanf_s_l
@@ -42,12 +42,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-ms.openlocfilehash: 0fcf2a9f3ac8585e71caa9f2cc990c7e303a2f5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28697cac20181c3dda0581c7486ebb673aec1241
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528611"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508801"
 ---
 # <a name="scanfs-scanfsl-wscanfs-wscanfsl"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 
@@ -81,7 +81,7 @@ int _wscanf_s_l(
 *format*<br/>
 Formatsteuerzeichenfolge.
 
-*Argument*<br/>
+*argument*<br/>
 Optionale Argumente.
 
 *locale*<br/>
@@ -89,54 +89,54 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl von Feldern zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** ein Fehler, oder wenn das EOF Zeichen oder das Ende der Zeichenfolge Zeichen, beim ersten Versuch erreicht ist, ein Zeichen zu lesen. Wenn *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Scanf_s** und **Wscanf_s** zurückgeben **EOF** und **Errno** zu **EINVAL**.
+Gibt die Anzahl von Feldern, die erfolgreich konvertiert und zugewiesen. Der Rückgabewert enthalten nicht Felder, die gelesen, aber nicht zugewiesen wurden. Der Rückgabewert 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** ein Fehler, oder wenn das EOF Zeichen oder das Ende der Zeichenfolge Zeichen, beim ersten Versuch gefunden wird, ein Zeichen zu lesen. Wenn *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Scanf_s** und **Wscanf_s** zurückgeben **EOF** und **Errno** zu **EINVAL**.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (errno, _doserrno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Scanf_s** -Funktion liest Daten aus dem Standardeingabestream **Stdin** und schreibt die Daten in der die vom angegebenen Speicherort *Argument*. Jede *Argument* muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **Scanf_s** -Funktion liest Daten aus dem Standardeingabestream **Stdin**, und schreibt es in *Argument*. Jede *Argument* muss ein Zeiger auf einen Variablentyp, die der Typspezifizierer in entspricht *Format*. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
 **Wscanf_s** ist eine Breitzeichen-Version von **Scanf_s**; die *Format* Argument **Wscanf_s** ist eine Breitzeichen-Zeichenfolge. **Wscanf_s** und **Scanf_s** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Scanf_s** unterstützt derzeit keine Eingabe aus einem unicodestream.
 
-Die Versionen dieser Funktionen, die **_l** -Suffix sind beinahe identisch, außer dass sie verwenden den Gebietsschemaparameter, der übergeben wird anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen, die **_l** -Suffix sind nahezu identisch, außer sie verwenden die *Gebietsschema* Parameter anstelle des aktuellen threadgebietsschemas.
 
-Im Gegensatz zu **Scanf** und **Wscanf**, **Scanf_s** und **Wscanf_s** erfordern die Puffergröße für alle des Typs Eingabeparameterangegebenwerden**c**, **C**, **s**, **S**, oder, die in eingeschlossen sind **[]**. Die Puffergröße in Zeichen wird als zusätzlicher Parameter direkt nach dem Zeiger auf den Puffer oder die Variable übergeben. Beim Lesen einer Zeichenfolge wird beispielsweise die Puffergröße für diese Zeichenfolge wie folgt übergeben:
+Im Gegensatz zu **Scanf** und **Wscanf**, **Scanf_s** und **Wscanf_s** müssen Puffergrößen für einige Parameter angeben. Geben Sie die Größe für alle **c**, **C**, **s**, **S**, oder einen Zeichenfolgentyp-Steuerelementsatz **[]** Parameter. Die Größe des Puffers in Zeichen wird als zusätzlicher Parameter übergeben. Es folgt unmittelbar auf den Zeiger auf den Puffer oder Variable. Wenn Sie eine Zeichenfolge lesen, wird die Puffergröße für diese Zeichenfolge z. B. wie folgt übergeben:
 
 ```C
 char s[10];
 scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specification is 9
 ```
 
-Die Puffergröße enthält das abschließende NULL-Zeichen. Sie können ein Feld für die Breitenangabe verwenden, um sicherzustellen, dass das eingelesene Token in den Puffer passt. Wenn kein Feld für die Breiteangabe verwendet wird und das eingelesen Token zu groß für den Puffer ist, wird nichts in diesen Puffer geschrieben.
+Die Puffergröße enthält das terminal Null-Zeichen. Sie können ein Feld für die Breitenangabe verwenden, um sicherzustellen, dass das Token, das am besten entspricht, in den Puffer gelesen wird. Wenn ein Token zu groß ist, wird nichts in den Puffer geschrieben, es sei denn, es eine Spezifikation für die Breite ist.
 
 > [!NOTE]
 > Size-Parameter ist vom Typ **ohne Vorzeichen**, nicht **"size_t"**. Verwenden Sie eine statische Umwandlung zum Konvertieren einer **"size_t"** Wert **ohne Vorzeichen** für 64-Bit-Buildkonfigurationen.
 
-Im folgenden Beispiel wird gezeigt, dass der Puffergrößenparameter die maximale Anzahl von Zeichen, aber nicht von Bytes beschreibt. Im Aufruf von **Wscanf_s**, die Zeichenbreite, die von dem Puffertyp angegeben ist, entspricht nicht die Zeichenbreite, die die im Formatbezeichner angegeben ist.
+Der puffergrößenparameter wird beschrieben, die maximale Anzahl von Zeichen, nicht Bytes. In diesem Beispiel passt die Breite des Puffertyps die Breite des Formatbezeichners nicht.
 
 ```C
 wchar_t ws[10];
 wscanf_s(L"%9S", ws, (unsigned)_countof(ws));
 ```
 
-Die **S** Formatbezeichner gibt die Verwendung der Zeichenbreite an, die "die Standardbreite einen Gegensatz" ist, die von der Funktion unterstützt wird. Die Zeichen sind ein Byte breit, aber die Funktion unterstützt Doppelbytezeichen. In diesem Beispiel wird eine Zeichenfolge bis maximal 9 Einzelbytezeichen eingelesen und an einen Puffer für Doppelbytezeichen übergeben. Die Zeichen werden als Einzelbytewerte behandelt; die ersten zwei Zeichen werden in `ws[0]` gespeichert, die zweiten zwei Zeichen in `ws[1]` usw.
+Die **S** Formatbezeichner bedeutet, dass die Zeichenbreite verwenden, die "die Standardbreite einen Gegensatz" von der Funktion unterstützt wird. Die Zeichenbreite ist einzelne Byte, aber die Funktion unterstützt Doppelbytezeichen. In diesem Beispiel liest eine Zeichenfolge mit bis zu neun einzelne Bytes bestehendes Zeichen und schreibt sie in einen Double-Byte-Breitzeichen-Puffer. Die Zeichen werden als Einzelbytewerte behandelt; die ersten zwei Zeichen werden in `ws[0]` gespeichert, die zweiten zwei Zeichen in `ws[1]` usw.
 
-Im Fall von Zeichen wird ein einzelnes Zeichen wie folgt gelesen:
+In diesem Beispiel liest ein einzelnes Zeichen an:
 
 ```C
 char c;
 scanf_s("%c", &c, 1);
 ```
 
-Wenn mehrere Zeichen für Zeichenfolgen gelesen werden, die nicht mit NULL abschließen, werden ganze Zahlen für die Breitenangabe und die Puffergröße verwendet.
+Wenn mehrere Zeichen für nicht-Null-terminierte Zeichenfolgen gelesen werden, werden ganze Zahlen für die Breitenangabe und die Größe des Puffers verwendet.
 
 ```C
 char c[4];
-scanf_s("%4c", &c, (unsigned)_countof(c)); // not null terminated
+scanf_s("%4c", c, (unsigned)_countof(c)); // not null terminated
 ```
 
-Weitere Informationen finden Sie unter [scanf-Breitenangabe](../../c-runtime-library/scanf-width-specification.md).
+Weitere Informationen finden Sie unter [scanf Width Specification (scanf-Breitenangabe)](../../c-runtime-library/scanf-width-specification.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -151,10 +151,10 @@ Weitere Informationen finden Sie unter [Format Specification Fields: scanf and w
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Scanf_s**, **_scanf_s_l**|\<stdio.h>|
-|**Wscanf_s**, **_wscanf_s_l**|\<stdio.h> oder \<wchar.h>|
+|**scanf_s**, **_scanf_s_l**|\<stdio.h>|
+|**wscanf_s**, **_wscanf_s_l**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die Konsole wird in den apps der universellen Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles **Stdin**, **"stdout"**, und **"stderr"** müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

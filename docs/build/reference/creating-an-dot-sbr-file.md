@@ -9,14 +9,17 @@ helpviewer_keywords:
 - local symbols in browse information
 - symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-ms.openlocfilehash: 75c3b926a605de66c876e9350218807031cd9a43
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6a2e685d33b108ce542fdc6e3e0565cc37299c1c
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810405"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508740"
 ---
 # <a name="creating-an-sbr-file"></a>Erstellen einer SBR-Datei
+
+> [!WARNING]
+> Obwohl BSCMAKE weiterhin mit Visual Studio installiert wird, wird es nicht mehr von der IDE verwendet. Seit Visual Studio 2008 werden Browse- und Symbolinformationen automatisch in einer SQL Server-.SDF-Datei im Projektmappenordner gespeichert.
 
 Die Eingabedateien für BSCMAKE sind SBR-Dateien. Der Compiler erstellt eine SBR-Datei für die einzelnen Objektdateien (obj) kompiliert. Wenn Sie erstellen oder aktualisieren Ihre Browseinformationsdatei, müssen alle .sbr-Dateien für Ihr Projekt auf dem Datenträger verfügbar sein.
 
