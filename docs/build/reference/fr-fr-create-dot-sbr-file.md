@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811874"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508701"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (SBR-Datei erstellen)
 
@@ -32,6 +32,9 @@ Erstellt SBR-Dateien.
 ```
 
 ## <a name="remarks"></a>Hinweise
+
+> [!WARNING]
+> Obwohl BSCMAKE weiterhin mit Visual Studio installiert wird, wird es nicht mehr von der IDE verwendet. Seit Visual Studio 2008 werden Browse- und Symbolinformationen automatisch in einer SQL Server-.SDF-Datei im Projektmappenordner gespeichert.
 
 Beim Erstellungsvorgang erstellt das Microsoft Browse Information Maintenance-Hilfsprogramm (BSCMAKE) anhand dieser Dateien eine BSC-Datei, die zur Darstellung von Browseinformationen verwendet wird.
 
@@ -61,6 +64,6 @@ Wenn Sie keinen Wert für `filename`angeben, erhält die SBR-Datei denselben Bas
 ## <a name="see-also"></a>Siehe auch
 
 [Ausgabedatei (/F) Optionen](output-file-f-options.md)<br/>
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)<br/>
 [Festlegen des Pfadnamens](specifying-the-pathname.md)
