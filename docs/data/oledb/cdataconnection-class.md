@@ -1,6 +1,6 @@
 ---
 title: CDataConnection-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 8a419a19c04b579c72df9938151f9ada657178f2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326536"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565505"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection-Klasse
 
@@ -103,7 +103,7 @@ class CDataConnection
 |-|-|
 |[Operator BOOL](#op_bool)|Bestimmt, ob die aktuelle Sitzung geöffnet oder nicht ist.|
 |[operator bool](#op_bool_ole)|Bestimmt, ob die aktuelle Sitzung geöffnet oder nicht ist.|
-|[Operator CDataSource &](#op_cdata_amp)|Gibt einen Verweis auf die enthaltene `CDataSource` Objekt.|
+|[operator CDataSource&](#op_cdata_amp)|Gibt einen Verweis auf die enthaltene `CDataSource` Objekt.|
 |[Operator CDataSource *](#op_cdata_star)|Gibt einen Zeiger auf die enthaltene `CDataSource` Objekt.|
 |[Operator-CSession &](#op_csession_amp)|Gibt einen Verweis auf die enthaltene `CSession` Objekt.|
 |[Operator CSession *](#op_csession_star)|Gibt einen Zeiger auf die enthaltene `CSession` Objekt.|
@@ -119,7 +119,7 @@ Mit `CDataConnection`, müssen Sie nur ein Verbindungsobjekt zu erstellen, über
 > [!NOTE]
 >  Wenn Sie eine datenbankanwendung, die mehrere Sitzungen verarbeiten muss erstellen, müssen Sie mit [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md).
 
-## <a name="#cdataconnection"></a> CDataConnection:: CDataConnection
+## <a name="cdataconnection"></a> CDataConnection:: CDataConnection
 
 Instanziiert und initialisiert ein `CDataConnection` Objekt.
 
@@ -132,7 +132,7 @@ CDataConnection(const CDataConnection &ds);
 
 #### <a name="parameters"></a>Parameter
 
-*DS*<br/>
+*ds*<br/>
 [in] Ein Verweis auf eine vorhandene Datenverbindung.
 
 ### <a name="remarks"></a>Hinweise
@@ -141,7 +141,7 @@ Beim ersten überschreiben erstellt ein neues `CDataConnection` -Objekt mit Stan
 
 Beim zweiten Überschreiben erstellt ein neues `CDataConnection` Objekt mit den Einstellungen entspricht dem Datenverbindungsobjekt, die Sie angeben.
 
-## <a name="#copy"></a> CDataConnection:: Copy
+## <a name="copy"></a> CDataConnection::Copy
 
 Erstellt eine Kopie einer vorhandenen Datenverbindung an.
 
@@ -153,10 +153,10 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 
 #### <a name="parameters"></a>Parameter
 
-*DS*<br/>
+*ds*<br/>
 [in] Ein Verweis auf eine vorhandene Datenverbindung zu kopieren.
 
-## <a name="#open"></a> CDataConnection:: Open
+## <a name="open"></a> CDataConnection:: Open
 
 Öffnet eine Verbindung mit einer Datenquelle mit einer Initialisierungszeichenfolge an.
 
@@ -175,7 +175,7 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 
 Ein standard-HRESULT.
 
-## <a name="#opennewsession"></a> CDataConnection:: Opennewsession
+## <a name="opennewsession"></a> CDataConnection:: Opennewsession
 
 Öffnet eine neue Sitzung mithilfe des aktuellen Verbindungsobjekts-Datenquelle.
 
@@ -187,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 #### <a name="parameters"></a>Parameter
 
-*Sitzung*<br/>
+*session*<br/>
 [in/Out] Ein Verweis auf das Objekt für die neue Sitzung.
 
 ### <a name="remarks"></a>Hinweise

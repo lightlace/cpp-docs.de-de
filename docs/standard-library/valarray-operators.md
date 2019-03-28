@@ -1,6 +1,6 @@
 ---
 title: '&lt;valarray&gt;-Operatoren'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::operator!=
 - valarray/std::operator%
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: daaddf6de79411aea58b79feb0fbfd0f8ff56f5c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6de4b4ad75f9240fb86ff5e363f4a7d9062925d9
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332607"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565921"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt;-Operatoren
 
@@ -268,7 +268,7 @@ Ein valarray-Objekt, dessen Elemente die elementweise Verknüpfung der bitweisen
 
 Eine bitweise Operation kann nur verwendet werden, um Bits in **Char** und **Int** -Datentypen und-Varianten und nicht in **"float"**, **doppelte**, **Longdouble**, **"void"**, **"bool"** oder in anderen komplexeren Datentypen.
 
-Für die bitweise `AND`-Operation gilt dieselbe Wahrheitstabelle wie für die logische `AND`-Operation. Die bitweise OR-Operation wird jedoch nur auf den Datentyp auf der Ebene der Einzelbits angewendet. Der [operator&&](../standard-library/valarray-operators.md#amp) wird auf Elementebene angewendet, wobei alle Werte, die nicht null sind, als TRUE zählen, und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Der bitweise **ANDoperator&** kann dagegen je nach dem Ergebnis der bitweisen Operation ein valarray-Objekt mit anderen Werten als 0 und 1 ergeben.
+Für die bitweise `AND`-Operation gilt dieselbe Wahrheitstabelle wie für die logische `AND`-Operation. Die bitweise OR-Operation wird jedoch nur auf den Datentyp auf der Ebene der Einzelbits angewendet. Der [operator&&](#op_amp_amp) wird auf Elementebene angewendet, wobei alle Werte, die nicht null sind, als TRUE zählen, und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Der bitweise `AND` [Operator &](#op_amp), im Gegensatz dazu kann dazu führen, mit anderen Werten als 0 oder 1 ist, je nach Ergebnis der bitweisen Operation ein valarray-Objekt.
 
 ### <a name="example"></a>Beispiel
 
@@ -356,7 +356,7 @@ Ein valarray-Objekt, dessen Elemente vom Typ "bool" und die elementweise Verknü
 
 ### <a name="remarks"></a>Hinweise
 
-Die logische `ANDoperator&&` gilt auf Elementebene, zählen alle Werte als "true", und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Die bitweise Version von `AND`, [Operator &,](../standard-library/valarray-operators.md#op_amp), im Gegensatz dazu kann dazu führen, mit anderen Werten als 0 oder 1, abhängig vom Ergebnis der bitweisen Operation ein valarray-Objekt.
+Die logische `ANDoperator&&` gilt auf Elementebene, zählen alle Werte als "true", und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Die bitweise Version von `AND`, [Operator &,](#op_amp), im Gegensatz dazu kann dazu führen, mit anderen Werten als 0 oder 1, abhängig vom Ergebnis der bitweisen Operation ein valarray-Objekt.
 
 ### <a name="example"></a>Beispiel
 
@@ -1430,7 +1430,7 @@ Ein valarray-Objekt, dessen Elemente die elementweise Verknüpfung der bitweisen
 
 Eine bitweise Operation kann nur verwendet werden, um Bits in **Char** und **Int** -Datentypen und-Varianten und nicht in **"float"**, **doppelte**, **long double**, **"void"**, **"bool"** oder in anderen komplexeren Datentypen.
 
-Der Operator exklusives `OR` ( **XOR**) weist die folgende Semantik auf: Wenn die Bits *b*1 und *b*2 gegeben sind, ist *b*1 **XOR** *b*2 **TRUE**, wenn exakt eines der Bits TRUE ist; **FALSE**, wenn beide Bits FALSE sind oder beide Bits TRUE sind.
+Das bitweise exklusive `OR` ( **XOR**) hat folgende Semantik: Erhalten Bits *b*1 und *b*2 *b*1 **XOR** *b*2 **"true"** Wenn genau eines der Bits ist true. **"false"** Wenn beide Bits false sind oder wenn beide Bits true sind.
 
 ### <a name="example"></a>Beispiel
 

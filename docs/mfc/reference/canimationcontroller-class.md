@@ -1,6 +1,6 @@
 ---
 title: CAnimationController-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationController
 - AFXANIMATIONCONTROLLER/CAnimationController
@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 114b6bffdc63ecadc951965f8f199b229f0f7672
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a3a533b876b9ca245c0553c4c24a815ef3cabca1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270279"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565960"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController-Klasse
 
@@ -127,7 +127,7 @@ class CAnimationController : public CObject;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Erstellt einen Animationscontroller.|
-|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|Der Destruktor. Wird aufgerufen, wenn Animation-Controller-Objekt zerstört wird.|
+|[CAnimationController::~CAnimationController](#_dtorcanimationcontroller)|Der Destruktor. Wird aufgerufen, wenn Animation-Controller-Objekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -181,7 +181,7 @@ class CAnimationController : public CObject;
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Ein Keyframe, der Anfang des Storyboards darstellt.|
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Gibt an, ob als Animationscontroller gültig oder nicht ist. Dieser Member ist auf "false" festgelegt, wenn das aktuelle Betriebssystem Windows Animations-API nicht unterstützt.|

@@ -1,15 +1,15 @@
 ---
 title: CMake-Projekte in Visual Studio
-ms.date: 03/05/2019
+ms.date: 03/27/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 84511c0712fffcacc1f90d4bde808620e0a0ab0f
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 479179d94a0534f5f0c790fea18e281053b686e2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356140"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565294"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>CMake-Projekte in Visual Studio
 
@@ -58,7 +58,7 @@ Wenn Sie Argumente beim Debuggen einer ausführbaren Datei übergeben müssen, k
 
 ## <a name="import-an-existing-cache"></a>Importieren eines vorhandenen Caches
 
-Wenn Sie eine vorhandene CMakeCache.txt-Datei importieren, Visual Studio automatisch benutzerdefinierte Variablen extrahiert und erstellt eine vorab aufgefüllte [ **"cmakesettings.JSON"** ](#cmake_settings) Datei basierend darauf. Der ursprüngliche Cache wird nicht geändert und kann weiterhin über die Befehlszeile oder über das Tool bzw. die IDE verwendet werden, mit dem bzw. der er generiert wurde. Die neue **"cmakesettings.JSON"** -Datei wird zusammen mit der im Stamm des Projekts "cmakelists.txt" gespeichert. Visual Studio generiert einen neuen Cache, der auf der Einstellungsdatei basiert. Sie können die automatische Cachegenerierung im Dialogfeld **Extras > Optionen > CMake > Allgemein** außer Kraft setzen.
+Wenn Sie eine vorhandene Datei „CMakeLists.txt“ importieren, extrahiert Visual Studio benutzerdefinierte Variablen automatisch und erstellt eine vorab mit Daten aufgefüllte Datei **CMakeSettings.json**, die auf diesen basiert. Der ursprüngliche Cache wird nicht geändert und kann weiterhin über die Befehlszeile oder über das Tool bzw. die IDE verwendet werden, mit dem bzw. der er generiert wurde. Die neue **"cmakesettings.JSON"** -Datei wird zusammen mit der im Stamm des Projekts "cmakelists.txt" gespeichert. Visual Studio generiert einen neuen Cache, der auf der Einstellungsdatei basiert. Sie können die automatische Cachegenerierung im Dialogfeld **Extras > Optionen > CMake > Allgemein** außer Kraft setzen.
 
 Nicht der gesamte Inhalt des Caches wird importiert.  Eigenschaften wie der Generator und der Speicherort des Compilers werden durch die Standardwerte ersetzt, die in der IDE bekanntermaßen funktionieren.
 
@@ -132,7 +132,7 @@ Um beschränken von Builds und Debuggen Sitzungen für eine Teilmenge der Projek
 
 Wenn Sie weitere Informationen zum Status des CMake-Caches benötigen, um ein Problem zu diagnostizieren, öffnen Sie das Hauptmenü **CMake** oder das Kontextmenü **CMakeLists.txt** im **Projektmappen-Explorer**, um einen der folgenden Befehle auszuführen:
 
-- **Cache anzeigen** öffnet die Datei „CMakeCache.txt“ aus dem Stammordner des Builds im Editor. (Alle Änderungen, die Sie hier an „CMakeCache.txt“ vornehmen, werden verworfen, wenn Sie den Cache bereinigen. Weitere Informationen dazu, wie die Änderungen nach dem Löschen des Caches beibehalten werden, finden Sie in diesem Artikel unter [CMake-Einstellungen und benutzerdefinierte Konfigurationen](#cmake_settings).)
+- **Cache anzeigen** öffnet die Datei „CMakeCache.txt“ aus dem Stammordner des Builds im Editor. (Alle Änderungen, die Sie hier an „CMakeCache.txt“ vornehmen, werden verworfen, wenn Sie den Cache bereinigen. Um Änderungen vorzunehmen, die beibehalten werden, nachdem der Cache bereinigt wird, finden Sie unter [Anpassen von CMake-Einstellungen](customize-cmake-settings.md).)
 
 - **Cacheordner öffnen** öffnet ein Explorer-Fenster zum Stammordner des Builds.
 

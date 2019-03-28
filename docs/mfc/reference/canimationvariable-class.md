@@ -1,6 +1,6 @@
 ---
 title: CAnimationVariable-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationVariable
 - AFXANIMATIONCONTROLLER/CAnimationVariable
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 42fd3ddc504e85ba3f69588bee54c6540b628129
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269031"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565759"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable-Klasse
 
@@ -68,7 +68,7 @@ class CAnimationVariable;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|Erstellt eine Animation-Variable-Objekt.|
-|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|Der Destruktor. Wird aufgerufen, wenn ein CAnimationVariable-Objekt zerstört wird.|
+|[CAnimationVariable::~CAnimationVariable](#_dtorcanimationvariable)|Der Destruktor. Wird aufgerufen, wenn ein CAnimationVariable-Objekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -101,7 +101,7 @@ class CAnimationVariable;
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Gibt den Standardwert, der an IUIAnimationVariable weitergegeben wird.|
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Enthält eine Liste der Übergänge, die diese Animationsvariable animieren.|

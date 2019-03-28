@@ -1,6 +1,6 @@
 ---
 title: CAnimationBaseObject-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationBaseObject
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e9c5ed98d654eb37be7ab8523d44c9da6eecd9c7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258917"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565883"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject-Klasse
 
@@ -74,7 +74,7 @@ class CAnimationBaseObject : public CObject;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Überladen. Erstellt eine Animationsobjekt.|
-|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Der Destruktor. Wird aufgerufen, wenn ein Animationsobjekt zerstört wird.|
+|[CAnimationBaseObject::~CAnimationBaseObject](#_dtorcanimationbaseobject)|Der Destruktor. Wird aufgerufen, wenn ein Animationsobjekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -90,8 +90,8 @@ class CAnimationBaseObject : public CObject;
 |[CAnimationBaseObject::GetAutodestroyTransitions](#getautodestroytransitions)|Erfahren Sie, ob verwandter Übergang werden automatisch zerstört.|
 |[CAnimationBaseObject::GetGroupID](#getgroupid)|Gibt aktuelle Gruppen-ID.|
 |[CAnimationBaseObject::GetObjectID](#getobjectid)|Gibt aktuelle Objekt-ID zurück.|
-|[CAnimationBaseObject::GetUserData](#getuserdata)|Gibt benutzerdefinierte Daten zurück.|
-|[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|Legt ein Flag, der sortiert werden, um Übergänge automatisch zu zerstören.|
+|[CAnimationBaseObject::GetUserData](#getuserdata)|Gibt den benutzerdefinierten Daten.|
+|[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|Legt ein Flag Übergänge automatisch zerstört.|
 |[CAnimationBaseObject::SetID](#setid)|Legt neue IDs.|
 |[CAnimationBaseObject::SetUserData](#setuserdata)|Legt den benutzerdefinierten Daten.|
 
@@ -104,17 +104,17 @@ class CAnimationBaseObject : public CObject;
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Gibt an, ob die zugehörigen Übergänge automatisch zerstört werden soll.|
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|Speichert den benutzerdefinierten Daten.|
 |[CAnimationBaseObject::m_nGroupID](#m_ngroupid)|Gibt an, die Gruppen-ID des Animationsobjekts.|
-|[CAnimationBaseObject::m_nObjectID](#m_nobjectid)|Gibt die Objekt-ID des Animationsobjekts.|
+|[CAnimationBaseObject::m_nObjectID](#m_nobjectid)|Gibt die Objekt-ID des Animationsobjekts an.|
 |[CAnimationBaseObject::m_pParentController](#m_pparentcontroller)|Ein Zeiger auf den übergeordneten Animationscontroller.|
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Klasse implementiert die grundlegende Methoden für alle Animationsobjekte. Ein Animationsobjekt kann darstellen, ein Wert, der Punkt, der Größe, Rechteck oder Farbe in eine Anwendung als auch eine benutzerdefinierte Entität. Animationsobjekte werden in Animationsgruppen gespeichert (Siehe CAnimationGroup). Jede Gruppe getrennt animiert werden kann und als Entsprechung des Storyboards behandelt werden kann. Ein Animationsobjekt kapselt einen oder mehrere Animationsvariablen (Siehe CAnimationVariable), abhängig von der logischen Darstellung. CAnimationRect enthält z. B. vier Animationsvariablen - eine Variable für jede Seite des Rechtecks. Jede Animation-Objektklasse stellt überladene AddTransition-Methode, die gekapselten Animationsvariablen Übergänge zuweisen verwendet werden soll. Ein Animationsobjekt kann durch die Objekt-ID (optional) identifiziert werden und nach Gruppen-ID. Eine Gruppen-ID ist erforderlich, um ein Animationsobjekt zur richtigen Gruppe zu platzieren, aber wenn eine Gruppen-ID nicht angegeben ist, wird ein Objekt in der Standardgruppe mit der ID 0 platziert. Wenn Sie SetID mit verschiedenen GroupID aufrufen, wird ein Animationsobjekt in eine andere Gruppe verschoben werden (eine neue Gruppe wird bei Bedarf erstellt).
+Diese Klasse implementiert die grundlegende Methoden für alle Animationsobjekte. Ein Animationsobjekt kann ein Wert, der Punkt, der Größe, Rechteck oder darstellen Farbe in eine Anwendung als auch eine benutzerdefinierte Entität. Animationsobjekte werden in Animationsgruppen gespeichert (Siehe CAnimationGroup). Jede Gruppe getrennt animiert werden kann und analog des Storyboards behandelt werden kann. Ein Animationsobjekt kapselt einen oder mehrere Animationsvariablen (Siehe CAnimationVariable), abhängig von der logischen Darstellung. CAnimationRect enthält z. B. vier Animationsvariablen - eine Variable für jede Seite des Rechtecks. Jede Animation-Objektklasse stellt überladene AddTransition-Methode, die gekapselten Animationsvariablen Übergänge zuweisen verwendet werden soll. Ein Animationsobjekt kann durch die Objekt-ID (optional) identifiziert werden und nach Gruppen-ID. Eine Gruppen-ID ist erforderlich, um ein Animationsobjekt zur richtigen Gruppe zu platzieren, aber wenn eine Gruppen-ID nicht angegeben ist, wird ein Objekt in der Standardgruppe mit der ID 0 platziert. Wenn Sie SetID mit verschiedenen GroupID aufrufen, wird ein Animationsobjekt in eine andere Gruppe verschoben werden (eine neue Gruppe wird bei Bedarf erstellt).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -150,7 +150,7 @@ virtual BOOL ApplyTransitions(
 Ein Zeiger auf ein Storyboard.
 
 *bDependOnKeyframes*<br/>
-Mit "false" fügt diese Methode nur die Übergänge, die nicht für Keyframes abhängen.
+Bei "FALSE" fügt diese Methode nur die Übergänge, die nicht für Keyframes abhängen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -305,17 +305,17 @@ Werden Verweise auf enthaltene Animationsvariablen erfasst.
 ```
 virtual void GetAnimationVariableList(
     CList<CAnimationVariable*,
-    CAnimationVariable*>& lst) = 0;
+    CAnimationVariable*>& list) = 0;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*lst*<br/>
+*list*<br/>
 Eine Liste, die mit Animationsvariablen, die innerhalb eines Animationsobjekts ausgefüllt werden müssen.
 
 ### <a name="remarks"></a>Hinweise
 
-Dies ist eine rein virtuelle Methode, die in einer abgeleiteten Klasse überschrieben werden muss. Ein Animationsobjekt, abhängig von der Art, enthält eine oder mehrere Animationsvariablen. CAnimationPoint enthält beispielsweise zwei Variablen für X- und Y-Koordinaten. Die Basisklasse CAnimationBaseObject implementiert einige generischen Methoden, die in der Liste der Animationsvariablen fungieren: ApplyTransitions, ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. Diese Methoden rufen GetAnimationVariableList auf, die in einer abgeleiteten Klasse mit der tatsächlichen Animationsvariablen in ein bestimmtes Animationsobjekt gefüllt ist, und klicken Sie dann Schleife in der Liste und erforderlichen Aktionen durchführen. Wenn Sie ein benutzerdefiniertes Animationsobjekt erstellen, müssen Sie alle in diesem Objekt enthaltenen Animationsvariablen lst hinzufügen.
+Diese rein virtuelle Methode muss in einer abgeleiteten Klasse überschrieben werden. Ein Animationsobjekt, abhängig von der Art, enthält eine oder mehrere Animationsvariablen. CAnimationPoint enthält beispielsweise zwei Variablen für X- und Y-Koordinaten. Die Basisklasse CAnimationBaseObject implementiert einige generischen Methoden, die in der Liste der Animationsvariablen fungieren: ApplyTransitions, ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. Diese Methoden rufen GetAnimationVariableList auf, die in einer abgeleiteten Klasse mit der tatsächlichen Animationsvariablen in ein bestimmtes Animationsobjekt gefüllt ist, und klicken Sie dann Schleife in der Liste und erforderlichen Aktionen durchführen. Wenn Sie ein benutzerdefiniertes Animationsobjekt erstellen, müssen Sie zum Hinzufügen *Liste* alle Animationsvariablen, die in diesem Objekt enthalten sind.
 
 ##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
 
@@ -367,7 +367,7 @@ Verwenden Sie diese Methode zum Abrufen der Objekt-ID. Es ist 0, wenn der Objekt
 
 ##  <a name="getuserdata"></a>  CAnimationBaseObject::GetUserData
 
-Gibt benutzerdefinierte Daten zurück.
+Gibt den benutzerdefinierten Daten.
 
 ```
 DWORD GetUserData() const;
@@ -407,7 +407,7 @@ UINT32 m_nGroupID;
 
 ##  <a name="m_nobjectid"></a>  CAnimationBaseObject::m_nObjectID
 
-Gibt die Objekt-ID des Animationsobjekts.
+Gibt die Objekt-ID des Animationsobjekts an.
 
 ```
 UINT32 m_nObjectID;
@@ -423,7 +423,7 @@ CAnimationController* m_pParentController;
 
 ##  <a name="setautodestroytransitions"></a>  CAnimationBaseObject::SetAutodestroyTransitions
 
-Legt ein Flag, der sortiert werden, um Übergänge automatisch zu zerstören.
+Legt ein Flag Übergänge automatisch zerstört.
 
 ```
 void SetAutodestroyTransitions(BOOL bValue);
@@ -458,7 +458,7 @@ Gibt an, neue Gruppen-ID.
 
 ### <a name="remarks"></a>Hinweise
 
-Ermöglicht das Ändern von Objekt-ID und die Gruppen-ID. Wenn sich die neuen Gruppen-ID aus der aktuellen-ID unterscheidet, wird ein Animationsobjekt in eine andere Gruppe verschoben (eine neue Gruppe wird, bei Bedarf erstellt werden).
+Ermöglicht es Ihnen so ändern Sie die Objekt-ID und die Gruppen-ID. Wenn sich die neuen Gruppen-ID aus der aktuellen-ID unterscheidet, wird ein Animationsobjekt in eine andere Gruppe verschoben (eine neue Gruppe wird, bei Bedarf erstellt werden).
 
 ##  <a name="setparentanimationobjects"></a>  CAnimationBaseObject::SetParentAnimationObjects
 
@@ -470,7 +470,7 @@ virtual void SetParentAnimationObjects();
 
 ### <a name="remarks"></a>Hinweise
 
-Dies ist eine Hilfsklasse, die verwendet werden kann, um zwischen Animationsvariablen, die innerhalb eines Animationsobjekts und ihrem Container herzustellen. Es durchläuft Animationsvariablen und einem Gegenzeiger auf ein übergeordnetes Objekt jedes Animationsvariablen Animation. In der aktuellen Implementierung, die die tatsächliche Beziehung in CAnimationBaseObject::ApplyTransitions eingerichtet wurde, werden Back Zeiger aus diesem Grund nicht festgelegt, bis Sie CAnimationGroup::Animate aufrufen. Kennen die Beziehung kann hilfreich sein, wenn Sie die Verarbeitung von Ereignissen und Grund, die eine Animation übergeordneten aus CAnimationVariable (verwenden Sie CAnimationVariable::GetParentAnimationObject)-Objekt.
+Dieses Hilfsprogramm kann verwendet werden, um eine Beziehung zwischen der Animationsvariablen innerhalb eines Animationsobjekts und ihrem Container herzustellen. Es durchläuft Animationsvariablen und einem Gegenzeiger auf ein übergeordnetes Objekt jedes Animationsvariablen Animation. Die tatsächliche Beziehung in CAnimationBaseObject::ApplyTransitions eingerichtet, daher Back Zeiger sind nicht festgelegt, bis Sie CAnimationGroup::Animate aufrufen, in der aktuellen Implementierung. Kennen die Beziehung kann hilfreich sein, wenn Sie die Verarbeitung von Ereignissen und Grund, die eine Animation übergeordneten aus CAnimationVariable-Objekt. Verwenden Sie CAnimationVariable::GetParentAnimationObject.
 
 ##  <a name="setuserdata"></a>  CAnimationBaseObject::SetUserData
 

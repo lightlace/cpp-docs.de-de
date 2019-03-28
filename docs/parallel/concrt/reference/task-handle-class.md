@@ -1,6 +1,6 @@
 ---
 title: task_handle-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8528bc212603484be9325ed967e9475e4faa1348
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298086"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565099"
 ---
 # <a name="taskhandle-class"></a>task_handle-Klasse
 
@@ -39,7 +39,7 @@ Der Typ des Funktionsobjekts, die aufgerufen werden, um die Arbeit, dargestellt 
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[task_handle](#ctor)|Erstellt ein neues `task_handle`-Objekt. Die Aktionen der Aufgabe wird ausgeführt, durch den Aufruf der Funktion, die als Parameter an den Konstruktor angegeben.|
+|[task_handle](#task_handle)|Erstellt ein neues `task_handle`-Objekt. Die Aktionen der Aufgabe wird ausgeführt, durch den Aufruf der Funktion, die als Parameter an den Konstruktor angegeben.|
 |[~ Task_handle-Destruktor](#dtor)|Zerstört das `task_handle`-Objekt.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
@@ -76,7 +76,7 @@ Der Funktionsaufrufoperator, den von der Laufzeit aufgerufen, um die Arbeit des 
 void operator()() const;
 ```
 
-##  <a name="task_handle__ctor"></a> task_handle
+## <a name="taskhandle"></a>task_handle
 
 Erstellt ein neues `task_handle`-Objekt. Die Aktionen der Aufgabe wird ausgeführt, durch den Aufruf der Funktion, die als Parameter an den Konstruktor angegeben.
 

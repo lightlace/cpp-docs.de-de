@@ -1,6 +1,6 @@
 ---
 title: ICommandSource-Schnittstelle
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
 - AFXWINFORMS/ICommandSource
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: eed7abbbb40c532ad596f683b6ed2c98a0cadf9b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296019"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565609"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource-Schnittstelle
 
@@ -179,7 +179,7 @@ Die Befehls-ID.
 
 Diese Methode entfernt den Befehlshandler, der aus das Befehlsquellobjekt CmdID zugeordnet.
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
 
 Entfernt eine Gruppe von Befehlshandler von einem Befehl-Quellobjekt.
 ```
@@ -196,7 +196,7 @@ Der Startindex des der Befehls-ID-Bereich.
 Der Endindex der Befehls-ID-Bereich.
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode entfernt eine Gruppe von Meldungshandler, der angegebenen Befehls-IDs von CmdIDMin und CmdIDMax, aus das Befehlsquellobjekt zugeordnet.
+Diese Methode entfernt eine Gruppe von nachrichtenhandlern aufbauen, die CmdIDMin und CmdIDMax, aus dem Quellobjekt für den Befehl angegebenen Befehls-IDs zugeordnet.
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
 
@@ -215,7 +215,7 @@ Der Startindex des der Befehls-ID-Bereich.
 Der Endindex der Befehls-ID-Bereich.
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode entfernt eine Gruppe von Benutzer-Schnittstelle Nachricht Befehlshandler, der angegebenen Befehls-IDs von CmdIDMin und CmdIDMax, aus das Befehlsquellobjekt zugeordnet.
+Diese Methode entfernt eine Gruppe von Benutzer-Schnittstelle Befehl nachrichtenhandlern aufbauen, die CmdIDMin und CmdIDMax, aus dem Quellobjekt für den Befehl angegebenen Befehls-IDs zugeordnet.
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
 

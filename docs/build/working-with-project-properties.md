@@ -1,19 +1,19 @@
 ---
 title: Festlegen von C++-Compiler und erstellen Sie die Eigenschaften in Visual Studio
 description: Verwenden Sie Visual Studio-IDE, um Optionen von C++-Compiler und Linker und andere Buildeinstellungen zu ändern.
-ms.date: 12/10/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 55adb6dc91919bda9c2827a89e5de536667085c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826054"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564911"
 ---
 # <a name="set-compiler-and-build-properties"></a>Festlegen des Compilers und der Buildeigenschaften
 
@@ -65,7 +65,7 @@ Die folgende Abbildung zeigt die Eigenschaftenseiten für ein Visual C++-Projekt
 
 ![Projekteigenschaftenseiten](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
-Sie können den Eigenschaften-Editor verwenden, um die Werte aller verfügbaren Makros anzuzeigen. Makros werden im Verlauf dieses Artikels unter [Makros für Eigenschaftenseiten](#bkmkPropertiesVersusMacros) erläutert.
+Sie können den Eigenschaften-Editor verwenden, um die Werte aller verfügbaren Makros anzuzeigen.
 
 ### <a name="predefined-macros"></a>Vordefinierte Makros
 
@@ -79,7 +79,7 @@ Besitzt die Syntax `%(name)`. Bei einer Datei gilt ein Elementmakro nur für die
 
 Sie können *benutzerdefinierte Makros* erstellen, um sie als Variablen in Projektbuilds zu verwenden. Sie können z. B. ein benutzerdefiniertes Makro erstellen, das einen Wert für einen benutzerdefinierten Buildschritt oder ein benutzerdefiniertes Buildtool bereitstellt. Ein benutzerdefiniertes Makro ist ein Name-Wert-Paar. Verwenden Sie in einer Projektdatei die Notation **$(**<em>name</em>**)**, um auf den Wert zuzugreifen.
 
-Ein benutzerdefiniertes Makro wird in einem Eigenschaftenblatt gespeichert. Wenn Ihr Projekt nicht bereits ein Eigenschaftenblatt enthält, können Sie erstellen, indem Sie die Schritte unter [Freigabe oder beabsichtigen Visual Studio C++-projekteinstellungen](#bkmkPropertySheets).
+Ein benutzerdefiniertes Makro wird in einem Eigenschaftenblatt gespeichert. Wenn Ihr Projekt nicht bereits ein Eigenschaftenblatt enthält, können Sie erstellen, indem Sie die Schritte unter [Freigabe oder zur Wiederverwendung von Visual Studio-projekteinstellungen](create-reusable-property-configurations.md).
 
 #### <a name="to-create-a-user-defined-macro"></a>So erstellen Sie ein benutzerdefiniertes Makro
 
@@ -128,17 +128,17 @@ Erweitern Sie im linken Bereich des Dialogfelds **Eigenschaftenseiten** die **Ko
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Freigabe oder beabsichtigen Visual Studio-projekteinstellungen](create-reusable-property-configurations.md)<br/>
+[Freigeben oder Wiederverwenden von Visual Studio-Projekteinstellungen](create-reusable-property-configurations.md)<br/>
 So erstellen Sie eine PROPS-Datei mit benutzerdefinierten Einstellungen, die freigegeben werden können oder Resused.
 
-[Vererbung von Eigenschaften](project-property-inheritance.md)<br/>
+[Vererbung von Projekteigenschaften](project-property-inheritance.md)<br/>
 Beschreibt die Reihenfolge der Auswertung für props, targets, vcxproj-Dateien und Umgebungsvariablen im Buildprozess.
 
-[Ändern von Eigenschaften und Ziele ohne Änderung der Projektdatei](modify-project-properties-without-changing-project-file.md)<br/>
+[Ändern von Eigenschaften und Zielen ohne Änderungen an der Projektdatei](modify-project-properties-without-changing-project-file.md)<br/>
 Vorgehensweise: temporäre Buildeinstellungen zu erstellen, ohne eine Projektdatei zu ändern. 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Visual Studio Projects - C++](creating-and-managing-visual-cpp-projects.md)<br/>
+[Visual Studio-Projekte: C++](creating-and-managing-visual-cpp-projects.md)<br/>
 [VCXPROJ- und PROPS-Dateistruktur](reference/vcxproj-file-structure.md)<br/>
 [Eigenschaftenseite: XML-Dateien](reference/property-page-xml-files.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: Registrierung und TypeLib globale Funktionen
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
 - afxpriv/ATL::AfxRegCreateKey
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: f94dd1770ff194e47e2e38cc3a9b5cf0cbaebe58
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301830"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566012"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Registrierung und TypeLib globale Funktionen
 
@@ -33,8 +33,8 @@ Diese Funktionen bieten Unterstützung für das Laden und Registrieren einer Typ
 
 |||
 |-|-|
-|[AfxRegCreateKey](#afxrefcreatekey)|Erstellt den angegebenen Registrierungsschlüssel.|
-|[AfxRegDeleteKey](#afxrefdeletekey)|Löscht den angegebenen Registrierungsschlüssel.|
+|[AfxRegCreateKey](#afxregcreatekey)|Erstellt den angegebenen Registrierungsschlüssel.|
+|[AfxRegDeleteKey](#afxregdeletekey)|Löscht den angegebenen Registrierungsschlüssel.|
 |[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|Ein Hilfsprogramm, um einen Vorschauhandler zu registrieren.|
 |[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| Hilfe beim Aufheben der Registrierung eines vorschauhandlers. |
 |[AtlRegisterTypeLib](#atlregistertypelib)|Diese Funktion wird aufgerufen, um eine Typbibliothek zu registrieren.|
@@ -343,7 +343,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Hilfsfunktion wird verwendet, indem [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) und [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).
+Diese Hilfsfunktion wird verwendet, indem [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) und [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>Anforderungen
 

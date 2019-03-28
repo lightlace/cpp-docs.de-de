@@ -1,6 +1,6 @@
 ---
 title: move_iterator-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/std::move_iterator
 - iterator/std::move_iterator::iterator_type
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: c9ff9385d43ac1c53f91a548ea01c04c1c67dc18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e2e62946325c082e761b6997ae584419175f8fe
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656133"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565044"
 ---
 # <a name="moveiterator-class"></a>move_iterator-Klasse
 
@@ -175,7 +175,7 @@ Gibt das neue aktuelle Element zurück.
 
 Der Operator fügt *_Off* zum gespeicherten Iterator. Danach gibt er `*this` zurück.
 
-## <a name="move_iterator__operator-_eq"></a> move_iterator::operator-=
+## <a name="operator-_eq"></a> move_iterator::operator-=
 
 Wechselt über eine angegebene Anzahl von vorherigen Elementen. Dieser Operator subtrahiert einen Offset vom gespeicherten Iterator.
 
@@ -234,7 +234,7 @@ reference operator[](difference_type _Off) const;
 
 Der Operator gibt `(reference)*(*this + _Off)` zurück.
 
-## <a name="move_iterator__operator--"></a> move_iterator::operator--
+## <a name="operator--"></a> move_iterator::operator--
 
 Prä- und Postdekrement-Memberoperatoren führen ein Dekrement für den gespeicherten Iterator aus.
 
@@ -251,7 +251,7 @@ Der erste Memberoperator (Prädekrement) dekrementiert den gespeicherten Iterato
 
 Der zweite Operator (Postdekrement, Dekrement in Postfix-Notation) erstellt eine Kopie von `*this` und berechnet dann `--*this`. Anschließend gibt er die Kopie zurück.
 
-## <a name="move_iterator__operator-"></a> move_iterator::operator-
+## <a name="operator-"></a> move_iterator::operator-
 
 Dekrementiert den gespeicherten Iterator und gibt den gekennzeichneten Wert zurück.
 

@@ -1,6 +1,6 @@
 ---
 title: CFixedStringT-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CFixedStringT
 - CSTRINGT/ATL::CFixedStringT
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-ms.openlocfilehash: a84afc50fb17c5e2ee21d136cd4697dec8fb97de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6c7649b7131e3b1620112acf89867d0731d7265d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739751"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564865"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT-Klasse
 
@@ -47,17 +47,17 @@ Die Anzahl der Zeichen im Puffer gespeichert.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CFixedStringT::operator =](#eq)|Weist einen neuen Wert ein `CFixedStringT` Objekt.|
+|[CFixedStringT::operator =](#operator_eq)|Weist einen neuen Wert ein `CFixedStringT` Objekt.|
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Klasse ist ein Beispiel für eine benutzerdefinierte Zeichenfolge-Klasse, die basierend auf `CStringT`. Zwar sehr ähnlich, unterscheiden sich die beiden Klassen in der Implementierung ein. Die wichtigsten Unterschiede zwischen `CFixedStringT` und `CStringT` sind:
+Diese Klasse ist ein Beispiel für eine benutzerdefinierte Zeichenfolge-Klasse, die basierend auf `CStringT`. Zwar ähnlich, unterscheiden sich die beiden Klassen in der Implementierung ein. Die wichtigsten Unterschiede zwischen `CFixedStringT` und `CStringT` sind:
 
 - Der Zeichenpuffer für die ersten, die als Teil des Objekts zugeordnet ist und Größe *T_nChars*. Dadurch wird die `CFixedString` Objekt, das ein Block zusammenhängender Arbeitsspeicher zu belegen. Jedoch, wenn der Inhalt des eine `CFixedStringT` Objekt hinausgeht *T_nChars*, der Puffer wird dynamisch zugewiesen.
 
 - Den Zeichenpuffer für einen `CFixedStringT` Objekt ist immer die gleiche Länge ( *T_nChars*). Es gibt keine Einschränkung hinsichtlich der Größe des Puffers für `CStringT` Objekte.
 
-- Der Speicher-Manager für `CFixedStringT` wird angepasst, dass der Freigabe einer [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) Objekt zwischen zwei oder mehr `CFixedStringT` Objectsis nicht zulässig. `CStringT` Objekte müssen diese Einschränkung nicht.
+- Der Speicher-Manager für `CFixedStringT` wird angepasst, dass der Freigabe einer [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) Objekt zwischen zwei oder mehr `CFixedStringT` Objekte ist nicht zulässig. `CStringT` Objekte müssen diese Einschränkung nicht.
 
 Um mehr über die Anpassung der `CFixedStringT` und Speicherverwaltung für String-Objekte im Allgemeinen finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
@@ -82,19 +82,19 @@ Erstellt ein `CFixedStringT`-Objekt.
 ```
 CFixedStringT() throw();
 explicit CFixedStringT(IAtlStringMgr* pStringMgr) throw();
-CFixedStringT(const CFixedStringT<StringType, t_nChars>& str);
-CFixedStringT(const StringType& str);
-CFixedStringT(const StringType::XCHAR* psz);
-explicit CFixedStringT(const StringType::YCHAR* psz);
-explicit CFixedStringT(const unsigned char* psz);
+CFixedStringT(const CFixedStringT<StringType, t_nChars>& strSrc);
+CFixedStringT(const StringType& strSrc);
+CFixedStringT(const StringType::XCHAR* pszSrc);
+explicit CFixedStringT(const StringType::YCHAR* pszSrc);
+explicit CFixedStringT(const unsigned char* pszSrc);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*psz*<br/>
+*pszSrc*<br/>
 Eine mit Null endende Zeichenfolge, die in diese kopiert werden `CFixedStringT` Objekt.
 
-*str*<br/>
+*strSrc*<br/>
 Eine vorhandene `CFixedStringT` Objekt, das in diese kopiert werden `CFixedStringT` Objekt.
 
 *pStringMgr*<br/>
@@ -102,27 +102,27 @@ Ein Zeiger auf den Speicher-Manager, der die `CFixedStringT` Objekt. Weitere Inf
 
 ### <a name="remarks"></a>Hinweise
 
-Da die Konstruktoren der Eingabedaten in den neuen zugeordneten Speicher kopieren, sollten Sie bedenken, dass der Speicher Ausnahmen führen können. Beachten Sie, dass einige dieser Konstruktoren als Funktionen für die typkonvertierung fungieren.
+Da die Konstruktoren der Eingabedaten in den neuen zugeordneten Speicher kopieren, sollten Sie bedenken, dass der Speicher Ausnahmen führen können. Einige dieser Konstruktoren fungieren als Funktionen für die typkonvertierung.
 
-##  <a name="operator__eq"></a>  CFixedStringT::operator =
+##  <a name="operator_eq"></a>  CFixedStringT::operator =
 
 Initialisiert eine vorhandene `CFixedStringT` Objekt mit neuen Daten.
 
 ```
 CFixedStringT<StringType, t_nChars>& operator=(
-    const CFixedStringT<StringType, t_nChars>& str);
-CFixedStringT<StringType, t_nChars>& operator=(const char* psz);
-CFixedStringT<StringType, t_nChars>& operator=(const wchar_t* psz);
-CFixedStringT<StringType, t_nChars>& operator=(const unsigned char* psz);
-CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
+    const CFixedStringT<StringType, t_nChars>& strSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const char* pszSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const wchar_t* pszSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const unsigned char* pszSrc);
+CFixedStringT<StringType, t_nChars>& operator=(const StringType& strSrc);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*pszSrc*<br/>
 Eine mit Null endende Zeichenfolge, die in diese kopiert werden `CFixedStringT` Objekt.
 
-*psz*<br/>
+*strSrc*<br/>
 Eine vorhandene `CFixedStringT` in diese kopiert werden `CFixedStringT` Objekt.
 
 ### <a name="remarks"></a>Hinweise

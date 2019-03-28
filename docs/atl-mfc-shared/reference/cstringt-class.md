@@ -1,6 +1,6 @@
 ---
 title: CStringT-Klasse
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 327ffc40a9b7e41004bc5aac7ecc320076de537f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750870"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565817"
 ---
 # <a name="cstringt-class"></a>CStringT-Klasse
 
@@ -182,7 +182,7 @@ Bestimmt, ob die Zeichenfolgenklasse benötigt Unterstützung für C-Laufzeit (C
 
 |||
 |-|-|
-|[operator =](#operator_eq)|Weist einen neuen Wert ein `CStringT` Objekt.|
+|[CStringT::operator =](#operator_eq)|Weist einen neuen Wert ein `CStringT` Objekt.|
 |[CStringT::operator +](#operator_add)|Verkettet zwei Zeichenfolgen oder ein Zeichen und eine Zeichenfolge.|
 |[CStringT::operator +=](#operator_add_eq)|Verkettet eine neue Zeichenfolge am Ende einer vorhandenen Zeichenfolge.|
 |[CStringT::operator ==](#operator_eq_eq)|Bestimmt, ob zwei Zeichenfolgen logisch gleich sind.|
@@ -251,7 +251,7 @@ Die folgenden Zeichenfolgen-Datentypen sind in-Projekten verfügbar, in der ATL_
 
 Da `CStringT` verwendet eine Template-Argument, um den Zeichentyp zu definieren (entweder ["wchar_t"](../../c-runtime-library/standard-types.md) oder [Char](../../c-runtime-library/standard-types.md)) unterstützt, Webmethoden-Parametertypen können kompliziert sein manchmal. Um dieses Problem zu vereinfachen, eine Reihe von vordefinierten Typen definiert und verwendet die `CStringT` Klasse. Die folgende Tabelle enthält die verschiedenen Typen:
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |`XCHAR`|Ein einzelnes Zeichen (entweder **"wchar_t"** oder **Char**) mit dem gleichen Zeichen wie die `CStringT` Objekt.|
 |`YCHAR`|Ein einzelnes Zeichen (entweder **"wchar_t"** oder **Char**) mit den entgegengesetzten Zeichentyp als die `CStringT` Objekt.|
@@ -1023,6 +1023,56 @@ Diese Funktion ist nicht verfügbar, wenn _UNICODE definiert ist.
 ### <a name="example"></a>Beispiel
 
 Siehe das Beispiel für [CStringT::AnsiToOem](#ansitooem).
+
+##  <a name="operator_eq"></a>  CStringT::operator =
+
+Weist einen neuen Wert der Zeichenfolge.
+
+```
+CStringT& operator=(const CStringT& strSrc);
+
+template<bool bMFCDLL>
+CStringT& operator=(const CSimpleStringT<BaseType, bMFCDLL>& str);
+
+CStringT& operator=(PCXSTR pszSrc);
+CStringT& operator=(PCYSTR pszSrc);
+CStringT& operator=(const unsigned char* pszSrc);
+CStringT& operator=(XCHAR ch);
+CStringT& operator=(YCHAR ch);
+CStringT& operator=(const VARIANT& var);
+```
+
+### <a name="parameters"></a>Parameter
+
+*strSrc*<br/>
+Ein `CStringT` dieser Zeichenfolge zuweisen.
+
+*str*<br/>
+Ein Verweis auf ein `CThisSimpleString`-Objekt.
+
+*bMFCDLL*<br/>
+Ein boolescher Wert, der angibt, ob das Projekt eine MFC-DLL oder nicht ist.
+
+*BaseType*<br/>
+Der Basistyp Zeichenfolge.
+
+*var*<br/>
+Ein variant-Objekt in dieser Zeichenfolge zuweisen.
+
+*ch*<br/>
+Eine ANSI- oder Unicode-Zeichen der Zeichenfolge zuweisen.
+
+*pszSrc*<br/>
+Ein Zeiger auf die ursprüngliche Zeichenfolge zugewiesen wird.
+
+### <a name="remarks"></a>Hinweise
+
+Der Zuweisungsoperator nimmt einen anderen `CStringT` -Objekt, einen Zeichenzeiger oder ein einzelnes Zeichen. Sie sollten bedenken, dass der Speicher Ausnahmen können auftreten, wenn Sie diesen Operator verwenden, da Sie neuer Speicher zugeordnet werden kann.
+
+Informationen zum `CThisSimpleString`, finden Sie im Abschnitt "Hinweise" [CStringT::CStringT](#cstringt).
+
+> [!NOTE]
+> Obwohl es möglich ist, erstellen Sie `CStringT` Instanzen, die enthalten eingebettete Null-Zeichen, wir Raten sie. Aufrufen von Methoden und Operatoren für `CStringT` Objekte, die eingebettete Null-Zeichen enthalten können zu unbeabsichtigten Ergebnissen führen.
 
 ##  <a name="operator_add"></a>  CStringT::operator +
 

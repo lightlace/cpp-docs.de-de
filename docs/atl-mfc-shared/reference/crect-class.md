@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6e87d77eec526cbfcfe5c1e6e78b0287226f0613
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739422"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565696"
 ---
 # <a name="crect-class"></a>CRect-Klasse
 
@@ -950,7 +950,7 @@ Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur
 
 Des Parameters des *x* und *y* (oder `cx` und `cy`) Werte hinzugefügt, `CRect`.
 
-Die dritte Überladung vergrößert `CRect` durch die Anzahl der Einheiten, die im jeden Member des-Parameters angegeben.
+Die dritte Überladung vergrößert `CRect` durch die Anzahl der Einheiten, die in jedem Member des-Parameters angegeben.
 
 ### <a name="example"></a>Beispiel
 
@@ -988,7 +988,7 @@ Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur
 
 Des Parameters des *x* und *y* (oder `cx` und `cy`) Werten subtrahiert werden `CRect`.
 
-Die dritte Überladung entleert `CRect` durch die Anzahl der Einheiten, die im jeden Member des-Parameters angegeben. Beachten Sie, die diese Überladung wie Funktionen [DeflateRect](#deflaterect).
+Die dritte Überladung entleert `CRect` durch die Anzahl der Einheiten, die in jedem Member des-Parameters angegeben. Beachten Sie, die diese Überladung wie Funktionen [DeflateRect](#deflaterect).
 
 ### <a name="example"></a>Beispiel
 
@@ -1085,7 +1085,7 @@ Die `CRect` verschieben bzw. jedoch `CRect` durch die Anzahl der Einheiten, die 
 
 Des Parameters des *x* und *y* (oder `cx` und `cy`) Parameter hinzugefügt werden `CRect`des positionieren.
 
-Die dritte Überladung gibt eine neue `CRect` gleich `CRect` aufgeblasen wird durch die Anzahl der Einheiten, die im jeden Member des-Parameters angegeben.
+Die dritte Überladung gibt eine neue `CRect` gleich `CRect` aufgeblasen wird durch die Anzahl der Einheiten, die in jedem Member des-Parameters angegeben.
 
 ### <a name="example"></a>Beispiel
 
@@ -1128,7 +1128,7 @@ Die `CRect` verschieben bzw. Entleeren `CRect` durch die Anzahl der Einheiten, d
 
 Des Parameters des *x* und *y* (oder `cx` und `cy`) Parameter subtrahiert werden `CRect`der position.
 
-Die dritte Überladung gibt eine neue `CRect` gleich `CRect` verkleinert werden, um die Anzahl der Einheiten, die im jeden Member des-Parameters angegeben. Beachten Sie, die diese Überladung wie Funktionen [DeflateRect](#deflaterect), nicht [SubtractRect](#subtractrect).
+Die dritte Überladung gibt eine neue `CRect` gleich `CRect` verkleinert, indem Sie die Anzahl der Einheiten, die in jedem Member des-Parameters angegeben. Beachten Sie, die diese Überladung wie Funktionen [DeflateRect](#deflaterect), nicht [SubtractRect](#subtractrect).
 
 ### <a name="example"></a>Beispiel
 

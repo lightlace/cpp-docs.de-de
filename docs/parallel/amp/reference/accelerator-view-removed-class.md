@@ -1,20 +1,20 @@
 ---
 title: accelerator_view_removed-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - accelerator_view_removed
 - AMPRT/accelerator_view_removed
-- AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed
-- AMPRT/Concurrency::accelerator_view_removed:get_view_removed_reason
+- AMPRT/Concurrency::accelerator_view_removed::accelerator_view_removed
+- AMPRT/Concurrency::accelerator_view_removed::get_view_removed_reason
 helpviewer_keywords:
-- AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed Class
+- AMPRT/Concurrency::accelerator_view_removed::accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-ms.openlocfilehash: 9b803b205ea925ed8cc07e36342a1646d576d7d4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 09f534a90f3191025c3ce99d07a462908387c676
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263753"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564943"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed-Klasse
 
@@ -62,26 +62,26 @@ Initialisiert eine neue Instanz der dem [Accelerator_view_removed](accelerator-v
 
 ```
 explicit accelerator_view_removed(
-    const char * _Message,
-    HRESULT _View_removed_reason ) throw();
+    const char * message,
+    HRESULT view_removed_reason ) throw();
 
 explicit accelerator_view_removed(
-    HRESULT _View_removed_reason ) throw();
+    HRESULT view_removed_reason ) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Message*<br/>
+*message*<br/>
 Eine Beschreibung des Fehlers.
 
-*_View_removed_reason*<br/>
+*view_removed_reason*<br/>
 Ein HRESULT-Fehlercode, der angibt, der Ursache für das Entfernen der `accelerator_view` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Eine neue Instanz der Accelerator_view_removed-Klasse.
+Eine neue Instanz der `accelerator_view_removed`-Klasse.
 
-## <a name="get_view_removed_reason_method"></a> get_view_removed_reason
+## <a name="getviewremovedreason"></a>get_view_removed_reason
 
 Gibt einen HRESULT-Fehlercode, der angibt, der Ursache für die `accelerator_view` Entfernung des Objekts.
 

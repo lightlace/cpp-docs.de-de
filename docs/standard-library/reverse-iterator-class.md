@@ -1,6 +1,6 @@
 ---
 title: reverse_iterator-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - xutility/std::reverse_iterator
 - iterator/std::reverse_iterator::difference_type
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: c865caa6d47d68462740fb4e9b2f6b712d9b6df9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae4a3da8f15f838900cb5a4324fbaeda01d918a2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640218"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565635"
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator-Klasse
 
@@ -48,7 +48,7 @@ Die `reverse_iterator` erfordert, dass ein bidirektionaler Iterator muss keine v
 
 Der Bereich eines Iterators ist [*erste*, *letzten*), wobei die eckige Klammer links den Einschluss der gibt an *erste* und gibt an, die Klammer rechts den Einschluss von Elementen bis zu, aber *letzten* selbst. Die gleichen Elemente befinden sich in der umgekehrten Sequenz [ **Rev** - *erste*, **"Rev"** - *letzten*) damit auch wenn *letzten* ist die 1-Past-the-End-Element in einer Sequenz, klicken Sie dann das erste Element **Rev** - *erste* in der umgekehrten Sequenz verweist auf \*(*letzten* - 1). Die Identität, die alle umgekehrten Iteratoren auf die zugrunde liegenden Iteratoren bezieht:
 
-&\*( **Reverse_iterator** ( *ich* )) == &\*( *ich* - 1).
+&\*( **reverse_iterator** ( *i* ) ) == &\*( *i* - 1 ).
 
 In der Praxis bedeutet dies, dass in der umgekehrten Sequenz das reverse_iterator-Objekt auf das Element verweist, das eine Position hinter dem Element (rechts davon) liegt, auf das der Iterator in der ursprünglichen Sequenz verwiesen hat. Wenn ein Iterator das Element 6 in der Sequenz adressierte (2, 4, 6, 8), dann adressiert `reverse_iterator` das Element 4 in der umgekehrten Sequenz (8, 6, 4, 2).
 
@@ -84,7 +84,7 @@ In der Praxis bedeutet dies, dass in der umgekehrten Sequenz das reverse_iterato
 |[operator-](#operator-)|Subtrahiert einen Offset von einem `reverse_iterator` und gibt einen `reverse_iterator` zurück, der das Element an die Offsetposition adressiert.|
 |[operator--](#operator--)|Verringert `reverse_iterator` zum vorherigen Element.|
 |[operator-=](#operator-_eq)|Subtrahiert einen angegebenen Offset von einem `reverse_iterator`.|
-|[operator->](#operator-_gt)|Gibt einen Zeiger auf das Element zurück, das von `reverse_iterator` adressiert wird.|
+|[operator->](#op-arrow)|Gibt einen Zeiger auf das Element zurück, das von `reverse_iterator` adressiert wird.|
 |[operator&#91;&#93;](#op_at)|Gibt einen Verweis auf ein Elementoffset aus dem Element zurück, das von `reverse_iterator` mithilfe der angegebenen Anzahl von Positionen adressiert wird.|
 
 ## <a name="requirements"></a>Anforderungen
@@ -477,7 +477,7 @@ After the +2 offset, the iterator rVPOS1 now points
 to the third element in the reversed sequence: 6.
 ```
 
-## <a name="reverse_iterator__operator-"></a> reverse_iterator::operator-
+## <a name="operator-"></a> reverse_iterator::operator-
 
 Subtrahiert einen Offset von einem `reverse_iterator` und gibt einen `reverse_iterator` zurück, der das Element an die Offsetposition adressiert.
 
@@ -554,7 +554,7 @@ After the -2 offset, the iterator rVPOS2 points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="reverse_iterator__operator--"></a> reverse_iterator::operator--
+## <a name="operator--"></a> reverse_iterator::operator--
 
 Erniedrigt den reverse_iterator auf das vorherige Element.
 
@@ -627,7 +627,7 @@ After the decrement, the iterator rVPOS1 points
 to the next-to-last element in the reversed sequence: 3.
 ```
 
-## <a name="reverse_iterator__operator-_eq"></a> reverse_iterator::operator-=
+## <a name="operator-_eq"></a> reverse_iterator::operator-=
 
 Subtrahiert einen angegebenen Offset von einem `reverse_iterator`.
 
@@ -702,7 +702,7 @@ After the -2 offset, the iterator rVPOS1 now points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="op_arrow"></a> reverse_iterator::operator-&gt;
+## <a name="op-arrow"></a> reverse_iterator::operator-&gt;
 
 Gibt einen Zeiger auf das Element zurück, das von `reverse_iterator` adressiert wird.
 

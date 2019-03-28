@@ -1,6 +1,6 @@
 ---
 title: CMFCVisualManagerWindows7 Class
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMFCVisualManagerWindows7
 - AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7
@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: 296ccc0accdf2937406d9965118c1807aeb2604c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e729201f1a6b6fd41286cc6af2b8c08fc7ee697c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269395"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565518"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 Class
 
@@ -34,7 +34,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|Standardkonstruktor|
-|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|Standarddestruktor.|
+|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#_dtorcmfcvisualmanagerwindows7)|Standarddestruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -42,7 +42,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |----------|-----------------|
 |`CMFCVisualManagerWindows7::CleanStyle`|Löscht den aktuellen visuellen Stil, und setzt den standardmäßigen visuellen Stil.|
 |`CMFCVisualManagerWindows7::CleanUp`|Löscht alle Objekte in der Benutzeroberfläche aus, und setzt die Menüs.|
-|`CMFCVisualManagerWindows7::DrawNcBtn`|Zeichnet eine Schaltfläche im nicht-Clientbereich im Frame. Das Framework verwendet diese Methode zum Zeichnen zu minimieren, maximieren, schließen und Wiederherstellen von Schaltflächen in der oberen rechten Ecke des Fensterrahmens. Diese Methode wird nicht aufgerufen, wenn die Anwendung eine nicht-Aero-Design verwendet.|
+|`CMFCVisualManagerWindows7::DrawNcBtn`|Zeichnet eine Schaltfläche im nicht-Clientbereich im Frame. Das Framework verwendet diese Methode zum Zeichnen zu minimieren, maximieren, schließen und Wiederherstellen von Schaltflächen in der oberen rechten Ecke des Fensterrahmens. Diese Methode wird nur aufgerufen, wenn das Programm verwendet eine `Aero` Design.|
 |`CMFCVisualManagerWindows7::DrawNcText`|Zeichnet Text in der nicht-Clientbereich im Frame. Das Framework verwendet diese Methode in der Titelleiste oben auf der das Rahmenfenster der Anwendungstitel gezeichnet werden soll.|
 |`CMFCVisualManagerWindows7::DrawSeparator`|Zeichnet eine Trennzeichen auf der [CMFCToolBar-Klasse](../../mfc/reference/cmfctoolbar-class.md).|
 |`CMFCVisualManagerWindows7::GetRibbonBar`|Ruft die [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) der Benutzeroberfläche zugeordnet.|
@@ -173,7 +173,7 @@ Das Framework ruft diese Methode auf, wenn er den Bereich um eine Menüelementbi
 virtual void OnFillMenuImageRect(
     CDC* pDC,
     CMFCToolBarButton* pButton,
-    CRect rect,
+    CRect rectangle,
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
@@ -185,7 +185,7 @@ virtual void OnFillMenuImageRect(
 *pButton*<br/>
 [in] Ein Zeiger auf eine `CMFCToolBarButton`. Das Framework füllt den Hintergrund für diese Schaltfläche.
 
-*rect*<br/>
+*rectangle*<br/>
 [in] Ein Rechteck, das die Begrenzungen des Image im Menübereich-Schaltfläche angibt.
 
 *state*<br/>

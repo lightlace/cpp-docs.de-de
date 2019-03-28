@@ -1,6 +1,6 @@
 ---
 title: COleDateTimeSpan-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTimeSpan
 - ATLCOMTIME/ATL::COleDateTimeSpan
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748488"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565648"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan-Klasse
 
@@ -745,7 +745,7 @@ Eine kurze Beschreibung dieser Status-Werte finden Sie in der folgenden Liste:
 - `COleDateTimeSpan::null` Gibt an, das von diesem `COleDateTimeSpan` Objekt null ist, d. h., dass für dieses Objekt kein Wert angegeben wurde. (Dies ist "null", in dem Sinne Database "kein Wert, wenn" im Gegensatz zu den C++-NULL).
 
    > [!CAUTION]
-   > Diese Funktion ist für die erweiterte programmierungssituationen. Diese Funktion wird die Daten in dieses Objekt nicht geändert. Dieser wird den meisten Fällen verwendet, legen Sie den Status auf **null** oder **ungültige**. Beachten Sie, dass der Zuweisungsoperator ( [Operator =](#eq)) und [SetDateTimeSpan](#setdatetimespan) führen Sie den Status des Objekts basierend auf den Werten der Datenquelle festgelegt.
+   > Diese Funktion ist für die erweiterte programmierungssituationen. Diese Funktion wird die Daten in dieses Objekt nicht geändert. Dieser wird den meisten Fällen verwendet, legen Sie den Status auf **null** oder **ungültige**. Beachten Sie, dass der Zuweisungsoperator ([Operator =](#operator_eq)) und [SetDateTimeSpan](#setdatetimespan) führen Sie den Status des Objekts basierend auf den Werten der Datenquelle festgelegt.
 
 ### <a name="example"></a>Beispiel
 

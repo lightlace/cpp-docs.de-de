@@ -1,6 +1,6 @@
 ---
 title: Debuggen und Fehlerberichterstattungs-Makros
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287322"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565035"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Debuggen und Fehlerberichterstattungs-Makros
 
@@ -29,7 +29,7 @@ Diese Makros stellen nützliche Funktionen zum Debuggen und Ablaufverfolgung ber
 |[ATLASSERT](#atlassert)|Führt die gleiche Funktionalität wie die [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) Makro finden Sie in der C-Laufzeitbibliothek.|
 |[ATLENSURE](#atlensure)|Überprüft die Parameter. Rufen Sie `AtlThrow` bei Bedarf|
 |[ATLTRACENOTIMPL](#atltracenotimpl)|Sendet eine Nachricht auf dem Sicherungsmedium, dass die angegebene Funktion nicht implementiert wird.|
-|[ATLTRACE](#alttrace)|Gibt die Warnungen an, die ein Ausgabegerät, z. B. Debuggerfenster, entsprechend der angegebenen Flags und Ebenen. Aus Gründen der Abwärtskompatibilität enthalten.|
+|[ATLTRACE](#atltrace)|Gibt die Warnungen an, die ein Ausgabegerät, z. B. Debuggerfenster, entsprechend der angegebenen Flags und Ebenen. Aus Gründen der Abwärtskompatibilität enthalten.|
 |[ATLTRACE2](#atltrace2)|Gibt die Warnungen an, die ein Ausgabegerät, z. B. Debuggerfenster, entsprechend der angegebenen Flags und Ebenen.|
 
 ##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES

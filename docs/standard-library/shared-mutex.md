@@ -1,6 +1,6 @@
 ---
 title: '&lt;shared_mutex&gt;'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -45,12 +45,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751816"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565385"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -60,13 +60,13 @@ Der Header &lt;Shared_mutex > definiert die Klassen `shared_mutex` und `shared_t
 
 |Klassen|Beschreibung|
 |-------------|-----------------|
-|[shared_mutex-Klasse](../standard-library/shared-mutex.md#class_shared_mutex)|Einen gemeinsamer Mutex-Typ, der von einem Agent exklusiv gesperrt oder nicht exklusiv von mehreren Agents gemeinsam verwendet werden kann.|
-|[shared_timed_mutex-Klasse](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Einen gemeinsamer zeitgesteuerter Mutex-Typ, der von einem Agent exklusiv gesperrt oder nicht exklusiv von mehreren Agents gemeinsam verwendet werden kann.|
-|[shared_lock-Klasse](../standard-library/shared-mutex.md#class_shared_lock)|Eine Vorlagenklasse, die einen gemeinsamen Mutex zur Unterstützung von zeitgesteuerten Lock-Vorgängen und die nicht exklusive gemeinsame Verwendung von mehreren Agents umschließt.|
+|[shared_mutex-Klasse](#class_shared_mutex)|Einen gemeinsamer Mutex-Typ, der von einem Agent exklusiv gesperrt oder nicht exklusiv von mehreren Agents gemeinsam verwendet werden kann.|
+|[shared_timed_mutex-Klasse](#class_shared_timed_mutex)|Einen gemeinsamer zeitgesteuerter Mutex-Typ, der von einem Agent exklusiv gesperrt oder nicht exklusiv von mehreren Agents gemeinsam verwendet werden kann.|
+|[shared_lock-Klasse](#class_shared_lock)|Eine Vorlagenklasse, die einen gemeinsamen Mutex zur Unterstützung von zeitgesteuerten Lock-Vorgängen und die nicht exklusive gemeinsame Verwendung von mehreren Agents umschließt.|
 
 |Funktionen|Beschreibung|
 |---------------|-----------------|
-|[swap](../standard-library/shared-mutex.md#function_swap)|Vertauscht den Inhalt von gemeinsamen Mutex-Objekten, auf die die Funktionsparameter verweisen.|
+|[swap](#function_swap)|Vertauscht den Inhalt von gemeinsamen Mutex-Objekten, auf die die Funktionsparameter verweisen.|
 
 ## <a name="syntax"></a>Syntax
 
@@ -167,7 +167,7 @@ public:
    };
 ```
 
-###  <a name="&lt;shared"></a> shared_lock-Klasse
+###  <a name="class_shared_lock"></a> shared_lock-Klasse
 
 Vorlagenklasse `shared_lock` steuert den gemeinsamen Besitz eines gemeinsamen Mutex-Objekts innerhalb eines Bereichs. Bei dem Vorlagenparameter muss es sich um einen gemeinsamen Mutex-Typ handeln.
 

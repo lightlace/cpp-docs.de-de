@@ -1,6 +1,6 @@
 ---
 title: CDataRecoveryHandler-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CDataRecoveryHandler
 - AFXDATARECOVERY/CDataRecoveryHandler
@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5c5836a11dbf9e05db5b56e0bc5c062dd1617b2f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273035"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565856"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler-Klasse
 
@@ -168,7 +168,7 @@ TRUE, wenn die `CDataRecoveryHandler` alle Dokumente; gespeichert "False", wenn 
 
 Diese Methode gibt TRUE zurück, wenn es sind keine Dokumente, die gespeichert werden müssen. Außerdem gibt TRUE zurück, ohne speichern alle Dokumente aus, wenn beim Abrufen der `CWinApp` oder `CDocManager` für die Anwendung einen Fehler generiert.
 
-Um diese Methode verwenden zu können, muss entweder AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART oder AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL festgelegt werden `m_dwRestartManagerSupportFlags`. Finden Sie unter [M_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags) für Weitere Informationen.
+Um diese Methode verwenden zu können, muss entweder AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART oder AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL festgelegt werden `m_dwRestartManagerSupportFlags`. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Unterstützung für den Neustart-Manager](../../mfc/how-to-add-restart-manager-support.md).
 
 ##  <a name="autosavedocumentinfo"></a>  CDataRecoveryHandler::AutosaveDocumentInfo
 

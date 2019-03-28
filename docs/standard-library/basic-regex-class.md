@@ -1,17 +1,17 @@
 ---
 title: basic_regex-Klasse
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - regex/std::basic_regex
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 0799bbcbfb7cdbc1ee1755cf387de2aee46db027
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3a38dc186a52c8431442d58bb10e56837396b07
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633404"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565450"
 ---
 # <a name="basicregex-class"></a>basic_regex-Klasse
 
@@ -58,13 +58,13 @@ Diese Memberfunktionen akzeptieren auch ein Argument `flags` , verschiedene Opti
 |-|-|
 |public static const Flag_type icase|regex_constants::icase|
 |public static const Flag_type nosubs|regex_constants::nosubs|
-|public static const Flag_type zu optimieren.|regex_constants::Optimize|
-|public static const Flag_type sortieren|regex_constants::COLLATE|
+|public static const Flag_type zu optimieren.|regex_constants::optimize|
+|public static const Flag_type sortieren|regex_constants::collate|
 |public static const Flag_type ECMAScript|regex_constants::ECMAScript|
-|public static const Flag_type basic|regex_constants::Basic|
-|public static const Flag_type erweitert|regex_constants::Extended|
+|public static const Flag_type basic|regex_constants::basic|
+|public static const Flag_type erweitert|regex_constants::extended|
 |public static const Flag_type awk|regex_constants::awk|
-|public static const Flag_type grep|regex_constants::GREP|
+|public static const Flag_type grep|regex_constants::grep|
 |public static const Flag_type egrep|regex_constants::egrep|
 |Private RXtraits "traits"||
 
@@ -88,7 +88,7 @@ Diese Memberfunktionen akzeptieren auch ein Argument `flags` , verschiedene Opti
 |-|-|
 |[assign](#assign)|Weist dem Objekt für einen regulären Ausdruck einen Wert zu.|
 |[flags](#flags)|Gibt Syntaxoptionsflags zurück.|
-|[get_loc](#get_loc)|Gibt das gespeicherte Gebietsschemaobjekt zurück.|
+|[getloc](#getloc)|Gibt das gespeicherte Gebietsschemaobjekt zurück.|
 |[imbue](#imbue)|Ändert das gespeicherte Gebietsschemaobjekt.|
 |[mark_count](#mark_count)|Gibt die Anzahl der übereinstimmenden Teilausdrücke zurück.|
 |[swap](#swap)|Tauscht zwei Objekte mit regulärem Ausdruck.|
@@ -248,13 +248,13 @@ Zeiger zum Anfang der zu kopierenden Sequenz.
 *flags*<br/>
 Syntaxoptionsflags, die beim Kopieren hinzugefügt werden.
 
-*Len/TD >*<br/>
+*len/TD>*<br/>
 Länge der zu kopierenden Sequenz.
 
 *str*<br/>
 Zu kopierende Zeichenfolge.
 
-*Erste*<br/>
+*first*<br/>
 Anfang der zu kopierenden Sequenz.
 
 *last*<br/>
@@ -322,13 +322,13 @@ Zeiger zum Anfang der zu kopierenden Sequenz.
 *flags*<br/>
 Syntaxoptionsflags, die beim Kopieren hinzugefügt werden.
 
-*Len/TD >*<br/>
+*len/TD>*<br/>
 Länge der zu kopierenden Sequenz.
 
 *str*<br/>
 Zu kopierende Zeichenfolge.
 
-*Erste*<br/>
+*first*<br/>
 Anfang der zu kopierenden Sequenz.
 
 *last*<br/>
@@ -391,7 +391,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parameter
 
-*Loc*<br/>
+*loc*<br/>
 Das zu speichernde Gebietsschemaobjekt.
 
 ### <a name="remarks"></a>Hinweise
