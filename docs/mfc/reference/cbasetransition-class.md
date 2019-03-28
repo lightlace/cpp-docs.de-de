@@ -1,6 +1,6 @@
 ---
 title: CBaseTransition-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CBaseTransition
 - AFXANIMATIONCONTROLLER/CBaseTransition
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258371"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565908"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition-Klasse
 
@@ -73,8 +73,8 @@ class CBaseTransition : public CObject;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CBaseTransition::CBaseTransition](#cbasetransition)|Erstellt ein Basis-Übergang-Objekt.|
-|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|Der Destruktor. Wird aufgerufen, wenn ein Übergangsobjekt zerstört wird.|
+|[CBaseTransition::CBaseTransition](#cbasetransition)|Erstellt ein Basis Übergangsobjekt.|
+|[CBaseTransition::~CBaseTransition](#_dtorcbasetransition)|Der Destruktor. Wird aufgerufen, wenn ein Übergangsobjekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -95,7 +95,7 @@ class CBaseTransition : public CObject;
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CBaseTransition::m_bAdded](#m_badded)|Gibt an, ob es sich bei ein Übergang zu einem Storyboard hinzugefügt wurde.|
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Speichert einen Zeiger auf den Keyframe, der das Ende des Übergangs angibt.|
@@ -170,7 +170,7 @@ Wendet den Übergang der entsprechenden Variablen im Storyboard an. Wenn der Sta
 
 ##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition
 
-Erstellt ein Basis-Übergang-Objekt.
+Erstellt ein Basis Übergangsobjekt.
 
 ```
 CBaseTransition();
@@ -228,7 +228,7 @@ Ein gültiger Zeiger auf ein Keyframe oder NULL, wenn Sie ein Übergang zwischen
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode kann verwendet werden, auf einem Keyframe-Objekt zuzugreifen, die zuvor von SetKeyframes festgelegt wurde. Durch den Top-Level-Code wird aufgerufen, wenn Übergänge Storyboard hinzugefügt werden.
+Diese Methode kann verwendet werden, auf einem Keyframe-Objekt zuzugreifen, die zuvor von SetKeyframes festgelegt wurde. Von der obersten Ebene Code wird aufgerufen, wenn Übergänge Storyboard hinzugefügt werden.
 
 ##  <a name="getrelatedvariable"></a>  CBaseTransition::GetRelatedVariable
 
@@ -260,7 +260,7 @@ Ein gültiger Zeiger auf einen Keyframe oder NULL, wenn ein Übergang nicht nach
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode kann verwendet werden, auf einem Keyframe-Objekt zuzugreifen, die zuvor von SetKeyframes festgelegt wurde. Durch den Top-Level-Code wird aufgerufen, wenn Übergänge Storyboard hinzugefügt werden.
+Diese Methode kann verwendet werden, auf einem Keyframe-Objekt zuzugreifen, die zuvor von SetKeyframes festgelegt wurde. Von der obersten Ebene Code wird aufgerufen, wenn Übergänge Storyboard hinzugefügt werden.
 
 ##  <a name="gettransition"></a>  CBaseTransition::GetTransition
 
@@ -320,7 +320,7 @@ Gibt TRUE zurück, wenn ein Übergang zu einem Storyboard ist, andernfalls "fals
 
 ### <a name="remarks"></a>Hinweise
 
-Dieses Flag wird intern festgelegt, wenn der Code auf oberster Ebene storyboard Übergänge hinzufügt.
+Dieses Flag wird intern festgelegt, wenn der Code der obersten Ebene storyboard Übergänge hinzufügt.
 
 ##  <a name="m_badded"></a>  CBaseTransition::m_bAdded
 

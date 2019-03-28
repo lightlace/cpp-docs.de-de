@@ -1,6 +1,6 @@
 ---
 title: time_point-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - chrono/std::chrono::time_point
 - chrono/std::chrono::time_point::time_point
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: f38cb883f1fc9e07c65d261ea7a6e074bf02db5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99477f57dc44d63f663a6db38250cc0620151ec9
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513749"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565242"
 ---
 # <a name="timepoint-class"></a>time_point-Klasse
 
@@ -101,14 +101,14 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Abfragedauer*<br/>
+*Dur*<br/>
 Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Das `time_point`-Objekt nach Ausführung der Addition.
 
-## <a name="time_point__operator-_eq"></a> time_point::operator-=
+## <a name="operator-_eq"></a> time_point::operator-=
 
 Subtrahiert einen angegebenen Wert vom gespeicherten [duration](../standard-library/duration-class.md)-Wert.
 
@@ -118,7 +118,7 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Abfragedauer*<br/>
+*Dur*<br/>
 Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -140,10 +140,10 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parameter
 
-*Abfragedauer*<br/>
+*Dur*<br/>
 Ein [duration](../standard-library/duration-class.md)-Objekt.
 
-*TP*<br/>
+*Tp*<br/>
 Ein `time_point`-Objekt.
 
 ### <a name="remarks"></a>Hinweise

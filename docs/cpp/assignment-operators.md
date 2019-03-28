@@ -1,6 +1,6 @@
 ---
 title: Zuweisungsoperatoren
-ms.date: 03/05/2018
+ms.date: 03/27/2019
 f1_keywords:
 - =
 - '*='
@@ -31,18 +31,18 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 44211e43a0449c8a50ff03cac31eeed1fcc49a28
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328473"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565479"
 ---
 # <a name="assignment-operators"></a>Zuweisungsoperatoren
 
 ## <a name="syntax"></a>Syntax
 
-*Ausdruck* *Zuweisungsoperator* *Ausdruck*
+*expression* *assignment-operator* *expression*
 
 *Zuweisungsoperator* : eines der<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
@@ -57,7 +57,7 @@ Zuweisungsoperatoren speichern einen Wert in dem Objekt, das durch den linken Op
 
 Alle Zuweisungsoperatoren in der folgenden Tabelle (außer der =-Operator) sind Verbundzuweisungsoperatoren.
 
-### <a name="assignment-operators"></a>Zuweisungsoperatoren
+### <a name="assignment-operators-table"></a>Operatoren-Zuweisungstabelle
 
 |Operator|Bedeutung|
 |--------------|-------------|
@@ -73,7 +73,7 @@ Alle Zuweisungsoperatoren in der folgenden Tabelle (außer der =-Operator) sind 
 |**^=**|Rufen Sie den bitweisen exklusiven OR-Operator des ersten und zweiten Operanden auf. Speichern Sie das Ergebnis in dem Objekt, das durch den ersten Operanden angegeben wird.|
 |**\|=**|Rufen Sie den bitweisen inklusiven OR-Operator des ersten und zweiten Operanden auf. Speichern Sie das Ergebnis in dem Objekt, das durch den ersten Operanden angegeben wird.|
 
-**Operatorschlüsselwörter**
+### <a name="operator-keywords"></a>Operatorschlüsselwörter
 
 Drei der Verbundzuweisungsoperatoren weisen Textentsprechungen auf. Dies sind:
 
@@ -180,7 +180,7 @@ eine der folgenden Auswirkungen haben:
 
 ## <a name="compound-assignment"></a>Verbundzuweisung
 
-Die Verbundzuweisungsoperatoren, in der Tabelle gezeigt [Zuweisungsoperatoren](#assignment-operators), sind im Formular angegeben habe *e1* *Op*= *e2*, wobei *e1* ist ein änderbarer l-Wert nicht vom **const** Typ und *e2* ist eine der folgenden:
+Die Verbundzuweisungsoperatoren, dargestellt der [Operatoren-Zuweisungstabelle](#assignment-operators-table), werden in der Form angegeben *e1* *Op*= *e2*, wobei *e1* ist ein änderbarer l-Wert nicht vom **const** Typ und *e2* ist eine der folgenden:
 
 - Ein arithmetischer Typ
 
@@ -188,11 +188,11 @@ Die Verbundzuweisungsoperatoren, in der Tabelle gezeigt [Zuweisungsoperatoren](#
 
 Die *e1* *Op*= *e2* Formular verhält sich wie *e1* **=** *e1* *Op* *e2*, aber *e1* wird nur einmal ausgewertet.
 
-Eine Verbundzuweisung für einen enumerierten Typ generiert eine Fehlermeldung. Wenn der linke Operand ein Zeigertyp ist, muss der rechte Operand ein Zeigertyp oder ein konstanter Ausdruck sein, der 0 (null) ergibt. Wenn der linke Operand ein ganzzahliger Typ ist, darf der rechte Operand kein Zeigertyp sein.
+Eine Verbundzuweisung für einen enumerierten Typ generiert eine Fehlermeldung. Wenn der linke Operand ein Zeigertyp ist, muss der rechte Operand ein Zeigertyp oder ein konstanter Ausdruck sein, der 0 ergibt. Wenn der linke Operand ein ganzzahliger Typ ist, darf der rechte Operand kein Zeigertyp sein.
 
 ## <a name="result-of-assignment-operators"></a>Ergebnis von Zuweisungsoperatoren
 
-Die Zuweisungsoperatoren geben den Wert des Objekts zurück, das vom linken Operanden nach der Zuweisung angegeben wird. Das Typergebnis ist der Typ des linken Operanden. Das Ergebnis eines Zuweisungsausdrucks ist immer ein l-value. Diese Operatoren weisen eine Assoziativität von rechts nach links auf. Der linke Operand muss ein veränderbarer l-value sein.
+Die Zuweisungsoperatoren geben den Wert des Objekts zurück, das vom linken Operanden nach der Zuweisung angegeben wird. Das Typergebnis ist der Typ des linken Operanden. Das Ergebnis eines Zuweisungsausdrucks ist immer ein l-value. Diese Operatoren weisen eine Assoziativität von rechts nach links auf. Der linke Operand muss ein veränderbarer L-Wert sein.
 
 In ANSI C ist das Ergebnis eines Zuweisungsausdrucks kein l-value. Daher ist der gültige C++-Ausdruck `(a += b) += c` in C ungültig.
 

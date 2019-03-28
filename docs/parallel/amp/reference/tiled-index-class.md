@@ -1,6 +1,6 @@
 ---
 title: tiled_index-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dd8b6d7a0e174c88ad229da2d08a9ec8a11fb0aa
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257903"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565216"
 ---
 # <a name="tiledindex-class"></a>tiled_index-Klasse
 
@@ -79,7 +79,7 @@ Die Länge der unwichtigsten Dimension.
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[Barrier-Konstante](#tiled_index__barrier)|Speichert eine [Tile_barrier](tile-barrier-class.md) Objekt, das eine Grenze in der aktuellen Kachel mit Threads darstellt.|
 |||
@@ -110,7 +110,7 @@ Die Länge der unwichtigsten Dimension.
 
 **Namespace:** Parallelität
 
-## <a name="tiled_index__ctor"></a>  Tiled_index-Konstruktor
+## <a name="ctor"></a>  Tiled_index-Konstruktor
 
 Initialisiert eine neue Instanz der `tiled_index`-Klasse.
 
@@ -152,7 +152,7 @@ Das `tile_index`-Objekt, das in das erstellte `tiled_index`-Objekt kopiert werde
 
 |||
 |-|-|
-|name|Beschreibung|
+|Name|Beschreibung|
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Initialisiert eine neue Instanz der `tile_index`-Klasse aus dem Index der Kachel in den globalen Koordinaten und der relativen Position in der Kachel in lokalen Koordinaten. Die Parameter `_Global` und `_Tile_origin` werden berechnet.|
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Initialisiert eine neue Instanz der `tile_index`-Klasse, indem das angegebene `tiled_index`-Objekt kopiert wird.|
 

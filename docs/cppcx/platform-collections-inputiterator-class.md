@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::InputIterator-Klasse
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745800"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565138"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator-Klasse
 
@@ -53,7 +53,7 @@ Der Typname der InputIterator-Vorlagenklasse.
 |Name|Beschreibung|
 |----------|-----------------|
 |[InputIterator::operator!=-Operator](#operator-inequality)|Gibt an, ob der aktuelle InputIterator ungleich einem angegebenen InputIterator ist.|
-|[InputIterator::operator*-Operator](#operator-decrement)|Ruft einen Verweis auf das Element ab, das vom aktuellen InputIterator angegeben wird.|
+|[InputIterator::operator*-Operator](#operator-dereference)|Ruft einen Verweis auf das Element ab, das vom aktuellen InputIterator angegeben wird.|
 |[InputIterator::operator++-Operator](#operator-increment)|Inkrementiert den aktuellen InputIterator.|
 |[InputIterator::operator==-Operator](#operator-equality)|Gibt an, ob der aktuelle InputIterator gleich einem angegebenen InputIterator ist.|
 |[InputIterator::operator->-Operator](#operator-arrow)|Ruft die Adresse des Elements ab, auf das vom aktuellen InputIterator verwiesen wird.|
@@ -76,12 +76,12 @@ Initialisiert eine neue Instanz der InputIterator-Klasse.
 
 ```
 InputIterator();
-explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
+explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*iter*<br/>
+*Iterator*<br/>
 Ein Iteratorobjekt.
 
 ## <a name="operator-arrow"></a>  Inputiterator:: -&gt; Operator

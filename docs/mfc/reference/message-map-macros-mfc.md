@@ -1,6 +1,6 @@
 ---
 title: Meldungszuordnungsmakros (MFC)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AFXWIN/DECLARE_MESSAGE_MAP
 - AFXWIN/BEGIN_MESSAGE_MAP
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 09c023f6dcbf1fd33a0caac17af75f449d80c509
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: b1cc721ed994ae1c6704011199ac635ee462ded8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850271"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565535"
 ---
 # <a name="message-map-macros-mfc"></a>Meldungszuordnungsmakros (MFC)
 
@@ -45,7 +45,7 @@ Um meldungszuordnungen zu unterstützen, stellt MFC die folgenden Makros:
 |-|-|
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|Deklariert, dass eine meldungszuordnung in einer Klasse verwendet wird, Nachrichten Funktionen zuzuordnen (muss in der Klassendeklaration verwendet werden).|
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|Beginn der Definition einer meldungszuordnung (muss in der klassenimplementierung verwendet werden).|
-|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Beginn der Definition einer meldungszuordnung für einen Klassentyp mit einem einzelnen Vorlagenargument an. |
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_message_map)|Beginn der Definition einer meldungszuordnung für einen Klassentyp mit einem einzelnen Vorlagenargument an. |
 |[END_MESSAGE_MAP](#end_message_map)|Beendet die Definition einer meldungszuordnung (muss in der klassenimplementierung verwendet werden).|
 
 ### <a name="message-mapping-macros"></a>Nachrichtenzuordnung Makros
@@ -67,7 +67,7 @@ Um meldungszuordnungen zu unterstützen, stellt MFC die folgenden Makros:
 |||
 |-|-|
 |[ON_COMMAND_RANGE](#on_command_range)|Gibt an, welche Funktion den Bereich der Befehls-IDs angegeben werden, in die ersten beiden Parameter in das Makro behandelt.|
-|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Gibt an, welche updatehandler den Bereich der Befehls-IDs, die in der ersten beiden Pa angegebenen behandelt] rameter in das Makro.|
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Gibt an, welche updatehandler den Bereich der Befehls-IDs angegeben werden, in die ersten beiden Parameter in das Makro behandelt.|
 |[ON_CONTROL_RANGE](#on_control_range)|Gibt an, welche Funktion das Behandeln von Benachrichtigungen aus dem Bereich von Steuerelement-IDs, die in der zweiten und dritten Parameter in das Makro angegeben zu werden. Der erste Parameter ist eine Steuerelement-Benachrichtigung, z. B. BN_CLICKED.|
 
 Weitere Informationen auf meldungszuordnungen, die meldungszuordnung Deklaration und demarkation-Makros und die Nachricht-Zuordnungs-Makros finden Sie unter [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md) und [Nachrichtenbehandlung und Zuordnung Themen](../../mfc/message-handling-and-mapping.md). Weitere Informationen zu Meldungszuordnungsbereiche, finden Sie unter [Handler für Meldungszuordnungsbereiche](../../mfc/handlers-for-message-map-ranges.md).
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **Header:** afxwin.h
 
-##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begintemplatemessagemap"></a>BEGIN_TEMPLATE_MESSAGE_MAP
 
 Beginn der Definition einer meldungszuordnung für einen Klassentyp mit einem einzelnen Vorlagenargument an.
 
@@ -199,12 +199,12 @@ Dieses Makro wird eine Nachricht auf eine Memberfunktion zugeordnet.
 ### <a name="syntax"></a>Syntax
 
 ```
-ON_COMMAND( id, memberFxn )
+ON_COMMAND( commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*ID*<br/>
+*commandId*<br/>
 Die Befehls-ID.
 
 *memberFxn*<br/>
@@ -216,7 +216,7 @@ Er gibt an, welche Funktion behandelt eine Nachricht aus einem Befehl Benutzerob
 
 Wenn ein Befehlsziel Objekt auf eine Windows-WM_COMMAND-Meldung mit der angegebenen ID empfängt, ruft ON_COMMAND die Memberfunktion `memberFxn` zur Verarbeitung der Nachricht.
 
-Verwenden Sie ON_COMMAND, um einen einzelnen Befehl auf eine Memberfunktion zuzuordnen. Verwendung [ON_COMMAND_RANGE](#on_command_range) , einen Bereich für Befehls-Ids auf eine Memberfunktion zuzuordnen. Nur ein Meldungszuordnungseintrags kann eine angegebenen Befehls-Id überein. Sie können nicht mehr als einen Handler, also einen Befehl zuordnen. Weitere Informationen und Beispiele finden Sie unter [Nachrichtenbehandlung und Zuordnen von Themen](../../mfc/message-handling-and-mapping.md).
+Verwenden Sie ON_COMMAND, um einen einzelnen Befehl auf eine Memberfunktion zuzuordnen. Verwendung [ON_COMMAND_RANGE](#on_command_range) , einen Bereich für Befehls-IDs auf eine Memberfunktion zuzuordnen. Nur ein Meldungszuordnungseintrags kann eine angegebenen Befehls-ID überein. Sie können nicht mehr als einen Handler, also einen Befehl zuordnen. Weitere Informationen und Beispiele finden Sie unter [Nachrichtenbehandlung und Zuordnen von Themen](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -237,12 +237,12 @@ Erweiterte Befehlshandler Member-Funktion.
 ### <a name="syntax"></a>Syntax
 
 ```
-ON_COMMAND_EX(id, memberFxn);
+ON_COMMAND_EX(commandId, memberFxn);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*ID*<br/>
+*commandId*<br/>
 Die Befehls-ID.
 
 *memberFxn*<br/>
@@ -265,7 +265,7 @@ Gibt an, welche Funktion eine Benachrichtigung für benutzerdefinierte Steuerele
 ### <a name="syntax"></a>Syntax
 
 ```
-ON_CONTROL( wNotifyCode, id, memberFxn )
+ON_CONTROL( wNotifyCode, commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -273,7 +273,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 *wNotifyCode*<br/>
 Der Benachrichtigungscode des Steuerelements.
 
-*ID*<br/>
+*commandId*<br/>
 Die Befehls-ID.
 
 *memberFxn*<br/>
@@ -356,7 +356,7 @@ Leitet Befehle über die Dispatch-Befehlsschnittstelle `IOleCommandTarget`.
 ### <a name="syntax"></a>Syntax
 
 ```
-ON_OLECMD( pguid, olecmdid, id )
+ON_OLECMD( pguid, olecmdid, commandId )
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -367,7 +367,7 @@ Der Bezeichner der Befehlsgruppe, zu der der Befehl gehört. Verwenden Sie NULL 
 *olecmdid*<br/>
 Der Bezeichner der der OLE-Befehl.
 
-*ID*<br/>
+*commandId*<br/>
 Die Menü-ID, Symbolleisten-ID, Schaltflächen-ID oder andere-ID der Ressource oder des Objekts, die Sie den Befehl ausgeben.
 
 ### <a name="remarks"></a>Hinweise
@@ -575,12 +575,12 @@ Dieses Makro gibt an, welche Funktion eine Benutzeroberflächen-Update-Befehlsna
 ### <a name="syntax"></a>Syntax
 
 ```
-ON_UPDATE_COMMAND_UI( id, memberFxn )
+ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*ID*<br/>
+*messageId*<br/>
 Die Meldungs-ID.
 
 *memberFxn*<br/>

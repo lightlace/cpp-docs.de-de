@@ -1,6 +1,6 @@
 ---
 title: CRenderTarget-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CRenderTarget
 - AFXRENDERTARGET/CRenderTarget
@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259879"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565758"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget-Klasse
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Erstellt ein CRenderTarget-Objekt.|
-|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|Der Destruktor. Wird aufgerufen, wenn es sich bei einem Renderingzielobjekt zerstört wird.|
+|[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|Der Destruktor. Wird aufgerufen, wenn es sich bei einem Renderingzielobjekt zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -208,7 +208,7 @@ class CRenderTarget : public CObject;
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CRenderTarget::m_lstResources](#m_lstresources)|Eine Liste von Zeigern auf CD2DResource-Objekte.|
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Ein Zeiger auf ein ID2D1RenderTarget-Objekt.|
@@ -502,7 +502,7 @@ Zeichnet den Umriss eines Rechtecks, das die angegebenen Abmessungen und Strichs
 
 ```
 void DrawRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
     FLOAT fStrokeWidth = 1.0,
     ID2D1StrokeStyle* strokeStyle = NULL);
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Parameter
 
-*rect*<br/>
+*rectangle*<br/>
 Die Abmessungen des Rechtecks zum Zeichnen in geräteunabhängigen Pixeln
 
 *pBrush*<br/>
@@ -555,7 +555,7 @@ Zeichnet den angegebenen Text unter Verwendung der Formatierungsinformationen, d
 ```
 void DrawText(
     const CString& strText,
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pForegroundBrush,
     CD2DTextFormat* textFormat = NULL,
     D2D1_DRAW_TEXT_OPTIONS options = D2D1_DRAW_TEXT_OPTIONS_NONE,
@@ -567,7 +567,7 @@ void DrawText(
 *strText*<br/>
 Ein Zeiger auf ein Array von Unicode-Zeichen zu zeichnen.
 
-*rect*<br/>
+*rectangle*<br/>
 Die Größe und Position des Bereichs, in dem der Text gezeichnet wird.
 
 *pForegroundBrush*<br/>
@@ -714,13 +714,13 @@ Zeichnet das Innere des angegebenen Rechtecks.
 
 ```
 void FillRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*rect*<br/>
+*rectangle*<br/>
 Die Dimension des Rechtecks zum Zeichnen in geräteunabhängigen Pixeln.
 
 *pBrush*<br/>
@@ -999,7 +999,7 @@ void PushAxisAlignedClip(
 Die Größe und Position des Clippingbereichs, in geräteunabhängigen Pixeln.
 
 *mode*<br/>
-Die Antialiasingmodus, der verwendet wird, um die Ränder des Clips Rects zu zeichnen, die Subpixelgrenzen aufweisen und den Clip durch den Szeneninhalt in blend. Das blending wird ausgeführt, sobald bei die PopAxisAlignedClip-Methode aufgerufen wird, und nicht für jeden Primitiv innerhalb der Ebene gilt.
+Die Antialiasingmodus, der verwendet wird, um die Ränder des Clips Rechtecke zu zeichnen, die Subpixelgrenzen aufweisen und den Clip durch den Szeneninhalt in blend. Das blending wird ausgeführt, sobald bei die PopAxisAlignedClip-Methode aufgerufen wird, und nicht für jeden Primitiv innerhalb der Ebene gilt.
 
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer
 

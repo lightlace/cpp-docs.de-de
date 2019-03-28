@@ -1,6 +1,6 @@
 ---
 title: basic_ostream-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: dce4911bd4b7abe6c73551d6a0b178d9b2700dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543636"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565726"
 ---
 # <a name="basicostream-class"></a>basic_ostream-Klasse
 
@@ -48,7 +48,7 @@ Der `traits_type` eines Zeichens.
 
 ## <a name="remarks"></a>Hinweise
 
-Die meisten der Memberfunktionen, die [operator<<](#op_lt_lt) überladen, sind Funktionen für die formatierte Ausgabe. Sie entsprechen dem folgenden Muster:
+Die meisten der Memberfunktionen, die [operator<<](#basic_ostream_operator_lt_lt) überladen, sind Funktionen für die formatierte Ausgabe. Sie entsprechen dem folgenden Muster:
 
 ```cpp
 iostate state = goodbit;
@@ -122,7 +122,7 @@ Weitere Informationen zu Ausgabestreams finden Sie im Beispiel für die [basic_o
 |[put](#put)|Schreibt ein Zeichen in einen Stream.|
 |[seekp](#seekp)|Setzt die Position im Ausgabestream zurück.|
 |[sentry](#sentry)|Die geschachtelte Klasse beschreibt ein Objekt, dessen Deklaration die Funktionen für formatierte Ausgabe und für unformatierte Ausgabe strukturiert.|
-|[swap](#op_eq)|Tauscht die Werte dieses `basic_ostream`-Objekts gegen die Werte des bereitgestellten `basic_ostream`-Objekts aus.|
+|[swap](#swap)|Tauscht die Werte dieses `basic_ostream`-Objekts gegen die Werte des bereitgestellten `basic_ostream`-Objekts aus.|
 |[tellp](#tellp)|Meldet die Position im Ausgabestream.|
 |[write](#write)|Schreibt Zeichen in einen Stream.|
 
@@ -130,7 +130,7 @@ Weitere Informationen zu Ausgabestreams finden Sie im Beispiel für die [basic_o
 
 |Operator|Beschreibung|
 |-|-|
-|[operator=](#basic_ostream_operator_eq)|Weist diesem Objekt den Wert des bereitgestellten `basic_ostream`-Objektparameters zu.|
+|[operator=](#op_eq)|Weist diesem Objekt den Wert des bereitgestellten `basic_ostream`-Objektparameters zu.|
 |[operator<<](#basic_ostream_operator_lt_lt)|Schreibt in den Stream.|
 
 ## <a name="requirements"></a>Anforderungen
@@ -237,7 +237,7 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Parameter
 
-*pfn*<br/>
+*Pfn*<br/>
 Ein Funktionszeiger.
 
 *strbuf*<br/>
@@ -470,7 +470,7 @@ int main()
 
 Die geschachtelte Klasse beschreibt ein Objekt, dessen Deklaration die Funktionen für formatierte Ausgabe und für unformatierte Ausgabe strukturiert.
 
-Klasse Sentry {public: explizite Sentry (Basic_ostream\<Elem, Tr > & _Ostr); Operator bool() const; ~ sentry();};
+class sentry { public: explicit sentry(basic_ostream\<Elem, Tr>& _Ostr); operator bool() const; ~sentry(); };
 
 ### <a name="remarks"></a>Hinweise
 

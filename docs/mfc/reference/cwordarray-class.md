@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9b2888c82ad9522925ffbd53923d3988863f56ca
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259450"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565359"
 ---
 # <a name="cwordarray-class"></a>CWordArray-Klasse
 
@@ -292,7 +292,7 @@ Der Endindex der Befehls-ID-Bereich.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode entfernt eine Gruppe von nachrichtenhandlern aufbauen, zugeordnet, die angegebene Befehls-IDs, von *CmdIDMin* und *CmdIDMax*, aus dem Quellobjekt für den Befehl.
+Diese Methode entfernt eine Gruppe von nachrichtenhandlern aufbauen, die anhand des Befehls-IDs zugeordnet *CmdIDMin* und *CmdIDMax*, aus dem Quellobjekt für den Befehl.
 
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler
 
@@ -314,7 +314,7 @@ Der Endindex der Befehls-ID-Bereich.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode entfernt eine Gruppe von Benutzer-Schnittstelle Nachricht Befehlshandler, zugeordnet, die angegebene Befehls-IDs, von *CmdIDMin* und *CmdIDMax*, aus dem Quellobjekt für den Befehl.
+Diese Methode entfernt eine Gruppe von Benutzer-Schnittstelle Befehl nachrichtenhandlern aufbauen, die anhand des Befehls-IDs zugeordnet *CmdIDMin* und *CmdIDMax*, aus dem Quellobjekt für den Befehl.
 
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler
 

@@ -1,6 +1,6 @@
 ---
 title: duration-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2016
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 2b710de6275933b5dc05814664caef92cf251da4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568888"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565570"
 ---
 # <a name="duration-class"></a>duration-Klasse
 
@@ -50,7 +50,7 @@ Mit dem Vorlagenargument `Rep` wird der Typ beschrieben, der zum Aufnehmen der A
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Dauer](#duration)|Erstellt ein `duration`-Objekt.|
+|[duration](#duration)|Erstellt ein `duration`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -118,7 +118,7 @@ Eine `std::ratio`-Vorlagenspezialisierung zur Darstellung des Zeitraums von Zeit
 *R*<br/>
 Die Anzahl der Zeiteinheiten der Standardperiode.
 
-*Abfragedauer*<br/>
+*Dur*<br/>
 Die Anzahl von Zeiteinheiten des Zeitraums, der von *Period2*.
 
 ### <a name="remarks"></a>Hinweise
@@ -159,7 +159,7 @@ static constexpr duration min();
 
 Tatsächlich wird `duration(duration_values<rep>::min())` zurückgegeben.
 
-## <a name="duration__operator-"></a> duration::operator-
+## <a name="operator-"></a> duration::operator-
 
 Gibt eine Kopie des `duration`-Objekts zusammen mit einer negierten Taktanzahl zurück.
 
@@ -167,7 +167,7 @@ Gibt eine Kopie des `duration`-Objekts zusammen mit einer negierten Taktanzahl z
 constexpr duration operator-() const;
 ```
 
-## <a name="duration__operator--"></a> duration::operator--
+## <a name="operator--"></a> duration::operator--
 
 Verringert die gespeicherte Taktanzahl.
 
@@ -270,14 +270,14 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Abfragedauer*<br/>
+*Dur*<br/>
 Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Das `duration`-Objekt nach Ausführung der Addition.
 
-## <a name="duration__operator-_eq"></a> duration::operator-=
+## <a name="operator-_eq"></a> duration::operator-=
 
 Subtrahiert die Taktanzahl eines angegebenen `duration`-Objekts von der gespeicherten Taktanzahl.
 
@@ -287,7 +287,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Abfragedauer*<br/>
+*Dur*<br/>
 Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert

@@ -1,6 +1,6 @@
 ---
 title: '#Import-Anweisung (C++)'
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822625"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564953"
 ---
 # <a name="import-directive-c"></a>#import-Anweisung (C++)
 
@@ -160,7 +160,7 @@ using namespace MyLib;
 
 unmittelbar nach der **#import** -Anweisung im Quellcode.
 
-Der Namespace kann unterdrückt werden, mithilfe der [No_namespace](#_predir_no_namespace) Attribut der **#import** Richtlinie. Allerdings kann das Unterdrücken des Namespace zu Namenskonflikten führen. Der Namespace kann auch umbenannt werden, durch die [Rename_namespace](#_predir_rename_namespace) Attribut.
+Der Namespace kann unterdrückt werden, mithilfe der [No_namespace](no-namespace.md)) Attribut der **#import** Richtlinie. Allerdings kann das Unterdrücken des Namespace zu Namenskonflikten führen. Der Namespace kann auch umbenannt werden, durch die [Rename_namespace](rename-namespace.md) Attribut.
 
 Der Compiler stellt den vollständigen Pfad zu einer beliebigen Typbibliotheksabhängigkeit bereit, die von der Typbibliothek benötigt wird, die gerade verarbeitet wird. Der Pfad wird in Form von Kommentaren in den Header der Typbibliothek (.TLH) geschrieben, den der Compiler für jede verarbeitete Typbibliothek erstellt.
 
