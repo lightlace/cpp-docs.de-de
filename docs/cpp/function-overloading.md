@@ -1,23 +1,23 @@
 ---
 title: Funktionsüberladung
-ms.date: 11/19/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 6cc432e404a7a66de63cf87f0fe87f0ccdcb5d70
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176301"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565973"
 ---
 # <a name="function-overloading"></a>Funktionsüberladung
 
-C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gültigkeitsbereich zu. Diese heißen *überladen* Funktionen. Überladene Funktionen ermöglichen Ihnen das Bereitstellen anderer Semantiken für eine Funktion in Abhängigkeit von die Art und Anzahl von Argumenten.
+C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gültigkeitsbereich zu. Diese Funktionen aufgerufen werden *überladen* Funktionen. Überladene Funktionen ermöglichen Ihnen das Bereitstellen anderer Semantiken für eine Funktion in Abhängigkeit von die Art und Anzahl von Argumenten.
 
-Z. B. eine `print` -Funktion, akzeptiert eine `std::string` Argument möglicherweise sehr unterschiedliche Aufgaben als eines, das ein des Typs Argument durchführen **doppelte**. Überladen von erspart Ihnen, Namen zu verwenden, z. B. `print_string` oder `print_double`. Zum Zeitpunkt der Kompilierung wählt der Compiler an, welche Überladung verwendet abhängig von den Typ der Argumente, die durch den Aufrufer übergeben.  Wenn Sie aufrufen `print(42.0)` die `void print(double d)` -Funktion wird aufgerufen werden. Wenn Sie aufrufen `print("hello world")` die `void print(std::string)` Überladung aufgerufen werden.
+Z. B. eine `print` -Funktion, akzeptiert eine `std::string` Argument möglicherweise sehr unterschiedliche Aufgaben als eines, das ein des Typs Argument durchführen **doppelte**. Überladen von erspart Ihnen, Namen zu verwenden, z. B. `print_string` oder `print_double`. Zum Zeitpunkt der Kompilierung wählt der Compiler an, welche Überladung verwendet abhängig von den Typ der Argumente, die durch den Aufrufer übergeben.  Wenn Sie aufrufen `print(42.0)`, und klicken Sie dann die `void print(double d)` -Funktion wird aufgerufen werden. Wenn Sie aufrufen `print("hello world")`, und klicken Sie dann die `void print(std::string)` Überladung aufgerufen werden.
 
 Sie können sowohl Memberfunktionen und nicht-Memberfunktionen überladen. Die folgende Tabelle zeigt, welche Teile einer Funktionsdeklaration von C++ verwendet werden, um zwischen Gruppen von Funktionen mit dem gleichen Namen und dem gleichen Gültigkeitsbereich zu differenzieren.
 
@@ -32,7 +32,7 @@ Sie können sowohl Memberfunktionen und nicht-Memberfunktionen überladen. Die f
 |Verwenden von **Typedef** Namen|Nein|
 |Nicht angegebene Arraygrenzen|Nein|
 |**const** oder **volatile**|Ja, wenn auf den gesamten Funktion angewendet|
-|[ref-qualifier](#ref-qualifier)|Ja|
+|[Ref-qualifiers](#ref-qualifiers)|Ja|
 
 ## <a name="example"></a>Beispiel
 
@@ -113,13 +113,13 @@ int print(double dvalue, int prec)
 
 Der vorhergehende Code zeigt das Überladen der `print`-Funktion im Dateigültigkeitsbereich an.
 
-Das Standardargument wird nicht als Teil des Funktionstyps betrachtet. Daher erfolgt keine Verwendung beim Auswählen überladener Funktionen. Zwei Funktionen, die sich nur bei den Standardargumenten unterscheiden, werden als mehrfache Definitionen und nicht als überladene Funktionen betrachtet.
+Das Standardargument wird nicht als Teil des Funktionstyps betrachtet. Aus diesem Grund ist es nicht verwendet, beim Auswählen überladener Funktionen. Zwei Funktionen, die sich nur bei den Standardargumenten unterscheiden, werden als mehrfache Definitionen und nicht als überladene Funktionen betrachtet.
 
 Standardargumente können nicht für überladene Operatoren angegeben werden.
 
 ## <a name="argument-matching"></a>Argumentübereinstimmung
 
-Überladene Funktionen werden für die beste Übereinstimmung von Funktionsdeklarationen im aktuellen Bereich für Argumente ausgewählt, die im Funktionsaufruf angegeben werden. Wenn eine passende Funktion gefunden wird, wird diese Funktion aufgerufen. "Passend" in diesem Kontext bedeutet Folgendes:
+Überladene Funktionen werden für die beste Übereinstimmung von Funktionsdeklarationen im aktuellen Bereich für Argumente ausgewählt, die im Funktionsaufruf angegeben werden. Wenn eine passende Funktion gefunden wird, wird diese Funktion aufgerufen. "Passend" in diesem Kontext bedeutet entweder:
 
 - Ein exakte Übereinstimmung wurde gefunden.
 
@@ -135,7 +135,7 @@ Standardargumente können nicht für überladene Operatoren angegeben werden.
 
 Der Compiler erstellt einen Satz Kandidatenfunktionen für jedes Argument. Kandidatenfunktionen sind Funktionen, in denen das tatsächliche Argument an dieser Position in den Typ des formalen Arguments konvertiert werden kann.
 
-Ein Satz von „am besten passenden Funktionen“ wird für jedes Argument erstellt, und die ausgewählte Funktion ist die Schnittmenge aller Sätze. Wenn die Schnittmenge mehr als eine Funktion enthält, ist das Überladen mehrdeutig und generiert einen Fehler. Die letztendlich ausgewählte Funktion stimmt stets besser überein als jede andere Funktion in der Gruppe für mindestens ein Argument. Wenn dies nicht der Fall ist (wenn kein klarer Gewinner vorhanden ist), generiert der Funktionsaufruf einen Fehler.
+Ein Satz von „am besten passenden Funktionen“ wird für jedes Argument erstellt, und die ausgewählte Funktion ist die Schnittmenge aller Sätze. Wenn die Schnittmenge mehr als eine Funktion enthält, ist das Überladen mehrdeutig und generiert einen Fehler. Die letztendlich ausgewählte Funktion stimmt stets besser überein als jede andere Funktion in der Gruppe für mindestens ein Argument. Ist kein deutlicher Sieger auszumachen, generiert der Funktionsaufruf einen Fehler aus.
 
 Berücksichtigen Sie die folgenden Deklarationen (Funktionen sind zur Identifikation der folgenden Erläuterung als `Variant 1`, `Variant 2` und `Variant 3` gekennzeichnet):
 
@@ -155,12 +155,12 @@ F1 = Add( F2, 23 );
 
 Die vorhergehende Anweisung erstellt zwei Sätze:
 
-|Satz 1: Kandidatenfunktionen, deren erstes Argument vom Typ „fraction“ ist|Satz 2: Candidate Funktionen, deren zweites Argument konvertiert werden können Typ **Int**|
+|Legen Sie 1 fest: Kandidatenfunktionen, die erstes Argument vom Typ Anteil haben.|Legen Sie 2: Kandidat Funktionen, deren zweites Argument konvertiert werden können Typ **Int**|
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 |Variant 1|Variant 1 (**Int** konvertiert werden kann, um **lange** mithilfe einer standardkonvertierung)|
 |Variant 3||
 
-Funktionen in Satz 2 sind Funktionen, für die es implizite Konvertierungen vom tatsächlichen Parametertyp in den formalen Parametertyp gibt. Unter diesen Funktionen gibt es eine Funktion mit den geringsten "Kosten" für die Konvertierung des tatsächlichen Parametertyps in den formalen Parametertyp.
+Funktionen in Satz 2 sind Funktionen, für die sind implizite Konvertierungen vom tatsächlichen Parametertyp in den formalen Parametertyp und zwischen diesen Funktionen es gibt eine Funktion, die für die "Kosten" des tatsächlichen Parametertyps in den formalen Parametertyp konvertiert ist die kleinste.
 
 Die Schnittmenge dieser beiden Sätze ist "Variant 1". Ein Beispiel für einen mehrdeutigen Funktionsaufruf ist:
 
@@ -170,15 +170,15 @@ F1 = Add( 3, 6 );
 
 Der vorhergehende Funktionsaufruf erstellt die folgenden Sätze:
 
-|Satz 1: Kandidatenfunktionen, haben ersten Argument vom Typ **Int**|Satz 2: Kandidatenfunktionen, haben zweites Argument vom Typ **Int**|
+|Legen Sie 1 fest: Möglichen Funktionen, deren erste Argument vom Typ **Int**|Legen Sie 2: Kandidat Funktionen, deren zweites Argument vom Typ **Int**|
 |---------------------------------------------------------------------|----------------------------------------------------------------------|
 |Variant 2 (**Int** konvertiert werden kann, um **lange** mithilfe einer standardkonvertierung)|Variant 1 (**Int** konvertiert werden kann, um **lange** mithilfe einer standardkonvertierung)|
 
-Beachten Sie, dass die Schnittmenge zwischen diesen beiden Sätzen leer ist. Aus diesem Grund generiert der Compiler eine Fehlermeldung.
+Da die Schnittmenge dieser beiden Sätze leer ist, generiert der Compiler eine Fehlermeldung angezeigt.
 
 Für die argumentübereinstimmung wird eine Funktion mit *n* Standardargumente behandelt, als *n*+ 1 unterschiedliche Funktionen, jeweils eine unterschiedliche Anzahl von Argumenten.
 
-Die Ellipse (...) dient als Platzhalter; sie stimmt mit jedem tatsächlichen Argument überein. Dies kann zu vielen mehrdeutigen Gruppen führen, wenn Sie die überladene Funktion nicht mit größter Sorgfalt entwerfen.
+Die Ellipse (...) dient als Platzhalter; sie stimmt mit jedem tatsächlichen Argument überein. Dies kann zu vielen mehrdeutigen Gruppen führen, wenn Sie Ihre überladene Funktion legt mit größter Sorgfalt entwerfen nicht.
 
 > [!NOTE]
 >  Mehrdeutigkeit von überladenen Funktionen kann nicht bestimmt werden, bis ein Funktionsaufruf gefunden wird. An diesem Punkt werden die Sätze für jedes Argument im Funktionsaufruf erstellt, und Sie können bestimmen, ob eine eindeutige Überladung vorhanden ist. Dies bedeutet, dass Mehrdeutigkeiten im Code vorhanden sein dürfen, bis sie durch einen bestimmten Funktionsaufruf eindeutig deklariert werden.
@@ -189,7 +189,7 @@ Die Ellipse (...) dient als Platzhalter; sie stimmt mit jedem tatsächlichen Arg
 
 Aus demselben Grund Funktionsargumente eines Typs geändert, indem **const** oder **flüchtige** nicht anders als der Basistyp für den Zweck des Überladens behandelt.
 
-Allerdings kann die Funktion überladen Mechanismus zwischen verweisen, die von qualifiziert sind unterscheiden **const** und **flüchtige** und Verweise auf den Basistyp. Dies ermöglicht Code wie den folgenden:
+Allerdings kann die Funktion überladen Mechanismus zwischen verweisen, die von qualifiziert sind unterscheiden **const** und **flüchtige** und Verweise auf den Basistyp. Es ist Code wie den folgenden:
 
 ```cpp
 // argument_type_differences.cpp
@@ -243,7 +243,7 @@ Das Ergebnis der Konvertierungssequenz, falls vorhanden, ist die am besten passe
 
 - Konvertieren von **Int** zu **unsigned long**.
 
-Auch wenn die erste Sequenz das erwünschte Ziel erreicht, ist sie nicht die Sequenz mit der stärksten Übereinstimmung – es gibt eine kürzere Sequenz.
+Die erste Sequenz, obwohl sie das erwünschte Ziel erreicht, ist nicht die am besten passende Sequenz – eine kürzere Sequenz.
 
 Die folgende Tabelle zeigt eine Gruppe von Konvertierungen, die als triviale Konvertierungen bezeichnet werden, die eine begrenzte Auswirkung auf die Bestimmung haben, welche Sequenz die größte Übereinstimmung hat. Die Instanzen, in denen triviale Konvertierungen sich auf die Sequenzwahl auswirken, werden in der Liste nach der Tabelle behandelt.
 
@@ -251,18 +251,18 @@ Die folgende Tabelle zeigt eine Gruppe von Konvertierungen, die als triviale Kon
 
 |Konvertieren von Typ|Konvertiert in Typ|
 |-----------------------|---------------------|
-|*Typname*|*Typname* **&**|
-|*Typname* **&**|*Typname*|
-|*Typname* **]**|*Typname* __\*__|
-|*Typname* **(** *Argumentliste* **)**|**(** __\*__ *Typname* **) (** *Argumentliste* **)**|
-|*Typname*|**const** *Typname*|
-|*Typname*|**flüchtige** *Typname*|
-|*Typname* __\*__|**const** *Typname* __\*__|
-|*Typname* __\*__|**flüchtige** *Typname* __\*__|
+|*type-name*|*type-name* **&**|
+|*type-name* **&**|*type-name*|
+|*Typname* **]**|*type-name* __\*__|
+|*type-name* **(** *argument-list* **)**|**(** __\*__ *Typname* **) (** *Argumentliste* **)**|
+|*type-name*|**const** *type-name*|
+|*type-name*|**volatile** *type-name*|
+|*type-name* __\*__|**const** *type-name* __\*__|
+|*type-name* __\*__|**volatile** *type-name* __\*__|
 
 Die Reihenfolge für Konvertierungen lautet wie folgt:
 
-1. Genaue Übereinstimmung. Ein genaue Übereinstimmung zwischen den Typen, mit denen die Funktion aufgerufen wird und den Typen, die im Funktionsprototyp deklariert werden, ist immer die beste Übereinstimmung. Sequenzen von trivialen Konvertierungen werden als exakte Übereinstimmungen klassifiziert. Allerdings sind Sequenzen, die keine dieser Konvertierungen ausführen, besser als Sequenzen, die konvertieren:
+1. Genaue Übereinstimmung. Ein genaue Übereinstimmung zwischen den Typen, mit denen die Funktion aufgerufen wird und den Typen, die im Funktionsprototyp deklariert werden, ist immer die beste Übereinstimmung. Sequenzen von trivialen Konvertierungen werden als exakte Übereinstimmungen klassifiziert. Allerdings sind Sequenzen, die jede dieser Konvertierungen stellen nicht besser als Sequenzen berücksichtigt, die konvertiert:
 
    - Von Zeiger in Zeiger auf **const** (`type` <strong>\*</strong> zu **const** `type` <strong>\*</strong> ).
 
@@ -294,11 +294,11 @@ Die vorhergehende Regel gilt nur für einen bestimmten Ableitungspfad. Betrachte
 ![Mehrere&#45;Vererbung, die bevorzugten Konvertierungen](../cpp/media/vc391t2.gif "mehrere&#45;Vererbung, die bevorzugten Konvertierungen") <br/>
 Mehrfachvererbungsdiagramm zur Verfügung, die bevorzugten Konvertierungen
 
-Die Konvertierung von Typ `C*` in Typ `B*` ist der Konvertierung von Typ `C*` in Typ `A*` vorzuziehen. Der Grund liegt darin, dass sie sich auf dem gleichen Pfad befinden, und `B*` näher liegt. Allerdings ist die Konvertierung von Typ `C*` in Typ `D*` der Konvertierung in Typ `A*` nicht vorzuziehen. Keiner der Typen hat Vorrang gegenüber dem anderen, da die Konvertierungen verschiedenen Pfaden folgen.
+Die Konvertierung von Typ `C*` in Typ `B*` ist der Konvertierung von Typ `C*` in Typ `A*` vorzuziehen. Der Grund liegt darin, dass sie sich auf dem gleichen Pfad befinden, und `B*` näher liegt. Allerdings Konvertierung von Typ `C*` eingeben `D*` ist besser als die Konvertierung in den Typ nicht `A*`; keine Einstellung vorhanden ist, da die Konvertierungen verschiedenen Pfaden folgen.
 
-1. Übereinstimmung mit benutzerdefinierten Konvertierungen. Diese Sequenz kann nicht als genaue Übereinstimmung, als Übereinstimmung mithilfe von Erweiterungen oder als Übereinstimmung mithilfe von Standardkonvertierungen klassifiziert werden. Die Reihenfolge darf nur benutzerdefinierte Konvertierungen, Standardkonvertierungen oder triviale Konvertierungen enthalten, um die Übereinstimmung mit benutzerdefinierten Konvertierungen zu erreichen. Eine Übereinstimmung mit benutzerdefinierten Konvertierungen gilt als eine bessere Übereinstimmung als eine Übereinstimmung mit einem Auslassungszeichen, jedoch als nicht so gut wie eine Übereinstimmung mit Standardkonvertierungen.
+1. Übereinstimmung mit benutzerdefinierten Konvertierungen. Diese Sequenz kann nicht als eine genaue Übereinstimmung, Übereinstimmung mithilfe von Erweiterungen oder als Übereinstimmung mithilfe von standardkonvertierungen klassifiziert werden. Die Reihenfolge darf nur benutzerdefinierte Konvertierungen, Standardkonvertierungen oder triviale Konvertierungen enthalten, um die Übereinstimmung mit benutzerdefinierten Konvertierungen zu erreichen. Eine Übereinstimmung mit benutzerdefinierten Konvertierungen gilt als eine bessere Übereinstimmung als eine Übereinstimmung mit einem Auslassungszeichen, jedoch als nicht so gut wie eine Übereinstimmung mit Standardkonvertierungen.
 
-1. Übereinstimmung mit einem Auslassungszeichen. Jede beliebige Sequenz, die Auslassungszeichen in der Deklaration entspricht, wird als Übereinstimmung mit einem Auslassungszeichen klassifiziert. Dies wird als schwächste Übereinstimmung angesehen.
+1. Übereinstimmung mit einem Auslassungszeichen. Jede beliebige Sequenz, die Auslassungszeichen in der Deklaration entspricht, wird als Übereinstimmung mit einem Auslassungszeichen klassifiziert. Es ist die schwächste Übereinstimmung angesehen.
 
 Benutzerdefinierte Konvertierungen werden angewendet, wenn keine integrierte Erweiterung oder Konvertierung vorhanden ist. Diese Konvertierungen werden auf der Grundlage des Typs des Arguments ausgewählt, das abgeglichen wird. Betrachten Sie folgenden Code:
 
@@ -337,9 +337,9 @@ UDC udc;
 LogToFile( udc );
 ```
 
-Im vorherigen Beispiel, die eine benutzerdefinierte Konvertierung **Operator long**, wird aufgerufen, um die Konvertierung `udc` eingeben **lange**. Wenn keine benutzerdefinierte Konvertierung in den Typ **lange** war definiert, die Konvertierung würde wie folgt fortgesetzt: Typ `UDC` würde wurden so konvertiert, geben Sie **Int** mit der benutzerdefinierten die Konvertierung. Klicken Sie dann die standardkonvertierung vom Typ **Int** eingeben **lange** würde angewendet wurde, um das Argument in der Deklaration übereinstimmen.
+Im vorherigen Beispiel, die eine benutzerdefinierte Konvertierung **Operator long**, wird aufgerufen, um die Konvertierung `udc` eingeben **lange**. Wenn keine benutzerdefinierte Konvertierung in den Typ **lange** war definiert, die Konvertierung würde wie folgt fortgesetzt: Typ `UDC` würde wurden so konvertiert, geben Sie **Int** mit der eine benutzerdefinierte Konvertierungsfunktion. Klicken Sie dann die standardkonvertierung vom Typ **Int** eingeben **lange** würde angewendet wurde, um das Argument in der Deklaration übereinstimmen.
 
-Wenn für die Übereinstimmung mit einem Argument eine benutzerdefinierte Konvertierung erforderlich ist, werden die Standardkonvertierungen bei der Suche nach der besten Übereinstimmung nicht verwendet. Dies gilt auch dann, wenn mehr als eine Kandidatenfunktion eine benutzerdefinierte Konvertierung erfordert. In so einem Fall werden die Funktionen als gleich betrachtet. Zum Beispiel:
+Wenn eine benutzerdefinierte Konvertierung erforderlich sind, Übereinstimmung mit einem Argument, werden nicht die standardkonvertierungen verwendet, wenn der besten Übereinstimmung. Auch wenn mehr als eine kandidatenfunktion eine benutzerdefinierte Konvertierung erfordert, werden die Funktionen als gleich betrachtet. Zum Beispiel:
 
 ```cpp
 // argument_matching2.cpp
@@ -371,7 +371,7 @@ Beide Versionen der `Func` erfordern eine benutzerdefinierte Konvertierung Typen
 
 - Konvertieren vom Typ **Int** eingeben **lange**; anschließende Konvertierung in den Typ `UDC2` (zweistufige-Konvertierung).
 
-Obwohl es die zweite dieser Konvertierungen eine Standardkonvertierung sowie die benutzerdefinierte Konvertierung erfordert, gelten die zwei Konvertierungen noch immer als gleich.
+Auch wenn das zweite Argument eine standardkonvertierung, und die benutzerdefinierte Konvertierung erfordert, sind die zwei Konvertierungen noch immer als gleich.
 
 > [!NOTE]
 >  Benutzerdefinierte Konvertierungen gelten als Konvertierung durch Konstruktion oder als Konvertierung durch Initialisierung (Konvertierungsfunktion). Beide Methoden werden als gleich betrachtet, wenn die beste Übereinstimmung berücksichtigt wird.
@@ -451,9 +451,9 @@ Sie können überladen **new-Operator** ausschließlich auf Grundlage der Rückg
 
 **Ende Microsoft-spezifisch**
 
-- Memberfunktionen können nicht allein auf der Grundlage, dass eine statisch und die andere nicht statisch ist, überladen werden.
+- Memberfunktionen können nicht allein auf der Grundlage eine statisch und die andere nicht statisch überladen werden.
 
-- **TypeDef** -Deklarationen definieren keine neue Typen; sie führen Synonyme für vorhandene Typen. Sie wirken sich nicht auf den Mechanismus zum Überladen aus. Betrachten Sie folgenden Code:
+- **TypeDef** -Deklarationen definieren keine neue Typen; sie führen Synonyme für vorhandene Typen. Der Mechanismus zum Überladen davon nicht betroffen. Betrachten Sie folgenden Code:
 
     ```cpp
     typedef char * PSTR;
@@ -466,7 +466,7 @@ Sie können überladen **new-Operator** ausschließlich auf Grundlage der Rückg
 
 - Aufgelistete Typen sind verschiedene Typen und können verwendet werden, um zwischen überladenen Funktionen zu unterscheiden.
 
-- Die Typen "Array von" und "Zeiger auf" gelten als identisch, damit zwischen überladenen Funktionen unterschieden werden kann. Dies gilt nur für eindimensionale Arrays. Daher verursachen die folgenden überladenen Funktionen einen Konflikt und generieren eine Fehlermeldung:
+- Die Typen "Array von" und "Zeiger auf" gelten als identisch zum Zweck der unterscheiden zwischen überladenen Funktionen, jedoch nur für einzeln Arrays dimensioniert. Daher diese überladenen Funktionen in Konflikt stehen, und eine Fehlermeldung generiert:
 
     ```cpp
     void Print( char *szToPrint );
@@ -485,11 +485,11 @@ Sie können überladen **new-Operator** ausschließlich auf Grundlage der Rückg
 
 Zwei beliebige Funktionsdeklarationen des gleichen Namens im gleichen Bereich können auf die gleiche Funktion oder zwei einzelne Funktionen, die überladen werden, verweisen. Wenn die Argumentlisten der Deklarationen Argumente äquivalenter Typen enthalten (wie im vorherigen Abschnitt beschrieben), beziehen sich die Funktionsdeklarationen auf die gleiche Funktion. Andernfalls beziehen sie sich auf zwei separate Funktionen, die mithilfe des Überladens ausgewählt werden.
 
-Der Klassenbereich wird strikt beachtet. Deshalb befindet sich eine Funktion, die in einer Basisklasse deklariert wurde, nicht im selben Bereich wie eine Funktion, die in einer abgeleiteten Klasse deklariert wurde. Wenn eine Funktion in einer abgeleiteten Klasse, mit dem gleichen Namen wie eine virtuelle Funktion in der Basisklasse, die abgeleitete Klassenfunktion deklariert wird *überschreibt* die Funktion der Basisklasse. Weitere Informationen finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).
+Klassenbereich wird strikt beachtet; aus diesem Grund befindet sich eine Funktion, die in einer Basisklasse deklariert nicht im gleichen Bereich wie eine Funktion, die in einer abgeleiteten Klasse deklariert. Wenn eine Funktion in einer abgeleiteten Klasse, mit dem gleichen Namen wie eine virtuelle Funktion in der Basisklasse, die abgeleitete Klassenfunktion deklariert wird *überschreibt* die Funktion der Basisklasse. Weitere Informationen finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).
 
 Wenn die Funktion der Basisklasse ist nicht als "virtual" deklariert, und klicken Sie dann die Funktion der abgeleiteten Klasse gilt als *ausblenden* es. Sowohl überschreiben und Ausblenden von unterscheiden sich von überladen.
 
-Der Blockbereich wird strikt beachtet. Deshalb befindet sich eine Funktion, die im Dateibereich deklariert ist, nicht im selben Bereich wie eine lokal deklarierte Funktion. Wenn eine lokal deklarierte Funktion den gleichen Namen wie eine Funktion besitzt, die im Dateibereich deklariert wird, blendet die lokal deklarierte Funktion die Funktion im Dateibereich aus, und es erfolgt keine Überladung. Zum Beispiel:
+Blockbereich wird strikt beachtet; aus diesem Grund befindet sich eine Funktion, die im Dateibereich deklariert nicht im gleichen Bereich wie eine Funktion lokal deklariert werden. Wenn eine lokal deklarierte Funktion den gleichen Namen wie eine Funktion besitzt, die im Dateibereich deklariert wird, blendet die lokal deklarierte Funktion die Funktion im Dateibereich aus, und es erfolgt keine Überladung. Zum Beispiel:
 
 ```cpp
 // declaration_matching1.cpp
@@ -521,9 +521,9 @@ Der vorhergehende Code zeigt zwei Definitionen der Funktion `func`. Die Definiti
 
 Für überladene Memberfunktionen können verschiedenen Versionen der Funktion unterschiedliche Zugriffsrechte zugewiesen werden. Sie werden weiterhin als im Gültigkeitsbereich der einschließenden Klasse betrachtet und sind somit überladene Funktionen. Betrachten Sie den folgenden Code, in dem die Memberfunktion `Deposit` überladen wird. Eine Version ist öffentlich, die andere privat.
 
-Der Zweck dieses Beispiels ist es, eine `Account`-Klasse bereitzustellen, in der ein korrektes Kennwort erforderlich ist, um Eingaben vorzunehmen. Dies wird mithilfe der Überladung erreicht.
+Der Zweck dieses Beispiels ist es, eine `Account`-Klasse bereitzustellen, in der ein korrektes Kennwort erforderlich ist, um Eingaben vorzunehmen. Dies erfolgt mithilfe der Überladung.
 
-Beachten Sie, dass der Aufruf von `Deposit` in `Account::Deposit` die private Memberfunktion aufruft. Dieser Aufruf ist korrekt, da `Account::Deposit` eine Memberfunktion ist und daher Zugriff auf private Member der Klasse hat.
+Der Aufruf von `Deposit` in `Account::Deposit` die Private Memberfunktion aufruft. Dieser Aufruf ist korrekt da `Account::Deposit` ist eine Memberfunktion und Zugriff auf die privaten Member der Klasse.
 
 ```cpp
 // declaration_matching2.cpp
