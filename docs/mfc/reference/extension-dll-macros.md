@@ -1,15 +1,15 @@
 ---
 title: Makros und Funktionen für die Verwaltung von DLLs
-ms.date: 04/03/2017
+ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 863350067c39fbc9cdb3d9d3a6c4448348d977de
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: b27f8763b60dc7ce3ee074cad1365e7e1de3a7e6
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328765"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565424"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Makros und Funktionen für die Verwaltung von DLLs
 
@@ -20,10 +20,10 @@ ms.locfileid: "58328765"
 |[AfxOleInitModule](#afxoleinitmodule)|Bietet Unterstützung von OLE aus einer regulären MFC-DLL, die dynamisch mit MFC verknüpft wird.|
 |[AfxNetInitModule](#afxnetinitmodule)|Bietet MFC-Sockets aus einer regulären MFC-DLL, die dynamisch mit MFC verknüpft wird.|
 |[AfxGetAmbientActCtx](#afxgetambientactctx)|Ruft den aktuellen Status des pro-Module-Status-Flags ab.|
-|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|Legt den Zustand vor der Initialisierung bzw. den vorherigen Zustand nach der Bereinigung wiederherstellen.|
+|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|Legt den Zustand vor der Initialisierung bzw. den vorherigen Zustand nach dem Bereinigen wiederherstellen.|
 |[AfxInitExtensionModule](#afxinitextensionmodule)|Initialisiert die DLL an.|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|Legen Sie das pro-Module-Status-Flag, das von MFC die WinSxS-Verhalten wirkt sich auf.|
-|[AfxTermExtensionModule](#afxtermextensionmodule)|Ermöglicht es MFC so bereinigen Sie die MFC-Erweiterungs-DLL wird jeder Prozess von der DLL getrennt.|
+|[AfxTermExtensionModule](#afxtermextensionmodule)|Ermöglicht es MFC ermöglicht, bereinigen Sie die MFC-Erweiterungs-DLL, wird jeder Prozess von der DLL getrennt.|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 
@@ -79,7 +79,7 @@ Dies tauscht den aktuellen Modulstatus mit dem Status von zurückgegebenen [AfxG
 Weitere Informationen zu Modulzustände und MFC, finden Sie unter "Verwalten der Statusdaten von MFC-Modulen" in [Erstellen neuer Dokumente, Windows und Ansichten](../creating-new-documents-windows-and-views.md) und [technischen Hinweis 58](../tn058-mfc-module-state-implementation.md).
 
 > [!NOTE]
->  Wenn MFC einen Aktivierungskontext für eine Assembly erstellt, verwendet es [AfxWinInit](#afxwininit) den Kontext erstellt und `AFX_MANAGE_STATE` aktivieren und deaktivieren. Beachten Sie außerdem, `AFX_MANAGE_STATE` für die statischen MFC-Bibliotheken sowie MFC-DLLs aktiviert ist, damit MFC-Code in der richtigen Aktivierungskontext ausgewählt, die von der DLL für die Benutzer ausführen kann. Weitere Informationen finden Sie unter [Unterstützung für Aktivierungskontexte im MFC-Modulstatus](../support-for-activation-contexts-in-the-mfc-module-state.md).
+>  Wenn MFC einen Aktivierungskontext für eine Assembly erstellt, verwendet es [AfxWinInit](application-information-and-management.md#afxwininit) den Kontext erstellt und `AFX_MANAGE_STATE` aktivieren und deaktivieren. Beachten Sie außerdem, `AFX_MANAGE_STATE` für die statischen MFC-Bibliotheken sowie MFC-DLLs aktiviert ist, damit MFC-Code in der richtigen Aktivierungskontext ausgewählt, die von der DLL für die Benutzer ausführen kann. Weitere Informationen finden Sie unter [Unterstützung für Aktivierungskontexte im MFC-Modulstatus](../support-for-activation-contexts-in-the-mfc-module-state.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -151,7 +151,7 @@ Der Kontext eines Moduls wird in seinem Manifest eingebettet in der Regel in Mod
 
 ## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
-Mit dieser Funktion wird zum Festlegen des Modulstatus vor der Initialisierung bzw. den vorherigen Zustand nach der Bereinigung wiederherstellen.
+Mit dieser Funktion wird zum Festlegen des Modulstatus vor der Initialisierung bzw. den vorherigen Zustand nach dem Bereinigen wiederherstellen.
 
 ### <a name="syntax"></a>Syntax
 
@@ -181,7 +181,7 @@ Weitere Informationen zu Modulzustände und MFC, finden Sie unter "Verwalten der
 
 **Header:** afxstat_.h
 
-## <a name="afxinitextensionmodule"></a> AfxInitExtensionModule
+## <a name="afxinitextensionmodule"></a>AfxInitExtensionModule
 
 Rufen Sie diese Funktion in einer MFC-Erweiterungs-DLL des `DllMain` die DLL nicht initialisieren.
 
@@ -228,7 +228,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 `AfxInitExtensionModule` erstellt eine Kopie der DLL HMODULE und erfasst die DLL Runtime-Klassen (`CRuntimeClass` Strukturen) sowie die Objektfactory (`COleObjectFactory` Objekte) für die Verwendung später, wenn die `CDynLinkLibrary` Objekt erstellt wird.
 MFC-Erweiterungs-DLLs müssen zwei Dinge in ihre `DllMain` Funktion:
 
-- Rufen Sie [AfxInitExtensionModule](#_mfc_afxinitextensionmodule) und den Rückgabewert überprüfen.
+- Rufen Sie [AfxInitExtensionModule](#afxinitextensionmodule) und den Rückgabewert überprüfen.
 
 - Erstellen Sie eine `CDynLinkLibrary` Objekt, wenn die DLL exportieren [CRuntimeClass-Struktur](cruntimeclass-structure.md) Objekte oder verfügt über eine eigene benutzerdefinierte Ressourcen.
 
@@ -275,7 +275,7 @@ BOOL CMFCListViewApp::InitInstance()
 
 ## <a name="afxtermextensionmodule"></a>  AfxTermExtensionModule
 
-Mit dieser Funktion können Sie MFC Bereinigung ermöglichen die MFC-Erweiterungs-DLL wird jeder Prozess von der DLL getrennt (Dies ist der Fall, wenn der Prozess beendet wird oder die DLL entladen wird, aufgrund einer `AfxFreeLibrary` aufrufen).
+Mit dieser Funktion können Sie MFC bereinigen Sie die MFC-Erweiterungs-DLL wird jeder Prozess von der DLL getrennt zulassen (Dies ist der Fall, wenn der Prozess beendet wird oder die DLL entladen wird, als Ergebnis des eine `AfxFreeLibrary` aufrufen).
 
 ### <a name="syntax"></a>Syntax
 
@@ -289,7 +289,7 @@ void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = 
 Ein Verweis auf die [AFX_EXTENSION_MODULE](afx-extension-module-structure.md) -Struktur, die den Zustand der MFC-Erweiterungs-DLL-Modul enthält.
 
 *bAll*<br/>
-Wenn "true", Bereinigung, da alle MFC-Erweiterungs-DLL-Module. Andernfalls Bereinigung nur das aktuelle DLL-Modul.
+True gibt an, bereinigen Sie alle MFC-Erweiterungs-DLL-Module. Bereinigen Sie hingegen nur das aktuelle DLL-Modul.
 
 ### <a name="remarks"></a>Hinweise
 

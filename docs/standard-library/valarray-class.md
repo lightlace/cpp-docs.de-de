@@ -1,6 +1,6 @@
 ---
 title: valarray-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: f38d431248c524a65b4a7a7126ba73b767a64173
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: efb186753de0e04bd01f9cc6e81c487084b88ac2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525306"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565739"
 ---
 # <a name="valarray-class"></a>valarray-Klasse
 
@@ -88,7 +88,7 @@ Insbesondere dürfen keine feinen Unterschiede zwischen einer Kopierkonstruktion
 |-|-|
 |[operator!](#op_not)|Ein unärer Operator, der die logischen `NOT`-Werte jedes Elements eines `valarray`-Objekts abruft.|
 |[operator%=](#op_mod_eq)|Ruft den Rest der Division der Elemente eines Arrays elementweise entweder entsprechend einem angegebenen `valarray`-Objekt oder entsprechend einem Wert des Elementtyps ab.|
-|[operator&=](#op_amp_eq)|Ruft das bitweise `AND`-Ergebnis von Elementen eines Arrays entweder mit den entsprechenden Elementen in einem angegebenen `valarray`-Objekt oder mit einem Wert des Elementtyps ab.|
+|[operator&=](#op_and_eq)|Ruft das bitweise `AND`-Ergebnis von Elementen eines Arrays entweder mit den entsprechenden Elementen in einem angegebenen `valarray`-Objekt oder mit einem Wert des Elementtyps ab.|
 |[operator>>=](#op_gt_gt_eq)|Verschiebt die Bits für jedes Element eines `valarray`-Operanden um eine angegebene Anzahl von Positionen oder um einen elementweisen Betrag, der durch ein zweites `valarray`-Objekt angegeben ist, nach rechts.|
 |[operator<<=](#op_lt_lt_eq)|Verschiebt die Bits für jedes Element eines `valarray`-Operanden um eine angegebene Anzahl von Positionen oder um einen elementweisen Betrag, der durch ein zweites `valarray`-Objekt angegeben ist, nach links.|
 |[operator*=](#op_star_eq)|Multipliziert die Elemente eines angegebenen `valarray`-Objekts oder einen Wert des Elementtyps elementweise mit einem `valarray`-Operanden.|
@@ -508,7 +508,7 @@ valarray: ( 0 -3 4 -7 1 -3 ).
 */
 ```
 
-## <a name="and_eq"></a> valarray::operator&amp;=
+## <a name="op_and_eq"></a> valarray::operator&amp;=
 
 Ruft das bitweise **AND**-Ergebnis von Elementen eines Arrays entweder mit den entsprechenden Elementen in einem angegebenen valarray-Objekt oder mit einem Wert des Elementtyps ab.
 
@@ -906,7 +906,7 @@ valarray: ( 2 0 4 2 6 4 8 6 ).
 */
 ```
 
-## <a name="valarray__operator-"></a> valarray::operator-
+## <a name="operator-"></a> valarray::operator-
 
 Ein unärer Operator, der ein Minuszeichen auf jedes Element in einem valarray-Objekt anwendet.
 
@@ -958,7 +958,7 @@ valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 */
 ```
 
-## <a name="valarray__operator-_eq"></a> valarray::operator-=
+## <a name="operator-_eq"></a> valarray::operator-=
 
 Subtrahiert die Elemente eines angegebenen valarray-Objekts oder einen Wert des Elementtyps elementweise von einem valarray-Operanden.
 
@@ -1276,7 +1276,7 @@ Ein valarray-Objekt, dessen Elemente die elementweise logische **XOR** des Valar
 
 ### <a name="remarks"></a>Hinweise
 
-Der Operator exklusives Oder, auch als **XOR** bezeichnet, weist die folgende Semantik auf: Wenn die Elemente *e*1 und *e*2 gegeben sind, ist *e*1 **XOR** *e*2 **TRUE**, wenn exakt eines der Element TRUE ist; **FALSE**, wenn beide Elemente FALSE sind oder wenn beide Elemente TRUE sind.
+Die exklusive logische oder, bezeichnet als **XOR**, hat folgende Semantik: Elemente erhält *e*1 und *e*2 *e*1 **XOR** *e*2 **"true"** Wenn genau eines der Elemente ist "true". **"false"** Wenn beide Elemente false sind oder wenn beide Elemente true sind.
 
 ### <a name="example"></a>Beispiel
 
@@ -1852,7 +1852,7 @@ Die Anzahl von Elementen im Wertarray.
 *val*<br/>
 Der beim Initialisieren der Elemente im Wertarray zu verwendende Wert.
 
-*PTR*<br/>
+*Ptr*<br/>
 Zeiger auf die beim Initialisieren der Elemente im Wertarray zu verwendenden Werte.
 
 *Rechts*<br/>
