@@ -1,12 +1,12 @@
 ---
 title: Übersicht über die ARM64-ABI-Konventionen
 ms.date: 03/27/2019
-ms.openlocfilehash: 2695ba69c642b2100ec041d1f85debb4ad7041c8
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
+ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508857"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639445"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Übersicht über die ARM64-ABI-Konventionen
 
@@ -187,27 +187,21 @@ Ganzzahlige Werte werden in X0 zurückgegeben.
 
 Gleitkommazahlen-Punktwerte werden in s0/d0/v0 entsprechend zurückgegeben.
 
-Typen, die als Wert zurückgegebene werden unterschiedlich gehandhabt, je nachdem, ob sie bestimmte Eigenschaften verfügen.
+Typen, die als Wert zurückgegebene werden unterschiedlich gehandhabt, je nachdem, ob sie bestimmte Eigenschaften verfügen. Typen, die alle diese Eigenschaften haben,
 
-Typen werden einen "C" return Stil zugewiesen, sofern diese aggregate sind von der C ++ 14-Standarddefinition. Das heißt
+- Sie sind *aggregieren* von der C ++ 14-Standarddefinition, d. h., sie haben keine von Benutzern bereitgestellten Konstruktoren, keine privaten oder geschützten nicht statischen Datenmember, ohne Basisklassen und ohne virtuellen Funktionen, und
+- Sie haben einen trivialen Kopierzuweisungsoperator und
+- Sie haben einen trivialen Destruktor,
 
-- Sie können keine von Benutzern bereitgestellten Konstruktoren, keine privaten oder geschützten nicht statischen Datenmember, ohne Basisklassen und ohne virtuellen Funktionen
-- Sie haben einen trivialen Kopierkonstruktor, und
-- Sie haben einen trivialen Destruktor.
+Verwenden Sie das folgende Format für die Rückgabe an:
 
-Alle anderen Typen werden ein "C++" return-Format angegeben werden.
+- Typen, die kleiner oder gleich 8 Bytes werden in X0 zurückgegeben werden.
+- Typen, die kleiner oder gleich 16 Byte werden in X0 und X1, mit X0, enthält die niederwertigen 8 Bytes zurückgegeben.
+- Für Typen, die mehr als 16 Bytes muss der Aufrufer einen Speicherblock von ausreichender Größe und Ausrichtung, um das Ergebnis aufzunehmen reservieren. Die Adresse des Speicherblocks muss als ein zusätzliches Argument der Funktion in X8 übergeben werden. Der aufgerufene kann den Ergebnis-Speicherblock zu einem beliebigen Zeitpunkt während der Ausführung der Unterroutine ändern. Der aufgerufene nicht erforderlich, den in X8 gespeicherten Wert beibehalten.
 
-### <a name="c-return-style"></a>Return C-Stil
+Alle anderen Typen verwenden diese Konvention:
 
-Typen, die kleiner oder gleich 8 Bytes werden in X0 zurückgegeben werden.
-
-Typen, die kleiner oder gleich 16 Byte werden in X0 und X1, mit X0, enthält die niederwertigen 8 Bytes zurückgegeben.
-
-Für Typen, die mehr als 16 Bytes muss der Aufrufer einen Speicherblock von ausreichender Größe und Ausrichtung, um das Ergebnis aufzunehmen reservieren. Die Adresse des Speicherblocks muss als ein zusätzliches Argument der Funktion in X8 übergeben werden. Der aufgerufene kann den Ergebnis-Speicherblock zu einem beliebigen Zeitpunkt während der Ausführung der Unterroutine ändern. Der aufgerufene nicht erforderlich, den in X8 gespeicherten Wert beibehalten.
-
-### <a name="c-return-style"></a>C++-zurück-Stil
-
-Der Aufrufer muss einen Speicherblock von ausreichender Größe und Ausrichtung, um das Ergebnis aufzunehmen, die reserviert werden. Die Adresse des Speicherblocks muss als ein zusätzliches Argument an die Funktion in X0 oder X1 übergeben werden, wenn $dies X0 übergeben wird. Der aufgerufene kann den Ergebnis-Speicherblock zu einem beliebigen Zeitpunkt während der Ausführung der Unterroutine ändern. Der aufgerufene gibt die Adresse des Speicherblocks in X0 zurück.
+- Der Aufrufer muss einen Speicherblock von ausreichender Größe und Ausrichtung, um das Ergebnis aufzunehmen, die reserviert werden. Die Adresse des Speicherblocks muss als ein zusätzliches Argument an die Funktion in X0 oder X1 übergeben werden, wenn $dies X0 übergeben wird. Der aufgerufene kann den Ergebnis-Speicherblock zu einem beliebigen Zeitpunkt während der Ausführung der Unterroutine ändern. Der aufgerufene gibt die Adresse des Speicherblocks in X0 zurück.
 
 ## <a name="stack"></a>Stapel
 
