@@ -1,6 +1,6 @@
 ---
 title: CD2DResource-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DResource
 - AFXRENDERTARGET/CD2DResource
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284865"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564774"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource-Klasse
 
-Eine abstrakte Klasse, die eine Schnittstelle zum Erstellen und Verwalten von D2D-Ressourcen wie z. B. Pinsel, Ebenen und Texte enthält.
+Eine abstrakte Klasse, die eine Schnittstelle, die zum Erstellen und Verwalten von D2D-Ressourcen wie z. B. Pinsel, Ebenen und Texte bereitstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ class CD2DResource : public CObject;
 |Name|Beschreibung|
 |----------|-----------------|
 |[CD2DResource::CD2DResource](#cd2dresource)|Erstellt ein CD2DResource-Objekt.|
-|[CD2DResource::~CD2DResource](#cd2dresource__~cd2dresource)|Der Destruktor. Wird aufgerufen, wenn ein Ressourcenobjekt auf D2D zerstört wird.|
+|[CD2DResource::~CD2DResource](#_dtorcd2dresource)|Der Destruktor. Wird aufgerufen, wenn ein Ressourcenobjekt auf D2D zerstört wird.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -65,9 +65,9 @@ class CD2DResource : public CObject;
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Ressource wird Destoyed vom Besitzer (CRenderTarget) sein.|
+|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Ressourcen werden vom Besitzer (CRenderTarget) zerstört|
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|Zeiger auf das übergeordnete Element CRenderTarget)|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
@@ -157,7 +157,7 @@ True, wenn die Ressource gültig ist. andernfalls "false".
 
 ##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
 
-Ressource wird Destoyed vom Besitzer (CRenderTarget) sein.
+Ressourcen werden vom Besitzer (CRenderTarget) zerstört
 
 ```
 BOOL m_bIsAutoDestroy;

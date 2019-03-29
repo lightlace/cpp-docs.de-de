@@ -1,6 +1,6 @@
 ---
 title: Platform::Collections::Map-Klasse
-ms.date: 01/18/2018
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: cbe0b5e422c05cee46bff85e816ecc726c667749
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745175"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565281"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map-Klasse
 
@@ -47,7 +47,7 @@ Der Typ des Werts im Schlüssel-Wert-Paar.
 *C*<br/>
 Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Map zu bestimmen. In der Standardeinstellung [Std:: less\<K >](../standard-library/less-struct.md).
 
-*__is_valid_winrt_type()* eine vom Compiler generierten-Funktion, die überprüft, den Typ des ob *K* und *V* und bietet eine benutzerfreundliche Fehlermeldung, wenn der Typ in der Zuordnung gespeichert werden kann.
+*__is_valid_winrt_type()* eine vom Compiler generierte Funktion, die überprüft, den Typ des ob *K* und *V* und bietet eine benutzerfreundliche Fehlermeldung, wenn der Typ in der Zuordnung gespeichert werden kann.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -92,8 +92,8 @@ Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md
 
 |||
 |-|-|
-|name|Beschreibung|
-|[Map::MapChanged](#mapchanged-event.md) `event`|Tritt auf, wenn sich die Map ändert.|
+|Name|Beschreibung|
+|[Map:: mapchanged](#mapchanged) Ereignis|Tritt auf, wenn sich die Map ändert.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -238,7 +238,7 @@ Der Typname der aktuellen Map.
 Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Map zu bestimmen.
 
 *m*<br/>
-Ein Verweis oder [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) zu einem `map Class` , wird verwendet, um die aktuelle Map zu initialisieren.
+Ein Verweis oder [Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) zu einem `map Class` , wird verwendet, um die aktuelle Map zu initialisieren.
 
 *first*<br/>
 Der Eingabeiterator des ersten Elements in einem Bereich von Elementen, die verwendet werden, um die aktuelle Map zu initialisieren.
