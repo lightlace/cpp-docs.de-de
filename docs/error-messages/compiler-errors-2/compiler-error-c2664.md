@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: d9ebea5c955dcf89308654feec9866d4fdc924cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cffd178e1736358333ee27d4572d3531de23f527
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501360"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774606"
 ---
 # <a name="compiler-error-c2664"></a>Compilerfehler C2664
 
@@ -31,7 +31,7 @@ So beheben Sie C2664
 
 C2664 kann auch generiert werden, wenn durch eine Klasse ein Member in einer seiner Basisklassen verborgen wird.
 
-Weitere Informationen finden Sie unter [wie: Konvertieren von System:: String Wchar_t * oder Char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
+Weitere Informationen finden Sie unter [Vorgehensweise: Konvertieren von System:: String in Wchar_t * oder Char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -189,7 +189,7 @@ int main( ) {
 
 ## <a name="example"></a>Beispiel
 
-Eine Enumerationsvariable wird nicht in den ihr zugrunde liegenden Typ konvertiert, sodass einem Funktionsaufruf entsprochen wird. Weitere Informationen finden Sie unter [Enumerationsklasse](../../windows/enum-class-cpp-component-extensions.md). Im folgenden Beispiel wird C2664 generiert und gezeigt, wie Sie diesen Fehler beheben:
+Eine Enumerationsvariable wird nicht in den ihr zugrunde liegenden Typ konvertiert, sodass einem Funktionsaufruf entsprochen wird. Weitere Informationen finden Sie unter [Enumerationsklasse](../../extensions/enum-class-cpp-component-extensions.md). Im folgenden Beispiel wird C2664 generiert und gezeigt, wie Sie diesen Fehler beheben:
 
 ```
 // C2664f.cpp

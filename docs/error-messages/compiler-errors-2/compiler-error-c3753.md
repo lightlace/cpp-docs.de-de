@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3753
 ms.assetid: a5b99e28-796c-4107-a673-97c2ae3bb2b9
-ms.openlocfilehash: b6b1e8c3241a778b29045e734fffebb663554e62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c9c078e72babc85dc7092b8d6414625e9c0db7b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498370"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771098"
 ---
 # <a name="compiler-error-c3753"></a>Compilerfehler C3753
 
@@ -19,7 +19,7 @@ eine generische Eigenschaft ist nicht zulässig.
 
 Generische Parameterlisten können nur für verwaltete Klassen, Strukturen oder Funktionen angezeigt werden.
 
-Weitere Informationen finden Sie unter [Generika](../../windows/generics-cpp-component-extensions.md) und [Eigenschaft](../../windows/property-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [Generika](../../extensions/generics-cpp-component-extensions.md) und [Eigenschaft](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 

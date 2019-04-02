@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3084
 ms.assetid: 0362cb70-e24e-476f-a24d-8f5bb97c3afd
-ms.openlocfilehash: 7659c17d999a8720ffb0ccdcdb631b27949167b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01e229fe0ae5bf9e04c577bb653ff1ed7fdb33bf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572678"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773899"
 ---
 # <a name="compiler-error-c3084"></a>Compilerfehler C3084
 
@@ -19,7 +19,7 @@ ms.locfileid: "50572678"
 
 Ein Finalizer oder Destruktor wurde falsch deklariert.
 
-Beispielsweise sollte ein Destruktor nicht als versiegelt gekennzeichnet werden.  Abgeleitete Typen können nicht auf den Destruktor zugreifen.  Weitere Informationen finden Sie unter [explizite Überschreibungen](../../windows/explicit-overrides-cpp-component-extensions.md) und [Destruktoren und Finalizer in der Vorgehensweise: definieren und Verarbeiten von Klassen und Strukturen (C++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Beispielsweise sollte ein Destruktor nicht als versiegelt gekennzeichnet werden.  Abgeleitete Typen können nicht auf den Destruktor zugreifen.  Weitere Informationen finden Sie unter [explizite Überschreibungen](../../extensions/explicit-overrides-cpp-component-extensions.md) und [Destruktoren und Finalizer unter How to: Definieren und Verarbeiten von Klassen und Strukturen (C++ / CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Beispiel
 

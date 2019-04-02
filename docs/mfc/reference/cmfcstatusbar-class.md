@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326750"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775958"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar-Klasse
 
@@ -138,26 +138,26 @@ class CMFCStatusBar : public CPane
 
 ## <a name="remarks"></a>Hinweise
 
-Das folgende Diagramm zeigt eine Abbildung der Statusleiste von [Status Leiste Demobeispiel](../../visual-cpp-samples.md) Anwendung.
+Das folgende Diagramm zeigt eine Abbildung der Statusleiste von [Status Leiste Demobeispiel](../../overview/visual-cpp-samples.md) Anwendung.
 
 ![Beispiel für CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "Beispiel für CMFCStatusBar")
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt die lokalen Variablen, die die Anwendung verwendet, um die verschiedenen Methoden rufen Sie in der `CMFCStatusBar` Klasse. Diese Variablen werden in StatusBarDemoView.h deklariert. Der Hauptframe in "MainFrm.h" deklariert ist, das Dokument in StatusBarDemoDoc.h deklariert wird und die Ansicht in StatusBarDemoView.h deklariert ist. Dieser Codeausschnitt ist Teil der [Status Leiste Demobeispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel zeigt die lokalen Variablen, die die Anwendung verwendet, um die verschiedenen Methoden rufen Sie in der `CMFCStatusBar` Klasse. Diese Variablen werden in StatusBarDemoView.h deklariert. Der Hauptframe in "MainFrm.h" deklariert ist, das Dokument in StatusBarDemoDoc.h deklariert wird und die Ansicht in StatusBarDemoView.h deklariert ist. Dieser Codeausschnitt ist Teil der [Status Leiste Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie zum Abrufen eines Verweises auf `CMFCStatusBar` Objekt durch die Einführung der `GetStatusBar` -Methode in der "MainFrm.h", und klicken Sie dann das Aufrufen dieser Methode aus der `GetStatusBar` -Methode in der StatusBarDemoView.h. Dieser Codeausschnitt ist Teil der [Status Leiste Demobeispiel](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie zum Abrufen eines Verweises auf `CMFCStatusBar` Objekt durch die Einführung der `GetStatusBar` -Methode in der "MainFrm.h", und klicken Sie dann das Aufrufen dieser Methode aus der `GetStatusBar` -Methode in der StatusBarDemoView.h. Dieser Codeausschnitt ist Teil der [Status Leiste Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie verschiedene Methoden aufrufen, der `CMFCStatusBar` Klasse in StatusBarDemoView.cpp. Die Konstanten sind in "MainFrm.h" deklariert. Das Beispiel zeigt, wie Sie auf das Symbol, legen Sie den QuickInfo-Text, der dem Statusleistenbereich, eine Statusanzeige im angegebenen Bereich anzuzeigen, weisen Sie eine Animation in den angegebenen Bereich, legen Sie den Text und die Breite der dem Statusleistenbereich und legen Sie die Bearbeitung die aktuellen Statusanzeige für den Statusleistenbereich ESS-Leiste. Dieser Codeausschnitt ist Teil der [Status Leiste Demobeispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel zeigt, wie Sie verschiedene Methoden aufrufen, der `CMFCStatusBar` Klasse in StatusBarDemoView.cpp. Die Konstanten sind in "MainFrm.h" deklariert. Das Beispiel zeigt, wie Sie auf das Symbol, legen Sie den QuickInfo-Text, der dem Statusleistenbereich, eine Statusanzeige im angegebenen Bereich anzuzeigen, weisen Sie eine Animation in den angegebenen Bereich, legen Sie den Text und die Breite der dem Statusleistenbereich und legen Sie die Bearbeitung die aktuellen Statusanzeige für den Statusleistenbereich ESS-Leiste. Dieser Codeausschnitt ist Teil der [Status Leiste Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]

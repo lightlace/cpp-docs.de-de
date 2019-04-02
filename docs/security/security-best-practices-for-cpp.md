@@ -8,18 +8,18 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 81a15f7a34ebe6c4c101932074c63cb1c7f7fd26
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742472"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769861"
 ---
 # <a name="security-best-practices-for-c"></a>Empfohlene Vorgehensweisen bezüglich der Sicherheit in C++
 
 Dieser Artikel enthält Informationen über Sicherheitstools und Vorgehensweisen. Ihre Verwendung macht eine Anwendung zwar nicht immun gegen Angriffe, aber sie verringert die Wahrscheinlichkeit erfolgreicher Angriffe.
 
-## <a name="visual-c-security-features"></a>Visual C++-Sicherheitsfeatures
+## <a name="visual-c-security-features"></a>Visual C++-Sicherheitsfunktionen
 
 Diese Sicherheitsfunktionen sind in den Visual C++-Compiler und den Visual C++-Linker integriert:
 
@@ -46,13 +46,13 @@ Die C-Laufzeitbibliothek (CRT) wurde um sichere Versionen von Funktionen erweite
 
 ## <a name="safeint-library"></a>SafeInt-Bibliothek
 
-[SafeInt-Bibliothek](../windows/safeint-library.md) verhindert Ganzzahlüberläufe und andere als Angriffspunkt geeignete Fehler, die auftreten können, wenn die Anwendung mathematische Vorgänge ausführt. Die `SafeInt` -Bibliothek enthält die [SafeInt-Klasse](../windows/safeint-class.md), [SafeIntException-Klasse](../windows/safeintexception-class.md), und mehrere [SafeInt-Funktionen](../windows/safeint-functions.md).
+[SafeInt-Bibliothek](../safeint/safeint-library.md) verhindert Ganzzahlüberläufe und andere als Angriffspunkt geeignete Fehler, die auftreten können, wenn die Anwendung mathematische Vorgänge ausführt. Die `SafeInt` -Bibliothek enthält die [SafeInt-Klasse](../safeint/safeint-class.md), [SafeIntException-Klasse](../safeint/safeintexception-class.md), und mehrere [SafeInt-Funktionen](../safeint/safeint-functions.md).
 
 Die `SafeInt`-Klasse schützt vor Ganzzahlüberlauf und Exploits vom Typ "Division durch 0". Sie können sie zum Behandeln von Vergleichen zwischen Werten unterschiedlicher Typen verwenden. Es stellt zwei fehlerbehandlungsrichtlinien bereit. Gemäß Standardrichtlinie löst die `SafeInt`-Klasse eine `SafeIntException`-Klassenausnahme aus, um zu berichten, warum ein mathematischer Vorgang nicht abgeschlossen werden kann. Gemäß der zweiten Richtlinie beendet die `SafeInt`-Klasse die Programmausführung. Sie können auch eine benutzerdefinierte Richtlinie definieren.
 
 Jede `SafeInt`-Funktion schützt einen mathematischen Vorgang vor einem als Angriffspunkt geeigneten Fehler. Sie können zwei verschiedene Arten von Parametern verwenden, ohne sie in den gleichen Typ konvertieren zu müssen. Verwenden Sie die `SafeInt`-Klasse, um mehrere mathematische Vorgänge zu schützen.
 
-## <a name="checked-iterators"></a>Überprüfte Iteratoren
+## <a name="checked-iterators"></a>Checked Iterators
 
 Ein überprüfter Iterator erzwingt Containergrenzen. Wenn ein überprüfter Iterator außerhalb der zulässigen Grenzen liegt, wird eine Ausnahme generiert und die Programmausführung beendet. Ein überprüfter Iterator stellt andere Ebenen in der Antwort von Werten abhängig sind, die Präprozessordefinitionen zugewiesen sind, definiert z. B.  **\_SECURE\_SCL\_löst** und  **\_ITERATOR\_DEBUGGEN\_Ebene**. Z. B. am  **\_ITERATOR\_DEBUGGEN\_LEVEL = 2**, ein überprüfter Iterator stellt umfassende korrektheitsüberprüfungen im Debugmodus befindet, die sind mit verfügbar Assert-Vorgänge. Weitere Informationen finden Sie unter [überprüfte Iteratoren](../standard-library/checked-iterators.md) und [ \_ITERATOR\_DEBUGGEN\_Ebene](../standard-library/iterator-debug-level.md).
 

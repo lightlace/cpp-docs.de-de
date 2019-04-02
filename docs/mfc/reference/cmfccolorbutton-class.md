@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293484"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780001"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton-Klasse
 
@@ -98,7 +98,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |`m_bAltColorDlg`|Ein boolescher Wert. Bei "true", zeigt das Framework die [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) Farbe Dialogfeld bei der *andere* Schaltfläche geklickt wird, oder False gibt an, das System color-Dialogfeld. Der Standardwert ist "true". Weitere Informationen finden Sie unter [CMFCColorButton::EnableOtherButton](#enableotherbutton).|
 |`m_bAutoSetFocus`|Ein boolescher Wert. Bei "true", wird das Framework der Fokus auf das Menü "Farbe", wenn Sie im Menü angezeigt wird oder wenn "FALSE" den Fokus nicht ändert. Der Standardwert ist "true".|
@@ -126,7 +126,7 @@ Die `CMFCColorButton` Objekt benachrichtigt das übergeordnete Element, die eine
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie eine Schaltfläche "Farbe" zu konfigurieren, indem Sie mithilfe verschiedener Methoden in der `CMFCColorButton` Klasse. Die Methoden legen Sie die Farbe der Schaltfläche für die Farbe und die Anzahl der Spalten, und aktivieren Sie die automatische und die anderen Schaltflächen. In diesem Beispiel ist Teil der [Status Leiste Demobeispiel](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie eine Schaltfläche "Farbe" zu konfigurieren, indem Sie mithilfe verschiedener Methoden in der `CMFCColorButton` Klasse. Die Methoden legen Sie die Farbe der Schaltfläche für die Farbe und die Anzahl der Spalten, und aktivieren Sie die automatische und die anderen Schaltflächen. In diesem Beispiel ist Teil der [Status Leiste Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]

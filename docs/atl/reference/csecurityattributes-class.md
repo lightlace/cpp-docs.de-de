@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: ef0756ee1dd0aa7d82caf218aa2c417df0c2778c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 66188a2c944379cfae813220937ac1e7e98fb41d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269252"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768340"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes-Klasse
 
@@ -98,7 +98,7 @@ Diese Methode wird verwendet, durch den Konstruktor zum Initialisieren der `CSec
 
 ## <a name="see-also"></a>Siehe auch
 
-[Beispiel für die Sicherheit](../../visual-cpp-samples.md)<br/>
+[Beispiel für die Sicherheit](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)<br/>
 [Sicherheitsbeschreibung](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>

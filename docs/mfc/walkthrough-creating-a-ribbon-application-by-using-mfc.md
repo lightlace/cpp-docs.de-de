@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: a74e8863c32199d1c0309f70bceae867993ce721
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271332"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781223"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Exemplarische Vorgehensweise: Erstellen einer Menübandanwendung mithilfe von MFC
 
@@ -87,9 +87,9 @@ In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie Visual 
 
 [Vorgehensweise: Anpassen der Anwendungsschaltfläche](../mfc/how-to-customize-the-application-button.md)
 
-End-to-End-Beispiele finden Sie unter [Beispiele (MFC Feature Pack)](../visual-cpp-samples.md).
+End-to-End-Beispiele finden Sie unter [Beispiele (MFC Feature Pack)](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Exemplarische Vorgehensweisen](../mfc/walkthroughs-mfc.md)<br/>
-[Beispiele (MFC FeaturePack)](../visual-cpp-samples.md)
+[Beispiele (MFC FeaturePack)](../overview/visual-cpp-samples.md)

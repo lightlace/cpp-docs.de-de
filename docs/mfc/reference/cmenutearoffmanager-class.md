@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: c6bdbb18c2d1b40423457b4cf07d0a747138b99b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8b92ddad9d3a6de41cf6914dee268f6e54b5d420
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266197"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776062"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager-Klasse
 
@@ -70,7 +70,7 @@ Um abtrennbare Menüs in Ihrer Anwendung verwenden zu können, benötigen Sie ei
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie zum Erstellen und initialisieren eine `CMenuTearOffManager` -Objekt durch Aufrufen der `CWinAppEX::EnableTearOffMenus` Methode. Dieser Codeausschnitt ist Teil des [WordPad-Beispiels](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie zum Erstellen und initialisieren eine `CMenuTearOffManager` -Objekt durch Aufrufen der `CWinAppEX::EnableTearOffMenus` Methode. Dieser Codeausschnitt ist Teil des [WordPad-Beispiels](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]
 

@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296006"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781977"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl-Klasse
 
@@ -297,7 +297,7 @@ Die folgenden Abbildungen dargestellt ein Eigenschaftenraster-Steuerelement, das
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie ein Eigenschaftenobjekt der Grid-Steuerelement zu konfigurieren, indem Sie mithilfe verschiedener Methoden in der `CMFCPropertyGridCtrl` Klasse. Das Beispiel veranschaulicht das Kopfzeilen-Steuerelement zu aktivieren, aktivieren im Bereich für das, und legen Sie die Darstellung des Eigenschaftenraster-Steuerelement. Das Beispiel zeigt auch, Festlegen der alphabetischen Modus für das Steuerelement, bei dem das Steuerelement sortiert, alle Eigenschaften, die sie mit dem Namen ihrer Eigenschaft enthält, und wie Sie benutzerdefinierten Farben für die verschiedenen Elemente von dem Eigenschaftenraster-Steuerelement festlegen. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie ein Eigenschaftenobjekt der Grid-Steuerelement zu konfigurieren, indem Sie mithilfe verschiedener Methoden in der `CMFCPropertyGridCtrl` Klasse. Das Beispiel veranschaulicht das Kopfzeilen-Steuerelement zu aktivieren, aktivieren im Bereich für das, und legen Sie die Darstellung des Eigenschaftenraster-Steuerelement. Das Beispiel zeigt auch, Festlegen der alphabetischen Modus für das Steuerelement, bei dem das Steuerelement sortiert, alle Eigenschaften, die sie mit dem Namen ihrer Eigenschaft enthält, und wie Sie benutzerdefinierten Farben für die verschiedenen Elemente von dem Eigenschaftenraster-Steuerelement festlegen. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -480,7 +480,7 @@ Erstellen Sie ein Eigenschaftenraster-Steuerelement, rufen Sie zuerst [CMFCPrope
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `Create` -Methode in der `CMFCPropertyGridCtrl` Klasse. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `Create` -Methode in der `CMFCPropertyGridCtrl` Klasse. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70ca283468a51b4214273698a532ce2a85d52b44
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272099"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774976"
 ---
 # <a name="atl-collection-classes"></a>ATL-Auflistungsklassen
 
@@ -116,13 +116,13 @@ Das folgende Diagramm zeigt die Klassenhierarchie für die CTraits-Klassen.
 
 Die folgenden Beispiele veranschaulichen die Auflistungsklassen:
 
-- [MMXSwarm-Beispiel](../visual-cpp-samples.md)
+- [MMXSwarm-Beispiel](../overview/visual-cpp-samples.md)
 
-- [-Beispiel-Beispiel](../visual-cpp-samples.md)
+- [-Beispiel-Beispiel](../overview/visual-cpp-samples.md)
 
 - [UpdatePV-Beispiel](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 
-- [Marquee-Beispiel](../visual-cpp-samples.md)
+- [Marquee-Beispiel](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Siehe auch
 

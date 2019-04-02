@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 85e469e1f52a22917580ce8616aaba5ff57d08ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740389"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768028"
 ---
 # <a name="cpoint-class"></a>CPoint-Klasse
 
@@ -342,7 +342,7 @@ Verwenden Sie den unäroperator, um einen Punkt zu negieren. Verwenden Sie beisp
 
 ## <a name="see-also"></a>Siehe auch
 
-[MDI MFC-Beispiel](../../visual-cpp-samples.md)<br/>
+[MDI MFC-Beispiel](../../overview/visual-cpp-samples.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [POINT-Struktur](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect-Klasse](../../atl-mfc-shared/reference/crect-class.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: d36932a3edc0129f0497cb8db4095283650c5c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494158"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773098"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Verwenden eines Windows Form-Benutzersteuerelements in MFC
 
@@ -34,7 +34,7 @@ Den folgenden Abschnitten wird beschrieben, wie Sie:
 > [!NOTE]
 > Bei der Erstellung der Anwendung eine private (geänderte) Kopie der MFC-Windows Forms-Schnittstellen-DLL (mfcmifc80.dll) kann es nicht im GAC zu installieren, es sei denn, Sie den Microsoft-Schlüssel durch Ihren eigenen Anbieter-Schlüssel zu ersetzen. Weitere Informationen zum Signieren der Assembly, finden Sie unter [Programmieren mit Assemblys](/dotnet/framework/app-domains/programming-with-assemblies) und [Assemblys mit starken Namen (Assemblysignierung) (C++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Wenn die MFC-Anwendung Windows Forms verwendet, müssen Sie mfcmifc80.dll mit Ihrer Anwendung verteilen. Weitere Informationen finden Sie unter [Neuverteilen der MFC-Bibliothek](../ide/redistributing-the-mfc-library.md).
+Wenn die MFC-Anwendung Windows Forms verwendet, müssen Sie mfcmifc80.dll mit Ihrer Anwendung verteilen. Weitere Informationen finden Sie unter [Neuverteilen der MFC-Bibliothek](../windows/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

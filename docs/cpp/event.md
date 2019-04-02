@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: bd5f53e5d2b80b22c3a38f413c4fa79b27fa7026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606478"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778259"
 ---
 # <a name="event"></a>__event
 
@@ -62,7 +62,7 @@ Finden Sie unter [Ereignisbehandlung in systemeigenem C++](../cpp/event-handling
 
 COM-Ereignisse sind Schnittstellen. Die Parameter einer Methode in einer Quellschnittstelle des Ereignisses muss *in* Parameter (Dies wird jedoch nicht streng erzwungen), da ein *out* Parameter ist nicht hilfreich, wenn Sie Multicasting. Eine Warnung der Stufe 1 wird ausgegeben, wenn Sie verwenden eine *out* Parameter.
 
-Der Rückgabetyp ist in der Regel HRESULT oder **"void"**, jedoch können beliebiger ganzzahliger Typ sein, einschließlich **Enum**. Wenn ein Ereignis einen ganzzahligen Rückgabetyp verwendet und ein Ereignishandler einen Wert ungleich 0 (null) zurückgibt, handelt es sich um eine Fehlerbedingung. In diesem Fall werden durch das ausgelöste Ereignis Aufrufe anderer Delegaten abgebrochen. Beachten Sie, dass der Compiler eine Quellschnittstelle des Ereignisses als automatisch markiert einen [Quelle](../windows/source-cpp.md) in der generierten IDL-Datei.
+Der Rückgabetyp ist in der Regel HRESULT oder **"void"**, jedoch können beliebiger ganzzahliger Typ sein, einschließlich **Enum**. Wenn ein Ereignis einen ganzzahligen Rückgabetyp verwendet und ein Ereignishandler einen Wert ungleich 0 (null) zurückgibt, handelt es sich um eine Fehlerbedingung. In diesem Fall werden durch das ausgelöste Ereignis Aufrufe anderer Delegaten abgebrochen. Beachten Sie, dass der Compiler eine Quellschnittstelle des Ereignisses als automatisch markiert einen [Quelle](../windows/attributes/source-cpp.md) in der generierten IDL-Datei.
 
 Die [__interface](../cpp/interface.md) -Schlüsselwort ist immer erforderlich ist, nach dem **__event** für eine COM-Ereignisquelle.
 
@@ -75,7 +75,7 @@ Finden Sie unter [Ereignisbehandlung in COM](../cpp/event-handling-in-com.md) Be
 
 ## <a name="managed-events"></a>Verwaltete Ereignisse
 
-Weitere Informationen über die Codierung von Ereignissen in der neuen Syntax finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md).
+Weitere Informationen über die Codierung von Ereignissen in der neuen Syntax finden Sie unter [Ereignis](../extensions/event-cpp-component-extensions.md).
 
 Verwaltete Ereignisse sind Datenmember oder Methoden. Wenn mit einem Ereignis verwendet wird, muss der Rückgabetyp eines Delegaten kompatibel mit werden die [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Der Rückgabetyp des Ereignishandlers muss dem Rückgabetyp des Delegaten entsprechen. Weitere Informationen zu Delegaten finden Sie unter [Delegaten und Ereignissen](../dotnet/delegates-and-events.md). Wenn ein verwaltetes Ereignis ein Datenmember ist, muss ihr Typ ein Zeiger auf einen Delegaten sein.
 
@@ -87,7 +87,7 @@ __event ClickEventHandler* OnClick;  // data member as event
 __event void OnClick(String* s);  // method as event
 ```
 
-Wenn Sie implizit ein verwaltetes Ereignis deklarieren, können Sie add- und remove-Accessoren angeben, die aufgerufen werden, wenn Ereignishandler hinzugefügt oder entfernt werden. Sie können auch die Methode definieren, die das Ereignis außerhalb der Klasse aufruft (auslöst).
+Wenn Sie implizit ein verwaltetes Ereignis deklarieren, können Sie Add- und Remove-Zugriffsmethoden angeben, die aufgerufen werden, wenn Ereignishandler hinzugefügt oder entfernt werden. Sie können auch die Methode definieren, die das Ereignis außerhalb der Klasse aufruft (auslöst).
 
 ## <a name="example-native-events"></a>Beispiel: Systemeigene Ereignisse
 
@@ -131,8 +131,8 @@ public:
 
 [Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
 [Ereignisbehandlung](../cpp/event-handling.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__unhook](../cpp/unhook.md)<br/>
 [__raise](../cpp/raise.md)

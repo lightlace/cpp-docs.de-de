@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4687
 ms.assetid: 2f28e0b1-7358-4c88-bd70-aad8f0aa004c
-ms.openlocfilehash: 50551faf817f83d8a4af848a75af67ebe7004fe7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1978e1a35ba5b5d59b5961a21378d8af6921d145
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635476"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778662"
 ---
 # <a name="compiler-warning-c4687"></a>Compilerwarnung C4687
 
@@ -19,7 +19,7 @@ ms.locfileid: "50635476"
 
 Ein Typ versiegelter, "abstract" eignet sich in der Regel nur auf statische Memberfunktionen enthalten.
 
-Weitere Informationen finden Sie unter [abstrakte](../../windows/abstract-cpp-component-extensions.md)und [versiegelten](../../windows/sealed-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [abstrakte](../../extensions/abstract-cpp-component-extensions.md)und [versiegelten](../../extensions/sealed-cpp-component-extensions.md).
 
 C4687 wird standardmäßig als Fehler ausgegeben. Sie können C4687 mit Unterdrücken der [Warnung](../../preprocessor/warning.md) Pragma. Wenn Sie sicher sind, dass Sie in einem versiegelten "," abstract-Typ eine Schnittstelle implementieren möchten, können Sie C4687 unterdrücken.
 

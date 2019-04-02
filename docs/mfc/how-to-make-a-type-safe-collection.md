@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8be781bad699edb8cb0be844d79802269c3e0c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295187"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781522"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Vorgehensweise: Erstellen einer typsicheren Auflistung
 
@@ -27,7 +27,7 @@ In diesem Artikel wird erläutert, wie Sie typsichere Auflistungen für Ihre eig
 
 - [Verwenden nicht auf Vorlagen basierende-Auflistungsklassen](#_core_using_nontemplate_collection_classes)
 
-Die Microsoft Foundation Class-Bibliothek bietet vordefinierte typsichere Auflistungen, die basierend auf C++-Vorlagen. Da sie die Vorlagen sind, bieten diese Klassen typsicherheit und einfache Bedienung ohne die Typumwandlung und andere zusätzliche Arbeit, die die Verwendung einer nicht auf Vorlagen basierende Klasse zu diesem Zweck. Das MFC-Beispiel [sammeln](../visual-cpp-samples.md) veranschaulicht die Verwendung von vorlagenbasierte Auflistungsklassen in einer MFC-Anwendung. Verwenden Sie diese Klassen in der Regel jedes Mal, wenn Sie neue Sammlungen Code schreiben.
+Die Microsoft Foundation Class-Bibliothek bietet vordefinierte typsichere Auflistungen, die basierend auf C++-Vorlagen. Da sie die Vorlagen sind, bieten diese Klassen typsicherheit und einfache Bedienung ohne die Typumwandlung und andere zusätzliche Arbeit, die die Verwendung einer nicht auf Vorlagen basierende Klasse zu diesem Zweck. Das MFC-Beispiel [sammeln](../overview/visual-cpp-samples.md) veranschaulicht die Verwendung von vorlagenbasierte Auflistungsklassen in einer MFC-Anwendung. Verwenden Sie diese Klassen in der Regel jedes Mal, wenn Sie neue Sammlungen Code schreiben.
 
 ##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> Vorlagenbasierte Klassen verwenden, typsicherheit
 

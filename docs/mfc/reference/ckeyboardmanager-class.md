@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303606"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779806"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager-Klasse
 
@@ -81,7 +81,7 @@ Erstellen Sie keine `CKeyboardManager` Objekt manuell. Es wird automatisch durch
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie einen Zeiger zum Abrufen einer `CKeyboardManager` -Objekt aus einer `CWinAppEx` -Klasse, und alle zugeordneten Befehle im Menü Tastenkombinationen anzeigen. Dieser Codeausschnitt ist Teil der [Beispiel für benutzerdefinierte Seiten](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie einen Zeiger zum Abrufen einer `CKeyboardManager` -Objekt aus einer `CWinAppEx` -Klasse, und alle zugeordneten Befehle im Menü Tastenkombinationen anzeigen. Dieser Codeausschnitt ist Teil der [Beispiel für benutzerdefinierte Seiten](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 

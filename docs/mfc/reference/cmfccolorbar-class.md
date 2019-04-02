@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283253"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771406"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar-Klasse
 
@@ -144,7 +144,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |`m_bInternal`|Ein boolesches Feld, das bestimmt, ob die Mausereignisse verarbeitet werden. Mausereignisse werden in der Regel verarbeitet, wenn dieses Feld "true ist" und Anpassungsmodus "false ist".|
 |`m_bIsEnabled`|Ein boolescher Wert, der angibt, ob ein Steuerelement aktiviert ist.|
@@ -202,7 +202,7 @@ Klickt der Benutzer eine Schaltfläche der Farbleiste-Steuerelement, das Framewo
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt eine Farbleiste konfigurieren mithilfe verschiedener Methoden in der `CMFCColorBar` Klasse. Die Methoden legen Sie die horizontale und vertikale Ränder, die andere Schaltfläche "aktivieren", erstellen Sie ein Fenster der Farbleiste-Steuerelement und legt die zurzeit ausgewählte Farbe. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).
+Das folgende Beispiel zeigt eine Farbleiste konfigurieren mithilfe verschiedener Methoden in der `CMFCColorBar` Klasse. Die Methoden legen Sie die horizontale und vertikale Ränder, die andere Schaltfläche "aktivieren", erstellen Sie ein Fenster der Farbleiste-Steuerelement und legt die zurzeit ausgewählte Farbe. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#1](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#2](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_2.cpp)]

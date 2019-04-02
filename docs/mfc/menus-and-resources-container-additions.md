@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b1a74fef743592d3d052226dac926fc7ddc58578
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279337"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770342"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menüs und Ressourcen: Containererweiterungen
 
@@ -29,7 +29,7 @@ Dieser Artikel beschreibt die Änderungen, die für die Menüs und andere Ressou
 
 In containeranwendungen zwei Arten von Änderungen vorgenommen werden müssen: Änderungen an vorhandenen Ressourcen zur Unterstützung von OLE visuelle Bearbeitung und Hinzufügen von neuen Ressourcen, die für die direkte Aktivierung verwendet. Wenn Sie den Assistenten zum Erstellen Ihrer Anwendung mit Containern verwenden, werden diese Schritte für Sie ausgeführt werden, aber einige Anpassungen erforderlich sein.
 
-Wenn Sie nicht der Anwendungs-Assistent verwenden, empfiehlt es sich um OCLIENT anzuzeigen. RC-Version das Ressourcenskript für die OCLIENT-beispielanwendung, um festzustellen, wie diese Änderungen implementiert werden. Finden Sie im MFC-OLE-Beispiel [OCLIENT](../visual-cpp-samples.md).
+Wenn Sie nicht der Anwendungs-Assistent verwenden, empfiehlt es sich um OCLIENT anzuzeigen. RC-Version das Ressourcenskript für die OCLIENT-beispielanwendung, um festzustellen, wie diese Änderungen implementiert werden. Finden Sie im MFC-OLE-Beispiel [OCLIENT](../overview/visual-cpp-samples.md).
 
 In diesem Artikel behandelten Themen umfassen:
 
@@ -62,7 +62,7 @@ Kleine Änderungen an einer containeranwendung Accelerator tabellenressourcen si
 |--------|---------|----------|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
-Die zweite Änderung ist zum Erstellen einer neuen Accelerator-Tabelle, die die neue Menüressource erstellt haben, für die direkte Aktivierung entspricht. Diese Tabelle enthält Einträge für die Datei und Fenster Menüs neben dem Eintrag "VK_ESCAPE". Im folgende Beispiel wird die Zugriffstastentabelle, die für die direkte Aktivierung im MFC-Beispiel erstellten [CONTAINER](../visual-cpp-samples.md):
+Die zweite Änderung ist zum Erstellen einer neuen Accelerator-Tabelle, die die neue Menüressource erstellt haben, für die direkte Aktivierung entspricht. Diese Tabelle enthält Einträge für die Datei und Fenster Menüs neben dem Eintrag "VK_ESCAPE". Im folgende Beispiel wird die Zugriffstastentabelle, die für die direkte Aktivierung im MFC-Beispiel erstellten [CONTAINER](../overview/visual-cpp-samples.md):
 
 |ID|Key|Typ|
 |--------|---------|----------|

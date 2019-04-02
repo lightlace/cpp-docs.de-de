@@ -20,12 +20,12 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaa07373b7dd22807290ceefa9197b4013c61fe5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464586"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778233"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Verwenden von C++-Interop (implizites PInvoke)
 
@@ -59,7 +59,7 @@ Unabhängig davon, ob COM direkt oder über eine CRCW verwendet wird müssen die
 
 ## <a name="blittable-types"></a>Blitfähige Typen
 
-Für nicht verwaltete APIs, die einfache, systeminterne Typen verwenden (finden Sie unter [blitfähige und nicht blitfähige Typen](/dotnet/framework/interop/blittable-and-non-blittable-types)), keine besondere Codierung ist erforderlich, da diese Datentypen die gleiche Darstellung im Arbeitsspeicher haben, während komplexere Datentypen erfordern explizite Daten-Marshalling. Ein Beispiel finden Sie unter [Vorgehensweise: Aufrufen von nativen DLLs aus verwaltetem Code mithilfe von PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
+Für nicht verwaltete APIs, die einfache, systeminterne Typen verwenden (finden Sie unter [blitfähige und nicht blitfähige Typen](/dotnet/framework/interop/blittable-and-non-blittable-types)), keine besondere Codierung ist erforderlich, da diese Datentypen die gleiche Darstellung im Arbeitsspeicher haben, während komplexere Datentypen erfordern explizite Daten-Marshalling. Ein Beispiel finden Sie unter [Gewusst wie: Aufrufen von systemeigenen DLLs in verwaltetem Code mithilfe von PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -111,7 +111,7 @@ Done
 
 - [Vorgehensweise: Umwandeln von char * String nach System::Byte Array](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
 
-- [Gewusst wie: Konvertieren von System:: String in Wchar_t * oder Char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
+- [Vorgehensweise: Konvertieren von System:: String in Wchar_t * oder char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
 
 - [Vorgehensweise: Konvertieren von System::String zu Standardzeichenfolge](../dotnet/how-to-convert-system-string-to-standard-string.md)
 
@@ -131,19 +131,19 @@ Done
 
 - [Vorgehensweise: Objektverweis in nicht verwaltetem Arbeitsspeicher](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
 
-- [Gewusst wie: Erkennen der/CLR-Kompilierung](../dotnet/how-to-detect-clr-compilation.md)
+- [Vorgehensweise: Erkennen von/CLR-Kompilierung](../dotnet/how-to-detect-clr-compilation.md)
 
 - [Vorgehensweise: Konvertieren zwischen System::Guid und _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)
 
 - [Vorgehensweise: Angeben eines out-Parameters](../dotnet/how-to-specify-an-out-parameter.md)
 
-- [Gewusst wie: Verwenden eines nativen Typs in einer/CLR-Kompilierung](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
+- [Vorgehensweise: Verwenden eines nativen Typs in einer/CLR-Kompilierung](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
 
 - [Vorgehensweise: Deklarieren von Handles in nativen Typen](../dotnet/how-to-declare-handles-in-native-types.md)
 
 - [Vorgehensweise: Kapseln einer nativen Klasse zur Verwendung in C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-Informationen zum Verwenden von Delegaten in einem Interop-Szenario finden Sie unter [Delegate (Komponentenerweiterungen)](../windows/delegate-cpp-component-extensions.md).
+Informationen zum Verwenden von Delegaten in einem Interop-Szenario finden Sie unter [Delegate (Komponentenerweiterungen)](../extensions/delegate-cpp-component-extensions.md).
 
 ## <a name="see-also"></a>Siehe auch
 

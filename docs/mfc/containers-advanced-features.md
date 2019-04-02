@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 9d83ba601766f4b6fb84576571239a250169abb1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 350431975a4335fc06e436237b7e0d3388faab64
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278703"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769562"
 ---
 # <a name="containers-advanced-features"></a>Container: Erweiterte Funktionen
 
@@ -39,7 +39,7 @@ Der Artikel [Server: Implementieren eines Servers](../mfc/servers-implementing-a
 
 - Außer Kraft setzen `COleClientItem::CanActivate` um zu vermeiden, Elemente direkt bearbeiten, während der Server selbst zum direkten Bearbeiten verwendet wird.
 
-   Beispielsweise die MFC-OLE-Beispiel [OCLIENT](../visual-cpp-samples.md) ein Element, das von der Container/Server-Anwendung erstellt haben, sind eingebettet. Öffnen Sie die OCLIENT-Anwendung, und ein direktes Bearbeiten des Elements, die von der Container/Server-Anwendung erstellt. Während der Bearbeitung Ihrer Anwendung-Element, möchten, müssen Sie ein Element, das von der MFC-OLE-Beispiel erstellten einbetten möchten [HIERSVR](../visual-cpp-samples.md). Zu diesem Zweck können Sie keine direkte Aktivierung. Sie müssen vollständig HIERSVR zum Aktivieren dieses Element öffnen. Da die Microsoft Foundation Class Library diese OLE-Funktion nicht unterstützt, überschreiben `COleClientItem::CanActivate` können Sie für diese Situation überprüfen und zu verhindern, dass einen möglichen zur Laufzeit Fehler in Ihrer Anwendung.
+   Beispielsweise die MFC-OLE-Beispiel [OCLIENT](../overview/visual-cpp-samples.md) ein Element, das von der Container/Server-Anwendung erstellt haben, sind eingebettet. Öffnen Sie die OCLIENT-Anwendung, und ein direktes Bearbeiten des Elements, die von der Container/Server-Anwendung erstellt. Während der Bearbeitung Ihrer Anwendung-Element, möchten, müssen Sie ein Element, das von der MFC-OLE-Beispiel erstellten einbetten möchten [HIERSVR](../overview/visual-cpp-samples.md). Zu diesem Zweck können Sie keine direkte Aktivierung. Sie müssen vollständig HIERSVR zum Aktivieren dieses Element öffnen. Da die Microsoft Foundation Class Library diese OLE-Funktion nicht unterstützt, überschreiben `COleClientItem::CanActivate` können Sie für diese Situation überprüfen und zu verhindern, dass einen möglichen zur Laufzeit Fehler in Ihrer Anwendung.
 
 Wenn Sie eine neue Anwendung erstellen und diese als ein Container/Server-Anwendung verwendet werden soll, wählen Sie, dass die Option im Dialogfeld OLE-Optionen in der Anwendungs-Assistent und diese Unterstützung automatisch erstellt werden. Weitere Informationen finden Sie im Artikel [Übersicht: Erstellen eines ActiveX-Steuerelementcontainers](../mfc/reference/creating-an-mfc-activex-control-container.md). Informationen über MFC-Beispiele finden Sie in der MFC-Beispiele.
 
@@ -69,7 +69,7 @@ Die Links, um eingebettete Objekte Feature ermöglicht Benutzern, ein Dokument m
 
          If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.
 
-Das MFC-OLE-Beispiel [OCLIENT](../visual-cpp-samples.md) diese Funktion implementiert. Ein Beispiel dafür, wie dies funktioniert, finden Sie unter den `InitInstance` Funktion in der *OCLIENT. CPP* Datei dieser beispielanwendung.
+Das MFC-OLE-Beispiel [OCLIENT](../overview/visual-cpp-samples.md) diese Funktion implementiert. Ein Beispiel dafür, wie dies funktioniert, finden Sie unter den `InitInstance` Funktion in der *OCLIENT. CPP* Datei dieser beispielanwendung.
 
 ## <a name="see-also"></a>Siehe auch
 

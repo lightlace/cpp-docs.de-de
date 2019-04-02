@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c54cdfecfa6c4ff0eef7e16003ab2097553953d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259580"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775685"
 ---
 # <a name="crecttracker-class"></a>CRectTracker-Klasse
 
@@ -481,8 +481,8 @@ Diese Funktion wird die Maus erfassen, bis der Benutzer die linke Maustaste losl
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel zur OBJEKTNACHVERFOLGUNG](../../visual-cpp-samples.md)<br/>
-[MFC-Beispiel DRAWCLI](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel zur OBJEKTNACHVERFOLGUNG](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [COleResizeBar-Klasse](../../mfc/reference/coleresizebar-class.md)<br/>
 [CRect-Klasse](../../atl-mfc-shared/reference/crect-class.md)

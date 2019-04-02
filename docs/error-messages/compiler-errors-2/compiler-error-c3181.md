@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3181
 ms.assetid: 5d450f8b-6cef-4452-a0c4-2076e967451d
-ms.openlocfilehash: b37b28b4332b46aaaf803f58090a72c25e83f47f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc848d4108ed4a1a7b6646647a1bbb1ec8dcadf7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587758"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781808"
 ---
 # <a name="compiler-error-c3181"></a>Compilerfehler C3181
 
 'Typ': Ungültiger Operand für den Operator
 
-Ein ungültiger Parameter wurde übergeben, um die [Typeid](../../windows/typeid-cpp-component-extensions.md) Operator. Der Parameter muss es sich um einen verwalteten Typ sein.
+Ein ungültiger Parameter wurde übergeben, um die [Typeid](../../extensions/typeid-cpp-component-extensions.md) Operator. Der Parameter muss es sich um einen verwalteten Typ sein.
 
 Beachten Sie, dass der Compiler Aliase für systemeigene Typen verwendet werden, die Typen in der common Language Runtime zugeordnet.
 

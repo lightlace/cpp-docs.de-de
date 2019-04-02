@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: e64ea6701c5e3ec594c705e8995b5ba605ab0b79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 154fc67dc35d5e5633c72c27100da9be56c0c68c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301193"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779676"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Mehrere Dokumenttypen, Ansichten und Rahmenfenster
 
@@ -67,9 +67,9 @@ Die folgende Abbildung für die Dokumente „a“, „b“ und „c“ zeigt die
 ![Mehrere&#45;Benutzeroberflächen anzeigen](../mfc/media/vc37a71.gif "mehrere&#45;Benutzeroberflächen anzeigen") <br/>
 Benutzeroberflächen mit mehreren Ansichten
 
-Das Framework ermöglicht diese Modelle durch Implementieren des Befehls „Neues Fenster“ und Bereitstellen der Klasse [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), wie im Abschnitt [Splitterfenster](#_core_splitter_windows)erläutert. Sie können diese Modelle als Ausgangspunkt verwenden und darauf basierend weitere Modelle implementieren. Beispielprogramme für die verschiedenen Konfigurationen von Ansichten, Rahmenfenstern und Aufteilungen finden Sie unter [MFC-Beispiele](../visual-cpp-samples.md).
+Das Framework ermöglicht diese Modelle durch Implementieren des Befehls „Neues Fenster“ und Bereitstellen der Klasse [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), wie im Abschnitt [Splitterfenster](#_core_splitter_windows)erläutert. Sie können diese Modelle als Ausgangspunkt verwenden und darauf basierend weitere Modelle implementieren. Beispielprogramme für die verschiedenen Konfigurationen von Ansichten, Rahmenfenstern und Aufteilungen finden Sie unter [MFC-Beispiele](../overview/visual-cpp-samples.md).
 
-Weitere Informationen zu `UpdateAllViews`finden Sie unter [CView](../mfc/reference/cview-class.md) in der *MFC-Referenz* und im [Scribble-Beispiel](../visual-cpp-samples.md).
+Weitere Informationen zu `UpdateAllViews`finden Sie unter [CView](../mfc/reference/cview-class.md) in der *MFC-Referenz* und im [Scribble-Beispiel](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_multiple_frame_windows"></a> Multiple Frame Windows
 
@@ -79,11 +79,11 @@ Sie können den Befehl „Neues Fenster“ im Menü „Fenster“ verwenden, dam
 
 In einem Splitterfenster kann das Fenster in zwei oder mehr scrollbare Bereiche unterteilt werden. Ein Splittersteuerelement (auch als Teilungsfeld bezeichnet), das sich im Fensterrahmen neben den Scrollleisten befindet, ermöglicht dem Benutzer, die relativen Größen der Bereiche anzupassen. Jeder Bereich ist eine Ansicht des gleichen Dokuments. In "dynamischen" Splitterfenstern sind die Ansichten der gleichen Klasse, wie in der Abbildung Benutzeroberflächen mit mehreren Ansichten Teil b dargestellt. In „statischen“ Splitterfenstern können die Ansichten zu verschiedenen Klassen gehören. Splitterfenster beider Arten werden von der Klasse [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)unterstützt.
 
-Dynamische Splitterfenster mit Ansichten der gleichen Klasse ermöglichen es dem Benutzer, ein Fenster nach Belieben in mehrere Bereiche zu unterteilen und dann durch diese Bereiche zu scrollen, um verschiedene Teile des Dokuments anzuzeigen. Ein Benutzer kann die Aufteilung des Fensters auch aufheben, um die zusätzlichen Ansichten zu entfernen. Die Splitterfenster, die dem [Scribble-Beispiel](../visual-cpp-samples.md) hinzugefügt wurden, veranschaulichen dies. Dieses Thema beschreibt das Verfahren zum Erstellen von dynamischen Splitterfenstern. Ein dynamisches Splitterfenster wird in der Abbildung Benutzeroberflächen mit mehreren Ansichten Teil b angezeigt.
+Dynamische Splitterfenster mit Ansichten der gleichen Klasse ermöglichen es dem Benutzer, ein Fenster nach Belieben in mehrere Bereiche zu unterteilen und dann durch diese Bereiche zu scrollen, um verschiedene Teile des Dokuments anzuzeigen. Ein Benutzer kann die Aufteilung des Fensters auch aufheben, um die zusätzlichen Ansichten zu entfernen. Die Splitterfenster, die dem [Scribble-Beispiel](../overview/visual-cpp-samples.md) hinzugefügt wurden, veranschaulichen dies. Dieses Thema beschreibt das Verfahren zum Erstellen von dynamischen Splitterfenstern. Ein dynamisches Splitterfenster wird in der Abbildung Benutzeroberflächen mit mehreren Ansichten Teil b angezeigt.
 
 Bei statischen Splitterfenstern mit Ansichten verschiedener Klassen ist das Fenster bereits beim Start in mehrere Bereiche aufgeteilt, die jeweils unterschiedlichen Zwecken dienen. Im Visual C++-Bitmap-Editor beispielsweise zeigt das Bildfenster zwei Bereiche nebeneinander. Der linke Bereich zeigt ein Bild der Bitmap in der tatsächlichen Größe. Der rechte Bereich zeigt eine vergrößerte Ansicht der gleichen Bitmap. Die Bereiche sind durch eine Trennleiste getrennt, die der Benutzer ziehen kann, um die relative Größe der Bereiche zu ändern. Ein statisches Splitterfenster wird in Teil c Benutzeroberflächen mit mehreren Ansichten der Abbildung dargestellt.
 
-Weitere Informationen finden Sie unter [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) in der *MFC-Referenz* und in den [MFC-Beispielen](../visual-cpp-samples.md).
+Weitere Informationen finden Sie unter [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) in der *MFC-Referenz* und in den [MFC-Beispielen](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Siehe auch
 

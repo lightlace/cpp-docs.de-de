@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: 5921b89c7637f1a4d1171c8835bb1b5300b718fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572912"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767924"
 ---
 # <a name="subscript-operator-"></a>Subscript-Operator]
 
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 Ein postfixausdruck (der auch ein primärer Ausdruck sein kann) gefolgt von dem Indexoperator **[]**, gibt eine Arrayindizierung.
 
-Weitere Informationen zu verwalteten Arrays finden Sie unter [Arrays](../windows/arrays-cpp-component-extensions.md).
+Weitere Informationen zu verwalteten Arrays in C++ / CLI finden Sie unter [Arrays](../extensions/arrays-cpp-component-extensions.md).
 
 In der Regel durch dargestellten Wert *Postfix-Expression* ein Zeigerwert, z. B. ein Arraybezeichner, und *Ausdruck* ist ein Ganzzahlwert (einschließlich Enumerationstypen). Syntaktisch erforderlich ist allerdings nur, dass einer der Ausdrücke vom Zeigertyp und der andere Ausdruck vom Ganzzahltyp ist. Daher möglicherweise der ganzzahlige Wert in der *Postfix-Expression* Position und der Zeigerwert können in eckigen Klammern in werden die *Ausdruck* oder tiefgestellten Position. Betrachten Sie das folgende Codefragment:
 

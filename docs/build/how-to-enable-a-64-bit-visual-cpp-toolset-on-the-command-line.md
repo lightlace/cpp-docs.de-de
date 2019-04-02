@@ -12,19 +12,19 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: b30b831522016ce61f138f7e0521c42ff44e04d9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8436254a3d8c5c1dae018c2309ceaad7bd5b2408
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809768"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769276"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Vorgehensweise: Aktivieren eine 64-Bit, X64 gehosteten MSVC-Toolsets auf der Befehlszeile
 
 Visual Studio enthält C++-Compiler, Linker und anderen Tools, die Sie verwenden können, um plattformspezifischen Versionen Ihrer apps zu erstellen, die auf 32-Bit, 64-Bit- oder ARM-basierten Windows-Betriebssystemen ausgeführt werden können. Andere optionale Visual Studio-Workloads können Sie die C++-Tools verwenden, um andere Plattformen wie iOS, Android und Linux. Die Standard-Build-Architektur verwendet 32-Bit, X86-gehosteten Tools, um die 32-Bit, X86 Native Windows-Code zu erstellen. Allerdings müssen Sie wahrscheinlich einen 64-Bit-Computer. Profitieren Sie von den Prozessor und Speicherplatz für 64-Bit-Code verfügbar, mit der 64-Bit, X64 gehostete-Toolset, bei der Erstellung von Code für X86, X64 oder ARM-Prozessoren.
 
 > [!NOTE]
-> Informationen zu den spezifischen Tools, die in jeder Edition von Visual Studio enthalten sind, finden Sie unter [Visual C++-Tools und Features in Visual Studio-Editionen](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).
+> Informationen zu den spezifischen Tools, die in jeder Edition von Visual Studio enthalten sind, finden Sie unter [Visual C++-Tools und Features in Visual Studio-Editionen](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md).
 >
 > Weitere Informationen zur Verwendung von Visual Studio-IDE zum Erstellen von 64-Bit-Anwendungen finden Sie unter [Vorgehensweise: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms (Vorgehensweise: Konfigurieren von Visual C++-Projekten für 64-Bit-Zielplattformen (x64))](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
 

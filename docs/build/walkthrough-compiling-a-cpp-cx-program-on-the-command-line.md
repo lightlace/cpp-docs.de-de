@@ -2,16 +2,16 @@
 title: 'Exemplarische Vorgehensweise: Kompilieren eines C++ / CX-Programms in der Befehlszeile'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 099bef402d22abc12a31f105f63e5405c65a1d82
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809508"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766058"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines C++ / CX-Programms in der Befehlszeile
 
-Sie können Visual C++-Programme erstellen, die auf die Windows Runtime abzielen und diese in der Befehlszeile erstellen. Visual C++ unterstützt Visual C++-Komponentenerweiterungen (C++/CX), die zusätzliche Typen und Operatoren für das Windows-Runtime-Programmiermodell bereitstellen. Sie können C++ / CX verwenden, um apps für universelle Windows-Plattform (UWP), Windows Phone 8.1 und Windows-Desktop zu erstellen. Weitere Informationen finden Sie unter [eine Einführung in c++ / CX](https://msdn.microsoft.com/magazine/dn166929.aspx) und [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md).
+Sie können Visual C++-Programme erstellen, die auf die Windows Runtime abzielen und diese in der Befehlszeile erstellen. Visual C++ unterstützt Visual C++-Komponentenerweiterungen (C++/CX), die zusätzliche Typen und Operatoren für das Windows-Runtime-Programmiermodell bereitstellen. Sie können C++ / CX verwenden, um apps für universelle Windows-Plattform (UWP), Windows Phone 8.1 und Windows-Desktop zu erstellen. Weitere Informationen finden Sie unter [eine Einführung in c++ / CX](https://msdn.microsoft.com/magazine/dn166929.aspx) und [Komponentenerweiterungen für Laufzeitplattformen](../extensions/component-extensions-for-runtime-platforms.md).
 
 In dieser exemplarischen Vorgehensweise verwenden Sie einen Texteditor zur Erstellung eines grundlegenden C++/CX-Programms und kompilieren es dann auf der Befehlszeile. (Sie können Sie Ihr C++/CX-Programm verwenden, statt das gezeigte einzugeben oder Sie können ein C++/CX-Codebeispiel aus einem anderen Hilfeartikel verwenden. Dieses Verfahren ist nützlich zum Erstellen und Testen von kleinen Modulen, die keine Benutzeroberflächenelemente verfügen.)
 
@@ -64,4 +64,4 @@ Zur Aktivierung der Kompilierung für C++ / CX verwenden, müssen Sie verwenden 
 ## <a name="see-also"></a>Siehe auch
 
 [Projekte und Buildsysteme](projects-and-build-systems-cpp.md)<br/>
-[MSVC-Compiler-Optionen](reference/compiler-options.md)
+[MSVC-Compileroptionen](reference/compiler-options.md)

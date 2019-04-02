@@ -9,19 +9,19 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: 5a04c2712182fe9c9ed3fd9e5fe4548404f96a5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575213"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776673"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Unterstützung für duale Schnittstellen für OLE-Automatisierungsserver
 
 > [!NOTE]
 > Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.
 
-Dieser Hinweis enthält, wie eine Anwendung mit OLE-Automatisierungsserver MFC-basierten Unterstützung für duale Schnittstellen hinzugefügt wird. Die [ACDUAL](../visual-cpp-samples.md) Beispiel veranschaulicht die Unterstützung für duale Schnittstellen und der Beispielcode in diesem Hinweis ACDUAL entnommen wird. Die Makros, die in diesem Beachten Sie, wie z. B. DECLARE_DUAL_ERRORINFO DUAL_ERRORINFO_PART und IMPLEMENT_DUAL_ERRORINFO, sind Teil der ACDUAL-Beispiel und in MFCDUAL befinden. H.
+Dieser Hinweis enthält, wie eine Anwendung mit OLE-Automatisierungsserver MFC-basierten Unterstützung für duale Schnittstellen hinzugefügt wird. Die [ACDUAL](../overview/visual-cpp-samples.md) Beispiel veranschaulicht die Unterstützung für duale Schnittstellen und der Beispielcode in diesem Hinweis ACDUAL entnommen wird. Die Makros, die in diesem Beachten Sie, wie z. B. DECLARE_DUAL_ERRORINFO DUAL_ERRORINFO_PART und IMPLEMENT_DUAL_ERRORINFO, sind Teil der ACDUAL-Beispiel und in MFCDUAL befinden. H.
 
 ## <a name="dual-interfaces"></a>Duale Schnittstellen
 
@@ -43,7 +43,7 @@ Eine duale Schnittstelle ist eigentlich nur eine benutzerdefinierte Schnittstell
 
 Ändern Sie zunächst die ODL-Datei für den Server aus, um duale Schnittstellen für Ihre Objekte zu definieren. Sie müssen eine Interface-Anweisung, um eine duale Schnittstelle zu definieren, verwenden, anstatt die `DISPINTERFACE` -Anweisung, die die Visual C++-Assistenten generieren. Anstatt zu entfernen, die vorhandene `DISPINTERFACE` -Anweisung, fügen Sie eine neue Schnittstelle-Anweisung hinzu. Durch Beibehalten der `DISPINTERFACE` Formular können Sie weiterhin Klassen-Assistenten zu verwenden, um die Eigenschaften und Methoden für Ihr Objekt hinzufügen, aber Sie müssen die entsprechenden Eigenschaften und Methoden der Schnittstelle-Anweisung hinzufügen.
 
-Eine Interface-Anweisung für eine duale Schnittstelle müssen die *OLEAUTOMATION* und *DUAL* Attribute und die Schnittstelle muss von abgeleitet werden `IDispatch`. Können Sie die [GUIDGEN](../visual-cpp-samples.md) ein Beispiel zum Erstellen einer **IID** für die duale Schnittstelle:
+Eine Interface-Anweisung für eine duale Schnittstelle müssen die *OLEAUTOMATION* und *DUAL* Attribute und die Schnittstelle muss von abgeleitet werden `IDispatch`. Können Sie die [GUIDGEN](../overview/visual-cpp-samples.md) ein Beispiel zum Erstellen einer **IID** für die duale Schnittstelle:
 
 ```IDL
 [ uuid(0BDD0E81-0DD7-11cf-BBA8-444553540000), // IID_IDualAClick
@@ -310,7 +310,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 }
 ```
 
-`CATCH_ALL_DUAL` übernimmt den richtigen Fehlercode zurückgeben, wenn eine Ausnahme auftritt. `CATCH_ALL_DUAL` Konvertiert eine MFC-Ausnahme in der OLE-Automatisierung für die Fehlerbehandlung mithilfe der `ICreateErrorInfo` Schnittstelle. (Ein Beispiel für `CATCH_ALL_DUAL` Makro ist in der Datei MFCDUAL. H in die [ACDUAL](../visual-cpp-samples.md) Beispiel. Die Funktion, die sie zur Ausnahmebehandlung ruft `DualHandleException`, in der Datei MFCDUAL ist. CPP.) `CATCH_ALL_DUAL` bestimmt den Fehlercode basierend auf den Typ der Ausnahme zurückgegeben, die aufgetreten sind:
+`CATCH_ALL_DUAL` übernimmt den richtigen Fehlercode zurückgeben, wenn eine Ausnahme auftritt. `CATCH_ALL_DUAL` Konvertiert eine MFC-Ausnahme in der OLE-Automatisierung für die Fehlerbehandlung mithilfe der `ICreateErrorInfo` Schnittstelle. (Ein Beispiel für `CATCH_ALL_DUAL` Makro ist in der Datei MFCDUAL. H in die [ACDUAL](../overview/visual-cpp-samples.md) Beispiel. Die Funktion, die sie zur Ausnahmebehandlung ruft `DualHandleException`, in der Datei MFCDUAL ist. CPP.) `CATCH_ALL_DUAL` bestimmt den Fehlercode basierend auf den Typ der Ausnahme zurückgegeben, die aufgetreten sind:
 
 - [COleDispatchException](../mfc/reference/coledispatchexception-class.md) – In diesem Fall `HRESULT` erstellt wird, mit dem folgenden Code:
 
@@ -332,7 +332,7 @@ Anschließend fügen Sie Code, um die schnittstellenzuordnung für Ihre Automati
 
 Abschließend implementieren Sie die Klasse, die definiert, die zur Unterstützung von `ISupportErrorInfo`.
 
-(Die [ACDUAL](../visual-cpp-samples.md) Beispiel enthält drei Makros können diese drei Schritte ausführen, `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, und `IMPLEMENT_DUAL_ERRORINFO`, alle in MFCDUAL enthalten. H.)
+(Die [ACDUAL](../overview/visual-cpp-samples.md) Beispiel enthält drei Makros können diese drei Schritte ausführen, `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, und `IMPLEMENT_DUAL_ERRORINFO`, alle in MFCDUAL enthalten. H.)
 
 Das folgende Beispiel implementiert eine Klasse, die zur Unterstützung von definiert `ISupportErrorInfo`. `CAutoClickDoc` Der Name Ihrer Automation-Klasse und `IID_IDualAClick` ist die **IID** für die Schnittstelle, die die Quelle von Fehlern, die durch die OLE-Automatisierungsobjekte Error-Objekt gemeldet wurde:
 

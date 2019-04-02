@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 0c4a74ce69f5c52eb6fc107ea477e5715e86ecd2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825413"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775425"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++-Projekte und Buildsysteme in Visual Studio
 
@@ -74,10 +74,12 @@ Sie können MSBuild über die Befehlszeile aufrufen, durch Übergabe einer .vcxp
 
 [Releasebuilds](release-builds.md) erstellen, und beheben die optimierte Version erstellt, für die Bereitstellung für Endbenutzer bereitzustellen.
 
-[Verwenden Sie das MSVC-Toolset, über die Befehlszeile](building-on-the-command-line.md)<br/>
+[Verwenden des MSVC-Toolsets über die Befehlszeile](building-on-the-command-line.md)<br/>
 Erläutert, wie die C/C++-Compiler und Buildtools verwenden direkt über die Befehlszeile statt Visual Studio-IDE.
 
 [Erstellen von DLLs in Visual Studio](dlls-in-visual-cpp.md) wie erstellen, Debuggen und Bereitstellen von C/C++-DLLs (freigegebene Bibliotheken) in Visual Studio.
+
+[Exemplarische Vorgehensweise: Erstellen und Verwenden einer statischen Bibliothek](walkthrough-creating-and-using-a-static-library-cpp.md) wie Sie eine binäre LIB-Datei zu erstellen.
 
 [Erstellen isolierter C/C++-Anwendungen und Side-by-Side Assemblys](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) beschreibt das Bereitstellungsmodell für Windows Desktop-Anwendungen, basierend auf dem Konzept der isolierten Anwendungen und Side-by-Side Assemblys.
 

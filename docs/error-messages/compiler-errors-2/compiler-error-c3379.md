@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
-ms.openlocfilehash: 2d6b2cb15cfaa0b72b946c0edb3b451737b51772
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bf4e2e42b4534d47a2a7d3c9a838c404a99ba68
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553503"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769978"
 ---
 # <a name="compiler-error-c3379"></a>Compilerfehler C3379
 
@@ -19,7 +19,7 @@ ms.locfileid: "50553503"
 
 Bei Anwendung auf einem verwalteten Typ, z. B. Klasse oder Struktur, die [öffentliche](../../cpp/public-cpp.md) und [private](../../cpp/private-cpp.md) -Schlüsselwort geben an, ob die Klasse über Assemblymetadaten verfügbar gemacht wird. `public` oder `private` kann nicht für eine geschachtelte Klasse, die den Assemblyzugriff der einschließenden Klasse erben, werden nicht angewendet werden.
 
-Bei Verwendung mit ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md), `ref` und `value` -Schlüsselwort geben an, dass eine Klasse verwaltet wird (finden Sie unter [Klassen und Strukturen](../../windows/classes-and-structs-cpp-component-extensions.md)).
+Bei Verwendung mit ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md), `ref` und `value` -Schlüsselwort geben an, dass eine Klasse verwaltet wird (finden Sie unter [Klassen und Strukturen](../../extensions/classes-and-structs-cpp-component-extensions.md)).
 
 Im folgende Beispiel wird die C3379 generiert:
 

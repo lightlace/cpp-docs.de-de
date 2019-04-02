@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: d58293b94eeaf499c48f750972b15256e9c19794
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f92a72e36fecbb39e57cbdf9583047aca0c1ebd5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293185"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773735"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager-Klasse
 
@@ -117,7 +117,7 @@ Weitere Informationen dazu, wie Sie benutzerdefinierte Mausverhalten bereitzuste
 
 ### <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie einen Zeiger auf Abrufen einer `CMouseManager` -Objekt unter Verwendung der `CWinAppEx::GetMouseManager` Methode und die `AddView` -Methode in der die `CMouseManager` Klasse. Dieser Codeausschnitt ist Teil der [Zustandsauflistung Beispiel](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie einen Zeiger auf Abrufen einer `CMouseManager` -Objekt unter Verwendung der `CWinAppEx::GetMouseManager` Methode und die `AddView` -Methode in der die `CMouseManager` Klasse. Dieser Codeausschnitt ist Teil der [Zustandsauflistung Beispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]
 

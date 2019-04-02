@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289867"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768550"
 ---
 # <a name="cfile-class"></a>CFile-Klasse
 
@@ -128,7 +128,7 @@ class CFile : public CObject
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CFile::m_pTM](#m_ptm)|Zeiger auf `CAtlTransactionManager` Objekt.|
 
@@ -918,7 +918,7 @@ Darüber hinaus finden Sie in den Beispielen für [CFile::CFile](#cfile) und [CF
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel DRAWCLI](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [CObject-Klasse](../../mfc/reference/cobject-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CStdioFile-Klasse](../../mfc/reference/cstdiofile-class.md)<br/>

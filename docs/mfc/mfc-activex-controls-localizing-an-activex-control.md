@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: 4e9ef9a2f79bda5d41c01984f063622b3b73fb51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13c8ff545763017b01685e012ab2d497eaf7084a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268212"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767547"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Lokalisieren eines ActiveX-Steuerelements
 
@@ -28,7 +28,7 @@ Wenn Sie ein ActiveX-Steuerelement einen internationalen Markt anpassen möchten
 
 Im Allgemeinen sollte ActiveX-Steuerelemente immer ihrem Gebietsschema auf die LocaleID-ambient-Eigenschaft basieren. Hierfür gibt es drei Möglichkeiten:
 
-- Laden Sie die Ressourcen, die immer bei Bedarf, basierend auf den aktuellen Wert von der LocaleID-ambient-Eigenschaft. Die MFC-ActiveX-Steuerelemente Beispiel [LOCALIZE](../visual-cpp-samples.md) nutzt diese Strategie.
+- Laden Sie die Ressourcen, die immer bei Bedarf, basierend auf den aktuellen Wert von der LocaleID-ambient-Eigenschaft. Die MFC-ActiveX-Steuerelemente Beispiel [LOCALIZE](../overview/visual-cpp-samples.md) nutzt diese Strategie.
 
 - Laden Sie Ressourcen aus, wenn das erste Steuerelement basierend auf der ambient LocaleID-Eigenschaft Instanzen wird, und verwenden Sie diese Ressourcen für alle anderen Instanzen. In diesem Artikel wird diese Strategie.
 
@@ -40,7 +40,7 @@ Im Allgemeinen sollte ActiveX-Steuerelemente immer ihrem Gebietsschema auf die L
     > [!NOTE]
     >  Dies funktioniert für das Steuerelement, aber die Laufzeit-DLL dynamisch aktualisiert nicht seine eigenen Ressourcen bei die LocaleID-Ambiente-Eigenschaft ändert. Laufzeit-DLLs für ActiveX-Steuerelemente verwenden darüber hinaus das Threadgebietsschema, um das Gebietsschema für ihre Ressourcen zu ermitteln.
 
-Im weiteren Verlauf dieses Artikels werden zwei Lokalisierung von Strategien beschrieben. Die erste Strategie [ordnet Programmierschnittstelle des Steuerelements](#_core_localizing_your_control.92.s_programmability_interface) (Namen von Eigenschaften, Methoden und Ereignisse). Die zweite Strategie [ordnet die Benutzeroberfläche des Steuerelements](#_core_localizing_the_control.92.s_user_interface), verwenden ambient LocaleID-Eigenschaft des Containers. Eine Demonstration der steuerelementlokalisierung finden Sie unter dem Beispiel für die MFC-ActiveX-Steuerelemente [LOCALIZE](../visual-cpp-samples.md).
+Im weiteren Verlauf dieses Artikels werden zwei Lokalisierung von Strategien beschrieben. Die erste Strategie [ordnet Programmierschnittstelle des Steuerelements](#_core_localizing_your_control.92.s_programmability_interface) (Namen von Eigenschaften, Methoden und Ereignisse). Die zweite Strategie [ordnet die Benutzeroberfläche des Steuerelements](#_core_localizing_the_control.92.s_user_interface), verwenden ambient LocaleID-Eigenschaft des Containers. Eine Demonstration der steuerelementlokalisierung finden Sie unter dem Beispiel für die MFC-ActiveX-Steuerelemente [LOCALIZE](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Lokalisieren von Programmierschnittstelle des Steuerelements
 
@@ -88,7 +88,7 @@ Das folgende Codebeispiel veranschaulicht eine Möglichkeit zum Suchen und laden
 
 [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]
 
-Beachten Sie, dass die untersprachen-ID in jedem Fall der Switch-Anweisung, um spezialisiertere Lokalisierung bereitzustellen überprüft werden konnte. Eine Demonstration dieser Funktion finden Sie unter den `GetResourceHandle` -Funktion in der MFC-ActiveX-Steuerelemente Beispiel [LOCALIZE](../visual-cpp-samples.md).
+Beachten Sie, dass die untersprachen-ID in jedem Fall der Switch-Anweisung, um spezialisiertere Lokalisierung bereitzustellen überprüft werden konnte. Eine Demonstration dieser Funktion finden Sie unter den `GetResourceHandle` -Funktion in der MFC-ActiveX-Steuerelemente Beispiel [LOCALIZE](../overview/visual-cpp-samples.md).
 
 Wenn das Steuerelement selbst in einem Container geladen wird, kann es aufrufen [COleControl:: AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid) die Gebietsschema-ID abrufen Das Steuerelement kann dann den zurückgegebenen Gebietsschema-ID-Wert, übergeben die `GetLocalizedResourceHandle` -Funktion, die die richtige Ressourcenbibliothek lädt. Das Steuerelement sollte das resultierende Handle übergeben, sofern vorhanden, um [AfxSetResourceHandle](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):
 

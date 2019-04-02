@@ -2,12 +2,12 @@
 title: Parallele Programmierung in Visual C++
 ms.date: 11/04/2016
 ms.assetid: f5c28ab6-a1d9-492f-b207-05e8aee73e96
-ms.openlocfilehash: c2ac9d983ad492d9d367cc30119e78156a23a2bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80f3708b7c5f5a2c5167e0c27324898195e9d340
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659003"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781353"
 ---
 # <a name="parallel-programming-in-visual-c"></a>Parallele Programmierung in Visual C++
 
@@ -18,8 +18,8 @@ Visual C++ bietet die folgenden Technologien, die Ihnen helfen, Multithread- und
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[Automatische Parallelisierung und automatische Vektorisierung](auto-parallelization-and-auto-vectorization.md)|Compileroptimierungen, die Code beschleunigen.|
-|[Concurrency Runtime](concrt/concurrency-runtime.md)|Klassen, die das Schreiben von Programmen vereinfachen, die Datenparallelität oder Aufabenparallelität verwenden.|
+|[Concurrency Runtime](concrt/concurrency-runtime.md)|Klassen, die das Schreiben von Programmen vereinfachen, die Datenparallelität oder Taskparallelität verwenden.|
 |[C++ AMP (C++ Accelerated Massive Parallelism)](amp/cpp-amp-cpp-accelerated-massive-parallelism.md)|Klassen, welche die Verwendung von modernen Grafikprozessoren für allgemeine Programmierung ermöglichen.|
 |[Multithreadingunterstützung für älteren Code (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)|Ältere Technologien, die in älteren Anwendungen nützlich sein können. Für neue Apps verwenden Sie die Concurrency Runtime oder C++-AMP.|
 |[OpenMP](openmp/openmp-in-visual-cpp.md)|Die Microsoft-Implementierung der OpenMP-API.|
-|[Visual C++](../visual-cpp-in-visual-studio.md)|Dieser Abschnitt der Dokumentation enthält Informationen über die meisten Funktionen von Visual C++.|
+|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Dieser Abschnitt der Dokumentation enthält Informationen über die meisten Funktionen von Visual C++.|

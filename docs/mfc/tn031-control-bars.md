@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39309408c6d1fc6cbb4223eda22c511865f14498
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286464"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772513"
 ---
 # <a name="tn031-control-bars"></a>TN031: Steuerleisten
 
@@ -136,7 +136,7 @@ Alle Bitmapschaltflächen der Symbolleiste stammen aus einer einzigen Bitmap. Di
 
 Die Schaltflächen müssen gleich groß sein. Der Standardwert beträgt 24 x 22 Pixel. Die Bilder/Glyphen müssen gleich groß sein und Seite an Seite in der Bitmap liegen. Die Standardgröße für Bilder/Glyphen beträgt 16 x 15 Pixel. Aus diesem Grund benötigen Sie für eine Symbolleiste mit 10 Schaltflächen (in Standardgröße) eine Bitmap mit einer Breite von 160 Pixeln und einer Höhe von 15 Pixeln.
 
-Jede Schaltfläche verfügt nur über ein einziges Bild/eine einzige Glyphe. Die verschiedenen Schaltflächenstatus und Formatvorlagen (z. B. gedrückt, oben, unten, deaktiviert, deaktiviert unten, unbestimmt) werden von dem einen Bild/der einen Glyphe aus algorithmisch generiert. Theoretisch kann jede Farbbitmap oder DIB verwendet werden. Der Algorithmus zum Generieren der verschiedenen Schaltflächenstatus funktioniert am besten, wenn das ursprüngliche Bild in Graustufen vorliegt. Im allgemeinen MFC-Beispiel [CLIPART](../visual-cpp-samples.md) finden Sie standardmäßige Symbolleistenschaltflächen und Symbolleistenschaltflächen-ClipArt als Beispiel.
+Jede Schaltfläche verfügt nur über ein einziges Bild/eine einzige Glyphe. Die verschiedenen Schaltflächenstatus und Formatvorlagen (z. B. gedrückt, oben, unten, deaktiviert, deaktiviert unten, unbestimmt) werden von dem einen Bild/der einen Glyphe aus algorithmisch generiert. Theoretisch kann jede Farbbitmap oder DIB verwendet werden. Der Algorithmus zum Generieren der verschiedenen Schaltflächenstatus funktioniert am besten, wenn das ursprüngliche Bild in Graustufen vorliegt. Im allgemeinen MFC-Beispiel [CLIPART](../overview/visual-cpp-samples.md) finden Sie standardmäßige Symbolleistenschaltflächen und Symbolleistenschaltflächen-ClipArt als Beispiel.
 
 Die in der Symbolleiste verwendeten Farben entsprechen auch der Empfehlung des Windows Interface Application Design Guide. Diese Farben sind nicht hartcodiert und ändern sich dynamisch gemäß der Benutzeranpassung in der Systemsteuerung.
 

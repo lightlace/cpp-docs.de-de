@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 8909f91e31279f1fc1395610aea4708b79731113
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805967"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774169"
 ---
 # <a name="comptr-class"></a>com::ptr-Klasse
 
@@ -43,7 +43,7 @@ COM-Schnittstelle.
 
 Ein `com::ptr` kann auch als eine lokale Funktion-Variable verwendet werden, um die verschiedenen COM-Aufgaben zu vereinfachen und Automatisieren der Verwaltung der Lebensdauer.
 
-Ein `com::ptr` kann nicht direkt als Funktionsparameter verwendet werden; verwenden Sie eine [nachverfolgung verweisoperator](../windows/tracking-reference-operator-cpp-component-extensions.md) oder [Handle für Objekt (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) stattdessen.
+Ein `com::ptr` kann nicht direkt als Funktionsparameter verwendet werden; verwenden Sie eine [nachverfolgung verweisoperator](../extensions/tracking-reference-operator-cpp-component-extensions.md) oder [Handle für Objekt (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) stattdessen.
 
 Ein `com::ptr` nicht direkt von einer Funktion zurückgegeben werden; verwenden Sie stattdessen ein Handle.
 
@@ -167,14 +167,14 @@ int main() {
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|name|Beschreibung| 
+|Name|Beschreibung| 
 |---------|-----------| 
 |[ptr::ptr](#ptr)|Erstellt eine `com::ptr` ein COM-Objekt umschlossen.| 
 |[ptr::~ptr](#tilde-ptr)|Destructs eine `com::ptr`.| 
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |---------|-----------| 
 |[ptr::Attach](#attach)|Fügt einem COM-Objekt ein `com::ptr`.| 
 |[ptr::CreateInstance](#createInstance)|Erstellt eine Instanz eines COM-Objekts innerhalb einer `com::ptr`.| 
@@ -185,7 +185,7 @@ int main() {
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |---------|-----------| 
 |[ptr::operator-&gt;](#operator-arrow)|Memberzugriffsoperator, zum Aufrufen von Methoden für das COM-Objekt im Besitz des Benutzers verwendet.| 
 |[ptr::operator=](#operator-assign)|Fügt einem COM-Objekt ein `com::ptr`.| 

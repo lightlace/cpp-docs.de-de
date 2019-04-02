@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 34097de7d50e260ee82a8891cee988b1533debdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556571"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779533"
 ---
 # <a name="compiler-error-c3392"></a>Compilerfehler C3392
 
 'Typargument': Ungültiges Typargument für den generischen 'Param'-Parameter von 'generischer_Typ' (generisch). Muss einen öffentlichen parameterlosen Konstruktor aufweisen.
 
-Ein generischer Typ wurde fehlerhaft instanziiert. Überprüfen Sie die Typdefinition. Weitere Informationen finden Sie unter [Generika](../../windows/generics-cpp-component-extensions.md).
+Ein generischer Typ wurde fehlerhaft instanziiert. Überprüfen Sie die Typdefinition. Weitere Informationen finden Sie unter [Generika](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 

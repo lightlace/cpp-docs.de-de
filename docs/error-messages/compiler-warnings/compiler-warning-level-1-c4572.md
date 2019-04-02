@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4572
 ms.assetid: 482dee5a-29bd-4fc3-b769-9dfd4cd2a964
-ms.openlocfilehash: b4d3356522faacfc343c33908b64597387fbe51c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e32509e4d32eef4f53b8d43a7db769844f1182c7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521072"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781548"
 ---
 # <a name="compiler-warning-level-1-c4572"></a>Compilerwarnung (Stufe 1) C4572
 
-/ CLR [ParamArray]-Attribut ist veraltet, verwenden Sie '...' stattdessen
+[ParamArray]-Attribut ist unter "/ CLR", und verwenden als veraltet markiert "..." Stattdessen
 
-Es wurde ein veraltetes Format zum Angeben einer Liste variabler Argumente verwendet. Verwenden Sie beim Kompilieren für die CLR auslassungszeichensyntax anstelle von <xref:System.ParamArrayAttribute>. Weitere Informationen finden Sie unter [Variablenargumentlisten (...) (C++ / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Es wurde ein veraltetes Format zum Angeben einer Liste variabler Argumente verwendet. Verwenden Sie beim Kompilieren für die CLR auslassungszeichensyntax anstelle von <xref:System.ParamArrayAttribute>. Weitere Informationen finden Sie unter [Variablenargumentlisten (...) (C++ / CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Beispiel
 

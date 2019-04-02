@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3299
 ms.assetid: 7cabdf01-bceb-404f-9401-cdd9c7fc1641
-ms.openlocfilehash: 4ad48ea0bc09e098a41cb9aa969a08e9ead48f73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 314b75a9d0ab8cde2886a7466fa0f95b5bbdd8f1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484828"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778051"
 ---
 # <a name="compiler-error-c3299"></a>Compilerfehler C3299
 
@@ -21,7 +21,7 @@ Wenn Sie eine generische Memberfunktion überschreiben, können Sie keine Einsch
 
 Die Einschränkungsklauseln für die generische Funktion, die Sie überschreiben, werden geerbt.
 
-Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Beispiel
 

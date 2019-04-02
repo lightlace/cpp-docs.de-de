@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: bacd8726fd4c833f956f763cca81a88d41d1f167
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298203"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777362"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton-Klasse
 
@@ -56,7 +56,7 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Gibt an, ob die Standard-System-Popupmenü angezeigt oder verwendet [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Gibt an, ob das Popupmenü unterhalb und rechts neben der Schaltfläche angezeigt wird.|
@@ -72,7 +72,7 @@ Bei der Erstellung einer `CMFCMenuButton`, Sie müssen ein Handle übergeben, zu
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie das Handle des Menüs auf die Schaltfläche mit den angefügten festzulegen, Ändern der Größe der Schaltfläche gemäß seiner Größe für Text- und Bilddateien, und legen Sie im Popupmenü aus, das vom Framework angezeigt wird. Dieser Codeausschnitt ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie das Handle des Menüs auf die Schaltfläche mit den angefügten festzulegen, Ändern der Größe der Schaltfläche gemäß seiner Größe für Text- und Bilddateien, und legen Sie im Popupmenü aus, das vom Framework angezeigt wird. Dieser Codeausschnitt ist Teil der [Beispiel neue Steuerelemente](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]

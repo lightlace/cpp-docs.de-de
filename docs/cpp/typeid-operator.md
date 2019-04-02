@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-ms.openlocfilehash: dfbf5275391e2820c94d2827c9b2c3eb252365c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1185f48df4a941eb2a5d81bfa67d07cdf4387d0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571924"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780885"
 ---
 # <a name="typeid-operator"></a>typeid-Operator
 
@@ -26,7 +26,7 @@ Die **Typeid** Operator ermöglicht, den Typ eines Objekts zur Laufzeit bestimmt
 
 Das Ergebnis des **Typeid** ist eine `const type_info&`. Der Wert ist ein Verweis auf eine `type_info` Objekt, das entweder darstellt der *Typ-Id* oder den Typ des der *Ausdruck*, je nachdem, für welche Form der **Typeid** wird verwendet. Finden Sie unter [Type_info-Klasse](../cpp/type-info-class.md) für Weitere Informationen.
 
-Die **Typeid** Operator funktioniert nicht mit verwalteten Typen (abstrakten Deklaratoren oder Instanzen), finden Sie unter [Typeid](../windows/typeid-cpp-component-extensions.md) Informationen zum Abrufen der <xref:System.Type> eines angegebenen Typs.
+Die **Typeid** Operator funktioniert nicht mit verwalteten Typen (abstrakten Deklaratoren oder Instanzen), finden Sie unter [Typeid](../extensions/typeid-cpp-component-extensions.md) Informationen zum Abrufen der <xref:System.Type> eines angegebenen Typs.
 
 Die **Typeid** Operator wird eine laufzeitüberprüfung aus, wenn auf ein l-Wert eines polymorphen Klassentyps angewendet, in dem der tatsächliche Typ des Objekts kann nicht von der statischen Informationen bestimmt werden. Zu solchen Fällen zählen folgende:
 

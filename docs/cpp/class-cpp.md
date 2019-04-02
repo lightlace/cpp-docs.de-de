@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 5abd2ef73ff8af9ebc2f1827cb5403025d5383ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c4ef9690a41737147354ee0976f6912c4711ff67
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330995"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774814"
 ---
 # <a name="class-c"></a>class (C++)
 
@@ -31,22 +31,22 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 #### <a name="parameters"></a>Parameter
 
-*Vorlage-Spezifikation*<br/>
+*template-spec*<br/>
 Optionale Vorlagenspezifikationen. Weitere Informationen finden Sie unter [Vorlagen](templates-cpp.md).
 
 *class*<br/>
 Die **Klasse** Schlüsselwort.
 
-*MS-Decl-Spezifikation*<br/>
+*ms-decl-spec*<br/>
 Optionale Speicherklassenspezifikation. Weitere Informationen finden Sie in der [__declspec](../cpp/declspec.md) Schlüsselwort.
 
-*Tag*<br/>
+*tag*<br/>
 Der Typname, der für die Klasse angegeben wurde. Das Tag ist ein reserviertes Wort innerhalb des Gültigkeitsbereichs der Klasse. Das Tag ist optional. Wenn es nicht angegeben wird, wird eine anonyme Klasse definiert. Weitere Informationen finden Sie unter [Anonyme Klassentypen](../cpp/anonymous-class-types.md).
 
-*Base-list*<br/>
+*base-list*<br/>
 Optionale Liste von Klassen oder Strukturen, von denen diese Klasse ihre Member ableitet. Finden Sie unter [Basisklassen](../cpp/base-classes.md) für Weitere Informationen. Jede Klasse oder Struktur Basisnamen kann einen Zugriffsspezifizierer vorangestellt werden ([öffentliche](../cpp/public-cpp.md), [private](../cpp/private-cpp.md), [geschützt](../cpp/protected-cpp.md)) und die [virtuellen](../cpp/virtual-cpp.md) Schlüsselwort. Finden Sie in der memberzugriffstabelle in [Steuern des Zugriffs auf Klassenmember](member-access-control-cpp.md) für Weitere Informationen.
 
-*Memberliste*<br/>
+*member-list*<br/>
 Liste von Klassenmembern. Finden Sie unter [Member-Klassenübersicht](../cpp/class-member-overview.md) für Weitere Informationen.
 
 *Deklaratoren*<br/>
@@ -66,7 +66,7 @@ Weitere Informationen zu Klassen im Allgemeinen finden Sie in einem der folgende
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-Weitere Informationen über verwaltete Klassen und Strukturen finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)
+Informationen über verwaltete Klassen und strukte in C++ / CLI und C++ / CX, finden Sie unter [Klassen und Strukturen](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 ## <a name="example"></a>Beispiel
 

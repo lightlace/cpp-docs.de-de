@@ -7,18 +7,18 @@ helpviewer_keywords:
 - derived classes [MFC], from CObject
 - CObject class [MFC], when to use
 ms.assetid: 26021031-feaf-424c-80d1-9547c4409d6a
-ms.openlocfilehash: cbefed5f44981d784d1fc5b6616bab5ee45e4115
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30eb3ce5bbb72ab685ed891644a478a36026ebea
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279509"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772305"
 ---
 # <a name="do-i-have-to-derive-new-classes-from-cobject"></a>Muss ich von CObject neue Klassen ableiten?
 
 Nein, müssen Sie nicht.
 
-Leiten Sie eine Klasse von [CObject](../mfc/reference/cobject-class.md) Wenn Sie die Funktionen sie bereitstellt benötigen, z. B. Serialisierung oder dynamische Creatability. Viele Datenklassen auf Dateien, serialisiert werden, daher es oft eine gute Idee ist, daraus ableiten müssen `CObject`. Für ein Beispiel für eine Klasse abgeleitet `CObject`, finden Sie unter den [Scribble-Beispiels](../visual-cpp-samples.md).
+Leiten Sie eine Klasse von [CObject](../mfc/reference/cobject-class.md) Wenn Sie die Funktionen sie bereitstellt benötigen, z. B. Serialisierung oder dynamische Creatability. Viele Datenklassen auf Dateien, serialisiert werden, daher es oft eine gute Idee ist, daraus ableiten müssen `CObject`. Für ein Beispiel für eine Klasse abgeleitet `CObject`, finden Sie unter den [Scribble-Beispiels](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -17,18 +17,18 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281950"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767198"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menüs und Ressourcen: Servererweiterungen
 
 Dieser Artikel beschreibt die Änderungen, die mit den Menüs und anderen Ressourcen in einer visual bearbeiten (Komponente) Serveranwendung vorgenommen werden müssen. Eine Serveranwendung erfordert viele Erweiterungen für die Menüstruktur und andere Ressourcen aus, da es in einem von drei Modi gestartet werden kann: allein stehen, embedded oder vorhanden. Siehe die [Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md) beschrieben, gibt es höchstens vier Sätze von Menüs. Alle vier sind für eine MDI-voll-Server-Anwendung verwendet werden, während nur drei für ein Miniserver verwendet werden. Der Anwendungs-Assistent wird das Menülayout für den Typ des Servers erforderlich gewünschten erstellen. Einige Anpassungen kann erforderlich sein.
 
-Wenn Sie nicht der Anwendungs-Assistent verwenden, empfiehlt es sich um HIERSVR anzuzeigen. RC-Version das Ressourcenskript für die MFC-beispielanwendung [HIERSVR](../visual-cpp-samples.md), um anzuzeigen, wie diese Änderungen implementiert werden.
+Wenn Sie nicht der Anwendungs-Assistent verwenden, empfiehlt es sich um HIERSVR anzuzeigen. RC-Version das Ressourcenskript für die MFC-beispielanwendung [HIERSVR](../overview/visual-cpp-samples.md), um anzuzeigen, wie diese Änderungen implementiert werden.
 
 In diesem Artikel behandelten Themen umfassen:
 
@@ -56,7 +56,7 @@ Zwei neue Zugriffstaste tabellenressourcen müssen für Server-Anwendungen hinzu
 
 Die zweite Tabelle ist praktisch eine exakte Kopie des Zugriffstastentabelle der Ansicht. Alle Unterschiede parallele Änderungen in das Menü mit der Option vollständig öffnen, die im genannten [Server Menüerweiterungen](#_core_server_menu_additions).
 
-Ein Beispiel dieser Accelerator Tabelle Änderungen vergleichen Sie die Zugriffstastentabellen IDR_HIERSVRTYPE_SRVR_IP und IDR_HIERSVRTYPE_SRVR_EMB mit IDR_MAINFRAME in die HIERSVR. RC-Datei in den MFC-OLE-Beispiel enthaltenen [HIERSVR](../visual-cpp-samples.md). Die Datei und Fenster-Accelerators fehlen in der Tabelle des direktes und genaue Kopien von ihnen in der eingebettete Tabelle.
+Ein Beispiel dieser Accelerator Tabelle Änderungen vergleichen Sie die Zugriffstastentabellen IDR_HIERSVRTYPE_SRVR_IP und IDR_HIERSVRTYPE_SRVR_EMB mit IDR_MAINFRAME in die HIERSVR. RC-Datei in den MFC-OLE-Beispiel enthaltenen [HIERSVR](../overview/visual-cpp-samples.md). Die Datei und Fenster-Accelerators fehlen in der Tabelle des direktes und genaue Kopien von ihnen in der eingebettete Tabelle.
 
 ##  <a name="_core_string_table_additions_for_server_applications"></a> Zeichenfolge Tabelle Ergänzungen für Serveranwendungen
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738481"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780235"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Vorgehensweise: Marshallen von eingebetteten Zeigern mit C++-Interop
 
@@ -23,7 +23,7 @@ Im folgenden code, Beispiele für die Verwendung der [verwaltete, unverwaltete](
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie eine nicht verwaltete Funktion, die eine Struktur, die Zeiger wird von einer verwalteten Funktion aufgerufen werden kann. Die verwaltete Funktion erstellt eine Instanz der Struktur und eingebetteter Zeiger mit dem neuen Schlüsselwort initialisiert (statt der [Ref neue Gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) Schlüsselwort). Da dies den Speicher auf dem systemeigenen Heap reserviert haben, besteht keine Notwendigkeit zum Anheften des Arrays an die Garbagecollection zu unterdrücken. Der Arbeitsspeicher muss jedoch explizit gelöscht werden, um Arbeitsspeicher Datenlecks zu vermeiden.
+Im folgende Beispiel wird veranschaulicht, wie eine nicht verwaltete Funktion, die eine Struktur, die Zeiger wird von einer verwalteten Funktion aufgerufen werden kann. Die verwaltete Funktion erstellt eine Instanz der Struktur und eingebetteter Zeiger mit dem neuen Schlüsselwort initialisiert (statt der [Ref neue Gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) Schlüsselwort). Da dies den Speicher auf dem systemeigenen Heap reserviert haben, besteht keine Notwendigkeit zum Anheften des Arrays an die Garbagecollection zu unterdrücken. Der Arbeitsspeicher muss jedoch explizit gelöscht werden, um Arbeitsspeicher Datenlecks zu vermeiden.
 
 ```
 // marshal_embedded_pointer.cpp

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: 6e593d023c486aa504f0b5eee8578fa8c307bcc8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a14ef9043ec2196ff930a37d0eff95e90024d3d5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432707"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769198"
 ---
 # <a name="uuidof-operator"></a>__uuidof-Operator
 
@@ -39,7 +39,7 @@ Verwenden Sie dieses Schlüsselwort, um die an folgende Elemente angefügte GUID
 
 - Ein Objekt durch die [Uuid](../cpp/uuid-cpp.md) erweitertes Attribut.
 
-- Ein bibliotheksblock erstellt, mit der [Modul](../windows/module-cpp.md) Attribut.
+- Ein bibliotheksblock erstellt, mit der [Modul](../windows/attributes/module-cpp.md) Attribut.
 
 > [!NOTE]
 > In einem Debugbuild **__uuidof** immer Initialisiert ein Objekt dynamisch (zur Laufzeit). In einem Releasebuild **__uuidof** können statisch (zur Kompilierzeit) initialisieren ein Objekts.

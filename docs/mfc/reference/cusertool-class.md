@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: ca9035ecfcde0c2e82628c5509a16557a487b8cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290455"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779039"
 ---
 # <a name="cusertool-class"></a>CUserTool-Klasse
 
@@ -70,7 +70,7 @@ class CUserTool : public CObject
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CUserTool::m_strArguments](#m_strarguments)|Die Befehlszeilenargumente für das benutzertool.|
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|Das Ausgangsverzeichnis für das benutzertool.|
@@ -82,7 +82,7 @@ Weitere Informationen dazu, wie Sie die Benutzertools für in Ihrer Anwendung er
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie Sie ein Tool erstellt eine `CUserToolsManager` -Objekts die `m_strLabel` Membervariablen gespeichert, und legen Sie die Anwendung, die die benutzertool ausgeführt wird. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie Sie ein Tool erstellt eine `CUserToolsManager` -Objekts die `m_strLabel` Membervariablen gespeichert, und legen Sie die Anwendung, die die benutzertool ausgeführt wird. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]
 

@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cada70723c7fadc9c91c40380b8a7e9fc46a07a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285281"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777258"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc-Klasse
 
@@ -943,7 +943,7 @@ Diese Funktion ruft die `OnUpdate` Member-Funktion für jedes der Elemente des D
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel HIERSVR](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [COleLinkingDoc-Klasse](../../mfc/reference/colelinkingdoc-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [COleDocument-Klasse](../../mfc/reference/coledocument-class.md)<br/>

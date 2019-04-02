@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3283
 ms.assetid: c51d912c-cde3-4928-904e-26734c8954ce
-ms.openlocfilehash: 873ab4d4b016fa392b7a2f64fdd14c3e93f2e22d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 593b04b8593e261aa1980ada7693300b52a869c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516089"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779988"
 ---
 # <a name="compiler-error-c3283"></a>Compilerfehler C3283
 
 "Typ": Eine Schnittstelle darf keinen Instanzenkonstruktor aufweisen
 
-Eine CLR- [Schnittstelle](../../windows/interface-class-cpp-component-extensions.md) darf keinen Instanzenkonstruktor aufweisen.  Ein statischer Konstruktor ist zulässig.
+Eine CLR- [Schnittstelle](../../extensions/interface-class-cpp-component-extensions.md) darf keinen Instanzenkonstruktor aufweisen.  Ein statischer Konstruktor ist zulässig.
 
 Im folgenden Beispiel wird C3283 generiert:
 

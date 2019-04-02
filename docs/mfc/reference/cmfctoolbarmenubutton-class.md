@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7733969a0218dacf481ac82c764911c61ecabbbf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281520"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769147"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton-Klasse
 
@@ -171,7 +171,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|True gibt an, ruft das Framework immer [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) bei eine Schaltfläche gezeichnet wird.|
 
@@ -183,7 +183,7 @@ Eine benutzerdefinierte abgeleitete Klasse die `CMFCToolbarMenuButton` Klasse ve
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie konfigurieren eine `CMFCToolBarMenuButton` Objekt. Der Code veranschaulicht das angeben, dass der Dropdown-Menü im Palettenmodus befindet, und geben Sie die ID für die abtrennbarer Leiste, die erstellt wird, wenn der Benutzer die Schaltfläche auf einer Menüleiste zieht. Dieser Codeausschnitt ist Teil des [WordPad-Beispiels](../../visual-cpp-samples.md).
+Das folgende Beispiel zeigt, wie Sie konfigurieren eine `CMFCToolBarMenuButton` Objekt. Der Code veranschaulicht das angeben, dass der Dropdown-Menü im Palettenmodus befindet, und geben Sie die ID für die abtrennbarer Leiste, die erstellt wird, wenn der Benutzer die Schaltfläche auf einer Menüleiste zieht. Dieser Codeausschnitt ist Teil des [WordPad-Beispiels](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#10](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_1.cpp)]
 
@@ -241,7 +241,7 @@ Wenn *UiID* ist ein gültiger Befehls-ID, die Schaltfläche führt diesen Befehl
 
 ### <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie zum Erstellen eines Objekts von der `CMFCToolBarMenuButton` Klasse. Dieser Codeausschnitt ist Teil des [WordPad-Beispiels](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie zum Erstellen eines Objekts von der `CMFCToolBarMenuButton` Klasse. Dieser Codeausschnitt ist Teil des [WordPad-Beispiels](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#9](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]
 

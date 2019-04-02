@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: 2c9238eab1627b0494c4073c88032c488fdfb828
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752384"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777180"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Vorgehensweise: Deklarieren von Überschreibungsbezeichnern in nativen Kompilierungen (C++ / CLI)
 
-[versiegelte](../windows/sealed-cpp-component-extensions.md), [abstrakte](../windows/abstract-cpp-component-extensions.md), und [überschreiben](../windows/override-cpp-component-extensions.md) stehen in Kompilierungen, die keine **/Zw** oder ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md).
+[versiegelte](../extensions/sealed-cpp-component-extensions.md), [abstrakte](../extensions/abstract-cpp-component-extensions.md), und [überschreiben](../extensions/override-cpp-component-extensions.md) stehen in Kompilierungen, die keine **/Zw** oder ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
 >  Hat der ISO C ++ 11-Standardsprache der [außer Kraft setzen](../cpp/override-specifier.md) Bezeichner und die [endgültige](../cpp/final-specifier.md) Bezeichner, und beide werden in Visual Studio verwenden unterstützt `final` anstelle von `sealed` in Code, der zum vorgesehen ist als nur nativ kompiliert werden.
@@ -88,4 +88,4 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Überschreibungsspezifizierer](../windows/override-specifiers-cpp-component-extensions.md)
+[Überschreibungsspezifizierer](../extensions/override-specifiers-cpp-component-extensions.md)

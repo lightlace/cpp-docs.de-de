@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271423"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767885"
 ---
 # <a name="containers-implementing-a-container"></a>Container: Implementieren eines Containers
 
@@ -36,7 +36,7 @@ Diese Funktionen werden automatisch für Sie bereitgestellt, bei der Verwendung 
 
 1. Implementieren einer `OnSize` informiert eine OLE-Message-Handler eingebettete Element, dass das Rechteck entsprechend ändern der Größe der enthaltenen Ansicht geändert werden muss.
 
-Da die Implementierung dieser Funktionen erheblich von einer Anwendung zur nächsten variiert, stellt der Anwendungs-Assistent nur eine einfache Implementierung bereit. Sie müssen wahrscheinlich zum Anpassen dieser Funktionen rufen Sie Ihre Anwendung ordnungsgemäß funktioniert. Ein Beispiel hierfür finden Sie unter den [CONTAINER](../visual-cpp-samples.md) Beispiel.
+Da die Implementierung dieser Funktionen erheblich von einer Anwendung zur nächsten variiert, stellt der Anwendungs-Assistent nur eine einfache Implementierung bereit. Sie müssen wahrscheinlich zum Anpassen dieser Funktionen rufen Sie Ihre Anwendung ordnungsgemäß funktioniert. Ein Beispiel hierfür finden Sie unter den [CONTAINER](../overview/visual-cpp-samples.md) Beispiel.
 
 #### <a name="to-handle-embedded-and-linked-items"></a>Eingebettete und verknüpfte Elemente verarbeitet werden
 
@@ -44,7 +44,7 @@ Da die Implementierung dieser Funktionen erheblich von einer Anwendung zur näch
 
 1. Außer Kraft setzen `OnChange`, `OnChangeItemPosition`, und `OnGetItemPosition`. Diese Funktionen verarbeiten, Ändern der Größe und Positionierung eingebettete und verknüpfte Elemente zu ändern.
 
-Der Anwendungs-Assistent wird zum Ableiten der Klasse für Sie allerdings müssen Sie wahrscheinlich überschreiben `OnChange` und anderen Funktionen, die mit in Schritt 2 im vorangegangenen Verfahren aufgeführt. Die Skelett-Implementierungen müssen für die meisten Anwendungen angepasst werden, da diese Funktionen aus einer Anwendung in den nächsten unterschiedlich implementiert sind. Dieser Beispiele finden Sie in den MFC-Beispielen [DRAWCLI](../visual-cpp-samples.md) und [CONTAINER](../visual-cpp-samples.md).
+Der Anwendungs-Assistent wird zum Ableiten der Klasse für Sie allerdings müssen Sie wahrscheinlich überschreiben `OnChange` und anderen Funktionen, die mit in Schritt 2 im vorangegangenen Verfahren aufgeführt. Die Skelett-Implementierungen müssen für die meisten Anwendungen angepasst werden, da diese Funktionen aus einer Anwendung in den nächsten unterschiedlich implementiert sind. Dieser Beispiele finden Sie in den MFC-Beispielen [DRAWCLI](../overview/visual-cpp-samples.md) und [CONTAINER](../overview/visual-cpp-samples.md).
 
 Sie müssen eine Anzahl von Elementen der containeranwendung Menüstruktur zur Unterstützung von OLE hinzufügen. Weitere Informationen dazu finden Sie unter [Menüs und Ressourcen: Containererweiterungen](../mfc/menus-and-resources-container-additions.md).
 

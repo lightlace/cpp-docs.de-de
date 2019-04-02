@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa49ebed2d48d9818c2d39ae4894d8caf1fbbf81
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301453"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773137"
 ---
 # <a name="ctoolbar-class"></a>CToolBar-Klasse
 
@@ -717,9 +717,9 @@ Rufen Sie diese Memberfunktion nur für Symbolleisten, die nicht folgen *Richtli
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Muster CTRLBARS](../../visual-cpp-samples.md)<br/>
-[MFC-Beispiel DLGCBR32](../../visual-cpp-samples.md)<br/>
-[MFC-Beispiel DOCKTOOL](../../visual-cpp-samples.md)<br/>
+[MFC-Muster CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar-Klasse](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CToolBarCtrl-Klasse](../../mfc/reference/ctoolbarctrl-class.md)<br/>

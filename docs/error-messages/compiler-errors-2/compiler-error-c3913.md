@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3913
 ms.assetid: a678bfce-9524-470d-9f23-7d08ecb972c8
-ms.openlocfilehash: bf83be5e95109c9e7fa0516cde780ca6907416ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a38f7bffd56f025510e092ad37b5f810cb11a9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516382"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776517"
 ---
 # <a name="compiler-error-c3913"></a>Compilerfehler C3913
 
@@ -19,7 +19,7 @@ Standardeigenschaft muss indiziert werden
 
 Eine Default-Eigenschaft wurde nicht ordnungsgemäß definiert.
 
-Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [property](../../extensions/property-cpp-component-extensions.md).
 
 Im folgende Beispiel wird die C3913 generiert:
 

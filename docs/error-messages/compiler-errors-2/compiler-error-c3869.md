@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3869
 ms.assetid: 85b2ad72-95c1-4ed6-9761-6ef66c3802b7
-ms.openlocfilehash: 1edc90c074389d6a666d3f01f6f7be424347f51a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a3d0d754557bbc811d1017ed1491181333e82dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428131"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766780"
 ---
 # <a name="compiler-error-c3869"></a>Compilerfehler C3869
 
 Gcnew-Einschränkung fehlt die leere Parameterliste Liste '(')
 
-Die `gcnew` speziellen Einschränkung wurde ohne die leere Parameterliste angegeben. Finden Sie unter [Einschränkungen für generische Typparameter (C++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) für Weitere Informationen.
+Die `gcnew` speziellen Einschränkung wurde ohne die leere Parameterliste angegeben. Finden Sie unter [Einschränkungen für generische Typparameter (C++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) für Weitere Informationen.
 
 ## <a name="example"></a>Beispiel
 

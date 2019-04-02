@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
-ms.openlocfilehash: 8a6cbbc1e75d345d0ebdcfc9e1db32f660c13b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 117c9b9918950fd2e95e206c5aea457dee183b0a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653413"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781574"
 ---
 # <a name="compiler-error-c3465"></a>Compilerfehler C3465
 
@@ -19,7 +19,7 @@ Um den Typ 'typ' zu verwenden, müssen Sie auf die Assembly 'assembly' verweisen
 
 Typweiterleitung funktioniert im Fall einer Clientanwendung bis zur erneuten Kompilierung des Clients. Bei der erneuten Kompilierung benötigen Sie einen Verweis auf jede Assembly, die die Definition eines in Ihrer Clientanwendung verwendeten Typs enthält.
 
-Weitere Informationen finden Sie unter [Typweiterleitung (C++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Weitere Informationen finden Sie unter [Typweiterleitung (C++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Beispiel
 

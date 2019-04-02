@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 626666a8f03a8312bd26fceca745f82ad1ab89b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285918"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778168"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar-Klasse
 
@@ -71,7 +71,7 @@ Ein `CMFCRibbonProgressBar` kann in zwei Modi betrieben werden: reguläre und un
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCRibbonProgressBar` -Klasse. Das Beispiel zeigt die Statusanzeige in der Sie arbeiten unendliche-Modus (wobei die Dauer eines Vorgangs unbekannt ist) festlegen, legen Sie die minimalen und maximalen Werte für die Statusanzeige, und legen Sie die aktuelle Position der Statusanzeige. Dieser Codeausschnitt ist Teil der [MS Office 2007-Demo-Beispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCRibbonProgressBar` -Klasse. Das Beispiel zeigt die Statusanzeige in der Sie arbeiten unendliche-Modus (wobei die Dauer eines Vorgangs unbekannt ist) festlegen, legen Sie die minimalen und maximalen Werte für die Statusanzeige, und legen Sie die aktuelle Position der Statusanzeige. Dieser Codeausschnitt ist Teil der [MS Office 2007-Demo-Beispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 

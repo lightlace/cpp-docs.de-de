@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: b221abf772df06541ecde247a9db9401c0ed3c3a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7776bf504d502feee8ef51949b8adc8e44f94c8e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278014"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772292"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar-Klasse
 
@@ -71,7 +71,7 @@ Einem Grundleisten-Objekt verhält sich ähnlich wie ein Symbolleistenobjekt. Ei
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCReBar` -Klasse. Das Beispiel zeigt das Erstellen eines Grundleisten-Steuerelements, und fügen Sie ein Band hinzu. Das Band fungiert als eine interne-Symbolleiste. Dieser Codeausschnitt ist Teil der [Grundleisten-Testbeispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCReBar` -Klasse. Das Beispiel zeigt das Erstellen eines Grundleisten-Steuerelements, und fügen Sie ein Band hinzu. Das Band fungiert als eine interne-Symbolleiste. Dieser Codeausschnitt ist Teil der [Grundleisten-Testbeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]

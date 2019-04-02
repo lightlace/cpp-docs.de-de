@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271906"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769692"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -239,7 +239,7 @@ class CDockablePane : public CPane
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Gibt an, ob der automatisch ausblendbaren Animation andockbaren Bereich deaktiviert ist.|
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Bestimmt das Verhalten des Bereichs an, wenn der Bereich in den Modus "automatisch ausblenden" ist.|
@@ -290,7 +290,7 @@ Die folgenden Tipps beziehen sich auf `CDockablePane` Objekte:
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie konfigurieren eine `CDockablePane` -Objekt unter Verwendung verschiedener Methoden in der `CDockablePane` Klasse. Das Beispiel veranschaulicht, wie Sie der automatisch ausblendbaren alle Feature für den andockbaren Bereich aktivieren, aktivieren Sie die Beschriftung oder die Ziehpunkte, aktivieren den automatischen Ausblendemodus, des Bereichs und animieren einen Bereich, der im Modus "automatisch ausblenden" befindet. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel zeigt, wie Sie konfigurieren eine `CDockablePane` -Objekt unter Verwendung verschiedener Methoden in der `CDockablePane` Klasse. Das Beispiel veranschaulicht, wie Sie der automatisch ausblendbaren alle Feature für den andockbaren Bereich aktivieren, aktivieren Sie die Beschriftung oder die Ziehpunkte, aktivieren den automatischen Ausblendemodus, des Bereichs und animieren einen Bereich, der im Modus "automatisch ausblenden" befindet. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]

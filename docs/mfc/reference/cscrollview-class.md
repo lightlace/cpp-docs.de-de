@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259255"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774152"
 ---
 # <a name="cscrollview-class"></a>CScrollView-Klasse
 
@@ -82,7 +82,7 @@ Automatisch als Reaktion auf Nachrichten über die Tastatur einen Bildlauf durch
 
 Sie können die Mausrad Scrollen selbst durch Überschreiben der Nachricht zugeordnete behandeln [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) und [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) Memberfunktionen. Wie für `CScrollView`, diese Memberfunktionen unterstützen das empfohlene Verhalten für [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), die Rad-Rotation-Nachricht.
 
-Leiten Sie zur Nutzung des automatischen Bildlaufs Ihrer Ansichtsklasse aus `CScrollView` anstelle von `CView`. Wenn die Ansicht zuerst erstellt wird, sollten Sie die Größe der bildlauffähige Ansicht basierend auf der Größe des Dokuments Aufruf berechnet die `SetScrollSizes` Memberfunktion der Ihre Überschreibung der [CView:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) oder [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Sie müssen Ihren eigenen Code zum Abfragen der Größe des Dokuments schreiben. Ein Beispiel finden Sie unter den [Scribble-Beispiels](../../visual-cpp-samples.md).)
+Leiten Sie zur Nutzung des automatischen Bildlaufs Ihrer Ansichtsklasse aus `CScrollView` anstelle von `CView`. Wenn die Ansicht zuerst erstellt wird, sollten Sie die Größe der bildlauffähige Ansicht basierend auf der Größe des Dokuments Aufruf berechnet die `SetScrollSizes` Memberfunktion der Ihre Überschreibung der [CView:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) oder [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Sie müssen Ihren eigenen Code zum Abfragen der Größe des Dokuments schreiben. Ein Beispiel finden Sie unter den [Scribble-Beispiels](../../overview/visual-cpp-samples.md).)
 
 Der Aufruf der `SetScrollSizes` Memberfunktion legt Zuordnungsmodus der Ansicht, die gesamten Dimensionen Bildlaufansicht, und die Beträge horizontal und vertikal scrollen. Alle Größen sind in logischen Einheiten. Die logische Größe der Ansicht wird aus Daten in das Dokument in der Regel berechnet, aber in einigen Fällen kann eine feste Größe angeben möchten. Beispiele für beide Ansätze, finden Sie unter [CScrollView::SetScrollSizes](#setscrollsizes).
 
@@ -376,7 +376,7 @@ Sie müssen den Zuordnungsmodus auf die Zuordnungsmodi für Windows mit Ausnahme
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel DIBLOOK](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CView-Klasse](../../mfc/reference/cview-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CView-Klasse](../../mfc/reference/cview-class.md)<br/>

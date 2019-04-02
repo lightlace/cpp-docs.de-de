@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
-ms.openlocfilehash: c45ce5e2e72c6a987a0053cb4b1bbb151c149faf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6641f05c8daa5ad505c0bcb8d29a369ad5fd9a9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496538"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779598"
 ---
 # <a name="compiler-error-c3352"></a>Compilerfehler C3352
 
@@ -19,7 +19,7 @@ ms.locfileid: "50496538"
 
 Die Parameterlisten für `function` und der Delegat stimmen nicht überein.
 
-Weitere Informationen finden Sie unter [Delegate (Komponentenerweiterungen)](../../windows/delegate-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [Delegate (Komponentenerweiterungen)](../../extensions/delegate-cpp-component-extensions.md).
 
 Im folgende Beispiel wird die C3352 generiert:
 

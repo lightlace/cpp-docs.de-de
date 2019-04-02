@@ -2,12 +2,12 @@
 title: Desktopanwendungen (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 80b85afc52819a742c85512e8e6031b9b2e26e9a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 090180062139642d8a686e9f1bf063f3e65aee88
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694568"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771918"
 ---
 # <a name="desktop-applications-visual-c"></a>Desktopanwendungen (Visual C++)
 
@@ -44,7 +44,7 @@ C Runtime (CRT) und Standard-Bibliothek von Klassen und Funktionen, COM-Objekte 
 |[Arbeiten mit Ressourcendateien](working-with-resource-files.md)|So fügen Sie Bilder, Symbole, Zeichenfolgentabellen und andere Ressourcen in eine Desktopanwendung.|
 |[Ressourcen für das Erstellen eines Spiels mit DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Enthält Links zu Inhalten für das Erstellen von Spielen in C++.|
 |[Exemplarische Vorgehensweise: Erstellen und Verwenden einer statischen Bibliothek](walkthrough-creating-and-using-a-static-library-cpp.md)|Vorgehensweise: Erstellen Sie eine LIB-Binärdatei.|
-|[Gewusst wie: Verwenden des Windows 10-SDKs in einer Windows-Desktopanwendung](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Enthält Schritte zum Einrichten Ihres Projekts für das Erstellen mit dem Windows 10-SDK.|
+|[Vorgehensweise: Verwenden des Windows 10 SDK in einer Windows-Desktopanwendung](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Enthält Schritte zum Einrichten Ihres Projekts für das Erstellen mit dem Windows 10-SDK.|
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
@@ -56,4 +56,4 @@ C Runtime (CRT) und Standard-Bibliothek von Klassen und Funktionen, COM-Objekte 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

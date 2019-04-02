@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 8daba00432d7f14c8517da3ed4dc506cfd80865a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825657"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780469"
 ---
 # <a name="consuming-libraries-and-components"></a>Nutzen Bibliotheken und Komponenten
 
@@ -20,7 +20,7 @@ Häufig ein C++-Projekt benötigt, Funktionen aufzurufen oder Zugriff auf Daten 
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Verwenden von Bibliotheken heruntergeladen über vcpkg
 
-Um eine Bibliothek nutzen, die Sie mithilfe von heruntergeladen haben die **Vcpkg** -Paket-Manager können Sie die nachstehenden Anweisungen ignorieren. Weitere Informationen finden Sie unter [vcpkg: Ein C++-Paket-Manager für Windows, Linux und MacOS](../vcpkg.md#integrate-with-visual-studio-windows) für Weitere Informationen.
+Um eine Bibliothek nutzen, die Sie mithilfe von heruntergeladen haben die **Vcpkg** -Paket-Manager können Sie die nachstehenden Anweisungen ignorieren. Weitere Informationen finden Sie unter [vcpkg: Ein C++-Paket-Manager für Windows, Linux und MacOS](vcpkg.md#integrate-with-visual-studio-windows) für Weitere Informationen.
 
 ## <a name="consuming-static-libraries"></a>Verwenden von statischen Bibliotheken
 
@@ -167,4 +167,4 @@ Die folgenden Eigenschaften gelten für COM- und Assemblyverweise und können ni
 ## <a name="see-also"></a>Siehe auch
 
 [Referenz für C++-Projekt Seite](reference/property-pages-visual-cpp.md)<br>
-[Festlegen von C++-Compiler und erstellen Sie die Eigenschaften in Visual Studio](working-with-project-properties.md)
+[Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio](working-with-project-properties.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 04136b3550675f0e50f905047fee551e27da7069
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271865"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768107"
 ---
 # <a name="cfont-class"></a>CFont-Klasse
 
@@ -359,6 +359,6 @@ Weitere Informationen zur Verwendung von Grafikobjekten finden Sie unter [Grafik
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel HIERSVR](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject-Klasse](../../mfc/reference/cgdiobject-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)

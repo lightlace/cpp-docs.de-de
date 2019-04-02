@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: 5b74ee8a779ad2fffa801749d9818f985bc8c352
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273308"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767183"
 ---
 # <a name="collections"></a>Auflistungen
 
@@ -55,7 +55,7 @@ Jede der drei bereitgestellten Auflistungsformen wird kurz weiter unten in diese
 
 ##  <a name="_core_the_template_based_collection_classes"></a> Die vorlagenbasierte Auflistungsklassen
 
-Die einfachste Möglichkeit zum Implementieren von einer typsicheren Auflistung, die Objekte eines beliebigen Typs enthält, ist die MFC-Template-basierten Klassen verwenden. Beispiele dieser Klassen finden Sie in der MFC-Beispiel [sammeln](../visual-cpp-samples.md).
+Die einfachste Möglichkeit zum Implementieren von einer typsicheren Auflistung, die Objekte eines beliebigen Typs enthält, ist die MFC-Template-basierten Klassen verwenden. Beispiele dieser Klassen finden Sie in der MFC-Beispiel [sammeln](../overview/visual-cpp-samples.md).
 
 Die folgende Tabelle enthält die MFC-vorlagenbasierte Auflistungsklassen.
 

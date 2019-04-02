@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: 690fc023b72b2606efc190aceb7c266a35a4ebb4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283047"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768015"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL-Auflistungen und -Enumerationen
 
@@ -40,7 +40,7 @@ Ein erweitertes Beispiel, das Sie durch die Implementierung einer C++-Standardbi
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.
 
-[-Beispiel](../visual-cpp-samples.md)<br/>
+[-Beispiel](../overview/visual-cpp-samples.md)<br/>
 Ein Beispiel, das die Verwendung von veranschaulicht `ICollectionOnSTLImpl` und `CComEnumOnSTL`, und die Implementierung von benutzerdefinierten Kopierrichtlinienklassen.
 
 ## <a name="see-also"></a>Siehe auch

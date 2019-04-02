@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2767
 ms.assetid: e8f84178-a160-4d71-a236-07e4fcc11e96
-ms.openlocfilehash: 6c13610b6fd7aae4b4232b836a0307867bd591d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78b171b634aea66115c4029c696fec042593bb30
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550149"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779585"
 ---
 # <a name="compiler-error-c2767"></a>Compilerfehler C2767
 
 verwaltet oder WinRTarray Dimensions-Konflikt: erwartet wurde(n) N Argument(e) - wurden M bereitgestellt
 
-Die Deklaration eines verwalteten oder WinRT-Arrays wurde nicht ordnungsgemäß formatiert. Weitere Informationen finden Sie unter [Array](../../windows/arrays-cpp-component-extensions.md).
+Die Deklaration eines verwalteten oder WinRT-Arrays wurde nicht ordnungsgemäß formatiert. Weitere Informationen finden Sie unter [Array](../../extensions/arrays-cpp-component-extensions.md).
 
 Im folgenden Beispiel wird C2767 generiert und gezeigt, wie Sie diesen Fehler beheben:
 

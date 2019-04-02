@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-ms.openlocfilehash: 277f82874426a008f598c052966ad81f46c45732
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305041"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766799"
 ---
 # <a name="drag-and-drop-ole"></a>Drag &amp; Drop (OLE)
 
@@ -26,7 +26,7 @@ Bei Verwendung von OLE- Drag & Drop entfernt aus der Prozess zwei Schritte. Wäh
 
 Verwenden OLE- Drag & Drop, können Daten von einem Speicherort zu einem anderen in einem Dokument, das zwischen verschiedenen Dokumenten oder zwischen Anwendungen übertragen werden. In einem Container oder einer Server-Anwendung implementiert werden kann, und jede Anwendung kann eine Drop-Quelle, Ziel eines Ablegevorgangs oder beides sein. Wenn eine Anwendung sowohl die Drop-Quelle als auch die Drop-Ziel unterstützt ist, ist Drag & Drop aktiviert zwischen untergeordneten Fenster oder in einem Fenster. Diese Funktion möglich Ihre Anwendung viel einfacher zu verwenden.
 
-Wenn Sie nur die Drag & Drop-Funktionen von OLE verwenden möchten, finden Sie unter [Drag & Drop: Anpassen von](../mfc/drag-and-drop-customizing.md). In diesem Artikel erläuterten Techniken können zu nicht-OLE-Anwendungen, die Quellen zu löschen. Der Artikel [Drag & Drop: Implementieren eines Drop-Ziels](../mfc/drag-and-drop-implementing-a-drop-target.md) beschreibt, wie Sie die Drop-Ziel-Unterstützung für OLE und nicht-OLE-Anwendungen zu implementieren. Es ist auch hilfreich sein, überprüfen Sie die MFC-OLE-Beispiele [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md).
+Wenn Sie nur die Drag & Drop-Funktionen von OLE verwenden möchten, finden Sie unter [Drag & Drop: Anpassen von](../mfc/drag-and-drop-customizing.md). In diesem Artikel erläuterten Techniken können zu nicht-OLE-Anwendungen, die Quellen zu löschen. Der Artikel [Drag & Drop: Implementieren eines Drop-Ziels](../mfc/drag-and-drop-implementing-a-drop-target.md) beschreibt, wie Sie die Drop-Ziel-Unterstützung für OLE und nicht-OLE-Anwendungen zu implementieren. Es ist auch hilfreich sein, überprüfen Sie die MFC-OLE-Beispiele [OCLIENT](../overview/visual-cpp-samples.md) und [HIERSVR](../overview/visual-cpp-samples.md).
 
 Wenn Sie nicht gelesen haben die [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md) Artikelreihe, Sie möchten dies jetzt nachzuholen. In diesen Artikeln wird erläutert, die Grundlagen von Datenübertragung und wie Sie es in Ihren Anwendungen implementieren.
 

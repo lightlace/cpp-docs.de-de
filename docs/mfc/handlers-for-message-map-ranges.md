@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: b587064625178c520338e4253e812e8f84275257
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d2bc961486d9bc686e1ca0d5feb0fe01d65f9512
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266366"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773995"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Handler für Meldungszuordnungsbereiche
 
@@ -95,7 +95,7 @@ Weitere Informationen zu den parameteranforderungen für die Aktualisierung Hand
 
 ##  <a name="_core_example_for_a_range_of_command_ids"></a> Beispiel für einen Bereich von Befehls-IDs
 
-Wenn können Sie Bereiche, die ein Beispiel ist bei der Verarbeitung von Befehlen wie der Zoom-Befehl in der MFC-Beispiel [HIERSVR](../visual-cpp-samples.md). Mit diesem Befehl wird die Ansicht zwischen 25 und 300 % seiner normalen Größe skalieren vergrößert. HIERSVR des View-Klasse verwendet einen Bereich, um die Zoom-Befehle mit einer Meldungszuordnungseintrags ähnlich wie dieses zu verarbeiten:
+Wenn können Sie Bereiche, die ein Beispiel ist bei der Verarbeitung von Befehlen wie der Zoom-Befehl in der MFC-Beispiel [HIERSVR](../overview/visual-cpp-samples.md). Mit diesem Befehl wird die Ansicht zwischen 25 und 300 % seiner normalen Größe skalieren vergrößert. HIERSVR des View-Klasse verwendet einen Bereich, um die Zoom-Befehle mit einer Meldungszuordnungseintrags ähnlich wie dieses zu verarbeiten:
 
 [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]
 

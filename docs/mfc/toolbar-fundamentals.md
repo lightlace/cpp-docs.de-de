@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258397"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775490"
 ---
 # <a name="toolbar-fundamentals"></a>Grundlegendes über Symbolleisten
 
@@ -62,7 +62,7 @@ Symbolleiste-Erstellung erfolgt in `CMainFrame::OnCreate`. MFC-Aufrufe [OnCreate
 1. Ruft die Funktionen, um andocken, Gleitkommatyp und QuickInfos zu ermöglichen. Weitere Informationen über diese Aufrufe, finden Sie im Artikel [andockbare und unverankerte Symbolleisten](../mfc/docking-and-floating-toolbars.md).
 
 > [!NOTE]
->  Im allgemeinen MFC-Beispiel [DOCKTOOL](../visual-cpp-samples.md) enthält Abbildungen der alten und neuen MFC-Symbolleisten. Die Symbolleisten, mit denen `COldToolbar` erfordern Aufrufe in Schritt 2 `LoadBitmap` (statt `LoadToolBar`) und `SetButtons`. Die neuen Symbolleisten sind Aufrufe von `LoadToolBar`.
+>  Im allgemeinen MFC-Beispiel [DOCKTOOL](../overview/visual-cpp-samples.md) enthält Abbildungen der alten und neuen MFC-Symbolleisten. Die Symbolleisten, mit denen `COldToolbar` erfordern Aufrufe in Schritt 2 `LoadBitmap` (statt `LoadToolBar`) und `SetButtons`. Die neuen Symbolleisten sind Aufrufe von `LoadToolBar`.
 
 Das Andocken, Gleitkommatyp und Aufrufe der Tool-Tipps sind optional. Sie können die Zeilen aus entfernen `OnCreate` Falls gewünscht. Das Ergebnis ist eine Symbolleiste, die feste, nicht "float" oder Redock und kann nicht angezeigt werden QuickInfos bleibt.
 

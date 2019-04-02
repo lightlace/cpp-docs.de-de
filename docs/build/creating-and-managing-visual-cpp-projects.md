@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: b5fb9ac87547578f101676d4cf424c7065155842
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825542"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775321"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio-Projekte – C++
 
@@ -26,7 +26,7 @@ Ein *Visual Studio-Projekt* basiert ein Projekt auf das MSBuild-Build-System. MS
 
 Sie können C++-Projekte erstellen, indem Sie die Auswahl **Datei &#124; neu &#124; Projekt**, und klicken Sie dann Visual C++ im linken Bereich auswählen. Im mittleren Bereich sehen Sie eine Liste der Projektvorlagen das Projekt aus: 
 
-   ![Projektvorlagen](../media/vs2017-new-project.png "Visual Studio 2017-Dialogfeld „Neues Projekt“")
+   ![Projektvorlagen](../overview/media/vs2017-new-project.png "Visual Studio 2017-Dialogfeld „Neues Projekt“")
 
 Weitere Informationen zu allen Standard-Projektvorlagen, die in Visual Studio enthalten sind, finden Sie unter [C++-Projektvorlagen in Visual Studio](reference/visual-cpp-project-types.md). Sie können eigene Projektvorlagen erstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Projektvorlagen](/visualstudio/ide/how-to-create-project-templates).
 
@@ -42,7 +42,7 @@ Quellcodedateien, Symbole oder andere Elemente Ihrem Projekt hinzufügen, indem 
 
 ## <a name="add-third-party-libraries"></a>Hinzufügen von Bibliotheken von Drittanbietern
 
-Verwenden Sie zum Hinzufügen von Drittanbieterbibliotheken der [Vcpkg](../vcpkg.md) -Paket-Manager. Führen Sie die Visual Studio-integrationsschritt richten Sie die Pfade zu dieser Bibliothek, wenn Sie es aus einem beliebigen Visual Studio-Projekt verweisen. 
+Verwenden Sie zum Hinzufügen von Drittanbieterbibliotheken der [Vcpkg](vcpkg.md) -Paket-Manager. Führen Sie die Visual Studio-integrationsschritt richten Sie die Pfade zu dieser Bibliothek, wenn Sie es aus einem beliebigen Visual Studio-Projekt verweisen. 
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>Festlegen von Compileroptionen und andere Buildeigenschaften
 
@@ -54,16 +54,16 @@ Zum Kompilieren, und führen Sie das neue Projekt ein, drücken Sie die **F5** o
 
 Ein neues Projekt wird ohne Fehler kompiliert. Wenn Sie Ihren eigenen Code hinzufügen, können Sie gelegentlich einen Fehler verursachen oder eine Warnung ausgelöst. Ein Fehler wird verhindert, dass den Build abgeschlossen; eine Warnung wird nicht verwendet. Alle Fehler und Warnungen werden angezeigt, bei der Erstellung des Projekts in das Fenster "Ausgabe" sowohl in der Fehlerliste. 
 
-   ![Liste von Ausgabe-Fenster und Fehler](../media/vs2017-output-error-list.png)
+   ![Liste von Ausgabe-Fenster und Fehler](../overview/media/vs2017-output-error-list.png)
 
 Sie können in der Fehlerliste drücken **F1** auf einen hervorgehobenen Fehler, um die Dokumentationsthema anzuzeigen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Festlegen von C++-Compiler und erstellen Sie die Eigenschaften in Visual Studio](working-with-project-properties.md)<br/>
+[Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio](working-with-project-properties.md)<br/>
 Gewusst wie Eigenschaftenseiten und Eigenschaftenblätter verwenden, um Ihre projekteinstellungen festzulegen.
 
-[Reference-Bibliotheken und Komponenten zum Zeitpunkt der Erstellung](adding-references-in-visual-cpp-projects.md)<br/>
+[Verweisen auf Bibliotheken und Komponenten zur Buildzeit](adding-references-in-visual-cpp-projects.md)<br/>
 Informationen zum Einschließen von Bibliotheken, DLL-Dateien, COM- und -Komponenten in einem Projekt.
  
 [Organisieren von Projektausgabedateien](how-to-organize-project-output-files-for-builds.md)<br/>

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5e4de39b0352f33ad59950754df7c0815d6038c3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417904"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776192"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget-Klasse
 
@@ -524,7 +524,7 @@ void RestoreWaitCursor();
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC ACDUAL-Beispiel](../../visual-cpp-samples.md)<br/>
+[MFC ACDUAL-Beispiel](../../overview/visual-cpp-samples.md)<br/>
 [CObject-Klasse](../../mfc/reference/cobject-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CCmdUI-Klasse](../../mfc/reference/ccmdui-class.md)<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294992"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781730"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Splitterfenster
 
@@ -46,7 +46,7 @@ Die maximale Anzahl der Bereiche, die Sie für den dynamischen Splitterfenstern 
 
 ## <a name="splitter-examples"></a>Splitter-Beispiele
 
-Viele der MFC-Beispiel-Programmen verwenden Splitterfenster, direkt oder indirekt. Im allgemeinen MFC-Beispiel [VIEWEX](../visual-cpp-samples.md) veranschaulicht verschiedene Verwendungen von statischen Splitterfenstern, wie Sie eine Aufteilung in eine Aufteilung zu platzieren.
+Viele der MFC-Beispiel-Programmen verwenden Splitterfenster, direkt oder indirekt. Im allgemeinen MFC-Beispiel [VIEWEX](../overview/visual-cpp-samples.md) veranschaulicht verschiedene Verwendungen von statischen Splitterfenstern, wie Sie eine Aufteilung in eine Aufteilung zu platzieren.
 
 Sie können auch Klassen-Assistenten verwenden, zum Erstellen eines neuen mehrere Document Interface (MDI) untergeordneten Rahmenfenster (Klasse), die ein Teilungsfenster enthält. Weitere Informationen über Splitterfenster, finden Sie unter [mehrere Dokumenttypen, Ansichten und Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
 

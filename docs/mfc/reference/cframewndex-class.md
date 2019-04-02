@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 6ba0c2b5449cb0058c1b274d9d9c0d7ae33bcd7f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d336e85020d8d2e855afb0568058057594ec8829
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302980"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769647"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx-Klasse
 
@@ -291,7 +291,7 @@ class CFrameWndEx : public CFrameWnd
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie eine Klasse von erben die `CFrameWndEx` Klasse. Das Beispiel veranschaulicht die Methodensignaturen in der Unterklasse und das Überschreiben der `OnShowPopupMenu` Methode. Dieser Codeausschnitt ist Teil des [WordPad-Beispiels](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie eine Klasse von erben die `CFrameWndEx` Klasse. Das Beispiel veranschaulicht die Methodensignaturen in der Unterklasse und das Überschreiben der `OnShowPopupMenu` Methode. Dieser Codeausschnitt ist Teil des [WordPad-Beispiels](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#3](../../mfc/reference/codesnippet/cpp/cframewndex-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#4](../../mfc/reference/codesnippet/cpp/cframewndex-class_2.cpp)]
@@ -2006,7 +2006,7 @@ void SetDockState(const CDockState& state);
 ### <a name="parameters"></a>Parameter
 
 *state*<br/>
-Der Andockstatus. Dieser Parameter wird ignoriert.
+Der Andockstatus. Konvertiert die Zeichenfolgendarstellung einer Zahl in einem angegebenen Stil und einem kulturspezifischen Format in die entsprechende 32-Bit-Ganzzahl mit Vorzeichen.
 
 ##  <a name="setprintpreviewframe"></a>  CFrameWndEx::SetPrintPreviewFrame
 

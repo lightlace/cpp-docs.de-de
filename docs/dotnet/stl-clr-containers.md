@@ -6,12 +6,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 511ea14d02b77e237ae9768776c4ff3eb97982ed
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744354"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774541"
 ---
 # <a name="stlclr-containers"></a>STL/CLR-Container
 
@@ -37,7 +37,7 @@ Sie können keine geschachtelte Werttypen in jedem der STL/CLR-Container einfüg
 
 ### <a name="handles-to-reference-types"></a>Handles für Referenztypen
 
-Sie können ein Handle für ein Verweistyp in einen STL/CLR-Container einfügen. Ein Handle in C++, die die CLR ist analog zu einem Zeiger in systemeigenem C++. Weitere Informationen finden Sie unter [Handle für Objekt (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md).
+Sie können ein Handle für ein Verweistyp in einen STL/CLR-Container einfügen. Ein Handle in C++, die die CLR ist analog zu einem Zeiger in systemeigenem C++. Weitere Informationen finden Sie unter [Handle für Objekt (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Beispiel
 
@@ -229,7 +229,7 @@ int main()
 
 Sie können auch einen nicht geschachtelter Werttyp in einen STL/CLR-Container einfügen. Nicht geschachtelter Werttyp ist ein Werttyp, der nicht wurde *geschachtelt* in einen Verweistyp handelt.
 
-Ein Value-Type-Element kann eine der standardmäßigen Werttypen, wie z. B. eine `int`, oder es kann ein benutzerdefinierter Wert z. B. eine `value class`. Weitere Informationen finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)
+Ein Value-Type-Element kann eine der standardmäßigen Werttypen, wie z. B. eine `int`, oder es kann ein benutzerdefinierter Wert z. B. eine `value class`. Weitere Informationen finden Sie unter [Klassen und Strukturen](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>Beispiel
 

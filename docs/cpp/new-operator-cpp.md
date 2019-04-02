@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 83800f823ffd14fd61a9735b09b12d2f07f6d0a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477986"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768067"
 ---
 # <a name="new-operator-c"></a>new-Operator (C++)
 
 Belegt Speicher für ein Objekt oder Array von Objekten des *Typname* aus dem freien Speicher und gibt einen typisierten Zeiger ungleich NULL zurück, auf das Objekt.
 
 > [!NOTE]
->  Microsoft-Erweiterungen für C++-Komponente bietet Unterstützung für die **neue** Schlüsselwort, um eine Vtable-Slot Einträge hinzuzufügen. Weitere Informationen finden Sie unter [new (neuer Slot in Vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+>  Microsoft-Erweiterungen für C++-Komponente bietet Unterstützung für die **neue** Schlüsselwort, um eine Vtable-Slot Einträge hinzuzufügen. Weitere Informationen finden Sie unter [new (neuer Slot in Vtable)](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,7 +29,7 @@ Belegt Speicher für ein Objekt oder Array von Objekten des *Typname* aus dem fr
 
 Wenn Fehler auftreten, **neue** gibt NULL zurück oder löst eine Ausnahme aus; finden Sie unter [der neuen "und" delete](../cpp/new-and-delete-operators.md) für Weitere Informationen. Sie können dieses Standardverhalten ändern, indem eine benutzerdefinierte Ausnahmebehandlungsroutine schreiben und Aufrufen der [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) -Laufzeitbibliothek-Funktion mit dem Funktionsnamen als Argument.
 
-Weitere Informationen zum Erstellen eines Objekts auf dem verwalteten Heap, finden Sie unter [Gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md).
+Weitere Informationen zum Erstellen eines Objekts auf dem verwalteten Heap, finden Sie unter [Gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
 Wenn **neue** wird verwendet, um Speicher für ein C++-Klassenobjekt zu reservieren, den Konstruktor des Objekts wird aufgerufen, nachdem der Speicher belegt wird.
 
@@ -61,10 +61,10 @@ Wenn Sie den Operator verwenden **neue** ohne zusätzliche Argumente, und die Ko
 
 Die folgende Liste beschreibt die Grammatikelemente von **neue**:
 
-*Platzierung*<br/>
+*placement*<br/>
 Bietet eine Möglichkeit der Übergabe zusätzlicher Argumente, wenn Sie überladen **neue**.
 
-*Typname*<br/>
+*type-name*<br/>
 Gibt den zuzuweisenden Typ an. Es kann entweder ein integrierter oder ein benutzerdefinierter Typ sein. Eine komplizierte Typspezifikation können Sie in Klammern einschließen, um die Reihenfolge der Bindung zu erzwingen.
 
 *initializer*<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279916"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772763"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Verwenden mehrerer Ressourcendateien und Headerdateien mit Visual C++
 
@@ -107,8 +107,7 @@ Wenn Sie benutzerdefinierte formatierte Ressourcen verwenden, können Sie sie zu
 
 AFXRES.RC und AFXPRINT.RC enthalten die Standardressourcen, die von bestimmten Funktionen des Frameworks benötigt werden. Wie RES\MYAPP.RC2 werden diese zwei vom Framework bereitgestellten Ressourcendateien mit #include am Ende von MYAPP.RC eingebunden. Zudem werden sie in den Kompilierzeitdirektiven des Dialogfelds „Gruppe enthält“ angegeben. So werden diese Frameworkressourcen beim Bearbeiten von MYAPP.RC in Visual C++ nicht direkt angezeigt oder bearbeitet, sie werden jedoch in die binäre RES-Datei der Anwendung und die finale EXE-Datei kompiliert. Weitere Informationen für die standard Frameworkressourcen, einschließlich der Verfahren zum Ändern, finden Sie unter [technischer Hinweis 23](../mfc/tn023-standard-mfc-resources.md).
 
-AFXRES.H definiert Standardsymbole, wie z. B. `ID_FILE_NEW`, die vom Framework und insbesondere in AFXRES.RC verwendet werden. AFXRES.H bindet mit #include auch die Datei WINRES.H ein, die eine Teilmenge von WINDOWS.H enthält. Diese wird von den von Visual C++ generierten RC-Dateien sowie AFXRES.RC benötigt. Die in AFXRES.H definierten Symbole stehen beim Bearbeiten der Anwendungsressourcendatei (MYAPP.RC) zur Verfügung. 
-  `ID_FILE_NEW` wird beispielsweise für das Menüelement "Neue Datei" in der Menüressource von MYAPP.RC verwendet. Sie können diese vom Framework definierten Symbole nicht ändern oder löschen.
+AFXRES.H definiert Standardsymbole, wie z. B. `ID_FILE_NEW`, die vom Framework und insbesondere in AFXRES.RC verwendet werden. AFXRES.H bindet mit #include auch die Datei WINRES.H ein, die eine Teilmenge von WINDOWS.H enthält. Diese wird von den von Visual C++ generierten RC-Dateien sowie AFXRES.RC benötigt. Die in AFXRES.H definierten Symbole stehen beim Bearbeiten der Anwendungsressourcendatei (MYAPP.RC) zur Verfügung. `ID_FILE_NEW` wird beispielsweise für das Menüelement "Neue Datei" in der Menüressource von MYAPP.RC verwendet. Sie können diese vom Framework definierten Symbole nicht ändern oder löschen.
 
 ## <a name="_mfcnotes_tn035_including"></a> Einschließen zusätzlicher Headerdateien
 
@@ -178,7 +177,7 @@ Visual C++ und der Ressourcencompiler unterstützen mehrere RC-Dateien im selben
 
 - Wenn Sie eine Ressource mit einem Text-Editor in einem lesbaren Format verwalten möchten, sollten Sie sie in einer RC-Datei getrennt von der Datei speichern, die in Visual C++ bearbeitet wird.
 
-- Wenn Sie eine benutzerdefinierte Ressource in einem Binär- oder Textformat speichern müssen, das von einem anderen spezialisierten Daten-Editor interpretiert werden kann, sollten Sie sie in einer separaten RC-Datei speichern, damit Visual C++ das Format nicht in Hexadezimaldaten ändert. Die. WAV (Audio) von Dateiressourcen im MFC Advanced Concepts-Beispiel [SPEAKN](../visual-cpp-samples.md) sind ein gutes Beispiel.
+- Wenn Sie eine benutzerdefinierte Ressource in einem Binär- oder Textformat speichern müssen, das von einem anderen spezialisierten Daten-Editor interpretiert werden kann, sollten Sie sie in einer separaten RC-Datei speichern, damit Visual C++ das Format nicht in Hexadezimaldaten ändert. Die. WAV (Audio) von Dateiressourcen im MFC Advanced Concepts-Beispiel [SPEAKN](../overview/visual-cpp-samples.md) sind ein gutes Beispiel.
 
 Sie können mit #include eine SECOND.RC in die Kompilierzeitanweisungen im Dialogfeld „Gruppe enthält“ einbinden:
 

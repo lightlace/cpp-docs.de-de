@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332438"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779260"
 ---
 # <a name="postfix-expressions"></a>Postfixausdrücke
 
@@ -23,7 +23,7 @@ Postfixausdrücke bestehen aus primären Ausdrücken bzw. Ausdrücken, in denen 
 |-------------------|-----------------------|
 |[Subscript-operator](../cpp/subscript-operator.md)|**[ ]**|
 |[Funktionsaufrufoperator](../cpp/function-call-operator-parens.md)|**( )**|
-|[Operator für die explizite Konvertierung](../cpp/explicit-type-conversion-operator-parens.md)|*Typname* **)**|
+|[Operator für die explizite Konvertierung](../cpp/explicit-type-conversion-operator-parens.md)|*type-name* **( )**|
 |[Memberzugriffsoperator](../cpp/member-access-operators-dot-and.md)|**.** Oder **->**|
 |[Postfixinkrement-Operators](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[Postfixdekrement-Operators](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
@@ -59,7 +59,7 @@ Die **Typeid** -Operator gilt ein postfixausdruck.  Finden Sie unter **Typeid-Op
 
 ## <a name="formal-and-actual-arguments"></a>Formale und tatsächliche Argumente
 
-Aufrufende Programme übergeben Informationen an die aufgerufenen Funktionen in "tatsächlichen Argumenten". Die aufgerufenen Funktionen greifen mithilfe der entsprechenden "formalen Argumente" auf die Informationen zu.
+Aufrufende Programme übergeben Informationen an die aufgerufenen Funktionen in „tatsächlichen Argumenten“. Die aufgerufenen Funktionen greifen mithilfe der entsprechenden „formalen Argumente“ auf die Informationen zu.
 
 Wenn eine Funktion aufgerufen wird, werden die folgenden Aufgaben ausgeführt:
 
@@ -149,7 +149,7 @@ Auslassungspunkte geben an, dass Argumente möglicherweise erforderlich sind, da
 
 Ellipsen müssen in der Argumentliste zuletzt deklariert werden, sofern sie vorhanden sind. Weitere Informationen zum Übergeben einer Variablen Anzahl von Argumenten finden Sie unter der Erläuterung [Va_arg, Va_start und Va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) in die *Run-Time Library Reference*.
 
-Weitere Informationen zu Standardargumenten in CLR-Programmierung finden Sie unter [Variablenargumentlisten (...) (C++ / CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Weitere Informationen zu Standardargumenten in CLR-Programmierung finden Sie unter [Variablenargumentlisten (...) (C++ / CLI) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 Mit Standardargumenten können Sie den Wert festlegen, den ein Argument annehmen soll, wenn keiner im Funktionsaufruf angegeben wird. Das folgende Codefragment zeigt, wie Standardargumente funktionieren. Weitere Informationen zu Einschränkungen für das Festlegen von Standardargumenten, finden Sie unter [Standardargumente](../cpp/default-arguments.md).
 

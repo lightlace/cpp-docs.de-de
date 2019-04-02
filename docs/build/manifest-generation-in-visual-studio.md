@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: eabd488e581357ec1386b20597c1987e4c8b2c19
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: f055e3d16dfc0ea4320883210458ae10daebdc45
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809729"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781678"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Manifestgenerierung in Visual Studio
 
@@ -27,7 +27,7 @@ Das Buildsystem von Visual Studio ermöglicht das Manifest in die endgültige Bi
 
 1. Wenn in der Binärdatei eingebettetes Manifest generiert, die für das Manifesttool identisch ist, wird der Build mit dem nächsten Schritt fortgesetzt.
 
-Das Manifest in die endgültige Binärdatei als Textressource eingebettet ist, und es kann angezeigt werden, indem Sie die endgültige Binärdatei als Datei in Visual Studio öffnen. Um sicherzustellen, dass das Manifest auf die richtigen Bibliotheken verweist, die Schritte [Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) oder führen Sie die Vorschläge in beschrieben die [Problembehandlung](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Abschnitt.
+Das Manifest in die endgültige Binärdatei als Textressource eingebettet ist, und es kann angezeigt werden, indem Sie die endgültige Binärdatei als Datei in Visual Studio öffnen. Um sicherzustellen, dass das Manifest auf die richtigen Bibliotheken verweist, die Schritte [Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md) oder führen Sie die Vorschläge in beschrieben die [Problembehandlung](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Abschnitt.
 
 ## <a name="see-also"></a>Siehe auch
 

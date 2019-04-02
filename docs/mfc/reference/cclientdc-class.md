@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CClientDC [MFC], CClientDC
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
-ms.openlocfilehash: 1c506e1fe3d36b9f356f8ef250e0310a10a917cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a67af5d7d82b8bd7d0490d4ae6f9535bf3283ea2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284111"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766767"
 ---
 # <a name="cclientdc-class"></a>CClientDC-Klasse
 
@@ -37,7 +37,7 @@ class CClientDC : public CDC
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CClientDC::m_hWnd](#m_hwnd)|Das HWND des Fensters für den dieser `CClientDC` gültig ist.|
 
@@ -100,7 +100,7 @@ HWND m_hWnd;
 
 ## <a name="see-also"></a>Siehe auch
 
-[MDI MFC-Beispiel](../../visual-cpp-samples.md)<br/>
+[MDI MFC-Beispiel](../../overview/visual-cpp-samples.md)<br/>
 [CDC-Klasse](../../mfc/reference/cdc-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CDC-Klasse](../../mfc/reference/cdc-class.md)

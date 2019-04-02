@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 5ac62d04c38dbddda90d2f33a9c14c9c131fcd9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326594"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772090"
 ---
 # <a name="ctabview-class"></a>CTabView-Klasse
 
@@ -65,7 +65,7 @@ Diese Klasse erleichtert die Ansicht im Registerkartenformat in eine Anwendung f
 
 Angenommen, Sie müssen möglicherweise ein Dokument, das auf unterschiedliche Weise dargestellt werden kann: als ein Arbeitsblatt, ein Diagramm, bearbeitbaren Formular, und So weiter. Sie einzelne Ansichten, zeichnen die Daten nach Bedarf erstellen, fügen Sie sie in Ihrem `CTabView`-abgeleitetes Objekt zu bitten, ohne eine zusätzliche Codierung im Registerkartenformat.
 
-[TabbedView-Beispiel: MFC-View-Anwendung mit Registerkarten](../../visual-cpp-samples.md) veranschaulicht die Verwendung der `CTabView`.
+[TabbedView-Beispiel: MFC-View-Anwendung mit Registerkarten](../../overview/visual-cpp-samples.md) veranschaulicht die Verwendung der `CTabView`.
 
 ## <a name="example"></a>Beispiel
 

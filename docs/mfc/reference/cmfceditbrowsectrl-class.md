@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0c6fb39e17e22bcac60d50b87f7370c6a9f91db9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273282"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770677"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl-Klasse
 
@@ -88,7 +88,7 @@ Die `CMFCEditBrowseCtrl` Klasse unterstützt die folgenden Modi.
 
    Klickt der Benutzer die Schaltfläche zum Durchsuchen, wird ein Dialogfeld zur Standardordner angezeigt.
 
-## <a name="how-to-specify-an-edit-browse-control"></a>Gewusst wie: Geben Sie ein Bearbeitungssteuerelement für das Durchsuchen
+## <a name="how-to-specify-an-edit-browse-control"></a>Vorgehensweise: Geben Sie ein Bearbeitungssteuerelement für das Durchsuchen
 
 Führen Sie die folgenden Schritte aus, um ein Bearbeitungssteuerelement durchsuchen, in Ihrer Anwendung zu integrieren:
 
@@ -120,7 +120,7 @@ Führen Sie die folgenden Schritte aus, um ein Bearbeitungssteuerelement durchsu
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie zwei Methoden in der `CMFCEditBrowseCtrl` Klasse: `EnableFolderBrowseButton` und `EnableFileBrowseButton`. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie zwei Methoden in der `CMFCEditBrowseCtrl` Klasse: `EnableFolderBrowseButton` und `EnableFileBrowseButton`. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]

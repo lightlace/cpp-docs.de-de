@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288779"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769484"
 ---
 # <a name="ribbon-designer-mfc"></a>Menüband-Designer (MFC)
 
@@ -107,7 +107,7 @@ In den folgenden Themen wird die Verwendung der Funktionen im Menüband-Designer
 
 - **Bereich:** Ein Bereich des Menübands, das eine Gruppe von verwandten Steuerelementen anzeigt. In jeder Menübandkategorie ist mindestens ein Menübandbereich enthalten.
 
-- **Menübandelemente:** Steuert, in den Bereichen, z. B. Schaltflächen und Kombinationsfelder. Die verschiedenen Steuerelemente, die gehostet werden können, auf einem Menüband, finden Sie unter [RibbonGadgets-Beispiel: Menüband der Anwendung für Minianwendungen](../visual-cpp-samples.md).
+- **Menübandelemente:** Steuert, in den Bereichen, z. B. Schaltflächen und Kombinationsfelder. Die verschiedenen Steuerelemente, die gehostet werden können, auf einem Menüband, finden Sie unter [RibbonGadgets-Beispiel: Menüband der Anwendung für Minianwendungen](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Siehe auch
 

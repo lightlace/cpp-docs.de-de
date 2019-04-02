@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
-ms.openlocfilehash: 7452ad3db642e132f4e46c1688d429dbaf78419a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe78a4c5a1773cf621d6554969b1c41c333bc5aa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532768"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778584"
 ---
 # <a name="attributes-by-group"></a>Attribute nach Gruppen
 
@@ -24,7 +24,7 @@ Die C++-Attribute werden in der folgenden funktionalen Gruppen organisiert.
 |[OLE DB-Consumerattribute](ole-db-consumer-attributes.md)|Code einfügen, basierend auf der [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)– um eine funktionierende OLE DB Consumer, der führt Aufgaben wie das Öffnen von Tabellen, Ausführen von Befehlen und den Zugriff auf Daten zu erstellen.|
 |[Compilerattribute](compiler-attributes.md)|Von Microsoft C++-Compiler bereitgestellt wird.|
 
-Informationen dazu, wie Sie benutzerdefinierte Attribute für Ihre Anwendung .NET Framework definiert werden, finden Sie unter [User-Defined Attributes](../user-defined-attributes-cpp-component-extensions.md).
+Informationen dazu, wie Sie benutzerdefinierte Attribute für Ihre Anwendung .NET Framework definiert werden, finden Sie unter [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="see-also"></a>Siehe auch
 

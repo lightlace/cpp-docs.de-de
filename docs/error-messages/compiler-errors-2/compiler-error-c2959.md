@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2959
 ms.assetid: d66bb2a8-70c3-4209-a358-b0c47f111a50
-ms.openlocfilehash: c45466fdf8d0c4bec67779943a5868299f05cf79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3465c3275783a625c172b711e9c41789b6f36713
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535732"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770226"
 ---
 # <a name="compiler-error-c2959"></a>Compilerfehler C2959
 
 eine generische Klasse oder Funktion kann nicht Mitglied einer Vorlage sein.
 
-Weitere Informationen finden Sie unter [Windows-Laufzeit und verwaltete Vorlagen](../../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) und [Generika](../../windows/generics-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [Windows-Laufzeit und verwaltete Vorlagen](../../extensions/windows-runtime-and-managed-templates-cpp-component-extensions.md) und [Generika](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 

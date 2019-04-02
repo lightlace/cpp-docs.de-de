@@ -9,18 +9,18 @@ helpviewer_keywords:
 - drag and drop [MFC], initiating drag operations
 - drag and drop [MFC], drop source
 ms.assetid: 0ed2fda0-63fa-4b1e-b398-f1f142f40035
-ms.openlocfilehash: cceed8517c7b63588c7b1b90e3306d90f0921b78
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2aa593fa953f7a9874036d48124ae7b92d88e0a6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300747"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768639"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Drag & Drop: Implementieren einer Drop-Quelle
 
 In diesem Artikel wird erläutert, wie Sie Ihre Anwendung für die Bereitstellung von Daten für einen Drag & Drop-Vorgang abrufen.
 
-Grundlegende Implementierung einer Drop-Quelle ist relativ einfach. Der erste Schritt ist, um zu bestimmen, welche Ereignisse Einleiten eines Ziehvorgangs. Empfohlen, den Anfang eines Ziehvorgangs als die Auswahl der Daten definieren, Richtlinien zur Benutzeroberfläche und eine **WM_LBUTTONDOWN** Ereignis, die auf einen Punkt innerhalb der ausgewählten Daten auftreten. Die MFC-OLE-Beispiele [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md) befolgen Sie diese Richtlinien.
+Grundlegende Implementierung einer Drop-Quelle ist relativ einfach. Der erste Schritt ist, um zu bestimmen, welche Ereignisse Einleiten eines Ziehvorgangs. Empfohlen, den Anfang eines Ziehvorgangs als die Auswahl der Daten definieren, Richtlinien zur Benutzeroberfläche und eine **WM_LBUTTONDOWN** Ereignis, die auf einen Punkt innerhalb der ausgewählten Daten auftreten. Die MFC-OLE-Beispiele [OCLIENT](../overview/visual-cpp-samples.md) und [HIERSVR](../overview/visual-cpp-samples.md) befolgen Sie diese Richtlinien.
 
 Wenn Ihre Anwendung ein Container ist, und die ausgewählten Daten ein verknüpftes oder eingebettetes Objekt vom Typ ist `COleClientItem`, rufen Sie die `DoDragDrop` Member-Funktion. Erstellen Sie andernfalls eine `COleDataSource` Objekt initialisieren Sie sie mit der Auswahl, und rufen Sie des Datenquellenobjekts `DoDragDrop` Member-Funktion. Wenn Ihre Anwendung auf einem Server ist, verwenden Sie `COleServerItem::DoDragDrop`. Informationen zum Anpassen von Standard-Drag & Drop-Verhalten, finden Sie im Artikel [Drag & Drop: Anpassen von](../mfc/drag-and-drop-customizing.md).
 

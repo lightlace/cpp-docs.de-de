@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 71a5943f65f4bd490ecb02824fef7a96741709f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540322"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770628"
 ---
 # <a name="compiler-error-c3104"></a>Compilerfehler C3104
 
@@ -19,7 +19,7 @@ Unzulässiges Attributargument.
 
 Sie haben ein ungültiges Argument für ein Attribut angegeben.
 
-Finden Sie unter [Attributparametertypen](../../windows/attribute-parameter-types-cpp-component-extensions.md) für Weitere Informationen.
+Finden Sie unter [Attributparametertypen](../../extensions/attribute-parameter-types-cpp-component-extensions.md) für Weitere Informationen.
 
 Dieser Fehler kann infolge einer konformitätsverbesserung für Compiler, die für Visual C++ 2005 durchgeführt wurde generiert werden: beim Übergeben von verwalteten Arrays auf benutzerdefinierte Attribute, ist der Typ des Arrays nicht mehr aus der Liste aggregatinitialisierung abgeleitet. Der Compiler ist nun erforderlich, um den Typ des Arrays als auch für die Initialisiererliste anzugeben.
 
