@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816099"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777817"
 ---
 # <a name="clr-restrictions"></a>Einschränkungen für "/clr"
 
@@ -29,7 +29,7 @@ Beachten Sie die folgenden Einschränkungen für die Verwendung von **"/ CLR"**:
 
 - Die [naked](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) -Modifizierer wird unter/CLR ignoriert.
 
-- Die Translator-Funktion festlegen, indem [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) wirkt sich nur abfängt in nicht verwaltetem Code. Finden Sie unter [Exception Handling](../../windows/exception-handling-cpp-component-extensions.md) für Weitere Informationen.
+- Die Translator-Funktion festlegen, indem [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) wirkt sich nur abfängt in nicht verwaltetem Code. Finden Sie unter [Exception Handling](../../extensions/exception-handling-cpp-component-extensions.md) für Weitere Informationen.
 
 - Der Vergleich der Funktionszeiger ist nicht zulässig, unter **"/ CLR"**.
 

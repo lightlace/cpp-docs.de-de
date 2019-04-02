@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
-ms.openlocfilehash: 34b5cff9191814b2a16a42d9e234bab09f29c117
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b76fa91d739e9cc89251aaf56aa9b196e62a68d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490024"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777128"
 ---
 # <a name="compiler-error-c3072"></a>Compilerfehler C3072
 
@@ -19,7 +19,7 @@ Operator 'Operator' kann nicht auf eine Instanz einer Verweisklasse angewendet w
 
 Verwenden Sie die unären '`operator` ' Operator, um eine Instanz einer Verweisklasse in einen Handletyp zu konvertieren
 
-Ein CLR-Typ ist erforderlich, CLR-Operatoren, keine systemeigenen (oder Standard-)-Operatoren.  Weitere Informationen finden Sie unter [Verweisoperator nachverfolgung](../../windows/tracking-reference-operator-cpp-component-extensions.md).
+Ein CLR-Typ ist erforderlich, CLR-Operatoren, keine systemeigenen (oder Standard-)-Operatoren.  Weitere Informationen finden Sie unter [Verweisoperator nachverfolgung](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 

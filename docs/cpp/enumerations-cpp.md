@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 3ed135c0fc32f9218783c964ed4ce79a9b3ec067
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332412"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772564"
 ---
 # <a name="enumerations-c"></a>Enumerationen (C++)
 
 Eine Enumeration ist ein benutzerdefinierter Typ, der aus einem Satz von benannten ganzzahligen Konstanten besteht, die als Enumeratoren bezeichnet werden.
 
 > [!NOTE]
->  Dieser Artikel behandelt die ISO-Standardsprache C++ **Enum** Typ und die Bereichsbezogene (oder stark typisierten) **Enumerationsklasse** Typ, der in C ++ 11 eingeführt wird. Informationen zu den **öffentliche Enumerationsklasse** oder **private Enumerationsklasse** Typen in C++ / CLI und C++ / CX, finden Sie unter [Enumerationsklasse](../windows/enum-class-cpp-component-extensions.md).
+>  Dieser Artikel behandelt die ISO-Standardsprache C++ **Enum** Typ und die Bereichsbezogene (oder stark typisierten) **Enumerationsklasse** Typ, der in C ++ 11 eingeführt wird. Informationen zu den **öffentliche Enumerationsklasse** oder **private Enumerationsklasse** Typen in C++ / CLI und C++ / CX, finden Sie unter [Enumerationsklasse](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,7 +52,7 @@ Der Typname, der für die Enumeration angegeben wurde.
 *Typ*<br/>
 Der zugrunde liegende Typ der Enumeratoren. Alle Enumeratoren weisen den gleichen zugrunde liegenden Typ auf. Kann ein beliebiger ganzzahliger Typ sein.
 
-*Enum-Liste*<br/>
+*enum-list*<br/>
 Eine durch Trennzeichen getrennte Liste mit Enumeratoren in der Enumeration. Jeder Enumerator oder Variablenname im Bereich muss eindeutig sein. Allerdings können die Werte doppelt vorkommen. In einer Enumeration ohne bereichseinschränkung ist der Gültigkeitsbereich der umschließende Bereich; in einer bereichsbezogenen Enumeration ist der Bereich ist die *Enumeration-List* selbst.  In einer bereichsbezogenen Enumeration ist kann die Liste leer sein aktiviert einen neuen integralen Typ definiert.
 
 *class*<br/>
@@ -145,7 +145,7 @@ Beachten Sie, dass die Zeile `hand = account_num;` noch den Fehler verursacht, d
 
 ## <a name="no_enumerators"></a> Enumerationen mit keine Enumeratoren
 
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): durch Definieren einer Enumeration (reguläre oder Bereichsbezogene) mit einem expliziten zugrunde liegenden Typ und kein Enumeratoren, Sie können in Kraft einführen einer neuen integraler Typ, der verfügt über keine implizite Konvertierung in einen anderen Typ. Dieser Typ wird als integrierte zugrunde liegenden Typs verwenden, können Sie das Fehlerpotenzial feine zurückzuführen, dass unbeabsichtigte impliziten Konvertierungen vermeiden.
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Durch Definieren einer Enumeration (reguläre oder Bereichsbezogene) mit einem expliziten zugrunde liegenden Typ und kein Enumeratoren, können Sie aktiviert einen neuen integralen Typ einführen, der keine implizite Konvertierung in einen anderen Typ aufweist. Dieser Typ wird als integrierte zugrunde liegenden Typs verwenden, können Sie das Fehlerpotenzial feine zurückzuführen, dass unbeabsichtigte impliziten Konvertierungen vermeiden.
 
 ```cpp
 enum class byte : unsigned char { };

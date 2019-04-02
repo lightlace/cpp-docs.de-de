@@ -8,12 +8,12 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: 5f46d55dc3898fdf5fede075a0d44f04a9f8326a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325860"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774255"
 ---
 # <a name="explicit-overrides-c"></a>Explizite Überschreibungen (C++)
 
@@ -21,7 +21,7 @@ ms.locfileid: "51325860"
 
 Wenn dieselbe virtuelle Funktion, in zwei oder mehr deklariert wird [Schnittstellen](../cpp/interface.md) und wenn eine Klasse, die von diesen Schnittstellen abgeleitet ist, können Sie jede virtuelle Funktion explizit überschreiben.
 
-Weitere Informationen über explizite in verwaltetem Code mithilfe der neuen verwalteten Syntax überschreibt, finden Sie unter [explizite Überschreibungen](../windows/explicit-overrides-cpp-component-extensions.md).
+Informationen über explizite überschreibungen in verwaltetem Code mit C++ / CLI finden Sie unter [explizite Überschreibungen](../extensions/explicit-overrides-cpp-component-extensions.md).
 
 **Ende Microsoft-spezifisch**
 

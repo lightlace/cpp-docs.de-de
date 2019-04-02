@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6d3bbafa15ada97f53710f0faf6a18ea8e892f6c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260386"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771310"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager-Klasse
 
@@ -258,7 +258,7 @@ class CDockingManager : public CObject
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CDockingManager::m_bHideDockingBarsInContainerMode](#m_bhidedockingbarsincontainermode)|Gibt an, ob die Dock-Manager auf Bereiche in OLE-Container-Modus wird ausgeblendet.|
 |[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)|Gibt die globalen Andockmodus an.|
@@ -292,7 +292,7 @@ Die folgenden Tipps beziehen sich auf `CDockingManager` Objekte:
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CDockingManager` Klasse zum Konfigurieren einer `CDockingManager` Objekt. Das Beispiel zeigt, wie Sie eine weitere Schaltfläche anzeigen, die ein Popup-Menü auf die Beschriftungen der alle andockbare Bereiche geöffnet wird und wie den Andockmodus des Objekts festgelegt. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CDockingManager` Klasse zum Konfigurieren einer `CDockingManager` Objekt. Das Beispiel zeigt, wie Sie eine weitere Schaltfläche anzeigen, die ein Popup-Menü auf die Beschriftungen der alle andockbare Bereiche geöffnet wird und wie den Andockmodus des Objekts festgelegt. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 

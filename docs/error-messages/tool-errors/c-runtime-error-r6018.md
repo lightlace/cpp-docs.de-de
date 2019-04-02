@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6018
 ms.assetid: f6dd40d1-a119-4d8b-b39e-97350ea23349
-ms.openlocfilehash: e0d229b4fd8c1a4f8e067c0e59a278344fd4e113
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b36e2184e5be131645fb4dd58a361fdb9a31da63
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531914"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774973"
 ---
 # <a name="c-runtime-error-r6018"></a>C-Laufzeitfehler R6018
 
@@ -32,4 +32,4 @@ Das Programm ist einen unerwarteter Fehler beim Ausführen eines Vorgangs für d
 
 Dieser Fehler tritt gewöhnlich auf, wenn das Programm die Runtime-Heapdaten versehentlich geändert wird. Es kann jedoch auch durch einen internen Fehler in der Common Language Runtime oder ein Betriebssystem-Code verursacht werden.
 
-Um dieses Problem zu beheben, überprüfen Sie die Heap-Beschädigung Fehlern im Code. Weitere Informationen und Beispiele finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Als Nächstes überprüfen Sie, dass Sie die neuesten verteilbaren Dateien für Ihre app-Bereitstellung verwenden. Weitere Informationen finden Sie unter [Bereitstellung in Visual C++](../../ide/deployment-in-visual-cpp.md).
+Um dieses Problem zu beheben, überprüfen Sie die Heap-Beschädigung Fehlern im Code. Weitere Informationen und Beispiele finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Als Nächstes überprüfen Sie, dass Sie die neuesten verteilbaren Dateien für Ihre app-Bereitstellung verwenden. Weitere Informationen finden Sie unter [Bereitstellung in Visual C++](../../windows/deployment-in-visual-cpp.md).

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9d4100037c5a6cd2eeef1a50fb2d5a46b2cb6505
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260750"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772722"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage-Klasse
 
@@ -574,10 +574,10 @@ Das Framework verfolgt, Nachverfolgen der Seiten sind "geändert", d. h., für d
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel CMNCTRL1](../../visual-cpp-samples.md)<br/>
-[MFC-Beispiel CMNCTRL2](../../visual-cpp-samples.md)<br/>
-[MFC-Beispiel PROPDLG](../../visual-cpp-samples.md)<br/>
-[MFC-Beispiel SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CDialog-Klasse](../../mfc/reference/cdialog-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CPropertySheet-Klasse](../../mfc/reference/cpropertysheet-class.md)<br/>

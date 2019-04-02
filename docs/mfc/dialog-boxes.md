@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 9add6f003f0f6cd4ab85980e1e35370770da43aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282057"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778493"
 ---
 # <a name="dialog-boxes"></a>Dialogfelder
 
@@ -61,7 +61,7 @@ Die meisten Dialogfelder sind modal, die erfordern, dass des Benutzers das Dialo
 
 - [Dialogfelder in OLE](../mfc/dialog-boxes-in-ole.md)
 
-- Erstellen Sie eine Anwendung, deren Benutzeroberfläche ein Dialogfeld ist: finden Sie unter den [CMNCTRL1](../visual-cpp-samples.md) oder [CMNCTRL2](../visual-cpp-samples.md) Beispielprogramme. Der Anwendungs-Assistent bietet diese Option ebenfalls.
+- Erstellen Sie eine Anwendung, deren Benutzeroberfläche ein Dialogfeld ist: finden Sie unter den [CMNCTRL1](../overview/visual-cpp-samples.md) oder [CMNCTRL2](../overview/visual-cpp-samples.md) Beispielprogramme. Der Anwendungs-Assistent bietet diese Option ebenfalls.
 
 - [Beispiele](../mfc/dialog-sample-list.md)
 

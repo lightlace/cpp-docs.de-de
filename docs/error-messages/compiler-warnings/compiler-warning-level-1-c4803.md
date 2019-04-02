@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-ms.openlocfilehash: 3915307ac2bcc6a923c93382cfefa618ce01fe52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8f5fe9d55a44193325a2fcfe9ef7675a2b3b89
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563214"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774879"
 ---
 # <a name="compiler-warning-level-1-c4803"></a>Compilerwarnung (Stufe 1) C4803
 
@@ -19,7 +19,7 @@ ms.locfileid: "50563214"
 
 Ereignismethoden müssen dieselbe Speicherklasse wie die Deklaration des Ereignisses. Der Compiler passt Ereignismethoden, sodass die Speicherklassen identisch sind.
 
-Diese Warnung kann auftreten, wenn Sie eine Klasse verfügen, die ein Ereignis von einer Schnittstelle implementiert. Raise-Methode für ein Ereignis wird in einer Schnittstelle nicht implizit vom Compiler generiert. Wenn Sie diese Schnittstelle in einer Klasse implementieren, generiert der Compiler implizit eine Raise-Methode, und diese Methode nicht virtuell, daher die Warnung. Weitere Informationen zu Ereignissen finden Sie unter [Ereignis](../../windows/event-cpp-component-extensions.md).
+Diese Warnung kann auftreten, wenn Sie eine Klasse verfügen, die ein Ereignis von einer Schnittstelle implementiert. Raise-Methode für ein Ereignis wird in einer Schnittstelle nicht implizit vom Compiler generiert. Wenn Sie diese Schnittstelle in einer Klasse implementieren, generiert der Compiler implizit eine Raise-Methode, und diese Methode nicht virtuell, daher die Warnung. Weitere Informationen zu Ereignissen finden Sie unter [Ereignis](../../extensions/event-cpp-component-extensions.md).
 
 Finden Sie unter [Warnung](../../preprocessor/warning.md) Pragma Informationen dazu, wie eine Warnung zu deaktivieren.
 

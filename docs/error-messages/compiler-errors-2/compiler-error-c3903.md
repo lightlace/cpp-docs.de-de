@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3903
 ms.assetid: cf47d7ad-a3bd-4f75-a253-71586e7a3be6
-ms.openlocfilehash: 0d650d5c3a361ae91e9a35a39866d30bff93f5f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bed6561d1e8d4281cd57e78808744d018c3cc9b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654189"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774892"
 ---
 # <a name="compiler-error-c3903"></a>Compilerfehler C3903
 
 "Property": ist nicht festgelegt haben, oder get-Methode
 
-Eine Eigenschaft benötigen mindestens einen `get` oder `set` Methode. Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md).
+Eine Eigenschaft benötigen mindestens einen `get` oder `set` Methode. Weitere Informationen finden Sie unter [property](../../extensions/property-cpp-component-extensions.md).
 
 Im folgende Beispiel wird die C3903 generiert:
 

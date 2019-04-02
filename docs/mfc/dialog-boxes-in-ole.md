@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fa3d87e2cc17e297c3e6387920c6d527d8ddbe39
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270890"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767651"
 ---
 # <a name="dialog-boxes-in-ole"></a>Dialogfelder in OLE
 
@@ -31,7 +31,7 @@ Dieses Dialogfeld ermöglicht den Benutzer, das beim Einfügen von Daten in eine
 Dieses Dialogfeld ermöglicht den Benutzer auswählen, welches Symbol angezeigt wird, um das verknüpftes oder eingebettetes Element darstellen. Zeigen Sie dieses Dialogfeld an, wenn der Benutzer wählt aus dem Menü "Bearbeiten" Symbol ändern oder wählt die Schaltfläche "Symbol ändern" in der Inhalte einfügen oder Convert-Dialogfelder. Zeigen Sie an, wenn der Benutzer das Dialogfeld "Objekt einfügen Öffnet" und als Symbol wählt. Verwenden der [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) Klasse, um das Dialogfeld anzuzeigen.
 
 *Convert*<br/>
-Dieses Dialogfeld ermöglicht den Benutzer, den Typ einer eingebetteten oder verknüpften Elements zu ändern. Wenn Sie eine Metadatei in einem Verbunddokument eingebettet haben und später eine andere Anwendung zu verwenden, um die eingebetteten Metadatei ändern möchten, können Sie z. B. das Dialogfeld "konvertieren" verwenden. Dieses Dialogfeld wird normalerweise angezeigt, indem Sie auf *Konfigurationselementtyp* Objekt auf das Menü "Bearbeiten" und dann auf klicken Sie im Untermenü auf konvertieren. Verwenden der [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) Klasse, um das Dialogfeld anzuzeigen. Führen Sie ein Beispiel, das MFC-OLE-Beispiel [OCLIENT](../visual-cpp-samples.md).
+Dieses Dialogfeld ermöglicht den Benutzer, den Typ einer eingebetteten oder verknüpften Elements zu ändern. Wenn Sie eine Metadatei in einem Verbunddokument eingebettet haben und später eine andere Anwendung zu verwenden, um die eingebetteten Metadatei ändern möchten, können Sie z. B. das Dialogfeld "konvertieren" verwenden. Dieses Dialogfeld wird normalerweise angezeigt, indem Sie auf *Konfigurationselementtyp* Objekt auf das Menü "Bearbeiten" und dann auf klicken Sie im Untermenü auf konvertieren. Verwenden der [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) Klasse, um das Dialogfeld anzuzeigen. Führen Sie ein Beispiel, das MFC-OLE-Beispiel [OCLIENT](../overview/visual-cpp-samples.md).
 
 *Links zum Bearbeiten oder aktualisieren Sie Links*<br/>
 Das Dialogfeld "Verknüpfungen bearbeiten" ermöglicht des Benutzers, Informationen über die Quelle eines verknüpften Objekts zu ändern. Die Update-Links-Dialogfeld überprüft die Quellen für alle verknüpften Elemente im aktuellen Dialogfeld und zeigt das Dialogfeld "Verknüpfungen bearbeiten" an, falls erforderlich. Das Dialogfeld "Verknüpfungen bearbeiten" angezeigt, wenn der Benutzer Links aus dem Menü "Bearbeiten" auswählt. Das Update-Links-Dialogfeld wird in der Regel angezeigt, wenn einem Verbunddokument erstmalig geöffnet wird. Verwenden Sie entweder die [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) oder [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) Klasse, die abhängig vom Dialogfeld, das Sie anzeigen möchten.

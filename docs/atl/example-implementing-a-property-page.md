@@ -4,18 +4,18 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267237"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777037"
 ---
 # <a name="example-implementing-a-property-page"></a>Beispiel: Implementieren einer Eigenschaftenseite
 
 Dieses Beispiel zeigt, wie Sie auf einer Eigenschaftenseite zu erstellen, das Eigenschaften anzeigt (und können Sie ändern) die [Dokumentklassen](../mfc/document-classes.md) Schnittstelle.
 
-Das Beispiel basiert auf der [ATLPages-Beispiel](../visual-cpp-samples.md).
+Das Beispiel basiert auf der [ATLPages-Beispiel](../overview/visual-cpp-samples.md).
 
 Um dieses Beispiel abzuschließen, führen Sie folgende Aktionen ausführen:
 
@@ -164,4 +164,4 @@ Wenn Sie dieses Makro ausführen, wird die Eigenschaftenseite mit den Dateinamen
 ## <a name="see-also"></a>Siehe auch
 
 [Eigenschaftenseiten](../atl/atl-com-property-pages.md)<br/>
-[ATLPages-Beispiel](../visual-cpp-samples.md)
+[ATLPages-Beispiel](../overview/visual-cpp-samples.md)

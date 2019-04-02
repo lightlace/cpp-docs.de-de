@@ -59,12 +59,12 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8d568760cc75a4c1f2ddb6dd88108cc830783194
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279353"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775830"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: Standardbefehlen
 
@@ -221,7 +221,7 @@ Für jedes Befehls-ID befindet sich eine Standardnachricht Zeile Eingabeaufforde
 
    Zurzeit besteht keine Standardimplementierung für diesen Befehl. Sie müssen dies implementieren, für die einzelnen `CView`-abgeleitete Klasse.
 
-   Wenn Sie den Befehl zu implementieren möchten, empfehlen wir, dass es sich bei der Verwendung dieses Befehls-ID. Finden Sie im Tutorial für MFC-Beispiel [SCRIBBLE](../visual-cpp-samples.md) eine beispielimplementierung.
+   Wenn Sie den Befehl zu implementieren möchten, empfehlen wir, dass es sich bei der Verwendung dieses Befehls-ID. Finden Sie im Tutorial für MFC-Beispiel [SCRIBBLE](../overview/visual-cpp-samples.md) eine beispielimplementierung.
 
 - ID_EDIT_COPY kopiert die aktuelle Auswahl in die Zwischenablage.
 
@@ -438,7 +438,7 @@ Für jedes Befehls-ID befindet sich eine Standardnachricht Zeile Eingabeaufforde
 
    Alle OLE-Clientanwendungen sollten den Befehl zu implementieren. AppWizard, mit der OLE-Option erstellt eine Skelette-Implementierung der `OnInsertObject` in Ihrer Ansichtsklasse, die Sie ausführen müssen.
 
-   Finden Sie im MFC-OLE-Beispiel [OCLIENT](../visual-cpp-samples.md) Beispiel für eine vollständige Implementierung dieses Befehls.
+   Finden Sie im MFC-OLE-Beispiel [OCLIENT](../overview/visual-cpp-samples.md) Beispiel für eine vollständige Implementierung dieses Befehls.
 
 - ID_OLE_EDIT_LINKS bearbeitet OLE-links
 
