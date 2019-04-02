@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: cb2bbdb36a102c7ef8974a9ac210473f2306f5d6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746772"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771512"
 ---
 # <a name="finally"></a>finally
 
@@ -19,7 +19,7 @@ Zusätzlich zu `try` und `catch` -Klauseln sowie in CLR-Ausnahmebehandlung unter
 
 Der Zweck der `finally` Block ist zum Bereinigen von Ressourcen übrig bleiben, nachdem die Ausnahme aufgetreten ist. Beachten Sie, dass die `finally` Block wird immer ausgeführt, auch wenn keine Ausnahme ausgelöst wurde. Die `catch` Block wird nur ausgeführt, wenn eine verwaltete Ausnahme ausgelöst wird, in der zugeordneten `try` Block.
 
-`finally` ist ein kontextbezogenes Schlüsselwort. finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md) für Weitere Informationen.
+`finally` ist ein kontextbezogenes Schlüsselwort. finden Sie unter [Kontextbezogene Schlüsselwörter](../extensions/context-sensitive-keywords-cpp-component-extensions.md) für Weitere Informationen.
 
 ## <a name="example"></a>Beispiel
 
@@ -58,4 +58,4 @@ in finally
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausnahmebehandlung](../windows/exception-handling-cpp-component-extensions.md)
+[Ausnahmebehandlung](../extensions/exception-handling-cpp-component-extensions.md)

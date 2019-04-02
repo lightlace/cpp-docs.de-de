@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268485"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773839"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem-Klasse
 
@@ -49,7 +49,7 @@ Als "rich-Edit-Steuerelement" ist ein Fenster, in dem der Benutzer kann Text ein
 
 Diese allgemeinen Windows-Steuerelements (und somit die [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) und verwandten Klassen) ist nur für Programme, die unter Versionen des Windows 95/98 und Windows NT 3.51 und höher.
 
-Ein Beispiel der Verwendung von rich-Edit-Container-Elemente in einer MFC-Anwendung finden Sie unter den [WORDPAD](../../visual-cpp-samples.md) beispielanwendung.
+Ein Beispiel der Verwendung von rich-Edit-Container-Elemente in einer MFC-Anwendung finden Sie unter den [WORDPAD](../../overview/visual-cpp-samples.md) beispielanwendung.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -110,7 +110,7 @@ Weitere Informationen finden Sie unter [DVASPECT](/windows/desktop/api/wtypes/ne
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel WORDPAD](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem-Klasse](../../mfc/reference/coleclientitem-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc-Klasse](../../mfc/reference/cricheditdoc-class.md)<br/>

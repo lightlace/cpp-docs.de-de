@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: 5dbe08eae911433c256d3f8dd1f60dea2db9478c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: df1db8a3e65d35f247df7d070119c66b02208815
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274426"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772058"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC-Klasse
 
@@ -45,7 +45,7 @@ class CPaintDC : public CDC
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CPaintDC::m_hWnd](#m_hwnd)|Das HWND zu der das `CPaintDC` Objekt angefügt ist.|
 
@@ -128,6 +128,6 @@ Beachten Sie, dass Sie, das Gerätekontext Handle durch zugreifen können die `P
 
 ## <a name="see-also"></a>Siehe auch
 
-[MDI MFC-Beispiel](../../visual-cpp-samples.md)<br/>
+[MDI MFC-Beispiel](../../overview/visual-cpp-samples.md)<br/>
 [CDC-Klasse](../../mfc/reference/cdc-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)

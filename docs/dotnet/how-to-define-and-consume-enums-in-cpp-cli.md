@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 0252c4b64690f6a2fb0fd97b97841fe45fcce244
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751452"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774736"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>Vorgehensweise: Definieren und Verarbeiten von Enumerationen in C++ / CLI
 
@@ -92,7 +92,7 @@ Operatoren &#124; ^ & ~ ++--, die nur für die Enumerationen mit ganzzahligem zu
 Der Compiler übernimmt keine statische oder dynamische Prüfung des Ergebnisses einer Enumeration Operation; ein Vorgang möglicherweise nicht in den Bereich der gültigen Enumeratoren der Enumeration einen Wert ab.
 
 > [!NOTE]
->  C ++ 11 stellt die Enum-Klasse-Typen in nicht verwaltetem Code sind grundlegend, als verwaltete Enumerationsklassen in C++ / CLI. Insbesondere der C ++ 11-Enumeration Klassentyp unterstützt nicht die gleichen Operatoren als verwaltete Enumeration Klassentyp in C++ / CLI und C++ / CLI-Quellcode muss bereitstellen, einen Zugriffsspezifizierer in verwaltete Enumeration Klassendeklarationen um sie von nicht verwaltetem (C++ zu unterscheiden 11) Enum Class-Deklarationen. Weitere Informationen zu Enumerationsklassen in C++ / CLI, C++ / CX und C ++ 11 finden Sie unter [Enumerationsklasse](../windows/enum-class-cpp-component-extensions.md).
+>  C ++ 11 stellt die Enum-Klasse-Typen in nicht verwaltetem Code sind grundlegend, als verwaltete Enumerationsklassen in C++ / CLI. Insbesondere der C ++ 11-Enumeration Klassentyp unterstützt nicht die gleichen Operatoren als verwaltete Enumeration Klassentyp in C++ / CLI und C++ / CLI-Quellcode muss bereitstellen, einen Zugriffsspezifizierer in verwaltete Enumeration Klassendeklarationen um sie von nicht verwaltetem (C++ zu unterscheiden 11) Enum Class-Deklarationen. Weitere Informationen zu Enumerationsklassen in C++ / CLI, C++ / CX und C ++ 11 finden Sie unter [Enumerationsklasse](../extensions/enum-class-cpp-component-extensions.md).
 
 ```
 // mcppv2_enum_5.cpp
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>Siehe auch
 
-[Enumerationsklasse](../windows/enum-class-cpp-component-extensions.md)
+[Enumerationsklasse](../extensions/enum-class-cpp-component-extensions.md)

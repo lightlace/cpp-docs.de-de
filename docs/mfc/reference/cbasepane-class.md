@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259811"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774476"
 ---
 # <a name="cbasepane-class"></a>CBasePane-Klasse
 
@@ -342,7 +342,7 @@ Die folgende Anpassungstipps beziehen sich auf die `CBasePane Class` und alle Kl
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CBasePane` -Klasse. Das Beispiel veranschaulicht das Abrufen von einem Bereich von der `CFrameWndEx` -Klasse und zum Festlegen der Andockmodus, die im Bereich Ausrichtung und den Stil. Der Code stammt aus dem [WordPad-Beispiels](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CBasePane` -Klasse. Das Beispiel veranschaulicht das Abrufen von einem Bereich von der `CFrameWndEx` -Klasse und zum Festlegen der Andockmodus, die im Bereich Ausrichtung und den Stil. Der Code stammt aus dem [WordPad-Beispiels](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 

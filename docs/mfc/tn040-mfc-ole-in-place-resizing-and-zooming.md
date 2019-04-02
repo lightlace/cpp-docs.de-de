@@ -9,12 +9,12 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: e2f6c6acfefaae877790fd2cc0926bc2474c79b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c2cb25388184ac969bec7c01d8077a458c03a03a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283760"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775282"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: MFC/OLE direkte Größenanpassung und Zoomen
 
@@ -40,7 +40,7 @@ Die meisten von der Last wird auf dem Server Implementierer selbst, platziert, i
 
 Der aktuelle Zoomfaktor kann bestimmt werden, indem `COleServerDoc::GetZoomFactor`. Dies aufrufen, wenn das Dokument nicht direkt aktiv ist führt immer zu einem Faktor Zoom von 100 % (oder das Verhältnis 1:1). Aufruf von es direkt aktiv möglicherweise einen anderen Wert als 100 % zurückgeben.
 
-Ein Beispiel für Zoomen ordnungsgemäß finden Sie im MFC-OLE-Beispiel [HIERSVR](../visual-cpp-samples.md). HIERSVR vergrößern, wird dadurch erschwert die Tatsache, dass Text angezeigt, und der Text, in der Regel keine Skalierung eine lineare Interpolation (Hinweise, typografische Konventionen, Entwurf Breiten und Höhen alle erschweren die Angelegenheit). Dennoch HIERSVR ist ein angemessener Verweis für die Implementierung korrekt Zoomen und daher ist das MFC-Tutorial [SCRIBBLE](../visual-cpp-samples.md) (Schritt 7).
+Ein Beispiel für Zoomen ordnungsgemäß finden Sie im MFC-OLE-Beispiel [HIERSVR](../overview/visual-cpp-samples.md). HIERSVR vergrößern, wird dadurch erschwert die Tatsache, dass Text angezeigt, und der Text, in der Regel keine Skalierung eine lineare Interpolation (Hinweise, typografische Konventionen, Entwurf Breiten und Höhen alle erschweren die Angelegenheit). Dennoch HIERSVR ist ein angemessener Verweis für die Implementierung korrekt Zoomen und daher ist das MFC-Tutorial [SCRIBBLE](../overview/visual-cpp-samples.md) (Schritt 7).
 
 `COleServerDoc::GetZoomFactor` den Zoomfaktor basierend auf einer Reihe von verschiedenen Metriken verfügbar sind oder aus dem Container als auch von der Implementierung von bestimmt Ihre `COleServerItem` und `COleServerDoc` Klassen. Kurz gesagt, wird der aktuelle Zoomfaktor der folgenden Formel bestimmt:
 

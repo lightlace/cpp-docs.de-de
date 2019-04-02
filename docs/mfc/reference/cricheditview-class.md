@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259515"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773722"
 ---
 # <a name="cricheditview-class"></a>CRichEditView-Klasse
 
@@ -194,7 +194,7 @@ Als "rich-Edit-Steuerelement" ist ein Fenster, in dem der Benutzer kann Text ein
 
 Diese allgemeinen Windows-Steuerelements (und somit die [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) und verwandten Klassen) ist nur für Programme, die unter Versionen des Windows 95/98 und Windows NT 3.51 und höher.
 
-Ein Beispiel mit einer rich-Edit-Ansicht in einer MFC-Anwendung, finden Sie unter den [WORDPAD](../../visual-cpp-samples.md) beispielanwendung.
+Ein Beispiel mit einer rich-Edit-Ansicht in einer MFC-Anwendung, finden Sie unter den [WORDPAD](../../overview/visual-cpp-samples.md) beispielanwendung.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -1284,7 +1284,7 @@ Außer Kraft setzen, die diese Funktion, die so zu ändern, die Rich--Ansicht Ed
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel WORDPAD](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView-Klasse](../../mfc/reference/cctrlview-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc-Klasse](../../mfc/reference/cricheditdoc-class.md)<br/>

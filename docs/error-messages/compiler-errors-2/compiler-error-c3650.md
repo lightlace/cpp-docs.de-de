@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3650
 ms.assetid: ca4d8de4-b027-4d13-9b9f-03ca62905c33
-ms.openlocfilehash: 52d30f3ddee8b25ea54e799cfcb984bdffa80726
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54543225144ed0187f6c1e68e7236d886c026860
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508870"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777115"
 ---
 # <a name="compiler-error-c3650"></a>Compilerfehler C3650
 
@@ -19,7 +19,7 @@ ms.locfileid: "50508870"
 
 Es wurde versucht, eine explizite Überschreibung für ein Element ausführen, die nicht virtuelle war.
 
-Weitere Informationen finden Sie unter [explizite Überschreibungen](../../windows/explicit-overrides-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [explizite Überschreibungen](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 Im folgende Beispiel wird die C3650 generiert:
 

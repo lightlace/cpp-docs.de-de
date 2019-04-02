@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: e413e4a08ce22ef109179ff0f98baf32ebba41c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93058d34ca9a17ab175a55a7bc7b953d369e65c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525842"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776738"
 ---
 # <a name="compiler-error-c3699"></a>Compilerfehler C3699
 
@@ -36,7 +36,7 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Eine triviale Eigenschaft kann nicht Verweistyp aufweisen. Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md) . Im folgende Beispiel wird die C3699 generiert.
+Eine triviale Eigenschaft kann nicht Verweistyp aufweisen. Weitere Informationen finden Sie unter [property](../../extensions/property-cpp-component-extensions.md) . Im folgende Beispiel wird die C3699 generiert.
 
 ```
 // C3699_b.cpp

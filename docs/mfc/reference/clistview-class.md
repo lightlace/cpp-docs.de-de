@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: 4507c2a640296c2d2619b1da7a0ebae2bc6ef401
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 698e37b2853a2ca3698ee0a426c8ded688c99c58
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291279"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776621"
 ---
 # <a name="clistview-class"></a>CListView-Klasse
 
@@ -110,7 +110,7 @@ Der nullbasierte Index des zu entfernenden Bildes.
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel ROWLIST](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView-Klasse](../../mfc/reference/cctrlview-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CCtrlView-Klasse](../../mfc/reference/cctrlview-class.md)
