@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: d23662d6dd6d2f241c48e0c83f2fa5ed9532c3f7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 32896939ddc7fd0b841e1b6904124b06c9bc51c9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807948"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766055"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Problembehandlung bei isolierten Anwendungen und parallelen Assemblys (C/C++)
 
@@ -31,7 +31,7 @@ Wenn die Anwendung über kein Manifest verfügt und von einer DLL abhängig ist,
 
 Wenn eine Anwendung, die auf einem Computer bereitgestellt wird, auf dem Visual Studio nicht installiert ist, abstürzt und dabei Fehlermeldungen ähnlich der oben genannten angezeigt werden, überprüfen Sie folgende Aspekte:
 
-1. Führen Sie die Schritte, die im Abschnitt [Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Der Dependency Walker zeigt den größten Teil der Abhängigkeiten für eine Anwendung oder DLL an. Wenn Sie feststellen, dass einige DLLs fehlen, installieren Sie diese DLLs auf dem Computer, auf dem Sie die Anwendung ausführen möchten.
+1. Führen Sie die Schritte, die im Abschnitt [Grundlegendes zu den Abhängigkeiten einer Visual C++-Anwendung](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md). Der Dependency Walker zeigt den größten Teil der Abhängigkeiten für eine Anwendung oder DLL an. Wenn Sie feststellen, dass einige DLLs fehlen, installieren Sie diese DLLs auf dem Computer, auf dem Sie die Anwendung ausführen möchten.
 
 1. Das Ladeprogramm des Betriebssystems verwendet das Anwendungsmanifest zum Laden von Assemblys, von denen die Anwendung abhängig ist. Das Manifest kann entweder als Ressource in die Binärdatei eingebettet oder als separate Datei im lokalen Anwendungsordner gespeichert sein. Um zu überprüfen, ob das Manifest in die Binärdatei eingebettet ist, öffnen Sie die Binärdatei in Visual Studio, und suchen Sie nach "RT_MANIFEST" in die Liste der Ressourcen. Wenn Sie ein eingebettetes Manifest nicht finden, suchen Sie in den Anwendungsordner für eine Datei, die etwa wie < name_der_binärdatei > mit dem Namen hat. \<Erweiterung > ". manifest".
 

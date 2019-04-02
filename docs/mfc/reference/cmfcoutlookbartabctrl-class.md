@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269937"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776803"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -109,7 +109,7 @@ Verwenden Sie zum Erstellen einer Outlook-Leiste, das Andocken unterstützt eine
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie zum Initialisieren einer `CMFCOutlookBarTabCtrl` Objekt, und Verwenden verschiedener Methoden in der `CMFCOutlookBarTabCtrl` Klasse. Das Beispiel zeigt, wie ermöglichen die direkte Bearbeitung der textbezeichnung auf Schaltflächen auf der Seite Registerkarte der Outlook-Leiste, aktivieren die Animation, Scroll-Handles, mit denen den Benutzer einen Bildlauf durch Schaltflächen in der Outlook-Leistenbereich, legen Sie die Rahmengröße von der Outlook-Registerkarte Inhalt aktivieren ROL, und legen Sie die Ausrichtung der Beschriftungen Text auf Schaltflächen auf der Registerkarte der Outlook-Leiste. Dieser Codeausschnitt ist Teil der [Outlook Demobeispiel](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie zum Initialisieren einer `CMFCOutlookBarTabCtrl` Objekt, und Verwenden verschiedener Methoden in der `CMFCOutlookBarTabCtrl` Klasse. Das Beispiel zeigt, wie ermöglichen die direkte Bearbeitung der textbezeichnung auf Schaltflächen auf der Seite Registerkarte der Outlook-Leiste, aktivieren die Animation, Scroll-Handles, mit denen den Benutzer einen Bildlauf durch Schaltflächen in der Outlook-Leistenbereich, legen Sie die Rahmengröße von der Outlook-Registerkarte Inhalt aktivieren ROL, und legen Sie die Ausrichtung der Beschriftungen Text auf Schaltflächen auf der Registerkarte der Outlook-Leiste. Dieser Codeausschnitt ist Teil der [Outlook Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -170,7 +170,7 @@ Setzen Sie *bDetachable* auf "true", `AddControl` erstellt intern eine `CDockabl
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `AddControl` -Methode in der die `CMFCOutlookBarTabCtrl` Klasse. Dieser Codeausschnitt ist Teil der [Outlook Demobeispiel](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `AddControl` -Methode in der die `CMFCOutlookBarTabCtrl` Klasse. Dieser Codeausschnitt ist Teil der [Outlook Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 

@@ -1,5 +1,5 @@
 ---
-title: automatisch (C++)
+title: auto (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - auto_CPP
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: f4d17069ed4e06a85b80d2027433ff87be6d1521
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518566"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776335"
 ---
-# <a name="auto-c"></a>automatisch (C++)
+# <a name="auto-c"></a>auto (C++)
 
 Leitet den Typ einer deklarierten Variable vom entsprechenden Initialisierungsausdruck ab.
 
@@ -34,13 +34,13 @@ Die **auto** -Schlüsselwort weist den Compiler an den Initialisierungsausdruck 
 
 Wir empfehlen die Verwendung des **auto** Schlüsselwort für die meisten Situationen – es sei denn, Sie möchten wirklich eine Konvertierung vornehmen, da diese Vorteile bietet:
 
-- **Stabilität:** , wenn der Typ des Ausdrucks geändert wird – dies schließt, wenn der Rückgabetyp einer Funktion geändert wird, dann funktioniert.
+- **Stabilität:** Wenn der Typ des Ausdrucks geändert wird – dies schließt, wenn der Rückgabetyp einer Funktion geändert wird, dann funktioniert.
 
-- **Leistung:** sind garantiert, dass es keine Konvertierung fallen.
+- **Leistung:** Sie haben die Sicherheit ist, dass es keine Konvertierung.
 
-- **Benutzerfreundlichkeit:** müssen Sie nicht über Typ Namen Rechtschreibung schwierigkeiten und Fehler machen.
+- **Benutzerfreundlichkeit:** Sie haben sich keine Gedanken Typ Namen Rechtschreibung schwierigkeiten und Fehler.
 
-- **Effizienz:** Ihre Codierung kann effizienter sein.
+- **Effizienz:** Die Codierung kann effizienter sein.
 
 Fälle von Konvertierungen in denen Sie möglicherweise **auto** nicht verwenden möchten:
 
@@ -52,7 +52,7 @@ Das **auto** -Schlüsselwort verwenden sie anstelle eines Typs zum Deklarieren e
 
 Der Initialisierungsausdruck kann eine Zuweisung (Gleichheitszeichensyntax), eine direkte Initialisierung (funktionsformatsyntax), werden ein [new-Operator](new-operator-cpp.md) möglich, Ausdruck oder der Initialisierungsausdruck der  *for-Range-Declaration* Parameter in einer [bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md) Anweisung. Weitere Informationen finden Sie unter [Initialisierer](../cpp/initializers.md) und den Codebeispielen weiter unten in diesem Dokument.
 
-Die **auto** -Schlüsselwort ist ein Platzhalter für einen Typ, aber es ist nicht selbst ein Typ. Aus diesem Grund kann das **auto** -Schlüsselwort nicht in Umwandlungen und Operatoren wie z. B. ["sizeof"](../cpp/sizeof-operator.md) und [Typeid](../windows/typeid-cpp-component-extensions.md) verwendet werden.
+Die **auto** -Schlüsselwort ist ein Platzhalter für einen Typ, aber es ist nicht selbst ein Typ. Aus diesem Grund die **automatisch** -Schlüsselwort kann nicht in Umwandlungen und Operatoren wie z. B. verwendet werden ["sizeof"](../cpp/sizeof-operator.md) und (für C++ / CLI) [Typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Nützlichkeit
 
@@ -133,7 +133,7 @@ Die folgende Tabelle enthält die Einschränkungen für die Verwendung des **aut
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|Ein Symbol kann erst verwendet werden, wenn es initialisiert wurde. In der Praxis bedeutet dies, dass eine Variable nicht verwendet werden kann, um sich selbst zu initialisieren.|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Sie können nicht eine Umwandlung in einen Typ, der mit deklariert wird die **automatisch** Schlüsselwort.|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Alle Symbole in einer Deklaratorliste, die mit deklariert ist die **automatisch** Schlüsselwort muss in den gleichen Typ aufgelöst werden. Weitere Informationen finden Sie unter [Deklarationen und Definitionen](declarations-and-definitions-cpp.md).|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Die ["sizeof"](../cpp/sizeof-operator.md) und [Typeid](../windows/typeid-cpp-component-extensions.md) Operatoren nicht angewendet werden, um ein Symbol, das mit deklariert wird die **automatisch** Schlüsselwort.|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Die ["sizeof"](../cpp/sizeof-operator.md) und [Typeid](../extensions/typeid-cpp-component-extensions.md) Operatoren nicht angewendet werden, um ein Symbol, das mit deklariert wird die **automatisch** Schlüsselwort.|
 
 ## <a name="examples"></a>Beispiele
 
@@ -225,7 +225,7 @@ int main()
 [Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (Variablentyp ableiten)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [sizeof-Operator](../cpp/sizeof-operator.md)<br/>
-[typeid](../windows/typeid-cpp-component-extensions.md)<br/>
+[typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [operator new](new-operator-cpp.md)<br/>
 [Deklarationen und Definitionen](declarations-and-definitions-cpp.md)<br/>
 [Beispiele für Lambdaausdrücke](../cpp/examples-of-lambda-expressions.md)<br/>

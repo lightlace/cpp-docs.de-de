@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30ee549a334a684deeb4a845f2fc49ee8bbe11db
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279444"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770836"
 ---
 # <a name="handling-the-apply-button"></a>Verwenden der Schaltfläche „Anwenden“
 
@@ -30,7 +30,7 @@ Rufen Sie [CPropertyPage::SetModified](../mfc/reference/cpropertypage-class.md#s
 
 Um die Auswirkungen der Schaltfläche "anwenden" implementieren, muss das Eigenschaftenblatt der Besitzer oder ein anderes externes Objekt in der Anwendung, zum Anwenden der aktuellen Einstellungen auf den Eigenschaftenseiten informieren. Zur gleichen Zeit, sollte das Eigenschaftenblatt die Schaltfläche "anwenden" deaktivieren, indem Aufrufen `CPropertyPage::SetModified( FALSE )` für alle Seiten, die die Änderungen auf das externe Objekt angewendet.
 
-Ein Beispiel dieses Prozesses finden Sie im allgemeinen MFC-Beispiel [PROPDLG](../visual-cpp-samples.md).
+Ein Beispiel dieses Prozesses finden Sie im allgemeinen MFC-Beispiel [PROPDLG](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Siehe auch
 

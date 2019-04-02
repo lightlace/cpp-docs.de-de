@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-ms.openlocfilehash: d91974cb1c98561ba61927b84d06ad45cffc1291
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 67870a0fcc685c420c7d24510e90c6f4ef9b72a9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745151"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780274"
 ---
 # <a name="platformenum-class"></a>Platform::Enum-Klasse
 
@@ -30,7 +30,7 @@ Die Enumerationsklasse erbt die Methoden Equals(), GetHashCode() und ToString() 
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie das Schlüsselwort [public enum class](../windows/enum-class-cpp-component-extensions.md) zum Erstellen von Enumerationen. Verwenden Sie den Platform::Enum-Typ nicht explizit. Weitere Informationen finden Sie unter [Enumerationen](../cppcx/enums-c-cx.md)definiert sind.
+Verwenden Sie das Schlüsselwort [public enum class](../extensions/enum-class-cpp-component-extensions.md) zum Erstellen von Enumerationen. Verwenden Sie den Platform::Enum-Typ nicht explizit. Weitere Informationen finden Sie unter [Enumerationen](../cppcx/enums-c-cx.md)definiert sind.
 
 ### <a name="requirements"></a>Anforderungen
 

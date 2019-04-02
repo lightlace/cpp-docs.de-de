@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3450
 ms.assetid: 78892cf7-0b82-4589-90d0-e06666247003
-ms.openlocfilehash: bedf78ef1cea9f17903fd05f9440c6baa69f7333
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5228e0396221c51f5fc7336255656416c1e553b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481236"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780183"
 ---
 # <a name="compiler-error-c3450"></a>Compilerfehler C3450
 
@@ -19,7 +19,7 @@ ms.locfileid: "50481236"
 
 Ein benutzerdefiniertes verwaltetes Attribut muss von <xref:System.ComponentModel.AttributeCollection.%23ctor%2A> erben. Ein Windows-Runtime-Attribut muss im `Windows::Foundation::Metadata`-Namespace definiert sein.
 
-Weitere Informationen finden Sie unter [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 

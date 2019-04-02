@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: ae7f582de5d6c45df34c42164756356a9c794d31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482515"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778753"
 ---
 # <a name="compiler-error-c2065"></a>Compilerfehler C2065
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Beispiel: C + c++ / CLI-Typ Abzug Fehler
+## <a name="example-ccli-type-deduction-failure"></a>Beispiel: C++ / CLI-Typ Abzug Fehler
 
-Dieser Fehler kann auftreten, wenn eine generische Funktion aufrufen, wenn das geplante Typargument nicht von den verwendeten Parametern abgeleitet werden kann. Weitere Informationen finden Sie unter [generische Funktionen (C++ / CLI)](../../windows/generic-functions-cpp-cli.md).
+Dieser Fehler kann auftreten, wenn eine generische Funktion aufrufen, wenn das geplante Typargument nicht von den verwendeten Parametern abgeleitet werden kann. Weitere Informationen finden Sie unter [generische Funktionen (C++ / CLI)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
@@ -220,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>Beispiel: C + c++ / CLI Zuordnen von Parametern
+## <a name="example-ccli-attribute-parameters"></a>Beispiel: C++ / CLI Zuordnen von Parametern
 
 Dieser Fehler kann außerdem infolge einer Konformitätsverbesserung für Compiler für Visual C++ 2005 auftreten, und zwar beim Überprüfen der Parameter für Visual C++-Attribute.
 

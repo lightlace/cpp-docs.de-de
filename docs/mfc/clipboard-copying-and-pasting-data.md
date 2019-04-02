@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270734"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776101"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Zwischenablage: Kopieren und Einfügen von Daten
 
@@ -32,7 +32,7 @@ Bevor Sie implementieren können, kopieren oder einfügen, müssen Sie die Funkt
 
 1. Wenn der Benutzer eine Ausschneiden-Operation anstelle eines Kopiervorgangs ausgewählt haben, löschen Sie die ausgewählten Daten aus Ihrer Anwendung.
 
-Ein Beispiel für diese Sequenz finden Sie unter den `OnEditCut` und `OnEditCopy` Funktionen in der MFC-OLE-Beispielprogramme [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md). Beachten Sie, dass diese Beispiele verwalten einen Zeiger auf die ausgewählten Daten aus, damit Schritt 1 bereits abgeschlossen wurde.
+Ein Beispiel für diese Sequenz finden Sie unter den `OnEditCut` und `OnEditCopy` Funktionen in der MFC-OLE-Beispielprogramme [OCLIENT](../overview/visual-cpp-samples.md) und [HIERSVR](../overview/visual-cpp-samples.md). Beachten Sie, dass diese Beispiele verwalten einen Zeiger auf die ausgewählten Daten aus, damit Schritt 1 bereits abgeschlossen wurde.
 
 ##  <a name="_core_pasting_data"></a> Einfügen von Daten
 
@@ -50,7 +50,7 @@ Einfügen von Daten ist komplizierter als das Kopieren, da Sie wählen Sie das F
 
 1. Führen Sie das Einfügen des Formats.
 
-Ein Beispiel, wie dies funktioniert, finden Sie die Implementierung von der `OnEditPaste` Memberfunktionen in der Ansichtsklassen definiert, die in den MFC-OLE-Beispielprogrammen [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md).
+Ein Beispiel, wie dies funktioniert, finden Sie die Implementierung von der `OnEditPaste` Memberfunktionen in der Ansichtsklassen definiert, die in den MFC-OLE-Beispielprogrammen [OCLIENT](../overview/visual-cpp-samples.md) und [HIERSVR](../overview/visual-cpp-samples.md).
 
 > [!TIP]
 >  Der Hauptvorteil der Trennung des Einfügevorgangs in eine eigene Funktion ist, dass der gleiche fügen Sie Code verwendet werden kann, wenn Daten in Ihrer Anwendung während eines Drag & Drop-Vorgangs gelöscht werden. Wie bei OCLIENT und HIERSVR Ihre `OnDrop` Funktionsaufruf kann auch `DoPasteItem`, Wiederverwendung von Code geschrieben, um die einfügen-Vorgänge zu implementieren.

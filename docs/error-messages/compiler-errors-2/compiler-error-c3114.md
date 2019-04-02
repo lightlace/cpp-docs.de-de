@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: 6ce5b9860cd75619f26a3585981af5807c33535a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5a4feae5c8805a27c020b532fd58e0562e46b6b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606673"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773774"
 ---
 # <a name="compiler-error-c3114"></a>Compilerfehler C3114
 
@@ -19,7 +19,7 @@ ms.locfileid: "50606673"
 
 In der Reihenfolge für Datenmember einer Attributklasse ein benanntes Argument gültig ist, es muss nicht gekennzeichnet werden `static`, `const`, oder `literal`. Wenn eine Eigenschaft, die Eigenschaft muss nicht `static` und muss über get- und set-Accessoren.
 
-Weitere Informationen finden Sie unter [Eigenschaft](../../windows/property-cpp-component-extensions.md) und [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [Eigenschaft](../../extensions/property-cpp-component-extensions.md) und [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 

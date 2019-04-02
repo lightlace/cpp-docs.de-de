@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1211
 ms.assetid: df0ca70d-ec6e-4400-926a-b877e2599978
-ms.openlocfilehash: 01b9dbc63ec4dee7335579c4805d34b4ff7214fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f39ab027d8d81762ae1cf8f38405f3e21524da2e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534393"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781938"
 ---
 # <a name="fatal-error-c1211"></a>Schwerwiegender Fehler C1211
 
@@ -23,4 +23,4 @@ Bestimmte Funktionen des Compilers funktionieren möglicherweise nicht in einer 
 
 Installieren Sie die CLR, die im Lieferumfang des von Ihnen verwendeten Compilers enthalten war, um C1211 zu beheben.
 
-Weitere Informationen finden Sie unter [Typweiterleitung (C++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Weitere Informationen finden Sie unter [Typweiterleitung (C++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740928"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772604"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>C++-Stack-Semantik für Referenztypen
 
-Vor Visual C++ 2005 eine Instanz eines Referenztyps kann nur erstellt werden mithilfe der `new` -Operator, der Erstellung des Objekts auf dem Garbage gesammelten Heap. Allerdings können Sie jetzt erstellen eine Instanz eines Referenztyps mit derselben Syntax, die Sie verwenden eine Instanz eines systemeigenen Typs auf dem Stapel zu erstellen. Also, Sie müssen nicht mit [Ref neue Gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) ein Objekt eines Verweistyps erstellt. Und wenn das Objekt den Gültigkeitsbereich verlässt, ruft der Compiler des Destruktors des Objekts.
+Vor Visual C++ 2005 eine Instanz eines Referenztyps kann nur erstellt werden mithilfe der `new` -Operator, der Erstellung des Objekts auf dem Garbage gesammelten Heap. Allerdings können Sie jetzt erstellen eine Instanz eines Referenztyps mit derselben Syntax, die Sie verwenden eine Instanz eines systemeigenen Typs auf dem Stapel zu erstellen. Also, Sie müssen nicht mit [Ref neue Gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) ein Objekt eines Verweistyps erstellt. Und wenn das Objekt den Gültigkeitsbereich verlässt, ruft der Compiler des Destruktors des Objekts.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -41,9 +41,9 @@ Der Compiler bietet auch eine `%` unäroperator, um eine Instanz eines Referenzt
 
 Die folgenden Verweistypen sind nicht verfügbar, für die Verwendung mit Stapelsemantik:
 
-- [delegate (Komponentenerweiterungen für C++)](../windows/delegate-cpp-component-extensions.md)
+- [delegate (Komponentenerweiterungen für C++)](../extensions/delegate-cpp-component-extensions.md)
 
-- [Arrays](../windows/arrays-cpp-component-extensions.md)
+- [Arrays](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)
+[Klassen und Strukturen](../extensions/classes-and-structs-cpp-component-extensions.md)

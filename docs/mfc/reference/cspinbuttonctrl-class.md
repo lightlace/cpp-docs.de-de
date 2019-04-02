@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f864a37c46158ab98776cd96d9f50d7cfaeb13d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425028"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776348"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl-Klasse
 
@@ -399,7 +399,7 @@ Die Memberfunktion `SetRange32` legt den 32-Bit-Bereich für das Drehfeld-Steuer
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CSliderCtrl-Klasse](../../mfc/reference/csliderctrl-class.md)

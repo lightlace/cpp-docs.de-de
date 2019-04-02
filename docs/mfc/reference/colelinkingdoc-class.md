@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300405"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773553"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc-Klasse
 
@@ -57,7 +57,7 @@ class COleLinkingDoc : public COleDocument
 
 ## <a name="remarks"></a>Hinweise
 
-Eine containeranwendung, die unterstützt das verknüpfen, um eingebettete Elemente wird einen "Link-Container" bezeichnet. Die [OCLIENT](../../visual-cpp-samples.md) beispielanwendung ist ein Beispiel für einen Link-Container.
+Eine containeranwendung, die unterstützt das verknüpfen, um eingebettete Elemente wird einen "Link-Container" bezeichnet. Die [OCLIENT](../../overview/visual-cpp-samples.md) beispielanwendung ist ein Beispiel für einen Link-Container.
 
 Wenn ein verknüpftes Element-Quelle ein eingebettetes Element in einem anderen Dokument ist, muss das Dokument enthält in der Reihenfolge für das eingebettete Element bearbeitet werden geladen werden. Aus diesem Grund muss ein Link-Container können von einer anderen containeranwendung gestartet werden, wenn der Benutzer die Quelle eines verknüpften Elements bearbeiten möchte. Ihre Anwendung muss auch verwenden, die [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) -Klasse so, dass es Dokumente, die beim Starten von programmgesteuert erstellen kann.
 
@@ -75,7 +75,7 @@ Verbinden Ihrer `COleTemplateServer` Objekt, das Ihren Dokumentvorlagen durch Au
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-Ein Beispiel für `CWinApp`-Definition der Klasse abgeleitet und `InitInstance` funktionieren, finden Sie unter OCLIENT. H und OCLIENT. CPP im MFC-Beispiel [OCLIENT](../../visual-cpp-samples.md).
+Ein Beispiel für `CWinApp`-Definition der Klasse abgeleitet und `InitInstance` funktionieren, finden Sie unter OCLIENT. H und OCLIENT. CPP im MFC-Beispiel [OCLIENT](../../overview/visual-cpp-samples.md).
 
 Weitere Informationen zur Verwendung von `COleLinkingDoc`, finden Sie in den Artikeln [Container: Implementieren eines Containers](../../mfc/containers-implementing-a-container.md) und [Container: Erweiterte Features](../../mfc/containers-advanced-features.md).
 
@@ -193,7 +193,7 @@ Sie sollten diese Funktion beim Schließen einer benannten Datei aufrufen, aber 
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel OCLIENT](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument-Klasse](../../mfc/reference/coledocument-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CDocTemplate-Klasse](../../mfc/reference/cdoctemplate-class.md)

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d1922c2f2d804c2a93d30dc0708b2d3ae037414d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259749"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768704"
 ---
 # <a name="coledocument-class"></a>COleDocument-Klasse
 
@@ -544,7 +544,7 @@ Dadurch wird das Framework fordert den Benutzer auf das Dokument zu speichern, b
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel-CONTAINER](../../visual-cpp-samples.md)<br/>
-[MFC-Beispiel MFCBIND](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel-CONTAINER](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [CDocument-Klasse](../../mfc/reference/cdocument-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)

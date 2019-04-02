@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-ms.openlocfilehash: f6e5031cb77729ede053b275c90fa93bf251fcb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486774"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769523"
 ---
 # <a name="unhook"></a>__unhook
 
@@ -48,7 +48,7 @@ long  __unhook(
 - Verwaltete Ereignisse: *SourceClass* ist die Ereignisquellenklasse, und *EventMethod* ist das Ereignis.
 
 *interface*<br/>
-Der Name der Schnittstelle von verknüpft wird *Empfänger*, nur für COM-Ereignisempfängern, bei denen die *Layout_dependent* Parameter der [Event_receiver](../windows/event-receiver.md) -Attribut ist **"true"**.
+Der Name der Schnittstelle von verknüpft wird *Empfänger*, nur für COM-Ereignisempfängern, bei denen die *Layout_dependent* Parameter der [Event_receiver](../windows/attributes/event-receiver.md) -Attribut ist **"true"**.
 
 *source*<br/>
 Ein Zeiger auf eine Instanz der Ereignisquelle. Je nach Code `type` im angegebenen `event_receiver`, *Quelle* kann einen der folgenden sein:
@@ -89,7 +89,7 @@ Mit Ausnahme von COM-Ereignisse **__hook** und **__unhook** außerhalb des Ereig
 
 Eine Alternative zur Verwendung **__unhook** den =-Operator verwendet wird.
 
-Weitere Informationen über die Codierung von verwalteter Ereignissen in der neuen Syntax finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md).
+Weitere Informationen über die Codierung von verwalteter Ereignissen in der neuen Syntax finden Sie unter [Ereignis](../extensions/event-cpp-component-extensions.md).
 
 > [!NOTE]
 >  Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.
@@ -101,8 +101,8 @@ Finden Sie unter [Ereignisbehandlung in systemeigenem C++](../cpp/event-handling
 ## <a name="see-also"></a>Siehe auch
 
 [Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__event](../cpp/event.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__raise](../cpp/raise.md)

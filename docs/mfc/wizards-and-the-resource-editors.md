@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: 5316899b7eb8828847af6d7db95edf3d8ba3822a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265521"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773826"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Assistenten und der Ressourcen-Editor
 
@@ -46,7 +46,7 @@ Das Fenster "Eigenschaften" erstellt ein leeres Meldungshandler-Memberfunktionen
 
 Verwenden Sie die Visual C++ [Ressourcen-Editoren](../windows/resource-editors.md) erstellen und Bearbeiten von Menüs, Dialogfeldern, benutzerdefinierte Steuerelemente, Zugriffstasten, Bitmaps, Symbole, Cursor, Zeichenfolgen und Versionsressourcen. Ab Visual C++, Version 4.0 vereinfacht ein Symbolleisten-Editor Erstellen von Symbolleisten.
 
-Damit Sie noch mehr, bietet die Microsoft Foundation Class-Library eine Datei mit dem allgemeinen. RES, die "ClipArt-Ressourcen enthält, die Sie häufiger kopieren können. RES, und fügen Sie in Ihren eigenen Ressourcendatei. ALLGEMEINE. RES enthält Schaltflächen der Symbolleiste, allgemeine Cursor, Symbole und vieles mehr. Sie können verwenden, ändern und verteilen diese Ressourcen in Ihrer Anwendung. Weitere Informationen zu allgemeinen. RES, finden Sie unter den [Clipart-Beispiel](../visual-cpp-samples.md).
+Damit Sie noch mehr, bietet die Microsoft Foundation Class-Library eine Datei mit dem allgemeinen. RES, die "ClipArt-Ressourcen enthält, die Sie häufiger kopieren können. RES, und fügen Sie in Ihren eigenen Ressourcendatei. ALLGEMEINE. RES enthält Schaltflächen der Symbolleiste, allgemeine Cursor, Symbole und vieles mehr. Sie können verwenden, ändern und verteilen diese Ressourcen in Ihrer Anwendung. Weitere Informationen zu allgemeinen. RES, finden Sie unter den [Clipart-Beispiel](../overview/visual-cpp-samples.md).
 
 Den Assistenten zum MFC-Anwendungen, die Visual C++-Assistenten, Ressourcen-Editoren und MFC-Framework viel Arbeit für Sie erledigt, und vereinfachen der Verwaltung von Ihrem Codes viel einfacher. Der größte Teil Ihrer Anwendung-spezifischen Code befindet sich in Ihrem Dokument und Anzeigen von Klassen.
 

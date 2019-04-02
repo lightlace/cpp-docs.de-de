@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: a65ccdb4d2f031a70ba03719b58fb439407cdfc8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d0a006c6928bf42c3e6f4adfbc3d1fdde7ff7c87
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825626"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773046"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Exemplarische Vorgehensweise: Kompilieren von C++ / CLI-Programm, das die CLR in Visual Studio
 
@@ -57,7 +57,7 @@ In diesen Artikeln wird davon ausgegangen, dass Sie die Grundlagen der Programmi
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   Weitere Informationen zur neuen Visual C++-Syntax finden Sie unter [Component Extensions for Runtime Platforms (Komponentenerweiterungen für Laufzeitplattformen)](../windows/component-extensions-for-runtime-platforms.md).
+   Weitere Informationen zur neuen Visual C++-Syntax finden Sie unter [Component Extensions for Runtime Platforms (Komponentenerweiterungen für Laufzeitplattformen)](../extensions/component-extensions-for-runtime-platforms.md).
 
 1. Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.
 

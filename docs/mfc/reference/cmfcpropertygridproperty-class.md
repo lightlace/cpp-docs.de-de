@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305067"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779026"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty-Klasse
 
@@ -282,7 +282,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Die Formatzeichenfolge für einen Wert vom Typ "double".|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Die Formatzeichenfolge für einen Wert vom Typ "float".|
@@ -297,7 +297,7 @@ Ein Objekt kann es sich um Datentypen wie Zeichenfolgen, Datumsangaben und boole
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCPropertyGridProperty` Objekt. Außerdem wird veranschaulicht, wie Sie mit verschiedenen Methoden in der `CMFCPropertyGridProperty` Klasse, um eine Option hinzufügen, Hinzufügen eines untergeordneten Elements, eine Eigenschaft zu aktivieren und eine Eigenschaft anzeigen. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCPropertyGridProperty` Objekt. Außerdem wird veranschaulicht, wie Sie mit verschiedenen Methoden in der `CMFCPropertyGridProperty` Klasse, um eine Option hinzufügen, Hinzufügen eines untergeordneten Elements, eine Eigenschaft zu aktivieren und eine Eigenschaft anzeigen. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 9f1fd2435222b33d0dfb188d2a51442c2f6aa82a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b23aa9e30c130cea8c84290b62cc19794376d4c1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288882"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773436"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane-Klasse
 
@@ -111,7 +111,7 @@ Ein Beispiel für eine Outlook-Leiste finden Sie das Beispielprojekt OutlookDemo
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie verschiedene Methoden, die `CMFCOutlookBarPane` Klasse. Das Beispiel zeigt, wie Sie ein Outlook-Leistenbereich erstellen, der Page-Scroll-Modus zu aktivieren, aktivieren Sie das Andocken und Festlegen der Hintergrundfarbe der Outlook-Leiste. Dieser Codeausschnitt ist Teil der [Outlook mit mehreren Ansichten Beispiel](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie verschiedene Methoden, die `CMFCOutlookBarPane` Klasse. Das Beispiel zeigt, wie Sie ein Outlook-Leistenbereich erstellen, der Page-Scroll-Modus zu aktivieren, aktivieren Sie das Andocken und Festlegen der Hintergrundfarbe der Outlook-Leiste. Dieser Codeausschnitt ist Teil der [Outlook mit mehreren Ansichten Beispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#4](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_2.cpp)]

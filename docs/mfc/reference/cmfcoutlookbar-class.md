@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304079"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775256"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar-Klasse
 
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Beispiel für eine Outlook-Leiste, finden Sie unter den [OutlookDemo-Beispiel: MFC-Anwendung für OutlookDemo](../../visual-cpp-samples.md).
+Ein Beispiel für eine Outlook-Leiste, finden Sie unter den [OutlookDemo-Beispiel: MFC-Anwendung für OutlookDemo](../../overview/visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Implementieren die Outlook-Leiste
 
@@ -294,7 +294,7 @@ Finden Sie unter [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#c
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `Create` Methode der `CMFCOutlookBar` Klasse. Dieser Codeausschnitt ist Teil der [Outlook mit mehreren Ansichten Beispiel](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `Create` Methode der `CMFCOutlookBar` Klasse. Dieser Codeausschnitt ist Teil der [Outlook mit mehreren Ansichten Beispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175920"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778337"
 ---
 # <a name="try-finally-statement"></a>try-finally-Anweisung
 
@@ -33,7 +33,7 @@ ms.locfileid: "52175920"
 
 Die folgende Syntax beschreibt die **Try-finally-** Anweisung:
 
-> **\_\_Versuchen Sie es**<br/>
+> **\_\_try**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;überwachten code<br/>
 > }<br/>
@@ -49,7 +49,7 @@ Die folgende Syntax beschreibt die **Try-finally-** Anweisung:
 
 Die **Try-finally-** -Anweisung ist eine Microsoft-Erweiterung der Programmiersprachen C und C++, die es ermöglicht zielanwendungen Bereinigungscode bei der Ausführung eines Codeblocks unterbrochen wird. Die Bereinigung besteht aus Aufgaben wie z. B. Neuzuweisung von Arbeitsspeicher, Schließen von Dateien und Freigeben von Dateihandles. Die **Try-finally-** -Anweisung ist besonders nützlich für Routinen, die mehrfach haben, in dem eine Überprüfung statt, für einen Fehler, die verursachen könnten vorzeitige, von der Routine Rückgabe.
 
-Weitere Informationen und ein Codebeispiel finden Sie unter [versuchen-except-Anweisung](../cpp/try-except-statement.md). Weitere Informationen über die strukturierte Ausnahmebehandlung im Allgemeinen, finden Sie unter [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Weitere Informationen zur Behandlung von Ausnahmen in verwalteten Anwendungen finden Sie unter [Ausnahmebehandlung unter/CLR](../windows/exception-handling-cpp-component-extensions.md).
+Weitere Informationen und ein Codebeispiel finden Sie unter [versuchen-except-Anweisung](../cpp/try-except-statement.md). Weitere Informationen über die strukturierte Ausnahmebehandlung im Allgemeinen, finden Sie unter [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Weitere Informationen zur Behandlung von Ausnahmen in verwalteten Anwendungen mit C++ / CLI finden Sie unter [Ausnahmebehandlung unter/CLR](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
 > Die strukturierte Ausnahmebehandlung arbeitet mit Win32 für C- und C++-Quelldateien. Sie ist jedoch nicht speziell für C++ entwickelt. Sie können sicherstellen, dass der Code portabler ist, indem Sie die C++-Ausnahmebehandlung verwenden. Die C++-Ausnahmebehandlung ist auch flexibler, da sie Ausnahmen eines beliebigen Typs behandeln kann. Für C++-Programme wird empfohlen, dass Sie den C++-Mechanismus für die Ausnahmebehandlung verwenden ([versuchen, catch- und throw-](../cpp/try-throw-and-catch-statements-cpp.md) Anweisungen).
@@ -66,7 +66,7 @@ Erreicht eine **__try** -Anweisung durch einfache sequenzielle Ausführung (fort
 
 Im Falle eine Ausnahme der **__try** blockieren, muss das Betriebssystem einen Handler finden, für die Ausnahme oder die Anwendung schlägt fehl. Wenn ein Handler für alle gefunden wird, **__finally** -blocke ausgeführt werden, und die Ausführung im Handler fortgesetzt wird.
 
-Nehmen Sie z. B. an, eine Reihe von Funktionsaufrufen verbindet Funktion A mit Funktion D, wie in der folgenden Abbildung dargestellt. Jede Funktion verfügt über einen Beendigungshandler. Wenn eine Ausnahme in Funktion D ausgelöst und in A behandelt wird, werden die Beendigungshandler in folgender Reihenfolge aufgerufen, während das System den Stapel abwickelt: D, C, B.
+Nehmen Sie z. B. an, eine Reihe von Funktionsaufrufen verbindet Funktion A mit Funktion D, wie in der folgenden Abbildung dargestellt. Jede Funktion verfügt über einen Beendigungshandler. Wenn eine Ausnahme in Funktion D ausgelöst und in A behandelt wird, werden die Beendigungshandler in dieser Reihenfolge aufgerufen, wie das System beim Entladen des Stapels: D, C, B.
 
 ![Reihenfolge der Beendigung&#45;Handler Ausführung](../cpp/media/vc38cx1.gif "Reihenfolge der Beendigung&#45;Handler-Ausführung") <br/>
 Reihenfolge für das Beenden bei Handlerausführung

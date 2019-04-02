@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292275"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776010"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu-Klasse
 
@@ -278,7 +278,7 @@ In der Regel MFC Popupmenüs wird automatisch erstellt. Wenn Sie erstellen möch
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel veranschaulicht ein Popupmenü-Objekt zu konfigurieren. Im Beispiel veranschaulicht die legen Sie das Logo und den Sound im Popupmenü, legen Sie die animationsgeschwindigkeit und der Typ, Menü Schatten zu zeichnen, wenn Sie im Popupmenü außerhalb der Hauptframe angezeigt wird, legen Sie die maximale Breite und Festlegen der Ausrichtung Menü rechts im Popupmenü. Dieser Codeausschnitt ist Teil der [Beispiel für benutzerdefinierte Seiten](../../visual-cpp-samples.md).
+Im folgende Beispiel veranschaulicht ein Popupmenü-Objekt zu konfigurieren. Im Beispiel veranschaulicht die legen Sie das Logo und den Sound im Popupmenü, legen Sie die animationsgeschwindigkeit und der Typ, Menü Schatten zu zeichnen, wenn Sie im Popupmenü außerhalb der Hauptframe angezeigt wird, legen Sie die maximale Breite und Festlegen der Ausrichtung Menü rechts im Popupmenü. Dieser Codeausschnitt ist Teil der [Beispiel für benutzerdefinierte Seiten](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]
 
@@ -451,7 +451,7 @@ Wenn *bOwnMessage* ist "true", die Routen Framework alle Nachrichten im Menü, *
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `Create` Methode der `CMFCPopuMenu` Klasse. Dieser Codeausschnitt ist Teil der [Beispiel für benutzerdefinierte Seiten](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `Create` Methode der `CMFCPopuMenu` Klasse. Dieser Codeausschnitt ist Teil der [Beispiel für benutzerdefinierte Seiten](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]
 

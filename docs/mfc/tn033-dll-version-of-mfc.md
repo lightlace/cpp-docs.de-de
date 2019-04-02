@@ -1,5 +1,5 @@
 ---
-title: 'TN033: DLL-Version der MFC'
+title: 'TN033: DLL Version of MFC (nur auf Englisch verfügbar)'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.dll
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-ms.openlocfilehash: 17ffc8b46060e742449c9612424b1cd06dd8a9d3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523961"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767781"
 ---
-# <a name="tn033-dll-version-of-mfc"></a>TN033: DLL-Version der MFC
+# <a name="tn033-dll-version-of-mfc"></a>TN033: DLL Version of MFC (nur auf Englisch verfügbar)
 
 In diesem Hinweis wird beschrieben, wie können Sie die MFCxx.DLL und MFCxxD.DLL (wobei x für die MFC-Versionsnummer ist), dynamic Link Librarys für MFC-Anwendungen und MFC-Erweiterungs-DLLs zu freigegeben. Weitere Informationen zu regulären MFC-DLLs, finden Sie unter [mithilfe von MFC als Teil einer DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).
 
@@ -33,23 +33,23 @@ Wenn Sie bei der Erstellung einer DLL mithilfe von MFC, die mit MFC-fremden Anwe
 
 ## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>Übersicht über die MFCxx.DLL-Unterstützung: Terminologie und Dateien
 
-**Reguläre MFC-DLL**: Verwenden Sie eine reguläre MFC-DLL an, um eine eigenständige DLL mithilfe einiger der MFC-Klassen zu erstellen. Über die App/DLL-Grenze hinweg sind "C"-Schnittstellen, und die Client-Anwendung muss keiner MFC-Anwendung sein.
+**Reguläre MFC-DLL**: Verwenden Sie eine reguläre MFC-DLL, um eine eigenständige DLL mithilfe einiger der MFC-Klassen zu erstellen. Über die App/DLL-Grenze hinweg sind "C"-Schnittstellen, und die Client-Anwendung muss keiner MFC-Anwendung sein.
 
-Dies ist die Version der DLL-Unterstützung in MFC 1.0 unterstützt. Es wird beschrieben, [technischen Hinweis 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md) und im MFC Advanced Concepts-Beispiel [DLLScreenCap](../visual-cpp-samples.md).
+Dies ist die Version der DLL-Unterstützung in MFC 1.0 unterstützt. Es wird beschrieben, [technischen Hinweis 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md) und im MFC Advanced Concepts-Beispiel [DLLScreenCap](../overview/visual-cpp-samples.md).
 
 > [!NOTE]
 > Ab Visual C++ 4.0 ist der Begriff **USRDLL** ist veraltet und wurde ersetzt durch eine reguläre MFC-DLL, die statisch mit MFC verknüpft. Sie können auch eine reguläre MFC-DLL erstellen, die dynamisch mit MFC verknüpft wird.
 
 MFC 3.0 (und höher) unterstützt reguläre MFC-DLLs mit allen neuen Funktionen einschließlich der Klassen OLE und der Datenbank.
 
-**AFXDLL**: Dies wird auch als die freigegebene Version von MFC-Bibliotheken bezeichnet. Dies ist die neue DLL-Unterstützung in MFC 2.0 hinzugefügt. Die MFC-Bibliothek selbst ist in einer Reihe von DLLs (siehe unten) und einer Clientanwendung oder die DLL dynamisch verknüpft mit die DLLs, die es benötigt. Schnittstellen für die Anwendung/DLL-Grenze sind C++ / MFC-Klasse-Schnittstellen. Die Clientanwendung muss eine MFC-Anwendung. Unterstützt alle Funktionen von MFC 3.0 (Ausnahme: UNICODE wird nicht unterstützt, für die Datenbankklassen).
+**AFXDLL**: Dies wird auch als die freigegebene Version von MFC-Bibliotheken bezeichnet. Dies ist die neue DLL-Unterstützung in MFC 2.0 hinzugefügt. Die MFC-Bibliothek selbst ist in einer Reihe von DLLs (siehe unten) und einer Clientanwendung oder die DLL dynamisch verknüpft mit die DLLs, die es benötigt. Schnittstellen für die Anwendung/DLL-Grenze sind C++ / MFC-Klasse-Schnittstellen. Die Clientanwendung muss eine MFC-Anwendung. Unterstützt alle Funktionen von MFC 3.0 (Ausnahme: UNICODE ist nicht für die Datenbankklassen unterstützt).
 
 > [!NOTE]
 > Ab Visual C++, Version 4.0 wird die DLL als ein "Erweiterungs-DLL." bezeichnet.
 
 In diesem Hinweis wird MFCxx.DLL verwenden, verweisen auf die gesamte, MFC-DLL festgelegt, die enthält:
 
-- Debuggen: MFCxxD.DLL (kombiniert) und MFCSxxD.LIB (statisch).
+- Debuggen: MFCSxxD.LIB (statisch), und MFCxxD.DLL (kombiniert).
 
 - Version: MFCxx.DLL (kombiniert) und MFCSxx.LIB (statisch).
 
@@ -98,7 +98,7 @@ Eine MFC-Erweiterungs-DLL ist eine DLL, Klassen und Funktion, um die Funktionali
 
 - Eine MFC-Erweiterungs-DLL wird in der Regel geben Sie eine Initialisierungsroutine zum Erstellen einer `CDynLinkLibrary` Wenn die MFC-Erweiterungs-DLL exportieren möchte `CRuntimeClass`es oder Ressourcen, um die Anwendung. Eine abgeleitete Klasse von `CDynLinkLibrary` kann verwendet werden, wenn nach Anwendung von der MFC-Erweiterungs-DLL beibehalten werden muss.
 
-Diese Überlegungen werden im folgenden ausführlicher beschrieben. Lesen Sie auch im MFC Advanced Concepts-Beispiel [DLLHUSK](../visual-cpp-samples.md) , da das Beispiel veranschaulicht:
+Diese Überlegungen werden im folgenden ausführlicher beschrieben. Lesen Sie auch im MFC Advanced Concepts-Beispiel [DLLHUSK](../overview/visual-cpp-samples.md) , da das Beispiel veranschaulicht:
 
 - Erstellen eine Anwendung, die gemeinsam genutzten Bibliotheken. (DLLHUSK. EXE-Datei ist eine MFC-Anwendung, die dynamisch mit MFC-Bibliotheken sowie andere DLLs verknüpft.)
 
@@ -324,7 +324,7 @@ Dynamische Erstellung von C++-Objekten, die eine C++-Klasse benannt ist ähnlich
 
 Wenn Sie möchten die Clientanwendung Klassen in der MFC-Erweiterungs-DLL zu verwenden, sind `DECLARE_SERIAL`, müssen Sie so exportieren Sie Ihre Klassen, um die an die Clientanwendung angezeigt werden. Dies auch geschieht durch Durchlaufen der `CDynLinkLibrary` Liste.
 
-Im Fall von im MFC Advanced Concepts-Beispiel [DLLHUSK](../visual-cpp-samples.md), die Liste sieht wie folgt:
+Im Fall von im MFC Advanced Concepts-Beispiel [DLLHUSK](../overview/visual-cpp-samples.md), die Liste sieht wie folgt:
 
 ```Example
 head ->   DLLHUSK.EXE   - or - DLLHUSK.EXE
@@ -339,7 +339,7 @@ head ->   DLLHUSK.EXE   - or - DLLHUSK.EXE
 
 Die MFCxx.DLL befindet sich letzter in der Ressourcen- und Klassenliste. MFCxx.DLL enthält alle MFC-Standardressourcen, einschließlich der eingabeaufforderungen aller Standardbefehls-IDs für die. Legen Sie das Element am Ende der Liste kann DLLs und die Clientanwendung selbst keine eigene Kopie der MFC-Standardressourcen, aber auf basieren auf den freigegebenen Ressourcen in MFCxx.DLL stattdessen.
 
-Zusammenführen von Ressourcen und Klassennamen aller DLLs mit der Clientanwendung Namespace hat den Nachteil, die Sie vorsichtig sein, welche IDs oder Namen, die Sie auswählen. Sie können natürlich deaktivieren diese Funktion durch den Export nicht entweder Ihre Ressourcen oder `CDynLinkLibrary` Objekt an die Clientanwendung. Die [DLLHUSK](../visual-cpp-samples.md) Beispiel verwaltet den Namespace für gemeinsam genutzte Ressource durch mehrere Headerdateien. Finden Sie unter [technischen Hinweis 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md) Weitere Tipps zum Arbeiten mit freigegebenen Dateien.
+Zusammenführen von Ressourcen und Klassennamen aller DLLs mit der Clientanwendung Namespace hat den Nachteil, die Sie vorsichtig sein, welche IDs oder Namen, die Sie auswählen. Sie können natürlich deaktivieren diese Funktion durch den Export nicht entweder Ihre Ressourcen oder `CDynLinkLibrary` Objekt an die Clientanwendung. Die [DLLHUSK](../overview/visual-cpp-samples.md) Beispiel verwaltet den Namespace für gemeinsam genutzte Ressource durch mehrere Headerdateien. Finden Sie unter [technischen Hinweis 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md) Weitere Tipps zum Arbeiten mit freigegebenen Dateien.
 
 ### <a name="initializing-the-dll"></a>Initialisieren der DLL
 
@@ -369,7 +369,7 @@ Eine effizientere Methode (und die Methode, die von MFCxx.DLL verwendet) werden 
 
 Wenn Sie versucht haben, Exportieren von C++ mit Klassen ein. DEF-Datei, bevor Sie ein Tool, um diese Liste automatisch generieren entwickeln möchten. Dies kann erfolgen über einen Link von einem zweistufigen Prozess. Verknüpfen Sie die DLL einmal mit keine Exporte und ermöglichen den Linker an generieren ein. MAP-Datei. Die. MAP-Datei kann verwendet werden, um eine Liste der Funktionen, die exportiert werden soll, zu generieren, damit mit einigen neu anordnen, sie verwendet werden kann, generieren Sie Ihre EXPORT-Einträge für Ihre. DEF-Datei. Die Exportliste für MFCxx.DLL und die OLE und der Datenbank-MFC-Erweiterungs-DLLs, mehrere Tausend bezüglich Anzahl, wurde mit solchen Prozess generiert, (obwohl es nicht vollkommen automatisch und erfordert einige manuell alle einmal eine Optimierung).
 
-### <a name="cwinapp-vs-cdynlinklibrary"></a>CWinApp im Vergleich zu CDynLinkLibrary
+### <a name="cwinapp-vs-cdynlinklibrary"></a>CWinApp vs. CDynLinkLibrary
 
 Eine MFC-Erweiterungs-DLL verfügt nicht über eine `CWinApp`-abgeleitetes Objekt selbst; stattdessen müssen sie gemeinsam mit der `CWinApp`-abgeleitete Objekt der Clientanwendung. Dies bedeutet, dass die Clientanwendung die Haupt-Meldungsverteilschleife, die Leerlaufschleife usw. besitzt.
 
@@ -411,7 +411,7 @@ Wenn Sie die externes Makefile-Funktion von Visual C++-Komponente verwenden oder
 
 Erforderliche Compilerflags:
 
-- **/ D_AFXDLL/MD**
+- **/D_AFXDLL /MD**
    **/D_AFXDLL**
 
 Die MFC-Standardheader benötigen dieses Symbol definiert werden:
@@ -432,7 +432,7 @@ Die meisten Programme die MFC-Beispiel können von Visual C++ oder mit einem fre
 
 Um solche Beispiele zur Verwendung von MFCxx.DLL zu konvertieren, können Sie laden die. MAK-Datei in Visual C++-Komponente, und legen Optionen für das Projekt aus, wie oben beschrieben. Wenn Sie den NMAKE-Build verwenden, können Sie angeben "AFXDLL = 1" auf der NMAKE-Befehlszeile und, erstellt das Beispiel mithilfe der gemeinsam genutzte MFC-Bibliotheken.
 
-Im MFC Advanced Concepts-Beispiel [DLLHUSK](../visual-cpp-samples.md) mit der MFC-DLL-Version erstellt wurde. Dieses Beispiel veranschaulicht das nicht nur zum Erstellen einer Anwendung mit MFCxx.DLL verknüpft, aber darüber hinaus veranschaulicht es andere Funktionen der MFC-DLL Packaging-Option wie MFC-Erweiterungs-DLLs, die weiter unten in diesem technischen Hinweis beschrieben.
+Im MFC Advanced Concepts-Beispiel [DLLHUSK](../overview/visual-cpp-samples.md) mit der MFC-DLL-Version erstellt wurde. Dieses Beispiel veranschaulicht das nicht nur zum Erstellen einer Anwendung mit MFCxx.DLL verknüpft, aber darüber hinaus veranschaulicht es andere Funktionen der MFC-DLL Packaging-Option wie MFC-Erweiterungs-DLLs, die weiter unten in diesem technischen Hinweis beschrieben.
 
 ### <a name="packaging-notes"></a>Anmerkungen zu dieser Version paketerstellung
 

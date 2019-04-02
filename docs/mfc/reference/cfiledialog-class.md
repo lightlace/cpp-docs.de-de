@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262102"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779208"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog-Klasse
 
@@ -251,7 +251,7 @@ Einige `CFileDialog` Methoden werden nicht unterstützt, unter Windows Vista ode
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Die Windows-Meldungen für die `CFileDialog` Klasse variieren, je nachdem auf welches Betriebssystem Sie verwenden. Windows XP unterstützt beispielsweise keine [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) und [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) für die `CFileDialog` Klasse. Allerdings Windows Vista und späteren Betriebssystemen werden unterstützt. Weitere Informationen über die unterschiedlichen Nachrichten, die generiert werden und die Reihenfolge, in dem sie empfangen werden, finden Sie unter [CFileDialog-Beispiel: Protokollierung der Ereignisse in ihrer Reihenfolge](../../visual-cpp-samples.md).
+Die Windows-Meldungen für die `CFileDialog` Klasse variieren, je nachdem auf welches Betriebssystem Sie verwenden. Windows XP unterstützt beispielsweise keine [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) und [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) für die `CFileDialog` Klasse. Allerdings Windows Vista und späteren Betriebssystemen werden unterstützt. Weitere Informationen über die unterschiedlichen Nachrichten, die generiert werden und die Reihenfolge, in dem sie empfangen werden, finden Sie unter [CFileDialog-Beispiel: Protokollierung der Ereignisse in ihrer Reihenfolge](../../overview/visual-cpp-samples.md).
 
 Verwenden einer `CFileDialog` Objekt, erstellen Sie zuerst mithilfe der `CFileDialog` Konstruktor. Nachdem Sie das Dialogfeld erstellt wurde, können Sie festlegen oder ändern Sie alle Werte in der [CFileDialog::m_ofn](#m_ofn) Struktur, die Werte oder Zustände der Dialogfeld-Steuerelemente initialisieren. Die `m_ofn` Struktur ist vom Typ `OPENFILENAME`. Weitere Informationen finden Sie unter den [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Struktur im Windows SDK.
 

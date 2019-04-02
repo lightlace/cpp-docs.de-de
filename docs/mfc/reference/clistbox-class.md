@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280315"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778766"
 ---
 # <a name="clistbox-class"></a>CListBox-Klasse
 
@@ -1538,7 +1538,7 @@ Ein Wert zurückgegeben, der größer oder gleich 0 gibt den Index eines Element
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel CTRLTEST](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>

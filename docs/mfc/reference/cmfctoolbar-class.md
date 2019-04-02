@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283136"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775626"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar-Klasse
 
@@ -504,7 +504,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Gibt an, ob Skalierung oder keine Symbolleistenbilder im Modus für hohe DPI-Wert.|
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Gibt das Verhältnis zwischen der Dimension (Höhe oder Breite) von Bildern und die Dimension von regulären Abbildern.|
@@ -525,7 +525,7 @@ Um eine spezielle Schaltfläche eingefügt werden soll, z. B. ein Kombinationsfe
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCToolBar` -Klasse. Das Beispiel veranschaulicht die legen Sie den Text der Bezeichnung Fenster der Symbolleiste, legen Sie die Rahmen, Festlegen des Formats für den Bereich, und aktivieren die **Schaltflächen hinzufügen oder entfernen** Schaltfläche, auf der Seite der Symbolleiste angezeigt wird. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCToolBar` -Klasse. Das Beispiel veranschaulicht die legen Sie den Text der Bezeichnung Fenster der Symbolleiste, legen Sie die Rahmen, Festlegen des Formats für den Bereich, und aktivieren die **Schaltflächen hinzufügen oder entfernen** Schaltfläche, auf der Seite der Symbolleiste angezeigt wird. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -1031,7 +1031,7 @@ Rufen Sie diese Methode anstelle von [CMFCToolBar::Create](#create) Wenn Sie bes
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `CreateEx` Methode der `CMFCToolBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `CreateEx` Methode der `CMFCToolBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -1799,7 +1799,7 @@ Die `CRect` -Objekt, dem *LpRect* Punkte auf 0 festgelegt ist, wenn eine Schaltf
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `GetItemRect` Methode der `CMFCToolBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `GetItemRect` Methode der `CMFCToolBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]
@@ -2737,7 +2737,7 @@ Das Framework ruft diese Methode während der Initialisierung Bilder zu laden, d
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `LoadToolBar` -Methode in der die `CMFCToolBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `LoadToolBar` -Methode in der die `CMFCToolBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -3079,7 +3079,7 @@ Rufen Sie diese Methode auf, wenn Sie möchten, auf die Symbolleisten-Schaltflä
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `ReplaceButton` -Methode in der die `CMFCToolBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `ReplaceButton` -Methode in der die `CMFCToolBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]

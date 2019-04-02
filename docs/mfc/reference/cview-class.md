@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305015"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775308"
 ---
 # <a name="cview-class"></a>CView-Klasse
 
@@ -351,7 +351,7 @@ Ein Wert aus der-DropEffect-aufgelistet, Typ, der den Typ der Dropdownliste gibt
 
 - DROPEFFECT_MOVE für MK_ALT erstellt eine Kopie des gelöschten Objekts und löschen Sie das ursprüngliche Objekt. Dies ist normalerweise die Standard-Drop-Effekt, wenn die Ansicht dieses Datenobjekt annehmen kann.
 
-Weitere Informationen finden Sie im MFC Advanced Concepts-Beispiel [OCLIENT](../../visual-cpp-samples.md).
+Weitere Informationen finden Sie im MFC Advanced Concepts-Beispiel [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -405,7 +405,7 @@ Ein Wert aus der-DropEffect-aufgelistet, Typ, der den Typ der Dropdownliste gibt
 
 - DROPEFFECT_MOVE für MK_ALT erstellt eine Kopie des gelöschten Objekts und löschen Sie das ursprüngliche Objekt. Dies ist normalerweise die Standard-Drop-Effekt, wenn die Ansicht das-Objekt akzeptieren kann.
 
-Weitere Informationen finden Sie im MFC Advanced Concepts-Beispiel [OCLIENT](../../visual-cpp-samples.md).
+Weitere Informationen finden Sie im MFC Advanced Concepts-Beispiel [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -445,7 +445,7 @@ Ein Wert aus der-DropEffect-aufgelistet, Typ, der den Typ der Dropdownliste gibt
 
 - DROPEFFECT_SCROLL gibt an, die ein Ziehvorgang für den Bildlauf durchgeführt wird oder in der Ansicht stattfindet.
 
-Weitere Informationen finden Sie im MFC Advanced Concepts-Beispiel [OCLIENT](../../visual-cpp-samples.md).
+Weitere Informationen finden Sie im MFC Advanced Concepts-Beispiel [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -871,7 +871,7 @@ Wenn *lHint* ist 0 und *pHint* NULL ist, das Dokument verfügt über eine generi
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel MDIDOCVW](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>

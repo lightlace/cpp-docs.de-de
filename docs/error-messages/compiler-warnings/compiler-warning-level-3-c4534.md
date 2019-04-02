@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-ms.openlocfilehash: a2af04502082f7fb30d59af5e6434161227c6d30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81445ff42aca78a8e40e9c88eff4bb76a41a8669
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437267"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772656"
 ---
 # <a name="compiler-warning-level-3-c4534"></a>Compilerwarnung (Stufe 3) C4534
 
@@ -19,7 +19,7 @@ ms.locfileid: "50437267"
 
 Eine nicht verwaltete Klasse kann einen Konstruktor mit Parametern, die Standardwerte festgelegt wurden und der Compiler wird dies als den Standardkonstruktor verwenden. Eine Klasse mit markiert die `value` Schlüsselwort nicht verwendet einen Konstruktor mit standardmäßigen Werten für die Parameter als einen standardmäßigen Konstruktor.
 
-Weitere Informationen finden Sie unter [Klassen und Strukturen](../../windows/classes-and-structs-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [Klassen und Strukturen](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 Im folgende Beispiel wird die C4534 generiert:
 

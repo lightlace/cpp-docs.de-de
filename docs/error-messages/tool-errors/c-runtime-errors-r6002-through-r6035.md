@@ -4,12 +4,12 @@ ms.date: 11/17/2017
 f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: 74494a92d9ac8d84da64af7a896f3c32913afc40
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178257"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766884"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C-Laufzeitfehler von R6002 bis einschließlich R6035
 
@@ -17,7 +17,7 @@ In diesem Abschnitt wird auf die Fehler verwiesen, die von der C-Laufzeitbibliot
 
 Finden Sie unter Umständen zusätzliche Unterstützung für Fehler und Warnungen in öffentlichen Foren von Microsoft. Sie können für den Fehler oder die Nummer der codeanalysewarnung suchen, auf die [Entwicklercommunity](https://developercommunity.visualstudio.com) Standort. Die [Visual C++ – Allgemeines](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral) Forum finden Sie Fragen zu Visual C++, die in anderen Foren nicht behandelt werden. Sie können auch suchen Sie nach Fehlern und Warnungen, und Fragen [Stack Overflow](http://stackoverflow.com/) um Lösungen zu finden.
 
-Links zu zusätzlichen Hilfe und Community-Ressourcen, finden Sie unter [Visual C++-Hilfe und Community](../../visual-cpp-help-and-community.md).
+Links zu zusätzlichen Hilfe und Community-Ressourcen, finden Sie unter [Visual C++-Hilfe und Community](../../overview/visual-cpp-help-and-community.md).
 
 ## <a name="c-runtime-errors"></a>C-Laufzeitfehler
 

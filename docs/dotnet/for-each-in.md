@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746309"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770690"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -35,7 +35,7 @@ Durchläuft ein Array oder eine Auflistung. Dieses nicht standardmäßige Schlü
 Der `identifier`-Typ.
 
 *identifier*<br/>
-Die Iterationsvariable, die das Auflistungselement darstellt.  Wenn `identifier` ist eine [Verweisoperator nachverfolgung](../windows/tracking-reference-operator-cpp-component-extensions.md), können Sie das Element ändern.
+Die Iterationsvariable, die das Auflistungselement darstellt.  Wenn `identifier` ist eine [Verweisoperator nachverfolgung](../extensions/tracking-reference-operator-cpp-component-extensions.md), können Sie das Element ändern.
 
 *expression*<br/>
 Ein Arrayausdruck oder eine Auflistung. Das Auflistungselement muss zulassen, dass der Compiler es in den Typ `identifier` konvertieren kann.
@@ -49,7 +49,7 @@ Die `for each`-Anweisung wird zum Durchlaufen einer Auflistung verwendet. Sie k�
 
 Die *Anweisungen* für jedes Element in das Array oder einer Auflistung ausgeführt werden. Nachdem die Iteration alle Elemente in der Auflistung durchlaufen hat, wird die Steuerung an die nächste Anweisung, die auf den `for each`-Block folgt, übergeben.
 
-`for each` und `in` sind [kontextbezogenen Schlüsselwörtern](../windows/context-sensitive-keywords-cpp-component-extensions.md).
+`for each` und `in` sind [kontextbezogenen Schlüsselwörtern](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
 
 Weitere Informationen finden Sie unter: 
 
@@ -159,4 +159,4 @@ Testing
 
 ## <a name="see-also"></a>Siehe auch
 
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für Laufzeitplattformen](../extensions/component-extensions-for-runtime-platforms.md)

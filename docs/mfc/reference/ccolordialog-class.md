@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 39868ed27a0dfb8756b4829ea7c378c798bd2ff3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc9bc76b328359d4c8ec7796de7dfaa7d3a9cf2c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304209"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772837"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog-Klasse
 
@@ -268,7 +268,7 @@ Diese Funktion wird innerhalb eines meldungshandlers aufgerufen oder `OnColorOK`
 
 ## <a name="see-also"></a>Siehe auch
 
-[MDI MFC-Beispiel](../../visual-cpp-samples.md)<br/>
-[MFC-Beispiel DRAWCLI](../../visual-cpp-samples.md)<br/>
+[MDI MFC-Beispiel](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog-Klasse](../../mfc/reference/ccommondialog-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)

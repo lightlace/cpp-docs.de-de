@@ -2,16 +2,16 @@
 title: Befehlszuordnungen für DHTML-Bearbeitungsbefehle
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 1f84a56876f1108e9b02d44f6ef0dec50f065c57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278261"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776153"
 ---
 # <a name="dhtml-editing-command-maps"></a>Befehlszuordnungen für DHTML-Bearbeitungsbefehle
 
-Die folgenden Makros können verwendet werden, um die DHTML-Bearbeitungsbefehle in zuordnen [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-abgeleiteten Klassen. Ein Beispiel ihrer Verwendung finden Sie unter [HTMLEdit Beispiel](../../visual-cpp-samples.md).
+Die folgenden Makros können verwendet werden, um die DHTML-Bearbeitungsbefehle in zuordnen [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-abgeleiteten Klassen. Ein Beispiel ihrer Verwendung finden Sie unter [HTMLEdit Beispiel](../../overview/visual-cpp-samples.md).
 
 ### <a name="dhtml-editing-command-map-macros"></a>DHTML-Bearbeitung für den Befehl Ereigniszuordnungs-Makros
 
@@ -46,7 +46,7 @@ Verwendung [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap) die Zuordnung
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [HTMLEdit Beispiel](../../visual-cpp-samples.md).
+Finden Sie unter [HTMLEdit Beispiel](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -89,7 +89,7 @@ Verwendung mit [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap).
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [HTMLEdit Beispiel](../../visual-cpp-samples.md).
+Finden Sie unter [HTMLEdit Beispiel](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -113,7 +113,7 @@ Die HTML-Befehl aus, um die Bearbeitung *CmdID* (z. B. IDM_COPY) zugeordnet.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [HTMLEdit Beispiel](../../visual-cpp-samples.md).
+Finden Sie unter [HTMLEdit Beispiel](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -140,7 +140,7 @@ Der Name der Meldungshandler-Funktion, die der Befehl zugeordnet ist.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [HTMLEdit Beispiel](../../visual-cpp-samples.md).
+Finden Sie unter [HTMLEdit Beispiel](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -167,7 +167,7 @@ Das Element vom Benutzeroberflächentyp; einer der AFX_UI_ELEMTYPE_NORMAL AFX_UI
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [HTMLEdit Beispiel](../../visual-cpp-samples.md).
+Finden Sie unter [HTMLEdit Beispiel](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -197,7 +197,7 @@ Das Element vom Benutzeroberflächentyp; einer der AFX_UI_ELEMTYPE_NORMAL AFX_UI
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [HTMLEdit Beispiel](../../visual-cpp-samples.md).
+Finden Sie unter [HTMLEdit Beispiel](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Anforderungen
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-ms.openlocfilehash: 2bdf0c353151c8e932b3e8641a72b2116c45f3f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b398a1adbf2f47343eed076f32ade5bb2564cd52
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568520"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767976"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: MFC/OLE1-Migration zu MFC/OLE 2
 
@@ -29,7 +29,7 @@ ms.locfileid: "50568520"
 
 Eines der Entwurfsziele für die OLE 2-Klassen in MFC 2.5 (und höher) war ein Großteil der Architektur fügen Sie in der für ein OLE-1.0-Unterstützung in MFC 2.0 erfolgen beibehalten werden sollen. Daher viele der gleichen OLE-Klassen in MFC 2.0 noch vorhanden sind in dieser Version von MFC (`COleDocument`, `COleServerDoc`, `COleClientItem`, `COleServerItem`). Darüber hinaus sind viele der APIs in diesen Klassen genau identisch. Unterscheidet sich jedoch OLE 2 erheblich von OLE-1,0, damit Sie erwarten können, dass einige Details geändert haben. Wenn Sie mit der Unterstützung von MFC 2.0 OLE1 vertraut sind, werden Sie mit MFC 2.0-Unterstützung zu Hause fühlen.
 
-Wenn Sie eine vorhandene MFC/OLE1-Anwendung erstellen und OLE 2-Funktionalität hinzugefügt wird, sollten Sie zunächst diesen Hinweis lesen. In diesem Hinweis werden einige allgemeine Probleme, die Sie möglicherweise beim Portieren Ihrer Funktionen zur OLE1 auf MFC/OLE 2 und anschließend wird erläutert, die Probleme beim Portieren von zwei Anwendungen, die in MFC 2.0 enthaltenen im Detail behandelt: die MFC-OLE-Beispiele [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md).
+Wenn Sie eine vorhandene MFC/OLE1-Anwendung erstellen und OLE 2-Funktionalität hinzugefügt wird, sollten Sie zunächst diesen Hinweis lesen. In diesem Hinweis werden einige allgemeine Probleme, die Sie möglicherweise beim Portieren Ihrer Funktionen zur OLE1 auf MFC/OLE 2 und anschließend wird erläutert, die Probleme beim Portieren von zwei Anwendungen, die in MFC 2.0 enthaltenen im Detail behandelt: die MFC-OLE-Beispiele [OCLIENT](../overview/visual-cpp-samples.md) und [HIERSVR](../overview/visual-cpp-samples.md).
 
 ## <a name="mfc-documentview-architecture-is-important"></a>MFC Dokument-/Ansichtarchitektur ist wichtig
 
@@ -45,19 +45,19 @@ MFC-"vorprogrammierten Implementierung" Klassen wie z. B. `CToolBar`, `CStatusBa
 
 Es gibt eine Anzahl von MFC-Beispiele, die OLE-Funktionen enthalten. Jede dieser Anwendungen implementiert OLE aus einem anderen Winkel aus:
 
-- [HIERSVR](../visual-cpp-samples.md) hauptsächlich für den Einsatz als Serveranwendung vorgesehen. Es wurde war in MFC 2.0 als MFC/OLE1-Anwendung enthalten und zu MFC/OLE 2 portiert und dann erweitert, dass es viele OLE-Funktionen finden Sie in OLE 2 implementiert.
+- [HIERSVR](../overview/visual-cpp-samples.md) hauptsächlich für den Einsatz als Serveranwendung vorgesehen. Es wurde war in MFC 2.0 als MFC/OLE1-Anwendung enthalten und zu MFC/OLE 2 portiert und dann erweitert, dass es viele OLE-Funktionen finden Sie in OLE 2 implementiert.
 
-- [OCLIENT](../visual-cpp-samples.md) Dies ist eine eigenständige containeranwendung, die viele der OLE-Funktionen vom Standpunkt der Container zeigen sollen. Es zu portiert wurde von MFC 2.0, und klicken Sie dann erweitert, um viele der der erweiterten OLE-Funktionen, z. B. das benutzerdefinierte Zwischenablageformate und Links zu eingebetteten Elemente unterstützen.
+- [OCLIENT](../overview/visual-cpp-samples.md) Dies ist eine eigenständige containeranwendung, die viele der OLE-Funktionen vom Standpunkt der Container zeigen sollen. Es zu portiert wurde von MFC 2.0, und klicken Sie dann erweitert, um viele der der erweiterten OLE-Funktionen, z. B. das benutzerdefinierte Zwischenablageformate und Links zu eingebetteten Elemente unterstützen.
 
-- [DRAWCLI](../visual-cpp-samples.md) dieser Anwendung implementiert die Unterstützung von OLE-Container viel wie OCLIENT der Fall ist, mit dem Unterschied, dass es im Rahmen einer vorhandenen objektorientiertes Zeichenprogramm tut es. Sie erfahren Sie, wie Sie implementieren die Unterstützung von OLE-Container und in Ihre vorhandene Anwendung integrieren können.
+- [DRAWCLI](../overview/visual-cpp-samples.md) dieser Anwendung implementiert die Unterstützung von OLE-Container viel wie OCLIENT der Fall ist, mit dem Unterschied, dass es im Rahmen einer vorhandenen objektorientiertes Zeichenprogramm tut es. Sie erfahren Sie, wie Sie implementieren die Unterstützung von OLE-Container und in Ihre vorhandene Anwendung integrieren können.
 
-- [SUPERPAD](../visual-cpp-samples.md) dieser Anwendung als auch wird von einer eigenständigen Anwendung in Ordnung sind, ist auch ein OLE-Server. Die serverunterstützung,, es implementiert, ist ziemlich Entwurfsaufwand. Von besonderem Interesse ist, wie sie OLE-Zwischenablage-Diensten verwendet, um Daten in die Zwischenablage zu kopieren, aber verwendet die Funktionen in das Steuerelement für Windows "Bearbeiten", um Zwischenablage einfügen-Funktionalität zu implementieren. Dadurch wird eine interessante Mischung von herkömmlichen Windows-API-Verwendung sowie die Integration in die neue OLE-APIs.
+- [SUPERPAD](../overview/visual-cpp-samples.md) dieser Anwendung als auch wird von einer eigenständigen Anwendung in Ordnung sind, ist auch ein OLE-Server. Die serverunterstützung,, es implementiert, ist ziemlich Entwurfsaufwand. Von besonderem Interesse ist, wie sie OLE-Zwischenablage-Diensten verwendet, um Daten in die Zwischenablage zu kopieren, aber verwendet die Funktionen in das Steuerelement für Windows "Bearbeiten", um Zwischenablage einfügen-Funktionalität zu implementieren. Dadurch wird eine interessante Mischung von herkömmlichen Windows-API-Verwendung sowie die Integration in die neue OLE-APIs.
 
 Weitere Informationen zu Beispielanwendungen wählen können finden Sie unter der "MFC-Beispiel Help".
 
 ## <a name="case-study-oclient-from-mfc-20"></a>Fallstudie: OCLIENT von MFC 2.0
 
-Wie weiter oben erläutert [OCLIENT](../visual-cpp-samples.md) in MFC 2.0 enthalten war und OLE mit MFC/OLE1 implementiert. Die Schritte, die mit denen diese Anwendung anfänglich konvertiert wurde, um die MFC/OLE 2-Klassen verwenden, werden nachfolgend beschrieben. Eine Reihe von Funktionen wurden hinzugefügt, nachdem der erste Port abgeschlossen wurde, um die MFC/OLE-Klassen besser zu veranschaulichen. Diese Funktionen werden hier nicht behandelt; Das Beispiel selbst, um mehr über die erweiterten Features finden Sie unter.
+Wie weiter oben erläutert [OCLIENT](../overview/visual-cpp-samples.md) in MFC 2.0 enthalten war und OLE mit MFC/OLE1 implementiert. Die Schritte, die mit denen diese Anwendung anfänglich konvertiert wurde, um die MFC/OLE 2-Klassen verwenden, werden nachfolgend beschrieben. Eine Reihe von Funktionen wurden hinzugefügt, nachdem der erste Port abgeschlossen wurde, um die MFC/OLE-Klassen besser zu veranschaulichen. Diese Funktionen werden hier nicht behandelt; Das Beispiel selbst, um mehr über die erweiterten Features finden Sie unter.
 
 > [!NOTE]
 > Die c#-Compilerfehlern und schrittweise Anleitungen wurde mit Visual C++-2.0 erstellt. Fehlermeldungen und Speicherorte können mit Visual C++ 4.0 geändert haben, aber bleibt gültig, die konzeptionelle Informationen.
@@ -291,7 +291,7 @@ An diesem Punkt ist OCLIENT eine funktionale OLE-Container-Anwendung. Es ist mö
 
 Eines der interessantesten Features von OLE ist die direkte Aktivierung (oder "Visuelle Bearbeitung"). Dieses Feature ermöglicht die Serveranwendung aus, übernehmen Sie Teile des Containers-Benutzeroberfläche eine nahtlose bearbeitende-Schnittstelle für den Benutzer bereitgestellt. Um OCLIENT direkte Aktivierung implementieren zu können, müssen einige besonderen Ressourcen sowie zusätzlicher Code hinzugefügt werden. Diese Ressourcen und den Code werden normalerweise von AppWizard bereitgestellt, in der Tat Großteil des Codes hier direkt aus einer neuen AppWizard-Anwendung mit Unterstützung für "Container" übernommen wurde.
 
-Zunächst einmal ist es erforderlich, fügen eine Menüressource verwendet werden, wenn es ist ein Element, das direkt aktiv ist. Sie können diese zusätzlichen Menüressourcen in Visual C++ erstellen, durch Kopieren der IDR_OCLITYPE-Ressource, und entfernen alle bis auf die Datei und Fenster-Popups. Zwei Trennlinien zwischen der Datei und Fenster-Popups an, dass die Trennung von Gruppen eingefügt (es sollte wie folgt aussehen: Datei &#124; &#124; Fenster). Weitere Informationen zur Bedeutung dieser Trennzeichen und wie der Server und-Container Menüs zusammengeführt werden finden Sie unter [Menüs und Ressourcen: Menüs schachteln](../mfc/menus-and-resources-menu-merging.md).
+Zunächst einmal ist es erforderlich, fügen eine Menüressource verwendet werden, wenn es ist ein Element, das direkt aktiv ist. Sie können diese zusätzlichen Menüressourcen in Visual C++ erstellen, durch Kopieren der IDR_OCLITYPE-Ressource, und entfernen alle bis auf die Datei und Fenster-Popups. Zwei Trennlinien zwischen der Datei und Fenster-Popups an, dass die Trennung von Gruppen eingefügt (es sollte wie folgt aussehen: Datei &#124; &#124; Fenster). Weitere Informationen zur Bedeutung dieser Trennzeichen und wie der Server und-Container Menüs zusammengeführt werden finden Sie unter [Menüs und Ressourcen: Das Zusammenführen von Menüs](../mfc/menus-and-resources-menu-merging.md).
 
 Nachdem Sie diese Menüs erstellt haben, müssen Sie das Framework, die ihnen bekannten Informationen zu informieren. Dies erfolgt durch Aufrufen von `CDocTemplate::SetContainerInfo` für die Dokumentvorlage, bevor Sie ihn der Dokument-Vorlagenliste in InitInstance hinzufügen. Der neue Code zum Registrieren der Dokumentvorlage sieht folgendermaßen aus:
 
@@ -351,7 +351,7 @@ BOOL CRectItem::OnChangeItemPosition(const CRect& rectPos)
 }
 ```
 
-An diesem Punkt ist genug Code zu einem Element, das direkt aktiviert werden und zum Umgang mit größenanpassung und verschieben das Element aus, wenn er aktiv ist vorhanden, aber kein Code kann der Benutzer die bearbeitungssitzung zu schließen. Einige Server diese Funktion selbst bieten eine werden durch die ESC-Taste verarbeiten, wird vorgeschlagen, Container geben Sie zwei Möglichkeiten, um ein Element zu deaktivieren: (1) durch Klicken das Element, und (2) die ESC-Taste drücken.
+An diesem Punkt ist genug Code zu einem Element, das direkt aktiviert werden und zum Umgang mit größenanpassung und verschieben das Element aus, wenn er aktiv ist vorhanden, aber kein Code kann der Benutzer die bearbeitungssitzung zu schließen. Einige Server diese Funktion selbst bieten eine werden durch die ESC-Taste verarbeiten, wird empfohlen, dass Container geben Sie zwei Möglichkeiten, um ein Element zu deaktivieren: (1) Sie können Sie durch Klicken auf außerhalb des Elements, und (2) die ESC-Taste drücken.
 
 Hinzufügen einer Zugriffstaste mit Visual C++, der die Taste "VK_ESCAPE" zu einem Befehl zugeordnet, ID_CANCEL_EDIT wird hinzugefügt, auf die Ressourcen, für die ESC-Taste. Der Handler für diesen Befehl die folgende:
 
@@ -422,7 +422,7 @@ void CMainView::OnSize(UINT nType, int cx, int cy)
 
 ## <a name="case-study-hiersvr-from-mfc-20"></a>Fallstudie: HIERSVR von MFC 2.0
 
-[HIERSVR](../visual-cpp-samples.md) wurde auch in MFC 2.0 und OLE mit MFC/OLE1 implementiert. Dieser Hinweis beschreibt kurz die Schritte, die mit denen diese Anwendung anfänglich konvertiert wurde, um die Klassen von MFC/OLE 2 verwenden. Eine Reihe von Funktionen wurden hinzugefügt, nachdem der erste Port abgeschlossen wurde, um die Klassen von MFC/OLE 2 besser zu veranschaulichen. Diese Funktionen werden hier nicht behandelt; Das Beispiel selbst, um mehr über die erweiterten Features finden Sie unter.
+[HIERSVR](../overview/visual-cpp-samples.md) wurde auch in MFC 2.0 und OLE mit MFC/OLE1 implementiert. Dieser Hinweis beschreibt kurz die Schritte, die mit denen diese Anwendung anfänglich konvertiert wurde, um die Klassen von MFC/OLE 2 verwenden. Eine Reihe von Funktionen wurden hinzugefügt, nachdem der erste Port abgeschlossen wurde, um die Klassen von MFC/OLE 2 besser zu veranschaulichen. Diese Funktionen werden hier nicht behandelt; Das Beispiel selbst, um mehr über die erweiterten Features finden Sie unter.
 
 > [!NOTE]
 > Die c#-Compilerfehlern und schrittweise Anleitungen wurde mit Visual C++-2.0 erstellt. Fehlermeldungen und Speicherorte können mit Visual C++ 4.0 geändert haben, aber bleibt gültig, die konzeptionelle Informationen.
@@ -600,7 +600,7 @@ CSize CServerItem::CalcNodeSize()
 }
 ```
 
-CServerItem überschreibt auch `COleServerItem::OnGetTextData`. Diese Funktion ist in MFC/OLE veraltet und wird durch einen anderen Mechanismus ersetzt. Die MFC 3.0-Version von MFC-OLE-Beispiel [HIERSVR](../visual-cpp-samples.md) implementiert diese Funktionalität durch Überschreiben der `COleServerItem::OnRenderFileData`. Diese Funktionalität ist nicht wichtig, dass dieser einfache Port, damit Sie die Außerkraftsetzung OnGetTextData entfernen können.
+CServerItem überschreibt auch `COleServerItem::OnGetTextData`. Diese Funktion ist in MFC/OLE veraltet und wird durch einen anderen Mechanismus ersetzt. Die MFC 3.0-Version von MFC-OLE-Beispiel [HIERSVR](../overview/visual-cpp-samples.md) implementiert diese Funktionalität durch Überschreiben der `COleServerItem::OnRenderFileData`. Diese Funktionalität ist nicht wichtig, dass dieser einfache Port, damit Sie die Außerkraftsetzung OnGetTextData entfernen können.
 
 Es gibt viele weitere Fehler in svritem.cpp, die nicht behandelt wurden. Sie sind nicht "echten" Fehler: nur Fehler, die durch vorherige Fehler verursacht.
 
@@ -644,7 +644,7 @@ Um diese Server-Anwendung "Visuelle Bearbeitung" (oder direkte Aktivierung) hinz
 
 - Sie müssen das Framework über diese speziellen Ressourcen und Klassen zu informieren.
 
-Die Menüressource ist einfach zu erstellen. Führen Sie Visual C++, kopieren Sie die Menüressource IDR_HIERSVRTYPE in einer Menüressource IDR_HIERSVRTYPE_SRVR_IP aufgerufen. Ändern Sie im Menü aus, sodass nur für die Verwendung der Bearbeiten und die Hilfe im Menü Popups bleiben. Hinzufügen von zwei Trennzeichen zum Menü zwischen der Menüs bearbeiten und Hilfe (es sollte wie folgt aussehen: Bearbeiten &#124; &#124; unterstützen). Weitere Informationen zu der Bedeutung dieser Trennzeichen und wie der Server und-Container Menüs zusammengeführt werden, finden Sie unter [Menüs und Ressourcen: Menüs schachteln](../mfc/menus-and-resources-menu-merging.md).
+Die Menüressource ist einfach zu erstellen. Führen Sie Visual C++, kopieren Sie die Menüressource IDR_HIERSVRTYPE in einer Menüressource IDR_HIERSVRTYPE_SRVR_IP aufgerufen. Ändern Sie im Menü aus, sodass nur für die Verwendung der Bearbeiten und die Hilfe im Menü Popups bleiben. Hinzufügen von zwei Trennzeichen zum Menü zwischen der Menüs bearbeiten und Hilfe (es sollte wie folgt aussehen: Bearbeiten Sie &#124; &#124; unterstützen). Weitere Informationen zu der Bedeutung dieser Trennzeichen und wie der Server und-Container Menüs zusammengeführt werden, finden Sie unter [Menüs und Ressourcen: Das Zusammenführen von Menüs](../mfc/menus-and-resources-menu-merging.md).
 
 Die Bitmap für die Teilmenge-Symbolleiste kann problemlos erstellt werden, durch Kopieren das entsprechende Element aus einer neuen AppWizard generiert-Anwendung mit der Option "Server" aktiviert. Diese Bitmap kann dann in Visual C++ importiert werden. Achten Sie darauf, dass der Bitmap eine ID von IDR_HIERSVRTYPE_SRVR_IP gewähren.
 

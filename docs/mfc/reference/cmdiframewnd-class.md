@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282447"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776530"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd-Klasse
 
@@ -459,9 +459,9 @@ Siehe das Beispiel für [CMDIFrameWnd::MDICascade](#mdicascade).
 
 ## <a name="see-also"></a>Siehe auch
 
-[MDI MFC-Beispiel](../../visual-cpp-samples.md)<br/>
-[MFC-Beispiel MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[MFC-Beispiel SNAPVW](../../visual-cpp-samples.md)<br/>
+[MDI MFC-Beispiel](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd-Klasse](../../mfc/reference/cframewnd-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>

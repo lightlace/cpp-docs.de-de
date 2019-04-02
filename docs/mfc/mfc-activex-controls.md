@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d10aad92088a02a1cab0977ea174abdf919a05e9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262609"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769211"
 ---
 # <a name="mfc-activex-controls"></a>MFC-ActiveX-Steuerelemente
 
@@ -116,7 +116,7 @@ Standardmäßig werden die ActiveX-Steuerelementklassen und-Werkzeuge in den fol
 
    Enthält die Bibliotheken, die für die Entwicklung von ActiveX-Steuerelementen mit MFC erforderlich sind.
 
-Dazu gehören auch Beispiele für MFC-ActiveX-Steuerelemente. Weitere Informationen zu diesen Beispielen, finden Sie unter [Beispiele für Steuerelemente: MFC-basierte ActiveX-Steuerelemente](../visual-cpp-samples.md)
+Dazu gehören auch Beispiele für MFC-ActiveX-Steuerelemente. Weitere Informationen zu diesen Beispielen, finden Sie unter [Beispiele für Steuerelemente: MFC-basierte ActiveX-Steuerelemente](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Siehe auch
 

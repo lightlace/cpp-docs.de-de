@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 4c2021128dcc06a76cf3b68c0ec49b72a5860046
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cc3af7649d30a153b67cd8269e595c11018833f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295135"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769787"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc Class
 
@@ -55,7 +55,7 @@ Als "rich-Edit-Steuerelement" ist ein Fenster, in dem der Benutzer kann Text ein
 
 Diese allgemeinen Windows-Steuerelements (und somit die [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) und verwandten Klassen) ist nur für Programme, die unter Versionen des Windows 95/98 und Windows NT 3.51 und höher.
 
-Ein Beispiel für eine rich-Edit-Dokument in einer MFC-Anwendung verwenden, finden Sie unter den [WORDPAD](../../visual-cpp-samples.md) beispielanwendung.
+Ein Beispiel für eine rich-Edit-Dokument in einer MFC-Anwendung verwenden, finden Sie unter den [WORDPAD](../../overview/visual-cpp-samples.md) beispielanwendung.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -146,7 +146,7 @@ BOOL m_bRTF;
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel WORDPAD](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleServerDoc-Klasse](../../mfc/reference/coleserverdoc-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditView-Klasse](../../mfc/reference/cricheditview-class.md)<br/>

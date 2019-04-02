@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 722c38de100f2f1ff00e6589573a76bcdd9f3e84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297384"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780950"
 ---
 # <a name="clist-class"></a>CList-Klasse
 
@@ -697,7 +697,7 @@ Sie müssen sicherstellen, dass Ihre POSITION-Wert eine gültige Position in der
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel erfassen](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel erfassen](../../overview/visual-cpp-samples.md)<br/>
 [CObject-Klasse](../../mfc/reference/cobject-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CMap-Klasse](../../mfc/reference/cmap-class.md)<br/>

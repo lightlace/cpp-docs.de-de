@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 4c8d05fd193254f2431bbec7692ff25420c1bf05
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 87f889a079b1c55d82f547230a1917540de276af
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565869"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770496"
 ---
 # <a name="csid-class"></a>CSid-Klasse
 
@@ -574,7 +574,7 @@ Rufen Sie [CSid::LoadAccount](#loadaccount) zum Aktualisieren der `CSid` Objekt 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Beispiel für die Sicherheit](../../visual-cpp-samples.md)<br/>
+[Beispiel für die Sicherheit](../../overview/visual-cpp-samples.md)<br/>
 [Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
 [Globale Sicherheitsfunktionen](../../atl/reference/security-global-functions.md)<br/>
 [Operatoren](../../atl/reference/atl-operators.md)

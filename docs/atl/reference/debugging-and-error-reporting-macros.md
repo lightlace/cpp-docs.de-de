@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565035"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775041"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Debuggen und Fehlerberichterstattungs-Makros
 
@@ -220,7 +220,7 @@ ATLTRACE2(
 
 ### <a name="remarks"></a>Hinweise
 
-Die Kurzform der ATLTRACE2 schreibt eine Zeichenfolge, die im Debugger das Fenster "Ausgabe". Die zweite Form der ATLTRACE2 ebenfalls schreibt die Ausgabe in das Ausgabefenster des Debuggers, jedoch gelten die Einstellungen des Ablaufverfolgungstools ATL-/MFC (finden Sie unter [ATLTraceTool-Beispiel](../../visual-cpp-samples.md)). Wenn Sie festlegen, z. B. *Ebene* 4 und die ATL/MFC-Ablaufverfolgungstool auf Ebene 0, werden Sie nicht die Meldung angezeigt. *Ebene* kann 0, 1, 2, 3 oder 4 sein. Die Standardeinstellung 0 (null) gibt nur die schwerwiegendsten Probleme.
+Die Kurzform der ATLTRACE2 schreibt eine Zeichenfolge, die im Debugger das Fenster "Ausgabe". Die zweite Form der ATLTRACE2 ebenfalls schreibt die Ausgabe in das Ausgabefenster des Debuggers, jedoch gelten die Einstellungen des Ablaufverfolgungstools ATL-/MFC (finden Sie unter [ATLTraceTool-Beispiel](../../overview/visual-cpp-samples.md)). Wenn Sie festlegen, z. B. *Ebene* 4 und die ATL/MFC-Ablaufverfolgungstool auf Ebene 0, werden Sie nicht die Meldung angezeigt. *Ebene* kann 0, 1, 2, 3 oder 4 sein. Die Standardeinstellung 0 (null) gibt nur die schwerwiegendsten Probleme.
 
 Die *Kategorie* Parameterlisten die Ablaufverfolgungsflags festgelegt. Diese Flags entsprechen den Typen von Methoden, die für die Sie melden möchten. Die folgenden Tabellen enthalten die gültige Ablaufverfolgungsflags Sie können die *Kategorie* Parameter.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-ms.openlocfilehash: a8a7fb6a88fb22fee5f5f8ec8c0dc215479c62fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4887d85e01344c171fb0fdfe957f2d8a669ff6a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489738"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771668"
 ---
 # <a name="hook"></a>__hook
 
@@ -45,7 +45,7 @@ Ein Zeiger auf die Ereignismethode, an die Sie die Ereignishandlermethode binden
 - Verwaltete Ereignisse: *SourceClass* ist die Ereignisquellenklasse, und *EventMethod* ist das Ereignis.
 
 *interface*<br/>
-Der Name der Schnittstelle verknüpft wird, um *Empfänger*, nur für COM-Ereignisempfängern, bei denen die *Layout_dependent* Parameter der [Event_receiver](../windows/event-receiver.md) -Attribut ist **"true"**.
+Der Name der Schnittstelle verknüpft wird, um *Empfänger*, nur für COM-Ereignisempfängern, bei denen die *Layout_dependent* Parameter der [Event_receiver](../windows/attributes/event-receiver.md) -Attribut ist **"true"**.
 
 *source*<br/>
 Ein Zeiger auf eine Instanz der Ereignisquelle. Je nach Code `type` im angegebenen `event_receiver`, *Quelle* kann einen der folgenden sein:
@@ -65,7 +65,7 @@ Ein Zeiger, der an die Ereignishandlermethode gebunden werden soll. Der Handler,
 
 - Verwaltete Ereignisse: *ReceiverClass* ist die Ereignisempfängerklasse und `HandlerMethod` ist der Handler.
 
-*Empfänger*<br/>
+*receiver*<br/>
 (Optional) Ein Zeiger auf eine Instanz von der Ereignisempfängerklasse. Wenn Sie keinen Empfänger angeben, wird standardmäßig die Empfängerklasse oder Struktur, in der **__hook** aufgerufen wird.
 
 ## <a name="usage"></a>Verwendung
@@ -76,7 +76,7 @@ Kann in jedem Gültigkeitsbereich der Funktion verwendet werden, einschließlich
 
 Die intrinsische Funktion **__hook** in einem Ereignisempfänger zuweisen oder eine Handlermethode einer Ereignismethode zu verknüpfen. Der angegebene Handler wird aufgerufen, wenn die Quelle das angegebene Ereignis auslöst. Sie können mehrere Handler an ein einzelnes Ereignis binden oder mehrere Ereignisse an einen einzigen Handler.
 
-Es gibt zwei Arten von **__hook**. Können Sie die erste Form (vier Argumente) in den meisten Fällen, insbesondere für COM-Ereignisempfängern, bei denen die *Layout_dependent* Parameter, der die [Event_receiver](../windows/event-receiver.md) -Attribut ist **"false"** .
+Es gibt zwei Arten von **__hook**. Können Sie die erste Form (vier Argumente) in den meisten Fällen, insbesondere für COM-Ereignisempfängern, bei denen die *Layout_dependent* Parameter, der die [Event_receiver](../windows/attributes/event-receiver.md) -Attribut ist **"false"** .
 
 In diesen Fällen müssen Sie nicht alle Methoden an eine Schnittstelle binden, bevor nicht bei einer der Methoden ein Ereignis ausgelöst wird; nur die Methode für die Ereignisbehandlung muss eingebunden werden. Sie können das zweite (Two-Argument) Formular von **__hook** nur für einen COM-Ereignisempfänger, in dem *Layout_dependent* **= True**.
 
@@ -88,7 +88,7 @@ Mit Ausnahme von COM-Ereignisse **__hook** und **__unhook** außerhalb des Ereig
 
 Eine Alternative zur Verwendung **__hook** ist die Verwendung des Operators +=.
 
-Weitere Informationen über die Codierung von verwalteter Ereignissen in der neuen Syntax finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md).
+Weitere Informationen über die Codierung von verwalteter Ereignissen in der neuen Syntax finden Sie unter [Ereignis](../extensions/event-cpp-component-extensions.md).
 
 > [!NOTE]
 > Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.
@@ -101,7 +101,7 @@ Finden Sie unter [Ereignisbehandlung in systemeigenem C++](../cpp/event-handling
 
 [Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
 [Ereignisbehandlung](../cpp/event-handling.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__unhook](../cpp/unhook.md)<br/>
 [__raise](../cpp/raise.md)<br/>

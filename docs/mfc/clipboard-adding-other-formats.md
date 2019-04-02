@@ -9,12 +9,12 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 182abe71ccc9552c113ebb114b4351178e48b096
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280217"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766846"
 ---
 # <a name="clipboard-adding-other-formats"></a>Zwischenablage: Hinzufügen anderer Formate
 
@@ -36,7 +36,7 @@ Um weitere Formate, die in der Zwischenablage platziert hinzuzufügen, müssen S
 
 1. Hinzufügen von standard-Formate durch Aufrufen von `COleDataSource::CacheGlobalData` für jedes Standardformat, das Sie unterstützen möchten.
 
-Diese Technik wird verwendet, in der MFC-OLE-Beispielprogramm [HIERSVR](../visual-cpp-samples.md) (Überprüfen Sie die `OnGetClipboardData` Memberfunktion die **CServerItem** Klasse). Der einzige Unterschied in diesem Beispiel ist dieser Schritt 3 nicht implementiert ist, da HIERSVR keine andere standard-Formate unterstützt.
+Diese Technik wird verwendet, in der MFC-OLE-Beispielprogramm [HIERSVR](../overview/visual-cpp-samples.md) (Überprüfen Sie die `OnGetClipboardData` Memberfunktion die **CServerItem** Klasse). Der einzige Unterschied in diesem Beispiel ist dieser Schritt 3 nicht implementiert ist, da HIERSVR keine andere standard-Formate unterstützt.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
 

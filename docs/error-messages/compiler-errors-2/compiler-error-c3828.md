@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3828
 ms.assetid: 8d9cee75-9504-4bc8-88b6-2413618a3f45
-ms.openlocfilehash: 68a82105a2ff7d58090e9f345bf7aafb34d492d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f499bb2a8fd6d3148935daec89835b79d2ff5b49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515283"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770550"
 ---
 # <a name="compiler-error-c3828"></a>Compilerfehler C3828
 
 'Objekttyp': Positionierungsargumente nicht zulässig, beim Erstellen von Instanzen der verwalteten oder WinRTclasses
 
-Wenn Sie ein Objekt eines verwalteten Typs oder der Windows-Runtime-Typ zu erstellen, können keine die Positionierungsform des Operators [Ref neue Gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md) oder [neue](../../cpp/new-operator-cpp.md).
+Wenn Sie ein Objekt eines verwalteten Typs oder der Windows-Runtime-Typ zu erstellen, können keine die Positionierungsform des Operators [Ref neue Gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md) oder [neue](../../cpp/new-operator-cpp.md).
 
 Im folgenden Beispiel wird C3828 generiert und gezeigt, wie Sie diesen Fehler beheben:
 

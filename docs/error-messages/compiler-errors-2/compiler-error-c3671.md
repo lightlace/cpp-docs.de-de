@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
-ms.openlocfilehash: 4b99578ed40b4ff70f3606840198b7062083ca83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4534b11f3aedf638f69337fb6a7af778e086bb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667041"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778987"
 ---
 # <a name="compiler-error-c3671"></a>Compilerfehler C3671
 
 "" function_1 ": Funktion überschreibt nicht die 'Funktion_2'
 
-Wenn Sie explizite Überschreibungssyntax verwenden zu können, generiert der Compiler einen Fehler, wenn eine Funktion nicht überschrieben wird.  Finden Sie unter [explizite Überschreibungen](../../windows/explicit-overrides-cpp-component-extensions.md) für Weitere Informationen.
+Wenn Sie explizite Überschreibungssyntax verwenden zu können, generiert der Compiler einen Fehler, wenn eine Funktion nicht überschrieben wird.  Finden Sie unter [explizite Überschreibungen](../../extensions/explicit-overrides-cpp-component-extensions.md) für Weitere Informationen.
 
 ## <a name="example"></a>Beispiel
 

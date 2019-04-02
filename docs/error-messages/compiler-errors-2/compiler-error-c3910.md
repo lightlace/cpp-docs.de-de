@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3910
 ms.assetid: cfcbe620-b463-463b-95ea-2d60ad33ebb5
-ms.openlocfilehash: b9194149c532044f6c8a1eab84729f7896f1352b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 186cd67d77e9aafbfe6a7d9dc18afb2bdbd94f0c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568544"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768808"
 ---
 # <a name="compiler-error-c3910"></a>Compilerfehler C3910
 
@@ -19,7 +19,7 @@ ms.locfileid: "50568544"
 
 Ein Ereignis definiert wurde, aber enthielt nicht die angegebene, erforderliche Accessor-Methode.
 
-Weitere Informationen finden Sie unter [Ereignis](../../windows/event-cpp-component-extensions.md).
+Weitere Informationen finden Sie unter [Ereignis](../../extensions/event-cpp-component-extensions.md).
 
 Im folgende Beispiel wird die C3910 generiert:
 

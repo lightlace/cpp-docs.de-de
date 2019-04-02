@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: a1dd85ed7bf80f5307bf0bd07ef5ef74875c8562
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43832f6c9b02c43fbe4a05cbea3add8783150113
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258943"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767664"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox-Klasse
 
@@ -57,7 +57,7 @@ Wenn der Benutzer wählt eine neue Schriftart in eine `CMFCToolBarFontComboBox` 
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCToolBarFontSizeComboBox` Klasse zum Konfigurieren einer `CMFCToolBarFontSizeComboBox` Objekt. Das Beispiel veranschaulicht, wie Sie den Schriftgrad, in Twips, aus dem Textfeld abzurufen, geben Sie das schriftartkombinationsfeld für Größe alle gültige Größen der angegebenen Schriftart und geben Sie den Schriftgrad in Twips. Dieser Codeausschnitt ist Teil des [WordPad-Beispiels](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCToolBarFontSizeComboBox` Klasse zum Konfigurieren einer `CMFCToolBarFontSizeComboBox` Objekt. Das Beispiel veranschaulicht, wie Sie den Schriftgrad, in Twips, aus dem Textfeld abzurufen, geben Sie das schriftartkombinationsfeld für Größe alle gültige Größen der angegebenen Schriftart und geben Sie den Schriftgrad in Twips. Dieser Codeausschnitt ist Teil des [WordPad-Beispiels](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]
 

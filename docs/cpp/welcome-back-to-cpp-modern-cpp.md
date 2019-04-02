@@ -3,12 +3,12 @@ title: Willkommen zurück bei C++ (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 08563f6a67ec7105da688d566d71d8ea15cb8cec
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334624"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771785"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Willkommen zurück bei C++ (Modern C++)
 
@@ -99,7 +99,7 @@ Wenn Sie von einer anderen Sprache her zu C++ kommen, insbesondere bei einer ver
 
 C++ erlebt eine Renaissance, da die Leistungsfähigkeit wieder über Allem steht. Sprachen wie Java und C# sind gut, wenn Programmiererproduktivität wichtig ist, aber ihren Einschränkungen werden deutlich, wenn Leistungsfähigkeit entscheidend ist. Bei Effizienz und hohe Leistungsfähigkeit, besonders auf Geräten, deren Hardware eingeschränkt ist, ist das moderne C++ unschlagbar.
 
-Es ist nicht nur eine moderne Sprache, auch die Entwicklungstools sind modern. Visual Studio können alle Teile des Entwicklungszyklus, robuster und effizienter. Das schließt Tools aus Application Lifecycle Management (ALM), IDE-Erweiterungen wie IntelliSense, benutzerfreundliche Toolmechanismen wie XAML und das Erstellen, Debuggen sowie viele weitere Tools ein.
+Es ist nicht nur eine moderne Sprache, auch die Entwicklungstools sind modern. Visual Studio können alle Teile des Entwicklungszyklus, robuster und effizienter. Das schließt Tools der Anwendungslebenszyklus-Verwaltung (ALM), IDE-Erweiterungen wie IntelliSense, benutzerfreundliche Toolmechanismen wie XAML und das Erstellen, Debuggen sowie viele weitere Tools ein.
 
 Die Artikel in diesem Teil der Dokumentation bieten übergeordnete Richtlinien und bewährte Methoden für die wichtigsten Funktionen und Techniken zum Schreiben moderner C++-Programmen.
 
@@ -132,4 +132,4 @@ Weitere Informationen finden Sie im Artikel Stack Overflow [sind die C++-Idiome 
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [Lambda-Ausdrücke](../cpp/lambda-expressions-in-cpp.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)<br/>
-[Visual C++-Sprachkonformität](../visual-cpp-language-conformance.md)
+[Visual C++-Sprachkonformität](../overview/visual-cpp-language-conformance.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-ms.openlocfilehash: a155d56cc234c11534f5456ef92ea913e094f1a8
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 506ead1b6e96f59717a92b6b0c48db0270b1822f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627279"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779520"
 ---
 # <a name="exception-handling-in-visual-c"></a>Ausnahmebehandlung in Visual C++
 
@@ -33,7 +33,7 @@ Visual C++ unterstützt drei Arten der Ausnahmebehandlung:
 
 Verwenden Sie die [/EH](../build/reference/eh-exception-handling-model.md) -Compileroption verwenden, um den Typ der Ausnahmebehandlung für die Verwendung in einem Projekt angeben C++-Ausnahmebehandlung ist die Standardeinstellung. Kombinieren Sie die Fehlerbehandlungsmechanismen nicht miteinander. Verwenden Sie beispielsweise C++-Ausnahmen nicht zusammen mit strukturierter Ausnahmebehandlung. Mit der C++-Ausnahmebehandlung können Sie besser portierbaren Code schreiben und Ausnahmen jeglichen Typs behandeln. Weitere Informationen zu den Nachteilen der strukturierten Ausnahmebehandlung finden Sie unter [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Ratschläge zum Mischen von MFC-Makros und C++-Ausnahmen, finden Sie unter [Ausnahmen: Mithilfe von MFC-Makros und C++-Ausnahmen](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-Weitere Informationen zur Behandlung von Ausnahmen in CLR-Anwendungen finden Sie unter [Exception Handling (C++ / CLI und C++ / CX)](../windows/exception-handling-cpp-component-extensions.md).
+Weitere Informationen zur Behandlung von Ausnahmen in CLR-Anwendungen finden Sie unter [Exception Handling (C++ / CLI und C++ / CX)](../extensions/exception-handling-cpp-component-extensions.md).
 
 Informationen über die Ausnahmebehandlung auf X64-Prozessoren finden Sie unter [X64 Ausnahmebehandlung](../build/exception-handling-x64.md).
 

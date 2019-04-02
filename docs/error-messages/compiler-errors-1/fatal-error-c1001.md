@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: a7130ed0568de387c99b8296dc4e10d92baec337
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: beb382b9c6ccf80d01f5a0262832e7fb7e1ea0a4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821364"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770927"
 ---
 # <a name="fatal-error-c1001"></a>Schwerwiegender Fehler C1001
 
@@ -23,4 +23,4 @@ Sie können häufig eine Optimierungsproblem beheben, durch das Entfernen von ei
 
 Wenn Optimierungen nicht für den Fehler verantwortlich sind, versuchen Sie es Umschreiben der Zeile, in dem der Fehler gemeldet wird, oder mehrere Zeilen von Code im Zusammenhang mit dieser Zeile. Den Code die Möglichkeit erhalten nach dem Präprozessorlauf der Compiler erkennt können Sie die [/p (Vorverarbeitung in eine Datei)](../../build/reference/p-preprocess-to-a-file.md) Option.
 
-Weitere Informationen wie die Quelle des Fehlers zu isolieren und einen internen Compilerfehler an Microsoft zu melden, finden Sie unter [wie Melden eines Problems mit dem Visual C++-Toolset](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Weitere Informationen wie die Quelle des Fehlers zu isolieren und einen internen Compilerfehler an Microsoft zu melden, finden Sie unter [wie Melden eines Problems mit dem Visual C++-Toolset](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).

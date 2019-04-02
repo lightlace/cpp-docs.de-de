@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - nullptr keyword [C++]
 ms.assetid: e9d80ea6-2506-4eb5-b47b-2349df085832
-ms.openlocfilehash: fc210679553c393143c7e94121dd75e19b934dd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57be8d71f1dac4f347ea6567c02a385719bb7306
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637111"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781080"
 ---
 # <a name="nullptr"></a>nullptr
 
 Legt eine NULL-Zeiger-Konstante vom Typ `std::nullptr_t` fest, der in einen beliebigen unformatierten Zeigertyp konvertiert werden kann.  Obwohl Sie das Schlüsselwort verwenden, können **"nullptr"** ohne Header, wenn Ihr Code den Typ verwendet `std::nullptr_t`, und Sie es definieren müssen, indem Sie den Header `<cstddef>`.
 
 > [!NOTE]
->  Die **"nullptr"** Schlüsselwort wird auch definiert, in C++ / CLI für Anwendungen mit verwaltetem Code und ist nicht mit dem ISO-Standard C++-Schlüsselwort austauschbar. Wenn Ihr Code mit kompiliert werden kann die ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md) Compileroption, die verwalteten Code ausgerichtet ist, verwenden Sie dann `__nullptr` in eine beliebige Codezeile, in denen Sie sicherstellen müssen, dass der Compiler die systemeigene C++-Interpretation verwendet. Weitere Informationen finden Sie unter ["nullptr"](../windows/nullptr-cpp-component-extensions.md).
+>  Die **"nullptr"** Schlüsselwort wird auch definiert, in C++ / CLI für Anwendungen mit verwaltetem Code und ist nicht mit dem ISO-Standard C++-Schlüsselwort austauschbar. Wenn Ihr Code mit kompiliert werden kann die ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md) Compileroption, die verwalteten Code ausgerichtet ist, verwenden Sie dann `__nullptr` in eine beliebige Codezeile, in denen Sie sicherstellen müssen, dass der Compiler die systemeigene C++-Interpretation verwendet. Weitere Informationen finden Sie unter ["nullptr"](../extensions/nullptr-cpp-component-extensions.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -27,4 +27,4 @@ Vermeiden Sie die Verwendung von NULL oder 0 (null) (`0`) als eine Konstante nul
 ## <a name="see-also"></a>Siehe auch
 
 [Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
-[nullptr](../windows/nullptr-cpp-component-extensions.md)
+["nullptr"](../extensions/nullptr-cpp-component-extensions.md)(C++ / CLI)

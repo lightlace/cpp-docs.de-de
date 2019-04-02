@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 6b7d72b048d9f44233f96a3af859315ea20e9747
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3ff74f5025d888077b51f8191f043237597dfdbe
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291638"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776972"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -120,7 +120,7 @@ Verwenden Sie die folgenden Funktionen zur Steuerung des Verhaltens von der desk
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCDesktopAlertWnd` Klasse zum Konfigurieren einer `CMFCDesktopAlertWnd` Objekt. Das Beispiel zeigt, wie Sie einen Animationstyp festlegen, legen Sie die Transparenz des Popupfensters, anzugeben, dass die Warnung eine kleine Beschriftung angezeigt und legen Sie die Zeit, die verstreicht, bevor die Warnung im Fenster automatisch geschlossen wird. Darüber hinaus wird das Erstellen und initialisieren die desktop-Benachrichtigungsfenster veranschaulicht. Dieser Codeausschnitt ist Teil der [Desktop Warnung Demobeispiel](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCDesktopAlertWnd` Klasse zum Konfigurieren einer `CMFCDesktopAlertWnd` Objekt. Das Beispiel zeigt, wie Sie einen Animationstyp festlegen, legen Sie die Transparenz des Popupfensters, anzugeben, dass die Warnung eine kleine Beschriftung angezeigt und legen Sie die Zeit, die verstreicht, bevor die Warnung im Fenster automatisch geschlossen wird. Darüber hinaus wird das Erstellen und initialisieren die desktop-Benachrichtigungsfenster veranschaulicht. Dieser Codeausschnitt ist Teil der [Desktop Warnung Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]
 

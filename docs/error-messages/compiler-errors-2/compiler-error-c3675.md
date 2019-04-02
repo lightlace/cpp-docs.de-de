@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
-ms.openlocfilehash: c154a0fe1989c92bb5e07c0710d3846883d1a113
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e29e536bf89aef887dc043327e4b4596703d0538
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546313"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775191"
 ---
 # <a name="compiler-error-c3675"></a>Compilerfehler C3675
 
@@ -19,7 +19,7 @@ ms.locfileid: "50546313"
 
 Wenn Sie eine einfache Eigenschaft deklarieren, generiert der Compiler die Get- und Set-Accessormethode und die Namen in den Bereich des Programms vorhanden sind.  Die vom Compiler generierten Namen werden durch voranstellen Get_- und Set_ an den Eigenschaftennamen gebildet.  Aus diesem Grund können Sie Funktionen mit dem gleichen Namen wie die vom Compiler generierten Accessoren nicht deklarieren.
 
-Weitere Informationen finden Sie unter [property](../../windows/property-cpp-component-extensions.md) .
+Weitere Informationen finden Sie unter [property](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Beispiel
 

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: a66c429626938f1bf10d715c1fecac341a3ba000
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da255da9fb9ff7a652fa1af796568a8e50759dc4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446045"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777697"
 ---
 # <a name="event-handling-in-com"></a>Ereignisbehandlung in COM
 
-In COM-Ereignisbehandlung richten Sie eine Ereignisquelle und einen Ereignisempfänger mithilfe der [Event_source](../windows/event-source.md) und [Event_receiver](../windows/event-receiver.md) -Attribute angeben `type` = `com`. Diese Attribute fügen den geeigneten Code für benutzerdefinierte Schnittstellen, Dispatchschnittstellen und duale Schnittstellen ein, damit die Klassen, auf die sie angewendet werden, Ereignisse über COM-Verbindungspunkte auslösen und behandeln können.
+In COM-Ereignisbehandlung richten Sie eine Ereignisquelle und einen Ereignisempfänger mithilfe der [Event_source](../windows/attributes/event-source.md) und [Event_receiver](../windows/attributes/event-receiver.md) -Attribute angeben `type` = `com`. Diese Attribute fügen den geeigneten Code für benutzerdefinierte Schnittstellen, Dispatchschnittstellen und duale Schnittstellen ein, damit die Klassen, auf die sie angewendet werden, Ereignisse über COM-Verbindungspunkte auslösen und behandeln können.
 
 ## <a name="declaring-events"></a>Deklarieren von Ereignissen
 
@@ -159,7 +159,7 @@ MyHandler2 was called with value 123.
 
 ##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> Layoutabhängige COM-Ereignisse
 
-Layoutabhängigkeit ist nur bei der COM-Programmierung ein Problem. Bei nativer und verwalteter Ereignisbehandlung müssen die Signaturen (Rückgabetyp, Aufrufkonvention und Argumente) der Handler ihren Ereignissen entsprechen, aber die Handlernamen müssen nicht mit ihren Ereignissen übereinstimmen.
+Layoutabhängigkeit ist nur bei der COM-Programmierung ein Problem. Bei systemeigener und verwalteter Ereignisbehandlung müssen die Signaturen (Rückgabetyp, Aufrufkonvention und Argumente) der Handler ihren Ereignissen entsprechen, aber die Handlernamen müssen nicht mit ihren Ereignissen übereinstimmen.
 
 In COM-Ereignisbehandlung, beim Festlegen der *Layout_dependent* Parameter der `event_receiver` zu **"true"**, die Übereinstimmung von Name und Signatur erzwungen wird. Dies bedeutet, dass die Namen und Signaturen der Handler im Ereignisempfänger exakt mit den Namen und Signaturen der Ereignisse übereinstimmen müssen, mit denen sie verknüpft sind.
 

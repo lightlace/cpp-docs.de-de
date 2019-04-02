@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751829"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774918"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Vorgehensweise: Definieren und Verarbeiten von Klassen und Strukturen (C++ / CLI)
 
@@ -97,7 +97,7 @@ int main() {
 
 Ein *implizit abstrakte Klasse* kann nicht instanziiert werden. Eine Klasse ist implizit abstrakt, wenn der Basistyp der Klasse eine Schnittstelle ist und die Klasse nicht alle Memberfunktionen der Schnittstelle implementiert.
 
-Wenn Objekte nicht aus einer Klasse erstellt werden können, die von einer Schnittstelle abgeleitet sind, könnte dies daran liegen, dass die Klasse implizit abstrakt ist. Weitere Informationen zu abstrakten Klassen finden Sie unter [abstrakte](../windows/abstract-cpp-component-extensions.md).
+Wenn Objekte nicht aus einer Klasse erstellt werden können, die von einer Schnittstelle abgeleitet sind, könnte dies daran liegen, dass die Klasse implizit abstrakt ist. Weitere Informationen zu abstrakten Klassen finden Sie unter [abstrakte](../extensions/abstract-cpp-component-extensions.md).
 
 Das folgende Codebeispiel zeigt, dass die `MyClass`-Klasse nicht instanziiert werden kann, da die `MyClass::func2`-Funktion nicht implementiert ist. Damit das Beispiel kompiliert werden kann, heben Sie die Auskommentierung der `MyClass::func2`-Funktion auf.
 
@@ -229,7 +229,7 @@ In dieser Tabelle werden die Auswirkungen der unterschiedlichen Zugriffsspezifiz
 |public|Auf den Member kann innerhalb und außerhalb der Assembly leicht zugegriffen werden.  Finden Sie unter [öffentliche](../cpp/public-cpp.md) für Weitere Informationen.|
 |private|Auf den Member kann weder innerhalb noch außerhalb der Assembly zugegriffen werden.  Finden Sie unter [private](../cpp/private-cpp.md) für Weitere Informationen.|
 |protected|Auf den Member kann innerhalb und außerhalb der Assembly zugegriffen werden. Dies gilt jedoch nur für abgeleitete Typen.  Finden Sie unter [geschützt](../cpp/protected-cpp.md) für Weitere Informationen.|
-|internal|Der Member ist öffentlich innerhalb der Assembly und privat außerhalb der Assembly.  `internal` ist ein kontextbezogenes Schlüsselwort.  Weitere Informationen finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).|
+|internal|Der Member ist öffentlich innerhalb der Assembly und privat außerhalb der Assembly.  `internal` ist ein kontextbezogenes Schlüsselwort.  Weitere Informationen finden Sie unter [Kontextbezogene Schlüsselwörter](../extensions/context-sensitive-keywords-cpp-component-extensions.md).|
 |Öffentliche geschützten - oder - Zeichen geschützte öffentliche|Der Member ist öffentlich innerhalb der Assembly und geschützt außerhalb der Assembly.|
 |Private geschützte - oder - Zeichen geschützten privaten|Der Member ist geschützt innerhalb der Assembly und privat außerhalb der Assembly.|
 
@@ -499,9 +499,9 @@ Diese unterschiedliche Semantik des `this`-Zeigers kann beim Aufrufen eines Stan
 
 Weitere Informationen finden Sie unter
 
-- [Handle für Objekt (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [Handle für Objekt (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -797,7 +797,7 @@ Code, die in Visual C++ geschrieben und kompiliert mit **"/ CLR"** Destruktor de
 
 - Das Objekt ist ein Member in einem Objekt, dessen Destruktor ausgeführt wird.
 
-- Rufen Sie die [löschen](../cpp/delete-operator-cpp.md) Operator auf ein Handle ([Handle für Objekt (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).
+- Rufen Sie die [löschen](../cpp/delete-operator-cpp.md) Operator auf ein Handle ([Handle für Objekt (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)).
 
 - Sie rufen den Destruktor explizit auf.
 
@@ -844,7 +844,7 @@ Nachdem der Finalizer eines Objekts ausgeführt wird, werden die Finalizer in de
 
 Wenn ein Finalizer einen systemeigenen Zeiger in einem verwalteten Typ löscht, müssen Sie sicherstellen, dass Verweise auf oder durch den systemeigenen Zeiger nicht vorzeitig erfasst werden. Rufen Sie den Destruktor auf dem verwalteten Typ auf, anstatt <xref:System.GC.KeepAlive%2A> zu verwenden.
 
-Zur Kompilierzeit können Sie erkennen, ob ein Typ einen Finalizer oder einen Destruktor enthält. Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+Zur Kompilierzeit können Sie erkennen, ob ein Typ einen Finalizer oder einen Destruktor enthält. Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 Im folgenden Beispiel werden zwei Typen verdeutlicht: ein Typ, der nicht verwaltete Ressourcen hat, und ein Typ mit verwalteten Ressourcen, die deterministisch freigegeben werden.
 
@@ -914,5 +914,5 @@ int main() {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
-[Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md)
+[Klassen und Strukturen](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
+[Klassen und Strukturen](../extensions/classes-and-structs-cpp-component-extensions.md)

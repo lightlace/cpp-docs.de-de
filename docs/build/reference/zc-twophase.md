@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: ebd577bc25a2789e3a6b328a4c9cd2e1596d04da
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b9e94f131448cb9be6c31962ecd19607ceb1b708
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821400"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776036"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(Zweiphasen-Namenssuche deaktivieren)
 
@@ -158,7 +158,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 Klicken Sie unter **/Zc:twoPhase-** und in älteren Compilern, erfordert der Compiler nur die `template` -Schlüsselwort in Zeile 2. Standardmäßig, und in Übereinstimmung mit Standards-Modus, erfordert der Compiler jetzt auch die `template` Schlüsselwort in Zeile 4 gibt an, dass `T::X<T>` ist eine Vorlage. Suchen Sie nach Code, der dieses Schlüsselwort nicht vorhanden ist, und geben Sie an, um den Code, der dem Standard entsprechen zu gestalten.
 
-Weitere Informationen über Konformitätsprobleme finden Sie unter [C++-konformitätsverbesserungen in Visual Studio](../../cpp-conformance-improvements-2017.md) und [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
+Weitere Informationen über Konformitätsprobleme finden Sie unter [C++-konformitätsverbesserungen in Visual Studio](../../overview/cpp-conformance-improvements-2017.md) und [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 

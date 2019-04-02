@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283422"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771499"
 ---
 # <a name="colecontrol-class"></a>COleControl-Klasse
 
@@ -4209,8 +4209,8 @@ Rufen Sie diese Funktion, um bestimmte Nachrichten über die meldungszuordnung d
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel CIRC3](../../visual-cpp-samples.md)<br/>
-[MFC-Beispiel TESTHELP](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [COlePropertyPage-Klasse](../../mfc/reference/colepropertypage-class.md)<br/>
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>

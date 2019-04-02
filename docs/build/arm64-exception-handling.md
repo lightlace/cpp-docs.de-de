@@ -1,12 +1,12 @@
 ---
 title: ARM64-Ausnahmebehandlung
 ms.date: 11/19/2018
-ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 78d3d7d206adcb123c9537e91c2d5976b8be5baa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816151"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770069"
 ---
 # <a name="arm64-exception-handling"></a>ARM64-Ausnahmebehandlung
 
@@ -54,7 +54,7 @@ Hierbei handelt es sich um die Annahmen, die in der Beschreibung für die Ausnah
 
 ![stapelrahmenlayout](media/arm64-exception-handling-stack-frame.png "stapelrahmenlayout")
 
-Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position in der lokalen Variablen Bereich je nach der Optimierung Überlegungen gespeichert werden. Das Ziel ist, um die Anzahl der lokalen Variablen zu maximieren, die von einer einzelnen Anweisung, die basierend auf Frame-Pointer (R29 entwickelt bei) oder der Stapelzeiger (sp) erreicht werden kann. Jedoch für `alloca` Funktionen, er verkettet werden muss und R29 entwickelt bei muss am Ende Stack verweisen. Für eine bessere Abdeckung von Register-Paar-Adressierung-Modus nicht flüchtig registrieren, damit Aave, Bereiche am oberen Rand der LAN-Stack positioniert werden. Hier sind Beispiele, die einige der am effizientesten Prolog Sequenzen zu veranschaulichen. Aus Gründen der Übersichtlichkeit und besseren Ort des Caches aufweist die Reihenfolge der aufgerufenen gespeicherten Register speichern, in dem alle kanonischen Prologe "immer größer werdenden einrichten" Reihenfolge. `#framesz` unten können Sie die Größe des gesamten Stapels (außer ' Alloca-Bereich) darstellt. `#localsz` und `#outsz` LAN-Größe zu kennzeichnen (einschließlich des Speichervorgangs Bereich für die \<R29 entwickelt bei, Lr > Paar) und der Parametergröße bzw. ausgehende.
+Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position in der lokalen Variablen Bereich je nach der Optimierung Überlegungen gespeichert werden. Das Ziel ist, um die Anzahl der lokalen Variablen zu maximieren, die von einer einzelnen Anweisung, die basierend auf Frame-Pointer (R29 entwickelt bei) oder der Stapelzeiger (sp) erreicht werden kann. Jedoch für `alloca` Funktionen, er verkettet werden muss und R29 entwickelt bei muss am Ende Stack verweisen. Um eine bessere Abdeckung von Register-Paar-Adressierung-Modus zu ermöglichen, werden nicht flüchtiges Register Speichern der Bereiche am oberen Rand der LAN-Stack positioniert. Hier sind Beispiele, die einige der am effizientesten Prolog Sequenzen zu veranschaulichen. Aus Gründen der Übersichtlichkeit und besseren Ort des Caches aufweist die Reihenfolge der aufgerufenen gespeicherten Register speichern, in dem alle kanonischen Prologe "immer größer werdenden einrichten" Reihenfolge. `#framesz` unten können Sie die Größe des gesamten Stapels (außer ' Alloca-Bereich) darstellt. `#localsz` und `#outsz` LAN-Größe zu kennzeichnen (einschließlich des Speichervorgangs Bereich für die \<R29 entwickelt bei, Lr > Paar) und der Parametergröße bzw. ausgehende.
 
 1. Chained, #localsz \<= 512
 
@@ -267,7 +267,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Beachten Sie, dass obwohl der Prolog und jeder Epilog hat einen eigenen Index in den entladungscodes, in der Tabelle genutzt gemeinsam und es ist durchaus möglich, dass (und nicht ganz selten), die sie die gleichen Codes gemeinsam verwenden können (siehe Beispiel 2 in Anhang A unten). Compiler-Autoren sollten für diesen Fall insbesondere optimieren, da der größte Index, der angegeben werden können, 255, ist daher beschränken die Gesamtzahl der entladungscodes für eine bestimmte Funktion.
+Beachten Sie, dass obwohl der Prolog und jeder Epilog hat einen eigenen Index in den entladungscodes, in der Tabelle genutzt gemeinsam und es ist durchaus möglich, dass (und nicht ganz selten), die sie die gleichen Codes gemeinsam verwenden können (siehe Beispiel 2 in den Beispielen im Abschnitt Bel zulassen). Compiler-Autoren sollten für diesen Fall insbesondere optimieren, da der größte Index, der angegeben werden können, 255, ist daher beschränken die Gesamtzahl der entladungscodes für eine bestimmte Funktion.
 
 ### <a name="unwind-codes"></a>Entladungscodes
 
@@ -340,7 +340,7 @@ Die Felder sind wie folgt aus:
 
 - **Funktion RVA starten** ist die 32-Bit-RVA des Starts der Funktion.
 - **Flag** ist ein 2-Bit-Feld, wie oben beschrieben, die folgende Bedeutung:
-  - 00 = gepackte Entladedaten nicht verwendet. Verbleibende Bits zeigen auf .xdata-Datensatz, unten
+  - 00 = gepackte Entladedaten nicht verwendet. Zeigen Sie die verbleibenden Bits auf kein .xdata-Datensatz
   - 01 = gepackte Entladedaten verwendet werden, wie unten beschrieben, mit einzelnen Prolog und Epilog am Anfang und Ende des Bereichs
   - 10 = gepackte Entladedaten verwendet werden, wie unten beschrieben, für Code ohne Prolog- und Epilog; Dies ist nützlich, wenn getrennte Funktion Segmente.
   - 11 = reserviert.
@@ -353,7 +353,7 @@ Die Felder sind wie folgt aus:
   - 11 = verketteten-Funktion eine Store/Load-Paar-Anweisung wird verwendet, in die Prolog-und Epilogcode \<R29 entwickelt bei, Lr >
 - **H** ist ein 1-Bit-Flag gibt an, ob die Funktion der herausgreift registriert (r0-r7), indem sie am Anfang der Funktion zu speichern. (0 = Register nicht heraus, 1 = greift Register).
 - **RegI** ist ein 4-Bit-Feld, der angibt, der Anzahl der nicht flüchtigen INT-Register (r19-r28) in den kanonischen Stapelspeicherort gespeichert.
-- **RegF** ist ein 3-Bit-Feld, der angibt, der Anzahl der nicht flüchtigen FP-Register (d8-d15) in den kanonischen Stapelspeicherort gespeichert. (0 = kein FP Register gespeichert wird, m > 0: m + 1 FP-Register gespeichert). Für die Funktion, speichern Sie nur ein FP-Register, die gepackte Entladedaten nicht die Daten angewendet werden.
+- **RegF** ist ein 3-Bit-Feld, der angibt, der Anzahl der nicht flüchtigen FP-Register (d8-d15) in den kanonischen Stapelspeicherort gespeichert. (RegF = 0: kein FP-Register gespeichert; RegF > 0: RegF + 1 FP-Register gespeichert). Gepackte Entladedaten-Daten können nicht verwendet werden, für die Funktion, bei denen nur ein FP-Register gespeichert.
 
 Kanonischen Prologe, die in Kategorien 1, 2 (ohne ausgehenden Eingabeaufforderungsbereich für Parameter), 3 und 4 im obigen Abschnitt fallen können durch gepackte entladeformat dargestellt werden.  Mit Ausnahme von der epilogen für kanonische Funktionen sehr ähnlichen Form, führen Sie **H** hat keine Auswirkungen, die `set_fp` Anweisung ausgelassen wird, und die Reihenfolge der Schritte sowie Anweisungen in den einzelnen Schritten im Epilog umgekehrt werden. Der Algorithmus für gepackte Xdata: Diese Schritte aus, in der folgenden Tabelle beschrieben
 
@@ -386,7 +386,7 @@ Schritt #|Flagwerte|Anzahl von Anweisungen|Opcode|Entladungscode
 
 \*\* Wenn **RegI** == **CR** == 0 (null) und **RegF** ! = 0 ist, das erste stp aus, für die Gleitkommazahlen der prädekrement ist.
 
-\*\*\* Keine Anweisung entspricht `mov r29, sp` im Epilog vorhanden ist. Wenn für die Wiederherstellung der sp von R29 entwickelt bei eine Funktion erforderlich ist, wir können gepackt Entladung der Daten.
+\*\*\* Keine Anweisung entspricht `mov r29, sp` im Epilog vorhanden ist. Gepackt entladen Daten können nicht verwendet werden, wenn eine Funktion sp aus R29 entwickelt bei Wiederherstellung erforderlich ist.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Entladung teilweise prologen und epilogen
 

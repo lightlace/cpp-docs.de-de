@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-ms.openlocfilehash: da04fa7fa84e7e5014d574583c9c95992db10f88
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46501193569d7f3098e23c67c68c76ce20a82ea3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281945"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766676"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Drag & Drop: Implementieren eines Drop-Ziels
 
@@ -33,7 +33,7 @@ In diesem Artikel wird beschrieben, wie Sie Ihre Anwendung ein Ablageziel zu mac
     |`OnDrop`|Behandlung von Daten in das angegebene Fenster gelöscht wird.|
     |`OnScrollBy`|Spezielles Verhalten für die beim Durchführen eines Bildlaufs erforderlich im Zielfenster ist.|
 
-Finden Sie in der Datei MAINVIEW. CPP-Datei, die MFC-OLE-Beispiel [OCLIENT](../visual-cpp-samples.md) für verdeutlicht, wie diese Funktionen zusammen verwendet werden.
+Finden Sie in der Datei MAINVIEW. CPP-Datei, die MFC-OLE-Beispiel [OCLIENT](../overview/visual-cpp-samples.md) für verdeutlicht, wie diese Funktionen zusammen verwendet werden.
 
 Weitere Informationen finden Sie unter:
 

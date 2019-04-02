@@ -21,12 +21,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: 93d1e067777b1c6f4430fe9cc44ae531559b6962
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294670"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768133"
 ---
 # <a name="docking-and-floating-toolbars"></a>Andockbare und unverankerte Symbolleisten
 
@@ -50,7 +50,7 @@ Andere in diesem Artikel behandelten Themen umfassen:
 
 - [Einstellung Wrap Positionen für eine Symbolleiste mit festem Format](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)
 
-Finden Sie im allgemeinen MFC-Beispiel [DOCKTOOL](../visual-cpp-samples.md) Beispiele.
+Finden Sie im allgemeinen MFC-Beispiel [DOCKTOOL](../overview/visual-cpp-samples.md) Beispiele.
 
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Aktivieren des Andockens in einem Rahmenfenster
 
@@ -104,7 +104,7 @@ Bestimmen Sie für eine Symbolleiste mit festem Format die Symbolleiste Schaltfl
 
 [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]
 
-Im allgemeinen MFC-Beispiel [DOCKTOOL](../visual-cpp-samples.md) zeigt, wie Memberfunktionen von Klassen [CControlBar](../mfc/reference/ccontrolbar-class.md) und [CToolBar](../mfc/reference/ctoolbar-class.md) dynamische Layouts einer Symbolleiste zu verwalten. Die Datei EDITBAR angezeigt. CPP im DOCKTOOL.
+Im allgemeinen MFC-Beispiel [DOCKTOOL](../overview/visual-cpp-samples.md) zeigt, wie Memberfunktionen von Klassen [CControlBar](../mfc/reference/ccontrolbar-class.md) und [CToolBar](../mfc/reference/ctoolbar-class.md) dynamische Layouts einer Symbolleiste zu verwalten. Die Datei EDITBAR angezeigt. CPP im DOCKTOOL.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
 

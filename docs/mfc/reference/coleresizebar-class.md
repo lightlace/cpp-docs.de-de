@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: 631276a065652ec991c4c1b5264e87b7244fb7b9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0b950e7533ba6f95c76ef8d4569980a9a82ea591
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275947"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769151"
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar-Klasse
 
@@ -105,7 +105,7 @@ Ungleich NULL, wenn die Größenänderung Leiste erstellt wurde; andernfalls 0.
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel SUPERPAD](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar-Klasse](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [COleServerDoc-Klasse](../../mfc/reference/coleserverdoc-class.md)

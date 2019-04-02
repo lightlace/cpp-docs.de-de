@@ -6,20 +6,20 @@ helpviewer_keywords:
 - tab controls [MFC], and property sheets
 - CTabCtrl class [MFC], and property sheets
 ms.assetid: f3b87bea-9ad9-41e6-a7ff-a9285308267e
-ms.openlocfilehash: be612038683ea4d8546e5811beaf6e62c5f88888
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e765316880749ae5fb065e048b66b1203d7f222e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265755"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768821"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Registerkarten-Steuerelemente und Eigenschaftenblätter
 
 Eigenschaftenblätter werden mehrseitige Dialogfelder oder "Registerkarten-Dialogfeldern, die bis zu 24 Dialogfeld-Vorlagenressourcen, die dem Benutzer angezeigt werden können. Beispiele für Eigenschaftenblätter finden Sie in das Dialogfeld Eigenschaften von Windows-Anzeige oder die folgende MFC-beispielanwendung:
 
-[CMNCTRL1: Zeigt die Klassen für allgemeine Steuerelemente, Teil 1](../visual-cpp-samples.md)
+[CMNCTRL1: Zeigt die Klassen für allgemeine Steuerelemente, Teil 1](../overview/visual-cpp-samples.md)
 
-[CMNCTRL2: Zeigt die Klassen für allgemeine Steuerelemente, Teil 2](../visual-cpp-samples.md)
+[CMNCTRL2: Zeigt die Klassen für allgemeine Steuerelemente, Teil 2](../overview/visual-cpp-samples.md)
 
 Eigenschaftenblätter können ganz einfach mit der MFC-Klasse implementiert werden [CPropertySheet](../mfc/reference/cpropertysheet-class.md).
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: 865524fe91b7d137e3a943973dcca6d833bd16df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5703c87945667f4ac65647019a72b304363bee2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471434"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780625"
 ---
 # <a name="raise"></a>__raise
 
@@ -26,7 +26,7 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>Hinweise
 
-Aus verwaltetem Code kann ein Ereignis nur innerhalb der Klasse ausgelöst werden, in der es definiert ist. Finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md) für Weitere Informationen.
+Aus verwaltetem Code kann ein Ereignis nur innerhalb der Klasse ausgelöst werden, in der es definiert ist. Finden Sie unter [Ereignis](../extensions/event-cpp-component-extensions.md) für Weitere Informationen.
 
 Das Schlüsselwort **__raise** verursacht einen Fehler, wenn Sie einem nicht ereignisgebundenen Aufruf ausgegeben werden soll.
 
@@ -63,4 +63,4 @@ int main() {
 
 [Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
 [Ereignisbehandlung](../cpp/event-handling.md)<br/>
-[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+[Komponentenerweiterungen für Laufzeitplattformen](../extensions/component-extensions-for-runtime-platforms.md)

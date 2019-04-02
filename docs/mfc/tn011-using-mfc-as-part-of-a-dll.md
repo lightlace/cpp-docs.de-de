@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7e9fda44e2af4ec32bae6299fbcc0eda17984f9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326451"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769731"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Verwenden von MFC als Teil einer DLL
 
@@ -57,7 +57,7 @@ Sie müssen auch diese Symbole zu definieren und diese Compilerschalter beim Kom
 
 Die Schnittstellen (APIs) zwischen der Anwendung und die DLL müssen explizit exportiert werden. Es wird empfohlen, dass Sie Ihre Schnittstellen mit geringer Bandbreite werden definieren, und nur C-Schnittstellen verwenden, sofern möglich. Direkte C-Schnittstellen sind einfacher zu verwalten als eine komplexere C++-Klassen.
 
-Platzieren Sie Ihre APIs in einem separaten-Header, der von C- und C++-Dateien enthalten sein kann. Finden Sie unter den Header ScreenCap.h im MFC Advanced Concepts-Beispiel [DLLScreenCap](../visual-cpp-samples.md) verdeutlicht. Um Ihre Funktionen zu exportieren, geben Sie in der `EXPORTS` Teil Ihrer Moduldefinitionsdatei (. DEF) oder `__declspec(dllexport)` auf Ihre Funktionsdefinitionen. Verwendung `__declspec(dllimport)` um diese Funktionen in die ausführbare Clientdatei zu importieren.
+Platzieren Sie Ihre APIs in einem separaten-Header, der von C- und C++-Dateien enthalten sein kann. Finden Sie unter den Header ScreenCap.h im MFC Advanced Concepts-Beispiel [DLLScreenCap](../overview/visual-cpp-samples.md) verdeutlicht. Um Ihre Funktionen zu exportieren, geben Sie in der `EXPORTS` Teil Ihrer Moduldefinitionsdatei (. DEF) oder `__declspec(dllexport)` auf Ihre Funktionsdefinitionen. Verwendung `__declspec(dllimport)` um diese Funktionen in die ausführbare Clientdatei zu importieren.
 
 Sie müssen am Anfang die exportierten Funktionen in regulären MFC-DLLs, die dynamisch mit MFC verknüpft, das AFX_MANAGE_STATE-Makro hinzufügen. Dieses Makro legt den aktuellen Modulstatus, die für die DLL an. Um dieses Makro zu verwenden, fügen Sie die folgende Codezeile am Anfang des aus der DLL exportierten Funktionen aus:
 

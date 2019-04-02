@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483329"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778285"
 ---
 # <a name="compiler-error-c2144"></a>Compilerfehler C2144
 
@@ -23,7 +23,7 @@ Dieser Fehler kann durch eine fehlende schließende geschweifte Klammer, Rechte 
 
 C2144 kann auch auftreten, wenn Sie versuchen, ein Makro aus einem CLR-Schlüsselwort zu erstellen, die ein Leerzeichen enthält.
 
-Sie können auch C2144 angezeigt, wenn Sie versuchen, die Weiterleitung eingeben. Finden Sie unter [Typweiterleitung (C++ / CLI)](../../windows/type-forwarding-cpp-cli.md) für Weitere Informationen.
+Sie können auch C2144 angezeigt, wenn Sie versuchen, die Weiterleitung eingeben. Finden Sie unter [Typweiterleitung (C++ / CLI)](../../extensions/type-forwarding-cpp-cli.md) für Weitere Informationen.
 
 ## <a name="examples"></a>Beispiele
 

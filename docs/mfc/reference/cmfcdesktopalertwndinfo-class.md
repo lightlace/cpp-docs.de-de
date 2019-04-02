@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4b3d8769b3d267c0bd3f81269dd3b8ab3cf3184
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301635"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768288"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo-Klasse
 
@@ -47,7 +47,7 @@ class CMFCDesktopAlertWndInfo
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Ein Handle für das Symbol, das angezeigt wird.|
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|Die Befehls-ID, das einen Link auf die desktop-Benachrichtigungsfenster zugeordnet ist.|
@@ -68,7 +68,7 @@ Wenn das Dialogfeld "Standard" nicht ausreichend ist, können Sie ein benutzerde
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie verschiedene Elemente in der `CMFCDesktopAlertWndInfo` Klasse. Im Beispiel wird veranschaulicht, wie das Handle auf das Symbol, das angezeigt wird, den Text festgelegt wird, der angezeigt wird, auf die desktop-Benachrichtigungsfenster, den Link, der auf dem desktop-Benachrichtigungsfenster angezeigt wird und die Befehls-ID, die einen Link auf die desktop-Benachrichtigungsfenster zugeordnet ist. In diesem Beispiel ist Teil der [Desktop Warnung Demobeispiel](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie verschiedene Elemente in der `CMFCDesktopAlertWndInfo` Klasse. Im Beispiel wird veranschaulicht, wie das Handle auf das Symbol, das angezeigt wird, den Text festgelegt wird, der angezeigt wird, auf die desktop-Benachrichtigungsfenster, den Link, der auf dem desktop-Benachrichtigungsfenster angezeigt wird und die Befehls-ID, die einen Link auf die desktop-Benachrichtigungsfenster zugeordnet ist. In diesem Beispiel ist Teil der [Desktop Warnung Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]
 

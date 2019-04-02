@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-ms.openlocfilehash: 59f8e7d095f3d514ab41b28dc37f5d3c707bbd08
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c532164788d359c7834759de01407d49c19463ca
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820298"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769328"
 ---
 # <a name="using-idispeventimpl"></a>Verwenden von IDispEventImpl
 
@@ -29,7 +29,7 @@ Bei Verwendung `IDispEventImpl` zum Verarbeiten von Ereignissen, müssen Sie:
 
 Das folgende Beispiel zeigt, wie Sie behandelt die `DocumentChange` Ereignis ausgelöst wird, von Word **Anwendung** Objekt. Dieses Ereignis wird als eine Methode definiert, auf die `ApplicationEvents` Disp-Schnittstelle.
 
-Das Beispiel stammt aus dem [ATLEventHandling-Beispiel](../visual-cpp-samples.md).
+Das Beispiel stammt aus dem [ATLEventHandling-Beispiel](../overview/visual-cpp-samples.md).
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
@@ -58,4 +58,4 @@ Der folgende Code wird im NotSoSimple.h angezeigt. Der entsprechende Code wird d
 ## <a name="see-also"></a>Siehe auch
 
 [Ereignisbehandlung](../atl/event-handling-and-atl.md)<br/>
-[ATLEventHandling-Beispiel](../visual-cpp-samples.md)
+[ATLEventHandling-Beispiel](../overview/visual-cpp-samples.md)

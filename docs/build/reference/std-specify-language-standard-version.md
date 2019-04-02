@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: d66a9ed445e28de2341aa2a07f249c10cba83da4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 32c63240f578b6170ae351cdf0cd1628167464b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812004"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779741"
 ---
 # <a name="std-specify-language-standard-version"></a>/ Std (Standardversion Sprache festlegen)
 
@@ -37,11 +37,11 @@ Der Standardwert **/Std: c ++ 14** Option aktiviert die C ++ 14-Funktionen von d
 
 - [U8-Zeichenliterale](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
-Weitere Informationen auf die C ++ 14 und C ++ 17-Features aktiviert sind, wenn **/Std: c ++ 14** ist angegeben, siehe Hinweise im [Visual C++-Sprachkonformität](../../visual-cpp-language-conformance.md).
+Weitere Informationen auf die C ++ 14 und C ++ 17-Features aktiviert sind, wenn **/Std: c ++ 14** ist angegeben, siehe Hinweise im [Visual C++-Sprachkonformität](../../overview/visual-cpp-language-conformance.md).
 
 Die **/Std: c ++ 17** Option ermöglicht den vollständigen Satz von C ++ 17-Features, von der MSVC-Compiler implementiert. Diese Option deaktiviert die Unterstützung von Compiler- und Standardbibliotheken für Features, die in Versionen des Arbeitsentwurfs und Fehlerbehebungsaktualisierungen des C++-Standards nach C++17 neu sind oder geändert wurden.
 
-Die **/Std: c ++ neueste** Option ermöglicht die Post-C ++ 17 Sprach- und bibliotheksunterstützung-Funktionen, die derzeit im Compiler und Bibliotheken implementiert. Diese können Funktionen aus der C ++ 20 Arbeitsentwurfs und fehlerbehebungsaktualisierungen Updates des C++-Standards enthalten, die nicht in C ++ 17 sowie experimentelle Angebote für den Entwurfsstandard enthalten sind. Eine Liste der unterstützten Sprachen und Features der Standardbibliothek, finden Sie unter [neuerungen bei Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). Die **/Std: c ++ neueste** Option keine Funktionen, die von überwachten aktiviert die **/ experimentelle** wechseln, jedoch möglicherweise erforderlich, um sie zu aktivieren.
+Die **/Std: c ++ neueste** Option ermöglicht die Post-C ++ 17 Sprach- und bibliotheksunterstützung-Funktionen, die derzeit im Compiler und Bibliotheken implementiert. Diese können Funktionen aus der C ++ 20 Arbeitsentwurfs und fehlerbehebungsaktualisierungen Updates des C++-Standards enthalten, die nicht in C ++ 17 sowie experimentelle Angebote für den Entwurfsstandard enthalten sind. Eine Liste der unterstützten Sprachen und Features der Standardbibliothek, finden Sie unter [neuerungen bei Visual C++](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md). Die **/Std: c ++ neueste** Option keine Funktionen, die von überwachten aktiviert die **/ experimentelle** wechseln, jedoch möglicherweise erforderlich, um sie zu aktivieren.
 
 > [!IMPORTANT]
 > Die aktivierte Funktionen für Compiler und -Bibliothek **/Std: c ++ neueste** als bereitgestellt werden – ist und ohne Unterstützung. Sie unterliegen aktuellen Änderungen bzw. ohne vorherige Ankündigung. Sie dienen als Vorschau von Sprachfunktionen, die in der nächsten Version des Standards angezeigt werden kann, aber der Standard ist noch In Bearbeitung. Verwenden Sie **/Std: c ++ 17** um die Features im neuesten ISO C++-Standard zu verwenden.
@@ -51,7 +51,7 @@ Die **/Std** faktisch während einer C++-Kompilierung die Option kann mithilfe d
 Die **/Std: c ++ 14** und **/Std: c ++ neueste** Optionen sind verfügbar ab der in Visual C++ 2015 Update 3. Die **/Std: c ++ 17** Option ist ab, die in Visual C++ 2017 Version 15.3 verfügbar. Wie bereits erwähnt, einige C ++ 17-standard wird Verhalten aktiviert, indem die **/Std: c ++ 14** Option, aber alle anderen C ++ 17-Features werden aktiviert, indem **/Std: c ++ 17**.
 
 > [!NOTE]
-> Abhängig von der MSVC-Compiler Version oder ein Update, bestimmte C ++ 14 und C ++ 17-Features möglicherweise nicht vollständig implementiert oder vollständig-konforme Funktion bei der Angabe der **/Std: c ++ 14** oder **/Std: c ++ 17** Optionen. Z. B. der Visual C++ 2017 RTM-Compiler unterstützt nicht vollständig C ++ 14-konformen `constexpr`, sfinae für Ausdrücke, oder 2-Phasen Namenssuche. Eine Übersicht über C++-sprachkonformität in Visual C++ von der endgültigen Produktversion, finden Sie unter [Visual C++-Sprachkonformität](../../visual-cpp-language-conformance.md).
+> Abhängig von der MSVC-Compiler Version oder ein Update, bestimmte C ++ 14 und C ++ 17-Features möglicherweise nicht vollständig implementiert oder vollständig-konforme Funktion bei der Angabe der **/Std: c ++ 14** oder **/Std: c ++ 17** Optionen. Z. B. der Visual C++ 2017 RTM-Compiler unterstützt nicht vollständig C ++ 14-konformen `constexpr`, sfinae für Ausdrücke, oder 2-Phasen Namenssuche. Eine Übersicht über C++-sprachkonformität in Visual C++ von der endgültigen Produktversion, finden Sie unter [Visual C++-Sprachkonformität](../../overview/visual-cpp-language-conformance.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
@@ -63,5 +63,5 @@ Die **/Std: c ++ 14** und **/Std: c ++ neueste** Optionen sind verfügbar ab der
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

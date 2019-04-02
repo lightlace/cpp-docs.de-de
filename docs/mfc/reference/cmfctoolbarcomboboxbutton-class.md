@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e3c124103aa95d9db5095e438a6b21d46c7cb35d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303169"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772071"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton-Klasse
 
@@ -136,7 +136,7 @@ Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen 
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCToolBarComboBoxButton` -Klasse. Das Beispiel zeigt, wie Sie die Felder bearbeiten und das Kombinationsfeld zu aktivieren, legen die vertikale Position des Kombinationsfeld-Schaltflächen in der Anwendung, die Höhe des Listenfelds festlegen, wenn er, nach unten gelöscht wird, die flache Darstellung der Schaltflächen in der Anwendung festgelegt , und legen Sie den Text im Eingabefeld des Kombinationsfeld-Schaltfläche. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCToolBarComboBoxButton` -Klasse. Das Beispiel zeigt, wie Sie die Felder bearbeiten und das Kombinationsfeld zu aktivieren, legen die vertikale Position des Kombinationsfeld-Schaltflächen in der Anwendung, die Höhe des Listenfelds festlegen, wenn er, nach unten gelöscht wird, die flache Darstellung der Schaltflächen in der Anwendung festgelegt , und legen Sie den Text im Eingabefeld des Kombinationsfeld-Schaltfläche. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]

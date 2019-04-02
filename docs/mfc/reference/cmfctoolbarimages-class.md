@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303339"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776413"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages-Klasse
 
@@ -242,7 +242,7 @@ class CMFCToolBarImages : public CObject
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|TRUE, wenn angegeben, Alphablending (32-Bit-Farbe) deaktiviert ist.|
 
@@ -252,7 +252,7 @@ Die vollständige Bitmap der Symbolleistenbilder, die von verwalteten `CMFCToolb
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie konfigurieren eine `CMFCToolBarImages` -Objekt unter Verwendung verschiedener Methoden in der `CMFCToolBarImages` Klasse. Das Beispiel zeigt, wie Sie die Größe des Bilds Symbolleiste festlegen, laden Sie ein Bild und legen Sie die transparente Farbe des Bilds. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel zeigt, wie Sie konfigurieren eine `CMFCToolBarImages` -Objekt unter Verwendung verschiedener Methoden in der `CMFCToolBarImages` Klasse. Das Beispiel zeigt, wie Sie die Größe des Bilds Symbolleiste festlegen, laden Sie ein Bild und legen Sie die transparente Farbe des Bilds. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#32](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#33](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_2.cpp)]
