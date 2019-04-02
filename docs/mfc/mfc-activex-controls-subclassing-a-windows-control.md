@@ -16,16 +16,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 08cdb90537dd50855a5bf223fbe54d58dfd6c365
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7042df6e7b7dc2c9a608470ba7cfc5a9e9f6127a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277052"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773254"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC-ActiveX-Steuerelemente: Erstellen von Unterklassen für ein Windows-Steuerelement
 
-Dieser Artikel beschreibt den Prozess zum Erstellen von Unterklassen für eine allgemeine Windows-Steuerelement, um ein ActiveX-Steuerelement zu erstellen. Unterklassen aus einer vorhandenen Windows-Steuerelement ist eine schnelle Möglichkeit, ein ActiveX-Steuerelement entwickeln. Das neue Steuerelement müssen die Funktionen von der untergeordnetes Windows-Steuerelement, z. B. das Zeichnen von und reagieren auf Mausklicks. Die MFC-ActiveX-Steuerelemente Beispiel [Schaltfläche](../visual-cpp-samples.md) ist ein Beispiel für das Erstellen von Unterklassen für ein Windows-Steuerelement.
+Dieser Artikel beschreibt den Prozess zum Erstellen von Unterklassen für eine allgemeine Windows-Steuerelement, um ein ActiveX-Steuerelement zu erstellen. Unterklassen aus einer vorhandenen Windows-Steuerelement ist eine schnelle Möglichkeit, ein ActiveX-Steuerelement entwickeln. Das neue Steuerelement müssen die Funktionen von der untergeordnetes Windows-Steuerelement, z. B. das Zeichnen von und reagieren auf Mausklicks. Die MFC-ActiveX-Steuerelemente Beispiel [Schaltfläche](../overview/visual-cpp-samples.md) ist ein Beispiel für das Erstellen von Unterklassen für ein Windows-Steuerelement.
 
 >[!IMPORTANT]
 > ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
@@ -93,7 +93,7 @@ Zum Hinzufügen ein meldungshandlers für eine reflektierte Meldung manuell wie 
 
 - Auch in der. CPP-Datei, implementieren die `OnOcmCommand` Member-Funktion zum Verarbeiten der Nachricht wiedergegeben. Die *wParam* und *lParam* Parameter sind identisch mit denen der ursprünglichen Fensternachricht im.
 
-Ein Beispiel dafür, wie wiedergegeben Nachrichten verarbeitet werden, finden Sie in dem Beispiel für die MFC-ActiveX-Steuerelemente [Schaltfläche](../visual-cpp-samples.md). Es zeigt eine `OnOcmCommand` Handler, den Benachrichtigungscode BN_CLICKED erkennt und antwortet, indem Sie das Auslösen von (senden) einer `Click` Ereignis.
+Ein Beispiel dafür, wie wiedergegeben Nachrichten verarbeitet werden, finden Sie in dem Beispiel für die MFC-ActiveX-Steuerelemente [Schaltfläche](../overview/visual-cpp-samples.md). Es zeigt eine `OnOcmCommand` Handler, den Benachrichtigungscode BN_CLICKED erkennt und antwortet, indem Sie das Auslösen von (senden) einer `Click` Ereignis.
 
 ## <a name="see-also"></a>Siehe auch
 

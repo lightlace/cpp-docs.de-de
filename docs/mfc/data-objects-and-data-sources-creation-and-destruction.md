@@ -15,12 +15,12 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 68ee5fbfec554df8865ca50c265ca2fa2f226a29
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304435"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775243"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Datenobjekte und Datenquellen: Erstellen und zerstören
 
@@ -68,7 +68,7 @@ Datenquellen werden erstellt, wenn eine Anwendung Daten in die Zwischenablage ko
 
 1. Ist dies ein **Ausschneiden** Vorgang oder `DoDragDrop` gibt **DROPEFFECT_MOVE**, die in Schritt 1 ausgewählten Daten aus dem Dokument gelöscht werden.
 
-Dieses Szenario wird von den MFC-OLE-Beispielen implementiert [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md). Suchen Sie in der Quelle nach der von `CView` abgeleiteten Klasse der einzelnen Anwendungen, außer nach den Funktionen `GetClipboardData` und `OnGetClipboardData`. Diese beiden Funktionen befinden sich in den Implementierungen der von `COleClientItem` oder `COleServerItem` abgeleiteten Klassen. Diese Programme sind ein gutes Beispiel dafür, wie diese Konzepte implementiert werden können.
+Dieses Szenario wird von den MFC-OLE-Beispielen implementiert [OCLIENT](../overview/visual-cpp-samples.md) und [HIERSVR](../overview/visual-cpp-samples.md). Suchen Sie in der Quelle nach der von `CView` abgeleiteten Klasse der einzelnen Anwendungen, außer nach den Funktionen `GetClipboardData` und `OnGetClipboardData`. Diese beiden Funktionen befinden sich in den Implementierungen der von `COleClientItem` oder `COleServerItem` abgeleiteten Klassen. Diese Programme sind ein gutes Beispiel dafür, wie diese Konzepte implementiert werden können.
 
 Eine andere Situation, in der Sie möglicherweise ein `COleDataSource`-Objekt erstellen möchten, besteht dann, wenn Sie das Standardverhalten eines Drag-and-Drop-Vorgangs ändern. Weitere Informationen finden Sie unter den [Drag & Drop: Anpassen von](../mfc/drag-and-drop-customizing.md) Artikel.
 
