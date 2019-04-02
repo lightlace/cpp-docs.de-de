@@ -7,18 +7,18 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297488"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772123"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Benutzerdefinierte Steuerelemente
 
 In diesem Hinweis wird beschrieben, die MFC-Unterstützung für benutzerdefinierte und selbst zeichnen-Steuerelemente. Außerdem wird beschrieben, dynamische Unterklassen und beschreibt die Beziehung zwischen [CWnd](../mfc/reference/cwnd-class.md) Objekte und `HWND`s.
 
-Die MFC-beispielanwendung CTRLTEST veranschaulicht, wie viele benutzerdefinierte Steuerelemente. Finden Sie unter den Quellcode für die allgemeinen MFC-Beispiel [CTRLTEST](../visual-cpp-samples.md) und online-Hilfe.
+Die MFC-beispielanwendung CTRLTEST veranschaulicht, wie viele benutzerdefinierte Steuerelemente. Finden Sie unter den Quellcode für die allgemeinen MFC-Beispiel [CTRLTEST](../overview/visual-cpp-samples.md) und online-Hilfe.
 
 ## <a name="owner-draw-controlsmenus"></a>Ownerdrawn-Steuerelemente /-Menüs
 
@@ -104,7 +104,7 @@ Für das selbst zeichnen, Listenfelder und Kombinationsfelder, `OnDeleteItem` wi
 
 ## <a name="examples-of-self-drawing-controls-and-menus"></a>Beispiele für Steuerelemente und Menüs selbst zu zeichnen
 
-Im allgemeinen MFC-Beispiel [CTRLTEST](../visual-cpp-samples.md) bietet Beispiele für ein Menü selbst zeichnen und ein Listenfeld mit selbst zeichnen.
+Im allgemeinen MFC-Beispiel [CTRLTEST](../overview/visual-cpp-samples.md) bietet Beispiele für ein Menü selbst zeichnen und ein Listenfeld mit selbst zeichnen.
 
 Das häufigste Beispiel eine selbst zeichnen-Schaltfläche ist eine Bitmapschaltfläche. Eine Bitmapschaltfläche wird eine Schaltfläche, die einem, zwei oder drei Bitmap-Images für die unterschiedlichen Zustände angezeigt werden. Ein Beispiel hierfür finden Sie im MFC-Klasse [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).
 
@@ -130,7 +130,7 @@ Erreichen Sie mithilfe der Methoden dynamische Unterklassen [CWnd:: SubclassWind
 
 Fügen Sie beiden Routinen ein `CWnd` Objekt zu einem vorhandenen `HWND`. `SubclassWindow` nimmt die `HWND` direkt. `SubclassDlgItem` ist eine Hilfsfunktion, die eine Steuerelement-ID und das übergeordnete Fenster verwendet. `SubclassDlgItem` Dient zum Anfügen von C++-Objekten für Dialogfeld-Steuerelemente, die aus einer Dialogfeldvorlage erstellt.
 
-Finden Sie unter den [CTRLTEST](../visual-cpp-samples.md) Beispiel für mehrere Beispiele dafür, wann mit `SubclassWindow` und `SubclassDlgItem`.
+Finden Sie unter den [CTRLTEST](../overview/visual-cpp-samples.md) Beispiel für mehrere Beispiele dafür, wann mit `SubclassWindow` und `SubclassDlgItem`.
 
 ## <a name="see-also"></a>Siehe auch
 
