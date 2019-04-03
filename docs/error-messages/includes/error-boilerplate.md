@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bcf2372f039ccec4b46bf51fb4da9f4175289f14
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58807604"
+---
 Die Visual Studio-Compiler und Buildtools können viele Arten von Fehlern und Warnungen gemeldet. Nachdem eine Fehlermeldung oder Warnung gefunden wurde, können die Buildtools Annahmen über die Absicht des Codes und den Vorgang fortzusetzen, sodass mehrere Probleme gleichzeitig gemeldet werden können. Wenn die Tools allerdings von falschen Annahmen ausgehen, sind spätere Fehler oder Warnungen möglicherweise nicht auf das Projekt anwendbar. Wenn Sie Probleme im Projekt beheben, sollten Sie immer mit dem ersten gemeldeten Problem (Fehler oder Warnung) beginnen, und häufig einen Rebuild für das Projekt ausführen. Eine Lösung, möglicherweise viele nachfolgende Fehler behoben.
 
 Um Hilfe zu einem bestimmten diagnosemeldung in Visual Studio zu erhalten, wählen Sie sie in der **Ausgabe** Fenster, und drücken Sie die **F1** Taste, um die Dokumentationsseite für diesen Fehler, öffnen, falls vorhanden. Sie können auch mithilfe der Suchfunktion oben um Artikeln über bestimmte Fehler oder Warnungen zu suchen oder Durchsuchen Sie die Liste von Fehlern und Warnungen von Tools und geben Sie im Navigationsbereich.
@@ -7,4 +15,4 @@ Um Hilfe zu einem bestimmten diagnosemeldung in Visual Studio zu erhalten, wähl
 
 Finden Sie unter Umständen zusätzliche Unterstützung für Fehler und Warnungen in öffentlichen Foren von Microsoft. Sie können für den Fehler oder die Nummer der codeanalysewarnung suchen, auf die [Entwicklercommunity](https://developercommunity.visualstudio.com/spaces/8/index.html) Standort. Sie können auch suchen Sie nach Fehlern und Warnungen, und Fragen [Stack Overflow](http://stackoverflow.com/) um Lösungen zu finden.
 
-Links zu zusätzlichen Hilfe und Community-Ressourcen, finden Sie unter [Visual C++-Hilfe und Community](../../visual-cpp-help-and-community.md).
+Links zu zusätzlichen Hilfe und Community-Ressourcen, finden Sie unter [Visual C++-Hilfe und Community](../../overview/visual-cpp-help-and-community.md).

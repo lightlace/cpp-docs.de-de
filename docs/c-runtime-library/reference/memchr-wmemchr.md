@@ -1,6 +1,6 @@
 ---
 title: memchr, wmemchr
-ms.date: 11/04/2016
+ms.date: 03/31/2019
 apiname:
 - wmemchr
 - memchr
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: cbd8b80ed42a6532fb7161fab7217a772a2cb777
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
+ms.sourcegitcommit: 489c0b998f2360317701f7a4a97b2b8ad96052d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57209898"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58866915"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -87,9 +87,9 @@ Wenn erfolgreich, gibt Sie einen Zeiger auf den ersten Speicherort der *c* in *P
 
 ## <a name="remarks"></a>Hinweise
 
-`memchr` und `wmemchr` suchen Sie nach dem ersten Vorkommen des *c* in der ersten *Anzahl* Bytes *Puffer*. Es wird beendet, wenn er findet *c* oder wenn sie die erste aktiviert hat *Anzahl* Bytes.
+`memchr` und `wmemchr` suchen Sie nach dem ersten Vorkommen des *c* in der ersten *Anzahl* Zeichen *Puffer*. Es wird beendet, wenn er findet *c* oder wenn sie die erste aktiviert hat *Anzahl* Zeichen.
 
-In C akzeptieren diese Funktionen eine **const** Zeiger für das erste Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger auf **const** gibt einen Zeiger auf **const**; die Version, die einen Zeiger auf nicht-akzeptiert**const** gibt einen Zeiger auf nicht-**const** . Das Makro _CRT_CONST_CORRECT_OVERLOADS definiert ist, wenn sowohl die **const** und nicht-**const** Versionen dieser Funktionen sind verfügbar. Wenn Sie nicht benötigen**const** Verhalten für beide C++ Überladungen in C++ benötigen, definieren Sie das Symbol _CONST_RETURN.
+In C akzeptieren diese Funktionen eine **const** Zeiger für das erste Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger auf **const** gibt einen Zeiger auf **const**; die Version, die einen Zeiger auf nicht-akzeptiert**const** gibt einen Zeiger auf nicht-**const** . Das Makro \_CRT\_CONST\_richtig\_ÜBERLADUNGEN definiert ist, wenn sowohl die **const** und nicht-**const** Versionen dieser Funktionen sind verfügbar. Wenn Sie nicht benötigen**const** Verhalten für beide C++-Überladungen in C++, definieren Sie das Symbol \_CONST\_zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
