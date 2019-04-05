@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [MFC]
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
-ms.openlocfilehash: f612f4be726707681ffbddff88ccc6b8a672e427
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522407"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032218"
 ---
 # <a name="record-field-exchange-rfx"></a>Datensatzfeldaustausch (RFX)
 
@@ -32,9 +32,9 @@ Wenn Sie möchten, müssen Sie manuell eine kleine Menge von RFX-Code in drei F�
 
 - Führen Sie Joins (mit einem Recordset für die Spalten aus zwei oder mehr Tabellen aus). Weitere Informationen finden Sie unter [Recordset: Ausführen einer Verknüpfung (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
-- Binden Sie Datenspalten der dynamisch. Dies ist weniger gebräuchlich als Parametrisierung. Weitere Informationen finden Sie unter [Recordset: Dynamisches Binden von Spalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+- Binden Sie Datenspalten der dynamisch. Dies ist weniger gebräuchlich als Parametrisierung. Weitere Informationen finden Sie unter [Recordset: Dynamisches Binden von Datenspalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-Wenn Sie ein besseres Verständnis von RFX benötigen, finden Sie unter [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+Wenn Sie ein besseres Verständnis von RFX benötigen, finden Sie unter [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
 Die folgenden Themen erläutern die Details der Verwendung des Recordset-Objekte:
 
@@ -48,6 +48,6 @@ Die folgenden Themen erläutern die Details der Verwendung des Recordset-Objekte
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[MFC-ODBC-nutzen](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[Nutzen von MFC-ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Datenbankunterstützung, MFC-Anwendungs-Assistent](../../mfc/reference/database-support-mfc-application-wizard.md)<br/>
 [CRecordset-Klasse](../../mfc/reference/crecordset-class.md)
