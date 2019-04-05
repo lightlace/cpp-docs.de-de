@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-ms.openlocfilehash: d954b7622ac78142c84b40007ecda8138b1b8f2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8218ccb66c6be9edef5d7de751a73bf4753d069f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556642"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027204"
 ---
 # <a name="interface-attributes"></a>Schnittstellenattribut
 
@@ -19,10 +19,10 @@ Die folgenden Attribute gelten für die [-Schnittstelle (oder __interface)](../.
 |Attribut|Beschreibung|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Gibt an, die UUID, die den MIDL-Compiler definiert synchrone und asynchrone Versionen einer COM-Schnittstelle weiterleitet.|
-|[custom](custom-cpp.md)|Können Sie eigene Attribute definieren.|
+|[Benutzerdefiniert](custom-cpp.md)|Können Sie eigene Attribute definieren.|
 |[dispinterface](dispinterface.md)|Fügt eine Schnittstelle in die IDL-Datei als Verteilschnittstelle ein.|
 |[dual](dual.md)|Fügt eine Schnittstelle in der IDL-Datei als eine duale Schnittstelle an.|
-|[export](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
+|["export"](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
 |[helpcontext](helpcontext.md)|Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der Hilfedatei.|
 |[helpfile](helpfile.md)|Legt den Namen der Hilfedatei für die Typbibliothek.|
 |[helpstring](helpstring.md)|Gibt eine Zeichenfolge an, die zum Beschreiben des Elements verwendet wird, auf das sie angewendet wird.|
@@ -30,7 +30,7 @@ Die folgenden Attribute gelten für die [-Schnittstelle (oder __interface)](../.
 |[helpstringdll](helpstringdll.md)|Gibt den Namen der DLL zu verwenden, um die Suche nach Dokument (Lokalisierung) ausführen.|
 |[hidden](hidden.md)|Gibt an, dass das Element vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden soll.|
 |[library_block](library-block.md)|Fügt ein Konstrukt in bibliotheksblock der IDL-Datei an.|
-|[local](local-cpp.md)|Ermöglicht Ihnen die Verwendung den MIDL-Compiler als ein Header-Generator, wenn in der Schnittstelle-Header verwendet. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.|
+|[Lokal](local-cpp.md)|Ermöglicht Ihnen die Verwendung den MIDL-Compiler als ein Header-Generator, wenn in der Schnittstelle-Header verwendet. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.|
 |[nonextensible](nonextensible.md)|Gibt an, dass die `IDispatch` -Implementierung enthält nur die Eigenschaften und Methoden aufgeführt, die in der schnittstellenbeschreibung und können nicht zur Laufzeit zusätzliche Member erweitert werden. Dieses Attribut ist nur gültig für eine [dual](dual.md) Schnittstelle.|
 |[odl](odl.md)|Gibt eine Schnittstelle als Schnittstelle Objekt Description Language (ODL).|
 |[object](object-cpp.md)|Gibt eine benutzerdefinierte Schnittstelle an.|

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-ms.openlocfilehash: 8f77ebf41e741d74443fbae3398589c77fbf6c01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5704c10393026a14ac66b632559fc376f008f8b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665542"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041535"
 ---
 # <a name="accessing-xml-data"></a>Zugreifen auf XML-Daten
 
@@ -88,4 +88,4 @@ Sie können [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)
+[Verwenden von Accessoren](../../data/oledb/using-accessors.md)

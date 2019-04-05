@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: df67256c54cae3e2adb054d653d3e58bb91dd631
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331268"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026161"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset: Parametrisieren eines Recordsets (ODBC)
 
@@ -46,7 +46,7 @@ Typische einsatzmöglichkeiten für Parameter sind:
 
 - Übergeben von Argumenten an eine vordefinierte Abfrage zur Laufzeit.
 
-   Um Parameter an eine gespeicherte Prozedur übergeben, müssen Sie eine vollständige benutzerdefinierte ODBC angeben **Aufrufen** Anweisung – mithilfe von Parameterplatzhaltern – beim Aufruf `Open`, dem Recordset Standard-SQL-Anweisung überschreiben. Weitere Informationen finden Sie unter [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) in die *Klassenbibliotheksreferenz* und [SQL: Anpassen eines Recordsets SQL-Anweisung (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) und [ Recordset: Deklarieren einer Klasse für eine vordefinierte Abfrage (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+   Um Parameter an eine gespeicherte Prozedur übergeben, müssen Sie eine vollständige benutzerdefinierte ODBC angeben **Aufrufen** Anweisung – mithilfe von Parameterplatzhaltern – beim Aufruf `Open`, dem Recordset Standard-SQL-Anweisung überschreiben. Weitere Informationen finden Sie unter [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) in die *Klassenbibliotheksreferenz* und [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) und [Recordset: Deklarieren einer Klasse für eine vordefinierte Abfrage (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
 - Effiziente Ausführung zahlreicher Neuabfragen mit Informationen zu den verschiedenen Parametern.
 
@@ -114,7 +114,7 @@ Vor der Erstellung des Recordset-Klasse zu bestimmen, welche Parameter Sie benö
 
    Fügen Sie nach den vom Assistenten generierte Felddatenmembern Parameterdatenmember hinzu. Standardmäßig wird das Wort "Param" an jeder benutzerdefinierte Parametername angefügt werden soll.
 
-1. Ändern der [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) Definition der Memberfunktion in der CPP-Datei. Hinzufügen von RFX-Funktion für jedes Datenelement für Parameter, die Sie der Klasse hinzugefügt. Weitere Informationen über das Schreiben eigener RFX-Funktionen finden Sie unter [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Geben Sie vor der RFX-Aufrufe für die Parameter mit einem einzigen Aufruf:
+1. Ändern der [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) Definition der Memberfunktion in der CPP-Datei. Hinzufügen von RFX-Funktion für jedes Datenelement für Parameter, die Sie der Klasse hinzugefügt. Weitere Informationen über das Schreiben eigener RFX-Funktionen finden Sie unter [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Geben Sie vor der RFX-Aufrufe für die Parameter mit einem einzigen Aufruf:
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -123,7 +123,7 @@ Vor der Erstellung des Recordset-Klasse zu bestimmen, welche Parameter Sie benö
 
 1. Erhöhen Sie im Konstruktor des Recordset-Klasse, die Anzahl von Parametern, `m_nParams`.
 
-   Weitere Informationen finden Sie unter [Datensatzfeldaustausch: Arbeiten mit Assistenten-Code](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
+   Weitere Informationen finden Sie unter [Record Field Exchange: Arbeiten mit Assistenten-Code](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
 
 1. Wenn Sie den Code, die einem Recordset-Objekt dieser Klasse erstellt schreiben, platzieren ein "?" (Fragezeichen) Symbol an jeder Stelle in Ihrer SQL-Anweisung-Zeichenfolgen, in denen ein Parameter ist, ersetzt werden.
 
@@ -176,5 +176,5 @@ Das Recordset enthält Datensätze, für die Schüler/Studenten, deren Datensät
 ## <a name="see-also"></a>Siehe auch
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: Hinzufügen, Aktualisieren und Löschen von Datensätzen (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
-[Recordset: Wie Recordsets Datensätze auswählen (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[Recordset: Hinzufügen, aktualisieren und Löschen von Datensätzen (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
+[Recordset: Datensatzauswahl durch Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

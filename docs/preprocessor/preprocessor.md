@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-ms.openlocfilehash: bd139dcbbbe519cc4c9750a657f8b47c5a5bcd18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1443d88fdba470cb8ed5058c9a9012bfbdc5bc7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530962"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028573"
 ---
 # <a name="preprocessor"></a>Präprozessor
 Der Präprozessor ist ein Textprozessor, der den Text einer Quelldatei im Rahmen der ersten Übersetzungsphase bearbeitet. Der Präprozessor analysiert den Quelltext zwar nicht, teilt ihn jedoch in Token auf, um Makroaufrufe zu finden. Obwohl der Compiler den Präprozessor normalerweise im ersten Durchlauf aufruft, kann der Präprozessor auch separat aufgerufen werden, um Text ohne Kompilierung zu verarbeiten.
 
 Das Referenzmaterial zum Präprozessor enthält die folgenden Abschnitte:
 
-- [Präprozessoranweisungen](../preprocessor/preprocessor-directives.md)
+- [Präprozessordirektiven](../preprocessor/preprocessor-directives.md)
 
 - [Präprozessor-Operatoren](../preprocessor/preprocessor-operators.md)
 
@@ -26,13 +26,13 @@ Das Referenzmaterial zum Präprozessor enthält die folgenden Abschnitte:
 
 **Microsoft-spezifisch**
 
-Sie erhalten eine Liste des Quellcodes nach der vorverarbeitung mithilfe der [/e](../build/reference/e-preprocess-to-stdout.md) oder [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) -Compileroption. Beide Optionen rufen den Präprozessor auf und geben den daraus resultierenden Text auf dem Standardausgabegerät aus, was in den meisten Fällen die Konsole ist. Der Unterschied zwischen beiden Optionen ist, dass /E `#line`-Anweisungen enthält und /EP diese Anweisungen entfernt.
+Sie erhalten eine Liste des Quellcodes nach der vorverarbeitung mithilfe der [/e](../build/reference/e-preprocess-to-stdout.md) oder [/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) -Compileroption. Beide Optionen rufen den Präprozessor auf und geben den daraus resultierenden Text auf dem Standardausgabegerät aus, was in den meisten Fällen die Konsole ist. Der Unterschied zwischen beiden Optionen ist, dass /E `#line`-Direktive enthält und /EP diese Direktive entfernt.
 
 **Ende Microsoft-spezifisch**
 
 ##  <a name="_predir_special_terminology"></a> Besondere Terminologie
 
-In der Präprozessordokumentation bezieht sich der Begriff „Argument“ auf die Entität, die an eine Funktion übergeben wird. In einigen Fällen wird diese durch "tatsächlich" oder "formal" modifiziert, womit der Argumentausdruck, der im Funktionsaufruf angegeben wird, bzw. die Argumentdeklaration, die in der Funktionsdefinition festgelegt wird, beschrieben wird.
+In der Präprozessordokumentation bezieht sich der Begriff "Argument" auf die Entität, die an eine Funktion übergeben wird. In einigen Fällen wird diese durch "tatsächlich" oder "formal" modifiziert, womit der Argumentausdruck, der im Funktionsaufruf angegeben wird, bzw. die Argumentdeklaration, die in der Funktionsdefinition festgelegt wird, beschrieben wird.
 
 Der Begriff "Variable" bezeichnet ein einfaches C-Datenobjekt. Der Begriff "Objekt" verweist auf beides, C++-Objekte und Variablen. Es handelt sich um einen inklusiven Begriff.
 

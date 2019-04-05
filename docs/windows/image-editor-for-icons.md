@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328427"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041548"
 ---
 # <a name="image-editor-for-icons-c"></a>Bildbearbeitung für Symbole (C++)
 
@@ -89,7 +89,7 @@ Die **Image** Menü wird, nur, wenn angezeigt die **Bild-Editor** aktiv ist, ent
 |**Neuer Bildtyp**|Öffnet die [neu \<Gerät > Bildtyp (Dialogfeld)](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Eine einzelnes Symbol-Ressource kann mehrere Images mit verschiedenen Größen enthalten, und Windows können der Größe der entsprechenden Symbole je nachdem, wie sich das alles angezeigt werden soll. Ein neuer Gerätetyp nicht ändert die Größe des Symbols, aber stattdessen erstellt ein neues Image innerhalb des Symbols. Gilt nur für Symbole und Cursor.|
 |**Aktuelle Symbol/Cursorbildtyp**|Öffnet ein Untermenü, in der die ersten neun verfügbaren Cursor oder ein Symbol-Images aufgeführt. Klicken Sie im Untermenü mit dem letzten Befehl **weitere**, öffnet der [öffnen \<Gerät > Bild (Dialogfeld)](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
 |**Bildtyp löschen**|Löscht das Image des ausgewählten Geräts an.|
-|**Extras**|Öffnet ein Untermenü, das alle verfügbaren aus Tools enthält die **Bildbearbeitung** Symbolleiste.|
+|**Tools**|Öffnet ein Untermenü, das alle verfügbaren aus Tools enthält die **Bildbearbeitung** Symbolleiste.|
 
 Die **Rastereinstellungen** Dialogfeld können Sie die Einstellungen für das Image angeben und Gitternetzlinien angezeigt, auf das Bild bearbeitet. Die Zeilen sind nützlich für das Abbild zu bearbeiten, aber nicht als Teil des Bilds selbst gespeichert.
 
@@ -97,8 +97,8 @@ Die **Rastereinstellungen** Dialogfeld können Sie die Einstellungen für das Im
 |---|---|
 |**Pixelraster**|Wenn diese Option aktiviert ist, zeigt ein Raster an, um jedes Pixel in der **Bildbearbeitung**.<br/><br/>Das Raster, die nur auf 4 × und höherer Auflösung angezeigt wird.|
 |**Linienraster**|Bei Auswahl dieser Option zeigt ein Raster an, um Blöcke von Pixeln in der **Bildbearbeitung**, durch die Werte der Raster-Abstand angegeben.|
-|**Width**|Gibt die Breite jedes Blocks Kachel.<br/><br/>Diese Eigenschaft ist nützlich, beim Zeichnen von Bitmaps, enthält mehrere Images, die in regelmäßigen Abständen angeordnet sind.|
-|**Height**|Gibt die Höhe jedes Blocks Kachel.<br/><br/>Diese Eigenschaft ist nützlich, beim Zeichnen von Bitmaps, enthält mehrere Images, die in regelmäßigen Abständen angeordnet sind.|
+|**Breite**|Gibt die Breite jedes Blocks Kachel.<br/><br/>Diese Eigenschaft ist nützlich, beim Zeichnen von Bitmaps, enthält mehrere Images, die in regelmäßigen Abständen angeordnet sind.|
+|**Höhe**|Gibt die Höhe jedes Blocks Kachel.<br/><br/>Diese Eigenschaft ist nützlich, beim Zeichnen von Bitmaps, enthält mehrere Images, die in regelmäßigen Abständen angeordnet sind.|
 
 ## <a name="toolbar"></a>Symbolleiste
 
@@ -143,7 +143,7 @@ Um dieses Dialogfeld zuzugreifen, wählen die **Schriftart** Schaltfläche der *
 |---|---|
 |**Schriftart**|Listet die verfügbaren Schriftarten an.|
 |**Schriftschnitt**|Listet die verfügbaren Formate für die angegebene Schriftart an.|
-|**Size**|Listet die verfügbaren Punktgrößen für die angegebene Schriftart an.|
+|**Größe**|Listet die verfügbaren Punktgrößen für die angegebene Schriftart an.|
 |**Beispiel**|Zeigt ein Beispiel, wie Text mit den Einstellungen für die angegebene Schriftart angezeigt wird.|
 |**Skript**|Listet die verfügbaren Sprachskripts für die angegebene Schriftart.<br/><br/>Wenn Sie ein Skript für die andere Sprache auswählen, wird der Zeichensatz für, dass die Sprache für die Erstellung von multilingual Dokumente verfügbar.|
 

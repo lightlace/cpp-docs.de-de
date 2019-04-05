@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-ms.openlocfilehash: 2d356cf7426c558c8ac0312eff02c0cb9de9c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e470fc12ad47aa156c513b293543fa356398d5e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544299"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031133"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 
@@ -30,12 +30,12 @@ void __svm_invlpga(void *Va, int ASID);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*VA*|[in] Die virtuelle Adresse der Seite für ungültig erklärt werden soll.|
+|*Va*|[in] Die virtuelle Adresse der Seite für ungültig erklärt werden soll.|
 |*ASID*|[in] Die Adresse Speicherplatz Bezeichner (ASID) der Seite für ungültig erklärt.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die `__svm_invlpga` -Funktion entspricht der `INVLPGA` -Computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593, Version 3.11, auf die [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) Standort.
+Die `__svm_invlpga` -Funktion entspricht der `INVLPGA` -Computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: "System Programming," Dokumentnummer 24593, Version 3.11, auf die [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) Standort.
 
 ## <a name="requirements"></a>Anforderungen
 

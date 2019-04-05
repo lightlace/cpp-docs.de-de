@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - record views, customizing default code
 ms.assetid: 91f2828f-0666-4273-ae28-e4703fd98521
-ms.openlocfilehash: a051394fd79dfb84801a1fb9e700a7ce49ed1c7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d64fc26e1c78bad0431bc9b10dd5117c4866159
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605178"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029355"
 ---
 # <a name="using-a-record-view--mfc-data-access"></a>Verwenden einer Datensatzansicht (MFC-Datenzugriff)
 

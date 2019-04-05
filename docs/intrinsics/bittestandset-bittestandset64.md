@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _bittestandset intrinsic
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-ms.openlocfilehash: 95acb833b05b67e7781973d6b3bd6fdcfe97615b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dadeeae23b1808bbee13940727a3bdbace1dad54
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513021"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028586"
 ---
 # <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
 
@@ -39,10 +39,10 @@ unsigned char _bittestandset64(
 
 #### <a name="parameters"></a>Parameter
 
-*a*<br/>
+*eine*<br/>
 [in, out] Ein Zeiger auf den zu untersuchenden Speicher.
 
-*b*<br/>
+*k*<br/>
 [in] Die zu testende Bitposition.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -53,7 +53,7 @@ Das Bit an der angegebenen Position.
 
 |Systemintern|Architektur|
 |---------------|------------------|
-|`_bittestandset`|X86, ARM, x64|
+|`_bittestandset`|x86, ARM, x64|
 |`_bittestandset64`|x64|
 
 **Headerdatei** \<intrin.h >

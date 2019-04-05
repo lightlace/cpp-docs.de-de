@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815878"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025097"
 ---
 # <a name="attribute-programming-faq"></a>Fragen und Antworten zur attributierten Programmierung
 
@@ -40,7 +40,7 @@ In diesem Thema werden die folgenden häufig gestellten Fragen beantwortet:
 
 Ein HRESULT ist ein einfacher Datentyp, der häufig als Rückgabewert von Attributen und ATL im Allgemeinen verwendet wird. Die folgende Tabelle beschreibt die verschiedenen Werte. Weitere Werte sind in den Header-Datei "Winerror.h" enthalten.
 
-|name|Beschreibung|Wert|
+|Name|Beschreibung|Wert|
 |----------|-----------------|-----------|
 |S_OK|Vorgang erfolgreich|0x00000000|
 |E_UNEXPECTED|Unerwarteter Fehler|0x8000FFFF|
@@ -84,12 +84,12 @@ Die folgenden Attribute haben jedoch eine einzelne, unbenannte Parameter:
 |[default](default-cpp.md)|[defaultvalue](defaultvalue.md)|[defaultvtable](defaultvtable.md)|
 |[emitidl](emitidl.md)|[entry](entry.md)|[first_is](first-is.md)|
 |[helpcontext](helpcontext.md)|[helpfile](helpfile.md)|[helpstring](helpstring.md)|
-|[helpstringcontext](helpstringcontext.md)|[helpstringdll](helpstringdll.md)|[ID](id.md)|
+|[helpstringcontext](helpstringcontext.md)|[helpstringdll](helpstringdll.md)|[id](id.md)|
 |[iid_is](iid-is.md)|[import](import.md)|[importlib](importlib.md)|
 |[include](include-cpp.md)|[includelib](includelib-cpp.md)|[last_is](last-is.md)|
 |[length_is](length-is.md)|[max_is](max-is.md)|[no_injected_text](no-injected-text.md)|
 |[pointer_default](pointer-default.md)|[pragma](pragma.md)|[restricted](restricted.md)|
-|[size_is](size-is.md)|[source](source-cpp.md)|[switch_is](switch-is.md)|
+|[size_is](size-is.md)|[Quelle](source-cpp.md)|[switch_is](switch-is.md)|
 |[switch_type](switch-type.md)|[transmit_as](transmit-as.md)|[wire_marshal](wire-marshal.md)|
 
 ##  <a name="vcconattributeprogrammmingfaqanchor3"></a> Kann ich Kommentare in einem Attributblock verwenden?

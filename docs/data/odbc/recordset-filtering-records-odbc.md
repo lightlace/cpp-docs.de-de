@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 47ac2b83df4da5fcfe0cbe5e9546571a50ecdfac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514750"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041214"
 ---
 # <a name="recordset-filtering-records-odbc"></a>Recordset: Filtern von Datensätzen (ODBC)
 
@@ -82,15 +82,15 @@ Beachten Sie die Verwendung der einfachen Anführungszeichen ein. Wenn Sie die F
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-Der ODBC-Spezifikation entspricht der Verwendung der Anführungszeichen, aber einige DBMS-Systeme möglicherweise andere Anführungszeichen erforderlich. Weitere Informationen finden Sie unter [SQL: Anpassen eines Recordsets SQL-Anweisung (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Der ODBC-Spezifikation entspricht der Verwendung der Anführungszeichen, aber einige DBMS-Systeme möglicherweise andere Anführungszeichen erforderlich. Weitere Informationen finden Sie unter [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 > [!NOTE]
->  Möchten Sie das Recordset Standard-SQL-Zeichenfolge zu überschreiben, indem Sie eine eigene SQL-Zeichenfolge zu übergeben `Open`, einen Filter sollte nicht festgelegt werden, wenn die benutzerdefinierte Zeichenfolge enthält eine **, in denen** Klausel. Weitere Informationen zum Überschreiben der Standard-SQL finden Sie unter [SQL: Anpassen eines Recordsets SQL-Anweisung (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+>  Möchten Sie das Recordset Standard-SQL-Zeichenfolge zu überschreiben, indem Sie eine eigene SQL-Zeichenfolge zu übergeben `Open`, einen Filter sollte nicht festgelegt werden, wenn die benutzerdefinierte Zeichenfolge enthält eine **, in denen** Klausel. Weitere Informationen zum Überschreiben der Standard-SQL finden Sie unter [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset: Sortieren von Datensätzen (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[Recordset: Wie Recordsets Datensätze auswählen (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Recordset: Wie Recordsets Datensätze aktualisieren (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Recordset: Datensatzauswahl durch Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Recordset: Datensatzaktualisierung durch Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [Recordset: Sperren von Datensätzen (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

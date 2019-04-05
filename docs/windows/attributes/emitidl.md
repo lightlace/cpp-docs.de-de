@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-ms.openlocfilehash: 4270c760c0d9d0ab833ee96dfbbaa9d6205026f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c4055e0f14bced1e5047fc502a4bf274126f804
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437948"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031633"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -25,7 +25,7 @@ Gibt an, ob alle nachfolgenden IDL-Attribute verarbeitet und in der generierten 
 
 ### <a name="parameters"></a>Parameter
 
-*state*<br/>
+*-Zustand*<br/>
 Einen der folgenden Werte möglich: `true`, `false`, `forced`, `restricted`, `push`, oder `pop`.
 
 - Wenn `true`, die IDL-Attribute, Kategorie bei der eine Quellcodedatei in der generierten IDL-Datei platziert werden. Dies ist die Standardeinstellung für **Emitidl**.
@@ -38,7 +38,7 @@ Einen der folgenden Werte möglich: `true`, `false`, `forced`, `restricted`, `pu
 
 - `push` ermöglicht Ihnen das Speichern Sie die aktuelle **Emitidl** Einstellungen, die ein internes **Emitidl** -Stapel und `pop` ermöglicht Ihnen das Festlegen **Emitidl** an einen beliebigen Wert am Anfang der internen **Emitidl** Stapel.
 
-`defaultimports=`*boolesche* \(optional)
+`defaultimports=`*boolean* \(optional)
 
 - Wenn *booleschen* ist **"true"**, docobj.idl in der generierten IDL-Datei importiert wird. Auch wenn es sich bei eine IDL-Datei mit dem gleichen Namen wie ein h, die Sie `#include` in Ihrer Quelle Code finden Sie im gleichen Verzeichnis wie der h-Datei, und klicken Sie dann die generierten IDL-Datei enthält eine Import-Anweisung für diese IDL-Datei.
 

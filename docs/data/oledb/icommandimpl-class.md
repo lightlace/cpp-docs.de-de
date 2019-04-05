@@ -52,12 +52,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: e1f461cc850a2122af7902babfad8f1e14ac3e33
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d890b62e4e4aabb9f8ca7ebb9d3051c53febd91f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424846"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026791"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl-Klasse
 
@@ -88,10 +88,10 @@ Eine Befehlsschnittstelle. Die Standardeinstellung ist `ICommand`.
 
 |||
 |-|-|
-|[Kündigung](#cancel)|Bricht die Ausführung des aktuellen Befehls ab.|
+|[Abbrechen](#cancel)|Bricht die Ausführung des aktuellen Befehls ab.|
 |[CancelExecution](#cancelexecution)|Bricht die Ausführung des aktuellen Befehls ab.|
 |[CreateRowset](#createrowset)|Erstellt ein Rowsetobjekt.|
-|[Execute](#execute)|Führt den Befehl.|
+|[Ausführen](#execute)|Führt den Befehl.|
 |[GetDBSession](#getdbsession)|Gibt einen Schnittstellenzeiger zurück, mit der Sitzung, die den Befehl erstellt haben.|
 |[ICommandImpl](#icommandimpl)|Der Konstruktor.|
 
@@ -277,5 +277,5 @@ Die `Execute` -Methode der Ihre Befehlsklasse kann diese Variable festlegen, um 
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

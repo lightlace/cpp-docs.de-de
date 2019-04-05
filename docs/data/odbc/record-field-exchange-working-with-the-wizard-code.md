@@ -15,12 +15,12 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: c0e1a35e5476c9e2e335c6f2863429d89e4fa28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492117"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041292"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Datensatzfeldaustausch: Arbeiten mit Assistenten-Code
 
@@ -99,7 +99,7 @@ Beachten Sie, dass die folgenden Funktionen der Funktion:
 
 - Ein Aufruf von `CFieldExchange::SetFieldType`, über die `pFX` Zeiger. Dieser Aufruf gibt an, dass alle RFX-Funktion am Ende der aufgerufenen `DoFieldExchange` oder beim nächsten Aufruf von `SetFieldType` Ausgabespalten sind. Weitere Informationen finden Sie unter [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-- Mehrere Aufrufe der `RFX_Text` globale Funktion – eine pro Felddatenmember (alle sind `CString` Variablen im Beispiel). Diese Aufrufe geben Sie die Beziehung zwischen den Namen einer Spalte in der Datenquelle und ein Felddatenmember. Die RFX-Funktionen ist die tatsächliche Datenübertragung. Die Klassenbibliothek stellt RFX-Funktionen für die allgemeine Datentypen. Weitere Informationen über RFX-Funktionen finden Sie unter [Datensatzfeldaustausch: Verwenden der RFX-Funktionen](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
+- Mehrere Aufrufe der `RFX_Text` globale Funktion – eine pro Felddatenmember (alle sind `CString` Variablen im Beispiel). Diese Aufrufe geben Sie die Beziehung zwischen den Namen einer Spalte in der Datenquelle und ein Felddatenmember. Die RFX-Funktionen ist die tatsächliche Datenübertragung. Die Klassenbibliothek stellt RFX-Funktionen für die allgemeine Datentypen. Weitere Informationen über RFX-Funktionen finden Sie unter [Record Field Exchange: Verwenden der RFX-Funktionen](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
 
     > [!NOTE]
     >  Die Reihenfolge der Spalten im Resultset muss die Reihenfolge der Aufrufe der RFX-Funktionen in entsprechen `DoFieldExchange`.

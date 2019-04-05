@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 0a13fb05f0e6e8582d5e476eb889e307458f528d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767300"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037730"
 ---
 # <a name="working-with-resource-files"></a>Arbeiten mit Ressourcendateien
 
@@ -41,7 +41,7 @@ Globalisieren und Lokalisieren von Ressourcen in verwalteten apps, finden Sie un
 [Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
 Beschreibt, Ressourcendateien und wie sie in der Windows-desktop-Anwendungen verwendet werden. Außerdem bietet Links zu Artikeln, die beschreiben, wie die Ressourcendateien verwendet.
 
-[Ressourcenbezeichner (Symbole)](../windows/symbols-resource-identifiers.md)<br/>
+[Ressourcen-IDs (Symbole)](../windows/symbols-resource-identifiers.md)<br/>
 Beschreiben Symbole und bieten Informationen zur Verwendung des Dialogfelds **Ressourcensymbole** , um Symbole in Ihren Projekten zu verwalten.
 
 [Ressourcen-Editor](../windows/resource-editors.md)<br/>
@@ -52,10 +52,10 @@ Beschreibt die Ressourcen-Editoren, bereitgestellt in Visual Studio und die Arte
 [Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 Enthält Links zur Visual C++-Dokumentation
 
-[Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)<br/>
+[Talk to Us](/visualstudio/ide/talk-to-us)<br/>
 Bietet Links zu Informationen über die Verwendung des Dokumentationssatzes, Support-Kontaktdaten sowie über die Bereitstellung von Barrierefreiheitsfunktionen.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Windows-Desktop-Anwendungen](../windows/windows-desktop-applications-cpp.md)<br/>
+[Windows-Desktopanwendungen](../windows/windows-desktop-applications-cpp.md)<br/>
 [Menüs und weitere Ressourcen](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

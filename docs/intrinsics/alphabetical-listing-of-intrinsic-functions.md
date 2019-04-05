@@ -6,12 +6,12 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 83b254b67cb2a7e09fbf57597996097a7afb5d76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654766"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026197"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Alphabetische Liste der intrinsischen Funktionen
 
@@ -77,13 +77,13 @@ Die folgenden Abschnitte beschreiben die Microsoft-spezifischen intrinsischen Fu
 
 [Intrinsische Funktionen „_interlockedbittestandreset“](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_interlockedbittestandset“](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[Systeminterne Funktionen „_interlockedbittestandset“](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_InterlockedCompareExchange“](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
+[Systeminterne Funktionen "_InterlockedCompareExchange"](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)
 
-[Intrinsische Funktionen „_InterlockedCompareExchangePointer“](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
+[Systeminterne Funktionen „_InterlockedCompareExchangePointer“](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
 
 [Intrinsische Funktionen „_InterlockedDecrement“](../intrinsics/interlockeddecrement-intrinsic-functions.md)
 
@@ -97,7 +97,7 @@ Die folgenden Abschnitte beschreiben die Microsoft-spezifischen intrinsischen Fu
 
 [Intrinsische Funktionen „_InterlockedOr“](../intrinsics/interlockedor-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_InterlockedXor“](../intrinsics/interlockedxor-intrinsic-functions.md)
+[Systeminterne Funktionen „_InterlockedXor“](../intrinsics/interlockedxor-intrinsic-functions.md)
 
 [__invlpg](../intrinsics/invlpg.md)
 
@@ -137,7 +137,7 @@ Die folgenden Abschnitte beschreiben die Microsoft-spezifischen intrinsischen Fu
 
 [__movsw](../intrinsics/movsw.md)
 
-[_mul128](../intrinsics/mul128.md)
+[__mul128](../intrinsics/mul128.md)
 
 [__mulh](../intrinsics/mulh.md)
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_auto_exclude attribute
 ms.assetid: 3241ef9c-758a-4e86-bdc5-37da6072430f
-ms.openlocfilehash: 04e3b261e24bbe9870a6d3fc428cd68e8c1a8132
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bde7535bd181057750ab9dd4c3999321b4990c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537630"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038941"
 ---
 # <a name="noautoexclude"></a>no_auto_exclude
 **C++-spezifisch**
@@ -26,7 +26,7 @@ no_auto_exclude
 
 ## <a name="remarks"></a>Hinweise
 
-Typbibliotheken können Definitionen der Elemente enthalten, die in Systemheadern oder anderen Typbibliotheken definiert sind. `#import` versucht, mehrfache Definitionsfehler dadurch zu vermeiden, dass solche Elemente automatisch ausgeschlossen werden. Wenn dies abgeschlossen ist, [Compilerwarnung (Stufe 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) für die einzelnen Elemente ausgeschlossen werden ausgegeben. Sie können diesen automatischen Ausschluss deaktivieren, indem Sie dieses Attribut verwenden.
+Typbibliotheken können Definitionen der Elemente enthalten, die in Systemheadern oder anderen Typbibliotheken definiert sind. `#import` versucht, mehrfache definitionsfehler zu vermeiden, indem Sie solche Elemente automatisch ausgeschlossen. Wenn dies abgeschlossen ist, [Compilerwarnung (Stufe 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) für die einzelnen Elemente ausgeschlossen werden ausgegeben. Sie können diesen automatischen Ausschluss deaktivieren, indem Sie dieses Attribut verwenden.
 
 **Ende C++-spezifisch**
 

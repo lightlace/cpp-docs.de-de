@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cl.exe compiler, attributes
 - attributes [C++/CLI], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
-ms.openlocfilehash: 8fef953a520572b42e69a48ea391282c7b70ba44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea4d3119a640c0642664210384c297e011104411
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667362"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030816"
 ---
 # <a name="compiler-attributes"></a>Compilerattribute
 
@@ -21,7 +21,7 @@ Compilerattribute bieten eine Vielzahl von Funktionen.
 |[emitidl](emitidl.md)|Bestimmt, ob alle nachfolgenden IDL-Attribute verarbeitet und in der generierten IDL-Datei platziert werden.|
 |[event_receiver](event-receiver.md)|Erstellt einen Ereignisempfänger an.|
 |[event_source](event-source.md)|Erstellt eine Ereignisquelle.|
-|[export](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
+|["export"](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
 |[implements](implements-cpp.md)|Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse angehören.|
 |[importidl](importidl.md)|Fügt die angegebenen IDL-Datei in der generierten IDL-Datei an.|
 |[importlib](importlib.md)|Stellt Typen, die bereits in einer anderen Typbibliothek kompiliert wurden, der erstellten Typbibliothek zur Verfügung.|

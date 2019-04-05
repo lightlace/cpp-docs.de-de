@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: b8e7de569a8310fdad0273ae70449d2da544f6e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482744"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024594"
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Recordset: Erneutes Abfragen eines Recordsets (ODBC)
 
@@ -29,7 +29,7 @@ Die Hauptgründe für erneutes Abfragen eines Recordsets sind:
 
 ##  <a name="_core_bringing_the_recordset_up_to_date"></a> Aktualisieren des Recordsets bis Datum
 
-In vielen Fällen möchten Sie das Recordset-Objekt, um es anzuzeigen requery auf dem neuesten Stand. In einer Mehrbenutzer-Datenbank-Umgebung können andere Benutzer die Daten während der Lebensdauer eines Recordsets ändern. Weitere Informationen zu wann das Recordset von anderen Benutzern vorgenommene Änderungen widerspiegelt, und wenn Recordsets anderer Benutzer die Änderung zu reflektieren, finden Sie unter [Recordset: wie Recordsets Update Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) und [Dynaset](../../data/odbc/dynaset.md).
+In vielen Fällen möchten Sie das Recordset-Objekt, um es anzuzeigen requery auf dem neuesten Stand. In einer Mehrbenutzer-Datenbank-Umgebung können andere Benutzer die Daten während der Lebensdauer eines Recordsets ändern. Weitere Informationen zu wann das Recordset von anderen Benutzern vorgenommene Änderungen widerspiegelt, und wenn Recordsets anderer Benutzer die Änderung zu reflektieren, finden Sie unter [Recordset: Datensatzaktualisierung durch Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) und [Dynaset](../../data/odbc/dynaset.md).
 
 ##  <a name="_core_requerying_based_on_new_parameters"></a> Erneutes Abfragen basierend auf neuen Parametern
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 519bbe0bdbef786c95ca3f6711b344b7a4f6b641
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329883"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033682"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -26,7 +26,7 @@ Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse ang
 
 ### <a name="parameters"></a>Parameter
 
-*interfaces*<br/>
+*Schnittstellen*<br/>
 Eine durch Trennzeichen getrennte Liste von Schnittstellen, die ein Mitglied der IDL-Co-Klasse. Ist eine kurzmethode zur Angabe einer einzelnen Schnittstelle **implementiert (** *Interface_name* **)**.
 
 *Disp-Schnittstellen*<br/>
@@ -42,7 +42,7 @@ In der Standardeinstellung nur COM-Schnittstellen, sind die Basisklassen von der
 
 |||
 |-|-|
-|**Betrifft**|**Klasse**, **Struktur**|
+|**Betrifft**|**class**, **struct**|
 |**Wiederholbar**|Ja|
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|

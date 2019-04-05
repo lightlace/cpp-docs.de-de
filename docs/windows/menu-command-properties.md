@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 62249bff7a278963ea67b2d2015ff52f22fcfc85
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562925"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026278"
 ---
 # <a name="menu-commands-c"></a>Befehle im Menü (C++)
 
@@ -35,7 +35,7 @@ Die folgenden Informationen sind entsprechend so aufgebaut, dass die **Menü** E
 |**Aktiviert**|Wenn **"true"**, der Menübefehl zu Beginn aktiviert ist. Typ: **Bool**. Standard: **"False"**.|
 |**Aktiviert**|Wenn **FALSE**, ist das Menüelement deaktiviert.|
 |**Grau**|Wenn **"true"**, ist der Menübefehl, Beginn grau dargestellt und inaktiv. Typ: **Bool**. Standard: **"False"**.|
-|**Hilfe**|Richtet das Menüelement rechtsbündig aus. Standard: **"False"**.<br/><br/>Der Menübefehl für die **Hilfe** befindet sich beispielsweise in allen Windows-Anwendungen immer ganz rechts. Wenn Sie diese Eigenschaft für ein Menüelement festlegen, wird das Element ganz rechts am Ende des Menüs angezeigt. Bezieht sich auf Elemente des Hauptmenüs.|
+|**Help**|Richtet das Menüelement rechtsbündig aus. Standard: **"False"**.<br/><br/>Der Menübefehl für die **Hilfe** befindet sich beispielsweise in allen Windows-Anwendungen immer ganz rechts. Wenn Sie diese Eigenschaft für ein Menüelement festlegen, wird das Element ganz rechts am Ende des Menüs angezeigt. Bezieht sich auf Elemente des Hauptmenüs.|
 |**ID**|Ein Symbol, das in der Headerdatei definiert ist. Typ: **Symbol**, **Ganzzahl**, oder **Zeichenfolge in Anführungszeichen**.<br/><br/>Sie können ein beliebiges Symbol verwenden, das üblicherweise in den Editoren verfügbar ist. Dies gilt auch, wenn das [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window) keine Dropdownliste enthält, aus der Sie auswählen können.|
 |**Popup**|Wenn **"true"**, der Menübefehl ist ein Popup-Menü. Typ: **Bool**. Standard: **"True"** für Menüs der obersten Ebene in einer Menüleiste, andernfalls **"false"**.|
 |**Eingabeaufforderung**|Enthält Text, der in der Statusleiste angezeigt werden soll, wenn dieser Menübefehl markiert wird. Der Text wird mit dem Bezeichner des Menübefehls in der Zeichenfolgentabelle gespeichert.<br/><br/>Diese Eigenschaft ist für jeden Projekttyp verfügbar, wobei die Laufzeitfunktionalität jedoch MFC-spezifisch ist.|

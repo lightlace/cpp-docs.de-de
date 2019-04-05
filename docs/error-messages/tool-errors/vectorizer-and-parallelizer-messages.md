@@ -8,20 +8,20 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 69e174a000edfea7027a04f9cf97bf5a1aeb585e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518762"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023905"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Vectorizer- and Parallelizer-Meldungen
 
 Können Sie die Visual C++-Compileroptionen [/qpar-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) und [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) Festlegen der [automatische Parallelisierung und automatische Vektorisierung](../../parallel/auto-parallelization-and-auto-vectorization.md) zu Ursachencodes und informationsmeldungen über ihre Aktivitäten. Dieser Artikel beschreibt die Ursachencodes und Nachrichten.
 
-- [Informationsmeldungen](#BKMK_InformationalMessages)
+- [Informationsnachrichten](#BKMK_InformationalMessages)
 
-- ["5xx"](#BKMK_ReasonCode50x)
+- [5xx](#BKMK_ReasonCode50x)
 
 - [10xx](#BKMK_ReasonCode100x)
 
@@ -53,7 +53,7 @@ Informationen zu Ursachencodes finden Sie im nächsten Teil dieses Artikels.
 
 Die folgenden Abschnitte enthalten mögliche Ursachencodes für den Auto-Parallelisierer und den Auto-Vektorisierer.
 
-###  <a name="BKMK_ReasonCode50x"></a> "5xx"
+###  <a name="BKMK_ReasonCode50x"></a> 5xx
 
 Die 5*Xx* -Ursachencodes gelten für den Auto-parallelisierer und den Auto-vektorisierer.
 
@@ -985,6 +985,6 @@ void code_1505(int *A, int *B)
 [Automatische Parallelisierung und automatische Vektorisierung](../../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
 [Parallele Programmierung in systemeigenem Code](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
 [#pragma loop()](../../preprocessor/loop.md)<br/>
-[/Q-Optionen (Vorgänge auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)<br/>
-[/Qpar-report (Berichtebene der automatischen Parallelisierung)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
-[/Qvec-report (Berichtebene der automatischen Vektorisierung)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+[/Q-Optionen (Operationen auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)<br/>
+[/Qpar-report (Auto-Parallelizer-Berichtsebene)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[/Qvec-report (Auto-Vectorizer-Berichtsebene)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

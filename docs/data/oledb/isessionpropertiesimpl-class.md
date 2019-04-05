@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 7b9f402d9b1c45c2fa10c1128afd271229036f88
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ed8b7a271bc6ac234fc9276d6c88d26848da24f8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420777"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039571"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl-Klasse
 
@@ -93,5 +93,5 @@ Finden Sie unter [ISessionProperties::SetProperties](/previous-versions/windows/
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

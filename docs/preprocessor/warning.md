@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631721"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037749"
 ---
 # <a name="warning-pragma"></a>warning-Pragma
 Aktiviert die selektive Änderung des Verhaltens der Compilerwarnmeldungen.
@@ -37,12 +37,12 @@ Die folgenden Parameter für Warnungsbezeichner stehen zur Verfügung.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Wenden Sie die angegebene Ebene auf die angegebenen Warnung(en) an. Dadurch aktiviert sich auch eine angegebene Warnung, die standardmäßig deaktiviert ist.|
 |*default*|Setzen Sie das Warnverhalten auf den Standardwert zurück. Dadurch aktiviert sich auch eine angegebene Warnung, die standardmäßig deaktiviert ist. Die Warnung wird auf der standardmäßigen dokumentierten Ebene generiert.<br /><br /> Weitere Informationen finden Sie unter [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*disable*|Geben Sie die angegebene(n) Warnung(en) nicht aus.|
-|*Fehler*|Melden Sie die angegebenen Warnungen als Fehler.|
+|*Deaktivieren*|Geben Sie die angegebene(n) Warnung(en) nicht aus.|
+|*error*|Melden Sie die angegebenen Warnungen als Fehler.|
 |*once*|Zeigen Sie die angegebene(n) Meldung(en) nur einmal an.|
 |*Unterdrücken*|Schiebt den aktuellen Zustand des Pragmas auf den Stapel, deaktiviert die angegebene Warnung für die nächste Zeile und ruft dann den Warnungsstapel auf, sodass der Pragmazustand zurückgesetzt wird.|
 
-Die folgende Codeanweisung veranschaulicht, dass ein Parameter `warning-number-list` mehrere Warnungsnummern enthalten kann und dass mehrere Parameter `warning-specifier` in der gleichen Pragmadirektive angegeben werden können.
+Die folgende Codeanweisung veranschaulicht, dass ein Parameter `warning-number-list` mehrere Warnungsnummern enthalten kann und dass mehrere Parameter `warning-specifier` in der gleichen Pragmaanweisung angegeben werden können.
 
 ```cpp
 #pragma warning( disable : 4507 34; once : 4385; error : 164 )

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: a1e5d096b996ef7b8a29c978be8070e3c682387d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d84e9306dcd468153f38cc0c3085b43388e1dbd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662123"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029420"
 ---
 # <a name="assume"></a>__assume
 
@@ -31,7 +31,7 @@ __assume(
 
 #### <a name="parameters"></a>Parameter
 
-*Ausdruck*<br/>
+*expression*<br/>
 Ein beliebiger Ausdruck, von dem angenommen wird, dass er "true" ergibt.
 
 ## <a name="remarks"></a>Hinweise
@@ -43,7 +43,7 @@ Wenn die `__assume`-Anweisung als Widerspruch geschrieben wurde (ein Ausdruck, d
 > [!WARNING]
 >  Ein Programm darf keine ungültige `__assume`-Anweisung an einem erreichbaren Pfad enthalten. Wenn der Compiler eine ungültige `__assume`-Anweisung erreichen kann, kann das Programm möglicherweise ein unvorhersehbares und möglicherweise gefährliches Verhalten verursachen.
 
-`__assume` ist keine echte systeminterne Funktion. Sie muss nicht als Funktion deklariert werden und kann nicht in einer `#pragma intrinsic`-Direktive verwendet werden. Es wird zwar kein Code generiert, der vom Optimierer generierte Code ist jedoch davon betroffen.
+`__assume` ist keine echte systeminterne. Sie muss nicht als Funktion deklariert werden und kann nicht in einer `#pragma intrinsic`-Anweisung verwendet werden. Es wird zwar kein Code generiert, der vom Optimierer generierte Code ist jedoch davon betroffen.
 
 Verwendung `__assume` in einer [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) nur, wenn die Assertion nicht wiederherstellbar ist. Verwenden Sie `__assume` nicht in einer Assert-Anweisung, für die Sie über den folgenden Fehlerwiederherstellungscode verfügen, da der Compiler den Fehlerbehebungscode aus Optimierungsgründen möglicherweise löscht.
 
@@ -55,7 +55,7 @@ Für die Kompatibilität mit früheren Versionen **_assume** ist ein Synonym fü
 
 |Systemintern|Architektur|
 |---------------|------------------|
-|`__assume`|X86, ARM, x64|
+|`__assume`|x86, ARM, x64|
 
 ## <a name="example"></a>Beispiel
 

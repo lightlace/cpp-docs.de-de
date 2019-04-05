@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: 202d5b23a5e2e8e673e3c220b9618cfe6cd4f0d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525605"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034088"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 
@@ -27,12 +27,12 @@ embedded_idl[("param")]
 
 ### <a name="parameters"></a>Parameter
 
-*param*<br/>
+*Parameter*<br/>
 Kann einer von zwei Werten sein:
 
-- **Emitidl**: Typinformationen, die von Typelib importiert werden in der IDL-Datei für das attributierte Projekt generiert vorhanden sein.  Dies ist die Standardeinstellung, die aktiv ist, wenn Sie keinen Parameter für `embedded_idl` angeben.
+- **emitidl**: Typinformationen, die von Typelib importiert werden in der IDL-Datei für das attributierte Projekt generiert vorhanden sein.  Dies ist die Standardeinstellung, die aktiv ist, wenn Sie keinen Parameter für `embedded_idl` angeben.
 
-- **No_emitidl**: Typinformationen, die von Typelib importiert werden nicht in der IDL-Datei für das attributierte Projekt generiert vorhanden sein.
+- **no_emitidl**: Typinformationen, die von Typelib importiert werden nicht in der IDL-Datei für das attributierte Projekt generiert vorhanden sein.
 
 ## <a name="example"></a>Beispiel
 

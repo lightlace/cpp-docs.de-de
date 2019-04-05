@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677369"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037954"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Datenquelle: Programmgesteuertes Konfigurieren einer ODBC-Datenquelle
 
@@ -80,7 +80,7 @@ Die Liste der Attribute in der Form "Schlüsselname=Wert". Diese Zeichenfolgen w
 
 1. Klicken Sie auf **Hinzufügen**.
 
-Hierdurch wird eine Liste der installierten Treiber mit der entsprechenden Beschreibung angezeigt. Verwenden Sie diese Beschreibung der *LpszDriver* Parameter. Verwenden Sie hierbei die vollständige Beschreibung, z. B. "Excel-Dateien (*.xls)", einschließlich der Dateierweiterung und der Klammern, sofern diese in der Beschreibung vorhanden sind.
+Hierdurch wird eine Liste der installierten Treiber mit der entsprechenden Beschreibung angezeigt. Verwenden Sie diese Beschreibung der *LpszDriver* Parameter. Verwenden Sie hierbei die vollständige Beschreibung, z. B. "Excel-Dateien (*.xls)", einschließlich der Dateinamenerweiterung und der Klammern, sofern diese in der Beschreibung vorhanden sind.
 
 Wahlweise kann auch die Registrierung oder, bei 16 Bit-Systemen, die Datei Odbcinst.ini durchsucht werden, die eine Liste aller Treibereinträge und Beschreibungen unter dem Registrierungsschlüssel "ODBC Drivers" enthält bzw. der Abschnitt [ODBC Drivers] in der Datei Odbcinst.ini.
 
@@ -94,7 +94,7 @@ Eine Möglichkeit zum Suchen von Schlüsselnamen und Werte für die *LpszAttribu
 
    - Suchen Sie den Schlüssel für die 32-Bit **HKEY_CURRENT_USER\Software\ODBC\ODBC. Datenquellen INI\ODBC** im linken Bereich.
 
-      Im rechten Fenster werden die Einträge der Form: "Pub: REG_SZ:*<data source name>*", wobei *<data source name>* ist eine Datenquelle, die bereits mit den gewünschten Einstellungen für den Treiber konfiguriert wurde werden sollen zu verwenden. Wählen Sie die Datenquelle, die Sie möchten, die z. b. SQL Server. Die Elemente, die nach der Zeichenfolge "Pub:" sind, die Reihenfolge der Schlüsselname und Wert für die Verwendung in Ihrem *LpszAttributes* Parameter.
+      Im rechten Fenster werden die Einträge der Form: "Pub: REG_SZ:*<data source name>*", wobei *<data source name>* ist eine Datenquelle, die Sie verwenden möchten bereits mit den gewünschten Einstellungen für den Treiber konfiguriert wurde. Wählen Sie die Datenquelle, die Sie möchten, die z. b. SQL Server. Die Elemente, die nach der Zeichenfolge "Pub:" sind, die Reihenfolge der Schlüsselname und Wert für die Verwendung in Ihrem *LpszAttributes* Parameter.
 
    - Suchen Sie den Abschnitt für 16-Bit in der Datei Odbc.ini nach [*\<Datenquellenname >*].
 

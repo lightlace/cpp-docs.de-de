@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: d0b67bae643698b6d4f09a75dd2e4ec6a23a5d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607271"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023866"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -28,7 +28,7 @@ ms.locfileid: "50607271"
 *db_table*<br/>
 Eine Zeichenfolge, die den Namen einer Datenbanktabelle (z. B. "Produkte") angeben.
 
-*name*<br/>
+*Name*<br/>
 (Optional) Der Name des Handles, die Sie verwenden, um die Arbeit mit der Tabelle. Sie müssen diesen Parameter angeben, wenn mehr als eine Zeile mit Ergebnissen zurückgegeben werden soll. **Db_table** generiert eine Variable mit dem angegebenen *Namen* , die verwendet werden kann, um das Rowset zu traversieren oder mehrere Aktionsabfragen auszuführen.
 
 *source_name*<br/>
@@ -68,7 +68,7 @@ Ein Beispiel für dieses Attribut in einer Anwendung verwendet, finden Sie in de
 
 |||
 |-|-|
-|**Betrifft**|**Klasse**, **Struktur**|
+|**Betrifft**|**class**, **struct**|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|

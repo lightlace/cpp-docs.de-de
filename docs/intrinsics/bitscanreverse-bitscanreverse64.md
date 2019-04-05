@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: f1c33f90fc8e44388068f0588d33effd80fc203c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3639aac38f4c7df82cbbdb23ed9038ac86ba2cc0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586419"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021968"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 
@@ -42,7 +42,7 @@ unsigned char _BitScanReverse64(
 *Index*<br/>
 [out] Geladen mit der Bitposition des ersten festgelegten Bits (1) wurde gefunden.
 
-*Maske*<br/>
+*Format*<br/>
 [in] Der 32-Bit oder 64-Bit-Wert zu suchen.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -53,7 +53,7 @@ Ungleich null, wenn `Index` festgelegt wurde, oder null (0), wenn keine festgele
 
 |Systemintern|Architektur|Header|
 |---------------|------------------|------------|
-|`_BitScanReverse`|X86, ARM, x64|\<intrin.h>|
+|`_BitScanReverse`|x86, ARM, x64|\<intrin.h>|
 |`_BitScanReverse64`|ARM, x64||
 
 ## <a name="example"></a>Beispiel

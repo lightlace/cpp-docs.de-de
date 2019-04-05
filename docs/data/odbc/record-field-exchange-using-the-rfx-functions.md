@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-ms.openlocfilehash: 00b995890cf0cced5d06c52c4d702c1c89111dc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489959"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035983"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Datensatzfeldaustausch: Verwenden der RFX-Funktionen
 
@@ -60,7 +60,7 @@ Die Klassenbibliothek stellt RFX-Funktionen für die Übertragung von vielen ver
 |`RFX_Date`|`CTime`|
 
 
-Weitere Informationen finden Sie in der Dokumentation der RFX-Funktionen unter [Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md) in die *Klassenbibliotheksreferenz*. Informationen zur Zuordnung von C++-Datentypen in SQL-Datentypen finden Sie in der Tabelle der ANSI SQL Data-Typen zugeordnet, C++-Datentypen in [SQL: SQL- und C++-Daten-Datentypen (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
+Weitere Informationen finden Sie in der Dokumentation der RFX-Funktionen unter [Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md) in die *Klassenbibliotheksreferenz*. Informationen zur Zuordnung von C++-Datentypen in SQL-Datentypen finden Sie in der Tabelle der ANSI SQL Data-Typen zugeordnet, C++-Datentypen in [SQL: SQL- und C++-Datentypen (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
 ## <a name="see-also"></a>Siehe auch
 

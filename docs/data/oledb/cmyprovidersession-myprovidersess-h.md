@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomSession class in CustomSess.H
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-ms.openlocfilehash: 75d0c8d871ca736be5e2c33829296b2760092e14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cb462aba671e79450e9ee7b8447410252f8edc9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568011"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023463"
 ---
 # <a name="ccustomsession-customsessh"></a>CCustomSession (CustomSess.H)
 
@@ -39,7 +39,7 @@ Das Sitzungsobjekt erbt `IGetDataSource`, `IOpenRowset`, `ISessionProperties`, u
 
 Der Assistent generiert auch drei Sitzungsklassen: `CCustomSessionColSchema`, `CCustomSessionPTSchema`, und `CCustomSessionTRSchema`. Diese Sitzungen werden für Schemarowsets verwendet. Schemarowsets können den Anbieter an Metadaten an den Consumer zurückgegeben, ohne dass die Consumer, die eine Abfrage ausführen oder Daten abrufen muss. Beim Abrufen von Metadaten kann viel schneller als das Suchen eines Anbieters Funktionen sein.
 
-OLE DB-Spezifikation erfordert, dass Anbieter implementieren die `IDBSchemaRowset` unterstützt drei Schema Rowsets Schnittstellentypen: DBSCHEMA_COLUMNS DBSCHEMA_PROVIDER_TYPES und DBSCHEMA_TABLES. Der Assistent generiert die Implementierungen für sämtliche-Schemarowsets. Jede vom Assistenten generierte Klasse enthält eine `Execute` Methode. In diesem `Execute` -Methode können Sie die Daten zurückgeben, an den Anbieter darüber, welche Tabellen, Spalten und Datentypen, die Sie unterstützen. Diese Daten werden zum Zeitpunkt der Kompilierung bezeichnet.
+OLE DB-Spezifikation erfordert, dass Anbieter implementieren die `IDBSchemaRowset` Schnittstelle unterstützt drei Rowset Schematypen: DBSCHEMA_COLUMNS DBSCHEMA_PROVIDER_TYPES und DBSCHEMA_TABLES. Der Assistent generiert die Implementierungen für sämtliche-Schemarowsets. Jede vom Assistenten generierte Klasse enthält eine `Execute` Methode. In diesem `Execute` -Methode können Sie die Daten zurückgeben, an den Anbieter darüber, welche Tabellen, Spalten und Datentypen, die Sie unterstützen. Diese Daten werden zum Zeitpunkt der Kompilierung bezeichnet.
 
 ## <a name="see-also"></a>Siehe auch
 

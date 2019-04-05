@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 6767d009ca376d8e8579baf32f2c9af1e282abce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649500"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024347"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL: SQL- und C++-Datentypen (ODBC)
 
@@ -28,7 +28,7 @@ In der folgende Tabelle werden ANSI SQL-Datentypen in C++-Datentypen zugeordnet.
 |**DECIMAL**|`CString` 1|
 |**SMALLINT**|**int**|
 |**REAL**|**float**|
-|**GANZE ZAHL**|**long**|
+|**INTEGER**|**long**|
 |**FLOAT**|**double**|
 |**DOUBLE**|**double**|
 |**NUMERIC**|`CString` 1|
@@ -41,7 +41,7 @@ In der folgende Tabelle werden ANSI SQL-Datentypen in C++-Datentypen zugeordnet.
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
 |**DATE**|`CTime`, `CString`|
-|**ZEIT**|`CTime`, `CString`|
+|**TIME**|`CTime`, `CString`|
 |**TIMESTAMP**|`CTime`, `CString`|
 
 1. ANSI **DECIMAL** und **numerischen** zuordnen `CString` da **SQL_C_CHAR** ist der Standardtyp für ODBC-Übertragung.

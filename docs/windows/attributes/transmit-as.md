@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 546b4c4b32837b46c48eafbe12e991bb6c1630ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573253"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032101"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -70,7 +70,7 @@ struct _TREE_NODE_TYPE * right;
 
 |||
 |-|-|
-|**Betrifft**|**typedef**|
+|**Betrifft**|**Typedef**|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
@@ -81,4 +81,4 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 [IDL-Attribute](idl-attributes.md)<br/>
 [typedef-, enum-, union- und struct-Attribute](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+["export"](export.md)

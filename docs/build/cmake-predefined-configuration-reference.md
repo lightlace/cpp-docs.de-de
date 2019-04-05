@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: d1e77db7ddc38fa41771a512a5b863d403bfdc28
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: cecadaec2e409dfba3b1929e406c36df3e498307
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825618"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031447"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Vordefinierte CMake-Buildkonfigurationen
 
@@ -350,5 +350,5 @@ Mithilfe dieser Optionen können Sie Befehle vor und nach dem Erstellen und vor 
 [Konfigurieren eines Linux CMake-Projekts](../linux/cmake-linux-project.md)<br/>
 [Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Konfigurieren von CMake-Debugsitzungen](configure-cmake-debugging-sessions.md)<br/>
-[Bereitstellen, Ausführen und Debuggen Ihres Linux-Projekts](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[CMake predefined configuration reference (Referenz für vordefinierte CMake-Konfigurationen)](cmake-predefined-configuration-reference.md)<br/>
+[Bereitstellen, Ausführen und Debuggen eines Linux-Projekts](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[Referenz für vordefinierte CMake-Konfigurationen](cmake-predefined-configuration-reference.md)<br/>

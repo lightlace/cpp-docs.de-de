@@ -1,12 +1,12 @@
 ---
 title: ARM64-Ausnahmebehandlung
 ms.date: 11/19/2018
-ms.openlocfilehash: 43e43beae5ee02f9ef4537da08a1c9915056b777
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58870792"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031726"
 ---
 # <a name="arm64-exception-handling"></a>ARM64-Ausnahmebehandlung
 
@@ -219,15 +219,15 @@ Diese Daten ist in vier Abschnitte unterteilt:
 
    e. **Anzahl der Epilog** ist ein 5-Bit-Feld mit zwei Bedeutungen, abhängig vom Zustand **E** Bit:
 
-      1. Wenn **E** auf 0 festgelegt ist: Es gibt die Anzahl der Gesamtzahl von ausnahmebereichen, die in Abschnitt 2 beschriebene an. Wenn mehr als 31 Bereiche in der Funktion vorhanden sind und dann die **Code Wörter** Feld muss auf 0 festgelegt werden, um anzugeben, dass ein ausnahmewort erforderlich ist.
+      1. Wenn **E** auf 0 festgelegt ist: Es gibt die Anzahl der Gesamtzahl der Epilog-Bereiche, die in Abschnitt 2 beschriebene an. Wenn mehr als 31 Bereiche in der Funktion vorhanden sind und dann die **Code Wörter** Feld muss auf 0 festgelegt werden, um anzugeben, dass ein ausnahmewort erforderlich ist.
 
       2. Wenn **E** auf 1 festgelegt ist, und klicken Sie dann dieses Feld gibt den Index des ersten entladungscodes an, die die und nur Epilog beschreibt.
 
-   f. **Code Wörter** ist ein 5-Bit-Feld, der angibt, die Anzahl der 32-Bit-Wörter, die erforderlich sind, die alle entladungscodes in Abschnitt 4 enthält. Wenn mehr als 31 Wörter erforderlich sind (d. h. maximal 124 entladen Codebytes), und klicken Sie dann dieses Feld auf 0 festgelegt werden muss, um anzugeben, dass ein ausnahmewort erforderlich ist.
+   f. **Code Wörter** ist ein 5-Bit-Feld, der angibt, die Anzahl der 32-Bit-Wörter, die erforderlich sind, die alle entladungscodes in Abschnitt 3 enthält. Wenn mehr als 31 Wörter erforderlich sind (d. h. maximal 124 entladen Codebytes), und klicken Sie dann dieses Feld auf 0 festgelegt werden muss, um anzugeben, dass ein ausnahmewort erforderlich ist.
 
    g. **Erweitert die Anzahl der Epilog** und **erweiterte Code Wörter** sind Felder 16-Bit- und 8-Bit-bzw., mehr Speicherplatz für die Codierung einer ungewöhnlich großen Anzahl von epilogen bereitstellen oder eine ungewöhnlich große Anzahl von entladen Code Wörter. Das erweiterungswort, enthält dieser Felder ist nur vorhanden, wenn beide die **Epilog Anzahl** und **Code Wörter** Felder im ersten headerwort werden auf 0 festgelegt.
 
-1. Nach den Ausnahmedaten Wenn **Epilog Anzahl** ist nicht 0 (null), ist eine Liste mit Informationen über Bereiche des Epilogs, um ein Wort gepackt und in der Reihenfolge zunehmender startoffsets gespeichert. Jeder Bereich enthält die folgenden Bits:
+1. Nach dem Header und optional erweiterte-Header, wenn oben beschriebenen **Epilog Anzahl** ist nicht 0 (null), ist eine Liste mit Informationen über Bereiche des Epilogs, um ein Wort gepackt und in der Reihenfolge zunehmender startoffsets gespeichert. Jeder Bereich enthält die folgenden Bits:
 
    a. **Epilog starten Offset** ist ein 18-Bit-Feld, die den Offset in Bytes geteilt durch 4, der relativ zum Start der Funktion Epilog beschreibt.
 
@@ -237,7 +237,7 @@ Diese Daten ist in vier Abschnitte unterteilt:
 
 1. Nachdem die Liste der Epilog Bereiche ein Array von Bytes, die entladungscodes enthalten wird, werden in einem späteren Abschnitt ausführlich beschrieben. Dieses Array ist am Ende aufgefüllt bis zur nächsten vollen Wortgrenze. Die Bytes werden in Little-Endian-Reihenfolge gespeichert, sodass sie im Little-Endian-Modus direkt abgerufen werden können.
 
-1. Nach den entladungscodebytes (und, wenn die **X** Bit im Header auf 1 festgelegt wurde) wird die ausnahmehandlerinformationen. Dies besteht aus einer einzelnen **Ausnahme-Handler RVA** die Adresse des ausnahmehandlers selbst bereitstellen und unmittelbar danach ein variabler Länge, die Menge der Daten, die vom Ausnahmehandler erforderlich.
+1. Nach den entladungscodebytes Wenn die **X** -Bit im Header wurde auf 1 festgelegt, wird die ausnahmehandlerinformationen. Dies besteht aus einer einzelnen **Ausnahme-Handler RVA** die Adresse des ausnahmehandlers selbst bereitstellen und unmittelbar danach ein variabler Länge, die Menge der Daten, die vom Ausnahmehandler erforderlich.
 
 Die oben genannten .xdata-Datensatz ist so entworfen, dass es möglich ist, den ersten 8 Bytes abzurufen, und berechnen aus, die die volle Größe des Datensatzes (abzüglich der Länge von die Ausnahmedaten mit variabler Größe, die folgt). Der folgende Codeausschnitt berechnet die Datensatzgröße:
 

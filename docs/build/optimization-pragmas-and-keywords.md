@@ -6,12 +6,12 @@ helpviewer_keywords:
 - pragmas, for optimization
 - optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-ms.openlocfilehash: df5df59f6c18a7372b0f0af0e0447c00ff524c4b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: db9af687c7de560b0012ceea50a7cbfcc7d5de9c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825417"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035503"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Pragmas und Schlüsselwörter für die Optimierung
 
@@ -37,7 +37,7 @@ Wirken sich auf "Optimierung", mehrere Schlüsselwörter und Pragmas, die Sie in
 
 - [#pragma zu optimieren.](../preprocessor/optimize.md)
 
-- [Register-Schlüsselwort](../cpp/storage-classes-cpp.md#register)
+- [register-Schlüsselwort](../cpp/storage-classes-cpp.md#register)
 
 ## <a name="see-also"></a>Siehe auch
 

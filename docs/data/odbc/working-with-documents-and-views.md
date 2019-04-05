@@ -7,12 +7,12 @@ helpviewer_keywords:
 - views [C++], MFC
 - documents [C++], MFC
 ms.assetid: 349b142d-1c5a-4b99-9de4-241e41d3d2f1
-ms.openlocfilehash: c7622c8ffe9e3c41d33ddf984fc9df6661c3a857
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 030ac53b924e4746bcd79e712313ce2f30b4198c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432083"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023983"
 ---
 # <a name="working-with-documents-and-views"></a>Arbeiten mit Dokumenten und Ansichten
 

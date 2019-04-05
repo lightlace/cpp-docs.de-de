@@ -10,12 +10,12 @@ helpviewer_keywords:
 - scrolling [C++], RFX
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
-ms.openlocfilehash: efc08736f1b61bc634b819fc62545d886134cd35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534705"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032676"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Datensatzfeldaustausch: Funktionsweise von RFX
 
@@ -40,7 +40,7 @@ Der Recordset-Klasse außer Kraft setzen der `DoFieldExchange` übernimmt alle A
 
 ##  <a name="_core_the_record_field_exchange_process"></a> RFX-Prozess
 
-In diesem Abschnitt wird die Abfolge der RFX-Ereignisse beschrieben, wie einem Recordset-Objekt geöffnet wird und wie Sie hinzugefügt haben, aktualisieren und Löschen von Datensätzen. In der Tabelle [Sequenz der RFX-Vorgänge beim Öffnen eines Recordset](#_core_sequence_of_rfx_operations_during_recordset_open) und die Tabelle [Sequenz der RFX-Operationen beim Scrollen](#_core_sequence_of_rfx_operations_during_scrolling) in diesem Thema veranschaulichen die Vorgehensweise als RFX-Prozesse eine `Move` -Befehl in der Recordset und ein Update verwaltet. Während dieser Prozesse wird [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) aufgerufen, um viele verschiedene Operationen durchzuführen. Die `m_nOperation` Datenmember der [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) Objekt bestimmt, welcher Vorgang angefordert wird. Möglicherweise hilfreich sein, lesen Sie [Recordset: wie Recordsets auswählen von Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) und [Recordset: wie Recordsets Update Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) vor der Lektüre dieses Materials.
+In diesem Abschnitt wird die Abfolge der RFX-Ereignisse beschrieben, wie einem Recordset-Objekt geöffnet wird und wie Sie hinzugefügt haben, aktualisieren und Löschen von Datensätzen. In der Tabelle [Sequenz der RFX-Vorgänge beim Öffnen eines Recordset](#_core_sequence_of_rfx_operations_during_recordset_open) und die Tabelle [Sequenz der RFX-Operationen beim Scrollen](#_core_sequence_of_rfx_operations_during_scrolling) in diesem Thema veranschaulichen die Vorgehensweise als RFX-Prozesse eine `Move` -Befehl in der Recordset und ein Update verwaltet. Während dieser Prozesse wird [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) aufgerufen, um viele verschiedene Operationen durchzuführen. Die `m_nOperation` Datenmember der [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) Objekt bestimmt, welcher Vorgang angefordert wird. Möglicherweise hilfreich sein, lesen Sie [Recordset: Datensatzauswahl durch Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) und [Recordset: Wie Recordsets Update Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) vor der Lektüre dieses Materials.
 
 ###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX: Binden von Spalten und Parametern
 
@@ -68,7 +68,7 @@ Die folgende Tabelle zeigt die Reihenfolge der RFX-Vorgänge beim Öffnen eines 
 
 Durch Recordsets verwenden ODBCs vorbereitete Ausführung, um für schnelles erneutes Abfragen mit der gleichen SQL-Anweisung ermöglichen. Weitere Informationen über die vorbereitete Ausführung finden Sie im ODBC-SDK *Programmer's Reference* in der MSDN Library.
 
-###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: Durchführen eines Bildlaufs
+###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: Scrollen
 
 Wenn Sie von einem Datensatz in eine andere scrollen, um das Framework ruft `DoFieldExchange` , die zuvor in den Felddatenmembern Werte für den neuen Datensatz gespeicherten Werte ersetzen.
 
@@ -116,14 +116,14 @@ In der folgende Tabelle zeigt die Reihenfolge der RFX-Vorgänge auf, wenn Sie ei
 |||8. Senden Sie die SQL-Anweisung.|
 ||9. Für `AddNew`, Bearbeitungspuffer wiederherstellen, auf deren Inhalte gesichert wurden. Für `Edit`, löschen Sie die Sicherung.||
 
-### <a name="rfx-deleting-existing-records"></a>RFX: Löschen von Datensätzen
+### <a name="rfx-deleting-existing-records"></a>RFX: Löschen von vorhandenen Datensätzen
 
 Wenn Sie einen Datensatz löschen, setzt der RFX alle Felder auf NULL als Erinnerung, die der Datensatz gelöscht, und Sie müssen aus einem Dienst verschieben. Sie können weitere Informationen zur RFX-Sequenz ist nicht erforderlich.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[MFC-ODBC-nutzen](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[Nutzen von MFC-ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Makros, globale Funktionen und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CFieldExchange-Klasse](../../mfc/reference/cfieldexchange-class.md)<br/>
-[CRecordset:: DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)
+[CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)

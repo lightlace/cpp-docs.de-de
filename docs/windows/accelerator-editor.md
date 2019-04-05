@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328401"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041123"
 ---
 # <a name="accelerator-editor-c"></a>Zugriffstasten-Editor (C++)
 
@@ -71,10 +71,10 @@ Die folgende sind zulässige Einträge für die **Modifizierer** Eigenschaft in 
 
    |Wert|Beschreibung|
    |-----------|-----------------|
-   |**Keine**|Benutzer drückt nur die **Schlüssel** Wert.<br/><br/>Dieser Wert ist am effizientesten mit den ASCII/ANSI-Werten 001 bis 026, was interpretiert wird als ^ A bis ^ Z (**STRG + A** über **STRG + Z**).|
-   |**ALT**|Der Benutzer muss drücken **Alt** vor der **Schlüssel** Wert.|
-   |**STRG**|Der Benutzer muss drücken **STRG** vor der **Schlüssel** Wert, mit dem ASCII-Typ ist ungültig.|
-   |**UMSCHALTTASTE**|Der Benutzer muss drücken **UMSCHALT** vor der **Schlüssel** Wert.|
+   |**Keiner**|Benutzer drückt nur die **Schlüssel** Wert.<br/><br/>Dieser Wert ist am effizientesten mit den ASCII/ANSI-Werten 001 bis 026, was interpretiert wird als ^ A bis ^ Z (**STRG + A** über **STRG + Z**).|
+   |**Alt**|Der Benutzer muss drücken **Alt** vor der **Schlüssel** Wert.|
+   |**Ctrl**|Der Benutzer muss drücken **STRG** vor der **Schlüssel** Wert, mit dem ASCII-Typ ist ungültig.|
+   |**Shift**|Der Benutzer muss drücken **UMSCHALT** vor der **Schlüssel** Wert.|
    |**Strg + Alt +**|Der Benutzer muss drücken **STRG** und **Alt** vor der **Schlüssel** Wert, mit dem ASCII-Typ ist ungültig.|
    |**STRG + UMSCHALT**|Der Benutzer muss drücken **STRG** und **UMSCHALT** vor der **Schlüssel** Wert, mit dem ASCII-Typ ist ungültig.|
    |**ALT + UMSCHALT**|Der Benutzer muss drücken **Alt** und **UMSCHALT** vor der **Schlüssel** Wert, mit dem ASCII-Typ ist ungültig.|

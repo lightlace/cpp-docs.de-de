@@ -33,12 +33,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 01b9012a2b32c22b86968b1ea0895bdc9ceabb13
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417722"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034237"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet-Klasse
 
@@ -109,7 +109,7 @@ bool AddProperty(DWORD dwPropertyID,
 *bValue*<br/>
 [in] Ein `BYTE` oder ein boolescher Wert, der zum Initialisieren des Eigenschaftswerts für die `DBPROP` Struktur hinzugefügt, der die Eigenschaft festgelegt.
 
-*nValue*<br/>
+*nWert*<br/>
 [in] Ein Ganzzahlwert, der zum Initialisieren des Eigenschaftswerts für die `DBPROP` Struktur hinzugefügt, der die Eigenschaft festgelegt.
 
 *fltValue*<br/>
@@ -144,7 +144,7 @@ CDBPropSet();
 *guid*<br/>
 [in] Eine GUID, die zum Initialisieren der `guidPropertySet` Feld.
 
-*propset*<br/>
+*Eigenschaftensatz*<br/>
 [in] Eine andere `CDBPropSet` Objekt für die Copy-Konstruktion.
 
 ## <a name="setguid"></a> CDBPropSet::SetGUID
@@ -178,8 +178,8 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet-Klasse](../../data/oledb/cdbpropidset-class.md)<br/>
 [DBPROPSET-Struktur](/previous-versions/windows/desktop/ms714367(v=vs.85))
 [DBPROP-Struktur](/previous-versions/windows/desktop/ms717970(v=vs.85))

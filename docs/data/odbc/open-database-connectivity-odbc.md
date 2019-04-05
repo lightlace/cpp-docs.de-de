@@ -6,12 +6,12 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 8a4d6cad399b1773102dc0bc64e28049cca30d2d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523350"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030088"
 ---
 # <a name="open-database-connectivity-odbc"></a>Open Database Connectivity (ODBC)
 
@@ -26,9 +26,9 @@ Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den 
 
 - [Welche Unterstützung bietet MFC](odbc-and-mfc.md) für ODBC-Programmierung
 
-- [Welche ODBC-Treiber verfügbar sind](odbc-driver-list.md)
+- [Welche ODBC-Treiber stehen zur Verfügung?](odbc-driver-list.md)
 
-- [Herstellen einer Verbindung mit dem ODBC-Datenquellen](data-source-managing-connections-odbc.md)
+- [Verbinden mit ODBC-Datenquellen](data-source-managing-connections-odbc.md)
 
 - [Datensatzfeldaustausch (RFX) aufzeichnen](record-field-exchange-rfx.md) zwischen einer Datenbank und einem Recordset-Objekt
 
@@ -48,11 +48,11 @@ Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den 
 
 - [Anpassen der SQL-Anweisung eines Recordsets](sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [Erstellung direkter SQL-Aufrufe](sql-making-direct-sql-calls-odbc.md)
+- [Durchführen direkter SQL-Aufrufe](sql-making-direct-sql-calls-odbc.md)
 
-- [Direktes Aufrufen von ODBC-API](odbc-calling-odbc-api-functions-directly.md)
+- [Direktes Aufrufen von ODBC-API-Funktionen](odbc-calling-odbc-api-functions-directly.md)
 
-- [Wie funktionieren die Datenbankklassen mit MFCs Dokument-/Ansichtarchitektur?](working-with-documents-and-views.md)
+- [Datenbankklassen und MFC-Dokumente/Ansichten](working-with-documents-and-views.md)
 
 - [Liste der ODBC-Treiber](odbc-driver-list.md)
 
@@ -60,7 +60,7 @@ Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den 
 
 Diese Aufgaben basieren auf die MFC-Bibliothek [ODBC](odbc-basics.md) Klassen. Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK.
 
-- [Installation und erste Schritte mit dem ODBC-](installing-and-getting-started-with-odbc.md)
+- [Installieren von ODBC und erste Schritte](installing-and-getting-started-with-odbc.md)
 
 - [Entwerfen und Erstellen einer ODBC-Datenbankanwendung](design-and-create-an-odbc-database-application.md)
 

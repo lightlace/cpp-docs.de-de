@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564953"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031984"
 ---
 # <a name="import-directive-c"></a>#import-Anweisung (C++)
 
@@ -148,7 +148,7 @@ Die primäre Headerdatei der Typbibliothek umfasst sieben Abschnitte:
 
 - Optionale alten GUID-Definition: Enthält Initialisierungen der benannten GUID-Konstanten. Hierbei handelt es sich um Namen im Format `CLSID_CoClass` und `IID_Interface`, vergleichbar mit denen vom MIDL-Compiler generiert.
 
-- `#include`-Anweisung für den sekundären Header der Typbibliothek.
+- `#include` Anweisung für den sekundären Header der Typbibliothek.
 
 - Textbaustein für Footer: Derzeit enthält `#pragma pack(pop)`.
 

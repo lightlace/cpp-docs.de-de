@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMSAVE instruction
 - __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
-ms.openlocfilehash: 2ffc68b13d09d15d90670fa135a2cac9d9a1d52f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d683a13f636db9683b4a7c8d075ad6c3c88c2aed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556612"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023411"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 
@@ -36,7 +36,7 @@ void __svm_vmsave(
 
 ## <a name="remarks"></a>Hinweise
 
-Die `__svm_vmsave` -Funktion entspricht der `VMSAVE` -Computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593, Version 3.11 oder höher, auf die [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) Standort.
+Die `__svm_vmsave` -Funktion entspricht der `VMSAVE` -Computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: "System Programming," Dokumentnummer 24593, Version 3.11 oder höher, auf die [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) Standort.
 
 ## <a name="requirements"></a>Anforderungen
 

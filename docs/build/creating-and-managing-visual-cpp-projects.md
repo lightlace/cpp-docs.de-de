@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775321"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038037"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio-Projekte – C++
 
@@ -60,10 +60,10 @@ Sie können in der Fehlerliste drücken **F1** auf einen hervorgehobenen Fehler,
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio](working-with-project-properties.md)<br/>
+[Festlegen von C++-Compiler und erstellen Sie die Eigenschaften in Visual Studio](working-with-project-properties.md)<br/>
 Gewusst wie Eigenschaftenseiten und Eigenschaftenblätter verwenden, um Ihre projekteinstellungen festzulegen.
 
-[Verweisen auf Bibliotheken und Komponenten zur Buildzeit](adding-references-in-visual-cpp-projects.md)<br/>
+[Reference-Bibliotheken und Komponenten zum Zeitpunkt der Erstellung](adding-references-in-visual-cpp-projects.md)<br/>
 Informationen zum Einschließen von Bibliotheken, DLL-Dateien, COM- und -Komponenten in einem Projekt.
  
 [Organisieren von Projektausgabedateien](how-to-organize-project-output-files-for-builds.md)<br/>

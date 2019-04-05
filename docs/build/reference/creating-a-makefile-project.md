@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: bb28d76b0ec459b5fd63f6a00dedff723274e90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825874"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035597"
 ---
 # <a name="create-a-c-makefile-project"></a>Erstellen eines C++-Makefile-Projekts
 
@@ -22,7 +22,7 @@ Wenn Sie über ein vorhandenes Makefile-Projekt verfügen, können Sie folgende 
 
 - Erstellen eines Makefile-Projekts in Visual Studio, die Ihre vorhandenen Makefile verwendet, um eine VCXPROJ-Datei zu konfigurieren, die Visual Studio für IntelliSense verwendet wird. (Sie verfügen nicht über alle IDE-Funktionen, die Sie mit einem nativen MSBuild-Projekt erhalten.) Siehe [So erstellen Sie ein Makefile-Projekt](#create_a_makefile_project) weiter unten.
 - Verwenden des Assistenten für das **Erstellen von Projekten aus vorhandenen Codedateien**, um ein natives MSBuild-Projekt aus dem Quellcode zu erstellen. Das ursprüngliche Makefile wird anschließend nicht verwendet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 und höher:** Verwenden der **"Ordner öffnen"** Funktion bearbeiten und Erstellen eines Makefile-Projekts als – ohne jegliche Beteiligung des MSBuild-Systems ist. Weitere Informationen finden Sie unter [Open Folder-Projekte für C++](../open-folder-projects-cpp.md).
+- **Visual Studio 2017 und höher:** Verwenden der **"Ordner öffnen"** Funktion bearbeiten und Erstellen eines Makefile-Projekts als – ohne jegliche Beteiligung des MSBuild-Systems ist. Weitere Informationen finden Sie unter [Open Folder projects for C++ (Verwenden von „Ordner öffnen“ mit Projekten in Visual C++)](../open-folder-projects-cpp.md).
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Zum Erstellen eines Makefile-Projekts mit der Makefile-Projektvorlage
 
@@ -86,7 +86,7 @@ Führen Sie das nächste Mal, wenn Sie Ihr Makefile-Projekt in der Visual Studio
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden von IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[Using IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [NMAKE-Referenz](nmake-reference.md)<br>
 [Vorgehensweise: Erstellen Sie ein C++-Projekt aus vorhandenem Code](../how-to-create-a-cpp-project-from-existing-code.md)
 [Sonderzeichen in einem Makefile](special-characters-in-a-makefile.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326640"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025129"
 ---
 # <a name="creating-a-simple-consumer"></a>Erstellen eines einfachen Consumers
 
@@ -56,7 +56,7 @@ Verwenden Sie als Nächstes die **ATL-OLE DB-Consumer-Assistenten** zum Hinzufü
    1. Auf der **Verbindung** Registerkarte, geben Sie die erforderliche Informationen, z. B. Servername, Anmelde-ID und Kennwort für die Datenquelle und die Datenbank auf dem Server.
 
       > [!NOTE]
-      > Es wurde ein Sicherheitsproblem mit der **Speichern von Kennwort zulassen** Feature von der **Datenlinkeigenschaften** im Dialogfeld. In **Geben Sie Informationen zum Anmelden an den Server**, es gibt zwei Optionsfelder: **Windows NT integrated Security verwenden** und **bestimmten Benutzernamen und bestimmtes Kennwort**.
+      > Es wurde ein Sicherheitsproblem mit der **Speichern von Kennwort zulassen** Feature von der **Datenlinkeigenschaften** im Dialogfeld. In **Geben Sie Informationen zum Anmelden an den Server**, es gibt zwei Optionsfelder: **Integrierte Sicherheit von mit Windows NT** und **bestimmten Benutzernamen und bestimmtes Kennwort**.
 
       > [!NOTE]
       > Bei Auswahl von **bestimmten Benutzernamen und bestimmtes Kennwort**, Sie haben die Möglichkeit, speichern Sie das Kennwort (mit der **Speichern von Kennwort zulassen** Kontrollkästchen), aber diese Option ist nicht sicher. Es wird empfohlen, die Sie auswählen, **Windows NT integrated Security verwenden**; diese Option verwendet die Windows NT zur Überprüfung Ihrer Identität.
@@ -100,4 +100,4 @@ Der Assistent generiert eine Befehlsklasse und eine Benutzerdatensatz-Klasse, si
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen eines OLE DB-Consumers mit einem Assistenten](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Erstellen eines OLE DB-Consumers mit einem Assistenten](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

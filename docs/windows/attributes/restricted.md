@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 1aa18255f7d7a0740494050a149d436fb167fe8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521035"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029504"
 ---
 # <a name="restricted"></a>restricted
 
@@ -27,7 +27,7 @@ Gibt an, dass ein Mitglied aus einem Modul, Schnittstelle oder Disp-Schnittstell
 
 ### <a name="parameters"></a>Parameter
 
-*interfaces*<br/>
+*Schnittstellen*<br/>
 Eine oder mehrere Schnittstellen, die auf ein COM-Objekt nicht beliebig aufgerufen werden können. Dieser Parameter ist nur gültig, wenn Sie auf eine Klasse angewendet werden.
 
 ## <a name="remarks"></a>Hinweise

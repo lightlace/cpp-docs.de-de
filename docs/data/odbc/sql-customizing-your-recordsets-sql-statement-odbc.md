@@ -10,12 +10,12 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-ms.openlocfilehash: 84ce18ccbf3cc59dd9c94826366595d2f128784f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eabaab019ee94b0c5617573c534d920ec710e9b2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459925"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036194"
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)
 
@@ -86,8 +86,8 @@ Die folgende Tabelle zeigt die Möglichkeiten für die *LpszSQL* Parameter `Open
 
 |Case|Was Sie in LpszSQL übergeben.|Die resultierenden SELECT-Anweisung|
 |----------|------------------------------|------------------------------------|
-|1|NULL|**Wählen Sie** *Rfx-Feldliste* **FROM** *Tabellenname*<br /><br /> `CRecordset::Open` Aufrufe `GetDefaultSQL` um den Namen der Tabelle zu erhalten. Die resultierende Zeichenfolge ist ein Fall 2 bis 5, je nachdem, was `GetDefaultSQL` zurückgibt.|
-|2|Ein Tabellenname|**Wählen Sie** *Rfx-Feldliste* **FROM** *Tabellenname*<br /><br /> Die Feldliste stammt aus der RFX-Anweisungen in `DoFieldExchange`. Wenn `m_strFilter` und `m_strSort` nicht leer sind, fügt die **, in denen** und/oder **ORDER BY** Klauseln.|
+|1|NULL|**SELECT** *rfx-field-list* **FROM** *table-name*<br /><br /> `CRecordset::Open` Aufrufe `GetDefaultSQL` um den Namen der Tabelle zu erhalten. Die resultierende Zeichenfolge ist ein Fall 2 bis 5, je nachdem, was `GetDefaultSQL` zurückgibt.|
+|2|Ein Tabellenname|**SELECT** *rfx-field-list* **FROM** *table-name*<br /><br /> Die Feldliste stammt aus der RFX-Anweisungen in `DoFieldExchange`. Wenn `m_strFilter` und `m_strSort` nicht leer sind, fügt die **, in denen** und/oder **ORDER BY** Klauseln.|
 |3 \*|Eine vollständige **wählen** Anweisung jedoch ohne eine **, in denen** oder **ORDER BY** Klausel|Wie übergeben. Wenn `m_strFilter` und `m_strSort` nicht leer sind, fügt die **, in denen** und/oder **ORDER BY** Klauseln.|
 |4 \*|Eine vollständige **wählen** -Anweisung mit einem **, in denen** und/oder **ORDER BY** Klausel|Wie übergeben. `m_strFilter` und/oder `m_strSort` müssen bleibt leer, oder zwei Filter und/oder Sortierung-Anweisungen erstellt werden.|
 |5 \*|Ein Aufruf einer gespeicherten Prozedur|Wie übergeben.|
@@ -144,7 +144,7 @@ Sie geben Sie die Liste der Spalten manuell statt auf RFX ihn automatisch zu ers
 
    Sie könnten z. B. neue Spalten zu unterstützen, die den Datenbanktabellen ein Kunde der Anwendung hinzugefügt werden, nachdem die Anwendung verteilt wurde. Sie müssen diese zusätzlichen Felddatenmember, hinzufügen, die zur Zeit nicht bekannt waren Sie die Klasse mit einem Assistenten deklariert.
 
-   Die Spaltenliste sollten die Spaltennamen und Datentypen in der gleichen Reihenfolge entsprechen, in der sie aufgeführt sind `DoFieldExchange`, gefolgt von den Namen der manuell gebundenen Spalten. Weitere Informationen finden Sie unter [Recordset: Dynamisches Binden von Spalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+   Die Spaltenliste sollten die Spaltennamen und Datentypen in der gleichen Reihenfolge entsprechen, in der sie aufgeführt sind `DoFieldExchange`, gefolgt von den Namen der manuell gebundenen Spalten. Weitere Informationen finden Sie unter [Recordset: Dynamisches Binden von Datenspalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
 - Sie möchten zum Verknüpfen von Tabellen, durch Angeben von mehreren Tabellen in der **FROM** Klausel.
 

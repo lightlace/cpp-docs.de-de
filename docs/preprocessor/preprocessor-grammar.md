@@ -6,24 +6,24 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 17768b7ec1442f2af1abf76596527d4df69b1534
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614187"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032413"
 ---
 # <a name="preprocessor-grammar"></a>Präprozessor-Grammatik
 
-*Steuerelement-Line-*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *Bezeichner* *-Token-Zeichenfolge*<sub>deaktivieren</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>Bezeichner</em>**(** *Bezeichner*<sub>opt</sub> **,** ... **,** *Bezeichner*<sub>opt</sub> **)** *-Token-Zeichenfolge*<sub>deaktivieren</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *Path-Spec* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *Path-Spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *Ziffernfolge***"** *Filename* **"**<sub>deaktivieren</sub><br/>
+*control-line*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identifier* *token-string*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identifier</em>**(** *identifier*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **)** *token-string*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence*  **"** *filename* **"**<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#undef** *Bezeichner*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#error** *-Token-Zeichenfolge*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *-Token-Zeichenfolge*
+&nbsp;&nbsp;&nbsp;&nbsp;**#error** *token-string*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *token-string*
 
 *constant-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**definiert (** *Bezeichner* **)**<br/>
@@ -31,25 +31,25 @@ ms.locfileid: "50614187"
 &nbsp;&nbsp;&nbsp;&nbsp;ein anderer konstanter Ausdruck
 
 *bedingte* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*If-Part* *Elif-Teile*<sub>opt</sub> *else-Teil*<sub>opt</sub> *Endif-Zeile*
+&nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
 
 *If-Part* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*If-Line-* *Text*
+&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
 
 *If-Line-* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *konstanter Ausdruck*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *Bezeichner*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *Bezeichner*
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifier*
 
 *Elif-Teile* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Elif-Line-* *Text*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Elif-Teile* *Elif-Line-* *Text*
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-line* *text*
 
-*Elif-Line-* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *konstanter Ausdruck*
+*elif-line* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *constant-expression*
 
 *else-Teil* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Else-Line* *Text*
+&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
 
 *Else-Line* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#else**
@@ -57,7 +57,7 @@ ms.locfileid: "50614187"
 *Endif-Line-* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#endif**
 
-*Digit-Sequence* :<br/>
+*digit-sequence* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 

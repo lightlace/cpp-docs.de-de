@@ -8,12 +8,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45afdf4b3b557b560d7597b1bb4330c36a1fc84d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563120"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025084"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Zugriffstasten (Bildbearbeitung für Symbole C++)
 
@@ -40,7 +40,7 @@ Unten sind die Zugriffstasten für den Bild-Editor-Befehlen, die standardmäßig
 |Image.LineTool|**STRG** + **L**|Zeichnet eine gerade Linie von der ausgewählten Form, Größe und Farbe.|
 |Image.MagnificationTool|**Ctrl** + **M**|Aktiviert die **Magnify** -Tool, das Ihnen ermöglicht, bestimmte Abschnitte Ihres Images vergrößern.|
 |Image.Magnify|**STRG** + **UMSCHALT** + **M**|Schaltet zwischen der aktuellen Vergrößerung und dem Vergrößerungsfaktor 1:1 um.|
-|Image.NewImageType|**Einfügen**|Startet die [neu \<Gerät > Bildtyp (Dialogfeld)](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) mit dem Sie ein Image für einen anderen Bildtyp erstellen können.|
+|Image.NewImageType|**Insert**|Startet die [neu \<Gerät > Bildtyp (Dialogfeld)](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) mit dem Sie ein Image für einen anderen Bildtyp erstellen können.|
 |Image.NextColor|**STRG** + **]**<br /><br /> - oder -<br /><br /> **STRG** + **-rechts-Taste**|Wechselt von der zum Zeichnen verwendeten Vordergrundfarbe zur nächsten Palettenfarbe.|
 |Image.NextRightColor|**STRG** + **UMSCHALTTASTE** + **]**<br /><br /> - oder -<br /><br /> **UMSCHALT** + **STRG** + **-rechts-Taste**|Wechselt von der zum Zeichnen verwendeten Hintergrundfarbe zur nächsten Palettenfarbe.|
 |Image.OutlinedEllipseTool|**UMSCHALT** + **Alt** + **P**|Zeichnet eine ausgefüllte Ellipse mit einem Rand.|
@@ -64,12 +64,12 @@ Unten sind die Zugriffstasten für den Bild-Editor-Befehlen, die standardmäßig
 
 ## <a name="requirements"></a>Anforderungen
 
-Keine
+Keiner
 
 ## <a name="see-also"></a>Siehe auch
 
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)<br/>
 [Vorgehensweise: Erstellen eines Symbols oder anderen Bilds](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Vorgehensweise: Bearbeiten eines Bilds](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Vorgehensweise: Bearbeiten eines Bildes](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
 [Vorgehensweise: Verwenden eines Zeichentools](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Vorgehensweise: Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: a56c15f76b83620e4f67c188450a6b5d2f68c22f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58766039"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041253"
 ---
 # <a name="data-access-in-visual-c"></a>Datenzugriff in Visual C++
 
@@ -29,12 +29,12 @@ Beschreibt die Legacy-Datenzugriffsprogrammierung mit Visual C++, wobei die bev
 [Open Database Connectivity (ODBC)](odbc/open-database-connectivity-odbc.md)<br/>
 Die MFC-Bibliothek (Microsoft Foundation Classes) stellt Klassen für die Programmierung mit ODBC (Open Database Connectivity) zur Verfügung.
 
-[OLE DB-Programmierung](oledb/ole-db-programming.md)<br/>
+[OLE DB-Programmierung](oledb/ole-db-programming.md)<br/>
 Eine größtenteils legacy-Schnittstelle die immer noch in einigen Szenarien erforderlich ist, insbesondere bei der Programmierung für Verbindungsserver.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-[Verbinden Sie mit SQL-Datenbank mit C und C++](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
+[Herstellen einer Verbindung mit SQL-Datenbank mit C und C++](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
 Verbinden Sie Azure SQL-Datenbank von C- oder C++-Anwendungen.
 
 [Microsoft Azure Storage-Clientbibliothek für C++](https://github.com/Azure/azure-storage-cpp)<br/>
@@ -49,7 +49,7 @@ SQL Server Native Client ist eine eigenständige Data Access Application-Program
 [Microsoft Azure C und C++ Developer Center](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure vereinfacht die C++-Anwendungsentwicklung mit mehr Flexibilität, Skalierbarkeit und Zuverlässigkeit mithilfe von Tools, die Sie lieben werden.
 
-[Gewusst wie: Verwenden von Blob-Speichers mit C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+[Vorgehensweise: Verwenden von Blob Storage von C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Azure Blob Storage ist ein Dienst, der unstrukturierte Daten in der Cloud als Objekte/Blobs speichert. Blob Storage kann beliebige Typen von Text oder Binärdaten speichern, z.B. Dokumente, Mediendateien oder Installationsprogramme für Anwendungen. Blob Storage wird auch als Objektspeicher bezeichnet.
 
 [ ODBC-Programmierreferenz](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>

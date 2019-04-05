@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _enable intrinsic
 - ssm instruction
 ms.assetid: 8bee669b-6bd8-4e25-9383-bb7d57295b4d
-ms.openlocfilehash: 1d129db17b489972555efb0b5df2de52e01fa649
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1ece6d6f4040b81b55d8400407d46f165b56b53
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631239"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024516"
 ---
 # <a name="enable"></a>_enable
 
@@ -32,13 +32,13 @@ void _enable(void);
 
 |Systemintern|Architektur|
 |---------------|------------------|
-|`_enable`|X86, ARM, x64|
+|`_enable`|x86, ARM, x64|
 
 **Headerdatei** \<intrin.h >
 
 ## <a name="remarks"></a>Hinweise
 
-`_enable` weist den Prozessor an, das Interrupt-Flag festzulegen. Unter x86-Systemen erzeugt diese Funktion die Anweisung für das Set Interrupt Flag (`sti`).
+`_enable` weist den Prozessor an, das Interrupt-Flag festlegen. Unter x86-Systemen erzeugt diese Funktion die Anweisung für das Set Interrupt Flag (`sti`).
 
 Diese Funktion ist nur im Kernelmodus verfügbar. Wenn sie im Benutzermodus verwendet wird, wird eine privilegierte Anweisungsausnahme ausgelöst.
 

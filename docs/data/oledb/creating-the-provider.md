@@ -4,18 +4,18 @@ ms.date: 10/15/2018
 helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-ms.openlocfilehash: 05ab045e104e3035f8ccd2fa1924b6959164b8d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6258b5247e4d9d027e0f03bc133dff1a059665bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538185"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032348"
 ---
 # <a name="creating-the-provider"></a>Erstellen des Anbieters
 
 ## <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>OLE DB-Anbieter mit dem ATL-OLE DB-Anbieter-Assistenten erstellen
 
-1. Mit der rechten Maustaste in des Projekts.
+1. Klicken Sie mit der rechten Maustaste auf das Projekt.
 
 1. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.
 
@@ -25,14 +25,14 @@ ms.locfileid: "50538185"
 
 1. Bearbeiten Sie die anderen Namensfelder, bei Bedarf. Zusätzlich zu den-Objekt und die Dateinamen können Sie die folgenden bearbeiten:
 
-   - **Co-Klasse**: der Name, der COM verwendet, um den Anbieter zu erstellen.
+   - **Co-Klasse**: Der Name, die COM verwendet, um den Anbieter zu erstellen.
 
-   - **ProgID**: der programmgesteuerte Bezeichner, die eine Textzeichenfolge handelt, die anstelle einer GUID verwendet werden kann.
+   - **ProgID**: Der programmgesteuerte Bezeichner, der eine Textzeichenfolge handelt, die anstelle einer GUID verwendet werden kann.
 
-   - **Version**: mit der Programm-ID und die Co-Klasse verwendet, um eine programmgesteuerte versionsabhängige-ID zu generieren
+   - **Version**: Mit der Programm-ID und die Co-Klasse verwendet, um eine programmgesteuerte versionsabhängige-ID zu generieren
 
 1. Klicken Sie auf **Fertig stellen**.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)
+[Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)

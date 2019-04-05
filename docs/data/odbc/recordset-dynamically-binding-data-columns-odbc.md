@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175664"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035117"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: Dynamisches Binden von Datenspalten (ODBC)
 
@@ -91,9 +91,9 @@ Die vier aufgelistet, denen Sie zusammenarbeiten möchten, werden in der folgend
 
 |||
 |-|-|
-|**Aktuelle Tabellenspalten**| (Liste 1 in der Abbildung) Eine Liste der Spalten derzeit in der Tabelle in der Datenquelle. Diese Liste kann die Liste der Spalten, die derzeit im Recordset gebunden übereinstimmen.|
-|**Recordset-Spalten**| (Liste 2 in der Abbildung) Eine Liste der Spalten, die in Recordsets gebunden werden. Diese Spalten verfügen bereits über RFX-Anweisungen in Ihre `DoFieldExchange` Funktion.|
-|**Bind-dynamisch Spalten**| (Liste 3 in der Abbildung) Eine Liste der Spalten in der Tabelle, aber nicht im Recordset. Dies sind die Spalten, die Sie dynamisch binden möchten.|
+|**Current-Table-Columns**| (Liste 1 in der Abbildung) Eine Liste der Spalten derzeit in der Tabelle in der Datenquelle. Diese Liste kann die Liste der Spalten, die derzeit im Recordset gebunden übereinstimmen.|
+|**Bound-Recordset-Columns**| (Liste 2 in der Abbildung) Eine Liste der Spalten, die in Recordsets gebunden werden. Diese Spalten verfügen bereits über RFX-Anweisungen in Ihre `DoFieldExchange` Funktion.|
+|**Columns-To-Bind-Dynamically**| (Liste 3 in der Abbildung) Eine Liste der Spalten in der Tabelle, aber nicht im Recordset. Dies sind die Spalten, die Sie dynamisch binden möchten.|
 |**Dynamic-Spaltenwerte**| (Liste 4 in der Abbildung) Eine Liste mit Speicher für die Werte, die aus den Spalten, die Sie dynamisch binden abgerufen werden. Elemente der Liste entsprechen den in Spalten um-dynamisch, 1: 1.|
 
 ###  <a name="_core_building_your_lists"></a> Erstellen der Listen
@@ -140,7 +140,7 @@ Richten Sie als Nächstes Speicherorte für die Spalten dynamisch gebunden werde
 
    Im häufigsten Fall hat Dynamic-Spaltenwerte Elemente des Typs `CString`. Wenn Sie mit Spalten mit unterschiedlichen Datentypen arbeiten, benötigen Sie eine Liste, die Elemente einer Vielzahl von Typen enthalten kann.
 
-Das Ergebnis der vorherigen Prozeduren ist die zwei wichtigsten Listen:-Bind-dynamisch Spalten mit den Namen der Spalten und dynamische Werte, die die Werte in den Spalten für den aktuellen Datensatz.
+Das Ergebnis der vorherigen Prozeduren ist die zwei wichtigsten Listen: Bind-dynamisch Spalten mit den Namen der Spalten und dynamische Werte, die die Werte in den Spalten für den aktuellen Datensatz.
 
 > [!TIP]
 > Wenn die neuen Spalten nicht alle den gleichen Datentyp sind, sollten Sie eine weitere Liste Elemente enthält, die den Typ der entsprechenden Elemente irgendwie in der Liste der Spalten zu definieren. (Können Sie die Werte AFX_RFX_BOOL AFX_RFX_BYTE und so weiter, für diesen, wenn Sie möchten. Diese Konstanten sind in AFXDB definiert. H.) Wählen Sie eine Liste basierend auf, wie Sie die Spaltendatentypen darstellen.

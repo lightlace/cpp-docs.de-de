@@ -11,12 +11,12 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-ms.openlocfilehash: e41b526b86922bafd1d923fa5848a5ef8ed4825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5df8151664bd7e726087cb5323c1e4622264ad23
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579598"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040055"
 ---
 # <a name="recordset-scrolling-odbc"></a>Recordset: Scrollen (ODBC)
 
@@ -89,11 +89,11 @@ rsCustSet.MoveFirst( );
 
 `IsEOF` Gibt einen Wert ungleich NULL zurück, wenn das Recordset hinter dem letzten Datensatz positioniert ist. `IsBOF` Gibt einen Wert ungleich NULL zurück, wenn das Recordset, vor dem ersten Datensatz (vor allen Datensätzen positioniert ist). In beiden Fällen besteht kein aktueller Datensatz zu verarbeitende zur Verfügung. Aufrufen `MovePrev` beim `IsBOF` ist bereits auf "true" fest, oder rufen Sie `MoveNext` beim `IsEOF` bereits TRUE ist, löst das Framework eine `CDBException`. Sie können auch `IsBOF` und `IsEOF` zu prüfen, eine leere Datensatzgruppe.
 
-Weitere Informationen zur Recordsetnavigation, finden Sie unter [Recordset: Lesezeichen und Absolute Positionen (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Weitere Informationen zur Recordsetnavigation, finden Sie unter [Recordset: Lesezeichen und absolute Positionen (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 ##  <a name="_core_when_scrolling_is_supported"></a> Beim Durchführen eines Bildlaufs unterstützt wird
 
-Als ursprünglich entwickelte SQL bereitgestellten Bildlauf ausschließlich vorwärts ausgeführt, aber ODBC erweitert die Bildlauf-Funktionen. Das verfügbare Maß an Unterstützung für das Scrollen, hängt die ODBC-Treiber, die die Anwendung mit ODBC-API-Konformitätsgrad des Treibers funktioniert, und gibt an, ob die ODBC-Cursorbibliothek geladen ist. Weitere Informationen finden Sie unter [ODBC](../../data/odbc/odbc-basics.md) und [ODBC: die ODBC-Cursorbibliothek](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Als ursprünglich entwickelte SQL bereitgestellten Bildlauf ausschließlich vorwärts ausgeführt, aber ODBC erweitert die Bildlauf-Funktionen. Das verfügbare Maß an Unterstützung für das Scrollen, hängt die ODBC-Treiber, die die Anwendung mit ODBC-API-Konformitätsgrad des Treibers funktioniert, und gibt an, ob die ODBC-Cursorbibliothek geladen ist. Weitere Informationen finden Sie unter [ODBC](../../data/odbc/odbc-basics.md) und [ODBC: Die ODBC-Cursorbibliothek](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!TIP]
 >  Sie können steuern, ob die Cursorbibliothek verwendet wird. Finden Sie unter den *bUseCursorLib* und *DwOptions* Parameter [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open).

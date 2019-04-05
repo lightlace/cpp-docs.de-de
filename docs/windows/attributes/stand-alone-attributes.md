@@ -5,12 +5,12 @@ helpviewer_keywords:
 - standalone attributes
 - attributes [C++/CLI], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
-ms.openlocfilehash: 1183d2b171a25b3b2d1aef14c19f81be65effc6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7dd1f35add3b23dbd81e32a1600481eec79fe7d7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640822"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033056"
 ---
 # <a name="stand-alone-attributes"></a>Eigenständige Attribute
 
@@ -21,7 +21,7 @@ Ein eigenständiges Attribut kann nicht ausgeführt werden, auf ein C++-Schlüss
 |Attribut|Beschreibung|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Gibt die angegebene Zeichenfolge verwendet werden, ohne die Anführungszeichen in der generierten Headerdatei an.|
-|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|[Benutzerdefiniert](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
 |[db_command](db-command.md)|Erstellt einen OLE DB-Befehl.|
 |[emitidl](emitidl.md)|Bestimmt, ob alle nachfolgenden IDL-Attribute verarbeitet und in der generierten IDL-Datei platziert werden.|
 |[idl_module](idl-module.md)|Gibt einen Einstiegspunkt in einer DLL an.|

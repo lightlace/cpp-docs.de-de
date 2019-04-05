@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521400"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024737"
 ---
 # <a name="creating-an-updatable-provider"></a>Erstellen eines aktualisierbaren Anbieters
 
@@ -109,11 +109,11 @@ Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Dahe
 
    Wenn Sie implementieren `IRowsetChangeImpl`, Sie müssen die folgenden Eigenschaften festlegen, für den Anbieter. Diese Eigenschaften werden in erster Linie verwendet, um die Schnittstellen durch anzufordern `ICommandProperties::SetProperties`.
 
-   - `DBPROP_IRowsetChange`: Automatisches Festlegen von diesem legt `DBPROP_IRowsetChange`.
+   - `DBPROP_IRowsetChange`: Diesem automatisch die Einstellung `DBPROP_IRowsetChange`.
 
-   - `DBPROP_UPDATABILITY`: Eine Bitmaske, die unterstützten Methoden für `IRowsetChange`: `SetData`, `DeleteRows`, oder `InsertRow`.
+   - `DBPROP_UPDATABILITY`: Bitmaske, die die unterstützten Methoden für `IRowsetChange`: `SetData`, `DeleteRows`, oder `InsertRow`.
 
-   - `DBPROP_CHANGEINSERTEDROWS`: Der Consumer kann Aufrufen `IRowsetChange::DeleteRows` oder `SetData` für neu eingefügte Zeilen.
+   - `DBPROP_CHANGEINSERTEDROWS`: Consumer kann Aufrufen `IRowsetChange::DeleteRows` oder `SetData` für neu eingefügte Zeilen.
 
    - `DBPROP_IMMOBILEROWS`: Rowset nicht eingefügte oder aktualisierte Zeilen neu angeordnet.
 
@@ -121,19 +121,19 @@ Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Dahe
 
    Wenn Sie implementieren `IRowsetUpdateImpl`, müssen Sie die folgenden Eigenschaften festlegen für den Anbieter darüber hinaus mit dem Festlegen aller Eigenschaften für `IRowsetChangeImpl` oben aufgeführt:
 
-   - `DBPROP_IRowsetUpdate`.
+   - `DBPROP_IRowsetUpdate`sein.
 
-   - `DBPROP_OWNINSERT`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
+   - `DBPROP_OWNINSERT`: READ_ONLY und VARIANT_TRUE ist erforderlich.
 
-   - `DBPROP_OWNUPDATEDELETE`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
+   - `DBPROP_OWNUPDATEDELETE`: READ_ONLY und VARIANT_TRUE ist erforderlich.
 
-   - `DBPROP_OTHERINSERT`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
+   - `DBPROP_OTHERINSERT`: READ_ONLY und VARIANT_TRUE ist erforderlich.
 
-   - `DBPROP_OTHERUPDATEDELETE`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
+   - `DBPROP_OTHERUPDATEDELETE`: READ_ONLY und VARIANT_TRUE ist erforderlich.
 
-   - `DBPROP_REMOVEDELETED`: READ_ONLY und auf VARIANT_TRUE festgelegt muss werden.
+   - `DBPROP_REMOVEDELETED`: READ_ONLY und VARIANT_TRUE ist erforderlich.
 
-   - `DBPROP_MAXPENDINGROWS`.
+   - `DBPROP_MAXPENDINGROWS`sein.
 
    > [!NOTE]
    > Wenn Sie Benachrichtigungen unterstützen, müssen Sie auch einige andere Eigenschaften sowie möglicherweise; finden Sie im Abschnitt `IRowsetNotifyCP` für diese Liste.
@@ -413,7 +413,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 
 ### <a name="column-flags"></a>Spaltenflags
 
-Wenn Sie Standardwerte für Spalten unterstützt, müssen Sie mithilfe von Metadaten im Festlegen der \<Anbieterklasse\>SchemaRowset-Klasse. Legen Sie `m_bColumnHasDefault = VARIANT_TRUE`.
+Wenn Sie Standardwerte für Spalten unterstützt, müssen Sie mithilfe von Metadaten im Festlegen der \<Anbieterklasse\>SchemaRowset-Klasse. Legen Sie `m_bColumnHasDefault = VARIANT_TRUE` fest.
 
 Sie können auch dafür verantwortlich, die Spaltenflags, die festlegen, mit dem DBCOLUMNFLAGS-Enumerationstyp angegeben werden. Die Spaltenflags werden Spalteneigenschaften beschrieben.
 
@@ -436,4 +436,4 @@ Dieser Code gibt an, unter anderem, dass die Spalte den Standardwert 0 (null) un
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen eines OLE DB-Anbieters](creating-an-ole-db-provider.md)
+[Erstellen eines OLE DB-Anbieters](creating-an-ole-db-provider.md)

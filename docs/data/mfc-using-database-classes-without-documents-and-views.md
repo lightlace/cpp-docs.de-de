@@ -17,12 +17,12 @@ helpviewer_keywords:
 - database applications [C++], without documents
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-ms.openlocfilehash: 558917f1a1485f1a886356b3c272842579f6b03e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602214"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024633"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Verwenden von Datenbankklassen ohne Dokumente und Ansichten
 
@@ -54,12 +54,12 @@ Der MFC-Anwendung-Assistent bietet mehrere Optionen **wählen datenbankunterstü
 
 |Option|Ansicht|Dokument|
 |------------|----------|--------------|
-|**Keine**|Abgeleitet von `CView`.|Bietet keine datenbankunterstützung. Dies ist die Standardoption.<br /><br /> Bei Auswahl der **Unterstützung für die Dokument-/Ansicht** option die [Anwendungstyp, MFC-Anwendungs-Assistent](../mfc/reference/application-type-mfc-application-wizard.md) Seite erhalten Sie vollständige Document-Unterstützung, einschließlich der Serialisierung und **neu** , **Öffnen**, **speichern**, und **speichern** von Befehlen auf die **Datei** Menü. Finden Sie unter [Anwendungen ohne Dokument](#_core_applications_with_no_document).|
+|**Keiner**|Abgeleitet von `CView`.|Bietet keine datenbankunterstützung. Dies ist die Standardoption.<br /><br /> Bei Auswahl der **Unterstützung für die Dokument-/Ansicht** option die [Anwendungstyp, MFC-Anwendungs-Assistent](../mfc/reference/application-type-mfc-application-wizard.md) Seite erhalten Sie vollständige Document-Unterstützung, einschließlich der Serialisierung und **neu** , **Öffnen**, **speichern**, und **speichern** von Befehlen auf die **Datei** Menü. Finden Sie unter [Anwendungen ohne Dokument](#_core_applications_with_no_document).|
 |**Nur Headerdateien**|Abgeleitet von `CView`.|Stellt die Basisebene der datenbankunterstützung für Ihre Anwendung bereit.<br /><br /> Enthält Afxdb.h. Fügt der DLLs, aber erstellt keine Datenbank-spezifische Klassen. Sie können die Recordsets später erstellen und verwenden diese zum Überprüfen und Aktualisieren von Datensätzen.|
 |**Datenbankansicht ohne dateiunterstützung**|Abgeleitet von `CRecordView`|Bietet dokumentunterstützung aber keine Serialisierungsunterstützung. Dokument speichern Recordset und Koordinieren von mehreren Ansichten; unterstützt keine Serialisierung oder **neu**, **öffnen**, **speichern**, und **speichern** Befehle. Finden Sie unter [Anwendungen mit minimalen Dokumente](#_core_applications_with_minimal_documents). Wenn Sie eine Ansicht einfügen, müssen Sie die Quelle der Daten angeben.<br /><br /> Enthält Datenbank-Header-Dateien, DLLs, einer Datensatzansicht und einem Recordset. (Nur für Anwendungen mit der **Unterstützung für die Dokument-/Ansicht** Option ausgewählt wird, auf die [Anwendungstyp, MFC-Anwendungs-Assistent](../mfc/reference/application-type-mfc-application-wizard.md) Seite.)|
 |**Datenbankansicht mit dateiunterstützung**|Abgeleitet von `CRecordView`|Unterstützt vollständige Dokument, einschließlich Serialisierung und dokumentbezogene **Datei** Menübefehle. Datenbankanwendungen arbeiten in der Regel individuell für einzelne Datensätze, statt auf einer pro-Datei-Basis und daher keine Serialisierung erforderlich ist. Allerdings müssen Sie eine besondere Verwendung für die Serialisierung möglicherweise. Finden Sie unter [Anwendungen mit minimalen Dokumente](#_core_applications_with_minimal_documents). Wenn Sie eine Ansicht einfügen, müssen Sie die Quelle der Daten angeben.<br /><br /> Enthält Datenbank-Header-Dateien, DLLs, einer Datensatzansicht und einem Recordset. (Nur für Anwendungen mit der **Unterstützung für die Dokument-/Ansicht** Option ausgewählt wird, auf die [Anwendungstyp, MFC-Anwendungs-Assistent](../mfc/reference/application-type-mfc-application-wizard.md) Seite.)|
 
-Eine Erläuterung der alternativen zur Serialisierung und andere Verwendungszwecke der Serialisierung, finden Sie unter [Serialisierung: Serialisierung im Vergleich. Datenbank-e/a](../mfc/serialization-serialization-vs-database-input-output.md).
+Eine Erläuterung der alternativen zur Serialisierung und andere Verwendungszwecke der Serialisierung, finden Sie unter [Serialisierung: Serialisierung im Vergleich zu Datenbank-e/a](../mfc/serialization-serialization-vs-database-input-output.md).
 
 ##  <a name="_core_applications_with_minimal_documents"></a> Anwendungen mit minimalen Dokumente
 
@@ -81,7 +81,7 @@ In der Regel verwenden Sie diese Option für einfache, formularbasierte Anwendun
 
 ###  <a name="_core_a_document_with_file_support"></a> Dokument mit Dateiunterstützung
 
-Wählen Sie die Anwendung-Assistent-Datenbankoption **-Datenbanksicht mit dateiunterstützung** , wenn Sie haben eine alternative Verwendung für die dokumentbezogene **Datei** Menübefehle und Dokumentserialisierung. Für den Datenzugriff Teil des Programms, können Sie das Dokument auf die gleiche Weise wie in beschrieben [Dokument ohne Dateiunterstützung](#_core_a_document_without_file_support). Serialisierung-Funktion des Dokuments ab, können zum Beispiel lesen und Schreiben eines Dokuments der serialisierte Benutzer-Profil, das die Einstellungen des Benutzers und weitere nützliche Informationen speichert. Weitere Ideen finden Sie unter [Serialisierung: Serialisierung im Vergleich. Datenbank-e/a](../mfc/serialization-serialization-vs-database-input-output.md).
+Wählen Sie die Anwendung-Assistent-Datenbankoption **-Datenbanksicht mit dateiunterstützung** , wenn Sie haben eine alternative Verwendung für die dokumentbezogene **Datei** Menübefehle und Dokumentserialisierung. Für den Datenzugriff Teil des Programms, können Sie das Dokument auf die gleiche Weise wie in beschrieben [Dokument ohne Dateiunterstützung](#_core_a_document_without_file_support). Serialisierung-Funktion des Dokuments ab, können zum Beispiel lesen und Schreiben eines Dokuments der serialisierte Benutzer-Profil, das die Einstellungen des Benutzers und weitere nützliche Informationen speichert. Weitere Ideen finden Sie unter [Serialisierung: Serialisierung im Vergleich zu Datenbank-e/a](../mfc/serialization-serialization-vs-database-input-output.md).
 
 Der Anwendungs-Assistent unterstützt diese Option, aber Sie müssen den Code, der das Dokument serialisiert schreiben. Store die serialisierte Informationen im Dokument-Datenmember.
 

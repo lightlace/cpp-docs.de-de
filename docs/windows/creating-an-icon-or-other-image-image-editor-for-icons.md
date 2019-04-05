@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: d10593ffbae7aef55adc3334057402b6952d8ba7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328492"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027596"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Vorgehensweise: Erstellen eines Symbols oder anderen Bilds
 
@@ -155,8 +155,8 @@ Die **benutzerdefiniertes Image** Dialogfeld können Sie ein neues Image mit ein
 
 |Eigenschaft|Beschreibung|
 |---|---|
-|**Width**|Dient zur Eingabe der Breite des benutzerdefinierten Images in Pixel (1-512, Max. 2048).|
-|**Height**|Dient zur Eingabe der Höhe für das benutzerdefinierte Image in Pixel (1-512, Max. 2048).|
+|**Breite**|Dient zur Eingabe der Breite des benutzerdefinierten Images in Pixel (1-512, Max. 2048).|
+|**Höhe**|Dient zur Eingabe der Höhe für das benutzerdefinierte Image in Pixel (1-512, Max. 2048).|
 |**Farben**|Ein Eingabefeld für die Anzahl der Farben für das benutzerdefinierte Image auswählen: 2, 16 und 256.|
 
 Verwenden der **öffnen &lt;Gerät&gt; Image** Dialogfeld zum Öffnen von Gerätebildern in C++-Projekten. Vorhandene Images mit der Geräte in der aktuellen Ressourcendatei (Bilder, die Teil der aktuellen Ressource) aufgeführt. Die folgende Eigenschaft enthalten ist:
@@ -320,7 +320,7 @@ Keiner
 ## <a name="see-also"></a>Siehe auch
 
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)<br/>
-[Vorgehensweise: Bearbeiten eines Bilds](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Vorgehensweise: Bearbeiten eines Bildes](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
 [Vorgehensweise: Verwenden eines Zeichentools](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Vorgehensweise: Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB, resource pooling
 - OLE DB providers, resource pooling
 ms.assetid: 2ead1bcf-bbd4-43ea-a307-bb694b992fc1
-ms.openlocfilehash: 2dc5fbe760b2e62eec8b974bb496e52d1de25f50
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 786c2b31bb93b0691d80885c86377e2afba8c1dc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264957"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029303"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>Ressourcenpooling in OLE DB-Anwendungen
 
@@ -28,4 +28,4 @@ Schließlich, da ADO wird automatisch für die Verwendung von OLE DB Services, S
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Ressourcenpooling und -Dienste](../../data/oledb/ole-db-resource-pooling-and-services.md)
+[OLE DB-Ressourcenpooling und -Dienste](../../data/oledb/ole-db-resource-pooling-and-services.md)

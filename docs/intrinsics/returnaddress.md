@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: 01916a9306faa4159f54225b745fd56c35b5ae16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641782"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041136"
 ---
 # <a name="returnaddress"></a>_ReturnAddress
 
@@ -20,7 +20,7 @@ ms.locfileid: "50641782"
 
 Die `_ReturnAddress` systeminterne enthält die Adresse der Anweisung in der aufrufenden Funktion, die ausgeführt wird, nachdem die Steuerung an den Aufrufer zurückgibt.
 
-Erstellen Sie das folgende Programm und die schrittweise durchlaufen im Debugger. Beachten Sie die Adresse, die von zurückgegeben wird, wie Sie das Programm durchgehen schrittweise, `_ReturnAddress`. Klicken Sie dann sofort nach der Rückgabe der Funktion, in denen `_ReturnAddress` wurde verwendet wird, öffnen die [wie: Verwenden des Disassembierungsfensters](/visualstudio/debugger/how-to-use-the-disassembly-window) und beachten Sie, dass die Adresse der die nächste Anweisung ausgeführt wird, werden die Adresse, die von zurückgegebenentspricht`_ReturnAddress`.
+Erstellen Sie das folgende Programm und die schrittweise durchlaufen im Debugger. Beachten Sie die Adresse, die von zurückgegeben wird, wie Sie das Programm durchgehen schrittweise, `_ReturnAddress`. Klicken Sie dann sofort nach der Rückgabe der Funktion, in denen `_ReturnAddress` wurde verwendet wird, öffnen die [Vorgehensweise: Verwenden des Disassembierungsfensters](/visualstudio/debugger/how-to-use-the-disassembly-window) und notieren Sie sich, dass die Adresse, der die nächste Anweisung ausgeführt werden, die Adresse, die von zurückgegeben entspricht `_ReturnAddress`.
 
 Optimierungen wie z. B. inlining Mai Auswirkungen auf die Rückgabeadresse. Angenommen, das unten angegebene Beispielprogramm kompiliert wird, mit [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` werden in der aufrufenden Funktion inline `main`. Aus diesem Grund die Aufrufe an `_ReturnAddress` aus `inline_func` und `main` wird jeweils den gleichen Wert zu erzeugen.
 

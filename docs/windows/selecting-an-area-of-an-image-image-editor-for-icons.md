@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 246dee3c7d0c1a5a4f495fddf709833acc2c885e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 849da0d14987a057d39d5f9531e97545b3d4b8cf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562990"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033287"
 ---
 # <a name="how-to-edit-an-image"></a>Vorgehensweise: Bearbeiten eines Bildes
 
@@ -208,16 +208,16 @@ Sie können festlegen, oder Ändern der Eigenschaften eines Image mithilfe der [
    |Eigenschaft|Beschreibung|
    |--------------|-----------------|
    |**Farben**|Gibt an, das Farbschema für das Image. Wählen Sie **Monochrom**, **16**, oder **256**, oder **True Color**.<br/><br/>Wenn Sie bereits das Image mit einem 16-Farben-Palette gezeichnet haben, durch die Auswahl **Monochrom** bewirkt, dass Ersetzungen von Schwarz und weiß, für die Farben in der Abbildung. Kontrast wird nicht immer beibehalten: z. B. benachbarte Bereiche Rot-Grün sind in Schwarz umgewandelt.|
-   |**Filename**|Gibt den Namen der Bilddatei.<br/><br/>Standardmäßig weist Visual Studio ein Basisdateiname, entfernen die ersten vier Zeichen ("IDB_") erstellt, aus der Standard-Ressourcen-ID (IDB_BITMAP1) und die entsprechende Erweiterung hinzugefügt. Der Name der Datei für das Bild in diesem Beispiel *BITMAP1.bmp*. Könnten Sie den Namen es *kann in MEINEBITMAP1.bmp*.|
-   |**Height**|Legt die Höhe des Bilds (in Pixel) fest. Der Standardwert ist 48.<br/><br/>Das Bild ist beschnitten, oder ein leerer Bereich unterhalb des Bildes hinzugefügt.|
+   |**Dateiname**|Gibt den Namen der Bilddatei.<br/><br/>Standardmäßig weist Visual Studio ein Basisdateiname, entfernen die ersten vier Zeichen ("IDB_") erstellt, aus der Standard-Ressourcen-ID (IDB_BITMAP1) und die entsprechende Erweiterung hinzugefügt. Der Name der Datei für das Bild in diesem Beispiel *BITMAP1.bmp*. Könnten Sie den Namen es *kann in MEINEBITMAP1.bmp*.|
+   |**Höhe**|Legt die Höhe des Bilds (in Pixel) fest. Der Standardwert ist 48.<br/><br/>Das Bild ist beschnitten, oder ein leerer Bereich unterhalb des Bildes hinzugefügt.|
    |**ID**|Legt den Ressourcenbezeichner fest.<br/><br/>Um ein Bild weist Microsoft Visual Studio standardmäßig den nächsten verfügbaren Bezeichner in einer Reihe: IDB_BITMAP1 IDB_BITMAP2 und So weiter. Ähnliche Namen werden für Symbole und Cursor verwendet.|
    |**Palette**|Ändert die Farbeigenschaften.<br/><br/>Doppelklicken Sie auf eine Farbe auswählen und Anzeigen der [benutzerdefinierte Farbauswahl (Dialogfeld)](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Definieren Sie die Farbe, indem Sie RGB- oder HSL-Werte in die entsprechenden Textfelder eingeben.|
    |**SaveCompressed**|Gibt an, ob das Bild in einem komprimierten Format ist. Diese Eigenschaft ist schreibgeschützt.<br/><br/>Visual Studio können Sie zum Speichern von Bildern in einem komprimierten Format keine damit für alle Bilder, die in Visual Studio erstellt wird, diese Eigenschaft wird **"false"**. Wenn Sie ein komprimiertes Bild (erstellt in einem anderen Programm) in Visual Studio öffnen, wird diese Eigenschaft **"true"**. Wenn Sie ein komprimiertes Bild mithilfe von Visual Studio speichern, werden nicht komprimiert, und diese Eigenschaft wird auf zurückgesetzt **"false"**.|
-   |**Width**|Legt die Breite des Bilds (in Pixel) fest. Der Standardwert für Bitmaps gleich 48.<br/><br/>Das Bild ist beschnitten, oder ein leerer Bereich rechts neben das bestehende Image hinzugefügt.|
+   |**Breite**|Legt die Breite des Bilds (in Pixel) fest. Der Standardwert für Bitmaps gleich 48.<br/><br/>Das Bild ist beschnitten, oder ein leerer Bereich rechts neben das bestehende Image hinzugefügt.|
 
 ## <a name="requirements"></a>Anforderungen
 
-Keine
+Keiner
 
 ## <a name="see-also"></a>Siehe auch
 

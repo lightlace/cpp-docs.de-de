@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: ac2b7e323fff5d3baa80b509586178a48dbe1f8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: d1ab314edeebedef4cff14cd5364a7ca16c74769
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693619"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033306"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Verwenden mehrerer Zugriffsmethoden für ein Rowset
 
@@ -24,7 +24,7 @@ Es gibt drei grundlegende Szenarien, in denen Sie mehrere Accessoren für Ereign
 
   - Accessor 1 enthält alle Spalten außer dem Primärschlüssel.
 
-- **Leistung:** In diesem Szenario müssen einer oder mehreren Spalten eine große Menge von Daten, z. B. Grafiken, Audio- oder video-Dateien. Jedes Mal, wenn Sie auf eine Zeile verschieben, möchten Sie wahrscheinlich nicht die Spalte mit der Datei große Datenmengen abrufen, da dadurch die Leistung Ihrer Anwendung also verlangsamen würde.
+- **Leistung.** In diesem Szenario müssen einer oder mehreren Spalten eine große Menge von Daten, z. B. Grafiken, Audio- oder video-Dateien. Jedes Mal, wenn Sie auf eine Zeile verschieben, möchten Sie wahrscheinlich nicht die Spalte mit der Datei große Datenmengen abrufen, da dadurch die Leistung Ihrer Anwendung also verlangsamen würde.
 
   Sie können separate Accessoren einrichten, in der die erste Accessor enthält alle Spalten mit Ausnahme des mit großen Datenmengen, und er ruft Daten aus diesen Spalten automatisch; der erste-Accessor ist der Autoaccessor. Der zweite Accessor ruft nur die Spalte, die große Datenmengen enthalten, aber es nicht abrufen von Daten aus dieser Spalte automatisch. Sie können die anderen Methoden aktualisieren oder Abrufen umfangreicher Datenmengen bei Bedarf verwenden.
 
@@ -158,5 +158,5 @@ int main(int argc, char* argv[])
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)<br/>
+[Verwenden von Accessoren](../../data/oledb/using-accessors.md)<br/>
 [Benutzerdatensätze](../../data/oledb/user-records.md)

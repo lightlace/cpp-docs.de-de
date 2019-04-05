@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: bf1ae81184d53dd271f63c26e8f9a52a6410b232
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627446"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038446"
 ---
 # <a name="pack"></a>pack
 Gibt die Komprimierungsausrichtung für Struktur, Union und Klassenmember an.
@@ -26,7 +26,7 @@ Gibt die Komprimierungsausrichtung für Struktur, Union und Klassenmember an.
 
 ### <a name="parameters"></a>Parameter
 
-**Anzeigen**<br/>
+**show**<br/>
 (Optional) Zeigt den aktuellen Bytewert für die verpackungsausrichtung an. Der Wert wird von einer Warnmeldung angezeigt.
 
 **push**<br/>

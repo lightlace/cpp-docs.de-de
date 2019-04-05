@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-ms.openlocfilehash: ecf59b0d920b39d8f129e3ff25b5518f985d78f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 386afe5362f876cd1489a35839f4f8cfc2381e91
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516908"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038212"
 ---
 # <a name="attributes-alphabetical-reference"></a>Alphabetische Attributreferenz
 
@@ -21,7 +21,7 @@ Die folgenden Attribute sind in Microsoft C++-Compiler verfügbar:
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|[Aggregierbar](aggregatable.md)|Gibt an, dass ein Steuerelement durch ein anderes Steuerelement aggregiert werden kann.|
+|[aggregatable](aggregatable.md)|Gibt an, dass ein Steuerelement durch ein anderes Steuerelement aggregiert werden kann.|
 |[Aggregate](aggregates.md)|Gibt an, dass ein Steuerelement die Zielklasse aggregiert.|
 |[appobject](appobject.md)|Identifiziert die Co-Klasse als ein Anwendungsobjekt, das eine vollständige Anwendung für die EXE-Datei zugeordnet ist, und gibt an, dass die Funktionen und Eigenschaften der Co-Klasse in diese Typbibliothek global verfügbar sind.|
 |[async_uuid](async-uuid.md)|Gibt an, die UUID, die den MIDL-Compiler definiert synchrone und asynchrone Versionen einer COM-Schnittstelle weiterleitet.|
@@ -33,7 +33,7 @@ Die folgenden Attribute sind in Microsoft C++-Compiler verfügbar:
 |[com_interface_entry](com-interface-entry-cpp.md)|Fügt einen Eintrag für die Schnittstelle eine COM-Zuordnung.|
 |[Steuerelement](control.md)|Gibt an, dass der benutzerdefinierte Typ eines Steuerelements.|
 |[cpp_quote](cpp-quote.md)|Gibt die angegebene Zeichenfolge verwendet werden, ohne die Anführungszeichen in der generierten Headerdatei an.|
-|[custom](custom-cpp.md)|Können Sie eigene Attribute definieren.|
+|[Benutzerdefiniert](custom-cpp.md)|Können Sie eigene Attribute definieren.|
 |[db_accessor](db-accessor.md)|Bindet Spalten in einem Rowset, und bindet sie an der entsprechenden Accessor-Zuordnungen.|
 |[db_column](db-column.md)|Bindet eine angegebene Spalte auf das Rowset an.|
 |[db_command](db-command.md)|Führt einen OLE DB-Befehl.|
@@ -52,14 +52,14 @@ Die folgenden Attribute sind in Microsoft C++-Compiler verfügbar:
 |[entry](entry.md)|Gibt eine exportierte Funktion oder Konstante in einem Modul durch identifizieren den Einstiegspunkt in der DLL an.|
 |[event_receiver](event-receiver.md)|Erstellt einen Ereignisempfänger an.|
 |[event_source](event-source.md)|Erstellt eine Ereignisquelle.|
-|[export](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
+|["export"](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
 |[first_is](first-is.md)|Gibt den Index des ersten Arrayelements übertragen werden.|
 |[helpcontext](helpcontext.md)|Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der Hilfedatei.|
 |[helpfile](helpfile.md)|Legt den Namen der Hilfedatei für die Typbibliothek.|
 |[helpstring](helpstring.md)|Gibt die ID des Hilfethemas in eine .hlp oder CHM-Datei an.|
 |[helpstringdll](helpstringdll.md)|Gibt den Namen der DLL zu verwenden, um die Suche nach Dokument (Lokalisierung) ausführen.|
 |[hidden](hidden.md)|Gibt an, dass das Element vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden soll.|
-|[ID](id.md)|Gibt eine DISPID für eine Memberfunktion (eine Eigenschaft oder eine Methode, in eine Schnittstelle oder Disp-Schnittstelle).|
+|[id](id.md)|Gibt eine DISPID für eine Memberfunktion (eine Eigenschaft oder eine Methode, in eine Schnittstelle oder Disp-Schnittstelle).|
 |[idl_module](idl-module.md)|Gibt einen Einstiegspunkt in einer DLL an.|
 |[idl_quote](idl-quote.md)|Können Sie Attribute verwenden, oder IDL-Konstrukte, die in der aktuellen Version von Visual C++ nicht unterstützt werden.|
 |[iid_is](iid-is.md)|Gibt die IID für die COM-Schnittstelle, die einen Schnittstellenzeiger einen verweist.|
@@ -77,7 +77,7 @@ Die folgenden Attribute sind in Microsoft C++-Compiler verfügbar:
 |[length_is](length-is.md)|Gibt die Anzahl von Elementen übertragen werden.|
 |[library_block](library-block.md)|Fügt ein Konstrukt in bibliotheksblock der IDL-Datei an.|
 |[licensed](licensed.md)|Gibt an, dass die Co-Klasse, die auf die es angewendet wird lizenziert, und muss mit instanziiert werden `IClassFactory2`.|
-|[local](local-cpp.md)|Ermöglicht Ihnen die Verwendung den MIDL-Compiler als ein Header-Generator, wenn in der Schnittstelle-Header verwendet. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.|
+|[Lokal](local-cpp.md)|Ermöglicht Ihnen die Verwendung den MIDL-Compiler als ein Header-Generator, wenn in der Schnittstelle-Header verwendet. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.|
 |[max_is](max-is.md)|Legt fest, den maximalen Wert für ein gültiges Array-Index.|
 |[module](module-cpp.md)|Definiert den Bibliotheksblock in der IDL-Datei.|
 |[ms_union](ms-union.md)|Steuert die Netzwerk-datenausrichtung Darstellung nonencapsulated Unions.|
@@ -88,7 +88,7 @@ Die folgenden Attribute sind in Microsoft C++-Compiler verfügbar:
 |[object](object-cpp.md)|Identifiziert eine benutzerdefinierte Schnittstelle an. gleichbedeutend mit benutzerdefinierten Attribut.|
 |[odl](odl.md)|Gibt eine Schnittstelle als Schnittstelle Objekt Description Language (ODL).|
 |[oleautomation](oleautomation.md)|Gibt an, dass eine Schnittstelle mit der Automatisierung kompatibel ist.|
-|[optional](optional-cpp.md)|Gibt einen optionalen Parameter für eine Memberfunktion an.|
+|[Optional](optional-cpp.md)|Gibt einen optionalen Parameter für eine Memberfunktion an.|
 |[out](out-cpp.md)|Gibt die Zeigerparameter an, die von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben werden (vom Server an den Client).|
 |[pointer_default](pointer-default.md)|Gibt das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der obersten Ebene Zeigern, die angezeigt werden in der Parameterliste.|
 |[pragma](pragma.md)|Gibt die angegebene Zeichenfolge verwendet werden, ohne die Anführungszeichen in der generierten IDL-Datei aus.|
@@ -103,19 +103,19 @@ Die folgenden Attribute sind in Microsoft C++-Compiler verfügbar:
 |[readonly](readonly-cpp.md)|Verhindert die Zuweisung zu einer Variablen.|
 |[ref](ref-cpp.md)|Identifiziert einen Verweiszeiger an.|
 |[registration_script](registration-script.md)|Führt die angegebene Registrierungsskript aus.|
-|[requestedit](requestedit.md)|Gibt an, dass die Eigenschaft unterstützt die `OnRequestEdit` Benachrichtigung.|
+|[requestedit](requestedit.md)|Gibt an, dass die Eigenschaft die `OnRequestEdit`-Benachrichtigung unterstützt.|
 |[requires_category](requires-category.md)|Gibt Kategorien von erforderliche Komponente für die Klasse an.|
 |[restricted](restricted.md)|Gibt an, dass es sich bei einer Bibliothek oder einem Mitglied ein Modul, Schnittstelle oder Disp-Schnittstelle nicht beliebig aufgerufen werden kann.|
 |[retval](retval.md)|Legt fest, den Parameter, der den Rückgabewert des Members empfängt.|
 |[satype](satype.md)|Gibt den Datentyp, der die `SAFEARRAY`.|
 |[size_is](size-is.md)|Gibt an, die Größe des Arbeitsspeichers für Größe Zeiger zugewiesen, die Größe der Zeiger auf Zeiger, die Größe und Einzel- oder mehrdimensionale Arrays.|
-|[source](source-cpp.md)|Gibt an, dass ein Member der Klasse, Eigenschaft oder Methode eine Ereignisquelle ist.|
-|[string](string-cpp.md)|Gibt an, dass das eindimensionale **Char**, **"wchar_t"**, `byte`, oder das entsprechende Array oder der Zeiger auf ein solches Array muss als Zeichenfolge behandelt werden.|
+|[Quelle](source-cpp.md)|Gibt an, dass ein Member der Klasse, Eigenschaft oder Methode eine Ereignisquelle ist.|
+|[Zeichenfolge](string-cpp.md)|Gibt an, dass das eindimensionale **Char**, **"wchar_t"**, `byte`, oder das entsprechende Array oder der Zeiger auf ein solches Array muss als Zeichenfolge behandelt werden.|
 |[support_error_info](support-error-info.md)|Unterstützt die Windows-Fehlerberichterstattung für das Zielobjekt.|
 |[switch_is](switch-is.md)|Gibt den Ausdruck oder einen Bezeichner fungiert als die union kombiniert werden sollen, die die union-Member auswählt.|
 |[switch_type](switch-type.md)|Gibt den Typ der Variablen als die union Discriminant verwendet.|
 |[synchronize](synchronize.md)|Synchronisiert den Zugriff auf eine Methode.|
-|[threading](threading-cpp.md)|Gibt das Threadingmodell für eine COM-Objekt.|
+|[Threading](threading-cpp.md)|Gibt das Threadingmodell für eine COM-Objekt.|
 |[transmit_as](transmit-as.md)|Weist den Compiler dargestellt ein, die Client- und serveranwendungen bearbeiten zu können, müssen, mit einem übertragenen Typ zuordnen.|
 |[uidefault](uidefault.md)|Gibt an, dass der Typinformationsmember das Standardelement für die Anzeige in der Benutzeroberfläche.|
 |[unique](unique-cpp.md)|Gibt einen eindeutigen Zeiger.|

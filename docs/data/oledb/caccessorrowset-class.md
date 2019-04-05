@@ -30,12 +30,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: dd7156575f551af1643dd3d1f8238ee1e3fe86f4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420153"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033903"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset-Klasse
 
@@ -67,7 +67,7 @@ Eine Rowset-Klasse.
 
 |||
 |-|-|
-|[Bind](#bind)|Bindungen erstellt (wird verwendet, wenn `bBind` angegeben ist, als **"false"** in [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
+|[Binden](#bind)|Bindungen erstellt (wird verwendet, wenn `bBind` angegeben ist, als **"false"** in [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
 |[CAccessorRowset](#caccessorrowset)|Konstruktor.|
 |[Schließen](#close)|Schließt das Rowset und alle Accessoren.|
 |[FreeRecordMemory](#freerecordmemory)|Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen frei.|
@@ -156,5 +156,5 @@ Weitere Informationen finden Sie unter [IColumnsInfo:: GetColumnInfo](/previous-
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

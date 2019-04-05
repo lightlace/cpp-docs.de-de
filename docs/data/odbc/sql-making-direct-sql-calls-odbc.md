@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SQL calls
 - direct SQL calls from ODBC
 ms.assetid: 091988d2-f5a5-4c2d-aa09-8779a9fb9607
-ms.openlocfilehash: 17b3279a4803a61595af64ab18629d6cf69f0f10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd528e7abb713e4b3eb2bd5388a29958a1bb006c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549850"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024980"
 ---
 # <a name="sql-making-direct-sql-calls-odbc"></a>SQL: Durchführen direkter SQL-Aufrufe (ODBC)
 
@@ -28,7 +28,7 @@ In diesem Thema wird Folgendes erläutert:
 
 ##  <a name="_core_when_to_call_sql_directly"></a> Wenn SQL direkt aufrufen
 
-Zum Erstellen neuer Tabellen löschen (Delete) Tabellen, Ändern von vorhandenen Tabellen, Indizes zu erstellen und andere SQL-Funktionen, die ändern, Ausführen der [Datenquelle (ODBC)](../../data/odbc/data-source-odbc.md) Schema müssen Sie eine SQL-Anweisung ausgeben, direkt an die Datenquelle, die mit der Datenbank Die Datendefinitionssprache (DDL). Wenn Sie einen Assistenten verwenden, um eine Datensatzgruppe für eine Tabelle (Entwurfszeit) zu erstellen, können Sie die Spalten der Tabelle zur Darstellung im Recordset auswählen. Dies lässt sich nicht für Spalten, die Sie oder ein anderer Benutzer der Datenquelle in die Tabelle später hinzufügen, nachdem das Programm kompiliert wurde. Die Datenbankklassen unterstützen keine DDL direkt, aber Sie können weiterhin Code, um eine neue Spalte zur Laufzeit dynamisch an das Recordset zu binden. Informationen dazu, wie Sie diese Bindung verwenden, finden Sie unter [Recordset: Dynamisches Binden von Spalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+Zum Erstellen neuer Tabellen löschen (Delete) Tabellen, Ändern von vorhandenen Tabellen, Indizes zu erstellen und andere SQL-Funktionen, die ändern, Ausführen der [Datenquelle (ODBC)](../../data/odbc/data-source-odbc.md) Schema müssen Sie eine SQL-Anweisung ausgeben, direkt an die Datenquelle, die mit der Datenbank Die Datendefinitionssprache (DDL). Wenn Sie einen Assistenten verwenden, um eine Datensatzgruppe für eine Tabelle (Entwurfszeit) zu erstellen, können Sie die Spalten der Tabelle zur Darstellung im Recordset auswählen. Dies lässt sich nicht für Spalten, die Sie oder ein anderer Benutzer der Datenquelle in die Tabelle später hinzufügen, nachdem das Programm kompiliert wurde. Die Datenbankklassen unterstützen keine DDL direkt, aber Sie können weiterhin Code, um eine neue Spalte zur Laufzeit dynamisch an das Recordset zu binden. Informationen dazu, wie Sie diese Bindung verwenden, finden Sie unter [Recordset: Dynamisches Binden von Datenspalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
 Sie können die DBMS verwenden, zum Ändern des Schemas oder ein anderes Tool, das Sie DDL-Funktionen durchführen kann. Sie können auch die ODBC-Funktionsaufrufe verwenden, für das Senden von SQL-Anweisungen, wie z. B. der Aufruf einer vordefinierten Abfrage (gespeicherten Prozedur), die keine Datensätze zurückgibt.
 

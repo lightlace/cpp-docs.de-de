@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: d402f2a1292088b52ce921bbc0007ab96554189e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784258"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033520"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL-Namespace
 
@@ -48,7 +48,7 @@ namespace Microsoft::WRL;
 |[ClassFactory-Klasse](classfactory-class.md)|Implementiert die grundlegende Funktion der `IClassFactory`-Schnittstelle.|
 |[ComPtr-Klasse](comptr-class.md)|Erstellt einen *intelligenten Zeigertyp* , der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. ComPtr verwaltet automatisch einen Verweiszähler für den zugrunde liegenden Schnittstellenzeiger und gibt die Schnittstelle frei, wenn der Verweiszähler auf 0 geht.|
 |[DeferrableEventArgs-Klasse](deferrableeventargs-class.md)|Eine für die Ereignisargumenttypen für Verzögerungen verwendete Vorlagenklasse.|
-|[EventSource-Klasse](eventsource-class.md)|Stellt ein Ereignis dar. `EventSource`-Memberfunktionen fügen Ereignishandler hinzu, entfernen sie und rufen sie auf.|
+|[EventSource-Klasse](eventsource-class.md)|Stellt ein Ereignis dar. `EventSource` Member-Funktionen hinzufügen, entfernen und die Ereignishandler aufruft.|
 |[FtmBase-Klasse](ftmbase-class.md)|Stellt ein Freethread-Marshaller-Objekt dar.|
 |[Module-Klasse](module-class.md)|Stellt eine Auflistung von zugehörigen Objekten dar.|
 |[RuntimeClass-Klasse](runtimeclass-class.md)|Stellt eine instanziierte Klasse dar, die die angegebene Anzahl von Schnittstellen erbt, und gewährt Unterstützung für die angegebene Windows-Runtime, klassisches COM und schwache Verweise.|
@@ -79,7 +79,7 @@ namespace Microsoft::WRL;
 |Name|Beschreibung|
 |----------|-----------------|
 |[AsWeak-Funktion](asweak-function.md)|Ruft einen schwachen Verweis zur angegebenen Instanz ab.|
-|[Rückruffunktion (WRL)](callback-function-wrl.md)|Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.|
+|[Callback-Funktion (WRL)](callback-function-wrl.md)|Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.|
 |[CreateActivationFactory-Funktion](createactivationfactory-function.md)|Erstellt eine Instanzen der angegebenen Klasse erstellende Factory, die durch die Windows-Runtime aktiviert werden kann.|
 |[CreateClassFactory-Funktion](createclassfactory-function.md)|Erstellt eine Factory, die Instanzen der angegebenen Klasse erstellt.|
 |[Make-Funktion](make-function.md)|Initialisiert die angegebene Windows-Runtime-Klasse.|

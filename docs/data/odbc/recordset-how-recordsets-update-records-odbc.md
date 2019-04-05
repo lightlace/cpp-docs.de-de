@@ -8,12 +8,12 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 3b9bea1cc8fc0a11773d2392f88fff333eb7084f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510005"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034481"
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Recordset: Datensatzaktualisierung durch Recordsets (ODBC)
 
@@ -35,13 +35,13 @@ In diesem Thema wird Folgendes erläutert:
 
 [Recordset: Wie AddNew, Edit und Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) beschreibt die Aktionen dieser Funktionen aus der Perspektive des Recordset-Objekts.
 
-[Recordset: Weitere Informationen zu Aktualisierungen (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) führt Sie das Recordset-Updateverlauf durch die Erläuterung der Auswirkungen von Transaktionen auf Aktualisierungen, Auswirkungen Schließen eines Recordsets oder fortlaufenden Updates werden ausgeführt, und wie Ihre Updates mit den Updates von anderen interagieren Benutzer sind.
+[Recordset: Weitere Informationen zu Aktualisierungen (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) führt Sie das Recordset-Updateverlauf durch die Erläuterung der Auswirkungen von Transaktionen auf Aktualisierungen, Auswirkungen Schließen eines Recordsets oder fortlaufenden Updates werden ausgeführt, und wie Ihre Updates mit den Updates von anderen Benutzern interagieren.
 
 ##  <a name="_core_your_role_in_recordset_updating"></a> Ihre Rolle beim Aktualisieren von Recordsets
 
 Die folgende Tabelle zeigt die Rolle bei der Verwendung von Recordsets zum Hinzufügen, bearbeiten oder Löschen von Datensätzen, zusammen mit der Funktionsweise von des Frameworks für Sie.
 
-### <a name="recordset-updating-you-and-the-framework"></a>Aktualisieren von Recordsets: Sie und das Framework
+### <a name="recordset-updating-you-and-the-framework"></a>Recordset zu aktualisieren: Sie und das Framework
 
 |Benutzer|Das Framework|
 |---------|-------------------|
@@ -73,4 +73,4 @@ Beim Aufruf [AddNew](../../mfc/reference/crecordset-class.md#addnew) oder [bearb
 ## <a name="see-also"></a>Siehe auch
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: Funktionsweise von AddNew, Edit und Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Recordset: Wie AddNew, bearbeiten und Löschen von Arbeit (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
