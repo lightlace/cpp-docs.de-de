@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779845"
 ---
 # <a name="carray-class"></a>CArray-Klasse
@@ -102,7 +102,7 @@ Ein Vorlagenparameter, der der Argumenttyp angegeben wird, der Zugriff auf Objek
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[operator&#91;&#93;](#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|
+|[Operator&#91;&#93;](#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|
 
 ## <a name="remarks"></a>Hinweise
 

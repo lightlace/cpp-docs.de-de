@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
 ms.openlocfilehash: 1fc422c3aca3efe1fb177e7a3567530d70c27119
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779754"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl-Klasse
@@ -101,7 +101,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 [in] Ein boolescher Wert, der angibt, ob das Kontextmenü zu aktivieren.
 
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags
@@ -294,5 +294,5 @@ Verwenden Sie die Methode [CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist) z
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Klassen](../../mfc/reference/mfc-classes.md)<br/>
-[CTreeCtrl-Klasse](../../mfc/reference/ctreectrl-class.md)<br/>
+[CTreeCtrl Class](../../mfc/reference/ctreectrl-class.md)<br/>
 [CMFCShellListCtrl-Klasse](../../mfc/reference/cmfcshelllistctrl-class.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: b4f8975cb67f754778280f84ece98de2ef949c1a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e4e843327daba6f0aa468cb07394165bc70fa7f0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297761"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779507"
 ---
 # <a name="dialog-bars"></a>Dialogleisten
 
@@ -32,5 +32,5 @@ Während der normalen aus Ihren eigenen Klassen abgeleitet ist `CDialog`, werden
 
 ## <a name="see-also"></a>Siehe auch
 
-[Elemente der Benutzeroberfläche](../mfc/user-interface-elements-mfc.md)<br/>
-[Beispiel](../visual-cpp-samples.md)
+[Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)<br/>
+[Beispiel](../overview/visual-cpp-samples.md)

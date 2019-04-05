@@ -33,10 +33,10 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
 ms.openlocfilehash: 6f864a37c46158ab98776cd96d9f50d7cfaeb13d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776348"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl-Klasse
@@ -271,10 +271,10 @@ void GetRange32(
 
 ### <a name="parameters"></a>Parameter
 
-*lower*<br/>
+*niedrigere*<br/>
 Verweis auf eine ganze Zahl, die die untere Grenze des Steuerelements empfängt.
 
-*upper*<br/>
+*obere*<br/>
 Verweis auf eine ganze Zahl, die die Obergrenze für das Steuerelement empfängt.
 
 ### <a name="return-value"></a>Rückgabewert

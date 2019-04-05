@@ -95,10 +95,10 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773748"
 ---
 # <a name="cedit-class"></a>CEdit Class
@@ -1196,7 +1196,7 @@ void SetPasswordChar(TCHAR ch);
 
 ### <a name="parameters"></a>Parameter
 
-*ch*<br/>
+*CH*<br/>
 Gibt das Zeichen, die anstelle der vom Benutzer eingegebenen Zeichen angezeigt werden. Wenn *ch* gleich 0 ist, werden die tatsächlichen Zeichen, die vom Benutzer eingegeben wird angezeigt.
 
 ### <a name="remarks"></a>Hinweise

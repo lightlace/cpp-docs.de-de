@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264988"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781873"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar-Klasse
 
@@ -124,7 +124,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Die Hintergrundfarbe der Titelleiste.|
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Die Farbe des Rahmens der Titelleiste.|
@@ -148,7 +148,7 @@ Rufen Sie zum Aktivieren der Modus "Balken" [CMFCCaptionBar::Create](#create) un
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCCaptionBar` -Klasse. Das Beispiel zeigt, wie Sie die Beschriftung-Steuerelement zu erstellen, legen Sie einen 3D-Rahmen der Titelleiste, legen Sie die Entfernung zwischen dem Rand der Beschriftung Leiste Elemente und dem Rand des Steuerelements Beschriftung in Pixel, legen Sie die Schaltfläche für die Titelleiste , legen Sie die QuickInfo für die Schaltfläche, legen Sie die textbezeichnung für die Titelleiste, legen Sie das Bitmap-Bild für die Titelleiste und legen Sie die QuickInfo für das Bild in der Titelleiste. Dieser Codeausschnitt ist Teil der [MS Office 2007-Demo-Beispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCCaptionBar` -Klasse. Das Beispiel zeigt, wie Sie die Beschriftung-Steuerelement zu erstellen, legen Sie einen 3D-Rahmen der Titelleiste, legen Sie die Entfernung zwischen dem Rand der Beschriftung Leiste Elemente und dem Rand des Steuerelements Beschriftung in Pixel, legen Sie die Schaltfläche für die Titelleiste , legen Sie die QuickInfo für die Schaltfläche, legen Sie die textbezeichnung für die Titelleiste, legen Sie das Bitmap-Bild für die Titelleiste und legen Sie die QuickInfo für das Bild in der Titelleiste. Dieser Codeausschnitt ist Teil der [MS Office 2007-Demo-Beispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -233,7 +233,7 @@ void EnableButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 [in] TRUE, wenn die Schaltfläche "false" zu aktivieren, auf um die Schaltfläche zu deaktivieren.
 
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Parameter
 
-*elem*<br/>
+*Elem*<br/>
 [in] Ein Caption-Element der Leiste für die Ausrichtung abzurufen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -412,7 +412,7 @@ virtual void OnDrawButton(
 *strButton*<br/>
 [in] Die Beschriftung der Schaltfläche Text.
 
-*bEnabled*<br/>
+*bAktiviert*<br/>
 [in] True, wenn die Schaltfläche aktiviert ist. "False" andernfalls.
 
 ### <a name="remarks"></a>Hinweise

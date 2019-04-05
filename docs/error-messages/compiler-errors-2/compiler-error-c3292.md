@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3292
 ms.assetid: ead485cc-5471-4e10-b361-300589ff5b70
-ms.openlocfilehash: 7c59932a79534a365a20fcad25583f7addc0d624
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a68d3e922532480063fe4c294e40f453885743e8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609605"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780651"
 ---
 # <a name="compiler-error-c3292"></a>Compilerfehler C3292
 
 Der cli-Namespace kann nicht erneut geöffnet werden.
 
-Der cli-Namespace kann nicht in Ihrem Code deklariert werden.  Weitere Informationen finden Sie unter [Platform-, Default- und Cli-Namespaces](../../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).
+Der cli-Namespace kann nicht in Ihrem Code deklariert werden.  Weitere Informationen finden Sie unter [Platform-, Default- und Cli-Namespaces](../../extensions/platform-default-and-cli-namespaces-cpp-component-extensions.md).
 
 ## <a name="example"></a>Beispiel
 

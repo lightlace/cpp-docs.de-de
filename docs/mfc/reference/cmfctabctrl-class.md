@@ -105,10 +105,10 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778454"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] Die ID des Registerkarten-Steuerelements.
 
-*location*<br/>
+*Speicherort*<br/>
 [in] Der Speicherort der Registerkarten. Der Standardwert ist LOCATION_BOTTOM. Weitere Informationen finden Sie in den Hinweisen.
 
 *bCloseBtn*<br/>
@@ -387,7 +387,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 [in] True, um die Schaltfläche "Schließen" auf der aktiven Registerkarte angezeigt werden sollen. Zum Anzeigen der Schaltfläche "Schließen" in der oberen rechten Ecke des Registerkartenbereichs wird false ZURÜCKGEGEBEN. Der Standardwert ist "true".
 
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit
@@ -400,7 +400,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 [in] True, um bearbeitbare registerkartenbezeichnungen zu aktivieren. "False", um bearbeitbare registerkartenbezeichnungen zu deaktivieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -415,7 +415,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 [in] TRUE, um ein Popupmenü Fenster im Registerkartenformat Bezeichnungen anzuzeigen; "False" Vorwärts und rückwärts-scrollschaltflächen angezeigt werden. Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parameter
 
-*bCancel*<br/>
+*bAbbrechen*<br/>
 [in] "True", den aktuellen Vorgang der Größenänderung abzubrechen; "False" zum Ausführen der aktuellen Anpassen der Größe ab. In beiden Fällen beendet das Framework an, das Ändern der Größe Rechteck zu zeichnen.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar
@@ -1139,6 +1139,6 @@ Diese Methode wirkt sich nur ein Registerkarten-Steuerelement, das flache Regist
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Klassen](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md)<br/>
-[CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md)<br/>
-[CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)

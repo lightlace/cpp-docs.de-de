@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 82036017188acc3f882e9751096af8ab268fd9db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525170"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780352"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Compilerwarnung (Stufe 4) C4754
 
 Aufgrund von Konvertierungsregeln für arithmetische Operationen in einem Vergleich kann ein Branch nicht ausgeführt werden.
 
-Die Warnung C4754 wird ausgegeben, da das Ergebnis des Vergleichs immer identisch ist. Dies bedeutet, dass eine der Verzweigungen der Bedingung nie ausgeführt wird, weil höchstwahrscheinlich der zugehörige ganzzahligen Ausdruck falsch ist. Dieser Fehler tritt häufig in falschen Ganzzahl-Überlaufüberprüfungen in 64-Bit-Architekturen auf.
+Die Warnung C4754 wird ausgegeben, da das Ergebnis des Vergleichs immer identisch ist. Dies bedeutet, dass einer der Branches der Bedingung nie ausgeführt wird, weil höchstwahrscheinlich der zugehörige ganzzahligen Ausdruck falsch ist. Dieser Fehler tritt häufig in falschen Ganzzahl-Überlaufüberprüfungen in 64-Bit-Architekturen auf.
 
-Konvertierungsregeln für Ganzzahlen sind komplex und enthalten viele subtile Fehlermöglichkeiten. Als Alternative zu jeder C4754-Warnung beheben, können Sie den Code so aktualisieren die [SafeInt-Bibliothek](../../windows/safeint-library.md).
+Konvertierungsregeln für Ganzzahlen sind komplex und enthalten viele subtile Fehlermöglichkeiten. Als Alternative zu jeder C4754-Warnung beheben, können Sie den Code so aktualisieren die [SafeInt-Bibliothek](../../safeint/safeint-library.md).
 
 ## <a name="example"></a>Beispiel
 

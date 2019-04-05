@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
 ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780222"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton-Klasse
@@ -208,7 +208,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] Gibt eine neue automatische Farbe an.
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 [in] Gibt an, ob die Schaltfläche zum automatischen oder nicht.
 
 ### <a name="remarks"></a>Hinweise
@@ -230,7 +230,7 @@ void EnableDocumentColors(
 *lpszLabel*<br/>
 [in] Gibt den Text der Schaltfläche an.
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 [in] "True", um dokumentspezifische Farben oder "false" zum Anzeigen von Systemfarben anzuzeigen.
 
 ### <a name="remarks"></a>Hinweise
@@ -256,7 +256,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Geben Sie "true", zeigen die `CMFCColorDialog` Dialogfeld oder "false", um das Dialogfeld Farbe Standardsystem anzuzeigen.
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 [in] Geben Sie "true", "other" die Schaltfläche anzuzeigen; andernfalls "false". Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -506,7 +506,7 @@ static void SetColorByCmdID(
 *uiCmdID*<br/>
 [in] Die Ressourcen-ID einer Menüschaltfläche Farbe.
 
-*color*<br/>
+*Farbe*<br/>
 [in] Ein RGB-Farbwert.
 
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName
@@ -521,7 +521,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parameter
 
-*color*<br/>
+*Farbe*<br/>
 [in] Der RGB-Wert, der die Farbe, deren Name geändert, werden soll.
 
 *strName*<br/>

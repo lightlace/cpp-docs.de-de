@@ -57,10 +57,10 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
 ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781691"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager-Klasse
@@ -159,7 +159,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |Parameter|Beschreibung|
 |*size*|[in] Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Parameter, der die Größe der Bitmap angibt.|
 |*pBits*|[out] Ein Zeiger auf einen Datenzeiger, der den Speicherort des DIB empfängt bit-Werten.|
-|*bitmap*|Ein Handle für die ursprüngliche bitmap|
+|*Bitmap*|Ein Handle für die ursprüngliche bitmap|
 |*clrTransparent*|Ein RGB-Wert, transparente Farbe des der ursprünglichen Bitmap angibt.|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -714,7 +714,7 @@ static BYTE __stdcall HueToRGB(
 *rm2*<br/>
 [in] Finden Sie unter "Hinweise".
 
-*rh*<br/>
+*RH*<br/>
 [in] Finden Sie unter "Hinweise".
 
 ### <a name="return-value"></a>Rückgabewert
@@ -972,7 +972,7 @@ static void __stdcall SetPixel(
 |*cy*|[in] Die gesamte Höhe der Bitmap.|
 |*w*|[in] Die X-Koordinate des Pixels in der Bitmap ändern.|
 |*y*|[in] Die y-Koordinate des Pixels in der Bitmap ändern.|
-|*color*|[in] Die neue Farbe des Pixels, identifiziert durch den angegebenen Koordinaten.|
+|*Farbe*|[in] Die neue Farbe des Pixels, identifiziert durch den angegebenen Koordinaten.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 
@@ -992,7 +992,7 @@ static COLORREF __stdcall SmartMixColors(
 |||
 |-|-|
 |Parameter|Beschreibung|
-|*color1*|[in] Die erste Farbe, zu kombinieren.|
+|*"Farbe1"*|[in] Die erste Farbe, zu kombinieren.|
 |*color2*|[in] Die zweite Farbe, zu kombinieren.|
 |*dblLumRatio*|[in] Das Verhältnis für die Helligkeit der neuen Farbe. `SmartMixColors` Multipliziert die Helligkeit der gemischten Farbe dieses Verhältnis bevor bestimmt wird, eine endgültige Farbe.|
 |*k1*|[in] Die gewichtete Verhältnis für die erste Farbe.|

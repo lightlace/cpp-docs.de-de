@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776907"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog-Klasse
@@ -131,13 +131,13 @@ Eine Zeichenfolge, die das Format für den Benutzer beschreibt.
 *lpszResult*<br/>
 Eine Zeichenfolge, die Beschreibung des Ergebnisses, wenn dieses Format im Dialogfeld ausgewählt wird.
 
-*flags*<br/>
+*Flags*<br/>
 Die verschiedenen verlinken und Einbetten für dieses Format verfügbaren Optionen. Dieses Flag ist eine bitweise Kombination eines oder mehrere der anderen Werte in der OLEUIPASTEFLAG Enumerationstyp.
 
 *cf*<br/>
 Das Zwischenablageformat hinzufügen.
 
-*tymed*<br/>
+*TYMED*<br/>
 Die Typen der Medien, die im folgenden Format zur Verfügung. Dies ist eine bitweise Kombination eines oder mehrere der Werte in der TYMED Enumerationstyp.
 
 *nFormatID*<br/>

@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
 ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781236"
 ---
 # <a name="ceditview-class"></a>CEditView-Klasse
@@ -186,7 +186,7 @@ BOOL FindText(
 *lpszFind*<br/>
 Der Text gefunden werden.
 
-*bNext*<br/>
+*bWeiter*<br/>
 Gibt die Richtung für die Suche. Wenn TRUE, ist die suchrichtung zum Ende des Puffers. False gibt an, wird die Suche Richtung am Anfang des Puffers.
 
 *bCase*<br/>
@@ -296,7 +296,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Der Text gefunden werden.
 
-*bNext*<br/>
+*bWeiter*<br/>
 Gibt die Richtung für die Suche. Wenn TRUE, ist die suchrichtung zum Ende des Puffers. False gibt an, wird die Suche Richtung am Anfang des Puffers.
 
 *bCase*<br/>
@@ -355,7 +355,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 Der Text gefunden werden.
 
-*bNext*<br/>
+*bWeiter*<br/>
 Gibt die Richtung für die Suche. Wenn TRUE, ist die suchrichtung zum Ende des Puffers. False gibt an, wird die Suche Richtung am Anfang des Puffers.
 
 *bCase*<br/>
@@ -495,7 +495,7 @@ Rufen Sie `UnlockBuffer` Sie nach der Verwendung des vom Zeigers [LockBuffer](#l
 [MFC-Beispiel SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView-Klasse](../../mfc/reference/cctrlview-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
-[CEdit-Klasse](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [CDocument-Klasse](../../mfc/reference/cdocument-class.md)<br/>
 [CDocTemplate-Klasse](../../mfc/reference/cdoctemplate-class.md)<br/>
 [CCtrlView-Klasse](../../mfc/reference/cctrlview-class.md)<br/>

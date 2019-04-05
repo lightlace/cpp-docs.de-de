@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302103"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781444"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd-Klasse
 
@@ -175,9 +175,9 @@ Weitere Informationen über Splitterfenster, finden Sie unter [technischen Hinwe
 
 Weitere Informationen zum Erstellen von dynamischen Splitterfenstern finden Sie unter:
 
-- MFC-Beispiel [Scribble](../../visual-cpp-samples.md)
+- MFC-Beispiel [Scribble](../../overview/visual-cpp-samples.md)
 
-- MFC-Beispiel [VIEWEX](../../visual-cpp-samples.md).
+- MFC-Beispiel [VIEWEX](../../overview/visual-cpp-samples.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -260,7 +260,7 @@ Die maximale Anzahl der Spalten im Teilungsfenster. Dieser Wert darf 2 nicht üb
 *sizeMin*<br/>
 Gibt die minimale Größe, an der ein Bereich angezeigt werden kann.
 
-*pContext*<br/>
+*"pContext"*<br/>
 Ein Zeiger auf eine [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) Struktur. Dies kann in den meisten Fällen werden die *"pContext"* an den übergeordneten Rahmenfensters übergeben.
 
 *dwStyle*<br/>
@@ -388,10 +388,10 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>Parameter
 
-*row*<br/>
+*Zeile*<br/>
 Gibt die Zeile des Splitter-Fenster in der die neue Ansicht platziert werden soll.
 
-*col*<br/>
+*SP*<br/>
 Gibt die Spalte Splitter-Fenster, in dem die neue Ansicht platziert werden soll.
 
 *pViewClass*<br/>
@@ -400,7 +400,7 @@ Gibt an, die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) der
 *sizeInit*<br/>
 Gibt die Anfangsgröße der neuen Ansicht an.
 
-*pContext*<br/>
+*"pContext"*<br/>
 Ein Zeiger auf einen erstellen-Kontext verwendet, um die Ansicht zu erstellen (in der Regel die *"pContext"* übergebenen des übergeordneten Rahmens außer Kraft gesetzte [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) Memberfunktion in der Teilungsfenster. erstellt wird).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -475,10 +475,10 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>Parameter
 
-*row*<br/>
+*Zeile*<br/>
 Gibt die Zeile des Splitter-Fenster, die Ansicht zu löschen.
 
-*col*<br/>
+*SP*<br/>
 Gibt die Spalte des Splitter-Fenster, die Ansicht zu löschen.
 
 ### <a name="remarks"></a>Hinweise
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*col*<br/>
+*SP*<br/>
 Gibt eine Spalte.
 
 *cxCur*<br/>
@@ -649,10 +649,10 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>Parameter
 
-*row*<br/>
+*Zeile*<br/>
 Gibt eine Zeile an.
 
-*col*<br/>
+*SP*<br/>
 Gibt eine Spalte.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*row*<br/>
+*Zeile*<br/>
 Gibt eine Zeile an.
 
 *cyCur*<br/>
@@ -727,10 +727,10 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>Parameter
 
-*row*<br/>
+*Zeile*<br/>
 Gibt die Zeile der Splitter-Fenster.
 
-*col*<br/>
+*SP*<br/>
 Gibt die Spalte der Splitter-Fenster.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -877,10 +877,10 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>Parameter
 
-*row*<br/>
+*Zeile*<br/>
 Wenn *aufnehmen* NULL ist, gibt die Zeile im Bereich, der aktiv sein werden.
 
-*col*<br/>
+*SP*<br/>
 Wenn *aufnehmen* NULL ist, gibt die Spalte im Bereich, der aktiv sein werden.
 
 *pWnd*<br/>
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*col*<br/>
+*SP*<br/>
 Gibt eine Spalte der Splitter-Fenster.
 
 *cxIdeal*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*row*<br/>
+*Zeile*<br/>
 Gibt eine Zeile der Splitter-Fenster an.
 
 *cyIdeal*<br/>
@@ -1036,7 +1036,7 @@ Ein Zeiger zu einem Gerätekontext.
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel VIEWEX](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CView-Klasse](../../mfc/reference/cview-class.md)<br/>

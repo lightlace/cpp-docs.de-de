@@ -165,10 +165,10 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773982"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem-Klasse
@@ -2150,7 +2150,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 *ptd*<br/>
 Zeiger auf eine [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) Datenstruktur, die Informationen über das neue Gerät für die Print-Ziel enthält. NULL kann sein.
 
-*ppd*<br/>
+*PPD*<br/>
 Zeiger auf eine [PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940) Datenstruktur, die Informationen über das neue Gerät für die Print-Ziel enthält. NULL kann sein.
 
 ### <a name="return-value"></a>Rückgabewert

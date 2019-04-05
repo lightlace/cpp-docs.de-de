@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425093"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780612"
 ---
 # <a name="clistctrl-class"></a>CListCtrl-Klasse
 
@@ -1788,7 +1788,7 @@ BOOL GetItemIndexRect(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*pItemIndex*|[in] Zeiger auf ein [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur für das übergeordnete Element des Unterelements ab.<br /><br /> Der Aufrufer ist verantwortlich für das zuordnen und Festlegen der Member, der die [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur. Dieser Parameter darf nicht NULL sein.|
-|*iColumn*|[in] Nullbasierte Index der einer Spalte im Steuerelement.|
+|*der iColumn*|[in] Nullbasierte Index der einer Spalte im Steuerelement.|
 |*rectType*|[in] Der Teil des Listenansicht-Unterelements für die das umschließende Rechteck abgerufen wird. Geben Sie einen der folgenden Werte an:<br /><br /> LVIR_BOUNDS - gibt das umschließende Rechteck des gesamten Unterelements, einschließlich das Symbol und die Bezeichnung zurück.<br /><br /> LVIR_ICON - gibt das umschließende Rechteck des Symbols oder des Minisymbols des Unterelements ab.<br /><br /> LVIR_LABEL - gibt das umschließende Rechteck für den Text des Unterelements.|
 |*pRect*|[out] Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die Informationen über das umschließende Rechteck des Unterelements empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung der [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur. Dieser Parameter darf nicht NULL sein.|
 
@@ -2702,7 +2702,7 @@ LRESULT InsertGroup(
 
 ### <a name="parameters"></a>Parameter
 
-*index*<br/>
+*Index*<br/>
 Der Index des Elements, in die Gruppe eingefügt werden soll.
 
 *pgrp*<br/>
@@ -2774,7 +2774,7 @@ Der Index des Elements eingefügt werden soll.
 *lpszItem*<br/>
 Die Adresse einer Zeichenfolge, enthält die Beschriftung des Elements oder -LPSTR_TEXTCALLBACK, wenn das Element ein Rückrufelement ist. Informationen zu Elementen der Rückruf finden Sie unter [CListCtrl:: GetCallbackMask](#getcallbackmask).
 
-*nImage*<br/>
+*Nbild*<br/>
 Der Index des Image des Elements oder -I_IMAGECALLBACK, wenn das Element ein Rückrufelement ist. Informationen zu Elementen der Rückruf finden Sie unter [CListCtrl:: GetCallbackMask](#getcallbackmask).
 
 *nMask*<br/>
@@ -2875,7 +2875,7 @@ BOOL IsItemVisible(int index) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*index*|[in] Nullbasierte Index eines Elements in der aktuellen Listenansicht-Steuerelement.|
+|*Index*|[in] Nullbasierte Index eines Elements in der aktuellen Listenansicht-Steuerelement.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2897,7 +2897,7 @@ UINT MapIDToIndex(UINT id) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*ID*|[in] Die eindeutige ID eines Elements.|
+|*id*|[in] Die eindeutige ID eines Elements.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2923,7 +2923,7 @@ UINT MapIndexToID(UINT index) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*index*|[in] Der nullbasierte Index eines Elements.|
+|*Index*|[in] Der nullbasierte Index eines Elements.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -3040,7 +3040,7 @@ BOOL RedrawItems(
 
 ### <a name="parameters"></a>Parameter
 
-*nFirst*<br/>
+*. Nerster*<br/>
 Der Index des ersten Elements neu gezeichnet wird.
 
 *nLast*<br/>
@@ -3114,7 +3114,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parameter
 
-*cr*<br/>
+*CR*<br/>
 Hintergrundfarbe festlegen, oder der CLR_NONE führt dazu-Wert für die keine Hintergrundfarbe. Listenansicht-Steuerelemente mit Hintergrundfarben neu zu zeichnen sich erheblich schneller als die ohne Hintergrundfarben. Weitere Informationen finden Sie unter [COLORREF](/windows/desktop/gdi/colorref) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3225,7 +3225,7 @@ BOOL SetCheck(
 *nItem*<br/>
 Der nullbasierte Index von einem Steuerelement ein Element.
 
-*fCheck*<br/>
+*Weitere Informationen finden*<br/>
 Gibt an, ob das Zustandsbild des Elements oder nicht sichtbar sein soll. In der Standardeinstellung *besuchen* ist "true" und das Zustandsbild sichtbar. Wenn *besuchen* ist "false", es ist nicht sichtbar.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Parameter
 
-*color*<br/>
+*Farbe*<br/>
 Ein [COLORREF](/windows/desktop/gdi/colorref) -Struktur, die die Farbe zum Festlegen der Einfügemarke angibt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3655,7 +3655,7 @@ Gibt an, welche Attribute festgelegt werden (siehe die Hinweise).
 *lpszItem*<br/>
 Die Adresse einer Null-terminierte Zeichenfolge, die das Element dort angeben.
 
-*nImage*<br/>
+*Nbild*<br/>
 Index des Elements Bildes in der Bildliste.
 
 *nState*<br/>
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Parameter
 
-*color*<br/>
+*Farbe*<br/>
 Die neue [COLORREF](/windows/desktop/gdi/colorref) Struktur, die die Konturfarbe enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4022,7 +4022,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parameter
 
-*cr*<br/>
+*CR*<br/>
 Eine COLORREF, die die neue Hintergrundfarbe des Texts angibt. Weitere Informationen finden Sie unter [COLORREF](/windows/desktop/gdi/colorref) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4048,7 +4048,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parameter
 
-*cr*<br/>
+*CR*<br/>
 Eine COLORREF, die die neue Farbe des Textes angibt. Weitere Informationen finden Sie unter [COLORREF](/windows/desktop/gdi/colorref) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4422,7 +4422,7 @@ Diese Funktion ordnet den LVS_AUTOARRANGE Stil verfügt auch das Listenansicht-S
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel ROWLIST](../../visual-cpp-samples.md)<br/>
+[MFC-Beispiel ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd-Klasse](cwnd-class.md)<br/>
 [Hierarchiediagramm](../hierarchy-chart.md)<br/>
 [CImageList-Klasse](cimagelist-class.md)
