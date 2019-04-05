@@ -1,6 +1,6 @@
 ---
 title: CPathT-Klasse
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CPathT
 - ATLPATH/ATL::CPathT
@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273022"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565788"
 ---
 # <a name="cpatht-class"></a>CPathT-Klasse
 
 Diese Klasse stellt einen Pfad an.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+> Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -139,7 +139,7 @@ Die ATL-/MFC-String-Klasse für den Pfad zu verwenden (siehe [CStringT](../../at
 |----------|-----------------|
 |[Const StringType CPathT::operator &](#operator_const_stringtype_amp)|Dieser Operator kann das Objekt wie eine Zeichenfolge behandelt werden.|
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Dieser Operator kann das Objekt wie eine Zeichenfolge behandelt werden.|
-|[CPathT::operator StringType &](#operator_stringtype)|Dieser Operator kann das Objekt wie eine Zeichenfolge behandelt werden.|
+|[CPathT::operator StringType &](#operator_stringtype_amp)|Dieser Operator kann das Objekt wie eine Zeichenfolge behandelt werden.|
 |[CPathT::operator +=](#operator_add_eq)|Dieser Operator Fügt eine Zeichenfolge in den Pfad an.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
@@ -653,7 +653,7 @@ Gibt den aktuellen Pfad zurück.
 Dieser Operator kann das Objekt wie eine Zeichenfolge behandelt werden.
 
 ```
-operatorconst StringType&() const throw();
+operator const StringType&() const throw();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
@@ -665,19 +665,19 @@ Gibt eine Zeichenfolge, die den aktuellen Pfad verwaltet, die von diesem Objekt 
 Dieser Operator kann das Objekt wie eine Zeichenfolge behandelt werden.
 
 ```
-operatorPCXSTR() const throw();
+operator PCXSTR() const throw();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
 
 Gibt eine Zeichenfolge, die den aktuellen Pfad verwaltet, die von diesem Objekt darstellt.
 
-##  <a name="operator_stringtype__amp"></a>  CPathT::operator StringType &amp;
+##  <a name="operator_stringtype_amp"></a>  CPathT::operator StringType &amp;
 
 Dieser Operator kann das Objekt wie eine Zeichenfolge behandelt werden.
 
 ```
-operatorStringType&() throw();
+operator StringType&() throw();
 ```
 
 ### <a name="return-value"></a>Rückgabewert
