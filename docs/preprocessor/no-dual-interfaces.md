@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_dual_interfaces attribute
 ms.assetid: 9acd5d9d-4a49-4cdc-9470-73a2c23cf512
-ms.openlocfilehash: d76fe3ce6bea4c3895da9d8b40d69852f912824e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae75bc2e974f374768f1a9e5a0e1ced61e9904b0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466728"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023801"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
 **C++-spezifisch**

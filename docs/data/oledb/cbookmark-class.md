@@ -67,12 +67,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: b59d4de6751dd2a7f90c5de766b5f95cb7e7b330
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fb2e3ec99471405f9c6521e0b70672c1da1b755c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525183"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030140"
 ---
 # <a name="cbookmark-class"></a>CBookmark-Klasse
 
@@ -118,7 +118,7 @@ Die Größe des Lesezeichenpuffers in Byte. Wenn *nSize* ist 0 (null), die Lesez
 
 `CBookmark<0>` ist eine Spezialisierung einer Klassenvorlage von `CBookmark`; des Puffers wird zur Laufzeit dynamisch erstellt.
 
-## <a name="cbookmark"></a> CBookmark:: CBookmark
+## <a name="cbookmark"></a> CBookmark::CBookmark
 
 Der Konstruktor.
 
@@ -141,7 +141,7 @@ Die erste Funktion legt Puffer auf NULL und die Puffergröße auf 0 fest. Die zw
 > [!NOTE]
 >  Diese Funktion steht nur in `CBookmark<0>`.
 
-## <a name="getbuffer"></a> CBookmark:: GetBuffer
+## <a name="getbuffer"></a> CBookmark::GetBuffer
 
 Ruft die Zeiger auf den Puffer Lesezeichen ab.
 
@@ -155,7 +155,7 @@ virtual BYTE* GetBuffer() const throw();
 
 Ein Zeiger auf der Lesezeichen-Puffer.
 
-## <a name="getsize"></a> CBookmark:: GetSize
+## <a name="getsize"></a> CBookmark::GetSize
 
 Ruft die Größe des Lesezeichenpuffers ab.
 
@@ -169,7 +169,7 @@ virtual DBLENGTH GetSize() const throw();
 
 Die Größe des Puffers in Byte.
 
-## <a name="setbookmark"></a> CBookmark:: SetBookmark
+## <a name="setbookmark"></a> CBookmark::SetBookmark
 
 Kopiert den Lesezeichenwert verweist *pBuffer* auf die `CBookmark` Puffern und legt die Größe des Puffers auf *nSize*.
 
@@ -211,5 +211,5 @@ Dieser Operator wird nur in benötigt `CBookmark<0>`.
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

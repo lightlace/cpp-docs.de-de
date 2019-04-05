@@ -5,12 +5,12 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 79eb11a2a9d6403eb267098bb4f893b4424d6a67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466338"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040805"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Arbeiten mit OLE DB-Consumervorlagen
 
@@ -18,7 +18,7 @@ Die folgenden Themen werden Beispiele zur Verwendung der OLE DB-Consumervorlagen
 
 - [Vereinfachen des Datenzugriffs mit Datenbankattributen](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
-- [Feldstatus-Datenmember in vom Assistenten generierten Zugriffsmethoden](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
+- [Feldstatus-Datenmember in vom Assistenten generierten Accessoren](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
 
 - [Durchlaufen eines einfachen Rowsets](../../data/oledb/traversing-a-simple-rowset.md)
 
@@ -30,11 +30,11 @@ Die folgenden Themen werden Beispiele zur Verwendung der OLE DB-Consumervorlagen
 
 - [Verwenden von gespeicherten Prozeduren](../../data/oledb/using-stored-procedures.md)
 
-- [Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)
+- [Verwenden von Accessoren](../../data/oledb/using-accessors.md)
 
 - [Abrufen von Metadaten mit Schemarowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)
 
-- [Unterstützen von Transaktionen in OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)
+- [Unterstützen von Transaktionen in OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)
 
 - [Verwenden von OLE DB-Datensatzansichten](../../data/oledb/using-ole-db-record-views.md)
 
@@ -60,4 +60,4 @@ Sie finden auch Beispiele für die OLE DB-Consumervorlagen in den folgenden Beis
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: ec80e8cf177becdc25bdf49d6dfa9ad9c7794b88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612822"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025269"
 ---
 # <a name="comment-cc"></a>comment (C/C++)
 
@@ -39,7 +39,7 @@ Platziert den Namen und die Versionsnummer des Compilers in der Objektdatei. Die
 
 Stellen *Commentstring* in der Objektdatei. Zum Zeitpunkt der Verknüpfung wird diese Zeichenfolge in der ausführbaren Datei platziert. Die Zeichenfolge wird nicht in den Arbeitsspeicher geladen, wenn die ausführbare Datei geladen wird. Allerdings kann sie mit einem Programm gesucht werden, das druckbare Zeichenfolgen in Dateien sucht. Eine Verwendung für diesen comment-record-Typ ist, eine Versionsnummer oder ähnliche Informationen in einer ausführbaren Datei einzubetten.
 
-`exestr` ist veraltet und wird in einer der nächsten Versionen entfernt. Der Linker verarbeitet den Kommentardatensatz nicht.
+`exestr` ist veraltet und wird in einer zukünftigen Version; entfernt der Linker verarbeitet den Kommentardatensatz nicht.
 
 ### <a name="lib"></a>lib
 

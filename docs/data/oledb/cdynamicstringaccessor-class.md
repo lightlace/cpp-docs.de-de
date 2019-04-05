@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: dff36dfb2b898c6a4df65492e2d9386c748f049b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534614"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035662"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor-Klasse
 
@@ -55,7 +55,7 @@ Die Spalteninformationen befindet sich in einem Puffer, die von dieser Klasse er
 
 Ausführliche Informationen und Beispiele für die Verwendung der dynamischen Accessorklassen, finden Sie unter [mithilfe von dynamischen Zugriffsmethoden](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="getstring"></a> CDynamicStringAccessor:: GetString
+## <a name="getstring"></a> CDynamicStringAccessor::GetString
 
 Ruft die Daten der angegebenen Spalte als Zeichenfolge ab.
 
@@ -85,7 +85,7 @@ Ein Zeiger auf den Zeichenfolgenwert fest, die aus der angegebenen Spalte abgeru
 
 Die zweite außer Kraft setzen Form akzeptiert den Namen der Spalte als eine ANSI-Zeichenfolge an. Die dritte außer Kraft setzen Form akzeptiert den Namen der Spalte als Unicode-Zeichenfolge an.
 
-## <a name="setstring"></a> CDynamicStringAccessor:: SetString
+## <a name="setstring"></a> CDynamicStringAccessor::SetString
 
 Legt die angegebene Spalte als Zeichenfolge fest.
 
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in] Ein Zeiger auf eine Zeichenfolge, die den Namen der Spalte enthält.
 
-*data*<br/>
+*Daten*<br/>
 [in] Ein Zeiger auf die Daten der Zeichenfolge, an die angegebene Spalte geschrieben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -125,8 +125,8 @@ Wenn _SECURE_ATL definiert ist, um einen Wert ungleich NULL haben, wird ein Lauf
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor-Klasse](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor-Klasse](../../data/oledb/cmanualaccessor-class.md)<br/>

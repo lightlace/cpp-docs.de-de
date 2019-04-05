@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 94c7025185a24b07d5968157d49c856d4359b33a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565505"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021630"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection-Klasse
 
@@ -102,11 +102,11 @@ class CDataConnection
 |||
 |-|-|
 |[Operator BOOL](#op_bool)|Bestimmt, ob die aktuelle Sitzung geöffnet oder nicht ist.|
-|[operator bool](#op_bool_ole)|Bestimmt, ob die aktuelle Sitzung geöffnet oder nicht ist.|
-|[operator CDataSource&](#op_cdata_amp)|Gibt einen Verweis auf die enthaltene `CDataSource` Objekt.|
+|[boolescher Operatorwert](#op_bool_ole)|Bestimmt, ob die aktuelle Sitzung geöffnet oder nicht ist.|
+|[Operator CDataSource &](#op_cdata_amp)|Gibt einen Verweis auf die enthaltene `CDataSource` Objekt.|
 |[Operator CDataSource *](#op_cdata_star)|Gibt einen Zeiger auf die enthaltene `CDataSource` Objekt.|
-|[Operator-CSession &](#op_csession_amp)|Gibt einen Verweis auf die enthaltene `CSession` Objekt.|
-|[Operator CSession *](#op_csession_star)|Gibt einen Zeiger auf die enthaltene `CSession` Objekt.|
+|[Operator-CSession&](#op_csession_amp)|Gibt einen Verweis auf die enthaltene `CSession` Objekt.|
+|[Operator-CSession*](#op_csession_star)|Gibt einen Zeiger auf die enthaltene `CSession` Objekt.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -187,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 #### <a name="parameters"></a>Parameter
 
-*session*<br/>
+*Sitzung*<br/>
 [in/Out] Ein Verweis auf das Objekt für die neue Sitzung.
 
 ### <a name="remarks"></a>Hinweise
@@ -306,5 +306,5 @@ Finden Sie unter [Operator-CSession &](../../data/oledb/cdataconnection-operator
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

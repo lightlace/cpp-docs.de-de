@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 3d79e48411006156ee4682adc736e83e226743af
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 878b7371dfa77880d68f1001444ed44b84d7240c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562977"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037420"
 ---
 # <a name="how-to-layout-controls-c"></a>Vorgehensweise: Formularlayout-Steuerelemente (C++)
 
@@ -114,12 +114,12 @@ Die **Einstellungen für Führungslinien** Dialogfeld hat die folgenden Eigensch
 |Eigenschaft|Beschreibung|
 |---|---|
 |**Layoutführungslinien**|Zeigt die Einstellungen für die Layoutführungslinien.|
-|**Keine**|Blendet die Layout-Tools.|
+|**Keiner**|Blendet die Layout-Tools.|
 |**Lineale und Führungslinien**|Wenn aktiviert, wird die Layouttools Lineale hinzugefügt und Anleitungen erfahren, wie in der Lineale platziert werden können. Die Standard-Handbücher sind die Ränder.|
 |**Raster**|Erstellt eine Layoutraster für Telefone. Neue Steuerelemente werden automatisch auf das Raster ausgerichtet.|
 |**Rasterweite**|Zeigt die Einstellungen für den Rasterabstand in Box Dialogeinheiten (DLUs).|
 |**Breite: DLUs**|Legt die Breite des Layoutrasters in DLUs fest. Eine horizontale DLU ist die durchschnittliche Breite der Dialogfeld-Schriftart geteilt durch 4.|
-|**Height: DLUs**|Legt die Höhe des Layoutrasters in DLUs fest. Eine vertikale DLU entspricht der durchschnittlichen Höhe der Dialogfeld-Schriftart dividiert durch 8.|
+|**Höhe: DLUs**|Legt die Höhe des Layoutrasters in DLUs fest. Eine vertikale DLU entspricht der durchschnittlichen Höhe der Dialogfeld-Schriftart dividiert durch 8.|
 
 ### <a name="guides-and-margins"></a>Führungslinien und Rändern
 
@@ -260,7 +260,7 @@ Sie können ein Kombinationsfeld Größe, wenn Sie sie zum Dialogfeld hinzufüge
 
    |Abstand|Beschreibung|
    |---|---|
-   |**Auf**|Speicherplatz Steuerelemente gleichmäßig zwischen dem äußeren linken und dem äußersten rechten ausgewählten Steuerelement.|
+   |**Über**|Speicherplatz Steuerelemente gleichmäßig zwischen dem äußeren linken und dem äußersten rechten ausgewählten Steuerelement.|
    |**Nach unten**|Speicherplatz Steuerelemente gleichmäßig zwischen dem obersten und untersten Steuerelements ausgewählt.|
 
 - Um Steuerelemente zu zentrieren, wählen Sie das Steuerelement oder Steuerelemente, die Sie neu anordnen möchten. Wechseln Sie zum Menü **Format** > **Center im Dialogfeld** und wählen Sie eine der folgenden Aktionen:
@@ -275,7 +275,7 @@ Sie können ein Kombinationsfeld Größe, wenn Sie sie zum Dialogfeld hinzufüge
    |Anordnung|Beschreibung|
    |---|---|
    |**Rechts**|Richtet die Schaltflächen am rechten Rand des Dialogfelds.|
-   |**Bottom** (Unten)|Richtet die Schaltflächen am unteren Rand des Dialogfelds.|
+   |**Bottom**|Richtet die Schaltflächen am unteren Rand des Dialogfelds.|
 
    Wenn Sie ein Steuerelement als eine Schaltfläche auswählen, wird nicht seine Position beeinflusst.
 
@@ -286,5 +286,5 @@ Win32
 ## <a name="see-also"></a>Siehe auch
 
 [Verwalten von Dialogfeld-Steuerelemente](controls-in-dialog-boxes.md)<br/>
-[How To: Hinzufügen, Bearbeiten oder Löschen eines Steuerelements](adding-editing-or-deleting-controls.md)<br/>
-[Vorgehensweise: Definieren von Zugriffssteuerung und Werten](defining-mnemonics-access-keys.md)<br/>
+[Vorgehensweise: Hinzufügen, bearbeiten oder Löschen von Steuerelementen](adding-editing-or-deleting-controls.md)<br/>
+[Vorgehensweise: Steuern des Zugriffs und Werte definieren](defining-mnemonics-access-keys.md)<br/>

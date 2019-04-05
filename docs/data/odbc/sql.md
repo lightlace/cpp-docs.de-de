@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: c9ea15520f98a86f8af7c278bfc77463689a4606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576815"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037856"
 ---
 # <a name="sql"></a>SQL
 
@@ -51,7 +51,7 @@ Datenbankklassen verwendet einen Teil von SQL bekannt als der Data Manipulation 
 |**WHERE**|Um einen Filter anzuwenden, der die Auswahl beschränkt.|
 |**ORDER BY**|Das Recordset eine Sortierreihenfolge zuweisen.|
 |**EINFÜGEN**|Neue Datensätze zu einem Recordset hinzufügen.|
-|**LÖSCHEN**|Zum Löschen von Datensätzen aus einem Recordset.|
+|**DELETE**|Zum Löschen von Datensätzen aus einem Recordset.|
 |**UPDATE**|So ändern Sie die Felder eines Datensatzes.|
 
 Darüber hinaus erkennt die Datenbankklassen ODBC **Aufrufen** Anweisungen, die Sie verwenden können, für einige Datenquellen eine vordefinierte Abfrage (oder eine gespeicherte Prozedur) aufgerufen. Der ODBC-Datenbanktreiber interpretiert diese Anweisungen und ersetzt den Befehl entsprechend für jeden DBMS.
@@ -61,9 +61,9 @@ Darüber hinaus erkennt die Datenbankklassen ODBC **Aufrufen** Anweisungen, die 
 
 Wenn die Klassen in eine benutzerdefinierte-Anweisung nicht erkennen `CRecordset::Open`, wird er als Namen einer Tabelle interpretiert.
 
-Eine Erklärung, wie das Framework für SQL-Anweisungen erstellt, finden Sie unter [Recordset: wie Recordsets auswählen von Datensätzen (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) und [SQL: Anpassen eines Recordsets SQL-Anweisung (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Eine Erklärung, wie das Framework für SQL-Anweisungen erstellt, finden Sie unter [Recordset: Datensatzauswahl durch Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) und [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-SQL-Datenbanken verwenden Sie Datentypen, die ähnlich wie in C und C++. Eine Erläuterung der diese ähnlichkeiten, finden Sie unter [SQL: SQL- und C++-Daten-Datentypen (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
+SQL-Datenbanken verwenden Sie Datentypen, die ähnlich wie in C und C++. Eine Erläuterung der diese ähnlichkeiten, finden Sie unter [SQL: SQL- und C++-Datentypen (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
 Sie finden weitere Informationen zu SQL, einschließlich einer Liste der unterstützten SQL-Anweisungen, Datentypen, Core-SQL-Grammatik und eine Lesen-Liste der empfohlenen Veröffentlichungen zu SQL, in der *ODBC SDK* *-Programmierreferenz*  auf der MSDN Library-CD.
 

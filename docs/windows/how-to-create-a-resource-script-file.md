@@ -36,12 +36,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: a18c24685ff0d5f65970a094730d1587abffb601
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c22df99240c0fa076124e33224a4f6f4ab9a957e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563029"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028521"
 ---
 # <a name="how-to-create-resources-c"></a>Vorgehensweise: Erstellen von Ressourcen (C++)
 
@@ -190,5 +190,5 @@ Win32
 ## <a name="see-also"></a>Siehe auch
 
 [Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
-[Vorgehensweise: Ressourcen verwalten](../windows/how-to-copy-resources.md)<br/>
+[Vorgehensweise: Verwalten von Ressourcen](../windows/how-to-copy-resources.md)<br/>
 [Vorgehensweise: Einfügen von Ressourcen zur Kompilierungszeit](../windows/how-to-include-resources-at-compile-time.md)<br/>

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520421"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028090"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if-, #elif-, #else- und #endif-Anweisungen (C/C++)
 
@@ -49,8 +49,8 @@ Die **#if** -Direktive, zusammen mit den **#elif**, **#else**, und **#endif** St
 &nbsp;&nbsp;&nbsp;&nbsp;*Elif-Line text*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Elif-Teile Elif-Line text*
 
-*Elif-Line-* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***konstanter Ausdruck*
+*elif-line* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif**  *constant-expression*
 
 *else-Teil* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Else-Line text*
@@ -65,7 +65,7 @@ Jede **#if** -Anweisung in einer Quelldatei muss eine schließende übereinstimm
 
 Die **#if**, **#elif**, **#else**, und **#endif** Anweisungen können in Textteilen von anderen schachteln **#if**Anweisungen. Jede geschachtelte **#else**, **#elif**, oder **#endif** Richtlinie gehört zur nächsten vorangehenden **#if** Richtlinie.
 
-Allen bedingten kompilierungsanweisungen, wie z. B. **#if** und **#ifdef**, müssen schließende zugeordnet werden **#endif** -Anweisungen vor dem Ende der Datei, andernfalls Fehler Nachricht wird generiert. Wenn Includedateien bedingte Kompilierungsanweisungen enthalten, müssen sie die gleichen Bedingungen erfüllen: Am Ende der Includedatei dürfen sich keine bedingten Kompilierungsanweisungen ohne Entsprechung befinden.
+Allen bedingten kompilierungsanweisungen, wie z. B. **#if** und **#ifdef**, müssen schließende zugeordnet werden **#endif** -Anweisungen vor dem Ende der Datei, andernfalls Fehler Nachricht wird generiert. Wenn in bedingten kompilierungsanweisungen enthalten sind Dateien einschließen, müssen sie die gleichen Bedingungen erfüllen: Keine nicht übereinstimmenden Anweisungen zur bedingten Kompilierung am Ende des Include-Datei muss vorhanden sein.
 
 Makroersetzung wird ausgeführt, in dem Teil der Befehlszeile, folgt eine **#elif** Befehl, sodass ein Makroaufruf im verwendet werden kann die *Konstantenausdruck*.
 
@@ -97,7 +97,7 @@ Der Präprozessoroperator **definiert** kann in speziellen Konstanten Ausdrücke
 
 defined( `identifier` )
 
-defined `identifier`
+Definition `identifier`
 
 Dieser Konstante Ausdruck wird als "true" (ungleich null), wenn die *Bezeichner* derzeit definiert ist; andernfalls ist die Bedingung "false" (0). Ein Bezeichner, der als leerer Text definiert wird, wird als definiert betrachtet. Die **definiert** -Direktive kann verwendet werden, eine **#if** und **#elif** Richtlinie allerdings an keiner anderen Stelle.
 
@@ -144,7 +144,7 @@ Die Anweisungen für die bedingte Kompilierung im folgenden Beispiel gehen von e
 #endif
 ```
 
-Die erste **#if** -Block zeigt zwei Sätze von verschachtelten **#if**, **#else**, und **#endif** Anweisungen. Der erste Satz von Anweisungen wird nur verarbeitet, wenn `DLEVEL > 5` "true" ist. Andernfalls die Anweisungen nach **#else** verarbeitet werden.
+Die erste **#if** -Block zeigt zwei Sätze von verschachtelten **#if**, **#else**, und **#endif** Anweisungen. Der erste Satz von Direktiven wird nur verarbeitet, wenn `DLEVEL > 5` "true" ist. Andernfalls die Anweisungen nach **#else** verarbeitet werden.
 
 Die **#elif** und **#else** Anweisungen im zweiten Beispiel verwendet, um eine der vier Auswahlmöglichkeiten, basierend auf den Wert der `DLEVEL`. Die Konstante `STACK` ist auf 0, 100 oder 200 festgelegt, abhängig von der Definition von `DLEVEL`. Wenn `DLEVEL` größer als 5 ist, wird die Anweisung
 
@@ -172,9 +172,9 @@ class Example
 
 Der vorangehende Code überprüft, ob die symbolische Konstante `EXAMPLE_H` definiert ist. In diesem Fall wurde die Datei bereits eingefügt und muss nicht erneut verarbeitet werden. Wenn dies nicht der Fall ist, wird die Konstante `EXAMPLE_H` definiert, um EXAMPLE.H als bereits verarbeitet zu markieren.
 
-## <a name="hasinclude"></a>"__has_include"
+## <a name="hasinclude"></a>__has_include
 
-**Visual Studio 2017 Version 15.3 und höher**: bestimmt, ob ein Header der Typbibliothek für die Aufnahme verfügbar ist:
+**Visual Studio 2017, Version 15.3 und höher**:  Bestimmt, ob ein Header der Typbibliothek für die Aufnahme verfügbar ist:
 
 ```cpp
 #ifdef __has_include

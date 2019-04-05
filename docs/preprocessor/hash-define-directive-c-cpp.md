@@ -10,20 +10,20 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: dec555de64a3ebd166bdff5558957f09e1c2755e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653751"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039499"
 ---
-# <a name="define-directive-cc"></a>#define-Anweisung (C/C++)
+# <a name="define-directive-cc"></a>#define-Direktive (C/C++)
 
 Die **#define** erstellt eine *Makro*, d.h., dass die Zuordnung eines Bezeichners oder parametrisierten Bezeichners zu einer tokenzeichenkette darstellt. Nachdem das Makro definiert wurde, kann der Compiler die Tokenzeichenkette für jedes Vorkommen des Bezeichners in der Quelldatei ersetzen.
 
 ## <a name="syntax"></a>Syntax
 
-`#define` *Bezeichner* *-Token-Zeichenfolge*<sub>deaktivieren</sub>
+`#define` *identifier* *token-string*<sub>opt</sub>
 
 `#define` *Bezeichner* `(` *Bezeichner*<sub>opt</sub> `,` *...*  `,` *Bezeichner*<sub>opt</sub> `)` *-Token-Zeichenfolge*<sub>deaktivieren</sub>
 

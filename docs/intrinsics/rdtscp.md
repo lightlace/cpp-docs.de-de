@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: 813f13e20e74890cfcb52ae25234aa348e1d522d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b28052fbe0a1ab0e1a6f037ce61f43abea5cf771
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496294"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028479"
 ---
 # <a name="rdtscp"></a>__rdtscp
 
@@ -31,7 +31,7 @@ unsigned __int64 __rdtscp(
 
 #### <a name="parameters"></a>Parameter
 
-*AUX*<br/>
+*Aux*<br/>
 [out] Zeiger auf einen Speicherort, der den Inhalt des Registers computerspezifische enthält `TSC_AUX[31:0]`.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -79,7 +79,7 @@ TSC_AUX was 0
 
 **Ende Microsoft-spezifisch**
 
-Copyright 2007 erweiterten Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.
+Copyright 2007 by Advanced Micro Devices, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.
 
 ## <a name="see-also"></a>Siehe auch
 

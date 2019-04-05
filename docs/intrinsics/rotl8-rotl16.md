@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _rotl8 intrinsic
 - _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
-ms.openlocfilehash: 63a4b342db58b37070c9348ac9eff1044a54a28b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 8c87c7a5fa1c2bee475b0e4508b5c1571dc449de
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327953"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028288"
 ---
 # <a name="rotl8-rotl16"></a>_rotl8, _rotl16
 
@@ -39,7 +39,7 @@ unsigned short _rotl16(
 *Wert*<br/>
 [in] Der zu drehende Wert.
 
-*shift*<br/>
+*Schiebeoperatoren*<br/>
 [in] Die Anzahl der Bits für die Drehung.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -50,8 +50,8 @@ Der gedrehte Wert.
 
 |Systemintern|Architektur|
 |---------------|------------------|
-|`_rotl8`|X86, ARM, x64|
-|`_rotl16`|X86, ARM, x64|
+|`_rotl8`|x86, ARM, x64|
+|`_rotl16`|x86, ARM, x64|
 
 **Headerdatei** \<intrin.h >
 

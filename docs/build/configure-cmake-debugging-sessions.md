@@ -3,12 +3,12 @@ title: Konfigurieren von CMake-Debugsitzungen in Visual Studio
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356165"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035347"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurieren von CMake-Debugsitzungen
 
@@ -42,7 +42,7 @@ Sobald Sie speichern die **"Launch.VS.JSON"** -Datei, in dem ein Eintrag erstell
 
 ## <a name="support-for-cmakesettings-variables"></a>Unterstützung für CMakeSettings-Variablen
 
- **"Launch.VS.JSON"** unterstützt Variablen die im deklarierten **"cmakesettings.JSON"** (siehe unten) und gilt für die aktuell ausgewählte Konfiguration sind. Sie verfügt ebenfalls über einen Schlüssel namens `currentDir`, der das aktuelle Verzeichnis der gestarteten App festlegt:
+ **"Launch.VS.JSON"** unterstützt Variablen die im deklarierten **"cmakesettings.JSON"** (siehe unten) und gilt für die aktuell ausgewählte Konfiguration sind. Es verfügt auch über einen Schlüssel namens `currentDir`, wodurch das aktuelle Verzeichnis der Start-app für ein lokales Projekt festgelegt:
 
 ```json
 {
@@ -59,12 +59,19 @@ Wenn Sie die App ausführen, entspricht der Wert von `currentDir` etwa Folgendem
 ```cmd
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
+
+Der Schlüssel "Cwd" legt das aktuelle Verzeichnis der Start-app für ein remote-Projekt fest. Der Standardwert ist "${debugInfo.defaultWorkingDirectory}" der ausgewertet wird 
+
+```cmd
+/var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
+```
+
 ## <a name="see-also"></a>Siehe auch
 
-[CMake Projects in Visual Studio (CMake-Projekte in Visual Studio)](cmake-projects-in-visual-studio.md)<br/>
+[CMake-Projekte in Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurieren eines Linux CMake-Projekts](../linux/cmake-linux-project.md)<br/>
 [Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Anpassen von CMake-Buildeinstellungen](customize-cmake-settings.md)<br/>
 [Konfigurieren von CMake-Debugsitzungen](configure-cmake-debugging-sessions.md)<br/>
-[Bereitstellen, Ausführen und Debuggen Ihres Linux-Projekts](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[CMake predefined configuration reference (Referenz für vordefinierte CMake-Konfigurationen)](cmake-predefined-configuration-reference.md)<br/>
+[Bereitstellen, Ausführen und Debuggen eines Linux-Projekts](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[Referenz für vordefinierte CMake-Konfigurationen](cmake-predefined-configuration-reference.md)<br/>

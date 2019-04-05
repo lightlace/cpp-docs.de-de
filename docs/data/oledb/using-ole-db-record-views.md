@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB, record views
 - MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-ms.openlocfilehash: 631e78e1a397ec360b1f3b2d94d7340e96925e23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83f4d64252ab5c2b80d62419ea448c1ffd0cdd69
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582711"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025865"
 ---
 # <a name="using-ole-db-record-views"></a>Verwenden von OLE DB-Datensatzansichten
 
@@ -33,5 +33,5 @@ Sie können die DDX-Funktionen mit `COleDbRecordView` um Daten direkt aus dem Da
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)<br/>
+[Verwenden von Accessoren](../../data/oledb/using-accessors.md)<br/>
 [COleDBRecordView-Klasse](../../mfc/reference/coledbrecordview-class.md)<br/>

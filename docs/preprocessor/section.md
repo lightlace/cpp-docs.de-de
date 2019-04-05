@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-ms.openlocfilehash: cd8eee564fa17b21d5421a3471fd676af921f444
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462139"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023242"
 ---
 # <a name="section"></a>section
 
@@ -37,12 +37,12 @@ Sobald ein Abschnitt definiert wurde, bleibt er für den Rest der Kompilierung g
 
 |Attribut|Beschreibung|
 |-|-|
-|**read**|Ermöglicht Lesevorgänge für Daten.|
-|**write**|Ermöglicht Schreibvorgänge für Daten.|
+|**Lesen**|Ermöglicht Lesevorgänge für Daten.|
+|**Schreiben**|Ermöglicht Schreibvorgänge für Daten.|
 |**execute**|Ermöglicht die Ausführung von Code.|
-|**Freigegebene**|Gibt den Abschnitt für alle Prozesse frei, die das Image laden.|
+|**Freigegeben**|Gibt den Abschnitt für alle Prozesse frei, die das Image laden.|
 |**nopage**|Markiert den Abschnitt als nicht auslagerbar; nützlich für Win32-Gerätetreiber.|
-|**NoCache**|Markiert den Abschnitt als nicht zwischenspeicherbar; nützlich für Win32-Gerätetreiber.|
+|**nocache**|Markiert den Abschnitt als nicht zwischenspeicherbar; nützlich für Win32-Gerätetreiber.|
 |**discard**|Markiert den Abschnitt als entfernbar; nützlich für Win32-Gerätetreiber.|
 |**remove**|Markiert den Abschnitt als nicht speicherresident; Virtuelle Gerätetreiber (V*x*D) nur.|
 

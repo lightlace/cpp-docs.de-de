@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 52ffd992480df517f8677e14161b697eb3ecc321
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 43a47366475b227ccfc5918b07760cc582326e82
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786281"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041470"
 ---
 # <a name="windows-desktop-wizard"></a>Windows-Desktop-Assistenten
 
@@ -65,7 +65,7 @@ Definiert abhängig vom Anwendungstyp die Unterstützung sowie Optionen für die
 |**Leeres Projekt**|Legt fest, dass die Projektdateien leer sind. Wenn Sie über eine Gruppe von Quellcodedateien (z. B. CPP-Dateien, Headerdateien, Symbole, Symbolleisten, Dialogfelder usw.) verfügen und in der Visual C++-Entwicklungsumgebung ein Projekt erstellen möchten, müssen Sie zunächst ein leeres Projekt anlegen und die Dateien dem Projekt dann hinzufügen.<br /><br /> Diese Option ist für statische Bibliotheksprojekte nicht verfügbar.|
 |**Symbole exportieren**|Legt fest, dass vom DLL-Projekt Symbole exportiert werden.|
 |**Vorkompilierter Header**|Legt fest, dass das statische Bibliotheksprojekt einen vorkompilierten Header verwendet.|
-|**Security Development Lifecycle (SDL) überprüft.**|Weitere Informationen zu SDL finden Sie unter [Prozessleitfaden für die Microsoft Security Development Lifecycle (SDL)](../build/reference/sdl-enable-additional-security-checks.md)|
+|**Security Development Lifecycle (SDL)-Prüfungen**|Weitere Informationen zu SDL finden Sie unter [Prozessleitfaden für die Microsoft Security Development Lifecycle (SDL)](../build/reference/sdl-enable-additional-security-checks.md)|
 
 ## <a name="add-common-headers-for"></a>Fügen Sie allgemeine Header für hinzu:
 

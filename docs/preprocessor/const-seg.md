@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: ce932b068f5751b7cf1ceab969312defd18336f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648343"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029621"
 ---
 # <a name="constseg"></a>const_seg
 Gibt das Segment, in denen [const](../cpp/const-cpp.md) Variablen werden in der OBJ-Datei gespeichert.
@@ -40,7 +40,7 @@ Mithilfe von *Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen e
 "*Segment-Name*"<br/>
 (Optional) Der Name eines Segments. Bei Verwendung mit **pop**, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.
 
-"*Segmentklasse*"<br/>
+"*segment-class*"<br/>
 (Optional) Für die Kompatibilität mit C++ vor Version 2.0 enthalten. Wird ignoriert.
 
 ## <a name="remarks"></a>Hinweise

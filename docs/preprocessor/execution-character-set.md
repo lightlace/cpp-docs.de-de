@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
-ms.openlocfilehash: ff6ff550f39dc746bb687d8d3147baa0837a6cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd31e8e91a1bcbfa6ace9b47fa2b13dd945adb20
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472669"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039925"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 
@@ -43,4 +43,4 @@ Standardmäßig verwendet Visual Studio die aktuelle Codepage als des quellzeich
 
 [Pragma-Direktiven und das \_ \_Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [/ Execution-CharSet (Ausführungszeichensatz festlegen)](../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/utf-8 (Quelle und ausführbare Zeichensätze auf UTF-8 festlegen)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[/UTF-8 (Quelle festlegen und ausführbare Zeichensätze auf UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

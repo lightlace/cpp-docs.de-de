@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-ms.openlocfilehash: 075f00ad8a4071af57014638707503847b58756d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557182"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034377"
 ---
 # <a name="vtordisp"></a>vtordisp
 
@@ -41,7 +41,7 @@ Entfernt den obersten Datensatz aus dem internen Compilerstapel und setzt die vt
 *n*<br/>
 Gibt den neuen Wert für die vtordisp-Einstellung an. Mögliche Werte sind 0, 1 oder 2, entsprechend der `/vd0`, `/vd1`, und `/vd2` Compileroptionen. Weitere Informationen finden Sie unter [/VD (Konstruktionsverschiebungen deaktivieren)](../build/reference/vd-disable-construction-displacements.md).
 
-*on*<br/>
+*an*<br/>
 Entspricht `#pragma vtordisp(1)`.
 
 *Ausschalten*<br/>
@@ -57,7 +57,7 @@ Angeben von 1 oder *auf*, Standard, ermöglicht die ausgeblendeten **Vtordisp** 
 
 Angeben von 2 ermöglicht die ausgeblendeten **Vtordisp** Elemente für alle virtuellen Basen mit virtuellen Funktionen.  `vtordisp(2)` Möglicherweise müssen Sie die richtige Leistung sicherzustellen **Dynamic_cast** auf einem teilweise konstruierten Objekt. Weitere Informationen finden Sie unter [Compilerwarnung (Stufe 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
 
-`#pragma vtordisp()`, ohne Argumente, setzt die vtordisp-Einstellung auf die ursprüngliche Einstellung zurück.
+`#pragma vtordisp()`, wird Sie keine Argumente, die Vtordisp-Einstellung auf die ursprüngliche Einstellung wiederhergestellt.
 
 ```cpp
 #pragma vtordisp(push, 2)

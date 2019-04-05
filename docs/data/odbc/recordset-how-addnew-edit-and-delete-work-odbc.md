@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Funktionsweise von AddNew, Edit und Delete (ODBC)'
+title: 'Recordset: Wie AddNew, bearbeiten und Löschen von Arbeit (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-ms.openlocfilehash: 84d4c2f1128f7b73189f69b056eee96619c31ef5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331970"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033204"
 ---
-# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset: Funktionsweise von AddNew, Edit und Delete (ODBC)
+# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset: Wie AddNew, bearbeiten und Löschen von Arbeit (ODBC)
 
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
 
@@ -41,7 +41,7 @@ In diesem Thema wird erläutert, wie die `AddNew`, `Edit`, und `Delete` Memberfu
 > [!NOTE]
 >  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie die gesammelte verwenden werden, finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Als Ergänzung, Sie möchten lesen [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), dem die entsprechende Rolle von RFX in Aktualisierungsvorgängen beschrieben.
+Als Ergänzung, Sie möchten lesen [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), dem die entsprechende Rolle von RFX in Aktualisierungsvorgängen beschrieben.
 
 ##  <a name="_core_adding_a_record"></a> Hinzufügen eines Datensatzes
 

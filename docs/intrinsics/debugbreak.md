@@ -8,12 +8,12 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: 72fe358f379656a05d840246c4d525bbabc9e9e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b52c34014402a235e03c45f82dcd1e5c542e4919
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591100"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023099"
 ---
 # <a name="debugbreak"></a>__debugbreak
 
@@ -31,14 +31,14 @@ void __debugbreak();
 
 |Systemintern|Architektur|Header|
 |---------------|------------------|------------|
-|`__debugbreak`|X86, ARM, x64|\<intrin.h>|
+|`__debugbreak`|x86, ARM, x64|\<intrin.h>|
 
 ## <a name="remarks"></a>Hinweise
 
 Die `__debugbreak` systeminterne Compilerfunktion ähnelt ["DebugBreak"](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), ist eine portable Win32-Methode, die einen Haltepunkt bewirkt.
 
 > [!NOTE]
->  Beim Kompilieren mit **"/ CLR"**, eine Funktion, `__debugbreak` in MSIL kompiliert wird. `asm int 3` bewirkt, dass eine Funktion in systemeigenem Code kompiliert wird. Weitere Informationen finden Sie unter [__asm](../assembler/inline/asm.md).
+>  Beim Kompilieren mit **"/ CLR"**, eine Funktion, `__debugbreak` in MSIL kompiliert wird. `asm int 3` bewirkt, dass eine Funktion in systemeigenem Code kompiliert werden. Weitere Informationen finden Sie unter [__asm](../assembler/inline/asm.md).
 
 Zum Beispiel:
 

@@ -3,12 +3,12 @@ title: Schlüssel-WRL-APIs nach Kategorie
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-ms.openlocfilehash: fd4bebf9c823079c3bdb4c4182bf3f30cdf105a7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: f3065323c567c944dab12fc1ebbcbd6bb57127e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785123"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039052"
 ---
 # <a name="key-wrl-apis-by-category"></a>Schlüssel-WRL-APIs nach Kategorie
 
@@ -23,7 +23,7 @@ Die folgenden Tabellen enthalten die primären Windows Runtime C++ Template Libr
 |[ClassFactory-Klasse](classfactory-class.md)|Implementiert die grundlegende Funktion der `IClassFactory`-Schnittstelle.|
 |[ComPtr-Klasse](comptr-class.md)|Erstellt einen *intelligenten Zeigertyp* , der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. ComPtr verwaltet automatisch einen Verweiszähler für den zugrunde liegenden Schnittstellenzeiger und gibt die Schnittstelle frei, wenn der Verweiszähler auf 0 geht.|
 |[Ereignisklasse (C++-Vorlagenbibliothek der Windows-Runtime)](event-class-wrl.md)|Stellt ein Ereignis dar.|
-|[EventSource-Klasse](eventsource-class.md)|Stellt ein Ereignis dar. `EventSource`-Memberfunktionen fügen Ereignishandler hinzu, entfernen sie und rufen sie auf.|
+|[EventSource-Klasse](eventsource-class.md)|Stellt ein Ereignis dar. `EventSource` Member-Funktionen hinzufügen, entfernen und die Ereignishandler aufruft.|
 |[FtmBase-Klasse](ftmbase-class.md)|Stellt ein Freethread-Marshaller-Objekt dar.|
 |[HandleT-Klasse](handlet-class.md)|Stellt ein Handle für ein Objekt dar.|
 |[HString-Klasse](hstring-class.md)|Bietet Unterstützung für die Bearbeitung von HSTRING-Handles.|
@@ -53,7 +53,7 @@ Die folgenden Tabellen enthalten die primären Windows Runtime C++ Template Libr
 |-----------|-----------------|
 |[ActivateInstance-Funktion](activateinstance-function.md)|Registriert, und ruft eine Instanz eines angegebenen Typs, der definiert, die in einer angegebenen Klasse-ID ab|
 |[AsWeak-Funktion](asweak-function.md)|Ruft einen schwachen Verweis zur angegebenen Instanz ab.|
-|[Callback-Funktion](callback-function-wrl.md)|Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.|
+|[Rückruffunktion](callback-function-wrl.md)|Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.|
 |[CreateActivationFactory-Funktion](createactivationfactory-function.md)|Erstellt eine Instanzen der angegebenen Klasse erstellende Factory, die durch die Windows-Runtime aktiviert werden kann.|
 |[CreateClassFactory-Funktion](createclassfactory-function.md)|Erstellt eine Factory, die Instanzen der angegebenen Klasse erstellt.|
 |[GetActivationFactory-Funktion](getactivationfactory-function.md)|Ruft eine aktivierungsfactory für den durch die Template-Parameter angegebenen Typ ab.|
@@ -68,4 +68,4 @@ Die folgenden Tabellen enthalten die primären Windows Runtime C++ Template Libr
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++-Vorlagenbibliothek für Windows-Runtime (WRL)](windows-runtime-cpp-template-library-wrl.md)
+[Windows Runtime C++ Template Library (WRL)](windows-runtime-cpp-template-library-wrl.md)

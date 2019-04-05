@@ -1,19 +1,19 @@
 ---
-title: Verwenden von manuellen Zugriffsmethoden
+title: Verwenden von manuellen Accessoren
 ms.date: 10/24/2018
 helpviewer_keywords:
 - command handling, OLE DB Templates
 - manual accessors
 - accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-ms.openlocfilehash: 8b969b7bb939d8e7d2217234795b564e8d137208
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a7e2dcde20cdb06a2f4e708149e24ee7144597c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651762"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028333"
 ---
-# <a name="using-manual-accessors"></a>Verwenden von manuellen Zugriffsmethoden
+# <a name="using-manual-accessors"></a>Verwenden von manuellen Accessoren
 
 Es gibt vier Schritte erforderlich, bei der Verarbeitung eines unbekannten Befehls:
 
@@ -47,4 +47,4 @@ Ein Beispiel für einen manuellen Accessor finden Sie unter `CDBListView::CallPr
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)
+[Verwenden von Accessoren](../../data/oledb/using-accessors.md)

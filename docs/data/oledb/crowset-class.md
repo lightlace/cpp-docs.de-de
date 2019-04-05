@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: eda4bb09865698a657828c6d4684a8df92ffe9b6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58779455"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032322"
 ---
 # <a name="crowset-class"></a>CRowset-Klasse
 
@@ -273,7 +273,7 @@ Ein Accessor-Klasse. Die Standardeinstellung ist `CAccessorBase`.
 |-|-|
 |[AddRefRows](#addrefrows)|Inkrementiert der Verweiszähler fest, die der aktuellen Zeile zugeordnet ist.|
 |[Schließen](#close)|Versionen von Zeilen und der aktuelle `IRowset` Schnittstelle.|
-|[Compare](#compare)|Vergleicht zwei Lesezeichen mit [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
+|[Vergleichen](#compare)|Vergleicht zwei Lesezeichen mit [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Erstellt ein neues `CRowset` -Objekt und ordnet sie (optional) eine `IRowset` Schnittstelle, die als Parameter übergeben.|
 |[Löschen](#delete)|Löscht Zeilen aus dem Rowset mit [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Sucht nach der nächsten Zeile nach dem angegebenen Lesezeichen.|
@@ -282,7 +282,7 @@ Ein Accessor-Klasse. Die Standardeinstellung ist `CAccessorBase`.
 |[GetDataHere](#getdatahere)|Ruft Daten aus dem angegebenen Puffer ab.|
 |[GetOriginalData](#getoriginaldata)|Ruft ab, die Daten zuletzt von abgerufen oder übertragen mit der Datenquelle, die ausstehende Änderungen werden ignoriert.|
 |[GetRowStatus](#getrowstatus)|Der Status aller Zeilen zurückgegeben.|
-|[Einfügen](#insert)|Erstellt und fügt eine neue Zeile mit [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
+|[Insert](#insert)|Erstellt und fügt eine neue Zeile mit [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
 |[IsSameRow](#issamerow)|Vergleicht die angegebene Zeile mit der aktuellen Zeile.|
 |[MoveFirst](#movefirst)|Positioniert den weiter-Fetch-Speicherort auf die ursprüngliche Position.|
 |[MoveLast](#movelast)|Wechselt zum letzten Datensatz.|
@@ -292,8 +292,8 @@ Ein Accessor-Klasse. Die Standardeinstellung ist `CAccessorBase`.
 |[MoveToRatio](#movetoratio)|Ruft Zeilen ab der ein Bruchteil Ausgangsposition im Rowset ab.|
 |[ReleaseRows](#releaserows)|Aufrufe [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) zum Freigeben des Handles der aktuellen Zeile.|
 |[SetData](#setdata)|Legt Datenwerte in einer oder mehreren Spalten einer Zeile mit [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
-|[Rückgängig machen](#undo)|Macht alle Änderungen, die auf eine Zeile seit der letzten Fetch oder [Update](../../data/oledb/crowset-update.md).|
-|[Update (Aktualisieren)](#update)|Sendet alle ausstehenden Änderungen an der aktuellen Zeile seit der letzten Fetch oder aktualisieren.|
+|[undo](#undo)|Macht alle Änderungen, die auf eine Zeile seit der letzten Fetch oder [Update](../../data/oledb/crowset-update.md).|
+|[Update](#update)|Sendet alle ausstehenden Änderungen an der aktuellen Zeile seit der letzten Fetch oder aktualisieren.|
 |[UpdateAll](#updateall)|Sendet alle ausstehenden Änderungen, die seit der letzten Fetch oder ein Update auf alle Zeilen.|
 
 ## <a name="remarks"></a>Hinweise
@@ -432,7 +432,7 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 *bPrecision*<br/>
 [in] Die maximale Genauigkeit, die beim Abrufen von Daten verwendet wird. Nur verwendet werden, wenn *wType* DBTYPE_NUMERIC ist. Weitere Informationen finden Sie unter [Konvertierungen, die im Zusammenhang mit DBTYPE_NUMERIC oder DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
-*bScale*<br/>
+*Sie ' bScale '*<br/>
 [in] Die Skalierung, die beim Abrufen von Daten verwendet. Nur verwendet werden, wenn *wType* DBTYPE_NUMERIC oder DBTYPE_DECIMAL ist. Weitere Informationen finden Sie unter [Konvertierungen, die im Zusammenhang mit DBTYPE_NUMERIC oder DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714(v=vs.85)) in die *OLE DB-Programmierreferenz*.
 
 *bSkipCurrent*<br/>
@@ -940,5 +940,5 @@ Ein standard-HRESULT.
 [DBViewer-Beispiel](../../overview/visual-cpp-samples.md)<br/>
 [MultiRead-Beispiel](../../overview/visual-cpp-samples.md)<br/>
 [Beispiel für MultiRead-Attribute](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

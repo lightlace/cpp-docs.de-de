@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328804"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038657"
 ---
 # <a name="resource-editors-c"></a>Ressourcen-Editoren (C++)
 
@@ -40,9 +40,9 @@ Wenn Sie eine Ressource erstellen oder öffnen, wird automatisch der entsprechen
 |Verwenden Sie...|Zur Bearbeitung von...|
 |----------------|----------------|
 |[Zugriffstasten-Editor](../windows/accelerator-editor.md)|Zugriffstastentabellen in Visual C++-Projekten.|
-|[Binary Editor](binary-editor.md)|Binäre Daten und benutzerdefinierte Ressourcen in Visual C++-, Visual Basic- oder Visual C#-Projekten.|
+|[Binär-Editor](binary-editor.md)|Binäre Daten und benutzerdefinierte Ressourcen in Visual C++-, Visual Basic- oder Visual C#-Projekten.|
 |[Dialog-Editor](../windows/dialog-editor.md)|Dialogfelder in Visual C++-Projekten.|
-|[Image Editor](../windows/image-editor-for-icons.md)|Bitmaps, Symbole, Cursor und andere Bilddateien in Visual C++-, Visual Basic- oder Visual C#-Projekten.|
+|[Bildbearbeitung](../windows/image-editor-for-icons.md)|Bitmaps, Symbole, Cursor und andere Bilddateien in Visual C++-, Visual Basic- oder Visual C#-Projekten.|
 |[Menü-Editor](../windows/menu-editor.md)|Menüressourcen in Visual C++-Projekten.|
 |[Ribbon-Editor](../mfc/ribbon-designer-mfc.md)|Menübandressourcen in MFC-Projekten.|
 |[Zeichenfolgen-Editor](../windows/string-editor.md)|Zeichenfolgentabellen in Visual C++-Projekten.|
@@ -130,4 +130,4 @@ Keiner
 
 [Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)<br/>
 [Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
-[Ressourcenbezeichner (Symbole)](../windows/symbols-resource-identifiers.md)<br/>
+[Ressourcen-IDs (Symbole)](../windows/symbols-resource-identifiers.md)<br/>

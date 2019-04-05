@@ -2,12 +2,12 @@
 title: Compilerwarnung (Stufe 1) C4436
 ms.date: 11/04/2016
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: b8f62b7556d458f285597b4ae92a4f6e15ee60c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 487fb8c804ac34ba52661774c2552199c764f6b0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657986"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041350"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>Compilerwarnung (Stufe 1) C4436
 
@@ -73,4 +73,4 @@ int main()
 
 [dynamic_cast-Operator](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
-[Compilerwarnung (Ebene 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)
+[Compilerwarnung (Stufe 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)

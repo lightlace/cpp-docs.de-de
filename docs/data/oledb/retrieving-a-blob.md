@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BLOB (binary large object), retrieving
 - OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
-ms.openlocfilehash: 42b7b95f2da4313bdfcb1d9d8a064ca5be563e40
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 23bc20355e1e2b17ac20cf975df2ff58d6553ef9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423247"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023086"
 ---
 # <a name="retrieving-a-blob"></a>Abrufen eines BLOBs
 
@@ -55,5 +55,5 @@ Weitere Informationen zu Makros, die BLOB-Daten behandelt, finden Sie unter **Sp
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)<br/>
+[Verwenden von Accessoren](../../data/oledb/using-accessors.md)<br/>
 [Makros und globale Funktionen für OLE-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>

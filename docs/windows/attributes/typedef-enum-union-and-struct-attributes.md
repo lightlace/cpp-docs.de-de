@@ -5,12 +5,12 @@ helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b56ada13a0c597866d538991ed1e83078924ac9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631061"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029582"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>typedef-, enum-, union- und struct-Attribute
 
@@ -21,8 +21,8 @@ Die folgenden Attribute gelten für die [Typedef](../../cpp/aliases-and-typedefs
 |Attribut|Beschreibung|
 |---------------|-----------------|
 |[case](case-cpp.md)|Verwendung der [Switch_type](switch-type.md) -Attribut in einer **Union**.|
-|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
-|[export](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
+|[Benutzerdefiniert](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|["export"](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
 |[first_is](first-is.md)|Gibt den Index des ersten Arrayelements übertragen werden.|
 |[helpcontext](helpcontext.md)|Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der Hilfedatei.|
 |[helpfile](helpfile.md)|Legt den Namen der Hilfedatei für die Typbibliothek.|
@@ -40,8 +40,8 @@ Die folgenden Attribute gelten für die [Typedef](../../cpp/aliases-and-typedefs
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
-|[export](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
+|[Benutzerdefiniert](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|["export"](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
 |[uuid](uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|
 |[v1_enum](v1-enum.md)|Wird angewiesen, der angegebene enumerierten Typ als eine 32-Bit-Entität und nicht als der Standardwert 16-Bit-übertragen werden.|
 
@@ -49,8 +49,8 @@ Die folgenden Attribute gelten für die [Typedef](../../cpp/aliases-and-typedefs
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
-|[export](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
+|[Benutzerdefiniert](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|["export"](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
 |[first_is](first-is.md)|Gibt den Index des ersten Arrayelements übertragen werden.|
 |[last_is](last-is.md)|Gibt den Index des letzten Elements Array übertragen werden.|
 |[length_is](length-is.md)|Gibt die Anzahl von Elementen übertragen werden.|
@@ -70,13 +70,13 @@ Die folgenden Attribute gelten für die [Typedef](../../cpp/aliases-and-typedefs
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|[Aggregierbar](aggregatable.md)|Gibt an, dass die Klasse Aggregation unterstützt.|
+|[aggregatable](aggregatable.md)|Gibt an, dass die Klasse Aggregation unterstützt.|
 |[Aggregate](aggregates.md)|Gibt an, dass ein Steuerelement die Zielklasse aggregiert.|
 |[appobject](appobject.md)|Identifiziert die Co-Klasse als ein Anwendungsobjekt, das eine vollständige .exe-Anwendung zugeordnet ist, und gibt an, dass die Funktionen und Eigenschaften der Co-Klasse in diese Typbibliothek global verfügbar sind.|
 |[coclass](coclass.md)|Erstellt ein ActiveX-Steuerelement.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Fügt einen Eintrag für die Schnittstelle eine COM-Zuordnung.|
 |[Steuerelement](control.md)|Gibt an, dass der benutzerdefinierte Typ eines Steuerelements.|
-|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|[Benutzerdefiniert](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
 |[db_column](db-column.md)|Bindet eine angegebene Spalte auf das Rowset an.|
 |[db_command](db-command.md)|Erstellt einen OLE DB-Befehl.|
 |[db_param](db-param.md)|Ordnet die angegebenen Member-Variable mit einem Eingabe- oder ausgabeadapter-Parameter und Variablen begrenzt.|
@@ -86,7 +86,7 @@ Die folgenden Attribute gelten für die [Typedef](../../cpp/aliases-and-typedefs
 |[defaultvtable](defaultvtable.md)|Definiert eine Schnittstelle als die Vtable-Standardschnittstelle für ein Steuerelement an.|
 |[event_receiver](event-receiver.md)|Erstellt einen Ereignisempfänger an.|
 |[event_source](event-source.md)|Erstellt eine Ereignisquelle.|
-|[export](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
+|["export"](export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
 |[first_is](first-is.md)|Gibt den Index des ersten Arrayelements übertragen werden.|
 |[hidden](hidden.md)|Gibt an, dass das Element vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden soll.|
 |[implements_category](implements-category.md)|Gibt an, für die Klasse implementierten Komponentenkategorien.|
@@ -95,8 +95,8 @@ Die folgenden Attribute gelten für die [Typedef](../../cpp/aliases-and-typedefs
 |[max_is](max-is.md)|Legt fest, den maximalen Wert für ein gültiges Array-Index.|
 |[requires_category](requires-category.md)|Gibt die erforderliche Komponentenkategorien der Zielklasse.|
 |[size_is](size-is.md)|Gibt an, die Größe des Arbeitsspeichers für Größe Zeiger zugewiesen, die Größe der Zeiger auf Zeiger, die Größe und Einzel- oder mehrdimensionale Arrays.|
-|[source](source-cpp.md)|Gibt an für eine Klasse das COM-Objekt-Schnittstellen für Verbindungspunkte aus. Auf eine Eigenschaft oder Methode gibt Sie an, dass das Element zurückgibt, ein Objekt oder eine Variante, die eine Ereignisquelle ist.|
-|[threading](threading-cpp.md)|Gibt das Threadingmodell für eine COM-Objekt.|
+|[Quelle](source-cpp.md)|Gibt an für eine Klasse das COM-Objekt-Schnittstellen für Verbindungspunkte aus. Auf eine Eigenschaft oder Methode gibt Sie an, dass das Element zurückgibt, ein Objekt oder eine Variante, die eine Ereignisquelle ist.|
+|[Threading](threading-cpp.md)|Gibt das Threadingmodell für eine COM-Objekt.|
 |[unique](unique-cpp.md)|Gibt einen eindeutigen Zeiger.|
 |[uuid](uuid-cpp-attributes.md)|Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.|
 |[version](version-cpp.md)|Identifiziert eine bestimmte Version mehrere Versionen einer Klasse.|

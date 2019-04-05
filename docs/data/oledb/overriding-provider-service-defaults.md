@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: 5966d1d5d18ad099a28498f92848cf8f6f7997ac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 08011f65ca220885e124e5ad6072244e4ad6e80d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415811"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033955"
 ---
 # <a name="overriding-provider-service-defaults"></a>Überschreiben der Standardwerte für Anbieterdienste
 
@@ -33,4 +33,4 @@ Wenn der Registrierungseintrag für den Anbieter nicht vorhanden ist, wird nicht
 [Ressourcenpooling](/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
 [Verwendung Kunden, die Ressourcenpooling](/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
 [Funktionsweise von Anbietern effektiv mit Ressourcenpooling](/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
-[Aktivieren und Deaktivieren von OLE DB-Diensten](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>
+[Aktivieren und Deaktivieren von OLE DB-Diensten](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

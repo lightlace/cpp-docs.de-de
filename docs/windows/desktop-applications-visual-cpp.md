@@ -2,12 +2,12 @@
 title: Desktopanwendungen (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 090180062139642d8a686e9f1bf063f3e65aee88
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58771918"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033107"
 ---
 # <a name="desktop-applications-visual-c"></a>Desktopanwendungen (Visual C++)
 
@@ -42,7 +42,7 @@ C Runtime (CRT) und Standard-Bibliothek von Klassen und Funktionen, COM-Objekte 
 |[Erstellen einer leeren Windows-Desktopanwendung](creating-an-empty-windows-desktop-application.md)|Vorgehensweise: Erstellen Sie ein Windows-Desktopprojekt, die keine Standarddateien enthält.|
 |[Hinzufügen von Dateien zu leeren Win32-Anwendungen](adding-files-to-an-empty-win32-applications.md)|Wie Sie ein leeres Projekt Dateien hinzufügen.|
 |[Arbeiten mit Ressourcendateien](working-with-resource-files.md)|So fügen Sie Bilder, Symbole, Zeichenfolgentabellen und andere Ressourcen in eine Desktopanwendung.|
-|[Ressourcen für das Erstellen eines Spiels mit DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Enthält Links zu Inhalten für das Erstellen von Spielen in C++.|
+|[Ressourcen zum Erstellen eines Spiels mit DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Enthält Links zu Inhalten für das Erstellen von Spielen in C++.|
 |[Exemplarische Vorgehensweise: Erstellen und Verwenden einer statischen Bibliothek](walkthrough-creating-and-using-a-static-library-cpp.md)|Vorgehensweise: Erstellen Sie eine LIB-Binärdatei.|
 |[Vorgehensweise: Verwenden des Windows 10 SDK in einer Windows-Desktopanwendung](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Enthält Schritte zum Einrichten Ihres Projekts für das Erstellen mit dem Windows 10-SDK.|
 
@@ -51,7 +51,7 @@ C Runtime (CRT) und Standard-Bibliothek von Klassen und Funktionen, COM-Objekte 
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[Windows-Entwicklung](/windows/desktop/index)|Enthält Informationen zur Windows-API und COM. (Einige Windows-APIs und Drittanbieter-DLLs werden als COM-Objekte implementiert).|
-|[Hilo: Entwickeln von C++-Anwendungen für Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Beschreibt, wie Sie eine vielseitige Windows-Desktopanwendung erstellen, die Windows-Animationen und Direct2D verwendet, um eine karussellbasierte Benutzeroberfläche zu erstellen.  In diesem Tutorial wurde nicht aktualisiert, seit Windows 7, aber es bietet weiterhin eine ausführliche Einführung in Win32-Programmierung.|
+|[HiLo: Entwickeln von C++-Anwendungen für Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Beschreibt, wie Sie eine vielseitige Windows-Desktopanwendung erstellen, die Windows-Animationen und Direct2D verwendet, um eine karussellbasierte Benutzeroberfläche zu erstellen.  In diesem Tutorial wurde nicht aktualisiert, seit Windows 7, aber es bietet weiterhin eine ausführliche Einführung in Win32-Programmierung.|
 |[Übersicht über Windows-Programmierung in C++](overview-of-windows-programming-in-cpp.md)|Beschreibt die wichtigsten Features von Windows-Desktop-Programmierung in C++.|
 
 ## <a name="see-also"></a>Siehe auch

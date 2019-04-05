@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 80edcb709073021ccf024aaf14c9a914bd8d8939
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597702"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041240"
 ---
 # <a name="codeseg"></a>code_seg
 Gibt das Textsegment an, in dem Funktionen in der OBJ-Datei gespeichert werden.
@@ -40,7 +40,7 @@ Gibt das Textsegment an, in dem Funktionen in der OBJ-Datei gespeichert werden.
 "*Segment-Name*"<br/>
 (Optional) Der Name eines Segments. Bei Verwendung mit **pop**, wird das Element im Stapel geholt und *Segment-Name* wird von der aktiven textsegmentnamen.
 
-"*Segmentklasse*"<br/>
+"*segment-class*"<br/>
 (Optional) Ignoriert, aber aus Gründen der Kompatibilität mit früheren Versionen von C++ als Version 2.0.
 
 ## <a name="remarks"></a>Hinweise

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 089f8d5501c18b679a3d5878bb30762d2dcc1e04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76c6c848351df773b9857b2f83726b64db982d9f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438908"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031196"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss
 
@@ -34,7 +34,7 @@ void _mm_stream_ss(
 *dest*<br/>
 [out] Ein Zeiger auf den Speicherort, in denen die Quelldaten geschrieben werden.
 
-*Quelle*<br/>
+*Source*<br/>
 [in] Eine 128-Bit-Zahl, die enthält die `float` Wert, der in der unteren 32 Bits geschrieben werden...
 
 ## <a name="return-value"></a>Rückgabewert
@@ -89,7 +89,7 @@ f[2] = -3, f[3] = 3
 
 **Ende Microsoft-spezifisch**
 
-Copyright 2007 erweiterten Micro-Geräte, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.
+Copyright 2007 by Advanced Micro Devices, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.
 
 ## <a name="see-also"></a>Siehe auch
 

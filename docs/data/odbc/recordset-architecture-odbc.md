@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: fc44f2b4fcae51cef78d6b660f0cc86ee516e5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651190"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039649"
 ---
 # <a name="recordset-architecture-odbc"></a>Recordset: Architektur (ODBC)
 
@@ -89,7 +89,7 @@ Definieren Sie Parameterdatenmember, teilen Sie das Framework über Parameter in
 
 Wenn ein Assistent einen Konstruktor für die Klasse schreibt, er initialisiert zudem die [M_nFields](../../mfc/reference/crecordset-class.md#m_nfields) Datenmember, die angibt, die Anzahl der [Felddatenmember](#_core_field_data_members) in der Klasse. Wenn Sie eine hinzufügen [Parameter](#_core_parameter_data_members) der-Klasse, müssen Sie auch eine Initialisierung für Hinzufügen der [M_nParams](../../mfc/reference/crecordset-class.md#m_nparams) Datenmember, der die Anzahl von Parameterdatenmember angibt. Das Framework verwendet diese Werte mit den Datenelementen zu arbeiten.
 
-Weitere Informationen und Beispiele finden Sie unter [Datensatzfeldaustausch: Verwenden von RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Weitere Informationen und Beispiele finden Sie unter [Record Field Exchange: Verwenden von RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
 ## <a name="see-also"></a>Siehe auch
 

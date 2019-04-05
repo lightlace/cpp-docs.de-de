@@ -1,5 +1,5 @@
 ---
-title: Momentaufnahme
+title: Snapshot
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC cursor library [ODBC], snapshots
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-ms.openlocfilehash: 99e1d76f8d65def326b0514f3219cef43f695220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5999f89156d895ff0c87c892be892c6a614a0132
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512672"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037645"
 ---
-# <a name="snapshot"></a>Momentaufnahme
+# <a name="snapshot"></a>Snapshot
 
 Eine Momentaufnahme ist ein Recordset, eine statische Ansicht der Daten enthält, wie sie zu dem Zeitpunkt vorhanden waren, die die Momentaufnahme erstellt wurde. Beim Öffnen der Momentaufnahme und verschieben alle Datensätze, die Gruppe von Datensätzen, die sie enthält, und ändern Sie deren Werte nicht, bis Sie durch Aufrufen die Momentaufnahme wiederherstellen `Requery`.
 
@@ -37,7 +37,7 @@ Unterstützung von basiert auf der ODBC-Cursorbibliothek, der statische Cursor u
 Momentaufnahmen sind nur verfügbar, wenn die ODBC-Cursorbibliothek geladen war die `CDatabase` Objekt erstellt wurde, oder der ODBC-Treiber, die Sie verwenden die statische Cursor unterstützt.
 
 > [!NOTE]
->  Für einige ODBC-Treiber können Momentaufnahmen (statische Cursor) nicht aktualisiert werden. Überprüfen Sie die Dokumentation des Treibers für die unterstützten Cursortypen und die parallelitätstypen, die sie unterstützen. Um aktualisierbaren Momentaufnahmen zu gewährleisten, stellen Sie sicher, dass Sie die Cursorbibliothek in den Arbeitsspeicher geladen, bei der Erstellung einer `CDatabase` Objekt. Weitere Informationen finden Sie unter [ODBC: die ODBC-Cursorbibliothek](../../data/odbc/odbc-the-odbc-cursor-library.md).
+>  Für einige ODBC-Treiber können Momentaufnahmen (statische Cursor) nicht aktualisiert werden. Überprüfen Sie die Dokumentation des Treibers für die unterstützten Cursortypen und die parallelitätstypen, die sie unterstützen. Um aktualisierbaren Momentaufnahmen zu gewährleisten, stellen Sie sicher, dass Sie die Cursorbibliothek in den Arbeitsspeicher geladen, bei der Erstellung einer `CDatabase` Objekt. Weitere Informationen finden Sie unter [ODBC: Die ODBC-Cursorbibliothek](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!NOTE]
 >  Wenn Sie sowohl Momentaufnahmen und Dynasets verwenden möchten, müssen Sie diese auf zwei unterschiedlichen Grundlage `CDatabase` Objekte (zwei verschiedene Verbindungen).

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: e5cccd337514df34729fc916900a7b16a15596fc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784246"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041389"
 ---
 # <a name="callback-function-wrl"></a>Callback-Funktion (WRL)
 
@@ -233,7 +233,7 @@ Ein Objekt, das das Rückrufobjekt und seine Memberfunktion darstellt.
 *object*<br/>
 Das Objekt, dessen Memberfunktion beim Eintreten eines Ereignisses aufgerufen wird.
 
-*method*<br/>
+*Methode*<br/>
 Die Memberfunktion, die beim Eintreten eines Ereignisses aufgerufen wird.
 
 ## <a name="return-value"></a>Rückgabewert

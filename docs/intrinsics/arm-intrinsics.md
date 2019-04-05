@@ -1931,12 +1931,12 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: e4c962b7911c97095e22c670dabfaa3d3d4b2709
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525508"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027628"
 ---
 # <a name="arm-intrinsics"></a>Systeminterne ARM-Funktionen
 
@@ -1954,7 +1954,7 @@ Der Hauptunterschied zwischen dem Visual C++-Compiler und dem ARM-Compiler beste
 
 |Funktionsname|Anweisung|Funktionsprototyp|
 |-------------------|-----------------|------------------------|
-|_arm_smlal|SMLAL|__int64 _arm_smlal (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
+|_arm_smlal|SMLAL|__int64 _arm_smlal(\__int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_umlal|UMLAL|unsigned __int64 _arm_umlal(unsigned \__int64 _RdHiLo, unsigned int _Rn, unsigned int _Rm)|
 |_arm_clz|CLZ|unsigned int _arm_clz(unsigned int _Rm)|
 |_arm_qadd|QADD|int _arm_qadd(int _Rm, int _Rn)|
@@ -1965,10 +1965,10 @@ Der Hauptunterschied zwischen dem Visual C++-Compiler und dem ARM-Compiler beste
 |_arm_smlabt|SMLABT|int _arm_smlabt(int _Rn, int _Rm, int _Ra)|
 |_arm_smlatb|SMLATB|int _arm_smlatb(int _Rn, int _Rm, int _Ra)|
 |_arm_smlatt|SMLATT|int _arm_smlatt(int _Rn, int _Rm, int _Ra)|
-|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
-|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
-|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
-|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
+|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb(\__int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt(\__int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb(\__int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt(\__int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_smlawb|SMLAWB|int _arm_smlawb(int _Rn, int _Rm, int _Ra)|
 |_arm_smlawt|SMLAWT|int _arm_smlawt(int _Rn, int _Rm, int _Ra)|
 |_arm_smulbb|SMULBB|int _arm_smulbb(int _Rn, int _Rm)|
@@ -2046,10 +2046,10 @@ Der Hauptunterschied zwischen dem Visual C++-Compiler und dem ARM-Compiler beste
 |_arm_smmlsr|SMMLSR|int _arm_smmlsr(int _Rn, int _Rm, int _Ra)|
 |_arm_smmul|SMMUL|int _arm_smmul(int _Rn, int _Rm)|
 |_arm_smmulr|SMMULR|int _arm_smmulr(int _Rn, int _Rm)|
-|_arm_smlald|SMLALD|__int64 _arm_smlald (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
-|_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
-|_arm_smlsld|SMLSLD|__int64 _arm_smlsld (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
-|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx (\___int64 _RdHiLo, _Rn Int, Int _Rm)|
+|_arm_smlald|SMLALD|__int64 _arm_smlald(\__int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx(\__int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlsld|SMLSLD|__int64 _arm_smlsld(\__int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx(\__int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_smuad|SMUAD|int _arm_smuad(int _Rn, int _Rm)|
 |_arm_smuadx|SMUADX|int _arm_muadxs(int _Rn, int _Rm)|
 |_arm_smusd|SMUSD|int _arm_smusd(int _Rn, int _Rm)|
@@ -2074,32 +2074,32 @@ Der Hauptunterschied zwischen dem Visual C++-Compiler und dem ARM-Compiler beste
 |__iso_volatile_load32||__int32 \__iso_volatile_load32 (const Volatile \___int32 \*)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
 |__iso_volatile_load64||__int64 \__iso_volatile_load64 (const Volatile \___int64 \*)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
 |__iso_volatile_load8||__int8 \__iso_volatile_load8 (const Volatile \__int8 \*)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
-|__iso_volatile_store16||"void" __iso_volatile_store16 (Volatile \___int16 \*, \___int16)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
-|__iso_volatile_store32||"void" __iso_volatile_store32 (Volatile \___int32 \*, \___int32)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store16||void __iso_volatile_store16(volatile \__int16 \*, \__int16)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
+|__iso_volatile_store32||void __iso_volatile_store32(volatile \__int32 \*, \__int32)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
 |__iso_volatile_store64||"void" __iso_volatile_store64 (Volatile \___int64 \*, \___int64)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
 |__iso_volatile_store8||"void" __iso_volatile_store8 (Volatile \__int8 \*, \__int8)<br /><br /> Weitere Informationen finden Sie unter [__iso_volatile_load/Store Instrinsics](#IsoVolatileLoadStore).|
 |__ldrexd|LDREXD|__int64 \__ldrexd (const Volatile \___int64 \*)|
-|__prefetch|PLD|"void" __cdecl \__prefetch (const Void \*)<br /><br /> Stellt einen `PLD`-Speicherhinweis für das System bereit, dass auf den Speicher an oder in der Nähe der angegebenen Adresse bald zugegriffen werden kann. Einige Systeme führen möglicherweise eine Optimierung für dieses Speicherzugriffsmuster aus, um die Leistung zur Laufzeit zu verbessern. Aus Sicht der C++-Sprache hat die Funktion jedoch keine sichtbaren Auswirkungen und hat möglicherweise gar keinen Nutzen.|
+|__prefetch|PLD|void __cdecl \__prefetch(const void \*)<br /><br /> Stellt einen `PLD`-Speicherhinweis für das System bereit, dass auf den Speicher an oder in der Nähe der angegebenen Adresse bald zugegriffen werden kann. Einige Systeme führen möglicherweise eine Optimierung für dieses Speicherzugriffsmuster aus, um die Leistung zur Laufzeit zu verbessern. Aus Sicht der C++-Sprache hat die Funktion jedoch keine sichtbaren Auswirkungen und hat möglicherweise gar keinen Nutzen.|
 |__rdpmccntr64||__int64 ohne Vorzeichen \__rdpmccntr64(void)|
 |__sev|SEV|void __sev(void)|
-|__static_assert||"void" __static_assert (Int, const Char \*)|
+|__static_assert||void __static_assert(int, const char \*)|
 |__swi|SVC|unsigned int __swi(unsigned int, ...)|
 |__trap|BKPT|int __trap(int, ...)|
 |__wfe|WFE|void __wfe(void)|
 |__wfi|WFI|void __wfi(void)|
 |_AddSatInt|QADD|int _AddSatInt(int, int)|
-|_CopyDoubleFromInt64||Doppelte _CopyDoubleFromInt64 (\___int64)|
+|_CopyDoubleFromInt64||double _CopyDoubleFromInt64(\__int64)|
 |_CopyFloatFromInt32||float _CopyFloatFromInt32(\__int32)|
 |_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|
 |_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|
 |_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|
-|_CountLeadingOnes64||unsigned Int _CountLeadingOnes64 (ohne Vorzeichen \___int64)|
+|_CountLeadingOnes64||unsigned int _CountLeadingOnes64(unsigned \__int64)|
 |_CountLeadingSigns||unsigned int _CountLeadingSigns(long)|
-|_CountLeadingSigns64||ganze Zahl ohne Vorzeichen _CountLeadingSigns64 (\___int64)|
+|_CountLeadingSigns64||unsigned int _CountLeadingSigns64(\__int64)|
 |_CountLeadingZeros||unsigned int _CountLeadingZeros(unsigned long)|
 |_CountLeadingZeros64||unsigned Int _CountLeadingZeros64 (ohne Vorzeichen \___int64)|
 |_CountOneBits||unsigned int _CountOneBits(unsigned long)|
-|_CountOneBits64||unsigned Int _CountOneBits64 (ohne Vorzeichen \___int64)|
+|_CountOneBits64||unsigned int _CountOneBits64(unsigned \__int64)|
 |_DAddSatInt|QDADD|int _DAddSatInt(int, int)|
 |_DSubSatInt|QDSUB|int _DSubSatInt(int, int)|
 |_isunordered||int _isunordered(double, double)|
@@ -2122,7 +2122,7 @@ Der Hauptunterschied zwischen dem Visual C++-Compiler und dem ARM-Compiler beste
 
 ###  <a name="BarrierRestrictions"></a> Einschränkungen der Speicherabgrenzung
 
-Die intrinsischen Funktionen `__dmb` (Datenspeicherabgrenzung) `__dsb` (Datensynchronisierungsabgrenzung) und `__isb` (Anweisungssynchronisierungsabgrenzung) verwenden die folgenden vordefinierten Werte, um die Speicherabgrenzungseinschränkung in Bezug auf das Freigeben der Domäne und die Art des Zugriffs an, die von dem Vorgang betroffen sind.
+Die systeminterne Funktionen `__dmb` (Datenspeicherabgrenzung) `__dsb` (Datensynchronisierungsabgrenzung) und `__isb` (Anweisungssynchronisierungsabgrezung) verwenden die folgenden vordefinierten Werte, um die Speicherabgrenzungseinschränkung in Bezug auf das Freigeben der Domäne und der Art des Zugriffs an, die von dem Vorgang betroffen sind.
 
 |Einschränkungswert|Beschreibung|
 |-----------------------|-----------------|
@@ -2155,7 +2155,7 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
 
 #### <a name="parameters"></a>Parameter
 
-*Position*<br/>
+*Speicherort*<br/>
 Die Adresse eines Speicherbereichs für Lese- oder Schreibvorgänge.
 
 *Wert*<br/>
@@ -2180,7 +2180,7 @@ Weitere Informationen zu den **/volatile:iso** Befehlszeilenargument finden Sie 
 
 ###  <a name="MoveFromCo"></a> _MoveFromCoprocessor, _MoveFromCoprocessor2
 
-Diese intrinsischen Funktionen lesen von Daten aus ARM-Coprozessoren mithilfe der Coprozessor-Datenübertragungsanweisungen.
+Diese systeminternen Funktionen lesen von Daten aus ARM-Coprozessoren mithilfe der Coprozessor-Datenübertragungsanweisungen.
 
 ```
 int _MoveFromCoprocessor(
@@ -2225,7 +2225,7 @@ Der Wert, der aus dem Coprozessor gelesen wird.
 
 Die Werte aller fünf Parameter dieser systeminternen Funktion müssen konstante Ausdrücke sein, die zum Zeitpunkt der Kompilierung bekannt sind.
 
-`_MoveFromCoprocessor` verwendet die MRC-Anweisung; `_MoveFromCoprocessor2` verwendet MRC2. Die Parameter entsprechen den Bitfeldern, die direkt in das Befehlswort codiert werden. Die Interpretation der Parameter ist vom Coprozessor abhängig. Weitere Informationen finden Sie im Handbuch für den betreffenden Coprozessor.
+`_MoveFromCoprocessor` verwendet die MRC-Anweisung. `_MoveFromCoprocessor2` verwendet MRC2. Die Parameter entsprechen den Bitfeldern, die direkt in das Befehlswort codiert werden. Die Interpretation der Parameter ist vom Coprozessor abhängig. Weitere Informationen finden Sie im Handbuch für den betreffenden Coprozessor.
 
 ###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64
 
@@ -2250,7 +2250,7 @@ Coprozessorspezifischer Opcode im Bereich von 0 bis 15.
 *CRM*<br/>
 Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.
 
-**Gibt den Wert**
+**Rückgabewert**
 
 Der Wert, der aus dem Coprozessor gelesen wird.
 
@@ -2356,22 +2356,22 @@ Die folgende Tabelle enthält die systeminternen Funktionen von anderen Architek
 |-------------------|------------------------|
 |__assume|void __assume(int)|
 |__code_seg|"void" __code_seg (const Char \*)|
-|__debugbreak|"void" __cdecl \__debugbreak(void)|
+|__debugbreak|void __cdecl \__debugbreak(void)|
 |__fastfail|__declspec(noreturn) void \__fastfail(unsigned int)|
-|__nop|"void" __nop(void) **Hinweis:** auf ARM-Plattformen generiert diese Funktion eine NOP-Anweisung aus, wenn eine in der Zielarchitektur implementiert wird; andernfalls ist eine alternative Anweisung, die nicht den Zustand des Programms oder der CPU ändert generiert – beispielsweise `MOV r8, r8`. Dies ist funktionell gleichwertig mit der \__nop systeminterne für andere Hardware-Architekturen. Da eine Anweisung, die keine Auswirkungen auf den Status des Programms oder der CPU hat, von der Zielarchitektur als Optimierung ignoriert werden kann, verbraucht die Anweisung nicht unbedingt CPU-Zyklen. Aus diesem Grund verwenden Sie nicht die \__nop systemintern, um die Ausführungszeit einer Codesequenz zu bearbeiten, es sei denn, Sie sind sich über wird das Verhalten der CPU. Sie können stattdessen die \__nop systeminterne Anpassung an die nächste Anweisung eine bestimmte Grenze von 32-Bit-Adresse.|
-|__yield|"void" __yield(void) **Hinweis:** auf ARM-Plattformen generiert diese Funktion die YIELD-Anweisung, die angibt, dass der Thread eine Aufgabe ausführt, die vorübergehend unterbrochen werden kann von der Ausführung, z. B. ein Spinlock – ohne beeinträchtigt die Anwendung an. Dadurch kann die CPU andere Aufgaben während der Ausführungszyklen ausführen, die andernfalls verloren gehen würden.|
-|_AddressOfReturnAddress|"void" \* _AddressOfReturnAddress(void)|
+|__nop|"void" __nop(void) **beachten:**  Auf ARM-Plattformen generiert diese Funktion eine NOP-Anweisung, wenn eine in der Zielarchitektur implementiert wird. Andernfalls wird eine alternative Anweisung generiert, die nicht den Status des Programms oder der CPU ändert, z. B. `MOV r8, r8`. Dies ist funktionell gleichwertig mit der \__nop systeminterne für andere Hardware-Architekturen. Da eine Anweisung, die keine Auswirkungen auf den Status des Programms oder der CPU hat, von der Zielarchitektur als Optimierung ignoriert werden kann, verbraucht die Anweisung nicht unbedingt CPU-Zyklen. Aus diesem Grund verwenden Sie nicht die \__nop systemintern, um die Ausführungszeit einer Codesequenz zu bearbeiten, es sei denn, Sie sind sich über wird das Verhalten der CPU. Sie können stattdessen die \__nop systeminterne Anpassung an die nächste Anweisung eine bestimmte Grenze von 32-Bit-Adresse.|
+|__yield|"void" __yield(void) **beachten:**  Diese Funktion generiert auf ARM-Plattformen die YIELD-Anweisung, die angibt, dass der Thread eine Aufgabe ausführt, deren Ausführung vorübergehend unterbrochen werden kann – z. B. ein Spinlock – ohne negative Auswirkungen auf die Anwendung. Dadurch kann die CPU andere Aufgaben während der Ausführungszyklen ausführen, die andernfalls verloren gehen würden.|
+|_AddressOfReturnAddress|void \* _AddressOfReturnAddress(void)|
 |_BitScanForward|unsigned Char _BitScanForward (unsigned long \* _Index "," unsigned long _Mask)|
 |_BitScanReverse|unsigned Char _BitScanReverse (unsigned long \* _Index "," unsigned long _Mask)|
 |_bittest|unsigned Char _bittest (lange const \*, long)|
 |_bittestandcomplement|unsigned Char _bittestandcomplement (lange \*, long)|
 |_bittestandreset|unsigned Char _bittestandreset (lange \*, long)|
 |_bittestandset|unsigned Char _bittestandset (lange \*, long)|
-|_byteswap_uint64|__int64 ohne Vorzeichen \__cdecl _byteswap_uint64 (ohne Vorzeichen \___int64)|
+|_byteswap_uint64|unsigned __int64 \__cdecl _byteswap_uint64(unsigned \__int64)|
 |_byteswap_ulong|unsigned long __cdecl _byteswap_ulong(unsigned long)|
 |_byteswap_ushort|unsigned short __cdecl _byteswap_ushort(unsigned short)|
-|_disable|"void" __cdecl _disable(void) **Hinweis:** auf ARM-Plattformen generiert diese Funktion die CPSID-Anweisung, sondern nur als systeminterne Funktion verfügbar.|
-|_enable|"void" __cdecl _enable(void) **Hinweis:** auf ARM-Plattformen generiert diese Funktion die CPSIE-Anweisung, sondern nur als systeminterne Funktion verfügbar.|
+|_disable|void __cdecl _disable(void) **Note:**  Auf ARM-Plattformen generiert diese Funktion die CPSID-Anweisung. Diese ist nur als systeminterne Funktion verfügbar.|
+|_enable|"void" __cdecl _enable(void) **beachten:**  Auf ARM-Plattformen generiert diese Funktion die CPSIE-Anweisung. Diese ist nur als systeminterne Funktion verfügbar.|
 |_lrotl|unsigned long __cdecl _lrotl(unsigned long, int)|
 |_lrotr|unsigned long __cdecl _lrotr(unsigned long, int)|
 |_ReadBarrier|void _ReadBarrier(void)|
@@ -2394,19 +2394,19 @@ Die folgende Tabelle enthält die systeminternen Funktionen von anderen Architek
 
 Ineinandergreifende systeminterne Funktionen sind eine Reihe von systeminternen Funktionen, die zum Ausführen atomarer Lese-Änderungs-Schreib-Vorgänge verwendet werden. Einige davon sind auf allen Plattformen verfügbar. Sie werden hier separat aufgeführt, da es eine große Anzahl davon gibt. Da ihre Definitionen jedoch meist redundant sind, ist es einfacher ist, über diese Begriffe im Allgemeinen nachzudenken. Die genauen Verhaltensweisen können von den Namen abgeleitet werden.
 
-In der folgenden Tabelle ist die ARM-Unterstützung der ineinandergreifenden systeminternen "non-bittest"-Funktionen zusammengefasst. Jede Zelle in der Tabelle entspricht einem Namen, der durch Anhängen des Vorgangsnamens in der am weitesten links befindlichen Zelle der Zeile und des Typnamens in der obersten Zelle der Spalte an `_Interlocked` abgeleitet wird. Z. B. die Zelle am Schnittpunkt der `Xor` Zeile und die **8** Spalte entspricht `_InterlockedXor8` und wird vollständig unterstützt. Die meisten unterstützten Funktionen bieten diese optionalen Suffixe: `_acq`, `_rel` und `_nf`. Das `_acq`-Suffix gibt eine "Acquire"-Semantik zum Abrufen an, und das `_rel`-Suffix gibt eine "Release"-Semantik zum Freigeben an. Das Suffix `_nf` bzw. "no fence" kommt nur bei ARM vor und wird im nächsten Abschnitt erläutert.
+In der folgenden Tabelle ist die ARM-Unterstützung der ineinandergreifenden systeminternen "non-bittest"-Funktionen zusammengefasst. Jede Zelle in der Tabelle entspricht einem Namen, der durch Anhängen des Vorgangsnamens in der am weitesten links befindlichen Zelle der Zeile und des Typnamens in der obersten Zelle der Spalte an `_Interlocked` abgeleitet wird. Z. B. die Zelle am Schnittpunkt der `Xor` Zeile und die **8** Spalte entspricht `_InterlockedXor8` und wird vollständig unterstützt. Die meisten unterstützten Funktionen bieten diese optionalen Suffixe: `_acq`, `_rel` und `_nf`. Das `_acq`-Suffix gibt eine „Acquire“-Semantik zum Abrufen an, und das `_rel`-Suffix gibt eine „Release“-Semantik zum Freigeben an. Das Suffix `_nf` bzw. "no fence" kommt nur bei ARM vor und wird im nächsten Abschnitt erläutert.
 
 ||8|16|32|64|P|
 |-|-------|--------|--------|--------|-------|
-|Hinzufügen|Keine|Keine|Vollständig|Vollständig|Keine|
-|And|Vollständig|Vollständig|Vollständig|Vollständig|Keine|
+|Hinzufügen|Keiner|Keiner|Vollständig|Vollständig|Keiner|
+|und|Vollständig|Vollständig|Vollständig|Vollständig|Keiner|
 |CompareExchange|Vollständig|Vollständig|Vollständig|Vollständig|Vollständig|
-|Dekrement|Keine|Vollständig|Vollständig|Vollständig|Keine|
+|Dekrement|Keiner|Vollständig|Vollständig|Vollständig|Keiner|
 |Exchange|Partial|Partial|Partial|Partial|Partial|
-|ExchangeAdd|Vollständig|Vollständig|Vollständig|Vollständig|Keine|
-|Inkrement|Keine|Vollständig|Vollständig|Vollständig|Keine|
-|Oder|Vollständig|Vollständig|Vollständig|Vollständig|Keine|
-|Xor|Vollständig|Vollständig|Vollständig|Vollständig|Keine|
+|ExchangeAdd|Vollständig|Vollständig|Vollständig|Vollständig|Keiner|
+|Inkrement|Keiner|Vollständig|Vollständig|Vollständig|Keiner|
+|Or|Vollständig|Vollständig|Vollständig|Vollständig|Keiner|
+|Xor|Vollständig|Vollständig|Vollständig|Vollständig|Keiner|
 
 Key:
 
@@ -2414,7 +2414,7 @@ Key:
 
 - **Partielle**: unterstützt Plain, `_acq`, und `_nf` Forms.
 
-- **Keine**: nicht unterstützt
+- **None:** Nicht unterstützt
 
 ###  <a name="nf_suffix"></a> _nf (keine Fence)-Suffix
 
@@ -2490,7 +2490,7 @@ Die `_nf`- bzw. "no fence"-Suffix gibt an, dass sich der Vorgang nicht wie eine 
 |_InterlockedExchange8|_InterlockedExchange8 char (Char Volatile \* a_ndroid, Char)|
 |_InterlockedExchange8_acq|_InterlockedExchange8_acq char (Char Volatile \* a_ndroid, Char)|
 |_InterlockedExchange8_nf|_InterlockedExchange8_nf char (Char Volatile \* a_ndroid, Char)|
-|_InterlockedExchangeAdd|lange __cdecl _InterlockedExchangeAdd (long volatile \*, long)|
+|_InterlockedExchangeAdd|long __cdecl _InterlockedExchangeAdd(long volatile \*, long)|
 |_InterlockedExchangeAdd16|Short _InterlockedExchangeAdd16 (short Volatile \*, short)|
 |_InterlockedExchangeAdd16_acq|kurze _InterlockedExchangeAdd16_acq (short Volatile \*, short)|
 |_InterlockedExchangeAdd16_nf|kurze _InterlockedExchangeAdd16_nf (short Volatile \*, short)|
@@ -2578,5 +2578,5 @@ Die systeminternen Funktionen "plain interlocked bittest" gibt es auf allen Plat
 ## <a name="see-also"></a>Siehe auch
 
 [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
-[Verweis auf den ARM-Assembler](../assembler/arm/arm-assembler-reference.md)<br/>
+[Referenz zum ARM-Assembler](../assembler/arm/arm-assembler-reference.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)

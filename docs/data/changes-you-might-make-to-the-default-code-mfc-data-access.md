@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - record views [C++], customizing default code
 ms.assetid: 9992ed37-a6bf-45a5-a572-5c14e42b6628
-ms.openlocfilehash: 5b8b118c5320e57f2bae5925d3df98650b0288c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc448ae1e13025a83b33386c2845bdf7bb4d5eec
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611392"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038634"
 ---
 # <a name="changes-you-might-make-to-the-default-code--mfc-data-access"></a>Mögliche Änderungen am Standardcode (MFC-Datenzugriff)
 
@@ -19,7 +19,7 @@ Die [MFS-Anwendungsassistenten](../mfc/reference/database-support-mfc-applicatio
 
 - Parametrisieren Sie das Recordset. Geben Sie den tatsächlichen Laufzeit-Parameterwert nach dem Filter an. Weitere Informationen finden Sie unter [Recordset: Parametrisieren eines Recordsets (ODBC)](../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
-- Übergeben Sie eine benutzerdefinierte SQL-Zeichenfolge, die [öffnen](../mfc/reference/crecordset-class.md#open) Member-Funktion. Eine Erläuterung, was Sie mit diesem Verfahren erreichen können, finden Sie unter [SQL: Anpassen eines Recordsets SQL-Anweisung (ODBC)](../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+- Übergeben Sie eine benutzerdefinierte SQL-Zeichenfolge, die [öffnen](../mfc/reference/crecordset-class.md#open) Member-Funktion. Eine Erläuterung, was Sie mit diesem Verfahren erreichen können, finden Sie unter [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)](../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [COM]
 - COM, attributes
 ms.assetid: 52a5dd70-e8be-4bba-afd6-daf90fe689a0
-ms.openlocfilehash: fa7e279f6b7c9c0932d404c336bcfd89bfd553a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb87d3861c6b3066cf482108e2ce2243c8196093
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644092"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038928"
 ---
 # <a name="com-attributes"></a>COM-Attribute
 
@@ -19,7 +19,7 @@ Die COM-Attribute fügen Code um zahlreiche Bereiche von COM-Entwicklung und .NE
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|[Aggregierbar](aggregatable.md)|Gibt an, dass ein Steuerelement durch ein anderes Steuerelement aggregiert werden kann.|
+|[aggregatable](aggregatable.md)|Gibt an, dass ein Steuerelement durch ein anderes Steuerelement aggregiert werden kann.|
 |[Aggregate](aggregates.md)|Gibt an, dass ein Steuerelement die Zielklasse aggregiert.|
 |[coclass](coclass.md)|Erstellt ein COM-Objekt, die eine COM-Schnittstelle implementieren können.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Fügt einen Eintrag für die Schnittstelle eine COM-Zuordnung.|
@@ -30,7 +30,7 @@ Die COM-Attribute fügen Code um zahlreiche Bereiche von COM-Entwicklung und .NE
 |[requires_category](requires-category.md)|Gibt Kategorien von erforderliche Komponente für die Klasse an.|
 |[support_error_info](support-error-info.md)|Unterstützt die Windows-Fehlerberichterstattung für das Zielobjekt.|
 |[synchronize](synchronize.md)|Synchronisiert den Zugriff auf eine Methode.|
-|[threading](threading-cpp.md)|Gibt das Threadingmodell für eine COM-Objekt.|
+|[Threading](threading-cpp.md)|Gibt das Threadingmodell für eine COM-Objekt.|
 |[vi_progid](vi-progid.md)|Definiert eine versionsunabhängige Programm-ID für ein Steuerelement an.|
 
 ## <a name="see-also"></a>Siehe auch

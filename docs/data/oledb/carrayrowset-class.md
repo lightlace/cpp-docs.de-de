@@ -43,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0a867f80f3be685b3c45c8645d6441732acf5851
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330982"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040237"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset-Klasse
 
@@ -93,7 +93,7 @@ Der Typ der Accessor-Klasse, die Sie auf das Rowset verwenden möchten.
 |-|-|
 |[CArrayRowset::m_nRowsRead](#nrowsread)|Die Anzahl der Zeilen, die bereits gelesen.|
 
-## <a name="carrayrowset"></a> CArrayRowset:: CArrayRowset
+## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
 
 Erstellt ein neues `CArrayRowset`-Objekt.
 
@@ -105,10 +105,10 @@ CArrayRowset(int nMax = 100000);
 
 #### <a name="parameters"></a>Parameter
 
-*nmax.*<br/>
+*nMax*<br/>
 [in] Maximale Anzahl von Zeilen im Rowset.
 
-## <a name="snapshot"></a> CArrayRowset:: Snapshot
+## <a name="snapshot"></a> CArrayRowset::Snapshot
 
 Liest das gesamte Rowset in den Speicher, erstellen ein Bild oder eine Momentaufnahme davon.
 
@@ -118,7 +118,7 @@ Liest das gesamte Rowset in den Speicher, erstellen ein Bild oder eine Momentauf
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> CArrayRowset:: Operator
+## <a name="operator"></a> CArrayRowset::operator
 
 Stellt arrayähnlichen Syntax für den Zugriff auf eine Zeile im Rowset bereit.
 
@@ -144,7 +144,7 @@ Der Inhalt der die angeforderte Zeile.
 
 Wenn *Funktionen "nrow"* überschreitet die Anzahl der Zeilen im Rowset, wird eine Ausnahme ausgelöst.
 
-## <a name="nrowsread"></a> CArrayRowset:: M_nrowsread
+## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
 
 Enthält die Anzahl der Zeilen im Rowset, die bereits gelesen wurden.
 
@@ -156,6 +156,6 @@ ULONG m_nRowsRead;
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CRowset-Klasse](../../data/oledb/crowset-class.md)
