@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3394
 ms.assetid: 4e025d79-27ba-43c8-b0d9-839ecef98126
-ms.openlocfilehash: 4eba2c9f34f1cfcaf97733f914520043ee1124bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 826084d375c69ca289a858a29a12ae16874c1fbd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557400"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781457"
 ---
 # <a name="compiler-error-c3394"></a>Compilerfehler C3394
 
 Syntaxfehler in Einschränkungsklausel: „identifier“ wurde gefunden, es wurde jedoch ein Typ erwartet.
 
-Eine Einschränkung wurde nicht ordnungsgemäß formatiert.  Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+Eine Einschränkung wurde nicht ordnungsgemäß formatiert.  Weitere Informationen finden Sie unter [Einschränkungen für generische Typparameter (C++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Beispiel
 

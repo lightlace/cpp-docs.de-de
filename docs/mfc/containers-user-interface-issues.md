@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE containers [MFC], user interface
 - user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
-ms.openlocfilehash: e35f831f3e1a0b2fede03de0bbd846525f3c41f8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 68a56983bccbdb2ed7f6701577ea5abaa7ea04c6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304257"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779663"
 ---
 # <a name="containers-user-interface-issues"></a>Container: Probleme mit der Benutzeroberfläche
 
@@ -21,7 +21,7 @@ Sie müssen eine Reihe von Funktionen einer containeranwendung Benutzeroberfläc
 |------------------------|---------|
 |Menüerweiterungen für Container|[Menüs und Ressourcen: Containererweiterungen](../mfc/menus-and-resources-container-additions.md)|
 |Zusätzliche Ressourcen für Container|[Menüs und Ressourcen: Containererweiterungen](../mfc/menus-and-resources-container-additions.md)|
-|Zeichnen verknüpfte oder eingebettete Elemente|[Container-Beispiel](../visual-cpp-samples.md)|
+|Zeichnen verknüpfte oder eingebettete Elemente|[Container-Beispiel](../overview/visual-cpp-samples.md)|
 |Neue Dialogfelder für Container|[Dialogfelder in OLE](../mfc/dialog-boxes-in-ole.md)|
 
 ## <a name="see-also"></a>Siehe auch

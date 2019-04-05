@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293421"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781756"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx-Klasse
 
@@ -201,7 +201,7 @@ Leiten Sie zur Nutzung von erweiterten docking-Features in MDI-Anwendungen die M
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird eine Klasse von abgeleitet `CMDIChildWndEx`. Dieser Codeausschnitt stammt aus dem [VisualStudioDemo-Beispiel: Visual Studio-Mfc_anwendung](../../visual-cpp-samples.md).
+Im folgende Beispiel wird eine Klasse von abgeleitet `CMDIChildWndEx`. Dieser Codeausschnitt stammt aus dem [VisualStudioDemo-Beispiel: Visual Studio-Mfc_anwendung](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ Wenn Sie das Framework Status später wiederherstellen, wird den Namen des Dokum
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird die Verwendung der `GetDocumentName`-Methode gezeigt. Dieser Codeausschnitt stammt aus dem [VisualStudioDemo-Beispiel: Visual Studio-Mfc_anwendung](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird die Verwendung der `GetDocumentName`-Methode gezeigt. Dieser Codeausschnitt stammt aus dem [VisualStudioDemo-Beispiel: Visual Studio-Mfc_anwendung](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -547,7 +547,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Ein Zeiger auf angrenzenden Bereich.
 
-*bAfter*<br/>
+*bNach*<br/>
 [in] True gibt an, *pControlBar* eingefügt wird, nach dem *pTarget*. False gibt an, *pControlBar* eingefügt wird, bevor Sie *pTarget*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -602,7 +602,7 @@ Diese Funktion wird verwendet, um zu verhindern, dass nur-Lese Dokumente speiche
 
 ### <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht das Überschreiben der `IsReadOnly` Methode. Dieser Codeausschnitt stammt aus dem [VisualStudioDemo-Beispiel: Visual Studio-Mfc_anwendung](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht das Überschreiben der `IsReadOnly` Methode. Dieser Codeausschnitt stammt aus dem [VisualStudioDemo-Beispiel: Visual Studio-Mfc_anwendung](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
@@ -1152,7 +1152,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 Gibt an, ob aktiviert (TRUE) oder deaktiviert (FALSE), automatische Auswahl eines Teils des Clientbereichs eines Fensters angezeigt.
 
 ### <a name="remarks"></a>Hinweise

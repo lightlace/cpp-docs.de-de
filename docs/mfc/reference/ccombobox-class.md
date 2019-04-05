@@ -109,10 +109,10 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778519"
 ---
 # <a name="ccombobox-class"></a>CComboBox-Klasse
@@ -1227,7 +1227,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parameter
 
-*nSelect*<br/>
+*. nalles auswählen*<br/>
 Gibt den nullbasierten Index des wählen Sie die Zeichenfolge an. Wenn-1 und aktuelle Auswahl im Listenfeld entfernt wird, und der Edit-Steuerelement deaktiviert ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bExtended*<br/>
+*bDie*<br/>
 Gibt an, ob das Kombinationsfeld die erweiterten Benutzeroberfläche oder die Standardbenutzeroberfläche verwenden möchten. Der Wert "true", werden die erweiterten Benutzeroberfläche markiert. der Wert "false" wählt die Standardbenutzeroberfläche.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1562,7 +1562,7 @@ Diese Memberfunktion hat keine Auswirkungen auf das Kombinationsfeld erstellt, m
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>
 [CButton-Klasse](../../mfc/reference/cbutton-class.md)<br/>
-[CEdit-Klasse](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [CListBox-Klasse](../../mfc/reference/clistbox-class.md)<br/>
 [CScrollBar-Klasse](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic-Klasse](../../mfc/reference/cstatic-class.md)<br/>

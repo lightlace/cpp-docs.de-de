@@ -167,10 +167,10 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
 ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779026"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty-Klasse
@@ -406,7 +406,7 @@ void AllowEdit(BOOL bAllow=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAllow*<br/>
+*bVererbbare*<br/>
 [in] True, um die Eigenschaft bearbeitbar zu machen. FALSE, wenn die Eigenschaft schreibgeschützt machen. Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -545,7 +545,7 @@ void Enable(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 [in] True, zum Aktivieren der Eigenschaft. So deaktivieren Sie die Eigenschaft wird false ZURÜCKGEGEBEN. Deaktivierte Eigenschaften reagieren nicht auf die Maus- und Tastatureingaben. Der Standardwert ist "true".
 
 ### <a name="remarks"></a>Hinweise
@@ -563,7 +563,7 @@ void EnableSpinControl(
 
 ### <a name="parameters"></a>Parameter
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 [in] "True", um das Drehfeld-Steuerelement zu aktivieren; So deaktivieren Sie das Drehfeld-Steuerelement wird false ZURÜCKGEGEBEN. Der Standardwert ist "true".
 
 *nMin*<br/>
@@ -1652,7 +1652,7 @@ void SetName(
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*<br/>
+*lpszName*<br/>
 [in] Der Eigenschaftenname.
 
 *bRedraw*<br/>

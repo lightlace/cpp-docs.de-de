@@ -15,10 +15,10 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
 ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781210"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer-Klasse
@@ -156,7 +156,7 @@ Eine Liste der Einträge, die in die Registrierung geschrieben werden, nur dann,
 *rglpszOverwrite*<br/>
 Eine Liste der Einträge, die geschrieben werden, in die Registrierung, unabhängig davon, ob alle vorherigen Einträge vorhanden sind.
 
-*bRegister*<br/>
+*bRegistrieren Sie sich*<br/>
 Bestimmt, ob die Klasse ist, registriert werden. Wenn *bRegistrieren Sie sich* ist "true", die Klasse mit der Registrierung registriert ist. Andernfalls, hebt die Registrierung für sie der Klasse.
 
 ### <a name="remarks"></a>Hinweise

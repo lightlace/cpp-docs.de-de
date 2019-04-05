@@ -15,12 +15,12 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-ms.openlocfilehash: 626aae04e0b19dc951814e4741cad3729acd3b72
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48c5ddbc8a3bcf6f74c251820e83cdebcef05bc9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263012"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781002"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Ereignissen
 
@@ -92,7 +92,7 @@ Nun, da Sie das benutzerdefinierte ClickIn-Ereignis mithilfe des Assistenten zum
 
 1. Doppelklicken Sie auf die neue Handlerfunktion in der Klassenansicht springen zu den Meldungshandlercode in der Implementierung (. CPP)-Datei des ActiveX-Steuerelements.
 
-Der folgende code Beispiel ruft die `InCircle` Funktion jedes Mal, wenn die linke Maustaste in das Fenster des Steuerelements geklickt wird. In diesem Beispiel finden Sie in der Handlerfunktion WM_LBUTTONDOWN, `OnLButtonDown`in die [für CIRC](../visual-cpp-samples.md) abstrakt.
+Der folgende code Beispiel ruft die `InCircle` Funktion jedes Mal, wenn die linke Maustaste in das Fenster des Steuerelements geklickt wird. In diesem Beispiel finden Sie in der Handlerfunktion WM_LBUTTONDOWN, `OnLButtonDown`in die [für CIRC](../overview/visual-cpp-samples.md) abstrakt.
 
 [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]
 

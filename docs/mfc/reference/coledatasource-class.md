@@ -37,10 +37,10 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 37de6fd74f1e9210dcd9b9a356719436814c0c7f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776829"
 ---
 # <a name="coledatasource-class"></a>COleDataSource-Klasse
@@ -397,7 +397,7 @@ virtual BOOL OnRenderFileData(
 *lpFormatEtc*<br/>
 Verweist auf die [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Struktur, die das Format, in dem Informationen angefordert, angibt.
 
-*pFile*<br/>
+*pFile-Datei*<br/>
 Verweist auf eine [CFile](../../mfc/reference/cfile-class.md) Objekt, in dem die Daten gerendert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert

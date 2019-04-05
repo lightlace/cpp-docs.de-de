@@ -51,10 +51,10 @@ helpviewer_keywords:
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
 ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780950"
 ---
 # <a name="clist-class"></a>CList-Klasse
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *TYPE*<br/>
 Der Vorlagenparameter, den Typ des Objekts in der Liste angibt.
 
-*position*<br/>
+*Position*<br/>
 Die Position in der Liste des abzurufenden Elements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parameter
 
-*position*<br/>
+*Position*<br/>
 Eine Positionswert, der von einem vorherigen zurückgegebene `GetNext`, `GetPrev`, oder `Find` Aufruf der Memberfunktion.
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parameter
 
-*position*<br/>
+*Position*<br/>
 Eine Positionswert, der von einem vorherigen zurückgegebene `GetNext`, `GetPrev`, oder `Find` Aufruf der Memberfunktion.
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Parameter
 
-*position*<br/>
+*Position*<br/>
 Die Position des Elements, das aus der Liste entfernt werden.
 
 ### <a name="remarks"></a>Hinweise

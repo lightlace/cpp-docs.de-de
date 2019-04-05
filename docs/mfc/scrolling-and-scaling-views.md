@@ -8,18 +8,18 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: 2baa89f233eb6df93cde3adbde35ba1e6d35c093
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283708"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777576"
 ---
 # <a name="scrolling-and-scaling-views"></a>Bildlauf und Skalierung für Ansichten
 
 MFC unterstützt, Ansichten, die einen Bildlauf durchführen und Ansichten, die automatisch auf die Größe des Rahmenfensters skaliert werden, in der sie angezeigt wird. Klasse `CScrollView` unterstützt beide Arten von Ansichten.
 
-Weitere Informationen zu den Bildlauf und Skalierung, finden Sie unter Klasse [CScrollView](../mfc/reference/cscrollview-class.md) in die *MFC-Referenz*. Ein Beispiel für Bildlauf, finden Sie unter den [Scribble-Beispiels](../visual-cpp-samples.md).
+Weitere Informationen zu den Bildlauf und Skalierung, finden Sie unter Klasse [CScrollView](../mfc/reference/cscrollview-class.md) in die *MFC-Referenz*. Ein Beispiel für Bildlauf, finden Sie unter den [Scribble-Beispiels](../overview/visual-cpp-samples.md).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
 

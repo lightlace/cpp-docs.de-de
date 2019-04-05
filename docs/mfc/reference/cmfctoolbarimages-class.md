@@ -141,10 +141,10 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776413"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages-Klasse
@@ -482,7 +482,7 @@ BOOL Draw(
 *bHilite*<br/>
 [in] True, wenn das Bild hervorgehoben werden. andernfalls "false".
 
-*bDisabled*<br/>
+*bDeaktiviert*<br/>
 [in] True, wenn das Bild in den deaktivierten Stil gezeichnet wird. andernfalls "false".
 
 *bIndeterminate*<br/>
@@ -893,7 +893,7 @@ BOOL Load(
 *hinstRes*<br/>
 [in] Eine Instanz der Ressourcen-DLL.
 
-*bAdd*<br/>
+*Hinzufügen*<br/>
 [in] "True", die geladenen Bitmap zum Ersetzen der vorhandenen Bitmap auf die vorhandenen Bitmap, oder "false" hinzu.
 
 *lpszBmpFileName*<br/>
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parameter
 
-*nValue*<br/>
+*nWert*<br/>
 [in] Der neue Wert, der den alpha-Kanal.
 
 ### <a name="remarks"></a>Hinweise

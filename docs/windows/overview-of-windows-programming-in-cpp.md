@@ -3,10 +3,10 @@ title: Übersicht über Windows-Programmierung in C++
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
 ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58772903"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Übersicht über Windows-Programmierung in C++
@@ -98,7 +98,7 @@ Visual Studio bietet einen leistungsfähigen Debugger für nativen Code, Tools f
 |-----------|-----------------|
 |[Exemplarische Vorgehensweise: Erstellen eines Standard C++-Programms](walkthrough-creating-a-standard-cpp-program-cpp.md)| Erstellen Sie eine Windows-Konsolenanwendung.|
 |[Exemplarische Vorgehensweise: Erstellen von Windows-Desktopanwendungen (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Erstellen Sie eine einfache Windows-Desktopanwendung an.|
-|[Windows-Desktopassistent](windows-desktop-wizard.md)|Mithilfe des Assistenten zum Erstellen von neuer Windows-Projekten.|
+|[Windows-Desktop-Assistenten](windows-desktop-wizard.md)|Mithilfe des Assistenten zum Erstellen von neuer Windows-Projekten.|
 |[Active Template Library (ATL)](../atl/TOC.md)|Verwenden Sie die ATL-Bibliothek, um COM-Komponenten in C++ zu erstellen.|
 |[Microsoft Foundation Classes (MFC)](../mfc/TOC.md)|Verwenden von MFC um zu große oder kleine ein Windows-Anwendungen mit Dialogfelder und Steuerelemente zu erstellen.|
 |[Freigegebene ATL- und MFC-Klassen](../atl-mfc-shared/TOC.md)|Verwenden Sie Klassen wie z. B. CString, die in ATL- und MFC-freigegeben werden.|
@@ -107,7 +107,7 @@ Visual Studio bietet einen leistungsfähigen Debugger für nativen Code, Tools f
 |[Ressourcen zum Erstellen eines Spiels mit DirectX](resources-for-creating-a-game-using-directx.md)
 |[Vorgehensweise: Verwenden des Windows 10 SDK in einer Windows-Desktopanwendung](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
 |[Arbeiten mit Ressourcendateien](working-with-resource-files.md)|So fügen Sie Bilder, Symbole, Zeichenfolgentabellen und andere Ressourcen in eine Desktopanwendung.|
-|[Ressourcen für das Erstellen eines Spiels mit DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Enthält Links zu Inhalten für das Erstellen von Spielen in C++.|
+|[Ressourcen zum Erstellen eines Spiels mit DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Enthält Links zu Inhalten für das Erstellen von Spielen in C++.|
 |[Vorgehensweise: Verwenden des Windows 10 SDK in einer Windows-Desktopanwendung](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Enthält Schritte zum Einrichten Ihres Projekts für das Erstellen mit dem Windows 10-SDK.|
 |[Bereitstellen von systemeigenen Desktopanwendungen](deploying-native-desktop-applications-visual-cpp.md)|Stellen Sie systemeigene Anwendungen für Windows bereit.|
 
@@ -117,8 +117,8 @@ Visual Studio bietet einen leistungsfähigen Debugger für nativen Code, Tools f
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Übergeordnetes Thema für Inhalte von Visual C++-Entwickler.|
-[.NET-Entwicklung mit C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Erstellen von Wrappern für systemeigenen C++-Bibliotheken, die sie zur Kommunikation mit .NET-Anwendungen und-Komponenten zu aktivieren.|
-|[Komponentenerweiterungen für .NET und UWP](../extensions/component-extensions-for-runtime-platforms.md)|Referenz für Syntaxelemente, die von C++ freigegebene c++ / CX und C++ / CLI.|
+[.NET Development mit C++ / CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Erstellen von Wrappern für systemeigenen C++-Bibliotheken, die sie zur Kommunikation mit .NET-Anwendungen und-Komponenten zu aktivieren.|
+|[Komponentenerweiterungen für .NET- und UWP](../extensions/component-extensions-for-runtime-platforms.md)|Referenz für Syntaxelemente, die von C++ freigegebene c++ / CX und C++ / CLI.|
 |[Universelle Windows-Apps (C++)](universal-windows-apps-cpp.md)|Schreiben von UWP-Anwendungen, die mithilfe C++ / CX oder Windows Runtime Template Library (WRL).|
 |[C++-Attribute für COM und .NET](attributes/cpp-attributes-com-net.md)|Nicht standardmäßige Attribute für nur-Windows-Programmierung mit der .NET- oder COM.|
 

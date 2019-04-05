@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
 ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780963"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog-Klasse
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in] Gibt die Kategorie-ID, in dem die Schaltfläche eingefügt werden soll.
 
-*button*<br/>
+*Schaltfläche*<br/>
 [in] Gibt die Schaltfläche zum Einfügen.
 
 *iInsertBefore*<br/>
@@ -357,7 +357,7 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 [in] True, um die benutzerdefinierten Symbolleisten aktivieren. "False", um Symbolleisten zu deaktivieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in] Ein Zeiger auf das übergeordnete Fenster.
 
-*bitmap*<br/>
+*Bitmap*<br/>
 [in] Ein Verweis auf ein Bitmap-Objekt, das bearbeitet werden.
 
 *nBitsPerPixel*<br/>
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in] Gibt den Befehl an der Schaltfläche ersetzt werden.
 
-*button*<br/>
+*Schaltfläche*<br/>
 [in] Ein **const** Verweis auf die Symbolleiste Button-Objekt, das die Schaltfläche mit den alten ersetzt.
 
 ### <a name="remarks"></a>Hinweise
