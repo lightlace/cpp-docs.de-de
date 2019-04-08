@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: 594b78fd36dcb1ff92c63867688c38eac7520eba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304331"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779793"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager-Klasse
 
@@ -81,7 +81,7 @@ Die `CContextMenuManager` können auch speichern und Laden von Zuständen in die
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie ein Menü Hinzufügen einer `CContextMenuManager` Objekt und das nicht dem aktiven Popup-Menü zu schließen bei der `CContextMenuManager` Objekt wird ein neues Popupmenü angezeigt. Dieser Codeausschnitt ist Teil der [Beispiel für benutzerdefinierte Seiten](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie ein Menü Hinzufügen einer `CContextMenuManager` Objekt und das nicht dem aktiven Popup-Menü zu schließen bei der `CContextMenuManager` Objekt wird ein neues Popupmenü angezeigt. Dieser Codeausschnitt ist Teil der [Beispiel für benutzerdefinierte Seiten](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 
@@ -117,7 +117,7 @@ BOOL AddMenu(
 *uiMenuResId*<br/>
 [in] Die Menü-Ressourcen-ID.
 
-*Wert*<br/>
+*lpszName*<br/>
 [in] Eine Zeichenfolge, die den Namen für das neue Menü enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -169,7 +169,7 @@ HMENU GetMenuByName(
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*<br/>
+*lpszName*<br/>
 [in] Eine Zeichenfolge, die den Namen des abzurufenden Menüs enthält.
 
 *puiOrigResID*<br/>

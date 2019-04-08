@@ -19,7 +19,7 @@ ms.locfileid: "58328583"
 Alle Visual C++-CLR-Projekte werden standardmäßig auf die C-Laufzeitbibliotheken verknüpfen. Daher werden diese Projekte als Anwendungen im gemischten Modus, klassifiziert werden, weil sie systemeigenen Code mit Code kombinieren, die die common Language Runtime (verwalteter Code). Wenn sie kompiliert werden, werden sie in der Zwischensprache (IL), auch bekannt als Microsoft intermediate Language (MSIL) kompiliert.
 
 > [!IMPORTANT]
-> Visual Studio 2015 als veraltet markiert und Visual Studio 2017 nicht mehr unterstützt die Erstellung von **/CLR: pure** oder **/CLR: safe** Code für die CLR-Anwendungen. Wenn Sie rein oder sicher-Assemblys benötigen, empfehlen wir, dass Sie Ihre Anwendung in c# übersetzen.
+> Visual Studio 2015 als veraltet markiert und Visual Studio 2017 nicht mehr unterstützt die Erstellung von **/CLR: pure** oder **/CLR: safe** Code für die CLR-Anwendungen. Wenn Sie rein oder sicher-Assemblys benötigen, empfehlen wir, dass Sie Ihre Anwendung in C# übersetzen.
 
 Bei Verwendung eine frühere Version von Visual C++-Compiler-Toolsets, die unterstützt **/CLR: pure** oder **/CLR: safe**, Sie können dieses Verfahren verwenden, um Ihren Code in reine MSIL zu konvertieren:
 

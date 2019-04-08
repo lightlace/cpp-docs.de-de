@@ -477,9 +477,9 @@ Wie andere C++-Bibliotheken können Sie C++ AMP in UWP-apps. In diesen Artikeln 
 
 - [Ein Fenster Store-app in JavaScript und C++ Reise-Optimierer von Bing Maps](http://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Gewusst wie: Verwenden von C++ AMP from c# mithilfe der Windows-Runtime](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Gewusst wie: Verwenden von C++ AMP from C# mithilfe der Windows-Runtime](http://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [Gewusst wie: Verwenden von C++ AMP from c#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [Gewusst wie: Verwenden von C++ AMP from C#](http://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [Aufrufen nativer Funktionen aus verwaltetem Code](../../dotnet/calling-native-functions-from-managed-code.md)
 

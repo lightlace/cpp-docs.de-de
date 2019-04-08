@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel erstellt eine Komponente, die mithilfe von c#. Beachten Sie, dass die Einschränkung gibt an, dass der generische Typ nur mit einem Werttyp instanziiert werden kann.
+Das folgende Beispiel erstellt eine Komponente, die mithilfe von C#. Beachten Sie, dass die Einschränkung gibt an, dass der generische Typ nur mit einem Werttyp instanziiert werden kann.
 
 ```
 // C3225_b.cs
@@ -54,7 +54,7 @@ public class MyList<T> where T: struct {}
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel verwendet der c#-Komponente erstellt und verstößt gegen die Einschränkung, die nur MyList sein kann nicht mit einem Werttyp instanziiert <xref:System.Nullable>. Im folgende Beispiel wird die C3225 generiert.
+Dieses Beispiel verwendet der C#-Komponente erstellt und verstößt gegen die Einschränkung, die nur MyList sein kann nicht mit einem Werttyp instanziiert <xref:System.Nullable>. Im folgende Beispiel wird die C3225 generiert.
 
 ```
 // C3225_c.cpp

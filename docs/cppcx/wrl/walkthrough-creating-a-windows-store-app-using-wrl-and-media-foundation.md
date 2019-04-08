@@ -95,9 +95,9 @@ In den meisten Fällen können Sie mithilfe C++ / CX verwenden, um die Windows-R
 
    1. Klicken Sie unter **Windows-Metadaten**legen **Windows-Metadaten generieren** zu **Ja (/ WINMD)**.
 
-### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Die WRL der benutzerdefinierten Media Foundation-Komponente aus einer c#-app verwenden.
+### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Die WRL der benutzerdefinierten Media Foundation-Komponente aus einer C#-app verwenden.
 
-1. Fügen Sie einen neuen **c# leere App (Universelles Windows)** Projekt die `MediaCapture` Lösung. Nennen Sie das Projekt, z. B. *MediaCapture*.
+1. Fügen Sie einen neuen **C# leere App (Universelles Windows)** Projekt die `MediaCapture` Lösung. Nennen Sie das Projekt, z. B. *MediaCapture*.
 
 1. In der **MediaCapture** fügen einen Verweis auf die `GrayscaleTransform` Projekt. Informationen dazu finden Sie unter [Vorgehensweise: Hinzufügen und Entfernen von Verweisen mit dem Verweis-Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).
 

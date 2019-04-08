@@ -21,7 +21,7 @@ Ein generischer Typ wurde fehlerhaft instanziiert. Überprüfen Sie die Typdefin
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird c# verwendet eine Komponente zu erstellen, die einen generischen Typ mit bestimmten Einschränkungen, die beim Erstellen von generischer Typen in C++ nicht unterstützt werden, enthält c++ / CLI. Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Im folgende Beispiel wird C# verwendet eine Komponente zu erstellen, die einen generischen Typ mit bestimmten Einschränkungen, die beim Erstellen von generischer Typen in C++ nicht unterstützt werden, enthält c++ / CLI. Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
 ```cs
 // C3392.cs

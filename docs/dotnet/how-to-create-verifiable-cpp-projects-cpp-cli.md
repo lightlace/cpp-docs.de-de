@@ -18,7 +18,7 @@ ms.locfileid: "57817375"
 Visual C++-Anwendungs-Assistenten werden keine überprüfbaren Projekte erstellt.
 
 > [!IMPORTANT]
-> Visual Studio 2015 als veraltet markiert und Visual Studio 2017 nicht unterstützt. die **/CLR: pure** und **/CLR: safe** überprüfbare Projekte. Wenn Sie die überprüfbaren Code benötigen, empfehlen wir, dass Sie Ihren Code in c# übersetzen.
+> Visual Studio 2015 als veraltet markiert und Visual Studio 2017 nicht unterstützt. die **/CLR: pure** und **/CLR: safe** überprüfbare Projekte. Wenn Sie die überprüfbaren Code benötigen, empfehlen wir, dass Sie Ihren Code in C# übersetzen.
 
 Allerdings bei Verwendung eine ältere Version von Visual C++-Compiler-Toolsets, die unterstützt **/CLR: pure** und **/CLR: safe**, Projekte konvertiert werden können, um überprüfbar zu sein. Dieses Thema beschreibt das Festlegen von Projekteigenschaften, und ändern die Quelldateien zum Transformieren von Visual C++-Projekten zum Erzeugen von überprüfbarer Anwendungen.
 

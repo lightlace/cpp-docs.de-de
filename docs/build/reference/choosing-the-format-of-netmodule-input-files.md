@@ -13,7 +13,7 @@ ms.locfileid: "57807324"
 
 Eine MSIL-OBJ-Datei (kompiliert mit ["/ CLR"](clr-common-language-runtime-compilation.md)) kann auch als eine NETMODULE-Datei verwendet werden.  OBJ-Dateien enthalten die Metadaten und systemeigene Symbole.  NETMODULE-Dateien enthalten nur Metadaten.
 
-Sie können eine MSIL-OBJ-Datei an einem beliebigen anderen Visual Studio-Compiler übergeben, über die/addmodule-Compileroption (aber beachten Sie, dass die OBJ-Datei der resultierenden Assembly Teil, und mit der Assembly geliefert werden muss.)  Beispielsweise haben in Visual c# und Visual Basic/addmodule-Compileroption.
+Sie können eine MSIL-OBJ-Datei an einem beliebigen anderen Visual Studio-Compiler übergeben, über die/addmodule-Compileroption (aber beachten Sie, dass die OBJ-Datei der resultierenden Assembly Teil, und mit der Assembly geliefert werden muss.)  Beispielsweise haben in Visual C# und Visual Basic/addmodule-Compileroption.
 
 > [!NOTE]
 >  In den meisten Fällen müssen Sie an den Linker die OBJ-Datei aus der Kompilierung übergeben, die das Modul .net erstellt.  Eine DLL- oder NETMODULE-Datei MSIL-Modul-Datei an dem Linker übergeben kann dazu führen, dass LNK1107.

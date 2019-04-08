@@ -6,17 +6,17 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-ms.openlocfilehash: eb576fae7a2a895b88aa958c61b3170e58fbb070
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656299"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032179"
 ---
 # <a name="macros-cc"></a>Makros (C/C++)
 Vorverarbeitung erweitert Makros in allen Zeilen, die keine Präprozessordirektiven sind (Zeilen, die keine **#** als erstes Zeichen ohne Leerzeichen) und in Teilen einiger Direktiven, die nicht als Teil des übersprungen werden ein für die bedingte Kompilierung. "Direktiven für die bedingte Kompilierung" ermöglichen es Ihnen, die Kompilierung von Teilen einer Quelldatei zu unterdrücken, indem sie einen konstanten Ausdruck oder einen Bezeichner testen, um zu bestimmen, welche Textblöcke an den Compiler übergeben werden und welche Textblöcke während des Präprozessorlaufs aus der Quelldatei entfernt werden .
 
-Die `#define`-Anweisung wird normalerweise verwendet, um aussagekräftige Bezeichner Konstanten, Schlüsselwörtern und häufig verwendeten Anweisungen oder Ausdrücken zuzuordnen. Bezeichner, die Konstanten darstellen, werden manchmal als "symbolische Konstanten "oder" Manifestkonstanten" bezeichnet. Bezeichner, die Anweisungen oder Ausdrücke darstellen, werden als "Makros" bezeichnet. In dieser Präprozessordokumentation wird nur der Begriff "Makro" verwendet.
+Die `#define`-Direktive wird normalerweise verwendet, um aussagekräftige Bezeichner Konstanten, Schlüsselwörtern und häufig verwendeten Anweisungen oder Ausdrücken zuzuordnen. Bezeichner, die Konstanten darstellen, werden manchmal als "symbolische Konstanten "oder" Manifestkonstanten" bezeichnet. Bezeichner, die Anweisungen oder Ausdrücke darstellen, werden als "Makros" bezeichnet. In dieser Präprozessordokumentation wird nur der Begriff "Makro" verwendet.
 
 Wenn der Name des Makros im Programmquelltext oder in den Argumenten von bestimmten anderen Präprozessorbefehlen erkannt wird, wird er als Aufruf dieses Makros behandelt. Der Makroname wird durch eine Kopie des Makrotexts ersetzt. Wenn das Makro Argumente akzeptiert, werden die tatsächlichen Argumente nach dem Makronamen durch formale Parameter im Makrotext ersetzt. Der Prozess des Ersetzens eines Makroaufrufs durch die verarbeitete Textkopie wird als "Erweiterung" des Makroaufrufs bezeichnet.
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
-ms.openlocfilehash: 8d8ba1e66c1ffc46429b5c0e987be833aef2e72f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2a029f653753363e08b3c4f8b9fceab6295924af
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328525"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034114"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Datensatzfeldaustausch: Verwenden von RFX
 
@@ -20,7 +20,7 @@ In diesem Thema wird erläutert, was Sie tun, um RFX zu verwenden wie das Framew
 
 Die folgenden Themen enthalten Informationen an:
 
-- [Datensatzfeldaustausch: Arbeiten mit Assistenten-Code](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) stellt die wichtigsten Komponenten von RFX vor und erläutert den Code, den MFS-Anwendungsassistenten und **Klasse hinzufügen** (siehe [Hinzufügen eines MFC-ODBC-Consumers ](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) schreiben, die zur Unterstützung von RFX und wie Sie den assistentencode nicht ändern möchten.
+- [Datensatzfeldaustausch: Arbeiten mit Assistenten-Code](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) stellt die wichtigsten Komponenten von RFX vor und erläutert den Code, den MFS-Anwendungsassistenten und **Klasse hinzufügen** (siehe [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) schreiben zur Unterstützung von RFX und wie Sie den assistentencode nicht ändern möchten.
 
 - [Datensatzfeldaustausch: Verwenden der RFX-Funktionen](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) wird erläutert, wie Sie in der RFX-Funktionen in Aufrufen Ihrer `DoFieldExchange` außer Kraft setzen.
 
