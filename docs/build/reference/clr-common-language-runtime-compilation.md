@@ -43,7 +43,7 @@ Einer oder mehrere der folgenden Schalter, durch Komma getrennt.
 
 - **safe**
 
-   **/ CLR: safe ist veraltet**. Die Option ist in Visual Studio 2017 entfernt. Es wird empfohlen, dass Sie Code portieren, der sichere MSIL in c# werden muss.
+   **/ CLR: safe ist veraltet**. Die Option ist in Visual Studio 2017 entfernt. Es wird empfohlen, dass Sie Code portieren, der sichere MSIL in C# werden muss.
 
 - **noAssembly**
 

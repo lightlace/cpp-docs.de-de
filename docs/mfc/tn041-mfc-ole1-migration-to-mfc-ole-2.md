@@ -60,7 +60,7 @@ Weitere Informationen zu Beispielanwendungen wählen können finden Sie unter de
 Wie weiter oben erläutert [OCLIENT](../overview/visual-cpp-samples.md) in MFC 2.0 enthalten war und OLE mit MFC/OLE1 implementiert. Die Schritte, die mit denen diese Anwendung anfänglich konvertiert wurde, um die MFC/OLE 2-Klassen verwenden, werden nachfolgend beschrieben. Eine Reihe von Funktionen wurden hinzugefügt, nachdem der erste Port abgeschlossen wurde, um die MFC/OLE-Klassen besser zu veranschaulichen. Diese Funktionen werden hier nicht behandelt; Das Beispiel selbst, um mehr über die erweiterten Features finden Sie unter.
 
 > [!NOTE]
-> Die c#-Compilerfehlern und schrittweise Anleitungen wurde mit Visual C++-2.0 erstellt. Fehlermeldungen und Speicherorte können mit Visual C++ 4.0 geändert haben, aber bleibt gültig, die konzeptionelle Informationen.
+> Die C#-Compilerfehlern und schrittweise Anleitungen wurde mit Visual C++-2.0 erstellt. Fehlermeldungen und Speicherorte können mit Visual C++ 4.0 geändert haben, aber bleibt gültig, die konzeptionelle Informationen.
 
 ## <a name="getting-it-up-and-running"></a>Es einrichten und ausführen
 
@@ -425,7 +425,7 @@ void CMainView::OnSize(UINT nType, int cx, int cy)
 [HIERSVR](../overview/visual-cpp-samples.md) wurde auch in MFC 2.0 und OLE mit MFC/OLE1 implementiert. Dieser Hinweis beschreibt kurz die Schritte, die mit denen diese Anwendung anfänglich konvertiert wurde, um die Klassen von MFC/OLE 2 verwenden. Eine Reihe von Funktionen wurden hinzugefügt, nachdem der erste Port abgeschlossen wurde, um die Klassen von MFC/OLE 2 besser zu veranschaulichen. Diese Funktionen werden hier nicht behandelt; Das Beispiel selbst, um mehr über die erweiterten Features finden Sie unter.
 
 > [!NOTE]
-> Die c#-Compilerfehlern und schrittweise Anleitungen wurde mit Visual C++-2.0 erstellt. Fehlermeldungen und Speicherorte können mit Visual C++ 4.0 geändert haben, aber bleibt gültig, die konzeptionelle Informationen.
+> Die C#-Compilerfehlern und schrittweise Anleitungen wurde mit Visual C++-2.0 erstellt. Fehlermeldungen und Speicherorte können mit Visual C++ 4.0 geändert haben, aber bleibt gültig, die konzeptionelle Informationen.
 
 ## <a name="getting-it-up-and-running"></a>Es einrichten und ausführen
 
