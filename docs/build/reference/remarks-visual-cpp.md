@@ -1,5 +1,5 @@
 ---
-title: '&lt;"Hinweise" > (C++-Dokumentationskommentare)'
+title: '&lt;Hinweise > (C++-Dokumentationskommentare)'
 ms.date: 11/04/2016
 f1_keywords:
 - remarks
