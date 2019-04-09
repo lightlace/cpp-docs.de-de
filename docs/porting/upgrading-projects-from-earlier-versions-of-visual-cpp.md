@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: dae4937661db945fa17f15ea39b0d17a8bf72640
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768216"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034912"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Aktualisieren von Projekten von früheren Versionen von Visual C++
 
@@ -35,9 +35,9 @@ Weitere Informationen zum Aktualisieren der entsprechenden Windows-Versionen fin
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Aktualisieren Ihres Codes auf die Universal CRT](upgrade-your-code-to-the-universal-crt.md)<br/>
+[Upgraden Ihres Codes auf die Universal CRT](upgrade-your-code-to-the-universal-crt.md)<br/>
 [Ändern von WINVER und _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
-[Fix your dependencies on library internals (Beheben Ihrer Abhängigkeiten auf bibliotheksinternen Elementen)](fix-your-dependencies-on-library-internals.md)<br/>
+[Beheben Ihrer Abhängigkeiten von bibliotheksinternen Elementen](fix-your-dependencies-on-library-internals.md)<br/>
 [Gleitkomma-Migrationsprobleme](floating-point-migration-issues.md)<br/>
 [Verwenden von nativen Zielversionen in Visual Studio, um alte Projekte zu erstellen](use-native-multi-targeting.md)<br/>
 [In Visual Studio 2019 Preview veraltete Visual C++-Features](features-deprecated-in-visual-studio.md)<br/>
@@ -45,6 +45,6 @@ Weitere Informationen zum Aktualisieren der entsprechenden Windows-Versionen fin
 
 ## <a name="see-also"></a>Siehe auch
 
-[Neues bei Visual C++ in Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Neuerungen bei Visual C++ in Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Änderungsverlauf von Visual C++ von 2003 bis 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Nicht dem Standard entsprechendes Verhalten](../cpp/nonstandard-behavior.md)
