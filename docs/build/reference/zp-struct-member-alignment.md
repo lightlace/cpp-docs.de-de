@@ -1,6 +1,6 @@
 ---
 title: /Zp (Ausrichten des Strukturmembers)
-ms.date: 12/17/2018
+ms.date: 04/04/2019
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237163"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Ausrichten des Strukturmembers)
 
@@ -28,7 +28,7 @@ Steuert, wie die Member einer Struktur im Speicher abgelegt werden, und gibt die
 
 ## <a name="remarks"></a>Hinweise
 
-Bei Angabe der **/Zp**_n_ option, die einzelnen Strukturmember nach dem ersten entweder die Größe des Elementtyps gespeichert oder *n*-Byte-Grenzen (, in denen *n* ist 1, 2, 4, 8 oder 16), je nachdem, was kleiner ist.
+Die **/Zp**_n_ Option teilt dem Compiler, wo die einzelnen Strukturmember gespeichert. Der Compiler speichert Member an einer Grenze, die die kleinere von entweder die Größe der der Elementtyp ist nach der ersten oder *n*-Byte-Grenze.
 
 Die verfügbaren Packen-Werte werden in der folgenden Tabelle beschrieben:
 
@@ -37,13 +37,13 @@ Die verfügbaren Packen-Werte werden in der folgenden Tabelle beschrieben:
 |1|Komprimiert Strukturen auf 1-Byte-Begrenzungen. Identisch mit **/Zp**.|
 |2|Komprimiert Strukturen auf 2-Byte-Begrenzungen.|
 |4|Komprimiert Strukturen auf 4-Byte-Begrenzungen.|
-|8|Komprimiert Strukturen auf 8-Byte-Begrenzungen (Standard).|
-|16| Komprimiert Strukturen auf 16-Byte-Begrenzungen.|
+|8|Komprimiert Strukturen auf 8-Byte-Begrenzungen (Standard für X86, ARM und ARM64).|
+|16| Komprimiert Strukturen auf 16-Byte-Begrenzungen (Standard für X64).|
 
-Sie sollten diese Option nicht verwenden, es sei denn, Sie bestimmte ausrichtungsanforderungen haben.
+Verwenden Sie diese Option nicht, es sei denn, Sie bestimmte ausrichtungsanforderungen haben.
 
 > [!WARNING]
-> C++-Header im Windows SDK wird davon ausgegangen **"/ zp8"** packen. Arbeitsspeicher, die eine Beschädigung kann auftreten, wenn die **/Zp** Einstellung geändert, wenn Sie mithilfe von Windows SDK-Header.
+> Im Windows SDK C++-Header festgelegt und vorausgesetzt **"/ zp8"** intern packen. Arbeitsspeicher, die eine Beschädigung kann auftreten, wenn die **/Zp** Einstellung geändert wird, in das Windows SDK-Header. Die Header sind nicht betroffen von einem **/Zp** Option, die Sie in der Befehlszeile festlegen.
 
 Sie können auch [Pack](../../preprocessor/pack.md) Ausrichten von Strukturen. Weitere Informationen zur Ausrichtung finden Sie unter:
 
@@ -59,7 +59,7 @@ Sie können auch [Pack](../../preprocessor/pack.md) Ausrichten von Strukturen. W
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
-1. Wählen Sie die **C/C++-** > **Codegenerierung** Eigenschaftenseite.
+1. Wählen Sie die **Konfigurationseigenschaften** > **C/C++-** > **Codegenerierung** Eigenschaftenseite.
 
 1. Ändern der **Ausrichtung der Strukturmember an** Eigenschaft.
 
@@ -69,5 +69,5 @@ Sie können auch [Pack](../../preprocessor/pack.md) Ausrichten von Strukturen. W
 
 ## <a name="see-also"></a>Siehe auch
 
-- [MSVC-Compiler-Optionen](compiler-options.md)
-- [MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[MSVC-Compiler-Optionen](compiler-options.md) \
+[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)

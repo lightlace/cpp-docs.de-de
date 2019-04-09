@@ -4,12 +4,12 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 2dedd56759b6bb49260221e22218da6f4300a970
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 380a96bcb1a119b2b6d4104d60936217d1350fbb
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356087"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237132"
 ---
 # <a name="open-folder-projects-for-c"></a>„Ordner öffnen“-Projekte für C++
 
@@ -64,7 +64,7 @@ Sie können Buildskripts oder andere externe Vorgänge in den Dateien automatisi
 
 ![Konfigurieren von Tasks für „Ordner öffnen“](media/open-folder-config-tasks.png)
 
-Dies erstellt (oder geöffnet) die **"Tasks.VS.JSON"** Datei im VS-Ordner die Visual Studio im Stammordner des Projekts erstellt. Sie können in dieser Datei einen beliebigen Task definieren und diesen dann über das Kontextmenü des **Projektmappen-Explorers** aufrufen. Das folgende Beispiel zeigt eine tasks.vs.json-Datei, die einen einzelnen Task definiert. `taskName` definiert den Namen, der im Kontextmenü angezeigt wird. `appliesTo` definiert, für welche Dateien der Befehl ausgeführt werden kann. Die `command`-Eigenschaft bezieht sich auf die Umgebungsvariable „COMSPEC“, die den Pfad für die Konsole („cmd.exe“ unter Windows) identifiziert. Sie können ebenfalls auf Umgebungsvariablen verweisen, die in „CppProperties.json“ oder „CMakeSettings.json“ definiert sind. Die `args`-Eigenschaft gibt die Befehlszeile an, die aufgerufen werden soll. Das `${file}`-Makro ruft die ausgewählte Datei im **Projektmappen-Explorer** ab. Im folgenden Beispiel wird der Dateiname der aktuell ausgewählten CPP-Datei angezeigt.
+Dies erstellt (oder geöffnet) die **"Tasks.VS.JSON"** Datei im VS-Ordner die Visual Studio im Stammordner des Projekts erstellt. Sie können in dieser Datei einen beliebigen Task definieren und diesen dann über das Kontextmenü des **Projektmappen-Explorers** aufrufen. Das folgende Beispiel zeigt eine tasks.vs.json-Datei, die einen einzelnen Task definiert. `taskName` definiert den angezeigten Namen im Kontextmenü an. `appliesTo` definiert, welche Dateien für der Befehl ausgeführt werden kann. Die `command`-Eigenschaft bezieht sich auf die Umgebungsvariable „COMSPEC“, die den Pfad für die Konsole („cmd.exe“ unter Windows) identifiziert. Sie können ebenfalls auf Umgebungsvariablen verweisen, die in „CppProperties.json“ oder „CMakeSettings.json“ definiert sind. Die `args`-Eigenschaft gibt die Befehlszeile an, die aufgerufen werden soll. Das `${file}`-Makro ruft die ausgewählte Datei im **Projektmappen-Explorer** ab. Im folgenden Beispiel wird der Dateiname der aktuell ausgewählten CPP-Datei angezeigt.
 
 ```json
 {
@@ -107,7 +107,3 @@ Wenn Sie zusätzliche Argumente hinzufügen möchten, fügen Sie diese wie im fo
 ```
 
 Wenn Sie diese Datei speichern, wird die neue Konfiguration in der Dropdownliste der Debugziele angezeigt, und Sie können auf diese klicken, um den Debugger zu starten. Sie können beliebig viele Debugkonfigurationen für beliebig viele ausführbare Dateien erstellen. Wenn Sie nun auf **F5** drücken, wird der Debugger gestartet. Dieser hält an jedem Breakpoint an, den Sie bereits festgelegt haben. Die bekannten Debuggerfenster und deren Funktionalitäten sind nun verfügbar.
-
-## <a name="see-also"></a>Siehe auch
-
-
