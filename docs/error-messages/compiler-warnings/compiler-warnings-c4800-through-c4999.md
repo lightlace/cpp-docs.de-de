@@ -213,10 +213,8 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 4) C4881|der Konstruktor und/oder der Destruktor wird nicht aufgerufen werden, für die Tile_static-Variable '*Variable*"|
 |Compilerwarnung (Stufe 1) C4882|Übergeben von functor-Objekten mit nicht Konstanten aufrufoperatoren an Concurrency:: parallel_for_each ist veraltet.|
 |[Compilerwarnung C4900](compiler-warning-level-1-c4900.md)|Konflikt zwischen "*tool1*'Version'*version1*'und'*tool2*'Version'*version2*"|
-|[Compilerwarnung (Ebene 1) C4905](compiler-warning-level-1-c4905.md)|
-  Breites Zeichenfolgenliteral umgewandelt zu "LPSTR"|
-|[Compilerwarnung (Ebene 1) C4906](compiler-warning-level-1-c4906.md)|
-  Zeichenfolgenliteral umgewandelt zu "LPWSTR"|
+|[Compilerwarnung (Ebene 1) C4905](compiler-warning-level-1-c4905.md)|Breites Zeichenfolgenliteral umgewandelt zu "LPSTR"|
+|[Compilerwarnung (Ebene 1) C4906](compiler-warning-level-1-c4906.md)|Zeichenfolgenliteral umgewandelt zu "LPWSTR"|
 |[Compilerwarnung (Stufe 1) C4910](compiler-warning-level-1-c4910.md)|"\<Bezeichner >:"__declspec(dllexport)"und"Extern"bei einer expliziten Instanziierung nicht miteinander kompatibel sind|
 |[Compilerwarnung (Stufe 1) C4912](compiler-warning-level-1-c4912.md)|"*Attribut*": Attribut wurde ein nicht definiertes Verhalten für ein geschachteltes UDT|
 |[Compilerwarnung (Stufe 4) C4913](compiler-warning-level-4-c4913.md)|Benutzerdefinierter binärer Operator "," ist vorhanden, die Überladung konnte aber alle Operanden nicht konvertieren. Es wurde der standardmäßig enthaltene binäre Operator "," verwendet.|
