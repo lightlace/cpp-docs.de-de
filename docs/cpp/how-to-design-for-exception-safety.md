@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237197"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Vorgehensweise: Entwurf für sichere Ausnahmebehandlung
 
@@ -23,7 +23,7 @@ Egal wie eine Funktion eine Ausnahme behandelt, sie muss nach den folgenden grun
 
 ### <a name="keep-resource-classes-simple"></a>Halten Sie Ressourcenklassen einfach
 
-Wenn Sie eine manuelle Ressourcenverwaltung in Klassen kapseln, verwenden Sie zur Verwaltung jeder Ressource eine Klasse, die keine anderen Aufgaben hat. Andernfalls könnten Verluste verursacht werden. Verwendung [intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md) Wenn möglich, wie im folgenden Beispiel gezeigt. Dieses Beispiel ist bewusst künstlich und vereinfacht, um die Unterschiede bei der Verwendung von `shared_ptr` hervorzuheben.
+Wenn Sie eine manuelle ressourcenverwaltung in Klassen kapseln, verwenden Sie eine Klasse, die keine außer eine einzelne Ressource zu verwalten. Die Klasse einfach halten, verringern Sie das Risiko der Einführung von Ressourcenverluste. Verwendung [intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md) Wenn möglich, wie im folgenden Beispiel gezeigt. Dieses Beispiel ist bewusst künstlich und vereinfacht, um die Unterschiede bei der Verwendung von `shared_ptr` hervorzuheben.
 
 ```cpp
 // old-style new/delete version
@@ -107,7 +107,7 @@ Die grundlegende Garantie ist die schwächste der drei Garantien. Sie kann aber 
 
 ## <a name="exception-safe-classes"></a>Ausnahmesichere Klassen
 
-Eine Klasse kann dazu beitragen, ihre eigene Ausnahmesicherheit sicherzustellen, selbst wenn sie von unsicheren Funktionen genutzt wird. Dazu verhindert die Klasse, dass sie teilweise konstruiert oder gelöscht wird. Wird ein Klassenkonstruktor vor dem Abschließen beendet, wird das Objekt nie erstellt und dessen Destruktor nie aufgerufen. Für automatische, vor der Ausnahme initialisierte Variablen werden zwar deren Destruktoren aufgerufen. Aber für dynamisch reservierten Speicher oder Ressourcen, die nicht über einen intelligenten Zeiger oder eine ähnliche automatische Variable verwaltet werden, hat dies einen Verlust zur Folge.
+Eine Klasse kann dazu beitragen, ihre eigene Ausnahmesicherheit sicherzustellen, selbst wenn sie von unsicheren Funktionen genutzt wird. Dazu verhindert die Klasse, dass sie teilweise konstruiert oder zerstört wird. Wird ein Klassenkonstruktor vor dem Abschließen beendet, wird das Objekt nie erstellt und dessen Destruktor nie aufgerufen. Für automatische, vor der Ausnahme initialisierte Variablen werden zwar deren Destruktoren aufgerufen. Aber für dynamisch reservierten Speicher oder Ressourcen, die nicht über einen intelligenten Zeiger oder eine ähnliche automatische Variable verwaltet werden, hat dies einen Verlust zur Folge.
 
 Die integrierten Datentypen sind alle NO-FAIL, und die Standardbibliothekstypen unterstützen mindestens die grundlegende Garantie. Beachten Sie für jeden benutzerdefinierten Typ, der ausnahmesicher sein muss, die folgenden Richtlinien:
 

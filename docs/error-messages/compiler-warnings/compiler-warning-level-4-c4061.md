@@ -1,25 +1,25 @@
 ---
 title: Compilerwarnung (Stufe 4) C4061
-ms.date: 11/30/2017
+ms.date: 04/05/2019
 f1_keywords:
 - C4061
 helpviewer_keywords:
 - C4061
 ms.assetid: a99cf88e-7941-4519-8b1b-f6889d914b2f
-ms.openlocfilehash: 8b730d561134b8b7ca4454ee74f99216fbc72cb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 073e3e9cb1cb5bb6b0f66157c986072227960212
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237119"
 ---
 # <a name="compiler-warning-level-4-c4061"></a>Compilerwarnung (Stufe 4) C4061
 
 > Enumerator '*Bezeichner*"im Schalter der Enumeration'*Enumeration*" wird nicht von einer Case-Bezeichnung explizit behandelt
 
-Der Enumerator hat keinen verknüpften Handler in einer `switch` Anweisung.
+Den angegebenen Enumerator *Bezeichner* weist keinen verknüpften Handler in einer `switch` -Anweisung mit einem `default` Fall. Die fehlende Case-Anweisung handelt es sich möglicherweise um ein Flüchtigkeitsfehler, oder er möglicherweise kein Problem. Es hängt von, ob der Enumerator von Standardfall oder nicht verarbeitet wird. Für eine verwandte Warnung für nicht verwendete Enumeratoren in `switch` Anweisungen, die keine `default` Groß-/Kleinschreibung, finden Sie unter [C4062](compiler-warning-level-4-c4062.md).
 
-Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen dazu, wie Sie Warnungen zu aktivieren, die standardmäßig deaktiviert sind, finden Sie unter [Compiler Warnungen, die standardmäßig deaktivierte](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -46,3 +46,7 @@ int main()
 {
 }
 ```
+
+## <a name="see-also"></a>Siehe auch
+
+[Compilerwarnung (Stufe 4) C4062](compiler-warning-level-4-c4062.md)
