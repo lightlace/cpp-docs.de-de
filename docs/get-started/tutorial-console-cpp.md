@@ -2,16 +2,16 @@
 title: Erstellen eines C++-Konsolen-App-Projekts
 description: Erstellen einer Hallo Welt-Konsolen-App in Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 03/25/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 49fc20f3040f50ddc1b8014cc4dcf8df20f7af87
-ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
+ms.openlocfilehash: 1b2fe7b95ec27a559de73673412cb2d28507b656
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "57700648"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476876"
 ---
 # <a name="create-a-c-console-app-project"></a>Erstellen eines C++-Konsolen-App-Projekts
 
@@ -23,7 +23,7 @@ C++-Programmierer beginnen häufig mit einer „Hallo, Welt!“- Anwendung, die 
 
 ## <a name="create-your-app-project"></a>Erstellen Ihres App-Projekts
 
-Visual Studio verwendet *Projekte*, um Code für eine App zu ordnen, und *Projektmappen*, um Ihre Projekte zu ordnen. In einem Projekt sind alle Optionen, Konfigurationen und Regeln enthalten, mithilfe derer Ihre Apps erstellt werden. Außerdem verwaltet ein Projekt die Beziehung zwischen allen Projektdateien und externen Dateien. Wenn Sie Ihre App erstellen möchten, müssen Sie zuerst ein neues Projekt und eine Projektmappe erstellen.
+Visual Studio verwendet *Projekte*, um Code für eine App zu ordnen, und *Projektmappen*, um Ihre Projekte zu ordnen. Ein Projekt beinhaltet alle Optionen, Einstellungen und Regeln, die Sie zum Erstellen Ihrer Anwendung verwendet haben. Es verwaltet auch die Beziehungen zwischen allen Projektdateien und externen Dateien. Wenn Sie Ihre App erstellen möchten, müssen Sie zuerst ein neues Projekt und eine Projektmappe erstellen.
 
 1. Klicken Sie in der Menüleiste in Visual Studio auf **Datei** > **Neu** > **Projekt**. Das Fenster **Neues Projekt** wird angezeigt.
 
@@ -33,7 +33,7 @@ Visual Studio verwendet *Projekte*, um Code für eine App zu ordnen, und *Projek
 
    ![Das Dialogfeld „Neues Projekt“](./media/calculator-new-project-dialog.png "Das Dialogfeld „Neues Projekt“")
 
-   Dadurch wird eine leere C++-Windows-Konsolenanwendung erstellt. Konsolenanwendungen verwenden ein Windows-Konsolenfenster, um Ausgabe anzuzeigen und Benutzereingaben entgegenzunehmen. In Visual Studio wird ein Editorfenster geöffnet, und der generierte Code wird angezeigt. Dies sollte in etwa so aussehen:
+   Eine leere C++-Windows-Konsolenanwendung wird erstellt. Konsolenanwendungen verwenden ein Windows-Konsolenfenster, um Ausgabe anzuzeigen und Benutzereingaben entgegenzunehmen. In Visual Studio wird ein Editorfenster geöffnet und der generierte Code angezeigt:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -58,8 +58,6 @@ Visual Studio verwendet *Projekte*, um Code für eine App zu ordnen, und *Projek
     //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
-
-[Ein Problem ist aufgetreten.](#create-your-app-project-issues)
 
 ## <a name="verify-that-your-new-app-builds-and-runs"></a>Überprüfen, dass Ihre neue App erstellt und ausgeführt wird
 
@@ -124,13 +122,11 @@ Wandeln Sie den Code in dieser Vorlage nun in eine Rechner-App um.
 
 1. Wenn Sie die Datei speichern möchten, drücken Sie **STRG+S**, oder klicken im oberen Bereich der IDE auf das **Speichern**-Symbol: das Diskettensymbol in der Symbolleiste unterhalb der Menüleiste.
 
-1. Um die Anwendung auszuführen, drücken Sie **STRG+F5**, oder wechseln Sie zum **Debuggen**-Menü, und wählen Sie dort **Ohne Debuggen starten** aus. Wenn ein Popupelement mit der Meldung **This project is out of date** (Dieses Projekt ist nicht mehr aktuell) angezeigt wird, können Sie **Dieses Dialogfeld nicht mehr anzeigen** auswählen, und dann **Ja**, um Ihre Anwendung zu erstellen. Es sollte nun ein Konsolenfenster-Popupelement mit dem im Code angegebenen Text angezeigt werden.
+1. Um die Anwendung auszuführen, drücken Sie **STRG+F5**, oder wechseln Sie zum **Debuggen**-Menü, und wählen Sie dort **Ohne Debuggen starten** aus. Wenn ein Popupelement mit der Meldung **Dieses Projekt ist nicht mehr aktuell** angezeigt wird, können Sie **Dieses Dialogfeld nicht mehr anzeigen** auswählen, und dann **Ja**, um Ihre Anwendung zu erstellen. Es sollte nun ein Konsolenfenster mit dem im Code angegebenen Text angezeigt werden.
 
    ![Erstellen und Starten der Anwendung](./media/calculator-first-launch.gif "Erstellen und Starten der Anwendung")
 
 1. Schließen Sie das Konsolenfenster, sobald Sie fertig sind.
-
-[Ein Problem ist aufgetreten.](#edit-the-code-issues)
 
 ## <a name="add-code-to-do-some-math"></a>Hinzufügen von Code für Berechnungen
 
@@ -138,7 +134,7 @@ Jetzt können Sie mathematische Logik hinzufügen.
 
 ### <a name="to-add-a-calculator-class"></a>Hinzufügen einer Rechnerklasse
 
-1. Wechseln Sie zum Menü **Projekt**, und wählen Sie **Klasse hinzufügen** aus. Geben Sie im Eingabefeld für **Klassenname** den Namen *Calculator* (Taschenrechner) ein. Klicken Sie auf **OK**. Dadurch werden Ihrem Projekt zwei neue Dateien hinzugefügt. Um alle geänderten Dateien auf einmal zu speichern, drücken Sie **STRG+UMSCHALT+S**. Dies ist die Tastenkombination für **Datei** > **Alle speichern**. Es gibt auch eine Symbolleistenschaltfläche für **Alle speichern**: ein Symbol mit zwei Disketten. Diese Schaltfläche befindet sich neben der Schaltfläche **Speichern**. Generell hat es sich bewährt, **Alle speichern** immer wieder auszuführen, damit auch wirklich alle Dateien gespeichert werden.
+1. Wechseln Sie zum Menü **Projekt**, und wählen Sie **Klasse hinzufügen** aus. Geben Sie im Eingabefeld für **Klassenname** den Namen *Calculator* (Taschenrechner) ein. Klicken Sie auf **OK**. Zwei neue Dateien werden Ihrem Projekt hinzugefügt. Um alle geänderten Dateien auf einmal zu speichern, drücken Sie **STRG+UMSCHALT+S**. Dies ist die Tastenkombination für **Datei** > **Alle speichern**. Es gibt auch eine Symbolleistenschaltfläche für **Alle speichern**: ein Symbol mit zwei Disketten. Diese Schaltfläche befindet sich neben der Schaltfläche **Speichern**. Generell hat es sich bewährt, **Alle speichern** immer wieder auszuführen, damit auch wirklich alle Dateien gespeichert werden.
 
    ![Erstellen der Rechnerklasse](./media/calculator-create-class.gif "Erstellen der Rechnerklasse")
 
@@ -166,7 +162,7 @@ Jetzt können Sie mathematische Logik hinzufügen.
    > - Die zwei Zeilen, die Sie gelöscht haben, haben einen *Konstruktor* und einen *Destruktor* für die Klasse deklariert. Für eine einfache Klasse wie die vorliegende werden diese vom Compiler für Sie erstellt. Deren Verwendung liegt aber außerhalb des in diesem Tutorial abgedeckten Bereichs.
    > - Es hat sich bewährt, Ihren Code auf Grundlage der jeweiligen Funktion in verschiedenen Dateien zu organisieren. Dies erleichtert das spätere Auffinden des benötigen Codes. Hier definieren Sie die `Calculator`-Klasse und die Datei, die die `main()`-Funktion enthält, einzeln. Es soll aber dennoch in `main()` auf die `Calculator`-Klasse verwiesen werden.
 
-1. Unter `Calculate` wird eine grüne Wellenlinie angezeigt. Dies liegt daran, dass die `Calculate`-Funktion in der .cpp-Datei nicht definiert wurde. Bewegen Sie den Mauszeiger über das Wort, klicken Sie dann auf die Glühbirne, die angezeigt wird, und wählen Sie dann **Create definition of „Calculate“ in Calculator.cpp** (Definition von „Calculate“ in Calculator.cpp erstellen). Ein Popupelement wird angezeigt, das Ihnen eine Vorschau der Codeänderung anzeigt, die in der anderen Datei vorgenommen wurde. Der Code wurde *Calculator.cpp* hinzugefügt.
+1. Unter `Calculate` wird eine grüne Wellenlinie angezeigt. Dies liegt daran, dass die `Calculate`-Funktion in der CPP-Datei nicht definiert wurde. Bewegen Sie den Mauszeiger über das Wort, klicken Sie dann auf die Glühbirne, die angezeigt wird, und wählen Sie dann **Create definition of „Calculate“ in Calculator.cpp** (Definition von „Calculate“ in Calculator.cpp erstellen). Ein Popupelement wird angezeigt, das Ihnen eine Vorschau der Codeänderung anzeigt, die in der anderen Datei vorgenommen wurde. Der Code wurde *Calculator.cpp* hinzugefügt.
 
    ![Erstellen einer Definition von „Calculate“](./media/calculator-create-definition.gif "Erstellen einer Definition von „Calculate“")
 
@@ -268,19 +264,19 @@ Da es keine Beschränkungen gibt, was der Benutzer im Konsolenfenster eingeben k
 
 ### <a name="to-run-the-app-in-the-debugger"></a>Ausführen der App im Debugger
 
-1. Setzen Sie auf der `result = c.Calculate(x, oper, y);`-Zeile einen Breakpoint, exakt nach dem Punkt, an dem der Benutzer zur Eingabe aufgefordert wurde. Klicken Sie dazu auf der linken Seite des Editorfensters auf Höhe der Zeile auf den grauen, vertikalen Rand, sodass dort ein roter Punkt angezeigt wird.
+1. Setzen Sie auf der `result = c.Calculate(x, oper, y);`-Zeile einen Breakpoint, exakt nach dem Punkt, an dem der Benutzer zur Eingabe aufgefordert wurde. Um den Breakpoint festzulegen, klicken Sie auf der linken Seite des Editorfensters neben der Zeile auf den grauen, vertikalen Rand. Ein roter Punkt wird angezeigt.
 
    ![Breakpoint festlegen](./media/calculator-set-breakpoint.gif "Set a breakpoint")
 
-   Ab sofort wird die Ausführung dann immer bei dieser Zeile angehalten, wenn Sie das Programm debuggen. Sie haben aber bereits eine ungefähre Vorstellung davon, dass das Programm für einfache Fälle funktioniert, und Sie möchten nicht, dass die Ausführung jedes Mal pausiert wird. Knüpfen Sie den Breakpoint also an eine Bedingung.
+   Ab sofort wird die Ausführung dann immer bei dieser Zeile angehalten, wenn Sie das Programm debuggen. Wir haben bereits eine grobe Vorstellung, dass das Programm in einfachen Fällen funktioniert. Da wir die Ausführung nicht jedes Mal anhalten möchten, legen wir den Breakpoint als bedingt fest.
 
-1. Klicken Sie mit der rechten Maustaste auf den roten Punkt, der den Breakpoint darstellt, und wählen Sie dann **Bedingungen** aus. Geben Sie im Eingabefeld für die Bedingung `(y == 0) && (oper == '/')` ein. Klicken Sie danach auf die **Schließen**-Schaltfläche. Die Bedingung wird automatisch gespeichert.
+1. Klicken Sie mit der rechten Maustaste auf den roten Punkt, der den Breakpoint darstellt, und wählen Sie dann **Bedingungen** aus. Geben Sie im Eingabefeld für die Bedingung `(y == 0) && (oper == '/')` ein. Wenn Sie fertig sind, wählen Sie die Schaltfläche **OK** aus. Die Bedingung wird automatisch gespeichert.
 
    ![Festlegen eines konditionalen Breakpoints](./media/calculator-conditional-breakpoint.gif "Festlegen eines konditionalen Breakpoints")
 
    Die Ausführung wird nun also genau dann am Breakpoint angehalten, wenn versucht wird, durch 0 zu teilen.
 
-1. Drücken Sie **F5**, um das Programm zu debuggen, oder klicken Sie auf die Schaltfläche für den **lokalen Windows-Debugger**: die Symbolleistenschaltfläche mit dem grünen Pfeilsymbol. Wenn Sie in Ihrer Konsolen-App z. B. „5 - 0“ eingeben, verhält sich das Programm normal und wird weiter ausgeführt. Wenn Sie nun jedoch „10 / 0“ eingeben, hält das Programm am Breakpoint an. Auch wenn Sie eine beliebige Anzahl von Leerzeichen zwischen den Operator und die Zahlen setzen, ist `cin` intelligent genug, um die Eingabe dennoch korrekt zu analysieren.
+1. Drücken Sie **F5**, um das Programm zu debuggen, oder wählen Sie die Schaltfläche **Lokaler Windows-Debugger** mit dem grünen Pfeilsymbol auf der Symbolleiste aus. Wenn Sie in Ihrer Konsolen-App z. B. „5 - 0“ eingeben, verhält sich das Programm normal und wird weiter ausgeführt. Wenn Sie nun jedoch „10 / 0“ eingeben, hält das Programm am Breakpoint an. Auch wenn Sie eine beliebige Anzahl von Leerzeichen zwischen den Operator und die Zahlen setzen, ist `cin` intelligent genug, um die Eingabe dennoch korrekt zu analysieren.
 
    ![Pausieren am konditionalen Breakpoint](./media/calculator-debug-conditional.gif "Pausieren am konditionalen Breakpoint")
 
@@ -290,29 +286,29 @@ Sobald Sie Ihren Code debuggen, können Sie feststellen, dass ein paar neue Fens
 
    ![Das Fenster „Auto“](./media/calculator-autos.png "Das Fenster „Auto“")
 
-Wenn Sie alle Variablen dieser Funktion ansehen möchten, wechseln Sie zum Fenster **Lokale**. Tatsächlich können Sie die Werte dieser Variablen während des Debuggens auch spontan bearbeiten, um zu erfahren, welche Auswirkung diese auf das Programm haben würden. Hier bearbeiten Sie die Variablen jedoch nicht.
+Wenn Sie alle Variablen dieser Funktion ansehen möchten, wechseln Sie zum Fenster **Lokale**. Tatsächlich können Sie die Werte dieser Variablen während des Debuggens bearbeiten, um zu erfahren, welche Auswirkung sie auf das Programm haben würden. Hier bearbeiten Sie die Variablen jedoch nicht.
 
    ![Das Fenster „Lokale“](./media/calculator-locals.png "Das Fenster „Lokale“")
 
-Sie können auch einfach direkt im Code den Mauszeiger auf Variablen bewegen, um deren aktuelle Werte an den Stellen anzeigen zu lassen, an denen die Ausführung jeweils pausiert wurde. Sorgen Sie jedoch dafür, dass sich das Editorfenster im Vordergrund befindet, indem Sie zuerst darauf klicken, bevor Sie diesen Vorgang testen.
+Sie können auch einfach direkt im Code den Mauszeiger auf Variablen bewegen, um deren aktuelle Werte an den Stellen anzeigen zu lassen, an denen die Ausführung jeweils pausiert wurde. Sorgen Sie dafür, dass sich das Editorfenster im Vordergrund befindet, indem Sie darauf klicken, bevor Sie diesen Vorgang testen.
 
    ![Bewegen des Mauszeigers über Variablen, um deren aktuellen Wert anzuzeigen](./media/calculator-hover-tooltip.gif "Bewegen des Mauszeigers über Variablen, um deren aktuellen Wert anzuzeigen")
 
 ### <a name="to-continue-debugging"></a>Fortsetzen mit dem Debuggen
 
-1. In der gelben Zeile auf der linken Seite wird der aktuelle Stand der Ausführung angezeigt. Diese befindet sich gerade in einer Zeile, die `Calculate` aufruft. Drücken Sie also **F11**, um in die Funktion **hineinzuspringen**. Dadurch wechseln Sie zum Text der `Calculate`-Funktion. Gehen Sie bedacht mit der Option **Hineinspringen** um. Verwenden Sie sie nämlich zu häufig, vergeuden Sie damit viel Zeit, da mit dieser Option in der Zeile, in der Sie sich gerade befinden, in jeden Code, den Sie verwenden, hineingesprungen werden kann, auch in Standardbibliotheksfunktionen.
+1. In der gelben Zeile auf der linken Seite wird der aktuelle Stand der Ausführung angezeigt. Die aktuelle Zeile ruft `Calculate` auf. Drücken Sie also **F11**, um einen **Einzelschritt** in der Funktion auszuführen. Dadurch wechseln Sie zum Text der `Calculate`-Funktion. Wenden Sie den **Einzelschritt** mit Bedacht an; wenn Sie dies zu oft tun, verschwenden Sie unter Umständen viel Zeit. Sie gehen damit in jeden Code, den Sie in der Zeile verwenden, einschließlich der standardmäßigen Bibliotheksfunktionen.
 
-1. Der Ausführungsstand befindet sich nun gerade auf dem Beginn der `Calculate`-Funktion. Drücken Sie **F10**, um zur nächsten Zeile in der Programmausführung zu wechseln. Dies wird auch als **Überspringen** bezeichnet. Sie können die Option **Überspringen** verwenden, um von Zeile zu Zeile zu springen, ohne dabei genau die Details jedes Teils der Zeile anzusehen. Prinzipiell sollten Sie **Überspringen** gegenüber **Hineinspringen** bevorzugen, es sei denn, Sie möchten sich wirklich den Code genauer ansehen, der von einem anderen Punkt abgerufen wird, so wie Sie dies getan haben, um sich den Textkörper von `Calculate` anzusehen.
+1. Der Ausführungsstand befindet sich nun gerade auf dem Beginn der `Calculate`-Funktion. Drücken Sie **F10**, um zur nächsten Zeile in der Programmausführung zu wechseln. **F10** wird auch als **Prozedurschritt** bezeichnet. Sie können die Option **Überspringen** verwenden, um von Zeile zu Zeile zu springen, ohne dabei genau die Details jedes Teils der Zeile anzusehen. Prinzipiell sollten Sie **Überspringen** gegenüber **Hineinspringen** bevorzugen, es sei denn, Sie möchten sich wirklich den Code genauer ansehen, der von einem anderen Punkt abgerufen wird, so wie Sie dies getan haben, um sich den Textkörper von `Calculate` anzusehen.
 
 1. Verwenden Sie **F10**, um solange Zeilen zu **überspringen**, bis Sie sich wieder in der `main()`-Funktion in der anderen Datei befinden, und halten Sie dort in der Zeile `cout` an.
 
    ![Prozedurschritt aus „Calculate“ und Prüfen der Ergebnisse](./media/calculator-undefined-zero.gif "Prozedurschritt aus „Calculate“ und Prüfen der Ergebnisse")
 
-1. Es scheint, das Programm funktioniert wie erwartet: Es nimmt die erste Zahl und dividiert sie durch die zweite. Bewegen Sie in der `cout`-Zeile den Mauszeiger über die Variable `result`, oder sehen Sie sich `result` im Fenster **Auto** an. Sie sehen, dass ihr Wert als „inf“ aufgeführt ist. Dies ist falsch, beheben Sie diesen Fehler also. Die `cout`-Zeile gibt nur aus, welcher Wert auch immer in `result` gespeichert ist. Wenn Sie also mithilfe von **F10** eine Zeile weiter springen, wird im Konsolenfenster Folgendes angezeigt:
+1. Es scheint, das Programm funktioniert wie erwartet: Es nimmt die erste Zahl und dividiert sie durch die zweite. Bewegen Sie in der `cout`-Zeile den Mauszeiger über die Variable `result`, oder sehen Sie sich `result` im Fenster **Auto** an. Sie sehen, dass der Wert als „inf“ aufgelistet ist, was offenbar falsch ist, also korrigieren wir dies. Die `cout`-Zeile gibt nur aus, welcher Wert auch immer in `result` gespeichert ist. Wenn Sie also mithilfe von **F10** eine Zeile weiter springen, wird im Konsolenfenster Folgendes angezeigt:
 
    ![Das Ergebnis einer Division durch Null](./media/calculator-divide-by-zero-fail.png "Das Ergebnis einer Division durch Null")
 
-   Dies geschieht, da die Division durch Null nicht definiert wurde. Das Programm hat also keine numerische Antwort für die angeforderte Operation.
+   Dieses Ergebnis resultiert daraus, dass die Division durch Null (0) nicht definiert ist. Das Programm hat also keine numerische Antwort für die angeforderte Operation.
 
 ### <a name="to-fix-the-divide-by-zero-error"></a>Beheben des Fehlers „Division durch Null“
 
@@ -332,9 +328,9 @@ Entwickeln Sie eine elegantere Lösung für die Division durch Null, damit der B
 
     int main()
     {
-        double x = 0.0
-        double y = 0.0
-        double result = 0.0
+        double x = 0.0;
+        double y = 0.0;
+        double result = 0.0;
         char oper = '+';
 
         cout << "Calculator Console Application" << endl << endl;
@@ -360,7 +356,7 @@ Entwickeln Sie eine elegantere Lösung für die Division durch Null, damit der B
     }
     ```
 
-1. Drücken Sie nun einmal **F5**. Dadurch wird die Programmausführung ordnungsgemäß fortgeführt, bis das Programm pausiert, um eine Benutzereingabe anzufordern. Geben Sie noch einmal `10 / 0` ein. Nun wird eine hilfreichere Antwort ausgegeben. Der Benutzer wird zu weiterer Eingabe aufgefordert, und das Programm wird weiter normal ausgeführt.
+1. Drücken Sie nun einmal **F5**. Die Programmausführung wird ordnungsgemäß fortgeführt, bis das Programm pausiert, um eine Benutzereingabe anzufordern. Geben Sie noch einmal `10 / 0` ein. Nun wird eine hilfreichere Antwort ausgegeben. Der Benutzer wird zu weiterer Eingabe aufgefordert, und das Programm wird weiter normal ausgeführt.
 
    ![Das endgültige Ergebnis nach Änderungen](./media/calculator-final-verification.gif "Das endgültige Ergebnis nach Änderungen")
 
