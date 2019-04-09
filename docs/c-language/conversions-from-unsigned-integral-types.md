@@ -1,6 +1,6 @@
 ---
 title: Konvertierungen von ganzzahligen Typen ohne Vorzeichen
-ms.date: 01/29/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: d7653c545601d10b159f10a8a3c8f60f9128f944
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579686"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565021"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Konvertierungen von ganzzahligen Typen ohne Vorzeichen
 
-Eine ganze Zahl ohne Vorzeichen wird durch Abschneiden der höherwertigen Bits zu einer kürzeren Zahl ohne oder mit Vorzeichen konvertiert, oder sie wird durch Nullerweiterung in eine längere Zahl ohne oder mit Vorzeichen konvertiert (siehe Tabelle [Konvertierungen von ganzzahligen Typen ohne Vorzeichen](#_clang_table_4..3)).
+Eine ganze Zahl ohne Vorzeichen wird durch Abschneiden der höherwertigen Bits zu einer kürzeren Zahl ohne oder mit Vorzeichen konvertiert, oder sie wird durch Nullerweiterung in eine längere Zahl ohne oder mit Vorzeichen konvertiert. Weitere Informationen finden Sie in der [Tabelle der Konvertierungen von integralen Typen ohne Vorzeichen](#conversions-from-unsigned-integral-types-table).
 
 Wenn der Ganzzahlwert in eine ganze Zahl mit Vorzeichen mit geringerer Größe tiefer gestuft wird, oder eine ganze Zahl ohne Vorzeichen in ihre entsprechende ganze Zahl mit Vorzeichen konvertiert wird, bleibt der Wert unverändert, wenn er im neuen Typ dargestellt werden kann. Der dargestellte Wert ändert sich jedoch, wenn wie im folgenden Beispiel das Vorzeichenbit festgelegt wird.
 
@@ -35,7 +35,7 @@ Werte ohne Vorzeichen werden so konvertiert, dass sie ihren Wert beibehalten und
 
 In der folgenden Tabelle werden die Konvertierungen von ganzzahligen Typen ohne Vorzeichen zusammengefasst.
 
-## <a name="conversions-from-unsigned-integral-types"></a>Konvertierungen von integralen Typen ohne Vorzeichen
+## <a name="conversions-from-unsigned-integral-types-table"></a>Tabelle der Konvertierungen von integralen Typen ohne Vorzeichen
 
 |Von|Beschreibung|Methode|
 |----------|--------|------------|

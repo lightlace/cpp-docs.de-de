@@ -9,24 +9,24 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 051ef3aa8c691a2191d25183ef96f17b557a47c1
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57820207"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769263"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Exemplarische Vorgehensweise: Bereitstellen des Programms (C++)
 
-Nachdem Sie die Anwendung erstellt haben, indem Sie die früheren exemplarischen Vorgehensweisen vorgenommen haben, die unter [Using the Visual Studio IDE for C++ Desktop Development (Verwenden der Visual Studio-IDE für C++-Desktopentwicklung)](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) aufgeführt sind, besteht der letzte Schritt in der Erstellung eines Installationsprogramms, damit andere Benutzer das Programm auf ihren Computern installieren können. Für den Installer fügen Sie der vorhandenen Projektmappe ein neues Projekt hinzu. Die Ausgabe dieses neuen Projekts ist eine setup.exe-Datei , mit der die Anwendung auf einem anderen Computer installiert wird.
+Nachdem Sie die Anwendung erstellt haben, indem Sie die früheren exemplarischen Vorgehensweisen dazu vorgenommen haben, besteht der letzte Schritt in der Erstellung eines Installationsprogramms, damit andere Benutzer das Programm auf ihren Computern installieren können. Für den Installer fügen Sie der vorhandenen Projektmappe ein neues Projekt hinzu. Die Ausgabe dieses neuen Projekts ist eine setup.exe-Datei , mit der die Anwendung auf einem anderen Computer installiert wird.
 
-In dieser exemplarischen Vorgehensweise wird der Windows Installer zum Bereitstellen der Anwendung verwendet. Sie können auch ClickOnce verwenden, um eine Anwendung bereitzustellen. Weitere Informationen finden Sie unter [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md). Weitere Informationen über die allgemeine Bereitstellung finden Sie unter [Deploying Applications, Services, and Components (Bereitstellen von Anwendungen, Diensten und Komponenten)](/visualstudio/deployment/deploying-applications-services-and-components).
+In dieser exemplarischen Vorgehensweise wird der Windows Installer zum Bereitstellen der Anwendung verwendet. Sie können auch ClickOnce verwenden, um eine Anwendung bereitzustellen. Weitere Informationen finden Sie unter [ClickOnce Deployment for Visual C++ Applications](../windows/clickonce-deployment-for-visual-cpp-applications.md). Weitere Informationen über die allgemeine Bereitstellung finden Sie unter [Deploying Applications, Services, and Components (Bereitstellen von Anwendungen, Diensten und Komponenten)](/visualstudio/deployment/deploying-applications-services-and-components).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - In dieser exemplarischen Vorgehensweise wird davon ausgegangen, dass Sie die Grundlagen der Programmiersprache C++ beherrschen.
 
-- Es wird ebenfalls davon ausgegangen, dass Sie die früheren exemplarischen Vorgehensweisen abgeschlossen haben, die unter [Verwenden der Visual Studio-IDE für die C++-Desktopentwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) aufgeführt sind.
+- Es wird ebenfalls davon ausgegangen, dass Sie die früheren exemplarischen Vorgehensweisen abgeschlossen haben, die unter [Verwenden der Visual Studio-IDE für die C++-Desktopentwicklung](using-the-visual-studio-ide-for-cpp-desktop-development.md) aufgeführt sind.
 
 - Diese exemplarische Vorgehensweise kann nicht in den Express-Editionen von Visual Studio ausgeführt werden.
 
@@ -72,10 +72,10 @@ In dieser exemplarischen Vorgehensweise wird der Windows Installer zum Bereitste
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-**Zurück:** [Exemplarische Vorgehensweise: Debuggen eines Projekts (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Zurück:** [Exemplarische Vorgehensweise: Debuggen eines Projekts (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Siehe auch
 
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [Projekte und Buildsysteme](../build/projects-and-build-systems-cpp.md)<br/>
-[Deploying Desktop Applications (Bereitstellen von Desktopanwendungen)](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
+[Deploying Desktop Applications (Bereitstellen von Desktopanwendungen)](../windows/deploying-native-desktop-applications-visual-cpp.md)<br/>
