@@ -17,7 +17,7 @@ ms.locfileid: "56152728"
 ---
 # <a name="c-comments"></a>C-Kommentare
 
-Ein „Kommentar“ ist eine Folge von Zeichen, die mit einer Kombination aus Schrägstrich und Sternchen (<strong>/\*</strong>)beginnt und vom Compiler als einzelnes Leerzeichen behandelt und andernfalls ignoriert wird. Ein Kommentar kann jede Kombination von Zeichen aus dem darstellbaren Zeichensatz enthalten, einschließlich Zeilenumbruchzeichen, aber ausschließlich des „Kommentarende“-Trennzeichens (<strong>\*/</strong>). Kommentare können mehr als eine Zeile belegen, jedoch nicht geschachtelt werden.
+Ein „Kommentar“ ist eine Folge von Zeichen, die mit einer Kombination aus Schrägstrich und Sternchen (<strong>/\*</strong>) beginnt und vom Compiler als einzelnes Leerzeichen behandelt und andernfalls ignoriert wird. Ein Kommentar kann jede Kombination von Zeichen aus dem darstellbaren Zeichensatz enthalten, einschließlich Zeilenumbruchzeichen, aber ausschließlich des „Kommentarende“-Trennzeichens (<strong>\*/</strong>). Kommentare können mehr als eine Zeile belegen, jedoch nicht geschachtelt werden.
 
 Kommentare können an beliebiger Stelle angezeigt werden, wo ein Leerzeichen gestattet ist. Da der Compiler einen Kommentar als einzelnes Leerzeichen behandelt, können Sie Kommentare nicht in Token einschließen. Der Compiler ignoriert die Zeichen im Kommentar.
 
