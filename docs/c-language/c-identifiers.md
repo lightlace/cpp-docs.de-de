@@ -69,7 +69,7 @@ aDD
 
 **Microsoft-spezifisch**
 
-Wählen Sie keinen Namen für Bezeichner aus, die mit zwei Unterstrichen oder mit einem Unterstrich gefolgt von einem Großbuchstaben beginnen. Mit dem ANSI C-Standard können Bezeichnernamen, die mit diesen Zeichenkombinationen beginnen, für die Verwendung durch den Compiler reserviert werden. Bezeichner mit Gültigkeit auf Dateiebene sollten nicht mit einem Unterstrich und einem nachfolgenden Kleinbuchstaben beginnen. Bezeichnernamen, die mit diesen Zeichen beginnen, sind ebenfalls reserviert. Gemäß der Konvention verwendet Microsoft einen Unterstrich und einen Großbuchstaben am Anfang von Makronamen und doppelte Unterstriche für Microsoft-spezifische Schlüsselwortnamen. Um Namenskonflikte zu vermeiden, wählen Sie stets Bezeichnernamen aus, die nicht mit einem oder zwei Unterstriche beginnen, oder Namen, die mit einem Unterstrich und einem nachfolgenden Großbuchstaben beginnen.
+Wählen Sie keinen Namen für Bezeichner aus, die mit zwei Unterstrichen oder mit einem Unterstrich gefolgt von einem Großbuchstaben beginnen. Mit dem ANSI C-Standard können Bezeichnernamen, die mit diesen Zeichenkombinationen beginnen, für die Verwendung durch den Compiler reserviert werden. Bezeichner mit Gültigkeit auf Dateiebene sollten nicht mit einem Unterstrich und einem nachfolgenden Kleinbuchstaben beginnen. Bezeichnernamen, die mit diesen Zeichen beginnen, sind ebenfalls reserviert. Gemäß der Konvention verwendet Microsoft einen Unterstrich und einen Großbuchstaben am Anfang von Makronamen und doppelte Unterstriche für Microsoft-spezifische Schlüsselwortnamen. Um Namenskonflikte zu vermeiden, wählen Sie stets Bezeichnernamen aus, die nicht mit einem oder zwei Unterstrichen beginnen, oder Namen, die mit einem Unterstrich und einem nachfolgenden Großbuchstaben beginnen.
 
 **Ende Microsoft-spezifisch**
 
@@ -94,7 +94,7 @@ Beim Quellzeichensatz handelt es sich um einen Satz zulässiger Zeichen, die in 
 
 **Ende Microsoft-spezifisch**
 
-Ein Bezeichner hat einen "Bereich", bei der es sich um die Region des Programms handelt, in der es bekannt ist, sowie eine "Bindung", die bestimmt, ob derselbe Name in einem anderen Bereich auf denselben Bezeichner verweist. Diese Themen werden unter [Lebensdauer, Bereich, Sichtbarkeit und Verknüpfung](../c-language/lifetime-scope-visibility-and-linkage.md) erläutert.
+Ein Bezeichner hat einen "Bereich", bei dem es sich um die Region des Programms handelt, in der es bekannt ist, sowie eine "Bindung", die bestimmt, ob derselbe Name in einem anderen Bereich auf denselben Bezeichner verweist. Diese Themen werden unter [Lebensdauer, Bereich, Sichtbarkeit und Verknüpfung](../c-language/lifetime-scope-visibility-and-linkage.md) erläutert.
 
 ## <a name="see-also"></a>Siehe auch
 
