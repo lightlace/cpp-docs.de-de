@@ -1,6 +1,6 @@
 ---
 title: /ZW (Windows-Runtime-Kompilierung)
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.CompileAsWinRT
 - /zw
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: a16482cf8d21651db9486ab19c347a4ccadf5279
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73295866004fd506fd5f06ff25c048d14b821016
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809430"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424039"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Windows-Runtime-Kompilierung)
 
@@ -44,7 +44,7 @@ Bei Angabe der **/Zw** der Compiler-Option unterstützt diese Features:
 
 - Automatische referenzzählung von Windows-Runtime-Objekte und Automatisches Verwerfen eines Objekts, wenn dessen Verweiszähler auf Null geht.
 
-Da der incremental Linker die Windows-Metadaten in OBJ-Dateien enthalten sind, mithilfe von nicht unterstützt. die **/Zw** -Option der [/GM (minimale Neuerstellung aktivieren)](gm-enable-minimal-rebuild.md) inkompatibel mit  **/Zw**.
+Da der incremental Linker die Windows-Metadaten in OBJ-Dateien enthalten sind, mithilfe von nicht unterstützt. die **/Zw** option, die als veraltet markierten [/GM (minimale Neuerstellung aktivieren)](gm-enable-minimal-rebuild.md) inkompatibel mit **/Zw**.
 
 Weitere Informationen finden Sie unter [Sprachreferenz zu Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).
 

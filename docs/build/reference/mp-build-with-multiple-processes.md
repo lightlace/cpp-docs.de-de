@@ -1,6 +1,6 @@
 ---
 title: /MP (Erstellen mit mehreren Prozessen)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MultiProcessorCompilation
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808455"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424143"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Erstellen mit mehreren Prozessen)
 
@@ -51,7 +51,7 @@ Die folgende Tabelle enthält die Compileroptionen und Sprachfunktionen, die nic
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) Präprozessordirektive|Konvertiert die Typen in einer Typbibliothek in C++-Klassen und schreibt diese Klassen dann in eine Headerdatei.|
 |[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiert die Präprozessorausgabe in die Standardausgabe (**stdout**).|
-|[/Gm](gm-enable-minimal-rebuild.md)|Ermöglicht eine inkrementelle erneute Erstellung.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Veraltet. Ermöglicht eine inkrementelle erneute Erstellung.|
 |[/showIncludes](showincludes-list-include-files.md)|Schreibt eine Liste von Includedateien in den Standardfehler (**stderr**).|
 |[/Yc](yc-create-precompiled-header-file.md)|Schreibt eine vorkompilierte Headerdatei.|
 
@@ -125,12 +125,8 @@ Die Richtlinie für die Entscheidung, ob zum Verwenden von MSBuild oder **/MP** 
 
 - Wenn die Anzahl von Projekten und Dateien pro Projekt ausgeglichen ist, verwenden Sie beide MSBuild und **/MP**. Legen Sie anfangs die Option **/maxcpucount** auf die Anzahl der zu erstellenden Projekte und die Option **/MP** auf die Anzahl der Prozessoren im Computer fest. Messen Sie die Leistung und passen Sie dann die Einstellungen so an, dass sie zu optimalen Ergebnissen führen. Wiederholen Sie diesen Zyklus, bis Sie mit der Gesamt-Buildzeit zufrieden sind.
 
-#### <a name="the-gm-compiler-option"></a>Die Compileroption /Gm
-
-Standardmäßig aktiviert ein Projektbuild die Compileroption **/Gm** (inkrementelle Builds) für Debugbuilds und deaktiviert sie für Releasebuilds. Aus diesem Grund ist die Compileroption **/MP** bei Debugbuilds automatisch deaktiviert, da ein Konflikt mit der standardmäßigen Compileroption **/Gm** besteht.
-
 ## <a name="see-also"></a>Siehe auch
 
 [#import-Anweisung](../../preprocessor/hash-import-directive-cpp.md)<br/>
-[MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf (Schnellere PDB-Generierung)](zf.md)<br/>
+[Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
+[/ ZF (schnellere PDB-Generierung)](zf.md)<br/>
