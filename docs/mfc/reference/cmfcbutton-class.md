@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269811"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768213"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton-Klasse
 
@@ -154,7 +154,7 @@ class CMFCButton : public CButton
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Gibt die Ausrichtung des Schaltflächentexts.|
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Gibt an, ob Windows XP-Designs verwendet werden soll.|
@@ -180,7 +180,7 @@ Fügen Sie zum Verarbeiten von benachrichtigungsmeldungen in einem Dialogfeld-Bo
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie so konfigurieren Sie die Eigenschaften der Schaltfläche mithilfe verschiedener Methoden in der `CMFCButton` Klasse. Im Beispiel ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie so konfigurieren Sie die Eigenschaften der Schaltfläche mithilfe verschiedener Methoden in der `CMFCButton` Klasse. Im Beispiel ist Teil der [Beispiel neue Steuerelemente](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -542,7 +542,7 @@ Die `CMFCButton` Konstruktor initialisiert dieses Member zu BUTTONSTYLE_3D.
 
 ### <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie zum Festlegen der Werte von der `m_nFlatStyle` Membervariable in den `CMFCButton` Klasse. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).
+Im folgende Beispiel wird veranschaulicht, wie zum Festlegen der Werte von der `m_nFlatStyle` Membervariable in den `CMFCButton` Klasse. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]
@@ -867,7 +867,7 @@ void SetImage(
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie verschiedene Versionen der `SetImage` -Methode in der die `CMFCButton` Klasse. Im Beispiel ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie verschiedene Versionen der `SetImage` -Methode in der die `CMFCButton` Klasse. Im Beispiel ist Teil der [Beispiel neue Steuerelemente](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -891,7 +891,7 @@ Verwenden Sie diese Methode, die Schaltfläche mit den ein Cursorbild enthält, 
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `SetMouseCursor` -Methode in der die `CMFCButton` Klasse. Das Beispiel ist Teil des Codes in der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `SetMouseCursor` -Methode in der die `CMFCButton` Klasse. Das Beispiel ist Teil des Codes in der [Beispiel neue Steuerelemente](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]
