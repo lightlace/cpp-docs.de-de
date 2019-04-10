@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: d94c223ed1e0b236ae8565d13a9f2c9652b6eb84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270302"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772750"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog-Klasse
 
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |`m_bIsMyPalette`|True, wenn das Dialogfeld zur Farbauswahl eine eigene Farben-Palette verwendet bzw. FALSE, wenn das Dialogfeld eine Palette verwendet, die im angegebenen die `CMFCColorDialog` Konstruktor.|
 |`m_bPickerMode`|True, während der Benutzer eine Farbe im Dialogfeld "Auswahl" auswählen. andernfalls "false".|
@@ -100,7 +100,7 @@ Kann eine `CMFCColorDialog` -Objekt auf dem Stapel, und rufen dann `DoModal`, ü
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie ein Dialogfeld "Farbe" konfigurieren "mithilfe verschiedener Methoden in der `CMFCColorDialog` Klasse. Das Beispiel zeigt, wie die aktuelle und die neuen Farben im Dialogfeld festgelegt, und wie Sie die Komponenten roten, grünen und blauen einer ausgewählten Farbe für die zwei Eigenschaftenseiten das Dialogfeld "Farbe" festlegen. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie ein Dialogfeld "Farbe" konfigurieren "mithilfe verschiedener Methoden in der `CMFCColorDialog` Klasse. Das Beispiel zeigt, wie die aktuelle und die neuen Farben im Dialogfeld festgelegt, und wie Sie die Komponenten roten, grünen und blauen einer ausgewählten Farbe für die zwei Eigenschaftenseiten das Dialogfeld "Farbe" festlegen. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 
