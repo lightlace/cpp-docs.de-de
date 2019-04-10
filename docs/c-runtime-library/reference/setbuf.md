@@ -1,6 +1,6 @@
 ---
 title: setbuf
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 apiname:
 - setbuf
 apilocation:
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 3b5fbccd304d406131b0c4f7d16a289f80484642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440495"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424169"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -52,9 +52,9 @@ Vom Benutzer zugewiesener Puffer.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Setbuf** -Funktion steuert die Pufferung für *Stream*. Die *Stream* -Argument muss verweisen auf eine geöffnete Datei, die nicht gelesen oder geschrieben wurde. Wenn die *Puffer* Argument **NULL**, der Stream nicht gepuffert wird. Wenn nicht, der Puffer auf ein Zeichenarray der Länge zeigen muss **BUFSIZ**, wobei **BUFSIZ** in STDIO definiert die Größe des Puffers entspricht. H. Für den E/A-Pufferbetrieb wird anstelle des systemseitig für den gegebenen Stream reservierten Puffers der vom Benutzer angegebene Puffer verwendet. Die **"stderr"** ist standardmäßig ungepuffert, aber Sie können **Setbuf** Puffer zuweisen **"stderr"**.
+Die **Setbuf** -Funktion steuert die Pufferung für *Stream*. Die *Stream* -Argument muss auf eine geöffnete Datei, die gelesen oder geschrieben wurde noch nicht verweisen. Wenn die *Puffer* Argument **NULL**, der Stream wird ungepufferten. Wenn nicht, der Puffer auf ein Zeichenarray der Länge zeigen muss **BUFSIZ**, wobei **BUFSIZ** in STDIO definiert die Größe des Puffers entspricht. H. Für den E/A-Pufferbetrieb wird anstelle des systemseitig für den gegebenen Stream reservierten Puffers der vom Benutzer angegebene Puffer verwendet. Die **"stderr"** Stream wird ungepufferten standardmäßig, jedoch können Sie **Setbuf** Puffer zuweisen **"stderr"**.
 
-**Setbuf** wurde ersetzt durch [Setvbuf](setvbuf.md), dies ist die bevorzugte Routine für neuen Code. **Setbuf** für Kompatibilität mit vorhandenem Code beibehalten.
+**Setbuf** wurde ersetzt durch [Setvbuf](setvbuf.md), dies ist die bevorzugte Routine für neuen Code. Im Gegensatz zu **Setvbuf**, **Setbuf** hat keine Möglichkeit, Fehler melden. **Setvbuf** auch können Sie steuern, sowohl der Puffermodus als auch die Größe des Puffers. **Setbuf** für Kompatibilität mit vorhandenem Code vorhanden ist.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,14 +1,14 @@
 ---
 title: Compileroptionen alphabetisch sortiert
-ms.date: 08/20/2018
+ms.date: 04/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 6175d62938534e790fb60b300ff55ad031da5801
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811939"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424117"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Compileroptionen alphabetisch sortiert
 
@@ -39,17 +39,17 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/F](f-set-stack-size.md)|Legt die Stapelgröße fest.|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Generiert Code, der für eine bestimmte X64 optimiert ist Architektur oder für die Einzelheiten der Micro-Architekturen, in der Mikroarchitekturen von AMD64- und Extended Memory 64 Technology (EM64T)-Architekturen.|
 |[/FA](fa-fa-listing-file.md)|Erstellt eine Listendatei.|
-|[/Fa](fa-fa-listing-file.md)|Legt den Namen der Listendatei fest.|
+|[/FA](fa-fa-listing-file.md)|Legt den Namen der Listendatei fest.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Anzeige des vollständigen Pfads der Quellcodedateien im Diagnosetext in "cl.exe".|
 |[/Fd](fd-program-database-file-name.md)|Benennt die Programmdatenbankdatei um.|
 |[/Fe](fe-name-exe-file.md)|Benennt die ausführbare Datei um.|
 |[/FI](fi-name-forced-include-file.md)|Führt eine Vorverarbeitung der angegebenen Includedatei durch.|
-|[/Fi](fi-preprocess-output-file-name.md)|Legt den vorverarbeiteten Ausgabedateinamen fest.|
-|[/Fm](fm-name-mapfile.md)|Erstellt eine Zuordnungsdatei.|
+|[/FI](fi-preprocess-output-file-name.md)|Legt den vorverarbeiteten Ausgabedateinamen fest.|
+|[/Fm](fm-name-mapfile.md)|Erstellt eine Map-Datei.|
 |[/Fo](fo-object-file-name.md)|Erstellt eine Objektdatei.|
 |[/fp](fp-specify-floating-point-behavior.md)|Gibt das Gleitkommaverhalten an.|
-|[/Fp](fp-name-dot-pch-file.md)|Gibt den Namen einer vorkompilierten Headerdatei an.|
-|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|Erstellt Browserdateien. **/Fr** ist veraltet.|
+|[/fp](fp-name-dot-pch-file.md)|Gibt den Namen einer vorkompilierten Headerdatei an.|
+|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/FR](fr-fr-create-dot-sbr-file.md)|Erstellt Browserdateien. **/Fr** ist veraltet.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|Erzwingt die Serialisierung von Schreibvorgängen auf die Programmdatenbank (PDB) mithilfe von MSPDBSRV.EXE.|
 |[/FU](fu-name-forced-hash-using-file.md)|Erzwingt die Verwendung eines Dateinamens, als ob er an die [#using](../../preprocessor/hash-using-directive-cpp.md) -Direktive übergeben worden wäre.|
 |[/Fx](fx-merge-injected-code.md)|Führt eingefügten Code mit der Quelldatei zusammen.|
@@ -58,13 +58,13 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Ge](ge-enable-stack-probes.md)|Veraltet. Aktiviert Stapelüberprüfungen.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Aktiviert Stringpooling.|
 |[/GH](gh-enable-pexit-hook-function.md)|Ruft die Hookfunktion `_pexit`auf.|
-|[/Gh](gh-enable-penter-hook-function.md)|Ruft die Hookfunktion `_penter`auf.|
+|[/GH](gh-enable-penter-hook-function.md)|Ruft die Hookfunktion `_penter`auf.|
 |[/GL](gl-whole-program-optimization.md)|Aktiviert die Optimierung des gesamten Programms.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Aktiviert minimale Neuerstellung.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Veraltet. Aktiviert minimale Neuerstellung.|
 |[/GR](gr-enable-run-time-type-information.md)|Aktiviert Laufzeit-Typeninformation (RTTI).|
-|[/Gr](gd-gr-gv-gz-calling-convention.md)|Verwendet die `__fastcall` -Aufrufkonvention (nur x86).|
+|[/GR](gd-gr-gv-gz-calling-convention.md)|Verwendet die `__fastcall` -Aufrufkonvention (nur x86).|
 |[/GS](gs-buffer-security-check.md)|Führt eine Puffer-Sicherheitsüberprüfung durch.|
-|[/Gs](gs-control-stack-checking-calls.md)|Steuert Stapelüberprüfungen|
+|[/GS](gs-control-stack-checking-calls.md)|Steuert Stapelüberprüfungen|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|Unterstützt die Fiber-Sicherheit für Daten, die mit statischem lokalen Thread-Speicher zugewiesen werden.|
 |[/guard:cf](guard-enable-control-flow-guard.md)|Fügt Sicherheitsüberprüfungen zum Ablaufsteuerungsschutz hinzu.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|Verwendet die `__vectorcall` -Aufrufkonvention. (nur x86 und x64)|
@@ -72,11 +72,11 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/GX](gx-enable-exception-handling.md)|Veraltet. Aktiviert synchrone Ausnahmebehandlung. Verwenden Sie stattdessen [/EH](eh-exception-handling-model.md) .|
 |[/Gy](gy-enable-function-level-linking.md)|Aktiviert Funktionslevel-Linking.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Veraltet. Identisch mit [/RTC1](rtc-run-time-error-checks.md).|
-|[/Gz](gd-gr-gv-gz-calling-convention.md)|Verwendet die `__stdcall` -Aufrufkonvention (nur x86).|
+|[/GZ](gd-gr-gv-gz-calling-convention.md)|Verwendet die `__stdcall` -Aufrufkonvention (nur x86).|
 |[/H](h-restrict-length-of-external-names.md)|Veraltet. Beschränkt die Länge externer (öffentlicher) Namen.|
 |[/HELP](help-compiler-command-line-help.md)|Listet die Compileroptionen auf.|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Erzwingt, dass in Registern übergebene Parameter beim Funktionseinstieg in ihre Speicherorte auf dem Stapel geschrieben werden. Diese Compileroption steht nur für die X64-Compiler (systemeigene und cross-Compiler).|
-|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Erstellt ein Hotpatch-fähiges Abbild.|
+|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Erstellt ein "Hot"-hotpatchfähiges Image an.|
 |[/I](i-additional-include-directories.md)|Sucht in einem Verzeichnis nach Includedateien.|
 |[/J](j-default-char-type-is-unsigned.md)|Ändert den `char` -Standardtyp.|
 |[/JMC](jmc.md)|Unterstützt native C++ nur mein Code debuggen.|
@@ -97,30 +97,30 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Od](od-disable-debug.md)|Deaktiviert Optimierung.|
 |[/Og](og-global-optimizations.md)|Veraltet. Verwendet globale Optimierung.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Erstellt systeminterne Funktionen.|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|Ermöglicht [#pragma omp](../../preprocessor/omp.md) im Quellcode.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Ermöglicht die [ `#pragma omp` ](../../preprocessor/omp.md) -Anweisung im Quellcode.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Bevorzugt kompakten Code.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Bevorzugt schnellen Code.|
 |[/Ox](ox-full-optimization.md)|Verwendet maximale Optimierung (/Ob2gity /Gs).|
 |[/Oy](oy-frame-pointer-omission.md)|Unterdrückt Framezeiger (nur x86).|
 |[/P](p-preprocess-to-a-file.md)|Schreibt Präprozessorausgaben in eine Datei.|
-|[/permissive-](permissive-standards-conformance.md)|Legen Sie die Standard-Standards-Modus.|
+|[/ PERMISSIVE--](permissive-standards-conformance.md)|Legen Sie die Standard-Standards-Modus.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Generiert schnelle Transzendente.|
 |[/QIfist](qifist-suppress-ftol.md)|Veraltet. Unterdrückt `_ftol` , wenn eine Konvertierung von einem Gleitkommatyp zu einem ganzzahligen Typ erforderlich ist (nur x86).|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Entfernt `fwait` -Befehle in `try` -Blöcken.|
 |[/Qpar (Automatische Parallelisierung)](qpar-auto-parallelizer.md)|Ermöglicht automatische Parallelisierung von Schleifen, die mit der [#pragma loop()](../../preprocessor/loop.md) -Direktive gekennzeichnet sind.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Verwendet ganzzahlige Verschiebungsanweisungen für Gleitkommawerte und deaktiviert bestimmte Gleitkomma-Ladeoptimierungen.|
-|[/Qvec-report (Berichtebene der automatischen Vektorisierung)](qvec-report-auto-vectorizer-reporting-level.md)|Aktiviert die Berichterstellungsebenen für die automatische Vektorisierung.|
+|[/Qvec-report (Auto-Vectorizer-Berichtsebene)](qvec-report-auto-vectorizer-reporting-level.md)|Aktiviert die Berichterstellungsebenen für die automatische Vektorisierung.|
 |[/RTC](rtc-run-time-error-checks.md)|Aktiviert Laufzeitfehlerüberprüfung.|
 |[/sdl](sdl-enable-additional-security-checks.md)|Aktiviert zusätzliche Sicherheitsfunktionen und Warnungen.|
 |[/showIncludes](showincludes-list-include-files.md)|Zeigt während der Kompilierung eine Liste der Includedateien an.|
 |[/source-charset](source-charset-set-source-character-set.md)|Festlegen des quellzeichensatzes.|
 |[/std](std-specify-language-standard-version.md)|C++-standard-Version Kompatibilität Selektor.|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Gibt eine C-Quelldatei an.|
-|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Gibt an, dass alle Quelldateien c sind.|
+|[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Gibt an, dass alle Quelldateien c sind.|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Gibt eine C++-Quelldatei an.|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Gibt an, dass alle Quelldateien C++ sind.|
+|[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Gibt an, dass alle Quelldateien C++ sind.|
 |[/U](u-u-undefine-symbols.md)|Entfernt ein vorkompiliertes Makro.|
-|[/u](u-u-undefine-symbols.md)|Entfernt alle vorkompilierten Makros.|
+|[/U](u-u-undefine-symbols.md)|Entfernt alle vorkompilierten Makros.|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Set Zeichensätze Quell- und auf UTF-8.|
 |[/V](v-version-number.md)|Veraltet. Legt die Versionszeichenfolge der OBJ-Datei fest.|
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|UTF-8-Dateien auf nur kompatible Zeichen zu überprüfen.|
@@ -154,7 +154,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Ze](za-ze-disable-language-extensions.md)|Veraltet. Aktiviert Spracherweiterungen.|
 |[/Zf](zf.md)|Verbessert die PDB-Datei Zeitpunkt der Generierung in parallele Builds.|
 |[/Zg](zg-generate-function-prototypes.md)|In Visual C++ 2015 entfernt. Erzeugt Funktionsprototypen.|
-|[/ZI](z7-zi-zi-debug-information-format.md)|Fügt Debuginformationen in eine Programmdatenbank ein, die mit Bearbeiten und Fortfahren kompatibel ist.|
+|[/Zi](z7-zi-zi-debug-information-format.md)|Fügt Debuginformationen in eine Programmdatenbank ein, die mit Bearbeiten und Fortfahren kompatibel ist.|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Erzeugt vollständige Debuginformationen.|
 |[/Zl](zl-omit-default-library-name.md)|Entfernt Standard-Bibliotheksnamen aus der OBJ-Datei (nur x86).|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|Legt die maximale Speicherbelegung für den vorkompilierten Header fest.|
