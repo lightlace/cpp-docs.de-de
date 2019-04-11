@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292188"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "58780482"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit-Klasse
 
@@ -140,7 +140,7 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCRibbonEdit` Objekt Spin-Schaltflächen neben dem Bearbeitungssteuerelement anzeigen und Festlegen des Texts des Edit-Steuerelements. Dieser Codeausschnitt ist Teil der [MS Office 2007-Demo-Beispiel](../../visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCRibbonEdit` Objekt Spin-Schaltflächen neben dem Bearbeitungssteuerelement anzeigen und Festlegen des Texts des Edit-Steuerelements. Dieser Codeausschnitt ist Teil der [MS Office 2007-Demo-Beispiel](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]
 
@@ -187,7 +187,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in] Die Bezeichnung für die `CMFCRibbonEdit` Steuerelement.
 
-*nImage*<br/>
+*Nbild*<br/>
 [in] Index der kleine Bilder haben die für die Verwendung der `CMFCRibbonEdit` Steuerelement. Die Auflistung der kleinen Bilder wird von der übergeordneten Menübandkategorie verwaltet.
 
 ### <a name="remarks"></a>Hinweise
@@ -555,7 +555,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bEnable*<br/>
+*bAktivieren*<br/>
 [in] True, um das Steuerelement zu aktivieren. So deaktivieren Sie das Steuerelement wird false ZURÜCKGEGEBEN.
 
 ### <a name="remarks"></a>Hinweise
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Zeiger auf das übergeordnete Fenster für die `CMFCRibbonEdit` Objekt.
 
-*data*<br/>
+*Daten*<br/>
 Die barrierefreiheitsdaten für das `CMFCRibbonEdit` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
