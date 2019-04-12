@@ -52,7 +52,7 @@ Die folgenden Schlüsselwörter und speziellen Bezeichner werden vom Microsoft C
 
 Standardmäßig sind Microsoft-Erweiterungen aktiviert. Um sicherzustellen, dass Ihre Programme vollständig portabel sind, können Sie Microsoft-Erweiterungen deaktivieren, indem Sie während der Kompilierung die Option [/Za \(Spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) angeben. Dabei werden einige Microsoft-spezifische Schlüsselwörter deaktiviert.
 
-Wenn Microsoft-Erweiterungen aktiviert sind, können Sie in den Programmen die oben aufgeführten Schlüsselwörter verwenden. Bei Einhaltung der ANSI-Kompatibilität werden den meisten dieser Schlüsselwörter ein doppelten Unterstrich vorangestellt. Die vier Ausnahmen – **dllimport**, **dllimport**, **naked** und **thread** werden nur mit **__declspec** verwendet und erfordern deshalb keinen vorangestellten doppelten Unterstrich. Für die Abwärtskompatibilität werden die restlichen Schlüsselwörter mit Versionen mit einem Unterstrich unterstützt.
+Wenn Microsoft-Erweiterungen aktiviert sind, können Sie in den Programmen die oben aufgeführten Schlüsselwörter verwenden. Bei Einhaltung der ANSI-Kompatibilität wird den meisten dieser Schlüsselwörter ein doppelter Unterstrich vorangestellt. Die vier Ausnahmen – **dllimport**, **dllimport**, **naked** und **thread** – werden nur mit **__declspec** verwendet und erfordern deshalb keinen vorangestellten doppelten Unterstrich. Für die Abwärtskompatibilität werden die restlichen Schlüsselwörter mit Versionen mit einem Unterstrich unterstützt.
 
 **Ende Microsoft-spezifisch**
 
