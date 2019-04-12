@@ -1,12 +1,12 @@
 ---
 title: ARM64-Ausnahmebehandlung
 ms.date: 11/19/2018
-ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59031726"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59534122"
 ---
 # <a name="arm64-exception-handling"></a>ARM64-Ausnahmebehandlung
 
@@ -44,7 +44,7 @@ Hierbei handelt es sich um die Annahmen, die in der Beschreibung für die Ausnah
 
 1. Es ist keine bedingter Code in epilogen.
 
-1. Dedizierte Framezeigerregister: Wenn die sp gespeichert wird, in einem anderen Register (R29 entwickelt bei) im Prolog, die registriert bleibt unverändert, während die Funktion, damit der ursprüngliche sp jederzeit wiederhergestellt werden kann.
+1. Dedizierte Framezeigerregister: Wenn die sp gespeichert wird, in einem anderen Register (x29) im Prolog, die registriert bleibt unverändert, während die Funktion, damit der ursprüngliche sp jederzeit wiederhergestellt werden kann.
 
 1. Es sei denn, der gespeicherten Prozedur in einem anderen Register gespeichert wird, tritt ein, alle Manipulation des Stapelzeigers ausschließlich innerhalb der Prolog und Epilog.
 
@@ -54,90 +54,90 @@ Hierbei handelt es sich um die Annahmen, die in der Beschreibung für die Ausnah
 
 ![stapelrahmenlayout](media/arm64-exception-handling-stack-frame.png "stapelrahmenlayout")
 
-Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position in der lokalen Variablen Bereich je nach der Optimierung Überlegungen gespeichert werden. Das Ziel ist, um die Anzahl der lokalen Variablen zu maximieren, die von einer einzelnen Anweisung, die basierend auf Frame-Pointer (R29 entwickelt bei) oder der Stapelzeiger (sp) erreicht werden kann. Jedoch für `alloca` Funktionen, er verkettet werden muss und R29 entwickelt bei muss am Ende Stack verweisen. Um eine bessere Abdeckung von Register-Paar-Adressierung-Modus zu ermöglichen, werden nicht flüchtiges Register Speichern der Bereiche am oberen Rand der LAN-Stack positioniert. Hier sind Beispiele, die einige der am effizientesten Prolog Sequenzen zu veranschaulichen. Aus Gründen der Übersichtlichkeit und besseren Ort des Caches aufweist die Reihenfolge der aufgerufenen gespeicherten Register speichern, in dem alle kanonischen Prologe "immer größer werdenden einrichten" Reihenfolge. `#framesz` unten können Sie die Größe des gesamten Stapels (außer ' Alloca-Bereich) darstellt. `#localsz` und `#outsz` LAN-Größe zu kennzeichnen (einschließlich des Speichervorgangs Bereich für die \<R29 entwickelt bei, Lr > Paar) und der Parametergröße bzw. ausgehende.
+Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position in der lokalen Variablen Bereich je nach der Optimierung Überlegungen gespeichert werden. Das Ziel ist, um die Anzahl der lokalen Variablen zu maximieren, die von einer einzelnen Anweisung, die basierend auf Frame-Pointer (x29) oder Stapelzeiger (sp) erreicht werden kann. Jedoch für `alloca` Funktionen, er verkettet werden muss und X29 muss am Ende Stack verweisen. Um eine bessere Abdeckung von Register-Paar-Adressierung-Modus zu ermöglichen, werden nicht flüchtiges Register Speichern der Bereiche am oberen Rand der LAN-Stack positioniert. Hier sind Beispiele, die einige der am effizientesten Prolog Sequenzen zu veranschaulichen. Aus Gründen der Übersichtlichkeit und besseren Ort des Caches aufweist die Reihenfolge der aufgerufenen gespeicherten Register speichern, in dem alle kanonischen Prologe "immer größer werdenden einrichten" Reihenfolge. `#framesz` unten können Sie die Größe des gesamten Stapels (außer ' Alloca-Bereich) darstellt. `#localsz` und `#outsz` LAN-Größe zu kennzeichnen (einschließlich des Speichervorgangs Bereich für die \<X29, Lr > Paar) und der Parametergröße bzw. ausgehende.
 
 1. Chained, #localsz \<= 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        stp    r29, lr, [sp, -#localsz]!    // save <r29,lr> at bottom of local area
-        mov    r29,sp                   // r29 points to bottom of local
-        sub    sp, #outsz               // (optional for #outsz != 0)
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        stp    x29,lr,[sp,#-localsz]!   // save <x29,lr> at bottom of local area
+        mov    x29,sp                   // x29 points to bottom of local
+        sub    sp,sp,#outsz             // (optional for #outsz != 0)
     ```
 
 1. Verkettet, #localsz > 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        sub    sp,#localsz+#outsz       // allocate remaining frame
-        stp    r29, lr, [sp, #outsz]    // save <r29,lr> at bottom of local area
-        add    r29,sp, #outsz           // setup r29 points to bottom of local area
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        sub    sp,sp,#(localsz+outsz)   // allocate remaining frame
+        stp    x29,lr,[sp,#outsz]       // save <x29,lr> at bottom of local area
+        add    x29,sp,#outsz            // setup x29 points to bottom of local area
     ```
 
 1. Nicht verkettete, Funktionen (Lr nicht gespeichert)
 
     ```asm
-        stp    r19,r20,[sp, -72]!       // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp, 16]
-        str    r23 [sp,32]
-        stp    d8,d9,[sp,40]            // save FP regs (optional)
-        stp    d10,d11,[sp,56]
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]
+        str    x23,[sp,#32]
+        stp    d8,d9,[sp,#40]           // save FP regs (optional)
+        stp    d10,d11,[sp,#56]
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Alle lokalen erfolgt basierend auf SP. \<R29 entwickelt bei, Lr > verweist auf den vorherigen Frame. Für die Größe des Quellframes \<= 512, die "sub sp,..." können wegoptimiert werden, wenn der Bereich Regs gespeichert am unteren Rand der Stapel verschoben wird. Der Nachteil dieser ist, dass es ist nicht konsistent mit anderer Layouts, die oben genannten, gespeicherten Regs nehmen Sie Teil des Bereichs für das Paar-Regs und vor und nach dem indizierten Offset Adressierung.
+   Alle lokalen erfolgt basierend auf SP. \<X29, Lr > verweist auf den vorherigen Frame. Für die Größe des Quellframes \<= 512, die "sub sp,..." können wegoptimiert werden, wenn der Bereich Regs gespeichert am unteren Rand der Stapel verschoben wird. Der Nachteil dieser ist, dass es ist nicht konsistent mit anderer Layouts, die oben genannten, gespeicherten Regs nehmen Sie Teil des Bereichs für das Paar-Regs und vor und nach dem indizierten Offset Adressierung.
 
 1. Nicht verkettete nichtblatt-Funktionen (Int, gespeichert im Bereich wird Lr gespeichert)
 
     ```asm
-        stp    r19,r20,[sp,-80]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        stp    r23, lr,[sp, 32]         // save last Int reg and lr
-        stp    d8,d9,[sp, 48]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,64]          // ...
-        sub    sp,#framesz-80           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        stp    x23,lr,[sp,#32]          // save last Int reg and lr
+        stp    d8,d9,[sp,#48]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#64]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
    Oder mit einer geraden Anzahl gespeichert Int-Register,
 
     ```asm
-        stp    r19,r20,[sp,-72]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        str    lr,[sp, 32]              // save lr
-        stp    d8,d9,[sp, 40]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,56]          // ...
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        str    lr,[sp,#32]              // save lr
+        stp    d8,d9,[sp,#40]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#56]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Nur r19 gespeichert:
+   Nur X19 gespeichert:
 
     ```asm
-        sub    sp, sp, #16              // reg save area allocation*
-        stp    r19,lr,[sp,0]            // save r19, lr
-        sub    sp,#framesz-16           // allocate the remaining local area
+        sub    sp,sp,#16                // reg save area allocation*
+        stp    x19,lr,[sp]              // save x19, lr
+        sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
    \* Das Reg speichern Bereich Zuordnung ist nicht in die stp reduziert, da eine stp bereits indizierten Reg-Lr nicht mit den entladungscodes dargestellt werden kann.
 
-   Alle lokalen erfolgt basierend auf SP. \<R29 entwickelt bei > verweist auf den vorherigen Frame.
+   Alle lokalen erfolgt basierend auf SP. \<X29 > verweist auf den vorherigen Frame.
 
 1. Chained, #framesz \<= 512, #outsz = 0
 
     ```asm
-        stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
-        mov    r29,sp                       // r29 points to bottom of stack
-        stp    r19,r20,[sp, #framesz -32]   // save INT pair
-        stp    d8,d9,[sp, #framesz -16]     // save FP pair
+        stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
+        mov    x29,sp                       // x29 points to bottom of stack
+        stp    x19,x20,[sp,#(framesz-32)]   // save INT pair
+        stp    d8,d9,[sp,#(framesz-16)]     // save FP pair
     ```
 
    Mit der oben genannten #1-Prolog verglichen, liegt der Vorteil, dass alle Register speichern Anweisungen werden direkt nach dem Zuordnen von Anweisung nur einen Stapel ausgeführt werden können. Es besteht daher keine Anti-Abhängigkeit auf sp, die von der Anweisung auf Parallelität verhindert.
@@ -145,38 +145,38 @@ Für Funktionen der Frame verkettet kann das fp-Lr-Paar an beliebiger Position i
 1. Verkettet, frame-Größe > 512 (optional für die Funktionen ohne Alloca)
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        sub    sp,#framesz-80               // allocate the remaining local area
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        sub    sp,sp,#(framesz-80)          // allocate the remaining local area
     ```
 
-   Für die Optimierung Zweck können R29 entwickelt bei an einer beliebigen Position in der Nähe zu der eine bessere Abdeckung vor/nach-indexed Offset Adressierungsmodus für "Reg-Paar" platziert werden. "Lokal", unter der Frame-Pointer können zugegriffen werden basierend auf SP.
+   Für die Optimierung Zweck können X29 an einer beliebigen Position in der Nähe zu der eine bessere Abdeckung vor/nach-indexed Offset Adressierungsmodus für "Reg-Paar" platziert werden. "Lokal", unter der Frame-Pointer können zugegriffen werden basierend auf SP.
 
 1. Verkettet, Rahmengröße > 4K, mit oder ohne alloca(),
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        mov    r8, #framesz/16
-        bl     chkstk
-        sub    sp, r8*16                    // allocate remaining frame
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        mov    x15,#(framesz/16)
+        bl     __chkstk
+        sub    sp,sp,x15,lsl#4              // allocate remaining frame
                                             // end of prolog
         ...
-        sp = alloca                         // more alloca() in body
+        sub    sp,sp,#alloca                // more alloca() in body
         ...
                                             // beginning of epilog
-        mov    sp,r29                       // sp points to top of local area
-        ldp    d10,d11, [sp,64],
+        mov    sp,x29                       // sp points to top of local area
+        ldp    d10,d11,[sp,#64]
         ...
-        ldp    r29, lr, [sp], -80           // post-indexed, reload <r29,lr>
+        ldp    x29,lr,[sp],#80              // post-indexed, reload <x29,lr>
     ```
 
 ## <a name="arm64-exception-handling-information"></a>Informationen zur Behandlung von ARM64 Ausnahme
@@ -235,7 +235,7 @@ Diese Daten ist in vier Abschnitte unterteilt:
 
    c. **StartIndex Epilog** ein 10-Bit (2 Weitere Bits als **erweiterte Code Wörter**), der angibt, des Byte-Indexes des ersten Felds entladungscode, der diesen Epilog beschreibt.
 
-1. Nachdem die Liste der Epilog Bereiche ein Array von Bytes, die entladungscodes enthalten wird, werden in einem späteren Abschnitt ausführlich beschrieben. Dieses Array ist am Ende aufgefüllt bis zur nächsten vollen Wortgrenze. Die Bytes werden in Little-Endian-Reihenfolge gespeichert, sodass sie im Little-Endian-Modus direkt abgerufen werden können.
+1. Nachdem die Liste der Epilog Bereiche ein Array von Bytes, die entladungscodes enthalten wird, werden in einem späteren Abschnitt ausführlich beschrieben. Dieses Array ist am Ende aufgefüllt bis zur nächsten vollen Wortgrenze. Entladedaten-Codes in diesem Array, beginnend mit dem nächstgelegenen in den Hauptteil der Funktion, verschieben auf den Rändern der Funktion geschrieben werden. Die Bytes für jeden Code entladen werden in big-Endian-Reihenfolge, damit sie direkt abgerufen werden können beginnend mit dem höchstwertigen Byte zuerst gespeichert, die den Vorgang und die Länge der Rest des Codes identifiziert.
 
 1. Nach den entladungscodebytes Wenn die **X** -Bit im Header wurde auf 1 festgelegt, wird die ausnahmehandlerinformationen. Dies besteht aus einer einzelnen **Ausnahme-Handler RVA** die Adresse des ausnahmehandlers selbst bereitstellen und unmittelbar danach ein variabler Länge, die Menge der Daten, die vom Ausnahmehandler erforderlich.
 
@@ -286,22 +286,22 @@ Gemäß der folgenden Tabelle werden die entladungscodes codiert wird. Alle entl
 |Entladungscode|Bits und interpretation|
 |-|-|
 |`alloc_s`|000xxxxx: Zuordnen von kleinen Stapel mit einer Größe \< 512 (2 ^ 5 * 16).|
-|`save_r19r20_x`|    001zzzzz: Speichern \<r19, r20 > an [sp-#Z * 8]!, vorab indizierte Offset > =-248 |
-|`save_fplr`|        01zzzzzz: Speichern \<R29 entwickelt bei, Lr > gekoppelt werden am [sp + #Z * 8], Offset \<= 504. |
-|`save_fplr_x`|        10zzzzzz: Speichern \<R29 entwickelt bei, Lr > gekoppelt werden am [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512 |
+|`save_r19r20_x`|    001zzzzz: Speichern \<X19, X20 > an [sp-#Z * 8]!, vorab indizierte Offset > =-248 |
+|`save_fplr`|        01zzzzzz: Speichern \<X29, Lr > gekoppelt werden am [sp + #Z * 8], Offset \<= 504. |
+|`save_fplr_x`|        10zzzzzz: Speichern \<X29, Lr > gekoppelt werden am [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512 |
 |`alloc_m`|        bis jetzt 11000xxx'Xxxxxxxx: Zuordnen von besetzen mit einer Größe \< 16 KB (2 ^ 11 * 16). |
-|`save_regp`|        110010xx "Xxzzzzzz: Speichern von r(19+#X)-Paar an [sp + #Z * 8], Offset \<= 504 |
-|`save_regp_x`|        110011xx "Xxzzzzzz: Speichern von Paar r(19+#X) an [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512 |
-|`save_reg`|        110100xx "Xxzzzzzz: Speichern Sie die Reg-r(19+#X) am [sp + #Z * 8], Offset \<= 504 |
-|`save_reg_x`|        1101010 X "Xxxzzzzz: Speichern Sie die Reg-r(19+#X) auf [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-256 |
-|`save_lrpair`|         1101011 X'Xxzzzzzz: Speichern von Paar \<r19 + 2 *#X, Lr > am [sp + #Z*8], Offset \<= 504 |
+|`save_regp`|        110010xx "Xxzzzzzz: Speichern von x(19+#X)-Paar an [sp + #Z * 8], Offset \<= 504 |
+|`save_regp_x`|        110011xx "Xxzzzzzz: Speichern von Paar x(19+#X) an [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512 |
+|`save_reg`|        110100xx "Xxzzzzzz: Speichern Sie die Reg-x(19+#X) am [sp + #Z * 8], Offset \<= 504 |
+|`save_reg_x`|        1101010 X "Xxxzzzzz: Speichern Sie die Reg-x(19+#X) auf [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-256 |
+|`save_lrpair`|         1101011 X'Xxzzzzzz: Speichern von Paar \<X (19 + 2 *#X), Lr > am [sp + #Z*8], Offset \<= 504 |
 |`save_fregp`|        1101100 X'Xxzzzzzz: Speichern von Paar d(8+#X) am [sp + #Z * 8], Offset \<= 504 |
 |`save_fregp_x`|        1101101 X'Xxzzzzzz: Speichern Sie Paar d(8+#X), [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-512 |
 |`save_freg`|        1101110 X'Xxzzzzzz: Speichern Sie die Reg-d(8+#X) am [sp + #Z * 8], Offset \<= 504 |
 |`save_freg_x`|        11011110' Xxxzzzzz: Speichern Sie die Reg-d(8+#X) auf [sp-(#Z + 1) * 8]!, vorab indizierte Offset > =-256 |
 |`alloc_l`|         11100000' Xxxxxxxx 'Xxxxxxxx' Xxxxxxxx: Zuordnen von besetzen mit einer Größe \< 256 MB (2 ^ 24 * 16) |
-|`set_fp`|        11100001: Richten Sie R29 entwickelt bei: mit: R29 entwickelt bei Mov, sp |
-|`add_fp`|        11100010' Xxxxxxxx: R29 entwickelt bei mit einrichten: Hinzufügen von R29 entwickelt bei, sp, #x * 8 |
+|`set_fp`|        11100001: Richten Sie X29: mit: Mov X29, sp |
+|`add_fp`|        11100010' Xxxxxxxx: X29 mit einrichten: Hinzufügen von X29, sp, #x * 8 |
 |`nop`|            11100011: keine Entladung Vorgang erforderlich ist. |
 |`end`|            11100100: Ende der entladungscodes. Impliziert ret im Epilog. |
 |`end_c`|        11100101: Ende entladungscode im aktuellen verketteten Bereich. |
@@ -347,12 +347,12 @@ Die Felder sind wie folgt aus:
 - **Länge-Funktion** ist ein 11-Bit-Feld, das die Länge der gesamten Funktion in Bytes geteilt durch 4 bereitstellt. Wenn die Funktion größer als 8 KB ist, muss stattdessen ein voller .xdata-Datensatz verwendet werden.
 - **Frame-Größe** ist ein 9-Bit-Feld, der angibt, der Anzahl der Bytes vom Stapel, der für diese Funktion, geteilt durch 16 zugeordnet ist. Funktionen, die größer als (8 KB – 16) Bytes an Stapelspeicher reservieren müssen einen vollständiger .xdata-Datensatz verwenden. Dies schließt die lokale Variable Bereich ausgehende Eingabeaufforderungsbereich für Parameter vom aufgerufenen gespeicherten Int und FP-Bereich und home Parameterbereich aus, jedoch ohne die dynamische Zuordnung Bereich.
 - **CR** ist ein 2-Bit-Flag gibt an, ob die Funktion zusätzliche Anweisungen zum Einrichten einer rahmenkette und die return-Link schließt:
-  - 00 = nicht verkettete Funktion \<R29 entwickelt bei, Lr > Paar nicht im Stapel gespeichert.
+  - 00 = nicht verkettete Funktion \<X29, Lr > Paar nicht im Stapel gespeichert.
   - 01 = nicht verkettete Funktion \<Lr > wird im Stapel gespeichert
   - 10 = reserviert.
-  - 11 = verketteten-Funktion eine Store/Load-Paar-Anweisung wird verwendet, in die Prolog-und Epilogcode \<R29 entwickelt bei, Lr >
-- **H** ist ein 1-Bit-Flag gibt an, ob die Funktion der herausgreift registriert (r0-r7), indem sie am Anfang der Funktion zu speichern. (0 = Register nicht heraus, 1 = greift Register).
-- **RegI** ist ein 4-Bit-Feld, der angibt, der Anzahl der nicht flüchtigen INT-Register (r19-r28) in den kanonischen Stapelspeicherort gespeichert.
+  - 11 = verketteten-Funktion eine Store/Load-Paar-Anweisung wird verwendet, in die Prolog-und Epilogcode \<X29, Lr >
+- **H** ist ein 1-Bit-Flag gibt an, ob die Funktion der herausgreift registriert (X0-X7), indem sie am Anfang der Funktion zu speichern. (0 = Register nicht heraus, 1 = greift Register).
+- **RegI** ist ein 4-Bit-Feld, der angibt, der Anzahl der nicht flüchtigen INT-Register (X19-X28) in den kanonischen Stapelspeicherort gespeichert.
 - **RegF** ist ein 3-Bit-Feld, der angibt, der Anzahl der nicht flüchtigen FP-Register (d8-d15) in den kanonischen Stapelspeicherort gespeichert. (RegF = 0: kein FP-Register gespeichert; RegF > 0: RegF + 1 FP-Register gespeichert). Gepackte Entladedaten-Daten können nicht verwendet werden, für die Funktion, bei denen nur ein FP-Register gespeichert.
 
 Kanonischen Prologe, die in Kategorien 1, 2 (ohne ausgehenden Eingabeaufforderungsbereich für Parameter), 3 und 4 im obigen Abschnitt fallen können durch gepackte entladeformat dargestellt werden.  Mit Ausnahme von der epilogen für kanonische Funktionen sehr ähnlichen Form, führen Sie **H** hat keine Auswirkungen, die `set_fp` Anweisung ausgelassen wird, und die Reihenfolge der Schritte sowie Anweisungen in den einzelnen Schritten im Epilog umgekehrt werden. Der Algorithmus für gepackte Xdata: Diese Schritte aus, in der folgenden Tabelle beschrieben
@@ -367,26 +367,26 @@ Schritt 3: FP aufgerufenen gespeicherten Register zu speichern.
 
 Schritt 4: Speichern Sie im Bereich home input-Argumente.
 
-Schritt 5: Ordnen Sie die verbleibenden Stapel, einschließlich LAN, \<R29 entwickelt bei, Lr > Kopplung und der ausgehende Eingabeaufforderungsbereich für Parameter. 5a entspricht kanonischen Typs 1. 5 und 5c sind für kanonische Typ 2. 5D und 5e für beide Typ 3 und 4 geben.
+Schritt 5: Ordnen Sie die verbleibenden Stapel, einschließlich LAN, \<X29, Lr > Kopplung und der ausgehende Eingabeaufforderungsbereich für Parameter. 5a entspricht kanonischen Typs 1. 5 und 5c sind für kanonische Typ 2. 5D und 5e für beide Typ 3 und 4 geben.
 
 Schritt #|Flagwerte|Anzahl von Anweisungen|Opcode|Entladungscode
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **RegI** <= 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** <=7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** == 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5 b|**CR** == 11 &&<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5D|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+1|0 < **RegI** <= 10|RegI / 2 + **RegI** % 2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+3|0 < **RegF** <=7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5 b|**CR** == 11 &&<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** == 11 && #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5D|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* Wenn **CR** == 01 und **RegI** eine ungerade Zahl ist, Schritt2 und letzten Save_rep in Schritt 1 in einem Save_regp zusammengeführt werden.
 
 \*\* Wenn **RegI** == **CR** == 0 (null) und **RegF** ! = 0 ist, das erste stp aus, für die Gleitkommazahlen der prädekrement ist.
 
-\*\*\* Keine Anweisung entspricht `mov r29, sp` im Epilog vorhanden ist. Gepackt entladen Daten können nicht verwendet werden, wenn eine Funktion sp aus R29 entwickelt bei Wiederherstellung erforderlich ist.
+\*\*\* Keine Anweisung entspricht `mov x29,sp` im Epilog vorhanden ist. Gepackt entladen Daten können nicht verwendet werden, wenn eine Funktion Wiederherstellung sp aus X29 erforderlich ist.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Entladung teilweise prologen und epilogen
 
@@ -397,16 +397,16 @@ Es ist schwieriger, in dem Fall ordnungsgemäß entladen, in dem eine Ausnahme o
 Führen Sie beispielsweise diese Prolog und Epilog-Sequenz:
 
 ```asm
-0000:    stp    r29, lr, [sp, -256]!        // save_fplr_x  256 (pre-indexed store)
-0004:    stp    d8,d9,[sp,224]              // save_fregp 0, 224
-0008:    stp    r19,r20,[sp,240]            // save_regp 0, 240
-000c:    mov    r29,sp                      // set_fp
+0000:    stp    x29,lr,[sp,#-256]!          // save_fplr_x  256 (pre-indexed store)
+0004:    stp    d8,d9,[sp,#224]             // save_fregp 0, 224
+0008:    stp    x19,x20,[sp,#240]           // save_regp 0, 240
+000c:    mov    x29,sp                      // set_fp
          ...
-0100:    mov    sp,r29                      // set_fp
-0104:    ldp    r19,r20,[sp,240]            // save_regp 0, 240
+0100:    mov    sp,x29                      // set_fp
+0104:    ldp    x19,x20,[sp,#240]           // save_regp 0, 240
 0108:    ldp    d8,d9,[sp,224]              // save_fregp 0, 224
-010c:    ldp    r29, lr, [sp, -256]!        // save_fplr_x  256 (post-indexed load)
-0110:    ret     lr                         // end
+010c:    ldp    x29,lr,[sp],#256            // save_fplr_x  256 (post-indexed load)
+0110:    ret    lr                          // end
 ```
 
 Neben jedem Opcode befindet sich der entsprechende entladungscode, der diesen Vorgang beschreibt. Die erste, was zu beachten ist, dass die Reihe von entladungscodes für den Prolog eine genaue Gegenstück, der die entladungscodes für den Epilog (ohne Berücksichtigung der letzten Anweisung des Epilogs). Dies ist eine gängige Situation, und aus diesem Grund die Entladung Codes für den Prolog sind immer davon ausgegangen, dass von Ausführungsreihenfolge für den Prolog in umgekehrter Reihenfolge gespeichert werden.
@@ -442,9 +442,9 @@ Ein typischer Fall von funktionsfragmenten ist "Trennung von code" mit die der C
 - (die Region 1: Starten)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
@@ -460,9 +460,9 @@ Ein typischer Fall von funktionsfragmenten ist "Trennung von code" mit die der C
 
     ```asm
     ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
@@ -489,27 +489,27 @@ Ein weiterer komplizierter Fall von funktionsfragmenten ist "Verkleinern von Wra
 - (die Region 1: Starten)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
 - (die Region 2: Starten)
 
     ```asm
-        stp     r21,r22,[sp,224]        // save_regp 2, 224
+        stp     x21,x22,[sp,#224]       // save_regp 2, 224
         ...
-        ldp     r21,r22,[sp,224]        // save_regp 2, 224
+        ldp     x21,x22,[sp,#224]       // save_regp 2, 224
     ```
 
 - (die Region 2: End)
 
     ```asm
         ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
