@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 7ef43491c35ec4f57f7a691851e584e6aad58ef3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58782278"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898712"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
@@ -26,14 +26,14 @@ Microsoft Visual C++, üblicherweise mit Visual C++ oder MSVC abgekürzt, ist de
 
 ## <a name="whats-new-and-conformance-history"></a>Verlauf von Neuerungen und Konformität
 
-[What's New for C++ in Visual Studio 2017 (Neuerungen bei C++ in Visual Studio 2017)](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-Erfahren Sie, welche Neuerungen es für Visual Studio 2017 gibt.
+[Neuerungen bei C++ in Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+Erfahren Sie, welche Neuerungen es für Visual Studio gibt.
 
-[What's New for C++ in Visual Studio 2003 through 2015 (Neuerungen bei C++ in Visual Studio 2003 bis 2015)](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
+[Neuerungen bei C++ in Visual Studio 2003 bis 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 Erfahren Sie, welche Neuerungen es in C++ für die einzelnen Visual Studio-Versionen von 2003 bis 2015 gibt.
 
-[Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](cpp-conformance-improvements-2017.md)<br/>
-Weitere Informationen zu Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017.
+[Verbesserungen der C++-Konformität in Visual Studio](cpp-conformance-improvements.md)<br/>
+Weitere Informationen zu Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual Studio
 
 [Visual C++-Sprachkonformität](visual-cpp-language-conformance.md)<br/>
 Eine Liste der Konformitätsstatus nach Feature im MSVC-C++-Compiler.
@@ -63,7 +63,7 @@ Erfahren Sie mehr über moderne C++-Programmiertechniken, die auf C++11 und C++1
 [Standard C++](http://isocpp.org/)<br/>
 Lernen Sie C++ kennen, verschaffen Sie sich einen Überblick über das moderne C++, und greifen Sie auf Links für Bücher, Artikel, Gespräche und Ereignisse zu.
 
-[Erlernen von Visual C++](../build/vscpp-step-1-create.md)<br/>
+[Visual C++ kennen lernen](../build/vscpp-step-1-create.md)<br/>
 Beginnen Sie mit dem Erlernen von C++.
 
 [Visual C++-Beispiele](visual-cpp-samples.md)<br/>
@@ -71,7 +71,7 @@ Informationen zu Beispielen.
 
 ## <a name="c-development-tools"></a>C++-Entwicklungstools
 
-[Overview of C++ Development in Visual Studio (Übersicht über die C++-Entwicklung in Visual Studio)](overview-of-cpp-development.md)<br/>
+[Übersicht über die C++-Entwicklung in Visual Studio](overview-of-cpp-development.md)<br/>
 Informationen zur Verwendung der Visual Studio-IDE zum Erstellen von Projekten, Bearbeiten von Code, Verknüpfen von Bibliotheken, Kompilieren, Debuggen, Erstellen von Komponententests, Ausführen von statischen Analysen, Bereitstellen etc.
 
 [Projekte und Buildsysteme](../build/projects-and-build-systems-cpp.md)<br/>
@@ -80,7 +80,7 @@ Erstellen und Konfigurieren von C++-Projekten, CMake-Projekten und anderen Arten
 [Schreiben und Refactoring von C++-Code](../ide/writing-and-refactoring-code-cpp.md)<br/>
 Verwenden der Produktivitätsfeatures im C++-Editor zum Umgestalten, Navigieren und Schreiben von Code
 
-[Debuggen von nativem Code](/visualstudio/debugger/debugging-native-code)<br/>
+[Debuggen von systemeigenem Code](/visualstudio/debugger/debugging-native-code)<br/>
 Verwenden des Visual Studio-Debuggers mit C++-Projekten
 
 [Übersicht über die Codeanalyse für C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
@@ -94,7 +94,7 @@ Erstellen von Komponententests mit dem Microsoft-Komponententest-Framework für 
 [Universelle Windows-Apps](../windows/universal-windows-apps-cpp.md)<br/>
 Rufen Sie Anleitungen und Referenzmaterial im Windows Developer Center ab. Weitere Informationen zur Entwicklung von UWP-Apps finden Sie unter [Einführung in die Universelle Windows-Plattform](/windows/uwp/get-started/universal-application-platform-guide) und [Erstellen Ihrer ersten UWP-App mit C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
-[Desktop-Anwendungen (C++)](../windows/desktop-applications-visual-cpp.md)<br/>
+[Desktopanwendungen (C++)](../windows/desktop-applications-visual-cpp.md)<br/>
 Informationen zum Erstellen von traditionellen nativen C++-Desktopanwendungen für Windows.
 
 [.NET-Programmierung mit C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
@@ -127,7 +127,7 @@ Hier erhalten Sie Informationen zum Arbeiten mit verschiedenen Text- und Zeichen
 
 [C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)
 
-[C-Sprachreferenz](../c-language/c-language-reference.md)
+[C-Programmiersprachenreferenz](../c-language/c-language-reference.md)
 
 [Intrinsische Compilerfunktionen und Assemblysprache](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
@@ -171,11 +171,11 @@ Erfahren Sie mehr über die Erstellung effektiver Fehlerberichte für das Visual
 [Visual C++-Team-Blog](http://blogs.msdn.com/b/vcblog/)<br/>
 Weitere Informationen über neue Funktionen und die neuesten Informationen von den Entwicklern von [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)].
 
-[Visual Studio Developer Community](https://developercommunity.visualstudio.com/)<br/>
+[Visual Studio-Entwicklercommunity](https://developercommunity.visualstudio.com/)<br/>
 Informieren Sie sich, wie Sie Hilfe erhalten, Fehler melden und Vorschläge für Visual Studio unterbreiten.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C-Sprachreferenz](../c-language/c-language-reference.md)
+- [C-Programmiersprachenreferenz](../c-language/c-language-reference.md)
 - [C-Laufzeitbibliotheksreferenz](../c-runtime-library/c-run-time-library-reference.md)
 - [Intrinsische Compilerfunktionen und Assemblysprache](../intrinsics/compiler-intrinsics-and-assembly-language.md)
