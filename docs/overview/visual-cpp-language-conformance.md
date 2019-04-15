@@ -5,18 +5,18 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 151ffecc0a9497d84b23a631477827ed2e86711a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58782226"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898803"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++-Sprachkonformität
 
 Dieses Thema bietet einen Überblick über die Konformität von Compiler- und Standardbibliotheksfeatures des C++-Compilers in Visual Studio 2017 und früheren Versionen mit den Sprachstandards ISO C++03, C++11, C++14, C++17 und dem Entwurf von C++20. Jeder Name eines Features im Compiler und in der Standardbibliothek verweist auf das ISO C++-Standardvorschlagsdokument, in dem das Feature beschrieben ist, falls zum Zeitpunkt der Veröffentlichung ein solches Dokument verfügbar ist. Die Spalte „Supported“ (Unterstützt) listet die Visual Studio-Version auf, in der die Unterstützung für die Funktion zum ersten Mal aufgetreten ist.
 
-Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visual Studio 2017 finden Sie unter [Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](cpp-conformance-improvements-2017.md) und [Neuerungen bei Visual C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Kompatibilitätsänderungen in früheren Versionen finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](../porting/visual-cpp-change-history-2003-2015.md) und [Visual C++ What's New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md) (Visual C++ – Neuerungen von 2003 bis 2015). Aktuelle Nachrichten vom C++-Team finden Sie im [Visual C++-Teamblog](https://blogs.msdn.microsoft.com/vcblog/).
+Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visual Studio 2017 finden Sie unter [Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](cpp-conformance-improvements.md) und [Neuerungen bei Visual C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Kompatibilitätsänderungen in früheren Versionen finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](../porting/visual-cpp-change-history-2003-2015.md) und [Visual C++ What's New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md) (Visual C++ – Neuerungen von 2003 bis 2015). Aktuelle Nachrichten vom C++-Team finden Sie im [Visual C++-Teamblog](https://blogs.msdn.microsoft.com/vcblog/).
 
 > [!NOTE]
 > Es gibt keine binären Änderungen von Visual Studio 2015 auf Visual Studio 2017.
@@ -25,13 +25,13 @@ Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visua
 
 |Bereich „Funktionen“| |
 |----|---|
-|__Funktionen der C++03/11-Kernsprache__|__Unterstützt__|
+|__Hauptfeatures von C++03/11__|__Unterstützt__|
 |&nbsp;&nbsp;Alles andere|VS 2015 <sup>[A](#note_A)</sup>|
 |&nbsp;&nbsp;Zwei-Phasen Namenssuche|VS 2017 15.7 <sup>[B](#note_B)</sup>|
 |&nbsp;&nbsp;[N2634 SFINAE für Ausdrücke](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 C99-Präprozessor](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|Teilweise <sup>[D](#note_D)</sup>|
 |&nbsp;&nbsp;[N1988 Erweiterte Ganzzahltypen](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1988.pdf)|Nicht zutreffend <sup>[E](#note_E)</sup>|
-|__Funktionen der C++14-Kernsprache__|__Unterstützt__|
+|__Hauptfeatures von C++14__|__Unterstützt__|
 |&nbsp;&nbsp;[N3323 Optimierte Formulierungen für kontextbezogene Konvertierungen](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3472 Binäre Literale](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
 |&nbsp;&nbsp;[N3638 Rückagebetypen „auto“ und „decltype(auto)“](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)|VS 2015|
@@ -44,7 +44,7 @@ Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visua
 |&nbsp;&nbsp;[N3652 Erweiterte constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)|VS 2017|
 |&nbsp;&nbsp;[N3653 NSDMIs für Aggregate](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3653.html)|VS 2017|
 |&nbsp;&nbsp;[N3664 Zuordnungen vermeiden/zusammenführen](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3664.html)|Nicht zutreffend <sup>[F](#note_F)</sup>|
-|__Funktionen der C++17-Kernsprache__|__Unterstützt__|
+|__Hauptfeatures von C++17__|__Unterstützt__|
 |&nbsp;&nbsp;[N4086 Entfernen von Trigraphen](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)|VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N3922 Neue Regeln für „auto“ mit „braced-init-lists“](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4051 „typename“ in Vorlagen-Vorlagenparametern](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -88,7 +88,7 @@ Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visua
 
 |Bereich „Funktionen“| |
 |----|---|
-|__Hauptfeatures von C++ 17 (Fehlerberichte)__|__Unterstützt__|
+|__Hauptfeatures von C++17 (Fehlerberichte)__|__Unterstützt__|
 |&nbsp;&nbsp;[P0702R1 Beheben von Problemen mit der Argumentableitung für Klassenvorlagen für „initializer-list ctors“](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0588R1: Vereinfachen der Erfassung impliziter Lambdas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Nein|
 |&nbsp;&nbsp;[CWG 1581: Wann werden constexpr-Memberfunktionen definiert?](https://wg21.cmeerw.net/cwg/issue1581)|Nein|
@@ -98,7 +98,7 @@ Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visua
 
 |Bereich „Funktionen“| |
 |----|---|
-|__C++20-Kernsprachfunktionen__|__Unterstützt__|
+|__Hauptfeatures von C++20__|__Unterstützt__|
 |&nbsp;&nbsp;[P0306R4 Hinzufügen von &#95;&#95;VA_OPT&#95;&#95; für das Auslassen und Löschen von Kommas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0306r4.html)|Nein|
 |&nbsp;&nbsp;[P0329R4 Designierte Initialisierung](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|Nein|
 |&nbsp;&nbsp;[P0409R2 Zulassen von „lambda-capture [=, this]“](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|Nein|
@@ -111,7 +111,7 @@ Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visua
 
 |Bereich „Funktionen“| |
 |---|---|
-|__C++20-Standardbibliotheksfunktionen__|__Unterstützt__|
+|__Standardbibliotheksfeatures von C++20__|__Unterstützt__|
 |&nbsp;&nbsp; [P0777R1: Vermeiden unnötigen Verfalls](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0463R1 Endian](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|Nein|
 |&nbsp;&nbsp;[P0674R1 „make_shared()“ für Arrays](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|Nein|
@@ -135,7 +135,7 @@ Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visua
 |&nbsp;&nbsp; [P0767R1: Die Unterstützung für is_pod wird eingestellt](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|Nein|
 |&nbsp;&nbsp; [P0768R1: Library Support For The Spaceship Comparison Operator \<=> (auf Englisch von Walter E. Brown)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|Nein|
 |&nbsp;&nbsp; [P0966R1: string::reserve() Should Not Shrink (auf Englisch von Mark Zeren und Andrew Luo)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0966r1.html)|Nein|
-|__C++17 Standardbibliotheksfunktionen__|__Unterstützt__|
+|__Standardbibliotheksfeatures von C++17__|__Unterstützt__|
 |&nbsp;&nbsp;[P0433R2 Integrieren der Vorlagenableitung für Klassenvorlagen in die Standardbibliothek](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html)<br />&nbsp;&nbsp;[P0739R0 Verbessern der Integration der Argumentableitung für Klassenvorlagen in die Standardbibliothek](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0426R1 constexpr für char_traits](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0030R1 hypot(x, y, z)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf)|VS 2017 15.7|
@@ -214,7 +214,7 @@ Informationen zu Kompatibilitätsverbesserungen und anderen Änderungen in Visua
 |&nbsp;&nbsp;[N4389 bool_constant](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4389.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0063R3 C11-Standardbibliothek](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0063r3.html)|VS 2015 <sup>[C11](#note_C11), [14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4510 Unterstützung von unvollständigen Typen in vector/list/forward_list](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4510.html)|VS 2013 <sup>[14](#note_14)</sup>|
-|__C++14 Standardbibliotheksfunktionen__|__Unterstützt__|
+|__Standardbibliotheksfeatures von C++14__|__Unterstützt__|
 |&nbsp;&nbsp;[N3462 SFINAE-freundliche result_of](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3462.html)|VS 2015.2|
 |&nbsp;&nbsp;[N3302 constexpr für \<complex>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3302.html)|VS 2015|
 |&nbsp;&nbsp;[N3469 constexpr für \<chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3469.html)|VS 2015|
@@ -315,8 +315,8 @@ Die folgenden Algorithmen werden aktuell nicht parallelisiert:
 
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)<br/>
-[Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](cpp-conformance-improvements-2017.md)<br/>
-[Neues bei Visual C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Verbesserungen der C++-Konformität in Visual Studio](cpp-conformance-improvements.md)<br/>
+[Neuerungen bei Visual C++ in Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Änderungsverlauf von Visual C++ von 2003 bis 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Visual C++: Neuerungen von 2003 bis 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
-[Blog des Visual C++-Teams](https://blogs.msdn.microsoft.com/vcblog/)
+[Visual C++-Teamblog](https://blogs.msdn.microsoft.com/vcblog/)

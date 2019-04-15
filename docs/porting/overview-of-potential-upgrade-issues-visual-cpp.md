@@ -2,12 +2,12 @@
 title: Überblick über potenzielle Aktualisierungsprobleme (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 16918a70d4ce56a7415c3a807485e72c085d1194
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775036"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898829"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Überblick über potenzielle Aktualisierungsprobleme (Visual C++)
 
@@ -111,7 +111,7 @@ Der Parameter `/Zc:forScope` wurde beispielsweise früh im Verlauf von MSVC eing
 
 Ein Beispiel für einen bei der Aktualisierung häufig auftretenden Compilerfehler ist die Übergabe eines nicht konstanten Arguments an einen konstanten Parameter. Ältere Versionen des Compilers haben dies nicht immer als Fehler gekennzeichnet. Weitere Informationen finden Sie unter [Strikte Compilerkonvertierungen](porting-guide-spy-increment.md#stricter_conversions).
 
-Weitere Informationen zu bestimmten Verbesserungen an der Übereinstimmung mit Standards finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](visual-cpp-change-history-2003-2015.md) und [Verbesserungen an C++ bei der Übereinstimmung in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
+Weitere Informationen zu bestimmten Verbesserungen bei der Übereinstimmung mit Standards finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](visual-cpp-change-history-2003-2015.md) und [C++ conformance improvements in Visual Studio (Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual Studio)](../overview/cpp-conformance-improvements.md).
 
 ## <a name="errors-involving-stdinth-integral-types"></a>Fehler im Zusammenhang mit ganzzahligen \<stdint.h>-Typen
 
@@ -127,7 +127,7 @@ Die Compileroption [/showIncludes](../build/reference/showincludes-list-include-
 
 Im Laufe der Jahre wurden viele Änderungen an der C-Laufzeit vorgenommen. Viele sichere Versionen von Funktionen wurden hinzugefügt, und einige Funktionen wurden entfernt. Darüber hinaus wurde, wie oben in diesem Artikel beschrieben, die Microsoft-Implementierung der CRT in Visual Studio 2015 in neue Binärdateien und zugehörigen LIB-Dateien umgestaltet.
 
-Wenn ein Fehler eine CRT-Funktion betrifft, finden Sie in den Artikeln [Wichtige Änderungen in Visual C++ 2003-2015](visual-cpp-change-history-2003-2015.md) oder [Verbesserungen an der Konformität mit Standards in Visual C++ in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md) zusätzliche Informationen. Wenn der Fehler „LNK2019, Nicht aufgelöste Externe“ auftritt, stellen Sie sicher, dass die Funktion nicht entfernt wurde. Wenn Sie jedoch sicher sind, dass die Funktion noch vorhanden und der aufrufende Code korrekt ist, überprüfen Sie, ob im Projekt `/NODEFAULTLIB` verwendet wird. Ist dies der Fall, müssen Sie die Liste der Bibliotheken aktualisieren, sodass das Projekt die neuen universellen Bibliotheken (UCRT) verwendet. Weitere Informationen finden Sie oben im Abschnitt zu Bibliotheken und Abhängigkeiten.
+Wenn ein Fehler eine CRT-Funktion betrifft, finden Sie in den Artikeln [Änderungsverlauf von Visual C++ von 2003 bis 2015](visual-cpp-change-history-2003-2015.md) und [C++ conformance improvements in Visual Studio (Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual Studio)](../overview/cpp-conformance-improvements.md) zusätzliche Informationen. Wenn der Fehler „LNK2019, Nicht aufgelöste Externe“ auftritt, stellen Sie sicher, dass die Funktion nicht entfernt wurde. Wenn Sie jedoch sicher sind, dass die Funktion noch vorhanden und der aufrufende Code korrekt ist, überprüfen Sie, ob im Projekt `/NODEFAULTLIB` verwendet wird. Ist dies der Fall, müssen Sie die Liste der Bibliotheken aktualisieren, sodass das Projekt die neuen universellen Bibliotheken (UCRT) verwendet. Weitere Informationen finden Sie oben im Abschnitt zu Bibliotheken und Abhängigkeiten.
 
 Wenn der Fehler `printf` oder `scanf` betrifft, stellen Sie sicher, dass Sie die beiden Funktion nicht privat und ohne „stdio.h“ definieren. Falls dies der Fall ist, entfernen Sie entweder die privaten Definitionen, oder stellen Sie eine Verknüpfung mit „legacy\_stdio\_definitions.lib“ her. Dies können Sie im Dialogfeld **Eigenschaftenseiten** unter **Konfigurationseigenschaften** > **Linker** > **Eingabe** in der Eigenschaft **Zusätzliche Abhängigkeiten** festlegen. Wenn Sie eine Verknüpfung mit dem Windows SDK 8.1 oder früher herstellen, fügen Sie „legacy\_stdio\_definitions.lib“ hinzu.
 
@@ -161,7 +161,7 @@ Weitere Informationen finden Sie unter [Aktualisieren der Windows-Zielversion](p
 
 ## <a name="atl--mfc"></a>ATL/MFC
 
-ATL und MFC sind relativ stabile APIs, allerdings werden auch hier gelegentlich Änderungen vorgenommen. Weitere Informationen finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](visual-cpp-change-history-2003-2015.md) sowie [Neues bei Visual C++ in Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) und [Verbesserungen an C++ bei der Übereinstimmung in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
+ATL und MFC sind relativ stabile APIs, allerdings werden auch hier gelegentlich Änderungen vorgenommen. Weitere Informationen finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](visual-cpp-change-history-2003-2015.md) sowie [What's New for Visual C++ in Visual Studio (Neuerungen bei Visual C++ in Visual Studio)](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) und [C++ conformance improvements in Visual Studio (Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual Studio)](../overview/cpp-conformance-improvements.md).
 
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 wurde bereits in „MSVCRTD.lib“ definiert
 
@@ -181,5 +181,5 @@ Weitere Informationen finden Sie unter [Portieren von MBCS zu Unicode](porting-g
 
 ## <a name="see-also"></a>Siehe auch
 
-[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Verbesserungen bei der Übereinstimmung mit C++-Standards in Visual C++ 2017](../overview/cpp-conformance-improvements-2017.md)
+[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Verbesserungen der C++-Konformität in Visual Studio](../overview/cpp-conformance-improvements.md)
