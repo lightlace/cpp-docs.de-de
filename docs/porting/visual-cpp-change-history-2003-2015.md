@@ -5,10 +5,10 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/15/2019
 ms.locfileid: "58898881"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Änderungsverlauf von Visual C++ von 2003 bis 2015
@@ -30,11 +30,11 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
 - [Wichtige Änderungen der C-Laufzeitbibliothek (CRT)](#BK_CRT)
 
-- [Standard-C++ und C++-Standardbibliothek: Breaking Changes](#BK_STL)
+- [Standard C++ und C++-Standardbibliothek: Bedeutende Änderungen](#BK_STL)
 
-- [Wichtige MFC- und ATL-Änderungen](#BK_MFC)
+- [MFC und ATL: Bedeutende Änderungen](#BK_MFC)
 
-- [Wichtige Concurrency Runtime-Änderungen](#BK_ConcRT)
+- [Concurrency Runtime: Bedeutende Änderungen](#BK_ConcRT)
 
 ## <a name="VC_2015"></a>Visual C++ 2015: Änderungen bei der Übereinstimmung mit Standards
 
@@ -66,7 +66,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
-  - `float` und `long double`-Versionen der folgenden Gleitkommafunktionen: `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2`, `expm1`, `fabs`, `fdim`, `floor`, `fma`, `fmax`, `fmin`, `fmod`, `frexp`, `hypot`, `ilogb`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round`, `scalbln`, `scalbn`, `sin`, `sinh`, `sqrt`, `tan`, `tanh`, `tgamma` und `trunc`
+  - Die `float`- und `long double`-Versionen der folgenden Gleitkommafunktionen: `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2`, `expm1`, `fabs`, `fdim`, `floor`, `fma`, `fmax`, `fmin`, `fmod`, `frexp`, `hypot`, `ilogb`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round`, `scalbln`, `scalbn`, `sin`, `sinh`, `sqrt`, `tan`, `tanh`, `tgamma` und `trunc`
 
   Wenn Sie über Code verfügen, der `abs` mit einem Gleitkommatyp verwendet, der nur den \<math.h>-Header enthält, sind die Gleitkommaversionen nicht mehr verfügbar. Der Aufruf wird nun in `abs(int)` aufgelöst, selbst wenn ein Gleitkommaargument vorhanden ist, wodurch der folgende Fehler ausgelöst wird:
 
@@ -88,7 +88,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
 #### <a name="new-and-newh"></a>\<new> und \<new.h>
 
-- **new und delete**
+- **Operatoren „new“ und „delete“**
 
    In früheren Bibliotheksversionen wurden die in der Implementierung definierten Operatorfunktionen „new“ und „delete“ aus der DLL-Datei der Laufzeitbibliothek (z. B. msvcr120.dll) exportiert. Dieser Operatorfunktionen sind immer statisch mit Ihren Binärdateien verknüpft, selbst wenn DLL-Dateien der Laufzeitbibliothek verwendet werden.
 
@@ -108,7 +108,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
 #### <a name="stdioh-and-conioh"></a>\<stdio.h> und \<conio.h>
 
-- **Die printf- und scanf-Funktionsreihe werden nun inline definiert.**
+- **Die printf- und scanf-Funktionsreihen werden nun inline definiert.**
 
    Die Definitionen aller `printf`- und `scanf`-Funktionen wurden nun in \<stdio.h>, \<conio.h> und andere CRT-Header verschoben. Dieser Breaking Change führt zu einem Linkerfehler (LNK2019: Unresolved External Symbol (LNK2019: nicht aufgelöstes externes Symbol)) für alle Programme, die diese Funktionen ohne entsprechende CRT-Header lokal deklariert haben. Sie sollten nach Möglichkeit den Code um die CRT-Header (d.h. `#include <stdio.h>`) und die Inlinefunktionen ergänzen. Wenn Sie diese Headerdateien nicht zu Ihrem Code hinzufügen möchten, können Sie alternativ eine Bibliothek zur Linkereingabe, „legacy_stdio_definitions.lib“, hinzufügen.
 
@@ -133,7 +133,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
    Die [cets](../c-runtime-library/cgets-cgetws.md)- und [_cgetws](../c-runtime-library/cgets-cgetws.md)-Funktionen wurden entfernt. Alternativen zu diesen Funktionen stellen [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) und [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)dar.
 
-- **Formatierung von unendlichen Werten und NaN-Werten**
+- **Formatierung von unendlichen und** NaN-Werten
 
    In früheren Versionen wurden unendliche und NaN-Werte mit einem Satz MSVC-spezifischer Sentinelzeichenfolgen formatiert.
 
@@ -159,7 +159,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
   Die [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)-Funktionen analysieren die neuen Zeichenfolgen so, dass nun ein Roundtrip über `printf` und `scanf` für diese ausgeführt wird.
 
-- **Formatierung und Analyse von Gleitkommawerten**
+- **Formatierung von Gleitkommawerten und** Analyse
 
    Neue Formatierung von Gleitkommawerten und Analysealgorithmen wurden zur Verbesserung der Genauigkeit eingeführt. Diese Änderung wirkt sich auf die [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)- und [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)-Funktionsreihen sowie auf Funktionen wie [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md) aus.
 
@@ -183,11 +183,11 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
    Mit den alten Analysealgorithmen werden nur bis zu 17 signifikante Ziffern aus der Eingabezeichenfolge berücksichtigt und die restlichen Ziffern verworfen. Dieser Ansatz ist ausreichend, um einen durch die Zeichenfolge dargestellten Näherungswert zu generieren. Das Ergebnis liegt in der Regel nah am richtig gerundeten Ergebnis. Mit der neuen Implementierung werden alle vorhanden Ziffern berücksichtigt und das ordnungsgemäß gerundete Ergebnis für alle Eingaben (bis zu 768 Ziffern) generiert. Darüber hinaus berücksichtigen diese Funktionen nun den Rundungsstatus (steuerbar über fesetround).  Da diese Funktionen möglicherweise verschiedene Ergebnisse ausgeben, stellt dies einen potenziellen Breaking Behavior Change dar. Die neuen Ergebnisse sind in jedem Fall genauer als die alten Ergebnisse.
 
-- **Analyse von Gleitkommawerten bei Hexadezimalzahlen und unendlichen Werten sowie NaN-Werten**
+- **Analyse von Hexadezimal- und unendlichen-/NaN-Gleitkommawerten**
 
    Mit den Analysealgorithmen für Gleitkommawerte werden nun Zeichenfolgen mit Hexadezimal-Gleitkommawerten (z. B. die von %a- und %A-Ausgabeformatspezifizierer generierten) und alle unendlichen und NaN-Zeichenfolgen, die von den `printf`-Funktionen generiert werden, wie oben beschrieben analysiert.
 
-- **Auffüllung mit Nullen mithilfe von %A und %a**
+- **Auffüllung von %A und %a mit Nullen**
 
    Mit den %a- und %A-Formatspezifizierern werden Gleitkommawerte als Hexadezimalmantisse und binärer Exponent formatiert. In früheren Versionen wurden mit den `printf`-Funktionen die Zeichenfolgen nicht ordnungsgemäß mit Nullen aufgefüllt. Beispiel: `printf("%07.0a\n", 1.0)` hat 00x1p+0 ausgegeben, statt 0x01p+0. Dieser Fehler wurde behoben.
 
@@ -203,7 +203,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
    In früheren Versionen wurden F# und N als Längenmodifizierer von der Implementierung analysiert. Dieses Verhalten geht auf segmentierte Adressräume zurück: Mit diesen Längenspezifizierern wurden ferne und nahe Zeiger wie in %Fp oder %Ns ermittelt. Dieses Verhalten wurde entfernt. Wenn „%F“ ermittelt wird, wird es nun als %F-Formatspezifizierer behandelt. Wenn „%N“ ermittelt wird, wird es nun als ungültiger Parameter behandelt.
 
-- **Formatierung von Exponenten**
+- **Formatieren von Exponenten**
 
    Mit den %e- und %E-Formatspezifizierern werden Gleitkommawerte als Dezimalmantisse und Exponent formatiert. Die %g- und %G-Formatspezifizierer formatieren die Zahlen in einigen Fällen auf die gleiche Weise. In früheren Versionen wurden Zeichenfolgen immer mit Exponenten mit drei Ziffern von der CRT generiert. Beispielsweise würde `printf("%e\n", 1.0)` 1.000000e+000 ausgeben, was falsch war. C erfordert, dass bei Exponenten, die mit nur einer oder zwei Ziffern dargestellt werden können, auch nur zwei Ziffern ausgegeben werden.
 
@@ -219,7 +219,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
 - **_O_U8TEXT-Modus**
 
-   Die [_setmode](../c-runtime-library/reference/setmode.md) -Funktion meldet jetzt ordnungsgemäß den Modus für im _O_U8TEXT-Modus geöffnete Streams. In früheren Bibliotheksversionen wurden solche Streams als in _O_WTEXT geöffnete Streams gekennzeichnet.
+   Die [_setmode](../c-runtime-library/reference/setmode.md)-Funktion meldet jetzt ordnungsgemäß den Modus für im _O_U8TEXT-Modus geöffnete Streams. In früheren Bibliotheksversionen wurden solche Streams als in _O_WTEXT geöffnete Streams gekennzeichnet.
 
    Dies ist eine wichtige Änderung, wenn Ihr Code den _O_WTEXT-Modus für Streams bei der UTF-8-Codierung interpretiert. Wenn UTF_8 von Ihrer Anwendung nicht unterstützt wird, sollten Sie in Erwägung ziehen, Unterstützung für diese immer häufiger verwendete Codierung hinzuzufügen.
 
@@ -233,7 +233,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
    In früheren Versionen wurden mit den `tmpnam`- und `tmpnam_s`-Funktionen Dateinamen im Stammverzeichnis des Laufwerks (z.B. \sd3c.) geniert. Mit diesen Funktionen werden jetzt verwendbare Dateinamenpfade in einem temporären Verzeichnis generiert.
 
-- **FILE-Kapselung**
+- **Dateikapselung**
 
    In früheren Versionen wurde der vollständige FILE-Typ öffentlich in \<stdio.h> definiert. So konnte der Benutzercode auf einen FILE-Typ zugreifen und interne Daten ändern. Die Bibliothek blendet nun detaillierte Informationen zur Implementierung aus. Gemäß dieser Änderung stellt FILE wie in \<stdio.h> definiert nun einen nicht transparenten Typ dar, und auf die Member kann nicht von außerhalb der CRT selbst zugegriffen werden.
 
@@ -247,7 +247,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
    Die Funktionen `strtof` und `wcstof` konnten `errno` nicht auf ERANGE festlegen, wenn der Wert nicht als float-Eigenschaft dargestellt werden konnte. Dieser Fehler galt nur für diese zwei Funktionen. Die Funktionen `strtod`, `wcstod`, `strtold` und `wcstold` waren nicht betroffen. Dieses Problem wurde behoben und stellt einen Breaking Change für die Laufzeit dar.
 
-- **Ausgerichtete Speicherbelegungsfunktionen**
+- **Ausgerichtete Zuordnungsfunktionen**
 
    In früheren Versionen haben die ausgerichteten Zuordnungsfunktionen (`_aligned_malloc`, `_aligned_offset_malloc` usw.) automatisch Anforderungen für einen Block mit einer Ausrichtung von 0 (null) akzeptiert. Die angeforderte Ausrichtung muss eine Potenz von zwei sein, was bei „0“ (null) nicht der Fall ist. Angeforderte Ausrichtungen von „0“ (null) werden nun als ungültige Parameter behandelt. Dieses Problem wurde behoben und stellt einen Breaking Change für die Laufzeit dar.
 
@@ -315,7 +315,7 @@ Um neue Optimierungen und Debuggingüberprüfungen zu aktivieren, unterbricht di
 
    Die \<chrono>-Implementierung von [steady_clock](../standard-library/steady-clock-struct.md) wurde gemäß den Zuverlässigkeits- und Stabilitätsanforderungen des C++-Standards geändert. `steady_clock` basiert nun auf [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx), und `high_resolution_clock` ist jetzt ein typedef-Element für `steady_clock`. Aus diesem Grund ist `steady_clock::time_point` in Visual Studio jetzt ein typedef-Element für `chrono::time_point<steady_clock>`. Dies ist jedoch nicht unbedingt bei anderen Implementierungen der Fall.
 
-- **Speicherbelegungen und Konstanten**
+- **Zuordnungen und Konstanten**
 
    Es sind nun Vergleiche der Zuordnungen erforderlich, um Konstantenargumente zu akzeptieren. Wenn Ihre Zuweisungen diese Operatoren auf folgende Weise definieren,
 
@@ -341,7 +341,7 @@ Um neue Optimierungen und Debuggingüberprüfungen zu aktivieren, unterbricht di
 
    Die nicht standardmäßigen Headerdateien \<hash_map> und \<hash_set> sind seit Visual Studio 2015 veraltet und werden in künftigen Releases nicht mehr enthalten sein. Verwenden Sie stattdessen \<unordered_map> und \<unordered_set>.
 
-- **Vergleichsoperatoren und operator()**
+- **Vergleiche und operator()**
 
    Assoziative Container (\<map>-Reihe) erfordern jetzt Vergleiche mit const-Funktionsaufrufoperatoren. Beim Ausführen des folgenden Codes tritt nun in einer Vergleichsklassendeklaration ein Fehler beim Kompilieren auf:
 
@@ -395,7 +395,7 @@ Um neue Optimierungen und Debuggingüberprüfungen zu aktivieren, unterbricht di
 
 ####  <a name="BK_ConcRT"></a> Concurrency Runtime
 
-- **Yield-Makro aus „Windows.h“ weist einen Konflikt auf mit concurrency::Context::Yield**
+- **Yield-Makro aus Windows.h weist einen Konflikt auf mit concurrency::Context::Yield**
 
    Die Concurrency Runtime verwendete zuvor `#undef`, um die Yield-Makrodefinition zur Vermeidung von Konflikten zwischen dem in Windows.h und der `concurrency::Context::Yield`-Funktion definierten Yield-Makro aufzuheben. `#undef` wurde entfernt, und es wurde ein neuer nicht in Konflikt stehender äquivalenter API-Aufruf, [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution), hinzugefügt. Zur Umgehung von Konflikten mit Yield können Sie entweder den Code stattdessen zum Aufrufen der Funktion `YieldExecution` aktualisieren, oder den Namen der Funktion `Yield` auf der Aufrufsite wie im folgenden Beispiel aufgeführt durch Klammern umschließen:
 
@@ -413,7 +413,7 @@ Diese Änderungen haben jedoch nur wenig oder keinen Einfluss auf den Großteil 
 
 Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte auswirken können, wirken sie sich nicht auf die Binärkompatibilität zwischen Updates für Visual Studio-Versionen aus. Ein *Breaking Change* ist schwerwiegender und kann sich auf die Kompatibilität mit Binärdateien auswirken. Diese Arten von Beeinträchtigung der Binärkompatibilität treten jedoch nur zwischen Hauptversionen von Visual Studio auf, z. B. zwischen Visual Studio 2013 und Visual Studio 2015. Informationen zu bedeutenden Änderungen, die zwischen Visual Studio 2013 und Visual Studio 2015 vorgenommen wurden, finden Sie unter [Visual Studio 2015: Änderungen bei der Übereinstimmung mit Standards](#VC_2015).
 
-- [Verbesserungen bei der Übereinstimmung mit Standards in Visual Studio 2015](#VS_RTM)
+- [Verbesserungen der Konformität in Visual Studio 2015](#VS_RTM)
 
 - [Verbesserungen bei der Übereinstimmung mit Standards in Update 1](#VS_Update1)
 
@@ -447,9 +447,9 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    Die `/Zg`-Compileroption (Funktionsprototypen generieren) ist nicht mehr verfügbar. Diese Compileroption wurde zuvor als veraltet markiert.
 
-- Sie können Komponententests nicht mehr mit C++/CLI über die Befehlszeile mit der „mstest.exe“ ausführen. Verwenden Sie stattdessen vstest.console.exe. Weitere Informationen finden Sie unter [Befehlszeilenoptionen für VSTest.Console.exe](/visualstudio/test/vstest-console-options).
+- Sie können Komponententests nicht mehr mit C++/CLI über die Befehlszeile mit der „mstest.exe“ ausführen. Verwenden Sie stattdessen vstest.console.exe. Siehe [Befehlszeilenoptionen für VSTest.Console.exe](/visualstudio/test/vstest-console-options).
 
-- **mutable-Schlüsselwort**
+- **mutable (Schlüsselwort)**
 
    Der **mutable**-Speicherklassenspezifizierer ist an Positionen nicht mehr zulässig, an denen zuvor beim Kompilieren ein Fehler aufgetreten ist. Der Compiler generiert nun den Fehler C2071 (Ungültige Speicherklasse). Gemäß dem Standard kann der **mutable**-Spezifizierer nur auf Namen von Klassendatenmembern angewendet werden und kann nicht auf als konstant oder statisch deklarierte Namen sowie nicht auf Verweismember angewendet werden.
 
@@ -915,7 +915,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 <!--From here to VS_Update1 added 04/21/2017-->
 
-- **Als externes „C“ deklariertes main benötigt nun einen Rückgabetyp**
+- **Als externes „C“ deklariertes „main“ benötigt nun einen Rückgabetyp.**
 
    Mit dem folgenden Code wird nun C4430 generiert.
 
@@ -929,7 +929,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     extern "C" int __cdecl main(){} // OK
     ```
 
-- **typename ist in Memberinitialisierer nicht zulässig**
+- **„typename“ ist in Memberinitialisierer nicht zulässig**
 
    Mit dem folgenden Code wird nun C2059 generiert:
 
@@ -956,7 +956,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     ...
     ```
 
-- **Speicherklasse für explizite Spezialisierungen wird ignoriert**
+- **Die Speicherklasse für explizite Spezialisierungen wird ignoriert.**
 
    Im folgenden Code wird der statische Speicherklassenspezifizierer ignoriert.
 
@@ -972,7 +972,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     }
     ```
 
-- **Eine Konstante, die in static_assert innerhalb einer Klassenvorlage verwendet wird, verursacht stets einen Fehler**
+- **Eine Konstante, die in „static_assert“ innerhalb einer Klassenvorlage verwendet wird, verursacht stets einen Fehler.**
 
    Der folgende Code bewirkt, dass `static_assert` stets einen Fehler verursacht:
 
@@ -1004,7 +1004,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     //other partial specializations here
     ```
 
-- **Regeln für Vorwärtsdeklarationen erzwungen (gilt nur für C)**
+- **Regeln für Vorwärtsdeklarationen erzwungen. (Gilt nur für C.)**
 
    Mit dem folgenden Code wird nun C2065 generiert:
 
@@ -1104,7 +1104,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     }
     ```
 
-- **Zeichenfolgenliteral ist ein konstantes Array**
+- **Zeichenfolgenliteral ist ein Konstantenarray**
 
    Der folgende Code erzeugt nun C2664: „void f(void *)“: Argument 1 kann nicht von „const char (*)[2]“ in „void *“ konvertiert werden
 
@@ -1129,7 +1129,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     }
     ```
 
-- **C++11-UDL-Zeichenfolgen**
+- **C++ 11-UDL-Zeichenfolgen**
 
    Der folgende Code erzeugt nun den Fehler C3688: ungültiges Literalsuffix „L“; Literaloperator oder Literaloperatorvorlage „operator ""L“ nicht gefunden
 
@@ -1169,7 +1169,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    Regeln für das Verketten von Zeichenfolgen stimmen nun auch mit dem Standard überein, was bedeutet, dass „L"a" "b"“ mit „L"ab"“ übereinstimmt. Frühere Versionen von Visual Studio haben die Verkettung von Zeichenfolgen mit unterschiedlicher Zeichenbreite nicht akzeptiert.
 
-- **C++11: leeres Zeichen entfernt**
+- **C ++ 11: Leere Zeichen entfernt**
 
    Der folgende Code erzeugt nun den Fehler C2137: leere Zeichenkonstante
 
@@ -1215,7 +1215,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    Zur Korrektur des Codes können Sie den „catch“-Block in `catch (const D &)` ändern, doch die bessere Lösung ist meist das Verwenden der MFC-Makros TRY/CATCH.
 
-- **alignof ist jetzt ein Schlüsselwort**
+- **„alignof“ ist jetzt ein Schlüsselwort**
 
    Der folgende Code führt jetzt zu Fehler C2332: „class“: fehlender Tagname. Zur Korrektur des Codes müssen Sie die Klasse umbenennen oder lediglich die Klasse durch das neue Schlüsselwort ersetzen, wenn die Klasse dieselbe Aufgabe wie **alignof** erledigt.
 
@@ -1223,7 +1223,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     class alignof{}
     ```
 
-- **constexpr ist jetzt ein Schlüsselwort**
+- **„constexpr“ ist jetzt ein Schlüsselwort**
 
    Mit dem folgenden Code wird nun Fehler C2059 generiert: Syntaxfehler: ')'. Um den Code zu korrigieren, müssen Sie Funktions- oder Variablennamen umbenennen, die mit „constexpr“ aufgerufen werden.
 
@@ -1231,11 +1231,11 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     int constexpr() {return 1;}
     ```
 
-- **Verschiebbare Typen dürfen nicht const sein**
+- **Verschiebbare Typen dürfen nicht „const“ sein**
 
    Wenn eine Funktion einen Typ zurückgibt, der verschoben werden soll, darf der Rückgabetyp nicht **const** sein.
 
-- **Gelöschte Kopierkonstruktoren**
+- **Löschen von Kopierkonstruktoren**
 
    Der folgende Code erzeugt nun C2280: „S::S(S &&)“: Es wurde versucht, auf eine gelöschte Funktion zu verweisen:
 
@@ -1261,7 +1261,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     S s2 = {2,3}; //OK
     ```
 
-- **Konvertierung in Funktionszeiger wird nur generiert, wenn kein Lambdaausdruck erfasst wird**
+- **Konvertierung in Funktionszeiger wird nur generiert, wenn kein Lambda erfasst wird**
 
    Der folgende Code führt in Visual Studio 2015 zu C2664.
 
@@ -1333,7 +1333,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     }
     ```
 
-- **Korrigieren einer ungültigen Kopierinitialisierung in nicht statischer Datenmemberinitialisierung**
+- **Korrigieren ungültiger Kopierinitialisierung in nicht statischer Datenmemberinitialisierung**
 
    Mit dem folgenden Code wird nun Fehler C2664 generiert: 'S1::S1(S1 &&)': Argument 1 kann nicht von „bool“ in „const S1 &“ konvertiert werden:
 
@@ -1355,7 +1355,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     };
     ```
 
-- **Zugreifen auf Konstruktoren in decltype-Anweisungen**
+- **Zugreifen auf Konstruktoren in „decltype“-Anweisungen**
 
    Mit dem folgenden Code wird nun C2248 generiert: 'S::S': Kein Zugriff auf die in der Klasse „S“ deklarierten privaten Member möglich:
 
@@ -1382,7 +1382,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     };
     ```
 
-- **Standardkonstruktor von Lambdaausdrücken wird implizit gelöscht**
+- **Standardkonstruktor von Lambda wird implizit gelöscht**
 
    Der folgende Code erzeugt nun den Fehler C3497: Sie können keine Instanz eines Lambdaelements erstellen:
 
@@ -1396,7 +1396,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    Um den Fehler zu beheben, entfernen Sie die Notwendigkeit des Aufrufs des Standardkonstruktors. Wenn das Lambda nichts erfasst, kann er in einen Funktionszeiger umgewandelt werden.
 
-- **Lambdaausdrücke mit einem gelöschten Zuweisungsoperator**
+- **Lambdas mit einem gelöschten Zuweisungsoperator**
 
    Mit dem folgenden Code wird nun Fehler C2280 generiert:
 
@@ -1417,7 +1417,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    Um den Fehler zu beheben, ersetzen Sie den Lambda durch eine „functor“-Klasse, oder entfernen Sie die Notwendigkeit der Verwendung des Zuweisungsoperators.
 
-- **Verschieben eines Objekt mit einem gelöschten Kopierkonstruktor**
+- **Versuch, ein Objekt mit gelöschten Kopierkonstruktor zu verschieben**
 
    Der folgende Code erzeugt nun den Fehler C2280: „moveable::moveable(const moveable &)“: Versuch des Verweises auf eine gelöschte Funktion
 
@@ -1444,7 +1444,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
         m_m(std::move(m))
     ```
 
-- **Lokale Klasse kann nicht auf andere lokale Klasse verweisen, die später in derselben Funktion definiert ist**
+- **Lokale Klasse kann nicht auf andere lokale Klasse verweisen, die später in der gleichen Funktion definiert ist**
 
    Der folgende Code erzeugt nun den Fehler C2079: „s“ verwendet die nicht definierte Struktur "main::S2"
 
@@ -1477,7 +1477,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     }
     ```
 
-- **Basiskonstruktor mit protected-Zugriffsmodifizierer kann nicht im Körper eines abgeleiteten Konstruktors aufgerufen werden**
+- **Geschützter Basiskonstruktor kann nicht im Text eines abgeleiteten Konstruktors aufgerufen werden**
 
    Mit dem folgenden Code wird nun Fehler C2248 generiert: 'S1::S1': Kein Zugriff auf das geschützte Member möglich, das in der Klasse „S1“ deklariert ist
 
@@ -1528,7 +1528,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     };
     ```
 
-   Ändern Sie zum Beheben des Problems die oberste Zeile in `#define A();`
+   Ändern Sie zum Beheben des Problems die oberste Zeile in `#define A();`.
 
    Der folgende Code erzeugt nun den Fehler C2059: Syntaxfehler: „)“
 
@@ -1588,7 +1588,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    In Visual Studio 2015 ist es wahrscheinlicher, dass vom Compiler generierte Inline-Konstruktoren von abstrakten Klassen mit virtuellen Basisklassen zu falscher Nutzung von `__declspec(novtable)` in Kombination mit `__declspec(dllimport)` führen.
 
-- **auto erfordert einzelnen Ausdruck in direct-list-initialization**
+- **„auto“ erfordert einzelnen Ausdruck in „direct-list“-Initialisierung**
 
    Der folgende Code erzeugt nun Fehler C3518: "testPositions": In einem „direct-list-initialization“-Kontext kann der Typ für „auto“ nur aus einem einzelnen Initialisierungsausdruck hergeleitet werden
 
@@ -1612,7 +1612,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     };
     ```
 
-- **Überprüfen von Typen und Verweisen auf Typen für is_convertible**
+- **Prüfen von Typen und Verweisen auf Typen für is_convertible**
 
    Der folgende Code bewirkt nun, dass die statische Assertion fehlschlägt.
 
@@ -1633,9 +1633,9 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     static_assert(std::is_convertible<D*, B2*>::value, "fail");
     ```
 
-- **Deklarationen von __declspec(novtable) müssen einheitlich sein**
+- **Deklarationen von „__declspec(novtable)“ müssen einheitlich sein**
 
-   `__declspec` – Deklarationen hiervon müssen für alle Bibliotheken einheitlich sein. Der folgende Code erzeugt nun einen Verstoß gegen eine Regel mit einer Definition:
+   Deklarationen von `__declspec` müssen über alle Bibliotheken hinweg einheitlich sein. Der folgende Code erzeugt nun einen Verstoß gegen eine Regel mit einer Definition:
 
     ```cpp
     //a.cpp
@@ -1775,7 +1775,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    Außerdem, auch wenn dazu keine spezifische Diagnose ausgegeben wird, wird der Inlineoperator **new** als nicht wohlgeformt angesehen.
 
-- **Aufrufen von „operator *type*()“ (benutzerdefinierte Konvertierung) für Nichtklassentypen**
+- **Aufrufen von „operator *type*()“ (benutzerdefinierte Konversion) für Nichtklassentypen**
 
    Frühere Versionen ließen den Aufruf von 'operator *type*()' für Nichtklassentypen zu und ignorierten den Aufruf stumm. Durch dieses alte Verhalten entstand die Gefahr der stummen Erzeugung von ungültigem Code, was zu unvorhersehbarem Laufzeitverhalten führt. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C2228 als Ergebnis aus.
 
@@ -1805,7 +1805,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     }
     ```
 
-- **Redundanter Typname in ausführlichen Typbezeichner**
+- **Redundanter Typname in ausführlichen Typspezifizierern**
 
    Frühere Versionen des Compilers ließen **typename** in ausführlichen Typbezeichnern zu. Auf diese Weise erstellter Code ist jedoch semantisch inkorrekt. Der Compiler akzeptiert in dieser Weise erstellten Code nicht mehr und gibt den Compilerfehler C3406 als Ergebnis aus.
 
@@ -2292,7 +2292,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     };
     ```
 
-- `volatile` **– Membervariablen mit diesem Schlüsselwort verhindern implizit definierte Konstruktoren und Zuweisungsoperatoren**
+- `volatile` **Membervariablen verhindern implizit definierte Konstruktoren und Zuweisungsoperatoren**
 
    In früheren Versionen des Compilers ist es für eine Klasse zulässig, die Membervariablen des Typs **volatile** enthält, dass Kopier-/Verschiebe-Standardkonstruktoren und Kopier-/Verschiebe-Standardzuweisungsoperatoren automatisch generiert werden. Dieses alte Verhalten war falsch und entsprach nicht dem C++-Standard. Der Compiler geht bei einer Klasse mit **volatilen** Membervariablen davon aus, dass sie nicht triviale Konstruktions- und Zuweisungsoperatoren enthält. Dies verhindert, dass Standardimplementierungen dieser Operatoren automatisch generiert werden. Ist eine solche Klasse ein Member einer Union (oder einer anonymen Union innerhalb einer Klasse), werden Kopier-/Bewegungskonstruktoren und Kopier-/Bewegungszuweisungsoperatoren der Union (oder die Klasse, die die anonyme Union enthält) implizit als gelöscht definiert. Wird versucht, die Union (oder die Klasse, die die anonyme Union enthält) zu erstellen oder zu kopieren, ohne sie explizit zu definieren, tritt ein Fehler auf, und der Compiler gibt daher den Compilerfehler C2280 aus.
 
@@ -2348,7 +2348,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     B b2(b1);  // error C2280
     ```
 
-- **Statische Memberfunktionen unterstützen keine cv-Qualifizierer**
+- **Statische Memberfunktionen unterstützen keine CV-Qualifizierer.**
 
    In früheren Versionen von Visual Studio 2015 ist es zulässig, dass statische Memberfunktionen CV-Qualifizierer haben. Diese Verhalten wird von einer Regression in Visual Studio 2015 und Visual Studio 2015 Update 1 verursacht. Visual Studio 2013 sowie vorherige Versionen des Compilers lehnen Code, der auf diese Weise geschrieben ist, ab. Das Verhalten von Visual Studio 2015 und Visual Studio 2015 Update 1 ist fehlerhaft und entspricht nicht dem C++-Standard.  Visual Studio 2015 Update 2 weist Code, der in dieser Weise geschrieben ist, zurück und gibt stattdessen den Compilerfehler C2511 aus.
 
@@ -2493,7 +2493,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    In früheren Versionen des Compilers wurden die statischen Assertionen unten in diesem Beispiel übergeben, da `std::is_convertable<>::value` fälschlicherweise auf **TRUE** festgelegt war. Jetzt ist `std::is_convertable<>::value` richtig auf **FALSE** festgelegt, wodurch ein Fehler in den statischen Assertionen verursacht wird.
 
-- **Standardmäßig verwendete und gelöschte triviale Kopier- und Verschiebekonstruktoren beachten Zugriffsspezifizierer**
+- **Als Standard festgelegte und gelöschte triviale Kopier- und Verschiebekonstruktoren beachten Zugriffsspezifizierer**
 
    In früheren Versionen des Compilers wurden die Zugriffsspezifizierer von als Standard festgelegten und gelöschten trivialen Kopier- und Verschiebekonstruktoren nicht geprüft, ehe ihr Aufrufen erlaubt wurde. Dieses alte Verhalten war falsch und entsprach nicht dem C++-Standard. Durch dieses alte Verhalten entstand in einigen Fällen die Gefahr der stummen Erzeugung von ungültigem Code, was zu unvorhersehbarem Laufzeitverhalten führt. Der Compiler prüft jetzt den Zugriffsspezifizierer von als Standard festgelegten und gelöschten trivialen Kopier- und Verschiebekonstruktoren, um zu bestimmen, ob diese aufgerufen werden können. Falls nicht, gibt der Compiler die Warnung C2248 aus.
 
@@ -2934,7 +2934,7 @@ Der C++-Compiler in Visual Studio 2013 erkennt Konflikte im _ITERATOR_DEBUG_LEVE
 
 - Wenn der vorhandene Code die simulierten bereichsbezogenen Enumerationen der vorherigen Version verwendet (herkömmliche nicht bereichsbezogene Enumerationen, die von Namespaces umschlossen sind), müssen Sie ihn ändern. Wenn Sie z. B. auf den Typ `std::future_status::future_status` verwiesen haben müssen Sie jetzt `std::future_status` verwenden. Die meisten Codes bleiben jedoch unberührt, `std::future_status::ready` wird beispielsweise weiterhin kompiliert.
 
-- `explicit operator bool()` ist strenger als der Operator unspecified-bool-type(). `explicit operator bool()` ermöglicht explizite Konvertierungen in booleschen Wert – bei `shared_ptr<X> sp` sind z. B. `static_cast<bool>(sp)` und `bool b(sp)` sowie kontextbedingte Konvertierungen gültig, die auf einen booleschen Wert getestet werden können – z. B. `if (sp)`, `!sp` oder `sp &&`. Allerdings verbietet `explicit operator bool()` implizite Konvertierungen in „bool“, sodass Sie `bool b = sp;` nicht verwenden können, und bei einem bestimmten Bool-Rückgabetyp können Sie `return sp` nicht verwenden.
+- `explicit operator bool()` ist strenger als der Operator „unspecified-bool-type()“. `explicit operator bool()` ermöglicht explizite Konvertierungen in „bool“ – bei `shared_ptr<X> sp` sind z.B. `static_cast<bool>(sp)` und `bool b(sp)` und „kontextbedingte Konvertierungen“ gültig, die auf „bool“ getestet werden können – z.B. `if (sp)`, `!sp` oder `sp &&`. Allerdings verbietet `explicit operator bool()` implizite Konvertierungen in „bool“, sodass Sie `bool b = sp;` nicht verwenden können, und bei einem bestimmten Bool-Rückgabetyp können Sie `return sp` nicht verwenden.
 
 - Da echte variadic-Vorlagen nun implementiert wurden, haben _VARIADIC_MAX und verknüpfte Makros keine Auswirkungen. Wenn Sie noch _VARIADIC_MAX definieren, wird es ignoriert. Wenn Sie die Makromaschinerie bestätigt haben, die dazu dienen sollten, simulierte variadic Vorlagen auf andere Weise zu unterstützen, müssen Sie den Code ändern.
 
@@ -2966,19 +2966,19 @@ Der C++-Compiler in Visual Studio 2013 erkennt Konflikte im _ITERATOR_DEBUG_LEVE
 
 - Zugriff auf das MFC-Menüband wurde geändert.  Anstelle einer Architektur mit einer Ebene gibt es jetzt eine hierarchische Architektur. Sie können das alte Verhalten weiterhin verwenden, indem Sie `CRibbonBar::EnableSingleLevelAccessibilityMode()` aufrufen.
 
-- `CDatabase::GetConnect` – diese Methode wurde entfernt. Zur Verbesserung der Sicherheit wird die Verbindungszeichenfolge nun verschlüsselt gespeichert und nur bei Bedarf entschlüsselt. Sie kann nicht als Nur-Text zurückgegeben werden.  Die Zeichenfolge kann mit der Methode `CDatabase::Dump` abgerufen werden.
+- Die Methode `CDatabase::GetConnect` wurde entfernt. Zur Verbesserung der Sicherheit wird die Verbindungszeichenfolge nun verschlüsselt gespeichert und nur bei Bedarf entschlüsselt. Sie kann nicht als Nur-Text zurückgegeben werden.  Die Zeichenfolge kann mit der Methode `CDatabase::Dump` abgerufen werden.
 
 - Die Signatur von `CWnd::OnPowerBroadcast` wurde geändert. Die Signatur dieses Meldungshandlers wird geändert, um ein LPARAM als zweiten Parameter zu akzeptieren.
 
 - Signaturen werden zum anzupassen der Meldungshandler geändert. Die Parameterlisten der folgenden Funktionen wurden geändert, um neu hinzugefügte ON_WM_*-Meldungshandler zu verwenden:
 
-   - `CWnd::OnDisplayChange` wurde in (UINT, int, int) anstatt (WPARAM, LPARAM) geändert, damit das neue ON_WM_DISPLAYCHANGE-Makro in der Meldungszuordnung verwendet werden kann.
+   - `CWnd::OnDisplayChange` wurde in (UINT, int, int) anstatt (WPARAM, LPARAM) geändert, sodass das neue ON_WM_DISPLAYCHANGE-Makro in der Meldungszuordnung verwendet werden kann.
 
-   - `CFrameWnd::OnDDEInitiate` wurde in (CWnd*, UINT, UNIT) anstatt (WPARAM, LPARAM) geändert, damit das neue ON_WM_DDE_INITIATE-Makro in der Meldungszuordnung verwendet werden kann.
+   - `CFrameWnd::OnDDEInitiate` wurde in (CWnd*, UINT, UNIT) anstatt (WPARAM, LPARAM) geändert, sodass das neue ON_WM_DDE_INITIATE-Makro in der Meldungszuordnung verwendet werden kann.
 
-   - `CFrameWnd::OnDDEExecute` wurde in (CWnd*, HANDLE) anstatt (WPARAM, LPARAM) geändert, damit das neue ON_WM_DDE_EXECUTE-Makro in der Meldungszuordnung verwendet werden kann.
+   - `CFrameWnd::OnDDEExecute` wurde in (CWnd*, HANDLE) anstatt (WPARAM, LPARAM) geändert, sodass das neue ON_WM_DDE_EXECUTE-Makro in der Meldungszuordnung verwendet werden kann.
 
-   - `CFrameWnd::OnDDETerminate` wurde in den Parameter (CWnd*) anstatt (WPARAM, LPARAM) geändert, damit das neue ON_WM_DDE_TERMINATE-Makro in der Meldungszuordnung verwendet werden kann.
+   - `CFrameWnd::OnDDETerminate` wurde in den Parameter (CWnd*) anstatt (WPARAM, LPARAM) geändert, sodass das neue ON_WM_DDE_TERMINATE-Makro in der Meldungszuordnung verwendet werden kann.
 
    - `CMFCMaskedEdit::OnCut` wurde in keine Parameter anstatt (WPARAM, LPARAM) geändert, damit das neue ON_WM_CUT-Makro in der Meldungszuordnung verwendet werden kann.
 
@@ -2986,7 +2986,7 @@ Der C++-Compiler in Visual Studio 2013 erkennt Konflikte im _ITERATOR_DEBUG_LEVE
 
    - `CMFCMaskedEdit::OnPaste` wurde in keine Parameter anstatt (WPARAM, LPARAM) geändert, damit das neue ON_WM_PASTE-Makro in der Meldungszuordnung verwendet werden kann.
 
-- `#ifdef` – diese Anweisungen wurden aus MFC-Headerdateien entfernt. Zahlreiche `#ifdef`-Anweisungen in den MFC-Headerdateien, die sich auf ältere, nicht unterstützte Versionen von Windows beziehen (WINVER &lt; 0x0501), wurden entfernt.
+- `#ifdef`-Anweisungen wurden aus MFC-Headerdateien entfernt. Zahlreiche `#ifdef`-Anweisungen in den MFC-Headerdateien, die sich auf ältere, nicht unterstützte Versionen von Windows beziehen (WINVER &lt; 0x0501), wurden entfernt.
 
 - ATL DLL (atl120.dll) wurde entfernt. ATL wird jetzt als Header und als statische Bibliothek (atls.lib) bereitgestellt.
 
@@ -3052,7 +3052,7 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - Zusätzlich zum Erkennen von Konflikten bei _ITERATOR_DEBUG_LEVEL, das in Visual C++ 2010 implementiert wurde, erkennt der C++-Compiler in Visual Studio 2012 Runtime Bibliothekskonflikte. Diese Konflikte treten auf, wenn die Compileroptionen `/MT` (statisches Release), `/MTd` (statisches Debuggen), `/MD` (dynamisches Release) und `/MDd` (dynamisches Debuggen) kombiniert werden.
 
-- `operator<()`, `operator>()`, `operator<=()` und `operator>=()` waren zuvor für die Containerfamilien `std::unordered_map` und `stdext::hash_map` verfügbar, auch wenn die zugehörigen Implementierungen nicht nützlich waren. Diese nicht standardmäßigen Operatoren wurden in Visual C++ in Visual Studio 2012 entfernt. Darüber hinaus wurde die Implementierung von `operator==()` und `operator!=()` für die `std::unordered_map`-Reihe erweitert, sodass die Reihe `stdext::hash_map` abgedeckt ist. (Es wird empfohlen, die Verwendung der `stdext::hash_map`-Reihe in neuem Code zu vermeiden.)
+- `operator<()`, `operator>()`, `operator<=()` und `operator>=()` waren zuvor für die Containerreihen `std::unordered_map` und `stdext::hash_map` verfügbar, auch wenn die zugehörigen Implementierungen nicht nützlich waren. Diese nicht standardmäßigen Operatoren wurden in Visual C++ in Visual Studio 2012 entfernt. Darüber hinaus wurde die Implementierung von `operator==()` und `operator!=()` für die `std::unordered_map`-Reihe erweitert, sodass die Reihe `stdext::hash_map` abgedeckt ist. (Es wird empfohlen, die Verwendung der `stdext::hash_map`-Reihe in neuem Code zu vermeiden.)
 
 - C++11 22.4.1.4 [locale.codecvt] gibt an, dass `codecvt::length()` und `codecvt::do_length()` änderbare `stateT&`-Parameter verwenden sollten, Visual C++ 2010 hat jedoch `const stateT&` verwendet. Der C++-Compiler in Visual Studio 2012 verwendet `stateT&` gemäß den Vorgaben des Standards. Dieser Unterschied ist wichtig für alle, die versuchen, die virtuelle Funktion `do_length()` zu überschreiben.
 
@@ -3090,7 +3090,7 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - Es wurde ein Parameter zu dem `CFolderPickerDialog`-Konstruktor hinzugefügt. (Dies ist ein Standardparameter, weshalb kein Eingriff in den Quellcode erforderlich ist.)
 
-- `CFileStatus` – die Größe dieser Struktur wurde geändert: Der `m_attribute`-Member wurde von BYTE in DWORD geändert (entsprechend dem Wert, der von `GetFileAttributes` zurückgegeben wird).
+- Die Größe der Struktur `CFileStatus` wurde geändert: Der `m_attribute`-Member wurde von BYTE in DWORD geändert (entsprechend dem Wert, der von `GetFileAttributes` zurückgegeben wird).
 
 - `CRichEditCtrl` und `CRichEditView` nutzen in Unicode-Builds MSFTEDIT_CLASS (RichEdit 4.1-Steuerelement) anstelle von RICHEDIT_CLASS (RichEdit 3.0-Steuerelement).
 
@@ -3404,15 +3404,15 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 ### <a name="mfc"></a>MFC
 
-- `CTime` – Klasse: Die `CTime`-Klasse akzeptiert jetzt Datumsangaben beginnend mit 1.1.1900 unserer Zeitrechnung. anstatt 01.01.1970.
+- `CTime`-Klasse: Die `CTime`-Klasse akzeptiert jetzt Datumsangaben beginnend mit 1.1.1900 unserer Zeitrechnung. anstatt 01.01.1970.
 
 - Aktivierreihenfolge von Steuerelementen in MFC-Dialogfeldern: Die richtige Aktivierreihenfolge mehrerer Steuerelemente in einem MFC-Dialogfeld ist gestört, wenn ein MFC-ActiveX-Steuerelement in die Aktivierreihenfolge eingefügt wird. Diese Änderung behebt dieses Problem.
 
    Erstellen Sie beispielsweise eine MFC-Dialogfeldanwendung, die über ein ActiveX-Steuerelement und mehrere Bearbeitungssteuerelemente verfügt. Positionieren Sie das ActiveX-Steuerelement in der Mitte der Aktivierreihenfolge der Bearbeitungssteuerelemente. Starten Sie die Anwendung, klicken Sie auf ein Bearbeitungssteuerelement, dessen Aktivierreihenfolge auf das ActiveX-Steuerelement folgt, und drücken Sie dann die TAB-TASTE. Vor dieser Änderung wechselte der Fokus zum Bearbeitungssteuerelement, das auf das ActiveX-Steuerelement folgte, anstatt zum nächsten Steuerelement in der Aktivierreihenfolge.
 
-- `CFileDialog` – Klasse: Benutzerdefinierte Vorlagen für die `CFileDialog`-Klasse können nicht automatisch zu Windows Vista portiert werden. Sie sind immer noch verwendbar ist, verfügen jedoch nicht über die zusätzliche Funktionalität oder das Aussehen von Dialogfeldern im Windows Vista-Stil.
+- `CFileDialog`-Klasse: Benutzerdefinierte Vorlagen für die `CFileDialog`-Klasse können nicht automatisch zu Windows Vista portiert werden. Sie sind immer noch verwendbar ist, verfügen jedoch nicht über die zusätzliche Funktionalität oder das Aussehen von Dialogfeldern im Windows Vista-Stil.
 
-- `CWnd` und `CFrameWnd` – Klassen: Die `CWnd::GetMenuBarInfo`-Methode wurde entfernt.
+- `CWnd`-Klasse und `CFrameWnd`-Klasse: Die `CWnd::GetMenuBarInfo`-Methode wurde entfernt.
 
    Die Methode `CFrameWnd::GetMenuBarInfo` ist jetzt eine nicht virtuelle Methode. Weitere Informationen finden Sie unter **Funktion „GetMenuBarInfo“** im Windows SDK.
 
@@ -3442,7 +3442,7 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - `_set_security_error_handler` wurde entfernt. Entfernen Sie alle Aufrufe der Funktion. Der Standardhandler bietet eine viel sicherere Möglichkeit des Umgangs mit Sicherheitsfehlern.
 
-- `time_t` ist jetzt ein 64-Bit-Wert (wenn _USE_32BIT_TIME_T nicht definiert ist).
+- `time_t` ist jetzt ein 64-Bit-Wert (sofern _USE_32BIT_TIME_T definiert ist).
 
 - Die Funktionen `_spawn` und `_wspawn` lassen `errno` gemäß des C-Standards bei Erfolg unverändert.
 
@@ -3466,7 +3466,7 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 ### <a name="standard-library-2005"></a>Standardbibliothek (2005)
 
-- Die exception-Klasse (unter \<exception> > header) wurde in den Namespace `std` verschoben. In früheren Versionen befand sich diese Klasse im globalen Namespace. Fügen Sie Ihrem Code die folgende using-Anweisung hinzu, um Fehler zu beheben, die darauf hinweisen, dass die exception-Klasse nicht gefunden werden kann: `using namespace std;`
+- Die exception-Klasse (unter \<exception> > header) wurde in den Namespace `std` verschoben. In früheren Versionen befand sich diese Klasse im globalen Namespace. Zum Beheben von Fehlern, die angeben, dass die exception-Klasse nicht gefunden werden kann, müssen Sie zu Ihrem Code die folgende using-Anweisung hinzufügen: `using namespace std;`
 
 - Wenn `valarray::resize()` aufgerufen wird, geht der Inhalt von `valarray` verloren und wird durch Standardwerte ersetzt. Die Methode `resize()` dient zum erneuten Initialisieren von `valarray`, ohne dass ein dynamisches Wachsen wie bei einem Vektor erfolgt.
 
@@ -3524,4 +3524,4 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Neuerungen bei Visual C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)
+[Neues bei Visual C++ in Visual Studio 2015](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)
