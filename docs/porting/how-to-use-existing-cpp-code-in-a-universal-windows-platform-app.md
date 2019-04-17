@@ -1,19 +1,19 @@
 ---
 title: 'Vorgehensweise: Verwenden von vorhandenem C++-Code in einer UWP-App (Universelle Windows-Plattform)'
-ms.date: 08/21/2018
+ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 1a4633b74591e16f22def44ff5875557f2909043
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745511"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424195"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Vorgehensweise: Verwenden von vorhandenem C++-Code in einer UWP-App (Universelle Windows-Plattform)
 
-Die vielleicht einfachste Möglichkeit, für die Ausführung Ihres Desktop-Programms in der UWP-Umgebung zu sorgen, ist der Einsatz von Desktop Bridge-Technologien. Zu diesen gehört der Desktop App Converter, der Ihre vorhandene Anwendung als UWP-App packt, ohne dass Codeänderungen erforderlich sind. Weitere Informationen finden Sie unter [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
+Die einfachste Möglichkeit, für die Ausführung Ihres Desktop-Programms in der UWP-Umgebung (Universelle Windows-Plattform) zu sorgen, ist der Einsatz von Desktop-Brücke-Technologien. Zu diesen gehört der Desktop App Converter, der Ihre vorhandene Anwendung als UWP-App packt, ohne dass Codeänderungen erforderlich sind. Weitere Informationen finden Sie unter [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
 
-Im weiteren Verlauf dieses Themas wird das Portieren von C++-Bibliotheken (DLLs und statischen Bibliotheken) auf die universelle Windows-Plattform (UWP) erläutert. Dieser Vorgang ermöglicht, dass Ihre wesentliche C++-Logik in mehreren UWP-Apps verwendet werden kann.
+Im weiteren Verlauf dieses Artikels wird das Portieren von C++-Bibliotheken (DLLs und statischen Bibliotheken) auf die Universelle Windows-Plattform erläutert. Dieser Vorgang ermöglicht, dass Ihre wesentliche C++-Logik in mehreren UWP-Apps verwendet werden kann.
 
 UWP-Apps werden in einer geschützten Umgebung ausgeführt. Daher sind viele Win32-, COM- und CRT-API-Aufrufe, die die Sicherheit der Plattform gefährden können, nicht zulässig. Der Compiler kann diese Aufrufe erkennen und gibt einen Fehler aus, falls die Option `/ZW` verwendet wird. Sie können das Zertifizierungskit für Apps auf Ihre Anwendung anwenden, um Code mit unzulässigen API-Aufrufen zu erkennen. Weitere Informationen finden Sie unter [Zertifizierungskit für Windows-Apps](/windows/uwp/debug-test-perf/windows-app-certification-kit).
 
@@ -54,11 +54,11 @@ Dieses Thema enthält die folgenden Verfahren:
 
 Um eine höhere Sicherheit und Zuverlässigkeit zu erreichen, werden universelle Windows-Apps in einer eingeschränkten Runtime-Umgebung ausgeführt, damit Sie eine beliebige systemeigene DLL nicht genauso nutzen können, wie sie es in einer klassischen Windows-Desktopanwendung würden. Wenn Sie über Quellcode für eine DLL verfügen, können Sie den Code so portieren, dass er unter UWP ausgeführt werden kann. Als Erstes ändern Sie einige Projekteinstellungen und Projektdatei-Metadaten, um das Projekt als UWP-Projekt zu identifizieren. Sie müssen den Bibliothekscode mit der Option `/ZW` kompilieren, sodass C++/CX aktiviert wird. Bestimmte API-Aufrufe sind in UWP-Apps aufgrund strenger Kontrollen hinsichtlich der Umgebung nicht zulässig. Weitere Informationen finden Sie unter [Win32 and COM APIs for UWP apps (Win32- und COM-API für Universal Windows Platform-Apps (UWP))](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
 
-Das folgende Verfahren gilt, wenn Sie über eine native DLL verfügen, die Funktionen mit **__declspec(dllexport)** verfügbar macht.
+Das folgende Verfahren gilt, wenn Sie über eine native DLL verfügen, die Funktionen mit `__declspec(dllexport)` verfügbar macht.
 
 ### <a name="to-port-a-native-dll-to-the-uwp-without-creating-a-new-project"></a>So portieren Sie eine systemeigene DLL auf UWP, ohne ein neues Projekt zu erstellen
 
-1. Bei einer nativen DLL, die Funktionen mithilfe von **__declspec(dllexport)** exportiert, können Sie diese Funktionen aus einer UWP-App aufrufen, indem Sie die DLL als UWP-Projekt neu kompilieren. Nehmen wir beispielsweise an, wir haben eine DLL, die eine Reihe von Klassen und deren Methoden mit ähnlichem Code wie in der folgenden Header-Datei exportiert:
+1. Bei einer nativen DLL, die Funktionen mithilfe von `__declspec(dllexport)` exportiert, können Sie diese Funktionen aus einer UWP-App aufrufen, indem Sie die DLL als UWP-Projekt neu kompilieren. Nehmen wir beispielsweise an, wir haben eine DLL, die eine Reihe von Klassen und deren Methoden mit ähnlichem Code wie in der folgenden Header-Datei exportiert:
 
     ```cpp
     // giraffe.h
@@ -131,7 +131,7 @@ Das folgende Verfahren gilt, wenn Sie über eine native DLL verfügen, die Funkt
 
    Alles im Projekt (stdafx.h, dllmain.cpp) ist Teil der standardmäßigen Win32-Projektvorlage. Wenn Sie das nachvollziehen möchten, jedoch zu diesem Zeitpunkt noch nicht Ihre eigene DLL mit diesen Schritten verwenden möchten, erstellen Sie ein Win32-Projekt, wählen Sie im Projekt-Asssistenten DLL, und fügen Sie dann als Headerdatei „giraffe.h“ und als Codedatei „giraffe.cpp“ hinzu. Kopieren Sie anschließend die Inhalte aus dem Code in diesem Schritt in die entsprechenden Dateien.
 
-   Der Code definiert das Makro `GIRAFFE_API`, das zu **__declspec(dllexport)** aufgelöst wird, wenn `_DLL` definiert ist, d.h., wenn das Projekt als DLL erstellt wird.
+   Der Code definiert das Makro `GIRAFFE_API`, das zu `__declspec(dllexport)` aufgelöst wird, wenn `_DLL` definiert ist, also wenn das Projekt als DLL erstellt wird.
 
 2. Öffnen Sie die **Projekteigenschaften** für das DLL-Projekt, und legen Sie die **Konfiguration** auf **Alle Konfigurationen** fest.
 
@@ -157,7 +157,7 @@ Das folgende Verfahren gilt, wenn Sie über eine native DLL verfügen, die Funkt
 
    Das Problem besteht darin, dass das universelle Windows-Projekt eine andere Namenskonvention für die vorkompilierte Headerdatei verwendet.
 
-6. Erstellen Sie das Projekt. Sie erhalten möglicherweise einige Fehler zu nicht kompatiblen Befehlszeilenoptionen. Die häufig verwendete Option **Minimale Neuerstellung aktivieren** (/Gm) ist beispielsweise standardmäßig in vielen C++-Projekten festgelegt und nicht kompatibel mit `/ZW`.
+6. Erstellen Sie das Projekt. Sie erhalten möglicherweise einige Fehler zu nicht kompatiblen Befehlszeilenoptionen. Die nun veraltete, aber häufig verwendete Option **Minimale Neuerstellung aktivieren** (/Gm) ist beispielsweise standardmäßig in vielen älteren C++-Projekten festgelegt und nicht mit `/ZW` kompatibel.
 
    Einige Funktionen sind nicht verfügbar, wenn Sie Etwas für die universelle Windows-Plattform kompilieren. Zu allen Problemen werden Compilerfehler angezeigt. Lösen Sie diese Fehler, bis Sie eine einwandfreie Version besitzen.
 
@@ -231,4 +231,4 @@ Wenn Sie systemeigene APIs in einer statischen Bibliothek aus einer UWP-App nutz
 
 ## <a name="see-also"></a>Siehe auch
 
-[Portieren auf die universelle Windows-Plattform](../porting/porting-to-the-universal-windows-platform-cpp.md)
+[Portieren von Code auf die Universelle Windows-Plattform](../porting/porting-to-the-universal-windows-platform-cpp.md)
