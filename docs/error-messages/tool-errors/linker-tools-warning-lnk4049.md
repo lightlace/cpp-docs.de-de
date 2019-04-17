@@ -1,23 +1,25 @@
 ---
 title: Linkertoolwarnung LNK4049
-ms.date: 04/09/2019
+ms.date: 04/15/2019
 f1_keywords:
 - LNK4049
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-ms.openlocfilehash: 357bf5a981dddadfd79d2d6981ccc9c478909097
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.openlocfilehash: b527d15310dba70c1bae21e601db17db2900e219
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59477352"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674252"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>Linkertoolwarnung LNK4049
 
 > Symbol "*Symbol*"definiert "*filename.obj*" wird importiert
 
-Das Symbol wurde sowohl aus exportiert und in das Programm importiert.
+[von "__declspec(dllimport)" "](../../cpp/dllexport-dllimport.md) wurde angegeben, für die *Symbol* , obwohl das Symbol, in der Objektdatei definiert ist *filename.obj* im gleichen Abbild. Entfernen Sie die `__declspec(dllimport)` Modifizierer, um diese Warnung zu beheben.
+
+## <a name="remarks"></a>Hinweise
 
 Diese Warnung wird vom Linker generiert, wenn Sie ein Symbol in ein Objekt definieren und sie mithilfe verweisen der `__declspec(dllimport)` deklarationsmodifizierer in einem anderen.
 
@@ -33,7 +35,7 @@ Um LNK4049 zu beheben, verwenden Sie eines der folgenden Verfahren aus:
 
 - Entfernen Sie die `__declspec(dllimport)` Modifizierer aus der Vorwärtsdeklaration des Symbols, das LNK4049 ausgelöst hat. Sie können nach Symbolen in einem binären Bild suchen, mit der **DUMPBIN** Hilfsprogramm. Die **DUMPBIN/Symbols** Schalter zeigt die COFF-Symboltabelle des Bilds an. Weitere Informationen zu den **DUMPBIN** Hilfsprogramm finden Sie unter [DUMPBIN-Referenz](../../build/reference/dumpbin-reference.md).
 
-- Inkrementelles Verknüpfen und die Optimierung des ganzen Programms, vorübergehend zu deaktivieren. Wenn erneut kompiliert, generiert die Anwendung Warnung LNK4217, die den Namen der Funktion enthält, die auf das importierte Symbol verweist. Entfernen Sie die `__declspec(dllimport)` deklarationsmodifizierer aus der importierten Symbole und das inkrementelle Verknüpfung erneut zu aktivieren oder die Optimierung des ganzen Programms nach Bedarf.
+- Inkrementelles Verknüpfen und die Optimierung des ganzen Programms, vorübergehend zu deaktivieren. Wenn erneut kompiliert, generiert die Anwendung den Namen der Funktion enthält, die die importierten Symbole verweist auf die Warnung LNK4217 an. Entfernen Sie die `__declspec(dllimport)` deklarationsmodifizierer aus der importierten Symbole und das inkrementelle Verknüpfung erneut zu aktivieren oder die Optimierung des ganzen Programms nach Bedarf.
 
 Der letzte generierte Code ordnungsgemäß verhält sich, zwar ist der Code zum Aufrufen der importierten Funktion weniger effizient als direkter Aufruf der Funktion. Diese Warnung nicht angezeigt, wenn Sie bei der Kompilierung der ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md) Option.
 

@@ -1,18 +1,18 @@
 ---
-title: Linkertoolwarnung LNK4286 Warnung
-ms.date: 04/09/2019
+title: Linkertoolwarnung LNK4286
+ms.date: 04/15/2019
 f1_keywords:
 - LNK4286
 helpviewer_keywords:
 - LNK4286
-ms.openlocfilehash: f4ab9104c68534eaf1278a6cacb91623c24a237b
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.openlocfilehash: 43ed18808ba5ce632dd7dc7095f7bc30e4497ec9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59477633"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674226"
 ---
-# <a name="linker-tools-warning-lnk4286"></a>Linkertoolwarnung LNK4286 Warnung
+# <a name="linker-tools-warning-lnk4286"></a>Linkertoolwarnung LNK4286
 
 > Symbol "*Symbol*"definiert "*filename_1.obj*"wird importiert, indem"*filename_2.obj*"
 
@@ -31,5 +31,5 @@ Weitere Informationen zum Importieren und Exportieren von Datendeklarationen, fi
 ## <a name="see-also"></a>Siehe auch
 
 [Linkertoolwarnung Lnk4049](linker-tools-warning-lnk4049.md) \
-[Linkertoolwarnung LNK4286 Warnung](linker-tools-warning-lnk4286.md) \
+[Linkertoolwarnung Lnk4217](linker-tools-warning-lnk4217.md) \
 [dllexport, dllimport](../../cpp/dllexport-dllimport.md)
