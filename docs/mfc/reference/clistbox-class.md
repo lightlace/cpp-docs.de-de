@@ -103,10 +103,10 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778766"
 ---
 # <a name="clistbox-class"></a>CListBox-Klasse
@@ -1143,7 +1143,7 @@ int SelItemRange(
 
 ### <a name="parameters"></a>Parameter
 
-*bWählen*<br/>
+*bSelect*<br/>
 Gibt an, wie die Auswahl festgelegt. Wenn *bWählen* ist "true", die Zeichenfolge ausgewählt und hervorgehoben ist; False gibt an, die Hervorhebung wird entfernt, und die Zeichenfolge nicht mehr ausgewählt ist.
 
 *nFirstItem*<br/>
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parameter
 
-*. nalles auswählen*<br/>
+*nSelect*<br/>
 Gibt den nullbasierten Index der Zeichenfolge, die ausgewählt werden. Wenn *. nalles auswählen* ist-1 und keine Auswahl im Listenfeld festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1412,7 +1412,7 @@ int SetSel(
 *nIndex*<br/>
 Enthält den nullbasierten Index der Zeichenfolge, die festgelegt werden. Wenn-1 und die Auswahl hinzugefügt oder aus allen Zeichenfolgen, abhängig vom Wert entfernt *bWählen*.
 
-*bWählen*<br/>
+*bSelect*<br/>
 Gibt an, wie die Auswahl festgelegt. Wenn *bWählen* ist "true", die Zeichenfolge ausgewählt und hervorgehoben ist; False gibt an, die Hervorhebung wird entfernt, und die Zeichenfolge nicht mehr ausgewählt ist. Die angegebene Zeichenfolge ist aktiviert und standardmäßig markiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1544,6 +1544,6 @@ Ein Wert zurückgegeben, der größer oder gleich 0 gibt den Index eines Element
 [CWnd-Klasse](../../mfc/reference/cwnd-class.md)<br/>
 [CButton-Klasse](../../mfc/reference/cbutton-class.md)<br/>
 [CComboBox-Klasse](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CEdit-Klasse](../../mfc/reference/cedit-class.md)<br/>
 [CScrollBar-Klasse](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic-Klasse](../../mfc/reference/cstatic-class.md)

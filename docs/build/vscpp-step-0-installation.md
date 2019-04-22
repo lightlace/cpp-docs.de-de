@@ -1,5 +1,5 @@
 ---
-title: Installieren von C++-Unterstützung in Visual Studio
+title: Installieren der C++-Unterstützung in Visual Studio
 description: Installieren Sie Visual Studio-Unterstützung für Visual C++
 ms.custom: mvc
 ms.date: 04/02/2019
@@ -7,13 +7,13 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 2c2bed4063194bdc3c0f3fbc405be6bf9a4031e7
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870779"
 ---
-# <a name="install-c-support-in-visual-studio"></a>Installieren von C++-Unterstützung in Visual Studio
+# <a name="install-c-support-in-visual-studio"></a>Installieren der C++-Unterstützung in Visual Studio
 
 Wenn Sie noch nicht heruntergeladen und Visual Studio und Visual C++-Tools noch nicht installiert, sieht aus wie für den Einstieg.
 
@@ -146,7 +146,7 @@ Weitere Informationen zu den freien Speicherplatz und den Anforderungen des Betr
 1. Laden Sie das neueste Visual Studio 2017-Installationsprogramm für Windows herunter.
 
    > [!div class="nextstepaction"]
-   > [Installieren Sie Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+   > [Installieren von Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
    > Die Community Edition eignet sich für einzelne Entwickler, Schulungsumgebungen, akademische Forschung und Open Source-Entwicklung. Installieren Sie für andere Verwendungen [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) oder [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).

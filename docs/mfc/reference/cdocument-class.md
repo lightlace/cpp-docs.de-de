@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774182"
 ---
 # <a name="cdocument-class"></a>CDocument-Klasse
@@ -375,7 +375,7 @@ virtual POSITION FindChunk(
 *guid*<br/>
 Gibt die GUID eines Blocks gefunden.
 
-*PID*<br/>
+*pid*<br/>
 Gibt an, eine PID eines Blocks gefunden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1044,7 +1044,7 @@ virtual void ReleaseFile(
 
 ### <a name="parameters"></a>Parameter
 
-*pFile-Datei*<br/>
+*pFile*<br/>
 Ein Zeiger auf das CFile-Objekt, das freigegeben werden.
 
 *bAbort*<br/>
@@ -1070,10 +1070,10 @@ virtual void RemoveChunk(
 
 ### <a name="parameters"></a>Parameter
 
-*GUID*<br/>
+*Guid*<br/>
 Gibt die GUID eines Blocks entfernt werden soll.
 
-*PID*<br/>
+*Pid*<br/>
 Gibt an, die PID eines Blocks entfernt werden soll.
 
 ### <a name="remarks"></a>Hinweise

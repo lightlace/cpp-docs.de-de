@@ -183,10 +183,10 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
 ms.openlocfilehash: 92f5adcea50e660ecfad131313247e118312e609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781262"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl-Klasse
@@ -755,7 +755,7 @@ BOOL EnableButton(
 *nID*<br/>
 Der Befehl Bezeichner der Schaltfläche zum Aktivieren oder deaktivieren.
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 True, um die Schaltfläche zu aktivieren. FALSE, wenn die Schaltfläche zu deaktivieren.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1324,7 +1324,7 @@ int HitTest(LPPOINT ppt) const;
 
 ### <a name="parameters"></a>Parameter
 
-*PPT*<br/>
+*ppt*<br/>
 Ein Zeiger auf eine [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die die X-Koordinate des Treffertests in enthält die `x` Element und die y-Koordinate des der Treffer im Testen der `y` Member. Die Koordinaten sind relativ zum Clientbereich für die Sie auf der Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1427,7 +1427,7 @@ BOOL InsertMarkHitTest(
 
 ### <a name="parameters"></a>Parameter
 
-*PPT*<br/>
+*ppt*<br/>
 Ein Zeiger auf eine [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die den Treffertest enthält Koordinaten relativ zum Clientbereich der Symbolleiste.
 
 *ptbim*<br/>

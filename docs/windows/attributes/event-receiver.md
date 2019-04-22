@@ -1,5 +1,5 @@
 ---
-title: Compilerattribute (C++-COM-Attribut)
+title: Event_receiver (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_receiver
@@ -13,10 +13,10 @@ helpviewer_keywords:
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
 ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023294"
 ---
 # <a name="eventreceiver"></a>event_receiver
@@ -54,7 +54,7 @@ Geben Sie *Layout_dependent* nur, wenn `type` = **com**. *Layout_dependent* ist 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Event_receiver** C++-Attribut gibt an, dass die Klasse oder Struktur, die auf das er angewendet wird einen Ereignisempfänger, verwenden das einheitliche Ereignismodell für die Visual C++ wird.
+Die **Event_receiver** C++ Attribut gibt an, dass die Klasse oder Struktur, die auf das er angewendet wird einen Ereignisempfänger, verwenden das visuelle Element kann C++ einheitliche Ereignismodell.
 
 **Event_receiver** wird zusammen mit den [Event_source](event-source.md) Attribut und die [__hook](../../cpp/hook.md) und [__unhook](../../cpp/unhook.md) Schlüsselwörter. Verwendung `event_source` zum Erstellen von Ereignisquellen. Verwendung **__hook** einen Ereignisempfänger Methoden ("Hook") Event Receiver-Methoden, Ereignisse aus einer Ereignisquelle zu verknüpfen. Verwendung **__unhook** um sie zu trennen.
 

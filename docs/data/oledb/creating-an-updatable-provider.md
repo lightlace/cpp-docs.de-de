@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
 ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024737"
 ---
 # <a name="creating-an-updatable-provider"></a>Erstellen eines aktualisierbaren Anbieters
@@ -121,7 +121,7 @@ Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Dahe
 
    Wenn Sie implementieren `IRowsetUpdateImpl`, müssen Sie die folgenden Eigenschaften festlegen für den Anbieter darüber hinaus mit dem Festlegen aller Eigenschaften für `IRowsetChangeImpl` oben aufgeführt:
 
-   - `DBPROP_IRowsetUpdate`sein.
+   - `DBPROP_IRowsetUpdate`.
 
    - `DBPROP_OWNINSERT`: READ_ONLY und VARIANT_TRUE ist erforderlich.
 
@@ -133,7 +133,7 @@ Beachten Sie, dass `IRowsetUpdateImpl` leitet sich von `IRowsetChangeImpl`. Dahe
 
    - `DBPROP_REMOVEDELETED`: READ_ONLY und VARIANT_TRUE ist erforderlich.
 
-   - `DBPROP_MAXPENDINGROWS`sein.
+   - `DBPROP_MAXPENDINGROWS`.
 
    > [!NOTE]
    > Wenn Sie Benachrichtigungen unterstützen, müssen Sie auch einige andere Eigenschaften sowie möglicherweise; finden Sie im Abschnitt `IRowsetNotifyCP` für diese Liste.
@@ -436,4 +436,4 @@ Dieser Code gibt an, unter anderem, dass die Spalte den Standardwert 0 (null) un
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen eines OLE DB-Anbieters](creating-an-ole-db-provider.md)
+[Erstellen eines OLE DB-Anbieters](creating-an-ole-db-provider.md)

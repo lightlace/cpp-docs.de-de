@@ -49,10 +49,10 @@ helpviewer_keywords:
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
 ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021468"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Systeminterne Funktionen "_InterlockedCompareExchange"
@@ -178,13 +178,13 @@ __int64 _InterlockedCompareExchange64_rel(
 
 #### <a name="parameters"></a>Parameter
 
-*Destination*<br/>
+*Ziel*<br/>
 [in, out] Zeiger auf den Zielwert. Das Zeichen wird ignoriert.
 
 *Exchange*<br/>
 [in] Exchange-Wert. Das Zeichen wird ignoriert.
 
-*Comparand-Parameter*<br/>
+*Comparand*<br/>
 [in] Wert, der Vergleich mit dem Ziel. Das Zeichen wird ignoriert.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -197,12 +197,12 @@ Der Rückgabewert ist der Anfangswert des `Destination`-Zeigers.
 |---------------|------------------|------------|
 |`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
-|`_InterlockedCompareExchange_np`ist `_InterlockedCompareExchange16_np`ist `_InterlockedCompareExchange64_np`|x64|\<intrin.h>|
+|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|x64|\<intrin.h>|
 |`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Hinweise
 
-`_InterlockedCompareExchange` Führt einen atomarischen Vergleich der `Destination` Wert mit einer der `Comparand` Wert. Wenn der `Destination`-Wert gleich dem `Comparand`-Wert ist, wird der `Exchange`-Wert in der von `Destination` angegebenen Adresse gespeichert. Andernfalls wird kein Vorgang ausgeführt.
+`_InterlockedCompareExchange` führt einen atomaren Vergleich des `Destination`-Werts mit dem `Comparand`-Wert durch. Wenn der `Destination`-Wert gleich dem `Comparand`-Wert ist, wird der `Exchange`-Wert in der von `Destination` angegebenen Adresse gespeichert. Andernfalls wird kein Vorgang ausgeführt.
 
 `_InterlockedCompareExchange` bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) Funktion.
 
@@ -436,7 +436,7 @@ int main(
 ## <a name="see-also"></a>Siehe auch
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)<br/>
-[Systeminterne Funktionen „_InterlockedCompareExchangePointer“](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)<br/>
+[Intrinsische Funktionen „_InterlockedCompareExchangePointer“](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)<br/>
 [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
 [Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
 [Konflikt mit dem x86-Compiler](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

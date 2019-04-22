@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 ms.openlocfilehash: 563cf73299c00413889ada2520b1bf4fcd86f2be
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023697"
 ---
 # <a name="dialog-box-controls-c"></a>Dialogfeld-Steuerelemente (C++)
@@ -41,14 +41,14 @@ Die Standardsteuerelemente sind in der **Toolbox** Standardwert Ereignisse sind:
 |[Schaltflächen-Steuerelement](../mfc/reference/cbutton-class.md)|BN_CLICKED|
 |[Kontrollkästchen-Steuerelement](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[Kombinationsfeld-Steuerelement](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Bearbeitungssteuerelement](../mfc/reference/cedit-class.md)|EN_CHANGE-EREIGNIS|
+|[Steuerelement bearbeiten](../mfc/reference/cedit-class.md)|EN_CHANGE-EREIGNIS|
 |Gruppenfeld|(nicht zutreffend)|
 |[Listenfeld-Steuerelement](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
 |[Optionsfeld-Steuerelement](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[Statischer Text-Steuerelement](../mfc/reference/cstatic-class.md)|(nicht zutreffend)|
 |[Bildsteuerelement](../mfc/reference/cpictureholder-class.md)|(nicht zutreffend)|
 |[Rich Edit 2.0-Steuerelement](../mfc/using-cricheditctrl.md)|EN_CHANGE-EREIGNIS|
-|[Scrollleisten-Steuerelement](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
+|[Bildlaufleisten-Steuerelement](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
 > [!NOTE]
 > Weitere Informationen zur Verwendung der **RichEdit 1.0** mit MFC zu steuern, finden Sie unter [Verwenden des RichEdit 1.0-Steuerelements mit MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) und [Rich bearbeiten Beispiele für](../mfc/rich-edit-control-examples.md).
@@ -62,10 +62,10 @@ Die [Windows-Standardsteuerelemente](../mfc/controls-mfc.md) zur Verfügung, in 
 |[Statuskontrolle](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
 |[Abkürzungstasten-Steuerelement](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
 |[Listensteuerelement](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[Baumsteuerelement](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Registersteuerelement](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[Animationssteuerelement](../mfc/using-an-animation-control.md)|ACN_START|
-|[Datums-/Zeitauswahl-Steuerelement](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
+|[Strukturansicht-Steuerelement](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
+|[Registerkarten-Steuerelement](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
+|[Animation-Steuerelement](../mfc/using-an-animation-control.md)|ACN_START|
+|[Datums-/ Zeitauswahl-Steuerelement](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
 |[Monatskalender-Steuerelement](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
 |[IP-Adressensteuerelement](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
 |[Erweitertes Kombinationsfeld-Steuerelement](../mfc/creating-an-extended-combo-box-control.md)||

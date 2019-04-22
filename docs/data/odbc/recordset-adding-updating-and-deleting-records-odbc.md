@@ -19,10 +19,10 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
 ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024607"
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Recordset: Hinzufügen, aktualisieren und Löschen von Datensätzen (ODBC)
@@ -51,7 +51,7 @@ In der folgenden Tabelle ist zusammengefasst, welche Optionen für Recordsets zu
 
 ### <a name="recordset-readupdate-options"></a>Lese- und Aktualisierungsoptionen von Recordsets
 
-|Typ|Thema|Datensatz bearbeiten|Datensatz löschen|Neue hinzufügen (anhängen)|
+|Typ|Lesen|Datensatz bearbeiten|Datensatz löschen|Neue hinzufügen (anhängen)|
 |----------|----------|-----------------|-------------------|------------------------|
 |Schreibgeschützt|J|N|N|N|
 |Nur erweiterbar|J|N|N|J|
@@ -65,9 +65,9 @@ Ein Recordset-Objekt ist aktualisierbar, wenn die Datenquelle aktualisierbar ist
 
 1. Aufrufen des Recordset-Objekts [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) Member-Funktion.
 
-   `CanUpdate` Gibt einen Wert ungleich NULL zurück, wenn das Recordset aktualisierbar ist.
+   `CanUpdate` gibt einen Wert ungleich 0 (null) zurück, falls das Recordset aktualisierbar ist.
 
-Standardmäßig sind Recordsets aktualisierbar (durchführen können `AddNew`, `Edit`, und `Delete` Vorgänge). Sie können jedoch auch die [AppendOnly](../../mfc/reference/crecordset-class.md#open) können aktualisierbare Recordsets zu öffnen. Zu einem auf diese Weise geöffneten Recordset können Sie lediglich mit `AddNew` neue Datensätze hinzufügen. Sie können keine vorhandenen Datensätze bearbeiten oder löschen. Sie können testen, ob ein Recordset nur zum durch Aufrufen von Anhängen geöffnet ist die [CanAppend](../../mfc/reference/crecordset-class.md#canappend) Member-Funktion. `CanAppend` Gibt einen Wert ungleich NULL zurück, wenn das Recordset vollständig aktualisierbar ist oder nur zum Anhängen geöffnet ist.
+Standardmäßig sind Recordsets aktualisierbar (durchführen können `AddNew`, `Edit`, und `Delete` Vorgänge). Sie können jedoch auch die [AppendOnly](../../mfc/reference/crecordset-class.md#open) können aktualisierbare Recordsets zu öffnen. Zu einem auf diese Weise geöffneten Recordset können Sie lediglich mit `AddNew` neue Datensätze hinzufügen. Sie können keine vorhandenen Datensätze bearbeiten oder löschen. Sie können testen, ob ein Recordset nur zum durch Aufrufen von Anhängen geöffnet ist die [CanAppend](../../mfc/reference/crecordset-class.md#canappend) Member-Funktion. `CanAppend` gibt einen Wert ungleich 0 (null) zurück, wenn das Recordset vollständig aktualisierbar ist oder nur zum Anhängen geöffnet ist.
 
 Der folgende Codeausschnitt zeigt, wie Sie `CanUpdate` in einem Recordset-Objekt mit dem Namen `rsStudentSet` aufrufen können:
 
@@ -94,7 +94,7 @@ Sie können neue Datensätze zu einem Recordset hinzufügen, wenn die [CanAppend
 
 1. Aufrufen des Recordset-Objekts [AddNew](../../mfc/reference/crecordset-class.md#addnew) Member-Funktion.
 
-   `AddNew` Bereitet das Recordset als Bearbeitungspuffer fungieren. Alle Felddatenmember werden auf den Spezialwert Null festgelegt und als nicht geändert markiert, sodass nur geänderte Werte an die Datenquelle, beim Aufrufen geschrieben werden [Update](../../mfc/reference/crecordset-class.md#update).
+   `AddNew` bereitet das Recordset so vor, dass dieses als Bearbeitungspuffer fungieren kann. Alle Felddatenmember werden auf den Spezialwert Null festgelegt und als nicht geändert markiert, sodass nur geänderte Werte an die Datenquelle, beim Aufrufen geschrieben werden [Update](../../mfc/reference/crecordset-class.md#update).
 
 1. Stellen Sie die Werte der Felddatenmember des neuen Datensatzes ein.
 
@@ -139,7 +139,7 @@ Sie können vorhandene Datensätze bearbeiten, wenn des Recordsets [CanUpdate](.
 
 1. Aufrufen des Recordset-Objekts [bearbeiten](../../mfc/reference/crecordset-class.md#edit) Member-Funktion.
 
-   `Edit` Bereitet das Recordset als Bearbeitungspuffer fungieren. Alle Felddatenmember werden so markiert, dass das Recordset später feststellen kann, ob sie geändert wurden. Die neuen Werte für die geänderten Felddatenmember werden an die Datenquelle geschrieben, wenn Sie aufrufen [Update](../../mfc/reference/crecordset-class.md#update).
+   `Edit` bereitet das Recordset so vor, dass dieses als Bearbeitungspuffer fungieren kann. Alle Felddatenmember werden so markiert, dass das Recordset später feststellen kann, ob sie geändert wurden. Die neuen Werte für die geänderten Felddatenmember werden an die Datenquelle geschrieben, wenn Sie aufrufen [Update](../../mfc/reference/crecordset-class.md#update).
 
 1. Stellen Sie die Werte der Felddatenmember des neuen Datensatzes ein.
 

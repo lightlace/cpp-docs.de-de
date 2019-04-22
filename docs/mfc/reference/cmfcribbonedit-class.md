@@ -74,10 +74,10 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
 ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780482"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit-Klasse
@@ -187,7 +187,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in] Die Bezeichnung für die `CMFCRibbonEdit` Steuerelement.
 
-*Nbild*<br/>
+*nImage*<br/>
 [in] Index der kleine Bilder haben die für die Verwendung der `CMFCRibbonEdit` Steuerelement. Die Auflistung der kleinen Bilder wird von der übergeordneten Menübandkategorie verwaltet.
 
 ### <a name="remarks"></a>Hinweise
@@ -555,7 +555,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True, um das Steuerelement zu aktivieren. So deaktivieren Sie das Steuerelement wird false ZURÜCKGEGEBEN.
 
 ### <a name="remarks"></a>Hinweise
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Zeiger auf das übergeordnete Fenster für die `CMFCRibbonEdit` Objekt.
 
-*Daten*<br/>
+*data*<br/>
 Die barrierefreiheitsdaten für das `CMFCRibbonEdit` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert

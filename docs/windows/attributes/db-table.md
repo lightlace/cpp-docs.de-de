@@ -1,5 +1,5 @@
 ---
-title: Db_table (C++-COM-Attribut)
+title: Db_table (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_table
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
 ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023866"
 ---
 # <a name="dbtable"></a>db_table
@@ -28,13 +28,13 @@ ms.locfileid: "59023866"
 *db_table*<br/>
 Eine Zeichenfolge, die den Namen einer Datenbanktabelle (z. B. "Produkte") angeben.
 
-*Name*<br/>
+*name*<br/>
 (Optional) Der Name des Handles, die Sie verwenden, um die Arbeit mit der Tabelle. Sie müssen diesen Parameter angeben, wenn mehr als eine Zeile mit Ergebnissen zurückgegeben werden soll. **Db_table** generiert eine Variable mit dem angegebenen *Namen* , die verwendet werden kann, um das Rowset zu traversieren oder mehrere Aktionsabfragen auszuführen.
 
 *source_name*<br/>
 (Optional) Die `CSession` Variable oder eine Instanz einer Klasse, die die `db_source` -Attribut angewendet, auf dem der Befehl ausgeführt wird. Informationen hierzu finden Sie unter [db_source](db-source.md).
 
-*HRESULT*<br/>
+*hresult*<br/>
 (Optional) Identifiziert die Variable, die das HRESULT des diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.
 
 ## <a name="remarks"></a>Hinweise

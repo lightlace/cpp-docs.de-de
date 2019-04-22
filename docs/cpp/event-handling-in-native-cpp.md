@@ -5,15 +5,15 @@ helpviewer_keywords:
 - event handling [C++], Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
 ms.openlocfilehash: 93bfcc93c680618ea3a51eabd145548a4f47563a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772331"
 ---
 # <a name="event-handling-in-native-c"></a>Ereignisbehandlung in systemeigenem C++
 
-In systemeigenen C++-Ereignisbehandlung richten Sie eine Ereignisquelle und einen Ereignisempfänger mithilfe der [Event_source](../windows/attributes/event-source.md) und [Event_receiver](../windows/attributes/event-receiver.md) -Attribute angeben `type` = `native`. Diese Attribute ermöglichen es den Klassen, auf die sie angewendet werden, in einem systemeigenen Nicht-COM-Kontext Ereignisse auszulösen und Ereignisse zu behandeln.
+In systemeigenen C++ Ereignisbehandlung müssen Sie eine Ereignisquelle und einen Ereignisempfänger mithilfe der [Event_source](../windows/attributes/event-source.md) und [Event_receiver](../windows/attributes/event-receiver.md) -Attribute angeben `type` =`native`. Diese Attribute ermöglichen es den Klassen, auf die sie angewendet werden, in einem systemeigenen Nicht-COM-Kontext Ereignisse auszulösen und Ereignisse zu behandeln.
 
 ## <a name="declaring-events"></a>Deklarieren von Ereignissen
 

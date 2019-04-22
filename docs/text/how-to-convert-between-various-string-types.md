@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
 ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778324"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Vorgehensweise: Konvertieren Sie zwischen verschiedenen Zeichenfolgentypen
@@ -459,9 +459,9 @@ Hello, World! (System::String)
 
 ### <a name="description"></a>Beschreibung
 
-In diesem Beispiel wird veranschaulicht, wie ein `CString` in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird. `CString` basiert auf dem TCHAR-Datentyp, der wiederum, ob abhängt das Symbol `_UNICODE` definiert ist. Ist `_UNICODE` nicht definiert, wird `TCHAR` für char definiert und `CString` enthält eine Mehrbytezeichenzeichenfolge. Wenn `_UNICODE` definiert ist, wird `TCHAR` für `wchar_t` definiert, und `CString` enthält eine Zeichenfolge mit Breitzeichen.
+In diesem Beispiel wird veranschaulicht, wie ein `CString` in die anderen oben aufgeführten Zeichenfolgentypen konvertiert wird. `CString` basiert auf dem TCHAR-Datentyp, der davon abhängt, ob das `_UNICODE`-Symbol definiert ist. Ist `_UNICODE` nicht definiert, wird `TCHAR` für char definiert und `CString` enthält eine Mehrbytezeichenzeichenfolge. Wenn `_UNICODE` definiert ist, wird `TCHAR` für `wchar_t` definiert, und `CString` enthält eine Zeichenfolge mit Breitzeichen.
 
-`CStringA` ist die Multibyte-Zeichenfolgenversion von `CString`, `CStringW` ist die einzige Version des Breitzeichen-Zeichenfolge. Weder`CStringA` noch `CStringW` bestimmt mithilfe von `_UNICODE`, wie kompiliert werden soll. `CStringA` und `CStringW` werden in diesem Beispiel verwendet, um kleinere Unterschiede in den Puffer größenzuordnung verdeutlichen und ausgabebehandlung aufzuklären.
+`CStringA` ist die Multibyte-Zeichenfolgenversion von `CString`, `CStringW` ist die Version mit ausschließlich Zeichenfolgen mit Breitzeichen. Weder`CStringA` noch `CStringW` bestimmt mithilfe von `_UNICODE`, wie kompiliert werden soll. `CStringA` und `CStringW` werden in diesem Beispiel verwendet, um kleinere Unterschiede in der Puffergrößenzuordnung und Ausgabebehandlung aufzuklären.
 
 ### <a name="code"></a>Code
 
@@ -803,9 +803,9 @@ Hello, World! (basic_string)
 ## <a name="see-also"></a>Siehe auch
 
 [ATL und MFC-Zeichenfolgen-Konvertierungsmakros](../atl/reference/string-conversion-macros.md)<br/>
-[CString-Vorgänge bei Zeichenfolgen im C-Format](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[Vorgehensweise: Konvertieren einer Standardzeichenfolge nach System:: String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[Vorgehensweise: Konvertieren von System:: String zu Standardzeichenfolge](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[CString-Operationen bei Zeichenfolgen im C-Format](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
+[Vorgehensweise: Konvertieren einer Standardzeichenfolge nach System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[Vorgehensweise: Konvertieren von System::String zu Standardzeichenfolge](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
 [Vorgehensweise: Konvertieren von System:: String in Wchar_t * oder char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [Programmieren mit CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>

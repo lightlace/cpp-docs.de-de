@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
 ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775971"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Vorgehensweise: Zugreifen auf Zeichen in einem System:: String
@@ -22,7 +22,7 @@ Sie erreichen die Zeichen einer <xref:System.String> -Objekt für Hochleistungs-
 
 `PtrToStringChars` Gibt eine <xref:System.Char>, d.h. ein innerer Zeiger (auch bekannt als eine `byref`). Daher ist es während der Garbagecollection. Sie müssen diesen Zeiger anheften, es sei denn, man es an eine native Funktion übergeben.
 
-Betrachten Sie folgenden Code.  Anheften von Zertifikaten ist nicht erforderlich, da `ppchar` ein innerer Zeiger ist, und wenn der Garbage Collector die Zeichenfolge das Objekt zeigt verschiebt auf, auch aktualisiert `ppchar`. Ohne eine [Pin_ptr (C++ / CLI)](../extensions/pin-ptr-cpp-cli.md), funktioniert der Code, und haben nicht die potenziellen Leistungseinbußen durch Anheften von verursacht.
+Betrachten Sie folgenden Code.  Anheften von Zertifikaten ist nicht erforderlich, da `ppchar` ein innerer Zeiger ist, und wenn der Garbage Collector die Zeichenfolge das Objekt zeigt verschiebt auf, auch aktualisiert `ppchar`. Ohne eine [Pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), funktioniert der Code, und haben nicht die potenziellen Leistungseinbußen durch Anheften von verursacht.
 
 Wenn Sie übergeben `ppchar` an eine native Funktion, klicken Sie dann es muss eine feste Zeiger, da der Garbage Collector keine Zeiger auf den nicht verwalteten Stapelrahmen zu aktualisieren.
 

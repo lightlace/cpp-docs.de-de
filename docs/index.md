@@ -5,10 +5,10 @@ description: Erfahren Sie, wie Sie mit C++ Anwendungen, Dienste und Tools für I
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898673"
 ---
 <div id="main" class="v2">
@@ -74,10 +74,10 @@ ms.locfileid: "58898673"
         <h1>Visual C++–Dokumentation</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">Arbeitslasten</a>
+                <a href="#workloads">Arbeitsauslastungen</a>
                 <ul id="workloads">
                     <li>
-                        <a href="#workloads1">Arbeitslasten</a>
+                        <a href="#workloads1">Arbeitsauslastungen</a>
                         <ul id="workloads1" class="cardsC">
                             <li>
                                 <a href="/cpp/cppcx/universal-windows-apps-cpp">
@@ -90,7 +90,7 @@ ms.locfileid: "58898673"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Entwicklung für die universelle Windows-Plattform</h3>
+                                                    <h3>Entwicklung auf der universellen Windows-Plattform</h3>
                                                     <p>Entwickeln Sie Apps für die universelle Windows-Plattform (UWP) mit C++.</p>
                                                 </div>
                                             </div>
@@ -198,10 +198,10 @@ ms.locfileid: "58898673"
                 </ul>
             </li>
             <li>
-                <a href="#features">Features</a>
+                <a href="#features">Funktionen</a>
                 <ul id="features">
                     <li>
-                        <a href="#features1">Features</a>
+                        <a href="#features1">Funktionen</a>
                         <ul id="features1" class="cardsC">
                             <li>
                                 <a href="/cpp/ide/writing-and-refactoring-code-cpp">
