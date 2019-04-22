@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
 ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777674"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Vorgehensweise: Marshal Unicode Strings Using C++ Interop
@@ -30,7 +30,7 @@ In diesem Thema wird veranschaulicht, wie Unicode-Zeichenfolgen werden, können 
 
 ## <a name="example"></a>Beispiel
 
-Um eine Unicode-Zeichenfolge von einer verwalteten an eine nicht verwaltete Funktion übergeben werden soll, kann die PtrToStringChars-Funktion (deklariert in Vcclr.h) verwendet werden, Zugriff auf den Speicher, in dem die verwaltete Zeichenfolge gespeichert wird. Da diese Adresse an eine native Funktion übergeben wird, ist es wichtig, dass der Arbeitsspeicher mit angeheftet werden [Pin_ptr (C++ / CLI)](../extensions/pin-ptr-cpp-cli.md) um zu verhindern, dass die Zeichenfolgendaten verschoben wird, sollte ein Garbage Collection-Zyklus stattfinden und der nicht verwaltete Funktion ausgeführt wird.
+Um eine Unicode-Zeichenfolge von einer verwalteten an eine nicht verwaltete Funktion übergeben werden soll, kann die PtrToStringChars-Funktion (deklariert in Vcclr.h) verwendet werden, Zugriff auf den Speicher, in dem die verwaltete Zeichenfolge gespeichert wird. Da diese Adresse an eine native Funktion übergeben wird, ist es wichtig, dass der Arbeitsspeicher mit angeheftet werden [Pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) um zu verhindern, dass die Zeichenfolgendaten verschoben wird, sollte ein Garbage Collection-Zyklus stattfinden und der nicht verwaltete Funktion ausgeführt wird.
 
 ```
 // MarshalUnicode1.cpp

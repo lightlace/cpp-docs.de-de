@@ -21,10 +21,10 @@ helpviewer_keywords:
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
 ms.openlocfilehash: 1f6e66ae4d5524518c3388f5af843cc15f65da50
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024529"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedExchangePointer“
@@ -79,7 +79,7 @@ Die Funktion gibt den Anfangswert zurück, auf den `Target` zeigt.
 |Systemintern|Architektur|Header|
 |---------------|------------------|------------|
 |`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedExchangePointer_acq`ist `_InterlockedExchangePointer_rel`ist `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
+|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
 |`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|X64 mit HLE-Unterstützung|\<immintrin.h>|
 
 In der x86-Architektur ist `_InterlockedExchangePointer` ein Makro, das `_InterlockedExchange` aufruft.

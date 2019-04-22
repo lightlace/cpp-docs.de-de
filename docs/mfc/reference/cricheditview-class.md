@@ -101,10 +101,10 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
 ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773722"
 ---
 # <a name="cricheditview-class"></a>CRichEditView-Klasse
@@ -298,7 +298,7 @@ Gibt an, ob es sich bei der Suche die Groß-/Kleinschreibung beachtet wird.
 *bWord*<br/>
 Gibt an, wenn die Suche nur ganze Wörter nicht Teilen von Wörtern übereinstimmen soll.
 
-*bWeiter*<br/>
+*bNext*<br/>
 Gibt die Richtung für die Suche. Wenn TRUE, ist die suchrichtung zum Ende des Puffers. False gibt an, wird die Suche Richtung am Anfang des Puffers.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -336,7 +336,7 @@ Gibt an, ob es sich bei der Suche die Groß-/Kleinschreibung beachtet wird.
 *bWord*<br/>
 Gibt an, wenn die Suche nur ganze Wörter nicht Teilen von Wörtern übereinstimmen soll.
 
-*bWeiter*<br/>
+*bNext*<br/>
 Gibt die Richtung für die Suche. Wenn TRUE, ist die suchrichtung zum Ende des Puffers. False gibt an, wird die Suche Richtung am Anfang des Puffers.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -786,7 +786,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Die zu suchende Zeichenfolge.
 
-*bWeiter*<br/>
+*bNext*<br/>
 Die Richtung zu suchen: TRUE gibt an, nach unten; False gibt an, auf.
 
 *bCase*<br/>
@@ -932,7 +932,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 Der Text ersetzt werden.
 
-*bWeiter*<br/>
+*bNext*<br/>
 Gibt die Richtung für die Suche an: "True" ist nicht verfügbar; False gibt an, auf.
 
 *bCase*<br/>
@@ -1287,5 +1287,5 @@ Außer Kraft setzen, die diese Funktion, die so zu ändern, die Rich--Ansicht Ed
 [MFC-Beispiel WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView-Klasse](../../mfc/reference/cctrlview-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
-[CRichEditDoc Class](../../mfc/reference/cricheditdoc-class.md)<br/>
+[CRichEditDoc-Klasse](../../mfc/reference/cricheditdoc-class.md)<br/>
 [CRichEditCntrItem-Klasse](../../mfc/reference/cricheditcntritem-class.md)

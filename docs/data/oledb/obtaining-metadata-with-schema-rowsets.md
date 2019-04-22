@@ -7,10 +7,10 @@ helpviewer_keywords:
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
 ms.openlocfilehash: 12c3de79626411b76a402a7f5407f40a7b054318
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026028"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Abrufen von Metadaten mit Schemarowsets
@@ -42,7 +42,7 @@ Wenn Sie eine Abfrage nach Schemainformationen durchführen, können Sie Einschr
 SELECT * FROM authors WHERE l_name = 'pivo'
 ```
 
-`l_name` ist eine Einschränkung. Dies ist ein einfaches Beispiel mit nur einer Einschränkung. die Schemarowset-Klassen unterstützen mehrere Einschränkungen.
+`l_name` eine Einschränkung. Dies ist ein einfaches Beispiel mit nur einer Einschränkung. die Schemarowset-Klassen unterstützen mehrere Einschränkungen.
 
 Die [Schemarowset Typedef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) zu kapseln alle OLE DB-Schemarowsets, damit Sie ein Schemarowset wie beliebiges anderes Rowset zugreifen können, durch das Instanziieren und ihn zu öffnen. Z. B. die TypeDef-Klasse [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md) ist definiert als:
 
@@ -90,4 +90,4 @@ Weitere Informationen über anbieterunterstützung für Schemarowsets finden Sie
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden von Accessoren](../../data/oledb/using-accessors.md)
+[Verwenden von Zugriffsmethoden](../../data/oledb/using-accessors.md)

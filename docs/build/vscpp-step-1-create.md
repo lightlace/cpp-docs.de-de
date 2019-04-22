@@ -7,10 +7,10 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898777"
 ---
 # <a name="create-a-c-console-app-project"></a>Erstellen eines C++-Konsolen-App-Projekts
@@ -19,7 +19,7 @@ C++-Programmierer beginnen häufig mit einer „Hallo, Welt!“- Anwendung, die 
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-- Visual Studio mit der Workload „Desktopentwicklung mit C++“ muss auf Ihrem Computer installiert sein und ausgeführt werden. Wenn sie noch nicht installiert ist, finden Sie unter [Installieren von C++-Unterstützung in Visual Studio](vscpp-step-0-installation.md).
+- Visual Studio mit der Workload „Desktopentwicklung mit C++“ muss auf Ihrem Computer installiert sein und ausgeführt werden. Ist dies noch nicht der Fall, finden Sie unter [Install C++ support in Visual Studio (Installieren von C++-Komponenten in Visual Studio)](vscpp-step-0-installation.md) weitere Informationen.
 
 ## <a name="create-your-app-project"></a>Erstellen Ihres App-Projekts
 
@@ -55,7 +55,7 @@ Visual Studio verwendet *Projekte*, um Code für eine App zu ordnen, und *Projek
 
 Visual Studio erstellt ein neues, leeres Projekt, für die Sie für die Art von app spezialisiert werden kann, die Sie erstellen und Ihre Quellcodedateien hinzufügen möchten. Sie werden als Nächstes tun.
 
-[Ich führte ein Problem aufgetreten.](#create-your-app-project-issues)
+[Ein Problem ist aufgetreten.](#create-your-app-project-issues)
 
 ## <a name="make-your-project-a-console-app"></a>Stellen Sie Ihr Projekt eine Konsolen-app
 
@@ -69,7 +69,7 @@ Visual Studio kann alle Arten von apps und Komponenten für Windows und andere P
 
 Visual Studio weiß jetzt zum Erstellen Ihres Projekts in einem Konsolenfenster ausführen. Als Nächstes, Sie fügen eine Quellcodedatei hinzu und geben Sie den Code für Ihre app.
 
-[Ich führte ein Problem aufgetreten.](#make-your-project-a-console-app-issues)
+[Ein Problem ist aufgetreten.](#make-your-project-a-console-app-issues)
 
 ## <a name="add-a-source-code-file"></a>Fügen Sie eine Quellcodedatei hinzu.
 
@@ -81,7 +81,7 @@ Visual Studio weiß jetzt zum Erstellen Ihres Projekts in einem Konsolenfenster 
 
 Visual Studio erstellt eine neue, leere Quellcodedatei und in einem Editor-Fenster, bereit für die Eingabe von Quellcode geöffnet.
 
-[Ich führte ein Problem aufgetreten.](#add-a-source-code-file-issues)
+[Ein Problem ist aufgetreten.](#add-a-source-code-file-issues)
 
 ## <a name="add-code-to-the-source-file"></a>Fügen Sie Code zur Quelldatei hinzu.
 
@@ -103,7 +103,7 @@ Visual Studio erstellt eine neue, leere Quellcodedatei und in einem Editor-Fenst
 
 Wenn der Code im Editor wie folgt aussieht, können Sie zu fahren mit dem nächsten Schritt erstellen Sie Ihre app.
 
-[Ich führte ein Problem aufgetreten.](#add-a-source-code-file-issues)
+[Ein Problem ist aufgetreten.](#add-a-source-code-file-issues)
 
 ::: moniker-end
 

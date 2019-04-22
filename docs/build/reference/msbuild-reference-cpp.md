@@ -4,10 +4,10 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild reference [C++]
 ms.openlocfilehash: b6ec6b5d276cb7104cf61c229476596d2a2a7684
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024698"
 ---
 # <a name="msbuild-reference-for-c-projects"></a>Referenz zu MSBuild für C++-Projekte
@@ -18,7 +18,7 @@ Wenn Sie MSBuild direkt über die Befehlszeile verwenden möchten, finden Sie un
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Merkmale von MSBuild für C++-Projekte](msbuild-visual-cpp-overview.md)<br/>
+[MSBuild-Interna für C++-Projekte](msbuild-visual-cpp-overview.md)<br/>
 Informationen darüber, wie Eigenschaften und Ziele gespeichert und verarbeitet werden.
 
 [Gängige Makros für Buildbefehle und -eigenschaften](common-macros-for-build-commands-and-properties.md)<br/>

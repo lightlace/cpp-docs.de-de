@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
 ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776894"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>Vorgehensweise: Marshallen von Arrays mithilfe C++-Interop
@@ -24,7 +24,7 @@ Im folgenden code, Beispiele für die Verwendung der [verwaltete, unverwaltete](
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie ein verwaltetes Array an eine nicht verwaltete Funktion übergeben wird. Die verwaltete Funktion verwendet [Pin_ptr (C++ / CLI)](../extensions/pin-ptr-cpp-cli.md) Garbagecollection für das Array vor dem Aufrufen von nicht verwalteten Funktion unterdrückt werden sollen. Durch die Bereitstellung von nicht verwalteten Funktion mit einer festen Zeiger in den GC-Heap, kann der Mehraufwand für das Erstellen einer Kopie des Arrays vermieden werden. Zu zeigen, dass die GC-Heap-Speicher wird auf die nicht verwaltete Funktion zugreifen, es ändert es sich um den Inhalt des Arrays und die Änderungen werden übernommen, bei die verwaltete Funktion Steuerung wird.
+Im folgende Beispiel wird veranschaulicht, wie ein verwaltetes Array an eine nicht verwaltete Funktion übergeben wird. Die verwaltete Funktion verwendet [Pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) Garbagecollection für das Array vor dem Aufrufen von nicht verwalteten Funktion unterdrückt werden sollen. Durch die Bereitstellung von nicht verwalteten Funktion mit einer festen Zeiger in den GC-Heap, kann der Mehraufwand für das Erstellen einer Kopie des Arrays vermieden werden. Zu zeigen, dass die GC-Heap-Speicher wird auf die nicht verwaltete Funktion zugreifen, es ändert es sich um den Inhalt des Arrays und die Änderungen werden übernommen, bei die verwaltete Funktion Steuerung wird.
 
 ```
 // PassArray1.cpp

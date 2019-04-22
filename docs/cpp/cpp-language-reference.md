@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
 ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774034"
 ---
 # <a name="c-language-reference"></a>C++-Programmiersprachenreferenz
@@ -81,7 +81,7 @@ Deklarieren von Ereignissen und Ereignishandlern.
 Microsoft C++-spezifische Modifizierer. Arbeitsspeicher adressieren, Aufrufkonventionen, **naked** Funktionen, erweiterte speicherklassenattribute (**__declspec**), **__w64**.
 
 [Inlineassembler](../assembler/inline/inline-assembler.md)<br/>
-Verwenden von Assemblysprache und C++ im **__asm** Blöcke.
+Verwenden der Assemblysprache und C++ in **__asm** Blöcke.
 
 [COM-Unterstützung des Compilers](../cpp/compiler-com-support.md)<br/>
 Ein Verweis auf Microsoft-spezifische Klassen und globale Funktionen, die zur Unterstützung von COM-Typen verwendet werden.

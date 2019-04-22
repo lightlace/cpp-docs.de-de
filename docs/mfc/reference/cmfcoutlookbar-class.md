@@ -39,10 +39,10 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
 ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775256"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar-Klasse
@@ -279,7 +279,7 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Gibt an, die besondere Bibliothek definierten Stile.
 
-*"pContext"*<br/>
+*pContext*<br/>
 [in] Erstellen von Kontext.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -458,7 +458,7 @@ virtual void OnAfterAnimation(int nPage);
 
 ### <a name="parameters"></a>Parameter
 
-*. nSeite*<br/>
+*nPage*<br/>
 [in] Der nullbasierte Index der Registerkarte, die aktiven vorgenommen wurde.
 
 ### <a name="remarks"></a>Hinweise
@@ -475,7 +475,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 
 ### <a name="parameters"></a>Parameter
 
-*. nSeite*<br/>
+*nPage*<br/>
 [in] Der nullbasierte Index der Registerkarte, die aktiv festgelegt wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -511,7 +511,7 @@ BOOL RemoveCustomPage(
 
 ### <a name="parameters"></a>Parameter
 
-*uipage fehlgeschlagen*<br/>
+*uiPage*<br/>
 [in] Nullbasierte Index der Seite in das übergeordnete Outlook-Fenster.
 
 *pTargetWnd*<br/>
@@ -578,5 +578,5 @@ Standardmäßig ist dieser Modus deaktiviert.
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Klassen](../../mfc/reference/mfc-classes.md)<br/>
 [CBaseTabbedPane-Klasse](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
+[CMFCOutlookBarTabCtrl-Klasse](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
 [CMFCOutlookBarPane-Klasse](../../mfc/reference/cmfcoutlookbarpane-class.md)

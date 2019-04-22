@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
 ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767781"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: DLL Version of MFC (nur auf Englisch verfügbar)
@@ -476,7 +476,7 @@ Eine Anwendung mit MFCxx.DLL verwendet eine allgemeine speicherbelegung von MSVC
 
 ### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>Ordnungszahlen "und" Klasse "__declspec(dllexport)" "" und "DLL-Namen
 
-Wir verwenden nicht die `class` **__declspec(dllexport)** Funktionen des C++-Compilers. Stattdessen ist eine Liste der Exporte in der Klasse Bibliothekquellen (MFCxx.DEF und MFCxxD.DEF) enthalten. Nur diese ausgewählten Satz von Einstiegspunkten (Funktionen und Daten) werden exportiert. Andere Symbole, z. B. private Implementierung von MFC-Funktionen oder Klassen werden nicht exportiert alle Exporte nach Ordnungszahl ohne einen Zeichenfolgennamen in dieser Tabelle erhält vom residenten oder nicht-residenten fertig sind.
+Wir verwenden nicht die `class` **__declspec(dllexport)** Funktionalität der C++ Compiler. Stattdessen ist eine Liste der Exporte in der Klasse Bibliothekquellen (MFCxx.DEF und MFCxxD.DEF) enthalten. Nur diese ausgewählten Satz von Einstiegspunkten (Funktionen und Daten) werden exportiert. Andere Symbole, z. B. private Implementierung von MFC-Funktionen oder Klassen werden nicht exportiert alle Exporte nach Ordnungszahl ohne einen Zeichenfolgennamen in dieser Tabelle erhält vom residenten oder nicht-residenten fertig sind.
 
 Mithilfe von `class` **__declspec(dllexport)** möglicherweise eine gute Alternative für die Erstellung kleinerer DLLs, aber bei einer großen DLL wie MFC, der Standardwert exportieren Mechanismus hat, Effizienz und Kapazität Grenzwerte.
 

@@ -1,5 +1,5 @@
 ---
-title: Db_source (C++-COM-Attribut)
+title: Db_source (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_source
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
 ms.openlocfilehash: 884cab78d64c20bef00958f0cc0319281fd69921
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026330"
 ---
 # <a name="dbsource"></a>db_source
@@ -28,10 +28,10 @@ Erstellt eine Verbindung mit einer Datenquelle.
 *db_source*<br/>
 Die Verbindungszeichenfolge für die Verbindung mit der Datenquelle verwendet wird. Das Format der Verbindungszeichenfolge finden Sie unter [Verbindungszeichenfolgen und Datenverknüpfungen](/previous-versions/windows/desktop/ms718376(v=vs.85)) in der Microsoft Data Access Components (MDAC) SDK.
 
-*Name*<br/>
+*name*<br/>
 (Optional) Bei Verwendung von **Db_source** für eine Klasse, *Namen* ist eine Instanz von einem Datenquellenobjekt an, die die **Db_source** angewendet werden (siehe Beispiel 1). Bei Verwendung von **Db_source** Inline in der Implementierung einer Methode *Namen* ist eine Variable (lokal in der Methode), die für den Datenzugriff verwendet werden kann (siehe Beispiel 2). Übergeben Sie das *Namen* auf die *Source_name* Parameter `db_command` , einen Befehl die Datenquelle zugeordnet werden soll.
 
-*HRESULT*<br/>
+*hresult*<br/>
 (Optional) Identifiziert die Variable, die das HRESULT des diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.
 
 ## <a name="remarks"></a>Hinweise

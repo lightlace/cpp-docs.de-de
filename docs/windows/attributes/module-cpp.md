@@ -7,10 +7,10 @@ helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
 ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040579"
 ---
 # <a name="module-c"></a>module (C++)
@@ -36,7 +36,7 @@ Definiert den Bibliotheksblock in der IDL-Datei.
 
 - `unspecified` Deaktiviert die Einfügung von ATL-Code im Zusammenhang mit dem Modulattribut: Einfügung der ATL-Modulklasse, globalen Instanz _AtlModule und von Einstiegspunkt zeigen Funktionen. Einfügen von ATL-Code aufgrund von anderen Attributen im Projekt wird nicht deaktiviert.
 
-*Name*<br/>
+*name*<br/>
 (Optional) Der Name des bibliotheksblocks.
 
 *version*<br/>
@@ -72,7 +72,7 @@ Gibt die Typbibliothek an.
 *restricted*<br/>
 (Optional) Mitglieder der Bibliothek können nicht beliebig aufgerufen werden. Weitere Informationen finden Sie unter [restricted](/windows/desktop/Midl/restricted) MIDL-Attribut.
 
-*Benutzerdefiniert*<br/>
+*custom*<br/>
 (Optional) Ein oder mehrere Attribute; Dies ist vergleichbar mit der [benutzerdefinierte](custom-cpp.md) Attribut. Der erste Parameter für *benutzerdefinierte* ist die GUID des Attributs. Zum Beispiel:
 
 ```
@@ -95,15 +95,15 @@ Pro IDL-Datei ist ein Bibliotheksblock zulässig. Mehrere Modul-Einträge im Que
 
 Wenn dieses Attribut in einem Projekt verwendet wird, das ATL verwendet, ändert sich das Verhalten des Attributs. Zusätzlich zu den oben beschriebenen Verhalten fügt das Attribut auch ein globales Objekt (namens `_AtlModule`) mit den korrekten Typ und Code für zusätzliche Unterstützung. Wenn das Attribut eigenständig ist, wird eine von dem richtigen Modultyp abgeleitete Klasse eingefügt. Wenn das Attribut auf eine Klasse angewendet wird, wird eine Basisklasse des richtigen Modultyps hinzugefügt. Der richtige Typ wird durch den Wert bestimmt die *Typ* Parameter:
 
-- `type` = **DLL**
+- `type` = **dll**
 
    [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) dient als Basisklasse und als für einen COM-Server erforderliche Standard-DLL-Einstiegspunkte. Diese Einstiegspunkte sind [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)und [DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
-- `type` = **EXE-Datei**
+- `type` = **exe**
 
    [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) dient als Basisklasse und ausführbarer Standardeinstiegspunkt [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
-- `type` = **Dienst**
+- `type` = **service**
 
    [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) dient als Basisklasse und ausführbarer Standardeinstiegspunkt [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
@@ -166,7 +166,7 @@ Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net
 [Eigenständige Attribute](stand-alone-attributes.md)<br/>
 [typedef-, enum-, union- und struct-Attribute](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[Bibliothek](/windows/desktop/Midl/library)<br/>
+[library](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

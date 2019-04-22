@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
 ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776803"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
@@ -148,7 +148,7 @@ void AddControl(
 *pWndCtrl*<br/>
 [in] Ein Zeiger auf ein Steuerelement hinzufügen.
 
-*lpszName*<br/>
+*Wert*<br/>
 [in] Gibt den Namen der Registerkarte an.
 
 *bDetachable*<br/>
@@ -246,7 +246,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Gibt an, ob die Animation aktiviert oder deaktiviert werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -265,7 +265,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Bei "true", ermöglichen Sie die direkte Bearbeitung der textbezeichnung. False gibt an, deaktivieren Sie die direkte Bearbeitung aus.
 
 ### <a name="remarks"></a>Hinweise
@@ -285,7 +285,7 @@ void EnableScrollButtons(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Bestimmt, ob die Bildlauf-Schaltflächen angezeigt werden.
 
 *bIsUp*<br/>
@@ -508,6 +508,6 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [Klassen](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
+[CMFCBaseTabCtrl-Klasse](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
 [CMFCOutlookBar-Klasse](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
 [CMFCOutlookBarPane-Klasse](../../mfc/reference/cmfcoutlookbarpane-class.md)

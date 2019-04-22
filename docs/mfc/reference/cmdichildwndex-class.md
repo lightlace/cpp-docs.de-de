@@ -113,10 +113,10 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
 ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781756"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx-Klasse
@@ -547,7 +547,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Ein Zeiger auf angrenzenden Bereich.
 
-*bNach*<br/>
+*bAfter*<br/>
 [in] True gibt an, *pControlBar* eingefügt wird, nach dem *pTarget*. False gibt an, *pControlBar* eingefügt wird, bevor Sie *pTarget*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1152,7 +1152,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob aktiviert (TRUE) oder deaktiviert (FALSE), automatische Auswahl eines Teils des Clientbereichs eines Fensters angezeigt.
 
 ### <a name="remarks"></a>Hinweise

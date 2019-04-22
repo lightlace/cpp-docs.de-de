@@ -9,10 +9,10 @@ helpviewer_keywords:
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
 ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023242"
 ---
 # <a name="section"></a>section
@@ -37,10 +37,10 @@ Sobald ein Abschnitt definiert wurde, bleibt er für den Rest der Kompilierung g
 
 |Attribut|Beschreibung|
 |-|-|
-|**Lesen**|Ermöglicht Lesevorgänge für Daten.|
-|**Schreiben**|Ermöglicht Schreibvorgänge für Daten.|
+|**read**|Ermöglicht Lesevorgänge für Daten.|
+|**write**|Ermöglicht Schreibvorgänge für Daten.|
 |**execute**|Ermöglicht die Ausführung von Code.|
-|**Freigegeben**|Gibt den Abschnitt für alle Prozesse frei, die das Image laden.|
+|**shared**|Gibt den Abschnitt für alle Prozesse frei, die das Image laden.|
 |**nopage**|Markiert den Abschnitt als nicht auslagerbar; nützlich für Win32-Gerätetreiber.|
 |**nocache**|Markiert den Abschnitt als nicht zwischenspeicherbar; nützlich für Win32-Gerätetreiber.|
 |**discard**|Markiert den Abschnitt als entfernbar; nützlich für Win32-Gerätetreiber.|

@@ -157,10 +157,10 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778558"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx-Klasse
@@ -641,7 +641,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] TRUE, um das Laden von den andockzustand, "false" zu aktivieren, um das Laden der Andockstatus zu deaktivieren.
 
 ### <a name="remarks"></a>Hinweise
@@ -658,7 +658,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] True gibt an, ist das MDI-Gruppen im Registerkartenformat-Feature aktiviert; Wenn "FALSE" ist das MDI-Gruppen im Registerkartenformat Feature deaktiviert.
 
 *params*<br/>
@@ -707,7 +707,7 @@ void EnableMDITabs(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 Gibt an, ob Registerkarten aktiviert sind.
 
 *bIcons*<br/>
@@ -783,7 +783,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parameter
 
-*bAktivieren*<br/>
+*bEnable*<br/>
 [in] Wenn "true", wird die automatische Behandlung von im Menü aktiviert ist; Wenn "FALSE" ist die automatische Behandlung deaktiviert.
 
 *uiCustomizeCmd*<br/>
@@ -1047,7 +1047,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Ein Zeiger auf den Bereich vor oder nach dem Bereich eingefügt werden soll.
 
-*bNach*<br/>
+*bAfter*<br/>
 [in] True gibt an, *pControlBar* eingefügt wird, nach dem *pTarget*. False gibt an, *pControlBar* eingefügt wird, bevor Sie *pTarget*.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1186,7 +1186,7 @@ virtual BOOL LoadFrame(
 *pParentWnd*<br/>
 [in] Ein Zeiger auf den Rand des übergeordneten.
 
-*"pContext"*<br/>
+*pContext*<br/>
 [in] Ein Zeiger auf eine [CCreateContext-Struktur](../../mfc/reference/ccreatecontext-structure.md). Dieser Parameter kann NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1238,7 +1238,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bWeiter*<br/>
+*bNext*<br/>
 [in] True gibt an, verschieben Sie die Registerkarte zur nächsten Gruppe im Registerkartenformat. False gibt an, verschieben Sie sie in der vorherigen Registerkartengruppe an.
 
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup
