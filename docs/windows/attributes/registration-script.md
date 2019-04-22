@@ -1,5 +1,5 @@
 ---
-title: Registration_script (C++-COM-Attribut)
+title: Registration_script (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
 ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024373"
 ---
 # <a name="registrationscript"></a>registration_script
@@ -25,12 +25,12 @@ Führt den angegebenen benutzerdefinierten Registrierung-Skript aus.
 
 ### <a name="parameters"></a>Parameter
 
-*Skript*<br/>
+*script*<br/>
 Der vollständige Pfad zu einer benutzerdefinierten Registrierungsskriptdatei (.rgs). Der Wert **keine**, z. B. `script = "none"`, gibt an, dass die Co-Klasse keine Anforderungen an die Registrierung.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Registration_script** C++-Attribut führt die benutzerdefinierte Registrierungsskript gemäß *Skript*. Wenn dieses Attribut nicht angegeben ist, wird eine standard-RGS-Datei, die (mit Informationen zum Registrieren der Komponente) verwendet. Weitere Informationen zu RGS-Dateien finden Sie unter [der ATL-Registrierungskomponente (Registrar)](../../atl/atl-registry-component-registrar.md).
+Die **Registration_script** C++ Attribut führt die benutzerdefinierte Registrierungsskript gemäß *Skript*. Wenn dieses Attribut nicht angegeben ist, wird eine standard-RGS-Datei, die (mit Informationen zum Registrieren der Komponente) verwendet. Weitere Informationen zu RGS-Dateien finden Sie unter [der ATL-Registrierungskomponente (Registrar)](../../atl/atl-registry-component-registrar.md).
 
 Dieses Attribut erfordert, dass die Attribute [coclass](coclass.md), [progid](progid.md), oder [vi_progid](vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden.
 

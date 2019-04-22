@@ -6,10 +6,10 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
 ms.openlocfilehash: aa67d45dfc0fadd300caeaaeb8a7c25bb1c38bcb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023567"
 ---
 # <a name="method-attributes"></a>Methodenattribut
@@ -20,7 +20,7 @@ Die folgenden Attribute gelten für die Methoden in einer Klasse, Co-Klasse oder
 |---------------|-----------------|
 |[bindable](bindable.md)|Gibt an, dass die Eigenschaft die Datenbindung unterstützt.|
 |[call_as](call-as.md)|Aktiviert eine Funktion nicht remotefähige an eine remote-Funktion zugeordnet werden soll.|
-|[Benutzerdefiniert](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
+|[custom](custom-cpp.md)|Sie können Ihr eigenes Attribut definieren.|
 |[db_column](db-column.md)|Bindet eine angegebene Spalte auf das Rowset an.|
 |[db_command](db-command.md)|Erstellt einen OLE DB-Befehl.|
 |[db_param](db-param.md)|Ordnet die angegebenen Member-Variable mit einem Eingabe- oder ausgabeadapter-Parameter und Variablen begrenzt.|
@@ -35,10 +35,10 @@ Die folgenden Attribute gelten für die Methoden in einer Klasse, Co-Klasse oder
 |[helpstringcontext](helpstringcontext.md)|Gibt die ID des Hilfethemas in eine .hlp oder CHM-Datei an.|
 |[helpstringdll](helpstringdll.md)|Gibt den Namen der DLL zu verwenden, um die Suche nach Dokument (Lokalisierung) ausführen.|
 |[hidden](hidden.md)|Gibt an, dass das Element vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden soll.|
-|[id](id.md)|Gibt eine DISPID für eine Memberfunktion (eine Eigenschaft oder eine Methode, in eine Schnittstelle oder Disp-Schnittstelle).|
+|[ID](id.md)|Gibt eine DISPID für eine Memberfunktion (eine Eigenschaft oder eine Methode, in eine Schnittstelle oder Disp-Schnittstelle).|
 |[immediatebind](immediatebind.md)|Gibt an, dass die Datenbank über alle Änderungen an einer Eigenschaft eines datengebundenen Objekts sofort benachrichtigt wird.|
 |[in](in-cpp.md)|Gibt an, dass ein Parameter, die von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben werden.|
-|[Lokal](local-cpp.md)|Ermöglicht Ihnen die Verwendung den MIDL-Compiler als ein Header-Generator, wenn in der Schnittstelle-Header verwendet. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.|
+|[local](local-cpp.md)|Ermöglicht Ihnen die Verwendung den MIDL-Compiler als ein Header-Generator, wenn in der Schnittstelle-Header verwendet. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.|
 |[nonbrowsable](nonbrowsable.md)|Gibt an, dass ein Schnittstellenmember nicht in einem Eigenschaftenbrowser angezeigt werden soll.|
 |[propget](propget.md)|Gibt eine Eigenschaft Accessor-Funktion.|
 |[propput](propput.md)|Gibt eine Eigenschaften festlegende Funktion an.|
@@ -48,7 +48,7 @@ Die folgenden Attribute gelten für die Methoden in einer Klasse, Co-Klasse oder
 |[requestedit](requestedit.md)|Gibt an, dass die Eigenschaft die `OnRequestEdit`-Benachrichtigung unterstützt.|
 |[restricted](restricted.md)|Gibt an, dass ein Mitglied aus einem Modul, Schnittstelle oder Disp-Schnittstelle nicht beliebig aufgerufen werden kann.|
 |[satype](satype.md)|Gibt den Datentyp, der die `SAFEARRAY` Struktur.|
-|[Quelle](source-cpp.md)|Gibt den Schnittstellen des Steuerelements nach Verbindungspunkten für eine Klasse an. Auf eine Eigenschaft oder Methode die `source` Attribut gibt an, dass das Element zurückgibt, ein Objekt oder eine Variante, die eine Ereignisquelle ist.|
+|[source](source-cpp.md)|Gibt den Schnittstellen des Steuerelements nach Verbindungspunkten für eine Klasse an. Auf eine Eigenschaft oder Methode die `source` Attribut gibt an, dass das Element zurückgibt, ein Objekt oder eine Variante, die eine Ereignisquelle ist.|
 |[synchronize](synchronize.md)|Synchronisiert den Zugriff auf die Zielmethode.|
 |[vararg](vararg.md)|Gibt an, dass die Funktion eine Variable Anzahl von Argumenten akzeptieren.|
 

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
 ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766936"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Vorgehensweise: Marshallen von Rückrufen und Delegaten mit C++-Interop
@@ -27,7 +27,7 @@ Im folgenden code, Beispiele für die Verwendung der [verwaltete, unverwaltete](
 
 Im folgenden Beispiel wird veranschaulicht, wie so konfigurieren Sie eine nicht verwaltete API, um einen verwalteten Delegaten ausgelöst wird. Ein verwalteter Delegat erstellt wird und eine der Interop-Methoden, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, dient zum Abrufen des zugrunde liegenden Einstiegspunkts für den Delegaten. Diese Adresse wird dann an die nicht verwaltete Funktion übergeben bezeichneten ohne Kenntnis der Tatsache, dass es als eine verwaltete Funktion implementiert wird.
 
-Beachten Sie, dass ist es möglich, aber nicht erforderlich ist, für das anheften der Delegat, der mit [Pin_ptr (C++ / CLI)](../extensions/pin-ptr-cpp-cli.md) um zu verhindern, dass er erneut befinden oder durch den Garbage Collector verworfen. Schutz vor der vorzeitigen Garbagecollection ist erforderlich, aber anheften bietet mehr Schutz als ist erforderlich, da es verhindert, Sammlung dass, verhindert aber zugleich verschieben.
+Beachten Sie, dass ist es möglich, aber nicht erforderlich ist, für das anheften der Delegat, der mit [Pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) um zu verhindern, dass er erneut befinden oder durch den Garbage Collector verworfen. Schutz vor der vorzeitigen Garbagecollection ist erforderlich, aber anheften bietet mehr Schutz als ist erforderlich, da es verhindert, Sammlung dass, verhindert aber zugleich verschieben.
 
 Ein Delegat erneut durch eine Garbagecollection verschoben wird, wirkt sich nicht die zugrunde liegende verwaltete-Rückruf, also <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> wird verwendet, um einen Verweis auf den Delegaten, sodass Verschiebung des Delegaten, aber verhindert die Freigabe hinzufügen. Anstelle von GCHandle Pin_ptr reduziert die Fragmentierungspotenzial des verwalteten Heaps.
 

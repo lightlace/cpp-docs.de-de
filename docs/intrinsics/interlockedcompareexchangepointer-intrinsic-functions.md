@@ -25,10 +25,10 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
 ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024815"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Systeminterne Funktionen „_InterlockedCompareExchangePointer“
@@ -79,13 +79,13 @@ long _InterlockedCompareExchangePointer_rel (
 
 #### <a name="parameters"></a>Parameter
 
-*Destination*<br/>
+*Ziel*<br/>
 [in, out] Zeiger auf einen Zeiger auf den Zielwert. Das Zeichen wird ignoriert.
 
 *Exchange*<br/>
 [in] Exchange-Zeiger. Das Zeichen wird ignoriert.
 
-*Comparand-Parameter*<br/>
+*Comparand*<br/>
 [in] Zeiger auf den Vergleich mit dem Ziel. Das Zeichen wird ignoriert.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -97,12 +97,12 @@ Der Rückgabewert ist der Anfangswert des Ziels.
 |Systemintern|Architektur|Header|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`ist `_InterlockedCompareExchangePointer_nf`ist `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Hinweise
 
-`_InterlockedCompareExchangePointer` Führt einen atomarischen Vergleich der `Destination` befassen sich in der `Comparand` Adresse. Wenn die `Destination`-Adresse der `Comparand`-Adresse entspricht, wird die `Exchange`-Adresse an der durch `Destination` definierten Adresse gespeichert. Andernfalls wird kein Vorgang ausgeführt.
+`_InterlockedCompareExchangePointer` führt einen atomarischen Vergleich der `Destination`-Adresse mit der `Comparand`-Adresse durch. Wenn die `Destination`-Adresse der `Comparand`-Adresse entspricht, wird die `Exchange`-Adresse an der durch `Destination` definierten Adresse gespeichert. Andernfalls wird kein Vorgang ausgeführt.
 
 `_InterlockedCompareExchangePointer` bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx) Funktion.
 

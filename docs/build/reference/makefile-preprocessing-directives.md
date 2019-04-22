@@ -56,11 +56,11 @@ Vorverarbeitungsdirektiven sind nicht in der Groß-/Kleinschreibung beachtet. Da
 
    Nur/d / ich/n und "/ s" kann in einem Makefile verwendet werden. In der Datei Tools.ini dürfen sich alle Optionen außer/f "," / Help "," / nologo, / X und /?. Änderungen, die in einem Beschreibungsblock angegeben werden nicht bis zum nächsten Beschreibung Blocks wirksam. Diese Direktive aktualisiert **MAKEFLAGS**; Änderungen werden während der Rekursion geerbt, wenn **MAKEFLAGS** angegeben ist.
 
-- **! Fehler***Text*
+- **! Fehler** *Text*
 
    Zeigt *Text* in Fehler U1050 an, und hält NMAKE, selbst wenn/k, /, **. IGNORIEREN Sie**, **! CMDSWITCHES**, oder dem Bindestrich (-) Befehlsmodifizierer verwendet wird. Leerzeichen oder vor dem Registerkarten *Text* werden ignoriert.
 
-- **! Nachricht***Text*
+- **! Nachricht** *Text*
 
    Zeigt *Text* an die Standardausgabe. Leerzeichen oder vor dem Registerkarten *Text* werden ignoriert.
 
@@ -72,11 +72,11 @@ Vorverarbeitungsdirektiven sind nicht in der Groß-/Kleinschreibung beachtet. Da
 
    Verarbeitet die Anweisungen zwischen **! IF** und dem nächsten **! ANDERE** oder **! ENDIF** Wenn *Constant_expression* einen Wert ungleich null ergibt.
 
-- **! IFDEF***Makroname*
+- **! IFDEF** *Makroname*
 
    Verarbeitet die Anweisungen zwischen **! IFDEF** und dem nächsten **! ANDERE** oder **! ENDIF** Wenn *Macroname* definiert ist. Ein null-Makro gilt definiert werden.
 
-- **! IFNDEF***Makroname*
+- **! IFNDEF** *Makroname*
 
    Verarbeitet die Anweisungen zwischen **! IFNDEF** und dem nächsten **! ANDERE** oder **! ENDIF** Wenn *Macroname* ist nicht definiert.
 
@@ -100,7 +100,7 @@ Vorverarbeitungsdirektiven sind nicht in der Groß-/Kleinschreibung beachtet. Da
 
    Markiert das Ende einer **! IF**, **! IFDEF**, oder **! IFNDEF** Block. Sämtlicher Text nach **! ENDIF** in der gleichen Zeile wird ignoriert.
 
-- **! UNDEF***Makroname*
+- **! UNDEF** *Makroname*
 
    Hebt die Definierung *Macroname*.
 

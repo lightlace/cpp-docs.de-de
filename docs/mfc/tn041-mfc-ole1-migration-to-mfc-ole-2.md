@@ -14,10 +14,10 @@ helpviewer_keywords:
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
 ms.openlocfilehash: b398a1adbf2f47343eed076f32ade5bb2564cd52
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767976"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: MFC/OLE1-Migration zu MFC/OLE 2
@@ -60,7 +60,7 @@ Weitere Informationen zu Beispielanwendungen wählen können finden Sie unter de
 Wie weiter oben erläutert [OCLIENT](../overview/visual-cpp-samples.md) in MFC 2.0 enthalten war und OLE mit MFC/OLE1 implementiert. Die Schritte, die mit denen diese Anwendung anfänglich konvertiert wurde, um die MFC/OLE 2-Klassen verwenden, werden nachfolgend beschrieben. Eine Reihe von Funktionen wurden hinzugefügt, nachdem der erste Port abgeschlossen wurde, um die MFC/OLE-Klassen besser zu veranschaulichen. Diese Funktionen werden hier nicht behandelt; Das Beispiel selbst, um mehr über die erweiterten Features finden Sie unter.
 
 > [!NOTE]
-> Die C#-Compilerfehlern und schrittweise Anleitungen wurde mit Visual C++-2.0 erstellt. Fehlermeldungen und Speicherorte können mit Visual C++ 4.0 geändert haben, aber bleibt gültig, die konzeptionelle Informationen.
+> Die c#-Compilerfehlern und schrittweise Anleitungen wurde mit Visual C++-2.0 erstellt. Fehlermeldungen und Speicherorte können mit Visual C++ 4.0 geändert haben, aber bleibt gültig, die konzeptionelle Informationen.
 
 ## <a name="getting-it-up-and-running"></a>Es einrichten und ausführen
 
@@ -291,7 +291,7 @@ An diesem Punkt ist OCLIENT eine funktionale OLE-Container-Anwendung. Es ist mö
 
 Eines der interessantesten Features von OLE ist die direkte Aktivierung (oder "Visuelle Bearbeitung"). Dieses Feature ermöglicht die Serveranwendung aus, übernehmen Sie Teile des Containers-Benutzeroberfläche eine nahtlose bearbeitende-Schnittstelle für den Benutzer bereitgestellt. Um OCLIENT direkte Aktivierung implementieren zu können, müssen einige besonderen Ressourcen sowie zusätzlicher Code hinzugefügt werden. Diese Ressourcen und den Code werden normalerweise von AppWizard bereitgestellt, in der Tat Großteil des Codes hier direkt aus einer neuen AppWizard-Anwendung mit Unterstützung für "Container" übernommen wurde.
 
-Zunächst einmal ist es erforderlich, fügen eine Menüressource verwendet werden, wenn es ist ein Element, das direkt aktiv ist. Sie können diese zusätzlichen Menüressourcen in Visual C++ erstellen, durch Kopieren der IDR_OCLITYPE-Ressource, und entfernen alle bis auf die Datei und Fenster-Popups. Zwei Trennlinien zwischen der Datei und Fenster-Popups an, dass die Trennung von Gruppen eingefügt (es sollte wie folgt aussehen: Datei &#124; &#124; Fenster). Weitere Informationen zur Bedeutung dieser Trennzeichen und wie der Server und-Container Menüs zusammengeführt werden finden Sie unter [Menüs und Ressourcen: Das Zusammenführen von Menüs](../mfc/menus-and-resources-menu-merging.md).
+Zunächst einmal ist es erforderlich, fügen eine Menüressource verwendet werden, wenn es ist ein Element, das direkt aktiv ist. Sie können diese zusätzlichen Menüressourcen in Visual erstellen C++ durch Kopieren der IDR_OCLITYPE-Ressource, und entfernen alle bis auf die Datei und Fenster-Popups. Zwei Trennlinien zwischen der Datei und Fenster-Popups an, dass die Trennung von Gruppen eingefügt (es sollte wie folgt aussehen: Datei &#124; &#124; Fenster). Weitere Informationen zur Bedeutung dieser Trennzeichen und wie der Server und-Container Menüs zusammengeführt werden finden Sie unter [Menüs und Ressourcen: Das Zusammenführen von Menüs](../mfc/menus-and-resources-menu-merging.md).
 
 Nachdem Sie diese Menüs erstellt haben, müssen Sie das Framework, die ihnen bekannten Informationen zu informieren. Dies erfolgt durch Aufrufen von `CDocTemplate::SetContainerInfo` für die Dokumentvorlage, bevor Sie ihn der Dokument-Vorlagenliste in InitInstance hinzufügen. Der neue Code zum Registrieren der Dokumentvorlage sieht folgendermaßen aus:
 
@@ -307,7 +307,7 @@ pTemplate->SetContainerInfo(IDR_OLECLITYPE_INPLACE);
 AddDocTemplate(pTemplate);
 ```
 
-Die Ressource IDR_OLECLITYPE_INPLACE ist die spezielle direktes-Ressource, die in Visual C++ erstellt.
+Die IDR_OLECLITYPE_INPLACE-Ressource ist in visuellen zuvor erstellte Ressource des speziellen direktes C++.
 
 Um die direkte Aktivierung zu ermöglichen, sind einige Faktoren, die in beiden ändern, müssen die `CView` (CMainView) abgeleitete Klasse als auch die `COleClientItem` abgeleitete Klasse (CRectItem). Alle diese Außerkraftsetzungen von AppWizard bereitgestellt werden, und den größten Teil der Implementierung direkt über eine standardanwendung von AppWizard stammen.
 
@@ -353,7 +353,7 @@ BOOL CRectItem::OnChangeItemPosition(const CRect& rectPos)
 
 An diesem Punkt ist genug Code zu einem Element, das direkt aktiviert werden und zum Umgang mit größenanpassung und verschieben das Element aus, wenn er aktiv ist vorhanden, aber kein Code kann der Benutzer die bearbeitungssitzung zu schließen. Einige Server diese Funktion selbst bieten eine werden durch die ESC-Taste verarbeiten, wird empfohlen, dass Container geben Sie zwei Möglichkeiten, um ein Element zu deaktivieren: (1) Sie können Sie durch Klicken auf außerhalb des Elements, und (2) die ESC-Taste drücken.
 
-Hinzufügen einer Zugriffstaste mit Visual C++, der die Taste "VK_ESCAPE" zu einem Befehl zugeordnet, ID_CANCEL_EDIT wird hinzugefügt, auf die Ressourcen, für die ESC-Taste. Der Handler für diesen Befehl die folgende:
+Fügen Sie für die ESC-Taste, eine Zugriffstaste mit visuellen C++ , der die Taste "VK_ESCAPE" zu einem Befehl zugeordnet, auf die Ressourcen ID_CANCEL_EDIT hinzugefügt wird. Der Handler für diesen Befehl die folgende:
 
 ```cpp
 // The following command handler provides the standard
@@ -425,7 +425,7 @@ void CMainView::OnSize(UINT nType, int cx, int cy)
 [HIERSVR](../overview/visual-cpp-samples.md) wurde auch in MFC 2.0 und OLE mit MFC/OLE1 implementiert. Dieser Hinweis beschreibt kurz die Schritte, die mit denen diese Anwendung anfänglich konvertiert wurde, um die Klassen von MFC/OLE 2 verwenden. Eine Reihe von Funktionen wurden hinzugefügt, nachdem der erste Port abgeschlossen wurde, um die Klassen von MFC/OLE 2 besser zu veranschaulichen. Diese Funktionen werden hier nicht behandelt; Das Beispiel selbst, um mehr über die erweiterten Features finden Sie unter.
 
 > [!NOTE]
-> Die C#-Compilerfehlern und schrittweise Anleitungen wurde mit Visual C++-2.0 erstellt. Fehlermeldungen und Speicherorte können mit Visual C++ 4.0 geändert haben, aber bleibt gültig, die konzeptionelle Informationen.
+> Die c#-Compilerfehlern und schrittweise Anleitungen wurde mit Visual C++-2.0 erstellt. Fehlermeldungen und Speicherorte können mit Visual C++ 4.0 geändert haben, aber bleibt gültig, die konzeptionelle Informationen.
 
 ## <a name="getting-it-up-and-running"></a>Es einrichten und ausführen
 
@@ -527,7 +527,7 @@ BOOL COLEServerApp::InitInstance()
 
 Beachten Sie, dass der obige Code auf eine neue Ressourcen-ID, IDR_HIERSVRTYPE_SRVR_EMB bezieht. Dies ist die Menüressource verwendet werden, wenn ein Dokument, das in einen anderen Container eingebettete bearbeitet wird. In MFC/OLE1 wurden die Menüelemente, die spezifisch für ein eingebettetes Element bearbeiten dynamisch geändert. Verwenden eine ganz anderes Menüstruktur beim Bearbeiten der eines eingebetteten Elements anstelle von dateibasierten Dokument bearbeiten erleichtert diese zwei Modi unterschiedliche Benutzeroberflächen bereit. Wie Sie später sehen werden, wird eine völlig separate Menüressource verwendet, wenn Sie ein eingebettetes Objekt direkt bearbeiten.
 
-Um diese Ressource zu erstellen, laden Sie das Ressourcenskript in Visual C++, und kopieren Sie die vorhandene IDR_HIERSVRTYPE Menüressource aus. Benennen Sie die neue Ressource zu IDR_HIERSVRTYPE_SRVR_EMB (Hierbei handelt es sich um dieselben Namenskonventionen gelten, die von AppWizard verwendet). Als Nächstes ändern Sie "Datei speichern" in "Aktualisieren der Datei"; Geben Sie ihm ID ID_FILE_UPDATE-Befehl. Ändern Sie außerdem "Datei speichern unter" auf "Datei Kopie speichern unter"; Geben Sie ihm ID ID_FILE_SAVE_COPY_AS-Befehl. Das Framework bietet die Implementierung der beiden folgenden Befehle.
+Um diese Ressource zu erstellen, laden Sie das Ressourcenskript in visuelle C++ , und kopieren Sie die vorhandene IDR_HIERSVRTYPE Menüressource. Benennen Sie die neue Ressource zu IDR_HIERSVRTYPE_SRVR_EMB (Hierbei handelt es sich um dieselben Namenskonventionen gelten, die von AppWizard verwendet). Als Nächstes ändern Sie "Datei speichern" in "Aktualisieren der Datei"; Geben Sie ihm ID ID_FILE_UPDATE-Befehl. Ändern Sie außerdem "Datei speichern unter" auf "Datei Kopie speichern unter"; Geben Sie ihm ID ID_FILE_SAVE_COPY_AS-Befehl. Das Framework bietet die Implementierung der beiden folgenden Befehle.
 
 ```Output
 \hiersvr\svritem.h(60) : error C2433: 'OLESTATUS' : 'virtual' not permitted on data declarations

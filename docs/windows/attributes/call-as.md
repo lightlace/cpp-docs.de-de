@@ -1,5 +1,5 @@
 ---
-title: Call_as (C++-COM-Attribut)
+title: Call_as (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
 ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023918"
 ---
 # <a name="callas"></a>call_as
@@ -25,12 +25,12 @@ Ermöglicht einem [lokalen](local-cpp.md) Funktion, um eine remote-Funktion, dam
 
 ### <a name="parameters"></a>Parameter
 
-*Funktion*<br/>
+*function*<br/>
 Die lokale Funktion, die aufgerufen werden, wenn eine remote-Funktion aufgerufen wird, werden sollen.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Call_as** C++-Attribut hat die gleiche Funktionalität wie die [Call_as](/windows/desktop/Midl/call-as) MIDL-Attribut.
+Die **Call_as** C++ Attribut hat die gleiche Funktionalität wie die [Call_as](/windows/desktop/Midl/call-as) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 
@@ -65,4 +65,4 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 [IDL-Attribute](idl-attributes.md)<br/>
 [Methodenattribut](method-attributes.md)<br/>
-[Lokal](local-cpp.md)
+[local](local-cpp.md)

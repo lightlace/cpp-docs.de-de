@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
 ms.openlocfilehash: 5c1a4e7df424499f400dbd70d675956deef6bc5d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58784350"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
@@ -71,7 +71,7 @@ Zeigt, wie die [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttp
 Verwendet die `HttpRequest` -Klasse, die in definierten [Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) im Rahmen einer vollständigen UWP-app.
 
 [Beispiel zum Erstellen einer Windows Runtime DLL-Komponente mit C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
-Zeigt, wie die Windows Runtime C++ Template Library eine prozessinterne DLL-Komponente zu erstellen und nutzen es in C++ / CX, JavaScript und C#.
+Zeigt, wie die Windows Runtime C++ Template Library eine prozessinterne DLL-Komponente zu erstellen und nutzen es in C++ / CX, JavaScript und c#.
 
 [DirectX marble Maze-Beispiel](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Veranschaulicht, wie die Windows Runtime C++ Template Library verwenden, um die Lebensdauer von COM-Komponenten wie DirectX und Media Foundation im Rahmen eines vollständigen 3D-Spiels verwalten.

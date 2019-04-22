@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
 ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780365"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString-Klasse
@@ -110,7 +110,7 @@ Beispielsweise übersetzt zu
 
 ## <a name="remarks"></a>Hinweise
 
-`CMapStringToString` integriert das `IMPLEMENT_SERIAL`-Makro, um die Serialisierung sowie die Sicherung der Elemente zu unterstützen. Jedes Element der Reihe nach serialisiert, wenn eine Zuordnung in ein Archiv, entweder mit den überladenen einfügen gespeichert ist ( **<<**) Operator oder mit der `Serialize` Member-Funktion.
+`CMapStringToString` enthält die `IMPLEMENT_SERIAL` Makro, um Serialisierung und die Sicherung der Elemente zu unterstützen. Jedes Element der Reihe nach serialisiert, wenn eine Zuordnung in ein Archiv, entweder mit den überladenen einfügen gespeichert ist ( **<<**) Operator oder mit der `Serialize` Member-Funktion.
 
 Wenn Sie eine Sicherung einzelner benötigen `CString` -  `CString` Elemente müssen Sie die Tiefe des sicherungskontexts auf 1 oder größer festlegen.
 
@@ -209,7 +209,7 @@ CPair* PLookup(LPCTSTR key);
 
 ### <a name="parameters"></a>Parameter
 
-*Key*<br/>
+*key*<br/>
 Ein Zeiger auf den Schlüssel für das Element, nach dem gesucht werden.
 
 ### <a name="return-value"></a>Rückgabewert

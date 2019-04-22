@@ -10,10 +10,10 @@ helpviewer_keywords:
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
 ms.openlocfilehash: f87c2401bcc964229d3c0b3cf7119a09553cc2f2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774762"
 ---
 # <a name="keywords-c"></a>Keywords (C++)
@@ -76,7 +76,7 @@ Schlüsselwörter sind vordefinierte, reservierte Bezeichner, die besondere Bede
 
 In Microsoft C++ sind Bezeichner mit zwei vorangehenden Unterstrichen für Compilerimplementierungen reserviert. Daher werden gemäß Microsoft-Konvention Microsoft-spezifischen Schlüsselwörtern doppelte Unterstriche vorangestellt. Diese Wörter können nicht als Bezeichnernamen verwendet werden.
 
-Standardmäßig sind Microsoft-Erweiterungen aktiviert. Um sicherzustellen, dass Ihre Programme vollständig portabel sind, können Sie Microsoft-Erweiterungen deaktivieren, indem Sie während der Kompilierung die Option [/Za \( (Spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) angeben. Dabei werden einige Microsoft-spezifische Schlüsselwörter deaktiviert.
+Standardmäßig sind Microsoft-Erweiterungen aktiviert. Um sicherzustellen, dass Ihre Programme vollständig portabel sind, können Sie Microsoft-Erweiterungen deaktivieren, indem Sie während der Kompilierung die Option [/Za \(Spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) angeben. Dabei werden einige Microsoft-spezifische Schlüsselwörter deaktiviert.
 
 Wenn Microsoft-Erweiterungen aktiviert sind, können Sie Microsoft-spezifische Schlüsselwörter in Programmen verwenden. Zur Einhaltung der ANSI-Kompatibilität wird diesen Schlüsselwörtern ein doppelter Unterstrich vorangestellt. Für die Abwärtskompatibilität werden Versionen vieler der Schlüsselwörtern mit doppelten unterstrichen mit einem Unterstrich unterstützt. Darüber hinaus **__cdecl** ohne vorangehenden Unterstrich verfügbar ist.
 
