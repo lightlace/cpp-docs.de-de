@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
 ms.openlocfilehash: 309bb7e707d649cf78528f3d0df6cf8e43201823
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040618"
 ---
 # <a name="crestrictions-class"></a>CRestrictions-Klasse
@@ -75,7 +75,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Parameter
 
-*Sitzung*<br/>
+*session*<br/>
 [in] Gibt ein vorhandenes Session-Objekt, das für die Verbindung mit der Datenquelle verwendet.
 
 *lpszParam*<br/>
@@ -96,6 +96,6 @@ Finden Sie unter [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Schemarowset-Klassen und Typedef-Klassen](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - FD compiler option [C++]
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
 ms.openlocfilehash: ac63b021dc0cb9ee5964af7fa2e168f710653979
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424052"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Minimale Neuerstellung in der IDE)
@@ -23,6 +23,6 @@ Wenn Sie nicht die veraltete aktivieren **/GM** -Option in der Entwicklungsumgeb
 
 ## <a name="see-also"></a>Siehe auch
 
-[/F-Optionen (Ausgabedateioptionen)](output-file-f-options.md)<br/>
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[Ausgabedatei (/F) Optionen](output-file-f-options.md)<br/>
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

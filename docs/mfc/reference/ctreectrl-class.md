@@ -163,10 +163,10 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
 ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58782003"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
@@ -850,7 +850,7 @@ BOOL GetItemImage(
 *hItem*<br/>
 Das Handle des Elements, dessen Bild abgerufen werden sollen.
 
-*Nbild*<br/>
+*nImage*<br/>
 Eine ganze Zahl, die den Index des Elements Bildes in der Strukturansicht-Steuerelement die Bildliste empfängt.
 
 *nSelectedImage*<br/>
@@ -1427,7 +1427,7 @@ Ganze Zahl, welche Attribute festlegen. Finden Sie unter den `TVITEM` Struktur i
 *lpszItem*<br/>
 Die Adresse einer Zeichenfolge, die den Text des Elements enthält.
 
-*Nbild*<br/>
+*nImage*<br/>
 Index des Elements Bildes in der Strukturansicht-Steuerelement die Bildliste.
 
 *nSelectedImage*<br/>
@@ -1739,7 +1739,7 @@ BOOL SetCheck(
 *hItem*<br/>
 Die HTREEITEM, um die Überprüfung der statusänderung zu erhalten.
 
-*Weitere Informationen finden*<br/>
+*fCheck*<br/>
 Gibt an, ob das Strukturelement-Steuerelement aktiviert oder deaktiviert werden. In der Standardeinstellung `SetCheck` legt das Element, das überprüft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1925,7 +1925,7 @@ Ganze Zahl, welche Attribute festlegen. Finden Sie unter den `mask` Mitglied der
 *lpszItem*<br/>
 Die Adresse einer Zeichenfolge, die den Text des Elements enthält.
 
-*Nbild*<br/>
+*nImage*<br/>
 Index des Elements Bildes in der Strukturansicht-Steuerelement die Bildliste. Finden Sie unter den `iImage` Mitglied der `TVITEM` Struktur.
 
 *nSelectedImage*<br/>
@@ -2054,7 +2054,7 @@ BOOL SetItemImage(
 *hItem*<br/>
 Handle des Elements, dessen Bild festgelegt werden.
 
-*Nbild*<br/>
+*nImage*<br/>
 Index des Elements Bildes in der Strukturansicht-Steuerelement die Bildliste.
 
 *nSelectedImage*<br/>

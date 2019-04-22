@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
 ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781795"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap-Klasse
@@ -40,7 +40,7 @@ Die Basisklasse der typisierter Zeiger Map-Klasse; muss eine Zeiger-Map-Klasse (
 *KEY*<br/>
 Die Klasse des Objekts als Schlüssel für die Karte verwendet.
 
-*VALUE*<br/>
+*WERT*<br/>
 Die Klasse des Objekts in der Zuordnung gespeichert.
 
 ## <a name="members"></a>Member
@@ -100,10 +100,10 @@ Template-Parameter, die den Typ der Map-Schlüssel angibt.
 *rKey*<br/>
 Gibt den zurückgegebenen Schlüssel des Elements abgerufen.
 
-*VALUE*<br/>
+*WERT*<br/>
 Der Vorlagenparameter, die den Typ der Werte von der Zuordnung angibt.
 
-*r-Wert*<br/>
+*rValue*<br/>
 Gibt den Rückgabewert des abgerufenen Elements an.
 
 ### <a name="remarks"></a>Hinweise
@@ -127,13 +127,13 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *BASE_CLASS*<br/>
 Template-Parameter, die die Basisklasse dieser Map-Klasse angeben.
 
-*Key*<br/>
+*key*<br/>
 Der Schlüssel des Elements, das gesucht werden sollen.
 
-*VALUE*<br/>
+*WERT*<br/>
 Template-Parameter, die den Typ des in dieser Zuordnung gespeicherten Werte angibt.
 
-*r-Wert*<br/>
+*rValue*<br/>
 Gibt den Rückgabewert des abgerufenen Elements an.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -154,13 +154,13 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>Parameter
 
-*VALUE*<br/>
+*WERT*<br/>
 Template-Parameter, die den Typ des in dieser Zuordnung gespeicherten Werte angibt.
 
 *BASE_CLASS*<br/>
 Template-Parameter, die die Basisklasse dieser Map-Klasse angeben.
 
-*Key*<br/>
+*key*<br/>
 Der Schlüssel des Elements, das gesucht werden oder in der Zuordnung erstellt werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -180,7 +180,7 @@ BOOL RemoveKey(KEY key);
 *KEY*<br/>
 Template-Parameter, die den Typ der Map-Schlüssel angibt.
 
-*Key*<br/>
+*key*<br/>
 Der Schlüssel für das Element entfernt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -204,7 +204,7 @@ void SetAt(KEY key, VALUE newValue);
 *KEY*<br/>
 Template-Parameter, die den Typ der Map-Schlüssel angibt.
 
-*Key*<br/>
+*key*<br/>
 Gibt den Wert des der NewValue Schlüssels an.
 
 *newValue*<br/>

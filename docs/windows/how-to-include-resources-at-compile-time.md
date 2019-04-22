@@ -24,10 +24,10 @@ helpviewer_keywords:
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
 ms.openlocfilehash: ca24a10f905e61feb2b090ba3966c752db3d4444
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041502"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Vorgehensweise: Einfügen von Ressourcen zur Kompilierungszeit (C++)
@@ -52,8 +52,8 @@ Sie können Ressourcen hinzufügen von anderen Dateien zu Ihrem Projekt zum Zeit
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| **Symbol header file** | Können Sie den Namen der Headerdatei ändern, wo die Symboldefinitionen für Ihre Ressourcendateien gespeichert werden.<br/><br/>Weitere Informationen finden Sie unter [ändern die Namen von Symbolheaderdateien](../windows/changing-the-names-of-symbol-header-files.md). |
-| **Direktiven für schreibgeschützte Symbole** | Ermöglicht Ihnen, Headerdateien einzufügen, die Symbole enthalten, die sollte nicht geändert werden.<br/><br/>Beispielsweise Symboldateien für andere Projekte freigegeben werden. Dies kann auch die MFC h-Dateien enthalten. Weitere Informationen finden Sie unter [einschließlich gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole](../windows/including-shared-read-only-or-calculated-symbols.md). |
+| **Symbolheaderdatei** | Können Sie den Namen der Headerdatei ändern, wo die Symboldefinitionen für Ihre Ressourcendateien gespeichert werden.<br/><br/>Weitere Informationen finden Sie unter [ändern die Namen von Symbolheaderdateien](../windows/changing-the-names-of-symbol-header-files.md). |
+| **Anweisungen für schreibgeschützte Symbole** | Ermöglicht Ihnen, Headerdateien einzufügen, die Symbole enthalten, die sollte nicht geändert werden.<br/><br/>Beispielsweise Symboldateien für andere Projekte freigegeben werden. Dies kann auch die MFC h-Dateien enthalten. Weitere Informationen finden Sie unter [einschließlich gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole](../windows/including-shared-read-only-or-calculated-symbols.md). |
 | **Kompilierzeitdirektiven** | Können Sie Ressourcendateien einschließen, die erstellt und bearbeitet, separat von den Ressourcen in der Hauptressourcendatei, kompilierzeitanweisungen (z. B. diese Anweisungen, die bedingt Ressourcen einfügen) enthalten oder Ressourcen in einem benutzerdefinierten Format enthalten.<br/><br/>Sie können auch der **Kompilierung Feld kompilierzeitanweisungen** zum standard-MFC-Ressourcendateien einzufügen. |
 
 > [!NOTE]
@@ -98,5 +98,5 @@ Win32
 ## <a name="see-also"></a>Siehe auch
 
 [Ressourcendateien](../windows/resource-files-visual-studio.md)<br/>
-[Vorgehensweise: Erstellen von Ressourcen](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Vorgehensweise: Verwalten von Ressourcen](../windows/how-to-copy-resources.md)<br/>
+[Vorgehensweise: Ressourcen erstellen](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Vorgehensweise: Ressourcen verwalten](../windows/how-to-copy-resources.md)<br/>

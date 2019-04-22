@@ -73,10 +73,10 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781444"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd-Klasse
@@ -260,7 +260,7 @@ Die maximale Anzahl der Spalten im Teilungsfenster. Dieser Wert darf 2 nicht üb
 *sizeMin*<br/>
 Gibt die minimale Größe, an der ein Bereich angezeigt werden kann.
 
-*"pContext"*<br/>
+*pContext*<br/>
 Ein Zeiger auf eine [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) Struktur. Dies kann in den meisten Fällen werden die *"pContext"* an den übergeordneten Rahmenfensters übergeben.
 
 *dwStyle*<br/>
@@ -388,10 +388,10 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Gibt die Zeile des Splitter-Fenster in der die neue Ansicht platziert werden soll.
 
-*SP*<br/>
+*col*<br/>
 Gibt die Spalte Splitter-Fenster, in dem die neue Ansicht platziert werden soll.
 
 *pViewClass*<br/>
@@ -400,7 +400,7 @@ Gibt an, die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) der
 *sizeInit*<br/>
 Gibt die Anfangsgröße der neuen Ansicht an.
 
-*"pContext"*<br/>
+*pContext*<br/>
 Ein Zeiger auf einen erstellen-Kontext verwendet, um die Ansicht zu erstellen (in der Regel die *"pContext"* übergebenen des übergeordneten Rahmens außer Kraft gesetzte [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) Memberfunktion in der Teilungsfenster. erstellt wird).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -475,10 +475,10 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Gibt die Zeile des Splitter-Fenster, die Ansicht zu löschen.
 
-*SP*<br/>
+*col*<br/>
 Gibt die Spalte des Splitter-Fenster, die Ansicht zu löschen.
 
 ### <a name="remarks"></a>Hinweise
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*SP*<br/>
+*col*<br/>
 Gibt eine Spalte.
 
 *cxCur*<br/>
@@ -649,10 +649,10 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Gibt eine Zeile an.
 
-*SP*<br/>
+*col*<br/>
 Gibt eine Spalte.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Gibt eine Zeile an.
 
 *cyCur*<br/>
@@ -727,10 +727,10 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Gibt die Zeile der Splitter-Fenster.
 
-*SP*<br/>
+*col*<br/>
 Gibt die Spalte der Splitter-Fenster.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -877,10 +877,10 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Wenn *aufnehmen* NULL ist, gibt die Zeile im Bereich, der aktiv sein werden.
 
-*SP*<br/>
+*col*<br/>
 Wenn *aufnehmen* NULL ist, gibt die Spalte im Bereich, der aktiv sein werden.
 
 *pWnd*<br/>
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*SP*<br/>
+*col*<br/>
 Gibt eine Spalte der Splitter-Fenster.
 
 *cxIdeal*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeile*<br/>
+*row*<br/>
 Gibt eine Zeile der Splitter-Fenster an.
 
 *cyIdeal*<br/>

@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
 ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774580"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd-Klasse
@@ -156,7 +156,7 @@ Enthält die Größe und Position des Fensters. Die `rectDefault` Wert ermöglic
 *pParentWnd*<br/>
 Gibt an, das Fenster des übergeordneten. Wenn der Wert NULL ist, wird das Hauptanwendungsfenster verwendet.
 
-*"pContext"*<br/>
+*pContext*<br/>
 Gibt an, eine [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) Struktur. Dieser Parameter kann NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert

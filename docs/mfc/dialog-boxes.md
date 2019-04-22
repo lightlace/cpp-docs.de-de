@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
 ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778493"
 ---
 # <a name="dialog-boxes"></a>Dialogfelder
@@ -33,7 +33,7 @@ Die meisten Dialogfelder sind modal, die erfordern, dass des Benutzers das Dialo
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
 
-- [Beispiel: Anzeigen eines Dialogfelds mit einem Menübefehl](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
+- [Anpassen von mit VSTU Anzeigen eines Dialogfelds mit einem Menübefehl](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
 - [Dialogfeld-Steuerelemente im framework](../mfc/dialog-box-components-in-the-framework.md)
 
@@ -53,7 +53,7 @@ Die meisten Dialogfelder sind modal, die erfordern, dass des Benutzers das Dialo
 
 - [Zuordnen von Windows-Meldungen zu einer Klasse](../mfc/mapping-windows-messages-to-your-class.md)
 
-- [Überschreibbare Memberfunktionen](../mfc/commonly-overridden-member-functions.md)
+- [Häufig überschreibbare Memberfunktionen](../mfc/commonly-overridden-member-functions.md)
 
 - [Häufig hinzugefügte Memberfunktionen](../mfc/commonly-added-member-functions.md)
 
@@ -63,8 +63,8 @@ Die meisten Dialogfelder sind modal, die erfordern, dass des Benutzers das Dialo
 
 - Erstellen Sie eine Anwendung, deren Benutzeroberfläche ein Dialogfeld ist: finden Sie unter den [CMNCTRL1](../overview/visual-cpp-samples.md) oder [CMNCTRL2](../overview/visual-cpp-samples.md) Beispielprogramme. Der Anwendungs-Assistent bietet diese Option ebenfalls.
 
-- [Proben](../mfc/dialog-sample-list.md)
+- [Beispiele](../mfc/dialog-sample-list.md)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)
+[Elemente der Benutzeroberfläche](../mfc/user-interface-elements-mfc.md)

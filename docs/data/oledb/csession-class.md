@@ -41,10 +41,10 @@ helpviewer_keywords:
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
 ms.openlocfilehash: b34a6300473db94621360f1d04fd73ddd7e8bd69
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041457"
 ---
 # <a name="csession-class"></a>CSession-Klasse
@@ -67,7 +67,7 @@ class CSession
 
 |||
 |-|-|
-|[Abbrechen](#abort)|Abgebrochen (beendet) der Transaktion.|
+|[Abort](#abort)|Abgebrochen (beendet) der Transaktion.|
 |[Schließen](#close)|Schließt die Sitzung.|
 |[Commit](#commit)|Führt einen Commit die Transaktion.|
 |[GetTransactionInfo](#gettransactioninfo)|Gibt Informationen zu einer Transaktion zurück.|
@@ -217,5 +217,5 @@ Weitere Informationen finden Sie unter [ITransactionLocal:: StartTransaction](/p
 ## <a name="see-also"></a>Siehe auch
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)

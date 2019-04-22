@@ -5,15 +5,15 @@ helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
 ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777050"
 ---
 # <a name="how-to-use-tracking-references-in-ccli"></a>Vorgehensweise: Verwenden von Nachverfolgungsverweisen in C++ / CLI
 
-In diesem Artikel veranschaulicht, wie einen Nachverfolgungsverweis (%) in C++ / CLI für die common Language Runtime (CLR)-Typen als Verweis zu übergeben.
+In diesem Artikel veranschaulicht, wie einen Nachverfolgungsverweis (%) in C++/CLI common Language Runtime (CLR)-Typen nach Verweis übergeben.
 
 ## <a name="to-pass-clr-types-by-reference"></a>CLR-Typen als Verweis übergeben
 
@@ -70,7 +70,7 @@ int main() {
 zip == 20100
 ```
 
-Das nächste Beispiel zeigt, dass die Verwendung der Adresse einer nachverfolgungsverweisvariablen gibt ein [Interior_ptr (C++ / CLI)](../extensions/interior-ptr-cpp-cli.md), ändern und den Datenzugriff über ein Nachverfolgungsverweis veranschaulicht.
+Das nächste Beispiel zeigt, dass die Verwendung der Adresse einer nachverfolgungsverweisvariablen gibt ein [Interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md), ändern und den Datenzugriff über ein Nachverfolgungsverweis veranschaulicht.
 
 ```cpp
 // tracking_reference_data.cpp
