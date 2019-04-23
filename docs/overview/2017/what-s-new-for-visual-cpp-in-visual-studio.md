@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899456"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779490"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Neuerungen bei C++ in Visual Studio 2017
 
@@ -80,7 +80,7 @@ Die Option [/Zc:noexceptTypes-](../../build/reference/zc-noexcepttypes.md) kann 
 - Leistungsverbesserung: `basic_string::operator==` überprüft nun die Größe der Zeichenfolge, bevor der Inhalt der Zeichenfolge verglichen wird.
 - Leistungsverbesserung: die Kontrollkopplung in `basic_string`, die für den Compileroptimierer schwer zu analysieren war, wurde entfernt. Beachten Sie, dass bei kurzen Zeichenfolgen der Aufruf von `reserve` auch dann Kosten verursacht, wenn keine Arbeit erledigt wird.
 - Wir haben \<any\>, \<string_view\>, `apply()` und `make_from_tuple()` hinzugefügt.
-- `std::vector` wurde aus Leistungsgründen und zur Sicherstellung der korrekten Funktionsweise überholt. Das Aliasing während des Einfügens bzw. während des Neuerstellens und Einfügens (Emplacement) wird nun korrekt entsprechend des Standards durchgeführt. Die starke Ausnahmegarantie wird nun bereitgestellt, wenn dies laut Standard über `move_if_noexcept()` oder über eine andere Logik erforderlich ist. Beim Einfügen bzw. Neuerstellen und Einfügen werden weniger Elementoperationen durchgeführt.
+- `std::vector` wurde aufgrund der Korrektheit und Leistung überholt: Das Aliasing während der Einfügung und des Einbaus wird nun korrekt gehandhabt, so wie dies von Standard vorgesehen ist. Die starke Ausnahmegarantie wird nun bereitgestellt, wenn Standard dies durch `move_if_noexcept()` oder eine andere Logik erfordert. Die Einfügung bzw. der Einbau führen weniger Elementvorgänge durch.
 - Die C++-Standardbibliothek vermeidet nun die Dereferenzierung von Fancy Pointern des Typs NULL.
 - Es wurden \<optional\>, \<variant\>, `shared_ptr::weak_type`, und \<cstdalign\> hinzugefügt.
 - C++14 `constexpr` wurde in `min(initializer_list)`, `max(initializer_list)` und `minmax(initializer_list)` und `min_element()`, `max_element()` und `minmax_element()` hinzugefügt.
@@ -114,11 +114,11 @@ Es wurden verschiedene weitere C++17-Features implementiert. Weitere Information
 - Standardbibliothekscontainer binden nun ihre `max_size()` an `numeric_limits<difference_type>::max()`, anstatt `max()` an `size_type`. Dadurch wird sichergestellt, dass das Ergebnis von `distance()` in Iteratoren von diesem Container im Rückgabetyp von `distance()` darstellbar ist.
 - Fehlende Spezialisierung wurde behoben: `auto_ptr<void>`.
 - Die Algorithmen `for_each_n()`, `generate_n()` und `search_n()` konnten zuvor nicht kompiliert werden, wenn das length-Argument kein integraler Typ war. Jetzt wird versucht, nicht integrale Typen in den `difference_type` des Iterators zu konvertieren.
-- `normal_distribution<float>` gibt in der Standardbibliothek beim Einschränken von double auf float keine Warnungen mehr aus.
+- `normal_distribution<float>` gibt in der Standardbibliothek beim Einschränken von „double“ auf „float“ keine Warnungen mehr aus.
 - Einige `basic_string`-Vorgänge wurden korrigiert, bei denen bei Überprüfung der maximal zulässigen Überlaufgröße ein Vergleich mit `npos` anstatt mit `max_size()` erfolgte.
-- `condition_variable::wait_for(lock, relative_time, predicate)` wartete bisher im Falle einer fälschlicherweise erfolgten Aktivierung die gesamte relative Zeit. Jetzt wird nur für ein einzelnes Intervall der relativen Zeit gewartet.
-- `future::get()` macht nun in Übereinstimmung mit dem Standard das `future`-Objekt ungültig.
-- `iterator_traits<void *>` war zuvor ein schwerwiegender Fehler, weil versucht wurde, `void&` zu formen. Stattdessen erfolgt nun eine Umwandlung in eine leere Struktur, um die Nutzung von `iterator_traits` in „is iterator“-SFINAE-Bedingungen zuzulassen.
+- `condition_variable::wait_for(lock, relative_time, predicate)` wartet in der Regel im Falle einer fälschlicherweise erfolgten Aktivierung die gesamte relative Zeit. Jetzt wird nur für ein einzelnes Intervall der relativen Zeit gewartet.
+- `future::get()` macht jetzt das `future`-Objekt ungültig, so wie es der Standard erfordert.
+- `iterator_traits<void *>` war zuvor ein harter Fehler, weil versucht wurde, `void&` zu formen. Es wird jetzt zu einer leeren Struktur, um die Verwendung von `iterator_traits` in "is iterator" SFINAE-Bedingungen zuzulassen.
 - Einige von Clang **-Wsystem-headers**-Objekten gemeldete Warnungen wurden korrigiert.
 - Die von „Clang **-Wmicrosoft-exception-spec**“ gemeldete Warnung „exception specification in declaration does not match previous declaration“ (die Ausnahmespezifikation in der Deklaration entspricht nicht der vorherigen Deklaration) wurde ebenfalls korrigiert.
 - Von Clang und C1XX gemeldete mem-initializer-list-Reihenfolgewarnungen wurden ebenfalls korrigiert.
@@ -127,7 +127,7 @@ Es wurden verschiedene weitere C++17-Features implementiert. Weitere Information
 - Viele `vector<bool>`-Vorgänge sind jetzt als `noexcept` gekennzeichnet.
 - Die Standardbibliothek erzwingt jetzt den Abgleich von `value_type` (im C++17-Modus) mit einem Escapehatch für die Abwahl.
 - Einige Bedingungen wurden korrigiert, bei denen „self-range-insert“ in `basic_string` den Inhalt der Zeichenfolge durcheinandergebracht hat. (Hinweis: „self-range-insert“ in Vektoren ist im Standard immer noch nicht zulässig.)
-- `basic_string::shrink_to_fit()` wird nicht mehr von `propagate_on_container_swap` der Speicherbelegung beeinträchtigt.
+- `basic_string::shrink_to_fit()` wird nicht länger vom `propagate_on_container_swap` der Zuweisung beeinträchtigt.
 - `std::decay` verarbeitet jetzt abominable-Funktionstypen (also Funktionstypen mit cv- und/oder ref-Qualifizierer).
 - include-Direktiven wurden geändert und verwenden jetzt die richtige Groß- und Kleinschreibung und Schrägstriche, was die Portierbarkeit verbessert.
 - Warnung C4061 „enumerator '*enumerator*' in switch of enum '*enumeration*' is not explicitly handled by a case label“ (Enumerator 'enumerator' in der switch-Anweisung der Enumeration 'enumeration' wird von keiner case-Bezeichnung explizit behandelt) wurde korrigiert. Diese Warnung ist standardmäßig deaktiviert und wurde als Ausnahme der allgemeinen Richtlinie der Standardbibliothek für Warnungen korrigiert. (Die Standardbibliothek ist „**/W4** clean“, versucht jedoch nicht, „**/Wall** clean“ zu sein. Viele standardmäßig deaktivierte Warnungen verbrauchen viele Ressourcen und sind nicht für die regelmäßige Verwendung gedacht.)
@@ -141,8 +141,8 @@ Es wurden verschiedene weitere C++17-Features implementiert. Weitere Information
 - `std::try_lock()` wurde geändert und verwendet jetzt Paketerweiterung anstelle von Rekursion.
 - Der Algorithmus von `std::lock()` zum Verhindern von Deadlocks wurde verbessert und verwendet jetzt `lock()`-Vorgänge, anstatt alle `try_lock()` auf allen Sperren zu durchlaufen.
 - Die Optimierung von benannten Rückgabewerten in `system_category::message()` wurde aktiviert.
-- `conjunction` und `disjunction` instanziieren jetzt n + 1 Typen anstatt 2n + 2 Typen.
-- `std::function` instanziiert den Mechanismus für die Speicherbelegungsunterstützung nicht mehr für jedes aufrufbare Objekt mit Typlöschung. Dies erhöht den Durchsatz und reduziert die OBJ-Größe in Programmen, die viele verschiedene Lambdaausdrücke an `std::function` übergeben.
+- `conjunction` und `disjunction` instanziieren jetzt „N+1“-Typen anstatt „2N+2“-Typen.
+- `std::function` instanziiert den Mechanismus für die Zuweisungsunterstützung nicht mehr für jedes aufrufbare Objekt mit Typlöschung. Dies erhöht den Durchsatz und reduziert die OBJ-Größe in Programmen, die viele verschiedene Lambdas an `std::function` übergeben.
 - `allocator_traits<std::allocator>` enthält manuelle `std::allocator`-Inlinevorgänge und verringert die Codegröße in Code, der mit `std::allocator` nur über `allocator_traits` interagiert (dies gilt für den Großteil von Codes).
 - Die minimale Zuweisungsschnittstelle von C++11 wird jetzt von der Standardbibliothek verarbeitet, die `allocator_traits` direkt aufruft, anstatt die Zuweisung in einer internen Klasse `_Wrap_alloc` zu umschließen. Dies reduziert den Umfang des Codes, der für die Unterstützung der Zuweisung generiert wird, verbessert in einigen Fällen die Möglichkeit des Optimierers, sich mit den Standardbibliothekscontainern auseinanderzusetzen, und verbessert das Debuggen (Sie sehen im Debugger jetzt Ihren Zuweisungstyp anstelle von `_Wrap_alloc<your_allocator_type>`).
 - Die Metaprogrammierung für benutzerdefinierte `allocator::reference`-Elemente, die von Zuweisungen eigentlich nicht angepasst werden dürfen, wurde entfernt. (Durch Zuweisungen können Container originelle Zeiger verwenden, aber keine originellen Verweise.)
@@ -156,7 +156,7 @@ Es wurden verschiedene weitere C++17-Features implementiert. Weitere Information
 - Die Änderung des funktionsbasierten Ausdrucks „SFINAE“ in `struct`- und `void_t`-basiert wurde abgeschlossen.
 - Algorithmen der Standardbibliothek vermeiden jetzt postinkrementelle Iteratoren.
 - Warnungen zu Abschneidungen beim Verwenden von 32-Bit-Zuweisungen in 64-Bit-Systemen wurden korrigiert.
-- `std::vector` – Verschiebungsanweisungen für diese Klasse sind nun effizienter im Fall von Vorgängen, die weder POCMA noch der Speicherbelegung entsprechen, da nach Möglichkeit der Puffer wiederverwendet wird.
+- Die Zuweisung von `std::vector`-Verschiebungen erfolgt jetzt für Vorgänge, die weder der Zuweisung noch POCMA entsprechen, effizienter, indem nach Möglichkeit der Puffer wiederverwendet wird.
 
 #### <a name="readability-and-other-improvements"></a>Verbesserungen der Lesbarkeit und andere Optimierungen
 
@@ -199,25 +199,25 @@ Mehrere Features der Standardbibliothek wurden in Übereinstimmung mit dem C++17
 
 #### <a name="performance-fixes-and-improvements"></a>Fehlerbehebungen und Optimierungen der Leistung
 
-- `basic_string<char16_t>` nutzt die gleichen Optimierungen von `memcmp` und `memcpy` sowie ähnliche Optimierungen, die von `basic_string<wchar_t>` verwendet werden.
+- `basic_string<char16_t>` interagiert nun mit den gleichen Optimierungen von `memcmp` und `memcpy` sowie ähnlichen Optimierungen, die von `basic_string<wchar_t>` verwendet werden.
 - Eine Einschränkung des Optimierers, die verhindert hat, dass Funktionszeiger durch unsere Arbeitsweise „Vermeiden von Kopierfunktionen“ in Visual Studio 2015 Update 3 inline dargestellt wurden, wurde umgangen, wodurch die Leistung von `lower_bound(iter, iter, function pointer)` wiederhergestellt wurde.
 - Der Mehraufwand für die Überprüfung der Reihenfolge von Eingaben (`includes`, `set_difference`, `set_symmetric_difference` und `set_union`) des Iteratordebuggens wurde durch das Entpacken von Iteratoren vor der Überprüfung der Reihenfolge verringert.
-- `std::inplace_merge` überspringt nun Elemente, die sich bereits an der richtigen Position befinden.
+- `std::inplace_merge` überspringt nun Elemente, die sich bereits in der richtigen Position befinden.
 - Das Erstellen von `std::random_device` erstellt nicht länger ein `std::string`-Element bzw. zerstört es auch nicht mehr.
-- `std::equal` und `std::partition` – für diese wurde ein Jump Threading-Optimierungsdurchlauf ausgeführt, durch den ein Iteratorvergleich weniger erforderlich ist.
+- Für `std::equal` und `std::partition` wurde ein Jump Threading-Optimierungsdurchlauf ausgeführt, der einen Iteratorvergleich erspart.
 - Wenn `std::reverse` Zeiger auf trivial kopierbares `T` übergeben werden, erfolgt die Ausgabe nun an eine handgeschriebene vektorisierte Implementierung.
-- `std::fill`, `std::equal` und `std::lexicographical_compare` wurden so angepasst, dass eine Weiterleitung an `memset` und `memcmp` für `std::byte` und `gsl::byte` (sowie für andere char-ähnliche Enumerationen und Enumerationsklassen) funktioniert. Beachten Sie, dass die Weiterleitung für `std::copy` mithilfe von `is_trivially_copyable` erfolgt und deshalb keine Änderungen notwendig sind.
+- `std::fill`, `std::equal` und `std::lexicographical_compare` wurden beigebracht, wie die Weiterleitung an `memset` und `memcmp` für `std::byte` und `gsl::byte` (sowie für andere char-ähnliche Enumerationen und Enumerationsklassen) funktioniert. Beachten Sie, dass die Weiterleitung für `std::copy` mithilfe von `is_trivially_copyable` erfolgt und deshalb keine Änderungen notwendig sind.
 - Die Standardbibliothek enthält keine Destruktoren mehr mit leeren Klammern, deren einziges Verhalten darin bestand, Typen als nicht tribial zerstörbar zu definieren.
 
 #### <a name="correctness-fixes-in-visual-studio-2017-version-155"></a>Fehlerbehebungen in Visual Studio 2017 Version 15.5
 
-- `std::partition` ruft nun in Übereinstimmung mit dem Standard das Prädikat n Mal anstatt n + 1 Mal auf.
+- `std::partition` ruft nun das Prädikat n Mal anstatt n+1 Mal auf, wie es der Standard verlangt.
 - Versuche, Magic Statics in Version 15.3 zu vermeiden, wurden in Version 15.5 korrigiert.
 - `std::atomic<T>` erfordert nicht mehr, dass `T` standardmäßig konstruierbar ist.
 - Heapalgorithmen, die logarithmische Zeit erfordern, nehmen keine lineare Zeitassertion mehr vor, dass die Eingabe tatsächlich ein Heap ist, wenn Iteratordebuggen aktiviert ist.
-- `__declspec(allocator)` wird jetzt nur noch für C1XX geschützt, um Warnungen des Compiler-Front-Ends Clang zu verhindern, das diesen Modifizierer von declspec nicht versteht.
-- `basic_string::npos` ist nun als Konstante zur Kompilierzeit verfügbar.
-- `std::allocator` verarbeitet nun im C++17-Modus ordnungsgemäß die Speicherbelegung von überausgerichteten Typen, also von Typen, deren Ausrichtung größer als `max_align_t` ist (wenn keine Deaktivierung durch **/Zc:alignedNew-** erfolgt).  Vektoren von Objekten mit 16- oder 32-Byte-Ausrichtung werden z.B. nun ordnungsgemäß für SSE- und AVX-Anweisungen ausgerichtet.
+- `__declspec(allocator)` wird jetzt nur noch für C1XX geschützt, um Warnungen von Clang zu verhindern, das diese declspec nicht versteht.
+- `basic_string::npos` ist nun als Kompilierzeitkonstante verfügbar.
+- `std::allocator` verarbeitet nun die Zuordnung von überalignierten Typen, also von Typen, deren Ausrichtung größer als `max_align_t` ist, im C++17-Modus ordnungsgemäß (wenn keine Deaktivierung durch **/Zc:alignedNew-** erfolgt).  Vektoren von Objekten mit 16- oder 32-Byte-Ausrichtung werden z.B. nun ordnungsgemäß für SSE- und AVX-Anweisungen ausgerichtet.
 
 ### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 Version 15.6
 
