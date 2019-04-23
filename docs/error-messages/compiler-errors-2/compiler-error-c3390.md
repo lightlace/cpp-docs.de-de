@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
 ms.openlocfilehash: 3f1149d4584a0ea3d0061a3ec4e2b77830603ef2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768743"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778734"
 ---
 # <a name="compiler-error-c3390"></a>Compilerfehler C3390
 
@@ -21,7 +21,7 @@ Ein generischer Typ wurde fehlerhaft instanziiert.  Überprüfen Sie die Typdefi
 
 ## <a name="example"></a>Beispiel
 
-Im ersten Beispiel wird C# eine Komponente zu erstellen, die einen generischen Typ, die über bestimmte Einschränkungen, die nicht unterstützt werden enthält verfügt, wenn generische Typen in C++ erstellen / CLR. Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Im ersten Beispiel wird c# eine Komponente zu erstellen, die einen generischen Typ, die über bestimmte Einschränkungen, die nicht unterstützt werden enthält verfügt, wenn generische Typen in C++ erstellen / CLR. Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
 ```cs
 // C3390.cs

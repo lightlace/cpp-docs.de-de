@@ -1,6 +1,6 @@
 ---
 title: OpenMP-Anweisungen
-ms.date: 10/22/2018
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP directives
 - atomic
@@ -29,34 +29,46 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: a61e74bda4e508bac3c4afd183fa2ab204c629d1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d644b612c0c326692786c94046d799163dfbce8d
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333240"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124953"
 ---
 # <a name="openmp-directives"></a>OpenMP-Anweisungen
 
 Enthält Links zu Anweisungen, die in der OpenMP-API verwendet.
 
-Visual C++ unterstützt die folgenden OpenMP-Anweisungen:
+Visual C++ unterstützt die folgenden OpenMP-Anweisungen.
+
+Für die parallele Arbeit-Freigabe:
 
 |Direktive|Beschreibung|
 |---------|-----------|
-|[atomic](#atomic)|Gibt an, dass eine Speicheradresse, die automatisch aktualisiert werden.|
-|[barrier](#barrier)|Synchronisiert alle Threads in einem Team. Alle Threads anhalten die Barriere, bis alle Threads die Barriere ausführen.|
-|[critical](#critical)|Gibt an, dass Code nur in einem Thread zu einem Zeitpunkt ausgeführt wird.|
-|[flush](#flush-openmp)|Gibt an, dass alle Threads die gleiche Ansicht der Arbeitsspeicher für alle freigegebenen Objekte.|
-|[for](#for-openmp)|Bewirkt, dass die Arbeit einem `for` Schleife innerhalb eines parallelen Bereichs zwischen Threads aufgeteilt werden.|
-|[master](#master)|Gibt an, dass nur die master-Thread einen Abschnitt des Programms ausgeführt werden soll.|
-|[Sortiert](#ordered-openmp-directives)|Gibt an, diesen Code unter einem parallelisierten `for` Schleife ausgeführt werden soll, wie eine sequenzielle Schleife.|
 |[parallel](#parallel)|Definiert einen parallelen Bereich, also Code, die von mehreren Threads gleichzeitig ausgeführt werden.|
+|[for](#for-openmp)|Bewirkt, dass die Arbeit einem `for` Schleife innerhalb eines parallelen Bereichs zwischen Threads aufgeteilt werden.|
 |[Abschnitte](#sections-openmp)|Identifiziert die Codeabschnitte, die auf allen Threads aufgeteilt werden.|
 |[single](#single)|Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der nicht unbedingt die master-Thread ausgeführt werden soll.|
+
+Für Master und -Synchronisierung:
+
+|Direktive|Beschreibung|
+|---------|-----------|
+|[master](#master)|Gibt an, dass nur die master-Thread einen Abschnitt des Programms ausgeführt werden soll.|
+|[critical](#critical)|Gibt an, dass Code nur in einem Thread zu einem Zeitpunkt ausgeführt wird.|
+|[barrier](#barrier)|Synchronisiert alle Threads in einem Team. Alle Threads anhalten die Barriere, bis alle Threads die Barriere ausführen.|
+|[atomic](#atomic)|Gibt an, dass eine Speicheradresse, die automatisch aktualisiert werden.|
+|[flush](#flush-openmp)|Gibt an, dass alle Threads die gleiche Ansicht der Arbeitsspeicher für alle freigegebenen Objekte.|
+|[ordered](#ordered-openmp-directives)|Gibt an, diesen Code unter einem parallelisierten `for` Schleife ausgeführt werden soll, wie eine sequenzielle Schleife.|
+
+Für Data-Umgebung:
+
+|Direktive|Beschreibung|
+|---------|-----------|
 |[threadprivate](#threadprivate)|Gibt an, dass eine Variable einem Thread zugehörig ist.|
 
-## <a name="atomic"></a>Atomic
+## <a name="atomic"></a>atomic
 
 Gibt an, dass eine Speicheradresse, die automatisch aktualisiert werden.
 
@@ -67,18 +79,18 @@ Gibt an, dass eine Speicheradresse, die automatisch aktualisiert werden.
 
 ### <a name="parameters"></a>Parameter
 
-*Ausdruck*<br/>
-Die Anweisung, die die l-Wert, dessen Speicherort verfügt, die Sie für mehrere Schreibvorgänge schützen möchten. Weitere Informationen zu rechtlichen Ausdruck Formen finden Sie in der OpenMP-Spezifikation.
+*expression*<br/>
+Die Anweisung, die die *Lvalue*, deren Speicheradresse, die Sie für mehrere Schreibvorgänge schützen möchten.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `atomic` -Anweisung unterstützt keine OpenMP-Klauseln.
+Die `atomic` -Anweisung unterstützt keine Klauseln.
 
 Weitere Informationen finden Sie unter [2.6.4 atomic erstellen](../../../parallel/openmp/2-6-4-atomic-construct.md).
 
 ### <a name="example"></a>Beispiel
 
-```
+```cpp
 // omp_atomic.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -111,7 +123,7 @@ Synchronisiert alle Threads in einem Team. Alle Threads anhalten die Barriere, b
 
 ### <a name="remarks"></a>Hinweise
 
-Die `barrier` -Anweisung unterstützt keine OpenMP-Klauseln.
+Die `barrier` -Anweisung unterstützt keine Klauseln.
 
 Weitere Informationen finden Sie unter [2.6.3 Barrier-Direktive](../../../parallel/openmp/2-6-3-barrier-directive.md).
 
@@ -133,17 +145,17 @@ Gibt an, dass der Code ist nur in einem Thread zu einem Zeitpunkt ausgeführt we
 ### <a name="parameters"></a>Parameter
 
 *name*<br/>
-(Optional) Ein Name zur Identifizierung des kritischen Codes. Beachten Sie, dass dieser Name in Klammern eingeschlossen werden muss.
+(Optional) Ein Name zur Identifizierung des kritischen Codes. Der Name muss in Klammern eingeschlossen werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `critical` -Anweisung unterstützt keine OpenMP-Klauseln.
+Die `critical` -Anweisung unterstützt keine Klauseln.
 
 Weitere Informationen finden Sie unter [2.6.2 kritische erstellen](../../../parallel/openmp/2-6-2-critical-construct.md).
 
 ### <a name="example"></a>Beispiel
 
-```
+```cpp
 // omp_critical.cpp
 // compile with: /openmp
 #include <omp.h>
@@ -199,7 +211,7 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>Flush (OpenMP)
+## <a name="flush-openmp"></a>flush
 
 Gibt an, dass alle Threads die gleiche Ansicht der Arbeitsspeicher für alle freigegebenen Objekte.
 
@@ -210,17 +222,17 @@ Gibt an, dass alle Threads die gleiche Ansicht der Arbeitsspeicher für alle fre
 ### <a name="parameters"></a>Parameter
 
 *var*<br/>
-(Optional) Eine durch Trennzeichen getrennte Liste von Variablen, die Objekte darstellen, die Sie synchronisieren möchten. Wenn `var` nicht angegeben ist, alle Arbeitsspeicher wird geleert.
+(Optional) Eine durch Trennzeichen getrennte Liste von Variablen, die Objekte darstellen, die Sie synchronisieren möchten. Wenn *Var* nicht angegeben ist, alle Arbeitsspeicher wird geleert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `flush` -Anweisung unterstützt keine OpenMP-Klauseln.
+Die `flush` -Anweisung unterstützt keine Klauseln.
 
 Weitere Informationen finden Sie unter [2.6.5 flush-Direktive](../../../parallel/openmp/2-6-5-flush-directive.md).
 
 ### <a name="example"></a>Beispiel
 
-```
+```cpp
 // omp_flush.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -275,7 +287,7 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>für (OpenMP)
+## <a name="for-openmp"></a>für
 
 Bewirkt, dass die Arbeit einem `for` Schleife innerhalb eines parallelen Bereichs zwischen Threads aufgeteilt werden.
 
@@ -286,23 +298,23 @@ Bewirkt, dass die Arbeit einem `for` Schleife innerhalb eines parallelen Bereich
 
 ### <a name="parameters"></a>Parameter
 
-*Klauseln*<br/>
-(Optional) NULL oder mehr Klauseln. Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln `for`.
+*clauses*<br/>
+(Optional) NULL oder mehr Klauseln, finden Sie unter den **"Hinweise"** Abschnitt.
 
-*for_Statement*<br/>
+*for_statement*<br/>
 Ein `for` Schleife. Nicht definiertem Verhalten führt, wenn Benutzer im code die `for` Schleife ändert die Indexvariable.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `for` -Anweisung unterstützt die folgenden OpenMP-Klauseln:
+Die `for` -Anweisung unterstützt die folgenden Klauseln:
 
+- [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [lastprivate](openmp-clauses.md#lastprivate)
-- [nowait](openmp-clauses.md#nowait)
-- [Sortiert](openmp-clauses.md#ordered-openmp-clauses)
-- [private](openmp-clauses.md#private-openmp)
 - [reduction](openmp-clauses.md#reduction)
+- [ordered](openmp-clauses.md#ordered-openmp-clauses)
 - [schedule](openmp-clauses.md#schedule)
+- [nowait](openmp-clauses.md#nowait)
 
 Wenn `parallel` ebenfalls angegeben wird, `clauses` kann jede beliebige Klausel von akzeptiert die `parallel` oder `for` Anweisungen, mit Ausnahme von `nowait`.
 
@@ -310,7 +322,7 @@ Weitere Informationen finden Sie unter [2.4.1 for-Konstrukt](../../../parallel/o
 
 ### <a name="example"></a>Beispiel
 
-```
+```cpp
 // omp_for.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -385,7 +397,7 @@ Gibt an, dass nur die master-Thread einen Abschnitt des Programms ausgeführt we
 
 ### <a name="remarks"></a>Hinweise
 
-Die `master` -Anweisung unterstützt keine OpenMP-Klauseln.
+Die `master` -Anweisung unterstützt keine Klauseln.
 
 Die [einzelne](#single) -Direktive können Sie angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der nicht unbedingt die master-Thread ausgeführt werden soll.
 
@@ -393,7 +405,7 @@ Weitere Informationen finden Sie unter [2.6.1 master-Konstrukt](../../../paralle
 
 ### <a name="example"></a>Beispiel
 
-```
+```cpp
 // omp_master.cpp
 // compile with: /openmp
 #include <omp.h>
@@ -434,7 +446,7 @@ a[3] = 9
 a[4] = 16
 ```
 
-## <a name="ordered-openmp-directives"></a>geordnete (OpenMP-Anweisungen)
+## <a name="ordered-openmp-directives"></a>Sortiert
 
 Gibt an, diesen Code unter einem parallelisierten `for` Schleife ausgeführt werden soll, wie eine sequenzielle Schleife.
 
@@ -447,13 +459,13 @@ Gibt an, diesen Code unter einem parallelisierten `for` Schleife ausgeführt wer
 
 Die `ordered` Richtlinie im dynamischen Wertebereich liegen eine [für](#for-openmp) oder `parallel for` erstellen, die mit einer `ordered` Klausel.
 
-Die `ordered` -Anweisung unterstützt keine OpenMP-Klauseln.
+Die `ordered` -Anweisung unterstützt keine Klauseln.
 
 Weitere Informationen finden Sie unter [2.6.6 ordered-Konstrukt](../../../parallel/openmp/2-6-6-ordered-construct.md).
 
 ### <a name="example"></a>Beispiel
 
-```
+```cpp
 // omp_ordered.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -518,31 +530,31 @@ Definiert einen parallelen Bereich, also Code, die von mehreren Threads gleichze
 
 ### <a name="parameters"></a>Parameter
 
-*Klauseln*<br/>
-(Optional) NULL oder mehr Klauseln.  Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln `parallel`.
+*clauses*<br/>
+(Optional) NULL oder mehr Klauseln, finden Sie unter den **"Hinweise"** Abschnitt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `parallel` -Anweisung unterstützt die folgenden OpenMP-Klauseln:
+Die `parallel` -Anweisung unterstützt die folgenden Klauseln:
 
-- [copyin](openmp-clauses.md#copyin)
-- [default](openmp-clauses.md#default-openmp)
-- [firstprivate](openmp-clauses.md#firstprivate)
 - [if](openmp-clauses.md#if-openmp)
-- [num_threads](openmp-clauses.md#num-threads)
 - [private](openmp-clauses.md#private-openmp)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [default](openmp-clauses.md#default-openmp)
+- [shared](openmp-clauses.md#shared-openmp)
+- [copyin](openmp-clauses.md#copyin)
 - [reduction](openmp-clauses.md#reduction)
-- [Freigegebene](openmp-clauses.md#shared-openmp)
+- [num_threads](openmp-clauses.md#num-threads)
 
-`parallel` kann auch verwendet werden, mit der [Abschnitte](#sections-openmp) und [für](#for-openmp) Anweisungen.
+`parallel` kann auch verwendet werden, mit der [für](#for-openmp) und [Abschnitte](#sections-openmp) Anweisungen.
 
 Weitere Informationen finden Sie unter [2.3 parallel-Konstrukt](../../../parallel/openmp/2-3-parallel-construct.md).
 
 ### <a name="example"></a>Beispiel
 
-Im folgende Beispiel veranschaulicht die legen Sie die Anzahl von Threads und ein paralleles Bereichs zu definieren. Die Anzahl von Threads entspricht standardmäßig auf die Anzahl der logischen Prozessoren auf dem Computer zur Verfügung. Z. B. Wenn Sie einen Computer mit einem physischen Prozessor, die Hyperthreading aktiviert wurde verfügen, wird es zwei logischen Prozessoren und zwei Threads haben.
+Im folgende Beispiel veranschaulicht die legen Sie die Anzahl von Threads und ein paralleles Bereichs zu definieren. Die Anzahl von Threads entspricht standardmäßig auf die Anzahl der logischen Prozessoren auf dem Computer zur Verfügung. Z. B. Wenn Sie einen Computer mit einem physischen Prozessor, die Hyperthreading aktiviert wurde verfügen, wird es zwei logischen Prozessoren und zwei Threads haben. Die Reihenfolge der Ausgabe kann auf verschiedenen Computern variieren.
 
-```
+```cpp
 // omp_parallel.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -564,11 +576,7 @@ Hello from thread 2
 Hello from thread 3
 ```
 
-### <a name="comment"></a>Kommentar
-
-Beachten Sie, dass die Reihenfolge der Ausgabe auf verschiedenen Computern variieren kann.
-
-## <a name="sections-openmp"></a>Abschnitte (OpenMP)
+## <a name="sections-openmp"></a>Abschnitte
 
 Identifiziert die Codeabschnitte, die auf allen Threads aufgeteilt werden.
 
@@ -584,20 +592,20 @@ Identifiziert die Codeabschnitte, die auf allen Threads aufgeteilt werden.
 
 ### <a name="parameters"></a>Parameter
 
-*Klauseln*<br/>
-(Optional) NULL oder mehr Klauseln. Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln `sections`.
+*clauses*<br/>
+(Optional) NULL oder mehr Klauseln, finden Sie unter den **"Hinweise"** Abschnitt.
 
 ### <a name="remarks"></a>Hinweise
 
 Die `sections` Richtlinie kann 0 (null) oder mehrere enthalten `section` Anweisungen.
 
-Die `sections` -Anweisung unterstützt die folgenden OpenMP-Klauseln:
+Die `sections` -Anweisung unterstützt die folgenden Klauseln:
 
+- [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [lastprivate](openmp-clauses.md#lastprivate)
-- [nowait](openmp-clauses.md#nowait)
-- [private](openmp-clauses.md#private-openmp)
 - [reduction](openmp-clauses.md#reduction)
+- [nowait](openmp-clauses.md#nowait)
 
 Wenn `parallel` ebenfalls angegeben wird, `clauses` kann jede beliebige Klausel von akzeptiert die `parallel` oder `sections` Anweisungen, mit Ausnahme von `nowait`.
 
@@ -605,7 +613,7 @@ Weitere Informationen finden Sie unter [2.4.2 sections-Konstrukt](../../../paral
 
 ### <a name="example"></a>Beispiel
 
-```
+```cpp
 // omp_sections.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -639,17 +647,17 @@ Sie können angeben, dass ein Abschnitt des Codes in einem einzelnen Thread, der
 
 ### <a name="parameters"></a>Parameter
 
-*Klauseln*<br/>
-(Optional) NULL oder mehr Klauseln. Finden Sie im Abschnitt "Hinweise" eine Liste von unterstützten Klauseln `single`.
+*clauses*<br/>
+(Optional) NULL oder mehr Klauseln, finden Sie unter den **"Hinweise"** Abschnitt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `single` -Anweisung unterstützt die folgenden OpenMP-Klauseln:
+Die `single` -Anweisung unterstützt die folgenden Klauseln:
 
-- [copyprivate](openmp-clauses.md#copyprivate)
-- [firstprivate](openmp-clauses.md#firstprivate)
-- [nowait](openmp-clauses.md#nowait)
 - [private](openmp-clauses.md#private-openmp)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [copyprivate](openmp-clauses.md#copyprivate)
+- [nowait](openmp-clauses.md#nowait)
 
 Die [master](#master) -Direktive können Sie angeben, dass ein Abschnitt des Codes nur für die master-Thread ausgeführt werden sollen.
 
@@ -698,23 +706,17 @@ Gibt an, dass eine Variable einem Thread zugehörig ist.
 ### <a name="parameters"></a>Parameter
 
 *var*<br/>
-Eine durch Trennzeichen getrennte Liste von Variablen, die Sie an einen Thread als privat kennzeichnen möchten. `var` Hierbei muss es sich um eine globale oder Namespace-bezogenen Variable oder eine statische lokale Variable sein.
+Eine durch Trennzeichen getrennte Liste von Variablen, die Sie an einen Thread als privat kennzeichnen möchten. *Var* muss entweder eine globale oder Namespace-bezogenen Variable oder eine statische lokale Variable sein.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `threadprivate` -Anweisung unterstützt keine OpenMP-Klauseln.
+Die `threadprivate` -Anweisung unterstützt keine Klauseln.
 
-Weitere Informationen finden Sie unter [2.7.1 Threadprivate-Direktive](../../../parallel/openmp/2-7-1-threadprivate-directive.md).
+Der `threadprivate` Richtlinie basiert auf der [Thread](../../../cpp/thread.md) -Attribut mit dem [__declspec](../../../cpp/declspec.md) -Schlüsselwort, Grenzwerte für `__declspec(thread)` gelten für `threadprivate`. Z. B. eine `threadprivate` Variable befindet sich in jedem Thread im Prozess gestartet, nicht nur die Threads, die Teil eines Thread-Teams, die von einem parallelen Bereich Anwendungen erzeugt werden. Achten Sie auf Dieses Implementierungsdetail; Sie können feststellen, dass Konstruktoren für eine `threadprivate` einen benutzerdefinierten Typ heißen Weitere häufig wird erwartet.
 
-Der `threadprivate` Richtlinie basiert auf der [Thread](../../../cpp/thread.md) -Attribut mit dem [__declspec](../../../cpp/declspec.md) -Schlüsselwort, Grenzwerte für `__declspec(thread)` gelten für `threadprivate`.
+Können Sie `threadprivate` in einer DLL, die beim Starten des Prozesses statisch geladen wird, jedoch können keine `threadprivate` in einer DLL, die über geladen werden [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) wie z.B. DLLs, die mit geladen werden  [ /DELAYLOAD (Verzögerung Laden von Import)](../../../build/reference/delayload-delay-load-import.md), die auch verwendet `LoadLibrary`.
 
-Sie können keine `threadprivate` in einer DLL, die über geladen werden [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya).  Dieses Verbot enthält DLLs, die mit geladen werden [/DELAYLOAD (Laden von Import verzögern)](../../../build/reference/delayload-delay-load-import.md), die auch verwendet `LoadLibrary`.
-
-Sie können `threadprivate` in einer DLL, die beim Starten des Prozesses statisch geladen wird.
-
-Da `threadprivate` basiert auf `__declspec(thread)`, `threadprivate` Variable befindet sich in jedem Thread im Prozess gestartet, nicht nur die Threads, die Teil eines Thread-Teams, die von einem parallelen Bereich Anwendungen erzeugt werden.  Achten Sie auf Dieses Implementierungsdetail; Sie werden feststellen, z. B. diese Konstruktoren für eine `threadprivate` einen benutzerdefinierten Typ heißen Weitere häufig wird erwartet.
-
-Ein `threadprivate` ist nicht garantiert, dass Variablen eines destructable sein Destruktor aufgerufen werden.  Zum Beispiel:
+Ein `threadprivate` der Variable ein *"destructible"* ist nicht garantiert, dass Typ sein Destruktor aufgerufen werden. Zum Beispiel:
 
 ```
 struct MyType
@@ -731,7 +733,9 @@ int main()
 }
 ```
 
-Benutzer haben keine Kontrolle, wenn die Threads enthalten sind, die den parallelen Bereich beendet wird.  Wenn diese Threads vorhanden sind, wenn der Prozess beendet wird, die Threads nicht, über das Beenden des Prozesses informiert und der Destruktor nicht aufgerufen, für die `threaded_var` auf einem beliebigen Thread mit der Ausnahme, die beendet wird (Hier wird der primäre Thread).  So können Code auf ordnungsgemäße Zerstörung von verlassen dürfen nicht `threadprivate` Variablen.
+Benutzer haben keine Kontrolle, wenn die Threads enthalten sind, die den parallelen Bereich beendet wird. Wenn diese Threads vorhanden sind, wenn der Prozess beendet wird, die Threads nicht, über das Beenden des Prozesses informiert und der Destruktor nicht aufgerufen, für die `threaded_var` auf einem beliebigen Thread mit der Ausnahme, die beendet wird (Hier wird der primäre Thread). So können Code auf ordnungsgemäße Zerstörung von verlassen dürfen nicht `threadprivate` Variablen.
+
+Weitere Informationen finden Sie unter [2.7.1 Threadprivate-Direktive](../../../parallel/openmp/2-7-1-threadprivate-directive.md).
 
 ### <a name="example"></a>Beispiel
 

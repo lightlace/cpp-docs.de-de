@@ -6,16 +6,16 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: 93e3b8912ddf20bf8e190bb42e8413e6d909bbcc
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703433"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124680"
 ---
 # <a name="isnormal"></a>isnormal
 
-Bestimmt, ob ein Gleitkommawert unendlich ist.
+Bestimmt, ob ein Gleitkommawert ein normaler Wert ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,7 +27,7 @@ int isnormal(
 template <class FloatingType>
 inline bool isnormal(
    FloatingType x
-) throw(); /* C++-only template function */
+) throw(); /* C++-only function template */
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -37,11 +37,11 @@ Der zu testende Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Isnormal** gibt einen Wert ungleich Null (**"true"** in C++-Code) Wenn das Argument *x* ist begrenzte und nicht subnormal. **Isnormal** gibt 0 zurück (**"false"** in C++-Code), wenn das Argument ein Subnormal, unendlich oder ein NaN-Wert ist.
+**Isnormal** gibt einen Wert ungleich Null (**"true"** in C++ Code) Wenn das Argument *x* ist 0 (null), Subnormal, unendlich oder ein NaN-Wert. Andernfalls **Isnormal** gibt 0 zurück (**"false"** in C++ Code).
 
 ## <a name="remarks"></a>Hinweise
 
-**Isnormal** ist ein Makro, wenn als C, und eine Vorlage Inlinefunktion beim Kompilieren als C++ kompiliert.
+**Isnormal** ist ein Makro, die beim Kompilieren als C++, und eine Inlinevorlage-Funktion beim Kompilieren als C++.
 
 ## <a name="requirements"></a>Anforderungen
 

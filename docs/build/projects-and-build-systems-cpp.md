@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 73797f3817338c48e8ff11eaaadff71263374fd0
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775425"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124758"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++-Projekte und Buildsysteme in Visual Studio
 
@@ -35,7 +35,7 @@ Grundlegende C++-Kompilierung umfasst drei Hauptschritte:
 
 ## <a name="the-msvc-toolset"></a>Der MSVC-Toolsets
 
-Microsoft C++-Compiler, Linker, standard-Bibliotheken und zugehörigen Hilfsprogramme umfassen das MSCV-Compilertoolset (auch als eine toolkette oder "build-Tools" bezeichnet). Diese sind in Visual Studio enthalten. Sie können auch herunterladen und verwenden Sie das Toolset als eigenständiges Paket kostenlos von der [Speicherort des Downloads der Build-Tools für Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
+Microsoft C++ Compiler, Linker, standard-Bibliotheken und zugehörigen Hilfsprogramme umfassen die MSVC-Compilertoolset (auch als eine toolkette oder "build-Tools" bezeichnet). Diese sind in Visual Studio enthalten. Sie können auch herunterladen und verwenden Sie das Toolset als eigenständiges Paket kostenlos von der [Speicherort des Downloads der Build-Tools für Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
 
 Sie können einfache Programme erstellen, durch den Aufruf des MSVC-Compilers (cl.exe) direkt über die Befehlszeile. Der folgende Befehl akzeptiert eine einzelne Quellcodedatei, und ruft cl.exe zum Erstellen einer ausführbaren Datei namens *hello.exe*: 
 
