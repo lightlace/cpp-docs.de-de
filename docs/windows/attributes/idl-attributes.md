@@ -9,10 +9,10 @@ helpviewer_keywords:
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
 ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039500"
 ---
 # <a name="idl-attributes"></a>IDL-Attribute
@@ -27,11 +27,11 @@ Jetzt können Sie von innerhalb einer Quellcodedatei, die mithilfe von Visual C+
 
 Bei Verwendung nicht mit [COM-Attributen](com-attributes.md), IDL-Attribute können Sie die Schnittstellen definieren. Wenn der Quellcode kompiliert wird, werden die Attribute zum Definieren der generierten IDL-Datei verwendet. Bei Verwendung mit COM-Attributen in einem ATL-Projekt einige IDL Attribute, z. B. `coclass`, dass Code in das Projekt eingefügt werden.
 
-Beachten Sie, dass [Idl_quote](idl-quote.md) können Sie MIDL-Konstrukte, die in der aktuellen Version von Visual C++ nicht unterstützt werden. Diese und andere Attribute wie z. B. [Importlib](importlib.md) und [Includelib](includelib-cpp.md) finden Sie Informationen zu vorhandenen IDL-Dateien in Ihrem aktuellen Visual C++-Projekt verwenden.
+Beachten Sie, dass [Idl_quote](idl-quote.md) können Sie MIDL-Konstrukte, die in der aktuellen Version des Visuals nicht unterstützt werden C++. Diese und andere Attribute wie z. B. [Importlib](importlib.md) und [Includelib](includelib-cpp.md) finden Sie Informationen zu vorhandenen IDL-Dateien in Ihrem aktuellen Visual C++-Projekt verwenden.
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|[aggregatable](aggregatable.md)|Gibt an, dass ein Steuerelement durch ein anderes Steuerelement aggregiert werden kann.|
+|[Aggregierbar](aggregatable.md)|Gibt an, dass ein Steuerelement durch ein anderes Steuerelement aggregiert werden kann.|
 |[appobject](appobject.md)|Identifiziert die Co-Klasse als ein Anwendungsobjekt, das eine vollständige Anwendung für die EXE-Datei zugeordnet ist, und gibt an, dass die Funktionen und Eigenschaften der Co-Klasse in diese Typbibliothek global verfügbar sind.|
 |[async_uuid](async-uuid.md)|Gibt an, die UUID, die den MIDL-Compiler definiert synchrone und asynchrone Versionen einer COM-Schnittstelle weiterleitet.|
 |[bindable](bindable.md)|Gibt an, dass die Eigenschaft die Datenbindung unterstützt.|
@@ -58,7 +58,7 @@ Beachten Sie, dass [Idl_quote](idl-quote.md) können Sie MIDL-Konstrukte, die in
 |[hidden](hidden.md)|Gibt an, dass das Element vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden soll.|
 |[idl_module](idl-module.md)|Gibt einen Einstiegspunkt in einer DLL an.|
 |[idl_quote](idl-quote.md)|Können Sie Attribute verwenden, oder IDL-Konstrukte, die in der aktuellen Version von Visual C++ nicht unterstützt werden.|
-|[id](id.md)|Gibt eine DISPID für eine Memberfunktion (eine Eigenschaft oder eine Methode, in eine Schnittstelle oder Disp-Schnittstelle).|
+|[ID](id.md)|Gibt eine DISPID für eine Memberfunktion (eine Eigenschaft oder eine Methode, in eine Schnittstelle oder Disp-Schnittstelle).|
 |[iid_is](iid-is.md)|Gibt die IID für die COM-Schnittstelle, die einen Schnittstellenzeiger einen verweist.|
 |[immediatebind](immediatebind.md)|Gibt an, dass die Datenbank über alle Änderungen an einer Eigenschaft eines datengebundenen Objekts sofort benachrichtigt wird.|
 |[importlib](importlib.md)|Stellt Typen, die bereits in einer anderen Typbibliothek kompiliert wurden, der erstellten Typbibliothek zur Verfügung.|
@@ -70,7 +70,7 @@ Beachten Sie, dass [Idl_quote](idl-quote.md) können Sie MIDL-Konstrukte, die in
 |[lcid](lcid.md)|Sie können einen Gebietsschemabezeichner an eine Funktion übergeben.|
 |[length_is](length-is.md)|Gibt die Anzahl von Elementen übertragen werden.|
 |[licensed](licensed.md)|Gibt an, dass die Co-Klasse, die auf die es angewendet wird lizenziert, und muss mit instanziiert werden `IClassFactory2`.|
-|[Lokal](local-cpp.md)|Ermöglicht Ihnen die Verwendung den MIDL-Compiler als ein Header-Generator, wenn in der Schnittstelle-Header verwendet. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.|
+|[local](local-cpp.md)|Ermöglicht Ihnen die Verwendung den MIDL-Compiler als ein Header-Generator, wenn in der Schnittstelle-Header verwendet. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.|
 |[max_is](max-is.md)|Legt fest, den maximalen Wert für ein gültiges Array-Index.|
 |[module](module-cpp.md)|Definiert den Bibliotheksblock in der IDL-Datei.|
 |[ms_union](ms-union.md)|Steuert die Netzwerk-datenausrichtung Darstellung nonencapsulated Unions.|
@@ -81,7 +81,7 @@ Beachten Sie, dass [Idl_quote](idl-quote.md) können Sie MIDL-Konstrukte, die in
 |[object](object-cpp.md)|Identifiziert eine benutzerdefinierte Schnittstelle an. gleichbedeutend mit benutzerdefinierten Attribut.|
 |[odl](odl.md)|Gibt eine Schnittstelle als Schnittstelle Objekt Description Language (ODL).|
 |[oleautomation](oleautomation.md)|Gibt an, dass eine Schnittstelle mit der Automatisierung kompatibel ist.|
-|[Optional](optional-cpp.md)|Gibt einen optionalen Parameter für eine Memberfunktion an.|
+|[optional](optional-cpp.md)|Gibt einen optionalen Parameter für eine Memberfunktion an.|
 |[out](out-cpp.md)|Gibt die Zeigerparameter an, die von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben werden (vom Server an den Client).|
 |[pointer_default](pointer-default.md)|Gibt das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der obersten Ebene Zeigern, die angezeigt werden in der Parameterliste.|
 |[pragma](pragma.md)|Gibt die angegebene Zeichenfolge verwendet werden, ohne die Anführungszeichen in der generierten IDL-Datei aus.|
@@ -98,8 +98,8 @@ Beachten Sie, dass [Idl_quote](idl-quote.md) können Sie MIDL-Konstrukte, die in
 |[restricted](restricted.md)|Gibt an, dass es sich bei einer Bibliothek oder einem Mitglied ein Modul, Schnittstelle oder Disp-Schnittstelle nicht beliebig aufgerufen werden kann.|
 |[retval](retval.md)|Legt fest, den Parameter, der den Rückgabewert des Members empfängt.|
 |[size_is](size-is.md)|Gibt an, die Größe des Arbeitsspeichers für Größe Zeiger zugewiesen, die Größe der Zeiger auf Zeiger, die Größe und Einzel- oder mehrdimensionale Arrays.|
-|[Quelle](source-cpp.md)|Gibt an, dass ein Member der Klasse, Eigenschaft oder Methode eine Ereignisquelle ist.|
-|[Zeichenfolge](string-cpp.md)|Gibt an, dass das eindimensionale **Char**, **"wchar_t"**, `byte`, oder das entsprechende Array oder der Zeiger auf ein solches Array muss als Zeichenfolge behandelt werden.|
+|[source](source-cpp.md)|Gibt an, dass ein Member der Klasse, Eigenschaft oder Methode eine Ereignisquelle ist.|
+|[string](string-cpp.md)|Gibt an, dass das eindimensionale **Char**, **"wchar_t"**, `byte`, oder das entsprechende Array oder der Zeiger auf ein solches Array muss als Zeichenfolge behandelt werden.|
 |[switch_is](switch-is.md)|Gibt den Ausdruck oder einen Bezeichner fungiert als die union kombiniert werden sollen, die die union-Member auswählt.|
 |[switch_type](switch-type.md)|Gibt den Typ der Variablen als die union Discriminant verwendet.|
 |[transmit_as](transmit-as.md)|Weist den Compiler dargestellt ein, die Client- und serveranwendungen bearbeiten zu können, müssen, mit einem übertragenen Typ zuordnen.|

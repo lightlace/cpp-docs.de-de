@@ -1,5 +1,5 @@
 ---
-title: Idl_quote (C++-COM-Attribut)
+title: Idl_quote (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
 ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037116"
 ---
 # <a name="idlquote"></a>idl_quote
@@ -30,7 +30,7 @@ Der Attributname, die Visual C++-Compiler mit der generierten IDL-Datei übergeb
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die **Idl_quote** C++-Attribut dient als eigenständiges Attribut für den (durch ein Semikolon nach der schließenden Klammer), klicken Sie dann *Text* befindet sich in der zusammengeführten IDL-Datei unverändert. Wenn **Idl_quote** wird verwendet, auf ein Symbol, *Text* befindet sich innerhalb des Attributblocks für das Symbol.
+Wenn die **Idl_quote** C++ Attribut werden als eigenständige Attribut (durch ein Semikolon nach der schließenden Klammer), klicken Sie dann *Text* befindet sich in der zusammengeführten IDL-Datei unverändert. Wenn **Idl_quote** wird verwendet, auf ein Symbol, *Text* befindet sich innerhalb des Attributblocks für das Symbol.
 
 ## <a name="example"></a>Beispiel
 

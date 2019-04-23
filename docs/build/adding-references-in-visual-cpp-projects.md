@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
 ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038762"
 ---
 # <a name="consuming-libraries-and-components"></a>Nutzen Bibliotheken und Komponenten
@@ -128,7 +128,7 @@ Die folgenden Eigenschaften gelten für COM- und Assemblyverweise und können ni
 
    Zeigt den Assemblynamen für die Assembly an, auf die verwiesen wird.
 
-- **culture**
+- **Kultur**
 
    Zeigt die Kultur des ausgewählten Verweises an.
 
@@ -140,7 +140,7 @@ Die folgenden Eigenschaften gelten für COM- und Assemblyverweise und können ni
 
    Zeigt den Verzeichnispfad der Assembly an, auf die verwiesen wird.
 
-- **Identität**
+- **Identity**
 
    Für die .NET Framework-Assemblys wird der vollständige Pfad angezeigt. Zeigt die GUID für COM-Komponenten an.
 
@@ -167,4 +167,4 @@ Die folgenden Eigenschaften gelten für COM- und Assemblyverweise und können ni
 ## <a name="see-also"></a>Siehe auch
 
 [Referenz für C++-Projekt Seite](reference/property-pages-visual-cpp.md)<br>
-[Festlegen von C++-Compiler und erstellen Sie die Eigenschaften in Visual Studio](working-with-project-properties.md)
+[Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio](working-with-project-properties.md)

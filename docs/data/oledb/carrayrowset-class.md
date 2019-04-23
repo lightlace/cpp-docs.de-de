@@ -44,10 +44,10 @@ helpviewer_keywords:
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
 ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040237"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset-Klasse
@@ -133,7 +133,7 @@ TAccessor & operator[](int nrow);
 *TAccessor*<br/>
 Auf Vorlagen basierenden Parameter, der den Typ des Accessors gespeichert, in dem Rowset angibt.
 
-*Funktionen "nrow"*<br/>
+*nRow*<br/>
 [in] Anzahl von der Zeile (Arrayelement), die Sie zugreifen möchten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -156,6 +156,6 @@ ULONG m_nRowsRead;
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CRowset-Klasse](../../data/oledb/crowset-class.md)

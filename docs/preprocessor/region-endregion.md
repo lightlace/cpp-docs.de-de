@@ -13,10 +13,10 @@ helpviewer_keywords:
 - region pragma
 ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
 ms.openlocfilehash: c73a90aa2be83d643b74dde4645081e89da3ff73
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037926"
 ---
 # <a name="region-endregion"></a>region, endregion
@@ -32,10 +32,10 @@ ms.locfileid: "59037926"
 
 ### <a name="parameters"></a>Parameter
 
-*Kommentar*<br/>
+*comment*<br/>
 (Optional) Ein Kommentar, der im Code-Editor angezeigt wird.
 
-*Name*<br/>
+*name*<br/>
 (Optional) Der Name des Bereichs.  Dieser Name wird im Code-Editor angezeigt.
 
 ## <a name="remarks"></a>Hinweise

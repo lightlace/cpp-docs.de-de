@@ -1,5 +1,5 @@
 ---
-title: Iid_is (C++-COM-Attribut)
+title: Iid_is (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
 ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038556"
 ---
 # <a name="iidis"></a>iid_is
@@ -30,7 +30,7 @@ Ein Ausdruck der C-Sprache, der eine IID einer COM-Schnittstelle angibt, auf ein
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Iid_is** C++-Attribut hat die gleiche Funktionalität wie die [Iid_is](/windows/desktop/Midl/iid-is) MIDL-Attribut.
+Die **Iid_is** C++ Attribut hat die gleiche Funktionalität wie die [Iid_is](/windows/desktop/Midl/iid-is) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

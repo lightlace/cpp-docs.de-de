@@ -15,10 +15,10 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
 ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424092"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Für Visual Studio C++-Projekte erstellte Dateitypen
@@ -27,7 +27,7 @@ Viele Arten von Dateien sind mit Visual Studio-Projekten für klassische desktop
 
 - [Projekt- und Projektmappendateien](project-and-solution-files.md)
 
-- [CLR-Projekte](files-created-for-clr-projects.md)
+- [CLR Projects (CLR-Projekte)](files-created-for-clr-projects.md)
 
 - [ATL-Programm oder Steuern von Quell- und Headerdateien](atl-program-or-control-source-and-header-files.md)
 

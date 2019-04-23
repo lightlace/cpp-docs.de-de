@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
 ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037856"
 ---
 # <a name="sql"></a>SQL
@@ -50,8 +50,8 @@ Datenbankklassen verwendet einen Teil von SQL bekannt als der Data Manipulation 
 |**SELECT**|Um zu ermitteln, welche Tabellen und Spalten in der Datenquelle verwendet werden.|
 |**WHERE**|Um einen Filter anzuwenden, der die Auswahl beschränkt.|
 |**ORDER BY**|Das Recordset eine Sortierreihenfolge zuweisen.|
-|**EINFÜGEN**|Neue Datensätze zu einem Recordset hinzufügen.|
-|**DELETE**|Zum Löschen von Datensätzen aus einem Recordset.|
+|**INSERT**|Neue Datensätze zu einem Recordset hinzufügen.|
+|**LÖSCHEN**|Zum Löschen von Datensätzen aus einem Recordset.|
 |**UPDATE**|So ändern Sie die Felder eines Datensatzes.|
 
 Darüber hinaus erkennt die Datenbankklassen ODBC **Aufrufen** Anweisungen, die Sie verwenden können, für einige Datenquellen eine vordefinierte Abfrage (oder eine gespeicherte Prozedur) aufgerufen. Der ODBC-Datenbanktreiber interpretiert diese Anweisungen und ersetzt den Befehl entsprechend für jeden DBMS.

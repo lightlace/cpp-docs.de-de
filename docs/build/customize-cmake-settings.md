@@ -4,10 +4,10 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
 ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037522"
 ---
 # <a name="customize-cmake-build-settings"></a>Anpassen von CMake-Buildeinstellungen
@@ -100,16 +100,16 @@ Für CMake-Projekte unter Linux sind zusätzliche Einstellungen verfügbar. Weit
 
 ## <a name="environment-variables"></a>Umgebungsvariablen
 
- `CMakeSettings.json` unterstützt auch die Nutzung von Umgebungsvariablen in einem der oben genannten Eigenschaften. Die Syntax zum Erweitern der Umgebungsvariable %FOO% ist `${env.FOO}`.
+ `CMakeSettings.json` unterstützt ebenfalls die Verwendung von Umgebungsvariablen in allen zuvor erwähnten Eigenschaften. Die Syntax zum Erweitern der Umgebungsvariable %FOO% ist `${env.FOO}`.
 Sie haben in dieser Datei ebenfalls Zugriff auf integrierte Makros:
 
-- `${workspaceRoot}` : enthält den vollständigen Pfad des Arbeitsbereichsordners
-- `${workspaceHash}` – Hash des Arbeitsbereichs %Location; nützlich zum Erstellen von eines eindeutigen Bezeichners für den aktuellen Arbeitsbereich (z. B. in Ordnerpfade verwendet)
-- `${projectFile}` – der vollständige Pfad der Datei "cmakelists.txt"-Datei des Stammzertifikats
-- `${projectDir}` – der vollständige Pfad des Ordners, der Datei "cmakelists.txt"-Datei des Stammzertifikats
-- `${thisFile}` – der vollständige Pfad des der `CMakeSettings.json` Datei
-- `${name}` – der Name der Konfiguration
-- `${generator}` – der Name des dem Generator von CMake, die in dieser Konfiguration verwendet
+- `${workspaceRoot}`: stellt den vollständigen Pfad des Arbeitsbereichsordners bereit
+- `${workspaceHash}`: Hash des Speicherorts für den Arbeitsbereich; nützlich für das Erstellen eines eindeutigen Bezeichners für den aktuellen Arbeitsbereich (z.B. für die Verwendung in Ordnerpfaden)
+- `${projectFile}`: der vollständige Pfad der CMakeLists.txt-Stammdatei
+- `${projectDir}`: der vollständige Pfad des Ordners der CMakeLists.txt-Stammdatei
+- `${thisFile}`: der vollständige Pfad der Datei `CMakeSettings.json`
+- `${name}`: der Name der Konfiguration
+- `${generator}`: der Name des CMake-Generators, der in dieser Konfiguration verwendet wurde
 
 ## <a name="ninja-command-line-arguments"></a>Ninja-Befehlszeilenargumente
 
@@ -137,7 +137,7 @@ usage: ninja [options] [targets...]
 
 ## <a name="inherited-environments"></a>Geerbte Umgebungen
 
- `CMakeSettings.json` unterstützt die geerbten Umgebungen. Durch dieses Feature können Sie Standardumgebungen vererben und benutzerdefinierte Umgebungsvariablen erstellen, die bei der Ausführung an „CMake.exe“ übergeben werden.
+ `CMakeSettings.json` unterstützt geerbte Umgebungen. Durch dieses Feature können Sie Standardumgebungen vererben und benutzerdefinierte Umgebungsvariablen erstellen, die bei der Ausführung an „CMake.exe“ übergeben werden.
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -236,9 +236,9 @@ Im nächsten Beispiel definiert die x86-Debug-Konfiguration einen eigenen Wert f
 
 ## <a name="see-also"></a>Siehe auch
 
-[CMake-Projekte in Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[CMake Projects in Visual Studio (CMake-Projekte in Visual Studio)](cmake-projects-in-visual-studio.md)<br/>
 [Konfigurieren eines Linux CMake-Projekts](../linux/cmake-linux-project.md)<br/>
 [Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Konfigurieren von CMake-Debugsitzungen](configure-cmake-debugging-sessions.md)<br/>
-[Bereitstellen, Ausführen und Debuggen eines Linux-Projekts](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[Referenz für vordefinierte CMake-Konfigurationen](cmake-predefined-configuration-reference.md)<br/>
+[Bereitstellen, Ausführen und Debuggen Ihres Linux-Projekts](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[CMake predefined configuration reference (Referenz für vordefinierte CMake-Konfigurationen)](cmake-predefined-configuration-reference.md)<br/>

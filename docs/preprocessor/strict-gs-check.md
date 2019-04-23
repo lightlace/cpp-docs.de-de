@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
 ms.openlocfilehash: b62e1be466e65c0de6fb4eaa33ac6e99915529e6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037803"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
@@ -68,4 +68,4 @@ void ** ReverseArray(void **pData,
 ## <a name="see-also"></a>Siehe auch
 
 [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md)
+[/GS (Puffersicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md)

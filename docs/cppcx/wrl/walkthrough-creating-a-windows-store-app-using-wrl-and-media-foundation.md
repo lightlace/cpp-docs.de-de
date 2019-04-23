@@ -4,10 +4,10 @@ ms.date: 09/17/2018
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
 ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036035"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Exemplarische Vorgehensweise: Erstellen einer UWP-app mithilfe von WRL und Media Foundation
@@ -95,9 +95,9 @@ In den meisten Fällen können Sie mithilfe C++ / CX verwenden, um die Windows-R
 
    1. Klicken Sie unter **Windows-Metadaten**legen **Windows-Metadaten generieren** zu **Ja (/ WINMD)**.
 
-### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Die WRL der benutzerdefinierten Media Foundation-Komponente aus einer C#-app verwenden.
+### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Die WRL der benutzerdefinierten Media Foundation-Komponente aus einer c#-app verwenden.
 
-1. Fügen Sie einen neuen **C# leere App (Universelles Windows)** Projekt die `MediaCapture` Lösung. Nennen Sie das Projekt, z. B. *MediaCapture*.
+1. Fügen Sie einen neuen **c# leere App (Universelles Windows)** Projekt die `MediaCapture` Lösung. Nennen Sie das Projekt, z. B. *MediaCapture*.
 
 1. In der **MediaCapture** fügen einen Verweis auf die `GrayscaleTransform` Projekt. Informationen dazu finden Sie unter [Vorgehensweise: Hinzufügen und Entfernen von Verweisen mit dem Verweis-Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).
 
@@ -121,6 +121,6 @@ Im Beispiel wird gezeigt, wie Fotos von der standardmäßigen Webcam nacheinande
 
 ## <a name="see-also"></a>Siehe auch
 
-[Windows Runtime C++ Template Library (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
+[C++-Vorlagenbibliothek für Windows-Runtime (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
 [Beispiel für die medienerweiterungen](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

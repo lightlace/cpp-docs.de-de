@@ -10,10 +10,10 @@ helpviewer_keywords:
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
 ms.openlocfilehash: 11e36e06adc4fa95cb9aa607704e72f64c812429
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036152"
 ---
 # <a name="phases-of-translation"></a>Phasen der Übersetzung
@@ -45,19 +45,19 @@ Alle Zeilen, die in einem umgekehrten Schrägstrich enden (**\\**) und daraufhin
 *Tokenisierung*<br/>
 Die Quelldatei wird in Vorverarbeitungstoken und Leerstellenzeichen unterteilt. Kommentare in der Quelldatei werden jeweils durch ein Leerzeichen ersetzt. Zeilenumbruchzeichen werden beibehalten.
 
-*Vorverarbeitung*<br/>
+*Die vorverarbeitung*<br/>
 Vorverarbeitungsanweisungen werden ausgeführt, und Makros werden in die Quelldatei erweitert. Die `#include`-Anweisung ruft die Übersetzung auf, die mit den vorherigen drei Übersetzungsschritten für jeden enthaltenen Text beginnt.
 
 *Zeichensatzzuordnung*<br/>
 Alle Quellzeichensatzmember und Escapesequenzen werden in ihre Äquivalente im Ausführungszeichensatz konvertiert. Für Microsoft C und C++ sind sowohl die Quell- als auch Ausführungszeichensätze ASCII.
 
-*Zeichenfolgenverkettung*<br/>
+*Verketten von Zeichenfolgen*<br/>
 Alle angrenzenden Zeichenfolgen und breiten Zeichenfolgenliterale werden verkettet. Beispiel: `"String " "concatenation"` wird zu `"String concatenation"`.
 
-*Übersetzung*<br/>
+*Translation*<br/>
 Alle Token werden sowohl syntaktisch als auch semantisch analysiert. Diese Token werden in Objektcode konvertiert.
 
-*Bindung*<br/>
+*Verknüpfung*<br/>
 Alle externen Verweise werden aufgelöst, um ein ausführbares Programm oder eine Dynamic Link Library zu erstellen.
 
 Der Compiler gibt während Phasen der Übersetzung, in denen er auf Syntaxfehler trifft, Warnungen oder Fehler aus.

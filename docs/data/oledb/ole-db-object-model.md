@@ -6,10 +6,10 @@ helpviewer_keywords:
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
 ms.openlocfilehash: 303ad4166f0f1126182956fae9c19f513be7cfb3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039155"
 ---
 # <a name="ole-db-object-model"></a>OLE DB-Objektmodell
@@ -78,5 +78,5 @@ Benachrichtigungen werden von miteinander kommunizierenden consumergruppen, die 
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)<br/>
-[Übersicht über die OLE DB-Programmierung](../../data/oledb/ole-db-programming-overview.md)
+[OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)<br/>
+[Übersicht über die OLE DB-Programmierung](../../data/oledb/ole-db-programming-overview.md)
