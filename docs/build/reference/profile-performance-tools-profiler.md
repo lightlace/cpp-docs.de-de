@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: ca68ae090c6e4e6e3e10f37ac0d225faee96746a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 23cbccba9a8ec839252d553cc5cbafd37e66bbf9
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810002"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124771"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Leistungstools-Profiler)
 
@@ -56,7 +56,22 @@ Erstellt eine Ausgabedatei, die mit dem Leistungstoolprofiler verwendet werden k
 
 1. Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
 
+### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Diese Linkeroption in Visual Studio-CMake-Projekts festgelegt.
+
+**CMake** Projekt verfügt nicht über eine **Eigenschaftenseiten**, die Optionen des Linkers können festgelegt werden durch Ändern von der Datei "cmakelists.txt".
+
+1. Öffnen Sie die Datei "cmakelists.txt" im Stammverzeichnis Projekts an.
+
+1. Fügen Sie folgenden Code hinzu. Weitere Informationen finden Sie unter [CMake-Verweise](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
+
+1. Erstellen Sie die Projektmappe neu.
+
+```
+SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")
+```
+
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 [MSVC-Linkeroptionen](linker-options.md)
+

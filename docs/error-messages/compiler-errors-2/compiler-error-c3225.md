@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
 ms.openlocfilehash: cae0572002c849fb5aed771993d3a89ed82c726a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778311"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778284"
 ---
 # <a name="compiler-error-c3225"></a>Compilerfehler C3225
 
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel erstellt eine Komponente, die mithilfe von C#. Beachten Sie, dass die Einschränkung gibt an, dass der generische Typ nur mit einem Werttyp instanziiert werden kann.
+Das folgende Beispiel erstellt eine Komponente, die mithilfe von c#. Beachten Sie, dass die Einschränkung gibt an, dass der generische Typ nur mit einem Werttyp instanziiert werden kann.
 
 ```
 // C3225_b.cs
@@ -54,7 +54,7 @@ public class MyList<T> where T: struct {}
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel verwendet der C#-Komponente erstellt und verstößt gegen die Einschränkung, die nur MyList sein kann nicht mit einem Werttyp instanziiert <xref:System.Nullable>. Im folgende Beispiel wird die C3225 generiert.
+Dieses Beispiel verwendet der c#-Komponente erstellt und verstößt gegen die Einschränkung, die nur MyList sein kann nicht mit einem Werttyp instanziiert <xref:System.Nullable>. Im folgende Beispiel wird die C3225 generiert.
 
 ```
 // C3225_c.cpp

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: bcf2372f039ccec4b46bf51fb4da9f4175289f14
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58807604"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804089"
 ---
 Die Visual Studio-Compiler und Buildtools können viele Arten von Fehlern und Warnungen gemeldet. Nachdem eine Fehlermeldung oder Warnung gefunden wurde, können die Buildtools Annahmen über die Absicht des Codes und den Vorgang fortzusetzen, sodass mehrere Probleme gleichzeitig gemeldet werden können. Wenn die Tools allerdings von falschen Annahmen ausgehen, sind spätere Fehler oder Warnungen möglicherweise nicht auf das Projekt anwendbar. Wenn Sie Probleme im Projekt beheben, sollten Sie immer mit dem ersten gemeldeten Problem (Fehler oder Warnung) beginnen, und häufig einen Rebuild für das Projekt ausführen. Eine Lösung, möglicherweise viele nachfolgende Fehler behoben.
 
