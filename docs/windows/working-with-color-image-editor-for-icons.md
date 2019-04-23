@@ -63,10 +63,10 @@ helpviewer_keywords:
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
 ms.openlocfilehash: c424d2e613c51f901def13c4bf42a066797cc65c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034143"
 ---
 # <a name="how-to-work-with-color"></a>Vorgehensweise: Arbeiten mit Farben
@@ -108,9 +108,9 @@ Die **benutzerdefinierte Farbauswahl** Dialogfeld können Sie die Farben anpasse
 |**Farbverlauf Farbanzeige**|Ändert die Werte einer ausgewählten Farbe.<br/><br/>Positionieren Sie das Fadenkreuz, auf die Farbe, die Sie verwenden möchten, ändern und den Schieberegler nach oben oder unten auf die Brillanz oder RGB-Werte der Farbe zu ändern.|
 |**Helligkeits-Symbolleiste**|Legt die Helligkeit für die Farbe, die Sie, in Auswählen der **Farbverlauf Farbanzeige** Feld.<br/><br/>Wählen Sie aus, und ziehen Sie den weißen Pfeil der Balken für größere Helligkeit oder nach unten bei kleiner. Die **Farbe** Feld zeigt die Farbe, die Sie ausgewählt haben und die Auswirkungen der Helligkeit, die Sie festlegen.|
 |**Farbe**|Listet den Farbton (Farbwert für rad) der Farbe, die Sie definieren. Werte zwischen 0 und 240, in denen 0 ist rot, 60 ist gelb gekennzeichnet, 120 ist Grün, 180 beträgt Cyan, Magenta "200" lautet und 240 ist Blau.|
-|**Farbton**|Listet den Farbton (Farbwert für rad) der Farbe, die Sie definieren. Werte zwischen 0 und 240, in denen 0 ist rot, 60 ist gelb gekennzeichnet, 120 ist Grün, 180 beträgt Cyan, Magenta "200" lautet und 240 ist Blau.|
-|**Sa**|Gibt an, der Sättigungswert der Farbe, die Sie definieren. Die Sättigung ist die Menge des in einem angegebenen Farbton. Werte zwischen 0 und 240.|
-|**Hell.:**|Listet die Brillanz (Helligkeit) der Farbe, die Sie definieren. Werte zwischen 0 und 240.|
+|**Hue**|Listet den Farbton (Farbwert für rad) der Farbe, die Sie definieren. Werte zwischen 0 und 240, in denen 0 ist rot, 60 ist gelb gekennzeichnet, 120 ist Grün, 180 beträgt Cyan, Magenta "200" lautet und 240 ist Blau.|
+|**Sätt.:**|Gibt an, der Sättigungswert der Farbe, die Sie definieren. Die Sättigung ist die Menge des in einem angegebenen Farbton. Werte zwischen 0 und 240.|
+|**Lum**|Listet die Brillanz (Helligkeit) der Farbe, die Sie definieren. Werte zwischen 0 und 240.|
 |**Rot**|Gibt den Wert der Farbe, die Sie definieren. Werte zwischen 0 und 255 liegen.|
 |**Grün**|Gibt den grünen Wert der Farbe, die Sie definieren. Werte zwischen 0 und 255 liegen.|
 |**Blau**|Gibt den blauen Wert der Farbe, die Sie definieren. Werte zwischen 0 und 255 liegen.|
@@ -229,6 +229,6 @@ Keiner
 
 [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)<br/>
 [Vorgehensweise: Erstellen eines Symbols oder anderen Bilds](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Vorgehensweise: Bearbeiten eines Bildes](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Vorgehensweise: Bearbeiten eines Bilds](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
 [Vorgehensweise: Verwenden eines Zeichentools](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Wire_marshal (C++-COM-Attribut)
+title: Wire_marshal (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
 ms.openlocfilehash: d1d18336a20644338a50ab66c7fcb06959e5760a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029861"
 ---
 # <a name="wiremarshal"></a>wire_marshal
@@ -25,7 +25,7 @@ Gibt einen Datentyp, der für die Übertragung anstelle eines Typs anwendungsspe
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Wire_marshal** C++-Attribut hat die gleiche Funktionalität wie die [Wire_marshal](/windows/desktop/Midl/wire-marshal) MIDL-Attribut.
+Die **Wire_marshal** C++ Attribut hat die gleiche Funktionalität wie die [Wire_marshal](/windows/desktop/Midl/wire-marshal) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 
@@ -53,7 +53,7 @@ Der folgende Code veranschaulicht die Verwendung der **Wire_marshal**:
 
 |||
 |-|-|
-|**Betrifft**|**Typedef**|
+|**Betrifft**|**typedef**|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|

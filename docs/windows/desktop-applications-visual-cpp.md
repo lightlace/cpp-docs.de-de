@@ -3,10 +3,10 @@ title: Desktopanwendungen (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033107"
 ---
 # <a name="desktop-applications-visual-c"></a>Desktopanwendungen (Visual C++)
@@ -29,7 +29,7 @@ In Visual Studio 2017 Version 15.4 und höher können Sie ein Windows-Anwendungs
 
 - Eine MFC-Anwendung ist eine Windows-Desktopanwendung, mit denen die [Microsoft Foundation Classes](../mfc/mfc-desktop-applications.md) die Benutzeroberfläche zu erstellen. Eine MFC-Anwendung kann auch COM-Komponenten "als auch" CRT "und" Standard-Bibliothek-APIs verwenden. MFC stellt einen dünnen objektorientierten C++-Wrapper über die Nachrichtenschleife für Fenster und die Windows-APIs bereit. MFC ist die Standardauswahl für Anwendungen – insbesondere Enterprise-Anwendungen –, die viele Steuerelemente der Benutzeroberfläche oder benutzerdefinierten Steuerelementen aufweisen. MFC stellt bequeme Hilfsklassen für die fensterverwaltung, Serialisierung, Textbearbeitung, Drucken und moderne Benutzeroberflächenelemente wie das Menüband bereit. Um effektiv mit MFC sollten Sie mit Win32 vertraut sein.
 
-- C++ / CLI-Anwendung oder Komponente verwendet Erweiterungen für C++-Syntax (wie von der C++-Spezifikation zugelassen) zur Interaktion zwischen .NET und nativem C++-Code zu ermöglichen.  C++ / CLI-Anwendung kann Teile, die nativ ausgeführt und Teile, die auf .NET Framework mit Zugriff auf die Basisklassenbibliothek von .NET ausgeführt haben. C++ / CLI ist die bevorzugte Option, wenn Sie systemeigenen C++-Code verfügen, die Arbeit mit Code in C# oder Visual Basic geschrieben werden soll. Es dient in erster Linie für die Verwendung in .NET DLLs nicht im Code der Benutzeroberfläche. Weitere Informationen finden Sie unter [.NET-Programmierung mit C++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+- C++ / CLI-Anwendung oder Komponente verwendet Erweiterungen für C++-Syntax (wie von der C++-Spezifikation zugelassen) zur Interaktion zwischen .NET und nativem C++-Code zu ermöglichen.  C++ / CLI-Anwendung kann Teile, die nativ ausgeführt und Teile, die auf .NET Framework mit Zugriff auf die Basisklassenbibliothek von .NET ausgeführt haben. C++ / CLI ist die bevorzugte Option, wenn Sie systemeigenen C++-Code verfügen, die Arbeit mit Code in c# oder Visual Basic geschrieben werden soll. Es dient in erster Linie für die Verwendung in .NET DLLs nicht im Code der Benutzeroberfläche. Weitere Informationen finden Sie unter [.NET-Programmierung mit C++ / CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
 C Runtime (CRT) und Standard-Bibliothek von Klassen und Funktionen, COM-Objekte und der öffentlichen Windows-Funktionen, die insgesamt als Windows-API bezeichnet werden, kann desktop-Anwendung in C++ verwenden. Eine Einführung in Windows-Desktopanwendung in C++, finden Sie unter [erste Schritte mit Win32- und C++](/windows/desktop/LearnWin32/learn-to-program-for-windows).
 
@@ -42,7 +42,7 @@ C Runtime (CRT) und Standard-Bibliothek von Klassen und Funktionen, COM-Objekte 
 |[Erstellen einer leeren Windows-Desktopanwendung](creating-an-empty-windows-desktop-application.md)|Vorgehensweise: Erstellen Sie ein Windows-Desktopprojekt, die keine Standarddateien enthält.|
 |[Hinzufügen von Dateien zu leeren Win32-Anwendungen](adding-files-to-an-empty-win32-applications.md)|Wie Sie ein leeres Projekt Dateien hinzufügen.|
 |[Arbeiten mit Ressourcendateien](working-with-resource-files.md)|So fügen Sie Bilder, Symbole, Zeichenfolgentabellen und andere Ressourcen in eine Desktopanwendung.|
-|[Ressourcen zum Erstellen eines Spiels mit DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Enthält Links zu Inhalten für das Erstellen von Spielen in C++.|
+|[Ressourcen für das Erstellen eines Spiels mit DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Enthält Links zu Inhalten für das Erstellen von Spielen in C++.|
 |[Exemplarische Vorgehensweise: Erstellen und Verwenden einer statischen Bibliothek](walkthrough-creating-and-using-a-static-library-cpp.md)|Vorgehensweise: Erstellen Sie eine LIB-Binärdatei.|
 |[Vorgehensweise: Verwenden des Windows 10 SDK in einer Windows-Desktopanwendung](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Enthält Schritte zum Einrichten Ihres Projekts für das Erstellen mit dem Windows 10-SDK.|
 
@@ -51,7 +51,7 @@ C Runtime (CRT) und Standard-Bibliothek von Klassen und Funktionen, COM-Objekte 
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[Windows-Entwicklung](/windows/desktop/index)|Enthält Informationen zur Windows-API und COM. (Einige Windows-APIs und Drittanbieter-DLLs werden als COM-Objekte implementiert).|
-|[HiLo: Entwickeln von C++-Anwendungen für Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Beschreibt, wie Sie eine vielseitige Windows-Desktopanwendung erstellen, die Windows-Animationen und Direct2D verwendet, um eine karussellbasierte Benutzeroberfläche zu erstellen.  In diesem Tutorial wurde nicht aktualisiert, seit Windows 7, aber es bietet weiterhin eine ausführliche Einführung in Win32-Programmierung.|
+|[Hilo: Entwickeln von C++-Anwendungen für Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Beschreibt, wie Sie eine vielseitige Windows-Desktopanwendung erstellen, die Windows-Animationen und Direct2D verwendet, um eine karussellbasierte Benutzeroberfläche zu erstellen.  In diesem Tutorial wurde nicht aktualisiert, seit Windows 7, aber es bietet weiterhin eine ausführliche Einführung in Win32-Programmierung.|
 |[Übersicht über Windows-Programmierung in C++](overview-of-windows-programming-in-cpp.md)|Beschreibt die wichtigsten Features von Windows-Desktop-Programmierung in C++.|
 
 ## <a name="see-also"></a>Siehe auch

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
 ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030244"
 ---
 # <a name="source-c"></a>source (C++)
@@ -25,7 +25,7 @@ Gibt an für eine Klasse das COM-Objekt-Schnittstellen für Verbindungspunkte au
 
 ### <a name="parameters"></a>Parameter
 
-*Schnittstellen*<br/>
+*interfaces*<br/>
 Eine oder mehrere Schnittstellen, die Sie angeben, wenn Sie die Quelle anwenden Attribut auf eine Klasse. Dieser Parameter wird nicht verwendet werden, wenn Quelle auf eine Eigenschaft oder Methode angewendet wird.
 
 ## <a name="remarks"></a>Hinweise

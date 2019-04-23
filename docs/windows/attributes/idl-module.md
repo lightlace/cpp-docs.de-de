@@ -1,5 +1,5 @@
 ---
-title: Idl_module (C++-COM-Attribut)
+title: Idl_module (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
 ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034977"
 ---
 # <a name="idlmodule"></a>idl_module
@@ -26,10 +26,10 @@ function declaration
 
 ### <a name="parameters"></a>Parameter
 
-*Name*<br/>
+*name*<br/>
 Ein benutzerdefinierter Name für den Codeblock, der in der IDL-Datei angezeigt wird.
 
-*DLL-Name*<br/>
+*dllname*<br/>
 (Optional) Die DLL-Datei, die den Export enthält.
 
 *uuid*<br/>
@@ -55,7 +55,7 @@ Die Funktion, die Sie definieren.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Idl_module** C++-Attribut ermöglicht die Angabe den Einstiegspunkt in eine DLL-Datei, dem Sie Daten aus einer DLL-Datei importieren können.
+Die **Idl_module** C++ Attribut können Sie den Einstiegspunkt in einer DLL-Datei angeben, dem Sie Daten aus einer DLL-Datei importieren können.
 
 Die **Idl_module** Attribut hat ähnliche Funktionen wie die [Modul](/windows/desktop/Midl/module) MIDL-Attribut.
 

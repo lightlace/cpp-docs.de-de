@@ -8,10 +8,10 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
 ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029277"
 ---
 # <a name="compiler-intrinsics"></a>Intrinsische Compilerfunktionen
@@ -34,7 +34,7 @@ Eine Headerdatei, \<intrin.h >, ist verfügbar, die Prototypen für die gängigs
 
 In den folgenden Abschnitten werden alle systeminternen Funktionen aufgeführt, die auf verschiedenen Architekturen verfügbar sind. Weitere Informationen zu der Funktionsweise systeminterner Funktionen auf dem bestimmten Zielprozessor finden Sie in der Referenzdokumentation des Herstellers.
 
-- [Systeminterne ARM-Funktionen](../intrinsics/arm-intrinsics.md)
+- [Intrinsische ARM-Funktionen](../intrinsics/arm-intrinsics.md)
 
 - [Liste der intrinsischen Funktionen für x86](../intrinsics/x86-intrinsics-list.md)
 
@@ -46,7 +46,7 @@ In den folgenden Abschnitten werden alle systeminternen Funktionen aufgeführt, 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Referenz zum ARM-Assembler](../assembler/arm/arm-assembler-reference.md)<br/>
-[Referenz zum Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[Verweis auf den ARM-Assembler](../assembler/arm/arm-assembler-reference.md)<br/>
+[Referenz zum Microsoft-Makroassembler](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
 [Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
 [C-Laufzeitbibliotheksreferenz](../c-runtime-library/c-run-time-library-reference.md)

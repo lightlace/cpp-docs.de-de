@@ -1,5 +1,5 @@
 ---
-title: COM_INTERFACE_ENTRY (C++-COM-Attribut)
+title: COM_INTERFACE_ENTRY (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
 ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030406"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
@@ -31,7 +31,7 @@ Eine Zeichenfolge mit den tatsächlichen Text des Eintrags. Eine Liste der mögl
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Com_interface_entry** fügt C++-Attribut den ungekürzt Inhalt einer Zeichenfolge in die Zuordnung des COM-Schnittstelle des Zielobjekts. Wenn das Attribut angewendet wird, sobald auf das Zielobjekt, der Eintrag in den Anfang der vorhandenen schnittstellenzuordnung eingefügt wird. Wenn das Attribut auf dem gleichen Zielobjekt wiederholt angewendet wird, werden die Einträge am Anfang die schnittstellenzuordnung in der Reihenfolge eingefügt, die sie empfangen werden.
+Die **Com_interface_entry** C++ fügt Attribut den ungekürzt Inhalt einer Zeichenfolge in die Zuordnung des COM-Schnittstelle des Zielobjekts. Wenn das Attribut angewendet wird, sobald auf das Zielobjekt, der Eintrag in den Anfang der vorhandenen schnittstellenzuordnung eingefügt wird. Wenn das Attribut auf dem gleichen Zielobjekt wiederholt angewendet wird, werden die Einträge am Anfang die schnittstellenzuordnung in der Reihenfolge eingefügt, die sie empfangen werden.
 
 Dieses Attribut erfordert, dass die Attribute [coclass](coclass.md), [progid](progid.md), oder [vi_progid](vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden. Wenn ein einzelnes Attribut verwendet wird, werden die anderen beiden automatisch angewendet. Z. B. wenn `progid` angewendet wird, `vi_progid` und `coclass` werden ebenfalls angewendet.
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
 ms.openlocfilehash: d2697c955d2063bb075e06536b083c0b138aa4ac
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031958"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB-Consumervorlagen (C++)
@@ -58,7 +58,7 @@ Weitere Informationen finden Sie unter den folgenden Themen:
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)<br/>
+[OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)<br/>
 [Datenzugriff](../data-access-in-cpp.md)<br/>
-[OLE DB SDK-Dokumentation](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[OLE DB-SDK-Dokumentation](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
 [Microsoft OLE DB-Treiber für SQLServer](/sql/connect/oledb/oledb-driver-for-sql-server)

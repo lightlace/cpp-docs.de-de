@@ -8,10 +8,10 @@ helpviewer_keywords:
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
 ms.openlocfilehash: 76c6c848351df773b9857b2f83726b64db982d9f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031196"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss
@@ -34,7 +34,7 @@ void _mm_stream_ss(
 *dest*<br/>
 [out] Ein Zeiger auf den Speicherort, in denen die Quelldaten geschrieben werden.
 
-*Source*<br/>
+*Quelle*<br/>
 [in] Eine 128-Bit-Zahl, die enthält die `float` Wert, der in der unteren 32 Bits geschrieben werden...
 
 ## <a name="return-value"></a>Rückgabewert
