@@ -8,10 +8,10 @@ helpviewer_keywords:
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
 ms.openlocfilehash: 7151d897469993b2f9be3575eb11a08844af3c69
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028359"
 ---
 # <a name="updating-rowsets"></a>Aktualisieren von Rowsets
@@ -205,6 +205,6 @@ Schließlich ist einer der Hauptgründe für die Verwendung verzögerter Aktuali
 
 ## <a name="see-also"></a>Siehe auch
 
-[Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
+[Arbeiten mit OLE DB-Consumervorlagen](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset-Klasse](../../data/oledb/crowset-class.md)<br/>
 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>

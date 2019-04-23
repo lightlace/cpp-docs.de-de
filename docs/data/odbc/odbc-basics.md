@@ -9,21 +9,21 @@ helpviewer_keywords:
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
 ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033241"
 ---
 # <a name="odbc-basics"></a>Grundlagen zu ODBC
 
 Dieses Thema vermittelt Grundlagen zu ODBC (Open Database Connectivity):
 
-- [Zusammenwirken von ODBC mit den Datenbankklassen](../../data/odbc/odbc-and-the-database-classes.md)
+- [Funktionsweise von ODBC mit den Datenbankklassen](../../data/odbc/odbc-and-the-database-classes.md)
 
-- [Zusammenwirken von ODBC-Treibern mit Dynasets](../../data/odbc/odbc-driver-requirements-for-dynasets.md)
+- [Funktionsweise von ODBC-Treibern mit Dynasets](../../data/odbc/odbc-driver-requirements-for-dynasets.md)
 
-- [ODBC-Komponenten, die mit den Anwendungen verteilt werden müssen](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
+- [ODBC-Komponenten, Sie neu zu verteilenden mit Ihren Anwendungen müssen](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
 Sie sollten auch das verwandte Thema lesen [ODBC: Die ODBC-Cursorbibliothek](../../data/odbc/odbc-the-odbc-cursor-library.md).
 

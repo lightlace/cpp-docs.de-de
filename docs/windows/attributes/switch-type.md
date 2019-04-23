@@ -1,5 +1,5 @@
 ---
-title: Switch_type (C++-COM-Attribut)
+title: Switch_type (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
 ms.openlocfilehash: b461769d3d988efae0be7380e1e0112e3f3cf801
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027856"
 ---
 # <a name="switchtype"></a>switch_type
@@ -32,7 +32,7 @@ Der Switchtyp kann es sich um eine ganze Zahl "," Zeichen "," Boolesch "oder" En
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Switch_type** C++-Attribut hat die gleiche Funktionalität wie die [Switch_type](/windows/desktop/Midl/switch-type) MIDL-Attribut.
+Die **Switch_type** C++ Attribut hat die gleiche Funktionalität wie die [Switch_type](/windows/desktop/Midl/switch-type) MIDL-Attribut.
 
 C++-Attribute unterstützen keine [gekapselt Unions](/windows/desktop/Midl/encapsulated-unions). [Nonencapsulated Unions](/windows/desktop/Midl/nonencapsulated-unions) werden nur in der folgenden Form unterstützt:
 
@@ -63,7 +63,7 @@ Finden Sie unter den [Fall](case-cpp.md) Beispiel für ein Beispiel für die Ver
 
 |||
 |-|-|
-|**Betrifft**|**Typedef**|
+|**Betrifft**|**typedef**|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|Keiner|
 |**Ungültige Attribute**|Keiner|
@@ -74,4 +74,4 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 
 [IDL-Attribute](idl-attributes.md)<br/>
 [typedef-, enum-, union- und struct-Attribute](typedef-enum-union-and-struct-attributes.md)<br/>
-["export"](export.md)
+[export](export.md)

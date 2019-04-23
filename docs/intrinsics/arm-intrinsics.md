@@ -1932,10 +1932,10 @@ helpviewer_keywords:
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027628"
 ---
 # <a name="arm-intrinsics"></a>Systeminterne ARM-Funktionen
@@ -2155,7 +2155,7 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
 
 #### <a name="parameters"></a>Parameter
 
-*Speicherort*<br/>
+*Position*<br/>
 Die Adresse eines Speicherbereichs für Lese- oder Schreibvorgänge.
 
 *Wert*<br/>
@@ -2208,10 +2208,10 @@ Coprozessorzahl im Bereich 0 bis 15.
 *opcode1*<br/>
 Coprozessorspezifischer Opcode im Bereich von 0 bis 7.
 
-*CRN*<br/>
+*crn*<br/>
 Coprozessorregisternummer im Bereich 0 bis 15, die den ersten Operanden für die Anweisung angibt.
 
-*CRM*<br/>
+*crm*<br/>
 Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.
 
 *opcode2*<br/>
@@ -2225,7 +2225,7 @@ Der Wert, der aus dem Coprozessor gelesen wird.
 
 Die Werte aller fünf Parameter dieser systeminternen Funktion müssen konstante Ausdrücke sein, die zum Zeitpunkt der Kompilierung bekannt sind.
 
-`_MoveFromCoprocessor` verwendet die MRC-Anweisung. `_MoveFromCoprocessor2` verwendet MRC2. Die Parameter entsprechen den Bitfeldern, die direkt in das Befehlswort codiert werden. Die Interpretation der Parameter ist vom Coprozessor abhängig. Weitere Informationen finden Sie im Handbuch für den betreffenden Coprozessor.
+`_MoveFromCoprocessor` verwendet die MRC-Anweisung; `_MoveFromCoprocessor2` verwendet MRC2. Die Parameter entsprechen den Bitfeldern, die direkt in das Befehlswort codiert werden. Die Interpretation der Parameter ist vom Coprozessor abhängig. Weitere Informationen finden Sie im Handbuch für den betreffenden Coprozessor.
 
 ###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64
 
@@ -2247,10 +2247,10 @@ Coprozessorzahl im Bereich 0 bis 15.
 *opcode1*<br/>
 Coprozessorspezifischer Opcode im Bereich von 0 bis 15.
 
-*CRM*<br/>
+*crm*<br/>
 Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.
 
-**Rückgabewert**
+**Gibt den Wert**
 
 Der Wert, der aus dem Coprozessor gelesen wird.
 
@@ -2286,7 +2286,7 @@ void _MoveToCoprocessor2(
 
 #### <a name="parameters"></a>Parameter
 
-*Wert*<br/>
+*value*<br/>
 Der Wert, der in den Coprozessor geschrieben werden soll.
 
 *coproc*<br/>
@@ -2295,10 +2295,10 @@ Coprozessorzahl im Bereich 0 bis 15.
 *opcode1*<br/>
 Coprozessorspezifischer Opcode im Bereich von 0 bis 7.
 
-*CRN*<br/>
+*crn*<br/>
 Coprozessorregisternummer im Bereich 0 bis 15, die den ersten Operanden für die Anweisung angibt.
 
-*CRM*<br/>
+*crm*<br/>
 Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.
 
 *opcode2*<br/>
@@ -2335,7 +2335,7 @@ Coprozessorzahl im Bereich 0 bis 15.
 *opcode1*<br/>
 Coprozessorspezifischer Opcode im Bereich von 0 bis 15.
 
-*CRM*<br/>
+*crm*<br/>
 Coprozessorregisternummer im Bereich 0 bis 15, die einen zusätzlichen Quell- oder Zieloperanden angibt.
 
 #### <a name="return-value"></a>Rückgabewert
@@ -2578,5 +2578,5 @@ Die systeminternen Funktionen "plain interlocked bittest" gibt es auf allen Plat
 ## <a name="see-also"></a>Siehe auch
 
 [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
-[Referenz zum ARM-Assembler](../assembler/arm/arm-assembler-reference.md)<br/>
+[Verweis auf den ARM-Assembler](../assembler/arm/arm-assembler-reference.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)

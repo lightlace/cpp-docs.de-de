@@ -6,10 +6,10 @@ helpviewer_keywords:
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
 ms.openlocfilehash: 2cbb334ab15912fdcf6980461016976d869f5a84
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029459"
 ---
 # <a name="setting-properties-in-your-provider"></a>Festlegen von Eigenschaften im Anbieter
@@ -49,4 +49,4 @@ Der Microsoft OLE DB-Anbieter ignoriert die folgenden OLE DB-Eigenschaften:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Arbeiten mit OLE DB-Anbietervorlagen](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Arbeiten mit OLE DB-Anbietervorlagen](../../data/oledb/working-with-ole-db-provider-templates.md)

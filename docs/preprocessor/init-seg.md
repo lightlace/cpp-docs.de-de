@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
 ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026629"
 ---
 # <a name="initseg"></a>init_seg
@@ -36,13 +36,13 @@ Da die Initialisierung eines globalen statischen Objekts ausführenden Code umfa
 
 Die Optionen, um die **Init_seg** Pragma sind:
 
-*Compiler*<br/>
+*compiler*<br/>
 Reserviert für die Initialisierung der Microsoft C-Laufzeitbibliothek. Objekte in dieser Gruppe werden zuerst erstellt.
 
 *lib*<br/>
 Verfügbar für die Initialisierungen der Klassenbibliotheken von Drittanbietern. Objekte in dieser Gruppe werden erstellt, nach denen als *Compiler* aber vor allen anderen.
 
-*Benutzer*<br/>
+*user*<br/>
 Verfügbar für alle beliebigen Benutzer. Objekte in dieser Gruppe werden zuletzt erstellt.
 
 *Name des Abschnitts* ermöglicht die explizite Angabe des Abschnitts für Initialisierung. Objekte in einem vom Benutzer angegebenen *Abschnittsname* sind nicht implizit erstellt werden; allerdings werden ihre Adressen im Abschnitt mit dem Namen von platziert *Abschnittsname*.

@@ -22,10 +22,10 @@ helpviewer_keywords:
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
 ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028090"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if-, #elif-, #else- und #endif-Anweisungen (C/C++)
@@ -97,7 +97,7 @@ Der Präprozessoroperator **definiert** kann in speziellen Konstanten Ausdrücke
 
 defined( `identifier` )
 
-Definition `identifier`
+defined `identifier`
 
 Dieser Konstante Ausdruck wird als "true" (ungleich null), wenn die *Bezeichner* derzeit definiert ist; andernfalls ist die Bedingung "false" (0). Ein Bezeichner, der als leerer Text definiert wird, wird als definiert betrachtet. Die **definiert** -Direktive kann verwendet werden, eine **#if** und **#elif** Richtlinie allerdings an keiner anderen Stelle.
 

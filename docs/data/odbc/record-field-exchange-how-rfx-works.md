@@ -11,10 +11,10 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
 ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032676"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Datensatzfeldaustausch: Funktionsweise von RFX
@@ -90,7 +90,7 @@ Wenn Sie einen neuen Datensatz hinzufügen, gilt die das Recordset als Bearbeitu
 
 1. `AddNew` oder `Edit` bereitet die Felder im Bearbeitungspuffer vor, damit RFX geänderten Felddatenmember ermitteln kann.
 
-   Da ein neuer Datensatz keine alten Werte mit neue Werten verglichen wurde `AddNew` legt den Wert jedes felddatenelement auf den Wert PSEUDO_NULL fest. Später beim Aufrufen `Update`, RFX wird jeder Datenmember-Wert, mit dem Wert PSEUDO_NULL verglichen. Wenn es ein Unterschied besteht, wurde der Datenmember festgelegt. (PSEUDO_NULL ist nicht identisch mit einer Spalte "Record" mit einem Null-Wert "true" noch eines dieser identisch mit NULL in C++.)
+   Da ein neuer Datensatz keine alten Werte mit neue Werten verglichen wurde `AddNew` legt den Wert jedes felddatenelement auf den Wert PSEUDO_NULL fest. Später beim Aufrufen `Update`, RFX wird jeder Datenmember-Wert, mit dem Wert PSEUDO_NULL verglichen. Wenn es ein Unterschied besteht, wurde der Datenmember festgelegt. (PSEUDO_NULL ist nicht identisch mit einer Spalte "Record" mit einem Null-Wert "true" noch eines dieser identisch mit C++ NULL.)
 
    Im Gegensatz zu den `Update` rufen Sie für `AddNew`, `Update` rufen Sie für `Edit` vergleicht aktualisierte Werte mit den zuvor gespeicherten Werte, anstatt PSEUDO_NULL. Der Unterschied besteht darin, die `AddNew` hat keine zuvor gespeicherten Werte für den Vergleich.
 
@@ -123,7 +123,7 @@ Wenn Sie einen Datensatz löschen, setzt der RFX alle Felder auf NULL als Erinne
 ## <a name="see-also"></a>Siehe auch
 
 [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[Nutzen von MFC-ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[MFC-ODBC-nutzen](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Makros, globale Funktionen und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CFieldExchange-Klasse](../../mfc/reference/cfieldexchange-class.md)<br/>
 [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)

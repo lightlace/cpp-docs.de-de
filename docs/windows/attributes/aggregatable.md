@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 74a561b9b70c5aee36781d102835c73dec2c3ac2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d5ceb46a124db8c0082495d48e6ee0e21655422
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582457"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59029290"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -25,7 +25,7 @@ Gibt an, dass die Klasse Aggregation unterstützt.
 
 ### <a name="parameters"></a>Parameter
 
-*Wert*<br/>
+*value*<br/>
 (Optional) Ein Parameter, um anzugeben, wenn das COM-Objekt aggregiert werden können:
 
 - `never` Das COM-Objekt kann nicht aggregiert werden.
@@ -72,7 +72,7 @@ class CMyClass {};
 
 |||
 |-|-|
-|**Betrifft**|**Klasse**, **Struktur**|
+|**Betrifft**|**class**, **struct**|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|Eine oder mehrere der folgenden: `coclass`, `progid`, oder `vi_progid`.|
 |**Ungültige Attribute**|Keiner|

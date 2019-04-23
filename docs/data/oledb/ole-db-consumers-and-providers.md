@@ -9,10 +9,10 @@ helpviewer_keywords:
 - OLE DB, data model
 ms.assetid: 886cb39d-652b-4557-93f0-4b1b0754d8bc
 ms.openlocfilehash: f5940ca65e42787c3156a9537cb3f3f6694339c0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031312"
 ---
 # <a name="ole-db-consumers-and-providers"></a>OLE DB-Consumer und -Anbieter
@@ -27,5 +27,5 @@ OLE DB werden Begriffe-Client und Server vermieden, da diese Rollen immer, insbe
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)<br/>
-[Übersicht über die OLE DB-Programmierung](../../data/oledb/ole-db-programming-overview.md)
+[OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)<br/>
+[Übersicht über die OLE DB-Programmierung](../../data/oledb/ole-db-programming-overview.md)
