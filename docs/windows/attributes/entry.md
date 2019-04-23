@@ -7,10 +7,10 @@ helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
 ms.openlocfilehash: 703a55ee7c56b64a5b168016770508508bab09e0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036301"
 ---
 # <a name="entry"></a>entry
@@ -25,7 +25,7 @@ Gibt eine exportierte Funktion oder Konstante in einem Modul durch identifiziere
 
 ### <a name="parameters"></a>Parameter
 
-*id*<br/>
+*ID*<br/>
 Die ID des Einstiegspunkts.
 
 ## <a name="remarks"></a>Hinweise

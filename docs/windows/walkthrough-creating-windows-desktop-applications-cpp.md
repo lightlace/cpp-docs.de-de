@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Desktop applications [C++]
 - Windows API [C++]
 ms.openlocfilehash: cb6d09acc00f2e38ee41180c81c1877bc53027c2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037956"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Exemplarische Vorgehensweise: Erstellen Sie eine herkömmliche Windows-Desktop-Anwendung (C++)
@@ -96,7 +96,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
 
 ### <a name="to-start-a-windows-desktop-application"></a>So beginnen Sie eine Windows-Desktopanwendung
 
-1. Ebenso wie jede C- und C++-Anwendung müssen ein `main` fungieren als Ausgangspunkt erforderlich, jede Windows-Desktopanwendung benötigen eine `WinMain` Funktion. `WinMain` weist die folgende Syntax.
+1. Ebenso wie jede C- und C++-Anwendung müssen ein `main` fungieren als Ausgangspunkt erforderlich, jede Windows-Desktopanwendung benötigen eine `WinMain` Funktion. `WinMain` besitzt die folgende Syntax.
 
    ```cpp
    int CALLBACK WinMain(
@@ -119,7 +119,7 @@ Als Nächstes erfahren Sie, wie Sie den Code für eine Windows-desktop-Anwendung
    #include <tchar.h>
    ```
 
-1. Neben der `WinMain` -Funktion muss jede Windows-Desktopanwendung auch über eine Fensterprozedurfunktion verfügen. Diese Funktion ist in der Regel mit dem Namen `WndProc` , aber Sie können sie einen beliebigen Namen. `WndProc` weist die folgende Syntax.
+1. Neben der `WinMain` -Funktion muss jede Windows-Desktopanwendung auch über eine Fensterprozedurfunktion verfügen. Diese Funktion ist in der Regel mit dem Namen `WndProc` , aber Sie können sie einen beliebigen Namen. `WndProc` besitzt die folgende Syntax.
 
    ```cpp
    LRESULT CALLBACK WndProc(
@@ -561,4 +561,4 @@ Herzlichen Glückwunsch! Sie haben diese exemplarische Vorgehensweise abgeschlos
 
 ## <a name="see-also"></a>Siehe auch
 
-[Windows-Desktopanwendungen](../windows/windows-desktop-applications-cpp.md)
+[Windows-Desktop-Anwendungen](../windows/windows-desktop-applications-cpp.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
 ms.openlocfilehash: 9330b1405ca247364cd04d3ab399f66e4f332273
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037869"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
@@ -34,7 +34,7 @@ unsigned char _InterlockedCompareExchange128(
 
 #### <a name="parameters"></a>Parameter
 
-*Destination*<br/>
+*Ziel*<br/>
 [in, out] Zeiger auf das Ziel, das ein Array von zwei 64-Bit-Ganzzahlen ist, gelten als ein 128-Bit-Feld. Die Zieldaten muss 16-Byte-ausgerichtet werden, um eine allgemeine schutzverletzung zu vermeiden.
 
 *ExchangeHigh*<br/>
@@ -130,5 +130,5 @@ Copyright 2007 by Advanced Micro Devices, Inc. Alle Rechte vorbehalten. Reproduz
 ## <a name="see-also"></a>Siehe auch
 
 [Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
-[Systeminterne Funktionen "_InterlockedCompareExchange"](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
+[Intrinsische Funktionen „_InterlockedCompareExchange“](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
 [Konflikt mit dem x86-Compiler](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

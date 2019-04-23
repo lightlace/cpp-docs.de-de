@@ -53,10 +53,10 @@ helpviewer_keywords:
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
 ms.openlocfilehash: 6c20698e2219cf7c3e1d840e23b5f8113947ae9f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037711"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl-Klasse
@@ -118,8 +118,8 @@ Die Storage-Einheit für alle Zeilenhandles, die vom Anbieter.
 |[GetOriginalData](#getoriginaldata)|Ruft die Daten zuletzt übertragen oder abgerufen, die aus der Datenquelle, die ausstehende Änderungen werden ignoriert.|
 |[GetPendingRows](#getpendingrows)|Gibt eine Liste der Zeilen mit ausstehenden Änderungen.|
 |[GetRowStatus](#getrowstatus)|Der Status der angegebenen Zeilen zurückgegeben.|
-|[undo](#undo)|Macht alle Änderungen auf die Zeile seit der letzten Fetch oder aktualisieren.|
-|[Update](#update)|Überträgt alle Änderungen, die auf die Zeile seit der letzten Fetch oder aktualisieren.|
+|[Rückgängig machen](#undo)|Macht alle Änderungen auf die Zeile seit der letzten Fetch oder aktualisieren.|
+|[Update (Aktualisieren)](#update)|Überträgt alle Änderungen, die auf die Zeile seit der letzten Fetch oder aktualisieren.|
 
 ### <a name="implementation-methods-callback"></a>Implementierungsmethoden (Rückruf)
 
@@ -334,6 +334,6 @@ Ein Zeiger auf die Daten zwischengespeichert werden. Die Daten sind vom Typ *Sto
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [Erstellen eines aktualisierbaren Anbieters](../../data/oledb/creating-an-updatable-provider.md)

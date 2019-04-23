@@ -24,10 +24,10 @@ helpviewer_keywords:
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
 ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424078"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Debuginformationsformat)
@@ -91,6 +91,6 @@ Die **"/ Zi"** Option erzwingt, dass sowohl die [/Gy (Funktionslevel-Linking akt
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)
 

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
 ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035662"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor-Klasse
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in] Ein Zeiger auf eine Zeichenfolge, die den Namen der Spalte enthält.
 
-*Daten*<br/>
+*data*<br/>
 [in] Ein Zeiger auf die Daten der Zeichenfolge, an die angegebene Spalte geschrieben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -125,8 +125,8 @@ Wenn _SECURE_ATL definiert ist, um einen Wert ungleich NULL haben, wird ein Lauf
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor-Klasse](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor-Klasse](../../data/oledb/cmanualaccessor-class.md)<br/>

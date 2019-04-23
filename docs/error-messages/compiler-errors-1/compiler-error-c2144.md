@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
 ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778285"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776105"
 ---
 # <a name="compiler-error-c2144"></a>Compilerfehler C2144
 

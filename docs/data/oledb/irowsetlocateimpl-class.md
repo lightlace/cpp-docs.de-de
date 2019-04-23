@@ -33,10 +33,10 @@ helpviewer_keywords:
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
 ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039818"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl-Klasse
@@ -94,7 +94,7 @@ Die Storage-Einheit für alle Zeilenhandles, die vom Lesezeichen.
 
 |||
 |-|-|
-|[Vergleichen](#compare)|Vergleicht zwei Lesezeichen.|
+|[Compare](#compare)|Vergleicht zwei Lesezeichen.|
 |[GetRowsAt](#getrowsat)|Ruft Zeilen ab der Zeile, in einem Lesezeichen als Offset angegeben ab.|
 |[GetRowsByBookmark](#getrowsbybookmark)|Ruft die Zeilen, die die angegebenen Lesezeichen entsprechen.|
 |[Hash](#hash)|Gibt hash-Werte für den angegebenen Lesezeichen.|
@@ -235,8 +235,8 @@ CAtlArray<DBROWCOUNT> m_rgBookmarks;
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetLocate:IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85))
 [Anbieterunterstützung für Lesezeichen](../../data/oledb/provider-support-for-bookmarks.md)<br/>
-[Lesezeichen](/previous-versions/windows/desktop/ms709728(v=vs.85))
+[BTextmarken](/previous-versions/windows/desktop/ms709728(v=vs.85))

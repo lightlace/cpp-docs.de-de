@@ -58,10 +58,10 @@ helpviewer_keywords:
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
 ms.openlocfilehash: 7b5c19c95cff3058bb3dcc6640f8ab07cf01edd6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040068"
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/ w, / W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, / Wall, / WD, / we, / wo, / WV, / WX (Warnstufe)
@@ -94,7 +94,7 @@ Die Warnungsoptionen für die und die zugehörigen Argumente werden in der folge
 
 |Option|Beschreibung|
 ------------|-----------------|
-|**/W**|Unterdrückt alle compilerwarnungen.|
+|**/w**|Unterdrückt alle compilerwarnungen.|
 |**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Gibt die Ebene der Warnungen an, die vom Compiler generiert werden. Die gültige Warnung Ebenen liegen zwischen 0 und 4:<br />**/ W0** alle Warnungen unterdrückt. Dies entspricht dem **/w**.<br />**/ W1** zeigt Warnungen der Stufe 1 (Schweregrad). **/ W1** ist die Standardeinstellung in den Befehlszeilencompiler.<br />**/ W2** werden auf Ebene 1 und Warnungen der Stufe 2 (wichtige).<br />**/ W3** zeigt auf Ebene 1, Ebene 2 und Ebene 3 (Produktionsqualität) Warnungen. **/ W3** ist die Standardeinstellung in der IDE.<br />**/ W4** zeigt auf Ebene 1, Ebene 2 und Ebene 3 Warnungen, und alle Ebene 4 (informative) Warnungen, die nicht standardmäßig deaktiviert sind. Es wird empfohlen, dass Sie diese Option verwenden, um Lint-ähnlicher Warnungen bereitzustellen. Für ein neues Projekt möglicherweise am besten geeignet **/W4** in allen Kompilierungen; Dadurch wird die geringstmögliche Anzahl schwer zu findender Codefehler sichergestellt.|
 |**/Wall**|Zeigt alle Warnungen angezeigt, indem **/W4** und alle anderen Warnungen, die **/W4** enthält keine – z. B. Warnungen, die standardmäßig deaktiviert sind. Weitere Informationen finden Sie unter [Compiler Warnings, sind standardmäßig](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
 |**/ WV**\[**:**_Version_]|Zeigt nur die Warnungen, die in der Version des Compilers eingeführt wurden *Version* und früheren Versionen. Sie können diese Option verwenden, um neue Warnungen im Code zu unterdrücken, bei der Migration auf eine neuere Version des Compilers, und vorhandene Build-Prozess zu verwalten, während Sie sie beheben. Der optionale Parameter *Version* hat das Format *Nn*[. *mm*[. *Bbbbb*]], in denen *Nn* ist die Hauptversionsnummer *mm* ist die optionale Nebenversionsnummer und *Bbbbb* ist die optionale Buildnummer der Compiler. Verwenden Sie z. B. */Wv:17* , eingeführt in Visual Studio 2012 (d. h. jede Version des Compilers, die eine Hauptversionsnummer von 17) oder früher Warnungen angezeigt, aber Unterdrücken von Warnungen in Visual Studio 2013 (wichtigsten Version eingeführt wurden 18) und höher. In der Standardeinstellung **/WV** verwendet, die die aktuelle Versionsnummer für Compiler und keine Warnungen unterdrückt werden. Informationen darüber, welche Warnungen, durch die Version des Compilers unterdrückt werden, finden Sie unter [Compilerwarnungen nach Compilerversion](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
@@ -116,7 +116,7 @@ Die [erstellen Fehlerdokumentation](../../error-messages/compiler-errors-1/c-cpp
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
 
-1. Festlegen der **/W0**, **/W1**, **/W2**, **/w3**, **/W4**, **/Wall**, **/WV**, **/WX** oder **/WX-** Option die **Konfigurationseigenschaften** > **C / C++** > **allgemeine** Eigenschaftenseite.
+1. Festlegen der **/W0**, **/W1**, **/W2**, **/w3**, **/W4**, **/Wall**, **/WV**, **/WX** oder **/WX-** Option die **Konfigurationseigenschaften** > **C / C++**   >  **Allgemeine** Eigenschaftenseite.
 
    - Festlegen der **/W0**, **/W1**, **/W2**, **/w3**, **/W4**, oder **/Wall** Ändern von Optionen, die **Warnstufe** Eigenschaft.
 
@@ -140,5 +140,5 @@ Die [erstellen Fehlerdokumentation](../../error-messages/compiler-errors-1/c-cpp
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

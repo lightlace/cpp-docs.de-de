@@ -1,5 +1,5 @@
 ---
-title: No_injected_text (C++-COM-Attribut)
+title: No_injected_text (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.no_injected_text
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
 ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038368"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
@@ -30,7 +30,7 @@ Verhindert, dass den Compiler Einfügen von Code durch Verwendung des Attributs.
 
 ## <a name="remarks"></a>Hinweise
 
-Die häufigste Verwendung von der **No_injected_text** C++-Attribut ist, indem die [/FX](../../build/reference/fx-merge-injected-code.md) Compileroption, die fügt die **No_injected_text** Attribut in der MRG-Datei.
+Die häufigste Verwendung von der **No_injected_text** C++ Attribut ist, indem die [/FX](../../build/reference/fx-merge-injected-code.md) Compileroption, die fügt die **No_injected_text** Attribut in der MRG-Datei.
 
 ## <a name="requirements"></a>Anforderungen
 

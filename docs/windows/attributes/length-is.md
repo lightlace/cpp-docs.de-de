@@ -1,5 +1,5 @@
 ---
-title: Length_is (C++-COM-Attribut)
+title: Length_is (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
 ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039909"
 ---
 # <a name="lengthis"></a>length_is
@@ -30,7 +30,7 @@ Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argumentliste Slots sin
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Length_is** C++-Attribut hat die gleiche Funktionalität wie die [Length_is](/windows/desktop/Midl/length-is) MIDL-Attribut.
+Die **Length_is** C++ Attribut hat die gleiche Funktionalität wie die [Length_is](/windows/desktop/Midl/length-is) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

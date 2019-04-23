@@ -1,5 +1,5 @@
 ---
-title: Max_is (C++-COM-Attribut)
+title: Max_is (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
 ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041308"
 ---
 # <a name="maxis"></a>max_is
@@ -30,7 +30,7 @@ Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argumentliste Slots sin
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Max_is** C++-Attribut hat die gleiche Funktionalität wie die [Max_is](/windows/desktop/Midl/max-is) MIDL-Attribut.
+Die **Max_is** C++ Attribut hat die gleiche Funktionalität wie die [Max_is](/windows/desktop/Midl/max-is) MIDL-Attribut.
 
 ## <a name="requirements"></a>Anforderungen
 

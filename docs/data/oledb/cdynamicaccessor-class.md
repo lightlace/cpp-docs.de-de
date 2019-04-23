@@ -128,10 +128,10 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
 ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040967"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor-Klasse
@@ -696,7 +696,7 @@ bool SetValue(
 *pColumnName*<br/>
 [in] Ein Zeiger auf eine Zeichenfolge, die den Namen der Spalte enthält.
 
-*Daten*<br/>
+*data*<br/>
 [in] Der Zeiger auf den Arbeitsspeicher, die die Daten enthält.
 
 *nColumn*<br/>
@@ -710,8 +710,8 @@ Für alle anderen Datentypen, es ist einfacher, die auf Vorlagen basierende Vers
 
 ## <a name="see-also"></a>Siehe auch
 
-[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor-Klasse](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor-Klasse](../../data/oledb/cmanualaccessor-class.md)

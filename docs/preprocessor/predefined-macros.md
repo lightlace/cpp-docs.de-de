@@ -144,10 +144,10 @@ helpviewer_keywords:
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
 ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237210"
 ---
 # <a name="predefined-macros"></a>Vordefinierte Makros
@@ -362,7 +362,7 @@ MSVC unterstützt diese zusätzlichen vordefinierte Makros.
 
 - **&#95;MSC&#95;VER** definiert als ein Ganzzahlliteral, das die Haupt- und Anzahl der Elemente der Versionsnummer des Compilers codiert. Die Nummer die Hauptversion ist das erste Element der durch Punkte getrennten Versionsnummer und die Nummer die Nebenversion ist das zweite Element. Wenn die Versionsnummer der Microsoft C/C++-Compiler "17.00.51106.1" ist, wird z. B. die  **&#95;MSC&#95;VER** -Makro in 1700 ausgewertet. Geben Sie `cl /?` in der Befehlszeile zum Anzeigen der Versionsnummer des Compilers. Dieses Makro wird immer definiert.
 
-   |Visual Studio-Version|**&AMP;#95;MSC&AMP;#95;VER**|
+   |Visual Studio-Version|**&#95;MSC&#95;VER**|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7.0)|1300|
