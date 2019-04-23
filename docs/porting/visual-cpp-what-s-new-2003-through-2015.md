@@ -3,10 +3,10 @@ title: 'Visual C++: Neuerungen von 2003 bis 2015'
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
 ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898855"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
@@ -24,13 +24,13 @@ Glücklicherweise haben diese Unterschiede wenig oder keinen Einfluss auf den Gr
 
 Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte auswirken können, wirken sie sich nicht auf die Binärkompatibilität zwischen Updates für Visual C++-Versionen aus. Eine schwerwiegendere Art der Änderung, die *bedeutende Änderung*, kann die Binärkompatibilität beeinträchtigen. Doch diese Arten von Unterbrechung der Binärkompatibilität treten nur zwischen Hauptversionen von Visual C++ auf. Beispielsweise zwischen Visual C++ 2013 und Visual C++ 2015. Informationen zu bedeutenden Änderungen, die zwischen Visual C++ 2013 und Visual C++ 2015 vorgenommen wurden, finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](../porting/visual-cpp-change-history-2003-2015.md).
 
-- [Verbesserungen bei der Übereinstimmung mit Standards in Visual Studio 2015](#VS_RTM)
+- [Verbesserungen der Konformität in Visual Studio 2015](#VS_RTM)
 
-- [Verbesserungen bei der Übereinstimmung mit Standards in Visual Studio 2015 Update 1](#VS_Update1)
+- [Verbesserungen der Konformität in Visual Studio 2015 Update 1](#VS_Update1)
 
-- [Verbesserungen bei der Übereinstimmung mit Standards in Visual Studio 2015 Update 2](#VS_Update2)
+- [Verbesserungen der Konformität in Visual Studio 2015 Update 2](#VS_Update2)
 
-- [Verbesserungen bei der Übereinstimmung mit Standards in Visual Studio 2015 Update 3](#VS_Update3)
+- [Verbesserungen der Konformität in Visual Studio 2015 Update 3](#VS_Update3)
 
 ### <a name="VS_RTM"></a> Verbesserungen der Konformität in Visual Studio 2015
 
@@ -57,13 +57,13 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     }
    ```
 
-- **Zg-Compileroption**
+- **Zg (Compileroption)**
 
    Die `/Zg`-Compileroption (Funktionsprototypen generieren) ist nicht mehr verfügbar. Diese Compileroption wurde zuvor als veraltet markiert.
 
 - Sie können Komponententests nicht mehr mit C++/CLI über die Befehlszeile mit mstest.exe ausführen. Verwenden Sie stattdessen „vstest.console.exe“.
 
-- **Schlüsselwort mutable**
+- **mutable (Schlüsselwort)**
 
    Der **mutable**-Speicherklassenspezifizierer ist an Positionen nicht mehr zulässig, an denen zuvor beim Kompilieren ein Fehler aufgetreten ist. Der Compiler generiert nun den Fehler C2071 (Ungültige Speicherklasse). Gemäß dem Standard kann der mutable-Spezifizierer nur auf Namen von Klassendatenmembern angewendet werden und kann nicht auf als konstant oder statisch deklarierte Namen sowie nicht auf Verweismember angewendet werden.
 
@@ -1104,7 +1104,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     };
    ```
 
-- `volatile` * **– Membervariablen mit diesem Schlüsselwort vermeiden implizit definierte Konstruktoren und Zuweisungsoperatoren**. In früheren Versionen des Compilers konnte eine Klasse, die über **volatile**-Membervariablen verfügte, Kopier-/Verschiebestandardkonstruktoren und Standardzuweisungsoperatoren für Kopier-/Verschiebevorgänge automatisch generieren.TDieses alte Verhalten war falsch und entsprach nicht dem C++-Standard.TDer Compiler geht bei einer Klasse mit volatilen Membervariablen davon aus, dass sie nicht triviale Konstruktions- und Zuweisungsoperatoren hat. Dies verhindert, dass Standardimplementierungen dieser Operatoren automatisch generiert werden.WIst eine solche Klasse ein Member einer Union (oder einer anonymen Union innerhalb einer Klasse), werden Kopier-/Verschiebekonstruktoren und Kopier-/Verschiebezuweisungsoperatoren der Union (oder die Klasse, die die anonyme Union enthält) implizit als gelöscht definiert.AWird versucht, die Union (oder die Klasse, die die anonyme Union enthält) zu erstellen oder zu kopieren, ohne sie explizit zu definieren, tritt ein Fehler auf, und der Compiler gibt den Compilerfehler C2280 aus.
+- `volatile` **Membervariablen vermeiden implizit definierte Konstruktoren und Zuweisungsoperatoren**. In früheren Versionen des Compilers war es für eine Klasse zulässig, die über Membervariablen des Typs **volatile** verfügte, Kopier-/Verschiebestandardkonstruktoren und Kopier-/Verschiebestandardzuweisungsoperatoren automatisch zu generieren. Dieses alte Verhalten war falsch und entsprach nicht dem C++-Standard. Der Compiler geht bei einer Klasse mit volatilen Membervariablen davon aus, dass sie nicht triviale Konstruktions- und Zuweisungsoperatoren hat. Dies verhindert, dass Standardimplementierungen dieser Operatoren automatisch generiert werden. Ist eine solche Klasse ein Member einer Union (oder einer anonymen Union innerhalb einer Klasse), werden Kopier-/Verschiebekonstruktoren und Kopier-/Verschiebezuweisungsoperatoren der Union (oder die Klasse, die die anonyme Union enthält) implizit als gelöscht definiert. Wird versucht, die Union (oder die Klasse, die die anonyme Union enthält) zu erstellen oder zu kopieren, ohne sie explizit zu definieren, tritt ein Fehler auf, und der Compiler gibt den Compilerfehler C2280 aus.
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1158,7 +1158,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     B b2 (b1);  // error C2280
    ```
 
-- **Statische Memberfunktionen unterstützen keine cv-Qualifizierer.**
+- **Statische Memberfunktionen unterstützen keine CV-Qualifizierer.**
 
    In früheren Versionen von Visual C++ 2015 ist es zulässig, dass statische Memberfunktionen CV-Qualifizierer haben. Dieses Verhalten ist durch einen Rückschritt in Visual C++ 2015 und Visual C++ 2015 Update 1 begründet. Visual C++ 2013 und frühere Versionen von Visual C++ weisen Code zurück, der in dieser Weise geschrieben ist. Das Verhalten von Visual C++ 2015 und Visual C++ 2015 Update 1 ist falsch und entspricht nicht dem C++-Standard.  Visual Studio 2015 Update 2 weist Code, der in dieser Weise geschrieben ist, zurück und gibt stattdessen den Compilerfehler C2511 aus.
 
@@ -1301,7 +1301,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
    In früheren Versionen von Visual C++ wurden die statischen Assertionen unten in diesem Beispiel übergeben, da `std::is_convertable<>::value` fälschlicherweise auf **TRUE** festgelegt war. Jetzt ist `std::is_convertable<>::value` richtig auf **FALSE** festgelegt, wodurch ein Fehler in den statischen Assertionen verursacht wird.
 
-- **Standardmäßig verwendete und gelöschte triviale Kopier- und Verschiebekonstruktoren beachten Zugriffsspezifizierer**
+- **Als Standard festgelegte und gelöschte triviale Kopier- und Verschiebekonstruktoren beachten Zugriffsspezifizierer**
 
    In früheren Versionen des Compilers wurden die Zugriffsspezifizierer von als Standard festgelegten und gelöschten trivialen Kopier- und Verschiebekonstruktoren nicht geprüft, ehe ihr Aufrufen erlaubt wurde. Dieses alte Verhalten war falsch und entsprach nicht dem C++-Standard. Durch dieses alte Verhalten entstand in einigen Fällen die Gefahr der stummen Erzeugung von ungültigem Code, was zu unvorhersehbarem Laufzeitverhalten führt. Der Compiler prüft jetzt den Zugriffsspezifizierer von als Standard festgelegten und gelöschten trivialen Kopier- und Verschiebekonstruktoren, um zu bestimmen, ob diese aufgerufen werden können. Falls nicht, gibt der Compiler die Warnung C2248 aus.
 
@@ -1580,19 +1580,19 @@ Diese verbesserte Unterstützung für ISO-C/C++-Standards erfordert möglicherwe
 
 ### <a name="windows-runtime-app-development-support"></a>Unterstützung für die Entwicklung von Windows-Runtime-Apps
 
-- **Unterstützung für Wertstrukturtypen, für die ein Boxing durchgeführt wurde**
+- **Unterstützung für geschachtelte Typen in Wertstrukturen.**
 
    Sie können jetzt Werttypen definieren, indem Sie Felder verwenden, die NULL sein können – z.B. `IBox<int>^` anstelle von **int**. Das bedeutet, dass die Felder entweder einen Wert haben oder **nullptr** entsprechen.
 
-- **Umfangreichere Ausnahmeinformationen**
+- **Umfangreichere Ausnahmeinformationen.**
 
    C++/CX unterstützt das neue Windows-Fehlermodell, das die Erfassung und die Weitergabe von umfangreichen Ausnahmeinformationen über der Anwendungsbinärdateischnittstelle (ABI) aktiviert. Dies schließt auch Aufruflisten und benutzerdefinierte Meldungs- ein.
 
-- **Object::ToString() ist jetzt virtuell**
+- **„Object::ToString()“ ist jetzt virtuell.**
 
    Sie können „ToString“ in benutzerdefinierten Windows-Runtime-Referenztypen überschreiben.
 
-- **Unterstützung für veraltete APIs**
+- **Unterstützung für veraltete APIs.**
 
    Öffentliche Windows-Runtime-APIs können jetzt als veraltet markiert und ihnen kann eine benutzerdefinierte Meldung zugewiesen werden, die als Buildwarnung angezeigt werden und Migrationsanleitungen bereitstellen kann.
 
@@ -1632,7 +1632,7 @@ Diese verbesserte Unterstützung für ISO-C/C++-Standards erfordert möglicherwe
 - ' (Einfaches Anführungszeichen)
 - " (doppeltes Anführungszeichen)
 
-**Zusätzliche C++-Features für die automatische Vervollständigung**
+**Zusätzliche C++-Features für die automatische Vervollständigung.**
 
 - Fügt Semikolon für Klassentypen hinzu.
 - Vervollständigt Klammern für unformatierte Zeichenfolgenliterale.
@@ -1642,15 +1642,15 @@ Diese verbesserte Unterstützung für ISO-C/C++-Standards erfordert möglicherwe
 
 **Kontextbasierte Memberlistenfilterung.** Member, auf die nicht zugegriffen werden kann, werden aus den IntelliSense-Memberlisten herausgefiltert. Beispielsweise werden private Member nicht in der Memberliste angezeigt, es sei denn, Sie ändern den Code, der den Typ implementiert. Während die Memberliste geöffnet ist, können Sie **STRG**+**J** drücken, um eine Filterungsebene zu entfernen (gilt nur für das aktuelle Memberlistenfenster). Sie können **STRG**+**J** erneut drücken, um die Textfilterung zu entfernen und die Member anzuzeigen.
 
-**Scrollfeature für Parameterhilfe.** Die angezeigte Funktionssignatur in der QuickInfo der Parameter Hilfe ändert sich jetzt je nach Anzahl der Parameter, die Sie wirklich eingegeben haben, anstatt nur eine beliebige Signatur anzuzeigen, die nicht auf Grundlage des aktuellen Kontextes aktualisiert wird. Parameterhilfe funktioniert auch ordnungsgemäß, wenn sie in geschachtelten Funktionen angezeigt wird.
+**Parameterhilfescrollen.** Die angezeigte Funktionssignatur in der QuickInfo der Parameter Hilfe ändert sich jetzt je nach Anzahl der Parameter, die Sie wirklich eingegeben haben, anstatt nur eine beliebige Signatur anzuzeigen, die nicht auf Grundlage des aktuellen Kontextes aktualisiert wird. Parameterhilfe funktioniert auch ordnungsgemäß, wenn sie in geschachtelten Funktionen angezeigt wird.
 
-**Header-/Codedatei umschalten.** Sie können nun zwischen einem Header und der zugehörigen Codedatei umschalten, indem Sie einen Befehl im Kontextmenü oder eine Tastenkombination verwenden.
+**Zwischen Header-/Codedatei umschalten.** Sie können nun zwischen einem Header und der zugehörigen Codedatei umschalten, indem Sie einen Befehl im Kontextmenü oder eine Tastenkombination verwenden.
 
 **In der Größe veränderbares C++-Projekteigenschaftenfenster**
 
 **Automatisches Generieren des Ereignishandlercodes in C++/CX und C++/CLI.**  Wenn Sie Code eingeben, um einen Ereignishandler in einer C++/CX- oder C++/CLI-Codedatei hinzuzufügen, kann der Editor die Delegatinstanz und die Ereignishandlerdefinition automatisch generieren. Ein QuickInfo-Fenster wird angezeigt, wenn Ereignishandlercode automatisch generiert werden kann.
 
-**Verbesserung der DPI-Berücksichtigung.** Die DPI-Einstellung für Anwendungsmanifestdateien unterstützt jetzt die Einstellung "Hohe DPI-Werte pro Monitor".
+**Unterstützung der DPI-Erweiterung.** Die DPI-Einstellung für Anwendungsmanifestdateien unterstützt jetzt die Einstellung "Hohe DPI-Werte pro Monitor".
 
 **Schnellere Konfigurationsumschaltung.** Für große Anwendungen werden Konfigurationen, insbesondere nachfolgende Umschaltvorgänge, viel schneller ausgeführt.
 
@@ -1727,21 +1727,21 @@ Neben den Fenstern **Parallele Aufgaben** und **Parallele Stapel** ist in Visual
 
 **Unterstützung von Visual Studio-Vorlagen.** Sie können jetzt die Technologie der Visual Studio-Vorlagen verwenden, um C++-Projekte und Elementvorlagen zu erstellen.
 
-**Asynchrones Laden von Projektmappen.** Projekte werden jetzt auf asynchrone Weise geladen, d.h. die wichtigsten Bestandteile der Projektmappe zuerst, sodass Sie schneller mit der Arbeit beginnen können.
+**Laden asynchroner Projektmappen.** Projekte werden jetzt auf asynchrone Weise geladen, d.h. die wichtigsten Bestandteile der Projektmappe zuerst, sodass Sie schneller mit der Arbeit beginnen können.
 
 **Automatisierte Bereitstellung für das Remotedebuggen.** Die Bereitstellung von Dateien für das Remotedebuggen in Visual C++ wurde vereinfacht. Die Option **Bereitstellen** im Kontextmenü des Projekts kopiert die Dateien, die in den Eigenschaften für die Debugkonfiguration angegeben sind, automatisch auf den Remotecomputer. Es ist nicht mehr erforderlich, die Dateien manuell auf den Remotecomputer zu kopieren.
 
 **IntelliSense für C++/CLI.** IntelliSense wird für C++/CLI nun vollständig unterstützt. IntelliSense-Features wie QuickInfo, die Parameterhilfe, Listenmembers und die automatische Vervollständigung funktionieren jetzt für C++/CLI. Zudem funktionieren die anderen in diesem Dokument aufgeführten IntelliSense- und IDE-Erweiterungen ebenfalls für C++/CLI.
 
-**Umfangreichere IntelliSense-QuickInfos.** Die IntelliSense-QuickInfo für C++ zeigt jetzt XML-Dokumentationskommentare mit Informationen zum Stil an. Wenn Sie eine API für eine Bibliothek verwenden, die über XML-Dokumentationskommentare verfügt, z.B. C++ AMP, zeigt die InteliSense-QuickInfo neben der Deklaration auch weitere Informationen an. Wenn Ihr Code außerdem XML-Dokumentationskommentare enthält, zeigt die IntelliSense-QuickInfo umfangreichere Informationen an.
+**Umfangreichere IntelliSense-QuickInfo.** Die IntelliSense-QuickInfo für C++ zeigt jetzt XML-Dokumentationskommentare mit Informationen zum Stil an. Wenn Sie eine API für eine Bibliothek verwenden, die über XML-Dokumentationskommentare verfügt, z.B. C++ AMP, zeigt die InteliSense-QuickInfo neben der Deklaration auch weitere Informationen an. Wenn Ihr Code außerdem XML-Dokumentationskommentare enthält, zeigt die IntelliSense-QuickInfo umfangreichere Informationen an.
 
 **C++-Codekonstrukte.** Für Codekonstrukte wie u.a. „switch“, „if-else“ oder „for loop“ ist Skelettcode in der Dropdownliste der Listenmembers verfügbar. Wählen Sie aus der Liste ein Codefragment aus, das Sie in Ihren Code einfügen, und fügen Sie dann die erforderliche Logik ein. Sie können auch Ihre eigenen Codefragmente erstellen, um sie im Editor zu verwenden.
 
-**Verbesserungen bei „Member auflisten“.** Die Dropdownliste mit den **Listenmembers** wird automatisch angezeigt, wenn Sie Code in den Code-Editor eingeben. Ergebnisse werden gefiltert, sodass beim Tippen nur relevante Members angezeigt werden. Sie können im Dialogfeld **Optionen** unter **Text-Editor** > **C/C++** > **Erweitert** steuern, welche Filterlogik von der Memberliste verwendet werden soll.
+**Erweiterungen der Listenmembers.** Die Dropdownliste mit den **Listenmembers** wird automatisch angezeigt, wenn Sie Code in den Code-Editor eingeben. Ergebnisse werden gefiltert, sodass beim Tippen nur relevante Members angezeigt werden. Sie können im Dialogfeld **Optionen** unter **Text-Editor** > **C/C++** > **Erweitert** steuern, welche Filterlogik von der Memberliste verwendet werden soll.
 
 **Semantische Farbgebung.** Für Typen, Aufzählungen, Makros sowie andere C++-Tokens ist jetzt standardmäßig die Farbgebung aktiviert.
 
-**Verweismarkierung.** Wenn Sie ein Symbol auswählen, werden jetzt alle Instanzen des Symbols in der aktuellen Datei angezeigt. Drücken Sie **STRG**+**UMSCHALT**+**NACH-OBEN** oder **STRG**+**UMSCHALT**+**NACH-UNTEN**, um zwischen den markierten Verweisen zu wechseln. Sie können diese Funktion im Dialogfeld **Optionen** unter **Text-Editor** > **C/C++** > **Erweitert** deaktivieren.
+**Markieren von Verweisen.** Wenn Sie ein Symbol auswählen, werden jetzt alle Instanzen des Symbols in der aktuellen Datei angezeigt. Drücken Sie **STRG**+**UMSCHALT**+**NACH-OBEN** oder **STRG**+**UMSCHALT**+**NACH-UNTEN**, um zwischen den markierten Verweisen zu wechseln. Sie können diese Funktion im Dialogfeld **Optionen** unter **Text-Editor** > **C/C++** > **Erweitert** deaktivieren.
 
 ### <a name="application-lifecycle-management-tools"></a>Anwendungslebenszyklus-Verwaltungstools
 
@@ -1777,9 +1777,9 @@ Die Code Coverage wurde aktualisiert, um Binärdateien zur Runtime dynamisch zu 
 
 ### <a name="c-compiler-and-linker"></a>C++-Compiler und -Linker
 
-**Schlüsselwort auto.** Das Schlüsselwort **auto** hat eine neue Funktion. Verwenden Sie die Standardbedeutung des Schlüsselworts **auto**, um eine Variable zu deklarieren, deren Typ aus dem Initialisierungsausdruck der Variablendeklaration abgeleitet wird. Mit der Compileroption `/Zc:auto` wird entweder die neue oder die ehemalige Bedeutung des Schlüsselworts **auto** aufgerufen.
+**Schlüsselwort „auto“.** Das Schlüsselwort **auto** hat eine neue Funktion. Verwenden Sie die Standardbedeutung des Schlüsselworts **auto**, um eine Variable zu deklarieren, deren Typ aus dem Initialisierungsausdruck der Variablendeklaration abgeleitet wird. Mit der Compileroption `/Zc:auto` wird entweder die neue oder die ehemalige Bedeutung des Schlüsselworts **auto** aufgerufen.
 
-**Typspezifizierer decltype.** Der **decltype**-Typspezifizierer gibt den Typ eines angegebenen Ausdrucks zurück. Verwenden Sie den **decltype**-Typspezifizierer in Kombination mit dem Schlüsselwort **auto**, um einen Typ zu deklarieren, der entweder komplex oder nur dem Compiler bekannt ist. Verwenden Sie z.B. diese Kombination, um eine Vorlagenfunktion zu deklarieren, deren Rückgabetyp von den Typen seiner Vorlagenargumente abhängt. Stattdessen können Sie auch eine Vorlagenfunktion deklarieren, die einen Aufruf einer anderen Funktion aufruft und anschließend den Rückgabetyp der aufgerufenen Funktion zurückgibt.
+**decltype-Typspezifizierer.** Der **decltype**-Typspezifizierer gibt den Typ eines angegebenen Ausdrucks zurück. Verwenden Sie den **decltype**-Typspezifizierer in Kombination mit dem Schlüsselwort **auto**, um einen Typ zu deklarieren, der entweder komplex oder nur dem Compiler bekannt ist. Verwenden Sie z.B. diese Kombination, um eine Vorlagenfunktion zu deklarieren, deren Rückgabetyp von den Typen seiner Vorlagenargumente abhängt. Stattdessen können Sie auch eine Vorlagenfunktion deklarieren, die einen Aufruf einer anderen Funktion aufruft und anschließend den Rückgabetyp der aufgerufenen Funktion zurückgibt.
 
 **Lambdaausdrücke.** Die Lambdafunktionen verfügen über einen Funktionstext, aber nicht über einen Namen. Sie vereinen in sich die besten Eigenschaften von Funktionszeigern und Funktionsobjekten. Verwenden Sie anstelle eines Funktionsobjekts eine Lambdafunktion als Vorlagenfunktionsparameter, oder verwenden Sie sie zusammen mit dem Schlüsselwort **auto**, um eine Variable des Typs „Lambda“ zu deklarieren.
 
@@ -1787,23 +1787,23 @@ Die Code Coverage wurde aktualisiert, um Binärdateien zur Runtime dynamisch zu 
 
 **static_assert-Deklaration.** Der Deklarationstest **static_assert** einer Softwareassertion ermöglicht es, Zuweisungen beim Kompilieren zu testen, anstatt diesen Test wie andere Zuweisungsmechanismen zur Laufzeit auszuführen. Schlägt die Assertion fehl, kann auch die Kompilierung nicht erfolgreich abgeschlossen werden. Das System gibt dann eine Fehlermeldung aus.
 
-**Schlüsselwörter nullptr und __nullptr.** Mithilfe des Visual C++-Compilers können Sie das Schlüsselwort **nullptr** mit nativem oder verwaltetem Code verwenden. Das Schlüsselwort **nullptr** gibt an, dass ein Zeiger des Typs „Ziehpunkt“, „Innerer Zeiger“ oder „Nativer Zeiger“ nicht auf ein Objekt zeigt. Wenn Sie die Compileroption `/clr` verwenden, interpretiert der Compiler **nullptr** als verwalteten Code. Wird die Option `/clr` hingegen nicht verwendet, gilt der Code als nativ.
+**Die Schlüsselwörter „nullptr“ und „__nullptr“.** Mithilfe des Visual C++-Compilers können Sie das Schlüsselwort **nullptr** mit nativem oder verwaltetem Code verwenden. Das Schlüsselwort **nullptr** gibt an, dass ein Zeiger des Typs „Ziehpunkt“, „Innerer Zeiger“ oder „Nativer Zeiger“ nicht auf ein Objekt zeigt. Wenn Sie die Compileroption `/clr` verwenden, interpretiert der Compiler **nullptr** als verwalteten Code. Wird die Option `/clr` hingegen nicht verwendet, gilt der Code als nativ.
 Das Microsoft-spezifische Schlüsselwort **__nullptr** entspricht zwar der Bedeutung von **nullptr**, ist aber nur auf nativen Code anwendbar. Wenn Sie nativen C/C++-Code über die Compileroption `/clr` kompilieren, kann der Compiler nicht ermitteln, ob es sich bei dem Schlüsselwort **nullptr** um nativen Code oder um eine verwaltete Benennung handelt. Wenn Sie dem Compiler eindeutige Anweisungen geben möchten, verwenden Sie das Schlüsselwort „nullptr“, um die verwaltete Benennung anzugeben, und **__nullptr**, um die native Benennung anzugeben.
 
-**Compileroption /Zc:trigraphs.** Standardmäßig ist die Unterstützung von Trigraphen deaktiviert. Verwenden Sie die Compileroption `/Zc:trigraphs`, um die Unterstützung von Trigraphen zu aktivieren.
+**Compileroption „/Zc:trigraphs“.** Standardmäßig ist die Unterstützung von Trigraphen deaktiviert. Verwenden Sie die Compileroption `/Zc:trigraphs`, um die Unterstützung von Trigraphen zu aktivieren.
 Ein Trigraph besteht aus zwei aufeinander folgenden Fragezeichen (??) gefolgt von einem eindeutigen dritten Zeichen. Der Compiler ersetzt einen Trigraphen durch ein entsprechendes Interpunktionszeichen. Der Compiler ersetzt z.B. den Trigraphen ??= durch das Nummernzeichen #. Verwenden Sie Trigraphen in C-Quelldateien, die einen Zeichensatz aufweisen, der einige Interpunktionszeichen nicht enthält.
 
-**Neue Option „Profilgesteuerte Optimierung“.** Bei PogoSafeMode handelt es sich um eine neue Option zur profilgesteuerten Optimierung, über die Sie angeben können, ob der abgesicherte oder der schnelle Modus bei der Optimierung der Anwendung verwendet werden soll. Der abgesicherte Modus ist zwar threadsicher, aber langsamer als der schnelle Modus. Der schnelle Modus stellt das Standardverhalten dar.
+**Die neue Option „profilgesteuerte Optimierung“.** Bei PogoSafeMode handelt es sich um eine neue Option zur profilgesteuerten Optimierung, über die Sie angeben können, ob der abgesicherte oder der schnelle Modus bei der Optimierung der Anwendung verwendet werden soll. Der abgesicherte Modus ist zwar threadsicher, aber langsamer als der schnelle Modus. Der schnelle Modus stellt das Standardverhalten dar.
 
-**Neue Common Language Runtime-Option /clr:nostdlib.** Für `/clr` wurde eine neue Option hinzugefügt (Common Language Runtime-Kompilierung). Wenn verschiedene Versionen derselben Bibliotheken enthalten sind, wird ein Compilerfehler zurückgegeben. Mithilfe der neuen Option können Sie die CLR-Standardbibliotheken ausschließen, damit Ihr Programm eine festgelegte Version verwenden kann.
+**Neue Common Language Runtime-Option „/clr:nostdlib“.** Für `/clr` wurde eine neue Option hinzugefügt (Common Language Runtime-Kompilierung). Wenn verschiedene Versionen derselben Bibliotheken enthalten sind, wird ein Compilerfehler zurückgegeben. Mithilfe der neuen Option können Sie die CLR-Standardbibliotheken ausschließen, damit Ihr Programm eine festgelegte Version verwenden kann.
 
-**Neue #pragma-Anweisung detect_mismatch.** Mithilfe der pragma-Anweisung „detect_mismatch“ können Sie Ihren Dateien eine Markierung hinzufügen, die mit anderen Markierungen mit demselben Namen verglichen wird. Wenn es mehrere Werte für denselben Namen gibt, wird vom Linker ein Fehler zurückgegeben.
+**Die neue pragma-Anweisung „detect_mismatch“** Mithilfe der pragma-Anweisung „detect_mismatch“ können Sie Ihren Dateien eine Markierung hinzufügen, die mit anderen Markierungen mit demselben Namen verglichen wird. Wenn es mehrere Werte für denselben Namen gibt, wird vom Linker ein Fehler zurückgegeben.
 
-**Intrinsische XOP-Funktionen, intrinsische FMA4-Funktionen und intrinsische LWP-Funktionen.** Neue intrinsische Funktionen wurden hinzugefügt, um Prozessortechnologien für intrinsische XOP-Funktionen (für Visual Studio 2010 SP1 hinzugefügt), intrinsische FMA4-Funktionen (für Visual Studio 2010 SP1 hinzugefügt) und intrinsische LWP-Funktionen (für Visual Studio 2010 SP1 hinzugefügt) zu unterstützen. Verwenden Sie „__cpuid“ und „__cpuidex“, um zu bestimmen, welche Prozessortechnologien auf den einzelnen Computern unterstützt werden.
+**Intrinsische XOP-Funktionen, intrinsische FMA4-Funktion und intrinsische LWP-Funktionen.** Neue intrinsische Funktionen wurden hinzugefügt, um Prozessortechnologien für intrinsische XOP-Funktionen (für Visual Studio 2010 SP1 hinzugefügt), intrinsische FMA4-Funktionen (für Visual Studio 2010 SP1 hinzugefügt) und intrinsische LWP-Funktionen (für Visual Studio 2010 SP1 hinzugefügt) zu unterstützen. Verwenden Sie „__cpuid“ und „__cpuidex“, um zu bestimmen, welche Prozessortechnologien auf den einzelnen Computern unterstützt werden.
 
 ### <a name="visual-c-projects-and-the-build-system"></a>Visual C++-Projekte und das Buildsystem
 
-**MSBuild** Visual C++-Projektmappen und -Projekte werden jetzt mithilfe von „MSBuild.exe“ erstellt. Diese Datei ersetzt die Datei „VCBuild.exe“. Bei MSBuild handelt es sich um das flexible, erweiterbare, XML-basierte Buildtool, das auch von den anderen Visual Studio-Sprachen und -Projekttypen verwendet wird. Aufgrund dieser Änderung verwenden Visual C++-Projektdateien jetzt das XML-Dateiformat und verfügen über die Erweiterung „vcxproj“. Visual C++-Projektdateien aus früheren Versionen von Visual Studio werden automatisch in das neue Dateiformat konvertiert.
+**MSBuild.** Visual C++-Projektmappen und -Projekte werden jetzt mithilfe von „MSBuild.exe“ erstellt. Diese Datei ersetzt die Datei „VCBuild.exe“. Bei MSBuild handelt es sich um das flexible, erweiterbare, XML-basierte Buildtool, das auch von den anderen Visual Studio-Sprachen und -Projekttypen verwendet wird. Aufgrund dieser Änderung verwenden Visual C++-Projektdateien jetzt das XML-Dateiformat und verfügen über die Erweiterung „vcxproj“. Visual C++-Projektdateien aus früheren Versionen von Visual Studio werden automatisch in das neue Dateiformat konvertiert.
 
 **VC++-Verzeichnisse.** Die Einstellung „VC++-Verzeichnisse“ befindet sich jetzt an zwei verschiedenen Orten. Verwenden Sie die Projekteigenschaftenseiten, um Werte projektbasiert für VC++-Verzeichnisse festzulegen. Verwenden Sie den **Eigenschaften-Manager** und ein Eigenschaftenblatt, um globale Werte für jede Konfiguration von VC++-Verzeichnissen festzulegen.
 
@@ -1832,9 +1832,9 @@ Ein Trigraph besteht aus zwei aufeinander folgenden Fragezeichen (??) gefolgt vo
 
 **Windows 7-Features.** MFC unterstützt zahlreiche Features für Windows 7, z.B. die Menüband-Benutzeroberfläche, die Taskleiste, Sprunglisten, Miniaturansichten mit Registerkarten, Miniaturansichten, die Statusanzeige, Symbolüberlagerung und die Suchindizierung. Da MFC automatisch einige Funktionen für Windows 7 unterstützt, müssen Sie Ihre bereits vorhandene Anwendung nicht mehr verändern. Verwenden Sie zur Unterstützung von anderen Features in neuen Anwendungen den MFS-Anwendungsassistenten, um die gewünschte Funktionalität anzugeben.
 
-**Multitouchunterstützung.** MFC unterstützt Anwendungen mit Multitouch-Benutzeroberflächen, also z.B. Anwendungen, die für das Betriebssystem Microsoft Surface geschrieben wurden. Eine Multitouch-Anwendung kann Windows Touch-Nachrichten und Bewegungsnachrichten verarbeiten, die eine Kombination aus verschiedenen Touch-Nachrichten darstellen. Registrieren Sie Ihre Anwendung für Touch- und Bewegungsereignisse. Dann leitet Ihr Betriebssystem Multitouch-Ereignisse an Ihre Ereignishandler weiter.
+**Multitouch-Unterstützung.** MFC unterstützt Anwendungen mit Multitouch-Benutzeroberflächen, also z.B. Anwendungen, die für das Betriebssystem Microsoft Surface geschrieben wurden. Eine Multitouch-Anwendung kann Windows Touch-Nachrichten und Bewegungsnachrichten verarbeiten, die eine Kombination aus verschiedenen Touch-Nachrichten darstellen. Registrieren Sie Ihre Anwendung für Touch- und Bewegungsereignisse. Dann leitet Ihr Betriebssystem Multitouch-Ereignisse an Ihre Ereignishandler weiter.
 
-**Berücksichtigung hoher DPI-Werte.** Standardmäßig unterstützen MFC-Anwendungen jetzt High-DPI. Wenn eine Anwendung High-DPI (Dots per Inch = Punkte pro Zoll) unterstützt, kann das Betriebssystem Fenster, Text und andere Benutzeroberflächenelemente für die aktuelle Bildschirmauflösung skalieren. Das bedeutet, dass bei einem skalierten Bild die Chance größer ist, dass es richtig ausgerichtet und weder beschnitten noch verpixelt dargestellt wird.
+**High-DPI-Unterstützung.** Standardmäßig unterstützen MFC-Anwendungen jetzt High-DPI. Wenn eine Anwendung High-DPI (Dots per Inch = Punkte pro Zoll) unterstützt, kann das Betriebssystem Fenster, Text und andere Benutzeroberflächenelemente für die aktuelle Bildschirmauflösung skalieren. Das bedeutet, dass bei einem skalierten Bild die Chance größer ist, dass es richtig ausgerichtet und weder beschnitten noch verpixelt dargestellt wird.
 
 **Neustart-Manager.** Der Neustart-Manager speichert Dokumente automatisch ab und startet die Anwendung neu, falls diese unerwartet geschlossen oder neu gestartet wird. Sie können den Neustart-Manager beispielsweise verwenden, um die Anwendung erneut zu starten, nachdem sie durch ein automatisches Update geschlossen wurde. Weitere Informationen zum Konfigurieren Ihrer Anwendung für das Verwenden des Neustart-Managers finden Sie unter **Vorgehensweise: Hinzufügen von Unterstützung für den Neustart-Manager**.
 
@@ -1858,17 +1858,17 @@ MFC unterstützt jetzt die Animation und Direct2D-Grafiken. Die MFC-Bibliothek v
 
 ### <a name="ide"></a>IDE
 
-**Verbesserung von IntelliSense** IntelliSense für Visual C++ wurde vollständig umgestaltet und ist jetzt schneller, genauer und kann größere Projekte verarbeiten. Damit diese Verbesserungen erzielt werden können, unterscheidet die IDE zwischen der Weise, auf die ein Entwickler Quellcode abruft und verändert, und der, auf die die IDE Quellcode und Projekteinstellungen verwendet, um eine Projektmappe zu erstellen.
+**Verbesserung von IntelliSense.** IntelliSense für Visual C++ wurde vollständig umgestaltet und ist jetzt schneller, genauer und kann größere Projekte verarbeiten. Damit diese Verbesserungen erzielt werden können, unterscheidet die IDE zwischen der Weise, auf die ein Entwickler Quellcode abruft und verändert, und der, auf die die IDE Quellcode und Projekteinstellungen verwendet, um eine Projektmappe zu erstellen.
 Da also die Aufgaben getrennt werden, werden Suchfunktionen wie die **Klassenansicht** und das neue Dialogfeld **Navigieren zu** von einem System verarbeitet, das auf einer neuen SQL Server-Desktopdatenbankdatei (.sdf) basiert, die die alte NCB-Datei (No Compile Browse) ersetzt. IntelliSense-Features wie QuickInfo, automatische Vervollständigung und die Parameterhilfe analysieren Übersetzungseinheiten nur falls erforderlich. Hybridfunktionen wie das neue Fenster **Aufrufhierarchie** verwenden eine Kombination aus Suchfunktionen und IntelliSense-Features.
 Da IntelliSense nur die Informationen verarbeitet, die zum jeweiligen Zeitpunkt erforderlich sind, ist die IDE reaktionsfähiger. Außerdem werden IDE-Ansichten und -Fenster genauer dargestellt, da die Informationen aktueller sind. Zudem können größere Projekte verarbeitet werden, da die IDE-Infrastruktur besser organisiert, leistungsfähiger und skalierbarer ist.
 
-**Verbesserte IntelliSense-Fehlererkennung.** Die IDE kann besser Fehler ermitteln, die einen Verlust von IntelliSense zur Folge hätten, und zeigt rote Wellenlinien unter diesen Fehlern an. Außerdem sendet die IDE IntelliSense-Fehler an das Fenster **Fehlerliste**. Wenn Sie den Code anzeigen lassen möchten, der das Problem verursacht, doppelklicken Sie auf den Fehler im Fenster **Fehlerliste**.
+**Verbesserung von IntelliSense-Fehlern.** Die IDE kann besser Fehler ermitteln, die einen Verlust von IntelliSense zur Folge hätten, und zeigt rote Wellenlinien unter diesen Fehlern an. Außerdem sendet die IDE IntelliSense-Fehler an das Fenster **Fehlerliste**. Wenn Sie den Code anzeigen lassen möchten, der das Problem verursacht, doppelklicken Sie auf den Fehler im Fenster **Fehlerliste**.
 
-**Feature zur automatischen Vervollständigung für #include-Anweisungen.** Die IDE unterstützt die automatische Vervollständigung für das Schlüsselwort `#include`. Wenn Sie `#include` eingeben, erstellt die IDE ein Dropdown-Listenfeld mit gültigen Headerdateien. Wenn Sie dann den Dateinamen eingeben, filtert die IDE die Liste anhand Ihres Eintrags. Sie können jederzeit die Datei aus der Liste auswählen, die Sie hinzufügen möchten. Dadurch können Sie Dateien schnell hinzufügen, ohne den genauen Dateinamen kennen zu müssen.
+**#include-Funktion zur automatischen Vervollständigung.** Die IDE unterstützt die automatische Vervollständigung für das Schlüsselwort `#include`. Wenn Sie `#include` eingeben, erstellt die IDE ein Dropdown-Listenfeld mit gültigen Headerdateien. Wenn Sie dann den Dateinamen eingeben, filtert die IDE die Liste anhand Ihres Eintrags. Sie können jederzeit die Datei aus der Liste auswählen, die Sie hinzufügen möchten. Dadurch können Sie Dateien schnell hinzufügen, ohne den genauen Dateinamen kennen zu müssen.
 
-**„Navigieren zu“.** Über das Dialogfeld **Navigieren zu** können Sie alle Symbole und Dateien in Ihrem Projekt suchen, die einer bestimmten Zeichenfolge entsprechen. Es wird nach Suchergebnissen gesucht, während Sie zusätzliche Zeichen in Ihre Suchzeichenfolge eingeben. Im Feedbackfeld **Ergebnisse** sehen Sie die Anzahl der gefundenen Elemente. Darüber können Sie entscheiden, ob Sie Ihre Suche einschränken möchten. Mithilfe der Feedbackfelder **Art/Umfang**, **Speicherort** und **Vorschau** können Sie Elemente mit ähnlichen Namen eindeutig kenntlich machen. Ebenso können Sie diese Funktion erweitern, sodass andere Programmiersprachen unterstützt werden.
+**Navigate to (Navigieren zu).** Über das Dialogfeld **Navigieren zu** können Sie alle Symbole und Dateien in Ihrem Projekt suchen, die einer bestimmten Zeichenfolge entsprechen. Es wird nach Suchergebnissen gesucht, während Sie zusätzliche Zeichen in Ihre Suchzeichenfolge eingeben. Im Feedbackfeld **Ergebnisse** sehen Sie die Anzahl der gefundenen Elemente. Darüber können Sie entscheiden, ob Sie Ihre Suche einschränken möchten. Mithilfe der Feedbackfelder **Art/Umfang**, **Speicherort** und **Vorschau** können Sie Elemente mit ähnlichen Namen eindeutig kenntlich machen. Ebenso können Sie diese Funktion erweitern, sodass andere Programmiersprachen unterstützt werden.
 
-**Paralleles Debuggen und parallele Profilerstellung.** Der Visual Studio-Debugger beachtet die Concurrency Runtime und unterstützt Sie bei der Behandlung von Problemen mit der Parallelverarbeitung von Anwendungen. Sie können das neue Concurrency-Profilerstellungstool verwenden, um das allgemeine Verhalten Ihrer Anwendung zu visualisieren. Außerdem können Sie neue Toolfenster verwenden, um den Status der Aufgaben und deren Aufruflisten zu visualisieren.
+**Paralleles Debuggen und Profilerstellung.** Der Visual Studio-Debugger beachtet die Concurrency Runtime und unterstützt Sie bei der Behandlung von Problemen mit der Parallelverarbeitung von Anwendungen. Sie können das neue Concurrency-Profilerstellungstool verwenden, um das allgemeine Verhalten Ihrer Anwendung zu visualisieren. Außerdem können Sie neue Toolfenster verwenden, um den Status der Aufgaben und deren Aufruflisten zu visualisieren.
 
 **Menüband-Designer.** Bei dem **Menüband-Designer** handelt es sich um einen grafischen Editor, über den Sie eine MFC-Menübandbenutzeroberfläche erstellen und bearbeiten können. Die endgültige Menüband-Benutzeroberfläche wird von einer XML-basierten Ressourcendatei dargestellt (.mfcribbon-ms). Für bereits vorhandene Anwendungen können Sie Ihre aktuelle Menübandbenutzeroberflächen erfassen, indem Sie zunächst vorübergehend einige Codezeilen hinzufügen und anschließend den **Menüband-Designer** aufrufen. Nach der Erstellung der Ressourcendatei für das Menüband können Sie Ihren handgeschriebenen Code für die Menüband-Benutzeroberfläche durch einige Anweisungen ersetzen, die die Menübandressource laden.
 
@@ -1876,7 +1876,7 @@ Da IntelliSense nur die Informationen verarbeitet, die zum jeweiligen Zeitpunkt 
 
 ### <a name="tools"></a>Tools
 
-**MFC-Klassen-Assistent.** Mit Visual C++ 2010 wird das praktische Tool „MFC-Klassenassistent“ wieder eingeführt. Der MFC-Klassenassistent stellt eine praktische Möglichkeit dar, um einem Projekt Klassen, Meldungen und Variablen hinzuzufügen, ohne Quelldateien manuell verändern zu müssen.
+**MFC-Klassenassistent.** Mit Visual C++ 2010 wird das praktische Tool „MFC-Klassenassistent“ wieder eingeführt. Der MFC-Klassenassistent stellt eine praktische Möglichkeit dar, um einem Projekt Klassen, Meldungen und Variablen hinzuzufügen, ohne Quelldateien manuell verändern zu müssen.
 
 **ATL-Steuerelement-Assistent.** Der ATL-Steuerelement-Assistent füllt das Feld `ProgID` nicht mehr automatisch auf. Wenn ein ATL-Steuerelement keine `ProgID` besitzt, können andere Tools möglicherweise nicht damit arbeiten. Beispielsweise verlangt das Dialogfeld **Insert Active Control** (Aktives Steuerelement einfügen), dass Steuerelemente eine `ProgID` aufweisen. Weitere Informationen zu diesem Dialogfeld finden Sie unter **Insert ActiveX Control Dialog Box („Dialogfeld ‚ActiveX-Steuerelement einfügen‘“)**.
 
@@ -1935,8 +1935,8 @@ Neben dem Datentyp „YMMWORD“ werden die 256-Bit-Multimediaoperanden unterst�
 - Die `__cpuid`-Funktion wurde aktualisiert. Die Funktionen `__cpuid` und `__cpuidex` unterstützen jetzt einige neue Features der letzten Überarbeitungen von AMD- und Intel-Prozessoren. Das intrinsische Funktion `__cpuidex` ist neu und erfasst weitere Informationen von neueren Prozessoren.
 - Die Compileroption `/MP` reduzierte die Gesamtdauer des Buildvorgangs. Die Option `/MP` kann die Gesamtzeit deutlich reduzieren, damit mehrere Quelldateien kompiliert werden können, indem mehrere Prozesse erstellt werden, in denen Dateien gleichzeitig kompiliert werden. Diese Option ist besonders auf Computern nützlich, die das Hyperthreading, mehrere Prozessoren oder mehrere Kerne unterstützen.
 - Die `/Wp64`-Compileroption und das **__w64**-Schlüsselwort sind veraltet. Die `/Wp64`-Compileroption und das **__w64**-Schlüsselwort, die Probleme mit der 64-Bit-Portabilität ermitteln, sind veraltet und werden in einer zukünftigen Version des Compilers entfernt. Verwenden Sie anstelle dieser Compileroption und des Schlüsselworts einen Visual C++-Compiler, der eine 64-Bit-Plattform als Ziel verwendet.
-- `/Qfast_transcendentals` generiert Inlinecode für transzendente Funktionen.
-- `/Qimprecise_fwaits` entfernt die fwait-Befehle in try-Blöcken, wenn Sie die Compileroption `/fp:except` verwenden.
+- `/Qfast_transcendentals` generiert Inlinecode für transzendentale Funktionen.
+- `/Qimprecise_fwaits` entfernt die internen fwait-Befehle, um Blöcke zu testen, wenn Sie die Compileroption `/fp:except` verwenden.
 
 ### <a name="linker-changes"></a>Änderungen am Linker
 
@@ -1985,71 +1985,71 @@ __sptr, __uptr
 In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 
 - Native 64-Bit-Compiler und Cross-Compiler.
-- `/analyze` (Enterprise-Codeanalyse) – diese Compileroption wurde hinzugefügt.
-- `/bigobj` – diese Compileroption wurde hinzugefügt.
+- Die `/analyze`-Compileroption (Enterprise-Codeanalyse) wurde hinzugefügt.
+- Die `/bigobj`-Compileroption wurde hinzugefügt.
 - `/clr:pure`, `/clr:safe` und `/clr:oldSyntax` wurden hinzugefügt. (Dies wurde später in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 entfernt.)
 - Veraltete Compileroptionen: Viele Compileroptionen wurden in diesem Release als veraltet gekennzeichnet. Weitere Informationen finden Sie unter **Deprecated Compiler Options (Veraltete Compileroptionen)**.
 - Das doppelte Thunking in `/clr`-Code wurde reduziert. Weitere Informationen finden Sie unter **Doppeltes Thunking (C++)**.
-- `/EH` (Ausnahmebehandlungsmodell) oder `/EHs` können nicht mehr verwendet werden, um eine Ausnahme abzufangen, die nicht mit throw ausgelöst wurde. Verwenden Sie stattdessen `/EHa`.
-- `/errorReport` (Interne Compilerfehler melden) – diese Compileroption wurde hinzugefügt.
-- `/favor` (Für 64-Bit-Architektur optimieren) – diese Compileroption wurde hinzugefügt.
-- `/FA`, `/Fa` (Listingdatei) – diese Compileroption wurden hinzugefügt.
-- `/FC` (Vollständiger Pfad der Quellcodedatei in Diagnose) – diese Compileroption wurde hinzugefügt.
-- `/fp` (Gleitkommaverhalten festlegen) – diese Compileroption wurde hinzugefügt.
-- `/G` (Optionen zum Optimieren für Prozessoren) – diese Compileroption wurde hinzugefügt.
-- `/G` (Optionen zum Optimieren für Prozessoren) – diese Compileroption wurde hinzugefügt.
-- `/G3`, `/G4`, `/G5`, `/G6`, `/G7` und `/GB` – diese Compileroptionen wurden entfernt. Der Compiler verwendet eine Füllmethode, die versucht, die beste Ausgabedatei für alle Architekturen zu erstellen.
+- `/EH` (Ausnahmebehandlungsmodell) oder `/EHs` können nicht mehr verwendet werden, um eine Ausnahme zu erfassen, die mit einer anderen Funktion als mit „Throw“ ausgelöst wird. Verwenden Sie stattdessen `/EHa`.
+- Die `/errorReport`-Compileroption (Interne Compilerfehler melden) wurde hinzugefügt.
+- Die `/favor`-Compileroption (Optimierung für 64) wurde hinzugefügt.
+- Die Compileroptionen `/FA` und `/Fa` (Listendatei) wurden hinzugefügt.
+- Die `/FC`-Compileroption (Vollständiger Pfad der Quellcodedatei in Diagnose) wurde hinzugefügt.
+- Die `/fp`-Compileroption (Festlegen des Gleitkommaverhaltens) wurde hinzugefügt.
+- Die `/G`-Compileroption (Optionen zum Optimieren für Prozessoren) wurde hinzugefügt.
+- Die `/G`-Compileroption (Optionen zum Optimieren für Prozessoren) wurde hinzugefügt.
+- Die Compileroptionen `/G3`, `/G4`, `/G5`, `/G6`, `/G7`, und `/GB` wurden entfernt. Der Compiler verwendet eine Füllmethode, die versucht, die beste Ausgabedatei für alle Architekturen zu erstellen.
 - `/Gf` wurde entfernt. Verwenden Sie stattdessen `/GF` (Doppelte Zeichenfolgen beseitigen).
 - `/GL` (Optimierung des gesamten Programms) ist jetzt mit `/CLRHEADER` kompatibel.
 - `/GR` ist jetzt standardmäßig aktiviert.
-- `/GS` (Puffersicherheitsüberprüfung) stellt jetzt einen Sicherheitsschutz für anfällige Zeigerparameter bereit. `/GS` ist jetzt standardmäßig aktiviert. `/GS` funktioniert jetzt auch für Funktionen, die mit `/clr` (Common Language Runtime-Kompilierung) für MSIL kompiliert werden.
-- `/homeparams` (Registerparameter in Stapel kopieren) – diese Compileroption wurde hinzugefügt.
-- `/hotpatch` (Hotpatchfähiges Image erstellen) – diese Compileroption wurde hinzugefügt.
+- `/GS` (Puffer-Sicherheitsüberprüfung) stellt jetzt einen Sicherheitsschutz für anfällige Zeigerparameter dar. `/GS` ist jetzt standardmäßig aktiviert. `/GS` funktioniert jetzt auch für Funktionen, die für MSIL mit `/clr` (Common Language Runtime-Kompilierung) kompiliert werden.
+- Die `/homeparams`-Compilerfunktion (Registerparameter in den Stapel kopieren) wurde hinzugefügt.
+- Die `/hotpatch`-Compilerfunktion (Hotpatchfähiges Image erstellen) wurde hinzugefügt.
 - Die Heuristik der Inlinefunktionen wurde aktualisiert. Weitere Informationen finden Sie unter **inline**, **__inline**, **__forceinline** und **inline_depth**.
 - Viele neue intrinsische Funktionen wurden hinzugefügt, und viele zuvor nicht dokumentierte intrinsische Funktionen werden jetzt dokumentiert.
 - Standardmäßig löst jeder fehlgeschlagene Aufruf von „New“ (Neu) eine Ausnahme aus.
-- `/ML` und `/MLd` – diese Compileroptionen wurden entfernt. Visual C++ unterstützt nicht mehr die statisch verknüpfte Singlethread-CRT-Bibliothek.
+- Die Compileroptionen `/ML` und `/MLd` wurden entfernt. Visual C++ unterstützt nicht mehr die statisch verknüpfte Singlethread-CRT-Bibliothek.
 - Mit dem Compiler wird die Optimierung von benannten Rückgabewerten implementiert, die aktiviert wird, wenn Sie mit `/O1`, `/O2` (Größe minimieren, Geschwindigkeit maximieren), `/Og` (globale Optimierung) und `/Ox` (Komplette Optimierung) kompiliert werden.
-- `/Oa` – diese Compileroption wurde entfernt und wird ignoriert, ohne dass eine Benachrichtigung angezeigt wird. Verwenden Sie die Modifizierer `noalias` oder `restrict__declspec`, um anzugeben, wie der Compiler beim Aliasing vorgeht.
-- `/Op` – diese Compileroption wurde entfernt. Verwenden Sie stattdessen `/fp` (Gleitkommaverhalten festlegen).
+- Die `/Oa`-Compileroption wurde entfernt und wird stillschweigend ignoriert. Verwenden Sie die Modifizierer `noalias` oder `restrict__declspec`, um anzugeben, wie der Compiler beim Aliasing vorgeht.
+- Die `/Op`-Compileroption wurde entfernt. Verwenden Sie stattdessen `/fp` (Gleitkommaverhalten festlegen).
 - „OpenMP“ wird jetzt von Visual C++ unterstützt.
-- `/openmp` (OpenMP 2.0-Unterstützung aktivieren) – diese Compileroption wurde hinzugefügt.
-- `/Ow` – diese Compileroption wurde entfernt und wird ignoriert, ohne dass eine Benachrichtigung angezeigt wird. Verwenden Sie die Modifizierer `noalias` oder `restrict__declspec`, um festzulegen, wie der Compiler beim Aliasing vorgehen soll.
+- Die `/openmp`-Compileroption (Aktivieren der OpenMP 2.0-Unterstützung) wurde hinzugefügt.
+- Die `/Ow`-Compileroption wurde entfernt und wird stillschweigend ignoriert. Verwenden Sie die Modifizierer `noalias` oder `restrict__declspec`, um festzulegen, wie der Compiler beim Aliasing vorgehen soll.
 
 ### <a name="profile-guided-optimizations"></a>Profilgesteuerte Optimierungen (PGO)
 
 - `/QI0f` wurde entfernt.
 - `/QIfdiv` wurde entfernt.
-- `/QIPF_B` (Errata für B-CPU-Stepping) – diese Compileroption wurde hinzugefügt.
-- `/QIPF_C` (Errata für C-CPU-Stepping) – diese Compileroption wurde hinzugefügt.
-- `/QIPF_fr32` (Obere 96 Gleitkommaregister nicht verwenden) – diese Compileroption wurde hinzugefügt.
-- `/QIPF_noPIC` (Positionsabhängigen Code erzeugen) – diese Compileroption wurde hinzugefügt.
-- `/QIPF_restrict_plabels` (Annahme, dass keine Funktionen zur Laufzeit erstellt werden) – diese Compileroption wurde hinzugefügt.
+- Die `/QIPF_B`-Compileroption (Errata für B-CPU-Stepping) wurde hinzugefügt.
+- Die `/QIPF_C`-Compileroption (Errata für C-CPU-Stepping) wurde hinzugefügt.
+- Die `/QIPF_fr32`-Compileroption (Obere 96 Gleitkommaregister nicht verwenden) wurde hinzugefügt.
+- Die `/QIPF_noPIC`-Compileroption (Erzeugen von positionsabhängigem Code) wurde hinzugefügt.
+- Die `/QIPF_restrict_plabels`-Compileroption (Annahme, dass keine Funktionen während der Laufzeit erstellt werden) wurde hinzugefügt.
 
 ### <a name="unicode-support-in-the-compiler-and-linker"></a>Unicode-Unterstützung im Compiler und Linker
 
-- `/vd` (Konstruktionsverschiebungen deaktivieren) – mit dieser Compileroption können Sie jetzt den dynamic_cast-Operator beim Erstellen eines Objekts verwenden (/vd2).
-- `/YX` – diese Compileroption wurde entfernt. Verwenden Sie stattdessen `/Yc` (Vorkompilierte Headerdatei erstellen) oder `/Yu` (Vorkompilierte Headerdatei verwenden). Wenn Sie `/YX` aus Ihren Buildkonfigurationen entfernen und nicht ersetzen, können dadurch die Buildvorgänge beschleunigt werden.
+- Mithilfe von `/vd` (Konstruktionsverschiebungen deaktivieren) können Sie jetzt den dynamic_cast-Operator beim Erstellen eines Objekts hinzufügen (/vd2).
+- Die `/YX`-Compileroption wurde entfernt. Verwenden Sie stattdessen `/Yc` (Vorkompilierte Headerdatei erstellen) oder `/Yu` (Vorkompilierte Headerdatei verwenden). Wenn Sie `/YX` aus Ihren Buildkonfigurationen entfernen und nicht ersetzen, können dadurch die Buildvorgänge beschleunigt werden.
 - `/Zc:forScope` ist jetzt standardmäßig aktiviert.
 - `/Zc:wchar_t` ist jetzt standardmäßig aktiviert.
-- `/Zd` – diese Compileroption wurde entfernt. Debugginginformationen für ausschließlich Zeilennummern werden nicht mehr unterstützt. Verwenden Sie stattdessen `/Zi`. Weitere Informationen finden Sie unter **/Z7, /Zi, /ZI (Debuginformationsformat)**.
+- Die `/Zd`-Compileroption wurde entfernt. Debugginginformationen für ausschließlich Zeilennummern werden nicht mehr unterstützt. Verwenden Sie stattdessen `/Zi`. Weitere Informationen finden Sie unter **/Z7, /Zi, /ZI (Debuginformationsformat)**.
 - `/Zg` ist jetzt nur noch für C-Quellcodedateien und nicht für C++-Quellcodedateien verfügbar.
-- `/Zx` (Optimierten Itanium-Code debuggen) – diese Compileroption wurde hinzugefügt.
+- Die `/Zx`-Compileroption (Optimierten Itaniumcode debuggen) wurde hinzugefügt.
 
 ### <a name="new-language-features"></a>Neue Sprachfeatures
 
 - Das attribute-Attribut ist jetzt als veraltet markiert.
-- `appdomain__declspec` – dieser Modifizierer wurde hinzugefügt.
-- `__clrcall` – diese Aufrufkonvention wurde hinzugefügt.
+- Der `appdomain__declspec`-Modifizierer wurde hinzugefügt.
+- Die `__clrcall`-Aufrufkonvention wurde hinzugefügt.
 - Mithilfe des veralteten (C++) **declspec**-Modifizierers können Sie jetzt eine Zeichenfolge angeben, die zur Kompilierzeit angezeigt wird, wenn ein Benutzer auf eine veraltete Klasse oder Funktion zugreifen will.
 - Am **dynamic_cast**-Operator wurden Breaking Changes vorgenommen.
 - Mithilfe von nativen Enumerationen können Sie jetzt den zugrunde liegenden Typ angeben.
-- `jitintrinsicdeclspec` – dieser Modifizierer wurde hinzugefügt.
-- `noaliasdeclspec` – dieser Modifizierer wurde hinzugefügt.
-- `process__declspec` – dieser Modifizierer wurde hinzugefügt.
+- Der `jitintrinsicdeclspec`-Modifizierer wurde hinzugefügt.
+- Der `noaliasdeclspec`-Modifizierer wurde hinzugefügt.
+- Der `process__declspec`-Modifizierer wurde hinzugefügt.
 - **abstract**, **override** und **sealed** können für die native Kompilierung verwendet werden.
 - Das **__restrict**-Schlüsselwort wurde hinzugefügt.
-- `restrictdeclspec` – dieser Modifizierer wurde hinzugefügt.
+- Der `restrictdeclspec`-Modifizierer wurde hinzugefügt.
 - **__thiscall** ist jetzt ein Schlüsselwort.
 - Das **__unaligned**-Schlüsselwort wird jetzt dokumentiert.
 - **volatile** (C++) verfügt jetzt über aktualisiertes Verhalten bezüglich Optimierungen.
@@ -2058,10 +2058,10 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 
 - Das vordefinierte __CLR_VER-Makro wurde hinzugefügt.
 - Das comment-Pragma (C/C++) akzeptiert jetzt `/MANIFESTDEPENDENCY` als Linkerkommentar. Die exestr-Kommentarfunktion wurde als veraltet markiert.
-- `embedded_idl` – Attribut (`#import`-Anweisung); nimmt nun einen optionalen Parameter entgegen.
-- `fenv_access` pragma
-- `float_control` pragma
-- `fp_contract` pragma
+- Das `embedded_idl`-Attribut (`#import`-Anweisung) verwendet jetzt einen optionalen Parameter.
+- `fenv_access`-Pragma
+- `float_control`-Pragma
+- `fp_contract`-Pragma
 - Globale Variablen werden nicht in der Reihenfolge initialisiert, in der sie deklariert werden, wenn Sie über globale Variablen in von Pragma verwalteten bzw nicht von Pragma verwalteten und nicht verwalteten Abschnitten verfügen. Dabei handelt es sich um eine möglicherweise bedeutungsvolle Änderung. Beispielsweise wird eine nicht verwaltete globale Variable mit verwalteten globalen Variablen initialisiert und ein vollständig konstruiertes verwaltetes Objekt ist erforderlich.
 - Mit „init_seg“ festgelegte Abschnitte sind jetzt schreibgeschützt und können nicht wie in den Vorgängerversionen bearbeitet werden.
 - Der inline_depth-Standard ist jetzt 16. Der Standard von 16 galt auch in Visual C++ .NET 2003.
@@ -2069,13 +2069,13 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 - Die vordefinierten Makros „_M_CEE“, „_M_CEE_PURE“ und „_M_CEE_SAFE“ wurden hinzugefügt. Weitere Informationen finden Sie unter „Predefined Macros (Vordefinierte Makros)“.
 - Das vordefinierte _M_IX86_FP-Makro wurde hinzugefügt.
 - Das vordefinierte _M_X64-Makro wurde hinzugefügt.
-- `make_public` pragma
-- `managed`, `unmanaged` – diese #pragma-Syntax wurde aktualisiert und verfügt jetzt über `push` und `pop`.
+- `make_public`-Pragma
+- Die Pragmasyntax `managed`,`unmanaged` wurde aktualisiert und verfügt jetzt über `push` und `pop`.
 - Auf „mscorlib.dll“ wird jetzt implizit von der `#using`-Anweisung in sämtlichen `/clr`-Kompilierungen verwiesen.
 - Das vordefinierte _OPENMP-Makro wurde hinzugefügt.
 - „optimize“-Pragma wurde aktualisiert, „a“ und „w“ gelten nicht mehr als gültige Parameter.
 - Das no_registry#import-Attribut wurde hinzugefügt.
-- `region`, `endregion` – diese #pragma-Anweisungen wurden hinzugefügt.
+- Die Pragmas `region` und `endregion` wurden hinzugefügt.
 - Das vordefinierte _VC_NODEFAULTLIB-Makro wurde hinzugefügt.
 - Variadic-Makros sind jetzt implementiert.
 - `vtordisp` ist veraltet und wird in einem der nächsten Releases von Visual C++ entfernt.
@@ -2084,40 +2084,40 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 ### <a name="new-linker-features"></a>Neue Linker-Features
 
 - Module (MSIL-Ausgabedateien, die keiner Assembly angehören) sind jetzt als Eingabe für den Linker zulässig.
-- `/ALLOWISOLATION` (Manifestsuche) – diese Linkeroption wurde hinzugefügt.
-- `/ASSEMBLYRESOURCE` (Verwaltete Ressource einbetten) wurde aktualisiert. Dadurch können Sie nun den Namen der Ressource in der Assembly angeben und festlegen, dass die Ressource privat ist.
-- `/CLRIMAGETYPE` (CLR-Imagetyp angeben) – diese Linkeroption wurde hinzugefügt.
-- `/CLRSUPPORTLASTERROR` (Letzten Fehlercode für PInvoke-Aufrufe beibehalten) – diese Linkeroption wurde hinzugefügt.
-- `/CLRTHREADATTRIBUTE` (CLR-Threadattribut festlegen) – diese Linkeroption wurde hinzugefügt.
-- `/CLRUNMANAGEDCODECHECK` (SuppressUnmanagedCodeSecurityAttribute hinzufügen) – diese Linkeroption wurde hinzugefügt.
-- `/ERRORREPORT` (Interne Linkerfehler melden) – diese Linkeroption wurde hinzugefügt.
-- `/EXETYPE` – diese Linkeroption wurde entfernt. Der Linker unterstützt das Erstellen von Gerätetreibern für Windows 95 und Windows 98 nicht mehr. Verwenden Sie eine geeignete DDK zum Erstellen dieser Gerätetreiber. Das EXETYPE-Schlüsselwort ist für Moduldefinitionsdateien nicht mehr gültig.
-- `/FUNCTIONPADMIN` (Hotpatchfähiges Image erstellen) – diese Linkeroption wurde hinzugefügt.
-- `/LTCG` – diese Linkeroption wird jetzt für mit `/clr` kompilierten Modulen unterstützt. `/LTCG` wurde außerdem aktualisiert, um profilgesteuerte Optimierungen zu unterstützen.
-- `/MANIFEST` (Manifest für parallele Assembly erstellen) – diese Linkeroption wurde hinzugefügt.
-- `/MANIFESTDEPENDENCY` (Manifestabhängigkeiten angeben) – diese Linkeroption wurde hinzugefügt.
-- `/MANIFESTFILE` (Manifestdatei benennen) – diese Linkeroption wurde hinzugefügt.
-- `/MAPINFO:LINES` – diese Linkeroption wurde entfernt.
-- `/NXCOMPAT` (Kompatibel mit der Datenausführungsverhinderung) – diese Linkeroption wurde hinzugefügt.
-- `/PGD` (Datenbank für profilgesteuerte Optimierungen festlegen) – diese Linkeroption wurde hinzugefügt.
-- `/PROFILE` (Leistungstoolsprofiler) – diese Linkeroption wurde hinzugefügt.
-- `/SECTION` (Abschnittsattribute festlegen) – diese Linkeroption unterstützt jetzt zwar die Attributnegation, aber nicht mehr die Attribute L oder D (VxD-bezogen).
+- Die `/ALLOWISOLATION`-Linkeroption (Manifestsuche) wurde hinzugefügt.
+- `/ASSEMBLYRESOURCE` (Verwaltete Ressource einbetten) wurde aktualisiert, und Sie können jetzt den Namen der Ressource in der Assembly angeben und angeben, dass die Ressource privat ist.
+- Die `/CLRIMAGETYPE`-Linkeroption (Angeben des CLR-Bildtyps) wurde hinzugefügt.
+- Die `/CLRSUPPORTLASTERROR`-Linkeroption (Letzten Fehlercode für PInvoke-Aufrufe beibehalten) wurde hinzugefügt.
+- Die `/CLRTHREADATTRIBUTE`-Linkeroption (Festlegen des CLR-Threadattributs) wurde hinzugefügt.
+- Die `/CLRUNMANAGEDCODECHECK`-Linkeroption (SuppressUnmanagedCodeSecurityAttribute hinzufügen) wurde hinzugefügt.
+- Die `/ERRORREPORT`-Linkeroption (Weiterleiten von internen Linkerfehlern) wurde hinzugefügt.
+- Die `/EXETYPE`-Linkeroption wurde entfernt. Der Linker unterstützt das Erstellen von Gerätetreibern für Windows 95 und Windows 98 nicht mehr. Verwenden Sie eine geeignete DDK zum Erstellen dieser Gerätetreiber. Das EXETYPE-Schlüsselwort ist für Moduldefinitionsdateien nicht mehr gültig.
+- Die `/FUNCTIONPADMIN`-Linkeroption (Erstellen eines Hotpatch-fähigen Images) wurde hinzugefügt.
+- Die `/LTCG`-Linkeroption wird jetzt für mit `/clr` kompilierten Modulen unterstützt. `/LTCG` wurde außerdem aktualisiert, um die profilgesteuerte Optimierung zu unterstützen.
+- Die `/MANIFEST`-Linkeroption (Paralleles Assemblymanifest erstellen) wurde hinzugefügt.
+- Die `/MANIFESTDEPENDENCY`-Linkeroption (Manifestabhängigkeiten angeben) wurde hinzugefügt.
+- Die `/MANIFESTFILE`-Linkeroption (Benennen der Manifestdatei) wurde hinzugefügt.
+- Die `/MAPINFO:LINES`-Linkeroption wurde entfernt.
+- Die `/NXCOMPAT`-Linkeroption (Kompatibel mit der Datenausführungsverhinderung) wurde hinzugefügt.
+- Die `/PGD`-Linkeroption (Datenbank für profilgesteuerte Optimierungen festlegen) wurde hinzugefügt.
+- Die `/PROFILE`-Linkeroption (Leistungstoolsprofiler) wurde hinzugefügt.
+- Die `/SECTION`-Linkeroption (Abschnittsattribute festlegen) unterstützt jetzt zwar die Attributnegation, aber die Attribute „L“ oder „D“ (VxD-bezogen) werden nicht mehr unterstützt.
 - Unicode-Unterstützung im Compiler und Linker
-- `/VERBOSE` (Fortschrittsmeldungen ausgeben) – diese Linkeroption akzeptiert jetzt auch ICF und REF.
-- `/VXD` – diese Linkeroption wurde entfernt. Der Linker unterstützt das Erstellen von Gerätetreibern für Windows 95 und Windows 98 nicht mehr. Verwenden Sie eine geeignete DDK zum Erstellen dieser Gerätetreiber. Das VXD-Schlüsselwort ist für Moduldefinitionsdateien nicht mehr gültig.
-- `/WS` – diese Linkeroption wurde entfernt. `/WS` wurde verwendet, um Images zu verändern, die für Windows NT 4.0 als Ziel verwendet werden. „IMAGECFG.exe“: Anstelle von `/WS` können jetzt R-Dateinamen verwendet werden. „IMAGECFG.exe“ befindet sich jetzt auf der Windows NT 4.0 CD-ROM in „SUPPORT\DEBUG\I386\IMAGECFG.EXE“.
-- `/WX` (Linkerwarnungen als Fehler behandeln) – diese Linkeroption wird jetzt dokumentiert.
+- Die `/VERBOSE`-Linkeroption (Meldungen zum Ausgabefortschritt) akzeptiert jetzt auch ICF und REF.
+- Die `/VXD`-Linkeroption wurde entfernt. Der Linker unterstützt das Erstellen von Gerätetreibern für Windows 95 und Windows 98 nicht mehr. Verwenden Sie eine geeignete DDK zum Erstellen dieser Gerätetreiber. Das VXD-Schlüsselwort ist für Moduldefinitionsdateien nicht mehr gültig.
+- Die `/WS`-Linkeroption wurde entfernt. `/WS` wurde verwendet, um Images zu verändern, die von Windows NT 4.0 als Ziel verwendet werden. „IMAGECFG.exe“: Anstelle von `/WS` können jetzt R-Dateinamen verwendet werden. „IMAGECFG.exe“ befindet sich jetzt auf der Windows NT 4.0 CD-ROM in „SUPPORT\DEBUG\I386\IMAGECFG.EXE“.
+- Die `/WX`-Linkeroption (Linkerwarnungen als Fehler behandeln) wird jetzt dokumentiert.
 
 ### <a name="new-linker-utility-features"></a>Neue Features des Linker-Hilfsprogramms
 
-- `/ALLOWISOLATION` – diese editbin-Option wurde hinzugefügt.
+- Die `/ALLOWISOLATION`-editbin-Option wurde hinzugefügt.
 - Die DESCRIPTION-Moduldefinitionsanweisungen für Dateien wurde entfernt. Der Linker unterstützt das Erstellen von virtuellen Gerätetreibern nicht mehr.
-- `/ERRORREPORT` – diese Option wurde zu „bscmake.exe“, „dumpbin.exe“, „editbin.exe“ und „lib.exe“ hinzugefügt.
-- `/LTCG` – diese lib-Option wurde hinzugefügt.
-- `/NXCOMPAT` – diese editbin-Option wurde hinzugefügt.
-- `/RANGE` – diese dumpbin-Option wurde hinzugefügt.
-- `/TLS` – diese dumpbin-Option wurde hinzugefügt.
-- `/WS` – diese editbin-Option wurde entfernt. `/WS` wurde verwendet, um Images zu verändern, die für Windows NT 4.0 als Ziel verwendet werden. „IMAGECFG.exe“: Anstelle von `/WS` können jetzt R-Dateinamen verwendet werden. „IMAGECFG.exe“ befindet sich jetzt auf der Windows NT 4.0 CD-ROM in „SUPPORT\DEBUG\I386\IMAGECFG.EXE“.
+- Die `/ERRORREPORT`-Option wurde zu „bscmake.exe“, „dumpbin.exe“, „editbin.exe“ und „lib.exe“ hinzugefügt.
+- Die `/LTCG`-Liboption wurde hinzugefügt.
+- Die `/NXCOMPAT`-editbin-Liboption wurde hinzugefügt.
+- Die `/RANGE`-dumpbin-Option wurde hinzugefügt.
+- Die `/TLS`-dumpbin-Option wurde hinzugefügt.
+- Die `/WS`-editbin-Option wurde entfernt. `/WS` wurde verwendet, um Images zu verändern, die von Windows NT 4.0 als Ziel verwendet werden. „IMAGECFG.exe“: Anstelle von `/WS` können jetzt R-Dateinamen verwendet werden. „IMAGECFG.exe“ befindet sich jetzt auf der Windows NT 4.0 CD-ROM in „SUPPORT\DEBUG\I386\IMAGECFG.EXE“.
 - Die /WX[:NO]-lib-Option wurde hinzugefügt.
 
 ### <a name="new-nmake-features"></a>Neue NMAKE-Features
@@ -2132,7 +2132,7 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 - MASM-Ausdrücke sind jetzt 64-Bit-Werte. In Vorgängerversionen hat es sich bei den MASM-Ausdrücken um 32-Bit-Werte gehandelt.
 - Die Anweisung „__asm int 3“ bewirkt jetzt, dass eine Funktion in nativen Code kompiliert wird.
 - ALIAS (MASM) wird jetzt dokumentiert.
-- `/ERRORREPORT` – diese Option für „ml.exe“ und „ml64.exe“ wurde hinzugefügt.
+- Die `/ERRORREPORT`-Optionen „ml.exe“ und „ml64.exe“ wurden hinzugefügt.
 - .FPO wird jetzt dokumentiert.
 - „H2INC.exe“ wird in Visual C++ 2005 nicht veröffentlicht. Wenn Sie „H2INC“ weiterhin verwenden müssen, verwenden Sie „H2INC.exe“ aus einer Vorgängerversion von Visual C++.
 - Operator IMAGEREL wurde hinzugefügt.
@@ -2147,7 +2147,7 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 - .SAVEXMM128
 - Neben .SETFRAME wurde auch die PROC-Anweisung mit einer Syntax aktualisiert, die sich nur auf x64 bezieht.
 - Die MMWORD-Anweisung wurde hinzugefügt.
-- `/omf` (Befehlszeilenoption für „ML.exe“) impliziert jetzt `/c`. „ML.exe“ unterstützt nicht die Verknüpfung von OMF-Formatobjekten.
+- `/omf` (Befehlszeilenoption „ML.exe“) impliziert jetzt `/c`. „ML.exe“ unterstützt nicht die Verknüpfung von OMF-Formatobjekten.
 - Die SEGMENT-Anweisung unterstützt jetzt zusätzliche Attribute.
 - Der Operator SECTIONREL wurde hinzugefügt.
 - Die XMMWORD-Anweisung wurde hinzugefügt.
@@ -2200,9 +2200,9 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 - Es wurde eine exemplarische Vorgehensweise hinzugefügt, in der veranschaulicht wird, wie Sie eine vorhandene native Anwendung für die Verwendung von „Managed Extensions for C++“ portieren können: Exemplarische Vorgehensweise: Portieren einer vorhandenen nativen C++-Anwendung für die Kompatibilität mit .NET Framework-Komponenten.
 - Sie können jetzt einen Delegat für eine Methode eines Werttypen erstellen.
 - Die Konformität des Compilers mit dem C++-Standard wurde für Visual C++ .NET 2003 deutlich verbessert.
-- `/arch` – diese Compileroption wurde hinzugefügt.
-- `/Gf` ist veraltet und wird in der nächsten Visual C++-Version entfernt.
-- `/G7` – diese Compileroption wurde hinzugefügt.
+- Die `/arch`-Compileroption wurde hinzugefügt.
+- `/Gf` ist als veraltet markiert und wird mit der nächsten Visual C++-Version entfernt.
+- Die `/G7`-Compileroption wurde hinzugefügt.
 - Die `/GS`-Compileroption wurde erweitert, um die lokalen Variablen vor direkten Pufferüberläufen zu schützen.
 - Die `/noBool`-Compileroption wurde entfernt. Über den Compiler darf **bool** jetzt nur noch als Schlüsselwort (anstatt als Identifizierer) in einer C++-Quellcodedatei angezeigt werden.
 - Der **long long**-Typ ist jetzt als **typedef** von **__int64** verfügbar. Beachten Sie, dass **long long** in CRT derzeit noch nicht unterstützt wird.
@@ -2216,7 +2216,7 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 
 ### <a name="attributes"></a>Attribute
 
-- `implements` – dieses Attribut wird jetzt dokumentiert.
+- Das Attribut `implements` wird jetzt dokumentiert.
 
 ### <a name="linker-features"></a>Linker-Features
 

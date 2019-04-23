@@ -3,10 +3,10 @@ title: 'Vorgehensweise: Verwenden von vorhandenem C++-Code in einer UWP-App (Uni
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
 ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424195"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Vorgehensweise: Verwenden von vorhandenem C++-Code in einer UWP-App (Universelle Windows-Plattform)
@@ -231,4 +231,4 @@ Wenn Sie systemeigene APIs in einer statischen Bibliothek aus einer UWP-App nutz
 
 ## <a name="see-also"></a>Siehe auch
 
-[Portieren von Code auf die Universelle Windows-Plattform](../porting/porting-to-the-universal-windows-platform-cpp.md)
+[Portieren auf die universelle Windows-Plattform](../porting/porting-to-the-universal-windows-platform-cpp.md)

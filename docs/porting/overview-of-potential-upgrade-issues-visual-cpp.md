@@ -3,10 +3,10 @@ title: Überblick über potenzielle Aktualisierungsprobleme (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
 ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898829"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Überblick über potenzielle Aktualisierungsprobleme (Visual C++)
@@ -181,5 +181,5 @@ Weitere Informationen finden Sie unter [Portieren von MBCS zu Unicode](porting-g
 
 ## <a name="see-also"></a>Siehe auch
 
-[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Verbesserungen der C++-Konformität in Visual Studio](../overview/cpp-conformance-improvements.md)
