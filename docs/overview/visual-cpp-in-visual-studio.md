@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: d8826c92077ac374b67a7294fe040d6fe8dea927
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58898712"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124745"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
@@ -29,7 +29,7 @@ Microsoft Visual C++, üblicherweise mit Visual C++ oder MSVC abgekürzt, ist de
 [Neuerungen bei C++ in Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 Erfahren Sie, welche Neuerungen es für Visual Studio gibt.
 
-[Neuerungen bei C++ in Visual Studio 2003 bis 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
+[What's New for C++ in Visual Studio 2003 through 2015 (Neuerungen bei C++ in Visual Studio 2003 bis 2015)](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 Erfahren Sie, welche Neuerungen es in C++ für die einzelnen Visual Studio-Versionen von 2003 bis 2015 gibt.
 
 [Verbesserungen der C++-Konformität in Visual Studio](cpp-conformance-improvements.md)<br/>
@@ -63,7 +63,7 @@ Erfahren Sie mehr über moderne C++-Programmiertechniken, die auf C++11 und C++1
 [Standard C++](http://isocpp.org/)<br/>
 Lernen Sie C++ kennen, verschaffen Sie sich einen Überblick über das moderne C++, und greifen Sie auf Links für Bücher, Artikel, Gespräche und Ereignisse zu.
 
-[Visual C++ kennen lernen](../build/vscpp-step-1-create.md)<br/>
+[Erlernen von Visual C++](../build/vscpp-step-1-create.md)<br/>
 Beginnen Sie mit dem Erlernen von C++.
 
 [Visual C++-Beispiele](visual-cpp-samples.md)<br/>
@@ -71,7 +71,7 @@ Informationen zu Beispielen.
 
 ## <a name="c-development-tools"></a>C++-Entwicklungstools
 
-[Übersicht über die C++-Entwicklung in Visual Studio](overview-of-cpp-development.md)<br/>
+[Overview of C++ Development in Visual Studio (Übersicht über die C++-Entwicklung in Visual Studio)](overview-of-cpp-development.md)<br/>
 Informationen zur Verwendung der Visual Studio-IDE zum Erstellen von Projekten, Bearbeiten von Code, Verknüpfen von Bibliotheken, Kompilieren, Debuggen, Erstellen von Komponententests, Ausführen von statischen Analysen, Bereitstellen etc.
 
 [Projekte und Buildsysteme](../build/projects-and-build-systems-cpp.md)<br/>
@@ -80,7 +80,7 @@ Erstellen und Konfigurieren von C++-Projekten, CMake-Projekten und anderen Arten
 [Schreiben und Refactoring von C++-Code](../ide/writing-and-refactoring-code-cpp.md)<br/>
 Verwenden der Produktivitätsfeatures im C++-Editor zum Umgestalten, Navigieren und Schreiben von Code
 
-[Debuggen von systemeigenem Code](/visualstudio/debugger/debugging-native-code)<br/>
+[Debuggen von nativem Code](/visualstudio/debugger/debugging-native-code)<br/>
 Verwenden des Visual Studio-Debuggers mit C++-Projekten
 
 [Übersicht über die Codeanalyse für C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
@@ -94,7 +94,7 @@ Erstellen von Komponententests mit dem Microsoft-Komponententest-Framework für 
 [Universelle Windows-Apps](../windows/universal-windows-apps-cpp.md)<br/>
 Rufen Sie Anleitungen und Referenzmaterial im Windows Developer Center ab. Weitere Informationen zur Entwicklung von UWP-Apps finden Sie unter [Einführung in die Universelle Windows-Plattform](/windows/uwp/get-started/universal-application-platform-guide) und [Erstellen Ihrer ersten UWP-App mit C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
-[Desktopanwendungen (C++)](../windows/desktop-applications-visual-cpp.md)<br/>
+[Desktop-Anwendungen (C++)](../windows/desktop-applications-visual-cpp.md)<br/>
 Informationen zum Erstellen von traditionellen nativen C++-Desktopanwendungen für Windows.
 
 [.NET-Programmierung mit C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
@@ -127,7 +127,7 @@ Hier erhalten Sie Informationen zum Arbeiten mit verschiedenen Text- und Zeichen
 
 [C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)
 
-[C-Programmiersprachenreferenz](../c-language/c-language-reference.md)
+[C-Sprachreferenz](../c-language/c-language-reference.md)
 
 [Intrinsische Compilerfunktionen und Assemblysprache](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
@@ -168,14 +168,14 @@ Das plattformübergreifende Befehlszeilentool **vcpkg** vereinfacht das Erkennen
 [Melden eines Problems mit dem Visual C++-Toolset](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
 Erfahren Sie mehr über die Erstellung effektiver Fehlerberichte für das Visual C++-Toolset (Compiler, Linker und andere Tools) und über die verschiedenen Wege, auf denen Sie den Bericht versenden können.
 
-[Visual C++-Team-Blog](http://blogs.msdn.com/b/vcblog/)<br/>
-Weitere Informationen über neue Funktionen und die neuesten Informationen von den Entwicklern von [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)].
+Microsoft [C++-Teamblog](https://devblogs.microsoft.com/cppblog/)<br/>
+Hier finden Sie weitere Informationen zu neuen Funktionen sowie aktuelle Informationen von den Entwicklern der C++-Tools in Visual Studio.
 
-[Visual Studio-Entwicklercommunity](https://developercommunity.visualstudio.com/)<br/>
+[Visual Studio Developer Community](https://developercommunity.visualstudio.com/)<br/>
 Informieren Sie sich, wie Sie Hilfe erhalten, Fehler melden und Vorschläge für Visual Studio unterbreiten.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C-Programmiersprachenreferenz](../c-language/c-language-reference.md)
+- [C-Sprachreferenz](../c-language/c-language-reference.md)
 - [C-Laufzeitbibliotheksreferenz](../c-runtime-library/c-run-time-library-reference.md)
 - [Intrinsische Compilerfunktionen und Assemblysprache](../intrinsics/compiler-intrinsics-and-assembly-language.md)
