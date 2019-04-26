@@ -46,7 +46,6 @@
 #### [pgomgr](pgomgr.md)
 #### [pgosweep](pgosweep.md)
 #### [Vorgehensweise: Zusammenführen mehrerer PGO-Profile in einem einzigen Profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
-#### [Visual Studio 2013: Add-In für die profilgesteuerte Optimierung (PGO) im Leistungs- und Diagnosehub](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)
 # [Verwenden des MSVC-Toolsets über die Befehlszeile](building-on-the-command-line.md)
 ## [Exemplarische Vorgehensweise: Kompilieren eines nativen C++-Programms in der Befehlszeile](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 ## [Exemplarische Vorgehensweise: Kompilieren eines C-Programms in der Befehlszeile](walkthrough-compile-a-c-program-on-the-command-line.md)
