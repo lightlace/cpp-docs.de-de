@@ -3,11 +3,11 @@ title: Konfigurieren von Programmen für Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
 ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273801"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurieren von Programmen für Windows XP
 
@@ -25,7 +25,7 @@ Der Windows XP-Plattformtoolset, das in Visual Studio enthalten ist, ist eine Ve
 
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften** aus.
 
-1. In der **Eigenschaftenseiten** Dialogfeld für das Projekt unter **Konfigurationseigenschaften** > **allgemeine**legen die **-Plattformtoolset** Eigenschaft, um das gewünschte Windows XP-Toolset. Wählen Sie z. B. **Visual Studio 2017 – Windows XP (v141_xp)** , Code für Windows XP und Windows Server 2003 zu erstellen, mit dem Microsoft Visual C++ 2017-Compiler.
+1. In der **Eigenschaftenseiten** Dialogfeld für das Projekt unter **Konfigurationseigenschaften** > **allgemeine**legen die **-Plattformtoolset** Eigenschaft, um das gewünschte Windows XP-Toolset. Wählen Sie z. B. **Visual Studio 2017 – Windows XP (v141_xp)** zum Erstellen von Code für Windows XP und Windows Server 2003, mithilfe von Microsoft Visual C++ 2017-Compiler.
 
 ### <a name="c-runtime-support"></a>C++-Laufzeitunterstützung
 

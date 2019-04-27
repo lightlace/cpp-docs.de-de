@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
 ms.openlocfilehash: 76cdf9424e6eab33a3a92b3f98d9c2b0b04ff667
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183751"
 ---
 # <a name="restrict"></a>__restrict
 
@@ -21,7 +21,7 @@ Wie die **__declspec ( [einschränken](../cpp/restrict.md) )** Modifizierer, die
 
 - Die **"__restrict"** Schlüsselwort ist nur auf Variablen gültig und `__declspec ( restrict )` ist nur auf Funktionsdeklarationen und-Definitionen gültig.
 
-- **"__restrict"** ähnelt **einschränken** aus der Spezifikation C99, aber **"__restrict"** in C++- oder C-Programmen verwendet werden können.
+- **"__restrict"** ähnelt **einschränken** aus der Spezifikation C99, aber **"__restrict"** kann verwendet werden, C++ oder C-Programmen.
 
 - Wenn **"__restrict"** wird verwendet, der Compiler nicht weiter die kein-Alias-Eigenschaft einer Variablen. Also wenn Sie Zuweisen einer **"__restrict"** Variablen nicht **"__restrict"** Variablen, der Compiler wird immer noch, dass der nicht-__restrict-Variable, um ein Alias erforderlich. Dies unterscheidet sich vom Verhalten der **einschränken** -Schlüsselwort aus der Spezifikation C99.
 
@@ -29,7 +29,7 @@ Wenn Sie das Verhalten einer vollständigen Funktion beeinflussen, ist es im All
 
 Für die Kompatibilität mit früheren Versionen **_restrict** ist ein Synonym für **"__restrict"** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) ist angegeben.
 
-In Visual Studio 2015 und höher **"__restrict"** für C++-Verweise verwendet werden können.
+In Visual Studio 2015 und höher **"__restrict"** kann verwendet werden, auf C++ verweisen.
 
 > [!NOTE]
 >  Wenn für eine Variable verwendet werden soll, die auch über die [flüchtige](../cpp/volatile-cpp.md) -Schlüsselwort, **flüchtige** Vorrang.

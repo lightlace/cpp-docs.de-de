@@ -3,11 +3,11 @@ title: Array und WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
 ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209415"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array und WriteOnlyArray (C++/CX)
 
@@ -91,4 +91,4 @@ Im Allgemeinen sollten Sie einen `Platform::Array` -Typ möglichst nicht als Eig
 
 [Typsystem](../cppcx/type-system-c-cx.md)<br/>
 [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)
+[Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)

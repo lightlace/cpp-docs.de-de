@@ -5,11 +5,11 @@ author: mikeblome
 ms.topic: tutorial
 ms.date: 03/05/2019
 ms.openlocfilehash: deb2c91d6d09d8945e5eb57a7ac742c5b1705e83
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196359"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: Erstellen plattformübergreifender C++-Projekte in Visual Studio 
 
@@ -187,7 +187,7 @@ In diesem Tutorial haben Sie gelernt, wie Sie eine Codebasis direkt über GitHub
 In den folgenden Artikeln erhalten Sie weitere Informationen zum Konfigurieren und Debuggen von CMake-Projekten in Visual Studio:
 
 > [!div class="nextstepaction"]
-> [CMake-Projekte in Visual Studio](cmake-projects-in-visual-studio.md)<br/><br/>
+> [CMake Projects in Visual Studio (CMake-Projekte in Visual Studio)](cmake-projects-in-visual-studio.md)<br/><br/>
 > [Konfigurieren eines Linux CMake-Projekts](../linux/cmake-linux-project.md)<br/><br/>
 > [Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer](../linux/connect-to-your-remote-linux-computer.md)<br/><br/>
 > [Anpassen von CMake-Buildeinstellungen](customize-cmake-settings.md)<br/><br/>

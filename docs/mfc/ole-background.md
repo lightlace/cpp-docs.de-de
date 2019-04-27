@@ -5,11 +5,11 @@ helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
 ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186588"
 ---
 # <a name="ole-background"></a>OLE-Hintergrund
 
@@ -58,7 +58,7 @@ OLE umfasst viele verschiedene Konzepte, dass alle für das Ziel der nahtlose In
 
 Einige der wichtigeren OLE Themen werden in den folgenden Artikeln behandelt:
 
-- [OLE-Hintergrund: Verlinken und einbetten](../mfc/ole-background-linking-and-embedding.md)
+- [OLE-Hintergrund: Verlinken und Einbetten](../mfc/ole-background-linking-and-embedding.md)
 
 - [OLE-Hintergrund: Container und Server](../mfc/ole-background-containers-and-servers.md)
 

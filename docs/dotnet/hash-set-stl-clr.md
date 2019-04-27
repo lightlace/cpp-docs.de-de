@@ -96,11 +96,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
 ms.openlocfilehash: 3cfd4e97af8b5abf163ce88eb81b438ef4737ed5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222896"
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 
@@ -131,7 +131,7 @@ Der Typ der Schlüsselkomponente eines Elements in der kontrollierten Sequenz.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Cliext/Hash_set >
+**Header:** \<cliext/hash_set>
 
 **Namespace:** Cliext
 
@@ -236,7 +236,7 @@ Löschen oder Entfernen eines Elements Ruft den Destruktor für ihren gespeicher
 
 ## <a name="members"></a>Member
 
-## <a name="begin"></a> hash_set:: begin (STL/CLR)
+## <a name="begin"></a> hash_set::begin (STL/CLR)
 
 Legt den Anfang der kontrollierten Sequenz fest.
 
@@ -352,7 +352,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="clear"></a> hash_set:: Clear (STL/CLR)
+## <a name="clear"></a> hash_set::clear (STL/CLR)
 
 Entfernt alle Elemente.
 
@@ -410,7 +410,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> hash_set:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> hash_set::const_iterator (STL/CLR)
 
 Der Typ eines konstanten Iterators für die gesteuerte Sequenz.
 
@@ -452,7 +452,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> hash_set:: const_reference (STL/CLR)
+## <a name="const_reference"></a> hash_set::const_reference (STL/CLR)
 
 Der Typ eines konstanten Verweises auf ein Element.
 
@@ -497,7 +497,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> hash_set:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> hash_set::const_reverse_iterator (STL/CLR)
 
 Der Typ eines Konstanten umgekehrten Iterators für die gesteuerte Sequenz...
 
@@ -539,7 +539,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> hash_set:: Count (STL/CLR)
+## <a name="count"></a> hash_set::count (STL/CLR)
 
 Sucht die Anzahl von Elementen, die einem angegebenen Schlüssel entsprechen.
 
@@ -592,7 +592,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> hash_set:: difference_type (STL/CLR)
+## <a name="difference_type"></a> hash_set::difference_type (STL/CLR)
 
 Die Typen des Abstands zwischen den beiden Elementen mit Vorzeichen.
 
@@ -647,7 +647,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> hash_set:: Empty (STL/CLR)
+## <a name="empty"></a> hash_set::empty (STL/CLR)
 
 Testet, ob keine Elemente vorhanden sind.
 
@@ -699,7 +699,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> hash_set:: End (STL/CLR)
+## <a name="end"></a> hash_set::end (STL/CLR)
 
 Legt das Ende der kontrollierten Sequenz fest.
 
@@ -748,7 +748,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> hash_set:: equal_range (STL/CLR)
+## <a name="equal_range"></a> hash_set::equal_range (STL/CLR)
 
 Sucht den Bereich, der einem angegebenen Schlüssel entspricht.
 
@@ -808,7 +808,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> hash_set:: Erase (STL/CLR)
+## <a name="erase"></a> hash_set::erase (STL/CLR)
 
 Entfernt Elemente an den angegebenen Positionen.
 
@@ -822,7 +822,7 @@ bool erase(key_type key)
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang des zu löschenden Bereichs.
 
 *key*<br/>
@@ -892,7 +892,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a> hash_set:: Find (STL/CLR)
+## <a name="find"></a> hash_set::find (STL/CLR)
 
 Sucht ein Element, das einem angegebenen Schlüssel entspricht.
 
@@ -1216,7 +1216,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_set"></a> hash_set:: hash_set (STL/CLR)
+## <a name="hash_set"></a> hash_set::hash_set (STL/CLR)
 
 Erstellt ein container-Objekt.
 
@@ -1245,7 +1245,7 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang des Bereichs, der eingefügt.
 
 *hashfn*<br/>
@@ -1456,7 +1456,7 @@ a b c
 a b c
 ```
 
-## <a name="hasher"></a> hash_set::Hasher (STL/CLR)
+## <a name="hasher"></a> hash_set::hasher (STL/CLR)
 
 Der Hashalgorithmus Delegat für einen Schlüssel.
 
@@ -1495,7 +1495,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_set:: Insert (STL/CLR)
+## <a name="insert"></a> hash_set::insert (STL/CLR)
 
 Fügt Elemente hinzu.
 
@@ -1511,7 +1511,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang des Bereichs, der eingefügt.
 
 *last*<br/>
@@ -1611,7 +1611,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="iterator"></a> hash_set:: Iterator (STL/CLR)
+## <a name="iterator"></a> hash_set::iterator (STL/CLR)
 
 Der Typ eines Iterators für die gesteuerte Sequenz.
 
@@ -1653,7 +1653,7 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> hash_set:: key_comp (STL/CLR)
+## <a name="key_comp"></a> hash_set::key_comp (STL/CLR)
 
 Kopiert der Delegat für zwei Schlüssel.
 
@@ -1712,7 +1712,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_comp"></a> hash_set:: key_comp (STL/CLR)
+## <a name="key_comp"></a> hash_set::key_comp (STL/CLR)
 
 Kopiert der Delegat für zwei Schlüssel.
 
@@ -1771,7 +1771,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_set:: key_compare (STL/CLR)
+## <a name="key_compare"></a> hash_set::key_compare (STL/CLR)
 
 Der Delegat für zwei Schlüssel.
 
@@ -1831,7 +1831,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> hash_set:: KEY_TYPE (STL/CLR)
+## <a name="key_type"></a> hash_set::key_type (STL/CLR)
 
 Der Typ eines Sortierschlüssels.
 
@@ -1950,7 +1950,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="lower_bound"></a> hash_set:: lower_bound (STL/CLR)
+## <a name="lower_bound"></a> hash_set::lower_bound (STL/CLR)
 
 Sucht den Anfang des Bereichs, der einem angegebenen Schlüssel entspricht.
 
@@ -2120,7 +2120,7 @@ int main()
     }
 ```
 
-## <a name="op"></a> hash_set::Operator = (STL/CLR)
+## <a name="op"></a> hash_set::operator= (STL/CLR)
 
 Ersetzt die kontrollierte Sequenz.
 
@@ -2175,7 +2175,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> hash_set:: rbegin (STL/CLR)
+## <a name="rbegin"></a> hash_set::rbegin (STL/CLR)
 
 Legt den Anfang der umgekehrten kontrollierten Sequenz fest.
 
@@ -2223,7 +2223,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> hash_set:: Reference (STL/CLR)
+## <a name="reference"></a> hash_set::reference (STL/CLR)
 
 Der Typ eines Verweises auf ein Element.
 
@@ -2268,7 +2268,7 @@ int main()
 a b c
 ```
 
-## <a name="rehash"></a> hash_set::Rehash (STL/CLR)
+## <a name="rehash"></a> hash_set::rehash (STL/CLR)
 
 Erstellt die Hashtabelle neu.
 
@@ -2342,7 +2342,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="rend"></a> hash_set:: rend (STL/CLR)
+## <a name="rend"></a> hash_set::rend (STL/CLR)
 
 Legt das Ende der umgekehrten kontrollierten Sequenz fest.
 
@@ -2391,7 +2391,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> hash_set:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> hash_set::reverse_iterator (STL/CLR)
 
 Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.
 
@@ -2433,7 +2433,7 @@ int main()
 c b a
 ```
 
-## <a name="size"></a> hash_set:: Size (STL/CLR)
+## <a name="size"></a> hash_set::size (STL/CLR)
 
 Ermittelt die Anzahl von Elementen.
 
@@ -2487,7 +2487,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> hash_set:: size_type (STL/CLR)
+## <a name="size_type"></a> hash_set::size_type (STL/CLR)
 
 Der Typ eines Abstands zwischen den beiden Elementen mit Vorzeichen.
 
@@ -2535,7 +2535,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_set:: Swap (STL/CLR)
+## <a name="swap"></a> hash_set::swap (STL/CLR)
 
 Vertauscht den Inhalt von zwei Containern.
 
@@ -2653,7 +2653,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> hash_set:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> hash_set::upper_bound (STL/CLR)
 
 Sucht das Ende des Bereichs, der einem angegebenen Schlüssel entspricht.
 
@@ -2710,7 +2710,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> hash_set:: value_comp (STL/CLR)
+## <a name="value_comp"></a> hash_set::value_comp (STL/CLR)
 
 Kopiert der Delegat für zwei Elementwerte.
 
@@ -2754,7 +2754,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> hash_set:: value_compare (STL/CLR)
+## <a name="value_compare"></a> hash_set::value_compare (STL/CLR)
 
 Der Delegat für zwei Elementwerte.
 
@@ -2799,7 +2799,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> hash_set:: value_type (STL/CLR)
+## <a name="value_type"></a> hash_set::value_type (STL/CLR)
 
 Der Typ eines Elements.
 

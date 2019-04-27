@@ -34,11 +34,11 @@ helpviewer_keywords:
 - wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
 ms.openlocfilehash: e0a320f90b2c0f8653109a6ae0056c4c0cdd7455
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176290"
 ---
 # <a name="strtoimax-strtoimaxl-wcstoimax-wcstoimaxl"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 
@@ -120,7 +120,7 @@ Ein *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, 
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Strtoimax**, **_strtoimax_l**, **Wcstoimax**, **_wcstoimax_l**|\<inttypes.h>|
+|**strtoimax**, **_strtoimax_l**, **wcstoimax**, **_wcstoimax_l**|\<inttypes.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

@@ -2,11 +2,11 @@
 title: Übersicht über die ARM64-ABI-Konventionen
 ms.date: 03/27/2019
 ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195502"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Übersicht über die ARM64-ABI-Konventionen
 
@@ -231,7 +231,7 @@ Code, der dynamisch generiert wird, sollte mit dynamischen Funktionstabellen üb
 
 ## <a name="cycle-counter"></a>Zyklus-counter
 
-Alle ARMv8 CPUs sind erforderlich, um einen Zyklus-Counter unterstützen registrieren, ein 64-Bit-Register, die Windows konfiguriert wird, um auf jeder Ausnahme-Ebene, einschließlich User-Modus gelesen werden. Darauf über die besondere PMCCNTR_EL0 zu registrieren, verwenden die MSR-Opcode in Assemblycode, oder die `_ReadStatusReg` inhärent für C/C++-Code.
+Alle ARMv8 CPUs sind erforderlich, um einen Zyklus-Counter unterstützen registrieren, ein 64-Bit-Register, die Windows konfiguriert wird, um auf jeder Ausnahme-Ebene, einschließlich User-Modus gelesen werden. Darauf über die besondere PMCCNTR_EL0 zu registrieren, verwenden die MSR-Opcode in Assemblycode, oder die `_ReadStatusReg` inhärent für C /C++ Code.
 
 Der Zyklus-Counter hier ist ein wahrer Zyklus-Counter, keine tatsächliche Uhr. Die Zählung Frequenz variiert mit der Prozessorfrequenz. Wenn Sie, dass Sie die Häufigkeit des Zyklus-Counters wissen müssen glauben, verwenden Sie darf nicht den Zyklus-Counter. Stattdessen soll die gesamtbetrachtungszeit, Sie für die verwenden `QueryPerformanceCounter`.
 

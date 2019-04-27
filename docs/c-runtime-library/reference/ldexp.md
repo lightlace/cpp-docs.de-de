@@ -1,5 +1,5 @@
 ---
-title: Ldexp, Ldexpf, ldexpl
+title: ldexp, ldexpf, ldexpl
 ms.date: 04/05/2018
 apiname:
 - ldexp
@@ -35,13 +35,13 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
 ms.openlocfilehash: 7fbf89f8d78e8a2ce1018a790350ec986dcab87e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286292"
 ---
-# <a name="ldexp-ldexpf-ldexpl"></a>Ldexp, Ldexpf, ldexpl
+# <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
 Multipliziert eine Gleitkommazahl mit einer ganzzahligen Potenz von zwei.
 
@@ -92,7 +92,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Ldexp**
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**Ldexp**, **Ldexpf**, **Ldexpl**|\<math.h>|\<cmath>|
+|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
 
 Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

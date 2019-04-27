@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
 ms.openlocfilehash: 26cc157cb7247a3a2ea7c10b415df1160540c9ad
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271728"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Weiterleiten von internen Linkerfehlern)
 
@@ -55,5 +55,5 @@ Die Option **/errorreport: Send** Fehlerinformationen automatisch an Microsoft s
 ## <a name="see-also"></a>Siehe auch
 
 [/errorReport (Interne Compilerfehler melden)](errorreport-report-internal-compiler-errors.md)<br/>
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 [MSVC-Linkeroptionen](linker-options.md)

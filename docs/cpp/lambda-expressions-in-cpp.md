@@ -1,5 +1,5 @@
 ---
-title: Lambdaausdrücke in C++
+title: Lambda-Ausdrücke in C++
 ms.date: 11/19/2018
 helpviewer_keywords:
 - lambda expressions [C++]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
 ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216490"
 ---
-# <a name="lambda-expressions-in-c"></a>Lambdaausdrücke in C++
+# <a name="lambda-expressions-in-c"></a>Lambda-Ausdrücke in C++
 
 In C ++ 11 und höher ein Lambda-Ausdruck – häufig bezeichnet ein *Lambda*– ist eine bequeme Möglichkeit, ein anonymes Funktionsobjekt zu definieren (einen *Closure*) direkt an der Position, in dem es aufgerufen oder als Argument übergeben, Um eine Funktion. Lambda-Ausdrücke werden in der Regel verwendet, um ein paar Codezeilen zu kapseln, die an Algorithmen oder asynchrone Methoden übergeben werden. Dieser Artikel definiert, was Lambdas sind, vergleicht sie mit anderen Programmierverfahren, beschreibt ihre Vorteile und bietet ein grundlegendes Beispiel.
 
@@ -23,7 +23,7 @@ In C ++ 11 und höher ein Lambda-Ausdruck – häufig bezeichnet ein *Lambda*–
 - [Arbeiten mit Lambda-Ausdrücke](examples-of-lambda-expressions.md)
 - ["constexpr" Lambda-Ausdrücke](lambda-expressions-constexpr.md)
 
-## <a name="parts-of-a-lambda-expression"></a>Bestandteile eines Lambdaausdrucks
+## <a name="parts-of-a-lambda-expression"></a>Bestandteile eines Lambda-Ausdrucks
 
 Der ISO C++-Standard zeigt einen einfachen Lambda-Ausdruck, der als drittes Argument an die `std::sort()`-Funktion übergeben wird:
 
@@ -116,7 +116,7 @@ Wenn Sie die Erfassungsklausel verwenden, sollten Sie diese wichtigen Punkte bea
 
 ### <a name="generalized-capture-c-14"></a>Generalisierte Erfassung (C++14)
 
-Neue Variablen können in C++14 in der Erfassungsklausel eingeführt und initialisiert werden, ohne dass diese Variablen im Bereich der Lambdafunktion vorhanden sein müssen. Die Initialisierung kann mit einem beliebigen Ausdruck ausgedrückt werden; der Typ der neuen Variablen wird von dem durch den Ausdruck genierten Typ abgeleitet. Ein Vorteil dieser Funktion ist, dass Sie Variablen, die nur verschoben werden können, (z. B. std::unique_ptr) aus dem umgebenden Bereich erfassen und in einem Lambda-Ausdruck verwenden können.
+Neue Variablen können in C++14 in der Erfassungsklausel eingeführt und initialisiert werden, ohne dass diese Variablen im Bereich der Lambdafunktion vorhanden sein müssen. Die Initialisierung kann mit einem beliebigen Ausdruck ausgedrückt werden; der Typ der neuen Variablen wird von dem durch den Ausdruck genierten Typ abgeleitet. Ein Vorteil dieser Funktion ist, dass Sie in C++14 Variablen, die nur verschoben werden können, (z. B. std::unique_ptr) aus dem umgebenden Bereich erfassen und in einem Lambda-Ausdruck verwenden können.
 
 ```cpp
 pNums = make_unique<vector<int>>(nums);
@@ -172,7 +172,7 @@ Weitere Informationen finden Sie unter [Ausnahmespezifikationen (Throw)](../cpp/
 
 ### <a name="return-type"></a>Rückgabetyp
 
-Der Rückgabetyp von Lambdaausdrücken wird automatisch hergeleitet. Müssen Sie nicht mit der [automatisch](../cpp/auto-cpp.md) Schlüsselwort, außer Sie geben eine *trailing-Return-Type*. Die *trailing-Return-Type* ähnelt den Rückgabetyp Teil einer normalen Methode oder Funktion. Der Rückgabetyp folgt jedoch auf die Parameterliste, und das Schlüsselwort „trailing-return-type `->`“ muss vor dem Rückgabetyp angegeben werden.
+Der Rückgabetyp von Lambda-Ausdrücken wird automatisch hergeleitet. Müssen Sie nicht mit der [automatisch](../cpp/auto-cpp.md) Schlüsselwort, außer Sie geben eine *trailing-Return-Type*. Die *trailing-Return-Type* ähnelt den Rückgabetyp Teil einer normalen Methode oder Funktion. Der Rückgabetyp folgt jedoch auf die Parameterliste, und das Schlüsselwort „trailing-return-type `->`“ muss vor dem Rückgabetyp angegeben werden.
 
 Sie können den Rückgabetyp eines Lambda-Ausdrucks weglassen, wenn der Lambda-Text nur eine einzelne Return-Anweisung enthält oder der Lambda-Ausdruck keinen Wert zurückgibt. Wenn der Lambda-Text aus einer einzelnen Rückgabeanweisung besteht, leitet der Compiler den Rückgabetyp vom Typ des Rückgabeausdrucks ab. Andernfalls leitet der Compiler den Rückgabetyp **"void"**. Betrachten Sie die folgenden Beispiele von Codeausschnitten, die dieses Prinzip veranschaulichen.
 
@@ -220,9 +220,9 @@ int main()
 0
 ```
 
-Da die Variable `n` als Wert erfasst wird, bleibt der Wert `0` nach dem Aufruf des Lambdaausdrucks erhalten. Die **änderbare** -Spezifikation ermöglicht `n` innerhalb des Lambda geändert werden.
+Da die Variable `n` als Wert erfasst wird, bleibt der Wert `0` nach dem Aufruf des Lambda-Ausdrucks erhalten. Die **änderbare** -Spezifikation ermöglicht `n` innerhalb des Lambda geändert werden.
 
-Obwohl ein Lambdaausdruck nur Variablen mit automatischer Speicherdauer aufzeichnen kann, können Sie Variablen verwenden, die eine statische Speicherdauer im Text eines Lambdaausdrucks aufweisen. Im folgenden Beispiel wird die Funktion `generate` und ein Lambda-Ausdruck verwendet, um jedem Element in einem `vector`-Objekt einen Wert zuzuweisen. Der Lambdaausdruck ändert die statische Variable, um den Wert des nächsten Elements zu generieren.
+Obwohl ein Lambdaausdruck nur Variablen mit automatischer Speicherdauer aufzeichnen kann, können Sie Variablen verwenden, die eine statische Speicherdauer im Text eines Lambdaausdrucks aufweisen. Im folgenden Beispiel wird die Funktion `generate` und ein Lambdaausdruck verwendet, um jedem Element in einem `vector`-Objekt einen Wert zuzuweisen. Der Lambda-Ausdruck ändert die statische Variable, um den Wert des nächsten Elements zu generieren.
 
 ```cpp
 void fillVector(vector<int>& v)

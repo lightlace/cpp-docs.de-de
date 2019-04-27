@@ -9,11 +9,11 @@ helpviewer_keywords:
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
 ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184600"
 ---
 # <a name="identifiers-c"></a>Bezeichner (C++)
 
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-Der Bereich der in einem Bezeichner zulässigen Zeichen ist weniger restriktiv, wenn C++ /CLI-Code kompiliert wird. Bezeichner in Code, der mit „/clr“ kompiliert wurde, müssen dem folgenden Standard entsprechen:  [Standard ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Der Bereich der in einem Bezeichner zulässigen Zeichen ist weniger restriktiv, wenn C++ /CLI-Code kompiliert wird. Im Code mit/CLR kompiliert entsprechen [Standard ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 **Ende Microsoft-spezifisch**
 
@@ -95,7 +95,7 @@ Das erste Zeichen eines Bezeichners muss ein Buchstabe des Alphabets (Großbuchs
 
 Für Bezeichner muss eine andere Schreibweise gewählt werden als für Schlüsselwörter. Bezeichner, die Schlüsselwörter enthalten, sind gültig. Z. B. `Pint` ist ein gültiger Bezeichner, obwohl er enthält **Int**, dies ist ein Schlüsselwort.
 
-Verwendung von zwei aufeinander folgenden unterstrichen ( **__** ) in einen Bezeichner oder eines einzelnen vorangestellten Unterstrichs, gefolgt von einem Großbuchstaben beginnen, ist C++-Implementierungen in allen Bereichen vorbehalten. Sie sollten es vermeiden, einen einzelnen vorangestellten Unterstrich gefolgt von einem Kleinbuchstaben für Dateibereiche zu verwenden, da Konflikte mit aktuellen oder zukünftigen reservierten Bezeichnern auftreten können.
+Verwendung von zwei aufeinander folgenden unterstrichen ( **__** ) in einen Bezeichner oder eines einzelnen vorangestellten Unterstrichs, gefolgt von einem Großbuchstaben beginnen, ist für die reserviert C++ Implementierungen in allen Bereichen. Sie sollten es vermeiden, einen einzelnen vorangestellten Unterstrich gefolgt von einem Kleinbuchstaben für Dateibereiche zu verwenden, da Konflikte mit aktuellen oder zukünftigen reservierten Bezeichnern auftreten können.
 
 ## <a name="see-also"></a>Siehe auch
 

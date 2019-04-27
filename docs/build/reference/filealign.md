@@ -10,11 +10,11 @@ helpviewer_keywords:
 - FILEALIGN linker option
 ms.assetid: c1017a35-8d71-4ad9-934b-a3e3ea037fa0
 ms.openlocfilehash: 43cfdd6efb163013d05877e91c8375eb592295a9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271150"
 ---
 # <a name="filealign-align-sections-in-files"></a>/ FILEALIGN (Abschnitte in Dateien ausrichten)
 
@@ -51,5 +51,5 @@ Verwenden Sie [DUMPBIN](dumpbin-reference.md), um Informationen über Abschnitte
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 [MSVC-Linkeroptionen](linker-options.md)

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
 ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186801"
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE-Hintergrund: Verlinken und einbetten
 
@@ -32,4 +32,4 @@ Alle OLE-Element weist, ob eingebettete oder verknüpfte, den Typ zugeordneten b
 [OLE-Hintergrund](../mfc/ole-background.md)<br/>
 [OLE-Hintergrund: Container und Server](../mfc/ole-background-containers-and-servers.md)<br/>
 [Container: Clientelemente](../mfc/containers-client-items.md)<br/>
-[Server: Server-Elemente](../mfc/servers-server-items.md)
+[Server: Serverelemente](../mfc/servers-server-items.md)

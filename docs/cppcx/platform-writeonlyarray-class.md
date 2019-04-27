@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
 ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182937"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray-Klasse
 
@@ -37,7 +37,7 @@ private ref class WriteOnlyArray<T, 1>
 
 Diese Methoden verfügen über interne Zugreifbarkeit, das heißt, sie sind nur innerhalb der C++-App oder -Komponente zugänglich.
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[WriteOnlyArray::begin](#begin)|Ein Iterator, der auf das erste Element des Arrays zeigt.|
 |[WriteOnlyArray::Data](#data)|Ein Zeiger auf den Datenpuffer.|

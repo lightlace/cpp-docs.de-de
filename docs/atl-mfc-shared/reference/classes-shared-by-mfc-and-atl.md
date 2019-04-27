@@ -5,17 +5,17 @@ helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
 ms.openlocfilehash: 5376a87aac2b82615cd48f80e0e95208b8132bf0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235145"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Von MFC und ATL freigegebenen Klassen
 
 Die folgende Tabelle enthält die von MFC und ATL freigegebenen Klassen
 
-|Klasse|Beschreibung|Headerdatei|
+|Klasse|Beschreibung|Header-Datei|
 |-----------|-----------------|-----------------|
 |[CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md)|Stellt Methoden für die Verwaltung von einer Datei zugeordneten Werte für Datum und Uhrzeit.|atltime.h|
 |[CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)|Stellt Methoden für die Verwaltung von relative Datum- und Zeitwerte, die einer Datei zugeordnet.|atltime.h|

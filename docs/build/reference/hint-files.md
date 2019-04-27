@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
 ms.openlocfilehash: 3d8b3be76fea454ed3b3dd3fd2a44174f34c065c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291895"
 ---
 # <a name="hint-files"></a>Hinweisdateien
 
@@ -156,7 +156,7 @@ Für Hinweise wird die folgende Syntax verwendet:
 |`@>`|Eine für Hinweisdateien spezifische *Ersatzzeichenfolge*, die das Ende von einer Reihe von Zuordnungselementen definiert.|
 |`#undef` *Hinweisname*|Die Präprozessordirektive, die einen vorhandenen Hinweis löscht. Der Name des Hinweises wird durch den Bezeichner *Hinweisname* bereitgestellt.|
 |`//` *Kommentar*|Ein einzeiliger Kommentar.|
-|`/*` *comment* `*/`|Ein mehrzeiliger Kommentar.|
+|`/*` *Kommentar* `*/`|Ein mehrzeiliger Kommentar.|
 
 ## <a name="example"></a>Beispiel
 

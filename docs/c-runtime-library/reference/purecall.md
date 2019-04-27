@@ -24,11 +24,11 @@ helpviewer_keywords:
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
 ms.openlocfilehash: a7a6db42dc4b8d9b2962a66c7866aae9db55eb3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62231974"
 ---
 # <a name="purecall"></a>_purecall
 
@@ -42,7 +42,7 @@ extern "C" int __cdecl _purecall();
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_purecall** Funktion ist ein Microsoft-spezifisches Implementierungsdetail des Microsoft Visual C++-Compilers. Diese Funktion soll nicht direkt von Ihrem Code aufgerufen werden, und sie hat keine öffentliche Header-Deklaration. Es ist hier dokumentiert, da es sich um einen öffentlichen Export der C-Laufzeitbibliothek handelt.
+Die **_purecall** Funktion ist ein Microsoft-spezifisches Implementierungsdetail des Microsoft Visual C++ Compiler. Diese Funktion soll nicht direkt von Ihrem Code aufgerufen werden, und sie hat keine öffentliche Header-Deklaration. Es ist hier dokumentiert, da es sich um einen öffentlichen Export der C-Laufzeitbibliothek handelt.
 
 Ein Aufruf an eine rein virtuelle Funktion ist ein Fehler, da sie keine Implementierung hat. Der Compiler generiert Code zum Aufrufen der **_purecall** fehlerhandlerfunktion, wenn eine reine virtuelle Funktion aufgerufen wird. In der Standardeinstellung **_purecall** das Programm beendet. Vor dem Beenden der **_purecall** -Funktion aufruft, ein **_purecall_handler** ausgeführt werden, wenn eine für den Prozess festgelegt wurde. Sie können Ihre eigene Fehlerhandlerfunktion für rein virtuelle Funktionsaufrufe installieren, um sie für das Debuggen und für Berichtszwecke abzufangen. Um Ihren eigenen Fehlerhandler zu verwenden, erstellen Sie eine Funktion mit der **_purecall_handler** Signatur verwenden [_set_purecall_handler](get-purecall-handler-set-purecall-handler.md) , es sich um den aktuellen Handler festzulegen.
 
