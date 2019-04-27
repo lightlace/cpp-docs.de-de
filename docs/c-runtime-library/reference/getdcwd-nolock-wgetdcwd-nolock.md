@@ -35,11 +35,11 @@ helpviewer_keywords:
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
 ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157707"
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
@@ -65,7 +65,7 @@ wchar_t *_wgetdcwd_nolock(
 
 ### <a name="parameters"></a>Parameter
 
-*Laufwerk*<br/>
+*drive*<br/>
 Laufwerk.
 
 *buffer*<br/>
@@ -80,7 +80,7 @@ Siehe [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 
 ## <a name="remarks"></a>Hinweise
 
-**_getdcwd_nolock** und **_wgetdcwd_nolock** sind identisch mit **_getdcwd** und **_wgetdcwd**, außer dass sie nicht vor geschützt sind Störungen durch andere Threads. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsichere Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+**_getdcwd_nolock** und **_wgetdcwd_nolock** sind identisch mit **_getdcwd** und **_wgetdcwd**, außer dass sie nicht vor geschützt sind Störungen durch andere Threads. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

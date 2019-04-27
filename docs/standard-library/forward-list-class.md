@@ -81,11 +81,11 @@ helpviewer_keywords:
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159781"
 ---
 # <a name="forwardlist-class"></a>forward_list-Klasse
 
@@ -104,7 +104,7 @@ class forward_list
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*Type*|Das in der Doppelschlange zu speichernde forward_list-Element.|
-|*Zuweisung*|Das gespeicherte Zuordnungsobjekt, das Details zum Belegen und Freigeben des Arbeitsspeichers des forward_list-Elements kapselt. Dieser Parameter ist optional. Der Standardwert lautet allocator< `Type`>.|
+|*Allocator*|Das gespeicherte Zuordnungsobjekt, das Details zum Belegen und Freigeben des Arbeitsspeichers des forward_list-Elements kapselt. Dieser Parameter ist optional. Der Standardwert lautet allocator< `Type`>.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -214,12 +214,12 @@ void assign(InputIterator First, InputIterator Last);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Erste*|Der Anfang des Ersetzungsbereichs.|
+|*first*|Der Anfang des Ersetzungsbereichs.|
 |*last*|Das Ende des Ersetzungsbereichs.|
 |*count*|Die Anzahl zuzuweisender Elemente.|
 |*val*|Der jedem Element zuzuweisende Wert.|
 |*Type*|Der Typ des Werts.|
-|* IList'|Das zu kopierende initializer_list-Element.|
+|* IList'| Das initializer_list-Element zu kopieren.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -467,7 +467,7 @@ iterator erase_after(const_iterator first, const_iterator last);
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*Where*|Die Position in der forward_list-Klasse, an der das Element gelöscht wird|
-|*Erste*|Der Anfang des zu löschenden Bereichs|
+|*first*|Der Anfang des zu löschenden Bereichs|
 |*last*|Das Ende des zu löschenden Bereichs|
 
 ### <a name="return-value"></a>Rückgabewert

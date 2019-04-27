@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
 ms.openlocfilehash: ce19dbc5f55460bb4bdbdee17f4fbbbcc8c6fd60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154902"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t-Klasse
 
@@ -39,7 +39,7 @@ Eine Reihe von [Vorlagen funktionieren](../cpp/relational-function-templates.md)
 
 |||
 |-|-|
-|["AddRef"](../cpp/com-ptr-t-addref.md)|Ruft die `AddRef` Memberfunktion `IUnknown` für den gekapselten Schnittstellenzeiger auf.|
+|[AddRef](../cpp/com-ptr-t-addref.md)|Ruft die `AddRef` Memberfunktion `IUnknown` für den gekapselten Schnittstellenzeiger auf.|
 |[Anfügen](../cpp/com-ptr-t-attach.md)|Kapselt einen unformatierten Schnittstellenzeiger vom Typ dieses intelligenten Zeigers.|
 |[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Erstellt eine neue Instanz eines angegebenen Objekts an eine `CLSID` oder `ProgID`.|
 |[Trennen](../cpp/com-ptr-t-detach.md)|Extrahiert den gekapselten Schnittstellenzeiger und gibt ihn zurück.|
@@ -53,7 +53,7 @@ Eine Reihe von [Vorlagen funktionieren](../cpp/relational-function-templates.md)
 |||
 |-|-|
 |[operator =](../cpp/com-ptr-t-operator-equal.md)|Weist einen neuen Wert zu einem vorhandenen **_com_ptr_t** Objekt.|
-|[Operatoren ==,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Vergleichen Sie das intelligente Zeigerobjekt mit einem anderen intelligenten Zeiger, unformatierten Schnittstellenzeiger oder NULL.|
+|[operators ==, !=, \<, >, \<=, >=](../cpp/com-ptr-t-relational-operators.md)|Vergleichen Sie das intelligente Zeigerobjekt mit einem anderen intelligenten Zeiger, unformatierten Schnittstellenzeiger oder NULL.|
 |[Extraktoren](../cpp/com-ptr-t-extractors.md)|Extrahieren Sie den gekapselten COM-Schnittstellenzeiger.|
 
 **Ende Microsoft-spezifisch**
