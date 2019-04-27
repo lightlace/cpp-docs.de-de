@@ -202,7 +202,7 @@
 #### [Zusammenfassung der Deklarationen](summary-of-declarations.md)
 #### [Zusammenfassung der Anweisungen](summary-of-statements.md)
 #### [Externe Definitionen](external-definitions.md)
-## [Durch die Implementierung definiertes Verhalten](implementation-defined-behavior.md)
+## [Implementation-Defined Behavior (Durch die Implementierung definiertes Verhalten)](implementation-defined-behavior.md)
 ### [Übersetzung: Diagnose](translation-diagnostics.md)
 ### [Umgebung](environment.md)
 #### [Argumente für „main“](arguments-to-main.md)
