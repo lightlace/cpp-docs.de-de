@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
 ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267276"
 ---
 # <a name="standard-conversions"></a>Standardkonvertierungen
 
@@ -147,12 +147,12 @@ Viele binäre Operatoren (ausführlicher [Ausdrücke mit Binäroperatoren](../cp
 
 ### <a name="conditions-for-type-conversion"></a>Bedingungen für die Typkonvertierung
 
-|Bedingungen erfüllt|Conversion|
+|Bedingungen erfüllt|Umwandeln|
 |--------------------|----------------|
 |Einer der Operanden ist vom Typ **long double**.|Anderer Operand wird in den Typ konvertiert **long double**.|
 |Vorangehende Bedingung nicht erfüllt und jeder Operand ist vom Typ **doppelte**.|Anderer Operand wird in den Typ konvertiert **doppelte**.|
 |Vorangehende Bedingungen nicht erfüllt und jeder Operand ist vom Typ **"float"**.|Anderer Operand wird in den Typ konvertiert **"float"**.|
-|Vorausgehende Bedingungen nicht erfüllt (keiner der Operanden ist vom Typ "floating").|Ganzzahlige Erweiterungen werden bei den Operanden wie folgt ausgeführt:<br /><br />– Wenn ein Operand vom Typ **unsigned long**, der andere Operand wird in den Typ konvertiert **unsigned long**.<br />– Wenn vorherige Bedingung nicht erfüllt, und wenn ein Operand vom Typ **lange** und der andere vom Typ **ganze Zahl ohne Vorzeichen**, beide Operanden sind in den Typ konvertiert **unsigned long**.<br />– Wenn die oben genannten zwei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **lange**, der andere Operand wird in den Typ konvertiert **lange**.<br />– Wenn die oben genannten drei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **ganze Zahl ohne Vorzeichen**, der andere Operand wird in den Typ konvertiert **ganze Zahl ohne Vorzeichen**.<br />– Wenn keines der oben genannten Bedingungen erfüllt sind, werden beide Operanden Typ konvertiert **Int**.|
+|Vorausgehende Bedingungen nicht erfüllt (keiner der Operanden ist vom Typ „floating“).|Ganzzahlige Erweiterungen werden bei den Operanden wie folgt ausgeführt:<br /><br />– Wenn ein Operand vom Typ **unsigned long**, der andere Operand wird in den Typ konvertiert **unsigned long**.<br />– Wenn vorherige Bedingung nicht erfüllt, und wenn ein Operand vom Typ **lange** und der andere vom Typ **ganze Zahl ohne Vorzeichen**, beide Operanden sind in den Typ konvertiert **unsigned long**.<br />– Wenn die oben genannten zwei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **lange**, der andere Operand wird in den Typ konvertiert **lange**.<br />– Wenn die oben genannten drei Bedingungen nicht erfüllt sind, und wenn ein Operand vom Typ **ganze Zahl ohne Vorzeichen**, der andere Operand wird in den Typ konvertiert **ganze Zahl ohne Vorzeichen**.<br />– Wenn keines der oben genannten Bedingungen erfüllt sind, werden beide Operanden Typ konvertiert **Int**.|
 
 Das folgende Codebeispiel veranschaulicht die Konvertierungsregeln, die in der Tabelle beschrieben werden:
 
@@ -198,15 +198,15 @@ Die folgende Tabelle zeigt die Zugriffsmöglichkeiten auf die Basisklassen bei d
 
 |Typ der Funktion|Ableitung|Konvertierung von<br /><br /> B * a\* zulässig?|
 |----------------------|----------------|-------------------------------------------|
-|Externe (nicht im Klassenumfang enthaltene) Funktion|Privat|Nein|
-||Geschützt|Nein|
-||Öffentlich|Ja|
-|B-Memberfunktion (im B-Bereich)|Privat|Ja|
-||Geschützt|Ja|
-||Öffentlich|Ja|
-|C-Memberfunktion (im C-Bereich)|Privat|Nein|
-||Geschützt|Ja|
-||Öffentlich|Ja|
+|Externe (nicht im Klassenumfang enthaltene) Funktion|Private|Nein|
+||Protected|Nein|
+||Public|Ja|
+|B-Memberfunktion (im B-Bereich)|Private|Ja|
+||Protected|Ja|
+||Public|Ja|
+|C-Memberfunktion (im C-Bereich)|Private|Nein|
+||Protected|Ja|
+||Public|Ja|
 
 Im zweiten Fall, in dem ein Zeiger auf eine Klasse in einen Zeiger auf eine Basisklasse konvertiert werden kann, wird eine explizite Typkonvertierung verwendet. (Finden Sie unter [expliziter Typkonvertierungsoperator](explicit-type-conversion-operator-parens.md) für Weitere Informationen zu expliziten typkonvertierungen.)
 
@@ -303,7 +303,7 @@ Ein Zeiger auf den Member einer Basisklasse kann in einen Zeiger auf den Member 
 
 - Die abgeleitete Klasse erbt nicht virtuell von der Basisklasse.
 
-Wenn der linke Operand ein Zeiger auf einen Member ist, muss der rechte Operand vom Typ "pointer-to-member" oder ein konstanter Ausdruck sein, der als 0 (null) ausgewertet wird. Diese Zuweisung ist nur in den folgenden Fällen gültig:
+Wenn der linke Operand ein Zeiger auf einen Member ist, muss der rechte Operand vom Typ „pointer-to-member“ oder ein konstanter Ausdruck sein, der als 0 ausgewertet wird. Diese Zuweisung ist nur in den folgenden Fällen gültig:
 
 - Der rechte Operand ist ein Zeiger auf einen Member derselben Klasse wie der linke Operand.
 

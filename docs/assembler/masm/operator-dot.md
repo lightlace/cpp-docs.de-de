@@ -9,11 +9,11 @@ helpviewer_keywords:
 - . operator
 ms.assetid: 468ea0c8-5b08-47be-991b-38abacb77611
 ms.openlocfilehash: 75eccec0c65cba093d84e9d71107247e5b697287
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62177200"
 ---
 # <a name="operator-"></a>Operator .
 
@@ -21,9 +21,9 @@ Der erste Operator gibt *Ausdruck* sowie den Offset des *Feld* innerhalb der Str
 
 ## <a name="syntax"></a>Syntax
 
-> *Ausdruck* __.__ *Feld* \[ __.__ *Feld*]...
+> *Ausdruck* __.__ *field* \[__.__ *Feld*]...
 >
-> __\[__*Registrieren Sie*__]__ __.__ *Feld* \[ __.__ *Feld*]...
+> __\[__*Registrieren Sie*__]__ __.__ *field* \[__.__ *Feld*]...
 
 ## <a name="see-also"></a>Siehe auch
 

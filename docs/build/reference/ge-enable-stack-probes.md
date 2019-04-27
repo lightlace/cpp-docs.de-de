@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Ge compiler option [C++]
 ms.assetid: 4b54deae-4e3c-4bfa-95f3-ba23590f7258
 ms.openlocfilehash: a785ec041370e0bcbb2ce8b698bfba89235a0a0c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292184"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Stapelüberprüfungen aktivieren)
 
@@ -53,5 +53,5 @@ Dieser Mechanismus ist nützlich, wenn Sie die Funktionalität des Prüfpunkts S
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)
