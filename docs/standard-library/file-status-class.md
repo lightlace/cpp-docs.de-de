@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
 ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160016"
 ---
 # <a name="filestatus-class"></a>file_status-Klasse
 
@@ -50,11 +50,11 @@ class file_status;
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Filesystem >
+**Header:** \<filesystem>
 
-**Namespace:** Std::experimental::filesystem, Std::experimental::filesystem
+**Namespace:** std::experimental::filesystem, std::experimental::filesystem
 
-## <a name="file_status"></a> file_status:: file_status
+## <a name="file_status"></a> file_status::file_status
 
 Konstruiert einen Wrapper für [File_type](../standard-library/filesystem-enumerations.md#file_type) und [Perms](../standard-library/filesystem-enumerations.md#perms).
 
@@ -75,13 +75,13 @@ file_status(file_status&&) noexcept = default;
 *ftype*<br/>
 Angegebene `file_type`, standardmäßig `file_type::none`.
 
-*Maske*<br/>
+*mask*<br/>
 Angegebene Datei `perms`, standardmäßig `perms::unknown`.
 
 *file_status*<br/>
 Das gespeicherte Objekt.
 
-## <a name="op_as"></a> file_status::Operator =
+## <a name="op_as"></a> file_status::operator=
 
 Die als Standard festgelegten Memberzuweisungsoperatoren verhalten sich wie erwartet.
 
@@ -122,7 +122,7 @@ void permissions(perms mask) noexcept
 
 ### <a name="parameters"></a>Parameter
 
-*Maske*<br/>
+*mask*<br/>
 Angabe `perms`.
 
 ## <a name="see-also"></a>Siehe auch

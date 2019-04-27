@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148320"
 ---
 # <a name="c-attributes-for-com-and-net"></a>C++-Attribute für COM und .NET
 
@@ -60,7 +60,7 @@ Die folgende Abbildung veranschaulicht die Beziehung zwischen dem Compiler und A
 > [!NOTE]
 > Verwendung von Attributen wird den Inhalt der Quelldatei nicht geändert werden. Nur dann, die der generierten Attributcode sichtbar ist, ist während des Debuggens von Sitzungen. Darüber hinaus können für jede Quelldatei im Projekt, eine Textdatei generiert werden, in dem die Ergebnisse der Ersetzung Attribut angezeigt. Weitere Informationen zu dieser Vorgehensweise finden Sie unter [/FX (eingefügten Code zusammenführen)](../../build/reference/fx-merge-injected-code.md) und [Debuggen von Injiziertem Code](/visualstudio/debugger/how-to-debug-injected-code).
 
--Attribute haben eine Reihe von Eigenschaften, die ihre ordnungsgemäße Nutzung definiert, wie die meisten C++-Konstrukte. Dies wird als den Kontext des Attributs bezeichnet und ist in der Tabelle der Attribut-Kontext für jedes Attribut-Referenzthema behoben wurden. Z. B. die [Co-Klasse](coclass.md) Attribut kann nur auf einer vorhandenen Klasse oder Struktur angewendet werden, im Gegensatz zu den [Cpp_quote](cpp-quote.md) -Attribut, das an einer beliebigen Stelle innerhalb einer C++-Quelldatei eingefügt werden kann.
+-Attribute haben eine Reihe von Eigenschaften, die ihre ordnungsgemäße Nutzung definiert, wie die meisten C++-Konstrukte. Dies wird als den Kontext des Attributs bezeichnet und ist in der Tabelle der Attribut-Kontext für jedes Attribut-Referenzthema behoben wurden. Z. B. die [Co-Klasse](coclass.md) Attribut kann nur auf einer vorhandenen Klasse oder Struktur angewendet werden, im Gegensatz zu der [Cpp_quote](cpp-quote.md) -Attribut, das in eine beliebige Stelle eingefügt werden, kann eine C++ Quelldatei.
 
 ## <a name="building-an-attributed-program"></a>Erstellen eines attributierten Programms
 
