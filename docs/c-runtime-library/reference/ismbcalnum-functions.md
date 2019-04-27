@@ -47,11 +47,11 @@ helpviewer_keywords:
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
 ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157285"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -113,8 +113,8 @@ Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, a
 |-Routine zurückgegebener Wert|Testbedingung|Beispiel für Codepage 932|
 |-------------|--------------------|---------------------------|
 |**_ismbcalnum**, **_ismbcalnum_l**|Alphanumerisches Zeichen|Gibt einen Wert ungleich NULL und nur, wenn *c* eine einzelbytedarstellung eines englischen ASCII-Buchstabens ist: Siehe Beispiele für **_ismbcdigit** und **_ismbcalpha**.|
-|**_ismbcalpha**, **_ismbcalpha_l**|Alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* eine einzelbytedarstellung eines englischen ASCII-Buchstabens ist: 0 x 41 < =*c*< = 0x5A oder 0 x 61 < =*c*< = 0x7A; oder ein Katakana-Buchstabe: 0xA6 < =*c*< = 0xDF.|
-|**_ismbcdigit**, **_ismbcdigit**|Ziffer|Gibt einen Wert ungleich NULL und nur, wenn *c* eine einzelbytedarstellung einer ASCII-Ziffer ist: 0 x 30 < =*c*< = 0 x 39.|
+|**_ismbcalpha**, **_ismbcalpha_l**|Alphabetisch|Gibt einen Wert ungleich NULL und nur, wenn *c* eine einzelbytedarstellung eines englischen ASCII-Buchstabens ist: 0 x 41 < =*c*< = 0x5A oder 0 x 61 < =*c*< = 0x7A; oder ein Katakana-Buchstabe: 0xA6<=*c*<=0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|Ziffer|Gibt einen Wert ungleich NULL und nur, wenn *c* eine einzelbytedarstellung einer ASCII-Ziffer ist: 0x30<=*c*<=0x39.|
 
 ## <a name="requirements"></a>Anforderungen
 

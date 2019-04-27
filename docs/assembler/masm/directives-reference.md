@@ -1,5 +1,5 @@
 ---
-title: Anweisungen – Referenz
+title: Direktiven – Referenz
 ms.date: 08/30/2018
 f1_keywords:
 - Directives Reference
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), directives reference
 ms.assetid: da6efcd1-18f7-41de-81cd-a002a02f9a22
 ms.openlocfilehash: 655c177b8e5b859faf3b6d9c3250bc3ced31b430
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62178937"
 ---
-# <a name="directives-reference"></a>Anweisungen – Referenz
+# <a name="directives-reference"></a>Direktiven – Referenz
 
 ## <a name="x64"></a>x64
 
@@ -27,8 +27,8 @@ ms.locfileid: "51327199"
 
 |||
 |-|-|
-|[AUSRICHTEN](../../assembler/masm/align-masm.md)|[EVEN](../../assembler/masm/even.md)|
-|[BEZEICHNUNG](../../assembler/masm/label-masm.md)|[ORG](../../assembler/masm/org.md)|
+|[ALIGN](../../assembler/masm/align-masm.md)|[EVEN](../../assembler/masm/even.md)|
+|[LABEL](../../assembler/masm/label-masm.md)|[ORG](../../assembler/masm/org.md)|
 
 ### <a name="conditional-assembly"></a>Bedingte Assembly
 
@@ -54,18 +54,18 @@ ms.locfileid: "51327199"
 |-|-|-|
 |[.ERR](../../assembler/masm/dot-err.md)|[.ERR2](../../assembler/masm/dot-err2.md)|[.ERRB](../../assembler/masm/dot-errb.md)|
 |[.ERRDEF](../../assembler/masm/dot-errdef.md)|[.ERRDIF](../../assembler/masm/dot-errdif.md)/[.ERRDIF&#91;&#91;I&#93;&#93;&#93;](../../assembler/masm/dot-errdif.md)|[.ERRE](../../assembler/masm/dot-erre.md)|
-|[. ERRIDN](../../assembler/masm/dot-erridn.md)/[. ERRIDN&AMP;#91;&AMP;#91;ICH&AMP;#93;&AMP;#93;](../../assembler/masm/dot-erridn.md)|[.ERRNB](../../assembler/masm/dot-errnb.md)|[.ERRNDEF](../../assembler/masm/dot-errndef.md)|
+|[.ERRIDN](../../assembler/masm/dot-erridn.md)/[.ERRIDN&#91;&#91;I&#93;&#93;](../../assembler/masm/dot-erridn.md)|[.ERRNB](../../assembler/masm/dot-errnb.md)|[.ERRNDEF](../../assembler/masm/dot-errndef.md)|
 |[.ERRNZ](../../assembler/masm/dot-errnz.md)|||
 
 ### <a name="data-allocation"></a>Datenzuordnung
 
 ||||
 |-|-|-|
-|[AUSRICHTEN](../../assembler/masm/align-masm.md)|[BYTE](../../assembler/masm/byte-masm.md)/[SBYTE](../../assembler/masm/sbyte-masm.md)|[DWORD](../../assembler/masm/dword.md)/[SDWORD](../../assembler/masm/sdword.md)|
-|[EVEN](../../assembler/masm/even.md)|[FWORD](../../assembler/masm/fword.md)|[BEZEICHNUNG](../../assembler/masm/label-masm.md)|
+|[ALIGN](../../assembler/masm/align-masm.md)|[BYTE](../../assembler/masm/byte-masm.md)/[SBYTE](../../assembler/masm/sbyte-masm.md)|[DWORD](../../assembler/masm/dword.md)/[SDWORD](../../assembler/masm/sdword.md)|
+|[EVEN](../../assembler/masm/even.md)|[FWORD](../../assembler/masm/fword.md)|[LABEL](../../assembler/masm/label-masm.md)|
 |[ORG](../../assembler/masm/org.md)|[QWORD](../../assembler/masm/qword.md)|[REAL4](../../assembler/masm/real4.md)|
 |[REAL8](../../assembler/masm/real8.md)|[REAL10](../../assembler/masm/real10.md)|[TBYTE](../../assembler/masm/tbyte.md)|
-|[WORD](../../assembler/masm/word.md)/["SWORD"](../../assembler/masm/sword.md)|||
+|[WORD](../../assembler/masm/word.md)/[SWORD](../../assembler/masm/sword.md)|||
 
 ### <a name="equates"></a>Entspricht
 
@@ -87,7 +87,7 @@ ms.locfileid: "51327199"
 
 ||||
 |-|-|-|
-|[ENDM](../../assembler/masm/endm.md)|[EXITM](../../assembler/masm/exitm.md)|["GOTO"](../../assembler/masm/goto-masm.md)|
+|[ENDM](../../assembler/masm/endm.md)|[EXITM](../../assembler/masm/exitm.md)|[GOTO](../../assembler/masm/goto-masm.md)|
 |[LOKALE](../../assembler/masm/local-masm.md)|[MACRO](../../assembler/masm/macro.md)|[PURGE](../../assembler/masm/purge.md)|
 
 ### <a name="miscellaneous"></a>Verschiedenes
@@ -122,7 +122,7 @@ ms.locfileid: "51327199"
 ||||
 |-|-|-|
 |[ENDM](../../assembler/masm/endm.md)|[FÜR](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|
-|["GOTO"](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[WHILE](../../assembler/masm/while-masm.md)|
+|[GOTO](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[WHILE](../../assembler/masm/while-masm.md)|
 
 ### <a name="scope"></a>Bereich
 
@@ -136,7 +136,7 @@ ms.locfileid: "51327199"
 ||||
 |-|-|-|
 |[.ALPHA](../../assembler/masm/dot-alpha.md)|[ASSUME](../../assembler/masm/assume.md)|[.DOSSEG](../../assembler/masm/dot-dosseg.md)|
-|[ENDE](../../assembler/masm/end-masm.md)|[ENDET](../../assembler/masm/ends-masm.md)|[GROUP](../../assembler/masm/group.md)|
+|[ENDE](../../assembler/masm/end-masm.md)|[ENDS](../../assembler/masm/ends-masm.md)|[GROUP](../../assembler/masm/group.md)|
 |[SEGMENT](../../assembler/masm/segment.md)|[.SEQ](../../assembler/masm/dot-seq.md)||
 
 ### <a name="simplified-segment"></a>Vereinfachte Segment
@@ -159,7 +159,7 @@ ms.locfileid: "51327199"
 
 ||||
 |-|-|-|
-|[ENDET](../../assembler/masm/ends-masm.md)|[DATENSATZ](../../assembler/masm/record-masm.md)|[STRUKTUR](../../assembler/masm/struct-masm.md)|
+|[ENDS](../../assembler/masm/ends-masm.md)|[RECORD](../../assembler/masm/record-masm.md)|[STRUCT](../../assembler/masm/struct-masm.md)|
 |[TYPEDEF](../../assembler/masm/typedef-masm.md)|[UNION](../../assembler/masm/union.md)||
 
 ## <a name="see-also"></a>Siehe auch

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
 ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180042"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Aufgabenparallelität (Concurrency Runtime)
 
@@ -72,9 +72,9 @@ Sie verwenden Aufgaben, wenn Sie asynchronen Code schreiben und ein Vorgang erst
 
 Aufgrund ihrer kompakten Syntax werden Lambda-Ausdrücke häufig zur Definition der Arbeit verwendet, die von Aufgaben und Aufgabengruppen ausgeführt wird. Im Folgenden finden Sie einige Verwendungstipps:
 
-- Da Aufgaben in der Regel in Hintergrundthreads ausgeführt werden, beachten Sie die Objektlebensdauer, wenn Sie Variablen in Lambda-Ausdrücken erfassen. Wenn Sie eine Variable als Wert erfassen, wird eine Kopie dieser Variablen im Lambda-Text erstellt. Wenn Sie sie als Verweis erfassen, wird keine Kopie erstellt. Daher müssen Sie sicherstellen, dass die Lebensdauer jeder Variablen, die Sie als Verweis erfassen, länger ist als die Lebensdauer der Aufgabe, die diese verwendet.
+- Da Aufgaben in der Regel in Hintergrundthreads ausgeführt werden, beachten Sie die Objektlebensdauer, wenn Sie Variablen in Lambdaausdrücken erfassen. Wenn Sie eine Variable als Wert erfassen, wird eine Kopie dieser Variablen im Lambda-Text erstellt. Wenn Sie sie als Verweis erfassen, wird keine Kopie erstellt. Daher müssen Sie sicherstellen, dass die Lebensdauer jeder Variablen, die Sie als Verweis erfassen, länger ist als die Lebensdauer der Aufgabe, die diese verwendet.
 
-- Wenn Sie einen Lambda-Ausdruck an eine Aufgabe übergeben, erfassen Sie keine Variablen, die auf dem Stapel als Verweis zugeordnet sind.
+- Wenn Sie einen Lambdaausdruck an eine Aufgabe übergeben, erfassen Sie keine Variablen, die auf dem Stapel als Verweis zugeordnet sind.
 
 - Bezeichnen Sie die in Lambdaausdrücken erfassten Variablen eindeutig, damit Sie feststellen können, welche Variablen Sie als Wert und welche Sie als Verweis erfassen. Aus diesem Grund wird empfohlen, die Option `[=]` oder `[&]` für Lambda-Ausdrücke nicht zu verwenden.
 
@@ -131,7 +131,7 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
 
 - Verketten von Fortsetzungen auf eine beliebige Länge
 
-- Behandeln von durch den Vorgänger ausgelösten Ausnahmen mithilfe einer Fortsetzung
+- Behandeln von durch den Vorgänger ausgelöste Ausnahmen mithilfe einer Fortsetzung
 
 Mithilfe dieser Funktionen können Sie eine oder mehrere Aufgaben ausführen, wenn die erste Aufgabe abgeschlossen wird. Sie können beispielsweise eine Fortsetzung erstellen, in der eine Datei komprimiert wird, nachdem sie von der ersten Aufgabe vom Datenträger gelesen wurde.
 
@@ -179,7 +179,7 @@ In diesem Beispiel können Sie auch `task<vector<int>>` angeben, um eine aufgabe
 
 Wenn eine Aufgabe in einem Satz von Aufgaben abgebrochen wird oder eine Ausnahme auslöst, wird `when_all` sofort abgeschlossen und wartet nicht, bis die übrigen Aufgaben beendet sind. Wenn eine Ausnahme ausgelöst wird, löst die Laufzeit die Ausnahme erneut aus, wenn Sie `task::get` oder `task::wait` für das Task-Objekt aufrufen, das von `when_all` zurückgegeben wird. Wenn von mehr als einer Aufgabe eine Ausnahme ausgelöst wird, wird von der Laufzeit eine ausgewählt. Daher müssen Sie sicherstellen, dass Sie alle Ausnahmen nach Abschluss aller Aufgaben berücksichtigen. Eine nicht behandelte Ausnahme einer Aufgabe führt dazu, dass die App beendet wird.
 
-Es steht eine Hilfsfunktion zur Verfügung, mit der Sie sicherstellen können, dass Ihr Programm alle Ausnahmen berücksichtigt. Die Funktion `observe_all_exceptions` löst für jede Aufgabe im bereitgestellten Bereich jede aufgetretene Ausnahme aus, damit diese erneut ausgelöst wird, und „schluckt“ diese anschließend.
+Es steht eine Hilfsfunktion zur Verfügung, mit der Sie sicherstellen können, dass Ihr Programm alle Ausnahmen berücksichtigt. Die Funktion `observe_all_exceptions` löst für jede Aufgabe im bereitgestellten Bereich jede aufgetretene Ausnahme aus, damit diese erneut ausgelöst wird, und "schluckt" diese anschließend.
 
 [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]
 
@@ -244,7 +244,7 @@ Es gibt zwei Möglichkeiten, dies zu erreichen: Sie können eine Fortsetzung ver
 
 Die [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) Klasse vereinfacht eine solche Komposition von Aufgaben. Wie die `task`-Klasse ist der Typparameter `T` der Typ des Ergebnisses, das von der Aufgabe erzeugt wird. Dieser Typ kann `void` sein, wenn die Aufgabe keinen Wert zurückgibt. Für `T` kann der `const`-Modifizierer nicht verwendet werden. In der Regel wird ein `task_completion_event`-Objekt für einen Thread oder eine Aufgabe bereitgestellt, der bzw. die signalisieren, wenn der Wert für das Objekt zur Verfügung steht. Gleichzeitig wird mindestens eine Aufgabe als Listener dieses Ereignisses festgelegt. Wenn das Ereignis festgelegt wird, werden die Listeneraufgaben abgeschlossen und ihre Fortsetzungen für die Ausführung geplant.
 
-Ein Beispiel für die Verwendung `task_completion_event` zum Implementieren einer Aufgabe, die nach einer Verzögerung abgeschlossen wird, finden Sie unter [Vorgehensweise: Erstellen Sie eine Aufgabe abgeschlossen wird nach einer Verzögerung](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
+Ein Beispiel für die Verwendung `task_completion_event` zum Implementieren einer Aufgabe, die nach einer Verzögerung abgeschlossen wird, finden Sie unter [Vorgehensweise: Erstellen Sie eine Aufgabe, die nach einer Verzögerung abgeschlossen wird](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
 
 ##  <a name="task-groups"></a> Aufgabengruppen
 
@@ -257,7 +257,7 @@ Die PPL Unterscheidet zwischen Aufgabengruppen zu diesen beiden Kategorien: *uns
 > [!IMPORTANT]
 > Die PPL definiert auch die [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) -Algorithmus, der verwendet die `structured_task_group` Klasse, um eine Reihe von Aufgaben parallel ausgeführt. Da der `parallel_invoke`-Algorithmus eine kompaktere Syntax aufweist, wird empfohlen, diesen, sofern möglich, anstelle der `structured_task_group`-Klasse zu verwenden. Das Thema [parallele Algorithmen](../../parallel/concrt/parallel-algorithms.md) beschreibt `parallel_invoke` ausführlicher.
 
-Verwenden Sie `parallel_invoke`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und sofort darauf zu warten, dass alle Aufgaben abgeschlossen sind. Diese Technik wird häufig als bezeichnet *Zweig- und Joinknoten* Parallelität. Verwenden Sie `task_group`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und später darauf zu warten, dass alle Aufgaben abgeschlossen sind. Beispielsweise können Sie einem `task_group`-Objekt Aufgaben hinzufügen und in einer anderen Funktion oder einem anderen Thread darauf warten, dass die Aufgaben beendet werden.
+Verwenden Sie `parallel_invoke`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und sofort darauf zu warten, dass alle Aufgaben abgeschlossen sind. Diese Technik wird häufig als bezeichnet *Zweig- und Joinknoten* Parallelität. Verwenden Sie `task_group`, um mehrere unabhängige Aufgaben gleichzeitig auszuführen und später darauf zu warten, dass allle Aufgaben abgeschlossen sind. Beispielsweise können Sie einem `task_group`-Objekt Aufgaben hinzufügen und in einer anderen Funktion oder einem anderen Thread darauf warten, dass die Aufgaben beendet werden.
 
 Aufgabengruppen unterstützen das Konzept eines Abbruchs. Mit einem Abbruch können Sie für alle aktiven Aufgaben angeben, dass der gesamte Vorgang abgebrochen werden soll. Durch den Abbruch wird außerdem verhindert, dass Aufgaben gestartet werden, die noch nicht gestartet wurden. Weitere Informationen über Abbrüche finden Sie unter [Abbruch in der PPL](cancellation-in-the-ppl.md).
 
@@ -299,7 +299,7 @@ Message from task: 42
 
 Da die Aufgaben vom `parallel_invoke`-Algorithmus gleichzeitig ausgeführt werden, kann sich die Reihenfolge der Ausgabemeldungen unterscheiden.
 
-Vollständige Beispiele für die Verwendung der `parallel_invoke` -Algorithmus finden Sie unter [wie: mithilfe von Parallel_invoke zum parallele Sortierung Schreiben einer](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) und [Vorgehensweise: mithilfe von Parallel_invoke zum Ausführen von parallelen Vorgängen](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Für ein vollständiges Beispiel, verwendet der `task_group` Klasse zur Implementierung asynchroner Futures finden Sie unter [Exemplarische Vorgehensweise: Implementieren von Futures](../../parallel/concrt/walkthrough-implementing-futures.md).
+Vollständige Beispiele für die Verwendung der `parallel_invoke` -Algorithmus finden Sie unter [Vorgehensweise: Mithilfe von Parallel_invoke zum parallele Sortierung Schreiben einer](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) und [Vorgehensweise: Mithilfe von Parallel_invoke zum Ausführen von parallelen Vorgängen](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Für ein vollständiges Beispiel, verwendet der `task_group` Klasse zur Implementierung asynchroner Futures finden Sie unter [Exemplarische Vorgehensweise: Implementieren von Futures](../../parallel/concrt/walkthrough-implementing-futures.md).
 
 ##  <a name="robust"></a> Stabile Programmierung
 
@@ -309,9 +309,9 @@ Es ist wichtig, dass Sie die Rolle des Abbruchs und der Ausnahmebehandlung verst
 
 |Titel|Beschreibung|
 |-----------|-----------------|
-|[Vorgehensweise: Verwenden von parallel_invoke zum Schreiben einer Runtime für paralleles Sortieren](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Erläutert, wie die Leistung des bitonischen Sortieralgorithmus mit dem `parallel_invoke`-Algorithmus verbessert werden.|
-|[Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von parallel_invoke](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Erläutert, wie die Leistung eines Programms mit dem `parallel_invoke`-Algorithmus verbessert werden kann, das mehrere Vorgänge in einer freigegebenen Datenquelle ausführt.|
-|[Vorgehensweise: Erstellen einer Aufgabe, die nach einer Verzögerung abgeschlossen wird](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Zeigt, wie die `task`, `cancellation_token_source`, `cancellation_token`, und `task_completion_event` Klassen zum Erstellen einer Aufgabe, die nach einer Verzögerung abgeschlossen wird.|
+|[Vorgehensweise: Verwenden von „parallel_invoke“ zum Schreiben einer Routine für paralleles Sortieren](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Erläutert, wie die Leistung des bitonischen Sortieralgorithmus mit dem `parallel_invoke`-Algorithmus verbessert werden.|
+|[Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von „parallel_invoke“](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Erläutert, wie die Leistung eines Programms mit dem `parallel_invoke`-Algorithmus verbessert werden kann, das mehrere Vorgänge in einer freigegebenen Datenquelle ausführt.|
+|[Vorgehensweise: Erstellen eines Tasks, der nach einer Verzögerung abgeschlossen wird](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Zeigt, wie die `task`, `cancellation_token_source`, `cancellation_token`, und `task_completion_event` Klassen zum Erstellen einer Aufgabe, die nach einer Verzögerung abgeschlossen wird.|
 |[Exemplarische Vorgehensweise: Implementieren von Futures](../../parallel/concrt/walkthrough-implementing-futures.md)|Zeigt, wie die vorhandene Funktionalität in der Concurrency Runtime kombiniert werden kann, um mehr Funktionalität zu erreichen.|
 |[Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Beschreibt die PPL, die ein obligatorisches Programmiermodell zum Entwickeln gleichzeitiger Anwendungen bereitstellt.|
 
@@ -325,7 +325,7 @@ Es ist wichtig, dass Sie die Rolle des Abbruchs und der Ausnahmebehandlung verst
 
 [When_any-Funktion](reference/concurrency-namespace-functions.md#when_any)
 
-[Task_group-Klasse](reference/task-group-class.md)
+[task_group-Klasse](reference/task-group-class.md)
 
 [Parallel_invoke-Funktion](reference/concurrency-namespace-functions.md#parallel_invoke)
 

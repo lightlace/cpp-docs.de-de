@@ -6,11 +6,11 @@ helpviewer_keywords:
 - client items and OLE containers
 ms.assetid: 231528b5-0744-4f83-8897-083bf55ed087
 ms.openlocfilehash: 0c7f4a63cb9a31b52be2d3574ddad29313df6a4d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153358"
 ---
 # <a name="containers-client-items"></a>Container: Clientelemente
 
@@ -28,7 +28,7 @@ Jeder containeranwendung sollte über mindestens eine Klasse von ableiten `COleC
 
 [Container](../mfc/containers.md)<br/>
 [Container: Verbunddateien](../mfc/containers-compound-files.md)<br/>
-[Container: Probleme mit der Benutzeroberfläche](../mfc/containers-user-interface-issues.md)<br/>
-[Container: Erweiterte Funktionen](../mfc/containers-advanced-features.md)<br/>
+[Container: Benutzeroberflächenprobleme](../mfc/containers-user-interface-issues.md)<br/>
+[Container: Erweiterte Features](../mfc/containers-advanced-features.md)<br/>
 [COleClientItem-Klasse](../mfc/reference/coleclientitem-class.md)<br/>
 [COleServerItem-Klasse](../mfc/reference/coleserveritem-class.md)

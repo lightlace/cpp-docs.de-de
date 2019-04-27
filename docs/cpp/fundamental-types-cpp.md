@@ -44,11 +44,11 @@ helpviewer_keywords:
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
 ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153800"
 ---
 # <a name="fundamental-types--c"></a>Grundlegende Typen (C++)
 
@@ -75,9 +75,9 @@ In der folgenden Tabelle werden die Einschränkungen für die Typgrößen erklä
 ||**__int8**, **__int16**, **__int32**, **__int64**|Ganzzahl mit fester Größe `__int n`, wobei `n` in Bits die Größe der ganzzahligen Variablen ist. **__int8**, **__int16**, **__int32** und **__int64** sind Microsoft-spezifische Schlüsselwörter. Nicht alle Typen sind in allen Architekturen verfügbar. (**__int128** wird nicht unterstützt.)|
 ||**long**|Typ **lange** (oder **long Int**) ist ein integraler Typ, der größer als oder gleich der Größe des Typs **Int**.<br /><br /> Objekte des Typs **lange** können deklariert werden, als **lange signiert** oder **unsigned long**. **Lange signiert** ist ein Synonym für **lange**.|
 ||**langes long**|Größer als ein unsigned **lange**.<br /><br /> Objekte des Typs **long long** können deklariert werden, als **long long signiert** oder **long long ohne Vorzeichen**. **long long signiert** ist ein Synonym für **long long**.|
-||**"wchar_t"**, **"__wchar_t"**|Eine Variable vom Typ **"wchar_t"** kennzeichnet einen Breitzeichen oder Multibytezeichen Zeichentyp. In der Standardeinstellung **"wchar_t"** ist ein systemeigener Typ, aber Sie können [/Zc:](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) vornehmen **"wchar_t"** eine Typedef für **unsigned short**. Die **__wchar_t** Typ ist ein Microsoft-spezifisches Synonym für den systemeigenen **"wchar_t"** Typ.<br /><br /> Verwenden Sie das Präfix L vor einem Zeichen oder einem Zeichenliteral, um einen Breitzeichentyp festzulegen.|
+||**wchar_t**, **__wchar_t**|Eine Variable vom Typ **"wchar_t"** kennzeichnet einen Breitzeichen oder Multibytezeichen Zeichentyp. In der Standardeinstellung **"wchar_t"** ist ein systemeigener Typ, aber Sie können [/Zc:](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) vornehmen **"wchar_t"** eine Typedef für **unsigned short**. Die **__wchar_t** Typ ist ein Microsoft-spezifisches Synonym für den systemeigenen **"wchar_t"** Typ.<br /><br /> Verwenden Sie das Präfix L vor einem Zeichen oder einem Zeichenliteral, um einen Breitzeichentyp festzulegen.|
 |Gleitkomma|**float**|Typ **"float"** ist der kleinste Gleitkommatyp Punkttyp.|
-||**double**|Typ **doppelte** ist ein Gleitkommatyp, der größer als oder gleich dem Typ **"float"**, aber kleiner oder gleich der Größe des Typs **long double**.<br /><br /> Microsoft-spezifisch: die Darstellung der **long double** und **doppelte** identisch ist. Allerdings **long double** und **doppelte** sind separate Projektionstypen und.|
+||**double**|Typ **doppelte** ist ein Gleitkommatyp, der größer als oder gleich dem Typ **"float"**, aber kleiner oder gleich der Größe des Typs **long double**.<br /><br /> Microsoft-spezifisch: Die Darstellung der **long double** und **doppelte** identisch ist. Allerdings **long double** und **doppelte** sind separate Projektionstypen und.|
 ||**long double**|Typ **long double** ist ein Gleitkommatyp, der größer als oder gleich dem Typ **doppelte**.|
 
 **Microsoft-spezifisch**

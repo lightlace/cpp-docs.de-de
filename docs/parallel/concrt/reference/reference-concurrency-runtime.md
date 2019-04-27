@@ -454,18 +454,18 @@ helpviewer_keywords:
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
 ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180146"
 ---
 # <a name="reference-concurrency-runtime"></a>Referenz (Concurrency Runtime)
 
 Dieser Abschnitt enthält Referenzinformationen für die Concurrency Runtime.
 
 > [!Note]
-> Die C++-Sprachstandard reserviert die Verwendung von Bezeichnern, die mit einem Unterstrich (_) für Implementierungen wie Bibliotheken zu beginnen. Verwenden Sie diese Namen nicht im Code. Die Eindeutigkeit des Verhaltens von Codeelementen mit Namen dieser Art kann nicht gewährleistet werden, und für zukünftige Versionen muss mit Änderungen gerechnet werden. Aus diesen Gründen werden solche Codeelemente in der Dokumentation für die Concurrency Runtime weggelassen.
+> Die C++ -Sprachstandard reserviert die Verwendung von Bezeichnern, die mit einem Unterstrich (_) für Implementierungen wie Bibliotheken zu beginnen. Verwenden Sie diese Namen nicht im Code. Die Eindeutigkeit des Verhaltens von Codeelementen mit Namen dieser Art kann nicht gewährleistet werden, und für zukünftige Versionen muss mit Änderungen gerechnet werden. Aus diesen Gründen werden solche Codeelemente in der Dokumentation für die Concurrency Runtime weggelassen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

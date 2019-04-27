@@ -8,21 +8,21 @@ helpviewer_keywords:
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
 ms.openlocfilehash: 913aa199b4acd2ceb6daf7a24d8c50c28234b74a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184360"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Assertion und benutzerdefinierte Meldungen (C++)
 
-Die C++-Sprache unterstützt drei Mechanismen zur Fehlerbehandlung, mit denen Sie Ihre Anwendung debuggen: die [#error-Anweisung](../preprocessor/hash-error-directive-c-cpp.md), ["static_assert"](../cpp/static-assert.md) -Schlüsselwort, und die [assert-Makro, _assert-, _ Wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) Makro. Alle drei Mechanismen geben Fehlermeldungen aus, zwei testen auch Softwareassertionen. Eine Softwareassertion gibt eine Bedingung an, die an einer bestimmten Stelle im Programm "true" sein muss. Wenn bei einer Assertion zur Kompilierzeit ein Fehler auftritt, gibt der Compiler eine Diagnosemeldung und einen Kompilierungsfehler aus. Wenn bei einer Assertion zur Laufzeit ein Fehler auftritt, gibt das Betriebssystem eine Diagnosemeldung aus und schließt Ihre Anwendung.
+Die C++ Sprache unterstützt drei Mechanismen für die Fehlerbehandlung, mit denen Sie Ihre Anwendung debuggen: die [#error-Anweisung](../preprocessor/hash-error-directive-c-cpp.md), ["static_assert"](../cpp/static-assert.md) -Schlüsselwort, und die [assert-Makro, _ bestätigen, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) Makro. Alle drei Mechanismen geben Fehlermeldungen aus, zwei testen auch Softwareassertionen. Eine Softwareassertion gibt eine Bedingung an, die an einer bestimmten Stelle im Programm "true" sein muss. Wenn bei einer Assertion zur Kompilierzeit ein Fehler auftritt, gibt der Compiler eine Diagnosemeldung und einen Kompilierungsfehler aus. Wenn bei einer Assertion zur Laufzeit ein Fehler auftritt, gibt das Betriebssystem eine Diagnosemeldung aus und schließt Ihre Anwendung.
 
 ## <a name="remarks"></a>Hinweise
 
 Die Lebensdauer der Anwendung besteht aus einer Vorverarbeitungs-, einer Kompilierungs- und einer Laufzeitphase. Jeder Mechanismus zur Fehlerbehandlung greift auf Debuginformationen zu, die während einer dieser Phasen verfügbar sind. Um auf effiziente Weise zu debuggen, wählen Sie den Mechanismus aus, der entsprechende Informationen über diese Phase bereitstellt:
 
-- Die [#error-Anweisung](../preprocessor/hash-error-directive-c-cpp.md) während der Vorverarbeitungsphase gültig ist. Sie gibt bedingungslos eine vom Benutzer angegebene Meldung aus und führt dazu, dass die Kompilierung mit einem Fehler beendet wird. Die Meldung kann Text enthalten, der von Präprozessoranweisungen geändert wird, aber Ausdrucksergebnisse werden nicht gewertet.
+- Die [#error-Anweisung](../preprocessor/hash-error-directive-c-cpp.md) während der Vorverarbeitungsphase gültig ist. Sie gibt bedingungslos eine vom Benutzer angegebene Meldung aus und führt dazu, dass die Kompilierung mit einem Fehler beendet wird. Die Meldung kann Text enthalten, der von Präprozessordirektiven geändert wird, aber Ausdrucksergebnisse werden nicht gewertet.
 
 - Die ["static_assert"](../cpp/static-assert.md) Deklaration gültig ist, zum Zeitpunkt der Kompilierung. Sie testet eine Softwareassertion, die durch einen vom Benutzer angegebenen ganzzahligen Ausdruck dargestellt wird, der in einen booleschen Wert konvertiert werden kann. Wenn der Ausdruck 0 (false) ergibt, gibt der Compiler die vom Benutzer angegebene Meldung aus, und die Kompilierung wird mit einem Fehler beendet.
 

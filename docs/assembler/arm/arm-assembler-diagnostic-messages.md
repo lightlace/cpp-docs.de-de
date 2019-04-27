@@ -21,11 +21,11 @@ helpviewer_keywords:
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
 ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167842"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Diagnosemeldungen des ARM-Assemblers
 
@@ -104,7 +104,7 @@ AREA |.myarea2|,ALIGN=3
 ALIGN 8           ; OK
 ```
 
-> A4508: Mithilfe dieser gedrehte Konstante ist veraltet.
+> A4508: Mithilfe dieser gedrehte Konstante ist als veraltet markiert.
 
 Im Modus "ARM" besteht eine alternative Syntax zum Angeben von Konstanten zur Verfügung.  Anstelle des Schreibens von `#<const>`, können Sie schreiben `#<byte>,#<rot>`, steht für den konstanten Wert an, die abgerufen werden, indem Sie den Wert Drehen `<byte>` nach rechts `<rot>`.  In einigen Kontexten wurde die Verwendung dieser gedrehte Konstanten von ARM als veraltet. In diesen Fällen verwenden Sie die einfache `#<const>` Syntax stattdessen.
 

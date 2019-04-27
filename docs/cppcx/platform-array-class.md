@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
 ms.openlocfilehash: 597f8e32e2da95370169cdbfe2ccd209296322cc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161661"
 ---
 # <a name="platformarray-class"></a>Platform::Array-Klasse
 
@@ -126,5 +126,5 @@ Ein Handle für das aktuelle Array.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Platform-namespace](../cppcx/platform-namespace-c-cx.md)<br/>
+[Plattformnamespace](../cppcx/platform-namespace-c-cx.md)<br/>
 [Array und WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

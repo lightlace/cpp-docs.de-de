@@ -24,11 +24,11 @@ helpviewer_keywords:
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
 ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156863"
 ---
 # <a name="max"></a>__max
 
@@ -42,7 +42,7 @@ Ein Präprozessormakro, die den größeren von zwei Werten zurückgibt.
 
 ### <a name="parameters"></a>Parameter
 
-*eine*, *b*<br/>
+*a*, *b*<br/>
 Werte von einem numerischen Datentyp, der verglichen werden soll.
 
 ## <a name="return-value"></a>Rückgabewert

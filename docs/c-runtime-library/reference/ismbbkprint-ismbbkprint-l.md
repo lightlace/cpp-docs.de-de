@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
 ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157525"
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
 
@@ -61,7 +61,7 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_ismbbkprint** gibt einen Wert ungleich NULL zurück, wenn die ganze Zahl *c* einen nicht-ASCII-Text oder nicht-ASCII- interpunktionssymbol 0 ist, ist dies nicht. **_ismbbkprint** testet beispielsweise in Codepage 932 nur auf alphanumerische Katakana-Zeichen oder Katakana-Interpunktion (Bereich: 0xA1–0xDF). **_ismbbkprint** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige zeicheneinstellungen. **_ismbbkprint_l** ist identisch mit dem Unterschied, dass das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_ismbbkprint** gibt einen Wert ungleich NULL zurück, wenn die ganze Zahl *c* einen nicht-ASCII-Text oder nicht-ASCII- interpunktionssymbol 0 ist, ist dies nicht. Beispielsweise in Codepage 932 nur **_ismbbkprint** Tests für alphanumerische Katakana-Zeichen oder Katakana-Interpunktion (Bereich: 0xA1–0xDF). **_ismbbkprint** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige zeicheneinstellungen. **_ismbbkprint_l** ist identisch mit dem Unterschied, dass das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 

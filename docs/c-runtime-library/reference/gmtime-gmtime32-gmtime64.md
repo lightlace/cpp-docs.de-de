@@ -32,11 +32,11 @@ helpviewer_keywords:
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
 ms.openlocfilehash: 4f32da5920a0cb892619195207d6501a4b1fd874
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157616"
 ---
 # <a name="gmtime-gmtime32-gmtime64"></a>gmtime, _gmtime32, _gmtime64
 
@@ -90,7 +90,7 @@ Die **_gmtime32** -Funktion gliedert den *SourceTime* -Wert und speichert diesen
 
 |-Routine zurückgegebener Wert|Erforderlicher C-Header|Erforderlicher C++-Header|
 |-------------|---------------------|-|
-|**Gmtime**, **_gmtime32**, **_gmtime64**|\<time.h>|\<CTime > oder \<time.h >|
+|**gmtime**, **_gmtime32**, **_gmtime64**|\<time.h>|\<CTime > oder \<time.h >|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

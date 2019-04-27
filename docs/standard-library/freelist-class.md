@@ -11,11 +11,11 @@ helpviewer_keywords:
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
 ms.openlocfilehash: ef1f2e617e93869a1084dc030c6496c819f1ed96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159391"
 ---
 # <a name="freelist-class"></a>freelist-Klasse
 
@@ -32,7 +32,7 @@ class freelist : public Max
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*sz*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*Sz*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
 |*Max*|Die max-Klasse, die die maximale Anzahl von Elementen darstellt, die in der freien Liste gespeichert werden. Die Klasse kann [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) oder [max_variable_size](../standard-library/max-variable-size-class.md) sein.|
 
 ## <a name="remarks"></a>Hinweise

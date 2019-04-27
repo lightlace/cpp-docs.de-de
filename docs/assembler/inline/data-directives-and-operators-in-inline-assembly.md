@@ -1,5 +1,5 @@
 ---
-title: Datenanweisungen und Operatoren in der Inlineassembly
+title: Datendirektiven und Operatoren in der Inlineassembly
 ms.date: 08/30/2018
 helpviewer_keywords:
 - data directives [C++]
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - structures [C++], MASM
 ms.assetid: fb7410c7-156a-4131-bcfc-211aa70533e3
 ms.openlocfilehash: 52e20c37f3066122a062e3fc9c64ced576b6c302
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167230"
 ---
-# <a name="data-directives-and-operators-in-inline-assembly"></a>Datenanweisungen und Operatoren in der Inlineassembly
+# <a name="data-directives-and-operators-in-inline-assembly"></a>Datendirektiven und Operatoren in der Inlineassembly
 
 **Microsoft-spezifisch**
 

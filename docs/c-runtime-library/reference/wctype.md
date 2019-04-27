@@ -22,11 +22,11 @@ helpviewer_keywords:
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
 ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155315"
 ---
 # <a name="wctype"></a>wctype
 
@@ -55,17 +55,17 @@ Die Funktion bestimmt eine Klassifizierungsregel für Breitzeichencodes. Die fol
 
 |Funktion|Identisch mit|
 |--------------|-------------|
-|iswalnum(c)|Iswctype (C, Wctype ("Alnum"))|
-|iswalpha(c)|Iswctype (C, Wctype ("Alpha"))|
-|iswcntrl(c)|Iswctype (C, Wctype ("Strg"))|
-|iswdigit(c)|Iswctype (C, Wctype ("Digit"))|
-|iswgraph(c)|Iswctype (C, Wctype ("Graph"))|
-|iswlower(c)|Iswctype (C, Wctype ("niedriger"))|
-|iswprint(c)|Iswctype (C, Wctype ("Print"))|
-|iswpunct(c)|Iswctype (C, Wctype ("Punct"))|
-|iswspace(c)|Iswctype (C, Wctype ("Leerzeichen"))|
-|iswupper(c)|Iswctype (C, Wctype ("oberen"))|
-|iswxdigit(c)|Iswctype (C, Wctype ("Xdigit"))|
+|iswalnum(c)|iswctype(c, wctype( "alnum" ) )|
+|iswalpha(c)|iswctype(c, wctype( "alpha" ) )|
+|iswcntrl(c)|iswctype(c, wctype( "cntrl" ) )|
+|iswdigit(c)|iswctype(c, wctype( "digit" ) )|
+|iswgraph(c)|iswctype(c, wctype( "graph" ) )|
+|iswlower(c)|iswctype(c, wctype( "lower" ) )|
+|iswprint(c)|iswctype(c, wctype( "print" ) )|
+|iswpunct(c)|iswctype(c, wctype( "punct" ) )|
+|iswspace(c)|iswctype(c, wctype( "space" ) )|
+|iswupper(c)|iswctype(c, wctype( "upper" ) )|
+|iswxdigit(c)|iswctype(c, wctype( "xdigit" ) )|
 
 ## <a name="requirements"></a>Anforderungen
 

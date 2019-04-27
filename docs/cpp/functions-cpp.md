@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154131"
 ---
 # <a name="functions-c"></a>Funktionen (C++)
 
@@ -190,13 +190,13 @@ Argumente werden standardmäßig zur Funktion nach Wert weitergegeben. Die Funkt
 void DoSomething(std::string& input){...}
 ```
 
-Wenn eine Funktion ein Argument ändert, das nach Verweis weitergegeben wird, ändert sie das ursprüngliche Objekt und nicht eine lokale Kopie. Qualifizieren Sie den Parameter als „const&“, um zu verhindern, dass eine Funktion ein derartiges Argument ändert:
+Wenn eine Funktion ein Argument ändert, das nach Verweis weitergegeben wird, ändert sie das ursprüngliche Objekt und nicht eine lokale Kopie. Um zu verhindern, dass eine Funktion derartiges Argument ändert, qualifizieren Sie den Parameter als const &:
 
 ```cpp
 void DoSomething(const std::string& input){...}
 ```
 
-**C++ 11:** verwenden, um Argumente explizit zu behandeln, das als Rvalue-Verweis oder Lvalue-Verweis übergeben werden, ein doppeltes kaufmännisches und-Zeichen für den Parameter um einen universellen Verweis anzugeben:
+**C++ 11:**  Verwenden Sie zum expliziten Verarbeiten von Argumenten, die als Rvalue-Verweis oder Lvalue-Verweis übergeben werden, ein doppeltes kaufmännisches und-Zeichen für den Parameter, um einen universellen Verweis anzugeben:
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -363,7 +363,7 @@ Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zur�
     }
     ```
 
-1. **Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Verwenden Sie die strukturierte Bindungen. Der Vorteil der strukturierte Bindungen ist, dass die Variablen, die die Rückgabewerte speichern initialisiert werden zur gleichen Zeit, die sie deklariert werden, die was in einigen Fällen wesentlich effizienter sein kann. In dieser Anweisung –`auto[x, y, z] = f();`– die Klammern einführen und Namen, die innerhalb des Bereichs für den gesamten Funktionsblock initialisiert.
+1. **Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Verwenden Sie strukturierte Bindungen. Der Vorteil der strukturierte Bindungen ist, dass die Variablen, die die Rückgabewerte speichern initialisiert werden zur gleichen Zeit, die sie deklariert werden, die was in einigen Fällen wesentlich effizienter sein kann. In dieser Anweisung –`auto[x, y, z] = f();`– die Klammern einführen und Namen, die innerhalb des Bereichs für den gesamten Funktionsblock initialisiert.
 
     ```cpp
     #include <tuple>

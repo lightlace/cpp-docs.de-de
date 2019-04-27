@@ -5,11 +5,11 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
 ms.openlocfilehash: 8363139efddb2fa64057fdb995ab7bd5dfbcfd9b
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153741"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Vorgehensweise: Erstellen und Verwenden von Shared_ptr-Instanzen
 
@@ -57,7 +57,7 @@ Sie können einen `shared_ptr` folgendermaßen an eine andere Funktion übergebe
 
 - Wenn Sie einer Hilfsfunktion Zugriff auf den zugrunde liegenden Zeiger erteilen müssen und Sie wissen, dass die Hilfsfunktion nur den Zeiger verwendet und dann zurückgegeben wird, bevor die aufrufende Funktion zurückgegeben wird, muss die Funktion den Besitz des zugrunde liegenden Zeigers nicht teilen. Sie muss lediglich innerhalb der Lebensdauer des `shared_ptr` des Aufrufers auf den Zeiger zugreifen. In diesem Fall ist es sicher, den `shared_ptr` als Verweis zu übergeben bzw. den Rohdatenzeiger oder einen Verweis an das zugrunde liegende Objekt zu übergeben. Ein Übergeben auf diese Weise bietet einen leichten Leistungsvorteil und hilft Ihnen dabei, Ihre Programmierabsicht besser zum Ausdruck zu bringen.
 
-- Manchmal, beispielsweise in einem `std:vector<shared_ptr<T>>`, müssen Sie jeden `shared_ptr` an einen Text eines Lambdaausdrucks oder ein benanntes Funktionsobjekt übergeben. Wenn das Lambda oder die Funktion den Zeiger nicht speichert, übergeben Sie den `shared_ptr` als Verweis, damit der Kopierkonstruktor nicht für jedes Element aufgerufen wird.
+- Manchmal, beispielsweise in einem `std:vector<shared_ptr<T>>`, müssen Sie jeden `shared_ptr` an einen Text eines Lambda-Ausdrucks oder ein benanntes Funktionsobjekt übergeben. Wenn das Lambda oder die Funktion den Zeiger nicht speichert, übergeben Sie den `shared_ptr` als Verweis, damit der Kopierkonstruktor nicht für jedes Element aufgerufen wird.
 
 ## <a name="example-6"></a>Beispiel 6
 

@@ -5,11 +5,11 @@ f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
 ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159859"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -40,7 +40,7 @@ Die Vorlagenfunktion `async` und die Vorlagenklassen `promise` sowie `packaged_t
 
 Jede der Vorlagenklassen `promise`, `future`, und `shared_future` verfügt über eine Spezialisierung für den Typ **"void"** und eine teilweise Spezialisierung für das Speichern und Abrufen eines Werts durch einen Verweis. Diese Spezialisierungen unterscheiden sich von der primären Vorlage nur durch die Signaturen und die Semantik der Funktionen, die den zurückgegebenen Wert speichern und abrufen.
 
-Die Vorlagenklassen `future` und `shared_future` blockieren nie in den Destruktoren, außer in einem Fall, der für Abwärtskompatibilität beibehalten wird: Anders als bei allen anderen Zukunftsereignissen blockiert bei `future` oder dem letzten `shared_future`-Element, das einer Aufgabe angefügt wird, die mit `std::async` gestartet wird, der Destruktor, wenn die Aufgabe noch nicht abgeschlossen wurde. Das bedeutet, er blockiert, wenn `.get()` oder `.wait()` vom Thread noch nicht aufgerufen wurde und die Aufgabe noch ausgeführt wird. Der folgende Hinweis zur Nutzbarkeit wurde der Beschreibung von `std::async` im Normenentwurf hinzugefügt: "[Hinweis: Wenn eine von "std::async" erhaltene Zukunft außerhalb des lokalen Bereichs verschoben wird, muss beim Schreiben von anderem Code, bei dem die Zukunft verwendet wird, beachtet werden, dass der Destruktor de Zukunft möglicherweise blockiert, sodass der Freigabezustand in den Bereitschaftszustand wechseln kann – Ende des Hinweises]". In allen anderen Fällen sind `future` und `shared_future`-Destruktoren erforderlich und blockieren garantiert nie.
+Die Vorlagenklassen `future` und `shared_future` nie-block, in deren Destruktoren, außer in einem Fall, das für die Abwärtskompatibilität beibehalten wird: Im Gegensatz zu anderen Futures für eine `future`– oder das letzte `shared_future`–, die Schritte mit der Aufgabe angefügt wird `std::async`, der Destruktor blockiert, wenn die Aufgabe nicht abgeschlossen wurde; das heißt, er blockiert, wenn dieser Thread nicht aufgerufen wurde `.get()` oder `.wait()`und die Aufgabe noch ausgeführt wird. Benutzerfreundlichkeit wird im folgenden Hinweis wurde in der Beschreibung der `std::async` im Draft Standard: "[Hinweis: Wenn eine Zukunft std::async abgerufenes außerhalb des lokalen Bereichs verschoben wird, muss anderer Code, die die Zukunft verwendet Beachten Sie, dass damit der Freigabezustand bereit. wird die Zukunft der Destruktor blockiert sein – Ende des Hinweises] "In allen anderen Fällen `future` und `shared_future` Destruktoren sind erforderlich und werden garantiert nie blockiert.
 
 ## <a name="members"></a>Member
 
@@ -73,7 +73,7 @@ Die Vorlagenklassen `future` und `shared_future` blockieren nie in den Destrukto
 
 ### <a name="enumerations"></a>Enumerationen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|Liefert symbolische Namen für die von der `future_error`-Klasse ausgegeben Fehler.|
 |[future_status](../standard-library/future-enums.md#future_status)|Liefert symbolische Namen für die Gründe, aus denen eine zeitgesteuerte Wartefunktion eine Rückgabe ausführen kann.|

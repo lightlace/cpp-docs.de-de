@@ -24,11 +24,11 @@ helpviewer_keywords:
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
 ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156303"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -57,7 +57,7 @@ Bei erfolgreichem Abschluss **_msize_dbg** gibt die Größe (in Bytes) des angeg
 
 ## <a name="remarks"></a>Hinweise
 
-**_msize_dbg** ist eine Debugversion der _[Msize](msize.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_msize_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_msize**. Beide **_msize** und **_msize_dbg** berechnen Sie die Größe eines Speicherblocks im Basisheap, jedoch **_msize_dbg** fügt zwei Debugfunktionen: Es schließt die Puffer auf beiden Seiten der Benutzer ermöglicht Teil des Speicherblocks in der zurückgegebenen Größe und größenberechnungen für bestimmte Blocktypen.
+**_msize_dbg** ist eine Debugversion der _[Msize](msize.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_msize_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_msize**. Beide **_msize** und **_msize_dbg** berechnen Sie die Größe eines Speicherblocks im Basisheap, jedoch **_msize_dbg** fügt zwei Debugfunktionen: Es schließt die Puffer auf beiden Seiten des benutzerteils des Speicherblocks, in der zurückgegebenen Größe ein, und ermöglicht größenberechnungen für bestimmte Blocktypen.
 
 Informationen darüber, wie Speicherblöcke in der Debugversion des Basisheaps zugeordnet, initialisiert und verwaltet werden, finden Sie unter [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Belegungsblocktypen und ihrer Verwendung finden Sie unter [Blocktypen auf dem Debugheap](/visualstudio/debugger/crt-debug-heap-details). Informationen zu den Unterschieden zwischen dem Aufruf einer Standardheapfunktion und der Debugversion in einem Debugbuild finden Sie unter [Debugversionen von Heapreservierungsfunktionen](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
