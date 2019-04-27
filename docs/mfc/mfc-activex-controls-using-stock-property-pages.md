@@ -16,11 +16,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
 ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239334"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC-ActiveX-Steuerelemente: Verwenden von vordefinierten Eigenschaftenseiten
 
@@ -33,7 +33,7 @@ Weitere Informationen zur Verwendung von Eigenschaftenseiten in einem ActiveX-St
 
 - [MFC-ActiveX-Steuerelemente: Eigenschaftenseiten](../mfc/mfc-activex-controls-property-pages.md)
 
-- [MFC-ActiveX-Steuerelemente: Hinzufügen einer anderen benutzerdefinierten Eigenschaftenseite](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC-ActiveX-Steuerelemente: Hinzufügen einer weiteren benutzerdefinierten Eigenschaftenseite](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 MFC bietet drei vordefinierten Eigenschaftenseiten für die Verwendung von ActiveX-Steuerelementen: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, und `CLSID_CPicturePropPage`. Diese Seiten wird eine Benutzeroberfläche für die vordefinierten Farbe, Schriftart und Bildeigenschaften, bzw. angezeigt.
 

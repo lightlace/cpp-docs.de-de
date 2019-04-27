@@ -34,11 +34,11 @@ helpviewer_keywords:
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
 ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285698"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -68,7 +68,7 @@ void _wmakepath(
 *path*<br/>
 Vollständiger Pfadpuffer
 
-*Laufwerk*<br/>
+*drive*<br/>
 Enthält einen Buchstaben (A, B usw.) für das gewünschte Laufwerk und einen optionalen nachgestellten Doppelpunkt. **_makepath** fügt den Doppelpunkt automatisch in den zusammengesetzten Pfad, wenn sie nicht vorhanden ist. Wenn *Laufwerk* ist **NULL** oder auf eine leere Zeichenfolge verweist, erscheint kein Laufwerksbuchstabe in die zusammengesetzte *Pfad* Zeichenfolge.
 
 *dir*<br/>

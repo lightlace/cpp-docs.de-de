@@ -10,11 +10,11 @@ helpviewer_keywords:
 - User code, debugging
 - JMC compiler option [C++]
 ms.openlocfilehash: c107ad7107d2a65ed19719933aa127c0557916ce
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291638"
 ---
 # <a name="jmc-just-my-code-debugging"></a>/ JMC (nur mein Code Debuggen)
 
@@ -48,5 +48,5 @@ Weitere Informationen finden Sie unter [C++ nur mein Code](/visualstudio/debugge
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)<br/>

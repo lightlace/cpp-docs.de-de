@@ -33,11 +33,11 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: f6ea1ac49dabbfc34af9c8ddd020543f606d37a4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224141"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt;-Funktionen
 
@@ -213,7 +213,7 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parameter
 
-*Inhalt*<br/>
+*cont*<br/>
 Ein Container.
 
 *array*<br/>
@@ -308,7 +308,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>Parameter
 
-*Inhalt*<br/>
+*cont*<br/>
 Ein Container oder ein initializer_list-Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -341,7 +341,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>Parameter
 
-*Inhalt*<br/>
+*cont*<br/>
 Ein Container oder ein initializer_list-Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -373,7 +373,7 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der erste Iterator, dessen Abstand zum zweiten ermittelt werden soll.
 
 *last*<br/>
@@ -454,7 +454,7 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parameter
 
-*Inhalt*<br/>
+*cont*<br/>
 Ein Container.
 
 *array*<br/>
@@ -630,7 +630,7 @@ Iter Ptr,
 
 ### <a name="parameters"></a>Parameter
 
-*PTR*<br/>
+*Ptr*<br/>
 Ein Zeiger auf das Zielarray.
 
 *Size*<br/>
@@ -740,7 +740,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parameter
 
-*PTR*<br/>
+*Ptr*<br/>
 Ein Zeiger auf das Zielarray.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -817,7 +817,7 @@ InputIterator next(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Die aktuelle Position.
 
 *_Off*<br/>
@@ -844,7 +844,7 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Die aktuelle Position.
 
 *_Off*<br/>

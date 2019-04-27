@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
 ms.openlocfilehash: 393a73fcf31c7c00b2057862792ff0536cc98ad8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212373"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -42,7 +42,7 @@ Die folgenden Funktionen haben systeminterne Formen und die systeminternen Forme
 |[_lrotl](../c-runtime-library/reference/lrotl-lrotr.md)|[_strset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|[memset](../c-runtime-library/reference/memset-wmemset.md)||
 |[_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|[strcat](../c-runtime-library/reference/strcat-wcscat-mbscat.md)||
 
-Programme, die intrinsische Funktionen verwenden, sind schneller, da sie nicht den Mehraufwand der Funktionsaufrufe haben, sie können aufgrund des zusätzlich erstellten Codes jedoch größer sein.
+Programme, die systeminterne Funktionen verwenden, sind schneller, da sie nicht den Mehraufwand der Funktionsaufrufe haben, sie können aufgrund des zusätzlich erstellten Codes jedoch größer sein.
 
 **X86 bestimmte**
 

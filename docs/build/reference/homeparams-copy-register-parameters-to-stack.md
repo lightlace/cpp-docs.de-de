@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -homeparams compiler option [C++]
 ms.assetid: 51067de4-24f7-436b-b8d9-bc867a7d53aa
 ms.openlocfilehash: a1f9269c7deae6c9ae2e4f198006ad09dd37abc3
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57820662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291417"
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/homeparams (Registerparameter in den Stapel kopieren)
 
@@ -46,5 +46,5 @@ In Debugbuilds wird der Stapel immer mit Parametern in Registern übergeben aufg
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

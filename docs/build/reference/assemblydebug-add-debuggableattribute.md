@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ASSEMBLYDEBUG linker option
 ms.assetid: 94443af3-470c-41d7-83a0-7434563d7982
 ms.openlocfilehash: b9899ea76b7a23a0d09442fca01e7d968c5e8aa6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273091"
 ---
 # <a name="assemblydebug-add-debuggableattribute"></a>/ASSEMBLYDEBUG (DebuggableAttribute hinzufügen)
 
@@ -78,5 +78,5 @@ Andere Optionen des Linkers, die Generierung der Zielassembly betreffen sind:
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 [MSVC-Linkeroptionen](linker-options.md)

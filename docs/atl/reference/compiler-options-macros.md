@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278422"
 ---
 # <a name="compiler-options-macros"></a>Compileroptionen-Makros
 
@@ -115,7 +115,7 @@ Definieren Sie dieses Makro, um die Verwendung der ANSI C++-Standard-kompatible 
 
 Der ATL und MFC-Bibliotheken wurden geändert, um Visual C++-Compilers verbesserte C++ Kompatibilität mit dem standard entsprechen. Entsprechend dem ANSI C++-Standard, muss die Syntax eines Zeigers auf eine Klassenmemberfunktion `&CMyClass::MyFunc`.
 
-Wenn [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) ist nicht definiert (der Standardfall), deaktiviert ATL-/MFC den C4867 Fehler in den Makro-Zuordnungen (insbesondere meldungszuordnungen) an, sodass der Code, der in früheren Versionen erstellt wurde, erstellen Sie wie zuvor fortgesetzt werden kann. Wenn Sie definieren **_ATL_ENABLE_PTM_WARNING**, Ihr Code sollte die C++-Standard kompatibel sein.
+Wenn [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) ist nicht definiert (der Standardfall), deaktiviert ATL-/MFC den C4867 Fehler in den Makro-Zuordnungen (insbesondere meldungszuordnungen) an, sodass der Code, der in früheren Versionen erstellt wurde, erstellen Sie wie zuvor fortgesetzt werden kann. Wenn Sie definieren **_ATL_ENABLE_PTM_WARNING**, Ihr Code muss C++ Standard kompatibel.
 
 Allerdings wurde nicht standardmäßigen Form als veraltet markiert, damit Sie vorhandenen Code in C++-konforme Standardsyntax verschieben müssen. Z. B. Folgendes:
 

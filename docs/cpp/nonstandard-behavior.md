@@ -7,11 +7,11 @@ helpviewer_keywords:
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
 ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245373"
 ---
 # <a name="nonstandard-behavior"></a>Nicht dem Standard entsprechendes Verhalten
 
@@ -21,7 +21,7 @@ Die Liste der Compiler-Grenzen, die von den in der C++-Standard definierten abwe
 
 ## <a name="covariant-return-types"></a>Kovariante Rückgabetypen
 
-Virtuelle Basisklassen werden nicht als Covariant-Rückgabetypen unterstützt, wenn die virtuelle Funktion eine variable Anzahl von Argumenten hat. Dies entspricht nicht Abschnitt 10.3, Absatz 7 der C++ ISO-Spezifikation. Im folgende Beispiel wird nicht kompiliert, sodass Compilerfehler [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
+Virtuelle Basisklassen werden nicht als kovariante Rückgabetypen unterstützt, wenn die virtuelle Funktion eine variable Anzahl von Argumenten hat. Dies entspricht nicht Abschnitt 10.3, Absatz 7 der C++ ISO-Spezifikation. Im folgende Beispiel wird nicht kompiliert, sodass Compilerfehler [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
 
 ```cpp
 // CovariantReturn.cpp
@@ -75,7 +75,7 @@ Weitere Informationen zu Ausnahmespezifikationen finden Sie unter [Ausnahmespezi
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-Der C++-Standard gibt an, dass [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) muss nicht entsprechen, die eine gültige `char_type` Wert. Visual C++-Compiler erzwingt diese Einschränkung für Typ **Char**, jedoch nicht für Typ **"wchar_t"**. Dies entspricht nicht der Anforderung in Tabelle 62, in Abschnitt 12.1.1 der C++ ISO-Spezifikation. Das unten gezeigte Beispiel veranschaulicht dies.
+Die C++ -Standard gibt an, die [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) muss nicht entsprechen, die eine gültige `char_type` Wert. Das visuelle Element C++ Compiler erzwingt diese Einschränkung für Typ **Char**, jedoch nicht für Typ **"wchar_t"**. Dies entspricht nicht der Anforderung in Tabelle 62, in Abschnitt 12.1.1 der C++ ISO-Spezifikation. Das unten gezeigte Beispiel veranschaulicht dies.
 
 ```cpp
 #include <iostream>

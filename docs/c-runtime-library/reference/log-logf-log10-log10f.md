@@ -1,5 +1,5 @@
 ---
-title: Log, Logf, Logl, log10, log10f, log10l
+title: log, logf, logl, log10, log10f, log10l
 ms.date: 04/05/2018
 apiname:
 - log10f
@@ -41,13 +41,13 @@ helpviewer_keywords:
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
 ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286011"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>Log, Logf, Logl, log10, log10f, log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
 Berechnet die Logarithmen.
 
@@ -80,9 +80,9 @@ Die **Log** Funktionen geben den natürlichen Logarithmus (Basis *e*) der *x* be
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± QNAN, SUCHEN|Keine|_DOMAIN|
+|± QNAN, IND|none|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
-|*X* < 0|INVALID|_DOMAIN|
+|*x* < 0|INVALID|_DOMAIN|
 
 **Log** und **log10** eine Implementierung, Streaming SIMD Extensions 2 (SSE2) verwendet, haben. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
 
@@ -94,7 +94,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von aufrufen können *
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Log**, **Logf**, **Logl**, **log10**, **log10f**, **log10l**|\<math.h>|
+|**log**, **logf**, **logl**, **log10**, **log10f**, **log10l**|\<math.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

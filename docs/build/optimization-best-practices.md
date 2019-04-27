@@ -6,11 +6,11 @@ helpviewer_keywords:
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
 ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274169"
 ---
 # <a name="optimization-best-practices"></a>Bewährte Vorgehensweisen für die Optimierung
 
@@ -93,7 +93,7 @@ Außerdem steht mit `#pragma inline_depth` ein nützliches Pragma zur Beschränk
 
 ## <a name="restrict-and-assume"></a>__restrict und \__assume
 
-Es gibt eine Reihe von Schlüsselwörtern in Visual C++, die Leistung verbessert werden kann: ["__restrict"](../cpp/extension-restrict.md) und [__assume](../intrinsics/assume.md).
+Es gibt eine Reihe von Schlüsselwörtern in Visual C++ , mit denen Leistung: ["__restrict"](../cpp/extension-restrict.md) und [__assume](../intrinsics/assume.md).
 
 Zuerst muss darauf hingewiesen werden, dass es sich bei `__restrict` und `__declspec(restrict)` um zwei verschiedene Elemente handelt. Obwohl sie gewisse Gemeinsamkeiten aufweisen, unterscheidet sich ihre Semantik. `__restrict` ist ein Typqualifizierer, wie `const` oder `volatile`, wird aber ausschließlich für Zeigertypen eingesetzt.
 
@@ -107,7 +107,7 @@ Mit `__assume`, Entwickler kann den Compiler anweisen, Annahmen über den Wert e
 
 Beispielsweise teilt `__assume(a < 5);` dem Compiler mit, dass in dieser Zeile des Codes die Variable `a` kleiner als 5 ist. Auch dies ist eine Zusage für den Compiler. Wenn `a` an dieser Stelle im Programm 6 ist, entspricht das Verhalten des Programms nach der Optimierung des Compilers möglicherweise nicht Ihren Erwartungen. `__assume` ist vor Switch-Anweisungen und/oder bedingten Ausdrücken sehr nützlich.
 
-Für `__assume` gelten einige Beschränkungen. Es handelt sich hierbei genau wie bei `__restrict` nur um einen Vorschlag, der vom Compiler ggf. ignoriert werden kann. Zum anderen funktioniert `__assume` derzeit nur mit Ungleichungen aus Variablen und Konstanten. Ungleichungen mit Symbolen werden nicht weitergegeben, beispielsweise "assume(a < b)".
+Für `__assume` gelten einige Beschränkungen. Es handelt sich hierbei genau wie bei `__restrict` nur um einen Vorschlag, der vom Compiler ggf. ignoriert werden kann. Zum anderen funktioniert `__assume` derzeit nur mit Ungleichungen aus Variablen und Konstanten. Werden nicht weitergegeben Ungleichungen, z. B. Assume(a < b).
 
 ## <a name="intrinsic-support"></a>Unterstützung für systeminterne Funktionen
 

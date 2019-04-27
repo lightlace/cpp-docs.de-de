@@ -24,11 +24,11 @@ helpviewer_keywords:
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
 ms.openlocfilehash: bf26e4f7b7fb4f0334b57604fe5c4996312bd62a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286305"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -55,11 +55,11 @@ Thousands_sep,<br/>_W_thousands_sep|Zeiger auf ein Zeichen trennt Gruppen von Zi
 Gruppieren|Zeiger auf eine **Char**-Größe ganze Zahl, die Größe der einzelnen Gruppen von Ziffern in nichtmonetären Mengen enthält.
 Int_curr_symbol,<br/>_W_int_curr_symbol|Zeiger auf das internationale Währungssymbol für das aktuelle Gebietsschema. Die ersten drei Zeichen geben das alphabetische internationale Währungssymbol an, wie im Standard *ISO 4217 – Codes für die Darstellung der Währung und Fonds* definiert. Das vierte Zeichen (unmittelbar vorausgehendes Zeichen NULL) trennt das internationale Währungssymbol von der monetären Menge.
 Currency_symbol,<br/>_W_currency_symbol|Zeiger auf das lokale Währungssymbol für das aktuelle Gebietsschema.
-Mon_decimal_point,<br/>_W_mon_decimal_point|Zeiger auf die Dezimalstelle Zeichen für den monetären Mengen.
-Mon_thousands_sep,<br/>_W_mon_thousands_sep|Zeiger auf das Trennzeichen für Gruppen von Ziffern links von der Dezimalstelle in monetären Mengen.
+mon_decimal_point,<br/>_W_mon_decimal_point|Zeiger auf die Dezimalstelle Zeichen für den monetären Mengen.
+mon_thousands_sep,<br/>_W_mon_thousands_sep|Zeiger auf das Trennzeichen für Gruppen von Ziffern links von der Dezimalstelle in monetären Mengen.
 mon_grouping|Zeiger auf eine **Char**-Größe ganze Zahl, die Größe der einzelnen Gruppen von Ziffern in monetären Mengen enthält.
-Positive_sign,<br/>_W_positive_sign|Die Zeichenfolge, die das Zeichen für nicht negative monetären Mengen angibt.
-Negative_sign,<br/>_W_negative_sign|Die Zeichenfolge, die das Zeichen für negative monetären Mengen angibt.
+positive_sign,<br/>_W_positive_sign|Die Zeichenfolge, die das Zeichen für nicht negative monetären Mengen angibt.
+negative_sign,<br/>_W_negative_sign|Die Zeichenfolge, die das Zeichen für negative monetären Mengen angibt.
 int_frac_digits|Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in international formatierten monetären Mengen.
 frac_digits|Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in formatierten monetären Mengen.
 p_cs_precedes|Auf 1 festgelegt, wenn dem Währungssymbol ein Wert für eine nicht negative, formatierte monetäre Menge vorangeht. Auf 0 festgelegt, wenn das Symbol einem Wert folgt.

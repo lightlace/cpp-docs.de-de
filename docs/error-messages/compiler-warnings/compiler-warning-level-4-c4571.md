@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
 ms.openlocfilehash: 92164bf297a44871897b6c6150eb54f8c5ccf3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62220454"
 ---
 # <a name="compiler-warning-level-4-c4571"></a>Compilerwarnung (Stufe 4) C4571
 
@@ -29,7 +29,7 @@ Sie können in einem der folgenden Arten C4571 behoben haben,
 
 - Aktivieren Sie C4571 nicht, wenn Sie nicht möchten, dass Ihre catch(...)-Blöcke zum Abfangen von strukturierter Ausnahmen, aber dennoch catch(...)-Blöcke verwenden möchten.  Sie können weiterhin abfangen, strukturierte Ausnahmen, die die strukturierte Ausnahmebehandlung Schlüsselwörter (**__try**, **__except**, und **__finally**).  Beachten Sie jedoch, dass kompiliert **/EHs** Destruktoren werden nur aufgerufen werden, wenn eine C++-Ausnahme ausgelöst wird, nicht verwendet werden, wenn SEH-Ausnahmen,.
 
-- Ersetzen Sie catch(...) Block mit Catch-Blöcke für bestimmte C++-Ausnahmen aus, und fügen Sie optional auf die die C++-Ausnahmebehandlung die strukturierte Ausnahmebehandlung hinzu (**__try**, **__except**, und **_ __identifier**).  Finden Sie unter [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) für Weitere Informationen.
+- Catch(...) Block aus, ersetzen Sie dies durch Catch-Blöcke für bestimmte C++ Ausnahmen, und fügen Sie optional für die strukturierten Ausnahmebehandlung das C++ Ausnahmebehandlung (**__try**, **__except**, und **__finally**).  Finden Sie unter [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) für Weitere Informationen.
 
 Finden Sie unter [/EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md) für Weitere Informationen.
 
