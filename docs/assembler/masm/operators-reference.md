@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
 ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210813"
 ---
 # <a name="masm-operators-reference"></a>MASM-Operatoren – Referenz
 
@@ -19,7 +19,7 @@ ms.locfileid: "50430458"
 ||||
 |-|-|-|
 |[* (Multiplikation)](operator-multiply.md)|[+ (Addition)](operator-add.md)|[-(Subtraktion oder Negation)](operator-subtract-2.md)|
-|[. (Feld)](operator-dot.md)|[/ (Division)](operator-subtract-1.md)|[&#91;&#93;(Index)](operator-brackets.md)|
+|[. (Feld)](operator-dot.md)|[/ (Division)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
 |[Modulo (Rest)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>Ablaufsteuerung
@@ -65,7 +65,7 @@ ms.locfileid: "50430458"
 
 ||||
 |-|-|-|
-|[EQ (gleich)](operator-eq.md)|[GE (größer oder gleich)](operator-ge.md)|[GT (größer als)](operator-gt.md)|
+|[EQ (equal)](operator-eq.md)|[GE (größer oder gleich)](operator-ge.md)|[GT (größer als)](operator-gt.md)|
 |[LE (kleiner oder gleich)](operator-le.md)|[LT (kleiner als)](operator-lt.md)|[NE (ungleich)](operator-ne.md)|
 
 ## <a name="segment"></a>Segment

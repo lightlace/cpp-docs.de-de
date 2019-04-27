@@ -22,11 +22,11 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
 ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270951"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Aufrufkonvention)
 
@@ -41,7 +41,7 @@ Mit diesen Optionen wird festgelegt, in welcher Reihenfolge die Funktionsargumen
 
 ## <a name="remarks"></a>Hinweise
 
-**/ GD**, die Standardeinstellung gibt an, die [__cdecl](../../cpp/cdecl.md) -Aufrufkonvention für alle Funktionen außer C++-Memberfunktionen, Funktionen und Funktionen, die markiert sind [__stdcall](../../cpp/stdcall.md), [__ Fastcall](../../cpp/fastcall.md), oder [__vectorcall](../../cpp/vectorcall.md).
+**/ GD**, die Standardeinstellung gibt an, die [__cdecl](../../cpp/cdecl.md) -Aufrufkonvention für alle Funktionen außer C++ Memberfunktionen und Funktionen, die markiert sind [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md), oder [__vectorcall](../../cpp/vectorcall.md).
 
 **/ Gr** gibt an, die `__fastcall` -Aufrufkonvention für alle Funktionen außer C++-Memberfunktionen, mit dem Namen Funktionen `main`, Funktionen, die markiert sind und `__cdecl`, `__stdcall`, oder `__vectorcall`. Alle `__fastcall` -Funktionen müssen Prototypen aufweisen. Diese Aufrufkonvention ist nur in Compilern verfügbar, die auf x86 abzielen, und wird von Compilern ignoriert, die auf andere Architekturen abzielen.
 
@@ -54,7 +54,7 @@ Funktionen, die eine variable Anzahl von Argumenten akzeptieren, müssen mit `__
 **/ GD**, **/Gr**, **/GV** und **/GZ** sind nicht kompatibel mit [/CLR: safe](clr-common-language-runtime-compilation.md) oder   **/CLR: pure**. Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
 
 > [!NOTE]
-> Standardmäßig für X86 Prozessoren C++-Memberfunktionen verwenden [__thiscall](../../cpp/thiscall.md).
+> Standardmäßig für X86 Prozessoren C++ Memberfunktionen [__thiscall](../../cpp/thiscall.md).
 
 Für alle Prozessoren verwendet eine Memberfunktion, die explizit als `__cdecl`, `__fastcall`, `__vectorcall` oder `__stdcall` gekennzeichnet ist, die angegebene Aufrufkonvention, wenn diese nicht auf dieser Architektur ignoriert wird. Eine Memberfunktion, die eine variable Anzahl von Argumenten zulässt, verwendet immer die Aufrufkonvention `__cdecl`.
 
@@ -111,5 +111,5 @@ Für C die `__vectorcall` -Benennungskonvention den Funktionsnamen, gefolgt von 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [MSVC-Compiler-Optionen](compiler-options.md)
-- [MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+- [MSVC-Compileroptionen](compiler-options.md)
+- [Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

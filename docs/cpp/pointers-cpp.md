@@ -1,5 +1,5 @@
 ---
-title: Zeiger (C++)
+title: Pointers (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarators, pointers
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 ms.openlocfilehash: a258a71b8b89643ee98785ee9dfbf30cdf128db7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223065"
 ---
-# <a name="pointers-c"></a>Zeiger (C++)
+# <a name="pointers-c"></a>Pointers (C++)
 
 Zeiger werden mithilfe der folgenden Sequenz deklariert.
 
-> \[*Speicherklassenspezifizierer*] \[ *cv-Qualifizierer*] *-Typspezifizierer* \[ *ms-Modifizierer*]  *Deklarator* **;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* **;**
 
 Wo beliebiger gültiger zeigerdeklarator für verwendet werden dürfen *Deklarator*. Die Syntax für einen einfachen Zeigerdeklarator lautet wie folgt:
 

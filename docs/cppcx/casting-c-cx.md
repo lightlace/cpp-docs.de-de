@@ -3,15 +3,15 @@ title: Umwandlung von Typen (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
 ms.openlocfilehash: 65d489d14c91b462e5a2bbe8bd60fce2657904a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258212"
 ---
 # <a name="casting-ccx"></a>Umwandlung von Typen (C++/CX)
 
-Vier verschiedene Umwandlungsoperatoren von Windows-Runtime-Typen: [Static_cast-Operator](../cpp/static-cast-operator.md), [Dynamic_cast-Operator](../cpp/dynamic-cast-operator.md), **Safe_cast Operator**, und [ Reinterpret_cast-Operator](../cpp/reinterpret-cast-operator.md). **Safe_cast** und **"static_cast"** eine Ausnahme ausgelöst wird, wenn die Konvertierung kann nicht ausgeführt werden; [Static_cast-Operator](../cpp/static-cast-operator.md) führt auch die typüberprüfung zur Kompilierzeit. **Dynamic_cast** gibt **"nullptr"** bei einem Fehler, den Typ zu konvertieren. Obwohl **"reinterpret_cast"** gibt einen Wert ungleich Null, es ist möglicherweise ungültig. Aus diesem Grund wird empfohlen, dass Sie nicht verwenden, **"reinterpret_cast"** , wenn Sie wissen, dass die Umwandlung erfolgreich ist. Darüber hinaus wird empfohlen, dass Sie in Ihrem C + keine C-stilartige Umwandlungen verwenden c++ / CX zu code, da sie identisch sind **"reinterpret_cast"**.
+Vier verschiedene Umwandlungsoperatoren von Windows-Runtime-Typen: [Static_cast-Operator](../cpp/static-cast-operator.md), [Dynamic_cast-Operator](../cpp/dynamic-cast-operator.md), **Safe_cast Operator**, und [ Reinterpret_cast-Operator](../cpp/reinterpret-cast-operator.md). **Safe_cast** und **"static_cast"** eine Ausnahme ausgelöst wird, wenn die Konvertierung kann nicht ausgeführt werden; [Static_cast-Operator](../cpp/static-cast-operator.md) führt auch die typüberprüfung zur Kompilierzeit. **Dynamic_cast** gibt **"nullptr"** bei einem Fehler, den Typ zu konvertieren. Obwohl **"reinterpret_cast"** gibt einen Wert ungleich Null, es ist möglicherweise ungültig. Aus diesem Grund wird empfohlen, dass Sie nicht verwenden, **"reinterpret_cast"** , wenn Sie wissen, dass die Umwandlung erfolgreich ist. Darüber hinaus sollten Sie keine C-stilartige Umwandlungen in Ihre C++/CX zu code, da sie identisch sind **"reinterpret_cast"**.
 
 Der Compiler und die Laufzeit führen ebenfalls implizite Umwandlungen aus – beispielsweise bei Boxingvorgängen, wenn ein Werttyp oder ein integrierter Datentyp als Argumente an eine Methode mit dem Parametertyp `Object^`übergeben werden. Theoretisch sollte eine implizite Umwandlung zur Laufzeit nie Ausnahmen verursachen. Wenn der Compiler eine implizite Konvertierung nicht ausführen kann, löst dies einen Fehler zur Kompilierzeit aus.
 
@@ -123,4 +123,4 @@ Die folgende Tabelle enthält die Fälle, in dem gefahrlos verwenden **"reinterp
 
 - [Typsystem](../cppcx/type-system-c-cx.md)
 - [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
-- [Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)
+- [Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)

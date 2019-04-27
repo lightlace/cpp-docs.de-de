@@ -8,17 +8,17 @@ helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
 ms.openlocfilehash: fc5a32fedf52377889b61103856e2125733cd696
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266781"
 ---
 # <a name="thiscall"></a>__thiscall
 
 **Microsoft-spezifisch**
 
-Die **__thiscall** -Aufrufkonvention wird für Memberfunktionen verwendet und ist die Standardaufrufkonvention, die von C++-Memberfunktionen, die keine Variablen Argumente verwenden, verwendet. Klicken Sie unter **__thiscall**, der aufgerufene entleert den Stapel, handelt es sich nicht `vararg` Funktionen. Argumente werden von rechts nach links, auf dem Stapel abgelegt, mit der **dies** Zeiger übergeben wird, über das Register "ECX" und nicht auf dem Stapel, auf die X86 Architektur.
+Die **__thiscall** Aufrufkonvention wird für Memberfunktionen verwendet und ist der Standardwert ein, die Aufrufkonvention C++ Memberfunktionen, die keine Variablen Argumente verwenden. Klicken Sie unter **__thiscall**, der aufgerufene entleert den Stapel, handelt es sich nicht `vararg` Funktionen. Argumente werden von rechts nach links, auf dem Stapel abgelegt, mit der **dies** Zeiger übergeben wird, über das Register "ECX" und nicht auf dem Stapel, auf die X86 Architektur.
 
 Ein Grund für die Verwendung **__thiscall** ist in Klassen, deren Memberfunktionen `__clrcall` standardmäßig. In diesem Fall können Sie **__thiscall** auf einzelne Member von systemeigenem Code funktioniert.
 

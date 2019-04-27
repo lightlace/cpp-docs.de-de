@@ -8,11 +8,11 @@ helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
 ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224089"
 ---
 # <a name="ltiteratorgt"></a>&lt;Iterator&gt;
 
@@ -40,7 +40,7 @@ Iteratoren sind eine Verallgemeinerung von Zeigern. Die Anforderungen werden so 
 
 Iteratoren mit höheren Anforderungen und besserem Zugriff auf Elemente können anstelle von Iteratoren mit geringeren Anforderungen verwendet werden. Wird beispielsweise ein Forward-Iterator aufgerufen, kann stattdessen auch ein Random-Access-Iterator verwendet werden.
 
-Visual Studio besitzt zusätzliche Erweiterungen für C++-Standardbibliotheksiteratoren, um eine Vielzahl von Debugmodussituationen für aktivierte und nicht aktivierte Iteratoren zu unterstützen. Weitere Informationen finden Sie unter [Sichere Bibliotheken: C++-Standardbibliothek](../standard-library/safe-libraries-cpp-standard-library.md).
+Visual Studio besitzt zusätzliche Erweiterungen für C++-Standardbibliotheksiteratoren, um eine Vielzahl von Debugmodussituationen für aktivierte und nicht aktivierte Iteratoren zu unterstützen. Weitere Informationen finden Sie unter [sichere Bibliotheken: C++Standard-Bibliothek](../standard-library/safe-libraries-cpp-standard-library.md).
 
 ### <a name="functions"></a>Funktionen
 
@@ -55,9 +55,9 @@ Visual Studio besitzt zusätzliche Erweiterungen für C++-Standardbibliotheksite
 |[end](../standard-library/iterator-functions.md#end)|Ruft einen Iterator für das Element ab, das auf das letzte Element im angegebenen Container folgt.|
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|Damit wird ein Iterator erstellt, mit dem Elemente an den Anfang eines bestimmten Containers eingefügt werden können.|
 |[inserter](../standard-library/iterator-functions.md#inserter)|Ein Iterator-Adapter, mit dem einem Container an einem bestimmten Punkt ein neues Element hinzugefügt wird.|
-|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Erstellt ein [checked_array_iterator](../standard-library/checked-array-iterator-class.md)-Objekt, das von anderen Algorithmen verwendet werden kann. **Hinweis:** Bei dieser Funktion handelt es sich um eine Microsoft-Erweiterung der C++-Standardbibliothek. Der Code, der mit dieser Funktion implementiert wird, ist nicht auf C++-Standardbuildumgebungen übertragbar, die die Microsoft-Erweiterung nicht unterstützen.|
+|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Erstellt einen [checked_array_iterator](../standard-library/checked-array-iterator-class.md), der von anderen Algorithmen verwendet werden kann. **Hinweis**:  Bei dieser Funktion handelt es sich um eine Microsoft-Erweiterung der C++-Standardbibliothek. Der Code, der mit dieser Funktion implementiert wird, ist nicht auf C++-Standardbuildumgebungen übertragbar, die die Microsoft-Erweiterung nicht unterstützen.|
 |[make_move_iterator](../standard-library/iterator-functions.md#make_move_iterator)|Gibt einen Move-Iterator zurück, der den bereitgestellten Iterator als gespeicherten Basis-Iterator enthält.|
-|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Erstellt ein [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)-Objekt, das von anderen Algorithmen verwendet werden kann. **Hinweis:** Bei dieser Funktion handelt es sich um eine Microsoft-Erweiterung der C++-Standardbibliothek. Der Code, der mit dieser Funktion implementiert wird, ist nicht auf C++-Standardbuildumgebungen übertragbar, die die Microsoft-Erweiterung nicht unterstützen.|
+|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Erstellt ein [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)-Objekt, das von anderen Algorithmen verwendet werden kann. **Hinweis**:  Bei dieser Funktion handelt es sich um eine Microsoft-Erweiterung der C++-Standardbibliothek. Der Code, der mit dieser Funktion implementiert wird, ist nicht auf C++-Standardbuildumgebungen übertragbar, die die Microsoft-Erweiterung nicht unterstützen.|
 |[next](../standard-library/iterator-functions.md#next)|Führt eine bestimmte Anzahl von Iterationen aus und gibt die neue Position des Iterators zurück.|
 |[prev](../standard-library/iterator-functions.md#prev)|Führt eine bestimmte Anzahl von Iterationen rückwärts aus und gibt die neue Position des Iterators zurück.|
 
@@ -80,7 +80,7 @@ Visual Studio besitzt zusätzliche Erweiterungen für C++-Standardbibliotheksite
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Die Vorlagenklasse beschreibt einen Output-Iterator. Er fügt Elemente an, in einen Container des Typs `Container`, der Zugriff erfolgt über das geschützte `pointer` -Objekt namens Container.|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp für eine eine `iterator_category` -Funktion, die einen bidirektionalen Iterator darstellt.|
-|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Eine Klasse, die auf ein Array mit einem Iterator vom Typ "Random-Access, Checked" zugreift. **Hinweis:** Bei dieser Klasse handelt es sich um eine Microsoft-Erweiterung der C++-Standardbibliothek. Der Code, der mit dieser Funktion implementiert wird, ist nicht auf C++-Standardbuildumgebungen übertragbar, die die Microsoft-Erweiterung nicht unterstützen.|
+|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Eine Klasse, die auf ein Array mit einem Iterator vom Typ "Random-Access, Checked" zugreift. **Hinweis**:  Bei dieser Klasse handelt es sich um eine Microsoft-Erweiterung der C++-Standardbibliothek. Der Code, der mit dieser Funktion implementiert wird, ist nicht auf C++-Standardbuildumgebungen übertragbar, die die Microsoft-Erweiterung nicht unterstützen.|
 |[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp für eine eine `iterator_category` -Funktion, die einen forward-Iterator darstellt.|
 |[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|Die Vorlagenklasse beschreibt einen Output-Iterator. Er fügt Elemente an, in einen Container des Typs `Container`, der Zugriff erfolgt über das geschützte `pointer` -Objekt namens Container.|
 |[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp für eine eine `iterator_category` -Funktion, die einen eingabeiterator darstellt.|
@@ -95,7 +95,7 @@ Visual Studio besitzt zusätzliche Erweiterungen für C++-Standardbibliotheksite
 |[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp für eine `iterator_category` -Funktion, die einen Ausgabeiterator darstellt.|
 |[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp für eine `iterator_category` -Funktion, die einen random-Access-Iterator darstellt.|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das sich wie ein Random-Access-Iterator verhält, nur in umgekehrter Reihenfolge.|
-|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Eine Klasse, die auf ein Array mit einem Iterator vom Typ "Random-Access, Unchecked" zugreift. **Hinweis:** Bei dieser Klasse handelt es sich um eine Microsoft-Erweiterung der C++-Standardbibliothek. Der Code, der mit dieser Funktion implementiert wird, ist nicht auf C++-Standardbuildumgebungen übertragbar, die die Microsoft-Erweiterung nicht unterstützen.|
+|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Eine Klasse, die auf ein Array mit einem Iterator vom Typ "Random-Access, Unchecked" zugreift. **Hinweis**:  Bei dieser Klasse handelt es sich um eine Microsoft-Erweiterung der C++-Standardbibliothek. Der Code, der mit dieser Funktion implementiert wird, ist nicht auf C++-Standardbuildumgebungen übertragbar, die die Microsoft-Erweiterung nicht unterstützen.|
 
 ## <a name="see-also"></a>Siehe auch
 

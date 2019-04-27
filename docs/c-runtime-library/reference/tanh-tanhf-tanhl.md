@@ -1,5 +1,5 @@
 ---
-title: Tanh, Tanhf, tanhl
+title: tanh, tanhf, tanhl
 ms.date: 04/10/2018
 apiname:
 - tanh
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258316"
 ---
-# <a name="tanh-tanhf-tanhl"></a>Tanh, Tanhf, tanhl
+# <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
 Berechnet den hyperbolischen Tangens.
 
@@ -65,7 +65,7 @@ Die **Tanh** Funktionen geben den hyperbolischen Tangens *x*. Es gibt keine Fehl
 
 |Eingabe|SEH-Ausnahme|**Matherr** Ausnahme|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|Keine|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -75,7 +75,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Tanh** 
 
 |-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C)|
 |-------------|---------------------|-|
-|**Tanh**, **Tanhf**, **Tanhl**|\<math.h>|\<cmath> oder \<math.h>|
+|**tanh**, **tanhf**, **tanhl**|\<math.h>|\<cmath> oder \<math.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

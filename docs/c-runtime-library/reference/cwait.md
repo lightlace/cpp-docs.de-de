@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
 ms.openlocfilehash: f7a49497ac71ec15261e1215bd2bbed2e49f42ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288783"
 ---
 # <a name="cwait"></a>_cwait
 
@@ -54,8 +54,8 @@ Zeiger auf einen Puffer, in dem der Ergebniscode des angegebenen Prozesses gespe
 *procHandle*<br/>
 Das Handle für den Prozess auf die gewartet (d. h. den Prozess, der vor dem Beenden **_cwait** zurückgeben kann).
 
-*Aktion*<br/>
-NULL = Von Anwendungen für Windows-Betriebssystems ignoriert. für andere Anwendungen: Code für die Aktion auszuführenden *ProcHandle*.
+*action*<br/>
+NULL: Von Anwendungen für Windows-Betriebssystems ignoriert. für andere Anwendungen: Code für die Aktion auszuführenden *ProcHandle*.
 
 ## <a name="return-value"></a>Rückgabewert
 

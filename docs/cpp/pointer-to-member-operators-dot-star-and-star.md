@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
 ms.openlocfilehash: 60dad0e3134662957ee21396d330af795e80918e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267662"
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>Pointer-to-Member-Operatoren:. * "und" -&gt;*
 
@@ -80,7 +80,7 @@ m_func1
 
 Im vorherigen Beispiel wird ein Zeiger auf einen Member, `pmfn` verwendet, um die Memberfunktion `m_func1` aufzurufen. Mit einem weiteren Zeiger auf einen Member, `pmd`, erfolgt der Zugriff auf den `m_num`-Member.
 
-Der binäre Operator. * kombiniert den ersten Operanden, der ein Objekt des Klassentyps sein muss, mit dem zweiten Operanden, der vom Typ „Pointer-to-Member“ sein muss.
+Der binäre Operator. * kombiniert den ersten Operanden, der ein Objekt des Klassentyps sein muss, mit dem zweiten Operanden, der ein "Pointer-to-Member"-Typ sein muss.
 
 Der binäre Operator -> * kombiniert den ersten Operanden, der sein muss ein Zeiger auf ein Objekt vom Typ der Klasse, mit dem zweiten Operanden, der einen Zeiger-auf-Member-Typ sein muss.
 

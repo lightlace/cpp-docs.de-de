@@ -28,11 +28,11 @@ f1_keywords:
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
 ms.openlocfilehash: dcf1eca5b163c8553b43d747d53537ec424a793c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269188"
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -105,8 +105,8 @@ Ein *Leerzeichen* besteht möglicherweise aus Leerzeichen und Tabulatorzeichen, 
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Strtold**, **_strtold_l**|\<stdlib.h>|
-|**Wcstold**, **_wcstold_l**|\<stdlib.h> oder \<wchar.h>|
+|**strtold**, **_strtold_l**|\<stdlib.h>|
+|**wcstold**, **_wcstold_l**|\<stdlib.h> oder \<wchar.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

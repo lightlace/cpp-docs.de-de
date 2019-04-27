@@ -11,15 +11,15 @@ helpviewer_keywords:
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
 ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195315"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportieren aus einer DLL mithilfe von "__declspec(dllexport)"
 
-Microsoft eingeführte **__export** der 16-Bit-Compilerversion von Visual C++, damit der Compiler die Exportnamen automatisch generieren und diese in einer LIB-Datei. Diese LIB-Datei kann dann wie eine statische LIB-Datei zur Verknüpfung mit einer DLL verwendet werden.
+Microsoft eingeführte **__export** in der 16-Bit-Compiler-Version von Visual C++ , damit der Compiler die Exportnamen automatisch generieren und diese in einer LIB-Datei. Diese LIB-Datei kann dann wie eine statische LIB-Datei zur Verknüpfung mit einer DLL verwendet werden.
 
 In neueren Compilerversionen können Sie Daten, Funktionen, Klassen oder Memberfunktionen von Klassen exportieren, aus einer DLL mithilfe der **__declspec(dllexport)** Schlüsselwort. **__declspec(dllexport)** der Objektdatei die Exportdirektive hinzugefügt, damit Sie nicht benötigen, verwenden Sie eine DEF-Datei.
 
@@ -68,7 +68,7 @@ Zu Referenzzwecken können Sie die Win32-Headerdatei Winbase.h durchsuchen. Es e
 
 - [Bestimmen Sie die Exportmethode verwendet werden](determining-which-exporting-method-to-use.md)
 
-- [Importieren Sie in eine Anwendung mithilfe von "__declspec(dllimport)" "](importing-into-an-application-using-declspec-dllimport.md)
+- [Importieren in eine Anwendung mithilfe von __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Initialisieren einer DLL](run-time-library-behavior.md#initializing-a-dll)
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
 ms.openlocfilehash: 473a838a48ed6523ce78d0bc8128dd83636c81d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267375"
 ---
 # <a name="safebuffers"></a>safebuffers
 
@@ -30,7 +30,7 @@ __declspec( safebuffers )
 
 Die **/GS** -Compileroption bewirkt, dass der Compiler Pufferüberläufe zu testen, indem sicherheitsüberprüfungen im Stapel eingefügt. Die Typen der Datenstrukturen, die für sicherheitsüberprüfungen freigegeben sind, werden in beschrieben [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md). Weitere Informationen zur pufferüberlauferkennung finden Sie unter [Sicherheitsfunktionen in MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).
 
-Ein fachmännischer manueller Codereview oder eine externe Analyse kann bestimmen, dass eine Funktion vor einem Pufferüberlauf sicher ist. In diesem Fall können Sie sicherheitsüberprüfungen für eine Funktion unterdrücken, indem Sie die Anwendung die **__declspec(safebuffers)** Schlüsselwort, um die Funktionsdeklaration.
+Ein fachmännischer manueller Code Review oder eine fachmännische manuelle externe Analyse kann bestimmen, dass eine Funktion vor einem Pufferüberlauf sicher ist. In diesem Fall können Sie sicherheitsüberprüfungen für eine Funktion unterdrücken, indem Sie die Anwendung die **__declspec(safebuffers)** Schlüsselwort, um die Funktionsdeklaration.
 
 > [!CAUTION]
 >  Puffer-Sicherheitsüberprüfungen bieten wichtige Sicherheit und haben eine geringfügige Auswirkung auf die Leistung. Daher empfiehlt es sich, sie nicht zu unterdrücken, außer in dem seltenen Fall, in dem die Leistung einer Funktion ein wichtiger Aspekt ist und die Funktion bekanntermaßen sicher ist.

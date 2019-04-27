@@ -43,11 +43,11 @@ helpviewer_keywords:
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
 ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285771"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -108,7 +108,7 @@ Wenn erfolgreich, wird der gerundete Integralwert von *x*.
 
 |Problem|Zurück|
 |-----------|------------|
-|*X* liegt außerhalb des Bereichs des Rückgabetyps<br /><br /> *X* ±∞ =<br /><br /> *X* = NaN|Löst **FE_INVALID** und gibt Sie 0 (null) zurück.|
+|*X* liegt außerhalb des Bereichs des Rückgabetyps<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Löst **FE_INVALID** und gibt Sie 0 (null) zurück.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -116,13 +116,13 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Lrint**
 
 Wenn *x* stellt keinen dar. die entsprechende Gleitkommazahl eines integralwerts, diese Funktionen lösen **FE_INEXACT**.
 
-**Microsoft-spezifisch**: Wenn das Ergebnis außerhalb des Bereichs des Rückgabetyps ist oder wenn der Parameter NaN oder unendlich ist, ist der Rückgabewert von der Implementierung abhängig. Der Microsoft-Compiler gibt den Wert 0 (null) zurück.
+**Microsoft-spezifisch**: Wenn das Ergebnis außerhalb des Bereichs des Rückgabetyps ist oder wenn der Parameter NaN oder unendlich ist, ist der Rückgabewert Implementierung definiert. Der Microsoft-Compiler gibt den Wert 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
-|**Lrint**, **Lrintf**, **Lrintl**, **Llrint**, **Llrintf**, **Llrintl**|\<math.h>|\<cmath>|
+|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

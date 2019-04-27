@@ -99,11 +99,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
 ms.openlocfilehash: 2e3cd31ada54d1569cb7e5344ab471108b625558
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222961"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 
@@ -146,7 +146,7 @@ Der Typ der Komponente zusätzliche eines Elements in der kontrollierten Sequenz
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Cliext/Hash_map >
+**Header:** \<cliext/hash_map>
 
 **Namespace:** Cliext
 
@@ -252,7 +252,7 @@ Löschen oder Entfernen eines Elements Ruft den Destruktor für ihren gespeicher
 
 ## <a name="members"></a>Member
 
-## <a name="begin"></a> hash_multimap:: begin (STL/CLR)
+## <a name="begin"></a> hash_multimap::begin (STL/CLR)
 
 Legt den Anfang der kontrollierten Sequenz fest.
 
@@ -377,7 +377,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="clear"></a> hash_multimap:: Clear (STL/CLR)
+## <a name="clear"></a> hash_multimap::clear (STL/CLR)
 
 Entfernt alle Elemente.
 
@@ -435,7 +435,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="const_iterator"></a> hash_multimap:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> hash_multimap::const_iterator (STL/CLR)
 
 Der Typ eines konstanten Iterators für die gesteuerte Sequenz.
 
@@ -477,7 +477,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reference"></a> hash_multimap:: const_reference (STL/CLR)
+## <a name="const_reference"></a> hash_multimap::const_reference (STL/CLR)
 
 Der Typ eines konstanten Verweises auf ein Element.
 
@@ -522,7 +522,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reverse_iterator"></a> hash_multimap:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> hash_multimap::const_reverse_iterator (STL/CLR)
 
 Der Typ eines Konstanten umgekehrten Iterators für die gesteuerte Sequenz...
 
@@ -564,7 +564,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> hash_multimap:: Count (STL/CLR)
+## <a name="count"></a> hash_multimap::count (STL/CLR)
 
 Sucht die Anzahl von Elementen, die einem angegebenen Schlüssel entsprechen.
 
@@ -617,7 +617,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> hash_multimap:: difference_type (STL/CLR)
+## <a name="difference_type"></a> hash_multimap::difference_type (STL/CLR)
 
 Die Typen des Abstands zwischen den beiden Elementen mit Vorzeichen.
 
@@ -672,7 +672,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> hash_multimap:: Empty (STL/CLR)
+## <a name="empty"></a> hash_multimap::empty (STL/CLR)
 
 Testet, ob keine Elemente vorhanden sind.
 
@@ -724,7 +724,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> hash_multimap:: End (STL/CLR)
+## <a name="end"></a> hash_multimap::end (STL/CLR)
 
 Legt das Ende der kontrollierten Sequenz fest.
 
@@ -777,7 +777,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="equal_range"></a> hash_multimap:: equal_range (STL/CLR)
+## <a name="equal_range"></a> hash_multimap::equal_range (STL/CLR)
 
 Sucht den Bereich, der einem angegebenen Schlüssel entspricht.
 
@@ -838,7 +838,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="erase"></a> hash_multimap:: Erase (STL/CLR)
+## <a name="erase"></a> hash_multimap::erase (STL/CLR)
 
 Entfernt Elemente an den angegebenen Positionen.
 
@@ -852,7 +852,7 @@ bool erase(key_type key)
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang des zu löschenden Bereichs.
 
 *key*<br/>
@@ -931,7 +931,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="find"></a> hash_multimap:: Find (STL/CLR)
+## <a name="find"></a> hash_multimap::find (STL/CLR)
 
 Sucht ein Element, das einem angegebenen Schlüssel entspricht.
 
@@ -1259,7 +1259,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multimap"></a> hash_multimap:: hash_multimap (STL/CLR)
+## <a name="hash_multimap"></a> hash_multimap::hash_multimap (STL/CLR)
 
 Erstellt ein container-Objekt.
 
@@ -1288,7 +1288,7 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang des Bereichs, der eingefügt.
 
 *hashfn*<br/>
@@ -1502,7 +1502,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="hasher"></a> hash_multimap::Hasher (STL/CLR)
+## <a name="hasher"></a> hash_multimap::hasher (STL/CLR)
 
 Der Hashalgorithmus Delegat für einen Schlüssel.
 
@@ -1541,7 +1541,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_multimap:: Insert (STL/CLR)
+## <a name="insert"></a> hash_multimap::insert (STL/CLR)
 
 Fügt Elemente hinzu.
 
@@ -1557,7 +1557,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang des Bereichs, der eingefügt.
 
 *last*<br/>
@@ -1659,7 +1659,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="iterator"></a> hash_multimap:: Iterator (STL/CLR)
+## <a name="iterator"></a> hash_multimap::iterator (STL/CLR)
 
 Der Typ eines Iterators für die gesteuerte Sequenz.
 
@@ -1701,7 +1701,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> hash_multimap:: key_comp (STL/CLR)
+## <a name="key_comp"></a> hash_multimap::key_comp (STL/CLR)
 
 Kopiert der Delegat für zwei Schlüssel.
 
@@ -1760,7 +1760,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_multimap:: key_compare (STL/CLR)
+## <a name="key_compare"></a> hash_multimap::key_compare (STL/CLR)
 
 Der Delegat für zwei Schlüssel.
 
@@ -1820,7 +1820,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> hash_multimap:: KEY_TYPE (STL/CLR)
+## <a name="key_type"></a> hash_multimap::key_type (STL/CLR)
 
 Der Typ eines Sortierschlüssels.
 
@@ -1939,7 +1939,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="lower_bound"></a> hash_multimap:: lower_bound (STL/CLR)
+## <a name="lower_bound"></a> hash_multimap::lower_bound (STL/CLR)
 
 Sucht den Anfang des Bereichs, der einem angegebenen Schlüssel entspricht.
 
@@ -2013,7 +2013,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 Schlüssel-Wert verwenden.
 
-*zugeordnet*<br/>
+*mapped*<br/>
 Zugeordnet zu suchenden Wert an.
 
 ### <a name="remarks"></a>Hinweise
@@ -2047,7 +2047,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> hash_multimap:: mapped_type (STL/CLR)
+## <a name="mapped_type"></a> hash_multimap::mapped_type (STL/CLR)
 
 Der Typ eines zugeordneten Werts, der jedem Schlüssel zugeordnet ist.
 
@@ -2174,7 +2174,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op"></a> hash_multimap::Operator = (STL/CLR)
+## <a name="op"></a> hash_multimap::operator= (STL/CLR)
 
 Ersetzt die kontrollierte Sequenz.
 
@@ -2229,7 +2229,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rbegin"></a> hash_multimap:: rbegin (STL/CLR)
+## <a name="rbegin"></a> hash_multimap::rbegin (STL/CLR)
 
 Legt den Anfang der umgekehrten kontrollierten Sequenz fest.
 
@@ -2280,7 +2280,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="reference"></a> hash_multimap:: Reference (STL/CLR)
+## <a name="reference"></a> hash_multimap::reference (STL/CLR)
 
 Der Typ eines Verweises auf ein Element.
 
@@ -2325,7 +2325,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rehash"></a> hash_multimap::Rehash (STL/CLR)
+## <a name="rehash"></a> hash_multimap::rehash (STL/CLR)
 
 Erstellt die Hashtabelle neu.
 
@@ -2399,7 +2399,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="rend"></a> hash_multimap:: rend (STL/CLR)
+## <a name="rend"></a> hash_multimap::rend (STL/CLR)
 
 Legt das Ende der umgekehrten kontrollierten Sequenz fest.
 
@@ -2452,7 +2452,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="reverse_iterator"></a> hash_multimap:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> hash_multimap::reverse_iterator (STL/CLR)
 
 Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.
 
@@ -2494,7 +2494,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="size"></a> hash_multimap:: Size (STL/CLR)
+## <a name="size"></a> hash_multimap::size (STL/CLR)
 
 Ermittelt die Anzahl von Elementen.
 
@@ -2546,7 +2546,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> hash_multimap:: size_type (STL/CLR)
+## <a name="size_type"></a> hash_multimap::size_type (STL/CLR)
 
 Der Typ eines Abstands zwischen den beiden Elementen mit Vorzeichen.
 
@@ -2594,7 +2594,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_multimap:: Swap (STL/CLR)
+## <a name="swap"></a> hash_multimap::swap (STL/CLR)
 
 Vertauscht den Inhalt von zwei Containern.
 
@@ -2712,7 +2712,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="upper_bound"></a> hash_multimap:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> hash_multimap::upper_bound (STL/CLR)
 
 Sucht das Ende des Bereichs, der einem angegebenen Schlüssel entspricht.
 
@@ -2771,7 +2771,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="value_comp"></a> hash_multimap:: value_comp (STL/CLR)
+## <a name="value_comp"></a> hash_multimap::value_comp (STL/CLR)
 
 Kopiert der Delegat für zwei Elementwerte.
 
@@ -2866,7 +2866,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> hash_multimap:: value_type (STL/CLR)
+## <a name="value_type"></a> hash_multimap::value_type (STL/CLR)
 
 Der Typ eines Elements.
 

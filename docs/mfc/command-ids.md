@@ -6,11 +6,11 @@ helpviewer_keywords:
 - command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
 ms.openlocfilehash: 76071105e72f1ca4a851b9cdb76d5f1a96f44edb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219891"
 ---
 # <a name="command-ids"></a>Befehls-IDs
 
@@ -18,7 +18,7 @@ Ein Befehl ist vollständig mit der Befehls-ID, die allein beschrieben (in codie
 
 Z. B. ein Element alle löschen, in dem Menü "Bearbeiten" möglicherweise eine ID wie folgt zugewiesen werden **ID_EDIT_CLEAR_ALL**. Die Class-Bibliothek verfügt über vordefinierte einige IDs, insbesondere für Befehle, die das Framework selbst, wie z. B. verarbeitet **ID_EDIT_CLEAR_ALL** oder **ID_FILE_OPEN**. Sie werden andere Befehls-IDs selbst erstellen.
 
-Wenn Sie Ihre eigenen Menüs Menü-Editor in der Visual C++ erstellen, es ist eine gute Idee, die Klassenbibliothek folgen der Namenskonvention wie dargestellt **ID_FILE_OPEN**. [Standardbefehle](../mfc/standard-commands.md) erläutert die standardmäßigen Befehle, die von der Klassenbibliothek definiert.
+Bei der Erstellung Ihrer eigenen Menüs in der Visualisierung C++ Menü-Editor, es ist eine gute Idee, die Klassenbibliothek folgen der Namenskonvention wie dargestellt **ID_FILE_OPEN**. [Standardbefehle](../mfc/standard-commands.md) erläutert die standardmäßigen Befehle, die von der Klassenbibliothek definiert.
 
 ## <a name="see-also"></a>Siehe auch
 

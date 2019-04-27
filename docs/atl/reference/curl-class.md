@@ -36,11 +36,11 @@ helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
 ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277252"
 ---
 # <a name="curl-class"></a>CUrl-Klasse
 
@@ -189,7 +189,7 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 Die URL.
 
 *dwFlags*<br/>
-Geben Sie ATL_URL_DECODE oder ATL_URL_ESCAPE, um alle Escapezeichen in konvertieren *LpszUrl* auf die tatsächlichen Werte nach der Analyse. (Vor Visual C++ 2005 konvertiert ATL_URL_DECODE alle Escape-Zeichen vor der Analyse.)
+Geben Sie ATL_URL_DECODE oder ATL_URL_ESCAPE, um alle Escapezeichen in konvertieren *LpszUrl* auf die tatsächlichen Werte nach der Analyse. (Vor Visual C++ 2005 ATL_URL_DECODE konvertiert alle Escapezeichen vor der Analyse.)
 
 ### <a name="return-value"></a>Rückgabewert
 

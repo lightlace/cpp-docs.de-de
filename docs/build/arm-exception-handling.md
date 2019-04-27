@@ -3,11 +3,11 @@ title: ARM-Ausnahmebehandlung
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
 ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195354"
 ---
 # <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
@@ -479,7 +479,7 @@ Epilogue:
 
    - *Anpassen von Stack* = 3 (0x0C/4 =)
 
-### <a name="example-3-nested-variadic-function"></a>Beispiel 3: Geschachtelte Variadic-Funktion
+### <a name="example-3-nested-variadic-function"></a>Beispiel 3: Geschachtelte Variadic-Funktion
 
 ```asm
 Prologue:

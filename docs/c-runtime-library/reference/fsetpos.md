@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
 ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287572"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -44,15 +44,15 @@ int fsetpos(
 
 ### <a name="parameters"></a>Parameter
 
-*Stream*<br/>
+*stream*<br/>
 Zeiger auf die **FILE**-Struktur.
 
-*POS*<br/>
+*pos*<br/>
 Speicher des Positionsindikators
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall **Fsetpos** gibt 0 zurück. Bei einem Fehler, die Funktion gibt einen Wert ungleich NULL zurück und legt **Errno** auf eine der folgenden Manifestkonstanten, die (definiert in ERRNO. H): **EBADF**, was bedeutet die Datei kann nicht zugegriffen werden oder das Objekt, das *Stream* verweist, ist keine gültige Dateistruktur hat; oder **EINVAL**, was bedeutet, dass einen ungültigen Wert für *Stream* oder *pos* übergeben wurde. Wenn ein ungültiger Parameter übergeben wird, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird.
+Im Erfolgsfall **Fsetpos** gibt 0 zurück. Bei einem Fehler, die Funktion gibt einen Wert ungleich NULL zurück und legt **Errno** auf eine der folgenden Manifestkonstanten, die (definiert in ERRNO. H): **EBADF**, das bedeutet, dass die Datei kann nicht zugegriffen werden oder das Objekt, das *Stream* verweist, ist keine gültige Dateistruktur hat; oder **EINVAL**, was bedeutet, dass einen ungültigen Wert für *Stream*  oder *pos* übergeben wurde. Wenn ein ungültiger Parameter übergeben wird, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben wird.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

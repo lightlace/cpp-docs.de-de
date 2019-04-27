@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
 ms.openlocfilehash: 34fb3e16dc7369526895a011c7e192d2f51edf14
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278552"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset-Klasse
 
@@ -209,7 +209,7 @@ class unordered_multiset;
 |[max_bucket_count](#max_bucket_count)|Ruft die maximale Anzahl von Buckets ab.|
 |[max_load_factor](#max_load_factor)|Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.|
 |[max_size](#max_size)|Ruft die maximale Größe der gesteuerten Sequenz ab.|
-|[Rehash-](#rehash)|Erstellt die Hashtabelle neu.|
+|[rehash](#rehash)|Erstellt die Hashtabelle neu.|
 |[size](#size)|Ermittelt die Anzahl von Elementen.|
 |[swap](#swap)|Vertauscht den Inhalt von zwei Containern.|
 |[unordered_multiset](#unordered_multiset)|Erstellt ein container-Objekt.|
@@ -350,7 +350,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*<br/>
+*keyval*<br/>
 Der zuzuordnende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -851,7 +851,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*<br/>
+*keyval*<br/>
 Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -1159,7 +1159,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*<br/>
+*keyval*<br/>
 Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -1264,7 +1264,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*<br/>
+*keyval*<br/>
 Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -2440,7 +2440,7 @@ unordered_multiset(
 |*Al*|Das zu speichernde Zuweisungsobjekt.|
 |*Comp*|Das zu speichernde Vergleichsfunktionsobjekt.|
 |*Hash*|Das zu speichernde Hashfunktionsobjekt.|
-|*Bucket_count-Wert*|Die Mindestanzahl von Buckets.|
+|*Bucket_count*|Die Mindestanzahl von Buckets.|
 |*Rechts*|Der zu kopierende Container.|
 |*IList*|Das initializer_list-Element, aus dem kopiert werden soll.|
 

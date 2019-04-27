@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
 ms.openlocfilehash: d8fb8ca56932669ff85646f2aa0c10691122013b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245021"
 ---
 # <a name="one39s-complement-operator-"></a>Eine&#39;s Komplementoperator: ~
 
@@ -27,7 +27,7 @@ ms.locfileid: "50469777"
 
 ## <a name="remarks"></a>Hinweise
 
-Der Einerkomplementoperator (`~`), der manchmal als „bitweiser Komplementoperator“ bezeichnet wird, ergibt eine bitweise Einerkomplement seines Operanden. Das bedeutet, dass jedes Bit, das 1 im Operanden ist, 0 im Ergebnis ist. Umgekehrt ist jedes Bit, das 0 im Operanden ist, im Ergebnis 1. Der Operand für den Einerkomplementoperator muss ein ganzzahliger Typ sein.
+Der Einerkomplementoperator (`~`), der manchmal als "bitweiser Komplementoperator" bezeichnet wird, ergibt eine bitweise Einerkomplement seines Operanden. Das bedeutet, dass jedes Bit, das 1 im Operanden ist, 0 im Ergebnis ist. Umgekehrt ist jedes Bit, das 0 im Operanden ist, im Ergebnis 1. Der Operand für den Einerkomplementoperator muss ein ganzzahliger Typ sein.
 
 ## <a name="operator-keyword-for-"></a>Operator-Schlüsselwort für ~
 

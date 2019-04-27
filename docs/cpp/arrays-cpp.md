@@ -7,11 +7,11 @@ helpviewer_keywords:
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
 ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184507"
 ---
 # <a name="arrays-c"></a>Arrays (C++)
 
@@ -19,8 +19,8 @@ Ein Array ist eine Auflistung von gleichen Objekten. Der einfachste Fall eines A
 
 > *Decl-Specifiers* *Bezeichner* **\[** *Konstantenausdruck* **]**<br/>
 > *Decl-Specifiers* *Bezeichner*  **\[]**<br/>
-> *Decl-Specifiers* *Bezeichner* **\[]\[** *Konstantenausdruck* **]** . . .<br/>
-> *Decl-Specifiers* *Bezeichner* **\[** *Konstantenausdruck* **]** **\[** *Konstantenausdruck* **]** . . .
+> *Decl-Specifiers* *Bezeichner* **\[]\[** *Konstantenausdruck* **]** . sein. sein.<br/>
+> *Decl-Specifiers* *Bezeichner* **\[** *Konstantenausdruck* **]** **\[** *Konstantenausdruck* **]** . sein. sein.
 
 1. Der Deklarationsbezeichner:
 

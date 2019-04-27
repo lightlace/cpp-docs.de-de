@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
 ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212412"
 ---
 # <a name="bssseg"></a>bss_seg
 
@@ -39,7 +39,7 @@ Gibt das Segment an, in dem nicht initialisierte Variablen in der OBJ-Datei gesp
 *"Segment-Name"*<br/>
 (Optional) Der Name eines Segments. Bei Verwendung mit **pop**, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.
 
-*"Segment-Class"*<br/>
+*"segment-class"*<br/>
 (Optional) Für die Kompatibilität mit C++ vor Version 2.0 enthalten. Wird ignoriert.
 
 ## <a name="remarks"></a>Hinweise

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - -DELAY linker option
 ms.assetid: 9334b332-cc58-4dae-b10f-a4c75972d50c
 ms.openlocfilehash: d3c32ba04cbad509ff2819020a35102698d6ceb3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272125"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (Laden von Importeinstellungen verzögern)
 
@@ -56,5 +56,5 @@ Verwenden Sie zum Angeben von DLLs, um das verzögerte Laden der [/DELAYLOAD](de
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 [MSVC-Linkeroptionen](linker-options.md)

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
 ms.openlocfilehash: c5854fd1255ab509d8778828de25638dd821d74b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272831"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Kommentare bei der Vorverarbeitung beibehalten)
 
@@ -64,8 +64,8 @@ int i;   // a variable
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)<br/>
 [/E (In StdOut vorverarbeiten)](e-preprocess-to-stdout.md)<br/>
 [/P (In einer Datei vorverarbeiten)](p-preprocess-to-a-file.md)<br/>
 [/EP (In StdOut ohne #line-Anweisungen vorverarbeiten)](ep-preprocess-to-stdout-without-hash-line-directives.md)

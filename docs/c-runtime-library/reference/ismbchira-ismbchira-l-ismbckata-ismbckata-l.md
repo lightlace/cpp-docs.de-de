@@ -41,11 +41,11 @@ helpviewer_keywords:
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
 ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286732"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -93,10 +93,10 @@ Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, a
 
 |-Routine zurückgegebener Wert|Testbedingung (nur Codepage 932)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Doppelbyte Hiragana: 0x829F < =*c*< = 0x82F1.|
-|**_ismbchira_l**|Doppelbyte Hiragana: 0x829F < =*c*< = 0x82F1.|
-|**_ismbckata**|Doppelbyte Katakana: 0 x 8340 < =*c*< = 0 x 8396.|
-|**_ismbckata_l**|Doppelbyte Katakana: 0 x 8340 < =*c*< = 0 x 8396.|
+|**_ismbchira**|Doppelbyte-Hiragana-Zeichen: 0x829F<=*c*<=0x82F1.|
+|**_ismbchira_l**|Doppelbyte-Hiragana-Zeichen: 0x829F<=*c*<=0x82F1.|
+|**_ismbckata**|Doppelbyte-Katakana-Zeichen: 0x8340<=*c*<=0x8396.|
+|**_ismbckata_l**|Doppelbyte-Katakana-Zeichen: 0x8340<=*c*<=0x8396.|
 
 **Ende der Codepage 932 (spezifisch)**
 

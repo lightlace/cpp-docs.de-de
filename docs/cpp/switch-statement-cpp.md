@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
 ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267088"
 ---
 # <a name="switch-statement-c"></a>switch-Anweisung (C++)
 
@@ -106,7 +106,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): eine Switch-Anweisung kann einführen und initialisieren Sie eine Variable, deren Bereich auf den Block der Switch-Anweisung beschränkt ist:
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)):  Eine Switch-Anweisung kann einführen und initialisieren eine Variable, deren Bereich auf den Block der Switch-Anweisung beschränkt ist:
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())

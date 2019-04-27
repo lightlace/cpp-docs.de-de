@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Page directive
 ms.assetid: 6654c094-c1f7-4d10-8d9d-902ddd1ac27e
 ms.openlocfilehash: 0295cd05412045049944f118a42e0cd7a8c0e268
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210602"
 ---
 # <a name="page"></a>PAGE
 
@@ -19,7 +19,7 @@ Die erste Anweisung legt die Zeile *Länge* und Zeichen *Breite* neben dem Eintr
 
 ## <a name="syntax"></a>Syntax
 
-> Seite "[[*Länge*]] [[, *Breite*]]<br/><br/>
+> PAGE [[*length*]][[, *width*]]<br/><br/>
 > SEITE +
 
 ## <a name="see-also"></a>Siehe auch

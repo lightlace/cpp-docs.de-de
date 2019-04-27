@@ -3,11 +3,11 @@ title: /HIGHENTROPYVA (Unterstützung für 64-Bit ASLR)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
 ms.openlocfilehash: 5ecbbf8bbd8e74f80f2f5b2d7df0d2ef544112fc
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291599"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (Unterstützung für 64-Bit ASLR)
 
@@ -35,7 +35,7 @@ Für **/highentropyva** wirksam zur Ladezeit [/DynamicBase](dynamicbase-use-addr
 
 ## <a name="see-also"></a>Siehe auch
 
-- [MSVC-Linker-Referenz](linking.md)
+- [MSVC-Linkerreferenz](linking.md)
 - [MSVC-Linkeroptionen](linker-options.md)
 - [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
 - [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
