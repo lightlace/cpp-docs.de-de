@@ -26,11 +26,11 @@ helpviewer_keywords:
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
 ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288249"
 ---
 # <a name="ecvts"></a>_ecvt_s
 
@@ -65,7 +65,7 @@ Wird mit dem Zeiger auf die Zeichenfolge mit Ziffern aufgefüllt, die sich aus d
 *_SizeInBytes*<br/>
 Größe des Puffers in Byte.
 
-*"_Value"*<br/>
+*_Value*<br/>
 Zu konvertierende Zahl.
 
 *_Count*<br/>
@@ -74,7 +74,7 @@ Anzahl der gespeicherten Ziffern.
 *_Dec*<br/>
 Gespeicherte Position der Dezimalstelle.
 
-*_Signieren*<br/>
+*_Sign*<br/>
 Vorzeichen der konvertierten Zahl.
 
 ## <a name="return-value"></a>Rückgabewert

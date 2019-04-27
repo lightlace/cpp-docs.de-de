@@ -6,17 +6,17 @@ helpviewer_keywords:
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
 ms.openlocfilehash: 561d6cb41ca066f5a2435b4eb1e8710ccaa99ea1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62248939"
 ---
 # <a name="atl-classes-and-structs"></a>ATL-Klassen und Strukturen
 
 Die Active Template Library (ATL) umfasst die folgenden Klassen und Strukturen. Um eine bestimmte Klasse nach Kategorien suchen zu können, finden Sie unter den [ATL-Klassenübersicht](../../atl/atl-class-overview.md).
 
-|Klasse / Struktur|Beschreibung|Headerdatei|
+|Klasse / Struktur|Beschreibung|Header-Datei|
 |-----------|-----------------|-----------------|
 |[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|Enthält Informationen, die für das Rendering an verschiedene Ziele, z. B. einen Drucker, Metadatei oder ActiveX-Steuerelement verwendet.|atlctl.h|
 |[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|Enthält Daten von Klasseninstanzen Windowing-Code in ATL|atlbase.h|

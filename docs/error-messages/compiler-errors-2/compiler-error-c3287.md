@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
 ms.openlocfilehash: ab0b93aa1a74ea79515e24ef2b1e289cf0227dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222676"
 ---
 # <a name="compiler-error-c3287"></a>Compilerfehler C3287
 
@@ -19,7 +19,7 @@ Der Typ 'Typ' (Rückgabetyp von 'GetEnumerator') muss eine passende öffentliche
 
 Benutzerdefinierte Auflistungsklassen müssen Definitionen für `MoveNext` und `Current`enthalten.
 
-Weitere Informationen finden Sie unter [Gewusst wie: Durchlaufen einer benutzerdefinierten Auflistung mit der for-each-Klausel](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) .
+Weitere Informationen finden Sie unter [How to: Wiederholen Sie den Vorgang Over a User-Defined-Sammlung mit für die einzelnen](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) für Weitere Informationen.
 
 ## <a name="example"></a>Beispiel
 

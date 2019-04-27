@@ -7,11 +7,11 @@ helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
 ms.openlocfilehash: f37be47b92a71e20821cd1e40f8cf1350dfedaff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210374"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -20,7 +20,7 @@ Definiert ein Programm Segment namens *Namen* müssen der Segment-Attribute
 ## <a name="syntax"></a>Syntax
 
 > *Namen* SEGMENT [[schreibgeschützt]] [[*ausrichten*]] [[*kombinieren*]] [[*verwenden*]] [[*Merkmale*]] ALIAS (*Zeichenfolge*) [['*Klasse*']]<br/>
-> *Anweisungen*<br/>
+> *statements*<br/>
 > *Namen* endet
 
 #### <a name="parameters"></a>Parameter
@@ -40,17 +40,17 @@ Der Bereich der Speicheradressen, die von denen die Startadresse für das Segmen
 Wenn dieser Parameter nicht angegeben ist, **PARA** wird standardmäßig verwendet.
 
 *combine*<br/>
-**Öffentliche**, **STACK**, **allgemeine**, **Arbeitsspeicher**, **am**<em>Adresse</em>, **PRIVATE**
+**PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT**<em>address</em>, **PRIVATE**
 
-*Verwendung*<br/>
+*use*<br/>
 **USE16**, **USE32**, **FLATFILE**
 
-*Merkmale*<br/>
+*characteristics*<br/>
 **INFO**, **lesen**, **schreiben**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, und **verwerfen**
 
 Diese werden nur für COFF-Format unterstützt, und die Merkmale für COFF-Abschnitt von ähnlichen Namen entsprechen (z. B. **SHARED** IMAGE_SCN_MEM_SHARED entspricht). Lesen legt das Flag IMAGE_SCN_MEM_READ fest. Das veraltete READONLY-Flag verursacht Abschnitt, um die IMG_SCN_MEM_WRITE-Flag zu deaktivieren. Wenn alle *Merkmale* festgelegt sind, werden die Standardeigenschaften nicht verwendet werden und nur die Programmierer angegebenen Flags sind gültig.
 
-`ALIAS(` *Zeichenfolge* `)`<br/>
+`ALIAS(` *string* `)`<br/>
 Diese Zeichenfolge wird als der Name des Abschnitts in der ausgegebenen COFF-Objekt verwendet.  Erstellt mehrere Abschnitte mit den gleichen externen Namen mit unterschiedlichen Namen von MASM-Segment an.
 
 Nicht unterstützt, die mit **"/ OMF"**.

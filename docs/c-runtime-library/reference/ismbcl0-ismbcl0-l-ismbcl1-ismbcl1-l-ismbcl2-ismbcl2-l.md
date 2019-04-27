@@ -49,11 +49,11 @@ helpviewer_keywords:
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
 ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286629"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -108,12 +108,12 @@ Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas
 
 |-Routine zurückgegebener Wert|Testbedingung (nur Codepage 932)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS, nicht Kanji: 0 x 8140 < =*c*< = 0x889E.|
-|**_ismbcl0_l**|JIS, nicht Kanji: 0 x 8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|JIS, Ebene 1: 0x889F < =*c*< = 0 x 9872.|
-|**_ismbcl1_l**|JIS, Ebene 1: 0x889F < =*c*< = 0 x 9872.|
-|**_ismbcl2**|JIS, Ebene 2: 0x989F < =*c*< = 0xEAA4.|
-|**_ismbcl2_l**|JIS, Ebene 2: 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl0**|JIS Nicht-Kanji: 0x8140<=*c*<=0x889E.|
+|**_ismbcl0_l**|JIS Nicht-Kanji: 0x8140<=*c*<=0x889E.|
+|**_ismbcl1**|JIS-Bereich 1: 0x889F<=*c*<=0x9872.|
+|**_ismbcl1_l**|JIS-Bereich 1: 0x889F<=*c*<=0x9872.|
+|**_ismbcl2**|JIS-Bereich 2: 0x989F<=*c*<=0xEAA4.|
+|**_ismbcl2_l**|JIS-Bereich 2: 0x989F<=*c*<=0xEAA4.|
 
 Die Funktionen überprüfen, ob der angegebene Wert *c* Übereinstimmungen testbedingungen oben beschriebenen, jedoch nicht überprüft, *c* ein gültiges Multibytezeichen ist. Wenn das untere Byte in den Bereichen 0x00–0x3F, 0x7F oder 0xFD–0xFF liegt, geben diese Funktionen einen Wert ungleich 0 (null) zurück. Dies gibt an, dass das Zeichen die Testbedingung erfüllt. Verwenden Sie [_ismbbtrail](ismbbtrail-ismbbtrail-l.md), um zu prüfen, ob das Multibytezeichen definiert ist.
 

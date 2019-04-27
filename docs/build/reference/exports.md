@@ -7,11 +7,11 @@ helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
 ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271345"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -51,7 +51,7 @@ EXPORTS
    func2=other_module.#42
 ```
 
-Da der MSVC-Compiler die namensergänzung für C++-Funktionen verwendet, müssen Sie entweder den ergänzten Namen verwenden *Internal_name* oder definieren Sie die exportierten Funktionen mithilfe von `extern "C"` im Quellcode. Der Compiler ergänzt auch C-Funktionen, mit denen die [__stdcall](../../cpp/stdcall.md) -Aufrufkonvention mit einem Unterstrich (\_) Präfix und einem Suffix bestehen die at-Zeichen (\@) gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Argumentliste.
+Da der MSVC-Compiler die namensergänzung für verwendet C++ -Funktionen müssen Sie entweder die ergänzten Namen verwenden *Internal_name* oder definieren Sie die exportierten Funktionen mithilfe von `extern "C"` im Quellcode. Der Compiler ergänzt auch C-Funktionen, mit denen die [__stdcall](../../cpp/stdcall.md) -Aufrufkonvention mit einem Unterstrich (\_) Präfix und einem Suffix bestehen die at-Zeichen (\@) gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Argumentliste.
 
 Um die vom Compiler erzeugten, ergänzten Namen zu suchen, verwenden die [DUMPBIN](dumpbin-reference.md) Tool oder den Linker [/MAP](map-generate-mapfile.md) Option. Die ergänzten Namen sind compilerspezifisch. Wenn Sie die ergänzten Namen in der .DEF-Datei exportieren, müssen die ausführbaren Dateien, die zur DLL verknüpfen, ebenfalls mit derselben Version des Compilers erstellt werden. Damit wird sichergestellt, dass die ergänzten Namen im Aufrufer den exportierten Namen in der .DEF-Datei entsprechen.
 

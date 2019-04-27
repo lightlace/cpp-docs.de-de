@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: fec3884dff0dda7140f18fa53e493c12996edcf0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255499"
 ---
 # <a name="function-inlining-problems"></a>Probleme bei Inlinefunktionen
 
@@ -24,7 +24,7 @@ Wenn Sie Inlinefunktionen verwenden, müssen Sie folgende Schritte ausführen:
 
 - Haben inlining in der Headerdatei aktiviert.
 
-```
+```cpp
 // LNK2019_function_inline.cpp
 // compile with: /c
 // post-build command: lib LNK2019_function_inline.obj
@@ -39,7 +39,7 @@ void _load_config_used::Test() { printf("in Test\n"); }
 
 und anschließend
 
-```
+```cpp
 // LNK2019_function_inline_2.cpp
 // compile with: LNK2019_function_inline.lib
 struct _load_config_used {
@@ -60,7 +60,7 @@ Das Kombinieren von Inline- und nicht Kompilierungsoptionen auf verschiedene Mod
 
 Auf ähnliche Weise definiert ein Projekt, verwendet der inlineersetzung, noch die Funktionen in einer CPP-Datei anstelle Datei in der Kopfzeile auch LNK2019 erhält. Die Header-Datei enthalten ist überall als geeignet, aber die Funktionen sind nur inline, wenn die CPP-Datei durch den Compiler; übergibt aus diesem Grund wird der Linker die Funktionen als nicht aufgelöste externe bei der Verwendung in anderen Modulen angezeigt.
 
-```
+```cpp
 // LNK2019_FIP.h
 struct testclass {
    void PublicStatMemFunc1(void);
@@ -69,7 +69,7 @@ struct testclass {
 
 Und dann
 
-```
+```cpp
 // LNK2019_FIP.cpp
 // compile with: /c
 #include "LNK2019_FIP.h"
@@ -78,7 +78,7 @@ inline void testclass::PublicStatMemFunc1(void) {}
 
 Und dann
 
-```
+```cpp
 // LNK2019_FIP_2.cpp
 // compile with: LNK2019_FIP.cpp
 // LNK2019 expected

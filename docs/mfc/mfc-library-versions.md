@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238501"
 ---
 # <a name="mfc-library-versions"></a>MFC-Bibliotheksversionen
 
@@ -85,7 +85,7 @@ MFC-Projekte verwenden das Präprozessorsymbol \_UNICODE UTF-16 Breitzeichen-Uni
 
 Statische Bibliotheken für die MFC verwenden Sie die folgenden Benennungskonventionen. Die Namen von Typbibliotheken aufweisen Form.
 
-> <em>u</em>AFX<em>cd</em>. LIB
+> <em>u</em>AFX<em>cd</em>.LIB
 
 in dem die Buchstaben kursiv dargestellten Kleinbuchstaben Platzhalter für Bezeichner, dessen Bedeutung in der folgenden Tabelle angezeigt werden:
 
@@ -116,14 +116,14 @@ Die MFC-DLLs haben *Version* Zahlen, die binäre Kompatibilität angeben. Verwen
 
 |DLL|Beschreibung|
 |---------|-----------------|
-|MFC*Version*. DLL|Version von MFC-DLL, ANSI- oder MBCS-Version|
-|MFC*Version*U.DLL|MFC-DLL, Unicode-Releaseversion|
-|MFC*Version*D.DLL|MFC-DLL "," ANSI "oder" Debuggen von MBCS-version|
-|MFC*Version*UD. DLL|MFC-DLL, Unicode-Debug-version|
-|MFCM*Version*. DLL|MFC-DLL mit Windows Forms-Steuerelementen, ANSI- oder MBCS-Version-Version|
-|MFCM*Version*U.DLL|MFC-DLL mit Windows Forms-Steuerelementen, Unicode-Releaseversion|
-|MFCM*Version*D.DLL|MFC-DLL mit Windows Forms-Steuerelementen, ANSI- oder Debuggen der MBCS-Version|
-|MFCM*Version*UD. DLL|MFC-DLL mit Windows Forms-Steuerelementen, Unicode-Debug-version|
+|MFC*version*.DLL|Version von MFC-DLL, ANSI- oder MBCS-Version|
+|MFC*version*U.DLL|MFC-DLL, Unicode-Releaseversion|
+|MFC*version*D.DLL|MFC-DLL "," ANSI "oder" Debuggen von MBCS-version|
+|MFC*version*UD.DLL|MFC-DLL, Unicode-Debug-version|
+|MFCM*version*.DLL|MFC-DLL mit Windows Forms-Steuerelementen, ANSI- oder MBCS-Version-Version|
+|MFCM*version*U.DLL|MFC-DLL mit Windows Forms-Steuerelementen, Unicode-Releaseversion|
+|MFCM*version*D.DLL|MFC-DLL mit Windows Forms-Steuerelementen, ANSI- oder Debuggen der MBCS-Version|
+|MFCM*version*UD.DLL|MFC-DLL mit Windows Forms-Steuerelementen, Unicode-Debug-version|
 
 Die Importbibliotheken, die zum Erstellen von Anwendungen oder MFC-Erweiterungs-DLLs, mit denen diese gemeinsam genutzte DLLs benötigt den gleichen Basisnamen wie die DLL haben aber eine LIB-Dateinamenerweiterung. Wenn Sie die freigegebene DLLs verwenden, muss eine kleine statische Bibliothek immer noch mit dem Code verknüpft sein; Diese Bibliothek heißt MFCS*Version*{U} {D} lib.
 

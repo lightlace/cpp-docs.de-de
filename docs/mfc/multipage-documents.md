@@ -26,11 +26,11 @@ helpviewer_keywords:
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
 ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238471"
 ---
 # <a name="multipage-documents"></a>Mehrseitige Dokumente
 
@@ -56,7 +56,7 @@ Die [CView](../mfc/reference/cview-class.md) -Klasse definiert mehrere Memberfun
 
 ### <a name="cviews-overridable-functions-for-printing"></a>CView überschreibbare-Funktionen für das Drucken
 
-|name|Grund für das Überschreiben|
+|Name|Grund für das Überschreiben|
 |----------|---------------------------|
 |[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|Um Werte in das Dialogfeld Drucken, insbesondere die Länge des Dokuments einzufügen.|
 |[OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting)|Zuweisen von Schriftarten oder andere GDI-Ressourcen|

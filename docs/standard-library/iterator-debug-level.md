@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
 ms.openlocfilehash: a584fe5a97e251205e750507b27e53e6e7b9a20e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224193"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
@@ -49,7 +49,7 @@ Informationen über das Deaktivieren der Warnungen für überprüfte Iteratoren 
 
 ### <a name="example"></a>Beispiel
 
-Verwenden Sie zum Angeben eines Werts für das Makro _ITERATOR_DEBUG_LEVEL eine [/d](../build/reference/d-preprocessor-definitions.md) -Compileroption verwenden, um es in der Befehlszeile definieren, oder verwenden Sie `#define` Header sind vor der C++-Standardbibliothek in Ihren Quelldateien enthalten. Z. B. auf der Befehlszeile kompilieren *sample.cpp* im Debugmodus befindet und Unterstützung für das iteratordebugging zu verwenden, können Sie die Makrodefinition _ITERATOR_DEBUG_LEVEL angeben:
+Verwenden Sie zum Angeben eines Werts für das Makro _ITERATOR_DEBUG_LEVEL eine [/d](../build/reference/d-preprocessor-definitions.md) -Compileroption verwenden, um es in der Befehlszeile definieren, oder verwenden Sie `#define` vor der C++ Standard-Bibliothek-Header sind in Ihren Quelldateien enthalten. Z. B. auf der Befehlszeile kompilieren *sample.cpp* im Debugmodus befindet und Unterstützung für das iteratordebugging zu verwenden, können Sie die Makrodefinition _ITERATOR_DEBUG_LEVEL angeben:
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
 ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258148"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -226,10 +226,10 @@ Die folgende Tabelle zeigt den Offset eines jeden Members mit einer Vielzahl von
 
 |Variable|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
-|a|0|0|0|0|
-|b|1|2|2|2|
+|eine|0|0|0|0|
+|k|1|2|2|2|
 |c|3|4|4|8|
-|d|32|32|32|32|
+|T|32|32|32|32|
 |e|40|40|40|40|
 |f|41|42|44|48|
 |sizeof(S)|64|64|64|64|
@@ -244,4 +244,4 @@ Der Offset eines Objekts basiert auf dem Offset des vorherigen Objekts und der a
 
 [__declspec](../cpp/declspec.md)<br/>
 [Übersicht über ARM-ABI-Konventionen](../build/overview-of-arm-abi-conventions.md)<br/>
-[X64 Softwarekonventionen](../build/x64-software-conventions.md)
+[Softwarekonventionen bei x64-Systemen](../build/x64-software-conventions.md)

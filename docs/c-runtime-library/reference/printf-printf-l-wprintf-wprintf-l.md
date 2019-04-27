@@ -39,11 +39,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
 ms.openlocfilehash: 1f3d439c12fa803bfe1af31a9a45d777b2e1caa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232492"
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -77,7 +77,7 @@ int _wprintf_l(
 *format*<br/>
 Formatsteuerung
 
-*Argument*<br/>
+*argument*<br/>
 Optionale Argumente.
 
 *locale*<br/>
@@ -132,8 +132,8 @@ Line one
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Printf**, **_printf_l**|\<stdio.h>|
-|**Wprintf**, **_wprintf_l**|\<stdio.h> oder \<wchar.h>|
+|**printf**, **_printf_l**|\<stdio.h>|
+|**wprintf**, **_wprintf_l**|\<stdio.h> oder \<wchar.h>|
 
 Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

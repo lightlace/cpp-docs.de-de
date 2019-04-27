@@ -3,11 +3,11 @@ title: Attribute in C++
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
 ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284746"
 ---
 # <a name="attributes-in-c"></a>Attribute in C++
 
@@ -15,7 +15,7 @@ Der C++-Standard definiert einen Satz von Attributen und können auch Compileran
 
 In einigen Fällen überlappen Standardattribute compilerspezifischen "declspec"-Parameter. In Visual C++ können Sie die `[[deprecated]]` Attribut anstelle von `declspec(deprecated)` und das Attribut wird von einem beliebigen konformen-Compiler erkannt werden. Für alle anderen "declspec" Parameter wie z. B. Dllimport und Dllexport gibt es noch keine Attribut Entsprechung, damit Sie weiterhin "declspec"-Syntax verwenden müssen. Attribute wirken sich nicht auf das System der Typen, und die Bedeutung eines Programms nicht ändern. Compiler ignoriert die Attributwerte, die sie nicht erkennen.
 
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): im Rahmen einer Attributliste, können Sie den Namespace für alle Namen angeben, mit einem einzelnen **mit** Introducer:
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Sie können den Namespace für alle Namen mit einem einzelnen angeben, im Rahmen einer Attributliste **mit** Introducer:
 
 ```cpp
 void g() {
@@ -33,13 +33,13 @@ In C ++ 11 Geben Sie Attribute für eine standardisierte Möglichkeit zum Kommen
 void Foo(int);
 ```
 
-Attribute, die eine standardisierte Alternative zu anbieterspezifischer Erweiterungen wie z. B. #pragma-Anweisungen, __declspec() (Visual C++) darstellen oder &#95; &#95;Attribut&#95; &#95; (GNU). Allerdings müssen Sie weiterhin die anbieterspezifische Konstrukte für die meisten Zwecke zu verwenden. Der Standard gibt derzeit die folgenden Attribute, die ein entsprechenden Compiler erkennen soll:
+Attribute, die eine standardisierte Alternative zu anbieterspezifischer Erweiterungen wie z. B. #pragma-Anweisungen darstellen __declspec() (Visual C++), oder &#95; &#95;Attribut&#95; &#95; (GNU). Allerdings müssen Sie weiterhin die anbieterspezifische Konstrukte für die meisten Zwecke zu verwenden. Der Standard gibt derzeit die folgenden Attribute, die ein entsprechenden Compiler erkennen soll:
 
 - `[[noreturn]]` Gibt an, dass eine Funktion niemals zurückgibt; Anders ausgedrückt: es immer eine Ausnahme ausgelöst. Der Compiler kann anpassen, deren kompilierungsregeln für `[[noreturn]]` Entitäten.
 
 - `[[carries_dependency]]` Gibt an, dass die Funktion datenabhängigkeits-Reihenfolge in Bezug auf die Synchronisierung von Threads verteilt. Das Attribut kann angewendet werden, um einen oder mehrere Parameter, um anzugeben, dass das übergebene Argument eine Abhängigkeit in den Funktionstext enthält. Für die Funktion selbst, um anzugeben, dass der Rückgabewert eine Abhängigkeit aus der Funktion enthält, kann das Attribut angewendet werden. Diese Informationen können der Compiler effizienteren Code generiert.
 
-- `[[deprecated]]` **Visual Studio 2015 und höher:** gibt an, dass eine Funktion nicht vorgesehen ist, verwendet werden, und möglicherweise nicht vorhanden in zukünftigen Versionen einer Bibliothek-Schnittstelle. Der Compiler kann dies verwenden, um eine informationsmeldung zu generieren, wenn Clientcode versucht die Funktion aufgerufen. Kann auf die Deklaration einer Klasse, einen Typedef-Namen, eine Variable, einen nicht statischen Datenmember, eine Funktion, einen Namespace, eine Enumeration, einen Enumerator oder eine Spezialisierung einer Klassenvorlage angewendet werden.
+- `[[deprecated]]` **Visual Studio 2015 und höher:** Gibt an, dass eine Funktion nicht vorgesehen ist, verwendet werden, und möglicherweise nicht vorhanden in zukünftigen Versionen einer Bibliothek-Schnittstelle. Der Compiler kann dies verwenden, um eine informationsmeldung zu generieren, wenn Clientcode versucht die Funktion aufgerufen. Kann auf die Deklaration einer Klasse, einen Typedef-Namen, eine Variable, einen nicht statischen Datenmember, eine Funktion, einen Namespace, eine Enumeration, einen Enumerator oder eine Spezialisierung einer Klassenvorlage angewendet werden.
 
 - `[[fallthrough]]` **Visual Studio 2017 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) die `[[fallthrough]]` -Attribut kann verwendet werden, im Kontext des [wechseln](switch-statement-cpp.md) Anweisungen als Hinweis für den Compiler (oder Leser der Code), die das Fallthrough-Verhalten vorgesehen ist. Visual C++-Compiler warnt derzeit nicht auf Fallthrough-Verhalten, damit dieses Attribut keine Wirkung Compilerverhalten hat.
 
@@ -77,9 +77,9 @@ Attribute, die eine standardisierte Alternative zu anbieterspezifischer Erweiter
 
   Das Beispiel löst Warnungen aus:
 
-  - 26494 (Typ-Regel 5: immer ein Objekt zu initialisieren.)
+  - 26494 (Geben Sie die Regel 5: Immer ein Objekt initialisiert.)
 
-  - 26485 (Bounds-Regel 3: kein Array zu zeigerverfall.)
+  - 26485 (Bounds-Regel 3: Kein Array zu zeigerverfall.)
 
   - 26481 (Begrenzungen Regel 1: Verwenden Sie keine Zeigerarithmetik. Verwenden Sie Spanne stattdessen.)
 

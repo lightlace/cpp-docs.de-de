@@ -16,11 +16,11 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
 ms.openlocfilehash: 40dedbe2737a79b7531b8acd47870ce7cb788604
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237586"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout-Klasse
 
@@ -66,7 +66,7 @@ class CMFCDynamicLayout : public CObject
 
 ## <a name="nested-types"></a>Geschachtelte Typen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CMFCDynamicLayout::MoveSettings Structure](#movesettings_structure)|Kapselt Daten für die Verschiebung für Steuerelemente in einem dynamischen Layout.|
 |[CMFCDynamicLayout::SizeSettings Structure](#sizesettings_structure)|Kapselt Daten für die Größenänderung für Steuerelemente in einem dynamischen Layout.|
