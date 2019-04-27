@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154307"
 ---
 # <a name="expressions-with-binary-operators"></a>Ausdrücke mit binären Operatoren
 
@@ -45,7 +45,7 @@ Binäre Operatoren agieren in zwei Operanden in einem Ausdruck. Die binären Ope
 
    - Kleiner als oder gleich (\<=)
 
-   - Größer oder gleich (>=)
+   - Größer als oder gleich (> =)
 
    - Ist gleich (==)
 
@@ -63,7 +63,7 @@ Binäre Operatoren agieren in zwei Operanden in einem Ausdruck. Die binären Ope
 
    - [Logisches AND (& &)](../cpp/logical-and-operator-amp-amp.md)
 
-   - [Logisches OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
+   - [Logical OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
 
 - [Assignment operators (Zuweisungsoperatoren)](../cpp/assignment-operators.md)
 
@@ -81,9 +81,9 @@ Binäre Operatoren agieren in zwei Operanden in einem Ausdruck. Die binären Ope
 
    - Linksschiebezuweisung (<\<=)
 
-   - Rechtsschiebezuweisung (>>=)
+   - Rechtsschiebezuweisung (>> =)
 
-   - Bitweise AND-Zuweisung (&=)
+   - Bitweise AND-Zuweisung (& =)
 
    - Bitweise exklusive OR-Zuweisung (^=)
 

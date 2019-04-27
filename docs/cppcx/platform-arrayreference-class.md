@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
 ms.openlocfilehash: 923f60e90517e377b99d5e29f38c48b2633c3c46
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161570"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference-Klasse
 
@@ -122,4 +122,4 @@ Ein Handle für das Objekt des Typs `Array<TArg>^`
 
 ## <a name="see-also"></a>Siehe auch
 
-[Platform-namespace](../cppcx/platform-namespace-c-cx.md)
+[Plattformnamespace](../cppcx/platform-namespace-c-cx.md)

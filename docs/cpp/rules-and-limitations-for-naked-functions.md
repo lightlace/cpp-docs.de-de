@@ -5,11 +5,11 @@ helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
 ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267371"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Regeln und Einschränkungen für Naked-Funktionen
 
@@ -33,7 +33,7 @@ Die folgenden Regeln und Einschränkungen treffen auf naked-Funktionen zu:
 
 - Die **naked** Schlüsselwort wird ignoriert, beim Kompilieren mit ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md).
 
-- Für [__fastcall](../cpp/fastcall.md) naked-Funktionen, wenn Sie ein Verweis in C-/C++-Code auf eines der Registerargumente vorhanden ist, sollte der Prologcode die Werte dieses Registers in den Stapelspeicherort für diese Variable speichern. Zum Beispiel:
+- Für [__fastcall](../cpp/fastcall.md) naked-Funktionen, wenn ein Verweis vorhanden, in der C ist /C++ Code auf eines der Registerargumente, sollte der Prologcode die Werte dieses Registers in den Stapelspeicherort für diese Variable speichern. Zum Beispiel:
 
 ```cpp
 // nkdfastcl.cpp

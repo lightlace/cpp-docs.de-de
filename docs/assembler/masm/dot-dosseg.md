@@ -7,15 +7,15 @@ helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
 ms.openlocfilehash: 28b3e351030ee83693c0fec5568aacf9b4b77c27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62204360"
 ---
 # <a name="dosseg"></a>.DOSSEG
 
-Sortiert die Segmente gemäß der Konvention des MS-DOS-Segment: CODE zuerst dann nicht in DGROUP Segmente, und klicken Sie dann im DGROUP Segmente.
+Sortiert die Segmente gemäß der Konvention des MS-DOS-Segment an: CODE first, klicken Sie dann Segmente in nicht DGROUP, und klicken Sie dann die Segmente in DGROUP.
 
 ## <a name="syntax"></a>Syntax
 

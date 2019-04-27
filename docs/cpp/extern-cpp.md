@@ -1,5 +1,5 @@
 ---
-title: Extern (C++)
+title: extern (C++)
 ms.date: 04/12/2018
 f1_keywords:
 - extern
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
 ms.openlocfilehash: 4a3a4e158794e06f28c638e87e014ddc3fb99837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183738"
 ---
-# <a name="extern-c"></a>Extern (C++)
+# <a name="extern-c"></a>extern (C++)
 
 Die **"extern"** -Schlüsselwort angewendet wird, auf eine globale Variable, Funktion oder Vorlage Deklaration festlegen, dass der Name des, daran hat *externe Verknüpfung*. Weitere Informationen zu Verknüpfungen und warum wird die Verwendung der globalen Variablen nicht empfohlen, finden Sie unter [Programm und Verknüpfung](program-and-linkage-cpp.md).
 

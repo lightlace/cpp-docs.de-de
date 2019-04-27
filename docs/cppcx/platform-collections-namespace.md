@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
 ms.openlocfilehash: 025c25d6c01ab9a28c68574cc2a13e09dbf28388
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161744"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections-Namespace
 
@@ -35,7 +35,7 @@ using namespace Platform::Collections;
 
 Dieser Namespace enthält die folgenden Member.
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[Platform::Collections::BackInsertIterator-Klasse](../cppcx/platform-collections-backinsertiterator-class.md)|Stellt einen Iterator dar, der ein Element am Ende einer Auflistung einfügt.|
 |[Platform::Collections::InputIterator-Klasse](../cppcx/platform-collections-inputiterator-class.md)|Stellt einen Iterator dar, der ein Element am Anfang einer Auflistung einfügt.|
@@ -48,7 +48,7 @@ Dieser Namespace enthält die folgenden Member.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
-[Platform-namespace](../cppcx/platform-namespace-c-cx.md)
+[Plattformnamespace](../cppcx/platform-namespace-c-cx.md)
 
 ### <a name="requirements"></a>Anforderungen
 

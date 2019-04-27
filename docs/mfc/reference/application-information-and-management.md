@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57808390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151279"
 ---
 # <a name="application-information-and-management"></a>Anwendungsinformationen und Anwendungsverwaltung
 
@@ -682,7 +682,7 @@ Die Microsoft Foundation Class-Bibliothek wird automatisch mehrere standardmäß
 
 Registrierter Name für eine Klasse von `AfxRegisterWndClass` ausschließlich auf den Parametern abhängig ist. Wenn Sie aufrufen `AfxRegisterWndClass` mehrmals mit identischen Parametern registriert nur eine Klasse beim ersten Aufruf. Nachfolgende Aufrufe von `AfxRegisterWndClass` einfach den bereits registrierten Klassennamen mit identischen Parametern zurück.
 
-Wenn Sie aufrufen `AfxRegisterWndClass` für mehrere CWnd abgeleiteten Klassen mit identischen Parametern, die anstelle einer separaten Fenster-Klasse für jede Klasse, verwendet jede Klasse die gleichen Fensterklasse. Dies kann Probleme verursachen, wenn das Format der CS_CLASSDC-Klasse verwendet wird. Anstatt mehrere CS_CLASSDC Fensterklassen erhalten Sie eine CS_CLASSDC Fensterklasse, und alle C++-Fenster, die diese Klasse Freigabe der gleichen Domänencontroller zu verwenden. Um dieses Problem zu vermeiden, rufen Sie [AfxRegisterClass](#afxregisterclass) zum Registrieren der Klasse.
+Wenn Sie aufrufen `AfxRegisterWndClass` für mehrere CWnd abgeleiteten Klassen mit identischen Parametern, die anstelle einer separaten Fenster-Klasse für jede Klasse, verwendet jede Klasse die gleichen Fensterklasse. Dies kann Probleme verursachen, wenn das Format der CS_CLASSDC-Klasse verwendet wird. Anstatt mehrere CS_CLASSDC Fensterklassen, erhalten Sie eine CS_CLASSDC Fensterklasse und alle C++ Fenster, in denen diese Klasse teilen den gleichen DC. Um dieses Problem zu vermeiden, rufen Sie [AfxRegisterClass](#afxregisterclass) zum Registrieren der Klasse.
 
 Lesen Sie bitte zu technischen [TN001: Fensterklassenregistrierung](../../mfc/tn001-window-class-registration.md) für Weitere Informationen zu fensterklassenregistrierung und `AfxRegisterWndClass` Funktion.
 

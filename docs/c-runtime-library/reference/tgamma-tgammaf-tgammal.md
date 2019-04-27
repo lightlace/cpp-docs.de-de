@@ -31,11 +31,11 @@ helpviewer_keywords:
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
 ms.openlocfilehash: c9ff92658163fc20ce21496aba34b22b3661748b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155614"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -80,7 +80,7 @@ Ein Bereichsfehler kann auftreten, wenn die Größe der *x* ist zu groß oder zu
 |-----------|------------|
 |x = ±0|±INFINITY|
 |x = negative ganze Zahl|NaN|
-|X = - INFINITY|NaN|
+|x = -INFINITY|NaN|
 |x = +INFINITY|+INFINITY|
 |x = NaN|NaN|
 |Domänenfehler|NaN|
@@ -100,7 +100,7 @@ Wenn x eine natürliche Zahl ist, gibt diese Funktion die Fakultät von (x-1) zu
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
-|**Tgamma**, **Tgammaf**, **Tgammal**|\<math.h>|\<cmath>|
+|**tgamma**, **tgammaf**,  **tgammal**|\<math.h>|\<cmath>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

@@ -34,11 +34,11 @@ helpviewer_keywords:
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
 ms.openlocfilehash: 693b70b3682876d7e6c3721f5d06aa13d31abb96
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155588"
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
 
@@ -71,7 +71,7 @@ Die **Zeit** Funktion gibt die Anzahl der Sekunden seit Mitternacht vergangenen 
 
 |-Routine zurückgegebener Wert|Erforderlicher C-Header|Erforderlicher C++-Header|
 |-------|------|---------------------|
-|**Zeit**,  **\_time32**,  **\_time64**|\<time.h>|\<CTime > oder \<time.h >|
+|**time**, **\_time32**, **\_time64**|\<time.h>|\<CTime > oder \<time.h >|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: b5ead8b1000fd6c2708b2450f71da3dc612dc51d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158559"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt;-Funktionen
 
@@ -150,10 +150,10 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 *str*<br/>
 Ein Std:: String, Char\*, string, Zeichenfolgenliteral oder unformatiertes Zeichenfolgenliteral oder eine Breite Version von diesen (z.B. Std:: wstring, Wchar_t\*).
 
-*Trennzeichen*<br/>
+*delimiter*<br/>
 Ein benutzerdefiniertes Zeichen oder Breitzeichen, das als Trennzeichen für den Anfang und das Ende der Zeichenfolge verwendet wird.
 
-*Escapezeichen*<br/>
+*escape*<br/>
 Ein benutzerdefiniertes Zeichen oder Breitzeichen, das als Escapezeichen für Escapesequenzen in der Zeichenfolge verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -362,7 +362,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parameter
 
-*CH*<br/>
+*Ch*<br/>
 Das zum Auffüllen in einer rechts ausgerichteten Anzeige verwendete Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -425,7 +425,7 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>Parameter
 
-*Breite*<br/>
+*Wide*<br/>
 Die Breite des Anzeigefelds.
 
 ### <a name="return-value"></a>Rückgabewert

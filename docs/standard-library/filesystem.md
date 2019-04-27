@@ -10,11 +10,11 @@ f1_keywords:
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 ms.openlocfilehash: 54817eeeba0b885cbf3de558c04fe2eb5d6e14fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159846"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -31,7 +31,7 @@ using namespace std::experimental::filesystem::v1;
 > [!IMPORTANT]
 > Ab der Version von Visual Studio 2017 die \<Filesystem >-Header wurde noch keinem C++-Standard. Visual C++ 2017 implementiert den endgültigen Entwurfsstandard aus [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
-Dieser Header unterstützt Dateisysteme für eine von zwei umfangreichen Klassen von Hostbetriebssystemen: Microsoft Windows und POSIX.
+Dieser Header unterstützt Dateisysteme für eine von zwei umfangreichen Klassen von Hostbetriebssystemen: Microsoft Windows und Posix.
 
 Der überwiegende Teil der Funktionalität ist für beide Betriebssysteme gleich. In diesem Dokuments sind die Unterschiede aufgeführt. Zum Beispiel:
 
@@ -102,7 +102,7 @@ Weitere Informationen und Codebeispiele finden Sie unter [Dateisystemnavigation 
 
 ## <a name="structs"></a>Strukturen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[space_info-Struktur](../standard-library/space-info-structure.md)|Enthält Informationen zu einem Volume.|
 
@@ -116,7 +116,7 @@ Weitere Informationen und Codebeispiele finden Sie unter [Dateisystemnavigation 
 
 ## <a name="enumerations"></a>Enumerationen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Eine mit [copy_file](../standard-library/filesystem-functions.md#copy_file) verwendete Enumeration, mit der das Verhalten bestimmt wird, wenn eine Datei vorhanden ist.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Eine mit [copy_file](../standard-library/filesystem-functions.md#copy_file) verwendete Enumeration, mit der das Verhalten bestimmt wird, wenn eine Datei vorhanden ist.|

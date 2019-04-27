@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
 ms.openlocfilehash: 4564def412834ae0586292e8aa533d3b2bd0d679
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152669"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute-Klasse
 
@@ -38,7 +38,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 Das MTAThreadAttribute-Attribut erbt von [Platform:: Object Class](../cppcx/platform-object-class.md). „MTAThreadAttribute“ wird zudem überladen oder weist die folgenden Member auf:
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[MTAThreadAttribute::Equals](#equals)|Bestimmt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.|
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|Gibt den Hashcode für diese Instanz zurück.|

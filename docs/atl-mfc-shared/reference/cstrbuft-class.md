@@ -14,11 +14,11 @@ helpviewer_keywords:
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
 ms.openlocfilehash: 81c3b429089eab3ba95c178e3fc7cf2bf55783a2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223492"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT-Klasse
 
@@ -73,7 +73,7 @@ Der Zeichentyp, der die `CStrBufT` Klasse. Einer der folgenden Werte ist möglic
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CStrBufT::AUTO_LENGTH](#auto_length)|Bestimmen Sie automatisch die neue Länge der Zeichenfolge an die Version an.|
 |[CStrBufT::SET_LENGTH](#set_length)|Legen Sie die Länge des Zeichenfolgenobjekts GetBuffer Zeitpunkt|

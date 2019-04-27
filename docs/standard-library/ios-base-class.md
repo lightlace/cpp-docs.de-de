@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158590"
 ---
 # <a name="iosbase-class"></a>ios_base-Klasse
 
@@ -570,7 +570,7 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parameter
 
-*IDX*<br/>
+*idx*<br/>
 Der Index des als `iword` zu speichernden Werts.
 
 ### <a name="remarks"></a>Hinweise
@@ -743,7 +743,7 @@ void register_callback(
 *pfn*<br/>
 Ein Zeiger auf die Rückruffunktion.
 
-*IDX*<br/>
+*idx*<br/>
 Eine benutzerdefinierte Nummer.
 
 ### <a name="remarks"></a>Hinweise

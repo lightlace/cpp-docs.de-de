@@ -27,11 +27,11 @@ helpviewer_keywords:
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
 ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155419"
 ---
 # <a name="umask"></a>_umask
 
@@ -62,7 +62,7 @@ Der ganzzahlige Ausdruck *Pmode* enthält eine oder beide der folgenden Manifest
 |-|-|
 | **_S_IWRITE** | Schreiben zugelassen. |
 | **_S_IREAD** | Lesen erlaubt. |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Lesen und Schreiben erlaubt. |
+| **_S_IREAD** &#124; **_S_IWRITE** | Lesen und Schreiben erlaubt. |
 
 Wenn beide Konstanten gegeben sind, werden sie mit dem bitweisen OR-Operator verbunden ( **&#124;** ). Wenn die *Pmode* Argument **_S_IREAD**, lesen, ist nicht zulässig (die Datei ist lesegeschützt). Wenn die *Pmode* Argument **_S_IWRITE**, Schreiben nicht zulässig (die Datei ist schreibgeschützt). Wenn z.B. das Schreib-Bit in der Maske festgelegt ist, sind alle neuen Dateien schreibgeschützt. Beachten Sie, dass in MS-DOS und Windows-Betriebssystemen alle Dateien lesbar sind und es nicht möglich ist, nur Schreibberechtigungen zu vergeben. Daher ist das Festlegen der Lesevorgangs-bit mit **_umask** hat keine Auswirkungen auf den Dateimodus.
 

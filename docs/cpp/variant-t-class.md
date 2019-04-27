@@ -11,11 +11,11 @@ helpviewer_keywords:
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
 ms.openlocfilehash: 69976cab9caed653a8278f80821569b613f690eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165946"
 ---
 # <a name="variantt-class"></a>_variant_t-Klasse
 
@@ -44,7 +44,7 @@ Ein **_variant_t** -Objekt kapselt den `VARIANT` -Datentyp. Die Klasse verwaltet
 |||
 |-|-|
 |[Operator =](../cpp/variant-t-operator-equal.md)|Weist einen neuen Wert zu einem vorhandenen **_variant_t** Objekt.|
-|[Operator ==,! =](../cpp/variant-t-relational-operators.md)|Vergleichen Sie zwei **_variant_t** -Objekte auf Gleichheit bzw. Ungleichheit.|
+|[operator ==, !=](../cpp/variant-t-relational-operators.md)|Vergleichen Sie zwei **_variant_t** -Objekte auf Gleichheit bzw. Ungleichheit.|
 |[Extraktoren](../cpp/variant-t-extractors.md)|Extrahieren von Daten aus dem gekapselten `VARIANT` Objekt.|
 
 **Ende Microsoft-spezifisch**

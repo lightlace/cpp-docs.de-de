@@ -8,11 +8,11 @@ helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
 ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212091"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -40,11 +40,11 @@ Die Menge der komplexen Zahlen mit den Operationen für komplexe Addition und ko
 
 - Die gegenzahl für eine komplexe Zahl (*eine*, *b*) ist (-*eine*, -*b*), und der Kehrwert für alle komplexe Zahlen mit Ausnahme von (0, 0) ist
 
-   (*eine*/ (*eine*<sup>2</sup> + *b*<sup>2</sup>), -*b*/ (*eine*<sup>2</sup> + *b*<sup>2</sup>))
+   (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
 Durch die Darstellung einer komplexen Zahl *z* = (*eine*, *b*) in der Form *z* = *eine*  +  *Bi*, wobei *ich*<sup>2</sup> =-1, die Regeln für die Algebra der Menge der reellen Zahlen auf die Menge der komplexen Zahlen und deren Komponenten angewendet werden kann. Zum Beispiel:
 
-   (1 + 2*ich*) \* (2 + 3*ich*) = 1 \* (2 + 3*ich*) + 2*ich* \* (2 + 3*i*) = (2 + 3*ich*) + (4*ich* + 6*ich*<sup>2</sup>) = (2 bis 6) + (3 + 4)*ich* -4 + 7 =*ich*
+   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
 
 Das System der komplexen Zahlen ist ein Körper, jedoch kein geordneter Körper. Es gibt keine Reihenfolge der komplexen Zahlen, wie es für das Feld der reellen Zahlen und deren Teilmengen gibt, daher ungleichheiten findet auf komplexe Zahlen angewendet werden können, wie sie in reelle Zahlen sind.
 
@@ -52,7 +52,7 @@ Es gibt drei allgemeine Formen der Darstellung einer komplexen Zahl *z*:
 
 - Kartesisch: *z* = *eine* + *Bi*
 
-- Polar: *z* = *r* (cos *p* + *ich* sin *p*)
+- Polar: *z* = *r* (cos *p* + *i* sin *p*)
 
 - Exponentiell: *z* = *r* \* *e*<sup>*Ip*</sup>
 

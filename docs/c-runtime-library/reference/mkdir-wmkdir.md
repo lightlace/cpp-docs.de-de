@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
 ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285196"
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
 
@@ -58,7 +58,7 @@ int _wmkdir(
 
 ### <a name="parameters"></a>Parameter
 
-*DirName*<br/>
+*dirname*<br/>
 Der Pfad für ein neues Verzeichnis.
 
 ## <a name="return-value"></a>Rückgabewert

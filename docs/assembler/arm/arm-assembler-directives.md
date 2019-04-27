@@ -3,11 +3,11 @@ title: ARM-Assemblyanweisungen
 ms.date: 08/30/2018
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
 ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167672"
 ---
 # <a name="arm-assembler-directives"></a>ARM-Assemblyanweisungen
 
@@ -75,7 +75,7 @@ Der Microsoft-ARM-Assembler verwendet zum größten Teil der ARM-Assemblysprache
 
    Gibt an, Importe, die mit der folgenden Syntax:
 
-   > **IMPORT**|**"extern"** *Sym*{**, SCHWACHE** *Alias*{**, Typ** *t*}}
+   > **IMPORT**|**EXTERN** *sym*{**, WEAK** *alias*{**, TYPE** *t*}}
 
    *SYM* ist der Name des Symbols, das importiert werden.
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
 ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182898"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Verwenden von Datenbankklassen mit Dokumenten und Ansichten
 
@@ -63,7 +63,7 @@ Viele einfache formularbasierte Anwendungen ist die Dokumente nicht erforderlich
 
 ##  <a name="_core_other_factors"></a> Andere Faktoren
 
-Formularbasierte Anwendungen häufig verfügen nicht über keine Verwendung für die Framework Dokument-Serialisierungsmechanismus, daher Sie sollten zu entfernen, deaktivieren oder zu ersetzen die **neu** und **öffnen** Befehle in der **Datei** Menü. Finden Sie im Artikel [Serialisierung: Serialisierung im Vergleich zu Datenbank-e/a](../mfc/serialization-serialization-vs-database-input-output.md).
+Formularbasierte Anwendungen häufig verfügen nicht über keine Verwendung für die Framework Dokument-Serialisierungsmechanismus, daher Sie sollten zu entfernen, deaktivieren oder zu ersetzen die **neu** und **öffnen** Befehle in der **Datei** Menü. Finden Sie im Artikel [Serialisierung: Serialisierung im Vergleich zur Datenbank-e/a](../mfc/serialization-serialization-vs-database-input-output.md).
 
 Möchten Sie möglicherweise auch, verwenden Sie die vielen Benutzeroberflächen-Möglichkeiten, die das Framework unterstützt werden. Beispielsweise können Sie mehrere `CRecordView` Objekte in einem Splitterfenster kann mehrere Recordsets in verschiedenen öffnen, mehrere Document Interface (MDI) untergeordnete Fenster und So weiter.
 

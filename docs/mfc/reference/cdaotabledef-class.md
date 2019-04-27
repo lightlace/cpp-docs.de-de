@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151215"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef-Klasse
 
@@ -876,7 +876,7 @@ Die folgende Tabelle zeigt mögliche Datenbanktypen und ihre entsprechenden Date
 |Importieren von HTML|"HTML-importieren;"|" `drive`:\\\ *Pfad*\ *Filename*"|
 |Der HTML-Export|"HTML-Export;"|" `drive`:\\\ *Pfad*"|
 |Text|"Text;"|"Laufwerk:\\\path"|
-|ODBC|"ODBC; Datenbank = `database`; UID = *Benutzer*; PWD = *Kennwort*; DSN = *%DataSourceName;* LOGINTIMEOUT = *Sekunden;*" (Dies eventuell nicht möglich, eine vollständige Verbindungszeichenfolge für alle Server, sondern nur ein Beispiel. Es ist sehr wichtig, keine Leerzeichen zwischen den Parametern enthalten.)|Keine|
+|ODBC|"ODBC; Datenbank = `database`; UID = *Benutzer*; PWD = *Kennwort*; DSN = *%DataSourceName;* LOGINTIMEOUT = *Sekunden;*" (Dies eventuell nicht möglich, eine vollständige Verbindungszeichenfolge für alle Server, sondern nur ein Beispiel. Es ist sehr wichtig, keine Leerzeichen zwischen den Parametern enthalten.)|Keiner|
 |Exchange|"Exchange;<br /><br /> MAPILEVEL = *"folderPath"*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [Profil = *Profil*;]<br /><br /> [PWD = *Kennwort*;]<br /><br /> [DATABASE = `database`;] "|*"Laufwerk*:\\\ *Pfad*\\\ *Filename*. MDB"|
 
 > [!NOTE]

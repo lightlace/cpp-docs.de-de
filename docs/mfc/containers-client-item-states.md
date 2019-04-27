@@ -8,11 +8,11 @@ helpviewer_keywords:
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
 ms.openlocfilehash: 1453ba3f96e49cefc9014a93ebcfbcfe5c6bc905
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152851"
 ---
 # <a name="containers-client-item-states"></a>Container: Clientelement-Zustände
 
@@ -42,6 +42,6 @@ Wenn ein Element vorhanden aktiviert wurde, übergibt, in der Regel nur kurz ges
 
 [Container](../mfc/containers.md)<br/>
 [Activation (Aktivierung)](../mfc/activation-cpp.md)<br/>
-[Container: Clientelement-Benachrichtigungen](../mfc/containers-client-item-notifications.md)<br/>
+[Container: Clientelementbenachrichtigungen](../mfc/containers-client-item-notifications.md)<br/>
 [Tracker](../mfc/trackers.md)<br/>
 [CRectTracker-Klasse](../mfc/reference/crecttracker-class.md)

@@ -20,11 +20,11 @@ f1_keywords:
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
 ms.openlocfilehash: e43d5caaeebb6303d209d870c804357117812985
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157538"
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
@@ -58,7 +58,7 @@ _invoke_watson(
 
 ## <a name="parameters"></a>Parameter
 
-*Ausdruck*<br/>
+*expression*<br/>
 Eine Zeichenfolge mit dem Quellcode-Parameterausdruck, der nicht gültig ist.
 
 *function_name*<br/>
@@ -67,10 +67,10 @@ Der Name der Funktion, die den Handler aufgerufen hat.
 *file_name*<br/>
 Die Quellcodedatei, in der der Handler aufgerufen wurde.
 
-*Zeilennummer*<br/>
+*line_number*<br/>
 Die Zeilennummer im Quellcode, in der der Handler aufgerufen wurde.
 
-*Reserviert*<br/>
+*reserved*<br/>
 Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert

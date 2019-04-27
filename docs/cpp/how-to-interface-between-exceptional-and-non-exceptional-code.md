@@ -5,11 +5,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
 ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183699"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Vorgehensweise: Schnittstelle zwischen Code von nicht- Ausnahmen
 
@@ -191,7 +191,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
 }
 ```
 
-Bei Konvertierungen von Ausnahmen in Fehlercodes besteht ein mögliches Problem darin, dass Fehlercodes häufig nicht die umfangreichen Informationen enthalten, die eine Ausnahme speichern kann. Um dieses Problem zu beheben, geben Sie einen **catch** Block für jeden einzelnen Ausnahmetyp, die ausgelöst werden kann, und führen Sie die Protokollierung, um die Details der Ausnahme aufzuzeichnen, bevor es in einen Fehlercode konvertiert wird. Diesen Ansatz kann viele codewiederholungen erstellt, wenn mehrere Funktionen, die alle den gleichen Satz von verwenden **catch** Blöcke. Ist eine gute Möglichkeit zur Vermeidung von codewiederholungen refactoring dieser Blöcke in eine private Hilfsfunktion, die implementiert die **versuchen** und **catch** blockiert und ein Funktionsobjekt, das aufgerufen wird, in der akzeptiert**versuchen** Block. Übergeben Sie den Code in jeder öffentlichen Funktion als Lambdaausdruck an die Hilfsfunktion.
+Bei Konvertierungen von Ausnahmen in Fehlercodes besteht ein mögliches Problem darin, dass Fehlercodes häufig nicht die umfangreichen Informationen enthalten, die eine Ausnahme speichern kann. Um dieses Problem zu beheben, geben Sie einen **catch** Block für jeden einzelnen Ausnahmetyp, die ausgelöst werden kann, und führen Sie die Protokollierung, um die Details der Ausnahme aufzuzeichnen, bevor es in einen Fehlercode konvertiert wird. Diesen Ansatz kann viele codewiederholungen erstellt, wenn mehrere Funktionen, die alle den gleichen Satz von verwenden **catch** Blöcke. Ist eine gute Möglichkeit zur Vermeidung von codewiederholungen refactoring dieser Blöcke in eine private Hilfsfunktion, die implementiert die **versuchen** und **catch** blockiert und ein Funktionsobjekt, das aufgerufen wird, in der akzeptiert**versuchen** Block. Übergeben Sie den Code in jeder öffentlichen Funktion als Lambda-Ausdruck an die Hilfsfunktion.
 
 ```cpp
 template<typename Func>
@@ -237,4 +237,4 @@ Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions 
 ## <a name="see-also"></a>Siehe auch
 
 [Behandeln von Fehlern und Ausnahmen (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Vorgehensweise: Entwurf für sichere Ausnahmebehandlung](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Vorgehensweise: Entwurfsrichtlinien für sichere Ausnahmebehandlung](../cpp/how-to-design-for-exception-safety.md)<br/>

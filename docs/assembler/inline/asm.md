@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
 ms.openlocfilehash: 6b94bf73e66550d0245ef1f55c17d6676e3b4356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167555"
 ---
 # <a name="asm"></a>__asm
 
@@ -27,13 +27,13 @@ Das `__asm`-Schlüsselwort ruft den Inlineassembler auf und kann immer da auftre
 
 ## <a name="grammar"></a>Grammatik
 
-*ASM-Block*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *Assemblyanweisung* **;** <sub>deaktivieren</sub><br/>
+*asm-block*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *Assembly-Anweisung-List* **}** **;** <sub>deaktivieren</sub>
 
-*Assembly-Anweisung-List*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Assembly-Anweisung* **;** <sub>deaktivieren</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Assembly-Anweisung* **;** *Assembly-Anweisung-List* **;** <sub>deaktivieren</sub>
+*assembly-instruction-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
 
 ## <a name="remarks"></a>Hinweise
 

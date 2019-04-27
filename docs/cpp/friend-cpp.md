@@ -9,11 +9,11 @@ helpviewer_keywords:
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
 ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154482"
 ---
 # <a name="friend-c"></a>Friend (C++)
 
@@ -51,7 +51,7 @@ friend class F;
 friend F;
 ```
 
-Das erste Formular führt eine neue Klasse F aus, wenn keine vorhandenen Klasse mit diesem Namen in der innersten Namespace gefunden wurde. **C ++ 11**: zweite Formular führt eine neue Klasse keinen; er kann verwendet werden, wenn die Klasse wurde bereits deklariert, und es verwendet werden, muss Wenn Sie ein Vorlagentyp-Parameter oder eine Typdefinition als Friend zu deklarieren.
+Das erste Formular führt eine neue Klasse F aus, wenn keine vorhandenen Klasse mit diesem Namen in der innersten Namespace gefunden wurde. **C++11**: Das zweite Formular führt eine neue Klasse keinen; Es kann verwendet werden, wenn die Klasse wurde bereits deklariert, und es verwendet werden, muss Wenn Sie ein Vorlagentyp-Parameter oder eine Typdefinition als Friend zu deklarieren.
 
 Verwendung `class friend F` bei der referenzierte Typ wurde nicht noch deklariert:
 

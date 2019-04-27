@@ -8,15 +8,15 @@ helpviewer_keywords:
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
 ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210800"
 ---
 # <a name="c-standard-library-overview"></a>Übersicht über die C++-Standardbibliothek
 
-Alle C++-Bibliotheken werden in Standardheadern deklariert oder definiert. Diese Implementierung beinhaltet zwei zusätzliche Header, \<Hash_map > und \<Hash_set >, nicht vom C++-Standard erforderlich sind. Eine vollständige Liste der Header, die diese Implementierung unterstützt, finden Sie unter [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md).
+Alle C++-Bibliotheken werden in Standardheadern deklariert oder definiert. Diese Implementierung beinhaltet zwei zusätzliche Header, \<Hash_map > und \<Hash_set >, nicht erforderlich sind die C++ Standard. Eine vollständige Liste der Header, die diese Implementierung unterstützt, finden Sie unter [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md).
 
 Eine freistehende Implementierung der C++-Bibliothek enthält nur eine Teilmenge dieser Header:
 
@@ -44,7 +44,7 @@ Dieser Artikel enthält folgende Abschnitte:
 
 - [Sichere Bibliotheken: C++-Standardbibliothek](../standard-library/safe-libraries-cpp-standard-library.md)
 
-- [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md)
+- [Checked Iterators](../standard-library/checked-iterators.md)
 
 - [Unterstützung für Iteratordebugging](../standard-library/debug-iterator-support.md)
 

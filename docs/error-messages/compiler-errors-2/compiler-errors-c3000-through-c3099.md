@@ -1,6 +1,6 @@
 ---
 title: Compilerfehler C3000 bis C3099
-ms.date: 11/17/2017
+ms.date: 04/21/2019
 f1_keywords:
 - C3051
 - C3061
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - C3093
 - C3098
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
-ms.openlocfilehash: b7a01c35086fe503e39af2af60655c03301dc7c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08c7b691d6390e6c1070fc71dff116604731ebab
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281665"
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>Compilerfehler C3000 bis C3099
 
@@ -55,7 +55,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 
 |Fehler|Meldung|
 |-----------|-------------|
-|Compilerfehler Fehler C3000|Veraltet.|
+|Compilerfehler C3000|Veraltet.|
 |[Compilerfehler C3001](compiler-error-c3001.md)|"*Nachricht*": wurde ein OpenMP-Direktivenname erwartet|
 |[Compilerfehler C3002](compiler-error-c3002.md)|"*name1* *name2*": mehrere OpenMP-Direktivennamen|
 |[Compilerfehler C3003](compiler-error-c3003.md)|"*Richtlinie*": OpenMP-Direktivenname nach Direktivenklauseln nicht zulässig.|
@@ -74,7 +74,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerfehler C3016](compiler-error-c3016.md)|"*Bezeichner*": Indexvariable in OpenMP for-Anweisung muss Ganzzahltyps mit Vorzeichen aufweisen|
 |[Compilerfehler C3017](compiler-error-c3017.md)|Der Beendigungstest in der For-Anweisung von OpenMP weist eine ungültige Form auf.|
 |[Compilerfehler C3018](compiler-error-c3018.md)|"*Bezeichner*": OpenMP 'for' Test oder das Inkrement muss die Indexvariable verwenden '*Variable*"|
-|[Compilerfehler C3019](compiler-error-c3019.md)|Das Inkrement in OpenMP der for-Anweisung weist eine ungültige form|
+|[Compilerfehler C3019 generiert](compiler-error-c3019.md)|Das Inkrement in OpenMP der for-Anweisung weist eine ungültige form|
 |[Compilerfehler C3020](compiler-error-c3020.md)|"*Variable*": Indexvariable der for-Schleife von OpenMP kann nicht im Schleifenkörper geändert werden|
 |[Compilerfehler C3021](compiler-error-c3021.md)|"*Argument*': Argument von OpenMP ist leer"*Richtlinie*"Richtlinie|
 |[Compilerfehler C3022](compiler-error-c3022.md)|"*Richtlinie*': Ungültiger Plantyp von"*Richtlinie*'on OpenMP"*Richtlinie*" Richtlinie|
@@ -83,7 +83,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerfehler C3025](compiler-error-c3025.md)|"*Klausel*": ein ganzzahliger Ausdruck erwartet|
 |[Compilerfehler C3026](compiler-error-c3026.md)|"*Klausel*": konstanter Ausdruck muss positiv sein|
 |[Compilerfehler C3027](compiler-error-c3027.md)|"*Klausel*': arithmetischer Ausdruck oder Zeigerausdruck erwartet|
-|[Compilerfehler C3028](compiler-error-c3028.md)|"*Member*': nur eine Variable oder ein statischer Datenmember kann in einer Datenfreigabeklausel verwendet werden|
+|[Compilerfehler C3028 generiert](compiler-error-c3028.md)|"*Member*': nur eine Variable oder ein statischer Datenmember kann in einer Datenfreigabeklausel verwendet werden|
 |[Compilerfehler C3029](compiler-error-c3029.md)|"*Symbol*": kann nur einmal in der Datenfreigabe-Klauseln in einer OpenMP-Direktive|
 |[Compilerfehler C3030](compiler-error-c3030.md)|"*Bezeichner*': Variable '*Richtlinie*'-Klausel/-Direktive kann keinen Verweistyp aufweisen|
 |[Compilerfehler C3031](compiler-error-c3031.md)|"*Bezeichner*': Variable in Reduction-Klausel muss arithmetischen Skalartyp aufweisen|
@@ -106,7 +106,7 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerfehler C3048](compiler-error-c3048.md)|Der Ausdruck, der auf "#pragma omp atomic" folgt, weist eine ungültige Form auf.|
 |[Compilerfehler C3049](compiler-error-c3049.md)|"*Argument*": Ungültiges Argument in der 'Default'-Klausel (OpenMP)|
 |[Compilerfehler C3050](compiler-error-c3050.md)|"*Klasse*': eine Verweisklasse kann nicht von erben"*Bezeichner*"|
-|Compilerfehler Fehler C3051|Veraltet.|
+|Compilerfehler C3051|Veraltet.|
 |[Compilerfehler C3052](compiler-error-c3052.md)|"*Bezeichner*': Variable nicht in einer Datenfreigabeklausel unter einer default(None)-Klausel angezeigt.|
 |[Compilerfehler C3053](compiler-error-c3053.md)|"*Bezeichner*': 'Threadprivate' ist nur für globale oder statische Datenelemente gültig|
 |[Compilerfehler C3054](compiler-error-c3054.md)|"#pragma omp parallel" wird in einer generischen Klasse oder Funktion derzeit nicht unterstützt.|
@@ -116,42 +116,47 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |[Compilerfehler C3058](compiler-error-c3058.md)|"*Bezeichner*": Symbol, die nicht als "Threadprivate" deklariert werden, bevor sie in der Copyin-Klausel verwendet wird|
 |[Compilerfehler C3059](compiler-error-c3059.md)|"*Bezeichner*': 'Threadprivate'-Symbol kann nicht verwendet werden, der '*Klausel*"-Klausel|
 |[Compilerfehler C3060](compiler-error-c3060.md)|"*Bezeichner*': eine Friend-Funktion kann nicht mit einem qualifizierten Namen (es kann nur deklariert werden) innerhalb einer Klasse definiert werden|
-|Compilerfehler Fehler C3061|Operator '*Operator*': für die Enumeration nicht zulässig "*Typ*"mit der zugrunde liegenden Typ'*Typ*"|
-|[Compilerfehler C3062](compiler-error-c3062.md)|"*Bezeichner*': Enumerator ist ein Wert erforderlich, da der zugrunde liegenden Typ ist"*Typ*"|
-|[Compilerfehler C3063](compiler-error-c3063.md)|Operator '*Operator*": alle Operanden müssen den gleichen Enumerationstyp aufweisen|
-|Compilerfehler Fehler C3064|"*Bezeichner*": muss ein einfacher Typ oder in einem aufgelöst|
+|Compilerfehler C3061|Operator '*Operator*': für die Enumeration nicht zulässig "*Typ*"mit der zugrunde liegenden Typ'*Typ*"|
+|[Compilerfehler C3062 generiert](compiler-error-c3062.md)|"*Bezeichner*': Enumerator ist ein Wert erforderlich, da der zugrunde liegenden Typ ist"*Typ*"|
+|[Compilerfehler C3063 generiert](compiler-error-c3063.md)|Operator '*Operator*": alle Operanden müssen den gleichen Enumerationstyp aufweisen|
+|Compilerfehler C3064|"*Bezeichner*": muss ein einfacher Typ oder in einem aufgelöst|
 |[Compilerfehler C3065](compiler-error-c3065.md)|Die Eigenschaftendeklaration im Nichtklassenbereich ist nicht zulässig.|
 |[Compilerfehler C3066](compiler-error-c3066.md)|Es gibt mehrere Möglichkeiten, ein Objekt dieses Typs aufgerufen werden, kann mit diesen Argumenten|
-|Compilerfehler Fehler C3067|eine Initialisiererliste kann nicht verwendet werden, mit dem integrierten Operator]|
-|[Compilerfehler C3068](compiler-error-c3068.md)|"*Bezeichner*': eine naked-Funktion dürfen nicht Objekten, die Entladung erforderlich wäre, wenn eine C++-Ausnahme aufgetreten ist.|
+|Compilerfehler C3067|eine Initialisiererliste kann nicht verwendet werden, mit dem integrierten Operator]|
+|[Compilerfehler C3068 generiert](compiler-error-c3068.md)|"*Bezeichner*': eine naked-Funktion dürfen nicht Objekten, die Entladung erforderlich wäre, wenn eine C++-Ausnahme aufgetreten ist.|
 |[Compilerfehler C3069](compiler-error-c3069.md)|Operator '*Operator*': für den Enumerationstyp nicht zulässig.|
 |[Compilerfehler C3070](compiler-error-c3070.md)|"*Bezeichner*": Eigenschaft hat keine'set'-Methode|
 |[Compilerfehler C3071](compiler-error-c3071.md)|Operator '*Operator*' kann nur auf eine Instanz einer Verweisklasse oder einen Werttyp angewendet werden|
-|[Compilerfehler C3072](compiler-error-c3072.md)|Operator '*Operator*' kann nicht mit einer Instanz eines Ref-Klasse verwenden, die den unären '% s'-Operator, um eine Instanz einer Verweisklasse konvertieren in einen Handletyp Klasse angewendet werden|
-|[Compilerfehler C3073](compiler-error-c3073.md)|"*Bezeichner*": Verweisklasse hat keinen benutzerdefinierten Kopierkonstruktor|
-|Compilerfehler Fehler C3074|ein Array kann nicht mit einem Initialisierer in Klammern initialisiert werden|
+|[Compilerfehler C3072 generiert](compiler-error-c3072.md)|Operator '*Operator*' kann nicht mit einer Instanz eines Ref-Klasse verwenden, die den unären '% s'-Operator, um eine Instanz einer Verweisklasse konvertieren in einen Handletyp Klasse angewendet werden|
+|[Compilerfehler C3073 generiert](compiler-error-c3073.md)|"*Bezeichner*": Verweisklasse hat keinen benutzerdefinierten Kopierkonstruktor|
+|Compilerfehler C3074|ein Array kann nicht mit einem Initialisierer in Klammern initialisiert werden|
 |[Compilerfehler C3075](compiler-error-c3075.md)|"*Bezeichner*': Sie können keine Instanz eines Referenztyps einbetten"*Typ*", in einen Werttyp|
-|[Compilerfehler C3076](compiler-error-c3076.md)|"*Bezeichner*': Sie können keine Instanz eines Referenztyps einbetten"*Typ*", in einem systemeigenen Typ|
+|[Compilerfehler C3076 generiert](compiler-error-c3076.md)|"*Bezeichner*': Sie können keine Instanz eines Referenztyps einbetten"*Typ*", in einem systemeigenen Typ|
 |[Compilerfehler C3077](compiler-error-c3077.md)|"*Bezeichner*": ein Finalizer kann nur ein Member eines Verweistyps sein|
-|Compilerfehler Fehler C3078|Größe des Arrays muss in neuen Ausdrücken angegeben werden|
-|Compilerfehler Fehler C3079|eine Initialisiererliste kann nicht als rechter Operand dieses Zuweisungsoperators verwendet werden|
+|Compilerfehler C3078|Größe des Arrays muss in neuen Ausdrücken angegeben werden|
+|Compilerfehler C3079|eine Initialisiererliste kann nicht als rechter Operand dieses Zuweisungsoperators verwendet werden|
 |[Compilerfehler C3080](compiler-error-c3080.md)|"*Finalizer*": ein Finalizer kann keiner Storage-Class-Specifier aufweisen|
-|Compilerfehler Fehler C3081|Veraltet.|
+|Compilerfehler C3081|Veraltet.|
 |Compilerfehler C3082|Veraltet.|
 |[Compilerfehler C3083](compiler-error-c3083.md)|"*Bezeichner*': das Symbol auf der linken Seite des ein '::' muss ein Typ sein|
 |[Compilerfehler C3084](compiler-error-c3084.md)|"*Bezeichner*': nicht möglich, ein Destruktor/Finalizer '*Schlüsselwort*"|
 |[Compilerfehler C3085](compiler-error-c3085.md)|"*Bezeichner*": ein Konstruktor kann nicht sein. '*Schlüsselwort*"|
-|Compilerfehler Fehler C3086|"Std:: initializer_list" kann nicht gefunden werden: Sie müssen #include \<Initializer_list >|
+|Compilerfehler C3086|cannot find 'std::initializer_list': you need to #include \<initializer_list>|
 |[Compilerfehler C3087](compiler-error-c3087.md)|"*Bezeichner*": Aufruf von "*Deklaration*" dieser Member bereits initialisiert|
-|Compilerfehler Fehler C3088|"*Klasse*': Der Attributkonstruktor muss benannte formale Argumente aufweisen|
-|Compilerfehler Fehler C3089|"*Bezeichner*": Name des Parameters entspricht nicht der Name des Elements, der alle Daten|
-|Compilerfehler Fehler C3090|"*Klasse*': Attributklasse handelt es sich nicht um eine Vorlage|
-|Compilerfehler Fehler C3091|"*Klasse*": Attribute-Klasse kann keine Basisklassen aufweisen.|
-|Compilerfehler Fehler C3092|"*Klasse*": Attribut-Klassenmember kann nicht, ein wenig Feld'static' oder 'const'|
-|Compilerfehler Fehler C3093|"*Typ*': Typ ist nicht zulässig, für den Attributklassenmember"*Member*"|
+|Compilerfehler C3088|"*Klasse*': Der Attributkonstruktor muss benannte formale Argumente aufweisen|
+|Compilerfehler C3089|"*Bezeichner*": Name des Parameters entspricht nicht der Name des Elements, der alle Daten|
+|Compilerfehler C3090|"*Klasse*': Attributklasse handelt es sich nicht um eine Vorlage|
+|Compilerfehler C3091|"*Klasse*": Attribute-Klasse kann keine Basisklassen aufweisen.|
+|Compilerfehler C3092|"*Klasse*": Attribut-Klassenmember kann nicht, ein wenig Feld'static' oder 'const'|
+|Compilerfehler C3093|"*Typ*': Typ ist nicht zulässig, für den Attributklassenmember"*Member*"|
 |[Compilerfehler C3094](compiler-error-c3094.md)|"*Attribut*': anonyme Verwendung ist nicht zulässig.|
 |[Compilerfehler C3095](compiler-error-c3095.md)|"*Attribut*": Attribut kann nicht wiederholt werden|
 |[Compilerfehler C3096](compiler-error-c3096.md)|"*Attribut*": Attribut ist für Datenmember von Attributklassen nur zulässig.|
 |[Compilerfehler C3097](compiler-error-c3097.md)|"*Attribut*": Attribut beschränkt werden muss, mit ' Assembly:' oder ' Module: "|
-|Compilerfehler Fehler C3098|"*Bezeichner*": Attribut hat keine benutzerdefinierten Konstruktoren|
+|Compilerfehler C3098|"*Bezeichner*": Attribut hat keine benutzerdefinierten Konstruktoren|
 |[Compilerfehler C3099](compiler-error-c3099.md)|"*Schlüsselwort*": Verwenden Sie [System:: AttributeUsageAttribute] / [Windows::Foundation::Metadata::AttributeUsageAttribute] für verwaltete/WinRT-Attribute|
+
+## <a name="see-also"></a>Siehe auch
+
+[C /C++ Compiler- und Build tools, Fehler und Warnungen](../compiler-errors-1/c-cpp-build-errors.md) \
+[Compilerfehler C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

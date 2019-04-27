@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
 ms.openlocfilehash: 6b271adbaf3fe4d2d5c3b41e974bf3036e7b1947
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159339"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset-Klasse
 
@@ -115,7 +115,7 @@ Der im hash_multiset-Objekt zu speichernde Elementdatentyp.
 *Merkmale*<br/>
 Der Typ, der zwei Funktionsobjekte enthält: eines der Klasse "compare", ein binäres Prädikat, das zwei Elementwerte als Sortierschlüssel, um zu ermitteln, deren relative Reihenfolge und eine Hashfunktion, die eine unäre Prädikat Zuordnung Schlüsselwerte der Elemente, die ohne Vorzeichen ist vergleichen können ganzen Zahlen vom Typ `size_t`. Das Argument ist optional und `hash_compare<Key, less<Key> >` ist der Standardwert.
 
-*Zuweisung*<br/>
+*Allocator*<br/>
 Der Typ, der das gespeicherte Zuweisungsobjekt darstellt, mit dem Details zur Belegung und Freigabe von Arbeitsspeicher für das hash_multiset-Objekt gekapselt werden. Dieses Argument ist optional, und der Standardwert ist `allocator<Key>`.
 
 ## <a name="remarks"></a>Hinweise
@@ -1103,7 +1103,7 @@ size_type erase(const key_type& key);
 *_Where*<br/>
 Die Position des aus der hash_multiset zu entfernenden Elements.
 
-*Erste*<br/>
+*first*<br/>
 Die Position des ersten Elements, das aus der hash_multiset entfernt werden soll.
 
 *last*<br/>
@@ -1430,7 +1430,7 @@ In allen Konstruktoren wird ein Funktionsobjekt vom Typ `Traits` gespeichert, de
 
 Die ersten drei Konstruktoren geben ein leeres ursprüngliches `hash_multiset`, wird die zweite Angabe des Typs der Vergleichsfunktion (*Comp*) verwendet werden, in der Reihenfolge der Elemente und die dritte explizit anzugeben, die Allocator-Typ (*Al*) verwendet werden. Mit dem Schlüsselwort **explicit** werden bestimmte Arten automatischer Typumwandlungen unterdrückt.
 
-Mit dem vierten Konstruktor wird `hash_multiset` `Right` verschoben.
+Der vierte Konstruktor verschiebt die `hash_multiset` `Right`.
 
 Die fünften, sechsten und siebten Konstruktoren verwenden ein initializer_list-Element.
 

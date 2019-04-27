@@ -15,11 +15,11 @@ helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
 ms.openlocfilehash: 43418da36aa2d87608a9d672e4345d24011be0b3
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153438"
 ---
 # <a name="lock-class"></a>lock-Klasse
 
@@ -41,14 +41,14 @@ Intern wird die Lock-Klasse verwendet <xref:System.Threading.Monitor> zum Synchr
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |---------|-----------|
 |[lock::lock](#lock)|Erstellt eine `lock` Objekt, das optional wartet unbegrenzt, Abrufen von der Sperre für eine bestimmte Zeit oder überhaupt nicht.|
 |[lock::~lock](#tilde-lock)|Destructs eine `lock` Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |---------|-----------|
 |[lock::acquire](#acquire)|Richtet eine Sperre für ein Objekt, das optional wartet unbegrenzt, Abrufen von der Sperre für eine bestimmte Zeit oder überhaupt nicht.|
 |[lock::is_locked](#is-locked)|Gibt an, ob eine Sperre gehalten wird.|
@@ -57,7 +57,7 @@ Intern wird die Lock-Klasse verwendet <xref:System.Threading.Monitor> zum Synchr
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |---------|-----------|
 |[lock::operator&nbsp;bool](#operator-bool)|Operator für die Verwendung von `lock` in einem bedingten Ausdruck.|
 |[lock::operator==](#operator-equality)|Equality-Operator.|

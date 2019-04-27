@@ -17,11 +17,11 @@ helpviewer_keywords:
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
 ms.openlocfilehash: 36c97ee866ca449e9bbcf514e464a13f24f12cd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166892"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>Typen- und Variablengrößen in der Inlineassembly
 
@@ -45,7 +45,7 @@ die folgenden C "und" Assembly-Ausdrücke zu erhalten, die Größe des `arr` und
 
 |__asm|C|Größe|
 |-------------|-------|----------|
-|**Länge** Arr|`sizeof`(Arr) /`sizeof`(arr[0])|8|
+|**Länge** Arr|`sizeof`(arr)/`sizeof`(arr[0])|8|
 |**Größe** Arr|`sizeof`(Arr)|32|
 |**Typ** Arr|`sizeof`(arr[0])|4|
 

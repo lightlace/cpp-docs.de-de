@@ -7,11 +7,11 @@ helpviewer_keywords:
 - code_seg __declspec keyword
 ms.assetid: ad3c1105-15d3-4e08-b7b9-e4bd9d7b6aa0
 ms.openlocfilehash: a0b9c6dcd7ee19af59ac39a71498fe41bfc107ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216553"
 ---
 # <a name="codeseg-declspec"></a>code_seg (__declspec)
 
@@ -39,7 +39,7 @@ Wenn eine **Code_seg** Attribut eine Namespace-gültigkeitsbereichsfunktion oder
 
 Wenn eine **Code_seg** -Attribut auf eine Vorlagenklasse oder eine Vorlagenfunktion angewendet wird, werden alle implizite spezialisierungen der Vorlage in das angegebene Segment platziert. Explizite oder partielle spezialisierungen erben nicht die **Code_seg** Attribut aus der primären Vorlage. Sie können angeben, die denselben oder einen anderen **Code_seg** -Attribut für die Spezialisierung. Ein **Code_seg** Attribut nicht auf eine explizite Vorlageninstanziierung angewendet werden.
 
-Standardmäßig wird vom Compiler generierter Code, wie beispielsweise eine spezielle Memberfunktion, in das Segment .text platziert. Die Anweisung `#pragma code_seg` überschreibt diesen Standard nicht. Verwenden der **Code_seg** Attribut für die Klasse, Klassenvorlage oder Funktionsvorlage, um steuern, in dem vom Compiler generierte Code platziert wird.
+Standardmäßig wird vom Compiler generierter Code, wie beispielsweise eine spezielle Memberfunktion, in das Segment .text platziert. Die Direktive `#pragma code_seg` überschreibt diesen Standard nicht. Verwenden der **Code_seg** Attribut für die Klasse, Klassenvorlage oder Funktionsvorlage, um steuern, in dem vom Compiler generierte Code platziert wird.
 
 Lambdas erben **Code_seg** Attribute von ihrem umschließenden Bereich. Um ein Segment für einen Lambda-Ausdruck angeben, gelten eine **Code_seg** Attribut nach der parameterdeklarationsklausel und vor allen änderbaren oder Ausnahmespezifikation, alle nachstehenden rückgabetypspezifikationen und der Lambda-Text. Weitere Informationen finden Sie unter [Lambda-Ausdruckssyntax](../cpp/lambda-expression-syntax.md). In diesem Beispiel wird ein Lambda in einem Segment mit dem Namen PagedMem definiert:
 

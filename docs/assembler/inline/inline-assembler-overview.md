@@ -8,11 +8,11 @@ helpviewer_keywords:
 - inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
 ms.openlocfilehash: 21e0d9ca0e64922b83518eb79c19d2f2e67813bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167010"
 ---
 # <a name="inline-assembler-overview"></a>Übersicht über Inlineassembler
 
@@ -22,7 +22,7 @@ Der Inlineassembler können Sie Assemblysprachanweisungen in Ihrem C- und C++-Qu
 
 Da der Inlineassembler keine separaten Assembly- und Verknüpfungsschritte erfordert, ist er einfacher als ein getrennter Assembler. Inline-Assemblycode können einen C- oder C++ Variablen- oder Funktionsname-Namen, der im Gültigkeitsbereich, daher ist es einfach, es mit C und C++-Code des Programms zu integrieren. Und da der Assemblycode mit C und C++-Anweisungen kombiniert werden kann, können sie Aufgaben, die mühsam oder unmöglich in C oder C++ allein sind ausführen.
 
-Die [__asm](../../assembler/inline/asm.md) -Schlüsselwort ruft den Inlineassembler und können angezeigt werden, wo eine C- oder C++-Anweisung gültig ist. Es kann nicht allein stehen. Ihm muss eine Assemblyanweisung, eine Gruppe von Anweisungen, die in geschweifte Klammern eingeschlossen sind, oder zumindest ein leeres Paar geschweifter Klammern folgen. Der Begriff "`__asm`-Block" bezieht sich hier auf eine beliebige Anweisung bzw. Gruppe von Anweisungen, unabhängig davon, ob in geschweifte Klammern gesetzt oder nicht.
+Die [__asm](../../assembler/inline/asm.md) -Schlüsselwort ruft den Inlineassembler und kann verwendet werden, wo eine C oder C++ Anweisung ist zulässig. Es kann nicht allein stehen. Ihm muss eine Assemblyanweisung, eine Gruppe von Anweisungen, die in geschweifte Klammern eingeschlossen sind, oder zumindest ein leeres Paar geschweifter Klammern folgen. Der Begriff "`__asm`-Block" bezieht sich hier auf eine beliebige Anweisung bzw. Gruppe von Anweisungen, unabhängig davon, ob in geschweifte Klammern gesetzt oder nicht.
 
 Der folgende Code zeigt eine einfache `__asm` Block in geschweifte Klammern eingeschlossen. (Der Code ist eine Prologsequenz für eine benutzerdefinierte Funktion).
 
