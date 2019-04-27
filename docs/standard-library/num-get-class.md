@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 ms.openlocfilehash: c0984c15e2bf1682fc902264f47f340d0bd3c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223749"
 ---
 # <a name="numget-class"></a>num_get-Klasse
 
@@ -167,13 +167,13 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Anfang des Zeichenbereichs, aus dem die Zahl gelesen wird.
 
 *last*<br/>
 Das Ende des Zeichenbereichs, aus dem die Zahl gelesen wird.
 
-*"_Iosbase"*<br/>
+*_Iosbase*<br/>
 Die [ios_base](../standard-library/ios-base-class.md), deren Flags durch die Konvertierung verwendet werden.
 
 *_State*<br/>
@@ -414,13 +414,13 @@ iter_type get(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Anfang des Zeichenbereichs, aus dem die Zahl gelesen wird.
 
 *last*<br/>
 Das Ende des Zeichenbereichs, aus dem die Zahl gelesen wird.
 
-*"_Iosbase"*<br/>
+*_Iosbase*<br/>
 Die [ios_base](../standard-library/ios-base-class.md), deren Flags durch die Konvertierung verwendet werden.
 
 *_State*<br/>
@@ -580,7 +580,7 @@ Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwend
 
 Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 

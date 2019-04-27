@@ -31,11 +31,11 @@ helpviewer_keywords:
 - csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
 ms.openlocfilehash: 2ea6eaedc7eae7256310bf55b06fde0ecb2c64de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62289402"
 ---
 # <a name="csinh-csinhf-csinhl"></a>csinh, csinhf, csinhl
 
@@ -78,7 +78,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Csinh**
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**Csinh**, **Csinhf**, **Csinhl**|\<complex.h>|\<ccomplex>|
+|**csinh**,               **csinhf**, **csinhl**|\<complex.h>|\<ccomplex>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

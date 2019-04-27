@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
 ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261259"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL-OLE DB-Consumer-Assistent
 
@@ -36,13 +36,13 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
    - **Verbindung** Registerkarte
 
-      Der Inhalt dieser Registerkarte hängt von der gewählten Anbieter ab. Es gibt, zwar viele Arten von Anbietern handelt es sich bei dieser Abschnitt behandelt die Verbindungen für die beiden am häufigsten verwendeten: SQL- und ODBC-Daten. Die anderen sind ähnlich wie Variationen der hier beschriebenen Felder.
+      Der Inhalt dieser Registerkarte hängt von der gewählten Anbieter ab. Es gibt, zwar viele Arten von Anbietern handelt es sich bei dieser Abschnitt behandelt die Verbindungen für die beiden am häufigsten verwendeten: Daten, SQL und ODBC. Die anderen sind ähnlich wie Variationen der hier beschriebenen Felder.
 
       Für SQL-Daten:
 
-      1. **Wählen Sie aus, oder geben Sie einen Servernamen:** klicken Sie auf das Dropdown-Listenfeld-Menü, um alle registrierten Daten-Server im Netzwerk angezeigt, und wählen Sie eine.
+      1. **Wählen Sie aus, oder geben Sie einen Servernamen an:** Klicken Sie auf das Dropdown-Listenfeld-Menü, um alle registrierten Daten-Server im Netzwerk angezeigt, und wählen Sie eine.
 
-      1. **Geben Sie Informationen zum Anmelden an den Server:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
+      1. **Geben Sie Informationen zum Anmelden an den Server aus:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
 
          > [!NOTE]
          > Es gibt ein Sicherheitsproblem mit der Funktion "Speichern des Kennworts zulassen" des Dialogfelds Eigenschaften für Datenlinks. Es gibt zwei Optionsfelder, in "Geben Sie Informationen zum Anmelden an den Server":
@@ -53,17 +53,17 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
          > Bei Auswahl von **bestimmten Benutzernamen und bestimmtes Kennwort**, Sie haben die Möglichkeit, speichern Sie das Kennwort (mit der Sie das Kontrollkästchen für "Speichern des Kennworts zulassen"); diese Option ist jedoch nicht sicher. Es wird empfohlen, die Sie auswählen, **Windows NT integrated Security verwenden**; diese Option ist sicherer, da das Kennwort verschlüsselt.
          > Es kann jedoch Situationen, in denen gewünschten "Speichern von Kennwort zulassen". Z. B. Wenn Sie eine Bibliothek mit einer privaten datenbanklösung freigeben, sollten Sie nicht greifen direkt auf die Datenbank jedoch stattdessen eine Anwendung der mittleren Ebene verwenden, überprüfen den Benutzer (über den Authentifizierungsschema, das Sie auswählen), und klicken Sie dann die Art der Daten zu beschränken für den Benutzer verfügbar.
 
-      1. **Wählen Sie die Datenbank auf dem Server:** klicken Sie auf das Dropdown-Listenfeld-Menü, um alle registrierten Datenbanken auf dem Datenserver angezeigt, und wählen Sie eine.
+      1. **Wählen Sie die Datenbank auf dem Server:** Klicken Sie auf das Dropdown-Listenfeld-Menü, um alle registrierten Datenbanken auf dem Datenserver angezeigt, und wählen Sie eine.
 
          \- oder –
 
-         **Anfügen einer Datenbankdatei als Datenbanknamen:** Geben Sie eine Datei als die Datenbank verwendet werden soll, geben Sie den expliziten Pfadnamen.
+         **Anfügen einer Datenbankdatei als Datenbanknamen an:** Geben Sie eine Datei als die Datenbank verwendet werden soll; Geben Sie den expliziten Pfadnamen.
 
       Für ODBC-Daten:
 
-      1. **Geben Sie die Quelle der Daten:** können Sie einen Data Source Name oder eine Verbindungszeichenfolge verwenden.
+      1. **Geben Sie die Quelle der Daten:** Sie können einen Datenquellennamen ein, oder eine Verbindungszeichenfolge verwenden.
 
-         **Name der Datenquelle verwenden:** dieses Dropdown-Liste zeigt Datenquellen, die auf Ihrem Computer registriert. Sie können Datenquellen voraus mithilfe von ODBC-Datenquellen-Administrator einrichten
+         **Name der Datenquelle verwenden:** Diese Dropdownliste werden die Datenquellen, die auf Ihrem Computer registriert angezeigt. Sie können Datenquellen voraus mithilfe von ODBC-Datenquellen-Administrator einrichten
 
          \- oder –
 
@@ -72,7 +72,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
          > [!NOTE]
          > Sie erhalten eine Verbindungszeichenfolge durch Anzeigen der Eigenschaften einer vorhandenen Verbindung in **Server-Explorer**, oder Sie können eine Verbindung erstellen, durch Doppelklicken auf **Verbindung hinzufügen** in **Server Explorer**.
 
-      1. **Geben Sie Informationen zum Anmelden an den Server:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
+      1. **Geben Sie Informationen zum Anmelden an den Server aus:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
 
       1. Geben Sie den ersten Katalog verwenden.
 
@@ -80,9 +80,9 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
    - **Erweiterte** Registerkarte
 
-      **Netzwerkeinstellungen:** geben die **Ebene des Identitätswechsels** (die Ebene des Identitätswechsels, die der Server zu verwenden, wenn der Identitätswechsel für den Client zulässig ist, entspricht direkt den RPC-Ebenen des Identitätswechsels) und  **Schutzebene** (das Maß an Schutz von Daten zwischen Client und Server gesendeten entspricht direkt den RPC-Schutzebenen).
+      **Netzwerkeinstellungen:** Geben Sie die **Ebene des Identitätswechsels** (die Ebene des Identitätswechsels, die der Server zu verwenden, wenn der Identitätswechsel für den Client zulässig ist, entspricht direkt den RPC-Ebenen des Identitätswechsels) und **Schutzebene** () das Maß an Schutz von Daten, die zwischen Client und Server gesendet werden soll; entspricht direkt den RPC-Schutzebenen).
 
-      **Sonstiges:** In **Verbindungstimeout**, geben Sie die Anzahl von Sekunden Zeit im Leerlauf, die zulässig sind, bevor ein Timeout auftritt. In **Zugriffsberechtigungen**, geben Sie die Zugriffsberechtigungen auf die Datenverbindung.
+      **Andere:** In **Verbindungstimeout**, geben Sie die Anzahl von Sekunden Zeit im Leerlauf, die zulässig sind, bevor ein Timeout auftritt. In **Zugriffsberechtigungen**, geben Sie die Zugriffsberechtigungen auf die Datenverbindung.
 
       Weitere Informationen zu erweiterten Eigenschaften finden Sie in der Begleitdokumentation für jeden bestimmten OLE DB-Anbieter.
 
@@ -165,7 +165,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
       Wählen Sie diese Option aus, wenn Sie verwenden möchten `CCommand` oder `db_command` der Befehls- und Klassendeklarationen erstellen. Dies ist die Standardauswahl.
 
-- **Unterstützung**
+- **Support**
 
    Wählen Sie die Kontrollkästchen, um die Art der Updates, die im Consumer unterstützt werden (der Standardwert ist "None") anzugeben. Folgendes wird festgelegt, [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) und die entsprechenden Einträge für [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) -Zuordnung in der Eigenschaft festgelegt.
 

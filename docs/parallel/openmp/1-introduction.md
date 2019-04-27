@@ -3,11 +3,11 @@ title: 1. Einführung
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
 ms.openlocfilehash: 8c735408bdf9f9a13693bd0ad25df185bb1db42a
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236449"
 ---
 # <a name="1-introduction"></a>1. Einführung
 
@@ -57,7 +57,7 @@ Die folgenden Begriffe werden in diesem Dokument verwendet:
 
   Eine private Variable benennt einen Block von Speicher, der für den Thread, der den Verweis eindeutig ist. Es gibt mehrere Möglichkeiten, um anzugeben, dass eine Variable privat ist: eine Definition innerhalb eines parallelen Bereichs ist, eine `threadprivate` -Direktive einer `private`, `firstprivate`, `lastprivate`, oder `reduction` -Klausel, oder Verwenden der Variablen als eine `for`Schleife Steuerelementvariable in einem `for` -Schleife unmittelbar nach einem `for` oder `parallel for` Richtlinie.
 
-- Bereich
+- region
 
   Eine dynamische Umfang.
 
@@ -87,7 +87,7 @@ Die folgenden Begriffe werden in diesem Dokument verwendet:
 
   Ein oder mehrere Threads, die bei der Ausführung eines Konstrukts darstellen.
 
-- Thread
+- thread
 
   Eine Ausführung-Entität mit einem seriellen Kontrollfluss, ein Satz von privaten Variablen und Zugriff auf freigegebene Variablen.
 
@@ -133,5 +133,5 @@ Bei dieser OpenMP-API-Spezifikation in C verweist, wird der Verweis auf die Basi
 
 - [Funktionen der Laufzeitbibliothek](3-run-time-library-functions.md)
 - [Umgebungsvariablen](4-environment-variables.md)
-- [Die Implementierung definiertes Verhalten in OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+- [Durch die Implementierung definierte Verhalten in OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 - [Neue Features in OpenMP C/C++-Version 2.0](f-new-features-and-clarifications-in-version-2-0.md)

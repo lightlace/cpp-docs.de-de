@@ -5,11 +5,11 @@ f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
 ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224076"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -67,7 +67,7 @@ Ein mutex-Typ wird auch als *sperrbarer Typ* bezeichnet. Wenn er die Memberfunkt
 
 ### <a name="structs"></a>Strukturen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[adopt_lock_t-Struktur](../standard-library/adopt-lock-t-structure.md)|Stellt einen Typ dar, der zum Definieren eines `adopt_lock`-Elements verwendet wird.|
 |[defer_lock_t-Struktur](../standard-library/defer-lock-t-structure.md)|Stellt einen Typ dar, der ein `defer_lock`-Objekt definiert, das zum Auswählen eines überladenen Konstruktors von `unique_lock` verwendet wird.|
@@ -76,7 +76,7 @@ Ein mutex-Typ wird auch als *sperrbarer Typ* bezeichnet. Wenn er die Memberfunkt
 
 ### <a name="variables"></a>Variablen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Stellt ein Objekt dar, das an die Konstruktoren von `lock_guard` und `unique_lock` übergeben werden kann, um anzugeben, dass das auch an den Konstruktor übergebene mutex-Objekt gesperrt ist.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Stellt ein Objekt dar, das an den Konstruktor für `unique_lock` übergeben werden kann, um anzugeben, dass der Konstruktor das an diesen übergebene mutex-Objekt nicht sperren soll.|

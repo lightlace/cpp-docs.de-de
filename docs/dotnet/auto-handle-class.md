@@ -16,11 +16,11 @@ helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
 ms.openlocfilehash: ad98bfa9ff447f08c458427961b427e0f2087e62
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54806006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209268"
 ---
 # <a name="autohandle-class"></a>auto_handle-Klasse
 
@@ -42,14 +42,14 @@ Der verwaltete Typ eingebettet werden.
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
 
-|name|Beschreibung|  
+|Name|Beschreibung|  
 |---------|-----------|  
 |[auto_handle::auto_handle](#auto-handle)|Die `auto_handle` Konstruktor.|  
 |[auto_handle::~auto_handle](#tilde-auto-handle)|Die `auto_handle` Destruktor.|  
 
 ### <a name="public-methods"></a>Öffentliche Methoden  
 
-|name|Beschreibung|  
+|Name|Beschreibung|  
 |---------|-----------|  
 |[auto_handle::get](#get)|Ruft das enthaltene Objekt ab.|  
 |[auto_handle::release](#release)|Gibt das Objekt aus `auto_handle` Management.|
@@ -58,7 +58,7 @@ Der verwaltete Typ eingebettet werden.
 
 ### <a name="public-operators"></a>Öffentliche Operatoren 
 
-|name|Beschreibung|  
+|Name|Beschreibung|  
 |---------|-----------| 
 |[auto_handle::operator-&gt;](#operator-arrow)|Memberzugriffsoperators dargestellt.|   
 |[auto_handle::operator=](#operator-assign)|Zuweisungsoperator.| 

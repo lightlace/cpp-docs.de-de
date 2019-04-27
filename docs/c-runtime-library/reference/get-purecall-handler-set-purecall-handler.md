@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
 ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287399"
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -66,7 +66,7 @@ Die vorherige **_purecall_handler**. Gibt **"nullptr"** Wenn kein vorheriger Han
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_get_purecall_handler** und **_set_purecall_handler** Funktionen sind Microsoft-spezifisch und gelten nur für C++-Code.
+Die **_get_purecall_handler** und **_set_purecall_handler** Funktionen sind Microsoft-spezifisch und gelten nur für C++ Code.
 
 Ein Aufruf an eine rein virtuelle Funktion ist ein Fehler, da sie keine Implementierung hat. Standardmäßig generiert der Compiler einen Code, um eine Fehlerhandlerfunktion aufzurufen, wenn eine reine virtuelle Funktion aufgerufen wird, womit das Programm beendet wird. Sie können Ihre eigene Fehlerhandlerfunktion für rein virtuelle Funktionsaufrufe installieren, um sie für das Debuggen und für Berichtszwecke abzufangen. Um Ihren eigenen Fehlerhandler zu verwenden, erstellen Sie eine Funktion mit der **_purecall_handler** Signatur verwenden **_set_purecall_handler** , es sich um den aktuellen Handler festzulegen.
 
