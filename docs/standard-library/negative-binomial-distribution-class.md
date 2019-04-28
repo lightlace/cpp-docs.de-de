@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
 ms.openlocfilehash: a2cc6479c9da3b51c28e5408eb44ff1d02b97023
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223674"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution-Klasse
 
@@ -253,7 +253,7 @@ Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parame
 
 Speichert die Parameter der Verteilung.
 
-Struktur Param_type {Typedef Negative_binomial_distribution`<`Result_type > Distribution_type; Param_type (Result_type k = 1, doppelklicken Sie p = 0,5); Result_type k() const; p() const; Doppelklicken
+struct param_type { typedef negative_binomial_distribution`<`result_type> distribution_type; param_type(result_type k = 1, double p = 0.5); result_type k() const; double p() const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 

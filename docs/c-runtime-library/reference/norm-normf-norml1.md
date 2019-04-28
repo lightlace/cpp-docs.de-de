@@ -31,11 +31,11 @@ helpviewer_keywords:
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
 ms.openlocfilehash: 3c1803a54f0dfc27975af5bb0eeb7e5c042b2579
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156135"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -71,7 +71,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Norm** 
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**Norm**, **Normf**, **Norml**|\<complex.h>|\<complex.h>|
+|**norm**, **normf**, **norml**|\<complex.h>|\<complex.h>|
 
 Die **_Fcomplex**, **_Dcomplex**, und **_Lcomplex** Typen sind Microsoft-spezifische Entsprechungen nicht implementierte nativen Typen C99 **float _Complex** , **double _Complex**, und **long double _Complex**bzw.  Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

@@ -100,11 +100,11 @@ helpviewer_keywords:
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
 ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157369"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -199,7 +199,7 @@ Um dieser Funktionen ohne die veraltungswarnung verwenden zu können, definieren
 
 In C++ haben diese Funktionen vorlagenüberladungen, mit die die sichereren Entsprechungen aufgerufen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Der Posix-Namen **Itoa**, **Ltoa**, und **Ultoa** vorhanden sind, wie Aliase für die **_itoa**, **_ltoa**, und **_ultoa** Funktionen. Der Posix-Namen sind veraltet, da sie nicht die Namenskonventionen auf implementierungsspezifische-Funktion von ISO C. folgen Standardmäßig führen diese Funktionen veraltungswarnung [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Der POSIX-Name für dieses Element ist veraltet. Verwenden Sie stattdessen den ISO C- und C++-konformen Namen:** *New_name*. Es wird empfohlen, Sie ändern, Ihren Quellcode, um die sichereren Versionen dieser Funktionen verwenden **_itoa_s**, **_ltoa_s**, oder **_ultoa_s**. Weitere Informationen finden Sie unter [_itoa_s, _itow_s Funktionen](itoa-s-itow-s.md).
+Der Posix-Namen **Itoa**, **Ltoa**, und **Ultoa** vorhanden sind, wie Aliase für die **_itoa**, **_ltoa**, und **_ultoa** Funktionen. Der Posix-Namen sind veraltet, da sie nicht die Namenskonventionen auf implementierungsspezifische-Funktion von ISO C. folgen Standardmäßig führen diese Funktionen veraltungswarnung [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Der POSIX-Name für dieses Element ist veraltet. Verwenden Sie stattdessen die ISO-C und C++ -konformen Namen:** *New_name*. Es wird empfohlen, Sie ändern, Ihren Quellcode, um die sichereren Versionen dieser Funktionen verwenden **_itoa_s**, **_ltoa_s**, oder **_ultoa_s**. Weitere Informationen finden Sie unter [_itoa_s, _itow_s Funktionen](itoa-s-itow-s.md).
 
 Für die Quelle der Codeportabilität empfiehlt es sich, die Posix-Namen in Ihrem Code beizubehalten. Um dieser Funktionen ohne die veraltungswarnung verwenden zu können, definieren Sie sowohl die **_CRT_NONSTDC_NO_WARNINGS** und **"_crt_secure_no_warnings"** Präprozessormakros, bevor Sie CRT-Header einschließen. Sie können dazu in der Befehlszeile an einer Developer-Eingabeaufforderung durch das Hinzufügen der **/D_CRT_SECURE_NO_WARNINGS** und **/D_CRT_NONSTDC_NO_WARNINGS** Compileroptionen die **cl**Befehl. Definieren Sie andernfalls die Makros, die in Ihren Quelldateien an. Wenn Sie den vorkompilierten Header verwenden, definieren die Makros, die am oberen Rand der vorkompilierten Headerdatei Includedatei, in der Regel "stdafx.h". Verwenden Sie zum definieren die Makros, die in Ihrem Quellcode **#define** Direktiven, bevor Sie alle CRT-Header, wie im folgenden Beispiel einfügen:
 
