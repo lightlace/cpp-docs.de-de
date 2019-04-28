@@ -7,11 +7,11 @@ helpviewer_keywords:
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
 ms.openlocfilehash: f263e9a2ed357cdc80ec29fc5d1b6d58c9e093e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245101"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Numerisch, Boolean und Zeigerliterale (C++)
 
@@ -71,7 +71,7 @@ auto val_4 = 108LL;                           // signed long long
 auto val_4 = 0x8000000000000000ULL << 16;     // unsigned long long
 ```
 
-**Trennzeichen für Ziffern**: Sie können das einfache Anführungszeichen (Apostroph) zum Trennen der-Werte in größerer Anzahl, um sie leichter lesbar zu machen. Trennzeichen haben keine Auswirkungen auf die Kompilierung.
+**Trennzeichen für Ziffern**: Sie können das einfache Anführungszeichen (Apostroph) verwenden, zum Trennen der-Werte in größerer Anzahl, um sie leichter lesbar zu machen. Trennzeichen haben keine Auswirkungen auf die Kompilierung.
 
 ```cpp
 long long i = 24'847'458'121
@@ -81,7 +81,7 @@ long long i = 24'847'458'121
 
 Gleitkommaliterale geben Werte an, die Nachkommastellen aufweisen müssen. Diese Werte enthalten Dezimaltrennzeichen (**.**) und können Exponenten enthalten.
 
-Gleitkommaliterale haben eine „Mantisse“, die den Wert der Zahl angibt, einen „Exponenten“, der die Größe der Zahl angibt, und ein optionales Suffix, das den Literaltyp angibt. Die Mantisse wird wie folgt angegeben: eine Ziffernsequenz, gefolgt von einem Punkt, gefolgt von einer optionalen Ziffernsequenz, die die Nachkommastellen der Zahl darstellen. Beispiel:
+Gleitkommaliterale haben eine „Mantisse“, die den Wert der Zahl angibt, einen „Exponenten“, der die Größe der Zahl angibt, und ein optionales Suffix, das den Literaltyp angibt. Die Mantisse wird wie folgt angegeben: eine Ziffernsequenz, gefolgt von einem Punkt, gefolgt von einer optionalen Ziffernsequenz, die die Nachkommastellen der Zahl darstellen. Zum Beispiel:
 
 ```cpp
 18.46

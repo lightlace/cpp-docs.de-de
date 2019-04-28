@@ -3,11 +3,11 @@ title: Dynamisches Layout
 ms.date: 11/19/2018
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 396aad5b33a00021ddb5c1143c1d15c130e97eaa
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175319"
 ---
 # <a name="dynamic-layout"></a>Dynamisches Layout
 
@@ -61,7 +61,7 @@ Das vorherige Verfahren eignet sich für das Angeben der Einstellungen für das 
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. Für das erste Steuerelement, zu dem Sie dynamisches Verhalten hinzufügen möchten, verwenden Sie die statischen Methoden in der dynamischen Layoutklasse zum Erstellen der [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) -Struktur, die die Art und Weise codiert das Steuerelement angepasst werden soll. Zu diesem Zweck zuerst die entsprechende statische Methode auswählen: [CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), oder [CMFCDynamicLayout::MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Sie übergeben eine Prozentzahl für die horizontalen bzw. vertikalen Aspekte der Verschiebung. Diese statischen Methoden geben alle ein neu erstelltes „MoveSettings“-Objekt zurück, mit dem Sie das Verschiebeverhalten eines Steuerelements angeben können.
+1. Für das erste Steuerelement, zu dem Sie dynamisches Verhalten hinzufügen möchten, verwenden Sie die statischen Methoden in der dynamischen Layoutklasse zum Erstellen der [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) -Struktur, die die Art und Weise codiert das Steuerelement angepasst werden soll. Dazu müssen Sie zuerst die entsprechende statische Methode auswählen: [CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), oder [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Sie übergeben eine Prozentzahl für die horizontalen bzw. vertikalen Aspekte der Verschiebung. Diese statischen Methoden geben alle ein neu erstelltes „MoveSettings“-Objekt zurück, mit dem Sie das Verschiebeverhalten eines Steuerelements angeben können.
 
    Beachten Sie, dass 100 eine exakte Verschiebung gemäß der Größenänderung des Dialogs bedeutet, wodurch der Rand eines Steuerelement in einem festen Abstand zum neuen Rahmen bleibt.
 
