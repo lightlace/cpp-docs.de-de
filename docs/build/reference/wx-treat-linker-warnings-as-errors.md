@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WX linker option
 ms.assetid: e4ba97c7-93f7-43ae-a4bb-d866790926c9
 ms.openlocfilehash: b4b29ed364d39c5f105dded703b8530c08db35e6
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57822092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316300"
 ---
 # <a name="wx-treat-linker-warnings-as-errors"></a>/WX (Linkerwarnungen als Fehler behandeln)
 
@@ -45,5 +45,5 @@ In der Standardeinstellung **/WX** ist nicht aktiv. Um linkerwarnungen als Fehle
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 [MSVC-Linkeroptionen](linker-options.md)
