@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 ms.openlocfilehash: 55f64fcebc308bd0e63643cfb5447608c4e2e37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399771"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo-Struktur
 
@@ -61,7 +61,7 @@ Wenn Sie einen Primärschlüssel für eine Tabelle festlegen, wird der primäre 
 *m_bUnique*<br/>
 Gibt an, ob ein Indexobjekt einen eindeutigen Index für eine Tabelle darstellt. Ist diese Eigenschaft auf "true", stellt das Indexobjekt einen Index, der eindeutig ist. Ein eindeutiger Index besteht aus einem oder mehreren Feldern, die logisch alle Datensätze in einer Tabelle in einen eindeutigen, vordefinierten Reihenfolge anordnen. Wenn der Index eines Felds besteht, müssen Werte im Feld für die gesamte Tabelle eindeutig sein. Wenn der Index von mehr als ein Feld besteht, jedes Feld kann doppelte Werte enthalten, aber jede Kombination von Werten alle indizierten Felder muss eindeutig sein.
 
-Wenn die Unique- und die primären Eigenschaften eines Indexobjekts auf "true" festgelegt werden, wird der Index ist, UNIQUE- und primary: Es werden alle Datensätze in der Tabelle in einer vordefinierten, logischen Reihenfolge eindeutig identifiziert. Wenn die Primärschlüssel-Eigenschaft auf "false" festgelegt ist, ist der Index ein sekundärer Index. Sekundäre Indizes (Schlüssel oder nichtschlüssel) ordnen logisch Datensätze in einer vordefinierten Reihenfolge ohne als Bezeichner für die Datensätze in der Tabelle zu dienen.
+Wenn die Unique- und die primären Eigenschaften eines Indexobjekts auf "true" festgelegt werden, ist der Index Unique- und primary: Alle Datensätze in der Tabelle in einer vordefinierten, logischen Reihenfolge identifiziert eindeutig. Wenn die Primärschlüssel-Eigenschaft auf "false" festgelegt ist, ist der Index ein sekundärer Index. Sekundäre Indizes (Schlüssel oder nichtschlüssel) ordnen logisch Datensätze in einer vordefinierten Reihenfolge ohne als Bezeichner für die Datensätze in der Tabelle zu dienen.
 
 Weitere Informationen finden Sie unter den Themen "Primäre Property" und "Eindeutige Eigenschaft" in-DAO-Hilfe.
 

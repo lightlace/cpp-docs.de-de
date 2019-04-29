@@ -5,11 +5,11 @@ helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
 ms.openlocfilehash: 2a029f653753363e08b3c4f8b9fceab6295924af
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395650"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Datensatzfeldaustausch: Verwenden von RFX
 

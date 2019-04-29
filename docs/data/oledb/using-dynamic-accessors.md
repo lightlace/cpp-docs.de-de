@@ -1,18 +1,18 @@
 ---
-title: Verwenden von dynamischen Zugriffsmethoden
+title: Verwenden von dynamischen Accessoren
 ms.date: 10/18/2018
 helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
 ms.openlocfilehash: 4539247894c3980464e744c76cea450324372382
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403060"
 ---
-# <a name="using-dynamic-accessors"></a>Verwenden von dynamischen Zugriffsmethoden
+# <a name="using-dynamic-accessors"></a>Verwenden von dynamischen Accessoren
 
 Dynamische Zugriffsmethoden können Sie eine Datenquelle zugreifen, wenn Sie keine Kenntnisse über das Datenbankschema (zugrunde liegende Struktur) verfügen. Die OLE DB-Vorlagen-Bibliothek enthält mehrere Klassen, die Ihnen helfen.
 
