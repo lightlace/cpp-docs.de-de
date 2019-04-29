@@ -8,11 +8,11 @@ helpviewer_keywords:
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 ms.openlocfilehash: f14f1197c4c835e9dfb753b1396e12e2d2f12772
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312172"
 ---
 # <a name="unions"></a>Unions
 
@@ -31,7 +31,7 @@ union [name]  { member-list };
 *name*<br/>
 Der Typname, der für die Union angegeben wurde.
 
-*Memberliste*<br/>
+*member-list*<br/>
 Elemente, die die Union enthalten kann. Siehe Hinweise.
 
 ## <a name="remarks"></a>Hinweise
@@ -147,7 +147,7 @@ void Initialize()
 
 Beachten Sie, dass die Union in der Eingabestruktur im vorherigen Beispiel keinen Namen aufweist. Hierbei handelt es sich um eine anonyme Union. Der Zugriff auf ihre Member ist so möglich, als wären sie direkte Member der Struktur. Weitere Informationen über anonyme Unions finden Sie im folgenden Abschnitt.
 
-Im vorherigen Beispiel wurde ein Problem gezeigt, das selbstredend mithilfe von aus einer allgemeinen Basisklasse abgeleiteten Klassen und durch das Verzweigen Ihres Codes auf Grundlage des Laufzeittyps jedes Objekts im Container gelöst werden könnte. Dies hätte Code zur Folge, der einfacher zu verwalten und zu verstehen wäre, wobei die Verwendung möglicherweise langsamer wäre als bei der Verwendung von Unions. Zudem können Sie mit einer Union vollständig nicht verknüpfte Typen speichern und den Typ des Werts dynamisch ändern, der gespeichert wird, ohne den Typ der Unionsvariablen an sich zu ändern. Daher können Sie ein heterogenes Array von „MyUnionType“ erstellen, dessen Elemente unterschiedliche Werte von unterschiedlichen Typen speichern.
+Im vorherigen Beispiel wurde ein Problem gezeigt, das selbstredend mithilfe von aus einer allgemeinen Basisklasse abgeleiteten Klassen und durch das Branchen Ihres Codes auf Grundlage des Laufzeittyps jedes Objekts im Container gelöst werden könnte. Dies hätte Code zur Folge, der einfacher zu verwalten und zu verstehen wäre, wobei die Verwendung möglicherweise langsamer wäre als bei der Verwendung von Unions. Zudem können Sie mit einer Union vollständig nicht verknüpfte Typen speichern und den Typ des Werts dynamisch ändern, der gespeichert wird, ohne den Typ der Unionsvariablen an sich zu ändern. Daher können Sie ein heterogenes Array von „MyUnionType“ erstellen, dessen Elemente unterschiedliche Werte von unterschiedlichen Typen speichern.
 
 Beachten Sie, dass die `Input`-Struktur im vorherigen Beispiel einfach missbraucht werden kann. Es liegt ganz im Ermessen des Benutzers, die Unterscheidung richtig zu verwenden, um auf das Member zuzugreifen, das die Daten hält. Sie können sich vor Missbrauch schützen, indem Sie die Union privat machen und besondere Zugriffsfunktionen bereitstellen, wie dies im nächsten Beispiel gezeigt wird.
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4430
 ms.assetid: 12efbfff-aa58-4a86-a7d6-2c6a12d01dd3
 ms.openlocfilehash: 1d58efd57433a065f08e4111302f358405e3b9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62311435"
 ---
 # <a name="compiler-warning-c4430"></a>Compilerwarnung C4430
 
-Fehlender Typspezifizierer - int wird angenommen. Hinweis: C++ unterstützt keine Standard-int
+Fehlender Typspezifizierer - int wird angenommen. Hinweis: C++ unterstützt nicht die Standard-int
 
 Dieser Fehler kann infolge einer konformitätsverbesserung für Compiler, die für Visual C++ 2005 durchgeführt wurde generiert werden: alle Deklarationen müssen explizit den Typ angeben Int wird nicht mehr angenommen.
 

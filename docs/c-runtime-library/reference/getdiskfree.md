@@ -27,11 +27,11 @@ helpviewer_keywords:
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
 ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331765"
 ---
 # <a name="getdiskfree"></a>_getdiskfree
 
@@ -51,10 +51,10 @@ unsigned _getdiskfree(
 
 ### <a name="parameters"></a>Parameter
 
-*Laufwerk*<br/>
+*drive*<br/>
 Das Laufwerk, zu dem Sie Informationen abrufen möchten.
 
-*DriveInfo*<br/>
+*driveinfo*<br/>
 Ein **_diskfree_t** -Struktur, die mit Informationen über das Laufwerk aufgefüllt wird.
 
 ## <a name="return-value"></a>Rückgabewert

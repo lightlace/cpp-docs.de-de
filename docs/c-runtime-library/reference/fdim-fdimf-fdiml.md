@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
 ms.openlocfilehash: 263635a32b21b01faa84405ab97bd5518f054ba5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334787"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -107,7 +107,7 @@ Diese Funktion entspricht, mit Ausnahme der Behandlung von NaN, `fmax(x - y, 0)`
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
-|**Fdim**, **Fdimf**, **Fdiml**|\<math.h>|\<cmath>|
+|**fdim**, **fdimf**, **fdiml**|\<math.h>|\<cmath>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
