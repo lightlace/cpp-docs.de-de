@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CWinApp class [MFC], overridables
 ms.assetid: 07183d5e-734b-45d9-a8b6-9dde4adac0b4
 ms.openlocfilehash: 35db009f86a0cb984f70a349a3ecdd93bfefb0f0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297080"
 ---
 # <a name="overridable-cwinapp-member-functions"></a>Überschreibbare CWinApp-Memberfunktionen
 
@@ -31,4 +31,4 @@ Die einzige `CWinApp` Memberfunktion, die Sie überschreiben müssen, ist `InitI
 
 ## <a name="see-also"></a>Siehe auch
 
-[CWinApp: Die Anwendungsserver-Klasse](../mfc/cwinapp-the-application-class.md)
+[CWinApp: Die Anwendungsklasse](../mfc/cwinapp-the-application-class.md)

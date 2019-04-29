@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
 ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295460"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr-Klasse
 
@@ -99,7 +99,7 @@ Ein `unique_ptr`.
 *Nptr*<br/>
 Ein `rvalue` vom Typ `std::nullptr_t`.
 
-*PTR*<br/>
+*Ptr*<br/>
 Ein `pointer`.
 
 *Deleter*<br/>
@@ -117,7 +117,7 @@ Verwenden Sie die [make_unique](../standard-library/memory-functions.md#make_uni
 
 `unique_ptr` verwaltet eine Ressource eindeutig. Jedes `unique_ptr`-Objekt speichert einen Zeiger auf das Objekt, das es besitzt, oder speichert einen NULL-Zeiger. Es kann höchstens ein `unique_ptr`-Objekt eine Ressource besitzen. Wird ein `unique_ptr`-Objekt, das eine bestimmte Ressource besitzt, zerstört, wird die Ressource freigegeben. Ein `unique_ptr`-Objekt kann verschoben, aber nicht kopiert werden. Weitere Informationen finden Sie unter [Rvalue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-Die Ressource wird freigegeben, indem ein gespeichertes `deleter`-Objekt vom Typ `Del` aufgerufen wird, dem bekannt ist, wie Ressourcen für ein bestimmtes `unique_ptr`-Objekt zugeordnet werden. Der Standardwert `deleter` `default_delete<T>` wird davon ausgegangen, dass die Ressource, zeigt `ptr` zugeordnet wird `new`, und dass sie die freigegeben werden kann, durch Aufrufen `delete _Ptr`. (Eine partielle `unique_ptr<T[]>`-Spezialisierung verwaltet Arrayobjekte, die `new[]` zugeordnet sind, und verfügt über den Standardwert `deleter` `default_delete<T[]>`, der auf den Aufruf von delete[] `ptr` spezialisiert ist.)
+Die Ressource wird freigegeben, indem ein gespeichertes `deleter`-Objekt vom Typ `Del` aufgerufen wird, dem bekannt ist, wie Ressourcen für ein bestimmtes `unique_ptr`-Objekt zugeordnet werden. Der Standardwert `deleter` `default_delete<T>` wird davon ausgegangen, dass die Ressource, zeigt `ptr` zugeordnet wird `new`, und dass sie die freigegeben werden kann, durch Aufrufen `delete _Ptr`. (Eine teilweise Spezialisierung `unique_ptr<T[]>`verwaltet Arrayobjekte, die mit `new[]`, und hat den Standardwert `deleter` `default_delete<T[]>`, die zum Aufrufen von Delete [] auf `ptr`.)
 
 Der gespeicherte Zeiger auf eine zugehörige Ressource `stored_ptr` ist vom Typ `pointer`. Er lautet `Del::pointer`, wenn er definiert ist, und `T *`, wenn er nicht definiert ist. Das gespeicherte `deleter`-Objekt `stored_deleter` belegt keinen Speicherplatz im Objekt, wenn `deleter` zustandslos ist. Beachten Sie, dass `Del` ein Verweistyp sein kann.
 

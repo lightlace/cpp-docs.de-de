@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
 ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305397"
 ---
 # <a name="tn043-rfx-routines"></a>TN043: RFX-Routinen
 
@@ -150,7 +150,7 @@ Um Ihre eigene benutzerdefinierte RFX-Funktion zu schreiben, wird empfohlen, das
 
 `RFX_Text` und `RFX_Binary`: Diese beiden Funktionen vorab einen statischen Puffer zum Speichern von Informationen für Zeichenfolge/Binary, und müssen diese Puffer registrieren & Wert bei ODBC SQLBindCol registrieren. Aus diesem Grund habe diese beiden Funktionen speziellen Code.
 
-`RFX_Date`: ODBC gibt Datum und Uhrzeit-Informationen in ihren eigenen TIMESTAMP_STRUCT Datenstruktur zurück. Diese Funktion weist eine TIMESTAMP_STRUCT dynamisch als "Proxy" für das Senden und Empfangen von Daten für Datum-Zeit. Verschiedene Vorgänge müssen die Informationen für Datum und Uhrzeit zwischen dem C++ übertragen `CTime` Objekt und dem TIMESTAMP_STRUCT-Proxy. Dies erschwert diese Funktion erheblich, aber es ist ein gutes Beispiel dafür, wie einen Proxy für die Datenübertragung verwendet.
+`RFX_Date`: ODBC gibt Datum und Uhrzeit-Informationen in ihren eigenen TIMESTAMP_STRUCT Datenstruktur zurück. Diese Funktion weist eine TIMESTAMP_STRUCT dynamisch als "Proxy" für das Senden und Empfangen von Daten für Datum-Zeit. Verschiedene Vorgänge müssen die Informationen für Datum und Uhrzeit zwischen übertragen die C++ `CTime` Objekt und dem TIMESTAMP_STRUCT-Proxy. Dies erschwert diese Funktion erheblich, aber es ist ein gutes Beispiel dafür, wie einen Proxy für die Datenübertragung verwendet.
 
 `RFX_LongBinary`: Dies ist der einzige Klassenbibliothek RFX-Funktion, die nicht spaltenbindung zum Empfangen und Senden von Daten. Diese Funktion ignoriert die Operation BindFieldToColumn stattdessen während des Vorgangs Fixup reserviert Speicher, um die eingehenden SQL_LONGVARCHAR oder SQL_LONGVARBINARY Daten enthalten, und führt einen SQLGetData-Aufruf zum Abrufen des Werts in den zugeordneten Speicher. Beim Vorbereiten zum Zurücksenden von Datenwerten mit der Datenquelle (z. B. NameValue und Wert-Vorgänge) verwendet diese Funktion ODBCs-DATA_AT_EXEC-Funktionalität. Finden Sie unter [technischen Hinweis 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) für Weitere Informationen zum Arbeiten mit SQL_LONGVARBINARY und SQL_LONGVARCHARs.
 

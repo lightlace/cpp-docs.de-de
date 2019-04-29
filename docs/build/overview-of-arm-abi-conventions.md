@@ -3,11 +3,11 @@ title: Übersicht über ARM-ABI-Konventionen
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
 ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295233"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Übersicht über die ABI-Konventionen ARM32
 
@@ -41,7 +41,7 @@ Auch wenn Windows es der ARM-Hardware ermöglicht, falsch ausgerichtete Ganzzahl
 
 Der Instruktionssatz für Windows on ARM ist streng auf Thumb-2 beschränkt. Der gesamte Code, der auf dieser Plattform ausgeführt wird, soll erwartungsgemäß im Thumb-Modus starten und dauerhaft dort verweilen. Ein Versuch, zum alten ARM-Instruktionssatz zu wechseln, kann erfolgreich sein. In einem solchen Fall können jedoch alle etwaigen Ausnahmen oder Interrupts zu einem Anwendungsfehler im Benutzermodus oder zu einer Fehlerprüfung im Kernel-Modus führen.
 
-Eine Nebenwirkung dieser Anforderung ist, dass für alle Codezeiger das niedrigwertigste Bit festgelegt sein muss. Auf diese Weise bleibt der Prozessor im Thumb-Modus und versucht nicht, den Zielcode als 32-Bit-ARM-Instruktionen ausführen, wenn die Codezeiger über BLX oder BX geladen und als Verzweigungsziel verwendet werden.
+Eine Nebenwirkung dieser Anforderung ist, dass für alle Codezeiger das niedrigwertigste Bit festgelegt sein muss. Auf diese Weise bleibt der Prozessor im Thumb-Modus und versucht nicht, den Zielcode als 32-Bit-ARM-Instruktionen ausführen, wenn die Codezeiger über BLX oder BX geladen und als Branchziel verwendet werden.
 
 ### <a name="it-instructions"></a>IT-Instruktionen
 
@@ -59,7 +59,7 @@ Der Einsatz von IT-Instruktionen in Thumb-2-Code ist mit Ausnahme der folgenden 
    |LDR, LDR[S]B, LDR[S]H|Aus Arbeitsspeicher laden|Jedoch keine LDR-Literalformen|
    |STR, STRB, STRH|Im Arbeitsspeicher speichern||
    |ADD, ADC, RSB, SBC, SUB|Addieren oder subtrahieren|Jedoch nicht ADD/SUB SP, SP, imm7-Formen<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-   |CMP, CMN|Compare|Rm != PC, Rn != PC|
+   |CMP, CMN|Vergleichen|Rm != PC, Rn != PC|
    |MUL|Multiplizieren||
    |ASR, LSL, LSR, ROR|Bit-Verschiebung||
    |AND, BIC, EOR, ORR, TST|Bitweise arithmetisch||
@@ -187,7 +187,7 @@ Der Stack muss dauerhaft 4-Byte-ausgerichtet bleiben und an jeder Funktionsgrenz
 
 Funktionen, die einen Frame-Pointer verwenden müssen, z. B. Funktionen, die `alloca` aufrufen oder die den Stack-Pointer dynamisch ändern, müssen den Frame-Pointer in r11 im Funktionsprolog einrichten und bis zum Epilog unverändert lassen. Funktionen, die keinen Frame-Pointer erfordern, müssen alle Stack-Updates im Prolog durchführen und dann den Stack-Pointer bis zum Epilog unverändert lassen.
 
-Funktionen, die 4 KB oder mehr im Stack zuweisen, müssen sicherstellen, dass jede Seite vor der letzten Seite in der richtigen Reihenfolge verwendet wird. Dadurch wird sichergestellt, dass kein Code über die Schutzseiten "läuft", die Windows zur Erweiterung des Stacks verwendet. Dies wird in der Regel mithilfe des Hilfsprogramms `__chkstk` erzielt, dem die Stack-Gesamtzuordnung in Bytes geteilt durch 4 an r4 übergeben wird und das die letzte Stackzuordnungsanzahl in Bytes wieder an r4 zurückgibt.
+Funktionen, die 4 KB oder mehr im Stack zuweisen, müssen sicherstellen, dass jede Seite vor der letzten Seite in der richtigen Reihenfolge verwendet wird. Dadurch wird sichergestellt, dass kein Code über die Schutzseiten „läuft“, die Windows zur Erweiterung des Stacks verwendet. Dies wird in der Regel mithilfe des Hilfsprogramms `__chkstk` erzielt, dem die Stack-Gesamtzuordnung in Bytes geteilt durch 4 an r4 übergeben wird und das die letzte Stackzuordnungsanzahl in Bytes wieder an r4 zurückgibt.
 
 ### <a name="red-zone"></a>Rote zone
 

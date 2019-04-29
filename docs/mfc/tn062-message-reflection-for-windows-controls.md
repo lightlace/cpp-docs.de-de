@@ -28,11 +28,11 @@ helpviewer_keywords:
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
 ms.openlocfilehash: aa189eec430d72bef753fef7ebbe9ad929d76c87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351843"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Meldungsreflektion für Windows-Steuerelemente
 
@@ -87,28 +87,28 @@ Die Bedeutung der Parameter und Rückgabewerte von Funktionen sind unter den Nam
 
 |Zuordnungseintrag|Funktionsprototyp|
 |---------------|------------------------|
-|**ON_CONTROL_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**die "void" Afx_msg** `memberFxn` **();**|
-|**ON_NOTIFY_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**die "void" Afx_msg** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *Ergebnis* **);**|
-|**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**die "void" Afx_msg** `memberFxn` **(CCmdUI** <strong>\*</strong> `pCmdUI` **);**|
-|**ON_WM_CTLCOLOR_REFLECT)**|**Afx_msg HBRUSH CtlColor vor (CDC** <strong>\*</strong> `pDC` **, "uint"** `nCtlColor` **);**|
-|**ON_WM_DRAWITEM_REFLECT)**|**Afx_msg "void" DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
-|**ON_WM_MEASUREITEM_REFLECT)**|**Afx_msg "void" MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
-|**ON_WM_DELETEITEM_REFLECT)**|**Afx_msg "void" DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
-|**("ON_WM_COMPAREITEM_REFLECT)**|**Afx_msg Int CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
-|**ON_WM_CHARTOITEM_REFLECT)**|**Afx_msg Int CharToItem (UINT** `nKey` **, "uint"** `nIndex` **);**|
-|**ON_WM_VKEYTOITEM_REFLECT)**|**Afx_msg Int VKeyToItem (UINT** `nKey` **, "uint"** `nIndex` **);**|
-|**ON_WM_HSCROLL_REFLECT)**|**Afx_msg "void" HScroll (UINT** `nSBCode` **, "uint"** `nPos` **);**|
-|**ON_WM_VSCROLL_REFLECT)**|**Afx_msg "void" VScroll (UINT** `nSBCode` **, "uint"** `nPos` **);**|
-|**ON_WM_PARENTNOTIFY_REFLECT)**|**Afx_msg "void" ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|
+|**ON_CONTROL_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( );**|
+|**ON_NOTIFY_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**die "void" Afx_msg** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *Ergebnis* **);**|
+|**ON_UPDATE_COMMAND_UI_REFLECT(** `memberFxn` **)**|**afx_msg void** `memberFxn` **( CCmdUI**<strong>\*</strong> `pCmdUI` **);**|
+|**ON_WM_CTLCOLOR_REFLECT( )**|**afx_msg HBRUSH CtlColor ( CDC**<strong>\*</strong> `pDC` **, UINT** `nCtlColor` **);**|
+|**ON_WM_DRAWITEM_REFLECT( )**|**afx_msg void DrawItem ( LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
+|**ON_WM_MEASUREITEM_REFLECT( )**|**afx_msg void MeasureItem ( LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
+|**ON_WM_DELETEITEM_REFLECT( )**|**afx_msg void DeleteItem ( LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
+|**ON_WM_COMPAREITEM_REFLECT( )**|**afx_msg int CompareItem ( LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
+|**ON_WM_CHARTOITEM_REFLECT( )**|**Afx_msg Int CharToItem (UINT** `nKey` **, "uint"** `nIndex` **);**|
+|**ON_WM_VKEYTOITEM_REFLECT( )**|**Afx_msg Int VKeyToItem (UINT** `nKey` **, "uint"** `nIndex` **);**|
+|**ON_WM_HSCROLL_REFLECT( )**|**afx_msg void HScroll ( UINT** `nSBCode` **, UINT** `nPos` **);**|
+|**ON_WM_VSCROLL_REFLECT( )**|**Afx_msg "void" VScroll (UINT** `nSBCode` **, "uint"** `nPos` **);**|
+|**ON_WM_PARENTNOTIFY_REFLECT( )**|**Afx_msg "void" ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|
 
 Die Makros ON_NOTIFY_REFLECT und ON_CONTROL_REFLECT haben Varianten, die mehr als ein Objekt (z. B. das Steuerelement und seinem übergeordneten Element) zu ermöglichen, um eine bestimmte Nachricht zu verarbeiten.
 
 |Zuordnungseintrag|Funktionsprototyp|
 |---------------|------------------------|
-|**ON_NOTIFY_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**Afx_msg "bool"** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *Ergebnis* **);**|
-|**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**Afx_msg "bool"** `memberFxn` **();**|
+|**ON_NOTIFY_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**Afx_msg "bool"** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *Ergebnis* **);**|
+|**ON_CONTROL_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( );**|
 
-## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Umgang mit Nachrichten reflektiert: Ein Beispiel für ein Wiederverwendbares Steuerelement
+## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Behandeln von reflektierten Meldungen: Ein Beispiel für ein Wiederverwendbares Steuerelement
 
 In diesem einfache Beispiel erstellt ein wiederverwendbares Steuerelement namens `CYellowEdit`. Das Steuerelement funktioniert identisch mit einem regulären Edit-Steuerelement, mit dem Unterschied, dass schwarzen Text auf einen gelben Hintergrund angezeigt. Es wäre einfach, Member-Funktionen hinzuzufügen, die ermöglichen die `CYellowEdit` -Steuerelement zum Anzeigen von verschiedenen Farben.
 

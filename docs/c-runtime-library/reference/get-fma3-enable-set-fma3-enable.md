@@ -20,11 +20,11 @@ helpviewer_keywords:
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
 ms.openlocfilehash: 19eabc3b5a11246d5b0056bdafbb169e2a7de9f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332194"
 ---
 # <a name="getfma3enable-setfma3enable"></a>_get_FMA3_enable, _set_FMA3_enable
 
@@ -39,7 +39,7 @@ int _get_FMA3_enable();
 
 ### <a name="parameters"></a>Parameter
 
-*Flag*<br/>
+*flag*<br/>
 Auf 1 festgelegt ist, aktivieren Sie die FMA3-Implementierungen, der das Gleitkomma Transzendente Math-Bibliotheksfunktionen auf X64 Plattformen, oder 0, um die Implementierungen zu verwenden, die keine FMA3-Anweisungen verwenden.
 
 ## <a name="return-value"></a>Rückgabewert

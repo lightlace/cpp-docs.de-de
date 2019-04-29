@@ -11,11 +11,11 @@ f1_keywords:
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
 ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279098"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -38,7 +38,7 @@ Ab Visual Studio 2015, die Implementierung der `steady_clock` wurde geändert, u
 
 ### <a name="structs"></a>Strukturen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[common_type-Struktur](../standard-library/common-type-structure.md)|Beschreibt Spezialisierungen der Vorlagenklasse [common_type](../standard-library/common-type-class.md) für Instanziierungen von `duration` und `time_point`.|
 |[duration_values-Struktur](../standard-library/duration-values-structure.md)|Stellt bestimmte Werte für den `duration`-Vorlagenparameter `Rep` bereit.|
@@ -89,9 +89,9 @@ Weitere Informationen zu Verhältnistypen, die in den folgenden typedefs-Element
 |Literal|Beschreibung|
 |-------------|-----------------|
 |chrono::hours operator "" h(unsigned long long Val)|Gibt die Stunden als Integralwert an.|
-|chrono:: Duration\<double Verhältnis\<3600 >> Operator "" h (long double-Wert)|Gibt die Stunden als Gleitkommawert an.|
+|chrono::duration\<double, ratio\<3600> > operator "" h(long double Val)|Gibt die Stunden als Gleitkommawert an.|
 |chrono::minutes (operator "" min)(unsigned long long Val)|Gibt die Minuten als Integralwert an.|
-|chrono:: Duration\<double Verhältnis\<60 >> (Operator "" min) (long double Val)|Gibt die Minuten als Gleitkommawert an.|
+|chrono::duration\<double, ratio\<60> > (operator "" min)( long double Val)|Gibt die Minuten als Gleitkommawert an.|
 |chrono::seconds operator "" s(unsigned long long Val)|Gibt die Minuten als Integralwert an.|
 |chrono::duration\<double> operator "" s(long double Val)|Gibt die Sekunden als Gleitkommawert an.|
 |chrono::milliseconds operator "" ms(unsigned long long Val)|Gibt die Millisekunden als Integralwert an.|

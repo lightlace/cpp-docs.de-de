@@ -9,11 +9,11 @@ f1_keywords:
 helpviewer_keywords:
 - Unicode, Visual C++
 ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317327"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Unicode-Unterstützung im Compiler und Linker
 
@@ -49,4 +49,4 @@ ASM- und COD-Dumps müssen standardmäßig in ANSI sein, damit die Kompatibilit�
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden Sie das MSVC-Toolset, über die Befehlszeile](../building-on-the-command-line.md)
+[Verwenden des MSVC-Toolsets über die Befehlszeile](../building-on-the-command-line.md)

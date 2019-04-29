@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335307"
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 
@@ -94,7 +94,7 @@ Wenn die Datei durch angegeben *Filename* ist nicht vorhanden, eine neue Datei m
 |-----------|----------------|
 |**_S_IWRITE**|Schreiben zugelassen.|
 |**_S_IREAD**|Lesen erlaubt.|
-|**_S_IREAD** &AMP;#124; **_S_IWRITE**|Lesen und Schreiben erlaubt.|
+|**_S_IREAD** &#124; **_S_IWRITE**|Lesen und Schreiben erlaubt.|
 
 Wenn keine Schreibberechtigung gewährt wird, kann die Datei nur gelesen werden. Hinweis: Alle Dateien sind stets lesbar; es ist nicht möglich, nur Schreibberechtigungen zu vergeben. Die Modi **_S_IWRITE** und **_S_IREAD** | **_S_IWRITE** sind äquivalent. Mit geöffneten Dateien **_creat** werden immer im Kompatibilitätsmodus geöffnet (siehe [_sopen](sopen-wsopen.md)) mit **_SH_DENYNO**.
 

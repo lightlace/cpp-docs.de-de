@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Wp64 compiler option [C++]
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
 ms.openlocfilehash: 5a3cdaf85fa4dc05ece54fc630cb69fc93650e6b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316547"
 ---
 # <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (Nach 64-Bit-Portabilitätsproblemen suchen)
 
@@ -63,6 +63,6 @@ Wenn Sie Ihre Anwendung regelmäßig mit einem Compiler, der 64-Bit X64 erstellt
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)<br/>
 [Konfigurieren von C++-Projekten für 64-Bit-X64 Ziele](../configuring-programs-for-64-bit-visual-cpp.md)

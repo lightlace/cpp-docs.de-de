@@ -7,11 +7,11 @@ helpviewer_keywords:
 - CGTHREADS linker option
 ms.assetid: 4b52cfdb-3702-470b-9580-fabeb1417488
 ms.openlocfilehash: b778802d3fffcaafc0cf01ac46ae85c4efbef95c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294667"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (Compilerthreads)
 
@@ -51,4 +51,4 @@ Für einen Build können mehrere Stufen der Parallelität angegeben werden. Der 
 ## <a name="see-also"></a>Siehe auch
 
 [MSVC-Linkeroptionen](linker-options.md)<br/>
-[MSVC-Linker-Referenz](linking.md)
+[MSVC-Linkerreferenz](linking.md)

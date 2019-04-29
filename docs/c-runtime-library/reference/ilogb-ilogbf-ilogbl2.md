@@ -1,5 +1,5 @@
 ---
-title: Ilogb, Ilogbf, ilogbl2
+title: ilogb, ilogbf, ilogbl2
 ms.date: 04/05/2018
 apiname:
 - ilogb
@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
 ms.openlocfilehash: 272544124dd8a8a666fc434516d3c45c73b1d011
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331674"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -79,7 +79,7 @@ Andernfalls gibt er die folgenden, in \<math.h> definierten Werte zurück:
 |Eingabe|Ergebnis|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±INF, ±nan, unbestimmte|FP_ILOGBNAN|
+|±inf, ±nan, indefinite|FP_ILOGBNAN|
 
 Fehler werden gemäß den Angaben in [_matherr](matherr.md) gemeldet.
 
@@ -93,7 +93,7 @@ Das Aufrufen dieser Funktion ist ähnlich wie das Aufrufen der entsprechenden **
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**Ilogb**, **Ilogbf**, **Ilogbl**|\<math.h>|\<cmath>|
+|**ilogb**, **ilogbf**, **ilogbl**|\<math.h>|\<cmath>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

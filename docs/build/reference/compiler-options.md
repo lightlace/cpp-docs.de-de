@@ -9,11 +9,11 @@ helpviewer_keywords:
 - x64 MSVC compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
 ms.openlocfilehash: 831aade72cd728ec42aee5ef1f320deb7bdf173d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294264"
 ---
 # <a name="compiler-options"></a>Compileroptionen
 
@@ -40,7 +40,7 @@ Wenn Sie eine bestimmte Compileroption suchen, ziehen Sie eine der folgenden Lis
 
 In den Themen zu den einzelnen Compileroptionen wird erläutert, wie die jeweilige Option in der Entwicklungsumgebung eingestellt werden kann. Informationen über das Festlegen von Optionen außerhalb der Entwicklungsumgebung, finden Sie unter:
 
-- [MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+- [Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)
 
 - [CL-Befehlsdateien](cl-command-files.md)
 

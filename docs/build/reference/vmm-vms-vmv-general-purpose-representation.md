@@ -20,11 +20,11 @@ helpviewer_keywords:
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
 ms.openlocfilehash: 7a46cecdbf96ad891ce218df4769a60590e562a9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316729"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Immer allgemeiner Zweck)
 
@@ -67,5 +67,5 @@ Wenn Sie eine der folgenden Vererbungsmodell Optionen angeben, wird das Modell f
 ## <a name="see-also"></a>Siehe auch
 
 [/vmb, /vmg (Darstellungsmethode)](vmb-vmg-representation-method.md)<br/>
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

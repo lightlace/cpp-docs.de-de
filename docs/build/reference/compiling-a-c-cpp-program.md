@@ -7,11 +7,11 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
 ms.openlocfilehash: 2269ba69cea2702ff190c791eb6753acb3619f7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294147"
 ---
 # <a name="compiling-a-cc-project"></a>Kompilieren eines C/C++-Projekts
 
@@ -37,7 +37,7 @@ Compileroptionen werden "von links nach rechts" verarbeitet. Wird ein Konflikt e
 
 ## <a name="additional-compiler-topics"></a>Weitere Themen zum Compiler
 
-- [MSVC-Compiler-Optionen](compiler-options.md)
+- [MSVC-Compileroptionen](compiler-options.md)
 
 - [Vorkompilierte Headerdateien](../creating-precompiled-header-files.md)
 

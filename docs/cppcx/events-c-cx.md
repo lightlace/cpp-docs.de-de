@@ -3,11 +3,11 @@ title: Ereignisse (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
 ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301538"
 ---
 # <a name="events-ccx"></a>Ereignisse (C++/CX)
 
@@ -63,4 +63,4 @@ Die Reihenfolge, in der die Ereignisquelle Ereignishandler auf Ereignisempfänge
 [Typsystem](../cppcx/type-system-c-cx.md)<br/>
 [Delegaten](../cppcx/delegates-c-cx.md)<br/>
 [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)
+[Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)

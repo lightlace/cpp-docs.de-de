@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
 ms.openlocfilehash: 89916e60d9677240f2d70e37e9a80e6ad7a76fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305865"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: DDX- und DDV-Routinen
 
@@ -87,7 +87,7 @@ Es gibt drei andere interessante `CDataExchange` Mitglieder:
 
 - `m_pDlgWnd`: Das Fenster (normalerweise ein Dialogfeld), das die Steuerelemente enthält. Dadurch wird verhindert, dass die Aufrufer der globalen Funktionen DDX_ und DDV_ "this" übergeben müssen jede DDX-/DDV-Routine.
 
-- `PrepareCtrl`, und `PrepareEditCtrl`: Vorbereiten von einem Dialogfeld-Steuerelement für den Datenaustausch. Speichert dieses Steuerelements Handle zum Festlegen des Fokus, wenn es sich bei einem Überprüfungsfehler fehlschlägt. `PrepareCtrl` wird verwendet, für nicht-Edit-Steuerelemente und `PrepareEditCtrl` wird für Bearbeitungssteuerelemente verwendet.
+- `PrepareCtrl`, und `PrepareEditCtrl`: Bereitet ein dialogsteuerelement für den Datenaustausch. Speichert dieses Steuerelements Handle zum Festlegen des Fokus, wenn es sich bei einem Überprüfungsfehler fehlschlägt. `PrepareCtrl` wird verwendet, für nicht-Edit-Steuerelemente und `PrepareEditCtrl` wird für Bearbeitungssteuerelemente verwendet.
 
 - `Fail`: Wird aufgerufen, nachdem ein Meldungsfeld, das warnen der Benutzer die Eingabe Fehler aufzurufen. Diese Routine wird den Fokus auf das letzte Steuerelement wiederhergestellt (dem letzten Aufruf von `PrepareCtrl` oder `PrepareEditCtrl`) und löst eine Ausnahme. Diese Memberfunktion kann von sowohl DDX_ und DDV_ Routinen aufgerufen werden.
 
@@ -143,11 +143,11 @@ else
 
 Klassen-Assistent unterstützt eine Teilmenge der DDX-/DDV-Anpassungen und ermöglicht Ihnen, Ihre eigenen DDX_ und DDV_ Routinen in der Klassen-Assistenten-Benutzeroberfläche integrieren. Dies ist nur Kosten von Vorteil, wenn Sie bestimmte-DDX- und DDV-Routinen in einem Projekt oder in vielen Projekten wiederverwenden möchten.
 
-Zu diesem Zweck werden spezielle Einträge in DDX vorgenommen. CLW (frühere Versionen von Visual C++ diese Informationen in APSTUDIO gespeichert. INI) oder in Ihrem Projekts ab. CLW-Datei. Die spezielle Einträge möglich eingegeben haben, entweder im Abschnitt [allgemeine Info] Ihres Projekts. CLW-Datei oder im Abschnitt [ExtraDDX] die DDX. CLW-Datei im Verzeichnis \Programme\Microsoft Visual Studio\Visual C ++ \bin. Möglicherweise müssen Sie den DDX zu erstellen. CLW-Datei, wenn er nicht bereits vorhanden. Wenn Sie die benutzerdefinierte DDX_/DDV_-Routinen nur in einem bestimmten Projekt verwenden möchten, fügen Sie die Einträge im Abschnitt [allgemeine Info] Ihres Projekts. Die Datei stattdessen CLW. Wenn Sie die Routinen für viele Projekte verwenden möchten, fügen Sie die Einträge im Abschnitt [ExtraDDX] der DDX. CLW.
+Zu diesem Zweck werden spezielle Einträge in DDX vorgenommen. CLW (frühere Versionen von Visual C++ diese Informationen in APSTUDIO gespeichert. INI) oder in Ihrem Projekts ab. CLW-Datei. Die spezielle Einträge möglich eingegeben haben, entweder im Abschnitt [allgemeine Info] Ihres Projekts. CLW-Datei oder im Abschnitt [ExtraDDX] die DDX. CLW Datei \Programme\Microsoft Visual Studio\Visual C++Verzeichnis \bin. Möglicherweise müssen Sie den DDX zu erstellen. CLW-Datei, wenn er nicht bereits vorhanden. Wenn Sie die benutzerdefinierte DDX_/DDV_-Routinen nur in einem bestimmten Projekt verwenden möchten, fügen Sie die Einträge im Abschnitt [allgemeine Info] Ihres Projekts. Die Datei stattdessen CLW. Wenn Sie die Routinen für viele Projekte verwenden möchten, fügen Sie die Einträge im Abschnitt [ExtraDDX] der DDX. CLW.
 
 Das allgemeine Format für diese spezielle Einträge ist:
 
-> ExtraDDXCount =*n*
+> ExtraDDXCount=*n*
 
 wo *n* ist die Anzahl der ExtraDDX? Zeilen, die folgen, des Formulars
 
@@ -168,13 +168,13 @@ Jedes Feld wird durch ein Zeichen ";" getrennt. Die Felder und deren Zweck werde
   c | Aktivieren Sie das Kontrollkästchen Zuständen
   R | erste Optionsfeld einer Gruppe
   L | unsortierte Listenfeld
-  c | SortedList-Feld
+  l | SortedList-Feld
   M | Kombinationsfeld (bei bearbeiten-Element)
   N | unsortierte Dropdownliste
   n | sortierte Dropdownliste
   1 | Wenn die Einfügung DDX auf den Anfang der Liste hinzugefügt werden sollen (Standardwert ist zu Ende hinzufügen) in der Regel dient zum DDX-Routinen, die die Eigenschaft 'Control' übertragen.
 
-- *VB-Schlüssel*
+- *vb-keys*
 
   Dieses Feld wird nur in den 16-Bit-Produkt für VBX-Steuerelementen verwendet (VBX-Steuerelementen sind im 32-Bit-Produkt nicht unterstützt.)
 
@@ -186,17 +186,17 @@ Jedes Feld wird durch ein Zeichen ";" getrennt. Die Felder und deren Zweck werde
 
   Einzelne Bezeichner für den Typ, in der Headerdatei auszugeben. Im Beispiel oben mit DDX_Time würde diese CTime festgelegt werden.
 
-- *VB-Schlüssel*
+- *vb-keys*
 
   In dieser Version nicht verwendet und sollte immer leer sein.
 
-- *Startwertes*
+- *initValue*
 
   Initialwert – 0 oder leer. Wenn es leer ist, wird keine initialisierungszeile im Abschnitt //{{AFX_DATA_INIT der Implementierungsdatei geschrieben werden. Ein leerer Eintrag für C++-Objekte verwendet werden soll (z. B. `CString`, `CTime`und so weiter), die über Konstruktoren, die korrekte Initialisierung garantieren verfügen.
 
 - *DDX_Proc*
 
-  Einzelne Bezeichner für die DDX_-Prozedur. Die Namen der C++-Funktion muss mit "DDX_" beginnen, fügen Sie jedoch nicht "DDX_" in der \<DDX_Proc > Bezeichner. Im obigen Beispiel ist die \<DDX_Proc > Bezeichner wäre Zeit. Wenn ClassWizard schreibt den Funktionsaufruf der Implementierungsdatei in die {{AFX_DATA_MAP Abschnitt er fügt diesen Namen an DDX_, daher DDX_Time eintreffen.
+  Einzelne Bezeichner für die DDX_-Prozedur. Die C++ Funktionsname muss mit "DDX_" beginnen, fügen Sie jedoch nicht "DDX_" in der \<DDX_Proc > Bezeichner. Im obigen Beispiel ist die \<DDX_Proc > Bezeichner wäre Zeit. Wenn ClassWizard schreibt den Funktionsaufruf der Implementierungsdatei in die {{AFX_DATA_MAP Abschnitt er fügt diesen Namen an DDX_, daher DDX_Time eintreffen.
 
 - *comment*
 
@@ -208,7 +208,7 @@ Jedes Feld wird durch ein Zeichen ";" getrennt. Die Felder und deren Zweck werde
 
 - *arg*
 
-  Einzelne Bezeichner für die DDV_-Prozedur. Die Namen der C++-Funktion muss mit "DDV_" beginnen, aber nehmen Sie nicht "DDX_" in der \<DDX_Proc > Bezeichner.
+  Einzelne Bezeichner für die DDV_-Prozedur. Die C++ Funktionsname muss mit "DDV_" beginnen, aber nehmen Sie nicht "DDX_" in der \<DDX_Proc > Bezeichner.
 
   *Arg* gefolgt von 1 oder 2 DDV-Argumente:
 

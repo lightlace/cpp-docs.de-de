@@ -11,11 +11,11 @@ helpviewer_keywords:
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
 ms.openlocfilehash: 9e595857a6089c59aa6638ed51acacae3a0eb5e9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294994"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Festlegen von Linker-Antwortdateien)
 
@@ -44,5 +44,5 @@ Finden Sie unter [@ (Geben Sie Compiler-Antwortdateien)](at-specify-a-compiler-r
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 [MSVC-Linkeroptionen](linker-options.md)

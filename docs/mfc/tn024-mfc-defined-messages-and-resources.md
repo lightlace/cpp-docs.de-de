@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
 ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306024"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: MFC-definierte Meldungen und Ressourcen
 
@@ -172,7 +172,7 @@ Die Standardsymbolleiste von AppWizard angegeben basieren auf eine benutzerdefin
 
 Eine MFC-private Ressource-Format wird verwendet, um zusätzliche Dialogfeld Initialisierungsinformationen zu speichern. Dies schließt den Anfangssatz von Zeichenfolgen in einem Kombinationsfeld gespeichert. Das Format dieser Ressource dient nicht manuell bearbeitet werden, aber von Visual C++ verarbeitet wird.
 
-Visual C++ und diese Ressource RT_DLGINIT sind nicht erforderlich, die entsprechenden Funktionen von MFC verwendet, da es sich um API-Alternative zu mithilfe der Informationen in der Ressource. Mit Visual C++ ist es viel einfacher zu schreiben, verwalten und Ihre Anwendung wird langfristig zu übersetzen.
+Visual C++ und diese Ressource RT_DLGINIT nicht die entsprechenden Funktionen von MFC verwendet, da es sich um API-Alternative zu mithilfe der Informationen in der Ressource erforderlich sind. Mit Visual C++ ist es viel einfacher zu schreiben, verwalten und Ihre Anwendung wird langfristig zu übersetzen.
 
 Die grundlegende Struktur einer Ressource RT_DLGINIT lautet wie folgt aus:
 

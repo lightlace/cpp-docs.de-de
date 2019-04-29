@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2038
 ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62298866"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Linkertoolfehler LNK2038
 
@@ -26,7 +26,7 @@ Visual Studio definiert die folgenden Symbole, um das Verknüpfen von nicht komp
 
 - `_MSC_VER` Gibt an, die Versionsnummern der Haupt- und Nebenversionsnummern des Visual C++-Compilers, die zum Erstellen einer app oder Bibliothek verwendet wird. Code, der mit einer Version des Visual C++-Compilers kompiliert wird, ist nicht mit Code kompatibel, der mit einer Version kompiliert wird, die andere Haupt- und Nebenversionsnummern hat. Weitere Informationen finden Sie unter `_MSC_VER` in [Predefined Macros](../../preprocessor/predefined-macros.md).
 
-   Wenn Sie in einer Bibliothek, die nicht mit der Version des Visual C++-Compilers kompatibel, die Sie verwenden verknüpfen, und Sie nicht erworben oder eine kompatible Version der Bibliothek zu erstellen, können Sie eine frühere Version des Compilers verwenden, zum Erstellen des Projekts: Ändern der **Plattformtoolset** Eigenschaft des Projekts, um die früheren Toolset. Weitere Informationen finden Sie unter [Vorgehensweise: Ändern des Zielframeworks und Plattformtoolset](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Wenn Sie in einer Bibliothek, die nicht mit der Version des Visual C++-Compilers kompatibel, die Sie verwenden verknüpfen, und Sie nicht erworben oder eine kompatible Version der Bibliothek zu erstellen, können Sie eine frühere Version des Compilers verwenden, zum Erstellen des Projekts: Ändern der **Plattformtoolset** Eigenschaft des Projekts, um die früheren Toolset. Weitere Informationen finden Sie unter [Vorgehensweise: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - `_ITERATOR_DEBUG_LEVEL` Gibt die Ebene der Sicherheits- und Debugfunktionen, die in der C++-Standardbibliothek aktiviert werden. Diese Funktionen können die Darstellung bestimmter C++-Standardbibliotheksobjekte ändern. Dadurch werden diese möglicherweise mit solchen Objekten inkompatibel, die andere Sicherheits- und Debugfunktionen verwenden. Weitere Informationen finden Sie unter [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 

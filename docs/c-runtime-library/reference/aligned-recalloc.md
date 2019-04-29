@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _aligned_recalloc function
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
 ms.openlocfilehash: ce505c5a389d4ff6aa12a88bfc47fb0a6f026eea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335606"
 ---
 # <a name="alignedrecalloc"></a>_aligned_recalloc
 
@@ -56,7 +56,7 @@ Die Anzahl der Elemente.
 *size*<br/>
 Die Größe jedes Elements in Byte.
 
-*Ausrichtung*<br/>
+*alignment*<br/>
 Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.
 
 ## <a name="return-value"></a>Rückgabewert

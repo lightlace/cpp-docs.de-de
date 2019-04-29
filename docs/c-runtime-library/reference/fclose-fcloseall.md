@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
 ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334878"
 ---
 # <a name="fclose-fcloseall"></a>fclose, _fcloseall
 
@@ -47,7 +47,7 @@ int _fcloseall( void );
 
 ### <a name="parameters"></a>Parameter
 
-*Stream*<br/>
+*stream*<br/>
 Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -62,7 +62,7 @@ Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doser
 
 Die **_fcloseall** -Funktion schließt alle offenen Streams außer **Stdin**, **"stdout"**, **"stderr"** (und in MS-DOS **_stdaux**  und **_stdprn**). Außerdem schließt und löscht alle temporären Dateien, die von erstellten **Tmpfile**. Bei beiden Funktionen werden alle Puffer, die dem Stream zugewiesen sind, vor dem Schließen geleert. Systemseitig angegebene Puffer werden freigegeben, wenn der Stream geschlossen wird. Vom Benutzer mit zugewiesenen Puffer **Setbuf** und **Setvbuf** werden nicht automatisch freigegeben.
 
-**Hinweis:** Wenn diese Funktionen verwendet werden, um einen Stream zu schließen, werden ebenso wie der Stream auch der zugrundeliegende Dateideskriptor und das Dateihandle des Betriebssystems geschlossen. Daher wird die Datei ursprünglich geöffnet wurde als Dateihandle oder Dateideskriptor und geschlossen wird, mit **Fclose**, sind nicht gleichzeitig Aufruf **_close** auf den Dateideskriptor zu schließen, rufen Sie die Win32-Funktion nicht  **"CloseHandle"** um das Dateihandle zu schließen.
+**Hinweis**: Wenn diese Funktionen verwendet werden, um einen Stream zu schließen, werden die zugrunde liegenden Dateideskriptor und Betriebssystem-Dateihandle (oder Socket), sowie der Stream geschlossen. Daher wird die Datei ursprünglich geöffnet wurde als Dateihandle oder Dateideskriptor und geschlossen wird, mit **Fclose**, sind nicht gleichzeitig Aufruf **_close** auf den Dateideskriptor zu schließen, rufen Sie die Win32-Funktion nicht  **"CloseHandle"** um das Dateihandle zu schließen.
 
 **Fclose** und **_fcloseall** enthält Code, der Schutz vor Störungen durch andere Threads. Für nicht sperrende Version von einem **Fclose**, finden Sie unter **_fclose_nolock**.
 
