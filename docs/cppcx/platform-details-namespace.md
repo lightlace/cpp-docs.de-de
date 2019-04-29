@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Details Namespace
 ms.assetid: e13c1f93-c823-4f0f-a3ee-2429bfd184db
 ms.openlocfilehash: 05677a08b7c63ddbe2196da946d62c00004d8942
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387642"
 ---
 # <a name="platformdetails-namespace"></a>Platform::Details-Namespace
 
@@ -30,7 +30,7 @@ namespace Platform {
 
 Obwohl dieser Namespace für die interne Verwendung vorgesehen ist, können Browser die folgenden Member dieses Namespace anzeigen.
 
-|name|Hinweis|
+|Name|Hinweis|
 |----------|------------|
 |Konsole|Klasse. Zeigt die Ausgabe in Komponententests an.|
 |_GUID|Struktur|

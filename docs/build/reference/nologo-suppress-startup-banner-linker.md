@@ -14,11 +14,11 @@ helpviewer_keywords:
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
 ms.openlocfilehash: 0ef0c6f8e0073e7450daa8d0433ce4d6e82ceab8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320518"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Startbanner unterdrücken) (Linker)
 
@@ -44,5 +44,5 @@ Standardmäßig werden diese Informationen durch den Linker an, das Fenster "Aus
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 [MSVC-Linkeroptionen](linker-options.md)

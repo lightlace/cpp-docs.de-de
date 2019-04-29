@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
 ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368733"
 ---
 # <a name="platformexception-class"></a>Platform::Exception-Klasse
 
@@ -153,4 +153,4 @@ In Windows 8 ist diese Eigenschaft schreibgeschützt, da Ausnahmen in dieser Ver
 
 ## <a name="see-also"></a>Siehe auch
 
-[Platform-namespace](../cppcx/platform-namespace-c-cx.md)
+[Plattformnamespace](../cppcx/platform-namespace-c-cx.md)

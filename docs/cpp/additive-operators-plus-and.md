@@ -13,11 +13,11 @@ helpviewer_keywords:
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
 ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385049"
 ---
 # <a name="additive-operators--and--"></a>Additive Operatoren: + und -
 
@@ -46,21 +46,21 @@ Additive Operatoren nehmen Operanden vom Typ *arithmetische*, *ganzzahligen*, un
 
 |Typ|Bedeutung|
 |----------|-------------|
-|*arithmetische Operationen*|Ganzzahlige und nicht verankerte Typen werden kollektiv als "arithmetische" Typen bezeichnet.|
+|*arithmetic*|Ganzzahlige und nicht verankerte Typen werden kollektiv als "arithmetische" Typen bezeichnet.|
 |*integral*|Die Typen "char" und "int" in sämtlichen Größen ("long", "short") und Enumerationen sind ganzzahlige Typen.|
-|*skalare*|Skalare Operanden sind entweder arithmetische oder Zeiger-Operanden.|
+|*scalar*|Skalare Operanden sind entweder arithmetische oder Zeiger-Operanden.|
 
 Die gültigen Kombinationen für diese Operatoren sind:
 
-*arithmetische* + *arithmetische*
+*arithmetic* + *arithmetic*
 
-*Skalare* + *ganzzahligen*
+*scalar* + *integral*
 
-*ganzzahlige* + *skalare*
+*integral* + *scalar*
 
-*arithmetische* - *arithmetische*
+*arithmetic* - *arithmetic*
 
-*Skalare* - *skalare*
+*scalar* - *scalar*
 
 Beachten Sie, dass Addition und Subtraktion keine äquivalenten Vorgänge sind.
 

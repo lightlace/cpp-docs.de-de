@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: e7c474e9112acadc11af889471b1e126dfeeb23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394142"
 ---
 # <a name="ctype-class"></a>ctype-Klasse
 
@@ -147,7 +147,7 @@ Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwend
 
 Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
@@ -180,7 +180,7 @@ Der Maskenwert, für den das Zeichen getestet werden soll.
 *ch*<br/>
 Das Zeichen, dessen Attribute getestet werden sollen.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in einem Bereich, dessen Attribute klassifiziert werden sollen.
 
 *last*<br/>
@@ -227,7 +227,7 @@ Das zu konvertierende Zeichen vom Typ `Chartype`, das vom Gebietsschema verwende
 *default*<br/>
 Der Standardwert von der Memberfunktion Zeichen vom Typ zugewiesen werden `CharType` , die keine entsprechenden Zeichen vom Typ **Char**.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in dem Bereich, in dem Zeichen konvertiert werden sollen.
 
 *last*<br/>
@@ -266,7 +266,7 @@ virtual const CharType *do_scan_is(
 *maskVal*<br/>
 Der Maskenwert, mit dem ein Zeichen übereinstimmen soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in dem Bereich, in dem gesucht werden soll.
 
 *last*<br/>
@@ -300,7 +300,7 @@ virtual const CharType *do_scan_not(
 *maskVal*<br/>
 Der Maskenwert, mit dem ein Zeichen nicht übereinstimmen soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in dem Bereich, in dem gesucht werden soll.
 
 *last*<br/>
@@ -335,7 +335,7 @@ virtual const CharType *do_tolower(
 *ch*<br/>
 Das Zeichen, das in einen Kleinbuchstaben umgewandelt werden soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in dem Zeichenbereich, in dem die Zeichen in Groß- bzw. Kleinbuchstaben umgewandelt werden sollen.
 
 *last*<br/>
@@ -370,7 +370,7 @@ virtual const CharType *do_toupper(
 *ch*<br/>
 Das Zeichen, das in einen Großbuchstaben umgewandelt werden soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in dem Zeichenbereich, in dem die Zeichen in Groß- bzw. Kleinbuchstaben umgewandelt werden sollen.
 
 *last*<br/>
@@ -406,7 +406,7 @@ virtual const char *do_widen(
 *byte*<br/>
 Das Zeichen vom Typ **Char** im systemeigenen Zeichensatz konvertiert werden.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in dem Bereich, in dem Zeichen konvertiert werden sollen.
 
 *last*<br/>
@@ -450,7 +450,7 @@ Der Maskenwert, für den das Zeichen getestet werden soll.
 *ch*<br/>
 Das Zeichen, dessen Attribute getestet werden sollen.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in einem Bereich, dessen Attribute klassifiziert werden sollen.
 
 *last*<br/>
@@ -530,7 +530,7 @@ Das zu konvertierende Zeichen vom Typ `Chartype`, das vom Gebietsschema verwende
 *default*<br/>
 Der Standardwert von der Memberfunktion Zeichen vom Typ zugewiesen werden `CharType` , die keine entsprechenden Zeichen vom Typ **Char**.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in dem Bereich, in dem Zeichen konvertiert werden sollen.
 
 *last*<br/>
@@ -591,7 +591,7 @@ const CharType *scan_is(
 *maskVal*<br/>
 Der Maskenwert, mit dem ein Zeichen übereinstimmen soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in dem Bereich, in dem gesucht werden soll.
 
 *last*<br/>
@@ -647,7 +647,7 @@ const CharType *scan_not(
 *maskVal*<br/>
 Der Maskenwert, mit dem ein Zeichen nicht übereinstimmen soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in dem Bereich, in dem gesucht werden soll.
 
 *last*<br/>
@@ -702,7 +702,7 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 *ch*<br/>
 Das Zeichen, das in einen Kleinbuchstaben umgewandelt werden soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in dem Zeichenbereich, in dem die Zeichen in Groß- bzw. Kleinbuchstaben umgewandelt werden sollen.
 
 *last*<br/>
@@ -757,7 +757,7 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 *ch*<br/>
 Das Zeichen, das in einen Großbuchstaben umgewandelt werden soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in dem Zeichenbereich, in dem die Zeichen in Groß- bzw. Kleinbuchstaben umgewandelt werden sollen.
 
 *last*<br/>
@@ -812,7 +812,7 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 *byte*<br/>
 Das Zeichen vom Typ char im nativen Zeichensatz, das umgewandelt werden soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in dem Bereich, in dem Zeichen konvertiert werden sollen.
 
 *last*<br/>

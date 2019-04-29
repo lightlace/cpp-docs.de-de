@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
 ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341112"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Bessel-Funktionen: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -92,15 +92,15 @@ Die **_j0**, **_j1**, und **_jn** Routinen geben Bessel Funktionen der ersten Ar
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **SUCHEN**|**UNGÜLTIG**|**_DOMAIN**|
+|± **QNAN**, **IND**|**UNGÜLTIG**|**_DOMAIN**|
 
 Die **_y0**, **_y1**, und **_yn** Routinen geben Bessel Funktionen der zweiten Art zurück: 0, 1 und n, bzw. ordnet.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **SUCHEN**|**UNGÜLTIG**|**_DOMAIN**|
+|± **QNAN**, **IND**|**UNGÜLTIG**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;X&#124; < 0,0|**UNGÜLTIG**|**_DOMAIN**|
+|&#124;x&#124; < 0.0|**UNGÜLTIG**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Anforderungen
 

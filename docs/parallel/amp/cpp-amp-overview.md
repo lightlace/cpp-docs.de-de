@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
 ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349898"
 ---
 # <a name="c-amp-overview"></a>Übersicht über C++ AMP
 
@@ -102,9 +102,9 @@ void CppAmpMethod() {
 
 Es sind zwar die gleichen grundlegenden Elemente vorhanden, es werden jedoch C++ AMP-Konstrukte verwendet:
 
-- Daten: Sie verwenden C++-Arrays aus, um drei C++ AMP erstellen [Array_view](../../parallel/amp/reference/array-view-class.md) Objekte. Sie stellen vier Werte zur Verfügung, um ein `array_view`-Objekt zu erstellen: die Datenwerte, den Rang, den Elementtyp und die Länge des `array_view`-Objekts in jeder Dimension. Der Rang und der Typ werden als Typparameter übergeben. Die Daten und die Länge werden als Konstruktorparameter übergeben. In diesem Beispiel ist das an den Konstruktor übergebene C++-Array eindimensional. Der Rang und die Länge werden verwendet, um die rechteckige Form der Daten im `array_view`-Objekt zu erstellen, und die Datenwerte werden verwendet, um das Array zu füllen. Die Laufzeitbibliothek enthält auch die [array-Klasse](../../parallel/amp/reference/array-class.md), die über eine Schnittstelle, die ähnelt verfügt die `array_view` Klasse und wird weiter unten in diesem Artikel.
+- Daten: Verwenden Sie C++ Arrays, erstellen Sie drei C++ AMP [Array_view](../../parallel/amp/reference/array-view-class.md) Objekte. Sie stellen vier Werte zur Verfügung, um ein `array_view`-Objekt zu erstellen: die Datenwerte, den Rang, den Elementtyp und die Länge des `array_view`-Objekts in jeder Dimension. Der Rang und der Typ werden als Typparameter übergeben. Die Daten und die Länge werden als Konstruktorparameter übergeben. In diesem Beispiel ist das an den Konstruktor übergebene C++-Array eindimensional. Der Rang und die Länge werden verwendet, um die rechteckige Form der Daten im `array_view`-Objekt zu erstellen, und die Datenwerte werden verwendet, um das Array zu füllen. Die Laufzeitbibliothek enthält auch die [array-Klasse](../../parallel/amp/reference/array-class.md), die über eine Schnittstelle, die ähnelt verfügt die `array_view` Klasse und wird weiter unten in diesem Artikel.
 
-- Iteration: Die [Parallel_for_each-Funktion (C++-AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) bietet einen Mechanismus zum Durchlaufen der Datenelemente oder *compute-Domäne*. In diesem Beispiel wird die Compute-Domäne durch `sum.extent` angegeben. Der Code, der ausgeführt werden soll, die in ein Lambda-Ausdruck enthalten ist oder *Kernelfunktion*. Die Anweisung `restrict(amp)` gibt an, dass nur die Teilmenge der Programmiersprache C++ verwendet wird, die mit C++ AMP beschleunigt werden kann.
+- Iteration: Die [Parallel_for_each-Funktion (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) bietet einen Mechanismus zum Durchlaufen der Datenelemente oder *compute-Domäne*. In diesem Beispiel wird die Compute-Domäne durch `sum.extent` angegeben. Der Code, der ausgeführt werden soll, die in ein Lambda-Ausdruck enthalten ist oder *Kernelfunktion*. Die Anweisung `restrict(amp)` gibt an, dass nur die Teilmenge der Programmiersprache C++ verwendet wird, die mit C++ AMP beschleunigt werden kann.
 
 - Index: Die [index-Klasse](../../parallel/amp/reference/index-class.md) Variable `idx`, wird mit dem Rang eins, den Rang übereinstimmt, deklariert die `array_view` Objekt. Mithilfe des Index kann auf die einzelnen Elemente der `array_view`-Objekte zugegriffen werden.
 
@@ -477,9 +477,9 @@ Wie andere C++-Bibliotheken können Sie C++ AMP in UWP-apps. In diesen Artikeln 
 
 - [Ein Fenster Store-app in JavaScript und C++ Reise-Optimierer von Bing Maps](http://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Gewusst wie: Verwenden von C++ AMP from C# mithilfe der Windows-Runtime](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Gewusst wie: Verwenden von C++ AMP from c# mithilfe der Windows-Runtime](http://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [Gewusst wie: Verwenden von C++ AMP from C#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [Gewusst wie: Verwenden von C++ AMP from c#](http://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [Aufrufen nativer Funktionen aus verwaltetem Code](../../dotnet/calling-native-functions-from-managed-code.md)
 

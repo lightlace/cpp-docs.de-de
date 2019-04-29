@@ -1,5 +1,5 @@
 ---
-title: Fmod, Fmodf, fmodl
+title: fmod, fmodf, fmodl
 ms.date: 04/05/2018
 apiname:
 - fmod
@@ -30,13 +30,13 @@ helpviewer_keywords:
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
 ms.openlocfilehash: 78677be1a0c9921c35e54d43a00b8956a9d858b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333351"
 ---
-# <a name="fmod-fmodf-fmodl"></a>Fmod, Fmodf, fmodl
+# <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
 Berechnet den Gleitkommarest.
 
@@ -67,7 +67,7 @@ long double fmodl(
 
 ### <a name="parameters"></a>Parameter
 
-*X*, *y*<br/>
+*x*, *y*<br/>
 Gleitkommawerte.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -84,7 +84,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von aufrufen können *
 
 |Funktion|Erforderlicher Header|
 |--------------|---------------------|
-|**Fmod**, **Fmodf**, **Fmodl**|\<math.h>|
+|**fmod**, **fmodf**, **fmodl**|\<math.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

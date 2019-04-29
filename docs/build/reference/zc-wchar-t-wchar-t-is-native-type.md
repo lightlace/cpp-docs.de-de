@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
 ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57815176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315637"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t ist der systemeigene Typ)
 
@@ -29,11 +29,11 @@ Analysieren Sie `wchar_t` als integrierten Typ entsprechend dem C++-Standard.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn **/Zc: wchar_t** aktiviert ist, `wchar_t` ist ein Schlüsselwort für einen integrierten ganzzahligen Typ im als C++ kompilierten Code. Wenn **/Zc:** (mit einem Minuszeichen) wird angegeben, oder im Code als C kompiliert, `wchar_t` ist kein integrierter Typ. Stattdessen `wchar_t` ist definiert als eine `typedef` für `unsigned short` in die kanonische Header STDDEF.h definiert ist. (Die Microsoft-Implementierung definiert es in einem anderen Header, der vom stddef.h berücksichtigt wird und andere standard-Header.)
+Wenn **/Zc: wchar_t** aktiviert ist, `wchar_t` ist ein Schlüsselwort für einen integrierten ganzzahligen Typ im Code als kompiliert C++. Wenn **/Zc:** (mit einem Minuszeichen) wird angegeben, oder im Code als C kompiliert, `wchar_t` ist kein integrierter Typ. Stattdessen `wchar_t` ist definiert als eine `typedef` für `unsigned short` in die kanonische Header STDDEF.h definiert ist. (Die Microsoft-Implementierung definiert es in einem anderen Header, der vom stddef.h berücksichtigt wird und andere standard-Header.)
 
-Wir empfehlen nicht **/Zc:** , da der C++-Standard, erfordert `wchar_t` ein integrierter Typ sein. Die Verwendung der `typedef`-Version kann Portabilitätsprobleme verursachen. Wenn Sie ein von früheren Versionen von Visual C++ Upgrade und Compilerfehler auftreten, [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) , da der Code versucht, eine implizite Konvertierung einer `wchar_t` zu `unsigned short`, es wird empfohlen, die Sie ändern den Code, um stattdessen den Fehler zu beheben Einstellung **/Zc:**.
+Wir empfehlen nicht **/Zc:** da die C++ Standard erfordert, dass `wchar_t` ein integrierter Typ sein. Die Verwendung der `typedef`-Version kann Portabilitätsprobleme verursachen. Wenn Sie ein von früheren Versionen von Visual Upgrade C++ und Compilerfehler auftreten, [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) , da der Code versucht, eine implizite Konvertierung einer `wchar_t` zu `unsigned short`, es wird empfohlen, die Sie ändern den Code, um den Fehler zu beheben statt **/Zc:**.
 
-Die **/Zc: wchar_t** Option ist standardmäßig in C++-Kompilierungen und wird in C++-Kompilierungen ignoriert. Die [/ PERMISSIVE--](permissive-standards-conformance.md) Option hat keine Auswirkungen auf **/Zc: wchar_t**.
+Die **/Zc: wchar_t** Option ist standardmäßig in C++ Kompilierungen und wird in C++-Kompilierungen ignoriert. Die [/ PERMISSIVE--](permissive-standards-conformance.md) Option hat keine Auswirkungen auf **/Zc: wchar_t**.
 
 Microsoft implementiert `wchar_t` als 2-Byte-Wert ohne Vorzeichen. In den Microsoft-spezifischen systemeigenen Typ zugeordnet `__wchar_t`. Weitere Informationen zu `wchar_t`, finden Sie unter [Datentypbereiche](../../cpp/data-type-ranges.md) und [Basistypen](../../cpp/fundamental-types-cpp.md).
 

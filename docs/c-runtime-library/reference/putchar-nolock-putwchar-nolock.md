@@ -33,11 +33,11 @@ helpviewer_keywords:
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
 ms.openlocfilehash: 2a70c2363b5ae35faab9a0167200366b286408b3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358156"
 ---
 # <a name="putcharnolock-putwcharnolock"></a>_putchar_nolock, _putwchar_nolock
 
@@ -65,7 +65,7 @@ Siehe **putchar, putwchar**.
 
 ## <a name="remarks"></a>Hinweise
 
-**Putchar_nolock** und **_putwchar_nolock** sind identisch mit den Versionen ohne das **_nolock** suffix mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt sind. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsichere Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+**Putchar_nolock** und **_putwchar_nolock** sind identisch mit den Versionen ohne das **_nolock** suffix mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt sind. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

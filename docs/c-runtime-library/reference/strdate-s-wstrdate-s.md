@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
 ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353988"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 
@@ -84,7 +84,7 @@ Null, wenn erfolgreich. Der Rückgabewert ist ein Fehlercode, wenn ein Fehler au
 |**NULL**|(alle)|**EINVAL**|Nicht geändert|
 |Nicht **NULL** (zeigt auf gültigen Puffer)|0|**EINVAL**|Nicht geändert|
 |Nicht **NULL** (zeigt auf gültigen Puffer)|0 < *NumberOfElements* < 9|**EINVAL**|Leere Zeichenfolge|
-|Nicht **NULL** (zeigt auf gültigen Puffer)|*NumberOfElements* > = 9|0|Aktuelles Datum, wie es in den Hinweisen angegeben wurde|
+|Nicht **NULL** (zeigt auf gültigen Puffer)|*numberOfElements* >= 9|0|Aktuelles Datum, wie es in den Hinweisen angegeben wurde|
 
 ## <a name="security-issues"></a>Sicherheitsprobleme
 

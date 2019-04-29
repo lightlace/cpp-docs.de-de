@@ -28,11 +28,11 @@ helpviewer_keywords:
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
 ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357589"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -62,8 +62,8 @@ Die **Rint** Funktionen geben einen Gleitkommawert, der die nächste ganze Zahl,
 
 |Eingabe|SEH-Ausnahme|**_matherr** Ausnahme|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|Keine|Keine|
-|Abbrüche|EXCEPTION_FLT_UNDERFLOW|Keine|
+|± ∞, QNAN, IND|none|none|
+|Abbrüche|EXCEPTION_FLT_UNDERFLOW|none|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -73,7 +73,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Rint** 
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
-|**Rint**, **Rintf**, **Rintl**|\<math.h>|\<cmath>|
+|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

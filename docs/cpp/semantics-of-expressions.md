@@ -8,11 +8,11 @@ helpviewer_keywords:
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
 ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331212"
 ---
 # <a name="semantics-of-expressions"></a>Semantik von Ausdrücken
 
@@ -52,7 +52,7 @@ Die Reihenfolge der Auswertung des in der obigen Abbildung dargestellten Ausdruc
 
 1. Addition (+) besitzt die zweithöchste Priorität, sodass `a` dem Produkt von `b` und `c` hinzugefügt wird.
 
-1. Nach links (<<) hat die niedrigste Priorität im Ausdruck, es gibt jedoch zwei Vorkommen. Da der Left Shift-Operator von links nach rechts gruppiert, wird zuerst der linke und dann der rechte Teilausdruck ausgewertet.
+1. Verschiebung nach links (<<) hat die niedrigste Priorität im Ausdruck, aber es gibt zwei vorkommen. Da der Left Shift-Operator von links nach rechts gruppiert, wird zuerst der linke und dann der rechte Teilausdruck ausgewertet.
 
 Wenn Teilausdrücke mit Klammern gruppiert werden, werden die Rangfolge sowie die Reihenfolge der Auswertung des Ausdrucks geändert, wie in der folgenden Abbildung gezeigt.
 
@@ -69,10 +69,10 @@ Die Programmiersprache C++ gibt beim Angeben von Operanden bestimmte Kompatibili
 
 |Typ erwartet|Typen zulässig|
 |-------------------|-------------------|
-|*Typ*|`const` *Typ*<br /> `volatile` *Typ*<br /> *type*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *Typ*<br /> `volatile const` *Typ*&|
-|*Typ* \*|*Typ* \*<br /> `const` *Typ* \*<br /> `volatile` *Typ* \*<br /> `volatile const` *Typ* \*|
-|`const` *Typ*|*Typ*<br /> `const` *Typ*<br />`const` *Typ*&|
-|`volatile` *Typ*|*Typ*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|
+|*Typ*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *type*<br /> `volatile const` *Typ*&|
+|*type* \*|*type* \*<br /> `const` *Typ* \*<br /> `volatile` *Typ* \*<br /> `volatile const` *Typ* \*|
+|`const` *type*|*Typ*<br /> `const` *type*<br />`const` *Typ*&|
+|`volatile` *type*|*Typ*<br /> `volatile` *type*<br /> `volatile` *Typ*&|
 
 Da die vorangehenden Regeln immer in Kombination verwendet werden können, kann ein const-Zeiger auf ein flüchtiges Objekt angegeben werden, wo ein Zeiger erwartet wird.
 
@@ -94,7 +94,7 @@ Zwischen aufeinanderfolgenden "Sequenzpunkten" kann der Wert eines Objekts nur e
 
 Die C++-Sprachendefinition gibt derzeit keine Sequenzpunkte an. Microsoft C++ verwendet dieselben Sequenzpunkte wie ANSI C für jeden beliebigen Ausdruck, der C-Operatoren einbezieht und nicht überladene Operatoren beinhaltet. Wenn Operatoren überladen werden, wird die Semantik von Operatorseqenzierung in Funktionsaufrufsequenzierung geändert. Microsoft C++ verwendet folgende Sequenzpunkte:
 
-- Linker Operand des logischen AND-Operators (&&). Der linke Operand des logischen AND-Operators wird vollständig ausgewertet, und alle Nebeneffekte werden vor dem Fortsetzen abgeschlossen. Es gibt keine Garantie, dass der rechte Operand des logischen AND-Operators ausgewertet wird.
+- Linker Operand des logischen AND-Operators (& &). Der linke Operand des logischen AND-Operators wird vollständig ausgewertet, und alle Nebeneffekte werden vor dem Fortsetzen abgeschlossen. Es gibt keine Garantie, dass der rechte Operand des logischen AND-Operators ausgewertet wird.
 
 - Linker Operand des logischen OR-Operators (&#124;&#124;). Der linke Operand des logischen OR-Operators wird vollständig ausgewertet, und alle Nebeneffekte werden vor dem Fortsetzen abgeschlossen. Es gibt keine Garantie, dass der rechte Operand des logischen OR-Operators ausgewertet wird.
 

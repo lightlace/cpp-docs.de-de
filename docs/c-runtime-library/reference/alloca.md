@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
 ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341599"
 ---
 # <a name="alloca"></a>_alloca
 
@@ -57,7 +57,7 @@ Eine Stapelüberlaufausnahme wird generiert, wenn der Speicherplatz nicht zugeor
 
 **_alloca** ordnet *Größe* Bytes aus dem Programmstapel. Der zugewiesene Speicherplatz wird automatisch freigegeben, wenn die aufrufende Funktion beendet wird (nicht, wenn die Zuordnung lediglich außerhalb des gültigen Bereichs übergeben). Aus diesem Grund übergeben Sie keine der Zeigerwert zurückgegebenes **_alloca** als Argument an [kostenlose](free.md).
 
-Es gibt Einschränkungen beim expliziten Aufruf **_alloca** in einem Ausnahmehandler (EH). EH-Routinen, die auf x86-Klasse-Prozessoren ausgeführt werden, arbeiten in ihrem eigenen Speicherrahmen: Sie führen Ihre Tasks im Speicherplatz aus, der nicht auf der aktuellen Position des Stapelzeigers der einschließenden Funktion basiert. Die am häufigsten verwendeten Implementierungen umfassen die strukturierte Windows NT-Ausnahmebehandlung (SEH) und C++-Catch-Klauselausdrücke. Aus diesem Grund explizit aufrufen **_alloca** in einem der folgenden Szenarien Ergebnisse in einem Programmfehler während an die aufrufende EH-Routine zurückgegeben:
+Es gibt Einschränkungen beim expliziten Aufruf **_alloca** in einem Ausnahmehandler (EH). EH-Routinen, die auf X86-Klasse-Prozessoren ausgeführt, die in ihrem eigenen Speicherrahmen ausgeführt werden: Sie führen ihre Tasks im Speicherbereich, der nicht auf der aktuellen Position des Stapelzeigers der einschließenden Funktion basiert. Die am häufigsten verwendeten Implementierungen umfassen die strukturierte Windows NT-Ausnahmebehandlung (SEH) und C++-Catch-Klauselausdrücke. Aus diesem Grund explizit aufrufen **_alloca** in einem der folgenden Szenarien Ergebnisse in einem Programmfehler während an die aufrufende EH-Routine zurückgegeben:
 
 - Windows NT-SEH-Ausnahme-Filterausdruck: `__except ( _alloca() )`
 

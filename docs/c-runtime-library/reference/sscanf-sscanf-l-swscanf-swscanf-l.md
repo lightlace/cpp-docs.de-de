@@ -41,11 +41,11 @@ helpviewer_keywords:
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
 ms.openlocfilehash: 60dbb8e89e531c3020c243d998a69370095424e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354697"
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
@@ -86,7 +86,7 @@ Gespeicherte Daten
 *format*<br/>
 Formatsteuerzeichenfolge. Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-*Argument*<br/>
+*argument*<br/>
 Optionale Argumente
 
 *locale*<br/>
@@ -122,8 +122,8 @@ Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, a
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Sscanf**, **_sscanf_l**|\<stdio.h>|
-|**Swscanf**, **_swscanf_l**|\<stdio.h> oder \<wchar.h>|
+|**sscanf**, **_sscanf_l**|\<stdio.h>|
+|**swscanf**, **_swscanf_l**|\<stdio.h> oder \<wchar.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

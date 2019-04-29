@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362737"
 ---
 # <a name="unorderedset-class"></a>unordered_set-Klasse
 
@@ -210,7 +210,7 @@ class unordered_set;
 |[max_bucket_count](#max_bucket_count)|Ruft die maximale Anzahl von Buckets ab.|
 |[max_load_factor](#max_load_factor)|Ruft die maximale Anzahl von Elementen pro Bucket ab oder legt sie fest.|
 |[max_size](#max_size)|Ruft die maximale Größe der gesteuerten Sequenz ab.|
-|[Rehash-](#rehash)|Erstellt die Hashtabelle neu.|
+|[rehash](#rehash)|Erstellt die Hashtabelle neu.|
 |[size](#size)|Ermittelt die Anzahl von Elementen.|
 |[swap](#swap)|Vertauscht den Inhalt von zwei Containern.|
 |[unordered_set](#unordered_set)|Erstellt ein container-Objekt.|
@@ -363,7 +363,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*<br/>
+*keyval*<br/>
 Der zuzuordnende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -855,7 +855,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*<br/>
+*keyval*<br/>
 Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -1165,7 +1165,7 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*<br/>
+*keyval*<br/>
 Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -1265,7 +1265,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyVal*<br/>
+*keyval*<br/>
 Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise

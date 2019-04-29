@@ -34,11 +34,11 @@ helpviewer_keywords:
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
 ms.openlocfilehash: 1309f991b8251bde7d614aa274d8d2e9da7a8ed3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333325"
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 
@@ -61,7 +61,7 @@ errno_t _wfopen_s(
 
 ### <a name="parameters"></a>Parameter
 
-*pFile-Datei*<br/>
+*pFile*<br/>
 Ein Zeiger auf den Dateizeiger, der den Zeiger auf die geöffnete Datei erhält.
 
 *filename*<br/>
@@ -76,7 +76,7 @@ Null, wenn erfolgreich, ein Fehlercode, wenn ein Fehler auftritt. Weitere Inform
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*pFile-Datei*|*filename*|*mode*|Rückgabewert|Inhalt der *pFile*|
+|*pFile*|*filename*|*mode*|Rückgabewert|Inhalt der *pFile*|
 |-------------|----------------|------------|------------------|------------------------|
 |**NULL**|any|any|**EINVAL**|unverändert|
 |any|**NULL**|any|**EINVAL**|unverändert|
@@ -98,7 +98,7 @@ Diese Funktionen überprüfen ihre Parameter. Wenn *pFile*, *Filename*, oder *Mo
 
 **Fopen_s** unterstützt Unicode-Dateistreams. Um eine neue oder vorhandene Unicode-Datei zu öffnen, geben eine *ccs* Flag, das angibt, das die gewünschte Codierung zu **Fopen_s**:
 
-**Fopen_s (& fp ', "newfile.txt", "RW-Medien, ccs =**_Codierung_**");**
+**fopen_s(&fp, "newfile.txt", "rw, ccs=**_encoding_**");**
 
 Zulässige Werte von *Codierung* sind **UNICODE**, **UTF-8**, und **UTF-16LE**. Wenn es kein Wert angegeben wird, für die *Codierung*, **Fopen_s** ANSI-Codierung verwendet.
 
@@ -111,7 +111,7 @@ Die folgende Tabelle fasst die Modi zusammen, für verschiedene *ccs* Flags, die
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Verwendete Codierungen auf Grundlage von ccs-Flag und BOM
 
-|CCS-flag|Keine BOM (oder neue Datei)|BOM: UTF-8|BOM: UTF-16|
+|CCS-flag|Keine BOM (oder neue Datei)|BYTEREIHENFOLGE-MARKE: UTF-8|BYTEREIHENFOLGE-MARKE: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -168,18 +168,18 @@ Weitere Informationen zur Anwendung von Text- und Binärmodi in Unicode- und Mul
 | **R** | Gibt an, dass das Zwischenspeichern für den zufälligen Zugriff vom Datenträger optimiert, aber nicht darauf beschränkt ist. |
 | **T** | Gibt an, dass eine Datei temporär ist. Wenn möglich, wird sie nicht auf den Datenträger geschrieben. |
 | **D** | Gibt an, dass eine Datei temporär ist. Sie wird gelöscht, wenn der letzte Dateizeiger geschlossen wird. |
-| **CCS =**_Codierung_ | Gibt den codierten Zeichensatz verwenden (eines **UTF-8**, **UTF-16LE**, oder **UNICODE**) für diese Datei. Machen Sie keine Angabe, wenn Sie ANSI-Codierung wünschen. |
+| **ccs=**_encoding_ | Gibt den codierten Zeichensatz verwenden (eines **UTF-8**, **UTF-16LE**, oder **UNICODE**) für diese Datei. Machen Sie keine Angabe, wenn Sie ANSI-Codierung wünschen. |
 
 Gültige Zeichen für die *Modus* in verwendete Zeichenfolge **Fopen_s** und [_fdopen](fdopen-wfdopen.md) entsprechen *Oflag* verwendeten Argumenten [_ Öffnen Sie](open-wopen.md) und [_sopen](sopen-wsopen.md)wie folgt.
 
 |Zeichen in *Modus* Zeichenfolge|Entsprechende *Oflag* Wert für _open/_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (in der Regel **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
-|**a +**|**_O_RDWR** &#124; **_O_APPEND** (in der Regel **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
+|**a**|**_O_WRONLY** &#124; **_O_APPEND** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND**)|
+|**a+**|**_O_RDWR** &#124; **_O_APPEND** (usually **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
 |**r**|**_O_RDONLY**|
-|**R +**|**_O_RDWR**|
-|**W**|**_O_WRONLY** (in der Regel **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC **)|
-|**w +**|**_O_RDWR** (in der Regel **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
+|**r+**|**_O_RDWR**|
+|**w**|**_O_WRONLY** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC**)|
+|**w+**|**_O_RDWR** (usually **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
 |**t**|**_O_TEXT**|
 |**c**|Keiner|
@@ -189,8 +189,8 @@ Gültige Zeichen für die *Modus* in verwendete Zeichenfolge **Fopen_s** und [_f
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
 |**CCS = UNICODE**|**_O_WTEXT**|
-|**CCS = UTF-8**|**"_O_UTF8"**|
-|**CCS = UTF-16LE**|**"_O_UTF16"**|
+|**ccs=UTF-8**|**_O_UTF8**|
+|**ccs=UTF-16LE**|**_O_UTF16**|
 
 Bei Verwendung von **Rb** Modus müssen nicht den Code und erwarten einen Großteil der Datei zu lesen bzw. nicht besonders wichtig Leistung des Netzwerks sind, im Speicher abgebildete Win32-Dateien möglicherweise auch eine Option.
 

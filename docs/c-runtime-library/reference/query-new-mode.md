@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
 ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358072"
 ---
 # <a name="querynewmode"></a>_query_new_mode
 
@@ -49,7 +49,7 @@ Gibt den aktuellen neuen handlermodus, nämlich 0 oder 1 für **Malloc**. Ein R�
 
 ## <a name="remarks"></a>Hinweise
 
-Die C++ **_query_new_mode** Funktionsergebnis ist eine ganze Zahl, die der neue handlermodus gibt an, die von der C++ festgelegt ist [_set_new_mode](set-new-mode.md) für Funktion [Malloc](malloc.md). Der neue handlermodus gibt an, ob bei einem Fehler bei der speicherbelegung **Malloc** besteht darin, rufen Sie die neue Handlerroutine mit [_set_new_handler](set-new-handler.md). In der Standardeinstellung **Malloc** wird die neue Handlerroutine nicht bei einem Fehler aufgerufen. Können Sie **_set_new_mode** also dieses Verhalten zu überschreiben, die bei einem Fehler **"malloc"** die neue Handlerroutine aufruft, in der gleichen Weise die **neue** Operator ist, wenn ein Fehler auftritt, Speicher zuordnen. Weitere Informationen finden Sie unter der Erläuterung [new and delete operators (Operatoren new und delete)](../../cpp/new-and-delete-operators.md) in der C++-Sprachreferenz.
+Die C++ **_query_new_mode** Funktionsergebnis ist eine ganze Zahl, die der neue handlermodus gibt an, der festgelegt wird, indem die C++ [_set_new_mode](set-new-mode.md) für Funktion [Malloc](malloc.md). Der neue handlermodus gibt an, ob bei einem Fehler bei der speicherbelegung **Malloc** besteht darin, rufen Sie die neue Handlerroutine mit [_set_new_handler](set-new-handler.md). In der Standardeinstellung **Malloc** wird die neue Handlerroutine nicht bei einem Fehler aufgerufen. Können Sie **_set_new_mode** also dieses Verhalten zu überschreiben, die bei einem Fehler **"malloc"** die neue Handlerroutine aufruft, in der gleichen Weise die **neue** Operator ist, wenn ein Fehler auftritt, Speicher zuordnen. Weitere Informationen finden Sie unter der Erläuterung [new and delete operators (Operatoren new und delete)](../../cpp/new-and-delete-operators.md) in der C++-Sprachreferenz.
 
 ## <a name="requirements"></a>Anforderungen
 

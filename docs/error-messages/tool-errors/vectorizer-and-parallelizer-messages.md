@@ -1,6 +1,6 @@
 ---
-title: Vectorizer- and Parallelizer-Meldungen
-ms.date: 11/04/2016
+title: Vektorisierungs- und Parallelisierungsmeldungen
+ms.date: 04/17/2019
 f1_keywords:
 - C5011
 - C5002
@@ -8,34 +8,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346869"
 ---
-# <a name="vectorizer-and-parallelizer-messages"></a>Vectorizer- and Parallelizer-Meldungen
+# <a name="vectorizer-and-parallelizer-messages"></a>Vektorisierungs- und Parallelisierungsmeldungen
 
-Können Sie die Visual C++-Compileroptionen [/qpar-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) und [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) Festlegen der [automatische Parallelisierung und automatische Vektorisierung](../../parallel/auto-parallelization-and-auto-vectorization.md) zu Ursachencodes und informationsmeldungen über ihre Aktivitäten. Dieser Artikel beschreibt die Ursachencodes und Nachrichten.
+Können Sie die Microsoft C++ Compileroptionen [/qpar-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) und [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) Festlegen der [automatische Parallelisierung und automatische Vektorisierung](../../parallel/auto-parallelization-and-auto-vectorization.md) Ausgabe Grund Fehlercodes und informationsmeldungen über ihre Aktivitäten. Dieser Artikel beschreibt die Ursachencodes und Nachrichten.
 
-- [Informationsmeldungen](#BKMK_InformationalMessages)
-
-- [5xx](#BKMK_ReasonCode50x)
-
-- [10xx](#BKMK_ReasonCode100x)
-
-- [11xx](#BKMK_ReasonCode110x)
-
-- [12xx](#BKMK_ReasonCode120x)
-
-- [13xx](#BKMK_ReasonCode130x)
-
-- [14xx](#BKMK_ReasonCode140x)
-
-- [15xx](#BKMK_ReasonCode150x)
-
-##  <a name="BKMK_InformationalMessages"></a> Informationsmeldungen
+## <a name="BKMK_InformationalMessages"></a> Informationsmeldungen
 
 Abhängig von der Berichterstellungsebene, die Sie angeben, wird eine der folgenden Informationsmeldungen für jede Schleife ausgegeben.
 
@@ -43,27 +27,25 @@ Informationen zu Ursachencodes finden Sie im nächsten Teil dieses Artikels.
 
 |Informationsnachricht|Beschreibung|
 |---------------------------|-----------------|
-|5001|Schleife vektorisiert|
-|5002|Schleife nicht vektorisiert wegen der Ursache "Beschreibung"|
-|5011|Schleife parallelisiert|
-|5012|Schleife nicht parallelisierte wegen der Ursache "Beschreibung".|
-|5021|Schleife kann dem Pragma nicht zugeordnet werden.|
+|5001|`Loop vectorized.`|
+|5002|`Loop not vectorized due to reason '*description*'.`|
+|5011|`Loop parallelized.`|
+|5012|`Loop not parallelized due to reason '*description*'.`|
+|5021|`Unable to associate loop with pragma.`|
 
-## <a name="reason-codes"></a>Ursachencodes
+Die folgenden Abschnitte enthalten mögliche Ursachencodes für die Parallelisierung und Vektorisierung.
 
-Die folgenden Abschnitte enthalten mögliche Ursachencodes für den Auto-Parallelisierer und den Auto-Vektorisierer.
+## <a name="BKMK_ReasonCode50x"></a> Ursachencodes "5xx"
 
-###  <a name="BKMK_ReasonCode50x"></a> 5xx
-
-Die 5*Xx* -Ursachencodes gelten für den Auto-parallelisierer und den Auto-vektorisierer.
+Die 5*Xx* -Ursachencodes gelten für den parallelisierer und den vektorisierer.
 
 |Ursachencode|Erklärung|
 |-----------------|-----------------|
-|500|Dies ist eine generische Meldung, die mehrere Fall abdeckt. Beispielsweise könnte die Schleife mehrere Austrittspunkte besitzen, oder in der Schleifenkopfzeile wird die Induktionsvariable nicht erhöht.|
-|501|Die Induktionsvariable ist nicht lokal oder die Obergrenze ist nicht schleifeninvariant.|
-|502|Die Induktionsvariable wird anders erhöht als durch einfaches +1.|
-|503|Die Schleife enthält Ausnahmebehandlungs- oder Switch-Anweisungen.|
-|504|In der Schleife wird möglicherweise eine Ausnahme ausgelöst, welche die Zerstörung eines C++-Objekts erfordert.|
+|500|Eine generische Meldung, die mehrere Fall abdeckt, z. B. die Schleife mehrere Austrittspunkte oder durch erhöhen die induktionsvariable schleifenheader endet jedoch nicht.|
+|501|`Induction variable is not local; or upper bound is not loop-invariant.`|
+|502|`Induction variable is stepped in some manner other than a simple +1.`|
+|503|`Loop includes exception-handling or switch statements.`|
+|504|`Loop body may throw an exception that requires destruction of a C++ object.`|
 
 ```cpp
 void code_500(int *A)
@@ -216,23 +198,23 @@ void code_504(int *A) {
 }
 ```
 
-###  <a name="BKMK_ReasonCode100x"></a> 10xx
+## <a name="BKMK_ReasonCode100x"></a> Ursachencodes 10xx
 
-Die 10*Xx* -Ursachencodes gelten für den Auto-parallelisierer.
+Die 10*Xx* -Ursachencodes gelten für die Parallelisierung.
 
 |Ursachencode|Erklärung|
 |-----------------|-----------------|
-|1000|Der Compiler in der Schleife hat eine Datenabhängigkeit gefunden.|
-|1001|Der Compiler hat erkannt, dass in der Schleife in einer skalaren Variablen gespeichert wird, die außerhalb der Schleife verwendet wird.|
-|1002|Der Compiler hat versucht, eine Schleife zu parallelisieren, die eine innere Schleife besitzt, welche bereits parallelisiert wurde.|
-|1003|Die Schleife enthält einen systeminternen Aufruf, mit dem möglicherweise auf den Arbeitsspeicher zugegriffen wird.|
-|1004|Die Schleife enthält eine skalare Reduzierung. Skalare Reduzierung kann auftreten, wenn die Schleife vektorisiert wurde.|
-|1005|Die **No_parallel** Pragma wurde angegeben.|
-|1006|Diese Funktion enthält **Openmp**. Dieses Problem beheben, entfernen Sie alle **Openmp** in dieser Funktion.|
-|1007|Die Schleifeninduktionsvariable oder die Schleifenbegrenzungen sind keine 32-Bit-Zahlen mit Vorzeichen (weder `int` noch `long`). Ändern Sie den Typ der Induktionsvariablen.|
-|1008|Der Compiler hat festgestellt, dass diese Schleife nicht genügend Arbeitsvorgänge ausführt, um automatische Parallelisierung sicherzustellen.|
-|1009|Der Compiler hat festgestellt, dass versucht wurde, eine Do-While-Schleife zu parallelisieren. Der Auto-Parallelisierer kann nur `for`-Schleifen bearbeiten.|
-|1010|Der Compiler hat festgestellt, dass die Schleife „ungleich“ (! =) für ihre Bedingung verwendet.|
+|1000|`The compiler detected a data dependency in the loop body.`|
+|1001|`The compiler detected a store to a scalar variable in the loop body, and that scalar has a use beyond the loop.`|
+|1002|`The compiler tried to parallelize a loop that has an inner loop that was already parallelized.`|
+|1003|`The loop body contains an intrinsic call that may read or write to memory.`|
+|1004|`There is a scalar reduction in the loop body. Scalar reduction can occur if the loop has been vectorized.`|
+|1005|`The no_parallel pragma was specified.`|
+|1006|`This function contains openmp. Resolve this by removing any openmp in this function.`|
+|1007|`The loop induction variable or the loop bounds are not signed 32-bit numbers (int or long). Resolve this by changing the type of the induction variable.`|
+|1008|`The compiler detected that this loop does not perform enough work to warrant auto-parallelization.`|
+|1009|`The compiler detected an attempt to parallelize a "do-while" loop. The auto-parallelizer only targets "for" loops.`|
+|1010|`The compiler detected that the loop is using "not-equals" (!=) for its condition.`|
 
 ```cpp
 int A[1000];
@@ -425,19 +407,19 @@ void code_1010()
 }
 ```
 
-###  <a name="BKMK_ReasonCode110x"></a> 11xx
+## <a name="BKMK_ReasonCode110x"></a> Ursachencodes 11xx
 
-Der 11*Xx* -Ursachencodes gelten für den Auto-vektorisierer.
+Der 11*Xx* -Ursachencodes gelten für die Vektorisierung.
 
 |Ursachencode|Erklärung|
 |-----------------|-----------------|
-|1100|Die Schleife enthält Elemente zur Ablaufsteuerung, beispielsweise "if" oder "?".|
-|1101|Die Schleife enthält Datentypkonvertierungen (möglicherweise implizit), die nicht vektorisiert werden können.|
-|1102|Die Schleife enthält nicht arithmetische oder andere nicht vektorisierbare Operationen.|
-|1103|Die Schleife enthält Schiebeoperationen, deren Größen innerhalb der Schleife variieren.|
-|1104|Die Schleife enthält skalare Variablen.|
-|1105|Die Schleife enthält eine nicht erkannte Reduzierungsoperation.|
-|1106|Die äußere Schleife ist nicht vektorisiert.|
+|1100|`Loop contains control flow—for example, "if" or "?".`|
+|1101|`Loop contains datatype conversion—perhaps implicit—that cannot be vectorized.`|
+|1102|`Loop contains non-arithmetic or other non-vectorizable operations.`|
+|1103|`Loop body includes shift operations whose size might vary within the loop.`|
+|1104|`Loop body includes scalar variables.`|
+|1105|`Loop includes a unrecognized reduction operation.`|
+|1106|`Outer loop not vectorized.`|
 
 ```cpp
 void code_1100(int *A, int x)
@@ -573,16 +555,16 @@ void code_1106(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode120x"></a> 12xx
+## <a name="BKMK_ReasonCode120x"></a> Ursachencodes 12xx
 
-Die 12*Xx* -Ursachencodes gelten für den Auto-vektorisierer.
+Die 12*Xx* -Ursachencodes gelten für die Vektorisierung.
 
 |Ursachencode|Erklärung|
 |-----------------|-----------------|
-|1200|Die Schleife enthält schleifengetragene Datenabhängigkeiten, die Vektorisierung verhindern. Verschiedene Schleifeniterationen behindern einander, sodass die Vektorisierung der Schleife Fehler erzeugen würde, und der Auto-Vektorisierer kann nicht sicherstellen, dass keine solchen Datenabhängigkeiten vorhanden sind.|
-|1201|Arraybasisänderungen während der Schleifenausführung.|
-|1202|Feld in einer Struktur ist nicht 32 oder 64 Bits breit.|
-|1203|Schleife enthält nicht aufeinander folgende Zugriffe in ein Array.|
+|1200|`Loop contains loop-carried data dependences that prevent vectorization. Different iterations of the loop interfere with each other such that vectorizing the loop would produce wrong answers, and the auto-vectorizer cannot prove to itself that there are no such data dependences.`|
+|1201|`Array base changes during the loop.`|
+|1202|`Field in a struct is not 32 or 64 bits wide.`|
+|1203|`Loop body includes non-contiguous accesses into an array.`|
 
 ```cpp
 void fn();
@@ -648,18 +630,18 @@ void code_1203(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode130x"></a> 13xx
+## <a name="BKMK_ReasonCode130x"></a> Ursachencodes 13xx
 
-Die 13*Xx* -Ursachencodes gelten für den Auto-vektorisierer.
+Die 13*Xx* -Ursachencodes gelten für die Vektorisierung.
 
 |Ursachencode|Erklärung|
 |-----------------|-----------------|
-|1300|Schleife enthält keine oder sehr wenige Berechnungen.|
-|1301|Der Schleifenschrittwert ist nicht +1.|
-|1302|Schleife ist ein "-während".|
-|1303|Zu wenige Schleifeniterationen für eine effektive Vektorisierung.|
-|1304|Schleife enthält Zuweisungen mit Werten unterschiedlicher Genauigkeit.|
-|1305|Nicht genügend Typinformationen.|
+|1300|`Loop body contains no—or very little—computation.`|
+|1301|`Loop stride is not +1.`|
+|1302|`Loop is a "do-while".`|
+|1303|`Too few loop iterations for vectorization to provide value.`|
+|1304|`Loop includes assignments that are of different sizes.`|
+|1305|`Not enough type information.`|
 
 ```cpp
 void code_1300(int *A, int *B)
@@ -780,18 +762,18 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-###  <a name="BKMK_ReasonCode140x"></a> 14xx
+## <a name="BKMK_ReasonCode140x"></a> Ursachencodes 14xx
 
-Die 14*Xx* -Ursachencodes treten, wenn eine Option aus, mit der automatischen Vektorisierung nicht kompatibel ist, angegeben wird.
+Die 14*Xx* -Ursachencodes treten, wenn eine Option aus, mit der Vektorisierung nicht kompatibel ist, angegeben wird.
 
 |Ursachencode|Erklärung|
 |-----------------|-----------------|
-|1400|**#pragma-loop(no_vector)** angegeben ist.|
-|1401|**/ Kernel** Switch wird angegeben, während X86 oder ARM abgezielt.|
-|1402|**SSE2** oder höher Switch ist nicht angegeben werden, während X86 abgezielt.|
-|1403|**/arch:Atom** Switch wird angegeben, und die Schleife enthält Operationen mit Double-Werten.|
-|1404|**/ O1** oder **/OS** -Schalter angegeben ist.|
-|1405|Vektorisierung wird deaktiviert, um die Optimierungsumwandlung dynamischer Initialisierer in statische Initialisierer zu unterstützen.|
+|1400|`#pragma loop(no_vector) is specified.`|
+|1401|`/kernel switch is specified when targeting x86 or ARM.`|
+|1402|`/arch:SSE2 or higher switch is not specified when targeting x86.`|
+|1403|`/arch:ATOM switch is specified and the loop includes operations on doubles.`|
+|1404|`/O1 or /Os switch is specified.`|
+|1405|`Vectorization is disabled to aid in dynamic-initializer-to-static-initializer optimization.`|
 
 ```cpp
 void code_1400(int *A)
@@ -852,18 +834,18 @@ void code_1404(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode150x"></a> 15xx
+## <a name="BKMK_ReasonCode150x"></a> Ursachencodes 15xx
 
-Der Block der 15*Xx* -Ursachencodes gelten für das Aliasing. Aliasing tritt auf, wenn auf einen Speicherort im Arbeitsspeicher unter zwei unterschiedlichen Namen zugegriffen werden kann.
+Die 15*Xx* -Ursachencodes gelten für das Aliasing. Aliasing tritt auf, wenn auf einen Speicherort im Arbeitsspeicher unter zwei unterschiedlichen Namen zugegriffen werden kann.
 
 |Ursachencode|Erklärung|
 |-----------------|-----------------|
-|1500|Mögliches Aliasing auf mehrdimensionale Arrays.|
-|1501|Mögliches Aliasing auf Arrays von Strukturen.|
-|1502|Mögliches Aliasing, und Arrayindex ist nicht n + K.|
-|1503|Mögliches Aliasing, und Arrayindex hat mehrere Offsets.|
-|1504|Mögliches Aliasing; würde zu viele Laufzeitüberprüfungen benötigen.|
-|1505|Mögliches Aliasing, aber Laufzeitüberprüfungen sind zu komplex.|
+|1500|`Possible aliasing on multi-dimensional arrays.`|
+|1501|`Possible aliasing on arrays-of-structs.`|
+|1502|`Possible aliasing and array index is other than n + K.`|
+|1503|`Possible aliasing and array index has multiple offsets.`|
+|1504|`Possible aliasing; would require too many runtime checks.`|
+|1505|`Possible aliasing, but runtime checks are too complex.`|
 
 ```cpp
 void code_1500(int A[100][100], int B[100][100])
@@ -982,9 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Automatische Parallelisierung und automatische Vektorisierung](../../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
-[Parallele Programmierung in systemeigenem Code](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
-[#pragma loop()](../../preprocessor/loop.md)<br/>
-[/Q-Optionen (Vorgänge auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md)<br/>
-[/Qpar-report (Berichtebene der automatischen Parallelisierung)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[C /C++ Compiler- und Build tools, Fehler und Warnungen](../compiler-errors-1/c-cpp-build-errors.md)
+[automatische Parallelisierung und automatische Vektorisierung](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Auto-Vektorisierer in Visual Studio 2012 – Übersicht](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[#pragma loop()](../../preprocessor/loop.md) \
+[/ Q-Optionen (Operationen auf niedriger Ebene)](../../build/reference/q-options-low-level-operations.md) \
+[/ Qpar-Report-(Auto-Parallelizer-Berichtsebene)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qvec-report (Berichtebene der automatischen Vektorisierung)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

@@ -51,11 +51,11 @@ helpviewer_keywords:
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
 ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348184"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -86,11 +86,11 @@ In der folgenden Tabelle werden die Bitfelder für **_crtDbgFlag** aufgeführt u
 
 |Bitfeld|Standard|Beschreibung|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|ON|: Aktiviert debugheapzuordnungen und die Verwendung von Speicher-Block-Typ-IDs, z. B. **_CLIENT_BLOCK**. AUS: Fügt neue Zuordnungen zur verknüpften Liste des Heaps hinzu, jedoch wird der Blocktyp auf **_IGNORE_BLOCK** festgelegt.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
-|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|EIN: Bewirkt den Aufruf von [_CrtCheckMemory](crtcheckmemory.md) bei jeder Anforderung zur Speicherbelegung bzw. zur Aufhebung der Speicherbelegung. OFF: **_CrtCheckMemory** muss explizit aufgerufen werden.<br /><br /> Heap-Häufigkeitsüberprüfungsmakros haben keine Auswirkungen, wenn dieses Flag festgelegt ist.|
-|**_CRTDBG_CHECK_CRT_DF**|OFF|: Schließt **_CRT_BLOCK** Vorgängen zu speicherzustandsunterschieden Typen von Speicherverlusten Erkennung und Arbeitsspeicher-Status. AUS: Der Speicher, der von der Laufzeitbibliothek intern verwendet wird, wird von diesen Vorgänge ignoriert.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|EIN: Behält freigegebene Speicherblöcke in der verknüpften Liste des Heaps bei, weist sie dem **_FREE_BLOCK**-Typ zu und füllt sie mit dem Bytewert „0xDD“ aus. AUS: Behält freigegebene Blöcke nicht in der verknüpften Liste des Heaps bei.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
-|**_CRTDBG_LEAK_CHECK_DF**|OFF|EIN: Führt beim Beenden des Programms eine automatische Überprüfung von Speicherverlusten durch, indem [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) aufgerufen und ein Fehlerbericht generiert wird, wenn die Anwendung nicht den gesamten belegten Speicher freigeben konnte. AUS: Führt beim Beenden des Programms keine automatische Überprüfung von Speicherverlusten durch.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
+|**_CRTDBG_ALLOC_MEM_DF**|ON|ON: Aktivieren Sie debugheapzuordnungen und die Verwendung von Speicher-Block-Typ-IDs, z. B. **_CLIENT_BLOCK**. AUS: Fügt neue Zuordnungen zur verknüpften Liste des Heaps hinzu, jedoch festgelegt Blocktyp auf **_IGNORE_BLOCK**.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
+|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: Rufen Sie [_CrtCheckMemory](crtcheckmemory.md) bei jeder Anforderung belegen und freigeben. OFF: **_CrtCheckMemory** muss explizit aufgerufen werden.<br /><br /> Heap-Häufigkeitsüberprüfungsmakros haben keine Auswirkungen, wenn dieses Flag festgelegt ist.|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|ON: Umfassen **_CRT_BLOCK** Vorgängen zu speicherzustandsunterschieden Typen von Speicherverlusten Erkennung und Arbeitsspeicher-Status. AUS: Von der Laufzeitbibliothek intern verwendete Speicher wird von diesen Vorgänge ignoriert.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON: Behalten Sie die freigegebenen Speicherblöcke in der verknüpften Liste des Heaps bei, weist sie der **_FREE_BLOCK** -Typ zu und füllt sie mit dem Bytewert "0xDD". AUS: Keine freigegebene Blöcke in der verknüpften Liste des Heaps beibehalten.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
+|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON: Automatische Überprüfung von Speicherverlusten beim Beenden des Programms durch einen Aufruf von [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) und ein Fehlerbericht generiert, wenn die Anwendung nicht belegten Speicher freigeben konnte. AUS: Führen Sie beim Beenden des Programms Überprüfung von Speicherverlusten nicht automatisch aus.<br /><br /> Kann auch mit einem beliebigen Heap-Häufigkeitsüberprüfungsmakros kombiniert werden.|
 
 **Heap-Häufigkeitsüberprüfungsmakros**
 

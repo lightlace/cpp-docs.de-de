@@ -17,11 +17,11 @@ helpviewer_keywords:
 - /O1 compiler option [C++]
 ms.assetid: 2d1423f5-53d9-44da-8908-b33a351656c2
 ms.openlocfilehash: d33fe6bceae09267fd3f79ffe3dc26864e87c764
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320356"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Größe minimieren, Geschwindigkeit maximieren)
 
@@ -60,6 +60,6 @@ Die **"/ O1"** und **"/ O2"** Compileroptionen sind eine schnelle Möglichkeit, 
 ## <a name="see-also"></a>Siehe auch
 
 [/O-Optionen (Code optimieren)](o-options-optimize-code.md)<br/>
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)<br/>
 [/EH (Ausnahmebehandlungsmodell)](eh-exception-handling-model.md)

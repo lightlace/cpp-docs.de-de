@@ -25,11 +25,11 @@ helpviewer_keywords:
 - set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
 ms.openlocfilehash: c340423e93b6487a4a951e4b96055cba6e474269
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356536"
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable
 
@@ -45,7 +45,7 @@ int _set_SSE2_enable(
 
 ### <a name="parameters"></a>Parameter
 
-*Flag*<br/>
+*flag*<br/>
 1, um die SSE2-Implementierung zu aktivieren; 0, um die SSE2-Implementierung zu deaktivieren. Standardmäßig ist die SSE2-Implementierung auf Prozessoren aktiviert, die sie unterstützen.
 
 ## <a name="return-value"></a>Rückgabewert

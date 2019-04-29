@@ -15,11 +15,11 @@ helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
 ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385205"
 ---
 # <a name="task-class-concurrency-runtime"></a>task-Klasse (Concurrency Runtime)
 
@@ -46,7 +46,7 @@ Der Typ des Task-Objekt.
 *_ReturnType*<br/>
 Der Ergebnistyp dieses Tasks.
 
-## <a name="members"></a>Mitglieder
+## <a name="members"></a>Member
 
 ### <a name="public-typedefs"></a>Öffentliche Typedefs
 
@@ -64,7 +64,7 @@ Der Ergebnistyp dieses Tasks.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[get](#get)|Überladen. Gibt das von diesem Task erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf einer Aufgabe mit einem `result_type` von `void` keinen Wert zurück.|
+|[get](#get)|Überladen. Gibt das von diesem Task erstellte Ergebnis zurück. Wenn sich die Aufgabe nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis die Aufgabe fertig gestellt wurde. Diese Methode gibt bei dem Aufruf einer Aufgabe mit einem `result_type` von `void` keinen Wert zurück.|
 |[is_apartment_aware](#is_apartment_aware)|Bestimmt, ob der Task eine `IAsyncInfo`-Schnittstelle der Windows Runtime entpackt oder von einem solchen Task abgeleitet wurde.|
 |[is_done](#is_done)|Bestimmt, ob die Aufgabe abgeschlossen wurde.|
 |[scheduler](#scheduler)|Gibt den Planer für diesen Task zurück.|
@@ -95,7 +95,7 @@ Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel
 
 ##  <a name="get"></a> Erhalten
 
-Gibt das von diesem Task erstellte Ergebnis zurück. Wenn sich der Task nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis der Task fertig gestellt wurde. Diese Methode gibt bei dem Aufruf einer Aufgabe mit einem `result_type` von `void` keinen Wert zurück.
+Gibt das von diesem Task erstellte Ergebnis zurück. Wenn sich die Aufgabe nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis die Aufgabe fertig gestellt wurde. Diese Methode gibt bei dem Aufruf einer Aufgabe mit einem `result_type` von `void` keinen Wert zurück.
 
 ```
 _ReturnType get() const;

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
 ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371775"
 ---
 # <a name="macros-cc"></a>Makros (C/C++)
 Vorverarbeitung erweitert Makros in allen Zeilen, die keine Präprozessordirektiven sind (Zeilen, die keine **#** als erstes Zeichen ohne Leerzeichen) und in Teilen einiger Direktiven, die nicht als Teil des übersprungen werden ein für die bedingte Kompilierung. "Direktiven für die bedingte Kompilierung" ermöglichen es Ihnen, die Kompilierung von Teilen einer Quelldatei zu unterdrücken, indem sie einen konstanten Ausdruck oder einen Bezeichner testen, um zu bestimmen, welche Textblöcke an den Compiler übergeben werden und welche Textblöcke während des Präprozessorlaufs aus der Quelldatei entfernt werden .

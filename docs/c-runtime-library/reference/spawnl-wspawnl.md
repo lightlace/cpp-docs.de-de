@@ -32,11 +32,11 @@ helpviewer_keywords:
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
 ms.openlocfilehash: 11ff3447487fcaf1a4225825c222b873005b2a1c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355275"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
@@ -71,10 +71,10 @@ intptr_t _wspawnl(
 *mode*<br/>
 Ausführungsmodus für den aufrufenden Prozess.
 
-*CmdName*<br/>
+*cmdname*<br/>
 Pfad der auszuführenden Datei.
 
-*arg0*, *arg1*,... *Argn*<br/>
+*arg0*, *arg1*, ... *argn*<br/>
 Liste von Zeigern zu Argumenten. Die *arg0* -Argument ist gewöhnlich ein Zeiger auf *Cmdname*. Die Argumente *arg1* über *Argn* sind Zeiger auf die Zeichenfolgen, die die neue Argumentliste bilden. Folgende *Argn*, ist eine **NULL** Zeiger auf das Ende der Argumentliste zu markieren.
 
 ## <a name="return-value"></a>Rückgabewert

@@ -35,11 +35,11 @@ helpviewer_keywords:
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
 ms.openlocfilehash: c1d2361fceec448c98fd9e5a368653aac38c83e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356770"
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -80,10 +80,10 @@ void _wsearchenv(
 *filename*<br/>
 Der Name der zu suchenden Datei.
 
-*Variablenname*<br/>
+*varname*<br/>
 Zu durchsuchende Umgebung.
 
-*Pfadname*<br/>
+*pathname*<br/>
 Puffer zum Speichern des vollständigen Pfades.
 
 ## <a name="remarks"></a>Hinweise

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358231"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Handler für Windows-Standardmeldungen
 
@@ -23,7 +23,7 @@ Standard-Handler für standard-Windows-Meldungen (**WM_**) sind in der Klasse vo
 
 `afx_msg void OnPaint();`
 
-Die **Afx_msg** Schlüsselwort schlägt vor, die Auswirkungen der C++- **virtuellen** Schlüsselwort durch die Handler von anderen unterscheiden `CWnd` Memberfunktionen. Beachten Sie jedoch, dass diese Funktionen nicht virtuelle sind. Sie werden stattdessen über meldungszuordnungen implementiert. Meldungszuordnungen hängt ausschließlich standard Präprozessormakros und nicht für alle Erweiterungen der Programmiersprache C++. Die **Afx_msg** Schlüsselwort in Leerzeichen aufgelöst wird, nach der vorverarbeitung.
+Die **Afx_msg** Schlüsselwort schlägt vor, die Auswirkungen der C++ **virtuellen** Schlüsselwort durch die Handler von anderen unterscheiden `CWnd` Memberfunktionen. Beachten Sie jedoch, dass diese Funktionen nicht virtuelle sind. Sie werden stattdessen über meldungszuordnungen implementiert. Meldungszuordnungen hängt ausschließlich standard Präprozessormakros und nicht für alle Erweiterungen der Programmiersprache C++. Die **Afx_msg** Schlüsselwort in Leerzeichen aufgelöst wird, nach der vorverarbeitung.
 
 Um einen Handler, der definiert, die in einer Basisklasse zu überschreiben, definieren Sie einfach eine Funktion mit den gleichen Prototyp, in der abgeleiteten Klasse und einen meldungszuordnung Eintrag für den Ereignishandler. Der Handler überschreibt"" ein Handler mit dem gleichen Namen in einer der Basisklassen Ihrer Klasse fest.
 

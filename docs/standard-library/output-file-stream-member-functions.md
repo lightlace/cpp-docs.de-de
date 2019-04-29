@@ -5,11 +5,11 @@ helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 ms.openlocfilehash: eba627c69437754a9c0a819167443aa00c025fef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370839"
 ---
 # <a name="output-file-stream-member-functions"></a>Ausgabedateistream-Memberfunktionen
 
@@ -109,7 +109,7 @@ Verwenden Sie diese Memberfunktionen, um beim Schreiben in einen Stream auf Fehl
 |[good](basic-ios-class.md#good)|Gibt **TRUE** zurück, wenn kein Fehler (nicht behebbar oder anderweitig) vorhanden und das End-of-File-Flag nicht festgelegt ist.|
 |[eof](basic-ios-class.md#eof)|Gibt **TRUE** auf das End-of-File-Bedingung zurück.|
 |[clear](basic-ios-class.md#clear)|Legt den internen Fehlerzustand fest. Wenn mit den Standardargumenten aufgerufen, löscht er alle Fehlerbits.|
-|[Rdstate] (Basic-Ios-class.md #rdstate|Gibt den aktuellen Fehlerstatus zurück.|
+|[rdstate](basic-ios-class.md#rdstate|Gibt den aktuellen Fehlerstatus zurück.|
 
 Der **!** Operator wird überladen, um die gleiche Funktion wie führen Sie die `fail` Funktion. Daher ist der Ausdruck:
 

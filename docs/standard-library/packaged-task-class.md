@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
 ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370670"
 ---
 # <a name="packagedtask-class"></a>packaged_task-Klasse
 
@@ -67,7 +67,7 @@ class packaged_task;
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<zukünftige >
+**Header:** \<future>
 
 **Namespace:** std
 
@@ -172,7 +172,7 @@ template <class Fn, class Alloc>
 *Rechts*<br/>
 Ein `packaged_task`-Objekt.
 
-*Alloc*<br/>
+*alloc*<br/>
 Eine Speicherbelegung. Siehe [\<allocators>](../standard-library/allocators-header.md) für weitere Informationen.
 
 *fn*<br/>

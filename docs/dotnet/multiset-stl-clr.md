@@ -98,11 +98,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
 ms.openlocfilehash: e7a0551c1d75993d588f5dbb369989c42a71d903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384776"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 
@@ -133,7 +133,7 @@ Der Typ der Schlüsselkomponente eines Elements in der kontrollierten Sequenz.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Cliext/Set >
+**Header:** \<cliext/set>
 
 **Namespace:** Cliext
 
@@ -232,7 +232,7 @@ Löschen oder Entfernen eines Elements Ruft den Destruktor für ihren gespeicher
 
 ## <a name="members"></a>Member
 
-## <a name="begin"></a> multiset:: begin (STL/CLR)
+## <a name="begin"></a> multiset::begin (STL/CLR)
 
 Legt den Anfang der kontrollierten Sequenz fest.
 
@@ -280,7 +280,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="clear"></a> multiset:: Clear (STL/CLR)
+## <a name="clear"></a> multiset::clear (STL/CLR)
 
 Entfernt alle Elemente.
 
@@ -338,7 +338,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> multiset:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> multiset::const_iterator (STL/CLR)
 
 Der Typ eines konstanten Iterators für die gesteuerte Sequenz.
 
@@ -380,7 +380,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> multiset:: const_reference (STL/CLR)
+## <a name="const_reference"></a> multiset::const_reference (STL/CLR)
 
 Der Typ eines konstanten Verweises auf ein Element.
 
@@ -425,7 +425,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> multiset:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> multiset::const_reverse_iterator (STL/CLR)
 
 Der Typ eines Konstanten umgekehrten Iterators für die gesteuerte Sequenz...
 
@@ -467,7 +467,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> multiset:: Count (STL/CLR)
+## <a name="count"></a> multiset::count (STL/CLR)
 
 Sucht die Anzahl von Elementen, die einem angegebenen Schlüssel entsprechen.
 
@@ -520,7 +520,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> multiset:: difference_type (STL/CLR)
+## <a name="difference_type"></a> multiset::difference_type (STL/CLR)
 
 Die Typen des Abstands zwischen den beiden Elementen mit Vorzeichen.
 
@@ -627,7 +627,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> multiset:: End (STL/CLR)
+## <a name="end"></a> multiset::end (STL/CLR)
 
 Legt das Ende der kontrollierten Sequenz fest.
 
@@ -676,7 +676,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> multiset:: equal_range (STL/CLR)
+## <a name="equal_range"></a> multiset::equal_range (STL/CLR)
 
 Sucht den Bereich, der einem angegebenen Schlüssel entspricht.
 
@@ -736,7 +736,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> multiset:: Erase (STL/CLR)
+## <a name="erase"></a> multiset::erase (STL/CLR)
 
 Entfernt Elemente an den angegebenen Positionen.
 
@@ -750,7 +750,7 @@ size_type erase(key_type key)
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang des zu löschenden Bereichs.
 
 *key*<br/>
@@ -820,7 +820,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a> multiset:: Find (STL/CLR)
+## <a name="find"></a> multiset::find (STL/CLR)
 
 Sucht ein Element, das einem angegebenen Schlüssel entspricht.
 
@@ -1106,7 +1106,7 @@ a b c
 a
 ```
 
-## <a name="insert"></a> multiset:: Insert (STL/CLR)
+## <a name="insert"></a> multiset::insert (STL/CLR)
 
 Fügt Elemente hinzu.
 
@@ -1122,7 +1122,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang des Bereichs, der eingefügt.
 
 *last*<br/>
@@ -1219,7 +1219,7 @@ a b b c x
 a b b c x y
 ```
 
-## <a name="iterator"></a> multiset:: Iterator (STL/CLR)
+## <a name="iterator"></a> multiset::iterator (STL/CLR)
 
 Der Typ eines Iterators für die gesteuerte Sequenz.
 
@@ -1261,7 +1261,7 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> multiset:: key_comp (STL/CLR)
+## <a name="key_comp"></a> multiset::key_comp (STL/CLR)
 
 Kopiert der Delegat für zwei Schlüssel.
 
@@ -1380,7 +1380,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> multiset:: KEY_TYPE (STL/CLR)
+## <a name="key_type"></a> multiset::key_type (STL/CLR)
 
 Der Typ eines Sortierschlüssels.
 
@@ -1425,7 +1425,7 @@ int main()
 a b c
 ```
 
-## <a name="lower_bound"></a> multiset:: lower_bound (STL/CLR)
+## <a name="lower_bound"></a> multiset::lower_bound (STL/CLR)
 
 Sucht den Anfang des Bereichs, der einem angegebenen Schlüssel entspricht.
 
@@ -1528,7 +1528,7 @@ int main()
 a b c
 ```
 
-## <a name="multiset"></a> multiset:: multiset (STL/CLR)
+## <a name="multiset"></a> multiset::multiset (STL/CLR)
 
 Erstellt ein container-Objekt.
 
@@ -1551,7 +1551,7 @@ multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang des Bereichs, der eingefügt.
 
 *last*<br/>
@@ -1699,7 +1699,7 @@ c b a
 a b c
 ```
 
-## <a name="op_as"></a> multiset::Operator = (STL/CLR)
+## <a name="op_as"></a> multiset::operator= (STL/CLR)
 
 Ersetzt die kontrollierte Sequenz.
 
@@ -1754,7 +1754,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> multiset:: rbegin (STL/CLR)
+## <a name="rbegin"></a> multiset::rbegin (STL/CLR)
 
 Legt den Anfang der umgekehrten kontrollierten Sequenz fest.
 
@@ -1802,7 +1802,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> multiset:: Reference (STL/CLR)
+## <a name="reference"></a> multiset::reference (STL/CLR)
 
 Der Typ eines Verweises auf ein Element.
 
@@ -1847,7 +1847,7 @@ int main()
 a b c
 ```
 
-## <a name="rend"></a> multiset:: rend (STL/CLR)
+## <a name="rend"></a> multiset::rend (STL/CLR)
 
 Legt das Ende der umgekehrten kontrollierten Sequenz fest.
 
@@ -1896,7 +1896,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> multiset:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> multiset::reverse_iterator (STL/CLR)
 
 Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.
 
@@ -1938,7 +1938,7 @@ int main()
 c b a
 ```
 
-## <a name="size"></a> multiset:: Size (STL/CLR)
+## <a name="size"></a> multiset::size (STL/CLR)
 
 Ermittelt die Anzahl von Elementen.
 
@@ -1992,7 +1992,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> multiset:: size_type (STL/CLR)
+## <a name="size_type"></a> multiset::size_type (STL/CLR)
 
 Der Typ eines Abstands zwischen den beiden Elementen mit Vorzeichen.
 
@@ -2040,7 +2040,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> multiset:: Swap (STL/CLR)
+## <a name="swap"></a> multiset::swap (STL/CLR)
 
 Vertauscht den Inhalt von zwei Containern.
 
@@ -2158,7 +2158,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> multiset:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> multiset::upper_bound (STL/CLR)
 
 Sucht das Ende des Bereichs, der einem angegebenen Schlüssel entspricht.
 
@@ -2215,7 +2215,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> multiset:: value_comp (STL/CLR)
+## <a name="value_comp"></a> multiset::value_comp (STL/CLR)
 
 Kopiert der Delegat für zwei Elementwerte.
 
@@ -2259,7 +2259,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> multiset:: value_compare (STL/CLR)
+## <a name="value_compare"></a> multiset::value_compare (STL/CLR)
 
 Der Delegat für zwei Elementwerte.
 
@@ -2304,7 +2304,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> multiset:: value_type (STL/CLR)
+## <a name="value_type"></a> multiset::value_type (STL/CLR)
 
 Der Typ eines Elements.
 
@@ -2349,7 +2349,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> Operator! = (Multiset) (STL/CLR)
+## <a name="op_neq"></a> operator!= (multiset) (STL/CLR)
 
 Listen Sie nicht gleich-Vergleich ein.
 
@@ -2419,7 +2419,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> Operator&lt; (Multiset) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (multiset) (STL/CLR)
 
 Liste kleiner als Vergleich.
 
@@ -2489,7 +2489,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> Operator&lt;= (Multiset) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (multiset) (STL/CLR)
 
 Kleiner oder gleich Liste Vergleich.
 
@@ -2559,7 +2559,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> Operator == (Multiset) (STL/CLR)
+## <a name="op_eq"></a> operator== (multiset) (STL/CLR)
 
 Liste-gleich-Vergleich.
 
@@ -2629,7 +2629,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> Operator&gt; (Multiset) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (multiset) (STL/CLR)
 
 Die Liste ist größer als-Vergleich.
 
@@ -2699,7 +2699,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> Operator&gt;= (Multiset) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (multiset) (STL/CLR)
 
 Liste, die größer als oder gleich-Vergleich.
 

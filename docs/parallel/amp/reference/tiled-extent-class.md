@@ -14,11 +14,11 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
 ms.openlocfilehash: 51e7696b8103e81d42beec0987a49f26fe041643
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352280"
 ---
 # <a name="tiledextent-class"></a>tiled_extent-Klasse
 
@@ -81,7 +81,7 @@ Die Länge der unwichtigsten Dimension.
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[tile_dim0-Konstante](#tile_dim0)|Speichert die Länge der wichtigsten Dimension.|
 |[tile_dim1-Konstante](#tile_dim1)|Speichert die Länge der zweitwichtigsten Dimension.|

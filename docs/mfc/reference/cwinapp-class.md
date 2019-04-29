@@ -193,11 +193,11 @@ helpviewer_keywords:
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
 ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323358"
 ---
 # <a name="cwinapp-class"></a>CWinApp-Klasse
 
@@ -323,7 +323,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|Flags, die das Verhalten des Neustart-Managers bestimmt.|
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|Die Zeitdauer in Millisekunden zwischen speichert.|
@@ -2395,4 +2395,4 @@ Gibt an, die Anwendung Benutzer-Modell-ID.
 
 [CWinThread-Klasse](../../mfc/reference/cwinthread-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
-[Vorgehensweise: Hinzufügen von Unterstützung für Neustart-Manager](../../mfc/how-to-add-restart-manager-support.md)
+[Vorgehensweise: Hinzufügen von Unterstützung für den Neustart-Manager](../../mfc/how-to-add-restart-manager-support.md)

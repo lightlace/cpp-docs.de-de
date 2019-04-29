@@ -41,11 +41,11 @@ helpviewer_keywords:
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
 ms.openlocfilehash: f9c1686d7e42e0e885a65e153ee4e1ff2be01f27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332922"
 ---
 # <a name="fscanfs-fscanfsl-fwscanfs-fwscanfsl"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 
@@ -80,13 +80,13 @@ int _fwscanf_s_l(
 
 ### <a name="parameters"></a>Parameter
 
-*Stream*<br/>
+*stream*<br/>
 Zeiger auf die **FILE**-Struktur.
 
 *format*<br/>
 Formatsteuerzeichenfolge.
 
-*Argument*<br/>
+*argument*<br/>
 Optionale Argumente.
 
 *locale*<br/>
@@ -120,8 +120,8 @@ Die Versionen dieser Funktionen, die **_l** -Suffix sind beinahe identisch, auß
 
 |Funktion|Erforderlicher Header|
 |--------------|---------------------|
-|**Fscanf_s**, **_fscanf_s_l**|\<stdio.h>|
-|**Fwscanf_s**, **_fwscanf_s_l**|\<stdio.h> oder \<wchar.h>|
+|**fscanf_s**, **_fscanf_s_l**|\<stdio.h>|
+|**fwscanf_s**, **_fwscanf_s_l**|\<stdio.h> oder \<wchar.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

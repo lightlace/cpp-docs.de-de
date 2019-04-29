@@ -39,11 +39,11 @@ helpviewer_keywords:
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
 ms.openlocfilehash: e2ebfdc80a451ebf02563f78a62dd08618f92bcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340416"
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -73,7 +73,7 @@ int __control87_2(
 *new*<br/>
 Neue Bitwerte des Steuerworts.
 
-*Maske*<br/>
+*mask*<br/>
 Maske für festzulegende neue Steuerwortbits.
 
 *x86_cw*<br/>
@@ -90,7 +90,7 @@ Für **__control87_2**, der zurückgegebene Wert ist 1, was den Erfolg angibt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_control87** Funktion ruft ab und legt das gleitkommasteuerwort fest. Mit dem Gleitkommasteuerwort kann das Programm die Genauigkeits-, Rundungs- und Unendlichkeitsmodi im mathematischen Gleitkommapaket je nach Plattform ändern. Sie können auch **_control87** zu maskieren oder Aufheben der Maskierung Gleitkommaausnahmen. Wenn der Wert für *Maske* ist gleich 0 (null) **_control87** Ruft das gleitkommasteuerwort. Wenn *Maske* ist ungleich NULL ist, wird ein neuer Wert für das Steuerwort festgelegt: für jedes Bit, die auf ist (d. h. gleich 1) in *Maske*, das entsprechende Bit in *neue* wird verwendet, um das Steuerelement zu aktualisieren Word. Das heißt, **Fpcntrl** = ((**Fpcntrl** & ~*Maske*) &#124; (*neue* & *Maske*)) wo **Fpcntrl** das gleitkommasteuerwort ist.
+Die **_control87** Funktion ruft ab und legt das gleitkommasteuerwort fest. Mit dem Gleitkommasteuerwort kann das Programm die Genauigkeits-, Rundungs- und Unendlichkeitsmodi im mathematischen Gleitkommapaket je nach Plattform ändern. Sie können auch **_control87** zu maskieren oder Aufheben der Maskierung Gleitkommaausnahmen. Wenn der Wert für *Maske* ist gleich 0 (null) **_control87** Ruft das gleitkommasteuerwort. Wenn *Maske* ist ungleich NULL ist, wird ein neuer Wert für das Steuerwort festgelegt: Für alle, die bit ist (d. h. gleich 1) in *Maske*, das entsprechende Bit in *neue* wird verwendet, um das Steuerwort zu aktualisieren. Das heißt, **Fpcntrl** = ((**Fpcntrl** & ~*Maske*) &#124; (*neue* & *Maske*)) wo **Fpcntrl** das gleitkommasteuerwort ist.
 
 > [!NOTE]
 > Standardmäßig maskieren die Laufzeitbibliotheken alle Gleitkommaausnahmen.
@@ -138,7 +138,7 @@ Für die **_MCW_EM** das Aufheben-Maske die Ausnahme, was die Hardwareausnahme e
 |**_MCW_EM** (Interrupt-ausnahmemaske)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
 |**_MCW_IC** (unendlichkeitssteuerung)<br /><br /> (Nicht auf ARM oder X64 unterstützt] Plattformen.)|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
 |**_MCW_RC** (rundungssteuerung)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
-|**_MCW_PC** (Precision-Steuerung)<br /><br /> (Nicht unterstützt für ARM oder X64 Plattformen.)|0x00030000|**_PC_24** (24 Bits)<br /><br /> **_PC_53** (53 Bits)<br /><br /> **_PC_64** (64 Bit)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
+|**_MCW_PC** (Precision-Steuerung)<br /><br /> (Nicht unterstützt für ARM oder X64 Plattformen.)|0x00030000|**_PC_24** (24 bits)<br /><br /> **_PC_53** (53 Bits)<br /><br /> **_PC_64** (64 Bit)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
 
 ## <a name="requirements"></a>Anforderungen
 

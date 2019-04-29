@@ -31,11 +31,11 @@ helpviewer_keywords:
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
 ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339748"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -71,7 +71,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Creal**
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**Creal**, **Crealf**, **Creall**|\<complex.h>|\<ccomplex>|
+|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
 
 Die **_Fcomplex**, **_Dcomplex**, und **_Lcomplex** Typen sind Microsoft-spezifische Entsprechungen nicht implementierte nativen Typen C99 **float _Complex** , **double _Complex**, und **long double _Complex**bzw. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

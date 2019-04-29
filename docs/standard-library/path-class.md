@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
 ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370449"
 ---
 # <a name="path-class"></a>path-Klasse
 
@@ -50,7 +50,7 @@ class path;
 |[concat](#compare)|Fügt der angegebenen Reihenfolge um `mypath`, konvertiert (aber fügen kein Trennzeichen) nach Bedarf.|
 |[empty](#empty)|Gibt `mypath.empty()`zurück.|
 |[end](#end)|Gibt einen Sequenzende Iterator vom Typ `iterator`.|
-|[Erweiterung](#extension)|Gibt das Suffix des `filename()`.|
+|[extension](#extension)|Gibt das Suffix des `filename()`.|
 |[filename](#filename)|Gibt die Stammverzeichniskomponente von „myname“ zurück, insbesondere `empty() path() : *--end()`. Die Komponente kann leer sein.|
 |[generic_string](#generic_string)|Gibt `this->string<Elem, Traits, Alloc>(al)` zurück, wobei jeder umgekehrte Schrägstrich in einen Schrägstrich konvertiert wird (unter Windows).|
 |[generic_u16string](#generic_u16string)|Gibt `u16string()` zurück, wobei jeder umgekehrte Schrägstrich in einen Schrägstrich konvertiert wird (unter Windows).|
@@ -70,15 +70,15 @@ class path;
 |[make_preferred](#make_preferred)|Konvertiert jedes Trennzeichen in ein "preferred_separator" ein, nach Bedarf.|
 |[native](#native)|Gibt `myname`zurück.|
 |[parent_path](#parent_path)|Gibt die übergeordnete Pfadkomponente von `myname`.|
-|["preferred_separator"](#preferred_separator)|Das konstante Objekt gibt je nach Betriebssystem des Hosts das bevorzugte Zeichen zum Trennen von Pfadkomponenten zurück. |
-|[RELATIVE_PATH](#relative_path)|Gibt die relative Pfadkomponente von `myname`. |
+|[preferred_separator](#preferred_separator)|Das konstante Objekt gibt je nach Betriebssystem des Hosts das bevorzugte Zeichen zum Trennen von Pfadkomponenten zurück. |
+|[relative_path](#relative_path)|Gibt die relative Pfadkomponente von `myname`. |
 |[remove_filename](#remove_filename)|Entfernt den Dateinamen an.|
 |[replace_extension](#replace_extension)|Ersetzt die Erweiterung der `myname`. |
 |[replace_filename](#replace_filename)|RReplaces den Dateinamen.|
 |[root_directory](#root_directory)|Gibt die stammverzeichniskomponente von `myname`. |
 |[root_name](#root_name)|Gibt die stammnamenkomponente von `myname`. |
-|[Rootpfad](#root_path)|Gibt die stammpfadkomponente von `myname`.|
-|[Stamm](#stem)|Gibt die `stem` -Komponente `myname`.|
+|[root_path](#root_path)|Gibt die stammpfadkomponente von `myname`.|
+|[stem](#stem)|Gibt die `stem` -Komponente `myname`.|
 |[string](#string)|Konvertiert die Sequenz, die in gespeicherten `mypath`.|
 |[swap](#swap)|Führt `swap(mypath, right.mypath)`.|
 |[u16string](#u16string)|Konvertiert die Sequenz, die in gespeicherten `mypath` UTF-16 und gibt es in ein Objekt des Typs gespeichert `u16string`.|
@@ -94,11 +94,11 @@ class path;
 |[operator=](#op_as)|Ersetzt die Elemente des Pfads mit einer Kopie einen anderen Pfad an.|
 |[operator+=](#op_add)|Verschiedene `concat` Ausdrücke.|
 |[operator/=](#op_divide)|Verschiedene `append` Ausdrücke.|
-|[Operator string_type](#op_string)|Gibt `myname`zurück.|
+|[operator string_type](#op_string)|Gibt `myname`zurück.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Filesystem >
+**Header:** \<filesystem>
 
 **Namespace:** std::experimental::filesystem
 
@@ -119,7 +119,7 @@ path& append(InIt first, InIt last);
 *source*<br/>
 Angegebene Sequenz.
 
-*Erste*<br/>
+*first*<br/>
 Anfang der angegebenen Sequenz.
 
 *last*<br/>
@@ -142,7 +142,7 @@ path& assign(InIt first, InIt last);
 *source*<br/>
 Angegebene Sequenz.
 
-*Erste*<br/>
+*first*<br/>
 Anfang der angegebenen Sequenz.
 
 *last*<br/>
@@ -184,7 +184,7 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parameter
 
-*"pval"*<br/>
+*pval*<br/>
 Pfad zu vergleichen.
 
 *str*<br/>
@@ -210,7 +210,7 @@ path& concat(InIt first, InIt last);
 *source*<br/>
 Angegebene Sequenz.
 
-*Erste*<br/>
+*first*<br/>
 Anfang der angegebenen Sequenz.
 
 *last*<br/>
@@ -264,7 +264,7 @@ Gibt die Stammverzeichniskomponente von „myname“ zurück, insbesondere `empt
 path filename() const;
 ```
 
-## <a name="generic_string"></a> Path::generic_string
+## <a name="generic_string"></a> path::generic_string
 
 Gibt `this->string<Elem, Traits, Alloc>(al)` zurück, wobei jeder umgekehrte Schrägstrich in einen Schrägstrich konvertiert wird (unter Windows).
 
@@ -302,7 +302,7 @@ Gibt `u8string()` zurück, wobei jeder umgekehrte Schrägstrich in einen Schräg
 string generic_u8string() const;
 ```
 
-## <a name="generic_wstring"></a> Path::generic_wstring
+## <a name="generic_wstring"></a> path::generic_wstring
 
 Gibt `wstring()` zurück, wobei jeder umgekehrte Schrägstrich in einen Schrägstrich konvertiert wird (unter Windows).
 
@@ -334,7 +334,7 @@ Gibt `!parent_path().empty()`zurück.
 bool has_parent_path() const;
 ```
 
-## <a name="has_relative_path"></a> Path:: has_relative_path
+## <a name="has_relative_path"></a> path::has_relative_path
 
 Gibt `!relative_path().empty()`zurück.
 
@@ -342,7 +342,7 @@ Gibt `!relative_path().empty()`zurück.
 bool has_relative_path() const;
 ```
 
-## <a name="has_root_directory"></a> Path:: has_root_directory
+## <a name="has_root_directory"></a> path::has_root_directory
 
 Gibt `!root_directory().empty()`zurück.
 
@@ -358,7 +358,7 @@ Gibt `!root_name().empty()`zurück.
 bool has_root_name() const;
 ```
 
-## <a name="has_root_path"></a> Path:: has_root_path
+## <a name="has_root_path"></a> path::has_root_path
 
 Gibt `!root_path().empty()`zurück.
 
@@ -366,7 +366,7 @@ Gibt `!root_path().empty()`zurück.
 bool has_root_path() const;
 ```
 
-## <a name="has_stem"></a> Path::has_stem
+## <a name="has_stem"></a> path::has_stem
 
 Gibt `!stem().empty()`zurück.
 
@@ -374,7 +374,7 @@ Gibt `!stem().empty()`zurück.
 bool has_stem() const;
 ```
 
-## <a name="is_absolute"></a> Path:: is_absolute
+## <a name="is_absolute"></a> path::is_absolute
 
 Für Windows, die Funktion zurückgibt `has_root_name() && has_root_directory()`. Für Posix gibt die Funktion `has_root_directory()`.
 
@@ -447,7 +447,7 @@ Gibt `myname`zurück.
 const string_type& native() const noexcept;
 ```
 
-## <a name="op_as"></a> Path:: =
+## <a name="op_as"></a> path::operator=
 
 Ersetzt die Elemente des Pfads mit einer Kopie einen anderen Pfad an.
 
@@ -471,7 +471,7 @@ Der Quellpfad.
 
 Die erste Member-Operator Kopien `right.myname` zu `myname`. Der zweite Memberoperator verschiebt `right.myname` zu `myname`. Der dritte Memberoperator verhält sich wie `*this = path(source)`.
 
-## <a name="op_add"></a> Path:: Operator +=
+## <a name="op_add"></a> path::operator+=
 
 Verschiedene `concat` Ausdrücke.
 
@@ -499,7 +499,7 @@ Die hinzugefügte Zeichenfolge.
 *ptr*<br/>
 Der hinzugefügte Zeiger.
 
-*Elem*<br/>
+*elem*<br/>
 Die hinzugefügte `value_type` oder `Elem`.
 
 *source*<br/>
@@ -599,10 +599,10 @@ Der Pfad, den der konstruierte Pfad ist eine Kopie.
 *source*<br/>
 Die Quelle, von der der erstellte Pfad, die Kopie ist.
 
-*Loc*<br/>
+*loc*<br/>
 Das angegebene Gebietsschema.
 
-*Erste*<br/>
+*first*<br/>
 Die Position des ersten zu kopierenden Elements.
 
 *last*<br/>
@@ -626,7 +626,7 @@ Für `template<class InIt> path(InIt first, InIt last)` ist `myname(first, last)
 
 Für `template<class InIt> path(InIt first, InIt last, const locale& loc)` ist `myname(first, last)`, wobei alle erforderlichen Codecvt-Facets von `loc`.
 
-## <a name="preferred_separator"></a> Path::preferred_separator
+## <a name="preferred_separator"></a> path::preferred_separator
 
 Das konstante Objekt gibt je nach Betriebssystem des Hosts das bevorzugte Zeichen zum Trennen von Pfadkomponenten zurück.
 
@@ -654,7 +654,7 @@ path relative_path() const;
 
 Gibt die relative Pfadkomponente von `myname`, insbesondere das Suffix von `myname` nach dem Entfernen `root_path().native()` und aller unmittelbar nachfolgenden redundanten Verzeichnistrennzeichen. Die Komponente kann leer sein.
 
-## <a name="remove_filename"></a> Path:: remove_filename
+## <a name="remove_filename"></a> path::remove_filename
 
 Entfernt den Dateinamen an.
 
@@ -672,14 +672,14 @@ path& replace_extension(const path& newext = path());
 
 ### <a name="parameters"></a>Parameter
 
-*"newext"*<br/>
+*newext*<br/>
 Die neue Erweiterung.
 
 ### <a name="remarks"></a>Hinweise
 
 Entfernt zuerst das Suffix `extension().native()` aus `myname`. Dann, wenn `!newext.empty() && newext[0] != dot` (wobei `dot` ist `*path(".").c_str()`), klicken Sie dann `dot` wird angefügt `myname`. Klicken Sie dann *"newext"* wird angefügt `myname`.
 
-## <a name="replace_filename"></a> Path:: replace_filename
+## <a name="replace_filename"></a> path::replace_filename
 
 Ersetzt den Dateinamen an.
 
@@ -689,7 +689,7 @@ path& replace_filename(const path& pval);
 
 ### <a name="parameters"></a>Parameter
 
-*"pval"*<br/>
+*pval*<br/>
 Der Pfad des Dateinamens.
 
 ### <a name="remarks"></a>Hinweise
@@ -703,7 +703,7 @@ remove_filename();
 return (*this);
 ```
 
-## <a name="root_directory"></a> Path:: root_directory
+## <a name="root_directory"></a> path::root_directory
 
 Gibt die stammverzeichniskomponente von `myname`.
 

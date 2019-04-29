@@ -35,11 +35,11 @@ helpviewer_keywords:
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
 ms.openlocfilehash: 932a7827ef61a5e111f86f8bc44291827843b76e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353838"
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -162,9 +162,9 @@ Wie in der **Printf** -Funktion, die **#** Flag möglicherweise Formatierungscod
 
 |Formatcode|Bedeutung|
 |-----------------|-------------|
-|**% #a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X** , **%#z**, **%#Z**, **%#%**|**#** Flag wird ignoriert.|
-|**% zu #c**|Lange Datums- / Darstellung, für das Gebietsschema geeignet. Beispiel: „Dienstag, 14. März 1995, 12:41:29“.|
-|**%#x**|Langes Datumsformat für das Gebietsschema geeignete Darstellung. Beispiel: „Dienstag, 14. März 1995“.|
+|**%#a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X**, **%#z**, **%#Z**, **%#%**|**#** Flag wird ignoriert.|
+|**%#c**|Lange Datums- / Darstellung, für das Gebietsschema geeignet. Zum Beispiel: "Tuesday, March 14, 1995, 12:41:29".|
+|**%#x**|Langes Datumsformat für das Gebietsschema geeignete Darstellung. Zum Beispiel: "Dienstag, 14. März 1995 an".|
 |**%#d**, **%#D**, **%#e**, **%#F**, **%#H**, **% #ich**, **%#j**, **%#m**, **%#M**, **%#r**, **%#R**, **%#S**, **%#T** , **%#U**, **%#V**, **%#W**, **%#y**, **%#Y**|Entfernen Sie führende Nullen oder Leerzeichen (sofern vorhanden).|
 
 Das ISO 8601-Woche und das Jahr Woche basierende erzeugten **%V**, **%g**, und **%G**, verwendet eine Woche, die am Montag beginnt, auf dem Woche 1 Woche, an dem 4. Januar, enthält die erste die Woche, die mindestens vier Tage des Jahres enthält. Beim erste Montag des Jahres das 2. ist, sind 3. und 4., die vorherigen Tagen Teil der letzten Woche des vorherigen Jahres. Für diese Tage **%V** wird ersetzt durch 53 und beide **%g** und **%G** ersetzt werden, durch die Ziffern des vorherigen Jahres.

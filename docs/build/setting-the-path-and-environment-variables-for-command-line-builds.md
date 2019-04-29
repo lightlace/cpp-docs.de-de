@@ -19,11 +19,11 @@ helpviewer_keywords:
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
 ms.openlocfilehash: fed3360294bec724af09b87e5abd7c6bb22fa285
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315390"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Festlegen der Pfad- und Umgebungsvariablen für Befehlszeilenbuilds
 
@@ -38,8 +38,8 @@ Um anzuzeigen, welche Umgebungsvariablen festgelegt werden, indem Sie eine Devel
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden Sie das MSVC-Toolset, über die Befehlszeile](building-on-the-command-line.md)<br/>
-[MSVC-Linker-Referenz](reference/linking.md)<br/>
+[Verwenden des MSVC-Toolsets über die Befehlszeile](building-on-the-command-line.md)<br/>
+[MSVC-Linkerreferenz](reference/linking.md)<br/>
 [MSVC-Linkeroptionen](reference/linker-options.md)<br/>
-[MSVC-Compiler-Verweis](reference/compiling-a-c-cpp-program.md)<br/>
-[MSVC-Compiler-Optionen](reference/compiler-options.md)
+[MSVC-Compilerreferenz](reference/compiling-a-c-cpp-program.md)<br/>
+[MSVC-Compileroptionen](reference/compiler-options.md)

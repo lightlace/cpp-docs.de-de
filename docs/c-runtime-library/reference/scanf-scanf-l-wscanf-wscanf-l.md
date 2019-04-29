@@ -41,11 +41,11 @@ helpviewer_keywords:
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
 ms.openlocfilehash: 48aa0bb3348a3336de9ee0eb9f9ec0d3e1a2b3cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357121"
 ---
 # <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
@@ -79,7 +79,7 @@ int _wscanf_l(
 *format*<br/>
 Formatsteuerzeichenfolge.
 
-*Argument*<br/>
+*argument*<br/>
 Optionale Argumente.
 
 *locale*<br/>
@@ -117,8 +117,8 @@ Weitere Informationen finden Sie unter [Formatangabefelder: scanf- und wscanf-Fu
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Scanf**, **_scanf_l**|\<stdio.h>|
-|**Wscanf**, **_wscanf_l**|\<stdio.h> oder \<wchar.h>|
+|**scanf**, **_scanf_l**|\<stdio.h>|
+|**wscanf**, **_wscanf_l**|\<stdio.h> oder \<wchar.h>|
 
 Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

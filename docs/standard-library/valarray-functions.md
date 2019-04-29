@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: c4e5873e9a511311d2c49b34791df82038fe9f9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365183"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt;-Funktionen
 
@@ -974,7 +974,7 @@ Ein valarray-Objekt, dessen Elemente gleich dem hyperbolischen Sinus der Element
 
 Identitäten, die den hyperbolischen Sinus in Bezug auf die Exponentialfunktion definieren:
 
-Sinh ( *z* ) = (exp ( *z* ) – "exp" (- *z* )) / 2
+sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2
 
 ### <a name="example"></a>Beispiel
 
@@ -1210,7 +1210,7 @@ Ein valarray-Objekt, dessen Elemente gleich dem hyperbolischen Kosinus der Eleme
 
 Identitäten, die den hyperbolischen Tangens in Bezug auf die Exponentialfunktion definieren:
 
-Tanh ( *z* ) = Sinh ( *z* ) / cosh ( *z* ) = (exp ( *z* ) – "exp" (- *z* )) / (exp ( *z* ) + exp (- *z* ))
+tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )
 
 ### <a name="example"></a>Beispiel
 

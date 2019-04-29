@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4313
 ms.assetid: bcf64191-e2cf-452e-97b4-423fcec2d07c
 ms.openlocfilehash: 774af2d5d29112d56adf97e22d1bdd758a816ef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352935"
 ---
 # <a name="compiler-warning-level-1-c4313"></a>Compilerwarnung (Stufe 1) C4313
 
-'Funktion': 'Formatbezeichner' in der Formatzeichenfolge steht mit der Argumentennummer vom Typ 'Typ' in Konflikt.
+„Funktion“: „Formatbezeichner“ in der Formatzeichenfolge steht mit der Argumentennummer vom Typ „Typ“ in Konflikt.
 
 Es besteht ein Konflikt zwischen dem angegebenen Format und dem Wert, den Sie übergeben. Beispielsweise haben Sie einen 64-Bit-Parameter an einen nicht qualifizierten Formatbezeichner „%d“ übergeben, wohingegen ein 32-Bit-Ganzzahl-Parameter erwartet wird. Diese Warnung ist nur aktiv, wenn der Code für 64-Bit-Ziele kompiliert wird.
 
