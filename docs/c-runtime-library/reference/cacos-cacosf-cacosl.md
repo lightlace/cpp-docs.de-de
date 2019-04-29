@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
 ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348574"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
@@ -71,7 +71,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cacos**
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**Cacos**, **Cacosf**, **Cacosl**|\<complex.h>|\<ccomplex>|
+|**cacos**,               **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

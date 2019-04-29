@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369123"
 ---
 # <a name="regextraits-class"></a>regex_traits-Klasse
 
@@ -95,9 +95,9 @@ Jedes `regex_traits` -Objekt enthält ein Objekt des Typs `regex_traits::locale`
 |[lookup_collatename](#lookup_collatename)|Ordnet eine Sequenz einem Sortierungselement zu.|
 |[transform](#transform)|Konvertiert in eine äquivalente sortierte Sequenz.|
 |[transform_primary](#transform_primary)|Konvertiert in eine äquivalente fallunabhängig sortierte Sequenz.|
-|[Übersetzen](#translate)|Konvertiert in ein äquivalentes übereinstimmendes Element.|
+|[translate](#translate)|Konvertiert in ein äquivalentes übereinstimmendes Element.|
 |[translate_nocase](#translate_nocase)|Konvertiert in ein äquivalentes fallunabhängiges übereinstimmendes Element.|
-|[Wert](#value)|Konvertiert ein Element in einen Ziffernwert.|
+|[value](#value)|Konvertiert ein Element in einen Ziffernwert.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -221,7 +221,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parameter
 
-*Loc*<br/>
+*loc*<br/>
 Das zu speichernde Gebietsschemaobjekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -241,7 +241,7 @@ bool isctype(char_type ch, char_class_type cls) const;
 *ch*<br/>
 Das zu testende Element.
 
-*CLS*<br/>
+*cls*<br/>
 Die Klassen, für die der Test ausgeführt wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -289,7 +289,7 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang der Sequenz, die gesucht werden soll.
 
 *last*<br/>
@@ -314,7 +314,7 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang der Sequenz, die gesucht werden soll.
 
 *last*<br/>
@@ -373,7 +373,7 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Anfang der umzuwandelnden Sequenz.
 
 *last*<br/>
@@ -394,7 +394,7 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Anfang der umzuwandelnden Sequenz.
 
 *last*<br/>

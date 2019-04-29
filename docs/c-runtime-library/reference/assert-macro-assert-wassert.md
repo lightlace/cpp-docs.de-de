@@ -29,11 +29,11 @@ helpviewer_keywords:
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
 ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341365"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert-Makro, _assert, _wassert
 
@@ -59,7 +59,7 @@ void _wassert(
 
 ### <a name="parameters"></a>Parameter
 
-*Ausdruck*<br/>
+*expression*<br/>
 Ein skalarer Ausdruck (einschließlich zeigerausdrücken), der zu ungleich null ergibt (**"true"**) oder 0 (**"false"**).
 
 *message*<br/>
@@ -68,7 +68,7 @@ Die anzuzeigende Meldung.
 *filename*<br/>
 Der Name der Quelldatei, in der der Assertionsfehler aufgetreten ist.
 
-*Zeile*<br/>
+*line*<br/>
 Die Zeilennummer in der Quelldatei mit dem Assertionsfehler.
 
 ## <a name="remarks"></a>Hinweise
@@ -81,7 +81,7 @@ Die Diagnosemeldung wird in Breitzeichen ausgegeben. Daher funktioniert sie auch
 
 Das Ziel der Diagnosemeldung hängt vom Typ der Anwendung ab, die die Routine aufgerufen hat. Konsolenanwendungen erhalten die Meldung über immer **"stderr"**. In einer Windows-basierten Anwendung **assert** aufruft, die Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) Funktion, um ein Meldungsfeld, um die Nachricht zusammen mit anzuzeigen erstellen eine **OK** Schaltfläche. Wenn der Benutzer auf **OK**klickt, wird das Programm sofort beendet.
 
-Wenn die Anwendung mit einer Debugversion der Laufzeitbibliotheken verknüpft ist **assert** erstellt ein Meldungsfeld mit drei Schaltflächen: **Abbrechen**, **wiederholen**, und **Ignorieren**. Wenn der Benutzer auf **Abbrechen**klickt, wird das Programm sofort beendet. Wenn der Benutzer auf **Wiederholen**klickt, wird der Debugger aufgerufen und der Benutzer kann das Programm debuggen, wenn Just-In-Time (JIT)-Debuggen aktiviert ist. Wenn der Benutzer klickt **ignorieren**, **assert-** die normale Ausführung fort: Erstellen das Meldungsfeld mit der **OK** Schaltfläche. Wenn ein Fehlerzustand vorliegt, kann das Klicken auf **Ignorieren** zu undefiniertem Verhalten führen.
+Wenn die Anwendung mit einer Debugversion der Laufzeitbibliotheken verknüpft ist **assert** erstellt ein Meldungsfeld mit drei Schaltflächen: **Abbrechen**, **wiederholen**, und **ignorieren**. Wenn der Benutzer auf **Abbrechen**klickt, wird das Programm sofort beendet. Wenn der Benutzer auf **Wiederholen**klickt, wird der Debugger aufgerufen und der Benutzer kann das Programm debuggen, wenn Just-In-Time (JIT)-Debuggen aktiviert ist. Wenn der Benutzer klickt **ignorieren**, **assert-** die normale Ausführung fort: Erstellen das Meldungsfeld mit der **OK** Schaltfläche. Wenn ein Fehlerzustand vorliegt, kann das Klicken auf **Ignorieren** zu undefiniertem Verhalten führen.
 
 Weitere Informationen zum CRT-Debugging (C Runtime Library) finden Sie unter [CRT-Debugverfahren](/visualstudio/debugger/crt-debugging-techniques).
 
@@ -93,7 +93,7 @@ Die **assert** Makro ist in den Release- und Debugkonfigurationen Versionen der 
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Assert-**, **_wassert**|\<assert.h>|
+|**assert**, **_wassert**|\<assert.h>|
 
 Die Signatur der **_assert** Funktion ist nicht in einer Headerdatei verfügbar. Die Signatur der **_wassert** Funktion ist nur verfügbar, wenn die **NDEBUG** Makro ist nicht definiert.
 

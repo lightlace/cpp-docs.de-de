@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
 ms.openlocfilehash: 937c217cdef6895aaa3adb1499f1fde8f67fd513
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369489"
 ---
 # <a name="regexiterator-class"></a>regex_iterator-Klasse
 
@@ -273,13 +273,13 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang der Sequenz, die übereinstimmen soll.
 
 *last*<br/>
 Ende der Sequenz, die übereinstimmen soll.
 
-*RE*<br/>
+*re*<br/>
 Regulärer Ausdruck für Übereinstimmungen.
 
 *f*<br/>

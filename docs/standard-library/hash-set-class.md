@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: c7d5df87dc6c8529d18b9f5fb960148c7362129a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405039"
 ---
 # <a name="hashset-class"></a>hash_set-Klasse
 
@@ -117,7 +117,7 @@ Der im hash_set-Objekt zu speichernde Elementdatentyp.
 *Merkmale*<br/>
 Der Typ, der zwei Funktionsobjekte enthält: eines der Klasse "compare", ein binäres Prädikat, das zwei Elementwerte als Sortierschlüssel, um zu ermitteln, deren relative Reihenfolge und eine Hashfunktion, die eine unäre Prädikat Zuordnung Schlüsselwerte der Elemente, die ohne Vorzeichen ist vergleichen können ganzen Zahlen vom Typ `size_t`. Das Argument ist optional und `hash_compare<Key, less<Key> >` ist der Standardwert.
 
-*Zuweisung*<br/>
+*Allocator*<br/>
 Der Typ, mit dem das gespeicherte allocator-Objekt dargestellt wird, mit dem Details zum Belegen und Freigeben von Arbeitsspeicher für das hash_set-Element gekapselt werden. Dieses Argument ist optional, und der Standardwert ist `allocator<Key>`.
 
 ## <a name="remarks"></a>Hinweise
@@ -1109,7 +1109,7 @@ size_type erase(const key_type& key);
 *_Where*<br/>
 Die Position des aus hash_set zu entfernenden Elements.
 
-*Erste*<br/>
+*first*<br/>
 Die Position des ersten Elements, das aus hash_set entfernt werden soll.
 
 *last*<br/>

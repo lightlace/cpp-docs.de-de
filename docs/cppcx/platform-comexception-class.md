@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
 ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383346"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException-Klasse
 
@@ -55,7 +55,7 @@ Die COMException-Klasse verfügt auch über die folgenden Eigenschaften.
 
 Die folgenden vordefinierten Ausnahmen werden von COMException abgeleitet. Sie unterscheiden sich von COMException nur im Namen, im Namen des Konstruktors und dem zugrunde liegenden HRESULT-Wert.
 
-|name|Zugrunde liegendes HRESULT|Beschreibung|
+|Name|Zugrunde liegendes HRESULT|Beschreibung|
 |----------|------------------------|-----------------|
 |COMException|*Benutzerdefiniertes HRESULT*|Wird ausgelöst, wenn ein COM-Methodenaufruf ein unbekanntes HRESULT zurückgibt.|
 |AccessDeniedException|E_ACCESSDENIED|Wird ausgelöst, wenn der Zugriff auf eine Ressource oder eine Funktion verweigert wird.|
@@ -131,4 +131,4 @@ Eine Beschreibung der Ausnahme.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Platform-namespace](../cppcx/platform-namespace-c-cx.md)
+[Plattformnamespace](../cppcx/platform-namespace-c-cx.md)

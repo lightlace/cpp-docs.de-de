@@ -14,11 +14,11 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
 ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397743"
 ---
 # <a name="recordset-odbc"></a>Recordset (ODBC)
 
@@ -85,7 +85,7 @@ Die folgenden Themen erläutern die Details der Verwendung des Recordset-Objekte
 
 - [Recordset: Scrollen (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
 
-- [Recordset: Lesezeichen und Absolute Positionen (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
+- [Recordset: Lesezeichen und absolute Positionen (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
 
 - [Recordset: Filtern von Datensätzen (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
 
@@ -95,7 +95,7 @@ Die folgenden Themen erläutern die Details der Verwendung des Recordset-Objekte
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Themen über das Ändern von recordsets
 
-- [Recordset: Hinzufügen, aktualisieren und Löschen von Datensätzen (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [Recordset: Hinzufügen, Aktualisieren und Löschen von Datensätzen (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
 - [Recordset: Sperren von Datensätzen (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
@@ -119,7 +119,7 @@ Die folgenden Themen erläutern die Details der Verwendung des Recordset-Objekte
 
 - [Recordset: Datensatzauswahl durch Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [Recordset: How Recordsets Update Records (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [Recordset: Datensatzaktualisierung durch Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 ## <a name="see-also"></a>Siehe auch
 

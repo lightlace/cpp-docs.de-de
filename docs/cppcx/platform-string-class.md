@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330205"
 ---
 # <a name="platformstring-class"></a>Platform::String-Klasse
 
@@ -85,11 +85,11 @@ Die Zeichenfolgenklasse hat die folgenden Operatoren.
 
 |Member|Beschreibung|
 |------------|-----------------|
-|[String:: Operator ==-Operator](#operator-equality)|Gibt an, ob zwei angegebene Zeichenfolgenobjekte denselben Wert haben.|
+|[String:: Operator ==-Operator](#operator-equality)|Gibt an, ob zwei angegebene Zeichenfolgenobjekte denselben Wert aufweisen.|
 |[operator+-Operator](#operator-plus)|Verkettet zwei Zeichenfolgeobjekte in ein neues Zeichenfolgeobjekt.|
 |[String:: Operator >-Operator](#operator-greater-than)|Gibt an, ob der Wert eines Zeichenfolgenobjekts größer als der Wert eines zweiten Zeichenfolgenobjekts ist.|
 |[String:: Operator > =-Operator](#operator-greater-than-or-equals)|Gibt an, ob der Wert eines String-Objekts größer oder gleich dem Wert eines zweiten String-Objekts ist.|
-|[String:: Operator! =-Operator](#operator-inequality)|Gibt an, ob zwei angegebene Zeichenfolgenobjekte unterschiedliche Werte haben.|
+|[String:: Operator! =-Operator](#operator-inequality)|Gibt an, ob zwei angegebene Zeichenfolgenobjekte unterschiedliche Werte aufweisen.|
 |[String:: Operator <-Operator](#operator-less-than)|Gibt an, ob der Wert eines Zeichenfolgenobjekts kleiner als der Wert eines zweiten Zeichenfolgenobjekts ist.|
 
 ### <a name="requirements"></a>Anforderungen
@@ -498,4 +498,4 @@ Ein `String` Objekt, dessen Wert der aktuellen Zeichenfolge identisch.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Platform-namespace](../cppcx/platform-namespace-c-cx.md)
+[Plattformnamespace](../cppcx/platform-namespace-c-cx.md)

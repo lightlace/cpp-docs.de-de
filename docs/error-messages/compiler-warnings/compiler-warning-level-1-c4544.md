@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4544
 ms.assetid: 11ee04df-41ae-435f-af44-881e801315a8
 ms.openlocfilehash: f2a3f2e64a6a859add8182de4fc883c735563e92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352922"
 ---
 # <a name="compiler-warning-level-1-c4544"></a>Compilerwarnung (Stufe 1) C4544
 
-'declaration': Standardvorlagenargument wird für diese Vorlagendeklaration ignoriert
+'Declaration': Standardvorlagenargument wird für diese Vorlagendeklaration ignoriert
 
 Ein Standardvorlagenargument wurde an einer falschen Position angegeben und wurde ignoriert. Ein Standardvorlagenargument für eine Klassenvorlage kann nur in der Deklaration oder Definition der Klassenvorlage und nicht auf einem Member der Klassenvorlage angegeben werden.
 

@@ -60,11 +60,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
 ms.openlocfilehash: ec3863796f7c49c155af61576c15c1ca8a9d5109
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384607"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -94,7 +94,7 @@ Der Typ des zugrunde liegenden Containers.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Cliext/Stack >
+**Header:** \<cliext/stack>
 
 **Namespace:** Cliext
 
@@ -150,7 +150,7 @@ Das Objekt weist speicherbelegungen und-Freigaben für die gesteuerte Sequenz du
 
 ## <a name="members"></a>Member
 
-## <a name="assign"></a> Stack::Assign (STL/CLR)
+## <a name="assign"></a> stack::assign (STL/CLR)
 
 Ersetzt alle Elemente.
 
@@ -204,7 +204,7 @@ a b c
 a b c
 ```
 
-## <a name="const_reference"></a> Stack::const_reference (STL/CLR)
+## <a name="const_reference"></a> stack::const_reference (STL/CLR)
 
 Der Typ eines konstanten Verweises auf ein Element.
 
@@ -248,7 +248,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> Stack:: container_type (STL/CLR)
+## <a name="container_type"></a> stack::container_type (STL/CLR)
 
 Der Typ des zugrunde liegenden Containers.
 
@@ -290,7 +290,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a> Stack::difference_type (STL/CLR)
+## <a name="difference_type"></a> stack::difference_type (STL/CLR)
 
 Die Typen des Abstands zwischen den beiden Elementen mit Vorzeichen.
 
@@ -402,7 +402,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="generic_container"></a> Stack::generic_container (STL/CLR)
+## <a name="generic_container"></a> stack::generic_container (STL/CLR)
 
 Der Typ der generischen Schnittstelle für den Containeradapter.
 
@@ -465,7 +465,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a> Stack::generic_value (STL/CLR)
+## <a name="generic_value"></a> stack::generic_value (STL/CLR)
 
 Der Typ eines Elements für die Verwendung mit der generischen Schnittstelle für den Container.
 
@@ -523,7 +523,7 @@ a b c
 c b a
 ```
 
-## <a name="get_container"></a> Stack:: get_container (STL/CLR)
+## <a name="get_container"></a> stack::get_container (STL/CLR)
 
 Greift auf die zugrunde liegenden Containers.
 
@@ -565,7 +565,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> standardbibliotheksbeispiel = (STL/CLR)
+## <a name="op_as"></a> stack::operator= (STL/CLR)
 
 Ersetzt die kontrollierte Sequenz.
 
@@ -619,7 +619,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a> Stack:: POP (STL/CLR)
+## <a name="pop"></a> stack::pop (STL/CLR)
 
 Entfernt das letzte Element.
 
@@ -667,7 +667,7 @@ a b c
 a b
 ```
 
-## <a name="push"></a> Stack:: Push (STL/CLR)
+## <a name="push"></a> stack::push (STL/CLR)
 
 Fügt ein neues Letztes Element hinzu.
 
@@ -708,7 +708,7 @@ int main()
 a b c
 ```
 
-## <a name="reference"></a> Stack::Reference (STL/CLR)
+## <a name="reference"></a> stack::reference (STL/CLR)
 
 Der Typ eines Verweises auf ein Element.
 
@@ -757,7 +757,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a> Stack:: Size (STL/CLR)
+## <a name="size"></a> stack::size (STL/CLR)
 
 Ermittelt die Anzahl von Elementen.
 
@@ -811,7 +811,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> Stack:: size_type (STL/CLR)
+## <a name="size_type"></a> stack::size_type (STL/CLR)
 
 Der Typ eines Abstands zwischen den beiden Elementen mit Vorzeichen.
 
@@ -860,7 +860,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="stack"></a> Stack:: Stack (STL/CLR)
+## <a name="stack"></a> stack::stack (STL/CLR)
 
 Erstellt ein Containerobjekt für den Adapter.
 
@@ -878,7 +878,7 @@ explicit stack(container_type% wrapped);
 *right*<br/>
 Zu kopierende Objekt.
 
-*Umschlossen*<br/>
+*wrapped*<br/>
 Umschlossene Container verwenden.
 
 ### <a name="remarks"></a>Hinweise
@@ -953,7 +953,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="to_array"></a> Stack::to_array (STL/CLR)
+## <a name="to_array"></a> stack::to_array (STL/CLR)
 
 Kopiert die kontrollierte Sequenz in ein neues Array.
 
@@ -1003,7 +1003,7 @@ a b c d
 a b c
 ```
 
-## <a name="top"></a> Stack:: Top (STL/CLR)
+## <a name="top"></a> stack::top (STL/CLR)
 
 Greift auf das letzte Element zu.
 
@@ -1055,7 +1055,7 @@ top() = c
 a b x
 ```
 
-## <a name="top_item"></a> Stack:: die top_item (STL/CLR)
+## <a name="top_item"></a> stack::top_item (STL/CLR)
 
 Greift auf das letzte Element zu.
 
@@ -1107,7 +1107,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a> Stack:: value_type (STL/CLR)
+## <a name="value_type"></a> stack::value_type (STL/CLR)
 
 Der Typ eines Elements.
 
@@ -1152,7 +1152,7 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a> Operator! = (Stapel) (STL/CLR)
+## <a name="op_neq"></a> operator!= (stack) (STL/CLR)
 
 Der Stapel nicht gleich-Vergleich.
 
@@ -1294,7 +1294,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> Operator&lt;= (Stapel) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (stack) (STL/CLR)
 
 Kleiner oder gleich Stack Vergleich.
 
@@ -1507,7 +1507,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> Operator&gt;= (Stapel) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (stack) (STL/CLR)
 
 Stapel, die größer als oder gleich-Vergleich.
 

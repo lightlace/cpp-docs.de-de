@@ -13,11 +13,11 @@ helpviewer_keywords:
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
 ms.openlocfilehash: db34f528e70a7dcc437836684656b3ce8a4078fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399595"
 ---
 # <a name="tn058-mfc-module-state-implementation"></a>TN058: MFC-Modulzustandsimplementierung
 
@@ -30,7 +30,7 @@ Vor dem Lesen diesen Hinweis, finden Sie unter "Verwalten der Statusdaten von MF
 
 ## <a name="overview"></a>Übersicht
 
-Es gibt drei Arten von MFC-Statusinformationen: Modulstatus, Status und Zustand des Threads. In einigen Fällen können diese Zustandstypen kombiniert werden. MFC Handlezuordnungen sind beispielsweise sowohl lokale-Modul und Thread-lokalen. Dadurch können zwei verschiedene Module zu unterschiedliche Zuordnungen in jeder ihre Threads zu erhalten.
+Es gibt drei Arten von MFC-Informationen ein: Modulstatus, Status und Zustand des Threads. In einigen Fällen können diese Zustandstypen kombiniert werden. MFC Handlezuordnungen sind beispielsweise sowohl lokale-Modul und Thread-lokalen. Dadurch können zwei verschiedene Module zu unterschiedliche Zuordnungen in jeder ihre Threads zu erhalten.
 
 Prozessstatus und Zustand des Threads sind ähnlich. Diese Datenelemente Dinge, die seit jeher globale Variablen, jedoch werden für einen bestimmten Prozess oder thread für die ordnungsgemäße Win32s unterstützen oder für die ordnungsgemäße Multithreadingunterstützung befinden muss. Die Kategorie, die ein angegebenes Datenelement in passt hängt davon ab, das Element und die gewünschte Semantik in Bezug auf die Grenzen von Prozessen und Threads.
 

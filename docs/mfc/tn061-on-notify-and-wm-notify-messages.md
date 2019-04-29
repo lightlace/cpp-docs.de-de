@@ -14,11 +14,11 @@ helpviewer_keywords:
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
 ms.openlocfilehash: 74eb39a855da3ff3e6da7f14a76bf0804919826d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399576"
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: ON_NOTIFY- und WM_NOTIFY-Meldungen
 
@@ -80,7 +80,7 @@ Einige Benachrichtigungen gelten für alle neuen Windows-Steuerelemente zur Verf
 |NM_KILLFOCUS|Steuerelement hat den Eingabefokus verloren.|
 |NM_OUTOFMEMORY|Steuerelement konnte einen Vorgang nicht abschließen, weil nicht genügend Arbeitsspeicher verfügbar war|
 
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Behandeln von WM_NOTIFY-Meldungen in MFC-Anwendungen
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Verarbeiten von WM_NOTIFY-Meldungen in MFC-Anwendungen
 
 Die Funktion `CWnd::OnNotify` benachrichtigungsmeldungen behandelt. Die Standardimplementierung überprüft die meldungszuordnung für Benachrichtigungshandler aufrufen. Im Allgemeinen nicht überschreiben `OnNotify`. Sie können stattdessen bieten eine Handlerfunktion und die meldungszuordnung Ihres Besitzerfensters-Klasse eine Meldungszuordnungseintrags für diesen Handler hinzugefügt.
 
@@ -94,7 +94,7 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 mit folgenden Parametern:
 
-*wNotifyCode schalten*<br/>
+*wNotifyCode*<br/>
 Der Code der benachrichtigungsmeldung, wie z. B. LVN_KEYDOWN behandelt werden.
 
 *ID*<br/>
@@ -114,7 +114,7 @@ mit folgenden Parametern:
 *pNotifyStruct*<br/>
 Ein Zeiger auf die Benachrichtigungsstruktur, wie im vorherigen Abschnitt beschrieben.
 
-*Ergebnis*<br/>
+*result*<br/>
 Ein Zeiger auf den Ergebniscode müssen Sie festlegen, bevor Sie zurückkehren.
 
 ## <a name="example"></a>Beispiel
@@ -157,7 +157,7 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 mit folgenden Parametern:
 
-*wNotifyCode schalten*<br/>
+*wNotifyCode*<br/>
 Der Code der benachrichtigungsmeldung, wie z. B. LVN_KEYDOWN behandelt werden.
 
 *ID*<br/>
@@ -183,7 +183,7 @@ Der untergeordnete Bezeichner des Steuerelements, das die Benachrichtigung gesen
 *pNotifyStruct*<br/>
 Ein Zeiger auf die Benachrichtigungsstruktur, wie oben beschrieben.
 
-*Ergebnis*<br/>
+*result*<br/>
 Ein Zeiger auf den Ergebniscode müssen Sie festlegen, bevor Sie zurückkehren.
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE

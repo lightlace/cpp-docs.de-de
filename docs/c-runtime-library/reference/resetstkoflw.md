@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 ms.openlocfilehash: ad8c9b470c33a4c84f46ac7758d368917e7938e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357537"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -88,7 +88,7 @@ Rufen Sie **_resetstkoflw** um die Schutzseite wiederherzustellen, wenn die Wied
 
 An diesen Punkten ist der Stapel noch nicht ausreichend entladen.
 
-Stapelüberlauf-Ausnahmen werden als strukturierte Ausnahmen und keine C++-Ausnahmen generiert, sodass **_resetstkoflw** eignet sich nicht in einem herkömmlichen **catch** blockiert werden, da keine Stapelüberlauf-Ausnahmen abgefangen werden. Wenn allerdings [_set_se_translator](set-se-translator.md) verwendet wird, um einen strukturierten Ausnahmeübersetzer zu implementieren, der C++-Ausnahmen auslöst (siehe zweites Beispiel), führt eine Stapelüberlauf-Ausnahme zu einer C++-Ausnahme, die von einem C++-Catch-Block behandelt werden kann.
+Stapelüberlauf-Ausnahmen werden nicht als strukturierte Ausnahmen und generiert C++ Ausnahmen, sodass **_resetstkoflw** eignet sich nicht in einem herkömmlichen **catch** blockiert werden, da einen Stapelüberlauf nicht erfasst werden sollen Diese Ausnahme. Wenn allerdings [_set_se_translator](set-se-translator.md) verwendet wird, um einen strukturierten Ausnahmeübersetzer zu implementieren, der C++-Ausnahmen auslöst (siehe zweites Beispiel), führt eine Stapelüberlauf-Ausnahme zu einer C++-Ausnahme, die von einem C++-Catch-Block behandelt werden kann.
 
 Das Aufrufen von **_resetstkoflw** in einem C++-Catch-Block, der von einer Ausnahme erreicht wird, die von einer strukturierten Ausnahmeübersetzerfunktion ausgelöst wird, ist nicht sicher. In diesem Fall wird der Stapelspeicher nicht freigegeben und die Stapelzeiger wird nicht bis außerhalb des Catch-Blocks zurückgesetzt, auch wenn Destruktoren für alle zerstörbaren Objekte vor dem Catch-Block aufgerufen wurden. Diese Funktion sollte erst aufgerufen werden, wenn der Stapelspeicher freigegeben und der Stapelzeiger zurückgesetzt wurde. Daher sollte sie erst nach dem Beenden des Catch-Blocks aufgerufen werden. Im Catch-Block sollte so wenig Stapelspeicherplatz verwendet werden wie möglich, da ein Stapelüberlauf, der in einem Catch-Block auftritt, der selbst versucht, sich nach einem vorherigen Stapelüberlauf wiederherzustellen, nicht wiederhergestellt werden kann und dazu führen kann, dass das Programm nicht mehr reagiert, da der Überlauf in dem Catch-Block eine Ausnahme auslöst, die vom selben Catch-Block behandelt wird.
 
@@ -212,7 +212,7 @@ resetting stack overflow
 
 ### <a name="description"></a>Beschreibung
 
-Das folgende Beispiel zeigt die empfohlene Verwendung von **_resetstkoflw** in einem Programm, in dem strukturierte Ausnahmen in C++-Ausnahmen konvertiert werden.
+Das folgende Beispiel zeigt die empfohlene Verwendung von **_resetstkoflw** in einem Programm, in dem strukturierte Ausnahmen werden in konvertiert C++ Ausnahmen.
 
 ### <a name="code"></a>Code
 

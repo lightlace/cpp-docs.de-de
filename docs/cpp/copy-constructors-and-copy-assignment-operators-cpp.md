@@ -11,11 +11,11 @@ helpviewer_keywords:
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
 ms.openlocfilehash: 59f463d103e233a1d9b25da3243a16f67263c815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392296"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Kopierkonstruktoren und Kopierzuweisungsoperatoren (C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "50535043"
 >
 > Objekte können sowohl mit dem Zuordnungsvorgang als auch dem Initialisierungsvorgang kopiert werden.
 
-- **Zuweisung**: Wenn der Wert eines Objekts in ein anderes Objekt zugewiesen wird, wird das erste Objekt dem zweiten Objekt kopiert. Daher eignet sich
+- **Zuweisung**: Wenn der Wert eines Objekts in ein anderes Objekt zugewiesen wird, wird das erste Objekt in das zweite Objekt kopiert. Daher eignet sich
 
     ```cpp
     Point a, b;
@@ -76,13 +76,13 @@ int main()
 
 Vom Compiler generierte Kopierkonstruktoren, wie benutzerdefinierte Kopierkonstruktoren, haben Sie ein einzelnes Argument vom Typ "Verweis auf *Klassennamen*." Eine Ausnahme ist, wenn alle Basisklassen und Memberklassen Kopierkonstruktoren so deklariert, als ein einzelnes Argument des Typs haben **const** <em>Klassennamen</em><strong>&</strong>. In diesem Fall ist der vom Compiler generierte Kopierkonstruktor den Argumenttyp auch **const**.
 
-Wenn der Argumenttyp für den Kopierkonstruktor nicht ist **const**, Initialisierung durch Kopieren einer **const** Objekt wird ein Fehler generiert. Das Gegenteil trifft nicht: Wenn das Argument ist **const**, können Sie ein Objekt, das nicht kopieren initialisieren **const**.
+Wenn der Argumenttyp für den Kopierkonstruktor nicht ist **const**, Initialisierung durch Kopieren einer **const** Objekt wird ein Fehler generiert. Das Gegenteil trifft nicht zu: Wenn das Argument ist **const**, können Sie ein Objekt, das nicht kopieren initialisieren **const**.
 
 Vom Compiler generierte Zuweisungsoperatoren folgen demselben Muster in Bezug auf **const.** Sie akzeptieren ein einzelnes Argument vom Typ <em>Klassennamen</em> <strong>&</strong> es sei denn, die Zuweisungsoperatoren in allen Basis- und Memberklassen Argumente vom Typ akzeptieren **const** <em>Klassennamen</em><strong>&</strong>. In diesem Fall die Klasse des akzeptiert generierte Zuweisungsoperator eine **const** Argument.
 
 > [!NOTE]
 > Wenn virtuelle Basisklassen von Kopierkonstruktoren – vom Compiler generiert oder benutzerdefiniert – initialisiert werden, werden sie nur einmal initialisiert: bei der Erstellung.
 
-Die Auswirkungen ähneln denen beim Kopierkonstruktor. Wenn der Argumenttyp ist nicht **const**, Zuweisung von einem **const** Objekt wird ein Fehler generiert. Das Gegenteil trifft nicht: Wenn ein **const** Wert wird zugewiesen, auf einen Wert, der nicht **const**, die Zuordnung erfolgreich ist.
+Die Auswirkungen ähneln denen beim Kopierkonstruktor. Wenn der Argumenttyp ist nicht **const**, Zuweisung von einem **const** Objekt wird ein Fehler generiert. Das Gegenteil trifft nicht zu: Wenn eine **const** Wert wird zugewiesen, auf einen Wert, der nicht **const**, die Zuordnung erfolgreich ist.
 
 Weitere Informationen zu überladenen Zuweisungsoperatoren finden Sie unter [Zuweisung](../cpp/assignment.md).

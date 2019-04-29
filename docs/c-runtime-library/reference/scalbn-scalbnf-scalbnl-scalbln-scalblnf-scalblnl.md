@@ -37,11 +37,11 @@ helpviewer_keywords:
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
 ms.openlocfilehash: 7109340afaa634fc21177380d015c9eace506081
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357160"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -116,7 +116,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Scalbn*
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
-|**Scalbn**, **Scalbnf**, **Scalbnl**, **Scalbln**, **Scalblnf**, **Scalblnl**|\<math.h>|\<cmath>|
+|**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

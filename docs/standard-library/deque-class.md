@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: 8a50d04751ac5b4abaf94d0d9fd16f57c6200f66
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394012"
 ---
 # <a name="deque-class"></a>deque-Klasse
 
@@ -111,7 +111,7 @@ class deque
 *Type*<br/>
 Der in der Doppelschlange zu speichernde Elementdatentyp.
 
-*Zuweisung*<br/>
+*Allocator*<br/>
 Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Doppelschlange kapselt. Dieses Argument ist optional, und der Standardwert ist **Allocator\<Typ >**.
 
 ## <a name="remarks"></a>Hinweise
@@ -321,7 +321,7 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Der Feldindex (oder die Positionsnummer) des Elements, das auf die Doppelschlange verweisen soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -777,7 +777,7 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 |*Rechts*|Die Doppelschlange, deren Kopie die erstellte Doppelschlange ist.|
 |*Erste*|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|
 |*letzte*|Die Position des ersten Elements nach dem zu kopierenden Elementbereich.|
-|* IList'|Das zu kopierende initializer_list-Element.|
+|* IList'| Das initializer_list-Element kopiert werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1337,7 +1337,7 @@ iterator erase(iterator first, iterator last);
 *_Where*<br/>
 Die Position des Elements, das in der Doppelschlange entfernt werden soll.
 
-*Erste*<br/>
+*first*<br/>
 Die Position des ersten Elements, das in der Doppelschlange entfernt werden soll.
 
 *last*<br/>
@@ -1591,7 +1591,7 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Parameter
 
-*POS*<br/>
+*pos*<br/>
 Die Position des deque-Elements, auf das verwiesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert

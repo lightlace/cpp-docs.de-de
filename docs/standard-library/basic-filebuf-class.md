@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377149"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf-Klasse
 
@@ -405,7 +405,7 @@ basic_filebuf<Elem, Tr> *open(
 *_Filename*<br/>
 Der Name der zu öffnenden Datei.
 
-*_Modus*<br/>
+*_Mode*<br/>
 Eine der Enumerationen in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -433,7 +433,7 @@ Die Memberfunktion öffnet die Datei mit dem Dateinamen *Dateiname*, indem sie [
 
 Wenn **Mode & ios_base:: Binary** ist ungleich NULL ist, fügt die Funktion an `b` zu `strmode` zu einen binären Stream anstelle eines Textstreams zu öffnen. Es speichert dann den Rückgabewert von `fopen` im Dateizeiger `fp`. Wenn **mode & ios_base::ate** ungleich null ist, und der Dateizeiger kein NULL-Zeiger ist, ruft die Funktion `fseek`( **fp**, 0, `SEEK_END`) auf, um den Stream am Ende der Datei zu positionieren. Wenn es sich bei dieser Positionierung ein Fehler auftritt, ruft die Funktion [schließen](#close)( `fp`) und einen null-Zeiger im Dateizeiger gespeichert.
 
-Wenn der Dateizeiger kein NULL-Zeiger ist, bestimmt die Funktion das Dateikonvertierungs-Facet: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)) für die Verwendung durch [underflow](#underflow) und [overflow](#overflow).
+Wenn der Dateizeiger kein null-Zeiger ist, bestimmt die Funktion das dateikonvertierungs-Facets: `use_facet`< `codecvt`< **Elem**, `char`, **Traits_type::**[State_type](../standard-library/char-traits-struct.md#state_type)>> ( [Getloc](../standard-library/basic-streambuf-class.md#getloc)), für die Verwendung durch [Unterlauf](#underflow) und [Überlauf](#overflow).
 
 Wenn der Dateizeiger ein NULL-Zeiger ist, gibt die Funktion einen NULL-Zeiger zurück. Andernfalls wird **this** zurückgegeben.
 

@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379440"
 ---
 # <a name="chartraits-struct"></a>char_traits-Struktur
 
@@ -255,10 +255,10 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Parameter
 
-*_Bin*<br/>
+*_To*<br/>
 Das Element am Anfang des Zeichenfolgen- oder Zeichenarrays, das die kopierte Zeichenfolgensequenz empfangen soll.
 
-*_Aus*<br/>
+*_From*<br/>
 Das Element am Anfang des Quellzeichenfolgen- oder -zeichenarrays, das kopiert werden soll.
 
 *_Num*<br/>
@@ -323,7 +323,7 @@ Das Zeichenfolgen- oder Zeichenarray, das die kopierte Zeichenfolgensequenz empf
 *dest_size*<br/>
 Die Größe des *Dest*. Wenn `char_type` ist **Char**, und klicken Sie dann diese Größe in Byte ist. Wenn `char_type` ist **"wchar_t"**, sich diese Größe in Wörtern.
 
-*_Aus*<br/>
+*_From*<br/>
 Das zu kopierende Quellzeichenfolgen- oder -zeichenarray.
 
 *count*<br/>
@@ -384,7 +384,7 @@ Das EOF-Zeichen.
 
 Ein Wert, der Ende der Datei (z. B. EOF oder WEOF) darstellt.
 
-Gemäß C++-Standard darf dieser Wert keinem gültigen `char_type`-Wert entsprechen. Visual C++-Compiler erzwingt diese Einschränkung für Typ **Char**, jedoch nicht für Typ **"wchar_t"**. Das unten gezeigte Beispiel veranschaulicht dies.
+Gemäß C++-Standard darf dieser Wert keinem gültigen `char_type`-Wert entsprechen. Das visuelle Element C++ Compiler erzwingt diese Einschränkung für Typ **Char**, jedoch nicht für Typ **"wchar_t"**. Das unten gezeigte Beispiel veranschaulicht dies.
 
 ### <a name="example"></a>Beispiel
 
@@ -763,10 +763,10 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Parameter
 
-*_Bin*<br/>
+*_To*<br/>
 Das Element am Anfang des Zeichenfolgen- oder Zeichenarrays, das die kopierte Zeichenfolgensequenz empfangen soll.
 
-*_Aus*<br/>
+*_From*<br/>
 Das Element am Anfang des Quellzeichenfolgen- oder -zeichenarrays, das kopiert werden soll.
 
 *_Num*<br/>
@@ -846,7 +846,7 @@ Das Element am Anfang des Zeichenfolgen- oder Zeichenarrays, das die kopierte Ze
 *dest_size*<br/>
 Die Größe des *Dest*. Wenn `char_type` ist **Char**, ist dies in Byte. Wenn `char_type` ist **"wchar_t"**, ist dies in Wörtern.
 
-*_Aus*<br/>
+*_From*<br/>
 Das Element am Anfang des Quellzeichenfolgen- oder -zeichenarrays, das kopiert werden soll.
 
 *count*<br/>

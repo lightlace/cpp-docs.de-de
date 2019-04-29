@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
 ms.openlocfilehash: f12dafc62e302d90e5cffa04ee93e662b78295be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339480"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -77,7 +77,7 @@ Zeiger auf den Namen des Moduls (.exe oder .dll), in dem die Assertion oder der 
 *format*<br/>
 Zeiger auf die Formatsteuerelementzeichenfolge, mit der die Benutzermeldung erstellt wird.
 
-*Argument*<br/>
+*argument*<br/>
 Von verwendete optionale ersatzargumente *Format*.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -96,7 +96,7 @@ Die [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) Debuggen-Makros rufen **_CrtDbg
 
 Die folgende Tabelle listet die verfügbaren Optionen für den Berichtsmodus oder Modi und die Datei- und das resultierende Verhalten von **_CrtDbgReport** und **_CrtDbgReportW**. Diese Optionen werden als Bitflags in \<crtdbg.h>. definiert.
 
-|Berichtsmodus|Berichtsdatei|**_CrtDbgReport**, **_CrtDbgReportW** Verhalten|
+|Berichtsmodus|Berichtsdatei|**_CrtDbgReport**, **_CrtDbgReportW** behavior|
 |-----------------|-----------------|------------------------------------------------|
 |**_CRTDBG_MODE_DEBUG**|Nicht zutreffend|Schreibt die Meldung in die Windows-API[OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx)|
 |**_CRTDBG_MODE_WNDW**|Nicht zutreffend|Ruft die Windows-API [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) zum Erstellen eines Meldungsfelds auf, um die Meldung zusammen mit den Schaltflächen **Abbrechen**, **Wiederholen** und **Ignorieren** anzuzeigen Wenn ein Benutzer klickt **Abbrechen**, **_CrtDbgReport** oder **_CrtDbgReport** sofort abgebrochen. Wenn ein Benutzer auf **Wiederholen** klickt, wird 1 zurückgegeben. Wenn ein Benutzer klickt **ignorieren**, die Ausführung wird fortgeführt und **_CrtDbgReport** und **_CrtDbgReportW** gibt 0 zurück. Wenn ein Fehlerzustand vorliegt, führt das Klicken auf **Ignorieren** häufig zu einem „undefinierten Verhalten“.|

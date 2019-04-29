@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
 ms.openlocfilehash: 414fc542aa3f84f985e326960d8cf73b67fd1580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389306"
 ---
 # <a name="dataseg"></a>data_seg
 
@@ -41,7 +41,7 @@ Gibt das Datensegment an, in dem initialisierte Variablen in der OBJ-Datei gespe
 *"Segment-Name"*<br/>
 (Optional) Der Name eines Segments. Bei Verwendung mit **pop**, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.
 
-*"Segment-Class"*<br/>
+*"segment-class"*<br/>
 (Optional) Für die Kompatibilität mit C++ vor Version 2.0 enthalten. Wird ignoriert.
 
 ## <a name="remarks"></a>Hinweise

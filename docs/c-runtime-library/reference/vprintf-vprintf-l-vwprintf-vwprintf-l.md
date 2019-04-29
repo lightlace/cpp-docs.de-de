@@ -35,11 +35,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 44549505-00a0-4fa7-9a85-f2e666f55a38
 ms.openlocfilehash: 18684484db33faffc581f30e39ef42e5356b71ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364674"
 ---
 # <a name="vprintf-vprintfl-vwprintf-vwprintfl"></a>vprintf, _vprintf_l, vwprintf, _vwprintf_l
 
@@ -109,8 +109,8 @@ Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, a
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|
 |-------------|---------------------|----------------------|
-|**Vprintf**, **_vprintf_l**|\<stdio.h> und \<stdarg.h>|\<varargs.h>*|
-|**Vwprintf**, **_vwprintf_l**|\<stdio.h> oder \<wchar.h> und \<stdarg.h>|\<varargs.h>*|
+|**vprintf**, **_vprintf_l**|\<stdio.h> und \<stdarg.h>|\<varargs.h>*|
+|**vwprintf**, **_vwprintf_l**|\<stdio.h> oder \<wchar.h> und \<stdarg.h>|\<varargs.h>*|
 
 \* Benötigt für die Kompatibilität mit UNIX V.
 

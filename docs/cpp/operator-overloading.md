@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 ms.openlocfilehash: d6a294af3ea7ef6085eae0f7069ea2d1fdbb30e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377360"
 ---
 # <a name="operator-overloading"></a>Überladen von Operatoren
 
@@ -24,7 +24,7 @@ Die **Operator** -Schlüsselwort deklariert eine Funktion, die angibt, welche *-
 
 ## <a name="syntax"></a>Syntax
 
-> *Typ* **Operator** *-Operatorsymbol* **(** *Parameterliste* **)**
+> *type* **operator** *operator-symbol* **(** *parameter-list* **)**
 
 ## <a name="remarks"></a>Hinweise
 
@@ -107,7 +107,7 @@ Die Operatoren, die in der folgenden Tabelle aufgeführt sind, können nicht üb
 
 ### <a name="nonredefinable-operators"></a>Nicht neu definierbare Operatoren
 
-|Operator|name|
+|Operator|Name|
 |-|-|
 |**.**|Memberauswahl|
 |**.&#42;**|Pointer-to-member-Auswahl|

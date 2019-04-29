@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::tr2::sys::recursive_directory_iterator
 ms.assetid: 79a061bd-5b64-404c-97e8-749c888c2ced
 ms.openlocfilehash: 52e6f738aa226dba26bae0cf6e97cd18d107d677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370129"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator-Klasse
 
@@ -58,9 +58,9 @@ wird mit den Argumenten Aufruf besuchen `path("abc/def/ghi")` und `path("abc/jkl
 
 |Member-Funktion|Beschreibung|
 |-|-|
-|[Tiefe](#depth)|Gibt `mystack.size() - 1`, sodass `pval` auf Ebene 0 (null) ist.|
+|[depth](#depth)|Gibt `mystack.size() - 1`, sodass `pval` auf Ebene 0 (null) ist.|
 |[disable_recursion_pending](#disable_recursion_pending)|Speichert **"true"** in `no_push`.|
-|[Inkrement](#increment)|Wechselt zum nächsten Dateinamen in der Sequenz.|
+|[increment](#increment)|Wechselt zum nächsten Dateinamen in der Sequenz.|
 |[options](#options)|Gibt `myoptions`zurück.|
 |[pop](#pop)|Gibt das nächste Objekt zurück.|
 |[recursion_pending](#recursion_pending)|Gibt `!no_push`zurück.|
@@ -78,7 +78,7 @@ wird mit den Argumenten Aufruf besuchen `path("abc/def/ghi")` und `path("abc/jkl
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Filesystem >
+**Header:** \<filesystem>
 
 **Namespace:** std::tr2::sys
 
@@ -108,7 +108,7 @@ recursive_directory_iterator& increment(error_code& ec) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*EC*<br/>
+*ec*<br/>
 Angegebene Fehlercode.
 
 ### <a name="remarks"></a>Hinweise
@@ -128,7 +128,7 @@ bool operator!=(const recursive_directory_iterator& right) const;
 *right*<br/>
 Die [Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) für den Vergleich.
 
-## <a name="op_as"></a> recursive_directory_iterator:: =
+## <a name="op_as"></a> recursive_directory_iterator::operator=
 
 Die als Standard festgelegten Memberzuweisungsoperatoren verhalten sich wie erwartet.
 
@@ -142,7 +142,7 @@ recursive_directory_iterator& operator=(recursive_directory_iterator&&) noexcept
 *recursive_directory_iterator*<br/>
 Die [Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) kopiert wird, in der `recursive_directory_iterator`.
 
-## <a name="op_eq"></a> recursive_directory_iterator:: ==
+## <a name="op_eq"></a> recursive_directory_iterator::operator==
 
 Gibt **"true"** nur dann, wenn beide `*this` und *rechten* Sequenzende Iteratoren oder beide sind nicht Ende-des-Sequenzende-Iteratoren.
 
@@ -155,7 +155,7 @@ bool operator==(const recursive_directory_iterator& right) const;
 *right*<br/>
 Die [Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) für den Vergleich.
 
-## <a name="op_multiply"></a> recursive_directory_iterator:: *
+## <a name="op_multiply"></a> recursive_directory_iterator::operator*
 
 Gibt `myentry`zurück.
 
@@ -163,7 +163,7 @@ Gibt `myentry`zurück.
 const directory_entry& operator*() const;
 ```
 
-## <a name="op_cast"></a> recursive_directory_iterator:: ->
+## <a name="op_cast"></a> recursive_directory_iterator::operator->
 
 Gibt `&**this`zurück.
 
@@ -171,7 +171,7 @@ Gibt `&**this`zurück.
 const directory_entry * operator->() const;
 ```
 
-## <a name="op_increment"></a> recursive_directory_iterator:: Operator++-
+## <a name="op_increment"></a> recursive_directory_iterator::operator++
 
 Erhöht die `recursive_directory_iterator`.
 
@@ -198,7 +198,7 @@ Gibt `myoptions`zurück.
 directory_options options() const;
 ```
 
-## <a name="pop"></a> recursive_directory_iterator:: POP
+## <a name="pop"></a> recursive_directory_iterator::pop
 
 Gibt das nächste Objekt zurück.
 
@@ -210,7 +210,7 @@ void pop();
 
 Wenn `depth() == 0` das Objekt nicht mehr einen Sequenzende Iterator. Andernfalls beendet die Memberfunktion das Durchsuchen des aktuellen (tiefsten) Verzeichnisses und setzt das Durchsuchen auf der nächstniedrigeren Tiefe fort.
 
-## <a name="recursion_pending"></a> recursive_directory_iterator:: recursion_pending
+## <a name="recursion_pending"></a> recursive_directory_iterator::recursion_pending
 
 Gibt `!no_push`zurück.
 
@@ -218,7 +218,7 @@ Gibt `!no_push`zurück.
 bool recursion_pending() const;
 ```
 
-## <a name="recursive_directory_iterator"></a> recursive_directory_iterator:: recursive_directory_iterator
+## <a name="recursive_directory_iterator"></a> recursive_directory_iterator::recursive_directory_iterator
 
 Erstellt ein Objekt vom Typ `recursive_directory_iterator`.
 
@@ -240,13 +240,13 @@ recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;
 
 ### <a name="parameters"></a>Parameter
 
-*"pval"*<br/>
+*pval*<br/>
 Der angegebene Pfad.
 
 *error_code*<br/>
 Der angegebene Fehlercode.
 
-*"OPTS"*<br/>
+*opts*<br/>
 Die Optionen für die angegebene Verzeichnis.
 
 *recursive_directory_iterator*<br/>

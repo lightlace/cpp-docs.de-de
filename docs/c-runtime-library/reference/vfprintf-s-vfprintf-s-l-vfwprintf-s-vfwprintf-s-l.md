@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _vftprintf_s function
 ms.assetid: eab6f563-46e2-4806-963f-2b23f339ecdc
 ms.openlocfilehash: fc04dbc9c23e86694686953bf3184e370714841c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364830"
 ---
 # <a name="vfprintfs-vfprintfsl-vfwprintfs-vfwprintfsl"></a>vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l
 
@@ -74,7 +74,7 @@ int _vfwprintf_s_l(
 
 ### <a name="parameters"></a>Parameter
 
-*Stream*<br/>
+*stream*<br/>
 Zeiger auf die **FILE**-Struktur.
 
 *format*<br/>
@@ -118,8 +118,8 @@ Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, a
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|
 |-------------|---------------------|----------------------|
-|**Vfprintf_s**, **_vfprintf_s_l**|\<stdio.h> und \<stdarg.h>|\<varargs.h>*|
-|**Vfwprintf_s**, **_vfwprintf_s_l**|\<stdio.h> oder \<wchar.h> und \<stdarg.h>|\<varargs.h>*|
+|**vfprintf_s**, **_vfprintf_s_l**|\<stdio.h> und \<stdarg.h>|\<varargs.h>*|
+|**vfwprintf_s**, **_vfwprintf_s_l**|\<stdio.h> oder \<wchar.h> und \<stdarg.h>|\<varargs.h>*|
 
 \* Benötigt für die Kompatibilität mit UNIX V.
 

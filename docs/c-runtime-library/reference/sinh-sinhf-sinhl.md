@@ -1,5 +1,5 @@
 ---
-title: Sinh, Sinhf, sinhl
+title: sinh, sinhf, sinhl
 ms.date: 04/10/2018
 apiname:
 - sinhl
@@ -32,13 +32,13 @@ helpviewer_keywords:
 - sinhl function
 - hyperbolic functions
 ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356276"
 ---
-# <a name="sinh-sinhf-sinhl"></a>Sinh, Sinhf, sinhl
+# <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
 Berechnet den hyperbolischen Sinus.
 
@@ -67,7 +67,7 @@ Die **Sinh** Funktionen geben den hyperbolischen Sinus *x*. Standardmäßig, wen
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|Keiner|_DOMAIN|
-|&#124;X&#124; ≥ 7, 104760e + 002|OVERFLOW+INEXACT|OVERFLOW|
+|&#124;x&#124; ≥ 7.104760e+002|OVERFLOW+INEXACT|OVERFLOW|
 
 Weitere Informationen zu Rückgabecodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -79,7 +79,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Sinh** 
 
 |-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|
 |-|-|-|
-|**Sinh**, **Sinhf**, **Sinhl**|\<math.h>|\<cmath> oder \<math.h>|
+|**sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath> oder \<math.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

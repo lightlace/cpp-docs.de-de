@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
 ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370011"
 ---
 # <a name="priorityqueue-class"></a>priority_queue-Klasse
 
@@ -251,7 +251,7 @@ Der Basiscontainer, dessen Kopie die Warteschlange mit hoher Priorität sein sol
 *right*<br/>
 Die Warteschlange mit hoher Priorität, deren Kopie der erstellte Satz sein soll.
 
-*Erste*<br/>
+*first*<br/>
 Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
 *last*<br/>
