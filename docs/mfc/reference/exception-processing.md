@@ -14,11 +14,11 @@ helpviewer_keywords:
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 ms.openlocfilehash: 3db919f40caf4e5dbf42b4e10c549b165c0a9fe4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322214"
 ---
 # <a name="exception-processing"></a>Ausnahmeverarbeitung
 
@@ -161,7 +161,7 @@ Gibt einen Namen für ein Ausnahmeobjekt Zeiger, der durch das Makro erstellt we
 Der ausnahmeverarbeitung Code können Sie das Ausnahmeobjekt, bei Bedarf, um weitere Informationen über die genaue Ursache der Ausnahme erhalten Abfragen. Rufen Sie die `THROW_LAST` Makro, um die Verarbeitung der nächste äußere Ausnahme Frame zu verschieben. Bei Verwendung von **CATCH_ALL**, Ende der **versuchen** Block mit einer END_CATCH_ALL-Makro.
 
 > [!NOTE]
->  Die **CATCH_ALL** Block wird definiert, wie eine C++-Bereich, der durch Klammern getrennt wird. Wenn Sie die Variablen in diesem Bereich deklarieren, sind sie nur innerhalb des Bereichs zugegriffen werden kann.
+>  Die **CATCH_ALL** Block ist definiert als eine C++ Bereich durch Klammern getrennt wird. Wenn Sie die Variablen in diesem Bereich deklarieren, sind sie nur innerhalb des Bereichs zugegriffen werden kann.
 
 Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).
 
@@ -196,7 +196,7 @@ Verwenden Sie die CATCH-Makro, einem Ausnahmetyp abzufangen, und klicken Sie dan
 Der ausnahmeverarbeitung Code können Sie das Ausnahmeobjekt, bei Bedarf, um weitere Informationen über die genaue Ursache der Ausnahme erhalten Abfragen. Rufen Sie die THROW_LAST-Makro in der **AND_CATCH** Verarbeitung an den nächsten äußeren Ausnahme Frame zu blockieren. **AND_CATCH** markiert das Ende der vorangehenden **CATCH** oder **AND_CATCH** Block.
 
 > [!NOTE]
->  Die **AND_CATCH** Block wird definiert, wie eine C++-Bereich (getrennt durch geschweifte Klammern). Wenn Sie die Variablen in diesem Bereich deklarieren, denken Sie daran, dass sie nur innerhalb des Bereichs zugegriffen werden kann. Dies gilt auch für die *Exception_object_pointer_name* Variable.
+>  Die **AND_CATCH** Block ist definiert als eine C++ Bereich (getrennt durch geschweifte Klammern). Wenn Sie die Variablen in diesem Bereich deklarieren, denken Sie daran, dass sie nur innerhalb des Bereichs zugegriffen werden kann. Dies gilt auch für die *Exception_object_pointer_name* Variable.
 
 ### <a name="example"></a>Beispiel
 
@@ -225,7 +225,7 @@ Verwenden der **CATCH** -Makro, um einen Ausnahmetyp abzufangen, und klicken Sie
 Der ausnahmeverarbeitung Code können Sie das Ausnahmeobjekt, bei Bedarf, um weitere Informationen über die genaue Ursache der Ausnahme erhalten Abfragen. Rufen Sie die THROW_LAST-Makro in der **AND_CATCH_ALL** Verarbeitung an den nächsten äußeren Ausnahme Frame zu blockieren. **AND_CATCH_ALL** markiert das Ende der vorangehenden **CATCH** oder **AND_CATCH_ALL** Block.
 
 > [!NOTE]
->  Die **AND_CATCH_ALL** Block wird definiert, wie eine C++-Bereich (der durch Klammern getrennt wird). Wenn Sie die Variablen in diesem Bereich deklarieren, denken Sie daran, dass sie nur innerhalb des Bereichs zugegriffen werden kann.
+>  Die **AND_CATCH_ALL** Block ist definiert als eine C++ Bereich (der durch Klammern getrennt wird). Wenn Sie die Variablen in diesem Bereich deklarieren, denken Sie daran, dass sie nur innerhalb des Bereichs zugegriffen werden kann.
 
 ### <a name="requirements"></a>Anforderungen
 

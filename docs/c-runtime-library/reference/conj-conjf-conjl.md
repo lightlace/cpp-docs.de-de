@@ -31,11 +31,11 @@ helpviewer_keywords:
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
 ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335394"
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 
@@ -78,7 +78,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Conj** 
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**Conj**, **Conjf**, **Conjl**|\<complex.h>|\<ccomplex>|
+|**conj**,               **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

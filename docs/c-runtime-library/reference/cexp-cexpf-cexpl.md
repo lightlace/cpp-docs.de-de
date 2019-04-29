@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
 ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335461"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 
@@ -71,7 +71,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cexp** 
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**Cexp**, **Cexpf**, **Cexpl**|\<complex.h>|\<complex.h>|
+|**cexp**, **cexpf**, **cexpl**|\<complex.h>|\<complex.h>|
 
 Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

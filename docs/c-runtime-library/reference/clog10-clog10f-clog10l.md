@@ -31,11 +31,11 @@ helpviewer_keywords:
 - clog10l function
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
 ms.openlocfilehash: 195f4be80f0320e83cc9455a598185ce281bbf59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335451"
 ---
 # <a name="clog10-clog10f-clog10l"></a>clog10, clog10f, clog10l
 
@@ -79,7 +79,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **clog10*
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**clog10**, **clog10f**, **Clogl**|\<complex.h>|\<ccomplex>|
+|**clog10**,               **clog10f**, **clogl**|\<complex.h>|\<ccomplex>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

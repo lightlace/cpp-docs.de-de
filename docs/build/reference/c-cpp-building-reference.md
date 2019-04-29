@@ -9,11 +9,11 @@ helpviewer_keywords:
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
 ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294758"
 ---
 # <a name="cc-building-reference"></a>Referenz zur C/C++-Erstellung
 
@@ -21,12 +21,12 @@ Visual C++ bietet zwei Möglichkeiten zum Erstellen eines C/C++-Programms. Die e
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Referenz zu MSBuild für C++-Projekte](msbuild-visual-cpp-overview.md)
+[MSBuild-Referenz für C++-Projekte](msbuild-visual-cpp-overview.md)
 
-[MSVC-Compiler-Verweis](compiling-a-c-cpp-program.md)<br/>
+[MSVC-Compilerreferenz](compiling-a-c-cpp-program.md)<br/>
 Beschreibt die MSVC-Compiler, der eine Objektdatei mit Computercode, Linkerdirektiven, Abschnitte, externe Verweise und Namen von Funktionen/Daten erstellt.
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 Beschreibt den Linker an, der Code aus der Objektdateien, die vom Compiler erstellt wird und statisch verknüpfte Bibliotheken kombiniert wird, löst die Namensverweise, und erstellt eine ausführbare Datei.
 
 [Unicode-Unterstützung im Compiler und Linker](unicode-support-in-the-compiler-and-linker.md)
@@ -48,13 +48,13 @@ Beschreibt das Anpassen des Buildprozesses.
 [Erstellen eines C/C++-Programms](../projects-and-build-systems-cpp.md)<br/>
 Bietet Links zu Themen, in denen das Erstellen von Programmen über die Befehlszeile oder die integrierte Entwicklungsumgebung von Visual Studio beschrieben sind.
 
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)<br/>
 Beschreibt, Festlegen von Compileroptionen in der Entwicklungsumgebung oder in der Befehlszeile.
 
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
+[MSVC-Compileroptionen](compiler-options.md)<br/>
 Enthält Links zu Themen über die Verwendung von Compileroptionen.
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 Beschreibt, Festlegen von Linkeroptionen innerhalb oder außerhalb der integrierten Entwicklungsumgebung.
 
 [MSVC-Linkeroptionen](linker-options.md)<br/>

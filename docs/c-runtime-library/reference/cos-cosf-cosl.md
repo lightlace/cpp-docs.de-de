@@ -1,5 +1,5 @@
 ---
-title: COs, Cosf, cosl
+title: cos, cosf, cosl
 ms.date: 04/05/2018
 apiname:
 - cos
@@ -32,13 +32,13 @@ helpviewer_keywords:
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
 ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335359"
 ---
-# <a name="cos-cosf-cosl"></a>COs, Cosf, cosl
+# <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
 Berechnet den Kosinus.
 
@@ -66,7 +66,7 @@ Der Kosinus von *x*. Wenn *x* ist größer als oder gleich 263 oder kleiner als 
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± QNAN, SUCHEN|Keine|**_DOMAIN**|
+|± QNAN, IND|none|**_DOMAIN**|
 |± INF|**UNGÜLTIG**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Hinweise
@@ -77,7 +77,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **cos** v
 
 |-Routine zurückgegebener Wert|Erforderlicher C-Header|Erforderlicher C++-Header|
 |-------------|---------------------|-|
-|**COs**, **Cosh**, **Cosf**|\<math.h>|\<cmath> oder \<math.h>|
+|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> oder \<math.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
