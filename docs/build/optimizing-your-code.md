@@ -1,6 +1,6 @@
 ---
 title: Codeoptimierung
-ms.date: 12/10/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - performance, optimizing code
 - optimization
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: ae60070959c683a6365992e7b6cc510fd4111b36
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 430ac9ef1b2946e511d04f7ce18bb0f20d727d75
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826183"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341112"
 ---
 # <a name="optimizing-your-code"></a>Optimieren des Codes
 
@@ -23,13 +23,13 @@ Durch Optimieren der eine ausführbare Datei, können Sie ein Gleichgewicht zwis
 
 In den folgenden Themen werden einige der Optimierungen in der C/C++-Sprache beschrieben.
 
-[Pragmas und Schlüsselwörter für die Optimierung](optimization-pragmas-and-keywords.md)<br/>
+[Optimierung mit Pragmas und Schlüsselwörter](optimization-pragmas-and-keywords.md) \
 Eine Liste der Schlüsselwörter und Pragmas, dass Sie in Ihrem Code verwenden können, um die Leistung zu verbessern.
 
-[Compileroptionen nach Kategorien sortiert](reference/compiler-options-listed-by-category.md)<br/>
+[Compileroptionen nach Kategorien sortiert](reference/compiler-options-listed-by-category.md) \
 Eine Liste der **/o** Compileroptionen, die speziell Ausführung Geschwindigkeit oder Code Größe beeinflussen.
 
-[Rvalue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+[Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
 Rvalue-Verweise unterstützen die Implementierung der *move-Semantik*. Wenn die Verschiebung, die Semantik verwendet wird, um Vorlagenbibliotheken, die Leistung von Anwendungen zu implementieren, verwenden diese Vorlagen, erheblich verbessern kann.
 
 ### <a name="the-optimize-pragma"></a>Das optimierungspragma
@@ -52,10 +52,10 @@ Paradoxerweise kann ein Programm für Geschwindigkeit optimieren Code langsamer 
 
 Die folgenden Themen werden bewährte Programmierverfahren erläutert.
 
-[Tipps zum Verbessern von zeitkritischem Code](tips-for-improving-time-critical-code.md)<br/>
+[Tipps zum Verbessern von zeitkritischem Code](tips-for-improving-time-critical-code.md) \
 Bessere Codierung Techniken kann eine bessere Leistung erzielt werden. In diesem Thema schlägt vor, Programmiertechniken, mit denen Sie sicherstellen, dass die zeitkritischen Teile Ihres Codes eine zufriedenstellende Leistung erbringen können.
 
-[Empfohlene Vorgehensweisen für die Optimierung](optimization-best-practices.md)<br/>
+[Bewährte Vorgehensweisen für die Optimierung](optimization-best-practices.md) \
 Enthält allgemeine Richtlinien zur optimalen Anwendungsleistung zu optimieren.
 
 ## <a name="debugging-optimized-code"></a>Debuggen von optimiertem code
@@ -86,20 +86,19 @@ In den folgenden Themen bieten Informationen zum Erstellen, laden und Ausführen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Pragmas und Schlüsselwörter für die Optimierung](optimization-pragmas-and-keywords.md)<br/>
-[Erhöhen des Compilerdurchsatzes](improving-compiler-throughput.md)<br/>
-[Warum Gleitkommazahlen an Genauigkeit verlieren können](why-floating-point-numbers-may-lose-precision.md)<br/>
-[IEEE-Gleitkommadarstellung](ieee-floating-point-representation.md)<br/>
-[Tipps zum Verbessern von zeitkritischem Code](tips-for-improving-time-critical-code.md)<br/>
-[Bei Verwendung eines Funktionsnamens ohne „()“ wird kein Code generiert](using-function-name-without-parens-produces-no-code.md)<br/>
-[Empfohlene Vorgehensweisen für die Optimierung](optimization-best-practices.md)<br/>
-[Profilgesteuerte Optimierungen](profile-guided-optimizations.md)<br/>
-[Umgebungsvariablen für profilgesteuerte Optimierungen](environment-variables-for-profile-guided-optimizations.md)<br/>
-[PgoAutoSweep](pgoautosweep.md)<br/>
-[pgomgr](pgomgr.md)<br/>
-[pgosweep](pgosweep.md)<br/>
-[Vorgehensweise: Zusammenführen mehrerer PGO-Profile in einem einzigen Profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
-[Visual Studio 2013: Add-In für die profilgesteuerte Optimierung (PGO) im Leistungs- und Diagnosehub](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)<br/>
+[Optimierung mit Pragmas und Schlüsselwörter](optimization-pragmas-and-keywords.md) \
+[Erhöhen des Compilerdurchsatzes](improving-compiler-throughput.md) \
+[Warum Gleitkommazahlen an Genauigkeit verlieren können](why-floating-point-numbers-may-lose-precision.md) \
+[IEEE-Gleitkommadarstellung](ieee-floating-point-representation.md) \
+[Tipps zum Verbessern von zeitkritischem Code](tips-for-improving-time-critical-code.md) \
+[Verwendung eines Funktionsnamens ohne () wird kein Code generiert.](using-function-name-without-parens-produces-no-code.md) \
+[Bewährte Vorgehensweisen für die Optimierung](optimization-best-practices.md) \
+[Profilgesteuerte Optimierungen](profile-guided-optimizations.md) \
+[Umgebungsvariablen für Profilgesteuerte Optimierungen](environment-variables-for-profile-guided-optimizations.md) \
+[PgoAutoSweep](pgoautosweep.md) \
+[pgomgr](pgomgr.md) \
+[pgosweep](pgosweep.md) \
+[Vorgehensweise: Zusammenführen mehrerer PGO-Profile in einem einzigen Profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>Siehe auch
 

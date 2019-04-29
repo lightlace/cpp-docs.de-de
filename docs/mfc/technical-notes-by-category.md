@@ -5,11 +5,11 @@ f1_keywords:
 - vc.tables.mfc.technotes
 ms.assetid: b9f1c953-233d-4d64-9e8e-ca69b79460b8
 ms.openlocfilehash: 7bd6ab2c035fe49a88bd12b62ca26e83e7d9072a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306547"
 ---
 # <a name="technical-notes-by-category"></a>Technische Hinweise – nach Kategorien geordnet
 
@@ -20,7 +20,7 @@ Technische Hinweise sind in folgenden Kategorien unterteilt. Eine numerische Auf
 ||
 |-|
 |[TN001: Fensterklassenregistrierung](../mfc/tn001-window-class-registration.md)|
-|[TN003: Zuordnen von Windows Fensterhandles zu Objekten](../mfc/tn003-mapping-of-windows-handles-to-objects.md)|
+|[TN003: Zuordnen von Fensterhandles zu Objekten](../mfc/tn003-mapping-of-windows-handles-to-objects.md)|
 |[TN017: Zerstören von Fensterobjekten](../mfc/tn017-destroying-window-objects.md)|
 |[TN051: Verwenden von CTL3D jetzt und in der Zukunft](../mfc/tn051-using-ctl3d-now-and-in-the-future.md)|
 
@@ -31,20 +31,20 @@ Technische Hinweise sind in folgenden Kategorien unterteilt. Eine numerische Auf
 |[TN002: Persistentes Objektdatenformat](../mfc/tn002-persistent-object-data-format.md)|
 |[TN006: Meldungszuordnungen](../mfc/tn006-message-maps.md)|
 |[TN016: Verwenden von C++-Mehrfachvererbung mit MFC](../mfc/tn016-using-cpp-multiple-inheritance-with-mfc.md)|
-|[TN021: Befehl und Nachrichtenrouting](../mfc/tn021-command-and-message-routing.md)|
-|[TN022: Standardbefehlen](../mfc/tn022-standard-commands-implementation.md)|
-|[TN025: Dokument, Ansicht und dem Frame-Erstellung](../mfc/tn025-document-view-and-frame-creation.md)|
+|[TN021: Befehls- und Meldungsrouting](../mfc/tn021-command-and-message-routing.md)|
+|[TN022: Implementieren von Standardbefehlen](../mfc/tn022-standard-commands-implementation.md)|
+|[TN025: Dokument-, Ansicht- und Frame-Erstellung](../mfc/tn025-document-view-and-frame-creation.md)|
 |[TN026: DDX- und DDV-Routinen](../mfc/tn026-ddx-and-ddv-routines.md)|
-|[TN029: Splitter-Windows](../mfc/tn029-splitter-windows.md)|
+|[TN029: Splitterfenster](../mfc/tn029-splitter-windows.md)|
 |[TN030: Anpassen des Druckvorgangs und der Druckvorschau](../mfc/tn030-customizing-printing-and-print-preview.md)|
 |[TN031: Steuerleisten](../mfc/tn031-control-bars.md)|
 |[TN032: MFC-Ausnahmemechanismus](../mfc/tn032-mfc-exception-mechanism.md)|
-|[TN037: Multithreaded MFC 2.1 Anwendungen](../mfc/tn037-multithreaded-mfc-2-1-applications.md)|
+|[TN037: MFC 2.1-Multithreadanwendungen](../mfc/tn037-multithreaded-mfc-2-1-applications.md)|
 |[TN044: MFC-Unterstützung für DBCS](../mfc/tn044-mfc-support-for-dbcs.md)|
-|[TN046: Konventionen für Kommentare, die für die MFC-Klassen](../mfc/tn046-commenting-conventions-for-the-mfc-classes.md)|
+|[TN046: Konventionen für Kommentare für die MFC-Klassen](../mfc/tn046-commenting-conventions-for-the-mfc-classes.md)|
 |[TN058: MFC-Modulzustandsimplementierung](../mfc/tn058-mfc-module-state-implementation.md)|
 |[TN059: Verwenden von MFC MBCS/Unicode-Umwandlungsmakros](../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)|
-|[TN066: Allgemeine MFC 3.x auf 4.0 Probleme bei der Portierung](../mfc/tn066-common-mfc-3-x-to-4-0-porting-issues.md)|
+|[TN066: Häufige Probleme bei der Portierung von MFC 3.x nach MFC 4.0](../mfc/tn066-common-mfc-3-x-to-4-0-porting-issues.md)|
 
 ### <a name="mfc-controls"></a>MFC-Steuerelemente
 
@@ -62,19 +62,19 @@ Technische Hinweise sind in folgenden Kategorien unterteilt. Eine numerische Auf
 |[TN042: Empfehlungen für ODBC-Treiberentwickler](../mfc/tn042-odbc-driver-developer-recommendations.md)|
 |[TN043: RFX-Routinen](../mfc/tn043-rfx-routines.md)|
 |[TN045: MFC-und Datenbankunterstützung für Long LONGVARBINARY](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)|
-|[TN047: Abschwächen der Anforderungen für die Transaktion](../mfc/tn047-relaxing-database-transaction-requirements.md)|
-|[TN048: Schreiben von ODBC-Einrichtungs- und Verwaltungsprogrammen für MFC-Datenbankanwendungen](../mfc/tn048-writing-odbc-setup-and-administration-programs.md)|
+|[TN047: Abschwächen der Anforderungen für eine Datenbanktransaktion](../mfc/tn047-relaxing-database-transaction-requirements.md)|
+|[TN048: Schreiben von ODBC-Einrichtungsprogrammen und -Verwaltungsprogrammen für MFC-Datenbankanwendungen](../mfc/tn048-writing-odbc-setup-and-administration-programs.md)|
 |[TN053: Benutzerdefinierte DFX-Routinen für MFC-DAO-Klassen](../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)|
-|[TN054: DAO Aufrufen bei der Verwendung von MFC-DAO-Klassen direkt.](../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)|
-|[TN055: Migrieren von MFC-ODBC-Datenbankklassen-Anwendungen zu MFC DAO-Klassen](../mfc/tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes.md)|
-|[TN068: Ausführen von Transaktionen mit der Microsoft Access 7 ODBC-Treiber](../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)|
+|[TN054: Direktes Aufrufen von DAO bei der Verwendung von MFC-DAO-Klassen](../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)|
+|[TN055: Migrieren von Anwendungen mit MFC-ODBC-Datenbankklassen zu MFC-DAO-Klassen](../mfc/tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes.md)|
+|[TN068: Ausführen von Transaktionen mit dem Microsoft Access 7 ODBC-Treiber](../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)|
 
 ### <a name="mfc-dlls"></a>MFC-DLLs
 
 ||
 |-|
 |[TN011: Verwenden von MFC als Teil einer DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)|
-|[TN033: DLL-Version von MFC](../mfc/tn033-dll-version-of-mfc.md)|
+|[TN033: DLL-Version der MFC](../mfc/tn033-dll-version-of-mfc.md)|
 |[TN056: Installation lokalisierter MFC-Komponenten](../mfc/tn056-installation-of-localized-mfc-components.md)|
 |[TN057: Lokalisierung von MFC-Komponenten](../mfc/tn057-localization-of-mfc-components.md)|
 
@@ -96,10 +96,10 @@ Technische Hinweise sind in folgenden Kategorien unterteilt. Eine numerische Auf
 
 ||
 |-|
-|[TN020: -Benennungs- und Nummerierungskonventionen](../mfc/tn020-id-naming-and-numbering-conventions.md)|
+|[TN020: ID-Benennungs- und Nummerierungskonventionen](../mfc/tn020-id-naming-and-numbering-conventions.md)|
 |[TN023: MFC-Standardressourcen](../mfc/tn023-standard-mfc-resources.md)|
 |[TN024: MFC-definierte Meldungen und Ressourcen](../mfc/tn024-mfc-defined-messages-and-resources.md)|
-|[TN028: Kontextbezogene Hilfe Support](../mfc/tn028-context-sensitive-help-support.md)|
+|[TN028: Bereitstellen kontextbezogener Hilfe](../mfc/tn028-context-sensitive-help-support.md)|
 |[TN035: Verwenden mehrerer Ressourcendateien und Headerdateien mit Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)|
 |[TN036: Verwenden von CFormView mit AppWizard und ClassWizard](../mfc/tn036-using-cformview-with-appwizard-and-classwizard.md)|
 |[TN070: MFC-Fensterklassennamen](../mfc/tn070-mfc-window-class-names.md)|
@@ -108,4 +108,4 @@ Technische Hinweise sind in folgenden Kategorien unterteilt. Eine numerische Auf
 
 ||
 |-|
-|[TN063: Debugging Internet MFC-Erweiterungs-DLLs](../mfc/tn063-debugging-internet-extension-dlls.md)|
+|[TN063: Debuggen von MFC-Interneterweiterungs-DLLs](../mfc/tn063-debugging-internet-extension-dlls.md)|

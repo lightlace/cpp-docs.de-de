@@ -3,11 +3,11 @@ title: Ausnahmen (C++/CX)
 ms.date: 01/18/2018
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
 ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301525"
 ---
 # <a name="exceptions-ccx"></a>Ausnahmen (C++/CX)
 
@@ -15,7 +15,7 @@ Fehlerbehandlung in C++ / CX basiert auf Ausnahmen. Klicken Sie auf der unterste
 
 ## <a name="exceptions"></a>Ausnahmen
 
-In C++-Programm können Sie auslösen und Abfangen einer Ausnahme, die von einem Windows-Runtime-Vorgang ist, wird eine Ausnahme, die von abgeleitet ist `std::exception`, oder einen benutzerdefinierten Typ. Sie müssen eine Windows-Runtime-Ausnahme auslösen, nur, wenn sie die Anwendungsgrenze anwendungsbinärschnittstelle (ABI), z. B. anwendungsbinärschnittstelle, wenn der Code, der die Ausnahme abfängt, die in JavaScript geschrieben ist. Wenn eine nicht - Windows-Runtime C++-Ausnahme die ABI-Grenze erreicht, wird die Ausnahme in übersetzt eine `Platform::FailureException` Ausnahme aus, die ein E_FAIL HRESULT darstellt. Weitere Informationen zur ABI finden Sie unter [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+In C++-Programm können Sie auslösen und Abfangen einer Ausnahme, die von einem Windows-Runtime-Vorgang ist, wird eine Ausnahme, die von abgeleitet ist `std::exception`, oder einen benutzerdefinierten Typ. Sie müssen eine Windows-Runtime-Ausnahme auslösen, nur, wenn sie die Anwendungsgrenze anwendungsbinärschnittstelle (ABI), z. B. anwendungsbinärschnittstelle, wenn der Code, der die Ausnahme abfängt, die in JavaScript geschrieben ist. Wenn eine nicht - Windows-Runtime C++ Ausnahme die ABI-Grenze erreicht, wird die Ausnahme in übersetzt eine `Platform::FailureException` Ausnahme aus, die ein E_FAIL HRESULT darstellt. Weitere Informationen zur ABI finden Sie unter [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Sie können deklarieren, ein [Platform:: Exception](platform-exception-class.md) mithilfe einer von zwei Konstruktoren verwenden, die entweder einen HRESULT-Parameter oder einen HRESULT-Parameter und ein [Platform:: String](platform-string-class.md)^-Parameter, der über übergeben werden kann die Die ABI an eine beliebige Windows-Runtime-app, die ihn verarbeitet. Alternativ dazu können Sie eine Ausnahme deklarieren, indem Sie eine von zwei [Exception::CreateException](platform-exception-class.md#createexception) -Methodenüberladungen verwenden, die entweder einen HRESULT-Parameter oder einen HRESULT-Parameter und einen `Platform::String^` -Parameter akzeptieren.
 
@@ -27,13 +27,13 @@ Sie können keinen eigenen Ausnahmetyp von `Platform::Exception`ableiten. Verwen
 
 In der folgenden Tabelle sind die Standardausnahmen aufgelistet.
 
-|name|Zugrunde liegendes HRESULT|Beschreibung|
+|Name|Zugrunde liegendes HRESULT|Beschreibung|
 |----------|------------------------|-----------------|
 |COMException|*Benutzerdefiniertes HRESULT*|Wird ausgelöst, wenn ein COM-Methodenaufruf ein unbekanntes HRESULT zurückgibt.|
 |AccessDeniedException|E\_ACCESSDENIED|Wird ausgelöst, wenn der Zugriff auf eine Ressource oder eine Funktion verweigert wird.|
 |ChangedStateException|E\_CHANGED\_ZUSTAND|Wird ausgelöst, wenn Methoden eines Auflistungsiterators oder einer Auflistungsansicht aufgerufen werden, nachdem die übergeordnete Auflistung geändert wurde, wodurch die Ergebnisse der Methode ungültig wurden.|
 |ClassNotRegisteredException|REGDB\_E\_CLASSNOTREG|Wird ausgelöst, wenn eine COM-Klasse nicht registriert wurde.|
-|DisconnectedException|RPC\_E\_GETRENNT|Wird ausgelöst, wenn ein Objekt von den Clients getrennt wurde.|
+|DisconnectedException|RPC\_E\_DISCONNECTED|Wird ausgelöst, wenn ein Objekt von den Clients getrennt wurde.|
 |FailureException|E\_FEHL|Wird ausgelöst, wenn ein Vorgang fehlschlägt.|
 |InvalidArgumentException|E\_INVALIDARG|Wird ausgelöst, wenn eines der Argumente für eine Methode ungültig ist.|
 |InvalidCastException|E\_NOINTERFACE|Wird ausgelöst, wenn ein Typ nicht in einen anderen Typ umgewandelt werden kann.|
@@ -43,7 +43,7 @@ In der folgenden Tabelle sind die Standardausnahmen aufgelistet.
 |OperationCanceledException|E\_ABBRECHEN|Wird nach dem Abbrechen eines Vorgangs ausgelöst.|
 |OutOfBoundsException|E\_GRENZEN|Wird ausgelöst, wenn ein Vorgang versucht, auf Daten außerhalb des gültigen Bereichs zuzugreifen.|
 |OutOfMemoryException|E\_OUTOFMEMORY|Wird ausgelöst, wenn nicht genügend Arbeitsspeicher vorhanden ist, um den Vorgang abzuschließen.|
-|WrongThreadException|RPC\_E\_FALSCHE\_THREAD|Wird ausgelöst, wenn ein Thread über einen Schnittstellenzeiger aufruft, der für ein Proxyobjekt ist, das nicht zum Apartment des Threads gehört.|
+|WrongThreadException|RPC\_E\_WRONG\_THREAD|Wird ausgelöst, wenn ein Thread über einen Schnittstellenzeiger aufruft, der für ein Proxyobjekt ist, das nicht zum Apartment des Threads gehört.|
 
 ## <a name="hresult-and-message-properties"></a>HResult- und Meldungseigenschaften
 
@@ -104,4 +104,4 @@ C++ / CX verwendet nicht die `finally` Klausel.
 ## <a name="see-also"></a>Siehe auch
 
 [Sprachreferenz zu Visual C++](visual-c-language-reference-c-cx.md)<br/>
-[Namespaceverweis](namespaces-reference-c-cx.md)
+[Referenz zu Namespaces](namespaces-reference-c-cx.md)

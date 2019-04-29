@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-ms.openlocfilehash: 481109a5ed7d137aa2d10c77955a2f460cba43c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348873"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -50,7 +50,7 @@ void * _aligned_offset_malloc_dbg(
 *size*<br/>
 Die Größe der angeforderten Speicherbelegung.
 
-*Ausrichtung*<br/>
+*alignment*<br/>
 Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.
 
 *offset*<br/>
@@ -68,7 +68,7 @@ Ein Zeiger auf den Speicherblock, der zugewiesen wurde oder **NULL** bei fehlges
 
 ## <a name="remarks"></a>Hinweise
 
-**_aligned_offset_malloc_dbg** ist eine Debugversion von der [_aligned_offset_malloc](aligned-offset-malloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_aligned_offset_malloc_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_aligned_offset_malloc**. Beide **_aligned_offset_malloc** und **_aligned_offset_malloc_dbg** belegen einen Speicherblock im Basisheap, jedoch **_aligned_offset_malloc_dbg** verfügt über mehrere Debugfunktionen: Puffer auf beiden Seiten des benutzerteils des Blocks zum Prüfen auf Speicherverluste, einen blocktypparameter zum Nachverfolgen bestimmter belegungstypen und *Filename*/*Linenumber* Informationen zum Ermitteln des Ursprungs von belegungsanforderungen.
+**_aligned_offset_malloc_dbg** ist eine Debugversion von der [_aligned_offset_malloc](aligned-offset-malloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_aligned_offset_malloc_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_aligned_offset_malloc**. Beide **_aligned_offset_malloc** und **_aligned_offset_malloc_dbg** belegen einen Speicherblock im Basisheap, jedoch **_aligned_offset_malloc_dbg** verfügt über mehrere Debugfunktionen: Puffer auf beiden Seiten des benutzerteils des Blocks zum Prüfen auf Speicherverluste, und *Filename*/*Linenumber* -Informationen zum Ermitteln des Ursprungs von Anforderungen für speicherbelegung. Nachverfolgen von bestimmten belegungstypen mit einem blocktypparameter ist kein unterstützten Debug-Feature für ausgerichtete Zuweisungen. Ausgerichtete Zuweisungen werden als ein _NORMAL_BLOCK-Block-Typ angezeigt.
 
 **_aligned_offset_malloc_dbg** belegt den Speicherblock mit etwas mehr Speicherplatz als der angeforderten *Größe*. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Wenn der Block belegt wurde, wird der Benutzerteil des Blocks mit dem Wert "0xCD" gefüllt, und jeder der Überschreibungspuffer wird mit "0xFD" gefüllt.
 

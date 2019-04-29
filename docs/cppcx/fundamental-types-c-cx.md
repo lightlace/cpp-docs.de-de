@@ -3,11 +3,11 @@ title: Grundlegende Typen (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
 ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301450"
 ---
 # <a name="fundamental-types-ccx"></a>Grundlegende Typen (C++/CX)
 
