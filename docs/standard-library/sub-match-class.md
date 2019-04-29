@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
 ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412214"
 ---
 # <a name="submatch-class"></a>sub_match-Klasse
 
@@ -70,14 +70,14 @@ Eine Übereinstimmung der Länge 0 (null) kann auftreten, wenn eine Erfassungsgr
 |-|-|
 |[compare](#compare)|Vergleichen einer Teilübereinstimmung mit einer Sequenz.|
 |[length](#length)|Gibt die Länge einer Teilübereinstimmung zurück.|
-|[Übereinstimmung](#matched)|Gibt an, ob eine Übereinstimmung erfolgreich war.|
+|[matched](#matched)|Gibt an, ob eine Übereinstimmung erfolgreich war.|
 |[str](#str)|Konvertiert eine Teilübereinstimmung in eine Zeichenfolge.|
 
 ### <a name="operators"></a>Operatoren
 
 |Operator|Beschreibung|
 |-|-|
-|[Operator Basic_string < Value_type >](#op_basic_string_lt_value_type_gt)|Wandelt eine Teilübereinstimmung in eine Zeichenfolge um.|
+|[operator basic_string<value_type>](#op_basic_string_lt_value_type_gt)|Wandelt eine Teilübereinstimmung in eine Zeichenfolge um.|
 
 ## <a name="example"></a>Beispiel
 

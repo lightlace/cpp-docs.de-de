@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
 ms.openlocfilehash: 1569039db8c1f85d3091282b55d7eda253444deb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405793"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush-Klasse
 
@@ -100,7 +100,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 ### <a name="protected-data-members"></a>Geschützte Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|Speichert einen Zeiger auf ein CD2DBitmap-Objekt.|
 |[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|Speichert einen Zeiger auf ein ID2D1BitmapBrush-Objekt.|

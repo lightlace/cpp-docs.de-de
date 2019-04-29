@@ -11,11 +11,11 @@ helpviewer_keywords:
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
 ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395682"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Datensatzfeldaustausch: Verwenden der RFX-Funktionen
 

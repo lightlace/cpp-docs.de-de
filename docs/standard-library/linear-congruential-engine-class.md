@@ -7,11 +7,11 @@ helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413254"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine-Klasse
 
@@ -49,13 +49,13 @@ class linear_congruential_engine{
 Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 *A*<br/>
-**Multiplikator**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.
+**Multiplikator**. **Vorbedingung**: Siehe Abschnitt Hinweise.
 
 *C*<br/>
-**Inkrement**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.
+**Inkrement**. **Vorbedingung**: Siehe Abschnitt Hinweise.
 
 *M*<br/>
-**Modulo**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.
+**Modulo**. **Vorbedingung**: Finden Sie unter "Hinweise".
 
 ## <a name="members"></a>Member
 
@@ -80,13 +80,13 @@ Wenn *M* nicht gleich NULL ist, die Werte der Vorlagenargumente *ein* und *C* mu
 
 Obwohl Sie direkt aus dieser Engine einen Generator konstruieren können, können Sie auch eine dieser voreingestellten Typdefinitionen verwenden.
 
-`minstd_rand0`: 1988 minimal standard engine (Lewis, Goodman und Miller, 1969).
+`minstd_rand0`: Minimal Standard Engine 1988 (Lewis, Goodman und Miller 1969).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
 ```
 
-`minstd_rand`: Updated minimal standard engine `minstd_rand0` (Park, Miller und Stockmeyer, 1993).
+`minstd_rand`: Aktualisierte Minimal Standard Engine `minstd_rand0` (Park, Miller und Stockmeyer 1993).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;

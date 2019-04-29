@@ -1,16 +1,16 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen eines benutzerdefinierten Nachrichtenblocks'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
 ms.openlocfilehash: e897163a1d394228ac1d8f566e4b0d761fbeeb42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411343"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Exemplarische Vorgehensweise: Erstellen eines benutzerdefinierten Nachrichtenblocks
 
@@ -52,8 +52,7 @@ Die `transformer`-Klasse wird von `propagator_block` abgeleitet und fungiert dah
 
 Eine abgeleitete Klasse `source_block` muss sechs Methoden implementieren: [Propagate_to_any_targets](reference/source-block-class.md#propagate_to_any_targets), [Accept_message](reference/source-block-class.md#accept_message), [Reserve_message](reference/source-block-class.md#reserve_message), [ Consume_message](reference/source-block-class.md#consume_message), [Release_message](reference/source-block-class.md#release_message), und [Resume_propagation](reference/source-block-class.md#resume_propagation). Eine abgeleitete Klasse `target_block` müssen implementieren die [Propagate_message](reference/propagator-block-class.md#propagate_message) Methode implementieren und kann die [Send_message](reference/propagator-block-class.md#send_message) Methode. Ableitungen von `propagator_block` sowie von `source_block` und `target_block` sind funktional äquivalent.
 
-Die `propagate_to_any_targets`-Methode wird von der Laufzeit aufgerufen, um alle eingehenden Nachrichten synchron oder asynchron zu verarbeiten und alle ausgehenden Nachrichten weiterzugeben. Die `accept_message`-Methode wird von Zielblöcken aufgerufen, um Nachrichten zu akzeptieren. Viele Nachrichtenblocktypen wie `unbounded_buffer` senden Nachrichten nur an das erste Ziel, das diese empfangen würde. Daher wird der Besitz der Nachricht auf das Ziel übertragen. Andere Nachrichtenblocktypen wie z. B. [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md), bieten Nachrichten für alle entsprechenden Zielblöcke. 
-  `overwrite_buffer` erstellt daher eine Kopie der Nachricht für alle diesbezüglichen Ziele.
+Die `propagate_to_any_targets`-Methode wird von der Laufzeit aufgerufen, um alle eingehenden Nachrichten synchron oder asynchron zu verarbeiten und alle ausgehenden Nachrichten weiterzugeben. Die `accept_message`-Methode wird von Zielblöcken aufgerufen, um Nachrichten zu akzeptieren. Viele Nachrichtenblocktypen wie `unbounded_buffer` senden Nachrichten nur an das erste Ziel, das diese empfangen würde. Daher wird der Besitz der Nachricht auf das Ziel übertragen. Andere Nachrichtenblocktypen wie z. B. [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md), bieten Nachrichten für alle entsprechenden Zielblöcke. `overwrite_buffer` erstellt daher eine Kopie der Nachricht für alle diesbezüglichen Ziele.
 
 Mit den Methoden `reserve_message`, `consume_message`, `release_message` und `resume_propagation` können Nachrichtenblöcke an der Reservierung von Nachrichten teilnehmen. Zielblöcke rufen die `reserve_message`-Methode auf, wenn eine Nachricht für sie bereitgestellt wird, die zur späteren Verwendung reserviert werden muss. Nach dem Reservieren einer Nachricht durch den Zielblock kann dieser die `consume_message`-Methode aufrufen, um die Nachricht zu verarbeiten, oder die `release_message`-Methode, um die Reservierung abzubrechen. Analog zur `accept_message`-Methode kann die Implementierung von `consume_message` den Besitz der Nachricht übertragen oder eine Kopie der Nachricht zurückgeben. Nachdem eine reservierte Nachricht von einem Zielblock verarbeitet oder freigegeben wurde, wird die `resume_propagation`-Methode von der Laufzeit aufgerufen. Diese Methode setzt die Nachrichtenweitergabe i. d. R. mit der nächsten Nachricht in der Warteschlange fort.
 
@@ -63,8 +62,7 @@ Die `propagate_message`-Methode wird von der Laufzeit aufgerufen, um eine Nachri
 
 ##  <a name="class"></a> Definieren der Priority_buffer-Klasse
 
-Die `priority_buffer`-Klasse ist ein benutzerdefinierter Nachrichtenblocktyp, der eingehende Meldungen zunächst nach der Priorität und anschließend nach der Reihenfolge ihres Empfangs sortiert. Die `priority_buffer` -Klasse ähnelt der [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) Klasse, da es sich um eine Warteschlange Nachrichten enthält und auch daran, dass sie sowohl eine Quelle als auch als Zielnachrichtenblock fungiert und können mehrere Quellen sowie mehrere Ziele. 
-  `unbounded_buffer` legt als Kriterium für die Weitergabe von Nachrichten jedoch nur die Reihenfolge ihres Empfangs aus den Quellen zugrunde.
+Die `priority_buffer`-Klasse ist ein benutzerdefinierter Nachrichtenblocktyp, der eingehende Meldungen zunächst nach der Priorität und anschließend nach der Reihenfolge ihres Empfangs sortiert. Die `priority_buffer` -Klasse ähnelt der [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) Klasse, da es sich um eine Warteschlange Nachrichten enthält und auch daran, dass sie sowohl eine Quelle als auch als Zielnachrichtenblock fungiert und können mehrere Quellen sowie mehrere Ziele. `unbounded_buffer` legt als Kriterium für die Weitergabe von Nachrichten jedoch nur die Reihenfolge ihres Empfangs aus den Quellen zugrunde.
 
 Die `priority_buffer` -Klasse empfängt Nachrichten vom Typ std::[Tupel](../../standard-library/tuple-class.md) enthalten `PriorityType` und `Type` Elemente. `PriorityType` verweist auf den Typ, der die Priorität einer Nachricht angibt; `Type` verweist auf den Datenteil der Nachricht. Die `priority_buffer`-Klasse sendet Nachrichten vom Typ `Type`. Die `priority_buffer` Klasse verwaltet auch zwei Nachrichtenwarteschlangen: ein [Std:: priority_queue](../../standard-library/priority-queue-class.md) Objekt für eingehende Nachrichten und eine std::[Warteschlange](../../standard-library/queue-class.md) Objekt für ausgehende Nachrichten. Das Sortieren von Nachrichten nach der Priorität ist hilfreich, wenn ein `priority_buffer`-Objekt mehrere Nachrichten gleichzeitig oder bevor diese von Consumern gelesen werden empfängt.
 
@@ -150,8 +148,7 @@ Im folgenden Verfahren wird beschrieben, wie die `priority_buffer`-Klasse implem
 
 [!code-cpp[concrt-priority-buffer#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_15.h)]
 
-   Die Membervariable `_M_pReservedFor` wird von der Basisklasse `source_block` definiert. Diese Membervariable zeigt ggf. auf den Zielblock mit der Reservierung für die Nachricht, die sich an erster Stelle in der Warteschlange befindet. 
-  `link_target_notification` wird von der Laufzeit aufgerufen, wenn ein neues Ziel mit dem `priority_buffer`-Objekt verknüpft wird. Diese Methode gibt alle Nachrichten in der Ausgabewarteschlange weiter, wenn kein Ziel eine Reservierung aufweist.
+   Die Membervariable `_M_pReservedFor` wird von der Basisklasse `source_block` definiert. Diese Membervariable zeigt ggf. auf den Zielblock mit der Reservierung für die Nachricht, die sich an erster Stelle in der Warteschlange befindet. `link_target_notification` wird von der Laufzeit aufgerufen, wenn ein neues Ziel mit dem `priority_buffer`-Objekt verknüpft wird. Diese Methode gibt alle Nachrichten in der Ausgabewarteschlange weiter, wenn kein Ziel eine Reservierung aufweist.
 
 16. Definieren Sie die `private`-Methode im `propagate_priority_order`-Abschnitt.
 

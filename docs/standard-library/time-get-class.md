@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: df5a6da3995b1485585a3105ac027f19a27dc8eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412032"
 ---
 # <a name="timeget-class"></a>time_get-Klasse
 
@@ -217,7 +217,7 @@ iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der den Anfang der zu konvertierenden Sequenz angibt.
 
 *last*<br/>
@@ -232,10 +232,10 @@ Ein Feld in Iosbase, in dem entsprechende bitmaskenelemente festgelegt werden, u
 *ptm*<br/>
 Ein Zeiger auf die Zeitstruktur, in der die Zeit gespeichert werden soll.
 
-*FMT*<br/>
+*fmt*<br/>
 Eine Konvertierungsspezifiziererzeichen.
 
-*MOD*<br/>
+*mod*<br/>
 Ein optionales Modifiziererzeichen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -310,7 +310,7 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
 *last*<br/>
@@ -361,7 +361,7 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
 *last*<br/>
@@ -404,7 +404,7 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
 *last*<br/>
@@ -455,7 +455,7 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
 *last*<br/>
@@ -498,7 +498,7 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
 *last*<br/>
@@ -553,7 +553,7 @@ iter_type get(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Eingabeiterator, der angibt, wo die zu konvertierende Sequenz beginnt.
 
 *last*<br/>
@@ -568,10 +568,10 @@ Die entsprechenden Bitmaskenelemente werden für den Streamzustand festgelegt, u
 *ptm*<br/>
 Zeiger auf die Zeitstruktur, in der die Zeit gespeichert werden soll.
 
-*FMT*<br/>
+*fmt*<br/>
 Eine Konvertierungsspezifiziererzeichen.
 
-*MOD*<br/>
+*mod*<br/>
 Ein optionales Modifiziererzeichen.
 
 *fmt_first*<br/>
@@ -590,7 +590,7 @@ Die erste Memberfunktion gibt `do_get(first, last, iosbase, state, ptm, fmt, mod
 
 Die zweite Memberfunktion ruft `do_get` unter der Kontrolle des Formats auf, das durch `[fmt_first, fmt_last)` begrenzt ist. Die Funktion behandelt das Format als Sequenz von Feldern, von denen jedes die Konvertierung von null oder mehr Eingabeelementen bestimmt, die durch `[first, last)` begrenzt sind. Sie gibt einen Iterator zurück, der das erste nicht konvertierte Element festlegt. Es gibt drei Arten von Feldern:
 
-Ein Prozentzeichen (%) im Format, gefolgt von ein optionaler Modifizierer *mod* im festgelegten [eoq#], gefolgt von einem Konvertierungsspezifizierer *Fmt*, ersetzt *erste* mit den Rückgabewert von `do_get(first, last, iosbase, state, ptm, fmt, mod)`. Ein Konvertierungsfehler bewirkt, dass `ios_base::failbit` in *Zustand* und zurückgibt.
+Ein Prozentzeichen (%) in das Format, gefolgt von der ein optionaler Modifizierer *mod* im festgelegten [eoq#], gefolgt von einem Konvertierungsspezifizierer *Fmt*, ersetzt *erste* mit den Rückgabewert von `do_get(first, last, iosbase, state, ptm, fmt, mod)`. Ein Konvertierungsfehler bewirkt, dass `ios_base::failbit` in *Zustand* und zurückgibt.
 
 Ein Leerzeichenelement im Format bewirkt ein Überspringen von eingegebenen Leerzeichenelementen.
 
@@ -610,7 +610,7 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
 *last*<br/>
@@ -704,7 +704,7 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
 *last*<br/>
@@ -796,7 +796,7 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
 *last*<br/>
@@ -877,7 +877,7 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
 *last*<br/>
@@ -954,7 +954,7 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
 *last*<br/>
@@ -1040,14 +1040,14 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*Refs*<br/>
+*refs*<br/>
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
 Die möglichen Werte für die *Refs* Parameter und ihre Bedeutung:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 

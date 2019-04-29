@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
 ms.openlocfilehash: e2efb5d534ad43e2492ac4fb0bf76db402dca272
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410854"
 ---
 # <a name="weakptr-class"></a>weak_ptr-Klasse
 
@@ -281,10 +281,10 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 *Andere*<br/>
 Der Typ, der vom Argument für den gemeinsamen/schwachen Zeiger gesteuert wird.
 
-*WP*<br/>
+*wp*<br/>
 Der zu kopierende schwache Zeiger.
 
-*SP*<br/>
+*sp*<br/>
 Der zu kopierende gemeinsame Zeiger
 
 ### <a name="remarks"></a>Hinweise
@@ -396,7 +396,7 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Parameter
 
-*WP*<br/>
+*wp*<br/>
 Der schwache Zeiger, mit dem getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -517,10 +517,10 @@ weak_ptr(const shared_ptr<Other>& sp);
 *Andere*<br/>
 Der Typ, der vom Argument für den gemeinsamen/schwachen Zeiger gesteuert wird.
 
-*WP*<br/>
+*wp*<br/>
 Der zu kopierende schwache Zeiger.
 
-*SP*<br/>
+*sp*<br/>
 Der zu kopierende gemeinsame Zeiger
 
 ### <a name="remarks"></a>Hinweise

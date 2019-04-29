@@ -1,5 +1,5 @@
 ---
-title: 'TN055: Migrieren von MFC ODBC-Datenbankklassen-Anwendungen zu MFC DAO-Klassen'
+title: 'TN055: Migrieren von MFC-ODBC-Datenbankklassen-Anwendungen zu MFC DAO-Klassen'
 ms.date: 06/20/2018
 f1_keywords:
 - vc.mfc.odbc
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
 ms.openlocfilehash: f8e0d8e50f05e86c35e0f8b7f324533bffea6f25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399667"
 ---
-# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrieren von MFC ODBC-Datenbankklassen-Anwendungen zu MFC DAO-Klassen
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrieren von MFC-ODBC-Datenbankklassen-Anwendungen zu MFC DAO-Klassen
 
 > [!NOTE]
 > Die Visual C++-Umgebung und den Assistenten unterstützen DAO keine (obwohl die DAO-Klassen enthalten sind, und Sie können diese weiterhin verwenden). Microsoft empfiehlt die Verwendung von [OLE DB-Vorlagen](../data/oledb/ole-db-templates.md) oder [ODBC und MFC](../data/odbc/odbc-and-mfc.md) für neue Projekte. Sie sollten nur DAO Verwaltung bereits vorhandener Anwendungen verwenden.

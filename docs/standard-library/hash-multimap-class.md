@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
 ms.openlocfilehash: 8510bbc89a22fe3eb8df6bbf8ce77db44c7a65a0
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405078"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap-Klasse
 
@@ -121,7 +121,7 @@ Der im hash_multimap-Element zu speichernde Elementdatentyp.
 *Merkmale*<br/>
 Der Typ, der zwei Funktionsobjekte, eines der Klasse enthält *"traits"* werden zwei Elementwerte als Sortierschlüssel, um zu ermitteln, deren relative Reihenfolge und eine Hashfunktion, die ein unäres Prädikat Zuordnung der Schlüsselwerte der Elemente, die vergleichen können ganze Zahlen des Typs ohne Vorzeichen `size_t`. Das Argument ist optional und `hash_compare<Key, less<Key>>` ist der Standardwert.
 
-*Zuweisung*<br/>
+*Allocator*<br/>
 Der Typ, mit dem das gespeicherte Zuordnungsobjekt darstellt wird, mit dem Details zum Belegen und Freigeben des Arbeitsspeichers des hash_multimap-Elements gekapselt werden. Dieses Argument ist optional, und der Standardwert ist `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Hinweise
@@ -1179,7 +1179,7 @@ size_type erase(const key_type& key);
 *_Where*<br/>
 Die Position des aus der hash_multimap zu entfernenden Elements.
 
-*Erste*<br/>
+*first*<br/>
 Die Position des ersten Elements, das aus der hash_multimap entfernt werden soll.
 
 *last*<br/>

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
 ms.openlocfilehash: 8744ca8546d48e9283cc0dfa9d80babf5076f8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399147"
 ---
 # <a name="conditional-operator--"></a>Bedingter Operator:? :
 
@@ -45,13 +45,13 @@ Bedingte Ausdrücke besitzen Assoziativität von rechts nach links. Der erste Op
 
 - Wenn beide Operanden Verweistypen sind, werden Verweiskonvertierungen ausgeführt, um sie in einen gemeinsamen Typ zu konvertieren.
 
-- Wenn beide Operanden vom Typ "void" sind, ist der gemeinsame Typ "void".
+- Wenn beide Operanden vom Typ „void“ sind, ist der gemeinsame Typ „void“.
 
 - Wenn beide Operanden vom selben benutzerdefinierten Typ sind, ist der gemeinsame Typ dieser Typ.
 
 - Wenn die Operanden unterschiedliche Typen aufweisen und mindestens einer der Operanden den benutzerdefinierten Typ aufweist, werden die Sprachregeln zum Bestimmen des allgemeinen Typs verwendet. (Siehe obige Warnung.)
 
-Alle Kombinationen von zweiten und dritten Operanden, die nicht in der vorangehenden Liste enthalten sind, sind ungültig. Der Ergebnistyp ist der gemeinsame Typ, und es ist ein l-Wert, wenn die zweiten und dritten Operanden vom selben Typ und beide l-Werte sind.
+Alle Kombinationen von zweiten und dritten Operanden, die nicht in der vorangehenden Liste enthalten sind, sind ungültig. Der Ergebnistyp ist der gemeinsame Typ, und es ist ein L-Wert, wenn die zweiten und dritten Operanden vom selben Typ und beide L-Werte sind.
 
 > [!WARNING]
 >  Wenn die Typen der zweiten und dritten Operanden nicht identisch sind, werden komplexe Typkonvertierungsregeln gemäß C++-Standard aufgerufen. Diese Konvertierungen können zu unerwartetem Verhalten führen, einschließlich der Erstellung und Zerstörung von temporären Objekten. Aus diesem Grund empfehlen wir dringend, dass Sie entweder (1) keine benutzerdefinierten Typen als Operanden mit dem bedingten Operator verwenden oder (2) explizit jeden Operanden in einen gemeinsamen Typ umwandeln, wenn Sie benutzerdefinierte Typen verwenden.

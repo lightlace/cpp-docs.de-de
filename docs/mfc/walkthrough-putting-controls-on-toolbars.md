@@ -1,16 +1,16 @@
 ---
 title: 'Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
 ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392452"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste
 
@@ -62,7 +62,7 @@ Erstellen Sie zunächst die **finden** Kombinationsfeld-Steuerelement:
 
 1. Überschreiben Sie in der Klasse `CFindComboBox` die virtuelle Methode `PreTranslateMessage`. Diese Methode ermöglicht das Kombinationsfeld zum Verarbeiten der [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) Nachricht. Wenn der Benutzer die ESC-TASTE (`VK_ESCAPE`) drückt, kehren Sie zum Hauptrahmenfenster zurück. Wenn der Benutzer die EINGABETASTE (`VK_ENTER`) drückt, geben Sie im Hauptrahmenfenster eine `WM_COMMAND`-Meldung aus, die die Befehls-ID `ID_EDIT_FIND_COMBO` enthält.
 
-1. Erstellen Sie eine Klasse für den **finden** kombinationsfeldschaltfläche, abgeleitet [CMFCToolBarComboBoxButton-Klasse](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). In diesem Beispiel heißt es `CFindComboButton`.
+1. Erstellen Sie eine Klasse für den **finden** kombinationsfeldschaltfläche, abgeleitet [CMFCToolBarComboBoxButton-Klasse](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). In diesem Beispiel hat es den Namen `CFindComboButton`.
 
 1. Der Konstruktor von `CMFCToolbarComboBoxButton` akzeptiert drei Parameter: die Befehls-ID der Schaltfläche, den Index des Schaltflächensymbols und das Format des Kombinationsfelds. Legen Sie diese Parameter wie folgt fest:
 

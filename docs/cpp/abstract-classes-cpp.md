@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
 ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385088"
 ---
 # <a name="abstract-classes-c"></a>Abstrakte Klassen (C++)
 
@@ -53,7 +53,7 @@ Eine weitere Einschränkung ist, dass, wenn der Konstruktor für eine abstrakte 
 
 Rein virtuelle Funktionen können für abstrakte Klassen definiert werden, sie können aber nur mithilfe folgender Syntax direkt aufgerufen werden:
 
-*Abstract-Klassennamen*::*Funktionsname-*)
+*abstract-class-name*::*function-name*()
 
 Dies ist hilfreich beim Entwerfen von Klassenhierarchien, deren Basisklasse()n rein virtuelle Destruktoren enthält/enthalten, da Basisklassendestruktoren immer beim Zerstören eines Objekts aufgerufen werden. Betrachten Sie das folgende Beispiel:
 

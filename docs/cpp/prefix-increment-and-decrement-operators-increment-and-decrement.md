@@ -14,11 +14,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
 ms.openlocfilehash: deb8acc6c6a68c9a97f2f0efbdc4084b4937df46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392101"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Inkrementierungs- und Dekrementierungsoperatoren in Präfixnotation: ++ und --
 
@@ -35,7 +35,7 @@ Der präfixdekrementoperator (**++**) Fügt eine zu seinem Operanden hinzu, ist 
 
 Der präfixdekrementoperator (**--**) entspricht dem präfixinkrementoperator, außer dass der Operand um eins verringert wird und das Ergebnis dieser dekrementierte Wert ist.
 
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): der Operand eines Inkrement- oder Dekrementoperatoren möglicherweise nicht vom Typ **"bool"**.
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Der Operand eines Inkrement- oder Dekrementoperatoren möglicherweise nicht vom Typ **"bool"**.
 
 Sowohl Präfix- als auch Postfixinkrement und Dekrementoperatoren beeinflussen ihre Operanden. Der wesentliche Unterschied zwischen ihnen besteht in der Reihenfolge von Inkrement und Dekrement bei der Auswertung eines Ausdrucks. (Weitere Informationen finden Sie unter [Inkrementierungs- und Dekrementierungsoperatoren in Postfixnotation](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) In der Präfix-Form findet das Inkrement oder Dekrement statt, bevor der Wert in der Ausdrucksauswertung verwendet wird, daher ist der Wert des Ausdrucks ungleich dem Wert des Operanden. In der Postfix-Form findet das Inkrement oder Dekrement statt, nachdem der Wert in der Ausdrucksauswertung verwendet wird, daher ist der Wert des Ausdrucks der gleiche wie der Wert des Operanden. Zum Beispiel gibt das folgende Programm "`++i = 6`" aus:
 

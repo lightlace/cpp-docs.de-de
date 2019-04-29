@@ -14,11 +14,11 @@ helpviewer_keywords:
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
 ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407665"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Multithreading mit C++ und MFC
 
@@ -44,13 +44,13 @@ Weitere Informationen zur Multithreadunterstützung in MFC finden Sie in folgend
 
 - [Multithreading: Erstellen von Arbeitsthreads](multithreading-creating-worker-threads.md)
 
-- [Multithreading: Gewusst wie: der Synchronisierungsklassen](multithreading-how-to-use-the-synchronization-classes.md)
+- [Multithreading: Verwendungsmöglichkeiten der Synchronisierungsklassen](multithreading-how-to-use-the-synchronization-classes.md)
 
-- [Multithreading: Beenden von Threads](multithreading-terminating-threads.md)
+- [Multithreading: Terminieren von Threads](multithreading-terminating-threads.md)
 
-- [Multithreading: Tipps für die Programmierung](multithreading-programming-tips.md)
+- [Multithreading: Programmiertipps](multithreading-programming-tips.md)
 
-- [Multithreading: Wenn der Synchronisierungsklassen](multithreading-when-to-use-the-synchronization-classes.md)
+- [Multithreading: Verwendungsmöglichkeiten der Synchronisierungsklassen](multithreading-when-to-use-the-synchronization-classes.md)
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405585"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: Direct3D Namespace-Funktionen (AMP)
 

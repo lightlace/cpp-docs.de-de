@@ -7,11 +7,11 @@ helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
 ms.openlocfilehash: c0f30eacb308da61064a0383a6433b7127032a3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410972"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine-Klasse
 
@@ -56,7 +56,7 @@ Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](.
 *F*<br/>
 **Initialisierungsmultiplikator**. Wird verwendet, um die Initialisierung der Sequenz zu unterstützen. Vorbedingung: `F ≤ (1u<<W) - 1u`
 
-## <a name="members"></a>Mitglieder
+## <a name="members"></a>Member
 
 ||||
 |-|-|-|

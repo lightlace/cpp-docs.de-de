@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.openlocfilehash: 66c8c998a91ddd3e6550b57415a513fae55856da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410968"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits-Klasse
 
@@ -78,7 +78,7 @@ class allocator_traits;
 
 Folgende statische Methoden rufen die entsprechenden Methoden auf einem vorhandenen Allocator-Parameter auf.
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[allocate](#allocate)|Eine statische Methode, die mithilfe des vorhandenen Allocator-Parameters Arbeitsspeicher zuweist.|
 |[construct](#construct)|Eine statische Methode, die mithilfe eines angegebenen Allocators ein Objekt erstellt.|
@@ -106,13 +106,13 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Parameter
 
-*Al*<br/>
+*al*<br/>
 Ein Zuweisungsobjekt.
 
 *count*<br/>
 Die Anzahl der zuzuweisenden Elemente.
 
-*Hinweis*<br/>
+*hint*<br/>
 Ein `const_pointer`, der dem Zuweisungsobjekt möglicherweise dabei hilft, die Anforderung von Speicherplatz zu erfüllen. Dazu sucht er die Adresse eines vor der Anforderung zugewiesenen Objekts. Ein NULL-Zeiger wird nicht als Hinweis behandelt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -134,7 +134,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Parameter
 
-*Al*<br/>
+*al*<br/>
 Ein Zuweisungsobjekt.
 
 *ptr*<br/>
@@ -159,7 +159,7 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Parameter
 
-*Al*<br/>
+*al*<br/>
 Ein Zuweisungsobjekt.
 
 *ptr*<br/>
@@ -185,7 +185,7 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Parameter
 
-*Al*<br/>
+*al*<br/>
 Ein Zuweisungsobjekt.
 
 *ptr*<br/>
@@ -205,7 +205,7 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Parameter
 
-*Al*<br/>
+*al*<br/>
 Ein Zuweisungsobjekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -222,7 +222,7 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Parameter
 
-*Al*<br/>
+*al*<br/>
 Ein Zuweisungsobjekt.
 
 ### <a name="return-value"></a>Rückgabewert

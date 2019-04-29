@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
 ms.openlocfilehash: 791a18461b3a0ee8237dec47c87f9d441221141d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412552"
 ---
 # <a name="sharedptr-class"></a>shared_ptr-Klasse
 
@@ -155,7 +155,7 @@ Mehrere Threads können verschiedene `shared_ptr`-Objekte gleichzeitig lesen und
 
 |Operator|Beschreibung|
 |-|-|
-|[shared_ptr:: Operator bool](#op_bool)|Prüft, ob eine Ressource vorhanden ist, die Eigentum ist.|
+|[shared_ptr::operator bool](#op_bool)|Prüft, ob eine Ressource vorhanden ist, die Eigentum ist.|
 |[shared_ptr::operator*](#op_star)|Ruft den angegebenen Wert ab.|
 |[shared_ptr::operator=](#op_eq)|Ersetzt die Ressource, die Eigentum ist.|
 |[shared_ptr::operator-&gt;](#op_arrow)|Ruft einen Zeiger auf den angegebenen Wert ab.|
@@ -337,10 +337,10 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parameter
 
-*SP*<br/>
+*sp*<br/>
 Der zu kopierende gemeinsame Zeiger
 
-*AP*<br/>
+*ap*<br/>
 Der zu kopierende automatische Zeiger
 
 ### <a name="remarks"></a>Hinweise
@@ -462,13 +462,13 @@ Der Deleter-Typ.
 *ptr*<br/>
 Der zu kopierende Zeiger.
 
-*DTOR*<br/>
+*dtor*<br/>
 Der zu kopierende Deleter.
 
 *A*<br/>
 Der Zuweisungstyp.
 
-*Alloc*<br/>
+*alloc*<br/>
 Der zu kopierende Zuweiser.
 
 ### <a name="remarks"></a>Hinweise
@@ -585,19 +585,19 @@ Der Deleter-Typ.
 *A*<br/>
 Der Zuweisungstyp.
 
-*DTOR*<br/>
+*dtor*<br/>
 Der Deleter.
 
-*Vergleichsoperators*<br/>
+*ator*<br/>
 Die Zuweisung.
 
-*SP*<br/>
+*sp*<br/>
 Der zu kopierende intelligente Zeiger.
 
-*WP*<br/>
+*wp*<br/>
 Der schwache Zeiger.
 
-*AP*<br/>
+*ap*<br/>
 Der zu kopierende automatische Zeiger
 
 ### <a name="remarks"></a>Hinweise
@@ -721,7 +721,7 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parameter
 
-*SP*<br/>
+*sp*<br/>
 Der gemeinsame Zeiger, mit dem getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise

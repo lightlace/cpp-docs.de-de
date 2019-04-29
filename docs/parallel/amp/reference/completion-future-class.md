@@ -14,11 +14,11 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
 ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405572"
 ---
 # <a name="completionfuture-class"></a>completion_future-Klasse
 
@@ -91,7 +91,7 @@ Die `completion_future` Objekt kopieren oder verschieben.
 
 ### <a name="overloads-list"></a>Überladungsliste
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |`completion_future();`|Initialisiert eine neue Instanz der dem `completion_future` Klasse|
 |`completion_future(const completion_future& _Other);`|Initialisiert eine neue Instanz der dem `completion_future` -Klasse durch Kopieren eines Konstruktors.|
@@ -143,7 +143,7 @@ Ein Verweis auf das `completion_future`-Objekt.
 
 ## <a name="overloads-list"></a>Überladungsliste
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |`completion_future& operator=(const completion_future& _Other);`|Kopiert den Inhalt des angegebenen `completion_future` -Objekts in dieses Objekt, das mithilfe einer tiefen Kopie.|
 |`completion_future& operator=(completion_future&& _Other);`|Kopiert den Inhalt des angegebenen `completion_future` -Objekts in dieses Objekt, das mit einer bewegungszuweisung.|

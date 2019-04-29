@@ -7,11 +7,11 @@ helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
 ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412968"
 ---
 # <a name="matchresults-class"></a>match_results-Klasse
 
@@ -68,11 +68,11 @@ Die Vorlagenklasse beschreibt ein Objekt, das eine nicht änderbare Sequenz von 
 |[get_allocator](#get_allocator)|Gibt die gespeicherte Zuweisung zurück.|
 |[length](#length)|Gibt die Länge einer Teilübereinstimmung zurück.|
 |[max_size](#max_size)|Ruft die größte Anzahl von Teilübereinstimmungen ab.|
-|[Position](#position)|Ruft das Startoffset einer Untergruppe ab.|
+|[position](#position)|Ruft das Startoffset einer Untergruppe ab.|
 |[prefix](#prefix)|Ruft die Sequenz vor der ersten Teilübereinstimmung ab.|
 |[size](#size)|Zählt, wie viele Teilübereinstimmungen es gibt.|
 |[str](#str)|Gibt eine Teilübereinstimmung zurück.|
-|[Suffix](#suffix)|Ruft die Sequenz nach der letzten Teilübereinstimmung ab.|
+|[suffix](#suffix)|Ruft die Sequenz nach der letzten Teilübereinstimmung ab.|
 |[swap](#swap)|Tauscht zwei match_results-Objekte.|
 
 ### <a name="operators"></a>Operatoren
@@ -304,7 +304,7 @@ Der Ausgabeiteratortyp.
 *out*<br/>
 Der Ausgabestream, in den geschrieben werden soll.
 
-*FMT*<br/>
+*fmt*<br/>
 Die Formatzeichenfolge.
 
 *flags*<br/>
@@ -369,7 +369,7 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Alloc*<br/>
+*alloc*<br/>
 Das zu speichernde Zuweisungsobjekt.
 
 *right*<br/>

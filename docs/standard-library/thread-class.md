@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::thread [C++], native_handle
 - std::thread [C++], swap
 ms.openlocfilehash: d1405062ef553dbfea3b60b5f39e0546707343b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412071"
 ---
 # <a name="thread-class"></a>thread-Klasse
 
@@ -64,7 +64,7 @@ Jeder Ausführungsthread besitzt einen eindeutigen Bezeichner des Typs `thread::
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Trennen](#detach)|Trennt den zugeordneten Thread aus dem **Thread** Objekt.|
+|[detach](#detach)|Trennt den zugeordneten Thread aus dem **Thread** Objekt.|
 |[get_id](#get_id)|Gibt den eindeutigen Bezeichner des zugeordneten Threads zurück.|
 |[hardware_concurrency](#hardware_concurrency)|Statisch Gibt eine Schätzung der Anzahl von Hardwarethreadkontexten zurück.|
 |[join](#join)|Blockiert, bis der zugeordnete Thread abgeschlossen ist.|

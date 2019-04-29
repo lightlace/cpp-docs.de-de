@@ -11,11 +11,11 @@ helpviewer_keywords:
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
 ms.openlocfilehash: 779702aa33e2aa24bf5a380bd8435745cc0aadbd
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410706"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Zuordnungen für generischen Text in tchar.h
 
@@ -45,7 +45,7 @@ Allgemeintext-Funktion beispielsweise `_tcsrev`, ordnet die in tchar.h definiert
 
 ### <a name="generic-text-data-type-mappings"></a>Generische Textzuordnungen von Datentypen
 
-|Generischer Text<br /> Datentypname|_UNICODE &<br /> _MBCS nicht definiert|_MBCS<br /> Definiert|_UNICODE<br /> Definiert|
+|Generischer Text<br /> Datentypname|_UNICODE &AMP;<br /> _MBCS nicht definiert|_MBCS<br /> Definiert|_UNICODE<br /> Definiert|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**char**|**char**|**wchar_t**|
 |`_TINT`|**int**|**unsigned int**|`wint_t`|

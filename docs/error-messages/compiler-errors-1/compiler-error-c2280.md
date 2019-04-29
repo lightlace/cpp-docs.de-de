@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2280
 ms.assetid: e6c5b1fb-2b9b-4554-8ff9-775eeb37161b
 ms.openlocfilehash: e1ec032878fefdc1992605df5ee1aa13c673d4cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388903"
 ---
 # <a name="compiler-error-c2280"></a>Compilerfehler C2280
 
@@ -58,7 +58,7 @@ struct A {
 } a;    // C2280
 ```
 
-## <a name="example-reference-and-const-data-members"></a>Beispiel: Verweis und const-Datenmember
+## <a name="example-reference-and-const-data-members"></a>Beispiel: Referenz und const-Datenmember
 
 Ein `const` oder Verweisdatenmember für den Typ veranlasst den Compiler, deklarieren Sie eine `deleted` Kopierzuweisungsoperator. Nach der Initialisierung können nicht, diese Member zugewiesen werden, damit ein einfaches Kopieren oder Verschieben nicht funktioniert. Um dieses Problem zu beheben, empfehlen wir, dass Sie ändern die Logik, um die Zuweisungsvorgänge zu entfernen, die den Fehler zu verursachen.
 
@@ -79,7 +79,7 @@ void f() {
 }
 ```
 
-## <a name="example-movable-deletes-implicit-copy"></a>Beispiel: Verschiebbare wird die implizite Kopie gelöscht.
+## <a name="example-movable-deletes-implicit-copy"></a>Beispiel: Verschiebbare löscht implizite Kopie
 
 Wenn eine Klasse ein bewegungskonstruktor oder bewegungszuweisungsoperator deklariert, aber nicht explizit einen Kopierkonstruktor deklarieren, der Compiler implizit einen Kopierkonstruktor deklariert und definiert es als `deleted`. Wenn eine Klasse ein bewegungskonstruktor oder bewegungszuweisungsoperator deklariert, aber nicht explizit einen Kopierzuweisungsoperator deklarieren, der Compiler implizit einen Kopierzuweisungsoperator deklariert und definiert es als `deleted`. Um dieses Problem zu beheben, müssen Sie diese Member explizit deklarieren.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
 ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395897"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Weiterführende Themen zu MFC-ODBC-Klassen
 
@@ -39,7 +39,7 @@ Weiter in den folgenden Themen wird erläutert, die Konzepte und Techniken, die 
 
 - [Datensatzansichten](../../data/record-views-mfc-data-access.md)
 
-- [Serialisierung: Serialisierung im Vergleich zu Datenbankeingabe/-Ausgabe](../../mfc/serialization-serialization-vs-database-input-output.md)
+- [Serialisierung: Serialisierung im Vergleich zur Datenbankeingabe/-Ausgabe](../../mfc/serialization-serialization-vs-database-input-output.md)
 
 - [Snapshot](../../data/odbc/snapshot.md)
 

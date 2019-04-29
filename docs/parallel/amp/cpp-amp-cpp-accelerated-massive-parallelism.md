@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, getting started
 ms.assetid: e27824cb-3167-409b-8c3f-a0e476d8f349
 ms.openlocfilehash: f8ac71023f66868a66fb8c54a5e86678225378a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400694"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 
@@ -26,7 +26,7 @@ ms.locfileid: "50613173"
 |[Verwenden von accelerator-Objekten und accelerator_view-Objekten](../../parallel/amp/using-accelerator-and-accelerator-view-objects.md)|Beschreibt, wie die Ausführung des Codes auf der GPU mithilfe von Beschleunigern angepasst werden kann.|
 |[C++ AMP in UWP-Apps](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)|Beschreibt, wie Sie C++ AMP in apps der universellen Windows-Plattform (UWP) zu verwenden, die Windows-Runtime-Typen zu verwenden.|
 |[Grafiken (C++ AMP)](../../parallel/amp/graphics-cpp-amp.md)|Beschreibt, wie die C++ AMP-Grafikbibliothek verwendet wird.|
-|[Exemplarische Vorgehensweise: Matrixmultiplikation](../../parallel/amp/walkthrough-matrix-multiplication.md)|Veranschaulicht die Matrixmultiplikation mithilfe von C++ AMP-Code und Unterteilung.|
+|[Exemplarische Vorgehensweise: Matrizenmultiplikation](../../parallel/amp/walkthrough-matrix-multiplication.md)|Veranschaulicht die Matrixmultiplikation mithilfe von C++ AMP-Code und Unterteilung.|
 |[Exemplarische Vorgehensweise: Debuggen einer C++ AMP-Anwendung](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)|Erklärt, wie eine Anwendung erstellt und gedebuggt wird, die parallele Reduzierung verwendet, um ein großes Array von ganzen Zahlen aufzusummieren.|
 
 ## <a name="reference"></a>Referenz

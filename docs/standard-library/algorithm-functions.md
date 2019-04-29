@@ -201,11 +201,11 @@ helpviewer_keywords:
 - std::partition_copy [C++]
 - std::swap [C++]
 ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411173"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorithmusfunktionen&gt;
 
@@ -4261,7 +4261,7 @@ Das initializer_list-Element, das die zu vergleichenden Member enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Vorlagenfunktion gibt `pair<const Type&, const Type&>( right , left )` Wenn *rechten* ist kleiner als *linken*. Andernfalls wird `pair<const Type&, const Type&>( left , right )` zurückgegeben.
+Die erste Vorlagenfunktion gibt `pair<const Type&, const Type&>( right , left )` Wenn *rechten* ist kleiner als *linken*. Andernfalls wird `pair<const Type&, const Type&>( left , right )`zurückgegeben.
 
 Die zweite Memberfunktion gibt ein zurück, wobei das erste Element ist kleiner als und die zweite größer ist, wenn durch das Prädikat verglichen *Comp*.
 

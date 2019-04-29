@@ -15,11 +15,11 @@ helpviewer_keywords:
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
 ms.openlocfilehash: 59b83438d5341fd6a139af64a2f365a739438741
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394506"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Ausnahmen: Umwandeln von MFC-Ausnahmemakros
 
@@ -39,7 +39,7 @@ Die Hauptvorteile von konvertiert werden:
 
 - Code, der C++-Schlüsselwörter für die Ausnahmebehandlung verwendet, die in einer etwas kleiner kompiliert werden. EXE-Datei oder. DLL.
 
-- Die C++-Ausnahmebehandlung-Schlüsselwörter sind vielseitiger: sie können Behandeln von Ausnahmen eines beliebigen Datentyps, die kopiert werden können (**Int**, **"float"**, **Char**und so weiter), während die Makros behandeln Sie Ausnahmen nur der Klasse `CException` und davon abgeleitete Klassen.
+- Die C++ Ausnahmebehandlung Schlüsselwörter sind vielseitiger: Sie können Behandeln von Ausnahmen eines beliebigen Datentyps, die kopiert werden können (**Int**, **"float"**, **Char**und so weiter), während die Makros, die Ausnahmen nur der-Klasse behandeln `CException` und davon abgeleitete Klassen.
 
 Der Hauptunterschied zwischen die Makros und die Schlüsselwörter ist, dass Code mithilfe von "automatisch" die Makros, die eine abgefangene Ausnahme gelöscht, wenn die Ausnahme den Gültigkeitsbereich verlässt. Code mit den Schlüsselwörtern jedoch nicht, daher müssen Sie eine abgefangene Ausnahme explizit löschen. Weitere Informationen finden Sie im Artikel [Ausnahmen: Abfangen und Löschen von Ausnahmen](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
@@ -55,7 +55,7 @@ Ein weiterer Unterschied ist die Syntax. Die Syntax für Schlüsselwörter und M
 
    Die Ausnahmedeklaration für die **catch** -Schlüsselwort verwendet diese Syntax:
 
-   **catch (** *Exception_type* *Exception_name* **)**
+   **catch(** *exception_type* *exception_name* **)**
 
    Diese Ausnahme-Declaration-Anweisung gibt den Typ der Ausnahme-Catch-Block behandelt.
 
@@ -109,7 +109,7 @@ Der Code im nächsten Beispiel verwendet die C++-Ausnahmeschlüsselwörter aus, 
 
 [!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_4.cpp)]
 
-Weitere Informationen finden Sie unter [Ausnahmen: Verwenden von MFC-Makros und C++-Ausnahmen](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
+Weitere Informationen finden Sie unter [Ausnahmen: Mithilfe von MFC-Makros und C++-Ausnahmen](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
 ## <a name="see-also"></a>Siehe auch
 

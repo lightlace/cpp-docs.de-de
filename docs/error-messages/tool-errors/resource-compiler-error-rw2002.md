@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
 ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396779"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Ressourcencompiler: Fehler RW2002
 
@@ -69,7 +69,7 @@ Fehler beim Analysieren
 
 1. **erwartete steuerelementklassenname**
 
-   Die `class` Feld eine **Steuerelement** -Anweisung in der **Dialogfeld** -Anweisung muss eine der folgenden Typen sein: Schaltfläche, KOMBINATIONSFELD, bearbeiten, LISTBOX, BILDLAUFLEISTE, statischen und oder eine benutzerdefinierte. Stellen Sie sicher, dass die Klasse richtig geschrieben ist.
+   Die `class` Feld eine **Steuerelement** -Anweisung in der **Dialogfeld** -Anweisung muss eine der folgenden Typen sein: Schaltfläche "," ComboBox ", bearbeiten, LISTBOX, BILDLAUFLEISTE, statisch und oder Benutzerdefiniert. Stellen Sie sicher, dass die Klasse richtig geschrieben ist.
 
 1. **Name einer Schriftart erwartet**
 
@@ -141,7 +141,7 @@ Fehler beim Analysieren
 
 1. **Ungültiger-Steuerelementtyp**
 
-   Jede Control-Anweisung in einem **Dialogfeld** -Anweisung muss eine der folgenden sein: Kontrollkästchen, COMBOBOX, -Steuerelement, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, Symbol, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, BILDLAUFLEISTE. Stellen Sie sicher, dass diese Steueranweisungen richtig geschrieben sind.
+   Jede Control-Anweisung in einem **Dialogfeld** -Anweisung muss eine der folgenden sein: CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ICON, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, SCROLLBAR. Stellen Sie sicher, dass diese Steueranweisungen richtig geschrieben sind.
 
 1. **Ungültiger Typ**
 
