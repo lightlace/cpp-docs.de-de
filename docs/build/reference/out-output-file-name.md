@@ -12,11 +12,11 @@ helpviewer_keywords:
 - linker [C++], output files
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
 ms.openlocfilehash: be5fe929bdcf52be19955a5bc2d7aa093e194f45
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320070"
 ---
 # <a name="out-output-file-name"></a>/OUT (Ausgabedateiname)
 
@@ -53,5 +53,5 @@ Standardbasisname für eine Bibliothek Standardbasisname oder importieren Sie di
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 [MSVC-Linkeroptionen](linker-options.md)

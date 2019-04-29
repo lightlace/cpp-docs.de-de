@@ -9,11 +9,11 @@ helpviewer_keywords:
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
 ms.openlocfilehash: 9e52112bed0f583a3f5652f9213bd5049d543a80
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306147"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: Zerstören von Fensterobjekten
 
@@ -46,7 +46,7 @@ Die standardmäßige Implementierung des `CWnd::PostNcDestroy` nichts, eignet si
 Überschreiben Sie die Klassen, die entwickelt wurden, um allein auf dem Heap reserviert werden die `PostNcDestroy` Methode zum Durchführen einer **löschen**. Diese Anweisung gibt das C++-Objekt zugeordneten Arbeitsspeicher frei. Obwohl der Standardwert `CWnd` Destruktoraufrufe `DestroyWindow` Wenn *M_hWnd* ist nicht NULL ist, dies führt nicht zu einer Endlosschleife, da das Handle während der Phase Cleanup getrennt und NULL werden kann.
 
 > [!NOTE]
->  Das System in der Regel ruft `CWnd::PostNcDestroy` , nachdem sie die Windows-WM_NCDESTROY-Nachricht verarbeitet und die `HWND` und nicht mehr das C++-Fensterobjekt verbunden sind. Das System ruft auch `CWnd::PostNcDestroy` in der Implementierung der meisten [CWnd:: Create](../mfc/reference/cwnd-class.md#create) aufruft, wenn ein Fehler auftritt. Die Regeln für das automatische Cleanup werden weiter unten in diesem Thema beschrieben.
+>  Das System in der Regel ruft `CWnd::PostNcDestroy` , nachdem sie die Windows-WM_NCDESTROY-Nachricht verarbeitet und die `HWND` und C++ Window-Objekt nicht mehr verbunden sind. Das System ruft auch `CWnd::PostNcDestroy` in der Implementierung der meisten [CWnd:: Create](../mfc/reference/cwnd-class.md#create) aufruft, wenn ein Fehler auftritt. Die Regeln für das automatische Cleanup werden weiter unten in diesem Thema beschrieben.
 
 ## <a name="auto-cleanup-classes"></a>Automatisches Cleanup-Klassen
 
@@ -91,7 +91,7 @@ Warning: calling DestroyWindow in CWnd::~CWnd
 
 Im Fall von C++-Windows-Objekten, die automatischen Bereinigung durchführen, müssen Sie aufrufen `DestroyWindow`. Bei Verwendung der **löschen** Operator direkt die MFC-Diagnose-Speicherbelegungsfunktion benachrichtigt Sie, dass Sie doppelt so groß wie Freigeben von Arbeitsspeicher sind. Der obigen Abbildung sind, Ihre erste expliziter Aufruf und der indirekten Aufruf von **löschen** in der Implementierung der automatischen Bereinigung der `PostNcDestroy`.
 
-Nach dem Aufruf `DestroyWindow` auf ein nicht-automatischen Bereinigung-Objekt, das C++-Objekt werden weiterhin, aber *M_hWnd* werden auf NULL. Nach dem Aufruf `DestroyWindow` in einem automatischen Bereinigung-Objekt, das C++-Objekt nicht mehr verfügbar, freigegeben, indem der C++-Delete-Operator in der Implementierung der automatischen Bereinigung der `PostNcDestroy`.
+Nach dem Aufruf `DestroyWindow` für ein Objekt nicht auf der automatischen Bereinigung der C++ Objekt werden weiterhin, aber *M_hWnd* werden auf NULL. Nach dem Aufruf `DestroyWindow` in einem automatischen Bereinigung-Objekt, das C++-Objekt nicht mehr verfügbar, freigegeben, indem der C++-Delete-Operator in der Implementierung der automatischen Bereinigung der `PostNcDestroy`.
 
 ## <a name="see-also"></a>Siehe auch
 

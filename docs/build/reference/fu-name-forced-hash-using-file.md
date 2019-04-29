@@ -11,11 +11,11 @@ helpviewer_keywords:
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
 ms.openlocfilehash: c47a45208ac5b5c7e0000516ed114c008feda7ca
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292288"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Name der expliziten #using-Datei)
 
@@ -53,5 +53,5 @@ Informationen dazu, wie Sie eine Assembly oder ein Modul für die common Languag
 ## <a name="see-also"></a>Siehe auch
 
 [Ausgabedatei (/F) Optionen](output-file-f-options.md)<br/>
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
 ms.openlocfilehash: e8264de2c717c874da157cb29ad5e336e3ecbd0f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296747"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Hinzufügen einer MFC-Klasse aus einer Typbibliothek
 
@@ -37,4 +37,4 @@ Der Assistent erstellt eine MFC-Klasse, die von abgeleiteten [COleDispatchDriver
 ## <a name="see-also"></a>Siehe auch
 
 [Automatisierungsclients](../../mfc/automation-clients.md)<br/>
-[Benutzeroberflächenautomatisierungs-Clients: Verwenden von Typbibliotheken](../../mfc/automation-clients-using-type-libraries.md)
+[Automatisierungsclients: Verwenden von Typbibliotheken](../../mfc/automation-clients-using-type-libraries.md)

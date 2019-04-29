@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313827"
 ---
 # <a name="x64-software-conventions"></a>X64 Softwarekonventionen
 
@@ -193,7 +193,7 @@ Die folgende Tabelle beschreibt, wie jedes Register bei Funktionsaufrufen verwen
 
 ||||
 |-|-|-|
-|Register|Status|Verwendung|
+|Register|Status|Mit|
 |RAX|Volatil|Rückgabewert-Register|
 |RCX|Volatil|Erstes Ganzzahl-Argument|
 |RDX|Volatil|Zweites Ganzzahl-Argument|
@@ -206,7 +206,7 @@ Die folgende Tabelle beschreibt, wie jedes Register bei Funktionsaufrufen verwen
 |RBX|Nicht volatil|Muss vom Aufgerufenen bewahrt werden|
 |RBP|Nicht volatil|Kann als Frame-Pointer verwendet werden; muss vom Aufgerufenen bewahrt werden|
 |RSP|Nicht volatil|Stack-Pointer|
-|XMM0, YMM0|Volatil|Erstes FP-Argument; erstes Argument vom Typ Vektor, wenn `__vectorcall` verwendet wird|
+|XMM0, YMM0|Volatil|Erstes FP-Argument; erstes Vektortypargument, wenn `__vectorcall` verwendet wird|
 |XMM1, YMM1|Volatil|Zweites FP-Argument; zweites Argument vom Typ Vektor, wenn `__vectorcall` verwendet wird|
 |XMM2, YMM2|Volatil|Drittes FP-Argument; drittes Argument vom Typ Vektor, wenn `__vectorcall` verwendet wird|
 |XMM3, YMM3|Volatil|Viertes FP-Argument; viertes Argument vom Typ Vektor, wenn `__vectorcall` verwendet wird|

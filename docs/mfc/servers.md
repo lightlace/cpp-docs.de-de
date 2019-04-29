@@ -11,11 +11,11 @@ helpviewer_keywords:
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
 ms.openlocfilehash: 7b1eb0df439bcfde3aa295f23a90291e865df3a9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307834"
 ---
 # <a name="servers"></a>Server
 
@@ -47,17 +47,17 @@ Weitere Informationen zu Servern finden Sie unter:
 
 - [Server: Implementieren von Serverdokumenten](../mfc/servers-implementing-server-documents.md)
 
-- [Server: Implementieren von In-Place-Frame-Windows](../mfc/servers-implementing-in-place-frame-windows.md)
+- [Server: Implementieren eines In-Place-Frame-Fensters](../mfc/servers-implementing-in-place-frame-windows.md)
 
-- [Server: Server-Elemente](../mfc/servers-server-items.md)
+- [Server: Serverelemente](../mfc/servers-server-items.md)
 
-- [Server: Probleme mit der Benutzeroberfläche](../mfc/servers-user-interface-issues.md)
+- [Server: Benutzeroberflächenprobleme](../mfc/servers-user-interface-issues.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Container](../mfc/containers.md)<br/>
-[Container: Erweiterte Funktionen](../mfc/containers-advanced-features.md)<br/>
+[Container: Erweiterte Features](../mfc/containers-advanced-features.md)<br/>
 [Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Registrierung](../mfc/registration.md)<br/>
 [Automatisierungsserver](../mfc/automation-servers.md)

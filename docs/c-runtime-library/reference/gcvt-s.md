@@ -30,11 +30,11 @@ helpviewer_keywords:
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
 ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332293"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
@@ -65,7 +65,7 @@ Puffer, um das Ergebnis der Konvertierung zu speichern
 *sizeInBytes*<br/>
 Größe des Puffers.
 
-*Wert*<br/>
+*value*<br/>
 Zu konvertierender Wert.
 
 *Ziffern*<br/>
@@ -77,7 +77,7 @@ Null, wenn erfolgreich. Tritt ein Fehler aufgrund eines ungültigen Parameters a
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*buffer*|*sizeInBytes*|*Wert*|*Ziffern*|Zurück|Wert in *Puffer*|
+|*buffer*|*sizeInBytes*|*value*|*Ziffern*|Zurück|Wert in *Puffer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|any|any|any|**EINVAL**|Nicht geändert.|
 |Nicht **NULL** (zeigt auf gültigen Speicher)|Null|any|any|**EINVAL**|Nicht geändert.|

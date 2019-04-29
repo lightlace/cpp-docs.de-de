@@ -9,11 +9,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.KeyContainer
 ms.assetid: 3d587366-05ea-4956-a978-313069660735
 ms.openlocfilehash: a20e474deb69099c53ad656dda5406e7161a1695
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295136"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Erweitert, Manifesttool, Konfigurationseigenschaften, Dialogfeld „&lt;Projektname&gt;-Eigenschaftenseiten“
 
@@ -36,4 +36,4 @@ Verwenden Sie dieses Dialogfeld, um erweiterte Optionen für die Datei [Mt.exe](
 [\<file> Element](/visualstudio/deployment/file-element-clickonce-application)<br>
 [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br>
 [Manifesttool-Eigenschaftenseiten](manifest-tool-property-pages.md)<br>
-[Festlegen von C++-Compiler und erstellen Sie die Eigenschaften in Visual Studio](../working-with-project-properties.md)
+[Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio](../working-with-project-properties.md)

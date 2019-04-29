@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
 ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335346"
 ---
 # <a name="countof-macro"></a>_countof-Makro
 
@@ -50,7 +50,7 @@ Die Anzahl der Elemente im Array fest, ausgedrückt als eine **"size_t"**.
 
 **_countof** wird als ein Präprozessormakro funktionsähnliches implementiert. Die C++-Version verfügt über zusätzliche Vorlagen Mechanismen zum Zeitpunkt der Kompilierung zu erkennen, wenn ein Zeiger anstelle eines Arrays statisch deklarierte übergeben wird.
 
-Sicherstellen, dass *Array* ist tatsächlich ein Array, kein Zeiger. In C **_countof** fehlerhafte Ergebnisse erzeugt, wenn *Array* ist ein Zeiger. In C++ **_countof** kann nicht kompiliert werden Wenn *Array* ist ein Zeiger.  Ein Array als Parameter an eine Funktion übergeben *unumgänglich in einen Zeiger*, was bedeutet, dass in der Funktion wird keine **_countof** um das Ausmaß des Arrays zu ermitteln.
+Sicherstellen, dass *Array* ist tatsächlich ein Array, kein Zeiger. In C **_countof** fehlerhafte Ergebnisse erzeugt, wenn *Array* ist ein Zeiger. In C++, **_countof** kann nicht kompiliert werden Wenn *Array* ist ein Zeiger.  Ein Array als Parameter an eine Funktion übergeben *unumgänglich in einen Zeiger*, was bedeutet, dass in der Funktion wird keine **_countof** um das Ausmaß des Arrays zu ermitteln.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
 ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319277"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (_ftol unterdrücken)
 
@@ -66,5 +66,5 @@ Die **/QIfist** Option ist ab Visual Studio 2005 veraltet. Für den Compiler wur
 ## <a name="see-also"></a>Siehe auch
 
 [/Q-Optionen (Vorgänge auf niedriger Ebene)](q-options-low-level-operations.md)<br/>
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

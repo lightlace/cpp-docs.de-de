@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
 ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305488"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039: MFC/OLE-Automatisierungsimplementierung
 
@@ -120,7 +120,7 @@ Der Name der Klasse.
 *pszName*<br/>
 Externer Name der Eigenschaft.
 
-*MemberName*<br/>
+*memberName*<br/>
 Der Name der Membervariablen, die in der die Eigenschaft gespeichert wird.
 
 *pfnAfterSet*<br/>
@@ -156,7 +156,7 @@ Externer Name der Eigenschaft.
 *memberGet*<br/>
 Der Name der Memberfunktion verwendet, um die Eigenschaft abzurufen.
 
-*"MemberSet"*<br/>
+*memberSet*<br/>
 Der Name der Memberfunktion verwendet, um die Eigenschaft festzulegen.
 
 *vtPropType*<br/>
@@ -228,7 +228,7 @@ Der Name der Klasse.
 *pszName*<br/>
 Externer Name der Eigenschaft.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die festen DISPID für die Eigenschaft oder Methode.
 
 *pfnGet*<br/>
@@ -237,7 +237,7 @@ Der Name der Memberfunktion verwendet, um die Eigenschaft abzurufen.
 *pfnSet*<br/>
 Der Name der Memberfunktion verwendet, um die Eigenschaft festzulegen.
 
-*MemberName*<br/>
+*memberName*<br/>
 Der Name der Membervariable der Eigenschaft zugeordnet.
 
 *vtPropType*<br/>

@@ -4,12 +4,12 @@ ms.date: 05/11/2018
 helpviewer_keywords:
 - deploying the CRT [C++]
 - application CRT deployment [C++]
-ms.openlocfilehash: 90f859eb0e9134c997e7eecad118cfb8ec00b782
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 7952d2ec6e8f502b0edf776811a492c67f495cce
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786314"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344172"
 ---
 # <a name="universal-crt-deployment"></a>Bereitstellung der universellen CRT
 
@@ -23,7 +23,9 @@ Die bevorzugte Methode zur zentralen Installation der universellen CRT ist die V
 
 Nicht alle Microsoft Windows-Computer installieren regelmäßig Updates über Windows Update, und manche installieren möglicherweise nicht alle empfohlenen Updates. Es sind verteilbare Komponenten der universellen CRT verfügbar, die offline verteilt werden können und so die Verwendung von Anwendungen unterstützen, die auf diesen Computern mithilfe von Visual Studio 2015 und höheren C++-Toolsets erstellt wurden. Diese verteilbaren Komponenten können unter einem der obenstehenden KB-Links heruntergeladen werden. Beachten Sie, dass die verteilbaren Komponenten der universellen CRT erfordern, dass der Computer auf das aktuelle Service Pack aktualisiert wurde. Die verteilbare Komponente für Windows 7 kann also beispielsweise nur unter Windows 7 SP1, nicht unter Windows 7 RTM installiert werden.
 
-Da die universelle CRT grundlegend von den C++-Bibliotheken abhängt, installiert die verteilbare Visual C++-Komponente (VCRedist) eine Basisversion der universellen CRT auf den Computern, auf denen noch keine Version installiert ist, die für die C++-Bibliotheksabhängigkeiten ausreichend ist. Wenn Ihre Anwendung von einer aktuelleren Version der universellen CRT abhängt, müssen Sie diese Version explizit installieren. Es wird empfohlen, diese zu installieren, bevor Sie „VCRedist“ installieren, um mehrere möglicherweise erforderliche Neustarts zu verhindern.
+Da der Universal CRT eine grundlegende Abhängigkeit ist die C++ Bibliotheken, die Visualisierung C++ redistributable (VCRedist) wird die erste Version der Universal CRT (Version 10.0.10240) installiert, auf Computern, die nicht über eine bereits installierte Version verfügen. Diese Version ist ausreichend, um das erfüllen der C++ bibliotheksabhängigkeiten. Wenn Ihre Anwendung auf eine neuere Version der Universal CRT abhängig ist, müssen Sie um Ihren Computer auf dem neuesten Stand zu bringen mithilfe von Windows Update oder installieren diese Version explizit. Es wird empfohlen, um die universelle C-Laufzeit bereits über Windows Update oder über MSU installiert, vor der Installation der Komponente Vcredist installiert werden, um potenzielle zu vermeiden mehrere erforderlichen Neustarts zu erhalten.
+
+Nicht alle Betriebssysteme sind für die letzten universelle C-Laufzeit über Windows Update. Unter Windows 10 entspricht die zentral bereitgestellte Version die Version des Betriebssystems. Darüber hinaus müssen Sie das Betriebssystem aktualisieren, um die universelle C-Laufzeit zu aktualisieren. Für Windows Vista über Windows 8.1 basiert die neueste verfügbare Universal C Runtime derzeit auf die Version, in das Windows 10 Anniversary Update mit zusätzlichen Fixes (Version 10.0.14393) enthalten.
 
 ## <a name="local-deployment"></a>Lokale Bereitstellung
 

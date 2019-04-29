@@ -9,11 +9,11 @@ helpviewer_keywords:
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
 ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308211"
 ---
 # <a name="serialization-in-mfc"></a>Serialisierung in MFC
 
@@ -40,7 +40,7 @@ In den folgenden Artikeln behandelt, die zwei Hauptaufgaben, die für die Serial
 
 - [Serialisierung: Serialisieren eines Objekts](../mfc/serialization-serializing-an-object.md)
 
-Der Artikel [Serialisierung: Serialisierung im Vergleich zu Datenbank-e/a](../mfc/serialization-serialization-vs-database-input-output.md) wird beschrieben, bei der Serialisierung eine entsprechende Eingabe/Ausgabe-Methode in datenbankanwendungen ist.
+Der Artikel [Serialisierung: Serialisierung im Vergleich zur Datenbank-e/a](../mfc/serialization-serialization-vs-database-input-output.md) wird beschrieben, bei der Serialisierung eine entsprechende Eingabe/Ausgabe-Methode in datenbankanwendungen ist.
 
 ## <a name="see-also"></a>Siehe auch
 

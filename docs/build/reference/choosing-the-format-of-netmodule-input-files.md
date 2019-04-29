@@ -3,17 +3,17 @@ title: Auswählen des Formats von .netmodule-Eingabedateien
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
 ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294576"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Auswählen des Formats von .netmodule-Eingabedateien
 
 Eine MSIL-OBJ-Datei (kompiliert mit ["/ CLR"](clr-common-language-runtime-compilation.md)) kann auch als eine NETMODULE-Datei verwendet werden.  OBJ-Dateien enthalten die Metadaten und systemeigene Symbole.  NETMODULE-Dateien enthalten nur Metadaten.
 
-Sie können eine MSIL-OBJ-Datei an einem beliebigen anderen Visual Studio-Compiler übergeben, über die/addmodule-Compileroption (aber beachten Sie, dass die OBJ-Datei der resultierenden Assembly Teil, und mit der Assembly geliefert werden muss.)  Beispielsweise haben in Visual C# und Visual Basic/addmodule-Compileroption.
+Sie können eine MSIL-OBJ-Datei an einem beliebigen anderen Visual Studio-Compiler übergeben, über die/addmodule-Compileroption (aber beachten Sie, dass die OBJ-Datei der resultierenden Assembly Teil, und mit der Assembly geliefert werden muss.)  Beispielsweise haben in Visual c# und Visual Basic/addmodule-Compileroption.
 
 > [!NOTE]
 >  In den meisten Fällen müssen Sie an den Linker die OBJ-Datei aus der Kompilierung übergeben, die das Modul .net erstellt.  Eine DLL- oder NETMODULE-Datei MSIL-Modul-Datei an dem Linker übergeben kann dazu führen, dass LNK1107.

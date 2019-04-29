@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
 ms.openlocfilehash: f1a266eee4edc524fbbe49bdef31a8235f62bd3c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292301"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (Eingefügten Code zusammenführen)
 
@@ -77,5 +77,5 @@ Wenn Ihr Programm eine Headerdatei umfasst, die injizierten Code verwendet, erst
 ## <a name="see-also"></a>Siehe auch
 
 [Ausgabedatei (/F) Optionen](output-file-f-options.md)<br/>
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

@@ -3,11 +3,11 @@ title: 'Exemplarische Vorgehensweise: Kompilieren eines C++ / CLI-Programms in d
 ms.date: 09/24/2018
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 ms.openlocfilehash: c90d2c915db7264dc1b4e4807803e063c2a24fc7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314168"
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines C++ / CLI-Programms in der Befehlszeile
 
@@ -62,4 +62,4 @@ Zur Aktivierung der Kompilierung für C++ / CLI, verwenden Sie die ["/ CLR"](ref
 
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [Projekte und Buildsysteme](projects-and-build-systems-cpp.md)<br/>
-[MSVC-Compiler-Optionen](reference/compiler-options.md)
+[MSVC-Compileroptionen](reference/compiler-options.md)

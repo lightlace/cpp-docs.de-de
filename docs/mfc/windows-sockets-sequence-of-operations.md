@@ -9,11 +9,11 @@ helpviewer_keywords:
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
 ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296513"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Abfolge der Vorgänge
 
@@ -56,15 +56,15 @@ Die Reihenfolge der Aufrufe, die in der obigen Tabelle aufgeführten ist für ei
 
 Weitere Informationen finden Sie unter:
 
-- [Windows Sockets: Verwenden von Sockets mit Archiven](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows-Sockets: Verwenden von Sockets mit Archiven](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: Verwenden der Klasse CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows-Sockets: Verwenden der Klasse „CAsyncSocket“](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Ports und Socketadressen](../mfc/windows-sockets-ports-and-socket-addresses.md)
+- [Windows-Sockets: Ports und Socketadressen](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
-- [Windows Sockets: Stream-Sockets](../mfc/windows-sockets-stream-sockets.md)
+- [Windows-Sockets: Streamsockets](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Datagrammsockets](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows-Sockets: Datagrammsockets](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Siehe auch
 

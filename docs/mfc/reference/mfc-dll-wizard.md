@@ -12,11 +12,11 @@ helpviewer_keywords:
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
 ms.openlocfilehash: c0c8edfd26fc6abdcef1cbb2cfa93d88f9a37cde
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310291"
 ---
 # <a name="mfc-dll-wizard"></a>MFC-DLL-Assistent
 
@@ -42,7 +42,7 @@ Sie können die folgenden Aufgaben und Typen von Erweiterungen zu einem grundleg
 
 [Erstellen und Verwalten von Visual C++-Projekten](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
 [Eigenschaftenseiten](../../build/reference/property-pages-visual-cpp.md)<br/>
-[Festlegen des Compilers und der Buildeigenschaften](../../build/working-with-project-properties.md)<br/>
+[Festlegen der Compiler- und Buildeigenschaften](../../build/working-with-project-properties.md)<br/>
 [MFC-Klasse](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Implementieren einer Schnittstelle](../../ide/implementing-an-interface-visual-cpp.md)<br/>

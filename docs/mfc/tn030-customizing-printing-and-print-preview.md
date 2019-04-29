@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 ms.openlocfilehash: 09938c5cec2812998d5e76e15154754ad3ac3e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305683"
 ---
 # <a name="tn030-customizing-printing-and-print-preview"></a>TN030: Anpassen des Druckvorgangs und der Druckvorschau
 
@@ -40,13 +40,13 @@ Um manuell--Band-, müssen Sie erneut implementieren die print-Schleife so, dass
 
 Zweitens müssen Sie häufig aufrufen `QueryAbort` beim Zeichnen des Bands. Andernfalls die Abbrechen-Prozedur nicht aufgerufen, und der Benutzer wird in der Lage, den Druckauftrag abbrechen.
 
-## <a name="print-preview-electronic-paper-with-user-interface"></a>Seitenansicht: Elektronisches Dokument mit Benutzeroberfläche
+## <a name="print-preview-electronic-paper-with-user-interface"></a>Print Preview: Elektronische Papier mit der Benutzeroberfläche
 
 Seitenansicht, versucht im Wesentlichen um die Anzeige in eine Emulation von einem Drucker zu aktivieren. Standardmäßig dient das den Clientbereich des Hauptfensters ein oder zwei Seiten vollständig innerhalb des Fensters angezeigt. Der Benutzer kann zum Vergrößern auf einen Bereich der Seite, um weitere Details zu erkennen. Mit zusätzlicher Unterstützung wird der Benutzer auch so bearbeiten Sie das Dokument in der Vorschau zugelassen.
 
 ## <a name="customizing-print-preview"></a>Anpassen der Seitenansicht
 
-In diesem Hinweis befasst sich nur mit einem Aspekt des Ändern der Seitenansicht: Hinzufügen von Benutzeroberflächen in den Vorschaumodus. Andere Änderungen sind möglich, aber diese Änderungen sind nicht Gegenstand dieser Diskussion.
+In diesem Hinweis behandelt nur einen Aspekt der Seitenansicht ändern: Hinzufügen von Benutzeroberflächen in Vorschaumodus. Andere Änderungen sind möglich, aber diese Änderungen sind nicht Gegenstand dieser Diskussion.
 
 ## <a name="to-add-ui-to-the-preview-mode"></a>Der Vorschaumodus Benutzeroberfläche hinzu
 

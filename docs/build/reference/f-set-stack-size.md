@@ -11,11 +11,11 @@ helpviewer_keywords:
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
 ms.openlocfilehash: 9db595daa7de7820b594a8515ece7481b4382c98
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293094"
 ---
 # <a name="f-set-stack-size"></a>/F (Stapelgröße festlegen)
 
@@ -56,5 +56,5 @@ Sie können auch die Stapelgröße festlegen, durch:
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

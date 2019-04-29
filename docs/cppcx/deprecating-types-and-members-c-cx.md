@@ -3,11 +3,11 @@ title: Einstufen von Typen und Membern als veraltet (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
 ms.openlocfilehash: 7f488dfa522c0b48c75150d40584b0946baae806
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301499"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Einstufen von Typen und Membern als veraltet (C++/CX)
 
@@ -58,4 +58,4 @@ In der folgenden Tabelle werden die Konstrukte aufgeführt, auf die das veraltet
 
 [Typsystem](../cppcx/type-system-c-cx.md)<br/>
 [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)
+[Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)

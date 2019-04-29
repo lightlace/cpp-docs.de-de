@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
 ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62303795"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>.NET-Programmierung mit C++/CLI (Visual C++)
 
