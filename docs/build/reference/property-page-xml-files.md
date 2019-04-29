@@ -5,11 +5,11 @@ helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
 ms.openlocfilehash: 17b89f00b2e51c960ed7d3219427b56d92851b81
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319465"
 ---
 # <a name="property-page-xml-rule-files"></a>XML-Regeldateien für Eigenschaftenseiten
 
@@ -137,7 +137,7 @@ Im folgenden Abschnitt werden die Hauptelemente und einige der Metadaten beschri
 
    i. **DisplayName**, **PageTemplate** und **Order** sind auf die Benutzeroberfläche bezogene Eigenschaften, die in diesem Datenmodell vorhanden sind, das ansonsten von der Benutzeroberfläche unabhängig ist. Diese Eigenschaften werden meistens von allen Benutzeroberflächen verwendet, die zum Anzeigen von Eigenschaftenseiten verwendet werden. Die Eigenschaften **DisplayName** und **Description** sind in fast allen Elementen der XML-Datei vorhanden. Nur diese beiden Eigenschaften werden lokalisiert. Die Lokalisierung dieser Zeichenfolgen wird in einem späteren Beitrag erläutert.
 
-1. **Kategorie:** Eine Regel kann mehrere Kategorien haben. Bei der Reihenfolge, in der diese Kategorien in der XML-Datei aufgeführt werden, handelt es sich um einen Vorschlag für die Benutzeroberfläche, damit diese in der gleichen Reihenfolge angezeigt werden. Die Reihenfolge der Kategorien im Knoten „C/C++“, die auf der Benutzeroberfläche angezeigt wird (Allgemein, Optimierung, Präprozessor, ...),  entspricht beispielsweise der in „cl.xml“. Eine Beispielkategorie sieht folgendermaßen aus:
+1. **Kategorie**: Eine Regel kann mehrere Kategorien haben. Bei der Reihenfolge, in der diese Kategorien in der XML-Datei aufgeführt werden, handelt es sich um einen Vorschlag für die Benutzeroberfläche, damit diese in der gleichen Reihenfolge angezeigt werden. Die Reihenfolge der Kategorien im Knoten „C/C++“, die auf der Benutzeroberfläche angezeigt wird (Allgemein, Optimierung, Präprozessor, ...),  entspricht beispielsweise der in „cl.xml“. Eine Beispielkategorie sieht folgendermaßen aus:
 
     ```xml
     <Category Name="Optimization">
@@ -166,7 +166,7 @@ Im folgenden Abschnitt werden die Hauptelemente und einige der Metadaten beschri
 
    a. **Subtype** ist ein Attribut, das nur für **StringProperty** und **StringListProperty** verfügbar ist und Kontextinformationen enthält. Der Wert von „file“ gibt beispielsweise an, dass die Eigenschaft einen Dateipfad darstellt. Solche Kontextinformationen werden verwendet, um die Bearbeitungsoberfläche zu verbessern, indem ein Windows-Explorer als Editor für die Eigenschaft bereitgestellt wird, mit dem der Benutzer die Datei visuell auswählen kann.
 
-   b. **Kategorie:** Hiermit wird die Kategorie, unter der diese Eigenschaft greift, deklariert. Suchen Sie diese Eigenschaft in der Kategorie **Ausgabedateien** auf der Benutzeroberfläche.
+   b. **Kategorie**: Hiermit wird die Kategorie, unter der diese Eigenschaft greift, deklariert. Suchen Sie diese Eigenschaft in der Kategorie **Ausgabedateien** auf der Benutzeroberfläche.
 
    c. **Switch:** Wenn eine Regel ein Tool – darstellt werden z. B. das Compilertool in unserem Fall: die meisten Eigenschaften der Regel als Schalter für das Tool ausführbare bei der Erstellung übergeben. Der Wert dieses Attributs gibt das Parameterliteral an, das verwendet werden soll. Die oben genannte Eigenschaft gibt an, dass der Parameter **Fo** sein sollte. In Kombination mit dem **SwitchPrefix**-Attribut des übergeordneten Rule-Elements wird diese Eigenschaft an die ausführbare Datei als **/Fo"Debug\"** übergeben. Dies wird in der Befehlszeile für C/C++ auf der Benutzeroberfläche der Eigenschaftenseite angezeigt.
 
