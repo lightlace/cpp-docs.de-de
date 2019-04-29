@@ -5,11 +5,11 @@ helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
 ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317119"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>VCXPROJ- und PROPS-Dateistruktur
 
@@ -292,5 +292,5 @@ Kopieren Sie eine der PROPS-Dateien in den Ordner „VCTargets“, und passen Si
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von C++-Compiler und erstellen Sie die Eigenschaften in Visual Studio](../working-with-project-properties.md)<br/>
+[Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio](../working-with-project-properties.md)<br/>
 [Eigenschaftenseite: XML-Dateien](property-page-xml-files.md)

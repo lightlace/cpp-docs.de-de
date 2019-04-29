@@ -14,11 +14,11 @@ helpviewer_keywords:
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
 ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317002"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Symboldefinitionen aufheben)
 
@@ -71,8 +71,8 @@ Standardmäßig definiert der Compiler die folgenden Microsoft-spezifische Symbo
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)<br/>
 [/J (Standardzeichentyp ist „unsigned“)](j-default-char-type-is-unsigned.md)<br/>
 [/GR (Laufzeittypinfo aktivieren)](gr-enable-run-time-type-information.md)<br/>
 [/EH (Ausnahmebehandlungsmodell)](eh-exception-handling-model.md)<br/>

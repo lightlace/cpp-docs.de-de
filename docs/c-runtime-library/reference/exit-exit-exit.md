@@ -31,11 +31,11 @@ helpviewer_keywords:
 - function calls, terminating
 - process termination, calling
 ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339350"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
@@ -67,7 +67,7 @@ Beendigungsstatuscode.
 
 Die **beenden**, **_Exit** und **_exit** Funktionen beenden den aufrufenden Prozess. Die **beenden** Funktionsaufrufe Destruktoren für threadlokale Objekte und ruft dann – in der Reihenfolge von Last-in-First-Out (LIFO) – die Funktionen, die von registriert werden **von "atexit"** und **_onexit**, und klicken Sie dann alle Dateipuffer geleert, bevor der Prozess beendet wird. Die **_Exit** und **_exit** Funktionen wird der Prozess beendet, ohne threadlokale Objekte zu zerstören oder Verarbeitung **von "atexit"** oder **_onexit**-Funktionen und ohne den Streampuffer.
 
-Obwohl die **beenden**, **_Exit** und **_exit** Aufrufe geben einen Wert, der Wert in nicht zurück *Status* an die hostumgebung zur Verfügung gestellt wird oder aufrufende Prozess wartet, wenn nach des Prozesses beenden vorhanden. In der Regel der Aufrufer legt den *Status* Wert auf 0 zum Kennzeichnen einer normalen Beendigung oder auf einen anderen Wert einen Fehler an. Die *Status* -Wert steht dem Betriebssystem-Batchbefehl **ERRORLEVEL** und wird durch eine der beiden Konstanten repräsentiert: **EXIT_SUCCESS**, der einen Wert darstellt von 0 (null) oder **EXIT_FAILURE**, der einen Wert von 1 darstellt.
+Obwohl die **beenden**, **_Exit** und **_exit** Aufrufe geben einen Wert, der Wert in nicht zurück *Status* an die hostumgebung zur Verfügung gestellt wird oder aufrufende Prozess wartet, wenn nach des Prozesses beenden vorhanden. In der Regel der Aufrufer legt den *Status* Wert auf 0 zum Kennzeichnen einer normalen Beendigung oder auf einen anderen Wert einen Fehler an. Die *Status* -Wert steht dem Betriebssystem-Batchbefehl **ERRORLEVEL** und wird durch eine der beiden Konstanten repräsentiert: **EXIT_SUCCESS**, der einen Wert von 0 (null) darstellt oder **EXIT_FAILURE**, der einen Wert von 1 darstellt.
 
 Die **beenden**, **_Exit**, **_exit**, **Quick_exit**, **_cexit**, und **_c_exit** Funktionen verhalten sich wie folgt.
 
@@ -97,7 +97,7 @@ Verwenden Sie keine **DLL_PROCESS_ATTACH** aufzurufende **beenden** aus **DllMai
 
 |Funktion|Erforderlicher Header|
 |--------------|---------------------|
-|**Beenden Sie**, **_Exit**, **_exit**|\<process.h> oder\<stdlib.h>|
+|**exit**, **_Exit**, **_exit**|\<process.h> oder\<stdlib.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
