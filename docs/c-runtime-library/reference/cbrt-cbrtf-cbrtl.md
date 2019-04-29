@@ -28,11 +28,11 @@ helpviewer_keywords:
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
 ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341093"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -69,7 +69,7 @@ Die **Cbrt** Funktionen zurück die Kubikwurzel von *x*.
 
 |Eingabe|SEH-Ausnahme|**_matherr** Ausnahme|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|Keine|Keine|
+|± ∞, QNAN, IND|none|none|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -79,7 +79,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cbrt** 
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
-|**Cbrt**, **Cbrtf**, **Cbrtl**|\<math.h>|\<cmath>|
+|**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

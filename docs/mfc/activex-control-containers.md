@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
 ms.openlocfilehash: e8340acafc81447052fcb8d90df8997e81dc4117
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394857"
 ---
 # <a name="activex-control-containers"></a>ActiveX-Steuerelementcontainer
 
@@ -45,7 +45,7 @@ Artikel beschreiben die verschiedenen Themen über das Erstellen eines ActiveX-S
 
 - [ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelementen in einem ActiveX-Steuerelementcontainer](../mfc/programming-activex-controls-in-a-activex-control-container.md)
 
-- [ActiveX-Steuerelementcontainer: Verwenden von Steuerelementen in einem Container für die keine Dialogfelder sind](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
+- [ActiveX-Steuerelementcontainer: Verwenden von Steuerelementen in Containern, die keine Dialogfelder sind](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
 
 Weitere Informationen zur Verwendung von ActiveX-Steuerelemente in einem Dialogfeld finden Sie unter den [Dialog-Editor](../windows/dialog-editor.md) Themen.
 

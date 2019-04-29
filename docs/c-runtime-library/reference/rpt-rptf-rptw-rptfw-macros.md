@@ -87,11 +87,11 @@ helpviewer_keywords:
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
 ms.openlocfilehash: 61748cca2cdfcc2d72b6943bfeedd9597009e20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357494"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT-, _RPTF-, _RPTW- und _RPTFW-Makros
 
@@ -165,7 +165,7 @@ Zwei andere Makros sind vorhanden, die einen Debugbericht generieren. Das [_ASSE
 |-----------|---------------------|
 |**_RPT** Makros|\<crtdbg.h>|
 |**_RPTF** Makros|\<crtdbg.h>|
-|**_RPTW** Makros|\<crtdbg.h>|
+|**_RPTW** macros|\<crtdbg.h>|
 |**_RPTFW** Makros|\<crtdbg.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).

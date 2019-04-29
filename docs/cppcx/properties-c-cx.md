@@ -3,11 +3,11 @@ title: Eigenschaften (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
 ms.openlocfilehash: 8303952beefbbac13db14e148c6441c29a46b3d0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375222"
 ---
 # <a name="properties-ccx"></a>Eigenschaften (C++/CX)
 
@@ -39,4 +39,4 @@ Beachten Sie, dass eine Eigenschaft nicht in einer Memberliste initialisiert wer
 
 [Typsystem](../cppcx/type-system-c-cx.md)<br/>
 [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)
+[Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)

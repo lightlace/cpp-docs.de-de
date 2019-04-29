@@ -25,11 +25,11 @@ helpviewer_keywords:
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
 ms.openlocfilehash: 6bf16e5725916e81e64d80c0a1f96bf502c8826c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320226"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Inlinefunktionserweiterung)
 
@@ -78,5 +78,5 @@ Sie können die `#pragma` [Auto_inline](../../preprocessor/auto-inline.md) Direk
 ## <a name="see-also"></a>Siehe auch
 
 [/O-Optionen (Code optimieren)](o-options-optimize-code.md)<br/>
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

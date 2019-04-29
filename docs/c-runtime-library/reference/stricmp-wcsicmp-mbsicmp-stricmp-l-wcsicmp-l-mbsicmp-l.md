@@ -57,11 +57,11 @@ helpviewer_keywords:
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
 ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353834"
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
@@ -104,7 +104,7 @@ int _mbsicmp_l(
 
 ### <a name="parameters"></a>Parameter
 
-*Zeichenfolge1*, *Zeichenfolge2*<br/>
+*string1*, *string2*<br/>
 Zu vergleichende mit NULL endende Zeichenfolgen.
 
 *locale*<br/>
@@ -124,7 +124,7 @@ Bei einem Fehler **_mbsicmp** gibt **_NLSCMPERROR**, definiert in \<string.h > u
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_stricmp** -Funktion vergleicht der Reihe *string1* und *Zeichenfolge2* nach der Konvertierung der jedes Zeichen in Kleinbuchstaben, und gibt eines Wert, der ihre Beziehung angibt. **_stricmp** unterscheidet sich von **_stricoll** darin, dass die **_stricmp** hat nur Auswirkungen auf Vergleich von **LC_CTYPE**, der bestimmt, welche Zeichen oberen sind und Kleinbuchstaben. Die **_stricoll** Funktion vergleicht Zeichenfolgen gemäß der **LC_CTYPE** und **LC_COLLATE** Kategorien des Gebietsschemas, die die Groß-/Kleinschreibung und Sortierung umfasst die Reihenfolge. Weitere Informationen zu den **LC_COLLATE** Kategorie finden Sie unter [Setlocale](setlocale-wsetlocale.md) und [Gebietsschemakategorien](../../c-runtime-library/locale-categories.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema für gebietsschemaabhängige Verhalten. Die Versionen mit dem Suffix sind identisch, verwenden allerdings das übergebene Gebietsschema. Wenn das Gebietsschema nicht festgelegt wurde, wird das C-Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **_stricmp** -Funktion vergleicht der Reihe *string1* und *Zeichenfolge2* nach der Konvertierung der jedes Zeichen in Kleinbuchstaben, und gibt eines Wert, der ihre Beziehung angibt. **_stricmp** unterscheidet sich von **_stricoll** darin, dass die **_stricmp** hat nur Auswirkungen auf Vergleich von **LC_CTYPE**, der bestimmt, welche Zeichen oberen sind und Kleinbuchstaben. Die **_stricoll** Funktion vergleicht Zeichenfolgen gemäß der **LC_CTYPE** und **LC_COLLATE** Kategorien des Gebietsschemas, die die Groß-/Kleinschreibung und Sortierung umfasst Bestellung. Weitere Informationen zu den **LC_COLLATE** Kategorie finden Sie unter [Setlocale](setlocale-wsetlocale.md) und [Gebietsschemakategorien](../../c-runtime-library/locale-categories.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema für gebietsschemaabhängige Verhalten. Die Versionen mit dem Suffix sind identisch, verwenden allerdings das übergebene Gebietsschema. Wenn das Gebietsschema nicht festgelegt wurde, wird das C-Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > **_stricmp** entspricht **_strcmpi**. Sie können austauschbar verwendet werden, aber **_stricmp** ist der bevorzugte Standard.

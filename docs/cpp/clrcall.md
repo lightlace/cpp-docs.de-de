@@ -7,17 +7,17 @@ helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
 ms.openlocfilehash: bc44feb97223de47f45734f75777ee040d0ebdd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364570"
 ---
 # <a name="clrcall"></a>__clrcall
 
 **Microsoft-spezifisch**
 
-Gibt an, dass eine Funktion nur aus verwaltetem Code aufgerufen werden kann.  Verwendung **__clrcall** für alle virtuellen Funktionen, die nur aus verwaltetem Code aufgerufen wird. Allerdings kann diese Aufrufkonvention nicht für Funktionen verwendet werden, die vom nativem Code aufgerufen werden.
+Gibt an, dass eine Funktion nur aus verwaltetem Code aufgerufen werden kann.  Verwendung **__clrcall** für alle virtuellen Funktionen, die nur aus verwaltetem Code aufgerufen wird. Allerdings kann diese Aufrufkonvention nicht für Funktionen verwendet werden, die vom nativen Code aufgerufen werden.
 
 Verwendung **__clrcall** zur Verbesserung der Leistung beim Aufrufen von einer verwalteten Funktion für eine virtuelle verwaltete Funktion oder verwaltete Funktion mit verwalteter Funktionszeiger.
 
@@ -29,7 +29,7 @@ Wenn `/clr` (nicht `/clr:pure` oder `/clr:safe`) wird verwendet, und **__clrcall
 
 [/ CLR (common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) bedeutet, dass alle Funktionen Funktionszeiger und **__clrcall** und der Compiler nicht erlaubt, dass eine Funktion in der Kompiliereinheit etwas anderes als markiertwerden **__clrcall**. Wenn **/CLR: pure** verwendet wird, **__clrcall** kann nur für Funktionszeiger und externe Deklarationen angegeben werden.
 
-Sie können direkt aufrufen **__clrcall** Funktionen aus vorhandenen C++-Code, die mithilfe von kompiliert wurde **"/ CLR"** solange diese Funktion eine MSIL-Implementierung verfügt. **__clrcall** Funktionen können nicht direkt über Funktionen, die Inline-Asm haben, und rufen die CPU-spezifische Intrinisics, z. B. nicht aufgerufen werden, auch wenn diese Funktionen mit kompiliert werden `/clr`.
+Sie können direkt aufrufen **__clrcall** Funktionen aus vorhandenen C++ Code, der kompiliert wurde **"/ CLR"** solange diese Funktion eine MSIL-Implementierung verfügt. **__clrcall** Funktionen können nicht direkt über Funktionen, die Inline-Asm haben, und rufen die CPU-spezifische Intrinisics, z. B. nicht aufgerufen werden, auch wenn diese Funktionen mit kompiliert werden `/clr`.
 
 **__clrcall** Funktionszeiger nur sollen in der Anwendungsdomäne verwendet werden, in dem sie erstellt wurden.  Statt der Übergabe von **__clrcall** -Funktionszeiger über Anwendungsdomänen hinweg, verwenden Sie <xref:System.CrossAppDomainDelegate>. Weitere Informationen finden Sie unter [Anwendungsdomänen und Visual C++](../dotnet/application-domains-and-visual-cpp.md).
 

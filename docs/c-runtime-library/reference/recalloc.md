@@ -24,11 +24,11 @@ helpviewer_keywords:
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
 ms.openlocfilehash: 3bcc238dcb950a8e30af16efc557e99d933efe92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357720"
 ---
 # <a name="recalloc"></a>_recalloc
 
@@ -73,7 +73,7 @@ Da der neue Block an einem neuen Speicherort sein kann, wird der Zeiger von zur�
 
 **_recalloc** legt **Errno** zu **ENOMEM** , wenn die speicherbelegung fehlschlägt oder gegebenenfalls die Größe des Arbeitsspeichers übersteigt **_HEAP_MAXREQ**. Informationen hierzu und über andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**Recalloc** Aufrufe **Realloc** um die C++ [_set_new_mode](set-new-mode.md) Funktion, um den neuen handlermodus festzulegen. Der neue handlermodus gibt an, ob bei einem Fehler **Realloc** besteht darin, rufen Sie die neue Handlerroutine mit [_set_new_handler](set-new-handler.md). In der Standardeinstellung **Realloc** Ruft die neue Handlerroutine nicht bei einem Fehler, um Speicher zu belegen. Sie können dieses Standardverhalten überschreiben, damit, wenn **_recalloc** ein Fehler auftritt, bei der speicherbelegung **Realloc** die neue Handlerroutine aufruft, in der gleichen Weise wie die **neue** Operator führt, wenn dieser aus demselben Grund fehlschlägt. Um den Standardwert zu überschreiben, rufen Sie
+**Recalloc** Aufrufe **Realloc** um verwenden die C++ [_set_new_mode](set-new-mode.md) Funktion, um den neuen handlermodus festzulegen. Der neue handlermodus gibt an, ob bei einem Fehler **Realloc** besteht darin, rufen Sie die neue Handlerroutine mit [_set_new_handler](set-new-handler.md). In der Standardeinstellung **Realloc** Ruft die neue Handlerroutine nicht bei einem Fehler, um Speicher zu belegen. Sie können dieses Standardverhalten überschreiben, damit, wenn **_recalloc** ein Fehler auftritt, bei der speicherbelegung **Realloc** die neue Handlerroutine aufruft, in der gleichen Weise wie die **neue** Operator führt, wenn dieser aus demselben Grund fehlschlägt. Um den Standardwert zu überschreiben, rufen Sie
 
 ```C
 _set_new_mode(1);

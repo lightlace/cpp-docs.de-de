@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
 ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317951"
 ---
 # <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (umfassen Link "Quelle"-Datei in die PDB-Datei)
 
@@ -44,5 +44,5 @@ Link "Quelle" ist eine Sprache – und unabhängig Quellcodeverwaltungssystem f�
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 [MSVC-Linkeroptionen](linker-options.md)

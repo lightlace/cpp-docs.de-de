@@ -52,11 +52,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
 ms.openlocfilehash: ed5e190f0c64aca3876d1cd1f05c9d75224355cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384763"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -85,7 +85,7 @@ Der Typ des zugrunde liegenden Containers.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Cliext bzw. einer neuen Warteschlange >
+**Header:** \<cliext/queue>
 
 **Namespace:** Cliext
 
@@ -129,7 +129,7 @@ Der Typ des zugrunde liegenden Containers.
 |Interface|Beschreibung|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplizieren Sie ein Objekt.|
-|IPriorityQueue\<-Wert, der Container >|Behalten Sie die generischen Container-Adapter.|
+|IPriorityQueue\<Value, Container>|Behalten Sie die generischen Container-Adapter.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -259,7 +259,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> priority_queue:: container_type (STL/CLR)
+## <a name="container_type"></a> priority_queue::container_type (STL/CLR)
 
 Der Typ des zugrunde liegenden Containers.
 
@@ -534,7 +534,7 @@ c a b
 c b a
 ```
 
-## <a name="get_container"></a> priority_queue:: get_container (STL/CLR)
+## <a name="get_container"></a> priority_queue::get_container (STL/CLR)
 
 Greift auf die zugrunde liegenden Containers.
 
@@ -575,7 +575,7 @@ int main()
 c a b
 ```
 
-## <a name="op_as"></a> priority_queue::Operator = (STL/CLR)
+## <a name="op_as"></a> priority_queue::operator= (STL/CLR)
 
 Ersetzt die kontrollierte Sequenz.
 
@@ -701,10 +701,10 @@ template<typename InIt>
 
 #### <a name="parameters"></a>Parameter
 
-*Inhalt*<br/>
+*cont*<br/>
 Der zu kopierende Container.
 
-*Erste*<br/>
+*first*<br/>
 Anfang des Bereichs, der eingefügt.
 
 *last*<br/>
@@ -1008,7 +1008,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> priority_queue:: size_type (STL/CLR)
+## <a name="size_type"></a> priority_queue::size_type (STL/CLR)
 
 Der Typ eines Abstands zwischen den beiden Elementen mit Vorzeichen.
 

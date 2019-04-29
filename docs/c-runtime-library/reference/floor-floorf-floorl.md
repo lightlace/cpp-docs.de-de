@@ -30,11 +30,11 @@ helpviewer_keywords:
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
 ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333585"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -71,7 +71,7 @@ Die **Floor** Funktionen geben einen Gleitkommawert, der die größte ganze Zahl
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Keine|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
 
 **Floor** verfügt über eine Implementierung, Streaming SIMD Extensions 2 (SSE2) verwendet. Informationen und Einschränkungen zur Verwendung der SSE2-Implementierung finden Sie unter [_set_SSE2_enable](set-sse2-enable.md).
 
@@ -83,7 +83,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von aufrufen können *
 
 |Funktion|Erforderlicher Header|
 |--------------|---------------------|
-|**Floor**, **Floorf**, **Floorl**|\<math.h>|
+|**floor**, **floorf**, **floorl**|\<math.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - msclr::auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
 ms.openlocfilehash: 81d4174943543db708090ad654a911980ecf026d
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388929"
 ---
 # <a name="autogcroot-class"></a>auto_gcroot-Klasse
 
@@ -43,7 +43,7 @@ Der verwaltete Typ eingebettet werden.
  
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren 
  
-|name|Beschreibung| 
+|Name|Beschreibung| 
 |---------|-----------| 
 |[auto_gcroot::auto_gcroot](#auto-gcroot)|Die `auto_gcroot` Konstruktor.| 
 |[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|Die `auto_gcroot` Destruktor.
@@ -51,7 +51,7 @@ Der verwaltete Typ eingebettet werden.
 
 ### <a name="public-methods"></a>Öffentliche Methoden 
 
-|name|Beschreibung| 
+|Name|Beschreibung| 
 |---------|-----------| 
 |[auto_gcroot::attach](#attach)|Fügen Sie `auto_gcroot` auf ein Objekt.| 
 |[auto_gcroot::get](#get)|Ruft das enthaltene Objekt ab.| 
@@ -62,7 +62,7 @@ Der verwaltete Typ eingebettet werden.
  
 ### <a name="public-operators"></a>Öffentliche Operatoren
  
-|name|Beschreibung| 
+|Name|Beschreibung| 
 |---------|-----------|
 |[auto_gcroot::operator-&gt;](#operator-arrow)|Memberzugriffsoperators dargestellt.|  
 |[auto_gcroot::operator=](#operator-assign)|Zuweisungsoperator.|

@@ -1,5 +1,5 @@
 ---
-title: Cosh, Coshf, coshl
+title: cosh, coshf, coshl
 ms.date: 04/11/2018
 apiname:
 - cosh
@@ -29,13 +29,13 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347443"
 ---
-# <a name="cosh-coshf-coshl"></a>Cosh, Coshf, coshl
+# <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
 Berechnet den hyperbolischen Kosinus.
 
@@ -65,8 +65,8 @@ Standardmäßig ist das Ergebnis zu groß, eine **Cosh**, **Coshf**, oder **Cosh
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **SUCHEN**|Keine|**_DOMAIN**|
-|*X* ≥ 7, 104760e + 002|**UNGENAUE**+**OVERFLOW**|**ÜBERLAUF**|
+|± **QNAN**, **IND**|none|**_DOMAIN**|
+|*x* ≥ 7.104760e+002|**INEXACT**+**OVERFLOW**|**ÜBERLAUF**|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -76,7 +76,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cosh** 
 
 |-Routine zurückgegebener Wert|Erforderlicher Header (C)|Erforderlicher Header (C++)|
 |-------------|---------------------|-|
-|**Coshf**, **Cosl**, **Coshl**|\<math.h>|\<cmath> oder \<math.h>|
+|**coshf**, **cosl**, **coshl**|\<math.h>|\<cmath> oder \<math.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

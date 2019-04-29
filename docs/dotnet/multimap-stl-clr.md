@@ -98,11 +98,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
 ms.openlocfilehash: 9cc7dd32f222e68abb45fe8c518d9f378453b372
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384830"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 
@@ -145,7 +145,7 @@ Der Typ der Komponente zusätzliche eines Elements in der kontrollierten Sequenz
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Cliext/Zuordnung >
+**Header:** \<cliext/map>
 
 **Namespace:** Cliext
 
@@ -245,7 +245,7 @@ Löschen oder Entfernen eines Elements Ruft den Destruktor für ihren gespeicher
 
 ## <a name="members"></a>Member
 
-## <a name="begin"></a> multimap:: begin (STL/CLR)
+## <a name="begin"></a> multimap::begin (STL/CLR)
 
 Legt den Anfang der kontrollierten Sequenz fest.
 
@@ -296,7 +296,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="clear"></a> multimap:: Clear (STL/CLR)
+## <a name="clear"></a> multimap::clear (STL/CLR)
 
 Entfernt alle Elemente.
 
@@ -354,7 +354,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="const_iterator"></a> multimap:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> multimap::const_iterator (STL/CLR)
 
 Der Typ eines konstanten Iterators für die gesteuerte Sequenz.
 
@@ -396,7 +396,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reference"></a> multimap:: const_reference (STL/CLR)
+## <a name="const_reference"></a> multimap::const_reference (STL/CLR)
 
 Der Typ eines konstanten Verweises auf ein Element.
 
@@ -441,7 +441,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reverse_iterator"></a> multimap:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> multimap::const_reverse_iterator (STL/CLR)
 
 Der Typ eines konstanten umgekehrten Iterators für die gesteuerte Sequenz.
 
@@ -483,7 +483,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> multimap:: Count (STL/CLR)
+## <a name="count"></a> multimap::count (STL/CLR)
 
 Sucht die Anzahl von Elementen, die einem angegebenen Schlüssel entsprechen.
 
@@ -536,7 +536,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> multimap:: difference_type (STL/CLR)
+## <a name="difference_type"></a> multimap::difference_type (STL/CLR)
 
 Die Typen des Abstands zwischen den beiden Elementen mit Vorzeichen.
 
@@ -643,7 +643,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> multimap:: End (STL/CLR)
+## <a name="end"></a> multimap::end (STL/CLR)
 
 Legt das Ende der kontrollierten Sequenz fest.
 
@@ -696,7 +696,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="equal_range"></a> multimap:: equal_range (STL/CLR)
+## <a name="equal_range"></a> multimap::equal_range (STL/CLR)
 
 Sucht den Bereich, der einem angegebenen Schlüssel entspricht.
 
@@ -757,7 +757,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="erase"></a> multimap:: Erase (STL/CLR)
+## <a name="erase"></a> multimap::erase (STL/CLR)
 
 Entfernt Elemente an den angegebenen Positionen.
 
@@ -771,7 +771,7 @@ bool erase(key_type key)
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang des zu löschenden Bereichs.
 
 *key*<br/>
@@ -850,7 +850,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="find"></a> multimap:: Find (STL/CLR)
+## <a name="find"></a> multimap::find (STL/CLR)
 
 Sucht ein Element, das einem angegebenen Schlüssel entspricht.
 
@@ -1140,7 +1140,7 @@ int main()
 [a 1]
 ```
 
-## <a name="insert"></a> multimap:: Insert (STL/CLR)
+## <a name="insert"></a> multimap::insert (STL/CLR)
 
 Fügt Elemente hinzu.
 
@@ -1156,7 +1156,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang des Bereichs, der eingefügt.
 
 *last*<br/>
@@ -1258,7 +1258,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="iterator"></a> multimap:: Iterator (STL/CLR)
+## <a name="iterator"></a> multimap::iterator (STL/CLR)
 
 Der Typ eines Iterators für die gesteuerte Sequenz.
 
@@ -1300,7 +1300,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> multimap:: key_comp (STL/CLR)
+## <a name="key_comp"></a> multimap::key_comp (STL/CLR)
 
 Kopiert der Delegat für zwei Schlüssel.
 
@@ -1419,7 +1419,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> multimap:: KEY_TYPE (STL/CLR)
+## <a name="key_type"></a> multimap::key_type (STL/CLR)
 
 Der Typ eines Sortierschlüssels.
 
@@ -1464,7 +1464,7 @@ int main()
 a b c
 ```
 
-## <a name="lower_bound"></a> multimap:: lower_bound (STL/CLR)
+## <a name="lower_bound"></a> multimap::lower_bound (STL/CLR)
 
 Sucht den Anfang des Bereichs, der einem angegebenen Schlüssel entspricht.
 
@@ -1538,7 +1538,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 Schlüssel-Wert verwenden.
 
-*zugeordnet*<br/>
+*mapped*<br/>
 Zugeordnet zu suchenden Wert an.
 
 ### <a name="remarks"></a>Hinweise
@@ -1572,7 +1572,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> multimap:: mapped_type (STL/CLR)
+## <a name="mapped_type"></a> multimap::mapped_type (STL/CLR)
 
 Der Typ eines zugeordneten Werts, der jedem Schlüssel zugeordnet ist.
 
@@ -1617,7 +1617,7 @@ int main()
 1 2 3
 ```
 
-## <a name="multimap"></a> multimap:: multimap (STL/CLR)
+## <a name="multimap"></a> multimap::multimap (STL/CLR)
 
 Erstellt ein container-Objekt.
 
@@ -1640,7 +1640,7 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Anfang des Bereichs, der eingefügt.
 
 *last*<br/>
@@ -1790,7 +1790,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_as"></a> multimap::Operator = (STL/CLR)
+## <a name="op_as"></a> multimap::operator= (STL/CLR)
 
 Ersetzt die kontrollierte Sequenz.
 
@@ -1845,7 +1845,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rbegin"></a> multimap:: rbegin (STL/CLR)
+## <a name="rbegin"></a> multimap::rbegin (STL/CLR)
 
 Legt den Anfang der umgekehrten kontrollierten Sequenz fest.
 
@@ -1941,7 +1941,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rend"></a> multimap:: rend (STL/CLR)
+## <a name="rend"></a> multimap::rend (STL/CLR)
 
 Legt das Ende der umgekehrten kontrollierten Sequenz fest.
 
@@ -1994,7 +1994,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="reverse_iterator"></a> multimap:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> multimap::reverse_iterator (STL/CLR)
 
 Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.
 
@@ -2036,7 +2036,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="size"></a> multimap:: Size (STL/CLR)
+## <a name="size"></a> multimap::size (STL/CLR)
 
 Ermittelt die Anzahl von Elementen.
 
@@ -2088,7 +2088,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> multimap:: size_type (STL/CLR)
+## <a name="size_type"></a> multimap::size_type (STL/CLR)
 
 Der Typ eines Abstands zwischen den beiden Elementen mit Vorzeichen.
 
@@ -2136,7 +2136,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> multimap:: Swap (STL/CLR)
+## <a name="swap"></a> multimap::swap (STL/CLR)
 
 Vertauscht den Inhalt von zwei Containern.
 
@@ -2254,7 +2254,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="upper_bound"></a> multimap:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> multimap::upper_bound (STL/CLR)
 
 Sucht das Ende des Bereichs, der einem angegebenen Schlüssel entspricht.
 
@@ -2313,7 +2313,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="value_comp"></a> multimap:: value_comp (STL/CLR)
+## <a name="value_comp"></a> multimap::value_comp (STL/CLR)
 
 Kopiert der Delegat für zwei Elementwerte.
 
@@ -2408,7 +2408,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> multimap:: value_type (STL/CLR)
+## <a name="value_type"></a> multimap::value_type (STL/CLR)
 
 Der Typ eines Elements.
 
@@ -2452,7 +2452,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_neq"></a> Operator! = (Multimap) (STL/CLR)
+## <a name="op_neq"></a> operator!= (multimap) (STL/CLR)
 
 Listen Sie nicht gleich-Vergleich ein.
 
@@ -2523,7 +2523,7 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> Operator&lt; (Multimap) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (multimap) (STL/CLR)
 
 Liste kleiner als Vergleich.
 
@@ -2594,7 +2594,7 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> Operator&lt;= (Multimap) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (multimap) (STL/CLR)
 
 Kleiner oder gleich Liste Vergleich.
 
@@ -2665,7 +2665,7 @@ int main()
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> Operator == (Multimap) (STL/CLR)
+## <a name="op_eq"></a> operator== (multimap) (STL/CLR)
 
 Liste-gleich-Vergleich.
 
@@ -2736,7 +2736,7 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> Operator&gt; (Multimap) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (multimap) (STL/CLR)
 
 Die Liste ist größer als-Vergleich.
 
@@ -2807,7 +2807,7 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> Operator&gt;= (Multimap) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (multimap) (STL/CLR)
 
 Liste, die größer als oder gleich-Vergleich.
 

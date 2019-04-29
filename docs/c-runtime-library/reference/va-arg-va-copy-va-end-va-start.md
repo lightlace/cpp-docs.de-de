@@ -38,11 +38,11 @@ helpviewer_keywords:
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353565"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 
@@ -94,7 +94,7 @@ Parameter, der dem ersten optionalen Argument vorausgeht.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Va_arg**, **Va_copy**, **Va_end**, und **Va_start** Makros ermöglichen auf portierbare Weise auf die Argumente für eine Funktion bei der Funktion akzeptiert eine Variable Anzahl von Argumenten. Es gibt zwei Versionen der Makros: Die in STDARG.H definierten Makros, die mit dem ISO-Standard C99 konform sind, und die in VARARGS.H definierten Makros, die zwar als veraltet markiert sind, aber beibehalten werden, da sie für Code abwärts kompatibel sind, der vor dem ANSI-Standard C89 geschrieben wurde.
+Die **Va_arg**, **Va_copy**, **Va_end**, und **Va_start** Makros ermöglichen auf portierbare Weise auf die Argumente für eine Funktion bei der Funktion akzeptiert eine Variable Anzahl von Argumenten. Es gibt zwei Versionen der Makros: Die Makros, die im STDARG definiert wird. H entsprechen den standard ISO C99; die Makros, die im VARARGS definiert wird. H sind veraltet, jedoch werden beibehalten, für die Abwärtskompatibilität mit Code, der vor der standardmäßigen ANSI-C89 geschrieben wurde.
 
 Diese Makros setzen voraus, dass die Funktion eine feste Anzahl von erforderlichen Argumenten akzeptiert, gefolgt von einer variablen Anzahl von optionalen Argumenten. Die erforderlichen Argumente werden als gewöhnliche Parameter für die Funktion deklariert und können über die Parameternamen aufgerufen werden. Die optionalen Argumente werden über Makros in STDARG.H (oder in VARARGS.H für Code, der vor dem ANSI-Standard C89 geschrieben wurde) aufgerufen, wodurch ein Zeiger auf das erste optionale Argument in der Argumentliste festgelegt wird und zurückgesetzt wird, nachdem das Verarbeiten der Argumente abgeschlossen ist.
 

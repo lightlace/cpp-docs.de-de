@@ -63,11 +63,11 @@ helpviewer_keywords:
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
 ms.openlocfilehash: 6ec4ff879b70e4d2cc16a3328217660db695e859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377137"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt;-Funktionen
 
@@ -698,7 +698,7 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Flag*<br/>
+*Kennzeichnen*<br/>
 Ein Zeiger auf ein `atomic_flag` -Objekt.
 
 ## <a name="atomic_flag_clear_explicit"></a> atomic_flag_clear_explicit
@@ -712,7 +712,7 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>Parameter
 
-*Flag*<br/>
+*Kennzeichnen*<br/>
 Ein Zeiger auf ein `atomic_flag` -Objekt.
 
 *Reihenfolge*<br/>
@@ -729,7 +729,7 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Flag*<br/>
+*Kennzeichnen*<br/>
 Ein Zeiger auf ein `atomic_flag` -Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -747,7 +747,7 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>Parameter
 
-*Flag*<br/>
+*Kennzeichnen*<br/>
 Ein Zeiger auf ein `atomic_flag` -Objekt.
 
 *Reihenfolge*<br/>
@@ -970,7 +970,7 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Ein Wert vom Typ `Ty`.
 
 ### <a name="return-value"></a>Rückgabewert

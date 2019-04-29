@@ -43,11 +43,11 @@ helpviewer_keywords:
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
 ms.openlocfilehash: c8c2b3b491e2e7265829fa88580529dc757ace8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376470"
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -120,8 +120,8 @@ Die UCRT-Versionen dieser Funktionen unterstützen keine Konvertierung von Fortr
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Strtod**, **_strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> oder &lt;stdlib.h> |
-|**Wcstod**, **_wcstod_l**|C: &lt;stdlib.h> oder &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> oder &lt;wchar.h> |
+|**strtod**, **_strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> oder &lt;stdlib.h> |
+|**wcstod**, **_wcstod_l**|C: &lt;stdlib.h> oder &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> oder &lt;wchar.h> |
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

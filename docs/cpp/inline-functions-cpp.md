@@ -13,11 +13,11 @@ helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
 ms.openlocfilehash: 55cf598877c2447e0f80e783b53b290699042b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400590"
 ---
 # <a name="inline-functions-c"></a>Inlinefunktionen [C++]
 
@@ -78,7 +78,7 @@ Die Verwendung von Inlinefunktionen kann das Programm schneller machen, da so de
 
 Der Compiler behandelt die Inlineerweiterungsoptionen und -Schlüsselwörter als Vorschläge. Es gibt keine Garantie, dass Funktionen inline gestellt werden. Sie können den Compiler auf eine bestimmte Funktion, nicht zwingen, trotz der **"__forceinline"** Schlüsselwort. Beim Kompilieren mit **"/ CLR"**, der Compiler wird nicht Inline eine Funktion, wenn Sicherheitsattribute auf die Funktion angewendet.
 
-Die **Inline** Schlüsselwort ist nur in C++ verfügbar. Die **"__inline"** und **"__forceinline"** Schlüsselwörter sind in C und C++ verfügbar. Für die Kompatibilität mit früheren Versionen **_inline** und **_forceinline** sind Synonyme für **"__inline"**, und **"__forceinline"** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) angegeben ist.
+Die **Inline** Schlüsselwort ist nur in C++ verfügbar. Die **"__inline"** und **"__forceinline"** Schlüsselwörter finden Sie in C und C++. Für die Kompatibilität mit früheren Versionen **_inline** und **_forceinline** sind Synonyme für **"__inline"**, und **"__forceinline"** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) angegeben ist.
 
 Die **Inline** -Schlüsselwort weist den Compiler an, dass die Inlineerweiterung bevorzugt wird. Jedoch kann der Compiler eine separate Instanz der Funktion erstellen (instanziieren) und Standardaufrufbindungen erstellen, anstatt den Code inline einzufügen. Zwei Fälle, in denen dies auftreten kann, sind:
 
@@ -164,7 +164,7 @@ Weitere Informationen zur Verwendung der **Inline** Spezifizierer, finden Sie un
 
 ## <a name="when-to-use-inline-functions"></a>Verwendungsmöglichkeiten von Inlinefunktionen
 
-Inlinefunktionen werden am besten für kleine Funktionen verwendet, z. B. Zugriff auf private Datenmember. Ein- oder zweispurige "Accessor"-Funktionen geben in erster Linie Zustandsinformationen über Objekte ab. Kurze Funktionen werden von der Restkapazität des Funktionsaufrufs beeinflusst. Längere Funktionen benötigen proportional weniger Zeit in der Aufruf-/Rückgabesequenz und profitieren weniger vom Inlining.
+Inlinefunktionen werden am besten für kleine Funktionen verwendet, z. B. Zugriff auf private Datenmember. Ein- oder zweispurige „Zugriffsmethoden“-Funktionen geben in erster Linie Zustandsinformationen über Objekte ab. Kurze Funktionen werden von der Restkapazität des Funktionsaufrufs beeinflusst. Längere Funktionen benötigen proportional weniger Zeit in der Aufruf-/Rückgabesequenz und profitieren weniger vom Inlining.
 
 Ein `Point` Klasse kann wie folgt definiert werden:
 

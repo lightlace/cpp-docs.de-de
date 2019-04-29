@@ -11,11 +11,11 @@ helpviewer_keywords:
 - recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
 ms.openlocfilehash: 9e589f00ec0512794d14accc6bb33c0e7adbd378
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397727"
 ---
 # <a name="recordset-performing-a-join-odbc"></a>Recordset: Ausführen einer Verknüpfung (ODBC)
 

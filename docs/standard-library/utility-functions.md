@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362366"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt;-Funktionen
 
@@ -42,7 +42,7 @@ T exchange(T& val, Other&& new_val)
 *val*<br/>
 Das Objekt, das den Wert von „new_val“ erhält.
 
-*"new_val"*<br/>
+*new_val*<br/>
 Das Objekt, dessen Wert nach „val“ kopiert oder verschoben wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -100,7 +100,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*Type*|Der Typ des übergebenen Werts *Arg*, die möglicherweise nicht den Typ des *Arg*. In der Regel bestimmt durch ein Vorlagenargument der Weiterleitungsfunktion.|
-|*arg*|Das umzuwandelnde Argument.|
+|*Arg*|Das umzuwandelnde Argument.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -170,7 +170,7 @@ Der Typ des ersten Paarelements.
 *T2*<br/>
 Der Typ des zweiten Paarelements.
 
-*Pull Request*<br/>
+*pr*<br/>
 Das Paar, für das die Auswahl durchgeführt werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -232,10 +232,10 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>Parameter
 
-*Wert1*<br/>
+*Val1*<br/>
 Ein Wert, der das erste Element aus `pair` initialisiert.
 
-*Wert2*<br/>
+*Val2*<br/>
 Ein Wert, der das zweite Element aus `pair` initialisiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -276,7 +276,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*Type*|Ein Typ, abgeleitet aus dem Typ des Arguments übergeben *Arg*zusammen mit den verweisreduzierungsregeln.|
-|*arg*|Das umzuwandelnde Argument. Auch wenn der Typ des *Arg* scheinbar als Rvalue-Verweis, angegeben werden `move` auch Lvalue-Argumente akzeptiert, da Lvalue-Verweise an Rvalue-Verweise gebunden werden können.|
+|*Arg*|Das umzuwandelnde Argument. Auch wenn der Typ des *Arg* scheinbar als Rvalue-Verweis, angegeben werden `move` auch Lvalue-Argumente akzeptiert, da Lvalue-Verweise an Rvalue-Verweise gebunden werden können.|
 
 ### <a name="return-value"></a>Rückgabewert
 

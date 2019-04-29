@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
 ms.openlocfilehash: 64c70b619380d7c2ed4aaaecad3ee01a1d0f79c7
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383320"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid-Wertklasse
 
@@ -208,4 +208,4 @@ Ein [GUID-Struktur](https://msdn.microsoft.com/library/windows/desktop/aa373931)
 
 ## <a name="see-also"></a>Siehe auch
 
-[Platform-namespace](../cppcx/platform-namespace-c-cx.md)
+[Plattformnamespace](../cppcx/platform-namespace-c-cx.md)

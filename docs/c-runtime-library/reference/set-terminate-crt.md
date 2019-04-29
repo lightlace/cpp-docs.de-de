@@ -24,11 +24,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
 ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356445"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -51,7 +51,7 @@ Gibt einen Zeiger auf die vorherige Funktion registriert **Set_terminate** , dam
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Set_terminate** -Funktion installiert *TermFunction* wie die Funktion wird aufgerufen, indem **beenden**. **Set_terminate** mit C++-Ausnahmebehandlung verwendet wird, und kann zu einem beliebigen Zeitpunkt im Programm aufgerufen werden, bevor die Ausnahme ausgelöst wird. **Beenden Sie** Aufrufe [Abbrechen](abort.md) standardmäßig. Sie können diese Standardeinstellung ändern, indem Sie Ihre eigene Beendigungsfunktion schreiben und Aufrufen **Set_terminate** mit dem Namen Ihrer Funktion als Argument. **Beenden Sie** Ruft die letzte Funktion, die als Argument an **Set_terminate**. Nach Ausführung aller Bereinigungsaufgaben gewünschten *TermFunction* sollte das Programm zu beenden. Wenn es nicht beendet wird (Wenn sie sich an den Aufrufer zurückgibt), [Abbrechen](abort.md) aufgerufen wird.
+Die **Set_terminate** -Funktion installiert *TermFunction* wie die Funktion wird aufgerufen, indem **beenden**. **Set_terminate** wird zusammen mit C++ Ausnahmebehandlung und kann zu einem beliebigen Zeitpunkt im Programm aufgerufen werden, bevor die Ausnahme ausgelöst wird. **Beenden Sie** Aufrufe [Abbrechen](abort.md) standardmäßig. Sie können diese Standardeinstellung ändern, indem Sie Ihre eigene Beendigungsfunktion schreiben und Aufrufen **Set_terminate** mit dem Namen Ihrer Funktion als Argument. **Beenden Sie** Ruft die letzte Funktion, die als Argument an **Set_terminate**. Nach Ausführung aller Bereinigungsaufgaben gewünschten *TermFunction* sollte das Programm zu beenden. Wenn es nicht beendet wird (Wenn sie sich an den Aufrufer zurückgibt), [Abbrechen](abort.md) aufgerufen wird.
 
 In einer Multithreadumgebung werden die Beendigungsfunktionen für jeden Thread separat verwaltet. Jeder neue Thread muss eine eigene Beendigungsfunktion installieren. Daher ist jeder Thread für die eigene Beendigungsbehandlung verantwortlich.
 

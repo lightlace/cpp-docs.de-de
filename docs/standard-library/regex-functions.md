@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: 47b3ae9d59db7c39d7b9667038d216f24530d5dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369604"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt;-Funktionen
 
@@ -108,7 +108,7 @@ Die Zuweisungsklasse der Zeichenfolge.
 *flags*<br/>
 Flags für Übereinstimmungen.
 
-*Erste*<br/>
+*first*<br/>
 Anfang der Sequenz, die übereinstimmen soll.
 
 *last*<br/>
@@ -120,7 +120,7 @@ Die Übereinstimmungsergebnisse. Elementtyp entspricht: [Smatch](../standard-lib
 *ptr*<br/>
 Zeiger auf den Anfang der Sequenz, die übereinstimmen soll. Wenn *Ptr* ist `char*`, verwenden Sie dann `cmatch` und `regex`. Wenn *Ptr* ist `wchar_t*` dann `wcmatch` und `wregex`.
 
-*RE*<br/>
+*re*<br/>
 Der reguläre Ausdruck, der übereinstimmen soll. Typ `regex` für `string` und `char*`, oder `wregex` für `wstring` und `wchar_t*`.
 
 *str*<br/>
@@ -238,10 +238,10 @@ Der zu entsprechende Elementtyp.
 *flags*<br/>
 Flags für Übereinstimmungen.
 
-*Erste*<br/>
+*first*<br/>
 Anfang der Sequenz, die übereinstimmen soll.
 
-*FMT*<br/>
+*fmt*<br/>
 Das Format für Ersetzungen.
 
 *last*<br/>
@@ -250,7 +250,7 @@ Ende der Sequenz, die übereinstimmen soll.
 *out*<br/>
 Der Ausgabeiterator.
 
-*RE*<br/>
+*re*<br/>
 Der reguläre Ausdruck, der übereinstimmen soll.
 
 *str*<br/>
@@ -377,7 +377,7 @@ Die Zuweisungsklasse der Zeichenfolge.
 *flags*<br/>
 Flags für Übereinstimmungen.
 
-*Erste*<br/>
+*first*<br/>
 Anfang der Sequenz, die übereinstimmen soll.
 
 *last*<br/>
@@ -389,7 +389,7 @@ Die Übereinstimmungsergebnisse.
 *ptr*<br/>
 Zeiger auf den Anfang der Sequenz, die übereinstimmen soll.
 
-*RE*<br/>
+*re*<br/>
 Der reguläre Ausdruck, der übereinstimmen soll.
 
 *str*<br/>

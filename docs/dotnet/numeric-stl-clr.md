@@ -18,11 +18,11 @@ helpviewer_keywords:
 - partial_sum function [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
 ms.openlocfilehash: 0311b36ec1190631e053eeade443939703e69103
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384802"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 
@@ -36,7 +36,7 @@ Definiert containervorlagenfunktionen, die Algorithmen, die für die numerische 
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Cliext/Numeric >
+**Header:** \<cliext/numeric>
 
 **Namespace:** Cliext
 
@@ -68,7 +68,7 @@ template<class _InIt, class _Ty, class _Fn2> inline
 
 Diese Funktion verhält sich wie die numerischen C++-Standardbibliothek-Funktion `accumulate`. Weitere Informationen finden Sie unter [sammeln](../standard-library/numeric-functions.md#accumulate).
 
-## <a name="adjacent_difference"></a> Adjacent_difference (STL/CLR)
+## <a name="adjacent_difference"></a> adjacent_difference (STL/CLR)
 
 Berechnet die aufeinander folgenden Unterschiede zwischen einem Element und seinem Vorgänger in einem Eingabebereich und gibt die Ergebnisse in einem Zielbereich aus oder berechnet das Ergebnis einer allgemeinen Prozedur, in der der Vorgang zum Feststellen von Unterschieden durch einen anderen angegebenen binären Vorgang ersetzt wird.
 
@@ -87,7 +87,7 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 Diese Funktion verhält sich wie die numerischen C++-Standardbibliothek-Funktion `adjacent_difference`. Weitere Informationen finden Sie unter [Adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference).
 
-## <a name="inner_product"></a> Inner_product (STL/CLR)
+## <a name="inner_product"></a> inner_product (STL/CLR)
 
 Berechnet die Summe des elementweisen Produkts von zwei Bereichen und fügt sie einem angegebenen Anfangswert hinzu oder berechnet das Ergebnis einer allgemeinen Prozedur, in der die Summen- und Produktvorgänge durch andere angegebene binäre Vorgänge ersetzt werden.
 
@@ -107,7 +107,7 @@ template<class _InIt1, class _InIt2, class _Ty, class _Fn21,
 
 Diese Funktion verhält sich wie die numerischen C++-Standardbibliothek-Funktion `inner_product`. Weitere Informationen finden Sie unter [Inner_product](../standard-library/numeric-functions.md#inner_product).
 
-## <a name="partial_sum"></a> Partial_sum (STL/CLR)
+## <a name="partial_sum"></a> partial_sum (STL/CLR)
 
 Berechnet eine Reihe von Summen in einem Eingabebereich vom ersten Element bis der `i`th-Element und speichert das Ergebnis jeder Summe im `i`th-Element eines Zielbereichs oder berechnet das Ergebnis einer allgemeinen Prozedur, in dem der Summenvorgang wird von einem anderen angegebenen binären Vorgang ersetzt wird.
 

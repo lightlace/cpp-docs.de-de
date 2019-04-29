@@ -26,11 +26,11 @@ helpviewer_keywords:
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
 ms.openlocfilehash: 9a49ec403b1cb95407b0a366accf1d9374d9cb22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333247"
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 
@@ -54,7 +54,7 @@ Ausnahmecode.
 *excInfo*<br/>
 Zeiger zur Windows NT-Ausnahmeinformationsstruktur
 
-*Ereignishandler*<br/>
+*handler*<br/>
 Zeiger zur IEEE-Traphandlerroutine des Benutzers.
 
 ## <a name="return-value"></a>Rückgabewert

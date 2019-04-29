@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::to_string [C++]
 - std::to_wstring [C++]
 ms.openlocfilehash: d10af9bc32acd730db1fe9da3775ac2aa84e5fff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412344"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt;-Funktionen
 
@@ -82,7 +82,7 @@ Der Eingabestream, aus dem eine Zeichenfolge extrahiert werden soll.
 *str*<br/>
 Die Zeichenfolge, in die die Zeichen aus dem Eingabestream gelesen werden.
 
-*Delim*<br/>
+*delim*<br/>
 Das Zeilentrennzeichen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -176,7 +176,7 @@ double stod(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*str*|Die zu konvertierende Zeichenfolge.|
-|*IDX*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
+|*idx*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -205,7 +205,7 @@ float stof(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*str*|Die zu konvertierende Zeichenfolge.|
-|*IDX*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
+|*idx*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -240,7 +240,7 @@ Der Ganzzahlwert.
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*str*|Die zu konvertierende Zeichenfolge.|
-|*IDX*|Enthält den Index des ersten Zeichens ohne Konvertierung bei der Rückgabe.|
+|*idx*|Enthält den Index des ersten Zeichens ohne Konvertierung bei der Rückgabe.|
 |*base*|Die zu verwendende Zahlenbasis.|
 
 ### <a name="remarks"></a>Hinweise
@@ -272,7 +272,7 @@ long stol(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*str*|Die zu konvertierende Zeichenfolge.|
-|*IDX*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
+|*idx*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
 |*base*|Die zu verwendende Zahlenbasis.|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -302,7 +302,7 @@ double stold(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*str*|Die zu konvertierende Zeichenfolge.|
-|*IDX*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
+|*idx*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -333,7 +333,7 @@ long long stoll(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*str*|Die zu konvertierende Zeichenfolge.|
-|*IDX*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
+|*idx*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
 |*base*|Die zu verwendende Zahlenbasis.|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -365,7 +365,7 @@ unsigned long stoul(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*str*|Die zu konvertierende Zeichenfolge.|
-|*IDX*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
+|*idx*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
 |*base*|Die zu verwendende Zahlenbasis.|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -397,7 +397,7 @@ unsigned long long stoull(
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*str*|Die zu konvertierende Zeichenfolge.|
-|*IDX*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
+|*idx*|Der Indexwert des ersten Zeichens ohne Konvertierung.|
 |*base*|Die zu verwendende Zahlenbasis.|
 
 ### <a name="return-value"></a>Rückgabewert

@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
 ms.openlocfilehash: c976f9ec72929f2c8ff91fb9f9594d91c7457365
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331024"
 ---
 # <a name="smart-pointers-modern-c"></a>Intelligente Zeiger (Modern C++)
 
@@ -49,7 +49,7 @@ Dieses Beispiel verdeutlicht die folgenden wesentlichen Schritte für die Verwen
 
 1. Lassen Sie den intelligenten Zeiger das Objekt löschen.
 
-Intelligente Zeiger sind dafür konzipiert, im Hinblick auf Leistung und Arbeitsspeicher so effizient wie möglich sein. Beispielsweise ist der einzige Datenmember in `unique_ptr` der gekapselte Zeiger. Dies bedeutet, dass `unique_ptr` genau die gleiche Größe hat wie dieser Zeiger, entweder vier oder acht Bytes. Der Zugriff auf gekapselte Zeiger mithilfe der überladenen Methoden * und -> des intelligenten Zeigers ist nicht wesentlich langsamer als der direkte Zugriff auf Rohzeiger.
+Intelligente Zeiger sind dafür konzipiert, im Hinblick auf Leistung und Arbeitsspeicher so effizient wie möglich sein. Beispielsweise ist der einzige Datenmember in `unique_ptr` der gekapselte Zeiger. Dies bedeutet, dass `unique_ptr` genau die gleiche Größe hat wie dieser Zeiger, entweder vier oder acht Bytes. Zugreifen auf den gekapselten Zeiger mit den intelligenten Zeiger, die überladen * und -> ist nicht wesentlich langsamer als der direkte Zugriff auf das unformatierte Zeiger.
 
 Intelligente Zeiger verfügen über eigene Memberfunktionen, auf die mithilfe der Punktnotation zugegriffen wird. Beispielsweise verfügen einige intelligente Zeiger der C++-Standardbibliothek eine rücksetzungsmemberfunktion, die Besitz des Zeigers freigibt. Dies ist hilfreich, wenn Sie den Arbeitsspeicher des intelligenten Zeigers freigeben möchten, bevor dieser ungültig wird, wie im folgenden Beispiel gezeigt.
 

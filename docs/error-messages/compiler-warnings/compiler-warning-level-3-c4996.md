@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57816424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401500"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilerwarnung (Stufe 3) C4996
 
@@ -19,7 +19,7 @@ Der Compiler hat eine veraltete Deklaration gefunden. **Diese Warnung ist immer 
 
 Dies sind einige allgemeine C4996-Nachrichten, die von C-Laufzeitbibliothek und der Standardbibliothek, aber keine vollständige Liste generiert. Folgen Sie den Links, oder Lesen Sie weiter nach Möglichkeiten, um das Problem zu beheben oder die Warnung deaktivieren.
 
-- [Der POSIX-Name für dieses Element ist veraltet. Verwenden Sie stattdessen den ISO C- und C++-konformen Namen: *New_name*. Details finden Sie in der Onlinehilfe.](#posix-function-names)
+- [Der POSIX-Name für dieses Element ist veraltet. Verwenden Sie stattdessen die ISO-C und C++ -konformen Namen: *New_name*. Details finden Sie in der Onlinehilfe.](#posix-function-names)
 
 - [Diese Funktion oder Variable möglicherweise unsicher. Erwägen Sie die Verwendung *sichere_version* stattdessen. Verwenden Sie zum Deaktivieren der veraltungswarnung \_CRT\_SECURE\_keine\_WARNUNGEN.  Details finden Sie in der Onlinehilfe.](#unsafe-crt-library-functions)
 
@@ -65,7 +65,7 @@ Hier sind einige der häufige Fehlerquellen C4996 Warnungen und Fehler.
 
 ### <a name="posix-function-names"></a>POSIX-Funktionsnamen
 
-**Der POSIX-Name für dieses Element ist veraltet. Verwenden Sie stattdessen den ISO C- und C++-konformen Namen:** *New_name*. **Finden Sie in der Onlinehilfe für Details.**
+**Der POSIX-Name für dieses Element ist veraltet. Verwenden Sie stattdessen die ISO-C und C++ -konformen Namen:** *New_name*. **Finden Sie in der Onlinehilfe für Details.**
 
 Microsoft hat einige POSIX-Funktionen in der CRT mit C99 und C ++ 03 festgelegten Regeln für die Implementierung definierten globalen Funktionsnamen entsprechen umbenannt. Nur die ursprünglichen POSIX-Namen sind veraltet, nicht die Funktionen selbst. In den meisten Fällen wurde dem POSIX-Funktionsnamen ein führender Unterstrich hinzugefügt, um einen mit dem Standard-konformen Namen zu erzielen. Der Compiler gibt für den ursprünglichen Funktionsnamen eine veraltungswarnung aus, und schlägt den bevorzugten Namen vor.
 

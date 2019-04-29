@@ -7,11 +7,11 @@ helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
 ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369805"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -212,11 +212,11 @@ Dieser Code zeigt zwei verschiedene Randomisierungen – Randomisierungen eines 
 
 URNGs werden oft anhand folgender Eigenschaften beschrieben:
 
-1. **Periodenlänge**: Anzahl von Iterationen, die für eine Wiederholung der generierten Zahlensequenz erforderlich sind. Je länger, desto besser.
+1. **Periodenlänge**: Wie viele Iterationen dauert es, und wiederholen die Sequenz von Zahlen generiert. Je länger, desto besser.
 
-2. **Leistung**: Geschwindigkeit und Speicherplatzbedarf der Generierung von Zahlen. Je kürzer, desto besser.
+2. **Leistung**: Wie schnell die Zahlen generiert werden können und wie viel Speicher dauert. Je kürzer, desto besser.
 
-3. **Qualität**: Ähnlichkeit der generierten Sequenz mit wirklich zufälligen Zahlen. Dies wird häufig als „*Zufallscharakter*“ bezeichnet.
+3. **Qualität**: Wie in der Nähe der generierten Sequenz mit wirklich zufälligen Zahlen. Dies wird häufig als „*Zufallscharakter*“ bezeichnet.
 
 Den folgenden Abschnitten werden die uniform random Number-Generators (URNGs) zur Verfügung gestellt, der \<random >-Header.
 
@@ -425,7 +425,7 @@ Jede Engine und jeder Engine-Adapter haben die folgenden Member:
 
 - `result_type operator()` gibt Werte zurück, die gleichmäßig zwischen `min()` und `max()` verteilt werden.
 
-- `result_type min()` gibt den vom `operator()` des Generators zurückgegeben Mindestwert zurück. Moduladapter verwenden das `min()`-Ergebnis des Basismoduls.
+- `result_type min()` gibt den vom `operator()` des Generators zurückgegeben Mindestwert zurück. Engine-Adapter verwenden das `min()`-Ergebnis der Basis-Engine.
 
 - `result_type max()` gibt den vom `operator()` des Generators zurückgegeben Höchstwert zurück. Wenn `result_type` ein Integraltyp (Ganzzahlwerttyp) ist, ist `max()` der Höchstwert, der tatsächlich zurückgegeben werden kann (inklusiv). Wenn `result_type` ein Gleitkommatyp (Echtwerttyp) ist, ist `max()` der kleinste Wert, der größer als alle Werte ist, die zurückgegeben werden können (nicht-inklusiv). Engine-Adapter verwenden das `max()`-Ergebnis der Basis-Engine.
 

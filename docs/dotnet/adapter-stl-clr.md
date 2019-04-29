@@ -50,11 +50,11 @@ helpviewer_keywords:
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
 ms.openlocfilehash: d5c554439d9bb418b9b62484ee10cd6917cf1777
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397678"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -68,7 +68,7 @@ Der STL/CLR-Header `<cliext/adapter>` gibt zwei Vorlagenklassen (`collection_ada
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Cliext/Adapter >
+**Header:** \<cliext/adapter>
 
 **Namespace:** Cliext
 
@@ -85,7 +85,7 @@ Der STL/CLR-Header `<cliext/adapter>` gibt zwei Vorlagenklassen (`collection_ada
 
 ## <a name="members"></a>Member
 
-## <a name="collection_adapter"></a> Collection_adapter (STL/CLR)
+## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
 
 Dient als Wrapper für eine .NET Collection für die Verwendung als STL/CLR-Container. Ein `collection_adapter` ist eine Vorlagenklasse, die ein einfaches STL/CLR-Container-Objekt beschreibt. Es dient als Wrapper für eine Schnittstelle (Base Class Library, BCL) und gibt ein Iteratorpaar, die Sie verwenden, um die kontrollierte Sequenz zu bearbeiten.
 
@@ -410,7 +410,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="end"></a> collection_adapter::End (STL/CLR)
+## <a name="end"></a> collection_adapter::end (STL/CLR)
 
 Legt das Ende der kontrollierten Sequenz fest.
 
@@ -455,7 +455,7 @@ int main()
 a b c
 ```
 
-## <a name="iterator"></a> collection_adapter::Iterator (STL/CLR)
+## <a name="iterator"></a> collection_adapter::iterator (STL/CLR)
 
 Der Typ eines Iterators für die gesteuerte Sequenz.
 
@@ -600,7 +600,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_eq"></a> collection_adapter::Operator = (STL/CLR)
+## <a name="op_eq"></a> collection_adapter::operator= (STL/CLR)
 
 Ersetzt das gespeicherte BCL-Handle.
 
@@ -657,7 +657,7 @@ a b c
 a b c
 ```
 
-## <a name="reference"></a> collection_adapter::Reference (STL/CLR)
+## <a name="reference"></a> collection_adapter::reference (STL/CLR)
 
 Der Typ eines Verweises auf ein Element.
 
@@ -705,7 +705,7 @@ int main()
 a b c
 ```
 
-## <a name="size"></a> collection_adapter::Size (STL/CLR)
+## <a name="size"></a> collection_adapter::size (STL/CLR)
 
 Ermittelt die Anzahl von Elementen.
 
@@ -793,7 +793,7 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="swap"></a> collection_adapter::Swap (STL/CLR)
+## <a name="swap"></a> collection_adapter::swap (STL/CLR)
 
 Vertauscht den Inhalt von zwei Containern.
 
@@ -927,7 +927,7 @@ template<typename Iter>
 *Iter*<br/>
 Der Typ der Wrapper-Iteratoren.
 
-*Erste*<br/>
+*first*<br/>
 Erste Iterator zu umschließen.
 
 *last*<br/>
@@ -989,7 +989,7 @@ SyncRoot not nullptr = True
 | a b c |
 ```
 
-## <a name="range_adapter"></a> Range_adapter (STL/CLR)
+## <a name="range_adapter"></a> range_adapter (STL/CLR)
 
 Eine Vorlagenklasse, die ein Paar von Iteratoren, die verwendet werden umschließt, um mehrere (Base Class Library, BCL)-Schnittstellen zu implementieren. Sie verwenden die Range_adapter einen STL/CLR-Bereich bearbeiten, als handele es sich um eine BCL-Auflistung.
 
@@ -1034,7 +1034,7 @@ Der Typ, der die umschlossenen Iteratoren zugeordnet wird.
 
 Die Range_adapter speichert ein Paar von Iteratoren, die wiederum eine Sequenz von Elementen zu begrenzen. Das Objekt implementiert vier BCL-Schnittstellen, mit denen Sie die Elemente, in Reihenfolge durchlaufen. Sie verwenden diese Vorlagenklasse zum Bearbeiten von STL/CLR-Bereiche, ähnlich wie die BCL-Container.
 
-## <a name="range_adapter_op_eq"></a> range_adapter::Operator = (STL/CLR)
+## <a name="range_adapter_op_eq"></a> range_adapter::operator= (STL/CLR)
 
 Ersetzt den gespeicherten Iterator-Paar.
 
@@ -1106,7 +1106,7 @@ range_adapter(Iter first, Iter last);
 
 #### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Erste Iterator zu umschließen.
 
 *last*<br/>

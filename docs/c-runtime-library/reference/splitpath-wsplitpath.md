@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
 ms.openlocfilehash: d079bd17912c0711a4e1fbadadf12430520f2c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355002"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -68,7 +68,7 @@ void _wsplitpath(
 *path*<br/>
 Vollständiger Pfad
 
-*Laufwerk*<br/>
+*drive*<br/>
 Laufwerkbuchstabe, gefolgt von einem Doppelpunkt (**:**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie nicht der Buchstabe des Laufwerks erforderlich ist.
 
 *dir*<br/>
@@ -98,7 +98,7 @@ Jeder Puffer muss so groß wie die entsprechende Manifestkonstante sein, damit e
 
 In der folgenden Tabelle werden die Werte der Manifestkonstanten aufgelistet.
 
-|name|Wert|
+|Name|Wert|
 |----------|-----------|
 |**_MAX_DRIVE**|3|
 |**_MAX_DIR**|256|

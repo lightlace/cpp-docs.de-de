@@ -17,11 +17,11 @@ helpviewer_keywords:
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
 ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330842"
 ---
 # <a name="string-and-character-literals--c"></a>Zeichenfolgen- und Zeichenliterale (C++)
 
@@ -112,13 +112,13 @@ Es gibt drei Arten von Escapesequenzen: einfache, oktale und hexadezimale. Escap
 | Umgekehrter Schrägstrich | \\\\ |
 | Horizontaler Tabulator | \\t |
 | Fragezeichen | ? - oder einen \\? |
-| Vertikaler Tabulator | \\V |
+| Vertikaler Tabulator | \\v |
 | Einfaches Anführungszeichen | \\' |
-| Rückschritt | \\B |
+| Rückschritt | \\b |
 | Doppeltes Anführungszeichen | \\" |
-| Wagenrücklauf | \\R |
+| Wagenrücklauf | \\r |
 | das Nullzeichen | \\0 |
-| Seitenvorschub | \\F |
+| Seitenvorschub | \\f |
 | Oktal | \\ooo |
 | Warnung (Glocke) | \\a |
 | Hexadezimal | \\xhhh |
@@ -254,7 +254,7 @@ auto s4 = U"hello"; // const char32_t*
 
 ### <a name="raw-string-literals-c11"></a>Unformatierte Zeichenfolgenliterale (C++11)
 
-Ein unformatiertes Zeichenfolgenliteral ist ein mit Null endendes Array – eines beliebigen Zeichentyps –, das jedes Schriftzeichen, einschließlich der doppelte Anführungszeichen ("), umgekehrtem Schrägstrich enthält (\\), oder die Zeilenendemarke enthält. Unformatierte Zeichenfolgenliterale werden häufig in regulären Ausdrücken, die Zeichenklassen verwenden, und in HTML-Zeichenfolgen und XML-Zeichenfolgen verwendet. Beispiele finden Sie im folgenden Artikel: [Bjarne Stroustrups FAQ zu C++11](http://www.stroustrup.com/C++11FAQ.html).
+Ein unformatiertes Zeichenfolgenliteral ist ein mit Null endendes Array – eines beliebigen Zeichentyps –, das jedes Schriftzeichen, einschließlich der doppelte Anführungszeichen ("), umgekehrtem Schrägstrich enthält (\\), oder die Zeilenendemarke enthält. Unformatierte Zeichenfolgenliterale werden häufig in regulären Ausdrücken, die Zeichenklassen verwenden, und in HTML-Zeichenfolgen und XML-Zeichenfolgen verwendet. Beispiele finden Sie im folgenden Artikel: [Bjarne Stroustrups FAQ zu C ++ 11](http://www.stroustrup.com/C++11FAQ.html).
 
 ```cpp
 // represents the string: An unescaped \ character
@@ -328,7 +328,7 @@ Da Zeichenfolgenliterale (nicht einschließlich Std: String-Literale) Konstanten
 
 **Microsoft-spezifisch**
 
-In Visual C++ können Sie ein Zeichenfolgenliteral verwenden, um einen Zeiger auf ein nicht konstantes initialisieren **Char** oder **"wchar_t"**. Dies ist in C99-Code zulässig, in C++98 jedoch veraltet und wurde in C++11 entfernt. Ein Versuch, die Zeichenfolge zu ändern, verursacht eine Zugriffsverletzung, wie in diesem Beispiel:
+In visuellen C++ können Sie ein Zeichenfolgenliteral, das einen Zeiger auf ein nicht konstantes initialisieren **Char** oder **"wchar_t"**. Dies ist in C99-Code zulässig, in C++98 jedoch veraltet und wurde in C++11 entfernt. Ein Versuch, die Zeichenfolge zu ändern, verursacht eine Zugriffsverletzung, wie in diesem Beispiel:
 
 ```cpp
 wchar_t* str = L"hello";

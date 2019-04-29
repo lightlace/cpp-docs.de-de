@@ -24,11 +24,11 @@ helpviewer_keywords:
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
 ms.openlocfilehash: 86268bd9ac49c8ea27f715404236bcb9291f5d8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339714"
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 
@@ -69,11 +69,11 @@ Wenn *Pfn* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Pa
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
-**Bibliotheken:** Nur Debugversionen von C-Laufzeitbibliotheken.
+**Bibliotheken:** Debugversionen der universal C-Laufzeitbibliotheken nur.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Debugroutinen](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtSetDbgFlag](crtsetdbgflag.md)<br/>
-[Für den Heapzustand](/visualstudio/debugger/crt-debug-heap-details)<br/>
+[Berichtsfunktionen für den Heapzustand](/visualstudio/debugger/crt-debug-heap-details)<br/>
 [_CrtReportBlockType](crtreportblocktype.md)<br/>

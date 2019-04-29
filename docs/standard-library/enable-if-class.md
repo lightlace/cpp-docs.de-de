@@ -8,11 +8,11 @@ helpviewer_keywords:
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413761"
 ---
 # <a name="enableif-class"></a>enable_if-Klasse
 
@@ -50,7 +50,7 @@ In C++ ist eine fehlgeschlagene Substitution von Vorlagenparametern kein eigentl
 
 Im Folgenden finden Sie vier Beispielszenarien:
 
-- Szenario 1: Umschließen des Rückgabetyps einer Funktion:
+- Szenario 1: Umschließen den Rückgabetyp einer Funktion:
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- Szenario 3: Hinzufügen eines Vorlagenparameters mit einem Standardargument:
+- Szenario 3: Hinzufügen eines Vorlagenparameters, die einem Standardargument:
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- Szenario 4: Wenn Ihre Funktion über ein Argument ohne Vorlage verfügt, können Sie ihren Typ umschließen:
+- Szenario 4: Wenn Ihre Funktion ein Argument ohne Vorlage verfügt, können Sie ihren Typ umschließen:
 
 ```cpp
     template <typename T>

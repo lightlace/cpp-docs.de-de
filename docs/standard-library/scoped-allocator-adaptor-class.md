@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348210"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor-Klasse
 
@@ -65,7 +65,7 @@ Drei Typen werden zum Zwecke der Darstellung generiert:
 
 ### <a name="constructors"></a>Konstruktoren
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|Erstellt ein `scoped_allocator_adaptor`-Objekt.|
 
@@ -88,7 +88,7 @@ Drei Typen werden zum Zwecke der Darstellung generiert:
 
 ### <a name="structs"></a>Strukturen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[scoped_allocator_adaptor::rebind Struct](#rebind_struct)|Definiert den Typ `Outer::rebind\<Other>::other` als Synonym für `scoped_allocator_adaptor\<Other, Inner...>`.|
 
@@ -124,7 +124,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 *count*<br/>
 Die Anzahl von Elementen, für die ausreichend Speicher zugewiesen werden soll.
 
-*Hinweis*<br/>
+*hint*<br/>
 Ein Zeiger, der möglicherweise das Zuweiserobjekt unterstützt, indem er die Adresse eines Objekts sucht, das vor der Anforderung zugewiesen wurde.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -166,10 +166,10 @@ Zeiger auf den Speicherort, in dem das Objekt erstellt werden soll.
 *args*<br/>
 Liste von Argumenten
 
-*Erste*<br/>
+*first*<br/>
 Objekt des ersten Typs in einem Paar
 
-*Sekunde*<br/>
+*second*<br/>
 Objekt des zweiten Typs in einem Paar
 
 *right*<br/>
@@ -271,7 +271,7 @@ Ein Verweis auf das gespeicherte Objekt vom Typ `outer_allocator_type`
 
 Definiert den Typ `Outer::rebind\<Other>::other` als Synonym für `scoped_allocator_adaptor\<Other, Inner...>`.
 
-Struktur binden {Typedef Other_traits::rebind\<andere > Other_alloc; Typedef Scoped_allocator_adaptor\<Other_alloc, innere... > andere;};
+Struktur binden {Typedef Other_traits::rebind\<andere > Other_alloc; Typedef Scoped_allocator_adaptor\<Other_alloc, innere... >. };
 
 ## <a name="scoped_allocator_adaptor"></a> scoped_allocator_adaptor::scoped_allocator_adaptor-Konstruktor
 
@@ -297,10 +297,10 @@ scoped_allocator_adaptor(Outer2&& al,
 *right*<br/>
 Ein vorhandener `scoped_allocator_adaptor`.
 
-*Al*<br/>
+*al*<br/>
 Eine vorhandener Zuweiser, der als äußerer Zuweiser verwendet werden soll.
 
-*Rest*<br/>
+*rest*<br/>
 Eine Liste von Zuweisern, die als innere Zuweiser verwendet werden sollen.
 
 ### <a name="remarks"></a>Hinweise

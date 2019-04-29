@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_offset_recalloc_dbg function
 - _aligned_offset_recalloc_dbg function
 ms.assetid: 7ab719c3-77e0-4d2e-934f-01529d062fbf
-ms.openlocfilehash: 0b314b4aca080877b4e41723a8d2010fd8e835ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 671635e6cdc0f3f9bcd140de40500ed49beb4a8f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348028"
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
 
@@ -58,7 +58,7 @@ Anzahl der Elemente.
 *size*<br/>
 Länge jedes Elements in Bytes.
 
-*Ausrichtung*<br/>
+*alignment*<br/>
 Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.
 
 *offset*<br/>
@@ -76,7 +76,7 @@ Zeilennummer in der Quelldatei, in der Realloc angefordert wurde, oder **NULL**.
 
 ## <a name="remarks"></a>Hinweise
 
-**_aligned_offset_realloc_dbg** ist eine Debugversion von der [_aligned_offset_recalloc](aligned-offset-recalloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_aligned_offset_recalloc_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_aligned_offset_recalloc**. Beide **_aligned_offset_recalloc** und **_aligned_offset_recalloc_dbg** zum erneuten Zuweisen eines Speicherblocks im Basisheap, jedoch **_aligned_offset_recalloc_dbg** verfügt mehrere Debugfunktionen: Puffer auf beiden Seiten des benutzerteils des Blocks zum Prüfen auf Speicherverluste, einen blocktypparameter zum Nachverfolgen bestimmter belegungstypen und *Filename*/*Linenumber*  Informationen zum Ermitteln des Ursprungs von belegungsanforderungen.
+**_aligned_offset_realloc_dbg** ist eine Debugversion von der [_aligned_offset_recalloc](aligned-offset-recalloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_aligned_offset_recalloc_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_aligned_offset_recalloc**. Beide **_aligned_offset_recalloc** und **_aligned_offset_recalloc_dbg** zum erneuten Zuweisen eines Speicherblocks im Basisheap, jedoch **_aligned_offset_recalloc_dbg** verfügt mehrere Debugfunktionen: Puffer auf beiden Seiten des benutzerteils des Blocks zum Prüfen auf Speicherverluste, und *Filename*/*Linenumber* -Informationen zum Ermitteln des Ursprungs von Anforderungen für speicherbelegung. Nachverfolgen von bestimmten belegungstypen mit einem blocktypparameter ist kein unterstützten Debug-Feature für ausgerichtete Zuweisungen. Ausgerichtete Zuweisungen werden als ein _NORMAL_BLOCK-Block-Typ angezeigt.
 
 **_aligned_offset_realloc_dbg** zuordnet den angegebenen Speicherblock mit etwas mehr Speicherplatz als der angeforderten *NewSize*. *NewSize* größer oder kleiner als die Größe des ursprünglich zugeordneten Speicherblocks sein kann. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Durch die Neubelegung wird der ursprüngliche Speicherblock möglicherweise an einen anderen Speicherort im Heap verschoben und auch die Größe des Speicherblocks geändert. Wenn der Speicherblock verschoben wird, wird der Inhalt des ursprünglichen Blocks überschrieben.
 

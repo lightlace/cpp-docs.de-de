@@ -13,11 +13,11 @@ helpviewer_keywords:
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
 ms.openlocfilehash: 0b560913deb57393a8547f0831e0d987eed41ab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392348"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C++-Built-Operatoren, Rangfolge und Assoziativität
 
@@ -38,10 +38,10 @@ Operator *Rangfolge* gibt die Reihenfolge der Vorgänge in Ausdrücken, die mehr
 |[Postfix-Inkrement](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Postfixdekrement](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[Typnamen](../cpp/typeid-operator.md)|[typeid](../cpp/typeid-operator.md)|
-|[Konstantentypkonvertierung](../cpp/const-cast-operator.md)|[const_cast-Operator](../cpp/const-cast-operator.md)|
+|[Konstantentypkonvertierung](../cpp/const-cast-operator.md)|[const_cast](../cpp/const-cast-operator.md)|
 |[Dynamische typkonvertierung](../cpp/dynamic-cast-operator.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|
-|[Neu interpretierte typkonvertierung](../cpp/reinterpret-cast-operator.md)|["reinterpret_cast"](../cpp/reinterpret-cast-operator.md)|
-|[Statische typkonvertierung](../cpp/static-cast-operator.md)|[static_cast-Operator](../cpp/static-cast-operator.md)|
+|[Neu interpretierte typkonvertierung](../cpp/reinterpret-cast-operator.md)|[reinterpret_cast](../cpp/reinterpret-cast-operator.md)|
+|[Statische typkonvertierung](../cpp/static-cast-operator.md)|[static_cast](../cpp/static-cast-operator.md)|
 |**Gruppe 3 Vorrang, rechts-nach-links-Assoziativität**|
 |[Größe des Objekts oder Typs](../cpp/sizeof-operator.md)|[sizeof](../cpp/sizeof-operator.md)|
 |[Präfixinkrement](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[++](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
@@ -50,7 +50,7 @@ Operator *Rangfolge* gibt die Reihenfolge der Vorgänge in Ausdrücken, die mehr
 |[Logisches not](../cpp/logical-negation-operator-exclpt.md)|[\!](../cpp/logical-negation-operator-exclpt.md)|
 |[Unäre Negation](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[Unäres plus](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
-|[Adresse des](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
+|[Address-of](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[Dereferenzierung](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[Objekt erstellen](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
 |[Objekt zerstören](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
@@ -60,7 +60,7 @@ Operator *Rangfolge* gibt die Reihenfolge der Vorgänge in Ausdrücken, die mehr
 |**Gruppe 5 Rangfolge von links nach rechts Assoziativität**|
 |[Multiplikation](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[Division](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
-|[Modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
+|[Modulus](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |**Gruppe 6 Rangfolge von links nach rechts Assoziativität**|
 |[Addition](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[Subtraktion](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|
@@ -86,7 +86,7 @@ Operator *Rangfolge* gibt die Reihenfolge der Vorgänge in Ausdrücken, die mehr
 |**Gruppe 14 Rangfolge von links nach rechts Assoziativität**|
 |[Logisches OR](../cpp/logical-or-operator-pipe-pipe.md)|[&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)|
 |**Gruppieren von 15 Rangfolge, rechts-nach-links-Assoziativität**|
-|[Bedingte](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
+|[Conditional](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
 |**Gruppieren von 16 Rangfolge, rechts-nach-links-Assoziativität**|
 |[Zuweisung](../cpp/assignment-operators.md)|[=](../cpp/assignment-operators.md)|
 |[Multiplikationszuweisung](../cpp/assignment-operators.md)|[&#42;=](../cpp/assignment-operators.md)|

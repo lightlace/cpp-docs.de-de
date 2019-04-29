@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
 ms.openlocfilehash: a03a6100c372e059bd9ef2ddde0558da307923dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385023"
 ---
 # <a name="address-of-operator-amp"></a>Address-of-Operator: &amp;
 
@@ -27,7 +27,7 @@ ms.locfileid: "50519118"
 
 Unäre Address-of-Operators (**&**) nimmt die Adresse seines Operanden. Der Operand des Address-of-Operators kann sein, entweder einen Funktionsbezeichner oder einen l-Wert, der ein Objekt festgelegt, das kein Bitfeld ist.
 
-Der address-of-Operator kann nur auf Variablen vom Typ „Basis“, „Struktur“, „Klasse“ oder „Union“ angewendet werden, die auf Dateibereichsebene deklariert wurden, oder auf indizierte Arrayverweise. In diesen Ausdrücken kann ein konstanter Ausdruck, der nicht den address-of-Operator einschließt, dem address-of-Ausdruck hinzugefügt oder von diesem subtrahiert werden.
+Der address-of-Operator kann nur auf Variablen vom Typ "Basis", "Struktur", "Klasse" oder "Union" angewendet werden, die auf Dateibereichsebene deklariert wurden, oder auf indizierte Arrayverweise. In diesen Ausdrücken kann ein konstanter Ausdruck, der nicht den address-of-Operator einschließt, dem address-of-Ausdruck hinzugefügt oder von diesem subtrahiert werden.
 
 Bei Anwendung auf Funktionen oder L-Werte ist das Ergebnis des Ausdrucks ein Zeigertyp (ein R-Wert), der vom Typ des Operanden abgeleitet wird. Wenn der Operand ist z. B. **Char**, das Ergebnis des Ausdrucks ist ein Zeiger auf **Char**. Der Address-of-Operator, auf angewendet **const** oder **flüchtige** -Objekte `const type *` oder `volatile type *`, wobei **Typ** ist der Typ des ursprünglichen -Objekt.
 

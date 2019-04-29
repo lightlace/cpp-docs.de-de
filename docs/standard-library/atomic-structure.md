@@ -5,11 +5,11 @@ f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 ms.openlocfilehash: 258812f033d34f040d96847581d6f51692a933b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376668"
 ---
 # <a name="atomic-structure"></a>atomic-Struktur
 
@@ -29,15 +29,15 @@ struct atomic;
 |**Konstruktor**||
 |[atomic](#atomic)|Erstellt ein atomisches Objekt.|
 |**Operatoren**||
-|[Atomic:: Ty](#op_ty)|Liest und den gespeicherten Wert und gibt ihn zurück. ([Atomic:: Load](#load))|
-|[Atomic:: =](#op_eq)|Verwendet zum Ersetzen des gespeicherten Werts einen angegebenen Wert. ([Atomic:: Store](#store))|
-|[Atomic:: Operator++-](#op_inc)|Erhöht den gespeicherten Wert. Wird nur von integrale und Zeigerspezialisierungen verwendet.|
-|[Atomic:: Operator +=](#op_add_eq)|Fügt dem gespeicherten Wert einen angegebenen Wert hinzu. Wird nur von integrale und Zeigerspezialisierungen verwendet.|
-|[Atomic:::](#op_dec)|Verringert den gespeicherten Wert. Wird nur von integrale und Zeigerspezialisierungen verwendet.|
-|[Atomic:: Operator-=](#op_sub_eq)|Subtrahiert einen angegebenen Wert vom gespeicherten Wert. Wird nur von integrale und Zeigerspezialisierungen verwendet.|
-|[Atomic:: & =](#op_and_eq)|Führt ein bitweises und auf einem angegebenen Wert und den gespeicherten Wert. Wird nur bei Integralspezialisierungen verwendet.|
-|[Atomic::&#124;=](#op_or_eq)|Führt ein bitweises oder auf einem angegebenen Wert und den gespeicherten Wert. Wird nur bei Integralspezialisierungen verwendet.|
-|[Atomic:: ^ =](#op_xor_eq)|Führt eine bitweise exklusive oder auf einem angegebenen Wert und den gespeicherten Wert. Wird nur bei Integralspezialisierungen verwendet.|
+|[Atomic:: Ty](#op_ty)|Liest und den gespeicherten Wert und gibt ihn zurück. ([atomic::load](#load))|
+|[atomic::operator=](#op_eq)|Verwendet zum Ersetzen des gespeicherten Werts einen angegebenen Wert. ([Atomic:: Store](#store))|
+|[atomic::operator++](#op_inc)|Erhöht den gespeicherten Wert. Wird nur von integrale und Zeigerspezialisierungen verwendet.|
+|[atomic::operator+=](#op_add_eq)|Fügt dem gespeicherten Wert einen angegebenen Wert hinzu. Wird nur von integrale und Zeigerspezialisierungen verwendet.|
+|[atomic::operator--](#op_dec)|Verringert den gespeicherten Wert. Wird nur von integrale und Zeigerspezialisierungen verwendet.|
+|[atomic::operator-=](#op_sub_eq)|Subtrahiert einen angegebenen Wert vom gespeicherten Wert. Wird nur von integrale und Zeigerspezialisierungen verwendet.|
+|[atomic::operator&=](#op_and_eq)|Führt ein bitweises und auf einem angegebenen Wert und den gespeicherten Wert. Wird nur bei Integralspezialisierungen verwendet.|
+|[atomic::operator&#124;=](#op_or_eq)|Führt ein bitweises oder auf einem angegebenen Wert und den gespeicherten Wert. Wird nur bei Integralspezialisierungen verwendet.|
+|[atomic::operator^=](#op_xor_eq)|Führt eine bitweise exklusive oder auf einem angegebenen Wert und den gespeicherten Wert. Wird nur bei Integralspezialisierungen verwendet.|
 |**Funktionen**||
 |[compare_exchange_strong](#compare_exchange_strong)|Führt eine *Atomic_compare_and_exchange* -Vorgang für **dies** und gibt das Ergebnis zurück.|
 |[compare_exchange_weak](#compare_exchange_weak)|Führt eine *Weak_atomic_compare_and_exchange* -Vorgang für **dies** und gibt das Ergebnis zurück.|
@@ -47,7 +47,7 @@ struct atomic;
 |[fetch_sub](#fetch_sub)|Subtrahiert einen angegebenen Wert vom gespeicherten Wert.|
 |[fetch_xor](#fetch_xor)|Führt eine bitweise exklusive oder auf einem angegebenen Wert und den gespeicherten Wert.|
 |[is_lock_free](#is_lock_free)|Gibt an, ob der atomischen Vorgänge auf **dies** sind *sperrfrei*. Ein atomischer Typ ist *sperrfrei*, wenn für keine der atomischen Vorgänge auf diesem Typ Sperren verwendet werden.|
-|[Auslastungstest](#load)|Liest und den gespeicherten Wert und gibt ihn zurück.|
+|[load](#load)|Liest und den gespeicherten Wert und gibt ihn zurück.|
 |[store](#store)|Verwendet zum Ersetzen des gespeicherten Werts einen angegebenen Wert.|
 
 ## <a name="remarks"></a>Hinweise
@@ -60,17 +60,17 @@ Eine Spezialisierung ist für jeden Integraltypen außer vorhanden **"bool"**. M
 
 ||||
 |-|-|-|
-|**Atomic\<Char >**|**Atomic\<signiert Char >**|**Atomic\<unsigned Char >**|
-|**Atomic\<char16_t >**|**Atomic\<char32_t >**|**Atomic\<"wchar_t" >**|
-|**Atomic\<kurze >**|**Atomic\<unsigned short >**|**Atomic\<Int >**|
-|**Atomic\<unsigned Int >**|**Atomic\<lange >**|**Atomic\<unsigned long >**|
-|**Atomic\<long long >**|**Atomic\<long long ohne Vorzeichen >**|
+|**atomic\<char>**|**Atomic\<signiert Char >**|**atomic\<unsigned char>**|
+|**atomic\<char16_t>**|**atomic\<char32_t>**|**atomic\<wchar_t>**|
+|**atomic\<short>**|**atomic\<unsigned short>**|**atomic\<int>**|
+|**Atomic\<unsigned Int >**|**atomic\<long>**|**atomic\<unsigned long>**|
+|**atomic\<long long>**|**atomic\<unsigned long long>**|
 
 Integralspezialisierungen werden von den entsprechenden `atomic_integral`-Typen abgeleitet. Z. B. **atomic\<unsigned Int >** ergibt sich aus `atomic_uint`.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<atomic >
+**Header:** \<atomic>
 
 **Namespace:** std
 
@@ -113,7 +113,7 @@ atomic<Ty>::operator Ty() const noexcept;
 
 Dieser Operator gilt die `memory_order_seq_cst` [Memory_order](atomic-enums.md).
 
-## <a name="op_eq"></a> Atomic:: =
+## <a name="op_eq"></a> atomic::operator=
 
 Speichert einen angegebenen Wert.
 
@@ -150,7 +150,7 @@ Ty atomic<Ty>::operator++() noexcept;
 
 Die ersten beiden Operatoren zurückgegeben wird den inkrementierten Wert. die letzten beiden Operatoren geben den Wert vor dem Inkrementieren zurück. Verwenden Sie die Operatoren der `memory_order_seq_cst` [Memory_order](atomic-enums.md).
 
-## <a name="op_add_eq"></a> Atomic:: Operator +=
+## <a name="op_add_eq"></a> atomic::operator+=
 
 Fügt dem gespeicherten Wert einen angegebenen Wert hinzu. Wird nur von integrale und Zeigerspezialisierungen verwendet.
 
@@ -191,7 +191,7 @@ Ty atomic<Ty>::operator--() noexcept;
 
 Die ersten beiden Operatoren den dekrementierte Wert zurückgegeben wird. die letzten beiden Operatoren geben den Wert vor dem verringern zurück. Verwenden Sie die Operatoren der `memory_order_seq_cst` [Memory_order](atomic-enums.md).
 
-## <a name="op_sub_eq"></a> Atomic:: Operator-=
+## <a name="op_sub_eq"></a> atomic::operator-=
 
 Subtrahiert einen angegebenen Wert vom gespeicherten Wert. Wird nur von integrale und Zeigerspezialisierungen verwendet.
 
@@ -269,7 +269,7 @@ Das Ergebnis der bitweisen oder.
 
 Dieser Operator führt einen Lese-Änderungs-Schreib-Vorgang zum Ersetzen des gespeicherten Werts von  **\*dies** mit einem bitweisen oder von *Wert* und den aktuellen Wert auf die in gespeicherten  **\*dies**, innerhalb der Einschränkungen der der `memory_order_seq_cst` [Memory_order](atomic-enums.md) Einschränkungen.
 
-## <a name="op_xor_eq"></a> Atomic:: ^ =
+## <a name="op_xor_eq"></a> atomic::operator^=
 
 Führt eine bitweise exklusive oder in einem angegebenen Wert und den gespeicherten Wert von  **\*dies**. Wird nur bei Integralspezialisierungen verwendet.
 
@@ -295,7 +295,7 @@ Das Ergebnis des bitweisen exklusiven oder.
 
 Dieser Operator führt einen Lese-Änderungs-Schreib-Vorgang zum Ersetzen des gespeicherten Werts von  **\*dies** mit eine bitweise exklusive oder von *Wert* und den aktuellen Wert auf die in gespeicherten  **\*dies**, innerhalb der Einschränkungen der der `memory_order_seq_cst` [Memory_order](atomic-enums.md) Einschränkungen.
 
-## <a name="compare_exchange_strong"></a> Atomic:: compare_exchange_strong
+## <a name="compare_exchange_strong"></a> atomic::compare_exchange_strong
 
 Führt einen atomischen Vergleichs- und Austausch-Vorgang für  **\*dies**.
 
@@ -438,7 +438,7 @@ Der gespeicherte Wert von  **\*dies** vor dem Austausch.
 
 Dieser Vorgang wird eine Lese-Änderungs-Schreib-Operation mit *Wert* zum Ersetzen des Werts, die in gespeicherten  **\*dies**, innerhalb der mit den vom angegebenen  *Reihenfolge*.
 
-## <a name="fetch_add"></a> Atomic:: fetch_add
+## <a name="fetch_add"></a> atomic::fetch_add
 
 Ruft den Wert, der in gespeicherten  **\*dies**, und fügt dann den gespeicherten Wert einen angegebenen Wert hinzu.
 
@@ -531,7 +531,7 @@ Ein *Ty* -Objekt, das das Ergebnis der bitweisen enthält oder.
 
 Die `fetch_or` Methode führt einen Lese-Änderungs-Schreib-Vorgang zum Ersetzen des gespeicherten Werts von  **\*dies** mit einem bitweisen oder von *Wert* und den aktuellen Wert an, die in gespeichertist **\*dies**, innerhalb der mit den vom angegebenen *Reihenfolge*.
 
-## <a name="fetch_sub"></a> Atomic:: fetch_sub
+## <a name="fetch_sub"></a> atomic::fetch_sub
 
 Subtrahiert einen angegebenen Wert vom gespeicherten Wert.
 
@@ -593,7 +593,7 @@ Ein *Ty* -Objekt, das das Ergebnis des bitweisen exklusiven enthält oder.
 
 Die `fetch_xor` Methode führt einen Lese-Änderungs-Schreib-Vorgang zum Ersetzen des gespeicherten Werts von  **\*dies** mit eine bitweise exklusive oder von *Wert* und den aktuellen Wert an, die in gespeichert ist  **\*dies**, und wendet die arbeitsspeichereinschränkungen mit den vom angegebenen *Reihenfolge*.
 
-## <a name="is_lock_free"></a> Atomic:: is_lock_free
+## <a name="is_lock_free"></a> atomic::is_lock_free
 
 Gibt an, ob der atomischen Vorgänge auf  **\*dies** sperrfrei sind.
 

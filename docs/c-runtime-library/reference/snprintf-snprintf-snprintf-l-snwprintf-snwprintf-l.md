@@ -49,11 +49,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
 ms.openlocfilehash: 202f2f12de3955a2c9b0f785c3e89280d91a4a95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355717"
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -137,7 +137,7 @@ Die maximale Anzahl der zu speichernden Zeichen.
 *format*<br/>
 Formatsteuerzeichenfolge.
 
-*Argument*<br/>
+*argument*<br/>
 Optionale Argumente.
 
 *locale*<br/>
@@ -187,7 +187,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Snprintf**, **_snprintf**, **_snprintf_l**|\<stdio.h>|
+|**snprintf**, **_snprintf**,  **_snprintf_l**|\<stdio.h>|
 |**_snwprintf**, **_snwprintf_l**|\<stdio.h> oder \<wchar.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).

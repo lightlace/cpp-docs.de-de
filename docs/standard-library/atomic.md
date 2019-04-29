@@ -49,11 +49,11 @@ f1_keywords:
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376600"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -78,7 +78,7 @@ Ein atomischer Vorgang hat zwei Schlüsseleigenschaften, die dabei helfen, mehre
 
 Auf manchen Plattformen ist es möglicherweise nicht möglich, atomische Vorgänge für bestimme Typen effizient zu implementieren, ohne `mutex`-Sperren zu verwenden. Ein atomischer Typ ist *sperrfrei*, wenn für keine der atomischen Vorgänge auf diesem Typ Sperren verwendet werden.
 
-**C ++ 11**: In Signalhandlern können Sie atomische Vorgänge für ein `obj`-Objekt ausführen, wenn `obj.is_lock_free()` oder `atomic_is_lock_free(x)` TRUE sind.
+**C++11**: In signalhandlern durchführen können der atomischen Vorgänge auf ein Objekt `obj` Wenn `obj.is_lock_free()` oder `atomic_is_lock_free(x)` erfüllt sind.
 
 Die Klasse [Atomic_flag](../standard-library/atomic-flag-structure.md) bietet einen minimalen atomischen Typ, der enthält eine **"bool"** Flag. Die Vorgänge sind immer sperrfrei.
 
@@ -101,7 +101,7 @@ Für jeden integralen Typen besteht ein entsprechend benannter atomischer Typ, d
 |`atomic_integral`-Typ|Integrale Typen|`atomic_is_lock_free`-Makro|
 |----------------------------|-------------------|---------------------------------|
 |`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_schar`|**Char mit Vorzeichen**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**signed char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
 |`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
@@ -113,7 +113,7 @@ Für jeden integralen Typen besteht ein entsprechend benannter atomischer Typ, d
 |`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_llong`|**langes long**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**long long ohne Vorzeichen**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**unsigned long long**|ATOMIC_LLONG_LOCK_FREE|
 
 Typedef-Namen bestehen für Spezialisierungen der atomischen Vorlage für einige der Typen, die im Header \<inttypes.h> definiert sind.
 
@@ -152,14 +152,14 @@ Typedef-Namen bestehen für Spezialisierungen der atomischen Vorlage für einige
 
 ## <a name="structs"></a>Strukturen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[atomic-Struktur](../standard-library/atomic-structure.md)|Beschreibt ein Objekt, das auf einem gespeicherten Wert atomische Vorgänge ausführt.|
 |[atomic_flag-Struktur](../standard-library/atomic-flag-structure.md)|Beschreibt ein Objekt, das atomisch festlegt und löscht eine **"bool"** Flag.|
 
 ## <a name="enums"></a>Enumerationen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[memory_order-Enumeration](../standard-library/atomic-enums.md#memory_order_enum)|Stellt symbolische Namen für Synchronisierungsvorgänge auf Speicheradressen bereit. Diese Vorgänge wirken sich auf das Sichtbarwerden der Zuweisung eines Thread in einem anderen aus.|
 
@@ -167,7 +167,7 @@ Typedef-Namen bestehen für Spezialisierungen der atomischen Vorlage für einige
 
 In der folgenden Liste haben die Funktionen, die nicht auf `_explicit` enden, die Semantik des entsprechenden `_explicit`, abgesehen von den Funktionen, die über die impliziten [memory_order](../standard-library/atomic-enums.md#memory_order_enum)-Argumente von `memory_order_seq_cst` verfügen.
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Führt einen *atomischen Vergleichs- und Austauschvorgang* aus.|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Führt einen *atomischen Vergleichs- und Austauschvorgang* aus.|

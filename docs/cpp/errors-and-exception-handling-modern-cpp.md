@@ -4,11 +4,11 @@ ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
 ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398913"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Behandeln von Fehlern und Ausnahmen (Modern C++)
 
@@ -64,7 +64,7 @@ Ausnahmen in C++ ähneln denen in Sprachen wie C# und Java. In der **versuchen S
 
 ## <a name="basic-guidelines"></a>Grundlegende Richtlinien
 
-Stabile Fehlerbehandlung ist in jeder Programmiersprache schwierig. Obwohl Ausnahmen etliche Features bereitstellen, die gute Fehlerbehandlung unterstützen, können sie Ihnen nicht die gesamte Arbeit abnehmen. Um die Vorteile des Ausnahmemechanismus auszuschöpfen, sollten Sie Ausnahmen bei der Entwicklung Ihres Codes einplanen.
+Stabile Fehlerbehandlung ist in jeder Programmiersprache schwierig. Obwohl Ausnahmen etliche Funktionen bereitstellen, die gute Fehlerbehandlung unterstützen, können sie Ihnen nicht die gesamte Arbeit abnehmen. Um die Vorteile des Ausnahmemechanismus auszuschöpfen, sollten Sie Ausnahmen bei der Entwicklung Ihres Codes einplanen.
 
 - Verwenden Sie Assertionen, um Fehler zu verhindern, die nie auftreten sollten. Verwenden Sie Ausnahmen, um Fehler abzufangen, die beispielsweise bei der Eingabevalidierung oder in Parametern von öffentlichen Funktionen auftreten können. Weitere Informationen finden Sie im Abschnitt **Ausnahmen Vs. Assertionen**.
 
@@ -90,7 +90,7 @@ Ausnahmen und Assertionen sind zwei verschiedene Mechanismen zum Erkennen von La
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++-Ausnahmen und Windows SEH-Ausnahmen
 
-Sowohl C-Programme als auch C++-Programme können den Mechanismus der strukturierten Ausnahmebehandlung (Structured Exception Handling, SEH) im Windows-Betriebssystem verwenden. Die Konzepte in SEH entsprechen denen für C++-Ausnahmen, außer dass SEH verwendet die **__try**, **__except**, und **__finally** anstelle von erstellt **Testen** und **catch**. In Visual C++ werden C++-Ausnahmen für SEH implementiert. Wenn Sie jedoch C++-Code schreiben, verwenden Sie die Syntax für C++-Ausnahmen.
+Sowohl C-Programme als auch C++-Programme können den Mechanismus der strukturierten Ausnahmebehandlung (Structured Exception Handling, SEH) im Windows-Betriebssystem verwenden. Die Konzepte in SEH entsprechen denen für C++ Ausnahmen, die mit dem Unterschied, SEH verwendet die **__try**, **__except**, und **__finally** anstelle von erstellt **testen**  und **catch**. In Visual C++ werden C++-Ausnahmen für SEH implementiert. Wenn Sie jedoch C++-Code schreiben, verwenden Sie die Syntax für C++-Ausnahmen.
 
 Weitere Informationen zu SEH finden Sie unter [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md).
 
@@ -100,7 +100,7 @@ Ausnahmespezifikationen wurden in C++ als Möglichkeit eingeführt, um die Ausna
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vorgehensweise: Schnittstelle zwischen Code von nicht- Ausnahmen](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[Vorgehensweise: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
 [Willkommen zurück bei C++ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++-Programmiersprachenreferenz](../cpp/cpp-language-reference.md)<br/>
 [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

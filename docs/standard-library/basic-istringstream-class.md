@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
 ms.openlocfilehash: fdf622bbef370e8b3625f419be29f293bc06eacc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400629"
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream-Klasse
 
@@ -105,7 +105,7 @@ basic_istringstream(
 
 ### <a name="parameters"></a>Parameter
 
-*_Modus*<br/>
+*_Mode*<br/>
 Eine der Enumerationen in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *str*<br/>

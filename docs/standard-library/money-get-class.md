@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383528"
 ---
 # <a name="moneyget-class"></a>money_get-Klasse
 
@@ -105,7 +105,7 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
 *last*<br/>
@@ -114,7 +114,7 @@ Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 *Intl*<br/>
 Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*iosbase*<br/>
+*Iosbase*<br/>
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
 *Zustand*<br/>
@@ -187,7 +187,7 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
 *last*<br/>
@@ -196,7 +196,7 @@ Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 *Intl*<br/>
 Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*iosbase*<br/>
+*Iosbase*<br/>
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
 *Zustand*<br/>
@@ -291,7 +291,7 @@ Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwend
 
 Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 

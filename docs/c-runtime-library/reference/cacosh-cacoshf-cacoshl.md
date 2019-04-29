@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
 ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340728"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh, cacoshf, cacoshl
 
@@ -78,7 +78,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cacosh*
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**Cacosh**, **Cacoshf**, **Cacoshl**|\<complex.h>|\<ccomplex>|
+|**cacosh**,               **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

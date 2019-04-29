@@ -42,11 +42,11 @@ helpviewer_keywords:
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
 ms.openlocfilehash: 8668c186a16dc3f3dc2c7223eb10c100fa6d72fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354262"
 ---
 # <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
 
@@ -134,7 +134,7 @@ Die `strchr` -Funktion sucht das erste Vorkommen des *c* in *str*, oder es gibt 
 
 Der Ausgabewert ist von der Einstellung von den LC_CTYPE--kategorieeinstellung des Gebietsschemas betroffen; Weitere Informationen finden Sie unter [Setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-In C akzeptieren diese Funktionen eine **const** Zeiger für das erste Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger auf **const** gibt einen Zeiger auf **const**; die Version, die einen Zeiger auf nicht-akzeptiert**const** gibt einen Zeiger auf nicht-**const** . Das Makro _CRT_CONST_CORRECT_OVERLOADS definiert ist, wenn sowohl die **const** und nicht-**const** Versionen dieser Funktionen sind verfügbar. Wenn Sie nicht benötigen**const** Verhalten für beide C++-Überladungen, definieren Sie das Symbol _CONST_RETURN.
+In C akzeptieren diese Funktionen eine **const** Zeiger für das erste Argument. In C++ sind zwei Überladungen verfügbar. Die Überladung, die einen Zeiger auf **const** gibt einen Zeiger auf **const**; die Version, die einen Zeiger auf nicht-akzeptiert**const** gibt einen Zeiger auf nicht-**const** . Das Makro _CRT_CONST_CORRECT_OVERLOADS definiert ist, wenn sowohl die **const** und nicht-**const** Versionen dieser Funktionen sind verfügbar. Wenn Sie nicht benötigen**const** Verhalten für beide C++ Überladungen, definieren Sie das Symbol _CONST_RETURN.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

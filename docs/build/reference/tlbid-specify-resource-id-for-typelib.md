@@ -13,11 +13,11 @@ helpviewer_keywords:
 - type libraries, specifying resource ID
 ms.assetid: 434b28a2-4656-4d52-ac82-8b18bf486fb2
 ms.openlocfilehash: c52bfb9e4b6d0e94cecb77c766ac9e82b52f1e66
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317795"
 ---
 # <a name="tlbid-specify-resource-id-for-typelib"></a>/TLBID (Ressourcen-ID für TypeLib festlegen)
 
@@ -52,5 +52,5 @@ Wenn diese Ressourcen-ID mit einem Ihrer vorhandenen Ressourcen in Konflikt steh
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 [MSVC-Linkeroptionen](linker-options.md)

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333929"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -44,15 +44,15 @@ int fgetpos(
 
 ### <a name="parameters"></a>Parameter
 
-*Stream*<br/>
+*stream*<br/>
 Der Zielstream
 
-*POS*<br/>
+*pos*<br/>
 Speicher des Positionsindikators
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall **Fgetpos** gibt 0 zurück. Bei einem Fehler, es gibt einen Wert ungleich NULL zurück und legt **Errno** auf eine der folgenden Manifestkonstanten, die (definiert in STDIO. H): **EBADF**, ist kein gültiger Dateizeiger oder kann nicht zugegriffen werden, was bedeutet, dass den angegebenen Stream oder **EINVAL**, d. h. die *Stream* Wert oder der Wert des *pos* ist ungültig, z. B. If ist ein null-Zeiger. Wenn *Stream* oder *pos* ist eine **NULL** -Zeiger ist, ruft die Funktion den Handler für ungültige Parameter an, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Im Erfolgsfall **Fgetpos** gibt 0 zurück. Bei einem Fehler, es gibt einen Wert ungleich NULL zurück und legt **Errno** auf eine der folgenden Manifestkonstanten, die (definiert in STDIO. H): **EBADF**, ist kein gültiger Dateizeiger oder kann nicht zugegriffen werden, was bedeutet, dass den angegebenen Stream oder **EINVAL**, d. h. die *Stream* Wert oder der Wert des *pos*ist ungültig, z. B. If ist ein null-Zeiger. Wenn *Stream* oder *pos* ist eine **NULL** -Zeiger ist, ruft die Funktion den Handler für ungültige Parameter an, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Hinweise
 

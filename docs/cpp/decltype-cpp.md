@@ -10,15 +10,15 @@ helpviewer_keywords:
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
 ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399082"
 ---
 # <a name="decltype--c"></a>Decltype (C++)
 
-Die **"decltype"** Typspezifizierer ergibt den Typ des angegebenen Ausdrucks. Die **"decltype"** Typspezifizierer verwenden, zusammen mit den [auto-Schlüsselwort](../cpp/auto-cpp.md), eignet sich vor allem für Entwickler, die Vorlagenbibliotheken schreiben. Verwendung **automatisch** und **"decltype"** um eine Vorlagenfunktion deklarieren, deren Rückgabetyp Typ hängt von den Typen seiner Vorlagenargumente. Oder verwenden Sie **automatisch** und **"decltype"** um eine Vorlagenfunktion zu deklarieren, die einen Aufruf einer anderen Funktion umschließt, und klicken Sie dann den Rückgabetyp der umschlossenen Funktion zurückgibt.
+Die **"decltype"** Typspezifizierer ergibt den Typ des angegebenen Ausdrucks. Die **"decltype"** Typspezifizierer verwenden, zusammen mit den [auto-Schlüsselwort](../cpp/auto-cpp.md), eignet sich vor allem für Entwickler, die Vorlagenbibliotheken schreiben. Verwendung **auto** und **"decltype"** um eine Vorlagenfunktion deklarieren, deren Rückgabetyp Typ hängt von den Typen seiner Vorlagenargumente. Oder verwenden Sie **automatisch** und **"decltype"** um eine Vorlagenfunktion zu deklarieren, die einen Aufruf einer anderen Funktion umschließt, und klicken Sie dann den Rückgabetyp der umschlossenen Funktion zurückgibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,7 +30,7 @@ decltype( expression )
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Ausdruck*|Ein Ausdruck. Weitere Informationen finden Sie unter [Ausdrücke](../cpp/expressions-cpp.md).|
+|*expression*|Ein Ausdruck. Weitere Informationen finden Sie unter [Ausdrücke](../cpp/expressions-cpp.md).|
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -179,7 +179,7 @@ x3.Dump() = 42
 
 ## <a name="example"></a>Beispiel
 
-**Visual Studio 2017 und höher:** der Compiler analysiert Decltype-Argumente aus, wenn die Vorlagen deklariert, aber nicht instanziiert. Wenn eine unabhängige Spezialisierung im decltype-Argument gefunden wird, wird sie nicht zum Zeitpunkt der Instanziierung zurückgestellt werden. Sie wird sofort verarbeitet, und alle resultierenden Fehler können zu diesem Zeitpunkt untersucht werden.
+**Visual Studio 2017 und höher:** Der Compiler analysiert Decltype-Argumente an, wenn die Vorlagen deklariert, aber nicht instanziiert. Wenn eine unabhängige Spezialisierung im decltype-Argument gefunden wird, wird sie nicht zum Zeitpunkt der Instanziierung zurückgestellt werden. Sie wird sofort verarbeitet, und alle resultierenden Fehler können zu diesem Zeitpunkt untersucht werden.
 
 Das folgende Beispiel zeigt einen solchen Compilerfehler, der zum Zeitpunkt der Deklaration ausgelöst wird:
 

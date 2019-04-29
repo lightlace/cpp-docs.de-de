@@ -27,15 +27,15 @@ helpviewer_keywords:
 - pseudorandom numbers
 - numbers, generating pseudorandom
 ms.openlocfilehash: 868c6239ac1b86dfc9ac72cc8cc83d1ba3002b4a
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357771"
 ---
 # <a name="rand"></a>rand
 
-Generiert eine pseudozufällige Zahl mithilfe eines Algorithmus sehr bekannten und vollständig reproduziert werden kann. Eine weitere programmgesteuert sichere Version dieser Funktion ist verfügbar. finden Sie unter [Rand_s](rand-s.md). Anzahl von generierten **Rand** sind nicht kryptografisch sicher. Verwenden Sie für weitere zufallszahlengenerierung, kryptografisch sichere, [Rand_s](rand-s.md) oder die Funktionen deklariert werden, in der C++-Standardbibliothek in [ \<zufällige >](../../standard-library/random.md).
+Generiert eine pseudozufällige Zahl mithilfe eines Algorithmus sehr bekannten und vollständig reproduziert werden kann. Eine weitere programmgesteuert sichere Version dieser Funktion ist verfügbar. finden Sie unter [Rand_s](rand-s.md). Anzahl von generierten **Rand** sind nicht kryptografisch sicher. Für kryptografische Zufallszahlen generieren sicherer, verwenden Sie [Rand_s](rand-s.md) oder die Funktionen deklariert werden, der C++ Standardbibliothek in [ \<random >](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ int rand( void );
 
 Die **Rand** Funktion gibt eine pseudozufällige Ganzzahl im Bereich von 0 bis **RAND_MAX** (32767). Verwenden der [Srand](srand.md) Funktion die Pseudozufallszahl vor dem Aufruf ein Seeding **Rand**.
 
-Die **Rand** -Funktion generiert eine bekannte Folge und ist nicht geeignet für die Verwendung als einer kryptografischen Funktion. Verwenden Sie für weitere zufallszahlengenerierung, kryptografisch sichere, [Rand_s](rand-s.md) oder die Funktionen deklariert werden, in der C++-Standardbibliothek in [ \<zufällige >](../../standard-library/random.md). Informationen, was falsch ist **Rand** und wie \<random > behandelt diese Mängel, finden Sie in diesem Video berechtigt [Rand als schädlich](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+Die **Rand** -Funktion generiert eine bekannte Folge und ist nicht geeignet für die Verwendung als einer kryptografischen Funktion. Für kryptografische Zufallszahlen generieren sicherer, verwenden Sie [Rand_s](rand-s.md) oder die Funktionen deklariert werden, der C++ Standardbibliothek in [ \<random >](../../standard-library/random.md). Informationen, was falsch ist **Rand** und wie \<random > behandelt diese Mängel, finden Sie in diesem Video berechtigt [Rand als schädlich](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
 ## <a name="requirements"></a>Anforderungen
 

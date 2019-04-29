@@ -3,11 +3,11 @@ title: Verweisklassen und Strukturen (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
 ms.openlocfilehash: e9ac14762dba580967fbecd245a81a4ff4356b64
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368590"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Verweisklassen und Strukturen (C++/CX)
 
@@ -132,4 +132,4 @@ Das folgende Beispiel zeigt, wie eine öffentliche Verweisklasse, die von andere
 [Typsystem](../cppcx/type-system-c-cx.md)<br/>
 [Wertklassen und Strukturen](../cppcx/value-classes-and-structs-c-cx.md)<br/>
 [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)
+[Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)

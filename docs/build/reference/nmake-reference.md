@@ -8,11 +8,11 @@ helpviewer_keywords:
 - NMAKE program
 ms.assetid: 24fab6e3-7e43-4da4-957a-88afbbcf8661
 ms.openlocfilehash: 47836973680fba311fe70cb1a24bb1483ba99a4b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320486"
 ---
 # <a name="nmake-reference"></a>NMAKE-Referenz
 
@@ -40,8 +40,8 @@ Zum Verwenden von NMAKE müssen Sie es in einem Developer-Eingabeaufforderungsfe
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden Sie das MSVC-Toolset, über die Befehlszeile](../building-on-the-command-line.md)<br/>
+[Verwenden des MSVC-Toolsets über die Befehlszeile](../building-on-the-command-line.md)<br/>
 [Zusätzliche MSVC-Buildtools](c-cpp-build-tools.md)<br/>
-[Visual Studio Projects - C++](../creating-and-managing-visual-cpp-projects.md)<br/>
+[Visual Studio-Projekte: C++](../creating-and-managing-visual-cpp-projects.md)<br/>
 [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 [Referenz zur C/C++-Erstellung](c-cpp-building-reference.md)

@@ -4,11 +4,11 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392276"
 ---
 # <a name="c-type-system-modern-c"></a>C++- Typsystem (Modern C++)
 
@@ -94,7 +94,7 @@ Ein **const** Typ unterscheidet sich von seiner nicht Const-Version, z. B. **con
 
 ## <a name="string-types"></a>String-Typen
 
-Genaugenommen hat die C++-Sprache keine integrierte String-Datentyp; **Char** und **"wchar_t"** speichern einzelne Zeichen: Sie müssen ein Array dieser Typen an eine Zeichenfolge, Ungefährer deklarieren, der einen abschließenden null-Wert hinzufügen (z. B. ASCII `'\0'`) auf das Arrayelement eine hinter dem letzten gültigen Zeichen (so genannte eine *Zeichenfolge im C-Stil*). Für Zeichenfolgen im C-Stil ist das Schreiben von viel mehr Code oder die Verwendung externer Hilfsprogrammbibliotheken für Zeichenfolgefunktionen erforderlich. Aber in modernem C++ haben wir die Standardbibliothekstypen `std::string` (8-Bit-Version **Char**--Zeichenfolgen) oder `std::wstring` (16-Bit-Version **"wchar_t"**--Zeichenfolgen). Diese C++-Standardbibliothek-Container können als systemeigene Zeichenfolgentypen betrachtet werden, da sie Teil der Standardbibliotheken sind, die in jeder kompatiblen C++-Buildumgebung enthalten sind. Verwenden Sie einfach die `#include <string>`-Anweisung, um diese Typen im Programm bereitzustellen. (Wenn Sie MFC oder ATL verwenden, ist auch die CString-Klasse verfügbar, aber Sie ist nicht Bestandteil des C++-Standards.) Von der Verwendung von auf NULL endenden Zeichenarrays (die bereits erwähnten Zeichenfolgen im C-Stil) wird im modernen C++ Abstand genommen.
+Streng genommen ist der C++ Sprache verfügt über keine integrierte String-Datentyp; **Char** und **"wchar_t"** speichern einzelne Zeichen: Sie müssen ein Array dieser Typen an eine Zeichenfolge, Ungefährer deklarieren, der einen abschließenden null-Wert hinzufügen (z. B. ASCII `'\0'`) auf das Arrayelement eine Stelle hinter dem letzten gültigen Zeichen (so genannte eine *Zeichenfolge im C-Stil*). Für Zeichenfolgen im C-Stil ist das Schreiben von viel mehr Code oder die Verwendung externer Hilfsprogrammbibliotheken für Zeichenfolgefunktionen erforderlich. Aber in Modern C++, wir haben die Standardbibliothekstypen `std::string` (8-Bit-Version **Char**--Zeichenfolgen) oder `std::wstring` (16-Bit-Version **"wchar_t"**--Zeichenfolgen). Diese C++-Standardbibliothek-Container können als systemeigene Zeichenfolgentypen betrachtet werden, da sie Teil der Standardbibliotheken sind, die in jeder kompatiblen C++-Buildumgebung enthalten sind. Verwenden Sie einfach die `#include <string>`-Anweisung, um diese Typen im Programm bereitzustellen. (Wenn Sie MFC oder ATL verwenden, ist auch die CString-Klasse verfügbar, aber Sie ist nicht Bestandteil des C++-Standards.) Von der Verwendung von auf NULL endenden Zeichenarrays (die bereits erwähnten Zeichenfolgen im C-Stil) wird im modernen C++ Abstand genommen.
 
 ## <a name="user-defined-types"></a>Benutzerdefinierte Typen
 

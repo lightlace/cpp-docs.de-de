@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
 ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369955"
 ---
 # <a name="promise-class"></a>promise-Klasse
 
@@ -69,7 +69,7 @@ class promise;
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<zukünftige >
+**Header:** \<future>
 
 **Namespace:** std
 
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parameter
 
-*Exkl*<br/>
+*Exc*<br/>
 Ein [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), der von dieser Methode als Ausnahmeergebnis gespeichert ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -166,7 +166,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parameter
 
-*Exkl*<br/>
+*Exc*<br/>
 Ein [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), der von dieser Methode als Ausnahmeergebnis gespeichert ist.
 
 ### <a name="remarks"></a>Hinweise

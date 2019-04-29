@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
 ms.openlocfilehash: 346dd4f681432143c954ca125c3862fc6827db60
-ms.sourcegitcommit: b04160e9ed58f83bdc8ace218ae64b35395f6ea2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50968103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383541"
 ---
 # <a name="moneyput-class"></a>money_put-Klasse
 
@@ -114,7 +114,7 @@ Ein Iterator, der das erste Element in der eingefügten Zeichenfolge adressiert.
 *_Intl*<br/>
 Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*"_Iosbase"*<br/>
+*_Iosbase*<br/>
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
 *_Fill*<br/>
@@ -236,7 +236,7 @@ Ein Iterator, der das erste Element in der eingefügten Zeichenfolge adressiert.
 *_Intl*<br/>
 Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*"_Iosbase"*<br/>
+*_Iosbase*<br/>
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
 *_Fill*<br/>

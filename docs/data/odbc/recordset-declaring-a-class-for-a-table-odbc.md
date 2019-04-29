@@ -6,11 +6,11 @@ helpviewer_keywords:
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
 ms.openlocfilehash: 17adc6e26dcbb39453d9009d82843d213271cc78
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397873"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset: Deklarieren einer Klasse für eine Tabelle (ODBC)
 

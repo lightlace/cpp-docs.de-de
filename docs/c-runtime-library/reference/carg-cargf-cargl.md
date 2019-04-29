@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
 ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340715"
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
@@ -78,7 +78,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Carg** 
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**Carg**, **Cargf**, **Cargl**|\<complex.h>|\<ccomplex>|
+|**carg**,               **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

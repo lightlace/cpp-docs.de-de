@@ -64,11 +64,11 @@ helpviewer_keywords:
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
 ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393752"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -82,7 +82,7 @@ Fügen Sie den STL/CLR-Header `<cliext/functional>` zu definieren, die eine Reih
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Cliext/functional >
+**Header:** \<cliext/functional>
 
 **Namespace:** Cliext
 
@@ -126,7 +126,7 @@ Fügen Sie den STL/CLR-Header `<cliext/functional>` zu definieren, die eine Reih
 
 ## <a name="members"></a>Member
 
-## <a name="binary_delegate"></a> Binary_delegate (STL/CLR)
+## <a name="binary_delegate"></a> binary_delegate (STL/CLR)
 
 Die Genereic-Klasse beschreibt einen Delegaten mit zwei Argumenten. Sie verwenden, geben Sie einen Delegaten in Bezug auf die Argument- und Rückgabetypen-Typen.
 
@@ -141,7 +141,7 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>Parameter
 
-*arg1*<br/>
+*Arg1*<br/>
 Der Typ des ersten Arguments.
 
 *Arg2*<br/>
@@ -202,7 +202,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="binary_delegate_noreturn"></a> Binary_delegate_noreturn (STL/CLR)
+## <a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
 
 Die Genereic-Klasse beschreibt einen Delegaten mit zwei Argumenten, die zurückgibt **"void"**. Sie verwenden, geben Sie einen Delegaten in Bezug auf das Argument.
 
@@ -216,7 +216,7 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>Parameter
 
-*arg1*<br/>
+*Arg1*<br/>
 Der Typ des ersten Arguments.
 
 *Arg2*<br/>
@@ -272,7 +272,7 @@ compare(a, b) = True
 compare(b, a) = False
 ```
 
-## <a name="binary_negate"></a> Binary_negate (STL/CLR)
+## <a name="binary_negate"></a> binary_negate (STL/CLR)
 
 Die Vorlagenklasse beschreibt ein Funktionselement ist, die beim Aufruf gibt die logische nicht von der gespeicherten Funktionselement von zwei Argumenten. Sie verwenden, geben Sie ein Funktionsobjekt im Hinblick auf seine gespeicherten Funktionselement.
 
@@ -311,7 +311,7 @@ Der Typ der gespeicherten kennen.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 |stored_function_type|Der Typ der zu kennen.|
 
@@ -322,7 +322,7 @@ Der Typ der gespeicherten kennen.
 |Operator|Beschreibung|
 |--------------|-----------------|
 |Operator()|Berechnet die gewünschte Funktion.|
-|Operator delegate_type^()|Wandelt das Funktionselement in einen Delegaten an.|
+|operator delegate_type^()|Wandelt das Funktionselement in einen Delegaten an.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -401,7 +401,7 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>Vorlagenparameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ des Arguments.
 
 *Spaß*<br/>
@@ -409,7 +409,7 @@ Der Typ der zu kennen.
 
 #### <a name="function-parameters"></a>Funktionsparameter
 
-*Funktionselement*<br/>
+*functor*<br/>
 Das Funktionselement umschlossen werden soll.
 
 *left*<br/>
@@ -482,7 +482,7 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>Vorlagenparameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ des Arguments.
 
 *Spaß*<br/>
@@ -490,7 +490,7 @@ Der Typ der zu kennen.
 
 #### <a name="function-parameters"></a>Funktionsparameter
 
-*Funktionselement*<br/>
+*functor*<br/>
 Das Funktionselement umschlossen werden soll.
 
 *right*<br/>
@@ -586,7 +586,7 @@ Der Typ der gespeicherten kennen.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 |stored_function_type|Der Typ der zu kennen.|
 
@@ -597,7 +597,7 @@ Der Typ der gespeicherten kennen.
 |Operator|Beschreibung|
 |--------------|-----------------|
 |Operator()|Berechnet die gewünschte Funktion.|
-|Operator delegate_type^()|Wandelt das Funktionselement in einen Delegaten an.|
+|operator delegate_type^()|Wandelt das Funktionselement in einen Delegaten an.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -691,7 +691,7 @@ Der Typ der gespeicherten kennen.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 |stored_function_type|Der Typ der zu kennen.|
 
@@ -702,7 +702,7 @@ Der Typ der gespeicherten kennen.
 |Operator|Beschreibung|
 |--------------|-----------------|
 |Operator()|Berechnet die gewünschte Funktion.|
-|Operator delegate_type^()|Wandelt das Funktionselement in einen Delegaten an.|
+|operator delegate_type^()|Wandelt das Funktionselement in einen Delegaten an.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -787,7 +787,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ von den Argumenten und Rückgabewerten.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -796,7 +796,7 @@ Der Typ von den Argumenten und Rückgabewerten.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
@@ -806,7 +806,7 @@ Der Typ von den Argumenten und Rückgabewerten.
 |Operator|Beschreibung|
 |--------------|-----------------|
 |Operator()|Berechnet die gewünschte Funktion.|
-|Operator delegate_type^()|Wandelt das Funktionselement in einen Delegaten an.|
+|operator delegate_type^()|Wandelt das Funktionselement in einen Delegaten an.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -859,7 +859,7 @@ int main()
 2 3
 ```
 
-## <a name="equal_to"></a> Equal_to (STL/CLR)
+## <a name="equal_to"></a> equal_to (STL/CLR)
 
 Die Vorlagenklasse beschreibt ein Funktionselement ist, wenn Sie aufgerufen wird, gibt true zurück, nur dann, wenn das erste Argument gleich dem zweiten ist. Sie verwenden, geben Sie ein Funktionsobjekt im Hinblick auf den Argumenttyp.
 
@@ -888,7 +888,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ der Argumente.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -897,7 +897,7 @@ Der Typ der Argumente.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
@@ -907,7 +907,7 @@ Der Typ der Argumente.
 |Operator|Beschreibung|
 |--------------|-----------------|
 |Operator()|Berechnet die gewünschte Funktion.|
-|Operator delegate_type^()|Wandelt das Funktionselement in einen Delegaten an.|
+|operator delegate_type^()|Wandelt das Funktionselement in einen Delegaten an.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -989,7 +989,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ der Argumente.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -998,7 +998,7 @@ Der Typ der Argumente.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
@@ -1061,7 +1061,7 @@ int main()
 1 0
 ```
 
-## <a name="greater_equal"></a> Greater_equal (STL/CLR)
+## <a name="greater_equal"></a> greater_equal (STL/CLR)
 
 Die Vorlagenklasse beschreibt ein Funktionselement ist, wenn aufgerufen, gibt nur true zurück, wenn das erste Argument größer als oder gleich dem zweiten ist. Sie verwenden, geben Sie ein Funktionsobjekt im Hinblick auf den Argumenttyp.
 
@@ -1090,7 +1090,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ der Argumente.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -1099,7 +1099,7 @@ Der Typ der Argumente.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
@@ -1191,7 +1191,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ der Argumente.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -1200,12 +1200,12 @@ Der Typ der Argumente.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
 |------------|-----------------|
-|less|Erstellt das Funktionselement.|
+|weniger|Erstellt das Funktionselement.|
 
 |Operator|Beschreibung|
 |--------------|-----------------|
@@ -1292,7 +1292,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ der Argumente.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -1301,7 +1301,7 @@ Der Typ der Argumente.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
@@ -1393,7 +1393,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ der Argumente.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -1402,7 +1402,7 @@ Der Typ der Argumente.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
@@ -1492,7 +1492,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ der Argumente.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -1501,7 +1501,7 @@ Der Typ der Argumente.
 |---------------------|-----------------|
 |argument_type|Der Typ des Arguments Funktionselement.|
 |delegate_type|Der Typ des generischen Delegaten.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 
 |Member|Beschreibung|
 |------------|-----------------|
@@ -1584,7 +1584,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ der Argumente.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -1593,7 +1593,7 @@ Der Typ der Argumente.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
@@ -1685,7 +1685,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ von den Argumenten und Rückgabewerten.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -1694,7 +1694,7 @@ Der Typ von den Argumenten und Rückgabewerten.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
@@ -1786,7 +1786,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ von den Argumenten und Rückgabewerten.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -1795,7 +1795,7 @@ Der Typ von den Argumenten und Rückgabewerten.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
@@ -1887,7 +1887,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ von den Argumenten und Rückgabewerten.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -1896,7 +1896,7 @@ Der Typ von den Argumenten und Rückgabewerten.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
@@ -1959,7 +1959,7 @@ int main()
 8 3
 ```
 
-## <a name="negate"></a> Negation (STL/CLR)
+## <a name="negate"></a> negate (STL/CLR)
 
 Die Vorlagenklasse beschreibt ein Funktionselement ist, die beim Aufruf gibt Arguments negiert. Sie verwenden, geben Sie ein Funktionsobjekt im Hinblick auf den Argumenttyp.
 
@@ -1986,7 +1986,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ der Argumente.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -1995,7 +1995,7 @@ Der Typ der Argumente.
 |---------------------|-----------------|
 |argument_type|Der Typ des Arguments Funktionselement.|
 |delegate_type|Der Typ des generischen Delegaten.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 
 |Member|Beschreibung|
 |------------|-----------------|
@@ -2049,7 +2049,7 @@ int main()
 -4 3
 ```
 
-## <a name="not_equal_to"></a> Not_Equal_To (STL/CLR)
+## <a name="not_equal_to"></a> not_equal_to (STL/CLR)
 
 Die Vorlagenklasse beschreibt ein Funktionselement ist, wenn aufgerufen, gibt "true" fest, wenn das erste Argument nicht gleich dem zweiten. Sie verwenden, geben Sie ein Funktionsobjekt im Hinblick auf den Argumenttyp.
 
@@ -2078,7 +2078,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ der Argumente.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -2087,7 +2087,7 @@ Der Typ der Argumente.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
@@ -2168,7 +2168,7 @@ Der Typ der zu kennen.
 
 #### <a name="function-parameters"></a>Funktionsparameter
 
-*Funktionselement*<br/>
+*functor*<br/>
 Das Funktionselement umschlossen werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -2240,7 +2240,7 @@ Der Typ der zu kennen.
 
 #### <a name="function-parameters"></a>Funktionsparameter
 
-*Funktionselement*<br/>
+*functor*<br/>
 Das Funktionselement umschlossen werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -2303,7 +2303,7 @@ int main()
 1 0
 ```
 
-## <a name="plus"></a> Plus (STL/CLR)
+## <a name="plus"></a> plus (STL/CLR)
 
 Die Vorlagenklasse beschreibt ein Funktionselement ist, wenn aufgerufen, gibt das erste Argument und der zweite. Sie verwenden, geben Sie ein Funktionsobjekt im Hinblick auf den Argumenttyp.
 
@@ -2332,7 +2332,7 @@ public:
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ von den Argumenten und Rückgabewerten.
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -2341,7 +2341,7 @@ Der Typ von den Argumenten und Rückgabewerten.
 |---------------------|-----------------|
 |delegate_type|Der Typ des generischen Delegaten.|
 |first_argument_type|Der Typ des ersten Arguments Funktionselement.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 |second_argument_type|Der Typ des zweiten Arguments Funktionselement.|
 
 |Member|Beschreibung|
@@ -2404,7 +2404,7 @@ int main()
 6 4
 ```
 
-## <a name="unary_delegate"></a> Unary_delegate (STL/CLR)
+## <a name="unary_delegate"></a> unary_delegate (STL/CLR)
 
 Die Genereic-Klasse beschreibt einen Delegaten mit einem Argument. Sie verwenden, geben Sie einen Delegaten in Bezug auf die Argument- und Rückgabetypen-Typen.
 
@@ -2418,7 +2418,7 @@ generic<typename Arg,
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ des Arguments.
 
 *Ergebnis*<br/>
@@ -2470,7 +2470,7 @@ hash(L'a') = 5
 hash(L'b') = 22
 ```
 
-## <a name="unary_delegate_noreturn"></a> Unary_delegate_noreturn (STL/CLR)
+## <a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
 
 Die Genereic-Klasse beschreibt einen Delegaten mit einem Argument, das zurückgibt **"void"**. Sie verwenden, geben Sie einen Delegaten in Bezug auf den Argumenttyp.
 
@@ -2483,7 +2483,7 @@ generic<typename Arg>
 
 #### <a name="parameters"></a>Parameter
 
-*arg*<br/>
+*Arg*<br/>
 Der Typ des Arguments.
 
 ### <a name="remarks"></a>Hinweise
@@ -2533,7 +2533,7 @@ hash(a) = 5
 hash(b) = 22
 ```
 
-## <a name="unary_negate"></a> Unary_negate (STL/CLR)
+## <a name="unary_negate"></a> unary_negate (STL/CLR)
 
 Die Vorlagenklasse beschreibt ein Funktionselement ist, die beim Aufruf gibt die logische nicht von der gespeicherten Funktionselement mit einem Argument. Sie verwenden, geben Sie ein Funktionsobjekt im Hinblick auf seine gespeicherten Funktionselement.
 
@@ -2570,7 +2570,7 @@ Der Typ der gespeicherten kennen.
 |---------------------|-----------------|
 |argument_type|Der Typ des Arguments Funktionselement.|
 |delegate_type|Der Typ des generischen Delegaten.|
-|RESULT_TYPE|Der Typ des Ergebnisses Funktionselement.|
+|result_type|Der Typ des Ergebnisses Funktionselement.|
 
 |Member|Beschreibung|
 |------------|-----------------|
@@ -2579,7 +2579,7 @@ Der Typ der gespeicherten kennen.
 |Operator|Beschreibung|
 |--------------|-----------------|
 |Operator()|Berechnet die gewünschte Funktion.|
-|Delegate_type ^|Wandelt das Funktionselement in einen Delegaten an.|
+|delegate_type^|Wandelt das Funktionselement in einen Delegaten an.|
 
 ### <a name="remarks"></a>Hinweise
 

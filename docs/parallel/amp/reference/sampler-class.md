@@ -13,11 +13,11 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
 ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352592"
 ---
 # <a name="sampler-class"></a>Samplerklasse
 
@@ -67,7 +67,7 @@ class sampler;
 
 **Header:** amp_graphics.h
 
-**Namespace:** Concurrency:: Graphics
+**Namespace:** concurrency::graphics
 
 ##  <a name="ctor"></a> Sampler
 
@@ -114,7 +114,7 @@ Die im Sampling für alle Dimensionen zu verwendenden Adressierung.
 *_Border_color*<br/>
 Die zu verwendenden Rahmenfarbe, wenn der Adressmodus address_border lautet. Der Standardwert ist `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
 
-*_Sonstige*<br/>
+*_Other*<br/>
 [5]-Kopierkonstruktor der `sampler` zu kopierende in das neue Objekt `sampler` Instanz.
 
 [6]-Bewegungskonstruktor die `sampler` Objekt, das Verschieben in das neue `sampler` Instanz.
@@ -179,7 +179,7 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 
 Der Filtermodus, der für den Sampler konfiguriert ist.
 
-##  <a name="operator_eq"></a> Operator =
+##  <a name="operator_eq"></a> operator=
 
 Weist den Wert eines anderen Samplerobjekts einem vorhandenen Sampler zu.
 
@@ -193,7 +193,7 @@ sampler& operator= (    // [2] move assignment operator
 
 ### <a name="parameters"></a>Parameter
 
-*_Sonstige*<br/>
+*_Other*<br/>
 [1]-Kopierzuweisungsoperator der `sampler` Objekt, das in diese kopiert `sampler`.
 
 [2] Move-Zuweisungsoperator der `sampler` Objekt zum Umwandeln dieses `sampler`.

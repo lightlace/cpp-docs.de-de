@@ -7,11 +7,11 @@ helpviewer_keywords:
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
 ms.openlocfilehash: 91f06c4a36e76638708edf085987e51418913fd6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337829"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Stream-Sockets
 
@@ -43,4 +43,4 @@ Streamsockets kann besser als Anwendungen, die dafür ausgelegt, einen Datagramm
 ## <a name="see-also"></a>Siehe auch
 
 [Windows-Sockets in MFC](../mfc/windows-sockets-in-mfc.md)<br/>
-[Windows Sockets: Hintergrund](../mfc/windows-sockets-background.md)
+[Windows-Sockets: Hintergrund](../mfc/windows-sockets-background.md)

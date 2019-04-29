@@ -40,11 +40,11 @@ helpviewer_keywords:
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
 ms.openlocfilehash: 1a884a75fbc3ba979402c94c67d2915863a847e9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384464"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -58,7 +58,7 @@ Fügen Sie den STL/CLR-Header `<cliext/utility>` definiert die Vorlagenklasse `p
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Cliext/Hilfsprogramm >
+**Header:** \<cliext/utility>
 
 **Namespace:** Cliext
 
@@ -73,7 +73,7 @@ Fügen Sie den STL/CLR-Header `<cliext/utility>` definiert die Vorlagenklasse `p
 |[operator== (pair) (STL/CLR)](#op_eq)|Pair-gleich-Vergleich.|
 |[operator!= (pair) (STL/CLR)](#op_neq)|Koppeln Sie nicht gleich-Vergleich ein.|
 |[operator< (pair) (STL/CLR)](#op_lt)|Paar kleiner-als-Vergleich.|
-|[Operator\<= (Paar) (STL/CLR)](#op_lteq)|Koppeln Sie kleiner oder gleich Vergleich.|
+|[operator\<= (pair) (STL/CLR)](#op_lteq)|Koppeln Sie kleiner oder gleich Vergleich.|
 |[operator> (pair) (STL/CLR)](#op_gt)|Das Paar ist größer als-Vergleich.|
 |[operator>= (pair) (STL/CLR)](#op_gteq)|Paar von größer als oder gleich-Vergleich.|
 
@@ -83,7 +83,7 @@ Fügen Sie den STL/CLR-Header `<cliext/utility>` definiert die Vorlagenklasse `p
 
 ## <a name="members"></a>Member
 
-## <a name="pair"></a> Paar (STL/CLR)
+## <a name="pair"></a> pair (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das ein Paar von Werten umschließt.
 
 ### <a name="syntax"></a>Syntax
@@ -96,10 +96,10 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parameter
 
-*Wert1*<br/>
+*Value1*<br/>
 Der Typ des ersten einem Wrapper versehene Wert.
 
-*Wert2*<br/>
+*Value2*<br/>
 Der Typ des zweiten einem Wrapper versehene Wert.
 
 ## <a name="members"></a>Member
@@ -164,7 +164,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="first_type"></a> Pair::first_type (STL/CLR)
+## <a name="first_type"></a> pair::first_type (STL/CLR)
 
 Der Typ des ersten umschlossene Werts.
 
@@ -263,10 +263,10 @@ pair(Value1 val1, Value2 val2);
 *right*<br/>
 -Paar, zu speichern.
 
-*Wert1*<br/>
+*val1*<br/>
 Erste zu speichernde Wert.
 
-*Wert2*<br/>
+*val2*<br/>
 Zweite zu speichernde Wert.
 
 ### <a name="remarks"></a>Hinweise
@@ -473,7 +473,7 @@ x x x x x
 a b c
 ```
 
-## <a name="make_pair"></a> Make_pair (STL/CLR)
+## <a name="make_pair"></a> make_pair (STL/CLR)
 
 Stellen Sie eine `pair` von ein Paar von Werten.
 
@@ -487,16 +487,16 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parameter
 
-*Wert1*<br/>
+*Value1*<br/>
 Der Typ des ersten umschlossene Werts.
 
-*Wert2*<br/>
+*Value2*<br/>
 Der Typ des umschlossenen Sekundenwert.
 
-*Erste*<br/>
+*first*<br/>
 Erste der zu umschließende Wert.
 
-*Sekunde*<br/>
+*second*<br/>
 Zweite der zu umschließende Wert.
 
 ### <a name="remarks"></a>Hinweise
@@ -526,7 +526,7 @@ int main()
 [y, 4]
 ```
 
-## <a name="op_neq"></a> Operator! = (Paar) (STL/CLR)
+## <a name="op_neq"></a> operator!= (pair) (STL/CLR)
 
 Koppeln Sie nicht gleich-Vergleich ein.
 
@@ -634,7 +634,7 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="op_lteq"></a> Operator&lt;= (Paar) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (pair) (STL/CLR)
 
 Koppeln Sie kleiner oder gleich Vergleich.
 
@@ -688,7 +688,7 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="op_eq"></a> Operator == (Paar) (STL/CLR)
+## <a name="op_eq"></a> operator== (pair) (STL/CLR)
 
 Pair-gleich-Vergleich.
 
@@ -796,7 +796,7 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="op_gteq"></a> Operator&gt;= (Paar) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (pair) (STL/CLR)
 
 Paar von größer als oder gleich-Vergleich.
 

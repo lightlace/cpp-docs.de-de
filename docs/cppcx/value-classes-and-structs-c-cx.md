@@ -6,11 +6,11 @@ helpviewer_keywords:
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
 ms.openlocfilehash: 5b9b50ba7200439e9ce648c53d52ce37226f61d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384984"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Wertklassen und Strukturen (C++/CX)
 
@@ -151,5 +151,5 @@ public:
 
 [Typsystem (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)<br/>
+[Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Verweisklassen und Strukturen (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

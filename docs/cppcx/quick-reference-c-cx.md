@@ -3,11 +3,11 @@ title: Kurzreferenz (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
 ms.openlocfilehash: 0526c9083d177688146926598b79e66ca2f9723c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362334"
 ---
 # <a name="quick-reference-ccx"></a>Kurzreferenz (C++/CX)
 

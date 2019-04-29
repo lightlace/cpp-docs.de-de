@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
 ms.openlocfilehash: 18ee500d7b884d1934c29dc91d9bcb03d507680d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356549"
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 
@@ -53,7 +53,7 @@ Gibt ein Zeiger auf die vorherige übersetzerfunktion registriert **_set_se_tran
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_set_se_translator** Funktion bietet eine Möglichkeit zum Verarbeiten von Win32-Ausnahmen (C-strukturierte Ausnahmen) als C++-typisierte Ausnahmen. Jede C-Ausnahme von C++ behandelt werden können **catch** Handler, definieren Sie zunächst eine C-Ausnahme-Wrapperklasse, die verwendet oder daraus abgeleitet wurden, einen bestimmten Klassentyp in eine C-Ausnahme zugeordnet werden kann. Um diese Klasse zu verwenden, installieren Sie eine benutzerdefinierte C-Ausnahmeübersetzungsfunktion, die bei jedem Auslösen einer C-Ausnahme vom internen Mechanismus für die Ausnahmebehandlung aufgerufen wird. In der übersetzerfunktion können Sie beliebige typisierte Ausnahmen, die von einem übereinstimmenden C++ abgefangen werden kann auslösen **catch** Handler.
+Die **_set_se_translator** Funktion bietet eine Möglichkeit zum Verarbeiten der Win32-Ausnahmen (C-strukturierte Ausnahmen) als C++ -typisierte Ausnahmen. Jede C-Ausnahme von C++ behandelt werden können **catch** Handler, definieren Sie zunächst eine C-Ausnahme-Wrapperklasse, die verwendet oder daraus abgeleitet wurden, einen bestimmten Klassentyp in eine C-Ausnahme zugeordnet werden kann. Um diese Klasse zu verwenden, installieren Sie eine benutzerdefinierte C-Ausnahmeübersetzungsfunktion, die bei jedem Auslösen einer C-Ausnahme vom internen Mechanismus für die Ausnahmebehandlung aufgerufen wird. In der übersetzerfunktion können Sie beliebige typisierte Ausnahmen, die von einem übereinstimmenden C++ abgefangen werden kann auslösen **catch** Handler.
 
 Verwenden Sie [/EHa](../../build/reference/eh-exception-handling-model.md) Verwendung **_set_se_translator**.
 

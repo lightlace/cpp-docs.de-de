@@ -39,11 +39,11 @@ helpviewer_keywords:
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
 ms.openlocfilehash: 10a50a175685f3e8f7f1241683c7705fd9a9b142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376431"
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -118,8 +118,8 @@ Die UCRT-Versionen dieser Funktionen unterstützen keine Konvertierung von Fortr
 
 |-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
-|**Strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> oder \<stdlib.h>|
-|**Wcstof**, **_wcstof_l**|C: \<stdlib.h> oder \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> oder \<wchar.h>|
+|**strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> oder \<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C: \<stdlib.h> oder \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> oder \<wchar.h>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

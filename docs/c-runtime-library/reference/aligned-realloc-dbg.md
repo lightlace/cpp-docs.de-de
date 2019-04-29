@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_realloc_dbg function
 - aligned_realloc_dbg function
 ms.assetid: 8aede920-991e-44cd-867f-83dc2165db47
-ms.openlocfilehash: 2a261b3e578bef5464bbfda8528ffd8b491acb23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 136edf6b5c95149302920af0c8a8dc9c07458e3b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348015"
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -53,7 +53,7 @@ Der Zeiger auf den aktuellen Speicherblock.
 *size*<br/>
 Die Größe der angeforderten Speicherbelegung.
 
-*Ausrichtung*<br/>
+*alignment*<br/>
 Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.
 
 *filename*<br/>
@@ -70,7 +70,7 @@ Es ist ein Fehler, wenn ein Speicher neu belegt und die Ausrichtung eines Blocks
 
 ## <a name="remarks"></a>Hinweise
 
-**_aligned_realloc_dbg** ist eine Debugversion von der [_aligned_realloc](aligned-realloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_aligned_realloc_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_aligned_realloc**. Beide **_aligned_realloc** und **_aligned_realloc_dbg** zum erneuten Zuweisen eines Speicherblocks im Basisheap, jedoch **_aligned_realloc_dbg** Datenbankmodell kann mehrere Debugfunktionen : Puffer auf beiden Seiten des benutzerteils des Blocks zum Prüfen auf Speicherverluste, einen blocktypparameter zum Nachverfolgen bestimmter belegungstypen und *Filename*/*Linenumber* Informationen zum Ermitteln des Ursprungs von belegungsanforderungen.
+**_aligned_realloc_dbg** ist eine Debugversion von der [_aligned_realloc](aligned-realloc.md) Funktion. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, jeden Aufruf von **_aligned_realloc_dbg** wird nach einer Verkleinerung auf einen Aufruf von **_aligned_realloc**. Beide **_aligned_realloc** und **_aligned_realloc_dbg** zum erneuten Zuweisen eines Speicherblocks im Basisheap, jedoch **_aligned_realloc_dbg** Datenbankmodell kann mehrere Debugfunktionen : Puffer auf beiden Seiten des benutzerteils des Blocks zum Prüfen auf Speicherverluste, und *Filename*/*Linenumber* Informationen zum Ermitteln des Ursprungs von belegungsanforderungen. Nachverfolgen von bestimmten belegungstypen mit einem blocktypparameter ist kein unterstützten Debug-Feature für ausgerichtete Zuweisungen. Ausgerichtete Zuweisungen werden als ein _NORMAL_BLOCK-Block-Typ angezeigt.
 
 **_aligned_realloc_dbg** zuordnet den angegebenen Speicherblock mit etwas mehr Speicherplatz als der angeforderten *NewSize*. *NewSize* größer oder kleiner als die Größe des ursprünglich zugeordneten Speicherblocks sein kann. Der zusätzliche Speicherplatz wird vom Debugheapmanager verwendet, um die Debugspeicherblöck zu verknüpfen und Debugheaderinformationen und Überschreibungspuffer für die Anwendung bereitzustellen. Durch die Neubelegung wird der ursprüngliche Speicherblock möglicherweise an einen anderen Speicherort im Heap verschoben und auch die Größe des Speicherblocks geändert. Wenn der Speicherblock verschoben wird, wird der Inhalt des ursprünglichen Blocks überschrieben.
 

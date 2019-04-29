@@ -27,11 +27,11 @@ helpviewer_keywords:
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
 ms.openlocfilehash: 061f0c9563d284396e85c6de70a2fe0911218eb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334371"
 ---
 # <a name="fegetround-fesetround"></a>fegetround, fesetround
 
@@ -95,7 +95,7 @@ Um diese Funktionen zu verwenden, müssen Sie vor dem Aufruf Gleitkommaoptimieru
 
 |Funktion|C-Header|C++-Header|
 |--------------|--------------|------------------|
-|**Fegetround**, **Fesetround**|\<fenv.h>|\<cfenv>|
+|**fegetround**, **fesetround**|\<fenv.h>|\<cfenv>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

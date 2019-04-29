@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
 ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358048"
 ---
 # <a name="putw"></a>_putw
 
@@ -50,7 +50,7 @@ int _putw(
 *binint*<br/>
 Binäre Ganzzahl wird ausgegeben.
 
-*Stream*<br/>
+*stream*<br/>
 Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert

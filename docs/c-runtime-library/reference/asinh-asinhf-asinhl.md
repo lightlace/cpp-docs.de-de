@@ -28,11 +28,11 @@ helpviewer_keywords:
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
 ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341781"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -62,7 +62,7 @@ Die **Asinh** Funktionen geben den umgekehrten hyperbolischen Sinus (hyperbolisc
 
 |Eingabe|SEH-Ausnahme|**_matherr** Ausnahme|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|Keine|Keine|
+|± QNAN, IND, INF|none|none|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -72,7 +72,7 @@ Wenn Sie C++ verwenden, können Sie Überladungen von Aufrufen **Asinh** verwend
 
 |Funktion|Erforderlicher C-Header|Erforderlicher C++-Header|
 |--------------|--------------|------------------|
-|**Asinh**, **Asinhf**, **Asinhl**|\<math.h>|\<Cmath > oder \<math.h <|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<Cmath > oder \<math.h <|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

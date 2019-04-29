@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
 ms.openlocfilehash: d524c49075c400caa345dd26ed681734ea0cfb94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385615"
 ---
 # <a name="compiler-error-c3642"></a>Compilerfehler C3642
 
@@ -21,7 +21,7 @@ Eine Funktion, die mit der [__clrcall](../../cpp/clrcall.md) Aufrufkonvention ka
 
 *Return_type/Args* ist entweder der Name der Funktion oder den Typ des der `__clrcall` Funktion, die Sie aufrufen möchten.  Ein Typ wird verwendet, wenn Sie über einen Funktionszeiger aufrufen.
 
-Um eine verwaltete Funktion aus einem systemeigenen Kontext aufzurufen, können Sie eine "Wrapper"-Funktion, die angerufen Hinzufügen der `__clrcall` Funktion. Sie können auch den CLR-marshalling-Mechanismus; finden Sie unter [Vorgehensweise: Marshallen Funktion Zeigern mithilfe von PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) für Weitere Informationen.
+Um eine verwaltete Funktion aus einem systemeigenen Kontext aufzurufen, können Sie eine "Wrapper"-Funktion, die angerufen Hinzufügen der `__clrcall` Funktion. Sie können auch den CLR-marshalling-Mechanismus; finden Sie unter [Vorgehensweise: Marshallen von Funktion Zeigern mithilfe von PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) für Weitere Informationen.
 
 Im folgende Beispiel wird die C3642 generiert:
 
