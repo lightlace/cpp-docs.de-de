@@ -39,11 +39,11 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
 ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411070"
 ---
 # <a name="allocatorbase-class"></a>allocator_base-Klasse
 
@@ -61,7 +61,7 @@ class allocator_base
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*Type*|Der Elementtyp, die durch die Zuweisung zugeordnet wird.|
-|*Synchronisierung*|Die Synchronisierungsrichtlinie für die Zuweisung: [sync_none-Klasse](../standard-library/sync-none-class.md), [sync_per_container-Klasse](../standard-library/sync-per-container-class.md), [sync_per_thread-Klasse](../standard-library/sync-per-thread-class.md) oder [sync_shared-Klasse](../standard-library/sync-shared-class.md).|
+|*Sync*|Die Synchronisierungsrichtlinie für die Zuweisung: [sync_none-Klasse](../standard-library/sync-none-class.md), [sync_per_container-Klasse](../standard-library/sync-per-container-class.md), [sync_per_thread-Klasse](../standard-library/sync-per-thread-class.md) oder [sync_shared-Klasse](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -180,7 +180,7 @@ pointer allocate(size_type _Nx);
 |Parameter|Beschreibung|
 |---------------|-----------------|
 |*_Nx*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
-|*_Hint*|Dieser Parameter wird ignoriert.|
+|*_Hint*|Konvertiert die Zeichenfolgendarstellung einer Zahl in einem angegebenen Stil und einem kulturspezifischen Format in die entsprechende 32-Bit-Ganzzahl mit Vorzeichen.|
 
 ### <a name="return-value"></a>Rückgabewert
 

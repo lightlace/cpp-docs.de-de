@@ -26,11 +26,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
 ms.openlocfilehash: 6763f2a96b771fadbec311cf8740352fff53e29a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413845"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator-Klasse.
 
@@ -62,7 +62,7 @@ class directory_iterator;
 
 |Member-Funktion|Beschreibung|
 |-|-|
-|[Inkrement](#increment)|Versucht, gelangen zum nächsten Dateinamen im Verzeichnis.|
+|[increment](#increment)|Versucht, gelangen zum nächsten Dateinamen im Verzeichnis.|
 
 ### <a name="operators"></a>Operatoren
 
@@ -98,10 +98,10 @@ directory_iterator(directory_iterator&&) noexcept = default;
 
 ### <a name="parameters"></a>Parameter
 
-*"pval"*<br/>
+*pval*<br/>
 Der gespeicherte Dateinamenpfad.
 
-*EC*<br/>
+*ec*<br/>
 Der Statuscode Fehler.
 
 *directory_iterator*<br/>
@@ -128,7 +128,7 @@ bool operator!=(const directory_iterator& right) const;
 *right*<br/>
 Die [Directory_iterator](../standard-library/directory-iterator-class.md) wird im Vergleich zu den `directory_iterator`.
 
-## <a name="op_as"></a> directory_iterator:: =
+## <a name="op_as"></a> directory_iterator::operator=
 
 Die als Standard festgelegten Memberzuweisungsoperatoren verhalten sich wie erwartet.
 
@@ -142,7 +142,7 @@ directory_iterator& operator=(directory_iterator&&) noexcept = default;
 *right*<br/>
 Die [Directory_iterator](../standard-library/directory-iterator-class.md) kopiert wird, in der `directory_iterator`.
 
-## <a name="op_eq"></a> directory_iterator:: ==
+## <a name="op_eq"></a> directory_iterator::operator==
 
 Der Memberoperator gibt **"true"** nur dann, wenn beide `*this` und *rechten* Sequenzende Iteratoren oder beide sind nicht Ende-des-Sequenzende-Iteratoren.
 

@@ -5,11 +5,11 @@ f1_keywords:
 - <thread>
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
 ms.openlocfilehash: 43fb79ceda6de7409e6f93797ce2f4ff213c43ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411980"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
@@ -38,13 +38,13 @@ Die `__STDCPP_THREADS__` -Makro ist definiert als einen Wert ungleich NULL, um a
 
 ### <a name="public-structures"></a>Öffentliche Strukturen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[Hash-Struktur (C++-Standardbibliothek)](../standard-library/hash-structure-stl.md)|Definiert eine Memberfunktion, die einen Wert, die eindeutig zurückgibt nach richtet eine `thread::id`. Das Funktionsobjekt definiert eine [Hash](../standard-library/hash-class.md) -Funktion, die für Werte des Typs eignet `thread::id` einer Verteilung von Indexwerten.|
 
 ### <a name="public-functions"></a>Öffentliche Funktionen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|Weist den aktuellen Ausführungsthread eindeutig aus.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|Blockiert den aufrufenden Thread.|

@@ -3,11 +3,11 @@ title: Delegaten (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
 ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406924"
 ---
 # <a name="delegates-ccx"></a>Delegaten (C++/CX)
 
@@ -106,7 +106,7 @@ Im folgenden Beispiel wird gezeigt, wie aus jedem dieser Objekte ein Delegat ers
 [!code-cpp[Cx_delegates#115](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#115)]
 
 > [!WARNING]
-> Wenn Sie ein Lambda verwenden, das den this-Zeiger aufzeichnet, stellen Sie sicher, dass Sie den `-=` -Operator verwenden, um die Registrierung vor Beenden des Lambda explizit vom Ereignis aufzuheben. Weitere Informationen finden Sie unter [Ereignisse](../cppcx/events-c-cx.md).
+> Wenn Sie ein Lambda verwenden, das den this-Zeiger aufzeichnet, stellen Sie sicher, dass Sie den `-=` -Operator verwenden, um die Registrierung vor Beenden des Lambda explizit vom Ereignis aufzuheben. Weitere Informationen finden Sie unter [Ereignisse](../cppcx/events-c-cx.md)definiert sind.
 
 ### <a name="generic-delegates"></a>Generische Delegate
 
@@ -134,4 +134,4 @@ Wenn Sie mit Ereignishandlern in .NET vertraut sind, wissen Sie, dass die empfoh
 
 [Typsystem](../cppcx/type-system-c-cx.md)<br/>
 [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)
+[Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)

@@ -3,11 +3,11 @@ title: Verwenden von Kacheln
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
 ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405370"
 ---
 # <a name="using-tiles"></a>Verwenden von Kacheln
 
@@ -151,7 +151,7 @@ Die Hauptarbeit des Beispiels steckt in der Definition des `array_view`-Objekts 
 
 4. Beim Ausführen jedes Threads gibt der `t_idx`-Index Informationen zurück, in welcher Unterteilung sich der Thread befindet (`tiled_index::tile`-Eigenschaft) und an welcher Position sich der Thread in der Kachel befindet (`tiled_index::local`-Eigenschaft).
 
-## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>Synchronisieren der Unterteilungen – "tile_static" und "tile_barrier::wait"
+## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>Synchronisieren der Unterteilungen – „tile_static“ und „tile_barrier::wait“
 
 Im vorherigen Beispiel wurde das Kachellayout und -indizes veranschaulicht, es ist jedoch nicht an sich sehr nützlich.  Eine Unterteilung wird dann nützlich, wenn die Kacheln fest mit dem Algorithmus und den `tile_static`-Variablen verbunden sind. Da alle Threads in einer Kachel über Zugriff auf `tile_static`-Variablen verfügen, werden Aufrufe an `tile_barrier::wait` verwendet, um den Zugriff auf die Variablen `tile_static` zu synchronisieren. Obwohl alle Threads in einer Kachel Zugriff auf die `tile_static`-Variablen haben, gibt es keine festgelegte Reihenfolge der Ausführung der Threads in der Kachel. Das folgende Beispiel zeigt, wie `tile_static`-Variablen und die `tile_barrier::wait`-Methode verwendet werden, um den Durchschnittswert der einzelnen Kacheln zu berechnen. Die Schlüssel zum Verständnis des Beispiels sind:
 
@@ -291,13 +291,13 @@ Es gibt zwei Arten von Speicherzugriffen, die synchronisiert werden müssen: glo
 
 Ein *Arbeitsspeicher-Fence* wird sichergestellt, dass der Speicher Zugriffe für andere Threads in der threadkachel verfügbar sind und das die programmreihenfolge entsprechend ausgeführt werden. Um dies sicherzustellen, ordnen Compiler und Prozessoren die Lese- und Schreibzugriffe fenceübergreifend nicht neu. In C++ AMP wird ein Arbeitsspeicher-Fence durch einen Aufruf eine dieser Methoden erstellt:
 
-- [tile_barrier:: Wait-Methode](reference/tile-barrier-class.md#wait): erstellt einen Fence um globalen und `tile_static` Arbeitsspeicher.
+- [tile_barrier:: Wait-Methode](reference/tile-barrier-class.md#wait): Erstellt einen Fence um globalen und `tile_static` Arbeitsspeicher.
 
-- [tile_barrier:: wait_with_all_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_all_memory_fence): erstellt einen Fence um globalen und `tile_static` Arbeitsspeicher.
+- [tile_barrier:: wait_with_all_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_all_memory_fence): Erstellt einen Fence um globalen und `tile_static` Arbeitsspeicher.
 
-- [tile_barrier:: wait_with_global_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_global_memory_fence): erstellt einen Fence ausschließlich um globalen Arbeitsspeicher.
+- [tile_barrier:: wait_with_global_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_global_memory_fence): Erstellt einen Fence ausschließlich um globalen Arbeitsspeicher.
 
-- [tile_barrier:: wait_with_tile_static_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): erstellt einen Fence ausschließlich um `tile_static` Arbeitsspeicher.
+- [tile_barrier:: wait_with_tile_static_memory_fence-Methode](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): Erstellt einen Fence ausschließlich um `tile_static` Arbeitsspeicher.
 
 Das Aufrufen eines bestimmten von Ihnen benötigten Fence kann die Leistung Ihrer App verbessern. Der Grenztyp hat Auswirkungen auf die neue Anordnung von Anweisungen durch Compiler und Hardware. Wenn Sie beispielsweise einen globalen Arbeitsspeicher-Fence verwenden, gilt er nur für globale Speicherzugriffe und daher werden Compiler und Hardware möglicherweise Lese- und Schreibvorgänge in `tile_static`-Variablen auf beiden Seiten des Fence neu anordnen.
 

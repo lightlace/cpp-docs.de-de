@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405169"
 ---
 # <a name="collate-class"></a>collate-Klasse
 
@@ -118,7 +118,7 @@ Der Name des Gebietsschemas.
 
 Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
@@ -142,13 +142,13 @@ int compare(const CharType* first1,
 *first1*<br/>
 Zeiger auf das erste Element in der ersten zu vergleichenden Sequenz.
 
-*Last1*<br/>
+*last1*<br/>
 Zeiger auf das letzte Element in der ersten zu vergleichenden Sequenz.
 
 *first2*<br/>
 Zeiger auf das erste Element in der zweiten zu vergleichenden Sequenz.
 
-*Last2*<br/>
+*last2*<br/>
 Zeiger auf das letzte Element in der zweiten zu vergleichenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -208,13 +208,13 @@ virtual int do_compare(const CharType* first1,
 *first1*<br/>
 Zeiger auf das erste Element in der ersten zu vergleichenden Sequenz.
 
-*Last1*<br/>
+*last1*<br/>
 Zeiger auf das letzte Element in der ersten zu vergleichenden Sequenz.
 
 *first2*<br/>
 Zeiger auf das erste Element in der zweiten zu vergleichenden Sequenz.
 
-*Last2*<br/>
+*last2*<br/>
 Zeiger auf das letzte Element in der zweiten zu vergleichenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -245,7 +245,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
 *last*<br/>
@@ -273,7 +273,7 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in der zu konvertierenden Sequenz.
 
 *last*<br/>
@@ -301,7 +301,7 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
 *last*<br/>
@@ -371,7 +371,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Zeiger auf das erste Zeichen in der zu konvertierenden Sequenz.
 
 *last*<br/>

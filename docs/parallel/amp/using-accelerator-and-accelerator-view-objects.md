@@ -3,15 +3,15 @@ title: Verwenden von accelerator-Objekten und accelerator_view-Objekten
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405390"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Verwenden von accelerator-Objekten und accelerator_view-Objekten
 
-Können Sie die [Accelerator](../../parallel/amp/reference/accelerator-class.md) und ["accelerator_view"](../../parallel/amp/reference/accelerator-view-class.md) Klassen an das Gerät oder Emulator C++ AMP-Code ausgeführt. Ein System kann über mehrere Geräte oder Emulatoren verfügen, die sich im Hinblick auf die Größe des Arbeitsspeichers, Unterstützung von freigegebenem Arbeitsspeicher, Debugunterstützung oder Unterstützung doppelter Genauigkeit unterscheiden. C++ Accelerated Massive Parallelism (C++ AMP) stellt APIs bereit, die Sie verwenden können, um die verfügbaren Zugriffstasten zu prüfen, eine als Standardvorlage festzulegen, mehrere accelerator_view-Objekte für mehrere Aufrufe von parallel_for_each festzulegen und spezielle Debugaufgaben auszuführen.
+Können Sie die [Accelerator](../../parallel/amp/reference/accelerator-class.md) und ["accelerator_view"](../../parallel/amp/reference/accelerator-view-class.md) Klassen an das Gerät oder Emulator zum Ausführen Ihrer C++ AMP-Code auf. Ein System kann über mehrere Geräte oder Emulatoren verfügen, die sich im Hinblick auf die Größe des Arbeitsspeichers, Unterstützung von freigegebenem Arbeitsspeicher, Debugunterstützung oder Unterstützung doppelter Genauigkeit unterscheiden. C++ Accelerated Massive Parallelism (C++ AMP) stellt APIs bereit, die Sie verwenden können, um die verfügbaren Zugriffstasten zu prüfen, eine als Standardvorlage festzulegen, mehrere accelerator_view-Objekte für mehrere Aufrufe von parallel_for_each festzulegen und spezielle Debugaufgaben auszuführen.
 
 ## <a name="using-the-default-accelerator"></a>Verwenden der Standardzugriffstaste
 

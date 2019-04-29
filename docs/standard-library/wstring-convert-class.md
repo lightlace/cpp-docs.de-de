@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
 ms.openlocfilehash: df3b003289dcd86e8033521d8cb0cacdbb7dfbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410797"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert-Klasse
 
@@ -42,7 +42,7 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parameter
 
-*codecvt*<br/>
+*Codecvt*<br/>
 Das Facet [locale](../standard-library/locale-class.md), das das Konvertierungsobjekt darstellt.
 
 *Elem*<br/>
@@ -139,8 +139,8 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|
 |*Byte*|Die zu konvertierende Einzelelement-Bytesequenz.|
 |*ptr*|Die auf NULL endende Zeichenfolge im C-Stil der zu konvertierenden Zeichen.|
-|*BSTR*|Der zu konvertierende [byte_string](#byte_string).|
-|*Erste*|Das erste Zeichen in einem Bereich von zu konvertierenden Zeichen.|
+|*Bstr*|Der zu konvertierende [byte_string](#byte_string).|
+|*first*|Das erste Zeichen in einem Bereich von zu konvertierenden Zeichen.|
 |*last*|Das letzte Zeichen in einem Bereich von zu konvertierenden Zeichen.|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -208,8 +208,8 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |---------------|-----------------|
 |*Char*|Die zu konvertierenden Breitzeichenfolgen.|
 |*Wptr*|Die auf NULL endende Sequenz im C-Stil, die bei `wptr`beginnt und konvertiert werden soll.|
-|*WSTR*|Die zu konvertierende Zeichenfolge vom Typ [wide_string](#wide_string).|
-|*Erste*|Das erste Element in dem zu konvertierenden Elementbereich.|
+|*Wstr*|Die zu konvertierende Zeichenfolge vom Typ [wide_string](#wide_string).|
+|*first*|Das erste Element in dem zu konvertierenden Elementbereich.|
 |*last*|Das letzte Element in dem zu konvertierenden Elementbereich.|
 
 ### <a name="remarks"></a>Hinweise
