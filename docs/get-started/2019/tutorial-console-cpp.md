@@ -121,14 +121,14 @@ Wandeln Sie den Code in dieser Vorlage nun in eine Rechner-App um.
    > Grundlegendes zum Code:
    >
    > - Die `#include`-Anweisungen ermöglichen es Ihnen, auf Code zu verweisen, der sich in anderen Dateien befindet. Manchmal kommt es vor, dass Sie einen Dateinamen sehen, der von spitzen Klammern (**\<\>**) eingeschlossen wird, manchmal wird er von Anführungszeichen (**" "**) eingeschlossen. Generell werden spitze Klammern verwendet, wenn auf die C++-Standardbibliothek verwiesen wird, während Anführungszeichen für andere Dateien verwendet werden.
-   > - Die `using namespace std;`-Zeile sagt dem Compiler, dass dieser Inhalt aus der C++-Standardbibliothek zu erwarten hat, der in dieser Datei verwendet werden soll. Ohne dieser Zeile müsste vor jedem Stichwort aus der Bibliothek `std::` stehen, um dessen Bereich anzuzeigen. Ohne dieser Zeile müsste beispielsweise jeder Verweis auf `cout` als `std::cout` geschrieben werden. Die `using`-Anweisung wird hinzugefügt, um den Code übersichtlicher zu gestalten.
+   > - Die `using namespace std;`-Zeile sagt dem Compiler, dass dieser Inhalt aus der C++-Standardbibliothek zu erwarten hat, der in dieser Datei verwendet werden soll. Ohne diese Zeile müsste vor jedem Stichwort aus der Bibliothek `std::` stehen, um dessen Bereich anzuzeigen. Ohne diese Zeile müsste beispielsweise jeder Verweis auf `cout` als `std::cout` geschrieben werden. Die `using`-Anweisung wird hinzugefügt, um den Code übersichtlicher zu gestalten.
    > - Das Schlüsselwort `cout` wird verwendet, damit die Standardausgabe in C++ erfolgt. Der Operator **\<\<** sagt dem Compiler, dass dieser alles, was rechts von ihm steht, an die Standardausgabe senden soll.
    > - Das Schlüsselwort **endl** ist ähnlich wie die Eingabetaste. Es beendet die Zeile und lässt den Cursor in die nächste Zeile springen. Es hat sich aber noch mehr bewährt, innerhalb der Zeichenfolge mit demselben Effekt ein `\n`-Zeichen zu setzen (eingeschlossen von ""), da `endl` den Puffer immer leert und der Leistung des Programms schaden kann. Da es sich hier aber um eine kleine App handelt, wird stattdessen aus Gründen der besseren Lesbarkeit `endl` verwendet.
    > - Alle C++-Anweisungen müssen mit einem Semikolon enden, und alle C++-Anwendungen müssen eine `main()`-Funktion enthalten. Diese Funktion wird vom Programm zuerst ausgeführt. Die Funktion `main()` muss auf den ganzen Code zugreifen können, damit dieser verwendet werden kann.
 
-1. Wenn Sie die Datei speichern möchten, drücken Sie **STRG+S**, oder klicken im oberen Bereich der IDE auf das **Speichern**-Symbol: das Diskettensymbol in der Symbolleiste unterhalb der Menüleiste.
+1. Wenn Sie die Datei speichern möchten, drücken Sie **STRG+S** oder klicken im oberen Bereich der IDE auf das **Speichern**-Symbol: das Diskettensymbol in der Symbolleiste unterhalb der Menüleiste.
 
-1. Um die Anwendung auszuführen, drücken Sie **STRG+F5**, oder wechseln Sie zum **Debuggen**-Menü, und wählen Sie dort **Ohne Debuggen starten** aus. Es sollte nun ein Konsolenfenster mit dem im Code angegebenen Text angezeigt werden.
+1. Um die Anwendung auszuführen, drücken Sie **STRG+F5** oder wechseln Sie zum **Debuggen**-Menü, und wählen Sie dort **Ohne Debuggen starten** aus. Es sollte nun ein Konsolenfenster mit dem im Code angegebenen Text angezeigt werden.
 
 1. Schließen Sie das Konsolenfenster, sobald Sie fertig sind.
 
@@ -138,7 +138,7 @@ Jetzt können Sie mathematische Logik hinzufügen.
 
 ### <a name="to-add-a-calculator-class"></a>Hinzufügen einer Rechnerklasse
 
-1. Wechseln Sie zum Menü **Projekt**, und wählen Sie **Klasse hinzufügen** aus. Geben Sie im Eingabefeld für **Klassenname** den Namen *Calculator* (Taschenrechner) ein. Klicken Sie auf **OK**. Zwei neue Dateien werden Ihrem Projekt hinzugefügt. Um alle geänderten Dateien auf einmal zu speichern, drücken Sie **STRG+UMSCHALT+S**. Dies ist die Tastenkombination für **Datei** > **Alle speichern**. Es gibt auch eine Symbolleistenschaltfläche für **Alle speichern**: ein Symbol mit zwei Disketten. Diese Schaltfläche befindet sich neben der Schaltfläche **Speichern**. Generell hat es sich bewährt, **Alle speichern** immer wieder auszuführen, damit auch wirklich alle Dateien gespeichert werden.
+1. Wechseln Sie zum Menü **Projekt**, und wählen Sie **Klasse hinzufügen** aus. Geben Sie im Eingabefeld für **Klassenname** den Namen *Calculator* (Taschenrechner) ein. Klicken Sie auf **OK**. Zwei neue Dateien werden Ihrem Projekt hinzugefügt. Um alle geänderten Dateien auf einmal zu speichern, drücken Sie **STRG+UMSCHALT+S**. Dies ist die Tastenkombination für **Datei** > **Alle speichern**. Es gibt auch eine Symbolleistenschaltfläche für **Alle speichern**: ein Symbol mit zwei Disketten. Diese Schaltfläche befindet sich neben der Schaltfläche **Speichern**. Generell hat es sich bewährt, **Alle speichern** häufig auszuführen, damit auch wirklich alle Dateien gespeichert werden.
 
    ![Erstellen der Rechnerklasse](./media/calc-vs2019-create-calculator-class.png "Erstellen der Rechnerklasse")
 
@@ -148,7 +148,7 @@ Jetzt können Sie mathematische Logik hinzufügen.
 
    Sie sollten in Editor nun drei Registerkarten geöffnet haben: *CalculatorTutorial.cpp*, *Calculator.h* und *Calculator.cpp*. Wenn Sie eine davon versehentlich schließen, können Sie sie im **Projektmappen-Explorer**-Fenster jeweils mit einem Doppelklick auf die Datei wieder öffnen.
 
-1. Entfernen Sie in **Calculator.h** die Zeilen `Calculator();` und `~Calculator();`, die erstellt wurden, die Sie hier jedoch nicht benötigen. Fügen Sie dann die folgende Codezeile hinzu, sodass die Datei nun folgendermaßen aussieht:
+1. Entfernen Sie in **Calculator.h** die erstellten Zeilen `Calculator();` und `~Calculator();`, da Sie diese hier nicht benötigen. Fügen Sie dann die folgende Codezeile hinzu, sodass die Datei nun folgendermaßen aussieht:
 
     ```cpp
     #pragma once
@@ -166,7 +166,7 @@ Jetzt können Sie mathematische Logik hinzufügen.
    > - Die zwei Zeilen, die Sie gelöscht haben, haben einen *Konstruktor* und einen *Destruktor* für die Klasse deklariert. Für eine einfache Klasse wie die vorliegende werden diese vom Compiler für Sie erstellt. Deren Verwendung liegt aber außerhalb des in diesem Tutorial abgedeckten Bereichs.
    > - Es hat sich bewährt, Ihren Code auf Grundlage der jeweiligen Funktion in verschiedenen Dateien zu organisieren. Dies erleichtert das spätere Auffinden des benötigen Codes. Hier definieren Sie die `Calculator`-Klasse und die Datei, die die `main()`-Funktion enthält, einzeln. Es soll aber dennoch in `main()` auf die `Calculator`-Klasse verwiesen werden.
 
-1. Unter `Calculate` wird eine grüne Wellenlinie angezeigt. Dies liegt daran, dass die `Calculate`-Funktion in der CPP-Datei nicht definiert wurde. Zeigen Sie mit dem Mauszeiger auf das Wort, und klicken Sie auf den angezeigten Schraubendreher und anschließend auf **Create definition of 'Calculate' in Calculator.cpp** (Definition von „Calculate“ in Calculator.cpp erstellen).
+1. Unter `Calculate` wird eine grüne Wellenlinie angezeigt. Dies liegt daran, dass wird die `Calculate`-Funktion in der CPP-Datei noch nicht definiert haben. Zeigen Sie mit dem Mauszeiger auf das Wort, und klicken Sie auf den angezeigten Schraubendreher und anschließend auf **Create definition of 'Calculate' in Calculator.cpp** (Definition von „Calculate“ in Calculator.cpp erstellen).
 
    ![Erstellen einer Definition von „Calculate“](./media/calc-vs2019-create-definition.png "Erstellen einer Definition von „Calculate“")
 
@@ -250,7 +250,7 @@ Wenn Sie nun den Code noch einmal erstellen und ausführen, wird er nach der Auf
    > - Einige anfängliche Variablen (`x`, `y`, `oper` und `result`) werden deklariert, um jeweils die erste Zahl, die zweite Zahl, den Operator und das Endergebnis zu speichern. Es empfiehlt sich immer, einige anfängliche Variablen anzugeben, um nicht definiertes Verhalten zu vermeiden. Genau dies ist hier geschehen.
    > - Die `Calculator c;`-Zeile deklariert ein Objekt namens „c“ als Instanz der `Calculator`-Klasse. Die Klasse selbst ist lediglich ein Entwurf dafür, wie der Rechner funktioniert. Das Objekt ist der spezifische Rechner, der die Berechnungen ausführt.
    > - Die `while (true)`-Anweisung ist eine Schleife. Der Code innerhalb der Schleife wird wieder und wieder ausgeführt, so lange, bis die Bedingung innerhalb der `()` erfüllt ist. Da die Bedingung nur als `true` aufgeführt ist, ist sie immer wahr, die Schleife wird also ununterbrochen ausgeführt. Um das Programm zu schließen, muss der Benutzer das Konsolenfenster manuell schließen. Andernfalls wartet das Programm ständig auf eine neue Eingabe.
-   > - Das `cin`-Schlüsselwort wird verwendet, um Benutzereingaben anzunehmen. Dieser Eingabestream ist intelligent genug, um eine Textzeile zu verarbeiten, die im Konsolenfenster eingegeben wird, und diese in der richtigen Reihenfolge innerhalb aller aufgeführt Variablen zu platzieren, angenommen, die Benutzereingabe entspricht den benötigten Spezifikationen. Sie können diese Zeile bearbeiten, sodass verschiedene Eingabearten akzeptiert werden, z. B. mehr als zwei Zahlen. Dafür müsste aber auch die `Calculate()`-Funktion aktualisiert werden.
+   > - Das `cin`-Schlüsselwort wird verwendet, um Benutzereingaben anzunehmen. Dieser Eingabestream ist intelligent genug, um eine Textzeile zu verarbeiten, die im Konsolenfenster eingegeben wird, und diese in der richtigen Reihenfolge innerhalb aller aufgeführten Variablen zu platzieren, vorausgesetzt, die Benutzereingabe entspricht den benötigten Spezifikationen. Sie können diese Zeile bearbeiten, sodass verschiedene Eingabearten akzeptiert werden, z. B. mehr als zwei Zahlen. Dafür müsste aber auch die `Calculate()`-Funktion aktualisiert werden.
    > - Der `c.Calculate(x, oper, y);`-Ausdruck ruft die zuvor definierte `Calculate`-Funktion auf und stellt die eingegebenen Eingabewerte zur Verfügung. Die Funktion gibt dann eine Zahl zurück, die in `result` gespeichert wird.
    > - Abschließend wird `result` in der Konsole ausgegeben, sodass der Benutzer das Ergebnis der Berechnung ansehen kann.
 
