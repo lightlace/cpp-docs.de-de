@@ -27,11 +27,11 @@ helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
 ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405559"
 ---
 # <a name="arrayview-class"></a>array_view-Klasse
 
@@ -99,13 +99,13 @@ Der Rang des `array_view`-Objekts.
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[Rank-Konstante](#rank)|Speichert den Rang des `array_view`-Objekts.|
 
 ### <a name="data-members"></a>Datenmember
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[extent](#extent)|Ruft das `extent`-Objekt ab, das die Form des `array_view`-Objekts definiert.|
 |[source_accelerator_view](#source_accelerator_view)|Ruft die ["accelerator_view"](accelerator-view-class.md) , in dem die Datenquelle die `array_view` befindet|

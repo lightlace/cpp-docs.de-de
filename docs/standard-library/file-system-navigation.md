@@ -3,15 +3,15 @@ title: Dateisystemnavigation
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
 ms.openlocfilehash: cfdc789daab5b476566f2072109d23fb9310094f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405195"
 ---
 # <a name="file-system-navigation"></a>Dateisystemnavigation
 
-Der Header \<filesystem> implementiert die technische Dateisystemspezifikation für C++ ISO/IEC TS 18822:2015 (endgültige Fassung: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) und enthält Typen und Funktionen, mit denen Sie plattformunabhängigen Code für die Navigation im Dateisystem schreiben können. Da er plattformübergreifend ist, enthält er APIs, die für Windows-Systeme nicht relevant sind. Beispielsweise bedeutet dies, dass `is_fifo(const path&)` gibt immer **"false"** auf Windows.
+Die \<Filesystem > Header implementiert die C++ Datei System technische Spezifikation ISO/IEC TS 18822:2015 (endgültige Fassung: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) und enthält Typen und Funktionen, mit denen Sie plattformunabhängigen Code für die Navigation im Dateisystem schreiben können. Da er plattformübergreifend ist, enthält er APIs, die für Windows-Systeme nicht relevant sind. Beispielsweise bedeutet dies, dass `is_fifo(const path&)` gibt immer **"false"** auf Windows.
 
 ## <a name="overview"></a>Übersicht
 

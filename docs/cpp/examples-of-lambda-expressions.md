@@ -5,11 +5,11 @@ helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392192"
 ---
 # <a name="examples-of-lambda-expressions"></a>Beispiele für Lambdaausdrücke
 
@@ -61,7 +61,7 @@ Obwohl Lambdaausdrücke am häufigsten im Text einer Funktion deklariert werden,
 
 ### <a name="example-2"></a>Beispiel 2
 
-Der Compiler für Visual C++ bindet einen Lambda-Ausdruck an die aufgezeichneten Variablen, wenn der Ausdruck deklariert wird, nicht wenn der Ausdruck aufgerufen wird. Das folgende Beispiel zeigt einen Lambda-Ausdruck, der die lokale Variable `i` nach Wert erfasst und die lokale Variable `j` nach Verweis. Da der Lambda-Ausdruck `i` als Wert erfasst, wirkt sich die Neuzuweisung von `i` später im Programm nicht auf das Ergebnis des Ausdrucks aus. Da der Lambda-Ausdruck `j` jedoch als Verweis erfasst, wirkt sich die erneute Zuweisung von `j` auf das Ergebnis des Ausdrucks aus.
+Der Compiler für Visual C++ bindet einen Lambdaausdruck an die aufgezeichneten Variablen, wenn der Ausdruck deklariert wird, nicht wenn der Ausdruck aufgerufen wird. Das folgende Beispiel zeigt einen Lambdaausdruck, der die lokale Variable `i` nach Wert erfasst und die lokale Variable `j` nach Verweis. Da der Lambda-Ausdruck `i` als Wert erfasst, wirkt sich die Neuzuweisung von `i` später im Programm nicht auf das Ergebnis des Ausdrucks aus. Da der Lambdaausdruck `j` jedoch als Verweis erfasst, wirkt sich die erneute Zuweisung von `j` auf das Ergebnis des Ausdrucks aus.
 
 ### <a name="code"></a>Code
 
@@ -105,7 +105,7 @@ Sie können einen Lambdaausdruck sofort aufrufen, wie im nächsten Codeausschnit
 
 ### <a name="example-1"></a>Beispiel 1
 
-Im folgenden Beispiel wird ein Lambda-Ausdruck deklariert, der die Summe von zwei ganze Zahlen zurückgibt und den Ausdruck sofort mit den Argumenten `5` und `4` aufruft:
+Im folgenden Beispiel wird ein Lambdaausdruck deklariert, der die Summe von zwei ganze Zahlen zurückgibt und den Ausdruck sofort mit den Argumenten `5` und `4` aufruft:
 
 ### <a name="code"></a>Code
 
@@ -130,7 +130,7 @@ int main()
 
 ### <a name="example-2"></a>Beispiel 2
 
-Im folgenden Beispiel wird ein Lambda-Ausdruck als Argument an die `find_if`-Funktion übergeben. Der Lambda-Ausdruck zurückgibt **"true"** Wenn der Parameter eine gerade Zahl ist.
+Im folgenden Beispiel wird ein Lambdaausdruck als Argument an die `find_if`-Funktion übergeben. Der Lambda-Ausdruck zurückgibt **"true"** Wenn der Parameter eine gerade Zahl ist.
 
 ### <a name="code"></a>Code
 
@@ -183,7 +183,7 @@ Weitere Informationen zu den `find_if` funktionieren, finden Sie unter [Find_if]
 
 ### <a name="example"></a>Beispiel
 
-Sie können einen Lambda-Ausdruck innerhalb eines anderen schachteln, wie in diesem Beispiel gezeigt wird. Der innere Lambda-Ausdruck multipliziert sein Argument mit 2 und gibt das Ergebnis zurück. Der äußere Lambda-Ausdruck ruft den inneren Lambda-Ausdruck mit seinem Argument auf und fügt dem Ergebnis 3 hinzu.
+Sie können einen Lambda-Ausdruck innerhalb eines anderen schachteln, wie in diesem Beispiel gezeigt wird. Der innere Lambdaausdruck multipliziert sein Argument mit 2 und gibt das Ergebnis zurück. Der äußere Lambdaausdruck ruft den inneren Lambdaausdruck mit seinem Argument auf und fügt dem Ergebnis 3 hinzu.
 
 ### <a name="code"></a>Code
 
@@ -221,7 +221,7 @@ In diesem Beispiel ist `[](int y) { return y * 2; }` der geschachtelte Lambdaaus
 
 ### <a name="example"></a>Beispiel
 
-Viele Programmiersprachen unterstützen das Konzept einer *Funktion höherer Ordnung.* Eine Funktion höherer Ordnung ist ein Lambda-Ausdruck, der einen anderen Lambda-Ausdruck als Argument akzeptiert oder einen Lambda-Ausdruck zurückgibt. Sie können die [Funktion](../standard-library/function-class.md) -Klasse zur Aktivierung eines C++-Lambda-Ausdrucks, verhalten sich wie eine Funktion höherer Ordnung. Das folgende Beispiel zeigt einen Lambda-Ausdruck, der ein `function`-Objekt zurückgibt, und einen Lambda-Ausdruck, der ein `function`-Objekt als sein Argument akzeptiert.
+Viele Programmiersprachen unterstützen das Konzept einer *Funktion höherer Ordnung.* Eine Funktion höherer Ordnung ist ein Lambda-Ausdruck, der einen anderen Lambda-Ausdruck als Argument akzeptiert oder einen Lambda-Ausdruck zurückgibt. Sie können die [Funktion](../standard-library/function-class.md) -Klasse zur Aktivierung eines C++-Lambda-Ausdrucks, verhalten sich wie eine Funktion höherer Ordnung. Das folgende Beispiel zeigt einen Lambdaausdruck, der ein `function`-Objekt zurückgibt, und einen Lambdaausdruck, der ein `function`-Objekt als sein Argument akzeptiert.
 
 ### <a name="code"></a>Code
 
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>Beispiel
 
 Sie können Lambda-Ausdrücke im Text einer Funktion verwenden. Der Lambdaausdruck kann auf alle Funktionen oder Datenmember zugreifen, auf die die einschließende Funktion zugreifen kann. Sie können explizit oder implizit erfassen, die **dies** Zeiger, um Zugriff auf die Funktionen und Datenmember der einschließenden Klasse bereitzustellen.
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): erfassen **dies** nach Wert (`[*this]`) Wenn der Lambda-Ausdruck wird in asynchronen oder parallelen Vorgängen verwendet werden kann Gültigkeitsbereich verlässt das Originalobjekt, wo nach den Code ausführen kann.
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Erfassen **dies** nach Wert (`[*this]`) Wenn der Lambda-Ausdruck verwendet werden in asynchronen oder parallelen Vorgängen, in denen möglicherweise den Code auszuführen, nachdem das ursprüngliche Objekt den Gültigkeitsbereich verlässt.
 
 Sie können die **dies** -Zeiger explizit in eine Funktion, wie hier gezeigt:
 
@@ -363,7 +363,7 @@ Die `ApplyScale`-Funktion verwendet einen Lambdaausdruck, um das Produkt des Ska
 
 ### <a name="example"></a>Beispiel
 
-Da Lambda-Ausdrücke typisiert sind, können Sie sie mit C++-Vorlagen verwenden. Im folgenden Beispiel werden die Funktionen `negate_all` und `print_all` dargestellt. Die `negate_all` -Funktion wendet den unären **Operator -** auf jedes Element in der `vector` Objekt. Die `print_all`-Funktion gibt jedes Element im `vector`-Objekt auf der Konsole aus.
+Da Lambdaausdrücke typisiert sind, können Sie sie mit C++-Vorlagen verwenden. Im folgenden Beispiel werden die Funktionen `negate_all` und `print_all` dargestellt. Die `negate_all` -Funktion wendet den unären **Operator -** auf jedes Element in der `vector` Objekt. Die `print_all`-Funktion gibt jedes Element im `vector`-Objekt auf der Konsole aus.
 
 ### <a name="code"></a>Code
 
@@ -427,7 +427,7 @@ Weitere Informationen zu C++-Vorlagen finden Sie unter [Vorlagen](../cpp/templat
 
 ### <a name="example"></a>Beispiel
 
-Der Text eines Lambda-Ausdrucks folgt den Regeln für die strukturierte Ausnahmebehandlung (SEH) und die C++-Ausnahmebehandlung. Sie können eine ausgelöste Ausnahme im Text eines Lambdaausdrucks behandeln oder die Ausnahmebehandlung auf den umschließenden Gültigkeitsbereich verzögern. Im folgenden Beispiel wird die **For_each** -Funktion und ein Lambda-Ausdruck zum Füllen einer `vector` -Objekt mit den Werten eines anderen. Er verwendet eine **versuchen**/**catch** Block, um ungültigen Zugriff auf den ersten Vektor zu behandeln.
+Der Text eines Lambda-Ausdrucks folgt den Regeln für die strukturierte Ausnahmebehandlung (SEH) und die C++-Ausnahmebehandlung. Sie können eine ausgelöste Ausnahme im Text eines Lambda-Ausdrucks behandeln oder die Ausnahmebehandlung auf den umschließenden Gültigkeitsbereich verzögern. Im folgenden Beispiel wird die **For_each** -Funktion und ein Lambda-Ausdruck zum Füllen einer `vector` -Objekt mit den Werten eines anderen. Er verwendet eine **versuchen**/**catch** Block, um ungültigen Zugriff auf den ersten Vektor zu behandeln.
 
 ### <a name="code"></a>Code
 
@@ -483,7 +483,7 @@ Weitere Informationen zur Behandlung von Ausnahmen finden Sie unter [Exception H
 
 ### <a name="example"></a>Beispiel
 
-Die Erfassungsklausel eines Lambda-Ausdrucks darf keine Variable mit einem verwalteten Typ enthalten. Sie können jedoch ein Argument mit einem verwalteten Typ an die Parameterliste eines Lambda-Ausdrucks übergeben. Das folgende Beispiel enthält einen Lambda-Ausdruck, der die lokale nicht verwaltete `ch`-Variable nach ihrem Wert erfasst und ein <xref:System.String?displayProperty=fullName>-Objekt als Parameter akzeptiert.
+Die Erfassungsklausel eines Lambdaausdrucks darf keine Variable mit einem verwalteten Typ enthalten. Sie können jedoch ein Argument mit einem verwalteten Typ an die Parameterliste eines Lambdaausdrucks übergeben. Das folgende Beispiel enthält einen Lambda-Ausdruck, der die lokale nicht verwaltete `ch`-Variable nach ihrem Wert erfasst und ein <xref:System.String?displayProperty=fullName>-Objekt als Parameter akzeptiert.
 
 ### <a name="code"></a>Code
 

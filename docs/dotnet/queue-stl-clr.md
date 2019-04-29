@@ -64,11 +64,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
 ms.openlocfilehash: 2cf0467c2b4799c2009f866b7aa22be5e421f762
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384724"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -98,7 +98,7 @@ Der Typ des zugrunde liegenden Containers.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Cliext bzw. einer neuen Warteschlange >
+**Header:** \<cliext/queue>
 
 **Namespace:** Cliext
 
@@ -156,7 +156,7 @@ Das Objekt weist speicherbelegungen und-Freigaben für die gesteuerte Sequenz du
 
 ## <a name="members"></a>Member
 
-## <a name="assign"></a> Queue::Assign (STL/CLR)
+## <a name="assign"></a> queue::assign (STL/CLR)
 
 Ersetzt alle Elemente.
 
@@ -210,7 +210,7 @@ a b c
 a b c
 ```
 
-## <a name="back"></a> Queue:: Back (STL/CLR)
+## <a name="back"></a> queue::back (STL/CLR)
 
 Greift auf das letzte Element zu.
 
@@ -262,7 +262,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a> Queue::back_item (STL/CLR)
+## <a name="back_item"></a> queue::back_item (STL/CLR)
 
 Greift auf das letzte Element zu.
 
@@ -314,7 +314,7 @@ back_item = c
 a b x
 ```
 
-## <a name="const_reference"></a> Queue::const_reference (STL/CLR)
+## <a name="const_reference"></a> queue::const_reference (STL/CLR)
 
 Der Typ eines konstanten Verweises auf ein Element.
 
@@ -358,7 +358,7 @@ int main()
 a b c
 ```
 
-## <a name="container_type"></a> Queue:: container_type (STL/CLR)
+## <a name="container_type"></a> queue::container_type (STL/CLR)
 
 Der Typ des zugrunde liegenden Containers.
 
@@ -400,7 +400,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a> Queue::difference_type (STL/CLR)
+## <a name="difference_type"></a> queue::difference_type (STL/CLR)
 
 Die Typen des Abstands zwischen den beiden Elementen mit Vorzeichen.
 
@@ -458,7 +458,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a> Queue:: Empty (STL/CLR)
+## <a name="empty"></a> queue::empty (STL/CLR)
 
 Testet, ob keine Elemente vorhanden sind.
 
@@ -512,7 +512,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="front"></a> Queue:: Front (STL/CLR)
+## <a name="front"></a> queue::front (STL/CLR)
 
 Greift auf das erste Element zu.
 
@@ -564,7 +564,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a> Queue::front_item (STL/CLR)
+## <a name="front_item"></a> queue::front_item (STL/CLR)
 
 Greift auf das erste Element zu.
 
@@ -616,7 +616,7 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a> Queue::generic_container (STL/CLR)
+## <a name="generic_container"></a> queue::generic_container (STL/CLR)
 
 Der Typ der generischen Schnittstelle für den Containeradapter.
 
@@ -679,7 +679,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a> Queue::generic_value (STL/CLR)
+## <a name="generic_value"></a> queue::generic_value (STL/CLR)
 
 Der Typ eines Elements für die Verwendung mit der generischen Schnittstelle für den Container.
 
@@ -737,7 +737,7 @@ a b c
 a b c
 ```
 
-## <a name="get_container"></a> Queue:: get_container (STL/CLR)
+## <a name="get_container"></a> queue::get_container (STL/CLR)
 
 Greift auf die zugrunde liegenden Containers.
 
@@ -778,7 +778,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> Queue::Operator = (STL/CLR)
+## <a name="op_as"></a> queue::operator= (STL/CLR)
 
 Ersetzt die kontrollierte Sequenz.
 
@@ -832,7 +832,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a> Queue:: POP (STL/CLR)
+## <a name="pop"></a> queue::pop (STL/CLR)
 
 Entfernt das letzte Element.
 
@@ -880,7 +880,7 @@ a b c
 b c
 ```
 
-## <a name="push"></a> Queue:: Push (STL/CLR)
+## <a name="push"></a> queue::push (STL/CLR)
 
 Fügt ein neues Letztes Element hinzu.
 
@@ -921,7 +921,7 @@ int main()
 a b c
 ```
 
-## <a name="queue"></a> Queue:: Queue (STL/CLR)
+## <a name="queue"></a> queue::queue (STL/CLR)
 
 Erstellt ein Containerobjekt für den Adapter.
 
@@ -939,7 +939,7 @@ explicit queue(container_type% wrapped);
 *right*<br/>
 Zu kopierende Objekt.
 
-*Umschlossen*<br/>
+*wrapped*<br/>
 Umschlossene Container verwenden.
 
 ### <a name="remarks"></a>Hinweise
@@ -1014,7 +1014,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="reference"></a> Queue::Reference (STL/CLR)
+## <a name="reference"></a> queue::reference (STL/CLR)
 
 Der Typ eines Verweises auf ein Element.
 
@@ -1063,7 +1063,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a> Queue:: Size (STL/CLR)
+## <a name="size"></a> queue::size (STL/CLR)
 
 Ermittelt die Anzahl von Elementen.
 
@@ -1117,7 +1117,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> Queue:: size_type (STL/CLR)
+## <a name="size_type"></a> queue::size_type (STL/CLR)
 
 Der Typ eines Abstands zwischen den beiden Elementen mit Vorzeichen.
 
@@ -1166,7 +1166,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="to_array"></a> Queue::to_array (STL/CLR)
+## <a name="to_array"></a> queue::to_array (STL/CLR)
 
 Kopiert die kontrollierte Sequenz in ein neues Array.
 
@@ -1216,7 +1216,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> Queue:: value_type (STL/CLR)
+## <a name="value_type"></a> queue::value_type (STL/CLR)
 
 Der Typ eines Elements.
 
@@ -1261,7 +1261,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> Operator! = (Warteschlange) (STL/CLR)
+## <a name="op_neq"></a> operator!= (queue) (STL/CLR)
 
 Nicht gleich-Vergleich in die Warteschlange.
 
@@ -1403,7 +1403,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> Operator&lt;= (Warteschlange) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (queue) (STL/CLR)
 
 Kleiner oder gleich in die Warteschlange Vergleich.
 
@@ -1616,7 +1616,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> Operator&gt;= (Warteschlange) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (queue) (STL/CLR)
 
 Warteschlange, die größer als oder gleich-Vergleich.
 

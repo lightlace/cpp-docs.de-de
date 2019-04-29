@@ -10,11 +10,11 @@ f1_keywords:
 - chrono/std::chrono::system_clock::is_steady Constant
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
 ms.openlocfilehash: 66710f94d96f069d6d388d6b49c76747c618a0d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412149"
 ---
 # <a name="systemclock-structure"></a>system_clock-Struktur
 
@@ -55,7 +55,7 @@ Eine Uhr ist *gleichmäßig*, wenn sie *monoton* und die Zeit zwischen den Teils
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[system_clock::is_monotonic-Konstante](#is_monotonic_constant)|Gibt an, ob der Uhrtyp monoton ist.|
 |[system_clock::is_steady-Konstante](#is_steady_constant)|Gibt an, ob der Uhrtyp gleichmäßig ist.|
@@ -76,7 +76,7 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*TM*<br/>
+*Tm*<br/>
 Ein [time_t](../c-runtime-library/standard-types.md)-Objekt.
 
 ## <a name="is_monotonic_constant"></a> system_clock::is_monotonic-Konstante

@@ -1,5 +1,5 @@
 ---
-title: 'TN054: DAO bei der Verwendung von MFC-DAO-Klassen direkt aufrufen'
+title: 'TN054: DAO Aufrufen bei der Verwendung von MFC-DAO-Klassen direkt.'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.dao
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - DAO (Data Access Objects), and MFC
 ms.assetid: f7de7d85-8d6c-4426-aa05-2e617c0da957
 ms.openlocfilehash: 938381f55b598911b69bb25bf7af576dfdfb2e4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399654"
 ---
-# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054: DAO bei der Verwendung von MFC-DAO-Klassen direkt aufrufen
+# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054: DAO Aufrufen bei der Verwendung von MFC-DAO-Klassen direkt.
 
 > [!NOTE]
 > Die Visual C++-Umgebung und den Assistenten unterstützen DAO keine (obwohl die DAO-Klassen enthalten sind, und Sie können diese weiterhin verwenden). Microsoft empfiehlt die Verwendung von [OLE DB-Vorlagen](../data/oledb/ole-db-templates.md) oder [ODBC und MFC](../data/odbc/odbc-and-mfc.md) für neue Projekte. Sie sollten nur DAO Verwaltung bereits vorhandener Anwendungen verwenden.

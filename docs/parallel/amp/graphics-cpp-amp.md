@@ -3,11 +3,11 @@ title: Grafiken (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
 ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405663"
 ---
 # <a name="graphics-c-amp"></a>Grafiken (C++ AMP)
 
@@ -263,7 +263,7 @@ Sie können auch kopieren über eine Textur auf einen anderen mithilfe der [Text
 
 ## <a name="texture-view-classes"></a>Texturansichtsklassen
 
-C++ AMP führt die [Texture_view-Klasse](../../parallel/amp/reference/texture-view-class.md) in Visual Studio 2013. Texturansichten unterstützen die gleichen texeltypen und -Ränge der [texture-Klasse](../../parallel/amp/reference/texture-class.md), aber im Unterschied zu Texturen bieten sie Zugriff auf zusätzliche Hardwarefunktionen wie textursamplings und Mipmaps. Texturansichten unterstützen schreibgeschützten, lesegeschützten und Lese-Schreibzugriff auf die zugrunde liegenden Texturdaten.
+C++AMP führt die [Texture_view-Klasse](../../parallel/amp/reference/texture-view-class.md) in Visual Studio 2013. Texturansichten unterstützen die gleichen texeltypen und -Ränge der [texture-Klasse](../../parallel/amp/reference/texture-class.md), aber im Unterschied zu Texturen bieten sie Zugriff auf zusätzliche Hardwarefunktionen wie textursamplings und Mipmaps. Texturansichten unterstützen schreibgeschützten, lesegeschützten und Lese-Schreibzugriff auf die zugrunde liegenden Texturdaten.
 
 - Schreibgeschützter Zugriff wird durch die `texture_view<const T, N>`-Vorlagenspezialisierung geboten, die Elemente mit 1, 2 oder 4 Komponenten, Textursampling und dynamischem Zugriff auf einen Bereich von Mipmapebenen unterstützt, die bei der Instanziierung der Ansicht bestimmt werden.
 
@@ -275,7 +275,7 @@ Texturansichten sind analog zu arrayansichten, aber nicht bieten der automatisch
 
 ### <a name="writeonlytextureview-deprecated"></a>writeonly_texture_view veraltet
 
-Für Visual Studio 2013, führt das C++ AMP bessere Unterstützung für hardwaretexturfunktionen wie Sampling und MipMaps bereit, die von nicht unterstützt werden kann die [Writeonly_texture_view-Klasse](../../parallel/amp/reference/writeonly-texture-view-class.md). Die neu eingeführte `texture_view`-Klasse unterstützt eine Obermenge der Funktionen in `writeonly_texture_view`; daher ist `writeonly_texture_view` veraltet.
+Für Visual Studio 2013 C++ und führt eine bessere Unterstützung für hardwaretexturfunktionen wie Sampling und MipMaps bereit, die von nicht unterstützt werden, kann die [Writeonly_texture_view-Klasse](../../parallel/amp/reference/writeonly-texture-view-class.md). Die neu eingeführte `texture_view`-Klasse unterstützt eine Obermenge der Funktionen in `writeonly_texture_view`; daher ist `writeonly_texture_view` veraltet.
 
 Es empfiehlt sich, dass Sie – zumindest für einen Code – `texture_view` für den Zugriff auf Funktionen zu verwenden, die zuvor von `writeonly_texture_view` bereitgestellt wurde. Vergleichen Sie die folgenden beiden Codebeispiele, in denen ein Texturobjekt geschrieben wird, das über zwei Komponenten (int_2) verfügt. Beachten Sie in beiden Fällen, dass die Ansicht, `wo_tv4`, durch den Wert im Lambdaausdruck erfasst werden muss. Es folgt ein Beispiel, in dem die neue Klasse `texture_view` verwendet wird:
 
@@ -342,7 +342,7 @@ Beachten Sie, wie eine Texturansicht mit nicht konstantem Elementtyp und einer K
 
 Der Elementtyp `texture_view` (seine Konstanz sowie die Anzahl der Komponenten) spielt ebenfalls eine Rolle bei der Frage, ob die Ansicht Textursampling unterstützt und wie auf Mipmapebenen zugegriffen werden kann:
 
-|Typ|Komponenten|Thema|Write|Sampling|Mipmapzugriff|
+|Typ|Komponenten|Lesen|Write|Sampling|Mipmapzugriff|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |Texture_view\<const T, N >|1, 2, 4|Ja|Nein (1)|Ja|Ja, kann indexiert werden. Bereich wird bei der Instanziierung bestimmt.|
 |Texture_view\<T, N>|1<br /><br /> 2, 4|Ja<br /><br /> Nein (2)|Ja<br /><br /> Ja|Nein (1)<br /><br /> Nein (1)|Ja, eine Ebene. Ebene wird bei der Instanziierung bestimmt.<br /><br /> Ja, eine Ebene. Ebene wird bei der Instanziierung bestimmt.|

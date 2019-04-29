@@ -3,15 +3,15 @@ title: Verwenden von Lambdas, Function-Objekten und eingeschränkten Funktionen
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
 ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405325"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Verwenden von Lambdas, Function-Objekten und eingeschränkten Funktionen
 
-Der C++ AMP-Code, den Sie im Beschleuniger ausführen möchten angegeben ist, als Argument in einem Aufruf der [Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) Methode. Als Argument können Sie einen Lambda-Ausdruck oder ein Funktionsobjekt (Funktionselement) verwenden. Zudem kann mit dem Lambdaausdruck oder dem Funktionsobjekt eine eingeschränkte C++ AMP-Funktion aufgerufen werden. In diesem Thema werden Lambdas, Funktionsobjekte und eingeschränkte Funktionen anhand eines Algorithmus zum Hinzufügen von Arrays veranschaulicht. Im folgenden Beispiel ist der Algorithmus ohne C++ AMP-Code dargestellt. Es werden zwei eindimensionale Arrays derselben Länge erstellt. Die entsprechenden ganzzahligen Elemente werden hinzugefügt und in einem dritten eindimensionalen Array gespeichert. C++ AMP wird nicht verwendet.
+Die C++ AMP-Code, den Sie im Beschleuniger ausführen möchten angegeben ist, als Argument in einem Aufruf der [Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) Methode. Als Argument können Sie einen Lambda-Ausdruck oder ein Funktionsobjekt (Funktionselement) verwenden. Zudem kann mit dem Lambdaausdruck oder dem Funktionsobjekt eine eingeschränkte C++ AMP-Funktion aufgerufen werden. In diesem Thema werden Lambdas, Funktionsobjekte und eingeschränkte Funktionen anhand eines Algorithmus zum Hinzufügen von Arrays veranschaulicht. Im folgenden Beispiel ist der Algorithmus ohne C++ AMP-Code dargestellt. Es werden zwei eindimensionale Arrays derselben Länge erstellt. Die entsprechenden ganzzahligen Elemente werden hinzugefügt und in einem dritten eindimensionalen Array gespeichert. C++ AMP wird nicht verwendet.
 
 ```cpp
 void CpuMethod() {

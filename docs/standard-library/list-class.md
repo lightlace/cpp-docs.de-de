@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413215"
 ---
 # <a name="list-class"></a>list-Klasse
 
@@ -121,7 +121,7 @@ class list
 *Type*<br/>
 Der in der Liste zu speichernde Elementdatentyp.
 
-*Zuweisung*<br/>
+*Allocator*<br/>
 Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Liste kapselt. Dieses Argument ist optional, und der Standardwert ist **Allocator**\<*Typ*>.
 
 ## <a name="remarks"></a>Hinweise
@@ -983,7 +983,7 @@ iterator erase(iterator first, iterator last);
 *Where*<br/>
 Die Position des von der Liste zu entfernenden Elements.
 
-*Erste*<br/>
+*first*<br/>
 Die Position des ersten Elements, das von der Liste entfernt werden soll.
 
 *last*<br/>

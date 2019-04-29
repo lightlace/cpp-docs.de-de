@@ -5,11 +5,11 @@ helpviewer_keywords:
 - based addressing
 ms.assetid: a68ff750-c7fa-4c0c-8d5f-2df76e4686c5
 ms.openlocfilehash: 8dec9b0bcc7db25e2ec4c39b9d907922691bfc05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393947"
 ---
 # <a name="based-grammar"></a>__based-Grammatik
 
@@ -21,15 +21,15 @@ Die einzige Form der basierenden Adressierung in 32-Bit- und 64-Bit-Kompilierung
 
 ## <a name="grammar"></a>Grammatik
 
-*Basis-Range-Modifier*: **__based (***Basis-Expression***)** 
+*based-range-modifier*: **__based(**  *base-expression*  **)**
 
-*Basis-Expression*: *based-variablebased-abstract-declaratorsegment-namesegment-cast*
+*base-expression*: *based-variablebased-abstract-declaratorsegment-namesegment-cast*
 
 *Basis-Variable*: *Bezeichner*
 
-*Basis-Abstract-Declarator*: *Abstract-Declarator*
+*based-abstract-declarator*: *abstract-declarator*
 
-*Basistyp*: *Typname*
+*base-type*: *type-name*
 
 **Ende Microsoft-spezifisch**
 

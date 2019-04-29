@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
 ms.openlocfilehash: add1e0da43a44c35f39c96e8d65e36aeea0d3afb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405156"
 ---
 # <a name="filesystemerror-class"></a>filesystem_error-Klasse
 
@@ -37,11 +37,11 @@ Die Klasse fungiert als Basisklasse für alle Ausnahmen, die ausgelöst werden, 
 |-|-|
 |[path1](#path1)|Gibt `mypval1` zurück.|
 |[path2](#path2)|Gibt `mypval2` zurück.|
-|[Was](#what)|Gibt einen Zeiger auf ein `NTBS` zurück.|
+|[what](#what)|Gibt einen Zeiger auf ein `NTBS` zurück.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Filesystem >
+**Header:** \<filesystem>
 
 **Namespace:** std::experimental::filesystem
 
@@ -65,16 +65,16 @@ filesystem_error(const string& what_arg,
 
 ### <a name="parameters"></a>Parameter
 
-*"what_arg"*<br/>
+*what_arg*<br/>
 Angegebene Nachricht.
 
-*EC*<br/>
+*ec*<br/>
 Angegebene Fehlercode.
 
-*"mypval1"*<br/>
+*mypval1*<br/>
 Weitere angegebenen Meldungsparameter.
 
-*"mypval2"*<br/>
+*mypval2*<br/>
 Weitere Nachricht der angegebenen Parameter.
 
 ## <a name="path1"></a> filesystem_error:: path1

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
 ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404740"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transportieren von Ausnahmen zwischen threads
 
-Visual C++ unterstützt *Transportieren einer Ausnahme* von einem Thread in einen anderen. Durch das Transportieren von Ausnahmen können Sie eine Ausnahme in einem Thread abfangen und anschließend die Ausnahme scheinbar in einem anderen Thread auslösen lassen. Sie können diese Funktion beispielsweise verwenden, um eine Multithreadanwendung zu schreiben, in der der primäre Thread alle Ausnahmen behandelt, die von seinen sekundären Threads ausgelöst werden. Das Transportieren von Ausnahmen ist insbesondere für Entwickler hilfreich, die parallele Programmierbibliotheken und -systeme erstellen. Um das Transportieren von Ausnahmen zu implementieren, Visual C++ bietet die ["exception_ptr"](../standard-library/exception-typedefs.md#exception_ptr) Typ und die [Current_exception](../standard-library/exception-functions.md#current_exception), [Rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), und [Make_ "exception_ptr"](../standard-library/exception-functions.md#make_exception_ptr) Funktionen.
+Visual C++ unterstützt *Transportieren einer Ausnahme* von einem Thread in einen anderen. Durch das Transportieren von Ausnahmen können Sie eine Ausnahme in einem Thread abfangen und anschließend die Ausnahme scheinbar in einem anderen Thread auslösen lassen. Sie können diese Funktion beispielsweise verwenden, um eine Multithreadanwendung zu schreiben, in der der primäre Thread alle Ausnahmen behandelt, die von seinen sekundären Threads ausgelöst werden. Das Transportieren von Ausnahmen ist insbesondere für Entwickler hilfreich, die parallele Programmierbibliotheken und -systeme erstellen. Transportieren von Ausnahmen, Visual implementieren C++ bietet die ["exception_ptr"](../standard-library/exception-typedefs.md#exception_ptr) Typ und die [Current_exception](../standard-library/exception-functions.md#current_exception), [Rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), und [Make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) Funktionen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ namespace std
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*nicht angegeben*|Eine nicht angegebene interne Klasse, die verwendet wird, um den Typ `exception_ptr` zu implementieren.|
+|*unspecified*|Eine nicht angegebene interne Klasse, die verwendet wird, um den Typ `exception_ptr` zu implementieren.|
 |*p*|Ein `exception_ptr`-Objekt, das auf eine Ausnahme verweist.|
 |*E*|Eine Klasse, die eine Ausnahme darstellt.|
 |*e*|Eine Instanz der `E`-Parameterklasse.|

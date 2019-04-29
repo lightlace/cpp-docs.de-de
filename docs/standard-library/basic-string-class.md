@@ -117,11 +117,11 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: ab93f8b225e27c0cf4d294d176c566bd6f2b5d02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409784"
 ---
 # <a name="basicstring-class"></a>basic_string-Klasse
 
@@ -137,12 +137,12 @@ class basic_string;
 ### <a name="parameters"></a>Parameter
 
 *CharType*<br/>
-Der Datentyp eines einzelnen in der Zeichenfolge zu speichernden Zeichens. Der C++-Standardbibliothek bietet spezialisierungen dieser Vorlagenklasse mit den Typdefinitionen [Zeichenfolge](../standard-library/string-typedefs.md#string) für Elemente des Typs **Char**, [Wstring](../standard-library/string-typedefs.md#wstring), für die **"wchar_t"**, [u16string](../standard-library/string-typedefs.md#u16string) für `char16_t`, und [u32string](../standard-library/string-typedefs.md#u32string) für `char32_t`.
+Der Datentyp eines einzelnen in der Zeichenfolge zu speichernden Zeichens. Die C++ Standardbibliothek bietet spezialisierungen dieser Vorlagenklasse mit den Typdefinitionen [Zeichenfolge](../standard-library/string-typedefs.md#string) für Elemente des Typs **Char**, [Wstring](../standard-library/string-typedefs.md#wstring), für die **"wchar_t"**, [u16string](../standard-library/string-typedefs.md#u16string) für `char16_t`, und [u32string](../standard-library/string-typedefs.md#u32string) für `char32_t`.
 
 *Merkmale*<br/>
 Verschiedene wichtige Eigenschaften der der `CharType` Elemente in einer Basic_string-Spezialisierung werden von der Klasse beschrieben `Traits`. Der Standardwert ist `char_traits`< `CharType`>.
 
-*Zuweisung*<br/>
+*Allocator*<br/>
 Der Typ, mit dem das gespeicherte Zuordnungsobjekt darstellt wird, mit dem Details zum Belegen und Freigeben des Arbeitsspeichers der Zeichenfolge gekapselt werden. Der Standardwert lautet **allocator**< `CharType`>.
 
 ### <a name="constructors"></a>Konstruktoren
@@ -322,7 +322,7 @@ Die Anzahl der Zeichen, die höchstens aus der Quellzeichenfolge angefügt werde
 *_Ch*<br/>
 Der Zeichenwert, der angefügt werden soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, der das erste Element im Bereich adressiert, der angefügt werden soll.
 
 *last*<br/>
@@ -480,13 +480,13 @@ Die Quellzeichenfolge, deren Zeichen der Zielzeichenfolge zugewiesen werden soll
 *_Ch*<br/>
 Der Zeichenwert, der zugewiesen werden soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, const_pointer oder const_iterator, der das erste Zeichen im Bereich der Quellzeichenfolge adressiert, die dem Zielbereich zugewiesen werden soll.
 
 *last*<br/>
 Ein Eingabeiterator, const_pointer oder const_iterator, der das Zeichen nach dem letzten Zeichen im Bereich der Quellzeichenfolge adressiert, die dem Zielbereich zugewiesen werden soll.
 
-*Ausschalten*<br/>
+*off*<br/>
 Die Position, ab der neue Zeichen zugewiesen werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -765,7 +765,7 @@ Der Index eines Zeichens in einer Zeichenfolge, die als erste verwendet wird, um
 *_Ch*<br/>
 Der Zeichenwert, der in die zu erstellende Zeichenfolge kopiert werden soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, const_pointer oder const_iterator, der das erste Element im einzufügenden Quellbereich adressiert.
 
 *last*<br/>
@@ -1910,7 +1910,7 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*first*<br/>
 Ein Iterator, der die Position des ersten Elements im zu löschenden Bereich adressiert.
 
 *last*<br/>
@@ -3046,7 +3046,7 @@ Der Zeichenwert der einzufügenden Elemente.
 *_It*<br/>
 Ein Iterator, der die Position adressiert, hinter der ein Zeichen eingefügt werden soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Eingabeiterator, const_pointer oder const_iterator, der das erste Element im einzufügenden Quellbereich adressiert.
 
 *last*<br/>
@@ -3945,10 +3945,10 @@ Das Zeichen, das in die Operandenzeichenfolge kopiert werden soll.
 *first0*<br/>
 Ein Iterator, der das erste Zeichen adressiert, das in der Operandenzeichenfolge entfernt werden soll.
 
-*Last0*<br/>
+*last0*<br/>
 Ein Iterator, der das letzte Zeichen adressiert, das in der Operandenzeichenfolge entfernt werden soll.
 
-*Erste*<br/>
+*first*<br/>
 Ein Iterator, const_pointer oder const_iterator, der das erste Zeichen adressiert, das in die Parameterzeichenfolge eingefügt werden soll.
 
 *last*<br/>

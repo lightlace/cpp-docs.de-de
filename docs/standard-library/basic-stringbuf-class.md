@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
 ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409758"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf-Klasse
 
@@ -128,7 +128,7 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Parameter
 
-*_Modus*<br/>
+*_Mode*<br/>
 Eine der Enumerationen in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *str*<br/>
@@ -241,7 +241,7 @@ Die Position, die für die Suche, relativ zum *_Way*. Weitere Informationen find
 *_Way*<br/>
 Gibt den Startpunkt für Offsetvorgänge an. Mögliche Werte sind unter [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
 
-*_Modus*<br/>
+*_Mode*<br/>
 Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden. Weitere Informationen finden Sie unter [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -277,7 +277,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 *_Sp*<br/>
 Die Position, nach der gesucht werden soll.
 
-*_Modus*<br/>
+*_Mode*<br/>
 Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -379,7 +379,7 @@ Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird **traits_typ
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Memberfunktion versucht, das aktuelle Element extrahieren `byte` aus dem Eingabepuffer fahren fort, um die aktuelle Streamposition und Zurückgeben des Elements als **Traits_type::**[To_int_type](../standard-library/char-traits-struct.md#to_int_type)( **Byte**). Geschieht dies auf eine Weise: Wenn eine Leseposition verfügbar ist, dauert es `byte` wie das Element in der Leseposition gespeichert, und den nächsten Zeiger für den Eingabepuffer verschiebt.
+Die geschützte virtuelle Memberfunktion versucht, das aktuelle Element extrahieren `byte` aus dem Eingabepuffer fahren fort, um die aktuelle Streamposition und Zurückgeben des Elements als **Traits_type::**[To_int_type](../standard-library/char-traits-struct.md#to_int_type)( **Byte**). Dies kann auf eine Weise erfolgen: Wenn eine Leseposition verfügbar ist, dauert es `byte` wie das Element in der Leseposition gespeichert, und den nächsten Zeiger für den Eingabepuffer verschiebt.
 
 ## <a name="swap"></a> basic_streambuf::swap
 

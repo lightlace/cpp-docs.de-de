@@ -89,11 +89,11 @@ helpviewer_keywords:
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
 ms.openlocfilehash: da046a467333fba9aa106b97e21cf583c8cef75d
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405065"
 ---
 # <a name="hashmap-class"></a>hash_map-Klasse
 
@@ -121,9 +121,9 @@ Der im hash_map-Element zu speichernde Schlüsseldatentyp.
 Der im hash_map-Element zu speichernde Elementdatentyp.
 
 *Merkmale*<br/>
-Der Typ, der zwei Funktionsobjekte enthält. Eins der Klasse "compare", der zwei Elementwerte als Sortierschlüssel vergleichen kann, um ihre relative Position zu bestimmen, und eine Hashfunktion, die ein Zuordnungsschlüssel mit unärem Prädikat der Elemente für ganzen Zahlen ohne Vorzeichen vom Typ `size_t` ist. Dieses Argument ist optional, und der Standardwert ist hash_compare<`Key`, less<`Key`> >.
+Der Typ, der zwei Funktionsobjekte enthält. Eins der Klasse "compare", der zwei Elementwerte als Sortierschlüssel vergleichen kann, um ihre relative Position zu bestimmen, und eine Hashfunktion, die ein Zuordnungsschlüssel mit unärem Prädikat der Elemente für ganzen Zahlen ohne Vorzeichen vom Typ `size_t` ist. Dieses Argument ist optional, und "hash_compare" <`Key`, less <`Key`>> ist der Standardwert.
 
-*Zuweisung*<br/>
+*Allocator*<br/>
 Der Typ, mit dem das gespeicherte Zuordnungsobjekt darstellt wird, mit dem Details zum Belegen und Freigeben des Arbeitsspeichers des hash_map-Elements gekapselt werden. Dieses Argument ist optional, und der Standardwert ist allocator<pair <const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Hinweise
@@ -1221,7 +1221,7 @@ size_type erase(const key_type& key);
 *_Where*<br/>
 Die Position des aus der hash_map zu entfernenden Elements.
 
-*Erste*<br/>
+*first*<br/>
 Die Position des ersten Elements, das aus der hash_map entfernt werden soll.
 
 *last*<br/>
@@ -1595,7 +1595,7 @@ iterator insert(
 |-|-|
 |*val*|Der Wert eines in das hash_map-Element einzufügenden Elements, es sei denn, das hash_map-Element enthält dieses Element bereits (oder, allgemeiner gesagt, enthält ein Element, dessen Schlüssel gleichwertig sortiert wird).|
 |*_Where*|Ein Hinweis bezüglich des Platzes, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird.|
-|*Erste*|Die Position des ersten Elements, das aus einem hash_map-Element kopiert werden soll.|
+|*first*|Die Position des ersten Elements, das aus einem hash_map-Element kopiert werden soll.|
 |*last*|Die Position direkt hinter dem letzten Element, das aus einem hash_map-Element kopiert werden soll.|
 
 ### <a name="return-value"></a>Rückgabewert

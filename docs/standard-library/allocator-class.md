@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
 ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411044"
 ---
 # <a name="allocator-class"></a>allocator-Klasse
 
@@ -77,7 +77,7 @@ Daher definiert eine Zuweisung die folgenden Typen:
 
 Diese `Type`s geben das Format, das Zeiger und Verweise für zugewiesene Elemente verwenden müssen. ( [allocator:: Pointer](#pointer) ist nicht unbedingt identisch mit `Type*` für alle zuweisungsobjekte, obwohl er verfügt über diese offensichtliche Definition für die Klasse `allocator`.)
 
-**C++11 und höher:** Verwenden Sie zum Aktivieren von „move“-Vorgängen in Ihrer Zuweisung die minimale Zuweisungsschnittstelle, und implementieren Sie den Kopierkonstruktor „== and !=“, Operatoren, „allocate“ und „deallocate“. Weitere Informationen und ein Beispiel finden Sie unter [Allocators](../standard-library/allocators.md)
+**C ++ 11 und höher:**  Um Move-Vorgänge in Ihrer Zuweisung zu aktivieren, verwenden Sie die minimale zuweisungsschnittstelle, und Implementieren der Kopierkonstruktor, == und! =-Operatoren, reservieren und freigeben. Weitere Informationen und ein Beispiel finden Sie unter [Allocators](../standard-library/allocators.md)
 
 ## <a name="members"></a>Member
 

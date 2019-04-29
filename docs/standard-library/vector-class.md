@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
-ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410901"
 ---
 # <a name="vector-class"></a>vector-Klasse
 
@@ -109,7 +109,7 @@ class vector
 *Type*<br/>
 Der im Vektor zu speichernde Elementdatentyp.
 
-*Zuweisung*<br/>
+*Allocator*<br/>
 Der Typ, der das gespeicherte allocator-Objekt darstellt, das Details zum Belegen und Freigeben von Arbeitsspeicher für den Vektor kapselt. Dieses Argument ist optional, und der Standardwert ist `allocator<Type>`.
 
 ## <a name="remarks"></a>Hinweise
@@ -1081,7 +1081,7 @@ iterator erase(
 |Parameter|Beschreibung|
 |-|-|
 |*_Where*|Die Position des von dem Vektor zu entfernenden Elements.|
-|*Erste*|Die Position des ersten Elements, das von dem Vektor entfernt werden soll.|
+|*first*|Die Position des ersten Elements, das von dem Vektor entfernt werden soll.|
 |*last*|Die Position direkt hinter dem letzten von dem Vektor entfernten Element.|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1250,7 +1250,7 @@ void insert(
 |*_Where*|Die Position in dem Vektor, an der das erste Element eingefügt wird.|
 |*val*|Der Wert des Elements, das in den Vektor eingefügt wird.|
 |*count*|Die Anzahl von Elementen, die in den Vektor eingefügt werden.|
-|*Erste*|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|
+|*first*|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|
 |*last*|Die Position des ersten Elements nach dem zu kopierenden Elementbereich.|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1386,7 +1386,7 @@ const_reference operator[](size_type Pos) const;
 
 |Parameter|Beschreibung|
 |-|-|
-|*POS*|Die Position des angegebenen Vektorelements.|
+|*Pos*|Die Position des angegebenen Vektorelements.|
 
 ### <a name="return-value"></a>Rückgabewert
 

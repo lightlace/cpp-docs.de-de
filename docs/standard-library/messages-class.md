@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383580"
 ---
 # <a name="messages-class"></a>messages-Klasse
 
@@ -152,10 +152,10 @@ virtual string_type do_get(
 *_Catval*<br/>
 Der Identifikationswert, der den zu suchenden Katalog angibt.
 
-*_Nicht*<br/>
+*_Set*<br/>
 Der erste identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Nachricht*<br/>
+*_Message*<br/>
 Der zweite identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
 *_Dfault*<br/>
@@ -222,10 +222,10 @@ string_type get(
 *_Catval*<br/>
 Der Identifikationswert, der den zu suchenden Katalog angibt.
 
-*_Nicht*<br/>
+*_Set*<br/>
 Der erste identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Nachricht*<br/>
+*_Message*<br/>
 Der zweite identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
 *_Dfault*<br/>
@@ -264,7 +264,7 @@ Der Name des Gebietsschemas.
 
 Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 

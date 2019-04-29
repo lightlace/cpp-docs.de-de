@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_raise_error function
 ms.assetid: a98226c2-c3fe-44f1-8ff5-85863de11cd6
 ms.openlocfilehash: 5790fceef26d6de4edff604270cc7108f764aced
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399251"
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 
@@ -30,7 +30,7 @@ void __stdcall _com_raise_error(
 
 #### <a name="parameters"></a>Parameter
 
-*HR*<br/>
+*hr*<br/>
 HRESULT-Informationen.
 
 *perrinfo*<br/>
@@ -56,7 +56,7 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 
 **Header:** \<comdef.h>
 
-**LIB:** Wenn die **Wchar_t ist der systemeigene Typ** Compileroption aktiviert ist, verwenden Sie comsuppw.lib oder comsuppwd.lib. Wenn **Wchar_t ist der systemeigene Typ** deaktiviert ist, sollten Sie comsupp.lib verwenden. Weitere Informationen finden Sie unter[/Zc:wchar_t (wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Lib:** Wenn die **Wchar_t ist der systemeigene Typ** Compileroption aktiviert ist, verwenden Sie comsuppw.lib oder comsuppwd.lib. Wenn **Wchar_t ist der systemeigene Typ** deaktiviert ist, sollten Sie comsupp.lib verwenden. Weitere Informationen finden Sie unter[/Zc:wchar_t (wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="see-also"></a>Siehe auch
 

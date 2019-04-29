@@ -15,11 +15,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
 ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392140"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Inkrementierungs- und Dekrementierungsoperatoren in Postfixnotation: ++ und --
 
@@ -48,7 +48,7 @@ Anwenden des Postfixinkrement-Operators auf einen Zeiger auf ein Array von Objek
 
 Die Operanden der Postfixinkrement-und Postfixdekrement-Operatoren müssen geändert werden (nicht **const**) l-Werte des arithmetischen Typ oder Zeigertyp. Der Typ des Ergebnisses ist identisch mit der die *Postfix-Expression*, aber es ist nicht mehr ein l-Wert.
 
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): der Operand eines Postfixinkrement oder Dekrement Operator möglicherweise nicht vom Typ **"bool"**.
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Der Operand eines Postfixinkrement oder Dekrement Operator möglicherweise nicht vom Typ **"bool"**.
 
 Der folgende Code veranschaulicht den Postfixinkrement-Operator:
 

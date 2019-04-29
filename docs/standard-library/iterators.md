@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
 ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396138"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -47,7 +47,7 @@ Es gibt fünf Kategorien von Iteratoren. Die Kategorien zum Erhöhen der Leistun
 
 - **Forward**. Ein *forward-Iterator* `X` eine Sequenz mit kann vorwärts durchlaufen den-Operator und beliebiges Element lesen oder Schreiben nicht Konstante Elemente beliebig häufig mithilfe der **&ast;** Operator. Sie können auf elementmitglieder zugreifen, mithilfe der **->** Iteratoren mithilfe weiterleiten, Operator und Vergleichen der **==** und **! =** Operatoren. Sie können mehrere Kopien eines Forward-Iterators anfertigen, wobei jede einzelne unabhängig dereferenziert und inkrementiert werden kann. Ein forward-Iterator, der initialisiert wird, ohne Verweis auf einen beliebigen Container aufgerufen wird, eine *null-forward-Iterator*. Null-Forward-Iteratoren vergleichen immer gleich.
 
-- **Bidirektionale**. Ein *bidirektionaler Iterator, der* `X` kann die Stelle eines forward-Iterators treten. Sie können jedoch auch einen bidirektionaler Iterator, wie in verringern `--X`, `X--`, oder `(V = *X--)`. Sie können auf Elementmitglieder zugreifen und bidirektionale Iteratoren genauso wie Forward-Iteratoren vergleichen.
+- **Bidirectional**. Ein *bidirektionaler Iterator, der* `X` kann die Stelle eines forward-Iterators treten. Sie können jedoch auch einen bidirektionaler Iterator, wie in verringern `--X`, `X--`, oder `(V = *X--)`. Sie können auf Elementmitglieder zugreifen und bidirektionale Iteratoren genauso wie Forward-Iteratoren vergleichen.
 
 - **Random Access**. Ein *Iterator mit wahlfreiem Zugriff* `X` kann die Stelle eines bidirektionalen Iterators treten. Mit einem Iterator mit wahlfreiem Zugriff können Sie den tiefgestellten-Operator  **\[]** Zugriff auf Elemente. Sie können die **+**, **-**, **+=** und **-=** Operatoren verschieben Vorwärts oder rückwärts eine angegebene Anzahl von Elementen und den Abstand zwischen Iteratoren berechnen. Sie können Bidirektionale Iteratoren vergleichen, mithilfe von **==**, **! =**, **\<**, **>**, **\< =**, und **>=**.
 
