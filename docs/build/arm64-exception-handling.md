@@ -2,11 +2,11 @@
 title: ARM64-Ausnahmebehandlung
 ms.date: 11/19/2018
 ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
-ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59534122"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342300"
 ---
 # <a name="arm64-exception-handling"></a>ARM64-Ausnahmebehandlung
 
@@ -357,7 +357,7 @@ Die Felder sind wie folgt aus:
 
 Kanonischen Prologe, die in Kategorien 1, 2 (ohne ausgehenden Eingabeaufforderungsbereich für Parameter), 3 und 4 im obigen Abschnitt fallen können durch gepackte entladeformat dargestellt werden.  Mit Ausnahme von der epilogen für kanonische Funktionen sehr ähnlichen Form, führen Sie **H** hat keine Auswirkungen, die `set_fp` Anweisung ausgelassen wird, und die Reihenfolge der Schritte sowie Anweisungen in den einzelnen Schritten im Epilog umgekehrt werden. Der Algorithmus für gepackte Xdata: Diese Schritte aus, in der folgenden Tabelle beschrieben
 
-Dies ist Schritt 0: Führen Sie die erforderliche Berechnung der Größe der einzelnen Bereiche.
+Schritt 0: Führen Sie die erforderliche Berechnung der Größe der einzelnen Bereiche.
 
 Schritt 1: Int aufgerufenen gespeicherten Register zu speichern.
 
@@ -583,7 +583,7 @@ Wenn ein Fragment keinen Prolog und keine Epilog hat, erfordert er dennoch einen
 
 Beachten Sie, dass die gleiche Sequenz von Prolog-entladungscodes EpilogStart Index [0] verweist.
 
-### <a name="example-3-variadic-unchained-function"></a>Beispiel 3: Variadic nicht Funktion verkettet.
+### <a name="example-3-variadic-unchained-function"></a>Beispiel 3: Variadic nicht Funktion verkettet.
 
 ```asm
 |Delegate| PROC

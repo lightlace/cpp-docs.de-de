@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
 ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278690"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346037"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency-Namespace (C++ AMP)
 
@@ -57,7 +57,7 @@ namespace Concurrency;
 
 ### <a name="enumerations"></a>Enumerationen
 
-|name|Beschreibung|
+|Name|Beschreibung|
 |----------|-----------------|
 |[Access_type-Enumeration](concurrency-namespace-enums-amp.md#access_type)|Gibt den Datenzugriffstyp an.|
 |[Queuing_mode-Enumeration](concurrency-namespace-enums-amp.md#queuing_mode)|Gibt die Modi für das Hinzufügen zur Warteschlange an, die auf dem Beschleuniger unterstützt werden.|
@@ -72,7 +72,7 @@ namespace Concurrency;
 |[Operator--Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator-)|Berechnet die Differenz zwischen den angegebenen Argumenten pro Komponente.|
 |[Operator *-Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator_star)|Berechnet das komponentenbezogene Produkt der angegebenen Argumente.|
 |[Operator /-Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator_div)|Berechnet den komponentenbezogenen Quotienten der angegebenen Argumente.|
-|[Operator%-Operator (C++-AMP)](concurrency-namespace-operators-amp.md#operator_mod)|Berechnet den Modul des angegebenen ersten Arguments dividiert durch das zweite angegebene Argument.|
+|[Operator%-Operator (C++ AMP)](concurrency-namespace-operators-amp.md#operator_mod)|Berechnet den Modul des angegebenen ersten Arguments dividiert durch das zweite angegebene Argument.|
 
 ### <a name="functions"></a>Funktionen
 
@@ -97,7 +97,7 @@ namespace Concurrency;
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Gibt eine formatierte Zeichenfolge im Visual Studio **Ausgabe** Fenster und löst eine [Runtime_exception](runtime-exception-class.md) Ausnahme, die der gleichen Formatierung eine Zeichenfolge.|
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Gibt eine formatierte Zeichenfolge im Visual Studio **Ausgabe** Fenster. Sie wird von einer Funktion mit der Einschränkungsklausel `restrict(amp)` aufgerufen.|
 |[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|Blockiert die Ausführung aller Threads in einer Kachel, bis alle globalen Speicherzugriffe abgeschlossen sind.|
-|[Parallel_for_each-Funktion (C++-AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Führt eine Funktion übergreifend über die "compute"-Domäne aus.|
+|[Parallel_for_each-Funktion (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Führt eine Funktion übergreifend über die "compute"-Domäne aus.|
 |[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Blockiert die Ausführung aller Threads in einer Kachel, bis alle Speicherzugriffe vom Typ `tile_static` abgeschlossen sind.|
 
 ## <a name="constants"></a>Konstanten
