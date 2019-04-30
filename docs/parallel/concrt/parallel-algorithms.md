@@ -5,11 +5,11 @@ helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
 ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262869"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346341"
 ---
 # <a name="parallel-algorithms"></a>Parallele Algorithmen
 
@@ -84,9 +84,9 @@ Für ein vollständiges Beispiel, verwendet der `parallel_for` -Algorithmus find
 
 ##  <a name="parallel_for_each"></a> Der Parallel_for_each-Algorithmus
 
-Die [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) Algorithmus führt Aufgaben für einen iterativen Container, z. B. die von der C++-Standardbibliothek, parallel bereitgestellt. Er verwendet die gleiche Partitionierungslogik wie der `parallel_for`-Algorithmus.
+Die [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) Algorithmus führt Aufgaben für einen iterativen Container, z. B. die C++ Standardbibliothek, die parallel. Er verwendet die gleiche Partitionierungslogik wie der `parallel_for`-Algorithmus.
 
-Die `parallel_for_each` -Algorithmus ähnelt der C++-Standardbibliothek [Std:: for_each](../../standard-library/algorithm-functions.md#for_each) -Algorithmus, außer dass die `parallel_for_each` -Algorithmus die Aufgaben gleichzeitig ausführt. Wie andere parallelen Algorithmen `parallel_for_each` die Aufgaben in einer bestimmten Reihenfolge wird nicht ausgeführt.
+Die `parallel_for_each` -Algorithmus ähnelt der C++ Standardbibliothek [Std:: for_each](../../standard-library/algorithm-functions.md#for_each) -Algorithmus, außer dass die `parallel_for_each` -Algorithmus die Aufgaben gleichzeitig ausführt. Wie andere parallelen Algorithmen `parallel_for_each` die Aufgaben in einer bestimmten Reihenfolge wird nicht ausgeführt.
 
 Obwohl die `parallel_for_each` Algorithmus funktioniert sowohl für forward-Iteratoren Iteratoren mit zufälligem Zugriff, es bietet eine bessere Leistung mit Iteratoren mit zufälligem Zugriff.
 
@@ -134,7 +134,7 @@ Vollständige Beispiele für die Verwendung der `parallel_invoke` -Algorithmus f
 
 ##  <a name="parallel_transform_reduce"></a> Die Parallel_transform- und Parallel_reduce-Algorithmen
 
-Die [Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) und [Concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) Algorithmen sind parallele Versionen einer C++-standardbibliotheksalgorithmen [Std](../../standard-library/algorithm-functions.md#transform)und [Std:: Accumulate](../../standard-library/numeric-functions.md#accumulate)bzw. Die Concurrency Runtime-Versionen verhalten sich wie die C++-Standardbibliothek-Versionen, außer dass die Reihenfolge der Vorgang nicht bestimmt wird, da sie parallel ausgeführt werden. Verwenden Sie diese Algorithmen, bei der Arbeit mit einem Satz, der groß genug, um Leistungs-und Skalierbarkeitsvorteile aus, die parallel verarbeitet werden.
+Die [Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) und [Concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) Algorithmen sind parallele Versionen einer der C++ -Algorithmen der Standardbibliothek [Std](../../standard-library/algorithm-functions.md#transform) und [Std:: Accumulate](../../standard-library/numeric-functions.md#accumulate)bzw. Die Concurrency Runtime-Versionen verhalten sich wie die C++-Standardbibliothek-Versionen, außer dass die Reihenfolge der Vorgang nicht bestimmt wird, da sie parallel ausgeführt werden. Verwenden Sie diese Algorithmen, bei der Arbeit mit einem Satz, der groß genug, um Leistungs-und Skalierbarkeitsvorteile aus, die parallel verarbeitet werden.
 
 > [!IMPORTANT]
 >  Die `parallel_transform` und `parallel_reduce` Algorithmen unterstützen nur, bidirektionale und weiterleiten, Iteratoren mit zufälligem Zugriff, da diese Iteratoren die stabile Speicheradressen erzeugen. Darüber hinaus diese Iteratoren müssen erzeugen nicht`const` l-Werte.
@@ -241,7 +241,7 @@ In der folgende Tabelle werden die wichtigen Eigenschaften der drei parallele So
 
 |Algorithmus|Beschreibung|Sortiermechanismus|Stabilität der Sortierung|Anforderungen an den Arbeitsspeicher|Zeit.|Iteratorzugriff|
 |---------------|-----------------|-----------------------|--------------------|-------------------------|---------------------|---------------------|
-|`parallel_sort`|Allgemeine vergleichsbasierte sortieren.|Vergleichsbasierte (aufsteigend)|Instabile|Keine|O((N/P)log(N/P) + 2N((P-1)/P))|Random|
+|`parallel_sort`|Allgemeine vergleichsbasierte sortieren.|Vergleichsbasierte (aufsteigend)|Instabile|Keiner|O((N/P)log(N/P) + 2N((P-1)/P))|Random|
 |`parallel_buffered_sort`|Schneller allgemeine vergleichsbasierte sortieren, die O(N) Speicherplatz benötigt.|Vergleichsbasierte (aufsteigend)|Instabile|Erfordert zusätzlichen O(N) Speicherplatz|O((N/P)log(N))|Random|
 |`parallel_radixsort`|Ganze Zahl schlüsselbasierten sortieren, die O(N) Speicherplatz benötigt.|Hashbasierter|Stable|Erfordert zusätzlichen O(N) Speicherplatz|O(N/P)|Random|
 

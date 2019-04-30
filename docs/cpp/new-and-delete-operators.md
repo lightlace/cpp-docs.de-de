@@ -10,17 +10,17 @@ helpviewer_keywords:
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
 ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441300"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345894"
 ---
 # <a name="new-and-delete-operators"></a>Operatoren "new" und "delete"
 
 C++ unterstützt die dynamische Zuordnung und Freigabe von Objekten mit den [neue](../cpp/new-operator-cpp.md) und [löschen](../cpp/delete-operator-cpp.md) Operatoren. Diese Operatoren belegen Speicher für Objekte aus einem Pool, der als freier Speicher bezeichnet wird. Die **neue** Operator Ruft die Spezialfunktion [new-Operator](../cpp/new-operator-cpp.md), und die **löschen** Operator Ruft die Spezialfunktion [Delete-Operator](../cpp/delete-operator-cpp.md).
 
-Die **neue** -Funktion in der C++-Standardbibliothek unterstützt das Verhalten in der C++-Standard, handelt es sich um eine Std:: bad_alloc-Ausnahme auslösen, wenn die speicherbelegung fehlschlägt. Falls Sie weiterhin die nicht auslösende Version von benötigen **neue**, Ihr Programm mit nothrownew.obj verknüpfen. Aber wenn Sie mit nothrownew.obj verknüpfen, die Standardeinstellung **new-Operator** in der C++-Standardbibliothek nicht mehr funktioniert.
+Die **neue** Funktion in der C++ Standardbibliothek unterstützt das Verhalten der C++ Standard besteht darin, eine Std:: bad_alloc-Ausnahme auslösen, wenn die speicherbelegung fehlschlägt. Falls Sie weiterhin die nicht auslösende Version von benötigen **neue**, Ihr Programm mit nothrownew.obj verknüpfen. Aber wenn Sie mit nothrownew.obj verknüpfen, die Standardeinstellung **new-Operator** in der C++-Standardbibliothek nicht mehr funktioniert.
 
 Eine Liste der Bibliotheksdateien, die die C-Laufzeitbibliothek und C++-Standardbibliothek enthalten, finden Sie unter [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md).
 

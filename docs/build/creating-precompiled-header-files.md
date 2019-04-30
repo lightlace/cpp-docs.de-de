@@ -10,11 +10,11 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825318"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341747"
 ---
 # <a name="precompiled-header-files"></a>Vorkompilierte Headerdateien
 
@@ -118,7 +118,7 @@ Bei Verwendung ein vorkompiliertes Headers, der mit "/ Yc" oder "/ Yu" erstellt,
 
 Diese Tabelle enthält die Compileroptionen, die eine Inkonsistenz Warnung auslösen könnte, wenn Sie einen vorkompilierten Header verwenden:
 
-|Option|name|Regel|
+|Option|Name|Regel|
 |------------|----------|----------|
 |/D|Definieren von Konstanten und Makros|Zwischen der Kompilierung, die Erstellen des vorkompilierten Headers und der aktuellen Kompilierung identisch sein muss. Der Status der definierten Konstanten nicht aktiviert ist, jedoch zu unvorhersehbaren Ergebnissen können auftreten, wenn Ihre Dateien auf den Werten der Konstanten geänderten abhängig sind.|
 |/ E "oder" / EP|Kopieren der Präprozessorausgabe in die Standardausgabe|Vorkompilierte Header funktionieren nicht mit der Option/e "oder" / EP.|
@@ -310,4 +310,4 @@ int main( void )
 ## <a name="see-also"></a>Siehe auch
 
 [Referenz zur C/C++-Erstellung](reference/c-cpp-building-reference.md)<br/>
-[MSVC-Compiler-Optionen](reference/compiler-options.md)
+[MSVC-Compileroptionen](reference/compiler-options.md)
