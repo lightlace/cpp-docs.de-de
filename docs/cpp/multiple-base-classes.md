@@ -8,11 +8,11 @@ helpviewer_keywords:
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
 ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176362"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345946"
 ---
 # <a name="multiple-base-classes"></a>Mehrere Basisklassen
 
@@ -81,7 +81,7 @@ Eine Klasse kann eine virtuelle Komponente und eine nicht virtuelle Komponente e
 ![Virtuelle und nicht&#45;virtuelle Komponenten einer Klasse](../cpp/media/vc38xp4.gif "virtuelle und nicht&#45;virtuelle Komponenten einer Klasse") <br/>
 Virtuelle und nicht virtuelle Komponenten der gleichen Klasse
 
-In der Abbildung verwenden `CashierQueue` und `LunchQueue``Queue` als virtuelle Basisklasse. Allerdings spezifiziert `TakeoutQueue` `Queue` als Basisklasse und nicht als virtuelle Basisklasse. Daher verfügt `LunchTakeoutCashierQueue` über zwei Unterobjekte des Typs `Queue`: eines aus dem Vererbungspfad, der `LunchCashierQueue` einschließt, und eines aus dem Pfad, der `TakeoutQueue` einschließt. Dies wird in der folgenden Abbildung verdeutlicht.
+In der Abbildung verwenden `CashierQueue` und `LunchQueue``Queue` als virtuelle Basisklasse. Allerdings spezifiziert `TakeoutQueue``Queue` als Basisklasse und nicht als virtuelle Basisklasse. Daher verfügt `LunchTakeoutCashierQueue` über zwei Unterobjekte des Typs `Queue`: eines aus dem Vererbungspfad, der `LunchCashierQueue` einschließt, und eines aus dem Pfad, der `TakeoutQueue` einschließt. Dies wird in der folgenden Abbildung verdeutlicht.
 
 ![Virtuelle und nicht&#45;virtuelle Vererbung in Objektlayout](../cpp/media/vc38xp5.gif "virtuelle und nicht&#45;virtuelle Vererbung in Objektlayout") <br/>
 Das Objektlayout mit virtueller und nicht virtuelle Vererbung

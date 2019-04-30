@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533821"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342976"
 ---
 # <a name="directoryentry-class"></a>directory_entry-Klasse
 
@@ -61,7 +61,7 @@ Weitere Informationen und Codebeispiele finden Sie unter [Dateisystemnavigation 
 
 |Konstruktor|Beschreibung|
 |-|-|
-|["directory_entry"](#directory_entry)|Die als Standard festgelegten Konstruktoren verhalten sich wie erwartet. Der vierte Konstruktor initialisiert `mypath` zu *"pval"*, `mystat` zu *Stat_arg*, und `mysymstat` zu *"symstat_arg"*.|
+|[directory_entry](#directory_entry)|Die als Standard festgelegten Konstruktoren verhalten sich wie erwartet. Der vierte Konstruktor initialisiert `mypath` zu *"pval"*, `mystat` zu *Stat_arg*, und `mysymstat` zu *"symstat_arg"*.|
 
 ### <a name="member-functions"></a>Memberfunktionen
 
@@ -104,13 +104,13 @@ void assign(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>Parameter
 
-*"pval"*<br/>
+*pval*<br/>
 Der gespeicherte Dateinamenpfad.
 
 *stat_arg*<br/>
 Der Status des gespeicherten Dateinamens.
 
-*"symstat_arg"*<br/>
+*symstat_arg*<br/>
 Den symbolischen Linkstatus des gespeicherten Dateinamens.
 
 ## <a name="directory_entry"></a> "directory_entry"
@@ -128,13 +128,13 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>Parameter
 
-*"pval"*<br/>
+*pval*<br/>
 Der gespeicherte Dateinamenpfad.
 
 *stat_arg*<br/>
 Der Status des gespeicherten Dateinamens.
 
-*"symstat_arg"*<br/>
+*symstat_arg*<br/>
 Den symbolischen Linkstatus des gespeicherten Dateinamens.
 
 ## <a name="op_neq"></a> Operator! =
@@ -150,7 +150,7 @@ bool operator!=(const directory_entry& right) const noexcept;
 *right*<br/>
 Die ["directory_entry"](../standard-library/directory-entry-class.md) wird im Vergleich zu den `directory_entry`.
 
-## <a name="op_as"></a> Operator =
+## <a name="op_as"></a> operator=
 
 Die als Standard festgelegten Memberzuweisungsoperatoren verhalten sich wie erwartet.
 
@@ -177,7 +177,7 @@ bool operator==(const directory_entry& right) const noexcept;
 *right*<br/>
 Die ["directory_entry"](../standard-library/directory-entry-class.md) wird im Vergleich zu den `directory_entry`.
 
-## <a name="op_lt"></a> Operator&lt;
+## <a name="op_lt"></a>-Operator&lt;
 
 Die Memberfunktion gibt `mypath < right.mypath`zurück.
 
@@ -203,7 +203,7 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 *right*<br/>
 Die ["directory_entry"](../standard-library/directory-entry-class.md) wird im Vergleich zu den `directory_entry`.
 
-## <a name="op_gt"></a> Operator&gt;
+## <a name="op_gt"></a>-Operator&gt;
 
 Die Memberfunktion gibt `right < *this`zurück.
 
@@ -258,16 +258,16 @@ void replace_filename(
 
 ### <a name="parameters"></a>Parameter
 
-*"pval"*<br/>
+*pval*<br/>
 Der gespeicherte Dateinamenpfad.
 
 *stat_arg*<br/>
 Der Status des gespeicherten Dateinamens.
 
-*"symstat_arg"*<br/>
+*symstat_arg*<br/>
 Den symbolischen Linkstatus des gespeicherten Dateinamens.
 
-## <a name="status"></a> Status
+## <a name="status"></a> status
 
 Beide Memberfunktionen geben `mystat` möglicherweise zunächst wie folgt geändert:
 
@@ -282,10 +282,10 @@ file_status status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*EC*<br/>
+*ec*<br/>
 Der Statuscode Fehler.
 
-## <a name="symlink_status"></a> "symlink_status"
+## <a name="symlink_status"></a> symlink_status
 
 Beide Memberfunktionen geben `mysymstat` möglicherweise zunächst wie folgt geändert: Wenn `status_known(mysymstat)` keinen weiteren Schritt ausführen. Andernfalls `mysymstat = symlink_status(mypval)`.
 
@@ -296,10 +296,10 @@ file_status symlink_status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*EC*<br/>
+*ec*<br/>
 Der Statuscode Fehler.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<Dateisystem&gt;](../standard-library/filesystem.md)<br/>
+[\<filesystem&gt;](../standard-library/filesystem.md)<br/>

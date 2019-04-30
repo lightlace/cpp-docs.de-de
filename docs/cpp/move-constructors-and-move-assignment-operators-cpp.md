@@ -1,15 +1,15 @@
 ---
-title: 'Gewusst wie: Definieren von bewegungskonstruktoren und bewegungszuweisungsoperatoren (C++)'
+title: 'Vorgehensweise: Definieren von bewegungskonstruktoren und bewegungszuweisungsoperatoren (C++)'
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
 ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504519"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345017"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)
 
@@ -312,4 +312,4 @@ Die [Std:: Move](../standard-library/utility-functions.md#move) -Funktion bewahr
 ## <a name="see-also"></a>Siehe auch
 
 [Rvalue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
-[Std:: Move](../standard-library/utility-functions.md#move)
+[std::move](../standard-library/utility-functions.md#move)
