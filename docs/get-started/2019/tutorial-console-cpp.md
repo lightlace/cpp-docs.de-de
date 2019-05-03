@@ -126,9 +126,9 @@ Wandeln Sie den Code in dieser Vorlage nun in eine Rechner-App um.
    > - Das Schlüsselwort **endl** ist ähnlich wie die Eingabetaste. Es beendet die Zeile und lässt den Cursor in die nächste Zeile springen. Es hat sich aber noch mehr bewährt, innerhalb der Zeichenfolge mit demselben Effekt ein `\n`-Zeichen zu setzen (eingeschlossen von ""), da `endl` den Puffer immer leert und der Leistung des Programms schaden kann. Da es sich hier aber um eine kleine App handelt, wird stattdessen aus Gründen der besseren Lesbarkeit `endl` verwendet.
    > - Alle C++-Anweisungen müssen mit einem Semikolon enden, und alle C++-Anwendungen müssen eine `main()`-Funktion enthalten. Diese Funktion wird vom Programm zuerst ausgeführt. Die Funktion `main()` muss auf den ganzen Code zugreifen können, damit dieser verwendet werden kann.
 
-1. Wenn Sie die Datei speichern möchten, drücken Sie **STRG+S** oder klicken im oberen Bereich der IDE auf das **Speichern**-Symbol: das Diskettensymbol in der Symbolleiste unterhalb der Menüleiste.
+1. Wenn Sie die Datei speichern möchten, drücken Sie **STRG+S**, oder klicken Sie im oberen Bereich der IDE auf das **Speichern**-Symbol: das Diskettensymbol in der Symbolleiste unterhalb der Menüleiste.
 
-1. Um die Anwendung auszuführen, drücken Sie **STRG+F5** oder wechseln Sie zum **Debuggen**-Menü, und wählen Sie dort **Ohne Debuggen starten** aus. Es sollte nun ein Konsolenfenster mit dem im Code angegebenen Text angezeigt werden.
+1. Drücken Sie **STRG+F5**, um die Anwendung auszuführen, oder wechseln Sie zum **Debuggen**-Menü, und wählen Sie dort **Ohne Debuggen starten** aus. Es sollte nun ein Konsolenfenster mit dem im Code angegebenen Text angezeigt werden.
 
 1. Schließen Sie das Konsolenfenster, sobald Sie fertig sind.
 
@@ -148,7 +148,7 @@ Jetzt können Sie mathematische Logik hinzufügen.
 
    Sie sollten in Editor nun drei Registerkarten geöffnet haben: *CalculatorTutorial.cpp*, *Calculator.h* und *Calculator.cpp*. Wenn Sie eine davon versehentlich schließen, können Sie sie im **Projektmappen-Explorer**-Fenster jeweils mit einem Doppelklick auf die Datei wieder öffnen.
 
-1. Entfernen Sie in **Calculator.h** die erstellten Zeilen `Calculator();` und `~Calculator();`, da Sie diese hier nicht benötigen. Fügen Sie dann die folgende Codezeile hinzu, sodass die Datei nun folgendermaßen aussieht:
+1. Entfernen Sie in **Calculator.h** die Zeilen `Calculator();` und `~Calculator();`, die erstellt wurden, jedoch nicht benötigt werden. Fügen Sie dann die folgende Codezeile hinzu, sodass die Datei nun folgendermaßen aussieht:
 
     ```cpp
     #pragma once
@@ -166,7 +166,7 @@ Jetzt können Sie mathematische Logik hinzufügen.
    > - Die zwei Zeilen, die Sie gelöscht haben, haben einen *Konstruktor* und einen *Destruktor* für die Klasse deklariert. Für eine einfache Klasse wie die vorliegende werden diese vom Compiler für Sie erstellt. Deren Verwendung liegt aber außerhalb des in diesem Tutorial abgedeckten Bereichs.
    > - Es hat sich bewährt, Ihren Code auf Grundlage der jeweiligen Funktion in verschiedenen Dateien zu organisieren. Dies erleichtert das spätere Auffinden des benötigen Codes. Hier definieren Sie die `Calculator`-Klasse und die Datei, die die `main()`-Funktion enthält, einzeln. Es soll aber dennoch in `main()` auf die `Calculator`-Klasse verwiesen werden.
 
-1. Unter `Calculate` wird eine grüne Wellenlinie angezeigt. Dies liegt daran, dass wird die `Calculate`-Funktion in der CPP-Datei noch nicht definiert haben. Zeigen Sie mit dem Mauszeiger auf das Wort, und klicken Sie auf den angezeigten Schraubendreher und anschließend auf **Create definition of 'Calculate' in Calculator.cpp** (Definition von „Calculate“ in Calculator.cpp erstellen).
+1. Unter `Calculate` wird eine grüne Wellenlinie angezeigt. Dies liegt daran, dass die `Calculate`-Funktion in der CPP-Datei nicht definiert wurde. Zeigen Sie mit dem Mauszeiger auf das Wort, und klicken Sie auf den angezeigten Schraubendreher und anschließend auf **Create definition of 'Calculate' in Calculator.cpp** (Definition von „Calculate“ in Calculator.cpp erstellen).
 
    ![Erstellen einer Definition von „Calculate“](./media/calc-vs2019-create-definition.png "Erstellen einer Definition von „Calculate“")
 
