@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242876"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447187"
 ---
 # <a name="compiler-error-c3867"></a>Compilerfehler C3867
 
@@ -19,7 +19,7 @@ ms.locfileid: "62242876"
 
 Sie haben versucht, die Adresse einer Memberfunktion zu verwenden, ohne die Memberfunktion mit dem Klassennamen und dem address-of-Operator zu qualifizieren.
 
-Dieser Fehler kann außerdem infolge einer Konformitätsverbesserung für Compiler für Visual C++ 2005 auftreten: Verbesserte Pointer-to-Member-Konformität. Code, der vor Visual C++ 2005 kompiliert wurde, generiert nun C3867.
+Dieser Fehler kann außerdem infolge einer konformitätsverbesserung für Compiler, die für Visual Studio 2005 durchgeführt wurde, generiert werden: verbesserte Pointer-to-Member-Konformität. Code, der vor Visual Studio 2005 kompiliert generiert nun C3867.
 
 ## <a name="example"></a>Beispiel
 

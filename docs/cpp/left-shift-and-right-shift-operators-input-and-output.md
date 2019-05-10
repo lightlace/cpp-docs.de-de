@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216420"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222060"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>LeftShift- und RightShift-Operatoren (&gt; &gt; und &lt; &lt;)
 
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-Wenn Sie eine signierte Zahl nach links verschieben, sodass das Vorzeichenbit davon betroffen ist, ist das Ergebnis nicht definiert. Das folgende Beispiel veranschaulicht, was in Visual C++ geschieht, wenn ein 1-Bit nach links in die Vorzeichenbitposition verschoben wird.
+Wenn Sie eine signierte Zahl nach links verschieben, sodass das Vorzeichenbit davon betroffen ist, ist das Ergebnis nicht definiert. Das folgende Beispiel zeigt, was geschieht, wenn ein 1-Bit an der Position Vorzeichenbit nach links verschoben wird.
 
 ```cpp
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 Der Right Shift Operator bewirkt, dass das Bitmuster in *Shift-Expression* durch die Anzahl der angegebenen Positionen nach rechts verschoben werden sollen *Additive-Expression*. Für unsignierte Zahlen werden die durch den Verschiebevorgang frei gewordenen Bitpositionen mit Nullen angefüllt. Für signierte Zahlen wird das Vorzeichenbit verwendet, um die frei gewordenen Bitpositionen zu füllen. In anderen Worten, wenn die Zahl positiv ist, wird 0 verwendet, und wenn die Zahl negativ ist, wird 1 verwendet.
 
 > [!IMPORTANT]
-> Das Ergebnis der Verschiebung einer signierten negativen Zahl nach rechts ist implementierungsabhängig. Obwohl Visual C++ das Vorzeichenbit verwendet, um frei gewordene Bitpositionen zu füllen, gibt es keine Garantie, dass auch andere Implementierungen dies tun werden.
+> Das Ergebnis der Verschiebung einer signierten negativen Zahl nach rechts ist implementierungsabhängig. Obwohl Microsoft C++ Compiler, die das Vorzeichenbit verwendet, um die frei gewordenen Bitpositionen zu füllen, es gibt keine Garantie, dass auch andere Implementierungen dies tun.
 
 Dieses Beispiel veranschaulicht, wie Verschiebevorgänge nach rechts nicht signierte Zahlen verwenden:
 
