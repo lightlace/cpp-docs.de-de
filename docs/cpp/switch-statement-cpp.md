@@ -1,6 +1,6 @@
 ---
 title: switch-Anweisung (C++)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267088"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221940"
 ---
 # <a name="switch-statement-c"></a>switch-Anweisung (C++)
 
@@ -78,7 +78,7 @@ int main() {
 
 Im obigen Beispiel wird `capa` inkrementiert, wenn `c` ein groß geschriebenes `A` ist. Die **Break** Anweisung nach `capa++` beendet die Ausführung der **wechseln** -Anweisungstexts und übergibt Sie an der **während** Schleife. Ohne die **Break** -Anweisung, Ausführung würde "Fortfahren" nächste Anweisung mit Bezeichnung, so, dass `lettera` und `nota` würde auch erhöht werden. Ein ähnlicher Zweck erfüllt die **Break** -Anweisung für `case 'a'`. Wenn `c` ein klein geschriebenes `a`, `lettera` wird erhöht, und die **Break** -Anweisung beendet die **wechseln** Anweisungstext. Wenn `c` kein `a` oder `A`, **Standard** -Anweisung ausgeführt wird.
 
-**Visual Studio 2017 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) die `[[fallthrough]]` -Attribut ist in C ++ 17-standard angegeben. Es kann verwendet werden, eine **wechseln** Anweisung als Hinweis für den Compiler (oder für alle Benutzer beim Lesen des Codes), Fall-through-Verhalten vorgesehen ist. Visual C++-Compiler warnt derzeit nicht auf Fallthrough-Verhalten, damit Sie dieses Attribut hat keine Auswirkungen Compilerverhalten. Beachten Sie, dass das Attribut auf eine leere Anweisung innerhalb der Anweisung mit Bezeichnung angewendet wird. mit anderen Worten ist das Semikolon erforderlich.
+**Visual Studio 2017 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) die `[[fallthrough]]` -Attribut ist in C ++ 17-standard angegeben. Es kann verwendet werden, eine **wechseln** Anweisung als Hinweis für den Compiler (oder für alle Benutzer beim Lesen des Codes), Fall-through-Verhalten vorgesehen ist. Microsoft C++ Compiler derzeit warnt nicht Fallthrough-Verhalten, damit Sie dieses Attribut hat keine Auswirkungen Compilerverhalten. Beachten Sie, dass das Attribut auf eine leere Anweisung innerhalb der Anweisung mit Bezeichnung angewendet wird. mit anderen Worten ist das Semikolon erforderlich.
 
 ```cpp
 int main()

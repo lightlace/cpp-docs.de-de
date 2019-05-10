@@ -1,6 +1,6 @@
 ---
 title: Exportieren aus einer DLL mithilfe von "__declspec(dllexport)"
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - dllexport
 - __declspec
@@ -10,18 +10,16 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 167060d0270004b8648d32af206865bfe66c3b4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195315"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220795"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportieren aus einer DLL mithilfe von "__declspec(dllexport)"
 
-Microsoft eingeführte **__export** in der 16-Bit-Compiler-Version von Visual C++ , damit der Compiler die Exportnamen automatisch generieren und diese in einer LIB-Datei. Diese LIB-Datei kann dann wie eine statische LIB-Datei zur Verknüpfung mit einer DLL verwendet werden.
-
-In neueren Compilerversionen können Sie Daten, Funktionen, Klassen oder Memberfunktionen von Klassen exportieren, aus einer DLL mithilfe der **__declspec(dllexport)** Schlüsselwort. **__declspec(dllexport)** der Objektdatei die Exportdirektive hinzugefügt, damit Sie nicht benötigen, verwenden Sie eine DEF-Datei.
+Sie können die Daten, Funktionen, Klassen oder Memberfunktionen von Klassen exportieren, aus einer DLL mithilfe der **__declspec(dllexport)** Schlüsselwort. **__declspec(dllexport)** der Objektdatei die Exportdirektive hinzugefügt, damit Sie nicht benötigen, verwenden Sie eine DEF-Datei.
 
 Am deutlichsten zeigt sich diese einfache Handhabung beim Exportieren von ergänzten C++-Funktionsnamen. Da es keine Standardspezifikation für die Namensergänzung gibt, kann der Name einer exportierten Funktion zwischen den einzelnen Compilerversionen variieren. Bei Verwendung von **__declspec(dllexport)**, Neukompilierung der DLL und die abhängigen .exe-Dateien ist nur erforderlich für jede Änderung der Benennung Konvention.
 
@@ -50,11 +48,6 @@ Beim Erstellen der DLL, erstellen Sie in der Regel eine Headerdatei mit den Funk
 ```
 
 **__declspec(dllexport)** speichert Funktionsnamen in der Exporttabelle der DLL. Wenn Sie die Größe der Tabelle optimieren möchten, finden Sie unter [Exportieren von Funktionen aus einer DLL über die Ordnungszahl statt über Namen](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
-
-> [!NOTE]
->  Wenn Sie DLL-Quellcode von Win16 auf Win32 zu portieren, ersetzen Sie jede Instanz von **__export** mit **__declspec(dllexport)**.
-
-Zu Referenzzwecken können Sie die Win32-Headerdatei Winbase.h durchsuchen. Es enthält Beispiele für **von "__declspec(dllimport)" "** Nutzung.
 
 ## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?
 

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference method
 ms.assetid: ab85a9fb-c628-4761-9a5f-a0231fad7690
-ms.openlocfilehash: 4204571dba320de6248dac2cfb10ae21dc31e72c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd58ffafb9be65067cbff5571fe9cbf9fcd0a55d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210938"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221593"
 ---
 # <a name="container-classreference"></a>Container-Klasse::reference
 
 > [!NOTE]
-> Dieses Thema ist in der Dokumentation zu Visual C++ als nicht funktionierendes Beispiel für Container aufgeführt, die in der C++-Standardbibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
+> Dieses Thema ist in der Microsoft C++ Dokumentation als nicht funktionierendes Beispiel für Container in verwendet die C++ Standard-Bibliothek. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
 
 Beschreibt ein Objekt, das als Verweis auf ein Element der gesteuerten Sequenz fungieren kann
 

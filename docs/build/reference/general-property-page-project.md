@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270899"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446562"
 ---
 # <a name="general-property-page-project"></a>Eigenschaftenseite "Allgemein" (Projekt)
 
@@ -98,7 +98,7 @@ Die Eigenschaften im Abschnitt „Allgemein“ bestimmen den Speicherort der Dat
 
 - **Plattformtoolset**
 
-   Ermöglicht eine Ausrichtung des Projekts auf andere Versionen der Visual C++-Bibliotheken und des Compilers. Visual C++-Projekte können entweder auf das von Visual Studio installierte Standardtoolset oder auf eines der von früheren Versionen von Visual Studio installierten Toolsets abzielen, einschließlich der Toolsets, die ausführbare Dateien erstellen, die auf Windows XP ausgeführt werden können. Informationen zum Ändern des Plattformtoolsets finden Sie unter [Vorgehensweise: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Ermöglicht eine Ausrichtung des Projekts auf andere Versionen der Visual C++-Bibliotheken und des Compilers. Visual Studio C++ -Projekte können entweder das Standardtoolset installiert, indem Sie Visual Studio oder einem Toolsets installiert, indem Sie mehrere früheren Versionen von Visual Studio, einschließlich des Toolsets, die ausführbaren Dateien zu erstellen, die auf Windowx XP ausgeführt werden können. Informationen zum Ändern des Plattformtoolsets finden Sie unter [Vorgehensweise: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Verwalteten inkrementellen Build aktivieren**
 

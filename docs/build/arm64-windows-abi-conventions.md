@@ -1,12 +1,12 @@
 ---
 title: Übersicht über die ARM64-ABI-Konventionen
 ms.date: 03/27/2019
-ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfb1b5b6be6a7a368c2ed7cab255da90ae7a22df
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195502"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220991"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Übersicht über die ARM64-ABI-Konventionen
 
@@ -50,6 +50,24 @@ Wie führt mit der ARM32 Version von Windows, auf ARM64 Windows im little-Endian
 ARM64 unter Windows können die CPU-Hardware, falsch ausgerichtete Zugriffe transparent behandeln. In eine Verbesserung von AArch32 kann die diese Unterstützung jetzt auch für alle ganzzahlzugriffe (einschließlich mit mehreren Wörtern zugreift) sowie für Gleitkomma-Zugriff.
 
 Zugriffe auf den Speicher für nicht-Cache (Gerät) müssen jedoch noch immer ausgerichtet werden. Falls Code könnte möglicherweise lesen oder Schreiben falsch ausgerichtete Daten aus dem Arbeitsspeicher der nicht zwischengespeicherten, muss Sie sicher, dass alle Zugriffe ausgerichtet sein.
+
+Layout-standardausrichtung für lokale Variablen:
+
+| Größe in Byte | Ausrichtung in bytes |
+| - | - |
+| 1 | 1 |
+| 2 | 2 |
+| 3, 4 | 4 |
+| > 4 | 8 |
+
+Layout-standardausrichtung für globale Variablen und statischen Variablen:
+
+| Größe in Byte | Ausrichtung in bytes |
+| - | - |
+| 1 | 1 |
+| 2 - 7 | 4 |
+| 8 - 63 | 8 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Ganzzahlregister
 
@@ -185,7 +203,9 @@ Tatsächlich ist es identisch mit den folgenden Regeln C.12–C.15 zuweisen Argu
 
 Ganzzahlige Werte werden in X0 zurückgegeben.
 
-Gleitkommazahlen-Punktwerte werden in s0/d0/v0 entsprechend zurückgegeben.
+Gleitkommazahlen-Punktwerte werden in s0, d0 oder v0, nach Bedarf zurückgegeben.
+
+Zu HFA und HVA-Werte werden in s0-s3, d0-d3- oder nach Bedarf v0-v3 zurückgegeben.
 
 Typen, die als Wert zurückgegebene werden unterschiedlich gehandhabt, je nachdem, ob sie bestimmte Eigenschaften verfügen. Typen, die alle diese Eigenschaften haben,
 

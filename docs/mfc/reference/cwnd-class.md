@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323472"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220351"
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 
@@ -8262,7 +8262,7 @@ Enthält die x- und y-Koordinaten des Cursors an. Diese Koordinaten sind immer B
 
 ### <a name="return-value"></a>Rückgabewert
 
-Einer der Treffertests für die Maus Enumerationswerte, die unten aufgeführten.
+Einer der Treffertests für die Maus-Enumerationswerte. Finden Sie unter [eine WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) für die Liste der Werte.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -8282,7 +8282,7 @@ afx_msg void OnNcLButtonDblClk(
 ### <a name="parameters"></a>Parameter
 
 *nHitTest*<br/>
-Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
+Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt. Finden Sie unter [eine WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) für die Liste der Werte.
 
 *point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.
@@ -8307,7 +8307,7 @@ afx_msg void OnNcLButtonDown(
 ### <a name="parameters"></a>Parameter
 
 *nHitTest*<br/>
-Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
+Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt. Finden Sie unter [eine WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) für die Liste der Werte.
 
 *point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.
@@ -8332,7 +8332,7 @@ afx_msg void OnNcLButtonUp(
 ### <a name="parameters"></a>Parameter
 
 *nHitTest*<br/>
-Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
+Gibt an, die [Treffertests Code](#onnchittest). Ein Treffertest ist ein Test, der die Position des Cursors bestimmt. Finden Sie unter [eine WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) für die Liste der Werte.
 
 *point*<br/>
 Gibt an, eine `CPoint` Objekt, das die x- und y enthält Bildschirmkoordinaten der Position des Mauszeigers. Diese Koordinaten sind immer relativ zu der oberen linken Ecke des Bildschirms.

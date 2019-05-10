@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43658eda749e68c17659fcb41248b88fd843792
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411265"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448504"
 ---
 # <a name="security-best-practices-for-c"></a>Empfohlene Vorgehensweisen bezüglich der Sicherheit in C++
 
@@ -21,7 +21,7 @@ Dieser Artikel enthält Informationen über Sicherheitstools und Vorgehensweisen
 
 ## <a name="visual-c-security-features"></a>Visual C++-Sicherheitsfunktionen
 
-Diese Sicherheitsfunktionen sind in den Visual C++-Compiler und den Visual C++-Linker integriert:
+Diese Sicherheitsfunktionen sind in der Microsoft integriert C++ Compiler und Linker:
 
 [/guard (Ablaufsteuerungsschutz aktivieren)](../build/reference/guard-enable-control-flow-guard.md)<br/>
 Bewirkt, dass der Compiler die ablaufsteuerung für indirekte Aufrufziele zum Zeitpunkt der Kompilierung zu analysieren und dann Code einzufügen, um die Ziele zur Laufzeit zu überprüfen.

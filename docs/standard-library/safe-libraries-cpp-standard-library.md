@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 340d300efb442fedb18b738c275bc0a79f874991
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c8f2de77255015254eabe018399f913b4582b7c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409732"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220471"
 ---
 # <a name="safe-libraries-c-standard-library"></a>Sichere Bibliotheken: C++-Standardbibliothek
 
-An den mit Visual C++ ausgelieferten Bibliotheken wurden verschiedene Verbesserungen vorgenommen, einschließlich der C++-Standardbibliothek, um die Sicherheit zu erhöhen.
+Mehrere Verbesserungen wurden vorgenommen, um die Bibliotheken, die im Lieferumfang von Microsoft C++, einschließlich der C++ Standardbibliothek, um sie sicherer zu machen.
 
 Einige Methoden in der C++-Standardbibliothek wurden als möglicherweise unsicher identifiziert, da sie zu einem Pufferüberlauf oder anderen Codefehlern führen könnten. Von der Verwendung dieser Methoden wird abgeraten, und es wurden neue, sicherere Methoden erstellt, um diese zu ersetzen. Diese neuen Methoden enden alle mit `_s`.
 

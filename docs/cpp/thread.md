@@ -1,6 +1,6 @@
 ---
 title: thread
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330517"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221963"
 ---
 # <a name="thread"></a>thread
 
@@ -40,7 +40,7 @@ Wenn Sie Thread-lokalen Variablen in dynamisch geladen Bibliotheken verwenden zu
 
 1. Wenn die Variable mit einem Funktionsaufruf (einschließlich Konstruktoren) initialisiert wird, wird diese Funktion nur aufgerufen werden, für den Thread, der Binary/laden die DLL in den Prozess verursacht hat, und klicken Sie nach diesen Threads, die gestartet wird, nach dem die Binary/DLL geladen wurde. Die Initialisierungsfunktionen werden nicht für jeden Thread aufgerufen, die bereits ausgeführt wurde, wenn die DLL geladen wurde. Dynamische Initialisierung tritt auf, auf den DllMain-Aufruf für DLL_THREAD_ATTACH, aber die DLL nie Ruft die Nachricht, wenn die DLL im Prozess nicht, wenn der Thread gestartet wird.
 
-1. Thread-lokalen Variablen, die statisch mit konstanten Werten initialisiert werden, sind für alle Threads in der Regel ordnungsgemäß initialisiert. Ab Dezember 2017 ist gibt es eine bekannte Konformitätsproblem in der Microsoft Visual C++-Compiler, bei dem erhalten der Constexpr-Variablen, dynamisch statt statische Initialisierung.
+1. Thread-lokalen Variablen, die statisch mit konstanten Werten initialisiert werden, sind für alle Threads in der Regel ordnungsgemäß initialisiert. Ab Dezember 2017 besteht jedoch ein Problem bekannt Übereinstimmung in der Microsoft C++ Compiler bei dem Constexpr-Variablen statt statische Initialisierung dynamische erhalten.
 
    Hinweis: Beide Probleme werden voraussichtlich in zukünftigen Updates des Compilers behoben werden.
 

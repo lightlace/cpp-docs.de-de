@@ -1,16 +1,16 @@
 ---
 title: 'Exemplarische Vorgehensweise: Hinzufügen von Animationen zu einem MFC-Projekt'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - animation [MFC]
 - MFC, animation
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
-ms.openlocfilehash: 25e29654f1e192e03a078e4a963f27abeea6056d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 07b0c5f712cd645246ecfb4e8c93543377a340a3
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358603"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558187"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Exemplarische Vorgehensweise: Hinzufügen von Animationen zu einem MFC-Projekt
 
@@ -38,9 +38,9 @@ Um diese exemplarische Vorgehensweise abzuschließen, müssen Sie Visual Studio 
 
 ### <a name="to-create-an-mfc-application"></a>Zum Erstellen einer MFC_Anwendung
 
-1. Zeigen Sie im Menü **Datei** auf **Neu** , und klicken Sie dann auf **Projekt**.
+1. Verwenden der **MFS-Anwendungsassistenten** zum Erstellen einer MFC_Anwendung. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell-Steuerelemente](walkthrough-using-the-new-mfc-shell-controls.md) Anweisungen zum Öffnen des Assistenten für Ihre Version von Visual Studio.
 
-1. In der **neues Projekt** im Dialogfeld im linken Bereich unter **installierte Vorlagen**, erweitern Sie **Visual C++** und wählen Sie dann **MFC**. Wählen Sie im mittleren Bereich **MFC-Anwendung**. In der **Namen** geben *MFCAnimationWalkthrough*. Klicken Sie auf **OK**.
+1. In der **Namen** geben *MFCAnimationWalkthrough*. Klicken Sie auf **OK**.
 
 1. In der **MFS-Anwendungsassistenten** Dialogfeld überprüfen Sie, ob **Anwendungstyp** ist **mehrere Dokumente**, **Projektstil** ist **Visual Studio**, und die **Unterstützung für die Dokument-/Ansicht** ausgewählt ist. Klicken Sie auf **Fertig stellen**.
 

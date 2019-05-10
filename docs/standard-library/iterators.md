@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae4193b8e6edf94ab0f8d839ac36fc1addfd8d04
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396138"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220331"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -86,7 +86,7 @@ Es ist wichtig, die Zusagen und Einschränkungen jeder Iteratorkategorie zu vers
 > [!NOTE]
 > Sie können die explizite Verwendung von Iteratoren mithilfe von range-for-Schleifen umgehen. Weitere Informationen finden Sie unter [bereichsbasiert für Anweisung](../cpp/range-based-for-statement-cpp.md).
 
-Visual C++ bietet jetzt überprüfte Iteratoren und Debug-Iteratoren, um sicherzustellen, dass Sie die Grenzen Ihres Containers nicht überschreiben. Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) und [Unterstützung für Iteratordebugging](../standard-library/debug-iterator-support.md).
+Microsoft C++ jetzt Angebote überprüft und Debug-Iteratoren um sicherzustellen, dass Sie die Grenzen Ihres Containers nicht überschreiben. Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) und [Unterstützung für Iteratordebugging](../standard-library/debug-iterator-support.md).
 
 ## <a name="see-also"></a>Siehe auch
 

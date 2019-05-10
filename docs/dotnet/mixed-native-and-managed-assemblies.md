@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 043390a2ebefcadac300b7fb0b05ae7f5ed411f3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384854"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447282"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Gemischte (native und verwaltete) Assemblys
 
@@ -27,7 +27,7 @@ Beispielsweise kann eine vorhandene Bibliothek besteht ausschließlich aus syste
 
 Visual C++ unterstützt die Generierung von gemischten verwalteten Assemblys nur mithilfe der **"/ CLR"** -Compileroption. Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden. Wenn Sie die reinen oder überprüfbare verwaltete Assemblys benötigen, empfehlen wir, dass Sie sie mithilfe von c# erstellen.
 
-Frühere Versionen von Visual C++-Compiler-Toolsets unterstützt die Generierung von drei verschiedenen Typen verwalteter Assemblys: gemischte, reine und überprüfbare. Die letzten zwei finden Sie im [reiner und überprüfbarer Code (C++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Frühere Versionen von Microsoft C++ -Compilertoolset unterstützt die Generierung von drei verschiedenen Typen verwalteter Assemblys: gemischte, reine und überprüfbare. Die letzten zwei finden Sie im [reiner und überprüfbarer Code (C++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

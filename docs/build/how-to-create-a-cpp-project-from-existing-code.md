@@ -1,6 +1,6 @@
 ---
 title: 'Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code'
-ms.date: 01/15/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, creating projects from existing code
 - Create New Project From Existing Code Files Wizard, project settings
@@ -10,12 +10,12 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a899fe7f1b038ac1497465171098183f63f40564
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62189025"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221458"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code
 
@@ -26,8 +26,6 @@ Durch das Portieren Ihrer vorhandenen Codedateien in ein C++-Projekt wird es Ihn
 ### <a name="to-create-a-c-project-from-existing-code"></a>So erstellen Sie ein C++-Projekt aus vorhandenem Code
 
 1. Klicken Sie im Menü **Datei** auf **Neu** > **Project From Existing Code** (Projekt aus vorhandenem Code).
-
-1. Wählen Sie auf der ersten Seite des Assistenten **Neues Projekt aus vorhandenen Codedateien erstellen** aus der Liste **Ein Projekt welchen Typs möchten Sie erstellen?** die Option **Visual C++** aus. Klicken Sie auf **Weiter** , um fortzufahren.
 
 1. Geben Sie den Speicherort Ihres Projekts, das Verzeichnis Ihrer Quelldateien und die Dateitypen an, die der Assistent in das neue Projekt importieren soll. Klicken Sie auf **Weiter** , um fortzufahren.
 
@@ -44,7 +42,7 @@ Durch das Portieren Ihrer vorhandenen Codedateien in ein C++-Projekt wird es Ihn
 
     | Einstellung | Beschreibung |
     | --- | --- |
-    | **Visual Studio verwenden** | Gibt an, dass Buildtools verwendet werden sollen, die zum Erstellen des neuen Projekts in Visual Studio enthalten sind. Diese Option ist standardmäßig ausgewählt.<br/><br/>Klicken Sie auf **Projekttyp**, um den Projekttyp anzugeben, den der Assistent generieren soll. Wählen Sie **Windows-Anwendungsprojekt**, **Konsolenanwendungsprojekt**, **DLL-Projekt (Dynamically Linked Library)** oder **LIB-Projekt (Static Library, Statische Bibliothek)**.<br/><br/>Aktivieren Sie **ATL-Unterstützung hinzufügen**, um ATL-Unterstützung zum neuen Projekt hinzuzufügen.<br/><br/>Aktivieren Sie **Unterstützung für MFC hinzufügen**, um MFC-Unterstützung zum neuen Projekt hinzuzufügen.<br/><br/>Aktivieren Sie **Unterstützung für die Common Language Runtime hinzufügen**, um Unterstützung für CRL-Programmierung zum Projekt hinzuzufügen. Wählen Sie die **Common Language Runtime-Unterstützung** als Konformitätstyp angeben, z. B. **Common Language Runtime (old syntax)** (Common Language Runtime (alte Syntax)), um die Konformität mit der Managed Extensions for C++-Syntax zu gewährleisten. Dabei handelt es sich um Syntax für die CLR-Programmierung, die vor Visual C++ 2005 verwendet wurde. |
+    | **Visual Studio verwenden** | Gibt an, dass Buildtools verwendet werden sollen, die zum Erstellen des neuen Projekts in Visual Studio enthalten sind. Diese Option ist standardmäßig ausgewählt.<br/><br/>Klicken Sie auf **Projekttyp**, um den Projekttyp anzugeben, den der Assistent generieren soll. Wählen Sie **Windows-Anwendungsprojekt**, **Konsolenanwendungsprojekt**, **DLL-Projekt (Dynamically Linked Library)** oder **LIB-Projekt (Static Library, Statische Bibliothek)**.<br/><br/>Aktivieren Sie **ATL-Unterstützung hinzufügen**, um ATL-Unterstützung zum neuen Projekt hinzuzufügen.<br/><br/>Aktivieren Sie **Unterstützung für MFC hinzufügen**, um MFC-Unterstützung zum neuen Projekt hinzuzufügen.<br/><br/>Aktivieren Sie **Unterstützung für die Common Language Runtime hinzufügen**, um Unterstützung für CRL-Programmierung zum Projekt hinzuzufügen. Wählen Sie die **Common Language Runtime-Unterstützung** für Compliance-Typ, z. B. **Common Language Runtime (alte Syntax)** für die Kompatibilität mit Managed Extensions for C++ Syntax, die CLR-Programmierung-Syntax vor Visual Studio 2005. |
     | **Externes Buildsystem verwenden** | Gibt an, dass zum Erstellen des neuen Projekts Buildtools verwendet werden sollen, die nicht in Visual Studio enthalten sind. Wenn diese Option ausgewählt ist, können Sie Buildbefehlszeilen auf den Seiten **Einstellungen für Debugkonfiguration angeben** und **Einstellungen für Releasekonfiguration angeben** angeben. |
 
     ![Projekteinstellungen](media/settings.png)

@@ -1,6 +1,6 @@
 ---
 title: IEEE-Gleitkommadarstellung
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - float keyword
 - real*8 value
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 69686e7e1c8994b799607eebf7e50387ed688272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 130a79ae6846df27ffabfd6cb6649e0a0de03e4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188833"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220624"
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE-Gleitkommadarstellung
 
-Microsoft Visual C++ ist konsistent mit den numerischen IEEE-Standards. Der IEEE-754-Standard beschreibt Gleitkomma-Formate, eine Methode zur Darstellung der reellen Zahlen in der Hardware. Es gibt mindestens fünf interne Formate für Gleitkommazahlen, die in der Hardware, die das Ziel des MSVC-Compilers darstellbar sind, aber der Compiler verwendet nur zwei davon. Die *mit einfacher Genauigkeit* (4-Byte) und *mit doppelter Genauigkeit* (8 Byte)-Formaten in Visual C++ verwendet werden. Mit einfacher Genauigkeit ist deklariert, mit dem Schlüsselwort **"float"**. Gleitkommazahl mit doppelter Genauigkeit ist deklariert, mit dem Schlüsselwort **doppelte**. Der IEEE-Standard gibt auch an *Hälfte mit einfacher Genauigkeit* (2-Byte) und *Quadrupel mit einfacher Genauigkeit* Formate (16-Byte), sowie einen *erweitert – mit doppelter Genauigkeit* (10 Byte) Format, das einige C- und C++-Compiler als implementieren die **long double** -Datentyp. In der MSVC-Compiler die **long double** -Datentyp wird als gesonderter Typ behandelt, aber der Storage-Typ zugeordnet ist, um **doppelte**. Vorhanden ist, jedoch systeminterne und Assembly-sprachunterstützung für Berechnungen mit den anderen Formaten, einschließlich des erweiterten-mit doppelter Genauigkeit (10 Byte)-Formats, wobei von Hardware unterstützt.
+Microsoft C++ (MSVC) ist konsistent mit den numerischen IEEE-Standards. Der IEEE-754-Standard beschreibt Gleitkomma-Formate, eine Methode zur Darstellung der reellen Zahlen in der Hardware. Es gibt mindestens fünf interne Formate für Gleitkommazahlen, die in der Hardware, die das Ziel des MSVC-Compilers darstellbar sind, aber der Compiler verwendet nur zwei davon. Die *mit einfacher Genauigkeit* (4-Byte) und *mit doppelter Genauigkeit* (8 Byte)-Formate in MSVC verwendet werden. Mit einfacher Genauigkeit ist deklariert, mit dem Schlüsselwort **"float"**. Gleitkommazahl mit doppelter Genauigkeit ist deklariert, mit dem Schlüsselwort **doppelte**. Der IEEE-Standard gibt auch an *Hälfte mit einfacher Genauigkeit* (2-Byte) und *Quadrupel mit einfacher Genauigkeit* Formate (16-Byte), sowie einen *erweitert – mit doppelter Genauigkeit* (10 Byte) Format, das einige C- und C++-Compiler als implementieren die **long double** -Datentyp. In der MSVC-Compiler die **long double** -Datentyp wird als gesonderter Typ behandelt, aber der Storage-Typ zugeordnet ist, um **doppelte**. Vorhanden ist, jedoch systeminterne und Assembly-sprachunterstützung für Berechnungen mit den anderen Formaten, einschließlich des erweiterten-mit doppelter Genauigkeit (10 Byte)-Formats, wobei von Hardware unterstützt.
 
 Die Werte werden wie folgt gespeichert:
 

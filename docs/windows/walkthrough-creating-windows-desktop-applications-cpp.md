@@ -1,17 +1,17 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen Sie eine herkömmliche Windows-Desktop-Anwendung (C++)'
 ms.custom: get-started-article
-ms.date: 09/18/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: cb6d09acc00f2e38ee41180c81c1877bc53027c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 0bc9ef82863fde361964234cca54f12aac1e2abe
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388086"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877388"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Exemplarische Vorgehensweise: Erstellen Sie eine herkömmliche Windows-Desktop-Anwendung (C++)
 
@@ -26,7 +26,7 @@ Die Windows-API (auch bekannt als die Win32-API, Windows-Desktop-API und klassis
 
 - Ein Computer, der Microsoft Windows 7 oder höher ausgeführt wird. Wir empfehlen die Windows 10, für die bestmögliche entwicklungserfahrung.
 
-- Eine Kopie von Visual Studio 2017. Informationen zum Herunterladen und installieren Sie Visual Studio finden Sie unter [Installieren von Visual Studio](/visualstudio/install/install-visual-studio). Wenn Sie das Installationsprogramm ausführen, stellen sicher, dass die **Desktopentwicklung mit C++** arbeitsauslastung aktiviert ist. Machen Sie sich keine Gedanken Sie, wenn Sie diese Workload nicht installiert haben, bei der Installation von Visual Studio. Sie können führen das Installationsprogramm erneut aus, und installieren Sie es jetzt.
+- Eine Kopie von Visual Studio. Informationen zum Herunterladen und installieren Sie Visual Studio finden Sie unter [Installieren von Visual Studio](/visualstudio/install/install-visual-studio). Wenn Sie das Installationsprogramm ausführen, stellen sicher, dass die **Desktopentwicklung mit C++** arbeitsauslastung aktiviert ist. Machen Sie sich keine Gedanken Sie, wenn Sie diese Workload nicht installiert haben, bei der Installation von Visual Studio. Sie können führen das Installationsprogramm erneut aus, und installieren Sie es jetzt.
 
    ![Desktopentwicklung mit C++](../build/media/desktop-development-with-cpp.png "Desktopentwicklung mit C++")
 
@@ -36,9 +36,37 @@ Die Windows-API (auch bekannt als die Win32-API, Windows-Desktop-API und klassis
 
 ## <a name="create-a-windows-desktop-project"></a>Erstellen Sie ein Windows-desktop-Projekt
 
-Um Ihre erste Windows-Desktopprojekt erstellen, und geben den Code für eine funktionierende Windows-Desktopanwendung, gehen Sie wie folgt vor. Wenn Sie eine Version älter als Visual Studio 2017 Version 15.3 von Visual Studio verwenden, fahren Sie mit [zum Erstellen eines Windows-desktop-Projekts in Visual Studio 2017 RTM](#create-in-vs2017-rtm).
+Um Ihre erste Windows-Desktopprojekt erstellen, und geben den Code für eine funktionierende Windows-Desktopanwendung, gehen Sie wie folgt vor. Stellen Sie sicher, dass die Auswahl für die Version in der oberen linken Ecke dieser Seite auf die richtige Version von Visual Studio festgelegt ist, die Sie verwenden.
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017-update-153-and-later"></a>Erstellen Sie ein Windows-Desktopprojekt in Visual Studio 2017 Update 15.3 und höher
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Erstellen Sie ein Windows-desktop-Projekt in Visual Studio-2019
+
+1. Wählen Sie im Hauptmenü **Datei** > **neu** > **Projekt** zum Öffnen der **Erstellen eines neuen Projekts** Dialogfeld Box.
+
+1. Legen Sie am oberen Rand des Dialogfelds, **Sprache** zu **C++** legen **Plattform** zu **Windows**, und legen Sie **Projekttyp** zu **Desktop**. 
+
+1. Wählen Sie die gefilterte Liste der Projekttypen, **-Assistenten für Windows Desktop** wählen Sie dann **Weiter**. Klicken Sie in der nächsten Seite Geben Sie einen Namen für das Projekt, und geben Sie den Speicherort des Projekts ein, bei Bedarf.
+
+1. Wählen Sie die **erstellen** klicken, um das Projekt zu erstellen.
+
+1. Die **-Projekt für Windows Desktop** Dialogfeld wird jetzt angezeigt. Klicken Sie unter **Anwendungstyp**Option **Windows-Anwendung (.exe)**. Wählen Sie unter **Zusätzliche Optionen**die Option **Leeres Projekt**aus. Wählen Sie **OK** zum Erstellen des Projekts.
+
+1. In **Projektmappen-Explorer**, mit der rechten Maustaste die **DesktopApp** Projekts **hinzufügen**, und wählen Sie dann **neues Element**.
+
+   ![Neues Element hinzufügen, DesktopApp Projekt](../build/media/desktop-app-project-add-new-item-153.gif "neues Element hinzufügen, DesktopApp-Projekt")
+
+1. Klicken Sie im Dialogfeld **Neues Element hinzufügen** auf **C++-Datei (.cpp)**. In der **Namen** geben einen Namen für die Datei, z. B. *HelloWindowsDesktop.cpp*. Wählen Sie **Hinzufügen** aus.
+
+   ![Hinzufügen von cpp-Datei zu DesktopApp Projekt](../build/media/desktop-app-add-cpp-file-153.png "cpp-Datei zu DesktopApp-Projekt hinzufügen")
+
+Das Projekt wird jetzt erstellt und die Quelldatei wird im Editor geöffnet. Um den Vorgang fortzusetzen, fahren Sie mit [Erstellen des Codes](#create-the-code).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>Erstellen Sie ein Windows-desktop-Projekt in Visual Studio 2017
 
 1. Wählen Sie im Menü **Datei** die Option **Neu** und anschließend **Projekt** aus.
 
@@ -62,7 +90,11 @@ Um Ihre erste Windows-Desktopprojekt erstellen, und geben den Code für eine fun
 
 Das Projekt wird jetzt erstellt und die Quelldatei wird im Editor geöffnet. Um den Vorgang fortzusetzen, fahren Sie mit [Erstellen des Codes](#create-the-code).
 
-### <a id="create-in-vs2017-rtm"></a> Zum Erstellen eines Windows-desktop-Projekts in Visual Studio 2017 RTM
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>Erstellen Sie ein Windows-desktop-Projekt in Visual Studio 2015
 
 1. Wählen Sie im Menü **Datei** die Option **Neu** und anschließend **Projekt** aus.
 
@@ -89,6 +121,8 @@ Das Projekt wird jetzt erstellt und die Quelldatei wird im Editor geöffnet. Um 
    ![Hinzufügen von cpp-Datei zu DesktopApp Projekt](../build/media/desktop-app-add-cpp-file-150.png "cpp-Datei zu DesktopApp-Projekt hinzufügen")
 
 Das Projekt wird jetzt erstellt und die Quelldatei wird im Editor geöffnet.
+
+::: moniker-end
 
 ## <a name="create-the-code"></a>Erstellen des Codes
 

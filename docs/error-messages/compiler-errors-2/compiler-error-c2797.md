@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-ms.openlocfilehash: 04a7b2b1d33ab7efa77563406ab3c12831cf80fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd007bf193bd6529748004a96745fafcb9f3226
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360124"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447825"
 ---
 # <a name="compiler-error-c2797"></a>Compilerfehler C2797
 
 (Veraltet) Listeninitialisierung in Memberinitialisierer oder nicht statische datenmemberinitialisierer ist nicht implementiert.
 
-Diese Warnung ist in Visual Studio 2015 veraltet. In Visual Studio 2013 und früheren Versionen implementiert nicht Listen-Initialisierung innerhalb einer Memberinitialisiererliste oder einem nicht statischen datenmemberinitialisierer entweder Visual C++-Compiler. Vor dem Visual Studio 2013 Update 3 wurde dies im Hintergrund in einen Funktionsaufruf konvertiert, der zur Generierung von ungültigem Code führen könnte. Visual Studio 2013 Update 3 meldet dies als Fehler.
+Diese Warnung ist in Visual Studio 2015 veraltet. In Visual Studio 2013 und früheren Versionen, Microsoft C++ Compiler implementiert keine Listen-Initialisierung innerhalb entweder einer Memberinitialisiererliste oder einem nicht statischen datenmemberinitialisierer. Vor dem Visual Studio 2013 Update 3 wurde dies im Hintergrund in einen Funktionsaufruf konvertiert, der zur Generierung von ungültigem Code führen könnte. Visual Studio 2013 Update 3 meldet dies als Fehler.
 
 In diesem Beispiel wird C2797 generiert:
 

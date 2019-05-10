@@ -1,6 +1,6 @@
 ---
 title: Transportieren von Ausnahmen zwischen threads
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - std::current_exception
 - transporting exceptions between threads
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e59883c75fde9938a213fb4e888e6b05a79cf4f7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404740"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221922"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transportieren von Ausnahmen zwischen threads
 
-Visual C++ unterstützt *Transportieren einer Ausnahme* von einem Thread in einen anderen. Durch das Transportieren von Ausnahmen können Sie eine Ausnahme in einem Thread abfangen und anschließend die Ausnahme scheinbar in einem anderen Thread auslösen lassen. Sie können diese Funktion beispielsweise verwenden, um eine Multithreadanwendung zu schreiben, in der der primäre Thread alle Ausnahmen behandelt, die von seinen sekundären Threads ausgelöst werden. Das Transportieren von Ausnahmen ist insbesondere für Entwickler hilfreich, die parallele Programmierbibliotheken und -systeme erstellen. Transportieren von Ausnahmen, Visual implementieren C++ bietet die ["exception_ptr"](../standard-library/exception-typedefs.md#exception_ptr) Typ und die [Current_exception](../standard-library/exception-functions.md#current_exception), [Rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), und [Make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) Funktionen.
+Microsoft C++ (MSVC)-Compiler unterstützt *Transportieren einer Ausnahme* von einem Thread in einen anderen. Durch das Transportieren von Ausnahmen können Sie eine Ausnahme in einem Thread abfangen und anschließend die Ausnahme scheinbar in einem anderen Thread auslösen lassen. Sie können diese Funktion beispielsweise verwenden, um eine Multithreadanwendung zu schreiben, in der der primäre Thread alle Ausnahmen behandelt, die von seinen sekundären Threads ausgelöst werden. Das Transportieren von Ausnahmen ist insbesondere für Entwickler hilfreich, die parallele Programmierbibliotheken und -systeme erstellen. Um das Transportieren von Ausnahmen zu implementieren, MSVC bietet die ["exception_ptr"](../standard-library/exception-typedefs.md#exception_ptr) Typ und die [Current_exception](../standard-library/exception-functions.md#current_exception), [Rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), und [Make_ "exception_ptr"](../standard-library/exception-functions.md#make_exception_ptr) Funktionen.
 
 ## <a name="syntax"></a>Syntax
 

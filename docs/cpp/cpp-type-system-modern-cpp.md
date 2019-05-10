@@ -3,12 +3,12 @@ title: C++- Typsystem (Modern C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 3fa13d2f0b274361c2ad34b0eb64421d2d1d037e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392276"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222130"
 ---
 # <a name="c-type-system-modern-c"></a>C++- Typsystem (Modern C++)
 
@@ -53,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>Grundlegende (integrierte) Typen
 
-Im Gegensatz zu einigen Sprachen gibt es bei C++ keinen universellen Basistyp, von dem alle anderen Typen abgeleitet werden. Die Visual C++-Implementierung der Sprache umfasst viele *Basistypen*, auch bekannt als *integrierten Typen*. Das schließt numerische Typen wie z. B. **Int**, **doppelte**, **lange**, **"bool"**, sowie die **Char** und **"wchar_t"** bzw.-Typen für ASCII- und Unicode-Zeichen. Die meisten grundlegenden Typen (außer **"bool"**, **doppelte**, **"wchar_t"** und verwandten Typen) haben alle unsigned, Versionen, die den Bereich der Werte ändern, die die Variable speichern kann. Z. B. eine **Int**, das eine 32-Bit-Ganzzahl mit Vorzeichen, speichert kann einen Wert darstellen von – 2.147.483.648 bis 2.147.483.647. Ein **ganze Zahl ohne Vorzeichen**, die auch als 32-Bits gespeichert wird, kann einen Wert zwischen 0 und 4.294.967.295 speichern. Die Gesamtzahl der möglichen Werte ist in beiden Fällen gleich, nur der Bereich ist anders.
+Im Gegensatz zu einigen Sprachen gibt es bei C++ keinen universellen Basistyp, von dem alle anderen Typen abgeleitet werden. Die Sprache umfasst viele *Basistypen*, auch bekannt als *integrierten Typen*. Das schließt numerische Typen wie z. B. **Int**, **doppelte**, **lange**, **"bool"**, sowie die **Char** und **"wchar_t"** bzw.-Typen für ASCII- und Unicode-Zeichen. Die meisten grundlegenden Typen (außer **"bool"**, **doppelte**, **"wchar_t"** und verwandten Typen) haben alle unsigned, Versionen, die den Bereich der Werte ändern, die die Variable speichern kann. Z. B. eine **Int**, das eine 32-Bit-Ganzzahl mit Vorzeichen, speichert kann einen Wert darstellen von – 2.147.483.648 bis 2.147.483.647. Ein **ganze Zahl ohne Vorzeichen**, die auch als 32-Bits gespeichert wird, kann einen Wert zwischen 0 und 4.294.967.295 speichern. Die Gesamtzahl der möglichen Werte ist in beiden Fällen gleich, nur der Bereich ist anders.
 
 Die grundlegenden Typen werden vom Compiler erkannt, der über interne Regeln verfügt, die bestimmen, welche Vorgänge auf den Typen ausgeführt werden können und wie sie in andere grundlegenden Typen konvertiert werden können. Eine vollständige Liste der integrierten Typen und ihre Größe und numerischen Grenzen, finden Sie unter [Basistypen](../cpp/fundamental-types-cpp.md).
 

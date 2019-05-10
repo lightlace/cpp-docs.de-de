@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: cd0748993b6ac92bbf9f66fa868ac6e814e21bb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 47cfd4c633942874b7b349da5635b34ea42090ee
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387148"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447325"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Vorgehensweise: Verwenden von Eigenschaften in C++ / CLI
 
@@ -259,7 +259,7 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>Abstrakte und versiegelte-Eigenschaften
 
-Obwohl die [abstrakte](../extensions/abstract-cpp-component-extensions.md) und [versiegelten](../extensions/sealed-cpp-component-extensions.md) Schlüsselwörter werden als gültig in der ECMA C++-/ angegeben c++ / CLI-Spezifikation für den Visual C++-Compiler kann nicht angegeben werden sie auf triviale Eigenschaften noch auf die Eigenschaft die Deklaration einer nicht trivialen Eigenschaft.
+Obwohl die [abstrakte](../extensions/abstract-cpp-component-extensions.md) und [versiegelten](../extensions/sealed-cpp-component-extensions.md) Schlüsselwörter werden als gültig ist, in der ECMA-angegeben C++/CLI-Spezifikation für die Microsoft C++ -Compiler kann nicht angegeben werden sie auf triviale Eigenschaften noch auf die Eigenschaftendeklaration einer nicht trivialen Eigenschaft.
 
 Um eine versiegelte oder abstrakte Eigenschaft deklarieren, müssen Sie eine nicht triviale Eigenschaft definieren und geben Sie dann die `abstract` oder `sealed` Schlüsselwort für die Get- und set Accessorfunktionen.
 

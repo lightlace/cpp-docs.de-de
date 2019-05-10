@@ -1,17 +1,17 @@
 ---
 title: Lambda-Ausdrücke in C++
-ms.date: 11/19/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c7543b3558da88b41102fa7b790bb9d9f3f18463
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216490"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222386"
 ---
 # <a name="lambda-expressions-in-c"></a>Lambda-Ausdrücke in C++
 
@@ -157,7 +157,7 @@ In der Regel ist ein Aufrufoperator einer Lambda Funktion Const-by-Value, aber v
 
 ### <a name="exception-specification"></a>Ausnahmespezifikation
 
-Sie können die `noexcept`-Ausnahmespezifikation verwenden, um anzugeben, dass der Lambdaausdruck keine Ausnahmen auslöst. Wie bei normalen Funktionen generiert der Visual C++-Compiler die Warnung [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) Wenn ein Lambda-Ausdruck deklariert die `noexcept` Ausnahmespezifikation und der Lambda-Text eine Ausnahme auslöst, wie hier gezeigt:
+Sie können die `noexcept`-Ausnahmespezifikation verwenden, um anzugeben, dass der Lambdaausdruck keine Ausnahmen auslöst. Wie bei normalen Funktionen, die Microsoft C++ Compiler generiert Warnung [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) Wenn ein Lambda-Ausdruck deklariert die `noexcept` Ausnahmespezifikation und der Lambda-Text eine Ausnahme auslöst, wie hier gezeigt:
 
 ```cpp
 // throw_lambda_expression.cpp

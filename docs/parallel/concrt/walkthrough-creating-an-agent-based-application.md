@@ -1,16 +1,16 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen einer agentbasierten Anwendung'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c249bc8138a3617cce3eae836751575b2626f4aa
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378062"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857309"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Exemplarische Vorgehensweise: Erstellen einer agentbasierten Anwendung
 
@@ -40,9 +40,27 @@ Mit dieser exemplarischen Vorgehensweise wird die Durchführung der folgenden Au
 
 ##  <a name="createapplication"></a> Erstellen der Konsolenanwendung
 
-In diesem Abschnitt wird die Erstellung einer Visual C++-Konsolenanwendung beschrieben, die auf die vom Programm verwendeten Headerdateien verweist.
+In diesem Abschnitt wird gezeigt, wie zum Erstellen einer C++ Konsolenanwendung, die die Header-Dateien verweist, die das Programm verwendet werden. Die ersten Schritte hängen davon ab, welche Version von Visual Studio Sie verwenden. Stellen Sie sicher, dass die Auswahl für die Version in der oberen linken Ecke dieser Seite richtig festgelegt ist.
 
-#### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>So erstellen Sie eine Visual C++-Anwendung mit dem Win32-Anwendungs-Assistenten
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>Zum Erstellen einer C++ Konsolenanwendung in Visual Studio-2019
+
+1. Wählen Sie im Hauptmenü **Datei** > **neu** > **Projekt** zum Öffnen der **Erstellen eines neuen Projekts** Dialogfeld Box.
+
+1. Legen Sie am oberen Rand des Dialogfelds, **Sprache** zu **C++** legen **Plattform** zu **Windows**, und legen Sie **Projekttyp** zu **Konsole**. 
+
+1. Wählen Sie die gefilterte Liste der Projekttypen, **Konsolen-App** wählen Sie dann **Weiter**. Geben Sie in der nächsten Seite `BasicAgent` als Namen für das Projekt, und geben Sie bei Bedarf den Speicherort des Projekts.
+
+1. Wählen Sie die **erstellen** klicken, um das Projekt zu erstellen.
+
+1. Mit der rechten Maustaste des Projektknoten im **Projektmappen-Explorer**, und wählen Sie **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften** > **C /C++** > **vorkompilierte Header** > **vorkompiliert Header** wählen **erstellen**.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-c-console-application-in-visual-studio-2017-and-earlier"></a>Zum Erstellen einer C++ Konsolenanwendung in Visual Studio 2017 und früheren Versionen
 
 1. Auf der **Datei** Menü klicken Sie auf **neu**, und klicken Sie dann auf **Projekt** zum Anzeigen der **neues Projekt** im Dialogfeld.
 
@@ -50,7 +68,9 @@ In diesem Abschnitt wird die Erstellung einer Visual C++-Konsolenanwendung besch
 
 1. In der **Win32-Anwendungs-Assistenten** Dialogfeld klicken Sie auf **Fertig stellen**.
 
-1. Fügen Sie in der Datei stdafx.h den folgenden Code hinzu.
+::: moniker-end
+
+1. Fügen Sie den folgenden Code in "stdafx.h" (oder in "PCH.h", abhängig von Ihrer Version von Visual Studio).
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 

@@ -1,14 +1,14 @@
 ---
 title: Typumwandlungen und Typsicherheit (Modern C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e06ea3f9c3ea427f205764c35988ea3316c3794a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404688"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221859"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Typumwandlungen und Typsicherheit (Modern C++)
 
@@ -84,7 +84,7 @@ Der Compiler warnt nicht vor impliziten Konvertierungen zwischen ganzzahligen Ty
 
 ### <a name="pointer-conversions"></a>Zeigerkonvertierungen
 
-In vielen Ausdrücken wird ein Array im C-Format implizit in einen Zeiger auf das erste Element im Array konvertiert, und konstante Konvertierungen können automatisch ausgeführt werden. Dieser Prozess ist zwar sinnvoll, kann aber auch fehleranfällig sein. Das folgende fehlerhafte Codebeispiel erscheint z. B. unsinnig, wird aber dennoch in Visual C++ kompiliert und erzeugt das Ergebnis "p". Zuerst wird die literale Zeichenfolgenkonstante "Help" in einen `char*` konvertiert, der auf das erste Element des Arrays zeigt. Dieser Zeiger wird dann um drei Elemente erhöht, damit er auf das letzte Element "p" zeigt.
+In vielen Ausdrücken wird ein Array im C-Format implizit in einen Zeiger auf das erste Element im Array konvertiert, und konstante Konvertierungen können automatisch ausgeführt werden. Dieser Prozess ist zwar sinnvoll, kann aber auch fehleranfällig sein. Z. B. die folgende fehlerhafte Codebeispiel erscheint z. B. unsinnig, und noch er kompiliert und erzeugt ein Ergebnis von 'p'. Zuerst wird die literale Zeichenfolgenkonstante "Help" in einen `char*` konvertiert, der auf das erste Element des Arrays zeigt. Dieser Zeiger wird dann um drei Elemente erhöht, damit er auf das letzte Element "p" zeigt.
 
 ```cpp
 char* s = "Help" + 3;

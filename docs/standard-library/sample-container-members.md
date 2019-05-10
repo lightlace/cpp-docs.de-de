@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-ms.openlocfilehash: 28d726bbf2b756c047523954fd4d5f843ee11d2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce9cf7207537f2605c0883f5a6f4d2959c14f493
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386316"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220332"
 ---
 # <a name="sample-container-members"></a>Sample Container-Member
 
 > [!NOTE]
-> Dieses Thema ist in der Dokumentation zu Visual C++ als nicht funktionierendes Beispiel für Container aufgeführt, die in der C++-Standardbibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
+> Dieses Thema ist in der Microsoft C++ Dokumentation als nicht funktionierendes Beispiel für Container in verwendet die C++ Standard-Bibliothek. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
 
 ## <a name="reference"></a>Referenz
 

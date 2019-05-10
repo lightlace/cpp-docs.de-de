@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: fc5a32fedf52377889b61103856e2125733cd696
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e51879ae62b2881e0adadbe59859605f6cc58947
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266781"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221910"
 ---
 # <a name="thiscall"></a>__thiscall
 
@@ -24,7 +24,7 @@ Ein Grund für die Verwendung **__thiscall** ist in Klassen, deren Memberfunktio
 
 Beim Kompilieren mit [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), alle Funktionen und Funktionszeiger `__clrcall` sofern nicht anders angegeben. Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
 
-In Versionen vor Visual C++ 2005 die **__thiscall** Aufrufkonvention nicht explizit angegeben werden in einem Programm, da **__thiscall** kein Schlüsselwort war.
+In Versionen vor Visual Studio 2005 die **__thiscall** Aufrufkonvention nicht explizit angegeben werden in einem Programm, da **__thiscall** kein Schlüsselwort war.
 
 `vararg` Memberfunktionen der **__cdecl** Aufrufkonvention. Alle Funktionsargumente werden auf dem Stapel abgelegt, mit der **dies** Zeiger zuletzt auf dem Stapel abgelegt
 

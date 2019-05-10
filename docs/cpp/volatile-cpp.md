@@ -1,6 +1,6 @@
 ---
 title: volatile (C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - volatile_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 73243841b2ad02bcc165b2910ac54283028e6cf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2396b5afaed09a28fd83f22fccde0be04e3d7790
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243938"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221878"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -50,7 +50,7 @@ Objekte, die als deklariert sind **flüchtige** werden in bestimmten Optimierung
 
 ## <a name="iso-compliant"></a>ISO-Kompatibilität
 
-Wenn Sie mit der C#-Schlüsselwort "volatile" vertraut sind oder mit dem Verhalten von vertraut sind **flüchtige** in früheren Versionen von Visual C++, denken Sie daran, die der C ++ 11 ISO-Standard **flüchtige** -Schlüsselwort ist anders und wird in Visual Studio unterstützt bei der [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) -Compileroption angegeben ist. (In ARM ist es standardmäßig festgelegt). Die **flüchtige** -Schlüsselwort in C ++ 11 ISO-Standardcode ist nur für Hardwarezugriffe verwendet werden nicht für die Kommunikation zwischen Threads verwenden. Verwenden Sie für die Kommunikation zwischen Threads Mechanismen wie [Std:: Atomic\<T >](../standard-library/atomic.md) aus der [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md).
+Wenn Sie mit vertraut sind die C# Schlüsselwort "volatile" oder vertraut, mit dem Verhalten von **flüchtige** in früheren Versionen von Microsoft C++ Compiler (MSVC), denken Sie daran, die der C ++ 11 ISO-Standard **Volatile** -Schlüsselwort ist anders und wird in MSVC unterstützt bei der [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) -Compileroption angegeben ist. (In ARM ist es standardmäßig festgelegt). Die **flüchtige** -Schlüsselwort in C ++ 11 ISO-Standardcode ist nur für Hardwarezugriffe verwendet werden nicht für die Kommunikation zwischen Threads verwenden. Verwenden Sie für die Kommunikation zwischen Threads Mechanismen wie [Std:: Atomic\<T >](../standard-library/atomic.md) aus der [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="end-of-iso-compliant"></a>Ende ISO-Kompatibilität
 

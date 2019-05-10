@@ -1,15 +1,15 @@
 ---
 title: Beispiele für Lambdaausdrücke
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392192"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222095"
 ---
 # <a name="examples-of-lambda-expressions"></a>Beispiele für Lambdaausdrücke
 
@@ -61,7 +61,7 @@ Obwohl Lambdaausdrücke am häufigsten im Text einer Funktion deklariert werden,
 
 ### <a name="example-2"></a>Beispiel 2
 
-Der Compiler für Visual C++ bindet einen Lambdaausdruck an die aufgezeichneten Variablen, wenn der Ausdruck deklariert wird, nicht wenn der Ausdruck aufgerufen wird. Das folgende Beispiel zeigt einen Lambdaausdruck, der die lokale Variable `i` nach Wert erfasst und die lokale Variable `j` nach Verweis. Da der Lambda-Ausdruck `i` als Wert erfasst, wirkt sich die Neuzuweisung von `i` später im Programm nicht auf das Ergebnis des Ausdrucks aus. Da der Lambdaausdruck `j` jedoch als Verweis erfasst, wirkt sich die erneute Zuweisung von `j` auf das Ergebnis des Ausdrucks aus.
+Microsoft C++ Compiler bindet einen Lambdaausdruck an die aufgezeichneten Variablen, wenn der Ausdruck deklariert wird, wenn der Ausdruck aufgerufen wird. Das folgende Beispiel zeigt einen Lambdaausdruck, der die lokale Variable `i` nach Wert erfasst und die lokale Variable `j` nach Verweis. Da der Lambda-Ausdruck `i` als Wert erfasst, wirkt sich die Neuzuweisung von `i` später im Programm nicht auf das Ergebnis des Ausdrucks aus. Da der Lambdaausdruck `j` jedoch als Verweis erfasst, wirkt sich die erneute Zuweisung von `j` auf das Ergebnis des Ausdrucks aus.
 
 ### <a name="code"></a>Code
 

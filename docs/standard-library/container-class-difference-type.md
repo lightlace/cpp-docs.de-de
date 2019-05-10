@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - difference_type typedef
 ms.assetid: fae52485-d424-484e-9856-13505cfe528c
-ms.openlocfilehash: aa742c0df9a8647bb08dcc0c7f5391afcdc94b96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cef7bc44c2339e4ef2771cac346443dd67f94aa
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211268"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221664"
 ---
 # <a name="container-classdifferencetype"></a>Container-Klasse::difference_type
 
 > [!NOTE]
-> Dieses Thema ist in der Dokumentation zu Visual C++ als nicht funktionierendes Beispiel für Container aufgeführt, die in der C++-Standardbibliothek verwendet werden. Weitere Informationen finden Sie unter [C++ Standard Library Containers (C++-Standardbibliothekcontainer)](../standard-library/stl-containers.md).
+> Dieses Thema ist in der Microsoft C++ Dokumentation als nicht funktionierendes Beispiel für Container in verwendet die C++ Standard-Bibliothek. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
 
 Beschreibt ein Objekt, das die Differenz zwischen den Adressen von zwei beliebigen Elementen in der gesteuerten Sequenz darstellen kann
 

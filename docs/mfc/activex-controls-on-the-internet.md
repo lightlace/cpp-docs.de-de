@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d268da8bef4facfb9259e6ce43648c8713464ec9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394830"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448189"
 ---
 # <a name="activex-controls-on-the-internet"></a>ActiveX-Steuerelemente für das Internet
 
@@ -85,7 +85,7 @@ Wenn Sie ein neues Steuerelement mit dem Assistenten zum Erstellen, können Sie 
 
 1. Klicken Sie auf **neu** auf die **Datei** Menü.
 
-1. Wählen Sie **MFC-ActiveX-Steuerelement-Assistent** aus der Visual C++-Projekte, und benennen Sie Ihr Projekt.
+1. Wählen Sie **MFC-ActiveX-Steuerelement-Assistent** von Visual Studio C++ projiziert, und benennen Sie Ihr Projekt.
 
 1. Auf der **Steuerelementeinstellungen** Seite **lädt Eigenschaften asynchron**. Nach Auswahl dieser Option richtet die Status "bereit"-Eigenschaft und den Status "bereit" geändert-Ereignis für Sie.
 

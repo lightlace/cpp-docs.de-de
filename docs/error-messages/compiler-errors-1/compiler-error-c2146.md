@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: 3a0fd9c49a71f6f53d1a109378e3a6894bb68723
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f00de0ce491d517da11f251b89ccb9a7ae66b77d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175422"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447261"
 ---
 # <a name="compiler-error-c2146"></a>Compilerfehler C2146
 
@@ -73,7 +73,7 @@ typename X<T>::Y func() { }
 
 Außerdem sehen Sie diesen Fehler infolge einer konformitätsverbesserung für Compiler, die für Visual Studio .NET 2003 durchgeführt wurde: explizite spezialisierungen werden nicht mehr die Vorlageparameter aus der primären Vorlage gefunden.
 
-Die Verwendung von `T` aus der primären Vorlage ist in der expliziten Spezialisierung nicht zulässig. Ersetzen Sie alle Instanzen des Vorlagenparameters in der Spezialisierung für Code in Visual Studio .NET 2003 und Visual Studio .NET Version von Visual C++ gültig ist mit dem explizit spezialisierte Typ.
+Die Verwendung von `T` aus der primären Vorlage ist in der expliziten Spezialisierung nicht zulässig. Ersetzen Sie alle Instanzen des Vorlagenparameters in der Spezialisierung für Code in der Visual Studio .NET 2003 und Visual Studio .NET gültig ist mit dem explizit spezialisierte Typ.
 
 Im folgende Beispiel kompiliert in Visual Studio .NET aber in Visual Studio .NET 2003 fehl:
 

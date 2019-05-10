@@ -1,6 +1,6 @@
 ---
 title: 'Erweiterungs-DLLs: Übersicht'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - AFXDLL library
 - MFC DLLs [C++], MFC extension DLLs
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ea8e950e28907ea1a4a85c1f39392d5505f08c49
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196728"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221369"
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC-Erweiterungs-DLLs: Übersicht
 
@@ -22,8 +22,6 @@ Eine MFC-Erweiterungs-DLL ist eine DLL, in der Regel wiederverwendbare von beste
 Erweiterungs-DLLs können auch dazu verwendet werden, von MFC abgeleitete Objekte zwischen Anwendung und DLL zu übergeben. Die dem übergebenen Objekt zugeordneten Memberfunktionen befinden sich in dem Modul, in dem das Objekt erstellt wurde. Da diese Funktionen bei Verwendung der freigegebene DLL-Version von MFC ordnungsgemäß exportiert werden, können Sie kostenlos MFC übergeben oder Zeiger von MFC abgeleitete Objekte zwischen einer Anwendung und der MFC-Erweiterungs-DLLs geladen.
 
 Ein Beispiel für eine DLL, die die grundlegenden Voraussetzungen für eine MFC-Erweiterungs-DLL erfüllt, finden Sie im MFC-Beispiel [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk). Betrachten Sie insbesondere die Testdll1.cpp und Testdll2.cpp-Dateien.
-
-Beachten Sie, die den Begriff diese Bezeichnung nicht mehr in der Dokumentation zu Visual C++ verwendet wird. Eine MFC-Erweiterungs-DLL hat die gleichen Eigenschaften wie die frühere AFXDLL.
 
 ## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?
 

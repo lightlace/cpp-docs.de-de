@@ -1931,24 +1931,24 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8590f6ac056bf561960f9c02ff4a4cc6a4d3bfa0
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264295"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447718"
 ---
 # <a name="arm-intrinsics"></a>Systeminterne ARM-Funktionen
 
-Der Visual C++-Compiler stellt die folgenden systeminternen Funktionen in der ARM-Architektur zur Verfügung. Weitere Informationen zu ARM finden Sie unter den [ARM-Architektur-Reference Manuals](http://go.microsoft.com/fwlink/p/?LinkId=522049) und [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?LinkId=246102) auf der ARM-Infocenter-Website.
+Microsoft C++ Compiler (MSVC) stellt die folgenden systeminternen Funktionen auf der ARM-Architektur zur Verfügung. Weitere Informationen zu ARM finden Sie unter den [ARM-Architektur-Reference Manuals](http://go.microsoft.com/fwlink/p/?LinkId=522049) und [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?LinkId=246102) auf der ARM-Infocenter-Website.
 
 ##  <a name="top"></a> NEON
 
 Die Anweisungssatzerweiterungen für den NEON-Vektor für ARM bieten SIMD-Funktionen (Single Instruction Multiple Data), die den Funktionen in den MMX- und SSE-Vektor-Anweisungssätzen ähneln, die bei x86- und x64-Architekturprozessoren vorkommen.
 
-Systeminterne NEON-Funktionen werden unterstützt, wie in der Headerdatei `arm_neon.h` angegeben. Der Visual C++-Compiler-Unterstützung für systeminterne NEON-Funktionen, die von der ARM-Compiler, die in Anhang G der dokumentiert ist, ähnelt die [ARM Compiler-toolkette, Version 4.1 Compiler Reference](http://go.microsoft.com/fwlink/p/?LinkId=251083) auf der ARM-Infocenter-Website.
+Systeminterne NEON-Funktionen werden unterstützt, wie in der Headerdatei `arm_neon.h` angegeben. Die MSVC-Unterstützung für systeminterne NEON-Funktionen, die von der ARM-Compiler, die in Anhang G der dokumentiert ist, ähnelt die [ARM Compiler-toolkette, Version 4.1 Compiler Reference](http://go.microsoft.com/fwlink/p/?LinkId=251083) auf der ARM-Infocenter-Website.
 
-Der Hauptunterschied zwischen dem Visual C++-Compiler und dem ARM-Compiler besteht darin, dass der Visual C++-Compiler `_ex`-Varianten der `vldX`- und `vstX`-Vektoranweisungen zum Laden und Speichern hinzufügt. Die `_ex`-Varianten benötigen einen zusätzlichen Parameter, der die Ausrichtung des Zeigerargument angibt, sind aber ansonsten identisch mit ihren Nicht-`_ex`-Entsprechungen.
+Der Hauptunterschied zwischen MSVC und der ARM-Compiler ist, dass die MSVC fügt `_ex` Varianten der `vldX` und `vstX` -vektoranweisungen zum Laden und speichern Sie die Anweisungen. Die `_ex`-Varianten benötigen einen zusätzlichen Parameter, der die Ausrichtung des Zeigerargument angibt, sind aber ansonsten identisch mit ihren Nicht-`_ex`-Entsprechungen.
 
 ##  <a name="A"></a> Auflisten der ARM-spezifischen systeminternen Funktionen
 

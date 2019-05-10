@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-ms.openlocfilehash: c6b4456d9c75061c9a8c93f37f98b58f92adc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 29dbfa6465f6bcbcf4d0618b1820e59a8edbd3a3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384750"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447251"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Überlegungen zur Leistung von Interop (C++)
 
@@ -21,7 +21,7 @@ Dieses Thema enthält Richtlinien für verwaltete/nicht verwaltete interop-Über
 
 Visual C++ unterstützt die gleichen Interoperabilitätsmechanismen wie anderen wie Visual Basic und C# -Code (P/Invoke), aber es bietet auch Interop-Unterstützung, die Visual c++ (C++-Interop) spezifisch sind. Bei leistungskritischen Anwendungen ist es wichtig zu verstehen, die Auswirkungen auf die Leistung jeder Interop-Methode.
 
-Unabhängig von der Interop-Technik, die verwendet wird müssen besondere Übergangs-Sequenzen, die genannte Thunks, jedes Mal eine verwaltete Funktion, eine nicht verwaltete Funktion und umgekehrt ist dies aufruft. Diese Thunks werden vom Visual C++-Compiler automatisch eingefügt, aber es ist wichtig zu beachten, dass kumulativ, diese Übergänge im Hinblick auf Leistung teuer sein können.
+Unabhängig von der Interop-Technik, die verwendet wird müssen besondere Übergangs-Sequenzen, die genannte Thunks, jedes Mal eine verwaltete Funktion, eine nicht verwaltete Funktion und umgekehrt ist dies aufruft. Diese Thunks werden automatisch eingefügt, das Microsoft C++ Compiler, aber es ist wichtig zu beachten, dass kumulativ, diese Übergänge im Hinblick auf Leistung teuer sein können.
 
 ## <a name="reducing-transitions"></a>Reduzieren von Übergängen
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: cfe40d6520187212ab77607273c555f12012fd02
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825381"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217730"
 ---
 # <a name="project-files"></a>Projektdateien
 
-Eine Visual C++-Projektdatei ist eine XML-basierte Datei, die über die Erweiterung „VCXPROJ“ verfügt und Informationen enthält, die zum Erstellen eines Visual C++-Projekts erforderlich sind. Beachten Sie, dass die Projektdatei verschiedene Projektdateien importiert, die die Erweiterung *.props* oder *.targets* haben. Diese Dateien enthalten zusätzliche Buildinformationen und können selbst auf andere *.props*- oder *.targets*-Dateien verweisen. Die Makros im Dateipfad (z. B. `$(VCTargetsPath)`) hängen von Ihrer Visual Studio-Installation ab. Weitere Informationen zu diesen Makros und *props* und *targets* finden Sie unter [VC++ Directories Property Page](vcpp-directories-property-page.md), [Festlegen von C++-Compiler und Build Eigenschaften in Visual Studio](../working-with-project-properties.md) und [gängige Makros für Buildbefehle und-Eigenschaften](common-macros-for-build-commands-and-properties.md).
+Ein C++ Projektdatei in Visual Studio ist eine XML-Datei, die die Erweiterung "vcxproj" und enthält Informationen, die erforderlich sind, zum Erstellen einer C++ Projekt. Beachten Sie, dass die Projektdatei verschiedene Projektdateien importiert, die die Erweiterung *.props* oder *.targets* haben. Diese Dateien enthalten zusätzliche Buildinformationen und können selbst auf andere *.props*- oder *.targets*-Dateien verweisen. Die Makros im Dateipfad (z. B. `$(VCTargetsPath)`) hängen von Ihrer Visual Studio-Installation ab. Weitere Informationen zu diesen Makros und *props* und *targets* finden Sie unter [VC++ Directories Property Page](vcpp-directories-property-page.md), [Festlegen von C++-Compiler und Build Eigenschaften in Visual Studio](../working-with-project-properties.md) und [gängige Makros für Buildbefehle und-Eigenschaften](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -120,5 +120,5 @@ Die folgende VCXPROJ-Beispieldatei wurde erstellt, indem eine **Win32-Konsolenan
 
 ## <a name="see-also"></a>Siehe auch
 
-[Visual Studio Projects - C++](../creating-and-managing-visual-cpp-projects.md)<br>
-[Festlegen von C++-Compiler und erstellen Sie die Eigenschaften in Visual Studio](../working-with-project-properties.md)
+[Visual Studio-Projekte: C++](../creating-and-managing-visual-cpp-projects.md)<br>
+[Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio](../working-with-project-properties.md)
