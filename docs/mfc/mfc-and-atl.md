@@ -2,12 +2,12 @@
 title: MFC und ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-ms.openlocfilehash: c2cfb77f0e3885e0b315ddfe38bf942ec157375a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54498ddf8999379d93c899c05aa41fe224616ea3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239252"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525433"
 ---
 # <a name="mfc-and-atl"></a>MFC und ATL
 
@@ -17,7 +17,7 @@ Sie können MFC- oder ATL-Programme mit der Visual Studio Community Edition oder
 
 In Visual Studio 2015 ist Visual C++ eine optionale Komponente und die MFC- und ATL-Komponenten sind optionale Unterkomponenten unter Visual C++. Wenn Sie diese Komponenten bei der ersten Installation von Visual Studio nicht auswählen, werden Sie zu deren Installation aufgefordert, wenn Sie das erste Mal versuchen, ein MFC- oder ATL-Projekt zu erstellen oder zu öffnen.
 
-In Visual Studio 2017 und höher, MFC- und ATL-sind optionale Unterkomponenten unter der **Desktopentwicklung mit C++** Workload im Visual Studio-Installer-Programm. Sie können die ATL-Unterstützung ohne MFC installieren oder MFC und ATL-Unterstützung (MFC hängt von ATL) kombiniert. Weitere Informationen zu Workloads und Komponenten finden Sie unter [Installieren von Visual Studio 2017](/visualstudio/install/install-visual-studio).
+In Visual Studio 2017 und höher, MFC- und ATL-sind optionale Unterkomponenten unter der **Desktopentwicklung mit C++** Workload im Visual Studio-Installer-Programm. Sie können die ATL-Unterstützung ohne MFC installieren oder MFC und ATL-Unterstützung (MFC hängt von ATL) kombiniert. Weitere Informationen zu Workloads und Komponenten finden Sie unter [Installieren von Visual Studio](/visualstudio/install/install-visual-studio).
 
 ## <a name="related-articles"></a>Verwandte Artikel
 

@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: 4075051ec07fc1331d815534a715c0411160fe14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35bcd4d951ee0340709976807de3a1d5e984cf29
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405637"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524828"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view-Klasse
 
@@ -121,7 +121,7 @@ accelerator_view( const accelerator_view & other );
 *other*<br/>
 Das zu kopierende `accelerator_view`-Objekt.
 
-## <a name="createmarker"></a>create_marker
+## <a name="create_marker"></a>create_marker
 
 Gibt ein future-Objekt zurück, um den Abschluss aller Befehle nachzuverfolgen, die bis jetzt zu diesem `accelerator_view`-Objekt gesendet wurden.
 
@@ -149,7 +149,7 @@ void flush();
 
 Gibt `void`zurück.
 
-## <a name="getaccelerator"></a>get_accelerator
+## <a name="get_accelerator"></a>get_accelerator
 
 Gibt das Zugriffstaste für das Accelerator_view-Objekt zurück.
 ### <a name="syntax"></a>Syntax
@@ -162,7 +162,7 @@ accelerator get_accelerator() const;
 
 Der Accelerator-Objekt, für das Accelerator_view-Objekt.
 
-## <a name="getisautoselection"></a>get_is_auto_selection
+## <a name="get_is_auto_selection"></a>get_is_auto_selection
 
 Gibt einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn die "accelerator_view", um übergeben wird eine [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).
 
@@ -176,7 +176,7 @@ bool get_is_auto_selection() const;
 
 **"true"** , wenn die Laufzeit automatisch eine entsprechende Zugriffstaste; auswählt, andernfalls **"false"**.
 
-## <a name="getisdebug"></a>get_is_debug
+## <a name="get_is_debug"></a> get_is_debug
 
 Gibt einen booleschen Wert, der angibt, ob das Accelerator_view-Objekt die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert ist.
 
@@ -190,7 +190,7 @@ bool get_is_debug() const;
 
 Ein boolescher Wert, der angibt, ob die `accelerator_view` Objekt hat die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert.
 
-## <a name="getqueuingmode"></a>get_queuing_mode
+## <a name="get_queuing_mode"></a>get_queuing_mode
 
 Gibt den queuingmodus für das Accelerator_view-Objekt zurück.
 
@@ -204,7 +204,7 @@ queuing_mode get_queuing_mode() const;
 
 Den queuingmodus für das `accelerator_view` Objekt.
 
-## <a name="getversion"></a>get_version
+## <a name="get_version"></a>get_version
 
 Die Version, der die "accelerator_view" zurückgegeben.
 
@@ -218,7 +218,7 @@ unsigned int get_version() const;
 
 Die Version der `accelerator_view`.
 
-## <a name="isautoselection"></a>is_auto_selection
+## <a name="is_auto_selection"></a>is_auto_selection
 
 Ruft einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entsprechende Zugriffstaste auswählt, wenn die "accelerator_view", um übergeben wird eine [Parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).
 
@@ -228,7 +228,7 @@ Ruft einen booleschen Wert, der angibt, ob die Laufzeit automatisch eine entspre
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 ```
 
-## <a name="isdebug"></a>is_debug
+## <a name="is_debug"></a>is_debug
 
 Ruft einen booleschen Wert, der angibt, ob das Accelerator_view-Objekt die DEBUG-Ebene, die für eine umfangreiche Fehlerberichterstattung aktiviert ist.
 
@@ -295,7 +295,7 @@ Die `accelerator_view` Objekt, das mit dieser verglichen werden soll.
 
 **"true"** , wenn die beiden Objekte gleich sind, andernfalls **"false"**.
 
-## <a name="queuingmode"></a>queuing_mode
+## <a name="queuing_mode"></a>queuing_mode
 
 Ruft den queuingmodus für das Accelerator_view-Objekt ab.
 

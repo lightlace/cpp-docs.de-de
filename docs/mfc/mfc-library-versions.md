@@ -1,6 +1,6 @@
 ---
 title: MFC-Bibliotheksversionen
-ms.date: 1/09/2018
+ms.date: 05/08/2019
 helpviewer_keywords:
 - class libraries [MFC], building versions
 - version information [MFC], MFC library
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238501"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524787"
 ---
 # <a name="mfc-library-versions"></a>MFC-Bibliotheksversionen
 
@@ -129,7 +129,7 @@ Die Importbibliotheken, die zum Erstellen von Anwendungen oder MFC-Erweiterungs-
 
 Wenn Sie dynamisch die gemeinsam genutzte DLL-Version von MFC, verknüpfen möchten, ob es sich um aus einer Anwendung oder aus einer MFC-Erweiterungs-DLL handelt, müssen Sie die entsprechende MFC-Bibliothek einschließen*Version*. DLL-Datei oder MFC*Version*U.DLL, wenn Sie Ihr Produkt bereitstellen.
 
-Eine Liste der Visual C++-DLLs, die mit Ihren Anwendungen verteilt werden können, finden Sie unter [verteilbarer Code für Microsoft Visual Studio 2017 und Microsoft Visual Studio 2017 SDK (enthält Dienstprogramme und BuildServer-Dateien)](http://go.microsoft.com/fwlink/p/?LinkId=823098).
+Eine Liste der Visual C++ DLLs, die mit Ihren Anwendungen verteilt werden können, finden Sie unter [verteilbarer Code für Microsoft Visual Studio 2017 und Microsoft Visual Studio 2017 SDK (enthält Dienstprogramme und BuildServer-Dateien)](/visualstudio/productinfo/2017-redistribution-vs) oder [ Verteilbarer Code für Visual Studio-2019](/visualstudio/releases/2019/redistribution).
 
 Weitere Informationen zur MBCS und Unicode-Unterstützung in MFC finden Sie unter [Unicode- und Multibyte-Zeichensatz (MBCS) Unterstützung](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
 
