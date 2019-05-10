@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 6974f0d82653203973be50b5ea709bd9487a215f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204c7ef94d82513338f6635ec9eb22f26fc090a7
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363972"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448018"
 ---
 # <a name="fatal-error-c1010"></a>Schwerwiegender Fehler C1010
 
 Unerwartetes Dateiende während der Suche nach dem vorkompilierten Header. Haben Sie vergessen, hinzufügen ' #include "Quellcode?
 
-Eine Includedatei mit angegebenen ["/ Yu"](../../build/reference/yu-use-precompiled-header-file.md) ist in der Quelldatei nicht aufgeführt.  Diese Option ist standardmäßig aktiviert, in den meisten Typen von Visual C++-Projekt, und "stdafx.h" ist der Standardwert dieser Option angegebenen Includedatei.
+Eine Includedatei mit angegebenen ["/ Yu"](../../build/reference/yu-use-precompiled-header-file.md) ist in der Quelldatei nicht aufgeführt.  Diese Option ist standardmäßig aktiviert, in den meisten Visual Studio C++ Projekttypen und "stdafx.h" ist der Standardwert dieser Option angegebenen Includedatei.
 
 Verwenden Sie in der Visual Studio-Umgebung eine der folgenden Methoden zum Beheben dieses Fehlers ein:
 

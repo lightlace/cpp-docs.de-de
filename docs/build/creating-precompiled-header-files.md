@@ -1,20 +1,18 @@
 ---
 title: Vorkompilierte Headerdateien
-ms.date: 12/10/2018
-f1_keywords:
-- pch
+ms.date: 05/06/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 1dc6ff9de94f98a4eef3d3827bec177f22672674
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341747"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220819"
 ---
 # <a name="precompiled-header-files"></a>Vorkompilierte Headerdateien
 
@@ -43,7 +41,7 @@ Sie können C- und C++-Programme vorkompilieren. In C++-Programmierung ist es ü
 
 ## <a name="two-choices-for-precompiling-code"></a>Zwei Methoden für das Vorkompilieren von Code
 
-Mit Visual C++ können Sie jeder C- oder C++-Code Vorkompilieren; Sie sind nicht auf das Vorkompilieren von nur-Header-Dateien beschränkt.
+Sie können alle C Vorkompilieren oder C++ code Sie sind nicht auf das Vorkompilieren von nur-Header-Dateien beschränkt.
 
 Das Vorkompilieren erfordert Planung, aber es bietet wesentlich schnellere Kompilierungen, wenn Sie Quellcode als einfache Headerdateien vorkompilieren.
 
@@ -133,7 +131,7 @@ Diese Tabelle enthält die Compileroptionen, die eine Inkonsistenz Warnung ausl�
 
 Frühere Abschnitte enthalten eine Übersicht über vorkompilierte Header: "/ Yc" und "/ Yu" die Option/fp und [Hdrstop](../preprocessor/hdrstop.md) Pragma. In diesem Abschnitt wird beschrieben, eine Methode für die manuellen Optionen für vorkompilierte Header in einem Projekt verwenden; Es endet mit einer Beispiel-Makefile und den Code, den er verwaltet.
 
-Sehen Sie sich für einen anderen Ansatz verwenden Sie die manuellen Optionen für vorkompilierte Header in einem Projekt den Makefiles MFC\SRC im Verzeichnis, das bei der Standardinstallation von Visual C++ erstellt wird. Diese Makefiles nehmen einen ähnlichen Ansatz, mit dem in diesem Abschnitt dargestellt, aber stärkerer Einsatz der Microsoft Program Maintenance Utility (NMAKE) Makros und bieten mehr Kontrolle des Buildprozesses.
+Sehen Sie sich für einen anderen Ansatz verwenden Sie die manuellen Optionen für vorkompilierte Header in einem Projekt den Makefiles MFC\SRC im Verzeichnis, das bei der Standardinstallation von Visual Studio erstellt wird. Diese Makefiles nehmen einen ähnlichen Ansatz, mit dem in diesem Abschnitt dargestellt, aber stärkerer Einsatz der Microsoft Program Maintenance Utility (NMAKE) Makros und bieten mehr Kontrolle des Buildprozesses.
 
 ## <a name="pch-files-in-the-build-process"></a>PCH-Dateien im Erstellungsvorgang
 

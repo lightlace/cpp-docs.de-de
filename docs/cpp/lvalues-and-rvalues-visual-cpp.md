@@ -1,18 +1,18 @@
 ---
-title: 'Wert Kategorien: Lvalues und Rvalues (Visual C++)'
-ms.date: 04/06/2018
+title: 'Wert Kategorien: Lvalues und Rvalues (C++)'
+ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 74bfac5f5bb56549eee41a5479babf8e71b00aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4e3cfa87a8f1ae9b17f7c08afd8faeabea7102b3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245554"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222018"
 ---
-# <a name="lvalues-and-rvalues-visual-c"></a>Lvalues und Rvalues (Visual C++)
+# <a name="lvalues-and-rvalues-c"></a>Lvalues und Rvalues (C++)
 
 Jeder C++-Ausdruck weist einen Typ, und gehört zu einer *Wertkategorie*. Die Wert-Kategorien sind die Grundlage für die Regeln, die Compiler befolgen müssen, wenn erstellen, kopieren und verschieben Sie temporäre Objekte beim Auswerten des Ausdrucks.
 

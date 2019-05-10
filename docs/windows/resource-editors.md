@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a752122d89b3d952aec664f0dec092af1599f143
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388175"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448906"
 ---
 # <a name="resource-editors-c"></a>Ressourcen-Editoren (C++)
 
@@ -39,15 +39,15 @@ Wenn Sie eine Ressource erstellen oder öffnen, wird automatisch der entsprechen
 
 |Verwenden Sie...|Zur Bearbeitung von...|
 |----------------|----------------|
-|[Zugriffstasten-Editor](../windows/accelerator-editor.md)|Zugriffstastentabellen in Visual C++-Projekten.|
+|[Zugriffstasten-Editor](../windows/accelerator-editor.md)|Zugriffstastentabellen in Visual Studio C++ Projekte.|
 |[Binary Editor](binary-editor.md)|Binäre Daten und benutzerdefinierte Ressourcen in Visual C++-, Visual Basic- oder Visual C#-Projekten.|
-|[Dialog-Editor](../windows/dialog-editor.md)|Dialogfelder in Visual C++-Projekten.|
+|[Dialog-Editor](../windows/dialog-editor.md)|Dialogfelder in Visual Studio C++ Projekte.|
 |[Image Editor](../windows/image-editor-for-icons.md)|Bitmaps, Symbole, Cursor und andere Bilddateien in Visual C++-, Visual Basic- oder Visual C#-Projekten.|
-|[Menü-Editor](../windows/menu-editor.md)|Menüressourcen in Visual C++-Projekten.|
+|[Menü-Editor](../windows/menu-editor.md)|Menüressourcen in Visual Studio C++ Projekte.|
 |[Ribbon-Editor](../mfc/ribbon-designer-mfc.md)|Menübandressourcen in MFC-Projekten.|
-|[Zeichenfolgen-Editor](../windows/string-editor.md)|Zeichenfolgentabellen in Visual C++-Projekten.|
-|[Symbolleisten-Editor](../windows/toolbar-editor.md)|Symbolleistenressourcen in Visual C++-Projekten. Die **Symbolleisten-Editor** ist Teil der **Bildbearbeitung**.|
-|[Versionsinfo-Editor](../windows/version-information-editor.md)|Versionsinformationen in Visual C++-Projekten.|
+|[Zeichenfolgen-Editor](../windows/string-editor.md)|Zeichenfolgentabellen in Visual Studio C++ Projekte.|
+|[Symbolleisten-Editor](../windows/toolbar-editor.md)|Symbolleistenressourcen in Visual Studio C++ Projekte. Die **Symbolleisten-Editor** ist Teil der **Bildbearbeitung**.|
+|[Versionsinfo-Editor](../windows/version-information-editor.md)|Finden Sie in Visual Studio C++ Projekte.|
 
 > [!NOTE]
 > Wenn Ihr Projekt noch keine RC-Datei enthält, finden Sie unter [Vorgehensweise: Erstellen von Ressourcen](../windows/how-to-create-a-resource-script-file.md).

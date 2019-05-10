@@ -8,25 +8,25 @@ helpviewer_keywords:
 - projects [C++], types
 - templates [C++], projects
 - applications [C++], projects
-- Visual C++ projects, types
+- C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: cac194ed2c830541711161dc139a42ed0529340f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dce96a221804e5538929d63fa3c125a27e7fc36d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316755"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217770"
 ---
 # <a name="c-project-templates"></a>C++-Projektvorlagen
 
-Visual Studio-Projektvorlagen generiert Quellcodedateien, Compileroptionen, Menüs, Symbolleisten, Symbole, Verweise und `#include` Anweisungen, die für die Art von Projekt geeignet sind, Sie erstellen möchten. Visual Studio umfasst verschiedene Arten von Visual C++-Projektvorlagen und bietet für viele von ihnen Assistenten, sodass Sie Ihre Projekte beim Erstellen anpassen können. Sie können die Anwendung unmittelbar nach dem Erstellen eines Projekts erstellen und ausführen. Es ist empfehlenswert, den Buildprozess in Abständen durchzuführen, während Sie Ihre Anwendung entwickeln.
+Visual Studio-Projektvorlagen generiert Quellcodedateien, Compileroptionen, Menüs, Symbolleisten, Symbole, Verweise und `#include` Anweisungen, die für die Art von Projekt geeignet sind, Sie erstellen möchten. Visual Studio umfasst verschiedene Arten von C++ Projektvorlagen und für viele von ihnen stellt Assistenten bereit, sodass Sie Ihre Projekte anpassen können, erstellen. Sie können die Anwendung unmittelbar nach dem Erstellen eines Projekts erstellen und ausführen. Es ist empfehlenswert, den Buildprozess in Abständen durchzuführen, während Sie Ihre Anwendung entwickeln.
 
 > [!NOTE]
 > Mit C++-Projektvorlagen können Sie ein C-Sprachprojekt erstellen. Suchen Sie im generierten Projekt die Dateien mit der Dateinamenerweiterung .cpp, und ändern Sie sie in .c. Erweitern Sie dann auf der Seite **Projekteigenschaften** für das Projekt (nicht für die Projektmappe) die Option **Konfigurationseigenschaften**, **C/C++** , und wählen Sie dann **Erweitert**. Ändern Sie die Einstellung **Kompilierungsart** in **Als C-Code kompilieren (/TC)**.
 
 ## <a name="project-templates"></a>Projektvorlagen
 
-Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion und den Workloads ab, die Sie installiert haben. Wenn Sie die Workload „Desktopentwicklung mit C++“ installiert haben, verfügt Visual Studio über die folgenden Visual C++-Projektvorlagen.
+Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion und den Workloads ab, die Sie installiert haben. Wenn Sie die Desktop-Entwicklung mit installiert haben C++ Visual Studio-Workload hat diese C++ -Projektvorlagen.
 
 ### <a name="windows-desktop"></a>Windows-Desktop
 

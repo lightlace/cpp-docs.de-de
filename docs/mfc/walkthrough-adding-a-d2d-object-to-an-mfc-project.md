@@ -1,16 +1,16 @@
 ---
 title: 'Exemplarische Vorgehensweise: Hinzufügen eines D2D-Objekts zu einem MFC-Projekt'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-ms.openlocfilehash: 0793511f09be9dcb37732c4c16bfd2b3038a6cf4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 5710add59c0e5d27b2969ae22087533cae901ca9
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358616"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558173"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Exemplarische Vorgehensweise: Hinzufügen eines D2D-Objekts zu einem MFC-Projekt
 
@@ -36,9 +36,9 @@ Um diese exemplarische Vorgehensweise abzuschließen, benötigen Sie Visual Stud
 
 ## <a name="to-create-an-mfc-application"></a>Zum Erstellen einer MFC_Anwendung
 
-1. Auf der **Datei** Startmenü **neu** und wählen Sie dann **Projekt**.
+1. Verwenden der **MFS-Anwendungsassistenten** zum Erstellen einer MFC_Anwendung. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell-Steuerelemente](walkthrough-using-the-new-mfc-shell-controls.md) Anweisungen zum Öffnen des Assistenten für Ihre Version von Visual Studio.
 
-1. In der **neues Projekt** im Dialogfeld im linken Bereich unter **installierte Vorlagen**, erweitern Sie **Visual C++** und wählen Sie dann **MFC**. Wählen Sie im mittleren Bereich **MFC-Anwendung**. In der **Namen** geben *MFCD2DWalkthrough*. Klicken Sie auf **OK**.
+1. In der **Namen** geben *MFCD2DWalkthrough*. Klicken Sie auf **OK**.
 
 1. In der **MFS-Anwendungsassistenten**, wählen Sie **Fertig stellen** ohne Änderung von Einstellungen.
 

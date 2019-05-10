@@ -1,6 +1,6 @@
 ---
 title: 'Zeitliche Steuerung der Ausnahmebehandlung: Eine Zusammenfassung'
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: cbff7c4153646fcb3471e18d20a0e633fbd1307f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 7b52252454e27d622e412f490360a025dfc97838
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330452"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221902"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Zeitliche Steuerung der Ausnahmebehandlung: Eine Zusammenfassung
 
 Ein Beendigungshandler wird ausgeführt, unabhängig davon, wie die **__try** -Anweisungsblock beendet wird. Ursachen gehören das Herausspringen aus dem **__try** Block, eine `longjmp` -Anweisung, die überträgt die Steuerung aus den Block, und das Entladen des Stapels aufgrund einer Ausnahmebehandlung.
 
 > [!NOTE]
->  Visual C++ unterstützt zwei Formen der Anweisungen `setjmp` und `longjmp`. Die schnelle Version umgeht die Abbruchbehandlung, ist jedoch effizienter. Um diese Version zu verwenden, schließen Sie die Datei \<setjmp.h >. Die andere Version unterstützt die Abbruchbehandlung, wie im vorherigen Abschnitt beschrieben. Um diese Version zu verwenden, schließen Sie die Datei \<setjmpex.h >. Die Leistungssteigerung der schnellen Version hängt von der Hardwarekonfiguration ab.
+>  Microsoft C++ -Compiler unterstützt zwei Arten von der `setjmp` und `longjmp` Anweisungen. Die schnelle Version umgeht die Abbruchbehandlung, ist jedoch effizienter. Um diese Version zu verwenden, schließen Sie die Datei \<setjmp.h >. Die andere Version unterstützt die Abbruchbehandlung, wie im vorherigen Abschnitt beschrieben. Um diese Version zu verwenden, schließen Sie die Datei \<setjmpex.h >. Die Leistungssteigerung der schnellen Version hängt von der Hardwarekonfiguration ab.
 
 Das Betriebssystem führt alle Abbruchbehandlungen in der richtigen Reihenfolge aus, bevor ein anderer Code ausgeführt werden kann, einschließlich des Texts eines Ausnahmehandlers.
 

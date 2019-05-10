@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de433361901b5d247616c154afc48d637373d43
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338934"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448033"
 ---
 # <a name="compiler-error-c2440"></a>Compilerfehler C2440
 
@@ -194,7 +194,7 @@ C2440 kann auch aufgrund von Änderungen in der Attributfunktion auftreten.  Im 
 
 ## <a name="example"></a>Beispiel
 
-Das visuelle Element C++ Compiler nicht mehr erlaubt die [Const_cast-Operator](../../cpp/const-cast-operator.md) zur Abwärtsumwandlung beim Quellcode mit **"/ CLR"** Programmierung kompiliert wird.
+Microsoft C++ Compiler nicht mehr erlaubt die [Const_cast-Operator](../../cpp/const-cast-operator.md) zur Abwärtsumwandlung beim Quellcode mit **"/ CLR"** Programmierung kompiliert wird.
 
 Um den Fehler C2440 zu beheben, verwenden Sie den richtigen Umwandlungsoperator. Weitere Informationen finden Sie unter [Umwandlungsoperatoren](../../cpp/casting-operators.md).
 

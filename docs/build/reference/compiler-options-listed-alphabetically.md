@@ -1,14 +1,14 @@
 ---
 title: Compileroptionen alphabetisch sortiert
-ms.date: 04/08/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272333"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221763"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Compileroptionen alphabetisch sortiert
 
@@ -34,7 +34,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/E](e-preprocess-to-stdout.md)|Kopiert die Präprozessorausgabe in die Standardausgabe.|
 |[/EH](eh-exception-handling-model.md)|Gibt das Modell der Ausnahmebehandlung an.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiert die Präprozessorausgabe in die Standardausgabe.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Ermöglicht Ihnen, Informationen über interne Compilerfehler direkt an das Visual C++-Team zu senden.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Ermöglicht es Ihnen, Informationen interne Compilerfehler (ICE) direkt an Microsoft senden C++ Team.|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|Festlegen des ausführungszeichensatzes.|
 |[/F](f-set-stack-size.md)|Legt die Stapelgröße fest.|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Generiert Code, der für eine bestimmte X64 optimiert ist Architektur oder für die Einzelheiten der Micro-Architekturen, in der Mikroarchitekturen von AMD64- und Extended Memory 64 Technology (EM64T)-Architekturen.|
@@ -153,7 +153,7 @@ In diesem Abschnitt finden Sie eine vollständige Liste der Compileroptionen in 
 |[/Zc](zc-conformance.md)|Legt Standardverhalten unter [/Ze](za-ze-disable-language-extensions.md).[ / Za, / Ze (Spracherweiterungen deaktivieren)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|Veraltet. Aktiviert Spracherweiterungen.|
 |[/Zf](zf.md)|Verbessert die PDB-Datei Zeitpunkt der Generierung in parallele Builds.|
-|[/Zg](zg-generate-function-prototypes.md)|In Visual C++ 2015 entfernt. Erzeugt Funktionsprototypen.|
+|[/Zg](zg-generate-function-prototypes.md)|In Visual Studio 2015 entfernt. Erzeugt Funktionsprototypen.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Fügt Debuginformationen in eine Programmdatenbank ein, die mit Bearbeiten und Fortfahren kompatibel ist.|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Erzeugt vollständige Debuginformationen.|
 |[/Zl](zl-omit-default-library-name.md)|Entfernt Standard-Bibliotheksnamen aus der OBJ-Datei (nur x86).|

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - value_type typedef
 ms.assetid: e89d5a71-b48c-47fa-aa78-682243e6e97f
-ms.openlocfilehash: 195cd6c72f392dc9308971bb4adb4b0a79ff9370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bba94e290e691c807d9db7f40f2fa6f0d3c7965b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210787"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221355"
 ---
 # <a name="container-classvaluetype"></a>Container-Klasse::value_type
 
 > [!NOTE]
-> Dieses Thema ist in der Dokumentation zu Visual C++ als nicht funktionierendes Beispiel für Container aufgeführt, die in der C++-Standardbibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
+> Dieses Thema ist in der Microsoft C++ Dokumentation als nicht funktionierendes Beispiel für Container in verwendet die C++ Standard-Bibliothek. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
 
 Fungiert als ein Synonym für den Vorlagenparameter *Ty*.
 

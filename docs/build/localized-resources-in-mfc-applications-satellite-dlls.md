@@ -12,12 +12,12 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: c593d0bae6fc23cfd765116c44b07caa2a6d8ccf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1f512cc17832564b5eb530b97f8bfb2642c43d43
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188738"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220745"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Lokalisierte Ressourcen in MFC-Anwendungen: Satelliten-DLLs
 
@@ -53,5 +53,5 @@ Wenn keine dieser DLLs gefunden werden, verwendet MFC die Ressourcen in LangExam
 
 ## <a name="see-also"></a>Siehe auch
 
-[DLLs in Visual C++](dlls-in-visual-cpp.md)<br/>
+[Erstellen von C/C++-DLLs in Visual Studio](dlls-in-visual-cpp.md)<br/>
 [TN057: Lokalisierung von MFC-Komponenten](../mfc/tn057-localization-of-mfc-components.md)

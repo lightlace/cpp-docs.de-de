@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fbec210d973926a312d3e750e806dd9ef13f5f9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409485"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448531"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -26,7 +26,7 @@ Ermöglicht es Ihnen, die IDL-Konstrukte verwenden, die in der aktuellen Version
 ### <a name="parameters"></a>Parameter
 
 *Text*<br/>
-Der Attributname, die Visual C++-Compiler mit der generierten IDL-Datei übergeben, ohne einen Compilerfehler zurückgegeben werden sollen.
+Der Attributname, dass Sie, Microsoft beabsichtigen C++ Compiler an, über der generierten IDL-Datei übergeben, ohne einen Compilerfehler zurückzugeben.
 
 ## <a name="remarks"></a>Hinweise
 

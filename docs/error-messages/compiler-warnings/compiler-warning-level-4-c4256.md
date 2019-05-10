@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: b1f7534098a04c7c65a380d302999260c960f284
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400955"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447773"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Compilerwarnung (Stufe 4) C4256
 
@@ -19,7 +19,7 @@ ms.locfileid: "62400955"
 
 Mögliche Inkompatibilitäten.
 
-Betrachten Sie folgendes Codebeispiel. Wenn die Definition des Konstruktors S2::S2 (Int i,...) wurde mit einer Version von Visual C++-Compiler vor Version 7, kompiliert aber im folgende Beispiel wird mithilfe der aktuellen Version kompiliert, den Aufruf des Konstruktors für S3 funktioniert nicht richtig, da eine Änderung des besondere Schreibweisen-Aufrufkonvention. Wenn beide mit Visual C++ 6.0 kompiliert wurden, würde der Aufruf nicht ganz rechts, funktionieren nur, wenn keine Parameter für die Auslassungszeichen übergeben wurden.
+Betrachten Sie folgendes Codebeispiel. Wenn die Definition des Konstruktors S2::S2 (Int i,...) wurde mit einer Version von Microsoft kompiliert C++ Compiler vor Version 7, jedoch im folgenden Beispiel wird mithilfe der aktuellen Version kompiliert, den Aufruf des Konstruktors für S3 funktioniert nicht ordnungsgemäß aufgrund einer Änderung des besondere Schreibweisen-Aufrufkonvention. Wenn beide mit Visual C++ 6.0 kompiliert wurden, würde der Aufruf nicht ganz rechts, funktionieren nur, wenn keine Parameter für die Auslassungszeichen übergeben wurden.
 
 Um diese Warnung zu beheben,
 

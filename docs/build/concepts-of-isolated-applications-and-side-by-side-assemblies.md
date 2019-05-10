@@ -1,16 +1,16 @@
 ---
 title: Konzept der isolierten Anwendungen und der parallelen Assemblys
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 448d2088a9e91de8fc34b4f23721ffec77f6c697
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f569381b9efe9a8ca7704dc87bcb8e8102e0cde2
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196702"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220908"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Konzept der isolierten Anwendungen und der parallelen Assemblys
 
@@ -32,7 +32,7 @@ Die Abhängigkeiten von parallelen Assemblys können nach der Bereitstellung ein
 
 ## <a name="visual-c-libraries"></a>Visual C++-Bibliotheken
 
-In Visual Studio 2005 und Visual Studio 2008 wurden verteilbare Bibliotheken wie ATL, MRC, CRT, die C++-Standardbibliothek, OpenMP und MSDIA als freigegebene parallele Assemblys im systemeigenen Assemblycache bereitgestellt. In der aktuellen Version werden die verteilbaren Bibliotheken zentral bereitgestellt. Standardmäßig enthalten alle mit Visual C++ erstellten Anwendungen ein in die endgültige Binärdatei eingebettetes Manifest, das die Abhängigkeiten dieser Binärdatei von den Visual C++-Bibliotheken beschreibt. Weitere Informationen zum Verständnis der Manifestgenerierung für Visual C++-Anwendungen finden Sie unter [Understanding Manifest Generation for C/C++ Programs](understanding-manifest-generation-for-c-cpp-programs.md). Für Anwendungen, die statisch mit den verwendeten Bibliotheken verknüpft sind, oder für lokal bereitgestellte Anwendungen ist kein Manifest erforderlich. Weitere Informationen zur Bereitstellung finden Sie unter [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md).
+In Visual Studio 2005 und Visual Studio 2008 wurden verteilbare Bibliotheken wie ATL, MRC, CRT, die C++-Standardbibliothek, OpenMP und MSDIA als freigegebene parallele Assemblys im systemeigenen Assemblycache bereitgestellt. In der aktuellen Version werden die verteilbaren Bibliotheken zentral bereitgestellt. Standardmäßig werden alle Anwendungen, die erstellt werden, mithilfe von Visual Studio mit dem in die endgültige Binärdatei eingebettetes Manifest erstellt, und das Manifest beschreibt die Abhängigkeiten dieser Binärdatei für das visuelle Element C++ Bibliotheken. Zum Verständnis der manifestgenerierung für C++ -Anwendungen finden Sie unter [Understanding Manifest Generation für C /C++ Programme](understanding-manifest-generation-for-c-cpp-programs.md). Für Anwendungen, die statisch mit den verwendeten Bibliotheken verknüpft sind, oder für lokal bereitgestellte Anwendungen ist kein Manifest erforderlich. Weitere Informationen zur Bereitstellung finden Sie unter [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Siehe auch
 

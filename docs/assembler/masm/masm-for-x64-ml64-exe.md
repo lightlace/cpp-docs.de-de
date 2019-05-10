@@ -6,28 +6,28 @@ helpviewer_keywords:
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 0404bff54a08988a72fcb0a0c075a4446bf90f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1a92d2a22e8aa9df29c18fa36ff4508eb8eec57f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178240"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445869"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM für x64 (ml64.exe)
 
-Visual Studio enthält sowohl die 32-Bit-als auch die 64-Bit-gehostete Versionen der Microsoft-Assembler (MASM) Code des ereignisdateiziels X64. Mit dem Namen ml64.exe, dies ist der Assembler, die akzeptiert X64 Assembler-Sprache. Die MASM-Befehlszeilentools werden installiert, wenn Sie eine C++-Workload während der Installation von Visual Studio auswählen. Die MASM-Tools sind nicht als separater Download zur Verfügung. Anweisungen zum Herunterladen und installieren Sie eine Kopie von Visual Studio, finden Sie unter [Installieren von Visual Studio](/visualstudio/install/install-visual-studio). Wenn Sie nicht die vollständige Visual Studio-IDE installieren möchten, sondern nur die Befehlszeilentools möchten, laden Sie die [Build-Tools für Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
+Visual Studio enthält sowohl die 32-Bit-als auch die 64-Bit-gehostete Versionen der Microsoft-Assembler (MASM) Code des ereignisdateiziels X64. Mit dem Namen ml64.exe, dies ist der Assembler, die akzeptiert X64 Assembler-Sprache. Die MASM-Befehlszeilentools werden installiert, wenn Sie eine C++-Workload während der Installation von Visual Studio auswählen. Die MASM-Tools sind nicht als separater Download zur Verfügung. Anweisungen zum Herunterladen und installieren Sie eine Kopie von Visual Studio, finden Sie unter [Installieren von Visual Studio](/visualstudio/install/install-visual-studio). Wenn Sie nicht die vollständige Visual Studio-IDE installieren möchten, sondern nur die Befehlszeilentools möchten, laden Sie die [Build-Tools für Visual Studio](https://visualstudio.microsoft.com/downloads/).
 
 MASM verwenden, erstellen Sie Code für X64 ausgerichtet ist, in der Befehlszeile, müssen Sie eine Developer-Eingabeaufforderung für X64 Ziele, wodurch der erforderliche Pfad und andere Umgebungsvariablen festgelegt. Informationen zum Developer-Eingabeaufforderung zu starten, finden Sie unter [Erstellen von C/C++-Code, in der Befehlszeile](../../build/building-on-the-command-line.md).
 
 Weitere Informationen zu Befehlszeilenoptionen ml64.exe, finden Sie unter [ml- und ML64-Befehlszeilenreferenz](../../assembler/masm/ml-and-ml64-command-line-reference.md).
 
-Inlineassembler oder das ASM-Schlüsselwort wird nicht für X64 oder ARM-Ziele unterstützt. So portieren Sie Ihre X86, Inlineassembler verwendet code X64 "oder" ARM ", Sie können Ihren Code in C++ zu konvertieren, intrinsische Compilerfunktionen zu verwenden oder Assembler-Sprache-Quelldateien erstellen. Visual C++-Compiler unterstützt die systeminternen Funktionen, damit Sie spezielle-Function-Anweisungen können für beispielsweise privilegiert, Überprüfung/Test, interlocked usw., in wie nahe wie möglich eine plattformübergreifend bit. Weitere Informationen zu verfügbaren systeminternen Funktionen, finden Sie unter [intrinsische Compilerfunktionen](../../intrinsics/compiler-intrinsics.md).
+Inlineassembler oder das ASM-Schlüsselwort wird nicht für X64 oder ARM-Ziele unterstützt. So portieren Sie Ihre X86, Inlineassembler verwendet code X64 "oder" ARM ", Sie können Ihren Code in C++ zu konvertieren, intrinsische Compilerfunktionen zu verwenden oder Assembler-Sprache-Quelldateien erstellen. Microsoft C++ -Compiler unterstützt die systeminternen Funktionen, damit Sie spezielle-Function-Anweisungen können für beispielsweise privilegiert, Überprüfung/Test, interlocked usw., in wie nahe wie möglich eine plattformübergreifend bit. Weitere Informationen zu verfügbaren systeminternen Funktionen, finden Sie unter [intrinsische Compilerfunktionen](../../intrinsics/compiler-intrinsics.md).
 
-## <a name="add-an-assembler-language-file-to-a-visual-c-project"></a>Eine Assembler-Language-Datei zu einem Visual C++-Projekt hinzufügen
+## <a name="add-an-assembler-language-file-to-a-visual-studio-c-project"></a>Fügen Sie eine Assembler-Language-Datei eine Visual Studio- C++ Projekt
 
 Das Visual Studio-Projektsystem unterstützt Assembler-Language-Dateien, die mithilfe von MASM in C++-Projekten erstellt. Sie können erstellen X64 Assembler-Quelle von Dateien und in Objektdateien mit MASM, die X64 vollständig unterstützt. Anschließend können Sie diese Objektdateien verknüpfen, um C++-Code für die X64 Ziele. Dies ist eine Möglichkeit zum Umgehen des Mangel an x X64 Inlineassembler.
 
-### <a name="to-add-an-assembler-language-file-to-an-existing-visual-c-project"></a>Eine Assembler-Language-Datei zu einem vorhandenen Visual C++-Projekt hinzufügen
+### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>Zum Hinzufügen einer Assembler-Language-Datei zu einer vorhandenen Visual Studio C++ Projekt
 
 1. Wählen Sie das Projekt im **Projektmappen-Explorer** aus. Wählen Sie auf der Menüleiste **Projekt**, **Buildanpassungen**.
 

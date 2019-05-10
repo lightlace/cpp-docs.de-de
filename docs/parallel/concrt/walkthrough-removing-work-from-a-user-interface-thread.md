@@ -1,16 +1,16 @@
 ---
 title: 'Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3bd41b1815737730067929c4728b32181cb2fc03
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407801"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857004"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread
 
@@ -54,9 +54,9 @@ Dieser Abschnitt beschreibt, wie Sie die grundlegenden MFC-Anwendung zu erstelle
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>Zum Erstellen einer Visual C++-MFC-Anwendung
 
-1. Klicken Sie im Menü **Datei** auf **Neu**und dann auf **Projekt**.
+1. Verwenden der **MFS-Anwendungsassistenten** zum Erstellen einer MFC_Anwendung mit den Standardeinstellungen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell-Steuerelemente](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) Anweisungen zum Öffnen des Assistenten für Ihre Version von Visual Studio.
 
-1. In der **neues Projekt** Dialogfeld die **installierte Vorlagen** wählen Sie im Bereich **Visual C++**, und klicken Sie dann in der **Vorlagen** wählen Sie im Bereich **MFC-Anwendung**. Geben Sie einen Namen für das Projekt, z. B. `Mandelbrot`, und klicken Sie dann auf **OK** zum Anzeigen der **MFS-Anwendungsassistenten**.
+1. Geben Sie einen Namen für das Projekt, z. B. `Mandelbrot`, und klicken Sie dann auf **OK** zum Anzeigen der **MFS-Anwendungsassistenten**.
 
 1. In der **Anwendungstyp** wählen Sie im Bereich **einzelnes Dokument**. Sicherstellen, dass die **Unterstützung für die Dokument-/Ansicht** Kontrollkästchen deaktiviert ist.
 

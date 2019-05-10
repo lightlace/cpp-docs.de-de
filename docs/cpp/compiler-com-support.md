@@ -1,22 +1,22 @@
 ---
 title: COM-Unterstützung des Compilers
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-ms.openlocfilehash: f0b1d6280dc27641287de8fe539cd3a148048245
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e13874bad44610821bed9c588af6bd9124162116
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154837"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222208"
 ---
 # <a name="compiler-com-support"></a>COM-Unterstützung des Compilers
 
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch
 
-Der Visual C++-Compiler kann COM(Component Object Model)-Typbibliotheken direkt lesen und den Inhalt in C++-Quellcode übersetzen, der in die Kompilierung aufgenommen werden kann. Es sind Spracherweiterungen verfügbar, um die COM-Programmierung auf der Clientseite zu erleichtern.
+Microsoft C++ Compiler direkt lesen Komponente Objekt Model (COM) Typbibliotheken und übersetzt den Inhalt in C++ Quellcode, die in die Kompilierung aufgenommen werden kann. Es sind Spracherweiterungen verfügbar, um die COM-Programmierung auf der Clientseite zu erleichtern.
 
 Mithilfe der [#import-präprozessoranweisung](../preprocessor/hash-import-directive-cpp.md), der Compiler kann eine Typbibliothek lesen und konvertiert ihn in eine C++-Headerdatei, die beschreibt, die COM-als Schnittstellen Klassen. Ein Satz von `#import`-Attributen ist für die Benutzersteuerung des Inhalts der resultierenden Typbibliothek-Headerdateien verfügbar.
 

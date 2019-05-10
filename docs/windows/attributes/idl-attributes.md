@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29761d814505d2c2dd435d3416fe2367e1c16073
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409550"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448406"
 ---
 # <a name="idl-attributes"></a>IDL-Attribute
 
@@ -27,7 +27,7 @@ Jetzt können Sie von innerhalb einer Quellcodedatei, die mithilfe von Visual C+
 
 Bei Verwendung nicht mit [COM-Attributen](com-attributes.md), IDL-Attribute können Sie die Schnittstellen definieren. Wenn der Quellcode kompiliert wird, werden die Attribute zum Definieren der generierten IDL-Datei verwendet. Bei Verwendung mit COM-Attributen in einem ATL-Projekt einige IDL Attribute, z. B. `coclass`, dass Code in das Projekt eingefügt werden.
 
-Beachten Sie, dass [Idl_quote](idl-quote.md) können Sie MIDL-Konstrukte, die in der aktuellen Version des Visuals nicht unterstützt werden C++. Diese und andere Attribute wie z. B. [Importlib](importlib.md) und [Includelib](includelib-cpp.md) finden Sie Informationen zu vorhandenen IDL-Dateien in Ihrem aktuellen Visual C++-Projekt verwenden.
+Beachten Sie, dass [Idl_quote](idl-quote.md) können Sie MIDL-Konstrukte, die in der aktuellen Version des Visuals nicht unterstützt werden C++. Diese und andere Attribute wie z. B. [Importlib](importlib.md) und [Includelib](includelib-cpp.md) finden Sie Informationen zu vorhandenen IDL-Dateien in Ihrer aktuellen Visual Studio verwenden C++ Projekt.
 
 |Attribut|Beschreibung|
 |---------------|-----------------|

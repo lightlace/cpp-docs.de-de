@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-ms.openlocfilehash: 480b4c2a6e052e8e0823b97b548fc5d07b55230f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c415da15341f7800a706379d991cb753f5991170
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260174"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221173"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton-Klasse
 
@@ -108,7 +108,7 @@ CComPtr<IUnknown> m_spObj;
 
 Jeder Aufruf der [CreateInstance](#createinstance) -Methode fragt einfach dieses Objekt für einen Schnittstellenzeiger auf.
 
-Beachten Sie, dass das aktuelle Formular des `m_spObj` stellt eine bedeutende Änderung verglichen mit der Möglichkeit, `CComClassFactorySingleton` war in früheren Versionen von ATL In früheren Versionen der `CComClassFactorySingleton` Objekt zur gleichen Zeit wie die Klassenfactory, während der Initialisierung erstellt wurde. In Visual C++ .NET 2003 wird das Objekt verzögert, bei der ersten Anforderung erstellt. Diese Änderung kann in Programmen, die frühe Initialisierung abhängen, Fehler verursachen.
+Beachten Sie, dass das aktuelle Formular des `m_spObj` stellt eine bedeutende Änderung verglichen mit der Möglichkeit, `CComClassFactorySingleton` war in früheren Versionen von ATL In früheren Versionen der `CComClassFactorySingleton` Objekt zur gleichen Zeit wie die Klassenfactory, während der Initialisierung erstellt wurde. In visuellen C++.NET 2003 und höher, das Objekt erstellt wird verzögert, bei der ersten Anforderung. Diese Änderung kann in Programmen, die frühe Initialisierung abhängen, Fehler verursachen.
 
 ## <a name="see-also"></a>Siehe auch
 

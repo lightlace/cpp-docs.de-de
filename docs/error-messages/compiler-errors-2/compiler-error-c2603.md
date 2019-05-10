@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
-ms.openlocfilehash: 5391aed09b7fd448a9d72ea7cc17cd5c26fc5f04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4540180058c890a1dec9c4060f796f1f044c934
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215400"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447996"
 ---
 # <a name="compiler-error-c2603"></a>Compilerfehler C2603
 
 > "*Funktion*": Zu viele statische Objekte im Blockbereich mit Konstruktoren/Destruktoren in-Funktion
 
-In Versionen von Visual C++-Compiler vor Visual Studio 2015 oder wenn die [/Zc:threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) -Compileroption angegeben ist, besteht eine Beschränkung auf die Anzahl von statischen Objekten in einer extern sichtbaren Inlinefunktion man kann 31 .
+In Versionen von Microsoft C++ Compiler vor Visual Studio 2015, oder wenn die [/Zc:threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) -Compileroption angegeben ist, besteht eine Beschränkung auf die Anzahl von statischen Objekten in eine extern sichtbare man kann 31 Inline-Funktion.
 
-Um dieses Problem zu beheben, empfehlen wir Sie neuere Version von Visual C++-Compiler-Toolsets zu übernehmen, oder entfernen Sie wenn möglich die /Zc:threadSafeInit--Compileroption. Wenn dies nicht möglich ist, sollten Sie die statische Objekte kombinieren. Wenn die Objekte vom gleichen Typ sind, sollten Sie die Verwendung von einer einzelnen statischen Array dieses Typs, und verweisen auf einzelne Elemente nach Bedarf.
+Um dieses Problem zu beheben, die Sie übernehmen die neuere Version von Microsoft empfohlen C++ -Compilertoolset, oder entfernen Sie wenn möglich die /Zc:threadSafeInit--Compileroption. Wenn dies nicht möglich ist, sollten Sie die statische Objekte kombinieren. Wenn die Objekte vom gleichen Typ sind, sollten Sie die Verwendung von einer einzelnen statischen Array dieses Typs, und verweisen auf einzelne Elemente nach Bedarf.
 
 ## <a name="example"></a>Beispiel
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], HTML Help files
 ms.assetid: d30a1b1b-318f-4a78-8b60-93da53a224a8
-ms.openlocfilehash: cde4809fa270e66081088d68d806e637f64e5344
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 7fbac8bfa0427e8d6c60e88da92a525e62fb1a24
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270210"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446278"
 ---
 # <a name="help-files-html-help"></a>Hilfedateien (HTML-Hilfe)
 
@@ -27,4 +27,4 @@ Die folgenden Dateien werden erstellt, wenn Sie den HTML-Hilfstyp der Hilfsunter
 
 ## <a name="see-also"></a>Siehe auch
 
-[Für Visual C++-Projekte erstellte Dateitypen](file-types-created-for-visual-cpp-projects.md)
+[Datei erstellt, für visuelle C++ Projekte](file-types-created-for-visual-cpp-projects.md)

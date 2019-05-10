@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 9598d7a0480ee762892d1026a1eb64dcc5c64399
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362308"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448454"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Vorbereiten eines Testcomputers zum Ausführen einer ausführbaren Debugdatei
 
@@ -25,7 +25,7 @@ Es gibt drei Möglichkeiten, Debugversionen von DLLs für Visual C++-Bibliothek
 - Verwenden Sie eine lokale Bereitstellung, um die Debugversion einer bestimmten Visual C++-DLL im Installationsverzeichnis der Anwendung zu installieren, indem Sie die im Verzeichnis „Programme“ oder „Programme (x86)“ unter „\Microsoft Visual Studio \<Version>\VC\redist\Debug_NonRedist\\“ bereitgestellten Dateien verwenden.
 
     > [!NOTE]
-    >  Um eine mithilfe von Visual C++ 2005 oder Visual C++ 2008 erstellte Anwendung remote auf einem anderen Computer zu debuggen, müssen Sie Debugversionen der Visual C++-Bibliotheks-DLLs als freigegebene parallele Assemblys bereitstellen. Sie können ein Setup-Projekt oder Windows Installer zum Installieren von entsprechenden Mergemodulen verwenden.
+    >  Für das Remotedebuggen Ihrer Anwendung mit Visual Studio 2005 oder Visual Studio 2008 auf einem anderen Computer erstellt haben, müssen Sie Debugversionen der Visual bereitstellen C++ Bibliotheks-DLLs als freigegebene Side-by-Side Assemblys. Sie können ein Setup-Projekt oder Windows Installer zum Installieren von entsprechenden Mergemodulen verwenden.
 
 - Verwenden Sie in Visual Studio die Option **Bereitstellen** im Dialogfeld **Konfigurations-Manager**, um die Ausgabe des Projekts und andere Dateien zum Remotecomputer zu kopieren.
 

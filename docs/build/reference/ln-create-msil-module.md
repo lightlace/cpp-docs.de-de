@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -LN compiler option [C++]
 - /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-ms.openlocfilehash: 18b0e72d50f328afc1f2856f833cec1aa7d46f30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2dbd5ae5ddf802185912c49caf37aa61c6a7d4c3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176215"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446262"
 ---
 # <a name="ln-create-msil-module"></a>/LN (Erstellen eines MSIL-Moduls)
 
@@ -36,7 +36,7 @@ Möglicherweise möchten die Module zu erstellen, wenn ein komponentenbasierter 
 
 Die standarddateierweiterung für ein Modul ist "netmodule".
 
-In Visual C++-Versionen vor Visual C++ 2005, ein Modul erstellt wurde, mit **/CLR: noAssembly**.
+In Versionen vor Visual Studio 2005 wurde ein Modul mit erstellt **/CLR: noAssembly**.
 
 Der MSVC-Linker NETMODULE-Dateien als Eingabe akzeptiert und die vom Linker generierte Ausgabedatei ist eine Assembly oder eine NETMODULE-Datei mit keine Abhängigkeit zur Laufzeit auf die NETMODULE-Dateien, die an den Linker eingegeben wurden.  Weitere Informationen finden Sie unter [NETMODULE-Dateien als Eingabe für den Linker](netmodule-files-as-linker-input.md).
 

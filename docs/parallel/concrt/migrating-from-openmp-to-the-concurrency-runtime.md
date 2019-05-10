@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba2b413d40da601029f5c4e1d861576212c10494
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412669"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448423"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrieren von OpenMP zur Concurrency Runtime
 
 Concurrency Runtime ermöglicht eine Vielzahl von Programmiermodellen. Diese Modelle überlappen oder ergänzen die Modelle von anderen Bibliotheken. Die Dokumente in diesem Abschnitt vergleichen [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) in die Concurrency Runtime, und geben Sie Beispiele dazu, wie vorhandenen OpenMP-Code, um die Verwendung der Concurrency Runtime zu migrieren.
 
-Das OpenMP-Programmiermodell wird durch einen offenen Standard definiert und verfügt über klar definierte Bindungen zu den Programmiersprachen Fortran und C/C++. OpenMP-Versionen 2.0 und 2.5, das von Visual C++-Compiler unterstützt werden, sind gut geeignet für parallele Algorithmen, die iterativ sind. Das heißt, Sie parallelen Iteration über ein Array von Daten führen. OpenMP 3.0 unterstützt nicht-iterativer Aufgaben zusätzlich zu iterativer Aufgaben.
+Das OpenMP-Programmiermodell wird durch einen offenen Standard definiert und verfügt über klar definierte Bindungen zu den Programmiersprachen Fortran und C/C++. OpenMP-Versionen 2.0 und 2.5, die von Microsoft unterstützt werden C++ Compiler, sind gut geeignet für parallele Algorithmen, die iterativ; sind Das heißt, Sie parallelen Iteration über ein Array von Daten führen. OpenMP 3.0 unterstützt nicht-iterativer Aufgaben zusätzlich zu iterativer Aufgaben.
 
 OpenMP ist am effizientesten, wenn der Grad an Parallelität vorgegeben ist und mit den verfügbaren Ressourcen auf dem System übereinstimmt. Das OpenMP-Modell ist eine besonders gute Übereinstimmung für die High Performance computing, wo sehr große Berechnungsprobleme auf die Verarbeitungsressourcen eines Computers verteilt werden. In diesem Szenario der hardwareumgebung ist im Allgemeinen fest, und der Entwickler kann davon ausgehen, um exklusiven Zugriff auf alle Compute-Ressourcen zu erhalten, wenn der Algorithmus ausgeführt wird.
 

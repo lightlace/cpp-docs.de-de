@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4d9aaa493eab39199ac75b6b9fe888c3e103f115
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209153"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448069"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>C++-Stack-Semantik für Referenztypen
 
-Vor Visual C++ 2005 eine Instanz eines Referenztyps kann nur erstellt werden mithilfe der `new` -Operator, der Erstellung des Objekts auf dem Garbage gesammelten Heap. Allerdings können Sie jetzt erstellen eine Instanz eines Referenztyps mit derselben Syntax, die Sie verwenden eine Instanz eines systemeigenen Typs auf dem Stapel zu erstellen. Also, Sie müssen nicht mit [Ref neue Gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) ein Objekt eines Verweistyps erstellt. Und wenn das Objekt den Gültigkeitsbereich verlässt, ruft der Compiler des Destruktors des Objekts.
+Vor Visual Studio 2005 eine Instanz eines Referenztyps kann nur erstellt werden mithilfe der `new` -Operator, der Erstellung des Objekts auf dem Garbage gesammelten Heap. Allerdings können Sie jetzt erstellen eine Instanz eines Referenztyps mit derselben Syntax, die Sie verwenden eine Instanz eines systemeigenen Typs auf dem Stapel zu erstellen. Also, Sie müssen nicht mit [Ref neue Gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) ein Objekt eines Verweistyps erstellt. Und wenn das Objekt den Gültigkeitsbereich verlässt, ruft der Compiler des Destruktors des Objekts.
 
 ## <a name="remarks"></a>Hinweise
 

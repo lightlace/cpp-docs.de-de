@@ -5,16 +5,16 @@ helpviewer_keywords:
 - cl-exe compiler, intrinsics
 - intrinsics, x64
 - intrinsics, amd64
-ms.openlocfilehash: 141ffa24a87d7794815c10f407ee23718071dacf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1a0b664d0b67925cd6a2ed01e128741e641b48
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389657"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448577"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>X64 (amd64) Liste der intrinsischen Funktionen
 
-Dieses Dokument listet systeminterne Funktionen auf, die der Visual C++-Compiler unterstützt, wenn x64 (auch als amd64 bezeichnet) als Ziel definiert ist.
+Dieses Dokument listet systeminterne Funktionen, die Microsoft C++ Compiler unterstützt, wenn X64 (auch als amd64 bezeichnet) ausgerichtet ist.
 
 Weitere Informationen über einzelne systeminterne Funktionen finden Sie in diesen Ressourcen, je nach Prozessor, den Sie als Ziel bestimmen.
 

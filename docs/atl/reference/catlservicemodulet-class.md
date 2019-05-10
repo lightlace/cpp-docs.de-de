@@ -1,6 +1,6 @@
 ---
 title: CAtlServiceModuleT-Klasse
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CAtlServiceModuleT
 - ATLBASE/ATL::CAtlServiceModuleT
@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 2d4d5d4a5c4d8a52f792cc04a968974967c1e13a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1d44e356d907afcb261c0b4a765f8807bb54dc19
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260195"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221188"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT-Klasse
 
@@ -186,7 +186,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-In Visual Studio .NET 2003 wird diese Methode nicht in der Basisklasse implementiert. Der Visual Studio-Projekt-Assistent enthält diese Methode im generierten Code tritt ein Kompilierungsfehler auf, wenn ein Projekt erstellt wurde, in einer früheren Version von Visual C++ ATL 7.1 mit kompiliert wird. Jede abgeleitete Klasse `CAtlServiceModuleT` müssen diese Methode in der abgeleiteten Klasse implementieren.
+Jede abgeleitete Klasse `CAtlServiceModuleT` müssen diese Methode in der abgeleiteten Klasse implementieren.
 
 Verwenden Sie im Aufruf von PKT-Ebene von Authentifizierung, Identitätswechselebene RPC_C_IMP_LEVEL_IDENTIFY und eine entsprechende ungleich Null-Sicherheitsdeskriptor `CoInitializeSecurity`.
 

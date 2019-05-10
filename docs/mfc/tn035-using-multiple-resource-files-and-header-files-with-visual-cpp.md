@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ce38c2f3f4effa993dfa32221d82bece65096dd
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305514"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448523"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Verwenden mehrerer Ressourcendateien und Headerdateien mit Visual C++
 
@@ -204,7 +204,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC
 ```
 
-Mithilfe von Kompilierzeitanweisung können Sie die in Visual C++ bearbeitbaren und nicht bearbeitbaren Ressourcen in mehreren RC-Dateien organisieren. Einzige Aufgabe der MYAPP.RC-„Masterdatei“ ist dabei die Einbindung der übrigen RC-Dateien mit #include. Wenn Sie eine MAK-Datei eines Visual C++-Projekts verwenden, sollten Sie die RC-"Masterdatei" in das Projekt einschließen, damit alle mit #include eingebundenen Ressourcen mit der Anwendung kompiliert werden.
+Mithilfe von Kompilierzeitanweisung können Sie die in Visual C++ bearbeitbaren und nicht bearbeitbaren Ressourcen in mehreren RC-Dateien organisieren. Einzige Aufgabe der MYAPP.RC-„Masterdatei“ ist dabei die Einbindung der übrigen RC-Dateien mit #include. Wenn Sie ein Visual Studio verwenden C++ Projekt. MAK-Datei, dann sollte die "Master" enthalten. RC-Datei in das Projekt so, die alle die # mit #include eingebundenen Ressourcen mit der Anwendung kompiliert werden.
 
 **Erzwingung von nicht bearbeitbaren Visual C++-Dateien**
 

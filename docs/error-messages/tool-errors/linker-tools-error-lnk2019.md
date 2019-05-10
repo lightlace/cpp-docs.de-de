@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: af40a48e36d316842ec9a744ad95d6c3b3af3731
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386342"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447711"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Linkertoolfehler LNK2019
 
@@ -86,7 +86,7 @@ Wenn Sie beispielsweise eine intrinsische AVX2-Funktion verwenden, aber nicht di
 
 ### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>Sie kombinieren Code, der systemeigenen Wchar verwendet\_t mit Code, der nicht
 
-Durch die in Visual C++ 2005 vorgenommene Konformitätsverbesserung der C++-Sprache wurde `wchar_t` standardmäßig als systemeigener Typ festgelegt. Sie müssen die Compileroption [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) verwenden, um Code zu generieren, der mit Bibliotheks- und Objektdateien kompatibel ist, die mit früheren Versionen von Visual C++ kompiliert wurden. Wenn nicht alle Dateien mit der gleichen kompiliert wurden **/Zc:wchar\_t** Einstellungen Typenverweise möglicherweise nicht in kompatible Typen aufgelöst. Überprüfen Sie, ob `wchar_t` -Typen in allen Bibliotheks- und Objektdateien kompatibel sind. Aktualisieren Sie hierzu entweder die verwendeten Typen, oder verwenden Sie beim Kompilieren konsistente **/Zc:wchar_t** -Einstellungen.
+C++konformitätsverbesserung der Sprache, die in Visual Studio 2005 vorgenommene durchgeführt wurde `wchar_t` standardmäßig ein systemeigener Typ. Verwenden Sie die [/Zc:](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Compileroption zum Generieren von Code mit Bibliotheks- und Objektdateien, kompiliert mit früheren Versionen von Visual Studio kompatibel. Wenn nicht alle Dateien mit der gleichen kompiliert wurden **/Zc:wchar\_t** Einstellungen Typenverweise möglicherweise nicht in kompatible Typen aufgelöst. Überprüfen Sie, ob `wchar_t` -Typen in allen Bibliotheks- und Objektdateien kompatibel sind. Aktualisieren Sie hierzu entweder die verwendeten Typen, oder verwenden Sie beim Kompilieren konsistente **/Zc:wchar_t** -Einstellungen.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Bibliotheken von Drittanbietern Probleme und Vcpkg
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-ms.openlocfilehash: 65b7e1d8f03b5e59bd21091531bc9d21472e4ae4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c55160c855a6188a616f957acee43e409b751b62
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402735"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447795"
 ---
 # <a name="compiler-error-c3203"></a>Compilerfehler C3203
 
@@ -19,7 +19,7 @@ ms.locfileid: "62402735"
 
 Sie übergeben ein ungültiges Argument an eine Klassenvorlage oder generische Vorlage. Die Klassenvorlage oder generische Vorlage erwartet einen Typ als Parameter.
 
-Dieser Fehler kann infolge einer Konformitätsverbesserung für Compiler generiert werde, die für Visual C++ 2005 erstellt wurde: eine nicht spezialisierte Klassenvorlage kann nicht als Vorlagenargument in einer Basisklassenliste verwendet werden. Um C3203 zu beheben, fügen Sie explizit Typparametervorlage(n) zum Vorlagenklassennamen hinzu, wenn dieser als Vorlagenparameter in einer Basisklassenliste verwendet wird.
+Dieser Fehler kann infolge einer konformitätsverbesserung für Compiler, die für Visual Studio 2005 durchgeführt wurde generiert werden: eine nicht spezialisierte Klassenvorlage kann nicht als Vorlagenargument in einer Basisklassenliste verwendet werden. Um C3203 zu beheben, fügen Sie explizit Typparametervorlage(n) zum Vorlagenklassennamen hinzu, wenn dieser als Vorlagenparameter in einer Basisklassenliste verwendet wird.
 
 ```
 // C3203.cpp

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - const_iterator method
 ms.assetid: e68c9e30-fc4c-4c2e-8724-06d1fe8b8ccb
-ms.openlocfilehash: 9c229f496084b289aa006b61dde7c8030191a6c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 980ef67dc25ecdaf510758164eed1377712fb191
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211669"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221707"
 ---
 # <a name="container-classconstiterator"></a>Container-Klasse::const_iterator
 
 > [!NOTE]
-> Dieses Thema ist in der Dokumentation zu Visual C++ als nicht funktionierendes Beispiel für Container aufgeführt, die in der C++-Standardbibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
+> Dieses Thema ist in der Microsoft C++ Dokumentation als nicht funktionierendes Beispiel für Container in verwendet die C++ Standard-Bibliothek. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
 
 Beschreibt ein Objekt, das als konstanter Iterator für die gesteuerte Sequenz fungieren kann
 

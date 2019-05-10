@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 43a47366475b227ccfc5918b07760cc582326e82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b86536cb6177390ab89d235ecb8e093006dd8cff
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387726"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448562"
 ---
 # <a name="windows-desktop-wizard"></a>Windows-Desktop-Assistenten
 
@@ -83,8 +83,8 @@ Nach Erstellung einer Windows-Desktopanwendung können Sie mit dem Assistenten f
 > [!NOTE]
 > Es können keine ATL-Klassen hinzugefügt werden. MFC-Klassen können nur solchen Windows-Desktopanwendungstypen hinzugefügt werden, die MFC unterstützen (siehe vorangehende Tabelle).
 
-Die vom Assistenten erstellten Projektdateien können im **Projektmappen-Explorer**angezeigt werden. Weitere Informationen zu den Dateien, die der Assistent erstellt für das Projekt, finden Sie in der Datei Projekt generierten `ReadMe.txt`. Weitere Informationen zu den Dateitypen finden Sie unter [Für Visual C++-Projekte erstellte Dateitypen](../build/reference/file-types-created-for-visual-cpp-projects.md).
+Die vom Assistenten erstellten Projektdateien können im **Projektmappen-Explorer**angezeigt werden. Weitere Informationen zu den Dateien, die der Assistent erstellt für das Projekt, finden Sie in der Datei Projekt generierten `ReadMe.txt`. Weitere Informationen zu den Dateitypen [für visuelle Element erstellte Dateitypen C++ Projekte](../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Visual C++-Projekttypen](../build/reference/visual-cpp-project-types.md)
+[C++Projekttypen in Visual Studio](../build/reference/visual-cpp-project-types.md)

@@ -1,15 +1,15 @@
 ---
 title: XML-Regeldateien für Eigenschaftenseiten
-ms.date: 04/27/2017
+ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 17b89f00b2e51c960ed7d3219427b56d92851b81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 610dc7341a35845b35d8ed80f52b421d1c2fb5d1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319465"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217721"
 ---
 # <a name="property-page-xml-rule-files"></a>XML-Regeldateien für Eigenschaftenseiten
 
@@ -19,7 +19,7 @@ Die einzigen Szenarios, für die Sie die interne Funktionsweise dieser Dateien u
 
 Öffnen Sie zunächst die Eigenschaftenseiten eines Projekts. Klicken Sie hierzu mit der rechten Maustaste auf den Projektknoten im **Projektmappen-Explorer**, und wählen Sie „Eigenschaften“ aus.
 
-![Visual C++-Projekteigenschaften](../media/cpp-property-page-2017.png)
+![Visual Studio C++ Projekteigenschaften](../media/cpp-property-page-2017.png)
 
 Jeder Knoten unter **Konfigurationseigenschaften** wird als „Regel“ bezeichnet. Eine Regel stellt manchmal ein einzelnes Tool (z.B. den Compiler) dar. Im Allgemeinen bezieht sich der Begriff jedoch darauf, dass ein Element über Eigenschaften verfügt, ausgeführt werden und Ausgaben erzeugen kann. Jede Regel wird über eine XML-Datei im Ordner „VCTargets“ aufgefüllt. Die angezeigte C/C++-Regel wird beispielsweise über „cl.xml“ aufgefüllt.
 

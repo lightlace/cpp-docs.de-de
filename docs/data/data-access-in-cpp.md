@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a68c4a9df3b439ae641c5e4cbe6f3fbc8b8e6355
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398068"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222531"
 ---
 # <a name="data-access-in-visual-c"></a>Datenzugriff in Visual C++
 
@@ -40,11 +40,11 @@ Verbinden Sie Azure SQL-Datenbank von C- oder C++-Anwendungen.
 [Microsoft Azure Storage-Clientbibliothek für C++](https://github.com/Azure/azure-storage-cpp)<br/>
 [Azure Storage](/azure/storage/storage-introduction) ist eine Cloudspeicherlösung für moderne Anwendungen, die auf Stabilität, Verfügbarkeit und Skalierbarkeit für die Bedürfnisse ihrer Kunden beruhen. Stellen Sie eine Verbindung zu Azure Storage von C++ mithilfe der Azure Storage-Clientbibliothek für C++ her.
 
-[ODBC-Treiber 13.1 für SQLServer – Windows freigegeben](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-Der aktuelle ODBC-Treiber bietet zuverlässigen Datenzugriff auf die Microsoft SQL Server 2016 Microsoft Azure SQL-Datenbank für Anwendungen auf C/C++-Basis. Bietet Unterstützung für einschließlich immer verschlüsselt, Azure Active Directory und Always On-Verfügbarkeitsgruppen. Auch für MacOS und Linux verfügbar.
+[ODBC-Treiber für SQLServer](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
+Der aktuelle ODBC-Treiber bietet zuverlässigen Datenzugriff auf Microsoft SQL Server und Microsoft Azure SQL-Datenbank für C /C++ -basierte Anwendungen. Bietet Unterstützung für einschließlich immer verschlüsselt, Azure Active Directory und Always On-Verfügbarkeitsgruppen. Auch für MacOS und Linux verfügbar.
 
-[SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
-SQL Server Native Client ist eine eigenständige Data Access Application-Programmierschnittstelle (API), die für OLE DB und ODBC verwendet wird, die SQL Server 2005 über SQL Server 2014 unterstützt. Neue Anwendungen sollten den ODBC-Treiber 13.1 für SQL Server verwenden.
+[OLE DB-Treiber für SQLServer](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
+Der neueste OLE DB-Treiber ist eine eigenständige Data Access Application programming Interface (API), die von Microsoft SQL Server und Microsoft Azure SQL-Datenbank unterstützt.
 
 [Microsoft Azure C und C++ Developer Center](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure vereinfacht die C++-Anwendungsentwicklung mit mehr Flexibilität, Skalierbarkeit und Zuverlässigkeit mithilfe von Tools, die Sie lieben werden.

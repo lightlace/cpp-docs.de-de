@@ -1,17 +1,15 @@
 ---
 title: MSBuild in der Befehlszeile – C++
 ms.date: 12/12/2018
-f1_keywords:
-- MSBuild
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e95d99cf5c63c824bb9bade8e76bc3ca99079669
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273312"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220576"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>MSBuild in der Befehlszeile – C++
 
@@ -53,7 +51,7 @@ Weitere Informationen zu MSBuild finden Sie unter:
 
 |Begriff|Definition|
 |----------|----------------|
-|[Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Veranschaulicht, wie ein Visual C++-Projekt mit **MSBuild**.|
+|[Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines C++-Projekts](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Veranschaulicht das Erstellen eines Visual Studio C++ -Projekt mit **MSBuild**.|
 |[Vorgehensweise: Verwenden von Buildereignissen in MSBuild-Projekten](how-to-use-build-events-in-msbuild-projects.md)|Veranschaulicht, wie eine Aktion angeben, die zu einem Zeitpunkt Linkschritt im Build tritt auf,:, bevor der Build gestartet wird. Bevor Sie die Link-Schritt-beginnt. oder nach dem Ende des Buildvorgangs.|
 |[Vorgehensweise: Hinzufügen eines benutzerdefinierten Buildschritts zu MSBuild-Projekten](how-to-add-a-custom-build-step-to-msbuild-projects.md)|Veranschaulicht, wie eine benutzerdefinierte Phase die Buildsequenz hinzufügen.|
 |[Vorgehensweise: Hinzufügen von benutzerdefinierten Buildtools zu MSBuild-Projekten](how-to-add-custom-build-tools-to-msbuild-projects.md)|Veranschaulicht, wie eine bestimmte Datei Buildtool zugeordnet werden soll.|

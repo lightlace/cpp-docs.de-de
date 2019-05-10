@@ -1,6 +1,6 @@
 ---
 title: CComSafeArray-Klasse
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArray
 - ATLSAFE/ATL::CComSafeArray
@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dec6bbad0aa4a8409b9f3d24476dcc94b8eaefe3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259442"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221158"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray-Klasse
 
@@ -318,7 +318,7 @@ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein `CComSafeArray` Objekt kann erstellt werden, aus einer vorhandenen `SAFEARRAYBOUND` Struktur und die Anzahl der Dimensionen, oder legen die Anzahl von Elementen in Arrays und die untere Grenze. Wenn das Array ist im Visual C++ zugegriffen werden, sollte die untere Grenze 0 sein. Andere Sprachen können andere Werte für die untere Grenze (z. B. Visual Basic unterstützt Arrays mit Elementen mit einem Bereich, z. B.-10 bis 10).
+Ein `CComSafeArray` Objekt kann erstellt werden, aus einer vorhandenen `SAFEARRAYBOUND` Struktur und die Anzahl der Dimensionen, oder legen die Anzahl von Elementen in Arrays und die untere Grenze. Wenn das Array aus zugegriffen werden C++, die untere Grenze muss 0 sein. Andere Sprachen können andere Werte für die untere Grenze (z. B. Visual Basic unterstützt Arrays mit Elementen mit einem Bereich, z. B.-10 bis 10).
 
 ##  <a name="destroy"></a>  CComSafeArray::Destroy
 

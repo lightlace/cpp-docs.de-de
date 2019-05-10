@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator >=
 - operator>=
 ms.assetid: 14fbebf5-8b75-4afa-a51b-3112d31c07cf
-ms.openlocfilehash: 0f7ed1fcf0c4e3290d110d9aa12b66289cb331f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9994456a1345276af426bddd883fa7c53d7b93d0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371459"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220280"
 ---
 # <a name="operatorgt"></a>operator&gt;=
 
 > [!NOTE]
-> Dieses Thema ist in der Dokumentation zu Visual C++ als nicht funktionierendes Beispiel für Container aufgeführt, die in der C++-Standardbibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
+> Dieses Thema ist in der Microsoft C++ Dokumentation als nicht funktionierendes Beispiel für Container in verwendet die C++ Standard-Bibliothek. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
 
 Überlädt **operator>=**, um zwei Objekte der Vorlagenklasse [Container](../standard-library/sample-container-class.md) zu vergleichen.
 
