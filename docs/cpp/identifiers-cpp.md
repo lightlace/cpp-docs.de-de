@@ -1,6 +1,6 @@
 ---
 title: Bezeichner (C++)
-ms.date: 09/12/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - decorated names
 - decorated names, about decorated names
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 61ca021a8f41074dcef6bf9df2e5683ede98deee
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184600"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222431"
 ---
 # <a name="identifiers-c"></a>Bezeichner (C++)
 
@@ -70,7 +70,7 @@ Nur die ersten 2048 Zeichen aus Microsoft C++-Bezeichnern sind signifikant. Name
 
 - Die Anzahl von Argumenten für eine Funktion.
 
-Das Dollarzeichen `$` ist ein gültiges Bezeichnerzeichen in Visual C++. In Visual C++ können Sie die tatsächlichen Zeichen, die durch die zulässigen Bereiche der universellen Zeichennamen dargestellt sind, in Bezeichnern verwenden. Damit Sie diese Zeichen verwenden können, müssen Sie die Datei speichern, indem Sie eine Dateicodierungs-Codepage verwenden, die die Zeichen enthält.  In diesem Beispiel wird gezeigt, wie Sie sowohl erweiterte Zeichen als auch universelle Zeichennamen austauschbar in Ihrem Code verwenden können.
+Das Dollarzeichen `$` ist ein gültiges Bezeichnerzeichen in der Microsoft C++ Compiler (MSVC). MSVC können Sie die tatsächlichen Zeichen durch die zulässigen Bereiche der Universelle Zeichennamen in Bezeichnern dargestellt wird. Damit Sie diese Zeichen verwenden können, müssen Sie die Datei speichern, indem Sie eine Dateicodierungs-Codepage verwenden, die die Zeichen enthält.  In diesem Beispiel wird gezeigt, wie Sie sowohl erweiterte Zeichen als auch universelle Zeichennamen austauschbar in Ihrem Code verwenden können.
 
 ```cpp
 // extended_identifier.cpp

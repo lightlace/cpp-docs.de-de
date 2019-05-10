@@ -1,26 +1,26 @@
 ---
 title: Bewährte Vorgehensweisen für die Optimierung
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- Visual C++, optimization
+- C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 42178f8326def78f37bfcc905b96f37c7fc3affc
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274169"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220268"
 ---
 # <a name="optimization-best-practices"></a>Bewährte Vorgehensweisen für die Optimierung
 
-In diesem Dokument werden einige bewährte Methoden für die Optimierung in Visual C++ beschrieben.
+Dieses Dokument beschreibt einige bewährten Methoden zur Optimierung der C++ Programmen in Visual Studio.
 
 ## <a name="compiler-and-linker-options"></a>Optionen für Compiler und Linker
 
 ### <a name="profile-guided-optimization"></a>Profilgesteuerte Optimierung
 
-Visual C++ unterstützt *Profilgesteuerte Optimierung* (PGO). Diese Optimierung verwendet Profildaten aus Training Ausführungen einer instrumentierten Version einer Anwendung, um spätere Optimierung der Anwendung zu fördern. Das Verwenden der profilgesteuerte Optimierung (PGO) kann zeitaufwendig sein, sodass sie möglicherweise nicht von allen Entwicklern genutzt wird. Wir empfehlen jedoch, die profilgesteuerte Optimierung (PGO) für das endgültige Releasebuild eines Projekts zu verwenden. Weitere Informationen finden Sie unter [Profile-Guided Optimizations](profile-guided-optimizations.md).
+Visual Studio unterstützt *Profilgesteuerte Optimierung* (PGO). Diese Optimierung verwendet Profildaten aus Training Ausführungen einer instrumentierten Version einer Anwendung, um spätere Optimierung der Anwendung zu fördern. Das Verwenden der profilgesteuerte Optimierung (PGO) kann zeitaufwendig sein, sodass sie möglicherweise nicht von allen Entwicklern genutzt wird. Wir empfehlen jedoch, die profilgesteuerte Optimierung (PGO) für das endgültige Releasebuild eines Projekts zu verwenden. Weitere Informationen finden Sie unter [Profile-Guided Optimizations](profile-guided-optimizations.md).
 
 Darüber hinaus *Optimierung des ganzen Programms* (auch Link-Zeitcodegenerierung genannt) und die **"/ O1"** und **"/ O2"** Optimierungen wurden verbessert. Allgemein gilt, daß eine Anwendung, die mit einer dieser Optionen kompiliert wurde, sich durch eine höhere Geschwindigkeit auszeichnet als dieselbe Anwendung, die mit einem früheren Compiler kompiliert wurde.
 
@@ -93,13 +93,13 @@ Außerdem steht mit `#pragma inline_depth` ein nützliches Pragma zur Beschränk
 
 ## <a name="restrict-and-assume"></a>__restrict und \__assume
 
-Es gibt eine Reihe von Schlüsselwörtern in Visual C++ , mit denen Leistung: ["__restrict"](../cpp/extension-restrict.md) und [__assume](../intrinsics/assume.md).
+Es gibt eine Reihe von Schlüsselwörtern in Visual Studio, die Leistung verbessert werden kann: ["__restrict"](../cpp/extension-restrict.md) und [__assume](../intrinsics/assume.md).
 
 Zuerst muss darauf hingewiesen werden, dass es sich bei `__restrict` und `__declspec(restrict)` um zwei verschiedene Elemente handelt. Obwohl sie gewisse Gemeinsamkeiten aufweisen, unterscheidet sich ihre Semantik. `__restrict` ist ein Typqualifizierer, wie `const` oder `volatile`, wird aber ausschließlich für Zeigertypen eingesetzt.
 
 Ein Zeiger, der mit geändert wird `__restrict` wird als bezeichnet ein *__restrict-Zeiger*. Ein __restrict-Zeiger ist ein Zeiger, der nur über zugegriffen werden kann die \__restrict Zeiger. Anders gesagt kann nicht einem anderen Zeiger verwendet werden, Zugriff auf die Daten verweist die \__restrict Zeiger.
 
-`__restrict` kann sich als ein sehr leistungsstarkes Tool für den Visual C++-Optimierer erweisen, sollte jedoch mit großer Umsicht verwendet werden. Wenn Sie dieses Tool unangemessen verwenden, führt der Optimierer u. U. eine Optimierung durch, die zum Abbruch der Anwendung führt.
+`__restrict` kann ein leistungsfähiges Tool für die Microsoft sein C++ Optimizer, jedoch mit großer Sorgfalt. Wenn Sie dieses Tool unangemessen verwenden, führt der Optimierer u. U. eine Optimierung durch, die zum Abbruch der Anwendung führt.
 
 Die `__restrict` -Schlüsselwort ersetzt die **/OA** -Option aus vorherigen Versionen.
 

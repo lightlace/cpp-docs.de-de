@@ -1,6 +1,6 @@
 ---
 title: C++-Projekt Referenz zur – Visual Studio
-ms.date: 12/12/2018
+ms.date: 05/06/2019
 f1_keywords:
 - VC.Project.NotAProp.Edit
 helpviewer_keywords:
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - project properties [C++], setting
 - macros, project-file
 - property pages, project settings
-- Visual C++ projects, properties
+- C++ projects, properties
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 8a5d696c385c9c7a1c953bd28ea4da3c67369a2c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 7b10e3c7eef846d72220545b89a217da7a4bb9a1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826009"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217785"
 ---
 # <a name="c-project-property-page-reference"></a>Referenz für C++-Projekt Seite
 

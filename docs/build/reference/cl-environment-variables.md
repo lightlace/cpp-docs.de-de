@@ -1,6 +1,6 @@
 ---
 title: CL-Umgebungsvariablen
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - cl
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: a15bedc0a5aa8215356a98c3635a2edd1f3cfc5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 620ec386e06b1a0eed91c94e9b2b891d9955fd00
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294472"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217636"
 ---
 # <a name="cl-environment-variables"></a>CL-Umgebungsvariablen
 
@@ -22,7 +22,7 @@ Das CL-Tool verwendet die folgenden Umgebungsvariablen:
 
 - CL und \_CL\_, wenn definiert. Das CL-Tool voran, die Optionen und Argumente, die definiert, in der CL-Umgebungsvariablen auf die Befehlszeilenargumente und fügt die Optionen und Argumente definiert \_CL\_, vor der Verarbeitung.
 
-- INCLUDE: Hierbei muss es sich um den Punkt zu Ihrem „\include“-Unterverzeichnis Ihrer Visual C++-Installation handeln.
+- EINZUSCHLIEßEN Sie, muss auf das Unterverzeichnis \include"-Unterverzeichnis Ihrer Visual Studio-Installation verweisen.
 
 - LIBPATH, die Verzeichnisse für die Suche nach Metadatendateien mit referenzierte gibt [#using](../../preprocessor/hash-using-directive-cpp.md). Weitere Informationen über LIBPATH finden Sie unter `#using`.
 

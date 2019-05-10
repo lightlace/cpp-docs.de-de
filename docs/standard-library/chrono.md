@@ -1,6 +1,6 @@
 ---
 title: '&lt;chrono&gt;'
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - chrono/std::chrono::nanoseconds
 - chrono/std::chrono::minutes
@@ -10,18 +10,18 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44620b6ea6c970027a8e9a023c0972c6dec43ee0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279098"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220245"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 Schließen Sie den Standardheader \<chrono> zum Definieren von Klassen und Funktionen ein, die die Zeitdauer und Zeitangaben darstellen und bearbeiten.
 
-Ab Visual Studio 2015, die Implementierung der `steady_clock` wurde geändert, um die C++-standardanforderungen für Zuverlässigkeit und Monotonie zu erfüllen. `steady_clock` basiert nun auf QueryPerformanceCounter(), und `high_resolution_clock` ist jetzt ein typedef-Element für `steady_clock`. Demzufolge ist `steady_clock::time_point` in Visual C++ jetzt ein typedef-Element für `chrono::time_point<steady_clock>`; dies ist jedoch nicht unbedingt bei anderen Implementierungen der Fall.
+Ab Visual Studio 2015, die Implementierung der `steady_clock` wurde geändert, um die C++-standardanforderungen für Zuverlässigkeit und Monotonie zu erfüllen. `steady_clock` basiert nun auf QueryPerformanceCounter(), und `high_resolution_clock` ist jetzt ein typedef-Element für `steady_clock`. Daher in der Microsoft C++ Compiler `steady_clock::time_point` ist jetzt eine Typedefinition für `chrono::time_point<steady_clock>`, aber dies ist nicht unbedingt der Fall bei anderen Implementierungen.
 
 ## <a name="syntax"></a>Syntax
 

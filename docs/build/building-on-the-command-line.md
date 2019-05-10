@@ -2,7 +2,7 @@
 title: 'Verwenden Sie das MSVC-Toolset aus der Befehlszeile: Visual Studio'
 description: Verwenden Sie die Microsoft C++-Compiler-toolkette (MSVC) über die Befehlszeile außerhalb von Visual Studio-IDE.
 ms.custom: conceptual
-ms.date: 12/10/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5f9ac1e4753fdba412af26bcc45022dee354cacf
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342157"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877128"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>Verwenden Sie das MSVC-Toolset, über die Befehlszeile
 
-Sie können C- und C++-Anwendungen in der Befehlszeile erstellen, mithilfe von Tools, die in Visual Studio enthalten sind. Sie können auch das Compilertoolset als eigenständiges Paket herunterladen [Build-Tools für Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
+Sie können C- und C++-Anwendungen in der Befehlszeile erstellen, mithilfe von Tools, die in Visual Studio enthalten sind. Sie können auch das Compilertoolset als eigenständiges Paket herunterladen der [Visual Studio-downloads](https://visualstudio.microsoft.com/downloads/) Seite. Ist Teil der **Build-Tools für Visual Studio** paketverwaltung; Sie können auswählen, um nur die Tools herunterzuladen, Sie für müssen C++ Entwicklung.
 
 ## <a name="how-to-use-the-command-line-tools"></a>Wie Sie die Befehlszeilentools verwenden
 
@@ -43,13 +43,11 @@ Die Verknüpfungen der Eingabeaufforderung werden in einem hängt von der Versio
 - **x86_x64 Cross Tools-Eingabeaufforderung** -richtet die Umgebung für die 32-Bit, X86 Native Tools verwenden, um die 64-Bit, X64 Native Code zu erstellen.
 - **x64_x86 Cross Tools-Eingabeaufforderung** -richtet die Umgebung für die 64-Bit, X64 Native Tools verwenden, um die 32-Bit, X86 Native Code zu erstellen.
 
-Die tatsächlichen Start Ordner und die Tastenkombination Menünamen variieren je nach der Version von Visual Studio, die Sie installiert haben und die Installation Spitznamen, wenn Sie eine Eigenschaft festgelegt. Beispiel: Wenn Sie Visual Studio 2017 installiert haben, und Sie haben da sie eine Spitzname der Installation von *Vorschau*, den Namen der Developer-eingabeaufforderungsverknüpfung **Developer-Eingabeaufforderung für Visual Studio 2017 (Vorschauversion)**, in einem Ordner namens **Visual Studio 2017**.
-
-Wenn Sie installiert haben die [Build-Tools für Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (wozu auch gehört das Compiler-Toolset von Visual Studio 2015 Update 3), nur architekturspezifische oder der systemeigenen Cross tools-Developer-Eingabeaufforderung Optionen installiert sind , und nicht den allgemeinen **Developer-Eingabeaufforderung** Verknüpfung.
+Die tatsächlichen Start Ordner und die Tastenkombination Menünamen variieren je nach der Version von Visual Studio, die Sie installiert haben und die Installation Spitznamen, wenn Sie eine Eigenschaft festgelegt. Beispiel: Wenn Sie Visual Studio 2017 installiert haben, und Sie haben da sie eine Spitzname der Installation von *Vorschau*, wird die Verknüpfung der Developer-Eingabeaufforderung mit dem Namen **Entwicklereingabeaufforderung für VS 2019**in eine Ordner mit dem Namen **Visual Studio-2019**.
 
 ## <a name="developer_command_prompt"></a> Um ein Developer-Eingabeaufforderungsfenster zu öffnen.
 
-1. Öffnen Sie auf dem Desktop der Windows **starten** Menü, und scrollen Sie zum Suchen und öffnen Sie den Ordner für Ihre Version von Visual Studio, z. B. **Visual Studio 2017**. In einigen früheren Versionen von Visual Studio können die Tastenkombinationen, die in einem Unterordner namens sind **Visual Studio-Tools**.
+1. Öffnen Sie auf dem Desktop der Windows **starten** Menü, und scrollen Sie zum Suchen und öffnen Sie den Ordner für Ihre Version von Visual Studio, z. B. **Visual Studio-2019**. In einigen früheren Versionen von Visual Studio können die Tastenkombinationen, die in einem Unterordner namens sind **Visual Studio-Tools**.
 
 1. Wählen Sie in den Ordner, der **Developer-Eingabeaufforderung** für Ihre Version von Visual Studio. Diese Verknüpfung startet ein Developer-Eingabeaufforderungsfenster aus, die die Standard-Build-Architektur von 32-Bit, X86 Native Tools verwendet, um 32-Bit, X86 Native Code zu erstellen. Falls eine nicht standardmäßige Build-Architektur gewünscht, wählen Sie eine der systemeigenen oder Cross tools-eingabeaufforderungen an den Host und eine Zielarchitektur.
 
@@ -57,11 +55,11 @@ Geben eine noch schnellere Möglichkeit, ein Developer-Eingabeaufforderungsfenst
 
 ## <a name="developer_command_file_locations"></a> Dateispeicherorte für Developer-Befehl
 
-Wenn Sie die Build-Architektur-Umgebung in ein vorhandenes Fenster der Eingabeaufforderung festlegen möchten, können eine der Befehlsdateien (Batchdateien) vom Installationsprogramm erstellte Sie die erforderliche Umgebung festlegen. Wir empfehlen Ihnen nur hierzu ein Eingabeaufforderungsfenster, und wir empfehlen nicht Sie höhere Switch-Umgebungen im gleichen Befehlsfenster. Der Speicherort dieser Dateien hängt von der Version von Visual Studio, die Sie installiert haben, und auf Speicherort und Benennungskonventionen Optionen, die Sie während der Installation vorgenommen. Für Visual Studio 2017, Standardinstallation auf einem 64-Bit-Computer befinden sich im \Programme Dateien (x86) \Microsoft Visual Studio\2017\\*Edition*, wobei *Edition* möglicherweise-Community Professional, Enterprise, BuildTools oder einen anderen Namen, die Sie angegeben haben. Für Visual Studio 2015 ist der Speicherort der Standardinstallation in \Programme (x86) \Microsoft Visual Studio-14.0.
+Wenn Sie die Build-Architektur-Umgebung in ein vorhandenes Fenster der Eingabeaufforderung festlegen möchten, können eine der Befehlsdateien (Batchdateien) vom Installationsprogramm erstellte Sie die erforderliche Umgebung festlegen. Wir empfehlen Ihnen nur hierzu ein Eingabeaufforderungsfenster, und wir empfehlen nicht Sie höhere Switch-Umgebungen im gleichen Befehlsfenster. Der Speicherort dieser Dateien hängt von der Version von Visual Studio, die Sie installiert haben, und auf Speicherort und Benennungskonventionen Optionen, die Sie während der Installation vorgenommen. Für Visual Studio-2019, Standardinstallation auf einem 64-Bit-Computer befinden sich im \Programme Dateien (x86) \Microsoft Visual Studio\2019\\*Edition*, wobei *Edition* möglicherweise-Community Professional, Enterprise, BuildTools oder einen anderen Namen, die Sie angegeben haben. Der Visual Studio 2017-Speicherort ist ähnlich. Für Visual Studio 2015 ist der Speicherort der Standardinstallation in \Programme (x86) \Microsoft Visual Studio-14.0.
 
 Die primäre Developer-Eingabeaufforderung Befehlsdatei VsDevCmd.bat, befindet sich im Unterverzeichnis "Common7\Tools" des Installationsverzeichnisses. Wenn keine Parameter angegeben werden, dadurch die Umgebung wird aus, und der Hostserver und-Zielserver-Architektur für die 32-Bit-X86 Native Tools zu verwenden erstellen, um 32-Bit-X86 erstellen Code.
 
-Zusätzliche Befehlsdateien stehen zum Einrichten von bestimmten Build-Architekturen, abhängig von Ihrer Prozessorarchitektur und der Visual Studio-arbeitsauslastungen und Optionen, die Sie installiert haben. In Visual Studio 2017 befinden dieser im Unterverzeichnis "VC\Auxiliary\Build" des Visual Studio-Installationsverzeichnisses. In Visual Studio 2015, diese befinden sich in der VC VC\bin oder VC\bin\\*Architekturen* Unterverzeichnisse des Installationsverzeichnisses, wobei *Architekturen* ist eine der systemeigenen oder Cross-Compiler-Optionen. Diese Befehlsdateien Standardparameter festgelegt, und rufen VsDevCmd.bat, um den angegebenen Build-Architektur-Umgebung einzurichten. Eine typische Installation kann diese Befehlsdateien enthalten:
+Zusätzliche Befehlsdateien stehen zum Einrichten von bestimmten Build-Architekturen, abhängig von Ihrer Prozessorarchitektur und der Visual Studio-arbeitsauslastungen und Optionen, die Sie installiert haben. In Visual Studio 2017 und Visual Studio-2019 befinden dieser im Unterverzeichnis "VC\Auxiliary\Build" des Visual Studio-Installationsverzeichnisses. In Visual Studio 2015, diese befinden sich in der VC VC\bin oder VC\bin\\*Architekturen* Unterverzeichnisse des Installationsverzeichnisses, wobei *Architekturen* ist eine der systemeigenen oder Cross-Compiler-Optionen. Diese Befehlsdateien Standardparameter festgelegt, und rufen VsDevCmd.bat, um den angegebenen Build-Architektur-Umgebung einzurichten. Eine typische Installation kann diese Befehlsdateien enthalten:
 
 |Befehlsdatei|Hostserver und-Zielserver Architekturen|
 |---|---|
@@ -107,28 +105,28 @@ Diese optionalen Arguments können Sie angeben, **speichern** oder **Uwp** als d
 Gibt optional die Version des Windows SDK verwenden. Standardmäßig wird das neueste installierte Windows-SDK verwendet. Um die Windows SDK-Version anzugeben, können Sie eine vollständige Windows 10 SDK Zahl wie z. B. **10.0.10240.0**, oder geben Sie **8.1** mit dem Windows 8.1 SDK.
 
 *vcversion*<br/>
-Gibt optional die Visual Studio-Compiler-Toolset verwendet. Standardmäßig wird die Umgebung festgelegt, mit dem aktuellen Visual Studio 2017-Compilertoolset. Verwendung **-Vcvars_ver = 14.0** an das Visual Studio 2015-Compilertoolset.
+Gibt optional die Visual Studio-Compiler-Toolset verwendet. Standardmäßig wird die Umgebung festgelegt, mit dem aktuellen Visual Studio-Compilertoolset. Verwendung **-Vcvars_ver = 14.0** an das Visual Studio 2015-Compilertoolset oder **-Vcvars_ver = 15.0** an das Visual Studio 2017-Compilertoolset.
 
 <a name="vcvarsall"></a>
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>Zum Einrichten der Buildumgebung in ein vorhandenes Fenster der Eingabeaufforderung
 
-1. Verwenden Sie an der Eingabeaufforderung des Befehls CD, um zum Installationsverzeichnis von Visual Studio zu ändern. Verwenden Sie CD dann erneut so ändern in das Unterverzeichnis, das die konfigurationsspezifischen-Befehl enthält. Für Visual Studio 2017 handelt es sich um die VC\Auxiliary\Build-Unterverzeichnis. Verwenden Sie für Visual Studio 2015 die VC-Unterverzeichnis.
+1. Verwenden Sie an der Eingabeaufforderung des Befehls CD, um zum Installationsverzeichnis von Visual Studio zu ändern. Verwenden Sie CD dann erneut so ändern in das Unterverzeichnis, das die konfigurationsspezifischen-Befehl enthält. Für Visual Studio 2017 und 2019 ist dies das VC\Auxiliary\Build-Unterverzeichnis. Verwenden Sie für Visual Studio 2015 die VC-Unterverzeichnis.
 
-1. Geben Sie den Befehl für Ihre bevorzugte entwicklerumgebung. Verwenden Sie z. B. zum ARM-Code für UWP auf einer 64-Bit-Plattform erstellen mithilfe der neuesten Windows SDK und das Visual Studio 2017 RTM-Compilertoolset, diese Befehlszeile ein:
+1. Geben Sie den Befehl für Ihre bevorzugte entwicklerumgebung. Verwenden Sie zum ARM-Code für UWP auf einer 64-Bit-Plattform erstellen mithilfe der neuesten Windows SDK und das Visual Studio-2019-Compilertoolset, z. B. folgender Befehlszeile:
 
-   `vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10`
+   `vcvarsall.bat amd64_arm uwp`
 
 ## <a name="create-your-own-command-prompt-shortcut"></a>Erstellen Sie eigene eingabeaufforderungsverknüpfung
 
-Wenn Sie das Dialogfeld Eigenschaften für eines der vorhandenen Verknüpfungen der Developer-Eingabeaufforderung öffnen, sehen Sie das Ziel des Befehls verwendet. Z. B. das Ziel für die **X64 Native Tools-Eingabeaufforderung für Visual Studio 2017** Verknüpfung ist etwas Ähnliches wie in:
+Wenn Sie das Dialogfeld Eigenschaften für eines der vorhandenen Verknüpfungen der Developer-Eingabeaufforderung öffnen, sehen Sie das Ziel des Befehls verwendet. Z. B. das Ziel für die **X64 Native Tools-Eingabeaufforderung für VS 2019** Verknüpfung ist etwas Ähnliches wie in:
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
-Der Batch-Architektur-spezifische Dateien Satz der *Architektur* -Parameter, und rufen "vcvarsall.bat". Sie können die gleichen zusätzlichen Optionen auf diese Batchdateien übergeben, übergeben Sie zu "vcvarsall.bat" aus, oder rufen Sie einfach "vcvarsall.bat" direkt. Um Parameter für Ihre eigenen Tastenkombination Befehl anzugeben, fügen sie am Ende des Befehls in doppelte Anführungszeichen hinzu. Z. B. um eine Verknüpfung für ARM-Code für UWP auf einer 64-Bit-Plattform zu erstellen, mit der neuesten Windows SDK und das Visual Studio 2017 RTM-Compilertoolset einzurichten, verwenden Sie etwa das Ziel dieses Befehls in Ihrer Verknüpfung:
+Der Batch-Architektur-spezifische Dateien Satz der *Architektur* -Parameter, und rufen "vcvarsall.bat". Sie können die gleichen zusätzlichen Optionen auf diese Batchdateien übergeben, übergeben Sie zu "vcvarsall.bat" aus, oder rufen Sie einfach "vcvarsall.bat" direkt. Um Parameter für Ihre eigenen Tastenkombination Befehl anzugeben, fügen sie am Ende des Befehls in doppelte Anführungszeichen hinzu. Zum Einrichten einer Verknüpfung zur ARM-Code für UWP auf einer 64-Bit-Plattform zu erstellen, indem Sie das neueste Windows SDK mit einem Compiler-Toolset, das älter als die aktuelle Version ist, müssen Sie z. B. die Versionsnummer angeben. Verwenden Sie etwa das Ziel dieses Befehls in Ihrer Verknüpfung:
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=15.0"`
 
-Sie müssen den Pfad entsprechend Ihrem Visual Studio-Installationsverzeichnis anpassen.
+Sie müssen den Pfad entsprechend Ihrem Visual Studio-Installationsverzeichnis anpassen. Die vcvarsall.bat-Datei verfügt über zusätzliche Informationen zu bestimmten Versionsnummern.
 
 ## <a name="command-line-tools"></a>Befehlszeilentools
 

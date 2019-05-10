@@ -7,12 +7,12 @@ helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-ms.openlocfilehash: 966c7c1e42cd707726a8ca65bb80914c29ad582e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5b259a677fdf3013ae1be6073afaf34f76a6e2fd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200145"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221055"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Vornehmen eines ATL-Objekt als nicht erstellbares
 
@@ -37,7 +37,7 @@ Sie können die Attribute eines ATL-basierten COM-Objekts, dass ein Client direk
 ## <a name="see-also"></a>Siehe auch
 
 [ATL-Projekt-Assistent](../../atl/reference/atl-project-wizard.md)<br/>
-[Visual C++-Projekttypen](../../build/reference/visual-cpp-project-types.md)<br/>
+[C++Projekttypen in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md)

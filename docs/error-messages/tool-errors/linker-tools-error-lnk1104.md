@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: eadeeb7ac19e3975a37a1364502b33400018cb05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc6305ab2e96496aa212004e186150d4a51cf3fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255512"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446972"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Linkertoolfehler LNK1104
 
@@ -59,7 +59,7 @@ Stellen Sie sicher, dass Sie jede Version der Bibliothek installiert haben, müs
 
 ### <a name="cannot-open-a-file-built-by-your-project"></a>Eine vom Projekt erstellte Datei kann nicht geöffnet werden.
 
-Dieser Fehler möglicherweise angezeigt, wenn die Datei *Filename* wird Ihrer Projektmappe erstellt, aber noch nicht vorhanden, wenn der Linker versucht, darauf zuzugreifen. Dies kann passieren, wenn ein Projekt, die von einem anderen Projekt abhängig ist, aber die Projekte werden nicht in der richtigen Reihenfolge erstellt. Um dieses Problem zu beheben, stellen Sie sicher, dass Ihre Projektverweise auf im Projekt festgelegt werden, die die Datei verwendet werden, damit die fehlende Datei erstellt wird, bevor es erforderlich ist. Weitere Informationen finden Sie unter [Hinzufügen von Verweisen in Visual C++-Projekten](../../build/adding-references-in-visual-cpp-projects.md) und [Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project).
+Dieser Fehler möglicherweise angezeigt, wenn die Datei *Filename* wird Ihrer Projektmappe erstellt, aber noch nicht vorhanden, wenn der Linker versucht, darauf zuzugreifen. Dies kann passieren, wenn ein Projekt, die von einem anderen Projekt abhängig ist, aber die Projekte werden nicht in der richtigen Reihenfolge erstellt. Um dieses Problem zu beheben, stellen Sie sicher, dass Ihre Projektverweise auf im Projekt festgelegt werden, die die Datei verwendet werden, damit die fehlende Datei erstellt wird, bevor es erforderlich ist. Weitere Informationen finden Sie unter [Hinzufügen von Verweisen in Visual Studio C++ Projekte](../../build/adding-references-in-visual-cpp-projects.md) und [Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project).
 
 ### <a name="cannot-open-file-cprogramobj"></a>Datei kann nicht geöffnet werden kann ' "c:"\\Program.obj "
 

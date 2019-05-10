@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abb42db6a44f1c48d120eff1f117e06c970b6b44
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294439"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221779"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Gängige Makros für MSBuild-Befehlen und Eigenschaften
 
@@ -121,7 +121,7 @@ Diese Tabelle wird beschrieben, eine häufig verwendete Teilmenge der verfügbar
 |**$(FrameworkDir)**|Das Verzeichnis, in dem .NET Framework installiert wurde.|
 |**$(FrameworkSDKDir)**|Das Verzeichnis, in dem Sie .NET Framework installiert haben. .NET Framework könnte als Teil von Visual Studio oder separat installiert worden sein.|
 |**$(FrameworkVersion)**|Die Version von .NET Framework, die von Visual Studio verwendet wurde. In Kombination mit **$(FrameworkDir)** stellt dies den vollständigen Pfad zu der Version von .NET Framework dar, die von Visual Studio verwendet wurde.|
-|**$(FxCopDir)**|Der Pfad zur Datei „fxcop.cmd“. Die Datei „fxcop.cmd“ wird nicht mit allen Editionen von Visual C++ installiert.|
+|**$(FxCopDir)**|Der Pfad zur Datei „fxcop.cmd“. Die Datei "fxcop.cmd" ist in allen Editionen von Visual Studio nicht installiert.|
 |**$(IntDir)**|Der Pfad zum Verzeichnis, das für Zwischendateien angegeben wurde. Ist dies ein relativer Pfad, gelangen die Zwischendateien in diesen Pfad, der an das Projektverzeichnis angefügt wird. Dieser Pfad sollte über einen nachgestellten Schrägstrich verfügen. Dies wird in den Wert für die **Intermediate Directory** -Eigenschaft aufgelöst. Verwenden Sie nicht **$(OutDir)** , um diese Eigenschaft zu definieren.|
 |**$(OutDir)**|Der Pfad zum Ausgabedateiverzeichnis. Ist dies ein relativer Pfad, gelangen die Ausgabedateien in diesen Pfad, der an das Projektverzeichnis angefügt wird. Dieser Pfad sollte über einen nachgestellten Schrägstrich verfügen. Dies wird in den Wert für die **Output Directory** -Eigenschaft aufgelöst. Verwenden Sie nicht **$(IntDir)** , um diese Eigenschaft zu definieren.|
 |**$(Platform)**|Der Name der aktuellen Projektplattform (z.B. „Win32“).|
@@ -143,7 +143,7 @@ Diese Tabelle wird beschrieben, eine häufig verwendete Teilmenge der verfügbar
 |**$(TargetFileName)**|Der Dateiname der primären Ausgabedatei für den Build (als „Basisname + Dateierweiterung“ definiert).|
 |**$(TargetName)**|Der Basisname der primären Ausgabedatei für den Build.|
 |**$(TargetPath)**|Der absolute Pfadname der primären Ausgabedatei für den Build (als „Laufwerk + Pfad + Basisname + Dateierweiterung“ definiert).|
-|**$(VCInstallDir)**|Das Verzeichnis, das den C++-Inhalt Ihrer Visual Studio-Installation enthält. Diese Eigenschaft enthält die Version des angezielten Visual C++-Toolsets, die sich möglicherweise vom Visual Studio-Host unterscheidet. Beim Erstellen mit `$(PlatformToolset) = v140` enthält **$(VCInstallDir)** z.B. den Pfad zur Installation von Visual C++ 2015.|
+|**$(VCInstallDir)**|Das Verzeichnis, das den C++-Inhalt Ihrer Visual Studio-Installation enthält. Diese Eigenschaft enthält die Version des entsprechenden Microsoft C++ (MSVC)-Toolset, das u. u., die vom Visual Studio-Host. Beispielsweise wird beim Erstellen mit `$(PlatformToolset) = v140`, **$(VCInstallDir)** enthält den Pfad zur Installation von Visual Studio 2015.|
 |**$(VSInstallDir)**|Das Verzeichnis, in dem Visual Studio installiert wurde. Diese Eigenschaft enthält die Version des angezielten Visual Studio-Toolsets, die sich möglicherweise vom Visual Studio-Host unterscheidet. Beim Erstellen mit `$(PlatformToolset) = v110`, enthält **$(VSInstallDir)** z. B. den Pfad zur Installation von Visual Studio 2012.|
 |**$(WebDeployPath)**|Der relative Pfad vom Stamm der Webbereitstellung zum Speicherort der Projektausgaben. Gibt denselben Wert zurück wie <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|
 |**$(WebDeployRoot)**|Der absolute Pfad zum Speicherort von **\<localhost>**. Beispiel: „c:\inetpub\wwwroot“.|

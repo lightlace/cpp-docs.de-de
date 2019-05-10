@@ -1,17 +1,15 @@
 ---
 title: 'Vorgehensweise: Verwenden von Buildereignissen in MSBuild-Projekten'
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8f4ccea66f7346512df88fc4c6078752c624aaa9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273481"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221473"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Vorgehensweise: Verwenden von Buildereignissen in MSBuild-Projekten
 
@@ -39,7 +37,7 @@ Die folgende Tabelle führt jede *in Buildvorgang verwenden* Element:
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel hinzugefügt werden kann, innerhalb des Project-Elements der Datei "MyProject.vcxproj" im erstellten [Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Ein *vor dem Erstellen* Ereignis ist eine Kopie von "Main.cpp"; eine *Prälinkereignis* Ereignis ist eine Kopie des main.obj; und ein *nach der Erstellung* Ereignis erstellt eine Kopie des myproject.exe. Wenn das Projekt mit einer Releasekonfiguration erstellt wird, werden die Buildereignisse ausgeführt. Wenn das Projekt erstellt wird, eine Debugkonfiguration verwenden, werden die Buildereignisse nicht ausgeführt.
+Im folgende Beispiel hinzugefügt werden kann, innerhalb des Project-Elements der Datei "MyProject.vcxproj" im erstellten [Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen einer C++ Projekt](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Ein *vor dem Erstellen* Ereignis ist eine Kopie von "Main.cpp"; eine *Prälinkereignis* Ereignis ist eine Kopie des main.obj; und ein *nach der Erstellung* Ereignis erstellt eine Kopie des myproject.exe. Wenn das Projekt mit einer Releasekonfiguration erstellt wird, werden die Buildereignisse ausgeführt. Wenn das Projekt erstellt wird, eine Debugkonfiguration verwenden, werden die Buildereignisse nicht ausgeführt.
 
 ```
 <ItemDefinitionGroup>
@@ -73,4 +71,4 @@ Im folgende Beispiel hinzugefügt werden kann, innerhalb des Project-Elements de
 ## <a name="see-also"></a>Siehe auch
 
 [MSBuild in der Befehlszeile – C++](msbuild-visual-cpp.md)<br/>
-[Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines C++-Projekts](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

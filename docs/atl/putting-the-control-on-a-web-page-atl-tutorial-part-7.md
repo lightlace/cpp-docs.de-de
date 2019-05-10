@@ -1,14 +1,14 @@
 ---
 title: Platzieren des Steuerelements auf einer Webseite (ATL-Lernprogramm, Teil 7)
 ms.custom: get-started-article
-ms.date: 09/27/2018
+ms.date: 05/06/2019
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-ms.openlocfilehash: baf0ca56ae7512ac76f64b29e3060e0749c083c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: aab9557fd73e870c0362f876642e828616b538bd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261539"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221232"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Platzieren des Steuerelements auf einer Webseite (ATL-Lernprogramm, Teil 7)
 
@@ -74,7 +74,7 @@ Sie haben einigen VBScript-Code hinzugefügt, der die Seiteneigenschaft vom Steu
 
 ## <a name="indicating-that-the-control-is-safe-for-scripting"></a>Angeben, dass das Steuerelement für die Skripterstellung sicher ist
 
-Sie können die Webseite mit dem Steuerelement in Internet Explorer anzeigen. Noch benutzerfreundlicher ist es aber, die in Visual C++ integrierte Webbrowseransicht zu verwenden. Um das Steuerelement in der Webbrowseransicht anzuzeigen, mit der rechten Maustaste PolyCtl.htm, und klicken Sie auf **in Browser anzeigen**.
+Sie können die Webseite mit dem Steuerelement nur in Internet Explorer anzeigen. Andere Browser unterstützen ActiveX-Steuerelemente nicht mehr aufgrund von Sicherheitslücken. 
 
 > [!NOTE]
 > Wenn das Steuerelement nicht sichtbar ist, wissen Sie, dass es sich bei einigen Browsern Einstellungen Anpassungen ActiveX-Steuerelemente ausführen müssen. Finden Sie im Browser auf die Dokumentation zum Aktivieren von ActiveX-Steuerelemente.

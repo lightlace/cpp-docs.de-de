@@ -1,17 +1,17 @@
 ---
 title: Exportieren aus einer DLL mithilfe von DEF-Dateien
-ms.date: 01/09/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 92a140c6491e9e3f0d356509862dee39ebe3fae6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195476"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220786"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Exportieren aus einer DLL mithilfe von DEF-Dateien
 
@@ -36,7 +36,10 @@ EXPORTS
 
 Bei Verwendung der [MFC DLL-Assistenten](../mfc/reference/mfc-dll-wizard.md) zum Erstellen einer MFC-DLL der Assistent eine DEF-Gerüstdatei für Sie erstellt und automatisch wieder zu Ihrem Projekt hinzugefügt. Fügen Sie die Namen der zu exportierenden Funktionen in diese Datei ein. Erstellen Sie für MFC - fremde DLLs die DEF-Datei selbst, und fügen sie dem Projekt hinzu. Navigieren Sie zu **Projekt** > **Eigenschaften** > **Linker** > **Eingabe**  >  **Moduldefinitionsdatei** und geben Sie den Namen der DEF-Datei. Wiederholen Sie diesen Schritt für jede Konfiguration und Plattform, oder führen Sie es auf einmal dazu **Configuration = alle Konfigurationen**, und **Plattform = alle Plattformen**.
 
-Wenn Sie Funktionen in einer C++-Datei exportieren, müssen Sie entweder die ergänzten Namen in der DEF-Datei zu platzieren oder die exportierten Funktionen mit standard-C-Bindung definieren, indem Sie die Verwendung von Extern "C". Wenn Sie die ergänzten Namen in der DEF-Datei angeben müssen, können Sie sie abrufen, indem Sie mit der [DUMPBIN](../build/reference/dumpbin-reference.md) tool oder mit der Linker [/MAP](../build/reference/map-generate-mapfile.md) Option. Beachten Sie, dass die vom Compiler erzeugten, ergänzten Namen compilerspezifisch sind. Wenn Sie die ergänzten Namen, die Visual C++-Compiler erzeugten, in eine Definitionsdatei speichern, müssen Anwendungen, die mit der DLL verknüpft auch erstellt werden mit derselben Version von Visual C++, so, dass die ergänzten Namen in der aufrufenden Anwendung die exportierten Namen in der DLL DEF f übereinstimmen i.
+Wenn Sie Funktionen in einer C++-Datei exportieren, müssen Sie entweder die ergänzten Namen in der DEF-Datei zu platzieren oder die exportierten Funktionen mit standard-C-Bindung definieren, indem Sie die Verwendung von Extern "C". Wenn Sie die ergänzten Namen in der DEF-Datei angeben müssen, können Sie sie abrufen, indem Sie mit der [DUMPBIN](../build/reference/dumpbin-reference.md) tool oder mit der Linker [/MAP](../build/reference/map-generate-mapfile.md) Option. Beachten Sie, dass die vom Compiler erzeugten, ergänzten Namen compilerspezifisch sind. Setzen Sie das Microsoft produzierten ergänzten Namen C++ -Compiler (MSVC) in einer DEF-Datei, Anwendungen, die mit der DLL verknüpft müssen auch erstellt werden mit derselben Version von MSVC, so dass die ergänzten Namen in der aufrufenden Anwendung mit die exportierten Namen in übereinstimmen die DLLs DEF-Datei. 
+
+> [!NOTE]
+> Eine DLL, die mit Visual Studio 2015 erstellte kann von Anwendungen, die mit Visual Studio 2017 oder Visual Studio-2019 genutzt werden.
 
 Wenn Sie erstellen eine [Erweiterungs-DLL](../build/extension-dlls-overview.md), und Exportieren mit einer DEF-Datei, platzieren Sie den folgenden Code am Anfang und Ende der Headerdateien ein, die die exportierten Klassen enthalten:
 

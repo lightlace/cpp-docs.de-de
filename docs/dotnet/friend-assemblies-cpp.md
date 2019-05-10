@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 05b9d8bcf5d7364e1dcd31940bc0db64a5e605f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404428"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447303"
 ---
 # <a name="friend-assemblies-c"></a>Friend-Assemblys (C++)
 
@@ -47,7 +47,7 @@ Obwohl Typen im Gültigkeitsbereich des Namespace und den globalen Bereich auf e
 
 Zugriff auf alle Typen in einer Assembly muss explizit erteilt werden.  Beispielsweise ist Assembly C keinen Zugriff auf alle Typen in Assembly A haben Assembly C verweist auf Assembly B und Assembly B hat Zugriff auf alle Typen in Assembly a
 
-Informationen dazu, wie sich – d. h. wie Sie einen starken Namen zu geben – eine Assembly, die mithilfe der Visual C++-Compiler erstellt wurde, finden Sie unter [Assemblys mit starken Namen (Assemblysignierung) (C++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Informationen dazu, wie sich – d. h. wie Sie einen starken Namen zu geben – eine Assembly, die erstellt wird, mithilfe des Microsoft C++ -Compiler, finden Sie unter [Assemblys mit starken Namen (Assemblysignierung) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 Als Alternative zum Verwenden des Features der Friend-Assemblys können <xref:System.Security.Permissions.StrongNameIdentityPermission> Zugriff auf einzelne Typen eingeschränkt.
 

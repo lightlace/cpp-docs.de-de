@@ -1,23 +1,24 @@
 ---
 title: 'Exemplarische Vorgehensweise: Kompilieren eines nativen C++-Programms in der Befehlszeile'
+description: Verwenden Sie die Microsoft C++ Compiler über eine Eingabeaufforderung.
 ms.custom: conceptual
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: d7b5bc88966f7edbb7179c36398b1dd95afb971f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 64300c8683dd5d1c40638ba7d50acfca6abc40c0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313882"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217712"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Exemplarische Vorgehensweise: Kompilieren eines nativen C++-Programms in der Befehlszeile
 
-Visual C++ enthält einen C++-Befehlszeilencompiler, den Sie verwenden können, von einfachen Konsolen-apps für universelle Windows-Plattform-apps, Desktop-apps, Gerätetreiber und .NET-Komponenten alles erstellen.
+Visual Studio enthält eine Befehlszeile C++ Compiler, mit denen Sie von grundlegenden konsolenanwendungen zu universellen Windows-Plattform-apps, Desktop-apps, Gerätetreiber und .NET-Komponenten alles erstellen.
 
 In dieser exemplarischen Vorgehensweise erstellen Sie eine einfache, "Hello, World"-Stil C++-Programm mit einem Text-Editor und kompilieren es dann in der Befehlszeile aus. Wenn Sie möchten, um zu versuchen der Visual Studio-IDE, anstatt über die Befehlszeile finden Sie unter [Exemplarische Vorgehensweise: Arbeiten mit Projekten und Lösungen (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) oder [mithilfe von Visual Studio-IDE für C++-Desktopentwicklung](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
@@ -29,7 +30,7 @@ Zum Abschließen dieser exemplarischen Vorgehensweise müssen installiert sein V
 
 Visual Studio ist eine leistungsfähige integrierte Entwicklungsumgebung (IDE), die einen Editor mit vollem Funktionsumfang, Ressourcen-Manager, Debugger und Compiler für viele Sprachen und Plattformen unterstützt. Weitere Informationen zum Herunterladen und installieren Visual Studio, einschließlich der kostenlosen Visual Studio Community Edition und Unterstützung für C/C++-Entwicklung, finden Sie unter [Installieren von C++-Unterstützung in Visual Studio](vscpp-step-0-installation.md).
 
-Die Build-Tools für Visual Studio installiert nur die Befehlszeilencompiler, Tools und Bibliotheken, die Sie zum Erstellen von C- und C++-Programmen benötigen. Es eignet sich ideal für Build-Laboren oder Classroom ausführt und relativ schnell installiert werden. Um nur die Befehlszeilentools zu installieren, laden [Build-Tools für Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
+Die Build-Tools für Visual Studio installiert nur die Befehlszeilencompiler, Tools und Bibliotheken, die Sie zum Erstellen von C- und C++-Programmen benötigen. Es eignet sich ideal für Build-Laboren oder Classroom ausführt und relativ schnell installiert werden. Um nur die Befehlszeilentools zu installieren, suchen Sie nach Build-Tools für Visual Studio auf die [Visual Studio-Downloads](https://visualstudio.microsoft.com/downloads/) Seite.
 
 Bevor Sie ein C- oder C++-Programm in der Befehlszeile erstellen können, müssen Sie überprüfen, dass die Tools installiert sind und Sie sie über die Befehlszeile zugreifen können. Visual C++ verfügt über komplexe Anforderungen für die Befehlszeilen-Umgebung finden Sie Tools, Header und Bibliotheken, die sie verwendet. **Sie können Visual C++ in einem einfachen Eingabeaufforderungsfenster verwenden** ohne einige Vorbereitungsschritte ausführen. Visual C++ installiert Glücklicherweise Tastenkombinationen für die Sie eine Developer-Eingabeaufforderung zu starten, die in der Umgebung, die für Befehlszeilenbuilds eingerichtet sind. Leider sind die Namen von der Developer-Eingabeaufforderung Tastenkombinationen und, wo sie sich befinden sich in fast jeder Version von Visual C++ und in verschiedenen Versionen von Windows. Die erste Aufgabe der exemplarischen Vorgehensweise findet das richtige Abonnement verwenden.
 
@@ -38,11 +39,11 @@ Bevor Sie ein C- oder C++-Programm in der Befehlszeile erstellen können, müsse
 
 ### <a name="open-a-developer-command-prompt"></a>Eine Developer-Eingabeaufforderung öffnen
 
-1. Wenn Sie Visual Studio 2017 unter Windows 10 installiert haben, öffnen Sie im Startmenü, und wählen Sie **alle apps**. Führen Sie einen Bildlauf nach unten, und Öffnen der **Visual Studio 2017** Ordner (nicht der Visual Studio 2017-app). Wählen Sie **Developer-Eingabeaufforderung für Visual Studio 2017** im Eingabeaufforderungsfenster zu öffnen.
+1. Wenn Sie Visual Studio 2017 oder höher auf Windows 10 installiert haben, öffnen Sie im Startmenü, und wählen Sie **alle apps**. Führen Sie einen Bildlauf nach unten, und Öffnen der **Visual Studio** Ordner (nicht die Visual Studio-Anwendung). Wählen Sie **Entwicklereingabeaufforderung für VS** im Eingabeaufforderungsfenster zu öffnen.
 
    Wenn Sie Microsoft Visual C++ Build Tools 2015 unter Windows 10 installiert haben, öffnen Sie die **starten** Menü, und wählen Sie **alle apps**. Führen Sie einen Bildlauf nach unten, und Öffnen der **Visual C++ Build Tools** Ordner. Wählen Sie **Visual C++ 2015 X86 Native Tools-Eingabeaufforderung** im Eingabeaufforderungsfenster zu öffnen.
 
-   Wenn Sie eine andere Version von Visual Studio verwenden oder eine andere Version von Windows ausgeführt werden, suchen Sie im Startmenü oder -Startseite für den Ordner ein Visual Studio-Tools, der eine Developer-eingabeaufforderungsverknüpfung enthält. Sie können auch den Windows Search-Funktion verwenden, suchen Sie nach "Developer Command Prompt", und wählen Sie eine, die die installierte Version von Visual Studio entspricht. Verwenden Sie die Verknüpfung, um das Eingabeaufforderungsfenster zu öffnen.
+   Sie können auch den Windows Search-Funktion verwenden, suchen Sie nach "Developer Command Prompt", und wählen Sie eine, die die installierte Version von Visual Studio entspricht. Verwenden Sie die Verknüpfung, um das Eingabeaufforderungsfenster zu öffnen.
 
 1. Als Nächstes stellen Sie sicher, dass Visual C++ Developer-Eingabeaufforderung ordnungsgemäß eingerichtet ist. Geben Sie im Eingabeaufforderungsfenster Befehl `cl` und stellen Sie sicher, dass die Ausgabe sieht in etwa wie folgt:
 
@@ -87,7 +88,7 @@ Bevor Sie ein C- oder C++-Programm in der Befehlszeile erstellen können, müsse
 
 1. Speichern Sie Ihre Arbeit. Wählen Sie im Editor im Menü **Datei** den Befehl **Speichern**aus.
 
-   Herzlichen Glückwunsch! Sie haben eine Visual C++-Quelldatei hello.cpp, die die Kompilierung wird erstellt.
+   Herzlichen Glückwunsch! Sie haben erstellt eine C++ Quelldatei, hello.cpp, die kompiliert werden kann.
 
 1. Wechseln Sie in der Developer-Eingabeaufforderungsfenster. Geben Sie `dir` an der Eingabeaufforderung zum Auflisten des Inhalts des Verzeichnisses c:\hello. Daraufhin sollte der Quelle Datei hello.cpp in der verzeichnisauflistung, die in etwas so aussieht:
 

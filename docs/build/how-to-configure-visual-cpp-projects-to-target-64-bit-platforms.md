@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Konfigurieren von Visual C++-Projekte für 64-Bit-X64 Plattformen'
+title: 'Vorgehensweise: Konfigurieren von Visual Studio C++ Projekte auf Ziel-64-Bit, X64 Plattformen'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 21c812efd101c64e250a545d2a40df6adc31c414
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a063c2f333a755ab86a4f91c9d14d0c65a6d1414
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274472"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446398"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Vorgehensweise: Konfigurieren von Visual C++-Projekte für 64-Bit-X64 Plattformen
+# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Vorgehensweise: Konfigurieren von Visual Studio C++ Projekte auf Ziel-64-Bit, X64 Plattformen
 
 Sie können die Projektkonfigurationen in Visual Studio-IDE verwenden, C++-Anwendungen für 64-Bit-Ziel X64 Plattformen einrichten. Außerdem können Sie Win32-Projekteinstellungen zu einer 64-Bit-Projektkonfiguration migrieren.
 

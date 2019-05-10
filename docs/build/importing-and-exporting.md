@@ -1,6 +1,6 @@
 ---
 title: Importieren und Exportieren
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - DLLs [C++], importing
 - exporting DLLs [C++]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 03931f7f128ab0666890bb8e76677db67dda8fc7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188846"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220643"
 ---
 # <a name="importing-and-exporting"></a>Importieren und Exportieren
 
@@ -31,8 +31,6 @@ DEF-Dateien können [importieren in eine Anwendung](importing-using-def-files.md
 
 ## <a name="using-declspec"></a>__Declspec verwenden
 
-Visual C++ verwendet **von "__declspec(dllimport)" "** und **__declspec(dllexport)** ersetzen die **__export** Schlüsselwort, das zuvor in 16-Bit-Versionen von Visual C++.
-
 Sie müssen nicht mit **von "__declspec(dllimport)" "** für Ihren Code ordnungsgemäß kompiliert, aber auf diese Weise können Sie den Compiler, besseren Code zu generieren. Der Compiler kann besseren Code zu generieren, da sie bestimmen kann, ob eine Funktion in einer DLL oder nicht vorhanden, sodass den Compiler Code erstellt, die eine Dereferenzierungsebene überspringt, die normalerweise in einem Funktionsaufruf vorhanden wäre, die eine DLL-Grenze überschritten. Sie müssen allerdings verwenden **von "__declspec(dllimport)" "** Variablen verwendet, die in einer DLL zu importieren.
 
 Mit dem richtigen DEF-Datei EXPORTS-Abschnitt **__declspec(dllexport)** ist nicht erforderlich. **__declspec(dllexport)** bieten eine einfache Möglichkeit zum Exportieren von Funktionen aus einer .exe oder .dll-Datei, ohne über eine DEF-Datei hinzugefügt wurde.
@@ -47,4 +45,4 @@ Das Format Portable Win32-Anwendung soll die Anzahl der Seiten zu minimieren, di
 
 ## <a name="see-also"></a>Siehe auch
 
-[DLLs in Visual C++](dlls-in-visual-cpp.md)
+[Erstellen von C/C++-DLLs in Visual Studio](dlls-in-visual-cpp.md)

@@ -1,14 +1,14 @@
 ---
 title: Werttypen (Modern C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 32cdb29ec1c59081ad7e0493888f290f21561d2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 204ea9f86377eb8a5796f01cb81a9161163d9649
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390905"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221887"
 ---
 # <a name="value-types-modern-c"></a>Werttypen (Modern C++)
 
@@ -49,7 +49,7 @@ test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private memb
 
 ## <a name="value-types-and-move-efficiency"></a>Werttypen Sie und verschieben Sie die Effizienz
 
-Zuordnungsaufwand für die Kopie wird aufgrund von Optimierungen für neue vermieden. Z. B. beim Einfügen einer Zeichenfolge in der Mitte einen Vektor von Zeichenfolgen stehen keine Kopie Neubelegung Mehraufwand, nur eine Move - selbst wenn dies zu einer Vergrößerung des Vektors selbst führt. Dies gilt auch für andere Vorgänge, z. B. Ausführen eines Hinzufügevorgangs "auf zwei sehr große Objekte zu finden. Wie aktivieren Sie diesen Wert Vorgang Optimierungen? In einige C++-Compiler wird der Compiler dies für Sie implizit ermöglichen ähnlich wie Kopierkonstruktoren automatisch vom Compiler generiert werden können. Allerdings in Visual C++ müssen die Klasse "abonnierbare" um Zuweisung und Konstruktoren zu verschieben, indem Sie es in der Klasse deklarieren. Dies erfolgt mithilfe der doppelten kaufmännisches und-Zeichens (& &) Rvalue-Verweis in den entsprechenden Member Funktionsdeklarationen und definierenden bewegungskonstruktor und Methoden für die Zuweisung zu verschieben.  Sie müssen auch den korrekten Code, die Grundlagen aus dem Quellobjekt "stehlen" einfügen.
+Zuordnungsaufwand für die Kopie wird aufgrund von Optimierungen für neue vermieden. Z. B. beim Einfügen einer Zeichenfolge in der Mitte einen Vektor von Zeichenfolgen stehen keine Kopie Neubelegung Mehraufwand, nur eine Move - selbst wenn dies zu einer Vergrößerung des Vektors selbst führt. Dies gilt auch für andere Vorgänge, z. B. Ausführen eines Hinzufügevorgangs "auf zwei sehr große Objekte zu finden. Wie aktivieren Sie diesen Wert Vorgang Optimierungen? In einige C++-Compiler wird der Compiler dies für Sie implizit ermöglichen ähnlich wie Kopierkonstruktoren automatisch vom Compiler generiert werden können. Allerdings C++, muss Ihre Klasse auf "opt-in" um Zuweisung und Konstruktoren zu verschieben, indem Sie es in der Klasse deklarieren. Dies erfolgt mithilfe der doppelten kaufmännisches und-Zeichens (& &) Rvalue-Verweis in den entsprechenden Member Funktionsdeklarationen und definierenden bewegungskonstruktor und Methoden für die Zuweisung zu verschieben.  Sie müssen auch den korrekten Code, die Grundlagen aus dem Quellobjekt "stehlen" einfügen.
 
 Wie entscheiden Sie, wenn Sie verschieben müssen, aktiviert? Wenn Sie bereits, dass Sie die Erstellung aktiviert kopieren müssen wissen, sollten Sie aktiviert zu verschieben, wenn es günstiger sein als eine tiefe Kopie sein kann. Wenn Sie, dass Sie die Unterstützung verschieben müssen wissen, bedeutet jedoch nicht sie unbedingt, dass die Kopie, die aktiviert werden sollen. Der letzte Fall würde eine "nur zur Verschiebung Type" aufgerufen werden. Ein Beispiel für bereits in der Standardbibliothek ist `unique_ptr`. Nebenbei bemerkt, die alte `auto_ptr` ist veraltet und wurde durch ersetzt `unique_ptr` genau aufgrund des Mangels an Move-Semantik-Unterstützung in der vorherigen Version von C++.
 

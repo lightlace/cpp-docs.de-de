@@ -4,12 +4,12 @@ ms.date: 10/26/2017
 f1_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: d0bc8716e53e71c52f6a31036a95d0b4cefedd79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72700091fcd22271e6913228a1206b3d5efcbdef
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388708"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447176"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>Compilerwarnung C4868 (Stufe 4)
 
@@ -17,7 +17,7 @@ ms.locfileid: "62388708"
 
 Die Elemente von einer Initialisiererliste sind in der Reihenfolge von links nach rechts ausgewertet werden soll. Es gibt zwei Fälle, in dem der Compiler kann nicht garantiert diese Reihenfolge ist: die erste ist, wenn einige der Elemente als Wert übergebene Objekte sind die zweite ist beim Kompilieren mit `/clr` und einige Elemente sind Elemente des Arrays oder Felder von Objekten sind. Wenn der Compiler nicht, links-nach-rechts-Evaluierung garantieren kann gibt es Warnung C4868 aus.
 
-Diese Warnung kann infolge einer konformitätsverbesserung für Compiler generiert werden, die für Visual C++ 2015 Update 2 durchgeführt wurde. Code, der kompiliert vor Visual C++ 2015 Update 2 kann jetzt C4868 generieren.
+Diese Warnung kann infolge einer konformitätsverbesserung für Compiler generiert werden, die für Visual Studio 2015 Update 2 durchgeführt wurde. Code, der kompiliert vor Visual Studio 2015 Update 2 kann jetzt C4868 generieren.
 
 Diese Warnung ist standardmäßig deaktiviert. Verwendung `/Wall` um diese Warnung zu aktivieren.
 

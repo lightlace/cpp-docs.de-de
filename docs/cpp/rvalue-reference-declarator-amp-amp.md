@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 663b639dbfecf9253547e1dd3b4e40480c27b470
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331089"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222043"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Rvalue-Verweisdeklarator: &amp;&amp;
 
@@ -35,7 +35,7 @@ Rvalue-Verweise unterstützen die Implementierung der *move-Semantik*, kann die 
 
 Um Move-Semantik zu implementieren, stellen Sie in der Regel eine *bewegungskonstruktor* und optional einen bewegungszuweisungsoperator (**Operator =**), auf die Klasse. Kopier- und Zuordnungsvorgänge, deren Quellen rvalues sind, nutzen dann automatisch die Verschiebesemantik. Im Gegensatz zum standardmäßigen Kopierkonstruktor stellt der Compiler keinen standardmäßigen Bewegungskonstruktor bereit. Weitere Informationen wie einen bewegungskonstruktor geschrieben und wie Sie es in Ihrer Anwendung verwenden, finden Sie unter [Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-Sie können auch gewöhnliche Funktionen und Operatoren überladen, um die Verschiebesemantik zu nutzen. Visual C++ 2010 stellt die Move-Semantik in der C++-Standardbibliothek. Beispielsweise implementiert die `string`-Klasse Vorgänge, die Verschiebesemantik ausführen. Betrachten Sie das folgende Beispiel, in dem mehrere Zeichenfolgen verkettet werden und das Ergebnis ausgegeben wird:
+Sie können auch gewöhnliche Funktionen und Operatoren überladen, um die Verschiebesemantik zu nutzen. Visual Studio 2010 enthält die Verschiebesemantik in die C++ Standard-Bibliothek. Beispielsweise implementiert die `string`-Klasse Vorgänge, die Verschiebesemantik ausführen. Betrachten Sie das folgende Beispiel, in dem mehrere Zeichenfolgen verkettet werden und das Ergebnis ausgegeben wird:
 
 ```cpp
 // string_concatenation.cpp
@@ -51,15 +51,15 @@ int main()
 }
 ```
 
-Vor Visual C++ 2010 hat jeder Aufruf von **Operator +-** belegt und gibt ein neues temporäres `string` -Objekt (einem Rvalue). **Operator +-** einer Zeichenfolge kann nicht in den anderen angefügt werden, da er nicht weiß, ob die Quellzeichenfolgen Lvalues oder Rvalues sind. Wenn die Quellzeichenfolgen beide lvalues sind, wird möglicherweise an anderer Stelle im Programm auf sie verwiesen, und sie dürfen deshalb nicht geändert werden. Mit Rvalue-Referenzen, **Operator +-** Rvalues, werden die an anderer Stelle im Programm verwiesen werden, kann nicht geändert werden können. Aus diesem Grund **Operator +-** können jetzt eine Zeichenfolge in eine andere anfügen. Dadurch kann die Anzahl dynamischer Speicherbelegungen beträchtlich reduziert werden, die die `string`-Klasse ausführen muss. Weitere Informationen zu den `string` Klasse, finden Sie unter [Basic_string-Klasse](../standard-library/basic-string-class.md).
+Bevor Sie Visual Studio 2010, hat jeder Aufruf von **Operator +-** belegt und gibt ein neues temporäres `string` -Objekt (einem Rvalue). **Operator +-** einer Zeichenfolge kann nicht in den anderen angefügt werden, da er nicht weiß, ob die Quellzeichenfolgen Lvalues oder Rvalues sind. Wenn die Quellzeichenfolgen beide lvalues sind, wird möglicherweise an anderer Stelle im Programm auf sie verwiesen, und sie dürfen deshalb nicht geändert werden. Mit Rvalue-Referenzen, **Operator +-** Rvalues, werden die an anderer Stelle im Programm verwiesen werden, kann nicht geändert werden können. Aus diesem Grund **Operator +-** können jetzt eine Zeichenfolge in eine andere anfügen. Dadurch kann die Anzahl dynamischer Speicherbelegungen beträchtlich reduziert werden, die die `string`-Klasse ausführen muss. Weitere Informationen zu den `string` Klasse, finden Sie unter [Basic_string-Klasse](../standard-library/basic-string-class.md).
 
-Die Verschiebesemantik ist auch hilfreich, wenn der Compiler keine Rückgabewertoptimierung (Return Value Optimization, RVO) oder benannte Rückgabewertoptimierung (Named Return Value Optimization, NRVO) verwenden kann. In diesen Fällen ruft der Compiler den Verschiebekonstruktor auf, wenn der Typ diesen definiert. Weitere Informationen zur benannten Rückgabewertoptimierung finden Sie unter [benannte Rückgabewertoptimierung in Visual C++ 2005](https://msdn.microsoft.com/library/ms364057.aspx).
+Die Verschiebesemantik ist auch hilfreich, wenn der Compiler keine Rückgabewertoptimierung (Return Value Optimization, RVO) oder benannte Rückgabewertoptimierung (Named Return Value Optimization, NRVO) verwenden kann. In diesen Fällen ruft der Compiler den Verschiebekonstruktor auf, wenn der Typ diesen definiert. Weitere Informationen zur benannten Rückgabewertoptimierung finden Sie unter [benannte Rückgabewertoptimierung in Visual Studio 2005](https://msdn.microsoft.com/library/ms364057.aspx).
 
 Das Beispiel zum Einfügen eines Elements in ein `vector`-Objekt hilft Ihnen, die Verschiebesemantik besser zu verstehen. Wenn die Kapazität des `vector`-Objekts überschritten wird, muss das `vector`-Objekt Speicher für seine Elemente neu zuteilen und dann jedes Element an einen anderen Speicherort kopieren, um für das eingefügte Element Platz zu schaffen. Wenn ein Einfügevorgang ein Element kopiert, wird ein neues Element erstellt, der Kopierkonstruktor aufgerufen, um die Daten aus dem vorherigen Element in das neue Element zu kopieren, und anschließend das vorherige Element zerstört. Mithilfe der Verschiebesemantik können Sie Objekte direkt verschieben, ohne speicherintensive Speicherbelegungs- und Kopiervorgänge ausführen zu müssen.
 
 Um die Verschiebesemantik im `vector`-Beispiel zu nutzen, können Sie einen Bewegungskonstruktor schreiben, um Daten von einem Objekt in ein anderes zu verschieben.
 
-Weitere Informationen über die Einführung der Verschiebesemantik in die C++-Standardbibliothek in Visual C++ 2010 finden Sie unter [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md).
+Weitere Informationen über die Einführung der Verschiebesemantik in die C++ Standard-Bibliothek in Visual Studio 2010 finden Sie unter [ C++ Standardbibliothek](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="perfect-forwarding"></a>Perfekte Weiterleitung
 

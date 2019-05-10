@@ -1,18 +1,19 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen und Verwenden einer statischen Bibliothek (C++)'
+description: Verwendung C++ um eine statische Bibliothek (.lib) in Visual Studio zu erstellen.
 ms.custom: get-started-article
-ms.date: 09/18/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - libraries [C++], static
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
 ms.author: corob
-ms.openlocfilehash: 0d527681abb077a01b3d902c092a21de7a052867
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: afb12cc38dbaf0af88e93a9b329a59f3b54c8557
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313613"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217563"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Exemplarische Vorgehensweise: Erstellen und Verwenden einer statischen Bibliothek (C++)
 
@@ -36,30 +37,55 @@ Grundlegende Kenntnisse der Programmiersprache C++.
 
 ##  <a name="CreateLibProject"></a> Erstellen eines statischen Bibliotheksprojekts
 
-### <a name="to-create-a-static-library-project"></a>So erstellen Sie ein statisches Bibliotheksprojekt
+Die Anweisungen zum Erstellen des Projekts, hängt davon ab, ob Sie Visual Studio-2019 oder eine frühere Version verwenden. Stellen Sie sicher, dass Sie die richtige Version, die in der oberen linken Ecke dieser Seite festgelegt haben.
 
-1. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**.
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-static-library-project-in-visual-studio-2019"></a>Erstellen ein statischen Bibliotheksprojekts in Visual Studio-2019
+
+1. Wählen Sie auf der Menüleiste **Datei** > **neu** > **Projekt** zum Öffnen der **Erstellen eines neuen Projekts** Dialogfeld.
+
+1. Legen Sie am oberen Rand des Dialogfelds, **Sprache** zu **C++** legen **Plattform** zu **Windows**, und legen Sie **Projekttyp** zu **Bibliothek**. 
+
+1. Wählen Sie die gefilterte Liste der Projekttypen, **statische Bibliothek** wählen Sie dann **Weiter**. Geben Sie in der nächsten Seite *MathFuncsLib* in die **Namen** Feld zum Angeben eines Namens für das Projekt, und geben Sie den Speicherort des Projekts aus, falls gewünscht.
+
+1. Wählen Sie die **erstellen** klicken, um das Client-Projekt zu erstellen.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-static-library-project-in-visual-studio-2017"></a>Erstellen ein statischen Bibliotheksprojekts in Visual Studio 2017
+
+1. Wählen Sie auf der Menüleiste **Datei** > **Neu** > **Projekt** aus.
 
 1. Im linken Bereich die **neues Projekt** Dialogfeld erweitern Sie **installiert** > **Visual C++**, und wählen Sie dann **Windows Desktop**. Wählen Sie im mittleren Bereich **-Assistenten für Windows Desktop**.
 
-   > [!NOTE]
-   > Für Versionen von Visual Studio, die älter als 2017 in der **neues Projekt** Dialogfeld erweitern Sie **installiert** > **Vorlagen**  >  **Visual C++**, und wählen Sie dann **Win32**. Wählen Sie im mittleren Bereich **Win32-Konsolenanwendung**aus.
+1. Geben Sie im Feld *Name*einen Namen für das Projekt ein, z. B. **MathFuncsLib** . Geben Sie im Feld *Projektmappenname*einen Namen für die Projektmappe ein, z. B. **StaticLibrary** . Klicken Sie auf die Schaltfläche **OK** .
+
+1. Klicken Sie unter **Anwendungstyp**Option **statische Bibliothek (.lib)**.
+
+1. Klicken Sie unter **zusätzliche Optionen**, deaktivieren Sie die **vorkompilierter Header** Kontrollkästchen.
+
+1. Wählen Sie **OK** zum Erstellen des Projekts.
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-static-library-project-in-visual-studio-2015"></a>Erstellen ein statischen Bibliotheksprojekts in Visual Studio 2015
+
+1. Wählen Sie auf der Menüleiste **Datei** > **Neu** > **Projekt** aus.
+
+1. In der **neues Projekt** Dialogfeld erweitern Sie **installiert** > **Vorlagen** > **Visual C++** , und Wählen Sie dann **Win32**. Wählen Sie im mittleren Bereich **Win32-Konsolenanwendung**aus.
 
 1. Geben Sie im Feld *Name*einen Namen für das Projekt ein, z. B. **MathFuncsLib** . Geben Sie im Feld *Projektmappenname*einen Namen für die Projektmappe ein, z. B. **StaticLibrary** . Klicken Sie auf die Schaltfläche **OK** .
 
-    - Für Visual Studio 2017
+1. Klicken Sie auf **Weiter**.
 
-        1. Klicken Sie unter **Anwendungstyp**Option **statische Bibliothek (.lib)**.
+1. Klicken Sie unter **Anwendungstyp**Option **statische Bibliothek**. Deaktivieren Sie die **vorkompilierter Header** und **Fertig stellen**.
 
-        1. Klicken Sie unter **zusätzliche Optionen**, deaktivieren Sie die **vorkompilierter Header** Kontrollkästchen.
-
-        1. Wählen Sie **OK** zum Erstellen des Projekts.
-
-    - Für Versionen von Visual Studio, die älter als 2017
-
-        1. Klicken Sie auf **Weiter**.
-
-        1. Klicken Sie unter **Anwendungstyp**Option **statische Bibliothek**. Deaktivieren Sie die **vorkompilierter Header** und **Fertig stellen**.
+::: moniker-end
 
 ##  <a name="AddClassToLib"></a> Hinzufügen einer Klasse zur statischen Bibliothek
 
@@ -84,30 +110,53 @@ Grundlegende Kenntnisse der Programmiersprache C++.
 
 ##  <a name="CreateAppToRefTheLib"></a> Erstellen einer Konsolenanwendung in C++, die auf die statische Bibliothek verweist
 
-### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>So erstellen Sie eine Konsolenanwendung in C++, die auf die statische Bibliothek verweist
+::: moniker range="vs-2019"
 
-1. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**.
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2019"></a>Zum Erstellen einer C++ -Konsolen-app, die die statische Bibliothek in Visual Studio-2019 verweist.
+
+1. In **Projektmappen-Explorer**mit der rechten Maustaste auf den obersten Knoten für die Projektmappe, und wählen Sie **hinzufügen** > **neues Projekt** zum Öffnen der **Hinzufügen eines neuen Projekts**  Dialogfeld.
+
+1. Legen Sie am oberen Rand des Dialogfelds, **Sprache** zu **C++** legen **Plattform** zu **Windows**, und legen Sie **Projekttyp** zu **Konsole**. 
+
+1. Wählen Sie die gefilterte Liste der Projekttypen, **Konsolen-App** wählen Sie dann **Weiter**. Geben Sie in der nächsten Seite *MyExecRefsLib* in die **Namen** Feld zum Angeben eines Namens für das Projekt, und geben Sie den Speicherort des Projekts aus, falls gewünscht.
+
+1. Wählen Sie die **erstellen** klicken, um das Client-Projekt zu erstellen.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2017"></a>Zum Erstellen einer C++ -Konsolen-app, die die statische Bibliothek in Visual Studio 2017 verweist.
+
+1. Wählen Sie auf der Menüleiste **Datei** > **Neu** > **Projekt** aus.
 
 1. Im linken Bereich die **neues Projekt** Dialogfeld erweitern Sie **installiert** > **Visual C++**, und wählen Sie dann **Windows Desktop**. Wählen Sie im mittleren Bereich **-Assistenten für Windows Desktop**.
 
-   > [!NOTE]
-   > Für Versionen von Visual Studio, die älter als 2017 in der **neues Projekt** Dialogfeld erweitern Sie **installiert** > **Vorlagen**  >  **Visual C++**, und wählen Sie dann **Win32**. Wählen Sie im mittleren Bereich **Win32-Konsolenanwendung**aus.
+1. Geben Sie im Feld *Name*einen Namen für das Projekt ein, z. B. **MyExecRefsLib** . Wählen Sie in der Dropdownliste neben **Projektmappe**die Option **Hinzufügen**aus. Der Befehl fügt das neue Projekt der Projektmappe, die die statische Bibliothek enthält. Klicken Sie auf die Schaltfläche **OK** .
+
+1. Klicken Sie unter **Anwendungstyp**Option **Konsolenanwendung (.exe)**.
+
+1. Klicken Sie unter **zusätzliche Optionen**, deaktivieren Sie die **vorkompilierter Header** Kontrollkästchen.
+
+1. Wählen Sie **OK** zum Erstellen des Projekts.
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2015"></a>Zum Erstellen einer C++ -Konsolen-app, die die statische Bibliothek in Visual Studio 2015 verweist.
+
+1. Wählen Sie auf der Menüleiste **Datei** > **Neu** > **Projekt** aus.
+
+1. In der **neues Projekt** Dialogfeld erweitern Sie **installiert** > **Vorlagen** > **Visual C++** , und Wählen Sie dann **Win32**. Wählen Sie im mittleren Bereich **Win32-Konsolenanwendung**aus.
 
 1. Geben Sie im Feld *Name*einen Namen für das Projekt ein, z. B. **MyExecRefsLib** . Wählen Sie in der Dropdownliste neben **Projektmappe**die Option **Hinzufügen**aus. Der Befehl fügt das neue Projekt der Projektmappe, die die statische Bibliothek enthält. Klicken Sie auf die Schaltfläche **OK** .
 
-    - Für Visual Studio 2017
+1. Klicken Sie auf **Weiter**.
 
-        1. Klicken Sie unter **Anwendungstyp**Option **Konsolenanwendung (.exe)**.
+1. Stellen Sie sicher, dass **Konsolenanwendung** ausgewählt ist. Überprüfen Sie dann die **leeres Projekt** und **Fertig stellen**.
 
-        1. Klicken Sie unter **zusätzliche Optionen**, deaktivieren Sie die **vorkompilierter Header** Kontrollkästchen.
-
-        1. Wählen Sie **OK** zum Erstellen des Projekts.
-
-    - Für Versionen von Visual Studio, die älter als 2017
-
-        1. Klicken Sie auf **Weiter**.
-
-        1. Stellen Sie sicher, dass **Konsolenanwendung** ausgewählt ist. Überprüfen Sie dann die **leeres Projekt** und **Fertig stellen**.
+::: moniker-end
 
 ##  <a name="UseLibInApp"></a> Verwenden der Funktionalität der statischen Bibliothek in der App
 

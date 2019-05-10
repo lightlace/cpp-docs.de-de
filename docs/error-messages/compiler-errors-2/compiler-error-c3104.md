@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404168"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447838"
 ---
 # <a name="compiler-error-c3104"></a>Compilerfehler C3104
 
@@ -21,7 +21,7 @@ Sie haben ein ungültiges Argument für ein Attribut angegeben.
 
 Finden Sie unter [Attributparametertypen](../../extensions/attribute-parameter-types-cpp-component-extensions.md) für Weitere Informationen.
 
-Dieser Fehler kann infolge einer konformitätsverbesserung für Compiler, die für Visual C++ 2005 durchgeführt wurde generiert werden: beim Übergeben von verwalteten Arrays auf benutzerdefinierte Attribute, ist der Typ des Arrays nicht mehr aus der Liste aggregatinitialisierung abgeleitet. Der Compiler ist nun erforderlich, um den Typ des Arrays als auch für die Initialisiererliste anzugeben.
+Dieser Fehler kann infolge einer konformitätsverbesserung für Compiler, die für Visual Studio 2005 durchgeführt wurde generiert werden: beim Übergeben von verwalteten Arrays auf benutzerdefinierte Attribute, ist der Typ des Arrays nicht mehr aus der Liste aggregatinitialisierung abgeleitet. Der Compiler ist nun erforderlich, um den Typ des Arrays als auch für die Initialisiererliste anzugeben.
 
 ## <a name="example"></a>Beispiel
 

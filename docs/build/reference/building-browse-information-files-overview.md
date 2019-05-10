@@ -1,24 +1,28 @@
 ---
 title: 'Erstellen von Browseinformationsdateien: Übersicht'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - .bsc files, about .bsc files
 - bsc files, about bsc files
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5d33460ba63e50d31e44384be382e98cfbea4c91
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272883"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220548"
 ---
 # <a name="building-browse-information-files-overview"></a>Erstellen von Browseinformationsdateien: Übersicht
 
+
+> [!WARNING]
+> Obwohl BSCMAKE weiterhin mit Visual Studio installiert wird, wird es nicht mehr von der IDE verwendet. Seit Visual Studio 2008 werden Browse- und Symbolinformationen automatisch in einer SQL Server-.SDF-Datei im Projektmappenordner gespeichert.
+
 Zum Durchsuchen von Informationen für die Symbolsuche zu erstellen, erstellt der Compiler eine SBR-Datei für jede Quelldatei im Projekt, klicken Sie dann BSCMAKE an. EXE-Datei wird die SBR-Dateien in einer BSC-Datei.
 
-SBR- und BSC-Dateien generieren nimmt Zeit in Anspruch, damit Visual C++ diese Funktionen standardmäßig deaktiviert. Wenn Sie aktuelle Informationen durchsuchen möchten, müssen Sie die Durchsuchen-Optionen aktivieren und das Projekt erneut erstellen.
+SBR- und BSC-Dateien generieren nimmt Zeit in Anspruch, damit Visual Studio diese Funktionen standardmäßig deaktiviert. Wenn Sie aktuelle Informationen durchsuchen möchten, müssen Sie die Durchsuchen-Optionen aktivieren und das Projekt erneut erstellen.
 
 Verwendung [/FR](fr-fr-create-dot-sbr-file.md) oder [/FR](fr-fr-create-dot-sbr-file.md) um den Compiler SBR-Dateien zu erstellen. Sie können zum Erstellen von BSC-Dateien aufrufen [BSCMAKE](bscmake-command-line.md) über die Befehlszeile. Mithilfe von BSCMAKE über die Befehlszeile, bietet Ihnen eine präzisere Kontrolle über die Bearbeitung von Browserinformationsdateien. Finden Sie unter [BSCMAKE-Referenz](bscmake-reference.md) für Weitere Informationen.
 

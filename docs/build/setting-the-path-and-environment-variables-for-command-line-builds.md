@@ -1,11 +1,7 @@
 ---
 title: Festlegen der Pfad- und Umgebungsvariablen für Befehlszeilenbuilds
 ms.custom: conceptual
-ms.date: 11/04/2016
-f1_keywords:
-- include
-- Lib
-- Path
+ms.date: 05/06/2019
 helpviewer_keywords:
 - environment variables [C++]
 - VCVARS32.bat file
@@ -18,18 +14,18 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-ms.openlocfilehash: fed3360294bec724af09b87e5abd7c6bb22fa285
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 30dadf365186ae74144a3225889c08eedfb89b47
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315390"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217607"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Festlegen der Pfad- und Umgebungsvariablen für Befehlszeilenbuilds
 
-Die Visual C++-Befehlszeilen-Buildtools erfordern mehrere Umgebungsvariablen, die angepasst werden, für die Installation und Build-Konfiguration. Bei eine C++-Workload von Visual Studio-Installer installiert ist, erstellt benutzerdefinierte Befehlsdateien oder Batchdateien, die die erforderlichen Umgebungsvariablen festlegen. Das Installationsprogramm verwendet dann diese Befehlsdateien zum Erstellen von Verknüpfungen für das Windows-Startmenü zu einem Developer-Eingabeaufforderungsfenster zu öffnen. Diese Tastenkombinationen, richten Sie die Umgebungsvariablen für eine bestimmte erstellen Konfiguration. Wenn Sie die Befehlszeilentools verwenden möchten, können Sie eine dieser Verknüpfungen ausführen oder Sie können ein einfaches Eingabeaufforderungsfenster öffnen, und führen Sie dann einen benutzerdefinierten Befehl Dateien in der Buildumgebung für die Konfiguration selbst festlegen. Weitere Informationen finden Sie unter [verwenden Sie das MSVC-Toolset, über die Befehlszeile](building-on-the-command-line.md).
+Microsoft C++ (MSVC)-Befehlszeilen-Buildtools erfordern mehrere Umgebungsvariablen, die angepasst werden, für die Installation und Build-Konfiguration. Bei eine C++-Workload von Visual Studio-Installer installiert ist, erstellt benutzerdefinierte Befehlsdateien oder Batchdateien, die die erforderlichen Umgebungsvariablen festlegen. Das Installationsprogramm verwendet dann diese Befehlsdateien zum Erstellen von Verknüpfungen für das Windows-Startmenü zu einem Developer-Eingabeaufforderungsfenster zu öffnen. Diese Tastenkombinationen, richten Sie die Umgebungsvariablen für eine bestimmte erstellen Konfiguration. Wenn Sie die Befehlszeilentools verwenden möchten, können Sie eine dieser Verknüpfungen ausführen oder Sie können ein einfaches Eingabeaufforderungsfenster öffnen, und führen Sie dann einen benutzerdefinierten Befehl Dateien in der Buildumgebung für die Konfiguration selbst festlegen. Weitere Informationen finden Sie unter [verwenden Sie das MSVC-Toolset, über die Befehlszeile](building-on-the-command-line.md).
 
-Die Visual C++-Befehlszeilentools verwenden Sie die Umgebungsvariablen PATH, TMP, INCLUDE, LIB und LIBPATH und auch andere Umgebungsvariablen, die spezifisch für Ihre installierte Tools, Plattformen und -SDKs verwenden. Eine einfache Visual Studio-Installation kann 20 oder mehr Umgebungsvariablen festgelegt werden. Da die Werte dieser Variablen spezifisch für die Installation und die Auswahl der Buildkonfiguration sind und durch produktaktualisierungen oder -Upgrades geändert werden können, es wird dringend empfohlen, dass Sie eine Developer-eingabeaufforderungsverknüpfung oder eines verwenden die Benutzerdefinierte Befehlsdateien aus, die sie festlegen, statt sie in der Windows-Umgebung selbst festzulegen.
+Der MSVC-Befehlszeilentools verwenden Sie die Umgebungsvariablen PATH, TMP, INCLUDE, LIB und LIBPATH und auch andere Umgebungsvariablen, die spezifisch für Ihre installierte Tools, Plattformen und -SDKs verwenden. Eine einfache Visual Studio-Installation kann 20 oder mehr Umgebungsvariablen festgelegt werden. Da die Werte dieser Variablen spezifisch für die Installation und die Auswahl der Buildkonfiguration sind und durch produktaktualisierungen oder -Upgrades geändert werden können, es wird dringend empfohlen, dass Sie eine Developer-eingabeaufforderungsverknüpfung oder eines verwenden die Benutzerdefinierte Befehlsdateien aus, die sie festlegen, statt sie in der Windows-Umgebung selbst festzulegen.
 
 Um anzuzeigen, welche Umgebungsvariablen festgelegt werden, indem Sie eine Developer-eingabeaufforderungsverknüpfung, können Sie den SET-Befehl. Ein einfaches Eingabeaufforderungsfenster öffnen und die Ausgabe des Befehls "SET" für eine Baseline erfassen. Öffnen Sie ein Developer-Eingabeaufforderungsfenster, und erfassen Sie die Ausgabe des Befehls "SET" für den Vergleich. Ein difftool, z. B. die in Visual Studio-IDE integriert kann hilfreich sein, vergleichen die Umgebungsvariablen, und sehen, was von der Developer-Eingabeaufforderung festgelegt ist. Weitere Informationen, die bestimmte Umgebungsvariablen, die durch den Compiler und Linker verwendet, finden Sie unter [CL-Umgebungsvariablen](reference/cl-environment-variables.md).
 
