@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94ed75ffd59294d5beb076ef4d66e57ef763f10e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323113"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525453"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Datenbankunterstützung, MFC-Anwendungs-Assistent
 
@@ -46,15 +46,15 @@ Diese Seite enthält Optionen, die Ihnen die Angabe die Ebene der Datenbank zu e
 
 - **Datenquelle**
 
+   > [!NOTE]
+   > Die ATL-OLE DB-Consumer-Assistenten und der MFC-ODBC-Consumer-Assistenten sind nicht in Visual Studio-2019 und höher verfügbar. Sie können die Funktionalität trotzdem manuell hinzufügen. Weitere Informationen finden Sie unter [Erstellen eines Consumers ohne mithilfe eines Assistenten](../../data/oledb/creating-a-consumer-without-using-a-wizard.md).
+
    Klicken Sie auf die **Datenquelle** Schaltfläche, um eine Datenquelle mithilfe der angegebenen Treiber oder Anbieter und der Datenbank einzurichten. Bei Auswahl von OLE DB in der **Clienttyp** auswählen, zeigt diese Schaltfläche den **Datenlinkeigenschaften** Dialogfeld. Bei Auswahl von ODBC in die **Clienttyp** option, diese Schaltfläche bietet die **Auswählen einer Datenquelle** Dialogfeld. Diese Option ist nur verfügbar, wenn Sie eine Ansicht in Ihre Anwendung einbinden möchten.
 
    |Option|Beschreibung|
    |------------|-----------------|
    |**Datenverknüpfungseigenschaften** (OLE DB)|Legt die angegebene Datenquelle, die mit dem angegebenen OLE DB-Anbieter. Sie müssen die OLE DB-Anbieter, den Speicherort der Daten, die die Datenquelle, Anmelde-ID und (optional) ein Kennwort angeben. Weitere Informationen in diesem Dialogfeld finden Sie unter **Datenquelle** in [ATL-OLE DB-Consumer-Assistenten](../../atl/reference/atl-ole-db-consumer-wizard.md).|
    |**Wählen Sie die Datenquelle** (ODBC)|Legt die angegebene Datenquelle, die mit dem angegebenen ODBC-Treiber. Sie müssen einen Datenquellennamen ein, wählen Sie eine Tabelle für die Datenquelle auswählen. Der Assistent alle Spalten der Tabelle an der Membervariablen des bindet ein `CRecordset`-abgeleitete Klasse. Weitere Informationen in diesem Dialogfeld finden Sie unter **Datenquelle** in [MFC-ODBC-Consumer-Assistenten](../../mfc/reference/mfc-odbc-consumer-wizard.md).|
-
-   > [!NOTE]
-   > In früheren Versionen, die UMSCHALT-Taste die **Datenquelle** Schaltfläche geöffnet, ein Dialogfeld Datei öffnen, damit Sie eine Data Link (UDL) auswählen können. Diese Funktionalität wird nicht mehr unterstützt.
 
 - **Attributierte Datenbankklasse generieren**
 
