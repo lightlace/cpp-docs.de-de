@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387479"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447296"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Vorgehensweise: Definieren und Verarbeiten von Klassen und Strukturen (C++ / CLI)
 
@@ -127,7 +127,7 @@ Sie können die Sichtbarkeit von CLR-Typen (Common Language Runtime) so steuern,
 
 `public` Gibt an, dass ein Typ für jede Quelldatei sichtbar ist, enthält eine `#using` Direktive für die Assembly, die den Typ enthält.  `private` Gibt an, dass ein Typ nicht für Quelldateien sichtbar ist, die enthalten eine `#using` Direktive für die Assembly, die den Typ enthält. Allerdings sind private Typen in der gleichen Assembly sichtbar. Standardmäßig ist die Sichtbarkeit für eine Klasse auf `private` eingestellt.
 
-Vor Visual C++ 2005 unterstützten systemeigene Typen außerhalb der Assembly standardmäßig öffentliche Zugriffe. Aktivieren Sie [Compilerwarnung (Stufe 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) , damit Sie erkennen, wo private systemeigene Typen falsch verwendet werden. Verwenden der [Make_public](../preprocessor/make-public.md) Pragma, um den öffentlichen Zugriff auf einen systemeigenen Typ in einer Quellcodedatei zu ermöglichen, die Sie nicht ändern können.
+Standardmäßig vor Visual Studio 2005 unterstützten systemeigene Typen für öffentlichen Zugriff außerhalb der Assembly. Aktivieren Sie [Compilerwarnung (Stufe 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) , damit Sie erkennen, wo private systemeigene Typen falsch verwendet werden. Verwenden der [Make_public](../preprocessor/make-public.md) Pragma, um den öffentlichen Zugriff auf einen systemeigenen Typ in einer Quellcodedatei zu ermöglichen, die Sie nicht ändern können.
 
 Weitere Information finden Sie unter [#using Directive (#using-Direktive)](../preprocessor/hash-using-directive-cpp.md).
 
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-Das folgende Beispiel zeigt, dass der Visual C++-Compiler eine Funktion in der am meisten abgeleiteteten Klasse aufruft, auch wenn eine Konvertierung erforderlich ist, um einen oder mehrere Parameter anzugleichen. Er ruft keine Funktion in einer Basisklasse auf, die mit dem Funktionsaufruf besser übereinstimmt.
+Das nächste Beispiel zeigt, dass Microsoft C++ Compiler Ruft eine Funktion in der am stärksten abgeleitete Klasse, auch wenn eine Konvertierung erforderlich ist, eine oder mehrere Parameter entsprechend – und nicht in einer Basisklasse, die eine bessere Übereinstimmung für den Funktionsaufruf ist eine Funktion aufrufen.
 
 ```cpp
 // compile with: /clr
@@ -736,7 +736,7 @@ Der CLR-Garbage Collector löscht nicht verwendete verwaltete Objekte und gibt i
 
 Ein Visual C++-Finalizer ist nicht mit der <xref:System.Object.Finalize%2A>-Methode identisch. (In der CLR-Dokumentation werden Finalizer und die <xref:System.Object.Finalize%2A>-Methode synonym verwendet). Die <xref:System.Object.Finalize%2A>-Methode wird vom Garbage Collector aufgerufen, der jeden Finalizer in einer Klassenvererbungskette aufruft. Im Gegensatz zu Visual C++-Destruktoren führt ein Aufruf des abgeleiteten Klassenfinalizer nicht dazu, dass der Compiler den Finalizer in allen Basisklassen aufruft.
 
-Da der Visual C++-Compiler die deterministische Freigabe von Ressourcen unterstützt, implementieren Sie nicht die <xref:System.IDisposable.Dispose%2A>- oder <xref:System.Object.Finalize%2A>-Methode. Wenn Sie jedoch mit diesen Methoden vertraut sind, finden Sie hier ein Beispiel, wie ein Visual C++-Finalizer und ein Destruktor, der den Finalizer aufruft, zum <xref:System.IDisposable.Dispose%2A>-Muster zugeordnet werden:
+Da Microsoft C++ -Compiler unterstützt die deterministische Freigabe von Ressourcen, versuchen Sie nicht, implementieren die <xref:System.IDisposable.Dispose%2A> oder <xref:System.Object.Finalize%2A> Methoden. Wenn Sie jedoch mit diesen Methoden vertraut sind, finden Sie hier ein Beispiel, wie ein Visual C++-Finalizer und ein Destruktor, der den Finalizer aufruft, zum <xref:System.IDisposable.Dispose%2A>-Muster zugeordnet werden:
 
 ```cpp
 // Visual C++ code
@@ -757,7 +757,7 @@ void Dispose(bool disposing) {
 
 Ein verwalteter Typ verwendet möglicherweise auch verwaltete Ressourcen, die Sie lieber deterministisch freigeben möchten, anstatt sie zu einem bestimmten Zeitpunkt, nachdem das Objekt nicht mehr benötigt wird, vom Garbage Collector nicht deterministisch freigeben zu lassen. Durch die deterministische Freigabe von Ressourcen kann die Leistung erheblich gesteigert werden.
 
-Der Visual C++-Compiler ermöglicht die Definition eines Destruktors, um Objekte deterministisch zu bereinigen. Verwenden Sie den Destruktor, um alle Ressourcen freizugeben, die Sie deterministisch freigeben möchten.  Wenn ein Finalizer vorhanden ist, rufen Sie ihn im Destruktor auf, um Codeduplikate zu vermeiden.
+Microsoft C++ Compiler ermöglicht die Definition eines Destruktors, um Objekte deterministisch zu bereinigen. Verwenden Sie den Destruktor, um alle Ressourcen freizugeben, die Sie deterministisch freigeben möchten.  Wenn ein Finalizer vorhanden ist, rufen Sie ihn im Destruktor auf, um Codeduplikate zu vermeiden.
 
 ```cpp
 // compile with: /clr /c

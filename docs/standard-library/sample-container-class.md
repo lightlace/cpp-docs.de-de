@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
-ms.openlocfilehash: dbfa076756b9e4829898d38e0277ad90106ba579
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c797a893549c8ec708cfb60e6f002b35c27cd35c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410992"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220230"
 ---
 # <a name="sample-container-class"></a>Sample Container-Klasse
 
 > [!NOTE]
-> Dieses Thema ist in der Dokumentation zu Visual C++ als nicht funktionierendes Beispiel für Container aufgeführt, die in der C++-Standardbibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
+> Dieses Thema ist in der Microsoft C++ Dokumentation als nicht funktionierendes Beispiel für Container in verwendet die C++ Standard-Bibliothek. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
 
 Beschreibt ein Objekt, das eine Elementsequenz variabler Länge Sequenz von Elementen, in der Regel des Typs steuert `Ty`. Die Folge ist unterschiedlich gespeichert, abhängig vom tatsächlichen Container.
 

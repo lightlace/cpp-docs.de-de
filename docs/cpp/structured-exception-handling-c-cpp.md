@@ -9,16 +9,16 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e948d941afa1459623619e385aa67b1c60490245
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330569"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221947"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-Strukturierte Ausnahmebehandlung (SEH) ist ein Microsoft-Erweiterung für C, um bestimmte Ausnahmecode-Situationen, z. B. Hardwareausfällen ordnungsgemäß behandelt. Obwohl Windows und Visual C++ SEH unterstützen, empfehlen wir die Verwendung von ISO-Standard-c++-Ausnahmebehandlung, da Ihr Code damit besser portierbar und flexibler ist. Dennoch, um vorhandenen Code beibehalten oder für bestimmte Arten von Programmen, Sie können es erforderlich sein, die SEH verwenden.
+Strukturierte Ausnahmebehandlung (SEH) ist ein Microsoft-Erweiterung für C, um bestimmte Ausnahmecode-Situationen, z. B. Hardwareausfällen ordnungsgemäß behandelt. Obwohl Windows und Microsoft C++ unterstützen SEH, es wird empfohlen, die Verwendung von ISO-Standard C++ Ausnahmebehandlung, da Ihr Code damit besser portierbar und flexibler ist. Dennoch, um vorhandenen Code beibehalten oder für bestimmte Arten von Programmen, Sie können es erforderlich sein, die SEH verwenden.
 
 **Microsoft-spezifisch:**
 
@@ -34,7 +34,7 @@ Strukturierte Ausnahmebehandlung (SEH) ist ein Microsoft-Erweiterung für C, um 
 
 Mit SEH können Sie sicherstellen, dass Ressourcen wie Speicherblöcke und Dateien ordnungsgemäß freigegeben werden, wenn die Ausführung unerwartet beendet wird. Sie können auch bestimmte Probleme behandeln, z. B. unzureichender Arbeitsspeicher – mithilfe von kurzem strukturiertem Code, der nicht abhängig ist **Goto** -Anweisungen oder ausführliche Tests von Rückgabecodes.
 
-Die Anweisungen try-except und try-finally, auf die sich dieser Artikel bezieht, sind Microsoft-Erweiterungen der Programmiersprache C. Sie unterstützen SEH, indem es Anwendungen ermöglicht wird, die Steuerung eines Programms nach Ereignissen abzurufen, die andernfalls das Beenden der Ausführung zur Folge haben würden. Obwohl SEH mit C++-Quelldateien funktioniert, ist sie nicht ausdrücklich für C++ vorgesehen. Wenn Sie SEH in einem C++-Programm verwenden, die Sie bei der Kompilierung der [/EHa "oder" / EHsc](../build/reference/eh-exception-handling-model.md) option Destruktoren für lokale Objekte aufgerufen werden, aber weitere Ausführungsverhalten entspricht möglicherweise nicht Ihren Erwartungen. Eine Veranschaulichung finden Sie im Beispiel weiter unten in diesem Artikel. In den meisten Fällen anstelle von SEH empfiehlt es sich, dass Sie die ISO-Standard verwenden [C++-Ausnahmebehandlung](../cpp/try-throw-and-catch-statements-cpp.md), die auch Visual C++ unterstützt. Mithilfe der C++-Ausnahmebehandlung können Sie eine bessere Portierbarkeit des Codes sicherstellen, und Sie können Ausnahmen jeglichen Typs behandeln.
+Die Anweisungen try-except und try-finally, auf die sich dieser Artikel bezieht, sind Microsoft-Erweiterungen der Programmiersprache C. Sie unterstützen SEH, indem es Anwendungen ermöglicht wird, die Steuerung eines Programms nach Ereignissen abzurufen, die andernfalls das Beenden der Ausführung zur Folge haben würden. Obwohl SEH mit C++-Quelldateien funktioniert, ist sie nicht ausdrücklich für C++ vorgesehen. Wenn Sie SEH in einem C++-Programm verwenden, die Sie bei der Kompilierung der [/EHa "oder" / EHsc](../build/reference/eh-exception-handling-model.md) option Destruktoren für lokale Objekte aufgerufen werden, aber weitere Ausführungsverhalten entspricht möglicherweise nicht Ihren Erwartungen. Eine Veranschaulichung finden Sie im Beispiel weiter unten in diesem Artikel. In den meisten Fällen anstelle von SEH empfiehlt es sich, dass Sie die ISO-Standard verwenden [ C++ Ausnahmebehandlung](../cpp/try-throw-and-catch-statements-cpp.md), Microsoft C++ -Compiler unterstützt ebenfalls. Mithilfe der C++-Ausnahmebehandlung können Sie eine bessere Portierbarkeit des Codes sicherstellen, und Sie können Ausnahmen jeglichen Typs behandeln.
 
 Wenn Sie C-Code verfügen, die SEH verwendet wird, können Sie es mit C++-Code mischen, die C++-Ausnahmebehandlung verwendet wird. Weitere Informationen finden Sie unter [strukturierter Ausnahmebehandlung in C++](../cpp/exception-handling-differences.md).
 

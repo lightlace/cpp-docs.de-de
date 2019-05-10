@@ -1,13 +1,13 @@
 ---
 title: Übersicht über Windows-Programmierung in C++
-ms.date: 03/28/2019
+ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 48c7f419b6c69955ab25db528c8d3d86a7249391
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40028794a6df30db619965181f2e31d7c9a2745c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362347"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221321"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Übersicht über Windows-Programmierung in C++
 
@@ -21,7 +21,7 @@ C++-konsolenanwendungen, über die Befehlszeile in einem Konsolenfenster ausfüh
 
 Der Begriff *systemeigene desktop-Client-Anwendung* bezieht sich auf eine C- oder C++ im Fenstermodus-Anwendung, die ursprüngliche systemeigene verwendet [C-APIs für Windows und/oder COM-APIs](/windows/desktop/apiindex/windows-api-list) auf das Betriebssystem zugreifen. Diese APIs sind sich größtenteils in c geschriebenen Wenn Sie diese Art von Anwendung zu erstellen, Sie haben die Wahl der Programmierung einer Nachrichtenschleife für C-Stil, die Betriebssystemereignisse verarbeitet direkt oder über *Microsoft Foundation Classes* (MFC), eine C++-Bibliothek, die dient als Wrapper für Win32 in einer Weise, etwas objektorientierten. Keiner dieser Ansätze gilt als "modernen" im Vergleich zu der universellen Windows-Plattform (siehe unten), aber beide sind weiterhin vollständig unterstützt und Millionen von Codezeilen, die derzeit in der Welt ausführen. Eine Win32-Anwendung in einem Fenster verlangt vom Entwickler explizit mit Windows-Nachrichten innerhalb einer Prozedur-Funktion von Windows zu arbeiten. Trotz des Namens kann eine Win32-Anwendung als eine (x86) 32-Bit oder 64-Bit-(x64) binäre kompiliert werden. In der Visual Studio-IDE sind die Begriffe X86 und die Win32-Synonym.
 
-Um den ersten Schritten mit herkömmlichen Windows C++-Programmierung finden Sie unter [erste Schritte mit Win32- und C++](/windows/desktop/LearnWin32/learn-to-program-for-windows). Nachdem Sie ein Verständnis für Win32 erhalten, ist dies einfacher Informationen [MFC-Desktopanwendungen](/mfc/mfc-desktop-applications). Ein Beispiel für eine herkömmliche C++-Desktopanwendung, die komplexe Grafiken verwendet, finden Sie unter [Hilo: Entwickeln von C++-Anwendungen für Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
+Um den ersten Schritten mit herkömmlichen Windows C++-Programmierung finden Sie unter [erste Schritte mit Win32- und C++](/windows/desktop/LearnWin32/learn-to-program-for-windows). Nachdem Sie ein Verständnis für Win32 erhalten, ist dies einfacher Informationen [MFC-Desktopanwendungen](../mfc/mfc-desktop-applications.md). Ein Beispiel für eine herkömmliche C++-Desktopanwendung, die komplexe Grafiken verwendet, finden Sie unter [Hilo: Entwickeln von C++-Anwendungen für Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
 
 ### <a name="c-or-net"></a>C++ oder .NET? 
 

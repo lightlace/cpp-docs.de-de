@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ea4a878afea4453796277486da88b85e7f74883c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272545"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446522"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime-Kompilierung)
 
@@ -53,7 +53,7 @@ Einer oder mehrere der folgenden Schalter, durch Komma getrennt.
 
    Ein verwaltetes Programm, das keine Assemblymetadaten im Manifest aufweist, wird als ein *Modul*bezeichnet. Die **noAssembly** -Option kann nur zum Erzeugen eines Moduls verwendet werden. Wenn Sie bei der Kompilierung [/c](c-compile-without-linking.md) und **/clr:noAssembly**verwenden, geben Sie die Option [/NOASSEMBLY](noassembly-create-a-msil-module.md) in der Linkerphase ein, um ein Modul zu erstellen.
 
-   Vor Visual C++ 2005 war bei Verwendung von **/clr:noAssembly** die Angabe von **/LD**erforderlich. **/LD** ist jetzt bei der Angabe von **/clr:noAssembly**impliziert.
+   Bevor Sie Visual Studio 2005 **/CLR: noAssembly** erforderlichen **/ld**. **/LD** ist jetzt bei der Angabe von **/clr:noAssembly**impliziert.
 
 - **initialAppDomain**
 

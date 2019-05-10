@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4397
 ms.assetid: 6346fdc2-dbbf-4fba-803a-32b0d0a707be
-ms.openlocfilehash: 4ad690d78c1544adbe365a35ba3b5921c883631e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f0a3c31f460a66523ed1c327cee097dc890bbeb
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365389"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447672"
 ---
 # <a name="compiler-warning-level-1-c4397"></a>Compilerwarnung (Stufe 1) C4397
 
 DefaultCharSetAttribute wird ignoriert.
 
-<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> wird von Visual C++-Compiler ignoriert. Um einen Zeichensatz für die DLL anzugeben, verwenden Sie die Option "Zeichensatz" von DllImport. Weitere Informationen finden Sie unter [mithilfe C++-Interop (implizites PInvoke)](../../dotnet/using-cpp-interop-implicit-pinvoke.md).
+<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> wird von Microsoft ignoriert C++ Compiler. Um einen Zeichensatz für die DLL anzugeben, verwenden Sie die Option "Zeichensatz" von DllImport. Weitere Informationen finden Sie unter [mithilfe C++-Interop (implizites PInvoke)](../../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 ## <a name="example"></a>Beispiel
 

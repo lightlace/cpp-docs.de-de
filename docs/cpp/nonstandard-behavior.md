@@ -1,21 +1,21 @@
 ---
 title: Nicht dem Standard entsprechendes Verhalten
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compatibility and compliance, nonstandard behavior
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 82c5faae68f9da747017119d76578cc88163d8bb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245373"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222027"
 ---
 # <a name="nonstandard-behavior"></a>Nicht dem Standard entsprechendes Verhalten
 
-Die folgenden Abschnitte listen einige Bereiche auf, wo die Visual C++-Implementierung von C++ nicht mit dem C++-Standard übereinstimmt. Die unten angegebenen Abschnittszahlen beziehen sich auf die Abschnittszahlen im C++ 11-Standard (ISO/IEC 14882:2011(E)).
+Den folgenden Abschnitten werden einige Bereiche, in denen die Microsoft-Implementierung von C++ stimmt nicht überein, mit der C++ standard. Die unten angegebenen Abschnittszahlen beziehen sich auf die Abschnittszahlen im C++ 11-Standard (ISO/IEC 14882:2011(E)).
 
 Die Liste der Compiler-Grenzen, die von den in der C++-Standard definierten abweichen erhält [Compiler-Grenzen](../cpp/compiler-limits.md).
 
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>Bindung von nicht abhängigen Namen in Vorlagen
 
-Der Visual C++-Compiler unterstützt aktuell nicht die Bindung von nicht abhängigen Namen, wenn die Vorlage anfänglich analysiert wird. Dies entspricht nicht Abschnitt 14.6.3, Absatz 7 der C++ ISO-Spezifikation. Das kann zu Überladungen führen, die deklariert werden, nachdem die Vorlage (aber bevor die Vorlage instanziiert wird) angezeigt werden kann.
+Microsoft C++ Compiler unterstützt derzeit nicht von nicht abhängigen Namen bei der Vorlage anfänglich analysiert. Dies entspricht nicht Abschnitt 14.6.3, Absatz 7 der C++ ISO-Spezifikation. Das kann zu Überladungen führen, die deklariert werden, nachdem die Vorlage (aber bevor die Vorlage instanziiert wird) angezeigt werden kann.
 
 ```cpp
 #include <iostream>
@@ -75,7 +75,7 @@ Weitere Informationen zu Ausnahmespezifikationen finden Sie unter [Ausnahmespezi
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-Die C++ -Standard gibt an, die [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) muss nicht entsprechen, die eine gültige `char_type` Wert. Das visuelle Element C++ Compiler erzwingt diese Einschränkung für Typ **Char**, jedoch nicht für Typ **"wchar_t"**. Dies entspricht nicht der Anforderung in Tabelle 62, in Abschnitt 12.1.1 der C++ ISO-Spezifikation. Das unten gezeigte Beispiel veranschaulicht dies.
+Die C++ -Standard gibt an, die [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) muss nicht entsprechen, die eine gültige `char_type` Wert. Microsoft C++ Compiler erzwingt diese Einschränkung für Typ **Char**, jedoch nicht für Typ **"wchar_t"**. Dies entspricht nicht der Anforderung in Tabelle 62, in Abschnitt 12.1.1 der C++ ISO-Spezifikation. Das unten gezeigte Beispiel veranschaulicht dies.
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>Speicherort für Objekte
 
-Der C++-Standard (Abschnitt 1,8, Absatz 6) erfordert vollständige C++-Objekte, um eindeutige Speicherpositionen zu haben. Bei Visual C++ gibt es jedoch Fälle, in denen Typen ohne Datenmember einen Speicherort während der Lebensdauer des Objekts für andere Typen freigeben.
+Der C++-Standard (Abschnitt 1,8, Absatz 6) erfordert vollständige C++-Objekte, um eindeutige Speicherpositionen zu haben. Jedoch mit Microsoft C++, es gibt Fälle, in denen Typen ohne Datenmember einen Speicherort mit anderen Typen für die Lebensdauer des Objekts freigeben werden.

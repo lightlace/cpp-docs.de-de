@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
-- Visual C++ projects
+- Visual Studio C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0784e6f202750e846c75434eef62a12dab3952f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387453"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448107"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Gewusst wie: Erstellen überprüfbarer C++-Projekte (C++ / CLI)
 
@@ -20,7 +20,7 @@ Visual C++-Anwendungs-Assistenten werden keine überprüfbaren Projekte erstellt
 > [!IMPORTANT]
 > Visual Studio 2015 als veraltet markiert und Visual Studio 2017 nicht unterstützt. die **/CLR: pure** und **/CLR: safe** überprüfbare Projekte. Wenn Sie die überprüfbaren Code benötigen, empfehlen wir, dass Sie Ihren Code in c# übersetzen.
 
-Allerdings bei Verwendung eine ältere Version von Visual C++-Compiler-Toolsets, die unterstützt **/CLR: pure** und **/CLR: safe**, Projekte konvertiert werden können, um überprüfbar zu sein. Dieses Thema beschreibt das Festlegen von Projekteigenschaften, und ändern die Quelldateien zum Transformieren von Visual C++-Projekten zum Erzeugen von überprüfbarer Anwendungen.
+Allerdings bei Verwendung eine ältere Version von Microsoft C++ -Compilertoolset, die unterstützt **/CLR: pure** und **/CLR: safe**, Projekte konvertiert werden können, um überprüfbar zu sein. In diesem Thema wird beschrieben, wie Festlegen von Projekteigenschaften, und ändern die Quelldateien zum Transformieren von Visual Studio C++ Projekte um überprüfbare Anwendungen zu erstellen.
 
 ## <a name="compiler-and-linker-settings"></a>Compiler und Linker-Einstellungen
 

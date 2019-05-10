@@ -6,18 +6,21 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e3950f79c4c88d031e04d0d145e0a03c9ebc0a37
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293900"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221796"
 ---
 # <a name="decorated-names"></a>Ergänzte Namen
 
 Funktionen, Daten und Objekte werden in C- und C++-Programmen intern durch ihre ergänzten Namen dargestellt. Ein *ergänzten Namen* ist eine codierte Zeichenfolge, die vom Compiler erstellt werden, während der Kompilierung eines Objekts, die Daten oder die Funktionsdefinition. Er zeichnet Aufrufkonventionen, Typen, Funktionsparameter und sonstige Informationen zusammen mit dem Namen auf. Diese namensergänzung, auch bekannt als *namenszerlegung*, unterstützt den Linker dabei die richtigen Funktionen zu suchen und-Objekte beim Verknüpfen einer ausführbaren Datei.
 
-Die Konventionen für Namensergänzungen haben sich in den verschiedenen Versionen von Visual C++ geändert und können auf verschiedenen Zielarchitekturen ebenfalls unterschiedlich sein. Um die ordnungsgemäße Verknüpfung mit Quelldateien zu gewährleisten, die mit Visual C++ erstellt wurden, müssen C- und C++-DLLs sowie Bibliotheken mit dem gleichen Compilertoolset, den gleichen Kennzeichnungen und der gleichen Zielarchitektur kompiliert werden.
+Die Konventionen für namensergänzungen haben sich in verschiedenen Versionen von Visual Studio geändert, und Sie können auf verschiedenen Zielarchitekturen ebenfalls unterschiedlich sein. Verknüpfen Sie ordnungsgemäß mit Quelldateien, die mithilfe von Visual Studio C erstellt und C++ DLLs und Bibliotheken mit dem gleichen Compilertoolset, Flags und Zielarchitektur kompiliert werden soll. 
+
+> [!NOTE]
+> Bibliotheken, die mit Visual Studio 2015 können von Anwendungen, die mit Visual Studio 2017 oder Visual Studio-2019 genutzt werden.
 
 ##  <a name="Using"></a> Verwenden von ergänzten Namen
 
@@ -25,7 +28,7 @@ In der Regel müssen Sie den ergänzten Namen nicht kennen, um Code schreiben zu
 
 Wenn Sie den Funktionsnamen, die Klasse, die Aufrufkonvention, den Rückgabetyp oder einen Parameter ändern, ändert sich auch der ergänzte Name. In diesem Fall müssen Sie den neuen ergänzten Namen abrufen und ihn überall dort verwenden, wo der ergänzte Name angegeben ist.
 
-Die Namensergänzung ist auch dann wichtig, wenn eine Verknüpfen mit Code erfolgt, der in einer anderen Programmiersprache geschrieben wurde oder andere Compiler verwendet. Verschiedene Compilern verwenden unterschiedliche Konventionen für die Namensergänzung. Wenn Ihre ausführbare Datei eine Verknüpfung zu Code enthält, der in einer anderen Sprache geschrieben wurde, müssen Sie insbesondere darauf achten, dass die exportierten und importierten Namen und Aufrufkonventionen übereinstimmen. Der Assemblersprachcode muss die Konventionen für ergänzte Namen und Aufrufe von Visual C++ verwenden, um eine Verknüpfung mit Quellcode zu gewährleisten, der mit Visual C++ geschrieben wurde.
+Die Namensergänzung ist auch dann wichtig, wenn eine Verknüpfen mit Code erfolgt, der in einer anderen Programmiersprache geschrieben wurde oder andere Compiler verwendet. Verschiedene Compilern verwenden unterschiedliche Konventionen für die Namensergänzung. Wenn Ihre ausführbare Datei eine Verknüpfung zu Code enthält, der in einer anderen Sprache geschrieben wurde, müssen Sie insbesondere darauf achten, dass die exportierten und importierten Namen und Aufrufkonventionen übereinstimmen. Der Assemblersprachcode muss die MSVC ergänzten Namen und Aufrufkonventionen verwenden, verknüpfen Sie Quellcode mit MSVC geschrieben.
 
 ##  <a name="Format"></a> Format von einem C++ ergänzten Namen
 

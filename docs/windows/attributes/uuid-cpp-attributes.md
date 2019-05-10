@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: 8d9d55fc2a340165480cab4036ad1e5323e6b625
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae79f9a4d0af6375834c0792c4004f52a16e07e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407197"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448930"
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++-Attribute)
 
@@ -32,7 +32,7 @@ Ein 128-Bit, eindeutigen Bezeichner.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Definition einer Schnittstelle oder Klasse nicht angegeben ist die **Uuid** C++-Attribut, und klicken Sie dann auf Visual C++-Compiler bietet eine. Bei Angabe einer **Uuid**, Sie müssen die Anführungszeichen einschließen.
+Wenn die Definition einer Schnittstelle oder Klasse nicht angegeben ist die **Uuid** C++ -Attribut, und klicken Sie dann auf der Microsoft C++ Compiler bietet eine. Bei Angabe einer **Uuid**, Sie müssen die Anführungszeichen einschließen.
 
 Wenn Sie keinen angeben **Uuid**, generiert der Compiler die gleiche GUID für die Schnittstellen oder Klassen mit dem gleichen Namen in anderen Attributs Projekte auf einem Computer.
 

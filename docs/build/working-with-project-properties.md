@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a8c15de43a3843b8ff12cb4ad3d951d76b90c039
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314091"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446184"
 ---
 # <a name="set-compiler-and-build-properties"></a>Festlegen des Compilers und der Buildeigenschaften
 
@@ -23,7 +23,7 @@ In der IDE werden alle Informationen, die für das Erstellen eines Projekts erfo
 
 Wenn Sie ein Projekt erstellen, weist das System verschiedenen Eigenschaften Werte zu. Die Standardwerte variieren in Abhängigkeit von der Art des Projekts und den Optionen, die Sie im App-Assistenten auswählen. Ein ATL-Projekt verfügt beispielsweise über Eigenschaften für MIDL-Dateien. Diese sind jedoch in einer Basiskonsolenanwendung nicht vorhanden. Die Standardeigenschaften werden im Bereich „Allgemein“ auf den Eigenschaftenseiten angezeigt:
 
-![Visual C++-Projektstandards](media/visual-c---project-defaults.png "Visual C++ Project Defaults")
+![Visual C#&#43; &#43; Projektstandards](media/visual-c---project-defaults.png "Visual C++ Projektstandards")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Anwenden von Eigenschaften zum Erstellen von Konfigurationen und Plattformen
 
@@ -61,7 +61,7 @@ Die **Eigenschaftenseiten** Dialogfeld zeigt nur die Eigenschaftenseiten, die f�
 
 MSBuild unterstützt die Verwendung von Kompilierzeitkonstanten "Makros" bezeichnet, für bestimmte Zeichenfolgenwerte Verzeichnisse und Pfade enthalten. Diese werden verfügbar gemacht, in den Eigenschaftenseiten können Sie verweisen und ändern sie mithilfe der [Eigenschaften-Editor](#property_editor). 
 
-Die folgende Abbildung zeigt die Eigenschaftenseiten für ein Visual C++-Projekt. Im linken Bereich ist die *Regel* **VC++-Verzeichnisse** ausgewählt, und im rechten Bereich werden die Eigenschaften aufgeführt, die dieser Regel zugeordnet sind. Die `$(...)` Werte heißen *Makros*. Ein *Makro* ist eine Kompilierzeitkonstante, die auf einen benutzerdefinierten Wert oder auf einen Wert verweisen kann, der von Visual Studio oder dem MSBuild-System definiert wurde. Mit Makros anstelle von hartcodierten Werte wie Verzeichnispfaden können Sie leichter eigenschafteneinstellungen zwischen Computern und zwischen Versionen von Visual Studio, und können Sie besser sicherstellen, dass die projekteinstellungen ordnungsgemäß in teilnehmen [ eigenschaftenvererbung](project-property-inheritance.md). 
+Die folgende Abbildung zeigt die Eigenschaftenseiten für ein Visual Studio C++ Projekt. Im linken Bereich ist die *Regel* **VC++-Verzeichnisse** ausgewählt, und im rechten Bereich werden die Eigenschaften aufgeführt, die dieser Regel zugeordnet sind. Die `$(...)` Werte heißen *Makros*. Ein *Makro* ist eine Kompilierzeitkonstante, die auf einen benutzerdefinierten Wert oder auf einen Wert verweisen kann, der von Visual Studio oder dem MSBuild-System definiert wurde. Mit Makros anstelle von hartcodierten Werte wie Verzeichnispfaden können Sie leichter eigenschafteneinstellungen zwischen Computern und zwischen Versionen von Visual Studio, und können Sie besser sicherstellen, dass die projekteinstellungen ordnungsgemäß in teilnehmen [ eigenschaftenvererbung](project-property-inheritance.md). 
 
 ![Projekteigenschaftenseiten](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 

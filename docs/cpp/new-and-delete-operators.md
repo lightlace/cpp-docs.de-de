@@ -1,20 +1,19 @@
 ---
 title: Operatoren "new" und "delete"
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - delete_cpp
 - new
 helpviewer_keywords:
-- new keyword [C++], dynamic allocation of objects
-- nothrownew.obj
-- delete keyword [C++], syntax
+- new keyword [C++]
+- delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 8dd5e6a555872c443e32e9ea464ea49d4ae18f99
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345894"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222365"
 ---
 # <a name="new-and-delete-operators"></a>Operatoren "new" und "delete"
 
@@ -85,9 +84,7 @@ Das Argument in Klammern angegeben **neue** übergeben wird, um `Blanks::operato
 Blanks *SomeBlanks = new Blanks;
 ```
 
-In Visual C++ 5.0 und früher verwendeten nichtklassentypen und alle Arrays (unabhängig davon, ob sie von Waren **Klasse** Typ) zugeordnet, mit der **neue** -Operator verwendet immer die globale **new-Operator** Funktion.
-
-Ab Visual C++ 5.0 unterstützt der Compiler memberarray **neue** und **löschen** Operatoren in einer Klassendeklaration. Zum Beispiel:
+Der Compiler unterstützt memberarray **neue** und **löschen** Operatoren in einer Klassendeklaration. Zum Beispiel:
 
 ```cpp
 // spec1_the_operator_new_function2.cpp
@@ -203,7 +200,7 @@ int main( int argc, char *argv[] ) {
 
 Mit dem vorangehenden Code kann "Arbeitsspeicherverlust" erkannt werden, also Arbeitsspeicher, der im freien Speicher zugeordnet, jedoch nicht freigegeben wurde. Zum Ausführen dieser Erkennung wird die globale **neue** und **löschen** Operatoren zum Belegen und Freigeben des Arbeitsspeichers Anzahl neu definiert.
 
-Ab Visual C++ 5.0 unterstützt der Compiler memberarray **neue** und **löschen** Operatoren in einer Klassendeklaration. Zum Beispiel:
+Der Compiler unterstützt memberarray **neue** und **löschen** Operatoren in einer Klassendeklaration. Zum Beispiel:
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

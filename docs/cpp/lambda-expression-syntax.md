@@ -1,15 +1,15 @@
 ---
 title: Lambdaausdruckssyntax
-ms.date: 03/25/2019
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 2df2c203024e1b50cffdcb15af834fe09effaae2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 37e4a512678bf276b5244fd54945f49a37ff8d01
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216510"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222391"
 ---
 # <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax
 
@@ -83,7 +83,7 @@ Im Beispiel ist das dritte Argument für die **For_each** -Funktion ist ein Lamb
 
 ## <a name="example-2-using-a-function-object"></a>Beispiel 2: Verwendung eines Funktionsobjekts
 
-Manchmal wäre die Ausweitung eines Lambdas über den Umfang des vorherigen Beispiels hinaus zu hinderlich. Im nächsten Beispiel wird ein Funktionsobjekt statt eines Lambda-Ausdrucks zusammen mit den **For_each** -Funktion verwendet, um die gleichen Ergebnisse wie in Beispiel 1 zu erstellen. In beiden Beispielen wird die Anzahl gerader Zahlen in einem `vector`-Objekt gespeichert. Um den Zustand des Vorgangs beizubehalten, wird die `FunctorClass`-Variable von der `m_evenCount`-Klasse mithilfe eines Verweises als Membervariable gespeichert. Zum Ausführen des Vorgangs, `FunctorClass` implementiert den Operator Funktionsaufruf **operator()**. Der Visual C++-Compiler generiert Code, der an Größe und Leistung mit dem in Lambda-Codebeispiel 1 vergleichbar ist. Bei einem grundlegenden Problem, wie dem in diesem Artikel, ist der einfachere Lambda-Entwurf wahrscheinlich besser geeignet, als der Funktionsobjektentwurf. Wenn Sie allerdings der Meinung sind, die Funktionalität erfordere zukünftig möglicherweise beträchtliche Erweiterungen, verwenden Sie einen Funktionsobjektentwurf. Damit ist die Codeverwaltung einfacher.
+Manchmal wäre die Ausweitung eines Lambdas über den Umfang des vorherigen Beispiels hinaus zu hinderlich. Im nächsten Beispiel wird ein Funktionsobjekt statt eines Lambda-Ausdrucks zusammen mit den **For_each** -Funktion verwendet, um die gleichen Ergebnisse wie in Beispiel 1 zu erstellen. In beiden Beispielen wird die Anzahl gerader Zahlen in einem `vector`-Objekt gespeichert. Um den Zustand des Vorgangs beizubehalten, wird die `FunctorClass`-Variable von der `m_evenCount`-Klasse mithilfe eines Verweises als Membervariable gespeichert. Zum Ausführen des Vorgangs, `FunctorClass` implementiert den Operator Funktionsaufruf **operator()**. Microsoft C++ -Compiler generiert Code, die in der Größe und Leistung mit dem Lambda-Codebeispiel 1 vergleichbar ist. Bei einem grundlegenden Problem, wie dem in diesem Artikel, ist der einfachere Lambda-Entwurf wahrscheinlich besser geeignet, als der Funktionsobjektentwurf. Wenn Sie allerdings der Meinung sind, die Funktionalität erfordere zukünftig möglicherweise beträchtliche Erweiterungen, verwenden Sie einen Funktionsobjektentwurf. Damit ist die Codeverwaltung einfacher.
 
 Weitere Informationen zu den **operator()**, finden Sie unter [Funktionsaufruf](../cpp/function-call-cpp.md). Weitere Informationen zu den **For_each** funktionieren, finden Sie unter [For_each](../standard-library/algorithm-functions.md#for_each).
 

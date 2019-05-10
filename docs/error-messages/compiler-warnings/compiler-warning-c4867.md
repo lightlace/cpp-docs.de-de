@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4867
 ms.assetid: 8a257d70-c3a7-462d-b285-e57c952a8bf7
-ms.openlocfilehash: 9fa9b382b42a2fb8ba72fd9744c612af5dd598d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0fd5de46f713aed08508f8755c9e54c3ff46366b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311071"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447205"
 ---
 # <a name="compiler-warning-c4867"></a>Compilerwarnung C4867
 
@@ -19,7 +19,7 @@ ms.locfileid: "62311071"
 
 Ein Zeiger auf Member-Funktion wurde nicht ordnungsgemäß initialisiert.
 
-Diese Warnung kann generiert werden, infolge einer konformitätsverbesserung für Compiler, die für Visual C++ 2005 auftreten: verbesserte Pointer-to-Member-Konformität.  Code, der vor Visual C++ 2005 kompiliert wird nun C4867 generiert.
+Diese Warnung kann generiert werden, infolge einer konformitätsverbesserung für Compiler, die für Visual Studio 2005 durchgeführt wurde: verbesserte Pointer-to-Member-Konformität.  Code, der vor Visual Studio 2005 kompiliert wird nun C4867 generiert.
 
 Diese Warnmeldung wird immer als Fehler ausgegeben. Verwenden Sie das [warning](../../preprocessor/warning.md) -Pragma, um diese Warnung zu deaktivieren. Weitere Informationen über C4867 und MFC/ATL finden Sie unter [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).
 

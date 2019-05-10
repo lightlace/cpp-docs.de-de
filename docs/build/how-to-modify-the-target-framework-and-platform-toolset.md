@@ -1,22 +1,20 @@
 ---
 title: 'Vorgehensweise: Ändern des Zielframeworks und Plattformtoolset'
 ms.custom: conceptual
-ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.modifytargetframeworkandplatformtoolset
+ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: cf2078432f629a353e0c325b407db59681ffd9d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c3d6b50a57cab9cc63657949fceccebf4ea6b8c9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273494"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220678"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Vorgehensweise: Ändern des Zielframeworks und Plattformtoolset
 
-Sie können Visual C++-projekteinstellungen, um verschiedene Versionen von .NET Framework als Ziel und verschiedene Plattformtoolsets verwendet ändern. Standardmäßig wird vom Projektsystem die .NET Framework-Version und die Toolsetversion verwendet, die der von Ihnen zum Erstellen des Projekts verwendeten Version von Visual Studio entsprechen. Sie können das Toolset der Zielplattform ändern, indem Sie die Projekteigenschaften ändern. Das Zielframework kann durch Bearbeiten der Projektdatei (.vcxproj) geändert werden. Sie müssen keine separate CodeBase für jedes Kompilierungsziel verwenden.
+Sie können Visual Studio ändern C++ projekteinstellungen, verschiedene Versionen von .NET Framework als Ziel und andere Plattformtoolsets zu verwenden. Standardmäßig wird vom Projektsystem die .NET Framework-Version und die Toolsetversion verwendet, die der von Ihnen zum Erstellen des Projekts verwendeten Version von Visual Studio entsprechen. Sie können das Toolset der Zielplattform ändern, indem Sie die Projekteigenschaften ändern. Das Zielframework kann durch Bearbeiten der Projektdatei (.vcxproj) geändert werden. Sie müssen keine separate CodeBase für jedes Kompilierungsziel verwenden.
 
 > [!IMPORTANT]
 >  Einige Editionen unterstützen möglicherweise geänderte Zielframeworks oder Plattformtoolsets nicht. Weitere Informationen zur Kompatibilität finden Sie unter [Übertragung, Migration und Upgrade der Visual Studio-Projekte](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects).

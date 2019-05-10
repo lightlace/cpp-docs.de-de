@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173546"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222575"
 ---
 # <a name="cdc-class"></a>CDC-Klasse
 
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 Verweist auf eine Zeichenfolge, die gemessen werden. Sie können auch übergeben eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt für diesen Parameter.
 
 *nCount*<br/>
-Gibt die Anzahl von Zeichen in der Zeichenfolge an. Wenn *nCount* -1 ist, wird die Länge berechnet.
+Gibt an, die [Länge der Zeichenfolge](/windows/desktop/gdi/specifying-length-of-text-output-string) verweist *LpszString*.
 
 *nTabPositions*<br/>
 Gibt die Anzahl der Tabstopp Positionen im Array verweist *LpnTabStopPositions*.
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 Zeigt auf eine Zeichenfolge von Zeichen. Sie können auch übergeben eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt für diesen Parameter.
 
 *nCount*<br/>
-Gibt die Anzahl von Zeichen in der Zeichenfolge an. Wenn *nCount* -1 ist, wird die Länge berechnet.
+Gibt an, die [Länge der Zeichenfolge](/windows/desktop/gdi/specifying-length-of-text-output-string) verweist *LpszString*.
 
 *str*<br/>
 Ein `CString` Objekt mit der angegebenen Zeichen gemessen wird.
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 Verweist auf eine Zeichenfolge. Sie können auch übergeben eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt für diesen Parameter.
 
 *nCount*<br/>
-Gibt die Anzahl von Zeichen in der Zeichenfolge an. Wenn *nCount* -1 ist, wird die Länge berechnet.
+Gibt an, die [Länge der Zeichenfolge](/windows/desktop/gdi/specifying-length-of-text-output-string) verweist *LpszString*.
 
 *nTabPositions*<br/>
 Gibt die Anzahl der Tabstopp Positionen im Array verweist *LpnTabStopPositions*.
@@ -4087,7 +4087,7 @@ Gibt die Adresse der Prozedur Instanzen der Anwendung bereitgestellten Rückruff
 Gibt an, ein ferner Zeiger auf Daten in der Ausgabe-Funktion übergeben werden. Wenn *LpfnOutput* NULL ist, *LpData* muss ein long-Zeiger auf die Zeichenfolge, die ausgegeben werden.
 
 *nCount*<br/>
-Gibt die Anzahl der Zeichen, die ausgegeben werden. Wenn dieser Parameter 0 (null) ist `GrayString` berechnet die Länge der Zeichenfolge (vorausgesetzt, dass *LpData* ist ein Zeiger auf Zeichenfolge). Wenn *nCount* ist-1 und die Funktion verweist *LpfnOutput* 0 zurückgibt, ist das Bild wird angezeigt, jedoch nicht abgeblendet.
+Gibt die Anzahl der Zeichen, die ausgegeben werden. Wenn dieser Parameter 0 (null) ist `GrayString` berechnet die Länge der Zeichenfolge (vorausgesetzt, dass *LpData* ist ein Zeiger auf Zeichenfolge). Wenn *nCount* ist 1 und die Funktion verweist *LpfnOutput* 0 zurückgibt, ist das Bild wird angezeigt, jedoch nicht abgeblendet.
 
 *w*<br/>
 Gibt die logische X-Koordinate der Startposition des Rechtecks, das Sie die Zeichenfolge enthält.
@@ -6891,7 +6891,7 @@ Gibt die logische y-Koordinate des Anfangspunkts der Zeichenfolge an.
 Verweist auf die Zeichenfolge, die gezeichnet werden soll. Sie können entweder einen Zeiger übergeben, um ein Array von Zeichen oder ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt für diesen Parameter.
 
 *nCount*<br/>
-Gibt die Anzahl von Zeichen in der Zeichenfolge an. Wenn *nCount* -1 ist, wird die Länge berechnet.
+Gibt an, die [Länge der Zeichenfolge](/windows/desktop/gdi/specifying-length-of-text-output-string) verweist *LpszString*.
 
 *nTabPositions*<br/>
 Gibt die Anzahl der Werte im Array der Tabstopp Positionen an.

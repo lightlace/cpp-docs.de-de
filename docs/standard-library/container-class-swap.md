@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - swap method
 ms.assetid: 898c219c-bc8e-4d14-a149-6240426c693f
-ms.openlocfilehash: 2c2b87e8cc51248fd3d29df7f361fff92da72957
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b344747c42e9b8b751b97747aacec0b39d10d6a1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210843"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221520"
 ---
 # <a name="container-classswap"></a>Container-Klasse::swap
 
 > [!NOTE]
-> Dieses Thema ist in der Dokumentation zu Visual C++ als nicht funktionierendes Beispiel für Container aufgeführt, die in der C++-Standardbibliothek verwendet werden. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
+> Dieses Thema ist in der Microsoft C++ Dokumentation als nicht funktionierendes Beispiel für Container in verwendet die C++ Standard-Bibliothek. Weitere Informationen finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
 
 Tauscht die gesteuerten Sequenzen zwischen **\*this** und seinem Argument aus
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5f18a7faa4e77571a87cc0d76a43240aaf1fd52c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384685"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447227"
 ---
 # <a name="reflection-ccli"></a>Reflektion (C++/CLI)
 
@@ -34,7 +34,7 @@ Beachten Sie, dass der angegebene Assemblyname des starken Namens ist (finden Si
 Am häufigsten wird über die <xref:System.Object.GetType%2A>-Methode auf Reflektionsfunktionen zugegriffen. Diese Methode wird bereitgestellt, indem <xref:System.Object?displayProperty=nameWithType>, aus der alle Garbage Collection-Klassen abgeleitet werden.
 
 > [!NOTE]
-> Reflektion einer mit Visual C++-Compiler erstellte .exe ist nur zulässig, wenn die .exe mit erstellt wurde die **/CLR: pure** oder **/CLR: safe** Compileroptionen. Die **/CLR: pure** und **/CLR: safe** Compileroptionen sind in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht verfügbar. Finden Sie unter [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) für Weitere Informationen.
+> Reflektion auf ein .exe erstellt mit dem Microsoft C++ Compiler ist nur zulässig, wenn die .exe mit erstellt wurde die **/CLR: pure** oder **/CLR: safe** Compileroptionen. Die **/CLR: pure** und **/CLR: safe** Compileroptionen sind in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht verfügbar. Finden Sie unter [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) für Weitere Informationen.
 
 Weitere Informationen finden Sie unter <xref:System.Reflection>
 
@@ -181,7 +181,7 @@ Wenn der obige Code in eine DLL mit dem Namen vcpp_reflection_6.dll kompiliert w
 
 Sobald das Reflektionssystem die Assembly, ein Array von erfolgreich lädt **Typ** Objekte wird abgerufen, mit der <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> Funktion. Jedes Arrayelement enthält Informationen zu einem anderen Typ, obwohl in diesem Fall nur eine Klasse definiert ist. Mithilfe einer Schleife jeden **Typ** wird in diesem Array die Typmember mit abgefragt der **GetMembers** Funktion. Diese Funktion gibt ein Array von **MethodInfo** Objekten, jedes Objekt, das Informationen über die Memberfunktion, Datenmember oder Eigenschaft im Typ enthält.
 
-Beachten Sie, dass die Liste der Methoden explizit die Funktionen enthält, die in definierten **TestClass** und die Funktionen implizit geerbt wird, von der **System:: Object** Klasse. Bedingt dadurch, dass Eigenschaften in .NET- anstatt in Visual C++-Syntax beschrieben sind, werden sie als die zugrunde liegenden Datenmember angezeigt, auf die von den get-/set-Funktionen zugegriffen wird. Die get-/set-Funktionen werden in dieser Liste als reguläre Methoden angezeigt. Die Reflektion wird durch die Common Language Runtime und nicht durch den Visual C++-Compiler unterstützt.
+Beachten Sie, dass die Liste der Methoden explizit die Funktionen enthält, die in definierten **TestClass** und die Funktionen implizit geerbt wird, von der **System:: Object** Klasse. Bedingt dadurch, dass Eigenschaften in .NET- anstatt in Visual C++-Syntax beschrieben sind, werden sie als die zugrunde liegenden Datenmember angezeigt, auf die von den get-/set-Funktionen zugegriffen wird. Die get-/set-Funktionen werden in dieser Liste als reguläre Methoden angezeigt. Die Reflektion wird durch die common Language Runtime unterstützt, nicht von der Microsoft C++ Compiler.
 
 Obwohl mit diesem Code bereits eine von Ihnen definierte Assembly überprüft wurde, können Sie ihn auch zur Überprüfung von .NET-Assemblys verwenden. Wenn Sie "TestAssembly" beispielsweise in "mscorlib" ändern, wird eine Liste aller in "mscorlib.dll" definierten Typen und Methoden angezeigt.
 

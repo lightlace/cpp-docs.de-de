@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: b2dc48e2568e180820f8bca008c66878af4b575e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27b82fb7a688c8cc7a3df734a7e60a17f7ffa184
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372295"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446765"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Erstellen eines MFC-ActiveX-Steuerelements
 
@@ -36,7 +36,7 @@ Die einfachste Möglichkeit zum Erstellen eines MFC-ActiveX-Steuerelements ist d
 
 1. Klicken Sie auf **Fertig stellen** den Assistenten zu schließen und öffnen Sie das neue Projekt in der Entwicklungsumgebung.
 
-Nachdem Sie Ihr Projekt erstellt haben, können Sie anzeigen, dass die Dateien im **Projektmappen-Explorer**. Weitere Informationen zu den vom Assistenten erstellten Dateien im Projekt finden Sie in der projekteigenen Datei "Readme.txt". Weitere Informationen zu den Dateitypen finden Sie unter [für Visual C++-Projekte erstellte Dateitypen](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Nachdem Sie Ihr Projekt erstellt haben, können Sie anzeigen, dass die Dateien im **Projektmappen-Explorer**. Weitere Informationen zu den vom Assistenten erstellten Dateien im Projekt finden Sie in der projekteigenen Datei "Readme.txt". Weitere Informationen zu den Dateitypen finden Sie unter [für visuelle Element erstellte Dateitypen C++ Projekte](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 Nachdem Sie Ihr Projekt erstellt haben, können Sie die Code-Assistenten hinzufügen [Funktionen](../../ide/add-member-function-wizard.md), [Variablen](../../ide/add-member-variable-wizard.md), [Ereignisse](../../ide/add-event-wizard.md), [Eigenschaften](../../ide/names-add-property-wizard.md), und [Methoden](../../ide/add-method-wizard.md). Weitere Informationen zum Anpassen von ActiveX-Steuerelement finden Sie unter [MFC-ActiveX-Steuerelemente](../../mfc/mfc-activex-controls.md).
 

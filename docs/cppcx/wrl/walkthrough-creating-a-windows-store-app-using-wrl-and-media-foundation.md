@@ -1,20 +1,23 @@
 ---
 title: 'Exemplarische Vorgehensweise: Erstellen einer UWP-app mithilfe von WRL und Media Foundation'
-ms.date: 09/17/2018
+ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409205"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558267"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Exemplarische Vorgehensweise: Erstellen einer UWP-app mithilfe von WRL und Media Foundation
 
-Erfahren Sie, wie die Windows Runtime C++ Template Library (WRL) verwenden, um eine app für die universelle Windows-Plattform (UWP) erstellen, verwendet [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
+> [!NOTE]
+> Für neue UWP-apps und Komponenten, empfehlen wir die Verwendung von [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/), einen neuen C ++ 17-standardsprachprojektion für Windows-Runtime-APIs. C++ / WinRT finden Sie in das Windows 10 SDK Version 1803 gerechnet. C++ / WinRT ist nur in Headerdateien implementiert wird, und soll Sie mit erstklassigen Zugriff auf die moderne Windows-API bereitstellen.
 
-In diesem Beispiel wird eine benutzerdefinierte Media Foundation-Transformation erstellt, in der ein Graustufeneffekt auf Bilder angewendet wird, die über eine Webcam erfasst werden.  Die App verwendet C++ zum Definieren der benutzerdefinierten Transformation und C# zum Verwenden der Komponente für das Transformieren der erfassten Bilder.
+In diesem Tutorial erfahren Sie, wie zur Verwendung der Windows-Runtime C++ Template Library (WRL), um eine app für die universelle Windows-Plattform (UWP) erstellen, verwendet [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
+
+In diesem Beispiel wird eine benutzerdefinierte Media Foundation-Transformation erstellt, in der ein Graustufeneffekt auf Bilder angewendet wird, die über eine Webcam erfasst werden. Die App verwendet C++ zum Definieren der benutzerdefinierten Transformation und C# zum Verwenden der Komponente für das Transformieren der erfassten Bilder.
 
 > [!NOTE]
 > Anstelle von C# können Sie auch JavaScript, Visual Basic oder C++ verwenden, um die benutzerdefinierte Transformierenkomponente zu verwenden.
@@ -25,6 +28,8 @@ In den meisten Fällen können Sie mithilfe C++ / CX verwenden, um die Windows-R
 > Auch wenn dieses Codebeispiel lang ist, stellt es das erforderliche Minimum dar, um eine nützliche Media Foundation-Transformation zu erstellen. Sie können es als Ausgangspunkt für Ihre eigene benutzerdefinierte Transformation verwenden. In diesem Beispiel basiert auf der [medienerweiterungen](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), anzuwendende medienerweiterungen verwendet Effekte auf Videos, decodieren, und schemahandler zu erstellen, die Medienstreams generieren.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
+
+- In Visual Studio 2017 und höher ist die UWP-Unterstützung eine optionale Komponente. Um es zu installieren, öffnen Sie Visual Studio-Installer über das Windows-Startmenü aus, und suchen Sie Ihre Version von Visual Studio. Wählen Sie **ändern** und stellen Sie sicher, dass die **Entwicklung von universellen Windows-Plattform** Kachel aktiviert ist. Klicken Sie unter **optionale Komponenten** überprüfen  **C++ -Tools für UWP (v141)** für Visual Studio 2017 oder  **C++ -Tools für UWP (v142)** für Visual Studio-2019. Überprüfen Sie die Version des Windows SDK, das Sie verwenden möchten. 
 
 - Erleben Sie mit der [Windows-Runtime](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 

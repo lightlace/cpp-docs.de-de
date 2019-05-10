@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: 9280f3d96088d988a9d5cfe0f3d56444b865167e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a3d4c0446cd8dde83febb1b4269811b5dec3c477
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154333"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222102"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Ausnahmespezifikationen (Throw, "noexcept") (C++)
 
@@ -29,7 +29,7 @@ weist den Compiler an, dass die Funktion keine Ausnahmen auslöst. Allerdings **
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-In der folgende Tabelle sind die Microsoft Visual C++-Implementierung von Ausnahmespezifikationen zusammengefasst:
+Die folgende Tabelle enthält die Microsoft C++ Implementierung von Ausnahmespezifikationen:
 
 |Ausnahmespezifikation|Bedeutung|
 |-----------------------------|-------------|

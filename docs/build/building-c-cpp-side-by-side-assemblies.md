@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: 037fde58366ea4548ce3c7ff56c38cfc1a58aa17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d5d7652b6424177191275f8f80d7b1f6cf02b261
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195143"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221130"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Erstellen von parallelen C/C++-Assemblys
 
 Ein [Seite-an-Seite-Assembly](/windows/desktop/SbsCs/about-side-by-side-assemblies-) ist eine Sammlung von Ressourcen – eine Gruppe von DLLs, Windows-Klassen, COM-Servern, Typbibliotheken oder Schnittstellen – für eine Anwendung für die Verwendung zur Laufzeit verfügbar. Der wichtigste Vorteil von Neuverpacken von DLLs in Assemblys ist, dass mehrere Versionen der Assemblys von Anwendungen gleichzeitig verwendet werden können, und es möglich, den, der derzeit installierten Dienstassemblys im Falle einer Updateversion ist.
 
-Visual C++-Anwendung kann eine oder mehrere DLLs in verschiedenen Teilen der Anwendung verwenden. Zur Laufzeit die DLLs sind in der zentrale Prozess geladen, und der erforderliche Code ausgeführt wird. Die Anwendung basiert auf dem Betriebssystem, suchen Sie die angeforderten DLLs, zu verstehen, habe anderen abhängigen DLLs geladen werden, und Laden Sie diese dann zusammen mit den angeforderten-DLL. Auf Windows-Betriebssystemversionen sucht älter als Windows XP, Windows Server 2003 und Windows Vista, vom Ladeprogramm des Betriebssystems abhängigen DLLs im lokalen Ordner der Anwendung oder einen anderen Ordner auf dem Systempfad angegeben. Auf Windows XP, Windows Server 2003 und Windows Vista, kann vom Ladeprogramm des Betriebssystems auch nach abhängigen DLLs, die mithilfe von suchen eine [manifest](/windows/desktop/sbscs/manifests) -Datei, und suchen Sie für Seite-an-Seite-Assemblys, die diese DLLs enthalten.
+Ein C++ Anwendung kann eine oder mehrere DLLs in verschiedenen Teilen der Anwendung verwenden. Zur Laufzeit die DLLs sind in der zentrale Prozess geladen, und der erforderliche Code ausgeführt wird. Die Anwendung basiert auf dem Betriebssystem, suchen Sie die angeforderten DLLs, zu verstehen, habe anderen abhängigen DLLs geladen werden, und Laden Sie diese dann zusammen mit den angeforderten-DLL. Auf Windows-Betriebssystemversionen sucht älter als Windows XP, Windows Server 2003 und Windows Vista, vom Ladeprogramm des Betriebssystems abhängigen DLLs im lokalen Ordner der Anwendung oder einen anderen Ordner auf dem Systempfad angegeben. Auf Windows XP, Windows Server 2003 und Windows Vista, kann vom Ladeprogramm des Betriebssystems auch nach abhängigen DLLs, die mithilfe von suchen eine [manifest](/windows/desktop/sbscs/manifests) -Datei, und suchen Sie für Seite-an-Seite-Assemblys, die diese DLLs enthalten.
 
 Standardmäßig, wenn eine DLL, mit Visual Studio erstellt wird hat ein [Anwendungsmanifest](/windows/desktop/SbsCs/application-manifests) eingebettet als Ressource "RT_MANIFEST" mit der ID gleich 2. Genau wie bei einer ausführbaren Datei beschreibt dieses Manifest diese DLL-Abhängigkeiten von anderen Assemblys. Dies setzt voraus, dass die DLL nicht Teil einer Seite-an-Seite-Assembly ist und Anwendungen, die diese DLL abhängig sind nicht für das ein Anwendungsmanifest zu laden, aber verwenden stattdessen auf das Ladeprogramm des Betriebssystems finden Sie diese DLL-Datei unter dem Systempfad verwenden möchte.
 

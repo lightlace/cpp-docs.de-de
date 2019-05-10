@@ -1,17 +1,17 @@
 ---
 title: Arten von DLLs
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - MFC DLLs [C++], types
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: f4aa8b1be7cd9ad32b10f12c5d1dfd3ae86adc1d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 9e66fa1c24ea00961d99eef02c15526eff4eb533
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341777"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221487"
 ---
 # <a name="kinds-of-dlls"></a>Arten von DLLs
 
@@ -19,9 +19,9 @@ Anhand der Informationen unter diesem Thema können Sie feststellen, welche Art 
 
 ##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> Verschiedene Arten von DLLs zur Verfügung
 
-Mit Visual C++ können Sie Win32-DLLs in C oder C++ erstellen, die nicht die MFC-Bibliothek (Microsoft Foundation Class Library) verwenden. Um ein MFC-fremdes DLL-Projekt zu erstellen, verwenden Sie den Win32-Anwendungs-Assistenten.
+Sie können mithilfe von Visual Studio, Win32-DLLs in C erstellen oder C++ verwenden, die nicht die Microsoft Foundation Class (MFC)-Bibliothek. Um ein MFC-fremdes DLL-Projekt zu erstellen, verwenden Sie den Win32-Anwendungs-Assistenten.
 
-Die MFC-Bibliothek selbst ist über den MFC-DLL-Assistenten entweder in Static Link Libraries oder in einer Reihe von DLLs verfügbar. Wenn die DLL MFC verwendet, unterstützt Visual C++ drei verschiedene Szenarien für die DLL-Entwicklung:
+Die MFC-Bibliothek selbst ist über den MFC-DLL-Assistenten entweder in Static Link Libraries oder in einer Reihe von DLLs verfügbar. Wenn die DLL MFC verwendet wird, werden drei verschiedene Szenarien für die DLL-Entwicklung von Visual Studio unterstützt:
 
 - Erstellen einer reguläres MFC-DLL, die statisch mit MFC verknüpft wird
 
@@ -43,7 +43,7 @@ Die MFC-Bibliothek selbst ist über den MFC-DLL-Assistenten entweder in Static L
 
 ##  <a name="_core_which_kind_of_dll_to_use"></a> Entscheiden, welche Art von DLL verwendet
 
-Wenn die DLL nicht MFC verwendet, erstellen Sie mit Visual C++ eine MFC-fremde Win32-DLL. Das (statische oder dynamische) Verknüpfen einer DLL mit MFC beansprucht erhebliche Festplattenspeicher- und Arbeitsspeicherkapazitäten. Sie sollten eine Verknüpfung mit MFC nur dann vorsehen, wenn MFC von der DLL auch tatsächlich verwendet wird.
+Wenn die DLL nicht MFC verwendet, verwenden Sie Visual Studio, um ein MFC - fremde Win32-DLL zu erstellen. Das (statische oder dynamische) Verknüpfen einer DLL mit MFC beansprucht erhebliche Festplattenspeicher- und Arbeitsspeicherkapazitäten. Sie sollten eine Verknüpfung mit MFC nur dann vorsehen, wenn MFC von der DLL auch tatsächlich verwendet wird.
 
 Wenn die DLL MFC verwenden und entweder MFC oder MFC-fremden Anwendungen verwendet werden, müssen Sie erstellen entweder eine reguläre MFC-DLL, die dynamisch mit MFC verknüpft oder eine reguläre MFC-DLL, die statisch mit MFC verknüpft wird. In den meisten Fällen möchten Sie wahrscheinlich auch eine reguläre MFC-DLL zu verwenden, die dynamisch mit MFC verknüpft wird, da die Dateigröße der DLL wird wesentlich kleiner ist und die einsparungen im Arbeitsspeicher verwenden Sie die freigegebene Version von MFC können erheblich sein. Bei einer statischen Verknüpfung mit MFC wird die DLL größer, und es wird möglicherweise mehr Arbeitsspeicher benötigt, da eine eigene Kopie des MFC-Bibliothekscodes geladen wird.
 
@@ -54,8 +54,6 @@ Ein Nachteil der dynamischen Verknüpfung mit MFC besteht darin, dass Sie die ge
 Wenn Ihre DLL nur von ausführbaren MFC-Dateien verwendet wird, müssen Sie die Wahl zwischen dem Erstellen einer regulären MFC-DLL oder eine MFC-Erweiterungs-DLL. Wenn Ihre DLL, wiederverwendbare Klassen von bestehenden MFC-Klassen abgeleitet implementiert oder MFC abgeleitete Objekte zwischen Anwendung und DLL übergeben werden müssen, müssen Sie eine MFC-Erweiterungs-DLL erstellen.
 
 Wenn die DLL dynamisch mit MFC verknüpft wird, können die MFC-DLLs zusammen mit der DLL verteilt werden. Diese Architektur ist besonders geeignet, wenn die Klassenbibliothek von mehreren ausführbaren Dateien gemeinsam genutzt wird, um Festplattenspeicher zu sparen und die Arbeitsspeicherauslastung zu minimieren.
-
-Vor Version 4.0 unterstützte Visual C++ nur zwei Arten von DLLs, die MFC verwendeten: USRDLLs und AFXDLLs. Reguläre, statisch mit MFC verknüpfte MFC-DLLs haben dieselben Merkmale wie die frühere USRDLL. MFC-Erweiterungs-DLLs haben dieselben Merkmale wie die früheren AFXDLLs.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?
 
@@ -69,4 +67,4 @@ Vor Version 4.0 unterstützte Visual C++ nur zwei Arten von DLLs, die MFC verwen
 
 ## <a name="see-also"></a>Siehe auch
 
-[DLLs in Visual C++](dlls-in-visual-cpp.md)
+[Erstellen von C/C++-DLLs in Visual Studio](dlls-in-visual-cpp.md)

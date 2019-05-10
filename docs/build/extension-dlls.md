@@ -1,8 +1,6 @@
 ---
 title: Erweiterungs-DLLs
-ms.date: 11/04/2016
-f1_keywords:
-- afxdll
+ms.date: 05/06/2019
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 55b1e55a9c7bdf6daaff98a7fe3f1a2a55f68334
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195659"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220763"
 ---
 # <a name="mfc-extension-dlls"></a>MFC-Erweiterungs-DLLs
 
@@ -52,7 +50,7 @@ Eine MFC-Erweiterungs-DLL verwendet die gemeinsam genutzte MFC-Version auf diese
 
 Vor MFC, Version 4.0, wurde dieser DLL-Typ AFXDLL genannt. Diese Bezeichnung bezieht sich auf die `_AFXDLL` Präprozessorsymbol, das beim Erstellen der DLL definiert ist.
 
-Die Importbibliotheken für die freigegebene Version von MFC heißen gemäß der Konvention, die in beschriebenen [Namenskonventionen für MFC-DLLs](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Visual C++ bietet vordefinierte Versionen der MFC-DLLs sowie eine Reihe von MFC-fremden DLLs, die Sie mit Ihren Anwendungen verwenden und weitergeben können. Diese sind in der Datei Redist.txt dokumentiert, die im Ordner Programme\Microsoft Visual Studio installiert ist.
+Die Importbibliotheken für die freigegebene Version von MFC heißen gemäß der Konvention, die in beschriebenen [Namenskonventionen für MFC-DLLs](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Visual Studio bietet vordefinierte Versionen der MFC-DLLs sowie eine Reihe von MFC - fremde DLLs, die Sie verwenden können, und mit Ihren Anwendungen verteilen. Diese sind in der Datei Redist.txt dokumentiert, die im Ordner Programme\Microsoft Visual Studio installiert ist.
 
 Wenn Sie den Export über eine DEF-Datei vornehmen, fügen Sie den folgenden Code am Anfang und am Ende der Headerdatei ein:
 
@@ -132,4 +130,4 @@ Wenn der MFC-Erweiterungs-DLL zusätzliche Daten für jede Anwendung zu verwalte
 
 ## <a name="see-also"></a>Siehe auch
 
-[DLLs in Visual C++](dlls-in-visual-cpp.md)
+[Erstellen von C/C++-DLLs in Visual Studio](dlls-in-visual-cpp.md)

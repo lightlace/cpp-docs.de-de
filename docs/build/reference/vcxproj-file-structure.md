@@ -4,12 +4,12 @@ ms.date: 09/18/2018
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317119"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446503"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>VCXPROJ- und PROPS-Dateistruktur
 
@@ -21,13 +21,13 @@ Wenn Sie eine VCXPROJ-Datei manuell bearbeiten, sollten Sie Folgendes beachten:
 
 1. Die Struktur der Datei muss einer vorgeschriebenen Form folgen, die in diesem Artikel beschrieben wird.
 
-1. Das Visual C++-Projektsystem unterstützt derzeit keine Platzhalter in Projektelementen. Folgendes wird beispielsweise nicht unterstützt:
+1. Visual Studio C++ Projektsystem unterstützt derzeit keine Platzhalter in Projektelementen. Folgendes wird beispielsweise nicht unterstützt:
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Das Visual C++-Projektsystem unterstützt derzeit keine Makros in Pfaden von Projektelementen. Folgendes wird beispielsweise nicht unterstützt:
+1. Visual Studio C++ Projektsystem unterstützt derzeit keine Makros in Projektpfade-Element. Folgendes wird beispielsweise nicht unterstützt:
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -224,7 +224,7 @@ Die Metadaten sollten Konfigurationsbedingungen für jede Konfiguration enthalte
 </ItemGroup>
 ```
 
-Das Visual C++-Projektsystem unterstützt derzeit keine Platzhalter in Projektelementen.
+Visual Studio C++ Projektsystem unterstützt derzeit keine Platzhalter in Projektelementen.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Das Visual C++-Projektsystem unterstützt derzeit keine Platzhalter in Projektel
 </ItemGroup>
 ```
 
-Das Visual C++-Projektsystem unterstützt derzeit keine Makros in Projektelementen.
+Visual Studio C++ Projektsystem unterstützt derzeit keine Makros in Projektelementen.
 
 ```xml
 <ItemGroup>
