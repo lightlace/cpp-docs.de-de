@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b985799849a268010dff63f9f7bc25e474b365e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148320"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448517"
 ---
 # <a name="c-attributes-for-com-and-net"></a>C++-Attribute für COM und .NET
 
@@ -34,7 +34,7 @@ Attribute erweitern C++ in Anweisungen, die derzeit nicht möglich, ohne die kla
 
 - Ersetzt die große Menge der IDL-Code, die von einer COM‑Komponente, einige Attribute, die präzise erforderlich.
 
-Beispielsweise um einen einfachen Ereignisempfänger für eine generische ATL-Klasse zu implementieren, Sie können Anwenden der [Event_receiver](event-receiver.md) Attribut für eine bestimmte Objektklasse, z. B. `CMyReceiver`. Die `event_receiver` Attribut wird dann kompiliert, vom Visual C++-Compiler, die den entsprechenden Code in der Objektdatei einfügt.
+Beispielsweise um einen einfachen Ereignisempfänger für eine generische ATL-Klasse zu implementieren, Sie können Anwenden der [Event_receiver](event-receiver.md) Attribut für eine bestimmte Objektklasse, z. B. `CMyReceiver`. Die `event_receiver` Attribut wird dann kompiliert, das Microsoft C++ -Compiler, der den entsprechenden Code in der Objektdatei einfügt.
 
 ```cpp
 [event_receiver(com)]
@@ -49,7 +49,7 @@ Anschließend können Sie festlegen, um die `CMyReceiver` Methoden `handler1` un
 
 ## <a name="basic-mechanics-of-attributes"></a>Grundlegende Funktionsweise der Attribute
 
-Es gibt drei Möglichkeiten zum Einfügen von Attributen in Ihr Projekt. Erstens können Sie sie manuell in Ihren Quellcode einfügen. Zweitens können Sie sie mit dem Eigenschaftenraster eines Objekts in Ihrem Projekt einfügen. Schließlich können Sie mithilfe der verschiedenen Assistenten einfügen. Weitere Informationen zur Verwendung der **Eigenschaften** Fenster und die verschiedenen Assistenten, finden Sie unter [erstellen und Verwalten von Visual C++-Projekte](../../build/creating-and-managing-visual-cpp-projects.md).
+Es gibt drei Möglichkeiten zum Einfügen von Attributen in Ihr Projekt. Erstens können Sie sie manuell in Ihren Quellcode einfügen. Zweitens können Sie sie mit dem Eigenschaftenraster eines Objekts in Ihrem Projekt einfügen. Schließlich können Sie mithilfe der verschiedenen Assistenten einfügen. Weitere Informationen zur Verwendung der **Eigenschaften** Fenster und die verschiedenen Assistenten, finden Sie unter [Visual Studio-Projekte – C++ ](../../build/creating-and-managing-visual-cpp-projects.md).
 
 Als wenn das Projekt erstellt wird, analysiert, der Compiler jede C++-Quelldatei, erzeugt eine Objektdatei. Allerdings ist es, wenn der Compiler ein Attribut trifft, analysiert und syntaktisch überprüft. Der Compiler ruft dann dynamisch ein Attributanbieters zum Einfügen von Code oder andere Änderungen vornehmen, zum Zeitpunkt der Kompilierung. Die-Implementierung des Anbieters, hängt von den Typ des Attributs ab. ATL-bezogene Attribute werden beispielsweise durch Atlprov.dll implementiert.
 
@@ -64,7 +64,7 @@ Die folgende Abbildung veranschaulicht die Beziehung zwischen dem Compiler und A
 
 ## <a name="building-an-attributed-program"></a>Erstellen eines attributierten Programms
 
-Nachdem Sie Visual C++-Attribute in Ihren Quellcode einfügen, sollten Sie die Visual C++-Compiler, um eine Bibliothek und IDL-Datei für Sie zu generieren. Die folgenden Linkeroptionen können Sie TLB-Datei und IDL-Dateien:
+Nachdem Sie Visual einfügen C++ Attribute in Ihren Quellcode, sollten Sie die Microsoft C++ Compiler eine Typ-Bibliothek und IDL-Datei für Sie erstellt. Die folgenden Linkeroptionen können Sie TLB-Datei und IDL-Dateien:
 
 - [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 
