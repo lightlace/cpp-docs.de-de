@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 44671985b2ab22e866a63b284a4b22d87b614667
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: cd1d7910d95fa7e412f9843da2cec7ae10a38ef6
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446749"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708225"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Erstellen eines MFC-DLL-Projekts
 
@@ -36,7 +36,7 @@ Eine MFC-DLL ist eine Binärdatei und fungiert als gemeinsam genutzte Funktionsb
 
 1. Klicken Sie auf **Fertig stellen** den Assistenten zu schließen, und öffnen das neue Projekt in **Projektmappen-Explorer**.
 
-Nachdem das Projekt erstellt wurde, sehen Sie die Dateien im **Projektmappen-Explorer**. Weitere Informationen zu den vom Assistenten erstellten Dateien im Projekt finden Sie in der projekteigenen Datei "Readme.txt". Weitere Informationen zu den Dateitypen finden Sie unter [für visuelle Element erstellte Dateitypen C++ Projekte](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Nachdem das Projekt erstellt wurde, sehen Sie die Dateien im **Projektmappen-Explorer**. Weitere Informationen zu den vom Assistenten erstellten Dateien im Projekt finden Sie in der projekteigenen Datei "Readme.txt". Weitere Informationen zu den Dateitypen finden Sie unter [für Visual Studio erstellte Dateitypen C++ Projekte](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Siehe auch
 

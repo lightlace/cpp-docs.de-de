@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: c70c82d14227687f34309f8d125e3aeab53034a5
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 0f16fe577f1dc02dc9a2fc0cffb5899b16ad8cca
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448435"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708236"
 ---
 # <a name="creating-an-mfc-application"></a>Erstellen einer MFC-Anwendung
 
@@ -47,7 +47,7 @@ Abhängig von den im Assistenten ausgewählten Optionen erstellt der MFC-Anwendu
 
 1. Klicken Sie auf **Fertig stellen** den Assistenten zu schließen und öffnen Sie das neue Projekt in der Entwicklungsumgebung.
 
-Nachdem das Projekt erstellt wurde, sehen Sie die Dateien im **Projektmappen-Explorer**. Weitere Informationen zu den vom Assistenten erstellten Dateien im Projekt finden Sie in der projekteigenen Datei "Readme.txt". Weitere Informationen zu den Dateitypen finden Sie unter [für visuelle Element erstellte Dateitypen C++ Projekte](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Nachdem das Projekt erstellt wurde, sehen Sie die Dateien im **Projektmappen-Explorer**. Weitere Informationen zu den vom Assistenten erstellten Dateien im Projekt finden Sie in der projekteigenen Datei "Readme.txt". Weitere Informationen zu den Dateitypen finden Sie unter [für Visual Studio erstellte Dateitypen C++ Projekte](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-ms.openlocfilehash: e7eb1686f191e3bfc60632447978e16ff48b2ab8
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 17c1b30811fa1d9c3f3bc04a46553c617eff966b
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448590"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708142"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Steuerelementnamen, MFC-ActiveX-Steuerelement-Assistent
 
@@ -86,5 +86,5 @@ Geben Sie die Namen für die Control-Klasse und die Page-Klasse, die Typnamen, u
 [MFC-ActiveX-Steuerelement-Assistent](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Anwendungseinstellungen, MFC-ActiveX-Steuerelement-Assistent](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [Steuerelementeinstellungen, MFC-ActiveX-Steuerelement-Assistent](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)<br/>
-[Datei erstellt, für visuelle C++ Projekte](../../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Für Visual Studio-Datei erstellt C++ Projekte](../../build/reference/file-types-created-for-visual-cpp-projects.md)
 
