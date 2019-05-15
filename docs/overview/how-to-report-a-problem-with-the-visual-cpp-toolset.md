@@ -4,16 +4,16 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 266ea37510b636cd1dc1cfa5909552ace50df1bc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 21931fc4976c909c77120e696f25f93c0a0fda0b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782262"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446768"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Melden eines Problems mit dem Visual C++-Toolset oder der -Dokumentation
 
-Wenn Sie Probleme mit dem Microsoft Visual C++-Compiler, -Linker oder anderen Tools und Bibliotheken haben, informieren Sie uns darüber. Wenn in unserer Dokumentation ein Fehler vorliegt, möchten wir das natürlich auch wissen.
+Wenn Probleme mit dem Microsoft C++-Compiler, Linker oder anderen Tools und Bibliotheken auftreten, teilen Sie uns dies bitte mit. Wenn in unserer Dokumentation ein Fehler vorliegt, möchten wir das natürlich auch wissen.
 
 ## <a name="how-to-report-a-c-toolset-issue"></a>Melden eines Problems mit einem C++-Toolset
 

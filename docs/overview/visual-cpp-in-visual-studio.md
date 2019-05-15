@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: d8826c92077ac374b67a7294fe040d6fe8dea927
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124745"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222604"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
@@ -103,7 +103,7 @@ Informationen zum Erstellen von DLLs, die die Interoperabilität zwischen native
 [Linux-Programmierung](../linux/index.md)<br/>
 Verwenden Sie die Visual Studio-IDE, um einen Linux-Remotecomputer für die Kompilierung mit GCC zu programmieren und bereitzustellen.
 
-[DLLs in Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[Erstellen von C/C++-DLLs in Visual Studio](../build/dlls-in-visual-cpp.md)<br/>
 Stellen Sie fest, wie Win32, ATL und MFC zum Erstellen von Windows-Desktop DLLs verwendet werden und Informationen zum Kompilieren und Registrieren der DLL bereitstellen.
 
 [Parallele Programmierung](../parallel/parallel-programming-in-visual-cpp.md)<br/>
