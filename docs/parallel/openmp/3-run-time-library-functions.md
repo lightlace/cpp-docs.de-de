@@ -1,13 +1,13 @@
 ---
 title: 3. Funktionen der Laufzeitbibliothek
-ms.date: 01/17/2019
+ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 7ecb2a79ad61169cdeabc9bd4893147a5de6a210
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525035"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611185"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funktionen der Laufzeitbibliothek
 
@@ -55,6 +55,8 @@ Diese Funktion hat die Auswirkungen, die oben beschriebenen, beim Aufrufen durch
 
 Dieser Aufruf hat Vorrang vor den `OMP_NUM_THREADS` -Umgebungsvariablen angegeben. Der Standardwert für die Anzahl der Threads, die durch den Aufruf festgelegt werden kann `omp_set_num_threads` oder durch Festlegen der `OMP_NUM_THREADS` Umgebungsvariable kann explizit überschrieben werden, auf einem einzelnen `parallel` -Anweisung durch Angabe der `num_threads` Klausel.
 
+Weitere Informationen finden Sie unter [Omp_set_dynamic](#317-omp_set_dynamic-function).
+
 #### <a name="cross-references"></a>Querverweise
 
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
@@ -74,6 +76,8 @@ int omp_get_num_threads(void);
 Die `num_threads` -Klausel, die `omp_set_num_threads` -Funktion, und die `OMP_NUM_THREADS` Umgebungsvariable steuern die Anzahl der Threads in einem Team.
 
 Wenn die Anzahl der Threads nicht explizit vom Benutzer festgelegt wurde, ist die Standardeinstellung Implementierung definiert. Diese Funktion für die nächste einschließende bindet `parallel` Richtlinie. Wenn Sie aufgerufen wird, über einen seriellen Teil eines Programms oder eines geschachtelten parallelen Bereichs, das serialisiert wird, gibt diese Funktion 1 zurück.
+
+Weitere Informationen finden Sie unter [Omp_set_dynamic](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Querverweise
 
@@ -165,6 +169,12 @@ Ein Aufruf von `omp_set_dynamic` hat Vorrang vor den `OMP_DYNAMIC` -Umgebungsvar
 
 Der Standardwert für die dynamische Anpassung des Threads wird die Implementierung definiert. Daher sollten Benutzer-Codes, die abhängig von einer bestimmten Anzahl von Threads zur richtigen Ausführung explizit deaktivieren, dynamische Threads. Implementierungen müssen nicht die Möglichkeit bieten, die Anzahl der Threads dynamisch anpassen, aber sie müssen die Schnittstelle für Portabilität auf allen Plattformen unterstützt.
 
+#### <a name="microsoft-specific"></a>Microsoft-spezifisch
+
+Die aktuelle Unterstützung des `omp_get_dynamic` und `omp_set_dynamic` lautet wie folgt: 
+
+Der Eingabeparameter für `omp_set_dynamic` wirkt sich nicht auf die Richtlinie threading und ändert sich nicht auf die Anzahl der Threads. `omp_get_num_threads` immer zurückgegeben, der eine benutzerdefinierte Anzahl, wenn diese festgelegt ist, oder die Nummer des Threads. In der aktuellen Microsoft-Implementierung `omp_set_dynamic(0)` deaktiviert, dynamische threading, damit Sie der vorhandene Satz von Threads für die folgenden parallelen Bereichs wiederverwendet werden kann. `omp_set_dynamic(1)` aktiviert die dynamische threading durch verwerfen den vorhandenen Satz von Threads, und erstellen eine neue Gruppe für den zukünftigen parallelen Bereich. Die Anzahl der Threads in der neuen Gruppe ist identisch mit den alten Satz und basiert auf den Rückgabewert der `omp_get_num_threads`. Verwenden Sie daher für eine optimale Leistung `omp_set_dynamic(0)` vorhandenen Threads wiederverwenden.
+
 #### <a name="cross-references"></a>Querverweise
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
@@ -180,7 +190,7 @@ Die `omp_get_dynamic` Funktion gibt einen Wert ungleich NULL zurück, wenn die d
 int omp_get_dynamic(void);
 ```
 
-Wenn die dynamische Anpassung der Anzahl der Threads von die Implementierung nicht implementiert wird, gibt diese Funktion immer 0 zurück.
+Wenn die dynamische Anpassung der Anzahl der Threads von die Implementierung nicht implementiert wird, gibt diese Funktion immer 0 zurück. Weitere Informationen finden Sie unter [Omp_set_dynamic](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Querverweise
 

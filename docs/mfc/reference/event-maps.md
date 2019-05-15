@@ -1,17 +1,15 @@
 ---
 title: Ereigniszuordnungen
 ms.date: 06/20/2018
-f1_keywords:
-- vc.mfc.macros.maps
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: 512170d7eaa891b3616ca1ea56c29a8bb5cccda9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98614aa41d3131d28c9e0c7584e5a88c2249ef97
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492235"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612231"
 ---
 # <a name="event-maps"></a>Ereigniszuordnungen
 
@@ -82,7 +80,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 *theClass*<br/>
 Gibt an, dass der Name der Steuerelement-Klasse, dessen Ereignis eine Zuordnung, ist.
 
-*Basisklasse*<br/>
+*baseClass*<br/>
 Gibt den Namen der Basisklasse der *TheClass*.
 
 ### <a name="remarks"></a>Hinweise
@@ -145,7 +143,7 @@ Die `VTS_` Konstanten und ihre Bedeutungen lauten wie folgt:
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|WÄHRUNG|
 |VTS_DATE|DATE|
-|VTS_BSTR|**const** __Char\*__|
+|VTS_BSTR|**const** __char\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|HANDLE|
@@ -190,7 +188,7 @@ EVENT_CUSTOM_ID(
 *pszName*<br/>
 Der Name des Ereignisses.
 
-*DISPID*<br/>
+*dispid*<br/>
 Die Dispatch-ID, der vom Steuerelement verwendet wird, wenn das Ereignis ausgelöst wird.
 
 *pfnFire*<br/>

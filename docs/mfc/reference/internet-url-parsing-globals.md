@@ -1,18 +1,16 @@
 ---
 title: Analysieren von Internet-URLs und -Hilfsprogramme
 ms.date: 04/03/2017
-f1_keywords:
-- vc.mfc.macros.isapi
 helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 0831d94f1a6f0293d3605a5e2e9ebde0564baf24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 310e4ffb3fc207d874e97ba1fac65f6f8cb41a31
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293471"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611026"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Analysieren von Internet-URLs und -Hilfsprogramme
 
