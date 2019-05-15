@@ -1,8 +1,6 @@
 ---
-title: 'Tn038 Implementieren von: MFC-OLE-IUnknown'
+title: 'TN038: MFC-OLE-IUnknown-Implementierung'
 ms.date: 06/28/2018
-f1_keywords:
-- vc.mfc.ole
 helpviewer_keywords:
 - aggregation macros [MFC]
 - COM interfaces, base interface
@@ -18,14 +16,14 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-ms.openlocfilehash: 0722ce294e6a088446b8ba681810cf3f7885f122
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a366d200c272570b4806a8642f287a7ef69b430e
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571430"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611312"
 ---
-# <a name="tn038-mfcole-iunknown-implementation"></a>TN038: Implementieren von MFC/OLE-IUnknown
+# <a name="tn038-mfcole-iunknown-implementation"></a>TN038: MFC/OLE-IUnknown-Implementierung
 
 > [!NOTE]
 > Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.
@@ -367,7 +365,7 @@ Darüber hinaus verwendet das Framework Meldungszuordnungen intern. So können S
 
 Zusätzlich zur Unterstützung von eigenständigen COM-Objekten unterstützt MFC auch Aggregation. Aggregation an sich ist zu komplex, ein Thema, um die hier beschriebenen. finden Sie in der [Aggregation](/windows/desktop/com/aggregation) Thema enthält weitere Informationen zum Aggregieren. Dieser Hinweis beschreibt einfach die Unterstützung für die Aggregation, die in den Framework und die Schnittstellenzuordnungen integriert ist.
 
-Es gibt zwei Möglichkeiten, Aggregation zu verwenden: (1) mit einem COM-Objekt, das Aggregation unterstützt und (2) durch Implementierung eines Objekts, von einem anderen aggregiert werden kann. Diese Funktionen können als "Verwenden eines Aggregatobjekts" und "Ausstatten einer Objekt-Implementierung mit Aggregatfähigkeit" bezeichnet werden. MFC unterstützt beide Funktionen.
+Es gibt zwei Möglichkeiten, Aggregation zu verwenden: (1) verwenden ein COM-Objekt, das Aggregation unterstützt und (2) implementieren ein Objekt, das von einem anderen aggregiert werden kann. Diese Funktionen können als "Verwenden eines Aggregatobjekts" und "Ausstatten einer Objekt-Implementierung mit Aggregatfähigkeit" bezeichnet werden. MFC unterstützt beide Funktionen.
 
 ### <a name="using-an-aggregate-object"></a>Verwenden eines Aggregatobjekts
 
@@ -552,7 +550,7 @@ END_INTERFACE_MAP
 *theClass*<br/>
 Die Klasse, in der die Schnittstellenzuordnung definiert werden soll
 
-*Basisklasse*<br/>
+*baseClass*<br/>
 Die Klasse, von der *TheClass* abgeleitet.
 
 #### <a name="remarks"></a>Hinweise
@@ -570,7 +568,7 @@ INTERFACE_PART(theClass, iid, localClass)
 *theClass*<br/>
 Der Name der Klasse, die die Schnittstellenzuordnung enthält.
 
-*IID*<br/>
+*iid*<br/>
 Die `IID`, die der eingebetteten Klasse zugeordnet werden soll.
 
 *localClass*<br/>
