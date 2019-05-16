@@ -95,7 +95,7 @@
 ## [ATL-Auflistungsklassen](atl-collection-classes.md)
 ## [ATL-Registrierungskomponente (Registrar)](atl-registry-component-registrar.md)
 ### [Erstellen von Registrierungsskripts](creating-registrar-scripts.md)
-#### [Einführung in die BNF-Snytax (Backus Naur Form)](understanding-backus-nauer-form-bnf-syntax.md)
+#### [Einführung in die BNF-Syntax (Backus Naur Form)](understanding-backus-naur-form-bnf-syntax.md)
 #### [Einführung in Analysestrukturen](understanding-parse-trees.md)
 #### [Beispiele für die Registrierungsskripterstellung](registry-scripting-examples.md)
 #### [Verwenden von ersetzbaren Parametern (Der Registrierungspräprozessor)](using-replaceable-parameters-the-registrar-s-preprocessor.md)
