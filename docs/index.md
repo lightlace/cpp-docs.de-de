@@ -4,12 +4,12 @@ title: Visual C++–Dokumentation
 description: Erfahren Sie, wie Sie mit C++ Anwendungen, Dienste und Tools für Ihre Plattformen und Geräte entwickeln können.
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db891bd1ed7a51a623dadfd5cc4e40a081cf0e7
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264438"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65789016"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -423,7 +423,7 @@ ms.locfileid: "62264438"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/Microsoft/cpprestsdk">
+                                <a href="/cpp/cloud/cloud-and-web-programming-in-visual-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -433,8 +433,8 @@ ms.locfileid: "62264438"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Netzwerkbibliotheken</h3>
-                                                    <p>C++ REST SDK (Codename Casablanca) mit Open-Source-Bibliothek für die Webprogrammierung.</p>
+                                                    <h3>Cloud- und Netzwerkbibliotheken</h3>
+                                                    <p>Verwenden Sie die SDKs von Microsoft Azure C/C++ für IoT, Speicher etc. sowie die Open-Source-Bibliothek von C++ REST SDK für die Webprogrammierung.</p>
                                                 </div>
                                             </div>
                                         </div>
