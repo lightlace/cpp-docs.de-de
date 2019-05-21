@@ -5,18 +5,16 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 0a32e4fcc959d7fcdc8e99bb77510d5f292c1986
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779490"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934121"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Neuerungen bei C++ in Visual Studio 2017
 
 Visual Studio 2017 RC enthält viele Updates und Problembehebungen der C++-Umgebung. Es wurden mehr als 250 Fehler behoben und Probleme mit dem Compiler sowie mit Tools gemeldet. Viele Probleme wurden von Kunden über die Optionen [Problem melden](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) und „Vorschlag senden“ unter **Feedback senden** übermittelt. Vielen Dank für das Melden von Fehlern! Weitere Informationen zu Neuerungen in Visual Studio finden Sie unter [What's new in Visual Studio 2017 (Neuerungen in Visual Studio 2017)](/visualstudio/ide/whats-new-in-visual-studio).
-
-<!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 
 ## <a name="c-compiler"></a>C++-Compiler
 
