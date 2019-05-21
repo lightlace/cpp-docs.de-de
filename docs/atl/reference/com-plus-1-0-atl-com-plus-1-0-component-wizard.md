@@ -1,55 +1,65 @@
 ---
 title: COM+ 1.0, ATL COM+ 1.0-Komponenten-Assistent
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 0fa649ba41a684be6ed18bd05d48954503c5db16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bff7f87fbdebbff9a1823ae8718c64be4f47a2ea
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278591"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707455"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, ATL COM+ 1.0-Komponenten-Assistent
 
-Verwenden Sie auf dieser Seite des ATL COM+ 1.0 Komponenten-Assistenten, geben Sie den Schnittstellentyp und weitere Schnittstellen unterstützt werden.
+::: moniker range="vs-2019"
 
-Weitere Informationen zu ATL-Projekte und ATL-COM-Klassen finden Sie unter [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md).
+Dieser Assistent ist in Visual Studio 2019 und höher nicht verfügbar.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Verwenden Sie diese Seite des ATL COM+ 1.0-Komponenten-Assistenten, um den Schnittstellentyp und weitere Schnittstellen anzugeben, die unterstützt werden sollen.
+
+Weitere Informationen zu ATL-Projekten und ATL-COM-Klassen finden Sie unter [ATL-COM-Desktop-Komponenten](../../atl/atl-com-desktop-components.md).
 
 - **Interface**
 
-   Gibt den Typ der Schnittstelle, die das Objekt unterstützt. Das Objekt unterstützt standardmäßig eine duale Schnittstelle.
+   Gibt den Typ der Schnittstelle an, die vom Objekt unterstützt wird. Standardmäßig unterstützt das Objekt eine duale Schnittstelle.
 
    |Option|Beschreibung|
    |------------|-----------------|
-   |**Dual**|Gibt an, dass das Objekt eine duale Schnittstelle unterstützt (die Vtable besitzt, benutzerdefinierte Funktionen und späte Bindung `IDispatch` Methoden). Ermöglicht es COM-Clients sowohl Automatisierungscontroller auf das Objekt zuzugreifen.|
-   |**Benutzerdefiniert**|Gibt an, dass das Objekt eine benutzerdefinierte Schnittstelle unterstützt (die Vtable hat benutzerdefinierte Funktionen). Eine benutzerdefinierte Schnittstelle kann vor allem über Prozessgrenzen hinweg schneller als das duale Schnittstelle sein.<br /><br /> - **Automatisierungskompatibel** die benutzerdefinierte Schnittstelle-Unterstützung hinzugefügt. Legt für die attributierte Projekte die **Oleautomation** -Attribut in der Co-Klasse.|
+   |**Dual**|Gibt an, dass das Objekt eine duale Schnittstelle unterstützt (seine vtable enthält benutzerdefinierte Funktionen und `IDispatch`-Methoden für späte Bindung). Ermöglicht es sowohl COM-Clients als auch Automation-Controllern, auf das Objekt zuzugreifen.|
+   |**Benutzerdefiniert**|Gibt an, dass das Objekt eine benutzerdefinierte Schnittstelle unterstützt (seine vtable enthält benutzerdefinierte Schnittstellenfunktionen). Eine benutzerdefinierte Schnittstelle kann schneller sein als eine duale Schnittstelle, insbesondere über Prozessgrenzen hinweg.<br /><br /> - **Automation compatible** Fügt der benutzerdefinierten Schnittstelle Automation-Unterstützung hinzu. Legt für attributierte Projekte das **oleautomation**-Attribut in der Co-Klasse (coclass) fest.|
 
 - **Queueable**
 
-   Gibt an, dass Clients auf diese Komponente, die mithilfe von Nachrichtenwarteschlangen asynchron aufrufen können. Fügt die Komponente, die attributiert Custom (TLBATTR_QUEUEABLE-Komponentenattributmakro, 0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte) hinzu.
+   Gibt an, dass Clients diese Komponente asynchron über Nachrichtenwarteschlangen aufrufen können. Fügt das komponentenattributierte Makro „custom(TLBATTR_QUEUEABLE,0)“ zur .h-Datei (attributierte Projekte) oder zur .idl-Datei (nicht attributierte Projekte) hinzu.
 
 - **Support**
 
-   Gibt zusätzliche Unterstützung für die Behandlung und Objekt-Steuerelement für Fehlermeldungen an.
+   Gibt zusätzliche Unterstützung für Fehlerbehandlung und Objektsteuerung an.
 
    |Option|Beschreibung|
    |------------|-----------------|
-   |**ISupportErrorInfo**|Stellt die Unterstützung der [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) Schnittstelle, damit das Objekt Fehlerinformationen an den Client zurückgeben kann.|
-   |**IObjectControl**|Ermöglicht dem Objektzugriff auf die drei [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) Methoden: [Aktivieren Sie](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), und [deaktivieren](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
-   |**IObjectConstruct**|Stellt die Unterstützung der [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) Schnittstelle zum Verwalten von in-Parameter von anderen Methoden oder Objekten übergeben.|
+   |**ISupportErrorInfo**|Erstellt Unterstützung für die [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md)-Schnittstelle, damit das Objekt Fehlerinformationen an den Client zurückgeben kann.|
+   |**IObjectControl**|Ermöglicht Ihrem Objekt Zugriff auf die drei [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol)-Methoden: [Activate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled) und [Deactivate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
+   |**IObjectConstruct**|Erstellt Unterstützung für die [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct)-Schnittstelle, um Parameter zu verwalten, die von anderen Methoden oder Objekten übergeben wurden.|
 
 - **Transaktion**
 
-   Gibt an, dass das Objekt Transaktionen unterstützt. Die mtxattr.h Datei IDL-Datei (nicht attributierte Projekte).
+   Gibt an, dass das Objekt Transaktionen unterstützt. Enthält die Datei „mtxattr.h“ und die .idl-Datei (nicht attributierte Projekte).
 
    |Option|Beschreibung|
    |------------|-----------------|
-   |**Unterstützt**|Gibt an, dass das Objekt nie den Stamm eines Streams für die Transaktion durch das Hinzufügen von der Komponente Attribut Makro custom(TLBATTR_TRANS_SUPPORTED,0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte).|
-   |**Erforderlich**|Gibt an, dass das Objekt kann möglicherweise nicht den Stamm eines Streams für die Transaktion durch das Hinzufügen von der Komponente Attribut Makro custom(TLBATTR_TRANS_REQUIRED,0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte).|
-   |**Nicht unterstützt**|Gibt an, dass das Objekt Transaktionen ausschließt. Fügt der Custom(TLBATTR_TRANS_NOTSUPP,0)-Komponentenattributmakro der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte) hinzu.|
-   |**Neue erfordert**|Gibt an, dass das Objekt immer den Stamm eines Streams für die Transaktion durch das Hinzufügen von der Komponente Attribut Makro custom(TLBATTR_TRANS_REQNEW,0) der h-Datei (attributierte Projekte) oder der IDL-Datei (nicht attributierte Projekte).|
+   |**Unterstützt**|Gibt an, dass das Objekt nie der Ausgangspunkt eines Transaktionsdatenstroms ist, indem das Komponentenattributmakro „custom(TLBATTR_TRANS_SUPPORTED,0)“ zur .h-Datei (attributierte Projekte) oder zur .idl-Datei (nicht attributierte Projekte) hinzugefügt wird.|
+   |**Erforderlich**|Gibt an, dass das Objekt der Ausgangspunkt eines Transaktionsdatenstroms sein kann, indem das Komponentenattributmakro „custom(TLBATTR_TRANS_REQUIRED,0)“ zur .h-Datei (attributierte Projekte) oder zur .idl-Datei (nicht attributierte Projekte) hinzugefügt wird.|
+   |**Nicht unterstützt**|Gibt an, dass das Objekt Transaktionen ausschließt. Fügt das Komponentenattributmakro „custom(TLBATTR_TRANS_NOTSUPP,0)“ zur .h-Datei (attributierte Projekte) oder zur .idl-Datei (nicht attributierte Projekte) hinzu.|
+   |**Requires new**|Gibt an, dass das Objekt immer der Ausgangspunkt eines Transaktionsdatenstroms ist, indem das Komponentenattributmakro „custom(TLBATTR_TRANS_REQNEW,0)“ zur .h-Datei (attributierte Projekte) oder zur .idl-Datei (nicht attributierte Projekte) hinzugefügt wird.|
+
+::: moniker-end
 
 ## <a name="see-also"></a>Siehe auch
 

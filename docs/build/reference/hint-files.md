@@ -11,16 +11,16 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 919cbedd0c0d7c610273d597328979d1fb449f8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446304"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707110"
 ---
 # <a name="hint-files"></a>Hinweisdateien
 
-Makros führen normalerweise dazu, dass bestimmte Codebereiche vom Parser für die Datenbank zum Durchsuchen von C++-Code übersprungen werden. Dies wird vermieden, indem Makros einer *Hinweisdatei* hinzugefügt werden. Wenn Sie ein Visual Studio öffnen C++ -Projekt der Parser analysiert den Code in jeder Quelldatei im Projekt und erstellt eine Datenbank mit Informationen zu jeder Bezeichner. Die IDE verwendet diese Informationen, um Features zum Durchsuchen von Code wie die **Klassenansicht** und die **Navigationsleiste** zu unterstützen.
+Makros führen normalerweise dazu, dass bestimmte Codebereiche vom Parser für die Datenbank zum Durchsuchen von C++-Code übersprungen werden. Dies wird vermieden, indem Makros einer *Hinweisdatei* hinzugefügt werden. Wenn Sie ein Visual Studio C++-Projekt öffnen, analysiert der Parser den Code in jeder Quelldatei des Projekts und erstellt eine Datenbank mit Informationen zu jedem Bezeichner. Die IDE verwendet diese Informationen, um Features zum Durchsuchen von Code wie die **Klassenansicht** und die **Navigationsleiste** zu unterstützen.
 
 Der Parser für die Datenbank zum Durchsuchen von C++-Code ist ein Fuzzyparser, der große Mengen an Code in kurzer Zeit analysieren kann. Ein Grund dafür ist, dass die Inhalte von Blöcken übersprungen werden. Beispielsweise wird nur erfasst, wo sich eine Funktion befindet und welche Parameter für diese vorhanden sind. Der Inhalt der Funktion wird hingegen ignoriert. Bestimmte Makros können zu Problemen mit den Heuristiken führen, die zur Ermittlung des Anfangs und Endes eines Blocks eingesetzt werden. Dadurch werden bestimmte Codebereiche nicht richtig erfasst.
 
@@ -118,7 +118,7 @@ Das Analysesystem durchsucht Verzeichnisse in folgender Reihenfolge nach Hinweis
 
 - Das Verzeichnis, das das Installationspaket für Visual C++ enthält (**vcpackages**). Dieses Verzeichnis enthält eine integrierte Hinweisdatei, die Symbole in häufig verwendeten Systemdateien (z.B. **windows.h**) beschreibt. Deshalb erbt Ihr Projekt automatisch die meisten erforderlichen Hinweise.
 
-- Der Pfad vom Stammverzeichnis einer Quelldatei zu dem Verzeichnis, das die Quelldatei enthält. In einer typischen Visual Studio C++ -Projekt, das Stammverzeichnis enthält die Projektmappe oder das Projekt die Datei.
+- Der Pfad vom Stammverzeichnis einer Quelldatei zu dem Verzeichnis, das die Quelldatei enthält. In einem typischen Visual Studio C++-Projekt enthält das Stammverzeichnis die Projektmappen- oder die Projektdatei.
 
    Eine Ausnahme besteht darin, wenn sich eine *STOP-Datei* im Pfad zur Quelldatei befindet. Eine Stoppdatei ist eine Datei mit dem Namen **cpp.stop**. Sie stellt eine zusätzliche Möglichkeit zum Einstellen der Suchreihenfolge dar. Statt im Stammverzeichnis zu beginnen, sucht das Analysesystem von dem Verzeichnis aus, das die STOP-Datei enthält, und beendet die Suche in dem Verzeichnis, das die Quelldatei enthält. In einem typischen Projekt benötigen Sie keine Stoppdatei.
 
@@ -162,7 +162,7 @@ Für Hinweise wird die folgende Syntax verwendet:
 
 Im folgenden Beispiel wird gezeigt, wie Hinweise aus Hinweisdateien gesammelt werden. Stoppdateien werden in diesem Beispiel nicht verwendet.
 
-Die Abbildung zeigt einige der physischen Verzeichnisse in einer Visual Studio C++ Projekt. Die Hinweisdateien befinden sich in den Verzeichnissen `vcpackages`, `Debug`, `A1` und `A2`.
+Die Abbildung stellt einige der physischen Verzeichnisse in einem Visual Studio C++-Projekt dar. Die Hinweisdateien befinden sich in den Verzeichnissen `vcpackages`, `Debug`, `A1` und `A2`.
 
 ### <a name="hint-file-directories"></a>Hinweisdateiverzeichnisse
 
@@ -244,7 +244,7 @@ Die folgenden Hinweise gelten für die vorangehende Liste:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Datei erstellt, für visuelle C++ Projekte](file-types-created-for-visual-cpp-projects.md)<br>
+[Für Visual Studio C++-Projekte erstellte Dateitypen](file-types-created-for-visual-cpp-projects.md)<br>
 [#define-Direktive (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef-Direktive (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [SAL-Anmerkungen](../../c-runtime-library/sal-annotations.md)<br>
