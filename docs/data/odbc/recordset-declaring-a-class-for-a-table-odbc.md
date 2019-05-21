@@ -1,28 +1,31 @@
 ---
 title: 'Recordset: Deklarieren einer Klasse für eine Tabelle (ODBC)'
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: 17adc6e26dcbb39453d9009d82843d213271cc78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ea17f131552fe7f71d9106a8979bb661955fe850
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397873"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707947"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset: Deklarieren einer Klasse für eine Tabelle (ODBC)
 
+> [!NOTE] 
+> Der MFC-ODBC-Consumer-Assistent ist in Visual Studio 2019 und höher nicht verfügbar. Sie können einen Consumer weiterhin manuell erstellen.
+
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
 
-Die am häufigsten verwendete Recordset-Klasse wird eine einzelne Tabelle geöffnet. Um eine Recordset-Klasse für eine einzelne Tabelle zu deklarieren, verwenden die [MFC-ODBC-Consumer-Assistenten](../../mfc/reference/adding-an-mfc-odbc-consumer.md) aus **Klasse hinzufügen** , und wählen Sie jede Spalte, benennen Sie einen entsprechenden Recordset-Felddatenmember werden sollen.
+Die am häufigsten verwendete Recordset-Klasse öffnet eine einzelne Tabelle. Um eine Recordset-Klasse für eine einzelne Tabelle zu deklarieren, verwenden Sie den [MFC-ODBC-Consumer-Assistenten](../../mfc/reference/adding-an-mfc-odbc-consumer.md) aus **Klasse hinzufügen**, und wählen Sie jede gewünschte Spalte aus, indem Sie einen entsprechenden Recordset-Felddatenmember benennen.
 
 Andere Verwendungen für Recordsets sind:
 
-- Verknüpfen von zwei oder mehr Tabellen.
+- Verknüpfen mehrerer Tabellen
 
-- Die die Ergebnisse einer vordefinierten Abfrage enthält.
+- Aufnehmen der Ergebnisse einer vordefinierten Abfrage
 
 ## <a name="see-also"></a>Siehe auch
 

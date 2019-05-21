@@ -1,38 +1,44 @@
 ---
 title: Hinzufügen einer ATL Active Server Page-Komponente
-ms.date: 11/04/2016
-helpviewer_keywords:
-- ASP components, adding
-- ASP components
-- ATL, ASP components
-- ATL ASP components
+ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: 2f7ad08cb514e33224c877bcbf1c5e8128e26185
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b6c1d23efdff6885cc8ab900aaf552db39631e6e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261311"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706930"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Hinzufügen einer ATL Active Server Page-Komponente
 
-Um ein Objekt für die Active Template Library (ATL) zu Ihrem Projekt hinzuzufügen, muss Ihr Projekt erstellt worden haben als eine ATL-COM-Anwendung oder einer MFC-Anwendung, die ATL-Unterstützung enthält. Können Sie die [ATL-Projektassistenten](../../atl/reference/atl-project-wizard.md) um ATL-Anwendungen zu erstellen, können Sie auswählen **ATL-Unterstützung zu MFC hinzufügen** aus der [-Klasse-Dialogfeld hinzufügen](../../ide/add-class-dialog-box.md) (Dialogfeld), oder Sie können Sie [Hinzufügen eines ATL-Objekts zu der MFC-Anwendung](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL-Unterstützung für eine MFC-Anwendung zu implementieren.
 
-Active Server Pages-Komponenten sind Bestandteil der Internet Information Services-Architektur, bietet die folgenden erweiterten Features für die Webentwicklung:
+::: moniker range="vs-2019"
 
-- Sie können ASP-Komponenten in Ihren HTML-Seiten zum Erstellen dynamischer, Browser-unabhängigen Inhalte einbetten.
+Der ATL Active Server Pages-Komponenten-Assistent ist in Visual Studio 2019 und höher nicht verfügbar.
 
-- Sie können ASP-Seiten verwenden, auf Standards basierende Datenbankkonnektivität zur Verfügung stellt.
+::: moniker-end
 
-- Sie können die ASP-Funktionen für die Fehlerbehandlung für Ihre Web-basierten Anwendungen verwenden.
+::: moniker range="<=vs-2017"
 
-## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Hinzufügen eine ATL Active Server Pages-Komponente zu Ihrem Projekt
+Um ein ATL-Objekt (Active Template Library) zu Ihrem Projekt hinzufügen zu können, muss Ihr Projekt als eine ATL-COM- oder MFC-Anwendung erstellt worden sein, die ATL-Unterstützung enthält. Sie können den [ATL-Projekt-Assistenten](../../atl/reference/atl-project-wizard.md) verwenden, um eine ATL-Anwendung zu erstellen, Sie können **ATL-Unterstützung zu MFC hinzufügen** im Dialogfeld [Klasse hinzufügen](../../ide/add-class-dialog-box.md) auswählen, oder Sie können [ein ATL-Objekt zu Ihrer MFC-Anwendung hinzufügen](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), um ATL-Unterstützung für eine MFC-Anwendung zu implementieren.
 
-1. In **Projektmappen-Explorer** mit der rechten Maustaste in des Namens des Projekts, dem Sie die ATL Active Server Pages-Komponente hinzufügen möchten.
+Active Server Pages-Komponenten sind Bestandteil der Internetinformationsdienste-Architektur, die folgende erweiterte Webentwicklungsfunktionalität bereitstellt:
+
+- Sie können ASP-Komponenten in Ihre HTML-Seiten einbetten, um dynamische, browserunabhängige Inhalte zu erstellen.
+
+- Sie können ASP-Seiten verwenden, um auf Standards basierende Datenbankkonnektivität bereitzustellen.
+
+- Sie können die ASP-Fehlerbehandlungsfunktionen für Ihre webbasierten Anwendungen nutzen.
+
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Hinzufügen einer ATL Active Server Pages-Komponente zu Ihrem Projekt
+
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Namen des Projekts, dem Sie die ATL Active Server Pages-Komponente hinzufügen möchten.
 
 1. Klicken Sie im Kontextmenü auf die Option **Hinzufügen**, und klicken Sie danach auf **Klasse hinzufügen**.
 
-1. In der [Klasse hinzufügen](../../ide/add-class-dialog-box.md) Dialogfeld die **Vorlagen** Bereich klicken Sie auf **ATL Active Server Page-Komponente**, und klicken Sie dann auf **öffnen** zum Anzeigen der [ATL Active Server Page-Komponenten-Assistent](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. Klicken Sie im Dialogfeld [Klasse hinzufügen](../../ide/add-class-dialog-box.md) im Bereich **Vorlagen** auf **ATL Active Server Page-Komponente**, und klicken Sie dann auf **Öffnen**, um den [ATL Active Server Page-Komponenten-Assistenten](../../atl/reference/atl-active-server-page-component-wizard.md) anzuzeigen.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Siehe auch
 

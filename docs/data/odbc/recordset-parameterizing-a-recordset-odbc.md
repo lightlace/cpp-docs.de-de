@@ -1,66 +1,66 @@
 ---
 title: 'Recordset: Parametrisieren eines Recordsets (ODBC)'
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - parameterizing recordsets
 - ODBC recordsets, parameterizing
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: df67256c54cae3e2adb054d653d3e58bb91dd631
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 499741693009fb27df58f0ed3cde046d5e6b8c2d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397756"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707793"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset: Parametrisieren eines Recordsets (ODBC)
 
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
 
-Manchmal empfiehlt in der Lage, wählen Sie die Datensätze zur Laufzeit mithilfe der Informationen, die Sie berechnet oder vom Benutzer abgerufen. Recordset-Parametern können Sie dieses Ziel zu erreichen.
+Manchmal möchten Sie in der Lage sein, zur Laufzeit Datensätze mit Informationen auszuwählen, die Sie berechnet oder von Ihrem Endbenutzer erhalten haben. Dies können Sie mit Recordset-Parametern erreichen.
 
 In diesem Thema wird Folgendes erläutert:
 
-- [Der Zweck eines parametrisierten Recordsets](#_core_parameterized_recordsets).
+- [Der Zweck eines parametrisierten Recordsets](#_core_parameterized_recordsets)
 
-- [Wann und warum Sie möglicherweise ein Recordset parametrisieren möchten](#_core_when_to_use_parameters).
+- [Wann und warum ein Recordset möglicherweise parametrisiert werden soll](#_core_when_to_use_parameters)
 
-- [Beschreibt, wie Parameter Datenelemente im Recordset-Klasse deklariert](#_core_parameterizing_your_recordset_class).
+- [Deklarieren von Parameterdatenmembern in Ihrer Recordset-Klasse](#_core_parameterizing_your_recordset_class)
 
-- [Wie Sie Informationen zu den Parametern zu einem Recordset-Objekt zur Laufzeit übergeben](#_core_passing_parameter_values_at_run_time).
+- [Übergeben von Parameterinformationen an ein Recordset-Objekt zur Laufzeit](#_core_passing_parameter_values_at_run_time).
 
 ##  <a name="_core_parameterized_recordsets"></a> Parametrisierte Recordsets
 
-Ein parametrisiertes Recordset können Sie die Parameterinformationen zur Laufzeit übergeben. Dies hat zwei wichtige Auswirkungen:
+Ein parametrisiertes Recordset ermöglicht es Ihnen, Parameterinformationen zur Laufzeit zu übergeben. Dies hat zwei nützliche Auswirkungen:
 
-- Es kann eine bessere ausführungsgeschwindigkeit führen.
+- Es kann sich eine bessere Ausführungsgeschwindigkeit ergeben.
 
-- Sie können eine Abfrage zu erstellen zur Laufzeit basierend auf Informationen, die zur Entwurfszeit nicht zur Verfügung, z. B. Informationen vom Benutzer erhalten oder zur Laufzeit berechnet.
+- Sie können zur Laufzeit eine Abfrage erstellen, die auf Informationen basiert, die Ihnen zur Entwurfszeit nicht zur Verfügung stehen, etwa Informationen, die Sie zur Laufzeit von einem Benutzer erhalten oder die Sie berechnet haben.
 
-Beim Aufruf `Open` zum Ausführen der Abfrage verwendet das Recordset die Parameterinformationen zum Abschließen der **SQL-SELECT** Anweisung. Sie können jedes Recordset parametrisieren.
+Wenn Sie `Open` aufrufen, um die Abfrage auszuführen, verwendet das Recordset die Parameterinformationen, um seine **SELECT**-SQL-Anweisung zu vervollständigen. Sie können jedes Recordset parametrisieren.
 
-##  <a name="_core_when_to_use_parameters"></a> Wenn Sie Parameter verwenden
+##  <a name="_core_when_to_use_parameters"></a> Wann Parameter zu verwenden sind
 
-Typische einsatzmöglichkeiten für Parameter sind:
+Typische Verwendungen für Parameter sind:
 
-- Übergeben von Argumenten an eine vordefinierte Abfrage zur Laufzeit.
+- Übergeben von Argumenten an eine vordefinierte Abfrage zur Laufzeit
 
-   Um Parameter an eine gespeicherte Prozedur übergeben, müssen Sie eine vollständige benutzerdefinierte ODBC angeben **Aufrufen** Anweisung – mithilfe von Parameterplatzhaltern – beim Aufruf `Open`, dem Recordset Standard-SQL-Anweisung überschreiben. Weitere Informationen finden Sie unter [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) in die *Klassenbibliotheksreferenz* und [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) und [Recordset: Deklarieren einer Klasse für eine vordefinierte Abfrage (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+   Um Parameter an eine gespeicherte Prozedur zu übergeben, müssen Sie eine vollständige benutzerdefinierte **CALL**-ODBC-Anweisung – mit Parameterplatzhaltern – angeben, wenn Sie `Open` aufrufen. Dabei wird die Standard-SQL-Anweisung des Recordsets überschrieben. Weitere Informationen finden Sie unter [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) in der *Klassenbibliotheksreferenz* und unter [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) und unter [Recordset: Deklarieren einer Klasse für eine vordefinierte Abfrage (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
-- Effiziente Ausführung zahlreicher Neuabfragen mit Informationen zu den verschiedenen Parametern.
+- Effizientes Ausführen zahlreicher erneuter Abfragen mit unterschiedlichen Parameterinformationen
 
-   Beispielsweise können jedes Mal, wenn Ihre Endbenutzer Informationen für einen bestimmten Studenten in der Registrierungsdatenbank für Schüler und Studenten, sucht Sie Namen\noder die ID des Studenten als Parameter, der vom Benutzer angeben. Klicken Sie dann beim Aufrufen des Recordsets `Requery` Memberfunktion wird die Abfrage wählt nur diese Student Datensatz.
+   Beispielsweise können Sie jedes Mal, wenn ein Endbenutzer Informationen zu einem bestimmten Schüler in der Registrierungsdatenbank für Schüler nachschlägt, den Namen oder die ID des Schülers als Parameter angeben, den Sie vom Benutzer erhalten haben. Dann wird, wenn Sie die `Requery`-Memberfunktion des Recordsets aufrufen, nur der Datensatz dieses Schülers für die Abfrage ausgewählt.
 
-   Der Recordset-Filter-Zeichenfolge, die in `m_strFilter`, könnte wie folgt aussehen:
+   Die für Ihren Recordset verwendete Filterzeichenfolge, die in `m_strFilter` gespeichert ist, könnte wie folgt aussehen:
 
     ```cpp
     "StudentID = ?"
     ```
 
-   Angenommen, Sie erhalten die Studenten-ID in der Variablen `strInputID`. Wenn Sie einen Parameter festlegen, um `strInputID` (z. B. die Studenten-ID 100) der Wert der Variablen gebunden ist, um die Parameterplatzhalter die "?" in der Filterzeichenfolge.
+   Angenommen, Sie erhalten die Schüler-ID in der Variablen `strInputID`. Wenn Sie einen Parameter auf `strInputID` festlegen(z. B. die Schüler-ID 100), wird der Wert der Variablen an den Parameterplatzhalter gebunden, der durch das „?“ in der Filterzeichenfolge dargestellt ist.
 
-   Weisen Sie den Parameterwert wie folgt:
+   Weisen Sie den Parameterwert wie folgt zu:
 
     ```cpp
     strInputID = "100";
@@ -68,36 +68,39 @@ Typische einsatzmöglichkeiten für Parameter sind:
     m_strParam = strInputID;
     ```
 
-   Sie möchten nicht auf diese Weise eine Filterzeichenfolge einrichten:
+   Eine Filterzeichenfolge können Sie auf folgende Weise einrichten:
 
     ```cpp
     m_strFilter = "StudentID = 100";   // 100 is incorrectly quoted
                                        // for some drivers
     ```
 
-   Eine Erläuterung der Verwendung von Anführungszeichen ordnungsgemäß für Filterzeichenfolgen, finden Sie unter [Recordset: Filtern von Datensätzen (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+   Eine Erläuterung, wie Anführungszeichen ordnungsgemäß für Filterzeichenfolgen verwendet werden, finden Sie unter [Recordset: Filtern von Datensätzen (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
-   Der Wert des Parameters unterscheidet sich jedes Mal, die das Recordset zu, für eine neue für Schüler und Studenten-ID aktualisieren
+   Der Parameterwert ist jedes Mal anders, wenn Sie das Recordset nach einer neuen Schüler-ID abfragen.
 
    > [!TIP]
-   > Verwenden von Parametern ist effizienter als einfach einen Filter. Für eine parametrisierte Recordset, muss die Datenbank zu eine SQL verarbeiten **wählen** Anweisung nur einmal. Für ein gefiltertes Recordset ohne Parameter die **wählen** Anweisung verarbeitet werden muss jedes Mal, wenn Sie `Requery` durch einen neuen Filterwert.
+   > Ein Verwenden von Parametern ist effizienter, als einfach einen Filter zu nutzen. Für ein parametrisiertes Recordset muss die Datenbank eine **SELECT**-SQL-Anweisung nur einmal verarbeiten. Für ein gefiltertes Recordset ohne Parameter muss die **SELECT**-Anweisung jedes Mal verarbeitet werden, wenn Sie über `Requery` mit einem neuen Filterwert abfragen.
 
-Weitere Informationen zu filtern, finden Sie unter [Recordset: Filtern von Datensätzen (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+Weitere Informationen zu Filtern finden Sie unter [Recordset: Filtern von Datensätzen (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
-##  <a name="_core_parameterizing_your_recordset_class"></a> Zum Parametrisieren von Recordset-Klasse
+##  <a name="_core_parameterizing_your_recordset_class"></a> Parametrisieren Ihrer Recordset-Klasse
 
 > [!NOTE]
-> Dieser Abschnitt gilt für abgeleitete Objekte `CRecordset` in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie das gesammelte Abrufen, die Implementierung von Parametern verwenden wird ein ähnlicher Prozess. Weitere Informationen finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Dieser Abschnitt bezieht sich auf aus `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen (Massenabrufen) von Zeilen nicht implementiert wurde. Wenn Sie Massenabrufen von Zeilen verwenden, erfolgt das Implementieren von Parametern in einem ähnlichen Vorgang. Weitere Informationen finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Vor der Erstellung des Recordset-Klasse zu bestimmen, welche Parameter Sie benötigen, was ihre Datentypen sind und wie Sie das Recordset verwendet.
+Bevor Sie Ihre Recordset-Klasse erstellen, müssen Sie bestimmen, welche Parameter Sie benötigen, welche Datentypen diese Parameter haben sollen und wie sie vom Recordset verwendet werden sollen.
 
-#### <a name="to-parameterize-a-recordset-class"></a>Parametrisieren von einem Recordset-Klasse
+#### <a name="to-parameterize-a-recordset-class"></a>Parametrisieren einer Recordset-Klasse
 
-1. Führen Sie die [MFC-ODBC-Consumer-Assistenten](../../mfc/reference/adding-an-mfc-odbc-consumer.md) aus **Klasse hinzufügen** zum Erstellen der Klasse.
+> [!NOTE] 
+> Der MFC-ODBC-Consumer-Assistent ist in Visual Studio 2019 und höher nicht verfügbar. Sie können diese Funktionalität weiterhin manuell erstellen.
 
-1. Geben Sie die Felddatenmember für die Spalten des Recordsets.
+1. Führen Sie den [MFC-ODBC-Consumer-Assistenten](../../mfc/reference/adding-an-mfc-odbc-consumer.md) über **Klasse hinzufügen** aus, um die Klasse zu erstellen.
 
-1. Nachdem der Assistent die Klasse in eine Datei in Ihrem Projekt schreibt, finden Sie unter der h-Datei und manuell fügen Sie eine oder mehrere Parameterdatenmember zur Klassendeklaration hinzu. Die Hinzufügung sieht in etwa wie im folgenden Beispiel, werden Teil einer Snapshot-Klasse beantworten Sie die Abfrage "die Schüler und Studenten sind in der senior-Klasse?"
+1. Geben Sie die Felddatenmember für die Spalten des Recordsets an.
+
+1. Nachdem der Assistent die Klasse in eine Datei in Ihrem Projekt geschrieben hat, öffnen Sie die .h-Datei, und fügen Sie manuell die entsprechenden Parameterdatenmember zur Klassendeklaration hinzu. Die Hinzufügung könnte in etwa wie das folgende Beispiel aussehen als Bestandteil einer Momentaufnahme-Klasse zur Beantwortung der Frage „Welche Schüler sind in der Oberstufe?“.
 
     ```cpp
     class CStudentSet : public CRecordset
@@ -112,44 +115,44 @@ Vor der Erstellung des Recordset-Klasse zu bestimmen, welche Parameter Sie benö
     };
     ```
 
-   Fügen Sie nach den vom Assistenten generierte Felddatenmembern Parameterdatenmember hinzu. Standardmäßig wird das Wort "Param" an jeder benutzerdefinierte Parametername angefügt werden soll.
+   Fügen Sie Ihre Parameterdatenmember hinzu, nachdem der Assistent Felddatenmember generiert hat. Die Konvention besteht darin, dass an jeden benutzerdefinierten Parameternamen das Wort „param“ angefügt wird.
 
-1. Ändern der [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) Definition der Memberfunktion in der CPP-Datei. Hinzufügen von RFX-Funktion für jedes Datenelement für Parameter, die Sie der Klasse hinzugefügt. Weitere Informationen über das Schreiben eigener RFX-Funktionen finden Sie unter [Record Field Exchange: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Geben Sie vor der RFX-Aufrufe für die Parameter mit einem einzigen Aufruf:
+1. Ändern Sie die [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)-Memberfunktionsdefinition in der CPP-Datei. Fügen Sie einen RFX-Funktionsaufruf für jeden Parameterdatenmember hinzu, den Sie der Klasse hinzugefügt haben. Informationen über das Schreiben eigener RFX-Funktionen finden Sie unter [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Setzen Sie vor die RFX-Aufrufe für die Parameter folgenden einzelnen Aufruf:
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
     // RFX calls for parameter data members
     ```
 
-1. Erhöhen Sie im Konstruktor des Recordset-Klasse, die Anzahl von Parametern, `m_nParams`.
+1. Inkrementieren Sie im Konstruktor Ihrer Recordset-Klasse die Anzahl der Parameter, `m_nParams`.
 
-   Weitere Informationen finden Sie unter [Record Field Exchange: Arbeiten mit Assistenten-Code](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
+   Weitere Informationen hierzu zu RFX finden Sie unter [Datensatzfeldaustausch: Arbeiten mit Assistenten-Code](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
 
-1. Wenn Sie den Code, die einem Recordset-Objekt dieser Klasse erstellt schreiben, platzieren ein "?" (Fragezeichen) Symbol an jeder Stelle in Ihrer SQL-Anweisung-Zeichenfolgen, in denen ein Parameter ist, ersetzt werden.
+1. Wenn Sie den Code schreiben, in dem ein Recordset-Objekt dieser Klasse erstellt wird, platzieren Sie ein „?“ (Fragezeichen) an jeder Stelle in Ihren SQL-Anweisungzeichenfolgen, an der ein Parameter ersetzt werden muss.
 
-   Zur Laufzeit "?" Platzhalter werden aufgefüllt, in der Reihenfolge, die Sie durch die Werte der Parameter zu übergeben. Der erste Parameter-Datenmember festgelegt wird, nachdem die [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) Aufruf ersetzt, die der ersten "?"in der SQL-Zeichenfolge, die zweite Parameterdatenmember ersetzt die zweite"?" und so weiter.
+   Zur Laufzeit werden die „?“-Platzhalter in der vorliegenden Reihenfolge durch die Parameterwerte ersetzt, die Sie übergeben. Der erste Parameterdatenmember, der nach dem [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)-Aufruf festgelegt ist, ersetzt das erste „?“ in der SQL-Zeichenfolge, der zweite Parameterdatenmember ersetzt das zweite „?“ und so weiter.
 
 > [!NOTE]
-> Die Reihenfolge der Parameter ist wichtig: die Reihenfolge der RFX-Aufrufe für Parameter in Ihre `DoFieldExchange` Funktion muss die Reihenfolge der Parameterplatzhalter in der SQL-Zeichenfolge entsprechen.
+> Die Parameterreihenfolge ist wichtig: Die Reihenfolge der RFX-Aufrufe für Parameter in Ihrer `DoFieldExchange`-Funktion muss mit der Reihenfolge der Parameterplatzhalter in Ihrer SQL-Zeichenfolge übereinstimmen.
 
 > [!TIP]
-> Die wahrscheinlichste Zeichenfolge, die Arbeit mit ist die Zeichenfolge, die Sie angeben (sofern vorhanden) für der Klasse des [M_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) Datenmember, aber einige ODBC-Treiber können Parameter in anderen SQL-Klauseln können.
+> Die wahrscheinlichste Zeichenfolge, mit der gearbeitet wird, ist die Zeichenfolge (sofern vorhanden), die Sie für den [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter)-Datenmember der Klasse angeben, es kann aber sein, dass einige ODBC-Treiber Parameter in anderen SQL-Klauseln unterstützen.
 
 ##  <a name="_core_passing_parameter_values_at_run_time"></a> Übergeben von Parameterwerten zur Laufzeit
 
-Sie müssen die Parameterwerte angeben, vor dem Aufruf `Open` (für ein neues Recordsetobjekt) oder `Requery` (für eine vorhandene Ressourcengruppe).
+Sie müssen die Parameterwerte angeben, bevor Sie `Open` (für ein neues Recordset-Objekt) oder `Requery` (für eine vorhandene Ressourcengruppe) aufrufen.
 
-#### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>Übergeben von Parameterwerten zu einem Recordset-Objekt zur Laufzeit
+#### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>So übergeben Sie Parameterwerte zur Laufzeit an ein Recordset-Objekt
 
-1. Erstellen Sie das Recordsetobjekt.
+1. Erstellen Sie das Recordset-Objekt.
 
-1. Eine Zeichenfolge oder Zeichenfolgen, z. B. Vorbereiten der `m_strFilter` Zeichenfolge, die die SQL-Anweisung, oder Teilen davon. Einfügen "?" Platzhalter, in denen die Parameterinformationen, sich an.
+1. Bereiten Sie Zeichenfolgen vor, z. B. die `m_strFilter`-Zeichenfolge, die die SQL-Anweisung oder Teile dieser Anweisung enthalten. Setzen Sie „?“-Platzhalter an die Stellen, an denen die Parameterinformationen eingefügt werden sollen.
 
-1. Jeder Parameter-Datenmember des Objekts wird einen Laufzeit-Parameterwert zuweisen.
+1. Weisen Sie jedem Parameterdatenmember des Objekts einen Laufzeitparameterwert zu.
 
-1. Rufen Sie die `Open` Member-Funktion (oder `Requery`, für ein bereits vorhandenes Recordset).
+1. Rufen Sie die `Open`-Memberfunktion auf (oder `Requery` für ein vorhandenes Recordset).
 
-Nehmen wir beispielsweise an, dass Sie eine Filterzeichenfolge für das Recordset mit Informationen, die zur Laufzeit abgerufene angeben möchten. Angenommen, Sie haben ein Recordset-Klasse erstellt `CStudentSet` zuvor – namens `rsStudents` – und möchten nun neu Abfragen für eine bestimmte Art von Informationen über Schüler.
+Angenommen, Sie möchten eine Filterzeichenfolge für Ihr Recordset mit Informationen angeben, die zur Laufzeit bereitgestellt werden. Nehmen Sie weiterhin an, dass Sie bereits ein Recordset der Klasse `CStudentSet` namens `rsStudents` erstellt haben und nun dieses Recordset erneut hinsichtlich einer bestimmten Art von Schülerinformationen abfragen möchten.
 
 ```cpp
 // Set up a filter string with
@@ -168,10 +171,10 @@ if( !rsStudents.Requery( ) )
     return FALSE;
 ```
 
-Das Recordset enthält Datensätze, für die Schüler/Studenten, deren Datensätze erfüllt die Bedingungen, die gemäß des Filters, der von der Laufzeit-Parameter erstellt wurde. In diesem Fall enthält das Recordset Datensätze für alle senior Schüler/Studenten.
+Das Recordset enthält Datensätze für die Schüler, deren Datensätze die Bedingungen erfüllen, die durch den Filter angegeben sind, der aus den Laufzeitparametern erstellt wurde. In diesem Fall enthält das Recordset Datensätze für alle Oberstufenschüler.
 
 > [!NOTE]
->  Bei Bedarf können Sie den Wert eines Datenmembers Parameter festlegen, für NULL-Werte mit [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull). Entsprechend können Sie überprüfen, ob ein Parameterdatenmember Null ist, ist mit [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull).
+>  Bei Bedarf können Sie den Wert eines Parameterdatenmembers mit [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull) auf den Nullwert festlegen. Mit [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) können Sie entsprechend prüfen, ob ein Parameterdatenmember den Nullwert hat.
 
 ## <a name="see-also"></a>Siehe auch
 

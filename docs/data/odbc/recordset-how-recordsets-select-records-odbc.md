@@ -1,6 +1,6 @@
 ---
 title: 'Recordset: Datensatzauswahl durch Recordsets (ODBC)'
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - recordsets, selecting records
 - record selection, ODBC recordsets
@@ -9,92 +9,95 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 41542e3e11d304bd9ad8b81c0a1b9c6504e156a7
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397821"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707898"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Recordset: Datensatzauswahl durch Recordsets (ODBC)
+
+> [!NOTE] 
+> Der MFC-ODBC-Consumer-Assistent ist in Visual Studio 2019 und höher nicht verfügbar. Sie können einen Consumer weiterhin manuell erstellen.
 
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
 
 In diesem Thema wird Folgendes erläutert:
 
-- [Ihre Rolle und die Optionen bei der Auswahl von Datensätzen](#_core_your_options_in_selecting_records).
+- [Ihre Rolle und Ihre Optionen beim Auswählen von Datensätzen](#_core_your_options_in_selecting_records)
 
-- [Wie ein Recordset erstellt die SQL-Anweisung, und wählt die Datensätze](#_core_how_a_recordset_constructs_its_sql_statement).
+- [Erstellen der SQL-Anweisung und Auswählen von Datensätzen für ein Recordset](#_core_how_a_recordset_constructs_its_sql_statement)
 
-- [Was Sie tun können, um die Auswahl anpassen](#_core_customizing_the_selection).
+- [Ihre Vorgehensweise zum Anpassen der Auswahl](#_core_customizing_the_selection)
 
-Durch Recordsets wählen Datensätze aus einer Datenquelle über einen ODBC-Treiber per SQL-Anweisungen an den Treiber. Die SQL-Anweisung gesendet hängt davon ab, wie Sie entwerfen, und Öffnen des Recordset-Klasse.
+Für Recordsets werden Datensätze über einen ODBC-Treiber in einer Datenquelle ausgewählt, indem SQL-Anweisungen an den Treiber gesendet werden. Die gesendeten SQL-Anweisungen hängen davon ab, wie Sie Ihre Recordset-Klasse konzipiert haben und öffnen.
 
-##  <a name="_core_your_options_in_selecting_records"></a> Optionen bei der Auswahl von Datensätzen
+##  <a name="_core_your_options_in_selecting_records"></a> Ihre Optionen beim Auswählen von Datensätzen
 
-Die folgende Tabelle zeigt die Optionen bei der Auswahl von Datensätzen.
+In der folgenden Tabelle sind die Optionen aufgeführt, die Sie für das Auswählen von Datensätzen haben.
 
 ### <a name="how-and-when-you-can-affect-a-recordset"></a>Wie und wann Sie ein Recordset beeinflussen können
 
 |Wenn Sie|Sie haben folgende Möglichkeiten:|
 |--------------|-------------|
-|Recordset-Klasse mit deklarieren die **Klasse hinzufügen** Assistenten|Geben Sie die Tabelle aus.<br /><br /> Geben Sie an, welche Spalten einbezogen werden sollen.<br /><br /> Finden Sie unter [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md).|
-|Führen Sie Ihre Implementierung des Recordset-Klasse|Überschreiben Sie die Member-Funktionen wie z. B. `OnSetOptions` (Erweitert), um anwendungsspezifische Optionen zu festzulegen oder um Standardwerte zu ändern. Geben Sie Parameterdatenmember, wenn Sie eine parametrisierte Abfrage soll.|
-|Erstellen Sie ein Recordset-Objekt (vor dem Aufruf `Open`)|Geben Sie eine Suchbedingung, die für die Verwendung im (möglicherweise kombiniertes) eine **, in denen** -Klausel, die die Datensätze zu filtern. Finden Sie unter [Recordset: Filtern von Datensätzen (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).<br /><br /> Geben Sie eine Sortierreihenfolge für die Verwendung in einer **ORDER BY** -Klausel, die die Datensätze sortiert. Finden Sie unter [Recordset: Sortieren von Datensätzen (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).<br /><br /> Geben Sie Parameterwerte für alle Parameter, die Sie der Klasse hinzugefügt. Finden Sie unter [Recordset: Parametrisieren eines Recordsets (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).|
+|Sie können Ihre Recordset-Klasse mit dem **Klasse hinzufügen**-Assistenten deklarieren.|Sie können die Tabelle angeben, in der ausgewählt werden soll.<br /><br /> Sie können angeben, welche Spalten einbezogen werden sollen.<br /><br /> Weitere Informationen finden Sie unter [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md).|
+|Die Implementierung Ihrer Recordset-Klasse abschließen|Memberkunktionen, z. B. `OnSetOptions` (erweitert), überschreiben, um anwendungsspezifische Optionen festzulegen oder Standardwerte zu ändern. Geben Sie Parameterdatenmember an, wenn Sie ein parametrisiertes Recordset wünschen.|
+|Ein Recordset-Objekt erstellen (vor dem Aufruf von `Open`)|Sie können eine Suchbedingung (möglicherweise kombiniert) zur Verwendung in einer **WHERE**-Klausel angeben, in der die Datensätze gefiltert werden. Weitere Informationen finden Sie unter [Recordset: Filtern von Datensätzen (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).<br /><br /> Sie können eine Sortierreihenfolge angeben, die in einer **ORDER BY**-Klausel verwendet wird, in der die Datensätze sortiert werden. Weitere Informationen finden Sie unter [Recordset: Sortieren von Datensätzen (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).<br /><br /> Sie können Parameterwerte für alle Parameter angeben, die Sie der Klasse hinzugefügt haben. Weitere Informationen finden Sie unter [Recordset: Parametrisieren eines Recordsets (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).|
 
-| Führen Sie die Abfrage des Recordsets durch Aufrufen von `Open`| Geben Sie eine benutzerdefinierte SQL-Zeichenfolge zum Ersetzen der standardmäßigen SQL-Zeichenfolge, die vom Assistenten zum einrichten. Finden Sie unter [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) in die *Class Library Reference* und [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md). |
+|Die Abfrage des Recordsets durch Aufrufen von `Open` ausführen| Sie können eine benutzerdefinierte SQL-Zeichenfolge angeben, um die Standard-SQL-Zeichenfolge zu ersetzen, die der Assistent eingerichtet hat. Weitere Informationen finden Sie unter [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) in der *Klassenbibliotheksreferenz* und unter [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC).](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).|
 
-| Rufen Sie `Requery` auf das Recordset mit den aktuellen Werten in der Datenquelle aktualisieren | Geben Sie die neuen Parametern, filtern oder sortieren. Finden Sie unter [Recordset: Erneutes Abfragen eines Recordsets (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |
+|`Requery` aufrufen, um das Recordset mit den neuesten Werten in der Datenquelle erneut abzufragen | Sie können neue Parameter angeben oder filtern oder sortieren. Weitere Informationen finden Sie unter [Recordset: Erneutes Abfragen eines Recordsets (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).|
 
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Wie die SQL-Anweisung erstellt ein Recordset
+##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Erstellen der SQL-Anweisung für ein Recordset
 
-Beim Aufruf eines Recordset-Objekts [öffnen](../../mfc/reference/crecordset-class.md#open) Memberfunktion `Open` erstellt eine SQL-Anweisung, die mit einige oder alle der folgenden Bestandteile:
+Wenn Sie die [Open](../../mfc/reference/crecordset-class.md#open)-Memberfunktion eines Recordset-Objekts aufrufen, erstellt `Open` eine SQL-Anweisung mit einigen oder allen der folgenden Bestandteile:
 
-- Die *LpszSQL* übergebene Parameter `Open`. Falls ungleich NULL, gibt dieser Parameter eine benutzerdefinierte SQL-Zeichenfolge oder einen Teil eines. Das Framework analysiert die Zeichenfolge an. Wenn die Zeichenfolge eine SQL **wählen** -Anweisung oder einer ODBC- **Aufrufen** der Framework-Anweisung verwendet die Zeichenfolge als SQL-Anweisung eines Recordsets. Wenn die Zeichenfolge nicht mit "SELECT" oder "{CALL" beginnt, wird das Framework verwendet, die zum Erstellen einer SQL bereitgestellte **FROM** Klausel.
+- Der *lpszSQL*-Parameter wird an `Open` übergeben. Ist er ungleich NULL, gibt dieser Parameter eine benutzerdefinierte SQL-Zeichenfolge oder einen Teil einer solchen Zeichenfolge an. Das Framework analysiert die Zeichenfolge. Ist die Zeichenfolge eine **SELECT**-SQL-Anweisung oder eine **CALL**-ODBC-Anweisung, verwendet das Framework die Zeichenfolge als SQL-Anweisung des Recordsets. Beginnt die Zeichenfolge nicht mit „SELECT“ oder „{CALL“, verwendet das Framework die bereitgestellten Bestandteile dazu, eine **FROM**-SQL-Klausel zu erstellen.
 
-- Die Zeichenfolge, die vom [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql). Standardmäßig Dies ist der Name der Tabelle, die Sie für das Recordset im Assistenten angegeben haben, aber Sie können ändern, was die Funktion zurückgibt. Das Framework ruft `GetDefaultSQL` – Wenn die Zeichenfolge nicht mit "SELECT" oder "{CALL" beginnt, wird der Wert um einen Tabellennamen ein, zu sein, die zum Erstellen einer SQL-Zeichenfolge verwendet wird.
+- Die Zeichenfolge, die von [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) zurückgegeben wird. Standardmäßig ist dies der Name der Tabelle, die Sie für das Recordset im Assistenten angegeben haben. Sie können aber ändern, was die Funktion zurückgibt. Das Framework ruft `GetDefaultSQL` auf; beginnt die Zeichenfolge nicht mit „SELECT“ oder „{CALL“, wird angenommen, dass sie ein Tabellenname ist, der dann verwendet wird, um eine SQL-Zeichenfolge zu erstellen.
 
 
-- Die Felddatenmember des Recordset-Objekts, die auf bestimmte Spalten der Tabelle gebunden werden. Das Framework bindet an die Adressen dieser Member, die als Puffer. Das Framework stellt die Korrelation der Felddatenmember Tabellenspalten aus der [RFX](../../data/odbc/record-field-exchange-using-rfx.md) oder der Bulk-RFX-Funktionsaufrufe in der Recordsets [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) oder [DoBulkFieldExchange ](../../mfc/reference/crecordset-class.md#dofieldexchange) Member-Funktion.
+- Die Felddatenmember des Recordset-Objekts, die an bestimmte Spalten der Tabelle gebunden werden müssen. Das Framework bindet Datensatzspalten an die Adressen dieser Member und verwendet diese als Puffer. Das Framework bestimmt die Zuordnung der Felddatenmember zu Tabellenspalten aus dem [RFX](../../data/odbc/record-field-exchange-using-rfx.md)- oder Massen-RFX-Funktionsaufruf in der [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)- oder [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)-Memberfunktion des Recordsets.
 
-- Die [Filter](../../data/odbc/recordset-filtering-records-odbc.md) für das Recordset, sofern vorhanden, innerhalb der [M_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) -Datenmember. Das Framework verwendet diese Zeichenfolge, um eine SQL-Konstrukt **, in denen** Klausel.
+- Der [Filter](../../data/odbc/recordset-filtering-records-odbc.md) für das Recordset, sofern vorhanden, der im [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter)-Datenmember enthalten ist. Das Framework verwendet diese Zeichenfolge, um eine **WHERE**-SQL-Klausel zu erstellen.
 
-- Die [Sortierreihenfolge](../../data/odbc/recordset-sorting-records-odbc.md) Reihenfolge für das Recordset, falls vorhanden, die in enthaltenen der [M_strSort](../../mfc/reference/crecordset-class.md#m_strsort) -Datenmember. Das Framework verwendet diese Zeichenfolge, um eine SQL-Konstrukt **ORDER BY** Klausel.
+- Die [Sortier](../../data/odbc/recordset-sorting-records-odbc.md)reihenfolge für das Recordset, sofern vorhanden, die im [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort)-Datenmember enthalten ist. Das Framework verwendet diese Zeichenfolge, um eine **ORDER BY**-SQL-Klausel zu erstellen.
 
    > [!TIP]
-   > Zur Verwendung der SQL **GROUP BY** Klausel (und möglicherweise die **HAVING** Klausel), fügen Sie die Klauseln an das Ende der Filterzeichenfolge.
+   > Möchten Sie die **GROUP BY**-SQL-Klausel (und möglicherweise die **HAVING**-Klausel) verwenden, fügen Sie die Klauseln am Ende Ihrer Filterzeichenfolge an.
 
-- Die Werte eines beliebigen [Parameterdatenmember](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) Sie für die Klasse angegeben. Legen Sie Parameterwerte nur vor dem Aufruf `Open` oder `Requery`. Das Framework bindet die Parameterwerte, "?" Platzhalter in der SQL-Zeichenfolge. Geben Sie zum Zeitpunkt der Kompilierung eine Zeichenfolge mit Platzhaltern. Zur Laufzeit füllt das Framework die Details basierend auf den Parameterwerten, die Sie übergeben.
+- Die Werte eines beliebigen [Parameterdatenmembers](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md), das Sie für die Klasse angeben. Sie legen Parameterwerte fest, unmittelbar bevor Sie `Open` oder `Requery` aufrufen. Das Framework bindet die Parameterwerte an „?“-Platzhalter in der SQL-Zeichenfolge. Zur Kompilierzeit geben Sie die Zeichenfolge mit Platzhaltern an. Zur Laufzeit füllt das Framework die Details anhand der Parameterwerte aus, die Sie übergeben.
 
-`Open` erstellt eine SQL- **wählen** hieraus Anweisung. Finden Sie unter [Anpassen der Auswahl](#_core_customizing_the_selection) Einzelheiten darüber, wie das Framework die Zutaten zusammen verwendet.
+`Open` erstellt eine **SELECT**-SQL-Anweisung aus diesen Bestandteilen. Ausführlichere Informationen darüber, wie das Framework die Bestandteile verwendet, finden Sie unter [Anpassen der Auswahl](#_core_customizing_the_selection).
 
-Nach dem Erstellen der Anweisung `Open` sendet die SQL-Anweisung der ODBC-Treiber-Manager (und die ODBC-Cursorbibliothek, wenn es im Speicher befindet), der es sich bei den ODBC-Treiber für ein bestimmtes DBMS sendet. Der Treiber kommuniziert mit dem DBMS, um die Auswahl für die Datenquelle auszuführen und den ersten Datensatz abgerufen. Das Framework lädt den Datensatz in den Felddatenmembern des Recordset-Objekts.
+Nachdem die Anweisung erstellt ist, sendet `Open` die SQL-Anweisung an den ODBC-Treiber-Manager (und die ODBC-Cursorbibliothek, wenn sie sich im Speicher befindet), der sie an den ODBC-Treiber für das spezielle DBMS sendet. Der Treiber kommuniziert mit dem DBMS, um die Auswahl für die Datenquelle auszuführen, und ruft den ersten Datensatz ab. Das Framework lädt den Datensatz in die Felddatenmember des Recordset-Objekts.
 
-Sie können eine Kombination dieser Techniken um zu öffnen [Tabellen](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md) und zum Erstellen einer Abfrage, die basierend auf einer [Join](../../data/odbc/recordset-performing-a-join-odbc.md) von mehreren Tabellen. Mit zusätzliche Anpassungen vorzunehmen, können Sie aufrufen [vordefinierte Abfragen](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (gespeicherte Prozeduren), wählen Sie Spalten, die zur Entwurfszeit nicht bekannt. der Tabelle und [binden](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) Recordset-Feldern oder Sie können die meisten anderen ausführen Datenzugriffsaufgaben. Aufgaben, die Sie durch das Anpassen von Recordsets erledigen können nicht weiterhin ausgeführt werden können [ODBC-API-Funktionen aufrufen](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) oder Ausführen von SQL-Anweisungen direkt [CDatabase:: ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).
+Sie können eine Kombination dieser Techniken verwenden, um [Tabellen](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md) zu öffnen und eine Abfrage zu erstellen, die auf einer [Verknüpfung](../../data/odbc/recordset-performing-a-join-odbc.md) (Join) mehrerer Tabellen basiert. In einer weiteren Anpassung können Sie [vordefinierte Abfragen](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (gespeicherte Prozeduren) aufrufen, die Tabellenspalten auswählen, die zur Entwurfszeit nicht bekannt waren, und diese Spalten an die Recordset-Felder [binden](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md), oder Sie können die meisten anderen Datenzugriffsaufgaben ausführen. Aufgaben, die Sie nicht durch Anpassen von Recordsets erledigen können, lassen sich weiterhin durch [Aufrufen von ODBC-API-Funktionen](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) oder direkt durch Ausführen von SQL-Anweisungen mit [CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) erledigen.
 
 ##  <a name="_core_customizing_the_selection"></a> Anpassen der Auswahl
 
-Neben der Angabe eines Filters, eine Sortierreihenfolge oder Parametern, können Sie die folgenden Aktionen zum Anpassen der Auswahl des Recordsets ausführen:
+Neben der Bereitstellung eines Filters, einer Sortierreihenfolge oder von Parametern können Sie die Auswahl Ihres Recordsets mit den folgenden Aktionen anpassen:
 
-- Übergeben Sie eine benutzerdefinierte SQL-Zeichenfolge in *LpszSQL* beim Aufruf [öffnen](../../mfc/reference/crecordset-class.md#open) für das Recordset. Alles was Sie übergeben *LpsqSQL* hat Vorrang vor was die [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) Memberfunktion zurückgegeben.
+- Übergeben Sie eine benutzerdefinierte SQL-Zeichenfolge in *lpszSQL*, wenn Sie [Open](../../mfc/reference/crecordset-class.md#open) für das Recordset aufrufen. Alle Werte, die Sie in *lpsqSQL* übergeben, haben Vorrang vor den Werten, die von der [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)-Memberfunktion zurückgegeben werden.
 
-   Weitere Informationen finden Sie unter [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md), das beschreibt der Types des SQL-Anweisungen (oder teilweise Anweisungen), die Sie an übergeben können `Open` und welche Aktionen das Framework mit ihnen ausgeführt.
+   Weitere Informationen finden Sie unter [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md). In diesem Artikel sind die Typen von SQL-Anweisungen (oder Teilanweisungen), die Sie an `Open` übergeben können, sowie die Aktionen beschrieben, die das Framework mit ihnen ausführt.
 
     > [!NOTE]
-    >  Wenn die benutzerdefinierte Zeichenfolge, die Sie übergeben nicht mit "SELECT" oder "{CALL" beginnt, wird MFC davon ausgegangen, dass sie einen Tabellennamen enthält. Dies gilt auch für das nächste Aufzählungselement zu finden.
+    >  Wenn die benutzerdefinierte Zeichenfolge, die Sie übergeben, nicht mit „SELECT“ oder „{CALL“ beginnt, geht MFC davon aus, dass sie einen Tabellennamen enthält. Dies gilt auch für den nächsten aufgezählten Punkt.
 
-- Ändern Sie die Zeichenfolge, die der Assistent in des Recordsets schreibt `GetDefaultSQL` Member-Funktion. Bearbeiten Sie den Code der Funktion zum Ändern der Rückgabewerte. Standardmäßig schreibt der Assistent eine `GetDefaultSQL` Funktion, die Namen einer einzelnen Tabelle zurückgibt.
+- Ändern Sie die Zeichenfolge, die der Assistent in die `GetDefaultSQL`-Memberfunktion Ihres Recordsets schreibt. Bearbeiten Sie den Code der Funktion, um deren Rückgabewerte zu ändern. Standardmäßig schreibt der Assistent eine `GetDefaultSQL`-Funktion, die einen einzigen Tabellennamen zurückgibt.
 
-   Sie haben `GetDefaultSQL` Zurückgeben der Elemente, die Sie übergeben können die *LpszSQL* Parameter `Open`. Wenn Sie nicht in eine benutzerdefinierte SQL-Zeichenfolge übergeben *LpszSQL*, verwendet das Framework die Zeichenfolge, die `GetDefaultSQL` zurückgibt. Mindestens `GetDefaultSQL` muss den Namen einer einzelnen Tabelle zurückgeben. Aber Sie können mehrere Tabellennamen, einen vollständigen zurückgegeben haben **auswählen** einen ODBC-Anweisung **Aufrufen** -Anweisung und So weiter. Eine Liste der Elemente, die Sie an übergeben können *LpszSQL* – oder `GetDefaultSQL` zurückgeben, finden Sie unter [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+   Sie können veranlassen, dass `GetDefaultSQL` jedes beliebige der Elemente zurückgibt, die Sie im *lpszSQL*Parameter an `Open` übergeben können. Wenn Sie keine benutzerdefinierte SQL-Zeichenfolge in *lpszSQL* übergeben, verwendet das Framework die Zeichenfolge, die `GetDefaultSQL` zurückgibt. Als Mindestanforderung muss `GetDefaultSQL` den Namen einer einzelnen Tabelle zurückgeben. Sie können für diese Funktion aber auch festlegen, dass sie mehrere Tabellennamen, eine vollständige **SELECT**-Anweisung, eine **CALL**-ODBC-Anweisung usw. zurückgibt. Eine Liste der Elemente, die Sie an *lpszSQL* übergeben können – oder die von `GetDefaultSQL` zurückgegeben werden sollen –, finden Sie unter [SQL: Anpassen der SQL-Anweisung eines Recordsets (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-   Wenn Sie einen Join der zwei oder mehr Tabellen ausführen, Schreiben Sie `GetDefaultSQL` zum Anpassen von der Tabellenliste in der SQL **FROM** Klausel. Weitere Informationen finden Sie unter [Recordset: Ausführen einer Verknüpfung (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+   Wenn Sie mehrere Tabellen verknüpfen, schreiben Sie `GetDefaultSQL` um, damit die Tabellenliste angepasst wird, die in der **FROM**-SQL-Klausel verwendet wird. Weitere Informationen finden Sie unter [Recordset: Ausführen einer Verknüpfung (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
 
-- Binden Sie manuell zusätzliche Felddatenmember, z. B. anhand von Informationen, die Sie erhalten über das Schema der Datenquelle zur Laufzeit. Fügen Sie Felddatenmember der Recordset-Klasse [RFX](../../data/odbc/record-field-exchange-using-rfx.md) oder der Bulk-RFX-Funktion aufruft, bis sie die [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) oder [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) Member-Funktion, und Initialisierungen Datenmember im Konstruktor Klasse. Weitere Informationen finden Sie unter [Recordset: Dynamisches Binden von Datenspalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+- Binden Sie weitere Felddatenmember manuell, vielleicht anhand von Informationen, die Sie zur Laufzeit über das Schema Ihrer Datenquelle erhalten. Fügen Sie Felddatenmember zur Recordset-Klasse, [RFX](../../data/odbc/record-field-exchange-using-rfx.md)- oder Bulk-RFX-Funktionsaafrufe für diese zur [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)- oder [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)-Memberfunktion und Initialisierungen der Datenmember im Klassenkonstruktor hinzu. Weitere Informationen finden Sie unter [Recordset: Dynamisches Binden von Datenspalten (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-- Überschreiben Sie das Recordset-Member-Funktionen, z. B. `OnSetOptions`, um anwendungsspezifische Optionen festzulegen oder um Standardwerte zu überschreiben.
+- Überschreiben Sie Memberkunktionen, z. B. `OnSetOptions`, um anwendungsspezifische Optionen festzulegen oder Standardwerte zu überschreiben.
 
-Wenn das Recordset als Grundlage für eine komplexe SQL­Anweisung werden sollen, müssen Sie eine Kombination dieser Techniken für die Anpassung zu verwenden. Z. B. möglicherweise SQL-Klauseln verwendet werden sollen, und Schlüsselwörter, die von Recordsets oder vielleicht nicht direkt unterstützt werden mehrere Tabellen verknüpft.
+Wenn Sie für das Recordset eine komplexe SQL­-Anweisung verwenden möchten, müssen Sie eine Kombination dieser Anpassungstechniken verwenden. Es könnte beispielsweise sein, dass Sie SQL-Klauseln und -Schlüsselwörter verwenden möchten, die nicht direkt von Recordsets unterstützt werden, oder dass Sie mehrere Tabellen verknüpfen.
 
 ## <a name="see-also"></a>Siehe auch
 

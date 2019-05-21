@@ -1,6 +1,6 @@
 ---
 title: Recordset (ODBC)
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - recordsets, snapshots
 - recordsets, creating
@@ -13,69 +13,66 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b043b08e13611b87bbffbe9dfb3255d5520e3359
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397743"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707834"
 ---
 # <a name="recordset-odbc"></a>Recordset (ODBC)
 
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
 
-Ein [CRecordset](../../mfc/reference/crecordset-class.md) Objekt stellt einen Satz von Datensätzen, ausgewählt aus einer Datenquelle dar. Die Datensätze aus sind möglich:
+Ein [CRecordset](../../mfc/reference/crecordset-class.md)-Objekt stellt eine Gruppe von Datensätzen dar, die in einer Datenquelle ausgewählt wurden. Die Datensätze können aus einem der folgenden Objekte stammen:
 
-- Eine Tabelle.
+- Eine Tabelle
 
-- Eine Abfrage.
+- Eine Abfrage
 
-- Eine gespeicherte Prozedur, die eine oder mehrere Tabellen zugreift.
+- Eine gespeicherte Prozedur, aus der auf mindestens eine Tabelle zugegriffen wird
 
-Ein Beispiel für ein Recordset basierend auf einer Tabelle ist "all Customers", die eine Customer-Tabelle zugreift. Ein Beispiel für eine Abfrage ist "alle Rechnungen für Joe Smith." Ein Beispiel für ein Recordset basierend auf einer gespeicherten Prozedur (manchmal auch als eine vordefinierte Abfrage bezeichnet) ist "alle Konten in Verzug," die ruft einer gespeicherten Prozedur in der Back-End-Datenbank. Ein Recordset kann zwei oder mehr Tabellen aus derselben Datenquelle, aber nicht die Tabellen aus unterschiedlichen Datenquellen miteinander verknüpfen.
-
-> [!NOTE]
->  Informationen zum Ableiten des Recordset-Klassen mit den Assistenten, finden Sie unter [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md) und [Datenbankunterstützung, MFC-Anwendungs-Assistent](../../mfc/reference/database-support-mfc-application-wizard.md).
+Ein Beispiel für ein Recordset, das auf einer Tabelle basiert, ist „alle Kunden“, wobei auf eine Kunden-Tabelle zugegriffen wird. Ein Beispiel für eine Abfrage ist „alle Rechnungen für Lena Koch“. Ein Beispiel für ein Recordset, das auf einer gespeicherten Prozedur (manchmal als vordefinierte Abfrage bezeichnet) basiert, ist „alle Konten mit Verzug“, wobei eine gespeicherte Prozedur in der Back-End-Datenbank aufgerufen wird. In einem Recordset können mehrere Tabellen aus derselben Datenquelle, aber keine Tabellen aus unterschiedlichen Datenquellen verknüpft werden.
 
 > [!NOTE]
->  Einige ODBC-Treiber unterstützt die Ansichten der Datenbank. Eine Ansicht in diesem Sinn ist eine Abfrage, die ursprünglich erstellt, mit dem SQL- `CREATE VIEW` Anweisung. Die Assistenten unterstützen derzeit keine Sichten, aber es ist möglich, diese Unterstützung selbst programmieren.
+>  Einige ODBC-Treiber unterstützen Sichten der Datenbank. Eine Sicht in diesem Sinn ist eine Abfrage, die ursprünglich mit der SQL-Anweisung `CREATE VIEW` erstellt wurde.
 
-##  <a name="_core_recordset_capabilities"></a> Recordset-Funktionen
+##  <a name="_core_recordset_capabilities"></a> Recordset-Eigenschaften
 
-Alle Recordset-Objekte freigeben, die folgenden Funktionen:
+Alle Recordset-Objekte haben die folgenden Eigenschaften:
 
-- Wenn die Datenquelle nicht schreibgeschützt ist, können Sie angeben, dass das Recordset [aktualisierbare](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), [erweiterbar](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), oder schreibgeschützt. Wenn das Recordset aktualisierbar ist, können Sie entweder pessimistisch oder optimistisch [Sperren](../../data/odbc/recordset-locking-records-odbc.md) Methoden bereitgestellt, der Treiber stellt die entsprechende Unterstützung. Wenn die Datenquelle schreibgeschützt ist, wird das Recordset schreibgeschützt sein.
+- Wenn die Datenquelle nicht schreibgeschützt ist, können Sie angeben, dass das Recordset [aktualisierbar](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md), [erweiterbar](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md) oder schreibgeschützt sein soll. Ist das Recordset aktualisierbar, können Sie entweder die pessimistische oder die optimistische [Sperr](../../data/odbc/recordset-locking-records-odbc.md)-Methode angeben, sofern der Treiber die entsprechende Methode unterstützt. Ist die Datenquelle schreibgeschützt, ist auch das Recordset schreibgeschützt.
 
-- Sie können Member-Funktionen zum Aufrufen [Scroll](../../data/odbc/recordset-scrolling-odbc.md) durch die ausgewählten Datensätze.
+- Sie können Memberfunktionen aufrufen, um durch die ausgewählten Datensätze zu [scrollen](../../data/odbc/recordset-scrolling-odbc.md).
 
-- Sie können [Filter](../../data/odbc/recordset-filtering-records-odbc.md) der Datensätze einschränken, welche Datensätze aus den verfügbaren ausgewählt werden.
+- Sie können die Datensätze [filtern](../../data/odbc/recordset-filtering-records-odbc.md), um einzuschränken, welche der verfügbaren Datensätze ausgewählt werden.
 
-- Sie können [Sortierreihenfolge](../../data/odbc/recordset-sorting-records-odbc.md) die Datensätze in aufsteigender oder absteigender Reihenfolge basierend auf einer oder mehreren Spalten.
+- Sie können die Datensätze anhand von Spalten in aufsteigender oder absteigender Reihenfolge[sortieren](../../data/odbc/recordset-sorting-records-odbc.md).
 
-- Sie können [parametrisieren](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) Recordset, um die Auswahl des Recordsets zur Laufzeit.
+- Sie können das Recordset [parametrisieren](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md), um die Recordsetauswahl zur Laufzeit festzulegen.
 
 ##  <a name="_core_snapshots_and_dynasets"></a> Momentaufnahmen und Dynasets
 
-Es gibt zwei unterschiedliche Arten von Recordsets: [Momentaufnahmen](../../data/odbc/snapshot.md) und [Dynasets](../../data/odbc/dynaset.md). Beide werden von der Klasse unterstützt `CRecordset`. Jede teilt die allgemeinen Merkmale von allen Recordsets, aber jede erweitert auch die allgemeine Funktionalität in seine eigenen speziellen Art und Weise. Momentaufnahmen stellen eine statische Ansicht der Daten und sind nützlich für Berichte und andere Situationen, in denen eine Ansicht der Daten sollen, wie sie zu einem bestimmten Zeitpunkt vorhanden waren. Dynasets sind nützlich, wenn Aktualisierungen, die von anderen Benutzern an ohne sich erneut Abfragen oder aktualisieren Sie das Recordset im Recordset angezeigt werden sollen. Momentaufnahmen und Dynasets können aktualisierbar oder schreibgeschützt sein. Einträgen hinzugefügt oder gelöscht, die von anderen Benutzern Aufrufen [CRecordset](../../mfc/reference/crecordset-class.md#requery).
+Es gibt zwei Hauptarten von Recordsets: [Momentaufnahmen](../../data/odbc/snapshot.md) und [Dynasets](../../data/odbc/dynaset.md). Beide werden von der Klasse `CRecordset` unterstützt. Beide Recordsetarten haben die allgemeinen Merkmale aller Recordsets, aber in jeder Art wird die allgemeine Funktionalität in einer jeweils speziellen Weise erweitert. Momentaufnahmen bieten eine statische Ansicht der Daten und sind nützlich für Berichte und andere Situationen, in denen Sie eine Ansicht der Daten in der Form wünschen, in der sie zu einem bestimmten Zeitpunkt vorhanden waren. Dynasets sind nützlich, wenn Sie möchten, dass von anderen Benutzern vorgenommene Aktualisierungen im Recordset sichtbar sind, ohne dass das Recordset erneut abgefragt oder aktualisiert werden muss. Momentaufnahmen und Dynasets können aktualisierbar oder schreibgeschützt sein. Um Datensätze zu berücksichtigen, die von anderen Benutzern hinzugefügt oder gelöscht wurden, rufen Sie [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery) auf.
 
-`CRecordset` ermöglicht auch zwei andere Arten von Recordsets: dynamische Recordsets und Forward-only-Recordsets. Dynamische Recordsets sind mit Dynasets vergleichbar. Dynamische Recordsets entsprechen jedoch keine Datensätze hinzugefügt oder gelöscht werden, ohne `CRecordset::Requery`. Aus diesem Grund dynamische Recordsets sind in der Regel aufwendig in Bezug auf die Verarbeitungszeit für das DBMS, und viele ODBC-Treiber nicht unterstützen. Im Gegensatz dazu bieten die Forward-only-Recordsets die effizienteste Methode des Datenzugriffs für Recordsets, die keine Updates oder Bildlauf rückwärts erfordern. Ein Forward-only-Recordset können Sie beispielsweise Daten von einer Datenquelle zu einem anderen migrieren, müssen Sie nur die Daten vorwärts bewegen. Um eine Forward-only-Recordset zu verwenden, müssen Sie beide der folgenden Schritte ausführen:
+`CRecordset` unterstützt auch zwei andere Arten von Recordsets: dynamische Recordsets und Vorwärtsrecordsets. Dynamische Recordsets sind mit Dynasets vergleichbar. In dynamischen Recordsets werden jedoch alle hinzugefügten oder gelöschten Datensätze berücksichtigt, ohne dass `CRecordset::Requery` aufgerufen wird. Aus diesem Grund sind dynamische Recordsets in der Regel teuer in Bezug auf die Verarbeitungszeit für das DBMS, und viele ODBC-Treiber unterstützen diese nicht. Im Gegensatz dazu bieten Vorwärtsrecordsets die effizienteste Methode des Datenzugriffs für Recordsets, die keine Updates oder kein Rückwärtsscrollen erfordern. Sie könnten beispielsweise ein Vorwärtsrecordset verwenden, um Daten von einer Datenquelle in eine andere zu migrieren, wobei Sie die Daten nur in Vorwärtsrichtung durchlaufen müssen. Um ein Vorwärtsrecordset zu verwenden, müssen Sie die beiden folgenden Schritte ausführen:
 
-- Übergeben Sie die Option `CRecordset::forwardOnly` als die *nOpenType* Parameter, der die [öffnen](../../mfc/reference/crecordset-class.md#open) Member-Funktion.
+- Übergeben Sie die Option `CRecordset::forwardOnly` als *nOpenType*-Parameter der [Open](../../mfc/reference/crecordset-class.md#open)-Memberfunktion.
 
-- Geben Sie `CRecordset::readOnly` in die *DwOptions* Parameter `Open`.
+- Geben Sie `CRecordset::readOnly` im *DwOptions*-Parameter von `Open` an.
 
     > [!NOTE]
-    >  Informationen zu ODBC-treiberanforderungen für Dynaset unterstützen, finden Sie unter [ODBC](../../data/odbc/odbc-basics.md). Eine Liste der in dieser Version von Visual C++ mitgelieferten ODBC-Treiber sowie Informationen zum Erwerb zusätzlicher Treiber finden Sie unter [Liste der ODBC-Treiber](../../data/odbc/odbc-driver-list.md).
+    >  Informationen zu den ODBC-Treiberanforderungen für Dynasetunterstützung finden Sie unter [ODBC](../../data/odbc/odbc-basics.md). Eine Liste der in dieser Version von Visual C++ mitgelieferten ODBC-Treiber sowie Informationen über den Erwerb zusätzlicher Treiber finden Sie unter [Liste der ODBC-Treiber](../../data/odbc/odbc-driver-list.md).
 
-##  <a name="_core_your_recordsets"></a> Die Recordsets
+##  <a name="_core_your_recordsets"></a> Ihre Recordsets
 
-Für jede unterschiedliche Tabelle, Sicht oder gespeicherte Prozedur, die Sie zugreifen möchten, definieren Sie in der Regel eine Klasse, die von abgeleiteten `CRecordset`. (Die Ausnahme ist ein Datenbank-Join, in dem ein Recordset Spalten aus zwei oder mehr Tabellen darstellt.) Wenn Sie eine Recordset-Klasse ableiten, aktivieren Sie die Datensatzfeldaustausch (RFX)-Mechanismus oder der Bulk Datensatzfeldaustausch (Bulk-RFX)-Mechanismus, die ähnlich dem Dialogfeld Daten Dialogdatenaustausch (DDX)-Mechanismus. RFX und Bulk-RFX vereinfachen die Übertragung von Daten aus der Datenquelle in das Recordset; RFX überträgt Daten aus dem Recordset zudem mit der Datenquelle. Weitere Informationen finden Sie unter [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md) und [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Für jede einzelne Tabelle, Sicht oder gespeicherte Prozedur, auf die Sie zugreifen möchten, definieren Sie üblicherweise eine Klasse, die aus `CRecordset` abgeleitet ist. (Die Ausnahme ist eine Datenbankverknüpfung (Join), in der ein Recordset Spalten aus mehreren Tabellen umfasst.) Wenn Sie eine Recordset-Klasse ableiten, aktivieren Sie den RFX-Mechanismus (Record Field Exchange, Datensatzfeldaustausch) oder den Massen-RFX-Mechanismus, die beide dem DDX-Mechanismus (Dialog Data Exchange, Dialogdatenaustausch) ähneln. RFX und Massen-RFX vereinfachen die Übertragung von Daten aus der Datenquelle in Ihr Recordset. Außerdem überträgt RFX Daten aus Ihrem Recordset in die Datenquelle. Weitere Informationen finden Sie unter [Datensatzfeldaustausch (RFX)](../../data/odbc/record-field-exchange-rfx.md) und [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Ein Recordset-Objekt erhalten Sie Zugriff auf alle ausgewählten Datensätze an. Sie führen Sie einen Bildlauf durch die ausgewählten Datensätze mit `CRecordset` Memberfunktionen, z. B. `MoveNext` und `MovePrev`. Zur gleichen Zeit stellt nur eine der ausgewählten Datensätze, den aktuellen Datensatz einem Recordset-Objekt dar. Sie können die Felder des aktuellen Datensatzes untersuchen, durch die Deklaration Recordset Klassenmembervariablen, die Spalten der Tabelle oder der Datensätze, die aus der Datenbankabfrage zu entsprechen. Informationen über die Datenmember des Recordsets, finden Sie unter [Recordset: Architektur (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
+Ein Recordset-Objekt ermöglicht Ihnen Zugriff auf alle ausgewählten Datensätze. Zum Scrollen durch die ausgewählten Datensätze verwenden Sie `CRecordset`-Memberfunktionen, etwa `MoveNext` und `MovePrev`. Gleichzeitig entspricht ein Recordset-Objekt nur einem der ausgewählten Datensätze, dem aktuellen Datensatz. Sie können sich die Felder des aktuellen Datensatzes ansehen, indem Sie Recordset-Klassenmembervariablen deklarieren, die den Spalten der Tabelle oder den Datensätzen entsprechen, die aus der Datenbankabfrage resultieren. Informationen über Recordset-Datenmember finden Sie unter [Recordset: Architektur (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
 
-Die folgenden Themen erläutern die Details der Verwendung des Recordset-Objekte. In den Themen finden Sie in funktionale Kategorien und natürlich in der angegebenen Reihenfolge sequenzielles lesen.
+In den folgenden Themen finden Sie ausführliche Informationen zur Verwendung von Recordset-Objekten. Die Themen sind in funktionsbezogenen Kategorien und in natürlicher Suchreihenfolge aufgeführt, um sequenzielles Lesen zu ermöglichen.
 
-### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>Themen über die Funktionsweise der öffnen, lesen und Schließen von recordsets
+### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>Themen über die Vorgehensweisen zum Öffnen, Lesen und Schließen von Recordsets
 
 - [Recordset: Architektur (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
@@ -93,7 +90,7 @@ Die folgenden Themen erläutern die Details der Verwendung des Recordset-Objekte
 
 - [Recordset: Parametrisieren eines Recordsets (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
-### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Themen über das Ändern von recordsets
+### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Themen über die Vorgehensweisen zum Ändern von Recordsets
 
 - [Recordset: Hinzufügen, Aktualisieren und Löschen von Datensätzen (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
@@ -101,7 +98,7 @@ Die folgenden Themen erläutern die Details der Verwendung des Recordset-Objekte
 
 - [Recordset: Erneutes Abfragen eines Recordsets (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
-### <a name="topics-about-somewhat-more-advanced-techniques"></a>Themen zu etwas erweiterten Techniken
+### <a name="topics-about-somewhat-more-advanced-techniques"></a>Themen über etwas fortgeschrittenere Techniken
 
 - [Recordset: Ausführen einer Verknüpfung (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
@@ -115,7 +112,7 @@ Die folgenden Themen erläutern die Details der Verwendung des Recordset-Objekte
 
 - [Recordset: Abrufen von Summen und anderen Aggregatergebnissen (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
-### <a name="topics-about-how-recordsets-work"></a>Themen zur Funktionsweise von recordsets
+### <a name="topics-about-how-recordsets-work"></a>Themen zur Funktionsweise von Recordsets
 
 - [Recordset: Datensatzauswahl durch Recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
@@ -124,5 +121,5 @@ Die folgenden Themen erläutern die Details der Verwendung des Recordset-Objekte
 ## <a name="see-also"></a>Siehe auch
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
-[MFC-ODBC-nutzen](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[Nutzen von MFC-ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Transaktion (ODBC)](../../data/odbc/transaction-odbc.md)

@@ -1,6 +1,6 @@
 ---
 title: 'Datensatzfeldaustausch: Arbeiten mit Assistenten-Code'
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - DoFieldExchange method, overriding
 - Unicode, with database classes
@@ -15,31 +15,34 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 81b26e61f64623d1e3da5ed207d0e8e43350229d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395678"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708007"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Datensatzfeldaustausch: Arbeiten mit Assistenten-Code
 
-In diesem Thema wird erläutert, den Code, den MFS-Anwendungsassistenten und **Klasse hinzufügen** (siehe [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) zur Unterstützung von RFX und wie Sie möchten möglicherweise ändern, Code zu schreiben.
+> [!NOTE] 
+> Der MFC-ODBC-Consumer-Assistent ist in Visual Studio 2019 und höher nicht verfügbar. Sie können einen Consumer weiterhin manuell erstellen.
+
+In diesem Thema wird der Code erläutert, den der MFC-Anwendungs-Assistent und **Klasse hinzufügen** (wie unter [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md) beschrieben) zur Unterstützung von RFX schreiben, und wird erläutert, wie Sie diesen Code ändern können.
 
 > [!NOTE]
->  Dieses Thema gilt für Klassen, die von `CRecordset` in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie gesammelte verwenden, wird die Massen-Datensatzfeldaustausch (Bulk-RFX) implementiert. Bulk RFX ähnelt RFX. Informationen zu den Unterschieden finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Dieses Thema bezieht sich auf aus `CRecordset` abgeleitete Klassen, in denen gesammeltes Abrufen (Massenabrufen) von Zeilen nicht implementiert wurde. Wenn Sie Massenabrufen von Zeilen verwenden, wird der Massen-Datensatzfeldaustausch (Bulk-RFX) implementiert. Bulk-RFX ist RFX sehr ähnlich. Informationen zu den Unterschieden finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Bei der Erstellung einer Recordset-Klasse mit dem MFC-Anwendungs-Assistenten oder **Klasse hinzufügen**, schreibt der Assistent die folgenden RFX-bezogene Elemente basierend auf der Datenquelle, Tabelle und Auswahl von Spalten, die Sie im Assistenten vornehmen:
+Wenn Sie eine Recordset-Klasse mit dem MFC-Anwendungs-Assistenten oder mit **Klasse hinzufügen** erstellen, schreibt der Assistent die folgenden RFX-bezogenen Elemente anhand der Datenquelle, der Tabelle und der Spalten, die Sie im Assistenten ausgewählt haben:
 
-- Deklarationen von den Recordset-Felddatenmembern in die Recordset-Klasse
+- Deklarationen der Recordset-Felddatenmember in der Recordset-Klasse
 
-- Eine Überschreibung der `CRecordset::DoFieldExchange`
+- Eine Überschreibung von `CRecordset::DoFieldExchange`
 
-- Initialisierung des Recordset-Felddatenmember in den Konstruktor des Recordset-Klasse
+- Initialisierung von Recordset-Felddatenmemberm im Konstruktor der Recordset-Klasse
 
-##  <a name="_core_the_field_data_member_declarations"></a> Feld Datenmemberdeklarationen
+##  <a name="_core_the_field_data_member_declarations"></a> Deklarationen von Felddatenmembern
 
-Die Assistenten schreiben Sie eine Deklaration des Recordset-Klasse in eine .h-Datei, die ähnlich wie die folgende Klasse `CSections`:
+Die Assistenten schreiben Sie die Deklaration einer Recordset-Klasse in eine .h-Datei, die so ähnlich aussieht wie die folgende für die Klasse `CSections`:
 
 ```cpp
 class CSections : public CRecordset
@@ -71,15 +74,15 @@ public:
 };
 ```
 
-Wenn Sie Parameterdatenmember oder neue Felddatenmember, die Sie selbst eine Bindung hinzufügen, fügen sie nach denjenigen vom Assistenten generierte hinzu.
+Wenn Sie Parameterdatenmember oder neue Felddatenmember hinzufügen, die Sie selbst binden, fügen Sie diese nach denjenigen hinzu, die vom Assistenten generiert wurden.
 
-Beachten Sie, die der Assistent überschreibt die `DoFieldExchange` Memberfunktion der Klasse `CRecordset`.
+Beachten Sie außerdem, dass der Assistent die `DoFieldExchange`-Memberfunktion der Klasse `CRecordset` überschreibt.
 
-##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange außer Kraft setzen
+##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange-Überschreibung
 
-[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) ist das Herzstück von RFX. Das Framework ruft `DoFieldExchange` jederzeit Daten in der Datenquelle entweder aus der Datenquelle zum Recordset oder vom Recordset zu verschieben muss. `DoFieldExchange` unterstützt das Abrufen von Informationen zu Feld auch Datenelemente über die [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) und [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) Memberfunktionen.
+[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) ist das Herzstück von RFX. Das Framework ruft `DoFieldExchange` jedes Mal auf, wenn es entweder Daten aus der Datenquelle in das Recordset oder aus dem Recordset in die Datenquelle verschieben muss. `DoFieldExchange` unterstützt außerdem das Abrufen von Informationen zu Felddatenmembern über die Memberfunktionen [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) und [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull).
 
-Die folgenden `DoFieldExchange` außer Kraft setzen, ist für die `CSections` Klasse. Der Assistent fügt die Funktion in der CPP-Datei für die Recordset-Klasse.
+Die folgende `DoFieldExchange`-Überschreibung gilt für die `CSections`-Klasse. Der Assistent schreibt die Funktion in der CPP-Datei für Ihre Recordset-Klasse.
 
 ```cpp
 void CSections::DoFieldExchange(CFieldExchange* pFX)
@@ -93,28 +96,28 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-Beachten Sie, dass die folgenden Funktionen der Funktion:
+Beachten Sie die folgenden Hauptmerkmale der Funktion:
 
-- In diesem Abschnitt der Funktion wird die feldzuordnung aufgerufen.
+- Dieser Abschnitt der Funktion wird als Feldzuordnung bezeichnet.
 
-- Ein Aufruf von `CFieldExchange::SetFieldType`, über die `pFX` Zeiger. Dieser Aufruf gibt an, dass alle RFX-Funktion am Ende der aufgerufenen `DoFieldExchange` oder beim nächsten Aufruf von `SetFieldType` Ausgabespalten sind. Weitere Informationen finden Sie unter [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
+- Ein Aufruf von `CFieldExchange::SetFieldType` über den `pFX`-Zeiger. Dieser Aufruf gibt an, dass alle RFX-Funktionsaufrufe bis zum Ende von `DoFieldExchange` oder bis zum nächsten Aufruf von `SetFieldType` Ausgabespalten sind. Weitere Informationen hierzu finden Sie unter [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-- Mehrere Aufrufe der `RFX_Text` globale Funktion – eine pro Felddatenmember (alle sind `CString` Variablen im Beispiel). Diese Aufrufe geben Sie die Beziehung zwischen den Namen einer Spalte in der Datenquelle und ein Felddatenmember. Die RFX-Funktionen ist die tatsächliche Datenübertragung. Die Klassenbibliothek stellt RFX-Funktionen für die allgemeine Datentypen. Weitere Informationen über RFX-Funktionen finden Sie unter [Record Field Exchange: Verwenden der RFX-Funktionen](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
+- Mehrere Aufrufe der globalen Funktion `RFX_Text`: jeweils einer pro Felddatenmember (die alle `CString`-Variablen im Beispiel sind). Diese Aufrufe geben die Beziehung zwischen dem Namen einer Spalte in der Datenquelle und einem Felddatenmember an. Die RFX-Funktionen übernehmen die tatsächliche Datenübertragung. Die Klassenbibliothek stellt RFX-Funktionen für alle gängigen Datentypen bereit. Weitere Informationen über RFX-Funktionen finden Sie unter [Datensatzfeldaustausch: Verwenden der RFX-Funktionen](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
 
     > [!NOTE]
-    >  Die Reihenfolge der Spalten im Resultset muss die Reihenfolge der Aufrufe der RFX-Funktionen in entsprechen `DoFieldExchange`.
+    >  Die Reihenfolge der Spalten in Ihrem Resultset muss mit der Reihenfolge der RFX-Funktionsaufrufe in `DoFieldExchange` übereinstimmen.
 
-- Die `pFX` Zeiger auf eine [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) -Objekt, das das Framework beim Aufruf übergeben wird `DoFieldExchange`. Die `CFieldExchange` Objekt gibt an, den Vorgang, `DoFieldExchange` ausführen, die Richtung der Übertragung und anderer Kontextinformationen.
+- Der `pFX`-Zeiger auf ein [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)-Objekt, das vom Framework übergeben wird, wenn es `DoFieldExchange` aufruft. Das `CFieldExchange`-Objekt gibt den Vorgang, den `DoFieldExchange` ausführen soll, die Richtung der Übertragung und weitere Kontextinformationen an.
 
 ##  <a name="_core_the_recordset_constructor"></a> Recordset-Konstruktor
 
-Der recordsetkonstruktor, den die Assistenten schreiben enthält zwei Dinge, die im Zusammenhang mit RFX:
+Der Recordset-Konstruktor, den die Assistenten schreiben, enthält zwei Dinge im Zusammenhang mit RFX:
 
-- Eine Initialisierung für jedes felddatenelement
+- Eine Initialisierung für jeden Felddatenmeber
 
-- Eine Initialisierung für die [M_nFields](../../mfc/reference/crecordset-class.md#m_nfields) Datenmember, der die Anzahl der Felddatenmember enthält
+- Eine Initialisierung für den [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)-Datenmember, der die Anzahl der Felddatenmember enthält
 
-Der Konstruktor für die `CSections` Recordset-Beispiel sieht wie folgt aus:
+Der Konstruktor für das `CSections`-Recordset-Beispiel sieht wie folgt aus:
 
 ```cpp
 CSections::CSections(CDatabase* pdb)
@@ -130,13 +133,13 @@ CSections::CSections(CDatabase* pdb)
 ```
 
 > [!NOTE]
->  Wenn Sie alle Felddatenmember manuell hinzufügen, wie Sie dynamisch neue Spalten zu binden, müssen Sie erhöhen `m_nFields`. Klicken Sie dazu eine neue Zeile des Codes, wie z. B. anfügen:
+>  Wenn Sie neue Felddatenmember manuell hinzufügen, wie dies der Fall ist, wenn Sie neue Spalten dynamisch binden, müssen Sie `m_nFields` inkrementieren. Fügen Sie dazu eine neue Codezeile an, etwa:
 
 ```cpp
 m_nFields += 3;
 ```
 
-Dies ist der Code für die drei neue Felder hinzufügen. Wenn Sie keine Parameterdatenmember hinzufügen, müssen Sie initialisieren den [M_nParams](../../mfc/reference/crecordset-class.md#m_nparams) Datenmember, der die Anzahl der Parameter-Datenmember enthält. Platzieren der `m_nParams` Initialisierung außerhalb der Klammern.
+Dies ist der Code für ein Hinzufügen von drei neuen Feldern. Wenn Sie Parameterdatenmember hinzufügen, müssen Sie den [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)-Datenmember initialisieren, der die Anzahl der Parameterdatenmember enthält. Platzieren Sie die `m_nParams`-Initialisierung außerhalb der Klammern.
 
 ## <a name="see-also"></a>Siehe auch
 

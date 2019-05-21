@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.appwiz.ATL.controls
 helpviewer_keywords:
@@ -11,43 +11,46 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: d16e9a9e7b92d2a98f8994227c5641994677fdda
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: deaac8f2d6aac02d0cd751e6abebb3b67051200f
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221205"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706849"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt
 
-Sie können eines der ATL-Code-Assistenten verwenden, ein Objekt oder ein Steuerelement zu ATL oder MFC-basierten Projekten hinzufügen. Für jede COM-Objekt oder ein Steuerelement hinzufügen Sie, generiert der Assistent cpp- und .h-Dateien als auch ein RGS-Datei für die Unterstützung für skriptbasierte Registrierung. Die folgenden ATL-Code-Assistenten stehen in Visual Studio zur Verfügung:
+> [!NOTE] 
+> Der ATL COM+ 1.0 Komponenten-Assistent, der ATL-OLE DB-Consumer-Assistent und der ATL-Assistent für Active Server Page-Komponenten sind in Visual Studio 2019 und höher nicht verfügbar.
+
+Sie können einen der ATL-Code-Assistenten verwenden, um Objekte oder Steuerelemente zu ATL. oder MFC-basierten Projekten hinzuzufügen. Für jedes COM-Objekt oder -Steuerelement, das Sie hinzufügen, generiert der Assistent CPP- und .h-Dateien sowie eine RGS-Datei für skriptbasierte Registrierungsunterstützung. Die folgenden ATL-Code-Assistenten sind in Visual Studio verfügbar:
 
 ||||
 |-|-|-|
 |[ATL Simple Object (Einfaches ATL-Objekt)](../../atl/reference/atl-simple-object-wizard.md)|[ATL-Dialogfeld](../../atl/reference/atl-dialog-wizard.md)|[ATL-Steuerelement](../../atl/reference/atl-control-wizard.md)|
-|[ATL-Eigenschaftenseite](../../atl/reference/atl-property-page-wizard.md)|[ATL Active Server Page-Komponente](../../atl/reference/atl-active-server-page-component-wizard.md)|[ATL-OLE DB-Consumers](../../atl/reference/atl-ole-db-consumer-wizard.md)|
-|[ATL-Unterstützung zu MFC hinzufügen](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[ATL COM+ 1.0 Komponenten-Assistent](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[ATL OLE DB Provider](../../atl/reference/atl-ole-db-provider-wizard.md)|
+|[ATL-Eigenschaftenseite](../../atl/reference/atl-property-page-wizard.md)|[ATL Active Server Page-Komponente](../../atl/reference/atl-active-server-page-component-wizard.md)|[ATL-OLE DB-Consumer](../../atl/reference/atl-ole-db-consumer-wizard.md)|
+|[ATL-Unterstützung zu MFC hinzufügen](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[ATL COM+ 1.0 Komponenten-Assistent](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[ATL-OLE DB-Anbieter](../../atl/reference/atl-ole-db-provider-wizard.md)|
 
 > [!NOTE]
-> Bevor ein ATL-Objekt zu Ihrem Projekt hinzufügen, sollten Sie die Informationen und die Anforderungen für das Objekt in seine Verwandte Hilfethemen überprüfen.
+> Bevor Sie ein ATL-Objekt zu Ihrem Projekt hinzufügen, sollten Sie die Details und Anforderungen für das Objekt in dessen zugehörigen Hilfethemen lesen.
 
-## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Hinzufügen eines Objekts oder ein Steuerelement unter Verwendung der ATL-Steuerelement-Assistent
+## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Hinzufügen eines Objekts oder Steuerelements mit dem ATL-Steuerelement-Assistenten
 
-1. In **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektknoten, und klicken Sie auf **hinzufügen** aus dem Kontextmenü. Klicken Sie auf **hinzufügen**.
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektknoten, und klicken Sie im Kontextmenü auf **Hinzufügen**. Klicken Sie auf **Klasse hinzufügen**.
 
-   Die [Klasse hinzufügen](../../ide/add-class-dialog-box.md) Dialogfeld wird angezeigt.
+   Das Dialogfeld [Klasse hinzufügen](../../ide/add-class-dialog-box.md) wird angezeigt.
 
-1. Mit der **ATL** im ausgewählten Ordner die **Kategorien** Bereich, wählen Sie ein Objekt zum Einfügen von aus der **Vorlagen** Bereich. Klicken Sie auf **Öffnen**. Der Code-Assistenten für das ausgewählte Objekt wird angezeigt.
+1. Wählen Sie im Bereich **Kategorien** den Ordner **ATL** aus, und wählen Sie im Bereich **Vorlagen** das Objekt aus, das eingefügt werden soll. Klicken Sie auf **Öffnen**. Der Code-Assistent für das ausgewählte Objekt wird angezeigt.
 
    > [!NOTE]
-   > Wenn Sie ein ATL-Objekt zu einem MFC-Projekt hinzufügen möchten, müssen Sie ATL-Unterstützung dem vorhandenen Projekt hinzufügen. Hierzu können Sie die Anweisungen im [ATL-Unterstützung hinzufügen, MFC-Projekt](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
+   > Wenn Sie ein ATL-Objekt zu einem MFC-Projekt hinzufügen möchten, müssen Sie dem vorhandenen Projekt ATL-Unterstützung hinzufügen. Gehen Sie dazu entsprechend den Anweisungen vor, die in [Hinzufügen von ATL-Unterstützung zu einem MFC-Projekt](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) aufgeführt sind.
 
-   Klicken Sie alternativ, fordert Visual Studio, wenn Sie versuchen, ein ATL-Objekt zu einem MFC-Projekt hinzufügen, ohne zuvor die ATL-Unterstützung hinzufügen, Ihnen die Angabe, ob ATL-Unterstützung zu Ihrem Projekt hinzugefügt werden soll. Klicken Sie auf **Ja** ATL-Unterstützung zum Projekt hinzufügen und die ausgewählten ATL-Assistenten zu öffnen.
+   Wenn Sie versuchen, ein ATL-Objekt zu Ihrem MFC-Projekt hinzuzufügen, ohne vorher ATL-Unterstützung hinzugefügt zu haben, werden Sie alternativ von Visual Studio aufgefordert anzugeben, ob ATL-Unterstützung zu Ihrem Projekt hinzugefügt werden soll. Klicken Sie auf **Ja**, um ATL-Unterstützung zum Projekt hinzuzufügen und den ausgewählten ATL-Assistenten zu öffnen.
 
 ## <a name="see-also"></a>Siehe auch
 
 [ATL-Projekt-Assistent](../../atl/reference/atl-project-wizard.md)<br/>
-[C++Projekttypen in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
+[C++-Projektvorlagen](../../build/reference/visual-cpp-project-types.md)<br/>
 [Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md)

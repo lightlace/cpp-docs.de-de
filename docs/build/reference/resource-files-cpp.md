@@ -1,23 +1,22 @@
 ---
 title: Ressourcendateien (C++)
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 helpviewer_keywords:
 - resource files
 - resources [C++]
-- file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: f1e32ba4776f3e975dc0fbc72334a85d6c793c93
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 20e57aa51cff8c4e3392c313645468387c2a4244
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446344"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707403"
 ---
 # <a name="resource-files-c"></a>Ressourcendateien (C++)
 
-Ressourcen sind Schnittstellenelemente, die dem Benutzer Informationen bereitstellen. Bitmaps, Symbole, Symbolleisten und Cursor sind Ressourcen. Einige Ressourcen können bearbeitet werden, sodass sie eine Aktion ausführen, z.B. das Auswählen aus einem Menü oder Eingeben von Daten in einem Dialogfeld.
+Ressourcen sind Schnittstellenelemente, die dem Benutzer Informationen bereitstellen. Bitmaps, Symbole, Symbolleisten und Cursor sind Ressourcen. Einige Ressourcen können eine Aktion ausführen, etwa Auswählen aus einem Menü oder Eingeben von Daten in einem Dialogfeld.
 
-Weitere Informationen finden Sie unter [Working with Resources (Arbeiten mit Ressourcen)](../../windows/working-with-resource-files.md).
+ Weitere Informationen finden Sie unter [Arbeiten mit Ressourcen](../../windows/working-with-resource-files.md).
 
 |Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|Beschreibung|
 |---------------|------------------------|--------------------------------|-----------------|
@@ -32,4 +31,4 @@ Weitere Informationen finden Sie unter [Working with Resources (Arbeiten mit Res
 
 ## <a name="see-also"></a>Siehe auch
 
-[Datei erstellt, für visuelle C++ Projekte](file-types-created-for-visual-cpp-projects.md)
+[Für Visual Studio C++-Projekte erstellte Dateitypen](file-types-created-for-visual-cpp-projects.md)
