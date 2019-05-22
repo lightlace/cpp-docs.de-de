@@ -6,43 +6,43 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c3917fea0f13e54d5f8f73599a2d28482bb6d259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204096"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934092"
 ---
 # <a name="model"></a>.MODEL
 
-Initialisiert das Speichermodell der Anwendung an.
+Initialisiert das Programmspeichermodell.
 
 ## <a name="syntax"></a>Syntax
 
-> . Modell Memorymodel [[, Langtype]] [[, Stackoption]]
+> .MODEL memorymodel [[, langtype]] [[, stackoption]]
 
 ### <a name="parameters"></a>Parameter
 
 *memorymodel*<br/>
-Erforderlicher Parameter, der bestimmt, die Größe der Zeiger für Code und Daten.
+Erforderlicher Parameter, der die Größe von Code- und Datenzeigern bestimmt.
 
 *langtype*<br/>
-Optionaler Parameter, der die aufrufenden und der naming-Konventionen für die Prozeduren und die öffentlichen Symbole festlegt.
+Optionaler Parameter, der die Aufruf- und Namenskonventionen für Prozeduren und öffentliche Symbole festlegt.
 
 *stackoption*<br/>
 Optionaler Parameter.
 
-*Stackoption* wird nicht verwendet werden, wenn *Memorymodel* ist `FLAT`.
+Der Parameter *stackoption* wird nicht verwendet, wenn *memorymodel* den Wert `FLAT` aufweist.
 
-Angeben von `NEARSTACK` das Stack-Segment in einem einzigen physischen Segment gruppiert (`DGROUP`) zusammen mit Daten. Das Stapelregister-Segment (`SS`) wird davon ausgegangen, dass die gleiche Adresse wie dem Datenregister-Segment enthalten (`DS`). `FARSTACK` den Stapel mit werden nicht gruppiert `DGROUP`; daher `SS` ist nicht gleich `DS`.
+Wenn `NEARSTACK` angegeben wird, werden die Stapelsegmente zusammen mit Daten in ein Segment (`DGROUP`) gruppiert. Es wird angenommen, dass das Stapelsegmentregister (`SS`) dieselbe Adresse wie das Datensegmentregister (`DS`) beinhaltet. `FARSTACK` gruppiert den Stapel nicht mithilfe von `DGROUP`. Daher entspricht `SS` nicht `DS`.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
-.`MODEL` werden nicht in [MASM für X64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+.`MODEL` wird in [MASM für x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) nicht verwendet.
 
-Die folgende Tabelle enthält die möglichen Werte für jeden Parameter aus, wenn 16-Bit- und 32-Bit-Zielplattformen:
+In der folgenden Tabelle werden die möglichen Werte für die einzelnen Parameter auf 16-Bit- und 32-Bit-Plattformen aufgelistet:
 
-|Parameter|32-Bit-Werten|16-Bit-Werte (Unterstützung für ältere 16-Bit-Entwicklung)|
+|Parameter|32-Bit-Werte|16-Bit-Werte (Support für frühere 16-Bit-Entwicklungen)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
 |*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
@@ -50,9 +50,9 @@ Die folgende Tabelle enthält die möglichen Werte für jeden Parameter aus, wen
 
 ## <a name="code"></a>Code
 
-MASM-bezogene Beispiele herunterladen Sie die Compiler-Beispiele von [Visual C++-Beispiele und die zugehörige Dokumentation für Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749).
+Beispiele zu MASM finden Sie in den Compilerbeispielen, die Sie unter [Visual C++ Samples and Related Documentation for Visual Studio 2010 (Visual C++-Beispiele und passende Dokumentation für Visual Studio 2010)](https://go.microsoft.com/fwlink/p/?linkid=178749) herunterladen können.
 
-Das folgende Beispiel zeigt die Verwendung der `.MODEL` Richtlinie.
+Im folgenden Beispiel wird die Verwendung der `.MODEL`-Anweisung gezeigt.
 
 ## <a name="example"></a>Beispiel
 
