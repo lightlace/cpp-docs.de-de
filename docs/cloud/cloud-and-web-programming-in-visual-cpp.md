@@ -1,25 +1,21 @@
 ---
 title: Cloud- und Webprogrammierung in Visual C++
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 3d71e36b6209c693940f2ebe6b5e9c73bc0c9d9d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708042"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65790362"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Cloud- und Webprogrammierung in Visual C++
 
 In C++ haben Sie mehrere Optionen, um eine Verbindung mit dem Web und der Cloud herzustellen.
 
-## <a name="cloud-programming-options"></a>Cloudprogrammierungsoptionen
+## <a name="microsoft-azure-sdks-and-rest-services"></a>Microsoft Azure SDKs und REST-Dienste
 
-- [Microsoft Azure Mobile Services](http://www.windowsazure.com/develop/mobile/)
-
-  Stellt systemeigene APIs bereit, die Sie in UWP-Apps (Universelle Windows-Plattform) oder Windows-Desktop-Apps verwenden können, um Verbindungen mit Windows Azure Mobile Services herzustellen. Obwohl die meisten Beispiele auf der Website in C# geschrieben sind, können Sie auch C++ verwenden. Weitere Informationen finden Sie unter [Schnellstart: Hinzufügen eines mobilen Diensts mit C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
-
-- [Microsoft Azure Storage-Clientbibliothek für C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
+- [Microsoft Azure Storage-Clientbibliothek für C++](https://azure.github.io/azure-storage-cpp/)
 
   Die Azure Storage-Clientbibliothek für C++ stellt eine umfassende API zum Arbeiten mit Azure Storage bereit, die u. a. die folgenden Möglichkeiten bietet:
 
@@ -29,9 +25,13 @@ In C++ haben Sie mehrere Optionen, um eine Verbindung mit dem Web und der Cloud 
   - Einreihen von Nachrichten in eine und Entfernen von Nachrichten aus einer Azure-Warteschlange
   - Verzögertes Auflisten von Containern, Blobs, Tabellen und Warteschlangen und verzögertes Abfragen von Entitäten
 
-- [OneDrive-API](https://dev.onedrive.com/README.htm)
+- Mit den ANSI C99 [Azure IoT Hub SDKs](/azure/iot-hub/iot-hub-devguide-sdks) für das Internet der Dinge wird für IoT-Anwendungen die Ausführung auf dem Gerät oder auf dem Back-End ermöglicht.
+
+- [OneDrive and SharePoint in Microsoft Graph](https://dev.onedrive.com/README.htm) (OneDrive und SharePoint in Microsoft Graph)
 
   Die OneDrive-API stellt eine Reihe von HTTP-Diensten bereit, über die Sie Ihre Anwendung mit Dateien und Ordnern in Office 365 und SharePoint Server 2016 verbinden können.
+
+## <a name="windows-and-cross-platform-networking-apis"></a>Windows- und plattformübergreifende Netzwerk-APIs
 
 - [C++ REST SDK (Codename „Casablanca“)](https://github.com/Microsoft/cpprestsdk)
 
@@ -59,4 +59,5 @@ In C++ haben Sie mehrere Optionen, um eine Verbindung mit dem Web und der Cloud 
 ## <a name="see-also"></a>Siehe auch
 
 [C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md) <br/>
-[Netzwerke und Webdienste](/windows/uwp/networking/)
+[Microsoft Azure C und C++ Developer Center](https://azure.microsoft.com/develop/cpp/) <br/>
+[Netzwerke und Webdienste (UWP)](/windows/uwp/networking/)

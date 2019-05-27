@@ -3,19 +3,19 @@ title: 'vcpkg: Ein C++-Paket-Manager für Windows, Linux und macOS'
 description: Vcpkg ist ein Befehlszeilen-Paket-Manager, der den Erwerb und die Installation von Open Source-C++-Bibliotheken für Windows erheblich vereinfacht.
 author: mikeblome
 ms.author: mblome
-ms.date: 03/18/2019
+ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 5dba6877c4489337625eed016c77b853f84af990
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217652"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837023"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Ein C++-Paket-Manager für Windows, Linux und macOS
 
-vcpkg ist ein Befehlszeilen-Paket-Manager, der den Erwerb und die Installation von Drittanbieterbibliotheken für Windows, Linux und macOS erheblich vereinfacht. Wenn Ihr Projekt Drittanbieterbibliotheken verwendet, wird empfohlen, dass Sie vcpkg verwenden, um diese zu installieren. Vcpkg unterstützt sowohl Open Source- als auch proprietäre Bibliotheken. Alle Bibliotheken im vcpkg-Windows-Katalog wurden auf ihre Kompatibilität mit Visual Studio 2015 und Visual Studio 2017 getestet. Ab Mai 2018 befinden sich mehr als 900 Bibliotheken im Windows-Katalog und über 350 im Linux/macOS-Katalog. Die C++-Community fügt beiden Katalogen weiterhin neue Bibliotheken hinzu.
+vcpkg ist ein Befehlszeilen-Paket-Manager, der den Erwerb und die Installation von Drittanbieterbibliotheken für Windows, Linux und macOS erheblich vereinfacht. Wenn Ihr Projekt Drittanbieterbibliotheken verwendet, wird empfohlen, dass Sie vcpkg verwenden, um diese zu installieren. Vcpkg unterstützt sowohl Open Source- als auch proprietäre Bibliotheken. Alle Bibliotheken im vcpkg-Windows-Katalog wurden auf ihre Kompatibilität mit Visual Studio 2015, Visual Studio 2017 und Visual Studio 2019 getestet. Ab Mai 2018 befinden sich mehr als 900 Bibliotheken im Windows-Katalog und über 350 im Linux/macOS-Katalog. Die C++-Community fügt beiden Katalogen weiterhin neue Bibliotheken hinzu.
 
 ## <a name="simple-yet-flexible"></a>Einfach aber flexibel
 
@@ -23,7 +23,7 @@ Mit einem einzigen Befehl können Sie Quellen herunterladen und eine Bibliothek 
 
 ## <a name="sources-not-binaries"></a>Quellen statt Binärdateien
 
-Im Fall von Bibliotheken im Windows-Katalog lädt vcpkg Quellen anstelle von Binärdateien herunter[1]. Vcpkg kompiliert diese Quellen mithilfe von Visual Studio 2017 bzw. Visual Studio 2015, falls 2017 nicht installiert ist. In C++ ist es sehr wichtig, dass alle Bibliotheken, die Sie verwenden, mit dem gleichen Compiler und der gleichen Compilerversion wie der Anwendungscode kompiliert werden, der damit verknüpft ist. Durch die Verwendung von vcpkg eliminieren Sie das Risiko nicht übereinstimmender Binärdateien und die Probleme, die dadurch entstehen können, oder reduzieren dieses zumindest entscheidend. In Teams, in denen eine bestimmte Version eines Compilers verwendet wird, kann ein Teammitglied mit vcpkg Quellen herunterladen und Binärdateien kompilieren und anschließend mit dem Exportbefehl die Binärdateien und Header für andere Teammitglieder zippen. Weitere Informationen finden Sie nachstehend unter [Exportieren von kompilierten Binärdateien und Headern](#export_binaries_per_project).
+Im Fall von Bibliotheken im Windows-Katalog lädt vcpkg Quellen anstelle von Binärdateien herunter[1]. Es kompiliert diese Quellen mithilfe der aktuellsten Version von Visual Studio, die es findet. In C++ ist es sehr wichtig, dass alle Bibliotheken, die Sie verwenden, mit dem gleichen Compiler und der gleichen Compilerversion wie der Anwendungscode kompiliert werden, der damit verknüpft ist. Durch die Verwendung von vcpkg eliminieren Sie das Risiko nicht übereinstimmender Binärdateien und die Probleme, die dadurch entstehen können, oder reduzieren dieses zumindest entscheidend. In Teams, in denen eine bestimmte Version eines Compilers verwendet wird, kann ein Teammitglied mit vcpkg Quellen herunterladen und Binärdateien kompilieren und anschließend mit dem Exportbefehl die Binärdateien und Header für andere Teammitglieder zippen. Weitere Informationen finden Sie nachstehend unter [Exportieren von kompilierten Binärdateien und Headern](#export_binaries_per_project).
 
 Bei der Erstellung eines vcpkg-Klons mit privaten Bibliotheken in der Ports-Sammlung können Sie einen Port hinzufügen, der vorab erstellte Binärdateien und Header herunterlädt und eine „portfile.cmake“-Datei schreibt, die diese Dateien einfach in den gewünschten Speicherort kopiert.
 
@@ -148,8 +148,8 @@ Standardmäßig listet der **upgrade**-Befehl nur die Bibliotheken auf, die vera
 
 - **--no-dry-run**: Durchführen des Upgrades. Ist diese Option nicht angegeben, listet der Befehl nur die veralteten Pakete auf.
 - **--keep-going**: Die Installation der Pakete wird fortgeführt, auch wenn die Installation eines Pakets fehlschlägt.
-- **--triplet \<t>**: Festlegen der Standarddreiergruppe für nicht qualifizierte Pakete
-- **--vcpkg-root \<path>**: Angeben des zu verwendenden vcpkg-Verzeichnisses statt des aktuellen Verzeichnisse oder des Toolverzeichnisses
+- **--triplet \<t>** : Festlegen der Standarddreiergruppe für nicht qualifizierte Pakete
+- **--vcpkg-root \<path>** : Angeben des zu verwendenden vcpkg-Verzeichnisses statt des aktuellen Verzeichnisse oder des Toolverzeichnisses
 
 ### <a name="upgrade-example"></a>Beispiel für ein Upgrade
 

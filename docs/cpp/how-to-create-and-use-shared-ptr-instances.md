@@ -1,27 +1,78 @@
 ---
-title: 'Vorgehensweise: Erstellen und Verwenden von Shared_ptr-Instanzen'
+title: 'Vorgehensweise: Erstellen und Verwenden von shared_ptr-Instanzen'
 ms.custom: how-to
-ms.date: 11/19/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 8363139efddb2fa64057fdb995ab7bd5dfbcfd9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e7d63840f60c00f97b02825965cc247cddc38fd
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153741"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174815"
 ---
-# <a name="how-to-create-and-use-sharedptr-instances"></a>Vorgehensweise: Erstellen und Verwenden von Shared_ptr-Instanzen
+# <a name="how-to-create-and-use-sharedptr-instances"></a>Vorgehensweise: Erstellen und Verwenden von shared_ptr-Instanzen
 
 Der Typ `shared_ptr` ist ein intelligenter Zeiger in der C++-Standardbibliothek für Szenarien, in denen möglicherweise mehrere Besitzer die Lebensdauer des Objekts im Arbeitsspeicher verwalten müssen. Nachdem Sie einen `shared_ptr` initialisiert haben, können Sie ihn kopieren, als Wert an Funktionsargumente übergeben oder anderen `shared_ptr`-Instanzen zuweisen. Alle Instanzen zeigen auf dasselbe Objekt und greifen gemeinsam auf einen "Kontrollblock" zu, der den Verweiszähler erhöht bzw. verringert, wenn ein neuer `shared_ptr` hinzugefügt wird, den Gültigkeitsbereich verlässt oder zurückgesetzt wird. Wenn der Verweiszähler Null erreicht, löscht der Kontrollblock die Speicherressource und sich selbst.
 
 Die folgende Abbildung zeigt mehrere `shared_ptr`-Instanzen, die auf einen Speicherbereich zeigen.
 
-![Freigegebene Zeiger Diagramm](../cpp/media/shared_ptr.png "freigegebene Zeiger-Diagramm")
+![Diagramm für gemeinsame Zeiger](../cpp/media/shared_ptr.png "Diagramm für gemeinsame Zeiger")
+
+## <a name="example-setup"></a>Beispielkonfiguration
+
+Bei allen folgenden Beispielen wird davon ausgegangen, dass Sie die erforderlichen Header hinzugefügt und die erforderlichen Typen, wie hier gezeigt, deklariert haben:
+
+```cpp
+// shared_ptr-examples.cpp
+// The following examples assume these declarations:
+#include <algorithm>
+#include <iostream>
+#include <memory>
+#include <string>
+#include <vector>
+
+struct MediaAsset
+{
+    virtual ~MediaAsset() = default; // make it polymorphic
+};
+
+struct Song : public MediaAsset
+{
+    std::wstring artist;
+    std::wstring title;
+    Song(const std::wstring& artist_, const std::wstring& title_) :
+        artist{ artist_ }, title{ title_ } {}
+};
+
+struct Photo : public MediaAsset
+{
+    std::wstring date;
+    std::wstring location;
+    std::wstring subject;
+    Photo(
+        const std::wstring& date_,
+        const std::wstring& location_,
+        const std::wstring& subject_) :
+        date{ date_ }, location{ location_ }, subject{ subject_ } {}
+};
+
+using namespace std;
+
+int main()
+{
+    // The examples go here, in order:
+    // Example 1
+    // Example 2
+    // Example 3
+    // Example 4
+    // Example 6
+}
+```
 
 ## <a name="example-1"></a>Beispiel 1
 
-Verwenden Sie nach Möglichkeit die [Make_shared](../standard-library/memory-functions.md#make_shared) Funktion zum Erstellen einer `shared_ptr` Wenn die Speicherressource zum ersten Mal erstellt wird. `make_shared` ist ausnahmesicher. Die Funktion verwendet den gleichen Aufruf zum Zuweisen des Arbeitsspeichers für den Kontrollblock und die Ressource und verringert so den Konstruktionsmehraufwand. Wenn Sie `make_shared` nicht verwenden, müssen Sie einen expliziten neuen Ausdruck zum Erstellen des Objekts verwenden, bevor Sie es an den `shared_ptr`-Konstruktor übergeben. Das folgende Beispiel zeigt verschiedene Möglichkeiten zum Deklarieren und Initialisieren eines `shared_ptr` zusammen mit einem neuen Objekt.
+Verwenden Sie nach Möglichkeit die Funktion [make_shared](../standard-library/memory-functions.md#make_shared) zum Erstellen eines `shared_ptr`, wenn die Speicherressource zum ersten Mal erstellt wird. `make_shared` ist ausnahmesicher. Die Funktion verwendet den gleichen Aufruf zum Zuweisen des Arbeitsspeichers für den Kontrollblock und die Ressource, wodurch der Konstruktionsmehraufwand verringert wird. Wenn Sie `make_shared` nicht verwenden, müssen Sie einen expliziten `new`-Ausdruck zum Erstellen des Objekts verwenden, bevor Sie es an den `shared_ptr`-Konstruktor übergeben. Das folgende Beispiel zeigt verschiedene Möglichkeiten zum Deklarieren und Initialisieren eines `shared_ptr` zusammen mit einem neuen Objekt.
 
 [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
@@ -33,7 +84,7 @@ Im folgenden Beispiel wird veranschaulicht, wie `shared_ptr`-Instanzen deklarier
 
 ## <a name="example-3"></a>Beispiel 3
 
-`shared_ptr` empfiehlt sich auch in C++-Standardbibliothek-Containern, wenn Sie die Algorithmen verwenden, die Elemente zu kopieren. Sie können Elemente in einem `shared_ptr` umschließen und sie dann in andere Container kopieren. Voraussetzung ist, dass der zugrunde liegende Arbeitsspeicher solange gültig ist, wie Sie ihn benötigen, und nicht länger. Im folgenden Beispiel wird die Verwendung des `replace_copy_if`-Algorithmus für `shared_ptr`-Instanzen in einem Vektor dargestellt.
+`shared_ptr` ist auch in Containern der C++ Standardbibliothek hilfreich, wenn Sie die Algorithmen verwenden, die Elemente kopieren. Sie können Elemente in einem `shared_ptr` umschließen und sie dann in andere Container kopieren. Voraussetzung ist, dass der zugrunde liegende Arbeitsspeicher solange gültig ist, wie Sie ihn benötigen, und nicht länger. Im folgenden Beispiel wird die Verwendung des `replace_copy_if`-Algorithmus für `shared_ptr`-Instanzen in einem Vektor dargestellt.
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
@@ -47,9 +98,9 @@ Sie können `dynamic_pointer_cast`, `static_pointer_cast` und `const_pointer_cas
 
 Sie können einen `shared_ptr` folgendermaßen an eine andere Funktion übergeben:
 
-- Übergeben Sie den `shared_ptr` als Wert. Dies ruft den Kopierkonstruktor auf, erhöht den Verweiszähler und macht den Aufgerufenen zum Besitzer. Bei diesem Vorgang kommt es zu einem geringfügigen Mehraufwand, der abhängig von der Anzahl der zu übergebenden `shared_ptr`-Objekte bedeutsam sein kann. Verwenden Sie diese Option, wenn der Codevertrag (implizit oder explizit) zwischen dem Aufrufer und dem Aufgerufenen erfordert, dass der Aufgerufene ein Besitzer ist.
+- Übergeben Sie den `shared_ptr` als Wert. Dies ruft den Kopierkonstruktor auf, erhöht den Verweiszähler und macht den Aufgerufenen zum Besitzer. Bei diesem Vorgang kommt es zu einem geringfügigen Mehraufwand, der abhängig von der Anzahl der zu übergebenden `shared_ptr`-Objekte bedeutsam sein kann. Verwenden Sie diese Option, wenn der implizite oder explizite Codevertrag zwischen dem Aufrufer und dem Aufgerufenen erfordert, dass der Aufgerufene ein Besitzer ist.
 
-- Übergeben Sie den `shared_ptr` als Verweis oder konstanter Verweis. In diesem Fall wird der Verweiszähler nicht erhöht, und der Aufgerufene kann auf den Zeiger zugreifen, solange der Aufrufer den Gültigkeitsbereich nicht verlässt. Der Aufgerufene hat auch die Möglichkeit, einen `shared_ptr` auf Basis des Verweises erstellen, wodurch er zu einem freigegebenen Besitzer wird. Verwenden Sie diese Option, wenn der Aufrufer den Aufgerufenen nicht kennt oder wenn Sie einen `shared_ptr` übergeben müssen und den Kopiervorgang aus Leistungsgründen vermeiden möchten.
+- Übergeben Sie den `shared_ptr` als Verweis oder konstanter Verweis. In diesem Fall wird der Verweiszähler nicht erhöht, und der Aufgerufene kann auf den Zeiger zugreifen, solange der Aufrufer den Gültigkeitsbereich nicht verlässt. Der Aufgerufene hat auch die Möglichkeit, einen `shared_ptr` auf Basis des Verweises zu erstellen und zu einem freigegebenen Besitzer zu werden. Verwenden Sie diese Option, wenn der Aufrufer den Aufgerufenen nicht kennt oder wenn Sie einen `shared_ptr` übergeben müssen und den Kopiervorgang aus Leistungsgründen vermeiden möchten.
 
 - Übergeben Sie den zugrunde liegenden Zeiger oder einen Verweis auf das zugrunde liegende Objekt. Dadurch kann der Aufgerufene das Objekt verwenden, jedoch nicht den Besitz teilen oder die Lebensdauer erweitern. Wenn der Aufgerufene einen `shared_ptr` auf der Grundlage des Rohdatenzeigers erstellt, ist der neue `shared_ptr` unabhängig vom Original und steuert die zugrunde liegende Ressource nicht. Verwenden Sie diese Option, wenn der Vertrag zwischen dem Aufrufer und dem Aufgerufenen klar festgelegt ist, dass der Aufrufer Besitzer der `shared_ptr`-Lebensdauer bleibt.
 

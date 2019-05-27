@@ -1,24 +1,24 @@
 ---
-title: Vererbung von Eigenschaften in Visual Studio-Projekte – C++
-ms.date: 12/10/2018
+title: 'Vererbung von Eigenschaften in Visual Studio-Projekten: C++'
+ms.date: 05/16/2019
 helpviewer_keywords:
 - C++ projects, property inheritance
-ms.openlocfilehash: 7e6e2ec4e4f1999639a1b0a0d7ce35873736e5e3
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 472700226ffc1f265f6fab84dbd44fca651b3c87
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220440"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837403"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>Vererbung von Eigenschaften in Visual Studio-Projekten
 
-Die Visual Studio-Projektsystem beruht auf MSBuild, die Dateiformate und die Regeln für das Erstellen von Projekte eines beliebigen Typs definiert. MSBuild verwaltet einen Großteil der Komplexität für das Erstellen für mehrere Konfigurationen und Plattformen. Sie sollten jedoch die Funktionsweise kennen. Dies ist besonders wichtig, wenn Sie benutzerdefinierte Konfigurationen definieren oder wiederverwendbare Eigenschaften erstellen möchten, die Sie für mehrere Projekte freigeben und in diese importieren können.
+Das Visual Studio-Projektsystem basiert auf MSBuild. MSBuild definiert die Dateiformate und die Regeln für das Erstellen von Projekten. MSBuild verwaltet einen Großteil der Komplexität für das Erstellen für mehrere Konfigurationen und Plattformen. Sie sollten jedoch die Funktionsweise kennen. Dies ist besonders wichtig, wenn Sie benutzerdefinierte Konfigurationen definieren oder wiederverwendbare Eigenschaften erstellen möchten, die Sie für mehrere Projekte freigeben und in diese importieren können.
 
-## <a name="the-vcxproj-file-props-files-and-targets-files"></a>Die VCXPROJ-Datei, props- und TARGETS-Dateien
+## <a name="the-vcxproj-file-props-files-and-targets-files"></a>Die VCXPROJ-Datei, PROPS- und TARGETS-Dateien
 
-Projekteigenschaften werden gespeichert, entweder direkt in der Projektdatei (*.vcxproj) oder in anderen targets oder PROPS-Dateien, die die Importe von Projekt und die Standardwerte angeben. Für Visual Studio 2015 befinden sich diese Dateien unter **\Programme (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Für Visual Studio 2017 befinden sich diese Dateien unter **\\Programme (x86)\\Microsoft Visual Studio\\2017\\_Edition_\\Common7\\IDE\\VC\\VCTargets**. Hierbei entspricht _Edition_ der installierten Visual Studio-Edition. Eigenschaften werden ebenfalls in einer PROPS-Datei gespeichert, die Sie zu Ihrem Projekt hinzufügen können. Es wird dringend empfohlen, diese Dateien nicht manuell zu bearbeiten, sondern die Eigenschaftenseiten in der IDE dafür zu verwenden. Dies gilt insbesondere für die Dateien, die in die Vererbung mit einbezogen werden, sofern Sie nicht über gute MSBuild-Kenntnisse verfügen.
+Projekteigenschaften werden entweder direkt in der Projektdatei (*.vcxproj) oder in weiteren TARGETS- oder PROPS-Dateien gespeichert, die Standardwerte angeben und von der Projektdatei importiert werden. Für Visual Studio 2015 befinden sich diese Dateien unter **\Programme (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Für Visual Studio 2017 oder Visual Studio 2019 befinden sich diese Dateien unter **\\Programme (x86)\\Microsoft Visual Studio\\&lt;2017 oder 2019>\\_Edition_\\Common7\\IDE\\VC\\VCTargets**. Hierbei entspricht _Edition_ der installierten Visual Studio-Edition. Eigenschaften werden ebenfalls in einer PROPS-Datei gespeichert, die Sie zu Ihrem Projekt hinzufügen können. Es wird dringend empfohlen, diese Dateien nicht manuell zu bearbeiten, sondern die Eigenschaftenseiten in der IDE dafür zu verwenden. Dies gilt insbesondere für die Dateien, die in die Vererbung mit einbezogen werden, sofern Sie nicht über gute MSBuild-Kenntnisse verfügen.
 
-Wie bereits erwähnt, kann die gleiche Eigenschaft für die gleiche Konfiguration einen anderen Wert in diesen verschiedenen Dateien zugewiesen werden. Wenn Sie ein Projekt erstellen, wertet die MSBuild-Engine die Projektdatei und alle importierten Dateien in einer klar definierten Reihenfolge (siehe unten) aus. Während die Dateien ausgewertet werden, überschreiben alle Eigenschaftswerte, die in den Dateien definiert sind, die vorhandenen Werte. Alle nicht angegebenen Werte werden von Dateien geerbt, die zuvor ausgewertet wurden. Deshalb ist beim Festlegen einer Eigenschaft mit Eigenschaftenseiten ebenfalls wichtig, darauf zu achten, wo Sie diese festlegen. Wenn Sie eine Eigenschaft in einer PROPS-Datei auf „X“ festlegen, diese aber in der Projektdatei auf „Y“ festgelegt ist, wird das Projekt mit der auf „Y“ festgelegten Eigenschaft erstellt. Wenn die gleiche Eigenschaft in einem Projektelement (z.B. in einer CPP-Datei) auf „Z“ festgelegt ist, verwendet die MSBuild-Engine den Wert „Z“. 
+Wie zuvor beschrieben kann der gleichen Eigenschaft für die gleiche Konfiguration in verschiedenen Dateien ein anderer Wert zugewiesen werden. Wenn Sie ein Projekt erstellen, wertet die MSBuild-Engine die Projektdatei und alle importierten Dateien in einer klar definierten Reihenfolge (siehe unten) aus. Während die Dateien ausgewertet werden, überschreiben alle Eigenschaftswerte, die in den Dateien definiert sind, die vorhandenen Werte. Alle nicht angegebenen Werte werden von Dateien geerbt, die zuvor ausgewertet wurden. Deshalb ist beim Festlegen einer Eigenschaft mit Eigenschaftenseiten ebenfalls wichtig, darauf zu achten, wo Sie diese festlegen. Wenn Sie eine Eigenschaft in einer PROPS-Datei auf „X“ festlegen, diese aber in der Projektdatei auf „Y“ festgelegt ist, wird das Projekt mit der auf „Y“ festgelegten Eigenschaft erstellt. Wenn die gleiche Eigenschaft in einem Projektelement (z.B. in einer CPP-Datei) auf „Z“ festgelegt ist, verwendet die MSBuild-Engine den Wert „Z“. 
 
 So sieht die grundlegende Vererbungsstruktur aus:
 
@@ -61,13 +61,13 @@ Weitere Informationen finden Sie unter [MSBuild Properties](/visualstudio/msbuil
 
 Eine Konfiguration ist nur eine beliebige Gruppe von Eigenschaften, denen ein Name zugewiesen wird. Visual Studio stellt Debug- und Releasekonfigurationen bereit und legt jeweils verschiedene Eigenschaften fest, die einem Debugbuild oder einem Releasebuild entsprechen. Sie können den **Konfigurations-Manager** verwenden, um benutzerdefinierte Konfigurationen zu definieren und somit Eigenschaften einfach für einen bestimmten Build gruppieren. 
 
-Um einen besseren Überblick über die Konfigurationen zu erhalten, öffnen Sie **Eigenschaften-Manager** dazu **Ansicht &#124; Eigenschaften-Manager** oder **Ansicht &#124; andere Windows &#124; Eigenschaften-Manager**  abhängig von Ihren Einstellungen. **Eigenschaften-Manager** hat der Knoten für jedes Paar der Konfiguration/Plattform im Projekt. Unter jedem dieser Knoten sind Knoten für Eigenschaftenblätter (PROPS-Dateien), die für diese Konfiguration spezifische Eigenschaften festlegen.
+Um eine bessere Vorstellung von Buildkonfigurationen zu bekommen, öffnen Sie den **Eigenschaften-Manager**, indem Sie **Ansicht &#124; Eigenschaften-Manager** oder **Ansicht &#124; Weitere Fenster &#124; Eigenschaften-Manager** auswählen, je nach Ihren Einstellungen. Der **Eigenschaften-Manager** weist Knoten für jede Konfiguration/jedes Plattform-Paar im Projekt auf. Unter jedem dieser Knoten sind Knoten für Eigenschaftenblätter (PROPS-Dateien), die für diese Konfiguration spezifische Eigenschaften festlegen.
 
 ![Eigenschaften-Manager](media/property-manager.png "Property Manager")
 
-Wenn Sie wechseln Sie zum Bereich "Allgemein" auf den Eigenschaftenseiten, und legen Sie die Eigenschaft Zeichensatz auf "Nicht festgelegt" anstelle von "Verwenden von Unicode", und klicken Sie auf **OK**, Eigenschaften-Manager zeigt keine **Unicode-Unterstützung** Eigenschaftenblatt für die aktuelle Konfiguration, aber es wird weiterhin für andere Konfigurationen bestehen.
+Wenn Sie auf den Eigenschaftenseiten zum Bereich „Allgemein“ wechseln und die Eigenschaft „Zeichensatz“ auf „Nicht festgelegt“ statt auf „Unicode-Zeichensatz verwenden“ festlegen und auf **OK** klicken, zeigt der Eigenschaften-Manager das Eigenschaftenblatt **Unicode-Unterstützung** für die aktuelle Konfiguration nicht an. Für andere Konfigurationen ist es jedoch vorhanden.
 
-Weitere Informationen zu Eigenschaften-Manager und Eigenschaftenseiten finden Sie unter [Freigabe oder beabsichtigen Visual Studio C++-projekteinstellungen](create-reusable-property-configurations.md).
+Weitere Informationen zum Eigenschaften-Manager und zu Eigenschaftenblättern finden Sie unter [Teilen oder Wiederverwenden von Visual Studio C++-Projekteinstellungen](create-reusable-property-configurations.md).
 
 > [!TIP]
 > Bei der USER-Datei handelt es sich um ein veraltetes Feature. Es wird empfohlen, diese zu löschen, damit die Eigenschaften entsprechend der Konfiguration und Plattform richtig gruppiert werden.

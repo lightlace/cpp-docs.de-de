@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Projects - C++
+title: 'Visual Studio-Projekte: C++'
 ms.date: 12/12/2018
 helpviewer_keywords:
 - ATL projects, creating
@@ -8,69 +8,81 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 15adae6cb9908f74d62709622ca3302fd35faa46
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446360"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837048"
 ---
-# <a name="visual-studio-projects---c"></a>Visual Studio-Projekte – C++
+# <a name="visual-studio-projects---c"></a>Visual Studio-Projekte: C++
 
-Ein *Visual Studio-Projekt* basiert ein Projekt auf das MSBuild-Build-System. MSBuild ist das systemeigene Buildsystem für Visual Studio und ist im Allgemeinen, dass die beste Buildsystem für UWP-apps als auch Desktop-Anwendungen, die MFC- oder ATL-Bibliotheken, COM-Komponenten und anderen Windows-spezifische Programme verwenden. MSBuild ist eng in Visual Studio integriert, aber Sie können es auch über die Befehlszeile verwenden. 
+Ein *Visual Studio-Projekt* ist ein Projekt, das auf dem MSBuild-Buildsystem basiert. MSBuild ist das native Buildsystem für Visual Studio und im Allgemeinen das beste Buildsystem für UWP-Apps sowie Desktopanwendungen, die von MFC- oder ATL-Bibliotheken oder COM-Komponenten Gebrauch machen, und für andere Windows-spezifische Programme. MSBuild ist eng in Visual Studio integriert. Sie können MSBuild jedoch auch über die Befehlszeile verwenden. 
 
 ## <a name="create-a-project"></a>Erstellen eines Projekts
 
-Sie können C++-Projekte erstellen, indem Sie die Auswahl **Datei &#124; neu &#124; Projekt**, und klicken Sie dann Visual C++ im linken Bereich auswählen. Im mittleren Bereich sehen Sie eine Liste der Projektvorlagen das Projekt aus: 
+::: moniker range="vs-2019"
+
+Sie können C++-Projekte erstellen, indem Sie **Datei** > **Neu** > **Projekt** auswählen und dann die **Sprache** auf C++ einstellen. In der Ergebnisliste sehen Sie eine Liste mit Projektvorlagen, die Sie filtern können, indem Sie die **Plattform** oder den **Projekttyp** festlegen oder Schlüsselwörter in das Suchfeld eingeben. 
+
+   ![Visual Studio 2019-Projektvorlagen](../build/media/vs2019-choose-console-app.png "Visual Studio 2019-Dialogfeld „Neues Projekt“")
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Sie können C++-Projekte erstellen, indem Sie **Datei** > **Neu** > **Projekt** und dann Visual C++ im linken Bereich auswählen. Im mittleren Bereich sehen Sie eine Liste mit Projektvorlagen:
 
    ![Projektvorlagen](../overview/media/vs2017-new-project.png "Visual Studio 2017-Dialogfeld „Neues Projekt“")
 
-Weitere Informationen zu allen Standard-Projektvorlagen, die in Visual Studio enthalten sind, finden Sie unter [C++-Projektvorlagen in Visual Studio](reference/visual-cpp-project-types.md). Sie können eigene Projektvorlagen erstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Projektvorlagen](/visualstudio/ide/how-to-create-project-templates).
+::: moniker-end
 
-Nachdem Sie ein Projekt erstellen, wird Sie der [Projektmappen-Explorer](/visualstudio/ide/solutions-and-projects-in-visual-studio) Fenster:
+Weitere Informationen zu allen in Visual Studio enthaltenen Standardprojektvorlagen finden Sie unter [C++-Projektvorlagen in Visual Studio](reference/visual-cpp-project-types.md). Sie können eigene Projektvorlagen erstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Projektvorlagen](/visualstudio/ide/how-to-create-project-templates).
+
+Nachdem Sie ein Projekt erstellt haben, wird es im Fenster des [Projektmappen-Explorers](/visualstudio/ide/solutions-and-projects-in-visual-studio) angezeigt:
 
    ![Projektmappen-Explorer](media/mathlibrary-solution-explorer-153.png)
 
-Wenn Sie ein neues Projekt erstellen, wird auch eine Projektmappendatei (sln) erstellt. Sie können zusätzliche Projekte der Projektmappe hinzufügen, indem Sie mit der rechten Maustaste auf diese im **Projektmappen-Explorer**. Die Projektmappendatei wird verwendet, Buildabhängigkeiten zu koordinieren, wenn Sie mehrere verwandte Projekte sich nicht viel mehr. Alle Compileroptionen werden auf Projektebene festgelegt.
+Beim Erstellen eines neuen Projekts wird außerdem eine Projektmappendatei (SLN) erstellt. Sie können der Projektmappe weitere Projekte hinzufügen, indem Sie im **Projektmappen-Explorer** mit der rechten Maustaste darauf klicken. Die Projektmappendatei wird zum Koordinieren von Buildabhängigkeiten unter mehreren verwandten Projekten verwendet, leistet aber nicht viel mehr als das. Alle Compileroptionen werden auf Projektebene festgelegt.
 
 ## <a name="add-items"></a>Hinzufügen von Elementen
 
-Quellcodedateien, Symbole oder andere Elemente Ihrem Projekt hinzufügen, indem Sie mit der rechten Maustaste auf das Projekt im **Projektmappen-Explorer** und **hinzufügen > New** oder **hinzufügen > vorhandenes**.
+Fügen Sie Ihrem Projekt Quellcodedateien, Symbole oder beliebige andere Elemente hinzu, indem Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt klicken und **Hinzufügen > Neu** oder **Hinzufügen > Vorhanden** auswählen.
 
 ## <a name="add-third-party-libraries"></a>Hinzufügen von Bibliotheken von Drittanbietern
 
-Verwenden Sie zum Hinzufügen von Drittanbieterbibliotheken der [Vcpkg](vcpkg.md) -Paket-Manager. Führen Sie die Visual Studio-integrationsschritt richten Sie die Pfade zu dieser Bibliothek, wenn Sie es aus einem beliebigen Visual Studio-Projekt verweisen. 
+Verwenden Sie zum Hinzufügen von Drittanbieterbibliotheken den [vcpkg](vcpkg.md)-Paket-Manager. Führen Sie den Visual Studio-Integrationsschritt aus, um die Pfade zu dieser Bibliothek einzurichten, damit sie für Verweise aus beliebigen Visual Studio-Projekten zur Verfügung steht. 
 
-## <a name="set-compiler-options-and-other-build-properties"></a>Festlegen von Compileroptionen und andere Buildeigenschaften
+## <a name="set-compiler-options-and-other-build-properties"></a>Festlegen von Compileroptionen und anderen Buildeigenschaften
 
-Zum Konfigurieren von Buildeinstellungen für ein Projekt mit der Maustaste, auf das Projekt im **Projektmappen-Explorer** , und wählen Sie **Eigenschaften**. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](working-with-project-properties.md).
+Klicken Sie zum Konfigurieren der Buildeinstellungen für ein Projekt im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften** aus. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](working-with-project-properties.md).
 
-## <a name="compile-and-run"></a>Kompilieren und ausführen
+## <a name="compile-and-run"></a>Kompilieren und Ausführen
 
-Zum Kompilieren, und führen Sie das neue Projekt ein, drücken Sie die **F5** oder klicken Sie auf die *debug-Dropdownliste* mit dem grünen Pfeil auf der Hauptsymbolleiste. Die *Dropdownliste "Konfiguration"* ist, in dem Sie, ob bei der ein *Debuggen* oder *Version* Build (oder eine andere benutzerdefinierte Konfiguration verwenden).
+Um das neue Projekt zu kompilieren und auszuführen, drücken Sie **F5**, oder klicken Sie auf die *Debug-Dropdownliste* mit dem grünen Pfeil in der Hauptsymbolleiste. In der *Dropdownliste „Konfiguration“* wählen Sie aus, ob ein *Debug-* oder ein *Release*-Build (oder eine andere, benutzerdefinierte Konfiguration) erstellt werden soll.
 
-Ein neues Projekt wird ohne Fehler kompiliert. Wenn Sie Ihren eigenen Code hinzufügen, können Sie gelegentlich einen Fehler verursachen oder eine Warnung ausgelöst. Ein Fehler wird verhindert, dass den Build abgeschlossen; eine Warnung wird nicht verwendet. Alle Fehler und Warnungen werden angezeigt, bei der Erstellung des Projekts in das Fenster "Ausgabe" sowohl in der Fehlerliste. 
+Ein neues Projekt wird ohne Fehler kompiliert. Wenn Sie eigenen Code hinzufügen, führen Sie damit möglicherweise gelegentlich einen Fehler ein oder lösen eine Warnung aus. Ein Fehler verhindert die Fertigstellung des Builds; eine Warnung tut das nicht. Beim Erstellen des Projekts werden alle Fehler und Warnungen sowohl im Ausgabefenster als auch in der Fehlerliste angezeigt. 
 
-   ![Liste von Ausgabe-Fenster und Fehler](../overview/media/vs2017-output-error-list.png)
+   ![Ausgabefenster und Fehlerliste](../overview/media/vs2017-output-error-list.png)
 
-Sie können in der Fehlerliste drücken **F1** auf einen hervorgehobenen Fehler, um die Dokumentationsthema anzuzeigen.
+In der Fehlerliste können Sie durch Drücken von **F1** auf einem hervorgehobenen Fehler zu dessen Dokumentationsthema gelangen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 [Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio](working-with-project-properties.md)<br/>
-Gewusst wie Eigenschaftenseiten und Eigenschaftenblätter verwenden, um Ihre projekteinstellungen festzulegen.
+Verwenden von Eigenschaftenseiten und Eigenschaftenblättern zum Festlegen von Projekteinstellungen.
 
 [Verweisen auf Bibliotheken und Komponenten zur Buildzeit](adding-references-in-visual-cpp-projects.md)<br/>
-Informationen zum Einschließen von Bibliotheken, DLL-Dateien, COM- und -Komponenten in einem Projekt.
+Einschließen von Bibliotheken, DLLs, COM- und .NET-Komponenten in einem Projekt.
  
 [Organisieren von Projektausgabedateien](how-to-organize-project-output-files-for-builds.md)<br/>
-So passen Sie den Speicherort der ausführbaren Dateien im Buildprozess erstellt werden.
+Anpassen des Speicherorts der im Buildprozess erstellten ausführbaren Dateien.
 
 [Benutzerdefinierte Buildschritte und Buildereignisse](understanding-custom-build-steps-and-build-events.md)<br/>
-Das Hinzufügen von beliebigen Befehl für den Buildprozess an bestimmten Punkten.
+Hinzufügen beliebiger Befehle zum Buildprozess an festgelegten Punkten.
 
 [Erstellen eines Projekts aus vorhandenem Code](how-to-create-a-cpp-project-from-existing-code.md)<br/>
-Vorgehensweise: Erstellen Sie ein neues Visual Studio-Projekt aus einer losen Auflistung von Quelldateien.
+Erstellen eines neuen Visual Studio-Projekts aus einer losen Sammlung von Quelldateien.
 
 ## <a name="see-also"></a>Siehe auch
 
