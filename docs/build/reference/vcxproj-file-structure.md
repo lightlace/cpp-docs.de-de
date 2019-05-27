@@ -1,19 +1,19 @@
 ---
 title: VCXPROJ- und PROPS-Dateistruktur
-ms.date: 09/18/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446503"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837518"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>VCXPROJ- und PROPS-Dateistruktur
 
-[MSBuild](../msbuild-visual-cpp.md) ist das Standardprojektsystem in Visual Studio. Wenn Sie in Visual C++ **Datei** > **Neues Projekt** auswählen, erstellen Sie ein MSBuild-Projekt, dessen Einstellungen in einer XML-Projektdatei mit der Erweiterung `.vcxproj` gespeichert werden. Die Projektdatei kann ebenfalls PROPS- und TARGETS-Dateien importieren, in denen Einstellungen gespeichert werden können. In den meisten Fällen müssen Sie die Projektdatei nicht bearbeiten. Sie sollten sogar davon absehen, sie manuell zu bearbeiten, sofern Sie nicht über gute Kenntnisse über MSBuild verfügen. Nach Möglichkeit sollten Sie die Eigenschaftenseiten für Visual Studio verwenden, um projekteinstellungen zu ändern (siehe [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md). In manchen Fällen müssen Sie eine Projektdatei oder ein Eigenschaftenblatt jedoch manuell bearbeiten. Für diese Szenarios enthält dieser Artikel grundlegende Informationen zur Struktur der Datei.
+[MSBuild](../msbuild-visual-cpp.md) ist das Standardprojektsystem in Visual Studio. Wenn Sie in Visual C++ **Datei** > **Neues Projekt** auswählen, erstellen Sie ein MSBuild-Projekt, dessen Einstellungen in einer XML-Projektdatei mit der Erweiterung `.vcxproj` gespeichert werden. Die Projektdatei kann ebenfalls PROPS- und TARGETS-Dateien importieren, in denen Einstellungen gespeichert werden können. In den meisten Fällen müssen Sie die Projektdatei nicht bearbeiten. Sie sollten sogar davon absehen, sie manuell zu bearbeiten, sofern Sie nicht über gute Kenntnisse über MSBuild verfügen. Nach Möglichkeit sollten Sie die Visual Studio-Eigenschaftenseiten verwenden, um Projekteinstellungen zu bearbeiten (lesen Sie dazu [Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio](../working-with-project-properties.md)). In manchen Fällen müssen Sie eine Projektdatei oder ein Eigenschaftenblatt jedoch manuell bearbeiten. Für diese Szenarios enthält dieser Artikel grundlegende Informationen zur Struktur der Datei.
 
 **Wichtig:**
 
@@ -21,13 +21,13 @@ Wenn Sie eine VCXPROJ-Datei manuell bearbeiten, sollten Sie Folgendes beachten:
 
 1. Die Struktur der Datei muss einer vorgeschriebenen Form folgen, die in diesem Artikel beschrieben wird.
 
-1. Visual Studio C++ Projektsystem unterstützt derzeit keine Platzhalter in Projektelementen. Folgendes wird beispielsweise nicht unterstützt:
+1. Das C++-Projektsystem von Visual Studio unterstützt derzeit keine Platzhalter in Projektelementen. Folgendes wird beispielsweise nicht unterstützt:
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Visual Studio C++ Projektsystem unterstützt derzeit keine Makros in Projektpfade-Element. Folgendes wird beispielsweise nicht unterstützt:
+1. Das C++-Projektsystem von Visual Studio unterstützt derzeit keine Makros in den Pfaden von Projektelementen. Folgendes wird beispielsweise nicht unterstützt:
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -47,7 +47,7 @@ Wenn Sie eine VCXPROJ-Datei manuell bearbeiten, sollten Sie Folgendes beachten:
 
 Sie können die Inhalte einer VCXPROJ-Datei überprüfen, indem Sie einen Text- oder XML-Editor verwenden. Sie können sie in Visual Studio anzeigen, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt klicken und anschließend **Projekt entladen** > **Foo.vcxproj bearbeiten** auswählen.
 
-Zunächst werden Sie feststellen, dass die Elemente auf oberster Ebene in einer bestimmten Reihenfolge angezeigt werden. Zum Beispiel:
+Zunächst werden Sie feststellen, dass die Elemente auf oberster Ebene in einer bestimmten Reihenfolge angezeigt werden. Beispiel:
 
 - Die meisten Eigenschaftengruppen und Elementdefinitionsgruppen werden nach dem Import für „Microsoft.Cpp.Default.props“ angezeigt.
 
@@ -104,7 +104,7 @@ Die Elementgruppe `ProjectConfigurations` wird nicht zur Buildzeit verwendet. Di
 
 ### <a name="projectconfiguration-elements"></a>ProjectConfiguration-Elemente
 
-In folgendem Codeausschnitt wird eine Projektkonfiguration dargestellt. In diesem Beispiel entspricht „Debug|x64“ dem Konfigurationsnamen. Der Konfigurationsname des Projekts muss im Format „$(Configuration)|$(Platform)“ vorliegen. Ein Knoten für die Konfiguration des Projekts haben zwei Eigenschaften: Konfiguration und Plattform. Diese Eigenschaften werden automatisch auf die hier angegebenen Werte festgelegt, wenn die Konfiguration aktiv ist.
+In folgendem Codeausschnitt wird eine Projektkonfiguration dargestellt. In diesem Beispiel entspricht „Debug|x64“ dem Konfigurationsnamen. Der Konfigurationsname des Projekts muss im Format „$(Configuration)|$(Platform)“ vorliegen. Ein ProjectConfiguration-Knoten kann zwei Eigenschaften enthalten: „Configuration“ und „Platform“. Diese Eigenschaften werden automatisch auf die hier angegebenen Werte festgelegt, wenn die Konfiguration aktiv ist.
 
 ```xml
 <ProjectConfiguration Include="Debug|x64">
@@ -213,7 +213,7 @@ Enthält Elementdefinitionen. Diese müssen die gleichen Bedingungsregeln wie di
 
 Enthält die Elemente (z.B. Quelldateien) des Projekts. Für Projektelemente werden keine Bedingungen unterstützt (d.h. für Elementtypen, die durch Regeldefinitionen als Projektelemente behandelt werden).
 
-Die Metadaten sollten Konfigurationsbedingungen für jede Konfiguration enthalten, auch wenn sie alle identisch sind. Zum Beispiel:
+Die Metadaten sollten Konfigurationsbedingungen für jede Konfiguration enthalten, auch wenn sie alle identisch sind. Beispiel:
 
 ```xml
 <ItemGroup>
@@ -224,7 +224,7 @@ Die Metadaten sollten Konfigurationsbedingungen für jede Konfiguration enthalte
 </ItemGroup>
 ```
 
-Visual Studio C++ Projektsystem unterstützt derzeit keine Platzhalter in Projektelementen.
+Das C++-Projektsystem von Visual Studio unterstützt derzeit keine Platzhalter in Projektelementen.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Visual Studio C++ Projektsystem unterstützt derzeit keine Platzhalter in Projek
 </ItemGroup>
 ```
 
-Visual Studio C++ Projektsystem unterstützt derzeit keine Makros in Projektelementen.
+Das C++-Projektsystem von Visual Studio unterstützt derzeit keine Makros in Projektelementen.
 
 ```xml
 <ItemGroup>
@@ -272,7 +272,7 @@ Auch die Entwurfszeitumgebung der IDE hängt teilweise von der richtigen Reihenf
 
 ## <a name="how-the-ide-uses-element-labels"></a>Verwendung von Elementbezeichnungen durch die IDE
 
-Wenn Sie in der IDE die Eigenschaft **UseOfAtl** auf der allgemeinen Eigenschaftenseite festlegen, wird diese in die Eigenschaftengruppe „Configuration“ in der Projektdatei geschrieben, während die Eigenschaft **TargetName** auf derselben Eigenschaftenseite in die Eigenschaftengruppe ohne Bezeichnung, die pro Konfiguration gilt, geschrieben wird. Visual Studio sucht in der XML-Datei der Eigenschaftenseite nach Informationen dazu, wohin jede Eigenschaft geschrieben werden soll. Für die Eigenschaftenseite **General** (Allgemein) (wenn Sie die englischsprachige Version von Visual Studio Enterprise Edition verwenden) entspricht diese Datei `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. Die XML-Regeldatei der Eigenschaftenseite definiert die statischen Informationen einer Regel und deren Eigenschaften. Eine dieser Informationen ist die bevorzugte Position einer Regeleigenschaft in der Zieldatei (die Datei, in die deren Wert geschrieben wird). Die bevorzugte Position wird vom Label-Attribut in den Elementen der Projektdatei angegeben.
+Wenn Sie in der IDE die Eigenschaft **UseOfAtl** auf der allgemeinen Eigenschaftenseite festlegen, wird diese in die Eigenschaftengruppe „Configuration“ in der Projektdatei geschrieben, während die Eigenschaft **TargetName** auf derselben Eigenschaftenseite in die Eigenschaftengruppe ohne Bezeichnung, die pro Konfiguration gilt, geschrieben wird. Visual Studio sucht in der XML-Datei der Eigenschaftenseite nach Informationen dazu, wohin jede Eigenschaft geschrieben werden soll. Für die Eigenschaftenseite **General** (Allgemein) (wenn Sie die englischsprachige Version von Visual Studio 2019 Enterprise Edition verwenden) entspricht diese Datei `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`. Die XML-Regeldatei der Eigenschaftenseite definiert die statischen Informationen einer Regel und deren Eigenschaften. Eine dieser Informationen ist die bevorzugte Position einer Regeleigenschaft in der Zieldatei (die Datei, in die deren Wert geschrieben wird). Die bevorzugte Position wird vom Label-Attribut in den Elementen der Projektdatei angegeben.
 
 ## <a name="property-sheet-layout"></a>Layout von Eigenschaftenblättern
 
@@ -288,7 +288,7 @@ Der folgende XML-Codeausschnitt stellt das minimale Layout einer Eigenschaftenbl
 </Project>
 ```
 
-Kopieren Sie eine der PROPS-Dateien in den Ordner „VCTargets“, und passen Sie diese an Ihre Anforderungen an, um ein eigenes Eigenschaftenblatt zu erstellen. Für Visual Studio 2017 Enterprise Edition ist der Standardpfad von VCTargets `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets`.
+Kopieren Sie eine der PROPS-Dateien in den Ordner „VCTargets“, und passen Sie diese an Ihre Anforderungen an, um ein eigenes Eigenschaftenblatt zu erstellen. Für Visual Studio 2019 Enterprise Edition ist der Standardpfad von VCTargets `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`.
 
 ## <a name="see-also"></a>Siehe auch
 

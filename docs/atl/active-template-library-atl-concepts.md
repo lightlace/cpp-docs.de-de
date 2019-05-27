@@ -4,100 +4,100 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: 785b929e935962f6461ffbc3722f573a61cb8749
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: a7b6a40eaed05462f3aa5c877a1c4da3e19c0b03
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221298"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836995"
 ---
 # <a name="active-template-library-atl-concepts"></a>ATL-Konzepte (Active Template Library)
 
-Die Active Template Library (ATL) ist ein Satz von vorlagenbasierter C++-Klassen, mit denen Sie die Objekte für kleine, schnelle Component Object Model (COM) zu erstellen. Sie verfügt über spezielle Unterstützung für wichtige COM-Funktionen, wie z.B. vordefinierte Implementierungen duale Schnittstellen, standard-COM-Enumerator-Schnittstellen, Verbindungspunkte, abtrennbare Schnittstellen und ActiveX-Steuerelemente.
+Die Active Template Library (ATL) ist ein Satz vorlagenbasierter C++-Klassen, mit deren Hilfe Sie kleine, schnell ausführbare COM-Objekte (Component Object Model) erstellen können. Sie bietet besondere Unterstützung für wichtige COM-Features, einschließlich Bestandsimplementierungen, dualen Schnittstellen, COM-Enumerator-Standardschnittstellen, Verbindungspunkten, abtrennbaren Schnittstellen und ActiveX-Steuerelementen.
 
-Wenn Sie viele der ATL-Programmierung tun, soll erfahren Sie mehr über die COM- und Attribute, die COM-Programmierung zu vereinfachen. Weitere Informationen finden Sie unter [attributierte Programmierung](../windows/attributed-programming-concepts.md). (COM- und Attribute werden nicht zu verwechseln mit der \[ \[Attribut]] Features in der C++ standard.)
+Wenn Sie sich viel mit ATL-Programmierung befassen, möchten Sie sicherlich mehr über COM- und .NET-Attribute erfahren, die dafür ausgelegt sind, die COM-Programmierung zu vereinfachen. Weitere Informationen finden Sie unter [Attributiertes Programmieren](../windows/attributed-programming-concepts.md). (COM- und .NET-Attribute dürfen nicht mit dem Feature \[\[attribute]] im C++-Standard verwechselt werden.)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md)<br/>
-Führt Sie durch die Erstellung eines Steuerelements und zeigt einige ATL-Grundlagen im Prozess.
-
 [Einführung in COM und ATL](../atl/introduction-to-com-and-atl.md)<br/>
-Stellt die wichtigsten Konzepte hinter das Component Object Model (COM). In diesem Artikel wird auch kurz erläutert, was ATL ist und wann Sie verwendet werden soll.
+Stellt die wichtigsten Konzepte hinter dem Component Object Model (COM) vor. Dieser Artikel erläutert außerdem kurz, was ATL ist und wann Sie sie verwenden sollten.
 
 [Grundlagen von ARL COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)<br/>
-Beschreibt die Beziehung zwischen verschiedenen ATL-Klassen und wie diese Klassen implementiert werden.
+Erörtert die Beziehung zwischen verschiedenen ATL-Klassen und deren Implementierung.
 
 [Duale Schnittstellen und ATL](../atl/dual-interfaces-and-atl.md)<br/>
-Beschreibt die duale Schnittstellen aus Sicht der ATL.
+Beschreibt duale Schnittstellen aus der ATL-Perspektive.
 
 [ATL-Auflistungen und -Enumeratoren](../atl/atl-collections-and-enumerators.md)<br/>
-Beschreibt die Implementierung und die Erstellung von Sammlungen und Enumeratoren in ATL
+Beschreibt die Implementierung und Erstellung von Auflistungen und Enumeratoren in ATL.
 
 [Grundlagen von zusammengesetzten Steuerelementen](../atl/atl-composite-control-fundamentals.md)<br/>
-Bietet schrittweise Anleitungen zum Erstellen eines zusammengesetzten Steuerelements an. Ein zusammengesetztes Steuerelement ist eine Art von ActiveX-Steuerelement, das andere ActiveX-Steuerelemente oder Windows-Steuerelemente enthalten kann.
+Bietet Schrittanleitungen zum Erstellen eines zusammengesetzten Steuerelements. Ein zusammengesetztes Steuerelement ist ein Typ von ActiveX-Steuerelement, der andere ActiveX-Steuerelemente oder Windows-Steuerelemente enthalten kann.
 
 [Fragen und Antworten zur ATL-Steuerelementkapselung](../atl/atl-control-containment-faq.md)<br/>
-Behandelt die grundlegenden Fragen zum Hosten von Steuerelementen mit ATL
+Behandelt die grundlegenden Fragen zum Hosten von Steuerelementen in ATL.
 
 [ATL COM-Eigenschaftenseiten](../atl/atl-com-property-pages.md)<br/>
-Erfahren Sie, wie Sie angeben, und Implementieren von COM-Eigenschaftenseiten.
+Veranschaulicht das Angeben und Implementieren von COM-Eigenschaftenseiten.
 
 [ATL-Unterstützung für DHTML-Steuerelemente](../atl/atl-support-for-dhtml-controls.md)<br/>
-Enthält detaillierte Anweisungen zum Erstellen eines DHTML-Steuerelements.
+Bietet Schrittanleitungen zum Erstellen eines DHTML-Steuerelements.
 
 [ATL-Verbindungspunkte](../atl/atl-connection-points.md)<br/>
-Erläutert, was die Verbindungspunkte sind und wie diese von ATL implementiert.
+Erläutert, was Verbindungspunkte sind und wie sie von ATL implementiert werden.
 
 [Ereignisbehandlung und ATL](../atl/event-handling-and-atl.md)<br/>
-Beschreibt die Schritte, die Sie durchführen müssen, um die Verwendung von ATL COM-Ereignisse behandeln müssen [IDispEventImpl](../atl/reference/idispeventimpl-class.md) und [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) Klassen.
+Beschreibt die Schritte, die Sie zur Behandlung von COM-Ereignissen mithilfe der Klassen [IDispEventImpl](../atl/reference/idispeventimpl-class.md) und [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) der ATL ausführen müssen.
 
 [ATL und der freethreaded Marshaller](../atl/atl-and-the-free-threaded-marshaler.md)<br/>
-Enthält Informationen zu der ATL-Assistent für einfache Objekte die Option aus, die Ihre Klasse die freethreaded Marshaller (FTM) aggregieren kann.
+Bietet Details zur Option des ATL-Assistenten für einfache Objekte, die es Ihrer Klasse ermöglicht, den Freethreaded Marshaller (FTM) zu aggregieren.
 
-[Angeben des Projekts. Threading-Modell](../atl/specifying-the-threading-model-for-a-project-atl.md)<br/>
-Beschreibt die Makros, die zur Steuerung der Leistung zur Laufzeit im Zusammenhang mit threading in Ihrem Projekt verfügbar sind.
+[Angeben des Threadingmodells für ein Projekt](../atl/specifying-the-threading-model-for-a-project-atl.md)<br/>
+Beschreibt die Makros, die zur Steuerung der Leistung zur Laufzeit im Zusammenhang mit dem Threading in Ihrem Projekt zur Verfügung stehen.
 
 [ATL-Modulklassen](../atl/atl-module-classes.md)<br/>
-Beschreibt die neuen für ATL 7.0. Modulklassen implementieren die grundlegende Funktionalität, die ATL erforderlich
+Beschreibt die neuen Modulklassen in ATL 7.0. Modulklassen implementieren die grundlegende Funktionalität, die für ATL erforderlich ist.
 
 [ATL-Dienste](../atl/atl-services.md)<br/>
-Behandelt die Serie von Ereignissen, die auftreten, wenn ein Dienst implementiert wird. Außerdem spricht über einige Konzepte im Zusammenhang mit der Entwicklung eines Diensts.
+Behandelt die Abfolge von Ereignissen, die bei der Implementierung eines Diensts eintreten. Erörtert darüber hinaus einige der Konzepte im Zusammenhang mit der Entwicklung von Diensten.
 
 [ATL-Fensterklassen](../atl/atl-window-classes.md)<br/>
-Beschreibt, wie zum Erstellen, Informationen und Unterklasse-Fenstern in ATL Der ATL-Fensterklassen sind nicht COM-Klassen.
+Beschreibt, wie in ATL Fenster erstellt und als übergeordnete oder untergeordnete Klasse festgelegt werden. Bei ATL-Fensterklassen handelt es sich nicht um COM-Klassen.
 
 [ATL-Auflistungsklassen](../atl/atl-collection-classes.md)<br/>
-Beschreibt, wie Arrays und Zuordnungen in ATL
+Beschreibt die Verwendung von Arrays und Zuordnungen in ATL.
 
-[Der ATL-Registrierungskomponente (Registrar)](../atl/atl-registry-component-registrar.md)<br/>
-Erläutert, ATL-Skripting-Syntax und ersetzbare Parameter. Außerdem wird die Verwendung, um einen statischen Link zur der Registrierungsstelle einzurichten.
+[ATL-Registrierungskomponente (Registrar)](../atl/atl-registry-component-registrar.md)<br/>
+Erörtert Syntax und ersetzbare Parameter bei der ATL-Skripterstellung. Außerdem wird das Einrichten eines statischen Links zur Registrierungskomponente erläutert.
 
 [Programmieren mit ATL- und C-Laufzeitcode](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
-Erläutert die Vorteile der Verknüpfung von statisch oder dynamisch auf die C Run-Time-Laufzeitbibliothek (CRT).
+Erörtert die Vorteile des statischen oder dynamischen Linkens zur C-Laufzeitbibliothek (CRT).
 
 [Programmieren mit CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
-Erläutert verschiedene Situationen mit Vorsicht beim Programmieren mit `CComBSTR`.
+Erörtert verschiedene Situationen beim Programmieren mit `CComBSTR`, in denen Vorsicht angebracht ist.
 
 [Codierungsreferenz](../atl/atl-encoding-reference.md)<br/>
-Bietet Funktionen und Makros, die in einen Bereich von allgemeinen Internetstandards wie Uuencode, hexadezimale und UTF8 in atlenc.h unterstützen Codierung.
+Bietet Funktionen und Makros, die das Codieren in einer Bandbreite von Internetstandards unterstützen, darunter uuencode, hexadezimal und UTF8 in atlenc.h.
 
-[Referenz zu Hilfsprogrammen](../atl/atl-utilities-reference.md)<br/>
-Stellt Code bereit, für die Bearbeitung von Pfade und URLs in Form von [CPathT](../atl/reference/cpatht-class.md) und [CUrl](../atl/reference/curl-class.md). Einen Threadpool [CThreadPool](../atl/reference/cthreadpool-class.md), in Ihren eigenen Anwendungen verwendet werden kann. Dieser Code finden Sie in "atlpath.h" und "atlutil.h".
+[Hilfsprogrammreferenz](../atl/atl-utilities-reference.md)<br/>
+Stellt Code für das Bearbeiten von Pfaden und URLs in Form von [CPathT](../atl/reference/cpatht-class.md) und [CUrl](../atl/reference/curl-class.md) bereit. In Ihren eigenen Anwendungen kann ein Threadpool, [CThreadPool](../atl/reference/cthreadpool-class.md), verwendet werden. Diesen Code finden Sie in „atlpath.h“ und „atlutil.h“.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
+[ATL-Tutorial](../atl/active-template-library-atl-tutorial.md)<br/>
+Führt Sie durch die Erstellung eines Steuerelements und veranschaulicht dabei einige ATL-Grundlagen.
+
 [ATL-Beispiele](../overview/visual-cpp-samples.md)<br/>
-Enthält Beschreibungen und Links für die ATL-Beispiel-Programme.
+Enthält Beschreibungen und Links zu den ATL-Beispielprogrammen.
 
 [Erstellen eines ATL-Projekts](../atl/reference/creating-an-atl-project.md)<br/>
-Enthält Informationen über ATL-Projektassistenten.
+Enthält Informationen zum ATL-Projekt-Assistenten.
 
 [ATL-Steuerelement-Assistent](../atl/reference/atl-control-wizard.md)<br/>
 Erläutert das Hinzufügen von Klassen.
 
 [Attributiertes Programmieren](../windows/attributed-programming-concepts.md)<br/>
-Enthält eine Übersicht zur Verwendung von Attributen zur Vereinfachung der COM-Programmierung sowie eine Liste mit Links zu ausführlicheren Themen.
+Ein Überblick zur Verwendung von Attributen, um die COM-Programmierung zu vereinfachen, mit einer Linkliste zu detaillierteren Themen.
 
 [ATL-Klassenübersicht](../atl/atl-class-overview.md)<br/>
-Bietet Informationen und Links zu den ATL-Klassen.
+Referenzinformationen und Links zu den ATL-Klassen.

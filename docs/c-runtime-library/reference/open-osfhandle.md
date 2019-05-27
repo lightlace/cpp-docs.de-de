@@ -1,6 +1,6 @@
 ---
 title: _open_osfhandle
-ms.date: 05/29/2018
+ms.date: 05/21/2019
 apiname:
 - _open_osfhandle
 apilocation:
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8527dade37f20b7341d5a26f5752ece668ab7fc9
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156102"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174800"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -54,22 +54,22 @@ Zulässige Vorgangsarten.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall **_open_osfhandle** gibt einen C-Laufzeit-Dateideskriptor zurück. Andernfalls wird-1 zurückgegeben.
+Im Erfolgsfall gibt **_open_osfhandle** einen C-Laufzeit-Dateideskriptor zurück. Andernfalls wird -1 zurückgegeben.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
-Die **_open_osfhandle** Funktion weist einen C-Laufzeit-Dateideskriptor und ordnet sie den Betriebssystem Dateihandle, das gemäß *Osfhandle*. Um eine compilerwarnung zu vermeiden, wandeln die *Osfhandle* Argument von **BEHANDELN** zu **Intptr_t**. Die *Flags* Argument ist ein Ganzzahlausdruck, der von einem oder mehreren Manifestkonstanten in definierten \<fcntl.h >. Wenn zwei oder mehr Manifestkonstanten verwendet werden, zu der *Flags* -Argument, werden die Konstanten mit dem bitweisen OR-Operator kombiniert ( **&#124;** ).
+Die **_open_osfhandle**-Funktion weist einen C-Laufzeit-Dateideskriptor zu und ordnet diesen der von *osfhandle* angegebenen Betriebssystem-Dateihandle zu. Um eine Compilerwarnung zu vermeiden, wandeln Sie das *osfhandle*-Argument von **HANDLE** zu **intptr_t** um. Das *flags*-Argument ist ein Ganzzahlausdruck, der von einer oder mehreren der folgenden Manifestkonstanten gebildet wurde, die in \<fcntl.h> definiert sind. Wenn zwei oder mehr Manifestkonstanten verwendet werden, um das *flags*-Argument zu bilden, werden die Konstanten mit dem bitweisen OR-Operator kombiniert ( **&#124;** ).
 
-Sind diese Manifestkonstanten in definiert \<fcntl.h >:
+Die Manifestkonstanten werden in \<fcntl.h> definiert:
 
 |||
 |-|-|
-| **\_O\_ANFÜGEN** | Positioniert einen Dateizeiger vor jedem Schreibvorgang am Ende der Datei. |
+| **\_O\_APPEND** | Positioniert einen Dateizeiger vor jedem Schreibvorgang am Ende der Datei. |
 | **\_O\_RDONLY** | Öffnet eine Datei nur zum Lesen. |
 | **\_O\_TEXT** | Öffnet eine Datei im Textmodus (übersetzt). |
 | **\_O\_WTEXT** | Öffnet eine Datei in Unicode (übersetzt UTF-16). |
 
-Die **_open_osfhandle** Aufruf überträgt den Besitz des Win32-Dateihandles auf den Dateideskriptor. Eine mit geöffnete Datei schließen **_open_osfhandle**, rufen Sie [ \_schließen](close.md). Das zugrunde liegende Betriebssystem-Dateihandle ist ebenfalls geschlossen, durch einen Aufruf von **_close**, daher es nicht notwendig ist, die Win32-Funktion **"CloseHandle"** am ursprünglichen Handle. Wenn der Dateideskriptor Besitz ist eine **Datei &#42;**  Stream, rufen Sie dann [Fclose](fclose-fcloseall.md) auf, die **Datei &#42;**  Stream schließt außerdem sowohl den Dateideskriptor und das zugrunde liegende Handle. Rufen Sie in diesem Fall nicht **_close** auf den Dateideskriptor.
+Der **_open_osfhandle**-Aufruf überträgt den Besitz am Win32-Dateihandle auf den Dateideskriptor. Um eine mit **_open_osfhandle** geöffnete Datei zu schließen, rufen Sie [\_close](close.md) auf. Das zugrundeliegende OS-Dateihandle wird auch mit einem **_close**-Aufruf geschlossen. Rufen Sie nicht die Win32-Funktion **CloseHandle** für das ursprüngliche Handle auf. Wenn der Dateideskriptor im Besitz eines **FILE &#42;** -Streams ist, dann werden durch einen Aufruf von [fclose](fclose-fcloseall.md) für diesen **FILE &#42;** -Stream sowohl der Dateideskriptor als auch das zugrunde liegende Handle geschlossen. In diesem Fall rufen Sie nicht **_close** für den Dateideskriptor oder **CloseHandle** für das ursprüngliche Handle auf.
 
 ## <a name="requirements"></a>Anforderungen
 

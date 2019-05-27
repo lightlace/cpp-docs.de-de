@@ -1,28 +1,29 @@
 ---
 title: C++ in Visual Studio
 description: Visual C++ ist der Name für den Microsoft C++-Compiler, -Code-Editor und zugehörige Tools in der Visual Studio-IDE. Verwenden Sie Visual C++ zum Entwickeln von Programmen für Windows, Linux, Android und iOS.
-ms.date: 09/26/2018
+ms.date: 05/13/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222604"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934145"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
 > [!NOTE]
-> Die Entwicklerdokumentation gilt für Visual Studio 2015 und 2017.
+> Diese Entwicklerdokumentation gilt für Visual Studio 2015 und höher. Verwenden Sie die Versionsauswahl oben links auf der Seite, um Ihre Version von Visual Studio anzugeben.
 >
 > Wenn Sie zum Ausführen eines Programms ein verteilbares Visual C++-Paket suchen, wechseln Sie zum [Microsoft Download Center](http://www.microsoft.com/download/), und geben Sie **Visual C++** in das Suchfeld ein.
 
-
 Microsoft Visual C++, üblicherweise mit Visual C++ oder MSVC abgekürzt, ist der Name für Entwicklungstools und Bibliotheken für C++, C und Assemblysprachen, die als Teil von Visual Studio unter Windows verfügbar sind. Mit diesen Tools und Bibliotheken können Sie Apps für die Universelle Windows Plattform (UWP), Windows-Desktop- und Serveranwendungen und plattformübergreifende Bibliotheken und Apps erstellen, die unter Windows, Linux, Android und iOS ausgeführt werden, sowie Apps und Bibliotheken verwalten, die .NET Framework verwenden. Sie können Visual C++ verwenden, um einfache Konsolen-Apps bis hin zu anspruchsvollen und komplexen Apps für Windows-Desktop zu schreiben, z.B. von Gerätetreibern und Betriebssystemkomponenten bis hin zu plattformübergreifenden Spielen für mobile Geräte, und von den kleinsten IoT-Geräten bis hin zu Hochleistungscomputing auf mehreren Servern in der Azure-Cloud.
+
+Visual Studio 2015, 2017 und 2019 können parallel installiert sein. Sie können Visual Studio 2019 (Compilertoolset v142) verwenden, um Programme mit dem Toolset aus Visual Studio 2015 (v140) und Visual Studio 2017 (v141) zu bearbeiten und zu erstellen.
 
 ## <a name="whats-new-and-conformance-history"></a>Verlauf von Neuerungen und Konformität
 

@@ -3,7 +3,7 @@
 # [Exemplarische Vorgehensweise: Erstellen von Windows-Desktopanwendungen](walkthrough-creating-windows-desktop-applications-cpp.md)
 # [Windows-Desktopassistent](win32-application-wizard.md)
 # [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)
-# [Microsoft Foundation Classes (MFC)](../mfc/TOC.md)
+# [Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)
 # [Freigegebene ATL- und MFC-Klassen](../atl-mfc-shared/TOC.md)
 # [Datenzugriff](../data/data-access-in-cpp.md)
 # [Text und Zeichenfolgen](../text/text-and-strings-in-visual-cpp.md)

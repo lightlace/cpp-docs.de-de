@@ -1,31 +1,31 @@
 ---
-title: Merkmale von MSBuild für C++-Projekte in Visual Studio
-ms.date: 12/08/2018
+title: MSBuild-Interna für C++-Projekte in Visual Studio
+ms.date: 05/16/2019
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3348320a1468fea03f39e43cc847f1085f3d319
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320889"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837229"
 ---
-# <a name="msbuild-internals-for-c-projects"></a>Merkmale von MSBuild für C++-Projekte
+# <a name="msbuild-internals-for-c-projects"></a>MSBuild-Interna für C++-Projekte
 
-Wenn Sie Projekteigenschaften, in der IDE festlegen, und speichern Sie das Projekt, schreibt Visual Studio die projekteinstellungen in Ihrer Projektdatei hinzu. Die Projektdatei enthält Einstellungen, die sich eindeutig auf das Projekt beziehen. Sie enthält aber nicht alle Einstellungen, die zur Erstellung des Projekts erforderlich sind. Die Projektdatei enthält `Import` Elemente, die einen Netzwerk zusätzlicher enthalten *Unterstützungsdateien.* Die Supportdateien enthalten die übrigen Eigenschaften, Ziele und Einstellungen, die erforderlich sind, um das Projekt zu erstellen.
+Wenn Sie Projekteigenschaften in der IDE festlegen und dann das Projekt speichern, schreibt Visual Studio die Projekteinstellungen in die Projektdatei. Die Projektdatei enthält Einstellungen, die sich eindeutig auf das Projekt beziehen. Sie enthält aber nicht alle Einstellungen, die zur Erstellung des Projekts erforderlich sind. Die Projektdatei enthält `Import`-Elemente, die ein Netzwerk zusätzlicher *Supportdateien* beinhalten. Die Supportdateien enthalten die übrigen Eigenschaften, Ziele und Einstellungen, die erforderlich sind, um das Projekt zu erstellen.
 
 Die meisten Ziele und Eigenschaften in den Unterstützungsdateien dienen ausschließlich der Implementierung des Buildsystems. Im folgenden Abschnitt werden einige nützliche Ziele und Eigenschaften erläutert, die Sie in der MSBuild-Befehlszeile angeben können. Durchsuchen Sie die Dateien in den Unterstützungsdateiverzeichnissen, um mehr Ziele und Eigenschaften zu ermitteln.
 
 ## <a name="support-file-directories"></a>Supportdateiverzeichnisse
 
-Standardmäßig befinden sich die primären Visual Studio-Unterstützungsdateien in den folgenden Verzeichnissen. Die Verzeichnisse unter Microsoft Visual Studio werden von Visual Studio 2017 und höheren Versionen werden verwendet, während die Verzeichnisse unter MSBuild von Visual Studio 2015 und früheren Versionen verwendet werden.
+Standardmäßig befinden sich die primären Visual Studio-Supportdateien in den folgenden Verzeichnissen. Die Verzeichnisse unter Microsoft Visual Studio werden von Visual Studio 2017 und höheren Versionen verwendet, während die Verzeichnisse unter MSBuild von Visual Studio 2015 und früheren Versionen verwendet werden.
 
 |Verzeichnis|Beschreibung|
 |---------------|-----------------|
-|*Laufwerk*: \Program Files *(x86)* \Microsoft Visual Studio\\*Jahr*\\*Edition*\Common7\IDE\VC\VCTargets\ <br /><br />*Laufwerk*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*Version*\ |Enthält die primären Zieldateien (TARGETS-Format) und Eigenschaftendateien (PROPS-Format), die von den Zielen verwendet werden. Standardmäßig verweist das $ (VCTargetsPath)-Makro auf dieses Verzeichnis.|
-|*Laufwerk*: \Program Files *(x86)* \Microsoft Visual Studio\\*Jahr*\\*Edition*\Common7\IDE\VC\VCTargets\ Plattformen\\*Plattform*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\ |Enthält plattformspezifische Ziel- und Eigenschaftsdateien, die die Ziele und Eigenschaften im übergeordneten Verzeichnis außer Kraft setzen. Dieses Verzeichnis enthält auch eine DLL, die Aufgaben definiert, die von den Zielen in diesem Verzeichnis verwendet werden.<br /><br /> Die *Plattform* steht für die ARM, Win32 oder X64 Unterverzeichnis.|
-|*Laufwerk*: \Program Files *(x86)* \Microsoft Visual Studio\\*Jahr*\\*Edition*\Common7\IDE\VC\VCTargets\ Plattformen\\*Plattform*\PlatformToolsets\\*Toolset*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\PlatformToolsets\\*toolset*\ <br /><br />*Laufwerk*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*Plattform*\PlatformToolsets\\*Toolset*\ |Enthält die Verzeichnisse, mit denen das Build, um C++-Anwendungen zu generieren, mit dem angegebenen *Toolset*.<br /><br /> Die *Jahr* und *Edition* Platzhalter von Visual Studio 2017 und höhere Editionen verwendet werden. Die *Version* Platzhalter ist V110 für Visual Studio 2012, V120 für Visual Studio 2013 oder V140 für Visual Studio 2015. Die *Plattform* steht für die ARM, Win32 oder X64 Unterverzeichnis. Die *Toolset* Platzhalter stellt das Toolsetunterverzeichnis, z. B. v140 zum Erstellen von Windows-apps mit dem Visual Studio 2015-Toolset, v120_xp für Windows XP mit dem Toolset von Visual Studio 2013 oder v110_wp80 zu erstellen. Erstellen von Windows Phone 8.0-apps mit dem Toolset von Visual Studio 2012.<br /><br />Der Pfad, der die Verzeichnisse enthält, mit denen den Build entweder Visual Studio 2008 oder Visual Studio 2010-Anwendungen generieren nicht umfassen die *Version*, und die *Plattform* Platzhalter Stellt den Itanium, Win32 oder X64 Unterverzeichnis. Die *Toolset* -Platzhalter stellt das Toolsetunterverzeichnis v90 oder v100 dar.|
+|*Laufwerk*:\Programme *(x86)* \Microsoft Visual Studio\\*Jahr*\\*Edition*\Common7\IDE\VC\VCTargets\ <br /><br />*Laufwerk*:\Programme *(x86)* \MSBuild\Microsoft.Cpp (x86)\v4.0\\*Version*\ |Enthält die primären Zieldateien (TARGETS-Format) und Eigenschaftendateien (PROPS-Format), die von den Zielen verwendet werden. Standardmäßig verweist das $ (VCTargetsPath)-Makro auf dieses Verzeichnis.|
+|*Laufwerk*:\Programme *(x86)* \Microsoft Visual Studio\\*Jahr*\\*Edition*\Common7\IDE\VC\VCTargets\Platforms\\*Plattform*\ <br /><br />*Laufwerk*:\Programme *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*Version*\Platforms\\*Plattform*\ |Enthält plattformspezifische Ziel- und Eigenschaftsdateien, die die Ziele und Eigenschaften im übergeordneten Verzeichnis außer Kraft setzen. Dieses Verzeichnis enthält außerdem eine DLL, die die von den Zielen in diesem Verzeichnis verwendeten Aufgaben definiert.<br /><br /> Der Platzhalter *Plattform* steht für das ARM-, Win32- oder x64-Unterverzeichnis.|
+|*Laufwerk*:\Programme *(x86)* \Microsoft Visual Studio\\*Jahr*\\*Edition*\Common7\IDE\VC\VCTargets\Platforms\\*Plattform*\PlatformToolsets\\*Toolset*\ <br /><br />*Laufwerk*:\Programme *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*Version*\Platforms\\*Plattform*\PlatformToolsets\\*Toolset*\ <br /><br />*Laufwerk*:\Programme *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*Plattform*\PlatformToolsets\\*Toolset*\ |Enthält die Verzeichnisse, die es dem Build ermöglichen, C++-Anwendungen mit dem angegebenen *Toolset* zu generieren.<br /><br /> Die Platzhalter *Jahr* und *Edition* werden von Visual Studio 2017 und späteren Editionen verwendet. Der Platzhalter *Version* ist V110 für Visual Studio 2012, V120 für Visual Studio 2013, V140 für Visual Studio 2015, v141 für Visual Studio 2017 und v142 für Visual Studio 2019. Der Platzhalter *Plattform* steht für das ARM-, Win32- oder x64-Unterverzeichnis. Der Platzhalter *Toolset* stellt das Toolsetunterverzeichnis dar, beispielsweise v140 zum Erstellen von Windows-Apps mithilfe des Visual Studio 2015-Toolsets, v120_xp zum Erstellen von Builds für Windows XP mit dem Visual Studio 2013-Toolset.<br /><br />Der Pfad, der die Verzeichnisse enthält, die es dem Build ermöglichen, entweder Visual Studio 2008- oder Visual Studio 2010-Anwendungen zu generieren, schließt *Version* nicht ein, und der Platzhalter *Plattform* stellt das Itanium-, Win32- oder x64-Unterverzeichnis dar. Der *Toolset*-Platzhalter stellt das Toolsetunterverzeichnis v90 oder v100 dar.|
 
 ## <a name="support-files"></a>Supportdateien
 
@@ -33,51 +33,51 @@ Die Supportdateiverzeichnisse enthalten Dateien mit diesen Erweiterungen:
 
 |Erweiterung|Beschreibung|
 |---------------|-----------------|
-|TARGETS|Enthält `Target`-XML-Elemente, die die vom Ziel ausgeführten Aufgaben angeben. Enthält auch `PropertyGroup`-, `ItemGroup`- und `ItemDefinitionGroup`-Elemente sowie benutzerdefinierte `Item`-Elemente, die zum Zuweisen von Dateien und Befehlszeilenoptionen zu Aufgabenparametern verwendet werden.<br /><br /> Weitere Informationen finden Sie unter [Target-Element (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|
-|PROPS|Enthält `Property Group`-XML-Elemente und benutzerdefinierte `Property`-XML-Elemente, die während eines Builds verwendete Datei- und Parametereinstellungen angeben.<br /><br /> Enthält auch `ItemDefinitionGroup`-XML-Elemente und benutzerdefinierte `Item`-XML-Elemente, die zusätzliche Einstellungen angeben. In einer Elementdefinitionsgruppe definierte Elemente ähneln Eigenschaften, allerdings kann in der Befehlszeile nicht auf sie zugegriffen werden. Visual Studio-Projektdateien verwenden häufig Elemente statt Eigenschaften um Einstellungen darzustellen.<br /><br /> Weitere Informationen finden Sie unter [ItemGroup-Element (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), 
-[ItemDefinitionGroup-Element (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild), und [Item-Element (MSBuild)](/visualstudio/msbuild/item-element-msbuild).|
-|.xml|Enthält XML-Elemente, die IDE-Benutzeroberflächenelemente, z. B. Eigenschaftenblätter, Eigenschaftenseiten oder Textfeld- bzw. Listenfeldsteuerelemente, deklarieren und initialisieren.<br /><br /> Die XML-Dateien unterstützen direkt die IDE, nicht MSBuild. Die Werte von IDE-Eigenschaften werden jedoch zur Erstellung von Eigenschaften und Elementen verwendet.<br /><br /> Die meisten XML-Dateien befinden sich in einem gebietsschemaspezifischen Unterverzeichnis. Beispielsweise sind die Dateien für die US-Englisch-Region in der $(%%VCTargetsPath%%) \1033\\.|
+|TARGETS|Enthält `Target`-XML-Elemente, die die vom Ziel ausgeführten Aufgaben angeben. Enthält auch `PropertyGroup`-, `ItemGroup`- und `ItemDefinitionGroup`-Elemente sowie benutzerdefinierte `Item`-Elemente, die zum Zuweisen von Dateien und Befehlszeilenoptionen zu Aufgabenparametern verwendet werden.<br /><br /> Weitere Informationen finden Sie unter [Zielelement (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|
+|PROPS|Enthält `Property Group`-XML-Elemente und benutzerdefinierte `Property`-XML-Elemente, die während eines Builds verwendete Datei- und Parametereinstellungen angeben.<br /><br /> Enthält auch `ItemDefinitionGroup`-XML-Elemente und benutzerdefinierte `Item`-XML-Elemente, die zusätzliche Einstellungen angeben. In einer Elementdefinitionsgruppe definierte Elemente ähneln Eigenschaften, allerdings kann in der Befehlszeile nicht auf sie zugegriffen werden. Visual Studio-Projektdateien verwenden häufig Elemente statt Eigenschaften, um Einstellungen darzustellen.<br /><br /> Weitere Informationen finden Sie unter [ItemGroup-Element (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), 
+[ItemDefinitionGroup-Element (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild) und [Item-Element (MSBuild)](/visualstudio/msbuild/item-element-msbuild).|
+|.xml|Enthält XML-Elemente, die IDE-Benutzeroberflächenelemente, z. B. Eigenschaftenblätter, Eigenschaftenseiten oder Textfeld- bzw. Listenfeldsteuerelemente, deklarieren und initialisieren.<br /><br /> Die XML-Dateien unterstützen direkt die IDE, nicht MSBuild. Die Werte von IDE-Eigenschaften werden jedoch zur Erstellung von Eigenschaften und Elementen verwendet.<br /><br /> Die meisten XML-Dateien befinden sich in einem gebietsschemaspezifischen Unterverzeichnis. Dateien für den englisch-amerikanischen Bereich befinden sich z. B. in $(VCTargetsPath)\1033\\.|
 
-## <a name="user-targets-and-properties"></a>Benutzerziele und-Eigenschaften
+## <a name="user-targets-and-properties"></a>Benutzerziele und -eigenschaften
 
-Es ist hilfreich zu wissen, welche Eigenschaften und Ziele nützlich und relevant sind, um MSBuild in der Befehlszeile am effektivsten verwenden zu können. Die meisten Eigenschaften und Ziele unterstützen, implementieren Sie das Visual Studio-Buildsystem und sind daher nicht für den Benutzer relevant. In diesem Abschnitt werden einige lohnende benutzerorientierte Eigenschaften und Ziele beschrieben.
+Es ist hilfreich zu wissen, welche Eigenschaften und Ziele nützlich und relevant sind, um MSBuild in der Befehlszeile am effektivsten verwenden zu können. Die meisten Eigenschaften und Ziele dienen der Implementierung des Visual Studio-Buildsystems und sind daher für den Benutzer nicht relevant. In diesem Abschnitt werden einige lohnende benutzerorientierte Eigenschaften und Ziele beschrieben.
 
 ### <a name="platformtoolset-property"></a>PlatformToolset-Eigenschaft
 
-Die `PlatformToolset` Eigenschaft bestimmt, welche MSVC-Toolset im Build verwendet wird. Standardmäßig wird das aktuelle Toolset verwendet. Wenn diese Eigenschaft festgelegt ist, verkettet der Wert der Eigenschaft wird mit Literalzeichenfolgen, um den Pfad eines Verzeichnisses zu bilden, das die, die zum Erstellen eines Projekts für eine bestimmte Plattform erforderlichen Eigenschafts- und Zieldateien enthält. Das Plattformtoolset muss installiert sein, um mithilfe dieser Plattform-Toolsetversion zu erstellen.
+Die `PlatformToolset`-Eigenschaft bestimmt, welches MSVC-Toolset im Build verwendet wird. Standardmäßig wird das aktuelle Toolset verwendet. Wenn diese Eigenschaft festgelegt ist, wird der Wert der Eigenschaft mit Literalzeichenfolgen verkettet, um den Pfad eines Verzeichnisses zu bilden, das die für die Erstellung eines Projekts für eine bestimmte Plattform erforderlichen Eigenschafts- und Zieldateien enthält. Das Plattformtoolset muss installiert sein, um Builds mithilfe dieser Plattform-Toolsetversion zu erstellen.
 
-Legen Sie z. B. die `PlatformToolset` Eigenschaft `v140` zu Visual Studio 2015-Tools und Bibliotheken zu verwenden, um Ihre Anwendung zu erstellen:
+Legen Sie beispielsweise die `PlatformToolset`-Eigenschaft auf `v140` fest, um zur Erstellung der Anwendung Visual Studio 2015-Tools und Bibliotheken zu verwenden:
 
 `msbuild myProject.vcxproj /p:PlatformToolset=v140`
 
 ### <a name="preferredtoolarchitecture-property"></a>PreferredToolArchitecture-Eigenschaft
 
-Die `PreferredToolArchitecture`-Eigenschaft bestimmt, ob der 32-Bit- oder 64-Bit-Compiler sowie die entsprechenden Tools im Build verwendet werden. Diese Eigenschaft beeinflusst nicht die Ausgabeplattformarchitektur oder Konfiguration. Standardmäßig verwendet MSBuild die X86 Version des Compilers und der Tools, wenn diese Eigenschaft nicht festgelegt ist.
+Die `PreferredToolArchitecture`-Eigenschaft bestimmt, ob der 32-Bit- oder 64-Bit-Compiler sowie die entsprechenden Tools im Build verwendet werden. Diese Eigenschaft beeinflusst nicht die Ausgabeplattformarchitektur oder Konfiguration. Standardmäßig verwendet MSBuild die x86-Version des Compilers und der Tools, wenn diese Eigenschaft nicht festgelegt wird.
 
-Legen Sie z. B. die `PreferredToolArchitecture` Eigenschaft `x64` auf dem 64-Bit-Compiler und Tools zu verwenden, um Ihre Anwendung zu erstellen:
+Legen Sie beispielsweise die `PreferredToolArchitecture`-Eigenschaft auf `x64` fest, um den 64-Bit-Compiler und 64-Bit-Tools zum Erstellen Ihrer Anwendung zu verwenden:
 
 `msbuild myProject.vcxproj /p:PreferredToolArchitecture=x64`
 
 ### <a name="useenv-property"></a>UseEnv-Eigenschaft
 
-Standardmäßig setzen die plattformspezifischen Einstellungen für das aktuelle Projekt die PATH-, INCLUDE-, LIB-, LIBPATH-, CONFIGURATION- und PLATFORM-Umgebungsvariablen außer Kraft. Legen Sie die `UseEnv` Eigenschaft **"true"** um sicherzustellen, dass die Umgebungsvariablen nicht überschrieben werden.
+Standardmäßig setzen die plattformspezifischen Einstellungen für das aktuelle Projekt die PATH-, INCLUDE-, LIB-, LIBPATH-, CONFIGURATION- und PLATFORM-Umgebungsvariablen außer Kraft. Legen Sie die `UseEnv`-Eigenschaft auf **true** fest, um zu gewährleisten, dass die Umgebungsvariablen nicht überschrieben werden.
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 
 ### <a name="targets"></a>Ziele
 
-Es gibt Hunderte von Zielen in den Visual Studio-Unterstützungsdateien. Die meisten sind jedoch systemorientierte Ziele, die der Benutzer ignorieren kann. Den meisten Systemzielen wird ein Unterstrich (_) vorangestellt oder sie verfügen über einen Namen, der mit "PrepareFor", "Compute", "Before", "After", "Pre" oder "Post" beginnt.
+In den Visual Studio-Supportdateien sind Hunderte von Zielen enthalten. Die meisten sind jedoch systemorientierte Ziele, die der Benutzer ignorieren kann. Den meisten Systemzielen wird ein Unterstrich (_) vorangestellt oder sie verfügen über einen Namen, der mit "PrepareFor", "Compute", "Before", "After", "Pre" oder "Post" beginnt.
 
-Die folgende Tabelle enthält einige nützliche benutzerorientierte Ziele.
+In der folgenden Tabelle sind mehrere nützliche benutzerorientierte Ziele aufgeführt.
 
 |Target|Beschreibung|
 |------------|-----------------|
 |BscMake|Führt das Microsoft-Wartungshilfsprogramm zum Durchsuchen von Informationen aus ("bscmake.exe").|
 |Build|Erstellt das Projekt.<br /><br /> Dies ist das Standardziel für ein Projekt.|
-|ClCompile|Führt das MSVC-Compilertool cl.exe.|
+|ClCompile|Führt das MSVC-Compilertool („cl.exe“) aus.|
 |Bereinigen|Löscht temporäre und zwischengespeicherte Builddateien.|
 |Lib|Führt das 32-Bit-Tool von Microsoft zur Bibliotheksverwaltung ("lib.exe") aus.|
-|Link|Führt das MSVC-Linkertool link.exe.|
+|Link|Führt das MSVC-Linkertool („link.exe“) aus.|
 |ManifestResourceCompile|Extrahiert eine Liste der Ressourcen aus einem Manifest und führt das Microsoft Windows-Ressourcencompilertool ("rc.exe") aus.|
 |Midl|Führt das MIDL (Microsoft Interface Definition Language)-Compilertool ("midl.exe") aus.|
 |Neu erstellen|Bereinigt und erstellt das Projekt.|
@@ -86,7 +86,7 @@ Die folgende Tabelle enthält einige nützliche benutzerorientierte Ziele.
 |Xsd|Führt das XML-Schemadefinitionstool ("Xsd.exe") aus. *Siehe den Hinweis unten.*|
 
 > [!NOTE]
-> In Visual Studio 2017, C++-Projekt Unterstützung für **Xsd** Dateien ist veraltet. Sie können weiterhin verwenden **Microsoft.VisualC.CppCodeProvider** durch Hinzufügen von **CppCodeProvider.dll** manuell in den GAC.
+> In Visual Studio 2017 und höher ist die Unterstützung von C++-Projekten für **xsd**-Dateien veraltet. Sie können **Microsoft.VisualC.CppCodeProvider** weiterhin verwenden, indem Sie die Datei **CppCodeProvider.dll** manuell dem globalen Assemblycache hinzufügen.
 
 ## <a name="see-also"></a>Siehe auch
 

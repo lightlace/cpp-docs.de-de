@@ -5,16 +5,16 @@ ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6a0e296e4a5542c1aad848c55d35d3e40244478d
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: 726d9f6573b4a3457205001875dac80b3a2997d7
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899446"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934158"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>C++-Konformitätsverbesserungen in Visual Studio 2017, Versionen 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#improvements_159)
 
-Der Microsoft Visual C++-Compiler ist jetzt vollständig mit Unterstützung für generalisierte contextpr und NSDMI für Aggregate für Funktionen, die im C++14-Standard hinzugefügt wurden. Beachten Sie, dass dem Compiler noch einige Funktionen der C++11- und C++98-Standards fehlen. Eine Tabelle mit dem aktuellen Compilerstatus finden Sie unter [Visual C++-Sprachkonformität](../visual-cpp-language-conformance.md).
+Der Microsoft C++-Compiler ist mit Unterstützung für generalisierte contextpr-Elemente und NSDMI für Aggregate für Funktionen, die im C++14-Standard hinzugefügt wurden, jetzt vollständig. Beachten Sie, dass dem Compiler noch einige Funktionen der C++11- und C++98-Standards fehlen. Eine Tabelle mit dem aktuellen Compilerstatus finden Sie unter [Visual C++-Sprachkonformität](../visual-cpp-language-conformance.md).
 
 ## <a name="c11"></a>C++11
 
@@ -70,7 +70,7 @@ Neue Syntax, um nur einen einzigen Namespacebezeichner in einer Attributliste zu
 
 ### <a name="structured-bindings"></a>Strukturierte Bindungen
 
-Es ist jetzt möglich, einen Wert mit individuellen Namen für die verschiedenen Komponenten in einer einzigen Anweisung zu speichern. Dies gilt, wenn der Wert ein Array, „std::tuple“ oder „std::pair“ ist oder nur öffentliche, nicht statische Datenmembers enthält. Weitere Informationen finden Sie unter [Structured Bindings (Strukturierte Bindungen)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) und [Returning multiple values from a function (Zurückgeben von mehreren Werten aus einer Funktion)](../../cpp/functions-cpp.md#multi_val).
+Es ist jetzt möglich, einen Wert mit individuellen Namen für die verschiedenen Komponenten in einer einzigen Anweisung zu speichern. Dies gilt, wenn der Wert ein Array, `std::tuple` oder `std::pair` ist oder nur öffentliche, nicht statische Datenmember enthält. Weitere Informationen finden Sie unter [Structured Bindings (Strukturierte Bindungen)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) und [Returning multiple values from a function (Zurückgeben von mehreren Werten aus einer Funktion)](../../cpp/functions-cpp.md#multi_val).
 
 ### <a name="construction-rules-for-enum-class-values"></a>Erstellungsregeln für enum-Klassenwerte
 
@@ -82,7 +82,7 @@ Das `*this`-Objekt in einem Lambdaausdruck kann jetzt anhand des Werts erfasst w
 
 ### <a name="removing-operator-for-bool"></a>Entfernen von „operator++“ für „bool“
 
-`operator++` wird nicht mehr für `bool`-Typen unterstützt. Weitere Informationen finden Sie unter [Remove Deprecated operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) (Veralteten „operator++(bool)“ entfernen).
+`operator++` wird nicht mehr in `bool`-Typen unterstützt. Weitere Informationen finden Sie unter [Remove Deprecated operator++(bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) (Veralteten „operator++(bool)“ entfernen).
 
 ### <a name="removing-deprecated-register-keyword"></a>Entfernen des veralteten Schlüsselworts „register“
 
@@ -955,7 +955,7 @@ Die Warnung wird unter **/Wv:18** ausgeschlossen und ist auf der Warnstufe W2 st
 
 ### <a name="stdisconvertible-for-array-types"></a>std::is_convertible für Arraytypen
 
-Frühere Versionen des Compilers haben zu falschen Ergebnissen für [std::is_convertible](../../standard-library/is-convertible-class.md) für Arraytypen geführt. Dadurch mussten Bibliotheksautoren bei der Verwendung der Typeigenschaft `std::is_convertible<...>` besondere Schreibweisen für den Microsoft Visual C++-Compiler anwenden. Im folgenden Beispiel sind die statischen Assertionen in früheren Versionen von Visual Studio erfolgreich, jedoch nicht in Visual Studio 2017 Version 15.3:
+Frühere Versionen des Compilers haben zu falschen Ergebnissen für [std::is_convertible](../../standard-library/is-convertible-class.md) für Arraytypen geführt. Daher mussten Bibliotheksautoren bei der Verwendung der Typeigenschaft `std::is_convertible<...>` besondere Schreibweisen für den Microsoft C++-Compiler anwenden. Im folgenden Beispiel sind die statischen Assertionen in früheren Versionen von Visual Studio erfolgreich, jedoch nicht in Visual Studio 2017 Version 15.3:
 
 ```cpp
 #include <type_traits>
