@@ -7,11 +7,11 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: f1e6b06c3212ae3ff192fdf402c0167575161656
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59430740"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "66182820"
 ---
 # <a name="create-a-c-console-app-project"></a>Erstellen eines C++-Konsolen-App-Projekts
 
@@ -36,7 +36,7 @@ Visual Studio verwendet *Projekte*, um Code für eine App zu ordnen, und *Projek
    ![Auswählen der Vorlage „Konsolen-App“](./media/calc-vs2019-choose-console-app.png "Auswählen der Vorlage „Konsolen-App“")
 
    > [!Important]
-   > Wählen Sie die C++-Version der Vorlage **Konsolen-App** aus. Diese erkennen Sie an den Tags **C++**, **Windows** und **Konsole**, und das Symbol enthält „++“ in der Ecke.
+   > Wählen Sie die C++-Version der Vorlage **Konsolen-App** aus. Diese erkennen Sie an den Tags **C++** , **Windows** und **Konsole**, und das Symbol enthält „++“ in der Ecke.
 
 1. Klicken Sie im Dialogfeld **Neues Projekt konfigurieren** in das Feld **Projektname**, und geben Sie dort den Namen *CalculatorTutorial* für das neue Projekt ein. Klicken Sie anschließend auf **Erstellen**.
 
@@ -120,7 +120,7 @@ Wandeln Sie den Code in dieser Vorlage nun in eine Rechner-App um.
 
    > Grundlegendes zum Code:
    >
-   > - Die `#include`-Anweisungen ermöglichen es Ihnen, auf Code zu verweisen, der sich in anderen Dateien befindet. Manchmal kommt es vor, dass Sie einen Dateinamen sehen, der von spitzen Klammern (**\<\>**) eingeschlossen wird, manchmal wird er von Anführungszeichen (**" "**) eingeschlossen. Generell werden spitze Klammern verwendet, wenn auf die C++-Standardbibliothek verwiesen wird, während Anführungszeichen für andere Dateien verwendet werden.
+   > - Die `#include`-Anweisungen ermöglichen es Ihnen, auf Code zu verweisen, der sich in anderen Dateien befindet. Manchmal kommt es vor, dass Sie einen Dateinamen sehen, der von spitzen Klammern ( **\<\>** ) eingeschlossen wird, manchmal wird er von Anführungszeichen ( **" "** ) eingeschlossen. Generell werden spitze Klammern verwendet, wenn auf die C++-Standardbibliothek verwiesen wird, während Anführungszeichen für andere Dateien verwendet werden.
    > - Die `using namespace std;`-Zeile sagt dem Compiler, dass dieser Inhalt aus der C++-Standardbibliothek zu erwarten hat, der in dieser Datei verwendet werden soll. Ohne diese Zeile müsste vor jedem Stichwort aus der Bibliothek `std::` stehen, um dessen Bereich anzuzeigen. Ohne diese Zeile müsste beispielsweise jeder Verweis auf `cout` als `std::cout` geschrieben werden. Die `using`-Anweisung wird hinzugefügt, um den Code übersichtlicher zu gestalten.
    > - Das Schlüsselwort `cout` wird verwendet, damit die Standardausgabe in C++ erfolgt. Der Operator **\<\<** sagt dem Compiler, dass dieser alles, was rechts von ihm steht, an die Standardausgabe senden soll.
    > - Das Schlüsselwort **endl** ist ähnlich wie die Eingabetaste. Es beendet die Zeile und lässt den Cursor in die nächste Zeile springen. Es hat sich aber noch mehr bewährt, innerhalb der Zeichenfolge mit demselben Effekt ein `\n`-Zeichen zu setzen (eingeschlossen von ""), da `endl` den Puffer immer leert und der Leistung des Programms schaden kann. Da es sich hier aber um eine kleine App handelt, wird stattdessen aus Gründen der besseren Lesbarkeit `endl` verwendet.
