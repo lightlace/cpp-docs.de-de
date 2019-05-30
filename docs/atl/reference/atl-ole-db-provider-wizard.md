@@ -1,90 +1,92 @@
 ---
 title: ATL-OLE DB-Anbieter-Assistent
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.atl.provider.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 3f8ff69fd80056bc2ac5a52cf3f42c69f8e8c543
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248262"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706962"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL-OLE DB-Anbieter-Assistent
 
-Dieser Assistent erstellt die Klassen, die einen OLE DB-Anbieter zu erstellen.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> Ab Version 15.9 von Visual Studio 2017 ist dieser Codeassistent veraltet. Er wird in einer zukünftigen Version von Visual Studio entfernt. Dieser Assistent wird nur selten verwendet. Die Entfernung dieses Assistenten wirkt sich nicht auf die allgemeine Unterstützung für Active Template Library (ATL) und Microsoft Foundation Classes (MFC) aus. In [dieser Umfrage](https://www.surveymonkey.com/r/QDWKKCN) können Sie Ihr Feedback zu dieser Veraltung mitteilen. Ihr Feedback ist uns wichtig.
+Dieser Assistent ist in Visual Studio 2019 und höher nicht verfügbar.
 
-## <a name="remarks"></a>Hinweise
+::: moniker-end
 
-Ab Visual Studio 2008 wird von diesem Assistenten erstellte Registrierungsskript seine COM-Komponenten unter registriert **HKEY_CURRENT_USER** anstelle von **HKEY_LOCAL_MACHINE**. Um dieses Verhalten zu ändern, legen Sie die **registerkomponenten für alle Benutzer** des ATL-Assistenten die Option.
+::: moniker range="<=vs-2017"
 
-Die folgende Tabelle beschreibt die Optionen für die der ATL-OLE DB-Anbieter-Assistent:
+## <a name="remarks"></a>Anmerkungen
+
+Ab Visual Studio 2008 werden mit dem von diesem Assistenten generierten Registrierungsskript die zugehörigen COM-Komponenten nicht unter **HKEY_LOCAL_MACHINE**, sondern unter **HKEY_CURRENT_USER** registriert. Um dieses Verhalten zu ändern, legen Sie die Option **Komponente für alle Benutzer registrieren** des ATL-Assistenten fest.
+
+Die folgende Tabelle beschreibt die Optionen für den ATL-OLE DB-Anbieter-Assistenten:
 
 - **Kurzname**
 
-   Geben Sie den kurzen Namen des Anbieters erstellt werden. Die anderen Eingabefelder im Assistenten werden automatisch aufgefüllt. basierend auf Ihrer Eingabe. Sie können die anderen Namensfelder bearbeiten, wenn Sie möchten.
+   Geben Sie den Kurznamen des Anbieters ein, der erstellt werden soll. Die weiteren Bearbeitungsfelder im Assistenten werden basierend auf Ihrer hier vorgenommenen Eingabe automatisch aufgefüllt. Sie können bei Bedarf die weiteren Namensfelder bearbeiten.
 
 - **Co-Klasse**
 
-   Der Name der Co-Klasse. Die ProgID-Name ändert sich entsprechend diesem Namen.
+   Der Name der Co-Klasse. Der ProgID-Name wird geändert, um diesem Namen zu entsprechen.
 
-- **Zugeordnet sind**
+- **Attributiert**
 
-   Diese Option gibt an, ob der Assistent mithilfe von Attributen oder Vorlagendeklarationen Anbieterklassen erstellt. Wenn Sie diese Option auswählen, verwendet der Assistent Attribute anstatt von Vorlagendeklarationen (Dies ist die Standardoption, wenn Sie ein attributiertes Projekt erstellt haben). Wenn Sie diese Option deaktivieren, verwendet der Assistent Vorlagendeklarationen anstelle von Attributen (Dies ist die Standardoption, wenn Sie ein nicht attributierten Projekt erstellt haben).
+   Diese Option gibt an, ob der Assistent Anbieterklassen mithilfe von Attributen oder Vorlagendeklarationen erstellt. Bei Auswahl dieser Option verwendet der Assistent Attribute anstelle von Vorlagendeklarationen (dies ist die Standardoption, wenn Sie ein attributiertes Objekt erstellen). Wenn Sie diese Option deaktivieren, verwendet der Assistent Vorlagendeklarationen anstelle von Attribute (dies ist die Standardoption, wenn Sie ein nicht attributiertes Projekt erstellen).
 
-   Wenn Sie diese Option auswählen, wenn Sie ein nicht attributierten Projekt erstellt haben, werden Sie in der Assistenten gewarnt, dass das Projekt in einem attributierten Projekt konvertiert wird und gefragt wird, ob Sie fortfahren.
+   Wenn Sie diese Option bei Erstellung eines nicht attributierten Projekts aktivieren, werden Sie vom Assistenten gewarnt, dass das Projekt in ein attributiertes Projekt konvertiert wird, und Sie können entscheiden, ob Sie den Vorgang fortsetzen möchten oder nicht.
 
 - **ProgID**
 
-   Die ProgID oder programmgesteuerte Bezeichner, ist die Zeichenfolge, die Ihre Anwendung nicht auf einer GUID verwenden können. Die ProgID-Name weist das Format *Projectname.Coclassname*.
+   Dieser programmgesteuerte Bezeichner ist eine Textzeichenfolge, den Ihre Anwendung anstelle einer GUID verwenden kann. Der ProgID-Name hat die Form *NameProjekt.NameCo-Klasse*.
 
 - **Version**
 
-   Die Versionsnummer des Anbieters. Der Standard ist 1.
+   Die Versionsnummer Ihres Anbieters. Der Standard ist 1.
 
 - **DataSource-Klasse**
 
-   Der Name der Datenquellklasse im C-Format*Shortname*Quelle.
+   Der Name der Datenquellenklasse in der Form C*Kurzname*Source.
 
-- **DataSource-h-Datei**
+- **DataSource-H-Datei**
 
-   Die Headerdatei für die Datenquellenklasse. Sie können den Dateinamen bearbeiten oder eine vorhanden Headerdatei auswählen.
+   Die Headerdatei für die Datenquellenklasse. Sie können den Namen dieser Datei bearbeiten oder eine vorhandene Headerdatei auswählen.
 
 - **Sitzungsklasse**
 
-   Der Name der Sitzungsklasse des Formulars C*Shortname*Sitzung.
+   Der Name der Sitzungsklasse in der Form C*Kurzname*Session.
 
-- **Sitzung .h-Datei**
+- **Sitzungs-H-Datei**
 
-   Die Headerdatei für die Sitzungsklasse. Sie können den Dateinamen bearbeiten oder eine vorhanden Headerdatei auswählen.
+   Die Headerdatei für die Sitzungsklasse. Sie können den Namen dieser Datei bearbeiten oder eine vorhandene Headerdatei auswählen.
 
-- **Command-Klasse**
+- **Befehlsklasse**
 
-   Der Name der Befehlsklasse, im Format C*Shortname*Befehl.
+   Der Name der Befehlsklasse in der Form C*Kurzname*Command.
 
-- **Befehl .h-Datei**
+- **Befehls-H-Datei**
 
-   Die Headerdatei für die Klasse des Befehls. Dieser Name kann nicht bearbeitet werden und hängt von den Namen der Rowset-Headerdatei.
+   Die Headerdatei für die Befehlsklasse. Der Name kann nicht bearbeitet werden und ist abhängig vom Namen der Headerdatei für das Rowset.
 
-- **Rowset-Klasse**
+- **Rowsetklasse**
 
-   Der Name der Rowset-Klasse des Formulars C*Shortname*Rowset.
+   Der Name der Rowsetklasse von in der Form C*Kurzname*Rowset.
 
-- **Rowset-h-Datei**
+- **Rowset-H-Datei**
 
-   Die Headerdatei für die Rowsetklasse. Sie können den Dateinamen bearbeiten oder eine vorhanden Headerdatei auswählen.
+   Die Headerdatei für die Rowsetklasse. Sie können den Namen dieser Datei bearbeiten oder eine vorhandene Headerdatei auswählen.
 
-- **Rowset-cpp-Datei**
+- **Rowset-CPP-Datei**
 
-   Der Anbieter Implementierungsdatei einschließen. Sie können den Dateinamen bearbeiten oder eine vorhandene Implementierungsdatei auswählen.
+   Die Implementierungsdatei des Anbieters. Sie können den Namen dieser Datei bearbeiten oder eine vorhandene Implementierungsdatei auswählen.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Siehe auch
 
-[ATL OLE DB Provider](../../atl/reference/adding-an-atl-ole-db-provider.md)
+[ATL-OLE DB-Anbieter](../../atl/reference/adding-an-atl-ole-db-provider.md)

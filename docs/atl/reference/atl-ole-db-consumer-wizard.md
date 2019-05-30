@@ -1,110 +1,114 @@
 ---
 title: ATL-OLE DB-Consumer-Assistent
-ms.date: 08/31/2018
-f1_keywords:
-- vc.codewiz.class.atl.consumer.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
-- connection strings [C++], OLE DB consumers
-- ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd7af5c9788f5075f38f85bd035ba8cd09e8baec
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261259"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706991"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL-OLE DB-Consumer-Assistent
 
-Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum Zugriff auf die angegebene Datenquelle über den angegebenen OLE DB-Anbieter.
+::: moniker range="vs-2019"
+
+Dieser Assistent ist in Visual Studio 2019 und höher nicht verfügbar.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Dieser Assistent richtet eine OLE DB-Consumerklasse mit den Datenbindungen ein, die zum Zugriff auf die angegebene Datenquelle über den angegebenen OLE DB-Anbieter erforderlich sind.
 
 > [!NOTE]
-> Mit diesem Assistenten müssen Sie auf die **Datenquelle** klicken, um eine Datenquelle auszuwählen, bevor Sie eingeben der Namen in der `Class` und **.h-Datei** Felder.
+> Dieser Assistent erfordert, dass Sie auf die Schaltfläche **Datenquelle** klicken, um eine Datenquelle auszuwählen, bevor Sie Namen in die Felder `Class` und **H-Datei** eingeben.
 
 ## <a name="uielement-list"></a>UIElement-Liste
 
 - **Datenquelle**
 
-   Die **Datenquelle** Schaltfläche können Sie die angegebene Datenquelle, die mit dem angegebenen OLE DB-Anbieter einrichten. Wenn Sie auf diese Schaltfläche, klicken Sie auf die **Datenlinkeigenschaften** Dialogfeld wird angezeigt. Weitere Informationen zum Erstellen von Verbindungszeichenfolgen und die **Datenlinkeigenschaften** im Dialogfeld finden Sie unter [Data Link-API – Übersicht](/previous-versions/windows/desktop/ms718102) in der Windows SDK-Dokumentation.
+   Mithilfe der Schaltfläche **Datenquelle** können Sie die angegebene Datenquelle unter Verwendung des angegebenen OLE DB-Anbieters einrichten. Wenn Sie auf diese Schaltfläche klicken, wird das Dialogfeld **Datenverknüpfungseigenschaften** geöffnet. Weitere Informationen zum Erstellen von Verbindungszeichenfolgen und dem Dialogfeld **Datenverknüpfungseigenschaften** finden Sie im Abschnitt [Übersicht über die Data Link-API](/previous-versions/windows/desktop/ms718102) in der Windows SDK-Dokumentation.
 
-   Die folgende zusätzliche Informationen beschreibt die Registerkarten in der **Datenlinkeigenschaften** Dialogfeld.
+   Die folgenden zusätzlichen Informationen beschreiben die Registerkarten im Dialogfeld **Datenverknüpfungseigenschaften**.
 
-   - **Anbieter** Registerkarte
+   - Registerkarte **Anbieter**
 
-      Wählen Sie einen entsprechenden-Anbieter für die Verbindung mit der Datenquelle zu verwalten. Der Typ des Anbieters wird normalerweise durch den Typ der Datenbank bestimmt, der Sie eine Verbindung herstellen. Klicken Sie auf die **Weiter** Schaltfläche aus, oder klicken Sie auf die **Verbindung** Registerkarte.
+      Wählen Sie einen geeigneten Anbieter zum Verwalten der Verbindung mit der Datenquelle aus. Der Anbietertyp wird üblicherweise durch den Typ der Datenbank bestimmt, mit der Sie eine Verbindung herstellen. Klicken Sie auf die Schaltfläche **Weiter** oder auf die Registerkarte **Verbindung**.
 
-   - **Verbindung** Registerkarte
+   - Registerkarte **Verbindung**
 
-      Der Inhalt dieser Registerkarte hängt von der gewählten Anbieter ab. Es gibt, zwar viele Arten von Anbietern handelt es sich bei dieser Abschnitt behandelt die Verbindungen für die beiden am häufigsten verwendeten: Daten, SQL und ODBC. Die anderen sind ähnlich wie Variationen der hier beschriebenen Felder.
+      Die Inhalte dieser Registerkarte hängen vom ausgewählten Anbieter ab. Es gibt viele Arten von Anbietern, aber in diesem Abschnitt werden die zwei häufigsten Verbindungen abgedeckt: SQL- und ODBC-Daten. Die weiteren Verbindungen sind ähnliche Variationen der hier beschriebenen Felder.
 
       Für SQL-Daten:
 
-      1. **Wählen Sie aus, oder geben Sie einen Servernamen an:** Klicken Sie auf das Dropdown-Listenfeld-Menü, um alle registrierten Daten-Server im Netzwerk angezeigt, und wählen Sie eine.
+      1. **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein:** Klicken Sie auf das Dropdownlistenmenü, um alle registrierten Datenserver im Netzwerk anzuzeigen. Wählen Sie einen Server aus.
 
-      1. **Geben Sie Informationen zum Anmelden an den Server aus:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
+      1. **Geben Sie Informationen zur Anmeldung beim Server ein:** Geben Sie einen Benutzernamen und ein Kennwort für die Anmeldung beim Datenserver ein.
 
          > [!NOTE]
-         > Es gibt ein Sicherheitsproblem mit der Funktion "Speichern des Kennworts zulassen" des Dialogfelds Eigenschaften für Datenlinks. Es gibt zwei Optionsfelder, in "Geben Sie Informationen zum Anmelden an den Server":
+         > Es besteht ein Sicherheitsproblem mit dem Feature „Kennwortspeicherung zulassen“ im Dialogfeld „Datenverknüpfungseigenschaften“. Der Abschnitt „Geben Sie Informationen zur Anmeldung beim Server ein“ enthält zwei Optionsschaltflächen:
          >
-         > - **Windows NT integrated Security verwenden**
-         > - **Bestimmten Benutzernamen und bestimmtes Kennwort**
+         > - **Integrierte Sicherheit von Windows NT verwenden**
+         > - **Bestimmten Benutzernamen und ein Kennwort verwenden**
          >
-         > Bei Auswahl von **bestimmten Benutzernamen und bestimmtes Kennwort**, Sie haben die Möglichkeit, speichern Sie das Kennwort (mit der Sie das Kontrollkästchen für "Speichern des Kennworts zulassen"); diese Option ist jedoch nicht sicher. Es wird empfohlen, die Sie auswählen, **Windows NT integrated Security verwenden**; diese Option ist sicherer, da das Kennwort verschlüsselt.
-         > Es kann jedoch Situationen, in denen gewünschten "Speichern von Kennwort zulassen". Z. B. Wenn Sie eine Bibliothek mit einer privaten datenbanklösung freigeben, sollten Sie nicht greifen direkt auf die Datenbank jedoch stattdessen eine Anwendung der mittleren Ebene verwenden, überprüfen den Benutzer (über den Authentifizierungsschema, das Sie auswählen), und klicken Sie dann die Art der Daten zu beschränken für den Benutzer verfügbar.
+         > Wenn Sie **Bestimmten Benutzernamen und ein Kennwort verwenden** aktivieren, erhalten Sie die Möglichkeit zur Speicherung des Kennworts (über das Kontrollkästchen „Kennwortspeicherung zulassen“). Diese Option ist jedoch nicht sicher. Es wird empfohlen, die Option **Integrierte Sicherheit von Windows NT verwenden** auszuwählen. Diese Option ist sicher, weil das Kennwort verschlüsselt wird.
+         > Es kann Situationen geben, in denen die Option „Kennwortspeicherung zulassen“ benötigt wird. Wenn Sie beispielsweise eine Bibliothek mit einer privaten Datenbanklösung veröffentlichen, sollten Sie nicht direkt auf die Datenbank zugreifen, sondern stattdessen eine Middle-Tier-Anwendung verwenden, um den Benutzer (über ein Authentifizierungsschema Ihrer Wahl) zu überprüfen und die Art der Daten einzuschränken, die für den Benutzer verfügbar sind.
 
-      1. **Wählen Sie die Datenbank auf dem Server:** Klicken Sie auf das Dropdown-Listenfeld-Menü, um alle registrierten Datenbanken auf dem Datenserver angezeigt, und wählen Sie eine.
+      1. **Wählen Sie die Datenbank auf dem Server aus:** Klicken Sie auf das Dropdownlistenmenü, um alle registrierten Datenbanken auf dem Datenserver anzuzeigen. Wählen Sie eine Datenbank aus.
 
          \- oder –
 
-         **Anfügen einer Datenbankdatei als Datenbanknamen an:** Geben Sie eine Datei als die Datenbank verwendet werden soll; Geben Sie den expliziten Pfadnamen.
+         **Fügen Sie eine Datenbankdatei als Datenbankname an:** Geben Sie eine Datei an, die als Datenbank verwendet wird. Geben Sie hierbei den expliziten Pfadnamen ein.
 
       Für ODBC-Daten:
 
-      1. **Geben Sie die Quelle der Daten:** Sie können einen Datenquellennamen ein, oder eine Verbindungszeichenfolge verwenden.
+      1. **Geben Sie die Quelle der Daten an:** Sie können einen Datenquellennamen oder eine Verbindungszeichenfolge verwenden.
 
-         **Name der Datenquelle verwenden:** Diese Dropdownliste werden die Datenquellen, die auf Ihrem Computer registriert angezeigt. Sie können Datenquellen voraus mithilfe von ODBC-Datenquellen-Administrator einrichten
+         **Datenquellennamen verwenden:** Diese Dropdownliste zeigt die für Ihren Computer registrierten Datenquellen an. Sie können Datenquellen vorab über den ODBC-Datenquellenadministrator einrichten.
 
          \- oder –
 
-         **Verwenden Sie die Verbindungszeichenfolge:** Geben Sie eine Verbindungszeichenfolge, die Sie bereits erworben haben, oder klicken Sie auf die **erstellen** Schaltfläche der **Auswählen einer Datenquelle** Dialogfeld wird angezeigt. Vybrat zdroj DAT-Datei oder der Computer, und klicken Sie auf **OK**.
+         **Verbindungszeichenfolge verwenden:** Geben Sie eine Verbindungszeichenfolge ein, die Sie bereits abgerufen haben, oder klicken Sie auf die Schaltfläche **Erstellen**. Daraufhin wird das Dialogfeld **Datenquelle auswählen** angezeigt. Wählen Sie eine Datei oder eine Computerdatenquelle aus, und klicken Sie auf **OK**.
 
          > [!NOTE]
-         > Sie erhalten eine Verbindungszeichenfolge durch Anzeigen der Eigenschaften einer vorhandenen Verbindung in **Server-Explorer**, oder Sie können eine Verbindung erstellen, durch Doppelklicken auf **Verbindung hinzufügen** in **Server Explorer**.
+         > Sie können eine Verbindungszeichenfolge abrufen, indem Sie die Eigenschaften einer vorhandenen Verbindung im **Server-Explorer** anzeigen, oder Sie können eine Verbindung erstellen, indem Sie im **Server-Explorer** auf **Verbindung hinzufügen** doppelklicken.
 
-      1. **Geben Sie Informationen zum Anmelden an den Server aus:** Geben Sie einen Benutzernamen und Kennwort, mit dem Datenserver anzumelden.
+      1. **Geben Sie Informationen zur Anmeldung beim Server ein:** Geben Sie einen Benutzernamen und ein Kennwort für die Anmeldung beim Datenserver ein.
 
-      1. Geben Sie den ersten Katalog verwenden.
+      1. Geben Sie den Anfangskatalog ein, der verwendet werden soll.
 
-      1. Klicken Sie auf **Verbindung testen**; Wenn der Test erfolgreich ist, klicken Sie auf **OK**. Wenn dies nicht der Fall ist, überprüfen Sie Ihre Anmeldeinformationen, versuchen Sie es einer anderen Datenbank oder einen anderen Datenserver.
+      1. Klicken Sie auf **Verbindung testen**. Wenn der Test erfolgreich war, klicken Sie auf **OK**. Falls der Test nicht erfolgreich war, überprüfen Sie Ihre Anmeldeinformationen, oder versuchen Sie es mit einer anderen Datenbank oder einem anderen Datenserver.
 
-   - **Erweiterte** Registerkarte
+   - Registerkarte **Erweitert**
 
-      **Netzwerkeinstellungen:** Geben Sie die **Ebene des Identitätswechsels** (die Ebene des Identitätswechsels, die der Server zu verwenden, wenn der Identitätswechsel für den Client zulässig ist, entspricht direkt den RPC-Ebenen des Identitätswechsels) und **Schutzebene** () das Maß an Schutz von Daten, die zwischen Client und Server gesendet werden soll; entspricht direkt den RPC-Schutzebenen).
+      **Netzwerkeinstellungen:** Geben Sie die **Ebene des Identitätswechsels** (die Ebene für den Identitätswechsel, die für den Server zulässig ist, wenn er die Identität des Clients annimmt; diese entspricht direkt der Ebene des Identitätswechsels für RPC) und die **Schutzebene** an (diese entspricht der Schutzebene für Daten, die zwischen Client und Server gesendet werden; entspricht direkt den RPC-Schutzebenen).
 
-      **Andere:** In **Verbindungstimeout**, geben Sie die Anzahl von Sekunden Zeit im Leerlauf, die zulässig sind, bevor ein Timeout auftritt. In **Zugriffsberechtigungen**, geben Sie die Zugriffsberechtigungen auf die Datenverbindung.
+      **Andere:** Geben Sie in **Verbindungstimeout** die Anzahl von Sekunden der Inaktivität ein, die zulässig ist, bevor ein Timeout ausgelöst wird. Geben Sie in **Zugriffsberechtigungen** die Zugriffsberechtigungen für die Datenverbindung an.
 
-      Weitere Informationen zu erweiterten Eigenschaften finden Sie in der Begleitdokumentation für jeden bestimmten OLE DB-Anbieter.
+      Weitere Informationen zu erweiterten Initialisierungseigenschaften finden Sie in der Dokumentation zum jeweiligen OLE DB-Anbieter.
 
-   - **Alle** Registerkarte
+   - Registerkarte **Alle**
 
-      Diese Registerkarte zeigt eine Zusammenfassung der Initialisierungseigenschaften für die Datenquelle und die Verbindung, die Sie angegeben haben. Sie können diese Werte bearbeiten.
+      Auf dieser Registerkarte wird eine Zusammenfassung der Initialisierungseigenschaften für die angegebene Datenquelle und Verbindung angezeigt. Sie können diese Werte bearbeiten.
 
-      Klicken Sie auf **OK** um den Vorgang abzuschließen. Die **Datenbankobjekt auswählen** Dialogfeld wird angezeigt. Wählen Sie in diesem Dialogfeld die Tabelle, Sicht oder gespeicherte Prozedur, den vom Consumer verwendet wird.
+      Klicken Sie auf **OK**, um den Vorgang abzuschließen. Das Dialogfeld **Datenbankobjekt auswählen** wird angezeigt. Wählen Sie in diesem Dialogfeld die Tabelle, Ansicht oder gespeicherte Prozedur aus, die der Consumer verwenden wird.
 
 - **Klasse**
 
-   Nachdem Sie eine Datenquelle ausgewählt haben, dieses Feld wird gefüllt mit einem Standardnamen-Klasse anhand der Tabelle oder eine gespeicherte Prozedur, die Sie ausgewählt haben (finden Sie unter **Vybrat zdroj DAT** unten). Sie können den Namen der Klasse bearbeiten.
+   Nachdem Sie eine Datenquelle ausgewählt haben, wird dieses Feld mit einem Standardklassennamen aufgefüllt, der auf der ausgewählten Tabelle oder gespeicherten Prozedur basiert (siehe **Datenquelle auswählen** unten). Sie können den Klassennamen bearbeiten.
 
 - **H-Datei**
 
-   Nachdem Sie eine Datenquelle ausgewählt haben, dieses Feld wird gefüllt mit einem Standard-Header-Klassennamen basierend auf der Tabelle oder eine gespeicherte Prozedur, die Sie ausgewählt haben (finden Sie unter **Vybrat zdroj DAT** unten). Sie können die Namen für die Header-Datei bearbeiten oder eine vorhanden Headerdatei auswählen.
+   Nachdem Sie eine Datenquelle ausgewählt haben, wird dieses Feld mit einem standardmäßigen Headerklassennamen aufgefüllt, der auf der ausgewählten Tabelle oder gespeicherten Prozedur basiert (siehe **Datenquelle auswählen** unten). Sie können den Namen der Headerdatei bearbeiten oder eine vorhanden Headerdatei auswählen.
 
-- **Zugeordnet sind**
+- **Attributiert**
 
-   Diese Option gibt an, ob der Assistent vom Consumer-Klassen, die mithilfe von Attributen oder Vorlagendeklarationen erstellt. Wenn Sie diese Option auswählen, verwendet der Assistent Attribute anstatt von Vorlagendeklarationen (Dies ist die Standardoption) aus. Wenn Sie diese Option deaktivieren, verwendet der Assistent Vorlagendeklarationen anstelle von Attributen.
+   Diese Option gibt an, ob der Assistent Consumerklassen mithilfe von Attributen oder Vorlagendeklarationen erstellt. Bei Auswahl dieser Option verwendet der Assistent Attribute anstelle von Vorlagendeklarationen (dies ist die Standardoption). Wenn Sie diese Option deaktivieren, verwendet der Assistent Vorlagendeklarationen anstelle von Attributen.
 
-   - Bei Auswahl von einem Consumer **Typ** von **Tabelle**, verwendet der Assistent die `db_source` und `db_table` Attribute, um die Tabelle und die Tabellenaccessor Klassendeklarationen erstellen, und verwendet `db_column` auf die spaltenzuordnung zu erstellen. Beispielsweise wird diese Zuordnung erstellt:
+   - Wenn Sie als **Typ** für den Consumer **Tabelle** auswählen, verwendet der Assistent die Attribute `db_source` und `db_table`, um die Klassendeklarationen für die Tabelle und den Tabellenaccessor zu erstellen, und verwendet `db_column` zum Erstellen der Spaltenzuordnung. Beispielsweise wird diese Zuordnung erstellt:
 
         ```cpp
         // Inject table class and table accessor class declarations
@@ -116,7 +120,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
         ...
         ```
 
-      anstatt die `CTable` Vorlagenklasse, die in der Tabelle und Tabelle Accessor-Klasse und die BEGIN_COLUMN_MAP und END_COLUMN_MAP Makros zum Erstellen der Spalte-Karte, wie im folgenden Beispiel deklarieren:
+      Stattdessen können auch die `CTable`-Vorlagenklasse zum Deklarieren der Tabellen- und Tabellenaccessorklasse sowie die Makros BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet werden, um die Spaltenzuordnung zu erstellen, wie in diesem Beispiel:
 
         ```cpp
         // Table accessor class
@@ -131,7 +135,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
             END_COLUMN_MAP()
         ```
 
-   - Bei Auswahl von einem Consumer **Typ** von **Befehl**, verwendet der Assistent die `db_source` und `db_command` Attribute aus, und verwendet `db_column` die spaltenzuordnung zu erstellen. Beispielsweise wird diese Zuordnung erstellt:
+   - Wenn Sie als **Typ** für den Consumer **Befehl** auswählen, verwendet der Assistent die Attribute `db_source` und `db_command` und verwendet `db_column` zum Erstellen der Spaltenzuordnung. Beispielsweise wird diese Zuordnung erstellt:
 
         ```cpp
         [db_source("<initialization_string>"), db_command("SQL_command")]
@@ -139,7 +143,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
         // Column map using db_column is the same as for consumer type of 'table'
         ```
 
-      anstatt den Befehl und den Befehl Accessor Klassendeklarationen in die Befehlsklasse .h-Datei, z. B.:
+      Stattdessen können auch die Befehls- und Befehlsaccessor-Klassendeklarationen in der H-Datei der Befehlsklasse verwendet werden, wie in diesem Beispiel:
 
         ```cpp
         // Command accessor class:
@@ -151,27 +155,27 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
         // for consumer type of 'table'
         ```
 
-      Finden Sie unter [grundlegende Funktionsweise von Attributen](../../windows/basic-mechanics-of-attributes.md) für Weitere Informationen.
+      Weitere Informationen finden Sie in [Grundlegende Mechanismen von Attributen](../../windows/basic-mechanics-of-attributes.md).
 
 - **Type**
 
-   Wählen Sie eine der folgenden Optionsfelder an, ob die Consumerklasse abgeleitet wird `CTable` oder `CCommand` (Standard).
+   Aktivieren Sie eine dieser Optionsschaltflächen, um anzugeben, ob die Consumerklasse von `CTable` oder `CCommand` (Standard) abgeleitet wird.
 
    - **Table**
 
-      Wählen Sie diese Option aus, wenn Sie verwenden möchten `CTable` oder `db_table` die Tabellen- und Klassendeklarationen erstellen.
+      Aktivieren Sie diese Option, wenn Sie `CTable` oder `db_table` zum Erstellen der Tabellen- und Tabellenaccessor-Klassendeklarationen verwenden möchten.
 
    - **Befehl**
 
-      Wählen Sie diese Option aus, wenn Sie verwenden möchten `CCommand` oder `db_command` der Befehls- und Klassendeklarationen erstellen. Dies ist die Standardauswahl.
+      Wählen Sie diese Option aus, wenn Sie `CCommand` oder `db_command` zum Erstellen der Tabellen- und Tabellenaccessor-Klassendeklarationen verwenden möchten. Dies ist die Standardauswahl.
 
-- **Support**
+- **Unterstützung**
 
-   Wählen Sie die Kontrollkästchen, um die Art der Updates, die im Consumer unterstützt werden (der Standardwert ist "None") anzugeben. Folgendes wird festgelegt, [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) und die entsprechenden Einträge für [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) -Zuordnung in der Eigenschaft festgelegt.
+   Aktivieren Sie die Kontrollkästchen, um die Art der Aktualisierung anzugeben, die im Consumer unterstützt wird (standardmäßig sind dies keine). Mit jeder der folgenden Optionen werden [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) und die geeigneten Einträge für [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) in der Eigenschaftenzuordnung festgelegt.
 
    - **Änderung**
 
-      Gibt an, dass die Consumer Updates der Daten der Zeile im Rowset unterstützt.
+      Gibt an, dass der Consumer das Aktualisieren von Zeilendaten im Rowset unterstützt.
 
    - **Einfügen**
 
@@ -181,8 +185,10 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
 
       Gibt an, dass der Consumer das Löschen von Zeilen aus dem Rowset unterstützt.
 
+::: moniker-end
+
 ## <a name="see-also"></a>Siehe auch
 
-[ATL-OLE DB-Consumers](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
-[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[ATL-OLE DB-Consumer](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
+[Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Verbindungszeichenfolgen und Datenverknüpfungen (OLE DB)](/previous-versions/windows/desktop/ms718376)

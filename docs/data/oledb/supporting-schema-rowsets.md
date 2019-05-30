@@ -7,32 +7,40 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: b49d53836179d765a72409d28304d7166dcf51d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 09af59d97ab87c66a0a7096e72cc7b92bc3a5dbf
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389169"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525271"
 ---
 # <a name="supporting-schema-rowsets"></a>Supporting Schema Rowsets
 
-Schemarowsets ermöglichen es Consumern, Informationen zu einem Datenspeicher zu erhalten, ohne zu wissen, die zugrunde liegende Struktur bzw. das Schema. Ein Datenspeicher kann z. B. Tabellen, die in einer benutzerdefinierten Hierarchie organisiert werden, damit es keine Möglichkeit gäbe, um das Schema mit Ausnahme des sicherzustellen, dass in diesem Artikel haben. (Ein weiteres Beispiel: Verwenden der Assistenten von Visual C++-Schemarowsets Accessoren für den Consumer zu generieren.) Um den Consumer zu diesem Zweck zu ermöglichen, des Anbieters Session-Objekt macht Methoden verfügbar, auf die [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) Schnittstelle. In Visual C++-Anwendungen, die Sie verwenden die [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) Klasse implementieren `IDBSchemaRowset`.
+Schemarowsets ermöglichen es Consumern, Informationen zu einem Datenspeicher abzurufen, ohne Kenntnis über die zugrunde liegende Struktur oder das Schema zu besitzen. Beispielsweise kann ein Datenspeicher Tabellen umfassen, die in einer benutzerdefinierten Hierarchie strukturiert sind. Es gibt in diesem Fall nur die Möglichkeit, Kenntnis über das Schema zu erlangen, indem es gelesen wird. (Als weiteres Beispiel verwenden die Visual C++-Assistenten Schemarowsets, um Zugriffsmethoden für den Consumer zu generieren.) Um dem Consumer dies zu ermöglichen, macht das Sitzungsobjekt des Anbieters Methoden für die [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))-Schnittstelle verfügbar. In Visual C++-Anwendungen verwenden Sie die Klasse [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) zur Implementierung von `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` unterstützt die folgenden Methoden:
 
-- [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) überprüft die Gültigkeit von Einschränkungen für ein Schemarowset.
+- [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) überprüft die Gültigkeit von Einschränkungen anhand eines Schemarowsets.
 
-- [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) implementiert eine COM-Objekterstellerfunktion für das Objekt, das durch die Template-Parameter angegeben.
+- [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) implementiert eine Funktion zur COM-Objekterstellung für das über den Vorlagenparameter angegebene Objekt.
 
 - [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) gibt an, welche Einschränkungen Sie für ein bestimmtes Schemarowset unterstützen.
 
-- [IDBSchemaRowset:: GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) gibt ein Schemarowset (geerbt von der Schnittstelle) zurück.
+- [IDBSchemaRowset::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) gibt ein (von der Schnittstelle geerbtes) Schemarowset zurück.
 
-- [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) gibt eine Liste der Schemarowsets zugänglich `IDBSchemaRowsetImpl::GetRowset` (geerbt von der Schnittstelle).
+- [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) gibt eine Liste mit Schemarowsets zurück, die für `IDBSchemaRowsetImpl::GetRowset` (von der Schnittstelle geerbt) zugänglich sind.
 
-## <a name="atl-ole-db-provider-wizard-support"></a>Die Unterstützung der ATL-OLE DB-Anbieter-Assistenten
+## <a name="atl-ole-db-provider-wizard-support"></a>Unterstützung für den ATL-OLE DB-Anbieter-Assistenten
 
-Die **ATL-OLE DB-Anbieter-Assistenten** drei Schemaklassen erstellt, in der Headerdatei für die Sitzung:
+::: moniker range="vs-2019"
+
+Der ATL-OLE DB-Anbieter-Assistent ist in Visual Studio 2019 und höher nicht verfügbar.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Der **ATL-OLE DB-Anbieter-Assistent** erstellt drei Schemaklassen in der Sitzungsheaderdatei:
 
 - **C**<em>ShortName</em>**SessionTRSchemaRowset**
 
@@ -40,27 +48,29 @@ Die **ATL-OLE DB-Anbieter-Assistenten** drei Schemaklassen erstellt, in der Head
 
 - **C**<em>ShortName</em>**SessionPTSchemaRowset**
 
-Diese Klassen reagieren auf Consumeranforderungen für die Schemainformationen; Beachten Sie, dass der OLE DB-Spezifikation erfordert, dass diese drei Schemarowsets unterstützt werden:
+Diese Klassen antworten auf Consumeranforderungen von Schemainformationen. Beachten Sie, dass die OLE DB-Spezifikation erfordert, dass diese drei Schemarowsets unterstützt werden müssen:
 
-- **C**<em>ShortName</em>**SessionTRSchemaRowset** behandelt Anforderungen für die Informationen in der Tabelle (DBSCHEMA_TABLES-Schemarowsets).
+- **C**<em>ShortName</em>**SessionTRSchemaRowset** verarbeitet Anforderungen von Tabelleninformationen (DBSCHEMA_TABLES-Schemarowset).
 
-- **C**<em>ShortName</em>**SessionColSchemaRowset** behandelt Anforderungen für die Spalteninformationen (DBSCHEMA_COLUMNS-Schemarowsets). Der Assistent stellt beispielimplementierungen für diese Klassen, die Schemainformationen für einen DOS-Anbieter zurückgegeben werden sollen.
+- **C**<em>ShortName</em>**SessionColSchemaRowset** verarbeitet Anforderungen von Spalteninformationen (DBSCHEMA_COLUMNS-Schemarowset). Der Assistent stellt Beispielimplementierungen für diese Klassen bereit, die Schemainformationen für einen DOS-Anbieter zurückgeben.
 
-- **C**<em>ShortName</em>**SessionPTSchemaRowset** verarbeitet Anforderungen, die Informationen zu den Typ (das DBSCHEMA_PROVIDER_TYPES-Schemarowset)-Schema. Vom Assistenten bereitgestellte Standardimplementierung gibt S_OK zurück.
+- **C**<em>ShortName</em>**SessionPTSchemaRowset** verarbeitet Anforderungen von Schemainformationen zum Anbietertyp (DBSCHEMA_PROVIDER_TYPES-Schemarowset). Die vom Assistenten bereitgestellte Standardimplementierung gibt S_OK zurück.
 
-Sie können diese Klassen zum Behandeln von Schemainformationen für den Anbieter geeignete anpassen:
+Sie können diese Klassen anpassen, um Schemainformationen in geeigneter Weise für Ihren Anbieter zu verarbeiten:
 
-- In **C**<em>ShortName</em>**SessionTRSchemaRowset**, füllen Sie die Felder Katalog, Tabellen- und Beschreibung (`trData.m_szType`, `trData.m_szTable`, und `trData.m_szDesc`). Das vom Assistenten generierten Beispiel verwendet nur eine Zeile (Tabelle). Andere Anbieter möglicherweise mehr als eine Tabelle zurück.
+- In **C**<em>ShortName</em>**SessionTRSchemaRowset** müssen Sie Felder für Katalog, Tabelle und Beschreibung ausfüllen (`trData.m_szType`, `trData.m_szTable` und `trData.m_szDesc`). Das vom Assistenten generierte Beispiel verwendet nur eine Zeile (Tabelle). Andere Anbieter können mehr als eine Tabelle zurückgeben.
 
-- In **C**<em>ShortName</em>**SessionColSchemaRowset**, Sie übergeben den Namen der Tabelle als eine `DBID`.
+- In **C**<em>ShortName</em>**SessionColSchemaRowset** übergeben Sie den Namen der Tabelle als `DBID`.
+
+::: moniker-end
 
 ## <a name="setting-restrictions"></a>Festlegen von Einschränkungen
 
-Ein wichtiges Konzept bei der Schemarowset-Unterstützung ist Einschränkungen, die Sie dazu das `SetRestrictions`. Einschränkungen ermöglichen es Consumern, nur die übereinstimmende Zeilen abzurufen (z. B. Suche nach allen Spalten in der Tabelle „MyTable“). Einschränkungen sind optional, und wenn keine unterstützt werden (Standardeinstellung), werden immer alle Daten zurückgegeben. Ein Beispiel für einen Anbieter, die Einschränkungen unterstützt, finden Sie unter den [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) Beispiel.
+Ein wichtiges Konzept bei der Unterstützung von Schemarowsets ist das Festlegen von Einschränkungen. Die Festlegung erfolgt über `SetRestrictions`. Einschränkungen ermöglichen es Consumern, nur die übereinstimmende Zeilen abzurufen (z. B. Suche nach allen Spalten in der Tabelle „MyTable“). Einschränkungen sind optional, und wenn keine unterstützt werden (Standardeinstellung), werden immer alle Daten zurückgegeben. Ein Beispiel für einen Anbieter mit Unterstützung von Einschränkungen finden Sie in [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV).
 
 ## <a name="setting-up-the-schema-map"></a>Einrichten der Schemazuordnung
 
-Richten Sie eine schemazuordnung in Session.h in UpdatePV wie diese:
+Richten Sie eine Schemazuordnung wie die folgende in „Session.h“ in UpdatePV ein:
 
 ```cpp
 BEGIN_SCHEMA_MAP(CUpdateSession)
@@ -70,9 +80,9 @@ BEGIN_SCHEMA_MAP(CUpdateSession)
 END_SCHEMA_MAP()
 ```
 
-Zur Unterstützung `IDBSchemaRowset`, müssen Sie DBSCHEMA_TABLES, DBSCHEMA_COLUMNS und DBSCHEMA_PROVIDER_TYPES unterstützen. Sie können zusätzliche Schemarowsets in Ihrem eigenen Ermessen hinzufügen.
+Um `IDBSchemaRowset` zu unterstützen, müssen Sie DBSCHEMA_TABLES, DBSCHEMA_COLUMNS und DBSCHEMA_PROVIDER_TYPES unterstützen. Sie können nach eigenem Ermessen weitere Schemarowsets hinzufügen.
 
-Deklarieren Sie eine Schema-Rowset-Klasse mit einer `Execute` Methode, z. B. `CUpdateSessionTRSchemaRowset` in `UpdatePV`:
+Deklarieren Sie eine Schemarowsetklasse mit einer `Execute`-Methode wie z.B. `CUpdateSessionTRSchemaRowset` in `UpdatePV`:
 
 ```cpp
 class CUpdateSessionTRSchemaRowset :
@@ -84,33 +94,33 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-`CUpdateSession` erbt von `IDBSchemaRowsetImpl`, sodass sie die Einschränkung, die für die Behandlung von Methoden hat. Mithilfe von `CSchemaRowsetImpl`, deklarieren Sie die drei untergeordneten Klassen (aufgeführt in der oben gezeigten Schema-Karte): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, und `CUpdateSessionPTSchemaRowset`. Jede dieser untergeordneten Klassen verfügt über eine `Execute` Methode, die einen entsprechenden Satz von Einschränkungen (Suchkriterien) behandelt. Jede `Execute` Methode vergleicht die Werte der *cRestrictions* und *RgRestrictions* Parameter. Siehe dazu die Beschreibung dieser Parameter in [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
+`CUpdateSession` erbt von `IDBSchemaRowsetImpl` und verfügt deshalb über alle zugehörigen Methoden für die Einschränkungsverarbeitung. Deklarieren Sie unter Verwendung von `CSchemaRowsetImpl` drei untergeordnete Klassen (diese werden in der Schemazuordnung oben aufgeführt): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset` und `CUpdateSessionPTSchemaRowset`. Jede dieser untergeordneten Klassen umfasst eine `Execute`-Methode, die den zugehörigen Satz an Einschränkungen (Suchkriterien) verarbeitet. Jede `Execute`-Methode vergleicht die Werte der Parameter *cRestrictions* und *rgRestrictions*. Eine Beschreibung dieser Parameter finden Sie in [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
-Weitere Informationen darüber, welche Einschränkungen einem bestimmten Schemarowset entsprechen, finden Sie unter der Tabelle der Schemarowset-GUIDs in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) in die **OLE DB-Programmierreferenz** im Windows SDK .
+Weitere Informationen dazu, welche Einschränkungen einem bestimmten Schemarowset entsprechen, finden Sie in der Tabelle der Schemarowset-GUIDs in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) in der **OLE DB-Programmierreferenz** im Windows SDK.
 
-Z. B. Wenn Sie die Einschränkung TABLE_NAME auf DBSCHEMA_TABLES unterstützt, würden Sie Folgendes:
+Wenn Sie beispielsweise die TABLE_NAME-Einschränkung für DBSCHEMA_TABLES unterstützen, gehen Sie folgendermaßen vor:
 
-Erstens DBSCHEMA_TABLES Nachschlagen Sie und feststellen Sie, dass es vier Einschränkungen (in Reihenfolge) unterstützt.
+Im ersten Schritt suchen Sie nach DBSCHEMA_TABLES und sehen, dass es vier Einschränkungen (in der Reihenfolge) unterstützt.
 
-|Schema-Rowset-Einschränkung|Einschränkungswert|
+|Schemarowseteinschränkung|Einschränkungswert|
 |-------------------------------|-----------------------|
-|TABLE_CATALOG|0 x 1 (binär 1)|
-|TABLE_SCHEMA|0 x 2 (binäre 10)|
-|TABLE_NAME|0 x 4 (binäre 100)|
-|TABLE_TYPE|0 x 8 (binäre 1000)|
+|TABLE_CATALOG|0x1 (binär: 1)|
+|TABLE_SCHEMA|0x2 (binär: 10)|
+|TABLE_NAME|0x4 (binär: 100)|
+|TABLE_TYPE|0x8 (binär: 1000)|
 
-Es gibt auch noch ein Bit für jede Einschränkung. Da lediglich TABLE_NAME unterstützt werden sollen, würden Sie 0 x 4 im Zurückgeben der `rgRestrictions` Element. Wenn Sie TABLE_CATALOG und TABLE_NAME unterstützt, werden Sie 0 x 5 (binär 101) zurückgegeben.
+Es ist ein Bit für jede Einschränkung vorhanden. Sie möchten nur TABLE_NAME unterstützen, deshalb geben Sie im `rgRestrictions`-Element 0x4 zurück. Wenn Sie TABLE_CATALOG und TABLE_NAME unterstützen möchten, geben Sie 0x5 (binär: 101) zurück.
 
-Standardmäßig gibt die Implementierung 0 (keine Einschränkungen nicht unterstützt werden) für jede Anforderung zurück. UpdatePV ist ein Beispiel für einen Anbieter, der Einschränkungen unterstützt.
+Standardmäßig gibt die Implementierung 0 für eine Anforderung zurück (keine Unterstützung von Einschränkungen). UpdatePV ist ein Beispiel für einen Anbieter, der Einschränkungen unterstützt.
 
 ### <a name="example"></a>Beispiel
 
-Dieser Code stammt aus dem [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) Beispiel. `UpdatePv` unterstützt die drei erforderlichen Schemarowsets: DBSCHEMA_TABLES DBSCHEMA_COLUMNS und DBSCHEMA_PROVIDER_TYPES. Als ein Beispiel zum Implementieren von Unterstützung für das in Ihrem Anbieter gelangen Sie in diesem Thema durch die Implementierung der DBSCHEMA_TABLE Rowset.
+Dieser Code stammt aus dem [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)-Beispiel. `UpdatePv` unterstützt die drei erforderlichen Schemarowsets: DBSCHEMA_TABLES, DBSCHEMA_COLUMNS und DBSCHEMA_PROVIDER_TYPES. Als Beispiel für eine Implementierung der Schemaunterstützung in Ihrem Anbieter werden Sie in diesem Thema durch die Implementierung des DBSCHEMA_TABLE-Rowsets geleitet.
 
 > [!NOTE]
-> Der Beispielcode unterscheiden sich von dem hier aufgeführten ist; den Code sollte wie die aktuelleren Version angesehen werden.
+> Der Beispielcode unterscheidet sich möglicherweise vom hier gezeigten Code. Betrachten Sie den Beispielcode als die aktuellere Codeversion.
 
-Der erste Schritt beim Hinzufügen von Unterstützung für das ist, um zu bestimmen, welche Einschränkungen Sie unterstützen möchten. Um zu bestimmen, welche Einschränkungen für die Schemarowsets verfügbar sind, sehen Sie sich für die Definition von OLE DB-Spezifikation `IDBSchemaRowset`. Folgende die hauptdefinition sehen Sie eine Tabelle mit den Schemanamen für Rowsets, die Anzahl der Einschränkungen und die Einschränkungsspalten. Wählen Sie das Schemarowset, die, das Sie unterstützen, und notieren Sie sich die Anzahl der Einschränkungen und die Einschränkungsspalten möchten. DBSCHEMA_TABLES unterstützt beispielsweise vier Einschränkungen (TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME und TABLE_TYPE):
+Im ersten Schritt beim Hinzufügen von Schemaunterstützung müssen Sie bestimmen, welche Einschränkungen Sie unterstützen möchten. Um zu ermitteln, welche Einschränkungen für Ihr Schemarowset verfügbar sind, sehen Sie sich die OLE DB-Spezifikation für die Definition von `IDBSchemaRowset` an. Nach der Hauptdefinition sehen Sie eine Tabelle mit dem Namen des Schemarowsets, der Anzahl von Einschränkungen und den Einschränkungsspalten. Wählen Sie das Schemarowset aus, das Sie unterstützen möchten, und notieren Sie sich die Anzahl von Einschränkungen und Einschränkungsspalten. DBSCHEMA_TABLES unterstützt beispielsweise vier Einschränkungen (TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME und TABLE_TYPE):
 
 ```cpp
 void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,
@@ -129,25 +139,25 @@ void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,
 }
 ```
 
-Eine Bit stellt jede Einschränkungsspalte dar. Wenn Sie eine Einschränkung unterstützen möchten (d. h. Sie können für eine Abfrage verwendet werden), dieses Bit auf 1 festgelegt. Wenn Sie nicht möchten, dass für eine Beschränkung unterstützt wird, wird dieses Bit auf 0 festgelegt. Aus der Zeile des obigen Codes `UpdatePV` unterstützt die TABLE_NAME und TABLE_TYPE-Einschränkungen für das DBSCHEMA_TABLES-Rowset. Dies sind die dritte (Bitmaske "100") und die Einschränkungen der vierten (Bitmaske 1000). Aus diesem Grund die Bitmaske für `UpdatePv` ist 1100 (oder 0x0C):
+Ein Bit repräsentiert jede Einschränkungsspalte. Wenn Sie eine Einschränkung unterstützen (d.h. eine Abfrage mithilfe der Einschränkung ausführen) möchten, legen Sie das Bit auf 1 fest. Wenn Sie eine Einschränkung nicht unterstützen möchten, legen Sie das Bit auf 0 fest. Im Code oben unterstützt `UpdatePV` die Einschränkungen TABLE_NAME und TABLE_TYPE für das DBSCHEMA_TABLES-Rowset. Dies sind die dritte (Bitmaske 100) und die vierte (Bitmaske 1000) Einschränkung. Die Bitmaske für `UpdatePv` lautet deshalb 1100 (oder 0x0C):
 
 ```cpp
 if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))
     rgRestrictions[l] = 0x0C;
 ```
 
-Die folgenden `Execute` Funktion ist vergleichbar mit denen in reguläre Rowsets. Sie verfügen über drei Argumente: *PcRowsAffected*, *cRestrictions*, und *RgRestrictions*. Die *PcRowsAffected* Variable ist ein Output-Parameter, dass der Anbieter die Anzahl der Zeilen im Schemarowset zurückgeben kann. Die *cRestrictions* Parameter ist ein Eingabeparameter, der die Anzahl der Einschränkungen, die vom Consumer übergeben werden an dem Anbieter. Die *RgRestrictions* -Parameter ist ein Array von VARIANT-Werten, die der Einschränkungswerte enthalten.
+Die folgende `Execute`-Funktion ähnelt denen in regulären Rowsets. Sie verfügen über drei Argumente: *pcRowsAffected*, *cRestrictions* und *rgRestrictions*. Die Variable *pcRowsAffected* ist ein Ausgabeparameter, mit dem der Anbieter die Anzahl von Zeilen im Schemarowset zurückgeben kann. Der *cRestrictions*-Parameter ist ein Eingabeparameter, der die Anzahl von Einschränkungen enthält, die vom Consumer an den Anbieter übergeben werden. Der Parameter *rgRestrictions* ist ein Array aus VARIANT-Werten, die die Einschränkungswerte enthalten.
 
 ```cpp
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,
                 const VARIANT* rgRestrictions)
 ```
 
-Die *cRestrictions* Variable basiert darauf, dass die Gesamtanzahl der Einschränkungen für ein Schemarowset, unabhängig davon, ob der Anbieter unterstützt. Da UpdatePv zwei Einschränkungen (der dritte und vierte) unterstützt, wird dieser Code nur für sieht eine *cRestrictions* Wert größer als oder gleich 3.
+Die Variable *cRestrictions* basiert auf der Gesamtzahl an Einschränkungen für ein Schemarowset, unabhängig davon, ob der Anbieter sie unterstützt. UpdatePV unterstützt zwei Einschränkungen (die 3. und die 4.), deshalb sucht dieser Code nur nach einem *cRestrictions*-Wert größer oder gleich 3.
 
-Der Wert für die Einschränkung TABLE_NAME befindet sich in *RgRestrictions [2]* (in diesem Fall ist die dritte Beschränkung in einem nullbasierten Array 2). Überprüfen Sie, dass die Einschränkung VT_EMPTY tatsächlich unterstützt ist. Beachten Sie, dass nicht VT_EMPTY gleich VT_NULL ist. VT_NULL gibt einen Wert für die gültige Einschränkung an.
+Der Wert für die TABLE_NAME-Einschränkung ist in *rgRestrictions[2]* gespeichert (die 3. Einschränkung in einem 0-basierten Array ist 2). Stellen Sie sicher, dass die Einschränkung nicht VT_EMPTY lautet, um sie tatsächlich zu unterstützen. Beachten Sie, dass VT_NULL nicht gleichbedeutend ist mit VT_EMPTY. VT_NULL gibt einen gültigen Einschränkungswert an.
 
-Die `UpdatePv` Definition des Namen einer Tabelle ist ein vollständig qualifizierter Pfadname in eine Textdatei. Extrahieren Sie den Einschränkungswert ein, und wiederholen Sie dann, zu öffnen, um sicherzustellen, dass die Datei vorhanden ist. Wenn die Datei nicht vorhanden ist, gibt S_OK zurück. Dies mag etwas rückwärts Zweck des Codes teilt dem Consumer ist ist jedoch, dass keine unterstützten Tabellen durch den Namen, die angegeben wurden. S_OK zurückgegeben, bedeutet, dass den Code ordnungsgemäß ausgeführt.
+Die `UpdatePv`-Definition eines Tabellennamens ist ein vollqualifizierter Pfadname zu einer Textdatei. Extrahieren Sie den Einschränkungswert, und versuchen Sie dann, die Datei zu öffnen, um sicherzustellen, dass sie tatsächlich vorhanden ist. Wenn die Datei nicht vorhanden ist, geben Sie S_OK zurück. Dies mag ein wenig rückwärts gerichtet erscheinen, aber tatsächlich informiert der Code den Consumer darüber, dass keine unterstützten Tabellen mit dem angegebenen Namen vorhanden waren. Die Rückgabe von S_OK bedeutet, dass der Code korrekt ausgeführt wurde.
 
 ```cpp
 USES_CONVERSION;
@@ -184,7 +194,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }
 ```
 
-Die vierte Beschränkung ist (TABLE_TYPE) die dritte Beschränkung ähnelt. Um festzustellen, ob der Wert auf VT_EMPTY nicht überprüfen. Diese Einschränkung gibt nur den "Table", Tabelle zurück. Um die gültigen Werte für die DBSCHEMA_TABLES zu ermitteln, suchen Sie im **Anhang B** von der **OLE DB-Programmierreferenz** in Abschnitt Rowset Tabellen.
+Die Unterstützung der vierten Einschränkung (TABLE_TYPE) ähnelt der für die dritte Einschränkung. Führen Sie eine Überprüfung durch, um sicherzustellen, dass der Wert nicht VT_EMPTY lautet. Diese Einschränkung gibt nur den Tabellentyp, TABLE, zurück. Die gültigen Werte für DBSCHEMA_TABLES finden Sie in **Anhang B** der **OLE DB-Programmierreferenz** im Abschnitt zum TABLES-Rowset.
 
 ```cpp
 // TABLE_TYPE restriction:
@@ -203,7 +213,7 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 }
 ```
 
-Dies ist in dem Sie einen Zeileneintrag, für das Rowset erstellen. Die Variable `trData` entspricht `CTABLESRow`, eine Struktur, in der OLE DB-Anbietervorlagen definiert. `CTABLESRow` entspricht der Tabellen-Rowset-Definition in **Anhang B** der OLE DB-Spezifikation. Sie müssen nur eine Zeile hinzufügen, da Sie nur eine Tabelle zu einem Zeitpunkt unterstützen können.
+Hier erstellen Sie tatsächlich einen Zeileneintrag für das Rowset. Die Variable `trData` entspricht `CTABLESRow`, einer in den OLE DB-Anbietervorlagen definierten Struktur. `CTABLESRow` entspricht der TABLES-Rowsetdefinition in **Anhang B** der OLE DB-Spezifikation. Sie müssen nur eine Zeile hinzufügen, weil Sie nur jeweils eine Tabelle unterstützen können.
 
 ```cpp
 // Bring over the data:
@@ -214,7 +224,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 ```
 
-`UpdatePV` wird nur die drei Spalten: Tabellenname, TABLE_TYPE und Beschreibung. Notieren Sie sich die Spalten, die für die Informationen zurückgegeben werden, da Sie diese Informationen benötigen, bei der Implementierung `GetDBStatus`:
+`UpdatePV` legt nur drei Spalten fest: TABLE_NAME, TABLE_TYPE und DESCRIPTION. Notieren Sie sich die Spalten, für die Sie Informationen zurückgeben. Sie benötigen diese Informationen bei der Implementierung von `GetDBStatus`:
 
 ```cpp
     _ATLTRY
@@ -232,7 +242,7 @@ wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 }
 ```
 
-Die `GetDBStatus` Funktion ist wichtig, den ordnungsgemäßen Betrieb des-Schemarowsets. Da Sie keine Daten für jede Spalte in das TABLES-Rowset zurückgeben, müssen Sie angeben, welche Spalten Daten für die zurückgegeben werden und welche nicht.
+Die Funktion `GetDBStatus` ist wichtig für die ordnungsgemäße Funktion des Schemarowsets. Sie geben nicht für jede Spalte im TABLES-Rowset Daten zurück, deshalb müssen Sie angeben, für welche Spalten Sie Daten zurückgeben und für welche nicht.
 
 ```cpp
 virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
@@ -253,13 +263,13 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 }
 ```
 
-Da Ihre `Execute` Funktion gibt Daten für die Felder TABLE_NAME, TABLE_TYPE und Beschreibung aus dem TABLES-Rowset zurück, finden Sie auf **Anhang B** der OLE DB-Spezifikation und ermitteln Sie (durch Zählen von oben nach unten) dass sie die Ordinalzahlen, 3, 4 und 6 sind. Zurückgeben Sie für jede dieser Spalten DBSTATUS_S_OK. Geben Sie für alle anderen Spalten DBSTATUS_S_ISNULL zurück. Es ist wichtig, dass dieser Status zurückgegeben, da ein Consumer nicht erkennen kann, dass der zurückgegebene Wert NULL oder etwas anderes ist. Beachten Sie in diesem Fall, dass NULL entspricht leer ist.
+Ihre `Execute`-Funktion gibt Daten für die Felder TABLE_NAME, TABLE_TYPE und DESCRIPTION aus dem TABLES-Rowset zurück, deshalb können Sie anhand von **Anhang B** der OLE DB-Spezifikation (durch Zählen von oben nach unten) feststellen, dass es sich um die Ordinalzahlen 3, 4 und 6 handelt. Geben Sie für jede dieser Spalten DBSTATUS_S_OK zurück. Für alle anderen Spalten geben Sie DBSTATUS_S_ISNULL zurück. Es ist wichtig, diesen Status zurückzugeben, weil ein Consumer möglicherweise nicht versteht, dass der zurückgegebene Wert NULL oder etwas anderes ist. Zur Erinnerung: NULL ist nicht gleichbedeutend mit leer.
 
-Weitere Informationen zu den OLE DB-Schemarowset-Schnittstelle, finden Sie unter den [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) -Schnittstelle in der **OLE DB-Programmierreferenz**.
+Weitere Informationen zur OLE DB-Schemarowset-Schnittstelle finden Sie im Abschnitt zur [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md)-Schnittstelle in der **OLE DB-Programmierreferenz**.
 
-Informationen zur Verwendung von Consumern `IDBSchemaRowset` Methoden finden Sie unter [Abrufen von Metadaten mit Schemarowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
+Informationen dazu, wie Consumer `IDBSchemaRowset`-Methoden verwenden können, finden Sie unter [Abrufen von Metadaten mit Schemarowsets](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
 
-Ein Beispiel für ein Anbieter, der Schemarowsets unterstützt, finden Sie unter den [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) Beispiel.
+Ein Beispiel für einen Anbieter, der Schemarowsets unterstützt, finden Sie im [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)-Beispiel.
 
 ## <a name="see-also"></a>Siehe auch
 

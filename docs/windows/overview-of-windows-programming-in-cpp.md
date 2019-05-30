@@ -2,12 +2,12 @@
 title: Übersicht über Windows-Programmierung in C++
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 957e3565ad4caa12da5e7d10915ca159d00954b8
-ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
+ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
+ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197738"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66355565"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Übersicht über Windows-Programmierung in C++
 
@@ -101,7 +101,7 @@ Visual Studio bietet einen leistungsfähigen Debugger für nativen Code, Tools f
 |[Windows-Desktopassistent](windows-desktop-wizard.md)|Mithilfe des Assistenten zum Erstellen von neuer Windows-Projekten.|
 |[Active Template Library (ATL)](../atl/atl-com-desktop-components.md)|Verwenden Sie die ATL-Bibliothek, um COM-Komponenten in C++ zu erstellen.|
 |[Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)|Verwenden von MFC um zu große oder kleine ein Windows-Anwendungen mit Dialogfelder und Steuerelemente zu erstellen.|
-|[Freigegebene ATL- und MFC-Klassen](../atl-mfc-shared/TOC.md)|Verwenden Sie Klassen wie z. B. CString, die in ATL- und MFC-freigegeben werden.|
+|[Freigegebene ATL- und MFC-Klassen](../atl-mfc-shared/atl-mfc-shared-classes.md)|Verwenden Sie Klassen wie z. B. CString, die in ATL- und MFC-freigegeben werden.|
 |[Datenzugriff](../data/data-access-in-cpp.md)| OLEDB- und ODBC|
 |[Text und Zeichenfolgen](../text/text-and-strings-in-visual-cpp.md)|Verschiedene Zeichenfolgen-Datentypen für Windows.|
 |[Ressourcen zum Erstellen eines Spiels mit DirectX](resources-for-creating-a-game-using-directx.md)
