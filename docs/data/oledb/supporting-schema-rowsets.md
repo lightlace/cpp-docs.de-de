@@ -1,5 +1,5 @@
 ---
-title: Supporting Schema Rowsets
+title: Unterstützung von Schemarowsets
 ms.date: 11/04/2016
 helpviewer_keywords:
 - schema rowsets
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 09af59d97ab87c66a0a7096e72cc7b92bc3a5dbf
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 1ad1a91e8a79238eee773d92a756b0238e8901d5
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525271"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707488"
 ---
-# <a name="supporting-schema-rowsets"></a>Supporting Schema Rowsets
+# <a name="supporting-schema-rowsets"></a>Unterstützung von Schemarowsets
 
 Schemarowsets ermöglichen es Consumern, Informationen zu einem Datenspeicher abzurufen, ohne Kenntnis über die zugrunde liegende Struktur oder das Schema zu besitzen. Beispielsweise kann ein Datenspeicher Tabellen umfassen, die in einer benutzerdefinierten Hierarchie strukturiert sind. Es gibt in diesem Fall nur die Möglichkeit, Kenntnis über das Schema zu erlangen, indem es gelesen wird. (Als weiteres Beispiel verwenden die Visual C++-Assistenten Schemarowsets, um Zugriffsmethoden für den Consumer zu generieren.) Um dem Consumer dies zu ermöglichen, macht das Sitzungsobjekt des Anbieters Methoden für die [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))-Schnittstelle verfügbar. In Visual C++-Anwendungen verwenden Sie die Klasse [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) zur Implementierung von `IDBSchemaRowset`.
 
@@ -38,7 +38,7 @@ Der ATL-OLE DB-Anbieter-Assistent ist in Visual Studio 2019 und höher nicht ver
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Der **ATL-OLE DB-Anbieter-Assistent** erstellt drei Schemaklassen in der Sitzungsheaderdatei:
 
