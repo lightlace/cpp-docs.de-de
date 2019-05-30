@@ -1,25 +1,35 @@
 ---
 title: Erstellen eines OLE DB-Consumers
-ms.date: 10/22/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: 652309d3-7736-4354-89ec-28ec80a83f9a
-ms.openlocfilehash: 9198ecce949a53190551a9c0c86c414ecdcbeb9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a221aa98f5d4011bb310e056f4c2c8b04d847af6
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361967"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707594"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Erstellen eines OLE DB-Consumers
 
-Sie können einen OLE DB-Vorlagen-Consumer erstellen, mit oder ohne die **ATL-OLE DB-Consumer-Assistenten**jedoch mithilfe des Assistenten die empfohlene Methode ist. Ein Consumer kann in jeder Anwendung ausgeführt werden, die ATL unterstützt.
+::: moniker range="vs-2019"
+
+Der ATL-OLE DB-Consumer-Assistent ist in Visual Studio 2019 und höher nicht verfügbar. Sie können diese Funktionalität weiterhin manuell hinzufügen. Weitere Informationen finden Sie unter [Erstellen eines Consumers ohne Assistent](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Sie können einen OLE DB-Vorlagenconsumer mit oder ohne den **ATL-OLE DB-Consumer-Assistenten** erstellen. Die Verwendung des Assistenten wird jedoch empfohlen. Ein Consumer kann in einer beliebigen Anwendung genutzt werden, die ATL unterstützt.
 
 In diesem Abschnitt werden die folgenden Themen behandelt:
 
 - [Erstellen eines OLE DB-Consumers mit einem Assistenten](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
 
-- [Erstellen eines OLE DB-Consumers ohne Assistent](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)
+- [Erstellen eines OLE DB-Consumers ohne Assistent](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)
+
+::: moniker-end
 
 ## <a name="see-also"></a>Siehe auch
 
