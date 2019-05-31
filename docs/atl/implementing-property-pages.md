@@ -1,49 +1,59 @@
 ---
-title: Implementieren der Eigenschaftenseiten
+title: Implementieren von Eigenschaftenseiten
 ms.date: 11/04/2016
 helpviewer_keywords:
 - IPropertyPage2 class
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 8999f6469e420fa86cb1267675f10dc173d45ff0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c4ba69d8421a76a94e4a676cb62ee53936d77da3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250436"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524582"
 ---
-# <a name="implementing-property-pages"></a>Implementieren der Eigenschaftenseiten
+# <a name="implementing-property-pages"></a>Implementieren von Eigenschaftenseiten
 
-Eigenschaftenseiten sind COM-Objekte, implementieren die `IPropertyPage` oder `IPropertyPage2` Schnittstelle. ATL bietet Unterstützung für das Implementieren der Eigenschaftenseiten über die [ATL-Eigenschaftenseiten-Assistent](../atl/reference/atl-property-page-wizard.md) in die [Dialogfeld Klasse hinzufügen](../ide/add-class-dialog-box.md).
+::: moniker range="vs-2019"
 
-So erstellen Sie eine Eigenschaftenseite mit ATL
+Der ATL-Eigenschaftenseiten-Assistent ist in Visual Studio 2019 und höher nicht verfügbar.
 
-- Erstellen Sie oder öffnen Sie ein Serverprojekt für ATL-Dynamic Link Library (DLL).
+::: moniker-end
 
-- Öffnen der [Dialogfeld Klasse hinzufügen](../ide/add-class-dialog-box.md) , und wählen Sie **ATL-Eigenschaftenseite**.
+::: moniker range="vs-2017"
 
-- Stellen Sie sicher, dass Ihr Eigenschaftenseite apartmentthreadpaket (da es sich um eine Benutzeroberfläche besitzt).
+Eigenschaftenseiten sind COM-Objekte, die die Schnittstelle `IPropertyPage` oder die Schnittstelle `IPropertyPage2` implementieren. ATL bietet Unterstützung für die Implementierung von Eigenschaftenseiten mit dem [ATL-Eigenschaftenseiten-Assistenten](../atl/reference/atl-property-page-wizard.md) im [Dialogfeld „Klasse hinzufügen“](../ide/add-class-dialog-box.md).
 
-- Legen Sie den Titel, Beschreibung (Doc-Zeichenfolge) und die Hilfedatei, um die Seite zugeordnet werden soll.
+So erstellen Sie eine Eigenschaftenseite mithilfe von ATL:
 
-- Fügen Sie Steuerelemente auf die generierten Dialogressource, als die Benutzeroberfläche der Ihre Eigenschaftenseite zu fungieren.
+- Erstellen oder öffnen Sie ein ATL-DLL-Serverprojekt (Dynamic Link Library).
 
-- Reagieren Sie auf Änderungen in Ihrer Seite auf der Benutzeroberfläche für die eine Überprüfung durchführen, aktualisieren die Site der Seite oder die Objekte zugeordnet sind, mit der Seite zu aktualisieren. Rufen Sie vor allem [:: SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty) Wenn der Benutzer Änderungen vornimmt, auf der Eigenschaftenseite.
+- Öffnen Sie das [Dialogfeld „Klasse hinzufügen“](../ide/add-class-dialog-box.md), und wählen Sie **ATL-Eigenschaftenseite** aus.
 
-- Überschreiben Sie optional die `IPropertyPageImpl` Methoden, die mithilfe des Leitfadens untenan.
+- Stellen Sie sicher dass Ihre Eigenschaftenseite über einen Apartmentthread verfügt (da sie eine Benutzeroberfläche aufweist).
 
-   |IPropertyPageImpl-Methode|Außer Kraft setzen, wenn Sie möchten...|Hinweise|
+- Legen Sie den Titel, die Beschreibung (Dokumentzeichenfolge) und die Hilfedatei fest, der bzw. die Ihrer Seite zugeordnet werden soll.
+
+- Fügen Sie der generierten Dialogfeldressource, die als Benutzeroberfläche Ihrer Eigenschaftenseite dienen soll, Steuerelemente hinzu.
+
+- Reagieren Sie auf Änderungen auf der Benutzeroberfläche der Seite, um eine Überprüfung durchzuführen, die Site der Seite zu aktualisieren oder die Objekte zu aktualisieren, die der Seite zugeordnet sind. Rufen Sie insbesondere [IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty) auf, wenn ein Benutzer die Eigenschaftenseite ändert.
+
+- Überschreiben Sie optional die `IPropertyPageImpl`-Methoden mithilfe der folgenden Anweisungen.
+
+   |IPropertyPageImpl-Methode|Grund für Überschreibung|Hinweise|
    |------------------------------|----------------------------------|-----------|
-   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Führen Sie grundlegende wurden die integritätsprüfungen für die Anzahl der Objekte übergeben werden, um die Seite und die Schnittstellen, die sie unterstützen.|Führen Sie Ihren eigenen Code vor der Implementierung der Basisklasse aufrufen. Wenn die Objekte, die festgelegt wird nicht Ihren Erwartungen entsprechen, sollten Sie so bald wie möglich der Aufruf fehl.|
-   |[Aktivieren](../atl/reference/ipropertypageimpl-class.md#activate)|Initialisieren Sie Ihrer Seite Benutzeroberfläche (z. B. Festlegen der Dialogfeld-Steuerelemente mit aktuellen Eigenschaftswerten von Objekten, erstellen Sie dynamisch Steuerelemente oder andere Initialisierungen durchführen).|Rufen Sie die basisklassenimplementierung, bevor Sie Ihren Code, sodass die Basisklasse der Klasse hat die Möglichkeit, das Dialogfeld und alle Steuerelemente erstellen, bevor Sie versuchen, die sie aktualisieren.|
-   |[Anwenden](../atl/reference/ipropertypageimpl-class.md#apply)|Überprüfen Sie die eigenschafteneinstellungen, und aktualisieren Sie die Objekte.|Es ist nicht erforderlich, die Implementierung der Basisklasse aufrufen, da nichts außer der Ablaufverfolgung des Aufrufs nicht möglich ist.|
-   |[Deaktivieren](../atl/reference/ipropertypageimpl-class.md#deactivate)|Bereinigen Sie bezogenen Elemente.|Die basisklassenimplementierung zerstört das Dialogfeld, das die Eigenschaftenseite darstellt. Bei Bedarf bereinigt werden, bevor Sie das Dialogfeld zerstört wird, sollten Sie Ihren Code vor dem Aufruf der Basisklasse hinzufügen.|
+   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Sie möchten grundlegende Integritätsprüfungen für die an Ihre Seite übergebenen Objekten sowie die von ihnen unterstützten Schnittstellen ausführen.|Führen Sie Ihren eigenen Code aus, bevor Sie die Implementierung der Basisklasse aufrufen. Wenn die festgelegten Objekte Ihren Erwartungen nicht entsprechen, sollten Sie den Aufruf schnellstmöglich als fehlerhaft kennzeichnen.|
+   |[Activate](../atl/reference/ipropertypageimpl-class.md#activate)|Sie möchten die Benutzeroberfläche Ihrer Seite initialisieren (z.B. möchten Sie Dialogfeldsteuerelemente mit aktuellen Eigenschaftswerten aus Objekten festlegen, Steuerelemente dynamisch erstellen oder andere Initialisierungen durchführen).|Rufen Sie die Implementierung der Basisklasse vor Ihrem Code auf, sodass die Basisklasse das Dialogfeldfenster und alle Steuerelemente erstellen kann, bevor Sie versuchen, diese zu aktualisieren.|
+   |[Apply](../atl/reference/ipropertypageimpl-class.md#apply)|Sie möchten die Eigenschafteneinstellungen überprüfen und die Objekte aktualisieren.|Sie müssen die Implementierung der Basisklasse nicht aufrufen, da diese außer der Ablaufverfolgung für den Aufruf keine Aktionen ausführt.|
+   |[Deactivate](../atl/reference/ipropertypageimpl-class.md#deactivate)|Sie möchten fensterbezogene Elemente bereinigen.|Die Implementierung der Basisklasse zerstört das Dialogfeld, das die Eigenschaftenseite repräsentiert. Wenn Sie vor der Zerstörung des Dialogfelds eine Bereinigung durchführen müssen, sollten Sie Ihren Code vor dem Aufruf der Basisklasse hinzufügen.|
 
-Eine Implementierung der Beispiel-Eigenschaft-Seite, finden Sie unter [Beispiel: Implementieren einer Eigenschaftenseite](../atl/example-implementing-a-property-page.md).
+Ein Beispiel für die Implementierung der Eigenschaftenseite finden Sie unter [Beispiel: Implementieren einer Eigenschaftenseite](../atl/example-implementing-a-property-page.md).
 
 > [!NOTE]
-> Wenn Sie zum Hosten von ActiveX-Steuerelementen in Ihr Eigenschaftenseite möchten, müssen Sie die Ableitung der vom Assistenten generierten Klasse zu ändern. Ersetzen Sie dies **CDialogImpl\<CYourClass >** mit **CAxDialogImpl\<CYourClass >** in der Liste der Basisklassen.
+> Wenn Sie auf Ihrer Eigenschaftenseite ActiveX-Steuerelemente hosten möchten, müssen Sie die Ableitung Ihrer vom Assistenten generierten Klasse ändern. Ersetzen Sie **CDialogImpl\<CYourClass>** in der Liste der Basisklassen durch **CAxDialogImpl\<CYourClass>** .
+
+::: moniker-end
 
 ## <a name="see-also"></a>Siehe auch
 

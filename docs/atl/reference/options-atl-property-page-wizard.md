@@ -1,42 +1,53 @@
 ---
 title: Optionen, ATL-Eigenschaftenseiten-Assistent
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.ppg.options
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: c92c7a3f03c3ddedbea02647e2317d77a7655609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c883b3e79bd857bb457da0a1bd540a08ddddf017
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275398"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524542"
 ---
 # <a name="options-atl-property-page-wizard"></a>Optionen, ATL-Eigenschaftenseiten-Assistent
 
-Mithilfe dieser Seite des Assistenten für das threading und die Aggregation auf der Eigenschaftenseite zu definieren, die Sie erstellen.
 
-- **Threading-Modell**
+::: moniker range="vs-2019"
 
-   Gibt das Threadingmodell an, die von der Eigenschaftenseite verwendet.
+Der ATL-Eigenschaftenseiten-Assistent ist in Visual Studio 2019 und höher nicht verfügbar.
 
-   Finden Sie unter [angeben des Projekts. Threading-Modell](../../atl/specifying-the-threading-model-for-a-project-atl.md) für Weitere Informationen.
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Verwenden Sie diese Seite des Assistenten, um das Threadingmodell und die Aggregationsebene der Eigenschaftenseite zu definieren, die Sie erstellen.
+
+- **Threadingmodell**
+
+   Gibt das Threadingmodell an, das von der Eigenschaftenseite verwendet wird.
+
+   Weitere Informationen finden Sie unter [Angeben des Threadingmodells für ein Projekt](../../atl/specifying-the-threading-model-for-a-project-atl.md).
 
    |Option|Beschreibung|
    |------------|-----------------|
    |**Single**|Die Eigenschaftenseite wird nur im primären COM-Thread ausgeführt.|
-   |**Apartment**|Die Eigenschaftenseite kann in jedem Singlethread-Apartment erstellt werden. Der Standardwert.|
+   |**Apartment**|Die Eigenschaftenseite kann in jedem Einzelthreadapartment erstellt werden. Der Standardwert.|
 
 - **Aggregation**
 
-   Fügt die Unterstützung für die Eigenschaftenseite, die Sie erstellen. Finden Sie unter [Aggregation](../../atl/aggregation.md) für Weitere Informationen.
+   Fügt Aggregationsunterstützung für die Eigenschaftenseite hinzu, die Sie erstellen. Weitere Informationen finden Sie unter [Aggregation](../../atl/aggregation.md).
 
    |Option|Beschreibung|
    |------------|-----------------|
-   |**Ja**|Erstellen Sie eine Eigenschaftenseite, die aggregiert werden können.|
-   |**No**|Erstellen Sie eine Eigenschaftenseite, die nicht aggregiert werden kann.|
-   |**Only**|Erstellen Sie eine Eigenschaftenseite, die durch die Aggregation nur instanziiert werden kann.|
+   |**Ja**|Erstellt eine Eigenschaftenseite, die aggregiert werden kann.|
+   |**No**|Erstellt eine Eigenschaftenseite, die nicht aggregiert werden kann.|
+   |**Nur**|Erstellt eine Eigenschaftenseite, die nur durch Aggregation instanziiert werden kann.|
+
+::: moniker-end
 
 ## <a name="see-also"></a>Siehe auch
 

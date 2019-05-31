@@ -1,21 +1,29 @@
 ---
 title: Erstellen eines OLE DB-Consumers mit einem Assistenten
-ms.date: 10/22/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: efefd4c0-4491-4072-aa9b-59545641efb3
-ms.openlocfilehash: e4de4070b1662e33d4b0c0c355cabde851746662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dd731862adb741db068fc3465acb64b42e673522
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362321"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707606"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Erstellen eines OLE DB-Consumers mit einem Assistenten
 
-Dieses Verfahren wird veranschaulicht, wie Sie verwenden können die **ATL-Projektassistenten** und **ATL-OLE DB-Consumer-Assistenten** zum Generieren eines Consumers OLE DB-Vorlagen und der Hauptcode von der Konsolenanwendung zum Ändern Abrufen und Anzeigen von Daten aus einer Datenbanktabelle.
+::: moniker range="vs-2019"
 
-In den letzten beiden Abschnitten wird erläutert, die vom Assistenten generierte OLE DB-Consumer-Code.
+Der ATL-OLE DB-Consumer-Assistent ist in Visual Studio 2019 und höher nicht verfügbar. Sie können diese Funktionalität weiterhin manuell hinzufügen. Weitere Informationen finden Sie unter [Erstellen eines Consumers ohne Assistent](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Dieses Verfahren veranschaulicht, wie Sie den **ATL-Projekt-Assistenten** und den **ATL-OLE DB-Consumer-Assistenten** verwenden können, um einen OLE DB-Vorlagenconsumer zu generieren und dann den Hauptcode der Konsolenanwendung so zu ändern, dass Daten aus einer Datenbanktabelle abgerufen und angezeigt werden.
+
+Die beiden letzten Abschnitte erläutern den vom Assistenten generierten OLE DB-Consumercode.
 
 In diesem Abschnitt werden die folgenden Themen behandelt:
 
@@ -26,6 +34,8 @@ In diesem Abschnitt werden die folgenden Themen behandelt:
 - [Vom Consumer-Assistenten generierte Klassen](../../data/oledb/consumer-wizard-generated-classes.md)
 
 - [Vom Consumer-Assistenten generierte Methoden](../../data/oledb/consumer-wizard-generated-methods.md)
+
+::: moniker-end
 
 ## <a name="see-also"></a>Siehe auch
 
