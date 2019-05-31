@@ -1,21 +1,24 @@
 ---
 title: Hinzufügen einer Schnittstelle zum Anbieter
-ms.date: 10/29/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-ms.openlocfilehash: c0452ca74509b65de3787af93bff41b3cb399c99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1d219568c1787558674c47edd55436b8690a61c
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384971"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524806"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Hinzufügen einer Schnittstelle zum Anbieter
 
-Bestimmen, welches Objekt Sie die Schnittstelle zum hinzufügen möchten (Data Source, Rowset, Befehl oder Sitzung Objekte in der Regel erstellt, durch die **OLE DB-Anbieter-Assistent**). Es ist möglich, dass das Objekt, dem Sie die Schnittstelle zum hinzufügen müssen, einer ist, die Ihrem Anbieter derzeit nicht unterstützt wird. In diesem Fall führen Sie die **ATL-OLE DB-Anbieter-Assistenten** zum Erstellen des Objekts. Mit der rechten Maustaste in des Projekts im **Klassenansicht**, klicken Sie auf **hinzufügen** > **neues Element** wählen Sie im Menü **installiert**  >  **Visual C++** > **ATL**, und klicken Sie dann auf **ATL-OLE DB-Anbieter**. Sie möchten den Code für die Benutzeroberfläche in einem separaten Verzeichnis abgelegt und kopieren Sie die Dateien zu Ihrem Anbieterprojekt.
+> [!NOTE]
+> Der ATL-OLE DB-Anbieter-Assistent ist in Visual Studio 2019 und höher nicht verfügbar.
 
-Wenn Sie eine neue Klasse zum unterstützen der Schnittstelle erstellt haben, stellen Sie das Objekt, das von dieser Klasse erben. Beispielsweise können Sie die Klasse hinzufügen `IRowsetIndexImpl` in ein Rowsetobjekt:
+Bestimmen Sie, welchem Objekt Sie die Schnittstelle hinzufügen möchten (in der Regel Datenquellen-, Rowset-, Befehls- oder Sitzungsobjekte, die vom **OLE DB-Anbieter-Assistent** erstellt werden). Es kann passieren, dass das Objekt, dem Sie die Schnittstelle hinzufügen müssen, von Ihrem Anbieter noch nicht unterstützt wird. Führen Sie in diesem Fall den **ATL-OLE DB-Anbieter-Assistenten** aus, um das Objekt zu erstellen. Klicken Sie in der **Klassenansicht** mit der rechten Maustaste auf das Projekt. Klicken Sie im Kontextmenü auf **Hinzufügen** > **Neues Element**, und wählen Sie **Installiert** > **Visual C++**  > **ATL** aus. Klicken Sie dann auf **ATL-OLE DB-Anbieter**. Möglicherweise ist es eine gute Idee, den Schnittstellencode in einem separaten Verzeichnis zu speichern und die Dateien dann in Ihr Anbieterprojekt zu kopieren.
+
+Wenn Sie eine neue Klasse erstellt haben, um die Schnittstelle zu unterstützen, legen Sie das Objekt so fest, dass es von dieser Klasse erbt. Sie können z.B. die Klasse `IRowsetIndexImpl` zu einem Rowsetobjekt hinzufügen:
 
 ```cpp
 template <class Creator>
@@ -24,7 +27,7 @@ class CCustomRowset :
     public IRowsetIndexImpl< ... >
 ```
 
-Hinzuzufügen Sie die Schnittstelle zu COM_MAP, in dem Objekt, das mit dem COM_INTERFACE_ENTRY-Makro. Wenn keine Zuordnung vorhanden ist, erstellen. Zum Beispiel:
+Fügen Sie die Schnittstelle mit dem COM_INTERFACE_ENTRY-Makro zu COM_MAP im Objekt hinzu. Wenn keine Zuordnung vorhanden ist, erstellen Sie eine. Beispiel:
 
 ```cpp
 BEGIN_COM_MAP(CCustomRowset)
@@ -32,7 +35,7 @@ BEGIN_COM_MAP(CCustomRowset)
 END_COM_MAP()
 ```
 
-Für das Rowsetobjekt die Kette der Zuordnung des übergeordneten Objekts, sodass das Objekt in der übergeordneten Klasse delegieren kann. Fügen Sie in diesem Beispiel der Zuordnung-Makro hinzu:
+Verketten Sie für das Rowsetobjekt die Zuordnung des übergeordneten Objekts, sodass das Objekt an die übergeordnete Klasse delegieren kann. In diesem Beispiel fügen Sie das COM_INTERFACE_ENTRY_CHAIN-Makro zur Zuordnung hinzu:
 
 ```cpp
 BEGIN_COM_MAP(CCustomRowset)

@@ -1,102 +1,112 @@
 ---
 title: Erstellen eines einfachen Consumers
-ms.date: 11/06/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f72363478696baccb0473e37104427b1516b39c3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362019"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525002"
 ---
 # <a name="creating-a-simple-consumer"></a>Erstellen eines einfachen Consumers
 
-Verwenden der **ATL-Projektassistenten** und **ATL-OLE DB-Consumer-Assistenten** um einen OLE DB-Vorlagen-Consumer zu generieren.
+::: moniker range="vs-2019"
 
-## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Zum Erstellen einer Konsolenanwendung für einen OLE DB-consumer
+Der ATL-OLE DB-Consumer-Assistent ist in Visual Studio 2019 und höher nicht verfügbar. Sie können diese Funktionalität weiterhin manuell hinzufügen. Weitere Informationen finden Sie unter [Erstellen eines Consumers ohne Assistent](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Verwenden Sie den **ATL-Projekt-Assistenten** und den **ATL-OLE DB-Consumer-Assistenten**, um einen OLE DB-Vorlagenconsumer zu generieren.
+
+## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>So erstellen Sie eine Konsolenanwendung für einen OLE DB-Consumer
 
 1. Klicken Sie im Menü **Datei** auf **Neu**und dann auf **Projekt**.
 
    Das Dialogfeld **Neues Projekt** wird angezeigt.
 
-1. In der **Projekttypen** Bereich, klicken Sie auf die **installiert** > **Visual C++** > **Windows Desktop** Ordner und klicken Sie dann auf die **-Assistenten für Windows Desktop** Symbol in der **Vorlagen** Bereich. In der **Namen** Geben Sie den Namen des Projekts, z. B. *MyCons*.
+1. Klicken Sie im Bereich **Projekttypen** auf den Ordner **Installiert** > **Visual C++**  > **Windows Desktop**, und klicken Sie dann im Bereich **Templates** auf das Symbol **Windows Desktop-Assistent**. Geben Sie im Feld **Name** den Namen Ihres Projekts ein, z.B. *MyCons*.
 
 1. Klicken Sie auf **OK**.
 
-   Die **-Projekt für Windows Desktop** -Assistent wird angezeigt.
+   Der **Windows-Desktopprojekt**-Assistent wird angezeigt.
 
-1. Auf der **Anwendungseinstellungen** Seite **Konsolenanwendung**, und wählen Sie dann **allgemeine Headerdateien für ATL hinzufügen**.
+1. Wählen Sie auf der Seite **Anwendungseinstellungen** die Option **Konsolenanwendung** und aus, und klicken Sie dann auf **Allgemeine Headerdateien hinzufügen für ATL**.
 
-1. Klicken Sie auf **OK** den Assistenten zu schließen und das Projekt zu erstellen.
+1. Klicken Sie auf **OK**, um den Assistenten zu schließen und das Projekt zu generieren.
 
-Verwenden Sie als Nächstes die **ATL-OLE DB-Consumer-Assistenten** zum Hinzufügen eines OLE DB-Consumer-Objekts.
+Verwenden Sie als Nächstes den **ATL-OLE DB-Consumer-Assistenten**, um ein OLE DB-Consumerobjekt hinzuzufügen.
 
-## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Um einen Consumer mit dem ATL-OLE DB-Consumer-Assistenten erstellen
+## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>So erstellen Sie einen Consumer mit dem ATL-OLE DB-Consumer-Assistenten
 
-1. In **Projektmappen-Explorer**, mit der rechten Maustaste die `MyCons` Projekt.
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt `MyCons`.
 
-1. Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **neues Element**.
+1. Klicken Sie im Kontextmenü auf **Hinzufügen**, und klicken Sie danach auf **Neues Element**.
 
    Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.
 
-1. In der **Kategorien** Bereich, klicken Sie auf **installiert** > **Visual C++** > **ATL**, klicken Sie auf die **ATL-OLEDB-Consumer** Symbol in der **Vorlagen** , und klicken Sie dann auf **hinzufügen**.
+1. Klicken Sie im Bereich **Kategorien** auf **Installiert** > **Visual C++** > **ATL**. Klicken Sie im Bereich **Vorlagen** auf das Symbol **ATL-OLE DB-Consumer**, und klicken Sie dann auf **Hinzufügen**.
 
-   Die **ATL-OLEDB-Consumer-Assistent** angezeigt wird.
+   Der **ATL-OLE DB-Consumer-Assistent** wird angezeigt.
 
-1. Klicken Sie auf die **Datenquelle** Schaltfläche.
+1. Klicken Sie auf die Schaltfläche **Datenquelle**.
 
-   Die **Datenlinkeigenschaften** Dialogfeld wird angezeigt.
+   Das Dialogfeld **Datenverknüpfungseigenschaften** wird angezeigt.
 
-1. In der **Datenlinkeigenschaften** Dialogfeld Feld, gehen Sie folgendermaßen vor:
+1. Gehen Sie im Dialogfeld **Datenverknüpfungseigenschaften** folgendermaßen vor:
 
-   1. Auf der **Anbieter** Registerkarte, geben Sie einen OLE DB-Anbieter.
+   1. Geben Sie auf der Registerkarte **Anbieter** einen OLE DB-Anbieter an.
 
-   1. Auf der **Verbindung** Registerkarte, geben Sie die erforderliche Informationen, z. B. Servername, Anmelde-ID und Kennwort für die Datenquelle und die Datenbank auf dem Server.
-
-      > [!NOTE]
-      > Es wurde ein Sicherheitsproblem mit der **Speichern von Kennwort zulassen** Feature von der **Datenlinkeigenschaften** im Dialogfeld. In **Geben Sie Informationen zum Anmelden an den Server**, es gibt zwei Optionsfelder: **Integrierte Sicherheit von mit Windows NT** und **bestimmten Benutzernamen und bestimmtes Kennwort**.
+   1. Geben Sie auf der Registerkarte **Verbindung** die erforderlichen Informationen an, wie z.B. den Servernamen, die Anmelde-ID und das Kennwort für Ihre Datenquelle und Datenbank auf dem Server.
 
       > [!NOTE]
-      > Bei Auswahl von **bestimmten Benutzernamen und bestimmtes Kennwort**, Sie haben die Möglichkeit, speichern Sie das Kennwort (mit der **Speichern von Kennwort zulassen** Kontrollkästchen), aber diese Option ist nicht sicher. Es wird empfohlen, die Sie auswählen, **Windows NT integrated Security verwenden**; diese Option verwendet die Windows NT zur Überprüfung Ihrer Identität.
+      > Es besteht ein Sicherheitsproblem mit dem Feature **Kennwortspeicherung zulassen** im Dialogfeld **Datenverknüpfungseigenschaften**. Der Abschnitt **Geben Sie Informationen zum Anmelden am Server ein** enthält zwei Optionsschaltflächen: **Integrierte Sicherheit von Windows NT verwenden** und **Bestimmten Benutzernamen und ein Kennwort verwenden**.
 
       > [!NOTE]
-      > Wenn Sie Windows NT integrated Security verwenden können, sollten Sie eine Anwendung der mittleren Ebene verwenden, um den Benutzer für das Kennwort aufzufordern oder das Kennwort an einem Ort mit Sicherheitsmechanismen, um dessen Schutz zu speichern (nicht im Quellcode).
+      > Wenn Sie **Bestimmten Benutzernamen und ein Kennwort verwenden** aktivieren, erhalten Sie die Möglichkeit zur Speicherung des Kennworts (über das Kontrollkästchen **Kennwortspeicherung zulassen**). Diese Option ist jedoch nicht sicher. Es wird empfohlen, die Option **Integrierte Sicherheit von Windows NT verwenden** auszuwählen. Diese Option verwendet Windows NT, um Ihre Identität zu überprüfen.
 
-   1. Nachdem Sie Ihren Anbieter und andere Einstellungen auswählen, klicken Sie auf **Testverbindung** um zu überprüfen, ob die Auswahl auf der vorherigen dialogfeldseiten. Wenn die **Ergebnisse** Feld Berichte `Test connection succeeded`, klicken Sie auf **OK** zum Erstellen der datenverknüpfung.
+      > [!NOTE]
+      > Wenn Sie die integrierte Sicherheit von Windows nicht verwenden können, sollten Sie eine Middle-Tier-Anwendung verwenden, um den Benutzer zur Eingabe des Kennworts aufzufordern oder das Kennwort anstatt im Quellcode an einem Ort zu speichern, der mit Sicherheitsmechanismen geschützt ist.
 
-   Die **Datenbankobjekt auswählen** Dialogfeld wird angezeigt.
+   1. Nach dem Auswählen des Anbieters und weiteren Einstellungen klicken Sie auf **Verbindung testen**, um die Einstellungen, die Sie auf den vorherigen Dialogfeldseiten ausgewählt haben, zu überprüfen. Wenn im Feld **Ergebnisse** die Meldung `Test connection succeeded` angezeigt wird, klicken Sie auf **OK**, um die Datenverknüpfung zu erstellen.
 
-1. Verwenden Sie die Strukturansicht-Steuerelement, um eine Tabelle, Sicht oder gespeicherte Prozedur auszuwählen. Wählen Sie für dieses Beispiel die `Products` -Tabelle aus dem `Northwind` Datenbank.
+   Das Dialogfeld **Datenbankobjekt auswählen** wird angezeigt.
 
-1. Klicken Sie auf **OK**. Wird die **ATL-OLE DB-Consumer-Assistenten**.
+1. Verwenden Sie das Struktursteuerelement, um eine Tabelle, eine Sicht oder eine gespeicherte Prozedur auszuwählen. Wählen Sie für dieses Beispiel die Tabelle `Products` aus der Datenbank `Northwind` aus.
 
-1. Der Assistent abgeschlossen ist, die Namen für `Class` und **.h-Datei** basierend auf den Namen der Tabelle, Sicht oder gespeicherte Prozedur, die Sie ausgewählt haben. Sie können diese Namen bearbeiten, wenn Sie möchten.
+1. Klicken Sie auf **OK**. Damit kehren Sie zum **ATL-OLE DB-Consumer-Assistenten** zurück.
 
-1. Deaktivieren der **attributiert** Kontrollkästchen, damit der Assistent erstellt der Consumer-Code mit [OLE DB-Vorlagenklassen](../../data/oledb/ole-db-consumer-templates-reference.md) anstelle des standardmäßigen [OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md).
+1. Der Assistent vervollständigt die Namen für `Class` und die **.h-Datei** basierend auf dem Namen der Tabelle, Sicht oder gespeicherten Prozedur, die Sie ausgewählt haben. Sie können diese Namen bearbeiten, wenn Sie möchten.
 
-1. Klicken Sie unter **Typ**Option **Befehl**.
+1. Deaktivieren Sie das Kontrollkästchen **Attributiert**, sodass der Assistent den Consumercode mithilfe von [OLE DB-Vorlagenklassen](../../data/oledb/ole-db-consumer-templates-reference.md) anstatt mit den standardmäßigen [OLE DB-Consumerattributen](../../windows/ole-db-consumer-attributes.md) erstellt.
 
-   Der Assistent erstellt eine [CCommand](../../data/oledb/ccommand-class.md)--basierten Consumer, wenn Sie die Option **Befehl** oder ein [CTable](../../data/oledb/ctable-class.md)--basierten Consumer, wenn Sie die Option **Tabelle**. Die Tabelle oder Befehlsklasse wird nach dem ausgewählten Objekt mit dem Namen, aber Sie können den Namen bearbeiten.
+1. Wählen Sie unter **Typ** den Eintrag **Befehl** aus.
 
-1. Unter **Unterstützung**, lassen Sie die **Änderung**, **einfügen**, und **löschen** Kontrollkästchen deaktiviert.
+   Der Assistent erstellt einen [CCommand](../../data/oledb/ccommand-class.md)-basierten Consumer, wenn Sie **Befehl** auswählen, oder einen [CTable](../../data/oledb/ctable-class.md)-basierten Consumer, wenn Sie **Tabelle** auswählen. Die Tabellen- bzw. Befehlsklasse ist nach dem ausgewählten Objekt benannt, aber Sie können den Namen bearbeiten.
 
-   Wählen Sie die **Änderung**, **einfügen**, und **löschen** Kontrollkästchen, um die ändern, einfügen und Löschen von Datensätzen im Rowset zu unterstützen. Weitere Informationen zum Schreiben von Daten an den Daten zu speichern, finden Sie unter [Aktualisieren von Rowsets](../../data/oledb/updating-rowsets.md).
+1. Lassen Sie im Bereich **Unterstützung** die Kontrollkästchen **Ändern**, **Einfügen** und **Löschen** deaktiviert.
 
-1. Klicken Sie auf **Fertig stellen** an den Consumer zu erstellen.
+   Aktivieren Sie die Kontrollkästchen **Ändern**, **Einfügen** und **Löschen**, um das Ändern, Einfügen und Löschen von Datensätzen im Rowset zu unterstützen. Weitere Informationen zum Schreiben von Daten in den Datenspeicher finden Sie unter [Aktualisieren von Rowsets](../../data/oledb/updating-rowsets.md).
 
-Der Assistent generiert eine Befehlsklasse und eine Benutzerdatensatz-Klasse, siehe [vom Klassen](../../data/oledb/consumer-wizard-generated-classes.md). Die Befehlsklasse müssen den Namen, den Sie im eingegeben haben die `Class` Feld im Assistenten (in diesem Fall `CProducts`), und die Benutzerdatensatz-Klasse hat einen Namen im Format "*ClassName*Accessor" (in diesem Fall `CProductsAccessor`).
+1. Klicken Sie auf **Fertig stellen**, um den Consumer zu erstellen.
+
+Der Assistent generiert eine Befehlsklasse und eine Benutzerdatensatzklasse, wie in [Vom Consumer-Assistenten generierte Klassen](../../data/oledb/consumer-wizard-generated-classes.md) gezeigt. Die Befehlsklasse weist den Namen auf, den Sie im Assistenten im Feld `Class` eingeben (in diesem Fall `CProducts`), und der Name der Benutzerdatensatzklasse weist die Form „*ClassName*-Accessor“ auf (in diesem Fall `CProductsAccessor`).
 
 > [!NOTE]
-> Der Assistent fügt die folgende Zeile in `Products.h`:
+> Der Assistent fügt die folgende Zeile in `Products.h` ein:
 
 ```cpp
 #error Security Issue: The connection string may contain a password
 ```
 
 > [!NOTE]
-> Diese Zeile wird verhindert, dass die Consumer-Anwendung zu kompilieren und erinnert Sie daran, Ihre Verbindungszeichenfolge auf der fest programmierte Kennwörter zu überprüfen. Nach dem Überprüfen Ihre Verbindungszeichenfolge enthält, können Sie diese Codezeile entfernen.
+> Diese Zeile verhindert, dass die Consumeranwendung kompiliert wird, und erinnert Sie daran, die Verbindungszeichenfolge für hartcodierte Kennwörter zu überprüfen. Nach dem Überprüfen der Verbindungszeichenfolge können Sie diese Codezeile entfernen.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Siehe auch
 

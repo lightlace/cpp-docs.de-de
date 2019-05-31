@@ -1,146 +1,154 @@
 ---
 title: Implementieren einer Eigenschaftenseite (ATL)
-ms.date: 11/19/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262104"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707101"
 ---
 # <a name="example-implementing-a-property-page"></a>Beispiel: Implementieren einer Eigenschaftenseite
 
-Dieses Beispiel zeigt, wie Sie auf einer Eigenschaftenseite zu erstellen, das Eigenschaften anzeigt (und können Sie ändern) die [Dokumentklassen](../mfc/document-classes.md) Schnittstelle.
+::: moniker range="vs-2019"
 
-Das Beispiel basiert auf der [ATLPages-Beispiel](../overview/visual-cpp-samples.md).
+Der ATL-Eigenschaftenseiten-Assistent ist in Visual Studio 2019 und höher nicht verfügbar.
 
-Um dieses Beispiel abzuschließen, führen Sie folgende Aktionen ausführen:
+::: moniker-end
 
-- [Hinzufügen von ATL-Eigenschaftenseitenklasse](#vcconusing_the_atl_object_wizard) über das Dialogfeld "Klasse hinzufügen" und die ATL-Eigenschaftenseiten-Assistent.
+::: moniker range="<=vs-2017"
 
-- [Bearbeiten der Dialogfeldressource](#vcconediting_the_dialog_resource) durch Hinzufügen neuer Steuerelemente für die interessante Eigenschaften der `Document` Schnittstelle.
+Dieses Beispiel zeigt, wie Sie eine Eigenschaftenseite erstellen, auf der Eigenschaften der [Document Classes](../mfc/document-classes.md)-Schnittstelle angezeigt werden (und auf der Sie die Eigenschaften ändern können).
 
-- [Hinzufügen von meldungshandlern](#vcconadding_message_handlers) informiert Sie die Site der Seite zu der vom Benutzer vorgenommenen Änderungen.
+Das Beispiel basiert auf dem [ATLPages-Beispiel](../overview/visual-cpp-samples.md).
 
-- Fügen Sie einige `#import` Anweisungen und eine Typdefinition in der [Housekeeping](#vcconhousekeeping) Abschnitt.
+In diesem Beispiel führen Sie folgende Aktionen aus:
 
-- [Überschreiben Sie IPropertyPageImpl::SetObjects](#vcconoverriding_ipropertypageimpl_setobjects) So überprüfen die Objekte, die auf der Eigenschaftenseite übergeben wird.
+- [Hinzufügen der Klasse für ATL-Eigenschaftenseiten](#vcconusing_the_atl_object_wizard) mithilfe des Dialogfelds „Klasse hinzufügen“ und des ATL-Eigenschaftenseiten-Assistenten.
 
-- [Überschreiben Sie IPropertyPageImpl::Activate](#vcconoverriding_ipropertypageimpl_activate) auf der Eigenschaftenseite Schnittstelle zu initialisieren.
+- [Bearbeiten der Dialogfeldressource](#vcconediting_the_dialog_resource) durch Hinzufügen neuer Steuerelemente für interessante Eigenschaften der `Document`-Schnittstelle.
 
-- [Überschreiben Sie IPropertyPageImpl::Apply](#vcconoverride_ipropertypageimpl_apply) zum Aktualisieren des Objekts mit den neuesten Eigenschaftswerten.
+- [Hinzufügen von Meldungshandlern](#vcconadding_message_handlers), um die Eigenschaftenseite über Änderungen zu informieren, die von Benutzern vorgenommen wurden.
 
-- [Zeigen Sie auf der Seite der](#vccontesting_the_property_page) durch Erstellen eines einfachen Hilfsprogramm-Objekts.
+- Hinzufügen einiger `#import`-Anweisungen und einer typedef im Abschnitt [Housekeeping](#vcconhousekeeping).
 
-- [Erstellen Sie ein Makro](#vcconcreating_a_macro) testen, die die Eigenschaftenseite.
+- [Überschreiben von „IPropertyPageImpl::SetObjects“](#vcconoverriding_ipropertypageimpl_setobjects), um die Objekte zu überprüfen, die an die Eigenschaftenseite übergeben werden.
 
-##  <a name="vcconusing_the_atl_object_wizard"></a> Der ATL-Eigenschaftenklasse von Seite hinzufügen
+- [Überschreiben von „IPropertyPageImpl::Activate“](#vcconoverriding_ipropertypageimpl_activate), um die Schnittstelle der Eigenschaftenseite zu initialisieren.
 
-Erstellen Sie zunächst ein neues ATL-Projekt für eine DLL-Server namens `ATLPages7`. Verwenden Sie jetzt die [ATL-Eigenschaftenseiten-Assistent](../atl/reference/atl-property-page-wizard.md) auf einer Eigenschaftenseite zu generieren. Geben Sie die Eigenschaftenseite eine **Kurznamen** von **DocProperties** wechseln Sie zu der **Zeichenfolgen** Seite Eigenschaft-Seite-spezifische Elemente festlegen, wie in der folgenden Tabelle gezeigt.
+- [Überschreiben von IPropertyPageImpl::Apply](#vcconoverride_ipropertypageimpl_apply), um das Objekt mit den neuesten Eigenschaftswerten zu aktualisieren.
+
+- [Anzeigen der Eigenschaftenseite](#vccontesting_the_property_page) durch Erstellen eines einfachen Hilfsobjekts.
+
+- [Erstellen eines Makros](#vcconcreating_a_macro), das die Eigenschaftenseite testet.
+
+##  <a name="vcconusing_the_atl_object_wizard"></a> Hinzufügen einer Klasse für ATL-Eigenschaftenseiten
+
+Zunächst erstellen Sie ein neues ATL-Projekt für einen DLL-Server namens `ATLPages7`. Danach verwenden Sie den [ATL-Eigenschaftenseiten-Assistenten](../atl/reference/atl-property-page-wizard.md), um eine Eigenschaftenseite zu generieren. Weisen Sie der Eigenschaftenseite den **Kurznamen** **DocProperties** zu, und wechseln Sie dann zur Seite **Zeichenfolgen**, um für die Eigenschaftenseite spezifische Elemente festzulegen, wie in der unten stehenden Tabelle gezeigt.
 
 |Element|Wert|
 |----------|-----------|
 |Titel|TextDocument|
-|-Dokumentzeichenfolge|VCUE TextDocument-Eigenschaften|
-|HelpFile|*\<blank>*|
+|Dokumentzeichenfolge|VCUE TextDocument Properties|
+|Hilfedatei|*\<blank>*|
 
-Die Werte, die Sie, auf dieser Seite des Assistenten festlegen auf der Seite Eigenschaftencontainer zurückgegeben, wenn ruft `IPropertyPage::GetPageInfo`. Was geschieht mit den Zeichenfolgen, nachdem das ist abhängig von den Container, aber sie in der Regel verwendet werden, werden um Ihre Seite für den Benutzer zu identifizieren. Der Titel in der Regel auf einer Registerkarte oberhalb der Seite angezeigt wird, und möglicherweise die Doc-Zeichenfolge in einer Statusleiste oder eine QuickInfo angezeigt (auch wenn der Frame Standardeigenschaft dieser Zeichenfolge überhaupt nicht verwendet).
+Die Werte, die Sie auf dieser Seite des Assistenten festlegen, werden an den Container der Eigenschaftenseite zurückgegeben, wenn dieser `IPropertyPage::GetPageInfo` aufruft. Was danach mit den Zeichenfolgen geschieht, hängt vom Container ab, aber in der Regel werden sie verwendet, um Ihre Seite für den Benutzer zu identifizieren. Der Titel wird üblicherweise auf einer Registerkarte über Ihrer Seite angezeigt, die Dokumentzeichenfolge in einer Statusleiste oder QuickInfo (allerdings verwendet der Frame für Standardeigenschaften diese Zeichenfolge gar nicht).
 
 > [!NOTE]
->  Die Zeichenfolgen, die Sie hier festlegen, werden vom Assistenten als von Zeichenfolgenressourcen in Ihrem Projekt gespeichert. Sie können ganz einfach bearbeiten, dass diese Zeichenfolgen mit dem Ressourcen-Editor, wenn Sie benötigen diese Informationen ändern, nachdem der Code für Ihre Seite generiert wurde.
+>  Die Zeichenfolgen, die Sie hier festlegen, werden vom Assistenten als Zeichenfolgenressourcen in Ihrem Projekt gespeichert. Sie können diese Zeichenfolgen ganz einfach mit dem Ressourcen-Editor bearbeiten, wenn Sie diese Informationen ändern müssen, nachdem der Code für Ihre Seite generiert wurde.
 
-Klicken Sie auf **OK** , damit der Assistent die Eigenschaftenseite erstellt.
+Klicken Sie auf **OK**, damit der Assistent Ihre Eigenschaftenseite generiert.
 
 ##  <a name="vcconediting_the_dialog_resource"></a> Bearbeiten der Dialogfeldressource
 
-Nun, dass Ihr Eigenschaftenseite generiert wurde, müssen Sie die Ressource Ihrer Seite darstellt, einige Steuerelemente hinzu. Fügen Sie ein Bearbeitungsfeld, ein statisches Textsteuerelement und ein Kontrollkästchen hinzu, und legen Sie deren IDs ein, wie unten dargestellt:
+Nach dem Generieren der Eigenschaftenseite müssen Sie der Dialogfeldressource, die Ihre Seite repräsentiert, einige Steuerelemente hinzufügen. Fügen Sie ein Bearbeitungsfeld, ein statisches Textsteuerelement und ein Kontrollkästchen hinzu, und legen Sie die IDs wie im Folgenden gezeigt fest:
 
-![Dialogfeldressource bearbeiten](../atl/media/ppgresourcelabeled.gif "Dialogfeldressource bearbeiten")
+![Bearbeiten einer Dialogfeldressource](../atl/media/ppgresourcelabeled.gif "Bearbeiten einer Dialogfeldressource")
 
-Diese Steuerelemente werden verwendet werden, um den Dateinamen des Dokuments und den schreibgeschützten Status anzuzeigen.
+Mit diesen Steuerelementen werden der Dateiname und der schreibgeschützte Status des Dokuments angezeigt.
 
 > [!NOTE]
->  Die Dialogressource umfasst keinen Frame Befehlsschaltflächen noch verfügt es über das Registerkartenformat aussehen, das Sie möglicherweise erwartet haben. Diese Funktionen werden bereitgestellt, durch eine eigenschaftenseitenrahmens z. B. die durch Aufrufen von erstellt [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).
+>  Die Dialogfeldressource enthält weder einen Frame noch Befehlsschaltflächen und weist auch nicht Registerkartenformat auf, das Sie möglicherweise erwartet haben. Diese Features werden durch einen Eigenschaftenseitenframe bereitgestellt, z.B. durch den, der durch den Aufruf von [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe) erstellt wird.
 
 ##  <a name="vcconadding_message_handlers"></a> Hinzufügen von Meldungshandlern
 
-Mit den Steuerelementen vorhanden können Sie Meldungshandler aktualisieren Sie den geänderten Status der Seite aus, wenn der Wert der beiden Steuerelemente geändert wird, hinzufügen:
+Wenn die Steuerelemente vorhanden sind, können Sie Meldungshandler hinzufügen, um den geänderten Status der Seite zu aktualisieren, wenn sich der Wert eines der Steuerelemente ändert:
 
 [!code-cpp[NVC_ATL_Windowing#73](../atl/codesnippet/cpp/example-implementing-a-property-page_1.h)]
 
-Dieser Code reagiert auf Änderungen an das Kontrollkästchen "oder" Edit-Steuerelement durch Aufrufen von [:: SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty), die informiert, dass die Site der Seite, die die Seite geändert wurde. In der Regel reagiert die Site der Seite durch Aktivieren oder Deaktivieren einer **übernehmen** auf des eigenschaftenseitenrahmens auf die Schaltfläche.
+Dieser Code reagiert auf Änderungen am Bearbeitungssteuerelement oder Kontrollkästchen durch Aufruf von [IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty), wodurch die Site der Seite darüber informiert wird, dass die Seite sich geändert hat. In der Regel reagiert die Site der Seite durch Aktivieren oder Deaktivieren einer **Anwenden**-Schaltfläche im Frame der Eigenschaftenseite.
 
 > [!NOTE]
->  Eigene Eigenschaftenseiten müssen Sie zum Nachverfolgen genau der Eigenschaften vom Benutzer geändert wurden, damit Sie vermeiden können, aktualisieren die Eigenschaften, die nicht geändert wurden. In diesem Beispiel implementiert diesen Code durch Nachverfolgen der die ursprünglichen Eigenschaftswerte und vergleichen diese mit den aktuellen Werten in der Benutzeroberfläche aus, wenn es darum, die Änderungen zu übernehmen.
+>  Auf Ihren eigenen Eigenschaftenseiten müssen Sie möglicherweise nachverfolgen, welche Eigenschaften genau vom Benutzer geändert wurden, um zu vermeiden, dass Eigenschaften aktualisiert werden, die sich nicht geändert haben. Dieses Beispiel implementiert diesen Code, indem die ursprünglichen Eigenschaftswerte nachverfolgt und mit den aktuellen Werten der Benutzeroberfläche verglichen werden, wenn die Änderungen angewendet werden sollen.
 
-##  <a name="vcconhousekeeping"></a> Wartungsaufgaben
+##  <a name="vcconhousekeeping"></a> Housekeeping
 
-Fügen Sie nun eine Reihe von `#import` DocProperties.h-Anweisungen, damit der Compiler kennt die `Document` Schnittstelle:
+Fügen Sie jetzt einige `#import`-Anweisungen zu „DocProperties.h“ hinzu, sodass der Compiler die `Document`-Schnittstelle kennt:
 
 [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]
 
-Sie müssen auch zum Verweisen auf die `IPropertyPageImpl` Basisklasse; fügen Sie die folgenden **Typedef** auf die `CDocProperties` Klasse:
+Sie müssen auch auf die Basisklasse `IPropertyPageImpl` verweisen. Fügen Sie die folgende **typedef** zur `CDocProperties`-Klasse hinzu:
 
 [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]
 
-##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> IPropertyPageImpl::SetObjects überschreiben
+##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> Überschreiben von „IPropertyPageImpl::SetObjects“
 
-Die erste `IPropertyPageImpl` Methode, die Sie überschreiben müssen, ist [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects). Hier fügen Sie Code aus, um zu überprüfen, ob nur ein einzelnes Objekt übergeben wurde und sie unterstützt die `Document` -Schnittstelle, die Sie erwarten:
+Die erste `IPropertyPageImpl`-Methode, die Sie überschreiben müssen, ist [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects). Hier fügen Sie Code hinzu, um zu überprüfen, ob nur ein einzelnes Objekt übergeben wurde und dass es die `Document`-Schnittstelle unterstützt, die Sie erwarten:
 
 [!code-cpp[NVC_ATL_Windowing#76](../atl/codesnippet/cpp/example-implementing-a-property-page_4.h)]
 
 > [!NOTE]
->  Es ist sinnvoll, nur ein einzelnes Objekt für diese Seite zu unterstützen, da Sie den Benutzer, der Dateiname des Objekts festgelegt werden kann, nur eine Datei kann an jedem Speicherort vorhanden sein.
+>  Es ist sinnvoll, für diese Seite nur ein einzelnes Objekt zu unterstützen, da Sie dem Benutzer erlauben, den Dateinamen des Objekts festzulegen – und an jedem Speicherort kann nur eine einzige Daten vorhanden sein.
 
-##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> IPropertyPageImpl::Activate überschreiben
+##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> Überschreiben von „IPropertyPageImpl::Activate“
 
-Der nächste Schritt besteht, initialisieren die Eigenschaftenseite mit den Eigenschaftswerten des zugrunde liegenden Objekts aus, wenn die Seite zum ersten Mal erstellt wird.
+Der nächste Schritt besteht darin, die Eigenschaftenseite mit den Eigenschaftswerten des zugrunde liegenden Objekts zu initialisieren, wenn die erste Seite erstellt wird.
 
-In diesem Fall sollten Sie die folgenden Member der Klasse hinzufügen, da auch die anfänglichen Eigenschaftswerte für den Vergleich verwendet werden, wenn Benutzer die Seite ihre Änderungen zu übernehmen:
+In diesem Fall sollten Sie die folgenden Member zur Klasse hinzufügen, da Sie auch die anfänglichen Eigenschaftswerte verwenden, um Vergleiche durchzuführen, wenn Benutzer der Seite ihre Änderungen anwenden:
 
 [!code-cpp[NVC_ATL_Windowing#77](../atl/codesnippet/cpp/example-implementing-a-property-page_5.h)]
 
-Implementierung der Basisklasse, von der [aktivieren](../atl/reference/ipropertypageimpl-class.md#activate) Methode ist dafür verantwortlich, erstellen das Dialogfeld und seine Steuerelemente, damit Sie diese Methode überschreiben und Ihre eigenen Initialisierung nach dem Aufruf der Basisklasse hinzufügen können:
+Die Implementierung der Basisklasse der [Activate](../atl/reference/ipropertypageimpl-class.md#activate)-Methode ist für das Erstellen des Dialogfelds und der zugehörigen Steuerelemente zuständig, daher können Sie diese Methode überschreiben und nach dem Aufruf der Basisklasse Ihre eigene Initialisierung hinzufügen:
 
 [!code-cpp[NVC_ATL_Windowing#78](../atl/codesnippet/cpp/example-implementing-a-property-page_6.h)]
 
-Dieser Code verwendet die COM-Methoden von der `Document` Schnittstelle zum Abrufen der Eigenschaften, die Sie interessiert sind. Anschließend wird die Win32-API-Wrapper von bereitgestellten [CDialogImpl](../atl/reference/cdialogimpl-class.md) und deren Basisklassen, die Eigenschaftswerte für den Benutzer anzuzeigen.
+Dieser Code verwendet die COM-Methoden der `Document`-Schnittstelle, um die Eigenschaften abzurufen, die Sie interessieren. Dann verwendet der Code die Win32-API-Wrapper, die von [CDialogImpl](../atl/reference/cdialogimpl-class.md) und den zugehörigen Basisklassen bereitgestellt werden, um dem Benutzer die Eigenschaftswerte anzuzeigen.
 
-##  <a name="vcconoverride_ipropertypageimpl_apply"></a> IPropertyPageImpl::Apply überschreiben
+##  <a name="vcconoverride_ipropertypageimpl_apply"></a> Überschreiben von „IPropertyPageImpl::Apply“
 
-Wenn Sie möchten, dass Benutzer ihre Änderungen auf die Objekte anzuwenden, ruft die Site der Seite die [übernehmen](../atl/reference/ipropertypageimpl-class.md#apply) Methode. Dies ist der Ort Sie das Gegenteil des Codes in `Activate` – während `Activate` dauerte Werte aus dem Objekt und die Steuerelemente auf der Eigenschaftenseite der Pushvorgang `Apply` akzeptiert Werte aus den Steuerelementen auf der Eigenschaftenseite und überträgt sie in der -Objekt.
+Wenn Benutzer ihre Änderungen an den Objekten anwenden möchten, ruft die Site der Eigenschaftenseite die Methode [Apply](../atl/reference/ipropertypageimpl-class.md#apply) auf. Hier erfolgt jetzt das Gegenteil des Codes in `Activate`: Während `Activate` Werte aus dem Objekt akzeptiert und an die Steuerelemente auf der Eigenschaftenseite übermittelt hat, akzeptiert `Apply` Werte aus den Steuerelementen auf der Eigenschaftenseite und übermittelt sie an das Objekt.
 
 [!code-cpp[NVC_ATL_Windowing#79](../atl/codesnippet/cpp/example-implementing-a-property-page_7.h)]
 
 > [!NOTE]
->  Die Überprüfung [M_bDirty](../atl/reference/ipropertypageimpl-class.md#m_bdirty) am Anfang dieser Implementierung wird eine anfängliche Überprüfung, um unnötige Updates von den Objekten zu vermeiden, wenn `Apply` mehr als einmal aufgerufen wird. Es gibt auch Überprüfungen im Hinblick auf jede der Eigenschaftswerte, um sicherzustellen, dass nur Änderungen in einem Methodenaufruf, führen die `Document`.
+>  Die Prüfung auf [m_bDirty](../atl/reference/ipropertypageimpl-class.md#m_bdirty) am Anfang dieser Implementierung ist eine anfängliche Prüfung, um unnötige Aktualisierungen der Objekte zu vermeiden, wenn `Apply` mehr als einmal aufgerufen wird. Es gibt auch Prüfungen für jeden der Eigenschaftswerte, um sicherzustellen, dass nur Änderungen zu einem Methodenaufruf von `Document` führen.
 
 > [!NOTE]
-> `Document` macht `FullName` als nur-Lese Eigenschaft. Um den Dateinamen des Dokuments basierend auf Änderungen an die Eigenschaftenseite zu aktualisieren, müssen Sie mit der `Save` Methode zum Speichern der Datei mit einem anderen Namen. Daher der Code auf einer Eigenschaftenseite keine beschränken zum Abrufen oder Festlegen von Eigenschaften.
+> `Document` macht `FullName` als schreibgeschützte Eigenschaft verfügbar. Um den Dateinamen des Dokuments basierend auf Änderungen zu aktualisieren, die an der Eigenschaftenseite vorgenommen wurden, müssen Sie die `Save`-Methode verwenden, um die Datei unter einem anderen Namen zu speichern. Daher sollte sich der Code auf einer Eigenschaftenseite nicht auf das Abrufen und Festlegen von Eigenschaften beschränken.
 
 ##  <a name="vccontesting_the_property_page"></a> Anzeigen der Eigenschaftenseite
 
-Um diese Seite anzeigen zu können, müssen Sie zum Erstellen eines einfachen Hilfsprogramm-Objekts. Das Hilfsobjekt bieten eine Methode, die vereinfacht die `OleCreatePropertyFrame` -API für das Anzeigen einer einzelnen Seite verbunden, auf ein einzelnes Objekt. Dieses Hilfsprogramm wird entworfen werden, sodass sie von Visual Basic verwendet werden kann.
+Um diese Seite anzuzeigen, müssen Sie ein einfaches Hilfsobjekt erstellen. Das Hilfsobjekt bietet eine Methode, die die `OleCreatePropertyFrame`-API zum Anzeigen einer einzelnen Seite vereinfacht, die mit einem einzelnen Objekt verknüpft ist. Dieses Hilfsobjekt ist so konzipiert, dass es mit Visual Basic verwendet werden kann.
 
-Verwenden Sie die [Dialogfeld Klasse hinzufügen](../ide/add-class-dialog-box.md) und [ATL-Assistent für einfache Objekte](../atl/reference/atl-simple-object-wizard.md) eine neue Klasse zu generieren und verwenden `Helper` als kurze Namen. Nachdem Sie erstellt haben, fügen Sie eine Methode, wie in der folgenden Tabelle gezeigt.
+Verwenden Sie das [Dialogfeld „Klasse hinzufügen“](../ide/add-class-dialog-box.md) und den [ATL-Assistenten für einfache Objekte](../atl/reference/atl-simple-object-wizard.md), um eine neue Klasse zu generieren, und verwenden Sie `Helper` als Kurznamen. Nach dem Erstellen fügen Sie eine Methode hinzu, wie in der unten stehenden Tabelle gezeigt.
 
 |Element|Wert|
 |----------|-----------|
 |Methodenname|`ShowPage`|
 |Parameter|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|
 
-Die *BstrCaption* Parameter ist die Beschriftung, die als Titel des Dialogfelds angezeigt werden. Die *BstrID* Parameter ist eine Zeichenfolge, die entweder eine CLSID oder ProgID der Eigenschaftenseite angezeigt. Die *pUnk* Parameter werden die `IUnknown` -Zeiger des Objekts, dessen Eigenschaften werden auf der Seite der konfiguriert werden.
+Der *bstrCaption*-Parameter ist die Beschriftung, die als Titel des Dialogfelds angezeigt werden soll. Der *bstrID*-Parameter ist eine Zeichenfolge, die entweder eine CLSID oder eine ProgID der anzuzeigenden Eigenschaftenseite repräsentiert. Der *pUnk*-Parameter ist der `IUnknown`-Zeiger des Objekts, dessen Eigenschaften durch die Eigenschaftenseite konfiguriert werden.
 
-Implementieren Sie die Methode an, wie unten dargestellt:
+Implementieren Sie die unten gezeigte Methode:
 
 [!code-cpp[NVC_ATL_Windowing#80](../atl/codesnippet/cpp/example-implementing-a-property-page_8.cpp)]
 
 ##  <a name="vcconcreating_a_macro"></a> Erstellen eines Makros
 
-Nachdem Sie das Projekt erstellt haben, können Sie testen die Eigenschaftenseite, und das Hilfsobjekt, der mithilfe eines einfachen Makros, das Sie erstellen und in der Visual Studio-Entwicklungsumgebung ausführen können. Erstellen Sie dieses Makro wird eine Hilfsprogramm Objekt aus, und rufen Sie dann die `ShowPage` Methode mit die ProgID des der **DocProperties** auf der Seite und die `IUnknown` Zeiger des Dokuments in Visual Studio-Editor gerade aktiv. Der Code, die, den Sie für dieses Makro benötigen, wird unten gezeigt:
+Nachdem Sie das Projekt erstellt haben, können Sie die Eigenschaftenseite und das Hilfsobjekt mit einem einfachen Makro testen, das Sie in der Visual Studio-Entwicklungsumgebung erstellen und ausführen. Dieses Makro erstellt ein Hilfsobjekt, und ruft dann die `ShowPage`-Methode auf; dabei verwendet das Makro die ProgID der Eigenschaftenseite **DocProperties** und den `IUnknown`-Zeiger des derzeit im Visual Studio-Editor aktiven Dokuments. Hier sehen Sie den für dieses Makro erforderlichen Code:
 
 ```vb
 Imports EnvDTE
@@ -159,7 +167,9 @@ End Sub
 End Module
 ```
 
-Wenn Sie dieses Makro ausführen, wird die Eigenschaftenseite mit den Dateinamen und den schreibgeschützten Status des Dokuments derzeit aktiven Text angezeigt werden. Der schreibgeschützte Zustand des Dokuments reflektieren lediglich die Möglichkeit zum Schreiben in das Dokument in der Entwicklungsumgebung; Das Attribut "schreibgeschützt" der Datei auf dem Datenträger betroffen nicht.
+Wenn Sie dieses Makro ausführen, wird die Eigenschaftenseite mit dem Dateinamen und dem schreibgeschützten Status des derzeit aktiven Textdokuments angezeigt. Der schreibgeschützte Status des Dokuments spiegelt nur die Möglichkeit wider, in der Entwicklungsumgebung in das Dokument zu schreiben, und wirkt sich nicht auf das Schreibschutzattribut der Datei auf dem Datenträger aus.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Siehe auch
 
