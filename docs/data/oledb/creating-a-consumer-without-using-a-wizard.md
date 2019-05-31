@@ -1,23 +1,23 @@
 ---
 title: Erstellen eines Consumers ohne Assistent
-ms.date: 10/12/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 029fe6866df81d366cc3bc15096f638791faa413
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 421723ed561e8ed986a64024c4c5d29c9fba6110
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362503"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525123"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Erstellen eines Consumers ohne Assistent
 
-Im folgende Beispiel wird davon ausgegangen, dass Sie ein vorhandenes Projekt mit ATL-OLE DB-Consumer-Unterstützung hinzufügen. Wenn Sie eine MFC-Anwendung OLE DB-Consumer-Unterstützung hinzufügen möchten, sollten Sie Ausführen den **MFS-Anwendungsassistenten**, die erstellt alle Unterstützung erforderlich sind, und ruft von MFC-Routinen, die zum Ausführen der Anwendungs erforderlich sind.
+Im folgenden Beispiel wird vorausgesetzt, dass Sie OLE DB-Consumerunterstützung einem vorhandenen ATL-Projekt hinzufügen. Wenn Sie einer MFC-Anwendung OLE DB-Consumerunterstützung hinzufügen möchten, sollten Sie den **MFS-Anwendungsassistenten** ausführen, der für alle erforderliche Unterstützung sorgt und MFC-Routinen aufruft, die zum Ausführen der Anwendung erforderlich sind.
 
-Hinzufügen von OLE DB-Consumer-Unterstützung ohne Verwendung der **ATL-OLE DB-Consumer-Assistenten**:
+So fügen Sie OLE DB-Consumerunterstützung ohne Verwendung des **ATL-OLE DB-Consumer-Assistenten** hinzu:
 
-- Fügen Sie in der Datei "PCH.h" Folgendes `#include` Anweisungen:
+- Fügen Sie der Datei „pch.h“ folgende `#include`-Anweisungen hinzu:
 
     ```cpp
     #include <atlbase.h>
@@ -25,14 +25,14 @@ Hinzufügen von OLE DB-Consumer-Unterstützung ohne Verwendung der **ATL-OLE DB-
     #include <atldbsch.h> // if you are using schema templates
     ```
 
-Programmgesteuert, führt ein Consumer in der Regel die folgende Sequenz von Vorgängen:
+Programmgesteuert führt ein Consumer in der Regel die folgende Sequenz von Vorgängen aus:
 
-1. Erstellen Sie eine Benutzerdatensatz-Klasse, die Spalten an lokale Variablen zu binden. In diesem Beispiel `CMyTableNameAccessor` wird die Benutzerdatensatz-Klasse (siehe [Benutzerdatensätze](../../data/oledb/user-records.md)). Diese Klasse enthält die spaltenzuordnung und eine parameterzuordnung. Deklarieren Sie einen Datenmember in die Benutzerdatensatz-Klasse für jedes Feld, die Sie in der spaltenzuordnung angeben. für jede von diesen Datenmembern müssen Sie auch deklarieren Sie einen Datenmember für Status und ein Datenelement für die Länge. Weitere Informationen finden Sie unter [Feldstatus-Datenmember in vom Assistenten generierten Accessoren](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
+1. Erstellen Sie eine Benutzerdatensatzklasse, die Spalten an lokale Variablen bindet. In diesem Beispiel ist `CMyTableNameAccessor` die Benutzerdatensatzklasse (siehe [Benutzerdatensätze](../../data/oledb/user-records.md)). Diese Klasse enthält die Spalten- und Parameterzuordnung. Deklarieren Sie in der Benutzerdatensatzklasse für jedes Feld, das Sie in der Spaltenzuordnung angeben, einen Datenmember; deklarieren Sie auch für jeden dieser Datenmember einen Statusdatenmember und einen Längendatenmember. Weitere Informationen finden Sie unter [Feldstatus-Datenmember in vom Assistenten generierten Accessoren](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
 
     > [!NOTE]
-    > Wenn Sie einen eigenen Consumer schreiben, müssen die Datenvariablen vor den Status- und Längenvariablen stammen.
+    > Wenn Sie einen eigenen Consumer erstellen, müssen die Datenvariablen in der Reihenfolge vor den Status- und Längenvariablen liegen.
 
-- Instanziieren Sie eine Datenquelle und eine Sitzung an. Entscheiden, welcher Typ des Accessors und Rowset verwenden, und klicken Sie dann instanziiert ein Rowset mit [CCommand](../../data/oledb/ccommand-class.md) oder [CTable](../../data/oledb/ctable-class.md):
+- Instanziieren Sie eine Datenquelle und eine Sitzung. Entscheiden Sie, welcher Accessor- und Rowsettyp verwendet werden soll, und instanziieren Sie dann ein Rowset mit [CCommand](../../data/oledb/ccommand-class.md) oder [CTable](../../data/oledb/ctable-class.md):
 
     ```cpp
     CDataSource ds;
@@ -40,15 +40,15 @@ Programmgesteuert, führt ein Consumer in der Regel die folgende Sequenz von Vor
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>
     ```
 
-- Rufen Sie `CoInitialize` COM-Initialisierung Dies wird in der Hauptcode bezeichnet. Zum Beispiel:
+- Rufen Sie `CoInitialize` zur COM-Initialisierung auf. Dies wird im Hauptcode aufgerufen. Beispiel:
 
     ```cpp
     HRESULT hr = CoInitialize(NULL);
     ```
 
-- Rufen Sie [CDataSource:: Open](../../data/oledb/cdatasource-open.md) oder eine seine Varianten.
+- Rufen Sie [CDataSource::Open](../../data/oledb/cdatasource-open.md) oder eine seine Varianten auf.
 
-- Öffnen Sie eine Verbindung mit der Datenquelle, öffnen Sie die Sitzung, und öffnen Sie und initialisieren Sie das Rowset (und wenn ein Befehl auch führen Sie aus):
+- Öffnen Sie eine Verbindung mit der Datenquelle, öffnen Sie die Sitzung, und öffnen und initialisieren Sie das Rowset (und führen Sie auch ggf. einen Befehl aus):
 
     ```cpp
     hr = ds.Open();
@@ -56,11 +56,11 @@ Programmgesteuert, führt ein Consumer in der Regel die folgende Sequenz von Vor
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- Optional, Set-Rowset-Eigenschaften mit `CDBPropSet::AddProperty` und übergeben sie als Parameter an `rs.Open`. Ein Beispiel dafür, wie dies funktioniert, finden Sie unter `GetRowsetProperties` in [vom Methoden](../../data/oledb/consumer-wizard-generated-methods.md).
+- Legen Sie optional Rowseteigenschaften mit `CDBPropSet::AddProperty` fest, und übergeben Sie sie als Parameter an `rs.Open`. Ein Beispiel hierfür finden Sie unter `GetRowsetProperties` in [Vom Consumer-Assistenten generierte Methoden](../../data/oledb/consumer-wizard-generated-methods.md).
 
-- Sie können jetzt das Rowset verwenden, zum Abrufen/Bearbeiten der Daten.
+- Sie können das Rowset jetzt zum Abrufen/Bearbeiten der Daten verwenden.
 
-- Wenn Ihre Anwendung abgeschlossen ist, schließen Sie die Verbindung, Sitzung und Rowset aus:
+- Wenn Ihre Anwendung abgeschlossen ist, schließen Sie Verbindung, Sitzung und Rowset:
 
     ```cpp
     rs.Close();
@@ -68,9 +68,9 @@ Programmgesteuert, führt ein Consumer in der Regel die folgende Sequenz von Vor
     ds.Close();
     ```
 
-   Wenn Sie einen Befehl verwenden, sollten Sie zum Aufrufen `ReleaseCommand` nach `Close`. Das Codebeispiel in [CCommand:: Close](../../data/oledb/ccommand-close.md) zeigt, wie `Close` und `ReleaseCommand`.
+   Wenn Sie einen Befehl verwenden, sollten Sie `ReleaseCommand` nach `Close` aufrufen. Das Codebeispiel in [CCommand::Close](../../data/oledb/ccommand-close.md) zeigt Ihnen, wie Sie `Close` und `ReleaseCommand` aufrufen.
 
-- Rufen Sie `CoUnInitialize` Aufhebung der Initialisierung der COM. Dies wird in der Hauptcode bezeichnet.
+- Rufen Sie `CoUnInitialize` auf, um die COM-Initialisierung aufzuheben. Dies wird im Hauptcode aufgerufen.
 
     ```cpp
     CoUninitialize();

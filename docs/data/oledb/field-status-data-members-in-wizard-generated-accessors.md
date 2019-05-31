@@ -1,24 +1,32 @@
 ---
 title: Feldstatus-Datenmember in vom Assistenten generierten Accessoren
-ms.date: 10/24/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: dd650b7cafef78e23c23ddfef791c88b6b93727f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c92a450a00e6218d2ccc679d56aeff0f379762a3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409004"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525071"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Feldstatus-Datenmember in vom Assistenten generierten Accessoren
 
-Bei Verwendung der **ATL-OLE DB-Consumer-Assistenten** um einen Consumer erstellen, generiert der Assistent einen Datenmember in die Benutzerdatensatz-Klasse für jedes Feld, das Sie in der spaltenzuordnung angeben. Jedes Datenelement ist vom Typ `DWORD` und enthält einen Statuswert, der dem jeweiligen Feld entspricht.
+::: moniker range="vs-2019"
 
-Z. B. für einen Datenmember *M_OwnerID*, generiert der Assistent einen zusätzlichen Datenmember für Feldstatus (*DwOwnerIDStatus*) und eine andere für die Feldlänge (*DwOwnerIDLength*). Es generiert außerdem eine spaltenzuordnung zu COLUMN_ENTRY_LENGTH_STATUS-Einträgen.
+Der ATL-OLE DB-Consumer-Assistent ist in Visual Studio 2019 und höher nicht verfügbar. Sie können diese Funktionalität weiterhin manuell hinzufügen. Weitere Informationen finden Sie unter [Erstellen eines Consumers ohne Assistent](creating-a-consumer-without-using-a-wizard.md).
 
-Dies wird im folgenden Code gezeigt:
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Bei Verwendung des **ATL-OLE DB-Consumer-Assistenten** zum Erstellen eines Consumers generiert der Assistent einen Datenmember in der Benutzerdatensatzklasse für jedes Feld, das Sie in der Spaltenzuordnung angeben. Jeder Datenmember ist vom Typ `DWORD` und enthält einen Statuswert, der dem jeweiligen Feld entspricht.
+
+Für einen Datenmember *m_OwnerID* generiert der Assistent z.B. einen zusätzlichen Datenmember für den Feldstatus (*dwOwnerIDStatus*) und einen weiteren für die Feldlänge (*dwOwnerIDLength*). Er generiert außerdem eine Spaltenzuordnung mit COLUMN_ENTRY_LENGTH_STATUS-Einträgen.
+
+Dies wird im folgenden Code veranschaulicht:
 
 ```cpp
 class CAuthorsAccessor
@@ -54,21 +62,21 @@ public:
 > [!NOTE]
 > Wenn Sie die Benutzerdatensatz-klasse ändern oder einen eigenen Consumer erstellen, müssen die Datenvariablen in der Reihenfolge vor den Status- und Längenvariablen liegen.
 
-Sie können die Status-Werte verwenden, zu Debugzwecken. Wenn vom Code generiert die **ATL-OLE DB-Consumer-Assistenten** Kompilierungsfehler generiert z. B. DB_S_ERRORSOCCURRED oder DB_E_ERRORSOCCURRED, Sie sollten ein erster Blick auf die aktuellen Werte von der Feldstatus-Datenmember. Die betreffenden Spalten entsprechen mit Werten ungleich NULL.
+Sie können die Statuswerte zu Debugzwecken verwenden. Wenn vom **ATL-OLE DB-Consumer-Assistenten** generierter Code Kompilierungsfehler wie z.B. DB_S_ERRORSOCCURRED oder DB_E_ERRORSOCCURRED generiert, sollten Sie zuerst einen Blick auf die aktuellen Werte der Feldstatus-Datenmember werfen. Diejenigen mit Werten ungleich 0 (null) entsprechen den Spalten, in denen die Fehler auftreten.
 
-Sie können auch die Status-Werte verwenden, um einen NULL-Wert für ein bestimmtes Feld festzulegen. Auf diese Weise können Sie in Fällen, in denen Sie einen Feldwert als NULL statt 0 (null) zu unterscheiden möchten. Es liegt an Ihnen zu entscheiden, ob NULL ein gültiger Wert oder ein spezieller Wert, und entscheiden, wie Sie Ihre Anwendung behandelt werden soll. OLE DB definiert DBSTATUS_S_ISNULL als die richtige Methode zur Angabe der eines generischen NULL-Werts. Wenn der Consumer Daten liest, und der Wert null ist, wird das Statusfeld auf DBSTATUS_S_ISNULL festgelegt. Wenn der Consumer einen NULL-Wert festgelegt möchte, setzt der Consumer den Statuswert auf DBSTATUS_S_ISNULL vor dem Aufruf des Anbieters an.
+Sie können mit den Statuswerten auch einen NULL-Wert für ein bestimmtes Feld festlegen. Dies ist hilfreich in Fällen, in denen Sie einen Feldwert von NULL von einem Feldwert von 0 (null) unterscheiden möchten. Es liegt an Ihnen, zu entscheiden, ob NULL ein gültiger Wert oder ein spezieller Wert ist, und wie Ihre Anwendung damit umgehen soll. OLE DB definiert DBSTATUS_S_ISNULL als richtiges Mittel zur Angabe eines generischen NULL-Werts. Wenn der Consumer Daten liest, und der Wert NULL ist, wird das Statusfeld auf DBSTATUS_S_ISNULL festgelegt. Wenn der Consumer einen NULL-Wert festlegen möchte, setzt er den Statuswert auf DBSTATUS_S_ISNULL, bevor der Anbieter aufgerufen wird.
 
-Öffnen Sie als Nächstes "OleDb.h", und suchen Sie nach DBSTATUSENUM. Sie können dann der numerische Wert des Status ungleich NULL für Enumerationswerte DBSTATUSENUM übereinstimmen. Ist der Enumerationsname nicht ausreichen, um Sie zu informieren, was falsch ist, finden Sie unter den **Status** Thema in der **Datenwerte binden** Teil der [OLE DB Programmer's Guide](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Dieses Thema enthält Tabellen mit dem Status-Werte, die beim Abrufen oder Festlegen der Daten verwendet. Informationen zu Längenwerten finden Sie unter den **Länge** Thema im gleichen Abschnitt.
+Öffnen Sie als Nächstes „Oledb.h“, und suchen Sie nach DBSTATUSENUM. Sie können dann den numerischen Wert des Ungleich-null-Status mit den DBSTATUSENUM-Enumerationswerten vergleichen. Wenn der Enumerationsname nicht ausreicht, um Ihnen mitzuteilen, was falsch ist, ziehen Sie das Thema **Status** des Abschnitts **Binden von Datenwerten** im [OLE DB-Programmierhandbuch](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) zu Rate. Dieses Thema enthält Tabellen mit den Statuswerten, die beim Abrufen oder Festlegen der Daten verwendet werden. Informationen zu Längenwerten finden Sie im Thema **Länge** des gleichen Abschnitts.
 
-## <a name="retrieving-the-length-or-status-of-a-column"></a>Abrufen der Länge oder der Status einer Spalte
+## <a name="retrieving-the-length-or-status-of-a-column"></a>Abrufen von Länge oder Status einer Spalte
 
-Sie können die Länge einer Spalte variabler Länge oder der Status einer Spalte (z. B. DBSTATUS_S_ISNULL, zu überprüfen) abrufen:
+Sie können die Länge einer Spalte mit variabler Länge oder den Status einer Spalte abrufen (um z.B. DBSTATUS_S_ISNULL zu überprüfen):
 
-- Verwenden Sie zum Abrufen der Länge der COLUMN_ENTRY_LENGTH-Makro ein.
+- Verwenden Sie zum Abrufen der Länge das COLUMN_ENTRY_LENGTH-Makro.
 
-- Um den Status zu erhalten, verwenden Sie die COLUMN_ENTRY_STATUS-Marko.
+- Verwenden Sie zum Abrufen des Status das COLUMN_ENTRY_STATUS-Makro.
 
-- Um beides zu erhalten, verwenden Sie COLUMN_ENTRY_LENGTH_STATUS wie gezeigt:
+- Um beides abzurufen, verwenden Sie COLUMN_ENTRY_LENGTH_STATUS wie folgt:
 
     ```cpp
     class CProducts
@@ -86,7 +94,7 @@ Sie können die Länge einer Spalte variabler Länge oder der Status einer Spalt
     };
     ```
 
-- Klicken Sie dann Zugriff auf die Länge bzw. den Status wie gezeigt:
+- Greifen Sie dann wie folgt auf Länge und/oder Status zu:
 
     ```cpp
     CTable<CAccessor<CProducts >> product;
@@ -102,7 +110,9 @@ Sie können die Länge einer Spalte variabler Länge oder der Status einer Spalt
     }
     ```
 
-Bei Verwendung von `CDynamicAccessor`, die Länge und den Status automatisch für Sie gebunden sind. Verwenden Sie zum Abrufen der Werte für Länge und der Status der `GetLength` und `GetStatus` Memberfunktionen.
+Bei Verwendung von `CDynamicAccessor` werden Länge und Status automatisch für Sie gebunden. Verwenden Sie zum Abrufen der Werte für Länge und Status die Memberfunktionen `GetLength` und `GetStatus`.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Siehe auch
 

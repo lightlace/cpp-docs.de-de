@@ -1,25 +1,25 @@
 ---
 title: Quellcodeorganisation (C++-Vorlagen)
-ms.date: 11/04/2016
+ms.date: 04/22/2019
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
-ms.openlocfilehash: 592f17c08b9d4de0f67f17c60521d6e9a11dfc3a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 1933758e47f2fcc0b63f0d16809591b932501854
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222005"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611389"
 ---
 # <a name="source-code-organization-c-templates"></a>Quellcodeorganisation (C++-Vorlagen)
 
-Eine Klassenvorlage definiert haben, müssen Sie den Quellcode so organisieren, dass die Elementdefinitionen für den Compiler sichtbar sind, wenn er benötigt.   Sie haben die Möglichkeit der Verwendung der *Aufnahme Modell* oder *explizite Instanziierung* Modell. Im Modell einschließen fügen Sie die Element-Definitionen in jeder Datei, die eine Vorlage verwendet wird. Dieser Ansatz ist am einfachsten und bietet maximale Flexibilität im Hinblick auf, welche konkreten Typen zusammen mit der Vorlage verwendet werden können. Der Nachteil besteht darin, dass es die Kompilierungszeiten erhöhen kann. Die Auswirkungen können ins Gewicht, wenn ein Projekt sein, bzw. die eingeschlossenen Dateien selbst sind umfangreich. Mit dem Ansatz explizite Instanziierung instanziiert die Vorlage selbst konkrete Klassen oder Klassenmember für bestimmte Typen.  Dieser Ansatz kann die Kompilierungszeiten beschleunigen, aber er begrenzt die Nutzung nur die Klassen, die die Vorlage-Implementierung voraus aktiviert hat. Im Allgemeinen empfehlen wir, dass Sie das Modell für die Aufnahme verwenden, es sei denn, die Kompilierungszeiten denen zu einem Problem werden.
+Wenn Sie eine Klassenvorlage definieren, müssen Sie den Quellcode so organisieren, dass die Memberdefinitionen für den Compiler sichtbar sind, wenn dieser sie benötigt.   Sie können zwischen einem *Einschlussmodell* und einem Modell der *expliziten Instanziierung* wählen. Im Einschlussmodell schließen Sie die Memberdefinitionen in jede Datei ein, die eine Vorlage verwendet. Diese Vorgehensweise ist die einfachsten und bietet maximale Flexibilität im Hinblick auf die konkreten Typen, die mit Ihrer Vorlage verwendet werden können. Der Nachteil ist, dass sich die Kompilierungszeiten verlängern können. Dies kann erhebliche Auswirkungen haben, wenn ein Projekt und/oder die eingeschlossenen Dateien selbst sehr groß sind. Beim Ansatz der expliziten Instanziierung instanziiert die Vorlage selbst konkrete Klassen oder Klassenmember für bestimmte Typen.  Dies kann die Kompilierung beschleunigen, beschränkt aber die Verwendung auf diejenigen Klassen, die bei der Vorlagenimplementierung im Voraus aktiviert wurden. Im Allgemeinen empfehlen wir das Einschlussmodell, es sei denn, dass die Kompilierungszeiten ein Problem darstellen.
 
 ## <a name="background"></a>Hintergrund
 
-Vorlagen sind nicht wie normale Klassen in dem Sinne, dass der Compiler keinen Objektcode für eine Vorlage oder eines seiner Member verursacht. Es gibt nichts zu generieren, wenn die Vorlage mit konkreten Typen instanziiert wird. Wenn der Compiler findet eine Vorlageninstanziierung wie z. B. `MyClass<int> mc;` und keine Klasse mit dieser Signatur noch vorhanden, wird eine neue Klasse generiert. Es versucht auch zum Generieren von Code für alle Memberfunktionen, die verwendet werden. Wenn diese Definitionen in einer Datei befinden, die nicht #included, direkt oder indirekt in der CPP-Datei, die kompiliert wird, der Compiler nicht sichtbar.  Aus Sicht des Compilers ist dies nicht unbedingt ein Fehler, da die Funktionen in einer anderen Übersetzungseinheit, definiert werden können, in denen Fall der Linker diese finden.  Wenn Sie diesen Code durch der Linker nicht gefunden wird, löst es eine **nicht aufgelöste externe** Fehler.
+Vorlagen sind keine normalen Klassen in dem Sinne, dass der Compiler keinen Objektcode für eine Vorlage oder einen der darin enthaltenen Member generiert. Bis die Vorlage mit konkreten Typen instanziiert wird, gibt es nichts zu generieren. Wenn der Compiler eine Vorlageninstanziierung wie `MyClass<int> mc;` findet, aber noch keine Klasse mit dieser Signatur vorhanden ist, generiert der Compiler eine neue Klasse. Er versucht auch, Code für alle verwendeten Memberfunktionen zu generieren. Wenn sich diese Definitionen in einer Datei befinden, die nicht direkt oder indirekt per „#include“ eingeschlossen ist, kann der Compiler die Definitionen in der kompilierten .cpp-Datei nicht finden.  Aus Sicht des Compilers ist dies nicht unbedingt ein Fehler, weil die Funktionen in einer anderen Übersetzungseinheit definiert sein können – in diesem Fall findet der Linker sie.  Wenn der Linker diesen Code nicht findet, gibt er einen **nicht aufgelösten internen** Fehler aus.
 
-## <a name="the-inclusion-model"></a>Das Modell einschließen
+## <a name="the-inclusion-model"></a>Das Einschlussmodell
 
-Die einfachste und am häufigsten verwendete Möglichkeit um Vorlagendefinitionen in einer Übersetzungseinheit sichtbar zu machen, ist die Definitionen in der Headerdatei selbst platzieren.  Jede cpp-Datei, die die Vorlage wird verwendet, muss einfach #include Sie den Header. Dies ist der Ansatz, der in der Standardbibliothek verwendet.
+Die einfachste und gängigste Art und Weise, Vorlagendefinitionen in einer Übersetzungseinheit sichtbar zu machen, besteht darin, die Definitionen in der Headerdatei selbst zu platzieren.  Jede .cpp-Datei, die die Vorlage verwendet, muss einfach nur den Header per „#include“ einschließen. Dies ist das Verfahren, das in der Standardbibliothek zur Anwendung kommt.
 
 ```cpp
 #ifndef MYARRAY
@@ -49,13 +49,13 @@ public:
 #endif
 ```
 
-Bei diesem Ansatz wird der Compiler hat Zugriff auf die vollständige Vorlage, und Sie können Vorlagen bei Bedarf für jeden Typ zu instanziieren. Es ist einfach und relativ einfach zu verwalten. Allerdings muss das Modell einschließen Kosten im Hinblick auf die Kompilierung.   Diese Kosten können in großen Programmen besonders wichtig, insbesondere dann, wenn die Vorlagenheader selbst #includes anderen Header. Jede cpp-Dateien, die #includes Header erhält eine eigene Kopie der Vorlagen und alle Definitionen. Der Linker in der Regel werden Dinge klären, sodass Sie werden nicht am Ende mehrere Definitionen für eine Funktion, aber dauert einige Zeit, um diese Aufgabe übernimmt. Zu kleineren Programmen, dass zusätzliche Kompilierungszeit wahrscheinlich nicht relevant ist.
+Bei diesem Verfahren hat der Compiler Zugriff auf die vollständige Vorlagendefinition und kann Vorlagen nach Bedarf für jeden Typ instanziieren. Das ist einfach und relativ einfach zu verwalten. Das Einschlussmodell weist jedoch in Sachen Kompilierungszeit einen Nachteil auf.   Dieser Nachteil kann in großen Programmen sehr schwer wiegen, insbesondere dann, wenn der Vorlagenheader selbst andere Header per „#include“ einschließt. Jede .cpp-Datei, die den Header per „#include“ einschließt, erhält eine eigene Kopie der Funktionsvorlagen sowie sämtlicher Definitionen. Der Linker ist im Allgemeinen in der Lage, dies zu verarbeiten, sodass Sie nicht am Ende mit mehreren Definitionen für eine Funktion dastehen. Für diese Verarbeitung braucht er allerdings Zeit. In kleineren Programmen ist diese zusätzliche Kompilierungszeit wahrscheinlich nicht relevant.
 
-## <a name="the-explicit-instantiation-model"></a>Das Modell für die explizite Instanziierung
+## <a name="the-explicit-instantiation-model"></a>Das Modell der expliziten Instanziierung
 
-Wenn das Modell für die Aufnahme nicht auf Ihr Projekt ist und man definitiv den Satz von Typen, die zum Instanziieren einer Vorlage verwendet werden, können Sie den Vorlagencode in eine h- und CPP-Datei zu trennen und in der CPP-Datei explizit instanziieren die Vorlagen. Dies bewirkt Objektcode generiert werden, dass der Compiler bei der gefundenen Benutzer Instanziierungen angezeigt wird.
+Wenn das Einschlussmodell für Ihr Projekt kein gangbarer Weg ist und Sie die Typen, die zum Instanziieren einer Vorlage benötigt werden, definitiv kennen, können Sie den Vorlagencode in eine .h- und eine .cpp-Datei trennen, und die .cpp-Datei instanziiert die Vorlagen explizit. Damit wird Objektcode generiert, den der Compiler sieht, wenn Benutzerinstanziierungen auftreten.
 
-Sie erstellen eine explizite Instanziierung mit der Schlüsselwort-Vorlage, gefolgt von der Signatur der Entität, die instanziiert werden soll. Dies kann ein Typ oder Member sein. Wenn Sie einen Typ explizit instanziiert werden, werden alle Mitglieder instanziiert.
+Sie erstellen eine explizite Instanziierung, indem Sie die Schlüsselwortvorlage gefolgt von der Signatur der Entität verwenden, die Sie instanziieren möchten. Hierbei kann es sich um einen Typ oder einen Member handeln. Wenn Sie explizit einen Typ instanziieren, werden alle Member instanziiert.
 
 ```cpp
 template MyArray<double, 5>;
@@ -99,7 +99,7 @@ void MyArray<T,N>::Print()
 template MyArray<double, 5>;template MyArray<string, 5>;
 ```
 
-Im vorherigen Beispiel wird der expliziten Instanziierungen am unteren Rand der CPP-Datei sind. Ein `MyArray` kann verwendet werden, nur für **doppelte** oder `String` Typen.
+Im vorherigen Beispiel befinden sich die expliziten Instanziierungen am Ende der .cpp-Datei. `MyArray` darf nur für **double**- oder `String`-Typen verwendet werden.
 
 > [!NOTE]
-> In C ++ 11 die **exportieren** Schlüsselwort wurde im Kontext des Vorlagendefinitionen als veraltet markiert. In der Praxis hat dies nur eine geringe Auswirkung, da die meisten Compiler nicht unterstützt.
+> In C++11 wurde das Schlüsselwort **export** im Kontext von Vorlagendefinitionen als „veraltet“ gekennzeichnet. In der Praxis hat dies wenig Auswirkungen, da die meisten Compiler dieses Schlüsselwort nie unterstützt haben.

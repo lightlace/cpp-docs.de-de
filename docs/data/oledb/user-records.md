@@ -1,6 +1,6 @@
 ---
 title: Benutzerdatensätze
-ms.date: 10/22/2018
+ms.date: 05/09/2019
 f1_keywords:
 - COLUMN_ENTRY_MAP
 helpviewer_keywords:
@@ -15,20 +15,23 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 5dd7be3eccd59dc1a5a0dc1cd6932ca1310627c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c9c1126f0e8248f31ac739bb1d939f811bda678d
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389046"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525284"
 ---
 # <a name="user-records"></a>Benutzerdatensätze
 
-Verwenden Sie einen statischen Accessor (d. h. ein Accessor abgeleitet `CAccessor`), der Consumer muss über ein Benutzerdatensatz verfügen. Der Benutzerdatensatz ist eine C++-Klasse, die Datenelemente Handle Eingabe oder Ausgabe enthält. Die **ATL-OLE DB-Consumer-Assistenten** generiert einen Benutzerdatensatz für den Consumer. Sie können die Benutzer-Datensatz für optionale Aufgaben wie das Behandeln von Kommentaren Methoden hinzufügen.
+> [!NOTE]
+> Der ATL-OLE DB-Consumer-Assistent ist in Visual Studio 2019 und höher nicht verfügbar. Sie können diese Funktionalität weiterhin manuell hinzufügen. Weitere Informationen finden Sie unter [Erstellen eines Consumers ohne Assistent](creating-a-consumer-without-using-a-wizard.md).
 
-Der folgende Code zeigt einen Beispieldatensatz, der Befehle behandelt. Im Benutzerdatensatz repräsentiert BEGIN_COLUMN_MAP ein Datenrowset an den Consumer von einem Anbieter übergeben. BEGIN_PARAM_MAP stellt einen Satz von Parametern dar. Dieses Beispiel verwendet eine [CCommand](../../data/oledb/ccommand-class.md) -Klasse, die Befehlsparameter zu behandeln. Datenmember der Zuordnungseinträge stellen die Offsets in einen zusammenhängenden Block von Arbeitsspeicher für jede Instanz der Klasse. Bei den-Makros entsprechen die-Makros auf der Anbieterseite.
+Um einen statischen Accessor (d.h. einen von `CAccessor` abgeleiteten Accessor) zu verwenden, muss der Consumer über einen Benutzerdatensatz verfügen. Der Benutzerdatensatz ist eine C++-Klasse, die Datenelemente zum Verarbeiten von Ein- oder Ausgabe enthält. Der **ATL-OLE DB-Consumer-Assistent** generiert einen Benutzerdatensatz für den Consumer. Sie können dem Benutzerdatensatz Methoden für optionale Aufgaben wie das Behandeln von Kommentaren hinzufügen.
 
-Weitere Informationen zu den Makros COLUMN_MAP und PARAM_MAP, finden Sie unter [Makros für OLE DB-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).
+Der folgende Code zeigt einen Beispieldatensatz, der Befehle behandelt. Im Benutzerdatensatz repräsentiert BEGIN_COLUMN_MAP ein Datenrowset, das dem Consumer von einem Anbieter übergeben wird. BEGIN_PARAM_MAP stellt einen Satz von Befehlsparametern dar. In diesem Beispiel wird eine [CCommand](../../data/oledb/ccommand-class.md)-Klasse verwendet, um die Befehlsparameter zu behandeln. Die Datenmember in den Zuordnungseinträgen stellen Offsets in einen zusammenhängenden Arbeitsspeicherblock für jede Instanz der Klasse dar. Die COLUMN_ENTRY-Makros entsprechen den PROVIDER_COLUMN_ENTRY-Makros auf der Anbieterseite.
+
+Weitere Informationen zu den Makros COLUMN_MAP und PARAM_MAP finden Sie unter [Macros for OLE DB Consumer Templates](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md) (Makros für OLE DB-Consumervorlagen).
 
 ```cpp
 class CArtists
@@ -55,13 +58,13 @@ END_PARAM_MAP()
 
 ## <a name="wizard-generated-user-records"></a>Vom Assistenten generierte Benutzerdatensätze
 
-Bei Verwendung der **ATL-OLE DB-Consumer-Assistenten** zum Generieren von eines Consumers, die Sie haben die Möglichkeit der Verwendung von OLE DB-Vorlagen oder OLE DB-Attribute. Der generierte Code ist in jedem Fall unterschiedlich. Weitere Informationen zu diesem Code finden Sie unter [vom Klassen](../../data/oledb/consumer-wizard-generated-classes.md).
+Wenn Sie den **ATL OLE DB-Consumer-Assistenten** zum Erstellen eines Consumers verwenden, haben Sie die Wahl, ob Sie OLE DB-Vorlagen oder OLE DB-Attribute verwenden möchten. Der generierte Code ist in beiden Fällen unterschiedlich. Weitere Informationen zu diesem Code finden Sie unter [Vom Consumer-Assistenten generierte Klassen](../../data/oledb/consumer-wizard-generated-classes.md).
 
-## <a name="user-record-support-for-multiple-accessors"></a>Datensatz Unterstützung für mehrere Accessoren für Benutzer
+## <a name="user-record-support-for-multiple-accessors"></a>Benutzerdatensatzunterstützung für mehrere Accessoren
 
-Weitere Informationen zu den Szenarien, in denen Sie mehrere Accessoren für Ereigniseigenschaften verwenden müssen, finden Sie unter [Verwenden mehrerer Zugriffsmethoden für ein Rowset](../../data/oledb/using-multiple-accessors-on-a-rowset.md).
+Weitere Informationen zu den Szenarien, in denen Sie mehrere Accessoren verwenden müssen, finden Sie unter [Verwenden mehrerer Zugriffsmethoden für ein Rowset](../../data/oledb/using-multiple-accessors-on-a-rowset.md).
 
-Im folgenden Beispiel wird des Benutzerdatensatzes geändert, um mehrere Accessoren für das Rowset zu unterstützen. Anstatt BEGIN_COLUMN_MAP und END_COLUMN_MAP, verwendet es [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) und [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) für jeden Accessor. Die Accessor-Anzahl (Offset von 0 (null)) und gibt an, ob der Accessor einen Autoaccessor ist, gibt das BEGIN_ACCESSOR-Makro an. Autoaccessoren Aufruf `GetData` zum Abrufen von Daten automatisch bei einem Aufruf von [MoveNext](../../data/oledb/crowset-movenext.md). Bei nicht automatische Accessoren müssen Sie explizit die Daten abzurufen. Verwenden Sie automatische, wenn Sie eine an ein Feld großer Datenmengen (z. B. ein Bitmap-Bild Bindung sind), die Sie nicht für jeden Datensatz abrufen möchten.
+Im folgenden Beispiel wird der Benutzerdatensatz geändert, sodass mehrere Accessoren für das Rowset unterstützt werden. Anstelle von BEGIN_COLUMN_MAP und END_COLUMN_MAP werden [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) und [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) für jeden Accessor verwendet. Das BEGIN_ACCESSOR-Makro gibt die Accessorzahl (Offset von 0 (null)) an, und ob der Accessor ein Autoaccessor ist. Autoaccessoren rufen `GetData` auf, um Daten automatisch bei einem Aufruf von [MoveNext](../../data/oledb/crowset-movenext.md) abzurufen. Bei nicht automatischen Accessoren müssen Sie die Daten explizit abrufen. Verwenden Sie einen nicht automatischen Accessor bei der Bindung eines großen Datenfelds (z.B. eines Bitmapbilds), das Sie nicht für jeden Datensatz abrufen möchten.
 
 ```cpp
 class CMultiArtists

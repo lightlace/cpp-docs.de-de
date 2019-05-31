@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
-ms.openlocfilehash: c0f31818002ce4611926d942b3bc556e31c1ae6f
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 466530cb8c2ebca7f1c87370389309d3a0486e26
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524712"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707611"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Erstellen eines einfachen schreibgeschützten Anbieters
 
@@ -20,7 +20,7 @@ Der ATL-OLE DB-Anbieter-Assistent ist in Visual Studio 2019 und höher nicht ver
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Wenn Sie mit dem **ATL-Projekt-Assistenten** und dem **ATL-OLE DB-Anbieter-Assistenten** einen OLE DB-Anbieter erstellt haben, können Sie weitere Funktionen hinzufügen, die Sie unterstützen möchten. Beginnen Sie mit dem Entwerfen des Anbieters, indem Sie untersuchen, welche Arten von Daten unter welchen Bedingungen an den Consumer gesendet werden sollen. Es ist sehr wichtig, zu ermitteln, ob Sie Befehle, Transaktionen und weitere optionale Objekte unterstützen müssen. Ein von vorneherein guter Entwurf beschleunigt Implementierung und Tests.
 

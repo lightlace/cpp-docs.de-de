@@ -1,35 +1,35 @@
 ---
 title: Bestimmen des geeigneten Zugriffsmethodentyps
-ms.date: 10/24/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-ms.openlocfilehash: 98234852d0577e581135980d6b8e525aeead5dc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f32b3375a517c8716324a2d5b35ec16826605f8e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175367"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525088"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Bestimmen des geeigneten Zugriffsmethodentyps
 
-Sie können die Datentypen für ein Rowset zum Zeitpunkt der Kompilierung oder zur Laufzeit bestimmen.
+Sie können die Datentypen in einem Rowset zur Kompilierzeit oder zur Laufzeit bestimmen.
 
-Wenn Sie Datentypen zum Zeitpunkt der Kompilierung ermitteln müssen, verwenden Sie einen statischen Accessor (z. B. `CAccessor`). Sie können die Datentypen ermitteln, manuell oder mithilfe der **ATL-OLE DB-Consumer-Assistenten**.
+Wenn Sie Datentypen zur Kompilierzeit ermitteln müssen, verwenden Sie einen statischen Accessor (z.B. `CAccessor`). 
 
-Wenn Sie die Datentypen zur Laufzeit bestimmen müssen, verwenden Sie eine dynamische (`CDynamicAccessor` oder seine untergeordneten Elemente) oder einen manuellen Accessor (`CManualAccessor`). Sie können in diesen Fällen Aufrufen `GetColumnInfo` für das Rowset die Spalteninformationen für die Bindung, zurückgeben, von dem Sie können Typen bestimmen.
+Wenn Sie Datentypen zur Laufzeit ermitteln müssen, verwenden Sie einen dynamischen (`CDynamicAccessor` oder seine untergeordneten Elemente) oder einen manuellen Accessor (`CManualAccessor`). Sie können in diesen Fällen `GetColumnInfo` für das Rowset aufrufen, um die Spaltenbindungsinformationen zurückzugeben, aufgrund derer Sie Typen bestimmen können.
 
-Die folgende Tabelle enthält die Typen der Accessoren in die Consumervorlagen bereitgestellt. Jeder Accessor hat vor- und Nachteile. Je nach Situation sollte eine Accessortyp Ihre Bedürfnisse erfüllen.
+Die folgende Tabelle enthält die Typen der Accessoren, die in den Consumervorlagen bereitgestellt werden. Jeder Accessor hat Vor- und Nachteile. Je nach Situation sollte ein Accessortyp Ihre Anforderungen erfüllen.
 
-|Accessor-Klasse|Bindung|Parameter|Kommentar|
+|Accessorklasse|Bindung|Parameter|Kommentar|
 |--------------------|-------------|---------------|-------------|
-|`CAccessor`|Erstellen Sie einen Benutzerdatensatz mit COLUMN_ENTRY-Makros. Die Makros, die einen Datenmember in diesen Datensatz binden, auf den Accessor verwendet wird. Wenn das Rowset erstellt wird, können keine Spalten aufgehoben werden.|Ja, mit der eine PARAM_MAP Makro-Eintrag. Nach der Bindung können nicht Parametern aufgehoben werden.|Am schnellsten Zugriffsmethode aufgrund von wenig Code.|
-|`CDynamicAccessor`|Automatisch.|Nein.|Nützlich, wenn Sie nicht, dass den Typ der Daten in einem Rowset wissen.|
-|`CDynamicParameterAccessor`|Automatische, kann jedoch [überschreiben](../../data/oledb/overriding-a-dynamic-accessor.md).|Ja, wenn der Anbieter unterstützt `ICommandWithParameters`. Parameter, die automatisch eingebunden werden.|Langsamer als `CDynamicAccessor` aber hilfreich zum Aufrufen der generischer gespeicherter Prozeduren.|
-|`CDynamicStringAccessor[A,W]`|Automatisch.|Nein.|Ruft Daten aus dem Datenspeicher als Zeichenfolgendaten ab.|
-|`CManualAccessor`|Mithilfe von manuellen `AddBindEntry`.|Manuell über `AddParameterEntry`.|Fast; Parameter und Spalten werden nur einmal gebunden. Sie bestimmen den Typ des zu verwendenden Daten. (Finden Sie unter [DBVIEWER](https://github.com/Microsoft/VCSamples) ein Beispiel für.) Benötigt mehr Code als `CDynamicAccessor` oder `CAccessor`. Es ist eher wie OLE DB nicht direkt aufrufen.|
-|`CXMLAccessor`|Automatisch.|Nein.|Ruft Daten aus dem Datenspeicher als Zeichenfolgedaten zugegriffen, und formatiert die Ausgabe als XML-Tags Daten.|
+|`CAccessor`|Erstellen Sie einen Benutzerdatensatz mit COLUMN_ENTRY-Makros. Die Makros binden einen Datenmember in diesem Datensatz an den Accessor. Wenn das Rowset erstellt wird, können Spaltenbindungen nicht aufgehoben werden.|Ja, mithilfe eines PARAM_MAP-Makro-Eintrags. Nach der Bindung kann die Bindung von Parametern nicht aufgehoben werden.|Schnellster Accessor aufgrund von wenig Code.|
+|`CDynamicAccessor`|Automatisch.|Nein.|Nützlich, wenn Sie den Typ der Daten in einem Rowset nicht kennen.|
+|`CDynamicParameterAccessor`|Automatisch, kann jedoch [überschrieben](../../data/oledb/overriding-a-dynamic-accessor.md) werden.|Ja, wenn der Anbieter `ICommandWithParameters` unterstützt. Parameter werden automatisch gebunden.|Langsamer als `CDynamicAccessor`, aber hilfreich zum Aufrufen generischer gespeicherter Prozeduren.|
+|`CDynamicStringAccessor[A,W]`|Automatisch.|Nein.|Ruft Daten aus dem Datenspeicher, auf die zugegriffen wird, als Zeichenfolgendaten ab.|
+|`CManualAccessor`|Manuell mithilfe von `AddBindEntry`.|Manuell mithilfe von `AddParameterEntry`.|Schnell; Parameter und Spalten werden nur einmal gebunden. Sie bestimmen den zu verwendenden Datentyp. (Siehe [DBVIEWER](https://github.com/Microsoft/VCSamples)-Beispiel.) Benötigt mehr Code als `CDynamicAccessor` oder `CAccessor`. Entspricht eher dem direkten Aufruf von OLE DB.|
+|`CXMLAccessor`|Automatisch.|Nein.|Ruft Daten aus dem Datenspeicher, auf die zugegriffen wird, als Zeichenfolgendaten ab, und formatiert sie als XML-markierte Daten.|
 
 ## <a name="see-also"></a>Siehe auch
 
