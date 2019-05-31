@@ -1,36 +1,43 @@
 ---
 title: Implementieren eines einfachen Consumers
-ms.date: 10/12/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
-- clients, creating
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 9067e8645fac9a06bd85ca5ef18fbaff45d16aae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 592a51dd77f7a2e115ee67a481e56dc558209253
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390801"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525080"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementieren eines einfachen Consumers
 
-In den folgenden Themen zeigen, wie so bearbeiten Sie die erstellten Dateien die **MFS-Anwendungsassistenten** und **ATL-OLE DB-Consumer-Assistenten** zum Erstellen eines einfachen Consumers. In diesem Beispiel besteht aus folgenden Teilen:
+::: moniker range="vs-2019"
 
-- [Abrufen von Daten mit dem Consumer](#retrieve) wird gezeigt, wie Code im Consumer zu implementieren, die alle Daten zeilenweise aus einer Datenbanktabelle liest.
+Der ATL-OLE DB-Consumer-Assistent ist in Visual Studio 2019 und höher nicht verfügbar. Sie können diese Funktionalität weiterhin manuell hinzufügen. Weitere Informationen finden Sie unter [Erstellen eines Consumers ohne Assistent](creating-a-consumer-without-using-a-wizard.md).
 
-- [Hinzufügen von Lesezeichen unterstützen, an den Consumer](#bookmark) veranschaulicht das Hinzufügen von lesezeichenunterstützung für den Consumer.
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Die folgenden Themen zeigen, wie Sie die vom **MFC-Anwendungsassistenten** und **ATL-OLE DB-Consumer-Assistenten** erstellten Dateien bearbeiten können, um einen einfachen Consumer zu erstellen. Dieses Beispiel besteht aus folgenden Teilen:
+
+- In [Abrufen von Daten mit dem Consumer](#retrieve) wird erläutert, wie Sie Code im Consumer implementieren, der alle Daten zeilenweise aus einer Datenbanktabelle liest.
+
+- In [Hinzufügen von Lesezeichenunterstützung für den Consumer](#bookmark) wird gezeigt, wie Sie dem Consumer Lesezeichenunterstützung hinzufügen können.
 
 > [!NOTE]
-> Sie können in diesem Abschnitt beschriebenen Consumer-Anwendung zum Testen verwenden die `MyProv` und `Provider` Beispiel-Anbieter.
+> Sie können die in diesem Abschnitt beschriebene Consumeranwendung verwenden, um die `MyProv`- und `Provider`-Beispielanbieter zu testen.
 
 > [!NOTE]
-> Erstellen Sie eine Consumeranwendung zum Testen `MyProv` (die gleiche Anbieter, die in beschriebenen [Erweitern des einfachen schreibgeschützten Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md)), müssen Sie lesezeichenunterstützung einschließen, wie in beschrieben [Hinzufügen von Lesezeichen unterstützen, die Consumer](#bookmark).
+> Um eine Consumeranwendung zum Testen von `MyProv` (derselbe Anbieter, der unter [Erweitern des einfachen schreibgeschützen Anbieters](../../data/oledb/enhancing-the-simple-read-only-provider.md) beschrieben ist) zu erstellen, müssen Sie die Lesezeichenunterstützung wie unter [Hinzufügen der Lesezeichenunterstützung für den Cosumer](#bookmark) beschrieben integrieren.
 
 ## <a name="retrieve" ></a> Abrufen von Daten mit dem Consumer
 
-### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>So ändern Sie die Konsolenanwendung verwendet die OLE DB-consumer
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>So ändern Sie die Konsolenanwendung zur Verwendung des OLE DB-Consumers
 
-1. In `MyCons.cpp`, ändern Sie den Hauptcode, indem Sie den fett formatierten Text wie folgt einfügen:
+1. Ändern Sie unter `MyCons.cpp` den Hauptcode, indem Sie den fettgedruckten Text wie folgt einfügen:
 
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
@@ -59,30 +66,30 @@ In den folgenden Themen zeigen, wie so bearbeiten Sie die erstellten Dateien die
 
 ## <a name="bookmark" ></a> Hinzufügen von Lesezeichenunterstützung für den Consumer
 
-Ein Lesezeichen ist eine Spalte, die Zeilen in der Tabelle eindeutig identifiziert. Normalerweise ist die Schlüsselspalte, aber nicht immer; Es ist anbieterspezifisch. In diesem Abschnitt erfahren Sie, wie Sie lesezeichenunterstützung hinzufügen. Zu diesem Zweck müssen Sie in die Benutzerdatensatz-Klasse die folgenden Schritte ausführen:
+Ein Lesezeichen ist eine Spalte, die Zeilen in der Tabelle eindeutig identifiziert. Normalerweise ist das die Schlüsselspalte. Dies ist jedoch nicht immer der Fall, es ist anbieterspezifisch. In diesem Abschnitt erfahren Sie, wie Sie die Lesezeichenunterstützung hinzufügen. Dazu müssen Sie die folgenden Schritte in der Klasse der Benutzerdatensätze durchführen:
 
 - Instanziieren Sie die Lesezeichen. Hierbei handelt es sich um Objekte des Typs [CBookmark](../../data/oledb/cbookmark-class.md).
 
-- Eine Lesezeichenspalte vom Anbieter anfordern, indem die `DBPROP_IRowsetLocate` Eigenschaft.
+- Fordern Sie eine Lesezeichenspalte vom Anbieter an, indem Sie die Eigenschaft `DBPROP_IRowsetLocate` festlegen.
 
-- Einen Lesezeicheneintrag mithilfe der spaltenzuordnung Hinzufügen der [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) Makro.
+- Fügen Sie der Spaltenübersicht mit dem Makro [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) einen Lesezeicheneintrag hinzu.
 
-Die vorherigen Schritten erhalten Sie lesezeichenunterstützung und ein Bookmark-Objekt, mit denen Sie arbeiten. Dieses Codebeispiel veranschaulicht ein Lesezeichen wie folgt aus:
+Mit den vorherigen Schritten erhalten Sie Lesezeichenunterstützung und ein Lesezeichenobjekt, mit dem Sie arbeiten können. Dieses Codebeispiel veranschaulicht ein Lesezeichen wie folgt:
 
 - Öffnen Sie eine Datei zum Schreiben.
 
-- Ausgabe von Rowsetdaten in die Datei Zeile für Zeile.
+- Geben Sie die Rowsetdaten in die Datei zeilenweise aus.
 
-- Verschieben den Rowset-Cursor auf das Lesezeichen durch Aufrufen von [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
+- Verschieben Sie den Rowsetsursor auf das Lesezeichen, indem Sie [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md) aufrufen.
 
-- Geben Sie den mit Lesezeichen versehenen Zeile, die an das Ende der Datei angefügt.
+- Geben Sie die mit Lesezeichen versehene Zeile aus, und hängen Sie sie an das Ende der Datei an.
 
 > [!NOTE]
-> Wenn Sie diese Consumeranwendung zum Testen verwenden die `Provider` anbieteranwendung zugreifen können, lassen Sie die lesezeichenunterstützung, die in diesem Abschnitt beschrieben.
+> Wenn Sie diese Consumeranwendung verwenden, um die `Provider`-Beispielanbieteranwendung zu testen, lassen Sie die in diesem Abschnitt beschriebene Lesezeichenunterstützung weg.
 
-### <a name="to-instantiate-the-bookmark"></a>Um das Lesezeichen zu instanziieren.
+### <a name="to-instantiate-the-bookmark"></a>So instanziieren Sie das Lesezeichen
 
-1. Der Accessor muss ein Objekt des Typs enthalten [CBookmark](../../data/oledb/cbookmark-class.md). Die *nSize* Parameter gibt die Größe des Lesezeichenpuffers in Bytes (in der Regel 4 für 32-Bit-Plattformen) und 8 für 64-Bit-Plattformen. Fügen Sie die folgende Deklaration, um der Spaltenelemente für die Daten in die Benutzerdatensatz-Klasse:
+1. Der Accessor muss ein Objekt des Typs [CBookmark](../../data/oledb/cbookmark-class.md) enthalten. Der *nSize*-Parameter gibt die Größe des Lesezeichenpuffers in Bytes an (in der Regel 4 für 32-Bit-Plattformen und 8 für 64-Bit-Plattformen). Fügen Sie die folgende Deklaration zu den Spaltendatenmembern in der Benutzerdatensatz-Klasse hinzu:
 
     ```cpp
     //////////////////////////////////////////////////////////////////////
@@ -95,9 +102,9 @@ Die vorherigen Schritten erhalten Sie lesezeichenunterstützung und ein Bookmark
        ...
     ```
 
-### <a name="to-request-a-bookmark-column-from-the-provider"></a>Eine Lesezeichenspalte vom Anbieter anfordern
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>So fordern Sie eine Lesezeichenspalte vom Anbieter an
 
-1. Fügen Sie den folgenden Code in die `GetRowsetProperties` -Methode in der die Benutzerdatensatz-Klasse:
+1. Fügen Sie den folgenden Code in der `GetRowsetProperties`-Methode der Benutzerdatensatz-Klasse hinzu:
 
     ```cpp
     // Set the DBPROP_IRowsetLocate property.
@@ -109,9 +116,9 @@ Die vorherigen Schritten erhalten Sie lesezeichenunterstützung und ein Bookmark
     }
     ```
 
-### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Einen Lesezeicheneintrag zu der spaltenzuordnung hinzufügen
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>So fügen Sie einen Lesezeicheneintrag zur Spaltenzuordnung hinzu
 
-1. Fügen Sie den folgenden Eintrag, um die spaltenzuordnung in der Benutzerdatensatz-Klasse:
+1. Fügen Sie den folgenden Eintrag zur Spaltenzuordnung in der Benutzerdatensatz-Klasse hinzu:
 
     ```cpp
     // Set a bookmark entry in the column map.
@@ -123,9 +130,9 @@ Die vorherigen Schritten erhalten Sie lesezeichenunterstützung und ein Bookmark
     END_COLUMN_MAP()
     ```
 
-### <a name="to-use-a-bookmark-in-your-main-code"></a>Verwenden Sie ein Lesezeichen in Ihrem Code main
+### <a name="to-use-a-bookmark-in-your-main-code"></a>So verwenden Sie eine Lesezeichen in Ihrem Hauptcode
 
-1. In der `MyCons.cpp` Datei der Konsolenanwendung, die Sie zuvor erstellt haben, den Hauptcode ändern, sodass er folgendermaßen. Um Lesezeichen zu verwenden, muss der Hauptcode eigene Bookmark-Objekt zu instanziieren (`myBookmark`); Dies ist ein anderes Lesezeichen in die Zugriffsmethode (`m_bookmark`).
+1. Ändern Sie in der `MyCons.cpp`-Datei aus der zuvor erstellten Konsolenanwendung den Hauptcode wie folgt. Um Lesezeichen verwenden zu können, muss der Hauptcode sein eigenes Lesezeichenobjekt (`myBookmark`) instanziieren; dies ist ein anderes Lesezeichen als das im Accessor (`m_bookmark`).
 
     ```cpp
     ///////////////////////////////////////////////////////////////////////
@@ -194,7 +201,9 @@ Die vorherigen Schritten erhalten Sie lesezeichenunterstützung und ein Bookmark
     }
     ```
 
-Weitere Informationen über Lesezeichen finden Sie unter [mithilfe von Lesezeichen](../../data/oledb/using-bookmarks.md). Beispiele zu Lesezeichen Siehe [Aktualisieren von Rowsets](../../data/oledb/updating-rowsets.md).
+Weitere Informationen über Lesezeichen finden Sie unter [Verwenden von Lesezeichen](../../data/oledb/using-bookmarks.md). Beispiele für Lesezeichen finden Sie auch in [Aktualisieren von Rowsets](../../data/oledb/updating-rowsets.md).
+
+::: moniker-end
 
 ## <a name="see-also"></a>Siehe auch
 
