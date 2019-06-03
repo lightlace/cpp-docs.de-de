@@ -39,7 +39,7 @@ Eine Constexpr-Variable oder Funktion muss Zurückgeben einer [Literaltyp](trivi
 
 Der Hauptunterschied zwischen const- und Constexpr-Variablen ist, dass die Initialisierung einer const-Variablen bis zur Laufzeit verzögert werden kann. Eine Constexpr-Variable muss zum Zeitpunkt der Kompilierung initialisiert werden.  Alle constexpr-Variablen sind auch const.
 
-- Eine Variable kann mit deklariert werden **"constexpr"**, wenn sie über einen Literaltyp verfügt und initialisiert wird. Wenn die Initialisierung von einem Konstruktor ausgeführt wird, muss der Konstruktor deklariert werden, als **"constexpr"**.
+- Eine Variable kann mit deklariert werden **"constexpr"** , wenn sie über einen Literaltyp verfügt und initialisiert wird. Wenn die Initialisierung von einem Konstruktor ausgeführt wird, muss der Konstruktor deklariert werden, als **"constexpr"** .
 
 - Ein Verweis kann als constexpr deklariert werden, wenn das Objekt, auf das er verweist, durch einen konstanten Ausdruck initialisiert wurde und alle impliziten Konvertierungen, die während der Initialisierung aufgerufen werden, auch konstante Ausdrücke sind.
 
@@ -56,7 +56,7 @@ constexpr int k = j + 1; //Error! j not a constant expression
 
 ## <a name="constexpr_functions"></a> Constexpr-Funktionen
 
-Ein **"constexpr"** -Funktion ist eine, deren Rückgabewert zum Zeitpunkt der Kompilierung kann es beim Nutzen von Code müssen berechnet werden kann. Nutzen von Code erfordert den Rückgabewert zum Zeitpunkt der Kompilierung, z. B. zum Initialisieren einer **"constexpr"** Variable, oder geben Sie ein Nichttyp-Vorlagenargument. Wenn die Argumente sind **"constexpr"** Werte eine **"constexpr"** Funktion generiert eine Kompilierzeitkonstante. Bei einem Aufruf mit nicht-**"constexpr"** Argumente, oder wenn der Wert nicht zum Zeitpunkt der Kompilierung erforderlich ist, erzeugt es den Wert zur Laufzeit wie eine reguläre Funktion. (Dieses duale Verhalten erspart Ihnen schreiben **"constexpr"** und nicht-**"constexpr"** Versionen der gleichen Funktion.)
+Ein **"constexpr"** -Funktion ist eine, deren Rückgabewert zum Zeitpunkt der Kompilierung kann es beim Nutzen von Code müssen berechnet werden kann. Nutzen von Code erfordert den Rückgabewert zum Zeitpunkt der Kompilierung, z. B. zum Initialisieren einer **"constexpr"** Variable, oder geben Sie ein Nichttyp-Vorlagenargument. Wenn die Argumente sind **"constexpr"** Werte eine **"constexpr"** Funktion generiert eine Kompilierzeitkonstante. Bei einem Aufruf mit nicht- **"constexpr"** Argumente, oder wenn der Wert nicht zum Zeitpunkt der Kompilierung erforderlich ist, erzeugt es den Wert zur Laufzeit wie eine reguläre Funktion. (Dieses duale Verhalten erspart Ihnen schreiben **"constexpr"** und nicht- **"constexpr"** Versionen der gleichen Funktion.)
 
 Ein **"constexpr"** -Funktion oder der Konstruktor ist implizit **Inline**.
 
@@ -72,9 +72,9 @@ Die folgenden Regeln gelten für Constexpr-Funktionen:
 
 - Der Text darf nicht **Goto** Anweisungen oder Try-Blöcken.
 
-- Eine explizite Spezialisierung einer nicht-Constexpr-Vorlage kann deklariert werden, als **"constexpr"**:
+- Eine explizite Spezialisierung einer nicht-Constexpr-Vorlage kann deklariert werden, als **"constexpr"** :
 
-- Eine explizite Spezialisierung einer **"constexpr"** Vorlage muss nicht auch **"constexpr"**:
+- Eine explizite Spezialisierung einer **"constexpr"** Vorlage muss nicht auch **"constexpr"** :
 
 Die folgenden Regeln gelten für **"constexpr"** Funktionen in Visual Studio 2017 und höher:
 
