@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: cba28039cb7755149b35a47ddee82b6274fe4c72
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: a12c2bd2c1c1963630a1bd74b56f2c832573cc94
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558210"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450515"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 1)
 
@@ -24,7 +24,7 @@ In dieser exemplarischen Vorgehensweise wird das klassische MFC-Beispiel Scribbl
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Die [1.0 MFC Scribble-Beispiel](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Hilfe zum Konvertieren von Visual Studio 2017 oder höher, finden Sie unter [Portierungsanleitung: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
+Die [1.0 MFC Scribble-Beispiel](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Hilfe zum Konvertieren von Visual Studio 2017 oder höher, finden Sie unter [Portierungsanleitung: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
 
 ##  <a name="top"></a> Abschnitte
 
@@ -171,7 +171,7 @@ Ein Menüband besteht aus den **Anwendung** Schaltfläche, die die große Schalt
 
 1. Klicken Sie in der Entwurfsansicht auf die **Anwendung** Schaltfläche, um ihre Eigenschaften anzuzeigen. Ändern Sie die Eigenschaftswerte wie folgt: **Image** zu `IDB_RIBBON_MAIN`, **Eingabeaufforderung** zu `File`, **Schlüssel** zu `f`, **große Bilder** zu `IDB_RIBBON_FILELARGE`, und **Kleine Bilder** zu `IDB_RIBBON_FILESMALL`.
 
-1. Die folgenden Änderungen wird das Menü erstellt, die angezeigt wird, wenn der Benutzer klickt auf die **Anwendung** Schaltfläche. Klicken Sie auf die Auslassungspunkte (**...** ) neben **Main Items** zum Öffnen der **Elemente-Editor**.
+1. Die folgenden Änderungen wird das Menü erstellt, die angezeigt wird, wenn der Benutzer klickt auf die **Anwendung** Schaltfläche. Klicken Sie auf die Auslassungspunkte ( **...** ) neben **Main Items** zum Öffnen der **Elemente-Editor**.
 
    1. Mit der **Element** Typ **Schaltfläche** ausgewählt ist, klicken Sie auf **hinzufügen** um eine Schaltfläche hinzuzufügen. Änderung **Beschriftung** zu `&New`, **ID** zu `ID_FILE_NEW`, **Image** zu `0`, **Bild groß** zu `0`.
 
@@ -199,7 +199,7 @@ Ein Menüband besteht aus den **Anwendung** Schaltfläche, die die große Schalt
 
 1. Die folgende Änderung wird eine beendigungsschaltfläche erstellt, der angezeigt wird am unteren Rand der **Anwendung** im Menü der Schaltfläche.
 
-   1. In der **Eigenschaften** Fenster, klicken Sie auf die Auslassungspunkte (**...** ) neben **Schaltfläche** zum Öffnen der **Elemente-Editor**.
+   1. In der **Eigenschaften** Fenster, klicken Sie auf die Auslassungspunkte ( **...** ) neben **Schaltfläche** zum Öffnen der **Elemente-Editor**.
 
    1. Mit der **Element** Typ **Schaltfläche** ausgewählt ist, klicken Sie auf **hinzufügen** um eine Schaltfläche hinzuzufügen. Änderung **Beschriftung** zu `E&xit`, **ID** zu `ID_APP_EXIT`, **Image** zu `8`.
 

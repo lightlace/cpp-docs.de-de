@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-ms.openlocfilehash: 30b66c78c6c3477c4da634901058d77d0e362101
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c66a3fe7b923b214c4cf2bd84fc03f535d5f4973
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349081"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449986"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 
@@ -63,9 +63,9 @@ Diese systeminterne Funktion speichert die unterstützten Funktionen und CPU-Inf
 
 Die systeminterne `__cpuid`-Funktion löscht das ECX-Register, bevor die `cpuid`-Anweisung aufgerufen wird. Die `__cpuidex` systeminterne legt den Wert des ECX-Registers auf *Subfunction_id* , bevor er generiert die `cpuid` Anweisung. Damit können Sie zusätzliche Informationen zum Prozessor sammeln.
 
-Weitere Informationen zu den spezifischen zu verwendenden Parametern und den von diesen systeminternen Funktionen auf Intel-Prozessoren zurückgegebenen Werte, finden Sie in der Dokumentation für die `cpuid` Anweisung [Intel 64 und IA-32 Architekturen Software-Entwickler-Handbuch Volume 2: Instruction Set Reference](http://go.microsoft.com/fwlink/p/?LinkID=510021) und [Intel Architektur Instruction Set Extensions Programming Reference](http://go.microsoft.com/fwlink/p/?LinkID=506627). Intel-Dokumentation verwendet die Begriffe "Leaf" und "Subleaf" für die *Function_id* und *Subfunction_id* in EAX und ECX übergebenen Parameter.
+Weitere Informationen zu den spezifischen zu verwendenden Parametern und den von diesen systeminternen Funktionen auf Intel-Prozessoren zurückgegebenen Werte, finden Sie in der Dokumentation für die `cpuid` Anweisung [Intel 64 und IA-32 Architekturen Software-Entwickler-Handbuch Volume 2: Instruction Set Reference](https://go.microsoft.com/fwlink/p/?LinkID=510021) und [Intel Architektur Instruction Set Extensions Programming Reference](https://go.microsoft.com/fwlink/p/?LinkID=506627). Intel-Dokumentation verwendet die Begriffe "Leaf" und "Subleaf" für die *Function_id* und *Subfunction_id* in EAX und ECX übergebenen Parameter.
 
-Weitere Informationen zu den spezifischen zu verwendenden Parametern und den von diesen systeminternen Funktionen auf AMD-Prozessoren zurückgegebenen Werte, finden Sie in der Dokumentation für die `cpuid` Anweisung AMD64 Architecture Programmer's Manual Volume 3: Allgemeine und System-Anweisungen, und klicken Sie in den Handbüchern Revision für Familien mit bestimmten Prozessor. Links auf diese Dokumente und andere Informationen finden Sie in der AMD [Leitfäden für Entwickler, Handbücher und ISA-Dokumente](http://go.microsoft.com/fwlink/p/?LinkId=510023) Seite. AMD-Dokumentation verwendet die Begriffe "Function Number" und "Subfunction Number" für die *Function_id* und *Subfunction_id* in EAX und ECX übergebenen Parameter.
+Weitere Informationen zu den spezifischen zu verwendenden Parametern und den von diesen systeminternen Funktionen auf AMD-Prozessoren zurückgegebenen Werte, finden Sie in der Dokumentation für die `cpuid` Anweisung AMD64 Architecture Programmer's Manual Volume 3: Allgemeine und System-Anweisungen, und klicken Sie in den Handbüchern Revision für Familien mit bestimmten Prozessor. Links auf diese Dokumente und andere Informationen finden Sie in der AMD [Leitfäden für Entwickler, Handbücher und ISA-Dokumente](https://go.microsoft.com/fwlink/p/?LinkId=510023) Seite. AMD-Dokumentation verwendet die Begriffe "Function Number" und "Subfunction Number" für die *Function_id* und *Subfunction_id* in EAX und ECX übergebenen Parameter.
 
 Wenn die *Function_id* -Argument 0 ist, *CpuInfo*[0] Gibt die höchste verfügbar nicht erweiterte *Function_id* Wert, der vom Prozessor unterstützt. Der Hersteller des Prozessors ist in codiert *CpuInfo*[1], *CpuInfo*[2], und *CpuInfo*[3].
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 2f2bec446fcec522857b4c05a34311e6c26c9b75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90d3fb5c601d9534215a46594884be5d168fe0aa
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270887"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449541"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Doppelte Zeichenfolgen beseitigen)
 
@@ -50,11 +50,11 @@ char *t = "This is a character buffer";
 > [!NOTE]
 >  Die **/GF** Compileroption erstellt einen adressierbaren Abschnitt für jede eindeutige Zeichenfolge. Und in der Standardeinstellung kann eine Objektdatei bis zu 65.536 adressierbare Abschnitte enthalten. Wenn Ihr Programm mehr als 65.536 Zeichenfolgen enthält, verwenden Sie die [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) -Compileroption verwenden, um mehr Abschnitte zu erstellen.
 
-**/ GF** ist gültig, wenn ["/ O1"](o1-o2-minimize-size-maximize-speed.md) oder **"/ O2"** verwendet wird.
+**/ GF** ist gültig, wenn ["/ O1"](o1-o2-minimize-size-maximize-speed.md) oder ["/ O2"](o1-o2-minimize-size-maximize-speed.md) verwendet wird.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 

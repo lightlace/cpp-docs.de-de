@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220351"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451234"
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 
@@ -906,8 +906,8 @@ class CWnd : public CCmdTarget
 |[CWnd::FindWindowEx](#findwindowex)|Gibt das Handle für das Fenster zurück, das anhand seines Fensternamens und seiner Fensterklasse bestimmt wird.|
 |[CWnd::FlashWindow](#flashwindow)|Bringt das Fenster einmal zum Blinken.|
 |[CWnd::FlashWindowEx](#flashwindowex)|Bringt das Fenster mit zusätzlicher Funktionalität zum Blinken.|
-|[CWnd::FromHandle](#fromhandle)|Gibt einen Zeigt zu einem `CWnd`-Objekt zurück, wenn ein Handle zu einem Fenster vorhanden ist.  Wenn ein `CWnd`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CWnd`-Objekt erstellt und angefügt.|
-|[CWnd::FromHandlePermanent](#fromhandlepermanent)|Gibt einen Zeigt zu einem `CWnd`-Objekt zurück, wenn ein Handle zu einem Fenster vorhanden ist.  Wenn ein `CWnd`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CWnd`-Objekt erstellt und angefügt.|
+|[CWnd::FromHandle](#fromhandle)|Gibt einen Zeigt zu einem `CWnd`-Objekt zurück, wenn ein Handle zu einem Fenster vorhanden ist. Wenn ein `CWnd`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CWnd`-Objekt erstellt und angefügt.|
+|[CWnd::FromHandlePermanent](#fromhandlepermanent)|Gibt einen Zeigt zu einem `CWnd`-Objekt zurück, wenn ein Handle zu einem Fenster vorhanden ist. Wenn ein `CWnd`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CWnd`-Objekt erstellt und angefügt.|
 |[CWnd::get_accChild](#get_accchild)|Wird durch das Framework aufgerufen, um die Adresse einer `IDispatch`-Schnittstelle für das angegebene, untergeordnete Element abzurufen.|
 |[CWnd::get_accChildCount](#get_accchildcount)|Wird durch das Framework aufgerufen, um die Zahl der untergeordneten Elemente abzurufen, die zu diesem Objekt gehören.|
 |[CWnd::get_accDefaultAction](#get_accdefaultaction)|Wird durch das Framework aufgerufen, um eine Zeichenfolge abzurufen, die die Standardaktion des Objekts beschreibt.|
@@ -1119,8 +1119,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnCopyData](#oncopydata)|Kopiert Daten aus einer Anwendung in eine andere.|
 |[CWnd::OnCreate](#oncreate)|Wird im Rahmen einer Fenstererstellung aufgerufen.|
 |[CWnd::OnCtlColor](#onctlcolor)|Wird aufgerufen, wenn `CWnd` das übergeordnete Element eines Steuerelements ist, wenn das Steuerelement gezeichnet wird.|
-|[CWnd::OnDeadChar](#ondeadchar)|Wird aufgerufen, wenn eine Tastatureingabe in ein systemfremdes, funktionsloses Zeichen (beispielsweise Akzentzeichen) übersetzt wird. |
-|[CWnd::OnDeleteItem](#ondeleteitem)|Wird aufgerufen, wenn ein vom Besitzer gezeichnetes Listen- oder Kombinationsfeld zerstört wird oder wenn Elemente aus dem Steuerelement entfernt werden. |
+|[CWnd::OnDeadChar](#ondeadchar)|Wird aufgerufen, wenn eine Tastatureingabe in ein systemfremdes, funktionsloses Zeichen (beispielsweise Akzentzeichen) übersetzt wird.|
+|[CWnd::OnDeleteItem](#ondeleteitem)|Wird aufgerufen, wenn ein vom Besitzer gezeichnetes Listen- oder Kombinationsfeld zerstört wird oder wenn Elemente aus dem Steuerelement entfernt werden.|
 |[CWnd::OnDestroy](#ondestroy)|Wird aufgerufen, wenn `CWnd` zerstört wird.|
 |[CWnd::OnDestroyClipboard](#ondestroyclipboard)|Wird aufgerufen, wenn die Zwischenablage, durch einen Aufruf der Windows geleert wird [EmptyClipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard) Funktion.|
 |[CWnd::OnDeviceChange](#ondevicechange)|Benachrichtigt eine Anwendung oder einen Gerätetreiber über eine Änderung an der Hardwarekonfiguration eines Geräts oder des Computers.|
@@ -1200,7 +1200,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnNotifyFormat](#onnotifyformat)|Wird aufgerufen, um zu bestimmen, ob das aktuelle Fenster ANSI- oder Unicode-Strukturen in der WM_NOTIFY-Benachrichtigung akzeptiert.|
 |[CWnd::OnPaint](#onpaint)|Wird aufgerufen, um eine Teilmenge des Fensters neu zu zeichnen.|
 |[CWnd::OnPaintClipboard](#onpaintclipboard)|Wird aufgerufen, wenn der Clientbereich der Zwischenablagenansicht neu gezeichnet werden muss.|
-|[CWnd::OnPaletteChanged](#onpalettechanged)|Wird aufgerufen, um Fenstern zu erlauben, die eine Farbpalette verwenden, ihre logischen Paletten zu realisieren und ihre Clientbereiche zu aktualisieren. |
+|[CWnd::OnPaletteChanged](#onpalettechanged)|Wird aufgerufen, um Fenstern zu erlauben, die eine Farbpalette verwenden, ihre logischen Paletten zu realisieren und ihre Clientbereiche zu aktualisieren.|
 |[CWnd::OnPaletteIsChanging](#onpaletteischanging)|Informiert andere Anwendungen, wenn eine Anwendung ihre logische Palette realisiert.|
 |[CWnd::OnParentNotify](#onparentnotify)|Wird aufgerufen, wenn ein untergeordnetes Fenster erstellt oder zerstört wird oder wenn der Benutzer eine Maustaste drückt, während sich der Cursor über einem untergeordneten Fenster befindet.|
 |[CWnd::OnPowerBroadcast](#onpowerbroadcast)|Wird aufgerufen, wenn ein Energieverwaltungsereignis auftritt.|
@@ -1229,10 +1229,10 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSysChar](#onsyschar)|Wird aufgerufen, wenn eine Tastatureingabe in ein Systemzeichen übersetzt wird.|
 |[CWnd::OnSysColorChange](#onsyscolorchange)|Wird für alle Fenster auf oberster Ebene aufgerufen, wenn in der Systemfarbeneinstellung eine Änderung vorgenommen wird.|
 |[CWnd::OnSysCommand](#onsyscommand)|Wird aufgerufen, wenn der Benutzer einen Befehl aus dem Steuerelementmenü auswählt oder wenn der Benutzer die Schaltfläche „Maximieren“ oder „Minimieren“ auswählt.|
-|[CWnd::OnSysDeadChar](#onsysdeadchar)|Wird aufgerufen, wenn eine Tastatureingabe in ein funktionsloses Systemzeichen (beispielsweise Akzentzeichen) übersetzt wird. |
+|[CWnd::OnSysDeadChar](#onsysdeadchar)|Wird aufgerufen, wenn eine Tastatureingabe in ein funktionsloses Systemzeichen (beispielsweise Akzentzeichen) übersetzt wird.|
 |[CWnd::OnSysKeyDown](#onsyskeydown)|Wird aufgerufen, wenn der Benutzer die ALT-TASTE gedrückt hält und dann eine andere Taste drückt.|
 |[CWnd::OnSysKeyUp](#onsyskeyup)|Wird aufgerufen, wenn der Benutzer eine Taste loslässt, die gedrückt wurde, während die ALT-TASTE gedrückt gehalten wurde.|
-|[CWnd::OnTCard](#ontcard)|Wird aufgerufen, wenn der Benutzer auf eine bearbeitbare Schaltfläche drückt |
+|[CWnd::OnTCard](#ontcard)|Wird aufgerufen, wenn der Benutzer auf eine bearbeitbare Schaltfläche drückt|
 |[CWnd::OnTimeChange](#ontimechange)|Wird für alle Fenster auf oberster Ebene aufgerufen, nachdem die Systemzeit geändert wurde.|
 |[CWnd::OnTimer](#ontimer)|Wird aufgerufen, nachdem jedes im angegebenen Intervall [SetTimer](#settimer).|
 |[CWnd::OnTouchInput](#ontouchinput)|Verarbeitet die einzelne Eingabe aus Windows Touch.|
@@ -1652,7 +1652,7 @@ void BringWindowToTop();
 
 Darüber hinaus aktiviert `BringWindowToTop` Popupfenster, Fenster der obersten Ebene und untergeordnete MDI-Fenster. Die Memberfunktion `BringWindowToTop` sollte dazu verwendet werden, um jedes Fenster aufzudecken, das von irgendeinem überlappenden Fenster teilweise oder vollständig verdeckt ist.
 
-Diese Funktion ruft nur die Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) Funktion. Rufen Sie die [SetWindowPos](#setwindowpos) Funktion, um die Position eines Fensters in der Z-Reihenfolge zu ändern. Die `BringWindowToTop`-Funktion ändert nicht den Fensterstil, um daraus ein Fenster oberster Ebene zu machen. Weitere Informationen finden Sie unter [Was ist der Unterschied zwischen HWND_TOP and HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Diese Funktion ruft nur die Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) Funktion. Rufen Sie die [SetWindowPos](#setwindowpos) Funktion, um die Position eines Fensters in der Z-Reihenfolge zu ändern. Die `BringWindowToTop`-Funktion ändert nicht den Fensterstil, um daraus ein Fenster oberster Ebene zu machen. Weitere Informationen finden Sie unter [Was ist der Unterschied zwischen HWND_TOP and HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>Beispiel
 
@@ -2455,7 +2455,7 @@ Die *LpPathSpec* Parameter weist das folgende Format:
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-In diesem Beispiel *Laufwerk* ist ein Laufwerkbuchstabe *Directory* ist ein gültiger Verzeichnisname und *Filename* ist ein gültiger Dateiname, die mindestens ein Platzhalter enthalten muss. Die Platzhalter sind ein Fragezeichen (**?**), d. h. alle Zeichen und ein Sternchen entsprechen (<strong>\*</strong>), d. h., eine beliebige Anzahl von Zeichen übereinstimmen.
+In diesem Beispiel *Laufwerk* ist ein Laufwerkbuchstabe *Directory* ist ein gültiger Verzeichnisname und *Filename* ist ein gültiger Dateiname, die mindestens ein Platzhalter enthalten muss. Die Platzhalter sind ein Fragezeichen ( **?** ), d. h. alle Zeichen und ein Sternchen entsprechen (<strong>\*</strong>), d. h., eine beliebige Anzahl von Zeichen übereinstimmen.
 
 Wenn Sie angeben, dass eine Zeichenfolge der Länge 0 für *LpPathSpec*, oder wenn Sie nur einen Verzeichnisnamen angeben, aber Sie keine Dateispezifikation schließen, wird die Zeichenfolge geändert werden, um "\*.\*".
 
@@ -2523,7 +2523,7 @@ Die *LpPathSpec* Parameter weist das folgende Format:
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-In diesem Beispiel *Laufwerk* ist ein Laufwerkbuchstabe *Directory* ist ein gültiger Verzeichnisname und *Filename* ist ein gültiger Dateiname, die mindestens ein Platzhalter enthalten muss. Die Platzhalter sind ein Fragezeichen (**?**), d. h. alle Zeichen und ein Sternchen entsprechen (<strong>\*</strong>), d. h. entsprechen, eine beliebige Anzahl von Zeichen.
+In diesem Beispiel *Laufwerk* ist ein Laufwerkbuchstabe *Directory* ist ein gültiger Verzeichnisname und *Filename* ist ein gültiger Dateiname, die mindestens ein Platzhalter enthalten muss. Die Platzhalter sind ein Fragezeichen ( **?** ), d. h. alle Zeichen und ein Sternchen entsprechen (<strong>\*</strong>), d. h. entsprechen, eine beliebige Anzahl von Zeichen.
 
 Wenn Sie angeben, dass eine Zeichenfolge der Länge 0 (null) für *LpPathSpec*, das aktuelle Verzeichnis verwendet werden und *LpPathSpec* wird nicht geändert werden. Wenn Sie nur einen Verzeichnisnamen angeben, aber Sie keine Dateispezifikation schließen, wird die Zeichenfolge geändert werden, um "\*".
 
@@ -3162,7 +3162,7 @@ Diese Methode emuliert die Funktionen der Funktion [FlashWindowEx](/windows/desk
 
 ##  <a name="fromhandle"></a>  CWnd:: FromHandle
 
-Gibt einen Zeigt zu einem `CWnd`-Objekt zurück, wenn ein Handle zu einem Fenster vorhanden ist.  Wenn ein `CWnd`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CWnd`-Objekt erstellt und angefügt.
+Gibt einen Zeigt zu einem `CWnd`-Objekt zurück, wenn ein Handle zu einem Fenster vorhanden ist. Wenn ein `CWnd`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CWnd`-Objekt erstellt und angefügt.
 
 ```
 static CWnd* PASCAL FromHandle(HWND hWnd);
@@ -3175,13 +3175,13 @@ Ein HWND eines Windows-Fensters.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeigt zu einem `CWnd`-Objekt zurück, wenn ein Handle zu einem Fenster vorhanden ist.  Wenn ein `CWnd`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CWnd`-Objekt erstellt und angefügt.
+Gibt einen Zeigt zu einem `CWnd`-Objekt zurück, wenn ein Handle zu einem Fenster vorhanden ist. Wenn ein `CWnd`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CWnd`-Objekt erstellt und angefügt.
 
 Der Zeiger kann temporär sein und sollte nicht für eine spätere Verwendung gespeichert werden.
 
 ##  <a name="fromhandlepermanent"></a>  CWnd::FromHandlePermanent
 
-Gibt einen Zeigt zu einem `CWnd`-Objekt zurück, wenn ein Handle zu einem Fenster vorhanden ist. 
+Gibt einen Zeigt zu einem `CWnd`-Objekt zurück, wenn ein Handle zu einem Fenster vorhanden ist.
 
 ```
 static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
@@ -4288,7 +4288,7 @@ Bezeichnet das Steuerelement als Ausgangspunkt für die Suche verwendet werden.
 Gibt an, wie die Funktion ist, um die Gruppe von Steuerelementen im Dialogfeld Suchen. Bei "true", sucht die Funktion das vorherige Steuerelement in der Gruppe ""; False gibt an, sucht er das nächste Steuerelement in der Gruppe ein.
 
 *pCurSiteOrWnd*<br/>
-Identifiziert die `COleControlSiteOrWnd` Steuerelement. Weitere Informationen zu `COleControlSiteOrWnd`, finden Sie unter **"Hinweise"**.
+Identifiziert die `COleControlSiteOrWnd` Steuerelement. Weitere Informationen zu `COleControlSiteOrWnd`, finden Sie unter **"Hinweise"** .
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -7757,7 +7757,7 @@ Enthält einen Zeiger auf den ausgewählten `CMenu`. Der Zeiger kann temporär s
 
 Das höherwertige Wort des Rückgabewerts sollte dem folgenden Befehl Codes enthalten:
 
-|Wert|Beschreibung|
+|Wert|Description|
 |-----------|-----------------|
 |0|Weist Windows, um das Zeichen, dass der Benutzer gedrückt, und erstellt ein kurzes akustisches Signal, auf dem Systemlautsprecher zu verwerfen.|
 |1|Weist Windows, um das aktuelle Menü zu schließen.|

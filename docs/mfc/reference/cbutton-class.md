@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3283e974dc2b933049599fba0b6cf51c32a18ef3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348691"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450830"
 ---
 # <a name="cbutton-class"></a>CButton-Klasse
 
@@ -153,7 +153,7 @@ Wenn Sie Windows gesendete benachrichtigungsmeldungen von einem Schaltflächen-S
 
 Jede Nachricht-Zuordnungseintrag weist folgende Form:
 
-**ON\_**_Benachrichtigung_ **(** _Id_, _MemberFxn_ **)**
+**ON\_** _Benachrichtigung_ **(** _Id_, _MemberFxn_ **)**
 
 wo *Id* gibt die untergeordneten Fenster-ID des Steuerelements, das Senden der Benachrichtigung und *MemberFxn* ist der Name der übergeordneten Member-Funktion, die Sie geschrieben haben, um die Benachrichtigung zu verarbeiten.
 
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 In der ersten Überladung ist eine [CString](../../atl-mfc-shared/using-cstring.md) -Objekt, den dem aktuellen Befehl Link-Steuerelement zugeordneten Notiztext enthält.
 
-- oder - 
+- oder -
 
 In der zweiten Überladung ist "true", wenn diese Methode erfolgreich ist; andernfalls "false".
 
@@ -808,7 +808,7 @@ True, wenn diese Methode erfolgreich ist. andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn eine Schaltfläche oder Link-Steuerelement mit erhöhter Sicherheitsberechtigung zum Ausführen einer Aktion erforderlich ist, legen Sie das Steuerelement auf `elevation required` Zustand. Anschließend zeigt Windows das Shield-Symbol (User Account Control, UAC) auf dem Steuerelement. Weitere Informationen finden Sie unter "User Account Control" [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).
+Wenn eine Schaltfläche oder Link-Steuerelement mit erhöhter Sicherheitsberechtigung zum Ausführen einer Aktion erforderlich ist, legen Sie das Steuerelement auf `elevation required` Zustand. Anschließend zeigt Windows das Shield-Symbol (User Account Control, UAC) auf dem Steuerelement. Weitere Informationen finden Sie unter "User Account Control" [MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507).
 
 Diese Methode sendet die [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) -Nachricht, die im Windows SDK beschrieben wird.
 

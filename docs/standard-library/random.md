@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369805"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450791"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -49,7 +49,7 @@ Hier sind einige Tipps zu bedenken, wenn mit \<random >:
 
 - Die hilfreichste Paarung für die meisten Anwendungen ist die `mt19937`-Engine mit `uniform_int_distribution`, wie später in diesem Artikel im [Codebeispiel](#code) gezeigt.
 
-Es gibt viele Optionen zur Auswahl der \<random > Header und einer von ihnen empfiehlt sich, den veralteten C-Laufzeitfunktion `rand()`. Informationen zu den neuerungen auszusetzen `rand()` und wie \<random > dieser Schwachpunkte finden Sie unter [in diesem Video](http://go.microsoft.com/fwlink/p/?linkid=397615).
+Es gibt viele Optionen zur Auswahl der \<random > Header und einer von ihnen empfiehlt sich, den veralteten C-Laufzeitfunktion `rand()`. Informationen zu den neuerungen auszusetzen `rand()` und wie \<random > dieser Schwachpunkte finden Sie unter [in diesem Video](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Beispiele
 
@@ -411,7 +411,7 @@ Finden Sie in den folgenden Abschnitten Informationen zu jedem dieser in definie
 
 - `UIntType` Gibt an **unsigned short**, **ganze Zahl ohne Vorzeichen**, **unsigned long**, oder **long long ohne Vorzeichen**.
 
-- `RealType` Gibt eine **"float"**, **doppelte**, oder **long double**.
+- `RealType` Gibt eine **"float"** , **doppelte**, oder **long double**.
 
 ### <a name="engines"></a>Engines
 
@@ -500,7 +500,7 @@ Dies sind zwei höchst hilfereiche URNGs in Visual Studio – `mt19937` und `ran
 
 <sup>* Wenn mit einem bekannten Startwert ausgestattet.</sup>
 
-Obwohl der ISO C++-Standard nicht erfordert, dass `random_device` kryptografisch sicher ist, wird es in Visual Studio implementiert, um kryptografische Sicherheit herzustellen. (Der Begriff „kryptografisch sicher“ drückt keine Garantie aus, sondern bezeichnet ein Mindest-Entropieniveau – und damit ein Vorhersagbarkeitsniveau –, das ein bestimmter Randomisierungsalgorithmus aufweist. Weitere Informationen finden Sie im Wikipedia-Artikel [Cryptographically secure pseudorandom number generator (Kryptographisch sicherer Zufallszahlengenerator, in englischer Sprache)](http://go.microsoft.com/fwlink/p/?linkid=398017).) Da der ISO C++-Standard dies nicht erfordert, können andere Plattformen `random_device` als einfachen Zufallszahlengenerator (kryptografisch nicht sicher) implementieren, der nur als Stammwertequelle für einen anderen Generator geeignet ist. Lesen Sie die Dokumentation für diese Plattformen, wenn Sie `random_device` plattformübergreifend verwenden.
+Obwohl der ISO C++-Standard nicht erfordert, dass `random_device` kryptografisch sicher ist, wird es in Visual Studio implementiert, um kryptografische Sicherheit herzustellen. (Der Begriff „kryptografisch sicher“ drückt keine Garantie aus, sondern bezeichnet ein Mindest-Entropieniveau – und damit ein Vorhersagbarkeitsniveau –, das ein bestimmter Randomisierungsalgorithmus aufweist. Weitere Informationen finden Sie im Wikipedia-Artikel [Cryptographically secure pseudorandom number generator (Kryptographisch sicherer Zufallszahlengenerator, in englischer Sprache)](https://go.microsoft.com/fwlink/p/?linkid=398017).) Da der ISO C++-Standard dies nicht erfordert, können andere Plattformen `random_device` als einfachen Zufallszahlengenerator (kryptografisch nicht sicher) implementieren, der nur als Stammwertequelle für einen anderen Generator geeignet ist. Lesen Sie die Dokumentation für diese Plattformen, wenn Sie `random_device` plattformübergreifend verwenden.
 
 `random_device`-Ergebnisse sind per Definition nicht reproduzierbar, und ein Nebeneffekt ist, dass er eventuell deutlich langsamer läuft als andere URNGs. Die meisten Anwendungen, für die keine kryptografische Sicherheit erforderlich sind, verwenden `mt19937` oder eine ähnliche Engine, obwohl Sie sie vielleicht mit einem Aufruf von `random_device` starten möchten, wie im [Codebeispiel](#code) gezeigt.
 

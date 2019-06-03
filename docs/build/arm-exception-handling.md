@@ -2,12 +2,12 @@
 title: ARM-Ausnahmebehandlung
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195354"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450483"
 ---
 # <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
@@ -21,7 +21,7 @@ Das ARM EABI (Embedded Application Binary Interface) legt ein Ausnahmeentladungs
 
 ### <a name="assumptions"></a>Annahmen
 
-Ausführbare Dateien für Windows auf ARM verwenden das portierbare ausführbare Format (Portable Executable, PE). Weitere Informationen finden Sie unter [Microsoft PE- und COFF-Spezifikation](http://go.microsoft.com/fwlink/p/?linkid=84140). Ausnahmebehandlungsinformationen werden in den Abschnitten .pdata und .xdata des Bilds gespeichert.
+Ausführbare Dateien für Windows auf ARM verwenden das portierbare ausführbare Format (Portable Executable, PE). Weitere Informationen finden Sie unter [Microsoft PE- und COFF-Spezifikation](https://go.microsoft.com/fwlink/p/?linkid=84140). Ausnahmebehandlungsinformationen werden in den Abschnitten .pdata und .xdata des Bilds gespeichert.
 
 Der Ausnahmebehandlungsmechanismus geht von bestimmten Annahmen über den Code aus, der ABI für Windows auf ARM folgt:
 

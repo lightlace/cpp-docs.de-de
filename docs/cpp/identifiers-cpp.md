@@ -8,12 +8,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 61ca021a8f41074dcef6bf9df2e5683ede98deee
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: c905d6acc52f2f4f2a7bf3e92426f76adf25390e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222431"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450313"
 ---
 # <a name="identifiers-c"></a>Bezeichner (C++)
 
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-Der Bereich der in einem Bezeichner zulässigen Zeichen ist weniger restriktiv, wenn C++ /CLI-Code kompiliert wird. Im Code mit/CLR kompiliert entsprechen [Standard ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Der Bereich der in einem Bezeichner zulässigen Zeichen ist weniger restriktiv, wenn C++ /CLI-Code kompiliert wird. Im Code mit/CLR kompiliert entsprechen [Standard ECMA-335: Common Language Infrastructure (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 **Ende Microsoft-spezifisch**
 

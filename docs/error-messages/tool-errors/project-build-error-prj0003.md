@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 00d101e62d49078ebfcfff9455497f30224b84fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30a63ba48434196478b52283880864d3e4ae6ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359695"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450753"
 ---
 # <a name="project-build-error-prj0003"></a>Projektbuildfehler PRJ0003
 
@@ -21,7 +21,7 @@ Die *Befehlszeile* Befehl formatiert wird, mit der Eingabe in die **Eigenschafte
 
 Mögliche Ursachen für diesen Fehler sind:
 
-- Ihr Projekt hängt von ATL-Server ab. Ab Visual Studio 2008, ATL-Server ist nicht mehr als Teil von Visual Studio enthalten, jedoch wurde als shared-Source-Projekt auf CodePlex veröffentlicht. Um den Quellcode für die ATL-Server und die Tools herunterzuladen, wechseln Sie zu [ATL-Serverbibliothek und Tools](http://go.microsoft.com/fwlink/p/?linkid=81979).
+- Ihr Projekt hängt von ATL-Server ab. Ab Visual Studio 2008, ATL-Server ist nicht mehr als Teil von Visual Studio enthalten, jedoch wurde als shared-Source-Projekt auf CodePlex veröffentlicht. Um den Quellcode für die ATL-Server und die Tools herunterzuladen, wechseln Sie zu [ATL-Serverbibliothek und Tools](https://go.microsoft.com/fwlink/p/?linkid=81979).
 
 - Geringe Systemressourcen. Schließen Sie einige Anwendungen zur Lösung dieses Problems.
 

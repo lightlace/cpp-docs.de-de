@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 93db20d14d3477734e35d33111246f9459310b90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45d6492c87b7543a54d031f02dcf09e319150131
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317158"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449724"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (Windows-Metadaten generieren)
 
 Aktiviert die Generierung einer Windows-Runtime-Metadatendatei (.winmd)-Datei.
 
-> **/WINMD**\[**:**{**NO**\|**ONLY**}]
+> **/WINMD**\[ **:** {**NO**\|**ONLY**}]
 
 ## <a name="arguments"></a>Argumente
 
@@ -30,13 +30,13 @@ Der Linker wird nur die winmd-Datei, aber nicht die binäre ausführbare Datei g
 
 ## <a name="remarks"></a>Hinweise
 
-Die **/WINMD** -Linkeroption wird für UWP-apps und Windows-Runtime-Komponenten verwendet, um die Erstellung einer Windows-Runtime-Metadatendatei (.winmd) zu steuern. Eine winmd-Datei ist eine Art von DLL, die Metadaten für Windows-Runtime-Typen und im Fall von Runtime-Komponenten, die Implementierungen dieser Typen enthält. Die Metadaten folgen der [ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
+Die **/WINMD** -Linkeroption wird für UWP-apps und Windows-Runtime-Komponenten verwendet, um die Erstellung einer Windows-Runtime-Metadatendatei (.winmd) zu steuern. Eine winmd-Datei ist eine Art von DLL, die Metadaten für Windows-Runtime-Typen und im Fall von Runtime-Komponenten, die Implementierungen dieser Typen enthält. Die Metadaten folgen der [ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
 
 Standardmäßig den Namen der Ausgabedatei hat das Format *Binaryname*winmd. Um einen anderen Dateinamen anzugeben, verwenden die [/winmdfile](winmdfile-specify-winmd-file.md) Option.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
 1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Windows-Metadaten** Eigenschaftenseite.
 

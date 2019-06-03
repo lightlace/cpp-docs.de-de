@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414008"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449693"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 
@@ -63,7 +63,7 @@ Referenzdokumentation finden Sie unter [Verweis](../../parallel/concrt/reference
 |-|-|
 |[Erstellen von asynchronen Vorgängen in C++ für UWP-Apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Beschreibt einige der wichtigsten Punkte zu bedenken, bei der Verwendung der Concurrency Runtime asynchrone Vorgänge in einer UWP-app erstellt.|
 |[Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Zeigt, wie PPL-Aufgaben mit kombiniert die `IXMLHTTPRequest2` und `IXMLHTTPRequest2Callback` Schnittstellen zum Senden von HTTP GET- und POST-Anforderungen an einen Webdienst in einer UWP-app.|
-|[Windows-Runtime-app-Beispiele](http://code.msdn.microsoft.com/windowsapps)|Enthält herunterladbare Codebeispiele und Demo-apps für Windows 8.x. Die C++-Beispiele verwenden Concurrency Runtime-Funktionen wie PPL-Aufgaben, um Daten im Hintergrund zu verarbeiten und so die Reaktionsfähigkeit aufrechtzuerhalten.|
+|[Windows-Runtime-app-Beispiele](https://code.msdn.microsoft.com/windowsapps)|Enthält herunterladbare Codebeispiele und Demo-apps für Windows 8.x. Die C++-Beispiele verwenden Concurrency Runtime-Funktionen wie PPL-Aufgaben, um Daten im Hintergrund zu verarbeiten und so die Reaktionsfähigkeit aufrechtzuerhalten.|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Datenflussprogrammierung in der Asynchronous Agents Library
 
@@ -99,8 +99,8 @@ Referenzdokumentation finden Sie unter [Verweis](../../parallel/concrt/reference
 |||
 |-|-|
 |[Muster und Tipps für die asynchrone Programmierung in Hilo (Windows Store-Apps mit C++ und XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Erfahren Sie, wie wir die Concurrency Runtime verwendet, um asynchrone Vorgänge in Hilo, einer Windows-Runtime-app, die mit C++ und XAML implementiert.|
-|[Parallel Programming in Native Code blog (Blog zum Thema paralleles Programmieren in nativem Code)](http://go.microsoft.com/fwlink/p/?linkid=183873)|Bietet zusätzliche ausführliche Blogartikel zur parallelen Programmierung in der Concurrency Runtime.|
-|[Parallel Computing in C++ and Native Code forum (Forum zum Thema paralleles Computing in C++ und nativem Code)](http://go.microsoft.com/fwlink/p/?linkid=183874)|Ermöglicht Ihnen die Teilnahme an Communitydiskussionen über die Concurrency Runtime.|
+|[Parallel Programming in Native Code blog (Blog zum Thema paralleles Programmieren in nativem Code)](https://go.microsoft.com/fwlink/p/?linkid=183873)|Bietet zusätzliche ausführliche Blogartikel zur parallelen Programmierung in der Concurrency Runtime.|
+|[Parallel Computing in C++ and Native Code forum (Forum zum Thema paralleles Computing in C++ und nativem Code)](https://go.microsoft.com/fwlink/p/?linkid=183874)|Ermöglicht Ihnen die Teilnahme an Communitydiskussionen über die Concurrency Runtime.|
 |[Parallele Programmierung](/dotnet/standard/parallel-programming/index)|Erfahren Sie, das parallel-Programmiermodell, das in .NET Framework verfügbar ist.|
 
 ## <a name="see-also"></a>Siehe auch

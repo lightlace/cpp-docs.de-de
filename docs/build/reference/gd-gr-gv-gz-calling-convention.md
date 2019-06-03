@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 4e3da750b174fa92e28c1d0d5a8cbc035738ee51
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 72d65ce7471ed047ab8347a45c58a6b8a9f39a7a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837279"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450848"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Aufrufkonvention)
 
@@ -39,7 +39,7 @@ Mit diesen Optionen wird festgelegt, in welcher Reihenfolge die Funktionsargumen
 > **/Gv**<br/>
 > **/Gz**<br/>
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 **/Gd**, die Standardeinstellung, gibt die [__cdecl](../../cpp/cdecl.md)-Aufrufkonvention für alle Funktionen an, mit Ausnahme von C++-Memberfunktionen und allen Funktionen, die als [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md) oder [__vectorcall](../../cpp/vectorcall.md) gekennzeichnet sind.
 
@@ -47,7 +47,7 @@ Mit diesen Optionen wird festgelegt, in welcher Reihenfolge die Funktionsargumen
 
 **/Gz** legt die `__stdcall`-Aufrufkonvention für alle Funktionen mit Ausnahme von C++-Memberfunktionen, als `main` benannten Funktionen und mit `__cdecl`, `__fastcall` oder `__vectorcall` gekennzeichneten Funktionen fest. Alle `__stdcall`-Funktionen müssen Prototypen haben. Diese Aufrufkonvention ist nur in Compilern verfügbar, die auf x86 abzielen, und wird von Compilern ignoriert, die auf andere Architekturen abzielen.
 
-**/Gv** gibt die `__vectorcall`-Aufrufkonvention für alle Funktionen an, außer C++-Memberfunktionen, Funktionen mit der Bezeichnung „main“, Funktionen mit einer Liste variabler Argumente `vararg` oder Funktionen, die mit einem widersprüchlichen `__cdecl`-, `__stdcall`- oder `__fastcall`-Attribut markiert sind. Diese Aufrufkonvention ist nur auf x86- und x64-Architekturen verfügbar, die „/arch:SSE2“ und höher unterstützen, und wird von Compilern ignoriert, die auf die ARM-Architektur abzielen.
+**/ GV** gibt an, die `__vectorcall` -Aufrufkonvention für alle Funktionen außer C++ Memberfunktionen, Funktionen, die mit dem Namen `main`, Funktionen mit einer `vararg` Liste variabler Argumente oder Funktionen, die mit einem widersprüchlichen markiert sind `__cdecl`, `__stdcall`, oder `__fastcall` Attribut. Diese Aufrufkonvention ist nur auf x86- und x64-Architekturen verfügbar, die „/arch:SSE2“ und höher unterstützen, und wird von Compilern ignoriert, die auf die ARM-Architektur abzielen.
 
 Funktionen, die eine variable Anzahl von Argumenten akzeptieren, müssen mit `__cdecl` gekennzeichnet sein.
 
@@ -101,7 +101,7 @@ Für C verwendet die `__vectorcall`-Benennungskonvention den Funktionsnamen, gef
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
-1. Wählen Sie die **C/C++** > **Erweitert**-Eigenschaftenseite aus.
+1. Wählen Sie die **C/C++**  > **Erweitert**-Eigenschaftenseite aus.
 
 1. Ändern Sie die Eigenschaft **Aufrufkonvention**.
 

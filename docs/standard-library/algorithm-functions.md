@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b914b3d2ed61c81629c06739eac86692d1444e58
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411173"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450417"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorithmusfunktionen&gt;
 
@@ -370,7 +370,7 @@ Gibt **"true"** , wenn die Bedingung in jedem Element im angegebenen Bereich erk
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion gibt **"true"** nur dann für jeden `N` im Bereich von `[0,Last - first)`, das Prädikat `comp(*(_First + N))` ist **"true"**.
+Die Vorlagenfunktion gibt **"true"** nur dann für jeden `N` im Bereich von `[0,Last - first)`, das Prädikat `comp(*(_First + N))` ist **"true"** .
 
 ## <a name="any_of"></a> any_of
 
@@ -440,7 +440,7 @@ Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn ein Element im Bereich gefunden wird, die oder gleich dem angegebenen Wert übereinstimmt, andernfalls **"false"**.
+**"true"** , wenn ein Element im Bereich gefunden wird, die oder gleich dem angegebenen Wert übereinstimmt, andernfalls **"false"** .
 
 ### <a name="remarks"></a>Hinweise
 
@@ -744,7 +744,7 @@ Ein Eingabeiterator, der das Ende des Bereichs angibt.
 Ein Ausgabeiterator, der das Ziel der kopierten Elemente angibt.
 
 *_Pred*<br/>
-Die Bedingung, auf die jedes Element im Bereich geprüft wird. Diese Bedingung wird von einem benutzerdefinierten Prädikatfunktionsobjekt bereitgestellt. Ein Prädikat akzeptiert ein Argument und gibt **"true"** oder **"false"**.
+Die Bedingung, auf die jedes Element im Bereich geprüft wird. Diese Bedingung wird von einem benutzerdefinierten Prädikatfunktionsobjekt bereitgestellt. Ein Prädikat akzeptiert ein Argument und gibt **"true"** oder **"false"** .
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -996,7 +996,7 @@ Benutzerdefiniertes Prädikatfunktionsobjekt, das die zu erfüllende Bedingung d
 
 Der zu durchsuchende Bereich muss gültig sein. Alle Iteratoren müssen dereferenzierbar sein, und die letzte Position ist von der Ersten durch Zunahme erreichbar.
 
-Wenn die beiden Bereich die gleiche Länge aufweisen, ist die Zeitkomplexität des Algorithmus linear zur Anzahl der im Bereich enthaltenen Elemente. Andernfalls gibt die Funktion sofort zurück **"false"**.
+Wenn die beiden Bereich die gleiche Länge aufweisen, ist die Zeitkomplexität des Algorithmus linear zur Anzahl der im Bereich enthaltenen Elemente. Andernfalls gibt die Funktion sofort zurück **"false"** .
 
 Weder das `operator==` noch das benutzerdefinierte Prädikat ist erforderlich, um eine Äquivalenzbeziehung vorzugeben, die zwischen den dazugehörigen Operanden symmetrisch, reflexiv und transitiv ist.
 
@@ -1695,7 +1695,7 @@ Benutzerdefiniertes Prädikatfunktionsobjekt oder [Lambdaausdruck](../cpp/lambda
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein eingabeiterator, der auf das erste Element im Bereich verweist, das vom Prädikat angegebene Bedingung erfüllt (das Prädikat ergibt **"true"**). Gibt zurück, wenn kein Element gefunden wird, um das Prädikat erfüllen, *letzten*.
+Ein eingabeiterator, der auf das erste Element im Bereich verweist, das vom Prädikat angegebene Bedingung erfüllt (das Prädikat ergibt **"true"** ). Gibt zurück, wenn kein Element gefunden wird, um das Prädikat erfüllen, *letzten*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1811,7 +1811,7 @@ Benutzerdefiniertes Prädikatfunktionsobjekt oder [Lambdaausdruck](../cpp/lambda
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein eingabeiterator, der auf das erste Element im Bereich verweist, die die vom Prädikat angegebene Bedingung nicht erfüllt (das Prädikat ergibt **"false"**). Wenn alle Elemente das Prädikat erfüllen (das Prädikat ergibt **"true"** für jedes Element), gibt *letzten*.
+Ein eingabeiterator, der auf das erste Element im Bereich verweist, die die vom Prädikat angegebene Bedingung nicht erfüllt (das Prädikat ergibt **"false"** ). Wenn alle Elemente das Prädikat erfüllen (das Prädikat ergibt **"true"** für jedes Element), gibt *letzten*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2498,7 +2498,7 @@ Ein zufälliger direkter Iterator, der den Beginn eines Bereichs angibt, der auf
 Ein zufälliger direkter Iterator, der das Ende des Bereichs angibt.
 
 *comp*<br/>
-Eine zu prüfende Bedingung, um Elemente zu sortieren. Ein binäres Prädikat akzeptiert ein einzelnes Argument und gibt **"true"** oder **"false"**.
+Eine zu prüfende Bedingung, um Elemente zu sortieren. Ein binäres Prädikat akzeptiert ein einzelnes Argument und gibt **"true"** oder **"false"** .
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2552,7 +2552,7 @@ Die zweite Vorlagenfunktion verhält sich wie die erste, mit der Ausnahme, dass 
 
 ## <a name="is_partitioned"></a> is_partitioned
 
-Gibt **"true"** , wenn alle Elemente im angegebenen Bereich zu testen, ob **"true"** für eine Bedingung ergeben, vor allen Elementen, die testen **"false"**.
+Gibt **"true"** , wenn alle Elemente im angegebenen Bereich zu testen, ob **"true"** für eine Bedingung ergeben, vor allen Elementen, die testen **"false"** .
 
 ```cpp
 template<class InputIterator, class BinaryPredicate>
@@ -2575,11 +2575,11 @@ Eine Bedingung, auf die geprüft werden soll. Dies wird von einem benutzerdefini
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt true zurück, wenn alle Elemente im angegebenen Bereich, die testen **"true"** für eine Bedingung ergeben, vor allen Elementen, die testen **"false"**, und andernfalls **"false"**.
+Gibt true zurück, wenn alle Elemente im angegebenen Bereich, die testen **"true"** für eine Bedingung ergeben, vor allen Elementen, die testen **"false"** , und andernfalls **"false"** .
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion gibt **"true"** nur, wenn alle Elemente im `[` `first ,` `last )` sind nach partitioniert *Comp*; d. h. alle Elemente `X` in `[` `first ,` `last )` für die `comp (X)` ist "true" vor allen Elementen auftreten `Y` für die `comp (Y)` ist **"false"**.
+Die Vorlagenfunktion gibt **"true"** nur, wenn alle Elemente im `[` `first ,` `last )` sind nach partitioniert *Comp*; d. h. alle Elemente `X` in `[` `first ,` `last )` für die `comp (X)` ist "true" vor allen Elementen auftreten `Y` für die `comp (Y)` ist **"false"** .
 
 ## <a name="is_permutation"></a> is_permutation
 
@@ -2631,11 +2631,11 @@ Ein forward-Iterator, der für den Vergleich auf das erste Element eines zweiten
 Ein forward-Iterator, der für den Vergleich auf eine Stelle hinter dem letzten Element eines zweiten Bereichs verweist.
 
 *Pred*<br/>
-Ein Prädikat, das auf Übereinstimmung überprüft und gibt eine **"bool"**.
+Ein Prädikat, das auf Übereinstimmung überprüft und gibt eine **"bool"** .
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Bereiche neu angeordnet werden können, um gemäß dem Vergleichsprädikat identisch ist, andernfalls **"false"**.
+**"true"** , wenn die Bereiche neu angeordnet werden können, um gemäß dem Vergleichsprädikat identisch ist, andernfalls **"false"** .
 
 ### <a name="remarks"></a>Hinweise
 
@@ -4793,7 +4793,7 @@ Gibt **"true"** , wenn die Bedingung nicht mindestens einmal im angegebenen Bere
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion gibt **"true"** nur dann für einige `N` im Bereich von `[0, last - first)`, das Prädikat `comp(*(first + N))` ist immer **"false"**.
+Die Vorlagenfunktion gibt **"true"** nur dann für einige `N` im Bereich von `[0, last - first)`, das Prädikat `comp(*(first + N))` ist immer **"false"** .
 
 ## <a name="partial_sort"></a> partial_sort
 
@@ -5172,7 +5172,7 @@ Gibt eine `ForwardIterator` , verweist auf das erste Element, das die Bedingung 
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion findet den ersten Iterator `it` in `[first, last)` für die `comp(*it)` ist **"false"**. Die Sequenz muss sortiert werden, indem *Comp*.
+Die Vorlagenfunktion findet den ersten Iterator `it` in `[first, last)` für die `comp(*it)` ist **"false"** . Die Sequenz muss sortiert werden, indem *Comp*.
 
 ## <a name="pop_heap"></a> pop_heap
 
@@ -5307,7 +5307,7 @@ Ein benutzerdefiniertes Prädikatfunktionsobjekt, das das Vergleichskriterium de
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die lexikographisch vorherige Permutation vorhanden ist und ersetzt die ursprüngliche Reihenfolge des Bereichs; andernfalls **"false"**, in diesem Fall wird die Reihenfolge in die lexikographisch größte umgewandelt Permutation.
+**"true"** , wenn die lexikographisch vorherige Permutation vorhanden ist und ersetzt die ursprüngliche Reihenfolge des Bereichs; andernfalls **"false"** , in diesem Fall wird die Reihenfolge in die lexikographisch größte umgewandelt Permutation.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a> random_shuffle
 
-Die Funktion Std::random_shuffle() ist veraltet, ersetzt durch [Std:: Shuffle](../standard-library/algorithm-functions.md#shuffle). Ein Codebeispiel und Weitere Informationen finden Sie unter [ \<random >](../standard-library/random.md) und Stack Overflow-Beitrag [Warum werden Std:: random_shuffle Methods eingestellt in C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
+Die Funktion Std::random_shuffle() ist veraltet, ersetzt durch [Std:: Shuffle](../standard-library/algorithm-functions.md#shuffle). Ein Codebeispiel und Weitere Informationen finden Sie unter [ \<random >](../standard-library/random.md) und Stack Overflow-Beitrag [Warum werden Std:: random_shuffle Methods eingestellt in C ++ 14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
 
 ## <a name="remove"></a>  remove
 

@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2428c94eaa5dd371d58680f6317173709f684507
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323634"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449573"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -375,7 +375,7 @@ Ungleich NULL, wenn erfolgreich, andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_**.
+Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_** .
 
 ##  <a name="createdragimage"></a>  CTreeCtrl::CreateDragImage
 
@@ -1505,7 +1505,7 @@ Das Handle für ein Strukturansichtselement ( `HTREEITEM`), entspricht die *uAcc
 
 ### <a name="remarks"></a>Hinweise
 
-Eingabehilfen sind, dass Anwendungen, die Personen mit behinderungen ermöglichen Computern verwenden. Ein Bezeichner für die Barrierefreiheit wird verwendet, durch die `IAccessible` Schnittstelle eindeutig an ein Element in einem Fenster. Weitere Informationen zu Eingabehilfen-IDs, suchen Sie nach dem Thema "Informationen zu Active Accessibility-Unterstützung" unter [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Eingabehilfen sind, dass Anwendungen, die Personen mit behinderungen ermöglichen Computern verwenden. Ein Bezeichner für die Barrierefreiheit wird verwendet, durch die `IAccessible` Schnittstelle eindeutig an ein Element in einem Fenster. Weitere Informationen zu Eingabehilfen-IDs, suchen Sie nach dem Thema "Informationen zu Active Accessibility-Unterstützung" unter [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Diese Methode sendet die [TVM_MAPACCIDTOHTREEITEM](/windows/desktop/Controls/tvm-mapaccidtohtreeitem) -Nachricht, die im Windows SDK beschrieben wird.
 
@@ -1541,7 +1541,7 @@ Die Barrierefreiheit-Identifier, entspricht die *hItem* Parameter.
 
 ### <a name="remarks"></a>Hinweise
 
-Eingabehilfen sind, dass Anwendungen, die Personen mit behinderungen ermöglichen Computern verwenden. Ein Bezeichner für die Barrierefreiheit wird verwendet, durch die `IAccessible` Schnittstelle eindeutig an ein Element in einem Fenster. Weitere Informationen zu Eingabehilfen-IDs, suchen Sie nach dem Thema "Informationen zu Active Accessibility-Unterstützung" unter [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Eingabehilfen sind, dass Anwendungen, die Personen mit behinderungen ermöglichen Computern verwenden. Ein Bezeichner für die Barrierefreiheit wird verwendet, durch die `IAccessible` Schnittstelle eindeutig an ein Element in einem Fenster. Weitere Informationen zu Eingabehilfen-IDs, suchen Sie nach dem Thema "Informationen zu Active Accessibility-Unterstützung" unter [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Diese Methode sendet die [TVM_MAPHTREEITEMTOACCID](/windows/desktop/Controls/tvm-maphtreeitemtoaccid) -Nachricht, die im Windows SDK beschrieben wird.
 
@@ -2281,7 +2281,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu den Unterschieden zwischen den QuickInfos und Infotipps suchen Sie nach dem Thema in der "QuickInfos und Infotipps" [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Weitere Informationen zu den Unterschieden zwischen den QuickInfos und Infotipps suchen Sie nach dem Thema in der "QuickInfos und Infotipps" [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Diese Methode sendet die [TVM_SHOWINFOTIP](/windows/desktop/Controls/tvm-showinfotip) -Nachricht, die im Windows SDK beschrieben wird.
 

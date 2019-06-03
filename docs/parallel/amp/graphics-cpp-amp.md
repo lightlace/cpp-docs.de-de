@@ -2,12 +2,12 @@
 title: Grafiken (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e21c5af094ce90c8e4365ed4263198422ad1905
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405663"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449868"
 ---
 # <a name="graphics-c-amp"></a>Grafiken (C++ AMP)
 
@@ -25,7 +25,7 @@ Die `norm` und `unorm` Typen sind skalare Typen, die den Bereich der beschränke
 
 ## <a name="short-vector-library"></a>Kurzvektorbibliothek
 
-Die Kurzvektorbibliothek bietet einige Funktionen des die [Vektortyp](http://go.microsoft.com/fwlink/p/?linkid=248500) , der in HLSL definiert ist, und wird normalerweise verwendet, um Texel zu definieren. Ein Kurzvektor ist eine Datenstruktur, die ein bis vier Werte desselben Typs enthält. Die unterstützten Typen sind **doppelte**, **"float"**, **Int**, `norm`, `uint`, und `unorm`. In der folgenden Tabelle werden Typnamen aufgeführt. Für jeden Typ, es gibt auch eine entsprechende **Typedef** , die keinen Unterstrich im Namen. Die Typen, die unterstrichen befinden sich in der [Concurrency:: Graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Die Typen, die die keine Unterstriche enthalten sind, in der [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) , damit sie eindeutig von der grundlegenden Typen mit ähnlichen Namen wie z. B. getrennt sind **__int8** und **__int16**.
+Die Kurzvektorbibliothek bietet einige Funktionen des die [Vektortyp](https://go.microsoft.com/fwlink/p/?linkid=248500) , der in HLSL definiert ist, und wird normalerweise verwendet, um Texel zu definieren. Ein Kurzvektor ist eine Datenstruktur, die ein bis vier Werte desselben Typs enthält. Die unterstützten Typen sind **doppelte**, **"float"** , **Int**, `norm`, `uint`, und `unorm`. In der folgenden Tabelle werden Typnamen aufgeführt. Für jeden Typ, es gibt auch eine entsprechende **Typedef** , die keinen Unterstrich im Namen. Die Typen, die unterstrichen befinden sich in der [Concurrency:: Graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Die Typen, die die keine Unterstriche enthalten sind, in der [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) , damit sie eindeutig von der grundlegenden Typen mit ähnlichen Namen wie z. B. getrennt sind **__int8** und **__int16**.
 
 ||Length 2|Die Länge 3|Länge 4|
 |-|--------------|--------------|--------------|
@@ -63,11 +63,11 @@ Die Kurzvektorbibliothek unterstützt das Accessorkonstrukt `vector_type.identif
 
 Viele GPUs haben Hardware und Caches, die für den Abruf von Pixeln und Texeln und zum Rendern von Images und Texturen optimiert sind. Die [Textur\<T, N >](../../parallel/amp/reference/texture-class.md) -Klasse, die eine Containerklasse für texelobjekte ist, macht die texturfunktionalität dieses GPUs verfügbar. Ein Texel kann Folgendes sein:
 
-- Ein **Int**, `uint`, **"float"**, **doppelte**, `norm`, oder `unorm` skalare.
+- Ein **Int**, `uint`, **"float"** , **doppelte**, `norm`, oder `unorm` skalare.
 
 - Ein Kurzvektor, der zwei oder vier Komponenten enthält. Die einzige Ausnahme ist `double_4`, die unzulässig ist.
 
-Das `texture`-Objekt kann über einen Rang von 1, 2 oder 3 verfügen. Das `texture`-Objekt kann nur als Verweis im Lambda eines Aufrufs auf `parallel_for_each` erfasst werden. Die Textur wird auf dem GPU-Computer als Direct3D-Texturobjekte gespeichert. Weitere Informationen zu Texturen und texeln in Direct3D finden Sie unter [Einführung in Texturen in Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).
+Das `texture`-Objekt kann über einen Rang von 1, 2 oder 3 verfügen. Das `texture`-Objekt kann nur als Verweis im Lambda eines Aufrufs auf `parallel_for_each` erfasst werden. Die Textur wird auf dem GPU-Computer als Direct3D-Texturobjekte gespeichert. Weitere Informationen zu Texturen und texeln in Direct3D finden Sie unter [Einführung in Texturen in Direct3D 11](https://go.microsoft.com/fwlink/p/?linkid=248502).
 
 Der verwendete Texeltyp kann eines der vielen Texturformate haben, die in der Grafikprogrammierung verwendet werden. Beispielsweise kann ein RGBA-Format 32 Bit mit jeweils 8 Bit für das R-, G-, B- und A-Skalarelement verwenden. Die Texturhardware einer Grafikkarte kann auf der Grundlage des Formats auf die einzelnen Elemente zugreifen. Wenn Sie das RGBA-Format verwenden, kann die Texturhardware z. B. jedes 8-Bit-Element in ein 32-Bit-Formular extrahieren. In C++ AMP können Sie die Bits pro skalarem Element des Texels festlegen, damit Sie auf die einzelnen Skalarelemente im automatisch Code zugreifen können, ohne Bit-Verschiebung zu verwenden.
 
@@ -307,7 +307,7 @@ void write2ComponentTexture() {
 
 Wie Sie sehen können, sind die beiden Codebeispiele fast identisch, wenn Sie nur in die primäre Mipmapebene schreiben. Wenn Sie im vorhandenen Code `writeonly_texture_view` verwendet haben und diesen Code nicht verbessern möchten, müssen Sie ihn nicht ändern. Wenn Sie den Code jedoch weiterentwickeln möchten, empfiehlt es sich, ihn umzuschreiben und `texture_view` zu verwenden, da die hier enthaltenen Erweiterungen neue Hardwaretexturfunktionen unterstützen. Es folgen weitere Informationen zu diesen neuen Funktionen.
 
-Weitere Informationen zum Veralten von `writeonly_texture_view`, finden Sie unter [Überblick über die Texture View Design in C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) über die parallele Programmierung in systemeigenem Code (Blog).
+Weitere Informationen zum Veralten von `writeonly_texture_view`, finden Sie unter [Überblick über die Texture View Design in C++ AMP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) über die parallele Programmierung in systemeigenem Code (Blog).
 
 ### <a name="instantiating-texture-view-objects"></a>Instanziieren von Texturansichtsobjekten
 
@@ -379,9 +379,9 @@ void write2ComponentTexture() {
 
 Texturansichten, deren Elemente auf Gleitkommatypen basieren, z. B.float, float_2 oder float_4, sind auch mithilfe von Textursampling lesbar, sodass Hardwareunterstützung für unterschiedliche Filter- und Adressierungsmodi genutzt werden kann. C++ AMP unterstützt die beiden Filtermodi, die in Berechnungsszenarien am häufigsten verwendet werden – Punktfilterung (nächster Nachbar) und lineare Filterung (gewichteter Durchschnitt) – und die vier Adressierungsmodi Wrap, Mirror, Clamp und Border. Weitere Informationen zu adressierungsmodi finden Sie unter [Address_mode-Enumeration](reference/concurrency-graphics-namespace-enums.md#address_mode).
 
-Neben den Modi, die C++ AMP direkt unterstützt, können Sie auf andere Filtermodi und Adressierungsmodi der zugrunde liegenden Plattform zugreifen, indem Sie die Interop-APIs verwenden, um einen Textursampler anzunehmen, der unter direkter Verwendung der Plattform-APIs erstellt wurde. Beispielsweise unterstützt Direct3D andere Filtermodi wie z. B. anisotropische Filterung und kann für jede Dimension einer Textur eine andere Adressierung anwenden. Sie können einen Textursampler erstellen, dessen Koordinaten vertikal eingeschlossen, horizontal gespiegelt sind und für den mit anisotroper Filterung Stichproben erstellt wurden, indem Sie die Direct3D-APIs verwenden und dann den Sampler im C++ AMP-Code mit der Interop-API `make_sampler` nutzen. Weitere Informationen finden Sie unter [Textursampling in C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) über die parallele Programmierung in systemeigenem Code (Blog).
+Neben den Modi, die C++ AMP direkt unterstützt, können Sie auf andere Filtermodi und Adressierungsmodi der zugrunde liegenden Plattform zugreifen, indem Sie die Interop-APIs verwenden, um einen Textursampler anzunehmen, der unter direkter Verwendung der Plattform-APIs erstellt wurde. Beispielsweise unterstützt Direct3D andere Filtermodi wie z. B. anisotropische Filterung und kann für jede Dimension einer Textur eine andere Adressierung anwenden. Sie können einen Textursampler erstellen, dessen Koordinaten vertikal eingeschlossen, horizontal gespiegelt sind und für den mit anisotroper Filterung Stichproben erstellt wurden, indem Sie die Direct3D-APIs verwenden und dann den Sampler im C++ AMP-Code mit der Interop-API `make_sampler` nutzen. Weitere Informationen finden Sie unter [Textursampling in C++ AMP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) über die parallele Programmierung in systemeigenem Code (Blog).
 
-Texturansichten unterstützen auch das Lesen von Mipmaps. Schreibgeschützte Texturansichten (die einen konstanten Elementtyp haben) bieten die höchste Flexibilität, da für eine Reihe von MIP-Ebenen, die bei der Instanziierung bestimmt werden, dynamisch eine Stichprobe erstellt werden kann und Elemente mit 1, 2 oder 4 Komponenten unterstützt werden. Texturansichten mit Lese/Schreibzugriff mit Elementen mit einer einzelnen Komponente unterstützen ebenfalls Mipmaps, jedoch nur auf einer Ebene, die bei der Instanziierung bestimmt wird. Weitere Informationen finden Sie unter [Textur mit Mipmaps](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) über die parallele Programmierung in systemeigenem Code (Blog).
+Texturansichten unterstützen auch das Lesen von Mipmaps. Schreibgeschützte Texturansichten (die einen konstanten Elementtyp haben) bieten die höchste Flexibilität, da für eine Reihe von MIP-Ebenen, die bei der Instanziierung bestimmt werden, dynamisch eine Stichprobe erstellt werden kann und Elemente mit 1, 2 oder 4 Komponenten unterstützt werden. Texturansichten mit Lese/Schreibzugriff mit Elementen mit einer einzelnen Komponente unterstützen ebenfalls Mipmaps, jedoch nur auf einer Ebene, die bei der Instanziierung bestimmt wird. Weitere Informationen finden Sie unter [Textur mit Mipmaps](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) über die parallele Programmierung in systemeigenem Code (Blog).
 
 ### <a name="writing-to-texture-view-objects"></a>Schreiben in Texturansichtsobjekten
 
@@ -404,7 +404,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>Interoperabilität
 
-Die C++ AMP-Laufzeit unterstützt Interoperabilität zwischen `texture<T,1>` und [ID3D11Texture1D-Schnittstelle](http://go.microsoft.com/fwlink/p/?linkId=248503)zwischen `texture<T,2>` und [ID3D11Texture2D-Schnittstelle](http://go.microsoft.com/fwlink/p/?linkId=255317), und zwischen `texture<T,3>`und [ID3D11Texture3D-Schnittstelle](http://go.microsoft.com/fwlink/p/?linkId=255377). Die [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) -Methode übernimmt eine `texture` Objekt und gibt eine `IUnknown` Schnittstelle. Die [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) -Methode übernimmt eine `IUnknown` Schnittstelle und eine `accelerator_view` Objekt und gibt eine `texture` Objekt.
+Die C++ AMP-Laufzeit unterstützt Interoperabilität zwischen `texture<T,1>` und [ID3D11Texture1D-Schnittstelle](https://go.microsoft.com/fwlink/p/?linkId=248503)zwischen `texture<T,2>` und [ID3D11Texture2D-Schnittstelle](https://go.microsoft.com/fwlink/p/?linkId=255317), und zwischen `texture<T,3>`und [ID3D11Texture3D-Schnittstelle](https://go.microsoft.com/fwlink/p/?linkId=255377). Die [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) -Methode übernimmt eine `texture` Objekt und gibt eine `IUnknown` Schnittstelle. Die [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) -Methode übernimmt eine `IUnknown` Schnittstelle und eine `accelerator_view` Objekt und gibt eine `texture` Objekt.
 
 ## <a name="see-also"></a>Siehe auch
 

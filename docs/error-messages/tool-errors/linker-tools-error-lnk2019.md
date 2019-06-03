@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: eb28ff3673c054b8ac1876d8ba736ceddfa5fd1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447711"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449611"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Linkertoolfehler LNK2019
 
@@ -213,9 +213,9 @@ int main() {
 }
 ```
 
-Um diesen Fehler zu beheben, ändern `unsigned short` zu `wchar_t` oder `WCHAR`, oder Kompilieren Sie "LNK2019g.cpp" über **/Zc:**.
+Um diesen Fehler zu beheben, ändern `unsigned short` zu `wchar_t` oder `WCHAR`, oder Kompilieren Sie "LNK2019g.cpp" über **/Zc:** .
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-Weitere Informationen zu möglichen Ursachen und Lösungen für LNK2001 finden Sie unter der Stack Overflow-Frage [Was ist ein Fehler für undefined Reference/unresolved external Symbol, und wie behebe ich es?](http://stackoverflow.com/q/12573816/2002113).
+Weitere Informationen zu möglichen Ursachen und Lösungen für LNK2001 finden Sie unter der Stack Overflow-Frage [Was ist ein Fehler für undefined Reference/unresolved external Symbol, und wie behebe ich es?](https://stackoverflow.com/q/12573816/2002113).
 

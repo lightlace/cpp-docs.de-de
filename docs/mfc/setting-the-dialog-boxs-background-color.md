@@ -9,18 +9,18 @@ helpviewer_keywords:
 - background colors, dialog boxes
 - MFC dialog boxes [MFC], colors
 ms.assetid: 05ee28a4-f3ae-4203-84ac-022f266ff2ab
-ms.openlocfilehash: 495ab827d6185826cc4d261a6a990f751e525d22
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3fcbeea5dc6137d7b7f0f2f6c1e0d034e6111b9a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297436"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449666"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Festlegen der Hintergrundfarbe für das Dialogfeld
 
 Sie können die Farbe des Hintergrunds in den Dialogfeldern festlegen, durch das Behandeln von WM_CTLCOLOR-Nachrichten für das Dialogfeldfenster. Die Farbe, die Sie festlegen, wird für nur das angegebene Dialogfeld verwendet.
 
-Finden Sie unter [Codexpert Blog](http://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/) verdeutlicht.
+Finden Sie unter [Codexpert Blog](https://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/) verdeutlicht.
 
 ## <a name="see-also"></a>Siehe auch
 
