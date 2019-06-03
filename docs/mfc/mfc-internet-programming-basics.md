@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 814e63272058200850424e9d5355637111527e1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eee045e198f61c088e302c40deb2de406adab428
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239130"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449727"
 ---
 # <a name="mfc-internet-programming-basics"></a>Grundlagen der MFC-Internetprogrammierung
 
@@ -70,11 +70,11 @@ MFC enthält Klassen, die internetprogrammierung unterstützen. Sie können [COl
 
 ##  <a name="_core_web_sites_for_more_information"></a> Websites für Weitere Informationen
 
-Weitere Informationen zu Microsoft Internet-Technologie, finden Sie unter den [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) Website. (Links können ohne vorherige Ankündigung ändern.)
+Weitere Informationen zu Microsoft Internet-Technologie, finden Sie unter den [Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322) Website. (Links können ohne vorherige Ankündigung ändern.)
 
 Diese Website für Entwickler enthält Informationen zur Verwendung von Microsoft-Entwicklungstools und Technologien und Top-Berichte über aktuelle und bevorstehende Konferenzen. Auf dieser Seite können Sie zu viele verwandte Websites für Entwickler, einschließlich .NET und XML-Developer Center wechseln. Sie können auch die Beta-SDKs und Beispiele herunterladen.
 
-Die [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) Spezifikationen für HTML, HTTP, CGI und andere Technologien www veröffentlicht.
+Die [World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) Spezifikationen für HTML, HTTP, CGI und andere Technologien www veröffentlicht.
 
 ##  <a name="_core_more_internet_help"></a> Weitere Internethilfe
 

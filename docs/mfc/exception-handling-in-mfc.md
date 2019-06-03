@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 69bb5a9478120db322b5727af491be7943f44cbe
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346052"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449717"
 ---
 # <a name="exception-handling-in-mfc"></a>Ausnahmebehandlung in MFC
 
@@ -132,4 +132,4 @@ In den folgenden Artikeln vergleichen die MFC-Ausnahmemakros, mit der C++-Ausnah
 ## <a name="see-also"></a>Siehe auch
 
 [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md)<br/>
-[Gewusst wie: Erstellen Sie eigene benutzerdefinierte Ausnahmeklassen](http://go.microsoft.com/fwlink/p/?linkid=128045)
+[Gewusst wie: Erstellen Sie eigene benutzerdefinierte Ausnahmeklassen](https://go.microsoft.com/fwlink/p/?linkid=128045)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161016"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449622"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Linkertoolfehler LNK2001
 
@@ -71,7 +71,7 @@ Dieser Fehler kann auftreten, wenn Ihr Code auf ein Symbol, von einer Version ei
 
 Es gibt derzeit keinen Standard für [C++ Benennung](../../error-messages/tool-errors/name-decoration.md) zwischen compileranbietern oder sogar zwischen unterschiedlichen Versionen eines Compilers. Aus diesem Grund Verknüpfen von Objektdateien, die mit anderen Compilern kompiliert möglicherweise nicht dasselbe Benennungsschema erstellt und somit Fehler LNK2001 verursacht.
 
-[Mischen von Inline und nicht-Inline-Kompilierungsoptionen](../../error-messages/tool-errors/function-inlining-problems.md) können auf verschiedene Module LNK2001 verursacht. Wenn eine C++-Bibliothek mit Inlinefunktionen eingeschaltet erstellt wird (**/Ob1** oder **/Ob2**) jedoch die entsprechende Headerdatei, beschreibt die Funktionen inlining deaktiviert (kein `inline` Schlüsselwort), diesen Fehler Tritt auf. Um dieses Problem zu beheben, definieren Sie die Funktionen `inline` in der Headerdatei, die Sie in anderen Quelldateien enthalten.
+[Mischen von Inline und nicht-Inline-Kompilierungsoptionen](../../error-messages/tool-errors/function-inlining-problems.md) können auf verschiedene Module LNK2001 verursacht. Wenn eine C++-Bibliothek mit Inlinefunktionen eingeschaltet erstellt wird ( **/Ob1** oder **/Ob2**) jedoch die entsprechende Headerdatei, beschreibt die Funktionen inlining deaktiviert (kein `inline` Schlüsselwort), diesen Fehler Tritt auf. Um dieses Problem zu beheben, definieren Sie die Funktionen `inline` in der Headerdatei, die Sie in anderen Quelldateien enthalten.
 
 Bei Verwendung der `#pragma inline_depth` Compiler, stellen Sie sicher, Sie haben eine [Wert 2 oder höher festgelegt](../../error-messages/tool-errors/function-inlining-problems.md), und stellen Sie sicher, dass Sie auch verwenden, die [/Ob1](../../build/reference/ob-inline-function-expansion.md) oder [/Ob2](../../build/reference/ob-inline-function-expansion.md) -Compileroption.
 
@@ -101,5 +101,5 @@ In einigen Fällen meldet der Linker kann nur den ergänzten Name für ein Symbo
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-Weitere Informationen zu möglichen Ursachen und Lösungen für LNK2001 finden Sie unter der Stack Overflow-Frage [Was ist ein Fehler für undefined Reference/unresolved external Symbol, und wie behebe ich es?](http://stackoverflow.com/q/12573816/2002113).
+Weitere Informationen zu möglichen Ursachen und Lösungen für LNK2001 finden Sie unter der Stack Overflow-Frage [Was ist ein Fehler für undefined Reference/unresolved external Symbol, und wie behebe ich es?](https://stackoverflow.com/q/12573816/2002113).
 

@@ -2,12 +2,12 @@
 title: Automatische Parallelisierung und automatische Vektorisierung
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ff908d1c7d45c8f757b8efe29f4f392102dc61d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236698"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450242"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Automatische Parallelisierung und automatische Vektorisierung
 
@@ -107,12 +107,12 @@ Wie Sie mit der automatischen Parallelisierung können Sie angeben können die [
 
 Weitere Informationen zu Ursachencodes und Meldungen finden Sie unter [Vectorizer- and Parallelizer-Meldungen](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-Ein Beispiel dafür, wie die Vektorisierung in der Praxis funktioniert, finden Sie unter [Austin-Projekt Teil 2 von 6: Seite mit dem Curling](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+Ein Beispiel dafür, wie die Vektorisierung in der Praxis funktioniert, finden Sie unter [Austin-Projekt Teil 2 von 6: Seite mit dem Curling](https://devblogs.microsoft.com/cppblog/project-austin-part-2-of-6-page-curling/)
 
 ## <a name="see-also"></a>Siehe auch
 
 [loop](../preprocessor/loop.md)<br/>
-[Parallele Programmierung in systemeigenem Code](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
+[Parallele Programmierung in systemeigenem Code](https://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
 [/Qpar (Automatische Parallelisierung)](../build/reference/qpar-auto-parallelizer.md)<br/>
 [/Qpar-report (Berichtebene der automatischen Parallelisierung)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [/Qvec-report (Berichtebene der automatischen Vektorisierung)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>

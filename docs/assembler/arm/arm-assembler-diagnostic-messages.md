@@ -20,12 +20,12 @@ helpviewer_keywords:
 - A4508
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
-ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72c1ea64501ef8104fee9bdf914a1464c07c3b76
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167842"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449214"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Diagnosemeldungen des ARM-Assemblers
 
@@ -33,13 +33,13 @@ Der Microsoft-ARM-Assembler (*Armasm*) diagnostische Warnungen und Fehler ausgib
 
 ## <a name="syntax"></a>Syntax
 
-> <em>FileName</em>**(**<em>Zeilennummer</em>**):** \[ **Fehler**|**Warnung** ] **Ein**<em>Anzahl</em>**:** *Nachricht*
+> <em>FileName</em> **(** <em>Zeilennummer</em> **):** \[ **Fehler**|**Warnung** ] **Ein**<em>Anzahl</em> **:** *Nachricht*
 
 ## <a name="diagnostic-messages---errors"></a>Diagnosemeldungen - Fehler
 
 > A2193: Diese Anweisung wird zu einem unvorhersehbaren Verhalten generiert.
 
-Die ARM-Architektur garantiert nicht, was geschieht, wenn diese Anweisung ausgeführt wird.  Weitere Informationen zu den klar definierten Formen der diese Anweisung finden Sie in der [ARM Architecture Reference Manual](http://go.microsoft.com/fwlink/p/?linkid=246464).
+Die ARM-Architektur garantiert nicht, was geschieht, wenn diese Anweisung ausgeführt wird.  Weitere Informationen zu den klar definierten Formen der diese Anweisung finden Sie in der [ARM Architecture Reference Manual](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 ```asm
     ADD r0, r8, pc         ; A2193: this instruction generates unpredictable behavior
@@ -115,7 +115,7 @@ Im Modus "ARM" besteht eine alternative Syntax zum Angeben von Konstanten zur Ve
 
 > A4509: Diese Form der bedingten Anweisung ist veraltet.
 
-Diese Form der bedingten Anweisung wurde als veraltet markiert, indem ARM in der ARMv8-Architektur. Es wird empfohlen, den Code, um die bedingte Verzweigungen zu ändern. Um anzuzeigen, welche bedingten Anweisungen weiterhin unterstützt werden, finden Sie in der [ARM Architecture Reference Manual](http://go.microsoft.com/fwlink/p/?linkid=246464).
+Diese Form der bedingten Anweisung wurde als veraltet markiert, indem ARM in der ARMv8-Architektur. Es wird empfohlen, den Code, um die bedingte Verzweigungen zu ändern. Um anzuzeigen, welche bedingten Anweisungen weiterhin unterstützt werden, finden Sie in der [ARM Architecture Reference Manual](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 Diese Warnung wird nicht ausgegeben, wenn die **- Oldit** Befehlszeilenschalter wird verwendet.
 

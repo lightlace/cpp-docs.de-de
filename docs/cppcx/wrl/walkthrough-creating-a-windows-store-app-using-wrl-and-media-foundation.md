@@ -3,12 +3,12 @@ title: 'Exemplarische Vorgehensweise: Erstellen einer UWP-app mithilfe von WRL u
 ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
-ms.translationtype: HT
+ms.openlocfilehash: 1eee353bb13a3fa03fda42c3d0f7a4103dc5ad13
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558267"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450143"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Exemplarische Vorgehensweise: Erstellen einer UWP-app mithilfe von WRL und Media Foundation
 
@@ -25,7 +25,7 @@ In diesem Beispiel wird eine benutzerdefinierte Media Foundation-Transformation 
 In den meisten Fällen können Sie mithilfe C++ / CX verwenden, um die Windows-Runtime zu erstellen. Allerdings müssen gelegentlich Sie die WRL verwenden. Wenn Sie eine medienerweiterung für Microsoft Media Foundation erstellen, müssen Sie z. B. eine Komponente erstellen, die sowohl COM-als auch Windows-Runtime-Schnittstellen implementiert. Da C++ / CX kann nur Windows-Runtime-Objekte erstellen, Sie müssen zum Erstellen einer medienerweiterung die WRL verwenden, da es sich um die Implementierung von sowohl COM-als auch Windows-Runtime-Schnittstellen ermöglicht.
 
 > [!NOTE]
-> Auch wenn dieses Codebeispiel lang ist, stellt es das erforderliche Minimum dar, um eine nützliche Media Foundation-Transformation zu erstellen. Sie können es als Ausgangspunkt für Ihre eigene benutzerdefinierte Transformation verwenden. In diesem Beispiel basiert auf der [medienerweiterungen](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), anzuwendende medienerweiterungen verwendet Effekte auf Videos, decodieren, und schemahandler zu erstellen, die Medienstreams generieren.
+> Auch wenn dieses Codebeispiel lang ist, stellt es das erforderliche Minimum dar, um eine nützliche Media Foundation-Transformation zu erstellen. Sie können es als Ausgangspunkt für Ihre eigene benutzerdefinierte Transformation verwenden. In diesem Beispiel basiert auf der [medienerweiterungen](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), anzuwendende medienerweiterungen verwendet Effekte auf Videos, decodieren, und schemahandler zu erstellen, die Medienstreams generieren.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
@@ -59,7 +59,7 @@ In den meisten Fällen können Sie mithilfe C++ / CX verwenden, um die Windows-R
 
 1. Hinzufügen einer **DLL (Universal Windows)** Projekt der Projektmappe. Nennen Sie das Projekt, z. B. *GrayscaleTransform*.
 
-1. Hinzufügen einer **Midl-Datei (.idl)** Datei zum Projekt. Nennen Sie die Datei, z. B. *"grayscaletransform.idl"*.
+1. Hinzufügen einer **Midl-Datei (.idl)** Datei zum Projekt. Nennen Sie die Datei, z. B. *"grayscaletransform.idl"* .
 
 1. "Grayscaletransform.idl" diesen Code hinzufügen:
 
@@ -98,7 +98,7 @@ In den meisten Fällen können Sie mithilfe C++ / CX verwenden, um die Windows-R
 
    1. Außerdem **Eingabe**, hinzufügen `runtimeobject.lib`, `mfuuid.lib`, und `mfplat.lib` auf die **zusätzliche Abhängigkeiten** Eigenschaft.
 
-   1. Klicken Sie unter **Windows-Metadaten**legen **Windows-Metadaten generieren** zu **Ja (/ WINMD)**.
+   1. Klicken Sie unter **Windows-Metadaten**legen **Windows-Metadaten generieren** zu **Ja (/ WINMD)** .
 
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Die WRL der benutzerdefinierten Media Foundation-Komponente aus einer c#-app verwenden.
 
@@ -122,10 +122,10 @@ Die folgende Abbildung zeigt die `MediaCapture app`.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Im Beispiel wird gezeigt, wie Fotos von der standardmäßigen Webcam nacheinander erfasst werden. Die [medienerweiterungen](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) finden Sie weitere. Es veranschaulicht die Aufzählung von Webcamgeräten und die Arbeit mit lokalen Schemahandlern, und es veranschaulicht zusätzliche Medieneffekte, die bei einzelnen Fotos und Videostreams funktionieren.
+Im Beispiel wird gezeigt, wie Fotos von der standardmäßigen Webcam nacheinander erfasst werden. Die [medienerweiterungen](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) finden Sie weitere. Es veranschaulicht die Aufzählung von Webcamgeräten und die Arbeit mit lokalen Schemahandlern, und es veranschaulicht zusätzliche Medieneffekte, die bei einzelnen Fotos und Videostreams funktionieren.
 
 ## <a name="see-also"></a>Siehe auch
 
 [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
-[Beispiel für die medienerweiterungen](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)
+[Beispiel für die medienerweiterungen](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

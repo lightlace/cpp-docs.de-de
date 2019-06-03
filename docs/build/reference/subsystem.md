@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e67ec57c3a8d74fdd97a94ed04c29cad53af1ea5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317717"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450730"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -43,7 +43,7 @@ Eine Windows-Zeichenmodusanwendung. Im Betriebssystem wird eine Konsole für Kon
 **EFI_RUNTIME_DRIVER**<br/>
 Extensible Firmware Interface (EFI)-Image
 
-Die EFI-Subsystemoptionen beschreiben ausführbare Images, die in die Extensible Firmware Interface-Umgebung ausgeführt werden. Diese Umgebung wird in der Regel mit der Hardware bereitgestellt und ausgeführt, bevor das Betriebssystem geladen wird. Die Hauptunterschiede zwischen EFI-Imagetypen sind die Speicheradresse, in die das Image geladen wird und die Aktionen, die ausgeführt wird, wenn der Aufruf zum Image zurückgegeben wird. Ein EFI_APPLICATIONS-Image wird entladen, wenn die Steuerung zurückgegeben wird. Ein EFI_BOOT_SERVICE_DRIVER oder ein EFI_RUNTIME_DRIVER wird entladen, wenn die Steuerung mit einem Fehlercode zurückgegeben wird. Ein EFI_ROM-Image wird vom ROM ausgeführt. Weitere Informationen finden Sie unter den Spezifikationen für die [Unified EFI Forum](http://www.uefi.org/) Website.
+Die EFI-Subsystemoptionen beschreiben ausführbare Images, die in die Extensible Firmware Interface-Umgebung ausgeführt werden. Diese Umgebung wird in der Regel mit der Hardware bereitgestellt und ausgeführt, bevor das Betriebssystem geladen wird. Die Hauptunterschiede zwischen EFI-Imagetypen sind die Speicheradresse, in die das Image geladen wird und die Aktionen, die ausgeführt wird, wenn der Aufruf zum Image zurückgegeben wird. Ein EFI_APPLICATIONS-Image wird entladen, wenn die Steuerung zurückgegeben wird. Ein EFI_BOOT_SERVICE_DRIVER oder ein EFI_RUNTIME_DRIVER wird entladen, wenn die Steuerung mit einem Fehlercode zurückgegeben wird. Ein EFI_ROM-Image wird vom ROM ausgeführt. Weitere Informationen finden Sie unter den Spezifikationen für die [Unified EFI Forum](https://www.uefi.org/) Website.
 
 **NATIVE**<br/>
 Code, der ohne eine Subsystemumgebung ausgeführt wird – z. B. Gerätetreiber im Kernelmodus und systemeigene Systemprozesse. Diese Option ist üblicherweise für Windows-Systemfunktionen reserviert.

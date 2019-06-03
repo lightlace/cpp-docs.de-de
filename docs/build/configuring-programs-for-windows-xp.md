@@ -2,12 +2,12 @@
 title: Konfigurieren von Programmen für Windows XP
 ms.date: 05/16/2019
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 6c94c6a66d0f22b8707012856a65df4b19965acb
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 55753737b4868f33487ed980eaf37a8801f59638
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837137"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450703"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Konfigurieren von Programmen für Windows XP
 
@@ -69,4 +69,4 @@ Aufgrund von Unterschieden bei Plattform- und Bibliotheksunterstützung ist die 
 
 - **Erstellen von HLSL**
 
-   Standardmäßig kompiliert das Windows XP-Toolset keine HLSL-Quellcodedateien. Zur Kompilierung von HLSL-Dateien laden Sie das June 2010 DirectX SDK herunter und installieren es und legen dann die VC-Verzeichnisse des Projekts so fest, dass es eingeschlossen ist. Weitere Informationen finden Sie im Abschnitt „DirectX-SDK registriert keine Include/Library-Pfade bei Visual Studio 2010“ der [June 2010 DirectX SDK-Downloadseite](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+   Standardmäßig kompiliert das Windows XP-Toolset keine HLSL-Quellcodedateien. Zur Kompilierung von HLSL-Dateien laden Sie das June 2010 DirectX SDK herunter und installieren es und legen dann die VC-Verzeichnisse des Projekts so fest, dass es eingeschlossen ist. Weitere Informationen finden Sie im Abschnitt „DirectX-SDK registriert keine Include/Library-Pfade bei Visual Studio 2010“ der [June 2010 DirectX SDK-Downloadseite](https://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).

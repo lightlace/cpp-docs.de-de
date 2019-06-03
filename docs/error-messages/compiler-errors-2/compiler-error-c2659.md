@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2659
 ms.assetid: b0883600-4d27-4ca7-a931-8ca6bd48654d
-ms.openlocfilehash: b8b6493b01ac2b88ea50ba50157328f59fdbedf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b44ef825626f60e9ae6c6e8600953959fcd7b3a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360384"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449228"
 ---
 # <a name="compiler-error-c2659"></a>Compilerfehler C2659
 
 „Operator“: Überladene Funktion als linker Operand
 
-Eine Funktion steht auf der linken Seite des angegebenen Operators. Der häufigste Grund für diesen Fehler ist, dass der Compiler den Bezeichner auf der linken Seite des Operators als Funktion analysiert hat, während der Entwickler ihn als Variable vorsah. Weitere Informationen finden Sie im Wikipedia Artikel [größten entwicklerprobleme Analyse](http://en.wikipedia.org/wiki/Most_vexing_parse). Dieses Beispiel demonstriert, dass die Deklaration einer Funktion und die Definition einer Variablen leicht miteinander verwechselt werden können:
+Eine Funktion steht auf der linken Seite des angegebenen Operators. Der häufigste Grund für diesen Fehler ist, dass der Compiler den Bezeichner auf der linken Seite des Operators als Funktion analysiert hat, während der Entwickler ihn als Variable vorsah. Weitere Informationen finden Sie im Wikipedia Artikel [größten entwicklerprobleme Analyse](https://en.wikipedia.org/wiki/Most_vexing_parse). Dieses Beispiel demonstriert, dass die Deklaration einer Funktion und die Definition einer Variablen leicht miteinander verwechselt werden können:
 
 ```
 // C2659a.cpp

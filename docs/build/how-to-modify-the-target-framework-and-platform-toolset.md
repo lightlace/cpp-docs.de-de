@@ -5,12 +5,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: c3d6b50a57cab9cc63657949fceccebf4ea6b8c9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: b2cf5ac5c6a339917b87a25001be568a7caa2247
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220678"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450739"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Vorgehensweise: Ändern des Zielframeworks und Plattformtoolset
 
@@ -22,7 +22,7 @@ Sie können Visual Studio ändern C++ projekteinstellungen, verschiedene Version
 Wenn Sie das Zielframework ändern, ändern Sie auch das Plattformtoolset in eine Version, die das Zielframework unterstützt. Um zum Beispiel .NET Framework 4.5 als Ziel festzulegen, müssen Sie ein kompatibles Plattformtoolset wie Visual Studio 2015 (v140), Visual Studio 2013 (v120) oder Visual Studio 2012 (v110) verwenden. Sie können das **Windows7.1SDK** -Plattformtoolset verwenden, um .NET Framework 2.0, 3,0, 3,5 und 4 sowie x86, Itanium und x64-Plattformen als Ziel festzulegen.
 
 > [!NOTE]
->  Zum Ändern des Toolsets der Zielplattform muss die zugehörige Version von Visual Studio oder die Windows-Plattform SDK installiert sein. Um beispielsweise die Itanium-Plattform mit dem **Windows7.1SDK** -Plattformtoolset als Ziel festzulegen, muss [Microsoft Windows-SDK für Windows 7 und .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) installiert sein. Sie können aber auch eine andere Visual Studio-Version für die Entwicklung verwenden, sofern Sie die richtige Frameworkversion und das richtige Plattformtoolset als Ziel festlegen.
+>  Zum Ändern des Toolsets der Zielplattform muss die zugehörige Version von Visual Studio oder die Windows-Plattform SDK installiert sein. Um beispielsweise die Itanium-Plattform mit dem **Windows7.1SDK** -Plattformtoolset als Ziel festzulegen, muss [Microsoft Windows-SDK für Windows 7 und .NET Framework 4 SP1](https://www.microsoft.com/download/details.aspx?id=8279) installiert sein. Sie können aber auch eine andere Visual Studio-Version für die Entwicklung verwenden, sofern Sie die richtige Frameworkversion und das richtige Plattformtoolset als Ziel festlegen.
 
 Sie können die Zielplattform zusätzlich erweitern, indem Sie ein benutzerdefiniertes Plattformtoolset erstellen. Weitere Informationen finden Sie unter [Systemeigene Festlegung von C++-Zielversionen](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) im Visual C++-Blog.
 
@@ -59,4 +59,4 @@ Sie können die Zielplattform zusätzlich erweitern, indem Sie ein benutzerdefin
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSBuild in der Befehlszeile – C++](msbuild-visual-cpp.md)
+[MSBuild on the Command Line – C++ (C++: MSBuild in der Befehlszeile)](msbuild-visual-cpp.md)

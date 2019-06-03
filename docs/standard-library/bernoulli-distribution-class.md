@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: b5ddbadea4d16d7a76df332074ec5c80fae57eb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbd5229e8b8a2c2b368688635d9d596a8538356b
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414125"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450865"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution-Klasse
 
@@ -71,7 +71,7 @@ Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse beschreibt eine Verteilung, die Werte des Typs **"bool"**, verteilte entsprechend der diskreten Wahrscheinlichkeitsfunktion Bernoulli-Verteilung. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klasse beschreibt eine Verteilung, die Werte des Typs **"bool"** , verteilte entsprechend der diskreten Wahrscheinlichkeitsfunktion Bernoulli-Verteilung. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -90,7 +90,7 @@ Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entwe
 
 Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).
 
-Ausführliche Informationen über die diskrete Wahrscheinlichkeitsfunktion zur Bernoulli-Verteilung finden Sie im Wolfram MathWorld-Artikel [Bernoulli Distribution](http://go.microsoft.com/fwlink/p/?linkid=398467).
+Ausführliche Informationen über die diskrete Wahrscheinlichkeitsfunktion zur Bernoulli-Verteilung finden Sie im Wolfram MathWorld-Artikel [Bernoulli Distribution](https://go.microsoft.com/fwlink/p/?linkid=398467).
 
 ## <a name="example"></a>Beispiel
 

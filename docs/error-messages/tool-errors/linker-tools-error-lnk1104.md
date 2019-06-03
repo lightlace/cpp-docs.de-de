@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: bc6305ab2e96496aa212004e186150d4a51cf3fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fcd3c06ae2db5c43aacbf781800870a83d2d77c1
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446972"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451138"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Linkertoolfehler LNK1104
 
@@ -81,7 +81,7 @@ Beim Angeben von einzelnen Bibliotheken in der **zusätzliche Abhängigkeiten** 
 
 Dieser Fehler wird möglicherweise angezeigt bei den Pfad für *Filename* erweitert, dass es mehr als 260 Zeichen lang sein. Ändern Sie die Namen oder ordnen Sie die Verzeichnisstruktur neu an, falls erforderlich, um die Pfade zu den erforderlichen Dateien zu kürzen.
 
-Dieser Fehler kann auftreten, da die Datei zu groß ist. Bibliotheken oder die Objekt-Dateien mehr als ein Gigabyte groß für den 32-Bit-Linker möglicherweise Probleme verursacht. Eine mögliche Lösung für dieses Problem ist die Verwendung der 64-Bit-Toolsets. Weitere Informationen dazu, wie Sie hierzu in der Befehlszeile finden Sie unter [Vorgehensweise: Aktivieren eines 64-Bit-Visual C++-Toolsets in der Befehlszeile](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Informationen dazu, wie dies in der IDE ausführen, finden Sie unter [Verwenden von MSBuild mit 64-Bit-Compiler und Tools](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) und Stack Overflow-Beitrag: [Wie Sie Visual Studio verwendet die systemeigenen amd64-toolkette](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
+Dieser Fehler kann auftreten, da die Datei zu groß ist. Bibliotheken oder die Objekt-Dateien mehr als ein Gigabyte groß für den 32-Bit-Linker möglicherweise Probleme verursacht. Eine mögliche Lösung für dieses Problem ist die Verwendung der 64-Bit-Toolsets. Weitere Informationen dazu, wie Sie hierzu in der Befehlszeile finden Sie unter [Vorgehensweise: Aktivieren eines 64-Bit-Visual C++-Toolsets in der Befehlszeile](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Informationen dazu, wie dies in der IDE ausführen, finden Sie unter [Verwenden von MSBuild mit 64-Bit-Compiler und Tools](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) und Stack Overflow-Beitrag: [Wie Sie Visual Studio verwendet die systemeigenen amd64-toolkette](https://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
 
 Dieser Fehler kann auftreten, wenn Sie nicht genügend Berechtigungen zum Zugriff auf haben *Filename*. Dies kann auftreten, wenn Sie einem normalen Benutzerkonto und ein Versuch Bibliotheksdateien in geschützte Verzeichnisse zugreifen, oder verwenden die Dateien kopiert, die von anderen Benutzern, die die ursprünglichen Berechtigungen festlegen. Um dieses Problem zu beheben, verschieben Sie die Datei zu einem beschreibbaren Projektverzeichnis. Wenn diese Datei befindet sich in einem Verzeichnis geschrieben, aber berechtigt ist, können Sie verwenden eine Administrator-Eingabeaufforderung und führen den takeown.exe-Befehl aus, um den Besitzer der Datei werden.
 

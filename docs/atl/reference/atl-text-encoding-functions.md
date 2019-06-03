@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 13c521bae6790a030212c4a8edac460c960ecfc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e3e44e99e6f3a53a930ed5b3ac1f7cd5ae23063
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247863"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449557"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL-Textcodierung-Funktionen
 
@@ -295,7 +295,7 @@ Gibt "true" bei Erfolg bei "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Das Codierungsschema "B" ist in RFC 2047 beschrieben ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+Das Codierungsschema "B" ist in RFC 2047 beschrieben ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength
 
@@ -319,7 +319,7 @@ Die erforderliche Anzahl von Zeichen für einen Puffer, die codierte Daten entha
 
 ### <a name="remarks"></a>Hinweise
 
-Das Codierungsschema "B" ist in RFC 2047 beschrieben ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+Das Codierungsschema "B" ist in RFC 2047 beschrieben ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="escapexml"></a> "Escapexml"
 
@@ -447,7 +447,7 @@ Gibt "true" bei Erfolg bei "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Das Codierungsschema "Q" wird in RFC 2047 beschrieben ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+Das Codierungsschema "Q" wird in RFC 2047 beschrieben ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength
 
@@ -471,7 +471,7 @@ Die erforderliche Anzahl von Zeichen für einen Puffer, die codierte Daten entha
 
 ### <a name="remarks"></a>Hinweise
 
-Das Codierungsschema "Q" wird in RFC 2047 beschrieben ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+Das Codierungsschema "Q" wird in RFC 2047 beschrieben ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="qpdecode"></a> QPDecode
 
@@ -509,7 +509,7 @@ Gibt "true" bei Erfolg bei "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Die quoted-printable-Codierungsschema wird in RFC 2045 beschrieben ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+Die quoted-printable-Codierungsschema wird in RFC 2045 beschrieben ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 
@@ -530,7 +530,7 @@ Die Anzahl der Bytes, die für einen Puffer, der eine decodierte Zeichenfolge en
 
 ### <a name="remarks"></a>Hinweise
 
-Die quoted-printable-Codierungsschema wird in RFC 2045 beschrieben ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+Die quoted-printable-Codierungsschema wird in RFC 2045 beschrieben ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpencode"></a> QPEncode
 
@@ -566,7 +566,7 @@ ATLSMTP_QPENCODE-Flags, die beschreibt, wie die Konvertierung ist, ausgeführt w
 
 - Fügt der ATLSMTP_QPENCODE_TRAILING_SOFT `=\r\n` auf die codierte Zeichenfolge.
 
-Die quoted-printable-Codierungsschema finden Sie im [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt).
+Die quoted-printable-Codierungsschema finden Sie im [RFC 2045](https://www.ietf.org/rfc/rfc2045.txt).
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -574,7 +574,7 @@ Gibt "true" bei Erfolg bei "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Die quoted-printable-Codierungsschema wird in RFC 2045 beschrieben ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+Die quoted-printable-Codierungsschema wird in RFC 2045 beschrieben ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 
@@ -595,7 +595,7 @@ Die erforderliche Anzahl von Zeichen für einen Puffer, die codierte Daten entha
 
 ### <a name="remarks"></a>Hinweise
 
-Die quoted-printable-Codierungsschema wird in RFC 2045 beschrieben ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+Die quoted-printable-Codierungsschema wird in RFC 2045 beschrieben ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="uudecode"></a> UUDecode
 

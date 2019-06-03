@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d7653e61e6aada9205f599cf7a7ca6187dd139d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373281"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450554"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Steuerelementeinstellungen, MFC-ActiveX-Steuerelement-Assistent
 
@@ -57,7 +57,7 @@ Weitere Informationen zum Auswählen der Optionen auf dieser Seite, um die Effiz
    Gibt an, dass das Steuerelement das standardmäßige Windows **zu** Dialogfeld zeigt die Versionsnummer und Copyrightinformationen an.
 
    > [!NOTE]
-   > Wie der Benutzer die Hilfe für das Steuerelement zugreift, hängt davon ab, wie Sie die Hilfe implementiert haben und gibt an, ob Sie die benutzerführung mit Hilfe Container integriert haben. Weitere Informationen zur Integration von Hilfe, auf die [MSDN-Bibliothek](http://go.microsoft.com/fwlink/p/?linkid=150542) -Website, suchen Sie nach "Hinzufügen von kontextbezogene Hilfe, ein MFC-ActiveX-Steuerelement".
+   > Wie der Benutzer die Hilfe für das Steuerelement zugreift, hängt davon ab, wie Sie die Hilfe implementiert haben und gibt an, ob Sie die benutzerführung mit Hilfe Container integriert haben. Weitere Informationen zur Integration von Hilfe, auf die [MSDN-Bibliothek](https://go.microsoft.com/fwlink/p/?linkid=150542) -Website, suchen Sie nach "Hinzufügen von kontextbezogene Hilfe, ein MFC-ActiveX-Steuerelement".
 
    Wenn Sie diese Option auswählen, fügt es der `AboutBox` -Methode in der die Klasse des Steuerelements zu steuern (C*ProjName*Ctrl.cpp fest) und die Projekt-Dispatchzuordnung AboutBox hinzugefügt. Diese Option ist standardmäßig ausgewählt.
 
@@ -87,7 +87,7 @@ Weitere Informationen zum Auswählen der Optionen auf dieser Seite, um die Effiz
 
 - **Fungiert als ein einfacher Frame-Steuerelement**
 
-   Gibt an, dass das Steuerelement ist ein Container für andere Steuerelemente OLEMISC_SIMPLEFRAME-Bit für das Steuerelement. Weitere Informationen auf der [MSDN-Bibliothek](http://go.microsoft.com/fwlink/p/?linkid=150542) -Website, suchen Sie nach "Simple Frame Site Containment".
+   Gibt an, dass das Steuerelement ist ein Container für andere Steuerelemente OLEMISC_SIMPLEFRAME-Bit für das Steuerelement. Weitere Informationen auf der [MSDN-Bibliothek](https://go.microsoft.com/fwlink/p/?linkid=150542) -Website, suchen Sie nach "Simple Frame Site Containment".
 
 - **Eigenschaften asynchron geladen**
 

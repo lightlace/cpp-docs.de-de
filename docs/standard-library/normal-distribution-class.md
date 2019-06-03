@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: d0de31a20e06d9b8ff3789cc7ae1928c9a7b6b7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df30ddb910cf2fa266a603a3ab285379ea45ec7c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223609"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449857"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution-Klasse
 
@@ -95,7 +95,7 @@ Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entwe
 
 Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).
 
-Ausführliche Informationen zur Normalverteilung finden Sie im Artikel [Normal Distribution (Normalverteilung)](http://go.microsoft.com/fwlink/p/?linkid=400924) auf WolframMathWorld.com.
+Ausführliche Informationen zur Normalverteilung finden Sie im Artikel [Normal Distribution (Normalverteilung)](https://go.microsoft.com/fwlink/p/?linkid=400924) auf WolframMathWorld.com.
 
 ## <a name="example"></a>Beispiel
 
