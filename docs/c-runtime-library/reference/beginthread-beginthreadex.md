@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f64fd7b945fc8ea2e5c111d300266e07faade0e7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349263"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504540"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -83,7 +83,7 @@ Stapelgröße für einen neuen Thread oder 0.
 Argumentliste, die an einem neuen Thread übergeben werden oder **NULL**.
 
 *Sicherheit*<br/>
-Zeiger auf eine [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) -Struktur, die bestimmt, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden kann. Wenn *Sicherheit* ist **NULL**, das Handle nicht geerbt werden. Muss **NULL** für Windows 95-Anwendungen.
+Zeiger auf eine [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) -Struktur, die bestimmt, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden kann. Wenn *Sicherheit* ist **NULL**, das Handle nicht geerbt werden. Muss **NULL** für Windows 95-Anwendungen.
 
 *initflag*<br/>
 Flags, die den anfänglichen Zustand eines neuen Threads steuern. Legen Sie *Initflag* um 0 sofort ausgeführt oder **CREATE_SUSPENDED** um den Thread in einem angehaltenen Zustand zu erstellen verwenden [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) um den Thread auszuführen. Legen Sie *Initflag* zu **STACK_SIZE_PARAM_IS_A_RESERVATION** Flag mit *Stack_size* wie der ursprüngliche Größe des Stapels in Byte zu reservieren, ist dieses Flag nicht angegeben ist, *Stack_size* gibt an, die Commitgröße.
@@ -271,7 +271,7 @@ Drücken Sie zum Beenden der Beispielanwendung eine beliebige Taste.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispielcode wird veranschaulicht, wie Sie das Threadhandle verwenden können, die von zurückgegeben wird **_beginthreadex** mit der Synchronisierungs-API [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject). Der Hauptthread wartet auf das Beenden des zweiten Threads, bevor er fortsetzt. Wenn der zweite Thread aufruft **_endthreadex**, wird das Threadobjekt in den signalisierten Zustand versetzt. Damit kann der primäre Thread fortgesetzt werden. Dies kann nicht mit **_beginthread** und **_endthread**, da **_endthread** Aufrufe **"CloseHandle"**, die den Thread zerstört -Objekt, bevor sie auf den signalisierten Zustand festgelegt werden kann.
+Im folgenden Beispielcode wird veranschaulicht, wie Sie das Threadhandle verwenden können, die von zurückgegeben wird **_beginthreadex** mit der Synchronisierungs-API [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject). Der Hauptthread wartet auf das Beenden des zweiten Threads, bevor er fortsetzt. Wenn der zweite Thread aufruft **_endthreadex**, wird das Threadobjekt in den signalisierten Zustand versetzt. Damit kann der primäre Thread fortgesetzt werden. Dies kann nicht mit **_beginthread** und **_endthread**, da **_endthread** Aufrufe **"CloseHandle"** , die den Thread zerstört -Objekt, bevor sie auf den signalisierten Zustand festgelegt werden kann.
 
 ```cpp
 // crt_begthrdex.cpp

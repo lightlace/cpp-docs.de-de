@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58b7b180f5b4925f64078f8c799036252003549e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278084"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503238"
 ---
 # <a name="cregkey-class"></a>CRegKey-Klasse
 
@@ -195,7 +195,7 @@ Optionen für den Schlüssel. Der Standardwert ist REG_OPTION_NON_VOLATILE. Eine
 Der Sicherheitszugriff für den Schlüssel. Der Standardwert ist KEY_READ &#124; KEY_WRITE. Eine Liste der möglichen Werte und Beschreibungen, finden Sie unter `RegCreateKeyEx`.
 
 *lpSecAttr*<br/>
-Ein Zeiger auf eine [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) -Struktur, die angibt, ob das Handle des Schlüssels von einem untergeordneten Prozess geerbt werden kann. Standardmäßig ist dieser Parameter NULL (d. h., die das Handle nicht geerbt werden kann).
+Ein Zeiger auf eine [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) -Struktur, die angibt, ob das Handle des Schlüssels von einem untergeordneten Prozess geerbt werden kann. Standardmäßig ist dieser Parameter NULL (d. h., die das Handle nicht geerbt werden kann).
 
 *lpdwDisposition*<br/>
 [out] Wenn nicht NULL ist, ruft Sie ab entweder REG_CREATED_NEW_KEY (wenn der Schlüssel nicht vorhanden war und erstellt wurde) oder REG_OPENED_EXISTING_KEY, (wenn der Schlüssel vorhanden war, und es geöffnet wurde).

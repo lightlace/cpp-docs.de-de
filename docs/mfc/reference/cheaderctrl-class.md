@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5268a5ae336b0f96dfd6c0bd348a883e85ac32e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160197"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503546"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl-Klasse
 
@@ -315,7 +315,7 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung `CreateEx` anstelle von `Create` anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_**.
+Verwendung `CreateEx` anstelle von `Create` anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_** .
 
 ##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage
 
@@ -761,7 +761,7 @@ Der Index des Elements basierend auf der Reihenfolge, in dem Kopfzeilen-Steuerel
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten des Win32-Makros [HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355), wie im Windows SDK beschrieben. Er wird bereitgestellt, um Header Elementreihenfolge zu unterstützen.
+Diese Memberfunktion implementiert das Verhalten des Win32-Makros [HDM_ORDERTOINDEX](/windows/desktop/controls/hdm-ordertoindex), wie im Windows SDK beschrieben. Er wird bereitgestellt, um Header Elementreihenfolge zu unterstützen.
 
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin
 

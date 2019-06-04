@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: ecffdb3a6f44f60004cf4f039bdab9c98e212ce1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fb0ad3eef781be1b5ca358e825c09a88c0109e3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338037"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503824"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile-Klasse
 
@@ -117,7 +117,7 @@ Ein Zeiger auf eine Ausnahme für die Datei. Im Falle eines Fehlers wird es auf 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf den Bindungskontext [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) mit gebunden werden soll, wenn erfolgreich; andernfalls NULL. Wenn Sie mit die Instanz geöffnet wurde ein `IBindHost` -Schnittstelle, aus dem Bindungskontext abgerufen wird die `IBindHost`. Es ist keine `IBindHost` Schnittstelle oder ein Fehler auftritt, um einen Bindungskontext zurückzugeben, einen Bindungskontext wird erstellt. Eine Beschreibung der [IBindHost](https://msdn.microsoft.com/library/ie/ms775076) Schnittstelle, finden Sie im Windows SDK.
+Ein Zeiger auf den Bindungskontext [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) mit gebunden werden soll, wenn erfolgreich; andernfalls NULL. Wenn Sie mit die Instanz geöffnet wurde ein `IBindHost` -Schnittstelle, aus dem Bindungskontext abgerufen wird die `IBindHost`. Es ist keine `IBindHost` Schnittstelle oder ein Fehler auftritt, um einen Bindungskontext zurückzugeben, einen Bindungskontext wird erstellt. Eine Beschreibung der [IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) Schnittstelle, finden Sie im Windows SDK.
 
 ### <a name="remarks"></a>Hinweise
 

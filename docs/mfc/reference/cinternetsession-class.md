@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d6d319a963fbc24e89bf8c4c0858cd80ec5a9d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345590"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503456"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession-Klasse
 
@@ -156,7 +156,7 @@ Gibt an, verschiedene Cacheoptionen. Der Standardwert ist auf 0 festgelegt. Die 
 
 - INTERNET_FLAG_DONT_CACHE Zwischenspeichern nicht der Daten, entweder lokal oder in einen beliebigen Gatewayserver.
 
-- Vorgänge INTERNET_FLAG_OFFLINE herunterladen, die über den persistenten Cache nur erfüllt werden. Wenn das Element nicht im Cache vorhanden ist, wird ein entsprechender Fehlercode zurückgegeben. Dieses Flag kann kombiniert werden, mit dem bitweisen **oder** ( **&#124;**) Operator.
+- Vorgänge INTERNET_FLAG_OFFLINE herunterladen, die über den persistenten Cache nur erfüllt werden. Wenn das Element nicht im Cache vorhanden ist, wird ein entsprechender Fehlercode zurückgegeben. Dieses Flag kann kombiniert werden, mit dem bitweisen **oder** ( **&#124;** ) Operator.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -258,7 +258,7 @@ Die Variable angeben der Größe der *PstrCookieData* Puffer. Wenn die Funktion 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt true zurück, wenn erfolgreich, oder "false" andernfalls. Wenn der Aufruf fehlschlägt, rufen Sie die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) um die Ursache des Fehlers zu bestimmen. Die folgenden Fehlerwerte gelten:
+Gibt true zurück, wenn erfolgreich, oder "false" andernfalls. Wenn der Aufruf fehlschlägt, rufen Sie die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) um die Ursache des Fehlers zu bestimmen. Die folgenden Fehlerwerte gelten:
 
 - ERROR_NO_MORE_ITEMS besteht kein Cookie für die angegebene URL und alle übergeordneten.
 
@@ -536,7 +536,7 @@ Der Zeiger, `OpenURL` gibt hängt *PstrURL*den Typ des Diensts. In der folgenden
 
 ### <a name="remarks"></a>Hinweise
 
-Der Parameter *DwFlags* muss entweder INTERNET_FLAG_TRANSFER_ASCII oder INTERNET_FLAG_TRANSFER_BINARY, jedoch nicht beides enthalten. Die übrigen Flags können kombiniert werden, mit dem bitweisen **oder** Operator ( **&#124;**).
+Der Parameter *DwFlags* muss entweder INTERNET_FLAG_TRANSFER_ASCII oder INTERNET_FLAG_TRANSFER_BINARY, jedoch nicht beides enthalten. Die übrigen Flags können kombiniert werden, mit dem bitweisen **oder** Operator ( **&#124;** ).
 
 `OpenURL`, die die Win32-Funktion umschließt `InternetOpenURL`, ermöglicht es, nur herunterladen, abrufen und Lesen von Daten aus einem Internetserver. `OpenURL` können Sie keine dateibearbeitung an einem Remotestandort, deshalb sie keine müssen [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) Objekt.
 
@@ -616,11 +616,11 @@ Gibt an, verschiedene Cacheoptionen. Der Standardwert ist auf 0 festgelegt. Die 
 
 - INTERNET_FLAG_DONT_CACHE Zwischenspeichern nicht der Daten, entweder lokal oder in einen beliebigen Gatewayserver.
 
-- Vorgänge INTERNET_FLAG_OFFLINE herunterladen, die über den persistenten Cache nur erfüllt werden. Wenn das Element nicht im Cache vorhanden ist, wird ein entsprechender Fehlercode zurückgegeben. Dieses Flag kann kombiniert werden, mit dem bitweisen **oder** ( **&#124;**) Operator.
+- Vorgänge INTERNET_FLAG_OFFLINE herunterladen, die über den persistenten Cache nur erfüllt werden. Wenn das Element nicht im Cache vorhanden ist, wird ein entsprechender Fehlercode zurückgegeben. Dieses Flag kann kombiniert werden, mit dem bitweisen **oder** ( **&#124;** ) Operator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn der Vorgang erfolgreich war, wird der Wert "true" zurückgegeben. Wenn ein Fehler aufgetreten ist, wird der Wert "false" zurückgegeben. Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
+Wenn der Vorgang erfolgreich war, wird der Wert "true" zurückgegeben. Wenn ein Fehler aufgetreten ist, wird der Wert "false" zurückgegeben. Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
 
 ## <a name="see-also"></a>Siehe auch
 

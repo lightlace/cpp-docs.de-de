@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 295a58a86f35fca3b8d25706857162facc9cb3ea
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164071"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503745"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +181,7 @@ Wenn Sie Windows gesendete benachrichtigungsmeldungen von ein Bearbeitungssteuer
 
 Jede Nachricht-Zuordnungseintrag weist folgende Form:
 
-  **ON_**_Benachrichtigung_**(** _Id_**,** _MemberFxn_ **)**
+  **ON_** _Benachrichtigung_ **(** _Id_ **,** _MemberFxn_ **)**
 
 wo `id` gibt die untergeordneten Fenster-ID des Edit-Steuerelements, das Senden der Benachrichtigung, und `memberFxn` ist der Name der übergeordneten Member-Funktion, die Sie geschrieben haben, um die Benachrichtigung zu verarbeiten.
 
@@ -708,7 +708,7 @@ Gibt das Zeichen, die das Zeichen angezeigt werden, die der Benutzer eingegeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn Sie das Steuerelement zum Bearbeiten mit dem ES_PASSWORD-Stil erstellen, bestimmt die DLL, die das Steuerelement unterstützt das Standardkennwortzeichen an. Das Manifest oder [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) Methode bestimmt die DLL unterstützt das Steuerelement zum Bearbeiten. Wenn das Steuerelement zum Bearbeiten von "User32.dll" unterstützt wird, ist das das Standardkennwortzeichen Sternchen ("*", U + 002A). Wenn comctl32.dll Version 6 der Edit-Steuerelement unterstützt, ist das Standardzeichen SCHWARZER Kreis ("●", U + 25CF). Weitere Informationen zu der DLL und die Version unterstützt das häufig verwendeter Steuerelemente finden Sie unter [Shell und allgemeine Steuerelemente Versionen](https://msdn.microsoft.com/library/windows/desktop/bb776779).
+Wenn Sie das Steuerelement zum Bearbeiten mit dem ES_PASSWORD-Stil erstellen, bestimmt die DLL, die das Steuerelement unterstützt das Standardkennwortzeichen an. Das Manifest oder [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) Methode bestimmt die DLL unterstützt das Steuerelement zum Bearbeiten. Wenn das Steuerelement zum Bearbeiten von "User32.dll" unterstützt wird, ist das das Standardkennwortzeichen Sternchen ("*", U + 002A). Wenn comctl32.dll Version 6 der Edit-Steuerelement unterstützt, ist das Standardzeichen SCHWARZER Kreis ("●", U + 25CF). Weitere Informationen zu der DLL und die Version unterstützt das häufig verwendeter Steuerelemente finden Sie unter [Shell und allgemeine Steuerelemente Versionen](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
 
 Diese Methode sendet die [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) -Nachricht, die im Windows SDK beschrieben wird.
 
@@ -867,7 +867,7 @@ Der Zeichenindex ist die Anzahl der Zeichen vom Anfang des Edit-Steuerelements i
 
 Diese Memberfunktion wird nur von mehrzeiligen Bearbeitungssteuerelemente verarbeitet.
 
-Weitere Informationen finden Sie unter [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) im Windows SDK.
+Weitere Informationen finden Sie unter [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) im Windows SDK.
 
 ### <a name="example"></a>Beispiel
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: a434a329febc38d6a46881dcabba6b05a402fbca
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 2f9ac262cc564c39d30ddfae7f70ea92e92081a8
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708054"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503796"
 ---
 # <a name="windows-desktop-wizard"></a>Windows-Desktop-Assistenten
 
@@ -51,7 +51,7 @@ Erstellt den angegebenen Anwendungstyp.
 
 |Option|Beschreibung|
 |------------|-----------------|
-|**Konsolenanwendung**|Erstellt eine Konsolenanwendung. Konsolenprogramme werden mit entwickelt [Konsolenfunktionen](https://msdn.microsoft.com/library/ms813137.aspx), die Zeichenmodus-Unterstützung in Konsolenfenstern zeichenmodusunterstützung bieten. Visual C++ [Laufzeitbibliotheken](../c-runtime-library/c-run-time-library-reference.md) auch Ausgabe und Eingabe in Konsolenfenstern mit standard-e/a-Funktionen, z. B. `printf_s()` und `scanf_s()`. Eine Konsolenanwendung hat keine grafische Benutzeroberfläche. Sie kompiliert Code in einer EXE-Datei und kann als eigenständige Anwendung von der Befehlszeile ausgeführt werden.<br /><br /> Sie können einer Konsolenanwendung MFC- und ATL-Unterstützung hinzufügen.|
+|**Konsolenanwendung**|Erstellt eine Konsolenanwendung. Visual C++ [Laufzeitbibliotheken](../c-runtime-library/c-run-time-library-reference.md) auch Ausgabe und Eingabe in Konsolenfenstern mit standard-e/a-Funktionen, z. B. `printf_s()` und `scanf_s()`. Eine Konsolenanwendung hat keine grafische Benutzeroberfläche. Sie kompiliert Code in einer EXE-Datei und kann als eigenständige Anwendung von der Befehlszeile ausgeführt werden.<br /><br /> Sie können einer Konsolenanwendung MFC- und ATL-Unterstützung hinzufügen.|
 |**Windows-Anwendung**|Erstellt ein Win32-Programm. Ein Win32-Programm ist eine ausführbare Anwendung (EXE), die in C oder C++ geschrieben ist und über Aufrufe der Win32-API eine grafische Benutzeroberfläche erstellt.<br /><br /> Sie können einer Windows-Anwendung keine MFC- oder ATL-Unterstützung hinzufügen.|
 |**Dynamic Link Library**|Erstellt eine Win32-Dynamic Link Library (DLL). Eine Win32-DLL ist eine in C oder C++ geschriebene Binärdatei, die anstelle von MFC-Klassenaufrufen Win32-API-Aufrufe verwendet. Sie fungiert als gemeinsam genutzte Funktionsbibliothek, die von mehreren Anwendungen gleichzeitig eingesetzt werden kann.<br /><br /> Eine DLL-Anwendung erstellt, die mit diesem Assistenten können keine MFC- oder ATL-Unterstützung hinzugefügt, aber Sie können eine MFC-DLL erstellen auswählen **neu > Projekt > MFC-DLL**.|
 |**Statische Bibliothek**|Erstellt eine statische Bibliothek. Eine statische Bibliothek ist eine Datei, die Objekte sowie zugehörige Funktionen und Daten enthält, die bei der Erstellung der ausführbaren Datei mit dem Programm verknüpft werden. In diesem Thema wird erläutert, wie Sie die Erstellung von Startdateien und [Projekteigenschaften](../build/reference/property-pages-visual-cpp.md) für eine statische Bibliothek. Eine statische Bibliothek bietet die folgenden Vorteile:<br /><br />– Eine statische Win32-Bibliothek ist hilfreich, wenn die Anwendung, die, der Sie gerade arbeiten, Aufrufe der Win32-API anstelle von MFC ausführt.<br />-Der Verknüpfungsvorgang ist identisch, ob die übrigen Teile Ihrer Windows-Anwendung in C oder C++ geschrieben wird.<br />– Sie können eine statische Bibliothek zu einem MFC-basierten Programm oder zu einem MFC-fremden Programm verknüpfen.|
@@ -87,4 +87,4 @@ Die vom Assistenten erstellten Projektdateien können im **Projektmappen-Explore
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++Projekttypen in Visual Studio](../build/reference/visual-cpp-project-types.md)
+[C++-Projektvorlagen](../build/reference/visual-cpp-project-types.md)

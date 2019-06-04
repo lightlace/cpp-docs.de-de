@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225248"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503446"
 ---
 # <a name="clistctrl-class"></a>CListCtrl-Klasse
 
@@ -681,7 +681,7 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_**.
+Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_** .
 
 `CreateEx` erstellt das Steuerelement mit den erweiterten Windows-Formatvorlagen, die anhand des *DwExStyle*. Um erweiterte Stile bestimmten auf ein Steuerelement festzulegen, rufen [SetExtendedStyle](#setextendedstyle). Verwenden Sie z. B. `CreateEx` solche Stile als WS_EX_CONTEXTHELP festgelegt, aber verwenden Sie `SetExtendedStyle` solche Stile als LVS_EX_FULLROWSELECT festgelegt. Weitere Informationen finden Sie die Stile, die in diesem Thema beschriebenen [erweiterte Listenansicht-Formatvorlagen](/windows/desktop/Controls/extended-list-view-styles) im Windows SDK.
 
@@ -1164,7 +1164,7 @@ Gibt den Index der Spalte, deren Breite ist, abgerufen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Breite in Pixel, der vom angegebenen Spalte *"ncol"*.
+Die Breite in Pixel, der vom angegebenen Spalte *"ncol"* .
 
 ### <a name="example"></a>Beispiel
 
@@ -1367,7 +1367,7 @@ True, wenn diese Methode erfolgreich ist. andernfalls "false".
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [LVM_GETGROUPINFOBYINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774933) -Nachricht, die im Windows SDK beschriebene-->.
+Diese Methode sendet die [LVM_GETGROUPINFOBYINDEX](/windows/desktop/controls/lvm-getgroupinfobyindex) -Nachricht, die im Windows SDK beschriebene-->.
 
 ### <a name="example"></a>Beispiel
 
@@ -1787,7 +1787,7 @@ BOOL GetItemIndexRect(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*pItemIndex*|[in] Zeiger auf ein [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur für das übergeordnete Element des Unterelements ab.<br /><br /> Der Aufrufer ist verantwortlich für das zuordnen und Festlegen der Member, der die [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur. Dieser Parameter darf nicht NULL sein.|
+|*pItemIndex*|[in] Zeiger auf ein [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) Struktur für das übergeordnete Element des Unterelements ab.<br /><br /> Der Aufrufer ist verantwortlich für das zuordnen und Festlegen der Member, der die [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) Struktur. Dieser Parameter darf nicht NULL sein.|
 |*iColumn*|[in] Nullbasierte Index der einer Spalte im Steuerelement.|
 |*rectType*|[in] Der Teil des Listenansicht-Unterelements für die das umschließende Rechteck abgerufen wird. Geben Sie einen der folgenden Werte an:<br /><br /> LVIR_BOUNDS - gibt das umschließende Rechteck des gesamten Unterelements, einschließlich das Symbol und die Bezeichnung zurück.<br /><br /> LVIR_ICON - gibt das umschließende Rechteck des Symbols oder des Minisymbols des Unterelements ab.<br /><br /> LVIR_LABEL - gibt das umschließende Rechteck für den Text des Unterelements.|
 |*pRect*|[out] Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die Informationen über das umschließende Rechteck des Unterelements empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung der [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur. Dieser Parameter darf nicht NULL sein.|
@@ -2093,8 +2093,8 @@ BOOL GetNextItemIndex(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*pItemIndex*|[in, out] Zeiger auf die [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur, die das Element beschreibt, an dem die Suche beginnt, oder -1, um das erste Element zu suchen, die Flags in entspricht, der *nFlags* Parameter.<br /><br /> Wenn diese Methode erfolgreich ist, ist die `LVITEMINDEX` Struktur beschreibt die von der Suche gefundenen Elements.|
-|*nFlags*|[in] Eine bitweise Kombination (OR) von Flags, die angeben, wie die Suche auszuführen.<br /><br /> Die Suche kann sich je nach dem Index, den Zustand oder die Darstellung das Zielelement oder das Zielelement physische Position relativ zu das Element angegeben wird, durch die *pItemIndex* Parameter. Weitere Informationen finden Sie unter den *Flags* Parameter in der [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) Nachricht.|
+|*pItemIndex*|[in, out] Zeiger auf die [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) Struktur, die das Element beschreibt, an dem die Suche beginnt, oder -1, um das erste Element zu suchen, die Flags in entspricht, der *nFlags* Parameter.<br /><br /> Wenn diese Methode erfolgreich ist, ist die `LVITEMINDEX` Struktur beschreibt die von der Suche gefundenen Elements.|
+|*nFlags*|[in] Eine bitweise Kombination (OR) von Flags, die angeben, wie die Suche auszuführen.<br /><br /> Die Suche kann sich je nach dem Index, den Zustand oder die Darstellung das Zielelement oder das Zielelement physische Position relativ zu das Element angegeben wird, durch die *pItemIndex* Parameter. Weitere Informationen finden Sie unter den *Flags* Parameter in der [LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex) Nachricht.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2104,7 +2104,7 @@ True, wenn diese Methode erfolgreich ist. andernfalls "false".
 
 Der Aufrufer ist verantwortlich für das zuordnen und Festlegen der Member der der `LVITEMINDEX` Struktur, um die durch die *pItemIndex* Parameter.
 
-Diese Methode sendet die [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) -Nachricht, die im Windows SDK beschrieben wird.
+Diese Methode sendet die [LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex) -Nachricht, die im Windows SDK beschrieben wird.
 
 ## <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem
 
@@ -2909,7 +2909,7 @@ Ein Listenansicht-Steuerelement überwacht intern Elementen nach Index. Dies kan
 
 Beachten Sie, dass in einer Multithreadumgebung der Index nur in dem Thread garantiert ist, die das Listenansicht-Steuerelement, nicht in Hintergrundthreads hostet.
 
-Diese Methode sendet die [LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137) -Nachricht, die im Windows SDK beschrieben wird.
+Diese Methode sendet die [LVM_MAPIDTOINDEX](/windows/desktop/controls/lvm-mapidtoindex) -Nachricht, die im Windows SDK beschrieben wird.
 
 ## <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
 
@@ -3641,7 +3641,7 @@ BOOL SetItem(
 ### <a name="parameters"></a>Parameter
 
 *pItem*<br/>
-Adresse von einem [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Struktur, die das neue Element enthält Attribute, wie im Windows SDK beschrieben. Der Struktur des `iItem` und `iSubItem` Mitglieder zu identifizieren, das Element oder Unterelement und der Struktur `mask` -Member gibt an, welche Attribute festlegen. Weitere Informationen zu den `mask` Member finden Sie unter den **"Hinweise"**.
+Adresse von einem [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Struktur, die das neue Element enthält Attribute, wie im Windows SDK beschrieben. Der Struktur des `iItem` und `iSubItem` Mitglieder zu identifizieren, das Element oder Unterelement und der Struktur `mask` -Member gibt an, welche Attribute festlegen. Weitere Informationen zu den `mask` Member finden Sie unter den **"Hinweise"** .
 
 *nItem*<br/>
 Der Index des Elements, dessen Attribute werden festgelegt werden.
@@ -3822,7 +3822,7 @@ BOOL SetItemIndexState(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*pItemIndex*|[in] Zeiger auf ein [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur, die ein Element beschreibt. Der Aufrufer ist für diese Struktur zuordnen und Festlegen von Membern verantwortlich.|
+|*pItemIndex*|[in] Zeiger auf ein [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) Struktur, die ein Element beschreibt. Der Aufrufer ist für diese Struktur zuordnen und Festlegen von Membern verantwortlich.|
 |*dwState*|[in] Der Zustand, der das Element festgelegt. Dies ist eine bitweise Kombination von [Liste anzeigen-Element-Zustände](/windows/desktop/Controls/list-view-item-states). Geben Sie 0 (null), zum Zurücksetzen oder dem einen legen, einen Status.|
 |*dwMask*|[in] Eine Maske, der die gültigen Bits der vom angegebenen Zustand der *dwState-Datenmember* Parameter. Geben Sie eine bitweise Kombination (OR) von [Liste anzeigen-Element-Zustände](/windows/desktop/Controls/list-view-item-states).|
 

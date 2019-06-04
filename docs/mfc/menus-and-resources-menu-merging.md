@@ -10,12 +10,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f7af7007e72cb8e01022c81a244fc70ba52a5cc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225538"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504824"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menüs und Ressourcen: Zusammenführen von Menüs
 
@@ -29,9 +29,7 @@ In diesem Artikel behandelten Themen umfassen:
 
 ##  <a name="_core_menu_layouts"></a> Menülayouts
 
-Der erste Schritt ist zum Koordinieren von Menülayouts. Weitere Informationen finden Sie unter den **Menü Erstellung** im Abschnitt [Überlegungen zur Programmierung Menü](https://msdn.microsoft.com/library/ms647557.aspx) im Windows SDK.
-
-Containeranwendungen sollten, erstellen ein neues Menüs verwendet werden, nur, wenn eingebettete Elemente direkt aktiviert werden. Mindestens sollte in diesem Menü aus folgenden, in der aufgeführten Reihenfolge bestehen:
+Der erste Schritt ist zum Koordinieren von Menülayouts. Containeranwendungen sollten, erstellen ein neues Menüs verwendet werden, nur, wenn eingebettete Elemente direkt aktiviert werden. Mindestens sollte in diesem Menü aus folgenden, in der aufgeführten Reihenfolge bestehen:
 
 1. Menü "Datei" identisch mit dem Kennwort verwendet, wenn Dateien geöffnet sind. (In der Regel sind keine anderen Menüelementen vor dem nächsten Element platziert.)
 

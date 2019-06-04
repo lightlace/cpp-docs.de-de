@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 24d79c684226d57839161946255781c3bdd5a043
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 54585ee17fe5686e9b3621d8a24581f06580a38f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341706"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504545"
 ---
 # <a name="coledataobject-class"></a>COleDataObject-Klasse
 
@@ -288,7 +288,7 @@ Nach einem Aufruf von [BeginEnumFormats](#beginenumformats), befindet sich die P
 
 Rufen Sie zum Überprüfen der Verfügbarkeit von einem bestimmten Format [COleDataObject::IsDataAvailable](#isdataavailable).
 
-Weitere Informationen finden Sie unter [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) im Windows SDK.
+Weitere Informationen finden Sie unter [IEnumXXXX::Next](/previous-versions//ms695273\(v=vs.85\)) im Windows SDK.
 
 ##  <a name="isdataavailable"></a>  COleDataObject::IsDataAvailable
 

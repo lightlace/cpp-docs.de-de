@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df6515573cfca784d1e59f34342466dde2e42e4
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375794"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504850"
 ---
 # <a name="cmenu-class"></a>CMenu-Klasse
 
@@ -769,7 +769,7 @@ Wert, der die Bedeutung des angibt `nIDItem`. In der Standardeinstellung `ByPos`
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert ungleich NULL. Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehlerinformationen abzurufen, verwenden Sie die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), wie im Windows SDK beschrieben.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ungleich NULL. Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehlerinformationen abzurufen, verwenden Sie die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror), wie im Windows SDK beschrieben.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1267,7 +1267,7 @@ Wert, der die Bedeutung des angibt *uItem*. Wenn dieser Parameter auf "FALSE" is
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert ungleich NULL. Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehlerinformationen abzurufen, verwenden Sie die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), wie im Windows SDK beschrieben.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ungleich NULL. Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehlerinformationen abzurufen, verwenden Sie die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror), wie im Windows SDK beschrieben.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1476,7 +1476,7 @@ Zeiger auf eine [TPMPARAMS](/windows/desktop/api/winuser/ns-winuser-tagtpmparams
 
 Bei Angabe von TPM_RETURNCMD in die *FuFlags* Parameter, der Rückgabewert ist der Menü-Elementbezeichner des Elements, das der Benutzer ausgewählt. Wenn der Benutzer das Menü abbricht, ohne eine Auswahl zu treffen, oder wenn ein Fehler auftritt, ist der Rückgabewert 0.
 
-Wenn Sie keine TPM_RETURNCMD im Angeben der *FuFlags* Parameter, die der Rückgabewert ungleich NULL, wenn die Funktion erfolgreich ausgeführt wird und 0 ist, wenn ein Fehler auftritt. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Wenn Sie keine TPM_RETURNCMD im Angeben der *FuFlags* Parameter, die der Rückgabewert ungleich NULL, wenn die Funktion erfolgreich ausgeführt wird und 0 ist, wenn ein Fehler auftritt. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 

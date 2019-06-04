@@ -1,6 +1,6 @@
 ---
 title: Bildlauf, Anordnung, Sortierung und Suche in Listensteuerelementen
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 helpviewer_keywords:
 - image lists [MFC], sorting
 - image lists [MFC], arranging
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - CListCtrl class [MFC], sorting
 - CListCtrl class [MFC], arranging the list
 ms.assetid: dcc51e4c-0ca8-4319-bec5-6994cc8ac9e5
-ms.openlocfilehash: 94ede322536f0ef57a87b4e6d4d448e4dff34814
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7826b7d08869f8df01f8dad2c4da3c24c468d1be
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277741"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504261"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Bildlauf, Anordnung, Sortierung und Suche in Listensteuerelementen
 
 Listen-Steuerelemente ([CListCtrl](../mfc/reference/clistctrl-class.md)) sind standardmäßig bildlauffähigen. Weitere Informationen finden Sie unter [Bildlaufposition](/windows/desktop/Controls/using-list-view-controls) im Windows SDK und die [Scroll](../mfc/reference/clistctrl-class.md#scroll) Member-Funktion.
 
-Rufen Sie `CListCtrl` Memberfunktionen zum Auflisten von Elementen im Steuerelement anordnen Elemente sortieren und Suchen von bestimmten Elementen. Weitere Informationen finden Sie unter [anordnen, Sortieren und Suchen von](https://msdn.microsoft.com/library/windows/desktop/bb774736) im Windows SDK und die [CListCtrl](../mfc/reference/clistctrl-class.md) Mitglieder [anordnen](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems) , und [FindItem](../mfc/reference/clistctrl-class.md#finditem).
+Rufen Sie `CListCtrl` Memberfunktionen zum Auflisten von Elementen im Steuerelement anordnen Elemente sortieren und Suchen von bestimmten Elementen. Weitere Informationen finden Sie unter [mit ListView-Steuerelementen](/windows/desktop/Controls/using-list-view-controls) im Windows SDK und die [CListCtrl](../mfc/reference/clistctrl-class.md) Mitglieder [anordnen](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems), und [FindItem](../mfc/reference/clistctrl-class.md#finditem).
 
 ## <a name="see-also"></a>Siehe auch
 

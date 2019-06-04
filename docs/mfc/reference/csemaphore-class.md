@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: f2a05963f39393bcc73650beb44c5dbb8e5535ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c518b6a9ad0fe857b0878bcecd3020ba97174e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324206"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504712"
 ---
 # <a name="csemaphore-class"></a>CSemaphore-Klasse
 
@@ -83,14 +83,14 @@ Die maximale Auslastung-Anzahl für das Semaphor. Muss größer als 0 sein.
 Der Name des das Semaphor. Muss angegeben werden, wenn das Semaphor über Prozessgrenzen hinweg zugegriffen wird. Wenn `NULL`, wird das Objekt unbenannt sein. Der Name ein vorhandenes Semaphor übereinstimmt, der Konstruktor erstellt ein neues `CSemaphore` Objekt, das das Semaphor mit diesem Namen verweist. Wenn der Name einer vorhandenen Synchronisierungsobjekt, die nicht auf eine Semaphore ist übereinstimmt, schlägt die Erstellung fehl.
 
 *lpsaAttributes*<br/>
-Von Sicherheitsattributen für das Semaphorobjekt. Eine vollständige Beschreibung dieser Struktur finden Sie unter [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) im Windows SDK.
+Von Sicherheitsattributen für das Semaphorobjekt. Eine vollständige Beschreibung dieser Struktur finden Sie unter [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) im Windows SDK.
 
 ### <a name="remarks"></a>Hinweise
 
 Zum Zugreifen auf oder release eine `CSemaphore` Objekt, das Erstellen einer [CMultiLock](../../mfc/reference/cmultilock-class.md) oder [CSingleLock](../../mfc/reference/csinglelock-class.md) Objekt, und rufen die [Sperre](../../mfc/reference/csinglelock-class.md#lock) und [Unlock](../../mfc/reference/csinglelock-class.md#unlock) Member-Funktionen.
 
 > [!IMPORTANT]
->  Nach dem Erstellen der `CSemaphore` -Objekts [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) um sicherzustellen, dass das Mutex nicht bereits vorhanden ist. Wenn der Mutex unerwartet vorhanden war, kann dies bedeuten, ein nicht autorisierten Prozess ist squatting und möglicherweise beabsichtigt Mutex in böswilliger Absicht verwendet werden. Die empfohlene Vorgehensweise für sicherheitsorientierten werden in diesem Fall das Handle geschlossen und fortgesetzt, als wäre der Fehler beim Erstellen des Objekts.
+>  Nach dem Erstellen der `CSemaphore` -Objekts [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) um sicherzustellen, dass das Mutex nicht bereits vorhanden ist. Wenn der Mutex unerwartet vorhanden war, kann dies bedeuten, ein nicht autorisierten Prozess ist squatting und möglicherweise beabsichtigt Mutex in böswilliger Absicht verwendet werden. Die empfohlene Vorgehensweise für sicherheitsorientierten werden in diesem Fall das Handle geschlossen und fortgesetzt, als wäre der Fehler beim Erstellen des Objekts.
 
 ## <a name="see-also"></a>Siehe auch
 

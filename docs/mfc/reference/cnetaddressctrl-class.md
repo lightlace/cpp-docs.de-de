@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23160c51466ce1a2857d3648dd5f4970dfe172f7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373809"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504229"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl-Klasse
 
@@ -74,7 +74,7 @@ Im folgenden Codebeispiel wird ein Teil eines Dialogfelds, das eine Netzwerkadre
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Codebeispiel wird aus der Dialogfeld-Headerdatei definiert die [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) und [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) Variablen, die erforderlich sind die [CNetAddressCtrl::GetAddress](#getaddress)Methode.
+Im folgenden Codebeispiel wird aus der Dialogfeld-Headerdatei definiert die [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) und [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) Variablen, die erforderlich sind die [CNetAddressCtrl::GetAddress](#getaddress)Methode.
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]
 
@@ -191,7 +191,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ### <a name="parameters"></a>Parameter
 
 *pAddress*<br/>
-[in, out] Zeiger auf ein [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) Struktur.  Legen Sie die *pAddrInfo* Member der Struktur an die Adresse des eine [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) strukturieren, bevor Sie die GetAddress-Methode aufrufen.
+[in, out] Zeiger auf ein [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) Struktur.  Legen Sie die *pAddrInfo* Member der Struktur an die Adresse des eine [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) strukturieren, bevor Sie die GetAddress-Methode aufrufen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -199,7 +199,7 @@ Der Wert S_OK zurück, wenn diese Methode erfolgreich ist; andernfalls, eine COM
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn diese Methode erfolgreich ist, ist die [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) Struktur enthält zusätzliche Informationen über die Netzwerkadresse.
+Wenn diese Methode erfolgreich ist, ist die [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) Struktur enthält zusätzliche Informationen über die Netzwerkadresse.
 
 Verwenden der [CNetAddressCtrl::SetAllowType](#setallowtype) Methode, um die Typen von Adressen anzugeben, kann die aktuellen Netzwerkadressen-Steuerelement zu unterstützen. Verwenden der [CNetAddressCtrl::GetAddress](#getaddress) Methode, um zu überprüfen und analysieren die Netzwerkadresse, die der Benutzer eingibt. Verwenden der [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) Methode einen Fehler Nachricht Infotipp anzuzeigen, wenn die [CNetAddressCtrl::GetAddress](#getaddress) Methode nicht erfolgreich ist.
 
@@ -215,7 +215,7 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Eine bitweise Kombination (OR) von Flags, die angibt, die Typen von Adressen unterstützen das Netzwerkadressen-Steuerelement. Weitere Informationen finden Sie unter [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).
+Eine bitweise Kombination (OR) von Flags, die angibt, die Typen von Adressen unterstützen das Netzwerkadressen-Steuerelement. Weitere Informationen finden Sie unter [NET_STRING](/windows/desktop/shell/net-string).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -233,7 +233,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*dwAddrMask*|[in] Eine bitweise Kombination (OR) von Flags, die angibt, die Typen von Adressen unterstützen das Netzwerkadressen-Steuerelement. Weitere Informationen finden Sie unter [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|
+|*dwAddrMask*|[in] Eine bitweise Kombination (OR) von Flags, die angibt, die Typen von Adressen unterstützen das Netzwerkadressen-Steuerelement. Weitere Informationen finden Sie unter [NET_STRING](/windows/desktop/shell/net-string).|
 
 ### <a name="return-value"></a>Rückgabewert
 

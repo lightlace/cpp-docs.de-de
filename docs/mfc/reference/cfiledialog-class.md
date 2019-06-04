@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe4994b91813e2965972b47c838ddaf5333cc5f0
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385364"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503754"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog-Klasse
 
@@ -512,7 +512,7 @@ void ApplyOFNToShellDialog();
 
 ### <a name="remarks"></a>Hinweise
 
-In Versionen von Windows vor Windows Vista, das Element [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) -Datenstruktur wurde mit dem Status der fortlaufend synchronisiert die `CFileDialog`. Alle Änderungen an der [M_ofn](#m_ofn) Membervariable wurden in den Zustand des Dialogfelds sofort sichtbar. Alle Änderungen in den Zustand des Dialogfelds sofort aktualisieren Sie außerdem die `m_ofn` Membervariablen gespeichert.
+In Versionen von Windows vor Windows Vista, das Element [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) -Datenstruktur wurde mit dem Status der fortlaufend synchronisiert die `CFileDialog`. Alle Änderungen an der [M_ofn](#m_ofn) Membervariable wurden in den Zustand des Dialogfelds sofort sichtbar. Alle Änderungen in den Zustand des Dialogfelds sofort aktualisieren Sie außerdem die `m_ofn` Membervariablen gespeichert.
 
 In Windows Vista oder höher, die Werte in der `m_ofn` Membervariable und Status der `CFileDialog` werden nicht unbedingt synchronisiert werden. Diese Funktion erzwingt den Status der `CFileDialog` entsprechend aktualisiert werden die `m_ofn` Struktur. Windows ruft diese Funktion automatisch während der [CFileDialog::DoModal](#domodal).
 
@@ -1626,7 +1626,7 @@ void UpdateOFNFromShellDialog();
 
 ### <a name="remarks"></a>Hinweise
 
-In Versionen von Windows vor Windows Vista, das Element [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) -Datenstruktur wurde mit dem Status der fortlaufend synchronisiert die `CFileDialog`. Alle Änderungen an der [M_ofn](#m_ofn) Membervariable direkt betroffen, den Zustand des Dialogfelds. Außerdem aktualisiert alle Änderungen in den Zustand des Dialogfelds sofort die Membervariable M_ofn.
+In Versionen von Windows vor Windows Vista, das Element [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) -Datenstruktur wurde mit dem Status der fortlaufend synchronisiert die `CFileDialog`. Alle Änderungen an der [M_ofn](#m_ofn) Membervariable direkt betroffen, den Zustand des Dialogfelds. Außerdem aktualisiert alle Änderungen in den Zustand des Dialogfelds sofort die Membervariable M_ofn.
 
 In Windows Vista oder höher, die `m_ofn` Datenstruktur wird nicht automatisch aktualisiert. Gewährleisten Sie die Genauigkeit der Daten in die `m_ofn` Membervariable, rufen Sie die `UpdateOFNFromShellDialog` Funktion vor dem Zugriff auf die Daten. Windows ruft diese Funktion automatisch während der Verarbeitung der [IFileDialog::OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
 

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8439e973c935108d645076bb7e2bfae7207e65d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245581"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503340"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY-Makros
 
@@ -39,7 +39,7 @@ Diese Makros Geben Sie die Schnittstellen eines Objekts in die COM-Zuordnung, da
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Identisch mit [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), außer dass die Abfrage, Weiterleitung führt Abfragen für alle IID *Punk*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Identisch mit [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), außer bei *Punk* NULL ist, erstellt es automatisch das Aggregat von beschrieben die *Clsid*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Identisch mit [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), außer dass die Abfrage, Weiterleitung führt Abfragen für alle IID *Punk*, und wenn *Punk* NULL ist, automatisch erstellen das Aggregat von beschrieben die *Clsid*.|
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Bewirkt, dass das Programm aufrufen ["DebugBreak"](https://msdn.microsoft.com/library/windows/desktop/ms679297) Wenn die angegebene Schnittstelle abgefragt wird.|
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Bewirkt, dass das Programm aufrufen ["DebugBreak"](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) Wenn die angegebene Schnittstelle abgefragt wird.|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Speichert die Schnittstelle-spezifische Daten für jede Instanz.|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Macht Ihre abtrennbare Schnittstellen verfügbar.|
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Verarbeitet die COM-Zuordnung der Basisklasse an, wenn die Verarbeitung dieser Eintrag in der COM-Zuordnung erreicht.|
@@ -243,7 +243,7 @@ Wenn die Schnittstelle-Abfrage schlägt fehl, setzt die Verarbeitung der COM-Zuo
 
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK
 
-Bewirkt, dass das Programm aufrufen ["DebugBreak"](https://msdn.microsoft.com/library/windows/desktop/ms679297) Wenn die angegebene Schnittstelle abgefragt wird.
+Bewirkt, dass das Programm aufrufen ["DebugBreak"](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) Wenn die angegebene Schnittstelle abgefragt wird.
 
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -328,7 +328,7 @@ Z. B. in den folgenden Code:
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-Beachten Sie, dass der erste Eintrag in der COM-Zuordnung eine Schnittstelle für das Objekt, das mit der COM-Zuordnung sein muss. Daher können keine beginnen Sie Ihre COM-Zuordnungseinträgen mit COM_INTERFACE_ENTRY_CHAIN, wodurch die COM-Zuordnung eines anderen Objekts, an dem Punkt gesucht werden soll, in denen **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** in COM-Zuordnung des Objekts angezeigt. Falls die COM-Zuordnung eines anderen Objekts zu suchen, zuerst werden sollen, fügen Sie einen Schnittstelle-Eintrag für `IUnknown` mit COM-Zuordnung, verkettet Sie dann COM-Zuordnung das andere Objekt. Zum Beispiel:
+Beachten Sie, dass der erste Eintrag in der COM-Zuordnung eine Schnittstelle für das Objekt, das mit der COM-Zuordnung sein muss. Daher können keine beginnen Sie Ihre COM-Zuordnungseinträgen mit COM_INTERFACE_ENTRY_CHAIN, wodurch die COM-Zuordnung eines anderen Objekts, an dem Punkt gesucht werden soll, in denen **COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** in COM-Zuordnung des Objekts angezeigt. Falls die COM-Zuordnung eines anderen Objekts zu suchen, zuerst werden sollen, fügen Sie einen Schnittstelle-Eintrag für `IUnknown` mit COM-Zuordnung, verkettet Sie dann COM-Zuordnung das andere Objekt. Zum Beispiel:
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 

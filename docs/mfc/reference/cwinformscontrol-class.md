@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1c7a394317fefba7911e9500126919e83389f20
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323299"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504666"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl-Klasse
 
@@ -108,7 +108,7 @@ inline BOOL CreateManagedControl(
 ### <a name="parameters"></a>Parameter
 
 *pType*<br/>
-Der Datentyp des Steuerelements erstellt werden. Muss eine [Typ](https://msdn.microsoft.com/library/system.type) -Datentyp.
+Der Datentyp des Steuerelements erstellt werden. Muss eine [Typ](/dotnet/api/system.type) -Datentyp.
 
 *dwStyle*<br/>
 Der Fensterstil, um auf das Steuerelement angewendet werden soll. Geben Sie eine Kombination von [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles). Derzeit werden nur die folgenden Formate unterstützt: WS_TABSTOP "," WS_VISIBLE "," WS_DISABLED "und" WS_GROUP ".
@@ -136,7 +136,7 @@ Im Erfolgsfall gibt einen Wert ungleich NULL zurück. Wenn Fehler auftreten, gib
 
 Diese Methode instanziiert ein .NET Framework Windows Forms-Steuerelement in einem MFC-Container.
 
-Die erste Überladung der Methode akzeptiert einen .NET Framework-Datentyp *PGeben* so, dass MFC ein neues Objekt dieses Typs instanziiert werden kann. *PGeben* muss eine [Typ](https://msdn.microsoft.com/library/system.type) -Datentyp.
+Die erste Überladung der Methode akzeptiert einen .NET Framework-Datentyp *PGeben* so, dass MFC ein neues Objekt dieses Typs instanziiert werden kann. *PGeben* muss eine [Typ](/dotnet/api/system.type) -Datentyp.
 
 Die zweite Überladung der Methode erstellt ein Windows Forms-Steuerelement, das auf der Grundlage der `TManagedControl` Template-Parameter, der die `CWinFormsControl` Klasse. Die Größe und Position des Steuerelements basiert auf der `RECT` Struktur, die an die Methode übergeben. Nur *DwStyle* ist wichtig für die Formate.
 

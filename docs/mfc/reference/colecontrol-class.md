@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edad2ca391639868e7af1db6e13aaec66733f383
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160314"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503864"
 ---
 # <a name="colecontrol-class"></a>COleControl-Klasse
 
@@ -1184,7 +1184,7 @@ Ein Deskriptor für die Parametertypen des Ereignisses.
 
 In der Regel sollte diese Funktion nicht direkt aufgerufen werden. Stattdessen werden Sie die Ereignisse auslösen-Funktionen im Ereignis Map-Abschnitt der Klassendeklaration des Steuerelements aufrufen.
 
-Die *PbParams* Argument ist eine durch Leerzeichen getrennte Liste von **VTS_**. Einer oder mehrere dieser Werte, durch Leerzeichen (nicht Kommas) getrennt, gibt bzw. geben die Parameterliste der Funktion an. Folgende Werte sind möglich:
+Die *PbParams* Argument ist eine durch Leerzeichen getrennte Liste von **VTS_** . Einer oder mehrere dieser Werte, durch Leerzeichen (nicht Kommas) getrennt, gibt bzw. geben die Parameterliste der Funktion an. Folgende Werte sind möglich:
 
 |Symbol|Parametertyp|
 |------------|--------------------|
@@ -2811,7 +2811,7 @@ DWORD, welche Form oder einen Aspekt, der ein Objekt beschreibt, besteht darin, 
 - Für alle Teile von transparenten oder unregelmäßige DVASPECT_TRANSPARENT-Rechteck.
 
 *pRect*<br/>
-Verweist auf die [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) -Struktur gibt das Rechteck, in dem das Objekt gezeichnet werden soll. Dieser Parameter steuert die Positionierung und Strecken des Objekts.
+Verweist auf die [RECTL](/previous-versions/dd162907\(v=vs.85\)) -Struktur gibt das Rechteck, in dem das Objekt gezeichnet werden soll. Dieser Parameter steuert die Positionierung und Strecken des Objekts.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4003,7 +4003,7 @@ Der neue Wert für das Steuerelement des Flags geändert werden. TRUE gibt an, d
 
 ### <a name="remarks"></a>Hinweise
 
-Aufruf, dass diese Funktion, wenn eine Änderung vorgenommen wird, der persistente Zustand des Steuerelements auswirken würde. Z. B. wenn der Wert einer permanenten Eigenschaft ändert, rufen Sie diese Funktion mit *bModified* **"true"**.
+Aufruf, dass diese Funktion, wenn eine Änderung vorgenommen wird, der persistente Zustand des Steuerelements auswirken würde. Z. B. wenn der Wert einer permanenten Eigenschaft ändert, rufen Sie diese Funktion mit *bModified* **"true"** .
 
 ##  <a name="setnotpermitted"></a>  COleControl::SetNotPermitted
 

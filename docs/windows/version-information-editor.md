@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: 7910522578d89657adb09eb7729eb7539e010027
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a17539d0a9fb94c440d65275e9d032182088ae6e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387826"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504483"
 ---
 # <a name="version-information-editor-c"></a>Versionsinfo-Editor (C++)
 
@@ -54,7 +54,7 @@ Beim Bearbeiten der `FILEFLAGS` -Schlüssel in der **Versionsinfo-Editor**, beac
 
    - Die **Versionsinfo-Editor** legt diese fest der **Debuggen** Eigenschaft mit einer `#ifdef` im Ressourcenskript, basierend auf der `_DEBUG` build-Flag.
 
-  - Wenn die `Private Build` Schlüssel besitzt eine **Wert** legen Sie in der **Versionsinformationen** Tabelle, die entsprechende **Private Build** -Eigenschaft in der **Eigenschaften**  Fenster für die `FILEFLAGS` Schlüssel **"true"**. Wenn **Wert** ist leer, wird sein. die Eigenschaft **"false"**. Ebenso die **Special Build** -Schlüssel in der **Versionsinformationen** an die Tabelle gebunden ist die **Special Build** -Eigenschaft für die `FILEFLAGS` Schlüssel.
+  - Wenn die `Private Build` Schlüssel besitzt eine **Wert** legen Sie in der **Versionsinformationen** Tabelle, die entsprechende **Private Build** -Eigenschaft in der **Eigenschaften**  Fenster für die `FILEFLAGS` Schlüssel **"true"** . Wenn **Wert** ist leer, wird sein. die Eigenschaft **"false"** . Ebenso die **Special Build** -Schlüssel in der **Versionsinformationen** an die Tabelle gebunden ist die **Special Build** -Eigenschaft für die `FILEFLAGS` Schlüssel.
 
 Sie können die Sequenz der Informationen des Zeichenfolgenblocks sortieren, indem Sie die Auswahl der **Schlüssel** oder **Wert** Spaltenüberschriften. Mithilfe dieser Überschriften können die Informationen automatisch in der ausgewählten Reihenfolge neu angeordnet werden.
 
@@ -87,6 +87,5 @@ Win32
 ## <a name="see-also"></a>Siehe auch
 
 [Ressourcen-Editor](../windows/resource-editors.md)<br/>
-<!--
-[Menus and Other Resources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
-[Version Information (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)-->
+[Menüs und weitere Ressourcen](/windows/desktop/menurc/resources)<br/>
+[Versionsinformationen (Windows)](/windows/desktop/menurc/version-information)
