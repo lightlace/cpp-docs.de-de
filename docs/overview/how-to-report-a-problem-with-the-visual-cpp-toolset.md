@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 21931fc4976c909c77120e696f25f93c0a0fda0b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: da703d6649cb430b572d4d0db44adcfdef8ed8c4
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446768"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451162"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Melden eines Problems mit dem Visual C++-Toolset oder der -Dokumentation
 
@@ -112,7 +112,7 @@ Eine gute Reproduktion weist folgende Merkmale auf:
 
 - Ein **Vergleich mit anderen Compilern** wurde durchgeführt (falls relevant). Bei Reproduktionen, die portablen C++-Code enthalten, muss das Verhalten mit anderen Compilern, falls möglich, verglichen werden. Der Standard bestimmt letztendlich die Richtigkeit des Programms und kein Compiler ist perfekt. Wenn Clang und GCC Ihren Code jedoch ohne Diagnose akzeptieren, MSVC jedoch nicht, liegt wahrscheinlich ein Fehler im Compiler vor. (Weitere Möglichkeiten bestehen in den unterschiedlichen Verhaltensweisen von Unix und Windows, in verschiedenen Implementierungsebenen der C++-Standards usw.) Wenn Ihr Code andererseits von allen Compilern abgelehnt ist, ist Ihr Code wahrscheinlich fehlerhaft. Die verschiedenen angezeigten Fehlermeldungen können Sie dabei unterstützen, das Problem selbst zu diagnostizieren.
 
-   Eine Liste der Onlinecompiler, mit denen Sie Ihren Code testen können, finden Sie unter [Online C++ compilers (C++-Onlinecompiler)](https://isocpp.org/blog/2013/01/online-c-compilers) auf der ISO C++-Website, oder Sie verwenden diese zusammengestellte [List of Online C++ Compilers (Liste der C++-Onlinecompiler)](https://arnemertz.github.io/online-compilers/) auf GitHub. Zu den Beispielen zählen [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) und [Coliru](http://coliru.stacked-crooked.com/).
+   Eine Liste der Onlinecompiler, mit denen Sie Ihren Code testen können, finden Sie unter [Online C++ compilers (C++-Onlinecompiler)](https://isocpp.org/blog/2013/01/online-c-compilers) auf der ISO C++-Website, oder Sie verwenden diese zusammengestellte [List of Online C++ Compilers (Liste der C++-Onlinecompiler)](https://arnemertz.github.io/online-compilers/) auf GitHub. Zu den Beispielen zählen [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) und [Coliru](https://coliru.stacked-crooked.com/).
 
    > [!NOTE]
    > Die Websites für Onlinecompiler stehen nicht in Verbindung mit Microsoft. Viele Websites für Onlinecompiler werden als persönliche Projekte geführt. Einige dieser Seiten sind möglicherweise nicht mehr verfügbar, über eine Suche sollten Sie jedoch andere Seiten finden, die Sie verwenden können.
