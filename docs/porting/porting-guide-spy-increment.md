@@ -2,12 +2,12 @@
 title: 'Leitfaden zum Portieren: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bca5e912d28124e8d5d6e56cc234ef7bf9bceb89
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751373"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451122"
 ---
 # <a name="porting-guide-spy"></a>Leitfaden zum Portieren: Spy++
 
@@ -51,7 +51,7 @@ MSBuild meldet, dass die Eigenschaft **Link.OutputFile** nicht mit den Werten **
 warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not match the Linker's OutputFile property value (...\spyxx\Debug\SpyHk55.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).warning MSB8012: TargetName(SpyxxHk) does not match the Linker's OutputFile property value (SpyHk55). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 ```
 
-**Link.OutputFile** ist die Buildausgabe (z.B. EXE, DLL) und wird in der Regel aus `$(TargetDir)$(TargetName)$(TargetExt)` erstellt, d.h. Pfad, Dateiname und Erweiterung. Dies ist ein häufiger Fehler beim Migrieren von Projekten von dem alten Visual C++-Buildtool (vcbuild.exe) zu dem neuen Buildtool (MSBuild.exe). Seit der Änderung des Buildtools in Visual Studio 2010 tritt dieser Fehler möglicherweise bei jeder Migration einer älteren Projektversion als 2010 zu 2010 oder neuer auf. Das grundlegende Problem besteht darin, dass der Projektmigrations-Assistent nicht den **Link.OutputFile**-Wert aktualisiert, da es auf Grundlage anderer Projekteinstellungen nicht immer möglich ist, diesen Wert zu bestimmen. Daher müssen Sie diesen in der Regel manuell festlegen. Weitere Details finden Sie in diesem [Beitrag](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) im Visual C++-Blog.
+**Link.OutputFile** ist die Buildausgabe (z.B. EXE, DLL) und wird in der Regel aus `$(TargetDir)$(TargetName)$(TargetExt)` erstellt, d.h. Pfad, Dateiname und Erweiterung. Dies ist ein häufiger Fehler beim Migrieren von Projekten von dem alten Visual C++-Buildtool (vcbuild.exe) zu dem neuen Buildtool (MSBuild.exe). Seit der Änderung des Buildtools in Visual Studio 2010 tritt dieser Fehler möglicherweise bei jeder Migration einer älteren Projektversion als 2010 zu 2010 oder neuer auf. Das grundlegende Problem besteht darin, dass der Projektmigrations-Assistent nicht den **Link.OutputFile**-Wert aktualisiert, da es auf Grundlage anderer Projekteinstellungen nicht immer möglich ist, diesen Wert zu bestimmen. Daher müssen Sie diesen in der Regel manuell festlegen. Weitere Details finden Sie in diesem [Beitrag](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) im Visual C++-Blog.
 
 In diesem Fall war die **Link.OutputFile**-Eigenschaft im konvertierten Projekt abhängig von der Konfiguration auf „.\Debug\Spyxx.exe“ und „.\Release\Spyxx.exe“ für das Spy++-Projekt festgelegt. Am sinnvollsten ist es, diese hartcodierten Werte einfach für **Alle Konfigurationen** durch `$(TargetDir)$(TargetName)$(TargetExt)` zu ersetzen. Wenn dies nicht funktioniert, können Sie die Werte von dort aus anpassen oder sie im Abschnitt **Allgemein** ändern, in dem diese festgelegt werden (die Eigenschaften lauten **Ausgabeverzeichnis**, **Zielname** und **Zielerweiterung**. Wenn die angezeigte Eigenschaft Makros verwendet, können Sie in der Dropdownliste **Bearbeiten** auswählen, um ein Dialogfeld zu öffnen, in dem die endgültige Zeichenfolge mit de vorgenommenen Makro-Ersetzungen angezeigt wird. Sie können alle verfügbaren Makros mit den zugehörigen aktuellen Werten anzeigen, indem Sie die Schaltfläche **Makros** wählen.
 
@@ -89,7 +89,7 @@ Durch diese Änderungen wird das SpyHk (DLL)-Projekt erstellt, es wird jedoch ei
 LINK : warning LNK4216: Exported entry point _DLLEntryPoint@12
 ```
 
-Der Einstiegspunkt für eine DLL darf nicht exportiert werden. Der Einstiegspunkt wird nur beim ersten Laden der DLL in den Arbeitsspeicher vom Ladeprogramm aufgerufen. Deshalb darf dieser nicht in der Exporttabelle für andere Aufrufer vorhanden sein. Es muss lediglich sichergestellt werden, dass diesem keine **__declspec(dllexport)**-Anweisung angefügt ist. In spyxxhk.c muss diese an zwei Stellen entfernt werden, in der Deklaration und der Definition von `DLLEntryPoint`. Die Verwendung dieser Direktive war nie sinnvoll, sie wurde jedoch von den früheren Linker- und Compilerversionen nicht als Problem gemeldet. Die neueren Versionen des Linkers generieren eine Warnung.
+Der Einstiegspunkt für eine DLL darf nicht exportiert werden. Der Einstiegspunkt wird nur beim ersten Laden der DLL in den Arbeitsspeicher vom Ladeprogramm aufgerufen. Deshalb darf dieser nicht in der Exporttabelle für andere Aufrufer vorhanden sein. Es muss lediglich sichergestellt werden, dass diesem keine **__declspec(dllexport)** -Anweisung angefügt ist. In spyxxhk.c muss diese an zwei Stellen entfernt werden, in der Deklaration und der Definition von `DLLEntryPoint`. Die Verwendung dieser Direktive war nie sinnvoll, sie wurde jedoch von den früheren Linker- und Compilerversionen nicht als Problem gemeldet. Die neueren Versionen des Linkers generieren eine Warnung.
 
 ```cpp
 // deleted __declspec(dllexport)
@@ -241,7 +241,7 @@ Das Makro MOUT wird in `*g_pmout`, ein Objekt vom Typ `mstream`, aufgelöst. Die
 1>  winmsgs.cpp(4612): note: while trying to match the argument list '(CMsgStream, const wchar_t [10])'
 ```
 
-Es gibt so viele Definitionen des **Operators <<**, sodass diese Art von Fehler einschüchternd sein kann. Bei näherer Betrachtung der verfügbaren Überladungen stellen wir fest, dass die meisten irrelevant sind. Bei näherer Betrachtung der `mstream`-Klassendefinition stellen wir auch fest, dass in diesem Fall die folgende Funktion höchstwahrscheinlich aufgerufen werden muss.
+Es gibt so viele Definitionen des **Operators <<** , sodass diese Art von Fehler einschüchternd sein kann. Bei näherer Betrachtung der verfügbaren Überladungen stellen wir fest, dass die meisten irrelevant sind. Bei näherer Betrachtung der `mstream`-Klassendefinition stellen wir auch fest, dass in diesem Fall die folgende Funktion höchstwahrscheinlich aufgerufen werden muss.
 
 ```cpp
 mstream& operator<<(LPTSTR psz)
