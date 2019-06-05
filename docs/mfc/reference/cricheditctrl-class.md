@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcb2f354314a0b0d1220a1ecb1c0fa2b8a913d5e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372100"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504735"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl Class
 
@@ -503,7 +503,7 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung `CreateEx` anstelle von `Create` anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_**.
+Verwendung `CreateEx` anstelle von `Create` anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_** .
 
 ##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl
 
@@ -1122,7 +1122,7 @@ Hängt davon ab, auf dem Formular:
 
 ### <a name="remarks"></a>Hinweise
 
-Bei Verwendung die erste Form stellt **Memberfunktion GetSelText (** `lpBuf` **)**, müssen Sie sicherstellen, dass der Puffer groß genug ist, für den Text ist, er erhält. Rufen Sie [Memberfunktion GetSel](#getsel) um zu bestimmen, die Anzahl der Zeichen in der aktuellen Auswahl.
+Bei Verwendung die erste Form stellt **Memberfunktion GetSelText (** `lpBuf` **)** , müssen Sie sicherstellen, dass der Puffer groß genug ist, für den Text ist, er erhält. Rufen Sie [Memberfunktion GetSel](#getsel) um zu bestimmen, die Anzahl der Zeichen in der aktuellen Auswahl.
 
 Weitere Informationen finden Sie unter [EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) im Windows SDK.
 
@@ -1354,7 +1354,7 @@ Der Index des Anfangszeichens der Zeile im angegebenen *nLine* oder -1, wenn die
 
 Der Zeichenindex ist die Anzahl der Zeichen vom Anfang des rich-Edit-Steuerelements in die angegebene Zeile.
 
-Weitere Informationen finden Sie unter [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) im Windows SDK.
+Weitere Informationen finden Sie unter [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) im Windows SDK.
 
 ### <a name="example"></a>Beispiel
 

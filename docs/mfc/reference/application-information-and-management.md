@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 84d11b5c2d456a55e09b8512a3c0af06409939e8
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612288"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504492"
 ---
 # <a name="application-information-and-management"></a>Anwendungsinformationen und Anwendungsverwaltung
 
@@ -98,7 +98,7 @@ Gibt ein zusätzliches Flag an, das die Erstellung des Threads steuert. Dieses F
 - **0** der Thread wird unmittelbar nach der Erstellung gestartet.
 
 *lpSecurityAttrs*<br/>
-Verweist auf eine [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Struktur, die Attribute für die Sicherheit für den Thread angibt. Wenn der Wert NULL ist, werden die gleichen Sicherheitsattribute als der erstellende Thread verwendet werden. Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.
+Verweist auf eine [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Struktur, die Attribute für die Sicherheit für den Thread angibt. Wenn der Wert NULL ist, werden die gleichen Sicherheitsattribute als der erstellende Thread verwendet werden. Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -648,7 +648,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Parameter
 
 *nClassStyle*<br/>
-Gibt den Stil für Windows-Klasse oder eine Kombination von Stilen, die das bitweise OR mit erstellt ( **&#124;**) Operator, für die Fensterklasse. Eine Liste der Klassenstile, finden Sie unter den [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Struktur im Windows SDK. Wenn der Wert NULL ist, werden die Standardwerte wie folgt festgelegt werden:
+Gibt den Stil für Windows-Klasse oder eine Kombination von Stilen, die das bitweise OR mit erstellt ( **&#124;** ) Operator, für die Fensterklasse. Eine Liste der Klassenstile, finden Sie unter den [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Struktur im Windows SDK. Wenn der Wert NULL ist, werden die Standardwerte wie folgt festgelegt werden:
 
 - Legt den Stil der Maus auf CS_DBLCLKS, sendet Nachrichten an die Fensterprozedur doppelklicken, wenn der Benutzer die Maustaste doppelklickt fest.
 

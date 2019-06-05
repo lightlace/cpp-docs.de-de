@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: b5d809fa4e0f608d4c0e6cbdaf8697688c6d3f9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09d385404edbc33883d2d2add2328b33876d23ae
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376778"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504641"
 ---
 # <a name="menu-editor-c"></a>Menü-Editor (C++)
 
@@ -76,7 +76,7 @@ Die **Menü-Editor** können Sie:
    **Neues Element** Feld mit dem Fokus verschoben wird, nach der Eingabe des Namens im Startmenü
 
    > [!NOTE]
-   > Um ein einzelnes Element im Menü auf der Menüleiste zu erstellen, legen die **Popup** Eigenschaft **"false"**.
+   > Um ein einzelnes Element im Menü auf der Menüleiste zu erstellen, legen die **Popup** Eigenschaft **"false"** .
 
 ### <a name="to-create-a-submenu"></a>So erstellen Sie ein Untermenü
 
@@ -113,7 +113,7 @@ Wählen Sie einen vorhandenen Menünamen, und drücken Sie die **einfügen** dr�
    Dieser Schritt erstellt einen Eintrag in der Tabelle mit den gleichen Ressourcenbezeichner des Menübefehls, die Sie erstellt haben.
 
    > [!NOTE]
-   > Eingabeaufforderungen können nur auf Menüelemente mit Anwenden einer **Popup** Eigenschaft **"true"**. Beispielsweise können Menüelemente auf oberster Ebene über Eingabeaufforderungen verfügen, wenn sie über Untermenüelemente verfügen. Der Zweck einer **Eingabeaufforderung** besteht darin anzugeben, was passiert, wenn ein Benutzer das Menüelement auswählt.
+   > Eingabeaufforderungen können nur auf Menüelemente mit Anwenden einer **Popup** Eigenschaft **"true"** . Beispielsweise können Menüelemente auf oberster Ebene über Eingabeaufforderungen verfügen, wenn sie über Untermenüelemente verfügen. Der Zweck einer **Eingabeaufforderung** besteht darin anzugeben, was passiert, wenn ein Benutzer das Menüelement auswählt.
 
 1. Drücken Sie **EINGABETASTE** auf den Menübefehl abzuschließen.
 
@@ -198,8 +198,6 @@ Win32
 
 [Ressourcen-Editor](../windows/resource-editors.md)<br/>
 [Menübefehle](../windows/menu-command-properties.md)<br/>
-
-<!--
-[User-Interface Objects and Command IDs](../mfc/user-interface-objects-and-command-ids.md)<br/>
-[Menus](../mfc/menus-mfc.md)<br/>
-[Menus](https://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)-->
+[Benutzeroberflächenobjekte und Befehls-IDs](../mfc/user-interface-objects-and-command-ids.md)<br/>
+[Menüs](../mfc/menus-mfc.md)<br/>
+[Menüs](/windows/desktop/menurc/menus)

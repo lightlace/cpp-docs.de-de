@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d386072b67568ecf58afd0853df2d7fbaeac68d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310435"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504569"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer-Klasse
 
@@ -473,7 +473,7 @@ Der Bezeichner des Steuerelements.
 Zeiger auf eine boolesche Variable, die Wert einer Funktion Erfolg/Fehler empfängt ("true" gibt an, Erfolg, "false" gibt an, Fehler).
 
 *bSigned*<br/>
-Gibt an, ob die Funktion prüfen Sie den Text für ein Minuszeichen (-) am Anfang und eine Ganzzahl mit Vorzeichen zurück, wenn eine Datei gefunden werden soll. Wenn die *bSigned* Parameter ist "true", die angeben, dass der Wert abgerufen werden sollen eine Ganzzahl mit Vorzeichen, umgewandelt den Rückgabewert in einer **Int** Typ. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Gibt an, ob die Funktion prüfen Sie den Text für ein Minuszeichen (-) am Anfang und eine Ganzzahl mit Vorzeichen zurück, wenn eine Datei gefunden werden soll. Wenn die *bSigned* Parameter ist "true", die angeben, dass der Wert abgerufen werden sollen eine Ganzzahl mit Vorzeichen, umgewandelt den Rückgabewert in einer **Int** Typ. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -515,7 +515,7 @@ Gibt die maximale Länge in Zeichen der Zeichenfolge, die in den Puffer, die auf
 
 Wenn die Funktion erfolgreich ist, gibt der Rückgabewert die Anzahl der Zeichen kopiert werden, in den Puffer, der das abschließende Nullzeichen nicht eingeschlossen.
 
-Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus
 

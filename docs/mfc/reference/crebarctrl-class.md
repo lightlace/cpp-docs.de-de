@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: db72dbab14db69f14d7c3d813562ec661df4b424
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6996f978305472ec7a3af171ecf0987724751d5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372379"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504749"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl-Klasse
 
@@ -317,7 +317,7 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_**.
+Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_** .
 
 ##  <a name="crebarctrl"></a>  CReBarCtrl::CReBarCtrl
 
@@ -678,7 +678,7 @@ Der nullbasierte Index des Bands auf dem angegebenen Punkt oder -1, wenn keine I
 
 ##  <a name="idtoindex"></a>  CReBarCtrl::IDToIndex
 
-Implementiert das Verhalten der Win32-Nachricht [RB_IDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774496), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_IDTOINDEX](/windows/desktop/controls/rb-idtoindex), wie im Windows SDK beschrieben.
 
 ```
 int IDToIndex(UINT uBandID) const;

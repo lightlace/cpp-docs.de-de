@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a6b6c872963dbbdf991d013cceba66ffd20bac5c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222575"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504391"
 ---
 # <a name="cdc-class"></a>CDC-Klasse
 
@@ -3220,7 +3220,7 @@ Gibt den aktuellen Grafikmodus bei Erfolg zurück. Eine Liste der Werte, die die
 
 Gibt 0 bei einem Fehler zurück.
 
-Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, kennzeichnet das Layout, für den aktuellen Gerätekontext. Andernfalls GDI_ERROR. Rufen Sie für erweiterte Fehlerinformationen [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Eine Liste der Flags, Layout, finden Sie unter [CDC::SetLayout](#setlayout).
+Wenn erfolgreich, kennzeichnet das Layout, für den aktuellen Gerätekontext. Andernfalls GDI_ERROR. Rufen Sie für erweiterte Fehlerinformationen [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Eine Liste der Flags, Layout, finden Sie unter [CDC::SetLayout](#setlayout).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -4012,7 +4012,7 @@ Gibt einen Wert ungleich NULL bei Erfolg zurück.
 
 Gibt 0 bei einem Fehler zurück.
 
-Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -4459,7 +4459,7 @@ Gibt einen Wert ungleich NULL bei Erfolg zurück.
 
 Gibt 0 bei einem Fehler zurück.
 
-Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -4912,7 +4912,7 @@ BOOL PolyDraw(
 Verweist auf ein Array von [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) -Datenstrukturen, die für die einzelnen Endpunkte enthält, die Zeile Segment und die Endpunkte und die Kontrollpunkte für jeden Bzier Spline.
 
 *lpTypes*<br/>
-Zeigt auf ein Array, der angibt, wie jeder Punkt in der *LpPoints* Array verwendet wird. Die folgenden Werte sind möglich:
+Zeigt auf ein Array, der angibt, wie jeder Punkt in der *LpPoints* Array verwendet wird. Folgende Werte sind möglich:
 
 - PT_MOVETO gibt an, dass es sich bei diesem Zeitpunkt nicht zusammenhängende Abbildung beginnt. Dieser Punkt wird die neue Position.
 
@@ -6003,7 +6003,7 @@ Gibt den Grafikmodus. Eine Liste der Werte, die für diesen Parameter, finden Si
 
 Gibt den alten Grafikmodus bei Erfolg zurück.
 
-Gibt 0 bei einem Fehler zurück. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Gibt 0 bei einem Fehler zurück. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -6032,7 +6032,7 @@ Gerät Kontextlayout und die Bitmap Steuerungsflags. Sie können eine Kombinatio
 
 Bei erfolgreicher Ausführung dem vorherigen Layout des Gerätekontexts.
 
-Wenn Fehler auftreten, GDI_ERROR. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Wenn Fehler auftreten, GDI_ERROR. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -6657,7 +6657,7 @@ Gibt einen Wert ungleich NULL bei Erfolg zurück.
 
 Gibt 0 bei einem Fehler zurück.
 
-Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 

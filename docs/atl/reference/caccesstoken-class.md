@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260726"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503385"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken-Klasse
 
@@ -246,7 +246,7 @@ Zeiger auf den neuen `CAccessToken` Objekt.
 Gibt die angeforderte Zugriffsrechte für das neue Token an. Der Standardwert, MAXIMUM_ALLOWED, fordert alle Zugriffsrechte, die für den Aufrufer gültig sind. Finden Sie unter [Zugriffsrechte und Zugriffsmasken](/windows/desktop/SecAuthZ/access-rights-and-access-masks) für weitere auf Zugriffsrechte.
 
 *pTokenAttributes*<br/>
-Zeiger auf eine [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Struktur, die eine Sicherheitsbeschreibung für das neue Token gibt an, und bestimmt, ob untergeordnete Prozesse, das Token erben können. Wenn *pTokenAttributes* NULL ist, das Token Ruft eine standardmäßige Sicherheitsbeschreibung aus, und das Handle nicht geerbt werden.
+Zeiger auf eine [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Struktur, die eine Sicherheitsbeschreibung für das neue Token gibt an, und bestimmt, ob untergeordnete Prozesse, das Token erben können. Wenn *pTokenAttributes* NULL ist, das Token Ruft eine standardmäßige Sicherheitsbeschreibung aus, und das Handle nicht geerbt werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -295,10 +295,10 @@ Gibt zusätzliche Flags, die die Prioritätsklasse und die Erstellung des Prozes
 Wenn TRUE, wird das Profil des Benutzers mit geladen [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
 
 *pProcessAttributes*<br/>
-Zeiger auf eine [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Struktur, die eine Sicherheitsbeschreibung für den neuen Prozess gibt an, und bestimmt, ob untergeordnete Prozesse, das zurückgegebene Handle erben können. Wenn *pProcessAttributes* NULL ist, der Prozess Ruft eine standardmäßige Sicherheitsbeschreibung aus, und das Handle nicht geerbt werden.
+Zeiger auf eine [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Struktur, die eine Sicherheitsbeschreibung für den neuen Prozess gibt an, und bestimmt, ob untergeordnete Prozesse, das zurückgegebene Handle erben können. Wenn *pProcessAttributes* NULL ist, der Prozess Ruft eine standardmäßige Sicherheitsbeschreibung aus, und das Handle nicht geerbt werden.
 
 *pThreadAttributes*<br/>
-Zeiger auf eine [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Struktur, die eine Sicherheitsbeschreibung für den neuen Thread gibt an, und bestimmt, ob untergeordnete Prozesse, das zurückgegebene Handle erben können. Wenn *pThreadAttributes* NULL ist, der Thread Ruft eine standardmäßige Sicherheitsbeschreibung aus, und das Handle nicht geerbt werden.
+Zeiger auf eine [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Struktur, die eine Sicherheitsbeschreibung für den neuen Thread gibt an, und bestimmt, ob untergeordnete Prozesse, das zurückgegebene Handle erben können. Wenn *pThreadAttributes* NULL ist, der Thread Ruft eine standardmäßige Sicherheitsbeschreibung aus, und das Handle nicht geerbt werden.
 
 *bInherit*<br/>
 Gibt an, ob der neue Prozess den aufrufenden Prozess Handles erbt. Bei "true", wird jede vererbbar geöffnetes Handle des aufrufenden Prozesses durch den neuen Prozess geerbt. Geerbte Handles haben die gleichen Wert und Access-Berechtigungen wie die ursprünglichen Handles.

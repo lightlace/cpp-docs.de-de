@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451234"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504257"
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 
@@ -5607,7 +5607,7 @@ Ungleich null, wenn die Funktion erfolgreich ist. Es ist 0, wenn ein Fehler auft
 
 Ein gesperrter Fenster kann nicht verschoben werden. Nur ein Fenster kann zu einem Zeitpunkt gesperrt werden. Entsperrt ein Fenster mit gesperrt `LockWindowUpdate`, rufen Sie [UnlockWindowUpdate](#unlockwindowupdate).
 
-Wenn eine Anwendung mit einem gesperrten Fenster (oder keine gesperrten untergeordneten Fenster) Ruft die [GetDC,](https://msdn.microsoft.com/library/windows/desktop/dd144871) [GetDCEx,](https://msdn.microsoft.com/library/windows/desktop/dd144873) oder ["BeginPaint"](/windows/desktop/api/winuser/nf-winuser-beginpaint) Windows-Funktion, die aufgerufene Funktion gibt ein Gerät zurück. der Kontext, dessen sichtbaren Bereich leer ist. Dies ist der Fall, bis die Anwendung das Fenster durch Aufrufen von entsperrt den `UnlockWindowUpdate` Member-Funktion.
+Wenn eine Anwendung mit einem gesperrten Fenster (oder keine gesperrten untergeordneten Fenster) Ruft die [GetDC,](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx,](/windows/desktop/api/winuser/nf-winuser-getdcex) oder ["BeginPaint"](/windows/desktop/api/winuser/nf-winuser-beginpaint) Windows-Funktion, die aufgerufene Funktion gibt ein Gerät zurück. der Kontext, dessen sichtbaren Bereich leer ist. Dies ist der Fall, bis die Anwendung das Fenster durch Aufrufen von entsperrt den `UnlockWindowUpdate` Member-Funktion.
 
 Gesperrten aktualisiert werden, verfolgt des das System das umschließende Rechteck des beliebiger Zeichenoperationen für Gerätekontexte einem gesperrten Fenster zugeordnet. Beim Zeichnen wieder aktiviert wird, wird dieses umschließenden Rechteck im gesperrten Fenster und dessen untergeordneten Fenstern erzwingen, dass eine letztendliche ungültig [WM_PAINT](/windows/desktop/gdi/wm-paint) Nachricht an den Bildschirm zu aktualisieren. Wenn keine Zeichnung aufgetreten ist, während das aktualisiert gesperrt wurden, wird kein Bereich ungültig.
 
@@ -10038,7 +10038,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode empfängt die [WM_USERCHANGED](https://msdn.microsoft.com/library/windows/desktop/ms632651) Benachrichtigung, die im Windows SDK beschrieben wird. Wenn der Benutzer an- oder abmeldet, aktualisiert das Betriebssystem benutzerspezifische Einstellungen. Das System sendet diese Nachricht sofort nach dem Aktualisieren der Einstellungen.
+Diese Methode empfängt die [WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged) Benachrichtigung, die im Windows SDK beschrieben wird. Wenn der Benutzer an- oder abmeldet, aktualisiert das Betriebssystem benutzerspezifische Einstellungen. Das System sendet diese Nachricht sofort nach dem Aktualisieren der Einstellungen.
 
 > [!NOTE]
 > Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.

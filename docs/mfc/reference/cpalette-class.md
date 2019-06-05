@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dc29a675f6ab3883683b3afae7e22e7ed0f1cc3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373179"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504762"
 ---
 # <a name="cpalette-class"></a>CPalette-Klasse
 
@@ -111,7 +111,7 @@ Gibt den ersten Eintrag in der Palette animiert werden soll.
 Gibt die Anzahl der Einträge in der Palette animiert werden soll.
 
 *lpPaletteColors*<br/>
-Verweist auf das erste Element eines Arrays von [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) Strukturen, ersetzen Sie die Paletteneinträge identifizierte *nStartIndex* und *nNumEntries*.
+Verweist auf das erste Element eines Arrays von [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) Strukturen, ersetzen Sie die Paletteneinträge identifizierte *nStartIndex* und *nNumEntries*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -245,7 +245,7 @@ Gibt den ersten Eintrag in der logischen Palette abgerufen werden sollen.
 Gibt die Anzahl der Einträge in der logischen Palette abgerufen werden sollen.
 
 *lpPaletteColors*<br/>
-Verweist auf ein Array von [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) Datenstrukturen für die Paletteneinträge zu erhalten. Das Array muss mindestens so viele Datenstrukturen laut enthalten *nNumEntries*.
+Verweist auf ein Array von [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) Datenstrukturen für die Paletteneinträge zu erhalten. Das Array muss mindestens so viele Datenstrukturen laut enthalten *nNumEntries*.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -312,7 +312,7 @@ Gibt den ersten Eintrag in der logischen Palette festgelegt werden.
 Gibt die Anzahl der Einträge in der logischen Palette festgelegt werden.
 
 *lpPaletteColors*<br/>
-Verweist auf ein Array von [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) Datenstrukturen für die Paletteneinträge zu erhalten. Das Array muss mindestens so viele Datenstrukturen laut enthalten *nNumEntries*.
+Verweist auf ein Array von [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) Datenstrukturen für die Paletteneinträge zu erhalten. Das Array muss mindestens so viele Datenstrukturen laut enthalten *nNumEntries*.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -322,7 +322,7 @@ Legen Sie die Anzahl der Einträge in der logischen Palette; 0, wenn die Funktio
 
 Wenn die logische Palette für einen Gerätekontext ausgewählt wird, wenn die Anwendung aufruft `SetPaletteEntries`, werden die Änderungen nicht wirksam bis die Anwendung ruft [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).
 
-Weitere Informationen zu den Windows-Struktur `PALETTEENTRY`, finden Sie unter [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) im Windows SDK.
+Weitere Informationen finden Sie unter [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) im Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 

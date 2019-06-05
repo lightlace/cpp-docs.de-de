@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 70329d3b2c18c8cd8e94854f40ff971c0b39a8f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261064"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503415"
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO-Struktur
 
@@ -60,7 +60,7 @@ Informationen über den Kontext für das Zielgerät verweist `ptd` aus dem das O
 Der Gerätekontext, in dem gezeichnet werden soll. Für ein fensterloses Objekt das `hdcDraw` ist Mitglied der `MM_TEXT` Zuordnungsmodus mit der logischen Koordinaten Abgleich der Clientkoordinaten des übergeordneten Fensters. Darüber hinaus der Gerätekontext muss den gleichen Zustand wie der in der Regel durch Übergeben einer `WM_PAINT` Nachricht.
 
 `prcBounds`<br/>
-Zeiger auf eine [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) -Struktur gibt das Rechteck auf `hdcDraw` und in dem das Objekt gezeichnet werden soll. Dieses Element steuert die Positionierung und Strecken des Objekts. Dieser Member sollte NULL, um ein fensterloses für ein direktes aktives Objekt gezeichnet werden soll. In jedem anderen Fall NULL ist kein gültiger Wert und sollten dazu führen, eine `E_INVALIDARG` Fehlercode. Wenn der Container einen Wert ungleich NULL für fensterloses Objekt übergibt, sollte das Objekt den angeforderten Aspekt in den angegebenen Gerätekontext und das Rechteck gerendert. Ein Container kann dies von fensterloses Objekt zum Rendern einer zweiten, nicht aktive Ansicht des Objekts oder zum Drucken des Objekts anfordern.
+Zeiger auf eine [RECTL](/previous-versions//dd162907\(v=vs.85\)) -Struktur gibt das Rechteck auf `hdcDraw` und in dem das Objekt gezeichnet werden soll. Dieses Element steuert die Positionierung und Strecken des Objekts. Dieser Member sollte NULL, um ein fensterloses für ein direktes aktives Objekt gezeichnet werden soll. In jedem anderen Fall NULL ist kein gültiger Wert und sollten dazu führen, eine `E_INVALIDARG` Fehlercode. Wenn der Container einen Wert ungleich NULL für fensterloses Objekt übergibt, sollte das Objekt den angeforderten Aspekt in den angegebenen Gerätekontext und das Rechteck gerendert. Ein Container kann dies von fensterloses Objekt zum Rendern einer zweiten, nicht aktive Ansicht des Objekts oder zum Drucken des Objekts anfordern.
 
 `prcWBounds`<br/>
 Wenn `hdcDraw` ist eine Metadatei-Gerätekontexts (finden Sie unter [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) im Windows SDK), dies ist ein Zeiger auf eine `RECTL` Struktur, die das umschließende Rechteck in der zugrunde liegenden Metadatei angibt. Die Rectangle-Struktur enthält, die Fenster Umfang und die Fensterursprung. Diese Werte sind hilfreich für das Zeichnen von Metadateien. Das Rechteck erkennbar `prcBounds` darin geschachtelt ist dies `prcWBounds` Rechteck; sie befinden sich in den gleichen koordinierten Bereich.
