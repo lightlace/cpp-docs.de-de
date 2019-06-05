@@ -1,0 +1,41 @@
+- name: C++-Dokumentation für Linux und Visual Studio
+  href: index.md
+- name: 'Herunterladen, Installieren und Einrichten der Linux-Entwicklungsworkload'
+  href: download-install-and-setup-the-linux-development-workload.md
+- name: Konfigurieren eines Linux-Projekts
+  href: configure-a-linux-project.md
+- name: Konfigurieren eines Linux CMake-Projekts
+  href: cmake-linux-project.md
+- name: Erstellen eines neuen Linux-Projekts
+  href: create-a-new-linux-project.md
+- name: Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer
+  href: connect-to-your-remote-linux-computer.md
+- name: 'Bereitstellen, Ausführen und Debuggen eines Linux-Projekts'
+  href: deploy-run-and-debug-your-linux-project.md
+- name: 'Tutorial: Erstellen plattformübergreifender C++-Projekte in Visual Studio'
+  href: ../build/get-started-linux-cmake.md
+- name: Referenz zur Linux-Projekteigenschaftenseite
+  expanded: false
+  items:
+    - name: Referenz zur Linux-Projekteigenschaftenseite
+      href: prop-pages-linux.md
+    - name: Allgemeine Eigenschaften (Linux)
+      href: prop-pages/general-linux.md
+    - name: Debugeigenschaften (Linux)
+      href: prop-pages/debugging-linux.md
+    - name: VC++-Verzeichniseigenschaften (Linux)
+      href: prop-pages/directories-linux.md
+    - name: Eigenschaften zum Kopieren von Quellen (Linux)
+      href: prop-pages/copy-sources-project.md
+    - name: C-/C++-Eigenschaften (Linux)
+      href: prop-pages/c-cpp-linux.md
+    - name: Linkereigenschaften (Linux)
+      href: prop-pages/linker-linux.md
+    - name: Buildereigniseigenschaften (Linux)
+      href: prop-pages/build-events-linux.md
+    - name: Eigenschaften benutzerdefinierter Buildschritte (Linux)
+      href: prop-pages/custom-build-step-linux.md
+    - name: MakeFile-Projekteigenschaften (Linux)
+      href: prop-pages/makefile-linux.md
+    - name: Remotearchiveigenschaften (Linux)
+      href: prop-pages/remote-ar-linux.md
