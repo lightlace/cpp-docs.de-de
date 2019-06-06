@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: c4b0a4507df7f352355fc95354e1e83aa7b6d0a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90d7f843c91956b679fe794c68adab12d85122b7
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296695"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741747"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Hinzufügen eines MFC-Meldungshandlers
 
@@ -24,10 +24,10 @@ Verwenden Sie das Fenster "Eigenschaften", um Meldung und Ereignisbehandlung Fun
 
 ## <a name="see-also"></a>Siehe auch
 
-[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Adding a Member Variable (Hinzufügen einer Membervariablen)](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
-[Navigating the Class Structure (Navigieren in der Klassenstruktur)](../../ide/navigating-the-class-structure-visual-cpp.md)<br/>
+[Navigating the Class Structure (Navigieren in der Klassenstruktur)](../../ide/navigate-code-cpp.md)<br/>
 [Dialog-Editor](../../windows/dialog-editor.md)
