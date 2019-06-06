@@ -41,25 +41,25 @@ Die **#if** -Direktive, zusammen mit den **#elif**, **#else**, und **#endif** St
 &nbsp;&nbsp;&nbsp;&nbsp;*If-Line text*
 
 *If-Line-* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***konstanter Ausdruck*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***Bezeichner*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***Bezeichner*
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *konstanter Ausdruck*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *Bezeichner*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *Bezeichner*
 
 *Elif-Teile* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Elif-Line text*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Elif-Teile Elif-Line text*
 
 *elif-line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif**  *constant-expression*
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *constant-expression*
 
 *else-Teil* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Else-Line text*
 
 *Else-Line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
 *Endif-Line-* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
 Jede **#if** -Anweisung in einer Quelldatei muss eine schließende übereinstimmen **#endif** Richtlinie. Eine beliebige Anzahl von **#elif** Direktiven können angezeigt werden, zwischen den **#if** und **#endif** Direktiven, jedoch höchstens eine **#else** -Anweisung zulässig. Die **#else** Richtlinie, sofern vorhanden, muss sein die letzte Anweisung vor **#endif**.
 
@@ -73,7 +73,7 @@ Der Präprozessor wählt eines der Vorkommnisse des *Text* zur weiteren Verarbei
 
 Der Präprozessor verarbeitet den ausgewählten *Text* und übergibt sie an den Compiler. Wenn *Text* Präprozessordirektiven, der Präprozessor enthält, werden diese Anweisungen enthält. Nur Textblöcke, die vom Präprozessor ausgewählt werden, werden kompiliert.
 
-Der Präprozessor wählt ein einzelnes *Text* , geordnet nach der Auswertung des konstanten Ausdrucks nach jeder **#if** oder **#elif** Richtlinie bis true (ungleich null) Konstante gefunden -Ausdruck. Er wählt den gesamten Text (einschließlich anderer präprozessoranweisungen, beginnend mit **#**) bis zu der zugehörigen **#elif**, **#else**, oder **#endif** .
+Der Präprozessor wählt ein einzelnes *Text* , geordnet nach der Auswertung des konstanten Ausdrucks nach jeder **#if** oder **#elif** Richtlinie bis true (ungleich null) Konstante gefunden -Ausdruck. Er wählt den gesamten Text (einschließlich anderer präprozessoranweisungen, beginnend mit **#** ) bis zu der zugehörigen **#elif**, **#else**, oder **#endif** .
 
 Wenn alle Vorkommen von *Konstantenausdruck* "false" sind oder wenn keine **#elif** -Anweisungen vorhanden sind, der Präprozessor wählt den Textblock nach der **#else** Klausel. Wenn die **#else** -Klausel weggelassen und alle Instanzen des *Konstantenausdruck* in die **#if** -Block "false", kein Textblock ausgewählt ist.
 
