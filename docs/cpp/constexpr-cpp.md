@@ -21,8 +21,8 @@ Um die Komplexität der Kompilierzeit konstanter Berechnungen und deren möglich
 
 ## <a name="syntax"></a>Syntax
 
-> **"constexpr"** *Literal-Typ* *Bezeichner* ** = ** *Konstantenausdruck* **;** 
->  **"constexpr"** *Literal-Typ* *Bezeichner* **{** *konstanter Ausdruck * **}** **;** 
+> **"constexpr"** *Literal-Typ* *Bezeichner* **=** *Konstantenausdruck* **;** 
+>  **"constexpr"** *Literal-Typ* *Bezeichner* **{** *konstanter Ausdruck* **}** **;** 
 >  **"constexpr"** *Literal-Typ* *Bezeichner* **(** *Params* **)** **;** 
 >  **"constexpr"** *"ctor"* **(** *Params* **)** **;**
 
