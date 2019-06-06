@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-ms.openlocfilehash: 0b849ffb585ef99512cc68e1c734dc5b3a87d507
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2651a83c50b03dfffd1ac0238b6c6d0a61888c88
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323319"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741560"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Details zur ATL-Unterstützung, die vom ATL-Assistenten hinzugefügt wird
 
@@ -31,10 +31,10 @@ Wenn Sie ATL-Unterstützung zu einem MFC-DLL-Projekt hinzufügen, sehen Sie eini
 ## <a name="see-also"></a>Siehe auch
 
 [ATL-Unterstützung in einem MFC-Projekt](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)<br/>
-[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Adding a Member Variable (Hinzufügen einer Membervariablen)](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC Message Handler (MFC-Meldungshandler)](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Navigating the Class Structure (Navigieren in der Klassenstruktur)](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Navigating the Class Structure (Navigieren in der Klassenstruktur)](../../ide/navigate-code-cpp.md)

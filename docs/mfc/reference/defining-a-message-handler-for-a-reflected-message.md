@@ -7,12 +7,12 @@ helpviewer_keywords:
 - messages [MFC], reflected
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
-ms.openlocfilehash: 250d1a838787d1ace682c084bdceeb0e1e6d3c92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 970dd7072cb8391d76d39536e442d5aab8e0f61d
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278963"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741602"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definieren eines Meldungshandlers für eine reflektierte Meldung
 
@@ -50,10 +50,10 @@ Zum Erstellen einer [ActiveX-Steuerelement](../../mfc/activex-controls-on-the-in
 ## <a name="see-also"></a>Siehe auch
 
 [Zuordnen von Meldungen zu Funktionen](../../mfc/reference/mapping-messages-to-functions.md)<br/>
-[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Adding a Member Variable (Hinzufügen einer Membervariablen)](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC Message Handler (MFC-Meldungshandler)](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Navigating the Class Structure (Navigieren in der Klassenstruktur)](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Navigating the Class Structure (Navigieren in der Klassenstruktur)](../../ide/navigate-code-cpp.md)

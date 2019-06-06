@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows messages [MFC], adding message handlers
 - message maps [MFC], mapping messages to functions
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
-ms.openlocfilehash: 7ed2b66ffe382cc8683b811362fb014597168037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33aa12626e92eb40606e3ec9b12ebb7bcac571ec
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321974"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741654"
 ---
 # <a name="mapping-messages-to-functions"></a>Zuordnen von Meldungen zu Funktionen
 
@@ -45,10 +45,10 @@ Um einen Meldungshandler entfernen möchten, doppelklicken Sie auf den Handler i
 ## <a name="see-also"></a>Siehe auch
 
 [MFC Message Handler (MFC-Meldungshandler)](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Adding a Member Variable (Hinzufügen einer Membervariablen)](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
-[Navigating the Class Structure (Navigieren in der Klassenstruktur)](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Navigating the Class Structure (Navigieren in der Klassenstruktur)](../../ide/navigate-code-cpp.md)
