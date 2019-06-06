@@ -185,7 +185,7 @@ After the insertion, the vector is: ( 1 2 3 40 ).
 
 ## <a name="op_star"></a>  back_insert_iterator:: Operator\*
 
-Der Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *\* *i* = *x* verwendet wird.
+Der Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks \* *i* = *x* verwendet wird.
 
 ```cpp
 back_insert_iterator<Container>& operator*();
