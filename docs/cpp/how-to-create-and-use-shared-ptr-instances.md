@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 4e7d63840f60c00f97b02825965cc247cddc38fd
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174815"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821681"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Vorgehensweise: Erstellen und Verwenden von shared_ptr-Instanzen
 
@@ -108,7 +108,7 @@ Sie können einen `shared_ptr` folgendermaßen an eine andere Funktion übergebe
 
 - Wenn Sie einer Hilfsfunktion Zugriff auf den zugrunde liegenden Zeiger erteilen müssen und Sie wissen, dass die Hilfsfunktion nur den Zeiger verwendet und dann zurückgegeben wird, bevor die aufrufende Funktion zurückgegeben wird, muss die Funktion den Besitz des zugrunde liegenden Zeigers nicht teilen. Sie muss lediglich innerhalb der Lebensdauer des `shared_ptr` des Aufrufers auf den Zeiger zugreifen. In diesem Fall ist es sicher, den `shared_ptr` als Verweis zu übergeben bzw. den Rohdatenzeiger oder einen Verweis an das zugrunde liegende Objekt zu übergeben. Ein Übergeben auf diese Weise bietet einen leichten Leistungsvorteil und hilft Ihnen dabei, Ihre Programmierabsicht besser zum Ausdruck zu bringen.
 
-- Manchmal, beispielsweise in einem `std:vector<shared_ptr<T>>`, müssen Sie jeden `shared_ptr` an einen Text eines Lambda-Ausdrucks oder ein benanntes Funktionsobjekt übergeben. Wenn das Lambda oder die Funktion den Zeiger nicht speichert, übergeben Sie den `shared_ptr` als Verweis, damit der Kopierkonstruktor nicht für jedes Element aufgerufen wird.
+- Manchmal, beispielsweise in einem `std::vector<shared_ptr<T>>`, müssen Sie jeden `shared_ptr` an einen Text eines Lambda-Ausdrucks oder ein benanntes Funktionsobjekt übergeben. Wenn das Lambda oder die Funktion den Zeiger nicht speichert, übergeben Sie den `shared_ptr` als Verweis, damit der Kopierkonstruktor nicht für jedes Element aufgerufen wird.
 
 ## <a name="example-6"></a>Beispiel 6
 
