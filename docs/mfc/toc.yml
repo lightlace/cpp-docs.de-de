@@ -1,0 +1,2945 @@
+- name: MFC-Desktopanwendungen
+  href: mfc-desktop-applications.md
+- name: MFC-Konzepte
+  expanded: false
+  items:
+    - name: MFC-Konzepte
+      href: mfc-concepts.md
+    - name: Allgemeine MFC-Themen
+      expanded: false
+      items:
+        - name: Allgemeine MFC-Themen
+          href: general-mfc-topics.md
+        - name: Verwenden der MFC-Quelldateien
+          expanded: false
+          items:
+            - name: Verwenden der MFC-Quelldateien
+              href: using-the-mfc-source-files.md
+            - name: Ein Beispiel für die Kommentare
+              href: an-example-of-the-comments.md
+            - name: – Implementierungskommentar
+              href: decrement-implementation-comment.md
+            - name: – Konstruktorenkommentar
+              href: decrement-constructors-comment.md
+            - name: – Attributekommentar
+              href: decrement-attributes-comment.md
+            - name: – Vorgangskommentar
+              href: decrement-operations-comment.md
+            - name: – Kommentar zu überschreibbaren Elementen
+              href: decrement-overridables-comment.md
+        - name: MFC-Bibliotheksversionen
+          expanded: false
+          items:
+            - name: MFC-Bibliotheksversionen
+              href: mfc-library-versions.md
+            - name: MFC MBCS DLL-Add-On
+              href: mfc-mbcs-dll-add-on.md
+        - name: Verwenden der Klassen zum Schreiben von Anwendungen für Windows
+          expanded: false
+          items:
+            - name: Verwenden der Klassen zum Schreiben von Anwendungen für Windows
+              href: using-the-classes-to-write-applications-for-windows.md
+            - name: Framework (MFC)
+              href: framework-mfc.md
+            - name: SDI und MDI
+              href: sdi-and-mdi.md
+            - name: 'Dokumente, Ansichten und das Framework'
+              href: documents-views-and-the-framework.md
+            - name: Assistenten und die Ressourcen-Editoren
+              href: wizards-and-the-resource-editors.md
+        - name: Erstellen im Framework
+          expanded: false
+          items:
+            - name: Erstellen im Framework
+              href: building-on-the-framework.md
+            - name: Reihenfolge der Vorgänge zur Erstellung von MFC-Anwendungen
+              href: sequence-of-operations-for-building-mfc-applications.md
+            - name: Reihenfolge der Vorgänge zur Erstellung von OLE-Anwendungen
+              href: sequence-of-operations-for-creating-ole-applications.md
+            - name: Reihenfolge der Vorgänge zur Erstellung von ActiveX-Steuerelementen
+              href: sequence-of-operations-for-creating-activex-controls.md
+            - name: Reihenfolge der Vorgänge zur Erstellung von Datenbankanwendungen
+              href: sequence-of-operations-for-creating-database-applications.md
+            - name: So ruft das Framework Ihren Code auf
+              href: how-the-framework-calls-your-code.md
+        - name: 'CWinApp: Die Anwendungsklasse'
+          expanded: false
+          items:
+            - name: 'CWinApp: Die Anwendungsklasse'
+              href: cwinapp-the-application-class.md
+            - name: CWinApp und der MFC-Anwendungs-Assistent
+              href: cwinapp-and-the-mfc-application-wizard.md
+            - name: Überschreibbare CWinApp-Memberfunktionen
+              href: overridable-cwinapp-member-functions.md
+            - name: InitInstance-Memberfunktion
+              href: initinstance-member-function.md
+            - name: Run-Memberfunktion
+              href: run-member-function.md
+            - name: ExitInstance-Memberfunktion
+              href: exitinstance-member-function.md
+            - name: OnIdle-Memberfunktion
+              href: onidle-member-function.md
+            - name: Spezielle CWinApp-Dienste
+              href: special-cwinapp-services.md
+        - name: Dokumentvorlagen und der Erstellungsvorgang für Dokumentansichten
+          expanded: false
+          items:
+            - name: Dokumentvorlagen und der Erstellungsvorgang für Dokumentansichten
+              href: document-templates-and-the-document-view-creation-process.md
+            - name: Erstellen von Dokumentvorlagen
+              href: document-template-creation.md
+            - name: Erstellen von Dokumentansichten
+              href: document-view-creation.md
+            - name: Beziehungen zwischen MFC-Objekten
+              href: relationships-among-mfc-objects.md
+            - name: 'Erstellen neuer Dokumente, Fenster und Ansichten'
+              href: creating-new-documents-windows-and-views.md
+        - name: Verwalten der Statusdaten von MFC-Modulen
+          expanded: false
+          items:
+            - name: Verwalten der Statusdaten von MFC-Modulen
+              href: managing-the-state-data-of-mfc-modules.md
+            - name: Einstiegspunkte für exportierte DLL-Funktionen
+              href: exported-dll-function-entry-points.md
+            - name: Einstiegspunkte für COM-Schnittstellen
+              href: com-interface-entry-points.md
+            - name: Einstiegspunkte für Fensterprozeduren
+              href: window-procedure-entry-points.md
+        - name: Leerlaufschleifen-Verarbeitung
+          href: idle-loop-processing.md
+        - name: Unterstützung für Aktivierungskontexte im MFC-Modulstatus
+          href: support-for-activation-contexts-in-the-mfc-module-state.md
+        - name: Isolierung der MFC-Bibliothek für Standardsteuerelemente
+          href: isolation-of-the-mfc-common-controls-library.md
+        - name: Anforderungen für die Erstellung von Windows Vista-Standardsteuerelementen
+          expanded: false
+          items:
+            - name: Anforderungen für die Erstellung von Windows Vista-Standardsteuerelementen
+              href: build-requirements-for-windows-vista-common-controls.md
+            - name: Veraltete ANSI-APIs
+              href: deprecated-ansi-apis.md
+        - name: 'Vorgehensweise: Hinzufügen von Unterstützung für den Neustart-Manager'
+          href: how-to-add-restart-manager-support.md
+        - name: Dynamisches Layout
+          href: dynamic-layout.md
+    - name: Verwenden von CObject
+      expanded: false
+      items:
+        - name: Verwenden von CObject
+          href: using-cobject.md
+        - name: Ableiten einer Klasse aus CObject
+          expanded: false
+          items:
+            - name: Ableiten einer Klasse aus CObject
+              href: deriving-a-class-from-cobject.md
+            - name: Festlegen von Funktionalitätsebenen
+              href: specifying-levels-of-functionality.md
+        - name: Zugreifen auf Klasseninformationen zur Laufzeit
+          href: accessing-run-time-class-information.md
+        - name: Dynamische Objekterstellung
+          href: dynamic-object-creation.md
+        - name: 'CObject-Klasse: Häufig gestellte Fragen'
+          expanded: false
+          items:
+            - name: 'CObject-Klasse: Häufig gestellte Fragen'
+              href: cobject-class-frequently-asked-questions.md
+            - name: Muss ich neue Klassen aus CObject ableiten?
+              href: do-i-have-to-derive-new-classes-from-cobject-q.md
+            - name: Welcher Overhead entsteht beim Ableiten einer Klasse aus CObject?
+              href: what-does-it-cost-me-to-derive-a-class-from-cobject-q.md
+    - name: Auflistungen
+      expanded: false
+      items:
+        - name: Auflistungen
+          href: collections.md
+        - name: Empfehlungen für die Auswahl einer Sammlungsklasse
+          href: recommendations-for-choosing-a-collection-class.md
+        - name: Vorlagenbasierte Klassen
+          href: template-based-classes.md
+        - name: 'Vorgehensweise: Erstellen einer typsicheren Sammlung'
+          href: how-to-make-a-type-safe-collection.md
+        - name: Zugreifen auf alle Elemente einer Sammlung
+          expanded: false
+          items:
+            - name: Zugreifen auf alle Elemente einer Sammlung
+              href: accessing-all-members-of-a-collection.md
+            - name: Löschen aller Objekte in einer CObject-Sammlung
+              href: deleting-all-objects-in-a-cobject-collection.md
+        - name: Erstellen von Stapel- und Warteschlangensammlungen
+          href: creating-stack-and-queue-collections.md
+    - name: Ausnahmebehandlung in MFC
+      expanded: false
+      items:
+        - name: Ausnahmebehandlung in MFC
+          href: exception-handling-in-mfc.md
+        - name: 'Ausnahmen: Änderungen für Ausnahmemakros in Version 3.0'
+          href: exceptions-changes-to-exception-macros-in-version-3-0.md
+        - name: 'Ausnahmen: Abfangen und Löschen von Ausnahmen'
+          href: exceptions-catching-and-deleting-exceptions.md
+        - name: 'Ausnahmen: Umwandeln von MFC-Ausnahmemakros'
+          href: exceptions-converting-from-mfc-exception-macros.md
+        - name: 'Ausnahmen: Verwenden von MFC-Makros und C++-Ausnahmen'
+          href: exceptions-using-mfc-macros-and-cpp-exceptions.md
+        - name: 'Ausnahmen: Untersuchen von Ausnahmeinhalten'
+          href: exceptions-examining-exception-contents.md
+        - name: 'Ausnahmen: Freigeben von Objekten in Ausnahmen'
+          href: exceptions-freeing-objects-in-exceptions.md
+        - name: 'Ausnahmen: Auslösen von Ausnahmen in eigenen Funktionen'
+          href: exceptions-throwing-exceptions-from-your-own-functions.md
+        - name: 'Ausnahmen: Ausnahmen in Konstruktoren'
+          href: exceptions-exceptions-in-constructors.md
+        - name: 'Ausnahmen: Datenbankausnahmen'
+          href: exceptions-database-exceptions.md
+        - name: 'Ausnahmen: OLE-Ausnahmen'
+          href: exceptions-ole-exceptions.md
+    - name: Dateien in MFC
+      expanded: false
+      items:
+        - name: Dateien in MFC
+          href: files-in-mfc.md
+        - name: Öffnen von Dateien
+          href: opening-files.md
+        - name: Lesen und Schreiben von Dateien
+          href: reading-and-writing-files.md
+        - name: Schließen von Dateien
+          href: closing-files.md
+        - name: Zugreifen auf den Dateistatus
+          href: accessing-file-status.md
+    - name: Schnittstellenelemente
+      href: interface-elements.md
+    - name: MAPI
+      expanded: false
+      items:
+        - name: MAPI
+          href: mapi.md
+        - name: MAPI-Unterstützung in MFC
+          href: mapi-support-in-mfc.md
+        - name: MAPI-Beispiele
+          href: mapi-samples.md
+    - name: Speicherverwaltung
+      expanded: false
+      items:
+        - name: Speicherverwaltung
+          href: memory-management.md
+        - name: 'Speicherverwaltung: Framezuteilung'
+          href: memory-management-frame-allocation.md
+        - name: 'Speicherverwaltung: Heapzuteilung'
+          expanded: false
+          items:
+            - name: 'Speicherverwaltung: Heapzuteilung'
+              href: memory-management-heap-allocation.md
+            - name: 'Speicherverwaltung: Beispiele'
+              href: memory-management-examples.md
+            - name: 'Speicherverwaltung: In der Größe änderbare Speicherblöcke'
+              href: memory-management-resizable-memory-blocks.md
+    - name: Meldungsbehandlung und -zuordnung
+      expanded: false
+      items:
+        - name: Meldungsbehandlung und -zuordnung
+          href: message-handling-and-mapping.md
+        - name: Meldungen und Befehle im Framework
+          expanded: false
+          items:
+            - name: Meldungen und Befehle im Framework
+              href: messages-and-commands-in-the-framework.md
+            - name: Meldungen
+              href: messages.md
+            - name: Meldungshandler
+              href: message-handlers.md
+            - name: Meldungskategorien
+              href: message-categories.md
+            - name: Zuordnen von Meldungen
+              href: mapping-messages.md
+            - name: Benutzeroberflächenobjekte und Befehls-IDs
+              expanded: false
+              items:
+                - name: Benutzeroberflächenobjekte und Befehls-IDs
+                  href: user-interface-objects-and-command-ids.md
+                - name: Befehls-IDs
+                  href: command-ids.md
+                - name: Standardbefehle
+                  href: standard-commands.md
+            - name: Befehlsziele
+              href: command-targets.md
+        - name: So ruft das Framework einen Handler auf
+          expanded: false
+          items:
+            - name: So ruft das Framework einen Handler auf
+              href: how-the-framework-calls-a-handler.md
+            - name: Senden und Empfangen von Meldungen
+              href: message-sending-and-receiving.md
+            - name: So erreichen nicht befehlsbasierte Meldungen ihre Handler
+              href: how-noncommand-messages-reach-their-handlers.md
+            - name: Befehlsrouting
+              href: command-routing.md
+            - name: Erläuterung des Befehlsroutings
+              href: command-routing-illustration.md
+            - name: OnCmdMsg-Handler
+              href: oncmdmsg-handler.md
+            - name: Überschreiben des Standardbefehlsroutings
+              href: overriding-the-standard-command-routing.md
+        - name: So durchsucht das Framework Meldungszuordnungen
+          expanded: false
+          items:
+            - name: So durchsucht das Framework Meldungszuordnungen
+              href: how-the-framework-searches-message-maps.md
+            - name: Wo sich Meldungszuordnungen befinden
+              href: where-to-find-message-maps.md
+            - name: Abgeleitete Meldungszuordnungen
+              href: derived-message-maps.md
+        - name: Deklarieren von Meldungshandlerfunktionen
+          expanded: false
+          items:
+            - name: Deklarieren von Meldungshandlerfunktionen
+              href: declaring-message-handler-functions.md
+            - name: Handler für Windows-Standardmeldungen
+              href: handlers-for-standard-windows-messages.md
+            - name: Handler für Befehle und Steuerelementbenachrichtigungen
+              href: handlers-for-commands-and-control-notifications.md
+            - name: Handler für Meldungszuordnungsbereiche
+              href: handlers-for-message-map-ranges.md
+            - name: Behandeln von reflektierten Meldungen
+              href: handling-reflected-messages.md
+        - name: 'Vorgehensweise: Anzeigen von Befehlsinformationen auf der Statusleiste'
+          href: how-to-display-command-information-in-the-status-bar.md
+        - name: 'Vorgehensweise: Erstellen einer Meldungszuordnung für eine Vorlagenklasse'
+          href: how-to-create-a-message-map-for-a-template-class.md
+    - name: MFC COM
+      expanded: false
+      items:
+        - name: MFC COM
+          href: mfc-com.md
+        - name: Containertechnologie für aktive Dokumente
+          expanded: false
+          items:
+            - name: Containertechnologie für aktive Dokumente
+              href: active-document-containment.md
+            - name: 'Beispiel für eine Containertechnologie für aktive Dokumente: Office Binder'
+              href: example-of-active-document-containment-office-binder.md
+            - name: Erstellen einer Containeranwendung für aktive Dokumente
+              href: creating-an-active-document-container-application.md
+            - name: Container für aktive Dokumente
+              expanded: false
+              items:
+                - name: Container für aktive Dokumente
+                  href: active-document-containers.md
+                - name: Zusammenführen des Hilfemenüs
+                  href: help-menu-merging.md
+                - name: Programmgesteuertes Drucken
+                  href: programmatic-printing.md
+                - name: Meldungsbehandlung und Befehlsziele
+                  href: message-handling-and-command-targets.md
+            - name: Server für aktive Dokumente
+              href: active-document-servers.md
+            - name: Aktive Dokumente
+              href: active-documents.md
+        - name: Automatisierung
+          expanded: false
+          items:
+            - name: Automatisierung
+              href: automation.md
+            - name: Automatisierungsclients
+              expanded: false
+              items:
+                - name: Automatisierungsclients
+                  href: automation-clients.md
+                - name: 'Automatisierungsclients: Verwenden von Typbibliotheken'
+                  href: automation-clients-using-type-libraries.md
+            - name: Automatisierungsserver
+              expanded: false
+              items:
+                - name: Automatisierungsserver
+                  href: automation-servers.md
+                - name: 'Automatisierungsserver: Probleme mit der Objektlebensdauer'
+                  href: automation-servers-object-lifetime-issues.md
+        - name: Verbindungspunkte
+          href: connection-points.md
+    - name: Grundlagen der MFC-Internetprogrammierung
+      expanded: false
+      items:
+        - name: Grundlagen der MFC-Internetprogrammierung
+          href: mfc-internet-programming-basics.md
+        - name: Internetbezogene MFC-Klassen
+          href: internet-related-mfc-classes.md
+        - name: Themenliste für Internetinformationen
+          href: internet-information-by-topic.md
+        - name: Aufgabenliste für Internetinformationen
+          href: internet-information-by-task.md
+        - name: Active Technology für das Internet
+          href: active-technology-on-the-internet.md
+        - name: WinInet-Grundlagen
+          href: wininet-basics.md
+        - name: HTML-Grundlagen
+          href: html-basics.md
+    - name: MFC-Internetprogrammierungsaufgaben
+      expanded: false
+      items:
+        - name: MFC-Internetprogrammierungsaufgaben
+          href: mfc-internet-programming-tasks.md
+        - name: Überlegungen zum Anwendungsentwurf
+          href: application-design-choices.md
+        - name: Schreiben von MFC-Anwendungen
+          href: writing-mfc-applications.md
+        - name: ActiveX-Steuerelemente für das Internet
+          href: activex-controls-on-the-internet.md
+        - name: Upgrading eines vorhandenen ActiveX-Steuerelements
+          href: upgrading-an-existing-activex-control.md
+        - name: Asynchrone Moniker im Internet
+          href: asynchronous-monikers-on-the-internet.md
+        - name: Testen von Internetanwendungen
+          href: testing-internet-applications.md
+        - name: Internetsicherheit (C++)
+          href: internet-security-cpp.md
+    - name: OLE in MFC
+      expanded: false
+      items:
+        - name: OLE in MFC
+          href: ole-in-mfc.md
+        - name: OLE-Hintergrund
+          expanded: false
+          items:
+            - name: OLE-Hintergrund
+              href: ole-background.md
+            - name: 'OLE-Hintergrund: Verknüpfen und Einbetten'
+              href: ole-background-linking-and-embedding.md
+            - name: 'OLE-Hintergrund: Container und Server'
+              href: ole-background-containers-and-servers.md
+            - name: 'OLE-Hintergrund: Implementierungsstrategien'
+              href: ole-background-implementation-strategies.md
+            - name: 'OLE-Hintergrund: MFC-Implementierung'
+              href: ole-background-mfc-implementation.md
+        - name: Aktivierung (C++)
+          expanded: false
+          items:
+            - name: Aktivierung (C++)
+              href: activation-cpp.md
+            - name: 'Aktivierung: Verben'
+              href: activation-verbs.md
+        - name: Container
+          expanded: false
+          items:
+            - name: Container
+              href: containers.md
+            - name: 'Container: Implementieren eines Containers'
+              href: containers-implementing-a-container.md
+            - name: 'Container: Clientelemente'
+              href: containers-client-items.md
+            - name: 'Container: Clientelementbenachrichtigungen'
+              href: containers-client-item-notifications.md
+            - name: 'Container: Clientelementzustände'
+              href: containers-client-item-states.md
+            - name: 'Container: Verbunddateien'
+              href: containers-compound-files.md
+            - name: 'Container: Benutzeroberflächenprobleme'
+              href: containers-user-interface-issues.md
+            - name: 'Container: Erweiterte Features'
+              href: containers-advanced-features.md
+        - name: Datenobjekte und Datenquellen (OLE)
+          expanded: false
+          items:
+            - name: Datenobjekte und Datenquellen (OLE)
+              href: data-objects-and-data-sources-ole.md
+            - name: 'Datenobjekte und Datenquellen: Erstellen und Löschen'
+              href: data-objects-and-data-sources-creation-and-destruction.md
+            - name: 'Datenobjekte und Datenquellen: Bearbeitung'
+              href: data-objects-and-data-sources-manipulation.md
+        - name: Drag & Drop (OLE)
+          expanded: false
+          items:
+            - name: Drag & Drop (OLE)
+              href: drag-and-drop-ole.md
+            - name: 'Drag & Drop: Implementieren einer Drag & Drop-Quelle'
+              href: drag-and-drop-implementing-a-drop-source.md
+            - name: 'Drag & Drop: Implementieren eines Drag & Drop-Ziels'
+              href: drag-and-drop-implementing-a-drop-target.md
+            - name: 'Drag & Drop: Anpassen'
+              href: drag-and-drop-customizing.md
+        - name: Menüs und Ressourcen (OLE)
+          expanded: false
+          items:
+            - name: Menüs und Ressourcen (OLE)
+              href: menus-and-resources-ole.md
+            - name: 'Menüs und Ressourcen: Containererweiterungen'
+              href: menus-and-resources-container-additions.md
+            - name: 'Menüs und Ressourcen: Servererweiterungen'
+              href: menus-and-resources-server-additions.md
+            - name: 'Menüs und Ressourcen: Zusammenführen von Menüs'
+              href: menus-and-resources-menu-merging.md
+        - name: Registrierung
+          href: registration.md
+        - name: Server
+          expanded: false
+          items:
+            - name: Server
+              href: servers.md
+            - name: 'Server: Implementieren eines Servers'
+              href: servers-implementing-a-server.md
+            - name: 'Server: Implementieren von Serverdokumenten'
+              href: servers-implementing-server-documents.md
+            - name: 'Server: Implementieren eines direkten Rahmenfensters'
+              href: servers-implementing-in-place-frame-windows.md
+            - name: 'Server: Serverelemente'
+              href: servers-server-items.md
+            - name: 'Server: Benutzeroberflächenprobleme'
+              href: servers-user-interface-issues.md
+        - name: Tracker
+          expanded: false
+          items:
+            - name: Tracker
+              href: trackers.md
+            - name: 'Tracker: Implementieren von Trackern in einer OLE-Anwendung'
+              expanded: false
+              items:
+                - name: 'Tracker: Implementieren von Trackern in einer OLE-Anwendung'
+                  href: trackers-implementing-trackers-in-your-ole-application.md
+                - name: 'Vorgehensweise: Implementieren der Nachverfolgung im Code'
+                  href: how-to-implement-tracking-in-your-code.md
+                - name: Gummibandtechnik und Ziehpunkte
+                  href: rubber-banding-and-trackers.md
+    - name: Serialisierung in MFC
+      expanded: false
+      items:
+        - name: Serialisierung in MFC
+          href: serialization-in-mfc.md
+        - name: 'Serialisierung: Erstellen einer serialisierbaren Klasse'
+          href: serialization-making-a-serializable-class.md
+        - name: 'Serialisierung: Serialisieren eines Objekts'
+          expanded: false
+          items:
+            - name: 'Serialisierung: Serialisieren eines Objekts'
+              href: serialization-serializing-an-object.md
+            - name: Was ist ein CArchive-Objekt?
+              href: what-is-a-carchive-object.md
+            - name: Zwei Möglichkeiten zur Erstellung eines CArchive-Objekts
+              href: two-ways-to-create-a-carchive-object.md
+            - name: Verwenden der CArchive-Operatoren << und >>
+              href: using-the-carchive-output-and-input-operators.md
+            - name: Speichern und Laden von CObjects per Archiv
+              href: storing-and-loading-cobjects-via-an-archive.md
+        - name: 'Serialisierung: Serialisierung im Vergleich zur Datenbankeingabe/-ausgabe'
+          expanded: false
+          items:
+            - name: 'Serialisierung: Serialisierung im Vergleich zur Datenbankeingabe/-ausgabe'
+              href: serialization-serialization-vs-database-input-output.md
+            - name: Empfehlungen zur Eingabe-/Ausgabebehandlung
+              href: recommendations-for-handling-input-output.md
+            - name: Das Dateimenü in einer MFC-Datenbankanwendung
+              href: file-menu-in-an-mfc-database-application.md
+    - name: Benutzeroberflächenelemente (MFC)
+      expanded: false
+      items:
+        - name: Benutzeroberflächenelemente (MFC)
+          href: user-interface-elements-mfc.md
+        - name: ActiveX-Steuerelemente
+          expanded: false
+          items:
+            - name: ActiveX-Steuerelemente
+              href: activex-controls.md
+            - name: MFC-ActiveX-Steuerelemente
+              expanded: false
+              items:
+                - name: MFC-ActiveX-Steuerelemente
+                  href: mfc-activex-controls.md
+                - name: 'MFC-ActiveX-Steuerelemente: Optimierung'
+                  expanded: false
+                  items:
+                    - name: 'MFC-ActiveX-Steuerelemente: Optimierung'
+                      href: mfc-activex-controls-optimization.md
+                    - name: Optimieren von Persistenz und Initialisierung
+                      href: optimizing-persistence-and-initialization.md
+                    - name: Bereitstellung von fensterloser Aktivierung
+                      href: providing-windowless-activation.md
+                    - name: 'Deaktivieren der Option „Aktiviert, wenn sichtbar“'
+                      href: turning-off-the-activate-when-visible-option.md
+                    - name: Bereitstellen von Mausinteraktionen in inaktiven Steuerelementen
+                      href: providing-mouse-interaction-while-inactive.md
+                    - name: Bereitstellen flimmerfreier Aktivierung
+                      href: providing-flicker-free-activation.md
+                    - name: Verwenden eines Gerätekontexts ohne Clippingbereichsanpassung
+                      href: using-an-unclipped-device-context.md
+                    - name: Optimieren der Steuerelementdarstellung
+                      href: optimizing-control-drawing.md
+                - name: 'MFC-ActiveX-Steuerelemente: Darstellen eines ActiveX-Steuerelements'
+                  href: mfc-activex-controls-painting-an-activex-control.md
+                - name: 'MFC-ActiveX-Steuerelemente: Ereignisse'
+                  href: mfc-activex-controls-events.md
+                - name: 'MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Ereignissen zu einem ActiveX-Steuerelement'
+                  href: mfc-activex-controls-adding-stock-events-to-an-activex-control.md
+                - name: 'MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Ereignissen'
+                  href: mfc-activex-controls-adding-custom-events.md
+                - name: 'MFC-ActiveX-Steuerelemente: Methoden'
+                  href: mfc-activex-controls-methods.md
+                - name: 'MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Methoden'
+                  href: mfc-activex-controls-adding-stock-methods.md
+                - name: 'MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Methoden'
+                  href: mfc-activex-controls-adding-custom-methods.md
+                - name: 'MFC-ActiveX-Steuerelemente: Zurückgeben von Fehlercodes aus einer Methode'
+                  href: mfc-activex-controls-returning-error-codes-from-a-method.md
+                - name: 'MFC-ActiveX-Steuerelemente: Eigenschaften'
+                  href: mfc-activex-controls-properties.md
+                - name: 'MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Eigenschaften'
+                  href: mfc-activex-controls-adding-stock-properties.md
+                - name: 'MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Eigenschaften'
+                  href: mfc-activex-controls-adding-custom-properties.md
+                - name: 'MFC-ActiveX-Steuerelemente: Weiterführende Eigenschaftenimplementierung'
+                  href: mfc-activex-controls-advanced-property-implementation.md
+                - name: 'MFC-ActiveX-Steuerelemente: Zugreifen auf Umgebungseigenschaften'
+                  href: mfc-activex-controls-accessing-ambient-properties.md
+                - name: 'MFC-ActiveX-Steuerelemente: Eigenschaftenseiten'
+                  href: mfc-activex-controls-property-pages.md
+                - name: 'MFC-ActiveX-Steuerelemente: Hinzufügen einer weiteren benutzerdefinierten Eigenschaftenseite'
+                  href: mfc-activex-controls-adding-another-custom-property-page.md
+                - name: 'MFC-ActiveX-Steuerelemente: Verwenden von vordefinierten Eigenschaftenseiten'
+                  href: mfc-activex-controls-using-stock-property-pages.md
+                - name: 'MFC-ActiveX-Steuerelemente: Erstellen eines Automatisierungsservers'
+                  href: mfc-activex-controls-creating-an-automation-server.md
+                - name: 'MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten'
+                  href: mfc-activex-controls-using-fonts.md
+                - name: 'MFC-ActiveX-Steuerelemente: Verwenden von Bildern in einem ActiveX-Steuerelement'
+                  href: mfc-activex-controls-using-pictures-in-an-activex-control.md
+                - name: 'MFC-ActiveX-Steuerelemente: Weiterführende Themen'
+                  href: mfc-activex-controls-advanced-topics.md
+                - name: 'MFC-ActiveX-Steuerelemente: Weitergabe von ActiveX-Steuerelementen'
+                  href: mfc-activex-controls-distributing-activex-controls.md
+                - name: 'MFC-ActiveX-Steuerelemente: Lizenzieren eines ActiveX-Steuerelements'
+                  href: mfc-activex-controls-licensing-an-activex-control.md
+                - name: 'MFC-ActiveX-Steuerelemente: Lokalisieren eines ActiveX-Steuerelements'
+                  href: mfc-activex-controls-localizing-an-activex-control.md
+                - name: 'MFC-ActiveX-Steuerelemente: Serialisieren'
+                  href: mfc-activex-controls-serializing.md
+                - name: 'MFC-ActiveX-Steuerelemente: Erstellen von Unterklassen für ein Windows-Steuerelement'
+                  expanded: false
+                  items:
+                    - name: 'MFC-ActiveX-Steuerelemente: Erstellen von Unterklassen für ein Windows-Steuerelement'
+                      href: mfc-activex-controls-subclassing-a-windows-control.md
+                    - name: Reflektierte Fenstermeldungs-IDs
+                      href: reflected-window-message-ids.md
+                - name: 'MFC-ActiveX-Steuerelemente: Verwenden der Datenbindung in einem ActiveX-Steuerelement'
+                  href: mfc-activex-controls-using-data-binding-in-an-activex-control.md
+            - name: ActiveX-Steuerelementcontainer
+              expanded: false
+              items:
+                - name: ActiveX-Steuerelementcontainer
+                  href: activex-control-containers.md
+                - name: Container für ActiveX-Steuerelemente
+                  href: containers-for-activex-controls.md
+                - name: 'ActiveX-Steuerelementcontainer: Manuelles Aktivieren von ActiveX-Steuerelementcontainern'
+                  href: activex-control-containers-manually-enabling-activex-control-containment.md
+                - name: 'ActiveX-Steuerelementcontainer: Einfügen eines Steuerelements in eine Steuerelementcontainer-Anwendung'
+                  href: inserting-a-control-into-a-control-container-application.md
+                - name: 'ActiveX-Steuerelementcontainer: Verbinden eines ActiveX-Steuerelements mit einer Membervariablen'
+                  href: activex-control-containers-connecting-an-activex-control-to-a-member-variable.md
+                - name: 'ActiveX-Steuerelementcontainer: Behandeln von Ereignissen aus einem ActiveX-Steuerelement'
+                  href: activex-control-containers-handling-events-from-an-activex-control.md
+                - name: 'ActiveX-Steuerelementcontainer: Anzeigen und Ändern von Steuerelementeigenschaften'
+                  href: activex-control-containers-viewing-and-modifying-control-properties.md
+                - name: 'ActiveX-Steuerelementcontainer: Programmieren von ActiveX-Steuerelementen in einem ActiveX-Steuerelementcontainer'
+                  href: programming-activex-controls-in-a-activex-control-container.md
+                - name: 'ActiveX-Steuerelementcontainer: Verwenden von Steuerelementen in Containern, die keine Dialogfelder sind'
+                  href: activex-control-containers-using-controls-in-a-non-dialog-container.md
+            - name: Testen der Eigenschaften und Ereignisse mit Test Container
+              href: testing-properties-and-events-with-test-container.md
+        - name: Zwischenablage
+          expanded: false
+          items:
+            - name: Zwischenablage
+              href: clipboard.md
+            - name: 'Zwischenablage: Verwenden des jeweiligen Zwischenablagemechanismus'
+              href: clipboard-when-to-use-each-clipboard-mechanism.md
+            - name: 'Zwischenablage: Verwenden der Windows-Zwischenablage'
+              href: clipboard-using-the-windows-clipboard.md
+            - name: 'Zwischenablage: Verwenden des OLE-Zwischenablagemechanismus'
+              expanded: false
+              items:
+                - name: 'Zwischenablage: Verwenden des OLE-Zwischenablagemechanismus'
+                  href: clipboard-using-the-ole-clipboard-mechanism.md
+                - name: 'Zwischenablage: Kopieren und Einfügen von Daten'
+                  href: clipboard-copying-and-pasting-data.md
+                - name: 'Zwischenablage: Hinzufügen anderer Formate'
+                  href: clipboard-adding-other-formats.md
+        - name: Steuerelemente (MFC)
+          expanded: false
+          items:
+            - name: Steuerelemente (MFC)
+              href: controls-mfc.md
+            - name: Beispiele für Standardsteuerelemente
+              href: common-control-sample-list.md
+            - name: Erstellen und Verwenden von Steuerelementen
+              expanded: false
+              items:
+                - name: Erstellen und Verwenden von Steuerelementen
+                  href: making-and-using-controls.md
+                - name: Verwenden von Standardsteuerelementen in einem Dialogfeld
+                  href: using-common-controls-in-a-dialog-box.md
+                - name: Verwenden des Dialog-Editors zum Hinzufügen von Steuerelementen
+                  href: using-the-dialog-editor-to-add-controls.md
+                - name: Manuelles Hinzufügen von Steuerelementen
+                  href: adding-controls-by-hand.md
+                - name: Ableiten von Steuerelementen aus einem Standardsteuerelement
+                  href: deriving-controls-from-a-standard-control.md
+                - name: Verwenden eines Standardsteuerelements als untergeordnetes Fenster
+                  href: using-a-common-control-as-a-child-window.md
+                - name: Empfangen von Benachrichtigungen von Standardsteuerelementen
+                  href: receiving-notification-from-common-controls.md
+            - name: Verwenden von CAnimateCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CAnimateCtrl
+                  href: using-canimatectrl.md
+                - name: Verwenden eines Animationssteuerelements
+                  href: using-an-animation-control.md
+                - name: Von Animationssteuerelementen gesendete Benachrichtigungen
+                  href: notifications-sent-by-animation-controls.md
+            - name: Verwenden von CDateTimeCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CDateTimeCtrl
+                  href: using-cdatetimectrl.md
+                - name: Erstellen des Steuerelements für die Datums- und Uhrzeitauswahl
+                  href: creating-the-date-and-time-picker-control.md
+                - name: Beispiele für Steuerelemente für die Datums- und Uhrzeitauswahl
+                  href: date-and-time-picker-control-examples.md
+                - name: Zugreifen auf das eingebettete Monatskalender-Steuerelement
+                  href: accessing-the-embedded-month-calendar-control.md
+                - name: Verwenden von benutzerdefinierten Formatzeichenfolgen in einem Steuerelement für die Datums- und Uhrzeitauswahl
+                  href: using-custom-format-strings-in-a-date-and-time-picker-control.md
+                - name: Verwenden von Rückruffeldern in einem Steuerelement für die Datums- und Uhrzeitauswahl
+                  href: using-callback-fields-in-a-date-and-time-picker-control.md
+                - name: Verarbeiten von Benachrichtigungsmeldungen in Steuerelementen für die Datums- und Uhrzeitauswahl
+                  href: processing-notification-messages-in-date-and-time-picker-controls.md
+            - name: Verwenden von CComboBoxEx
+              expanded: false
+              items:
+                - name: Verwenden von CComboBoxEx
+                  href: using-ccomboboxex.md
+                - name: Erstellen eines erweiterten Kombinationsfeld-Steuerelements
+                  href: creating-an-extended-combo-box-control.md
+                - name: Verwenden von Bildlisten in einem erweiterten Kombinationsfeld-Steuerelement
+                  href: using-image-lists-in-an-extended-combo-box-control.md
+                - name: Festlegen der Bilder für ein bestimmtes Element
+                  href: setting-the-images-for-an-individual-item.md
+                - name: Verarbeiten von Benachrichtigungsmeldungen in erweiterten Kombinationsfeld-Steuerelementen
+                  href: processing-notification-messages-in-extended-combo-box-controls.md
+            - name: Verwenden von CHeaderCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CHeaderCtrl
+                  href: using-cheaderctrl.md
+                - name: Headersteuerelement und Listensteuerelement
+                  href: header-control-and-list-control.md
+                - name: Beispiele für Headersteuerelemente
+                  href: header-control-examples.md
+                - name: Headerelemente in einem Headersteuerelement
+                  href: header-items-in-a-header-control.md
+                - name: Anpassen der Darstellung von Headerelementen
+                  href: customizing-the-header-item-s-appearance.md
+                - name: Bereitstellen von Drag & Drop-Unterstützung für Headerelemente
+                  href: providing-drag-and-drop-support-for-header-items.md
+                - name: Verwenden von Bildlisten in Headersteuerelementen
+                  href: using-image-lists-with-header-controls.md
+                - name: Erstellen von Ownerdrawn-Headersteuerelementen
+                  href: making-owner-drawn-header-controls.md
+                - name: Arbeiten mit dem Headersteuerelement
+                  href: working-with-a-header-control.md
+                - name: Erstellen des Headersteuerelements
+                  href: creating-the-header-control.md
+                - name: Hinzufügen von Elementen zum Headersteuerelement
+                  href: adding-items-to-the-header-control.md
+                - name: Anordnen von Elementen im Headersteuerelement
+                  href: ordering-items-in-the-header-control.md
+                - name: Verarbeiten von Benachrichtigungen des Headersteuerelements
+                  href: processing-header-control-notifications.md
+            - name: Verwenden von CHotKeyCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CHotKeyCtrl
+                  href: using-chotkeyctrl.md
+                - name: Verwenden eines Abkürzungstasten-Steuerelements
+                  href: using-a-hot-key-control.md
+                - name: Festlegen einer Abkürzungstaste
+                  href: setting-a-hot-key.md
+                - name: Globale Abkürzungstasten
+                  href: global-hot-keys.md
+                - name: Threadspezifische Abkürzungstasten
+                  href: thread-specific-hot-keys.md
+            - name: Verwenden von CImageList
+              expanded: false
+              items:
+                - name: Verwenden von CImageList
+                  href: using-cimagelist.md
+                - name: Arten von Bildlisten
+                  href: types-of-image-lists.md
+                - name: Verwenden einer Bildliste
+                  href: using-an-image-list.md
+                - name: Bearbeiten von Bildlisten
+                  href: manipulating-image-lists.md
+                - name: Darstellen von Bildern aus einer Bildliste
+                  href: drawing-images-from-an-image-list.md
+                - name: Overlaymasken in Bildlisten
+                  href: image-overlays-in-image-lists.md
+                - name: Herausziehen von Bildern aus einer Bildliste
+                  href: dragging-images-from-an-image-list.md
+                - name: Bildinformationen in Bildlisten
+                  href: image-information-in-image-lists.md
+            - name: Verwenden von CListCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CListCtrl
+                  href: using-clistctrl.md
+                - name: Listensteuerelement und Listenansicht
+                  href: list-control-and-list-view.md
+                - name: Listenelemente und Bildlisten
+                  href: list-items-and-image-lists.md
+                - name: Rückrufelemente und die Rückrufmaske
+                  href: callback-items-and-the-callback-mask.md
+                - name: Erstellen des Listensteuerelements
+                  href: creating-the-list-control.md
+                - name: Erstellen der Bildliste
+                  href: creating-the-image-lists.md
+                - name: Hinzufügen von Spalten zum Steuerelement (Berichtsansicht)
+                  href: adding-columns-to-the-control-report-view.md
+                - name: Hinzufügen von Elementen zum Steuerelement
+                  href: adding-items-to-the-control.md
+                - name: 'Scrollen, Anordnen, Sortieren und Suchen in Listensteuerelementen'
+                  href: scrolling-arranging-sorting-and-finding-in-list-controls.md
+                - name: Implementieren von Arbeitsbereichen in Listensteuerelementen
+                  href: implementing-working-areas-in-list-controls.md
+                - name: Verarbeiten von Benachrichtigungsmeldungen in Listensteuerelementen
+                  href: processing-notification-messages-in-list-controls.md
+                - name: Ändern der Stile von Listensteuerelementen
+                  href: changing-list-control-styles.md
+                - name: Virtuelle Listensteuerelemente
+                  href: virtual-list-controls.md
+                - name: Zerstören des Listensteuerelements
+                  href: destroying-the-list-control.md
+            - name: Verwenden von CMonthCalCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CMonthCalCtrl
+                  href: using-cmonthcalctrl.md
+                - name: Erstellen des Monatskalender-Steuerelements
+                  href: creating-the-month-calendar-control.md
+                - name: Beispiele für Monatskalender-Steuerelemente
+                  href: month-calendar-control-examples.md
+                - name: Verarbeiten von Benachrichtigungsmeldungen in Monatskalender-Steuerelementen
+                  href: processing-notification-messages-in-month-calendar-controls.md
+                - name: Einstellen des Tagesstatus für ein Monatskalender-Steuerelement
+                  href: setting-the-day-state-of-a-month-calendar-control.md
+            - name: Verwenden von CProgressCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CProgressCtrl
+                  href: using-cprogressctrl.md
+                - name: Stile für das Statussteuerelement
+                  href: styles-for-the-progress-control.md
+                - name: Einstellungen für das Statussteuerelement
+                  href: settings-for-the-progress-control.md
+                - name: Bearbeiten des Statussteuerelements
+                  href: manipulating-the-progress-control.md
+            - name: Verwenden von CReBarCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CReBarCtrl
+                  href: using-crebarctrl.md
+                - name: CReBar im Vergleich zu CReBarCtrl
+                  href: crebar-vs-crebarctrl.md
+                - name: Erstellen eines Grundleistensteuerelements
+                  href: creating-a-rebar-control.md
+                - name: Grundleistensteuerelemente und Bänder
+                  href: rebar-controls-and-bands.md
+                - name: Verwenden einer Bildliste mit einem Grundleistensteuerelement
+                  href: using-an-image-list-with-a-rebar-control.md
+                - name: Verwenden einer Dialogleiste mit einem Grundleistensteuerelement
+                  href: using-a-dialog-bar-with-a-rebar-control.md
+                - name: Verarbeiten von Benachrichtigungsmeldungen in einem Grundleistensteuerelement
+                  href: processing-notification-messages-in-a-rebar-control.md
+            - name: Verwenden von CRichEditCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CRichEditCtrl
+                  href: using-cricheditctrl.md
+                - name: Übersicht über das RichEdit-Steuerelement
+                  href: overview-of-the-rich-edit-control.md
+                - name: Klassen im Zusammenhang mit RichEdit-Steuerelementen
+                  href: classes-related-to-rich-edit-controls.md
+                - name: Beispiele für RichEdit-Steuerelemente
+                  href: rich-edit-control-examples.md
+                - name: Formatieren von Zeichen in RichEdit-Steuerelementen
+                  href: character-formatting-in-rich-edit-controls.md
+                - name: Formatieren von Absätzen in RichEdit-Steuerelementen
+                  href: paragraph-formatting-in-rich-edit-controls.md
+                - name: Die aktuelle Auswahl in einem RichEdit-Steuerelement
+                  href: current-selection-in-a-rich-edit-control.md
+                - name: Wortumbrüche in RichEdit-Steuerelementen
+                  href: word-breaks-in-rich-edit-controls.md
+                - name: Zwischenablagevorgänge in RichEdit-Steuerelementen
+                  href: clipboard-operations-in-rich-edit-controls.md
+                - name: Streamvorgänge in RichEdit-Steuerelementen
+                  href: stream-operations-in-rich-edit-controls.md
+                - name: Drucken mit RichEdit-Steuerelementen
+                  href: printing-in-rich-edit-controls.md
+                - name: Unbeschränkte Rich-Edit-Steuerelemente
+                  href: bottomless-rich-edit-controls.md
+                - name: Benachrichtigungen von einem RichEdit-Steuerelement
+                  href: notifications-from-a-rich-edit-control.md
+            - name: Verwenden von CSliderCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CSliderCtrl
+                  href: using-csliderctrl.md
+                - name: Verwenden von Schieberegler-Steuerelementen
+                  href: using-slider-controls.md
+                - name: Stile der Schieberegler-Steuerelemente
+                  href: slider-control-styles.md
+                - name: Memberfunktionen des Schieberegler-Steuerelements
+                  href: slider-control-member-functions.md
+                - name: Benachrichtigungsmeldungen von Schiebereglern
+                  href: slider-notification-messages.md
+            - name: Verwenden von CSpinButtonCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CSpinButtonCtrl
+                  href: using-cspinbuttonctrl.md
+                - name: Drehfeldstile
+                  href: spin-button-styles.md
+                - name: Memberfunktionen für Drehfelder
+                  href: spin-button-member-functions.md
+            - name: Verwenden von CStatusBarCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CStatusBarCtrl
+                  href: using-cstatusbarctrl.md
+                - name: Methoden zum Erstellen einer Statusleiste
+                  href: methods-of-creating-a-status-bar.md
+                - name: Einstellungen für CStatusBarCtrl
+                  href: settings-for-the-cstatusbarctrl.md
+                - name: Verwenden von CStatusBarCtrl zum Erstellen eines CStatusBarCtrl-Objekts
+                  href: using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md
+                - name: Festlegen des CStatusBarCtrl-Objektmodus
+                  href: setting-the-mode-of-a-cstatusbarctrl-object.md
+                - name: Initialisieren der Teile eines CStatusBarCtrl-Objekts
+                  href: initializing-the-parts-of-a-cstatusbarctrl-object.md
+                - name: Verwenden von QuickInfos in einem CStatusBarCtrl-Objekt
+                  href: using-tooltips-in-a-cstatusbarctrl-object.md
+            - name: Verwenden von CTabCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CTabCtrl
+                  href: using-ctabctrl.md
+                - name: Registersteuerelemente und Eigenschaftenblätter
+                  href: tab-controls-and-property-sheets.md
+                - name: Registerkarten und Attribute von Registersteuerelementen
+                  href: tabs-and-tab-control-attributes.md
+                - name: Erstellen von Ownerdrawn-Registerkarten
+                  href: making-owner-drawn-tabs.md
+                - name: Arbeiten mit dem Registersteuerelement
+                  href: working-with-a-tab-control.md
+                - name: Erstellen des Registersteuerelements
+                  href: creating-the-tab-control.md
+                - name: Hinzufügen von Registerkarten zum Registersteuerelement
+                  href: adding-tabs-to-a-tab-control.md
+                - name: Verarbeiten von Benachrichtigungsmeldungen des Registersteuerelements
+                  href: processing-tab-control-notification-messages.md
+            - name: Verwenden von CToolBarCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CToolBarCtrl
+                  href: using-ctoolbarctrl.md
+                - name: Methoden zum Erstellen einer Symbolleiste
+                  href: methods-of-creating-a-toolbar.md
+                - name: Einstellungen für das Symbolleisten-Steuerelement
+                  href: settings-for-the-toolbar-control.md
+                - name: Erstellen eines CToolBarCtrl-Objekts
+                  href: creating-a-ctoolbarctrl-object.md
+                - name: Verwenden von Bildlisten in einem Symbolleisten-Steuerelement
+                  href: using-image-lists-in-a-toolbar-control.md
+                - name: Verwenden von Menüschaltflächen in einem Symbolleisten-Steuerelement
+                  href: using-drop-down-buttons-in-a-toolbar-control.md
+                - name: Anpassen der Darstellung eines Symbolleisten-Steuerelements
+                  href: customizing-the-appearance-of-a-toolbar-control.md
+                - name: Behandeln von QuickInfo-Benachrichtigungen
+                  href: handling-tool-tip-notifications.md
+                - name: Behandeln von Anpassungsbenachrichtigungen
+                  href: handling-customization-notifications.md
+            - name: Verwenden von CToolTipCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CToolTipCtrl
+                  href: using-ctooltipctrl.md
+                - name: Methoden zum Erstellen von QuickInfos
+                  href: methods-of-creating-tool-tips.md
+                - name: Einstellungen für das QuickInfo-Steuerelement
+                  href: settings-for-the-tool-tip-control.md
+                - name: Verwenden von CToolTipCtrl zum Erstellen und Bearbeiten eines CToolTipCtrl-Objekts
+                  href: using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md
+                - name: Bearbeiten des QuickInfo-Steuerelements
+                  href: manipulating-the-tool-tip-control.md
+            - name: Verwenden von CTreeCtrl
+              expanded: false
+              items:
+                - name: Verwenden von CTreeCtrl
+                  href: using-ctreectrl.md
+                - name: CTreeCtrl im Vergleich zu CTreeView
+                  href: ctreectrl-vs-ctreeview.md
+                - name: Verwenden von Struktursteuerelementen
+                  href: using-tree-controls.md
+                - name: Kommunizieren mit dem Struktursteuerelement
+                  href: communicating-with-a-tree-control.md
+                - name: Struktursteuerelementstile
+                  href: tree-control-styles.md
+                - name: Übergeordnete und untergeordnete Elemente in einem Struktursteuerelement
+                  href: tree-control-parent-and-child-items.md
+                - name: Position eines Elements im Struktursteuerelement
+                  href: tree-control-item-position.md
+                - name: Elementbezeichnungen in Struktursteuerelementen
+                  href: tree-control-item-labels.md
+                - name: Bearbeiten der Struktursteuerelement-Bezeichnung
+                  href: tree-control-label-editing.md
+                - name: Übersicht über Elementzustände des Struktursteuerelements
+                  href: tree-control-item-states-overview.md
+                - name: Bilderliste für das Struktursteuerelement
+                  href: tree-control-image-lists.md
+                - name: Elementauswahl in einem Struktursteuerelement
+                  href: tree-control-item-selection.md
+                - name: Drag & Drop-Vorgänge für das Struktursteuerelement
+                  href: tree-control-drag-and-drop-operations.md
+                - name: Informationen über die Elemente im Struktursteuerelement
+                  href: tree-control-item-information.md
+                - name: Benachrichtigungsmeldungen von Struktursteuerelementen
+                  href: tree-control-notification-messages.md
+        - name: Steuerleisten
+          href: control-bars.md
+        - name: Dialogleisten
+          href: dialog-bars.md
+        - name: Dialogfelder
+          expanded: false
+          items:
+            - name: Dialogfelder
+              href: dialog-boxes.md
+            - name: 'Beispiel: Anzeigen eines Dialogfelds mit einem Menübefehl'
+              href: example-displaying-a-dialog-box-via-a-menu-command.md
+            - name: Dialogfeldbeispiele
+              href: dialog-sample-list.md
+            - name: Dialogfeld-Steuerelemente im Framework
+              href: dialog-box-components-in-the-framework.md
+            - name: Modale und nicht modale Dialogfelder
+              href: modal-and-modeless-dialog-boxes.md
+            - name: Eigenschaftenblätter und Eigenschaftenseiten (MFC)
+              href: property-sheets-and-property-pages-mfc.md
+            - name: Erstellen der Dialogfeldressource
+              href: creating-the-dialog-resource.md
+            - name: Erstellen einer Dialogfeldklasse mit Code-Assistenten
+              expanded: false
+              items:
+                - name: Erstellen einer Dialogfeldklasse mit Code-Assistenten
+                  href: creating-a-dialog-class-with-code-wizards.md
+                - name: Erstellen eigener Dialogfeldklassen
+                  href: creating-your-dialog-class.md
+            - name: Lebenszyklus eines Dialogfelds
+              expanded: false
+              items:
+                - name: Lebenszyklus eines Dialogfelds
+                  href: life-cycle-of-a-dialog-box.md
+                - name: Erstellen und Anzeigen von Dialogfeldern
+                  href: creating-and-displaying-dialog-boxes.md
+                - name: Erstellen von modalen Dialogfeldern
+                  href: creating-modal-dialog-boxes.md
+                - name: Erstellen von nicht modalen Dialogfeldern
+                  href: creating-modeless-dialog-boxes.md
+                - name: Verwenden einer Dialogvorlage im Speicher
+                  href: using-a-dialog-template-in-memory.md
+                - name: Festlegen der Hintergrundfarbe für das Dialogfeld
+                  href: setting-the-dialog-boxs-background-color.md
+                - name: Initialisieren des Dialogfelds
+                  href: initializing-the-dialog-box.md
+                - name: Verarbeiten von Windows-Meldungen in einem Dialogfeld
+                  href: handling-windows-messages-in-your-dialog-box.md
+                - name: Abrufen von Daten aus dem Dialogfeldobjekt
+                  href: retrieving-data-from-the-dialog-object.md
+                - name: Schließen des Dialogfelds
+                  href: closing-the-dialog-box.md
+                - name: Zerstören des Dialogfelds
+                  href: destroying-the-dialog-box.md
+            - name: Dialogdatenaustausch und -validierung
+              expanded: false
+              items:
+                - name: Dialogdatenaustausch und -validierung
+                  href: dialog-data-exchange-and-validation.md
+                - name: Dialogdatenaustausch
+                  href: dialog-data-exchange.md
+                - name: Validieren von Dialogfelddaten
+                  href: dialog-data-validation.md
+            - name: Typsicherer Zugriff auf die Steuerelemente in einem Dialogfeld
+              expanded: false
+              items:
+                - name: Typsicherer Zugriff auf die Steuerelemente in einem Dialogfeld
+                  href: type-safe-access-to-controls-in-a-dialog-box.md
+                - name: Typsicherer Zugriff auf Steuerelemente ohne Code-Assistenten
+                  href: type-safe-access-to-controls-without-code-wizards.md
+                - name: Typsicherer Zugriff auf Steuerelemente mit Code-Assistenten
+                  href: type-safe-access-to-controls-with-code-wizards.md
+            - name: Zuordnen von Windows-Meldungen zu einer Klasse
+              href: mapping-windows-messages-to-your-class.md
+            - name: Häufig überschriebene Memberfunktionen
+              href: commonly-overridden-member-functions.md
+            - name: Häufig hinzugefügte Memberfunktionen
+              href: commonly-added-member-functions.md
+            - name: Standarddialogfeld-Klassen
+              href: common-dialog-classes.md
+            - name: Dialogfelder in OLE
+              href: dialog-boxes-in-ole.md
+            - name: 'Exemplarische Vorgehensweise: Hinzufügen von CTaskDialog zu einer Anwendung'
+              href: walkthrough-adding-a-ctaskdialog-to-an-application.md
+        - name: Dokumentansichtsarchitektur
+          expanded: false
+          items:
+            - name: Dokumentansichtsarchitektur
+              href: document-view-architecture.md
+            - name: Dokumentansichtsbeispiele
+              href: document-view-sample-list.md
+            - name: Ein Portrait der Dokumentansichtsarchitektur
+              href: a-portrait-of-the-document-view-architecture.md
+            - name: Vorteile der Dokumentansichtsarchitektur
+              href: advantages-of-the-document-view-architecture.md
+            - name: Mithilfe des MFC-Anwendungs-Assistenten erstellte Dokument- und Ansichtsklassen
+              href: document-and-view-classes-created-by-the-mfc-application-wizard.md
+            - name: Alternativen zur Dokumentansichtsarchitektur
+              href: alternatives-to-the-document-view-architecture.md
+            - name: Verwenden von Dokumenten
+              expanded: false
+              items:
+                - name: Verwenden von Dokumenten
+                  href: using-documents.md
+                - name: Ableiten einer Dokumentklasse aus CDocument
+                  href: deriving-a-document-class-from-cdocument.md
+                - name: Verwalten von Daten mit Dokumentdatenvariablen
+                  href: managing-data-with-document-data-variables.md
+                - name: Serialisieren von Daten in und aus Dateien
+                  href: serializing-data-to-and-from-files.md
+                - name: Umgehen des Serialisierungsmechanismus
+                  href: bypassing-the-serialization-mechanism.md
+                - name: Behandeln von Kommentaren in einem Dokument
+                  href: handling-commands-in-the-document.md
+            - name: Verwenden von Ansichten
+              expanded: false
+              items:
+                - name: Verwenden von Ansichten
+                  href: using-views.md
+                - name: In MFC verfügbare abgeleitete Ansichtsklassen
+                  href: derived-view-classes-available-in-mfc.md
+                - name: Zeichnen in einer Ansicht
+                  href: drawing-in-a-view.md
+                - name: Interpretieren der Benutzereingaben in einer Ansicht
+                  href: interpreting-user-input-through-a-view.md
+                - name: Die Rolle der Ansicht beim Drucken
+                  href: role-of-the-view-in-printing.md
+                - name: Scrollen und Skalieren von Ansichten
+                  href: scrolling-and-scaling-views.md
+            - name: 'Mehrere Dokumenttypen, Ansichten und Rahmenfenster'
+              href: multiple-document-types-views-and-frame-windows.md
+            - name: Initialisieren und Bereinigen von Dokumenten und Ansichten
+              expanded: false
+              items:
+                - name: Initialisieren und Bereinigen von Dokumenten und Ansichten
+                  href: initializing-and-cleaning-up-documents-and-views.md
+                - name: Initialisieren von Dokumenten und Ansichten
+                  href: initializing-documents-and-views.md
+                - name: Bereinigen von Dokumenten und Ansichten
+                  href: cleaning-up-documents-and-views.md
+            - name: Hinzufügen mehrerer Ansichten zu einem Dokument
+              href: adding-multiple-views-to-a-single-document.md
+        - name: Formularansichten (MFC)
+          expanded: false
+          items:
+            - name: Formularansichten (MFC)
+              href: form-views-mfc.md
+            - name: Einfügen eines Formulars in ein Projekt
+              href: inserting-a-form-into-a-project.md
+        - name: 'HTML-Hilfe: Kontextbezogene Hilfe für Programme'
+          href: html-help-context-sensitive-help-for-your-programs.md
+        - name: MDI-Gruppen im Registerkartenformat
+          href: mdi-tabbed-groups.md
+        - name: Menüs (MFC)
+          expanded: false
+          items:
+            - name: Menüs (MFC)
+              href: menus-mfc.md
+            - name: Menübeispiele
+              href: menu-sample-list.md
+            - name: Bearbeiten von Menüs während der Programmausführung
+              href: manipulating-menus-during-program-execution.md
+            - name: 'Vorgehensweise: Aktualisieren von Benutzeroberflächenobjekten'
+              expanded: false
+              items:
+                - name: 'Vorgehensweise: Aktualisieren von Benutzeroberflächenobjekten'
+                  href: how-to-update-user-interface-objects.md
+                - name: Wann müssen Updatehandler aufgerufen werden?
+                  href: when-update-handlers-are-called.md
+                - name: ON_UPDATE_COMMAND_UI-Makro
+                  href: on-update-command-ui-macro.md
+                - name: Die CCmdUI-Klasse
+                  href: the-ccmdui-class.md
+        - name: OLE (MFC)
+          href: ole-mfc.md
+        - name: Drucken und Druckvorschau
+          expanded: false
+          items:
+            - name: Drucken und Druckvorschau
+              href: printing-and-print-preview.md
+            - name: Drucken
+              expanded: false
+              items:
+                - name: Drucken
+                  href: printing.md
+                - name: Funktionsweise des Standarddrucks
+                  href: how-default-printing-is-done.md
+                - name: Mehrseitige Dokumente
+                  href: multipage-documents.md
+                - name: Kopf- und Fußzeilen
+                  href: headers-and-footers.md
+                - name: Zuordnen von GDI-Ressourcen
+                  href: allocating-gdi-resources.md
+            - name: Druckvorschauarchitektur
+              href: print-preview-architecture.md
+        - name: Eigenschaftenblätter (MFC)
+          expanded: false
+          items:
+            - name: Eigenschaftenblätter (MFC)
+              href: property-sheets-mfc.md
+            - name: Eigenschaftenblätter und Eigenschaftenseiten in MFC
+              href: property-sheets-and-property-pages-in-mfc.md
+            - name: Verwenden von Eigenschaftenseiten in einer Anwendung
+              href: using-property-sheets-in-your-application.md
+            - name: Hinzufügen von Steuerelementen zu einem Eigenschaftenblatt
+              href: adding-controls-to-a-property-sheet.md
+            - name: Datenaustausch
+              href: exchanging-data.md
+            - name: Erstellen eines Eigenschaftenblatts ohne Modus
+              href: creating-a-modeless-property-sheet.md
+            - name: Verarbeiten der Schaltfläche „Anwenden“
+              href: handling-the-apply-button.md
+            - name: Eigenschaftenblätter als Assistenten
+              href: property-sheets-as-wizards.md
+        - name: Menüband-Designer (MFC)
+          expanded: false
+          items:
+            - name: Menüband-Designer (MFC)
+              href: ribbon-designer-mfc.md
+            - name: 'Vorgehensweise: Umwandeln eines vorhandenen MFC-Menübands in eine Menübandressource'
+              href: how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md
+            - name: 'Vorgehensweise: Anpassen der Anwendungsschaltfläche'
+              href: how-to-customize-the-application-button.md
+            - name: 'Vorgehensweise: Anpassen der Symbolleiste für den Schnellzugriff'
+              href: how-to-customize-the-quick-access-toolbar.md
+            - name: 'Vorgehensweise: Hinzufügen von Menüband-Steuerelementen und Ereignishandlern'
+              href: how-to-add-ribbon-controls-and-event-handlers.md
+            - name: 'Vorgehensweise: Laden einer Menübandressource aus einer MFC-Anwendung'
+              href: how-to-load-a-ribbon-resource-from-an-mfc-application.md
+            - name: 'Exemplarische Vorgehensweise: Erstellen einer Menübandanwendung mithilfe von MFC'
+              href: walkthrough-creating-a-ribbon-application-by-using-mfc.md
+            - name: 'Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 1)'
+              href: walkthrough-updating-the-mfc-scribble-application-part-1.md
+            - name: 'Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 2)'
+              href: walkthrough-updating-the-mfc-scribble-application-part-2.md
+        - name: Statusleisten
+          expanded: false
+          items:
+            - name: Statusleisten
+              href: status-bars.md
+            - name: Implementieren der Statusleiste mit MFC
+              expanded: false
+              items:
+                - name: Implementieren der Statusleiste mit MFC
+                  href: status-bar-implementation-in-mfc.md
+                - name: Aktualisieren des Textes in der Statusleiste
+                  href: updating-the-text-of-a-status-bar-pane.md
+        - name: QuickInfos
+          expanded: false
+          items:
+            - name: QuickInfos
+              href: tool-tips.md
+            - name: 'QuickInfos in Fenstern, die nicht aus CFrameWnd abgeleitet sind'
+              expanded: false
+              items:
+                - name: 'QuickInfos in Fenstern, die nicht aus CFrameWnd abgeleitet sind'
+                  href: tool-tips-in-windows-not-derived-from-cframewnd.md
+                - name: Aktivieren von QuickInfos
+                  href: enabling-tool-tips.md
+                - name: Behandeln der TTN_NEEDTEXT-Benachrichtigung für QuickInfos
+                  href: handling-ttn-needtext-notification-for-tool-tips.md
+                - name: TOOLTIPTEXT-Struktur
+                  href: tooltiptext-structure.md
+        - name: Symbolleisten
+          expanded: false
+          items:
+            - name: Symbolleisten
+              href: toolbars.md
+            - name: Beispiele für Symbolleisten
+              href: toolbar-sample-list.md
+            - name: Implementieren der MFC-Symbolleiste
+              expanded: false
+              items:
+                - name: Implementieren der MFC-Symbolleiste
+                  href: mfc-toolbar-implementation.md
+                - name: Grundlegendes über Symbolleisten
+                  href: toolbar-fundamentals.md
+                - name: Andockbare und unverankerte Symbolleisten
+                  href: docking-and-floating-toolbars.md
+                - name: QuickInfos für die Symbolleiste
+                  href: toolbar-tool-tips.md
+                - name: Arbeiten mit dem Symbolleisten-Steuerelement
+                  href: working-with-the-toolbar-control.md
+                - name: Verwenden der bisherigen Symbolleisten
+                  href: using-your-old-toolbars.md
+        - name: Visualisierungs-Manager
+          href: visualization-manager.md
+        - name: Windows
+          expanded: false
+          items:
+            - name: Windows
+              href: windows.md
+            - name: Fensterobjekte
+              expanded: false
+              items:
+                - name: Fensterobjekte
+                  href: window-objects.md
+                - name: Beziehung zwischen einem C++-Fensterobjekt und einem HWND
+                  href: relationship-between-a-cpp-window-object-and-an-hwnd.md
+                - name: Abgeleitete Fensterklassen
+                  href: derived-window-classes.md
+                - name: Erstellen von Fenstern
+                  expanded: false
+                  items:
+                    - name: Erstellen von Fenstern
+                      href: creating-windows.md
+                    - name: Registrieren von Fensterklassen
+                      href: registering-window-classes.md
+                    - name: Allgemeine Ablauffolge bei der Fenstererstellung
+                      href: general-window-creation-sequence.md
+                - name: Zerstören von Fensterobjekten
+                  expanded: false
+                  items:
+                    - name: Zerstören von Fensterobjekten
+                      href: destroying-window-objects.md
+                    - name: Fensterzerstörungssequenz
+                      href: window-destruction-sequence.md
+                    - name: Reservieren und Freigeben von Fensterspeicher
+                      href: allocating-and-deallocating-window-memory.md
+                - name: Trennen eines CWnd von seinem HWND
+                  href: detaching-a-cwnd-from-its-hwnd.md
+                - name: Arbeiten mit Fensterobjekten
+                  href: working-with-window-objects.md
+                - name: Gerätekontexte
+                  href: device-contexts.md
+                - name: Grafikobjekte
+                  expanded: false
+                  items:
+                    - name: Grafikobjekte
+                      href: graphic-objects.md
+                    - name: Ein- oder zweistufige Erstellung von Objekten
+                      href: one-stage-and-two-stage-construction-of-objects.md
+                    - name: Auswählen eines Grafikobjekts für einen Gerätekontext
+                      href: selecting-a-graphic-object-into-a-device-context.md
+            - name: Rahmenfenster
+              expanded: false
+              items:
+                - name: Rahmenfenster
+                  href: frame-windows.md
+                - name: Rahmenfensterklassen
+                  expanded: false
+                  items:
+                    - name: Rahmenfensterklassen
+                      href: frame-window-classes.md
+                    - name: Vom Anwendungs-Assistenten erstellte Rahmenfensterklassen
+                      href: frame-window-classes-created-by-the-application-wizard.md
+                - name: Rahmenfensterstile (C++)
+                  expanded: false
+                  items:
+                    - name: Rahmenfensterstile (C++)
+                      href: frame-window-styles-cpp.md
+                    - name: Ändern der Stile eines mit MFC erstellten Fensters
+                      href: changing-the-styles-of-a-window-created-by-mfc.md
+                - name: Funktionsweise von Rahmenfenstern
+                  href: what-frame-windows-do.md
+                - name: Verwenden von Rahmenfenstern
+                  expanded: false
+                  items:
+                    - name: Verwenden von Rahmenfenstern
+                      href: using-frame-windows.md
+                    - name: Erstellen von Dokumentrahmenfenstern
+                      href: creating-document-frame-windows.md
+                    - name: Wann müssen CWnd-Objekte initialisiert werden?
+                      href: when-to-initialize-cwnd-objects.md
+                    - name: Zerstören von Rahmenfenstern
+                      href: destroying-frame-windows.md
+                    - name: Verwalten von untergeordneten MDI-Fenstern
+                      href: managing-mdi-child-windows.md
+                    - name: Verwalten der aktuellen Ansicht
+                      href: managing-the-current-view.md
+                    - name: 'Verwalten von Menüs, Steuerleisten und Zugriffstasten'
+                      href: managing-menus-control-bars-and-accelerators.md
+                    - name: Ziehen und Ablegen von Dateien in einem Rahmenfenster
+                      href: dragging-and-dropping-files-in-a-frame-window.md
+                    - name: Antworten auf DDE-Anforderungen
+                      href: responding-to-dynamic-data-exchange-dde.md
+                    - name: Orchestrieren anderer Fensteraktionen
+                      href: orchestrating-other-window-actions.md
+    - name: Windows-Sockets
+      expanded: false
+      items:
+        - name: Windows-Sockets
+          href: windows-sockets.md
+        - name: Windows-Sockets in MFC
+          expanded: false
+          items:
+            - name: Windows-Sockets in MFC
+              href: windows-sockets-in-mfc.md
+            - name: 'Windows-Sockets: Hintergrund'
+              href: windows-sockets-background.md
+            - name: 'Windows-Sockets: Streamsockets'
+              href: windows-sockets-stream-sockets.md
+            - name: 'Windows-Sockets: Datagrammsockets'
+              href: windows-sockets-datagram-sockets.md
+            - name: 'Windows-Sockets: Verwenden von Sockets mit Archiven'
+              href: windows-sockets-using-sockets-with-archives.md
+            - name: 'Windows-Sockets: Abfolge der Vorgänge'
+              href: windows-sockets-sequence-of-operations.md
+            - name: 'Windows-Sockets: Beispiel für Sockets mithilfe von Archiven'
+              href: windows-sockets-example-of-sockets-using-archives.md
+            - name: 'Windows-Sockets: Funktionsweise von Sockets mit Archiven'
+              href: windows-sockets-how-sockets-with-archives-work.md
+            - name: 'Windows-Sockets: Verwenden der CAsyncSocket-Klasse'
+              href: windows-sockets-using-class-casyncsocket.md
+            - name: 'Windows-Sockets: Ableiten aus Socketklassen'
+              href: windows-sockets-deriving-from-socket-classes.md
+            - name: 'Windows-Sockets: Socketbenachrichtigungen'
+              href: windows-sockets-socket-notifications.md
+            - name: 'Windows-Sockets: Blockieren'
+              href: windows-sockets-blocking.md
+            - name: 'Windows-Sockets: Bytereihenfolge'
+              href: windows-sockets-byte-ordering.md
+            - name: 'Windows-Sockets: Konvertieren von Zeichenfolgen'
+              href: windows-sockets-converting-strings.md
+            - name: 'Windows-Sockets: Ports und Socketadressen'
+              href: windows-sockets-ports-and-socket-addresses.md
+    - name: Win32-Interneterweiterungen (WinInet)
+      expanded: false
+      items:
+        - name: Win32-Interneterweiterungen (WinInet)
+          href: win32-internet-extensions-wininet.md
+        - name: Vereinfachtes Erstellen von Internetclientanwendungen mit WinInet
+          href: how-wininet-makes-it-easier-to-create-internet-client-applications.md
+        - name: Vereinfachtes Erstellen von Internetclientanwendungen mit MFC
+          href: how-mfc-makes-it-easier-to-create-internet-client-applications.md
+        - name: MFC-Klassen für das Erstellen von Internetclientanwendungen
+          href: mfc-classes-for-creating-internet-client-applications.md
+        - name: Voraussetzungen für Internetclientklassen
+          href: prerequisites-for-internet-client-classes.md
+        - name: Schreiben einer Internetclientanwendung mithilfe von MFC-WinInet-Klassen
+          href: writing-an-internet-client-application-using-mfc-wininet-classes.md
+        - name: Schritte in einer typischen Internetclientanwendung
+          href: steps-in-a-typical-internet-client-application.md
+        - name: Schritte in einer typischen FTP-Clientanwendung
+          href: steps-in-a-typical-ftp-client-application.md
+        - name: Schritte zum Löschen einer Datei in einer typischen FTP-Clientanwendung
+          href: steps-in-a-typical-ftp-client-application-to-delete-a-file.md
+        - name: Schritte in einer typischen Gopher-Clientanwendung
+          href: steps-in-a-typical-gopher-client-application.md
+        - name: Schritte in einer typischen HTTP-Clientanwendung
+          href: steps-in-a-typical-http-client-application.md
+- name: Hierarchiediagramm
+  expanded: false
+  items:
+    - name: Hierarchiediagramm
+      href: hierarchy-chart.md
+    - name: Hierarchiediagrammkategorien
+      href: hierarchy-chart-categories.md
+- name: Anpassung für MFC
+  expanded: false
+  items:
+    - name: Anpassung für MFC
+      href: customization-for-mfc.md
+    - name: Anpassen von Tastatur und Maus
+      href: keyboard-and-mouse-customization.md
+    - name: Benutzerdefinierte Tools
+      href: user-defined-tools.md
+    - name: Sicherheitsauswirkungen der Anpassung
+      href: security-implications-of-customization.md
+- name: Technische Hinweise zu MFC
+  expanded: false
+  items:
+    - name: Technische Hinweise zu MFC
+      href: mfc-technical-notes.md
+    - name: Technische Hinweise – nach Kategorien geordnet
+      href: technical-notes-by-category.md
+    - name: Technische Hinweise – nach Nummern geordnet
+      href: technical-notes-by-number.md
+    - name: 'TN001: Fensterklassenregistrierung'
+      href: tn001-window-class-registration.md
+    - name: 'TN002: Persistentes Objektdatenformat'
+      href: tn002-persistent-object-data-format.md
+    - name: 'TN003: Zuordnen von Windows-Handles zu Objekten'
+      href: tn003-mapping-of-windows-handles-to-objects.md
+    - name: 'TN006: Meldungszuordnungen'
+      href: tn006-message-maps.md
+    - name: 'TN011: Verwenden von MFC als Teil einer DLL'
+      href: tn011-using-mfc-as-part-of-a-dll.md
+    - name: 'TN014: Benutzerdefinierte Steuerelemente'
+      href: tn014-custom-controls.md
+    - name: 'TN016: Verwenden von C++-Mehrfachvererbung mit MFC'
+      href: tn016-using-cpp-multiple-inheritance-with-mfc.md
+    - name: 'TN017: Zerstören von Fensterobjekten'
+      href: tn017-destroying-window-objects.md
+    - name: 'TN020: ID-Benennungs- und Nummerierungskonventionen'
+      href: tn020-id-naming-and-numbering-conventions.md
+    - name: 'TN021: Befehls- und Meldungsrouting'
+      href: tn021-command-and-message-routing.md
+    - name: 'TN022: Implementieren von Standardbefehlen'
+      href: tn022-standard-commands-implementation.md
+    - name: 'TN023: MFC-Standardressourcen'
+      href: tn023-standard-mfc-resources.md
+    - name: 'TN024: MFC-definierte Meldungen und Ressourcen'
+      href: tn024-mfc-defined-messages-and-resources.md
+    - name: 'TN025: Dokument-, Ansicht- und Frame-Erstellung'
+      href: tn025-document-view-and-frame-creation.md
+    - name: 'TN026: DDX- und DDV-Routinen'
+      href: tn026-ddx-and-ddv-routines.md
+    - name: 'TN028: Bereitstellen kontextbezogener Hilfe'
+      href: tn028-context-sensitive-help-support.md
+    - name: 'TN029: Splitterfenster'
+      href: tn029-splitter-windows.md
+    - name: 'TN030: Anpassen des Druckvorgangs und der Druckvorschau'
+      href: tn030-customizing-printing-and-print-preview.md
+    - name: 'TN031: Steuerleisten'
+      href: tn031-control-bars.md
+    - name: 'TN032: MFC-Ausnahmemechanismus'
+      href: tn032-mfc-exception-mechanism.md
+    - name: 'TN033: DLL-Version der MFC'
+      href: tn033-dll-version-of-mfc.md
+    - name: 'TN035: Verwenden mehrerer Ressourcendateien und Headerdateien mit Visual C++'
+      href: tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md
+    - name: 'TN036: Verwenden von CFormView mit AppWizard und ClassWizard'
+      href: tn036-using-cformview-with-appwizard-and-classwizard.md
+    - name: 'TN037: MFC 2.1-Multithreadanwendungen'
+      href: tn037-multithreaded-mfc-2-1-applications.md
+    - name: 'TN038: Implementieren von MFC-OLE-IUnknown'
+      href: tn038-mfc-ole-iunknown-implementation.md
+    - name: 'TN039: MFC-OLE-Automatisierungsimplementierung'
+      href: tn039-mfc-ole-automation-implementation.md
+    - name: 'TN040: Direkte Größenanpassung und Zoomen (MFC-OLE)'
+      href: tn040-mfc-ole-in-place-resizing-and-zooming.md
+    - name: 'TN041: Migration von MFC-OLE1 zu MFC-OLE2'
+      href: tn041-mfc-ole1-migration-to-mfc-ole-2.md
+    - name: 'TN042: Empfehlungen für ODBC-Treiberentwickler'
+      href: tn042-odbc-driver-developer-recommendations.md
+    - name: 'TN043: RFX-Routinen'
+      href: tn043-rfx-routines.md
+    - name: 'TN044: MFC-Unterstützung für DBCS'
+      href: tn044-mfc-support-for-dbcs.md
+    - name: 'TN045: MFC-Datenbankunterstützung für Long Varchar-Varbinary'
+      href: tn045-mfc-database-support-for-long-varchar-varbinary.md
+    - name: 'TN046: Konventionen für Kommentare für die MFC-Klassen'
+      href: tn046-commenting-conventions-for-the-mfc-classes.md
+    - name: 'TN047: Abschwächen der Anforderungen für eine Datenbanktransaktion'
+      href: tn047-relaxing-database-transaction-requirements.md
+    - name: 'TN048: Schreiben von ODBC-Einrichtungsprogrammen und -Verwaltungsprogrammen für MFC-Datenbankanwendungen'
+      href: tn048-writing-odbc-setup-and-administration-programs.md
+    - name: 'TN049: MFC-OLE MBCS-zu-Unicode-Übersetzungsebene (MFCANS32)'
+      href: tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md
+    - name: 'TN050: MFC-OLE-Standarddialogfelder (MFCUIx32)'
+      href: tn050-mfc-ole-common-dialogs-mfcuix32.md
+    - name: 'TN051: Verwenden von CTL3D jetzt und in der Zukunft'
+      href: tn051-using-ctl3d-now-and-in-the-future.md
+    - name: 'TN053: Benutzerdefinierte DFX-Routinen für DAO-Datenbankklassen'
+      href: tn053-custom-dfx-routines-for-dao-database-classes.md
+    - name: 'TN054: Direktes Aufrufen von DAO bei der Verwendung von MFC-DAO-Klassen'
+      href: tn054-calling-dao-directly-while-using-mfc-dao-classes.md
+    - name: 'TN055: Migrieren von Anwendungen mit MFC-ODBC-Datenbankklassen zu MFC-DAO-Klassen'
+      href: tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes.md
+    - name: 'TN056: Installation lokalisierter MFC-Komponenten'
+      href: tn056-installation-of-localized-mfc-components.md
+    - name: 'TN057: Lokalisierung von MFC-Komponenten'
+      href: tn057-localization-of-mfc-components.md
+    - name: 'TN058: MFC-Modulzustandsimplementierung'
+      href: tn058-mfc-module-state-implementation.md
+    - name: 'TN059: Verwenden von MFC-MBCS-zu-Unicode-Umwandlungsmakros'
+      href: tn059-using-mfc-mbcs-unicode-conversion-macros.md
+    - name: 'TN060: Die neuen Windows-Standardsteuerelemente'
+      href: tn060-the-new-windows-common-controls.md
+    - name: 'TN061: ON_NOTIFY- und WM_NOTIFY-Meldungen'
+      href: tn061-on-notify-and-wm-notify-messages.md
+    - name: 'TN062: Meldungsreflektion für Windows-Steuerelemente'
+      href: tn062-message-reflection-for-windows-controls.md
+    - name: 'TN063: Debuggen von MFC-Interneterweiterungs-DLLs'
+      href: tn063-debugging-internet-extension-dlls.md
+    - name: 'TN064: Apartmentmodellthreading in ActiveX-Steuerelementen'
+      href: tn064-apartment-model-threading-in-activex-controls.md
+    - name: 'TN065: Unterstützung für duale Schnittstellen für OLE-Automatisierungsserver'
+      href: tn065-dual-interface-support-for-ole-automation-servers.md
+    - name: 'TN066: Häufige Probleme bei der Portierung von MFC 3.x nach MFC 4.0'
+      href: tn066-common-mfc-3-x-to-4-0-porting-issues.md
+    - name: 'TN068: Ausführen von Transaktionen mit dem Microsoft Access 7 ODBC-Treiber'
+      href: tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md
+    - name: 'TN070: MFC-Fensterklassennamen'
+      href: tn070-mfc-window-class-names.md
+    - name: 'TN071: MFC-IOleCommandTarget-Implementierung'
+      href: tn071-mfc-iolecommandtarget-implementation.md
+- name: Übersicht über die Klassenbibliothek
+  expanded: false
+  items:
+    - name: Übersicht über die Klassenbibliothek
+      href: class-library-overview.md
+    - name: Allgemeine Prinzipien für den Klassenentwurf
+      expanded: false
+      items:
+        - name: Allgemeine Prinzipien für den Klassenentwurf
+          href: general-class-design-philosophy.md
+        - name: Anwendungsframework
+          href: application-framework.md
+        - name: Beziehung zur C-Sprachen-API
+          href: relationship-to-the-c-language-api.md
+    - name: 'Stammklasse: CObject'
+      href: root-class-cobject.md
+    - name: Klassen der MFC-Anwendungsarchitektur
+      expanded: false
+      items:
+        - name: Klassen der MFC-Anwendungsarchitektur
+          href: mfc-application-architecture-classes.md
+        - name: Klassen zur Anwendungs- und Threadunterstützung
+          href: application-and-thread-support-classes.md
+        - name: Klassen zur Befehlsweiterleitung
+          href: command-routing-classes.md
+        - name: Dokumentklassen
+          href: document-classes.md
+        - name: Ansichtsklassen (Architektur)
+          href: view-classes-architecture.md
+        - name: Klassen für Rahmenfenster (Architektur)
+          href: frame-window-classes-architecture.md
+        - name: Dokumentvorlagenklassen
+          href: document-template-classes.md
+    - name: 'Klassen für Fenster, Dialogfelder und Steuerelemente'
+      expanded: false
+      items:
+        - name: 'Klassen für Fenster, Dialogfelder und Steuerelemente'
+          href: window-dialog-and-control-classes.md
+        - name: Klassen für Rahmenfenster (Windows)
+          href: frame-window-classes-windows.md
+        - name: Ansichtsklassen (Windows)
+          href: view-classes-windows.md
+        - name: Dialogfeldklassen
+          href: dialog-box-classes.md
+        - name: Steuerelementklassen
+          href: control-classes.md
+        - name: Klassen für Steuerleisten
+          href: control-bar-classes.md
+    - name: Klassen zum Zeichnen und Drucken
+      expanded: false
+      items:
+        - name: Klassen zum Zeichnen und Drucken
+          href: drawing-and-printing-classes.md
+        - name: Klassen für die Ausgabe (Gerätekontext)
+          href: output-device-context-classes.md
+        - name: Klassen für Zeichenwerkzeuge
+          href: drawing-tool-classes.md
+    - name: Klassen für einfache Datentypen
+      href: simple-data-type-classes.md
+    - name: 'Klassen für Arrays, Listen und Zuordnungen'
+      expanded: false
+      items:
+        - name: 'Klassen für Arrays, Listen und Zuordnungen'
+          href: array-list-and-map-classes.md
+        - name: 'Vorlagenklassen für Arrays, Listen und Zuordnungen'
+          href: template-classes-for-arrays-lists-and-maps.md
+        - name: Klassen für gebrauchsfertige Arrays
+          href: ready-to-use-array-classes.md
+        - name: Klassen für gebrauchsfertige Listen
+          href: ready-to-use-list-classes.md
+        - name: Klassen für gebrauchsfertige Zuordnungen
+          href: ready-to-use-map-classes.md
+    - name: Klassen für Dateien und Datenbanken
+      expanded: false
+      items:
+        - name: Klassen für Dateien und Datenbanken
+          href: file-and-database-classes.md
+        - name: Datei-E/A-Klassen
+          href: file-i-o-classes.md
+        - name: "OLE\_DB-Klassen"
+          href: ole-db-classes.md
+        - name: DAO-Klassen
+          href: dao-classes.md
+        - name: ODBC-Klassen
+          href: odbc-classes.md
+    - name: Klassen für Internet und Netzwerk
+      expanded: false
+      items:
+        - name: Klassen für Internet und Netzwerk
+          href: internet-and-networking-classes.md
+        - name: Windows Sockets-Klassen
+          href: windows-sockets-classes.md
+        - name: Win32-Internetklassen
+          href: win32-internet-classes.md
+    - name: OLE-Klassen
+      expanded: false
+      items:
+        - name: OLE-Klassen
+          href: ole-classes.md
+        - name: OLE-Containerklassen
+          href: ole-container-classes.md
+        - name: OLE-Serverklassen
+          href: ole-server-classes.md
+        - name: OLE-Drag & Drop- und Datenübertragungsklassen
+          href: ole-drag-and-drop-and-data-transfer-classes.md
+        - name: OLE-Standarddialogfeld-Klassen
+          href: ole-common-dialog-classes.md
+        - name: OLE-Automatisierungsklassen
+          href: ole-automation-classes.md
+        - name: OLE-Steuerelementklassen
+          href: ole-control-classes.md
+        - name: Active Document-Klassen
+          href: active-document-classes.md
+        - name: OLE-bezogene Klassen
+          href: ole-related-classes.md
+    - name: Klassen für Debugging und Ausnahmen
+      expanded: false
+      items:
+        - name: Klassen für Debugging und Ausnahmen
+          href: debugging-and-exception-classes.md
+        - name: Klassen für die Debugunterstützung
+          href: debugging-support-classes.md
+        - name: Ausnahmeklassen
+          href: exception-classes.md
+- name: Exemplarische Vorgehensweisen (MFC)
+  expanded: false
+  items:
+    - name: Exemplarische Vorgehensweisen (MFC)
+      href: walkthroughs-mfc.md
+    - name: 'Exemplarische Vorgehensweise: Verwenden der neuen MFC-Shell-Steuerelemente'
+      href: walkthrough-using-the-new-mfc-shell-controls.md
+    - name: 'Exemplarische Vorgehensweise: Einfügen von Steuerelementen in eine Symbolleiste'
+      href: walkthrough-putting-controls-on-toolbars.md
+    - name: 'Exemplarische Vorgehensweise: Hinzufügen eines D2D-Objekts zu einem MFC-Projekt'
+      href: walkthrough-adding-a-d2d-object-to-an-mfc-project.md
+    - name: 'Exemplarische Vorgehensweise: Hinzufügen von Animationen zu einem MFC-Projekt'
+      href: walkthrough-adding-animation-to-an-mfc-project.md
+- name: MFC-API-Referenz
+  items:
+    - name: MFC-Klassen
+      expanded: false
+      items:
+        - name: MFC-Klassen
+          href: reference/mfc-classes.md
+        - name: CAccelerateDecelerateTransition-Klasse
+          href: reference/cacceleratedeceleratetransition-class.md
+        - name: CAnimateCtrl-Klasse
+          href: reference/canimatectrl-class.md
+        - name: CAnimationBaseObject-Klasse
+          href: reference/canimationbaseobject-class.md
+        - name: CAnimationColor-Klasse
+          href: reference/canimationcolor-class.md
+        - name: CAnimationController-Klasse
+          href: reference/canimationcontroller-class.md
+        - name: CAnimationGroup-Klasse
+          href: reference/canimationgroup-class.md
+        - name: CAnimationManagerEventHandler-Klasse
+          href: reference/canimationmanagereventhandler-class.md
+        - name: CAnimationPoint-Klasse
+          href: reference/canimationpoint-class.md
+        - name: CAnimationRect-Klasse
+          href: reference/canimationrect-class.md
+        - name: CAnimationSize-Klasse
+          href: reference/canimationsize-class.md
+        - name: CAnimationStoryboardEventHandler-Klasse
+          href: reference/canimationstoryboardeventhandler-class.md
+        - name: CAnimationTimerEventHandler-Klasse
+          href: reference/canimationtimereventhandler-class.md
+        - name: CAnimationValue-Klasse
+          href: reference/canimationvalue-class.md
+        - name: CAnimationVariable-Klasse
+          href: reference/canimationvariable-class.md
+        - name: CAnimationVariableChangeHandler-Klasse
+          href: reference/canimationvariablechangehandler-class.md
+        - name: CAnimationVariableIntegerChangeHandler-Klasse
+          href: reference/canimationvariableintegerchangehandler-class.md
+        - name: CArchive-Klasse
+          href: reference/carchive-class.md
+        - name: CArchiveException-Klasse
+          href: reference/carchiveexception-class.md
+        - name: CArray-Klasse
+          href: reference/carray-class.md
+        - name: CAsyncMonikerFile-Klasse
+          href: reference/casyncmonikerfile-class.md
+        - name: CAsyncSocket-Klasse
+          href: reference/casyncsocket-class.md
+        - name: CAutoHideDockSite-Klasse
+          href: reference/cautohidedocksite-class.md
+        - name: CBaseKeyFrame-Klasse
+          href: reference/cbasekeyframe-class.md
+        - name: CBasePane-Klasse
+          href: reference/cbasepane-class.md
+        - name: CBaseTabbedPane-Klasse
+          href: reference/cbasetabbedpane-class.md
+        - name: CBaseTransition-Klasse
+          href: reference/cbasetransition-class.md
+        - name: CBitmap-Klasse
+          href: reference/cbitmap-class.md
+        - name: CBitmapButton-Klasse
+          href: reference/cbitmapbutton-class.md
+        - name: CBitmapRenderTarget-Klasse
+          href: reference/cbitmaprendertarget-class.md
+        - name: CBrush-Klasse
+          href: reference/cbrush-class.md
+        - name: CButton-Klasse
+          href: reference/cbutton-class.md
+        - name: CByteArray-Klasse
+          href: reference/cbytearray-class.md
+        - name: CCachedDataPathProperty-Klasse
+          href: reference/ccacheddatapathproperty-class.md
+        - name: CCheckListBox-Klasse
+          href: reference/cchecklistbox-class.md
+        - name: CClientDC-Klasse
+          href: reference/cclientdc-class.md
+        - name: CCmdTarget-Klasse
+          href: reference/ccmdtarget-class.md
+        - name: CCmdUI-Klasse
+          href: reference/ccmdui-class.md
+        - name: CColorDialog-Klasse
+          href: reference/ccolordialog-class.md
+        - name: CComboBox-Klasse
+          href: reference/ccombobox-class.md
+        - name: CComboBoxEx-Klasse
+          href: reference/ccomboboxex-class.md
+        - name: CCommandLineInfo-Klasse
+          href: reference/ccommandlineinfo-class.md
+        - name: CCommonDialog-Klasse
+          href: reference/ccommondialog-class.md
+        - name: CConnectionPoint-Klasse
+          href: reference/cconnectionpoint-class.md
+        - name: CConstantTransition-Klasse
+          href: reference/cconstanttransition-class.md
+        - name: CContextMenuManager-Klasse
+          href: reference/ccontextmenumanager-class.md
+        - name: CControlBar-Klasse
+          href: reference/ccontrolbar-class.md
+        - name: CCreateContext-Struktur
+          href: reference/ccreatecontext-structure.md
+        - name: CCriticalSection-Klasse
+          href: reference/ccriticalsection-class.md
+        - name: CCtrlView-Klasse
+          href: reference/cctrlview-class.md
+        - name: CCubicTransition-Klasse
+          href: reference/ccubictransition-class.md
+        - name: CCustomInterpolator-Klasse
+          href: reference/ccustominterpolator-class.md
+        - name: CCustomTransition-Klasse
+          href: reference/ccustomtransition-class.md
+        - name: CD2DBitmap-Klasse
+          href: reference/cd2dbitmap-class.md
+        - name: CD2DBitmapBrush-Klasse
+          href: reference/cd2dbitmapbrush-class.md
+        - name: CD2DBrush-Klasse
+          href: reference/cd2dbrush-class.md
+        - name: CD2DBrushProperties-Klasse
+          href: reference/cd2dbrushproperties-class.md
+        - name: CD2DEllipse-Klasse
+          href: reference/cd2dellipse-class.md
+        - name: CD2DGeometry-Klasse
+          href: reference/cd2dgeometry-class.md
+        - name: CD2DGeometrySink-Klasse
+          href: reference/cd2dgeometrysink-class.md
+        - name: CD2DGradientBrush-Klasse
+          href: reference/cd2dgradientbrush-class.md
+        - name: CD2DLayer-Klasse
+          href: reference/cd2dlayer-class.md
+        - name: CD2DLinearGradientBrush-Klasse
+          href: reference/cd2dlineargradientbrush-class.md
+        - name: CD2DMesh-Klasse
+          href: reference/cd2dmesh-class.md
+        - name: CD2DPathGeometry-Klasse
+          href: reference/cd2dpathgeometry-class.md
+        - name: CD2DPointF-Klasse
+          href: reference/cd2dpointf-class.md
+        - name: CD2DPointU-Klasse
+          href: reference/cd2dpointu-class.md
+        - name: CD2DRadialGradientBrush-Klasse
+          href: reference/cd2dradialgradientbrush-class.md
+        - name: CD2DRectF-Klasse
+          href: reference/cd2drectf-class.md
+        - name: CD2DRectU-Klasse
+          href: reference/cd2drectu-class.md
+        - name: CD2DResource-Klasse
+          href: reference/cd2dresource-class.md
+        - name: CD2DRoundedRect-Klasse
+          href: reference/cd2droundedrect-class.md
+        - name: CD2DSizeF-Klasse
+          href: reference/cd2dsizef-class.md
+        - name: CD2DSizeU-Klasse
+          href: reference/cd2dsizeu-class.md
+        - name: CD2DSolidColorBrush-Klasse
+          href: reference/cd2dsolidcolorbrush-class.md
+        - name: CD2DTextFormat-Klasse
+          href: reference/cd2dtextformat-class.md
+        - name: CD2DTextLayout-Klasse
+          href: reference/cd2dtextlayout-class.md
+        - name: CDaoDatabase-Klasse
+          href: reference/cdaodatabase-class.md
+        - name: CDaoException-Klasse
+          href: reference/cdaoexception-class.md
+        - name: CDaoFieldExchange-Klasse
+          href: reference/cdaofieldexchange-class.md
+        - name: CDaoQueryDef-Klasse
+          href: reference/cdaoquerydef-class.md
+        - name: CDaoRecordset-Klasse
+          href: reference/cdaorecordset-class.md
+        - name: CDaoRecordView-Klasse
+          href: reference/cdaorecordview-class.md
+        - name: CDaoTableDef-Klasse
+          href: reference/cdaotabledef-class.md
+        - name: CDaoWorkspace-Klasse
+          href: reference/cdaoworkspace-class.md
+        - name: CDatabase-Klasse
+          href: reference/cdatabase-class.md
+        - name: CDataExchange-Klasse
+          href: reference/cdataexchange-class.md
+        - name: CDataPathProperty-Klasse
+          href: reference/cdatapathproperty-class.md
+        - name: CDataRecoveryHandler-Klasse
+          href: reference/cdatarecoveryhandler-class.md
+        - name: CDateTimeCtrl-Klasse
+          href: reference/cdatetimectrl-class.md
+        - name: CDBException-Klasse
+          href: reference/cdbexception-class.md
+        - name: CDBVariant-Klasse
+          href: reference/cdbvariant-class.md
+        - name: CDC-Klasse
+          href: reference/cdc-class.md
+        - name: CDCRenderTarget-Klasse
+          href: reference/cdcrendertarget-class.md
+        - name: CDHtmlDialog-Klasse
+          expanded: false
+          items:
+            - name: CDHtmlDialog-Klasse
+              href: reference/cdhtmldialog-class.md
+            - name: DDX_DHtml-Hilfsmakros
+              href: reference/ddx-dhtml-helper-macros.md
+        - name: CDialog-Klasse
+          href: reference/cdialog-class.md
+        - name: CDialogBar-Klasse
+          href: reference/cdialogbar-class.md
+        - name: CDialogEx-Klasse
+          href: reference/cdialogex-class.md
+        - name: CDiscreteTransition-Klasse
+          href: reference/cdiscretetransition-class.md
+        - name: CDocItem-Klasse
+          href: reference/cdocitem-class.md
+        - name: CDockablePane-Klasse
+          href: reference/cdockablepane-class.md
+        - name: CDockablePaneAdapter-Klasse
+          href: reference/cdockablepaneadapter-class.md
+        - name: CDockingManager-Klasse
+          href: reference/cdockingmanager-class.md
+        - name: CDockingPanesRow-Klasse
+          href: reference/cdockingpanesrow-class.md
+        - name: CDockSite-Klasse
+          href: reference/cdocksite-class.md
+        - name: CDockState-Klasse
+          href: reference/cdockstate-class.md
+        - name: CDocObjectServer-Klasse
+          href: reference/cdocobjectserver-class.md
+        - name: CDocObjectServerItem-Klasse
+          href: reference/cdocobjectserveritem-class.md
+        - name: CDocTemplate-Klasse
+          href: reference/cdoctemplate-class.md
+        - name: CDocument-Klasse
+          href: reference/cdocument-class.md
+        - name: CDragListBox-Klasse
+          href: reference/cdraglistbox-class.md
+        - name: CDrawingManager-Klasse
+          href: reference/cdrawingmanager-class.md
+        - name: CDumpContext-Klasse
+          href: reference/cdumpcontext-class.md
+        - name: CDWordArray-Klasse
+          href: reference/cdwordarray-class.md
+        - name: CEdit-Klasse
+          href: reference/cedit-class.md
+        - name: CEditView-Klasse
+          href: reference/ceditview-class.md
+        - name: CEvent-Klasse
+          href: reference/cevent-class.md
+        - name: CException-Klasse
+          href: reference/cexception-class.md
+        - name: CFieldExchange-Klasse
+          href: reference/cfieldexchange-class.md
+        - name: CFile-Klasse
+          href: reference/cfile-class.md
+        - name: CFileDialog-Klasse
+          href: reference/cfiledialog-class.md
+        - name: CFileException-Klasse
+          href: reference/cfileexception-class.md
+        - name: CFileFind-Klasse
+          href: reference/cfilefind-class.md
+        - name: CFindReplaceDialog-Klasse
+          href: reference/cfindreplacedialog-class.md
+        - name: CFolderPickerDialog-Klasse
+          href: reference/cfolderpickerdialog-class.md
+        - name: CFont-Klasse
+          href: reference/cfont-class.md
+        - name: CFontDialog-Klasse
+          href: reference/cfontdialog-class.md
+        - name: CFontHolder-Klasse
+          href: reference/cfontholder-class.md
+        - name: CFormView-Klasse
+          href: reference/cformview-class.md
+        - name: CFrameWnd-Klasse
+          href: reference/cframewnd-class.md
+        - name: CFrameWndEx-Klasse
+          href: reference/cframewndex-class.md
+        - name: CFtpConnection-Klasse
+          href: reference/cftpconnection-class.md
+        - name: CFtpFileFind-Klasse
+          href: reference/cftpfilefind-class.md
+        - name: CGdiObject-Klasse
+          href: reference/cgdiobject-class.md
+        - name: CGlobalUtils-Klasse
+          href: reference/cglobalutils-class.md
+        - name: CGopherConnection-Klasse
+          href: reference/cgopherconnection-class.md
+        - name: CGopherFile-Klasse
+          href: reference/cgopherfile-class.md
+        - name: CGopherFileFind-Klasse
+          href: reference/cgopherfilefind-class.md
+        - name: CGopherLocator-Klasse
+          href: reference/cgopherlocator-class.md
+        - name: CHeaderCtrl-Klasse
+          href: reference/cheaderctrl-class.md
+        - name: CHotKeyCtrl-Klasse
+          href: reference/chotkeyctrl-class.md
+        - name: CHtmlEditCtrl-Klasse
+          href: reference/chtmleditctrl-class.md
+        - name: CHtmlEditCtrlBase-Klasse
+          href: reference/chtmleditctrlbase-class.md
+        - name: CHtmlEditDoc-Klasse
+          href: reference/chtmleditdoc-class.md
+        - name: CHtmlEditView-Klasse
+          href: reference/chtmleditview-class.md
+        - name: CHtmlView-Klasse
+          href: reference/chtmlview-class.md
+        - name: CHttpConnection-Klasse
+          href: reference/chttpconnection-class.md
+        - name: CHttpFile-Klasse
+          href: reference/chttpfile-class.md
+        - name: CHwndRenderTarget-Klasse
+          href: reference/chwndrendertarget-class.md
+        - name: CImageList-Klasse
+          href: reference/cimagelist-class.md
+        - name: CInstantaneousTransition-Klasse
+          href: reference/cinstantaneoustransition-class.md
+        - name: CInternetConnection-Klasse
+          href: reference/cinternetconnection-class.md
+        - name: CInternetException-Klasse
+          href: reference/cinternetexception-class.md
+        - name: CInternetFile-Klasse
+          href: reference/cinternetfile-class.md
+        - name: CInternetSession-Klasse
+          href: reference/cinternetsession-class.md
+        - name: CInterpolatorBase-Klasse
+          href: reference/cinterpolatorbase-class.md
+        - name: CInvalidArgException-Klasse
+          href: reference/cinvalidargexception-class.md
+        - name: CIPAddressCtrl-Klasse
+          href: reference/cipaddressctrl-class.md
+        - name: CJumpList-Klasse
+          href: reference/cjumplist-class.md
+        - name: CKeyboardManager-Klasse
+          href: reference/ckeyboardmanager-class.md
+        - name: CKeyFrame-Klasse
+          href: reference/ckeyframe-class.md
+        - name: CLinearTransition-Klasse
+          href: reference/clineartransition-class.md
+        - name: CLinearTransitionFromSpeed-Klasse
+          href: reference/clineartransitionfromspeed-class.md
+        - name: CLinkCtrl-Klasse
+          href: reference/clinkctrl-class.md
+        - name: CList-Klasse
+          href: reference/clist-class.md
+        - name: CListBox-Klasse
+          href: reference/clistbox-class.md
+        - name: CListCtrl-Klasse
+          href: reference/clistctrl-class.md
+        - name: CListView-Klasse
+          href: reference/clistview-class.md
+        - name: CLongBinary-Klasse
+          href: reference/clongbinary-class.md
+        - name: CMap-Klasse
+          href: reference/cmap-class.md
+        - name: CMapPtrToPtr-Klasse
+          href: reference/cmapptrtoptr-class.md
+        - name: CMapPtrToWord-Klasse
+          href: reference/cmapptrtoword-class.md
+        - name: CMapStringToOb-Klasse
+          href: reference/cmapstringtoob-class.md
+        - name: CMapStringToPtr-Klasse
+          href: reference/cmapstringtoptr-class.md
+        - name: CMapStringToString-Klasse
+          href: reference/cmapstringtostring-class.md
+        - name: CMapWordToOb-Klasse
+          href: reference/cmapwordtoob-class.md
+        - name: CMapWordToPtr-Klasse
+          href: reference/cmapwordtoptr-class.md
+        - name: CMDIChildWnd-Klasse
+          href: reference/cmdichildwnd-class.md
+        - name: CMDIChildWndEx-Klasse
+          href: reference/cmdichildwndex-class.md
+        - name: CMDIFrameWnd-Klasse
+          href: reference/cmdiframewnd-class.md
+        - name: CMDIFrameWndEx-Klasse
+          href: reference/cmdiframewndex-class.md
+        - name: CMDITabInfo-Klasse
+          href: reference/cmditabinfo-class.md
+        - name: CMemFile-Klasse
+          href: reference/cmemfile-class.md
+        - name: CMemoryException-Klasse
+          href: reference/cmemoryexception-class.md
+        - name: CMemoryState-Struktur
+          href: reference/cmemorystate-structure.md
+        - name: CMenu-Klasse
+          href: reference/cmenu-class.md
+        - name: CMenuTearOffManager-Klasse
+          href: reference/cmenutearoffmanager-class.md
+        - name: CMetaFileDC-Klasse
+          href: reference/cmetafiledc-class.md
+        - name: CMFCAcceleratorKey-Klasse
+          href: reference/cmfcacceleratorkey-class.md
+        - name: CMFCAcceleratorKeyAssignCtrl-Klasse
+          href: reference/cmfcacceleratorkeyassignctrl-class.md
+        - name: CMFCAutoHideBar-Klasse
+          href: reference/cmfcautohidebar-class.md
+        - name: CMFCAutoHideButton-Klasse
+          href: reference/cmfcautohidebutton-class.md
+        - name: CMFCBaseTabCtrl-Klasse
+          href: reference/cmfcbasetabctrl-class.md
+        - name: CMFCBaseToolBar-Klasse
+          href: reference/cmfcbasetoolbar-class.md
+        - name: CMFCBaseVisualManager-Klasse
+          href: reference/cmfcbasevisualmanager-class.md
+        - name: CMFCButton-Klasse
+          href: reference/cmfcbutton-class.md
+        - name: CMFCCaptionBar-Klasse
+          href: reference/cmfccaptionbar-class.md
+        - name: CMFCCaptionButton-Klasse
+          href: reference/cmfccaptionbutton-class.md
+        - name: CMFCCmdUsageCount-Klasse
+          href: reference/cmfccmdusagecount-class.md
+        - name: CMFCColorBar-Klasse
+          href: reference/cmfccolorbar-class.md
+        - name: CMFCColorButton-Klasse
+          href: reference/cmfccolorbutton-class.md
+        - name: CMFCColorDialog-Klasse
+          href: reference/cmfccolordialog-class.md
+        - name: CMFCColorMenuButton-Klasse
+          href: reference/cmfccolormenubutton-class.md
+        - name: CMFCColorPickerCtrl-Klasse
+          href: reference/cmfccolorpickerctrl-class.md
+        - name: CMFCColorPopupMenu-Klasse
+          href: reference/cmfccolorpopupmenu-class.md
+        - name: CMFCCustomColorsPropertyPage-Klasse
+          href: reference/cmfccustomcolorspropertypage-class.md
+        - name: CMFCDesktopAlertDialog-Klasse
+          href: reference/cmfcdesktopalertdialog-class.md
+        - name: CMFCDesktopAlertWnd-Klasse
+          href: reference/cmfcdesktopalertwnd-class.md
+        - name: CMFCDesktopAlertWndButton-Klasse
+          href: reference/cmfcdesktopalertwndbutton-class.md
+        - name: CMFCDesktopAlertWndInfo-Klasse
+          href: reference/cmfcdesktopalertwndinfo-class.md
+        - name: CMFCDisableMenuAnimation-Klasse
+          href: reference/cmfcdisablemenuanimation-class.md
+        - name: CMFCDragFrameImpl-Klasse
+          href: reference/cmfcdragframeimpl-class.md
+        - name: CMFCDropDownFrame-Klasse
+          href: reference/cmfcdropdownframe-class.md
+        - name: CMFCDropDownToolBar-Klasse
+          href: reference/cmfcdropdowntoolbar-class.md
+        - name: CMFCDropDownToolbarButton-Klasse
+          href: reference/cmfcdropdowntoolbarbutton-class.md
+        - name: CMFCDynamicLayout-Klasse
+          href: reference/cmfcdynamiclayout-class.md
+        - name: CMFCEditBrowseCtrl-Klasse
+          href: reference/cmfceditbrowsectrl-class.md
+        - name: CMFCFilterChunkValueImpl-Klasse
+          href: reference/cmfcfilterchunkvalueimpl-class.md
+        - name: CMFCFontComboBox-Klasse
+          href: reference/cmfcfontcombobox-class.md
+        - name: CMFCFontInfo-Klasse
+          href: reference/cmfcfontinfo-class.md
+        - name: CMFCHeaderCtrl-Klasse
+          href: reference/cmfcheaderctrl-class.md
+        - name: CMFCImageEditorDialog-Klasse
+          href: reference/cmfcimageeditordialog-class.md
+        - name: CMFCImageEditorPaletteBar-Klasse
+          href: reference/cmfcimageeditorpalettebar-class.md
+        - name: CMFCImagePaintArea-Klasse
+          href: reference/cmfcimagepaintarea-class.md
+        - name: CMFCKeyMapDialog-Klasse
+          href: reference/cmfckeymapdialog-class.md
+        - name: CMFCLinkCtrl-Klasse
+          href: reference/cmfclinkctrl-class.md
+        - name: CMFCListCtrl-Klasse
+          href: reference/cmfclistctrl-class.md
+        - name: CMFCMaskedEdit-Klasse
+          href: reference/cmfcmaskededit-class.md
+        - name: CMFCMenuBar-Klasse
+          href: reference/cmfcmenubar-class.md
+        - name: CMFCMenuButton-Klasse
+          href: reference/cmfcmenubutton-class.md
+        - name: CMFCOutlookBar-Klasse
+          href: reference/cmfcoutlookbar-class.md
+        - name: CMFCOutlookBarPane-Klasse
+          href: reference/cmfcoutlookbarpane-class.md
+        - name: CMFCOutlookBarTabCtrl-Klasse
+          href: reference/cmfcoutlookbartabctrl-class.md
+        - name: CMFCPopupMenu-Klasse
+          href: reference/cmfcpopupmenu-class.md
+        - name: CMFCPopupMenuBar-Klasse
+          href: reference/cmfcpopupmenubar-class.md
+        - name: CMFCPreviewCtrlImpl-Klasse
+          href: reference/cmfcpreviewctrlimpl-class.md
+        - name: CMFCPrintPreviewToolBar-Klasse
+          href: reference/cmfcprintpreviewtoolbar-class.md
+        - name: CMFCPropertyGridColorProperty-Klasse
+          href: reference/cmfcpropertygridcolorproperty-class.md
+        - name: CMFCPropertyGridCtrl-Klasse
+          href: reference/cmfcpropertygridctrl-class.md
+        - name: CMFCPropertyGridFileProperty-Klasse
+          href: reference/cmfcpropertygridfileproperty-class.md
+        - name: CMFCPropertyGridFontProperty-Klasse
+          href: reference/cmfcpropertygridfontproperty-class.md
+        - name: CMFCPropertyGridProperty-Klasse
+          href: reference/cmfcpropertygridproperty-class.md
+        - name: CMFCPropertyGridToolTipCtrl-Klasse
+          href: reference/cmfcpropertygridtooltipctrl-class.md
+        - name: CMFCPropertyPage-Klasse
+          href: reference/cmfcpropertypage-class.md
+        - name: CMFCPropertySheet-Klasse
+          href: reference/cmfcpropertysheet-class.md
+        - name: CMFCReBar-Klasse
+          href: reference/cmfcrebar-class.md
+        - name: CMFCRibbonApplicationButton-Klasse
+          href: reference/cmfcribbonapplicationbutton-class.md
+        - name: CMFCRibbonBar-Klasse
+          href: reference/cmfcribbonbar-class.md
+        - name: CMFCRibbonBaseElement-Klasse
+          href: reference/cmfcribbonbaseelement-class.md
+        - name: CMFCRibbonButton-Klasse
+          href: reference/cmfcribbonbutton-class.md
+        - name: CMFCRibbonButtonsGroup-Klasse
+          href: reference/cmfcribbonbuttonsgroup-class.md
+        - name: CMFCRibbonCategory-Klasse
+          href: reference/cmfcribboncategory-class.md
+        - name: CMFCRibbonCheckBox-Klasse
+          href: reference/cmfcribboncheckbox-class.md
+        - name: CMFCRibbonColorButton-Klasse
+          href: reference/cmfcribboncolorbutton-class.md
+        - name: CMFCRibbonComboBox-Klasse
+          href: reference/cmfcribboncombobox-class.md
+        - name: CMFCRibbonContextCaption-Klasse
+          href: reference/cmfcribboncontextcaption-class.md
+        - name: CMFCRibbonCustomizeDialog-Klasse
+          href: reference/cmfcribboncustomizedialog-class.md
+        - name: CMFCRibbonCustomizePropertyPage-Klasse
+          href: reference/cmfcribboncustomizepropertypage-class.md
+        - name: CMFCRibbonEdit-Klasse
+          href: reference/cmfcribbonedit-class.md
+        - name: CMFCRibbonFontComboBox-Klasse
+          href: reference/cmfcribbonfontcombobox-class.md
+        - name: CMFCRibbonGallery-Klasse
+          href: reference/cmfcribbongallery-class.md
+        - name: CMFCRibbonGalleryMenuButton-Klasse
+          href: reference/cmfcribbongallerymenubutton-class.md
+        - name: CMFCRibbonLabel-Klasse
+          href: reference/cmfcribbonlabel-class.md
+        - name: CMFCRibbonLinkCtrl-Klasse
+          href: reference/cmfcribbonlinkctrl-class.md
+        - name: CMFCRibbonMainPanel-Klasse
+          href: reference/cmfcribbonmainpanel-class.md
+        - name: CMFCRibbonMiniToolBar-Klasse
+          href: reference/cmfcribbonminitoolbar-class.md
+        - name: CMFCRibbonPanel-Klasse
+          href: reference/cmfcribbonpanel-class.md
+        - name: CMFCRibbonProgressBar-Klasse
+          href: reference/cmfcribbonprogressbar-class.md
+        - name: CMFCRibbonQuickAccessToolBarDefaultState-Klasse
+          href: reference/cmfcribbonquickaccesstoolbardefaultstate-class.md
+        - name: CMFCRibbonSeparator-Klasse
+          href: reference/cmfcribbonseparator-class.md
+        - name: CMFCRibbonSlider-Klasse
+          href: reference/cmfcribbonslider-class.md
+        - name: CMFCRibbonStatusBar-Klasse
+          href: reference/cmfcribbonstatusbar-class.md
+        - name: CMFCRibbonStatusBarPane-Klasse
+          href: reference/cmfcribbonstatusbarpane-class.md
+        - name: CMFCRibbonUndoButton-Klasse
+          href: reference/cmfcribbonundobutton-class.md
+        - name: CMFCShellListCtrl-Klasse
+          href: reference/cmfcshelllistctrl-class.md
+        - name: CMFCShellTreeCtrl-Klasse
+          href: reference/cmfcshelltreectrl-class.md
+        - name: CMFCSpinButtonCtrl-Klasse
+          href: reference/cmfcspinbuttonctrl-class.md
+        - name: CMFCStandardColorsPropertyPage-Klasse
+          href: reference/cmfcstandardcolorspropertypage-class.md
+        - name: CMFCStatusBar-Klasse
+          href: reference/cmfcstatusbar-class.md
+        - name: CMFCTabCtrl-Klasse
+          href: reference/cmfctabctrl-class.md
+        - name: CMFCTabDropTarget-Klasse
+          href: reference/cmfctabdroptarget-class.md
+        - name: CMFCTabToolTipInfo-Struktur
+          href: reference/cmfctabtooltipinfo-structure.md
+        - name: CMFCTasksPane-Klasse
+          href: reference/cmfctaskspane-class.md
+        - name: CMFCTasksPaneTask-Klasse
+          href: reference/cmfctaskspanetask-class.md
+        - name: CMFCTasksPaneTaskGroup-Klasse
+          href: reference/cmfctaskspanetaskgroup-class.md
+        - name: CMFCToolBar-Klasse
+          href: reference/cmfctoolbar-class.md
+        - name: CMFCToolBarButton-Klasse
+          href: reference/cmfctoolbarbutton-class.md
+        - name: CMFCToolBarComboBoxButton-Klasse
+          href: reference/cmfctoolbarcomboboxbutton-class.md
+        - name: CMFCToolBarComboBoxEdit-Klasse
+          href: reference/cmfctoolbarcomboboxedit-class.md
+        - name: CMFCToolBarDateTimeCtrl-Klasse
+          href: reference/cmfctoolbardatetimectrl-class.md
+        - name: CMFCToolBarEditBoxButton-Klasse
+          href: reference/cmfctoolbareditboxbutton-class.md
+        - name: CMFCToolBarFontComboBox-Klasse
+          href: reference/cmfctoolbarfontcombobox-class.md
+        - name: CMFCToolBarFontSizeComboBox-Klasse
+          href: reference/cmfctoolbarfontsizecombobox-class.md
+        - name: CMFCToolBarImages-Klasse
+          href: reference/cmfctoolbarimages-class.md
+        - name: CMFCToolBarMenuButton-Klasse
+          href: reference/cmfctoolbarmenubutton-class.md
+        - name: CMFCToolBarInfo-Klasse
+          href: reference/cmfctoolbarinfo-class.md
+        - name: CMFCToolBarsCustomizeDialog-Klasse
+          href: reference/cmfctoolbarscustomizedialog-class.md
+        - name: CMFCToolTipCtrl-Klasse
+          href: reference/cmfctooltipctrl-class.md
+        - name: CMFCToolTipInfo-Klasse
+          href: reference/cmfctooltipinfo-class.md
+        - name: CMFCVisualManager-Klasse
+          href: reference/cmfcvisualmanager-class.md
+        - name: CMFCVisualManagerOffice2003-Klasse
+          href: reference/cmfcvisualmanageroffice2003-class.md
+        - name: CMFCVisualManagerOffice2007-Klasse
+          href: reference/cmfcvisualmanageroffice2007-class.md
+        - name: CMFCVisualManagerOfficeXP-Klasse
+          href: reference/cmfcvisualmanagerofficexp-class.md
+        - name: CMFCVisualManagerVS2005-Klasse
+          href: reference/cmfcvisualmanagervs2005-class.md
+        - name: CMFCVisualManagerWindows-Klasse
+          href: reference/cmfcvisualmanagerwindows-class.md
+        - name: CMFCVisualManagerWindows7-Klasse
+          href: reference/cmfcvisualmanagerwindows7-class.md
+        - name: CMFCWindowsManagerDialog-Klasse
+          href: reference/cmfcwindowsmanagerdialog-class.md
+        - name: CMiniFrameWnd-Klasse
+          href: reference/cminiframewnd-class.md
+        - name: CMonikerFile-Klasse
+          href: reference/cmonikerfile-class.md
+        - name: CMonthCalCtrl-Klasse
+          href: reference/cmonthcalctrl-class.md
+        - name: CMouseManager-Klasse
+          href: reference/cmousemanager-class.md
+        - name: CMultiDocTemplate-Klasse
+          href: reference/cmultidoctemplate-class.md
+        - name: CMultiLock-Klasse
+          href: reference/cmultilock-class.md
+        - name: CMultiPageDHtmlDialog-Klasse
+          href: reference/cmultipagedhtmldialog-class.md
+        - name: CMultiPaneFrameWnd-Klasse
+          href: reference/cmultipaneframewnd-class.md
+        - name: CMutex-Klasse
+          href: reference/cmutex-class.md
+        - name: CNetAddressCtrl-Klasse
+          href: reference/cnetaddressctrl-class.md
+        - name: CNotSupportedException-Klasse
+          href: reference/cnotsupportedexception-class.md
+        - name: CObArray-Klasse
+          href: reference/cobarray-class.md
+        - name: CObject-Klasse
+          href: reference/cobject-class.md
+        - name: CObList-Klasse
+          href: reference/coblist-class.md
+        - name: COccManager-Klasse
+          href: reference/coccmanager-class.md
+        - name: COleBusyDialog-Klasse
+          href: reference/colebusydialog-class.md
+        - name: COleChangeIconDialog-Klasse
+          href: reference/colechangeicondialog-class.md
+        - name: COleChangeSourceDialog-Klasse
+          href: reference/colechangesourcedialog-class.md
+        - name: COleClientItem-Klasse
+          href: reference/coleclientitem-class.md
+        - name: COleCmdUI-Klasse
+          href: reference/colecmdui-class.md
+        - name: COleControl-Klasse
+          href: reference/colecontrol-class.md
+        - name: COleControlContainer-Klasse
+          href: reference/colecontrolcontainer-class.md
+        - name: COleControlModule-Klasse
+          href: reference/colecontrolmodule-class.md
+        - name: COleControlSite-Klasse
+          href: reference/colecontrolsite-class.md
+        - name: COleConvertDialog-Klasse
+          href: reference/coleconvertdialog-class.md
+        - name: COleCurrency-Klasse
+          href: reference/colecurrency-class.md
+        - name: COleDataObject-Klasse
+          href: reference/coledataobject-class.md
+        - name: COleDataSource-Klasse
+          href: reference/coledatasource-class.md
+        - name: COleDBRecordView-Klasse
+          href: reference/coledbrecordview-class.md
+        - name: COleDialog-Klasse
+          href: reference/coledialog-class.md
+        - name: COleDispatchDriver-Klasse
+          href: reference/coledispatchdriver-class.md
+        - name: COleDispatchException-Klasse
+          href: reference/coledispatchexception-class.md
+        - name: COleDocObjectItem-Klasse
+          href: reference/coledocobjectitem-class.md
+        - name: COleDocument-Klasse
+          href: reference/coledocument-class.md
+        - name: COleDropSource-Klasse
+          href: reference/coledropsource-class.md
+        - name: COleDropTarget-Klasse
+          href: reference/coledroptarget-class.md
+        - name: COleException-Klasse
+          href: reference/coleexception-class.md
+        - name: COleInsertDialog-Klasse
+          href: reference/coleinsertdialog-class.md
+        - name: COleIPFrameWnd-Klasse
+          href: reference/coleipframewnd-class.md
+        - name: COleIPFrameWndEx-Klasse
+          href: reference/coleipframewndex-class.md
+        - name: COleLinkingDoc-Klasse
+          href: reference/colelinkingdoc-class.md
+        - name: COleLinksDialog-Klasse
+          href: reference/colelinksdialog-class.md
+        - name: COleMessageFilter-Klasse
+          href: reference/colemessagefilter-class.md
+        - name: COleObjectFactory-Klasse
+          href: reference/coleobjectfactory-class.md
+        - name: COlePasteSpecialDialog-Klasse
+          href: reference/colepastespecialdialog-class.md
+        - name: COlePropertiesDialog-Klasse
+          href: reference/colepropertiesdialog-class.md
+        - name: COlePropertyPage-Klasse
+          href: reference/colepropertypage-class.md
+        - name: COleResizeBar-Klasse
+          href: reference/coleresizebar-class.md
+        - name: COleSafeArray-Klasse
+          href: reference/colesafearray-class.md
+        - name: COleServerDoc-Klasse
+          href: reference/coleserverdoc-class.md
+        - name: COleServerItem-Klasse
+          href: reference/coleserveritem-class.md
+        - name: COleStreamFile-Klasse
+          href: reference/colestreamfile-class.md
+        - name: COleTemplateServer-Klasse
+          href: reference/coletemplateserver-class.md
+        - name: COleUpdateDialog-Klasse
+          href: reference/coleupdatedialog-class.md
+        - name: COleVariant-Klasse
+          href: reference/colevariant-class.md
+        - name: CPagerCtrl-Klasse
+          href: reference/cpagerctrl-class.md
+        - name: CPageSetupDialog-Klasse
+          href: reference/cpagesetupdialog-class.md
+        - name: CPaintDC-Klasse
+          href: reference/cpaintdc-class.md
+        - name: CPalette-Klasse
+          href: reference/cpalette-class.md
+        - name: CPane-Klasse
+          href: reference/cpane-class.md
+        - name: CPaneContainer-Klasse
+          href: reference/cpanecontainer-class.md
+        - name: CPaneContainerManager-Klasse
+          href: reference/cpanecontainermanager-class.md
+        - name: CPaneDialog-Klasse
+          href: reference/cpanedialog-class.md
+        - name: CPaneDivider-Klasse
+          href: reference/cpanedivider-class.md
+        - name: CPaneFrameWnd-Klasse
+          href: reference/cpaneframewnd-class.md
+        - name: CParabolicTransitionFromAcceleration-Klasse
+          href: reference/cparabolictransitionfromacceleration-class.md
+        - name: CPen-Klasse
+          href: reference/cpen-class.md
+        - name: CPictureHolder-Klasse
+          href: reference/cpictureholder-class.md
+        - name: CPrintDialog-Klasse
+          href: reference/cprintdialog-class.md
+        - name: CPrintDialogEx-Klasse
+          href: reference/cprintdialogex-class.md
+        - name: CPrintInfo-Struktur
+          href: reference/cprintinfo-structure.md
+        - name: CProgressCtrl-Klasse
+          href: reference/cprogressctrl-class.md
+        - name: CPropertyPage-Klasse
+          href: reference/cpropertypage-class.md
+        - name: CPropertySheet-Klasse
+          href: reference/cpropertysheet-class.md
+        - name: CPropExchange-Klasse
+          href: reference/cpropexchange-class.md
+        - name: CPtrArray-Klasse
+          href: reference/cptrarray-class.md
+        - name: CPtrList-Klasse
+          href: reference/cptrlist-class.md
+        - name: CReBar-Klasse
+          href: reference/crebar-class.md
+        - name: CReBarCtrl-Klasse
+          href: reference/crebarctrl-class.md
+        - name: CRecentDockSiteInfo-Klasse
+          href: reference/crecentdocksiteinfo-class.md
+        - name: CRecentFileList-Klasse
+          href: reference/crecentfilelist-class.md
+        - name: CRecordset-Klasse
+          href: reference/crecordset-class.md
+        - name: CRecordView-Klasse
+          href: reference/crecordview-class.md
+        - name: CRectTracker-Klasse
+          href: reference/crecttracker-class.md
+        - name: CRenderTarget-Klasse
+          href: reference/crendertarget-class.md
+        - name: CResourceException-Klasse
+          href: reference/cresourceexception-class.md
+        - name: CReversalTransition-Klasse
+          href: reference/creversaltransition-class.md
+        - name: CRgn-Klasse
+          href: reference/crgn-class.md
+        - name: CRichEditCntrItem-Klasse
+          href: reference/cricheditcntritem-class.md
+        - name: CRichEditCtrl-Klasse
+          href: reference/cricheditctrl-class.md
+        - name: CRichEditDoc-Klasse
+          href: reference/cricheditdoc-class.md
+        - name: CRichEditView-Klasse
+          href: reference/cricheditview-class.md
+        - name: CRuntimeClass-Struktur
+          href: reference/cruntimeclass-structure.md
+        - name: CScrollBar-Klasse
+          href: reference/cscrollbar-class.md
+        - name: CScrollView-Klasse
+          href: reference/cscrollview-class.md
+        - name: CSemaphore-Klasse
+          href: reference/csemaphore-class.md
+        - name: CSettingsStore-Klasse
+          href: reference/csettingsstore-class.md
+        - name: CSettingsStoreSP-Klasse
+          href: reference/csettingsstoresp-class.md
+        - name: CSharedFile-Klasse
+          href: reference/csharedfile-class.md
+        - name: CShellManager-Klasse
+          href: reference/cshellmanager-class.md
+        - name: CSimpleException-Klasse
+          href: reference/csimpleexception-class.md
+        - name: CSingleDocTemplate-Klasse
+          href: reference/csingledoctemplate-class.md
+        - name: CSingleLock-Klasse
+          href: reference/csinglelock-class.md
+        - name: CSinusoidalTransitionFromRange-Klasse
+          href: reference/csinusoidaltransitionfromrange-class.md
+        - name: CSinusoidalTransitionFromVelocity-Klasse
+          href: reference/csinusoidaltransitionfromvelocity-class.md
+        - name: CSliderCtrl-Klasse
+          href: reference/csliderctrl-class.md
+        - name: CSmartDockingInfo-Klasse
+          href: reference/csmartdockinginfo-class.md
+        - name: CSmoothStopTransition-Klasse
+          href: reference/csmoothstoptransition-class.md
+        - name: CSocket-Klasse
+          href: reference/csocket-class.md
+        - name: CSocketFile-Klasse
+          href: reference/csocketfile-class.md
+        - name: CSpinButtonCtrl-Klasse
+          href: reference/cspinbuttonctrl-class.md
+        - name: CSplitButton-Klasse
+          href: reference/csplitbutton-class.md
+        - name: CSplitterWnd-Klasse
+          href: reference/csplitterwnd-class.md
+        - name: CSplitterWndEx
+          href: reference/csplitterwndex-class.md
+        - name: CStatic-Klasse
+          href: reference/cstatic-class.md
+        - name: CStatusBar-Klasse
+          href: reference/cstatusbar-class.md
+        - name: CStatusBarCtrl-Klasse
+          href: reference/cstatusbarctrl-class.md
+        - name: CStdioFile-Klasse
+          href: reference/cstdiofile-class.md
+        - name: CStringArray-Klasse
+          href: reference/cstringarray-class.md
+        - name: CStringList-Klasse
+          href: reference/cstringlist-class.md
+        - name: CSyncObject-Klasse
+          href: reference/csyncobject-class.md
+        - name: CTabCtrl-Klasse
+          href: reference/ctabctrl-class.md
+        - name: CTabbedPane-Klasse
+          href: reference/ctabbedpane-class.md
+        - name: CTabView-Klasse
+          href: reference/ctabview-class.md
+        - name: CTaskDialog-Klasse
+          href: reference/ctaskdialog-class.md
+        - name: CToolBar-Klasse
+          href: reference/ctoolbar-class.md
+        - name: CToolBarCtrl-Klasse
+          href: reference/ctoolbarctrl-class.md
+        - name: CToolTipCtrl-Klasse
+          href: reference/ctooltipctrl-class.md
+        - name: CTooltipManager-Klasse
+          href: reference/ctooltipmanager-class.md
+        - name: CTreeCtrl-Klasse
+          href: reference/ctreectrl-class.md
+        - name: CTreeView-Klasse
+          href: reference/ctreeview-class.md
+        - name: CTypedPtrArray-Klasse
+          href: reference/ctypedptrarray-class.md
+        - name: CTypedPtrList-Klasse
+          href: reference/ctypedptrlist-class.md
+        - name: CTypedPtrMap-Klasse
+          href: reference/ctypedptrmap-class.md
+        - name: CUIntArray-Klasse
+          href: reference/cuintarray-class.md
+        - name: CUserException-Klasse
+          href: reference/cuserexception-class.md
+        - name: CUserTool-Klasse
+          href: reference/cusertool-class.md
+        - name: CUserToolsManager-Klasse
+          href: reference/cusertoolsmanager-class.md
+        - name: CView-Klasse
+          href: reference/cview-class.md
+        - name: CVSListBox-Klasse
+          href: reference/cvslistbox-class.md
+        - name: CWaitCursor-Klasse
+          href: reference/cwaitcursor-class.md
+        - name: CWinApp-Klasse
+          href: reference/cwinapp-class.md
+        - name: CWinAppEx-Klasse
+          href: reference/cwinappex-class.md
+        - name: CWindowDC-Klasse
+          href: reference/cwindowdc-class.md
+        - name: CWinFormsControl-Klasse
+          href: reference/cwinformscontrol-class.md
+        - name: CWinFormsDialog-Klasse
+          href: reference/cwinformsdialog-class.md
+        - name: CWinFormsView-Klasse
+          href: reference/cwinformsview-class.md
+        - name: CWinThread-Klasse
+          href: reference/cwinthread-class.md
+        - name: CWnd-Klasse
+          href: reference/cwnd-class.md
+        - name: CWordArray-Klasse
+          href: reference/cwordarray-class.md
+        - name: ICommandSource-Schnittstelle
+          href: reference/icommandsource-interface.md
+        - name: ICommandTarget-Schnittstelle
+          href: reference/icommandtarget-interface.md
+        - name: ICommandUI-Schnittstelle
+          href: reference/icommandui-interface.md
+        - name: IView-Schnittstelle
+          href: reference/iview-interface.md
+    - name: Interne Klassen
+      href: reference/internal-classes.md
+    - name: 'MFC-Makros, globale Funktionen und globale Variablen'
+      expanded: false
+      items:
+        - name: 'MFC-Makros, globale Funktionen und globale Variablen'
+          href: reference/mfc-macros-and-globals.md
+        - name: Datentypen (MFC)
+          href: reference/data-types-mfc.md
+        - name: Typumwandlung von MFC-Klassenobjekten
+          href: reference/type-casting-of-mfc-class-objects.md
+        - name: Objektmodelldienste zur Laufzeit
+          href: reference/run-time-object-model-services.md
+        - name: Diagnosedienste
+          href: reference/diagnostic-services.md
+        - name: Module und DLLs
+          href: reference/extension-dll-macros.md
+        - name: Ausnahmeverarbeitung
+          href: reference/exception-processing.md
+        - name: CString-Formatierung und Meldungsfeldanzeige
+          href: reference/cstring-formatting-and-message-box-display.md
+        - name: Anwendungsinformationen und Anwendungsverwaltung
+          href: reference/application-information-and-management.md
+        - name: Standardbefehle und Fenster-IDs
+          href: reference/standard-command-and-window-ids.md
+        - name: Hilfsfunktionen für die Auflistungsklasse
+          href: reference/collection-class-helpers.md
+        - name: Funktionen für grau dargestellte und gerasterte Bitmaps
+          href: reference/gray-and-dithered-bitmap-functions.md
+        - name: Funktionen für den Datensatzfeldaustausch
+          href: reference/record-field-exchange-functions.md
+        - name: Dialogdatenaustausch-Funktionen für CRecordView und CDaoRecordView
+          href: reference/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md
+        - name: Dialogdatenaustausch-Funktionen für OLE-Steuerelemente
+          href: reference/dialog-data-exchange-functions-for-ole-controls.md
+        - name: Datenbankmakros und globale Funktionen
+          href: reference/database-macros-and-globals.md
+        - name: Initialisieren und Beenden der DAO-Datenbank-Engine
+          href: reference/dao-database-engine-initialization-and-termination.md
+        - name: OLE-Initialisierung
+          href: reference/ole-initialization.md
+        - name: Anwendungssteuerelement
+          href: reference/application-control.md
+        - name: Dispatchzuordnungen
+          href: reference/dispatch-maps.md
+        - name: Variant-Parametertypkonstanten
+          href: reference/variant-parameter-type-constants.md
+        - name: Zugreifen auf die Typbibliothek
+          href: reference/type-library-access.md
+        - name: Eigenschaftenseiten (MFC)
+          href: reference/property-pages-mfc.md
+        - name: Ereigniszuordnungen
+          href: reference/event-maps.md
+        - name: Ereignissenkenzuordnungen
+          href: reference/event-sink-maps.md
+        - name: Verbindungszuordnungen
+          href: reference/connection-maps.md
+        - name: Registrieren von OLE-Steuerelementen
+          href: reference/registering-ole-controls.md
+        - name: Klassenfactorys und Lizenzierung
+          href: reference/class-factories-and-licensing.md
+        - name: Persistenz der OLE-Steuerelemente
+          href: reference/persistence-of-ole-controls.md
+        - name: Globale Funktionen zur Analyse von Internet-URLs
+          href: reference/internet-url-parsing-globals.md
+        - name: DHTML-Ereigniszuordnungen
+          href: reference/dhtml-event-maps.md
+        - name: Zuordnungen für DHTML-Bearbeitungsbefehle
+          href: reference/dhtml-editing-command-maps.md
+        - name: Standardroutinen für den Dialogdatenaustausch
+          href: reference/standard-dialog-data-exchange-routines.md
+        - name: Standardroutinen zur Prüfung der Dialogfelddaten
+          href: reference/standard-dialog-data-validation-routines.md
+        - name: AFX-Meldungen
+          href: reference/afx-messages.md
+        - name: Stile für Symbolleisten-Steuerelemente
+          href: reference/toolbar-control-styles.md
+        - name: 'CMFCImagePaintArea::IMAGE_EDIT_MODE-Enumeration'
+          href: reference/cmfcimagepaintarea-image-edit-mode-enumeration.md
+        - name: UICheckState-Enumeration
+          href: reference/uicheckstate-enumeration.md
+    - name: 'Strukturen, Stile, Rückrufe und Meldungszuordnungen'
+      expanded: false
+      items:
+        - name: 'Strukturen, Stile, Rückrufe und Meldungszuordnungen'
+          href: reference/structures-styles-callbacks-and-message-maps.md
+        - name: Von MFC verwendete Strukturen
+          expanded: false
+          items:
+            - name: Von MFC verwendete Strukturen
+              href: reference/structures-used-by-mfc.md
+            - name: AFX_EXTENSION_MODULE-Struktur
+              href: reference/afx-extension-module-structure.md
+            - name: AFX_GLOBAL_DATA-Struktur
+              href: reference/afx-global-data-structure.md
+            - name: CDaoDatabaseInfo-Struktur
+              href: reference/cdaodatabaseinfo-structure.md
+            - name: CDaoErrorInfo-Struktur
+              href: reference/cdaoerrorinfo-structure.md
+            - name: CDaoFieldInfo-Struktur
+              href: reference/cdaofieldinfo-structure.md
+            - name: CDaoIndexInfo-Struktur
+              href: reference/cdaoindexinfo-structure.md
+            - name: CDaoIndexFieldInfo-Struktur
+              href: reference/cdaoindexfieldinfo-structure.md
+            - name: CDaoParameterInfo-Struktur
+              href: reference/cdaoparameterinfo-structure.md
+            - name: CDaoQueryDefInfo-Struktur
+              href: reference/cdaoquerydefinfo-structure.md
+            - name: CDaoRelationInfo-Struktur
+              href: reference/cdaorelationinfo-structure.md
+            - name: CDaoRelationFieldInfo-Struktur
+              href: reference/cdaorelationfieldinfo-structure.md
+            - name: CDaoTableDefInfo-Struktur
+              href: reference/cdaotabledefinfo-structure.md
+            - name: CDaoWorkspaceInfo-Struktur
+              href: reference/cdaoworkspaceinfo-structure.md
+            - name: CODBCFieldInfo-Struktur
+              href: reference/codbcfieldinfo-structure.md
+            - name: DHtmlUrlEventMapEntry-Struktur
+              href: reference/dhtmlurleventmapentry-structure.md
+            - name: HSE_VERSION_INFO-Struktur
+              href: reference/hse-version-info-structure.md
+        - name: Von MFC verwendete Stile
+          href: reference/styles-used-by-mfc.md
+        - name: Von MFC verwendete Rückruffunktionen
+          href: reference/callback-functions-used-by-mfc.md
+        - name: Meldungszuordnungen (MFC)
+          expanded: false
+          items:
+            - name: Meldungszuordnungen (MFC)
+              href: reference/message-maps-mfc.md
+            - name: Meldungszuordnungsmakros (MFC)
+              href: reference/message-map-macros-mfc.md
+            - name: Zuordnungsmakros von Delegaten und Schnittstellen
+              href: reference/delegate-and-interface-maps.md
+            - name: 'Vorgehensweise: Verwenden des Querverweises zur Meldungszuordnung'
+              href: reference/how-to-use-the-message-map-cross-reference.md
+            - name: Meldungshandler für Benachrichtigungen von untergeordneten Fenstern
+              href: reference/child-window-notification-message-handlers.md
+            - name: Generischer Steuerelementhandler
+              href: reference/generic-control-handler.md
+            - name: Handler für Benutzerschaltflächen
+              href: reference/user-button-handlers.md
+            - name: Handler für Kombinationsfelder
+              href: reference/combo-box-handlers.md
+            - name: Handler für Bearbeitungssteuerelemente
+              href: reference/edit-control-handlers.md
+            - name: Handler für Listenfelder
+              href: reference/list-box-handlers.md
+            - name: Handler für WM_-Meldungen
+              href: reference/handlers-for-wm-messages.md
+            - name: 'WM_-Meldungshandler: A–C'
+              href: reference/wm-message-handlers-a-c.md
+            - name: 'WM_-Meldungshandler: D–E'
+              href: reference/wm-message-handlers-d-e.md
+            - name: 'WM_-Meldungshandler: F–K'
+              href: reference/wm-message-handlers-f-k.md
+            - name: 'WM_-Meldungshandler: L–M'
+              href: reference/wm-message-handlers-l-m.md
+            - name: 'WM_-Meldungshandler: N–O'
+              href: reference/wm-message-handlers-n-o.md
+            - name: 'WM_-Meldungen: P–R'
+              href: reference/wm-messages-p-r.md
+            - name: 'WM_-Meldungen: S'
+              href: reference/wm-messages-s.md
+            - name: 'WM_-Meldungen: T–Z'
+              href: reference/wm-messages-t-z.md
+            - name: Benutzerdefinierte Handler
+              href: reference/user-defined-handlers.md
+- name: MFC-Assistenten und -Dialogfelder
+  expanded: false
+  items:
+    - name: MFC-Assistenten und -Dialogfelder
+      href: reference/mfc-wizards-and-dialog-boxes.md
+    - name: Erstellen eines MFC-DLL-Projekts
+      expanded: false
+      items:
+        - name: Erstellen eines MFC-DLL-Projekts
+          href: reference/creating-an-mfc-dll-project.md
+        - name: MFC-DLL-Assistent
+          expanded: false
+          items:
+            - name: MFC-DLL-Assistent
+              href: reference/mfc-dll-wizard.md
+            - name: 'Anwendungseinstellungen, MFC-DLL-Assistent'
+              href: reference/application-settings-mfc-dll-wizard.md
+        - name: Vom MFC-DLL-Assistenten erstellte Klassen und Funktionen
+          href: reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md
+    - name: Erstellen einer MFC-Anwendung
+      expanded: false
+      items:
+        - name: Erstellen einer MFC-Anwendung
+          href: reference/creating-an-mfc-application.md
+        - name: MFC-Anwendungs-Assistent
+          expanded: false
+          items:
+            - name: MFC-Anwendungs-Assistent
+              href: reference/mfc-application-wizard.md
+            - name: 'Anwendungstyp, MFC-Anwendungs-Assistent'
+              href: reference/application-type-mfc-application-wizard.md
+            - name: 'Verbunddokumentunterstützung, MFC-Anwendungs-Assistent'
+              href: reference/compound-document-support-mfc-application-wizard.md
+            - name: 'Zeichenfolgen für Dokumentvorlagen, MFC-Anwendungs-Assistent'
+              href: reference/document-template-strings-mfc-application-wizard.md
+            - name: 'Datenbankunterstützung, MFC-Anwendungs-Assistent'
+              href: reference/database-support-mfc-application-wizard.md
+            - name: 'Benutzeroberflächen-Features, MFC-Anwendungs-Assistent'
+              href: reference/user-interface-features-mfc-application-wizard.md
+            - name: 'Erweiterte Features, MFC-Anwendungs-Assistent'
+              href: reference/advanced-features-mfc-application-wizard.md
+            - name: 'Generierte Klassen, MFC-Anwendungs-Assistent'
+              href: reference/generated-classes-mfc-application-wizard.md
+        - name: Erstellen einer formularbasierten MFC-Anwendung
+          href: reference/creating-a-forms-based-mfc-application.md
+        - name: Erstellen einer MFC-Anwendung im Stil des Datei-Explorers
+          href: reference/creating-a-file-explorer-style-mfc-application.md
+        - name: Erstellen einer MFC-Anwendung im Webbrowserstil
+          href: reference/creating-a-web-browser-style-mfc-application.md
+    - name: Erstellen eines MFC-ActiveX-Steuerelementcontainers
+      href: reference/creating-an-mfc-activex-control-container.md
+    - name: Erstellen eines MFC-ActiveX-Steuerelements
+      expanded: false
+      items:
+        - name: Erstellen eines MFC-ActiveX-Steuerelements
+          href: reference/creating-an-mfc-activex-control.md
+        - name: MFC-ActiveX-Steuerelement-Assistent
+          expanded: false
+          items:
+            - name: MFC-ActiveX-Steuerelement-Assistent
+              href: reference/mfc-activex-control-wizard.md
+            - name: 'Anwendungseinstellungen, MFC-ActiveX-Steuerelement-Assistent'
+              href: reference/application-settings-mfc-activex-control-wizard.md
+            - name: 'Steuerelementnamen, MFC-ActiveX-Steuerelement-Assistent'
+              href: reference/control-names-mfc-activex-control-wizard.md
+            - name: 'Steuerelementeinstellungen, MFC-ActiveX-Steuerelement-Assistent'
+              href: reference/control-settings-mfc-activex-control-wizard.md
+    - name: Hinzufügen einer MFC-Klasse
+      expanded: false
+      items:
+        - name: Hinzufügen einer MFC-Klasse
+          href: reference/adding-an-mfc-class.md
+        - name: MFC-Assistent zum Hinzufügen von Klassen
+          expanded: false
+          items:
+            - name: MFC-Assistent zum Hinzufügen von Klassen
+              href: reference/mfc-add-class-wizard.md
+            - name: 'Zeichenfolgen für Dokumentvorlagen, MFC-Assistent zum Hinzufügen von Klassen'
+              href: reference/document-template-strings-mfc-add-class-wizard.md
+    - name: Hinzufügen einer MFC-Klasse aus einer Typbibliothek
+      expanded: false
+      items:
+        - name: Hinzufügen einer MFC-Klasse aus einer Typbibliothek
+          href: reference/adding-an-mfc-class-from-a-type-library.md
+        - name: Assistent zum Hinzufügen von Klassen aus der Typbibliothek
+          href: reference/add-class-from-typelib-wizard.md
+    - name: Hinzufügen eines MFC-Meldungshandlers
+      expanded: false
+      items:
+        - name: Hinzufügen eines MFC-Meldungshandlers
+          href: reference/adding-an-mfc-message-handler.md
+        - name: Zuordnen von Meldungen zu Funktionen
+          expanded: false
+          items:
+            - name: Zuordnen von Meldungen zu Funktionen
+              href: reference/mapping-messages-to-functions.md
+            - name: Mit Benutzeroberflächenobjekten verknüpfte Meldungstypen
+              href: reference/message-types-associated-with-user-interface-objects.md
+            - name: Bearbeiten eines Meldungshandlers
+              href: reference/editing-a-message-handler.md
+            - name: Definieren eines Meldungshandlers für eine reflektierte Meldung
+              href: reference/defining-a-message-handler-for-a-reflected-message.md
+            - name: Deklarieren einer auf der neuen Steuerelementklasse basierenden Variablen
+              href: reference/declaring-a-variable-based-on-your-new-control-class.md
+    - name: Hinzufügen eines MFC-ODBC-Consumers
+      expanded: false
+      items:
+        - name: Hinzufügen eines MFC-ODBC-Consumers
+          href: reference/adding-an-mfc-odbc-consumer.md
+        - name: MFC-ODBC-Consumer-Assistent
+          href: reference/mfc-odbc-consumer-wizard.md
+    - name: Hinzufügen von ATL-Unterstützung zu einem MFC-Projekt
+      expanded: false
+      items:
+        - name: Hinzufügen von ATL-Unterstützung zu einem MFC-Projekt
+          href: reference/adding-atl-support-to-your-mfc-project.md
+        - name: 'Details zur ATL-Unterstützung, die vom ATL-Assistenten hinzugefügt wird'
+          href: reference/details-of-atl-support-added-by-the-atl-wizard.md
+    - name: MFC-Klassen-Assistent
+      href: reference/mfc-class-wizard.md
