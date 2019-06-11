@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 06940bb72f9113e0a8148e15418504b35fc95099
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694256"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504472"
 ---
 # <a name="add-a-property"></a>Hinzufügen einer Eigenschaft
 
@@ -62,7 +62,7 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
 
   Legt den Namen der Eigenschaft fest. Für MFC-Disp-Schnittstellen, die ActiveX-Steuerelementen zugeordnet sind, können Sie einen eigenen Namen angeben oder einen vordefinierten Eigenschaftennamen aus der Liste auswählen. Wenn Sie einen eigenen Eigenschaftennamen bereitstellen, ist der Implementierungstyp **Stock** (Vordefiniert) nicht verfügbar. Eine Beschreibung der Eigenschaften in der Liste finden Sie unter [Basiseigenschaften](#stock-properties).
 
-  |Schnittstellentyp|Beschreibung |
+  |Schnittstellentyp|Beschreibung|
   |--------------------|-----------------|
   |Duale ATL-Schnittstelle, benutzerdefinierte Schnittstelle, lokale benutzerdefinierte Schnittstelle|Geben Sie einen Eigenschaftennamen an.|
   |MFC-Disp-Schnittstelle, Disp-Schnittstelle des MFC-ActiveX-Steuerelements|Geben Sie einen Eigenschaftennamen an, oder wählen Sie eine Basiseigenschaft aus der Liste aus. Wenn Sie eine Eigenschaft aus der Liste auswählen, wird der entsprechende Wert im Feld **Eigenschaftentyp** angezeigt. Sie können diesen Typ abhängig von Ihrer Auswahl unter **Implementierungstyp** ändern.|
@@ -91,7 +91,7 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
 
   Nur MFC-Schnittstellen Gibt an, wie die hinzugefügten Eigenschaften implementiert werden sollen.
 
-  |Implementierungstyp|Beschreibung |
+  |Implementierungstyp|Beschreibung|
   |-------------------------|-----------------|
   |**Stock**|Gibt eine vordefinierte Implementierung für die unter **Eigenschaftenname** ausgewählte Eigenschaft an. Der Standardwert. Weitere Informationen finden Sie unter [Basiseigenschaften](#stock-properties).<br /><br /> Wenn Sie **Stock** (Vordefiniert) angeben, werden **Eigenschaftentyp**, **Parametertyp** und **Parametername** abgeblendet.|
   |**Membervariable**|Gibt an, dass die Eigenschaft als Membervariable hinzugefügt wird. Sie können benutzerdefinierte Eigenschaften und die meisten Basiseigenschaften als Membervariablen hinzufügen. Sie können die **Membervariable** für die Eigenschaften `Caption`, `hWnd` und `Text` nicht angeben.<br /><br /> Gibt Standardnamen unter **Variablenname** und **Benachrichtigungsfunktion** an. Sie können diesen Namen bearbeiten.|
@@ -105,7 +105,7 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
 
   Nur ATL-Schnittstellen Legt die Eigenschaft als schreibbar fest. Die `Put`-Methode wird also für das Festlegen bzw. „Einfügen“ dieser Eigenschaft des Objekts erstellt. Wählen Sie **Get** oder **Put** oder beide aus. Wenn Sie diese Option auswählen, können Sie die Methode auf zwei Arten implementieren:
 
-  |Option|Beschreibung |
+  |Option|Beschreibung|
   |------------|-----------------|
   |**PropPut**|Die [PropPut](../windows/propput.md)-Funktion gibt eine Kopie des Objekts zurück. Dies ist die Standardeinstellung und die gängigste Methode, um die Eigenschaft schreibbar zu machen.|
   |**PropPutRef**|Die [PropPutRef](../windows/propputref.md)-Funktion gibt einen Verweis auf das Objekt statt einer Kopie des Objekts zurück. Diese Option sollten Sie für Objekte (z.B. große Strukturen oder Arrays) verwenden, deren Initialisierung aufwändig sein kann.|
@@ -114,7 +114,7 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
 
   Nur ATL-Schnittstellen Legt fest, ob der Parameter, der durch **Parametername** festgelegt wurde, `in`, `out`, beides oder keines davon ist.
 
-  |Option|Beschreibung |
+  |Option|Beschreibung|
   |------------|-----------------|
   |`in`|Gibt an, dass der Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben wird.|
   |`out`|Gibt an, dass der Zeigerparameter an von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben wird (vom Server an den Client).|
@@ -163,7 +163,7 @@ Verwenden Sie diese Seite des Assistenten zum Hinzufügen von Eigenschaften, um 
 
 Nicht alle Optionen sind für alle Eigenschaftentypen verfügbar.
 
-|Option|Beschreibung |
+|Option|Beschreibung|
 |------------|-----------------|
 |`bindable`|Gibt an, dass die Eigenschaft die Datenbindung unterstützt. Informationen finden Sie in der *MIDL-Referenz* unter [bindable](/windows/desktop/Midl/bindable). Diese Option ist standardmäßig für die vordefinierte Implementierung der Eigenschaft festgelegt und kann nicht geändert werden.|
 |`defaultbind`|Gibt an, dass diese einzelne bindbare Eigenschaft das Objekt am besten darstellt. Informationen finden Sie in der *MIDL-Referenz* unter [defaultbind](/windows/desktop/Midl/defaultbind).|
@@ -181,7 +181,7 @@ Nicht alle Optionen sind für alle Eigenschaftentypen verfügbar.
 
 Wenn Sie einer MFC-Disp-Schnittstelle mithilfe des [Assistenten zum Hinzufügen von Eigenschaften](#idl-attributes-add-property-wizard) eine Eigenschaft hinzufügen, können Sie auf der [Namen](../ide/names-add-property-wizard.md)-Seite des Assistenten eine Basiseigenschaft aus der Liste **Eigenschaftennamen** auswählen. Dort stehen die folgenden Eigenschaften zur Auswahl:
 
-|Name der Eigenschaft|Beschreibung |
+|Name der Eigenschaft|Beschreibung|
 |-------------------|-----------------|
 |`Appearance`|Ruft einen Wert ab, der die Darstellung des Steuerelements bestimmt, oder legt diesen fest. Die Eigenschaft `Appearance` des Steuerelements kann dreidimensionale Anzeigeeffekte anzeigen oder ausblenden. Dies ist eine Lese-/Schreibumgebungseigenschaft.|
 |`BackColor`|Gibt die Ambient-Eigenschaft `BackColor` des Steuerelements zurück oder legt diese auf eine Palettenfarbe (RGB) oder eine vordefinierte Systemfarbe fest. Der Wert entspricht standardmäßig der Vordergrundfarbe des Containers des Steuerelements. Dies ist eine Lese-/Schreibumgebungseigenschaft.|
@@ -191,5 +191,5 @@ Wenn Sie einer MFC-Disp-Schnittstelle mithilfe des [Assistenten zum Hinzufügen 
 |`Font`|Gibt die Ambient-Schriftart des Steuerelements zurück oder legt diese fest. Wenn das Steuerelement über keine Schriftart verfügt, wird NULL zurückgegeben.|
 |`ForeColor`|Gibt die Ambient-Eigenschaft `ForeColor` des Steuerelements zurück oder legt diese fest.|
 |`hWnd`|Gibt die `hWnd`-Eigenschaft des Steuerelements zurück oder legt diese fest. `hWnd` verfügt nicht über den Implementierungstyp **Membervariable**.|
-|`ReadyState`|Gibt die `ReadyState`-Eigenschaft des Steuerelements zurück oder legt diese fest. Ein Steuerelement kann folgenden Status aufweisen: nicht initialisiert, initialisiert, wird geladen, interaktiv und abgeschlossen. Weitere Informationen finden Sie unter [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) im *Internet SDK*.|
+|`ReadyState`|Gibt die `ReadyState`-Eigenschaft des Steuerelements zurück oder legt diese fest. Ein Steuerelement kann folgenden Status aufweisen: nicht initialisiert, initialisiert, wird geladen, interaktiv und abgeschlossen. Weitere Informationen finden Sie unter [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) im *Internet SDK*.|
 |`Text`|Gibt den Text zurück, der in einem Steuerelement enthalten ist, oder legt diesen fest. `Text` verfügt nicht über den Implementierungstyp **Membervariable**.|
