@@ -1,17 +1,18 @@
 ---
-title: Schreiben und Refactoring von Code (C++)
-ms.date: 04/30/2018
+title: Schreiben und Umgestalten von Code (C++)
+description: Verwenden Sie den C++-Code-Editor in Visual Studio, um Ihren Code zu formatieren, in ihm zu navigieren, ihn zu verstehen und umzugestalten.
+ms.date: 05/14/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: bc839a759d2ff3f403ca001ab32702d3fe27833e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04f738cd6fdd456c432c334df42f37339e7fa49e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570429"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182630"
 ---
-# <a name="writing-and-refactoring-code-c"></a>Schreiben und Refactoring von Code (C++)
+# <a name="writing-and-refactoring-code-c"></a>Schreiben und Umgestalten von Code (C++)
 
-Der Visual C++-Code-Editor und die IDE bieten viele Codierungshilfen. Einige sind nur für C++, und einige sind im Wesentlichen für alle Visual Studio-Sprachen identisch. Weitere Informationen über die freigegebenen Features finden Sie unter [Schreiben von Code im Code- und Text-Editor](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Optionen zum Aktivieren und Konfigurieren von C++-spezifischen Features finden Sie unter **Extras > Optionen > Text-Editor > C/C++**. Wenn Sie die gewünschte Option ausgewählt haben, können Sie mit **F1** weitere Hilfethemen abrufen, wenn das Dialogfeld im Fokus ist. Geben Sie `Editor C++` in **Schnellstart** ein, um allgemeine Codeformatierungsoptionen abzurufen.
+Der C++-Code-Editor und die IDE in Visual Studio bieten viele Programmierhilfen. Einige sind nur für C++, und einige sind im Wesentlichen für alle Visual Studio-Sprachen identisch. Weitere Informationen über die freigegebenen Features finden Sie unter [Schreiben von Code im Code- und Text-Editor](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Optionen zum Aktivieren und Konfigurieren von C++-spezifischen Features finden Sie unter **Extras > Optionen > Text-Editor > C/C++** . Wenn Sie die gewünschte Option ausgewählt haben, können Sie mit **F1** weitere Hilfethemen abrufen, wenn das Dialogfeld im Fokus ist. Geben Sie `Editor C++` in **Schnellstart** ein, um allgemeine Codeformatierungsoptionen abzurufen.
 
 Experimentelle Features, die möglicherweise nicht in einer zukünftigen Version von Visual Studio enthalten sind, finden Sie im Dialogfeld [Text Editor C++ Experimental](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) (C++-Text-Editor „Experimentell“). In Visual Studio 2017 können Sie **Predictive IntelliSense** in diesem Dialogfeld aktivieren.
 
@@ -75,7 +76,7 @@ Zeigen Sie auf eine Variable, um die Typinformationen anzuzeigen.
 
 ## <a name="open-document-navigate-to-header"></a>Geöffnetes Dokument (zu Header navigieren)
 
-Klicken Sie mit der rechten Maustaste auf den Headernamen in einer `#include`-Anweisung, und öffnen Sie die Headerdatei.
+Klicken Sie mit der rechten Maustaste auf den Headernamen in einer `#include`-Richtlinie, und öffnen Sie die Headerdatei.
 
 ![Visual C&#43;&#43;-Menüoption „Dokument öffnen“](../ide/media/vs2015_cpp_open_document.png "vs2015_cpp_open_document")
 
@@ -91,7 +92,7 @@ Zeigen Sie auf eine Variablen- oder Funktionsdeklaration, klicken Sie mit der re
 
 ## <a name="view-call-hierarchy"></a>Aufrufhierarchie anzeigen
 
-Klicken Sie mit der rechten Maustaste auf alle Funktionsaufrufe, und zeigen Sie eine Liste aller aufgerufenen Funktionen und aller Funktionen an, die sie aufrufen. Jede Funktion in der Liste kann auf die gleiche Weise erweitert werden. Weitere Informationen finden Sie unter [Aufrufhierarchie](/visualstudio/ide/reference/call-hierarchy).
+Klicken Sie mit der rechten Maustaste auf einen beliebigen Funktionsaufruf, und lassen Sie eine rekursive Liste aller Funktionen anzeigen, die er aufruft, sowie aller Funktionen, die ihn aufrufen. Jede Funktion in der Liste kann auf die gleiche Weise erweitert werden. Weitere Informationen finden Sie unter [Aufrufhierarchie](/visualstudio/ide/reference/call-hierarchy).
 
 ![Visual C&#43;&#43;-Aufrufhierarchie](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
@@ -107,7 +108,7 @@ Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in einer Quellco
 
 ## <a name="scrollbar-map-mode"></a>Scrollleisten-Zuordnungsmodus
 
-Mit dem Bildlaufleisten-Zuordnungsmodus können Sie schnell einen Bildlauf durchführen und eine Codedatei durchsuchen, ohne die aktuelle Position zu verlassen. Oder klicken Sie auf eine beliebige Stelle auf der Code Map, um direkt zu dieser Position zu wechseln. Weitere Informationen finden Sie unter [Vorgehensweise: Verfolgen von Code durch Anpassen der Scrollleiste](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
+Mit dem Bildlaufleisten-Zuordnungsmodus können Sie schnell einen Bildlauf durchführen und eine Codedatei durchsuchen, ohne die aktuelle Position zu verlassen. Oder klicken Sie auf eine beliebige Stelle auf der Codezuordnung, um direkt zu dieser Position zu wechseln. Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen der Scrollleiste](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
 ![Code Map in Visual C&#43;&#43;](../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
 
