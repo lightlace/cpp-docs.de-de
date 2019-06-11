@@ -2,16 +2,16 @@
 layout: LandingPage
 title: Linux-Entwicklung mit der C++-Dokumentation
 description: Erstellen und Debuggen Sie Anwendungen die unter Linux ausgeführt werden.
-ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f57777451e861a8ea0df1eb81fc97553c176ebec
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393141"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821649"
 ---
 # <a name="linux-development-with-c-documentation"></a>Linux-Entwicklung mit der C++-Dokumentation
 
-Verwenden Sie Visual Studio 2017 zum Erstellen und Debuggen von Anwendungen, die unter Linux ausgeführt werden.
+Verwenden Sie Visual Studio 2017 oder höher, um Anwendungen zu erstellen oder zu debuggen, die auf Linux-Remotecomputern oder Windows-Subsystemen für Linux ausgeführt werden.
 
 <ul class="panelContent cardsF">
     <li>
@@ -64,8 +64,8 @@ Verwenden Sie Visual Studio 2017 zum Erstellen und Debuggen von Anwendungen, die
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
-                        <p><a href="/cpp/overview-of-cpp-development">IDE und Tools für Visual C++-Entwicklung</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">C++ in Visual Studio</a></h3>
+                        <p><a href="/cpp/overview-of-cpp-development">Übersicht über die C++-Entwicklung in Visual Studio</a></p>
                     </div>
                 </div>
             </div>

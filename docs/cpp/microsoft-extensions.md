@@ -14,27 +14,27 @@ ms.locfileid: "62301772"
 # <a name="microsoft-extensions"></a>Microsoft-Erweiterungen
 
 *asm-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm***Assemblyanweisung* **;** <sub>deaktivieren  </sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {***Assembly-Anweisung-List***};** <sub>deaktivieren    </sub>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm** *Assemblyanweisung* **;** <sub>deaktivieren  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *Assembly-Anweisung-List* **};** <sub>deaktivieren    </sub>
 
 *assembly-instruction-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** <sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;** <sub>opt</sub>
 
 *ms-modifier-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*ms-modifier* *ms-modifier-list*<sub>opt</sub>
 
 *ms-modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__cdecl**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__fastcall**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__stdcall**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__syscall** (reserviert für zukünftige Implementierungen)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__oldcall** (reserviert für zukünftige Implementierungen)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__unaligned** (reserviert für zukünftige Implementierungen)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__cdecl**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__fastcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__stdcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__syscall** (reserviert für zukünftige Implementierungen)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__oldcall** (reserviert für zukünftige Implementierungen)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__unaligned** (reserviert für zukünftige Implementierungen)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*based-modifier*
 
 *based-modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__based (** *based-type* **)**
+&nbsp;&nbsp;&nbsp;&nbsp; **__based (** *based-type* **)**
 
 *based-type*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Name*
