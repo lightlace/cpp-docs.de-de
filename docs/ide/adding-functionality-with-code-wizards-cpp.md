@@ -1,35 +1,39 @@
 ---
 title: Hinzufügen neuer Funktionen mit Code-Assistenten (C++)
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.classes
+ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
-- wizards [C++], code
-- Visual C++ projects, adding functionality
-- projects [C++], adding functionality
-- class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 87c46be17c20bf9d592dd2b5c537897fa629e9c2
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 8c88936edcb9110fe7482281f483f11c542b83c1
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57822573"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182650"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Hinzufügen neuer Funktionen mit Code-Assistenten (C++)
 
 Nachdem Sie ein Projekt erstellt haben, sollten Sie Funktionen zum Projekt hinzufügen oder diese ändern. Dazu zählt das Erstellen neuer Klassen, das Hinzufügen von neuen Memberfunktionen und -variablen sowie das Hinzufügen von Automatisierungsmethoden und -eigenschaften. Die Code-Assistenten wurden dafür entwickelt, diese Aktionen auszuführen.
 
-> [!WARNING]
-> Einige ATL- und MFC-Code-Assistenten sind jetzt veraltet und werden in einer zukünftigen Version von Visual Studio entfernt. Diese Assistenten werden nur selten verwendet. Die Entfernung dieser Assistenten wirkt sich nicht auf die allgemeine Unterstützung für Active Template Library (ATL) und Microsoft Foundation Classes (MFC) aus. In [dieser Umfrage](https://www.surveymonkey.com/r/QDWKKCN) können Sie Ihr Feedback zu dieser Veraltung mitteilen. Ihr Feedback ist uns wichtig.
+> [!NOTE]
+> Die folgenden nur selten verwendeten Code-Assistenten werden in Visual Studio 2019 entfernt. Die Entfernung dieser Assistenten wirkt sich nicht auf die allgemeine Unterstützung für Active Template Library (ATL) und Microsoft Foundation Classes (MFC) aus. Beispielcode für diese Technologien ist in der Microsoft-Dokumentation und im VCSamples-GitHub-Repository archiviert.
+
+- ATL COM+ 1.0 Komponenten-Assistent
+- ATL-Assistent für Active Server Pages-Komponenten
+- ATL-OLE DB-Anbieter-Assistent
+- ATL-Eigenschaftenseiten-Assistent
+- ATL-OLE DB-Consumer-Assistent
+- MFC-ODBC-Consumer
+- MFC-Klasse aus ActiveX-Steuerelement
+- MFC-Klasse aus Typbibliothek
+
 
 > [!NOTE]
 >  Sie können nun Meldungshandler und Zuordnungsmeldungen zu diesen hinzufügen und virtuelle MFC-Funktionen mithilfe des [Eigenschaftenfensters](/visualstudio/ide/reference/properties-window) überschreiben.
 
-## <a name="accessing-visual-c-code-wizards"></a>Zugreifen auf Visual C++-Code-Assistenten
+## <a name="accessing-c-code-wizards"></a>Zugreifen auf C++-Code-Assistenten
 
-Es gibt drei Orte, über die Sie auf Visual C++-Code-Assistenten zugreifen können:
+Es gibt drei Stellen, über die Sie auf C++-Code-Assistenten zugreifen können:
 
 - Im Menü **Projekt** ermöglicht der Befehl **Neues Element hinzufügen** das Erstellen des Dialogfelds `Add New Item`. Mit diesem können Sie neue Dateien zu Ihrem Projekt hinzufügen. Durch den Befehl **Klasse hinzufügen** wird das Dialogfeld [Klasse hinzufügen](../ide/add-class-dialog-box.md) angezeigt, das den Assistenten für jeden Klassentyp anzeigt, den Sie zu Ihrem Projekt hinzufügen können. Durch den Befehl **Ressource hinzufügen** wird das Dialogfeld [Ressource hinzufügen](../windows/add-resource-dialog-box.md) angezeigt, in dem Sie eine Ressource erstellen oder eine Ressource auswählen können, die zu Ihrem Projekt hinzugefügt werden soll.
 
@@ -73,5 +77,5 @@ Es gibt drei Orte, über die Sie auf Visual C++-Code-Assistenten zugreifen könn
 
 [Überschreiben einer virtuellen Funktion](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Navigating the Class Structure (Navigieren in der Klassenstruktur)](../ide/navigating-the-class-structure-visual-cpp.md)<br>
-[Visual C++-Projekttypen](../build/reference/visual-cpp-project-types.md)<br>
-[Für Visual C++-Projekte erstellte Dateitypen](../build/reference/file-types-created-for-visual-cpp-projects.md)
+[C++-Projektvorlagen](../build/reference/visual-cpp-project-types.md)<br>
+[Für Visual Studio C++-Projekte erstellte Dateitypen](../build/reference/file-types-created-for-visual-cpp-projects.md)
