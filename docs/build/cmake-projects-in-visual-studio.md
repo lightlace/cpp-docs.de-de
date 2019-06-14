@@ -1,15 +1,15 @@
 ---
 title: CMake-Projekte in Visual Studio
-ms.date: 03/27/2019
+ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: ae686383d82453f291bbf81428748524160082f7
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
-ms.translationtype: HT
+ms.openlocfilehash: f2bafb75aae2eabb4e8f289435ddaeb61e6aabf4
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877186"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042660"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>CMake-Projekte in Visual Studio
 
@@ -20,13 +20,13 @@ CMake ist ein plattformübergreifendes Open Source-Tool, das zum Definieren von 
 
 ::: moniker range="vs-2019"
 
-Visual Studio-2019 führt die **CMake-Einstellungs-Editor** und andere Verbesserungen gegenüber Visual Studio 2017. Die Komponente **Visual C++-Tools für CMake** verwendet die Funktion **Ordner öffnen**, um zu ermöglichen, dass die IDE CMake-Projektdateien (z.B. „CMakeLists.txt“) direkt für IntelliSense und das Durchsuchen nutzt. Es werden sowohl Ninja- als auch Visual Studio-Generatoren unterstützt. Wenn Sie einen Visual Studio-Generator verwenden, wird eine temporäre Projektdatei generiert und an „msbuild.exe“ übergeben. Diese wird jedoch nie für IntelliSense oder das Durchsuchen geladen. Sie können auch einen vorhandenen CMake-Cache importieren. 
+Visual Studio-2019 führt die **CMake-Einstellungs-Editor** und andere Verbesserungen gegenüber Visual Studio 2017. Die  **C++ CMake-Tools für Windows** Komponente verwendet die **"Ordner öffnen"** Feature die IDE Nutzen von CMake-Projektdateien (z. B. die Datei "cmakelists.txt") direkt für die Zwecke von IntelliSense zu aktivieren und Durchsuchen. Es werden sowohl Ninja- als auch Visual Studio-Generatoren unterstützt. Wenn Sie einen Visual Studio-Generator verwenden, wird eine temporäre Projektdatei generiert und an „msbuild.exe“ übergeben. Diese wird jedoch nie für IntelliSense oder das Durchsuchen geladen. Sie können auch einen vorhandenen CMake-Cache importieren. 
 
 ## <a name="installation"></a>Installation
 
-**Visual C++-Tools für CMake** wird standardmäßig als Teil der Workloads **Desktopentwicklung mit C++** und **Linux-Entwicklung mit C++** installiert. Finden Sie unter [plattformübergreifenden CMake-Projekten](../linux/cmake-linux-project.md) für Weitere Informationen.
+**C++CMake-Tools für Windows** wird standardmäßig installiert, als Teil der **Desktop-Entwicklung mit C++**  Workload und als Teil der **Linux-Entwicklung mit C++**  arbeitsauslastung. Finden Sie unter [plattformübergreifenden CMake-Projekten](../linux/cmake-linux-project.md) für Weitere Informationen.
 
-![CMake-Komponente in der Workload „Desktopentwicklung mit C++“](media/cmake-install.png)
+![CMake-Komponente in der Workload „Desktopentwicklung mit C++“](media/cmake-install-2019.png)
 
 Weitere Informationen finden Sie unter [Install the C++ Linux workload in Visual Studio (Installieren der C++-Workload unter Linux in Visual Studio)](../linux/download-install-and-setup-the-linux-development-workload.md).
 
@@ -54,10 +54,10 @@ Visual Studio verwendet eine Datei namens **"cmakesettings.JSON"** , Umgebungsva
 
 Verwenden Sie andernfalls die **Datei "cmakelists.txt"** genauso wie Sie würde in jedem Projekt CMake Quelldateien angeben, suchen Bibliotheken, Compiler- und Linkeroptionen Optionen festlegen und Angeben von anderen Buildsystem Informationen in Bezug auf.
 
-Wenn Sie Argumente beim Debuggen einer ausführbaren Datei übergeben müssen, können Sie eine andere Datei mit dem Namen **"Launch.VS.JSON"**. In einigen Szenarios generiert Visual Studio automatisch diese Dateien, und Sie können diese manuell bearbeiten. Sie können die Datei auch selbst erstellen.
+Wenn Sie Argumente beim Debuggen einer ausführbaren Datei übergeben müssen, können Sie eine andere Datei mit dem Namen **"Launch.VS.JSON"** . In einigen Szenarios generiert Visual Studio automatisch diese Dateien, und Sie können diese manuell bearbeiten. Sie können die Datei auch selbst erstellen.
 
 > [!NOTE]
-> Für andere Arten von Open Folder-Projekte werden zwei zusätzliche JSON-Dateien verwendet: **"Cppproperties.JSON"** und **"Tasks.VS.JSON"**. Diese sind für CMake-Projekte jedoch nicht relevant.
+> Für andere Arten von Open Folder-Projekte werden zwei zusätzliche JSON-Dateien verwendet: **"Cppproperties.JSON"** und **"Tasks.VS.JSON"** . Diese sind für CMake-Projekte jedoch nicht relevant.
 
 ## <a name="import-an-existing-cache"></a>Importieren eines vorhandenen Caches
 
@@ -212,10 +212,10 @@ Visual Studio verwendet eine Datei namens **"cmakesettings.JSON"** , Umgebungsva
 
 Verwenden Sie andernfalls die **Datei "cmakelists.txt"** genauso wie Sie würde in jedem Projekt CMake Quelldateien angeben, suchen Bibliotheken, Compiler- und Linkeroptionen Optionen festlegen und Angeben von anderen Buildsystem Informationen in Bezug auf.
 
-Wenn Sie Argumente beim Debuggen einer ausführbaren Datei übergeben müssen, können Sie eine andere Datei mit dem Namen **"Launch.VS.JSON"**. In einigen Szenarios generiert Visual Studio automatisch diese Dateien, und Sie können diese manuell bearbeiten. Sie können die Datei auch selbst erstellen.
+Wenn Sie Argumente beim Debuggen einer ausführbaren Datei übergeben müssen, können Sie eine andere Datei mit dem Namen **"Launch.VS.JSON"** . In einigen Szenarios generiert Visual Studio automatisch diese Dateien, und Sie können diese manuell bearbeiten. Sie können die Datei auch selbst erstellen.
 
 > [!NOTE]
-> Für andere Arten von Open Folder-Projekte werden zwei zusätzliche JSON-Dateien verwendet: **"Cppproperties.JSON"** und **"Tasks.VS.JSON"**. Diese sind für CMake-Projekte jedoch nicht relevant.
+> Für andere Arten von Open Folder-Projekte werden zwei zusätzliche JSON-Dateien verwendet: **"Cppproperties.JSON"** und **"Tasks.VS.JSON"** . Diese sind für CMake-Projekte jedoch nicht relevant.
 
 ## <a name="import-an-existing-cache"></a>Importieren eines vorhandenen Caches
 

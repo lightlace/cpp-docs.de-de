@@ -4,24 +4,24 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 4f59781833a303ad2db837549eddca2f2ce291b1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 8856a5b1782c75c5a59dfdc93a8203627059ea12
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220495"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042721"
 ---
 # <a name="open-folder-projects-for-c"></a>„Ordner öffnen“-Projekte für C++
 
 In Visual Studio 2017 und höher können Sie das Feature „Ordner öffnen“ verwenden, um einen Ordner mit Quelldateien öffnen und sofort mit dem Programmieren beginnen zu können. Dabei wird unter anderem IntelliSense, das Durchsuchen, Refactoring und Debuggen unterstützt. Es werden keine SLN- oder VCXPROJ-Dateien geladen. Bei Bedarf können Sie benutzerdefinierte Tasks sowie Build- und Startparameter über einfache JSON-Dateien angeben. Allgemeine Informationen zu „Ordner öffnen“ finden Sie unter [Entwickeln von Code in Visual Studio ohne Projekte oder Projektmappen](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions).
 
-CMake ist in die Visual Studio-IDE als „CMake Tools für Visual Studio“ integriert. Dabei handelt es sich um eine Komponente der Workload für C++-Desktopentwicklung. Weitere Informationen finden Sie unter [CMake-Projekte in Visual Studio](cmake-projects-in-visual-studio.md). Für alle anderen Buildsysteme können Sie die Funktion „Ordner öffnen“ verwenden. „Ordner öffnen“ entkoppelt Code-Editor, Debugger und Analysetools effektiv vom Buildsystem und dem Compiler-Toolset. Sie können den C++-Code-Editor mit seinen umfangreichen IntelliSense-Funktionen, die Code-Analysetools und den Visual Studio-Debugger mit praktisch jedem Buildsystem verwenden, darunter CMake, Ninja, QMake (für Qt-Projekte), GYP, SCons, Gradle, Buck, Make und andere. Dies funktioniert sogar ohne Buildsystem mit einer einzelnen Datei oder einer losen Sammlung von Dateien.
+CMake in Visual Studio-IDE integriert ist, als Komponente von der C++ desktoparbeitsauslastung. Weitere Informationen finden Sie unter [CMake-Projekte in Visual Studio](cmake-projects-in-visual-studio.md). Für alle anderen Buildsysteme können Sie die Funktion „Ordner öffnen“ verwenden. „Ordner öffnen“ entkoppelt Code-Editor, Debugger und Analysetools effektiv vom Buildsystem und dem Compiler-Toolset. Sie können den C++-Code-Editor mit seinen umfangreichen IntelliSense-Funktionen, die Code-Analysetools und den Visual Studio-Debugger mit praktisch jedem Buildsystem verwenden, darunter CMake, Ninja, QMake (für Qt-Projekte), GYP, SCons, Gradle, Buck, Make und andere. Dies funktioniert sogar ohne Buildsystem mit einer einzelnen Datei oder einer losen Sammlung von Dateien.
 
 Klicken Sie im Hauptmenü auf **Datei > Öffnen > Ordner**, oder drücken Sie **STRG+UMSCHALT+ALT+O**, um „Ordner öffnen“ zu verwenden. Der Projektmappen-Explorer zeigt sofort alle Dateien im Ordner an. Sie können auf eine beliebige Datei klicken, um mit der Bearbeitung zu beginnen. Visual Studio beginnt im Hintergrund damit, die Dateien zu indizieren, um IntelliSense, Navigation und Refactoringfunktionen zu ermöglichen. Während Sie Dateien bearbeiten, erstellen, verschieben und löschen, verfolgt Visual Studio die Änderungen automatisch nach und aktualisiert den IntelliSense-Index kontinuierlich. 
 
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>QMake-Projekte für das Qt-Framework
 
-Sie können CMake Tools für Visual Studio verwenden, um Qt für das Erstellen von Qt-Projekten anzuzielen. Alternativ können Sie für Visual Studio 2015 oder Visual Studio 2017 die [Qt-Erweiterung für Visual Studio](https://download.qt.io/development_releases/vsaddin/) verwenden.
+Können Sie CMake um Qt-Projekte zu erstellen, oder Sie können die [Qt-Erweiterung für Visual Studio](https://download.qt.io/development_releases/vsaddin/) für Visual Studio 2015 oder Visual Studio 2017.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck usw.
 
