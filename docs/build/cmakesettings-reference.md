@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 018a755aa4f3acde44fe1dbb33b07b49c8d1c223
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837254"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042589"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json-Schemareferenz
 
@@ -121,7 +121,7 @@ Wenn in der aktiven Konfiguration ein Visual Studio-Generator angegeben ist, wir
 
 - `remoteMachineName`: Gibt den Namen des Linux-Remotecomputers an, auf dem CMake, Builds und der Debugger gehostet werden. Verwenden Sie den Verbindungs-Manager zum Hinzufügen neuer Linux-Computer. Unterstützte Makros sind `${defaultRemoteMachineName}`.
 - `remoteCopySourcesOutputVerbosity`: Gibt den Ausführlichkeitsgrad des Quellkopiervorgangs zum Remotecomputer an. Zur Auswahl stehen „Normal“ (Regulär), „Verbose“ (Ausführlich) und „Diagnostic“ (Diagnostisch).
-- `remoteCopySourcesConcurrentCopies`: Gibt die Anzahl gleichzeitiger Kopien an, die während der Synchronisierung der Quellen zum Remotecomputer verwendet werden.
+- `remoteCopySourcesConcurrentCopies`: Gibt die Anzahl gleichzeitiger Kopien, die während der Synchronisierung der Quellen auf den Remotecomputer (nur Sftp) verwendet.
 - `remoteCopySourcesMethod`: Gibt die Methode zum Kopieren von Dateien auf den Remotecomputer an. Zur Auswahl stehen „rsync“ und „sftp“.
 - `remoteCMakeListsRoot`: Gibt das Verzeichnis auf dem Remotecomputer an, das das CMake-Projekt enthält. Unterstützte Makros sind `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `remoteBuildRoot`: Gibt das Verzeichnis auf dem Remotecomputer an, in dem CMake Buildskripts für den ausgewählten Generator erstellt. Unterstützte Makros sind `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
