@@ -1,25 +1,25 @@
 ---
-title: Binärdateienkompatibilität zwischen Visual Studio 2015 und Visual Studio 2017
-ms.date: 09/24/2018
+title: Kompatibilität von C++-Binärdateien zwischen Visual Studio 2015 und Visual Studio 2019
+ms.date: 05/03/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-ms.openlocfilehash: d0291ef75bda2e4da994e40ad55d94ae1042e57e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 052874eb9273ee9a9ce1695ffdadedd9911673e1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740504"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449046"
 ---
-# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Binärdateienkompatibilität zwischen Visual Studio 2015 und Visual Studio 2017
+# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2019"></a>Kompatibilität von C++-Binärdateien zwischen Visual Studio 2015 und Visual Studio 2019
 
-In früheren Versionen von Visual Studio war die Binärdateienkompatibilität zwischen Objektdateien (OBJ-Dateien), statischen Bibliotheken (LIB-Dateien), dynamischen Bibliotheken (DLL-Dateien) und ausführbaren Dateien (EXE-Dateien), die unter Verwendung verschiedener Versionen des Compilertoolsets und der Laufzeitbibliotheken erstellt wurden, nicht gewährleistet. Dies hat sich in Visual Studio 2017 geändert. In Visual Studio 2015 und Visual Studio 2017 ist die Hauptversion des C++-Toolsets 14 (v140 für Visual Studio 2015 und v141 für Visual Studio 2017). Dies spiegelt die Tatsache wider, dass sowohl die Laufzeitbibliotheken als auch die Anwendungen, die mit einer der beiden Versionen des Compilers kompiliert wurden, (größtenteils) binärdateienkompatibel sind. Wenn Sie eine DLL in Visual Studio 2015 erstellt haben, bedeutet dies beispielsweise, dass diese nicht erneut kompiliert werden muss, um sie aus einer Anwendung zu nutzen, die mit Visual Studio 2017 erstellt wurde.
+In Visual Studio 2013 und früheren Versionen war die Binärdateienkompatibilität zwischen Objektdateien (OBJ-Dateien), statischen Bibliotheken (LIB-Dateien), dynamischen Bibliotheken (DLL-Dateien) und ausführbaren Dateien (EXE-Dateien), die unter Verwendung verschiedener Versionen des Compilertoolsets und der Runtimebibliotheken erstellt wurden, nicht gewährleistet. 
 
-Für diese Regel gelten zwei Ausnahmen: Die Binärdateienkompatibilität ist in diesen Fällen nicht gewährleistet:
+In Visual Studio 2015 und höheren Versionen ist die Hauptversion des C++-Toolsets 14 (v140 für Visual Studio 2015, v141 für Visual Studio 2017 und v142 für Visual Studio 2019). Dies spiegelt die Tatsache wider, dass sowohl die Runtimebibliotheken als auch die Anwendungen, die mit einer der beiden Versionen des Compilers kompiliert wurden, binärdateienkompatibel sind. Dies bedeutet, dass Sie eine mit Visual Studio 2015 erstellte Drittanbieterbibliothek nicht noch mal kompilieren müssen, um sie aus einer Anwendung zu nutzen, die mit Visual Studio 2017 oder Visual Studio 2019 erstellt wurde.
 
-1. Wenn statische Bibliotheken oder Objektdateien mit dem Compilerschalter `/GL` kompiliert werden.
+Die einzige Ausnahme dieser Regel sind mit dem `/GL`-Compilerschalter kompilierte statische Bibliotheken oder Objektdateien, die nicht binärkompatibel sind. 
 
-2. Beim Verwenden von Bibliotheken, die mit einem Toolset erstellt wurden, dessen Version höher als die Version des Toolsets ist, das zum Kompilieren und Verknüpfen der Anwendung verwendet wurde. Beispielsweise kann ein Programm, das mit der Compilerversion 19.12 kompiliert und verknüpft wurde, Bibliotheken nutzen, die mit Version 19.0 bis 19.12 kompiliert wurden. Außerdem besteht Binärdateienkompatibilität nur zwischen Visual Studio 2015 und Visual Studio 2017. Die Verknüpfung von 19.x-Programmen mit Bibliotheken, die mit Visual Studio 2013 oder früher erstellt wurden, wird nicht unterstützt.
+Wenn Sie Binärdateien kombinieren, die mit verschiedenen unterstützten Versionen des MSVC-Toolsets erstellt wurden, kann das Visual C++ Redistributable-Paket, auf dem Ihre Anwendung ausgeführt wird, nicht älter als die Toolsetversionen sein, die zum Erstellen Ihrer App oder der verarbeiteten Bibliotheken verwendet werden. 
 
 ## <a name="see-also"></a>Siehe auch
 

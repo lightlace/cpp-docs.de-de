@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 57e9556ccb7313c137c173e0f2143dc6e563d4c3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 35f6ac980a451b375d5005c20853fdd29c78d96d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898816"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448941"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Verwenden von nativen Zielversionen in Visual Studio, um alte Projekte zu erstellen
 
@@ -44,7 +44,7 @@ Wenn Sie kein Upgrade durchführen möchten, führt Visual Studio keine Änderun
 
 ## <a name="instructions-for-visual-studio-2008"></a>Anweisungen für Visual Studio 2008
 
-Visual Studio 2008 verfügte über ein eigenes dediziertes Buildsystem für C++ mit dem Namen **VCBuild**. Ab Visual Studio 2010 wurden Visual C++-Projekte so verändert, dass sie fortan **MSBuild** verwendeten. Dies bedeutet, dass Sie ein Update durchführen müssen, damit Sie Ihre Visual Studio 2008-Projekte in der neuesten Visual Studio-Version erstellen können. Ihr aktualisiertes Projekt erstellt noch immer Binärdateien, die mit den Binärdateien, die mithilfe der IDE von Visual Studio 2008 erstellt wurden, voll kompatibel sind.
+Visual Studio 2008 verfügte über ein eigenes dediziertes Buildsystem für C++ mit dem Namen **VCBuild**. Ab Visual Studio 2010 wurden C++-Projekte in Visual Studio so verändert, dass sie **MSBuild** verwendeten. Dies bedeutet, dass Sie ein Update durchführen müssen, damit Sie Ihre Visual Studio 2008-Projekte in der neuesten Visual Studio-Version erstellen können. Ihr aktualisiertes Projekt erstellt noch immer Binärdateien, die mit den Binärdateien, die mithilfe der IDE von Visual Studio 2008 erstellt wurden, voll kompatibel sind.
 
 Zunächst müssen Sie zusätzlich zur aktuellen Visual Studio-Version Visual Studio 2010 auf demselben Computer erstellen, auf dem sich Visual Studio 2008 befindet. Nur Visual Studio 2010 installiert die **MSBuild**-Skripts, die für Visual Studio 2008-Projekte erforderlich sind.
 
@@ -52,13 +52,13 @@ Als Nächstes müssen Sie Ihre Visual Studio 2008-Projektmappen und -Projekte au
 
 Wenn das Upgrade abgeschlossen ist und der Protokollbericht Fehler oder Warnungen für Ihre Projekte ausgibt, überprüfen Sie diese sorgfältig. Die Konvertierung von **VCBuild** in **MSBuild** kann Probleme verursachen. Stellen Sie sicher, dass Sie alle Aktionselemente verstehen und implementieren, die im Bericht aufgeführt sind. Weitere Informationen zum Upgradeprotokollbericht und zu Problemen, die womöglich bei der Konvertierung von **VCBuild** in **MSBuild** auftreten, finden Sie im Blogpost: [C++ Native Multi-Targeting (Native Festlegung von Zielversionen für C++)](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/).
 
-Wenn das Projektupgrade abgeschlossen ist, und Sie alle Probleme in der Protokolldatei behoben haben, ist Ihre Lösung tatsächlich auf das neueste Toolset ausgerichtet. Als letzten Schritt ändern Sie die Eigenschaften für jedes Projekt in der Projektmappe, um das Toolset von Visual Studio 2008 zu verwenden. Laden Sie die Projektmappe in der aktuellen Version von Visual Studio, und öffnen Sie für jedes Projekt in der Projektmappe die **Eigenschaftenseiten** des Projekts: Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie anschließend auf **Eigenschaften**. Ändern Sie im Dialogfeld **Eigenschaftenseiten** den Wert der Dropdownliste **Konfiguration** in **Alle Konfigurationen**. Wählen Sie unter **Konfigurationseigenschaften**die Option **Allgemein** aus, und ändern Sie dann **Plattformtoolset** in **Visual Studio 2008 (v90)**.
+Wenn das Projektupgrade abgeschlossen ist, und Sie alle Probleme in der Protokolldatei behoben haben, ist Ihre Lösung tatsächlich auf das neueste Toolset ausgerichtet. Als letzten Schritt ändern Sie die Eigenschaften für jedes Projekt in der Projektmappe, um das Toolset von Visual Studio 2008 zu verwenden. Laden Sie die Projektmappe in der aktuellen Version von Visual Studio, und öffnen Sie für jedes Projekt in der Projektmappe die **Eigenschaftenseiten** des Projekts: Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie anschließend auf **Eigenschaften**. Ändern Sie im Dialogfeld **Eigenschaftenseiten** den Wert der Dropdownliste **Konfiguration** in **Alle Konfigurationen**. Wählen Sie unter **Konfigurationseigenschaften**die Option **Allgemein** aus, und ändern Sie dann **Plattformtoolset** in **Visual Studio 2008 (v90)** .
 
 Nach dieser Änderung wird der Visual Studio 2008-Compiler und die -Bibliotheken zum Generieren von Projektbinärdateien verwendet, wenn Sie die Projektmappe in der aktuellen Version von Visual Studio erstellen.
 
 ## <a name="install-an-older-visual-studio-toolset"></a>Installieren eines älteren Visual Studio-Toolsets
 
-Sie besitzen womöglich ein älteres Visual C++-Projekt, dass Sie nicht upgraden können oder wollen. Sie verfügen jedoch nicht über die Plattformtoolsetversion, die mit Ihrem Projekt übereinstimmt. Um das Toolset zu erhalten, können Sie in diesem Fall die kostenlose Visual Studio Community- oder Express-Edition der von Ihnen benötigten Version installieren. Jede Version von Visual Studio ab Visual Studio 2008 kann den Compiler, die Tools und Bibliotheken installieren, die auf diese Version der aktuellen Visual Studio-Version ausgerichtet sein muss. Durchsuchen Sie das Microsoft Download Center, um eine bestimmte Visual Studio-Version zu finden und herunterzuladen. Stellen Sie sicher, dass Sie die C++-Installationsoptionen während des Setups auswählen. Führen Sie nach dem Abschluss des Setups diese Visual Studio-Version aus, um Updates zu installieren. Prüfen Sie auch auf mögliche Windows Update-Änderungen, die erforderlich sein könnten. Dieser Updateüberprüfungsprozess muss möglicherweise mehrmals wiederholt werden, damit Sie jedes Update erhalten.
+Sie besitzen möglicherweise ein älteres C++-Projekt in Visual Studio, dass Sie nicht upgraden können oder wollen. Sie verfügen jedoch nicht über die für Ihr Projekt geeignete Plattformtoolsetversion. Um das Toolset zu erhalten, können Sie in diesem Fall die kostenlose Visual Studio Community- oder Express-Edition der von Ihnen benötigten Version installieren. Jede Version von Visual Studio ab Visual Studio 2008 kann den Compiler, die Tools und Bibliotheken installieren, die auf diese Version der aktuellen Visual Studio-Version ausgerichtet sein muss. Durchsuchen Sie das Microsoft Download Center, um eine bestimmte Visual Studio-Version zu finden und herunterzuladen. Stellen Sie sicher, dass Sie die C++-Installationsoptionen während des Setups auswählen. Führen Sie nach dem Abschluss des Setups diese Visual Studio-Version aus, um Updates zu installieren. Prüfen Sie auch auf mögliche Windows Update-Änderungen, die erforderlich sein könnten. Dieser Updateüberprüfungsprozess muss möglicherweise mehrmals wiederholt werden, damit Sie jedes Update erhalten.
 
 Die derzeit verfügbaren Downloads, finden Sie unter [Herunterladen älterer Visual Studio-Software](https://visualstudio.microsoft.com/vs/older-downloads/).
 

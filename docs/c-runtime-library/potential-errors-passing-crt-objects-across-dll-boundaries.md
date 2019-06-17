@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: 31f9d9aceba167b516c9d37724e240f1bc4586e1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 10fbb128698b6422779d09a15fe3c1d25e8de5b5
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749898"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446657"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen
 
@@ -23,7 +23,7 @@ HEAP[]: Invalid Address specified to RtlValidateHeap(#,#) (HEAP[]: Ungültige Ad
 
 ## <a name="causes"></a>Ursachen
 
-Jede Kopie der CRT-Bibliothek verfügt über einen eigenen Status, der von Ihrer App oder DLL im lokalen Threadspeicher gespeichert wird. Daher gelten CRT-Objekte wie Dateihandles, Umgebungsvariablen und Gebietsschemas nur für die Kopie der CRT in derjenigen App oder DLL, in der diese Objekte zugewiesen oder festgelegt sind. Wenn eine DLL und die zugehörigen App-Clients verschiedene Kopien der CRT-Bibliothek verwenden, können Sie diese CRT-Objekte nicht über die DLL-Grenze hinweg übergeben und damit rechnen, dass diese auf der anderen Seite ordnungsgemäß übernommen werden. Dies gilt insbesondere für CRT-Versionen vor der Universal CRT in Visual Studio 2015 und höher. Für jede mit Visual C++ 2013 oder früher erstellte Version von Visual Studio gab es eine versionsspezifische CRT-Bibliothek. Die internen Implementierungsdetails der CRT wie z.B. die Datenstrukturen und Benennungskonventionen unterschieden sich von Version zu Version. Die dynamische Verknüpfung von Code, der für eine Version der CRT kompiliert wurde, mit einer anderen Version der CRT-DLL wurde nie unterstützt. Die Verknüpfung funktionierte zwar zuweilen, das war aber eher Glück als Absicht.
+Jede Kopie der CRT-Bibliothek verfügt über einen eigenen Status, der von Ihrer App oder DLL im lokalen Threadspeicher gespeichert wird. Daher gelten CRT-Objekte wie Dateihandles, Umgebungsvariablen und Gebietsschemas nur für die Kopie der CRT in derjenigen App oder DLL, in der diese Objekte zugewiesen oder festgelegt sind. Wenn eine DLL und die zugehörigen App-Clients verschiedene Kopien der CRT-Bibliothek verwenden, können Sie diese CRT-Objekte nicht über die DLL-Grenze hinweg übergeben und damit rechnen, dass diese auf der anderen Seite ordnungsgemäß übernommen werden. Dies gilt insbesondere für CRT-Versionen vor der Universal CRT in Visual Studio 2015 und höher. Für jede mit Visual Studio 2013 oder früher erstellte Version von Visual Studio gab es eine versionsspezifische CRT-Bibliothek. Die internen Implementierungsdetails der CRT wie z.B. die Datenstrukturen und Benennungskonventionen unterschieden sich von Version zu Version. Die dynamische Verknüpfung von Code, der für eine Version der CRT kompiliert wurde, mit einer anderen Version der CRT-DLL wurde nie unterstützt. Die Verknüpfung funktionierte zwar zuweilen, das war aber eher Glück als Absicht.
 
 Und da jede Kopie der CRT-Bibliothek einen eigenen Heap-Manager aufweist, ist das Belegen von Speicher in einer CRT-Bibliothek und das Übergeben des Zeigers über eine DLL-Grenze hinweg zur Freigabe durch eine andere Kopie der CRT-Bibliothek eine potenzielle Ursache für eine Beschädigung des Heaps. Wenn Sie Ihre DLL so konzipieren, dass sie CRT-Objekte über die Grenze hinweg übergibt oder Speicher belegt, der außerhalb der DLL freigegeben werden soll, müssen Sie die App-Clients der DLL so einrichten, dass sie dieselbe Kopie der CRT-Bibliothek verwenden wie die DLL. Die DLL und die DLL-Clients verwenden normalerweise nur dann die gleiche Kopie der CRT-Bibliothek, wenn beide zur Ladezeit mit der gleichen Version der CRT-DLL verknüpft sind. Da die von Visual Studio 2015 und später auch Windows 10 verwendete DLL-Version der Universal CRT-Bibliothek jetzt eine zentral bereitgestellte Windows-Komponente ist (ucrtbase.dll), kann sie für Apps verwendet werden, die mit Visual Studio 2015 und höher erstellt werden. Eine Einschränkung gilt aber auch hier: Auch wenn der CRT-Code identisch ist, können Sie Speicher, der in einem Heap belegt ist, nicht einer Komponente zuweisen, die einen anderen Heap verwendet.
 

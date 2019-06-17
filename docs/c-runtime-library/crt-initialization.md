@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 980d94b29d31d8eea910fbdb171a0ae8df1dccca
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 03126b8fdf1c3824b114d822c269655c22e5ee9f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750035"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446686"
 ---
 # <a name="crt-initialization"></a>CRT-Initialisierung
 
@@ -41,7 +41,7 @@ Eine Möglichkeit für die Beantwortung dieser Frage besteht darin, einen Haltep
 
 Wenn Sie die Funktionen im Stapel durchsuchen, werden Sie feststellen, dass CRT eine Liste der Funktionszeiger durchläuft und dabei jeden Einzelnen aufruft. Diese Funktionen ähneln entweder `func()` oder Konstruktoren für Klasseninstanzen.
 
-CRT ruft die Liste der Funktionszeiger aus dem Visual C++-Compiler ab. Wenn der Compiler einen globalen Initialisierer erkennt, generiert er einen dynamischen Initialisierer im Abschnitt `.CRT$XCU` (wobei `CRT` für den Namen des Abschnitts und `XCU` für den Gruppennamen steht). Um eine Liste dieser dynamischen Initialisierer abzurufen, führen Sie den Befehl **dumpbin/all main.obj** aus, und durchsuchen Sie dann den Abschnitt `.CRT$XCU` (sofern „main.cpp“ als C++-Datei und nicht als C-Datei kompiliert ist). Sie sieht ungefähr wie folgt aus:
+CRT ruft die Liste der Funktionszeiger aus dem Microsoft Visual C++-Compiler ab. Wenn der Compiler einen globalen Initialisierer erkennt, generiert er einen dynamischen Initialisierer im Abschnitt `.CRT$XCU` (wobei `CRT` für den Namen des Abschnitts und `XCU` für den Gruppennamen steht). Um eine Liste dieser dynamischen Initialisierer abzurufen, führen Sie den Befehl **dumpbin/all main.obj** aus, und durchsuchen Sie dann den Abschnitt `.CRT$XCU` (sofern „main.cpp“ als C++-Datei und nicht als C-Datei kompiliert ist). Sie sieht ungefähr wie folgt aus:
 
 ```
 SECTION HEADER #6
@@ -77,7 +77,7 @@ CRT definiert zwei Zeiger:
 
 Bei beiden Gruppen sind keine Symbole definiert, außer `__xc_a` und `__xc_z`.
 
-Wenn der Linker verschiedene `.CRT`-Gruppen liest, fasst er sie in einem Bereich zusammen und sortiert sie in alphabetischer Reihenfolge. Dies bedeutet, dass die benutzerdefinierten globalen Initialisierer (die der Visual C++-Compiler in `.CRT$XCU` einfügt) immer nach `.CRT$XCA` und vor `.CRT$XCZ` kommen.
+Wenn der Linker verschiedene `.CRT`-Gruppen liest, fasst er sie in einem Bereich zusammen und sortiert sie in alphabetischer Reihenfolge. Dies bedeutet, dass die benutzerdefinierten globalen Initialisierer (die der Microsoft Visual C++-Compiler in `.CRT$XCU` einfügt) immer nach `.CRT$XCA` und vor `.CRT$XCZ` kommen.
 
 Der Abschnitt ähnelt der folgenden Ausgabe:
 
