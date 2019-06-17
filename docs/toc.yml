@@ -1531,14 +1531,20 @@
               href: build/reference/dot-xml-file-processing.md
             - name: Trennzeichen für C++-Dokumentationstags
               href: build/reference/delimiters-for-visual-cpp-documentation-tags.md
-- name: Schreiben und Refactoring von Code (C++)
+- name: Lesen und Schreiben von Code
   expanded: false
   items:
-    - name: Schreiben und Refactoring von Code (C++)
+    - name: Lesen und Schreiben von Code
       expanded: false
       items:
-        - name: Schreiben und Umgestalten von Code
+        - name: Lesen und verstehen von C++-Code
+          href: ide/read-and-understand-code-cpp.md
+        - name: Schreiben und Refactoring von C++-Code
           href: ide/writing-and-refactoring-code-cpp.md
+        - name: Navigieren durch C++-Code
+          href: ide/navigate-code-cpp.md
+        - name: Zusammenarbeiten mithilfe von Live Share für C++
+          href: ide/live-share-cpp.md
         - name: Ändern einer Signatur
           href: ide/refactoring/change-signature.md
         - name: Konvertieren in ein Rohzeichenfolgenliteral
@@ -1597,8 +1603,6 @@
           href: ide/implementing-a-connection-point-visual-cpp.md
         - name: Implementieren einer Schnittstelle
           href: ide/implementing-an-interface-visual-cpp.md
-        - name: Navigieren in der Klassenstruktur
-          href: ide/navigating-the-class-structure-visual-cpp.md
         - name: Überschreiben einer virtuellen Funktion
           href: ide/overriding-a-virtual-function-visual-cpp.md
 - name: Windows-Desktopentwicklung
