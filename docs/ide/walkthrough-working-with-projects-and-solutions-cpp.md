@@ -1,18 +1,18 @@
 ---
 title: 'Exemplarische Vorgehensweise: Arbeiten mit Projekten und Projektmappen (C++)'
-ms.date: 09/14/2018
+ms.date: 05/14/2019
 helpviewer_keywords:
 - solutions [C++]
 - projects [C++], about projects
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 6dfee695092a69252069dbfc73b6260bd65245e2
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57820064"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182640"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Exemplarische Vorgehensweise: Arbeiten mit Projekten und Projektmappen (C++)
 
@@ -22,24 +22,43 @@ In Visual Studio wird die Arbeit in Projekten und Projektmappen organisiert. Ein
 
 ## <a name="before-you-start"></a>Vor der Installation
 
-Sie benötigen Visual Studio 2017 Version 15.3 oder höher, um diese exemplarische Vorgehensweise abzuschließen. Wie Sie eine Kopie erhalten, erfahren Sie in der folgenden Anleitung: [Install C++ support in Visual Studio (Installieren der C++-Unterstützung in Visual Studio)](../build/vscpp-step-0-installation.md). Wenn Sie dies noch nicht durchgeführt haben, befolgen Sie nach der Installation die nächsten Schritte im Tutorial „Hallo Welt“, um sicherzustellen, dass Visual C++ ordnungsgemäß installiert wurde und alles funktioniert.
+Sie benötigen mindestens Visual Studio 2017, um diese exemplarische Vorgehensweise abschließen zu können. Wie Sie eine Kopie erhalten, erfahren Sie in der folgenden Anleitung: [Install C++ support in Visual Studio (Installieren der C++-Unterstützung in Visual Studio)](../build/vscpp-step-0-installation.md). Wenn Sie dies noch nicht durchgeführt haben, befolgen Sie nach der Installation die nächsten Schritte im Tutorial „Hallo Welt“, um sicherzustellen, dass die C++-Komponenten ordnungsgemäß installiert wurden und alles funktioniert.
 
 Es ist hilfreich, die Grundlagen von C++ zu verstehen und zu wissen, wofür der Compiler, der Linker und der Debugger verwendet werden. Im Tutorial wird ebenfalls davon ausgegangen, dass Sie mit Windows vertraut sind und wissen, wie Sie z.B. Menüs und Dialogfelder verwenden.
 
 ## <a name="create-a-project"></a>Erstellen eines Projekts
 
-Um ein Projekt zu erstellen, wählen Sie zunächst eine Projekttypvorlage. Für jeden Projekttyp legt Visual Studio Compilereinstellungen fest und generiert abhängig vom Typ Startcode, den Sie später ändern können.
+Um ein Projekt zu erstellen, wählen Sie zunächst eine Projekttypvorlage. Für jeden Projekttyp legt Visual Studio Compilereinstellungen fest und generiert abhängig vom Typ Startcode, den Sie später ändern können. Die folgenden Schritte variieren leicht, je nachdem, welche Version von Visual Studio Sie verwenden. Stellen Sie sicher, dass Sie in der Versionsauswahl links oben auf dieser Seite die richtige Version ausgewählt haben.
 
-### <a name="to-create-a-project"></a>So erstellen Sie ein Projekt
+::: moniker range="vs-2019"
 
-1. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**.
+### <a name="to-create-a-project-in-visual-studio-2019"></a>Erstellen eines Projekts in Visual Studio 2019
+
+1. Klicken Sie im Hauptmenü auf **Datei** > **Neu** > **Projekt**, um das Dialogfeld **Neues Projekt erstellen** zu öffnen.
+
+1. Legen Sie oben im Dialogfeld die **Sprache** auf **C++** , die **Plattform** auf **Windows** und den **Projekttyp** auf **Konsole** fest. 
+
+1. Wählen Sie aus der gefilterten Projekttypliste **Konsolen-App** aus, und klicken Sie auf **Weiter**. Geben Sie auf der nächsten Seite *Game* als Name für das Projekt ein.
+
+   Sie können den Standardspeicherort in der Dropdownliste **Speicherort** akzeptieren, einen anderen Speicherort eingeben oder über die Schaltfläche **Durchsuchen** das Verzeichnis auswählen, in dem Sie das Projekt speichern möchten.
+
+   Beim Erstellen eines Projekts wird das Projekt von Visual Studio in eine Projektmappe eingefügt. Standardmäßig weist die Lösung den gleichen Namen wie das Projekt auf. Sie können den Namen im Feld **Projektmappenname** ändern. Behalten Sie für dieses Beispiel jedoch den Standardnamen bei.
+
+1. Klicken Sie auf die Schaltfläche **Erstellen**, um das Projekt zu erstellen.
+
+   Visual Studio erstellt Ihre neue Projektmappe und die Projektdateien und öffnet den Editor für die Quellcodedatei „Game.cpp“, die generiert wurde.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-project-in-visual-studio-2017"></a>Erstellen eines Projekts in Visual Studio 2017
+
+1. Wählen Sie auf der Menüleiste **Datei** > **Neu** > **Projekt** aus.
 
 1. Erweitern Sie **Installiert** im linken Bereich des Dialogfeld **Neues Projekt**, und wählen Sie **Visual C++** aus, wenn dies nicht bereits geöffnet ist.
 
 1. Wählen Sie aus der Liste der installierten Vorlagen im mittleren Bereich **Windows-Konsolenanwendung** aus.
-
-   > [!NOTE]
-   > In früheren Versionen von Visual Studio heißt die installierte Vorlage **Win32-Konsolenanwendung**.
 
 1. Geben Sie im Feld **Name** einen Namen für das Projekt ein. Geben Sie für dieses Beispiel *Game* ein.
 
@@ -50,6 +69,30 @@ Um ein Projekt zu erstellen, wählen Sie zunächst eine Projekttypvorlage. Für 
 1. Wählen Sie die Schaltfläche **OK** aus, um das Projekt zu erstellen.
 
    Visual Studio erstellt Ihre neue Projektmappe und die Projektdateien und öffnet den Editor für die Quellcodedatei „Game.cpp“, die generiert wurde.
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-project-in-visual-studio-2015"></a>Erstellen eines Projekts in Visual Studio 2015
+
+1. Wählen Sie auf der Menüleiste **Datei** > **Neu** > **Projekt** aus.
+
+1. Erweitern Sie **Installiert** im linken Bereich des Dialogfeld **Neues Projekt**, und wählen Sie **Visual C++** aus, wenn dies nicht bereits geöffnet ist.
+
+1. Wählen Sie aus der Liste der installierten Vorlagen im mittleren Bereich **Win32-Konsolenanwendung** aus.
+
+1. Geben Sie im Feld **Name** einen Namen für das Projekt ein. Geben Sie für dieses Beispiel *Game* ein.
+
+   Sie können den Standardspeicherort in der Dropdownliste **Speicherort** akzeptieren, einen anderen Speicherort eingeben oder über die Schaltfläche **Durchsuchen** das Verzeichnis auswählen, in dem Sie das Projekt speichern möchten.
+
+   Beim Erstellen eines Projekts wird das Projekt von Visual Studio in eine Projektmappe eingefügt. Standardmäßig weist die Lösung den gleichen Namen wie das Projekt auf. Sie können den Namen im Feld **Projektmappenname** ändern. Behalten Sie für dieses Beispiel jedoch den Standardnamen bei.
+
+1. Wählen Sie die Schaltfläche **OK** aus, um das Projekt zu erstellen.
+
+   Visual Studio erstellt Ihre neue Projektmappe und die Projektdateien und öffnet den Editor für die Quellcodedatei „Game.cpp“, die generiert wurde.
+
+::: moniker-end
 
 ## <a name="organize-projects-and-files"></a>Organisieren von Projekten und Dateien
 
@@ -117,7 +160,7 @@ In diesem Teil der exemplarischen Vorgehensweise wird gezeigt, wie dem Projekt e
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
 
     ```cpp
-    #include "pch.h"
+    #include "pch.h" // remove this line in Visual Studio 2019
     #include "Cardgame.h"
     #include <iostream>
 
@@ -155,7 +198,7 @@ Fügen Sie Code zu Ihrer App hinzu, der die neuen Funktionen testet.
     // Game.cpp : Defines the entry point for the console application.
     //
 
-    #include "pch.h"
+    #include "pch.h" // remove this line in Visual Studio 2019
     #include "Cardgame.h"
     #include <iostream>
 

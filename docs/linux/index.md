@@ -2,12 +2,12 @@
 layout: LandingPage
 title: Linux-Entwicklung mit der C++-Dokumentation
 description: Erstellen und Debuggen Sie Anwendungen die unter Linux ausgeführt werden.
-ms.openlocfilehash: f57777451e861a8ea0df1eb81fc97553c176ebec
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: ac80c6ad3b0650d7da20f18b049af0242ffa5704
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821649"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042736"
 ---
 # <a name="linux-development-with-c-documentation"></a>Linux-Entwicklung mit der C++-Dokumentation
 
@@ -34,7 +34,7 @@ Verwenden Sie Visual Studio 2017 oder höher, um Anwendungen zu erstellen oder z
         </a>
     </li>
     <li>
-        <a href="https://blogs.msdn.microsoft.com/vcblog/2016/03/30/visual-c-for-linux-development/">
+        <a href="https://devblogs.microsoft.com/cppblog/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -44,8 +44,8 @@ Verwenden Sie Visual Studio 2017 oder höher, um Anwendungen zu erstellen oder z
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Visual C++ für die Linux – Blog</h3>
-                        <p>Bleiben Sie auf dem Laufenden mit den neuen Features, die Visual C++ für die Linux-Arbeitsauslastung hinzugefügt wurden.</p>
+                        <h3>C++-Teamblog</h3>
+                        <p>Halten Sie sich über die neuesten C++-Features in Visual Studio auf dem neuesten Stand.</p>
                     </div>
                 </div>
             </div>
@@ -64,8 +64,7 @@ Verwenden Sie Visual Studio 2017 oder höher, um Anwendungen zu erstellen oder z
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">C++ in Visual Studio</a></h3>
-                        <p><a href="/cpp/overview-of-cpp-development">Übersicht über die C++-Entwicklung in Visual Studio</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio">C++ in Visual Studio</a></h3>
                     </div>
                 </div>
             </div>

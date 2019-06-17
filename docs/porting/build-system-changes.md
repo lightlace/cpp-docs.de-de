@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: 621e62379657da66d6eaec7a3ceff780fd610066
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c3e51aa7e5a4346137e94191b551b0d53452e460
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828172"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449006"
 ---
 # <a name="build-system-changes"></a>Buildsystemänderungen
 
-Zum Erstellen von Visual C++-Projekten wird das MSBuild-System verwendet. In Visual Studio 2008 und früheren Releases wurde jedoch das VCBuild-System verwendet. Bestimmte Dateitypen und Konzepte, die von VCBuild abhängig waren, sind entweder nicht mehr vorhanden und werden im aktuellen System anders umgesetzt. In diesem Artikel werden die Unterschiede im aktuellen Buildsystem behandelt.
+Zum Erstellen von C++-Projekten in Visual Studio wird das MSBuild-System verwendet. In Visual Studio 2008 und früheren Releases wurde jedoch das VCBuild-System verwendet. Bestimmte Dateitypen und Konzepte, die von VCBuild abhängig waren, sind entweder nicht mehr vorhanden und werden im aktuellen System anders umgesetzt. In diesem Artikel werden die Unterschiede im aktuellen Buildsystem behandelt.
 
 ## <a name="vcproj-is-now-vcxproj"></a>VCPROJ ist nun VCXPROJ
 
@@ -37,7 +37,7 @@ Im aktuellen Release lautet die Erweiterung für Projekteigenschaftenblätter PR
 
 ## <a name="custom-build-rules-and-rules-files"></a>Benutzerdefinierte Buildregeln und RULES-Dateien
 
-In früheren Releases waren *Regeldateien* XML-basierte Dateien mit der Erweiterung RULES. Mit Regeldateien können Sie benutzerdefinierte Buildregeln definieren und diese in den Buildvorgang eines Visual C++-Projekts integrieren. Mit benutzerdefinierten Buildregeln, die mehreren Erweiterungen zugeordnet sein können, können Sie Eingabedateien an ein Tool übergeben, das mindestens eine Ausgabedatei erstellt.
+In früheren Releases waren *Regeldateien* XML-basierte Dateien mit der Erweiterung RULES. Mit Regeldateien können Sie benutzerdefinierte Buildregeln definieren und diese in den Buildvorgang eines C++-Projekts in Visual Studio integrieren. Mit benutzerdefinierten Buildregeln, die mehreren Erweiterungen zugeordnet sein können, können Sie Eingabedateien an ein Tool übergeben, das mindestens eine Ausgabedatei erstellt.
 
 In diesem Release werden benutzerdefinierte Buildregeln von den drei Dateitypen XML, PROPS und TARGETS dargestellt, anstatt von einer RULES-Datei. Wenn eine RULES-Datei, die mit einem früheren Release von Visual C++ erstellt wurde, zum aktuellen Release migriert wird, werden entsprechende XML-, PROPS- und TARGETS-Dateien erstellt und mit der ursprünglichen RULES-Datei im Projekt gespeichert.
 
@@ -50,7 +50,7 @@ In früheren Releases hat das Makro **$(Inherit)** die Reihenfolge festgelegt, i
 
 Im aktuellen Release wird die Vererbung durch Festlegen des Werts einer Eigenschaft als Verkettung von Literalwerten und Eigenschaftenmakros unterstützt. Die Makros **$(Inherit)** und **$(NoInherit)** werden nicht unterstützt.
 
-Im folgenden Beispiel wird einer Eigenschaft auf einer Eigenschaftenseite eine durch Semikolons getrennte Liste zugewiesen. Die Liste besteht aus der Verkettung des Literals *\<Wert>* und des Werts der `MyProperty`-Eigenschaft, auf den mithilfe der Makronotation **$(**<em>MyProperty</em>**)** zugegriffen wird.
+Im folgenden Beispiel wird einer Eigenschaft auf einer Eigenschaftenseite eine durch Semikolons getrennte Liste zugewiesen. Die Liste besteht aus der Verkettung des Literals *\<Wert>* und des Werts der `MyProperty`-Eigenschaft, auf den mithilfe der Makronotation **$(** <em>MyProperty</em> **)** zugegriffen wird.
 
 ```
 Property=<value>;$(MyProperty)

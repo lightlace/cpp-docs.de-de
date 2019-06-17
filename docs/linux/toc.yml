@@ -2,14 +2,14 @@
   href: index.md
 - name: 'Herunterladen, Installieren und Einrichten der Linux-Entwicklungsworkload'
   href: download-install-and-setup-the-linux-development-workload.md
-- name: Konfigurieren eines Linux-Projekts
-  href: configure-a-linux-project.md
-- name: Konfigurieren eines Linux CMake-Projekts
-  href: cmake-linux-project.md
-- name: Erstellen eines neuen Linux-Projekts
-  href: create-a-new-linux-project.md
 - name: Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer
   href: connect-to-your-remote-linux-computer.md
+- name: Erstellen eines neuen Linux-Projekts
+  href: create-a-new-linux-project.md
+- name: Konfigurieren eines Linux-Projekts
+  href: configure-a-linux-project.md
+- name: Erstellen und Konfigurieren eines Linux-CMake-Projekts
+  href: cmake-linux-project.md
 - name: 'Konfigurieren von Linux-Projekten, sodass sie AddressSanitizer verwenden'
   href: linux-asan-configuration.md
 - name: 'Bereitstellen, Ausführen und Debuggen eines Linux-Projekts'

@@ -1,25 +1,25 @@
 ---
 title: Verweise auf Zeiger
-ms.date: 08/20/2018
+ms.date: 06/13/2019
 helpviewer_keywords:
 - references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
-ms.openlocfilehash: 060bbaef74c934de4d8529b3ceafc61d1b70dc70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4719bc5ca0980da3a4f8ad3c2348fc870e916e90
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403450"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141687"
 ---
 # <a name="references-to-pointers"></a>Verweise auf Zeiger
 
-Verweise auf Zeiger können nahezu auf die gleiche Weise wie Verweise auf Objekte deklariert werden. Das Deklarieren eines Verweises auf einen Zeiger führt zu einem änderbaren Wert, der wie ein normaler Zeiger verwendet wird.
+Verweise auf Zeiger können nahezu auf die gleiche Weise wie Verweise auf Objekte deklariert werden. Ein Verweis auf einen Zeiger ist ein änderbarer Wert, der wie ein normaler Zeiger verwendet wird.
 
 ## <a name="example"></a>Beispiel
 
-Die folgenden Codebeispiele veranschaulichen den Unterschied zwischen einem Zeiger auf einen Zeiger und einem Verweis auf einen Zeiger.
+Dieses Codebeispiel zeigt den Unterschied zwischen der Verwendung von einem Zeiger auf einen Zeiger und einem Verweis auf einen Zeiger an.
 
-Die Funktionen `Add1` und `Add2` sind funktional äquivalent (obwohl sie nicht auf die gleiche Weise aufgerufen werden.) Der Unterschied besteht darin, dass `Add1` eine doppelte Dereferenzierung verwendet, während `Add2` die Vorteile eines Verweises auf einen Zeiger nutzt.
+Funktionen `Add1` und `Add2` funktional äquivalent sind, auch wenn sie nicht die gleiche Weise aufgerufen wurden. Der Unterschied besteht darin, die `Add1` verwendet doppelte Dereferenzierung, aber `Add2` verwendet die Vorteile eines Verweises auf einen Zeiger.
 
 ```cpp
 // references_to_pointers.cpp
@@ -52,11 +52,11 @@ void PrintTree( BTree* btRoot );
 int main( int argc, char *argv[] ) {
    // Usage message
    if( argc < 2 ) {
-      cerr << "Usage: Refptr [1 | 2]" << "\n";
+      cerr << "Usage: " << argv[0] << " [1 | 2]" << "\n";
       cerr << "\nwhere:\n";
       cerr << "1 uses double indirection\n";
       cerr << "2 uses a reference to a pointer.\n";
-      cerr << "\nInput is from stdin.\n";
+      cerr << "\nInput is from stdin. Use ^Z to terminate input.\n";
       return 1;
    }
 
@@ -99,15 +99,15 @@ int main( int argc, char *argv[] ) {
 // PrintTree: Display the binary tree in order.
 void PrintTree( BTree* MybtRoot ) {
    // Traverse the left branch of the tree recursively.
-   if ( btRoot->Left )
-      PrintTree( btRoot->Left );
+   if ( MybtRoot->Left )
+      PrintTree( MybtRoot->Left );
 
    // Print the current node.
-   cout << btRoot->szText << "\n";
+   cout << MybtRoot->szText << "\n";
 
    // Traverse the right branch of the tree recursively.
-   if ( btRoot->Right )
-      PrintTree( btRoot->Right );
+   if ( MybtRoot->Right )
+      PrintTree( MybtRoot->Right );
 }
 
 // Add1: Add a node to the binary tree.
@@ -150,13 +150,13 @@ int Add2( BTree*& Root, char *szToAdd ) {
 ```
 
 ```Output
-Usage: Refptr [1 | 2]
+Usage: references_to_pointers.exe [1 | 2]
 
 where:
 1 uses double indirection
 2 uses a reference to a pointer.
 
-Input is from stdin.
+Input is from stdin. Use ^Z to terminate input.
 ```
 
 ## <a name="see-also"></a>Siehe auch

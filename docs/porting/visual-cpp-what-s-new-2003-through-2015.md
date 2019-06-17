@@ -2,16 +2,16 @@
 title: 'Visual C++: Neuerungen von 2003 bis 2015'
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898855"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449809"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
 
-Auf dieser Seite werden alle Neuerungen für sämtliche Versionen von Visual C++ zusammengefasst – angefangen bei Visual Studio 2003 bis hin zu 2015. Diese Informationen werden bereitgestellt, um Sie zu unterstützen, falls Sie ein Upgrade von früheren Versionen von Visual C++ durchführen möchten.
+Auf dieser Seite werden alle Neuerungen für sämtliche Versionen von Visual C++ zusammengefasst – angefangen bei Visual Studio 2003 bis hin zu 2015. Diese Informationen werden bereitgestellt, um Sie zu unterstützen, falls Sie ein Upgrade von früheren Versionen von Visual Studio durchführen möchten.
 
 > [!NOTE]
 > Informationen zur aktuellen Version von Visual Studio finden Sie unter [What's new for Visual C++ in Visual Studio (Neuerungen bei Visual C++ in Visual Studio)](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) und [Conformance Improvements in Visual C++ in Visual Studio (Verbesserungen bei der Übereinstimmung mit Visual C++-Standards in Visual Studio)](../overview/cpp-conformance-improvements.md).
@@ -20,7 +20,7 @@ Auf dieser Seite werden alle Neuerungen für sämtliche Versionen von Visual C++
 
 In Visual Studio 2015 und höher können sich fortlaufende Verbesserungen der Konformität des Compilers mit Standards möglicherweise darauf auswirken, wie der Compiler den vorhandenen Quellcode versteht. In diesem Fall treten während Ihres Builds ggf. neue oder andere Fehler oder sogar Verhaltensunterschiede im Code auf, für den zuvor Builds erstellt wurden und die Ausführung ordnungsgemäß schien.
 
-Glücklicherweise haben diese Unterschiede wenig oder keinen Einfluss auf den Großteil Ihres Quellcodes. Sollten Quellcode- oder andere Änderungen zum Ausgleichen dieser Unterschiede erforderlich sein, sind Korrekturen in der Regel klein und einfach. Wir haben zahlreiche Beispiele für zuvor zulässigen Quellcode, die möglicherweise geändert werden müssen *(vorher)*, und die Updates zur Korrektur *(nachher)* hinzugefügt.
+Glücklicherweise haben diese Unterschiede wenig oder keinen Einfluss auf den Großteil Ihres Quellcodes. Sollten Quellcode- oder andere Änderungen zum Ausgleichen dieser Unterschiede erforderlich sein, sind Korrekturen in der Regel klein und einfach. Wir haben zahlreiche Beispiele für zuvor zulässigen Quellcode, die möglicherweise geändert werden müssen *(vorher)* , und die Updates zur Korrektur *(nachher)* hinzugefügt.
 
 Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte auswirken können, wirken sie sich nicht auf die Binärkompatibilität zwischen Updates für Visual C++-Versionen aus. Eine schwerwiegendere Art der Änderung, die *bedeutende Änderung*, kann die Binärkompatibilität beeinträchtigen. Doch diese Arten von Unterbrechung der Binärkompatibilität treten nur zwischen Hauptversionen von Visual C++ auf. Beispielsweise zwischen Visual C++ 2013 und Visual C++ 2015. Informationen zu bedeutenden Änderungen, die zwischen Visual C++ 2013 und Visual C++ 2015 vorgenommen wurden, finden Sie unter [Änderungsverlauf von Visual C++ von 2003 bis 2015](../porting/visual-cpp-change-history-2003-2015.md).
 
@@ -75,7 +75,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
     };
    ```
 
-   In früheren Versionen des Visual C++-Compilers war dies zulässig, jetzt generiert der Compiler jedoch den folgenden Fehler:
+   In früheren Versionen des Microsoft Visual C++-Compilers war dies zulässig, jetzt generiert der Compiler jedoch den folgenden Fehler:
 
    ```Output
     error C2071: 'S::r': illegal storage class
@@ -253,11 +253,11 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Platzierungsoperatoren „new“ und „delete“**
 
-   An dem **delete**-Operator wurde eine Änderung vorgenommen, damit er dem C++14-Standard entspricht. Detaillierte Informationen zur Standardänderung finden Sie unter [Aufhebung der Zuordnung mit C++-Größeninformationen](http://isocpp.org/files/papers/n3778.html). Durch die Änderungen wird eine Form des globalen **delete**-Operators hinzugefügt, der einen Größenparameter erfordert. Ein Breaking Change ist, dass nun ein Compilerfehler geniert wird (C2956) wenn Sie zuvor einen **delete**-Operator mit der gleichen Signatur verwendet haben (damit dieser einem **„new“-Platzierungsoperator** entspricht). Dieser tritt an der Stelle auf, an der der **Platzierungsoperator „new“** verwendet wird, denn an dieser Stelle im Code versucht der Compiler einen entsprechenden **delete**-Operator zu identifizieren.
+   An dem **delete**-Operator wurde eine Änderung vorgenommen, damit er dem C++14-Standard entspricht. Detaillierte Informationen zur Standardänderung finden Sie unter [Aufhebung der Zuordnung mit C++-Größeninformationen](https://isocpp.org/files/papers/n3778.html). Durch die Änderungen wird eine Form des globalen **delete**-Operators hinzugefügt, der einen Größenparameter erfordert. Ein Breaking Change ist, dass nun ein Compilerfehler geniert wird (C2956) wenn Sie zuvor einen **delete**-Operator mit der gleichen Signatur verwendet haben (damit dieser einem **„new“-Platzierungsoperator** entspricht). Dieser tritt an der Stelle auf, an der der **Platzierungsoperator „new“** verwendet wird, denn an dieser Stelle im Code versucht der Compiler einen entsprechenden **delete**-Operator zu identifizieren.
 
-   Bei der `void operator delete(void *, size_t)`-Funktion hat es sich um einen **„delete“-Platzierungsoperator** gehandelt, der dem **„new“-Platzierungsoperator** `void * operator new(size_t, size_t)` in C++11 entspricht. Durch die Aufhebung der Zuordnung mit C++14-Größeninformationen ist diese **delete**-Funktion nun eine *gewöhnliche Funktion zum Aufheben der Zuordnung* (globaler **delete**-Operator). Der Standard erfordert es, dass das Programm bei Verwendung eines **Platzierungsoperators „new“**, der eine entsprechenden **delete**-Funktion sucht und eine gewöhnliche Funktion zum Aufheben der Zuordnung ermittelt, nicht ordnungsgemäß formatiert ist.
+   Bei der `void operator delete(void *, size_t)`-Funktion hat es sich um einen **„delete“-Platzierungsoperator** gehandelt, der dem **„new“-Platzierungsoperator** `void * operator new(size_t, size_t)` in C++11 entspricht. Durch die Aufhebung der Zuordnung mit C++14-Größeninformationen ist diese **delete**-Funktion nun eine *gewöhnliche Funktion zum Aufheben der Zuordnung* (globaler **delete**-Operator). Der Standard erfordert es, dass das Programm bei Verwendung eines **Platzierungsoperators „new“** , der eine entsprechenden **delete**-Funktion sucht und eine gewöhnliche Funktion zum Aufheben der Zuordnung ermittelt, nicht ordnungsgemäß formatiert ist.
 
-   Angenommen, der Code definiert sowohl einen **Platzierungsoperator „new“** als auch einen **Platzierungsoperator „delete“**:
+   Angenommen, der Code definiert sowohl einen **Platzierungsoperator „new“** als auch einen **Platzierungsoperator „delete“** :
 
    ```cpp
     void * operator new(std::size_t, std::size_t);
@@ -1516,7 +1516,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 #### <a name="compiler"></a>Compiler
 
-Der Microsoft Visual C++-Compiler unterstützt die folgenden ISO C++11-Sprachfeatures:
+Microsoft Visual C++ unterstützt diese ISO C++11-Sprachfeatures:
 
 - Standardvorlagenargumente für Funktionsvorlagen.
 - Delegierende Konstruktoren
@@ -1696,7 +1696,7 @@ Diese verbesserte Unterstützung für ISO-C/C++-Standards erfordert möglicherwe
 ### <a name="new-in-visual-studio-2012-update-1"></a>Neuerungen in Visual Studio 2012 Update 1
 
 Verwenden Sie Windows XP als Ziel, wenn Sie C++-Code erstellen.
-Sie können den Visual C++-Compiler und die Visual C++-Bibliotheken verwenden, um Windows XP und Windows Server 2003 als Ziel zu verwenden.
+Sie können den Microsoft Visual C++-Compiler und die Microsoft Visual C++-Bibliotheken verwenden, um Windows XP und Windows Server 2003 als Ziel zu verwenden.
 
 #### <a name="parallel-programming-support"></a>Unterstützung der parallelen Programmierung
 
@@ -1737,11 +1737,11 @@ Neben den Fenstern **Parallele Aufgaben** und **Parallele Stapel** ist in Visual
 
 **C++-Codekonstrukte.** Für Codekonstrukte wie u.a. „switch“, „if-else“ oder „for loop“ ist Skelettcode in der Dropdownliste der Listenmembers verfügbar. Wählen Sie aus der Liste ein Codefragment aus, das Sie in Ihren Code einfügen, und fügen Sie dann die erforderliche Logik ein. Sie können auch Ihre eigenen Codefragmente erstellen, um sie im Editor zu verwenden.
 
-**Erweiterungen der Listenmembers.** Die Dropdownliste mit den **Listenmembers** wird automatisch angezeigt, wenn Sie Code in den Code-Editor eingeben. Ergebnisse werden gefiltert, sodass beim Tippen nur relevante Members angezeigt werden. Sie können im Dialogfeld **Optionen** unter **Text-Editor** > **C/C++** > **Erweitert** steuern, welche Filterlogik von der Memberliste verwendet werden soll.
+**Erweiterungen der Listenmembers.** Die Dropdownliste mit den **Listenmembers** wird automatisch angezeigt, wenn Sie Code in den Code-Editor eingeben. Ergebnisse werden gefiltert, sodass beim Tippen nur relevante Members angezeigt werden. Sie können im Dialogfeld **Optionen** unter **Text-Editor** > **C/C++**  > **Erweitert** steuern, welche Filterlogik von der Memberliste verwendet werden soll.
 
 **Semantische Farbgebung.** Für Typen, Aufzählungen, Makros sowie andere C++-Tokens ist jetzt standardmäßig die Farbgebung aktiviert.
 
-**Markieren von Verweisen.** Wenn Sie ein Symbol auswählen, werden jetzt alle Instanzen des Symbols in der aktuellen Datei angezeigt. Drücken Sie **STRG**+**UMSCHALT**+**NACH-OBEN** oder **STRG**+**UMSCHALT**+**NACH-UNTEN**, um zwischen den markierten Verweisen zu wechseln. Sie können diese Funktion im Dialogfeld **Optionen** unter **Text-Editor** > **C/C++** > **Erweitert** deaktivieren.
+**Markieren von Verweisen.** Wenn Sie ein Symbol auswählen, werden jetzt alle Instanzen des Symbols in der aktuellen Datei angezeigt. Drücken Sie **STRG**+**UMSCHALT**+**NACH-OBEN** oder **STRG**+**UMSCHALT**+**NACH-UNTEN**, um zwischen den markierten Verweisen zu wechseln. Sie können diese Funktion im Dialogfeld **Optionen** unter **Text-Editor** > **C/C++**  > **Erweitert** deaktivieren.
 
 ### <a name="application-lifecycle-management-tools"></a>Anwendungslebenszyklus-Verwaltungstools
 
@@ -1787,7 +1787,7 @@ Die Code Coverage wurde aktualisiert, um Binärdateien zur Runtime dynamisch zu 
 
 **static_assert-Deklaration.** Der Deklarationstest **static_assert** einer Softwareassertion ermöglicht es, Zuweisungen beim Kompilieren zu testen, anstatt diesen Test wie andere Zuweisungsmechanismen zur Laufzeit auszuführen. Schlägt die Assertion fehl, kann auch die Kompilierung nicht erfolgreich abgeschlossen werden. Das System gibt dann eine Fehlermeldung aus.
 
-**Die Schlüsselwörter „nullptr“ und „__nullptr“.** Mithilfe des Visual C++-Compilers können Sie das Schlüsselwort **nullptr** mit nativem oder verwaltetem Code verwenden. Das Schlüsselwort **nullptr** gibt an, dass ein Zeiger des Typs „Ziehpunkt“, „Innerer Zeiger“ oder „Nativer Zeiger“ nicht auf ein Objekt zeigt. Wenn Sie die Compileroption `/clr` verwenden, interpretiert der Compiler **nullptr** als verwalteten Code. Wird die Option `/clr` hingegen nicht verwendet, gilt der Code als nativ.
+**Die Schlüsselwörter „nullptr“ und „__nullptr“.** Microsoft Visual C++ ermöglicht die Verwendung des Schlüsselworts **nullptr** mit nativem oder verwaltetem Code. Das Schlüsselwort **nullptr** gibt an, dass ein Zeiger des Typs „Ziehpunkt“, „Innerer Zeiger“ oder „Nativer Zeiger“ nicht auf ein Objekt zeigt. Wenn Sie die Compileroption `/clr` verwenden, interpretiert der Compiler **nullptr** als verwalteten Code. Wird die Option `/clr` hingegen nicht verwendet, gilt der Code als nativ.
 Das Microsoft-spezifische Schlüsselwort **__nullptr** entspricht zwar der Bedeutung von **nullptr**, ist aber nur auf nativen Code anwendbar. Wenn Sie nativen C/C++-Code über die Compileroption `/clr` kompilieren, kann der Compiler nicht ermitteln, ob es sich bei dem Schlüsselwort **nullptr** um nativen Code oder um eine verwaltete Benennung handelt. Wenn Sie dem Compiler eindeutige Anweisungen geben möchten, verwenden Sie das Schlüsselwort „nullptr“, um die verwaltete Benennung anzugeben, und **__nullptr**, um die native Benennung anzugeben.
 
 **Compileroption „/Zc:trigraphs“.** Standardmäßig ist die Unterstützung von Trigraphen deaktiviert. Verwenden Sie die Compileroption `/Zc:trigraphs`, um die Unterstützung von Trigraphen zu aktivieren.
@@ -1801,9 +1801,9 @@ Ein Trigraph besteht aus zwei aufeinander folgenden Fragezeichen (??) gefolgt vo
 
 **Intrinsische XOP-Funktionen, intrinsische FMA4-Funktion und intrinsische LWP-Funktionen.** Neue intrinsische Funktionen wurden hinzugefügt, um Prozessortechnologien für intrinsische XOP-Funktionen (für Visual Studio 2010 SP1 hinzugefügt), intrinsische FMA4-Funktionen (für Visual Studio 2010 SP1 hinzugefügt) und intrinsische LWP-Funktionen (für Visual Studio 2010 SP1 hinzugefügt) zu unterstützen. Verwenden Sie „__cpuid“ und „__cpuidex“, um zu bestimmen, welche Prozessortechnologien auf den einzelnen Computern unterstützt werden.
 
-### <a name="visual-c-projects-and-the-build-system"></a>Visual C++-Projekte und das Buildsystem
+### <a name="visual-studio-c-projects-and-the-build-system"></a>C++-Projekte in Visual Studio und das Buildsystem
 
-**MSBuild.** Visual C++-Projektmappen und -Projekte werden jetzt mithilfe von „MSBuild.exe“ erstellt. Diese Datei ersetzt die Datei „VCBuild.exe“. Bei MSBuild handelt es sich um das flexible, erweiterbare, XML-basierte Buildtool, das auch von den anderen Visual Studio-Sprachen und -Projekttypen verwendet wird. Aufgrund dieser Änderung verwenden Visual C++-Projektdateien jetzt das XML-Dateiformat und verfügen über die Erweiterung „vcxproj“. Visual C++-Projektdateien aus früheren Versionen von Visual Studio werden automatisch in das neue Dateiformat konvertiert.
+**MSBuild.** Visual C++-Projektmappen und -Projekte werden jetzt mithilfe von „MSBuild.exe“ erstellt. Diese Datei ersetzt die Datei „VCBuild.exe“. Bei MSBuild handelt es sich um das flexible, erweiterbare, XML-basierte Buildtool, das auch von den anderen Visual Studio-Sprachen und -Projekttypen verwendet wird. Aufgrund dieser Änderung verwenden C++-Projektdateien in Visual Studio jetzt das XML-Dateiformat und haben die Erweiterung „vcxproj“. C++-Projektdateien in Visual Studio aus früheren Versionen von Visual Studio werden automatisch in das neue Dateiformat konvertiert.
 
 **VC++-Verzeichnisse.** Die Einstellung „VC++-Verzeichnisse“ befindet sich jetzt an zwei verschiedenen Orten. Verwenden Sie die Projekteigenschaftenseiten, um Werte projektbasiert für VC++-Verzeichnisse festzulegen. Verwenden Sie den **Eigenschaften-Manager** und ein Eigenschaftenblatt, um globale Werte für jede Konfiguration von VC++-Verzeichnissen festzulegen.
 
@@ -1878,7 +1878,7 @@ Da IntelliSense nur die Informationen verarbeitet, die zum jeweiligen Zeitpunkt 
 
 **MFC-Klassenassistent.** Mit Visual C++ 2010 wird das praktische Tool „MFC-Klassenassistent“ wieder eingeführt. Der MFC-Klassenassistent stellt eine praktische Möglichkeit dar, um einem Projekt Klassen, Meldungen und Variablen hinzuzufügen, ohne Quelldateien manuell verändern zu müssen.
 
-**ATL-Steuerelement-Assistent.** Der ATL-Steuerelement-Assistent füllt das Feld `ProgID` nicht mehr automatisch auf. Wenn ein ATL-Steuerelement keine `ProgID` besitzt, können andere Tools möglicherweise nicht damit arbeiten. Beispielsweise verlangt das Dialogfeld **Insert Active Control** (Aktives Steuerelement einfügen), dass Steuerelemente eine `ProgID` aufweisen. Weitere Informationen zu diesem Dialogfeld finden Sie unter **Insert ActiveX Control Dialog Box („Dialogfeld ‚ActiveX-Steuerelement einfügen‘“)**.
+**ATL-Steuerelement-Assistent.** Der ATL-Steuerelement-Assistent füllt das Feld `ProgID` nicht mehr automatisch auf. Wenn ein ATL-Steuerelement keine `ProgID` besitzt, können andere Tools möglicherweise nicht damit arbeiten. Beispielsweise verlangt das Dialogfeld **Insert Active Control** (Aktives Steuerelement einfügen), dass Steuerelemente eine `ProgID` aufweisen. Weitere Informationen zu diesem Dialogfeld finden Sie unter **Insert ActiveX Control Dialog Box („Dialogfeld ‚ActiveX-Steuerelement einfügen‘“)** .
 
 ### <a name="microsoft-macro-assembler-reference"></a>Referenz zum Microsoft Macro Assembler
 
@@ -1915,12 +1915,12 @@ Neben dem Datentyp „YMMWORD“ werden die 256-Bit-Multimediaoperanden unterst�
 
 #### <a name="c-support-library"></a>C++-Unterstützungsbibliothek
 
-- Mit C++ werden Marshallingbibliotheken eingeführt. Die Marshallingbibliothek bietet eine einfache und optimierte Möglichkeit, Daten zwischen nativen und verwalteten Umgebungen zu marshallen. Die Bibliothek stellt eine Alternative zu komplexeren und weniger effizienten Ansätzen wie PInvoke dar. Weitere Informationen finden Sie unter **Übersicht über das Marshaling in C++**.
+- Mit C++ werden Marshallingbibliotheken eingeführt. Die Marshallingbibliothek bietet eine einfache und optimierte Möglichkeit, Daten zwischen nativen und verwalteten Umgebungen zu marshallen. Die Bibliothek stellt eine Alternative zu komplexeren und weniger effizienten Ansätzen wie PInvoke dar. Weitere Informationen finden Sie unter **Übersicht über das Marshaling in C++** .
 
 #### <a name="atl-server"></a>ATL-Server
 
 - ATL-Server wird als freigegebenes Quellprojekt veröffentlicht.
-- Ein großer Bestandteil der Codebasis von ATL-Server wurde als freigegebenes Quellcodeprojekt auf CodePlex veröffentlicht und wird nicht als Teil von Visual Studio 2008 installiert. Mehrere Dateien, die mit ATL-Server verknüpft sind, gehören nicht mehr zu Visual Studio. Eine Liste mit den entfernten Dateien finden Sie unter **Removed ATL Server Files (Entfernte ATL-Serverdateien)**.
+- Ein großer Bestandteil der Codebasis von ATL-Server wurde als freigegebenes Quellcodeprojekt auf CodePlex veröffentlicht und wird nicht als Teil von Visual Studio 2008 installiert. Mehrere Dateien, die mit ATL-Server verknüpft sind, gehören nicht mehr zu Visual Studio. Eine Liste mit den entfernten Dateien finden Sie unter **Removed ATL Server Files (Entfernte ATL-Serverdateien)** .
 - Die Klassen zur Datencodierung und -decodierung „atlenc.h“ und die Hilfsfunktionen und -klassen in „atlutil.h“ und „atlpath.h“ sind jetzt Bestandteil der ATL-Bibliothek.
 - Microsoft unterstützt weiterhin ATL-Server-Versionen, die in älteren Releases von Visual Studio enthalten sind, solange diese Visual Studio-Versionen unterstützt werden. CodePlex entwickelt weiterhin ATL-Server-Code als Communityprojekt. Microsoft unterstützt keine CodePlex-Version von ATL-Server mehr.
 
@@ -1931,10 +1931,10 @@ Neben dem Datentyp „YMMWORD“ werden die 256-Bit-Multimediaoperanden unterst�
 - Der Compiler unterstützt verwaltete inkrementelle Builds. Wenn Sie diese Option angeben, kompiliert der Compiler keinen Code erneut, wenn eine Referenzassembly verändert wird. Stattdessen wird ein inkrementeller Build durchgeführt. Dateien werden nur erneut kompiliert, wenn Änderungen Auswirkungen auf den abhängigen Code haben.
 - Attribute, die im Zusammenhang mit dem ATL-Server stehen, werden nicht mehr unterstützt. Der Compiler unterstützt einige Attribute nicht mehr, die direkt mit dem ATL-Server im Zusammenhang stehen. Weitere Informationen zu einer vollständigen Liste der entfernten Attribute finden Sie unter „Breaking Changes (Fehler verursachende Änderungen)“.
 - Der Compiler unterstützt die Mikroarchitektur „Intel Core“. Der Compiler optimiert die Mikroarchitektur „Intel Core“ bei der Codegenerierung. Standardmäßig ist diese Optimierung aktiviert und kann nicht deaktiviert werden, da sie Pentium 4 und andere Prozessoren unterstützt.
-- Intrinsische Funktionen unterstützen neue AMD- und Intel-Prozessoren. Einige neue intrinsische Anweisungen unterstützen ein höheres Maß an Funktionalität in aktuelleren AMD- und Intel-Prozessoren. Weitere Informationen zu den neuen intrinsischen Funktionen finden Sie unter **Streaming SIMD Extensions 3 Instructions (Anweisungen zu zusätzlichen SIMD-Streamingerweiterungen 3)**, **Streaming SIMD Extensions 4 Instructions (Anweisungen zu SIMD-Streamingerweiterungen 4)**, **SSE4A and Advanced Bit Manipulation Intrinsics (SSE4A und erweiterbare intrinsische Bitmanipulations-Funktionen)**, **AES Intrinsics (Intrinsische AES-Funktionen)**, **_mm_clmulepi64_si128** und **__rdtscp**.
+- Intrinsische Funktionen unterstützen neue AMD- und Intel-Prozessoren. Einige neue intrinsische Anweisungen unterstützen ein höheres Maß an Funktionalität in aktuelleren AMD- und Intel-Prozessoren. Weitere Informationen zu den neuen intrinsischen Funktionen finden Sie unter **Streaming SIMD Extensions 3 Instructions (Anweisungen zu zusätzlichen SIMD-Streamingerweiterungen 3)** , **Streaming SIMD Extensions 4 Instructions (Anweisungen zu SIMD-Streamingerweiterungen 4)** , **SSE4A and Advanced Bit Manipulation Intrinsics (SSE4A und erweiterbare intrinsische Bitmanipulations-Funktionen)** , **AES Intrinsics (Intrinsische AES-Funktionen)** , **_mm_clmulepi64_si128** und **__rdtscp**.
 - Die `__cpuid`-Funktion wurde aktualisiert. Die Funktionen `__cpuid` und `__cpuidex` unterstützen jetzt einige neue Features der letzten Überarbeitungen von AMD- und Intel-Prozessoren. Das intrinsische Funktion `__cpuidex` ist neu und erfasst weitere Informationen von neueren Prozessoren.
 - Die Compileroption `/MP` reduzierte die Gesamtdauer des Buildvorgangs. Die Option `/MP` kann die Gesamtzeit deutlich reduzieren, damit mehrere Quelldateien kompiliert werden können, indem mehrere Prozesse erstellt werden, in denen Dateien gleichzeitig kompiliert werden. Diese Option ist besonders auf Computern nützlich, die das Hyperthreading, mehrere Prozessoren oder mehrere Kerne unterstützen.
-- Die `/Wp64`-Compileroption und das **__w64**-Schlüsselwort sind veraltet. Die `/Wp64`-Compileroption und das **__w64**-Schlüsselwort, die Probleme mit der 64-Bit-Portabilität ermitteln, sind veraltet und werden in einer zukünftigen Version des Compilers entfernt. Verwenden Sie anstelle dieser Compileroption und des Schlüsselworts einen Visual C++-Compiler, der eine 64-Bit-Plattform als Ziel verwendet.
+- Die `/Wp64`-Compileroption und das **__w64**-Schlüsselwort sind veraltet. Die `/Wp64`-Compileroption und das **__w64**-Schlüsselwort, die Probleme mit der 64-Bit-Portabilität ermitteln, sind veraltet und werden in einer zukünftigen Version des Compilers entfernt. Verwenden Sie anstelle dieser Compileroption und des Schlüsselworts einen Microsoft Visual C++-Compiler, der eine 64-Bit-Plattform als Ziel verwendet.
 - `/Qfast_transcendentals` generiert Inlinecode für transzendentale Funktionen.
 - `/Qimprecise_fwaits` entfernt die internen fwait-Befehle, um Blöcke zu testen, wenn Sie die Compileroption `/fp:except` verwenden.
 
@@ -1988,8 +1988,8 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 - Die `/analyze`-Compileroption (Enterprise-Codeanalyse) wurde hinzugefügt.
 - Die `/bigobj`-Compileroption wurde hinzugefügt.
 - `/clr:pure`, `/clr:safe` und `/clr:oldSyntax` wurden hinzugefügt. (Dies wurde später in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 entfernt.)
-- Veraltete Compileroptionen: Viele Compileroptionen wurden in diesem Release als veraltet gekennzeichnet. Weitere Informationen finden Sie unter **Deprecated Compiler Options (Veraltete Compileroptionen)**.
-- Das doppelte Thunking in `/clr`-Code wurde reduziert. Weitere Informationen finden Sie unter **Doppeltes Thunking (C++)**.
+- Veraltete Compileroptionen: Viele Compileroptionen wurden in diesem Release als veraltet gekennzeichnet. Weitere Informationen finden Sie unter **Deprecated Compiler Options (Veraltete Compileroptionen)** .
+- Das doppelte Thunking in `/clr`-Code wurde reduziert. Weitere Informationen finden Sie unter **Doppeltes Thunking (C++)** .
 - `/EH` (Ausnahmebehandlungsmodell) oder `/EHs` können nicht mehr verwendet werden, um eine Ausnahme zu erfassen, die mit einer anderen Funktion als mit „Throw“ ausgelöst wird. Verwenden Sie stattdessen `/EHa`.
 - Die `/errorReport`-Compileroption (Interne Compilerfehler melden) wurde hinzugefügt.
 - Die `/favor`-Compileroption (Optimierung für 64) wurde hinzugefügt.
@@ -2032,7 +2032,7 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 - Die `/YX`-Compileroption wurde entfernt. Verwenden Sie stattdessen `/Yc` (Vorkompilierte Headerdatei erstellen) oder `/Yu` (Vorkompilierte Headerdatei verwenden). Wenn Sie `/YX` aus Ihren Buildkonfigurationen entfernen und nicht ersetzen, können dadurch die Buildvorgänge beschleunigt werden.
 - `/Zc:forScope` ist jetzt standardmäßig aktiviert.
 - `/Zc:wchar_t` ist jetzt standardmäßig aktiviert.
-- Die `/Zd`-Compileroption wurde entfernt. Debugginginformationen für ausschließlich Zeilennummern werden nicht mehr unterstützt. Verwenden Sie stattdessen `/Zi`. Weitere Informationen finden Sie unter **/Z7, /Zi, /ZI (Debuginformationsformat)**.
+- Die `/Zd`-Compileroption wurde entfernt. Debugginginformationen für ausschließlich Zeilennummern werden nicht mehr unterstützt. Verwenden Sie stattdessen `/Zi`. Weitere Informationen finden Sie unter **/Z7, /Zi, /ZI (Debuginformationsformat)** .
 - `/Zg` ist jetzt nur noch für C-Quellcodedateien und nicht für C++-Quellcodedateien verfügbar.
 - Die `/Zx`-Compileroption (Optimierten Itaniumcode debuggen) wurde hinzugefügt.
 

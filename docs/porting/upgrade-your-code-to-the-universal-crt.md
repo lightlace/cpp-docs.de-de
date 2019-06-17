@@ -2,12 +2,12 @@
 title: Upgraden Ihres Codes auf die Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898764"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448997"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Upgraden Ihres Codes auf die Universal CRT
 
@@ -19,7 +19,7 @@ Mit dieser Umgestaltung haben sich die Namen oder Orte vieler CRT-Headerdateien,
 
 ## <a name="where-to-find-the-universal-crt-files"></a>Wo die universellen CRT-Dateien zu finden sind
 
-Als Windows-Komponente sind die UCRT-Bibliotheksdateien und -header nun Teil des Windows Software Development Kit (SDK). Wenn Sie Visual Studio installieren, werden Teile des Windows SDK auch installiert, die zur Verwendung der UCRT erforderlich sind. Der Visual Studio-Installer fügt die Speicherorte der UCRT-Header, -Bibliotheken und -DLL-Dateien zu den Standardpfaden hinzu, die vom Projekterstellungssystem von Visual Studio verwendet werden. Wenn Sie Ihre Visual C++-Projekte aktualisieren und diese die Standardprojekteinstellungen verwenden, findet die IDE automatisch neue Speicherorte für die Headerdateien, und der Linker verwendet automatisch die neue Standard-UCRT und vcruntime-Bibliotheken. Ebenso werden die Umgebungsvariablen, die Pfade für Header und Bibliotheken enthalten, aktualisiert und arbeiten auch automatisch, wenn Sie die Developer-Eingabeaufforderung verwenden, um die Funktion „Erstellen über die Befehlszeile“ zu nutzen.
+Als Windows-Komponente sind die UCRT-Bibliotheksdateien und -header nun Teil des Windows Software Development Kit (SDK). Wenn Sie Visual Studio installieren, werden Teile des Windows SDK auch installiert, die zur Verwendung der UCRT erforderlich sind. Der Visual Studio-Installer fügt die Speicherorte der UCRT-Header, -Bibliotheken und -DLL-Dateien zu den Standardpfaden hinzu, die vom Projekterstellungssystem von Visual Studio verwendet werden. Wenn Sie Ihre C++-Projekte in Visual Studio aktualisieren und diese die Standardprojekteinstellungen verwenden, findet die IDE automatisch die neuen Speicherorte für Headerdateien, und der Linker verwendet automatisch die neue Standard-UCRT und vcruntime-Bibliotheken. Ebenso werden die Umgebungsvariablen, die Pfade für Header und Bibliotheken enthalten, aktualisiert und arbeiten auch automatisch, wenn Sie die Developer-Eingabeaufforderung verwenden, um die Funktion „Erstellen über die Befehlszeile“ zu nutzen.
 
 Die Headerdateien der C-Standardbibliothek befinden sich nun im Windows SDK in einem Includeordner in einem der Version des SDK spezifischen Verzeichnis. Ein typischer Speicherort für die Headerdateien ist im Verzeichnis „Programme“ oder „Programme (x86)“ unter „Windows-Kits\\10\\Einschließen\\_SDK-Version_\\UCRT“, wobei _SDK-Version_ einer Windows-Version oder einem Update entspricht, z.B. 10.0.14393.0 für das Anniversary-Update von Windows 10.
 
@@ -29,7 +29,7 @@ Die eigentlichen UCRT-DLLs und diejenigen zum Debuggen befinden sich an anderen 
 
 Der compilerspezifische C- und C++Unterstützungsbibliothek für die Laufzeit, **vcruntime**, enthält den erforderlichen Code für die Unterstützung des Programmstarts und Features wie die Ausnahmebehandlung und Interna. Die Bibliothek und deren Headerdateien befinden sich noch immer im versionsspezifischen Microsoft Visual Studio-Ordner in Ihrem Verzeichnis „Programme“ oder „Programme (x86)“. In Visual Studio 2017 befinden sich die Header unter „Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\include (Einschließen)“, und die Link Libraries befinden sich unter „Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\lib\\_architecture_“, wobei _edition_ die Edition der installierten Visual Studio-Version ist. _lib-version_ ist die Version der Bibliotheken und _architecture_ ist die Prozessorarchitektur. Link Libraries für OneCore und Store sind auch im Bibliotheksordner vorhanden. Die Retail- und Debugversionen der statischen Bibliothek sind „libvcruntime.lib“ und „libvcruntimed.lib“. Die Retail- und Debug-Stub-Bibliotheken der dynamischen Verknüpfung sind jeweils „vcruntime.lib“ und „vcruntimed.lib“.
 
-Wenn Sie Ihre Visual C++-Projekte aktualisieren und Sie die **Linker** -Eigenschaft **Alle Standardbibliotheken ignorieren** des Projekts auf **Ja** festgelegt haben oder die Linkeroption `/NODEFAULTLIB` in der Befehlszeile verwenden, müssen Sie die Liste der Bibliotheken so aktualisieren, dass sie die neuen umgestalteten Bibliotheken enthält. Ersetzen Sie die alte CRT-Bibliothek (z.B. libcmt.lib, libcmtd.lib, msvcrt.lib oder msvcrtd.lib) mit den entsprechenden umgestalteten Bibliotheken. Informationen zu den bestimmten Bibliotheken, die Sie verwenden können, finden Sie unter [CRT Library Features (Features der CRT-Bibliothek)](../c-runtime-library/crt-library-features.md).
+Wenn Sie Ihre C++-Projekte in Visual Studio aktualisieren und Sie die **Linker** -Eigenschaft **Alle Standardbibliotheken ignorieren** des Projekts auf **Ja** festgelegt haben oder die Linkeroption `/NODEFAULTLIB` in der Befehlszeile verwenden, müssen Sie die Liste der Bibliotheken so aktualisieren, dass sie die neuen umgestalteten Bibliotheken enthält. Ersetzen Sie die alte CRT-Bibliothek (z.B. libcmt.lib, libcmtd.lib, msvcrt.lib oder msvcrtd.lib) mit den entsprechenden umgestalteten Bibliotheken. Informationen zu den bestimmten Bibliotheken, die Sie verwenden können, finden Sie unter [CRT Library Features (Features der CRT-Bibliothek)](../c-runtime-library/crt-library-features.md).
 
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Bereitstellung und Neuverteilung der Universal CRT
 

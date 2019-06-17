@@ -2,12 +2,12 @@
 title: 'Visual C++-Handbuch: Portieren und Aktualisieren'
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898790"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450374"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++-Handbuch: Portieren und Aktualisieren
 
@@ -53,7 +53,7 @@ Um mit dem Upgrade eines Projekts oder einer Projektmappe zu beginnen, öffnen S
 
 8. Laufzeitfehler oder unerwartete Ergebnisse aufgrund von Verhaltensänderungen
 
-9. Fehler aufgrund von Fehlern, die in den Tools eingeführt wurden Wenn ein Problem auftritt, melden Sie dies dem Visual C++-Team über die normalen Supportkanäle oder das [Visual Studio Feedback Center](http://connect.microsoft.com/VisualStudio/Feedback).
+9. Fehler aufgrund von Fehlern, die in den Tools eingeführt wurden Wenn ein Problem auftritt, melden Sie dies dem Microsoft Visual C++-Team über die normalen Supportkanäle oder die [Visual Studio-Website für die C++-Entwicklercommunity](https://developercommunity.visualstudio.com/spaces/62/index.html).
 
 Zusätzlich zu Änderungen, die Sie aufgrund von Compilerfehlern nicht vermeiden können, sind einige Änderungen bei einem Upgrade optional, wie z. B.:
 
@@ -75,7 +75,7 @@ Vielleicht haben sich auch Ihre Anforderungen geändert, oder Sie können absehe
 
 |Titel|Beschreibung|
 |-----------|-----------------|
-|[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Erläutert, wie in früheren Versionen von Visual C++ erstellte Projekte verwendet werden.|
+|[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Erläutert, wie in früheren Versionen von Visual Studio erstellte Projekte verwendet werden.|
 |[Neuerungen beim C++-Compiler in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|IDE- und Tooländerungen in der aktuellen Visual Studio-Version|
 |[Verbesserungen der C++-Konformität in Visual Studio](../overview/cpp-conformance-improvements.md)|Verbesserungen bei der Übereinstimmung mit Standards zwischen Visual Studio 2015 und Visual Studio|
 |[Änderungsverlauf von Visual C++ von 2003 bis 2015](visual-cpp-change-history-2003-2015.md)|Eine Liste aller Änderungen an den Visual C++-Bibliotheken und -Buildtools von Visual Studio 2003 bis 2015, die eventuell Änderungen an Ihrem Code erfordern.|
@@ -88,4 +88,4 @@ Vielleicht haben sich auch Ihre Anforderungen geändert, oder Sie können absehe
 
 ## <a name="see-also"></a>Siehe auch
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)
+[C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)

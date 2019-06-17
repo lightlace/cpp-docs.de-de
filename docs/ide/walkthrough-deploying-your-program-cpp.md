@@ -1,6 +1,6 @@
 ---
 title: 'Exemplarische Vorgehensweise: Bereitstellen des Programms (C++)'
-ms.date: 09/14/2018
+ms.date: 05/14/2019
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
 - setup projects [C++]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 4232edd10b71c70097002511ef4ee663e67d6598
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769263"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182660"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Exemplarische Vorgehensweise: Bereitstellen des Programms (C++)
 
@@ -30,9 +30,45 @@ In dieser exemplarischen Vorgehensweise wird der Windows Installer zum Bereitste
 
 - Diese exemplarische Vorgehensweise kann nicht in den Express-Editionen von Visual Studio ausgeführt werden.
 
-- Wenn dies noch nicht geschehen ist, laden Sie die Erweiterung Microsoft Visual Studio-Installerprojekte herunter. Dies wird später in den weiteren Schritten beschrieben. Die Erweiterung ist für Visual Studio-Entwickler kostenlos und fügt Visual Studio die Funktionen der Projektvorlagen für Setup und Bereitstellung hinzu.
+## <a name="install-the-visual-studio-setup-and-deployment-project-template"></a>Installieren der Setup- und Bereitstellungsprojektvorlage für Visual Studio
 
-### <a name="to-install-the-visual-studio-setup-and-deployment-project-template"></a>So installieren Sie die Microsoft Studio Setup- und Bereitstellungsprojektvorlage
+Die Schritte in diesem Abschnitt variieren, je nachdem, welche Version von Visual Studio installiert ist. Stellen Sie sicher, dass Sie in der Versionsauswahl links oben auf dieser Seite die richtige Version ausgewählt haben.
+
+::: moniker range="vs-2019"
+
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2019"></a>Installieren der Setup- und Bereitstellungsprojektvorlage für Visual Studio 2019
+
+1. Wenn dies noch nicht geschehen ist, laden Sie die Erweiterung Microsoft Visual Studio-Installerprojekte herunter. Die Erweiterung ist für Visual Studio-Entwickler kostenlos und fügt Visual Studio die Funktionen der Projektvorlagen für Setup und Bereitstellung hinzu. Wenn Sie mit dem Internet verbunden sind, wählen Sie in Visual Studio **Erweiterungen** > **Erweiterungen verwalten** aus. Wählen Sie im Dialogfeld **Erweiterungen und Updates** die Registerkarte **Online** aus, und geben Sie *Microsoft Visual Studio-Installerprojekte* in das Suchfeld ein. Drücken Sie die **EINGABETASTE**, wählen Sie **Microsoft Visual Studio \<Version > Installerprojekte** aus, und klicken Sie auf **Herunterladen**. Wählen Sie die Ausführung und Installation der Erweiterung aus, und starten Sie Visual Studio neu.
+
+1. Klicken Sie in der Menüleiste in Visual Studio auf **Datei** >  **Zuletzt geöffnete Projekte und Projektmappen**, und öffnen Sie Ihr Projekt dann wieder.
+
+1. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**, um das Dialogfeld **Neues Projekt erstellen** zu öffnen. Geben Sie im Suchfeld „Setup“ ein, und wählen Sie aus der Ergebnisliste die Option **Setup-Projekt** aus.
+
+1. Geben Sie im Feld **Name** einen Namen für das Setup-Projekt ein. Wählen Sie in der Dropdownliste **Projektmappe** die Option **Zu Projektmappe hinzufügen** aus. Klicken Sie auf die Schaltfläche **OK**, um das Setup-Projekt zu erstellen. Eine Registerkarte **Datei-Assistent (ProjektName)** wird im Editor-Fenster geöffnet.
+
+1. Klicken Sie mit der rechten Maustaste auf den Knoten **Anwendungsordner**, und wählen Sie **Hinzufügen** > **Projektausgabe** aus, um das Dialogfeld **Projektausgabegruppe hinzufügen** zu öffnen.
+
+1. Wählen Sie im Dialogfeld **Primäre Ausgabe** aus, und klicken Sie dann auf **OK**. Ein neues Element mit dem Namen **Primäre Ausgabe aus Game (aktiv)** wird angezeigt.
+
+1. Wählen Sie das Element **Primäre Ausgabe aus Game (aktiv)** aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Verknüpfung mit primärer Ausgabe aus Game (aktiv) erstellen** aus. Ein neues Element mit dem Namen **Verknüpfung mit primärer Ausgabe aus Game (aktiv)** wird angezeigt.
+
+1. Benennen Sie das Verknüpfungselement in *Game* um, und legen Si es im Knoten **Menü Benutzerprogramme** auf der linken Seite des Fensters ab.
+
+1. Wählen Sie im **Projektmappen-Explorer** das Projekt **Game Installer** aus, und wählen Sie **Ansicht** > **Eigenschaftenfenster** aus, oder drücken Sie **F4**, um das Fenster **Eigenschaften** zu öffnen.
+
+1. Geben Sie zusätzliche Details an, die im Installer angezeigt werden sollen.  Verwenden Sie z. B. *Contoso* als **Hersteller**, *Game Installer* als **Produktnamen** und *http\://www.contoso.com* als **SupportUrl**.
+
+1. Klicken Sie in der Menüleiste auf **Build** > **Konfigurations-Manager**. Aktivieren Sie in der Tabelle **Projekt** unter der Spalte **Erstellen** das Kontrollkästchen für **Game Installer**. Klicken Sie auf **Schließen**.
+
+1. Wählen Sie in der Menüleiste **Erstellen** > **Projektmappe erstellen** aus, um das Game-Projekt und das Game Installer-Projekt zu erstellen.
+
+1. Suchen Sie im Projektmappenordner das setup.exe-Programm, das mit dem Game Installer-Projekt erstellt wurde, und führen Sie es dann zum Installieren der Spielanwendung auf dem Computer aus. Sie können diese Datei (und die Datei „GameInstaller.msi“) kopieren, um die Anwendung und die erforderlichen Bibliotheksdateien auf einem anderen Computer zu installieren.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2017-and-earlier"></a>Installieren der Setup- und Bereitstellungsprojektvorlage für Visual Studio 2017 und ältere Versionen
 
 1. Wenn Sie mit dem Internet verbunden sind, wählen Sie in Visual Studio **Extras** > **Erweiterungen und Updates** aus.
 
@@ -40,7 +76,7 @@ In dieser exemplarischen Vorgehensweise wird der Windows Installer zum Bereitste
 
 1. Wählen Sie die Installation der Erweiterung aus, und starten Sie Visual Studio neu.
 
-1. Klicken Sie in der Menüleiste auf **Datei** > **Zuletzt geöffnete Projekte und Projektmappen**, und wählen Sie dann Sie Projektmappe **Game** aus, um sie erneut zu öffnen.
+1. Wählen Sie in der Menüleiste **Datei** > **Zuletzt geöffnete Projekte und Projektmappen** aus, und wählen Sie dann Sie Projektmappe **Game** aus, um sie wieder zu öffnen.
 
 ### <a name="to-create-a-setup-project-and-install-your-program"></a>So erstellen Sie ein Setupprojekt und installieren das Programm
 
@@ -60,15 +96,17 @@ In dieser exemplarischen Vorgehensweise wird der Windows Installer zum Bereitste
 
 1. Benennen Sie das Verknüpfungselement in *Game* um, und legen Si es im Knoten **Menü Benutzerprogramme** auf der linken Seite des Fensters ab.
 
-1. Wählen Sie im **Projektmappen-Explorer** das Projekt **Game Installer** aus, und wählen Sie **Ansicht** > **Fenster „Eigenschaften“** aus, oder drücken Sie **F4**, um das Fenster **Eigenschaften** zu öffnen.
+1. Wählen Sie im **Projektmappen-Explorer** das Projekt **Game Installer** aus, und wählen Sie **Ansicht** > **Eigenschaftenfenster** aus, oder drücken Sie **F4**, um das Fenster **Eigenschaften** zu öffnen.
 
 1. Geben Sie zusätzliche Details an, die im Installer angezeigt werden sollen.  Verwenden Sie z. B. *Contoso* als **Hersteller**, *Game Installer* als **Produktnamen** und *http\://www.contoso.com* als **SupportUrl**.
 
 1. Klicken Sie in der Menüleiste auf **Build** > **Konfigurations-Manager**. Aktivieren Sie in der Tabelle **Projekt** unter der Spalte **Erstellen** das Kontrollkästchen für **Game Installer**. Klicken Sie auf **Schließen**.
 
-1. Klicken Sie in der Menüleiste auf **Erstellen** > **Projektmappe erstellen**, um das Game-Projekt und das Game Installer-Projekt zu erstellen.
+1. Wählen Sie in der Menüleiste **Erstellen** > **Projektmappe erstellen** aus, um das Game-Projekt und das Game Installer-Projekt zu erstellen.
 
 1. Suchen Sie im Projektmappenordner das setup.exe-Programm, das mit dem Game Installer-Projekt erstellt wurde, und führen Sie es dann zum Installieren der Spielanwendung auf dem Computer aus. Sie können diese Datei (und die Datei „GameInstaller.msi“) kopieren, um die Anwendung und die erforderlichen Bibliotheksdateien auf einem anderen Computer zu installieren.
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Nächste Schritte
 
