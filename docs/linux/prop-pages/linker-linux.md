@@ -1,19 +1,27 @@
 ---
 title: Linkereigenschaften (Linux C++)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 01e8a9e45272ff55db6bbf738b48c75f4e1f6c48
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678339"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821292"
 ---
 # <a name="linker-properties-linux-c"></a>Linkereigenschaften (Linux C++)
 
+::: moniker range="vs-2015"
+
+Die Unterstützung für Linux ist in Visual Studio 2017 und höher verfügbar.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
 ## <a name="general"></a>Allgemein
 
-Eigenschaft | Beschreibung  | Auswahlmöglichkeiten
+Eigenschaft | Beschreibung | Auswahlmöglichkeiten
 --- | ---| ---
 Ausgabedatei | Die Option überschreibt den Standardnamen und den Speicherort des Programms, das der Linker erstellt. (-o)
 Status anzeigen | Gibt Linkerstatusmeldungen aus.
@@ -32,7 +40,7 @@ Ausgabe kopieren | Gibt an, ob die Buildausgabedatei vom Remotesystem auf den lo
 
 ## <a name="input"></a>Eingabe
 
-Eigenschaft | Beschreibung  | Auswahlmöglichkeiten
+Eigenschaft | Beschreibung | Auswahlmöglichkeiten
 --- | ---| ---
 Bestimmte Standardbibliotheken ignorieren | Gibt einen oder mehrere Namen der zu ignorierenden Standardbibliotheken an. (--exclude-libs lib,lib)
 Standardbibliotheken ignorieren | Ignoriert Standardbibliotheken und sucht nur nach explizit angegebenen Bibliotheken.
@@ -42,16 +50,18 @@ Zusätzliche Abhängigkeiten | Gibt zusätzliche Elemente an, die der Linkerbefe
 
 ## <a name="debugging"></a>Debuggen
 
-Eigenschaft | Beschreibung  | Auswahlmöglichkeiten
+Eigenschaft | Beschreibung | Auswahlmöglichkeiten
 --- | ---| ---
 Debuggersymbolinformationen | Debuggersymbolinformationen aus der Ausgabedatei. | **Alle einschließen**<br>**Nur Debuggersymbolinformationen auslassen**<br>**Alle Symbolinformationen auslassen**<br>
 Name der Zuordnungsdatei | Die Option Map weist den Linker an, eine Zuordnungsdatei mit dem vom Benutzer angegebenen Namen zu erstellen. (-Map=)
 
 ## <a name="advanced"></a>Erweitert
 
-Eigenschaft | Beschreibung  | Auswahlmöglichkeiten
+Eigenschaft | Beschreibung | Auswahlmöglichkeiten
 --- | ---| ---
 Variablen nach dem Umsetzen als ReadOnly kennzeichnen | Diese Option kennzeichnet Variablen nach dem Umsetzen als schreibgeschützt.
 Sofortige Funktionsbindung aktivieren | Diese Option kennzeichnet das Objekt für sofortige Funktionsbindung.
 Keinen ausführbaren Stapel erfordern | Diese Option gibt an, dass die Ausgabe keinen ausführbaren Stapel erfordert.
 Gesamtes Archiv | Diese Option verwendet den gesamten Code aus den Quellen und zusätzlichen Abhängigkeiten.
+
+::: moniker-end
