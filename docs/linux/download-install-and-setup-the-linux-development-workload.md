@@ -1,22 +1,37 @@
 ---
 title: Installieren der C++-Workload unter Linux in Visual Studio
 description: Informationen zum Herunterladen, Installieren und Einrichten der Linux-Workload für C++ in Visual Studio
-ms.date: 03/05/2019
+ms.date: 06/07/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 74155724abb3a0e02cc27dd8a8d144f142ee4b6f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: af4e3ec0ac21951163e92786555559cd02e8148f
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747721"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821578"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Herunterladen, Installieren und Einrichten der Linux-Workload
 
-Sie können die Visual Studio 2017-IDE unter Windows verwenden, um C++-Projekte zu erstellen, zu bearbeiten und zu debuggen, die auf einem physischen Linux-Computer, einem virtuellen Computer oder dem [Windows-Subsystem für Linux](/windows/wsl/about) ausgeführt werden. 
 
-Sie können an Ihrer bestehenden Codebasis arbeiten, die CMake oder ein anderes Buildsystem verwendet, ohne sie in ein Visual Studio-Projekt konvertieren zu müssen. Wenn Ihre Codebasis plattformübergreifend ist, können Sie sowohl Windows als auch Linux in Visual Studio als Ziel verwenden. Sie können zum Beispiel Ihren Code unter Windows mit Visual Studio bearbeiten, debuggen und ein Profil dafür erstellen und dann das Projekt schnell für weitere Tests neu auf Linux ausrichten. Die Linux-Headerdateien werden automatisch auf Ihren lokalen Computer kopiert. Dort werden sie von Visual Studio verwendet, um vollständige IntelliSense-Unterstützung bereitzustellen (Anweisungsvervollständigung, Gehe zu Definition usw.).
+::: moniker range=">=vs-2017"
+
+Sie können die Visual Studio-IDE unter Windows verwenden, um C++-Projekte zu erstellen, zu bearbeiten und zu debuggen, die auf einem physischen Linux-Computer, einem virtuellen Computer oder dem [Windows-Subsystem für Linux](/windows/wsl/about) ausgeführt werden. 
+
+Sie können an Ihrer bestehenden Codebasis arbeiten, die CMake oder ein anderes Buildsystem verwendet, ohne sie in ein Visual Studio-Projekt konvertieren zu müssen. Wenn Ihre Codebasis plattformübergreifend ist, können Sie sowohl Windows als auch Linux in Visual Studio als Ziel verwenden. Sie können zum Beispiel Ihren Code unter Windows mit Visual Studio bearbeiten, debuggen und ein Profil dafür erstellen und dann das Projekt schnell für weitere Tests neu auf Linux ausrichten. Die Linux-Headerdateien werden automatisch auf Ihren lokalen Computer kopiert. Dort werden sie von Visual Studio verwendet, um vollständige IntelliSense-Unterstützung bereitzustellen (Anweisungsvervollständigung, Gehe zu Definition usw.). 
  
 Für jedes dieser Szenarios ist die Workload **Linux-Entwicklung mit C++** erforderlich. 
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+In Visual Studio 2019 können Sie separate Linux-Ziele zum Erstellen und Debuggen angeben. Wenn Sie das WSL als Ziel verwenden, ist es nicht mehr erforderlich, eine Remoteverbindung hinzufügen oder SSH zu konfigurieren.
+
+Unterstützung für [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) ist jetzt in Visual Studio für Linux-Projekte integriert.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="visual-studio-setup"></a>Setup von Visual Studio
 
@@ -25,9 +40,7 @@ Für jedes dieser Szenarios ist die Workload **Linux-Entwicklung mit C++** erfor
 
    ![Workload „Visual C++ für Linux-Entwicklung“](media/linuxworkload.png)
 
-1. Wenn Sie CMake verwenden oder IoT- oder eingebettete Zielplattformen nutzen möchten, navigieren Sie auf der rechten Seite zum Bereich **Installationsdetails**, und erweitern Sie **Optionale Komponenten** unter **Linux-Entwicklung mit C++**. Wählen Sie dann die gewünschten Komponenten aus.
-
-    **Visual Studio 2017, Version 15.4 und höher**<br/>: Wenn Sie unter Linux die C++-Workload für Visual Studio installieren, ist standardmäßig CMake-Unterstützung für Linux aktiviert.
+1. Wenn Sie IoT- oder eingebettete Zielplattformen nutzen möchten, navigieren Sie auf der rechten Seite zum Bereich **Installationsdetails**, und erweitern Sie **Optionale Komponenten** unter **Linux-Entwicklung mit C++**. Wählen Sie dann die gewünschten Komponenten aus. CMake-Unterstützung für Linux ist standardmäßig ausgewählt.
 
 1. Klicken Sie auf **Ändern**, um mit der Installation fortzufahren.
 
@@ -35,40 +48,90 @@ Für jedes dieser Szenarios ist die Workload **Linux-Entwicklung mit C++** erfor
 
 Wenn Sie noch keinen Linux-Computer besitzen, können Sie einen virtuellen Linux-Computer in Azure erstellen. Weitere Informationen finden Sie unter [Schnellstart: Erstellen eines virtuellen Linux-Computers im Azure-Portal](/azure/virtual-machines/linux/quick-create-portal).
 
-Eine weitere Möglichkeit unter Windows 10 besteht darin, das Windows-Subsystem für Linux zu aktivieren. Weitere Informationen finden Sie im [Windows 10-Installationshandbuch](/windows/wsl/install-win10).
+Unter Windows 10 können Sie Ihre bevorzugte Linux-Distribution im WSL (Windows-Subsystem für Linux) installieren und als Ziel verwenden. Weitere Informationen finden Sie unter [Windows-Subsystem für Linux – Installationsleitfaden für Windows 10](/windows/wsl/install-win10). Das WSL ist eine praktische Konsolenumgebung, die jedoch nicht für grafische Anwendungen empfohlen wird. 
 
-## <a name="linux-setup-ubuntu"></a>Linux-Setup: Ubuntu
+::: moniker-end
 
-Auf dem Linux-Zielcomputer müssen **openssh-server**, **g++**, **gdb** und **gdbserver** installiert sein. Zudem muss der SSH-Daemon ausgeführt werden. **ZIP** ist für die automatische Synchronisierung von Remoteheadern mit Ihrem lokalen Computer für IntelliSense-Unterstützung erforderlich. Wenn diese Anwendungen noch nicht vorhanden sind, können Sie sie wie folgt installieren:
+::: moniker range="vs-2019"
+
+## <a name="linux-setup-ubuntu-on-wsl"></a>Linux-Setup: Ubuntu im WSL
+
+Im WSL ist keine Remoteverbindung erforderlich. **zip** und **rsync** sind zur automatischen Synchronisierung von Linux-Headern mit Visual Studio für die IntelliSense-Unterstützung erforderlich. Wenn die erforderlichen Anwendungen noch nicht vorhanden sind, können Sie sie wie folgt installieren:
+
+```bash
+sudo g++ gdb make rsync zip
+```
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu auf Linux-Remotesystemen
+
+Auf dem Linux-Zielsystem müssen **openssh-server**, **g++**, **gdb** und **gdbserver** installiert sein. Zudem muss der SSH-Daemon ausgeführt werden. **ZIP** ist für die automatische Synchronisierung von Remoteheadern mit Ihrem lokalen Computer für IntelliSense-Unterstützung erforderlich. Wenn diese Anwendungen noch nicht vorhanden sind, können Sie sie wie folgt installieren:
 
 1. Führen Sie bei einer Shelleingabeaufforderung auf dem Linux-Computer Folgendes aus:
 
-   `sudo apt-get install openssh-server g++ gdb gdbserver zip`
+   ```bash
+   sudo apt-get install openssh-server g++ gdb gdbserver zip
+   ```
 
    Aufgrund des Befehls „sudo“ werden Sie möglicherweise aufgefordert, Ihr Stammkennwort einzugeben.  Ist dies der Fall, geben Sie es ein und setzen den Vorgang fort. Nach Abschluss dieses Vorgangs sind die erforderlichen Dienste und Tools installiert.
 
 1. Stellen Sie sicher, dass der SSH-Dienst auf dem Linux-Computer ausgeführt wird, indem Sie Folgendes ausführen:
 
-   `sudo service ssh start`
-
+   ```bash
+   sudo service ssh start
+   ```
    Damit wird der Dienst im Hintergrund gestartet und ausgeführt, sodass Verbindungen akzeptiert werden können.
 
-## <a name="linux-setup-fedora"></a>Linux-Setup: Fedora
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+## <a name="fedora-on-wsl"></a>Fedora auf dem WSL
+
+Fedora verwendet den **dnf**-Paket-Installer. Führen Sie den folgenden Befehl aus, um **g++**, **gdb**, **rsync** und **zip** herunterzuladen:
+
+   ```bash
+   sudo dnf install gcc-g++ gdb rsync zip
+   ```
+
+**zip** und **rsync** sind zur automatischen Synchronisierung von Linux-Headern mit Visual Studio für die IntelliSense-Unterstützung erforderlich.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+## <a name="fedora-on-remote-linux-systems"></a>Fedora auf Linux-Remotesystemen
 
 Der Zielcomputer, auf dem Fedora ausgeführt wird, verwendet den **Dnf**-Paket-Installer. Um **openssh-server**, **g++**, **gdb**, **gdbserver** und **zip** herunterzuladen und den ssh-Daemon neu zu starten, befolgen Sie diese Anweisungen:
 
 1. Führen Sie bei einer Shelleingabeaufforderung auf dem Linux-Computer Folgendes aus:
 
-   `sudo dnf install openssh-server gcc-g++ gdb gdb-gdbserver zip`
-
+   ```bash
+   sudo dnf install openssh-server gcc-g++ gdb gdb-gdbserver zip
+   ```
    Aufgrund des Befehls „sudo“ werden Sie möglicherweise aufgefordert, Ihr Stammkennwort einzugeben.  Ist dies der Fall, geben Sie es ein und setzen den Vorgang fort. Nach Abschluss dieses Vorgangs sind die erforderlichen Dienste und Tools installiert.
 
 1. Stellen Sie sicher, dass der SSH-Dienst auf dem Linux-Computer ausgeführt wird, indem Sie Folgendes ausführen:
 
-   `sudo systemctl start sshd`
+   ```bash
+   sudo systemctl start sshd
+   ```
 
    Damit wird der Dienst im Hintergrund gestartet und ausgeführt, sodass Verbindungen akzeptiert werden können.
 
-## <a name="ensure-you-have-cmake-38-on-the-remote-linux-machine"></a>Sicherstellen, dass Sie auf dem Linux-Remotecomputer über CMake 3.8 verfügen
+::: moniker-end
 
-Ihre Linux-Distribution enthält möglicherweise eine ältere Version von CMake. Die CMake-Unterstützung in Visual Studio erfordert die Servermodusunterstützung, die in CMake 3.8 eingeführt wurde. Laden Sie für eine von Microsoft bereitgestellte CMake-Variante unter [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) die aktuellsten vordefinierten Binärdateien auf Ihren Linux-Computer herunter.
+::: moniker range="vs-2015"
+
+Die Unterstützung für die C++-Entwicklung für Linux ist in Visual Studio 2017 und höher verfügbar.
+
+::: moniker-end
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Jetzt können Sie ein Linux-Projekt erstellen oder öffnen und es so konfigurieren, dass es auf dem Zielsystem ausgeführt wird. Weitere Informationen finden Sie unter:
+
+- [Erstellen eines neuen Linux-Projekts](create-a-new-linux-project.md)
+- [Konfigurieren eines Linux CMake-Projekts](cmake-linux-project.md)

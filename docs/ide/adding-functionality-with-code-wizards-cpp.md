@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 8c88936edcb9110fe7482281f483f11c542b83c1
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: efced3be3a0bcc7efe16aef1061c4cd9ec1ed21c
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182650"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741636"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Hinzufügen neuer Funktionen mit Code-Assistenten (C++)
 
@@ -76,6 +76,6 @@ Es gibt drei Stellen, über die Sie auf C++-Code-Assistenten zugreifen können:
 ## <a name="see-also"></a>Siehe auch
 
 [Überschreiben einer virtuellen Funktion](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
-[Navigating the Class Structure (Navigieren in der Klassenstruktur)](../ide/navigating-the-class-structure-visual-cpp.md)<br>
+[Navigate your C++ code base in Visual Studio (Navigieren in Ihrer C++-Codebasis in Visual Studio)](../ide/navigate-code-cpp.md)<br>
 [C++-Projektvorlagen](../build/reference/visual-cpp-project-types.md)<br>
 [Für Visual Studio C++-Projekte erstellte Dateitypen](../build/reference/file-types-created-for-visual-cpp-projects.md)

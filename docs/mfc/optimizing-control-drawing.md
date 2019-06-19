@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
-ms.openlocfilehash: 4d0037ebdfe56690be2f18a2790b2b13967e337c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 354ec1678747be57d387673f2611d526df8dfb47
+ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378311"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194732"
 ---
 # <a name="optimizing-control-drawing"></a>Optimieren der Steuerelementdarstellung
 
 Wenn ein Steuerelement angewiesen wird, um sich selbst in einem Container bereitgestellten Gerätekontext zu zeichnen, in der Regel GDI-Objekte (z. B. Stifte, Pinseln und Schriftarten) in den Gerätekontext auswählt, führt seine Zeichenvorgänge und stellt die vorherigen GDI-Objekte. Wenn der Container enthält mehrere Steuerelemente, die in den gleichen Gerätekontext gezeichnet werden soll, und jedes Steuerelement wählt die GDI-Objekte, die erfordert, kann Zeit gespeichert werden, wenn die Steuerelemente zuvor ausgewählten Objekte nicht einzeln wiederherstellen. Nachdem alle Steuerelemente gezeichnet wurden, kann die Container automatisch die ursprünglichen Objekte wiederherstellen.
 
-Um zu erkennen, ob ein Container diese Technik unterstützt, kann ein Steuerelement Aufrufen der [COleControl::IsOptimizedDraw](../mfc/reference/colecontrol-class.md#isoptimizeddraw) Member-Funktion. Wenn diese Funktion gibt **"true"**, das Steuerelement kann den normalen Schritt der Wiederherstellung der zuvor ausgewählten Objekte überspringen.
+Um zu erkennen, ob ein Container diese Technik unterstützt, kann ein Steuerelement Aufrufen der [COleControl::IsOptimizedDraw](../mfc/reference/colecontrol-class.md#isoptimizeddraw) Member-Funktion. Wenn diese Funktion gibt **"true"** , das Steuerelement kann den normalen Schritt der Wiederherstellung der zuvor ausgewählten Objekte überspringen.
 
 Betrachten Sie ein Steuerelement, das Folgendes (nicht optimierte) muss `OnDraw` Funktion:
 
@@ -46,7 +46,6 @@ Abschließend, beseitigen unnötigen `SelectObject` Aufrufe ändern `OnDraw` wie
 
 [MFC-ActiveX-Steuerelemente: Optimierung](../mfc/mfc-activex-controls-optimization.md)<br/>
 [COleControl-Klasse](../mfc/reference/colecontrol-class.md)<br/>
-[MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)<br/>
 [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)<br/>
 [MFC-ActiveX-Steuerelement-Assistent](../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [MFC-ActiveX-Steuerelemente: Darstellen eines ActiveX-Steuerelements](../mfc/mfc-activex-controls-painting-an-activex-control.md)
