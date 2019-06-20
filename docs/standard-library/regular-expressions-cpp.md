@@ -5,10 +5,10 @@ helpviewer_keywords:
 - regular expressions [C++]
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
 ms.openlocfilehash: 291b25959f790db328080aa74a6320775a33e981
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/20/2019
 ms.locfileid: "65220310"
 ---
 # <a name="regular-expressions-c"></a>Reguläre Ausdrücke (C++)
@@ -478,7 +478,7 @@ Eine partielle Übereinstimmung ist erfolgreich, wenn die Übereinstimmung das E
 |"$&"|"&"|Die Zeichensequenz, die dem gesamten regulären Ausdruck entspricht (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`" (Dollarzeichen gefolgt vom Graviszeichen) || Die Zeichensequenz, die der Untersequenz vorausgeht, die dem regulären Ausdruck entspricht (`[match.prefix().first, match.prefix().second)`)|
+|"$\`" (Dollarzeichen gefolgt vom Graviszeichen)||Die Zeichensequenz, die der Untersequenz vorausgeht, die dem regulären Ausdruck entspricht (`[match.prefix().first, match.prefix().second)`)|
 |"$ '" (Dollarzeichen gefolgt vom Vorwärtsanführungszeichen)||Die Zeichensequenz, die der Untersequenz folgt, die dem regulären Ausdruck entspricht (`[match.suffix().first, match.suffix().second)`)|
 |"$n"|"\n"|Die Zeichensequenz, die die Erfassungsgruppe in Position entspricht `n`, wobei `n` ist eine Zahl zwischen 0 und 9 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|"\n"|
