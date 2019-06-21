@@ -16,19 +16,19 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62389254"
 ---
 # <a name="fenvaccess"></a>fenv_access
-Deaktiviert (**auf**) oder aktiviert (**aus**) Optimierungen, welche Gleitkommaausnahme zu kennzeichnen, Tests und Modus ändert.
+Deaktiviert (**on**) oder aktiviert (**off**) Optimierungen, welche die Flag-Tests und Modi-Änderungen beeinflussen können.
 
 ## <a name="syntax"></a>Syntax
 
-> **#pragma fenv_access führen (** { **auf** | **aus** } **)**
+> **#pragma fenv_access (** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Hinweise
 
-In der Standardeinstellung **Fenv_access** ist **aus**. Wenn der Compiler, die davon ausgehen kann Ihren Code nicht zugreifen oder die gleitkommaumgebung bearbeiten, und es viele gleitkommacode Optimierungen durchführen. Legen Sie **Fenv_access** zu **auf** an den Compiler darüber zu informieren, dass Ihr Code die Gleitkommaausnahme-Statusflags, Ausnahmen, zu testen oder Steuerelement Modus-Flags festlegen zugreift. Der Compiler deaktiviert diese Optimierungen, damit Ihr Code die gleitkommaumgebung einheitlich zugreifen kann.
+In der Standardeinstellung ist **fenv_access** **aus**. Wenn der Compiler davon ausgehen kann, dass Ihr Code nicht auf die Gleitkommaumgebung zugreift oder manipuliert, können viele Gleitkomma-Optimierungen gemacht werden. Setzen Sie **fenv_access** auf **on**, um dem Compiler mitzuteilen dass Ihr Code auf die Gleitkommaumgegung zugreift um auf Status-Flags, Ausnahmen zu testen oder Kontrollmodus Flags zu setzen. Der Compiler deaktiviert diese Optimierungen dann, damit Ihr Code auf konsistent auf die Gleitkommaumgebung zugreifen kann.
 
 Weitere Informationen zum Gleitkommaverhalten finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../build/reference/fp-specify-floating-point-behavior.md).
 
-Die Arten von Optimierungen, unterliegen **Fenv_access** sind:
+Die Arten von Optimierungen die **fenv_access** unterliegen sind:
 
 - Globale allgemeine Teilausdruckbeseitigung
 
@@ -44,7 +44,7 @@ Andere Gleitkommapragmas umfassen:
 
 ## <a name="examples"></a>Beispiele
 
-In diesem Beispiel wird **Fenv_access** zu **auf** gleitkommasteuerelements für die Genauigkeit von 24-Bit-Register festlegen:
+Dieses Beispiel setzt **fenv_access** auf **on** um das Gleitkomma Kontrollregister für 24-bit-Genauigkeit festzulegen:
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
@@ -73,8 +73,7 @@ int main() {
 ```Output
 out=9.999999776482582e-003
 ```
-
-Wenn Sie auskommentieren `#pragma fenv_access (on)` aus dem vorherigen Beispiel beachten Sie, dass die Ausgabe anders ist, da der Compiler kompilierzeitauswertung, ist das nicht den steuermodus verwendet wird.
+Wenn Sie `#pragma fenv_access (on)` im vorherigen Beispiel auskommentieren, können Sie sehen dass die Ausgabe unterschiedlich ist, da der Compiler compilezeit evaluierung anwendet, welche den Kontrollmodus nicht verwendet.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp
