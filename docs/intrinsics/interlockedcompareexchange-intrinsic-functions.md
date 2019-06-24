@@ -48,18 +48,18 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263736"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344440"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Systeminterne Funktionen "_InterlockedCompareExchange"
 
 **Microsoft-spezifisch**
 
-Führt einen ineinandergreifenden Vergleich und Austausch durch.
+Eine interlocked vergleichen und austauschen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -202,25 +202,25 @@ Der Rückgabewert ist der Anfangswert des `Destination`-Zeigers.
 
 ## <a name="remarks"></a>Hinweise
 
-`_InterlockedCompareExchange` führt einen atomaren Vergleich des `Destination`-Werts mit dem `Comparand`-Wert durch. Wenn der `Destination`-Wert gleich dem `Comparand`-Wert ist, wird der `Exchange`-Wert in der von `Destination` angegebenen Adresse gespeichert. Andernfalls wird kein Vorgang ausgeführt.
+`_InterlockedCompareExchange` enthält einen atomarischen Vergleich der `Destination` Wert mit dem `Comparand` Wert. Wenn der `Destination`-Wert gleich dem `Comparand`-Wert ist, wird der `Exchange`-Wert in der von `Destination` angegebenen Adresse gespeichert. Andernfalls wird kein Vorgang.
 
 `_InterlockedCompareExchange` bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) Funktion.
 
-Es gibt mehrere Varianten von `_InterlockedCompareExchange`, die sich basierend auf den beinhalteten Datentypen und in Abhängigkeit davon unterscheiden, ob prozessorspezifische Semantiken zum Abrufen bzw. Freigeben verwendet werden.
+Es gibt mehrere Varianten von `_InterlockedCompareExchange` , variieren je nach den Datentypen, die sie betreffen und gibt an, ob prozessorspezifische erwerben oder Release-Semantik verwendet werden.
 
-Die `_InterlockedCompareExchange`-Funktion funktioniert mit langen ganzen Zahlen, `_InterlockedCompareExchange8` funktioniert mit ganzzahligen 8-Bit-Werten, `_InterlockedCompareExchange16` funktioniert mit kurzen ganzen Zahlen, und `_InterlockedCompareExchange64` funktioniert mit ganzzahligen 64-Bit-Werten.
+Während der `_InterlockedCompareExchange` -Funktion arbeitet mit langen ganzen Zahlen, `_InterlockedCompareExchange8` funktioniert mit ganzzahligen 8-Bit-Werten, `_InterlockedCompareExchange16` funktioniert mit kurzen ganzen Zahlen, und `_InterlockedCompareExchange64` funktioniert mit ganzzahligen 64-Bit-Werten.
 
-Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel` für Semantiken zum Abrufen bzw. Freigeben, z. B. am Beginn und am Ende eines kritischen Abschnitts. Die systeminternen ARM-Funktionen mit dem Suffix `_nf` („no fence“) dienen nicht als Arbeitsspeicherbarriere.
+Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel` für Semantiken zum Abrufen bzw. Freigeben, z. B. am Beginn und am Ende eines kritischen Abschnitts. Die systeminternen ARM-Funktionen mit einer `_nf` ("no Fence")-Suffix nicht als Arbeitsspeicherbarriere fungieren.
 
 Die systeminternen Funktionen mit dem Suffix `_np` („no prefetch“) verhindern, dass ein möglicher Vorabrufvorgang vom Compiler eingefügt wird.
 
-Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen aufgerufen werden, die HLE nicht unterstützen, wird der Hinweis ignoriert.
+Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen, die HLE nicht unterstützen aufgerufen werden, wird der Hinweis ignoriert.
 
 Diese Routinen sind nur als systeminterne Funktionen verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird `_InterlockedCompareExchange` für die einfache Low-Level-Threadsynchronisierung verwendet. Der Ansatz unterliegt gewissen Einschränkungen als Grundlage für die Multithreadprogrammierung. Er wird zur Veranschaulichung der typischen Verwendung von ineinandergreifenden systeminternen Funktionen dargestellt. Verwenden Sie für optimale Ergebnisse die Windows-API. Weitere Informationen zur Multithreadprogrammierung finden Sie [Schreiben von Win32-Multithreadprogrammen](../parallel/writing-a-multithreaded-win32-program.md).
+Im folgenden Beispiel wird `_InterlockedCompareExchange` für die einfache Low-Level-Threadsynchronisierung verwendet. Der Ansatz unterliegt gewissen Einschränkungen als Grundlage für die Multithreadprogrammierung; Es wird angezeigt, um der typischen Verwendung von ineinandergreifenden systeminternen Funktionen zu veranschaulichen. Verwenden Sie für optimale Ergebnisse die Windows-API. Weitere Informationen zur Multithreadprogrammierung finden Sie unter [Schreiben von Win32-Multithreadprogrammen](../parallel/writing-a-multithreaded-win32-program.md).
 
 ```
 // intrinExample.cpp
@@ -248,7 +248,7 @@ using namespace std;
 //#define SKIP_LOCKING
 
 // A common way of locking using _InterlockedCompareExchange.
-// Please refer to other sources for a discussion of the many issues
+// Refer to other sources for a discussion of the many issues
 // involved. For example, this particular locking scheme performs well
 // when lock contention is low, as the while loop overhead is small and
 // locks are acquired very quickly, but degrades as many callers want

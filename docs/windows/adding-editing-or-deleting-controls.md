@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01116116ad6bb455d3b0fd8966e65b2fec4c5a35
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390983"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344365"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Vorgehensweise: Hinzufügen, bearbeiten oder Löschen von Steuerelementen (C++)
 
@@ -69,9 +69,9 @@ Die **Dialog-Editor** Registerkarte wird angezeigt, der [Fenster "Toolbox"](/vis
 
    - Wählen Sie im Dialogfeld auf den Speicherort, an der Sie das Steuerelement platzieren möchten, und das Steuerelement angezeigt wird, in dem Sie ausgewählt haben.
 
-   - Ziehen Sie aus, und legen Sie das Steuerelement aus der **Toolbox** Fenster aus, um den Speicherort für das Dialogfeld, und Sie können dann die Steuerelemente beliebig verschieben oder ändern ihre Größe und Form.
+   - Ziehen Sie aus, und legen Sie das Steuerelement aus der **Toolbox** Fenster aus, um den Speicherort in Ihrem Dialogfeld. Sie können anschließend verschieben Sie das Steuerelement auf oder Ändern der Größe und Form.
 
-   - Doppelklicken Sie auf das Steuerelement in der **Toolbox** Fenster und wird im Dialogfeld angezeigt, klicken Sie dann verschieben Sie das Steuerelement, zu dem Speicherort, die Sie bevorzugen.
+   - Doppelklicken Sie auf das Steuerelement in der **Toolbox** Fenster und wird im Dialogfeld angezeigt. Verschieben Sie das Steuerelement, um die gewünschte Position.
 
 ### <a name="to-add-multiple-controls"></a>Hinzufügen mehrerer Steuerelemente
 
@@ -87,7 +87,7 @@ Die **Dialog-Editor** Registerkarte wird angezeigt, der [Fenster "Toolbox"](/vis
 
 1. Platzieren Sie den Cursor, der als Fadenkreuz, der oberen linken Ecke des neuen Steuerelements erscheint auf das Dialogfeld erstellt werden sollen.
 
-1. Wählen Sie aus, halten Sie die Maustaste gedrückt, verankern Sie die linke obere Ecke des Steuerelements im Dialogfeld, und ziehen Sie den Cursor nach rechts und nach unten, bis die gewünschte Größe hat.
+1. Wählen Sie aus, und halten Sie die Maustaste gedrückt, die der oberen linken Ecke des Steuerelements auf das Dialogfeld zu verankern. Ziehen Sie dann den Cursor nach rechts und nach unten, bis die gewünschte Größe hat.
 
    > [!NOTE]
    > Sie können eine der vier Ecken des Steuerelements verankern, die Sie zeichnen können. Dieses Verfahren verwendet die oberen linken Ecke als Beispiel.
@@ -99,7 +99,7 @@ Die **Dialog-Editor** Registerkarte wird angezeigt, der [Fenster "Toolbox"](/vis
 
 ### <a name="to-add-a-custom-control"></a>So fügen Sie ein benutzerdefiniertes Steuerelement hinzu
 
-Sie können benutzerdefinierte Steuerelemente zum Dialogfeld hinzufügen, durch Auswählen der **benutzerdefiniertes Steuerelement** Symbol in der **Toolbox** und ziehen diesen an das Dialogfeld. Hinzufügen einer **Syslink** steuern, fügen Sie ein benutzerdefiniertes Steuerelement hinzu, und Ändern des Steuerelements **Klasse** Eigenschaft **Syslink**. Diese Aktion führt dazu, dass die Eigenschaften aktualisieren und Anzeigen der **Syslink** Steuerelementeigenschaften. Informationen zur MFC-Wrapperklasse finden Sie unter [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
+Sie können benutzerdefinierte Steuerelemente zum Dialogfeld hinzufügen. Wählen Sie die **benutzerdefiniertes Steuerelement** Symbol in der **Toolbox** und ziehen Sie es in einem Dialogfeld. Hinzufügen einer `Syslink` steuern, fügen Sie ein benutzerdefiniertes Steuerelement hinzu, und Ändern des Steuerelements **Klasse** Eigenschaft `Syslink`. Diese Aktion führt dazu, dass die Eigenschaften aktualisieren und Anzeigen der `Syslink` Steuerelementeigenschaften. Informationen zur MFC-Wrapperklasse finden Sie unter [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
 ## <a name="edit-controls"></a>Edit-Steuerelemente
 
@@ -113,7 +113,7 @@ Sie können benutzerdefinierte Steuerelemente zum Dialogfeld hinzufügen, durch 
 1. In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), ändern Sie die Eigenschaften des Steuerelements.
 
    > [!NOTE]
-   > Beim Festlegen der **Bitmap** -Eigenschaft für eine Schaltfläche, Optionsfeld oder Kontrollkästchen-Steuerelement gleich **"true"**, den Stil BS_BITMAP für das Steuerelement implementiert wird. Weitere Informationen finden Sie unter [Button-Stile](../mfc/reference/styles-used-by-mfc.md#button-styles). Ein Beispiel für eine Bitmap mit einem Steuerelement zuordnen, finden Sie unter [CButton:: SetBitmap](../mfc/reference/cbutton-class.md#setbitmap). Bitmaps werden nicht auf das Steuerelement angezeigt, während Sie auf die **Dialog-Editor**.
+   > Beim Festlegen der **Bitmap** -Eigenschaft für eine Schaltfläche, Optionsfeld oder Kontrollkästchen-Steuerelement gleich **"true"** , den Stil BS_BITMAP für das Steuerelement implementiert wird. Weitere Informationen finden Sie unter [Button-Stile](../mfc/reference/styles-used-by-mfc.md#button-styles). Ein Beispiel für eine Bitmap mit einem Steuerelement zuordnen, finden Sie unter [CButton:: SetBitmap](../mfc/reference/cbutton-class.md#setbitmap). Bitmaps werden nicht auf das Steuerelement angezeigt, während Sie auf die **Dialog-Editor**.
 
 ### <a name="to-undo-changes-to-the-properties-of-a-control"></a>Um Änderungen an den Eigenschaften eines Steuerelements rückgängig zu machen.
 
@@ -139,7 +139,7 @@ Sie können benutzerdefinierte Steuerelemente zum Dialogfeld hinzufügen, durch 
 > [!TIP]
 > Doppelklicken Sie auf das Steuerelement, um von einem Dialogfeld-Steuerelement zu seinem vorhandenen Handler zu wechseln.
 
-Sie können auch die **Membervariablen** Registerkarte die [MFC-Klassenassistent](../mfc/reference/mfc-class-wizard.md) neue Membervariablen für eine angegebene Klasse hinzufügen und Anzeigen der Membervariablen, die bereits definiert wurden.
+Können Sie auch die **Membervariablen** Registerkarte die [MFC-Klassenassistent](../mfc/reference/mfc-class-wizard.md) neue Membervariablen für eine angegebene Klasse hinzufügen und Anzeigen der bereits definierten Membervariablen.
 
 ## <a name="delete-controls"></a>Löschen von Steuerelementen
 
@@ -149,7 +149,7 @@ Wählen Sie im Dialogfeld, das Steuerelement aus, drücken Sie dann die **lösch
 
 ### <a name="troubleshooting"></a>Problembehandlung
 
-Nach dem Hinzufügen einer allgemeinen Steuerelements oder rich-Edit-Steuerelement in einem Dialogfeld an, nicht es angezeigt, wenn Sie Sie das Dialogfeld testen, oder das Dialogfeld selbst wird nicht, z. B. angezeigt:
+Nachdem Sie ein Dialogfeld, das ein allgemeines oder rich-Edit-Steuerelement hinzugefügt haben, nicht es angezeigt, wenn Sie im Dialogfeld testen. Alternativ dazu können Sie das Dialogfeld selbst wird nicht angezeigt. Zum Beispiel:
 
 1. Erstellen Sie eine Win32-Projekts, das die Anwendungseinstellungen ändern, damit Sie eine Windows-Anwendung (keine Konsolen-app erstellen).
 
@@ -196,7 +196,7 @@ Die **ActiveX-Steuerelement einfügen** Dialogfeld können Sie zum Einfügen von
 |**Pfad**|Zeigt die Datei, die in der das ActiveX-Steuerelement gefunden wird.|
 
 > [!CAUTION]
-> Der Vertrieb ist möglicherweise nicht für alle ActiveX-Steuerelemente auf Ihrem System rechtlich zulässig. Informieren Sie sich im Lizenzvertrag für die Software, die die Steuerelemente installiert hat, oder wenden Sie sich an den Hersteller der Software.
+> Der Vertrieb ist möglicherweise nicht für alle ActiveX-Steuerelemente auf Ihrem System rechtlich zulässig. Finden Sie in den Lizenzvertrag für Software, die die Steuerelemente installiert, oder wenden Sie sich an den Hersteller der Software.
 
 #### <a name="to-add-an-activex-control"></a>Ein ActiveX-Steuerelement hinzufügen
 
@@ -215,7 +215,7 @@ Die **ActiveX-Steuerelement einfügen** Dialogfeld können Sie zum Einfügen von
 
 #### <a name="to-edit-properties-for-an-activex-control"></a>So bearbeiten Sie Eigenschaften für ein ActiveX-Steuerelement
 
-ActiveX-Steuerelemente von unabhängigen Softwareanbietern stammen möglicherweise mit eigenen Eigenschaften und Merkmale. Diese Eigenschaften werden angezeigt, der **Eigenschaften** Fenster, einschließlich jede Eigenschaft, die von den Schreibern, der das ActiveX-Steuerelement erstellte Seiten, in angezeigt werden der **Eigenschaftenseiten** Dialogfelds (zum Anzeigen der  **Eigenschaftenseite** wählen Sie für ein bestimmtes ActiveX-Steuerelement, das **Eigenschaftenseite** Schaltfläche der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window)).
+ActiveX-Steuerelemente von unabhängigen Softwareanbietern stammen möglicherweise mit eigenen Eigenschaften und Merkmale. Diese Eigenschaften werden angezeigt, der **Eigenschaften** Fenster. Alle von den Schreibern, der das ActiveX-Steuerelement erstellten Eigenschaftenseiten werden angezeigt, der **Eigenschaftenseiten** Dialogfeld. (Anzeigen der **Eigenschaftenseite** wählen Sie für ein bestimmtes ActiveX-Steuerelement, das **Eigenschaftenseite** Schaltfläche der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window)).
 
 - Wählen Sie die **ActiveX** steuern, und wechseln Sie zum Menü **Ansicht** > **Eigenschaftenseite** zum Anzeigen der Eigenschaften. Nehmen Sie Änderungen an, nach Bedarf auf der Eigenschaftenseite.
 
