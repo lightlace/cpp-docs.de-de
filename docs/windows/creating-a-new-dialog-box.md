@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28ed6c8be262e0446b828cfa3e6e9fe2ba53672a
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223570"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344206"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Vorgehensweise: Erstellen einer (Dialogfeld) (C++)
 
 Die Position und Größe der einem C++-Dialogfeld, und die Position und Größe von Steuerelementen, werden in Dialogeinheiten gemessen. In der unteren rechten Ecke der Visual Studio Statusleiste an, wenn Sie sie auswählen, werden die Werte für einzelne Steuerelemente und das Dialogfeld angezeigt.
 
 > [!NOTE]
-> Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
+> Wenn Ihr Projekt noch keine RC-Datei enthält, finden Sie unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
 
 ## <a name="how-to"></a>Gewusst wie
 
@@ -38,7 +38,7 @@ Die **Dialog-Editor** können Sie:
 
 1. In der **Ressource hinzufügen** wählen Sie im Dialogfeld **Dialogfeld** in die **Ressourcentyp** Liste aus, und wählen Sie dann **neu**.
 
-   Wenn ein Pluszeichen (**+**) wird neben der **Dialogfeld** Ressourcentyp an, es bedeutet, dass Dialogfeldvorlagen verfügbar sind. Wählen Sie das Pluszeichen, um die Liste der Vorlagen erweitern, wählen Sie eine Vorlage aus, und wählen **neu**.
+   Wenn ein Pluszeichen ( **+** ) wird neben der **Dialogfeld** Ressourcentyp an, es bedeutet, dass Dialogfeldvorlagen verfügbar sind. Wählen Sie das Pluszeichen, um die Liste der Vorlagen erweitern, wählen Sie eine Vorlage aus, und wählen **neu**.
 
    Das neue Dialogfeld wird geöffnet, der **Dialog-Editor**.
 
@@ -67,7 +67,7 @@ Eigenschaften Sie, in festlegen können der [Fenster "Eigenschaften"](/visualstu
 
 - Der boolesche Wert **Center** Eigenschaft.
 
-   Wenn Sie den Wert auf **"true"**, das Dialogfeld wird immer in der Mitte des Bildschirms angezeigt. Wenn Sie diese Eigenschaft auf **"false"**, Sie können dann Festlegen der **XPos** und **YPos** Eigenschaften.
+   Wenn Sie den Wert auf **"true"** , das Dialogfeld wird immer in der Mitte des Bildschirms angezeigt. Wenn Sie diese Eigenschaft auf **"false"** , Sie können dann Festlegen der **XPos** und **YPos** Eigenschaften.
 
 - Die **XPos** und **YPos** Eigenschaften, die verwendet werden, wenn auf dem Bildschirm explizit zu definieren, die das Dialogfeld angezeigt wird.
 
@@ -75,7 +75,7 @@ Eigenschaften Sie, in festlegen können der [Fenster "Eigenschaften"](/visualstu
 
 - Die **Absolute Ausrichtung** -Eigenschaft, die Position wirkt sich auf.
 
-   Wenn **"true"**, die Koordinaten sind relativ zum Bildschirm. Wenn **"false"**, die Koordinaten sind relativ zum des Dialogfeldbesitzers-Fenster.
+   Wenn **"true"** , die Koordinaten sind relativ zum Bildschirm. Wenn **"false"** , die Koordinaten sind relativ zum des Dialogfeldbesitzers-Fenster.
 
 ### <a name="to-test-a-dialog-box"></a>So testen Sie ein Dialogfeld
 
@@ -92,7 +92,7 @@ Beim Entwerfen eines Dialogfelds können Sie dessen Laufzeitverhalten simulieren
 > [!NOTE]
 > Verbindungen mit DialogfeldCode, die mithilfe des Assistenten werden nicht in der Simulation enthalten.
 
-Während des Testverfahrens wird ein Dialogfeld normalerweise relativ zum Hauptprogrammfenster angezeigt. Wenn Sie das Dialogfeld festgelegt haben **Absolute Ausrichtung** Eigenschaft **"true"**, im Dialogfeld angezeigt, an der Position, die relativ zu der oberen linken Ecke des Bildschirms ist.
+Während des Testverfahrens wird ein Dialogfeld normalerweise relativ zum Hauptprogrammfenster angezeigt. Wenn Sie das Dialogfeld festgelegt haben **Absolute Ausrichtung** Eigenschaft **"true"** , im Dialogfeld angezeigt, an der Position, die relativ zu der oberen linken Ecke des Bildschirms ist.
 
 1. Wenn die **Dialog-Editor** ist das aktive Fenster, wechseln Sie zum Menü **Format** > **Testdialogfeld**.
 
