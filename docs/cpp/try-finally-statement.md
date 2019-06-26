@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c52921d2e9c4265d42b3e0187af1396ff8946bde
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404720"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400803"
 ---
 # <a name="try-finally-statement"></a>try-finally-Anweisung
 
@@ -40,12 +40,12 @@ Die folgende Syntax beschreibt die **Try-finally-** Anweisung:
 > **\_\_zum Schluss**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;Code für das Beenden<br/>
-> }<br/>
+> }
 
 ## <a name="grammar"></a>Grammatik
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\_\_Versuchen Sie es** *Compound-Statement*  **\_ \_schließlich** *Compound-Statement*
+&nbsp;&nbsp;&nbsp;&nbsp; **\_\_Versuchen Sie es** *Compound-Statement*  **\_ \_schließlich** *Compound-Statement*
 
 Die **Try-finally-** -Anweisung ist eine Microsoft-Erweiterung der Programmiersprachen C und C++, die es ermöglicht zielanwendungen Bereinigungscode bei der Ausführung eines Codeblocks unterbrochen wird. Die Bereinigung besteht aus Aufgaben wie z. B. Neuzuweisung von Arbeitsspeicher, Schließen von Dateien und Freigeben von Dateihandles. Die **Try-finally-** -Anweisung ist besonders nützlich für Routinen, die mehrfach haben, in dem eine Überprüfung statt, für einen Fehler, die verursachen könnten vorzeitige, von der Routine Rückgabe.
 
@@ -86,7 +86,7 @@ Ein **Goto** -Anweisung kann auch aus dem abgesicherten Abschnitt Herausspringen
 
 Beenden einer **Try-finally-** Anweisung mit der [Longjmp](../c-runtime-library/reference/longjmp.md) Run-Time-Funktion wird als nicht ordnungsgemäße Beendigung angesehen. Es ist nicht zulässig, wechseln in einem **__try** -Anweisung, jedoch aus einer solchen zulässig. Alle **__finally** Anweisungen, die zwischen dem Anfangspunkt aktiv sind (normale Beendigung der **__try** Block) und das Ziel (die **__except** blockiert wird, die Ausnahme behandelt) muss ausgeführt werden. Dies wird als "lokale Entladung" bezeichnet.
 
-Wenn eine **versuchen** Block vorzeitig aus irgendeinem Grund auch durch Herausspringen aus dem Block beendet wird, führt das System die zugeordnete **schließlich** Block als Teil der Prozess der stapelentladung. In solchen Fällen die [AbnormalTermination](/windows/desktop/Debug/abnormaltermination) -Funktion zurückgegeben wird **"true"** bei Aufruf innerhalb der **schließlich** blockieren; andernfalls wird **"false"**.
+Wenn eine **versuchen** Block vorzeitig aus irgendeinem Grund auch durch Herausspringen aus dem Block beendet wird, führt das System die zugeordnete **schließlich** Block als Teil der Prozess der stapelentladung. In solchen Fällen die [AbnormalTermination](/windows/desktop/Debug/abnormaltermination) -Funktion zurückgegeben wird **"true"** bei Aufruf innerhalb der **schließlich** blockieren; andernfalls wird **"false"** .
 
 Der Beendigungshandler wird nicht aufgerufen, wenn ein Prozess, während der Ausführung abgebrochen wird einer **Try-finally-** Anweisung.
 

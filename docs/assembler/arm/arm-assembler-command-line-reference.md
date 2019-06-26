@@ -26,7 +26,7 @@ Eine Kombination aus 0 (null) oder mehrere der folgenden:
 - **-Fehler** *Dateiname*<br/>
    Umleiten von Fehler- und Warnmeldungen zu *Filename*.
 
-- **-i** *dir*[**;**<em>dir</em>]<br/>
+- **-i** *dir*[ **;** <em>dir</em>]<br/>
    Die angegebenen Verzeichnisse im Include-Suchpfad hinzufügen.
 
 - **-predefine** *directive*<br/>

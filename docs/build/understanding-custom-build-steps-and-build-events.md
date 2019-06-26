@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93a1c787a863c2c52986a00fdeabbc4d44b0fcce
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314675"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400450"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Grundlagen benutzerdefinierter Buildschritte und Buildereignisse
 
@@ -69,7 +69,7 @@ Buildereignisse und benutzerdefinierte Buildschritte werden zusammen mit anderen
 [Angeben von benutzerdefinierten Buildtools](specifying-custom-build-tools.md)<br/>
 [Angeben von Buildereignissen](specifying-build-events.md)<br/>
 [Problembehandlung für Buildanpassungen](troubleshooting-build-customizations.md)<br/>
-[Formatieren der Ausgabe eines benutzerdefinierten Buildschritts oder eines benutzerdefinierten Buildereignisses](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
+[Formatieren der Ausgabe eines benutzerdefinierten Buildschritts oder eines benutzerdefinierten Buildereignisses](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 
 ## <a name="see-also"></a>Siehe auch
 

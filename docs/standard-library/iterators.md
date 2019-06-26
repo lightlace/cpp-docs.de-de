@@ -5,18 +5,18 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: ae4193b8e6edf94ab0f8d839ac36fc1addfd8d04
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: d72cd26f2642816efae2ec826df1bd9fa02e7531
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220331"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400422"
 ---
 # <a name="iterators"></a>Iterators
 
 Ein Iterator ist ein Objekt, das Elemente in einem C++-Standardbibliothekscontainer durchlaufen kann und den Zugriff auf einzelne Elemente bereitstellt. Alle C++-Standardbibliothekscontainer stellen Iteratoren bereit, damit Algorithmen standardisiert auf ihre Elemente zugreifen können, ohne dass die Art des Containers von Bedeutung ist, in dem die Elemente gespeichert werden.
 
-Sie können Iteratoren explizit mit Member- und globalen Funktionen wie z. B. `begin()` und `end()` und Operatoren, z. B. **++** und **--** voranschreiten oder rückwärts. Sie können Iteratoren auch implizit verwenden, mit einer Range-for-Schleife oder (für bestimmte iteratortypen) den tiefgestellt-Operator  **\[]**.
+Sie können Iteratoren explizit mit Member- und globalen Funktionen wie z. B. `begin()` und `end()` und Operatoren, z. B. **++** und **--** voranschreiten oder rückwärts. Sie können Iteratoren auch implizit verwenden, mit einer Range-for-Schleife oder (für bestimmte iteratortypen) den tiefgestellt-Operator  **\[]** .
 
 In der C++-Standardbibliothek ist der Anfang einer Sequenz oder eines Bereichs das erste Element. Das Ende einer Sequenz oder eines Bereichs wird immer als eins hinter dem letzten Element definiert. Die globalen Funktionen `begin` und `end` geben Iteratoren zu einem angegebenen Container zurück. Die typische explizite Iteratorschleife durch alle Elemente in einem Container sieht folgendermaßen aus:
 
@@ -49,7 +49,7 @@ Es gibt fünf Kategorien von Iteratoren. Die Kategorien zum Erhöhen der Leistun
 
 - **Bidirectional**. Ein *bidirektionaler Iterator, der* `X` kann die Stelle eines forward-Iterators treten. Sie können jedoch auch einen bidirektionaler Iterator, wie in verringern `--X`, `X--`, oder `(V = *X--)`. Sie können auf Elementmitglieder zugreifen und bidirektionale Iteratoren genauso wie Forward-Iteratoren vergleichen.
 
-- **Random Access**. Ein *Iterator mit wahlfreiem Zugriff* `X` kann die Stelle eines bidirektionalen Iterators treten. Mit einem Iterator mit wahlfreiem Zugriff können Sie den tiefgestellten-Operator  **\[]** Zugriff auf Elemente. Sie können die **+**, **-**, **+=** und **-=** Operatoren verschieben Vorwärts oder rückwärts eine angegebene Anzahl von Elementen und den Abstand zwischen Iteratoren berechnen. Sie können Bidirektionale Iteratoren vergleichen, mithilfe von **==**, **! =**, **\<**, **>**, **\< =**, und **>=**.
+- **Random Access**. Ein *Iterator mit wahlfreiem Zugriff* `X` kann die Stelle eines bidirektionalen Iterators treten. Mit einem Iterator mit wahlfreiem Zugriff können Sie den tiefgestellten-Operator  **\[]** Zugriff auf Elemente. Sie können die **+** , **-** , **+=** und **-=** Operatoren verschieben Vorwärts oder rückwärts eine angegebene Anzahl von Elementen und den Abstand zwischen Iteratoren berechnen. Sie können Bidirektionale Iteratoren vergleichen, mithilfe von **==** , **! =** , **\<** , **>** , **\< =** , und **>=** .
 
 Alle Iteratoren können zugewiesen oder kopiert werden. Es wird angenommen, dass es sich bei ihnen um Lightweight-Objekte handelt, und sie werden oftmals nach Wert und nicht nach Verweis weiter- und zurückgegeben. Beachten Sie zudem, dass einer der zuvor beschriebenen Vorgänge eine Ausnahme auslösen kann, wenn er für einen gültigen Iterator ausgeführt wird.
 
@@ -58,7 +58,7 @@ Die Hierarchie der Iteratorkategorien kann durch das Zeigen von drei Sequenzen z
 > Ausgabe-iterator<br/>
 > forward-Iterator -><br/>
 > bidirektionaler Iterator, der -><br/>
-> random-Access-Iterator -><br/>
+> random-Access-Iterator ->
 
 Der Pfeil nach rechts meint: „kann ersetzt werden durch“. Jeder einen Ausgabeiterator aufrufende Algorithmus sollte beispielsweise problemlos mit einem Forward-Iterator funktionieren; dies gilt jedoch *nicht* umgekehrt.
 
@@ -67,7 +67,7 @@ Für den schreibgeschützten Zugriff auf eine Sequenz können Sie Folgendes verw
 > Eingabe-iterator<br/>
 > forward-Iterator -><br/>
 > bidirektionaler Iterator, der -><br/>
-> random-Access-Iterator -><br/>
+> random-Access-Iterator ->
 
 In diesem Fall ist ein Eingabeiterator die schwächste aller Kategorien.
 
@@ -75,7 +75,7 @@ Schließlich können Sie für den Lese-/Schreibzugriff auf eine Sequenz Folgende
 
 > Forward-iterator<br/>
 > bidirektionaler Iterator, der -><br/>
-> random-Access-Iterator -><br/>
+> random-Access-Iterator ->
 
 Ein Objektzeiger kann immer als ein Random-Access-Iterator fungieren. Er kann demnach als eine beliebige Kategorie des Iterators fungieren, wenn er den entsprechenden Lese-/Schreibzugriff auf die Sequenz unterstützt, die er festlegt.
 
