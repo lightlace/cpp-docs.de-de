@@ -25,7 +25,7 @@ C2653 ist auch möglich, wenn Sie versuchen, Sie definieren eine *zusammengesetz
 
 ## <a name="examples"></a>Beispiele
 
-In diesem Beispiel wird C2653 generiert, da ein Bereichsname verwendet wird, aber nicht deklariert. Der Compiler erwartet, dass eine Klasse, Struktur, Union oder Namespacenamen, bevor Sie einen Bereichsoperator (:).
+In diesem Beispiel wird C2653 generiert, da ein Bereichsname verwendet wird, aber nicht deklariert. Der Compiler erwartet, dass eine Klasse, Struktur, Union oder Namespacenamen, bevor Sie einen Bereichsoperator (::).
 
 ```cpp
 // C2653.cpp
