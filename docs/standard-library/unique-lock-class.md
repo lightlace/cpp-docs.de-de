@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: 784969bea25bfff49a21c23b350afbfc8bdab59a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 235307a09796b21979c33ded18f8ce69414c0c3f
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383515"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400417"
 ---
 # <a name="uniquelock-class"></a>unique_lock-Klasse
 
@@ -66,7 +66,7 @@ Intern wird eine `unique_lock` speichert einen Zeiger auf ein zugeordnetes `mute
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
-*unique_lock*<br/>
+*unique_lock*
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,7 +88,7 @@ Wenn der gespeicherte `mutex` Zeiger NULL ist, löst diese Methode eine [System_
 
 Wenn der aufrufende Thread das zugeordnete `mutex` bereits besitzt, löst diese Methode einen `system_error` aus, der den Fehlercode `resource_deadlock_would_occur` hat.
 
-Andernfalls ruft diese Methode `lock` für das zugeordnete `mutex` und legt die interne Thread-ownershipflag auf **"true"**.
+Andernfalls ruft diese Methode `lock` für das zugeordnete `mutex` und legt die interne Thread-ownershipflag auf **"true"** .
 
 ## <a name="mutex"></a> mutex
 
@@ -108,7 +108,7 @@ explicit operator bool() noexcept
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn der Thread das Mutex besitzt; andernfalls **"false"**.
+**"true"** , wenn der Thread das Mutex besitzt; andernfalls **"false"** .
 
 ## <a name="op_eq"></a> operator=
 
@@ -143,7 +143,7 @@ bool owns_lock() const noexcept;
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn der Thread im Besitz der `mutex`ist, andernfalls **"false"**.
+**"true"** , wenn der Thread im Besitz der `mutex`ist, andernfalls **"false"** .
 
 ## <a name="release"></a> release
 
@@ -159,7 +159,7 @@ Der vorherige Wert des gespeicherten `mutex`-Zeigers.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode legt den Wert des gespeicherten `mutex` -Zeigers auf 0 und das interne `mutex` ownershipflag auf **"false"**.
+Diese Methode legt den Wert des gespeicherten `mutex` -Zeigers auf 0 und das interne `mutex` ownershipflag auf **"false"** .
 
 ## <a name="swap"></a>  swap
 
@@ -184,7 +184,7 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex`ist, andernfalls **"false"**.
+**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex`ist, andernfalls **"false"** .
 
 ### <a name="remarks"></a>Hinweise
 
@@ -209,7 +209,7 @@ Ein [chrono::duration](../standard-library/duration-class.md)-Objekt, das angibt
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex`ist, andernfalls **"false"**.
+**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex`ist, andernfalls **"false"** .
 
 ### <a name="remarks"></a>Hinweise
 
@@ -235,7 +235,7 @@ Ein Zeitpunkt, der den Schwellenwert angibt, nach dem die Methode nicht mehr ver
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex`ist, andernfalls **"false"**.
+**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex`ist, andernfalls **"false"** .
 
 ### <a name="remarks"></a>Hinweise
 
@@ -326,7 +326,7 @@ void unlock();
 
 Wenn der aufrufende Thread das zugeordnete `mutex` nicht besitzt, löst diese Methode einen [system_error](../standard-library/system-error-class.md) aus, der den Fehlercode `operation_not_permitted` hat.
 
-Andernfalls ruft diese Methode `unlock` für das zugeordnete `mutex` und legt die interne Thread-ownershipflag auf **"false"**.
+Andernfalls ruft diese Methode `unlock` für das zugeordnete `mutex` und legt die interne Thread-ownershipflag auf **"false"** .
 
 ## <a name="see-also"></a>Siehe auch
 

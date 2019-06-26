@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1010e4d1c11c9408ef73f4db0a449314b36059a7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376717"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400770"
 ---
 # <a name="menu-commands-c"></a>Befehle im Menü (C++)
 
@@ -32,16 +32,16 @@ Die folgenden Informationen sind entsprechend so aufgebaut, dass die **Menü** E
 |--------------|-----------------|
 |**Break**|Einer der folgenden Werte ist möglich:<br/>  - **Keine**: Kein Wechsel. Dies ist die Standardeinstellung.<br/>  - **Spalte**: Bei statischen Menüs bewirkt wird dieser Wert den Menübefehl in eine neue Zeile.<br/>      Bei Popupmenüs bewirkt dieser Wert, dass der Menübefehl in eine neue Spalte gesetzt wird, ohne dass zwischen den Spalten eine Trennlinie angezeigt wird.<br/>      Diese Eigenschaft wirkt sich nicht im Menü-Editor, sondern erst zur Laufzeit auf die Darstellung des Menüs aus.<br />   - **Bar**: Identisch mit **Spalte** außer dass bei Popupmenüs dieser Wert die neue Spalte von der alten Spalte getrennt durch eine vertikale Linie.<br/>      Diese Eigenschaft wirkt sich auf die Darstellung des Menüs nur zur Laufzeit nicht in der **Menü-Editor**.|
 |**Beschriftung**|Text zur Beschreibung des Menübefehls (der Menüname). Einem der Buchstaben in der Beschriftung eines Menübefehls kann eine Zugriffstaste zugeordnet werden, indem ihm ein kaufmännisches Und-Zeichen (&) vorangestellt wird.|
-|**Aktiviert**|Wenn **"true"**, der Menübefehl zu Beginn aktiviert ist. Typ: **Bool**. Standard: **"False"**.|
+|**Aktiviert**|Wenn **"true"** , der Menübefehl zu Beginn aktiviert ist. Typ: **Bool**. Standard: **"False"** .|
 |**Aktiviert**|Wenn **FALSE**, ist das Menüelement deaktiviert.|
-|**Grau**|Wenn **"true"**, ist der Menübefehl, Beginn grau dargestellt und inaktiv. Typ: **Bool**. Standard: **"False"**.|
-|**Hilfe**|Richtet das Menüelement rechtsbündig aus. Standard: **"False"**.<br/><br/>Der Menübefehl für die **Hilfe** befindet sich beispielsweise in allen Windows-Anwendungen immer ganz rechts. Wenn Sie diese Eigenschaft für ein Menüelement festlegen, wird das Element ganz rechts am Ende des Menüs angezeigt. Bezieht sich auf Elemente des Hauptmenüs.|
+|**Grau**|Wenn **"true"** , ist der Menübefehl, Beginn grau dargestellt und inaktiv. Typ: **Bool**. Standard: **"False"** .|
+|**Hilfe**|Richtet das Menüelement rechtsbündig aus. Standard: **"False"** .<br/><br/>Der Menübefehl für die **Hilfe** befindet sich beispielsweise in allen Windows-Anwendungen immer ganz rechts. Wenn Sie diese Eigenschaft für ein Menüelement festlegen, wird das Element ganz rechts am Ende des Menüs angezeigt. Bezieht sich auf Elemente des Hauptmenüs.|
 |**ID**|Ein Symbol, das in der Headerdatei definiert ist. Typ: **Symbol**, **Ganzzahl**, oder **Zeichenfolge in Anführungszeichen**.<br/><br/>Sie können ein beliebiges Symbol verwenden, das üblicherweise in den Editoren verfügbar ist. Dies gilt auch, wenn das [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window) keine Dropdownliste enthält, aus der Sie auswählen können.|
-|**Popup**|Wenn **"true"**, der Menübefehl ist ein Popup-Menü. Typ: **Bool**. Standard: **"True"** für Menüs der obersten Ebene in einer Menüleiste, andernfalls **"false"**.|
+|**Popup**|Wenn **"true"** , der Menübefehl ist ein Popup-Menü. Typ: **Bool**. Standard: **"True"** für Menüs der obersten Ebene in einer Menüleiste, andernfalls **"false"** .|
 |**Eingabeaufforderung**|Enthält Text, der in der Statusleiste angezeigt werden soll, wenn dieser Menübefehl markiert wird. Der Text wird mit dem Bezeichner des Menübefehls in der Zeichenfolgentabelle gespeichert.<br/><br/>Diese Eigenschaft ist für jeden Projekttyp verfügbar, wobei die Laufzeitfunktionalität jedoch MFC-spezifisch ist.|
-|**Rechtsbündig**|Richtet den Menübefehl auf der Menüleiste zur Laufzeit rechtsbündig aus. Typ: **Bool**. Standard: **"False"**.|
+|**Rechtsbündig**|Richtet den Menübefehl auf der Menüleiste zur Laufzeit rechtsbündig aus. Typ: **Bool**. Standard: **"False"** .|
 |**Von rechts nach links**|Ermöglicht die Darstellung der Menübefehle von rechts nach links, wenn die Benutzeroberfläche in eine Sprache übertragen werden soll, die von rechts nach links geschrieben wird, z. B. Hebräisch oder Arabisch.|
-|**Trennzeichen**|Wenn **"true"**, der Menübefehl ein Trennzeichen ist. Typ: **Bool**. Standard: **"False"**.|
+|**Trennzeichen**|Wenn **"true"** , der Menübefehl ein Trennzeichen ist. Typ: **Bool**. Standard: **"False"** .|
 
 ## <a name="associate-menu-commands"></a>Verknüpfen von Menübefehlen
 
@@ -55,7 +55,7 @@ Häufig ist es wünschenswert, dass ein Menübefehl und eine Tastenkombination d
 
    - Geben Sie im Anschluss an die Menübeschriftung die Escapesequenz für einen Tabulator (\t) ein, damit alle Zugriffstasten des Menüs links ausgerichtet sind.
 
-   - Geben Sie den Namen der Modifizierertaste (**STRG**, **Alt**, oder **UMSCHALT**) gefolgt von einem Pluszeichen (**+**) und den Namen, Buchstaben, oder Symbol der zusätzlichen Taste.
+   - Geben Sie den Namen der Modifizierertaste (**STRG**, **Alt**, oder **UMSCHALT**) gefolgt von einem Pluszeichen ( **+** ) und den Namen, Buchstaben, oder Symbol der zusätzlichen Taste.
 
    Beispielsweise weisen **STRG**+**O** auf die **öffnen** Befehl die **Datei** im Menü Sie ändern, dass der Menübefehl  **Beschriftung** , damit sie wie folgt aussieht:
 
@@ -88,7 +88,7 @@ Win32
 
 ## <a name="see-also"></a>Siehe auch
 
-[Menü-Editor](../windows/menu-editor.md)<br/>
+[Menü-Editor](../windows/menu-editor.md)
 
 <!--
 [Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>-->

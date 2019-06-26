@@ -5,14 +5,14 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f306ef11b17ac94281dc9a5fdba55a34d236eb1
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236555"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400925"
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>Compiler-Warnungen, die standardmäßig deaktiviert sind
+# <a name="compiler-warnings-that-are-off-by-default"></a>Standardmäßig deaktivierte Compilerwarnungen
 
 Der Compiler unterstützt Warnungen, die standardmäßig deaktiviert sind, da die meisten Entwickler diese nützliche nicht finden. In einigen Fällen warnen sie über eine Form Auswahl oder das allgemeine Idiome in älterem Code. Andere Warnungen sind zur Verwendung einer Microsoft-Erweiterung in der Sprache. In anderen Fällen geben sie einen Bereich, in denen Programmierer oft falsche Annahmen zu machen die zu unerwarteten oder nicht definierten Verhalten führen können. Wenn aktiviert, können einige Warnungen oft in der Bibliothek-Header angezeigt. Die C-Runtime-Bibliotheken und die C++-Standardbibliotheken sollen keine Warnungen nur auf der Warnebene ausgegeben [/W4](../build/reference/compiler-option-warning-level.md).
 
@@ -159,7 +159,7 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höher standardmäßig de
 ::: moniker range=">= vs-2019"
 <sup>16.0</sup> diese Warnung ist verfügbar in Visual Studio 2019 RTM.<br/>
 ::: moniker-end
-<sup>Perm</sup> diese Warnung ist deaktiviert, es sei denn, die [/ PERMISSIVE--](../build/reference/permissive-standards-conformance.md) Compiler-Option festgelegt ist.<br/>
+<sup>Perm</sup> diese Warnung ist deaktiviert, es sei denn, die [/ PERMISSIVE--](../build/reference/permissive-standards-conformance.md) Compiler-Option festgelegt ist.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Warnungen deaktivieren, wird standardmäßig in früheren Versionen
 
