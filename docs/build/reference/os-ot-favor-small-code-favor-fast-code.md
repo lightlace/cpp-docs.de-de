@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: d4e8d062685a543c428f0c86a22c17c8faf017ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bbdda07eacdb003515a40a93a232c0f8626ca89
+ms.sourcegitcommit: aed09c9c05e6b031c8a9f87a8d6bbdaf253485e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320174"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412242"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Kompakten Code bevorzugen, Schnellen Code bevorzugen)
 
@@ -39,7 +39,7 @@ Minimiert oder maximiert die Größe von exe- und DLL.
 
 **/ OS** (kompakten Code bevorzugen) minimieren die Größe von exe- und DLL, indem Sie die Anweisung an den Compiler, Größe gegenüber Geschwindigkeit zu bevorzugen. Der Compiler kann viele C- und C++-Konstrukte auf mit ähnlichen Sequenzen von Computercode reduzieren. Gelegentlich abgewogen Größe und Geschwindigkeit. Die **/OS** und **/Ot** Optionen können Sie eine Präferenz gegenüber der anderen angeben:
 
-**/ Ot** (bevorzugen, schnellen Code bevorzugen) maximiert die Geschwindigkeit von exe- und DLL, indem Sie die Anweisung an den Compiler, Geschwindigkeit gegenüber der Größe zu bevorzugen. (Dies ist die Standardeinstellung.) Der Compiler kann viele C- und C++-Konstrukte auf mit ähnlichen Sequenzen von Computercode reduzieren. In einigen Fällen abgewogen Größe und Geschwindigkeit. Die Option/Ot wird impliziert, durch die Geschwindigkeit maximieren (["/ O2"](o1-o2-minimize-size-maximize-speed.md)) Option. Die **"/ O2"** Option kombiniert mehrere Optionen für die sehr schnellen Code zu erzeugen.
+**/ Ot** (bevorzugen, schnellen Code bevorzugen) maximiert die Geschwindigkeit von exe- und DLL, indem Sie die Anweisung an den Compiler, Geschwindigkeit gegenüber der Größe zu bevorzugen. (Dies ist die Standardeinstellung.) Der Compiler kann viele C- und C++-Konstrukte auf mit ähnlichen Sequenzen von Computercode reduzieren. In einigen Fällen abgewogen Größe und Geschwindigkeit. Die **/Ot** Option impliziert wird, durch die Geschwindigkeit maximieren (["/ O2"](o1-o2-minimize-size-maximize-speed.md)) Option. Die **"/ O2"** Option kombiniert mehrere Optionen für die sehr schnellen Code zu erzeugen.
 
 Bei Verwendung von **/OS** oder **/Ot**, dann müssen Sie auch angeben ["/ Og"](og-global-optimizations.md) um den Code optimieren.
 
@@ -48,7 +48,7 @@ Bei Verwendung von **/OS** oder **/Ot**, dann müssen Sie auch angeben ["/ Og"](
 
 **X86 bestimmte**
 
-Der folgende Beispielcode veranschaulicht den Unterschied zwischen den kompakten Code bevorzugen (**/OS**) Optionen und schnellen Code bevorzugen (**/Ot**) Option:
+Der folgende Beispielcode veranschaulicht den Unterschied zwischen den kompakten Code bevorzugen ( **/OS**) Optionen und schnellen Code bevorzugen ( **/Ot**) Option:
 
 > [!NOTE]
 >  Im folgenden wird das erwartete Verhalten beschrieben, bei Verwendung **/OS** oder **/Ot**. Allerdings Compilerverhalten von Version zu Version möglicherweise verschiedene Optimierungen für den folgenden Code.
@@ -65,14 +65,14 @@ int differ(int x)
 }
 ```
 
-Wie im Fragment von Computercode unten gezeigt wird, wenn DIFFER.c kompiliert wird für die Größe (**/OS**), implementiert der Compiler die multiply-Ausdruck in der return-Anweisung explizit als ein multiplizieren, um eine kurze, aber langsamere Codesequenz zu erstellen:
+Wie im Fragment von Computercode unten gezeigt wird, wenn DIFFER.c kompiliert wird für die Größe ( **/OS**), implementiert der Compiler die multiply-Ausdruck in der return-Anweisung explizit als ein multiplizieren, um eine kurze, aber langsamere Codesequenz zu erstellen:
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
 imul   eax, 71                  ; 00000047H
 ```
 
-Klicken Sie alternativ, wenn DIFFER.c für Geschwindigkeit kompiliert wird (**/Ot**), implementiert der Compiler die multiply-Ausdruck in der return-Anweisung als eine Reihe von UMSCHALT und `LEA` Anweisungen, um eine schnelle, aber mehr Code zu erzeugen:
+Klicken Sie alternativ, wenn DIFFER.c für Geschwindigkeit kompiliert wird ( **/Ot**), implementiert der Compiler die multiply-Ausdruck in der return-Anweisung als eine Reihe von UMSCHALT und `LEA` Anweisungen, um eine schnelle, aber mehr Code zu erzeugen:
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
@@ -86,7 +86,7 @@ sub    eax, ecx
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
