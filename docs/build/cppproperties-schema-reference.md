@@ -3,12 +3,12 @@ title: CppProperties.json-Schemareferenz
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 8432b72deaef99ee20147505030cbc8a9a270869
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: cf5cd964068ad2e3aeeaf1e057c9bf407f4985f5
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344404"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516366"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json-Schemareferenz
 
@@ -264,7 +264,7 @@ Sie können innerhalb von `CppProperties.json` auf folgende integrierte Makros z
 |-|-|
 |`${workspaceRoot}`| den vollständigen Pfad zum Arbeitsbereichordner|
 |`${projectRoot}`| den vollständigen Pfad zum Ordner von `CppProperties.json`|
-|`${vsInstallDir}`| den vollständigen Pfad zum Ordner, indem die ausgeführte Instanz von Visual Studio installiert ist|
+|`${env.vsInstallDir}`| den vollständigen Pfad zum Ordner, indem die ausgeführte Instanz von Visual Studio installiert ist|
 
 Z. B. wenn das Projekt verfügt über einen Ordner einschließen und auch windows.h und andere allgemeine Header aus dem Windows SDK umfasst, Sie können aktualisieren möchten Ihre `CppProperties.json` Konfigurationsdatei mit den folgenden enthält:
 
