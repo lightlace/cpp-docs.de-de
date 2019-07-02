@@ -8,12 +8,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: 78dfd9f208b4c5cf484f0ff43c5e07ce1aadec35
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 25e9bb65492e0c4b100ecd7a800491d238b1dd38
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149647"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400528"
 ---
 # <a name="c-relational-and-equality-operators"></a>C-Operatoren (relational) und C-Gleichheitsoperatoren
 
@@ -26,7 +26,7 @@ Die binären Gleichheits- und relationalen Operatoren vergleichen ihren ersten O
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*
 
 *equality-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
@@ -48,7 +48,7 @@ Die ersten vier Operatoren in der obigen Auflistung haben Priorität gegenüber 
 
 Die Operanden können einen Ganzzahl-, Gleitkomma- oder Zeigertyp haben. Die Typen der Operanden können sich unterscheiden. Relationale Operatoren führen die üblichen arithmetischen Konvertierungen für Operanden des Ganzzahl- und Gleitkommatyps aus. Außerdem können Sie die folgenden Kombinationen von Operandentypen mit den Gleichheits- und relationalen Operatoren verwenden:
 
-- Beide Operanden des jeweiligen Gleichheits- oder relationalen Operators können Zeiger auf den gleichen Typ sein. Für den Gleichheitsoperator (`==`) und den Ungleichheitsoperator (`!=`) gibt das Ergebnis des Vergleichs an, ob die zwei Zeiger denselben Speicherbereich adressieren. Für die anderen relationalen Operatoren (**\<**, **>**, **\<**= und **>**=) gibt das Ergebnis des Vergleichs die relative Position der zwei Speicheradressen der Objekte an, auf die gezeigt wird. Mit relationalen Operatoren werden nur Offsets verglichen.
+- Beide Operanden des jeweiligen Gleichheits- oder relationalen Operators können Zeiger auf den gleichen Typ sein. Für den Gleichheitsoperator (`==`) und den Ungleichheitsoperator (`!=`) gibt das Ergebnis des Vergleichs an, ob die zwei Zeiger denselben Speicherbereich adressieren. Für die anderen relationalen Operatoren ( **\<** , **>** , **\<** = und **>** =) gibt das Ergebnis des Vergleichs die relative Position der zwei Speicheradressen der Objekte an, auf die gezeigt wird. Mit relationalen Operatoren werden nur Offsets verglichen.
 
    Der Zeigervergleich wird nur für Teile des gleichen Objekts definiert. Wenn die Zeiger auf Member eines Arrays verweisen, ist der Vergleich identisch mit dem Vergleich der entsprechenden tiefgestellten Zeichen. Die Adresse des ersten Arrayelements ist "kleiner als" die Adresse des letzten Elements. Im Fall von Strukturen sind Zeiger auf später deklarierte Strukturmember Größer-als-Zeiger auf Member, die früher in der Struktur deklariert werden. Zeiger auf die Member derselben Union sind gleich.
 
