@@ -93,6 +93,8 @@
           href: build/cmake-projects-in-visual-studio.md
         - name: 'Tutorial: Erstellen plattformübergreifender C++-Projekte in Visual Studio'
           href: build/get-started-linux-cmake.md
+        - name: Clang/LLVM in CMake-Projekten
+          href: build/clang-support-cmake.md
         - name: Konfigurieren eines Linux CMake-Projekts
           href: build/../linux/cmake-linux-project.md
         - name: Anpassen von CMake-Buildeinstellungen
