@@ -1,17 +1,22 @@
 ---
 title: Installieren der C++-Workload unter Linux in Visual Studio
 description: Informationen zum Herunterladen, Installieren und Einrichten der Linux-Workload für C++ in Visual Studio
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: af4e3ec0ac21951163e92786555559cd02e8148f
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821578"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042742"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Herunterladen, Installieren und Einrichten der Linux-Workload
 
+::: moniker range="vs-2015"
+
+Linux-Projekte werden von Visual Studio 2017 und höher unterstützt.
+
+::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
@@ -35,12 +40,15 @@ Unterstützung für [AddressSanitizer (ASan)](https://github.com/google/sanitize
 
 ## <a name="visual-studio-setup"></a>Setup von Visual Studio
 
-1. Geben Sie „Visual Studio Installer“ in das Windows-Suchfeld ein: ![Windows-Suchfeld](media/visual-studio-installer-search.png)
+1. Geben Sie „Visual Studio Installer“ in das Windows-Suchfeld ein:
+
+   ![Windows-Suchfeld](media/visual-studio-installer-search.png)
+
 2. Suchen Sie in den Ergebnissen unter **Apps** nach dem Installer, und doppelklicken Sie auf ihn. Wenn der Installer geöffnet wird, wählen Sie **Ändern**aus, und klicken Sie dann auf die Registerkarte **Workloads**. Scrollen Sie nach unten zu **Andere Toolsets**, und wählen Sie die Workload **Linux Entwicklung mit C++** aus.
 
    ![Workload „Visual C++ für Linux-Entwicklung“](media/linuxworkload.png)
 
-1. Wenn Sie IoT- oder eingebettete Zielplattformen nutzen möchten, navigieren Sie auf der rechten Seite zum Bereich **Installationsdetails**, und erweitern Sie **Optionale Komponenten** unter **Linux-Entwicklung mit C++**. Wählen Sie dann die gewünschten Komponenten aus. CMake-Unterstützung für Linux ist standardmäßig ausgewählt.
+1. Wenn Sie IoT- oder eingebettete Zielplattformen nutzen möchten, navigieren Sie auf der rechten Seite zum Bereich **Installationsdetails**, und erweitern Sie **Optionale Komponenten** unter **Linux-Entwicklung mit C++** . Wählen Sie dann die gewünschten Komponenten aus. CMake-Unterstützung für Linux ist standardmäßig ausgewählt.
 
 1. Klicken Sie auf **Ändern**, um mit der Installation fortzufahren.
 
@@ -56,10 +64,10 @@ Unter Windows 10 können Sie Ihre bevorzugte Linux-Distribution im WSL (Windows-
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Linux-Setup: Ubuntu im WSL
 
-Im WSL ist keine Remoteverbindung erforderlich. **zip** und **rsync** sind zur automatischen Synchronisierung von Linux-Headern mit Visual Studio für die IntelliSense-Unterstützung erforderlich. Wenn die erforderlichen Anwendungen noch nicht vorhanden sind, können Sie sie wie folgt installieren:
+Wenn Sie für WSL entwickeln, ist es nicht erforderlich, eine Remoteverbindung hinzuzufügen oder SSH zu konfigurieren, um einen Build zu erstellen und zu debuggen. **zip** und **rsync** sind zur automatischen Synchronisierung von Linux-Headern mit Visual Studio für die IntelliSense-Unterstützung erforderlich. Wenn die erforderlichen Anwendungen noch nicht vorhanden sind, können Sie sie wie folgt installieren:
 
 ```bash
-sudo g++ gdb make rsync zip
+sudo apt-get install g++ gdb make rsync zip
 ```
 ::: moniker-end
 
@@ -67,7 +75,7 @@ sudo g++ gdb make rsync zip
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu auf Linux-Remotesystemen
 
-Auf dem Linux-Zielsystem müssen **openssh-server**, **g++**, **gdb** und **gdbserver** installiert sein. Zudem muss der SSH-Daemon ausgeführt werden. **ZIP** ist für die automatische Synchronisierung von Remoteheadern mit Ihrem lokalen Computer für IntelliSense-Unterstützung erforderlich. Wenn diese Anwendungen noch nicht vorhanden sind, können Sie sie wie folgt installieren:
+Auf dem Linux-Zielsystem müssen **openssh-server**, **g++** , **gdb** und **gdbserver** installiert sein. Zudem muss der SSH-Daemon ausgeführt werden. **ZIP** ist für die automatische Synchronisierung von Remoteheadern mit Ihrem lokalen Computer für IntelliSense-Unterstützung erforderlich. Wenn diese Anwendungen noch nicht vorhanden sind, können Sie sie wie folgt installieren:
 
 1. Führen Sie bei einer Shelleingabeaufforderung auf dem Linux-Computer Folgendes aus:
 
@@ -90,7 +98,7 @@ Auf dem Linux-Zielsystem müssen **openssh-server**, **g++**, **gdb** und **gdbs
 
 ## <a name="fedora-on-wsl"></a>Fedora auf dem WSL
 
-Fedora verwendet den **dnf**-Paket-Installer. Führen Sie den folgenden Befehl aus, um **g++**, **gdb**, **rsync** und **zip** herunterzuladen:
+Fedora verwendet den **dnf**-Paket-Installer. Führen Sie den folgenden Befehl aus, um **g++** , **gdb**, **rsync** und **zip** herunterzuladen:
 
    ```bash
    sudo dnf install gcc-g++ gdb rsync zip
@@ -104,7 +112,7 @@ Fedora verwendet den **dnf**-Paket-Installer. Führen Sie den folgenden Befehl a
 
 ## <a name="fedora-on-remote-linux-systems"></a>Fedora auf Linux-Remotesystemen
 
-Der Zielcomputer, auf dem Fedora ausgeführt wird, verwendet den **Dnf**-Paket-Installer. Um **openssh-server**, **g++**, **gdb**, **gdbserver** und **zip** herunterzuladen und den ssh-Daemon neu zu starten, befolgen Sie diese Anweisungen:
+Der Zielcomputer, auf dem Fedora ausgeführt wird, verwendet den **Dnf**-Paket-Installer. Um **openssh-server**, **g++** , **gdb**, **gdbserver** und **zip** herunterzuladen und den ssh-Daemon neu zu starten, befolgen Sie diese Anweisungen:
 
 1. Führen Sie bei einer Shelleingabeaufforderung auf dem Linux-Computer Folgendes aus:
 

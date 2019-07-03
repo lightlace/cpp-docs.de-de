@@ -1,13 +1,13 @@
 ---
 title: Konfigurieren eines C++ Projekts unter Linux in Visual Studio
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821568"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042633"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurieren eines Linux-Projekts
 
@@ -37,7 +37,7 @@ Wählen Sie zum Anzeigen von Konfigurationsoptionen das Menü **Projekt > Eigens
 
 ![Allgemeine Konfiguration](media/settings_general.png)
 
-Standardmäßig wird eine ausführbare Datei (.out) mit dem Tool erstellt. Verwenden Sie zum Erstellen einer statischen oder dynamischen Bibliothek entweder die Einstellung **Konfigurationstyp** oder eine vorhandene Makefile-Datei.
+Standardmäßig wird eine ausführbare Datei (.out) erstellt. Verwenden Sie zum Erstellen einer statischen oder dynamischen Bibliothek entweder die Einstellung **Konfigurationstyp** oder eine vorhandene Makefile-Datei.
 
 Weitere Informationen zu den Einstellungen auf den Eigenschaftenseiten finden Sie unter [Linux Project Property Page Reference (Referenz zur Linux-Projekteigenschaftenseite)](prop-pages-linux.md).
 
@@ -63,7 +63,7 @@ Konfigurieren Sie die Remoteeinstellungen, die unter [Allgemein](prop-pages/gene
 
 - Das **Remotebuild-Stammverzeichnis** bestimmt das Stammverzeichnis, in dem das Projekt auf dem Linux-Remotecomputer erstellt wird. Standardmäßig handelt es sich dabei um **~/projects**, sofern nicht anders angegeben.
 
-- Das **Remotebuild-Projektverzeichnis** ist das Verzeichnis, in dem dieses spezifische Projekt auf dem Linux-Remotecomputer erstellt wird. Standardmäßig handelt es sich dabei um das Verzeichnis **$(RemoteRootDir)/$(ProjektName)**. Es wird zu einem Verzeichnis erweitert, das den Namen des aktuellen Projekts unter dem oben angegebenen Stammverzeichnis trägt.
+- Das **Remotebuild-Projektverzeichnis** ist das Verzeichnis, in dem dieses spezifische Projekt auf dem Linux-Remotecomputer erstellt wird. Standardmäßig handelt es sich dabei um das Verzeichnis **$(RemoteRootDir)/$(ProjektName)** . Es wird zu einem Verzeichnis erweitert, das den Namen des aktuellen Projekts unter dem oben angegebenen Stammverzeichnis trägt.
 
 > [!NOTE]
 > Verwenden Sie zum Ändern der C- und C++-Standardcompiler bzw. der Linker und Archivierungsprogramme, die zur Erstellung des Projekts verwendet werden, die entsprechenden Einträge im Abschnitt **C/C++ > Allgemein** sowie im Abschnitt **Linker > Allgemein**. Sie können beispielsweise eine bestimmte Version von GCC (GNU Compiler Collection) oder Clang angeben. Weitere Informationen finden Sie unter [C/C++-Eigenschaften (Linux C++)](prop-pages/c-cpp-linux.md) und [Linkereigenschaften (Linux C++)](prop-pages/linker-linux.md).
@@ -105,7 +105,7 @@ Beim Hinzufügen einer neuen Verbindung im **Verbindungs-Manager** erkennt Visua
 Diese Funktion hängt davon ab, ob auf dem Linux-Computer Zip installiert ist. Sie können Zip mit diesem apt-get-Befehl installieren:
 
 ```cmd
-apt install zip
+sudo apt install zip
 ```
 
 Navigieren Sie zum Verwalten Ihres Header-Caches zu **Extras > Optionen > Plattformübergreifend > Verbindungs-Manager > IntelliSense-Manager für Remoteheader**. Wählen Sie zum Aktualisieren des Header-Caches nach Änderungen auf dem Linux-Computer die Remoteverbindung aus, und klicken Sie dann auf **Aktualisieren**. Klicken Sie auf **Löschen**, um die Header zu entfernen, ohne die Verbindung selbst zu löschen. Klicken Sie auf **Erkunden**, um das lokale Verzeichnis im **Datei-Explorer** zu öffnen. Behandeln Sie diesen Ordner, als sei er schreibgeschützt. Wählen Sie zum Herunterladen von Headern für eine vorhandene Verbindung, die vor Version 15.3 von Visual Studio 2017 erstellt wurde, die Verbindung aus, und klicken Sie dann auf **Herunterladen**.
