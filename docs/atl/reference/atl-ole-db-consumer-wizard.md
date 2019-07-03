@@ -1,15 +1,15 @@
 ---
 title: ATL-OLE DB-Consumer-Assistent
-ms.date: 05/09/2019
+ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: bd7af5c9788f5075f38f85bd035ba8cd09e8baec
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 7195d712474765258ac0319539697b3517cb91b3
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706991"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552230"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL-OLE DB-Consumer-Assistent
 
@@ -30,7 +30,7 @@ Dieser Assistent richtet eine OLE DB-Consumerklasse mit den Datenbindungen ein, 
 
 - **Datenquelle**
 
-   Mithilfe der Schaltfläche **Datenquelle** können Sie die angegebene Datenquelle unter Verwendung des angegebenen OLE DB-Anbieters einrichten. Wenn Sie auf diese Schaltfläche klicken, wird das Dialogfeld **Datenverknüpfungseigenschaften** geöffnet. Weitere Informationen zum Erstellen von Verbindungszeichenfolgen und dem Dialogfeld **Datenverknüpfungseigenschaften** finden Sie im Abschnitt [Übersicht über die Data Link-API](/previous-versions/windows/desktop/ms718102) in der Windows SDK-Dokumentation.
+   Mithilfe der Schaltfläche **Datenquelle** können Sie die angegebene Datenquelle unter Verwendung des angegebenen OLE DB-Anbieters einrichten. Wenn Sie auf diese Schaltfläche klicken, wird das Dialogfeld **Datenverknüpfungseigenschaften** geöffnet. Weitere Informationen zum Erstellen von Verbindungszeichenfolgen und dem Dialogfeld **Datenverknüpfungseigenschaften** finden Sie im Abschnitt [Übersicht über die Data Link-API](/previous-versions/windows/desktop/ms718102(v=vs.85)) in der Windows SDK-Dokumentation.
 
    Die folgenden zusätzlichen Informationen beschreiben die Registerkarten im Dialogfeld **Datenverknüpfungseigenschaften**.
 
@@ -171,7 +171,7 @@ Dieser Assistent richtet eine OLE DB-Consumerklasse mit den Datenbindungen ein, 
 
 - **Unterstützung**
 
-   Aktivieren Sie die Kontrollkästchen, um die Art der Aktualisierung anzugeben, die im Consumer unterstützt wird (standardmäßig sind dies keine). Mit jeder der folgenden Optionen werden [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) und die geeigneten Einträge für [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) in der Eigenschaftenzuordnung festgelegt.
+   Aktivieren Sie die Kontrollkästchen, um die Art der Aktualisierung anzugeben, die im Consumer unterstützt wird (standardmäßig sind dies keine). Mit jeder der folgenden Optionen werden [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892(v=vs.85)) und die geeigneten Einträge für [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676(v=vs.85)) in der Eigenschaftenzuordnung festgelegt.
 
    - **Änderung**
 
@@ -191,4 +191,4 @@ Dieser Assistent richtet eine OLE DB-Consumerklasse mit den Datenbindungen ein, 
 
 [ATL-OLE DB-Consumer](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Verbindungszeichenfolgen und Datenverknüpfungen (OLE DB)](/previous-versions/windows/desktop/ms718376)
+[Verbindungszeichenfolgen und Datenverknüpfungen (OLE DB)](/previous-versions/windows/desktop/ms718376(v=vs.85))

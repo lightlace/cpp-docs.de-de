@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPane-Klasse
-ms.date: 11/19/2018
+ms.date: 07/02/2019
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eeb24a0a02d1a084c83e280705344a9e5c505724
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218669"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552285"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane-Klasse
 
@@ -294,7 +294,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::RemovePage](#removepage)|Entfernt eine angegebene Seite aus dem Aufgabenbereich.|
 |[CMFCTasksPane::RemoveTask](#removetask)|Entfernt eine Aufgabe aus einer Aufgabengruppe.|
 |[CMFCTasksPane::SaveState](#savestate)|(Überschreibt [CDockablePane:: SaveState](cdockablepane-class.md).)|
-|[CMFCTasksPane::Serialize](#serialize)|(Überschreibt [CDockablePane:: SaveState]().)|
+|[CMFCTasksPane::Serialize](#serialize)|(Überschreibt [CDockablePane:: SaveState](cdockablepane-class.md).)|
 |[CMFCTasksPane::SetActivePage](#setactivepage)|Aktiviert eine angegebene Seite im Aufgabenbereich.|
 |[CMFCTasksPane::SetCaption](#setcaption)|Legt den Beschriftungsnamen eines Aufgabenbereichs fest.|
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Legt die Höhe einer Gruppenbeschriftung fest.|
