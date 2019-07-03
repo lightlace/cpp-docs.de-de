@@ -1,15 +1,15 @@
 ---
 title: Vorbereiten eines Testcomputers zum Ausführen einer ausführbaren Debugdatei
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 87d2bf434aef3a85bf7fa19f5886bec106515809
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448454"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552331"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Vorbereiten eines Testcomputers zum Ausführen einer ausführbaren Debugdatei
 
@@ -29,11 +29,11 @@ Es gibt drei Möglichkeiten, Debugversionen von DLLs für Visual C++-Bibliothek
 
 - Verwenden Sie in Visual Studio die Option **Bereitstellen** im Dialogfeld **Konfigurations-Manager**, um die Ausgabe des Projekts und andere Dateien zum Remotecomputer zu kopieren.
 
-Nach der Installation von Visual C++-DLLs können Sie einen Remotedebugger auf dem Remotecomputer ausführen. Weitere Informationen zum Remotedebuggen finden Sie unter [Remote Debugging (Remotedebuggen)](/visualstudio/debugger/remote-debugging.md).
+Nach der Installation von Visual C++-DLLs können Sie einen Remotedebugger auf dem Remotecomputer ausführen. Weitere Informationen zum Remotedebuggen finden Sie unter [Remote Debugging (Remotedebuggen)](/visualstudio/debugger/remote-debugging).
 
 ## <a name="see-also"></a>Siehe auch
 
 [Bereitstellung in Visual C++](deployment-in-visual-cpp.md)<br>
 [Windows Installer-Befehlszeilenoptionen](/windows/desktop/Msi/command-line-options)<br>
 [Bereitstellungsbeispiele](deployment-examples.md)<br>
-[Remote Debugging](/visualstudio/debugger/remote-debugging.md)
+[Remote Debugging](/visualstudio/debugger/remote-debugging)

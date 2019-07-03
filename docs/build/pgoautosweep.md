@@ -1,20 +1,20 @@
 ---
-title: "\"PgoAutoSweep\""
-ms.date: 03/14/2018
+title: PgoAutoSweep
+ms.date: 07/02/2019
 f1_keywords:
 - PgoAutoSweep
 - PogoAutoSweepA
 - PogoAutoSweepW
-ms.openlocfilehash: 2d9804e5ce90663d44ac389ab4f71d10290e6470
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57bcd1b2e9f0a3312867c4373fd1e50bcf91576e
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295332"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552241"
 ---
-# <a name="pgoautosweep"></a>"PgoAutoSweep"
+# <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` Speichert die aktuellen Profilinformationen Indikator in einer Datei, und klicken Sie dann den Zähler zurückgesetzt. Verwenden Sie die Funktion während der profilgesteuerten Optimierung, Schulungen, die alle Profildaten aus das aktive Programm in eine PGC-Datei zur späteren Verwendung in den Build für die Optimierung zu schreiben.
+`PgoAutoSweep` Speichert die aktuellen Profilinformationen Indikator in einer Datei, und klicken Sie dann den Zähler zurückgesetzt. Verwenden Sie die Funktion während der profilgesteuerten Optimierung, die Schulungen, die alle Profildaten aus das ausgeführte Programm zu schreiben einer `.pgc` Datei zur späteren Verwendung in den Build für die Optimierung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,7 +26,7 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 ### <a name="parameters"></a>Parameter
 
 *name*<br/>
-Eine identifizierende Zeichenfolge für die gespeicherten PGC-Datei.
+Eine identifizierende Zeichenfolge für die gespeicherten `.pgc` Datei.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -34,11 +34,11 @@ Rufen Sie `PgoAutoSweep` aus Ihrer Anwendung zu speichern, die Profildaten zu ei
 
 Die gespeicherten Profildaten für den Leistungsindikator befindet sich in einer Datei namens *Base_name*-*Namen*! *Wert*.pgc, in denen *Base_name* ist der Basisname der ausführbaren Datei, *Namen* ist der an übergebene Parameter `PgoAutoSweep`, und *Wert* ist ein eindeutiger Wert, in der Regel eine monoton steigende Zahl, um Datei Namenskonflikte zu verhindern.
 
-Die PGC-Dateien, die von erstellten `PgoAutoSweep` müssen zusammengeführt werden, in einer PGD-Datei verwendet werden, um eine optimierte ausführbare Datei zu erstellen. Sie können die ["pgomgr"](pgomgr.md) Befehl aus, um die Zusammenführung ausführen.
+Die `.pgc` von erstellten Dateien `PgoAutoSweep` müssen zusammengeführt werden, in eine `.pgd` Datei, die verwendet werden, um eine optimierte ausführbare Datei zu erstellen. Sie können die ["pgomgr"](pgomgr.md) Befehl aus, um die Zusammenführung ausführen.
 
-Sie können den Namen der zusammengeführte PGD-Datei während des Builds für die Optimierung für dem Linker übergeben, mit der **PGD =**_Filename_ Argument für die [/USERPROFILE angegeben](reference/useprofile.md) -Linkeroption, oder mit der veralteten **/PGD** -Linkeroption. Wenn Sie in eine Datei mit dem Namen der PGC-Dateien zusammenführen *Base_name*PGD, Sie müssen nicht auf den Dateinamen in der Befehlszeile angeben, da der Dateiname der Linker standardmäßig übernimmt.
+Können Sie die Namen der zusammengeführten übergeben `.pgd` Datei an den Linker während des Buildvorgangs Optimierung mithilfe der **PGD =** _Filename_ Argument für die [/USERPROFILE angegeben](reference/useprofile.md) Linker aus, oder durch die Verwendung des veralteten **/PGD** -Linkeroption. Wenn Sie Zusammenführen der `.pgc` Dateien in eine Datei mit dem Namen *Base_name*PGD, Sie müssen nicht auf den Dateinamen in der Befehlszeile angeben, da der Dateiname der Linker standardmäßig übernimmt.
 
-Die `PgoAutoSweep` Funktion verwaltet die Threadsicherheit-Einstellung angegeben, wenn das instrumentierte Build erstellt wird. Wenn Sie die Standardeinstellung verwenden, oder geben Sie die **NOEXACT** Argument für die [/genprofile oder/fastgenprofile]() -Linkeroption, Aufrufe von `PgoAutoSweep` sind nicht threadsicher. Die **EXACT** Argument erstellt eine Thread-sicher und genauere, aber langsamer, instrumentierte ausführbare Datei.
+Die `PgoAutoSweep` Funktion verwaltet die Threadsicherheit-Einstellung angegeben, wenn das instrumentierte Build erstellt wird. Wenn Sie die Standardeinstellung verwenden, oder geben Sie die **NOEXACT** Argument für die [/genprofile oder/fastgenprofile](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) -Linkeroption, Aufrufe von `PgoAutoSweep` sind nicht threadsicher. Die **EXACT** Argument erstellt eine Thread-sicher und genauere, aber langsamer, instrumentierte ausführbare Datei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,7 +50,7 @@ Die ausführbare Datei muss die Datei "pgobootrun.lib" herstellen in den verknü
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird `PgoAutoSweep` zwei. PGC-Dateien zu unterschiedlichen Zeitpunkten während der Ausführung. Die erste enthält Daten, die das Laufzeitverhalten bis beschreiben `count` ist gleich 3 ist, und die zweite enthält die Daten, die nach diesem Punkt erst kurz vor Beendigung der Anwendung gesammelt.
+Im folgenden Beispiel wird `PgoAutoSweep` zwei `.pgc` Dateien zu unterschiedlichen Zeitpunkten während der Ausführung. Die erste enthält Daten, die das Laufzeitverhalten bis beschreiben `count` ist gleich 3 ist, und die zweite enthält die Daten, die nach diesem Punkt erst kurz vor Beendigung der Anwendung gesammelt.
 
 ```cpp
 // pgoautosweep.cpp
