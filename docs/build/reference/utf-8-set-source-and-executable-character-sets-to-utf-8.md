@@ -1,5 +1,5 @@
 ---
-title: /UTF-8 (Quelle festlegen und ausführbare Zeichensätze auf UTF-8)
+title: /UTF-8 (Festlegen von Quell- und Ausführungszeichensätze auf UTF-8)
 ms.date: 11/04/2016
 f1_keywords:
 - /utf-8
@@ -13,9 +13,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62317288"
 ---
-# <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (Quelle festlegen und ausführbare Zeichensätze auf UTF-8)
+# <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (Festlegen von Quell- und Ausführungszeichensätze auf UTF-8)
 
-Gibt an, sowohl der quellzeichensatz der ausführungszeichensatz als UTF-8.
+Gibt sowohl den Quell- als auch den Ausführungszeichensatz als UTF-8 an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,9 +31,9 @@ Standardmäßig erkennt Visual Studio eine Bytereihenfolge-Marke, um festzustell
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen des Compilers und der Buildeigenschaften](../working-with-project-properties.md).
 
-1. Erweitern Sie die **Konfigurationseigenschaften**, **C/C++-**, **Befehlszeile** Ordner.
+1. Erweitern Sie die **Konfigurationseigenschaften**, **C/C++-** , **Befehlszeile** Ordner.
 
 1. In **zusätzliche Optionen**, Hinzufügen der **/utf-8** verwenden, um die bevorzugte Codierung anzugeben.
 

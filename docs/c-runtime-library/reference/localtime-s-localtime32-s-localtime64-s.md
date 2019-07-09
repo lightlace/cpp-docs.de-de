@@ -1,6 +1,6 @@
 ---
 title: localtime_s, _localtime32_s, _localtime64_s
-ms.date: 11/04/2016
+ms.date: 07/09/2019
 apiname:
 - _localtime64_s
 - _localtime32_s
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 454ab492fbe8a31b9ceeca518fa5e590271dbf06
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157275"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693411"
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -84,9 +84,9 @@ Im Fall der ersten zwei Fehlerbedingungen, wird der ungültige Parameterhandler 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_localtime32_s** -Funktion konvertiert eine Zeit, gespeichert als eine [Time_t](../../c-runtime-library/standard-types.md) Wert und speichert das Ergebnis in eine Struktur vom Typ [tm](../../c-runtime-library/standard-types.md). Die **lange** Wert *SourceTime* darstellt, die die Sekunden seit Mitternacht vergangenen (00: 00:00), 1. Januar 1970, UTC. Dieser Wert in der Regel aus einer der [Zeit](time-time32-time64.md) Funktion.
+Die **Localtime_s** -Funktion konvertiert eine Zeit, gespeichert als eine [Time_t](../../c-runtime-library/standard-types.md) Wert und speichert das Ergebnis in eine Struktur vom Typ [tm](../../c-runtime-library/standard-types.md). Die **Time_t** Wert *SourceTime* darstellt, die die Sekunden seit Mitternacht vergangenen (00: 00:00), 1. Januar 1970, UTC. Dieser Wert in der Regel aus einer der [Zeit](time-time32-time64.md) Funktion.
 
-**_localtime32_s** für die lokale Zeitzone korrigiert werden, wenn der Benutzer zuerst die globalen Umgebungsvariablen **TZ**. Wenn **TZ** festgelegt wird, werden drei andere Umgebungsvariablen (**_timezone**, **_daylight**, und **_tzname**) werden ebenfalls automatisch festgelegt. Wenn die **TZ** Variable nicht festgelegt ist, **localtime32_s** versucht, die in der Datum/Uhrzeit-Anwendung in der Systemsteuerung festgelegten Zeitzonendaten zu verwenden. Wenn diese Information nicht abgerufen werden kann, wird standardmäßig PST8PDT verwendet, was die Zeitzone Pacific (PTC) darstellt. Unter [_tzset](tzset.md) finden Sie eine Beschreibung dieser Variablen. **RTZ** ist ein Microsoft-Erweiterung und nicht Teil der ANSI-Standarddefinition von **Localtime**.
+**Localtime_s** für die lokale Zeitzone korrigiert werden, wenn der Benutzer zuerst die globalen Umgebungsvariablen **TZ**. Wenn **TZ** festgelegt wird, werden drei andere Umgebungsvariablen ( **_timezone**, **_daylight**, und **_tzname**) werden ebenfalls automatisch festgelegt. Wenn die **TZ** Variable nicht festgelegt ist, **Localtime_s** versucht, die in der Datum/Uhrzeit-Anwendung in der Systemsteuerung festgelegten Zeitzonendaten zu verwenden. Wenn diese Information nicht abgerufen werden kann, wird standardmäßig PST8PDT verwendet, was die Zeitzone Pacific (PTC) darstellt. Unter [_tzset](tzset.md) finden Sie eine Beschreibung dieser Variablen. **RTZ** ist ein Microsoft-Erweiterung und nicht Teil der ANSI-Standarddefinition von **Localtime**.
 
 > [!NOTE]
 > Die Zielumgebung soll versuchen zu bestimmen, ob die Sommerzeit wirksam ist.
