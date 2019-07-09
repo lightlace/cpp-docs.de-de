@@ -1,6 +1,6 @@
 ---
 title: 'Syntax der Formatangabe: printf- und wprintf-Funktionen'
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: bccbe435d926a75990a4ca35b98c9b352dd40e8b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740317"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552252"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntax der Formatangabe: printf- und wprintf-Funktionen
 
@@ -22,7 +22,7 @@ Die verschiedenen `printf`- und `wprintf`-Funktionen nehmen eine Formatzeichenfo
 
 Eine Konvertierungsangabe besteht aus optionalen Feldern und Pflichtfeldern in folgender Form:
 
-**%**[[*flags*](#flags)][[*width*](#width)][.[*precision*](#precision)][[*size*](#size)][*type*](#type)
+**%** [[*flags*](#flags)][[*width*](#width)][.[*precision*](#precision)][[*size*](#size)][*type*](#type)
 
 Jedes Feld der Konvertierungsangabe ist entweder ein Zeichen oder eine Zahl, das bzw. die eine bestimmte Formatoption oder Konvertierungsspezifizierer darstellt. Das erforderliche *Typ*feld gibt die Art der Konvertierung an, die an einem Argument vorgenommen wird. Die optionalen Felder *flags*, *width* und *precision* steuern zusätzliche Formataspekte, z.B. Leerzeichen oder Nullen, Ausrichtung und dargestellte Genauigkeit. Das Feld *size* gibt die Größe des verwendeten und konvertierten Arguments an.
 
@@ -64,7 +64,7 @@ Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und ihre `unsigned`-Va
 |**X**|Ganze Zahl|Ganze Hexadezimalzahl ohne Vorzeichen; verwendet „ABCDEF“.|
 |**e**|Gleitkomma|Ein Wert mit Vorzeichen im Format [–]*d.dddd*__e±__*dd*[*d*], wobei *d* eine Dezimalzahl ist, *dddd* eine oder mehrere Dezimalstellen sind, je nach angegebener Präzision, oder standardmäßig sechs. *dd*[*d*] stellt zwei oder drei Dezimalstellen dar, je nach [Ausgabeformat](../c-runtime-library/set-output-format.md) und Exponentengröße.|
 |**E**|Gleitkomma|Identisch mit dem **e**-Format mit der Ausnahme, dass **E** anstelle von **e** den Exponenten einführt.|
-|**f**|Gleitkomma|Ein Wert mit Vorzeichen im Format [–]*dddd*__.__*dddd*, wobei *dddd* eine oder mehrere Dezimalstellen sind. Die Anzahl der Ziffern vor dem Dezimaltrennzeichen ist abhängig von der Größe der Zahl, und die Anzahl der Ziffern nach dem Dezimaltrennzeichen ist abhängig von der angeforderten Genauigkeit oder standardmäßig sechs.|
+|**f**|Gleitkomma|Ein Wert mit Vorzeichen im Format [–]*dddd* __.__ *dddd*, wobei *dddd* eine oder mehrere Dezimalstellen sind. Die Anzahl der Ziffern vor dem Dezimaltrennzeichen ist abhängig von der Größe der Zahl, und die Anzahl der Ziffern nach dem Dezimaltrennzeichen ist abhängig von der angeforderten Genauigkeit oder standardmäßig sechs.|
 |**F**|Gleitkomma|Identisch mit dem Format **f**, außer dass die infinity- und die NaN-Ausgabe groß geschrieben werden.|
 |**g**|Gleitkomma|Werte mit Vorzeichen werden im **f**- oder **e**-Format angezeigt, je nachdem, was für den angegebenen Wert und die Genauigkeit kompakter ist. Das **e**-Format wird nur verwendet, wenn der Exponent des Werts kleiner als -4 oder größer als oder gleich dem *precision*-Argument ist. Nachfolgende Nullen werden abgeschnitten, und das Dezimaltrennzeichen wird nur angezeigt, wenn eine oder mehrere Ziffern darauf folgen.|
 |**G**|Gleitkomma|Identisch mit dem **g**-Format mit der Ausnahme, dass **E** anstelle von **e** den Exponenten einführt (falls zutreffend).|
@@ -74,7 +74,7 @@ Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und ihre `unsigned`-Va
 |**p**|Zeigertyp|Zeigt das Argument als Adresse in Hexadezimalziffern an.|
 |**s**|Zeichenfolge|Gibt bei Verwendung mit `printf`-Funktionen eine Einzelbyte- oder Multibyte-Zeichenfolge und bei Verwendung mit `wprintf`-Funktionen eine Breitzeichenfolge an. Zeichen werden bis zum ersten NULL-Zeichen oder bis zum *precision*-Wert angezeigt.|
 |**S**|Zeichenfolge|Gibt bei Verwendung mit `printf`-Funktionen eine Breitzeichenfolge und bei Verwendung mit `wprintf`-Funktionen eine Einzelbyte- oder Multibyte-Zeichenfolge an. Zeichen werden bis zum ersten NULL-Zeichen oder bis zum *precision*-Wert angezeigt.|
-|**Z**|`ANSI_STRING`- oder `UNICODE_STRING`-Struktur|Wenn die Adresse einer [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string)- oder [UNICODE_STRING](/windows-hardware/drivers/ddi/content/wudfwdm/ns-wudfwdm-_unicode_string)-Struktur als Argument übergeben wird, wird die Zeichenfolge, die im Puffer angezeigt wird und auf die vom `Buffer`-Feld der Struktur gezeigt wird, übergeben. Verwenden Sie ein *size*-Längenpräfix von **w**, um ein `UNICODE_STRING`-Argument anzugeben, z.B. `%wZ`. Das `Length`-Feld der Struktur muss auf die Länge der Zeichenfolge in Bytes festgelegt sein. Das `MaximumLength`-Feld der Struktur muss auf die Länge des Puffers in Bytes festgelegt sein.<br /><br /> In der Regel wird das **Z**-Typzeichen nur in Treiberdebugfunktionen mit einer Formatangabe verwendet, z.B. `dbgPrint` und `kdPrint`.|
+|**Z**|`ANSI_STRING`- oder `UNICODE_STRING`-Struktur|Wenn die Adresse einer [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string)- oder [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string)-Struktur als Argument übergeben wird, wird die Zeichenfolge, die im Puffer angezeigt wird und auf die vom `Buffer`-Feld der Struktur gezeigt wird, übergeben. Verwenden Sie ein *size*-Längenpräfix von **w**, um ein `UNICODE_STRING`-Argument anzugeben, z.B. `%wZ`. Das `Length`-Feld der Struktur muss auf die Länge der Zeichenfolge in Bytes festgelegt sein. Das `MaximumLength`-Feld der Struktur muss auf die Länge des Puffers in Bytes festgelegt sein.<br /><br /> In der Regel wird das **Z**-Typzeichen nur in Treiberdebugfunktionen mit einer Formatangabe verwendet, z.B. `dbgPrint` und `kdPrint`.|
 
 Ab Visual Studio 2015 entspricht die formatierte Ausgabe dem C99-Standard, wenn das Argument, das einem Gleitkomma-Konvertierungsspezifizierer (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) entspricht, unendlich, unbestimmt oder NaN ist. In dieser Tabelle ist die formatierte Ausgabe aufgeführt:
 
@@ -129,7 +129,7 @@ Das erste optionale Feld in einer Konvertierungsangabe enthält *Flag-Anweisunge
 
 ## <a name="width-specification"></a>Breitenangabe
 
-In einer Konvertierungsangabe, erscheint das optionale Feld für die Breitenangabe nach jedem *flags*-Zeichen. Das Argument *width* ist eine nicht-negative ganze Dezimalzahl, die die minimale Anzahl von Zeichen steuert, die ausgegeben werden. Wenn die Anzahl der Zeichen im Ausgabewert kleiner als die angegebene Breite ist, werden Leerzeichen links oder rechts neben den Werten hinzugefügt – je nachdem, ob das Flag der Linksausrichtung (**-**) angegeben ist – bis die Mindestbreite erreicht ist. Wenn *width* das Vorzeichen 0 hat, werden dem Integer oder den Gleitkommakonvertierungen Nullen hinzugefügt, bis die minimale Breite erreicht ist. Eine Ausnahme ist, wenn die Konvertierung auf infinity oder NaN festgelegt ist.
+In einer Konvertierungsangabe, erscheint das optionale Feld für die Breitenangabe nach jedem *flags*-Zeichen. Das Argument *width* ist eine nicht-negative ganze Dezimalzahl, die die minimale Anzahl von Zeichen steuert, die ausgegeben werden. Wenn die Anzahl der Zeichen im Ausgabewert kleiner als die angegebene Breite ist, werden Leerzeichen links oder rechts neben den Werten hinzugefügt – je nachdem, ob das Flag der Linksausrichtung ( **-** ) angegeben ist – bis die Mindestbreite erreicht ist. Wenn *width* das Vorzeichen 0 hat, werden dem Integer oder den Gleitkommakonvertierungen Nullen hinzugefügt, bis die minimale Breite erreicht ist. Eine Ausnahme ist, wenn die Konvertierung auf infinity oder NaN festgelegt ist.
 
 Die Breitenangabe sorgt nie dafür, dass ein Wert abgeschnitten wird. Wenn die Anzahl der Zeichen im Ausgabewert größer als die angegebene Breite ist oder wenn *width* nicht angegeben ist, werden alle Zeichen des Werts ausgegeben, unterliegen aber der Spezifikation *precision*.
 
@@ -159,7 +159,7 @@ Das *Typ*zeichen bestimmt entweder die Interpretation von *precision* oder die S
 
 |Typ|Bedeutung|Standard|
 |----------|-------------|-------------|
-|**a**, **A**|Die Genauigkeit gibt die Anzahl der Ziffern nach dem Punkt an.|Die Standardgenauigkeit beträgt 13. Wenn die Genauigkeit 0 beträgt, wird kein Dezimaltrennzeichen gedruckt, es sei denn, das **#**-Flag wird verwendet.|
+|**a**, **A**|Die Genauigkeit gibt die Anzahl der Ziffern nach dem Punkt an.|Die Standardgenauigkeit beträgt 13. Wenn die Genauigkeit 0 beträgt, wird kein Dezimaltrennzeichen gedruckt, es sei denn, das **#** -Flag wird verwendet.|
 |**c**, **C**|Die Genauigkeit hat keine Auswirkung.|Zeichen wird gedruckt.|
 |**d**, **i**, **o**, **u**, **x**, **X**|Die Genauigkeit gibt die minimale Anzahl der zu druckenden Ziffern an. Wenn die Anzahl der Ziffern im Argument kleiner als *precision* ist, wird der Ausgabewert auf der linken Seite mit Nullen aufgefüllt. Der Wert wird nicht abgeschnitten, wenn die Anzahl der Ziffern *precision* überschreitet.|Die Standardgenauigkeit beträgt 1.|
 |**e**, **E**|Die Genauigkeit gibt die Anzahl der zu druckenden Ziffern nach dem Dezimaltrennzeichen an. Die letzte gedruckte Ziffer ist gerundet.|Die Standardgenauigkeit beträgt 6. Wenn *precision* 0 ist oder der Punkt (.) angezeigt wird, ohne dass eine Zahl folgt, wird kein Dezimaltrennzeichen gedruckt.|
