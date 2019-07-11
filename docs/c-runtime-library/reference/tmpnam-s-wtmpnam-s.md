@@ -78,7 +78,7 @@ Beide Funktionen geben bei Erfolg 0 zurück und bei einem Fehler eine Fehlernumm
 
 |||||
 |-|-|-|-|
-|*str*|*sizeInChars*|**Rückgabewert**|**Inhalt der***str*|
+|*str*|*sizeInChars*|**Rückgabewert**|**Inhalt der**  *str*|
 |**NULL**|any|**EINVAL**|nicht geändert|
 |Nicht **NULL** (zeigt auf gültigen Speicher)|zu kurz|**ERANGE**|nicht geändert|
 

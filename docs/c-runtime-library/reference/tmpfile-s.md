@@ -53,7 +53,7 @@ Gibt bei Erfolg 0 (null) zurück und einen Fehlercode, wenn ein Fehler auftritt.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*pFilePtr*|**Rückgabewert**|**Inhalt der***pFilePtr*|
+|*pFilePtr*|**Rückgabewert**|**Inhalt der**  *pFilePtr*|
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|nicht geändert|
 
