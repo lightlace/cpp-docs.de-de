@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf74bc3b5293cba018c07b6b5c56c85695db7635
+ms.sourcegitcommit: 6cb0670ca7d40e8ec55f162b8ce2847f5ae15f5c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179905"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67787368"
 ---
 # <a name="predefined-macros"></a>Vordefinierte Makros
 
@@ -186,7 +186,7 @@ Der Compiler unterstützt diesen vordefinierten Makros, die durch die ISO C99- u
 
 - **&#95;&#95;STDCPP&#95;THREADS&#95; &#95;**  nur, wenn ein Programm mehr als einem Thread der Ausführung verfügen, kann auf 1 festgelegt, und als C++ kompiliert wird. Anderenfalls ist nicht definiert.
 
-- **&#95;&#95;Zeit&#95; &#95;**  die Uhrzeit der Übersetzung der vorverarbeiteten Übersetzungseinheit. Die Zeit ist eine Zeichenfolge Zeichenfolgenliteral des Formats *hh: mm:*, die identisch mit der Zeit, die von der CRT zurückgegebenen [Asctime](../c-runtime-library/reference/asctime-wasctime.md) Funktion. Dieses Makro wird immer definiert.
+- **&#95;&#95;Zeit&#95; &#95;**  die Uhrzeit der Übersetzung der vorverarbeiteten Übersetzungseinheit. Die Zeit ist eine Zeichenfolge Zeichenfolgenliteral des Formats *hh: mm:* , die identisch mit der Zeit, die von der CRT zurückgegebenen [Asctime](../c-runtime-library/reference/asctime-wasctime.md) Funktion. Dieses Makro wird immer definiert.
 
 ## <a name="microsoft-specific-predefined-macros"></a>Microsoft-spezifische vordefinierte Makros
 
@@ -381,6 +381,9 @@ MSVC unterstützt diese zusätzlichen vordefinierte Makros.
    |Visual Studio 2017 Version 15.8|1915|
    |Visual Studio 2017, Version 15.9|1916|
    |Visual Studio 2019 RTW (16,0)|1920|
+   |Visual Studio 2019 Version 16.1|1921|
+   |Visual Studio 2019 Version 16.2|1922|
+   |Visual Studio 2019 Version 16.3|1923|
 
    So testen Sie für die Compiler-Versionen oder Updates in einer bestimmten Version von Visual Studio oder nach dem, verwenden die **>=** Operator. Können Sie sie in einer bedingten Anweisung zum Vergleichen  **&#95;MSC&#95;VER** für diese bekannten Version. Wenn Sie mehrere sich gegenseitig ausschließende Versionen zu vergleichende verfügen, Sortieren Sie die Vergleiche in absteigender Reihenfolge der Versionsnummer. Dieser Code sucht z. B. Compiler veröffentlicht in Visual Studio 2017 und höher. Als Nächstes überprüft für veröffentlicht in oder nach Visual Studio 2015-Compiler. Anschließend überprüft er alle Compiler vor Visual Studio 2015 veröffentlicht:
 
