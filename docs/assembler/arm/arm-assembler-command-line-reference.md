@@ -16,7 +16,7 @@ Dieser Artikel enthält Angaben über den Microsoft-ARM-Assembler in der Befehls
 ## <a name="syntax"></a>Syntax
 
 > **Armasm** [*Optionen*] *Sourcefile* *Objektdatei*
-> **Armasm** [*Optionen *] **- e/a** *Objektdatei* *Sourcefile*
+> **Armasm** [*Optionen*] **- e/a** *Objektdatei* *Sourcefile*
 
 ### <a name="parameters"></a>Parameter
 
