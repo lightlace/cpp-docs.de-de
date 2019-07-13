@@ -3,12 +3,12 @@ title: Erstellen des Projekts (ATL-Lernprogramm, Teil 1)
 ms.custom: get-started-article
 ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221404"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861018"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Erstellen des Projekts (ATL-Lernprogramm, Teil 1)
 
@@ -44,15 +44,10 @@ Dieses Tutorial führt Sie schrittweise durch ein nicht attributierte ATL-Projek
 
     Der Speicherort für den Quellcode in der Regel standardmäßig \Users\\\<Benutzername > \source\repos und einen neuen Ordner wird automatisch erstellt.
 
-1. Klicken Sie auf **OK** und **ATL-Projekt** -Assistent wird geöffnet.
+1. Klicken Sie in Visual Studio-2019, übernehmen die Standardwerte, und klicken Sie auf **OK**. 
+   Klicken Sie in Visual Studio 2017 auf **OK** zum Öffnen der **ATL-Projekt** Assistenten. Klicken Sie auf **Anwendungseinstellungen** um die verfügbaren Optionen anzuzeigen. Da dieses Projekt ein Steuerelement erstellt und ein Steuerelement muss in-Process-Server sein, lassen Sie die **Anwendungstyp** als DLL. Klicken Sie auf **OK**.
 
-1. Klicken Sie auf **Anwendungseinstellungen** um die verfügbaren Optionen anzuzeigen.
-
-1. Lassen Sie, wie Sie ein Steuerelement erstellen und ein Steuerelement muss in-Process-Server sein, die **Anwendungstyp** als DLL.
-
-1. Behalten Sie die anderen Optionen die Standardwerte bei, und klicken Sie auf **OK**.
-
-Die **ATL-Projektassistenten** erstellt das Projekt, indem Sie mehrere Dateien zu generieren. Sie können diese Dateien in anzeigen **Projektmappen-Explorer** durch Erweitern der `Polygon` Objekt. Die Dateien sind unten aufgeführt.
+Visual Studio erstellt das Projekt mehrere Dateien zu generieren. Sie können diese Dateien in anzeigen **Projektmappen-Explorer** durch Erweitern der `Polygon` Objekt. Die Dateien sind unten aufgeführt.
 
 |Datei|Beschreibung|
 |----------|-----------------|
@@ -66,7 +61,7 @@ Die **ATL-Projektassistenten** erstellt das Projekt, indem Sie mehrere Dateien z
 |stdafx.cpp|Die Datei, die `#include` die ATL-Implementierungsdateien.|
 |stdafx.h|Die Datei, die `#include` ATL-Headerdateien.|
 
-1. In **Projektmappen-Explorer**, mit der rechten Maustaste die `Polygon` Projekt.
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt `Polygon`.
 
 1. Klicken Sie im Kontextmenü auf **Eigenschaften**.
 

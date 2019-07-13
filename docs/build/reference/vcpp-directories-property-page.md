@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: e739ea99df424f44dc43a28e3dc01c3529bb0c1a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450715"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861049"
 ---
 # <a name="vc-directories-property-page-windows"></a>Eigenschaftenseite „VC++-Verzeichnisse“ (Windows)
 
-Verwenden Sie diese Eigenschaftenseite, um Visual Studio mitzuteilen, welche Verzeichnisse verwendet werden sollen, wenn das derzeit ausgewählte Projekt erstellt wird. Verwenden Sie zum Festlegen der Verzeichnisse für mehrere Projekte in einer Projektmappe ein benutzerdefiniertes Eigenschaftenfenster Siehe [Freigabe oder beabsichtigen Visual Studio C++-projekteinstellungen](../create-reusable-property-configurations.md).
+Verwenden Sie diese Eigenschaftenseite, um Visual Studio mitzuteilen, welche Verzeichnisse verwendet werden sollen, wenn das derzeit ausgewählte Projekt erstellt wird. Verwenden Sie zum Festlegen der Verzeichnisse für mehrere Projekte in einer Projektmappe ein benutzerdefiniertes Eigenschaftenfenster Siehe [Freigabe oder zur Wiederverwendung von Visual Studio C++ projekteinstellungen](../create-reusable-property-configurations.md).
 
 Die Linux-Version dieser Seite finden Sie unter [VC++-Verzeichnisse (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
@@ -54,7 +54,7 @@ Folgendes Dialogfeld wird angezeigt:
 
 ![Anzeigen von Bibliotheksverzeichnissen](../media/vcppdir_libdir.png "Dialogfeld für das Hinzufügen oder Entfernen von Bibliothekspfaden")
 
-Verwenden Sie dieses Dialogfeld, um die aktuellen Verzeichnisse anzuzeigen. Wenn Sie ein Verzeichnis jedoch ändern oder eines hinzufügen möchten, sollten Sie den **Eigenschaften-Manager** verwenden, um ein Eigenschaftenblatt zu erstellen oder das Eigenschaftenblatt für den Standardbenutzer ändern. Weitere Informationen finden Sie unter [Freigabe oder beabsichtigen Visual Studio C++-projekteinstellungen](../create-reusable-property-configurations.md).
+Verwenden Sie dieses Dialogfeld, um die aktuellen Verzeichnisse anzuzeigen. Wenn Sie ein Verzeichnis jedoch ändern oder eines hinzufügen möchten, sollten Sie den **Eigenschaften-Manager** verwenden, um ein Eigenschaftenblatt zu erstellen oder das Eigenschaftenblatt für den Standardbenutzer ändern. Weitere Informationen finden Sie unter [Freigabe oder zur Wiederverwendung von Visual Studio C++ projekteinstellungen](../create-reusable-property-configurations.md).
 
 Wie Sie oben sehen, werden viele der abgeleiteten Pfade als Makros angegeben.  Klicken Sie auf die Schaltfläche **Makros** in der unteren rechten Ecke des Dialogfelds, um den aktuellen Wert eines Makros zu überprüfen. Beachten Sie, dass viele Makros vom Konfigurationstyp abhängen. Ein Makro in einem Debugbuild kann einen anderen Pfad als das gleiche Makro in einem Releasebuild ergeben.
 
@@ -103,4 +103,4 @@ Vor jeder Kompilierung fragt Visual Studio den Zeitstempel aller Dateien ab, um 
 
 ## <a name="sharing-the-settings"></a>Freigeben der Einstellungen
 
-Sie können Projekteigenschaften für andere Benutzer oder Computer freigeben. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
+Sie können Projekteigenschaften für andere Benutzer oder Computer freigeben. Weitere Informationen finden Sie unter [Festlegen des Compilers und der Buildeigenschaften](../working-with-project-properties.md).
