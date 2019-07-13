@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: b846a065b02a73bfca8f548097101f73008b33d3
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504257"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861064"
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 
@@ -1606,9 +1606,7 @@ Die `CWnd` Objekt auf dem Sie diese Funktion aufrufen, muss ein vom datengebunde
 
 `BindDefaultProperty` kann im folgenden Kontext verwendet werden:
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#2](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="bindproperty"></a>  CWnd:: BindProperty
 
@@ -1636,9 +1634,7 @@ Die `CWnd` Objekt auf dem Sie diese Funktion aufrufen, muss ein vom datengebunde
 
 `BindProperty` kann im folgenden Kontext verwendet werden:
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#4](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="bringwindowtotop"></a>  CWnd::BringWindowToTop
 
@@ -4065,9 +4061,7 @@ Verwenden Sie den zurückgegebenen Zeiger, um die ICursor-Eigenschaft eines komp
 
 ### <a name="example"></a>Beispiel
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#5](../../mfc/reference/codesnippet/cpp/cwnd-class_37.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="getdynamiclayout"></a>  CWnd:: Getdynamiclayout
 
@@ -6546,7 +6540,7 @@ Gibt an, die Scan-Code, Schlüssel – übertragen von Code, vorherigen, des Sta
 |-----------|-----------------|
 |0-7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertiges Wort.|
 |8|Erweiterte Schlüssel, wie z. B. einer Steuertaste oder eine Taste auf der Zehnertastatur (1, wenn es sich um eine erweiterte Schlüssel ist, andernfalls wird 0).|
-|9-10|Nicht verwendet.|
+|9-10|Wird nicht verwendet.|
 |11-12|Wird intern von Windows verwendet.|
 |13|Kontextcode: (1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird; andernfalls wird 0).|
 |14|Vorherige Schlüssel Status (1, wenn die Taste gedrückt, vor dem Aufruf, 0 ist, wenn der Schlüssel aktiviert ist).|
@@ -7390,7 +7384,7 @@ Gibt an, die Scan-Code, Schlüssel – übertragen von Code, vorherigen, des Sta
 |-----------|-----------------|
 |0-7|Scannen Sie Code (OEM-abhängige Wert).|
 |8|Erweiterte Schlüssel, wie z. B. einer Steuertaste oder eine Taste auf der Zehnertastatur (1, wenn es sich um eine erweiterte Schlüssel handelt).|
-|9-10|Nicht verwendet.|
+|9-10|Wird nicht verwendet.|
 |11-12|Wird intern von Windows verwendet.|
 |13|Kontextcode: (1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird; andernfalls wird 0).|
 |14|Vorherige Schlüssel Status (1, wenn die Taste gedrückt, vor dem Aufruf, 0 ist, wenn der Schlüssel aktiviert ist).|
@@ -7435,7 +7429,7 @@ Gibt an, die Scan-Code, Schlüssel – übertragen von Code, vorherigen, des Sta
 |-----------|-----------------|
 |0-7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertiges Wort.|
 |8|Erweiterte Schlüssel, wie z. B. einer Steuertaste oder eine Taste auf der Zehnertastatur (1, wenn es sich um eine erweiterte Schlüssel ist, andernfalls wird 0).|
-|9-10|Nicht verwendet.|
+|9-10|Wird nicht verwendet.|
 |11-12|Wird intern von Windows verwendet.|
 |13|Kontextcode: (1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird; andernfalls wird 0).|
 |14|Vorherige Schlüssel Status (1, wenn die Taste gedrückt, vor dem Aufruf, 0 ist, wenn der Schlüssel aktiviert ist).|
@@ -9652,7 +9646,7 @@ Gibt an, die Scan-Code, Schlüssel – übertragen von Code, vorherigen, des Sta
 |-----------|-------------|
 |0-7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertiges Wort.|
 |8|Erweiterte Schlüssel, wie z. B. einer Steuertaste oder eine Taste auf der Zehnertastatur (1, wenn es sich um eine erweiterte Schlüssel ist, andernfalls wird 0).|
-|9-10|Nicht verwendet.|
+|9-10|Wird nicht verwendet.|
 |11-12|Wird intern von Windows verwendet.|
 |13|Kontextcode: (1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird; andernfalls wird 0).|
 |14|Vorherige Schlüssel Status (1, wenn die Taste gedrückt, vor dem Aufruf, 0 ist, wenn der Schlüssel aktiviert ist).|
@@ -9691,7 +9685,7 @@ Gibt an, die Scan-Code, Schlüssel – übertragen von Code, vorherigen, des Sta
 |-----------|-------------|
 |0-7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertiges Wort.|
 |8|Erweiterte Schlüssel, wie z. B. einer Steuertaste oder eine Taste auf der Zehnertastatur (1, wenn es sich um eine erweiterte Schlüssel ist, andernfalls wird 0).|
-|9-10|Nicht verwendet.|
+|9-10|Wird nicht verwendet.|
 |11-12|Wird intern von Windows verwendet.|
 |13|Kontextcode: (1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird, 0 andernfalls).|
 |14|Vorherige Schlüssel Status (1, wenn die Taste gedrückt ist, bevor die Nachricht gesendet wird, 0, wenn der Schlüssel aktiviert ist).|
@@ -9738,7 +9732,7 @@ Gibt an, die Scan-Code, Schlüssel – übertragen von Code, vorherigen, des Sta
 |-----------|-------------|
 |0-7|Scannen Sie Code (OEM-abhängige Wert). Niedrige Byte höherwertiges Wort.|
 |8|Erweiterte Schlüssel, wie z. B. einer Steuertaste oder eine Taste auf der Zehnertastatur (1, wenn es sich um eine erweiterte Schlüssel ist, andernfalls wird 0).|
-|9-10|Nicht verwendet.|
+|9-10|Wird nicht verwendet.|
 |11-12|Wird intern von Windows verwendet.|
 |13|Kontextcode: (1, wenn die ALT-Taste gedrückt gehalten wird, während die Taste gedrückt wird, 0 andernfalls).|
 |14|Vorherige Schlüssel Status (1, wenn die Taste gedrückt ist, bevor die Nachricht gesendet wird, 0, wenn der Schlüssel aktiviert ist).|

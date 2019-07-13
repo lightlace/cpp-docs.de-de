@@ -1,16 +1,16 @@
 ---
-title: X64 Aufrufkonvention
+title: Aufrufkonvention bei x64-Systemen
 description: Details zu den standardmäßigen X64 ABI-Aufrufkonvention.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313615"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861164"
 ---
-# <a name="x64-calling-convention"></a>X64 Aufrufkonvention
+# <a name="x64-calling-convention"></a>Aufrufkonvention bei x64-Systemen
 
 Dieser Abschnitt beschreibt die Standardprozesse und Konventionen, die eine Funktion (Aufrufer) verwendet wird, um Aufrufe in einer anderen Funktion (die aufgerufene) in X64 Code.
 
@@ -142,12 +142,12 @@ Struct2 func4(int a, double b, int c, float d);
 
 ## <a name="callercallee-saved-registers"></a>Gespeicherte Register von Aufrufer/Aufgerufener
 
-Die Register RAX, RCX, RDX, R8, R9, R10, R11 als flüchtig gelten und berücksichtigt werden muss zerstört, auf den Funktionsaufrufen (es sei denn, andernfalls Sicherheit, belegbare durch Analyse, wie z. B. die Optimierung des ganzen Programms).
+Die Register RAX, RCX, RDX, R8, R9, R10, R11, XMM0 bis 5 und die oberen Bereiche YMM0-15 und ZMM0-15 als flüchtig gelten und berücksichtigt werden müssen zerstört, auf den Funktionsaufrufen (es sei denn, andernfalls Sicherheit, belegbare durch Analyse, wie z. B. die Optimierung des ganzen Programms). Auf AVX512VL sind die ZMM YMM und XMM-Register 16-31 flüchtig.
 
-Die Register RBX, RBP, RDI, RSI, RSP, R12, R13, R14 und R15 werden als permanenten betrachtet und müssen gespeichert werden und wiederhergestellt, indem eine Funktion, die verwendet werden.
+Die Register RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 und XMM6-15 gelten als nicht flüchtig und müssen gespeichert werden und wiederhergestellt, indem eine Funktion, die verwendet werden.
 
 ## <a name="function-pointers"></a>Funktionszeiger
-
+ 
 Funktionszeiger sind einfach Zeiger auf die Bezeichnung der jeweiligen Funktion. Es ist kein Inhalt (TOC)-Anforderungen für Funktionszeiger.
 
 ## <a name="floating-point-support-for-older-code"></a>Gleitkommaunterstützung für älteren code
