@@ -1,13 +1,13 @@
 ---
 title: Ereignisse (C++/CX)
-ms.date: 01/22/2017
+ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894453"
 ---
 # <a name="events-ccx"></a>Ereignisse (C++/CX)
 
@@ -15,7 +15,7 @@ Eine Windows-Runtime Typ deklarieren, kann (das ist, zu veröffentlichen) Ereign
 
 ## <a name="consuming-events-in-windows-components"></a>Verwenden von Ereignissen in den Windows-Komponenten
 
-Viele Komponenten in der Windows-Runtime machen Ereignisse verfügbar. Beispielsweise löst ein LightSensor-Objekt ein ReadingChanged-Ereignis aus, wenn der Sensor einen neuen Lumineszenzwert meldet. Wenn Sie ein LightSensor-Objekt im Programm verwenden, können Sie eine Methode definieren, die aufgerufen wird, wenn das ReadingChanged-Ereignis ausgelöst wird. Die Methode möglich, was er tun soll; die einzige Voraussetzung ist, dass die Signatur die Signatur des Delegaten, die für Weitere Informationen zum Erstellen eines delegatereignishandlers übereinstimmen muss und Abonnieren eines Ereignisses finden Sie unter [Delegaten](../cppcx/delegates-c-cx.md).
+Viele Komponenten in der Windows-Runtime machen Ereignisse verfügbar. Beispielsweise löst ein LightSensor-Objekt ein ReadingChanged-Ereignis aus, wenn der Sensor einen neuen Lumineszenzwert meldet. Wenn Sie ein LightSensor-Objekt im Programm verwenden, können Sie eine Methode definieren, die aufgerufen wird, wenn das ReadingChanged-Ereignis ausgelöst wird. Die Methode möglich, was er tun soll; die einzige Voraussetzung ist, dass die Signatur die Signatur des Delegaten übereinstimmen muss, die aufgerufen wird. Weitere Informationen zum Erstellen eines delegatereignishandlers und Abonnieren eines Ereignisses finden Sie unter [Delegaten](../cppcx/delegates-c-cx.md).
 
 ## <a name="creating-custom-events"></a>Erstellen von benutzerdefinierten Ereignissen
 

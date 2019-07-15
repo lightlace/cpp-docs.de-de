@@ -2,17 +2,17 @@
 title: 'Exemplarische Vorgehensweise: Erstellen und Verwenden Ihrer eigenen Dynamic Link Library (C++)'
 description: Verwenden Sie C++, um in Visual Studio eine Dynamic Link Library (DLL) für Windows zu erstellen.
 ms.custom: conceptual
-ms.date: 04/22/2019
+ms.date: 07/14/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 53cde029973c14bfc5aae521946ebeadbed738ca
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 5db16c834f3e42aee0cc558ab1ea18bcb2a35063
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894371"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Exemplarische Vorgehensweise: Erstellen und Verwenden Ihrer eigenen Dynamic Link Library (C++)
 
@@ -34,9 +34,9 @@ Wie eine statisch verknüpfte Bibliothek _exportiert_ eine DLL Variablen, Funkti
 
 In dieser exemplarischen Vorgehensweise werden zwei Visual Studio-Projektmappen erstellt: eine, die die DLL kompiliert, und eine andere, die die Client-App kompiliert. Die DLL nutzt die Aufrufkonvention von C und kann daher von Apps aufgerufen werden, die in anderen Sprachen geschrieben wurden, vorausgesetzt, Plattform sowie Aufruf- und Verknüpfungskonventionen stimmen überein. Die Client-App verwendet _implizite Verknüpfungen_, bei denen Windows die App zur Ladezeit mit der DLL verknüpft. Dank dieser Art der Verknüpfung kann die App die von der DLL bereitgestellten Funktionen genauso nutzen wie die Funktionen in einer statisch verknüpften Bibliothek.
 
-In dieser exemplarischen Vorgehensweise werden einige gängige Situationen nicht behandelt. Die Verwendung von C++-DLLs durch andere Programmiersprachen wird nicht gezeigt. Die Erstellung einer DLL nur für Ressourcen wird nicht erläutert. Auch die Verwendung von expliziten Verknüpfungen zum Laden von DLLs zur Laufzeit statt zur Ladezeit wird nicht behandelt. Keine Sorge: Für all diese Verfahren können Sie Visual C++ verwenden. Links mit weiteren Informationen zu DLLs finden Sie im Artikel [Erstellen von C/C++-DLLs in Visual Studio](dlls-in-visual-cpp.md). Weitere Informationen zu impliziten und expliziten Verknüpfungen finden Sie unter [Bestimmen der geeigneten Verknüpfungsmethode](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Informationen zum Erstellen von C++-DLLs zur Verwendung mit Programmiersprachen, die Verknüpfungskonventionen der Sprache C verwenden, finden Sie unter [Exportieren von C++-Funktionen zur Verwendung in ausführbaren C-Dateien](exporting-cpp-functions-for-use-in-c-language-executables.md). Informationen zum Erstellen von DLLs zur Verwendung mit .NET-Sprachen finden Sie unter [Aufrufen von DLL-Funktionen aus Visual Basic-Anwendungen heraus](calling-dll-functions-from-visual-basic-applications.md).
+In dieser exemplarischen Vorgehensweise werden einige gängige Situationen nicht behandelt. Die Verwendung von C++-DLLs durch andere Programmiersprachen wird nicht gezeigt. Die Erstellung einer DLL nur für Ressourcen wird nicht erläutert. Auch die Verwendung von expliziten Verknüpfungen zum Laden von DLLs zur Laufzeit statt zur Ladezeit wird nicht behandelt. Verlassen Sie sich, Sie können Visual Studio verwenden, um all diese Aufgaben können. Links mit weiteren Informationen zu DLLs finden Sie im Artikel [Erstellen von C/C++-DLLs in Visual Studio](dlls-in-visual-cpp.md). Weitere Informationen zu impliziten und expliziten Verknüpfungen finden Sie unter [Bestimmen der geeigneten Verknüpfungsmethode](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Informationen zum Erstellen von C++-DLLs zur Verwendung mit Programmiersprachen, die Verknüpfungskonventionen der Sprache C verwenden, finden Sie unter [Exportieren von C++-Funktionen zur Verwendung in ausführbaren C-Dateien](exporting-cpp-functions-for-use-in-c-language-executables.md). Informationen zum Erstellen von DLLs zur Verwendung mit .NET-Sprachen finden Sie unter [Aufrufen von DLL-Funktionen aus Visual Basic-Anwendungen heraus](calling-dll-functions-from-visual-basic-applications.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Ein Computer, auf dem Microsoft Windows 7 oder eine höhere Version ausgeführt wird. Für ein optimales Entwicklungserlebnis empfehlen wir Windows 10.
 
@@ -60,7 +60,7 @@ Mit den folgenden Aufgaben erstellen Sie ein Projekt für Ihre DLL, fügen Code 
 
    ![Erstellen eines neuen DLL-Projekts](media/create-new-dll-project-2019.png "Erstellen des MathLibrary-Projekts")
 
-1. Legen Sie oben im Dialogfeld die **Sprache** auf **C++**, die **Plattform** auf **Windows** und den **Projekttyp** auf **Bibliothek** fest. 
+1. Legen Sie oben im Dialogfeld die **Sprache** auf **C++** , die **Plattform** auf **Windows** und den **Projekttyp** auf **Bibliothek** fest. 
 
 1. Wählen Sie aus der gefilterten Projekttypliste **Dynamic Link Library (DLL)** aus, und klicken Sie auf **Weiter**. Geben Sie auf der nächsten Seite `MathLibrary` als Projektnamen in das Feld **Name** ein, und geben Sie den Projektspeicherort an, falls gewünscht.
 
@@ -74,7 +74,7 @@ Mit den folgenden Aufgaben erstellen Sie ein Projekt für Ihre DLL, fügen Code 
 
 1. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**, um das Dialogfeld **Neues Projekt** zu öffnen.
 
-1. Erweitern Sie im linken Bereich des Dialogfelds **Neues Projekt** den Eintrag **Installiert** und ggf. **Visual C++**, und wählen Sie dann **Windows Desktop** aus. Wählen Sie im mittleren Bereich **Windows-Desktop-Assistent** aus. Geben Sie `MathLibrary` als Projektnamen im Textfeld **Name** ein.
+1. Erweitern Sie im linken Bereich des Dialogfelds **Neues Projekt** den Eintrag **Installiert** und ggf. **Visual C++** , und wählen Sie dann **Windows Desktop** aus. Wählen Sie im mittleren Bereich **Windows-Desktop-Assistent** aus. Geben Sie `MathLibrary` als Projektnamen im Textfeld **Name** ein.
 
    ![Benennen des MathLibrary-Projekts](media/mathlibrary-new-project-name-153.png "Benennen des MathLibrary-Projekts")
 
@@ -137,7 +137,7 @@ Im Moment ist diese DLL noch nicht besonders nützlich. Als Nächstes erstellen 
 
 1. Um eine Headerdatei für Ihre Funktionen zu erstellen, wählen Sie auf der Menüleiste **Projekt** > **Neues Element hinzufügen** aus.
 
-1. Wählen Sie im linken Bereich des Dialogfelds **Neues Element hinzufügen** die Option **Visual C++** aus. Wählen Sie im mittleren Bereich die Option **Headerdatei (.h)**. Geben Sie `MathLibrary.h` als Namen für die Headerdatei an.
+1. Wählen Sie im linken Bereich des Dialogfelds **Neues Element hinzufügen** die Option **Visual C++** aus. Wählen Sie im mittleren Bereich die Option **Headerdatei (.h)** . Geben Sie `MathLibrary.h` als Namen für die Headerdatei an.
 
    ![Hinzufügen des Headers im Dialogfeld „Neues Element hinzufügen“](media/mathlibrary-add-new-item-header-file.png "Hinzufügen des Headers im Dialogfeld „Neues Element hinzufügen“")
 
@@ -280,7 +280,7 @@ Um zu überprüfen, ob alles funktioniert, kompilieren Sie die Dynamic Link Libr
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-Herzlichen Glückwunsch: Sie haben mit Visual C++ eine DLL erstellt! Als Nächstes erstellen Sie eine Client-App, die die von der DLL exportierten Funktionen verwendet.
+Herzlichen Glückwunsch! Sie haben eine DLL, die mithilfe von Visual Studio erstellt. Als Nächstes erstellen Sie eine Client-App, die die von der DLL exportierten Funktionen verwendet.
 
 ## <a name="create-a-client-app-that-uses-the-dll"></a>Erstellen einer Client-App, die die DLL verwendet
 
@@ -294,7 +294,7 @@ Um eine DLL zu nutzen – unabhängig davon, ob es Ihre eigene oder eine Drittan
 
 1. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**, um das Dialogfeld **Neues Projekt erstellen** zu öffnen.
 
-1. Legen Sie oben im Dialogfeld die **Sprache** auf **C++**, die **Plattform** auf **Windows** und den **Projekttyp** auf **Konsole** fest. 
+1. Legen Sie oben im Dialogfeld die **Sprache** auf **C++** , die **Plattform** auf **Windows** und den **Projekttyp** auf **Konsole** fest. 
 
 1. Wählen Sie aus der gefilterten Projekttypliste **Konsolen-App** aus, und klicken Sie auf **Weiter**. Geben Sie auf der nächsten Seite `MathClient` als Projektnamen in das Feld **Name** ein, und geben Sie den Projektspeicherort an, falls gewünscht.
 
@@ -354,15 +354,17 @@ Um die MathLibrary-Funktionen in Ihrem Quellcode aufrufen zu können, muss Ihr P
 
 1. Doppelklicken Sie im oberen Bereich des Dialogfelds **Zusätzliche Includeverzeichnisse**, um ein Bearbeitungssteuerelement zu aktivieren.
 
-1. Geben Sie im Bearbeitungssteuerelement den Pfad zum Speicherort der Headerdatei **MathLibrary.h** an. In diesem Fall können Sie einen relativen Pfad von dem Ordner, der Ihre .cpp-Dateien im Clientprojekt enthält, zu dem Ordner verwenden, der die .h-Datei im DLL-Projekt enthält. Wenn sich Ihr Clientprojekt im gleichen Ordner wie die DLL-Projektmappe, aber in einer anderen Projektmappe befindet, sollte der relative Pfad folgendermaßen aussehen:
+1. Geben Sie im Bearbeitungssteuerelement den Pfad zum Speicherort der Headerdatei **MathLibrary.h** an. Klicken Sie auf den Dropdownpfeil, und wählen Sie dann  **\<Bearbeiten >** . Sie können haben, klicken Sie auf das Ordnersymbol, und klicken Sie dann auf die Auslassungspunkte ( **...** ), um den richtigen Ordner zu suchen.
+ 
+   Sie können auch diesen Fall, können Sie in einem relativen Pfad aus dem Ordner, der die CPP-Dateien im Clientprojekt den Ordner enthält, die die h-Datei in das DLL-Projekt enthält. Wenn sich Ihr Clientprojekt im gleichen Ordner wie die DLL-Projektmappe, aber in einer anderen Projektmappe befindet, sollte der relative Pfad folgendermaßen aussehen:
 
-   `..\..\MathLibrary\MathLibrary`
+   `..\MathLibrary\MathLibrary`
 
-   Wenn sich das DLL- und das Clientprojekt in der gleichen Projektmappe befinden oder sich die Projektmappen in verschiedenen Ordnern befinden, müssen Sie den relativen Pfad entsprechend anpassen.
+   Wenn Ihre DLL und dem Client-Projekte in der gleichen Projektmappe werden oder die Lösungen in anderen Ordnern sind, müssen klicken Sie dann Sie den relativen Pfad entsprechend anpassen sonst für den Ordner mit der zuvor beschriebenen Methode durchsuchen.
 
    ![Hinzufügen des Headerspeicherorts zur Eigenschaft „Zusätzliche Includeverzeichnisse“](media/mathclient-additional-include-directories.png "Hinzufügen des Headerspeicherorts zur Eigenschaft „Zusätzliche Includeverzeichnisse“")
 
-1. Wenn Sie den Pfad zur Headerdatei im Dialogfeld **Zusätzliche Includeverzeichnisse** eingegeben haben, klicken Sie auf die Schaltfläche **OK**, um zum Dialogfeld **Eigenschaftenseiten** zurückzukehren. Klicken Sie dort auf die Schaltfläche **OK**, um Ihre Änderungen zu speichern.
+1. Nachdem Sie den Pfad zur Headerdatei in eingegeben haben die **Additional Include Directories** Dialogfeld wählen die **OK** um zurückzugehen, die **Eigenschaftenseiten** im Dialogfeld und wählen Sie dann die **OK** Schaltfläche, um die Änderungen zu speichern.
 
 Jetzt können Sie die Datei **MathLibrary.h** einschließen und die von dieser Datei deklarierten Funktionen in Ihrer Clientanwendung verwenden. Ersetzen Sie den Inhalt von **MathClient.cpp** durch diesen Code:
 
@@ -412,8 +414,14 @@ Dieser Code kann kompiliert, aber nicht verknüpft werden, weil der Linker die I
 
 1. Doppelklicken Sie im oberen Bereich des Dialogfelds **Zusätzliche Bibliotheksverzeichnisse**, um ein Bearbeitungssteuerelement zu aktivieren. Geben Sie im Bearbeitungssteuerelement den Pfad zum Speicherort der Datei **MathLibrary.lib** an. Geben Sie den folgenden Wert ein, um ein Makro zu verwenden, das sowohl für den Debug- als auch den Releasebuild funktioniert:
 
-   `..\..\MathLibrary\$(IntDir)`
+   **Visual Studio 2019:**
 
+   `..\MathLibrary\$(IntDir)`
+
+   **Visual Studio 2017 und früher:**
+
+   `..\..\MathLibrary\$(IntDir)`
+ 
    ![Hinzufügen des Bibliotheksverzeichnisses](media/mathclient-additional-library-directories.png "Hinzufügen des Bibliotheksverzeichnisses")
 
 1. Wenn Sie den Pfad zur Bibliotheksdatei im Dialogfeld **Zusätzliche Bibliotheksverzeichnisse** eingegeben haben, klicken Sie auf die Schaltfläche **OK**, um zum Dialogfeld **Eigenschaftenseiten** zurückzukehren.
@@ -430,13 +438,19 @@ Ihre Client-App kann jetzt erfolgreich kompiliert und verknüpft werden, aber no
 
 1. Wählen Sie im Eigenschaftenbereich das Bearbeitungssteuerelement im Feld **Befehlszeile** aus, und geben Sie folgenden Befehl ein:
 
+   **Visual Studio 2019:**
+
+   `xcopy /y /d "..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
+
+    **Visual Studio 2017 und früher:**
+
    `xcopy /y /d "..\..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
    ![Hinzufügen des Postbuildbefehls](media/mathclient-post-build-command-line.png "Hinzufügen des Postbuildbefehls")
 
 1. Klicken Sie auf die Schaltfläche **OK**, um die Änderungen an den Projekteigenschaften zu speichern.
 
-Jetzt sind alle Elemente vorhanden, die benötigt werden, damit die Client-App kompiliert und ausgeführt werden kann. Kompilieren Sie die Anwendung, in dem Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** auswählen. Das **Ausgabefenster** in Visual Studio sollte in etwa Folgendes anzeigen:
+Jetzt sind alle Elemente vorhanden, die benötigt werden, damit die Client-App kompiliert und ausgeführt werden kann. Kompilieren Sie die Anwendung, in dem Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** auswählen. Die **Ausgabe** Fenster in Visual Studio sollte etwa wie folgt abhängig von Ihrer Version von Visual Studio haben:
 
 ```Output
 1>------ Build started: Project: MathClient, Configuration: Debug Win32 ------

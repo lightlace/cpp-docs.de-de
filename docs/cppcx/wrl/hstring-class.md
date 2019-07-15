@@ -1,6 +1,6 @@
 ---
 title: HString-Klasse
-ms.date: 09/24/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
@@ -8,6 +8,7 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HString::Detach
 - corewrappers/Microsoft::WRL::Wrappers::HString::Get
+- corewrappers/Microsoft::WRL::Wrappers::HString::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
 - corewrappers/Microsoft::WRL::Wrappers::HString::HString
 - corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 884efb2a69b05589ad9458148409533880073878
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894400"
 ---
 # <a name="hstring-class"></a>HString-Klasse
 
@@ -76,6 +77,7 @@ Name                                     | Beschreibung
 [HString::Detach](#detach)               | Hebt die Zuordnung der angegebenen `HString` Objekt von seinem zugrunde liegenden Wert.
 [HString::Get](#get)                     | Ruft den Wert des zugrunde liegenden HSTRING-Handles ab.
 [HString::GetAddressOf](#getaddressof)   | Ruft einen Zeiger auf das zugrunde liegende HSTRING-Handle ab.
+[HString::GetRawBuffer](#getrawbuffer)   | Ruft einen Zeiger auf die zugrunde liegenden Zeichenfolgendaten ab.
 [HString::IsValid](#isvalid)             | Gibt an, ob die aktuelle `HString` Objekt gültig ist.
 [HString::MakeReference](#makereference) | Erstellt eine `HStringReference` Objekt aus einem angegebenen Zeichenfolgenparameter.
 [HString::Release](#release)             | Löscht den zugrunde liegenden Zeichenfolgenwert und initialisiert die aktuelle `HString` Objekt auf einen leeren Wert.
@@ -182,6 +184,22 @@ Ein Zeiger auf das zugrunde liegende HSTRING-Handle.
 
 Nach diesem Vorgang wird der Zeichenfolgenwert, der das zugrunde liegende HSTRING-Handle zerstört.
 
+## <a name="getrawbuffer"></a>HString::GetRawBuffer
+
+Ruft einen Zeiger auf die zugrunde liegenden Zeichenfolgendaten ab.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Parameter
+
+*Länge* Zeiger auf ein **Int** Variable, die die Länge der Daten empfängt.
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein **const** Zeiger auf die zugrunde liegenden Zeichenfolgendaten.
+
+
 ## <a name="hstring"></a>HString::HString
 
 Initialisiert eine neue Instanz der `HString`-Klasse.
@@ -215,7 +233,7 @@ bool IsValid() const throw()
 
 ### <a name="parameters"></a>Parameter
 
-**"true"** Wenn die aktuelle `HString` Objekt ist nicht leer ist, andernfalls **"false"**.
+**"true"** Wenn die aktuelle `HString` Objekt ist nicht leer ist, andernfalls **"false"** .
 
 ## <a name="makereference"></a>HString::MakeReference
 
@@ -300,7 +318,7 @@ Der zweite Parameter, verglichen werden soll. *RS* kann ein `HString` oder `HStr
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn die *Lhs* und *RS* Parameter gleich sind; andernfalls, **"false"**.
+**"true"** Wenn die *Lhs* und *RS* Parameter gleich sind; andernfalls, **"false"** .
 
 ## <a name="operator-inequality"></a>Hstring::! =-Operator
 
@@ -333,7 +351,7 @@ Der zweite Parameter, verglichen werden soll. *RS* kann ein `HString` oder `HStr
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn die *Lhs* und *RS* Parameter sind nicht gleich sind, andernfalls **"false"**.
+**"true"** Wenn die *Lhs* und *RS* Parameter sind nicht gleich sind, andernfalls **"false"** .
 
 ## <a name="operator-less-than"></a>Hstring::&lt; Operator
 
@@ -355,7 +373,7 @@ Der zweite Parameter, verglichen werden soll. *RS* möglich ein Verweis auf ein 
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn die *Lhs* -Parameter ist kleiner als der *RS* Parameter ist, andernfalls **"false"**.
+**"true"** Wenn die *Lhs* -Parameter ist kleiner als der *RS* Parameter ist, andernfalls **"false"** .
 
 ## <a name="release"></a>HString::Release
 
