@@ -1,6 +1,6 @@
 ---
 title: CWinApp-Klasse
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CWinApp
 - AFXWIN/CWinApp
@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ec6c976b6611563eb95cce1173d7c77c3b5ef0
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894500"
 ---
 # <a name="cwinapp-class"></a>CWinApp-Klasse
 
@@ -899,7 +899,7 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 Diese Memberfunktion ist also nicht Groß-/ Kleinschreibung, die Zeichenfolgen in die *LpszSection* und *LpszEntry* Parameter können in Fällen unterscheiden.
 
 > [!NOTE]
-> `GetProfileBinary` weist einen Puffer und gibt dessen Adresse in \* *PpData*. Der Aufrufer ist verantwortlich für das Freigeben der Puffer mit **delete []**.
+> `GetProfileBinary` weist einen Puffer und gibt dessen Adresse in \* *PpData*. Der Aufrufer ist verantwortlich für das Freigeben der Puffer mit **delete []** .
 
 > [!IMPORTANT]
 > Die von dieser Funktion zurückgegebenen Daten enden nicht notwendigerweise auf NULL, und der Aufrufer muss die Validierung ausführen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
@@ -1033,10 +1033,10 @@ virtual void HtmlHelp(
 ### <a name="parameters"></a>Parameter
 
 *dwData*<br/>
-Gibt zusätzliche Daten an. Der verwendete Wert hängt vom Wert von der *nCmd* Parameter.
+Gibt zusätzliche Daten an. Der verwendete Wert hängt vom Wert von der *nCmd* Parameter. Standardmäßig `0x000F` d.h. [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
 
 *nCmd*<br/>
-Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Auswirkungen auf die *DwData* Parameter finden Sie unter den *uCommand* Parameters im über die HTMLHelp-API-Funktion im Windows SDK beschrieben.
+Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Auswirkungen auf die *DwData* Parameter finden Sie unter den *uCommand* Parameter beschrieben, der [HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw) oder [HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) API-Funktionen im Windows SDK.  
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1437,7 +1437,7 @@ Den Namen der Anwendung aus der an übergebene Parameter stammen die [CWinApp](#
 Von der globalen Funktion zurückgegebene [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName` ist eine öffentliche Variable des Typs **const Char**<strong>\*</strong>.
 
 > [!NOTE]
-> Wenn Sie einen Wert zuzuweisen `m_pszAppName`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:
+> Wenn Sie einen Wert zuzuweisen `m_pszAppName`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Beispiel:
 
 [!code-cpp[NVC_MFCWindowing#57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]
 
@@ -1458,7 +1458,7 @@ LPCTSTR m_pszExeName;
 Im Gegensatz zu [M_pszAppName](#m_pszappname), dieser Name darf keine Leerzeichen enthalten. `m_pszExeName` ist eine öffentliche Variable des Typs **const Char**<strong>\*</strong>.
 
 > [!NOTE]
-> Wenn Sie einen Wert zuzuweisen `m_pszExeName`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:
+> Wenn Sie einen Wert zuzuweisen `m_pszExeName`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Beispiel:
 
 [!code-cpp[NVC_MFCWindowing#58](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]
 
@@ -1475,7 +1475,7 @@ LPCTSTR m_pszHelpFilePath;
 Wird standardmäßig das Framework initialisiert `m_pszHelpFilePath` auf den Namen der Anwendung mit ". HLP"angefügt. Um den Namen der Hilfedatei zu ändern, legen `m_pszHelpFilePath` , zeigen Sie auf eine Zeichenfolge, die den vollständigen Namen der gewünschten Hilfedatei enthält. Eine bequeme Möglichkeit hierzu ist in der Anwendung [InitInstance](#initinstance) Funktion. `m_pszHelpFilePath` ist eine öffentliche Variable des Typs **const Char**<strong>\*</strong>.
 
 > [!NOTE]
-> Wenn Sie einen Wert zuzuweisen `m_pszHelpFilePath`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:
+> Wenn Sie einen Wert zuzuweisen `m_pszHelpFilePath`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Beispiel:
 
 [!code-cpp[NVC_MFCWindowing#59](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]
 
@@ -1492,7 +1492,7 @@ LPCTSTR m_pszProfileName;
 `m_pszProfileName` ist eine öffentliche Variable des Typs **const Char**<strong>\*</strong>.
 
 > [!NOTE]
-> Wenn Sie einen Wert zuzuweisen `m_pszProfileName`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:
+> Wenn Sie einen Wert zuzuweisen `m_pszProfileName`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Beispiel:
 
 [!code-cpp[NVC_MFCWindowing#60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]
 
@@ -1510,7 +1510,7 @@ Dieses Datenelement wird normalerweise als schreibgeschützt behandelt.
 
 - Der Wert wird auf einen Registrierungsschlüssel gespeichert. Der Name für die anwendungseinstellung für das Profil wird für den folgenden Registrierungsschlüssel angefügt: HKEY_CURRENT_USER/Software/LocalAppWizard-Generated/.
 
-Wenn Sie einen Wert zuzuweisen `m_pszRegistryKey`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Zum Beispiel:
+Wenn Sie einen Wert zuzuweisen `m_pszRegistryKey`, es muss dynamisch auf dem Heap zugeordnet werden. Die `CWinApp` Destruktoraufrufe **kostenlose**(), mit dem this-Zeiger. Sie verwenden möchten die `_tcsdup`()-Laufzeitbibliothek-Funktion der zuordnen möchten. Darüber hinaus können freigeben Sie den Speicher, der Zeiger für den aktuellen zugeordnet sind, bevor Sie einen neuen Wert zuweisen. Beispiel:
 
 [!code-cpp[NVC_MFCWindowing#61](../../mfc/reference/codesnippet/cpp/cwinapp-class_23.cpp)]
 
@@ -1970,7 +1970,7 @@ virtual HRESULT RegisterWithRestartManager(
 |*pRecoveryCallback*|[in] Die Rückruffunktion für die Wiederherstellung. Diese Funktion muss einen LPVOID-Parameter als Eingabe annehmen, und geben Sie einen DWORD-Wert zurück. Ist die Standardrückruffunktion für die Wiederherstellung `CWinApp::ApplicationRecoveryCallback`.|
 |*lpvParam*|[in] Die Eingabeparameter für die Wiederherstellung Callback-Funktion. Weitere Informationen finden Sie unter [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
 |*dwPingInterval*|[in] Die Länge der Zeit, die der Neustart-Manager wartet, bis die Wiederherstellung Callback-Funktion zurückgegeben werden soll. Dieser Parameter ist in Millisekunden.|
-|*dwCallbackFlags*|[in] Flags, die an die Wiederherstellung Callback-Funktion übergeben werden. Für zukünftige Verwendung reserviert.|
+|*dwCallbackFlags*|[in] Flags, die an die Wiederherstellung Callback-Funktion übergeben werden. Zur künftigen Verwendung reserviert.|
 
 ### <a name="return-value"></a>Rückgabewert
 

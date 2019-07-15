@@ -1,6 +1,6 @@
 ---
 title: Ermitteln der neu zu verteilenden DLLs
-ms.date: 03/25/2019
+ms.date: 07/15/2019
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 4e4b53745c76a8e5b630bdd92633779e84262188
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 82fb582cae129b517a96deb3d4a9572ef8370a9d
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894480"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Ermitteln der neu zu verteilenden DLLs
 
 Beim Erstellen einer Anwendung, die von Visual Studio bereitgestellte Bibliotheks-DLLs verwendet, müssen Benutzer der Anwendung auch diese DLLs auf ihren Computern haben, damit die Anwendung ausgeführt werden kann. Da die meisten Benutzer wahrscheinlich nicht Visual Studio installiert haben, müssen Sie diese DLLs für sie bereitstellen. Visual Studio stellt diese DLLs als *verteilbare Dateien* zur Verfügung, die Sie in den Installer der Anwendung einschließen können.
 
-Damit das Einfügen der verteilbaren DLLs mit dem Installer einfacher ist, sind diese als eigenständige *verteilbare Pakete* verfügbar. Dabei handelt es sich um architekturspezifische ausführbare Dateien, die die zentrale Bereitstellung verwenden, um die verteilbaren Dateien auf dem Computer eines Benutzers zu installieren. Z. B. Vcredist\_x86.exe installiert die 32-Bit-Bibliotheken für X86 Computern, Vcredist\_x64.exe installiert die 64-Bit-Bibliotheken für X64 Computer und Vcredist\_ARM.exe werden die Bibliotheken für ARM-Computer installiert. Die zentrale Bereitstellung wird empfohlen, da Microsoft den Windows Update-Dienst verwenden kann, um diese Bibliotheken unabhängig zu aktualisieren. Zusätzlich zu der Kopie in Ihrer Visual Studio-Installation können die aktuellen verteilbaren Pakete heruntergeladen werden. Links zu den aktuellen unterstützten verteilbaren Paketen für aktuelle und ältere Toolsets finden Sie unter [The latest supported Visual C++ downloads (Aktuelle unterstützte Visual C++-Downloads)](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). Bestimmte frühere Versionen von verteilbaren Paketen finden Sie, wenn Sie das [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=158431) nach „Visual C++ Redistributable Packages“ durchsuchen.
+Damit das Einfügen der verteilbaren DLLs mit dem Installer einfacher ist, sind diese als eigenständige *verteilbare Pakete* verfügbar. Dabei handelt es sich um architekturspezifische ausführbare Dateien, die die zentrale Bereitstellung verwenden, um die verteilbaren Dateien auf dem Computer eines Benutzers zu installieren. Z. B. Vcredist\_x86.exe werden die 32-Bit-Bibliotheken für x X86 und X64 Computer Vcredist installiert\_x64.exe installiert die 64-Bit-Bibliotheken für X64 Computer und Vcredist\_ARM.exe werden die Bibliotheken installiert, für ARM Computer. Die zentrale Bereitstellung wird empfohlen, da Microsoft den Windows Update-Dienst verwenden kann, um diese Bibliotheken unabhängig zu aktualisieren. Zusätzlich zu der Kopie in Ihrer Visual Studio-Installation können die aktuellen verteilbaren Pakete heruntergeladen werden. Links zu den aktuellen unterstützten verteilbaren Paketen für aktuelle und ältere Toolsets finden Sie unter [The latest supported Visual C++ downloads (Aktuelle unterstützte Visual C++-Downloads)](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). Bestimmte frühere Versionen von verteilbaren Paketen finden Sie, wenn Sie das [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=158431) nach „Visual C++ Redistributable Packages“ durchsuchen.
 
 Die Hauptversionsnummer des verteilbaren Pakets, das Sie bereitstellen, muss der Version des Visual Studio-Toolsets entsprechen, das Sie für das Erstellen Ihrer Anwendung verwendet haben. Die Nebenversion muss identisch oder höher sein. Die Versionsnummern der Toolsets von Visual Studio 2017 und Visual Studio 2015 sind kompatibel. Das bedeutet, dass die verteilbaren Visual Studio 2017-Dateien von Apps verwendet werden können, die mit dem 2015-Toolset erstellt wurden. Die verteilbaren 2015-Dateien sind zwar kompatibel, es wird jedoch nicht unterstützt, diese in Apps zu verwenden, die mit dem 2017-Toolset erstellt wurden. Es werden nur verteilbare Pakete unterstützt, die aus Ihrer oder einer neueren Toolsetversion stammen.
 

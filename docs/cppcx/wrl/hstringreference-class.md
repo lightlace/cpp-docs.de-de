@@ -1,11 +1,12 @@
 ---
 title: HStringReference-Klasse
-ms.date: 09/25/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::Get
+- corewrappers/Microsoft::WRL::Wrappers::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator=
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator==
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: b9d2e49d0a7e1321e2259c06e1313a90d55dc90e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c17a9df8fcc7d849bbbd4f613bf5dce6dae8983
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894396"
 ---
 # <a name="hstringreference-class"></a>HStringReference-Klasse
 
@@ -56,6 +57,7 @@ Member                              | Beschreibung
 ----------------------------------- | ------------------------------------------------------------------
 [HStringReference::CopyTo](#copyto) | Kopiert das aktuelle `HStringReference` Objekt zu einem HSTRING-Objekt.
 [HStringReference::Get](#get)       | Ruft den Wert des zugrunde liegenden HSTRING-Handles ab.
+[HStringReference::GetRawBuffer](#getrawbuffer) | Ruft einen Zeiger auf die zugrunde liegenden Zeichenfolgendaten ab.
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
@@ -106,6 +108,21 @@ HSTRING Get() const throw()
 ### <a name="return-value"></a>Rückgabewert
 
 Der Wert des zugrunde liegenden HSTRING-Handles.
+
+## <a name="getrawbuffer"></a>HStringReference::GetRawBuffer
+
+Ruft einen Zeiger auf die zugrunde liegenden Zeichenfolgendaten ab.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Parameter
+
+*Länge* Zeiger auf ein **Int** Variable, die die Länge der Daten empfängt.
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein **const** Zeiger auf die zugrunde liegenden Zeichenfolgendaten.
 
 ## <a name="hstringreference"></a>HStringReference::HStringReference
 
@@ -189,7 +206,7 @@ Der zweite Parameter, verglichen werden soll.  *RS* kann ein `HStringReference` 
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn die *Lhs* und *RS* Parameter gleich sind; andernfalls, **"false"**.
+**"true"** Wenn die *Lhs* und *RS* Parameter gleich sind; andernfalls, **"false"** .
 
 ## <a name="operator-inequality"></a>Hstringreference::! =
 
@@ -219,7 +236,7 @@ Der zweite Parameter, verglichen werden soll.  *RS* kann ein `HStringReference` 
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn die *Lhs* und *RS* Parameter sind nicht gleich sind, andernfalls **"false"**.
+**"true"** Wenn die *Lhs* und *RS* Parameter sind nicht gleich sind, andernfalls **"false"** .
 
 ## <a name="operator-less-than"></a>HStringReference::operator&lt;
 
@@ -241,4 +258,4 @@ Der zweite Parameter, verglichen werden soll.  *RS* möglich ein Verweis auf ein
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn die *Lhs* -Parameter ist kleiner als der *RS* Parameter ist, andernfalls **"false"**.
+**"true"** Wenn die *Lhs* -Parameter ist kleiner als der *RS* Parameter ist, andernfalls **"false"** .
