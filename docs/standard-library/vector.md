@@ -6,18 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 348b5c53ecd3fb7900d03fed7c1209a2c94eeb4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96f329bfdcc13bb557ef0cc487a1f414612e96c5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410855"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240965"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
 Definiert den Containervorlagenklassenvektor und einige unterstützende Vorlagen.
 
 Der `vector` ist ein Container, der Elemente eines bestimmten Typs in einer linearen Sequenz organisiert. Er ermöglicht schnellen zufälligen Zugriff auf alle Elemente sowie dynamische Hinzufügungen und Entfernungen zu und aus der Sequenz. Der `vector` ist der bevorzugte Container für eine Sequenz, wenn die Leistung mit wahlfreiem Zugriff ein wichtiger Faktor ist.
+
+> [!NOTE]
+> Die \<Vektor > Bibliothek verwendet auch die `#include <initializer_list>` Anweisung.
 
 Weitere Informationen zur `vector`-Klasse finden Sie unter [vector-Klasse](../standard-library/vector-class.md). Weitere Informationen zu der Spezialisierung `vector<bool>` finden Sie unter [vector\<bool>-Klasse](../standard-library/vector-bool-class.md).
 
@@ -74,21 +77,23 @@ void swap (
 
 ### <a name="parameters"></a>Parameter
 
-*Type*<br/>
+*Typ*\
 Der Vorlagenparameter für den Typ der Daten, die im Vektor gespeichert sind.
 
-*Allocator*<br/>
+*Zuweisung*\
 Der Vorlagenparameter für das gespeicherte Zuweisungsobjekt, das für die Speicherbelegung und -freigabe verantwortlich ist.
 
-*left*<br/>
+*Links*\
 Der erste (linke) Vektor in einem Vergleichsvorgang.
 
-*right*<br/>
+*Richting*\
 Der zweite (rechte) Vektor in einem Vergleichsvorgang.
+
+## <a name="members"></a>Member
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
 |[operator! =](../standard-library/vector-operators.md#op_neq)|Testet, ob das Vektorobjekt links vom Operator ungleich dem Vektorobjekt rechts vom Operator ist.|
 |[operator<](../standard-library/vector-operators.md#op_lt)|Testet, ob das Vektorobjekt links vom Operator kleiner als das Vektorobjekt auf der rechten Seite ist.|
@@ -99,7 +104,7 @@ Der zweite (rechte) Vektor in einem Vergleichsvorgang.
 
 ### <a name="classes"></a>Klassen
 
-|Klasse|Beschreibung|
+|||
 |-|-|
 |[vector-Klasse](../standard-library/vector-class.md)|Eine Vorlagenklasse von Sequenzcontainern, die Elemente eines bestimmten Typs in einer linearen Anordnung anordnen und schnellen zufälligen Zugriff auf ein Element ermöglichen.|
 
@@ -107,6 +112,7 @@ Der zweite (rechte) Vektor in einem Vergleichsvorgang.
 
 |||
 |-|-|
+|[hash]()||
 |[vector\<bool>-Klasse](../standard-library/vector-bool-class.md)|Eine vollständige Spezialisierung des Vorlagenklassenvektors für Elemente des Typs `bool` mit einer Zuweisung für den zugrunde liegenden Typ, der von der Spezialisierung verwendet wird.|
 
 ## <a name="requirements"></a>Anforderungen

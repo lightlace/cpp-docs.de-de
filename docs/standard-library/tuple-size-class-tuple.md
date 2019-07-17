@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 1a069bcf5385a014438e36983e455ec3761ce727
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c03c02dde3178a257a83720ff437f7981f5f7ed
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278942"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241551"
 ---
 # <a name="tuplesize-class"></a>tuple_size-Klasse;
 
@@ -54,24 +54,28 @@ template <class Tuple>
    struct tuple_size<const volatile Tuple>;
 ```
 
+```cpp
+template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
+```
+
 ### <a name="parameters"></a>Parameter
 
-*Tuple*<br/>
+*Tupel*\
 Der Typ des Tupels.
 
-*Elem*<br/>
+*Elem*\
 Der Typ der Arrayelemente.
 
-*Size*<br/>
+*Größe*\
 Die Größe des Arrays.
 
-*T1*<br/>
+*T1*\
 Der Typ des ersten Members des Paares.
 
-*T2*<br/>
+*T2*\
 Der Typ des zweiten Members des Paares.
 
-*Typen*<br/>
+*Typen*\
 Die Typen der Elemente des Tupels.
 
 ## <a name="remarks"></a>Hinweise
@@ -120,9 +124,3 @@ int main()
 **Header:** \<utility> (für Paarspezialisierung)
 
 **Namespace:** std
-
-## <a name="see-also"></a>Siehe auch
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[tuple](../standard-library/tuple-class.md)<br/>
-[tuple_element-Klasse](../standard-library/tuple-element-class-tuple.md)<br/>

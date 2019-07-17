@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d4330f8b0fcbce940f6647ebb8920f0b1969b6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212091"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244681"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
 Definiert die containervorlagenklasse `complex` und deren unterstützende Vorlagen.
 
-## <a name="syntax"></a>Syntax
+## <a name="requirements"></a>Anforderungen
 
-```cpp
-#include <complex>
-```
+**Header**: \<complex>
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Hinweise
 
@@ -42,9 +42,9 @@ Die Menge der komplexen Zahlen mit den Operationen für komplexe Addition und ko
 
    (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
-Durch die Darstellung einer komplexen Zahl *z* = (*eine*, *b*) in der Form *z* = *eine*  +  *Bi*, wobei *ich*<sup>2</sup> =-1, die Regeln für die Algebra der Menge der reellen Zahlen auf die Menge der komplexen Zahlen und deren Komponenten angewendet werden kann. Zum Beispiel:
+Durch die Darstellung einer komplexen Zahl *z* = (*eine*, *b*) in der Form *z* = *eine*  +  *Bi*, wobei *ich*<sup>2</sup> =-1, die Regeln für die Algebra der Menge der reellen Zahlen auf die Menge der komplexen Zahlen und deren Komponenten angewendet werden kann. Beispiel:
 
-   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
+   (1 + 2*ich*) \* (2 + 3*ich*) = 1 \* (2 + 3*ich*) + 2*ich* \* (2 + 3*i*) = (2 + 3*ich*) + (4*ich* + 6*ich*<sup>2</sup>) = (2 bis 6) + (3 + 4)*ich* -4 + 7 =*ich*
 
 Das System der komplexen Zahlen ist ein Körper, jedoch kein geordneter Körper. Es gibt keine Reihenfolge der komplexen Zahlen, wie es für das Feld der reellen Zahlen und deren Teilmengen gibt, daher ungleichheiten findet auf komplexe Zahlen angewendet werden können, wie sie in reelle Zahlen sind.
 
@@ -52,7 +52,7 @@ Es gibt drei allgemeine Formen der Darstellung einer komplexen Zahl *z*:
 
 - Kartesisch: *z* = *eine* + *Bi*
 
-- Polar: *z* = *r* (cos *p* + *i* sin *p*)
+- Polar: *z* = *r* (cos *p* + *ich* sin *p*)
 
 - Exponentiell: *z* = *r* \* *e*<sup>*Ip*</sup>
 
@@ -68,12 +68,20 @@ Die Ausdrücke, die in diesen Standarddarstellungen einer komplexen Zahl verwend
 
 Sofern nicht anders angegeben, Funktionen, die mehrere Werte zurückgeben können, sind erforderlich, um einen Hauptwert für ihre Argumente zurückgeben,-π größer und kleiner als oder gleich + π aus, um sie einwertig bleiben. Alle Winkel müssen angegeben werden, im Bogenmaß im Bereich 2π Radiant (360 Grad) vorhanden sind, im Kreis.
 
+## <a name="members"></a>Member
+
 ### <a name="functions"></a>Funktionen
 
-|Funktion|Beschreibung|
+|||
 |-|-|
 |[abs](../standard-library/complex-functions.md#abs)|Berechnet den Betrag einer komplexen Zahl.|
+|[acos](../standard-library/complex-functions.md#acos)||
+|[acosh](../standard-library/complex-functions.md#acosh)||
 |[arg](../standard-library/complex-functions.md#arg)|Extrahiert das Argument aus einer komplexen Zahl.|
+|[asin](../standard-library/complex-functions.md#asin)||
+|[asinh](../standard-library/complex-functions.md#asinh)||
+|[atan](../standard-library/complex-functions.md#atan)||
+|[atanh](../standard-library/complex-functions.md#atanh)||
 |[conj](../standard-library/complex-functions.md#conj)|Gibt die konjugierte Zahl einer komplexen Zahl zurück.|
 |[cos](../standard-library/complex-functions.md#cos)|Gibt den Kosinus einer komplexen Zahl zurück.|
 |[cosh](../standard-library/complex-functions.md#cosh)|Gibt den Kosinus Hyperbolicus einer komplexen Zahl zurück.|
@@ -84,7 +92,8 @@ Sofern nicht anders angegeben, Funktionen, die mehrere Werte zurückgeben könne
 |[norm](../standard-library/complex-functions.md#norm)|Extrahiert die Norm einer komplexen Zahl.|
 |[polar](../standard-library/complex-functions.md#polar)|Gibt die komplexe Zahl, die einem angegebenen Betrag und Argument entspricht, in kartesischer Form zurück.|
 |[pow](../standard-library/complex-functions.md#pow)|Wertet die komplexe Zahl aus, die sich dadurch ergibt, dass eine Basis, die eine komplexe Zahl ist, mit einer anderen komplexen Zahl potenziert wird.|
-|[Real](../standard-library/complex-functions.md#real)|Extrahiert die reelle Komponente einer komplexen Zahl.|
+|[proj](../standard-library/complex-functions.md#proj)||
+|[real](../standard-library/complex-functions.md#real)|Extrahiert die reelle Komponente einer komplexen Zahl.|
 |[sin](../standard-library/complex-functions.md#sin)|Gibt den Sinus einer komplexen Zahl zurück.|
 |[sinh](../standard-library/complex-functions.md#sinh)|Gibt den Sinus Hyperbolicus einer komplexen Zahl zurück.|
 |[sqrt](../standard-library/complex-functions.md#sqrt)|Gibt die Quadratwurzel einer komplexen Zahl zurück.|
@@ -93,7 +102,7 @@ Sofern nicht anders angegeben, Funktionen, die mehrere Werte zurückgeben könne
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
 |[Operator!=](../standard-library/complex-operators.md#op_neq)|Testet zwei komplexe Zahlen auf Ungleichheit, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|
 |[operator*](../standard-library/complex-operators.md#op_star)|Multipliziert zwei komplexe Zahlen, von denen eine oder beide einer Teilmenge des Typs für die reellen und imaginären Teile angehören.|
@@ -106,10 +115,10 @@ Sofern nicht anders angegeben, Funktionen, die mehrere Werte zurückgeben könne
 
 ### <a name="classes"></a>Klassen
 
-|Klasse|Beschreibung|
+|||
 |-|-|
 |[complex\<double>](../standard-library/complex-double.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **doppelte**, wobei die erste dem Realteil einer komplexen Zahl entspricht und die Sekunde, den imaginären Teil entspricht darstellt.|
-|[complex\<float>](../standard-library/complex-float.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **"float"**, wobei die erste dem Realteil einer komplexen Zahl entspricht und die Sekunde, den imaginären Teil entspricht darstellt.|
+|[complex\<float>](../standard-library/complex-float.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **"float"** , wobei die erste dem Realteil einer komplexen Zahl entspricht und die Sekunde, den imaginären Teil entspricht darstellt.|
 |[complex\<long double>](../standard-library/complex-long-double.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **long double**, wobei die erste dem Realteil einer komplexen Zahl entspricht und die Sekunde, den imaginären Teil entspricht darstellt.|
 |[complex](../standard-library/complex-class.md)|Die Vorlagenklasse beschreibt ein Objekt, mit dem das System komplexer Zahlen dargestellt wird und komplexe arithmetische Operationen ausgeführt werden.|
 

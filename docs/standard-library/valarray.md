@@ -6,38 +6,45 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365415"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246659"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
 Definiert die valarray-Vorlagenklasse sowie zahlreiche unterstützende Vorlagenklassen und Funktionen.
 
-## <a name="syntax"></a>Syntax
+## <a name="requirements"></a>Anforderungen
 
-```cpp
-#include <valarray>
-```
+**Header:** \<valarray>
+
+**Namespace:** std
+
+> [!NOTE]
+> Die \<valarray-Objekt >-Bibliothek verwendet die "#include < Initializer_list >" Anweisung.
 
 ## <a name="remarks"></a>Hinweise
 
 Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leistung ungewöhnliche Freiheiten. Insbesondere kann jede Funktion, die Rückgabe von Typ `valarray<T1>` kann ein Objekt eines anderen Typs T2 zurückgeben. In diesem Fall jede Funktion, die ein oder mehrere Argumente des Typs akzeptiert `valarray<T2>` müssen verfügen über Überladungen, die beliebige Kombinationen dieser Argumente, wobei jedes durch ein Argument des Typs T2 ersetzt akzeptieren.
 
+## <a name="members"></a>Member
+
 ### <a name="functions"></a>Funktionen
 
-|Funktion|Beschreibung|
+|||
 |-|-|
 |[abs](../standard-library/valarray-functions.md#abs)|Verarbeitet die Elemente eines valarray-Eingabeobjekts und gibt ein valarray-Objekt zurück, dessen Elemente gleich dem absoluten Wert der Elemente des valarray-Eingabeobjekts sind.|
 |[acos](../standard-library/valarray-functions.md#acos)|Verarbeitet die Elemente eines valarray-Eingabeobjekts und gibt ein valarray-Objekt zurück, dessen Elemente gleich dem Arkuskosinus der Elemente des valarray-Eingabeobjekts sind.|
 |[asin](../standard-library/valarray-functions.md#asin)|Verarbeitet die Elemente eines valarray-Eingabeobjekts und gibt ein valarray-Objekt zurück, dessen Elemente gleich dem Arkussinus der Elemente des valarray-Eingabeobjekts sind.|
 |[atan](../standard-library/valarray-functions.md#atan)|Verarbeitet die Elemente eines valarray-Eingabeobjekts und gibt ein valarray-Objekt zurück, dessen Elemente gleich dem Hauptwert des Arkustangens der Elemente des valarray-Eingabeobjekts sind.|
 |[atan2](../standard-library/valarray-functions.md#atan2)|Gibt ein valarray-Objekt zurück, dessen Elemente gleich dem Arkustangens der kartesischen Komponenten sind, die durch eine Kombination aus Konstanten und Elementen von valarray-Objekten angegeben sind.|
+|[begin](../standard-library/valarray-functions.md#begin)||
 |[cos](../standard-library/valarray-functions.md#cos)|Verarbeitet die Elemente eines valarray-Eingabeobjekts und gibt ein valarray-Objekt zurück, dessen Elemente gleich dem Kosinus der Elemente des valarray-Eingabeobjekts sind.|
 |[cosh](../standard-library/valarray-functions.md#cosh)|Verarbeitet die Elemente eines valarray-Eingabeobjekts und gibt ein valarray-Objekt zurück, dessen Elemente gleich dem Kosinus Hyperbolicus der Elemente des valarray-Eingabeobjekts sind.|
+|[end](../standard-library/valarray-functions.md#end)||
 |[exp](../standard-library/valarray-functions.md#exp)|Verarbeitet die Elemente eines valarray-Eingabeobjekts und gibt ein valarray-Objekt zurück, dessen Elemente gleich der natürlichen Exponentialfunktion der Elemente des valarray-Eingabeobjekts sind.|
 |[log](../standard-library/valarray-functions.md#log)|Verarbeitet die Elemente eines valarray-Eingabeobjekts und gibt ein valarray-Objekt zurück, dessen Elemente gleich dem natürlichen Logarithmus der Elemente des valarray-Eingabeobjekts sind.|
 |[log10](../standard-library/valarray-functions.md#log10)|Verarbeitet die Elemente eines valarray-Eingabeobjekts und gibt ein valarray-Objekt zurück, dessen Elemente gleich dem Logarithmus zur Basis 10 (dekadischer Logarithmus) der Elemente des valarray-Eingabeobjekts sind.|
@@ -51,7 +58,7 @@ Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leist
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
 |[Operator!=](../standard-library/valarray-operators.md#op_neq)|Überprüft, ob die entsprechenden Elemente von zwei gleich großen valarray-Objekten ungleich sind oder ob alle Elemente eines valarray-Objekts entsprechend einem angegebenen Wert des Elementtyps des valarray-Objekts ungleich sind.|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|Ruft den Rest der Division der entsprechenden Elemente von zwei gleich großen valarray-Objekten oder der Division eines valarray-Objekts durch einen angegebenen Wert des valarray Elementtyps oder der Division eines angegebenen Werts durch ein valarray-Objekt ab.|
@@ -74,7 +81,7 @@ Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leist
 
 ### <a name="classes"></a>Klassen
 
-|Klasse|Beschreibung|
+|||
 |-|-|
 |[gslice-Klasse](../standard-library/gslice-class.md)|Eine Hilfsklasse der valarray-Klasse, die zum Definieren von mehrdimensionalen Segmenten eines valarray-Objekts verwendet wird.|
 |[gslice_array-Klasse](../standard-library/gslice-array-class.md)|Eine interne zusätzliche Vorlagenklasse, die allgemeine slice-Objekte (Segmente) unterstützt, indem sie Vorgänge zwischen Teilmengenarrays bereitstellt, die durch das allgemeine Segment eines valarray-Objekts definiert sind.|
@@ -88,7 +95,7 @@ Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leist
 
 |||
 |-|-|
-|[valarray\<bool>-Klasse](../standard-library/valarray-bool-class.md)|Eine spezielle Version der Vorlagenklasse Valarray\<**Typ**> für Elemente des Typs **"bool"**.|
+|[valarray\<bool>-Klasse](../standard-library/valarray-bool-class.md)|Eine spezielle Version der Vorlagenklasse Valarray\<**Typ**> für Elemente des Typs **"bool"** .|
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 94d1104b66fc6bd84e209caa23ce309cffd9fa85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1795a44d2d31cfbad964b41ef03e4bf65b401352
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377817"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246195"
 ---
 # <a name="badexception-class"></a>bad_exception-Klasse
 
@@ -20,7 +20,12 @@ Die Klasse beschreibt eine Ausnahme, die von einem unexpected-Handler ausgelöst
 ## <a name="syntax"></a>Syntax
 
 ```cpp
-class bad_exception    : public exception {};
+class bad_exception : public exception {};
+
+bad_exception();
+bad_exception(const bad_exception&);
+bad_exception& operator=(const bad_exception&);
+const char* what() const override;
 ```
 
 ## <a name="remarks"></a>Hinweise
@@ -34,14 +39,3 @@ Sie finden eine Liste der Member, die von der `bad_exception`-Klasse geerbt werd
 ## <a name="example"></a>Beispiel
 
 Ein Beispiel zur Verwendung von [unexpected](../standard-library/exception-functions.md#unexpected), das `bad_exception` auslöst, finden Sie unter [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<exception>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Siehe auch
-
-[exception-Klasse](../standard-library/exception-class.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

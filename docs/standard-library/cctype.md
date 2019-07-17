@@ -6,26 +6,45 @@ f1_keywords:
 helpviewer_keywords:
 - cctype header
 ms.assetid: 3fd18bfd-c414-4def-bac1-c362e1fe8b71
-ms.openlocfilehash: 985dc27d8da535d9bb4a3005aca38cdde85c25ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19431d02e0742d63df058ca743fc0560131805bd
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351208"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244948"
 ---
 # <a name="ltcctypegt"></a>&lt;cctype&gt;
 
 Schließt den Standard-C-Bibliotheksheader \<ctype.h> ein und fügt die verknüpften Namen zum `std`-Namespace hinzu.
 
-## <a name="syntax"></a>Syntax
+## <a name="requirements"></a>Anforderungen
 
-```cpp
-#include <cctype>
-```
+**Header:** \<Cctype >
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Hinweise
 
 Durch Einschließen dieses Headers wird sichergestellt, dass die mit externer Bindung im Standard-C-Bibliotheksheader deklarierten Namen im `std`-Namespace deklariert werden.
+
+## <a name="functions"></a>Funktionen
+
+```cpp
+int isalnum(int c);
+int isalpha(int c);
+int isblank(int c);
+int iscntrl(int c);
+int isdigit(int c);
+int isgraph(int c);
+int islower(int c);
+int isprint(int c);
+int ispunct(int c);
+int isspace(int c);
+int isupper(int c);
+int isxdigit(int c);
+int tolower(int c);
+int toupper(int c);
+```
 
 ## <a name="see-also"></a>Siehe auch
 

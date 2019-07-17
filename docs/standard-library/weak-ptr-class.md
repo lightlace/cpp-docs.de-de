@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: e2efb5d534ad43e2492ac4fb0bf76db402dca272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e491c376f110f48b0b02a30fc39f6c6da1a5ab02
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410854"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240911"
 ---
 # <a name="weakptr-class"></a>weak_ptr-Klasse
 
@@ -57,17 +57,18 @@ public:
       weak_ptr& operator=(const weak_ptr<Other>&);
    template <class Other>
       weak_ptr& operator=(shared_ptr<Other>&);
+      
    void swap(weak_ptr&);
    void reset();
    long use_count() const;
    bool expired() const;
    shared_ptr<Ty> lock() const;
-   };
+};
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Ty*\
 Der vom schwachen Zeiger gesteuerte Typ.
 
 ## <a name="remarks"></a>Hinweise
@@ -84,7 +85,7 @@ Ein Zyklus tritt auf, wenn es für zwei oder mehr Ressourcen, die von `shared_pt
 
 ### <a name="constructors"></a>Konstruktoren
 
-|Konstruktor|Beschreibung|
+|||
 |-|-|
 |[weak_ptr](#weak_ptr)|Erstellt ein Objekt vom Typ `weak_ptr`.|
 
@@ -102,17 +103,11 @@ Ein Zyklus tritt auf, wenn es für zwei oder mehr Ressourcen, die von `shared_pt
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
 |[operator=](#op_eq)|Ersetzt eine in Besitz befindliche Ressource.|
 
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<memory>
-
-**Namespace:** std
-
-## <a name="element_type"></a> element_type
+### <a name="element_type"></a> ELEMENT_TYPE
 
 Der Typ des Elements.
 
@@ -120,11 +115,11 @@ Der Typ des Elements.
 typedef Ty element_type;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Der Type stellt ein Synonym für den Vorlagenparameter `Ty` dar.
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__weak_ptr_element_type.cpp
@@ -148,7 +143,7 @@ int main()
 *wp0.lock() == 5
 ```
 
-## <a name="expired"></a> expired
+### <a name="expired"></a> abgelaufen
 
 Überprüft, ob der Besitz abgelaufen ist.
 
@@ -156,11 +151,11 @@ int main()
 bool expired() const;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt **"true"** Wenn `*this` abgelaufen ist, andernfalls **"false"**.
+Die Memberfunktion gibt **"true"** Wenn `*this` abgelaufen ist, andernfalls **"false"** .
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__weak_ptr_expired.cpp
@@ -205,7 +200,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="lock"></a> lock
+### <a name="lock"></a> Sperre
 
 Bedingt exklusiven Besitz einer Ressource.
 
@@ -213,11 +208,11 @@ Bedingt exklusiven Besitz einer Ressource.
 shared_ptr<Ty> lock() const;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die Memberfunktion gibt ein leeres Shared_ptr-Objekt zurück, wenn `*this` abgelaufen ist; andernfalls wird eine [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md)\<Ty >-Objekt, das die Ressource besitzt `*this` verweist auf.
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__weak_ptr_lock.cpp
@@ -262,7 +257,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="op_eq"></a> operator=
+### <a name="op_eq"></a> Operator =
 
 Ersetzt eine in Besitz befindliche Ressource.
 
@@ -270,28 +265,28 @@ Ersetzt eine in Besitz befindliche Ressource.
 weak_ptr& operator=(const weak_ptr& wp);
 
 template <class Other>
-weak_ptr& operator=(const weak_ptr<Other>& wp);
+    weak_ptr& operator=(const weak_ptr<Other>& wp);
 
 template <class Other>
-weak_ptr& operator=(const shared_ptr<Other>& sp);
+    weak_ptr& operator=(const shared_ptr<Other>& sp);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-*Andere*<br/>
+*Andere*\
 Der Typ, der vom Argument für den gemeinsamen/schwachen Zeiger gesteuert wird.
 
-*wp*<br/>
+*WP*\
 Der zu kopierende schwache Zeiger.
 
-*sp*<br/>
+*SP*\
 Der zu kopierende gemeinsame Zeiger
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die Operatoren geben alle die Ressource frei, auf die derzeit von `*this` gezeigt wird, und weisen den Besitz der Ressource, die von der Operatorsequenz benannt wird, `*this` zu. Wenn bei einem Operator ein Fehler auftritt, bleibt `*this` unverändert.
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__weak_ptr_operator_as.cpp
@@ -323,28 +318,28 @@ int main()
 *wp1.lock() == 10
 ```
 
-## <a name="owner_before"></a> owner_before
+### <a name="owner_before"></a> owner_before
 
 Gibt **"true"** Wenn diese `weak_ptr` sortiert ist, bevor Sie (oder kleiner als) des bereitgestellten Zeigers.
 
 ```cpp
 template <class Other>
-bool owner_before(const shared_ptr<Other>& ptr);
+    bool owner_before(const shared_ptr<Other>& ptr);
 
 template <class Other>
-bool owner_before(const weak_ptr<Other>& ptr);
+    bool owner_before(const weak_ptr<Other>& ptr);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-*ptr*<br/>
+*PTR*\
 Ein `lvalue`-Verweis auf `shared_ptr` oder `weak_ptr`.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die vorlagenmemberfunktion gibt **"true"** Wenn `*this` ist `ordered before` `ptr`.
 
-## <a name="reset"></a> reset
+### <a name="reset"></a> Zurücksetzen
 
 Gibt eine in Besitz befindliche Ressource frei.
 
@@ -352,11 +347,11 @@ Gibt eine in Besitz befindliche Ressource frei.
 void reset();
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die Memberfunktion gibt die Ressource frei, auf die von `*this` gezeigt wird, und konvertiert `*this` in ein leeres „weak_ptr“-Objekt.
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__weak_ptr_reset.cpp
@@ -386,7 +381,7 @@ wp.expired() == false
 wp.expired() == true
 ```
 
-## <a name="swap"></a> swap
+### <a name="swap"></a> Swap
 
 Tauscht zwei `weak_ptr`-Objekte.
 
@@ -394,16 +389,23 @@ Tauscht zwei `weak_ptr`-Objekte.
 void swap(weak_ptr& wp);
 ```
 
-### <a name="parameters"></a>Parameter
+Umfasst auch die Spezialisierung.
 
-*wp*<br/>
+```cpp
+template<class T>
+    void swap(weak_ptr<T>& a, weak_ptr<T>& b) noexcept;
+```
+
+#### <a name="parameters"></a>Parameter
+
+*WP*\
 Der schwache Zeiger, mit dem getauscht werden soll.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die Memberfunktion belässt die Ressource, die ursprünglich verweist `*this` anschließend verweist *wp*, und die Ressource, die ursprünglich verweist *wp* anschließend verweist`*this`. Die Funktion ändert die Verweisanzahlen für die beiden Ressourcen nicht und löst auch keine Ausnahmen aus.
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__weak_ptr_swap.cpp
@@ -456,7 +458,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="use_count"></a> use_count
+### <a name="use_count"></a> use_count
 
 Ermittelt die Anzahl von festgelegten `shared_ptr`-Objekten.
 
@@ -464,11 +466,11 @@ Ermittelt die Anzahl von festgelegten `shared_ptr`-Objekten.
 long use_count() const;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die Memberfunktion gibt die Anzahl der `shared_ptr`-Objekte zurück, die die Ressource besitzen, auf die von `*this` gezeigt wird.
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__weak_ptr_use_count.cpp
@@ -496,9 +498,9 @@ wp.use_count() == 1
 wp.use_count() == 2
 ```
 
-## <a name="weak_ptr"></a> weak_ptr
+### <a name="weak_ptr"></a> weak_ptr
 
-Erstellt ein Objekt vom Typ `weak_ptr`.
+Erstellt ein Objekt vom Typ `weak_ptr`. Enthält auch einen Destruktor.
 
 ```cpp
 weak_ptr();
@@ -506,28 +508,30 @@ weak_ptr();
 weak_ptr(const weak_ptr& wp);
 
 template <class Other>
-weak_ptr(const weak_ptr<Other>& wp);
+    weak_ptr(const weak_ptr<Other>& wp);
 
 template <class Other>
-weak_ptr(const shared_ptr<Other>& sp);
+    weak_ptr(const shared_ptr<Other>& sp);
+
+~weak_ptr();
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-*Andere*<br/>
+*Andere*\
 Der Typ, der vom Argument für den gemeinsamen/schwachen Zeiger gesteuert wird.
 
-*wp*<br/>
+*WP*\
 Der zu kopierende schwache Zeiger.
 
-*sp*<br/>
+*SP*\
 Der zu kopierende gemeinsame Zeiger
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die Konstruktoren erstellen jeweils ein Objekt, das auf die Ressource zeigt, die von der Operatorensequenz benannt wird.
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__weak_ptr_construct.cpp
@@ -559,7 +563,3 @@ wp0.expired() == true
 *wp1.lock() == 5
 *wp2.lock() == 5
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[shared_ptr-Klasse](../standard-library/shared-ptr-class.md)<br/>

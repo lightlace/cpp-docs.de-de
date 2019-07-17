@@ -6,12 +6,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 80bdb1ca83be5fb390035d7f3b005793a2f03715
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87b640d4f3aa3fbfa23ad5603d84102301e71ea4
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370345"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240386"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;random&gt;-Funktionen
 
@@ -29,19 +29,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Parameter
 
-*RealType*<br/>
+*RealType*\
 Der ganzzahlige Gleitkommatyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*Bits*<br/>
+*Bits*\
 Der Zufallszahlengenerator.
 
-*Gen*<br/>
+*Gen*\
 Der Zufallszahlengenerator.
 
 ### <a name="remarks"></a>Hinweise
 
 Die Vorlagenfunktion ruft `operator()` von *Gen* wiederholt und verpackt die zurückgegebenen Werte in einen Gleitkommawert `x` des Typs *RealType* bis er die angegebene Anzahl erfasst hat von Mantissen-Bits in `x`. Die angegebene Zahl ist die kleinere von *Bits* (die muss ungleich NULL sein) und die volle Anzahl von Mantissen-Bits in *RealType*. Beim ersten Aufruf werden die Bits mit dem geringsten Wert ausgegeben. Die Funktion gibt `x` zurück.
-
-## <a name="see-also"></a>Siehe auch
-
-[\<random>](../standard-library/random.md)<br/>

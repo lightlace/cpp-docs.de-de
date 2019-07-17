@@ -4,23 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: d86fbf15313c25dd28b9220c654750ee8bc96d81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 398e2429c38cffb454c7b510aa5ab44fbe4cfef6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279072"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244892"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt;-Operatoren
 
-||||
-|-|-|-|
-|[operator modulo](#op_modulo)|[Operator!=](#op_neq)|[operator&gt;](#op_gt)|
-|[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|
-|[operator/](#op_div)|[operator==](#op_eq_eq)|
-
-## <a name="operator-"></a> operator-
+## <a name="operator-"></a> Operator-
 
 Operator für die Subtraktion oder Negation von [duration](../standard-library/duration-class.md)- und [time_point](../standard-library/time-point-class.md)-Objekten.
 
@@ -46,16 +39,16 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>Parameter
 
-*Links*<br/>
+*Links*\
 Das linke `duration` oder `time_point`-Objekt.
 
-*Rechts*<br/>
+*Richting*\
 Das rechte `duration` oder `time_point`-Objekt.
 
-*Zeit*<br/>
+*Zeit*\
 Ein `time_point`-Objekt.
 
-*Dur*<br/>
+*Abfragedauer*\
 Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -66,7 +59,7 @@ Die zweite Funktion gibt eine `time_point` -Objekt, das einem bestimmten Zeitpun
 
 Die dritte Funktion gibt eine `duration` -Objekt, das Zeitintervall zwischen darstellt *Links* und *rechts*.
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> Operator! =
 
 Ungleichheitsoperator für [duration](../standard-library/duration-class.md)- oder [time_point](../standard-library/time-point-class.md)-Objekte.
 
@@ -84,17 +77,17 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*<br/>
+*Links*\
 Das linke `duration` oder `time_point`-Objekt.
 
-*Rechts*<br/>
+*Richting*\
 Das rechte `duration` oder `time_point`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Jede Funktion gibt `!(Left == Right)` zurück.
 
-## <a name="op_star"></a> operator*
+## <a name="op_star"></a> Operator *
 
 Multiplikationsoperator für [duration](../standard-library/chrono-operators.md#op_star)-Objekte.
 
@@ -115,10 +108,10 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>Parameter
 
-*Dur*<br/>
+*Abfragedauer*\
 Ein `duration`-Objekt.
 
-*Mult*<br/>
+*Mult*\
 Ein Integralwert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -129,7 +122,7 @@ Sofern `is_convertible<Rep2, common_type<Rep1, Rep2>>` *nicht wahr ist*, wird di
 
 Sofern `is_convertible<Rep1, common_type<Rep1, Rep2>>` *nicht wahr ist*, wird die zweite Funktion nicht an der Überladungsauflösung beteiligt. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="op_div"></a> operator/
+## <a name="op_div"></a> Operator /
 
 Divisionsoperator für [duration](../standard-library/chrono-operators.md#op_star)-Objekte.
 
@@ -149,16 +142,16 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>Parameter
 
-*Dur*<br/>
+*Abfragedauer*\
 Ein `duration`-Objekt.
 
-*Div*<br/>
+*div*\
 Ein Integralwert.
 
-*Links*<br/>
+*Links*\
 Das linke `duration`-Objekt.
 
-*Rechts*<br/>
+*Richting*\
 Das rechte `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -169,7 +162,7 @@ Der zweite Operator gibt das Verhältnis der Intervalllängen von *Links* und *r
 
 Sofern `is_convertible<Rep2, common_type<Rep1, Rep2>>` *nicht wahr ist* und `Rep2` keine Instanziierung von `duration` ist, wird der erste Operator nicht an der Überladungsauflösung beteiligt. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="op_add"></a> operator+
+## <a name="op_add"></a> Operator +-
 
 Fügt [duration](../standard-library/duration-class.md)- und [time_point](../standard-library/time-point-class.md)-Objekte hinzu.
 
@@ -195,16 +188,16 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>Parameter
 
-*Links*<br/>
+*Links*\
 Das linke `duration` oder `time_point`-Objekt.
 
-*Rechts*<br/>
+*Richting*\
 Das rechte `duration` oder `time_point`-Objekt.
 
-*Zeit*<br/>
+*Zeit*\
 Ein `time_point`-Objekt.
 
-*Dur*<br/>
+*Abfragedauer*\
 Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -213,7 +206,7 @@ Die erste Funktion gibt eine `duration` -Objekt, das ein Zeitintervall verfügt,
 
 Die zweiten und dritten Funktionen geben eine `time_point` -Objekt, das einem bestimmten Zeitpunkt, die ersetzt wird darstellt, indem Sie das Intervall *Dur*, von dem Zeitpunkt *Zeit*.
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a>-Operator&lt;
 
 Bestimmt, ob ein [duration](../standard-library/duration-class.md)- oder [time_point](../standard-library/time-point-class.md)-Objekt kleiner als ein anderes `duration`- oder `time_point`-Objekt ist.
 
@@ -231,19 +224,19 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*<br/>
+*Links*\
 Das linke `duration` oder `time_point`-Objekt.
 
-*Rechts*<br/>
+*Richting*\
 Das rechte `duration` oder `time_point`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die erste Funktion gibt **"true"** Wenn die Intervalllänge von *Links* ist kleiner als die Intervalllänge von *rechts*. Die Funktion hingegen gibt **"false"**.
+Die erste Funktion gibt **"true"** Wenn die Intervalllänge von *Links* ist kleiner als die Intervalllänge von *rechts*. Die Funktion hingegen gibt **"false"** .
 
-Die zweite Funktion gibt **"true"** Wenn *Links* vorausgeht *rechts*. Die Funktion hingegen gibt **"false"**.
+Die zweite Funktion gibt **"true"** Wenn *Links* vorausgeht *rechts*. Die Funktion hingegen gibt **"false"** .
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Operator&lt;=
 
 Bestimmt, ob ein [duration](../standard-library/duration-class.md)- oder [time_point](../standard-library/time-point-class.md)-Objekt kleiner oder gleich einem anderen `duration`- oder `time_point`-Objekt ist.
 
@@ -261,17 +254,17 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*<br/>
+*Links*\
 Das linke `duration` oder `time_point`-Objekt.
 
-*Rechts*<br/>
+*Richting*\
 Das rechte `duration` oder `time_point`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Jede Funktion gibt `!(Right < Left)` zurück.
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> Operator ==
 
 Bestimmt, ob zwei `duration`-Objekte Zeitintervalle mit derselben Länge darstellen, oder ob zwei `time_point`-Objekte den gleichen Zeitpunkt darstellen.
 
@@ -289,19 +282,19 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*<br/>
+*Links*\
 Das linke `duration` oder `time_point`-Objekt.
 
-*Rechts*<br/>
+*Richting*\
 Das rechte `duration` oder `time_point`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die erste Funktion gibt **"true"** Wenn *Links* und *rechts* Zeitintervalle mit derselben Länge darstellen. Die Funktion hingegen gibt **"false"**.
+Die erste Funktion gibt **"true"** Wenn *Links* und *rechts* Zeitintervalle mit derselben Länge darstellen. Die Funktion hingegen gibt **"false"** .
 
-Die zweite Funktion gibt **"true"** Wenn *Links* und *rechts* den gleichen Zeitpunkt darstellen. Die Funktion hingegen gibt **"false"**.
+Die zweite Funktion gibt **"true"** Wenn *Links* und *rechts* den gleichen Zeitpunkt darstellen. Die Funktion hingegen gibt **"false"** .
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a>-Operator&gt;
 
 Bestimmt, ob ein [duration](../standard-library/duration-class.md)- oder [time_point](../standard-library/time-point-class.md)-Objekt größer als ein anderes `duration`- oder `time_point`-Objekt ist.
 
@@ -319,17 +312,17 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*<br/>
+*Links*\
 Das linke `duration` oder `time_point`-Objekt.
 
-*Rechts*<br/>
+*Richting*\
 Das rechte `duration` oder `time_point`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Jede Funktion gibt `Right < Left` zurück.
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Operator&gt;=
 
 Bestimmt, ob ein [duration](../standard-library/duration-class.md)- oder [time_point](../standard-library/time-point-class.md)-Objekt größer oder gleich einem anderen `duration`- oder `time_point`-Objekt ist.
 
@@ -347,17 +340,17 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*<br/>
+*Links*\
 Das linke `duration` oder `time_point`-Objekt.
 
-*Rechts*<br/>
+*Richting*\
 Das rechte `duration` oder `time_point`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Jede Funktion gibt `!(Left < Right)` zurück.
 
-## <a name="op_modulo"></a> operator modulo
+## <a name="op_modulo"></a> Operator modulo
 
 Operator für Modulo-Vorgänge für [duration](../standard-library/duration-class.md)-Objekte.
 
@@ -377,16 +370,16 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>Parameter
 
-*Dur*<br/>
+*Abfragedauer*\
 Ein `duration`-Objekt.
 
-*Div*<br/>
+*div*\
 Ein Integralwert.
 
-*Links*<br/>
+*Links*\
 Das linke `duration`-Objekt.
 
-*Rechts*<br/>
+*Richting*\
 Das rechte `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -394,7 +387,3 @@ Das rechte `duration`-Objekt.
 Die erste Funktion gibt eine `duration` Objekt, dessen Intervalllänge *Dur* modulo *Div*.
 
 Die zweite Funktion gibt einen Wert, der darstellt *Links* modulo *rechts*.
-
-## <a name="see-also"></a>Siehe auch
-
-[\<chrono>](../standard-library/chrono.md)<br/>

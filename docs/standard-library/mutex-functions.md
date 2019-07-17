@@ -14,21 +14,16 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: b375aec0bee4183563b8cd55e4e8a27f79e7cd3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6bd6a86e91c2d59fec2083dcf0ec6314d7c41ab
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326325"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240563"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt;-Funktionen und -Variablen
 
-||||
-|-|-|-|
-|[adopt_lock](#adopt_lock)|[call_once](#call_once)|[defer_lock](#defer_lock)|
-|[lock](#lock)|[try_to_lock](#try_to_lock)|
-
-## <a name="adopt_lock"></a> adopt_lock-Variable
+## <a name="adopt_lock"></a> adopt_lock
 
 Stellt ein Objekt dar, das an die Konstruktoren für [lock_guard](../standard-library/lock-guard-class.md) und [unique_lock](../standard-library/unique-lock-class.md) übergeben werden kann, um anzugeben, dass das ebenfalls an den Konstruktor übergebene Mutex-Objekt gesperrt ist.
 
@@ -48,20 +43,20 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>Parameter
 
-*Kennzeichnen*<br/>
+*Flag*\
 Ein [once_flag](../standard-library/once-flag-structure.md)-Objekt, das gewährleistet, dass das aufrufbare Objekt nur einmal aufgerufen wird.
 
-*F*<br/>
+*F*\
 Ein aufrufbares Objekt.
 
-*A*<br/>
+*EIN*\
 Eine Argumentliste.
 
 ### <a name="remarks"></a>Hinweise
 
 Wenn *Flag* ist nicht gültig ist, löst die Funktion eine [System_error](../standard-library/system-error-class.md) Listenfeldsteuerelement mit den Fehlercode `invalid_argument`. Andernfalls verwendet die Vorlagenfunktion seine *Flag* Argument, um sicherzustellen, dass sie ruft `F(A...)` genau einmal erfolgreich, unabhängig davon, wie oft die Vorlagenfunktion aufgerufen wird. Wenn `F(A...)` durch Auslösen einer Ausnahme beendet wird, war der Aufruf nicht erfolgreich.
 
-## <a name="defer_lock"></a> defer_lock-Variable
+## <a name="defer_lock"></a> defer_lock
 
 Stellt ein Objekt dar, das an den Konstruktor für [unique_lock](../standard-library/unique-lock-class.md) übergeben werden kann. Dies gibt an, dass der Konstruktor das ebenfalls an ihn übergebene Mutex-Objekt nicht sperren darf.
 
@@ -69,7 +64,7 @@ Stellt ein Objekt dar, das an den Konstruktor für [unique_lock](../standard-lib
 const defer_lock_t defer_lock;
 ```
 
-## <a name="lock"></a> lock
+## <a name="lock"></a> Sperre
 
 Versucht, alle Argumente ohne Deadlock zu sperren.
 
@@ -84,14 +79,23 @@ Die Argumente für die Vorlagenfunktion müssen *Mutex-Typen* sein, sofern nicht
 
 Die Funktion sperrt alle Argumente ohne Deadlock durch Aufrufe von `lock`, `try_lock` und `unlock`. Wenn ein Aufruf von `lock` oder `try_lock` eine Ausnahme auslöst, ruft die Funktion auf allen Mutex-Objekten `unlock` auf, die vor dem erneuten Auslösen der Ausnahme erfolgreich gesperrt wurden.
 
-## <a name="try_to_lock"></a> try_to_lock-Variable
+## <a name="swap"></a> Swap
+
+```cpp
+template <class Mutex>
+void swap(unique_lock<Mutex>& x, unique_lock<Mutex>& y) noexcept;
+```
+
+## <a name="try_lock"></a> try_lock
+
+```cpp
+template <class L1, class L2, class... L3> int try_lock(L1&, L2&, L3&...);
+```
+
+## <a name="try_to_lock"></a> try_to_lock
 
 Stellt ein Objekt dar, das an den Konstruktor für [unique_lock](../standard-library/unique-lock-class.md) übergeben werden kann, um anzugeben, dass der Konstruktor versuchen muss, das ebenfalls an ihn ohne Blockierung übergebene `mutex` zu entsperren.
 
 ```cpp
 const try_to_lock_t try_to_lock;
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[\<mutex>](../standard-library/mutex.md)<br/>

@@ -24,21 +24,14 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 22c5b34f1c87d10b48a797229bc987305fca8f9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412656"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246061"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt;-Funktionen
-
-||||
-|-|-|-|
-|[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|
-|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|
-|[set_unexpected](#set_unexpected)|[terminate](#terminate)|[uncaught_exception](#uncaught_exception)|
-|[unexpected](#unexpected)|
 
 ## <a name="current_exception"></a> current_exception
 
@@ -68,12 +61,12 @@ Erstellt ein [exception_ptr](../standard-library/exception-typedefs.md#exception
 
 ```cpp
 template <class E>
-exception_ptr make_exception_ptr(E Except);
+    exception_ptr make_exception_ptr(E Except);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Mit der Ausnahme*<br/>
+*Mit der Ausnahme*\
 Die Klasse mit der zu kopierenden Ausnahme. Normalerweise geben Sie ein [exception class](../standard-library/exception-class.md)-Objekt als Argument für die `make_exception_ptr`-Funktion an, obwohl jedes Klassenobjekt als Argument zulässig ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -96,7 +89,7 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Parameter
 
-*P*<br/>
+*P*\
 Die erneut auszulösende abgefangene Ausnahme. Wenn *P* ist ein NULL-Wert ["exception_ptr"](../standard-library/exception-typedefs.md#exception_ptr), löst die Funktion [Std:: bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Hinweise
@@ -121,7 +114,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*fnew*<br/>
+*fnew*\
 Die bei Beendigung aufzurufende Funktion.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -168,6 +161,17 @@ Ruft die aktuelle `unexpected_handler`-Funktion ab.
 unexpected_handler get_unexpected();
 ```
 
+## <a name="rethrow_if_nested"></a> rethrow_if_nested
+
+```cpp
+template <class E> 
+    void rethrow_if_nested(const E& e);
+```
+
+### <a name="remarks"></a>Hinweise
+
+Wenn kein polymorpher Klassentyp oder `nested_exception` nicht zugegriffen werden kann oder nicht eindeutig ist, gibt es keine Auswirkungen. Andernfalls führt eine dynamische Umwandlung.
+
 ## <a name="set_unexpected"></a> set_unexpected
 
 Richtet ein neues `unexpected_handler` ein, das bei einer unerwarteten Ausnahme auftritt.
@@ -178,7 +182,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*fnew*<br/>
+*fnew*\
 Die Funktion, die bei einer unerwarteten Ausnahme aufgerufen wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -216,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a> terminate
+## <a name="terminate"></a> Beenden
 
 Ruft einen terminate-Handler auf.
 
@@ -226,13 +230,24 @@ void terminate();
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion ruft einen Terminate-Handler eine Funktion vom Typ **"void"**. Wenn `terminate` direkt von der Anwendung, die Terminate-Handler wird aufgerufen, wird der zuletzt festgelegte durch einen Aufruf von [Set_terminate](../standard-library/exception-functions.md#set_terminate). Wenn `terminate` wird aufgerufen, wenn eine von vielen weiteren Gründen während der Auswertung eines Throw-Ausdrucks, der Terminate-Handler gilt die direkt nach der Auswertung des Throw-Ausdrucks.
+Die Funktion ruft einen Terminate-Handler eine Funktion vom Typ **"void"** . Wenn `terminate` direkt von der Anwendung, die Terminate-Handler wird aufgerufen, wird der zuletzt festgelegte durch einen Aufruf von [Set_terminate](../standard-library/exception-functions.md#set_terminate). Wenn `terminate` wird aufgerufen, wenn eine von vielen weiteren Gründen während der Auswertung eines Throw-Ausdrucks, der Terminate-Handler gilt die direkt nach der Auswertung des Throw-Ausdrucks.
 
 Ein terminate-Handler kehrt möglicherweise nicht zum Aufrufer zurück. Bei Programmstart ist der Terminate-Handler eine Funktion aufgerufen, `abort`.
 
 ### <a name="example"></a>Beispiel
 
 Ein Beispiel zur Verwendung von `terminate` finden Sie unter [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
+
+## <a name="throw_with_nested"></a> throw_with_nested
+
+```cpp
+template <class T> [[noreturn]]
+    void throw_with_nested(T&& t);
+```
+
+### <a name="remarks"></a>Hinweise
+
+Löst eine Ausnahme mit geschachtelte Ausnahmen.
 
 ## <a name="uncaught_exception"></a> uncaught_exception
 
@@ -299,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a> unexpected
+## <a name="unexpected"></a> Unerwarteter
 
 Ruft den unerwarteten Handler auf.
 
@@ -311,7 +326,7 @@ void unexpected();
 
 Für den C++-Standard ist es erforderlich, dass `unexpected` aufgerufen wird, wenn eine Funktion eine Ausnahme auslöst, die nicht auf der Auslöseliste aufgeführt wird. Die augenblickliche Implementierung unterstützt das nicht. Das Beispiel ruft `unexpected` direkt auf, wodurch der unerwartete Handler aufgerufen wird.
 
-Die Funktion ruft einen unerwarteten Handler auf, eine Funktion vom Typ **"void"**. Wenn `unexpected` direkt vom Programm aufgerufen wird, ist der unerwartete Handler durch einen Aufruf von [set_unexpected](../standard-library/exception-functions.md#set_unexpected) der zuletzt festgelegte Handler.
+Die Funktion ruft einen unerwarteten Handler auf, eine Funktion vom Typ **"void"** . Wenn `unexpected` direkt vom Programm aufgerufen wird, ist der unerwartete Handler durch einen Aufruf von [set_unexpected](../standard-library/exception-functions.md#set_unexpected) der zuletzt festgelegte Handler.
 
 Ein unerwarteter Handler kehrt möglicherweise nicht zum Aufrufer zurück. Die Ausführung kann hierdurch beendet werden:
 
@@ -326,7 +341,3 @@ Bei Programmstart ist der unerwartete Handler eine Funktion, die [erminate](../s
 ### <a name="example"></a>Beispiel
 
 Ein Beispiel zur Verwendung von `unexpected` finden Sie unter [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
-
-## <a name="see-also"></a>Siehe auch
-
-[\<exception>](../standard-library/exception.md)<br/>

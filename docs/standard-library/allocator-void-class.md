@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: 5591570527946895d1e0456b23327d7fabc4bef5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ac7fbaa8c50eb13457271cf96ddc3412733c833
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377919"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245882"
 ---
 # <a name="allocatorltvoidgt-class"></a>Allocator&lt;void&gt;-Klasse
 
-Eine Spezialisierung der vorlagenklassenzuweisung zum Typ **"void"**, definieren die Typen, die in diesem Kontext sinnvoll.
+Eine Spezialisierung der vorlagenklassenzuweisung zum Typ **"void"** , definieren die Typen, die in diesem Kontext sinnvoll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse spezialisiert explizit die Vorlagenklasse [Allocator](../standard-library/allocator-class.md) für Typ **"void"**. Dessen Konstruktoren und Zuweisungsoperator verhalten sich genauso wie für die Vorlagenklasse, aber sie definieren nur die folgenden Typen:
+Die Klasse spezialisiert explizit die Vorlagenklasse [Allocator](../standard-library/allocator-class.md) für Typ **"void"** . Dessen Konstruktoren und Zuweisungsoperator verhalten sich genauso wie für die Vorlagenklasse, aber sie definieren nur die folgenden Typen:
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer).
 
@@ -50,13 +50,3 @@ Die Klasse spezialisiert explizit die Vorlagenklasse [Allocator](../standard-lib
 - [value_type](../standard-library/allocator-class.md#value_type).
 
 - [rebind](../standard-library/allocator-class.md#rebind), eine geschachtelte Vorlagenklasse.
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<memory>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Siehe auch
-
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

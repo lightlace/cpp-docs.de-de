@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::error_code::default_error_condition
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
-ms.openlocfilehash: f4d0bc2c2922374d27bba3c0693e50f7930dbe67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 919a2a81c66de9adf15deeae8cf8ff3dea08762e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413696"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245821"
 ---
 # <a name="errorcode-class"></a>error_code-Klasse
 
@@ -40,21 +40,23 @@ class error_code;
 
 Ein Objekt vom Typ `error_code`-Klasse enthält einen Fehlercodewert und einen Zeiger auf ein Objekt, das eine [Kategorie](../standard-library/error-category-class.md) von Fehlercodes darstellt, die gemeldete Systemfehler auf niedriger Ebene beschreiben.
 
+## <a name="members"></a>Member
+
 ### <a name="constructors"></a>Konstruktoren
 
-|Konstruktor|Beschreibung|
+|||
 |-|-|
 |[error_code](#error_code)|Konstruiert ein Objekt vom Typ `error_code`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Typname|Beschreibung|
+|||
 |-|-|
 |[value_type](#value_type)|Ein Typ, der den gespeicherten Fehlercodewert darstellt.|
 
-### <a name="member-functions"></a>Memberfunktionen
+### <a name="functions"></a>Funktionen
 
-|Member-Funktion|Beschreibung|
+|||
 |-|-|
 |[assign](#assign)|Weist einen Fehlercodewert und die Kategorie an einen Fehlercode zu.|
 |[category](#category)|Gibt die Fehlerkategorie zurück.|
@@ -64,7 +66,7 @@ Ein Objekt vom Typ `error_code`-Klasse enthält einen Fehlercodewert und einen Z
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
 |[operator==](#op_eq_eq)|Prüft auf Gleichheit zwischen `error_code`-Objekten.|
 |[Operator!=](#op_neq)|Prüft auf Ungleichheit zwischen `error_code`-Objekten.|
@@ -72,13 +74,7 @@ Ein Objekt vom Typ `error_code`-Klasse enthält einen Fehlercodewert und einen Z
 |[operator=](#op_eq)|Weist dem `error_code`-Objekt einen neuen Enumerationswert zu.|
 |[operator bool](#op_bool)|Wandelt eine Variable vom Typ `error_code` um.|
 
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<system_error>
-
-**Namespace:** std
-
-## <a name="assign"></a> error_code::assign
+### <a name="assign"></a> Weisen Sie
 
 Weist einen Fehlercodewert und die Kategorie an einen Fehlercode zu.
 
@@ -86,18 +82,19 @@ Weist einen Fehlercodewert und die Kategorie an einen Fehlercode zu.
 void assign(value_type val, const error_category& _Cat);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*val*|Der Fehlercodewert, der in `error_code` gespeichert werden soll.|
-|*_Cat*|Die Fehlerkategorie, die in `error_code` gespeichert werden soll.|
+*val*\
+Der Fehlercodewert, der in `error_code` gespeichert werden soll.
 
-### <a name="remarks"></a>Hinweise
+*_Cat*\
+Die Fehlerkategorie, die in `error_code` gespeichert werden soll.
+
+#### <a name="remarks"></a>Hinweise
 
 Die Memberfunktion speichert *Val* als Fehlercodewert und einen Zeiger auf *_Cat*.
 
-## <a name="category"></a> error_code::category
+### <a name="category"></a> Kategorie
 
 Gibt die Fehlerkategorie zurück.
 
@@ -105,9 +102,9 @@ Gibt die Fehlerkategorie zurück.
 const error_category& category() const;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
-## <a name="clear"></a> error_code::clear
+### <a name="clear"></a> Deaktivieren
 
 Löscht den Fehlercodewert und die Kategorie.
 
@@ -115,11 +112,11 @@ Löscht den Fehlercodewert und die Kategorie.
 clear();
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die Memberfunktion speichert einen Fehlercodewert „Null“ und einen Zeiger auf das Objekt [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-## <a name="default_error_condition"></a> error_code::default_error_condition
+### <a name="default_error_condition"></a> default_error_condition
 
 Gibt die Standardfehlerbedingung zurück.
 
@@ -127,15 +124,15 @@ Gibt die Standardfehlerbedingung zurück.
 error_condition default_error_condition() const;
 ```
 
-### <a name="return-value"></a>Rückgabewert
+#### <a name="return-value"></a>Rückgabewert
 
 Die von [default_error_condition](../standard-library/error-category-class.md#default_error_condition) angegebene Funktion [error_condition](../standard-library/error-condition-class.md).
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Diese Memberfunktion gibt `category().default_error_condition(value())` zurück.
 
-## <a name="error_code"></a> error_code::error_code
+### <a name="error_code"></a> error_code
 
 Konstruiert ein Objekt vom Typ `error_code`.
 
@@ -150,15 +147,18 @@ error_code(_Enum _Errcode,
     error_code>::type* = 0);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*val*|Der Fehlercodewert, der in `error_code` gespeichert werden soll.|
-|*_Cat*|Die Fehlerkategorie, die in `error_code` gespeichert werden soll.|
-|*_Errcode*|Der Enumerationswert, der in `error_code` gespeichert werden soll.|
+*val*\
+Der Fehlercodewert, der in `error_code` gespeichert werden soll.
 
-### <a name="remarks"></a>Hinweise
+*_Cat*\
+Die Fehlerkategorie, die in `error_code` gespeichert werden soll.
+
+*_Errcode*\
+Der Enumerationswert, der in `error_code` gespeichert werden soll.
+
+#### <a name="remarks"></a>Hinweise
 
 Der erste Konstruktor speichert einen Fehlercodewert „Null“ und einen Zeiger auf [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -166,7 +166,7 @@ Der zweite Konstruktor speichert *Val* als Fehlercodewert und einen Zeiger auf [
 
 Der dritte Konstruktor speichert `(value_type)_Errcode` als Fehlercodewert und einen Zeiger auf [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-## <a name="message"></a> error_code::message
+### <a name="message"></a> Nachricht
 
 Gibt den Namen des Fehlercodes zurück.
 
@@ -174,15 +174,15 @@ Gibt den Namen des Fehlercodes zurück.
 string message() const;
 ```
 
-### <a name="return-value"></a>Rückgabewert
+#### <a name="return-value"></a>Rückgabewert
 
 Ein `string`, der den Namen des Fehlercodes darstellt.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Diese Memberfunktion gibt `category().message(value())` zurück.
 
-## <a name="op_eq_eq"></a> error_code::operator==
+### <a name="op_eq_eq"></a> Operator ==
 
 Prüft auf Gleichheit zwischen `error_code`-Objekten.
 
@@ -190,21 +190,20 @@ Prüft auf Gleichheit zwischen `error_code`-Objekten.
 bool operator==(const error_code& right) const;
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*right*|Das Objekt, das auf Gleichheit getestet werden soll.|
+*Richting*\
+Das Objekt, das auf Gleichheit getestet werden soll.
 
-### <a name="return-value"></a>Rückgabewert
+#### <a name="return-value"></a>Rückgabewert
 
 **TRUE**, wenn die Objekte gleich sind; **FALSE**, wenn die Objekte nicht gleich sind.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Der Memberoperator gibt `category() == right.category() && value == right.value()`zurück.
 
-## <a name="op_neq"></a> error_code::operator!=
+### <a name="op_neq"></a> Operator! =
 
 Prüft auf Ungleichheit zwischen `error_code`-Objekten.
 
@@ -212,21 +211,20 @@ Prüft auf Ungleichheit zwischen `error_code`-Objekten.
 bool operator!=(const error_code& right) const;
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*right*|Das Objekt, das auf Ungleichheit geprüft werden soll.|
+*Richting*\
+Das Objekt, das auf Ungleichheit geprüft werden soll.
 
-### <a name="return-value"></a>Rückgabewert
+#### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn die `error_code` Objekt ist nicht gleich der `error_code` Objekt übergebenen *rechten*; andernfalls **"false"**.
+**"true"** Wenn die `error_code` Objekt ist nicht gleich der `error_code` Objekt übergebenen *rechten*; andernfalls **"false"** .
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Der Memberoperator gibt `!(*this == right)`zurück.
 
-## <a name="op_lt"></a> error_code::operator bool&lt;
+### <a name="op_lt"></a>-Operator&lt;
 
 Testet, ob das `error_code`-Objekt kleiner ist als das `error_code`-Objekt, das für den Vergleich übergeben wurde.
 
@@ -234,21 +232,20 @@ Testet, ob das `error_code`-Objekt kleiner ist als das `error_code`-Objekt, das 
 bool operator<(const error_code& right) const;
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*right*|Das zu vergleichende error_code-Objekt.|
+*Richting*\
+Das zu vergleichende error_code-Objekt.
 
-### <a name="return-value"></a>Rückgabewert
+#### <a name="return-value"></a>Rückgabewert
 
 **TRUE**, wenn das Objekt, das an `error_code` übergeben wird, kleiner ist als das an `error_code` übergebene Objekt; andernfalls **FALSE**.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Der Memberoperator gibt `category() < right.category() || category() == right.category() && value < right.value()`zurück.
 
-## <a name="op_eq"></a> error_code::operator=
+### <a name="op_eq"></a> Operator =
 
 Weist dem `error_code`-Objekt einen neuen Enumerationswert zu.
 
@@ -258,21 +255,20 @@ typename enable_if<is_error_code_enum<_Enum>::value, error_code>::type&
     operator=(_Enum _Errcode);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*_Errcode*|Der Enumerationswert, der dem `error_code`-Objekt zugewiesen wird.|
+*_Errcode*\
+Der Enumerationswert, der dem `error_code`-Objekt zugewiesen wird.
 
-### <a name="return-value"></a>Rückgabewert
+#### <a name="return-value"></a>Rückgabewert
 
 Ein Verweis auf das `error_code`-Objekt, dem der neue Enumerationswert durch die Memberfunktion zugewiesen wird.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Der Memberoperator speichert `(value_type)_Errcode` als Fehlercodewert und einen Zeiger auf [generic_category](../standard-library/system-error-functions.md#generic_category). Er gibt `*this` zurück.
 
-## <a name="op_bool"></a> error_code::operator bool
+### <a name="op_bool"></a> Operator bool
 
 Wandelt eine Variable vom Typ `error_code` um.
 
@@ -280,15 +276,15 @@ Wandelt eine Variable vom Typ `error_code` um.
 explicit operator bool() const;
 ```
 
-### <a name="return-value"></a>Rückgabewert
+#### <a name="return-value"></a>Rückgabewert
 
 Der boolesche Wert des Objekts `error_code`.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
-Der Operator gibt einen Wert konvertiert werden kann, um **"true"** nur, wenn [Wert](#value) ist nicht gleich 0 (null). Der Rückgabetyp ist in nur **"bool"**, nicht zu `void *` oder anderen bekannten skalaren Typen.
+Der Operator gibt einen Wert konvertiert werden kann, um **"true"** nur, wenn [Wert](#value) ist nicht gleich 0 (null). Der Rückgabetyp ist in nur **"bool"** , nicht zu `void *` oder anderen bekannten skalaren Typen.
 
-## <a name="value"></a> error_code::value
+### <a name="value"></a> Wert
 
 Gibt den gespeicherten Fehlercodewert zurück.
 
@@ -300,9 +296,7 @@ value_type value() const;
 
 Der gespeicherte Fehlercodewert vom Typ [value_type](#value_type).
 
-### <a name="remarks"></a>Hinweise
-
-## <a name="value_type"></a> error_code::value_type
+### <a name="value_type"></a> value_type
 
 Ein Typ, der den gespeicherten Fehlercodewert darstellt.
 
@@ -310,11 +304,6 @@ Ein Typ, der den gespeicherten Fehlercodewert darstellt.
 typedef int value_type;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Diese Typdefinition ist ein Synonym für **Int**.
-
-## <a name="see-also"></a>Siehe auch
-
-[error_category-Klasse](../standard-library/error-category-class.md)<br/>
-[<system_error>](../standard-library/system-error.md)<br/>

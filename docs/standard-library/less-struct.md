@@ -7,12 +7,12 @@ helpviewer_keywords:
 - less struct
 - less function
 ms.assetid: 39349da3-11cd-4774-b2cc-b46af5aae5d7
-ms.openlocfilehash: e24c7fb238c9c05d91cbdba7fab277878e6f5e24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13aef35856066f9c1897c3d8855c5ff537aa3567
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224050"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245341"
 ---
 # <a name="less-struct"></a>less-Struktur
 
@@ -39,12 +39,13 @@ struct less<void>
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*, *T*, *U* jeder Typ, unterstützt eine `operator<` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
+*Typ*, *T*, *U*\
+Jeder Typ, der ein `operator<`-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links*<br/>
+*Links*\
 Der linke Operand des kleiner-als-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts*<br/>
+*Richting*\
 Der rechte Operand des kleiner-als-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -53,7 +54,7 @@ Das Ergebnis von `Left < Right`. Die spezialisierte Vorlage vervollkommnet die W
 
 ## <a name="remarks"></a>Hinweise
 
-Das binäre Prädikat `less` <  `Type`> stellt eine strenge schwache Sortierung eines Satzes von Elementwerten vom Typ *Typ* in Äquivalenzklassen, wenn dieser Typ den mathematischen Standard erfüllt Anforderungen für so sortiert wird. Die Spezialisierungen für einen Zeigertyp ergeben eine gesamte Sortierung von Elementen, insofern, dass alle Elemente unterschiedlicher Werte zueinander in Beziehung stehend sortiert werden.
+Das binäre Prädikat `less` < `Type`> stellt eine strenge schwache Sortierung eines Satzes von Elementwerten vom Typ *Typ* in Äquivalenzklassen, wenn dieser Typ den mathematischen Standard erfüllt Anforderungen für so sortiert wird. Die Spezialisierungen für einen Zeigertyp ergeben eine gesamte Sortierung von Elementen, insofern, dass alle Elemente unterschiedlicher Werte zueinander in Beziehung stehend sortiert werden.
 
 ## <a name="example"></a>Beispiel
 
@@ -100,19 +101,7 @@ cout << Iter1->m_i << " ";
 }
 ```
 
-## <a name="output"></a>Output
-
 ```Output
 Original vector v1 = (41 18467 6334 26500 19169 15724 11478)
 Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 ```
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Siehe auch
-
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

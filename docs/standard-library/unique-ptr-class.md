@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3aff30e2e23feb85c6b93d79ddd4552849d3ba05
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295460"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243472"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr-Klasse
 
@@ -93,16 +93,16 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts*<br/>
+*Richting*\
 Ein `unique_ptr`.
 
-*Nptr*<br/>
+*Nptr*\
 Ein `rvalue` vom Typ `std::nullptr_t`.
 
-*Ptr*<br/>
+*PTR*\
 Ein `pointer`.
 
-*Deleter*<br/>
+*Deleter*\
 Eine `deleter`-Funktion, die an `unique_ptr` gebunden ist.
 
 ## <a name="exceptions"></a>Ausnahmen
@@ -125,21 +125,21 @@ Der gespeicherte Zeiger auf eine zugehörige Ressource `stored_ptr` ist vom Typ 
 
 ### <a name="constructors"></a>Konstruktoren
 
-|Konstruktor|Beschreibung|
+|||
 |-|-|
 |[unique_ptr](#unique_ptr)|Es gibt sieben Konstruktoren für `unique_ptr`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Typname|Beschreibung|
+|||
 |-|-|
 |[deleter_type](#deleter_type)|Ein Synonym für den Vorlagenparameter `Del`.|
 |[element_type](#element_type)|Ein Synonym für den Vorlagenparameter `T`.|
 |[Zeiger](#pointer)|Ein Synonym für `Del::pointer`, wenn der Wert definiert ist; andernfalls `T *`.|
 
-### <a name="member-functions"></a>Memberfunktionen
+### <a name="functions"></a>Funktionen
 
-|Member-Funktion|Beschreibung|
+|||
 |-|-|
 |[get](#get)|Gibt `stored_ptr`zurück.|
 |[get_deleter](#get_deleter)|Gibt einen Verweis auf `stored_deleter` zurück.|
@@ -149,20 +149,14 @@ Der gespeicherte Zeiger auf eine zugehörige Ressource `stored_ptr` ist vom Typ 
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
-|**operator bool**|Der Operator gibt einen Wert eines Typs, der konvertiert werden kann, zurück **"bool"**. Das Ergebnis der Konvertierung in **"bool"** ist **"true"** beim `get() != pointer()`, andernfalls **"false"**.|
+|**operator bool**|Der Operator gibt einen Wert eines Typs, der konvertiert werden kann, zurück **"bool"** . Das Ergebnis der Konvertierung in **"bool"** ist **"true"** beim `get() != pointer()`, andernfalls **"false"** .|
 |`operator->`|Die Memberfunktion gibt `stored_ptr`zurück.|
 |`operator*`|Die Memberfunktion gibt `*stored_ptr`zurück.|
-|[unique_ptr operator=](#unique_ptr_operator_eq)|Weist den Wert eines `unique_ptr` (oder eines `pointer-type`) dem aktuellen `unique_ptr` zu.|
+|[operator=](#unique_ptr_operator_eq)|Weist den Wert eines `unique_ptr` (oder eines `pointer-type`) dem aktuellen `unique_ptr` zu.|
 
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<memory>
-
-**Namespace:** std
-
-## <a name="deleter_type"></a> deleter_type
+### <a name="deleter_type"></a> deleter_type
 
 Der Type stellt ein Synonym für den Vorlagenparameter `Del` dar.
 
@@ -170,11 +164,11 @@ Der Type stellt ein Synonym für den Vorlagenparameter `Del` dar.
 typedef Del deleter_type;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Der Type stellt ein Synonym für den Vorlagenparameter `Del` dar.
 
-## <a name="element_type"></a> element_type
+### <a name="element_type"></a> ELEMENT_TYPE
 
 Der Type stellt ein Synonym für den Vorlagenparameter `Type` dar.
 
@@ -182,11 +176,11 @@ Der Type stellt ein Synonym für den Vorlagenparameter `Type` dar.
 typedef Type element_type;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
-Der Type stellt ein Synonym für den Vorlagenparameter `Ty`dar.
+Der Type stellt ein Synonym für den Vorlagenparameter `Ty` dar.
 
-## <a name="get"></a> unique_ptr::get
+### <a name="get"></a> Erhalten
 
 Gibt `stored_ptr`zurück.
 
@@ -194,11 +188,11 @@ Gibt `stored_ptr`zurück.
 pointer get() const;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt `stored_ptr` zurück.
+Die Memberfunktion gibt `stored_ptr`zurück.
 
-## <a name="get_deleter"></a> unique_ptr::get_deleter
+### <a name="get_deleter"></a> get_deleter
 
 Gibt einen Verweis auf `stored_deleter` zurück.
 
@@ -208,11 +202,11 @@ Del& get_deleter();
 const Del& get_deleter() const;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die Memberfunktion gibt einen Verweis auf `stored_deleter` zurück.
 
-## <a name="unique_ptr_operator_eq"></a> unique_ptr operator=
+### <a name="unique_ptr_operator_eq"></a> Operator =
 
 Weist die Adresse des bereitgestellten `unique_ptr`-Objekts dem aktuellen Objekt zu.
 
@@ -223,15 +217,15 @@ unique_ptr& operator=(unique_ptr<Type, Del>&& right);
 unique_ptr& operator=(pointer-type);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
 Ein `unique_ptr`-Verweis, der verwendet wird, um den Wert des aktuellen `unique_ptr`-Objekts zuzuweisen.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die Memberfunktionen rufen `reset(right.release())` auf, verschieben `right.stored_deleter` zu `stored_deleter` und geben dann `*this` zurück.
 
-## <a name="pointer"></a> pointer
+### <a name="pointer"></a> Zeiger
 
 Ein Synonym für `Del::pointer`, wenn der Wert definiert ist; andernfalls `Type *`.
 
@@ -239,23 +233,23 @@ Ein Synonym für `Del::pointer`, wenn der Wert definiert ist; andernfalls `Type 
 typedef T1 pointer;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Der Typ ist ein Synonym für `Del::pointer`, sofern dieser definiert ist; andernfalls `Type *`.
 
-## <a name="release"></a> unique_ptr::release
+### <a name="release"></a> Version
 
-Gibt den Besitz des zurückgegebenen gespeicherten Zeigers an den Aufrufer frei und legt den Wert des gespeicherten Zeigers auf **"nullptr"**.
+Gibt den Besitz des zurückgegebenen gespeicherten Zeigers an den Aufrufer frei und legt den Wert des gespeicherten Zeigers auf **"nullptr"** .
 
 ```cpp
 pointer release();
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Verwenden Sie `release`, um den Besitz des von `unique_ptr` gespeicherten unformatierten Zeigers zu übernehmen. Der Aufrufer ist für das Löschen des zurückgegebenen Zeigers verantwortlich. `unique-ptr` wird in seinen leeren, standardmäßig konstruierten Zustand gesetzt. Sie können `unique_ptr` einen anderen Zeiger mit kompatiblem Typ nach dem Aufruf von `release` zuweisen.
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 Dieses Beispiel zeigt, inwiefern der Aufrufer von „release“ für das zurückgegebene Objekt verantwortlich ist:
 
@@ -296,8 +290,6 @@ int main() {
 }
 ```
 
-Computerausgabe:
-
 ```Output
 Constructing Sample(3)
 Constructing Sample(42)
@@ -305,28 +297,27 @@ Deleting Sample(42)
 Deleting Sample(3)
 ```
 
-## <a name="reset"></a> unique_ptr::reset
+### <a name="reset"></a> Zurücksetzen
 
-Übernimmt den Besitz des Zeigerparameters und löscht dann den ursprünglich gespeicherten Zeiger. Wenn der neue Zeiger mit dem ursprünglich gespeicherten Zeiger identisch ist `reset` löscht den Zeiger und legt den gespeicherten Zeiger auf **"nullptr"**.
+Übernimmt den Besitz des Zeigerparameters und löscht dann den ursprünglich gespeicherten Zeiger. Wenn der neue Zeiger mit dem ursprünglich gespeicherten Zeiger identisch ist `reset` löscht den Zeiger und legt den gespeicherten Zeiger auf **"nullptr"** .
 
 ```cpp
 void reset(pointer ptr = pointer());
 void reset(nullptr_t ptr);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*ptr*|Ein Zeiger auf die Ressource, deren Besitz übernommen werden soll.|
+*PTR*\
+Ein Zeiger auf die Ressource, deren Besitz übernommen werden soll.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Verwendung `reset` so ändern Sie den gespeicherten [Zeiger](#pointer) im Besitz der `unique_ptr` zu *Ptr* und löschen Sie dann den ursprünglichen gespeicherten Zeiger. Wenn `unique_ptr` nicht leer war, ruft `reset` die Deleter-Funktion, die von [get_deleter](#get_deleter) zurückgegeben wurde, auf dem ursprünglich gespeicherten Zeiger auf.
 
 Da `reset` zuerst speichert den neuen Zeiger *Ptr*, und löscht dann den ursprünglichen gespeicherten Zeiger, es ist möglich, dass `reset` zum sofortigen Löschen der *Ptr* ist er identisch mit der ursprünglichen gespeicherte Zeiger.
 
-## <a name="swap"></a> unique_ptr::swap
+### <a name="swap"></a> Swap
 
 Tauscht Zeiger zwischen zwei `unique_ptr`-Objekten aus.
 
@@ -334,16 +325,16 @@ Tauscht Zeiger zwischen zwei `unique_ptr`-Objekten aus.
 void swap(unique_ptr& right);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Ein `unique_ptr`-Objekt, das zum Tauschen von Zeigern verwendet wird.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die Memberfunktion tauscht `stored_ptr` mit `right.stored_ptr` und `stored_deleter` mit `right.stored_deleter`.
 
-## <a name="unique_ptr"></a> unique_ptr::unique_ptr
+### <a name="unique_ptr"></a> unique_ptr
 
 Es gibt sieben Konstruktoren für `unique_ptr`.
 
@@ -363,24 +354,27 @@ unique_ptr(
 unique_ptr(pointer ptr, typename remove_reference<Del>::type&& _Deleter);
 unique_ptr(unique_ptr&& right);
 template <class Ty2, Class Del2>
-unique_ptr(unique_ptr<Ty2, Del2>&& right);
+    unique_ptr(unique_ptr<Ty2, Del2>&& right);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*ptr*|Ein Zeiger auf die Ressource, die einem `unique_ptr.`-Objekt zugewiesen werden soll.|
-|*_Deleter*|Eine `deleter`-Funktion, die einem `unique_ptr`-Objekt zugewiesen werden soll.|
-|*right*|Eine `rvalue reference` auf ein `unique_ptr`-Objekt, aus dem `unique_ptr`-Felder dem neu erstellten `unique_ptr`-Objekt zugewiesen werden.|
+*PTR*\
+Ein Zeiger auf die Ressource zugewiesen werden eine `unique_ptr`.
 
-### <a name="remarks"></a>Hinweise
+*_Deleter*\
+Eine `deleter`-Funktion, die einem `unique_ptr`-Objekt zugewiesen werden soll.
+
+*Richting*\
+Eine `rvalue reference` auf ein `unique_ptr`-Objekt, aus dem `unique_ptr`-Felder dem neu erstellten `unique_ptr`-Objekt zugewiesen werden.
+
+#### <a name="remarks"></a>Hinweise
 
 Die ersten beiden Konstruktoren erstellen ein Objekt, das keine Ressource verwaltet. Der dritte Konstruktor speichert *Ptr* in `stored_ptr`. Der vierte Konstruktor speichert *Ptr* in `stored_ptr` und `deleter` in `stored_deleter`.
 
 Der fünfte Konstruktor speichert *Ptr* in `stored_ptr` und verschiebt `deleter` in `stored_deleter`. Der sechste und der siebte Konstruktor speichern `right.release()` in `stored_ptr` und verschieben `right.get_deleter()` in `stored_deleter`.
 
-## <a name="dtorunique_ptr"></a> unique_ptr ~unique_ptr
+### <a name="dtorunique_ptr"></a> ~ Unique_ptr
 
 Der Destruktor für `unique_ptr` zerstört ein `unique_ptr`-Objekt.
 
@@ -388,10 +382,6 @@ Der Destruktor für `unique_ptr` zerstört ein `unique_ptr`-Objekt.
 ~unique_ptr();
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Der Destruktor ruft `get_deleter()(stored_ptr)` auf.
-
-## <a name="see-also"></a>Siehe auch
-
-[\<memory>](../standard-library/memory.md)<br/>

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: baf38dd637e31f6fabdf869a242f8f18e2812717
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369589"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240272"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper-Klasse
 
@@ -35,7 +35,6 @@ Umschließt einen Verweis.
 template <class Ty>
 class reference_wrapper
 {
-public:
     typedef Ty type;
 
     reference_wrapper(Ty&) noexcept;
@@ -45,9 +44,6 @@ public:
     template <class... Types>
     auto operator()(Types&&... args) const ->
         decltype(std::invoke(get(), std::forward<Types>(args)...));
-
-private:
-    Ty *ptr; // exposition only
 };
 ```
 
@@ -59,39 +55,35 @@ Der `Ty`-Typ muss ein Objekttyp oder Funktionstyp sein, oder eine statische Asse
 
 Die Hilfsfunktionen [std::ref](functional-functions.md#ref) und [std::cref](functional-functions.md#cref) dienen zum Erstellen von `reference_wrapper`-Objekten.
 
+## <a name="members"></a>Member
+
 ### <a name="constructors"></a>Konstruktoren
 
-|Konstruktor|Beschreibung|
+|||
 |-|-|
 |[reference_wrapper](#reference_wrapper)|Erstellt ein Objekt vom Typ `reference_wrapper`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Typname|Beschreibung|
+|||
 |-|-|
 |[result_type](#result_type)|Der schwache Ergebnistyp des umschlossenen Verweises.|
 |[Typ](#type)|Der Typ des umschlossenen Verweises.|
 
-### <a name="member-functions"></a>Memberfunktionen
+### <a name="functions"></a>Funktionen
 
-|Member-Funktion|Beschreibung|
+|||
 |-|-|
 |[get](#get)|Ruft den umschlossenen Verweis ab.|
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
-|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Ruft einen Zeiger auf den umschlossenen Verweis ab.|
-|[reference_wrapper::operator()](#op_call)|Ruft den umschlossenen Verweis auf.|
+|[Operator Ty&amp;](#op_ty_amp)|Ruft einen Zeiger auf den umschlossenen Verweis ab.|
+|[Operator()](#op_call)|Ruft den umschlossenen Verweis auf.|
 
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## <a name="get"></a> reference_wrapper::get
+## <a name="get"></a> Erhalten
 
 Ruft den umschlossenen Verweis ab.
 
@@ -130,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a> reference_wrapper::operator Ty&amp;
+## <a name="op_ty_amp"></a> Operator Ty&amp;
 
 Ruft den umschlossenen Verweis auf.
 
@@ -166,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a> reference_wrapper::operator()
+## <a name="op_call"></a> Operator()
 
 Ruft den umschlossenen Verweis auf.
 
@@ -177,10 +169,10 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Parameter
 
-*Typen*<br/>
+*Typen*\
 Die Argumentlisttypen.
 
-*args*<br/>
+*args*\
 Die Argumentliste.
 
 ### <a name="remarks"></a>Hinweise
@@ -212,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a> reference_wrapper::reference_wrapper
+## <a name="reference_wrapper"></a> reference_wrapper
 
 Erstellt ein Objekt vom Typ `reference_wrapper`.
 
@@ -222,10 +214,10 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Ty*\
 Der zu umschließende Typ.
 
-*val*<br/>
+*val*\
 Der zu umschließende Wert.
 
 ### <a name="remarks"></a>Hinweise
@@ -263,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a> reference_wrapper::result_type
+## <a name="result_type"></a> RESULT_TYPE
 
 Der schwache Ergebnistyp des umschlossenen Verweises.
 
@@ -302,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a> reference_wrapper::type
+## <a name="type"></a> Typ
 
 Der Typ des umschlossenen Verweises.
 
@@ -343,8 +335,3 @@ int main() {
 i = 1
 rwi = 1
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[cref](../standard-library/functional-functions.md#cref)<br/>
-[ref](../standard-library/functional-functions.md#ref)<br/>

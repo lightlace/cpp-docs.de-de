@@ -98,12 +98,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c38c6823f48d61cf616f7b91a96dfcc040d666ed
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413215"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246487"
 ---
 # <a name="list-class"></a>list-Klasse
 
@@ -118,10 +118,10 @@ class list
 
 ### <a name="parameters"></a>Parameter
 
-*Type*<br/>
+*Typ*\
 Der in der Liste zu speichernde Elementdatentyp.
 
-*Allocator*<br/>
+*Zuweisung*\
 Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Liste kapselt. Dieses Argument ist optional, und der Standardwert ist **Allocator**\<*Typ*>.
 
 ## <a name="remarks"></a>Hinweise
@@ -134,15 +134,17 @@ Die Neuzuordnung von Listen tritt auf, wenn Elemente der Liste von einer Memberf
 
 Schließen Sie den C++-Standardbibliotheksheader \<list> ein, um die [container](../standard-library/stl-containers.md)-Vorlagenklassenliste und mehrere unterstützende Vorlagen zu definieren.
 
+## <a name="members"></a>Member
+
 ### <a name="constructors"></a>Konstruktoren
 
-|Konstruktor|Beschreibung|
+|||
 |-|-|
 |[list](#list)|Erstellt eine Liste einer bestimmten Größe bzw. mit Elementen eines bestimmten Werts oder mit einem bestimmten `allocator`-Element oder als vollständige bzw. teilweise Kopie einer anderen Liste.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Typname|Beschreibung|
+|||
 |-|-|
 |[allocator_type](#allocator_type)|Ein Typ, mit dem die `allocator`-Klasse für ein Listenobjekt dargestellt wird.|
 |[const_iterator](#const_iterator)|Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein **const**-Element in einer Liste gelesen werden kann.|
@@ -157,9 +159,9 @@ Schließen Sie den C++-Standardbibliotheksheader \<list> ein, um die [container]
 |[size_type](#size_type)|Ein Typ, der die Anzahl von Elementen in einer Liste zählt.|
 |[value_type](#value_type)|Ein Typ, der den in einer Liste gespeicherten Datentyp darstellt.|
 
-### <a name="member-functions"></a>Memberfunktionen
+### <a name="functions"></a>Funktionen
 
-|Member-Funktion|Beschreibung|
+|||
 |-|-|
 |[assign](#assign)|Löscht Elemente aus einer Liste und kopiert einen neuen Satz von Elementen in die Zielliste.|
 |[Rückseite](#back)|Gibt einen Verweis auf das letzte Element einer Liste zurück.|
@@ -198,15 +200,15 @@ Schließen Sie den C++-Standardbibliotheksheader \<list> ein, um die [container]
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
-|[list::operator=](#op_eq)|Ersetzt die Elemente der Liste mit einer Kopie einer anderen Liste.|
+|[operator=](#op_eq)|Ersetzt die Elemente der Liste mit einer Kopie einer anderen Liste.|
 
 ## <a name="requirements"></a>Anforderungen
 
 **Header**: \<list>
 
-## <a name="allocator_type"></a> list::allocator_type
+## <a name="allocator_type"></a> allocator_type
 
 Ein Typ, mit dem die Zuweisungsklasse für ein Listenobjekt dargestellt wird.
 
@@ -222,7 +224,7 @@ typedef Allocator allocator_type;
 
 Siehe das Beispiel für [get_allocator](#get_allocator).
 
-## <a name="assign"></a> list::assign
+## <a name="assign"></a> Weisen Sie
 
 Löscht Elemente aus einer Liste und kopiert einen neuen Satz von Elementen in eine Zielliste.
 
@@ -242,19 +244,19 @@ void assign(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*Erste*\
 Die Position des ersten Elements in dem aus der Argumentliste zu kopierenden Elementbereich.
 
-*letzte*<br/>
+*letzte*\
 Die Position des ersten Elements direkt hinter dem aus der Argumentliste zu kopierenden Elementbereich.
 
-*Anzahl*<br/>
+*Anzahl*\
 Die Anzahl von Kopien eines Elements, das in die Liste eingefügt wird.
 
-*val*<br/>
+*val*\
 Der Wert des Elements, das in die Liste eingefügt wird.
 
-*IList*<br/>
+*IList*\
 Das initializer_list-Element, das die einzufügenden Elemente enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -311,7 +313,7 @@ int main()
 c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40
 ```
 
-## <a name="back"></a> list::back
+## <a name="back"></a> Zurück
 
 Gibt einen Verweis auf das letzte Element einer Liste zurück.
 
@@ -361,7 +363,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a> list::begin
+## <a name="begin"></a> beginnen
 
 Gibt einen Iterator zurück, der das erste Element in einer Liste adressiert.
 
@@ -414,7 +416,7 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a> list::cbegin
+## <a name="cbegin"></a> cbegin
 
 Gibt eine **const** -Iterator, der das erste Element im Bereich adressiert.
 
@@ -440,7 +442,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a> list::cend
+## <a name="cend"></a> cend
 
 Gibt einen `const`-Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines Bereichs unmittelbar nachfolgt.
 
@@ -468,7 +470,7 @@ auto i2 = Container.cend();
 
 Der von `cend` zurückgegebene Wert darf nicht dereferenziert werden.
 
-## <a name="clear"></a> list::clear
+## <a name="clear"></a> Deaktivieren
 
 Löscht alle Elemente einer Liste.
 
@@ -503,7 +505,7 @@ The size of the list is initially 3
 The size of list after clearing is 0
 ```
 
-## <a name="const_iterator"></a> list::const_iterator
+## <a name="const_iterator"></a> const_iterator
 
 Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein **const**-Element in einer Liste gelesen werden kann.
 
@@ -519,7 +521,7 @@ Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwend
 
 Ein Beispiel hierfür finden Sie unter [back](#back).
 
-## <a name="const_pointer"></a> list::const_pointer
+## <a name="const_pointer"></a> const_pointer
 
 Gibt einen Zeiger auf eine **const** Element in einer Liste.
 
@@ -533,7 +535,7 @@ Ein `const_pointer`-Typ kann nicht zum Ändern des Werts eines Elements verwende
 
 In den meisten Fällen sollte ein [Iterator](#iterator) für den Zugriff auf Elemente in einem Listenobjekt verwendet werden.
 
-## <a name="const_reference"></a> list::const_reference
+## <a name="const_reference"></a> const_reference
 
 Ein Typ, der einen Verweis auf ein **const**-Element bereitstellt, das in einer Liste zum Lesen und Ausführen von **const**-Vorgängen gespeichert ist.
 
@@ -577,7 +579,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a> list::const_reverse_iterator
+## <a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem jedes **const**-Element in einer Liste gelesen werden kann.
 
@@ -593,7 +595,7 @@ Ein `const_reverse_iterator`-Typ kann nicht den Wert eines Elements ändern und 
 
 Ein Beispiel hierfür finden Sie unter [rbegin](#rbegin).
 
-## <a name="crbegin"></a> list::crbegin
+## <a name="crbegin"></a> crbegin
 
 Gibt einen konstanten Iterator zurück, der das erste Element in einer umgekehrten Liste adressiert.
 
@@ -637,7 +639,7 @@ int main( )
 The last element in the list is 30.
 ```
 
-## <a name="crend"></a> list::crend
+## <a name="crend"></a> crend
 
 Gibt einen konstanten Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines umgekehrten Listenelements nachfolgt.
 
@@ -688,7 +690,7 @@ int main( )
 The first element in the list is: 10
 ```
 
-## <a name="difference_type"></a> list::difference_type
+## <a name="difference_type"></a> difference_type
 
 Ein Ganzzahltyp mit Vorzeichen, der dazu verwendet werden kann, die Anzahl von Elementen einer Liste in einem Bereich zwischen Elementen darzustellen, auf die von Iteratoren gezeigt wird.
 
@@ -745,7 +747,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a> list::emplace
+## <a name="emplace"></a> emplace-
 
 Fügt ein direkt konstruiertes Element an einer angegebenen Position in die Liste ein.
 
@@ -755,10 +757,11 @@ void emplace(iterator Where, Type&& val);
 
 ### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|-|-|
-|*Where*|Die Position in der Ziel[liste](../standard-library/list-class.md), an der das erste Element eingefügt wird.|
-|*val*|Das Element, das am Ende der `list` hinzugefügt wird.|
+*WHERE*\
+Die Position in der Ziel[liste](../standard-library/list-class.md), an der das erste Element eingefügt wird.
+
+*val*\
+Das Element, das am Ende der `list` hinzugefügt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -788,7 +791,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_back"></a> list::emplace_back
+## <a name="emplace_back"></a> emplace_back
 
 Fügt ein direkt konstruiertes Element am Ende einer Liste ein.
 
@@ -798,9 +801,8 @@ void emplace_back(Type&& val);
 
 ### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|-|-|
-|*val*|Das Element, das am Ende der [Liste](../standard-library/list-class.md) hinzugefügt wird.|
+*val*\
+Das Element, das am Ende der [Liste](../standard-library/list-class.md) hinzugefügt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -830,7 +832,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_front"></a> list::emplace_front
+## <a name="emplace_front"></a> emplace_front
 
 Fügt ein direkt konstruiertes Element am Anfang einer Liste ein.
 
@@ -840,9 +842,8 @@ void emplace_front(Type&& val);
 
 ### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|-|-|
-|*val*|Das am Anfang der [Liste](../standard-library/list-class.md) hinzugefügte Element.|
+*val*\
+Das am Anfang der [Liste](../standard-library/list-class.md) hinzugefügte Element.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -872,7 +873,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="empty"></a> list::empty
+## <a name="empty"></a> leere
 
 Testet, ob eine Liste leer ist.
 
@@ -909,7 +910,7 @@ int main( )
 The list is not empty.
 ```
 
-## <a name="end"></a> list::end
+## <a name="end"></a> Ende
 
 Gibt einen Iterator zurück, der den Speicherort adressiert, der dem letzten Element einer Liste nachfolgt.
 
@@ -969,7 +970,7 @@ The new next-to-last integer of c1 is 400
 The list is now: 10 400 30
 ```
 
-## <a name="erase"></a> list::erase
+## <a name="erase"></a> Löschen
 
 Entfernt ein Element oder eine Reihe von Elementen in einer Liste aus angegebenen Speicherorten.
 
@@ -980,13 +981,13 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parameter
 
-*Where*<br/>
+*WHERE*\
 Die Position des von der Liste zu entfernenden Elements.
 
-*first*<br/>
+*Erste*\
 Die Position des ersten Elements, das von der Liste entfernt werden soll.
 
-*last*<br/>
+*letzte*\
 Die Position direkt hinter dem letzten von der Liste entfernten Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1044,7 +1045,7 @@ After erasing the first element, the list becomes: 20 30 40 50
 After erasing all elements but the first, the list becomes:  20
 ```
 
-## <a name="front"></a> list::front
+## <a name="front"></a> Vorderseite
 
 Gibt einen Verweis auf das erste Element in einer Liste zurück.
 
@@ -1091,7 +1092,7 @@ The first integer of c1 is 10
 The first integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a> list::get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 Gibt eine Kopie des Zuweisungsobjekts zurück, das zum Erstellen einer Liste verwendet wird.
 
@@ -1131,7 +1132,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a> list::insert
+## <a name="insert"></a> Einfügen
 
 Fügt ein Element oder mehrere Elemente oder ein Reihe von Elementen an einer bestimmten Position in die Liste ein.
 
@@ -1148,13 +1149,20 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|-|-|
-|*Where*|Die Position in der Zielliste, an der das erste Element eingefügt wird.|
-|*val*|Der Wert des Elements, das in die Liste eingefügt wird.|
-|*Anzahl*|Die Anzahl von Elementen, die in die Liste eingefügt werden.|
-|*Erste*|Die Position des ersten Elements in dem Elementbereich in der Argumentliste, die kopiert werden soll.|
-|*letzte*|Die Position des ersten Elements hinter dem Elementbereich in der Argumentliste, die kopiert werden soll.|
+*WHERE*\
+Die Position in der Zielliste, an der das erste Element eingefügt wird.
+
+*val*\
+Der Wert des Elements, das in die Liste eingefügt wird.
+
+*Anzahl*\
+Die Anzahl von Elementen, die in die Liste eingefügt werden.
+
+*Erste*\
+Die Position des ersten Elements in dem Elementbereich in der Argumentliste, die kopiert werden soll.
+
+*letzte*\
+Die Position des ersten Elements hinter dem Elementbereich in der Argumentliste, die kopiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1230,7 +1238,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a> list::iterator
+## <a name="iterator"></a> Iterator
 
 Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem jedes Element in einer Liste gelesen oder geändert werden kann.
 
@@ -1246,7 +1254,7 @@ Ein Typ `iterator` kann zum Ändern des Werts eines Elements verwendet werden.
 
 Ein Beispiel hierfür finden Sie unter [begin](#begin).
 
-## <a name="list"></a> list::list
+## <a name="list"></a> Liste
 
 Erstellt eine Liste einer bestimmten Größe bzw. mit Elementen eines bestimmten Werts oder mit einer bestimmten Zuweisung oder als vollständige bzw. teilweise Kopie einer anderen Liste.
 
@@ -1270,15 +1278,26 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|-|-|
-|*Al*|Die mit diesem Objekt zu verwendende Zuweisungsklasse.|
-|*Anzahl*|Die Anzahl von Elementen in der erstellten Liste.|
-|*val*|Der Werttyp der Elemente in der Liste.|
-|*Rechts*|Die Liste, deren Kopie die erstellte Liste ist.|
-|*Erste*|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|
-|*letzte*|Die Position des ersten Elements nach dem zu kopierenden Elementbereich.|
-|*IList*|Das initializer_list-Element, das die zu kopierenden Elemente enthält.|
+*Al*\
+Die mit diesem Objekt zu verwendende Zuweisungsklasse.
+
+*Anzahl*\
+Die Anzahl von Elementen in der erstellten Liste.
+
+*val*\
+Der Werttyp der Elemente in der Liste.
+
+*Richting*\
+Die Liste, deren Kopie die erstellte Liste ist.
+
+*Erste*\
+Die Position des ersten Elements in dem zu kopierenden Elementbereich.
+
+*letzte*\
+Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
+
+*IList*\
+Das initializer_list-Element, das die zu kopierenden Elemente enthält.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1393,7 +1412,7 @@ int main()
 c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 = 1 2 3 4
 ```
 
-## <a name="max_size"></a> list::max_size
+## <a name="max_size"></a> max_size
 
 Gibt die Maximallänge einer Liste zurück.
 
@@ -1424,7 +1443,7 @@ int main( )
 }
 ```
 
-## <a name="merge"></a> list::merge
+## <a name="merge"></a> Zusammenführen
 
 Entfernt die Elemente aus der Argumentliste, fügt sie in die Zielliste ein und sortiert den neuen, kombinierten Elementsatz in aufsteigender Reihenfolge oder in einer anderen angegebenen Reihenfolge.
 
@@ -1437,10 +1456,10 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Die Argumentliste, die mit der Zielliste zusammengeführt werden soll.
 
-*comp*<br/>
+*Comp*\
 Der Vergleichsoperator, der zum Sortieren der Elemente in der Zielliste verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -1508,7 +1527,7 @@ c3 = 5 1
 After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 2 1
 ```
 
-## <a name="op_eq"></a> list::operator=
+## <a name="op_eq"></a> Operator =
 
 Ersetzt die Elemente der Liste mit einer Kopie einer anderen Liste.
 
@@ -1519,9 +1538,8 @@ list& operator=(list&& right);
 
 ### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|-|-|
-|*right*|Die [Liste](../standard-library/list-class.md), die in die `list` kopiert wird.|
+*Richting*\
+Die [Liste](../standard-library/list-class.md), die in die `list` kopiert wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1568,7 +1586,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a> list::pointer
+## <a name="pointer"></a> Zeiger
 
 Stellt einen Zeiger auf ein Element in einer Liste bereit.
 
@@ -1582,7 +1600,7 @@ Ein Typ `pointer` kann zum Ändern des Werts eines Elements verwendet werden.
 
 In den meisten Fällen sollte ein [Iterator](#iterator) für den Zugriff auf Elemente in einem Listenobjekt verwendet werden.
 
-## <a name="pop_back"></a> list::pop_back
+## <a name="pop_back"></a> pop_back
 
 Löscht das Element am Ende einer Liste.
 
@@ -1624,7 +1642,7 @@ The last element is: 2
 After deleting the element at the end of the list, the last element is: 1
 ```
 
-## <a name="pop_front"></a> list::pop_front
+## <a name="pop_front"></a> pop_front
 
 Löscht das Element am Anfang einer Liste.
 
@@ -1666,7 +1684,7 @@ The second element is: 2
 After deleting the element at the beginning of the list, the first element is: 2
 ```
 
-## <a name="push_back"></a> list::push_back
+## <a name="push_back"></a> push_back
 
 Fügt am Ende einer Liste ein Element hinzu.
 
@@ -1676,9 +1694,8 @@ void push_back(void push_back(Type&& val);
 
 ### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|-|-|
-|*val*|Das Element, das am Ende der Liste hinzugefügt wird.|
+*val*\
+Das Element, das am Ende der Liste hinzugefügt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1721,7 +1738,7 @@ New last element: 2
 Moved first element: a
 ```
 
-## <a name="push_front"></a> list::push_front
+## <a name="push_front"></a> push_front
 
 Fügt am Anfang einer Liste ein Element hinzu.
 
@@ -1732,9 +1749,8 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|-|-|
-|*val*|Das am Anfang der Liste hinzugefügte Element.|
+*val*\
+Das am Anfang der Liste hinzugefügte Element.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1777,7 +1793,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a> list::rbegin
+## <a name="rbegin"></a> rbegin
 
 Gibt einen Iterator zurück, mit dem das erste Element in einer umgekehrten Liste behandelt wird.
 
@@ -1848,7 +1864,7 @@ The reversed list is: 30 20 10
 The last element in the list is now 40.
 ```
 
-## <a name="reference"></a> list::reference
+## <a name="reference"></a> Referenz
 
 Ein Typ, der einen Verweis auf ein in einer Liste gespeichertes Element bereitstellt.
 
@@ -1884,7 +1900,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="remove"></a> list::remove
+## <a name="remove"></a> Entfernen
 
 Löscht Elemente in einer Liste, die einen angegebenen Wert entsprechen.
 
@@ -1894,7 +1910,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-*val*<br/>
+*val*\
 Der Wert, der, sofern er von einem Element gehalten wird, das Entfernen dieses Elements aus der Liste verursacht.
 
 ### <a name="remarks"></a>Hinweise
@@ -1941,7 +1957,7 @@ The initial list is c1 = 5 100 5 200 5 300
 After removing elements with value 5, the list becomes c2 = 100 200 300
 ```
 
-## <a name="remove_if"></a> list::remove_if
+## <a name="remove_if"></a> remove_if
 
 Löscht Elemente aus einer Liste, für die ein angegebenes Prädikat erfüllt ist.
 
@@ -1952,7 +1968,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Parameter
 
-*Pred*<br/>
+*Pred*\
 Das unäre Prädikat, das bei Erfüllung durch ein Element das Löschen dieses Elements in der Liste zur Folge hat.
 
 ### <a name="example"></a>Beispiel
@@ -2006,7 +2022,7 @@ The initial list is c1 = 3 4 5 6 7 8
 After removing the odd elements, the list becomes c2 = 4 6 8
 ```
 
-## <a name="rend"></a> list::rend
+## <a name="rend"></a> REND
 
 Gibt ein Iterator zurück, der den Standort adressiert, der dem letzten Element in einer umgekehrten Liste nachfolgt.
 
@@ -2092,7 +2108,7 @@ The reversed list is: 30 20 10
 The modified reversed list is: 30 20 40
 ```
 
-## <a name="resize"></a> list::resize
+## <a name="resize"></a> Ändern der Größe
 
 Gibt eine neue Größe für eine Liste an.
 
@@ -2103,10 +2119,10 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parameter
 
-*_Newsize*<br/>
+*_Newsize*\
 Die neue Größe der verknüpften Liste.
 
-*val*<br/>
+*val*\
 Der Wert der neuen, der Liste hinzuzufügenden Elemente, wenn die neue Größe die ursprüngliche Größe überschreitet. Wenn der Wert ausgelassen wird, werden dem Standardwert die neuen Elemente für die Klasse zugewiesen.
 
 ### <a name="remarks"></a>Hinweise
@@ -2159,7 +2175,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse"></a> list::reverse
+## <a name="reverse"></a> Umgekehrte
 
 Kehrt die Reihenfolge um, in der die Elemente in einer Liste auftreten.
 
@@ -2203,7 +2219,7 @@ c1 = 10 20 30
 Reversed c1 = 30 20 10
 ```
 
-## <a name="reverse_iterator"></a> list::reverse_iterator
+## <a name="reverse_iterator"></a> reverse_iterator
 
 Ein Typ, der einen bidirektionalen Iterator bereitstellt, mit dem ein Element in einer umgekehrten Liste gelesen oder geändert werden kann.
 
@@ -2219,7 +2235,7 @@ Ein `reverse_iterator`-Typ wird verwendet, um die Liste in umgekehrter Reihenfol
 
 Ein Beispiel hierfür finden Sie unter [rbegin](#rbegin).
 
-## <a name="size"></a> list::size
+## <a name="size"></a> Größe
 
 Gibt die Anzahl von Elementen in einer Liste zurück.
 
@@ -2260,7 +2276,7 @@ List length is 1.
 List length is now 2.
 ```
 
-## <a name="size_type"></a> list::size_type
+## <a name="size_type"></a> size_type
 
 Ein Typ, der die Anzahl von Elementen in einer Liste zählt.
 
@@ -2272,7 +2288,7 @@ typedef typename Allocator::size_type size_type;
 
 Ein Beispiel hierfür finden Sie unter [size](#size).
 
-## <a name="sort"></a> list::sort
+## <a name="sort"></a> Sortieren
 
 Ordnet die Elemente einer Liste in aufsteigender Reihenfolge oder in Bezug auf eine andere benutzerdefinierte Reihenfolge.
 
@@ -2280,12 +2296,12 @@ Ordnet die Elemente einer Liste in aufsteigender Reihenfolge oder in Bezug auf e
 void sort();
 
 template <class Traits>
-void sort(Traits comp);
+    void sort(Traits comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*comp*<br/>
+*Comp*\
 Der zum Sortieren aufeinanderfolgender Elemente verwendete Vergleichsoperator.
 
 ### <a name="remarks"></a>Hinweise
@@ -2337,7 +2353,7 @@ After sorting c1 = 10 20 30
 After sorting with 'greater than' operation, c1 = 30 20 10
 ```
 
-## <a name="splice"></a> list::splice
+## <a name="splice"></a> splice-
 
 Entfernt Elemente aus einer Quellliste und fügt sie in eine Zielliste ein.
 
@@ -2357,19 +2373,19 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>Parameter
 
-*Where*<br/>
+*WHERE*\
 Die Position in der Zielliste, vor der die Elemente eingefügt werden sollen.
 
-*Quelle*<br/>
+*Source*\
 Die Quellliste, die in die Zielliste eingefügt werden soll.
 
-*Iter*<br/>
+*Iter*\
 Das Element, das aus der Quellliste eingefügt werden soll.
 
-*Erste*<br/>
+*Erste*\
 Das erste Element im Bereich, das aus der Quellliste eingefügt werden soll.
 
-*letzte*<br/>
+*letzte*\
 Die erste Position hinter dem letzten Element im Bereich, das aus der Quellliste eingefügt werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -2460,7 +2476,7 @@ int main()
 Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (22)c3 = 2 elements: (30) (31)c4 = 4 elements: (40) (41) (42) (43)After splicing c1 into c2:c1 = 0 elements:c2 = 5 elements: (20) (10) (11) (21) (22)After splicing the first element of c3 into c2:c3 = 1 elements: (31)c2 = 6 elements: (20) (10) (11) (30) (21) (22)After splicing a range of c4 into c2:c4 = 2 elements: (40) (43)c2 = 8 elements: (20) (10) (11) (30) (41) (42) (21) (22)
 ```
 
-## <a name="swap"></a> list::swap
+## <a name="swap"></a> Swap
 
 Tauscht die Elemente zweier Listen aus.
 
@@ -2471,10 +2487,10 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Die Liste, in dem Elemente ausgetauscht werden sollen, oder die Liste, deren Elemente ausgetauscht werden, mit denen der Liste *linken*.
 
-*left*<br/>
+*Links*\
 Eine Liste, deren Elemente mit denen der Liste ausgetauscht werden sollen *rechten*.
 
 ### <a name="example"></a>Beispiel
@@ -2525,7 +2541,7 @@ After swapping with c2, list c1 is: 10 20
 After swapping with c3, list c1 is: 100
 ```
 
-## <a name="unique"></a> list::unique
+## <a name="unique"></a> eindeutige
 
 Entfernt benachbarte doppelte Elemente oder benachbarte Elemente, die einige andere binäre Prädikate aus einer Liste erfüllen.
 
@@ -2538,7 +2554,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Parameter
 
-*Pred*<br/>
+*Pred*\
 Das binäre Prädikat, das zum Vergleichen von aufeinander folgenden Elementen verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -2598,7 +2614,7 @@ After removing successive duplicate elements, c2 = -10 10 20 -10
 After removing successive unequal elements, c3 = -10 -10
 ```
 
-## <a name="value_type"></a> list::value_type
+## <a name="value_type"></a> value_type
 
 Ein Typ, der den in einer Liste gespeicherten Datentyp darstellt.
 
@@ -2630,9 +2646,3 @@ int main( )
 ```Output
 44
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[\<list>](../standard-library/list.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

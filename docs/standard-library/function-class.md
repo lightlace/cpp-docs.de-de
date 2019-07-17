@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159716"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243791"
 ---
 # <a name="function-class"></a>function-Klasse
 
@@ -79,10 +79,10 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*Fty*<br/>
+*Fty*\
 Der zu umschließende Funktionstyp.
 
-*AX*<br/>
+*AX*\
 Die Zuweisungsfunktion.
 
 ## <a name="remarks"></a>Hinweise
@@ -103,21 +103,23 @@ In allen Fällen muss `INVOKE(f, t1, t2, ..., tN)` da, wo `f` das aufrufbare Obj
 
 Ein leeres `function`-Objekt enthält kein aufrufbaren Objekt bzw. einen Verweis ebendieses.
 
+## <a name="members"></a>Member
+
 ### <a name="constructors"></a>Konstruktoren
 
-|Konstruktor|Beschreibung|
+|||
 |-|-|
 |[function](#function)|Konstruiert einen Wrapper, der entweder leer ist oder ein aufrufbares Objekt eines willkürlichen Typs mit einer festen Signatur speichert.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Typname|Beschreibung|
+|||
 |-|-|
 |[result_type](#result_type)|Der Rückgabetyp des gespeicherten aufrufbaren Objekts.|
 
-### <a name="member-functions"></a>Memberfunktionen
+### <a name="functions"></a>Funktionen
 
-|Member-Funktion|Beschreibung|
+|||
 |-|-|
 |[assign](#assign)|Weist ein aufrufbares Objekt diesem Funktionsobjekt zu.|
 |[swap](#swap)|Tauscht zwei aufrufbare Objekte miteinander.|
@@ -126,19 +128,13 @@ Ein leeres `function`-Objekt enthält kein aufrufbaren Objekt bzw. einen Verweis
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
-|[function::operator unspecified](#op_unspecified)|Prüft, ob ein gespeichertes aufrufbares Objekt existiert.|
-|[function::operator()](#op_call)|Ruf ein aufrufbares Objekt auf.|
-|[function::operator=](#op_eq)|Ersetzt das gespeicherte aufrufbare Objekt.|
+|[Operator unspecified](#op_unspecified)|Prüft, ob ein gespeichertes aufrufbares Objekt existiert.|
+|[Operator()](#op_call)|Ruf ein aufrufbares Objekt auf.|
+|[operator=](#op_eq)|Ersetzt das gespeicherte aufrufbare Objekt.|
 
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## <a name="assign"></a> function::assign
+## <a name="assign"></a> Weisen Sie
 
 Weist ein aufrufbares Objekt diesem Funktionsobjekt zu.
 
@@ -156,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parameter
 
-*_Func*<br/>
+*_Func*\
 Ein aufrufbares Objekt.
 
-*_Fnref*<br/>
+*_Fnref*\
 Ein Verweiswrapper, der ein aufrufbares Objekt enthält.
 
-*AX*<br/>
+*AX*\
 Ein Zuweisungsobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
 Die Memberfunktionen ersetzen jeweils das von `*this` gehaltene `callable object` durch ein aufrufbares Objekt, das als `operand` übergeben wurde. Beide weisen Speicher mit dem Zuweisungsobjekt *Ax*.
 
-## <a name="function"></a> function::function
+## <a name="function"></a> Funktion
 
 Konstruiert einen Wrapper, der entweder leer ist oder ein aufrufbares Objekt eines willkürlichen Typs mit einer festen Signatur speichert.
 
@@ -194,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Das zu kopierende Funktionsobjekt.
 
-*FX*<br/>
+*FX*\
 Der Typ des aufrufbaren Objekts.
 
-*_Func*<br/>
+*_Func*\
 Das zu umschließende Objekt.
 
-*Alloc*<br/>
+*Alloc*\
 Der Zuweisungstyp.
 
-*AX*<br/>
+*AX*\
 Die Zuweisung.
 
-*_Fnref*<br/>
+*_Fnref*\
 Der zu umschließende aufrufbare Objektverweis.
 
 ### <a name="remarks"></a>Hinweise
@@ -286,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a> function::operator unspecified
+## <a name="op_unspecified"></a> Operator unspecified
 
 Prüft, ob ein gespeichertes aufrufbares Objekt existiert.
 
@@ -328,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a> function::operator()
+## <a name="op_call"></a> Operator()
 
 Ruf ein aufrufbares Objekt auf.
 
@@ -341,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parameter
 
-*TN*<br/>
+*TN*\
 Der Typ des n-ten Aufrufarguments.
 
-*tN*<br/>
+*TN*\
 Das n-te Aufrufargument.
 
 ### <a name="remarks"></a>Hinweise
@@ -379,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a> function::operator=
+## <a name="op_eq"></a> Operator =
 
 Ersetzt das gespeicherte aufrufbare Objekt.
 
@@ -394,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parameter
 
-*npc*<br/>
+*%npc*\
 Eine NULL-Zeiger-Konstante.
 
-*right*<br/>
+*Richting*\
 Das zu kopierende Funktionsobjekt.
 
-*fn*<br/>
+*fn*\
 Das zu umschließende Objekt.
 
-*fnref*<br/>
+*fnref*\
 Der zu umschließende aufrufbare Objektverweis.
 
 ### <a name="remarks"></a>Hinweise
@@ -461,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a> function::result_type
+## <a name="result_type"></a> RESULT_TYPE
 
 Der Rückgabetyp des gespeicherten aufrufbaren Objekts.
 
@@ -503,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a> function::swap
+## <a name="swap"></a> Swap
 
 Tauscht zwei aufrufbare Objekte miteinander.
 
@@ -513,7 +509,7 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Das Funktionsobjekt, mit dem getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -562,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a> function::target
+## <a name="target"></a> Ziel
 
 Prüft, ob das gespeicherte aufrufbare Objekt wie festgelegt aufrufbar ist.
 
@@ -575,14 +571,14 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parameter
 
-*Fty2*<br/>
+*Fty2*\
 Der zu überprüfende Typ des aufrufbaren Zielobjekts.
 
 ### <a name="remarks"></a>Hinweise
 
 Der Typ *Fty2* muss für die Argumenttypen aufrufbar sein `T1, T2, ..., TN` sowie des Rückgabetyps `Ret`. Wenn `target_type() == typeid(Fty2)`, dann gibt die Membervorlagenfunktion die Adresse des Zielobjekts zurück; andernfalls gibt sie 0 zurück.
 
-Ein Typ *Fty2* wird aufgerufen, für die Argumenttypen `T1, T2, ..., TN` sowie des Rückgabetyps `Ret` If, für die Lvalues `fn, t1, t2, ..., tN` Typen `Fty2, T1, T2, ..., TN`, `INVOKE(fn, t1, t2, ..., tN)` wohlgeformt ist und, falls `Ret`nicht **"void"**, konvertierbar `Ret`.
+Ein Typ *Fty2* wird aufgerufen, für die Argumenttypen `T1, T2, ..., TN` sowie des Rückgabetyps `Ret` If, für die Lvalues `fn, t1, t2, ..., tN` Typen `Fty2, T1, T2, ..., TN`, `INVOKE(fn, t1, t2, ..., tN)` wohlgeformt ist und, falls `Ret`nicht **"void"** , konvertierbar `Ret`.
 
 ### <a name="example"></a>Beispiel
 
@@ -623,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a> function::target_type
+## <a name="target_type"></a> target_type
 
 Ruft Typinformationen für das aufrufbare Objekt ab.
 
@@ -668,8 +664,3 @@ type == int (__cdecl*)(int)
 empty == true
 type == void
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[mem_fn](../standard-library/functional-functions.md#mem_fn)<br/>
-[reference_wrapper-Klasse](../standard-library/reference-wrapper-class.md)<br/>

@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 8915a652fe442af84f2582b9b9d47a243f416eeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fce204e3873151eafa0c4fa9c2b1e0af9971cfae
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377243"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243886"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
 Definiert die containervorlagenklasse **Array** und einige unterstützende Vorlagen.
 
-## <a name="syntax"></a>Syntax
+## <a name="requirements"></a>Anforderungen
 
-```cpp
-#include <array>
-```
+**Header:** \<array>
+
+**Namespace:** std
+
+> [!NOTE]
+> Die \<Array > Bibliothek verwendet auch die `#include <initializer_list>` Anweisung.
+
+## <a name="members"></a>Member
 
 ### <a name="classes"></a>Klassen
 
-|Klasse|Beschreibung|
+|||
 |-|-|
 |[array](../standard-library/array-class-stl.md)|Speichert eine Sequenz von Elementen mit fester Länge.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Umschließt den Typ eines Arrayelements.|
@@ -33,7 +38,7 @@ Definiert die containervorlagenklasse **Array** und einige unterstützende Vorla
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
 |[operator==](../standard-library/array-operators.md#op_eq_eq)|Array-Vergleich, gleich|
 |[Operator!=](../standard-library/array-operators.md#op_neq)|Array-Vergleich, ungleich|
@@ -44,7 +49,7 @@ Definiert die containervorlagenklasse **Array** und einige unterstützende Vorla
 
 ### <a name="functions"></a>Funktionen
 
-|Funktion|Beschreibung|
+|||
 |-|-|
 |[get](../standard-library/array-functions.md#get)|Ruft ein angegebenes Arrayelement ab.|
 |[swap](../standard-library/array-functions.md#swap)|Tauscht die Inhalte zweier Arrays miteinander aus.|

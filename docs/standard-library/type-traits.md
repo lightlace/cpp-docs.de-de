@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83949a2c74447735f6863c5f1af68b4dfe2ee4e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278981"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243526"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -68,7 +68,7 @@ Primäre Typkategorien
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|Testet, ob der Typ ist **"void"**.|
+|[is_void](../standard-library/is-void-class.md)|Testet, ob der Typ ist **"void"** .|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Testet, ob der Typ `std::nullptr_t` ist.|
 |[is_integral](../standard-library/is-integral-class.md)|Testet, ob der Typ eine Ganzzahl ist.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Testet, ob der Typ ein Gleitkomma ist.|
@@ -110,6 +110,7 @@ Typeigenschaften
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|Testet, ob der Typ eine polymorphe Klasse ist.|
 |[is_abstract](../standard-library/is-abstract-class.md)|Testet, ob es dich bei dem Typ um eine abstrakte Klasse handelt.|
 |[is_final](../standard-library/is-final-class.md)|Testet, ob der Typ ein als `final` markierter Klassentyp ist.|
+|[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|Testet, ob der Typ eine Ganzzahl mit einem Vorzeichen ist.|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|Testet, ob der Typ eine Ganzzahl ohne Vorzeichen ist.|
 |[is_constructible](../standard-library/is-constructible-class.md)|Testet, ob der Typ konstruiert werden kann, wenn die angegebenen Argumenttypen verwendet werden.|
@@ -119,6 +120,8 @@ Typeigenschaften
 |[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|Testet, ob dem ersten Typ ein Wert des zweiten Typs zugewiesen werden kann.|
 |[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|Testet, ob einem Typ ein konstanter Verweiswert des Typs zugewiesen werden kann.|
 |[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|Testet, ob einem Typ ein rvalue-Verweis des Typs zugewiesen werden kann.|
+|[is_swappable](../standard-library/type-traits-functions.md#is_swappable)||
+|[is_swappable_with](../standard-library/type-traits-functions.md#is_swappable_with)||
 |[is_destructible](../standard-library/is-destructible-class.md)|Testet, ob der Typ „destructible“ ist.|
 |[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|Testet, ob der Typ keine nicht trivialen Vorgänge verwendet, wenn er mit den angegebenen Typen konstruiert wird.|
 |[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|Testet, ob der Typ keine nicht trivialen Vorgänge verwendet, wenn er standardmäßig konstruiert wird.|
@@ -135,8 +138,11 @@ Typeigenschaften
 |[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|Testet, ob der Typ mit dem angegebenen Typ zugewiesen werden kann und die Zuweisung keine Ausnahmefehler auslöst.|
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Testet, ob der Typ durch Kopie zugewiesen werden kann und die Zuweisung keine Ausnahmefehler auslöst.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Prüft, ob dem Typ eine Verschiebung zugewiesen werden kann und die Zuweisung keine Ausnahmefehler auslöst.|
+|[is_nothrow_swappable](../standard-library/type-traits-functions.md#is_nothrow_swappable)||
+|[is_nothrow_swappable_with](../standard-library/type-traits-functions.md#is_nothrow_swappable_with)||
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Testet, ob der Typ zerstörbar ist und der Destruktor keine Ausnahmefehler auslöst.|
 |`has_virtual_destructor`|Testet, ob der Typ einen virtuellen Destruktor aufweist.|
+|`has_unique_object_representations`||
 | [is_invocable](is-invocable-classes.md) | Testet, ob ein aufrufbaren Typs mit den angegebenen Argumenttypen aufgerufen werden kann.<br/> In C ++ 17-hinzugefügt. |
 | [is_invocable_r](is-invocable-classes.md) | Testet, ob ein aufrufbaren Typs mit den angegebenen Argumenttypen und das Ergebnis aufgerufen werden kann in den angegebenen Typ konvertiert werden kann.<br/> In C ++ 17-hinzugefügt. |
 | [is_nothrow_invocable](is-invocable-classes.md) | Testet, ob ein aufrufbaren Typs aufgerufen werden kann, mit dem angegebenen Argument Typen und ist keine Ausnahmen auslösen.<br/> In C ++ 17-hinzugefügt. |
@@ -211,6 +217,14 @@ Weitere Transformationen
 |[invoke_result](invoke-result-class.md)|Bestimmt den Rückgabetyp des aufrufbaren Typs, der die angegebenen Argumenttypen akzeptiert. <br/>In C ++ 17-hinzugefügt. |
 |[result_of](../standard-library/result-of-class.md)|Bestimmt den Rückgabetyp des aufrufbaren Typs, der die angegebenen Argumenttypen akzeptiert. <br/>Hinzugefügt in C ++ 14, C ++ 17 veraltet. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Erzeugt für einen Enumerationstyp den zugrunde liegenden ganzzahligen Typ.|
+
+Logischer Operator "traits"
+
+|||
+|-|-|
+|[Verbindung](../standard-library/conjunction-class.md)||
+|[Disjunktion](../standard-library/disjunction-class.md)||
+|[Negation](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>Siehe auch
 

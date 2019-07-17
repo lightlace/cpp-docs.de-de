@@ -7,12 +7,12 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 94ccd071d23479064f007079835134055ed79aa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7071b7709f106fc974e401f89bb98c2525bd6558
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370332"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240506"
 ---
 # <a name="plus-struct"></a>plus-Struktur
 
@@ -39,12 +39,13 @@ struct plus<void>
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*, *T*, *U* ein Typ, eine Binärdatei unterstützt `operator+` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
+*Typ*, *T*, *U*\
+Ein Typ, der ein binäres `operator+`-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links*<br/>
+*Links*\
 Der linke Operand des Additionsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts*<br/>
+*Richting*\
 Der rechte Operand des Additionsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -94,20 +95,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 4 8 12 16 20 )
 The vector v2 = ( -4 -6 -8 -10 -12 -14 )
 The element-wise sums are: ( -4 -2 0 2 4 6 )
-*/
 ```
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Siehe auch
-
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

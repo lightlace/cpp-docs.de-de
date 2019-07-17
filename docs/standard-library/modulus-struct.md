@@ -7,12 +7,12 @@ helpviewer_keywords:
 - modulus class
 - modulus struct
 ms.assetid: 86d342f7-b7b1-46a4-b0bb-6b7ae827369b
-ms.openlocfilehash: 5b0488fbd6d943281de9eafdd33accf0375be17d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20f2070c5b835d67e06d64a0a1b05141f08cf373
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371632"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246798"
 ---
 # <a name="modulus-struct"></a>modulus-Struktur
 
@@ -39,12 +39,13 @@ struct modulus<void>
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*, *T*, *U* jeder Typ, unterstützt eine `operator%` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
+*Typ*, *T*, *U*\
+Jeder Typ, der ein `operator%`-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links*<br/>
+*Links*\
 Der linke Operand des Modulusvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts*<br/>
+*Richting*\
 Der rechte Operand des Modulusvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -103,21 +104,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 5 10 15 20 25 30 )
 The vector v2 = ( 3 6 9 12 15 18 )
 The element-wise remainders of the modular division
 are: ( 2 4 6 8 10 12 )
-*/
 ```
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Siehe auch
-
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

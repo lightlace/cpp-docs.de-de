@@ -10,22 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: ca1412efb4d095ef9a371b3739d4c282683821dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348457"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243818"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt;-Operatoren
 
-||||
-|-|-|-|
-|[Operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> Operator! =
 
 Prüft auf Ungleichheit zwischen Objekten.
 
@@ -48,16 +42,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Eines der Objekte, die auf Ungleichheit geprüft werden sollen.
 
-*right*<br/>
+*Richting*\
 Eines der Objekte, die auf Ungleichheit geprüft werden sollen.
 
-*Ty1*<br/>
+*Ty1*\
 Der vom linken gemeinsamen Zeiger gesteuerte Typ.
 
-*Ty2*<br/>
+*Ty2*\
 Der vom rechten gemeinsamen Zeiger gesteuerte Typ.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -126,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> Operator ==
 
 Prüft auf Gleichheit zwischen Objekten.
 
@@ -149,16 +143,16 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Eines der Objekte, die auf Gleichheit geprüft werden sollen.
 
-*right*<br/>
+*Richting*\
 Eines der Objekte, die auf Gleichheit geprüft werden sollen.
 
-*Ty1*<br/>
+*Ty1*\
 Der vom linken gemeinsamen Zeiger gesteuerte Typ.
 
-*Ty2*<br/>
+*Ty2*\
 Der vom rechten gemeinsamen Zeiger gesteuerte Typ.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -238,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Operator&gt;=
 
 Testet, ob ein Objekt größer gleich einem zweiten Objekt ist.
 
@@ -256,23 +250,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Eines der zu vergleichenden Objekte.
 
-*right*<br/>
+*Richting*\
 Eines der zu vergleichenden Objekte.
 
-*Ty1*<br/>
+*Ty1*\
 Der vom linken gemeinsamen Zeiger gesteuerte Typ.
 
-*Ty2*<br/>
+*Ty2*\
 Der vom rechten gemeinsamen Zeiger gesteuerte Typ.
 
 ### <a name="remarks"></a>Hinweise
 
 Die vorlagenoperatoren geben zurück `left.get() >= right.get()`.
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a>-Operator&lt;
 
 Testet, ob ein Objekt kleiner als ein zweites Objekt ist.
 
@@ -290,19 +284,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Eines der zu vergleichenden Objekte.
 
-*right*<br/>
+*Richting*\
 Eines der zu vergleichenden Objekte.
 
-*Ty1*<br/>
+*Ty1*\
 Der vom linken Zeiger gesteuerte Typ.
 
-*Ty2*<br/>
+*Ty2*\
 Der vom rechten Zeiger gesteuerte Typ.
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Operator&lt;=
 
 Testet, ob ein Objekt kleiner gleich einem zweiten Objekt ist.
 
@@ -320,23 +314,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Eines der zu vergleichenden Objekte.
 
-*right*<br/>
+*Richting*\
 Eines der zu vergleichenden Objekte.
 
-*Ty1*<br/>
+*Ty1*\
 Der vom linken gemeinsamen Zeiger gesteuerte Typ.
 
-*Ty2*<br/>
+*Ty2*\
 Der vom rechten gemeinsamen Zeiger gesteuerte Typ.
 
 ### <a name="remarks"></a>Hinweise
 
 Die vorlagenoperatoren geben zurück. `left.get() <= right.get()`
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a>-Operator&gt;
 
 Testet, ob ein Objekt größer als ein zweites Objekt ist.
 
@@ -354,19 +348,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Eines der zu vergleichenden Objekte.
 
-*right*<br/>
+*Richting*\
 Eines der zu vergleichenden Objekte.
 
-*Ty1*<br/>
+*Ty1*\
 Der vom linken gemeinsamen Zeiger gesteuerte Typ.
 
-*Ty2*<br/>
+*Ty2*\
 Der vom rechten gemeinsamen Zeiger gesteuerte Typ.
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a> Operator&lt;&lt;
 
 Schreibt den freigegebenen Zeiger auf den Stream.
 
@@ -378,19 +372,19 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parameter
 
-*Elem*<br/>
+*Elem*\
 Der Typ des Streamelements.
 
-*Tr*<br/>
+*TR*\
 Der Typ des Streamelements.
 
-*Ty*<br/>
+*Ty*\
 Der vom freigegebenen Zeiger gesteuerte Typ.
 
-*out*<br/>
+*out*\
 Der Ausgabestream.
 
-*sp*<br/>
+*SP*\
 Der freigegebene Zeiger.
 
 ### <a name="remarks"></a>Hinweise
@@ -418,7 +412,3 @@ int main()
 ```Output
 sp0 == 3f3040 (varies)
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[\<memory>](../standard-library/memory.md)<br/>

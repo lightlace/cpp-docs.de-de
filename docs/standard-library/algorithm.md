@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36dfca8418cbbabd7dcfb30b2cece483406a5667
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411148"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245955"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -24,6 +24,9 @@ Definiert C++-Standardbibliothek-Containervorlagenfunktionen, die Algorithmen au
 ```cpp
 (see relevant links below for specific algorithm syntax)
 ```
+
+> [!NOTE]
+> Die \<Algorithmus > Bibliothek verwendet auch die `#include <initializer_list>` Anweisung.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -43,12 +46,13 @@ Die numerischen C++-Standardbibliotheksalgorithmen, die für die numerische Vera
 
 ### <a name="function-templates"></a>Funktionsvorlagen
 
-|Vorlage für die Funktion|Beschreibung|
+|||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|Sucht zwei benachbarte Elemente, die entweder gleich sind oder eine angegebene Bedingung erfüllen.|
 |[all_of](../standard-library/algorithm-functions.md#all_of)|Gibt **"true"** Wenn eine Bedingung auf die einzelnen Elemente im angegebenen Bereich vorhanden ist.|
 |[any_of](../standard-library/algorithm-functions.md#any_of)|Gibt **"true"** Wenn eine Bedingung mindestens einmal im angegebenen Bereich von Elementen vorhanden ist.|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|Testet, ob ein Element in einem sortierten Bereich einem angegebenen Wert entspricht oder ihm auf eine von einem binären Prädikat angegebene Weise gleicht.|
+|[clamp](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|Weist die Werte von Elementen aus einem Quellbereich einem Zielbereich zu, durchläuft die Quellelementsequenz und weist ihnen vorwärts neue Positionen zu.|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|Weist die Werte von Elementen aus einem Quellbereich einem Zielbereich zu, durchläuft die Quellelementsequenz und weist ihnen rückwärts neue Positionen zu.|
 |[copy_if](../standard-library/algorithm-functions.md#copy_if)|Kopiert alle Elemente in einem angegebenen Bereich, die testen **"true"** für eine angegebene Bedingung|
@@ -65,13 +69,14 @@ Die numerischen C++-Standardbibliotheksalgorithmen, die für die numerische Vera
 |[find_if](../standard-library/algorithm-functions.md#find_if)|Sucht die Position des ersten Vorkommens eines Elements in einem Bereich, der eine bestimmte Bedingung erfüllt.|
 |[find_if_not](../standard-library/algorithm-functions.md#find_if_not)|Gibt das erste Element im angegebenen Bereich zurück, der eine Bedingung nicht erfüllt.|
 |[for_each](../standard-library/algorithm-functions.md#for_each)|Wendet ein angegebenes Funktionsobjekt auf jedes Element in einer Vorwärtsreihenfolge innerhalb eines Bereichs an und gibt das Funktionsobjekt zurück.|
+|[for_each_n](../standard-library/algorithm-functions.md#for_each_n)||
 |[generate](../standard-library/algorithm-functions.md#generate)|Weist die Werte, die von einem Funktionsobjekt generiert werden, jedem Element in einem Bereich zu.|
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|Weist die Werte, die von einem Funktionsobjekt generiert werden, einer angegebenen Anzahl von Elementen eines Bereichs zu und kehrt zu der Position zurück, die direkt nach dem letzten zugewiesenen Wert liegt.|
 |[includes](../standard-library/algorithm-functions.md#includes)|Testet, ob ein sortierter Bereich alle Elemente enthält, die in einem zweiten sortierten Bereich enthalten sind, wobei das Sortier- oder Äquivalenzkriterium für die Elemente durch ein binäres Prädikat angegeben werden kann.|
 |[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)|Kombiniert die Elemente von zwei aufeinander folgenden sortierten Bereichen in einen einzelnen sortierten Bereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.|
 |[is_heap](../standard-library/algorithm-functions.md#is_heap)|Gibt **"true"** , wenn die Elemente im angegebenen Bereich ein Heap bilden.|
 |[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|Gibt **"true"** Wenn der angegebene Bereich einen Heap bis zum letzten Element bildet.|
-|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|Gibt **"true"** , wenn alle Elemente im angegebenen Bereich zu testen, ob **"true"** für eine Bedingung ergeben, vor allen Elementen, die testen **"false"**.|
+|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|Gibt **"true"** , wenn alle Elemente im angegebenen Bereich zu testen, ob **"true"** für eine Bedingung ergeben, vor allen Elementen, die testen **"false"** .|
 |[is_permutation](../standard-library/algorithm-functions.md#is_permutation)|Legt fest, ob die Elemente in einem angegebenen Bereich eine gültige Permutation bilden.|
 |[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|Gibt **"true"** , wenn die Elemente im angegebenen Bereich in sortierter Reihenfolge befinden.|
 |[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|Gibt **"true"** , wenn die Elemente im angegebenen Bereich in sortierter Reihenfolge befinden.|
@@ -113,6 +118,7 @@ Die numerischen C++-Standardbibliotheksalgorithmen, die für die numerische Vera
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|Kehrt die Reihenfolge der Elemente in einem Quellbereich beim Kopieren in einen Zielbereich um.|
 |[rotate](../standard-library/algorithm-functions.md#rotate)|Vertauscht die Elemente in zwei benachbarten Bereichen.|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|Vertauscht die Elemente in zwei benachbarten Bereiche innerhalb eines Quellbereichs und kopiert das Ergebnis in einen Zielbereich.|
+|[sample](../standard-library/algorithm-functions.md#sample)||
 |[search](../standard-library/algorithm-functions.md#search)|Sucht das erste Vorkommen einer Sequenz in einem Zielbereich, dessen Elemente gleich den Elementen in einer bestimmten Elementsequenz sind oder dessen Elemente äquivalent sind mit den Elementen in der angegebenen Sequenz, wie durch ein binäres Prädikat festgelegt.|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|Sucht nach der ersten Untersequenz in einem Bereich, der aus einer angegebenen Anzahl von Elementen besteht, die einen bestimmten Wert oder eine Beziehung zu diesem durch ein binäres Prädikat angegebenen Wert haben.|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|Vereinigt alle Elemente, die zu dem einen, jedoch nicht zu einem anderen sortierten Quellbereich gehören, in einen einzelnen, sortierten Zielbereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - multiplies class
 - multiplies struct
 ms.assetid: ec85e8af-70ad-44ad-90f0-d961a5847864
-ms.openlocfilehash: 7e91c834d3e56d4c0170c4e2f6b26b73dc925432
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bccaf2a5e6594652a1179b357cdbbee2d2436b3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186074"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240584"
 ---
 # <a name="multiplies-struct"></a>multiplies-Struktur
 
@@ -39,12 +39,13 @@ struct multiplies<void>
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*, *T*, *U* ein Typ, eine Binärdatei unterstützt `operator*` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
+*Typ*, *T*, *U*\
+Ein Typ, der ein binäres `operator*`-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links*<br/>
+*Links*\
 Der linke Operanden des Multiplikationsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts*<br/>
+*Richting*\
 Der rechte Operand des Multiplikationsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -99,21 +100,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 2 4 6 8 10 12 )
 The vector v2 = ( 3 6 9 12 15 18 )
 The element-wise products of vectors V1 & v2
 are: ( 6 24 54 96 150 216 )
-*/
 ```
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Siehe auch
-
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

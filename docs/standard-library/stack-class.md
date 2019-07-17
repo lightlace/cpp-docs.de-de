@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: cc18a62db3f39bc85c0a3bb7e84e6a27011c2b5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412435"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241066"
 ---
 # <a name="stack-class"></a>stack-Klasse
 
@@ -40,11 +40,11 @@ class stack
 
 ### <a name="parameters"></a>Parameter
 
-*Type*<br/>
+*Typ*\
 Der Datentyp der Elemente, die im Stapel gespeichert werden sollen.
 
-*Container*<br/>
-Der Typ des zugrunde liegenden Containers, der verwendet wird, um den Stapel zu implementieren. Der Standardwert ist die Klasse `deque`*\<Type>*.
+*Container*\
+Der Typ des zugrunde liegenden Containers, der verwendet wird, um den Stapel zu implementieren. Der Standardwert ist die Klasse `deque` *\<Type>* .
 
 ## <a name="remarks"></a>Hinweise
 
@@ -60,23 +60,25 @@ Die Stack-Objekte sind auf Gleichheit vergleichbar nur, wenn die Elemente der Kl
 
 - In der [priority_queue-Klasse](../standard-library/priority-queue-class.md) sind deren Elemente so sortiert, dass sich das größte Element immer an der obersten Position befindet. Die Klasse unterstützt Einfügen eines Elements sowie die Prüfung und Entfernung des obersten Elements. Eine gute Analogie, um sich dies zu merken, sind Personen, die in einer Schlange stehen, in der sie nach Alter, Größe oder einem anderen Kriterium angeordnet sind.
 
+## <a name="members"></a>Member
+
 ### <a name="constructors"></a>Konstruktoren
 
-|Konstruktor|Beschreibung|
+|||
 |-|-|
 |[stack](#stack)|Erstellt ein `stack`-Objekt, das leer oder eine Kopie eines Basiscontainerobjekts ist.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Typname|Beschreibung|
+|||
 |-|-|
 |[container_type](#container_type)|Ein Typ, der den Basiscontainer bereitstellt, der durch ein `stack`-Objekt übernommen werden soll.|
 |[size_type](#size_type)|Eine Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in `stack` darstellen kann.|
 |[value_type](#value_type)|Ein Typ, der den Typ des Objekts angibt, das in einem `stack`-Objekt als Element gespeichert wird.|
 
-### <a name="member-functions"></a>Memberfunktionen
+### <a name="functions"></a>Funktionen
 
-|Member-Funktion|Beschreibung|
+|||
 |-|-|
 |[empty](#empty)|Testet, ob das `stack`-Objekt ist leer.|
 |[pop](#pop)|Entfernt das Element aus der obersten Position des `stack`-Objekts.|
@@ -84,13 +86,7 @@ Die Stack-Objekte sind auf Gleichheit vergleichbar nur, wenn die Elemente der Kl
 |[size](#size)|Gibt die Anzahl von Elementen in der `stack` zurück.|
 |[top](#top)|Gibt einen Verweis auf das Element in der obersten Position des `stack`-Objekts zurück.|
 
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<stack>
-
-**Namespace:** std
-
-## <a name="container_type"></a> stack::container_type
+## <a name="container_type"></a> container_type
 
 Ein Typ, der den anzupassenden Basiscontainer bereitstellt.
 
@@ -108,7 +104,7 @@ Weitere Informationen zu `Container` finden Sie im Abschnitt „Hinweise“ des 
 
 Im Beispiel für [stack::stack](#stack) wird verdeutlicht, wie ein `container_type` deklariert und verwendet wird.
 
-## <a name="empty"></a> stack::empty
+## <a name="empty"></a> leere
 
 Testet, ob ein Stack leer ist.
 
@@ -153,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a> stack::pop
+## <a name="pop"></a> POP
 
 Entfernt das Element aus der obersten Position des Stacks.
 
@@ -209,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a> stack::push
+## <a name="push"></a> Pushbenachrichtigungen
 
 Fügt ein Element am Anfang des Stapels.
 
@@ -219,7 +215,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-*val*<br/>
+*val*\
 Das am Anfang des Stacks hinzugefügte Element.
 
 ### <a name="remarks"></a>Hinweise
@@ -258,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a> stack::size
+## <a name="size"></a> Größe
 
 Gibt die Anzahl der Elemente im Stack zurück.
 
@@ -299,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a> stack::size_type
+## <a name="size_type"></a> size_type
 
 Ein Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in einem Stack darstellen kann.
 
@@ -315,7 +311,7 @@ Der Typ ist ein Synonym für `size_type` des Basiscontainers und vom Stack angep
 
 Im Beispiel für [size](#size) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird.
 
-## <a name="stack"></a> stack::stack
+## <a name="stack"></a> Stapel
 
 Erstellt ein einen Stack, der leer oder eine Kopie eines Basiscontainerobjekts ist.
 
@@ -327,7 +323,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Der Container, dessen Kopie der erstellte Stack sein soll.
 
 ### <a name="example"></a>Beispiel
@@ -369,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a> stack::top
+## <a name="top"></a> Nach oben
 
 Gibt einen Verweis auf ein Element am Anfang des Stacks zurück.
 
@@ -420,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a> stack::value_type
+## <a name="value_type"></a> value_type
 
 Ein Typ, der den Typ des Objekts angibt, das in einem Stack als Element gespeichert wird.
 

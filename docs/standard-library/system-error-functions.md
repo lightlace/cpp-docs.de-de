@@ -12,19 +12,14 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 78be83af678b553babbf1cde3d96c1507940b611
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab4d0d1ee810df8f719bba762262eb03bf899408
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412110"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245104"
 ---
 # <a name="ltsystemerrorgt-functions"></a>&lt;System_error&gt;-Funktionen
-
-||||
-|-|-|-|
-|[generic_category](#generic_category)|[make_error_code](#make_error_code)|[make_error_condition](#make_error_condition)|
-|[system_category](#system_category)|||
 
 ## <a name="generic_category"></a> generic_category
 
@@ -38,6 +33,20 @@ const error_category& generic_category() noexcept;
 
 Die `generic_category` Objekt ist eine Implementierung von [Error_category](../standard-library/error-category-class.md).
 
+## <a name="is_error_code_enum_v"></a> is_error_code_enum_v
+
+```cpp
+template <class T> 
+    inline constexpr bool is_error_code_enum_v = is_error_code_enum<T>::value;
+```
+
+## <a name="is_error_condition_enum_v"></a> is_error_condition_enum_v
+
+```cpp
+template <class T> 
+    inline constexpr bool is_error_condition_enum_v = is_error_condition_enum<T>::value;
+```
+
 ## <a name="make_error_code"></a> make_error_code
 
 Erstellt ein Fehlercodeobjekt.
@@ -48,7 +57,7 @@ error_code make_error_code(std::errc error) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*error*\
+*Fehler*\
 Die `std::errc` im fehlercodeobjekt zu speichernde Enumerationswert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -67,7 +76,7 @@ error_condition make_error_condition(std::errc error) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*error*\
+*Fehler*\
 Die `std::errc` im fehlercodeobjekt zu speichernde Enumerationswert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -87,7 +96,3 @@ const error_category& system_category() noexcept;
 ### <a name="remarks"></a>Hinweise
 
 Die `system_category` Objekt ist eine Implementierung von [Error_category](../standard-library/error-category-class.md).
-
-## <a name="see-also"></a>Siehe auch
-
-[\<system_error>](../standard-library/system-error.md)<br/>

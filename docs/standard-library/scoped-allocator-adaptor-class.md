@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5101f5c7b6ae1a032df94b912252c24f2c2853bf
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348210"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245588"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor-Klasse
 
@@ -105,6 +105,14 @@ Drei Typen werden zum Zwecke der Darstellung generiert:
 |[outer_allocator](#outer_allocator)|Ruft einen Verweis auf das gespeicherte Objekt vom Typ `outer_allocator_type` ab|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Erstellt ein neues `scoped_allocator_adaptor`-Objekt mit jedem gespeicherten Zuweiserobjekt, das durch Aufrufen von `select_on_container_copy_construction` für jeden entsprechenden Zuweiser initialisiert wird.|
 
+### <a name="operators"></a>Operatoren
+
+|Operator|Beschreibung|
+|-|-|
+|[operator=](#op_as)||
+|[operator==](#op_eq_eq)||
+|[Operator!=](#op_noeq)||
+
 ## <a name="requirements"></a>Anforderungen
 
 **Header:** \<scoped_allocator>
@@ -166,10 +174,10 @@ Zeiger auf den Speicherort, in dem das Objekt erstellt werden soll.
 *args*<br/>
 Liste von Argumenten
 
-*first*<br/>
+*Erste*<br/>
 Objekt des ersten Typs in einem Paar
 
-*second*<br/>
+*Sekunde*<br/>
 Objekt des zweiten Typs in einem Paar
 
 *right*<br/>
@@ -254,6 +262,29 @@ size_type max_size();
 
 `Outer_traits::max_size(outer_allocator())`
 
+## <a name="a-nameopas--scopedallocatoradaptoroperator"></a><a name="op_as">  scoped_allocator_adaptor::Operator =
+
+```cpp
+scoped_allocator_adaptor& operator=(const scoped_allocator_adaptor&) = default;
+scoped_allocator_adaptor& operator=(scoped_allocator_adaptor&&) = default;
+```
+
+## <a name="a-nameopeqeq--scopedallocatoradaptoroperator"></a><a name="op_eq_eq">  scoped_allocator_adaptor::Operator ==
+
+```cpp
+template <class OuterA1, class OuterA2, class... InnerAllocs>
+bool operator==(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
+const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
+```
+
+## <a name="a-nameopnoeq--scopedallocatoradaptoroperator"></a><a name="op_noeq">  scoped_allocator_adaptor::Operator! =
+
+```cpp
+template <class OuterA1, class OuterA2, class... InnerAllocs>
+bool operator!=(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
+const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
+```
+
 ## <a name="outer_allocator"></a>  scoped_allocator_adaptor:: outer_allocator
 
 Ruft einen Verweis auf das gespeicherte Objekt vom Typ `outer_allocator_type` ab
@@ -275,7 +306,7 @@ Struktur binden {Typedef Other_traits::rebind\<andere > Other_alloc; Typedef Sco
 
 ## <a name="scoped_allocator_adaptor"></a> scoped_allocator_adaptor::scoped_allocator_adaptor-Konstruktor
 
-Erstellt ein `scoped_allocator_adaptor`-Objekt.
+Erstellt ein `scoped_allocator_adaptor`-Objekt. Enthält auch einen Destruktor.
 
 ```cpp
 scoped_allocator_adaptor();
@@ -290,6 +321,8 @@ scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
+
+~scoped_allocator_adaptor();
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -300,7 +333,7 @@ Ein vorhandener `scoped_allocator_adaptor`.
 *al*<br/>
 Eine vorhandener Zuweiser, der als äußerer Zuweiser verwendet werden soll.
 
-*rest*<br/>
+*Rest*<br/>
 Eine Liste von Zuweisern, die als innere Zuweiser verwendet werden sollen.
 
 ### <a name="remarks"></a>Hinweise

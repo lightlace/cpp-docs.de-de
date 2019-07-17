@@ -6,18 +6,14 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 98a7e8197a0d729ab3a4e9ec0daf55a28cdaeb2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3904393096422a8986414a253d515342c7382f0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412643"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246048"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; typedefs
-
-||||
-|-|-|-|
-|[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|
 
 ## <a name="exception_ptr"></a> exception_ptr
 
@@ -70,7 +66,3 @@ typedef void (*unexpected_handler)();
 ### <a name="example"></a>Beispiel
 
 Ein Beispiel zur Verwendung von `unexpected_handler` finden Sie unter [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
-
-## <a name="see-also"></a>Siehe auch
-
-[\<exception>](../standard-library/exception.md)<br/>

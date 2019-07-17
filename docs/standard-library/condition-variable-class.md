@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212379"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244626"
 ---
 # <a name="conditionvariable-class"></a>condition_variable-Klasse
 
@@ -39,16 +39,16 @@ class condition_variable;
 
 ## <a name="members"></a>Member
 
-### <a name="public-constructors"></a>Öffentliche Konstruktoren
+### <a name="constructors"></a>Konstruktoren
 
-|Name|Beschreibung|
-|----------|-----------------|
+|||
+|-|-|
 |[condition_variable](#condition_variable)|Erstellt ein `condition_variable`-Objekt.|
 
-### <a name="public-methods"></a>Öffentliche Methoden
+### <a name="functions"></a>Funktionen
 
-|Name|Beschreibung|
-|----------|-----------------|
+|||
+|-|-|
 |[native_handle](#native_handle)|Gibt den implementierungsspezifischen Typ zurück, der das Handle "condition_variable" darstellt.|
 |[notify_all](#notify_all)|Hebt die Blockierung aller Threads auf, die das `condition_variable`-Objekt erwarten.|
 |[notify_one](#notify_one)|Hebt die Blockierung von einem der Threads, die auf das `condition_variable`-Objekt warten, auf.|
@@ -56,13 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|Blockiert einen Thread und legt ein Zeitintervall fest, nachdem die Blockierung des Threads aufgehoben wird.|
 |[wait_until](#wait_until)|Blockiert einen Thread und legt einen maximalen Zeitpunkt fest, an dem die Blockierung des Threads aufgehoben wird.|
 
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<condition_variable>
-
-**Namespace:** std
-
-## <a name="condition_variable"></a>condition_variable::condition_variable-Konstruktor
+## <a name="condition_variable"></a> CONDITION_VARIABLE
 
 Erstellt ein `condition_variable`-Objekt.
 
@@ -74,7 +68,7 @@ condition_variable();
 
 Wenn nicht genügend Arbeitsspeicher verfügbar ist, gibt der Konstruktor ein [system_error](../standard-library/system-error-class.md)-Objekt mit einem `not_enough_memory`-Fehlercode aus. Wenn das Objekt nicht erstellt werden kann, da eine andere Ressource nicht verfügbar ist, wird vom Konstruktor ein `system_error`-Objekt mit einem `resource_unavailable_try_again`-Fehlercode ausgelöst.
 
-## <a name="native_handle"></a> condition_variable::native_handle
+## <a name="native_handle"></a> native_handle
 
 Gibt den implementierungsspezifischen Typ zurück, der das „condition_variable“-Handle darstellt.
 
@@ -86,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` wird als Zeiger auf interne Datenstrukturen Concurrency Runtime von Concurrency Runtime definiert.
 
-## <a name="notify_all"></a> condition_variable::notify_all
+## <a name="notify_all"></a> notify_all
 
 Hebt die Blockierung aller Threads auf, die das `condition_variable`-Objekt erwarten.
 
@@ -94,7 +88,7 @@ Hebt die Blockierung aller Threads auf, die das `condition_variable`-Objekt erwa
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a> condition_variable::notify_one
+## <a name="notify_one"></a> notify_one
 
 Hebt die Blockierung von einem der Threads, die auf das `condition_variable`-Objekt warten auf.
 
@@ -102,7 +96,7 @@ Hebt die Blockierung von einem der Threads, die auf das `condition_variable`-Obj
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a> condition_variable::wait
+## <a name="wait"></a> Warte
 
 Blockiert einen Thread.
 
@@ -115,11 +109,11 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parameter
 
-*Lck*<br/>
+*Lck*\
 Ein [unique_lock\<mutex>](../standard-library/unique-lock-class.md)-Objekt
 
-*Pred*<br/>
-Ein Ausdruck, der gibt **"true"** oder **"false"**.
+*Pred*\
+Ein Ausdruck, der gibt **"true"** oder **"false"** .
 
 ### <a name="remarks"></a>Hinweise
 
@@ -132,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a> condition_variable::wait_for
+## <a name="wait_for"></a> wait_for
 
 Blockiert einen Thread und legt ein Zeitintervall fest, nachdem die Blockierung des Threads aufgehoben wird.
 
@@ -151,14 +145,14 @@ bool wait_for(
 
 ### <a name="parameters"></a>Parameter
 
-*Lck*<br/>
+*Lck*\
 Ein [unique_lock\<mutex>](../standard-library/unique-lock-class.md)-Objekt
 
-*Rel_time*<br/>
+*Rel_time*\
 Ein `chrono::duration`-Objekt, das die Zeitdauer vor der Aktivierung des Threads angibt.
 
-*Pred*<br/>
-Ein Ausdruck, der gibt **"true"** oder **"false"**.
+*Pred*\
+Ein Ausdruck, der gibt **"true"** oder **"false"** .
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -180,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a> condition_variable::wait_until
+## <a name="wait_until"></a> wait_until
 
 Blockiert einen Thread und legt einen maximalen Zeitpunkt fest, an dem die Blockierung des Threads aufgehoben wird.
 
@@ -209,14 +203,14 @@ bool wait_until(
 
 ### <a name="parameters"></a>Parameter
 
-*Lck*<br/>
+*Lck*\
 Ein [unique_lock\<mutex>](../standard-library/unique-lock-class.md)-Objekt
 
-*Abs_time*<br/>
+*Abs_time*\
 Ein [chrono::time_point](../standard-library/time-point-class.md)-Objekt
 
-*Pred*<br/>
-Ein Ausdruck, der gibt **"true"** oder **"false"**.
+*Pred*\
+Ein Ausdruck, der gibt **"true"** oder **"false"** .
 
 ### <a name="return-value"></a>Rückgabewert
 

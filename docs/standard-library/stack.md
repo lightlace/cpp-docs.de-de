@@ -7,26 +7,31 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: b8f2bb6cf74d0607bd3105196336a515adcade9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65f2197a4a9ac37ad5910bfa8dbef457fda5f611
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412461"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244115"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
 Definiert den Vorlagenklassenstapel und zwei unterstützende Vorlagen.
 
-## <a name="syntax"></a>Syntax
+## <a name="requirements"></a>Anforderungen
 
-```cpp
-#include <stack>
-```
+**Header:** \<stack>
+
+**Namespace:** std
+
+> [!NOTE]
+> Die \<Stack > Bibliothek verwendet auch die `#include <initializer_list>` Anweisung.
+
+## <a name="members"></a>Member
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
 |[Operator!=](../standard-library/stack-operators.md#op_neq)|Testet, ob das Stapelobjekt links vom Operator ungleich dem Stapelobjekt rechts vom Operator ist.|
 |[operator<](../standard-library/stack-operators.md#op_lt)|Testet, ob das Stapelobjekt links vom Operator kleiner als das Stapelobjekt rechts vom Operator ist.|
@@ -35,9 +40,15 @@ Definiert den Vorlagenklassenstapel und zwei unterstützende Vorlagen.
 |[operator>](../standard-library/stack-operators.md#op_gt)|Testet, ob das Stapelobjekt links vom Operator größer als das Stapelobjekt rechts vom Operator ist.|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Testet, ob das Stapelobjekt links vom Operator größer gleich dem Stapelobjekt rechts vom Operator ist.|
 
+### <a name="functions"></a>Funktionen
+
+|||
+|-|-|
+|[swap]()||
+
 ### <a name="classes"></a>Klassen
 
-|Klasse|Beschreibung|
+|||
 |-|-|
 |[stack-Klasse](../standard-library/stack-class.md)|Eine Vorlagencontainer-Adapterklasse, die die Funktionalität einschränkt, indem sie den Zugriff auf das Element beschränkt, das zuletzt zu einem zugrunde liegenden Containertyp hinzugefügt wurde.|
 

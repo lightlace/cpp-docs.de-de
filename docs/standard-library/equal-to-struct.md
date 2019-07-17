@@ -7,12 +7,12 @@ helpviewer_keywords:
 - equal_to function
 - equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
-ms.openlocfilehash: 9dc388c5e4248b6d0cd6ad4842be7252601dec13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac7c5a3ed8d85e6ea3ad46ec61c7968bc19cd15e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413735"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245832"
 ---
 # <a name="equalto-struct"></a>equal_to-Struktur
 
@@ -39,12 +39,13 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*, *T*, *U* jeder Typ, unterstützt eine `operator==` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
+*Typ*, *T*, *U*\
+Jeder Typ, der ein `operator==`-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links*<br/>
+*Links*\
 Der linke Operand des Gleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts*<br/>
+*Richting*\
 Der rechte Operand des Gleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert

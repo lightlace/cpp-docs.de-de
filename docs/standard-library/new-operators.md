@@ -1,108 +1,97 @@
 ---
-title: '&lt;new&gt;-Operatoren'
+title: '&lt;neue&gt; Operatoren und Enumerationen'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-ms.openlocfilehash: 87f7b6cfd6a06ab03b27ebe6aa4dd41b0b900673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3fd5b825fe1eaf3a07d9d001f03b9d0c64ffa31
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223687"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243684"
 ---
-# <a name="ltnewgt-operators"></a>&lt;new&gt;-Operatoren
+# <a name="ltnewgt-operators-and-enums"></a>&lt;neue&gt; Operatoren und Enumerationen
 
-||||
-|-|-|-|
-|[operator delete](#op_delete)|[operator delete[]](#op_delete_arr)|[operator new](#op_new)|
-|[operator new[]](#op_new_arr)|
+## <a name="op_align_val_t"></a> Enum-align_val_t
 
-## <a name="op_delete"></a> operator delete
+```cpp
+enum class align_val_t : size_t {};
+```
 
-Die Funktion, die durch einen Löschausdruck aufgerufen wird, um Speicher für einzelne Objekte freizugeben.
+## <a name="op_delete"></a> Delete-Operator
+
+Die Funktion aufgerufen wird, durch einen Löschausdruck Speicher für einzelne Objekte aufzuheben.
 
 ```cpp
 void operator delete(void* ptr) throw();
-
-void operator delete(void *,
-    void*) throw();
-
-void operator delete(void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete(void *, void*) throw();
+void operator delete(void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*ptr*<br/>
+*PTR*\
 Der Zeiger, dessen Wert durch den Löschvorgang als ungültig gerendert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Funktion wird aufgerufen, durch einen Löschausdruck zum Rendern des Werts der *Ptr* ungültig. Das Programm kann eine Funktion mit dieser Funktionssignatur definieren, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Das erforderliche Verhalten ist, akzeptieren den Wert *Ptr* , Null, oder die durch einen früheren Aufruf zurückgegeben wurde [new-Operator](../standard-library/new-operators.md#op_new)(**"size_t"**).
+Die erste Funktion wird aufgerufen, durch einen Löschausdruck zum Rendern des Werts der *Ptr* ungültig. Das Programm kann eine Funktion mit dieser Funktionssignatur definieren, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Das erforderliche Verhalten ist, akzeptieren den Wert *Ptr* , Null, oder die durch einen früheren Aufruf zurückgegeben wurde [new-Operator](../standard-library/new-operators.md#op_new)( **"size_t"** ).
 
-Das Standardverhalten für einen null-Wert des *Ptr* geschieht nichts. Jeder andere Wert von *Ptr* muss ein Wert, der zuvor durch einen Aufruf zurückgegeben wie zuvor beschrieben sein. Das Standardverhalten für diese einen Wert ungleich null der *Ptr* Freigebens von den früheren Aufruf zugeordnet ist. Es wird nicht angegeben, unter welchen Umständen Speicherplatz dieser Art ganz oder teilweise, durch einen nachfolgenden Aufruf von zugeordnet ist `operator new`(**"size_t"**), oder einem beliebigen `calloc`( **"size_t"**), `malloc`( **"size_t"**), oder `realloc`( **"void"**<strong>\*</strong>, **"size_t"**).
+Das Standardverhalten für einen null-Wert des *Ptr* geschieht nichts. Jeder andere Wert von *Ptr* muss ein Wert, der zuvor durch einen Aufruf zurückgegeben wie zuvor beschrieben sein. Das Standardverhalten für diese einen Wert ungleich null der *Ptr* Freigebens von den früheren Aufruf zugeordnet ist. Es wird nicht angegeben, unter welchen Umständen Speicherplatz dieser Art ganz oder teilweise, durch einen nachfolgenden Aufruf von zugeordnet ist `operator new`( **"size_t"** ), oder einem beliebigen `calloc`( **"size_t"** ), `malloc`( **"size_t"** ), oder `realloc`( **"void"** <strong>\*</strong>, **"size_t"** ).
 
 Die zweite Funktion wird durch einen Placement-delete-Ausdruck für einen entsprechenden new-Ausdruck der Form **new**( **std:: size_t**) aufgerufen. Dabei wird keine Aktion ausgeführt.
 
-Die dritte Funktion wird durch einen Placement-delete-Ausdruck für einen entsprechenden new-Ausdruck der Form **new**( **std::size_t**, **conststd::nothrow_t&**) aufgerufen. Das Programm kann eine Funktion mit dieser Funktionssignatur definieren, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Als erforderliches Verhalten soll ein Wert von `ptr` akzeptiert werden, der gleich 0 (null) ist oder durch einen früheren Aufruf von `operator new`( **size_t**). zurückgegeben wurde. Das Standardverhalten ist das bewerten **löschen**(`ptr`).
+Die dritte Funktion wird durch einen Placement-delete-Ausdruck für einen entsprechenden new-Ausdruck der Form **new**( **std::size_t**, **conststd::nothrow_t&** ) aufgerufen. Das Programm kann eine Funktion mit dieser Funktionssignatur definieren, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Als erforderliches Verhalten soll ein Wert von `ptr` akzeptiert werden, der gleich 0 (null) ist oder durch einen früheren Aufruf von `operator new`( **size_t**). zurückgegeben wurde. Das Standardverhalten ist das bewerten **löschen**(`ptr`).
 
 ### <a name="example"></a>Beispiel
 
 Finden Sie unter [new-Operator](../standard-library/new-operators.md#op_new) für ein Beispiel mit **Delete-Operator**.
 
-## <a name="op_delete_arr"></a> operator delete[]
+## <a name="op_delete_arr"></a> Operator Delete]
 
 Die Funktion, die durch einen Löschausdruck (delete-Ausdruck) aufgerufen wird, um Speicher für ein Array von Objekten freizugeben.
 
 ```cpp
 void operator delete[](void* ptr) throw();
-
-void operator delete[](void *,
-    void*) throw();
-
-void operator delete[](void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete[](void *, void*) throw();
+void operator delete[](void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*ptr*<br/>
+*PTR*\
 Der Zeiger, dessen Wert durch den Löschvorgang als ungültig gerendert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Funktion wird aufgerufen, indem ein `delete[]` Ausdruck zum Rendern des Werts der *Ptr* ungültig. Die Funktion lässt sich ersetzen, da das Programm eine Funktion mit dieser Funktionssignatur definieren kann, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Das erforderliche Verhalten ist, akzeptieren den Wert *Ptr* , Null, oder die durch einen früheren Aufruf zurückgegeben wurde [new-Operator&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**"size_t"**). Das Standardverhalten für einen null-Wert des *Ptr* geschieht nichts. Jeder andere Wert von *Ptr* muss ein Wert, der zuvor durch einen Aufruf zurückgegeben wie zuvor beschrieben sein. Das Standardverhalten für diese einen nicht-Null-Wert, der *Ptr* Freigebens von den früheren Aufruf zugeordnet ist. Es wird nicht angegeben, unter welchen Umständen Speicherplatz dieser Art ganz oder teilweise, durch einen nachfolgenden Aufruf von zugeordnet ist [new-Operator](../standard-library/new-operators.md#op_new)(**"size_t"**), oder einem beliebigen `calloc`(**"size_t"**), `malloc`(**"size_t"**), oder `realloc`( **"void"**<strong>\*</strong>, **"size_t"**) .
+Die erste Funktion wird aufgerufen, indem ein `delete[]` Ausdruck zum Rendern des Werts der *Ptr* ungültig. Die Funktion lässt sich ersetzen, da das Programm eine Funktion mit dieser Funktionssignatur definieren kann, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Das erforderliche Verhalten ist, akzeptieren den Wert *Ptr* , Null, oder die durch einen früheren Aufruf zurückgegeben wurde [new-Operator&#91;&#93;](../standard-library/new-operators.md#op_new_arr)( **"size_t"** ). Das Standardverhalten für einen null-Wert des *Ptr* geschieht nichts. Jeder andere Wert von *Ptr* muss ein Wert, der zuvor durch einen Aufruf zurückgegeben wie zuvor beschrieben sein. Das Standardverhalten für diese einen nicht-Null-Wert, der *Ptr* Freigebens von den früheren Aufruf zugeordnet ist. Es wird nicht angegeben, unter welchen Umständen Speicherplatz dieser Art ganz oder teilweise, durch einen nachfolgenden Aufruf von zugeordnet ist [new-Operator](../standard-library/new-operators.md#op_new)( **"size_t"** ), oder einem beliebigen `calloc`( **"size_t"** ), `malloc`( **"size_t"** ), oder `realloc`( **"void"** <strong>\*</strong>, **"size_t"** ) .
 
 Die zweite Funktion wird aufgerufen, durch einen Placement- `delete[]` Ausdruck entspricht einer `new[]` Ausdruck der Form `new[]`(**Std:: size_t**). Dabei wird keine Aktion ausgeführt.
 
-Die dritte Funktion wird durch einen Placement-delete-Ausdruck für einen entsprechenden `new[]`-Ausdruck der Form `new[]`( **std::size_t**, **const std::nothrow_t&**) aufgerufen. Das Programm kann eine Funktion mit dieser Funktionssignatur definieren, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Das erforderliche Verhalten ist, akzeptieren den Wert *Ptr* , Null, oder die durch einen früheren Aufruf von Operator zurückgegeben wurde `new[]`(**"size_t"**). Standardmäßig wird `delete[]`( `ptr`) ausgewertet.
+Die dritte Funktion wird durch einen Placement-delete-Ausdruck für einen entsprechenden `new[]`-Ausdruck der Form `new[]`( **std::size_t**, **const std::nothrow_t&** ) aufgerufen. Das Programm kann eine Funktion mit dieser Funktionssignatur definieren, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Das erforderliche Verhalten ist, akzeptieren den Wert *Ptr* , Null, oder die durch einen früheren Aufruf von Operator zurückgegeben wurde `new[]`( **"size_t"** ). Standardmäßig wird `delete[]`( `ptr`) ausgewertet.
 
 ### <a name="example"></a>Beispiel
 
 Unter [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) finden Sie Beispiele für die Verwendung von `operator delete[]`.
 
-## <a name="op_new"></a> operator new
+## <a name="op_new"></a> new-Operator
 
 Die Funktion, die durch einen new-Ausdruck aufgerufen wird, um Speicher für einzelne Objekte zu belegen.
 
 ```cpp
 void* operator new(std::size_t count) throw(bad_alloc);
-
-void* operator new(std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new(std::size_t count,
-    void* ptr) throw();
+void* operator new(std::size_t count, const std::nothrow_t&) throw();
+void* operator new(std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*count*<br/>
+*Anzahl*\
 Der zu belegende Speicherplatz in Bytes.
 
-*ptr*<br/>
+*PTR*\
 Der Zeiger, der zurückgegeben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -127,7 +116,7 @@ Als erforderliches Verhalten für einen neuen Handler ist eine der folgenden Ope
 
 Standardmäßig wird für einen [new handler](../standard-library/new-typedefs.md#new_handler) ein Objekt des Typs `bad_alloc` ausgelöst. Ein NULL-Zeiger legt den neuen Standard-Handler fest.
 
-Die Reihenfolge und Kontinuität von durch aufeinanderfolgende Aufrufe belegtem Speicherplatz `operator new`(**"size_t"**) ist nicht vorgegeben, wie die dort gespeicherten Anfangswerte.
+Die Reihenfolge und Kontinuität von durch aufeinanderfolgende Aufrufe belegtem Speicherplatz `operator new`( **"size_t"** ) ist nicht vorgegeben, wie die dort gespeicherten Anfangswerte.
 
 Die zweite Funktion wird durch einen Placement-new-Ausdruck aufgerufen, um genau auf alle Objekte dieser Größe ausgerichtete `count`-Bytes im Speicher zu belegen. Die Funktion lässt sich ersetzen, da das Programm eine Funktion mit dieser Funktionssignatur definieren kann, die die von der C++-Standardbibliothek definierte Standardversion ersetzt.
 
@@ -137,7 +126,7 @@ Die dritte Funktion wird durch einen Placement-**new**-Ausdruck der Form **new**
 
 Zum Freigeben von zugeordneten **new-Operator**, rufen Sie [Delete-Operator](../standard-library/new-operators.md#op_delete).
 
-Informationen zum Auslöseverhalten von „new“ finden Sie unter [new-Operator und delete-Operator](../cpp/new-and-delete-operators.md).
+Informationen zum Auslösen von oder nicht auslösend Verhalten der neuen, finden Sie unter [der neuen "und" delete](../cpp/new-and-delete-operators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -182,26 +171,22 @@ int main( )
 }
 ```
 
-## <a name="op_new_arr"></a> operator new[]
+## <a name="op_new_arr"></a> new []-Operator
 
 Die Zuordnungsfunktion, die durch einen new-Ausdruck aufgerufen wird, um Speicherplatz für ein Array von Objekten zu belegen.
 
 ```cpp
 void* operator new[](std::size_t count) throw(std::bad_alloc);
-
-void* operator new[](std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new[](std::size_t count,
-    void* ptr) throw();
+void* operator new[](std::size_t count, const std::nothrow_t&) throw();
+void* operator new[](std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*count*<br/>
+*Anzahl*\
 Der Speicherplatz in Bytes, der für ein Array-Objekt belegt werden soll.
 
-*ptr*<br/>
+*PTR*\
 Der Zeiger, der zurückgegeben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -210,7 +195,7 @@ Entweder ein Zeiger auf die niedrigste Byteadresse des neu belegten Speichers Od
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Funktion wird durch einen `new[]`-Ausdruck aufgerufen, um `count`-Bytes im Speicher zu belegen, die genau auf alle Array-Objekte ausgerichtet sind, die höchstens diese Größe aufweisen. Das Programm kann eine Funktion mit dieser Funktionssignatur definieren, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Das erforderliche Verhalten ist dieselbe wie für [new-Operator](../standard-library/new-operators.md#op_new)(**"size_t"**). Standardmäßig wird `operator new`( `count`) zurückgegeben.
+Die erste Funktion wird durch einen `new[]`-Ausdruck aufgerufen, um `count`-Bytes im Speicher zu belegen, die genau auf alle Array-Objekte ausgerichtet sind, die höchstens diese Größe aufweisen. Das Programm kann eine Funktion mit dieser Funktionssignatur definieren, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Das erforderliche Verhalten ist dieselbe wie für [new-Operator](../standard-library/new-operators.md#op_new)( **"size_t"** ). Standardmäßig wird `operator new`( `count`) zurückgegeben.
 
 Die zweite Funktion wird durch einen Placement-`new[]`-Ausdruck aufgerufen, um genau auf alle Objekte dieser Größe ausgerichtete `count`-Bytes im Speicher zu belegen. Das Programm kann eine Funktion mit dieser Funktionssignatur definieren, die die von der C++-Standardbibliothek definierte Standardversion ersetzt. Das Standardverhalten ist zurückzugebenden **Operatornew**(`count`) die Funktion erfolgreich ausgeführt. Ansonsten gibt sie einen NULL-Zeiger zurück.
 
@@ -260,7 +245,3 @@ int main() {
    delete[ ] fPtr3;
 }
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[\<new>](../standard-library/new.md)<br/>

@@ -6,16 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cassert header
 ms.assetid: 6ead15a3-ac45-4075-be8e-350bca995c26
-ms.openlocfilehash: 6634ddd9adb4e7e7364aec2354c4ebd707e6ccd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14dda03e835ec411013b2d827bd1ccaa77f8982e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380038"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245016"
 ---
 # <a name="ltcassertgt"></a>&lt;cassert&gt;
 
-Schließt den Standard-C-Bibliotheksheader \<assert.h> ein und fügt die verknüpften Namen zum `std`-Namespace hinzu.
+Schließt den Standard C-bibliotheksheader \<assert.h > und fügt die verknüpften Namen zum die `std` Namespace. Einschließen dieses Headers wird sichergestellt, dass die Namen deklariert, mit externer Bindung im Standard C-bibliotheksheader, in deklariert werden der `std` Namespace.
+
+> [!NOTE]
+> \<Assert.h > definiert nicht den `static_assert` Makro.
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,9 +26,15 @@ Schließt den Standard-C-Bibliotheksheader \<assert.h> ein und fügt die verknü
 #include <cassert>
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="macros"></a>Makros
 
-Durch Einschließen dieses Headers wird sichergestellt, dass die mit externer Bindung im Standard-C-Bibliotheksheader deklarierten Namen im `std`-Namespace deklariert werden.
+```cpp
+#define assert(E)
+```
+
+### <a name="remarks"></a>Hinweise
+
+`assert(E)` ist nur Konstanten, wenn NDEBUG definiert ist, in denen `assert` zuletzt definiert oder neu definiert, oder *E* konvertiert "bool" ergibt **"true"** .
 
 ## <a name="see-also"></a>Siehe auch
 

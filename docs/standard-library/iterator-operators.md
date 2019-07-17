@@ -17,22 +17,16 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 311710d5614bbc7c24d6b32e89285715476f94da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7455610af5f03be024753e26f67e561b14c85612
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224258"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244018"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt;-Operatoren
 
-||||
-|-|-|-|
-|[Operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|
-|[operator-](#operator-)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> Operator! =
 
 Testet, ob das Iterator-Objekt links vom Operator ungleich dem Iterator-Objekt rechts vom Operator ist.
 
@@ -49,10 +43,10 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Objekt vom Typ `iterator`.
 
-*right*<br/>
+*Richting*\
 Ein Objekt vom Typ `iterator`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -125,7 +119,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testet, ob das Iterator-Objekt links vom Operator gleich dem Iterator-Objekt rechts vom Operator ist.
 
@@ -153,10 +147,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Objekt des Typs „iterator“.
 
-*right*<br/>
+*Richting*\
 Ein Objekt des Typs „iterator“.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -167,7 +161,7 @@ Ein Objekt des Typs „iterator“.
 
 Ein Iterator-Objekt entspricht einem anderen, wenn sie sich auf dieselben Elemente in einem Container beziehen. Wenn zwei Iteratoren auf verschiedene Elemente in einem Container zeigen, sind sie nicht gleich.
 
-Die ersten zwei vorlagenoperatoren geben nur true, wenn beide zurück *linken* und *rechten* den gleichen Iterator speichern. Der dritte Vorlagenoperator gibt "true" nur, wenn beide *linken* und *rechten* den gleichen streamzeiger speichern. Der vierte Vorlagenoperator gibt ` left.equal ( right)` zurück.
+Die ersten zwei vorlagenoperatoren geben nur true, wenn beide zurück *linken* und *rechten* den gleichen Iterator speichern. Der dritte Vorlagenoperator gibt "true" nur, wenn beide *linken* und *rechten* den gleichen streamzeiger speichern. Der vierte Vorlagenoperator gibt `left.equal (right)` zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -231,7 +225,7 @@ in the reversed sequence: 8.
 The iterators are not equal.
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a>-Operator&lt;
 
 Testet, ob das Iterator-Objekt links vom Operator kleiner ist als das Iterator-Objekt rechts vom Operator.
 
@@ -242,10 +236,10 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Objekt vom Typ `iterator`.
 
-*right*<br/>
+*Richting*\
 Ein Objekt vom Typ `iterator`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -322,7 +316,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Operator&lt;=
 
 Testet, ob das Iterator-Objekt links vom Operator kleiner als oder gleich dem Iterator-Objekt rechts vom Operator ist.
 
@@ -333,10 +327,10 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Objekt des Typs „iterator“.
 
-*right*<br/>
+*Richting*\
 Ein Objekt des Typs „iterator“.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -417,7 +411,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a>-Operator&gt;
 
 Testet, ob das Iterator-Objekt links vom Operator größer als das Iterator-Objekt rechts vom Operator ist.
 
@@ -428,10 +422,10 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Objekt des Typs „iterator“.
 
-*right*<br/>
+*Richting*\
 Ein Objekt des Typs „iterator“.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -506,7 +500,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Operator&gt;=
 
 Testet, ob das Iterator-Objekt links vom Operator größer als oder gleich dem Iterator-Objekt rechts vom Operator ist.
 
@@ -517,10 +511,10 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Objekt des Typs „iterator“.
 
-*right*<br/>
+*Richting*\
 Ein Objekt des Typs „iterator“.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -601,7 +595,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_add"></a> operator+
+## <a name="op_add"></a> Operator +-
 
 Fügt einen Offset zu einem Iterator hinzu und gibt `move_iterator` oder `reverse_iterator` zurück, das auf das eingefügte Element an der neuen Offsetposition zeigt.
 
@@ -621,15 +615,15 @@ operator+(
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*<br/>
+*_Off*\
 Die Anzahl von Positionen, um die der konstante move_iterator oder der konstante reverse_iterator versetzt werden soll.
 
-*right*<br/>
+*Richting*\
 Der zu versetzende Iterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt die Summe *rechten* + *_Off*.
+Gibt die Summe *rechten* +  *_Off*.
 
 ### <a name="example"></a>Beispiel
 
@@ -680,7 +674,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a> operator-
+## <a name="operator-"></a> Operator-
 
 Subtrahiert einen Iterator von einem anderen und gibt die Differenz zurück.
 
@@ -698,10 +692,10 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Iterator.
 
-*right*<br/>
+*Richting*\
 Ein Iterator.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -772,7 +766,3 @@ The iterator rVPOS2 now points to the fifth element
 in the reversed sequence: 2.
 The difference: rVPOS2 - rVPOS1= 4.
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[\<iterator>](../standard-library/iterator.md)<br/>

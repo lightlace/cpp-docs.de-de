@@ -7,28 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 1566f9105a61b1c037e86fd2e4b280ed6dd2020e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385218"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245237"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
 Definiert verschiedene Typen und Funktionen, die grundlegend für den Umgang mit iostreams sind. Dieser Header wird in der Regel von einem anderen iostream-Header eingeschlossen. Sie müssen ihn nur selten direkt einschließen.
 
-## <a name="syntax"></a>Syntax
+## <a name="requirements"></a>Anforderungen
 
-```cpp
-#include <ios>
-```
+**Header**: \<Ios >
+
+**Namespace:** std
+
+> [!NOTE]
+> Die \<Ios >-Bibliothek verwendet die `#include <iosfwd>` Anweisung.
 
 ## <a name="remarks"></a>Hinweise
 
 Eine große Gruppe von Funktionen sind Manipulatoren. Ein in \<ios> deklarierter Manipulator ändert die Werte, die im Argumentobjekt der Klasse [ios_base](../standard-library/ios-base-class.md) gespeichert sind. Andere Manipulatoren führen Aktionen für Streams aus, die von Objekten eines Typs gesteuert werden, der von dieser Klasse abgeleitet wurde, z.B. eine Spezialisierung einer der Vorlagenklassen [basic_istream](../standard-library/basic-istream-class.md) oder [basic_ostream](../standard-library/basic-ostream-class.md). Z. B. [Noskipws](../standard-library/ios-functions.md#noskipws)(**str**) Löscht das formatflag `ios_base::skipws` im Objekt `str`, das von einem dieser Typen sein kann.
 
-Aufgrund von speziellen Einfüge- und Extraktionsvorgängen für die aus `ios_base` abgeleiteten Klassen können Sie einen Manipulator auch aufrufen, indem Sie ihn in einen Ausgabestream einfügen oder ihn aus einem Eingabestream extrahieren. Zum Beispiel:
+Aufgrund von speziellen Einfüge- und Extraktionsvorgängen für die aus `ios_base` abgeleiteten Klassen können Sie einen Manipulator auch aufrufen, indem Sie ihn in einen Ausgabestream einfügen oder ihn aus einem Eingabestream extrahieren. Beispiel:
 
 ```cpp
 istr>> noskipws;
@@ -36,9 +39,11 @@ istr>> noskipws;
 
 Ruft [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**) auf.
 
+## <a name="members"></a>Member
+
 ### <a name="typedefs"></a>Typedefs
 
-|Typname|Beschreibung|
+|||
 |-|-|
 |[ios](../standard-library/ios-typedefs.md#ios)|Unterstützt die ios-Klasse aus der alten iostream-Bibliothek.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Unterstützt interne Vorgänge.|
@@ -56,6 +61,7 @@ Ruft [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**) auf.
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Konfiguriert die Flags eines `ios_base`-Objekts, sodass ein Standard-Anzeigeformat für Floatwerte verwendet wird.|
 |[fixed](../standard-library/ios-functions.md#fixed)|Gibt an, dass eine Gleitkommazahl in fester Dezimalschreibweise angezeigt wird.|
 |[hex](../standard-library/ios-functions.md#hex)|Gibt an, dass ganzzahlige Variablen in Basis-16-Schreibweise angezeigt werden.|
+|[hexfloat](../standard-library/ios-functions.md#hexfloat)|
 |[internal](../standard-library/ios-functions.md#internal)|Bewirkt, dass ein Nummernzeichen linksbündig und die Zahl rechtsbündig ausgerichtet wird.|
 |[left](../standard-library/ios-functions.md#left)|Bewirkt, dass Text, der nicht so breit ist wie die Ausgabebreite, im Stream linksbündig angezeigt wird.|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Gibt an, dass Variablen des Typs [bool](../cpp/bool-cpp.md) im Stream als 1 oder 0 angezeigt werden.|
@@ -75,9 +81,19 @@ Ruft [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**) auf.
 |[unitbuf](../standard-library/ios-functions.md#unitbuf)|Bewirkt, dass die Ausgabe verarbeitet wird, wenn der Puffer nicht leer ist.|
 |[uppercase](../standard-library/ios-functions.md#uppercase)|Gibt an, dass hexadezimale Ziffern und der Exponent in wissenschaftlicher Schreibweise in Großbuchstaben angezeigt werden.|
 
+### <a name="error-reporting"></a>Fehlerberichterstattung
+
+|||
+|-|-|
+|[io_errc](../standard-library/ios-functions.md#io_errc)||
+|[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
+|[iostream_category](../standard-library/ios-functions.md#iostream_category)||
+|[make_error_code](../standard-library/ios-functions.md#make_error_code)||
+|[make_error_condition](../standard-library/ios-functions.md#make_error_condition)||
+
 ### <a name="classes"></a>Klassen
 
-|Klasse|Beschreibung|
+|||
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|Die Vorlagenklasse beschreibt die Speicher- und Memberfunktionen, die Eingabestreams (der Vorlagenklasse [basic_istream](../standard-library/basic-istream-class.md)) und Ausgabestreams (der Vorlagenklasse[ basic_ostream](../standard-library/basic-ostream-class.md)) gemeinsam sind, die von den Vorlagenparametern abhängen.|
 |[fpos](../standard-library/fpos-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das alle Informationen, die zum Wiederherstellen eines beliebigen Dateipositionsindikators innerhalb eines Streams erforderlich sind, speichern kann.|
