@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 8e13d03e577df4c64e85704993cfc0ff81af5f8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb32d1846c4e94fbd275dcc416de4f37d9bb53f1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369761"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240377"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator-Klasse
 
@@ -25,15 +25,15 @@ Eine Adapterklasse, die bereitgestellt wird, um Algorithmen das Speichern ihrer 
 
 ```cpp
 template <class OutputIterator, class Type>
-class raw_storage_iterator
+    class raw_storage_iterator
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*OutputIterator*<br/>
+*OutputIterator*\
 Gibt den Ausgabeiterator für das Objekt an, das gespeichert wird.
 
-*Type*<br/>
+*Typ*\
 Der Typ des Objekts, dem Speicher zugeordnet wird.
 
 ## <a name="remarks"></a>Hinweise
@@ -46,32 +46,26 @@ Diese Adapterklasse wird verwendet, wenn es erforderlich ist, Speicherbelegung u
 
 ### <a name="constructors"></a>Konstruktoren
 
-|Konstruktor|Beschreibung|
+|||
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|Erstellt einen unformatierten Speicheriterator mit einem angegebenen zugrunde liegenden Ausgabeiterator.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Typname|Beschreibung|
+|||
 |-|-|
 |[element_type](#element_type)|Stellt einen Typ bereit, der ein Element beschreibt, das in einem unformatierten Speicheriterator gespeichert werden soll.|
 |[iter_type](#iter_type)|Stellt einen Typ bereit, der einen Iterator beschreibt, der einem unformatierten Speicheriterator zugrunde liegt.|
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
 |[operator*](#op_star)|Ein Dereferenzierungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `ii`  =  `x`.|
 |[operator=](#op_eq)|Ein Zuweisungsoperator, der zum Implementieren der unformatierten speicheriteratorausdrucks \* `i`  =  `x` für das im Speicher gespeichert.|
 |[operator++](#op_add_add)|Inkrementoperatoren in Präfix- und Postfix-Notation für unformatierte Speicheriteratoren.|
 
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<memory>
-
-**Namespace:** std
-
-## <a name="element_type"></a> raw_storage_iterator::element_type
+### <a name="element_type"></a> ELEMENT_TYPE
 
 Stellt einen Typ bereit, der ein Element beschreibt, das in einem unformatierten Speicheriterator gespeichert werden soll.
 
@@ -79,11 +73,11 @@ Stellt einen Typ bereit, der ein Element beschreibt, das in einem unformatierten
 typedef Type element_type;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Der Typ ist ein Synonym für den Raw_storage_iterator-Klassenvorlagenparameter `Type`.
 
-## <a name="iter_type"></a> raw_storage_iterator::iter_type
+### <a name="iter_type"></a> iter_type
 
 Stellt einen Typ bereit, der einen Iterator beschreibt, der einem unformatierten Speicheriterator zugrunde liegt.
 
@@ -91,11 +85,11 @@ Stellt einen Typ bereit, der einen Iterator beschreibt, der einem unformatierten
 typedef ForwardIterator iter_type;
 ```
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Der Type stellt ein Synonym für den Vorlagenparameter `ForwardIterator` dar.
 
-## <a name="op_star"></a>  raw_storage_iterator:: Operator\*
+### <a name="op_star"></a>-Operator\*
 
 Der Dereferenzierungsoperator, der zum Implementieren des unformatierten Speicheriteratorausdrucks \* *ii* = *x* verwendet wird.
 
@@ -103,15 +97,15 @@ Der Dereferenzierungsoperator, der zum Implementieren des unformatierten Speiche
 raw_storage_iterator<ForwardIterator, Type>& operator*();
 ```
 
-### <a name="return-value"></a>Rückgabewert
+#### <a name="return-value"></a>Rückgabewert
 
 Ein Verweis auf den unformatierten Speicheriterator.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die Anforderungen für eine `ForwardIterator` der unformatierte speicheriterator nur den Ausdruck erfordern \* *Ii* = *t* gültig sein und, die er sagt nichts über die **Operator** oder `operator=` selbst. Die memberoperatoren in dieser Implementierung gibt  **\*dies**, sodass [Operator =](#op_eq)(**ConstType**&) können den tatsächlichen Speicher in einem Ausdruck ausführen wie z. B. \* *Ptr* = `val`.
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 ```cpp
 // raw_storage_iterator_op_deref.cpp
@@ -155,14 +149,15 @@ int main( void)
    raw_storage_iterator< Int*, Int > it( pInt );
 *it = 5;
 }
-/* Output:
+```
+
+```Output
 Not constructed.
 Copying 5
 Constructing 5
-*/
 ```
 
-## <a name="op_eq"></a> raw_storage_iterator::operator=
+### <a name="op_eq"></a> Operator =
 
 Ein Zuweisungsoperator, der dazu verwendet wird, den für einen unformatierten Speicheriterator verwendeten Ausdruck \* *i* = *x* zu implementieren, damit er im Arbeitsspeicher gespeichert werden kann.
 
@@ -171,22 +166,22 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
     const Type& val);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-*val*<br/>
+*val*\
 Der Wert des Objekts vom Typ `Type` in den Speicher eingefügt werden soll.
 
-### <a name="return-value"></a>Rückgabewert
+#### <a name="return-value"></a>Rückgabewert
 
 Der Operator fügt `val` in den Speicher ein, und gibt dann einen Verweis auf den unformatierten Speicheriterator zurück.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die Anforderungen für eine `ForwardIterator` Zustand, der der unformatierten speicheriterator erfüllt werden muss, benötigen Sie nur den Ausdruck \* *Ii* = *t* gültig sein, und er sagt nichts über die **Operator** oder `operator=` selbst. Diese Memberoperatoren geben beide **\*this** zurück.
 
 Der Zuweisungsoperator erstellt zuerst das nächste Objekt in der Ausgabesequenz, mithilfe des gespeicherten Iteratorwerts, indem die Platzierung des neuer Ausdrucks **new** (( `void` \*) &\* **first**) **Typ**( `val`) bewertet wird.
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 ```cpp
 // raw_storage_iterator_op_assign.cpp
@@ -228,14 +223,15 @@ int main( void )
    raw_storage_iterator<Int*, Int> it( pInt );
 *it = 5;
 }
-/* Output:
+```
+
+```Output
 Not constructed.
 Copying 5
 Constructing 5
-*/
 ```
 
-## <a name="op_add_add"></a> raw_storage_iterator::operator++
+### <a name="op_add_add"></a> "Operator++"
 
 Inkrementoperatoren in Präfix- und Postfix-Notation für unformatierte Speicheriteratoren.
 
@@ -245,11 +241,11 @@ raw_storage_iterator<ForwardIterator, Type>& operator++();
 raw_storage_iterator<ForwardIterator, Type> operator++(int);
 ```
 
-### <a name="return-value"></a>Rückgabewert
+#### <a name="return-value"></a>Rückgabewert
 
 Ein unformatierten Speicheriterator oder ein Verweis auf einen unformatierten Speicheriterator.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Der erste Operator versucht schließlich zum Extrahieren und speichern ein Objekt des Typs `CharType` aus dem zugeordneten Eingabestream. Der zweite Operator erstellt eine Kopie des Objekts, inkrementiert das Objekt und gibt dann die Kopie zurück.
 
@@ -259,7 +255,7 @@ Der zweite Postinkrement-Operator erstellt eine Kopie von **\*this**, erhöht da
 
 Der Konstruktor speichert `first` wie die Ausgabe-Iterator-Objekt.
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 ```cpp
 // raw_storage_iterator_op_incr.cpp
@@ -282,16 +278,17 @@ int main( void )
 
    delete[] pInt;
 }
-/* Output:
+```
+
+```Output
 array 0 = 0
 array 1 = 2
 array 2 = 4
 array 3 = 6
 array 4 = 8
-*/
 ```
 
-## <a name="raw_storage_iterator"></a> raw_storage_iterator::raw_storage_iterator
+### <a name="raw_storage_iterator"></a> raw_storage_iterator
 
 Erstellt einen unformatierten Speicheriterator mit einem angegebenen zugrunde liegenden Ausgabeiterator.
 
@@ -299,12 +296,12 @@ Erstellt einen unformatierten Speicheriterator mit einem angegebenen zugrunde li
 explicit raw_storage_iterator(ForwardIterator first);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Der Forward-Iterator, mit dem das `raw_storage_iterator`-Objekt erstellt wird.
 
-### <a name="example"></a>Beispiel
+#### <a name="example"></a>Beispiel
 
 ```cpp
 // raw_storage_iterator_ctor.cpp
@@ -360,7 +357,9 @@ int main( void )
 
    free(pInt);
 }
-/* Output:
+```
+
+```Output
 Error! I'm not constructed!
 Copying 1
 Error! I'm not constructed!
@@ -381,9 +380,4 @@ array 0 = 1
 array 1 = 2
 array 2 = 3
 array 3 = 4
-*/
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -200,46 +200,14 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 7dc5554b2d49e4c306aa64c32d7c9f8cc8a5bb6a
-ms.sourcegitcommit: 1acb6755e11379026a96f63facac4d33f4dc47ae
+ms.openlocfilehash: 7b0a8b427b919b624928a7d37d67937ac04884db
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314283"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245979"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorithmusfunktionen&gt;
-
-||||
-|-|-|-|
-|[move](#alg_move)|[adjacent_find](#adjacent_find)|[all_of](#all_of)|
-|[any_of](#any_of)|[binary_search](#binary_search)|[copy](#copy)|
-|[copy_backward](#copy_backward)|[copy_if](#copy_if)|[copy_n](#copy_n)|
-|[count](#count)|[count_if](#count_if)|[equal](#equal)|
-|[equal_range](#equal_range)|[fill](#fill)|[fill_n](#fill_n)|
-|[find](#find)|[find_end](#find_end)|[find_first_of](#find_first_of)|
-|[find_if](#find_if)|[find_if_not](#find_if_not)|[for_each](#for_each)|
-|[generate](#generate)|[generate_n](#generate_n)|[includes](#includes)|
-|[inplace_merge](#inplace_merge)|[is_heap](#is_heap)|[is_heap_until](#is_heap_until)|
-|[is_partitioned](#is_partitioned)|[is_permutation](#is_permutation)|[is_sorted](#is_sorted)|
-|[is_sorted_until](#is_sorted_until)|[iter_swap](#iter_swap)|[lexicographical_compare](#lexicographical_compare)|
-|[lower_bound](#lower_bound)|[make_heap](#make_heap)|[max](#max)|
-|[max_element](#max_element)|[merge](#merge)|[Min.](#min)|
-|[min_element](#min_element)|[minmax](#minmax)|[minmax_element](#minmax_element)|
-|[mismatch](#mismatch)|[move_backward](#move_backward)|[next_permutation](#next_permutation)|
-|[none_of](#none_of)|[nth_element](#nth_element)|[partial_sort](#partial_sort)|
-|[partial_sort_copy](#partial_sort_copy)|[partition](#partition)|[partition_copy](#partition_copy)|
-|[partition_point](#partition_point)|[pop_heap](#pop_heap)|[prev_permutation](#prev_permutation)|
-|[push_heap](#push_heap)|[random_shuffle](#random_shuffle)|[remove](#remove)|
-|[remove_copy](#remove_copy)|[remove_copy_if](#remove_copy_if)|[remove_if](#remove_if)|
-|[replace](#replace)|[replace_copy](#replace_copy)|[replace_copy_if](#replace_copy_if)|
-|[replace_if](#replace_if)|[reverse](#reverse)|[reverse_copy](#reverse_copy)|
-|[rotate](#rotate)|[rotate_copy](#rotate_copy)|[search](#search)|
-|[search_n](#search_n)|[set_difference](#set_difference)|[set_intersection](#set_intersection)|
-|[set_symmetric_difference](#set_symmetric_difference)|[set_union](#set_union)|[sort](#sort)|
-|[sort_heap](#sort_heap)|[stable_partition](#stable_partition)|[stable_sort](#stable_sort)|
-|[shuffle](#shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|
-|[transform](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|
-|[upper_bound](#upper_bound)|
 
 ## <a name="adjacent_find"></a> adjacent_find
 
@@ -256,17 +224,30 @@ ForwardIterator adjacent_find(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator adjacent_find(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class BinaryPredicate>
+ForwardIterator adjacent_find(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*comp*<br/>
+*Comp*\
 Das binäre Prädikat, das die Bedingung vorgibt, mithilfe der Werte der benachbarten Elemente im zu durchsuchenden Bereich erfüllt zu werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -353,14 +334,21 @@ bool all_of(
     InputIterator first,
     InputIterator last,
     BinaryPredicatecomp);
+
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool all_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabe-Iterator, der angibt, ab wo nach Bedingungen gesucht werden soll. Der Iterator zeigt an, an welcher Stelle ein Bereich von Elementen beginnt.
 
-*last*<br/>
+*letzte*\
 Ein Eingabe-Iterator, der angibt, an welcher Stelle ein Bereich von Elementen endet, in dem nach einer Bedingung gesucht werden soll.
 
 *comp*<br/>
@@ -419,17 +407,24 @@ bool any_of(
     InputIterator first,
     InputIterator last,
     UnaryPredicate comp);
+
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool any_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabe-Iterator, der angibt, ab wo ein Bereich von Elementen auf eine Bedingung überprüft werden soll.
 
-*last*<br/>
+*letzte*\
 Ein Eingabe-Iterator, der angibt, an welcher Stelle ein Bereich von Elementen endet, in dem nach einer Bedingung gesucht werden soll.
 
-*comp*<br/>
+*Comp*\
 Eine Bedingung, auf die geprüft werden soll. Diese wird von einem benutzerdefinierten Prädikatfunktionsobjekt bereitgestellt. Das Prädikat definiert die Bedingung, die das zu prüfende Element erfüllen muss. Ein Prädikat akzeptiert ein einzelnes Argument und gibt entweder **TRUE** oder **FALSE** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -497,16 +492,16 @@ bool binary_search(
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*value*<br/>
+*value*\
 Der Wert, mit dem vom Wert des Elements eine Übereinstimmung erzielt werden muss oder der die Bedingung mit dem vom binären Prädikat angegebenen Elementwert erfüllen muss.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element kleiner als ein anderes ist. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -607,7 +602,16 @@ int main()
 }
 ```
 
-## <a name="copy"></a>  copy
+## <a name="clamp"></a> Clamp
+
+```cpp
+template<class T>
+constexpr const T& clamp(const T& v, const T& lo, const T& hi);
+template<class T, class Compare>
+constexpr const T& clamp(const T& v, const T& lo, const T& hi, Compare comp);
+```
+
+## <a name="copy"></a> Kopieren
 
 Weist die Werte von Elementen aus einem Quellbereich einem Zielbereich zu, durchläuft die Quellelementsequenz und weist ihnen vorwärts neue Positionen zu.
 
@@ -617,17 +621,23 @@ OutputIterator copy(
     InputIterator first,
     InputIterator last,
     OutputIterator destBeg);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, ForwardIterator1 last,
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der die Position des ersten Elements im Quellbereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im Quellbereich adressiert.
 
-*destBeg*<br/>
+*destBeg*\
 Ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich adressiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -714,13 +724,13 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein bidirektionaler Iterator, der die Position des ersten Elements im Quellbereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein bidirektionaler Iterator, der die Position hinter dem letzten Element im Quellbereich adressiert.
 
-*destEnd*<br/>
+*destEnd*\
 Ein bidirektionaler Iterator, der die Position hinter dem letzten Element im Zielbereich adressiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -801,20 +811,27 @@ OutputIterator copy_if(
     InputIterator last,
     OutputIterator dest,
     Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Predicate>
+ForwardIterator2 copy_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, ForwardIterator1 last,
+    ForwardIterator2 result, Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der den Beginn eines Bereichs angibt, der auf die Bedingung geprüft werden soll.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der das Ende des Bereichs angibt.
 
-*dest*<br/>
+*dest*\
 Ein Ausgabeiterator, der das Ziel der kopierten Elemente angibt.
 
-*_Pred*<br/>
+*_Pred*\
 Die Bedingung, auf die jedes Element im Bereich geprüft wird. Diese Bedingung wird von einem benutzerdefinierten Prädikatfunktionsobjekt bereitgestellt. Ein Prädikat akzeptiert ein Argument und gibt **"true"** oder **"false"** .
 
 ### <a name="return-value"></a>Rückgabewert
@@ -839,17 +856,24 @@ OutputIterator copy_n(
     InputIterator first,
     Size count,
     OutputIterator dest);
+
+template<class ExecutionPolicy, class ForwardIterator1, class Size,
+class ForwardIterator2>
+ForwardIterator2 copy_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, Size n,
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Eine Eingabeiterator, der angibt, von welcher Position die Elemente kopiert werden.
 
-*count*<br/>
+*Anzahl*\
 Ein Ganzzahltyp mit oder ohne Vorzeichen, der die Anzahl der zu kopierenden Elemente angibt.
 
-*dest*<br/>
+*dest*\
 Eine Ausgabeiterator, der angibt, wohin die Elemente kopiert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -889,7 +913,7 @@ int main()
 dandelion + badger = danger
 ```
 
-## <a name="count"></a> count
+## <a name="count"></a> Anzahl
 
 Gibt die Anzahl von Elementen in einem Bereich zurück, dessen Werte mit einem angegebenen Wert übereinstimmen.
 
@@ -899,17 +923,25 @@ typename iterator_traits<InputIterator>::difference_type count(
     InputIterator first,
     InputIterator last,
     const Type& val);
+    
+template<class ExecutionPolicy, class ForwardIterator, class T>
+typename iterator_traits<ForwardIterator>::difference_type
+count(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*val*<br/>
+*val*\
 Der Wert der zu zählenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -969,17 +1001,25 @@ typename iterator_traits<InputIterator>::difference_type count_if(
     InputIterator first,
     InputIterator last,
     Predicate pred);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+typename iterator_traits<ForwardIterator>::difference_type
+count_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*_Pred*<br/>
+*_Pred*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das die Bedingung definiert, die erfüllt werden muss, wenn ein Element gezählt werden soll. Ein Prädikat akzeptiert ein einzelnes Argument und gibt entweder **TRUE** oder **FALSE** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1033,7 +1073,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.
 ```
 
-## <a name="equal"></a> equal
+## <a name="equal"></a> gleich
 
 Vergleicht zwei Bereiche elementweise auf Gleichheit oder Äquivalenz in dem durch ein binäres Prädikat angegebenen Sinn.
 
@@ -1069,23 +1109,50 @@ bool equal(
     InputIterator2  First2,
     InputIterator2  Last2,
     BinaryPredicate Comp);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2, BinaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2, ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2, ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*First1*<br/>
+*first1*\
 Ein Eingabeiterator, der die Position des ersten Elements im ersten zu testenden Bereich adressiert.
 
-*Last1*<br/>
+*Last1*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im ersten zu testenden Bereich adressiert.
 
-*first2*<br/>
+*first2*\
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten zu testenden Bereich adressiert.
 
-*first2*<br/>
+*first2*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zweiten zu testenden Bereich adressiert.
 
-*Comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das die zu erfüllende Bedingung definiert, wenn zwei Elemente als gleichwertig akzeptiert werden. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1154,16 +1221,16 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*val*<br/>
+*val*\
 Der Wert, nach dem im sortierten Bereich gesucht wird.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element kleiner als ein anderes ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1299,7 +1366,7 @@ int main()
 }
 ```
 
-## <a name="fill"></a> fill
+## <a name="fill"></a> Füllung
 
 Weist den gleichen neuen Wert jedem Element in einem angegebenen Bereich zu.
 
@@ -1309,17 +1376,24 @@ void fill(
     ForwardIterator first,
     ForwardIterator last,
     const Type& val);
+
+template<class ExecutionPolicy, class ForwardIterator, class T>
+void fill(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der die Position direkt hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*val*<br/>
+*val*\
 Der Wert, der Elemente im Bereich zugewiesen werden soll [ *erste*, *letzten*).
 
 ### <a name="remarks"></a>Hinweise
@@ -1377,17 +1451,25 @@ OutputIterator fill_n(
     OutputIterator First,
     Size Count,
     const Type& Val);
+
+template<class ExecutionPolicy, class ForwardIterator,
+class Size, class T>
+ForwardIterator fill_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    Size n, 
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*Erste*\
 Ein Ausgabeiterator, der Wert zugewiesen werden, der die Position des ersten Elements im Bereich von *Val*.
 
-*Anzahl*<br/>
+*Anzahl*\
 Ein Ganzzahltyp mit oder ohne Vorzeichen, der die Anzahl der dem Wert zuzuweisenden Elemente angibt.
 
-*val*<br/>
+*val*\
 Der Wert, der Elemente im Bereich zugewiesen werden soll [ *erste*, *First + Count*).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1446,7 +1528,7 @@ int main()
 }
 ```
 
-## <a name="find"></a> find
+## <a name="find"></a> Suchen
 
 Sucht die Position des ersten Vorkommens eines Elements in einem Bereich, der einen angegebenen Wert enthält.
 
@@ -1456,17 +1538,24 @@ InputIterator find(
     InputIterator first,
     InputIterator last,
     const T& val);
+
+template<class ExecutionPolicy, class ForwardIterator, class T>
+ForwardIterator find(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der die Position des ersten Elements im nach dem angegebenen Wert zu durchsuchenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der die Position eine Stelle hinter dem letzten Element im nach dem angegebenen Wert zu durchsuchenden Bereich adressiert.
 
-*val*<br/>
+*val*\
 Der zu suchende Wert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1498,23 +1587,43 @@ ForwardIterator1 find_end(
     ForwardIterator2 First2,
     ForwardIterator2 Last2,
     Pred Comp);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator1
+find_end(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+    
+template<class ExecutionPolicy, class ForwardIterator1,
+class ForwardIterator2, class BinaryPredicate>
+ForwardIterator1
+find_end(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*First1*<br/>
+*first1*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*Last1*<br/>
+*Last1*\
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*first2*<br/>
+*first2*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*Last2*<br/>
+*Last2*\
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*Comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das die zu erfüllende Bedingung definiert, wenn zwei Elemente als gleichwertig akzeptiert werden. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1642,23 +1751,43 @@ ForwardIterator1 find_first_of(
     ForwardIterator2  first2,
     ForwardIterator2 Last2,
     BinaryPredicate  comp);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator1
+find_first_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1,
+class ForwardIterator2, class BinaryPredicate>
+ForwardIterator1
+find_first_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*last1*<br/>
+*Last1*\
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*first2*<br/>
+*first2*\
 Ein Forward-Iterator, der die Position des ersten Elements im abzugleichenden Bereich adressiert.
 
-*last2*<br/>
+*Last2*\
 Ein Forward-Iterator, der die Position hinter dem letzten Element im abzugleichenden Bereich adressiert.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das die zu erfüllende Bedingung definiert, wenn zwei Elemente als gleichwertig akzeptiert werden. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1780,17 +1909,23 @@ InputIterator find_if(
     InputIterator first,
     InputIterator last,
     Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator find_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*Pred*<br/>
+*Pred*\
 Benutzerdefiniertes Prädikatfunktionsobjekt oder [Lambdaausdruck](../cpp/lambda-expressions-in-cpp.md), das bzw. der die Bedingung definiert, die vom zu suchenden Element erfüllt wird. Ein Prädikat akzeptiert einzelnes Argument und gibt **"true"** (erfüllt) oder **"false"** (nicht erfüllt). Die Signatur der *Pred* effektiv sein `bool pred(const T& arg);`, wobei `T` ist ein Typ, der `InputIterator` können beim Dereferenzieren implizit konvertiert werden. Die **const** Schlüsselwort dient nur zu veranschaulichen, dass das Argument nicht zu den Funktions- oder lambdaobjekt ändern sollten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1896,17 +2031,23 @@ InputIterator find_if_not(
     InputIterator first,
     InputIterator last,
     Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator find_if_not(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*Pred*<br/>
+*Pred*\
 Benutzerdefiniertes Prädikatfunktionsobjekt oder [Lambdaausdruck](../cpp/lambda-expressions-in-cpp.md), das bzw. der die Bedingung definiert, die nicht vom zu suchenden Element erfüllt wird. Ein Prädikat akzeptiert einzelnes Argument und gibt **"true"** (erfüllt) oder **"false"** (nicht erfüllt). Die Signatur der *Pred* effektiv sein `bool pred(const T& arg);`, wobei `T` ist ein Typ, der `InputIterator` können beim Dereferenzieren implizit konvertiert werden. Die **const** Schlüsselwort dient nur zu veranschaulichen, dass das Argument nicht zu den Funktions- oder lambdaobjekt ändern sollten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1929,17 +2070,24 @@ Function for_each(
     InputIterator first,
     InputIterator last,
     Function func);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Function>
+void for_each(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Function f);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der die Position des ersten Elements im zu verarbeitenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zu verarbeitenden Bereich adressiert.
 
-*_Func*<br/>
+*_Func*\
 Ein benutzerdefiniertes Funktionsobjekt, das auf jedes Element im Bereich angewendet wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1952,7 +2100,7 @@ Der Algorithmus `for_each` ist hoch flexibel, sodass die benutzerdefinierte Änd
 
 Der Bereich, auf den verwiesen wird, muss gültig sein. Alle Zeiger müssen dereferenzierbar sein, und die letzte Position innerhalb der Sequenz muss von der ersten Position aus durch Zunahme erreichbar sein.
 
-Die Komplexität ist linear, wobei höchstens ( *letzten* -  *erste*) vergleichen.
+Die Komplexität ist linear, wobei höchstens (*letzten* - *erste*) vergleichen.
 
 ### <a name="example"></a>Beispiel
 
@@ -2067,7 +2215,24 @@ The average of the elements of v1 is:
 Average ( v1mod2 ) = 10.
 ```
 
-## <a name="generate"></a> generate
+## <a name="for_each_n"></a> for_each_n
+
+```cpp
+template<class InputIterator, class Size, class Function>
+InputIterator for_each_n(
+    InputIterator first, 
+    Size n, 
+    Function f);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Function>
+ForwardIterator for_each_n(
+    ExecutionPolicy&& exec, 
+    ForwardIterator first, 
+    Size n, 
+    Function f);
+```
+
+## <a name="generate"></a> Generieren
 
 Weist die Werte, die von einem Funktionsobjekt generiert werden, jedem Element in einem Bereich zu.
 
@@ -2077,17 +2242,23 @@ void generate(
     ForwardIterator first,
     ForwardIterator last,
     Generator _Gen);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Generator>
+void generate(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, ForwardIterator last,
+    Generator gen);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der die Position des ersten Elements im Bereich, dem Werte zugeordnet werden, adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der die Position des ersten Elements direkt hinter dem letzten Element im Bereich, dem Werte zugeordnet werden, adressiert.
 
-*_Gen*<br/>
+*_Gen*\
 Ein Funktionsobjekt, das ohne Argumente aufgerufen und verwendet wird, um die Werte zu generieren, die jedem der Elemente im Bereich zugeordnet werden sollen.
 
 ### <a name="remarks"></a>Hinweise
@@ -2151,17 +2322,24 @@ void generate_n(
     OutputIterator First,
     Diff Count,
     Generator Gen);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Generator>
+ForwardIterator generate_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    Size n, 
+    Generator gen);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*<br/>
+*Erste*\
 Ein Ausgabeiterator für die Position des ersten Elements im Bereich, dem Werte zugeordnet werden.
 
-*Anzahl*<br/>
+*Anzahl*\
 Ein Ganzzahltyp mit oder ohne Vorzeichen, der die Anzahl der dem Wert durch die Generatorfunktion zuzuweisenden Elemente angibt.
 
-*Gen*<br/>
+*Gen*\
 Ein Funktionsobjekt, das ohne Argumente aufgerufen und verwendet wird, um die Werte zu generieren, die jedem der Elemente im Bereich zugeordnet werden sollen.
 
 ### <a name="remarks"></a>Hinweise
@@ -2215,7 +2393,7 @@ int main()
 }
 ```
 
-## <a name="includes"></a> includes
+## <a name="includes"></a> enthält
 
 Testet, ob ein sortierter Bereich alle Elemente enthält, die in einem zweiten sortierten Bereich enthalten sind, wobei das Sortier- oder Äquivalenzkriterium für die Elemente durch ein binäres Prädikat angegeben werden kann.
 
@@ -2234,23 +2412,41 @@ bool includes(
     InputIterator2 first2,
     InputIterator2 last2,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool includes(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Compare>
+bool includes(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Eingabeiterator, der die Position des ersten Elements im ersten der beiden sortierten Quellbereiche adressiert, die darauf geprüft werden, ob alle Elemente des zweiten Bereichs auch im ersten Bereich enthalten sind.
 
-*last1*<br/>
+*Last1*\
 Ein Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im ersten der beiden sortierten Quellbereiche adressiert, die darauf geprüft werden, ob alle Elemente des zweiten Bereichs auch im ersten Bereich enthalten sind.
 
-*first2*<br/>
+*first2*\
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die darauf geprüft werden, ob alle Elemente des zweiten Bereichs auch im ersten Bereich enthalten sind.
 
-*last2*<br/>
+*Last2*\
 Ein Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die darauf geprüft werden, ob alle Elemente des zweiten Bereichs auch im ersten Bereich enthalten sind.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element kleiner als ein anderes ist. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2437,20 +2633,35 @@ void inplace_merge(
     BidirectionalIterator middle,
     BidirectionalIterator last,
     Predicate comp);
+    
+template<class ExecutionPolicy, class BidirectionalIterator>
+void inplace_merge(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator middle,
+    BidirectionalIterator last);
+    
+template<class ExecutionPolicy, class BidirectionalIterator, class Compare>
+void inplace_merge(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator middle,
+    BidirectionalIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein bidirektionaler Eingabeiterator, der die Position des ersten Elements im ersten der beiden nacheinander sortierten Bereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
-*middle*<br/>
+*Mitte*\
 Ein bidirektionaler Eingabeiterator, der die Position des ersten Elements im zweiten der beiden nacheinander sortierten Bereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
-*last*<br/>
+*letzte*\
 Ein bidirektionaler Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im zweiten der beiden nacheinander sortierten Bereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element größer als ein anderes ist. Das binäre Prädikat akzeptiert zwei Argumente und sollte **true** zurückgeben, wenn das erste Element kleiner als das zweite Element ist, andernfalls wird **false** zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
@@ -2587,17 +2798,30 @@ bool is_heap(
     RandomAccessIterator first,
     RandomAccessIterator last,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+bool is_heap(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+bool is_heap(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein zufälliger direkter Iterator, der den Beginn eines Bereichs angibt, der auf einen Heap geprüft werden soll.
 
-*last*<br/>
+*letzte*\
 Ein zufälliger direkter Iterator, der das Ende des Bereichs angibt.
 
-*comp*<br/>
+*Comp*\
 Eine zu prüfende Bedingung, um Elemente zu sortieren. Ein binäres Prädikat akzeptiert ein einzelnes Argument und gibt **"true"** oder **"false"** .
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2627,17 +2851,30 @@ RandomAccessIterator is_heap_until(
     RandomAccessIterator begin,
     RandomAccessIterator end,
     BinaryPredicate compare);
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+RandomAccessIterator is_heap_until(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+RandomAccessIterator is_heap_until(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*begin*<br/>
+*beginnen*\
 Ein Iterator mit wahlfreiem Zugriff, der das erste Element eines Bereichs angibt, um nach einem Heap zu suchen.
 
-*end*<br/>
+*Ende*\
 Ein Iterator mit wahlfreiem Zugriff, der das Ende des Bereichs angibt, um nach einem Heap zu suchen.
 
-*compare*<br/>
+*Vergleichen*\
 Ein binäres Prädikat, das die Bedingung der strengen schwachen Sortierung angibt, die einen Heap definiert. Das standardmäßige Prädikat, wenn *vergleichen* ist nicht angegeben ist `std::less<>`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2646,7 +2883,7 @@ Gibt *End* , wenn der angegebene Bereich einen Heap bildet oder ein oder weniger
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Vorlagenfunktion gibt den letzten Iterator `next` in `[ begin , end ]` , in denen `[ begin , next)` ist ein Heap, sortiert nach dem Funktionsobjekt `std::less<>`. Wenn die Entfernung `end - begin < 2`, die Funktion gibt *End*.
+Die erste Vorlagenfunktion gibt den letzten Iterator `next` in `[begin , end]` , in denen `[begin , next)` ist ein Heap, sortiert nach dem Funktionsobjekt `std::less<>`. Wenn die Entfernung `end - begin < 2`, die Funktion gibt *End*.
 
 Die zweite Vorlagenfunktion verhält sich wie die erste, mit der Ausnahme, dass sie das Prädikat `compare` anstelle von `std::less<>` als Heapsortierbedingung verwendet.
 
@@ -2660,17 +2897,24 @@ bool is_partitioned(
     InputIterator first,
     InputIterator last,
     BinaryPredicate comp);
+    
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool is_partitioned(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der den Beginn des Bereichs angibt, ab wo nach Bedingungen gesucht werden soll.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der das Ende eines Bereichs angibt.
 
-*comp*<br/>
+*Comp*\
 Eine Bedingung, auf die geprüft werden soll. Dies wird von einem benutzerdefinierten Prädikatfunktionsobjekt bereitgestellt, das bzw. der die Bedingung definiert, die vom zu suchenden Element erfüllt wird. Ein Prädikat akzeptiert ein einzelnes Argument und gibt entweder **TRUE** oder **FALSE** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2679,7 +2923,7 @@ Gibt true zurück, wenn alle Elemente im angegebenen Bereich, die testen **"true
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion gibt **"true"** nur, wenn alle Elemente im `[` `first ,` `last )` sind nach partitioniert *Comp*; d. h. alle Elemente `X` in `[` `first ,` `last )` für die `comp (X)` ist "true" vor allen Elementen auftreten `Y` für die `comp (Y)` ist **"false"** .
+Die Vorlagenfunktion gibt **"true"** nur, wenn alle Elemente im `[first, last)` sind nach partitioniert *Comp*; d. h. alle Elemente `X` in `[first, last)` für die `comp (X)` ist "true" vor dem alle Elemente `Y` für die `comp (Y)` ist **"false"** .
 
 ## <a name="is_permutation"></a> is_permutation
 
@@ -2718,19 +2962,19 @@ bool is_permutation(
 
 ### <a name="parameters"></a>Parameter
 
-*First1*<br/>
+*first1*\
 Ein forward-Iterator, der auf das erste Element des Bereichs verweist.
 
-*Last1*<br/>
+*Last1*\
 Ein forward-Iterator, der auf eine Stelle hinter dem letzten Element des Bereichs verweist.
 
-*first2*<br/>
+*first2*\
 Ein forward-Iterator, der für den Vergleich auf das erste Element eines zweiten Bereichs verweist.
 
-*Last2*<br/>
+*Last2*\
 Ein forward-Iterator, der für den Vergleich auf eine Stelle hinter dem letzten Element eines zweiten Bereichs verweist.
 
-*Pred*<br/>
+*Pred*\
 Ein Prädikat, das auf Übereinstimmung überprüft und gibt eine **"bool"** .
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2801,7 +3045,7 @@ int main()
 }
 ```
 
-## <a name="is_sorted"></a> is-sorted
+## <a name="is_sorted"></a> is_sorted
 
 Gibt **"true"** , wenn die Elemente im angegebenen Bereich in sortierter Reihenfolge befinden.
 
@@ -2816,17 +3060,30 @@ bool is_sorted(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+bool is_sorted(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+bool is_sorted(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der angibt, wo der zu prüfende Bereich beginnt.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der das Ende eines Bereichs angibt.
 
-*comp*<br/>
+*Comp*\
 Eine Bedingung, auf die geprüft werden soll, um eine Reihenfolge zwischen zwei Elementen festzulegen. Ein Prädikat akzeptiert ein einzelnes Argument und gibt entweder **TRUE** oder **FALSE** zurück. Dies führt den gleichen Task wie `operator<` aus.
 
 ### <a name="remarks"></a>Hinweise
@@ -2851,17 +3108,30 @@ ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator is_sorted_until(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+ForwardIterator is_sorted_until(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der angibt, wo der zu prüfende Bereich beginnt.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der das Ende eines Bereichs angibt.
 
-*comp*<br/>
+*Comp*\
 Eine Bedingung, auf die geprüft werden soll, um eine Reihenfolge zwischen zwei Elementen festzulegen. Ein Prädikat akzeptiert ein einzelnes Argument und gibt entweder **TRUE** oder **FALSE** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -2870,7 +3140,7 @@ Gibt ein `ForwardIterator` zurück, das auf das letzte Element in der Sortierrei
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Vorlagenfunktion gibt den letzten Iterator `next` in `[` `first ,` `last ]` zurück, wobei `[` `first , next)` zu einer von `operator<` sortierten Sequenz wird. Wenn `distance()` `< 2` die Funktion gibt *letzten*.
+Die erste Vorlagenfunktion gibt den letzten Iterator `next` in `[first, last]` , damit `[first, next)` ist eine sortierte Sequenz sortiert nach `operator<`. Wenn `distance()` `< 2` die Funktion gibt *letzten*.
 
 Die zweite Vorlagenfunktion verhält sich genauso; der einzige Unterschied ist, dass sie `operator<(X, Y)` durch `comp (X, Y)` ersetzt.
 
@@ -2885,15 +3155,15 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Einer der Forward-Iteratoren, dessen Wert ausgetauscht werden soll.
 
-*right*<br/>
+*Richting*\
 Der zweite der Forward-Iteratoren, dessen Wert ausgetauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-`swap` sollte **iter_swap** vorgezogen werden; dieses war im C++-Standard für die Abwärtskompatibilität enthalten. Wenn `Fit1` und `Fit2` forward-Iteratoren sind `iter_swap` ( `Fit1`, `Fit2` ), entspricht der `swap` ( \* `Fit1`, \* `Fit2` ).
+`swap` sollte **iter_swap** vorgezogen werden; dieses war im C++-Standard für die Abwärtskompatibilität enthalten. Wenn `Fit1` und `Fit2` forward-Iteratoren sind `iter_swap(Fit1, Fit2)`, entspricht der `swap( *Fit1, *Fit2)`.
 
 Die Werttypen der Forward-Eingabeiteratoren müssen den gleichen Wert haben.
 
@@ -3049,23 +3319,41 @@ bool lexicographical_compare(
     InputIterator2  first2,
     InputIterator2 Last2,
     BinaryPredicate  comp  );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool lexicographical_compare(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Compare>
+bool lexicographical_compare(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Eingabeiterator, der die Position des ersten Elements im ersten zu vergleichenden Bereich adressiert.
 
-*last1*<br/>
+*Last1*\
 Ein Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im ersten zu vergleichenden Bereich adressiert.
 
-*first2*<br/>
+*first2*\
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten zu vergleichenden Bereich adressiert.
 
-*last2*<br/>
+*Last2*\
 Ein Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im zweiten zu vergleichenden Bereich adressiert.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element kleiner als ein anderes ist. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3198,16 +3486,16 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*value*<br/>
+*value*\
 Der Wert, dessen erste Position oder mögliche erste Position in dem sortierten Bereich gesucht wird.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element kleiner als ein anderes ist. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3335,13 +3623,13 @@ void make_heap(
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, der in einen Heap konvertiert werden soll.
 
-*last*<br/>
+*letzte*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich adressiert, der in einen Heap konvertiert werden soll.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element kleiner als ein anderes ist. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="remarks"></a>Hinweise
@@ -3398,7 +3686,7 @@ int main() {
 }
 ```
 
-## <a name="max"></a> max
+## <a name="max"></a> Max.
 
 Vergleicht zwei Objekte und gibt das größere der beiden zurück, wobei das Sortierkriterium möglicherweise von einem binären Prädikat angegeben wird.
 
@@ -3423,16 +3711,16 @@ constexpr Type& max(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Das erste der beiden Objekte, die verglichen werden.
 
-*right*<br/>
+*Richting*\
 Das zweite der beiden Objekte, die verglichen werden.
 
-*comp*<br/>
+*Comp*\
 Ein binäres Prädikat, das zum Vergleichen der beiden Objekte verwendet wird.
 
-*_IList*<br/>
+*_IList*\
 Die Initializerliste, die die zu vergleichenden Objekte enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3621,17 +3909,30 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 template<class ForwardIterator, class BinaryPredicate>
 constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryPredicate comp );
+
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator max_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+ForwardIterator max_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Vorwärtsiterator, der die Position des ersten Elements im nach dem größten Element zu durchsuchenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Vorwärtsiterator, der die Position direkt hinter dem letzten Elements im nach dem größten Element zu durchsuchenden Bereich adressiert.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element größer als ein anderes ist. Das binäre Prädikat akzeptiert zwei Argumente und sollte **true** zurückgeben, wenn das erste Element kleiner als das zweite Element ist, andernfalls wird **false** zurückgegeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3744,7 +4045,7 @@ int main()
 }
 ```
 
-## <a name="merge"></a> merge
+## <a name="merge"></a> Zusammenführen
 
 Kombiniert alle Elemente aus zwei sortierten Quellbereichen zu einem einzelnen sortierten Zielbereich, wobei das Sortierkriterium durch ein binäres Prädikat angegeben werden kann.
 
@@ -3765,26 +4066,47 @@ OutputIterator merge(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator merge(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator merge(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Eingabeiterator, der die Position des ersten Elements im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
-*last1*<br/>
+*Last1*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
-*first2*<br/>
+*first2*\
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten der beiden nacheinander sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
-*last2*<br/>
+*Last2*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zweiten der beiden nacheinander sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
-*result*<br/>
+*Ergebnis*\
 Ein Ausgabeiterator, der die Position des ersten Elements im ersten Zielbereich adressiert, in dem die beiden Quellbereiche kombiniert und zu einem einzelnen Bereich sortiert werden sollen.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element größer als ein anderes ist. Das binäre Prädikat akzeptiert zwei Argumente und sollte **true** zurückgeben, wenn das erste Element kleiner als das zweite Element ist, andernfalls wird **false** zurückgegeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -3917,7 +4239,7 @@ int main() {
 }
 ```
 
-## <a name="min"></a> min
+## <a name="min"></a> Min.
 
 Vergleicht zwei Objekte und gibt das kleinere der beiden zurück, wobei das Sortierkriterium möglicherweise von einem binären Prädikat angegeben wird.
 
@@ -3942,16 +4264,16 @@ constexpr Type min(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Das erste der beiden Objekte, die verglichen werden.
 
-*right*<br/>
+*Richting*\
 Das zweite der beiden Objekte, die verglichen werden.
 
-*comp*<br/>
+*Comp*\
 Ein binäres Prädikat, das zum Vergleichen der beiden Objekte verwendet wird.
 
-*_IList*<br/>
+*_IList*\
 Das initializer_list-Element, das die zu vergleichenden Member enthält.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4142,17 +4464,30 @@ constexpr ForwardIterator min_element(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator min_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+ForwardIterator min_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der die Position des ersten Elements im nach dem kleinsten Element zu durchsuchenden Bereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der die Position des ersten Elements direkt hinter dem letzten Element im nach dem kleinsten Element zu durchsuchenden Bereich adressiert.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element größer als ein anderes ist. Das binäre Prädikat akzeptiert zwei Argumente und sollte **true** zurückgeben, wenn das erste Element kleiner als das zweite Element ist, andernfalls wird **false** zurückgegeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4289,26 +4624,41 @@ constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator  first,
     ForwardIterator Last,
     BinaryPredicate  comp);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+pair<ForwardIterator, ForwardIterator>
+minmax_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+pair<ForwardIterator, ForwardIterator>
+minmax_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der das Beginn eines Bereichs angibt.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der das Ende eines Bereichs angibt.
 
-*comp*<br/>
+*Comp*\
 Ein optionaler Test, der zum Sortieren von Elementen verwendet wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Rückgabe
+Rückgabewert
 
 `pair<ForwardIterator, ForwardIterator>`
 
-`(` [min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.
+`(` [Min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[Max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -4322,7 +4672,7 @@ Die zweite Vorlagenfunktion verhält sich genauso; der einzige Unterschied ist, 
 
 Wenn die Sequenz nicht leer ist, führt die Funktion höchstens `3 * (last - first - 1) / 2` Vergleiche.
 
-## <a name="minmax"></a> minmax
+## <a name="minmax"></a> MinMax
 
 Vergleicht zwei Eingabeparameter und gibt diese als Paar, in der Reihenfolge "kleiner zu größer" zurück.
 
@@ -4347,16 +4697,16 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Das erste der beiden Objekte, die verglichen werden.
 
-*right*<br/>
+*Richting*\
 Das zweite der beiden Objekte, die verglichen werden.
 
-*comp*<br/>
+*Comp*\
 Ein binäres Prädikat, das zum Vergleichen der beiden Objekte verwendet wird.
 
-*_IList*<br/>
+*_IList*\
 Das initializer_list-Element, das die zu vergleichenden Member enthält.
 
 ### <a name="remarks"></a>Hinweise
@@ -4369,7 +4719,7 @@ Die verbleibenden Vorlagenfunktionen Verhalten sich identisch, außer dass sie e
 
 Die Funktion führt genau einen Vergleich aus.
 
-## <a name="mismatch"></a> mismatch
+## <a name="mismatch"></a> Konflikt
 
 Vergleicht zwei Bereiche elementweise und findet die e erste Position mit einem Unterschied.
 
@@ -4406,23 +4756,62 @@ mismatch(
     InputIterator2 First2,
     InputIterator2 Last2,
     BinaryPredicate Comp);
+
+//C++17
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    BinaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*First1*<br/>
+*first1*\
 Ein Eingabeiterator, der die Position des ersten Elements im ersten zu testenden Bereich adressiert.
 
-*Last1*<br/>
+*Last1*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im ersten zu testenden Bereich adressiert.
 
-*first2*<br/>
+*first2*\
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten zu testenden Bereich adressiert.
 
-*Last2*<br/>
+*Last2*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zweiten zu testenden Bereich adressiert.
 
-*Comp*<br/>
+*Comp*\
 Das benutzerdefinierte Prädikatfunktionsobjekt vergleicht die aktuellen Elemente in jedem Bereich und bestimmt, ob sie gleich sind. Gibt **TRUE** zurück, wenn erfüllt und **FALSE**, wenn nicht erfüllt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4522,9 +4911,9 @@ int main()
     cin >> c;
 
 }
+```
 
-/*
-Output:
+```Output
 C++03: vec_1 and vec_2 are a mismatch: false
 C++14: vec_1 and vec_2: mismatch. Left iterator at end right iterator at 30
 C++14 vec_1 v. vec_2 modified: mismatch. Left iterator at 15 right iterator at 42
@@ -4532,10 +4921,9 @@ C++14 vec_3 v. vec_4 with pred:  match.
 C++14 vec_3 v. modified vec_4 with pred: mismatch. Left iterator at 60 right iterator at 31
 C++14: vec_1 and list_1 are a mismatch: false
 Press a key
-*/
 ```
 
-## <a name="alg_move"></a> &lt;alg&gt; move
+## <a name="alg_move"></a> &lt;"alg"&gt; verschieben
 
 Verschiebt Elemente, die einem angegebenen Bereich zugeordnet sind.
 
@@ -4545,17 +4933,25 @@ OutputIterator move(
     InputIterator first,
     InputIterator last,
     OutputIterator dest);
+    
+template<class ExecutionPolicy, class ForwardIterator1,
+class ForwardIterator2>
+ForwardIterator2 move(
+    ExecutionPolicy&& exec, 
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Eine Eingabeiterator, der angibt, ab welcher Position die Elemente kopiert werden sollen.
 
-*last*<br/>
+*letzte*\
 Eine Eingabeiterator, der angibt, bis zu welcher Position die Elemente kopiert werden sollen.
 
-*dest*<br/>
+*dest*\
 Der Ausgabeiterator, der die zu verschiebenden Elemente enthalten soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -4576,13 +4972,13 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Iterator, der den Beginn eines Bereichs angibt, aus dem Elemente verschoben werden.
 
-*last*<br/>
+*letzte*\
 Ein Iterator, der das Ende eines Bereichs angibt, aus dem Elemente verschoben werden. Dieses Element wird nicht verschoben.
 
-*destEnd*<br/>
+*destEnd*\
 Ein bidirektionaler Iterator, der die Position hinter dem letzten Element im Zielbereich adressiert.
 
 ### <a name="remarks"></a>Hinweise
@@ -4605,13 +5001,13 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein bidirektionaler Iterator, der auf die Position des ersten Elements im zu permutierenden Bereich zeigt.
 
-*last*<br/>
+*letzte*\
 Ein bidirektionaler Iterator, der auf die Position des ersten Elements direkt hinter dem letzten Element im zu permutierenden Bereich zeigt.
 
-*comp*<br/>
+*Comp*\
 Ein benutzerdefiniertes Prädikatfunktionsobjekt, das das Vergleichskriterium definiert, das von aufeinanderfolgenden Elementen in der Reihenfolge erfüllt werden soll. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4775,20 +5171,35 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
+
+template<class ExecutionPolicy, class RandomAccessIterator>
+void nth_element(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator nth,
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void nth_element(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator nth,
+    RandomAccessIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, der partitioniert werden soll.
 
-*_N-te*<br/>
+*_Nth*\
 Ein zufälliger Eingabeiterator, der die Position des Elements, das auf der Grenze der Partition korrekt sortiert werden soll, adressiert.
 
-*last*<br/>
+*letzte*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich adressiert, der partitioniert werden soll.
 
-*comp*<br/>
+*Comp*\
 Ein benutzerdefiniertes Prädikatfunktionsobjekt, das das Vergleichskriterium definiert, das von aufeinanderfolgenden Elementen in der Reihenfolge erfüllt werden soll. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="remarks"></a>Hinweise
@@ -4874,17 +5285,24 @@ Gibt **"true"** Wenn niemals eine Bedingung zwischen Elementen im angegebenen Be
 ```cpp
 template<class InputIterator, class BinaryPredicate>
 bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
+
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool none_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabe-Iterator, der angibt, ab wo ein Bereich von Elementen auf eine Bedingung überprüft werden soll.
 
-*last*<br/>
+*letzte*\
 Eine Eingabeiterator, das Ende eines Bereichs von Elementen angibt.
 
-*comp*<br/>
+*Comp*\
 Eine Bedingung, auf die geprüft werden soll. Diese Bedingung wird von einem benutzerdefinierten Prädikatfunktionsobjekt bereitgestellt. Ein Prädikat akzeptiert ein einzelnes Argument und gibt entweder **TRUE** oder **FALSE** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -4912,20 +5330,35 @@ void partial_sort(
     RandomAccessIterator sortEnd,
     RandomAccessIterator last
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+void partial_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first,
+    RandomAccessIterator middle,
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void partial_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first,
+    RandomAccessIterator middle,
+    RandomAccessIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, der sortiert werden soll.
 
-*sortEnd*<br/>
+*sortEnd*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element in dem Unterbereich adressiert, der sortiert werden soll.
 
-*last*<br/>
+*letzte*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich adressiert, der teilweise sortiert werden soll.
 
-*comp*<br/>
+*Comp*\
 Ein benutzerdefiniertes Prädikatfunktionsobjekt, das das Vergleichskriterium definiert, das von aufeinanderfolgenden Elementen in der Reihenfolge erfüllt werden soll. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="remarks"></a>Hinweise
@@ -5028,23 +5461,41 @@ RandomAccessIterator partial_sort_copy(
     RandomAccessIterator first2,
     RandomAccessIterator last2,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator>
+RandomAccessIterator partial_sort_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    RandomAccessIterator result_first,
+    RandomAccessIterator result_last);
+
+template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator,
+class Compare>
+RandomAccessIterator partial_sort_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    RandomAccessIterator result_first,
+    RandomAccessIterator result_last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Eingabeiterator, der die Position des ersten Elements im Quellbereich adressiert.
 
-*last1*<br/>
+*Last1*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im Quellbereich adressiert.
 
-*first2*<br/>
+*first2*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements im sortierten Zielbereich adressiert.
 
-*last2*<br/>
+*Last2*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im sortierten Zielbereich adressiert.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das die zu erfüllende Bedingung definiert, wenn zwei Elemente als gleichwertig akzeptiert werden. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -5133,7 +5584,7 @@ int main() {
 }
 ```
 
-## <a name="partition"></a> partition
+## <a name="partition"></a> Partition
 
 Klassifiziert Elemente in einem Bereich in zwei zusammenhanglose Sätze, wenn diese Elemente ein unäres Prädikat erfüllen, das denen direkt vorausgeht, die es nicht erfüllen können.
 
@@ -5143,17 +5594,24 @@ BidirectionalIterator partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator partition(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein bidirektionaler Iterator, der die Position des ersten Elements in dem Bereich adressiert, der partitioniert werden soll.
 
-*last*<br/>
+*letzte*\
 Ein bidirektionaler Iterator, der die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich adressiert, der partitioniert werden soll.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das die Bedingung definiert, die erfüllt werden muss, wenn ein Element eingeordnet werden soll. Ein Prädikat akzeptiert ein einzelnes Argument und gibt entweder **TRUE** oder **FALSE** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -5220,23 +5678,34 @@ pair<OutputIterator1, OutputIterator2>
     OutputIterator1 dest1,
     OutputIterator2 dest2,
     Predicate pred);
+    
+template <class ExecutionPolicy, class ForwardIterator, class ForwardIterator1,
+class ForwardIterator2, class Predicate>
+pair<ForwardIterator1, ForwardIterator2>
+partition_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    ForwardIterator1 out_true, 
+    ForwardIterator2 out_false,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der den Beginn eines Bereichs angibt, der auf eine Bedingung geprüft werden soll.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der das Ende eines Bereichs angibt.
 
-*dest1*<br/>
+*dest1*\
 Ein Ausgabeiterator, der verwendet wird, um Elemente zu kopieren, die für eine Bedingung "true" zurückgeben getestet mit *_Pred*.
 
-*dest2*<br/>
+*dest2*\
 Ein Ausgabeiterator, der verwendet wird, um Elemente zu kopieren, die eine Bedingung "false" zurückgeben getestet mit *_Pred*.
 
-*_Pred*<br/>
+*_Pred*\
 Eine Bedingung, auf die geprüft werden soll. Diese Bedingung wird von einem benutzerdefinierten Prädikatfunktionsobjekt bereitgestellt, das die zu prüfende Bedingung definiert. Ein Prädikat akzeptiert ein einzelnes Argument und gibt entweder **TRUE** oder **FALSE** zurück.
 
 ### <a name="remarks"></a>Hinweise
@@ -5257,13 +5726,13 @@ ForwardIterator partition_point(
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein `ForwardIterator`, der den Beginn eines Bereichs angibt, der auf eine Bedingung geprüft werden soll.
 
-*last*<br/>
+*letzte*\
 Ein `ForwardIterator`, der das Ende eines Bereichs angibt.
 
-*comp*<br/>
+*Comp*\
 Eine Bedingung, auf die geprüft werden soll. Dies wird von einem benutzerdefinierten Prädikatfunktionsobjekt bereitgestellt, das bzw. der die Bedingung definiert, die vom zu suchenden Element erfüllt wird. Ein Prädikat akzeptiert ein einzelnes Argument und gibt entweder **TRUE** oder **FALSE** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -5288,13 +5757,13 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements im Heap adressiert.
 
-*last*<br/>
+*letzte*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im Heap adressiert.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element kleiner als ein anderes ist. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="remarks"></a>Hinweise
@@ -5396,13 +5865,13 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein bidirektionaler Iterator, der auf die Position des ersten Elements im zu permutierenden Bereich zeigt.
 
-*last*<br/>
+*letzte*\
 Ein bidirektionaler Iterator, der auf die Position des ersten Elements direkt hinter dem letzten Element im zu permutierenden Bereich zeigt.
 
-*comp*<br/>
+*Comp*\
 Ein benutzerdefiniertes Prädikatfunktionsobjekt, das das Vergleichskriterium definiert, das von aufeinanderfolgenden Elementen in der Reihenfolge erfüllt werden soll. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -5565,13 +6034,13 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements im Heap adressiert.
 
-*last*<br/>
+*letzte*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich adressiert, der in einen Heap konvertiert werden soll.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element kleiner als ein anderes ist. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="remarks"></a>Hinweise
@@ -5663,24 +6132,31 @@ int main() {
 
 Die Funktion Std::random_shuffle() ist veraltet, ersetzt durch [Std:: Shuffle](../standard-library/algorithm-functions.md#shuffle). Ein Codebeispiel und Weitere Informationen finden Sie unter [ \<random >](../standard-library/random.md) und Stack Overflow-Beitrag [Warum werden Std:: random_shuffle Methods eingestellt in C ++ 14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
 
-## <a name="remove"></a>  remove
+## <a name="remove"></a> Entfernen
 
 Eliminiert einen angegebenen Wert von einem angegebenen Bereich, ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen und das Ende eines neuen Bereichs zurückzugeben, der den angegebenen Wert nicht enthält.
 
 ```cpp
 template<class ForwardIterator, class Type>
 ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
+
+template<class ExecutionPolicy, class ForwardIterator, class T>
+ForwardIterator remove(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Vorwärtsiterator zur Position des ersten Elements in dem Bereich, aus dem Elemente entfernt werden.
 
-*last*<br/>
+*letzte*\
 Ein Vorwärtsiterator zur ersten Position hinter dem letzten Element in dem Bereich, aus dem Elemente entfernt werden.
 
-*val*<br/>
+*val*\
 Der Wert, der aus dem Bereich entfernt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -5752,20 +6228,29 @@ Kopiert Elemente aus einem Quellbereich in einen Zielbereich, ohne dass Elemente
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
 OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class T>
+ForwardIterator2 remove_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, aus dem Elemente entfernt werden.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element in dem Bereich adressiert, aus dem Elemente entfernt werden.
 
-*result*<br/>
+*Ergebnis*\
 Ein Ausgabeiterator, der die Position des ersten Elements in dem Zielbereich adressiert, in den Elemente entfernt werden.
 
-*val*<br/>
+*val*\
 Der Wert, der aus dem Bereich entfernt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -5834,20 +6319,29 @@ Kopiert Elemente aus einem Quellbereich in einen Zielbereich, ohne dass Elemente
 ```cpp
 template<class InputIterator, class OutputIterator, class Predicate>
 OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIterator result, Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Predicate>
+ForwardIterator2 remove_copy_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, aus dem Elemente entfernt werden.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element in dem Bereich adressiert, aus dem Elemente entfernt werden.
 
-*result*<br/>
+*Ergebnis*\
 Ein Ausgabeiterator, der die Position des ersten Elements in dem Zielbereich adressiert, in den Elemente entfernt werden.
 
-*_Pred*<br/>
+*_Pred*\
 Das unäre Prädikat, das erfüllt werden muss, ist der Wert eines zu ersetzenden Elements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -5928,17 +6422,24 @@ ForwardIterator remove_if(
     ForwardIterator first,
     ForwardIterator last,
     Predicate pred);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator remove_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der auf die Position des ersten Elements in dem Bereich verweist, aus dem Elemente entfernt werden.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der auf die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich verweist, aus dem Elemente entfernt werden.
 
-*_Pred*<br/>
+*_Pred*\
 Das unäre Prädikat, das erfüllt werden muss, ist der Wert eines zu ersetzenden Elements.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -6007,7 +6508,7 @@ int main() {
 }
 ```
 
-## <a name="replace"></a> replace
+## <a name="replace"></a> Ersetzen Sie
 
 Überprüft jedes Element in einem Bereich und ersetzt es, sofern es einem angegebenen Wert entspricht.
 
@@ -6018,20 +6519,28 @@ void replace(
     ForwardIterator last,
     const Type& oldVal,
     const Type& newVal);
+    
+template<class ExecutionPolicy, class ForwardIterator, class T>
+void replace(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    const T& old_value, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der auf die Position des ersten Elements in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der auf die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
-*_OldVal*<br/>
+*_OldVal*\
 Der alte Wert der ersetzten Elemente.
 
-*_NewVal*<br/>
+*_NewVal*\
 Der neue Wert, der den Elementen mit dem alten Wert zugewiesen wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -6082,7 +6591,7 @@ int main() {
 }
 ```
 
-## <a name="replace_copy"> </a> replace_copy
+## <a name="replace_copy"></a> replace_copy
 
 Überprüft jedes Element in einem Quellbereich und ersetzt es, sofern es einem angegebenen Wert entspricht, während das Ergebnis in einen neuen Zielbereich kopiert wird.
 
@@ -6094,23 +6603,32 @@ OutputIterator replace_copy(
     OutputIterator result,
     const Type& oldVal,
     const Type& newVal);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
+ForwardIterator2 replace_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    const T& old_value, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der auf die Position des ersten Elements in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der auf die Position hinter dem letzten Element in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
-*result*<br/>
+*Ergebnis*\
 Ein Ausgabeiterator, der auf das erste Element im Zielbereich verweist, in den die geänderte Sequenz von Elementen kopiert wird.
 
-*_OldVal*<br/>
+*_OldVal*\
 Der alte Wert der ersetzten Elemente.
 
-*_NewVal*<br/>
+*_NewVal*\
 Der neue Wert, der den Elementen mit dem alten Wert zugewiesen wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -6196,23 +6714,33 @@ OutputIterator replace_copy_if(
     OutputIterator result,
     Predicate pred,
     const Type& val);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Predicate, class T>
+ForwardIterator2 replace_copy_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Predicate pred, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Eingabeiterator, der auf die Position des ersten Elements in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
-*last*<br/>
+*letzte*\
 Ein Eingabeiterator, der auf die Position hinter dem letzten Element in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
-*result*<br/>
+*Ergebnis*\
 Ein Ausgabeiterator, der auf die Position des ersten Elements in dem Zielbereich verweist, in den Elemente kopiert werden.
 
-*_Pred*<br/>
+*_Pred*\
 Das unäre Prädikat, das erfüllt werden muss, ist der Wert eines zu ersetzenden Elements.
 
-*val*<br/>
+*val*\
 Der neue Wert, der den Elementen zugewiesen wird, deren alter Wert das Prädikat erfüllt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -6304,20 +6832,28 @@ void replace_if(
     ForwardIterator last,
     Predicate pred,
     const Type& val);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate, class T>
+void replace_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Predicate pred, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der auf die Position des ersten Elements in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
-*last*<br/>
+*letzte*\
 Ein Iterator, der auf die Position hinter dem letzten Element in dem Bereich verweist, aus dem Elemente ersetzt werden.
 
-*_Pred*<br/>
+*_Pred*\
 Das unäre Prädikat, das erfüllt werden muss, ist der Wert eines zu ersetzenden Elements.
 
-*val*<br/>
+*val*\
 Der neue Wert, der den Elementen zugewiesen wird, deren alter Wert das Prädikat erfüllt.
 
 ### <a name="remarks"></a>Hinweise
@@ -6376,21 +6912,27 @@ int main() {
 }
 ```
 
-## <a name="reverse"></a> reverse
+## <a name="reverse"></a> Umgekehrte
 
 Kehrt die Reihenfolge der Elemente innerhalb eines Bereichs um.
 
 ```cpp
 template<class BidirectionalIterator>
 void reverse(BidirectionalIterator first, BidirectionalIterator last);
+
+template<class ExecutionPolicy, class BidirectionalIterator>
+void reverse(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first, 
+    BidirectionalIterator last);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein bidirektionaler Iterator, der auf die Position des ersten Elements im Bereich verweist, in dem die Elemente permutiert werden.
 
-*last*<br/>
+*letzte*\
 Ein bidirektionaler Iterator, der auf die Position hinter dem letzten Element im Bereich verweist, in dem die Elemente permutiert werden.
 
 ### <a name="remarks"></a>Hinweise
@@ -6439,7 +6981,7 @@ The modified vector v1 with values reversed is:
 ( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
-## <a name="reverse_copy"> </a> reverse_copy
+## <a name="reverse_copy"></a> reverse_copy
 
 Kehrt die Reihenfolge der Elemente in einem Quellbereich beim Kopieren in einen Zielbereich um.
 
@@ -6449,17 +6991,24 @@ OutputIterator reverse_copy(
     BidirectionalIterator first,
     BidirectionalIterator Last,
     OutputIterator result);
+    
+template<class ExecutionPolicy, class BidirectionalIterator, class ForwardIterator>
+ForwardIterator reverse_copy(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator last,
+    ForwardIterator result);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein bidirektionaler Iterator, der auf die Position des ersten Elements im Quellbereich verweist, in dem die Elemente permutiert werden.
 
-*last*<br/>
+*letzte*\
 Ein bidirektionaler Iterator, der auf die Position hinter dem letzten Element im Quellbereich verweist, in dem die Elemente permutiert werden.
 
-*result*<br/>
+*Ergebnis*\
 Ein Ausgabeiterator, der auf die Position des ersten Elements in dem Zielbereich verweist, in den Elemente kopiert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -6510,7 +7059,7 @@ int main() {
 }
 ```
 
-## <a name="rotate"></a> rotate
+## <a name="rotate"></a> Drehen
 
 Vertauscht die Elemente in zwei benachbarten Bereichen.
 
@@ -6520,17 +7069,24 @@ void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator rotate(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator middle,
+    ForwardIterator last);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu rotierenden Bereich adressiert.
 
-*middle*<br/>
+*Mitte*\
 Ein Forward-Iterator, der die Grenzen innerhalb des Bereichs definiert, der die Position des ersten Elements im zweiten Teil des Bereichs adressiert und dessen Elemente mit denen im ersten Teil des Bereichs ausgetauscht werden sollen.
 
-*letzte*<br/>
+*letzte*\
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu rotierenden Bereich adressiert.
 
 ### <a name="remarks"></a>Hinweise
@@ -6625,19 +7181,28 @@ OutputIterator rotate_copy(
     ForwardIterator middle,
     ForwardIterator last,
     OutputIterator result );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 rotate_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 middle,
+    ForwardIterator1 last, 
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu rotierenden Bereich adressiert.
 
-*middle*<br/>
+*Mitte*\
 Ein Forward-Iterator, der die Grenzen innerhalb des Bereichs definiert, der die Position des ersten Elements im zweiten Teil des Bereichs adressiert und dessen Elemente mit denen im ersten Teil des Bereichs ausgetauscht werden sollen.
 
-_ *Letzten* ein vorwärtsiterator, der die Position hinter dem letzten Element im Bereich von rotiert werden soll.
+*letzte*\
+Ein Forward-Iterator, der die Position hinter dem letzten Element im zu rotierenden Bereich adressiert.
 
-*result*<br/>
+*Ergebnis*\
 Ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich adressiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -6709,7 +7274,17 @@ int main() {
 }
 ```
 
-## <a name="search"></a> search
+## <a name="sample"></a> Beispiel
+
+```cpp
+template<class PopulationIterator, class SampleIterator,
+class Distance, class UniformRandomBitGenerator>
+SampleIterator sample(PopulationIterator first, PopulationIterator last,
+SampleIterator out, Distance n,
+UniformRandomBitGenerator&& g);
+```
+
+## <a name="search"></a> Suche
 
 Sucht das erste Vorkommen einer Sequenz in einem Zielbereich, dessen Elemente gleich den Elementen in einer bestimmten Elementsequenz sind oder dessen Elemente äquivalent sind mit den Elementen in der angegebenen Sequenz, wie durch ein binäres Prädikat festgelegt.
 
@@ -6728,23 +7303,47 @@ ForwardIterator1 search(
     ForwardIterator2 first2,
     ForwardIterator2 last2
     Predicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator1 search(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+ForwardIterator1 search(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
+    
+template <class ForwardIterator, class Searcher>
+ForwardIterator search(
+    ForwardIterator first, 
+    ForwardIterator last,
+    const Searcher& searcher);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*last1*<br/>
+*Last1*\
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*first2*<br/>
+*first2*\
 Ein Forward-Iterator, der die Position des ersten Elements im abzugleichenden Bereich adressiert.
 
-*last2*<br/>
+*Last2*\
 Ein Forward-Iterator, der die Position hinter dem letzten Element im abzugleichenden Bereich adressiert.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das die zu erfüllende Bedingung definiert, wenn zwei Elemente als gleichwertig akzeptiert werden. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -6876,23 +7475,40 @@ ForwardIterator1 search_n(
     Diff2 count,
     const Type& val,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Size, class T>
+ForwardIterator search_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Size count, const T& value);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class T,
+class BinaryPredicate>
+ForwardIterator search_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Size count, 
+    const T& value,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu durchsuchenden Bereich adressiert.
 
-*last1*<br/>
+*Last1*\
 Ein Forward-Iterator, der die Position hinter dem letzten Element im zu durchsuchenden Bereich adressiert.
 
-*count*<br/>
+*Anzahl*\
 Die Größe der zu suchenden Untersequenz.
 
-*val*<br/>
+*val*\
 Der Wert der Elemente in der durchsuchten Sequenz.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das die zu erfüllende Bedingung definiert, wenn zwei Elemente als gleichwertig akzeptiert werden. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -7011,26 +7627,47 @@ OutputIterator set_difference(
     InputIterator2  last2,
     OutputIterator  result,
     BinaryPredicate  comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Eingabeiterator, der die Position des ersten Elements im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den Unterschied der beiden Quellbereiche repräsentiert.
 
-*last1*<br/>
+*Last1*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den Unterschied der beiden Quellbereiche repräsentiert.
 
-*first2*<br/>
+*first2*\
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den Unterschied der beiden Quellbereiche repräsentiert.
 
-*last2*<br/>
+*Last2*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den Unterschied der beiden Quellbereiche repräsentiert.
 
-*result*<br/>
+*Ergebnis*\
 Ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich adressiert, in den die beiden Quellbereiche kombiniert werden sollen. Dieser Zielbereich wird sortiert und repräsentiert den Unterschied der beiden Quellbereiche.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element größer als ein anderes ist. Das binäre Prädikat akzeptiert zwei Argumente und sollte **true** zurückgeben, wenn das erste Element kleiner als das zweite Element ist, andernfalls wird **false** zurückgegeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -7191,25 +7828,46 @@ OutputIterator set_intersection(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_intersection(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_intersection(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Eingabeiterator, der die Position des ersten Elements im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Schnittmenge der beiden Quellbereiche repräsentiert.
 
-*last1*<br/>
+*Last1*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Schnittmenge der beiden Quellbereiche repräsentiert.
 
-*first2*<br/>
+*first2*\
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Schnittmenge der beiden Quellbereiche repräsentiert.
 
-*last2*<br/>
+*Last2*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Schnittmenge der beiden Quellbereiche repräsentiert.
 
 **_** *Ergebnis* ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich, in dem die beiden Bereiche Datenquelle, kombiniert werden sollen in einem einzelnen Bereich sortiert, die die Schnittmenge der beiden Quelle darstellt. Bereiche.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element größer als ein anderes ist. Das binäre Prädikat akzeptiert zwei Argumente und sollte **true** zurückgeben, wenn das erste Element kleiner als das zweite Element ist, andernfalls wird **false** zurückgegeben.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -7364,20 +8022,41 @@ OutputIterator set_symmetric_difference(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_symmetric_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_symmetric_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Eingabeiterator, der die Position des ersten Elements im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den symmetrischen Unterschied der beiden Quellbereiche repräsentiert.
 
-*last1*<br/>
+*Last1*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den symmetrischen Unterschied der beiden Quellbereiche repräsentiert.
 
-*first2*<br/>
+*first2*\
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den symmetrischen Unterschied der beiden Quellbereiche repräsentiert.
 
-*last2*<br/>
+*Last2*\
 Ein Eingabeiterator, der die Position hinter den letzten Element im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der den symmetrischen Unterschied der beiden Quellbereiche repräsentiert.
 
 **_** *Ergebnis* ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich, in dem die beiden Bereiche Datenquelle, kombiniert werden sollen in einem einzelnen Bereich sortiert, die den symmetrischen Unterschied der beiden darstellt. Die Quellbereiche.
@@ -7543,20 +8222,41 @@ OutputIterator set_union(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_union(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_union(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Eingabeiterator, der die Position des ersten Elements im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Verbindung der beiden Quellbereiche repräsentiert.
 
-*last1*<br/>
+*Last1*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im ersten der beiden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Verbindung der beiden Quellbereiche repräsentiert.
 
-*first2*<br/>
+*first2*\
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Verbindung der beiden Quellbereiche repräsentiert.
 
-*last2*<br/>
+*Last2*\
 Ein Eingabeiterator, der die Position hinter dem letzten Element im zweiten der beiden aufeinanderfolgenden sortierten Quellbereiche adressiert, die kombiniert und zu einem einzelnen Bereich sortiert werden sollen, der die Verbindung der beiden Quellbereiche repräsentiert.
 
 **_** *Ergebnis* ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich, in dem die beiden Bereiche Datenquelle, auf einem einzelnen Bereich sortiert repräsentiert die Verbindung der beiden Quellbereiche kombiniert werden.
@@ -7701,7 +8401,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>  Shuffle
+## <a name="shuffle"></a> Shuffle
 
 Mischt (ordnet) Elemente für einen gegebenen Bereich mithilfe eines Zufallszahlengenerators.
 
@@ -7714,20 +8414,20 @@ void shuffle(RandomAccessIterator first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Iterator für das erste Element im zu mischenden Bereich, inklusiv. Muss die Anforderungen von `RandomAccessIterator` und `ValueSwappable` erfüllen.
 
-*last*<br/>
+*letzte*\
 Ein Iterator für das letzte Element im zu mischenden Bereich, exklusiv. Muss die Anforderungen von `RandomAccessIterator` und `ValueSwappable` erfüllen.
 
-*gen*<br/>
+*Gen*\
 Der Zufallszahlengenerator, den die `shuffle()`-Funktion für den Vorgang verwendet. Muss die Anforderungen eines `UniformRandomNumberGenerator` erfüllen.
 
 ### <a name="remarks"></a>Hinweise
 
 Weitere Informationen und ein Codebeispiel mit `shuffle()` finden Sie unter [\<random>](../standard-library/random.md).
 
-## <a name="sort"></a> sort
+## <a name="sort"></a> Sortieren
 
 Ordnet die Elemente in einem angegebenen Bereich in einer aufsteigenden Reihenfolge oder gemäß eines Sortierkriteriums an, das von einem binären Prädikat angegeben wird.
 
@@ -7742,17 +8442,30 @@ template<class RandomAccessIterator, class Predicate>
       RandomAccessIterator first,
       RandomAccessIterator last,
       Predicate comp);
+      
+template<class ExecutionPolicy, class RandomAccessIterator>
+void sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements in dem Bereich adressiert, der sortiert werden soll.
 
-*last*<br/>
+*letzte*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich adressiert, der sortiert werden soll.
 
-*comp*<br/>
+*Comp*\
 Ein benutzerdefiniertes Prädikatfunktionsobjekt, das das Vergleichskriterium definiert, das von aufeinanderfolgenden Elementen in der Reihenfolge erfüllt werden soll. Das binäre Prädikat akzeptiert zwei Argumente und gibt **"true"** , wenn die zwei Argumente sortiert sind und **"false"** andernfalls. Diese Vergleichoperatorfunktion muss eine strikte schwache Sortierung auf Elementenpaare der Sequenz anwenden. Weitere Informationen finden Sie unter [Algorithmen](../standard-library/algorithms.md).
 
 ### <a name="remarks"></a>Hinweise
@@ -7850,13 +8563,13 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements im Zielheap adressiert.
 
-*last*<br/>
+*letzte*\
 Ein zufälliger Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im Zielheap adressiert.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element kleiner als ein anderes ist. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="remarks"></a>Hinweise
@@ -7937,17 +8650,24 @@ BidirectionalIterator stable_partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate pred );
+    
+template<class ExecutionPolicy, class BidirectionalIterator, class Predicate>
+BidirectionalIterator stable_partition(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein bidirektionaler Iterator, der die Position des ersten Elements in dem Bereich adressiert, der partitioniert werden soll.
 
-*last*<br/>
+*letzte*\
 Ein bidirektionaler Iterator, der die Position des ersten Elements direkt hinter dem letzten Element in dem Bereich adressiert, der partitioniert werden soll.
 
-*_Pred*<br/>
+*_Pred*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das die Bedingung definiert, die erfüllt werden muss, wenn ein Element eingeordnet werden soll. Ein Prädikat akzeptiert ein einzelnes Argument und gibt entweder **TRUE** oder **FALSE** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -8018,17 +8738,30 @@ void stable_sort(
     BidirectionalIterator first,
     BidirectionalIterator last,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+void stable_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void stable_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein bidirektionaler Iterator, der die Position des ersten Elements in dem Bereich adressiert, der sortiert werden soll.
 
-*last*<br/>
+*letzte*\
 Ein bidirektionaler Iterator, der die Position des ersten Elements in dem Bereich adressiert, der sortiert werden soll.
 
-*comp*<br/>
+*Comp*\
 Ein benutzerdefiniertes Prädikatfunktionsobjekt, das das Vergleichskriterium definiert, das von aufeinanderfolgenden Elementen in der Reihenfolge erfüllt werden soll. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="remarks"></a>Hinweise
@@ -8106,7 +8839,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> Swap
 
 Das erste Überschreiben tauscht die Werte zweier Objekte aus. Das zweite Überschreiben tauscht die Werte zwischen zwei Arrays von Objekten aus.
 
@@ -8123,10 +8856,10 @@ template<class Type, size_t N>
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Das erste Objekt, dessen Inhalte beim ersten Überschreiben ausgetauscht werden soll. Das erste Array von Objekten, dessen Inhalte beim zweiten Überschreiben ausgetauscht werden soll.
 
-*right*<br/>
+*Richting*\
 Das zweite Objekt, dessen Inhalt beim ersten Überschreiben ausgetauscht werden soll. Das zweite Array von Objekten, dessen Inhalte beim zweiten Überschreiben ausgetauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -8199,17 +8932,24 @@ ForwardIterator2 swap_ranges(
    ForwardIterator1 first1,
    ForwardIterator1 last1,
    ForwardIterator2 first2 );
+   
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 swap_ranges(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Forward-Iterator, der die erste Position des ersten Bereichs anzeigt, dessen Elemente ausgetauscht werden sollen.
 
-*last1*<br/>
+*Last1*\
 Ein Forward-Iterator, der die erste Position direkt hinter der letzten Position des ersten Bereichs anzeigt, dessen Elemente ausgetauscht werden sollen.
 
-*first2*<br/>
+*first2*\
 Ein Forward-Iterator, der die erste Position des zweiten Bereichs anzeigt, dessen Elemente ausgetauscht werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -8283,7 +9023,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="transform"></a> transform
+## <a name="transform"></a> Transformieren
 
 Wendet ein angegebenes Funktionsobjekt auf jedes Element in einem Quellbereich oder auf ein Elementpaar aus zwei Quellbereichen an und kopiert die Rückgabewerte des Funktionsobjekts in einen Zielbereich.
 
@@ -8302,23 +9042,42 @@ OutputIterator transform(
     InputIterator2 first2,
     OutputIterator result,
     BinaryFunction func );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class UnaryOperation>
+ForwardIterator2 transform(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    UnaryOperation op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class BinaryOperation>
+ForwardIterator transform(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator result,
+    BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*first1*\
 Ein Eingabeiterator, der die Position des ersten Elements im ersten Quellbereich adressiert.
 
-*last1*<br/>
+*Last1*\
 Ein Eingabeiterator, der die Position des ersten Elements direkt hinter dem letzten Element im ersten bearbeiteten Quellbereich adressiert.
 
-*first2*<br/>
+*first2*\
 Ein Eingabeiterator, der die Position des ersten Elements im zweiten Quellbereich adressiert.
 
-*result*<br/>
+*Ergebnis*\
 Ein Ausgabeiterator, der die Position des ersten Elements im Zielbereich adressiert.
 
-*_Func*<br/>
+*_Func*\
 Ein benutzerdefiniertes unäres Objekt, das in der ersten Version des Algorithmus verwendet wird, die auf jedes Element im ersten Bereich angewendet wird, oder ein benutzerdefiniertes binäres Funktionsobjekt, das in der zweiten Version des Algorithmus verwendet wird, die paarweise in aufsteigender Reihenfolge auf die zwei Quellbereiche angewendet wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -8420,7 +9179,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
-## <a name="unique"></a> unique
+## <a name="unique"></a> eindeutige
 
 Entfernt doppelte Elemente, die in einem angegebenen Bereich nebeneinander angeordnet sind.
 
@@ -8435,17 +9194,30 @@ template<class ForwardIterator, class Predicate>
       ForwardIterator first,
       ForwardIterator last,
       Predicate comp);
+      
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator unique(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class BinaryPredicate>
+ForwardIterator unique(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Forward-Iterator, der die Position des ersten Elements im Bereich adressiert, der zum Entfernen von doppelten Elementen durchsucht werden soll.
 
-*last*<br/>
+*letzte*\
 Ein Forward-Iterator, der die Position des ersten Elements direkt hinter dem letzten Element im Bereich adressiert, der zum Entfernen von doppelten Elementen durchsucht werden soll.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das die zu erfüllende Bedingung definiert, wenn zwei Elemente als gleichwertig akzeptiert werden. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -8553,7 +9325,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
 
-## <a name="unique_copy"></a> nique_copy
+## <a name="unique_copy"></a> unique_copy
 
 Kopiert Elemente aus einem Quellbereich in einen Zielbereich mit Ausnahmen von doppelten Elementen, die nebeneinander angeordnet sind.
 
@@ -8568,20 +9340,34 @@ OutputIterator unique_copy( InputIterator first,
     InputIterator last,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Ein Vorwärtsiterator, der die Position des ersten Elements im zu kopierenden Quellbereich adressiert.
 
-*last*<br/>
+*letzte*\
 Ein Vorwärtsiterator, der die Position hinter dem letzten Element im zu kopierenden Quellbereich adressiert.
 
-*result*<br/>
+*Ergebnis*\
 Ein Vorwärtsiterator, der die Position des ersten Elements im Zielbereich adressiert, der die Kopie erhält, aus der aufeinanderfolgende Duplikate entfernt wurden.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das die zu erfüllende Bedingung definiert, wenn zwei Elemente als gleichwertig akzeptiert werden. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -8691,16 +9477,16 @@ template<class ForwardIterator, class Type, class Predicate>
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Die Position des ersten Elements in dem zu durchsuchenden Bereich.
 
-*last*<br/>
+*letzte*\
 Die Position eine Stelle hinter dem letzten Element im zu durchsuchenden Bereich.
 
-*value*<br/>
+*value*\
 Der Wert im sortierten Bereich, der vom Wert des vom zurückgegebenen Iterator adressierten Elements überschritten werden muss.
 
-*comp*<br/>
+*Comp*\
 Benutzerdefiniertes Prädikatfunktionsobjekt, das den Sinn definiert, in dem ein Element kleiner als ein anderes ist. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -8808,7 +9594,3 @@ int main()
         << *Result << "." << endl;
 }
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[\<algorithm>](../standard-library/algorithm.md)<br/>

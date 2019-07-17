@@ -7,27 +7,28 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: d90e49190ef2f22ce7ba2dfe30c2c68c6275f5b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0a5a01ca04d01d9535291e3c4a254143bc09e5a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380129"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243296"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
 Definiert die Vorlagenklasse "bitset" und zwei unterstützende Vorlagenfunktionen zum Darstellen und Manipulieren von Bitsequenzen fester Größe.
 
-## <a name="syntax"></a>Syntax
+## <a name="requirements"></a>Anforderungen
 
-```
+**Header:** \<bitset>
 
-#include <bitset>
-```
+**Namespace:** std
+
+## <a name="members"></a>Member
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
 |[operator&](../standard-library/bitset-operators.md#op_amp)|Führt ein bitweises UND zwischen zwei Bitsets aus.|
 |[operator<\<](../standard-library/bitset-operators.md#op_lt_lt)|Fügt eine Textdarstellung der Bitsequenz in den Standardausgabestream ein.|
@@ -37,9 +38,9 @@ Definiert die Vorlagenklasse "bitset" und zwei unterstützende Vorlagenfunktione
 
 ### <a name="classes"></a>Klassen
 
-|Klasse|Beschreibung|
+|||
 |-|-|
-|[bitset-Klasse](../standard-library/bitset-class.md)|Die Vorlagenklasse beschreibt einen Typ von Objekt, das eine Sequenz speichert, die aus einer festen Anzahl von Bits besteht, die eine kompakte Möglichkeit bieten, Flags für eine Menge von Elementen oder Bedingungen bereitzustellen.|
+|[bitset](../standard-library/bitset-class.md)|Die Vorlagenklasse beschreibt einen Typ von Objekt, das eine Sequenz speichert, die aus einer festen Anzahl von Bits besteht, die eine kompakte Möglichkeit bieten, Flags für eine Menge von Elementen oder Bedingungen bereitzustellen.|
 
 ## <a name="see-also"></a>Siehe auch
 

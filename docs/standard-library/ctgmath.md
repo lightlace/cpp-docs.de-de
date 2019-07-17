@@ -2,26 +2,26 @@
 title: '&lt;ctgmath&gt;'
 ms.date: 11/04/2016
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 64d72bb643e792fe39978d5c2e92e1bcf23cfc4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85099f3cb206dd791aade59bf9a531a714e68ac3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394196"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246604"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-Enthält die C++-Standardbibliotheksheader \<ccomplex> und \<cmath>. Dieser stellen die typgenerischen mathematischen Makros bereitstellen, die \<tgmath.h> entsprechen.
+Schließt die C++ standardbibliotheksheader \<komplexe > und \<Cmath >, die typgenerischen mathematischen Makros gleich bereitstellen \<tgmath.h >.
 
-## <a name="syntax"></a>Syntax
+## <a name="requirements"></a>Anforderungen
 
-```cpp
-#include <ctgmath>
-```
+**Header:** \<"ctgmath" >
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Hinweise
 
-Die Funktionalität des Standard-C-Bibliotheksheaders \<tgmath.h> wird von Überladungen in \<ccomplex> und \<cmath> bereitgestellt.
+Die Funktionalität des Standard-C-bibliotheksheaders \<tgmath.h > wird von Überladungen in bereitgestellt \<komplexe > und \<Cmath >.
 
 Durch Einschließen dieses Headers wird sichergestellt, dass die mit externer Bindung im Standard-C-Bibliotheksheader deklarierten Namen im `std`-Namespace deklariert werden.
 

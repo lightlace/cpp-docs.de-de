@@ -1,50 +1,62 @@
 ---
 title: '&lt;memory&gt;'
-ms.date: 11/04/2016
+ms.date: 04/04/2019
 f1_keywords:
 - memory/std::<memory>
 - <memory>
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.assetid: ef8e38da-7c9d-4037-9ad1-20c99febf5dc
-ms.openlocfilehash: c63421995fdabc94a7e6495df8d9937049dbba9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2776e658b511208d9a295cd84a961d7691d29e0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217338"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246807"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
 Definiert eine Klasse, einen Operator und mehrere Vorlagen, die beim Zuordnen und Freigeben von Objekten helfen.
 
-## <a name="syntax"></a>Syntax
+## <a name="requirements"></a>Anforderungen
 
-```cpp
-#include <memory>
-```
+**Header:** \<memory>
+
+**Namespace:** std
 
 ## <a name="members"></a>Member
 
 ### <a name="functions"></a>Funktionen
 
-|Funktion|Beschreibung|
+|||
 |-|-|
 |[addressof](../standard-library/memory-functions.md#addressof)|Ruft die echte Adresse eines Objekts ab.|
 |[align](../standard-library/memory-functions.md#align)|Gibt einen Zeiger auf einen Bereich einer angegebenen Größe zurück, basierend auf der angegebenen Ausrichtung und der Startadresse.|
 |[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Erstellt `shared_ptr` auf Objekte, die einem angegebenen Typ mit einer angegebenen Zuordnung, zugeordnet und dafür erstellt werden.|
+|[atomic_compare_exchange_strong](../standard-library/memory-functions.md#atomic_compare_exchange_strong)||
+|[atomic_compare_exchange_weak](../standard-library/memory-functions.md#atomic_compare_exchange_weak)||
+|[atomic_compare_exchange_strong_explicit](../standard-library/memory-functions.md#atomic_compare_exchange_strong_explicit)||
+|[atomic_compare_exchange_weak_explicit](../standard-library/memory-functions.md#atomic_compare_exchange_weak_explicit)||
+|[atomic_exchange](../standard-library/memory-functions.md#atomic_exchange)||
+|[atomic_exchange_explicit](../standard-library/memory-functions.md#atomic_exchange_explicit)||
+|[atomic_is_lock_free](../standard-library/memory-functions.md#atomic_is_lock_free)||
+|[atomic_load](../standard-library/memory-functions.md#atomic_load)||
+|[atomic_load_explicit](../standard-library/memory-functions.md#atomic_load_explicit)||
+|[atomic_store](../standard-library/memory-functions.md#atomic_store)||
+|[atomic_store_explicit](../standard-library/memory-functions.md#atomic_store_explicit)||
 |[const_pointer_cast](../standard-library/memory-functions.md#const_pointer_cast)|Konstantenumwandlung in `shared_ptr`.|
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|Einem Garbage Collector wird mitgeteilt, dass die bei einer bestimmten Adresse startenden und in der angegebenen Blockgröße fallenden Zeichen keine nachweisbaren Zeiger enthalten.|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Der Garbage Collection wird mitgeteilt, dass die angegebene Adresse von zugewiesenem Speicher erreichbar ist.|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|Es werden Objekte gelöscht, die `operator new` zugeordnet sind. Kann mit `unique_ptr` verwendet werden.|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Kurzschreibweise `destroy` Methode.|
+|[destroy](../standard-library/memory-functions.md#destroy)|Kurzschreibweise `destroy` Methode.|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Kurzschreibweise `destroy` Methode.|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Dynamische Umwandlung in `shared_ptr`.|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|Rufen Sie den Deleter von `shared_ptr` ab.|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Gibt den Typ der Zeigersicherheit zurück, der von einem Garbage Collector angenommen wird.|
 |[get_temporary_buffer](../standard-library/memory-functions.md#get_temporary_buffer)|Weist temporären Speicher für eine Elementsequenz zu, die eine bestimmte Anzahl von Elementen nicht überschreitet.|
 |[make_shared](../standard-library/memory-functions.md#make_shared)|Erstellt `shared_ptr`, das auf die zugeordneten Objekte zeigt, die mithilfe der Standardbelegung von keinen oder mehreren Argumenten erstellt werden, oder gibt es zurück.|
 |[make_unique](../standard-library/memory-functions.md#make_unique)|Erstellt [unique_ptr](../standard-library/unique-ptr-class.md), das auf die zugeordneten Objekt zeigt, die von keinem oder mehreren Argumenten erstellt werden, oder gibt es zurück.|
-|[owner_less](../standard-library/memory-functions.md#owner_less)|Ermöglicht Mischvergleiche, die auf Besitz basieren, freigegebener und schwacher Zeiger.|
 |[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|Eine Enumeration aller möglichen Rückgabewerte für `get_pointer_safety`.|
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|Gibt den temporären Speicher frei, der mithilfe der `get_temporary_buffer`-Vorlagenfunktion zugeordnet wurde.|
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|Statische Umwandlung in `shared_ptr`.|
@@ -53,12 +65,19 @@ Definiert eine Klasse, einen Operator und mehrere Vorlagen, die beim Zuordnen un
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|`garbage_collector` wird mitgeteilt, dass eine angegebene Speicheradresse nicht erreichbar ist.|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|Es werden Objekte aus einem angegebenen Eingabebereich in einen nicht initialisierten Zielbereich kopiert.|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|Eine Kopie einer angegebenen Anzahl von Elementen aus einem Eingabeiterator wird erstellt. Die Kopien werden in einen Forward-Iterator abgelegt.|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Kurzschreibweise `uninitialized_default_construct` Methode.|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Kurzschreibweise `uninitialized_construct` Methode.|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|Objekte eines angegebenen Werts werden in einen nicht initialisierten Zielbereich kopiert.|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|Objekte einer angegebenen Anzahl von Elementen werden in einen nicht initialisierten Zielbereich kopiert.|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Kurzschreibweise `uninitialized_move` Methode.|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Kurzschreibweise `uninitialized_move` Methode.|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Kurzschreibweise `uninitialized_value_construct` Methode.|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Kurzschreibweise `uninitialized_value_construct` Methode.|
+|[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
 |[Operator!=](../standard-library/memory-operators.md#op_neq)|Es wird auf Ungleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.|
 |[operator==](../standard-library/memory-operators.md#op_eq_eq)|Es wird auf Gleichheit zwischen Zuweisungsobjekten einer bestimmten Klasse getestet.|
@@ -70,7 +89,7 @@ Definiert eine Klasse, einen Operator und mehrere Vorlagen, die beim Zuordnen un
 
 ### <a name="classes"></a>Klassen
 
-|Klasse|Beschreibung|
+|||
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objektarrays des Typs **Type** verwaltet.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Beschreibt ein Objekt, das alle Informationen bestimmt, die für einen zuweisungsfähigen Container erforderlich ist.|
@@ -82,6 +101,16 @@ Definiert eine Klasse, einen Operator und mehrere Vorlagen, die beim Zuordnen un
 |[shared_ptr](../standard-library/shared-ptr-class.md)|Umschließt einen intelligenten Zeiger mit Verweiszählung um ein dynamisch zugeordnetes Objekt.|
 |[unique_ptr](../standard-library/unique-ptr-class.md)|Es wird ein Zeiger auf ein Objekt in Besitz gespeichert. Der Zeiger ist nicht im Besitz eines anderen `unique_ptr`-Elements. `unique_ptr` wird zerstört, wenn der Besitzer zerstört wird.|
 |[weak_ptr](../standard-library/weak-ptr-class.md)|Umschließt einen schwach verknüpften Zeiger.|
+
+### <a name="structures"></a>Strukturen
+
+|||
+|-|-|
+|[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
+|[default_delete](../standard-library/default-delete-struct.md)||
+|[hash]()||
+|[owner_less](../standard-library/memory-functions.md#owner_less)|Ermöglicht Mischvergleiche, die auf Besitz basieren, freigegebener und schwacher Zeiger.|
+|[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
 ### <a name="specializations"></a>Spezialisierungen
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: b8b50e04e530e2d21b7a4e042d9feb2984e639db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0836ed683b398981e95e401a73ded6367c7ab472
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411863"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241810"
 ---
 # <a name="tupleelement-class"></a>tuple_element-Klasse
 
@@ -56,22 +56,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parameter
 
-*Index*<br/>
+*Index*\
 Der Index des angegebenen Elements.
 
-*Tuple*<br/>
+*Tupel*\
 Der Typ des Tupels.
 
-*Elem*<br/>
+*Elem*\
 Der Typ eines Arrayelements.
 
-*Size*<br/>
+*Größe*\
 Die Größe des Arrays.
 
-*T1*<br/>
+*T1*\
 Der Typ des ersten Elements in einem Paar.
 
-*T2*<br/>
+*T2*\
 Der Typ des zweiten Elements in einem Paar.
 
 ## <a name="remarks"></a>Hinweise
@@ -181,7 +181,3 @@ int main() {
 **Header:** \<Utility > (für paarspezialisierungen)
 
 **Namespace:** std
-
-## <a name="see-also"></a>Siehe auch
-
-[tuple ](../standard-library/tuple-class.md)<br/>

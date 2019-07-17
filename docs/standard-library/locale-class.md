@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413176"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245406"
 ---
 # <a name="locale-class"></a>locale-Klasse
 
@@ -168,6 +168,7 @@ Numerische Formatierungsregeln für nachfolgende Einfügungen in `cout` bleiben 
 
 |Operator|Beschreibung|
 |-|-|
+|[operator=](#op_eq)|Weist ein Gebietsschema an.|
 |[Operator!=](#op_neq)|Prüft zwei Gebietsschemen auf Ungleichheit.|
 |[operator( )](#op_call)|Vergleicht zwei `basic_string`-Objekte.|
 |[operator==](#op_eq_eq)|Prüft zwei Gebietsschemen auf Gleichheit.|
@@ -417,7 +418,7 @@ Die Memberklasse beschreibt das statische Memberobjekt, das von jedem Gebietssch
 
 ## <a name="locale"></a> locale::locale
 
-Erstellt ein Gebietsschema, eine Kopie eines Gebietsschemas oder eine Kopie des Gebietsschemas, in dem ein Facet oder eine Kategorie durch ein Facet oder eine Kategorie eines anderen Gebietsschemas ersetzt wurde.
+Erstellt ein Gebietsschema, eine Kopie eines Gebietsschemas oder eine Kopie des Gebietsschemas, in dem ein Facet oder eine Kategorie durch ein Facet oder eine Kategorie eines anderen Gebietsschemas ersetzt wurde. Enthält auch einen Destruktor.
 
 ```cpp
 locale();
@@ -430,6 +431,8 @@ locale(const locale& Loc, const char* Locname, category Cat);
 
 template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
+
+~locale();
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -446,7 +449,7 @@ Ein Gebietsschema für die Auswahl einer Kategorie.
 *CAT*<br/>
 Die Kategorie, die im erstellten Gebietsschema ersetzt werden soll.
 
-*Fac*<br/>
+*FAc*<br/>
 Das Facet, das im erstellten Gebietsschema ersetzt werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -546,6 +549,14 @@ int main( )
 ```Output
 The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
+```
+
+## <a name="op_eq"></a>  locale:: Operator =
+
+Weist ein Gebietsschema an.
+
+```cpp
+const locale& operator=(const locale& other) noexcept;
 ```
 
 ## <a name="op_neq"></a> locale::operator!=

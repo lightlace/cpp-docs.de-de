@@ -7,12 +7,12 @@ helpviewer_keywords:
 - less_equal function
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
-ms.openlocfilehash: e1949477cc130bbbc8cdfeea082ec73f14bf4aad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67a686b139ae4abbf25a42a994cceaba008decf5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223942"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245388"
 ---
 # <a name="lessequal-struct"></a>less_equal-Struktur
 
@@ -39,12 +39,13 @@ struct less_equal<void>
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*, *T*, *U* jeder Typ, unterstützt eine `operator<=` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
+*Typ*, *T*, *U*\
+Jeder Typ, der ein `operator<=`-Element unterstützt, das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-*Links*<br/>
+*Links*\
 Der linke Operand des kleiner-oder-gleich-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-*Rechts*<br/>
+*Richting*\
 Der rechte Operand des kleiner-oder-gleich-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -53,7 +54,7 @@ Das Ergebnis von `Left <= Right`. Die spezialisierte Vorlage vervollkommnet die 
 
 ## <a name="remarks"></a>Hinweise
 
-Das binäre Prädikat `less_equal` <  `Type`> stellt eine strenge schwache Sortierung eines Satzes von Elementwerten vom Typ *Typ* in Äquivalenzklassen, wenn dieser Typ den mathematischen Standard erfüllt Anforderungen für so sortiert wird. Die Spezialisierungen für einen Zeigertyp ergeben eine gesamte Sortierung von Elementen, insofern, dass alle Elemente unterschiedlicher Werte zueinander in Beziehung stehend sortiert werden.
+Das binäre Prädikat `less_equal` < `Type`> stellt eine strenge schwache Sortierung eines Satzes von Elementwerten vom Typ *Typ* in Äquivalenzklassen, wenn dieser Typ den mathematischen Standard erfüllt Anforderungen für so sortiert wird. Die Spezialisierungen für einen Zeigertyp ergeben eine gesamte Sortierung von Elementen, insofern, dass alle Elemente unterschiedlicher Werte zueinander in Beziehung stehend sortiert werden.
 
 ## <a name="example"></a>Beispiel
 
@@ -109,19 +110,7 @@ int main( )
 }
 ```
 
-## <a name="sample-output"></a>Beispielausgabe
-
 ```Output
 Original vector v1 = (31247 37154 48755 15251 6205 2836 2836 2836)
 Sorted vector v1 = (2836 2836 2836 6205 15251 31247 37154 48755)
 ```
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Siehe auch
-
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

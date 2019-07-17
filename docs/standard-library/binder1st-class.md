@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: f70a1a4a0903b66edf5f42e59788b9a2d97fc967
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 384a870a10c9f806684443d8c67647e924b6b2aa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388214"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243383"
 ---
 # <a name="binder1st-class"></a>binder1st-Klasse
 
@@ -43,13 +43,13 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-*binary_fn*<br/>
+*binary_fn*\
 Das binäre Funktionsobjekt, das in ein unäres Funktionsobjekt konvertiert werden soll.
 
-*left*<br/>
+*Links*\
 Der Wert, an den das erste Argument des binären Funktionsobjekts gebunden werden soll.
 
-*right*<br/>
+*Richting*\
 Der Wert des Arguments, den das angepasste binäre Objekt mit dem festen Wert des zweiten Arguments vergleicht.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -58,9 +58,9 @@ Das unäre Funktionsobjekt, das Binden des ersten Arguments des binären Funktio
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse speichert eine Kopie eines binären Funktionsobjekts *Binary_fn* in `op`, sowie eine Kopie der *linken* in `value`. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert `op( value, right )`.
+Die Vorlagenklasse speichert eine Kopie eines binären Funktionsobjekts *Binary_fn* in `op`, sowie eine Kopie der *linken* in `value`. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert `op(value, right)`.
 
-Wenn *Binary_fn* ist ein Objekt des Typs `Operation` und `c` ist eine Konstante ist, dann `bind1st( binary_fn, c )` entspricht ein praktischer `binder1st<Operation>( binary_fn, c )`. Weitere Informationen finden Sie unter [bind1st](../standard-library/functional-functions.md#bind1st).
+Wenn *Binary_fn* ist ein Objekt des Typs `Operation` und `c` ist eine Konstante ist, dann `bind1st(binary_fn, c)` entspricht ein praktischer `binder1st<Operation>(binary_fn, c)`. Weitere Informationen finden Sie unter [bind1st](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Beispiel
 
@@ -105,20 +105,10 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "
          << result2 << "." << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
 The number of elements in v1 less than 10 is: 2.
-*/
 ```
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Siehe auch
-
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

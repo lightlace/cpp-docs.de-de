@@ -5,20 +5,16 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 68f0ba605b62f2492f49a2b81030c42dca80bf5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 567e0538f59c40d57f85d652a8919be6e034cf0b
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413228"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245354"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt;-Enumerationen
 
-|||
-|-|-|
-|[float_denorm_style](#float_denorm_style)|[float_round_style](#float_round_style)|
-
-## <a name="float_denorm_style"></a> float_denorm_style Enumeration
+## <a name="float_denorm_style"></a> float_denorm_style
 
 Die Enumeration beschreibt die verschiedenen Methoden, die eine Implementierung für die Darstellung eines denormalisierten Gleitkommawerts auswählen kann – für Werte, die zu klein sind, um als normalisierte Werte dargestellt zu werden:
 
@@ -43,7 +39,7 @@ Die Enumeration gibt Folgendes zurück:
 
 Unter [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm) finden Sie ein Beispiel, in dem auf die Werte dieser Enumeration zugegriffen werden kann.
 
-## <a name="float_round_style"></a> float_round_style Enumeration
+## <a name="float_round_style"></a> float_round_style
 
 Die Enumeration beschreibt die verschiedenen Methoden, die eine Implementierung für die Rundung eines Gleitkommawerts auf einen ganzzahligen Wert auswählen kann.
 
@@ -73,7 +69,3 @@ Die Enumeration gibt Folgendes zurück:
 ### <a name="example"></a>Beispiel
 
 Unter [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style) finden Sie ein Beispiel, in dem auf die Werte dieser Enumeration zugegriffen werden kann.
-
-## <a name="see-also"></a>Siehe auch
-
-[\<limits>](../standard-library/limits.md)<br/>

@@ -32,8 +32,14 @@ helpviewer_keywords:
 - std::dec [C++]
 - std::fixed [C++]
 - std::hex [C++]
+- std::hexfloat [C++]
+- std::io_errc [C++]
 - std::internal [C++]
+- std::iostream_category [C++]
+- std::is_error_code_enum [C++]
 - std::left [C++]
+- std::make_error_code [C++]
+- std::make_error_condition [C++]
 - std::noboolalpha [C++]
 - std::noshowbase [C++]
 - std::noshowpoint [C++]
@@ -50,25 +56,14 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 18f42f8e5bcd69872e4300d154eb72f489015e36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a08c039322c49f33ae4441851c96aa56e62fcb84
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404890"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245294"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt;-Funktionen
-
-||||
-|-|-|-|
-|[defaultfloat](#ios_defaultfloat)|[boolalpha](#boolalpha)|[dec](#dec)|
-|[fixed](#fixed)|[hex](#hex)|[internal](#internal)|
-|[left](#left)|[noboolalpha](#noboolalpha)|[noshowbase](#noshowbase)|
-|[noshowpoint](#noshowpoint)|[noshowpos](#noshowpos)|[noskipws](#noskipws)|
-|[nounitbuf](#nounitbuf)|[nouppercase](#nouppercase)|[oct](#oct)|
-|[right](#right)|[scientific](#scientific)|[showbase](#showbase)|
-|[showpoint](#showpoint)|[showpos](#showpos)|[skipws](#skipws)|
-|[unitbuf](#unitbuf)|[uppercase](#uppercase)|
 
 ## <a name="boolalpha"></a> boolalpha
 
@@ -80,7 +75,7 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -122,7 +117,7 @@ true
 true
 ```
 
-## <a name="dec"></a> dec
+## <a name="dec"></a> DEC
 
 Gibt an, dass ganzzahlige Variablen in Basis-10-Schreibweise angezeigt werden.
 
@@ -132,7 +127,7 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -175,7 +170,7 @@ int main( )
 100
 ```
 
-## <a name="ios_defaultfloat"></a>&lt;ios&gt; defaultfloat
+## <a name="ios_defaultfloat"></a> &lt;IOS&gt; Defaultfloat
 
 Konfiguriert die Flags eines `ios_base`-Objekts, sodass ein Standard-Anzeigeformat für Floatwerte verwendet wird.
 
@@ -185,14 +180,14 @@ ios_base& defaultfloat(ios_base& _Iosbase);
 
 ### <a name="parameters"></a>Parameter
 
-*_Iosbase*<br/>
+*"_Iosbase"* \
 Ein `ios_base`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
 Der Manipulator ruft _I `osbase.`[ios_base::unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)` auf und gibt dann _I `osbase` zurück.
 
-## <a name="fixed"></a> fixed
+## <a name="fixed"></a> behoben
 
 Gibt an, dass eine Gleitkommazahl in fester Dezimalschreibweise angezeigt wird.
 
@@ -202,7 +197,7 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -240,7 +235,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a> hex
+## <a name="hex"></a> Hex
 
 Gibt an, dass ganzzahlige Variablen in Basis-16-Schreibweise angezeigt werden soll.
 
@@ -250,7 +245,7 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -267,7 +262,21 @@ Der Manipulator ruft `str` **.** [Setf](../standard-library/ios-base-class.md#se
 
 Finden Sie unter [Dec](../standard-library/ios-functions.md#dec) ein Beispiel zur Verwendung für `hex`.
 
-## <a name="internal"></a> internal
+## <a name="hexfloat"></a> hexfloat
+
+```cpp
+ios_base& hexfloat (ios_base& str);
+```
+
+## <a name="io_errc"></a> io_errc
+
+```cpp
+enum class io_errc {
+    stream = 1
+};
+```
+
+## <a name="internal"></a> interne
 
 Bewirkt, dass ein Nummernzeichen linksbündig und die Zahl rechtsbündig ausgerichtet wird.
 
@@ -277,7 +286,7 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -313,7 +322,19 @@ int main( void )
 -..123.456
 ```
 
-## <a name="left"></a> left
+## <a name="is_error_code_enum"></a> is_error_code_enum
+
+```cpp
+template <> struct is_error_code_enum<io_errc> : public true_type { };
+```
+
+## <a name="iostream_category"></a> iostream_category
+
+```cpp
+const error_category& iostream_category() noexcept;
+```
+
+## <a name="left"></a> Links
 
 Bewirkt, dass Text, der nicht so breit ist wie die Ausgabebreite, im Stream linksbündig angezeigt wird.
 
@@ -323,7 +344,7 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -352,8 +373,20 @@ int main( )
 ```
 
 ```Output
-                   5
 5
+        5
+```
+
+## <a name="make_error_code"></a> make_error_code
+
+```cpp
+error_code make_error_code(io_errc e) noexcept;
+```
+
+## <a name="make_error_condition"></a> make_error_condition
+
+```cpp
+error_condition make_error_condition(io_errc e) noexcept;
 ```
 
 ## <a name="noboolalpha"></a> noboolalpha
@@ -366,7 +399,7 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -395,7 +428,7 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -422,7 +455,7 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -469,7 +502,7 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -496,7 +529,7 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -538,7 +571,7 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -551,7 +584,7 @@ Ein Verweis auf das Objekt, von dem _*str* abgeleitet wird.
 
 Der Manipulator ruft `str`.[ Unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`), und gibt dann zurück *str*.
 
-## <a name="nouppercase"></a>nouppercase
+## <a name="nouppercase"></a> nouppercase
 
 Gibt an, dass hexadezimale Ziffern und der Exponent in wissenschaftlicher Schreibweise in Kleinbuchstaben angezeigt werden.
 
@@ -561,7 +594,7 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -576,7 +609,7 @@ Der Manipulator ruft `str`.[ Unsetf](../standard-library/ios-base-class.md#unset
 
 Unter [uppercase](../standard-library/ios-functions.md#uppercase) finden Sie ein Beispiel für die Verwendung von `nouppercase`.
 
-## <a name="oct"></a> oct
+## <a name="oct"></a> Oktober
 
 Gibt an, dass ganzzahlige Variablen in Basis-8-Schreibweise angezeigt werden.
 
@@ -586,7 +619,7 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -603,7 +636,7 @@ Der Manipulator ruft `str`.[ SETF](../standard-library/ios-base-class.md#setf)( 
 
 Finden Sie unter [Dec](../standard-library/ios-functions.md#dec) ein Beispiel zur Verwendung für `oct`.
 
-## <a name="right"></a> right
+## <a name="right"></a> Richting
 
 Bewirkt, dass Text, der nicht so breit ist wie die Ausgabebreite, im Stream rechtsbündig angezeigt wird.
 
@@ -613,7 +646,7 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -660,7 +693,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a> scientific
+## <a name="scientific"></a> Wissenschaftliche
 
 Bewirkt, dass Gleitkommazahlen in wissenschaftlicher Schreibweise angezeigt werden.
 
@@ -670,7 +703,7 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -715,7 +748,7 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -769,7 +802,7 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -796,7 +829,7 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -841,7 +874,7 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -893,7 +926,7 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -918,7 +951,7 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*Str*\
 Ein Verweis auf ein [ios_base](../standard-library/ios-base-class.md)-Objekt oder auf einen Typ, der von `ios_base` erbt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -958,7 +991,3 @@ int main( void )
 a
 A
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[\<ios>](../standard-library/ios.md)<br/>

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 317344db856a7a0568aca422ecfe8280b80db097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a72941c7b8c351f7b4fb8fa0e40afb809ea7cbe
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159417"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243760"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
 Definiert C++-Standardbibliothek-Funktionen, mit deren Hilfe erstellen *Funktionsobjekte*, auch bekannt als *Funktionselemente*, und ihre Binder. Ein Funktionsobjekt ist ein Objekt eines Typs, der `operator()` definiert. Ein Funktionsobjekt kann ein Funktionszeiger sein, aber in der Regel, wird das Objekt zum Speichern zusätzlicher Informationen verwendet, auf die während eines Funktionsaufrufs zugegriffen werden kann.
 
-## <a name="syntax"></a>Syntax
+## <a name="requirements"></a>Anforderungen
 
-```cpp
-#include <functional>
-```
+**Header:** \<functional>
+
+**Namespace:** std
 
 ## <a name="remarks"></a>Hinweise
 
@@ -72,18 +72,23 @@ Wenn ein Aufrufwrapper über einen *schwachen Ergebnistyp* verfügt, basiert der
 
 Jeder Aufrufwrapper weist einen Verschiebekonstruktor und einen Kopierkonstruktor auf. Ein *einfacher Aufrufwrapper* ist ein Aufrufwrapper, der über einen Zuweisungsoperator verfügt und dessen Kopierkonstruktor, Verschiebekonstruktor und Zuweisungsoperator keine Ausnahmen auslösen. Ein *Aufrufweiterleitungwrapper* ist ein Aufrufwrapper, der mithilfe einer beliebigen Argumentliste aufgerufen werden kann, und der die Argumente den umschlossenen aufrufbaren Objekt als Verweise liefert. Alle rvalue-Argumente werden als rvalue-Verweise geliefert, und lvalue-Argumente werden als lvalue-Verweise geliefert.
 
-## <a name="classes"></a>Klassen
+## <a name="members"></a>Member
 
-|Klasse|Beschreibung|
+### <a name="classes"></a>Klassen
+
+|||
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|Eine Klasse, mit der eine Ausnahme beschrieben wird, die ausgelöst wird, um anzugeben, dass ein Aufruf von `operator()` an ein [function](../standard-library/function-class.md)-Objekt einen Fehler verursacht hat, da das Objekt leer war.|
 |[binary_negate](../standard-library/binary-negate-class.md)|Eine Klasse, mit der eine Memberfunktion bereitgestellt wird, die den Rückgabewert einer angegebenen binären Funktion negiert.<br/> (In C ++ 17 veraltet.) |
 |[binder1st](../standard-library/binder1st-class.md)|Eine Vorlagenklasse, mit der ein Konstruktor bereitgestellt wird, der ein binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert, indem das erste Argument der binären Funktion an einen angegebenen Wert gebunden wird.<br/> (Veraltet in C ++ 11, C ++ 17 entfernt). |
 |[binder2nd](../standard-library/binder2nd-class.md)|Eine Vorlagenklasse, mit der ein Konstruktor bereitgestellt wird, der ein binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert, indem das zweite Argument der binären Funktion an einen angegebenen Wert gebunden wird.<br/> (Veraltet in C ++ 11, C ++ 17 entfernt). |
+|[boyer_moore_horspool_searcher](../standard-library/boyer-moore-horspool-searcher-class.md)||
+|[boyer_moore_searcher](../standard-library/boyer-moore-searcher-class.md)||
 |[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Eine Adapterklasse, die einer const-Memberfunktion, die keine Argumente akzeptiert, ermöglicht, als unäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Verweisargument initialisiert wird.<br/> (Veraltet in C ++ 11, C ++ 17 entfernt). |
 |[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|Eine Adapterklasse, die einer const-Memberfunktion, die keine Argumente akzeptiert, ermöglicht, als unäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Zeigerargument initialisiert wird.<br/> (Veraltet in C ++ 11, C ++ 17 entfernt). |
 |[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|Eine Adapterklasse, die einer const-Memberfunktion, die ein einzelnes Argument akzeptiert, ermöglicht, als binäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Verweisargument initialisiert wird.<br/> (Veraltet in C ++ 11, C ++ 17 entfernt). |
 |[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|Eine Adapterklasse, die einer const-Memberfunktion, die ein einzelnes Argument akzeptiert, ermöglicht, als binäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Zeigerargument initialisiert wird.<br/> (Veraltet in C ++ 11, C ++ 17 entfernt). |
+|[default_searcher](../standard-library/default-searcher-class.md)||
 |[function](../standard-library/function-class.md)|Eine Klasse, die ein aufrufbares Objekt umschließt.|
 |[hash](../standard-library/hash-class.md)|Eine Klasse, die einen Hashcode für einen Wert berechnet.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Eine Klasse, die überprüft, ob ein bestimmter Typ generiert wird, indem `bind` aufgerufen wird.|
@@ -97,9 +102,9 @@ Jeder Aufrufwrapper weist einen Verschiebekonstruktor und einen Kopierkonstrukto
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Eine Klasse, die einen Verweis umschließt.|
 |[unary_negate](../standard-library/unary-negate-class.md)|Eine Klasse, mit der eine Memberfunktion bereitgestellt wird, die den Rückgabewert einer angegebenen unären Funktion negiert.<br/> (In C ++ 17 veraltet.)  |
 
-## <a name="functions"></a>Funktionen
+### <a name="functions"></a>Funktionen
 
-|Funktion|Beschreibung|
+|||
 |-|-|
 |[bind](../standard-library/functional-functions.md#bind)|Bindet Argumente an ein aufrufbares Objekt.|
 |[bind1st](../standard-library/functional-functions.md#bind1st)|Eine Hilfevorlagenfunktion, mit der ein Adapter erstellt wird, um ein binäres Funktionsobjekt in ein unäres Funktionsobjekt zu konvertieren, indem das erste Argument der binären Funktion an einen angegebenen Wert gebunden wird.<br/> (Veraltet in C ++ 11, C ++ 17 entfernt). |
@@ -109,6 +114,7 @@ Jeder Aufrufwrapper weist einen Verschiebekonstruktor und einen Kopierkonstrukto
 |[bit_or](../standard-library/functional-functions.md#bit_or)|Gibt das bitweise logische OR (operator&#124;) der zwei Parameter zurück.|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|Gibt das bitweise logische XOR (Operator^) der zwei Parameter zurück.|
 |[cref](../standard-library/functional-functions.md#cref)|Erstellt ein konstantes `reference_wrapper`-Element aus einem Argument.|
+|[invoke](../standard-library/functional-functions.md#invoke)||
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|Generiert einen einfachen Aufrufwrapper.|
 |[mem_fun](../standard-library/functional-functions.md#mem_fun)|Hilfevorlagenfunktionen, die verwendet werden, um Funktionsobjektadapter für Memberfunktionen zu konstruieren, wenn Sie mit Zeigerargumenten initialisiert werden.<br/> (Veraltet in C ++ 11, C ++ 17 entfernt). |
 |[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Eine Hilfevorlagenfunktion, die verwendet wird, um Funktionsobjektadapter für Memberfunktionen zu konstruieren, wenn Sie mit Verweisargumenten initialisiert wird.|
@@ -119,9 +125,9 @@ Jeder Aufrufwrapper weist einen Verschiebekonstruktor und einen Kopierkonstrukto
 |[ref](../standard-library/functional-functions.md#ref)|Konstruiert ein `reference_wrapper` aus einem Argument.|
 |[swap](../standard-library/functional-functions.md#swap)|Tauscht zwei `function`-Objekte.|
 
-## <a name="structs"></a>Strukturen
+### <a name="structs"></a>Strukturen
 
-|Struktur|Beschreibung|
+|||
 |-|-|
 |[binary_function](../standard-library/binary-function-struct.md)|Eine leere Basisklasse, mit der Typen definiert werden, die möglicherweise von einer abgeleiteten Klasse geerbt wird, die ein binäres Funktionsobjekt bereitstellt.<br/> (Veraltet in C ++ 11, C ++ 17 entfernt). |
 |[divides](../standard-library/divides-struct.md)|Die Klasse stellt ein vordefiniertes Funktionsobjekt bereit, das die arithmetische Operation der Unterteilung für Elemente eines angegebenen Werttyps ausführt.|
@@ -141,15 +147,15 @@ Jeder Aufrufwrapper weist einen Verschiebekonstruktor und einen Kopierkonstrukto
 |[plus](../standard-library/plus-struct.md)|Die Klasse stellt ein vordefiniertes Funktionsobjekt bereit, das die arithmetische Operation der Addition für Elemente eines angegebenen Werttyps ausführt.|
 |[unary_function](../standard-library/unary-function-struct.md)|Eine leere Basisklasse, mit der Typen definiert werden, die möglicherweise von einer abgeleiteten Klasse geerbt wird, die ein unäres Funktionsobjekt bereitstellt.<br/> (Veraltet in C ++ 11, C ++ 17 entfernt). |
 
-## <a name="objects"></a>erzwingen
+### <a name="objects"></a>erzwingen
 
-|Object|Beschreibung|
+|||
 |-|-|
 |[_1.._M](../standard-library/1-object.md)|Platzhalter für austauschbare Argumente.|
 
-## <a name="operators"></a>Operatoren
+### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
 |[operator==](../standard-library/functional-operators.md#op_eq_eq)|Lässt den Gleichheitsvergleich von aufrufbaren Objekten nicht zu.|
 |[Operator!=](../standard-library/functional-operators.md#op_neq)|Lässt den Ungleichheitsvergleich von aufrufbaren Objekten nicht zu.|

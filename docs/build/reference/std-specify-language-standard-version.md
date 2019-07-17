@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 0f45727c61d55ff57befc7ff23a3d434e86673bc
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 9bdeb92e03b3ae00258ac48a29cec42ef7e18e81
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837531"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241216"
 ---
 # <a name="std-specify-language-standard-version"></a>/std (Standardversion für die Sprache festlegen)
 
@@ -21,9 +21,9 @@ Aktivieren Sie unterstützte Features der Programmiersprache C++ aus der angegeb
 
 > /std:\[c++14\|c++17\|c++latest]
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Option **/std** ist in Visual Studio 2017 und höher verfügbar. Sie wird zum Steuern der versionsspezifischen Features gemäß dem ISO C++-Programmiersprachenstandard verwendet, die während der Kompilierung Ihres Codes aktiviert sind. Diese Option ermöglicht Ihnen, die Unterstützung für bestimmte neue Sprach- und Bibliotheksfeatures zu deaktivieren, die Ihren vorhandenen Code stören können, der mit einer bestimmten Version des Sprachstandards kompatibel ist. Standardmäßig ist **/std:c++14** angegeben, womit Features von Sprache und Standardbibliotheken deaktiviert sind, die sich in späteren Versionen des C++-Sprachstandards finden. Verwenden Sie **/std:c++17**, um die spezifischen Features und das Verhalten gemäß dem C++17-Standard zu aktivieren. Um explizit die aktuell implementierten Features von Compiler und Standardbibliotheken zu aktivieren, die für den nächsten Entwurf des Standards vorgeschlagen sind, verwenden Sie **/std:c++latest**. Alle C++20-Features erfordern **/std:latest**; wenn die Implementierung abgeschlossen ist, wird eine neue Option **/std:c++20** aktiviert.
+Die Option **/std** ist in Visual Studio 2017 und höher verfügbar. Sie wird zum Steuern der versionsspezifischen Features gemäß dem ISO C++-Programmiersprachenstandard verwendet, die während der Kompilierung Ihres Codes aktiviert sind. Diese Option ermöglicht Ihnen, die Unterstützung für bestimmte neue Sprach- und Bibliotheksfeatures zu deaktivieren, die Ihren vorhandenen Code stören können, der mit einer bestimmten Version des Sprachstandards kompatibel ist. Standardmäßig ist **/std:c++14** angegeben, womit Features von Sprache und Standardbibliotheken deaktiviert sind, die sich in späteren Versionen des C++-Sprachstandards finden. Verwenden Sie **/std:c++17**, um die spezifischen Features und das Verhalten gemäß dem C++17-Standard zu aktivieren. Um explizit die aktuell implementierten Features von Compiler und Standardbibliotheken zu aktivieren, die für den nächsten Entwurf des Standards vorgeschlagen sind, verwenden Sie **/std:c++latest**. Alle C ++ 20 Features erfordern **/Std: c ++ neueste**; Wenn die Implementierung abgeschlossen ist, wird ein neues **/Std: c ++ 20** Option wird aktiviert.
 
 Die Standardoption **/std:c++14** aktiviert den Satz der C++14-Features, die vom MSVC-Compiler implementiert werden. Diese Option deaktiviert Compiler- und Standardbibliotheksunterstützung für Features, die in aktuelleren Versionen des Sprachstandards geändert oder neu sind, mit Ausnahme einiger C++17-Features, die bereits in früheren Releases des MSVC-Compilers implementiert waren. Um Breaking Changes für Benutzer zu vermeiden, die bereits Abhängigkeiten mit den in Visual Studio 2015 Update 2 verfügbaren Features implementiert haben, bleiben diese Features aktiviert, wenn die Option **/std:c++14** angegeben wird:
 
@@ -57,7 +57,7 @@ Die Optionen **/std:c++14** und **/std:c++latest** stehen von Visual Studio 2015
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
-1. Wählen Sie **Konfigurationseigenschaften**, **C/C++**, **Sprache**aus.
+1. Wählen Sie **Konfigurationseigenschaften**, **C/C++** , **Sprache**aus.
 
 1. Wählen Sie unter **C++-Sprachstandard** in der Dropdownliste den zu unterstützenden Sprachstandard und dann **OK** oder **Übernehmen** aus, um Ihre Änderungen zu speichern.
 

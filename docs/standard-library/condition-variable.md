@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: 3ce9125a13f0dd2f2e4f98a217c4373f2be2f8a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212065"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244577"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -17,14 +17,14 @@ Definiert die Klassen [condition_variable](../standard-library/condition-variabl
 
 Für diesen Header wird "Concurrency Runtime (ConcRT)" verwendet, sodass er zusammen mit anderen ConcRT-Mechanismen verwendet werden kann. Weitere Informationen finden Sie unter [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
-## <a name="syntax"></a>Syntax
+## <a name="requirements"></a>Anforderungen
 
-```cpp
-#include <condition_variable>
-```
+**Header:** \<condition_variable>
+
+**Namespace:** std
 
 > [!NOTE]
-> Im Code, der kompiliert wird **"/ CLR"**, dieser Header blockiert.
+> Im Code, der kompiliert wird **"/ CLR"** , dieser Header blockiert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -49,13 +49,21 @@ Die `condition_variable_any`- und `condition_variable`- Klassen verfügen über 
 
 - `wait_for` wartet, bis zu einer angegebenen Dauer (`time interval`).
 
-Jede dieser Methoden verfügt über zwei überladene Versionen. Eine davon wartet einfach und kann fälschlicherweise aufwachen. Die andere verwendet ein zusätzliches Vorlagenargument, das ein Prädikat definiert. Die Methode wird nicht zurückgegeben werden, bis das Prädikat **"true"**.
+Jede dieser Methoden verfügt über zwei überladene Versionen. Eine davon wartet einfach und kann fälschlicherweise aufwachen. Die andere verwendet ein zusätzliches Vorlagenargument, das ein Prädikat definiert. Die Methode wird nicht zurückgegeben werden, bis das Prädikat **"true"** .
 
-Jede Klasse verfügt auch über zwei Methoden, mit denen eine Bedingungsvariable benachrichtigt wird, die die Bedingung den Wert **"true"**.
+Jede Klasse verfügt auch über zwei Methoden, mit denen eine Bedingungsvariable benachrichtigt wird, die die Bedingung den Wert **"true"** .
 
 - `notify_one` weckt einen der Threads auf, der auf die Bedingungsvariable wartet.
 
 - `notify_all` weckt alle Threads auf, die auf die Bedingungsvariable warten.
+
+## <a name="functions-and-enums"></a>Funktionen und Enumerationen
+
+```cpp
+void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
+
+enum class cv_status { no_timeout, timeout };
+```
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -32,40 +32,30 @@ helpviewer_keywords:
 - std::make_unchecked_array_iterator [C++]
 - std::next [C++]
 - std::prev [C++]
-ms.openlocfilehash: f6ea1ac49dabbfc34af9c8ddd020543f606d37a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69f1007f0c7f587e81313f5de97947410bf243df
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224141"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244025"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt;-Funktionen
 
-||||
-|-|-|-|
-|[advance](#advance)|[back_inserter](#back_inserter)|[begin](#begin)|
-|[cbegin](#cbegin)|[cend](#cend)|[distance](#distance)|
-|[end](#end)|[front_inserter](#front_inserter)|[inserter](#inserter)|
-|[make_checked_array_iterator](#make_checked_array_iterator)|[make_move_iterator](#make_move_iterator)|[make_unchecked_array_iterator](#make_unchecked_array_iterator)|
-|[next](#next)|[prev](#prev)|
-
-## <a name="advance"></a> advance
+## <a name="advance"></a> Erweiterte
 
 Damit kann ein Iterator um eine bestimmte Anzahl von Positionen vorwärts verschoben werden.
 
 ```cpp
 template <class InputIterator, class Distance>
-void advance(
-    InputIterator& InIt,
-    Distance Off);
+    void advance(InputIterator& InIt, Distance Off);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*InIt*<br/>
+*InIt*\
 Der Iterator, der vorwärts verschoben werden soll und die Anforderungen für einen Eingabeiterator erfüllen muss.
 
-*Off*<br/>
+*Ausschalten*\
 Ein Ganzzahltyp, der in den Differenztyp des Iterators konvertierbar ist und die Anzahl von Schritten angibt, um die die Position des Iterators vorwärts verschoben werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -134,7 +124,7 @@ back_insert_iterator<Container> back_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parameter
 
-*_Cont*<br/>
+*_Cont*\
 Der Container, in dem die Einfügung am Ende ausgeführt werden sollte.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -194,7 +184,7 @@ The initial vector vec is: ( 0 1 2 ).
 After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).
 ```
 
-## <a name="begin"></a>  begin
+## <a name="begin"></a> beginnen
 
 Ruft einen Iterator für das erste Element in einem angegebenen Container ab.
 
@@ -213,10 +203,10 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parameter
 
-*cont*<br/>
+*Inhalt*\
 Ein Container.
 
-*array*<br/>
+*Array*\
 Ein Array von Objekten des Typs `Ty`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -308,7 +298,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>Parameter
 
-*cont*<br/>
+*Inhalt*\
 Ein Container oder ein initializer_list-Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -341,7 +331,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>Parameter
 
-*cont*<br/>
+*Inhalt*\
 Ein Container oder ein initializer_list-Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -362,7 +352,28 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="distance"></a> distance
+## <a name="crbegin"></a> crbegin
+
+```cpp
+template <class C> constexpr auto crbegin(const C& c) -> decltype(std::rbegin(c));
+```
+
+## <a name="crend"></a> crend
+
+```cpp
+template <class C> constexpr auto crend(const C& c) -> decltype(std::rend(c));
+```
+
+## <a name="data"></a> Daten
+
+```cpp
+template <class C> constexpr auto data(C& c) -> decltype(c.data());
+template <class C> constexpr auto data(const C& c) -> decltype(c.data());
+template <class T, size_t N> constexpr T* data(T (&array)[N]) noexcept;
+template <class E> constexpr const E* data(initializer_list<E> il) noexcept;
+```
+
+## <a name="distance"></a> Entfernung
 
 Bestimmt die Anzahl von Inkrementen zwischen den durch zwei Iteratoren festgelegten Positionen.
 
@@ -373,10 +384,10 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Der erste Iterator, dessen Abstand zum zweiten ermittelt werden soll.
 
-*last*<br/>
+*letzte*\
 Der zweite Iterator, dessen Abstand zum ersten ermittelt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -435,7 +446,15 @@ LPOS is advanced 7 steps forward to point  to the eighth element: 12.
 The distance from L.begin( ) to LPOS is: 7.
 ```
 
-## <a name="end"></a> end
+## <a name="empty"></a> leere
+
+```cpp
+template <class C> constexpr auto empty(const C& c) -> decltype(c.empty());
+template <class T, size_t N> constexpr bool empty(const T (&array)[N]) noexcept;
+template <class E> constexpr bool empty(initializer_list<E> il) noexcept;
+```
+
+## <a name="end"></a> Ende
 
 Ruft einen Iterator für das Element ab, das auf das letzte Element im angegebenen Container folgt.
 
@@ -454,10 +473,10 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parameter
 
-*cont*<br/>
+*Inhalt*\
 Ein Container.
 
-*array*<br/>
+*Array*\
 Ein Array von Objekten des Typs `Ty`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -481,7 +500,7 @@ front_insert_iterator<Container> front_inserter(Container& _Cont);
 
 ### <a name="parameters"></a>Parameter
 
-*_Cont*<br/>
+*_Cont*\
 Das Containerobjekt, dessen Front ein eingefügtes Element hat.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -541,7 +560,7 @@ After the front insertions, the list L is:
 ( 200 100 -1 0 1 2 3 4 5 6 7 8 ).
 ```
 
-## <a name="inserter"></a> inserter
+## <a name="inserter"></a> im Codeausschnitteinfüger
 
 Eine hilfevorlagenfunktion, die Sie verwenden kann `inserter(_Cont, _Where)` anstelle von `insert_iterator<Container>(_Cont, _Where)`.
 
@@ -555,10 +574,10 @@ inserter(
 
 ### <a name="parameters"></a>Parameter
 
-*_Cont*<br/>
+*_Cont*\
 Der Container, zu dem neue Elemente hinzugefügt werden sollen.
 
-*_Where*<br/>
+*_Where*\
 Ein Iterator, der nach der Einfügemarke sucht.
 
 ### <a name="remarks"></a>Hinweise
@@ -630,13 +649,13 @@ Iter Ptr,
 
 ### <a name="parameters"></a>Parameter
 
-*Ptr*<br/>
+*PTR*\
 Ein Zeiger auf das Zielarray.
 
-*Size*<br/>
+*Größe*\
 Die Größe des Zielarrays.
 
-*Index*<br/>
+*Index*\
 Optionaler Index im Array.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -718,7 +737,7 @@ make_move_iterator(const Iterator& _It);
 
 ### <a name="parameters"></a>Parameter
 
-*_It*<br/>
+*_It*\
 Der Iterator, der im neuen Move-Iterator gespeichert ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -740,7 +759,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parameter
 
-*Ptr*<br/>
+*PTR*\
 Ein Zeiger auf das Zielarray.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -804,7 +823,7 @@ int main()
 }
 ```
 
-## <a name="next"></a> next
+## <a name="next"></a> Weiter
 
 Führt eine bestimmte Anzahl von Iterationen aus und gibt die neue Position des Iterators zurück.
 
@@ -817,10 +836,10 @@ InputIterator next(
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Die aktuelle Position.
 
-*_Off*<br/>
+*_Off*\
 Die Anzahl der Iterationen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -831,7 +850,7 @@ Gibt die neue Position des Iterators nach dem Durchlaufen *_Off* Zeiten.
 
 Die Vorlagenfunktion gibt `next` inkrementierte *_Off* Zeiten
 
-## <a name="prev"></a> prev
+## <a name="prev"></a> Prev
 
 Führt eine bestimmte Anzahl von Iterationen rückwärts aus und gibt die neue Position des Iterators zurück.
 
@@ -844,16 +863,33 @@ BidirectionalIterator prev(
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*Erste*\
 Die aktuelle Position.
 
-*_Off*<br/>
+*_Off*\
 Die Anzahl der Iterationen.
 
 ### <a name="remarks"></a>Hinweise
 
 Die Vorlagenfunktion gibt `next` dekrementiert `off`-Zeiten zurück.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="rbegin"></a> rbegin
 
-[\<iterator>](../standard-library/iterator.md)<br/>
+```cpp
+template <class C> constexpr auto rbegin(C& c) -> decltype(c.rbegin());
+template <class C> constexpr auto rbegin(const C& c) -> decltype(c.rbegin());
+```
+
+## <a name="rend"></a> REND
+
+```cpp
+template <class C> constexpr auto rend(C& c) -> decltype(c.rend());
+template <class C> constexpr auto rend(const C& c) -> decltype(c.rend());
+```
+
+## <a name="size"></a> Größe
+
+```cpp
+template <class C> constexpr auto size(const C& c) -> decltype(c.size());
+template <class T, size_t N> constexpr size_t size(const T (&array)[N]) noexcept;
+```

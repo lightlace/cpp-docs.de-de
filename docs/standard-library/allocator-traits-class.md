@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 66c8c998a91ddd3e6550b57415a513fae55856da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 795fd17c2c5b3c7fa92e62088b8f2fd126094df9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410968"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245890"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits-Klasse
 
@@ -55,31 +55,33 @@ Die Vorlagenklasse beschreibt ein Objekt, das einen *Allocatortyp* ergänzt. Ein
 
 ```cpp
 template <class Alloc>
-class allocator_traits;
+    class allocator_traits;
 ```
+
+## <a name="members"></a>Member
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|Beschreibung|
-|----------|-----------------|
-|`allocator_traits::allocator_type`|Dieser Typ stellt ein Synonym für den Vorlagenparameter `Alloc`dar.|
-|`allocator_traits::const_pointer`|Dieser Typ ist `Alloc::const_pointer`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `pointer_traits<pointer>::rebind<const value_type>`.|
-|`allocator_traits::const_void_pointer`|Dieser Typ ist `Alloc::const_void_pointer`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `pointer_traits<pointer>::rebind<const void>`.|
-|`allocator_traits::difference_type`|Dieser Typ ist `Alloc::difference_type`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `pointer_traits<pointer>::difference_type`.|
-|`allocator_traits::pointer`|Dieser Typ ist `Alloc::pointer`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `value_type *`.|
-|`allocator_traits::propagate_on_container_copy_assignment`|Dieser Typ ist `Alloc::propagate_on_container_copy_assignment`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `false_type`.|
-|`allocator_traits::propagate_on_container_move_assignment`|Dieser Typ ist `Alloc::propagate_on_container_move_assignment`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `false_type`. Wenn der Typ weiter gilt, kopiert ein zuweisungsfähiger Container seinen gespeicherten Allocator auf eine Bewegungszuweisung.|
-|`allocator_traits::propagate_on_container_swap`|Dieser Typ ist `Alloc::propagate_on_container_swap`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `false_type`. Wenn der Typ weiter gilt, tauscht ein zuweisungsfähiger Container seinen gespeicherten Allocator auf einem Swap aus.|
-|`allocator_traits::size_type`|Dieser Typ ist `Alloc::size_type`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `make_unsigned<difference_type>::type`.|
-|`allocator_traits::value_type`|Dieser Typ ist ein Synonym für `Alloc::value_type`.|
-|`allocator_traits::void_pointer`|Dieser Typ ist `Alloc::void_pointer`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `pointer_traits<pointer>::rebind<void>`.|
+|||
+|-|-|
+|`allocator_type`|Dieser Typ stellt ein Synonym für den Vorlagenparameter `Alloc`dar.|
+|`const_pointer`|Dieser Typ ist `Alloc::const_pointer`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `pointer_traits<pointer>::rebind<const value_type>`.|
+|`const_void_pointer`|Dieser Typ ist `Alloc::const_void_pointer`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `pointer_traits<pointer>::rebind<const void>`.|
+|`difference_type`|Dieser Typ ist `Alloc::difference_type`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `pointer_traits<pointer>::difference_type`.|
+|`pointer`|Dieser Typ ist `Alloc::pointer`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `value_type *`.|
+|`propagate_on_container_copy_assignment`|Dieser Typ ist `Alloc::propagate_on_container_copy_assignment`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `false_type`.|
+|`propagate_on_container_move_assignment`|Dieser Typ ist `Alloc::propagate_on_container_move_assignment`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `false_type`. Wenn der Typ weiter gilt, kopiert ein zuweisungsfähiger Container seinen gespeicherten Allocator auf eine Bewegungszuweisung.|
+|`propagate_on_container_swap`|Dieser Typ ist `Alloc::propagate_on_container_swap`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `false_type`. Wenn der Typ weiter gilt, tauscht ein zuweisungsfähiger Container seinen gespeicherten Allocator auf einem Swap aus.|
+|`size_type`|Dieser Typ ist `Alloc::size_type`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `make_unsigned<difference_type>::type`.|
+|`value_type`|Dieser Typ ist ein Synonym für `Alloc::value_type`.|
+|`void_pointer`|Dieser Typ ist `Alloc::void_pointer`, wenn dieser Typ wohlgeformt ist; andernfalls ist dieser Typ `pointer_traits<pointer>::rebind<void>`.|
 
 ### <a name="static-methods"></a>Statische Methoden
 
 Folgende statische Methoden rufen die entsprechenden Methoden auf einem vorhandenen Allocator-Parameter auf.
 
-|Name|Beschreibung|
-|----------|-----------------|
+|||
+|-|-|
 |[allocate](#allocate)|Eine statische Methode, die mithilfe des vorhandenen Allocator-Parameters Arbeitsspeicher zuweist.|
 |[construct](#construct)|Eine statische Methode, die mithilfe eines angegebenen Allocators ein Objekt erstellt.|
 |[deallocate](#deallocate)|Eine statische Methode, die mithilfe eines angegebenen Allocators eine angegebene Anzahl von Objekten freigibt.|
@@ -87,13 +89,7 @@ Folgende statische Methoden rufen die entsprechenden Methoden auf einem vorhande
 |[max_size](#max_size)|Eine statische Methode, die mithilfe eines angegebenen Allocators die maximale Anzahl von zuweisbaren Objekten ermittelt.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Eine statische Methode, die `select_on_container_copy_construction` in einem angegebenen Allocator aufruft.|
 
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<memory>
-
-**Namespace:** std
-
-## <a name="allocate"></a>  allocator_traits:: Allocate
+### <a name="allocate"></a> zuordnen
 
 Eine statische Methode, die mithilfe des vorhandenen Allocator-Parameters Arbeitsspeicher zuweist.
 
@@ -104,18 +100,18 @@ static pointer allocate(Alloc& al, size_type count,
     typename allocator_traits<void>::const_pointer* hint);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-*al*<br/>
+*Al*\
 Ein Zuweisungsobjekt.
 
-*count*<br/>
+*Anzahl*\
 Die Anzahl der zuzuweisenden Elemente.
 
-*hint*<br/>
+*Hinweis*\
 Ein `const_pointer`, der dem Zuweisungsobjekt möglicherweise dabei hilft, die Anforderung von Speicherplatz zu erfüllen. Dazu sucht er die Adresse eines vor der Anforderung zugewiesenen Objekts. Ein NULL-Zeiger wird nicht als Hinweis behandelt.
 
-### <a name="return-value"></a>Rückgabewert
+#### <a name="return-value"></a>Rückgabewert
 
 Jede Methode gibt einen Zeiger auf das zugewiesene Objekt zurück.
 
@@ -123,7 +119,7 @@ Die erste statische Methode gibt `al.allocate(count)` zurück.
 
 Die zweite Methode gibt dann `al.allocate(count, hint)` zurück, wenn der Ausdruck wohlgeformt ist; andernfalls `al.allocate(count)`.
 
-## <a name="construct"></a>  allocator_traits:: Construct
+### <a name="construct"></a> Erstellen
 
 Eine statische Methode, die mithilfe eines angegebenen Allocators ein Objekt erstellt.
 
@@ -132,22 +128,22 @@ template <class Uty, class Types>
 static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-*al*<br/>
+*Al*\
 Ein Zuweisungsobjekt.
 
-*ptr*<br/>
+*PTR*\
 Ein Zeiger auf den Speicherort, in dem das Objekt erstellt werden soll.
 
-*args*<br/>
+*args*\
 Eine Liste von Argumenten, die an den Objektkonstruktor übergeben wird.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Die statische Memberfunktion ruft `al.construct(ptr, args...)` auf, wenn der Ausdruck wohlgeformt ist; andernfalls wertet es `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)` aus.
 
-## <a name="deallocate"></a>  allocator_traits:: DEALLOCATE
+### <a name="deallocate"></a> Aufheben der Zuordnung
 
 Eine statische Methode, die mithilfe eines angegebenen Allocators eine angegebene Anzahl von Objekten freigibt.
 
@@ -157,45 +153,45 @@ static void deallocate(Alloc al,
     size_type count);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-*al*<br/>
+*Al*\
 Ein Zuweisungsobjekt.
 
-*ptr*<br/>
+*PTR*\
 Ein Zeiger auf den Anfangsort des Objekts, dessen Zuweisung aufzuheben ist.
 
-*count*<br/>
+*Anzahl*\
 Die Anzahl von Objekten, deren Zuweisung aufzuheben ist.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Diese Methode ruft `al.deallocate(ptr, count)` auf.
 
 Diese Methode löst keine Aktion aus.
 
-## <a name="destroy"></a>  allocator_traits:: Destroy
+### <a name="destroy"></a> Zerstören
 
 Eine statische Methode, die mithilfe eines angegebenen Allocators den Destruktor in einem Objekt aufruft, ohne dass dessen Arbeitsspeicher freigegeben wird.
 
 ```cpp
 template <class Uty>
-static void destroy(Alloc& al, Uty* ptr);
+    static void destroy(Alloc& al, Uty* ptr);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-*al*<br/>
+*Al*\
 Ein Zuweisungsobjekt.
 
-*ptr*<br/>
+*PTR*\
 Ein Zeiger auf den Speicherort des Objekts.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Diese Methode ruft `al.destroy(ptr)` auf, wenn der Ausdruck wohlgeformt ist; andernfalls wertet es `ptr->~Uty()` aus.
 
-## <a name="max_size"></a>  allocator_traits:: max_size
+### <a name="max_size"></a> max_size
 
 Eine statische Methode, die mithilfe eines angegebenen Allocators die maximale Anzahl von zuweisbaren Objekten ermittelt.
 
@@ -203,16 +199,16 @@ Eine statische Methode, die mithilfe eines angegebenen Allocators die maximale A
 static size_type max_size(const Alloc& al);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-*al*<br/>
+*Al*\
 Ein Zuweisungsobjekt.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Diese Methode gibt dann `al.max_size()` zurück, wenn der Ausdruck wohlgeformt ist; andernfalls `numeric_limits<size_type>::max()`.
 
-## <a name="select_on_container_copy_construction"></a>  allocator_traits:: select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a> select_on_container_copy_construction
 
 Eine statische Methode, die `select_on_container_copy_construction` in einem angegebenen Allocator aufruft.
 
@@ -220,21 +216,15 @@ Eine statische Methode, die `select_on_container_copy_construction` in einem ang
 static Alloc select_on_container_copy_construction(const Alloc& al);
 ```
 
-### <a name="parameters"></a>Parameter
+#### <a name="parameters"></a>Parameter
 
-*al*<br/>
+*Al*\
 Ein Zuweisungsobjekt.
 
-### <a name="return-value"></a>Rückgabewert
+#### <a name="return-value"></a>Rückgabewert
 
 Diese Methode gibt `al.select_on_container_copy_construction()`, wenn der wohlgeformt Typ ist; andernfalls *al*.
 
-### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Hinweise
 
 Diese Methode wird verwendet, um einen Allocator anzugeben, wenn der zugeordnete Container durch eine Kopie erstellt wurde.
-
-## <a name="see-also"></a>Siehe auch
-
-[\<memory>](../standard-library/memory.md)<br/>
-[pointer_traits-Struktur](../standard-library/pointer-traits-struct.md)<br/>
-[scoped_allocator_adaptor-Klasse](../standard-library/scoped-allocator-adaptor-class.md)<br/>

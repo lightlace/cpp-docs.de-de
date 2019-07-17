@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: 63b474d0209a5cc385de9dc11b56d5de8382a9cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d1d81e393b4a3eb27ea08bc53634bfcbc119240
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376418"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243975"
 ---
 # <a name="badalloc-class"></a>bad_alloc-Klasse
 
@@ -22,20 +22,16 @@ Die Klasse beschreibt eine Ausnahme, die ausgelöst wurde, um anzugeben, dass ei
 ```cpp
 class bad_alloc : public exception {
     bad_alloc();
-virtual ~bad_alloc();
-
+    virtual ~bad_alloc();
+    bad_alloc(const bad_alloc&);
+    bad_alloc& operator=(const bad_alloc&);
+    const char* what() const override;
 };
 ```
 
 ## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert von `what` ist eine implementierungsdefinierte C-Zeichenfolge. Keine der Memberfunktionen löst irgendeine Ausnahme aus.
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<new>
-
-**Namespace:** std
 
 ## <a name="example"></a>Beispiel
 
@@ -58,17 +54,6 @@ int main() {
 }
 ```
 
-## <a name="sample-output"></a>Beispielausgabe
-
 ```Output
 bad allocation
 ```
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<new>
-
-## <a name="see-also"></a>Siehe auch
-
-[exception-Klasse](../standard-library/exception-class.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

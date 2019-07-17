@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: 919c24217866a57d0401c8cd6fea8f5cef02906b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413189"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246461"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt;-Operatoren
 
-||||
-|-|-|-|
-|[Operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> Operator! =
 
 Testet, ob das Listenobjekt links vom Operator ungleich dem Listenobjekt rechts vom Operator ist.
 
@@ -42,10 +37,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Objekt vom Typ `list`.
 
-*right*<br/>
+*Richting*\
 Ein Objekt vom Typ `list`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -81,7 +76,7 @@ Lists not equal.
 */
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a>-Operator&lt;
 
 Testet, ob das Listenobjekt links vom Operator kleiner als das Listenobjekt auf der rechten Seite ist.
 
@@ -93,10 +88,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Objekt vom Typ `list`.
 
-*right*<br/>
+*Richting*\
 Ein Objekt vom Typ `list`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -136,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Operator&lt;=
 
 Testet, ob das Listenobjekt links vom Operator kleiner als oder gleich dem Listenobjekt rechts vom Operator ist.
 
@@ -148,10 +143,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Objekt vom Typ `list`.
 
-*right*<br/>
+*Richting*\
 Ein Objekt vom Typ `list`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -191,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> Operator ==
 
 Testet, ob das Listenobjekt links vom Operator gleich dem Listenobjekt rechts vom Operator ist.
 
@@ -203,10 +198,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Objekt vom Typ `list`.
 
-*right*<br/>
+*Richting*\
 Ein Objekt vom Typ `list`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -242,7 +237,7 @@ The lists are equal.
 */
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a>-Operator&gt;
 
 Testet, ob das Listenobjekt links vom Operator größer als das Listenobjekt auf der rechten Seite ist.
 
@@ -254,10 +249,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Objekt vom Typ `list`.
 
-*right*<br/>
+*Richting*\
 Ein Objekt vom Typ `list`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -297,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Operator&gt;=
 
 Testet, ob das Listenobjekt links vom Operator größer als oder gleich dem Listenobjekt rechts vom Operator ist.
 
@@ -309,10 +304,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*Links*\
 Ein Objekt vom Typ `list`.
 
-*right*<br/>
+*Richting*\
 Ein Objekt vom Typ `list`.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -352,7 +347,3 @@ int main( )
 List c1 is greater than or equal to list c2.
 */
 ```
-
-## <a name="see-also"></a>Siehe auch
-
-[\<list>](../standard-library/list.md)<br/>

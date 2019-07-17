@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdarg header
 ms.assetid: 639b4ef7-8408-4640-9343-41631f0ab663
-ms.openlocfilehash: 25a7cbdccf1287043659772b760a14fefd52e4ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8d2d3b886cfa46905e8f17f1e13b51881b80191
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394304"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244483"
 ---
 # <a name="ltcstdarggt"></a>&lt;cstdarg&gt;
 
-Schließt den Standard-C-Bibliotheksheader \<stdarg.h> ein und fügt die verknüpften Namen zum `std`-Namespace hinzu.
+Schließt den Standard C-bibliotheksheader \<stdarg.h > und fügt die verknüpften Namen zum die `std` Namespace. Einschließen dieses Headers wird sichergestellt, dass die Namen deklariert, mit externer Bindung im Standard C-bibliotheksheader, in deklariert werden der `std` Namespace.
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,9 +23,18 @@ Schließt den Standard-C-Bibliotheksheader \<stdarg.h> ein und fügt die verknü
 #include <cstdarg>
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="namespace-and-macros"></a>Namespace und Makros
 
-Durch Einschließen dieses Headers wird sichergestellt, dass die mit externer Bindung im Standard-C-Bibliotheksheader deklarierten Namen im `std`-Namespace deklariert werden.
+```cpp
+namespace std {
+    using va_list = see below;
+}
+
+#define va_arg(V, P)
+#define va_copy(VDST, VSRC)
+#define va_end(V)
+#define va_start(V, P)
+```
 
 ## <a name="see-also"></a>Siehe auch
 

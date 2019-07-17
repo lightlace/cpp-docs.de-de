@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7b62ecf64c70c554fe14883c45d6b7936c668d7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225268"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243577"
 ---
 # <a name="clistbox-class"></a>CListBox-Klasse
 
@@ -146,7 +146,7 @@ class CListBox : public CWnd
 |[CListBox::GetCount](#getcount)|Gibt die Anzahl der Zeichenfolgen in einem Listenfeld zurück.|
 |[CListBox::GetCurSel](#getcursel)|Gibt den nullbasierten Index des aktuell ausgewählten Zeichenfolge in einem Listenfeld zurück.|
 |[CListBox::GetHorizontalExtent](#gethorizontalextent)|Gibt die Breite in Pixel, ein Listenfeld, das ein horizontaler Bildlauf durchgeführt werden kann.|
-|[CListBox::GetItemData](#getitemdata)|Gibt den 32-Bit-Wert, der dem Listenfeld-Element zugeordnet.|
+|[CListBox::GetItemData](#getitemdata)|Gibt einen Wert, der dem Listenfeld-Element zugeordnet.|
 |[CListBox::GetItemDataPtr](#getitemdataptr)|Gibt einen Zeiger auf ein Element im Listenfeld an.|
 |[CListBox::GetItemHeight](#getitemheight)|Bestimmt die Höhe der Elemente in einem Listenfeld.|
 |[CListBox::GetItemRect](#getitemrect)|Gibt das umschließende Rechteck des Elements im Listenfeld an, wie er derzeit angezeigt wird.|
@@ -170,7 +170,7 @@ class CListBox : public CWnd
 |[CListBox::SetColumnWidth](#setcolumnwidth)|Wird die Breite der ein mehrspaltiges Listenfeld an.|
 |[CListBox::SetCurSel](#setcursel)|Wählt eine Zeichenfolge im Listenfeld aus.|
 |[CListBox::SetHorizontalExtent](#sethorizontalextent)|Legt die Breite in Pixel, ein Listenfeld, das ein horizontaler Bildlauf durchgeführt werden kann.|
-|[CListBox::SetItemData](#setitemdata)|Legt den 32-Bit-Wert, der dem Listenfeld-Element zugeordnet.|
+|[CListBox::SetItemData](#setitemdata)|Legt einen Wert, der dem Listenfeld-Element zugeordnet.|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|Legt einen Zeiger auf das Listenfeld-Element fest.|
 |[CListBox::SetItemHeight](#setitemheight)|Legt die Höhe der Elemente in einem Listenfeld fest.|
 |[CListBox::SetLocale](#setlocale)|Legt den Gebietsschemabezeichner für ein Listenfeld, das fest.|
@@ -374,7 +374,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Gibt die Art des Listenfelds. Wenden Sie eine beliebige Kombination von [listenfeldstile](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) in das Feld.
 
-*rect*<br/>
+*Rect*<br/>
 Gibt an, die im Listenfeld Größe und Position. Kann es sich um eine `CRect` Objekt oder ein `RECT` Struktur.
 
 *pParentWnd*<br/>
@@ -702,7 +702,7 @@ Gibt den nullbasierten Index des Elements im Listenfeld an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der 32-Bit-Wert, dem Element oder LB_ERR zugeordnet, wenn ein Fehler auftritt.
+Der Wert der Elements oder einer LB_ERR zugeordnet, wenn ein Fehler auftritt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -714,7 +714,7 @@ Der Wert zeigt Doppelwort war der *DwItemData* Parameter eine [SetItemData](#set
 
 ##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr
 
-Ruft ab, der von der Anwendung bereitgestellten 32-Bit-Wert zugeordnet ist, mit dem angegebenen Listenfeld-Element als Zeiger (**"void"** <strong>\*</strong>).
+Ruft ab, der von der Anwendung bereitgestellten 32-Bit-Wert zugeordnet ist, mit dem angegebenen Listenfeld-Element als Zeiger ( **"void"** <strong>\*</strong>).
 
 ```
 void* GetItemDataPtr(int nIndex) const;
@@ -1143,7 +1143,7 @@ int SelItemRange(
 
 ### <a name="parameters"></a>Parameter
 
-*bSelect*<br/>
+*bWählen*<br/>
 Gibt an, wie die Auswahl festgelegt. Wenn *bWählen* ist "true", die Zeichenfolge ausgewählt und hervorgehoben ist; False gibt an, die Hervorhebung wird entfernt, und die Zeichenfolge nicht mehr ausgewählt ist.
 
 *nFirstItem*<br/>
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parameter
 
-*nSelect*<br/>
+*. nalles auswählen*<br/>
 Gibt den nullbasierten Index der Zeichenfolge, die ausgewählt werden. Wenn *. nalles auswählen* ist-1 und keine Auswahl im Listenfeld festgelegt ist.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1288,7 +1288,7 @@ Diese Memberfunktion ist nicht für mehrspaltige Listenfelder nützlich. Rufen S
 
 ##  <a name="setitemdata"></a>  CListBox::SetItemData
 
-Legt einen 32-Bit-Wert, der das angegebene Element in einem Listenfeld zugeordnete fest.
+Legt einen Wert, der das angegebene Element in einem Listenfeld zugeordnet.
 
 ```
 int SetItemData(
@@ -1412,7 +1412,7 @@ int SetSel(
 *nIndex*<br/>
 Enthält den nullbasierten Index der Zeichenfolge, die festgelegt werden. Wenn-1 und die Auswahl hinzugefügt oder aus allen Zeichenfolgen, abhängig vom Wert entfernt *bWählen*.
 
-*bSelect*<br/>
+*bWählen*<br/>
 Gibt an, wie die Auswahl festgelegt. Wenn *bWählen* ist "true", die Zeichenfolge ausgewählt und hervorgehoben ist; False gibt an, die Hervorhebung wird entfernt, und die Zeichenfolge nicht mehr ausgewählt ist. Die angegebene Zeichenfolge ist aktiviert und standardmäßig markiert.
 
 ### <a name="return-value"></a>Rückgabewert

@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220372"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240694"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -33,7 +33,7 @@ using namespace std::experimental::filesystem::v1;
 
 Dieser Header unterstützt Dateisysteme für eine von zwei umfangreichen Klassen von Hostbetriebssystemen: Microsoft Windows und Posix.
 
-Der überwiegende Teil der Funktionalität ist für beide Betriebssysteme gleich. In diesem Dokuments sind die Unterschiede aufgeführt. Zum Beispiel:
+Der überwiegende Teil der Funktionalität ist für beide Betriebssysteme gleich. In diesem Dokuments sind die Unterschiede aufgeführt. Beispiel:
 
 - Windows unterstützt mehrere Stammnamen, z.B. „c:“ oder „\\\Netzwerkname“. Ein Dateisystem besteht aus einer Gesamtheit von Strukturen, von denen jede ein eigenes Stammverzeichnis, z.B. „c:\“ oder „\\\Netzwerkname\\“, und ein eigenes aktuelles Verzeichnis hat, um einen relativen Pfadnamen (ein Pfadname, der kein absoluter Pfadnamen ist) zu komplettieren.
 
@@ -89,10 +89,12 @@ Eine wichtige Funktion von Pfadobjekten ist schließlich, dass Sie diese überal
 
 Weitere Informationen und Codebeispiele finden Sie unter [Dateisystemnavigation (C++)](../standard-library/file-system-navigation.md).
 
-## <a name="classes"></a>Klassen
+## <a name="members"></a>Member
 
-|Name|Beschreibung|
-|----------|-----------------|
+### <a name="classes"></a>Klassen
+
+|||
+|-|-|
 |[directory_entry-Klasse](../standard-library/directory-entry-class.md)|Beschreibt ein Objekt, das von einem `directory_iterator` oder einem `recursive_directory_iterator` zurückgegeben wird und einen Pfad enthält|
 |[directory_iterator-Klasse.](../standard-library/directory-iterator-class.md)|Beschreibt einen Eingabeiterator, der alle Dateinamen in einem Dateisystemverzeichnis durchläuft.|
 |[filesystem_error-Klasse](../standard-library/filesystem-error-class.md)|Eine Basisklasse für Ausnahmen, die ausgelöst werden, um einen Systemüberlauf auf niedriger Ebene zu melden.|
@@ -100,10 +102,10 @@ Weitere Informationen und Codebeispiele finden Sie unter [Dateisystemnavigation 
 |[recursive_directory_iterator-Klasse](../standard-library/recursive-directory-iterator-class.md)|Beschreibt einen Eingabeiterator, der alle Dateinamen in einem Dateisystemverzeichnis durchläuft. Der Iterator kann die Verzeichnisse auch absteigend anordnen.|
 |[file_status-Klasse](../standard-library/file-status-class.md)|Bricht ein `file_type`um.|
 
-## <a name="structs"></a>Strukturen
+### <a name="structs"></a>Strukturen
 
-|Name|Beschreibung|
-|----------|-----------------|
+|||
+|-|-|
 |[space_info-Struktur](../standard-library/space-info-structure.md)|Enthält Informationen zu einem Volume.|
 
 ## <a name="functions"></a>Funktionen
@@ -116,12 +118,13 @@ Weitere Informationen und Codebeispiele finden Sie unter [Dateisystemnavigation 
 
 ## <a name="enumerations"></a>Enumerationen
 
-|Name|Beschreibung|
-|----------|-----------------|
+|||
+|-|-|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Eine mit [copy_file](../standard-library/filesystem-functions.md#copy_file) verwendete Enumeration, mit der das Verhalten bestimmt wird, wenn eine Datei vorhanden ist.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Eine mit [copy_file](../standard-library/filesystem-functions.md#copy_file) verwendete Enumeration, mit der das Verhalten bestimmt wird, wenn eine Datei vorhanden ist.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Eine Enumeration, die Optionen für Verzeichnisiteratoren angibt.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Eine Enumeration für Dateitypen.|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Ein Bitmaskentyp, mit dem Berechtigungen und Optionen zu Berechtigungen übermittelt werden.|
 
 ## <a name="see-also"></a>Siehe auch

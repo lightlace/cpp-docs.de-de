@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: df984d90f8b632f8e3e3b183943343952d45b8be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ccd9d7e58b9cadec83b64df5553564db20a5745
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211974"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244530"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t-Klasse
 
@@ -30,13 +30,13 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>Parameter
 
-*member_ptr*<br/>
+*member_ptr*\
 Ein Zeiger auf die Memberfunktion der Klasse `Type`, die in ein Funktionsobjekt konvertiert werden soll.
 
-*left*<br/>
+*Links*\
 Die **const** -Objekt, das *Member_ptr* auf Memberfunktion aufgerufen wird.
 
-*right*<br/>
+*Richting*\
 Das Argument, das zum übergeben wird *Member_ptr*.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -50,14 +50,3 @@ Die Vorlagenklasse speichert eine Kopie des *Member_ptr*, die einen Zeiger auf e
 ## <a name="example"></a>Beispiel
 
 Der Konstruktor von `const_mem_fun1_t` wird nur selten direkt verwendet. `mem_fn` wird verwendet, um Memberfunktionen anzupassen. Finden Sie unter [Mem_fn](../standard-library/functional-functions.md#mem_fn) ein Beispiel zur Verwendung von memberfunktionsadaptern.
-
-## <a name="requirements"></a>Anforderungen
-
-**Header:** \<functional>
-
-**Namespace:** std
-
-## <a name="see-also"></a>Siehe auch
-
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

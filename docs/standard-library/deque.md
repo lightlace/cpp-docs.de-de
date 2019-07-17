@@ -6,26 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 4c9746a0ffee654bb783e30e9a98e708b68048cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 167bdc324a67d8b1379f279e8fcc363ee6b0fca2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393986"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246740"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
 Definiert die Containervorlagenklasse "deque" und einige unterstützende Vorlagen.
 
-## <a name="syntax"></a>Syntax
+## <a name="requirements"></a>Anforderungen
 
-```cpp
-#include <deque>
-```
+**Header**: \<deque>
+
+> [!NOTE]
+> Die \<doppelschlange > Bibliothek verwendet auch die `#include <initializer_list>` Anweisung.
+
+## <a name="members"></a>Member
 
 ### <a name="operators"></a>Operatoren
 
-|Operator|Beschreibung|
+|||
 |-|-|
 |[Operator!=](../standard-library/deque-operators.md#op_neq)|Überprüft, ob das deque-Objekt links vom Operator ungleich dem deque-Objekt rechts vom Operator ist.|
 |[operator<](../standard-library/deque-operators.md#op_lt)|Überprüft, ob das deque-Objekt links vom Operator kleiner als das deque-Objekt rechts vom Operator ist.|
@@ -36,13 +39,13 @@ Definiert die Containervorlagenklasse "deque" und einige unterstützende Vorlage
 
 ### <a name="functions"></a>Funktionen
 
-|Funktion|Beschreibung|
+|||
 |-|-|
 |[swap](../standard-library/deque-functions.md#swap)|Tauscht die Elemente von zwei deque-Objekten aus.|
 
 ### <a name="classes"></a>Klassen
 
-|Klasse|Beschreibung|
+|||
 |-|-|
 |[deque-Klasse](../standard-library/deque-class.md)|Eine Vorlagenklasse für Sequenzcontainer, in der Elemente eines angegebenen Typs in einer linearen Anordnung angeordnet sind und die, wie Vektoren, schnellen zufälligen Zugriff auf jedes Element sowie effizientes Einfügen und Löschen auf der Rückseite des Containers ermöglicht.|
 

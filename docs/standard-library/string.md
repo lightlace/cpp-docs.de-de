@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3d84f4707af33f44a930f7f67b7f751e2ead627c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f3874b1d439326c97b015007ad8d5ede06341f7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412305"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245393"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -61,9 +61,10 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 
 |||
 |-|-|
+|[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|Tauscht die Arrays von Zeichen für zwei Zeichenfolgen aus.|
 |[stod](../standard-library/string-functions.md#stod)|Konvertiert eine Zeichenfolge in eine **doppelte**.|
-|[stof](../standard-library/string-functions.md#stof)|Konvertiert eine Zeichenfolge in eine **"float"**.|
+|[stof](../standard-library/string-functions.md#stof)|Konvertiert eine Zeichenfolge in eine **"float"** .|
 |[stoi](../standard-library/string-functions.md#stoi)|Konvertiert eine Zeichenfolge in eine Ganzzahl.|
 |[stold](../standard-library/string-functions.md#stold)|Konvertiert eine Zeichenfolge in eine **long double**.|
 |[stoll](../standard-library/string-functions.md#stoll)|Konvertiert eine Zeichenfolge in eine **long long**.|

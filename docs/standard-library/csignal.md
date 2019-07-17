@@ -6,16 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: e5c8f9982d4376f9f4751ab253a55bb10ab2a72c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 298aa14c4e41f1473cac72fc79aa3e180dfe183f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394300"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243557"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-Schließt den Standard-C-Bibliotheksheader `std`signal.h> ein und fügt die verknüpften Namen zum \<-Namespace hinzu.
+Schließt den Standard C-bibliotheksheader \<signal.h > und fügt die verknüpften Namen zum die `std` Namespace. Durch Einschließen dieses Headers wird sichergestellt, dass die mit externer Bindung im Standard-C-Bibliotheksheader deklarierten Namen im `std`-Namespace deklariert werden.
+
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,9 +24,32 @@ Schließt den Standard-C-Bibliotheksheader `std`signal.h> ein und fügt die verk
 #include <csignal>
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="namespace-and-macros"></a>Namespace und Makros
 
-Durch Einschließen dieses Headers wird sichergestellt, dass die mit externer Bindung im Standard-C-Bibliotheksheader deklarierten Namen im `std`-Namespace deklariert werden.
+```cpp
+namespace std {
+    using sig_atomic_t = see below;
+
+    extern using signal-handler = void(int);
+}
+
+#define SIG_DFL
+#define SIG_ERR
+#define SIG_IGN
+#define SIGABRT
+#define SIGFPE
+#define SIGILL
+#define SIGINT
+#define SIGSEGV
+#define SIGTERM
+```
+
+## <a name="functions"></a>Funktionen
+
+```cpp
+signal-handler* signal(int sig, signal-handler* func);
+int raise(int sig);
+```
 
 ## <a name="see-also"></a>Siehe auch
 
