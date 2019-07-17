@@ -1,6 +1,6 @@
 ---
 title: Eigenschaftenseite "Allgemein" (Projekt)
-ms.date: 11/04/2016
+ms.date: 07/17/2019
 f1_keywords:
 - VC.Project.VCConfiguration.IntermediateDirectory
 - VC.Project.VCConfiguration.ConfigurationType
@@ -25,30 +25,62 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 0fb6e1289b44940cabaee02e62690c94ec5bf131
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446562"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299772"
 ---
 # <a name="general-property-page-project"></a>Eigenschaftenseite "Allgemein" (Projekt)
 
-Wenn Sie im Projektmappen-Explorer mit der rechten Maustaste auf einen Projektknoten klicken und **Eigenschaften** auswählen, werden auf der Eigenschaftenseite **Allgemein** unter dem Knoten **Konfigurationseigenschaften** im linken Bereich zwei Abschnitte mit Eigenschaften angezeigt:
+::: moniker range=">=vs-2019"
 
-- Allgemein
+Dieses Thema bezieht sich auf Visual Studio-Projekte für Windows. Informationen zu Linux-Projekten finden Sie unter [Referenz zu C++ Linux-Eigenschaften Seiten](../../linux/prop-pages-linux.md). Informationen zu cmake-Projekten finden Sie unter [cmake-Projekte in Visual Studio](../cmake-projects-in-visual-studio.md).
 
-- Projektstandards
+Wenn Sie in Projektmappen-Explorer mit der rechten Maustaste auf einen Projekt Knoten klicken und **Eigenschaften**auswählen, werden auf der Eigenschaften Seite **Allgemein** unter dem Knoten **Konfigurations Eigenschaften** im linken Bereich folgende Eigenschaften angezeigt:
 
-Nicht-Windows-Projekten finden Sie unter [Linux C++ Referenz zur](../../linux/prop-pages-linux.md).
+- **Ausgabeverzeichnis**
 
-## <a name="general"></a>Allgemein
+   Legt das Verzeichnis fest, in dem Tools wie Linker alle endgültigen Ausgabedateien ablegen, die während des Buildprozesses erstellt werden. In der Regel handelt es sich um Ausgabedateien von Tools wie Linker, Bibliothekar oder BSCMake. Diese Eigenschaft ist standardmäßig das Verzeichnis, das durch die Makros $(SolutionDir)$(Configuration)\ angegeben wird.
 
-Die Eigenschaften im Abschnitt „Allgemein“ bestimmen den Speicherort der Dateien, die während des Buildvorgangs erstellt werden, und legen fest, welche Dateien bei Auswahl der Option **Bereinigen** (Menü **Build**) gelöscht werden.
+   Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.OutputDirectory%2A>.
 
-- **Zielplattform**
+- **Zwischenverzeichnis**
 
-   Gibt die Plattform an, auf der das Projekt ausgeführt wird. Beispielsweise Windows, Android oder iOS. Der Wert **Windows 10** bedeutet, dass das Projekt für die Universelle Windows-Plattform vorgesehen ist. Wenn Sie auf frühere Versionen von Windows abzielen, wird die Version nicht aufgeführt, und der Wert in diesem Feld wird einfach als **Windows** angezeigt. Dies ist ein schreibgeschütztes Feld, das festgelegt wird, wenn Sie ein Projekt erstellen.
+   Legt das Verzeichnis fest, in dem Tools wie der Compiler alle Zwischendateien ablegt, die während des Buildprozesses erstellt werden. In der Regel handelt es sich um Ausgabedateien von Tools wie C/C++-Compiler, MIDL und Ressourcencompiler. Diese Eigenschaft ist standardmäßig das Verzeichnis, das durch das Makro $(Configuration)\ angegeben wird.
+
+   Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>.
+
+- **Zielname**
+
+   Gibt den von diesem Projekt generierten Dateinamen an. Diese Eigenschaft ist standardmäßig der Dateiname, der durch das Makro $(ProjectName) angegeben wird.
+
+- **Konfigurationstyp**
+
+  Sie können aus einer Reihe unterschiedlicher Konfigurationstypen auswählen:
+
+  - **Anwendung (EXE-Datei)**
+
+     Zeigt das Linkertoolset (C/C++-Compiler, MIDL, Ressourcencompiler, Linker, BSCMake, XML-Webdienst-Proxy-Generator, benutzerdefinierte Build-, Präbuild-, Prälink- und Postbuildereignisse) an.
+
+  - **Dynamische Bibliothek (.dll)**
+
+     Zeigt das Linkertoolset an, legt die /DLL-Linkeroption fest und fügt CL die _WINDLL-Definition hinzu.
+
+  - **Makefile**
+
+     Zeigt das Makefile-Toolset (NMake) an.
+
+  - **Statische Bibliothek (LIB-Datei)**
+
+     Zeigt das Bibliothekstoolset an (von zwei Ausnahmen abgesehen ist dieses Toolset mit dem Linkertoolset identisch: Der Linker wird durch den Bibliothekar ersetzt, und der XML-Webdienst-Proxy-Generator fällt weg).
+
+  - **Hilfsprogramm**
+
+     Zeigt das Hilfsprogramm-Toolset (MIDL, benutzerdefinierte Build-, Präbuild-, Postbuildereignisse) an.
+
+  Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
 
 - **Windows SDK Version**
 
@@ -58,11 +90,43 @@ Die Eigenschaften im Abschnitt „Allgemein“ bestimmen den Speicherort der Dat
 
    Sie können das in Visual Studio enthaltene Windows XP-Plattformtoolset installieren, um die aktuellen Versionen der Bibliotheken zum Erstellen von Windows XP- und Windows 2003-Serverprojekten zu verwenden. Informationen zum Herunterladen und Verwenden dieses Plattformtoolsets finden Sie unter [Konfigurieren von Programmen für Windows XP](../configuring-programs-for-windows-xp.md). Weitere Informationen zum Ändern des Plattformtoolsets finden Sie unter [How to: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
-- **Mindestversion der Zielplattform** 
+- **Plattformtoolset**
 
-   Gibt die niedrigste Version der Plattform an, auf der das Projekt ausgeführt werden kann. Diese Eigenschaft wird nur angezeigt, wenn der Projekttyp sie unterstützt, z. B. in universellen Windows-Projekten. Wenn Ihre App Features in einer neueren Version des Windows SDK nutzen, unter früheren Versionen aber weiterhin ohne diese Features ausgeführt werden kann (möglicherweise mit verringerter Funktionalität), kann der Wert dieser beiden Eigenschaften unterschiedlich sein. Ist dies der Fall, sollte in Ihrem Code zur Laufzeit die Version der Plattform geprüft werden, auf der er ausgeführt wird. Es sollte nicht versucht werden, Features zu verwenden, die in älteren Plattformversionen nicht verfügbar sind.
+   Ermöglicht eine Ausrichtung des Projekts auf andere Versionen der Visual C++-Bibliotheken und des Compilers. Visual Studio C++ -Projekte können entweder auf das von Visual Studio installierte Standard Toolset oder auf eines der Toolsets abzielen, die von mehreren früheren Versionen von Visual Studio installiert wurden. Hierzu zählen auch Toolsets, mit denen ausführbare Dateien erstellt werden können, die unter WindowX XP ausgeführt werden können. Weitere Informationen zum Ändern des Platt Form Tool Sets finden [Sie unter Gewusst wie: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
-   Beachten Sie, dass Visual C++ diese Option nicht erzwingt. Sie ist aus Gründen der Konsistenz mit anderen Sprachen wie C# und JavaScript sowie als Leitfaden für jede Person eingefügt, die Ihr Projekt verwendet. Visual C++ generiert keinen Fehler, wenn Sie ein Feature verwenden, das in der Mindestversion nicht verfügbar ist.
+- **C++Sprach Standard**
+
+   Gibt an, welcher Sprachstandard verwendet werden soll. Der Standardwert ist/Std: c++ 14. Geben Sie/Std: c++ 17 an, um c++ 17-Features zu verwenden, oder/Std: c++ + latest, um c++ 20 oder andere experimentelle Features zu verwenden. Weitere Informationen finden Sie unter [/Std (angeben der Standard Version für die Sprache)](std-specify-language-standard-version.md) .
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Wenn Sie in Visual Studio 2015 und Visual Studio 2017 in **Projektmappen-Explorer**mit der rechten Maustaste auf einen Projekt Knoten klicken und **Eigenschaften**auswählen, wird auf der Eigenschaften Seite **Allgemein** unter dem Knoten **Konfigurations Eigenschaften** im linken Fensterbereich angezeigt. zwei Abschnitte der Eigenschaften:
+
+- Allgemein
+
+- Projektstandards
+
+## <a name="general"></a>Allgemein
+
+- **Zielplattform**
+
+   Gibt die Plattform an, auf der das Projekt ausgeführt wird. Beispielsweise Windows, Android oder iOS. Der Wert **Windows 10** bedeutet, dass das Projekt für die Universelle Windows-Plattform vorgesehen ist. Wenn Sie auf frühere Versionen von Windows abzielen, wird die Version nicht aufgeführt, und der Wert in diesem Feld wird einfach als **Windows** angezeigt. Dies ist ein schreibgeschütztes Feld, das festgelegt wird, wenn Sie ein Projekt erstellen.
+
+- **Ziel Platt Form Version (Visual Studio 2015)**
+
+   Gibt die niedrigste Version der Plattform an, auf der das Projekt ausgeführt werden kann. Diese Eigenschaft wird nur angezeigt, wenn der Projekttyp Sie unterstützt. Wenn Ihre App Features in einer neueren Version des Windows SDK nutzen, unter früheren Versionen aber weiterhin ohne diese Features ausgeführt werden kann (möglicherweise mit verringerter Funktionalität), kann der Wert dieser beiden Eigenschaften unterschiedlich sein. Ist dies der Fall, sollte in Ihrem Code zur Laufzeit die Version der Plattform geprüft werden, auf der er ausgeführt wird. Es sollte nicht versucht werden, Features zu verwenden, die in älteren Plattformversionen nicht verfügbar sind.
+
+   Das C++ Projekt System erzwingt diese Option nicht. Sie ist aus Gründen der Konsistenz mit anderen Sprachen wie C# und JavaScript sowie als Leitfaden für jede Person eingefügt, die Ihr Projekt verwendet. Visual C++ generiert keinen Fehler, wenn Sie ein Feature verwenden, das in der Mindestversion nicht verfügbar ist.
+
+- **Windows SDK Version (Visual Studio 2017)**
+
+   Gibt für die Windows-Zielplattform die Version des Windows SDK an, mit dem Ihr Projekt erstellt wird. Wenn Sie eine C++-Workload mit dem Visual Studio-Installer installieren, werden auch die erforderlichen Teile des Windows SDK installiert. Wenn Sie auf Ihrem Computer über andere Versionen des Windows SDK verfügen, wird jede installierte Version der SDK Tools in der Dropdownliste angezeigt.
+
+   Verwenden Sie den Wert **8.1**, um Windows 7 oder Windows Vista als Zielplattform anzugeben, da Windows SDK 8.1 für diese Plattformen abwärtskompatibel ist. Darüber hinaus müssen Sie den entsprechenden Wert für **_WIN32_WINNT** in „argetver.h“ definieren. Für Windows 7 ist dies "0x0601". Siehe [Ändern von WINVER und _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md)
+
+   Sie können das in Visual Studio enthaltene Windows XP-Plattformtoolset installieren, um die aktuellen Versionen der Bibliotheken zum Erstellen von Windows XP- und Windows 2003-Serverprojekten zu verwenden. Informationen zum Herunterladen und Verwenden dieses Plattformtoolsets finden Sie unter [Konfigurieren von Programmen für Windows XP](../configuring-programs-for-windows-xp.md). Weitere Informationen zum Ändern des Plattformtoolsets finden Sie unter [How to: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Ausgabeverzeichnis**
 
@@ -94,18 +158,18 @@ Die Eigenschaften im Abschnitt „Allgemein“ bestimmen den Speicherort der Dat
 
    Ermöglicht es Ihnen, ein vom Standardspeicherort abweichendes Verzeichnis für die Protokolldatei anzugeben, die bei jedem Erstellen eines Projekts generiert wird. Der Standardspeicherort wird durch die Makros $(IntDir)$(MSBuildProjectName).log angegeben.
 
-   Sie können Projektmakros verwenden, um den Verzeichnispfad zu ändern. Finden Sie unter [gängige Makros für Buildbefehle und-Eigenschaften](common-macros-for-build-commands-and-properties.md).
+   Sie können Projektmakros verwenden, um den Verzeichnispfad zu ändern. Siehe [Allgemeine Makros für Buildbefehle und-Eigenschaften](common-macros-for-build-commands-and-properties.md).
 
 - **Plattformtoolset**
 
-   Ermöglicht eine Ausrichtung des Projekts auf andere Versionen der Visual C++-Bibliotheken und des Compilers. Visual Studio C++ -Projekte können entweder das Standardtoolset installiert, indem Sie Visual Studio oder einem Toolsets installiert, indem Sie mehrere früheren Versionen von Visual Studio, einschließlich des Toolsets, die ausführbaren Dateien zu erstellen, die auf Windowx XP ausgeführt werden können. Informationen zum Ändern des Plattformtoolsets finden Sie unter [Vorgehensweise: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Ermöglicht eine Ausrichtung des Projekts auf andere Versionen der Visual C++-Bibliotheken und des Compilers. Visual Studio C++ -Projekte können entweder auf das von Visual Studio installierte Standard Toolset oder auf eines der Toolsets abzielen, die von mehreren früheren Versionen von Visual Studio installiert wurden. Hierzu zählen auch Toolsets, mit denen ausführbare Dateien erstellt werden können, die unter WindowX XP ausgeführt werden können. Weitere Informationen zum Ändern des Platt Form Tool Sets finden [Sie unter Gewusst wie: Modify the Target Framework and Platform Toolset (Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets)](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Verwalteten inkrementellen Build aktivieren**
 
    Für verwaltete Projekte aktiviert diese Option die Erkennung von externer Sichtbarkeit, wenn Sie Assemblys generieren. Wenn eine Änderung an einem verwalteten Projekt nicht für andere Projekte sichtbar ist, werden abhängige Projekte nicht neu erstellt. Dies kann Buildzeiten in Projektmappen mit verwalteten Projekten deutlich verbessern.
 
 ## <a name="project-defaults"></a>Projektstandards
-
+ 
 Die Eigenschaften im Abschnitt “Projektstandards“ stellen änderbare Standardeigenschaften dar. Die Definition für diese Eigenschaften befindet sich in den PROPS-Dateien unter *Installationsverzeichnis*\VC\VCProjectDefaults.
 
 - **Konfigurationstyp**
@@ -140,12 +204,6 @@ Die Eigenschaften im Abschnitt “Projektstandards“ stellen änderbare Standar
 
    Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc%2A>.
 
-- **Verwendung von ATL**
-
-   Legt fest, ob das ATL-Projekt statisch oder dynamisch mit der ATL-DLL verknüpft wird. Wenn Sie eine andere Option als **ATL wird nicht verwendet** festlegen, wird der Eigenschaftenseite **Befehlszeile** des Compilers eine Definition hinzugefügt.
-
-   Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfATL%2A>.
-
 - **Zeichensatz**
 
    Legt fest, ob _UNICODE oder _MBCS verwendet werden soll. Außerdem kann sich diese Option ggf. auf den Linkereinstiegspunkt auswirken.
@@ -170,6 +228,8 @@ Die Eigenschaften im Abschnitt “Projektstandards“ stellen änderbare Standar
 
    Gibt an, ob dieses Projekt Windows-Runtime-Apps (Universelle Windows-Plattform) unterstützt. Weitere Informationen finden Sie unter [/ZW (Windows Runtime Compilation) (/ZW (Windows-Runtime-Kompilierung))](zw-windows-runtime-compilation.md) und im Windows Developer Center.
 
+::: moniker-end
+
 ## <a name="see-also"></a>Siehe auch
 
-[Referenz für C++-Projekt Seite](property-pages-visual-cpp.md)
+[C++Referenz zur Projekteigenschaften Seite](property-pages-visual-cpp.md)

@@ -1,6 +1,6 @@
 ---
-title: C++-Projekt Referenz zur – Visual Studio
-ms.date: 05/06/2019
+title: 'C++Referenz zur Projekteigenschaften Seite: Visual Studio'
+ms.date: 07/16/2019
 f1_keywords:
 - VC.Project.NotAProp.Edit
 helpviewer_keywords:
@@ -14,22 +14,30 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 7b10e3c7eef846d72220545b89a217da7a4bb9a1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217785"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299728"
 ---
-# <a name="c-project-property-page-reference"></a>Referenz für C++-Projekt Seite
+# <a name="c-project-property-page-reference"></a>C++Referenz zur Projekteigenschaften Seite
 
-Mithilfe von Eigenschaftenseiten können Sie Einstellungen für Visual Studio-Projekte angeben. Klicken Sie zum Öffnen des Dialogfelds **Eigenschaftenseiten** für ein Visual Studio-Projekt im Menü **Projekt** auf **Eigenschaften**. Weitere Informationen zu Projekteigenschaften finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+In Visual Studio geben Sie die Optionen für Compiler und Linker, Dateipfade und andere Buildeinstellungen über die Eigenschaften Seiten für das Projekt an. Um die Eigenschaften **Seiten**zu öffnen, wählen Sie im Hauptmenü **Projekt** > **Eigenschaften** aus, oder klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf den Projekt Knoten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu Projekteigenschaften finden Sie unter [festlegen C++ von Compiler-und Buildeigenschaften in Visual Studio](../working-with-project-properties.md).
 
-Eigenschaftenseiten in nicht-Windows-Projekten finden Sie unter [Linux C++ Referenz zur](../../linux/prop-pages-linux.md).
+Informationen zu Eigenschaften Seiten in Linux-Projekten finden Sie unter [Referenz zu Linux C++ -Eigenschaften](../../linux/prop-pages-linux.md)Seiten.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Erweitert, Manifesttool, Konfigurationseigenschaften, Dialogfeld „\<Projektname>-Eigenschaftenseiten“](advanced-manifest-tool.md)
+[Eigenschaftenseite „Allgemein“ (Projekt)](general-property-page-project.md)
+
+[Eigenschaftenseite "VC++-Verzeichnisse"](vcpp-directories-property-page.md)
+
+[Manifest-Tool, Allgemeines](general-manifest-tool-configuration-properties.md)
+[Manifest-Tool, Eingabe-und Ausgabe](input-and-output-manifest-tool.md)
+Manifest-Tool[, isoliertes com](isolated-com-manifest-tool.md)
+-[Manifest-Tool, erweitert](advanced-manifest-tool.md)
+
 
 [Eigenschaftenseiten "Befehlszeile"](command-line-property-pages.md)
 
@@ -39,9 +47,9 @@ Eigenschaftenseiten in nicht-Windows-Projekten finden Sie unter [Linux C++ Refer
 
 [Eigenschaftenseite "Allgemein" (Datei)](general-property-page-file.md)
 
-[Eigenschaftenseite „Allgemein“ (Projekt)](general-property-page-project.md)
 
-[Allgemein, Manifesttool, Konfigurationseigenschaften, Dialogfeld „\<Projektname>-Eigenschaftenseiten“](general-manifest-tool-configuration-properties.md)
+
+
 
 [Eigenschaftenseiten "HLSL"](hlsl-property-pages.md)
 
@@ -51,9 +59,9 @@ Eigenschaftenseiten in nicht-Windows-Projekten finden Sie unter [Linux C++ Refer
 
 [HLSL-Eigenschaftenseiten: Ausgabedateien](hlsl-property-pages-output-files.md)
 
-[Eingabe und Ausgabe, Manifesttool, Konfigurationseigenschaften, Dialogfeld „\<Projektname>-Eigenschaftenseiten“](input-and-output-manifest-tool.md)
 
-[Isolated COM, Manifesttool, Konfigurationseigenschaften, Dialogfeld „\<Projektname>-Eigenschaftenseiten“](isolated-com-manifest-tool.md)
+
+
 
 [Eigenschaftenseiten "Linker"](linker-property-pages.md)
 
@@ -73,7 +81,7 @@ Eigenschaftenseiten in nicht-Windows-Projekten finden Sie unter [Linux C++ Refer
 
 [Eigenschaftenseiten "Ressourcen"](resources-property-pages.md)
 
-[Eigenschaftenseite "VC++-Verzeichnisse"](vcpp-directories-property-page.md)
+
 
 [Eigenschaftenseite "Webverweise"](web-references-property-page.md)
 

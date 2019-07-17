@@ -1,6 +1,6 @@
 ---
 title: Eigenschaftenseite "VC++-Verzeichnisse"
-ms.date: 10/09/2018
+ms.date: 07/17/2019
 f1_keywords:
 - VC.Project.VCDirectories.IncludePath
 - VC.Project.VCDirectories.ReferencePath
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 9b005a89156db48615ec6ea8dfc4f07a7414fc3b
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861049"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299790"
 ---
 # <a name="vc-directories-property-page-windows"></a>Eigenschaftenseite „VC++-Verzeichnisse“ (Windows)
 
-Verwenden Sie diese Eigenschaftenseite, um Visual Studio mitzuteilen, welche Verzeichnisse verwendet werden sollen, wenn das derzeit ausgewählte Projekt erstellt wird. Verwenden Sie zum Festlegen der Verzeichnisse für mehrere Projekte in einer Projektmappe ein benutzerdefiniertes Eigenschaftenfenster Siehe [Freigabe oder zur Wiederverwendung von Visual Studio C++ projekteinstellungen](../create-reusable-property-configurations.md).
+Verwenden Sie diese Eigenschaftenseite, um Visual Studio mitzuteilen, welche Verzeichnisse verwendet werden sollen, wenn das derzeit ausgewählte Projekt erstellt wird. Wenn Sie Verzeichnisse für mehrere Projekte in einer Projekt Mappe festlegen möchten, verwenden Sie ein benutzerdefiniertes Eigenschaften Blatt wie unter [freigeben oder wieder verwenden von Visual Studio C++ -Projekteinstellungen](../create-reusable-property-configurations.md)beschrieben.
 
 Die Linux-Version dieser Seite finden Sie unter [VC++-Verzeichnisse (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
@@ -38,7 +38,7 @@ Die Eigenschaften für VC++-Verzeichnisse gelten für ein Projekt, nicht für de
 
 Beachten Sie, dass die Eigenschaftenseite **VC++-Verzeichnisse** für plattformübergreifende Projekte anders aussieht. Weitere Informationen zu C++-Projekten unter Linux finden Sie unter [VC++-Verzeichnisse (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
-Wenn Sie mit nicht vertraut sind *Projekteigenschaften* in Visual Studio unter Umständen hilfreich sein, der erste Lesevorgang [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+Wenn Sie mit den *Projekteigenschaften* in Visual Studio nicht vertraut sind, ist es möglicherweise hilfreich, zuerst [Set C++ Compiler und Buildeigenschaften in Visual Studio](../working-with-project-properties.md)zu lesen.
 
 Die Standardeinstellungen für die Eigenschaften der **VC++-Verzeichnisse** hängen vom Projekttyp ab. Bei Desktopprojekten enthalten diese die Speicherorte der C++-Tools für ein bestimmtes Plattformtoolset sowie den Speicherort des Windows SDK. Sie können das **Plattformtoolset** und die Version des **Windows SDK** auf der Seite **Konfigurationseigenschaften** > **Allgemein** ändern.
 
@@ -54,7 +54,7 @@ Folgendes Dialogfeld wird angezeigt:
 
 ![Anzeigen von Bibliotheksverzeichnissen](../media/vcppdir_libdir.png "Dialogfeld für das Hinzufügen oder Entfernen von Bibliothekspfaden")
 
-Verwenden Sie dieses Dialogfeld, um die aktuellen Verzeichnisse anzuzeigen. Wenn Sie ein Verzeichnis jedoch ändern oder eines hinzufügen möchten, sollten Sie den **Eigenschaften-Manager** verwenden, um ein Eigenschaftenblatt zu erstellen oder das Eigenschaftenblatt für den Standardbenutzer ändern. Weitere Informationen finden Sie unter [Freigabe oder zur Wiederverwendung von Visual Studio C++ projekteinstellungen](../create-reusable-property-configurations.md).
+Verwenden Sie dieses Dialogfeld, um die aktuellen Verzeichnisse anzuzeigen. Wenn Sie ein Verzeichnis jedoch ändern oder eines hinzufügen möchten, sollten Sie den **Eigenschaften-Manager** verwenden, um ein Eigenschaftenblatt zu erstellen oder das Eigenschaftenblatt für den Standardbenutzer ändern. Weitere Informationen finden Sie unter [freigeben oder wieder verwenden von C++ Visual Studio-Projekteinstellungen](../create-reusable-property-configurations.md).
 
 Wie Sie oben sehen, werden viele der abgeleiteten Pfade als Makros angegeben.  Klicken Sie auf die Schaltfläche **Makros** in der unteren rechten Ecke des Dialogfelds, um den aktuellen Wert eines Makros zu überprüfen. Beachten Sie, dass viele Makros vom Konfigurationstyp abhängen. Ein Makro in einem Debugbuild kann einen anderen Pfad als das gleiche Makro in einem Releasebuild ergeben.
 
@@ -62,11 +62,11 @@ Sie können im Bearbeitungsfeld nach teilweisen oder vollständigen Übereinstim
 
 ![Anzeigen von Makrowerten](../media/vcppdir_libdir_macros.png "Dialogfeld für das Bearbeiten von Makros")
 
-Hinweis: Die Liste wird aufgefüllt, während der Eingabe. Drücken Sie nicht auf die **EINGABETASTE**.
+Hinweis: Die Liste wird bei der Typisierungs Auflistung aufgefüllt. Drücken Sie nicht auf die **EINGABETASTE**.
 
-Weitere Informationen über Makros und warum Sie diese anstatt hartcodierte Pfade möglichst verwenden sollten, finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+Weitere Informationen zu Makros und deren Verwendung anstelle von hart codierten Pfaden, wenn möglich, finden Sie unter [festlegen C++ von Compiler-und Buildeigenschaften in Visual Studio](../working-with-project-properties.md).
 
-Eine Liste der häufig verwendeten Makros finden Sie unter [gängige Makros für Buildbefehle und-Eigenschaften](common-macros-for-build-commands-and-properties.md).
+Eine Liste der häufig verwendeten Makros finden Sie unter [Allgemeine Makros für Buildbefehle und-Eigenschaften](common-macros-for-build-commands-and-properties.md).
 
 Sie können eigene Makros auf zwei Arten definieren:
 
@@ -74,7 +74,7 @@ Sie können eigene Makros auf zwei Arten definieren:
 
 - Definieren Sie Benutzermakros in einer PROPS-Datei. Weitere Informationen finden Sie unter [Property page macros (Makros für Eigenschaftenseiten)](../working-with-project-properties.md).
 
-Weitere Informationen finden Sie in folgenden Blogbeiträgen: [VC++-Verzeichnisse](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [geerbte Eigenschaften und Eigenschaftenblätter](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), und [Visual Studio 2010 C++-Projekt-Aktualisierungshandbuch](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
+Weitere Informationen finden Sie in den folgenden Blogbeiträgen: [VC + +-Verzeichnisse](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [geerbte Eigenschaften und Eigenschaften Blätter](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)und [Visual Studio C++ 2010 Project Upgrade Guide](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Verzeichnistypen
 
