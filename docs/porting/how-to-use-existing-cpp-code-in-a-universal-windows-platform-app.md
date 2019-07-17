@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verwenden von vorhandenem C++-Code in einer UWP-App (Universelle Windows-Plattform)'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59424195"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861130"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Vorgehensweise: Verwenden von vorhandenem C++-Code in einer UWP-App (Universelle Windows-Plattform)
 
@@ -135,7 +135,7 @@ Das folgende Verfahren gilt, wenn Sie über eine native DLL verfügen, die Funkt
 
 2. Öffnen Sie die **Projekteigenschaften** für das DLL-Projekt, und legen Sie die **Konfiguration** auf **Alle Konfigurationen** fest.
 
-3. Legen Sie in den **Projekteigenschaften** unter **C/C++** > **Allgemein** (Registerkarte) die Option **Windows-Runtime-Erweiterung verwenden** auf **Yes (/ZW)** (Ja (/ZW)) fest. Dadurch werden Komponentenerweiterungen (C++/CX) aktiviert.
+3. Legen Sie in den **Projekteigenschaften** unter **C/C++**  > **Allgemein** (Registerkarte) die Option **Windows-Runtime-Erweiterung verwenden** auf **Yes (/ZW)** (Ja (/ZW)) fest. Dadurch werden Komponentenerweiterungen (C++/CX) aktiviert.
 
 4. Wählen Sie im **Projektmappen-Explorer** den Projektknoten, öffnen Sie das Kontextmenü , und wählen Sie dann **Projekt entladen** aus. Öffnen Sie anschließend das Kontextmenü des entladenen Projektknotens, und klicken Sie dann auf die Option zum Bearbeiten der Projektdatei. Suchen Sie das Element `WindowsTargetPlatformVersion`, und ersetzen Sie es durch die folgenden Elemente.
 
@@ -193,9 +193,9 @@ Sie können eine statische Bibliothek jedoch in einer UWP-App ohne Neukompiliere
 
 ### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>So verwenden Sie eine systemeigene, statische C++-Bibliothek in einem UWP-Projekt
 
-1. Fügen Sie in den Projekteigenschaften für das UWP-Projekt im Bereich **Linker** in der **Input**-Eigenschaft den Pfad zur Bibliothek hinzu. Beispiel: Für eine Bibliothek in dem Projekt, das seine Ausgabe in *SolutionFolder\Debug\MyNativeLibrary\MyNativeLibrary.lib* platziert, fügen Sie den relativen Pfad `Debug\MyNativeLibrary\MyNativeLibrary.lib` hinzu.
+1. Wählen Sie in den Eigenschaften des UWP-Projekts im linken Bereich **Konfigurationseigenschaften** > **Linker** > **Eingabe** aus. Fügen Sie im rechten Bereich der Eigenschaft **Zusätzliche Abhängigkeiten** den Pfad zur Bibliothek hinzu. Beispiel: Für eine Bibliothek in dem Projekt, das seine Ausgabe in *SolutionFolder\Debug\MyNativeLibrary\MyNativeLibrary.lib* platziert, fügen Sie den relativen Pfad `Debug\MyNativeLibrary\MyNativeLibrary.lib` hinzu.
 
-2. Fügen Sie eine include-Anweisung hinzu, um die Headerdatei auf Ihre Datei „pch.h“ im UWP-Projekt zu verweisen, und fügen Sie Code hinzu, der die Bibliothek verwendet.
+2. Fügen Sie eine include-Anweisung hinzu, um die Headerdatei auf Ihre Datei „pch.h“ (sofern vorhanden) oder eine CPP-Datei zu verweisen, und fügen Sie Code hinzu, der die Bibliothek verwendet.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
