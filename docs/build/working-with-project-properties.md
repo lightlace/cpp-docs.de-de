@@ -1,23 +1,23 @@
 ---
 title: Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio
 description: Verwenden Sie die Visual Studio-IDE C++ , um Compiler-und Linkeroptionen und andere Buildeinstellungen zu ändern.
-ms.date: 03/27/2019
+ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 896587aea65d7aec24d3a11ff7d3e757937c2632
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 436c9c47d7e08176860144ce62cc874919351029
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299692"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313445"
 ---
 # <a name="set-compiler-and-build-properties"></a>Festlegen von compilerund Buildeigenschaften
 
-In der IDE werden alle Informationen, die für das Erstellen eines Projekts erforderlich sind, als *Eigenschaften* verfügbar gemacht. Zu diesen Informationen zählen unter anderem der Anwendungsname, die Erweiterung (z.B. DLL, LIB, EXE), Compileroptionen, Linkeroptionen, Debuggereinstellungen und benutzerdefinierte Buildschritte. Sie verwenden üblicherweise *Eigenschaftenseite* (**Projekt > Eigenschaften**), um diese Eigenschaften anzuzeigen und zu ändern. Um auf die Eigenschaften Seiten zuzugreifen, wählen Sie **Projekt > \<Projektname > Eigenschaften** im Hauptmenü aus, oder klicken Sie mit der rechten Maustaste auf den Projekt Knoten in **Projektmappen-Explorer** , und wählen Sie **Eigenschaften**aus.
+In der IDE werden alle Informationen, die für das Erstellen eines Projekts erforderlich sind, als *Eigenschaften* verfügbar gemacht. Zu diesen Informationen zählen unter anderem der Anwendungsname, die Erweiterung (z.B. DLL, LIB, EXE), Compileroptionen, Linkeroptionen, Debuggereinstellungen und benutzerdefinierte Buildschritte. In der Regel verwenden Sie Eigenschaften *Seiten* , um diese Eigenschaften anzuzeigen und zu ändern. Wählen Sie zum Zugreifen auf die Eigenschaften Seiten im Hauptmenü **Project** >  **_ProjectName_ Properties** aus, oder klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf den Projekt Knoten, und wählen Sie **Eigenschaften**aus.
 
 ## <a name="default-properties"></a>Standardeigenschaften
 
@@ -82,7 +82,7 @@ Ein benutzerdefiniertes Makro wird in einem Eigenschaftenblatt gespeichert. Wenn
 
 #### <a name="to-create-a-user-defined-macro"></a>So erstellen Sie ein benutzerdefiniertes Makro
 
-1. Öffnen Sie im Fenster **Eigenschaften-Manager** (klicken Sie auf der Menüleiste auf **Ansicht** > **Eigenschaften-Manager**) das Kontextmenü für ein Eigenschaftenblatt (der Name endet auf „.user“), und wählen Sie „Eigenschaften“ aus. Das Dialogfeld **Eigenschaftenseiten** für dieses Eigenschaftenblatt wird geöffnet.
+1. Öffnen Sie das Fenster **Eigenschaften-Manager** . (Wählen Sie in der Menüleiste**Eigenschaften-Manager** **anzeigen** > oder**andere Fenster** > **Eigenschaften-Manager** **anzeigen** > aus.) Öffnen Sie das Kontextmenü für ein Eigenschaften Blatt (der Name endet auf. User), und wählen Sie dann **Eigenschaften**aus. Das Dialogfeld **Eigenschaftenseiten** für dieses Eigenschaftenblatt wird geöffnet.
 
 1. Klicken Sie im linken Bereich des Dialogfelds auf **Benutzermakros**. Klicken Sie im rechten Bereich auf die Schaltfläche **Makro hinzufügen**, um das Dialogfeld **Benutzermakro hinzufügen** zu öffnen.
 
