@@ -1,10 +1,11 @@
 ---
 title: /X (Standardincludepfade ignorieren)
-ms.date: 11/04/2016
+ms.date: 07/18/2019
 f1_keywords:
 - /x
 - VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
 - VC.Project.VCCLWCECompilerTool.OVERWRITEStandardIncludePath
+- VC.Project.VCCLCompilerTool.IgnoreStandardIncludePath
 helpviewer_keywords:
 - /X compiler option [C++]
 - include files, ignore standard path
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: dba7e49880307002a3dee983264e93666adfef17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16f903b98d69472fe1a33b084fe6393ecf9ec001
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316313"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341051"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (Standardincludepfade ignorieren)
 
-Verhindert, dass der Compiler in in der PATH und INCLUDE-Umgebungsvariablen angegebenen Verzeichnisse nach Includedateien gesucht werden.
+Verhindert, dass der Compiler in Verzeichnissen, die in den path-und INCLUDE-Umgebungsvariablen angegeben sind, nach Includedateien sucht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,17 +33,17 @@ Verhindert, dass der Compiler in in der PATH und INCLUDE-Umgebungsvariablen ange
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können diese Option mit der [/i (Zusätzliche Includeverzeichnisse)](i-additional-include-directories.md) (**/i**`directory`) Option.
+Sie können diese Option mit der Option [/I (weitere Includeverzeichnisse)](i-additional-include-directories.md) ( **/I**`directory`) verwenden.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
 1. Klicken Sie auf den Ordner **C/C++** .
 
-1. Klicken Sie auf die **Präprozessor** Eigenschaftenseite.
+1. Klicken Sie auf die Eigenschaften Seite **Präprozessor** .
 
-1. Ändern der **Standardincludepfad ignorieren** Eigenschaft.
+1. Ändern Sie die Eigenschaft Standardincludepfad **ignorieren** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 
@@ -50,7 +51,7 @@ Sie können diese Option mit der [/i (Zusätzliche Includeverzeichnisse)](i-addi
 
 ## <a name="example"></a>Beispiel
 
-In den folgenden Befehl `/X` weist den Compiler an, die durch die Umgebungsvariablen PATH und INCLUDE angegeben Speicherorte zu ignorieren und `/I` gibt an, das Verzeichnis, in dem gesucht werden soll, für die Includedateien:
+Im folgenden Befehl `/X` weist den Compiler an, Speicherorte zu ignorieren, die durch den Pfad und die include- `/I` Umgebungsvariablen angegeben sind, und gibt das Verzeichnis an, in dem nach Includedateien gesucht werden soll:
 
 ```
 CL /X /I \ALT\INCLUDE MAIN.C

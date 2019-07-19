@@ -1,34 +1,40 @@
 ---
 title: '&lt;ctgmath&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <ctgmath>
+- ctgmath
+helpviewer_keywords:
+- ctgmath header
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 85099f3cb206dd791aade59bf9a531a714e68ac3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 30eca273ac41139251c024c27c16d4adefe7f784
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246604"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341110"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-Schließt die C++ standardbibliotheksheader \<komplexe > und \<Cmath >, die typgenerischen mathematischen Makros gleich bereitstellen \<tgmath.h >.
+Umfasst in der Tat die C++ Standard Bibliotheks Header \<Complex > und \<cmath->, die typgenerische mathematische Makros bereitstellen, \<die dem tgmath. h-> entsprechen.
+
+> [!NOTE]
+> Der tgmath \<. h-> Header der C-Standardbibliothek \<ist nicht in ctgmath > enthalten, da er tatsächlich C++ durch die über \<Ladungen in komplexen \<> und cmath-> ersetzt wird. Dadurch wird der \<ctgmath-> Header redundant. Der \<tgmath. h-> Header ist in C++veraltet. Der \<ctgmath-> Header ist in c++ 17 veraltet und wurde im Draft c++ 20-Standard entfernt.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<"ctgmath" >
+**Header:** \<ctgmath->
 
 **Namespace:** std
 
 ## <a name="remarks"></a>Hinweise
 
-Die Funktionalität des Standard-C-bibliotheksheaders \<tgmath.h > wird von Überladungen in bereitgestellt \<komplexe > und \<Cmath >.
-
-Durch Einschließen dieses Headers wird sichergestellt, dass die mit externer Bindung im Standard-C-Bibliotheksheader deklarierten Namen im `std`-Namespace deklariert werden.
+Die Funktionalität der C-Standard Bibliotheks Kopfzeile \<tgmath. h > wird von den über Ladungen in \<komplexen > und cmath- \<> bereitgestellt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<ccomplex>](../standard-library/ccomplex.md)<br/>
-[\<cmath>](../standard-library/cmath.md)<br/>
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<komplexe >](complex.md)\
+[\<cmath>](cmath.md)\
+[Header Dateireferenz](cpp-standard-library-header-files.md)\
+[C++Übersicht über die Standardbibliothek](cpp-standard-library-overview.md)\
+[Thread Sicherheit in der C++ Standardbibliothek](thread-safety-in-the-cpp-standard-library.md)
