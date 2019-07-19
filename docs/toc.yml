@@ -414,6 +414,8 @@
                   href: build/reference/general-property-page-project.md
                 - name: Eigenschaftenseite „Allgemein“
                   href: build/reference/general-property-page-file.md
+                - name: Eigenschaftenseite „Erweitert“
+                  href: build/reference/advanced-property-page.md
                 - name: Eigenschaftenseite „VC++-Verzeichnisse“
                   href: build/reference/vcpp-directories-property-page.md
                 - name: Befehlszeileneigenschaftenseiten
@@ -6296,7 +6298,7 @@
                   href: windows/attributes/noncreatable.md
                 - name: nonextensible
                   href: windows/attributes/nonextensible.md
-                - name: object
+                - name: Objekt
                   href: windows/attributes/object-cpp.md
                 - name: odl
                   href: windows/attributes/odl.md
