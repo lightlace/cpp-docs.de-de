@@ -3,12 +3,12 @@ title: Installieren der C++-Workload unter Linux in Visual Studio
 description: Informationen zum Herunterladen, Installieren und Einrichten der Linux-Workload für C++ in Visual Studio
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 5df7b323d202f398059e92abaeeeedbf73439fa4
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042742"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299792"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Herunterladen, Installieren und Einrichten der Linux-Workload
 
@@ -31,8 +31,6 @@ Für jedes dieser Szenarios ist die Workload **Linux-Entwicklung mit C++** erfor
 ::: moniker range="vs-2019"
 
 In Visual Studio 2019 können Sie separate Linux-Ziele zum Erstellen und Debuggen angeben. Wenn Sie das WSL als Ziel verwenden, ist es nicht mehr erforderlich, eine Remoteverbindung hinzufügen oder SSH zu konfigurieren.
-
-Unterstützung für [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) ist jetzt in Visual Studio für Linux-Projekte integriert.
 
 ::: moniker-end
 
