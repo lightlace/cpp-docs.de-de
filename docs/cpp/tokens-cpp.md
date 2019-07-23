@@ -1,5 +1,5 @@
 ---
-title: Tokens (C++)
+title: Token (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tokens [C++]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - translation units
 - white space, in C++ tokens
 ms.assetid: aa812fd0-6d47-4f3f-aee0-db002ee4d8b9
-ms.openlocfilehash: 1606df56191ec00ffea543dedd3fd4eda98d01c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd104b7308716ca182374bbff2df61731c84d574
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330439"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376256"
 ---
-# <a name="tokens-c"></a>Tokens (C++)
+# <a name="tokens-c"></a>Token (C++)
 
 Ein Token ist das kleinste Element eines C++-Programms, das für den Compiler von Bedeutung ist. Der C++-Parser erkennt folgende Arten von Token: Bezeichner, Schlüsselwörter, Literale, Operatoren, Markierungszeichen und andere Trennzeichen. Ein Stream dieser Token bildet eine Übersetzungseinheit.
 
@@ -26,7 +26,7 @@ Token werden normalerweise durch *Leerstellen*getrennt. Folgende Elemente könne
 
 - Zeilenumbrüche
 
-- Seitenvorschübe
+- Formular Feeds
 
 - Kommentare
 

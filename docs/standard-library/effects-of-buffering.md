@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-ms.openlocfilehash: e10b28edffdfe3411f86c031bfd12ea886410e20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23e241794455a92f9e3628a786d75a6d4c7b037e
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413787"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376316"
 ---
 # <a name="effects-of-buffering"></a>Pufferungseffekte
 
@@ -39,7 +39,7 @@ Damit das Programm logisch funktioniert, muss sich das `cout` -Objekt selbst lee
 cout <<"Please wait..." <<flush;
 ```
 
-In diesem Schritt wird der Puffer geleert, wodurch sichergestellt wird, dass die Meldung vor dem Wartevorgang ausgegeben wird. Sie können auch die `endl` Manipulator, der den Puffer leert und gibt einen Zeilenumbruch, oder Sie können die `cin` Objekt. Dieses Objekt (mit dem `cerr` - oder dem `clog` -Objekt) ist in der Regel mit dem `cout` -Objekt verknüpft. Daher wird bei jeder Verwendung von `cin` (oder einem der Objekte `cerr` oder `clog` ) das `cout` -Objekt geleert.
+In diesem Schritt wird der Puffer geleert, wodurch sichergestellt wird, dass die Meldung vor dem Wartevorgang ausgegeben wird. Sie können auch den `endl` Manipulator verwenden, der den Puffer leert und einen Wagen Rücklauf-Zeilenvorschub ausgibt, oder Sie können das `cin` -Objekt verwenden. Dieses Objekt (mit dem `cerr` - oder dem `clog` -Objekt) ist in der Regel mit dem `cout` -Objekt verknüpft. Daher wird bei jeder Verwendung von `cin` (oder einem der Objekte `cerr` oder `clog` ) das `cout` -Objekt geleert.
 
 ## <a name="see-also"></a>Siehe auch
 
