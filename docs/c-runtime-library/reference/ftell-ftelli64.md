@@ -27,12 +27,12 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-ms.openlocfilehash: cc76ad0776ae82637b95d32cdc6254d3c40da5b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9548d4684bd2df734be2b0b703f98d8c7982884
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332782"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376123"
 ---
 # <a name="ftell-ftelli64"></a>ftell, _ftelli64
 
@@ -56,17 +56,17 @@ Ziel **Datei** Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Ftell** und **_ftelli64** die aktuelle Dateiposition zurück. Der Rückgabewert von **Ftell** und **_ftelli64** das physische Byteoffset für im Textmodus geöffneten Streams u. u. nicht wiedergegeben werden, weil im Textmodus Carriage Return-Zeilenvorschub-Übersetzung verursacht. Verwendung **Ftell** mit [Fseek](fseek-fseeki64.md) oder **_ftelli64** mit [_fseeki64](fseek-fseeki64.md) auf Dateispeicherorte ordnungsgemäß zurückgegeben. Bei einem Fehler **Ftell** und **_ftelli64** der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese Funktionen zurück,-1 L und legen **Errno** auf eine der beiden Konstanten, die in ERRNO definiert. H. Die **EBADF** -Konstante bedeutet, dass die *Stream* Argument ein gültiger dateizeigerwert ist oder nicht auf eine geöffnete Datei verweist. **EINVAL** bedeutet, dass eine ungültige *Stream* Argument wurde an die Funktion übergeben. Auf Geräten, die über keine Suchfunktion verfügen (z.B. Terminals oder Drucker) oder wenn *Stream* verweist nicht auf eine geöffnete Datei, ist der Rückgabewert nicht definiert.
+" **f** " und " **_ftelli64** " geben die aktuelle Dateiposition zurück. Der von " **f** " und " **_ftelli64** " zurückgegebene Wert spiegelt möglicherweise nicht den physischen Byte Offset für Streams wider, die im Textmodus geöffnet wurden, da der Textmodus eine Wagen Rücklauf-Zeilenvorschub Übersetzung Verwenden Sie **ftell** mit [fseek](fseek-fseeki64.md) oder **_ftelli64** mit [_fseeki64](fseek-fseeki64.md) , um ordnungsgemäß zu den Dateispeicher Orten zurückzukehren. Bei Error rufen **ftell** und **_ftelli64** den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen "-1L" zurück und setzen " **errno** " auf eine von zwei Konstanten, die in "errno" definiert sind. Micha. Die **EBADF** -Konstante bedeutet, dass das *Stream* -Argument kein gültiger Dateizeiger Wert ist oder nicht auf eine geöffnete Datei verweist. **EINVAL** bedeutet, dass ein ungültiges *Stream* -Argument an die Funktion übermittelt wurde. Auf Geräten, die nicht suchen können (z. b. Terminals und Drucker), oder wenn der *Stream* nicht auf eine geöffnete Datei verweist, ist der Rückgabewert nicht definiert.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Ftell** und **_ftelli64** Funktionen Abrufen die aktuelle Position des Dateizeigers (sofern vorhanden) zugeordneten *Stream*. Die Position wird als ein Offset relativ zum Anfang des Streams ausgedrückt.
+Die **ftell** -Funktion und die **_ftelli64** -Funktion rufen die aktuelle Position des Dateizeigers (sofern vorhanden) ab, der dem *Stream*zugeordnet ist. Die Position wird als ein Offset relativ zum Anfang des Streams ausgedrückt.
 
 Beachten Sie, dass wenn eine Datei zum Anfügen von Daten geöffnet wird, die aktuelle Dateiposition vom letzten E/A-Vorgang nicht dadurch bestimmt wird, wo der nächste Schreibvorgang erfolgt. Wenn eine Datei für einen Anfügevorgang geöffnet wird und der letzte Vorgang ein Lesevorgang war, ist die Dateiposition der Punkt, an dem der nächste Lesevorgang gestartet wird, aber nicht der nächste Schreibvorgang. (Wenn eine Datei für einen Anfügevorgang geöffnet wird, wird die Dateiposition vor einem Schreibvorgang an das Ende der Datei verschoben.) Wenn noch kein E/A-Vorgang für eine zum Anhängen geöffnete Datei stattgefunden hat, ist die Dateiposition der Anfang der Datei.
 
-Im Textmodus wird STRG+Z in der Eingabe als Dateiendezeichen interpretiert. In den Dateien geöffnet zum Lesen/Schreiben **Fopen** und alle verknüpfte Routinen STRG + z am Ende der Datei überprüfen und ggf. zu entfernen. Dies geschieht, da die Verwendung **Ftell** und [Fseek](fseek-fseeki64.md) oder **_ftelli64** und [_fseeki64](fseek-fseeki64.md), zum Navigieren innerhalb einer Datei, die mit endet STRG + Z möglicherweise **Ftell** oder **_ftelli64** am Ende der Datei nicht ordnungsgemäß verhält.
+Im Textmodus wird STRG+Z in der Eingabe als Dateiendezeichen interpretiert. In **Dateien, die** für Lese-/Schreibvorgänge geöffnet sind, überprüfen Sie, ob die Datei mit dem Namen STRG + Z am Ende der Datei ist, und entfernen Sie Sie, wenn möglich. Dies geschieht, da die Kombination von **ftell** und [fseek](fseek-fseeki64.md) bzw. **_ftelli64** und [_fseeki64](fseek-fseeki64.md)zum Verschieben innerhalb einer Datei, die mit STRG + Z endet, dazu führen kann, dass sich **ftell** oder **_ftelli64** nicht ordnungsgemäß am Ende der Datei.
 
 Diese Funktion sperrt den aufrufenden Thread während der Ausführung und ist threadsicher. Eine nicht sperrende Version finden Sie unter **_ftell_nolock**.
 
