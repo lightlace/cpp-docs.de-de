@@ -30,11 +30,11 @@ helpviewer_keywords:
 - standard input, reading from
 ms.assetid: dc49ba60-0647-4ae9-aa9a-a0618b1666de
 ms.openlocfilehash: feeda65d06dbcfecb6ea5adc60934abf3d0df415
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331804"
 ---
 # <a name="getcharnolock-getwcharnolock"></a>_getchar_nolock, _getwchar_nolock
 
@@ -53,7 +53,7 @@ Siehe [getchar, getwchar](getchar-getwchar.md).
 
 ## <a name="remarks"></a>Hinweise
 
-**_getchar_nolock** und **_getwchar_nolock** sind identisch mit **Getchar** und **Getwchar** mit dem Unterschied, dass sie nicht vor Störungen durch andere geschützt werden Threads. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsichere Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+**_getchar_nolock** und **_getwchar_nolock** sind identisch mit **Getchar** und **Getwchar** mit dem Unterschied, dass sie nicht vor Störungen durch andere geschützt werden Threads. Sie sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

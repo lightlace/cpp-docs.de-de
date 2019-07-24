@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 ms.openlocfilehash: 2096d39a8ba316fc76c97517a16e34231940e7f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335294"
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 
@@ -83,7 +83,7 @@ Die **_CrtSetReportMode** Funktion weist den neue Berichtsmodus in angegebenen *
 |**_CRTDBG_MODE_DEBUG**|Schreibt die Nachricht in das Ausgabefenster des Debuggers.|
 |**_CRTDBG_MODE_FILE**|Schreibt die Nachricht an ein vom Benutzer bereitgestelltes Dateihandle. [_CrtSetReportFile](crtsetreportfile.md) sollte aufgerufen werden, um die als Ziel zu verwendende bestimmte Datei bzw. den bestimmten Stream zu definieren.|
 |**_CRTDBG_MODE_WNDW**|Erstellt ein Meldungsfeld, um die Meldung zusammen mit Anzeige der [Abbrechen](abort.md), **wiederholen**, und **ignorieren** Schaltflächen.|
-|**_CRTDBG_REPORT_MODE**|Gibt *ReportMode* für den angegebenen *ReportType*:<br /><br /> 1 **_CRTDBG_MODE_FILE**<br /><br /> 2 **_CRTDBG_MODE_DEBUG**<br /><br /> 4 **_CRTDBG_MODE_WNDW**|
+|**_CRTDBG_REPORT_MODE**|Gibt *ReportMode* für den angegebenen *ReportType*:<br /><br /> 1   **_CRTDBG_MODE_FILE**<br /><br /> 2   **_CRTDBG_MODE_DEBUG**<br /><br /> 4   **_CRTDBG_MODE_WNDW**|
 
 Jeder Berichtstyp kann mithilfe von einem, zwei oder drei Modi oder keinem Modus gemeldet werden. Daher ist es möglich, mehrere Ziele festzulegen, die für einen einzelnen Berichtstyp definiert werden. Das folgende Codefragment verursacht beispielsweise Assertionsfehler gesendet werden, auf beide Fenster einer Debugmeldung und **"stderr"**:
 
@@ -102,7 +102,7 @@ Außerdem können die Berichterstellungsmodi für jeden Berichtstyp separat gest
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
-**Bibliotheken:** Nur Debugversionen der [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md)
+**Bibliotheken:** Debugversionen von [CRT-Bibliotheksfunktionen](../../c-runtime-library/crt-library-features.md) nur.
 
 ## <a name="see-also"></a>Siehe auch
 

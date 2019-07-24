@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
 ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306180"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: Befehl und Nachrichtenrouting
 
@@ -80,7 +80,7 @@ Verwaltung des aktiviert/überprüft alle eines Programms Menüelemente ständig
 
 `CFrameWnd` Außerdem behandelt die WM_ENTERIDLE-Nachricht an das aktuelle Menü, das ausgewählte Element auf der Statusleiste (auch bekannt als die Zeile "Message") beschrieben.
 
-Menüstruktur einer Anwendung von Visual C++ bearbeitet wird verwendet, die potenzielle WM_INITMENUPOPUP Zeitpunkt verfügbaren Befehle darstellen. ON_UPDATE_COMMAND_UI-Handler können Status oder der Text eines Menüs ändern, oder für die erweiterte verwendet (z. B. der Datei MRU-Liste oder im Popupmenü OLE-Verben), tatsächlich ändern die Menüstruktur, bevor Sie im Menü gezeichnet wird.
+Menüstruktur einer Anwendung bearbeitet werden, indem Visual C++, wird verwendet, um die potenzielle WM_INITMENUPOPUP Zeitpunkt verfügbaren Befehle darstellen. ON_UPDATE_COMMAND_UI-Handler können Status oder der Text eines Menüs ändern, oder für die erweiterte verwendet (z. B. der Datei MRU-Liste oder im Popupmenü OLE-Verben), tatsächlich ändern die Menüstruktur, bevor Sie im Menü gezeichnet wird.
 
 Diese Art von ON_UPDATE_COMMAND_UI Verarbeitung erfolgt für Symbolleisten (und anderen Steuerleisten) Wenn die Anwendung die Leerlaufschleife eingibt. Finden Sie unter den *Klassenbibliotheksreferenz* und [technischer Hinweis 31](../mfc/tn031-control-bars.md) für Weitere Informationen zu Schiebeleisten-Steuerelemente.
 

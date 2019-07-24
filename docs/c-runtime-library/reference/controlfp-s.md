@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
 ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335378"
 ---
 # <a name="controlfps"></a>_controlfp_s
 
@@ -55,7 +55,7 @@ Der aktuelle Bitwert des Steuerworts.
 *newControl*<br/>
 Neue Bitwerte des Steuerworts.
 
-*Maske*<br/>
+*mask*<br/>
 Maske für festzulegende neue Steuerwortbits.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -68,7 +68,7 @@ Die **_controlfp_s** -Funktion ist eine plattformunabhängige und sicherere Vers
 
 Wenn der Wert für *Maske* ist gleich 0 (null) **_controlfp_s** Ruft das gleitkommasteuerwort ab und speichert den abgerufenen Wert in *CurrentControl*.
 
-Wenn *Maske* ist ungleich NULL ist, wird ein neuer Wert für das Steuerwort festgelegt: für jedes Bit, der festgelegt wird (d. h. gleich 1) in *Maske*, das entsprechende Bit in *neue* wird verwendet, um das Steuerelement aktualisieren Word. Das heißt, *Fpcntrl* = ((*Fpcntrl* & ~*Maske*) &#124; (*NewControl* & *Maske* )), in denen *Fpcntrl* das gleitkommasteuerwort ist. In diesem Szenario *CurrentControl* festgelegt ist, auf den Wert nach Abschluss der Änderung; es ist nicht der alte Steuerwort Bit-Wert.
+Wenn *Maske* ist ungleich NULL ist, wird ein neuer Wert für das Steuerwort festgelegt: Für alle, die bit festgelegt ist (d. h. gleich 1) in *Maske*, das entsprechende Bit in *neue* wird verwendet, um das Steuerwort zu aktualisieren. Das heißt, *Fpcntrl* = ((*Fpcntrl* & ~*Maske*) &#124; (*NewControl* & *Maske* )), in denen *Fpcntrl* das gleitkommasteuerwort ist. In diesem Szenario *CurrentControl* festgelegt ist, auf den Wert nach Abschluss der Änderung; es ist nicht der alte Steuerwort Bit-Wert.
 
 > [!NOTE]
 > Standardmäßig maskieren die Laufzeitbibliotheken alle Gleitkommaausnahmen.
@@ -117,7 +117,7 @@ Für die **_MCW_EM** deaktivieren-Maske die Ausnahme, was die Hardwareausnahme e
 |**_MCW_EM** (Interrupt-ausnahmemaske)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
 |**_MCW_IC** (unendlichkeitssteuerung)<br /><br /> (Nicht unterstützt für ARM oder X64 Plattformen.)|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
 |**_MCW_RC** (rundungssteuerung)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
-|**_MCW_PC** (Precision-Steuerung)<br /><br /> (Nicht unterstützt für ARM oder X64 Plattformen.)|0x00030000|**_PC_24** (24 Bits)<br /><br /> **_PC_53** (53 Bits)<br /><br /> **_PC_64** (64 Bit)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
+|**_MCW_PC** (Precision-Steuerung)<br /><br /> (Nicht unterstützt für ARM oder X64 Plattformen.)|0x00030000|**_PC_24** (24 bits)<br /><br /> **_PC_53** (53 Bits)<br /><br /> **_PC_64** (64 Bit)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
 
 ## <a name="requirements"></a>Anforderungen
 

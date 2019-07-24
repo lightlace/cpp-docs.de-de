@@ -31,11 +31,11 @@ helpviewer_keywords:
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
 ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338830"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -76,10 +76,10 @@ Wenn erfolgreich, wird die Basis-2-Exponent *x*, d. h. 2<sup>x</sup>. Andernfall
 
 |Problem|Zurück|
 |-----------|------------|
-|*X* ±0 =|1|
-|*X* = - INFINITY|+0|
-|*X* = Plus UNENDLICH|+INFINITY|
-|*X* = NaN|NaN|
+|*x* = ±0|1|
+|*x* = -INFINITY|+0|
+|*x* = +INFINITY|+INFINITY|
+|*x* = NaN|NaN|
 |Überlaufbereichsfehler|+HUGE_VAL, +HUGE_VALF, oder +HUGE_VALL|
 |Unterlaufbereichsfehler|Korrektes Ergebnis nach dem runden|
 
@@ -93,7 +93,7 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **exp2** 
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**"exp"**, **Expf**, **Expl**|\<math.h>|\<cmath>|
+|**exp**, **expf**, **expl**|\<math.h>|\<cmath>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
