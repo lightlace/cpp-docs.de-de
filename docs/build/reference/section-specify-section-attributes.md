@@ -9,11 +9,11 @@ helpviewer_keywords:
 - section attributes
 - /SECTION linker option
 ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318562"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Abschnittsattribute festlegen)
 
@@ -64,7 +64,7 @@ Um ein Attribut zu negieren, stehen Sie das Zeichen mit einem Ausrufezeichen (!)
 |Zeichen|Attribut|Bedeutung|
 |---------------|---------------|-------------|
 |E|Ausführen|Der Abschnitt ist ausführbar.|
-|R|Thema|Ermöglicht Lesevorgänge für Daten|
+|R|Lesen|Ermöglicht Lesevorgänge für Daten|
 |W|Write|Ermöglicht Schreibvorgänge für Daten|
 |S|Shared|Teilt den Abschnitt für alle Prozesse, die das Bild zu laden|
 |D|Entfernbare|Markiert den Abschnitt als entfernbar|
@@ -91,5 +91,5 @@ Die **ALIGN =**_Anzahl_ Argument können Sie angeben, einen Ausrichtungswert fü
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSVC-Linker-Referenz](linking.md)<br/>
+[MSVC-Linkerreferenz](linking.md)<br/>
 [MSVC-Linkeroptionen](linker-options.md)

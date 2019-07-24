@@ -11,11 +11,11 @@ helpviewer_keywords:
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
 ms.openlocfilehash: eebb1bc0c553dba1934aea75e2e63edc0f222fff
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292405"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Name der Zuordnungsdatei)
 
@@ -54,6 +54,6 @@ Globale Symbole in einer Zuordnungsdatei haben in der Regel eine oder mehrere f√
 ## <a name="see-also"></a>Siehe auch
 
 [Ausgabedatei (/F) Optionen](output-file-f-options.md)<br/>
-[MSVC-Compiler-Optionen](compiler-options.md)<br/>
-[MSVC-Compiler-Befehlszeilensyntax](compiler-command-line-syntax.md)<br/>
+[MSVC-Compileroptionen](compiler-options.md)<br/>
+[Syntax f√ºr die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)<br/>
 [Festlegen des Pfadnamens](specifying-the-pathname.md)
