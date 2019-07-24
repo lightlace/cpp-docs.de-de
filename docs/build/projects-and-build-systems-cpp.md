@@ -1,7 +1,7 @@
 ---
-title: C/C++-Projekte und Buildsysteme in Visual Studio
+title: C/C++ Projekte und Buildsysteme in Visual Studio
 ms.description: Use Visual Studio to compile and build C++ projects for Windows, ARM or Linux based on any project system.
-ms.date: 05/06/2019
+ms.date: 07/17/2019
 helpviewer_keywords:
 - builds [C++]
 - C++ projects, building
@@ -9,84 +9,84 @@ helpviewer_keywords:
 - builds [C++], options
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: b345517bb1202030c9d512d16e80484feb4ba737
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 672dea77c4165ddcd84d3253525dc8c2d8be3e7c
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220355"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313175"
 ---
-# <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++-Projekte und Buildsysteme in Visual Studio
+# <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++ Projekte und Buildsysteme in Visual Studio
 
-Sie können Visual Studio 2017 verwenden, bearbeiten, kompilieren und erstellen C++-Code, der Codebasis mit vollständiger IntelliSense-Unterstützung, ohne diesen Code in eine Visual Studio-Projekt oder die Kompilierung mit dem MSVC-Toolset konvertieren zu müssen. Sie können z. B. ein plattformübergreifenden CMake-Projekts in Visual Studio auf einem Windows-Computer bearbeiten und dann für Linux mit g++ auf einem Linux-Remotecomputer zu kompilieren.
+Mithilfe von Visual Studio können Sie jede C++ Codebasis mit vollständiger IntelliSense-Unterstützung bearbeiten, kompilieren und erstellen, ohne den Code in ein Visual Studio-Projekt konvertieren oder mit dem MSVC-Toolset kompilieren zu müssen. Beispielsweise können Sie ein plattformübergreifendes cmake-Projekt in Visual Studio auf einem Windows-Computer bearbeiten und dann für Linux mit g + + auf einem Linux-Remote Computer kompilieren.
 
-## <a name="c-compilation"></a>C++-Kompilierung
+## <a name="c-compilation"></a>C++Neuauflage
 
-Um *erstellen* ein C++-Programm zum Kompilieren von Quellcode aus einem oder mehreren Dateien, und verknüpfen Sie diese Dateien dann in eine ausführbare Datei (.exe), eine Dynamic-Load-Bibliothek (.dll) oder eine statische Bibliothek (.lib) bedeutet. 
+C++ Um *ein Programm* zu erstellen, können Sie Quellcode aus einer oder mehreren Dateien kompilieren und diese Dateien dann in eine ausführbare Datei (exe), eine Dynamic Load Library (dll) oder eine statische Bibliothek (. lib) verknüpfen. 
 
-Grundlegende C++-Kompilierung umfasst drei Hauptschritte:
+Die C++ grundlegende Kompilierung umfasst drei Hauptschritte:
 
-- Der C++-Präprozessor transformiert alle #directives und Makros Definitionen in jeder Quelldatei. Dies erstellt eine *Übersetzungseinheit*.
-- Der C++-Compiler kompiliert Jede Übersetzungseinheit in Objektdateien (.obj), Anwenden von die Compileroptionen festgelegt wurden.
-- Die *Linker* führt die Objektdateien in einer einzelnen ausführbaren Datei enthält, die Übernahme der Linkeroptionen an, die festgelegt wurden. 
+- Der C++ Präprozessor wandelt alle #Directives-und Makro Definitionen in jeder Quelldatei um. Dadurch wird eine *Übersetzungseinheit*erstellt.
+- Der C++ Compiler kompiliert jede Übersetzungseinheit in Objektdateien (. obj) und wendet alle festgelegten Compileroptionen an.
+- Der *Linker* führt die Objektdateien in einer einzelnen ausführbaren Datei zusammen und wendet dabei die Linkeroptionen an, die festgelegt wurden. 
 
-## <a name="the-msvc-toolset"></a>Der MSVC-Toolsets
+## <a name="the-msvc-toolset"></a>Das MSVC-Toolset
 
-Microsoft C++ Compiler, Linker, standard-Bibliotheken und zugehörigen Hilfsprogramme umfassen die MSVC-Compilertoolset (auch als eine toolkette oder "build-Tools" bezeichnet). Diese sind in Visual Studio enthalten. Sie können auch herunterladen und verwenden Sie das Toolset als eigenständiges Paket kostenlos von der [Speicherort des Downloads der Build-Tools für Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
+Der Microsoft C++ -Compiler, Linker, Standardbibliotheken und zugehörige Hilfsprogramme bilden das MSVC-Compilertoolset (auch als Toolkette oder "Buildtools" bezeichnet). Diese sind in Visual Studio enthalten. Sie können das Toolset auch als eigenständiges Paket kostenlos über den [Download Speicherort für Buildtools für Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)herunterladen und verwenden.
 
-Sie können einfache Programme erstellen, durch den Aufruf des MSVC-Compilers (cl.exe) direkt über die Befehlszeile. Der folgende Befehl akzeptiert eine einzelne Quellcodedatei, und ruft cl.exe zum Erstellen einer ausführbaren Datei namens *hello.exe*: 
+Sie können einfache Programme erstellen, indem Sie den MSVC-Compiler (cl. exe) direkt über die Befehlszeile aufrufen. Der folgende Befehl akzeptiert eine einzelne Quell Code Datei und ruft cl. exe auf, um eine ausführbare Datei mit dem Namen " *Hello. exe*" zu erstellen: 
 
 ```cmd
 cl /EHsc hello.cpp
 ```
-Beachten Sie hier den Compiler (cl.exe) automatisch das C++-Präprozessor "und" Linker ", um die Datei für die endgültige Ausgabe zu erzeugen aufgerufen wird.  Weitere Informationen finden Sie unter [erstellen über die Befehlszeile](building-on-the-command-line.md).
+Beachten Sie, dass der Compiler (cl. exe) den C++ Präprozessor und den Linker automatisch aufruft, um die endgültige Ausgabedatei zu entwickeln.  Weitere Informationen finden Sie unter [Building in der Befehlszeile](building-on-the-command-line.md).
 
-## <a name="build-systems-and-projects"></a>Erstellen von Systemen und Projekte
+## <a name="build-systems-and-projects"></a>Buildsysteme und Projekte
 
-Die meisten realen-Programme mithilfe bestimmter Art von *Buildsystem* zum Verwalten der Komplexitäten von kompiliert mehrere Quelldateien für Konfigurationen mit mehreren (z. B. debug oder Release), mehrere Plattformen (X86, X64, ARM, und so weiter), benutzerdefinierten Buildprozess Schritte und sogar mehrere ausführbare Dateien, die in einer bestimmten Reihenfolge kompiliert werden muss. Legen Sie Einstellungen in einem Build-Konfiguration-Dateien, und das Buildsystem die Datei als Eingabe akzeptiert, bevor es der Compiler aufgerufen wird. Der Satz von Quellcodedateien und Build-Konfigurationsdateien, die zum Erstellen einer ausführbaren Datei benötigt wird aufgerufen, eine *Projekt*. 
+In den meisten realen Programmen wird ein Buildsystem verwendet, um die Komplexität der Kompilierung mehrerer Quelldateien für mehrere Konfigurationen (d. h. Debuggen und Releases), mehrere Plattformen (x86, x64, Arm usw.), benutzerdefinierte Buildschritte und sogar mehrere  ausführbare Dateien, die in einer bestimmten Reihenfolge kompiliert werden müssen. Sie nehmen Einstellungen in einer buildkonfigurationsdatei (en) vor, und das Buildsystem akzeptiert diese Datei als Eingabe, bevor Sie den Compiler aufruft. Der Satz von Quell Code Dateien und buildkonfigurationsdateien, die zum Erstellen einer ausführbaren Datei erforderlich sind, wird als *Projekt*bezeichnet. 
 
-Die folgende Liste enthält verschiedene Optionen für Visual Studio-Projekte – C++:
+In der folgenden Liste werden verschiedene Optionen für Visual Studio- C++Projekte angezeigt:
 
-- Erstellen Sie ein Visual Studio-Projekt mithilfe von Visual Studio-IDE, und konfigurieren Sie sie mithilfe von Eigenschaftenseiten. Visual Studio-Projekte erstellen, Programme, die unter Windows ausgeführt wird. Eine Übersicht finden Sie unter [kompilieren und generieren](/visualstudio/ide/compiling-and-building-in-visual-studio) in Visual Studio-Dokumentation.
+- Erstellen Sie ein Visual Studio-Projekt mithilfe der Visual Studio-IDE, und konfigurieren Sie es mithilfe von Eigenschaften Seiten. In Visual Studio-Projekten werden Programme erzeugt, die unter Windows ausgeführt werden. Eine Übersicht finden Sie unter [Kompilieren und erstellen](/visualstudio/ide/compiling-and-building-in-visual-studio) in der Visual Studio-Dokumentation.
 
-- Öffnen Sie einen Ordner, der eine Datei "CMakeLists.txt" enthält. CMake-Unterstützung ist in Visual Studio integriert. Sie können die IDE verwenden, bearbeiten, testen und Debuggen, ohne die CMake-Dateien in irgendeiner Weise ändern. Dadurch können Sie in der gleichen CMake-Projekts als andere arbeiten, die verschiedene Editoren verwenden kann. CMake ist die empfohlene Vorgehensweise für die plattformübergreifende Entwicklung. Weitere Informationen finden Sie unter [CMake-Projekten](cmake-projects-in-visual-studio.md).
+- Öffnen Sie einen Ordner, der die Datei "CMakeLists. txt" enthält. Cmake-Unterstützung ist in Visual Studio integriert. Sie können die IDE zum Bearbeiten, testen und Debuggen verwenden, ohne die cmake-Dateien in irgendeiner Weise zu ändern. Auf diese Weise können Sie im gleichen cmake-Projekt arbeiten wie andere, die möglicherweise unterschiedliche Editoren verwenden. Cmake ist die empfohlene Vorgehensweise für die plattformübergreifende Entwicklung. Weitere Informationen finden Sie unter [cmake-Projekte](cmake-projects-in-visual-studio.md).
  
-- Öffnen Sie einen losen Ordner von Quelldateien mit keine Projektdatei an. Visual Studio verwendet Heuristik, um die Dateien zu erstellen. Dies ist eine einfache Möglichkeit zum Kompilieren und Ausführen von kleinen konsolenanwendungen. Weitere Informationen finden Sie unter [Open Folder-Projekte](open-folder-projects-cpp.md).
+- Öffnen Sie einen losen Ordner der Quelldateien ohne Projektdatei. Visual Studio verwendet Heuristik, um die Dateien zu erstellen. Dies ist eine einfache Möglichkeit, kleine Konsolen Anwendungen zu kompilieren und auszuführen. Weitere Informationen finden Sie unter [Öffnen von Ordner Projekten](open-folder-projects-cpp.md).
 
-- Öffnen Sie einen Ordner, der ein Makefile oder einer beliebigen anderen Build Systemkonfigurationsdatei enthält. Sie können Visual Studio, um beliebige Buildaufgabe Befehle aufrufen, indem Sie das Hinzufügen von JSON-Dateien in den Ordner konfigurieren. Weitere Informationen finden Sie unter [Open Folder-Projekte](open-folder-projects-cpp.md).
+- Öffnen Sie einen Ordner, der ein Makefile oder eine beliebige andere buildsystemkonfigurationsdatei enthält. Sie können Visual Studio so konfigurieren, dass beliebige Buildbefehle aufgerufen werden, indem Sie dem Ordner JSON-Dateien hinzufügen. Weitere Informationen finden Sie unter [Öffnen von Ordner Projekten](open-folder-projects-cpp.md).
  
-- Öffnen Sie eine Windows-Makefile in Visual Studio. Weitere Informationen finden Sie unter [NMAKE-Referenz](reference/nmake-reference.md).
+- Öffnen Sie in Visual Studio ein Windows-Makefile. Weitere Informationen finden Sie unter [NMAKE-Referenz](reference/nmake-reference.md).
 
 ## <a name="msbuild-from-the-command-line"></a>MSBuild über die Befehlszeile 
 
-Sie können MSBuild über die Befehlszeile aufrufen, durch Übergabe einer .vcxproj-Datei zusammen mit Befehlszeilenoptionen. Dieser Ansatz erfordert gute Kenntnisse von MSBuild, und es wird empfohlen, nur wenn unbedingt erforderlich. Weitere Informationen finden Sie unter [MSBuild](msbuild-visual-cpp.md).
+Sie können MSBuild von der Befehlszeile aus aufrufen, indem Sie eine vcxproj-Datei zusammen mit Befehlszeilenoptionen übergeben. Diese Vorgehensweise erfordert ein gutes Verständnis von MSBuild und wird nur empfohlen, wenn dies unbedingt erforderlich ist. Weitere Informationen finden Sie unter [MSBuild](msbuild-visual-cpp.md).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Visual Studio-Projekte](creating-and-managing-visual-cpp-projects.md) wie erstellen, konfigurieren und Erstellen von C++-Projekte in Visual Studio mit das systemeigene System (MSBuild) erstellen.
+[Visual Studio-Projekte](creating-and-managing-visual-cpp-projects.md) Erstellen, konfigurieren und Erstellen von C++ Projekten in Visual Studio mithilfe des nativen Buildsystems (MSBuild).
 
-[CMake-Projekten](cmake-projects-in-visual-studio.md) wie codieren, erstellen und Bereitstellen von CMake-Projekte in Visual Studio.
+[Cmake-Projekte](cmake-projects-in-visual-studio.md) Gewusst wie: Programmieren, erstellen und Bereitstellen von cmake-Projekten in Visual Studio
 
-[Open Folder-Projekte](open-folder-projects-cpp.md) wie mit Visual Studio code und Bereitstellen von C++-Projekte basierend auf jeder beliebigen Buildsystem oder kein Buildsystem. Überhaupt. 
+[Ordner Projekte öffnen](open-folder-projects-cpp.md) Verwenden von Visual Studio zum Programmieren, erstellen und bereit C++ stellen von Projekten auf der Grundlage beliebiger Buildsysteme oder eines Buildsystems. Überhaupt. 
 
-[Releasebuilds](release-builds.md) erstellen, und beheben die optimierte Version erstellt, für die Bereitstellung für Endbenutzer bereitzustellen.
+[Releasebuilds](release-builds.md) Erstellen und Beheben von Problemen mit optimierten Releasebuilds für die Bereitstellung für Endbenutzer.
 
 [Verwenden des MSVC-Toolsets über die Befehlszeile](building-on-the-command-line.md)<br/>
-Erläutert, wie die C/C++-Compiler und Buildtools verwenden direkt über die Befehlszeile statt Visual Studio-IDE.
+Erläutert, wie der C/CompilerC++ und die Buildtools direkt über die Befehlszeile anstelle der Visual Studio-IDE verwendet werden.
 
-[Erstellen von DLLs in Visual Studio](dlls-in-visual-cpp.md) wie erstellen, Debuggen und Bereitstellen von C/C++-DLLs (freigegebene Bibliotheken) in Visual Studio.
+Entwickeln von [DLLs in Visual Studio](dlls-in-visual-cpp.md) Erstellen, Debuggen und Bereitstellen vonC++ C/DLLs (freigegebene Bibliotheken) in Visual Studio.
 
-[Exemplarische Vorgehensweise: Erstellen und Verwenden einer statischen Bibliothek](walkthrough-creating-and-using-a-static-library-cpp.md) wie Sie eine binäre LIB-Datei zu erstellen.
+[Exemplarische Vorgehensweise: Erstellen und Verwenden einer statischen Bibliothek](walkthrough-creating-and-using-a-static-library-cpp.md) Erstellen einer lib-Binärdatei.
 
-[Erstellen isolierter C/C++-Anwendungen und Side-by-Side Assemblys](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) beschreibt das Bereitstellungsmodell für Windows Desktop-Anwendungen, basierend auf dem Konzept der isolierten Anwendungen und Side-by-Side Assemblys.
+[Aufbauen von CC++ /isolierten Anwendungen und](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) parallelen Assemblys Beschreibt das Bereitstellungs Modell für Windows-Desktop Anwendungen, das auf der Idee von isolierten Anwendungen und parallelen Assemblys basiert.
 
-[Konfigurieren von C++-Projekten für 64-Bit-X64 Ziele](configuring-programs-for-64-bit-visual-cpp.md) wie Ziel 64-Bit-X64 Hardware mit dem MSVC-Buildtools.
+[Konfigurieren C++ von Projekten für 64-Bit-, x64-Ziele](configuring-programs-for-64-bit-visual-cpp.md) Gewusst wie: Erstellen von 64-Bit-x64-Hardware mit den MSVC-Buildtools
 
-[Konfigurieren von C++-Projekten für ARM-Prozessoren](configuring-programs-for-arm-processors-visual-cpp.md) wie die MSVC-Buildtools zu verwenden, um die ARM-Hardware ausgerichtet.
+[Konfigurieren C++ von Projekten für ARM-Prozessoren](configuring-programs-for-arm-processors-visual-cpp.md) Verwenden der MSVC-Buildtools zum Ausrichten von Arm-Hardware
 
-[Optimieren Sie Ihren Code](optimizing-your-code.md) wie Sie Ihren Code auf verschiedene Weise einschließlich Profilgesteuerte programmoptimierungen zu optimieren.
+[Optimieren Ihres Codes](optimizing-your-code.md) Wie Sie Ihren Code auf verschiedene Weise optimieren, einschließlich Programm gesteuerter Optimierungen.
 
-[Konfigurieren von Programmen für Windows XP](configuring-programs-for-windows-xp.md) wie Ziel Windows XP mit dem MSVC-Buildtools.
+[Konfigurieren von Programmen für Windows XP](configuring-programs-for-windows-xp.md) Gewusst wie: Erstellen von Windows XP mit den MSVC-Buildtools
 
 [Referenz zur C/C++-Erstellung](reference/c-cpp-building-reference.md)<br/>
 Bietet Links zu Referenzartikeln für das Erstellen von Programmen in C++, zu Compiler- und Linkeroptionen und verschiedenen Buildtools.

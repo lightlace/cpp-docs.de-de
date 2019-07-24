@@ -16,12 +16,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 961ad52070928ba755625747546c8dc7b1c215ba
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 1550f8f012802e03e9228e67c381915b1b4e1d64
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750819"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376034"
 ---
 # <a name="is-isw-routines"></a>is- und isw-Routinen
 
@@ -156,7 +156,7 @@ Druckbares Breitzeichen, einschließlich Leerzeichen-Breitzeichen (L' ').
 Druckbares Breitzeichen, das weder ein Leerzeichen-Breitzeichen (L' ') noch ein Breitzeichen ist, für das `iswalnum` ungleich Null ist.
 
 `iswspace`<br/>
-Breitzeichen, das dem Standardleerzeichen entspricht oder ein von der Implementierung abhängiger Breitzeichensatz ist, für den `iswalnum` "false" ist. Standardleerstellenzeichen sind: Leerzeichen (L' '), Seitenvorschub (L'\f'), Zeilenumbruch (L'\n'), Wagenrücklaufzeichen (L'\r'), Horizontaler Tabulator (L'\t') und vertikaler Tabulator (L'\v').
+Breitzeichen, das dem Standardleerzeichen entspricht oder ein von der Implementierung abhängiger Breitzeichensatz ist, für den `iswalnum` "false" ist. Standardleerstellenzeichen sind: Leerzeichen (L' '), Seitenvorschub (L'\f'), Zeilenumbruch (L'\n'), Wagenrücklaufzeichen (L'\r'), horizontaler Tabulator (L'\t') und vertikaler Tabulator (L'\v').
 
 `iswupper`<br/>
 Ein Breitzeichen ist ein Großbuchstabe oder ein von der Implementierung abhängiger Breitzeichensatz, für den `iswcntrl`, `iswdigit`, `iswpunct` oder `iswspace` nicht 0 sind. `iswupper` gibt einen Rückgabewert ungleich 0 (null) nur für Breitzeichen zurück, die den Großbuchstaben entsprechen.

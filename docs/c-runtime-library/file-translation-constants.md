@@ -11,12 +11,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: ef9b986753de05c45b3071e55f9b163fa5a6a7da
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ed2fae935850837ebace880d78c206754b3061bd
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743333"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375920"
 ---
 # <a name="file-translation-constants"></a>Dateiübersetzungskonstanten
 
@@ -28,13 +28,13 @@ ms.locfileid: "57743333"
 
 ## <a name="remarks"></a>Anmerkungen
 
-Diese Konstanten geben den Modus der Übersetzung an (**„b“** oder **„t“**). Der Modus ist in der Zeichenfolge enthalten, die den Typ des Zugriffs angibt (**„r“**, **„w“**, **„a“**, **„r+“**, **„w+“**, **„a+“**).
+Diese Konstanten geben den Modus der Übersetzung an ( **„b“** oder **„t“** ). Der Modus ist in der Zeichenfolge enthalten, die den Typ des Zugriffs angibt ( **„r“** , **„w“** , **„a“** , **„r+“** , **„w+“** , **„a+“** ).
 
 Die Übersetzungsmodi lauten wie folgt:
 
 - **t**
 
-   Öffnet im Textmodus (übersetzt). Im Textmodus werden Wagenrücklauf-/Zeilenvorschub-Kombinationen (CR-LF) bei der Eingabe in einzelne Zeilenvorschübe (LF) übersetzt. LF-Zeichen werden bei der Ausgabe in CR-LF-Kombinationen übersetzt. Außerdem wird STRG+Z bei der Eingabe als EOF-Zeichen interpretiert. In den Dateien, die für das Lesen oder Lesen/Schreiben geöffnet sind, überprüft `fopen` die Datei auf STRG+Z am Dateiende, und entfernt sofern möglich die Markierung. Dies geschieht, da ein Verwenden der Funktionen `fseek` und `ftell` zum Navigieren innerhalb einer Datei, die mit STRG + Z endet, dazu führen kann, dass sich `fseek` in der Nähe des Dateiendes nicht ordnungsgemäß verhält.
+   Öffnet im Textmodus (übersetzt). Im Textmodus werden Wagenrücklauf-/Zeilenvorschub-Kombinationen (CR-LF) bei der Eingabe in einzelne Zeilenvorschübe (LF) übersetzt. LF-Zeichen werden bei der Ausgabe in CR-LF-Kombinationen übersetzt. Außerdem wird STRG+Z bei der Eingabe als EOF-Zeichen interpretiert. In den Dateien, die für das Lesen oder Lesen/Schreiben geöffnet sind, überprüft `fopen` die Datei auf STRG+Z am Dateiende und entfernt nach Möglichkeit die Markierung. Dies geschieht, da ein Verwenden der Funktionen `fseek` und `ftell` zum Navigieren innerhalb einer Datei, die mit STRG + Z endet, dazu führen kann, dass sich `fseek` in der Nähe des Dateiendes nicht ordnungsgemäß verhält.
 
    > [!NOTE]
    > Die **t**-Option ist nicht Teil des ANSI-Standards für `fopen` und `freopen`. Sie ist eine Microsoft-Erweiterung, die bei einer gewünschten ANSI-Portabilität nicht verwendet werden sollte.
