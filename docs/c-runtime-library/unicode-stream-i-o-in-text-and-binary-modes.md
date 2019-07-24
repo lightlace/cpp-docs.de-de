@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-ms.openlocfilehash: c16d2f74856bb42dfd6ffc4e1af7306f6edd97fb
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 10f77c7142c707d4df841899b50be2807b1b9c7f
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745999"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376272"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>Unicodestream-E/A im Text- und Binärmodus
 
@@ -22,9 +22,9 @@ Wenn eine Unicodestream-E/A-Routine (z.B. **fwprintf**, **fwscanf**, **fgetwc**,
 
 - Konvertierung von Unicode zu MBCS oder von MBCS zu Unicode. Wenn eine Unicodestream-E/A-Funktion im Textmodus arbeitet, wird angenommen, dass es sich bei Quell- oder Zielstream um eine Sequenz von Multibytezeichen handelt. Daher konvertieren die Unicode-Streameingabefunktionen Multibytezeichen in Breitzeichen (wie bei einem Aufruf der **mbtowc**-Funktion). Aus demselben Grund konvertieren die Unicode-Streamausgabefunktionen Breitzeichen in Multibytezeichen (wie bei einem Aufruf der **wctomb**-Funktion).
 
-- Übersetzung von Wagenrücklauf-Zeilenvorschub (CR-LF). Diese Übersetzung findet vor der MBCS-Unicode-Konvertierung (für Unicode-Streameingabefunktionen) und nach der Unicode-MBCS-Konvertierung (für Unicode-Streamausgabefunktionen) statt. Bei der Eingabe wird jede Wagenrücklauf-Zeilenvorschub-Kombination in ein einzelnes Zeilenvorschubzeichen übersetzt. Bei der Ausgabe wird jedes Zeilenvorschubzeichen in eine Wagenrücklauf-Zeilenvorschub-Kombination übersetzt.
+- Übersetzung von Wagenrücklauf-Zeilenvorschub (CR-LF) Diese Übersetzung findet vor der MBCS-Unicode-Konvertierung (für Unicode-Streameingabefunktionen) und nach der Unicode-MBCS-Konvertierung (für Unicode-Streamausgabefunktionen) statt. Bei der Eingabe wird jede Kombination aus Wagenrücklauf und Zeilenvorschub in ein einzelnes Zeilenvorschubzeichen übersetzt. Bei der Ausgabe wird jedes Zeilenvorschubzeichen in eine Kombination aus Wagenrücklauf und Zeilenvorschub übersetzt.
 
-Wenn jedoch eine Unicodestream-E/A-Funktion im binären Modus arbeitet, wir von einer Unicode-Datei ausgegangen und es erfolgt keine CR-LF-Übersetzung oder Zeichenkonvertierung während der Ein- und Ausgabe. Verwenden Sie die Anweisung _setmode( _fileno( stdin ), _O_BINARY );, um wcin ordnungsgemäß auf einer UNICODE-Textdatei zu verwenden.
+Wenn jedoch eine Unicodestream-E/A-Funktion im binären Modus arbeitet, wir von einer Unicode-Datei ausgegangen und es erfolgt keine CR-LF-Übersetzung oder Zeichenkonvertierung während der Ein- und Ausgabe. Verwenden Sie die `_setmode( _fileno( stdin ), _O_BINARY );`-Anweisung, um `wcin` ordnungsgemäß für eine UNICODE-Textdatei zu verwenden.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tokens
 - translation units
 ms.assetid: 05e5f6f1-b8ea-4f74-af17-c0b9b5dbd3b5
-ms.openlocfilehash: 8f92692fb19b0eeff2fe9af179fc8fe3fa6c2f7e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 44d8956313053ca6c7a55994f241c00bd71092b4
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149725"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340981"
 ---
 # <a name="c-tokens"></a>C-Tokens
 
@@ -33,7 +33,7 @@ In einem C-Quellprogramm ist das grundlegende Element, das vom Compiler erkannt 
 > [!NOTE]
 >  Eine Erläuterung der ANSI-Syntaxkonventionen erhalten Sie in der Einführung zur [Zusammenfassung der C-Sprachsyntax](../c-language/c-language-syntax-summary.md).
 
-Die Schlüsselwörter, Bezeichner, Konstanten, Zeichenfolgenliterale und Operatoren, die in diesem Abschnitt beschrieben werden, sind Beispiele für Token. Satzzeichen, wie eckige Klammern (**[ ]**), geschweifte Klammern (**{ }**), runde Klammern ( **( )** ) und Kommas (**,**) sind ebenfalls Token.
+Die Schlüsselwörter, Bezeichner, Konstanten, Zeichenfolgenliterale und Operatoren, die in diesem Abschnitt beschrieben werden, sind Beispiele für Token. Satzzeichen, wie eckige Klammern ( **[ ]** ), geschweifte Klammern ( **{ }** ), runde Klammern ( **( )** ) und Kommas ( **,** ) sind ebenfalls Token.
 
 ## <a name="see-also"></a>Siehe auch
 

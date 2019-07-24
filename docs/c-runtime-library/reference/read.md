@@ -26,12 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4dd599f227192b8c3ce17a0321d6399319e1925
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357654"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376303"
 ---
 # <a name="read"></a>_read
 
@@ -60,19 +60,19 @@ Maximale Anzahl der zu lesenden Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_read** gibt die Anzahl der gelesenen Bytes an, der möglicherweise kleiner als *Buffer_size* Wenn weniger als *Buffer_size* Bytes Links in der Datei, oder wenn die Datei im Textmodus geöffnet wurde. Im Textmodus jede Wagenrücklauf-Zeilenvorschub Paar `\r\n` wird durch ein einzelnes Zeilenvorschubzeichen ersetzt `\n`. Nur das einzelne Zeilenvorschubzeichen wird im Rückgabewert gezählt. Der Ersatz hat keine Auswirkung auf den Rückgabezeiger.
+**_read** gibt die Anzahl der gelesenen Bytes zurück, die möglicherweise kleiner als *buffer_size* ist, wenn in der Datei weniger als *buffer_size* Bytes verbleiben oder wenn die Datei im Textmodus geöffnet wurde. Im Textmodus wird jedes Wagen Rücklauf-Zeilenvorschub-Paar `\r\n` durch ein Einzel Zeilen-Feed-Zeichen `\n`ersetzt. Nur das einzeilige Einfügezeichen wird im Rückgabewert gezählt. Der Ersatz hat keine Auswirkung auf den Rückgabezeiger.
 
-Wenn die Funktion versucht, am Ende der Datei zu lesen, wird 0 zurückgegeben. Wenn *fd* ist nicht gültig ist, die Datei nicht zum Lesen geöffnet oder die Datei ist gesperrt, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt-1 zurück und legt **Errno** zu **EBADF**.
+Wenn die Funktion versucht, am Ende der Datei zu lesen, wird 0 zurückgegeben. Wenn *FD* nicht gültig ist, die Datei nicht zum Lesen geöffnet ist oder die Datei gesperrt ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und legt **errno** auf **EBADF**fest.
 
-Wenn *Puffer* ist **NULL**, oder wenn *Buffer_size* > **INT_MAX**, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, gibt die Funktion-1 zurück und **Errno** nastaven NA hodnotu **EINVAL**.
+Wenn  der Puffer **null**ist oder wenn *buffer_size* > **INT_MAX**, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück, und **errno** ist auf **EINVAL**festgelegt.
 
 Weitere Informationen zu diesem und anderen Rückgabecodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_read** -Funktion liest maximal *Buffer_size* Bytes in *Puffer* aus der Datei zugeordneten *fd*. Der Lesevorgang beginnt an der aktuellen Position des Dateizeigers für die betreffende Datei. Nach dem Lesevorgang zeigt der Dateizeiger auf das nächste ungelesene Zeichen.
+Die **_read** -Funktion liest maximal *buffer_size* Bytes aus der Datei, die mit *FD*verknüpft ist, in den *Puffer* . Der Lesevorgang beginnt an der aktuellen Position des Dateizeigers für die betreffende Datei. Nach dem Lesevorgang zeigt der Dateizeiger auf das nächste ungelesene Zeichen.
 
-Wenn die Datei im Textmodus geöffnet wurde, der Lesevorgang beendet, wenn **_read** findet ein STRG + Z-Zeichen, das als Dateiende-Indikator behandelt wird. Verwenden Sie [_lseek](lseek-lseeki64.md), um den Dateiende-Indikator zu löschen.
+Wenn die Datei im Textmodus geöffnet wurde, wird der Lesevorgang beendet, wenn **_read** auf ein STRG + Z-Zeichen stößt, das als Dateiende-Indikator behandelt wird. Verwenden Sie [_lseek](lseek-lseeki64.md), um den Dateiende-Indikator zu löschen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -133,7 +133,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Read 19 bytes from file

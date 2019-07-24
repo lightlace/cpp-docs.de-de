@@ -20,12 +20,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1adc999d37025392f03a11daebfffdeeb637d92b
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287810"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376137"
 ---
 # <a name="freads"></a>fread_s
 
@@ -62,13 +62,13 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Fread_s** gibt die Anzahl der (ganzen) Elemente, die in den Puffer gelesen wurden, die möglicherweise weniger als *Anzahl* , wenn ein Fehler oder das Ende der Datei gefunden wird, bevor Sie *Anzahl* erreicht ist. Verwenden der **Feof** oder **Ferror** Funktion, um einen Fehler, die von einer End-of-File-Bedingung zu unterscheiden. Wenn *Größe* oder *Anzahl* ist 0 (null) **Fread_s** gibt 0 und die pufferinhalte bleiben unverändert. Wenn *Stream* oder *Puffer* ist ein null-Zeiger **Fread_s** wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt diese Funktion **Errno** zu **EINVAL** und gibt 0 zurück.
+**fread_s** gibt die Anzahl der (gesamten) Elemente zurück, die in den Puffer gelesen wurden. Dies kann kleiner *als die* Anzahl sein, wenn ein Lesefehler oder das Ende der Datei gefunden wird, bevor der *Zähler* erreicht wird. Verwenden Sie die Funktion " **feof** " oder " **ferror** ", um einen Fehler von einer dateiendebedingung zu unterscheiden. Wenn *size* oder *count* 0 ist, gibt **fread_s** 0 zurück, und der Pufferinhalt bleibt unverändert. Wenn *Stream* oder *buffer* ein NULL-Zeiger ist, ruft **fread_s** den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt diese Funktion **errno** auf **EINVAL** fest und gibt 0 zurück.
 
 Weitere Informationen zu diesen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fread_s** Funktion liest bis zum *Anzahl* Elemente *ElementSize* Bytes aus dem Eingabe- *Stream* und speichert sie in *Puffer*.  Der Dateizeiger, der zugeordnet wird *Stream* (sofern vorhanden) wird durch die Anzahl tatsächlich gelesener Bytes erhöht. Wenn der angegebene Stream im Textmodus geöffnet wird, werden die Carriage Return-Zeilenvorschub-Paare durch Zeilenvorschubzeichen ersetzt. Dieser Vorgang hat keine Auswirkung auf den Dateizeiger oder den Rückgabewert. Die Position des Dateizeigers ist unbestimmt, wenn ein Fehler auftritt. Der Wert eines teilweise gelesenen Elements kann nicht bestimmt werden.
+Die **fread_s** -Funktion liest zum *zählen* von Elementen aus *ElementSize* -Bytes aus dem Eingabestream und speichert Sie im *Puffer*.  Der Dateizeiger, der dem *Stream* zugeordnet ist (falls vorhanden), wird um die Anzahl der tatsächlich gelesenen Bytes erweitert. Wenn der angegebene Stream im Textmodus geöffnet wird, werden Wagen Rücklauf-und Zeilenvorschub Paare durch Einzel-Zeilenvorschub Zeichen ersetzt. Dieser Vorgang hat keine Auswirkung auf den Dateizeiger oder den Rückgabewert. Die Position des Dateizeigers ist unbestimmt, wenn ein Fehler auftritt. Der Wert eines teilweise gelesenen Elements kann nicht bestimmt werden.
 
 Diese Funktion sperrt alle anderen Threads. Wenn Sie eine nicht sperrende Version benötigen, verwenden Sie **_fread_nolock**.
 
