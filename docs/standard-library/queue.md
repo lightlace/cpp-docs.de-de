@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: 641ab1bfe99360320509b806149fcedfe1068879
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d7a13b98ba8cff78839b2afb98371ffba5ced461
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240364"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458333"
 ---
 # <a name="ltqueuegt"></a>&lt;Warteschlange&gt;
 
@@ -24,7 +24,7 @@ Definiert die Vorlagenklassen "priority_queue" und "queue" sowie einige unterst√
 **Namespace:** std
 
 > [!NOTE]
-> Die \<Warteschlange > Bibliothek verwendet auch die `#include <initializer_list>` Anweisung.
+> Die \<Warteschlangen > Bibliothek verwendet auch `#include <initializer_list>` die-Anweisung.
 
 ## <a name="members"></a>Member
 
@@ -54,6 +54,6 @@ Definiert die Vorlagenklassen "priority_queue" und "queue" sowie einige unterst√
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

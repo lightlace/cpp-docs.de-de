@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240694"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457021"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,9 +29,9 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Ab der Version von Visual Studio 2017 die \<Filesystem >-Header wurde noch keinem C++-Standard. C++in Visual Studio 2017 (v141 MSVC) implementiert den endgültigen Entwurfsstandard finden Sie in [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> Ab der Veröffentlichung von Visual Studio 2017 war der Header \<des File System-> noch kein C++ Standard. C++in Visual Studio 2017 (MSVC v141) implementiert den endgültigen Entwurfs Standard, der in [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)enthalten ist.
 
-Dieser Header unterstützt Dateisysteme für eine von zwei umfangreichen Klassen von Hostbetriebssystemen: Microsoft Windows und Posix.
+Dieser Header unterstützt Dateisysteme für eine von zwei umfangreichen Klassen von Host Betriebssystemen: Microsoft Windows und POSIX.
 
 Der überwiegende Teil der Funktionalität ist für beide Betriebssysteme gleich. In diesem Dokuments sind die Unterschiede aufgeführt. Beispiel:
 
@@ -129,4 +129,4 @@ Weitere Informationen und Codebeispiele finden Sie unter [Dateisystemnavigation 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)

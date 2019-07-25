@@ -5,12 +5,12 @@ f1_keywords:
 - iosfwd/std::ostream
 - iosfwd/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
-ms.openlocfilehash: 02936fdfc990ea65a99b2875cf7f482eb2ce4ebe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18f30a12a6f4d2b97cb5dca3ace98e6241d856a7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370872"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447162"
 ---
 # <a name="ltostreamgt-typedefs"></a>&lt;ostream&gt;-Typdefinitionen
 
@@ -20,7 +20,7 @@ ms.locfileid: "62370872"
 
 ## <a name="ostream"></a> ostream
 
-Erstellt einen Typ aus Basic_ostream, der auf spezialisierte ist **Char** und `char_traits` auf **Char**.
+Erstellt einen Typ aus Basic_ostream, der auf **char** spezialisiert und `char_traits` auf **char**spezialisiert ist.
 
 ```cpp
 typedef basic_ostream<char, char_traits<char>> ostream;
@@ -28,11 +28,11 @@ typedef basic_ostream<char, char_traits<char>> ostream;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse [Basic_ostream](../standard-library/basic-ostream-class.md), die auf Elemente des Typs **Char** mit Standard-Zeichenmerkmale.
+Der Typ ist ein Synonym für die Vorlagen Klasse [basic_ostream](../standard-library/basic-ostream-class.md), die auf Elemente des Typs **char** mit Standard Zeichen Merkmalen spezialisiert ist.
 
 ## <a name="wostream"></a> wostream
 
-Erstellt einen Typ aus Basic_ostream, der auf spezialisierte ist **"wchar_t"** und `char_traits` auf **"wchar_t"**.
+Erstellt einen Typ aus Basic_ostream, der auf **wchar_t** spezialisiert ist `char_traits` und auf **wchar_t**spezialisiert ist.
 
 ```cpp
 typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
@@ -40,8 +40,8 @@ typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse [Basic_ostream](../standard-library/basic-ostream-class.md), die auf Elemente des Typs **"wchar_t"** mit Standard-Zeichenmerkmale.
+Der Typ ist ein Synonym für die Vorlagen Klasse [basic_ostream](../standard-library/basic-ostream-class.md), die auf Elemente vom Typ **wchar_t** mit Standard Zeichen Merkmalen spezialisiert ist.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<ostream>](../standard-library/ostream.md)<br/>
+[\<ostream>](../standard-library/ostream.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference::flip method
 ms.assetid: ef940365-cbe4-4a87-a3e2-1f3cfa357e29
-ms.openlocfilehash: 68172de6e50a599d5b1822b83787be3a3a94e037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1743df7773d577e53f054fa4e403cf0d00da8ce7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205124"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452171"
 ---
 # <a name="vectorltboolgtreferenceflip"></a>vector&lt;bool&gt;::reference::flip
 
@@ -55,7 +55,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>Ausgabe
 
 ```Output
 The vector is:
@@ -72,5 +72,5 @@ The vector with first element flipped is:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vektor\<Bool >:: reference-Klasse](../standard-library/vector-bool-reference-class.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[vector\<bool>::reference-Klasse](../standard-library/vector-bool-reference-class.md)\
+[C++ Standard Library Reference (C++-Standardbibliotheksreferenz)](../standard-library/cpp-standard-library-reference.md)

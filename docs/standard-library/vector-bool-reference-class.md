@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector<bool> reference class
 ms.assetid: f27854f9-0ef0-4e7e-ad2e-cd53b6cb3334
-ms.openlocfilehash: 7930c1cd93cd05a752d4997b9480c766ee26bd99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65bfc91cf5dc79fb1e5151a6f62c394b4579883b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407717"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453213"
 ---
 # <a name="vectorltboolgtreference-class"></a>vector&lt;bool&gt;::reference-Klasse
 
@@ -19,7 +19,7 @@ Die `vector<bool>::reference`-Klasse ist eine Proxyklasse, die von der [vector\<
 
 ## <a name="remarks"></a>Hinweise
 
-Ein simulierter Verweis ist erforderlich, da C++ systemintern keine direkten Verweise auf Bits zulässt. `vector<bool>` verwendet nur ein Bit pro Element, auf das anhand dieser Proxyklasse verwiesen werden kann. Allerdings ist die Verweissimulation nicht vollständig, da bestimmte Zuweisungen ungültig sind. Z. B. weil die Adresse der `vector<bool>::reference` Objekt kann nicht ausgeführt werden, wird den folgenden Code, der versucht, verwenden Sie `vector<bool>::operator&` ist nicht korrekt:
+Ein simulierter Verweis ist erforderlich, da C++ systemintern keine direkten Verweise auf Bits zulässt. `vector<bool>` verwendet nur ein Bit pro Element, auf das anhand dieser Proxyklasse verwiesen werden kann. Allerdings ist die Verweissimulation nicht vollständig, da bestimmte Zuweisungen ungültig sind. Da die Adresse des `vector<bool>::reference` Objekts beispielsweise nicht akzeptiert werden kann, ist der folgende Code, der verwendet `vector<bool>::operator&` werden soll, nicht korrekt:
 
 ```cpp
 vector<bool> vb;
@@ -33,7 +33,7 @@ bool& refb = vb[1];   // conversion error - do not use
 |Member-Funktion|Beschreibung|
 |-|-|
 |[flip](../standard-library/vector-bool-reference-flip.md)|Kehrt den booleschen Wert eines Vektorelements um.|
-|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|Stellt eine implizite Konvertierung von `vector<bool>::reference` zu **"bool"**.|
+|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|Stellt eine implizite Konvertierung von `vector<bool>::reference` in **bool**bereit.|
 |[operator=](../standard-library/vector-bool-reference-operator-assign.md)|Weist einen booleschen Wert einem Bit zu oder weist den Wert, der in einem Element enthalten ist, auf das verwiesen wird, einem Bit zu.|
 
 ## <a name="requirements"></a>Anforderungen
@@ -44,6 +44,6 @@ bool& refb = vb[1];   // conversion error - do not use
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<vector>](../standard-library/vector.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<vector>](../standard-library/vector.md)\
+[Thread Safety in the C++ Standard Library (Threadsicherheit in der C++-Standardbibliothek)](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

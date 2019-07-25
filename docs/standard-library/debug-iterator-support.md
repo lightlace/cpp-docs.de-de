@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 9042093bb073807e9bb1476ab514c82010aeab70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394055"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450590"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -87,7 +87,7 @@ int main() {
 -572662307
 ```
 
-## <a name="unitialized-iterators"></a>Nicht initialisierte Iteratoren
+## <a name="unitialized-iterators"></a>Unitialisierte Iteratoren
 
 Eine Assertanweisung wird auch dann ausgeführt, wenn ein Iterator, wie im Folgenden dargestellt, vor der Initialisierung verwendet wird:
 
@@ -128,9 +128,9 @@ int main()
 
 In diesem Beispiel wird anstelle eines functor-Objekts der Lambdaausdruck `[] (int& elem) { elem *= 2; }` verwendet. Dies hat zwar keinen Einfluss auf den Assertionsfehler (ein ähnliches functor-Objekt würde denselben Fehler verursachen). Dennoch eignen sich Lambdaausdrücke besonders gut für komplexe Funktionsobjektaufgaben. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="iterators-going-out-of-scope"></a>Iteratoren, die im außerhalb des gültigen Bereichs
+## <a name="iterators-going-out-of-scope"></a>Iteratoren, die den Gültigkeitsbereich verlassen
 
-Debugiteratorüberprüfungen auch dazu führen, dass eine Iteratorvariable, die in deklariert ist eine **für** Schleife außerhalb des Bereichs der **für** Schleife Bereich endet.
+Die Debug-iteratorüberprüfungen bewirken auch, dass eine Iteratorvariable, die in einer **for** -Schleife deklariert ist, außerhalb des gültigen Bereichs liegt, wenn der **for** -Schleifen Bereich endet.
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -146,9 +146,9 @@ int main() {
 }
 ```
 
-## <a name="destructors-for-debug-iterators"></a>Destruktoren für Debug-Iteratoren
+## <a name="destructors-for-debug-iterators"></a>Debugtoren für Debug-Iteratoren
 
-Debugiteratoren enthalten nicht triviale Destruktoren. Wenn ein Destruktor wird nicht ausgeführt, aber der Speicher des Objekts freigegeben wird, kann Zugriff Verstöße und datenbeschädigungen auftreten. Betrachten Sie das folgende Beispiel:
+Debugiteratoren enthalten nicht triviale Destruktoren. Wenn ein Dekonstruktor nicht ausgeführt wird, aber der Arbeitsspeicher des Objekts freigegeben wird, können Zugriffs Verletzungen und Daten Beschädigungen auftreten. Betrachten Sie das folgende Beispiel:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -175,4 +175,4 @@ struct derived : base {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)<br/>
+[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)

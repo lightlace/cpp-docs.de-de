@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d282d3ea54528b422509f4259e2d9a191f88e091
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241066"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453788"
 ---
 # <a name="stack-class"></a>stack-Klasse
 
@@ -40,19 +40,19 @@ class stack
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*\
+*Sorte*\
 Der Datentyp der Elemente, die im Stapel gespeichert werden sollen.
 
-*Container*\
+*Kum*\
 Der Typ des zugrunde liegenden Containers, der verwendet wird, um den Stapel zu implementieren. Der Standardwert ist die Klasse `deque` *\<Type>* .
 
 ## <a name="remarks"></a>Hinweise
 
-Die Elemente der Klasse `Type` , die im ersten Vorlagenparameter eines Stack-Objekts sind, sind gleichbedeutend mit [Value_type](#value_type) und muss mit dem Typ des Elements in der zugrunde liegenden Containerklasse `Container` vorgesehenen durch die zweiten Vorlagenparameter. Die `Type` muss zuweisbar sein, damit, dass es möglich, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.
+Die Elemente der- `Type` Klasse, die im ersten Vorlagen Parameter eines Stack-Objekts festgelegt sind, entsprechen [value_type](#value_type) und müssen mit dem Typ des Elements in der `Container` zugrunde liegenden Container Klasse, die von der zweiten Vorlage festgelegt wird, identisch sein Parame. `Type` Muss zugewiesen werden können, sodass es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.
 
-Geeignete zugrunde liegende Containerklassen für Stack sind [doppelschlange](../standard-library/deque-class.md), [list-Klasse](../standard-library/list-class.md), und [vector-Klasse](../standard-library/vector-class.md), oder ein beliebiger sequenzcontainer, der die Vorgänge unterstützt `back`, `push_back`, und `pop_back`. Die zugrunde liegende Containerklasse wird im Containeradapter gekapselt, der nur den begrenzten Satz der Memberfunktionen des Sequenzcontainers als öffentliche Schnittstelle verfügbar macht.
+Geeignete zugrunde liegende Containerklassen für Stack sind [Deque](../standard-library/deque-class.md), [List Class](../standard-library/list-class.md)und [Vector Class](../standard-library/vector-class.md), oder ein beliebiger anderer Sequenz Container, der die `back`Vorgänge `push_back`von, `pop_back`und unterstützt. Die zugrunde liegende Containerklasse wird im Containeradapter gekapselt, der nur den begrenzten Satz der Memberfunktionen des Sequenzcontainers als öffentliche Schnittstelle verfügbar macht.
 
-Die Stack-Objekte sind auf Gleichheit vergleichbar nur, wenn die Elemente der Klasse `Type` auf Gleichheit vergleichbar sind, und sind kleiner-als vergleichbar nur, wenn die Elemente der Klasse `Type` kleiner-als vergleichbar sind.
+Die Stapel Objekte sind auf Gleichheit vergleichbar, wenn die Elemente der Klasse `Type` gleich sind und nur dann kleiner als vergleichbar sind, wenn die Elemente der Klasse `Type` kleiner als vergleichbar sind.
 
 - Die stack-Klasse unterstützt eine LIFO-Datenstruktur (Last In – First Out). Eine gute Analogie, um sich dies zu merken, ist ein Stapel von Tellern. Elemente (Teller) können eingefügt, überprüft oder nur vom Anfang des Stapels entnommen werden, was dem letzten Element am Ende des Basiscontainers entspricht. Die Beschränkung, nur auf das oberste Element zuzugreifen, ist der Grund für die Verwendung der stack-Klasse.
 
@@ -86,7 +86,7 @@ Die Stack-Objekte sind auf Gleichheit vergleichbar nur, wenn die Elemente der Kl
 |[size](#size)|Gibt die Anzahl von Elementen in der `stack` zurück.|
 |[top](#top)|Gibt einen Verweis auf das Element in der obersten Position des `stack`-Objekts zurück.|
 
-## <a name="container_type"></a> container_type
+## <a name="container_type"></a>container_type
 
 Ein Typ, der den anzupassenden Basiscontainer bereitstellt.
 
@@ -104,7 +104,7 @@ Weitere Informationen zu `Container` finden Sie im Abschnitt „Hinweise“ des 
 
 Im Beispiel für [stack::stack](#stack) wird verdeutlicht, wie ein `container_type` deklariert und verwendet wird.
 
-## <a name="empty"></a> leere
+## <a name="empty"></a>leer
 
 Testet, ob ein Stack leer ist.
 
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a> POP
+## <a name="pop"></a>Chor
 
 Entfernt das Element aus der obersten Position des Stacks.
 
@@ -205,9 +205,9 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a> Pushbenachrichtigungen
+## <a name="push"></a>Push
 
-Fügt ein Element am Anfang des Stapels.
+Fügt ein Element am Anfang des Stapels hinzu.
 
 ```cpp
 void push(const Type& val);
@@ -215,7 +215,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-*val*\
+*ster*\
 Das am Anfang des Stacks hinzugefügte Element.
 
 ### <a name="remarks"></a>Hinweise
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a> Größe
+## <a name="size"></a>Größe
 
 Gibt die Anzahl der Elemente im Stack zurück.
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 Ein Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in einem Stack darstellen kann.
 
@@ -311,7 +311,7 @@ Der Typ ist ein Synonym für `size_type` des Basiscontainers und vom Stack angep
 
 Im Beispiel für [size](#size) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird.
 
-## <a name="stack"></a> Stapel
+## <a name="stack"></a>Heu
 
 Erstellt ein einen Stack, der leer oder eine Kopie eines Basiscontainerobjekts ist.
 
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a> Nach oben
+## <a name="top"></a>Nach oben
 
 Gibt einen Verweis auf ein Element am Anfang des Stacks zurück.
 
@@ -383,7 +383,7 @@ Ein Verweis auf das letzte Element im Container am Anfang des Stacks.
 
 Der Stack darf nicht leer sein, damit die Memberfunktion angewendet wird. Der Anfang des Stacks ist die Position des zuletzt hinzugefügten Elements und ist das letzte Element am Ende des Containers.
 
-Wenn der Rückgabewert von `top` zugewiesen ist eine `const_reference`, das Stack-Objekt kann nicht geändert werden. Wenn der Rückgabewert von `top` zugewiesen ist eine `reference`, kann das Stack-Objekt geändert werden.
+Wenn der Rückgabewert von `top` einem `const_reference`zugewiesen wird, kann das Stapel Objekt nicht geändert werden. Wenn der Rückgabewert von `top` einem `reference`zugewiesen wird, kann das Stapel Objekt geändert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -416,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Ein Typ, der den Typ des Objekts angibt, das in einem Stack als Element gespeichert wird.
 
@@ -459,5 +459,5 @@ The element at the top of the stack is 69.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

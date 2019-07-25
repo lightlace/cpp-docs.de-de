@@ -7,12 +7,12 @@ helpviewer_keywords:
 - template libraries
 - libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
-ms.openlocfilehash: ea8bae08def17093a2e663bb21dfe617ae851651
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60bfed322985b1345f4b3842a21f836953813657
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210748"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452428"
 ---
 # <a name="c-standard-library-reference"></a>C++-Standardbibliotheksreferenz
 
@@ -22,11 +22,11 @@ Weitere Informationen zu Visual C++-Laufzeitbibliotheken finden Sie unter [CRT-B
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)<br/>
+[Übersicht über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)\
 Bietet eine Übersicht der Implementierung von Microsoft für die C++-Standardbibliothek
 
-[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
+[iostream-Programmierung](../standard-library/iostream-programming.md)\
 Übersicht über E/A-Streamprogrammierung.
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
 Bietet Links zu Referenzthemen, in denen die Headerdateien der C++-Standardbibliothek mit Codebeispielen erörtert werden.

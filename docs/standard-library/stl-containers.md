@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: a6f4da35468143e6d7c3dda684ed93f33e29b21d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6077ff76e04e6f078946eed0856723e2a9998f58
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412409"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449599"
 ---
 # <a name="c-standard-library-containers"></a>C++-Standardbibliothekscontainer
 
@@ -166,11 +166,11 @@ Alle Container überladen den Operator „==“ zum Vergleichen von zwei Contain
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Vergleichen unterschiedlicher Container (C++14)
 
-In C ++ 14 und höher, Sie können vergleichen unterschiedliche Container und/oder Elementtypen mithilfe eines der `std::equal`, `std::mismatch`, oder `std::is_permutation` -funktionsüberladungen, die zwei vollständige Bereiche. Mit diesen Überladungen können Sie Container mit unterschiedlicher Länge vergleichen. Diese Überladungen sind weniger für Benutzerfehler anfällig und sind beim Vergleichen von Containern mit unterschiedlicher Länge so optimiert, dass sie in konstanter Zeit FALSE zurückgeben. Aus diesem Grund wird empfohlen, diese Überladungen zu verwenden, es sei denn (1) Sie haben einen klaren Grund dazu, dies nicht zu tun, oder (2) Sie verwenden einen [std:: list](../standard-library/list-class.md)-Container, der nicht von den Optimierungen mit zwei Bereichen profitiert.
+In c++ 14 und höher können Sie unterschiedliche Container und/oder unterschiedliche Elementtypen mit einer der `std::equal`-, `std::mismatch`-oder `std::is_permutation` -Funktions Überladungen vergleichen, die zwei komplette Bereiche annehmen. Mit diesen Überladungen können Sie Container mit unterschiedlicher Länge vergleichen. Diese Überladungen sind weniger für Benutzerfehler anfällig und sind beim Vergleichen von Containern mit unterschiedlicher Länge so optimiert, dass sie in konstanter Zeit FALSE zurückgeben. Aus diesem Grund wird empfohlen, diese Überladungen zu verwenden, es sei denn (1) Sie haben einen klaren Grund dazu, dies nicht zu tun, oder (2) Sie verwenden einen [std:: list](../standard-library/list-class.md)-Container, der nicht von den Optimierungen mit zwei Bereichen profitiert.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Container](../cpp/containers-modern-cpp.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
-[\<sample container>](../standard-library/sample-container.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Containers](../cpp/containers-modern-cpp.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)\
+[\<Sample Container>](../standard-library/sample-container.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

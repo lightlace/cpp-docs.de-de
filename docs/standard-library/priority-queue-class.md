@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3591264efec87c2c3454d0f885c19b30b73ae51c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370011"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458429"
 ---
 # <a name="priorityqueue-class"></a>priority_queue-Klasse
 
@@ -40,20 +40,20 @@ class priority_queue
 
 ### <a name="parameters"></a>Parameter
 
-*Type*<br/>
+*Sorte*\
 Der in der Warteschlange mit hoher Priorität zu speichernde Elementdatentyp.
 
-*Container*<br/>
+*Kum*\
 Der Typ des zugrunde liegenden Containers, der verwendet wird, um die Warteschlange mit hoher Priorität zu implementieren.
 
-*Compare*<br/>
+*Vergleichbar*\
 Der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Warteschlange mit hoher Priorität zu bestimmen. Dieses Argument ist optional, und das binäre Prädikat `less<typename Container::value_type>` ist der Standardwert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Elemente der Klasse `Type` , die im ersten Vorlagenparameter eines Warteschlangenobjekts sind, sind gleichbedeutend mit [Value_type](#value_type) und muss mit dem Typ des Elements in der zugrunde liegenden Containerklasse `Container` vorgesehenen durch die zweiten Vorlagenparameter. Die `Type` muss zuweisbar sein, damit, dass es möglich, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.
+Die Elemente der- `Type` Klasse, die im ersten Vorlagen Parameter eines Queue-Objekts festgelegt sind, entsprechen [value_type](#value_type) und müssen mit dem Typ des Elements in der `Container` zugrunde liegenden Container Klasse, die von der zweiten Vorlage festgelegt wird, entsprechen. Parame. `Type` Muss zugewiesen werden können, sodass es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.
 
-Die Warteschlange mit hoher Priorität sortiert die Sequenz, die es steuert, indem ein gespeichertes Funktionsobjekt Klasse `Traits`. Im Allgemeinen müssen die Elemente der Vorwärtsiteratoren etwas weniger als vergleichbar sein, um diese Sortierung zu erstellen, sodass beliebige zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Etwas technischer betrachtet ist die Vergleichsfunktion ein binäres Prädikat, das eine strenge schwache Sortierung im mathematischen Sinn verursacht.
+Der Priority_queue ordnet die Sequenz, die er steuert, durch Aufrufen eines gespeicherten Funktions `Traits`Objekts der-Klasse an. Im Allgemeinen müssen die Elemente der Vorwärtsiteratoren etwas weniger als vergleichbar sein, um diese Sortierung zu erstellen, sodass beliebige zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Etwas technischer betrachtet ist die Vergleichsfunktion ein binäres Prädikat, das eine strenge schwache Sortierung im mathematischen Sinn verursacht.
 
 Geeignete zugrunde liegende Containerklassen für die Warteschlangenklasse mit hoher Priorität sind [deque-Klasse](../standard-library/deque-class.md) und die Standard-[vector-Klasse](../standard-library/vector-class.md) oder ein beliebiger Sequenzcontainer, der die Vorgänge von `front`, `push_back` und `pop_back` und einen Random-Access-Iterator unterstützt. Die zugrunde liegende Containerklasse wird im Containeradapter gekapselt, der nur den begrenzten Satz der Memberfunktionen des Sequenzcontainers als öffentliche Schnittstelle verfügbar macht.
 
@@ -242,28 +242,28 @@ priority_queue(InputIterator first, InputIterator last, const Traits& _comp, con
 
 ### <a name="parameters"></a>Parameter
 
-*_comp*<br/>
+*_comp*\
 Die Vergleichsfunktion des Typs **constTraits** wird verwendet, um Elemente in der priority_queue zu sortieren, deren Standard die Vergleichsfunktion des Basiscontainer ist.
 
-*_Cont*<br/>
+*_Cont*\
 Der Basiscontainer, dessen Kopie die Warteschlange mit hoher Priorität sein soll.
 
-*right*<br/>
+*Richting*\
 Die Warteschlange mit hoher Priorität, deren Kopie der erstellte Satz sein soll.
 
-*first*<br/>
+*erstes*\
 Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
-*last*<br/>
+*letzten*\
 Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
 ### <a name="remarks"></a>Hinweise
 
-Jeder der ersten drei Konstruktoren gibt eine leere anfängliche Warteschlange mit hoher Priorität, Zweitens auch anzugeben, den Typ der Vergleichsfunktion (`comp`) verwendet werden, bei der Herstellung von der Reihenfolge der Elemente und die dritte explizit angeben der `container_type`(`_Cont`) verwendet werden. Mit dem Schlüsselwort **explicit** werden bestimmte Arten automatischer Typumwandlungen unterdrückt.
+Jeder der ersten drei Konstruktoren gibt eine leere anfängliche Priority_queue an, der zweite gibt auch den Typ der Vergleichsfunktion (`comp`) an, die zum Festlegen der Reihenfolge der Elemente verwendet werden soll, und der dritte gibt explizit das `container_type`(`_Cont`) zu verwenden. Mit dem Schlüsselwort **explicit** werden bestimmte Arten automatischer Typumwandlungen unterdrückt.
 
-Der vierte Konstruktor gibt eine Kopie der Priority_queue *rechten*.
+Der vierte Konstruktor gibt eine Kopie des Priority_queue- *Rechts*an.
 
-Die letzten drei Konstruktoren kopieren den Bereich \[ *erste*, *letzten*) von einem Container und verwenden Sie die Werte zum Initialisieren einer Warteschlange mit hoher mit steigender Explizitheit bei Angabe des Typs der Vergleichsfunktion der Klasse `Traits` und `container_type`.
+Mit den letzten drei Konstruktoren wird der \[Bereich *First*, *Last*) eines Containers kopiert und die Werte zum Initialisieren eines Priority_queue mit zunehmender Explizitheit bei Angabe des Typs der Vergleichsfunktion der `Traits` Klasse und verwendet. `container_type`.
 
 ### <a name="example"></a>Beispiel
 
@@ -386,7 +386,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-*val*<br/>
+*ster*\
 Das am Anfang zur Warteschlange mit hoher Priorität hinzugefügte Element.
 
 ### <a name="remarks"></a>Hinweise
@@ -492,7 +492,7 @@ const_reference top() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Verweis auf das größte Element, das gemäß der `Traits` -Funktion, Priority_queue-Objekt.
+Ein Verweis auf das größte Element, wie von der `Traits` -Funktion bestimmt, das-Objekt des Priority_queue.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -574,5 +574,5 @@ The element at the top of the priority_queue is 69.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

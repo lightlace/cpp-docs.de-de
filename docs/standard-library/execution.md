@@ -1,19 +1,19 @@
 ---
-title: '&lt;Ausführung&gt;'
+title: '&lt;Niederlage&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 3bce34019f9ed4880d72a9d16c3c8b78dde0e0e3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3b0ccd540c56500c2f265aa6192a12fc2d5078b0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268422"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457967"
 ---
-# <a name="ltexecutiongt"></a>&lt;Ausführung&gt;
+# <a name="ltexecutiongt"></a>&lt;Niederlage&gt;
 
 Beschreibt die Ausführungsrichtlinien für parallele Algorithmen.
 
@@ -33,19 +33,19 @@ namespace std::execution {
 
 |||
 |-|-|
-|[Is_execution_policy-Struktur](is-execution-policy-struct.md)|Erkennt die Ausführungsrichtlinien für die Funktionssignaturen aus der Beteiligung von andernfalls mehrdeutige Überladung Auflösung ausschließen.|
-|[Parallel_policy-Klasse](parallel-policy-class.md)|Als verwendet ein eindeutiger Typ zu unterscheiden, parallelen Algorithmus überladen und anzugeben, dass die Ausführung eines parallelen Algorithmus parallelisiert werden kann.|
-|[Parallel_unsequenced_policy-Klasse](parallel-unsequenced-policy-class.md)|Als verwendet ein eindeutiger Typ zu unterscheiden, parallelen Algorithmus überladen und anzugeben, dass die Ausführung eines parallelen Algorithmus parallelisiert und vektorisiert werden kann.|
-|[Sequenced_policy-Klasse](sequenced-policy-class.md)|Als verwendet ein eindeutiger Typ zu unterscheiden, parallelen Algorithmus überladen und erfordern, dass die Ausführung eines parallelen Algorithmus nicht parallelisiert werden kann.|
+|[is_execution_policy-Struktur](is-execution-policy-struct.md)|Erkennt Ausführungsrichtlinien, um Funktions Signaturen von der ansonsten mehrdeutigen Überladungs Auflösungs Beteiligung auszuschließen.|
+|[parallel_policy-Klasse](parallel-policy-class.md)|Wird als eindeutiger Typ verwendet, um das überladen paralleler Algorithmen eindeutig zu machen und anzugeben, dass die Ausführung eines parallelen Algorithmus parallelisiert werden kann.|
+|[parallel_unsequenced_policy-Klasse](parallel-unsequenced-policy-class.md)|Wird als eindeutiger Typ verwendet, um das überladen paralleler Algorithmen eindeutig zu machen und anzugeben, dass die Ausführung eines parallelen Algorithmus parallelisiert und vektorisiert werden kann.|
+|[sequenced_policy-Klasse](sequenced-policy-class.md)|Wird als eindeutiger Typ verwendet, um das überladen paralleler Algorithmen zu unterscheiden, und erfordert, dass die Ausführung eines parallelen Algorithmus möglicherweise nicht parallelisiert wird.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Ausführung >
+**Header:** \<Ausführungs >
 
 **Namespace:** stdext
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](thread-safety-in-the-cpp-standard-library.md)<br/>
+[Headerdateienreferenz](cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](thread-safety-in-the-cpp-standard-library.md)\
 [C++-Standardbibliotheksreferenz](cpp-standard-library-reference.md)

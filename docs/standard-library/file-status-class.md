@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::operator=
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
-ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60ced1f60c811f585928f47c6cfd5e695d0c4085
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160016"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457751"
 ---
 # <a name="filestatus-class"></a>file_status-Klasse
 
@@ -33,7 +33,7 @@ class file_status;
 
 |Konstruktor|Beschreibung|
 |-|-|
-|[file_status](#file_status)|Konstruiert einen Wrapper für [File_type](../standard-library/filesystem-enumerations.md#file_type) und [Perms](../standard-library/filesystem-enumerations.md#perms).|
+|[file_status](#file_status)|Erstellt einen Wrapper für [file_type](../standard-library/filesystem-enumerations.md#file_type) und Datei- [perms](../standard-library/filesystem-enumerations.md#perms).|
 
 ### <a name="member-functions"></a>Memberfunktionen
 
@@ -50,13 +50,13 @@ class file_status;
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<filesystem>
+**Header:** \<Dateisystem >
 
-**Namespace:** std::experimental::filesystem, std::experimental::filesystem
+**Namespace:** Std:: experimental:: File System, Std:: experimental:: File System
 
-## <a name="file_status"></a> file_status::file_status
+## <a name="file_status"></a>file_status::file_status
 
-Konstruiert einen Wrapper für [File_type](../standard-library/filesystem-enumerations.md#file_type) und [Perms](../standard-library/filesystem-enumerations.md#perms).
+Erstellt einen Wrapper für [file_type](../standard-library/filesystem-enumerations.md#file_type) und Datei- [perms](../standard-library/filesystem-enumerations.md#perms).
 
 ```cpp
 explicit file_status(
@@ -72,16 +72,16 @@ file_status(file_status&&) noexcept = default;
 
 ### <a name="parameters"></a>Parameter
 
-*ftype*<br/>
-Angegebene `file_type`, standardmäßig `file_type::none`.
+*FTYPE*\
+Angegeben `file_type`, der `file_type::none`Standardwert ist.
 
-*mask*<br/>
-Angegebene Datei `perms`, standardmäßig `perms::unknown`.
+*chel*\
+Angegebene Datei `perms` `perms::unknown`. der Standardwert ist.
 
-*file_status*<br/>
-Das gespeicherte Objekt.
+*file_status*\
+Das gespeicherte-Objekt.
 
-## <a name="op_as"></a> file_status::operator=
+## <a name="op_as"></a>file_status:: Operator =
 
 Die als Standard festgelegten Memberzuweisungsoperatoren verhalten sich wie erwartet.
 
@@ -92,10 +92,10 @@ file_status& operator=(file_status&&) nexcept = default;
 
 ### <a name="parameters"></a>Parameter
 
-*file_status*<br/>
-Die [File_status](../standard-library/file-status-class.md) kopiert wird, in der `file_status`.
+*file_status*\
+Das [file_status](../standard-library/file-status-class.md) , das in das `file_status`kopiert wird.
 
-## <a name="type"></a> Typ
+## <a name="type"></a>Sorte
 
 Ruft den `file_type` ab oder legt diesen fest.
 
@@ -106,14 +106,14 @@ void type(file_type ftype) noexcept
 
 ### <a name="parameters"></a>Parameter
 
-*ftype*<br/>
+*FTYPE*\
 Angabe `file_type`.
 
-## <a name="permissions"></a> Berechtigungen
+## <a name="permissions"></a>Griff
 
 Ruft die Dateiberechtigungen ab oder legt sie fest.
 
-Verwenden Sie den Setter, stellen eine Datei `readonly` oder entfernen Sie die `readonly` Attribut.
+Verwenden Sie den Setter, um eine `readonly` Datei zu erstellen `readonly` oder das Attribut zu entfernen.
 
 ```cpp
 perms permissions() const noexcept
@@ -122,11 +122,11 @@ void permissions(perms mask) noexcept
 
 ### <a name="parameters"></a>Parameter
 
-*mask*<br/>
+*chel*\
 Angabe `perms`.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[path-Klasse](../standard-library/path-class.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Path-Klasse](../standard-library/path-class.md)\
+[\<filesystem>](../standard-library/filesystem.md)

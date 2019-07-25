@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246659"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448338"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -24,11 +24,11 @@ Definiert die valarray-Vorlagenklasse sowie zahlreiche unterstützende Vorlagenk
 **Namespace:** std
 
 > [!NOTE]
-> Die \<valarray-Objekt >-Bibliothek verwendet die "#include < Initializer_list >" Anweisung.
+> Die \<Valarray-> Bibliothek verwendet die #include < initializer_list > "-Anweisung.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leistung ungewöhnliche Freiheiten. Insbesondere kann jede Funktion, die Rückgabe von Typ `valarray<T1>` kann ein Objekt eines anderen Typs T2 zurückgeben. In diesem Fall jede Funktion, die ein oder mehrere Argumente des Typs akzeptiert `valarray<T2>` müssen verfügen über Überladungen, die beliebige Kombinationen dieser Argumente, wobei jedes durch ein Argument des Typs T2 ersetzt akzeptieren.
+Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leistung ungewöhnliche Freiheiten. Insbesondere kann jede Funktion, die `valarray<T1>` den Typ zurückgibt, ein Objekt eines anderen Typs T2 zurückgeben. In diesem Fall muss jede Funktion, die ein oder mehrere Argumente des Typs `valarray<T2>` akzeptiert, über Ladungen haben, die beliebige Kombinationen dieser Argumente akzeptieren, die jeweils durch ein Argument des Typs T2 ersetzt werden.
 
 ## <a name="members"></a>Member
 
@@ -89,15 +89,15 @@ Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leist
 |[mask_array-Klasse](../standard-library/mask-array-class.md)|Eine interne zusätzliche Vorlagenklasse, die Objekte, die Teilmengen von übergeordneten valarray-Objekten und mit einem booleschen Ausdruck angegeben sind, dadurch unterstützt, dass sie Vorgänge zwischen den Teilmengenarrays bereitstellt.|
 |[slice-Klasse](../standard-library/slice-class.md)|Eine Hilfsklasse für die valarray-Klasse, die dazu verwendet wird, eindimensionale vektorähnliche Teilmengen eines valarray-Objekts zu definieren.|
 |[slice_array-Klasse](../standard-library/slice-array-class.md)|Eine interne zusätzliche Vorlagenklasse, die slice-Objekte (Segmente) unterstützt, indem sie Vorgänge zwischen Teilmengenarrays bereitstellt, die durch das Segment eines valarray-Objekts definiert sind.|
-|[valarray-Klasse](../standard-library/valarray-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das eine Sequenz von Elementen des Typs steuert `Type` , die als Array gespeichert und für das Ausführen von schnellen mathematischer Operations für rechnerische Leistung optimiert vorgesehen.|
+|[valarray-Klasse](../standard-library/valarray-class.md)|Die Vorlagen Klasse beschreibt ein Objekt, das eine Sequenz von Elementen des Typs `Type` steuert, die als Array gespeichert werden und für die Ausführung von hoch Geschwindigkeits mathematischen Operationen entworfen wurden, die für die Rechenleistung optimiert sind.|
 
 ### <a name="specializations"></a>Spezialisierungen
 
 |||
 |-|-|
-|[valarray\<bool>-Klasse](../standard-library/valarray-bool-class.md)|Eine spezielle Version der Vorlagenklasse Valarray\<**Typ**> für Elemente des Typs **"bool"** .|
+|[valarray\<bool>-Klasse](../standard-library/valarray-bool-class.md)|Eine spezialisierte Version der Vorlagen Klasse Valarray\<**Type**> auf Elemente des Typs **bool**.|
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

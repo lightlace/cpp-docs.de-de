@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 495e82d54a2d3b010e40403271713cd799b9b8ac
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245406"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453536"
 ---
 # <a name="locale-class"></a>locale-Klasse
 
@@ -168,7 +168,7 @@ Numerische Formatierungsregeln für nachfolgende Einfügungen in `cout` bleiben 
 
 |Operator|Beschreibung|
 |-|-|
-|[operator=](#op_eq)|Weist ein Gebietsschema an.|
+|[operator=](#op_eq)|Weist ein Gebiets Schema zu.|
 |[Operator!=](#op_neq)|Prüft zwei Gebietsschemen auf Ungleichheit.|
 |[operator( )](#op_call)|Vergleicht zwei `basic_string`-Objekte.|
 |[operator==](#op_eq_eq)|Prüft zwei Gebietsschemen auf Gleichheit.|
@@ -204,7 +204,7 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für einen **Int** Typ, eine Gruppe von verschiedenen Elementen einer Bitmaske darstellen kann, geben Sie lokal auf Locale-Klasse, oder kann verwendet werden, um jeden der entsprechenden C-gebietsschemakategorien darstellen. Die Elemente sind:
+Der Typ ist ein Synonym für einen **int** -Typ, der eine Gruppe von unterschiedlichen Elementen des Typs "lokale Bitmaske" der Klasse "locale" darstellen kann oder zur Darstellung der entsprechenden C-Gebiets Schema Kategorien verwendet werden kann. Die Elemente sind:
 
 - `collate`, entspricht der C-Kategorie LC_COLLATE
 
@@ -212,19 +212,19 @@ Der Typ ist ein Synonym für einen **Int** Typ, eine Gruppe von verschiedenen El
 
 - `monetary`, entspricht der C-Kategorie LC_MONETARY
 
-- `numeric`, für die C-Kategorie lc_monetary
+- `numeric`, entspricht der C-Kategorie LC_NUMERIC
 
 - `time`, entspricht der C-Kategorie LC_TIME
 
-- `messages`, entspricht der Posix-Kategorie LC_MESSAGES
+- `messages`, entspricht der POSIX-Kategorie LC_MESSAGES
 
 Zusätzlich gibt es zwei weitere nützliche Werte:
 
-- `none`, entspricht keiner der C-Kategorien
+- `none`, entspricht keiner der C-Kategorien.
 
 - `all`, entspricht der C-Union aller Kategorien LC_ALL
 
-Sie können eine beliebige Gruppe von Kategorien darstellen, indem Sie mithilfe von `OR` diese Konstanten, wie im `monetary` &#124; `time`.
+Sie können eine beliebige Gruppe von Kategorien darstellen, indem `OR` Sie mit diesen Konstanten wie in `monetary` &#124; `time`verwenden.
 
 ## <a name="classic"></a> locale::classic
 
@@ -240,7 +240,7 @@ Ein Verweis auf das C-Gebietsschema.
 
 ### <a name="remarks"></a>Hinweise
 
-Das klassische C-Gebietsschema ist das US- Englische ASCII-Gebietsschema in der Standard-C-Bibliothek, die implizit in Programmen verwendet wird, die nicht International sind.
+Das klassische C-Gebiets Schema ist die US-amerikanische Das englische ASCII-Gebiets Schema in der Standard-C-Bibliothek, das implizit in nicht internationalisierten Programmen verwendet wird.
 
 ### <a name="example"></a>Beispiel
 
@@ -292,12 +292,12 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Loc*<br/>
+*A.a.o.* \
 Das Gebietsschema enthält das Facet, das in das Zielgebietsschema eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Memberfunktion gibt ein Locale-Objekt, das ersetzt oder fügt hinzu  **\*dies** Facets `Facet` in aufgeführten *Loc*.
+Die Member-Funktion gibt ein Gebiets Schema Objekt zurück, das ersetzt oder  **\*diesem** das `Facet` in *Loc*aufgelistete facetelement hinzufügt.
 
 ### <a name="example"></a>Beispiel
 
@@ -361,7 +361,7 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parameter
 
-*Loc*<br/>
+*A.a.o.* \
 Das Gebietsschema, das als Standardgebietsschema vom Programm verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -414,11 +414,11 @@ class id
 ```
 ### <a name="remarks"></a>Hinweise
 
-Die Memberklasse beschreibt das statische Memberobjekt, das von jedem Gebietsschemafacet benötigt wird. Beachten Sie, dass Sie nicht kopieren oder Zuweisen von einem Objekt der Klasse `id`.
+Die Memberklasse beschreibt das statische Memberobjekt, das von jedem Gebietsschemafacet benötigt wird. Beachten Sie, dass Sie ein Objekt der Klasse `id`nicht kopieren oder zuweisen können.
 
 ## <a name="locale"></a> locale::locale
 
-Erstellt ein Gebietsschema, eine Kopie eines Gebietsschemas oder eine Kopie des Gebietsschemas, in dem ein Facet oder eine Kategorie durch ein Facet oder eine Kategorie eines anderen Gebietsschemas ersetzt wurde. Enthält auch einen Destruktor.
+Erstellt ein Gebietsschema, eine Kopie eines Gebietsschemas oder eine Kopie des Gebietsschemas, in dem ein Facet oder eine Kategorie durch ein Facet oder eine Kategorie eines anderen Gebietsschemas ersetzt wurde. Schließt außerdem einen Dekonstruktor ein.
 
 ```cpp
 locale();
@@ -437,40 +437,40 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parameter
 
-*Locname*<br/>
+*Locname*\
 Der Name eines Gebietsschemas.
 
-*Loc*<br/>
+*A.a.o.* \
 Ein Gebietsschema, das zum Erstellen des neuen Gebietsschemas kopiert werden soll.
 
-*Andere*<br/>
+*Außer*\
 Ein Gebietsschema für die Auswahl einer Kategorie.
 
-*CAT*<br/>
+*Cat*\
 Die Kategorie, die im erstellten Gebietsschema ersetzt werden soll.
 
-*FAc*<br/>
+*FAC*\
 Das Facet, das im erstellten Gebietsschema ersetzt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert das Objekt, um mit dem globalen Gebietsschema übereinzustimmen. Der zweite und dritte Konstruktor initialisieren alle gebietsschemakategorien Verhalten mit der Gebietsschemanamen konsistent *Locname*. Kopieren Sie die übrigen Konstruktoren *Loc*, mit der Ausnahmen:
+Der erste Konstruktor initialisiert das Objekt, um mit dem globalen Gebietsschema übereinzustimmen. Mit dem zweiten und dritten Konstruktoren werden alle Gebiets Schema Kategorien initialisiert, sodass das Verhalten mit dem Gebiets Schema Namen " *locname*" konsistent ist. Die übrigen Konstruktoren kopieren *Loc*, mit den folgenden Ausnahmen:
 
 `locale(const locale& Loc, const locale& Other, category Cat);`
 
-ersetzt aus *andere* die Facets, einer Kategorie C entsprechen, für welche C & *Cat* ungleich NULL ist.
+ersetzt von *anderen* Facetten, die einer Kategorie c entsprechen, für die C & *Cat* ungleich 0 (null) ist.
 
 `locale(const locale& Loc, const char* Locname, category Cat);`
 
 `locale(const locale& Loc, const string& Locname, category Cat);`
 
-ersetzt aus `locale(Locname, _All)` die Facets, einer Kategorie C entsprechen, für welche C & *Cat* ungleich NULL ist.
+ersetzt aus `locale(Locname, _All)` den Facetten, die einer Kategorie c entsprechen, für die C & *Cat* ungleich 0 (null) ist.
 
 `template<class Facet> locale(const locale& Loc, Facet* Fac);`
 
-ersetzt in (oder hinzugefügt) *Loc* Facets *Fac*, wenn *Fac* ist kein null-Zeiger.
+ersetzt in (oder fügt zu) *Loc* den *facefac*, wenn *FAC* kein NULL-Zeiger ist.
 
-Wenn ein Gebietsschema *Locname* ist ein null-Zeiger oder ungültig ist, löst die Funktion aus [Runtime_error](../standard-library/runtime-error-class.md).
+Wenn ein Gebiets Schema Name " *locname* " ein NULL-Zeiger oder anderweitig ungültig ist, löst die Funktion " [Runtime_error](../standard-library/runtime-error-class.md)" aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -551,9 +551,9 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="op_eq"></a>  locale:: Operator =
+## <a name="op_eq"></a>locale:: Operator =
 
-Weist ein Gebietsschema an.
+Weist ein Gebiets Schema zu.
 
 ```cpp
 const locale& operator=(const locale& other) noexcept;
@@ -569,7 +569,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Eines der Gebietsschemas, die auf Ungleichheit geprüft werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -633,10 +633,10 @@ bool operator()(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*linken*\
 Die linke Zeichenfolge.
 
-*right*<br/>
+*Richting*\
 Die rechte Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -702,7 +702,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Eines der Gebietsschemas, die auf Gleichheit geprüft werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -759,7 +759,7 @@ and loc3 (English_United States.1252) are not equal.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Codepages](../c-runtime-library/code-pages.md)<br/>
-[Gebietsschema-Namen, Sprachen und Zeichenfolgen für Länder und Regionen](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Codepages](../c-runtime-library/code-pages.md)\
+[Gebietsschema-Namen, Sprachen und Zeichenfolgen für Länder und Regionen](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

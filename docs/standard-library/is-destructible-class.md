@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_destructible
 ms.assetid: 3bb9b718-1ad5-49ae-93cc-92b93b546b4d
-ms.openlocfilehash: 1036a3756a736ee3916ed9fca84aa935bb0ba2cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80592a6fca274533a798b2f5a2459d336ee2c301
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336828"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452731"
 ---
 # <a name="isdestructible-class"></a>is_destructible-Klasse
 
@@ -26,12 +26,12 @@ struct is_destructible;
 
 ### <a name="parameters"></a>Parameter
 
-*T*<br/>
+*BUND*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *T* "destructible" ist, andernfalls er false enthält. „destructible“-Typen sind Referenztypen, Objekttypen und Typen, bei denen für einige Typen `U` gleich `remove_all_extents_t<T>` der nicht ausgewertete Operand `std::declval<U&>.~U()` wohlgeformt ist. Andere Typen, z. B. unvollständige Typen **"void"**, und Funktionstypen, sind keine "destructible"-Typen.
+Eine Instanz des typprädikats ist "true", wenn der Typ " *T* " ein deerbarer Typ ist; andernfalls "false". „destructible“-Typen sind Referenztypen, Objekttypen und Typen, bei denen für einige Typen `U` gleich `remove_all_extents_t<T>` der nicht ausgewertete Operand `std::declval<U&>.~U()` wohlgeformt ist. Andere Typen, einschließlich unvollständiger Typen, **void**und Funktionstypen, sind keine Typen, die nicht zerstört werden können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,4 +41,4 @@ Eine Instanz des typprädikats ist true, wenn der Typ *T* "destructible" ist, an
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

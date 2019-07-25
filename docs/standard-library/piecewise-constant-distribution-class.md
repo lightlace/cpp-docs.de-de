@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 0c990953f0cda81366ff2645d3cdf1065850abbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370397"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455247"
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution-Klasse
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType*<br/>
-Der gleitkommaergebnistyp, der Standardwert ist **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType*\
+Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -248,31 +248,31 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*firstI*<br/>
+*firsti*\
 Ein Eingabeiterator für das erste Element im Verteilungsbereich.
 
-*lastI*<br/>
+*lasti*\
 Ein Eingabeiterator für das letzte Element im Verteilungsbereich.
 
-*firstW*<br/>
+*firstW*\
 Ein Eingabeiterator für das erste Element im Gewichtsbereich.
 
-*Zeitintervalle*<br/>
+*Abstände*\
 Ein [initializer_list](../cpp/initializers.md) mit den Verteilungsintervallen.
 
-*count*<br/>
+*Countdown*\
 Die Anzahl von Elementen im Verteilungsbereich.
 
-*xmin*<br/>
+*xmin*\
 Der niedrigste Wert im Verteilungsbereich.
 
-*xmax*<br/>
+*xmax*\
 Der höchste Wert im Verteilungsbereich. Muss größer als *xmin* sein.
 
-*weightfunc*<br/>
-Das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Die Parameter und der Rückgabewert müssen konvertierbar sein **doppelte**.
+*weightfunc*\
+Das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Sowohl der-Parameter als auch der Rückgabewert müssen in den **Double**-Wert konvertiert werden können.
 
-*parm*<br/>
+*parm*\
 Die für die Erstellung der Verteilung verwendete Parameterstruktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -296,7 +296,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-erstellt ein Verteilungsobjekt mit Intervallen aus der Initialisiererliste *Intervallen* und Gewichtungen, die von der Funktion generiert *Weightfunc*.
+erstellt ein Verteilungs Objekt mit Intervallen aus den initialisiererlistenintervallen und Gewichtungen, die aus der Funktion " *weightfunc*" generiert werden.
 
 Der als
 ```cpp
@@ -305,14 +305,14 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-erstellt ein Verteilungsobjekt mit *Anzahl* verteilten Intervallen gleichmäßig über [ `xmin,xmax`], weist jedem Intervall Gewichte entsprechend der Funktion *Weightfunc*, und  *Weightfunc* muss einen Parameter übernehmen und einen Rückgabewert haben, beide davon konvertierbar müssen `double`. **Vorbedingung:** `xmin < xmax`
+erstellt ein Verteilungs Objekt mit  der gleichmäßig über [ `xmin,xmax`] verteilten Anzahl von Intervallen und weist jedem Intervall Gewichtungs Gewichtungen entsprechend der Funktion " *weightfunc*" zu, und " *weightfunc* " muss einen Parameter annehmen und eine Rückgabe aufweisen. -Wert, der beide in `double`konvertierbar sind. **Vorbedingung:** `xmin < xmax`
 
 Der als
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-erstellt ein Verteilungsobjekt mit *Parm* als gespeicherte Parameterstruktur.
+erstellt ein Verteilungs *Objekt mit einem* Parameter als gespeicherte Parameter Struktur.
 
 ## <a name="param_type"></a> piecewise_constant_distribution::param_type
 
@@ -346,5 +346,5 @@ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteil
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
-[piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)<br/>
+[\<random>](../standard-library/random.md)\
+[piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_constructible
 ms.assetid: 8be3f927-283e-4d67-95a5-8bf5dc4e7a3d
-ms.openlocfilehash: 9ea11d54d49bf8f6ae6416f9663c2593cc66ea3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ec4fc3ef5d9a799d5d77124870fbb337061c94c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383606"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455990"
 ---
 # <a name="isnothrowconstructible-class"></a>Is_nothrow_constructible-Klasse
 
@@ -26,15 +26,15 @@ struct is_nothrow_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-*T*<br/>
+*BUND*\
 Der abzufragende Typ.
 
-*Args*<br/>
-Die Argumenttypen in einem Konstruktor, der entsprechend *T*.
+*Args*\
+Die Argument Typen, die in einem Konstruktor von *T*abgeglichen werden sollen.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *T* konstruiert werden kann, ist die Verwendung der Argumenttypen *Args*, und der Konstruktor ist der Compiler löst bekannt; andernfalls ist Sie false. Typ *T* konstruierbar ist; wenn die Variablendefinition `T t(std::declval<Args>()...);` wohlgeformt ist. Beide *T* und alle Typen in *Args* müssen vollständige Typen werden **"void"**, oder Arrays mit Unbekannter Grenze.
+Eine Instanz des typprädikats ist "true", wenn der Typ *T* mit den Argument Typen in *args*konstruiert werden kann und der Konstruktor vom Compiler nicht ausgelöst werden kann. Andernfalls enthält Sie false. Der Typ *T* ist konstruierbar, wenn `T t(std::declval<Args>()...);` die Variablen Definition wohl geformt ist. Sowohl *T* als auch alle Typen in *args* müssen vollständige Typen, **void**oder Arrays mit unbekannter Grenze sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,4 +44,4 @@ Eine Instanz des typprädikats ist true, wenn der Typ *T* konstruiert werden kan
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

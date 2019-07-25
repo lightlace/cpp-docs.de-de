@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 15d13a3af35cb41950df8aeba0c86d779e701ddb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 87d268977ee46112fedce517e66a9e68071863db
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244449"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457571"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-Schließt den standard C-bibliotheksheader \<stddef.h > und fügt die verknüpften Namen zum die `std` Namespace. Einschließen dieses Headers wird sichergestellt, dass die Namen deklariert, mit externer Bindung im standard C-bibliotheksheader, in deklariert werden der `std` Namespace.
+Schließt den C-Standard Bibliotheks \<Header STDDEF. h > ein und fügt zugeordnete `std` Namen zum-Namespace hinzu. Durch einschließen dieses Headers wird sichergestellt, dass die mit externer Verknüpfung im C-Standard Bibliotheks Header deklarierten `std` Namen im-Namespace deklariert werden.
 
 > [!NOTE]
-> \<Cstddef > enthält Typ **Byte** und keine Typ **"wchar_t"** .
+> \<cstddef > enthält den Typ " **Byte** " und enthält nicht den Typ " **wchar_t**".
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ namespace std {
 ### <a name="parameters"></a>Parameter
 
 *ptrdiff_t*\
-Eine implementierungsdefinierte ganzzahliger Typ mit Vorzeichen, die die Differenz zwischen zwei Indizes in einem Arrayobjekt enthalten kann.
+Ein von der Implementierung definierter ganzzahliger Typ mit Vorzeichen, der den Unterschied zwischen zwei Indizes in einem Array Objekt enthalten kann.
 
-*"size_t"* \
-Eine Implementierung definierten Ganzzahltyp ohne Vorzeichen, der groß genug für die Größe in Bytes eines beliebigen Objekts enthalten ist.
+*size_t*\
+Ein von der Implementierung definierter ganzzahliger Typ ohne Vorzeichen, der groß genug ist, um die Größe eines beliebigen Objekts in Bytes zu enthalten.
 
 *max_align_t*\
-Ein POD-Typ, dessen ausrichtungsanforderung ist mindestens so groß wie mit jeder skalaren Typ; deren ausrichtungsanforderung ist in jedem Kontext unterstützt.
+Ein POD-Typ, dessen Ausrichtungs Anforderung mindestens so groß wie jeder skalare Typ ist und dessen Ausrichtungs Anforderung in jedem Kontext unterstützt wird.
 
 *nullptr_t*\
-Ein Synonym für den Typ des eine **"nullptr"** Ausdruck. Obwohl eine **"nullptr"** Adresse kann nicht erstellt werden, wird die Adresse eines anderen *Nullptr_t* Objekt, das einen l-Wert erstellt werden kann.
+Ein Synonym für den Typ eines **nullptr** -Ausdrucks. Obwohl eine **nullptr** -Adresse nicht verwendet werden kann, kann die Adresse eines anderen *nullptr_t* -Objekts, das ein Lvalue ist, übernommen werden.
 
 ## <a name="byte-class"></a>Byte-Klasse
 
@@ -79,6 +79,6 @@ template <class IntType>
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Übersicht über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

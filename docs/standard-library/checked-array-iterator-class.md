@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 688b93902da5b4492812b4715a248db9561ec258
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68ee602c44a8515e1d41f04a4bd0fbb7edc924b7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379193"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452300"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator-Klasse
 
@@ -243,13 +243,13 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Parameter
 
-*ptr*<br/>
+*PTR*\
 Ein Zeiger auf den Array.
 
-*size*<br/>
+*Größe*\
 Die Größe des Arrays.
 
-*index*<br/>
+*Sin*\
 (Optional) Ein Element im Array zur Initialisierung des Iterators.  Der Iterator wird standardmäßig mit dem ersten Element im Array initialisiert.
 
 ### <a name="remarks"></a>Hinweise
@@ -318,7 +318,7 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Der `checked_array_iterator` für die Durchführung von Gleichheitsüberprüfungen.
 
 ### <a name="remarks"></a>Hinweise
@@ -374,7 +374,7 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Der `checked_array_iterator` für die Durchführung von Ungleichheitsüberprüfungen.
 
 ### <a name="remarks"></a>Hinweise
@@ -430,7 +430,7 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Der `checked_array_iterator` für die Durchführung von Ungleichheitsüberprüfungen.
 
 ### <a name="remarks"></a>Hinweise
@@ -486,7 +486,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 `checked_array_iterator` für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -505,7 +505,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 `checked_array_iterator` für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -524,7 +524,7 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 `checked_array_iterator` für den Vergleich.
 
 ### <a name="remarks"></a>Hinweise
@@ -755,7 +755,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*<br/>
+*_Off*\
 Der Offset, um den der Iterator inkrementiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -803,7 +803,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*<br/>
+*_Off*\
 Der zum `checked_array_iterator` hinzuzufügende Offset.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -851,7 +851,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*<br/>
+*_Off*\
 Der Offset, um den der Iterator inkrementiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -902,7 +902,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*<br/>
+*_Off*\
 Der von `checked_array_iterator` zu dekrementierende Offset.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -923,7 +923,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*<br/>
+*_Off*\
 Der Offset von der `checked_array_iterator`-Adresse.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -993,5 +993,5 @@ Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/c
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

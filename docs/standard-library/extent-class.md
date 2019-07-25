@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extent class
 - extent
 ms.assetid: 6d16263d-90b2-4330-9ec7-b59ed898792d
-ms.openlocfilehash: 7463b424d15ee86f851b7d81953abf3fe1c98fee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cd53ba8537e706a68ffdcf08df998108266ad20
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393973"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457791"
 ---
 # <a name="extent-class"></a>extent-Klasse
 
@@ -27,15 +27,15 @@ struct extent;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
-*I*<br/>
+*ICH*\
 Das an die Abfrage gebundene Array.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn *Ty* ist ein Arraytyp, der mindestens über *ich* Dimensionen, die Typabfrage enthält die Anzahl der Elemente in der Dimension, die anhand des *ich*. Wenn *Ty* ist kein Arraytyp oder sein Rang kleiner als *ich*, oder wenn *ich* ist 0 (null) und *Ty* ist vom Typ "Array mit Unbekannter Grenze von `U` ", die Typabfrage enthält den Wert 0.
+Wenn *Ty* ein Arraytyp mit mindestens *I* Dimensionen ist, enthält die typabfrage die Anzahl der Elemente in der Dimension, die von *i*angegeben wird. Wenn *Ty* kein Arraytyp ist oder der Rang kleiner als *i*ist, *oder wenn der* Wert 0 (null) und " *Ty* " vom `U`Typ "Array mit unbekannter Grenze" ist, enthält die typabfrage den Wert 0.
 
 ## <a name="example"></a>Beispiel
 
@@ -69,6 +69,6 @@ extent 1 == 10
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_all_extents-Klasse](../standard-library/remove-all-extents-class.md)<br/>
-[remove_extent-Klasse](../standard-library/remove-extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_all_extents Class (remove_all_extents-Klasse)](../standard-library/remove-all-extents-class.md)\
+[remove_extent Class (remove_extent-Klasse)](../standard-library/remove-extent-class.md)

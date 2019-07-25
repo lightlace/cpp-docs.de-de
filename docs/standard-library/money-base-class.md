@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: b0c77b523dbe31bc5b07ae3d736441880fe04546
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383567"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455565"
 ---
 # <a name="moneybase-class"></a>money_base-Klasse
 
@@ -28,17 +28,17 @@ struct pattern
 
 ## <a name="remarks"></a>Hinweise
 
-Die Enumeration `part` beschreibt die möglichen Werte in Elementen des Array-Felds im strukturmuster. Die Werte der `part` sind:
+In der- `part` Enumeration werden die möglichen Werte in Elementen des Arrayfelds im Struktur Muster beschrieben. Die Werte von `part` lauten:
 
-- `none` auf NULL oder mehr Leerzeichen abzustimmen bzw. nichts zu generieren.
+- `none`, wenn NULL oder mehr Leerzeichen abgeglichen werden sollen
 
-- `sign` übereinstimmen oder ein positiven oder negativen Vorzeichen zu generieren.
+- `sign`, um ein positives oder negatives Vorzeichen abzugleichen oder zu generieren.
 
-- `space` NULL oder mehr Leerzeichen abzustimmen, oder ein Leerzeichen zu generieren.
+- `space`, wenn NULL oder mehr Leerzeichen gefunden werden oder ein Leerzeichen generiert werden soll
 
-- `symbol` übereinstimmen oder ein Währungssymbol zu generieren.
+- `symbol`, um ein Währungssymbol abzugleichen oder zu generieren.
 
-- `value` Um abzustimmen bzw. einen monetären Wert zu generieren.
+- `value`, um einen monetären Wert abzugleichen oder zu generieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,4 +48,4 @@ Die Enumeration `part` beschreibt die möglichen Werte in Elementen des Array-Fe
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

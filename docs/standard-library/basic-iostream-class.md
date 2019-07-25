@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 80aad69f05b7473b508447d6f69f1d92edbeeca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 052271e2e2cc929875489e27abde2147bc5c070a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400642"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460086"
 ---
 # <a name="basiciostream-class"></a>basic_iostream-Klasse
 
@@ -75,17 +75,17 @@ basic_iostream();
 
 ### <a name="parameters"></a>Parameter
 
-*strbuf*<br/>
+*strbuf*\
 Ein vorhandenes `basic_streambuf`-Objekt.
 
-*right*<br/>
+*Richting*\
 Ein vorhandenes `basic_iostream`-Objekt, das verwendet wird, um ein neues `basic_iostream`-Objekt zu erstellen.
 
 ### <a name="remarks"></a>Hinweise
 
 Der erste Konstruktor initialisiert die Basisobjekte über `basic_istream(strbuf)` und `basic_ostream(strbuf)`.
 
-Der zweite Konstruktor initialisiert die Basisobjekte durch Aufrufen von `move(right)`.
+Der zweite Konstruktor initialisiert die Basisobjekte durch Aufrufen `move(right)`von.
 
 ## <a name="op_eq"></a> basic_iostream::operator=
 
@@ -97,12 +97,12 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Ein `rvalue`-Verweis auf ein `basic_iostream`-Objekt, aus dem zugewiesen werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Memberoperator ruft `swap(right)`.
+Der Member-Operator `swap(right)`Ruft auf.
 
 ## <a name="swap"></a> basic_iostream::swap
 
@@ -114,15 +114,15 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Das auszutauschende `basic_iostream`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion ruft `swap(right)`.
+Die Member-Funktion `swap(right)`Ruft auf.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
-[iostreams-Konventionen](../standard-library/iostreams-conventions.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream-Programmierung](../standard-library/iostream-programming.md)\
+[iostreams-Konventionen](../standard-library/iostreams-conventions.md)

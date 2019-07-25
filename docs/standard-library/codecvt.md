@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: 56cd4263d3dcddd23246a05466275b8b7d370b95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc711b14a2d30041b4585a9515a95e42280f5306
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405208"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458610"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-Definiert mehrere Vorlagenklassen, die Objekte anhand der Vorlagenklasse [codecvt](../standard-library/codecvt-class.md) beschreiben. Diese Objekte dienen als [gebietsschemafacets](../standard-library/locale-class.md#facet_class) , Konvertierungen zwischen einer Sequenz von Werten des Typs steuern `Elem` und einer Sequenz von Werten des Typs **Char**.
+Definiert mehrere Vorlagenklassen, die Objekte anhand der Vorlagenklasse [codecvt](../standard-library/codecvt-class.md) beschreiben. Diese Objekte können als Gebiets Schema [Facetten](../standard-library/locale-class.md#facet_class) fungieren, die Konvertierungen zwischen einer Sequenz von Werten `Elem` des Typs und einer Sequenz von Werten des Typs **char**steuern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +34,7 @@ Die in diesem Header deklarierten Gebietsschemafacets führen Konvertierungen zw
 
 - UTF-16 ist innerhalb des Programms als eine oder zwei 16-Bit-Integer codierter Unicode. (Hinweis: Dies erfüllt nicht alle Anforderungen einer gültigen Breitzeichencodierung für Standard C oder Standard C++. Es ist aber als solches weit verbreitet.)
 
-Bei Bytestreams (in einer Datei gespeichert, als Bytesequenz übertragen oder gespeichert, die innerhalb des Programms in einem Array von **Char**):
+Für Bytestreams (in einer Datei gespeichert, als Byte Sequenz übertragen oder im Programm in einem Array von **char**gespeichert):
 
 - UTF-8 ist innerhalb eines Bytestreams als eine oder mehrere 8-Bit-Bytes mit deterministischer Bytereihenfolge Unicode-codiert.
 
@@ -64,4 +64,4 @@ Bei Bytestreams (in einer Datei gespeichert, als Bytesequenz übertragen oder ge
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)

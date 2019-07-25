@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383580"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449937"
 ---
 # <a name="messages-class"></a>messages-Klasse
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*<br/>
+*CharType*\
 Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
 ## <a name="remarks"></a>Hinweise
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Catval*<br/>
+*_Catval*\
 Der zu schließende Katalog.
 
 ### <a name="remarks"></a>Hinweise
@@ -122,12 +122,12 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Catval*<br/>
+*_Catval*\
 Der zu schließende Katalog.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Memberfunktion schließt den meldungskatalog *_Catval*, die geöffnet worden sein muss durch einen früheren Aufruf von [Do_open](#do_open).
+Die geschützte Member-Funktion schließt den Message Catalog *_Catval*, der von einem früheren-Befehl an [Do_open](#do_open)geöffnet werden muss.
 
 *_Catval* muss aus einem vorher geöffneten Katalog abgerufen werden, der nicht geschlossen wurde.
 
@@ -149,25 +149,25 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parameter
 
-*_Catval*<br/>
+*_Catval*\
 Der Identifikationswert, der den zu suchenden Katalog angibt.
 
-*_Set*<br/>
+*_Set*\
 Der erste identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Message*<br/>
+*_Message*\
 Der zweite identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Dfault*<br/>
+*_Dfault*\
 Die Zeichenfolge, die zurückgegeben werden soll, wenn ein Fehler auftritt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Es gibt eine Kopie des *_Dfault* bei einem Fehler. Andernfalls gibt er eine Kopie einer angegebenen Meldungssequenz zurück.
+Bei einem Fehler wird eine Kopie von *_Dfault* zurückgegeben. Andernfalls gibt er eine Kopie einer angegebenen Meldungssequenz zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Memberfunktion versucht eine meldungssequenz auf dem meldungskatalog abrufen *_Catval*. Umständen verwenden *fe_stgelegte*, *_nachricht*, und *_Dfault* auf diese Weise.
+Die geschützte Member-Funktion versucht, eine Nachrichten Sequenz aus dem Message Catalog *_Catval*abzurufen. Dabei werden möglicherweise *_Set*, *_message*und *_Dfault* verwendet.
 
 ### <a name="example"></a>Beispiel
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parameter
 
-*_Catname*<br/>
+*_Catname*\
 Der Name des zu suchenden Katalogs.
 
-*_Loc*<br/>
+*_Loc*\
 Das Gebietsschema, nach dem im Katalog gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -197,7 +197,7 @@ Er gibt einen Wert zurück, der bei einem Fehler kleiner als null ist. Andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Memberfunktion versucht einen meldungskatalog, dessen Name *_Catname*. Möglicherweise erleichtern des Gebietsschemas verwenden *_Loc* auf diese Weise
+Die geschützte Member-Funktion versucht, einen Meldungs Katalog zu öffnen, dessen Name *_Catname*lautet. Dabei kann das Gebiets Schema verwendet werden *_Loc*
 
 Der Rückgabewert sollte als Argument für einen späteren Aufruf an [close](#close) verwendet werden.
 
@@ -219,21 +219,21 @@ string_type get(
 
 ### <a name="parameters"></a>Parameter
 
-*_Catval*<br/>
+*_Catval*\
 Der Identifikationswert, der den zu suchenden Katalog angibt.
 
-*_Set*<br/>
+*_Set*\
 Der erste identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Message*<br/>
+*_Message*\
 Der zweite identifizierte, der zum Finden einer Meldung in einem Meldungskatalog verwendet wird.
 
-*_Dfault*<br/>
+*_Dfault*\
 Die Zeichenfolge, die zurückgegeben werden soll, wenn ein Fehler auftritt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Es gibt eine Kopie des *_Dfault* bei einem Fehler. Andernfalls gibt er eine Kopie einer angegebenen Meldungssequenz zurück.
+Bei einem Fehler wird eine Kopie von *_Dfault* zurückgegeben. Andernfalls gibt er eine Kopie einer angegebenen Meldungssequenz zurück.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -254,17 +254,17 @@ protected: messages(
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs*<br/>
+*_Refs*\
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
-*_Locname*<br/>
+*_Locname*\
 Der Name des Gebietsschemas.
 
 ### <a name="remarks"></a>Hinweise
 
-Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
+Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebiets Schemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
@@ -272,7 +272,7 @@ Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **locale::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="open"></a> messages::open
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Parameter
 
-*_Catname*<br/>
+*_Catname*\
 Der Name des zu suchenden Katalogs.
 
-*_Loc*<br/>
+*_Loc*\
 Das Gebietsschema, nach dem im Katalog gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -314,6 +314,6 @@ Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [basic_string](../sta
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<locale>](../standard-library/locale.md)<br/>
-[messages_base-Klasse](../standard-library/messages-base-class.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[messages_base-Klasse](../standard-library/messages-base-class.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

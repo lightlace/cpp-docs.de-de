@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_destructible
 ms.assetid: 3f7a787d-2448-40c5-ac51-a228318e02ce
-ms.openlocfilehash: 61d626c308338595a64031a45908ab299ae1a957
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a978b7cc32e6de3d4b1d811b9aa6f52cf0370d7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409771"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459636"
 ---
 # <a name="istriviallydestructible-class"></a>is_trivially_destructible-Klasse
 
@@ -26,12 +26,12 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>Parameter
 
-*T*<br/>
+*BUND*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *T* "destructible" ist, und des Destruktors wird an den Compiler keine nicht trivialen Vorgänge verwendet. Andernfalls ist sie FALSE.
+Eine Instanz des typprädikats ist true, wenn der Typ *T* ein deerbarer Typ ist, und der Dekonstruktor dem Compiler bekannt ist, dass keine nicht trivialen Vorgänge verwendet werden. Andernfalls ist sie FALSE.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,4 +41,4 @@ Eine Instanz des typprädikats ist true, wenn der Typ *T* "destructible" ist, un
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

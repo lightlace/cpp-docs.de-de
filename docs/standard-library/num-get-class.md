@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: c0984c15e2bf1682fc902264f47f340d0bd3c859
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67aef1ce52b6717ce6d6381429982cf660aa5e20
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223749"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457647"
 ---
 # <a name="numget-class"></a>num_get-Klasse
 
@@ -34,10 +34,10 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*<br/>
+*CharType*\
 Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
-*InputIterator*<br/>
+*InputIterator*\
 Der Typ des Iterators, von dem die numerische get-Funktionen ihre Eingabe lesen.
 
 ## <a name="remarks"></a>Hinweise
@@ -167,19 +167,19 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Anfang des Zeichenbereichs, aus dem die Zahl gelesen wird.
 
-*last*<br/>
+*letzten*\
 Das Ende des Zeichenbereichs, aus dem die Zahl gelesen wird.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Die [ios_base](../standard-library/ios-base-class.md), deren Flags durch die Konvertierung verwendet werden.
 
-*_State*<br/>
+*_State*\
 Der Zustand, zu dem die Failbit (siehe [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) bei einem Fehler hinzugefügt wird.
 
-*val*<br/>
+*ster*\
 Der gelesene Wert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -199,9 +199,9 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-versucht sequenzielle Elemente, die beginnend bei *erste* in der Sequenz `[first, last)` bis eine vollständige erkannt hat, nicht leeres Eingabefeld für ganze Zahlen. Wenn erfolgreich, sie dieses Feld in seinen äquivalenten Wert als Typ konvertiert **lange**, und speichert das Ergebnis in *Val*. Sie gibt einen Iterator zurück, der das erste Element nach dem numerischen Eingabefeld festlegt. Andernfalls speichert die Funktion "nothing" in *Val* und `ios_base::failbit` in `state`. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für ganze Zahlen festlegt. In beiden Fällen legt die Funktion `state` für `ios_base::eofbit` fest, wenn der Rückgabewert `last` entspricht.
+gleicht sequenzielle Elemente ab, beginnend an *erster Stelle* in der Sequenz `[first, last)` , bis Sie ein ganzes, nicht leeres ganzzahliges Eingabefeld erkannt hat. Im Erfolgsfall konvertiert Sie dieses Feld in den entsprechenden Wert als Typ **Long**und speichert das Ergebnis in *Val*. Sie gibt einen Iterator zurück, der das erste Element nach dem numerischen Eingabefeld festlegt. Andernfalls speichert die Funktion nichts im *Val* und legt `ios_base::failbit` in `state`fest. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für ganze Zahlen festlegt. In beiden Fällen legt die Funktion `state` für `ios_base::eofbit` fest, wenn der Rückgabewert `last` entspricht.
 
-Das Eingabefeld für ganze Zahl wird konvertiert, indem die gleichen Regeln, die von den Überprüfungsfunktionen verwendet wird, für den Abgleich aus, und Konvertieren einer Reihe von **Char** Elemente aus einer Datei. (Jedes dieser **Char** wird davon ausgegangen, dass Element soll einem äquivalenten Element vom Typ zuordnen `Elem` Zuordnung durch eine einfache 1: 1.) Die entsprechende Überprüfungskonvertierungsspezifikation wird wie folgt bestimmt:
+Das ganzzahlige Eingabefeld wird von denselben Regeln konvertiert, die von den Scanfunktionen zum Abgleichen und Konvertieren einer Reihe von **char** -Elementen aus einer Datei verwendet werden. (Bei jedem solchen **char** -Element wird davon ausgegangen, dass es einem entsprechenden `Elem` Element vom Typ durch eine einfache Zuordnung vom Typ "eins zu eins" zugeordnet wird.) Die entsprechende Überprüfungskonvertierungsspezifikation wird wie folgt bestimmt:
 
 Wenn `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), ist die Konvertierungsspezifikation `lo`.
 
@@ -230,7 +230,7 @@ virtual iter_type do_get(
     unsigned long& val) const;
 ```
 
-verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von `ld` durch `lu` ersetzt. Bei Erfolg das numerische Eingabefeld in einen Wert vom Typ sie konvertiert **unsigned long** und speichert diesen Wert in *Val*.
+verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von `ld` durch `lu` ersetzt. Wenn erfolgreich, konvertiert Sie das numerische Eingabefeld in einen Wert vom Typ **Ganzzahl ohne Vorzeichen long** und speichert diesen Wert in *Val*.
 
 Die fünfte virtuelle geschützte Memberfunktion:
 
@@ -243,7 +243,7 @@ virtual iter_type do_get(
     long long& val) const;
 ```
 
-verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von `ld` durch `lld` ersetzt. Bei Erfolg das numerische Eingabefeld in einen Wert vom Typ sie konvertiert **long long** und speichert diesen Wert in *Val*.
+verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von `ld` durch `lld` ersetzt. Wenn erfolgreich, konvertiert Sie das numerische Eingabefeld in einen Wert vom Typ **Long Long** und speichert diesen Wert in *Val*.
 
 Die sechste virtuelle geschützte Memberfunktion:
 
@@ -256,7 +256,7 @@ virtual iter_type do_get(
     unsigned long long& val) const;
 ```
 
-verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von `ld` durch `llu` ersetzt. Bei Erfolg das numerische Eingabefeld in einen Wert vom Typ sie konvertiert **long long ohne Vorzeichen** und speichert diesen Wert in *Val*.
+verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von `ld` durch `llu` ersetzt. Wenn erfolgreich, konvertiert Sie das numerische Eingabefeld in einen Wert vom Typ **Ganzzahl ohne Vorzeichen long long** und speichert diesen Wert in *Val*.
 
 Die siebte virtuelle geschützte Memberfunktion:
 
@@ -297,7 +297,7 @@ virtual iter_type do_get(
 
 verhält sich wie das achte, außer dass der entsprechende Überprüfungskonvertierungsspezifizierer `Lf` ist.
 
-Der zehnte virtuelle geschützte Memberfunktion:
+Die zehnte virtuelle geschützte Member-Funktion:
 
 ```cpp
 virtual iter_type do_get(
@@ -321,7 +321,7 @@ virtual iter_type do_get(
     bool& val) const;
 ```
 
-verhält sich wie die erste, außer dass sie versucht, eine Übereinstimmung für ein vollständiges, nicht leeres boolesches Eingabefeld zu finden. Bei Erfolg das boolesche Eingabefeld in einen Wert vom Typ sie konvertiert **"bool"** und speichert diesen Wert in *Val*.
+verhält sich wie die erste, außer dass sie versucht, eine Übereinstimmung für ein vollständiges, nicht leeres boolesches Eingabefeld zu finden. Wenn erfolgreich, konvertiert Sie das boolesche Eingabefeld in einen Wert vom Typ **bool** und speichert diesen Wert in *Val*.
 
 Ein boolesches Eingabefeld akzeptiert eine von zwei Formen. Wenn `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) falsch ist, ist es mit einem Eingabefeld für ganze Zahlen identisch, mit der Ausnahme, dass der konvertierte Wert entweder 0 (für FALSE) oder 1 (für TRUE) sein muss. Andernfalls muss die Sequenz entweder mit `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()` (für FALSE), oder `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()` (für TRUE) übereinstimmen.
 
@@ -414,19 +414,19 @@ iter_type get(
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Anfang des Zeichenbereichs, aus dem die Zahl gelesen wird.
 
-*last*<br/>
+*letzten*\
 Das Ende des Zeichenbereichs, aus dem die Zahl gelesen wird.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Die [ios_base](../standard-library/ios-base-class.md), deren Flags durch die Konvertierung verwendet werden.
 
-*_State*<br/>
+*_State*\
 Der Zustand, zu dem die Failbit (siehe [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) bei einem Fehler hinzugefügt wird.
 
-*val*<br/>
+*ster*\
 Der gelesene Wert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -437,13 +437,13 @@ Der Iterator, nachdem der Wert gelesen wurde.
 
 Beide Memberfunktionen geben [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`) zurück.
 
-Die erste virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen. Sie beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Eingabefeld für ganze Zahlen erkannt hat. Wenn erfolgreich, sie dieses Feld in seinen äquivalenten Wert als Typ konvertiert **lange** und speichert das Ergebnis in *Val*. Sie gibt einen Iterator zurück, der das erste Element nach dem numerischen Eingabefeld festlegt. Andernfalls speichert die Funktion "nothing" in *Val* und `ios_base::failbit` in _ *Zustand*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für ganze Zahlen festlegt. In beiden Fällen, wenn der Rückgabewert *letzten*, legt die Funktion `ios_base::eofbit` in *_State*.
+Die erste virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen. Sie beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Eingabefeld für ganze Zahlen erkannt hat. Wenn erfolgreich, konvertiert Sie dieses Feld in den entsprechenden Wert als Typ **Long** und speichert das Ergebnis in *Val*. Sie gibt einen Iterator zurück, der das erste Element nach dem numerischen Eingabefeld festlegt. Andernfalls speichert die Funktion nichts im *Val* und legt `ios_base::failbit` in _ *State fest*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für ganze Zahlen festlegt. In beiden Fällen legt `ios_base::eofbit` die Funktion in *_State*fest, wenn der Rückgabewert *Last*ist.
 
-Das Eingabefeld für ganze Zahl wird konvertiert, indem die gleichen Regeln, die von den Überprüfungsfunktionen verwendet wird, für den Abgleich aus, und Konvertieren einer Reihe von **Char** Elemente aus einer Datei. Jedes dieser **Char** wird davon ausgegangen, dass Element soll einem äquivalenten Element vom Typ zuordnen `CharType` durch eine einfache 1: 1-Zuordnung zugeordnet. Die entsprechende Überprüfungskonvertierungsspezifikation wird wie folgt bestimmt:
+Das ganzzahlige Eingabefeld wird von denselben Regeln konvertiert, die von den Scanfunktionen zum Abgleichen und Konvertieren einer Reihe von **char** -Elementen aus einer Datei verwendet werden. Bei jedem solchen **char** -Element wird davon ausgegangen, dass es einem entsprechenden `CharType` Element vom Typ durch eine einfache 1-zu-Eins-Zuordnung zugeordnet wird. Die entsprechende Überprüfungskonvertierungsspezifikation wird wie folgt bestimmt:
 
-- Wenn `iosbase`. [Flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), ist die Konvertierungsspezifikation `lo`.
+- Wenn `iosbase`. [Flags](../standard-library/ios-base-class.md#flags) & [Okt](../standard-library/ios-functions.md#oct), ist`lo`die Konvertierungsspezifikation.`ios_base::basefield` == `ios_base::`
 
-- Wenn **iosbase.flags** & **ios_base:: basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), ist die Konvertierungsspezifikation `lx`.
+- Wenn **iosbase. Flags** & **ios_base:: basefield** == `ios_base::`[Hex](../standard-library/ios-functions.md#hex), ist `lx`die Konvertierungsspezifikation.
 
 - Wenn **iosbase.flags** & **ios_base::basefield** == 0, ist die Konvertierungsspezifikation `li`.
 
@@ -467,7 +467,7 @@ virtual iter_type do_get(iter_type first,
     unsigned long& val) const;
 ```
 
-verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von `ld` durch `lu` ersetzt. Wenn erfolgreich, das numerische Eingabefeld sie in einen Wert vom Typ konvertiert **unsigned long** und speichert diesen Wert in *Val*.
+verhält sich wie die erste, außer dass sie eine Konvertierungsspezifikation von `ld` durch `lu` ersetzt. Wenn erfolgreich, wird das numerische Eingabefeld in einen Wert vom Typ **Ganzzahl ohne Vorzeichen long** konvertiert, und dieser Wert wird in *Val*gespeichert.
 
 Die dritte virtuelle geschützte Memberfunktion:
 
@@ -491,7 +491,7 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```
 
-verhält sich die dritte, außer dass der entsprechende überprüfungskonvertierungsspezifizierer `Lf`.
+verhält sich wie das dritte, mit der Ausnahme, dass der entsprechende Scan Konvertierungsspezifizierer ist `Lf`.
 
 Die fünfte virtuelle geschützte Memberfunktion:
 
@@ -515,7 +515,7 @@ virtual iter_type do_get(iter_type first,
     bool& val) const;
 ```
 
-verhält sich wie die erste, außer dass sie versucht, eine Übereinstimmung für ein vollständiges, nicht leeres boolesches Eingabefeld zu finden. Bei Erfolg das boolesche Eingabefeld in einen Wert vom Typ sie konvertiert **"bool"** und speichert diesen Wert in *Val*.
+verhält sich wie die erste, außer dass sie versucht, eine Übereinstimmung für ein vollständiges, nicht leeres boolesches Eingabefeld zu finden. Wenn erfolgreich, konvertiert Sie das boolesche Eingabefeld in einen Wert vom Typ **bool** und speichert diesen Wert in *Val*.
 
 Ein boolesches Eingabefeld nimmt eine von zwei Formen an. Wenn **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) **FALSE** ist, ist es identisch mit einem Eingabefeld für ganze Zahlen, mit der Ausnahme, dass der konvertierte Wert entweder 0 für **FALSE**) oder 1 (für **TRUE**) sein muss. Andernfalls muss die Sequenz entweder mit **fac**. [falsename](../standard-library/numpunct-class.md#falsename) (für **FALSE**), oder **fac**. [truename](../standard-library/numpunct-class.md#truename) (für **TRUE**) übereinstimmen.
 
@@ -573,14 +573,14 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs*<br/>
+*_Refs*\
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
+Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebiets Schemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
@@ -588,10 +588,10 @@ Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Facet-Klasse](../standard-library/locale-class.md#facet_class)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet-Klasse](../standard-library/locale-class.md#facet_class)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

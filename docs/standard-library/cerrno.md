@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cerrno header
 ms.assetid: c618f95c-ad4b-4a6f-825b-8727322ec77a
-ms.openlocfilehash: 04c8fd66edc8a61c3964241e41ef7ef1b6c88752
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1186a1e3c58c34de53f7a9835eaf9fd188593301
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244979"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455498"
 ---
 # <a name="ltcerrnogt"></a>&lt;cerrno&gt;
 
-Schließt den Standard C-bibliotheksheader \<errno.h > und fügt die verknüpften Namen zum die `std` Namespace. Einschließen dieses Headers wird sichergestellt, dass die Namen deklariert, mit externer Bindung im Standard C-bibliotheksheader, in deklariert werden der `std` Namespace.
+Schließt den C-Standard Bibliotheks \<Header errno. h > ein und fügt die verknüpften `std` Namen zum-Namespace hinzu. Durch einschließen dieses Headers wird sichergestellt, dass die mit externer Verknüpfung im C-Standard Bibliotheks Header deklarierten `std` Namen im-Namespace deklariert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -109,10 +109,10 @@ Schließt den Standard C-bibliotheksheader \<errno.h > und fügt die verknüpfte
 
 ### <a name="remarks"></a>Hinweise
 
-Die Makros, die hier werden durch den POSIX-Standard definiert.
+Die Makros werden hier durch den POSIX-Standard definiert.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Übersicht über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

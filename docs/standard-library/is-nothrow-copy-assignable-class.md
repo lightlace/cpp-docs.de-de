@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_assignable
 ms.assetid: baa8abd6-4f53-489f-abba-8d5d5c53bbbc
-ms.openlocfilehash: bb3aca47b61bdcc5b28eeedc1a6b4edefc303c4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 330c97cd945e161d2bf47deb377dd732bf53b3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383593"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455976"
 ---
 # <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable-Klasse
 
@@ -26,12 +26,12 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-*T*<br/>
+*BUND*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats enthält "true" für einen referenzierbare *T* , in denen `is_nothrow_assignable<T&, const T&>` enthält true ist; andernfalls ist Sie false.
+Eine Instanz des typprädikats ist true für einen referenzierbaren  Typ T `is_nothrow_assignable<T&, const T&>` , wobei true ist; andernfalls false.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,5 +41,5 @@ Eine Instanz des typprädikats enthält "true" für einen referenzierbare *T* , 
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_nothrow_assignable-Klasse](../standard-library/is-nothrow-assignable-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Is_nothrow_assignable-Klasse](../standard-library/is-nothrow-assignable-class.md)

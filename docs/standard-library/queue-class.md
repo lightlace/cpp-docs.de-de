@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240401"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458347"
 ---
 # <a name="queue-class"></a>queue-Klasse
 
@@ -42,19 +42,19 @@ class queue
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*\
+*Sorte*\
 Der in der Warteschlange zu speichernde Elementdatentyp.
 
-*Container*\
+*Kum*\
 Der Typ des zugrunde liegenden Containers, der verwendet wird, um die Warteschlange zu implementieren.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Elemente der Klasse `Type` , die im ersten Vorlagenparameter eines Warteschlangenobjekts sind, sind gleichbedeutend mit [Value_type](#value_type) und muss mit dem Typ des Elements in der zugrunde liegenden Containerklasse `Container` vorgesehenen durch die zweiten Vorlagenparameter. Die `Type` muss zuweisbar sein, damit, dass es möglich, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.
+Die Elemente der- `Type` Klasse, die im ersten Vorlagen Parameter eines Queue-Objekts festgelegt sind, entsprechen [value_type](#value_type) und müssen mit dem Typ des Elements in der `Container` zugrunde liegenden Container Klasse, die von der zweiten Vorlage festgelegt wird, entsprechen. Parame. `Type` Muss zugewiesen werden können, sodass es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.
 
-Geeignete zugrunde liegende Containerklassen für die Warteschlange sind [doppelschlange](../standard-library/deque-class.md) und [Liste](../standard-library/list-class.md), oder ein beliebiger sequenzcontainer, die den Betrieb unterstützt `front`, `back`, `push_back`, und `pop_front`. Die zugrunde liegende Containerklasse wird im Containeradapter gekapselt, der nur den begrenzten Satz der Memberfunktionen des Sequenzcontainers als öffentliche Schnittstelle verfügbar macht.
+Geeignete zugrunde liegende Containerklassen für die Warteschlange sind [Deque](../standard-library/deque-class.md) und [List](../standard-library/list-class.md)oder ein beliebiger anderer Sequenz Container, `front`der die `push_back`Vorgänge von `pop_front`, `back`, und unterstützt. Die zugrunde liegende Containerklasse wird im Containeradapter gekapselt, der nur den begrenzten Satz der Memberfunktionen des Sequenzcontainers als öffentliche Schnittstelle verfügbar macht.
 
-Die Warteschlangenobjekte sind ausschließlich auf Gleichheit vergleichbar nur, wenn die Elemente der Klasse `Type` auf Gleichheit vergleichbar sind, und sind kleiner-als vergleichbar nur, wenn die Elemente der Klasse `Type` kleiner-als vergleichbar sind.
+Die Warteschlangen Objekte sind bei und nur dann vergleichbar, wenn die Elemente `Type` der Klasse auf Gleichheit vergleichbar sind, und sind nur dann weniger als vergleichbar, wenn die Elemente `Type` der Klasse kleiner als vergleichbar sind.
 
 Es gibt drei Arten von Containeradaptern, die von der C++-Standardbibliothek definiert werden: Stapel, Warteschlangen und Warteschlangen mit hoher Priorität. Jede schränkt die Funktionalität von einigen zugrunde liegenden Containerklassen ein, um eine präzise gesteuerte Oberfläche für eine Standarddatenstruktur anzubieten.
 
@@ -91,7 +91,7 @@ Es gibt drei Arten von Containeradaptern, die von der C++-Standardbibliothek def
 |[push](#push)|Fügt am Ende der `queue` ein Element hinzu.|
 |[size](#size)|Gibt die Anzahl von Elementen in der `queue` zurück.|
 
-## <a name="back"></a> Zurück
+## <a name="back"></a>Zurück
 
 Gibt einen Verweis auf das letzte und das zuletzt hinzugefügte Element auf der Rückseite der Warteschlange zurück.
 
@@ -107,7 +107,7 @@ Das letzte Element der Warteschlange. Wenn die Warteschlange leer ist, ist der R
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Rückgabewert von `back` einem `const_reference` zugewiesen wird, kann das Warteschlangenobjekt nicht geändert werden. Wenn der Rückgabewert von `back` zugewiesen ist eine `reference`, kann das Warteschlangenobjekt geändert werden.
+Wenn der Rückgabewert von `back` einem `const_reference` zugewiesen wird, kann das Warteschlangenobjekt nicht geändert werden. Wenn der Rückgabewert von `back` einem `reference`zugewiesen wird, kann das Warteschlangen Objekt geändert werden.
 
 Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einer leeren Warteschlange ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) .
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a> container_type
+## <a name="container_type"></a>container_type
 
 Ein Typ, der den anzupassenden Basiscontainer bereitstellt.
 
@@ -155,7 +155,7 @@ Weitere Informationen zu `Container` finden Sie im Abschnitt „Hinweise“ des 
 
 Im Beispiel für [Warteschlange](#queue) wird verdeutlicht, wie ein `container_type` deklariert und verwendet wird.
 
-## <a name="empty"></a> leere
+## <a name="empty"></a>leer
 
 Testet, ob eine Warteschlange leer ist.
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a> Vorderseite
+## <a name="front"></a>Beifahrer
 
 Gibt einen Verweis auf das erste Element auf der Vorderseite einer Warteschlange zurück.
 
@@ -217,9 +217,9 @@ Das erste Element der Warteschlange. Wenn die Warteschlange leer ist, ist der R�
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Rückgabewert von `front` einem `const_reference` zugewiesen wird, kann das Warteschlangenobjekt nicht geändert werden. Wenn der Rückgabewert von `front` zugewiesen ist eine `reference`, kann das Warteschlangenobjekt geändert werden.
+Wenn der Rückgabewert von `front` einem `const_reference` zugewiesen wird, kann das Warteschlangenobjekt nicht geändert werden. Wenn der Rückgabewert von `front` einem `reference`zugewiesen wird, kann das Warteschlangen Objekt geändert werden.
 
-Die Memberfunktion gibt ein `reference` auf das erste Element der kontrollierten Sequenz, die nicht leer sein darf.
+Die Member-Funktion gibt `reference` ein an das erste Element der kontrollierten Sequenz zurück, das nicht leer sein darf.
 
 Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einer leeren Warteschlange ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) .
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a> POP
+## <a name="pop"></a>Chor
 
 Entfernt ein Element von der Vorderseite der Warteschlange.
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a> Pushbenachrichtigungen
+## <a name="push"></a>Push
 
 Fügt am Ende der Warteschlange ein Element hinzu.
 
@@ -319,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-*val*\
+*ster*\
 Das Element, das am Ende der Warteschlange hinzugefügt wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -358,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a> Warteschlange
+## <a name="queue"></a>Ei
 
 Erstellt eine Warteschlange, die leer oder eine Kopie eines Basiscontainerobjekts ist.
 
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a> Größe
+## <a name="size"></a>Größe
 
 Gibt die Anzahl der Elemente in der Warteschlange zurück.
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 Ein Ganzzahltyp ohne Vorzeichen, der die Anzahl von Elementen in einer Warteschlange darstellen kann.
 
@@ -482,7 +482,7 @@ Der Typ ist ein Synonym für das `size_type` des Basiscontainers, der von der Wa
 
 Im Beispiel für [queue::front](#front) wird verdeutlicht, wie ein `size_type` deklariert und verwendet wird.
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Ein Typ, der den Objekttyp angibt, der als Element in einer Warteschlange gespeichert wird.
 
@@ -526,5 +526,5 @@ The element at the front of the queue is 69.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

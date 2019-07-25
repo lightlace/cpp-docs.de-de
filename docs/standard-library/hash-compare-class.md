@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-ms.openlocfilehash: f535122b67f854b8b204664b829ce9da5fe3c6a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 399b412c41128f513cf01d1e034bad2bbc5ef79f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159820"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448809"
 ---
 # <a name="hashcompare-class"></a>hash_compare-Klasse
 
@@ -23,15 +23,15 @@ Klasse hash_compare { Traits comp; public: const size_t bucket_size = 4; const s
 
 ## <a name="remarks"></a>Hinweise
 
-Jeder hashassoziative Container speichert ein hashmerkmaleobjekt des Typs `Traits` (ein Vorlagenparameter). Sie können eine Klasse aus einer Spezialisierung von „hash_compare“ ableiten, um gezielt bestimmte Funktionen und Objekte zu überschreiben, oder Sie können eine eigene Version dieser Klasse angeben, wenn Sie bestimmte Mindestanforderungen einhalten. Insbesondere für ein Objekt "hash_comp" des Typs `hash_compare<Key, Traits>`, die oben genannten Container folgende Verhalten erforderlich ist:
+Jeder Hash assoziative Container speichert ein Hash Merkmale-Objekt vom `Traits` Typ (einen Vorlagen Parameter). Sie können eine Klasse aus einer Spezialisierung von „hash_compare“ ableiten, um gezielt bestimmte Funktionen und Objekte zu überschreiben, oder Sie können eine eigene Version dieser Klasse angeben, wenn Sie bestimmte Mindestanforderungen einhalten. Insbesondere für ein Objekt Hash_comp vom Typ `hash_compare<Key, Traits>`ist das folgende Verhalten für die oben genannten Container erforderlich:
 
-- Für alle Werte `key` des Typs `Key`, den Aufruf **"hash_comp"**(`key`) dient als eine Hashfunktion, die ergibt eine Verteilung von Werten des Typs `size_t`. Die von „hash_compare“ bereitgestellte Funktion gibt `key` zurück.
+- Für alle Werte `key` des Typs `Key`fungiert der **Hash_comp**(`key`)-Befehl als Hash Funktion, die eine Verteilung der Werte vom Typ `size_t`ergibt. Die von „hash_compare“ bereitgestellte Funktion gibt `key` zurück.
 
-- Für jeden Wert `key1` des Typs `Key` vorausgeht, die `key2` in der Sequenz und hat die gleiche Hashwert (der Wert, den die Hashfunktion zurückgegeben), **"hash_comp"**(`key2`, `key1`) ist "false". Die Funktion muss eine vollständige Ordnung für Werte vom Typ vorgeben `Key`. Gibt zurück, die von "hash_compare" bereitgestellte Funktion *Comp*(`key2`, `key1`) `,` , in denen *Comp* ein gespeichertes Objekt des Typs `Traits` , dass Sie, wenn angeben können Sie Erstellen Sie das Objekt "hash_comp". Für den standardmäßigen `Traits` Parametertyp `less<Key>`, Sortierschlüssel nie verringert.
+- Für jeden Wert `key1` des Typs `Key` , `key2` der in der Sequenz vorangestellt ist und denselben Hashwert hat (der Wert, der von der Hash Funktion zurück`key2`gegeben `key1`wird), ist **Hash_comp**(,) false. Die-Funktion muss eine Gesamt Reihenfolge für Werte des `Key`Typs erzwingen. Die von Hash_compare bereitgestellte Funktion gibt Comp`key2`( `key1`, `,` ) zurück, wobei *Comp* ein gespeichertes Objekt vom Typ `Traits` ist, das Sie beim Erstellen des Objekts Hash_comp angeben können. Für den Standard `Traits` Parametertyp `less<Key>`verringern Sortierschlüssel niemals den Wert.
 
-- Die ganzzahlige Konstante `bucket_size` gibt die durchschnittliche Anzahl von Elementen pro "Bucket" (hashtabelleneintrag), der Container sollte, nicht zu überschreiten. Der Wert der Konstanten muss größer als 0 sein. „hash_compare“ stellt den Wert „4“ bereit.
+- Die ganzzahlige Konstante `bucket_size` gibt die durchschnittliche Anzahl von Elementen pro "Bucket" (Hash Tabelleneintrag) an, die der Container nicht überschreiten soll. Der Wert der Konstanten muss größer als 0 sein. „hash_compare“ stellt den Wert „4“ bereit.
 
-- Die ganzzahlige Konstante `min_buckets` gibt an, die minimale Anzahl von Buckets an, in der Hashtabelle verwaltet. Der Wert der Konstanten muss eine Potenz von zwei und größer als 0 sein. „hash_compare“ stellt den Wert „8“ bereit.
+- Die ganzzahlige Konstante `min_buckets` gibt die Mindestanzahl von Buchern an, die in der Hash Tabelle verwaltet werden sollen. Der Wert der Konstanten muss eine Potenz von zwei und größer als 0 sein. „hash_compare“ stellt den Wert „8“ bereit.
 
 ## <a name="example"></a>Beispiel
 
@@ -45,5 +45,5 @@ Beispiele, wie „hash_compare“ deklariert und verwendet wird, finden Sie in d
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

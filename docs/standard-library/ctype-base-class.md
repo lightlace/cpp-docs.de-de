@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394181"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449360"
 ---
 # <a name="ctypebase-class"></a>ctype_base-Klasse
 
@@ -69,7 +69,7 @@ Definiert eine Enumerationsmaske. Jede Enumerationskonstante kennzeichnet eine a
 
 - **graph** ([isgraph](../standard-library/locale-functions.md#isgraph)-Funktion)
 
-Eine Kombination von Klassifikationen kann durch Verknüpfen dieser Konstanten mit OR beschrieben werden. Es ist immer, die "true" **Alnum** == ( **Alpha** &#124; **Ziffer** \) und **Graph** \= \= \( **Alnum** &#124; **Punct**).
+Eine Kombination von Klassifikationen kann durch Verknüpfen dieser Konstanten mit OR beschrieben werden. Insbesondere ist es immer true, dass **"alnum"** = = ( **Alpha** &#124; **Digit** \) und **Graph** \= \= \( **"alnum"** &#124; **punct**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,4 +79,4 @@ Eine Kombination von Klassifikationen kann durch Verknüpfen dieser Konstanten m
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

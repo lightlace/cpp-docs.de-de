@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_constructible
 ms.assetid: f13a0bea-63b1-492a-9a45-d445df35c282
-ms.openlocfilehash: 7682ce8fd8f127ac20a20fb0918e69d8c2d76947
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 229083f4569647bd65d1ce7e640f753a9418371d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413670"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455959"
 ---
 # <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible-Klasse
 
@@ -26,12 +26,12 @@ struct is_nothrow_copy_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* verfügt über einen Nothrow Kopierkonstruktor, andernfalls er false enthält.
+Eine Instanz des typprädikats ist "true",  wenn die typentität einen nothrow-Kopierkonstruktor aufweist; andernfalls "false".
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,4 +41,4 @@ Eine Instanz des typprädikats ist true, wenn der Typ *Ty* verfügt über einen 
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_function_pointer class
 - is_member_function_pointer
 ms.assetid: 02e372c4-2714-40f2-b376-2e10ca91c8ed
-ms.openlocfilehash: 0eb758977abf889a7d5ec8cdec9213980493ba2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1f51c389e86f2d0550a6418d04080f40f4bf4204
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351929"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456179"
 ---
 # <a name="ismemberfunctionpointer-class"></a>is_member_function_pointer-Klasse
 
@@ -27,12 +27,12 @@ struct is_member_function_pointer;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein Zeiger auf eine Memberfunktion oder ein `cv-qualified` Zeiger auf Memberfunktion ist; andernfalls "false".
+Eine Instanz des typprädikats ist "true",  wenn die typty ein Zeiger auf eine Element `cv-qualified` Funktion oder ein Zeiger auf eine Member-Funktion ist; andernfalls "false".
 
 ## <a name="example"></a>Beispiel
 
@@ -85,5 +85,5 @@ is_member_function_pointer<int (functional::*)()> == true
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_pointer-Klasse](../standard-library/is-member-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_member_pointer-Klasse](../standard-library/is-member-pointer-class.md)

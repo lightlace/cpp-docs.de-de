@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - iomanip header
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
-ms.openlocfilehash: 983fbc190fb83b81534e3888c748c0bf9c235638
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9da0de64bbb0ef48a6a9741ff941e6abda0e705
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404935"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449210"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-Enthalten die `iostreams` Standardheader \<Iomanip > um verschiedene Manipulatoren zu definieren, die jeweils ein einzelnes Argument nutzen.
+Schließen Sie `iostreams` den Standard \<Header iomanip > ein, um mehrere Manipulatoren zu definieren, die jeweils ein einzelnes Argument annehmen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,7 +26,7 @@ Enthalten die `iostreams` Standardheader \<Iomanip > um verschiedene Manipulator
 
 ## <a name="remarks"></a>Hinweise
 
-Jeder dieser Manipulatoren gibt einen nicht angegebenen Typ, der Namen `T1` über `T10`, methodenüberladungen, die beide `basic_istream` \< **Elem**, **Tr** > `::` [Operator >>](../standard-library/istream-operators.md#op_gt_gt) und `basic_ostream` \< **Elem**, **Tr** > `::` [Operator <<](../standard-library/ostream-operators.md#op_lt_lt).
+Jeder dieser Manipulatoren gibt einen nicht angegebenen Typ zurück, der `T1` durch `T10`aufgerufen wird, der sowohl `basic_istream` \< **Elem**-als auch **TR**>`::`-[Operator > >](../standard-library/istream-operators.md#op_gt_gt) und `basic_ostream` **Elem**, TR->Operator[< <](../standard-library/ostream-operators.md#op_lt_lt).`::` \<
 
 ### <a name="manipulators"></a>Manipulatoren
 
@@ -46,7 +46,7 @@ Jeder dieser Manipulatoren gibt einen nicht angegebenen Typ, der Namen `T1` übe
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
-[iostreams-Konventionen](../standard-library/iostreams-conventions.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream-Programmierung](../standard-library/iostream-programming.md)\
+[iostreams-Konventionen](../standard-library/iostreams-conventions.md)

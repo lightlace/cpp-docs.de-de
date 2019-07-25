@@ -38,12 +38,12 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-ms.openlocfilehash: 47e0a1e51809efad2924a2051d1627fe2e9ff95f
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: a34346b4fc15beb605836037ef8a05a541562f33
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400679"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451511"
 ---
 # <a name="regextraits-class"></a>regex_traits-Klasse
 
@@ -58,12 +58,12 @@ class regex_traits
 
 ## <a name="parameters"></a>Parameter
 
-*Elem*<br/>
+*Elem*\
 Der zu beschreibende Zeichenfolgentyp.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt verschiedene Merkmale des regulären Ausdrucks für den Typ *Elem*. Die Vorlagenklasse [Basic_regex-Klasse](../standard-library/basic-regex-class.md) verwendet diese Informationen zum Bearbeiten von Elementen des Typs *Elem*.
+Die Vorlagen Klasse beschreibt verschiedene Merkmale regulärer Ausdrücke für den Typ *Elem*. Die Vorlagen Klasse [basic_regex-Klasse](../standard-library/basic-regex-class.md) verwendet diese Informationen zum Bearbeiten von Elementen des Typs *Elem*.
 
 Jedes `regex_traits` -Objekt enthält ein Objekt des Typs `regex_traits::locale` , das von einigen seiner Memberfunktionen verwendet wird. Das Standardgebietsschema ist eine Kopie von `regex_traits::locale()`. Die Memberfunktion `imbue` ersetzt das lokale Objekt, und die `getloc` -Memberfunktion gibt eine Kopie des Gebietsschemaobjekts zurück.
 
@@ -90,7 +90,7 @@ Jedes `regex_traits` -Objekt enthält ein Objekt des Typs `regex_traits::locale`
 |[getloc](#getloc)|Gibt das gespeicherte Gebietsschemaobjekt zurück.|
 |[imbue](#imbue)|Ändert das gespeicherte Gebietsschemaobjekt.|
 |[isctype](#isctype)|Führt einen Test hinsichtlich der Mitgliedschaft durch.|
-|[length](#length)|Die Länge einer Null endende Sequenz zurückgegeben.|
+|[length](#length)|Gibt die Länge einer null terminierten Sequenz zurück.|
 |[lookup_classname](#lookup_classname)|Ordnet eine Sequenz einer Zeichenklasse zu.|
 |[lookup_collatename](#lookup_collatename)|Ordnet eine Sequenz einem Sortierungselement zu.|
 |[transform](#transform)|Konvertiert in eine äquivalente sortierte Sequenz.|
@@ -221,12 +221,12 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parameter
 
-*loc*<br/>
+*a.a.o.* \
 Das zu speichernde Gebietsschemaobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion kopiert *Loc* gespeicherten `locale` Objekt und gibt eine Kopie des vorherigen Werts des gespeicherten `locale` Objekt.
+Die Member-Funktion kopiert *Loc* in das `locale` gespeicherte-Objekt und gibt eine Kopie des vorherigen Werts des gespeicherten `locale` -Objekts zurück.
 
 ## <a name="isctype"></a> regex_traits::isctype
 
@@ -238,19 +238,19 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parameter
 
-*ch*<br/>
+*ch*\
 Das zu testende Element.
 
-*cls*<br/>
+*CLS*\
 Die Klassen, für die der Test ausgeführt wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt "true" zurück, wenn nur das Zeichen *ch* befindet sich in der vom angegebenen Zeichenklasse *Cls*.
+Die Member-Funktion gibt nur dann true zurück, wenn das Zeichen *ch* in der von *CLS*bezeichneten Zeichenklasse ist.
 
 ## <a name="length"></a> regex_traits::length
 
-Die Länge einer Null endende Sequenz zurückgegeben.
+Gibt die Länge einer null terminierten Sequenz zurück.
 
 ```cpp
 static size_type length(const char_type *str);
@@ -258,8 +258,8 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
-Die nullterminierte Sequenz.
+*SRT*\
+Die NULL terminierte Sequenz.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -288,10 +288,10 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Anfang der Sequenz, die gesucht werden soll.
 
-*last*<br/>
+*letzten*\
 Ende der Sequenz, die gesucht werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -313,10 +313,10 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Anfang der Sequenz, die gesucht werden soll.
 
-*last*<br/>
+*letzten*\
 Ende der Sequenz, die gesucht werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -372,10 +372,10 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Anfang der umzuwandelnden Sequenz.
 
-*last*<br/>
+*letzten*\
 Das Ende der umzuwandelnden Sequenz.
 
 ### <a name="remarks"></a>Hinweise
@@ -393,10 +393,10 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Anfang der umzuwandelnden Sequenz.
 
-*last*<br/>
+*letzten*\
 Das Ende der umzuwandelnden Sequenz.
 
 ### <a name="remarks"></a>Hinweise
@@ -413,7 +413,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parameter
 
-*ch*<br/>
+*ch*\
 Das zu konvertierende Element.
 
 ### <a name="remarks"></a>Hinweise
@@ -430,7 +430,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parameter
 
-*ch*<br/>
+*ch*\
 Das zu konvertierende Element.
 
 ### <a name="remarks"></a>Hinweise
@@ -447,25 +447,25 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parameter
 
-*ch*<br/>
+*ch*\
 Das zu konvertierende Element.
 
-*radix*<br/>
+*Basis*\
 Die zu verwendende arithmetische Basis.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt den Wert, der durch das Zeichen dargestellt *ch* in der Basisklasse *Basis*, oder -1, wenn *ch* ist keine gültige Ziffer in der Basisklasse *Basis*. Die Funktion wird nur aufgerufen werden, mit einem *Basis* Argument von 8, 10 oder 16.
+Die Member-Funktion gibt den Wert zurück, der durch das Zeichen *ch* im Basis- *Basis*dargestellt wird, oder-1, wenn *ch* keine gültige Ziffer im Basis- *Basis*ist. Die-Funktion wird nur mit einem *Basis* -Argument von 8, 10 oder 16 aufgerufen.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants-Klasse](../standard-library/regex-constants-class.md)<br/>
-[regex_error-Klasse](../standard-library/regex-error-class.md)<br/>
-[\<regex>-Funktionen](../standard-library/regex-functions.md)<br/>
-[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)<br/>
-[\<regex>-Operatoren](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)<br/>
-[\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)<br/>
-[Regex_traits\<Char >-Klasse](../standard-library/regex-traits-char-class.md)<br/>
-[regex_traits\<wchar_t>-Klasse](../standard-library/regex-traits-wchar-t-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants-Klasse](../standard-library/regex-constants-class.md)\
+[regex_error-Klasse](../standard-library/regex-error-class.md)\
+[\<Regex-> Funktionen](../standard-library/regex-functions.md)\
+[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)\
+[\<Regex-> Operatoren](../standard-library/regex-operators.md)\
+[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)\
+[\<Regex-> Typedefs](../standard-library/regex-typedefs.md)\
+[regex_traits\<Char >-Klasse](../standard-library/regex-traits-char-class.md)\
+[regex_traits\<wchar_t>-Klasse](../standard-library/regex-traits-wchar-t-class.md)

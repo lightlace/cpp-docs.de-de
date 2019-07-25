@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_scalar class
 - is_scalar
 ms.assetid: a0cdfc9a-f27e-4808-890f-6ed7942db60c
-ms.openlocfilehash: 2b981e009b895d55c251bc55a654739fe1eb5b95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d562ba4beb037d547846f57e7b40eaceb409a358
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413538"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449808"
 ---
 # <a name="isscalar-class"></a>is_scalar-Klasse
 
@@ -27,12 +27,12 @@ struct is_scalar;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein integraler Typ, ein Gleitkommawert Typ, ein Enumerationstyp, ein Zeigertyp oder ein Zeiger auf einen Membertyp oder ein `cv-qualified` -Formular von einem davon ist, andernfalls er false enthält.
+Eine Instanz des typprädikats ist "true",  wenn die typität ein ganzzahliger Typ, ein Gleit kommatyp, ein Enumerationstyp, ein Zeigertyp oder ein Zeiger `cv-qualified` auf einen Elementtyp oder ein-Formular von einem davon ist, andernfalls "false".
 
 ## <a name="example"></a>Beispiel
 
@@ -77,5 +77,5 @@ is_scalar<float> == true
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound-Klasse](../standard-library/is-compound-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_compound-Klasse](../standard-library/is-compound-class.md)

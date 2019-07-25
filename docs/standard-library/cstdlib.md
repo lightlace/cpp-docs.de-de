@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - cstdlib header
 ms.assetid: 0a6aaebf-84e9-4b60-ae90-17e11981cf54
-ms.openlocfilehash: 70e05ad734fa49ba8cb96e4bf83bc05b99c5f55c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 298d6a512b2863a326bda0670f33fe8f1bda0688
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246526"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449408"
 ---
 # <a name="ltcstdlibgt"></a>&lt;cstdlib&gt;
 
-Schließt den Standard C-bibliotheksheader \<stdlib.h > und fügt die verknüpften Namen zum die `std` Namespace. Einschließen dieses Headers wird sichergestellt, dass die Namen deklariert, mit externer Bindung im standard C-bibliotheksheader, in deklariert werden der `std` Namespace.
+Schließt den C-Standard Bibliotheks \<Header STDLIB. h > ein und fügt die verknüpften `std` Namen zum-Namespace hinzu. Durch einschließen dieses Headers wird sichergestellt, dass die mit externer Verknüpfung im C-Standard Bibliotheks Header deklarierten `std` Namen im-Namespace deklariert werden.
 
 > [!NOTE]
-> \<STDLIB.h > Schließen Sie den Typ nicht **"wchar_t"** .
+> \<STDLIB. h > enthält nicht den Typ **wchar_t**.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header**: \<Cstdlib >
+**Header**: \<cstdlib >
 
 **Namespace:** std
 
@@ -43,7 +43,7 @@ namespace std {
 #define MB_CUR_MAX
 ```
 
-## <a name="exposition-only-functions"></a>Darstellung nur Funktionen
+## <a name="exposition-only-functions"></a>Funktionen nur für die Ausstellung
 
 ```cpp
 extern "C" using c-atexit-handler = void();
@@ -52,20 +52,20 @@ extern "C" using c-compare-pred = int(const void*, const void*);
 extern "C++" using compare-pred = int(const void*, const void*);
 ```
 
-## <a name="start-and-termination-functions"></a>Starten und Beenden von Funktionen
+## <a name="start-and-termination-functions"></a>Start-und Beendigungs Funktionen
 
 |Funktion|Beschreibung|
 |-|-|
-|[_Exit](#_exit)|Beendet die Anwendung ohne mit Destruktoren oder registrierten Funktionen.|
-|[abort](#abort)|Beendet die Anwendung ohne Verwenden von Destruktoren.|
-|[atexit](#atexit)|Register-Funktion für die Beendigung des Programms.|
-|[exit](#exit)|Zerstört Objekte mit Threads und der statischen Speicher, dann gibt die Steuerung an.|
-|[at_quick_exit](#at_quick_exit)|Register-Funktion ohne Argumente für die Beendigung des Programms.|
-|[quick_exit](#quick_exit)|Register-Funktion mit beibehaltenen Objekten für die Beendigung des Programms.|
-|[getenv](#getenv)|Finden Sie unter C-standard-Bibliothek-Referenz.|
-|[system](#system)|Finden Sie unter C-standard-Bibliothek-Referenz.|
+|[_Exit](#_exit)|Beendet das Programm, ohne debugtoren oder registrierte Funktionen zu verwenden.|
+|[abort](#abort)|Beendet das Programm ohne deerdeerdeverwendung.|
+|[atexit](#atexit)|Registriert die Funktion für die Programm Beendigung.|
+|[exit](#exit)|Zerstört Objekte mit Thread-und statischem Speicher und gibt dann die Steuerung zurück.|
+|[at_quick_exit](#at_quick_exit)|Registriert die Funktion ohne Argumente für die Programm Beendigung.|
+|[quick_exit](#quick_exit)|Registriert die Funktion mit beibehaltenen Objekten für die Programm Beendigung.|
+|[getenv](#getenv)|Siehe C-Standard Bibliotheks Referenz.|
+|[system](#system)|Siehe C-Standard Bibliotheks Referenz.|
 
-### <a name="_exit"></a> _Exit
+### <a name="_exit"></a>_Exit
 
 ```cpp
 [[noreturn]] void _Exit(int status) noexcept;
@@ -73,9 +73,9 @@ extern "C++" using compare-pred = int(const void*, const void*);
 
 #### <a name="remarks"></a>Hinweise
 
-Das Programm wird beendet, ohne dass die Destruktoren für automatische Objekte, Thread oder statischer Speicherdauer ausgeführt und ohne Aufrufen von Funktionen, die an `atexit()`. Die Funktion `_Exit` Signal-sicher ist.
+Das Programm wird beendet, ohne dass Dekonstruktoren für Objekte der automatischen, Thread-oder statischen Speicherdauer ausgeführt werden und keine `atexit()`Funktionen aufgerufen werden, die an übermittelt werden. Die Funktion `_Exit` ist Signal sicher.
 
-### <a name="abort"></a> Abbrechen
+### <a name="abort"></a>Abbruch
 
 ```cpp
 [[noreturn]] void abort() noexcept;
@@ -83,9 +83,9 @@ Das Programm wird beendet, ohne dass die Destruktoren für automatische Objekte,
 
 #### <a name="remarks"></a>Hinweise
 
-Das Programm wird beendet, ohne dass die Destruktoren für automatische Objekte, Thread oder statischer Speicherdauer ausgeführt und ohne Aufrufen von Funktionen, die an `atexit()`. Die Funktion `abort` Signal-sicher ist.
+Das Programm wird beendet, ohne dass Dekonstruktoren für Objekte der automatischen, Thread-oder statischen Speicherdauer ausgeführt werden und keine `atexit()`Funktionen aufgerufen werden, die an übermittelt werden. Die Funktion `abort` ist Signal sicher.
 
-### <a name="at_quick_exit"></a> at_quick_exit
+### <a name="at_quick_exit"></a>at_quick_exit
 
 ```cpp
 int at_quick_exit(c-atexit-handler * func) noexcept;
@@ -94,13 +94,13 @@ int at_quick_exit(atexit-handler * func) noexcept;
 
 #### <a name="return-value"></a>Rückgabewert
 
-0 (null), wenn die Registrierung erfolgreich ist, die ungleich NULL, wenn schlägt fehl.
+0 (null), wenn die Registrierung erfolgreich ist, andernfalls ungleich 0 (null).
 
 #### <a name="remarks"></a>Hinweise
 
-Die `at_quick_exit()` Funktionen registrieren die Funktion verweist *Func* ohne Argumente aufgerufen werden beim `quick_exit` aufgerufen wird. Es wurde ein nicht angegeben, ob ein Aufruf zum `at_quick_exit()` dies nicht der Fall vor allen Aufrufen von `quick_exit` wird erfolgreich ausgeführt und die `at_quick_exit()` Funktionen führen ein Datenrace. Möglicherweise ist die Reihenfolge der Registrierung unbestimmt Wenn `at_quick_exit` hieß aus mehr als einem Thread und seit `at_quick_exit` Registrierungen unterscheiden sich von der `atexit` Registrierungen, Anwendungen müssen möglicherweise beide Registrierungsfunktionen mit Aufrufen der dasselbe Argument. Die Implementierung muss die Registrierung von mindestens 32 Funktionen unterstützen.
+Die `at_quick_exit()` Funktionen registrieren die Funktion, auf die *Func* verweist, wenn `quick_exit` aufgerufen wird, ohne Argumente aufzurufen. Es ist nicht angegeben, ob ein Aufruf `at_quick_exit()` von, der nicht vor allen Aufrufen `quick_exit` von erfolgt, erfolgreich `at_quick_exit()` ausgeführt werden kann, und die Funktionen stellen kein Daten Rennen dar. Die Reihenfolge der Registrierung ist möglicherweise unbestimmt, wenn `at_quick_exit` von mehr als einem Thread aufgerufen wurde `at_quick_exit` und Registrierungen sich `atexit` von den Registrierungen unterscheiden, müssen Anwendungen möglicherweise beide Registrierungsfunktionen mit dem dasselbe Argument. Die-Implementierung unterstützt die Registrierung von mindestens 32-Funktionen.
 
-### <a name="atexit"></a> von "atexit"
+### <a name="atexit"></a>atexit
 
 ```cpp
 int atexit(c-atexit-handler * func) noexcept;
@@ -109,13 +109,13 @@ int atexit(atexit-handler * func) noexcept;
 
 #### <a name="remarks"></a>Hinweise
 
-Die `atexit()` Funktionen registrieren die Funktion verweist *Func* ohne Argumente auf normale programmbeendigung aufgerufen werden. Es wurde ein nicht angegeben, ob ein Aufruf zum `atexit()` dies nicht der Fall vor einem Aufruf von `exit()` wird erfolgreich ausgeführt und die `atexit()` Funktionen führen ein Datenrace. Die Implementierung muss die Registrierung von mindestens 32 Funktionen unterstützen.
+Die `atexit()` Funktionen registrieren die Funktion, auf die von *Func* verwiesen wird, um beim normalen Programmabbruch ohne Argumente aufgerufen zu werden. Es ist nicht angegeben, ob ein `atexit()` -Befehl, der nicht vor einem- `exit()` Aufrufvorgang erfolgt, erfolgreich ausgeführt werden kann, und die `atexit()` -Funktionen stellen kein Daten Rennen dar. Die-Implementierung unterstützt die Registrierung von mindestens 32-Funktionen.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Wenn die Registrierung erfolgreich, ungleich NULL ist, wenn ein Fehler auftritt, gibt NULL zurück.
+Gibt 0 (null) zurück, wenn die Registrierung erfolgreich ist, wenn ein Fehler auftritt.
 
-### <a name="exit"></a> Beenden
+### <a name="exit"></a>Abstiegs
 
 ```cpp
 [[noreturn]] void exit(int status);
@@ -123,21 +123,21 @@ Wenn die Registrierung erfolgreich, ungleich NULL ist, wenn ein Fehler auftritt,
 
 #### <a name="remarks"></a>Hinweise
 
-Zunächst mit threadspeicherdauer Objekte und verknüpft Sie mit dem aktuellen Thread zerstört werden.
+Zuerst werden Objekte mit Thread Speicherdauer, die dem aktuellen Thread zugeordnet sind, zerstört.
 
-Als Nächstes mit statischer Speicherdauer-Objekte werden zerstört, und Funktionen registriert, indem `atexit` aufgerufen werden. Automatische Objekte werden nicht als Ergebnis eines Aufrufs zerstört `exit()`. Wenn Steuerelement eine registrierte Funktion erfolgt azurenode lässt `exit` , da die Funktion einen Handler für eine ausgelöste Ausnahme, bieten nicht `std::terminate()` aufgerufen werden soll. Jedes Mal, wenn er registriert ist, wird für eine Funktion aufgerufen. Objekte mit automatischer Speicherdauer werden alle in einem Programm, deren "main"-Funktion enthält keine automatische Objekte und führt den Aufruf von, zerstört `exit()`. Steuerelement kann direkt an diese eine Hauptfunktion durch Auslösen einer Ausnahme, die abgefangen wird in Main übertragen werden.
+Als nächstes werden Objekte mit statischer Speicherdauer zerstört, und Funktionen, `atexit` die durch Aufrufen von registriert werden, werden aufgerufen. Automatische Objekte werden nicht zerstört, weil aufgerufen `exit()`wird. Wenn das Steuerelement eine registrierte, von `exit` aufgerufene Funktion verlässt, weil die Funktion keinen Handler für eine `std::terminate()` ausgelöste Ausnahme bereitstellt, muss aufgerufen werden. Eine Funktion wird für jedes Mal aufgerufen, wenn Sie registriert wird. Objekte mit automatischer Speicherdauer werden in einem Programm zerstört, dessen Hauptfunktion keine automatischen Objekte enthält, `exit()`und führt den-Befehl aus. Das Steuerelement kann direkt zu einer solchen Hauptfunktion übertragen werden, indem eine Ausnahme ausgelöst wird, die in Main abgefangen wird.
 
-Als Nächstes alle C-Streams zu öffnen (wie durch die Funktionssignaturen im deklarierten vermittelt <cstdio>) mit ungeschriebene gepufferten Daten werden geleert, werden alle offenen C-Streams werden geschlossen, und alle Dateien erstellt durch Aufrufen von `tmpfile()` werden entfernt.
+Im nächsten Schritt werden alle Open c-Streams (wie von den in <cstdio>deklarierten Funktions Signaturen) mit nicht geschriebenen gepufferten Daten geleert, alle geöffneten c-Streams werden geschlossen, und alle durch Aufrufen `tmpfile()` von erstellten Dateien werden entfernt.
 
-Schließlich wird die Steuerung an die hostumgebung zurückgegeben. Wenn Status 0 (null) oder EXIT_SUCCESS ist, wird eine Form Implementierung definiert, der die erfolgreiche Beendigung von Status zurückgegeben. Wenn Status EXIT_FAILURE lautet, wird eine Form Implementierung definiert, der den Status nicht erfolgreichen Beendigung zurückgegeben. Andernfalls ist der zurückgegebene Status Implementierung definiert.
+Schließlich wird die Steuerung an die Host Umgebung zurückgegeben. Wenn "Status" den Wert "0" oder "EXIT_SUCCESS" aufweist, wird eine von der Implementierung definierte Form der erfolgreichen Beendigung zurückgegeben. Wenn der Status "EXIT_FAILURE" ist, wird eine von der Implementierung definierte Form des Status "nicht erfolgreich beendet" zurückgegeben. Andernfalls ist der zurückgegebene Status Implementierungs definiert.
 
-### <a name="getenv"></a> getenv
+### <a name="getenv"></a>getenv
 
 ```cpp
 char* getenv(const char* name);
 ```
 
-### <a name="quick_exit"></a> quick_exit
+### <a name="quick_exit"></a>quick_exit
 
 ```cpp
 [[noreturn]] void quick_exit(int status) noexcept;
@@ -145,15 +145,15 @@ char* getenv(const char* name);
 
 #### <a name="remarks"></a>Hinweise
 
-Funktionen, die durch Aufrufe registriert `at_quick_exit` werden in ihre Registrierung in umgekehrter Reihenfolge aufgerufen, mit dem Unterschied, dass eine Funktion aufgerufen werden soll, nachdem alle zuvor registrierten Funktionen an, die bereits zum Zeitpunkt aufgerufen worden er registriert wurde. Objekte sind nicht als Ergebnis eines Aufrufs zerstört `quick_exit`. Wenn Steuerelement eine registrierte Funktion erfolgt azurenode lässt `quick_exit` , da die Funktion einen Handler für eine ausgelöste Ausnahme, bieten nicht `std::terminate()` aufgerufen werden soll. Eine Funktion, die über registriert `at_quick_exit` wird aufgerufen, indem der aufrufende Thread `quick_exit`, die auf einem anderen Thread sein kann, als diejenige, die es registriert registriert daher die Funktionen sollten nicht abhängig von der Identität von Objekten mit threadspeicherdauer. Nach dem Aufruf von registrierten Funktionen `quick_exit` aufrufen sollte `_Exit(status)`. Es sind nicht die Standarddatei Puffer geleert. Die Funktion `quick_exit` Signal-sicher ist, beim Registrieren von Funktionen in `at_quick_exit` sind.
+Funktionen, die durch Aufrufe `at_quick_exit` von registriert werden, werden in umgekehrter Reihenfolge ihrer Registrierung aufgerufen, mit dem Unterschied, dass eine Funktion nach allen zuvor registrierten Funktionen aufgerufen werden muss, die bereits zum Zeitpunkt der Registrierung aufgerufen wurden. Objekte dürfen nicht zerstört werden, weil aufgerufen `quick_exit`wird. Wenn das Steuerelement eine registrierte, von `quick_exit` aufgerufene Funktion verlässt, weil die Funktion keinen Handler für eine `std::terminate()` ausgelöste Ausnahme bereitstellt, muss aufgerufen werden. Eine Funktion, die `at_quick_exit` über registriert wird, wird von dem `quick_exit`Thread aufgerufen, der aufruft, wobei es sich um einen anderen Thread als den handelt, der Sie registriert hat. Daher sollten registrierte Funktionen nicht auf die Identität von Objekten mit Thread Speicherdauer zurückgreifen. Nachdem registrierte Funktionen aufgerufen wurden `quick_exit` , wird `_Exit(status)`von aufgerufen. Die Standarddatei Puffer werden nicht geleert. Die- `quick_exit` Funktion ist Signal sicher, wenn die mit `at_quick_exit` registrierten Funktionen sind.
 
-### <a name="system"></a> System
+### <a name="system"></a>Anlage
 
 ```cpp
 int system(const char* string);
 ```
 
-## <a name="memory-allocation-functions"></a>Speicherverwaltungsfunktionen
+## <a name="memory-allocation-functions"></a>Speicher Belegungs Funktionen
 
 ```cpp
 void* aligned_alloc(size_t alignment, size_t size);
@@ -176,9 +176,9 @@ unsigned long long int strtoull(const char* nptr, char** endptr, int base);
 
 #### <a name="remarks"></a>Hinweise
 
-Diese Funktionen haben die Semantik, die in der C++-Standardbibliothek angegeben.
+Diese Funktionen verfügen über die Semantik, die in der C-Standardbibliothek angegeben ist.
 
-##  <a name="multibyte--wide-string-and-character-conversion-functions"></a>Zeichenfolge von Multibytezeichen / Breite und Zeichen-Konvertierungsfunktionen
+##  <a name="multibyte--wide-string-and-character-conversion-functions"></a>Multibyte/weite Zeichen folgen-und Zeichen Konvertierungs Funktionen
 
 ```cpp
 int mblen(const char* s, size_t n);
@@ -190,7 +190,7 @@ size_t wcstombs(char* s, const wchar_t* pwcs, size_t n);
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktionen haben die Semantik, die in der C++-Standardbibliothek angegeben.
+Diese Funktionen verfügen über die Semantik, die in der C-Standardbibliothek angegeben ist.
 
 ## <a name="algorithm-functions"></a>Algorithmusfunktionen
 
@@ -203,9 +203,9 @@ void qsort(void* base, size_t nmemb, size_t size, compare-pred * compar);
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktionen haben die Semantik, die in der C++-Standardbibliothek angegeben.
+Diese Funktionen verfügen über die Semantik, die in der C-Standardbibliothek angegeben ist.
 
-## <a name="low-quality-random-number-generation-functions"></a>Geringer Qualität random Number Generation-Funktionen
+## <a name="low-quality-random-number-generation-functions"></a>Funktionen der Zufallszahlengenerierung mit niedriger Qualität
 
 ```cpp
 int rand();
@@ -214,7 +214,7 @@ void srand(unsigned int seed);
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktionen haben die Semantik, die in der C++-Standardbibliothek angegeben.
+Diese Funktionen verfügen über die Semantik, die in der C-Standardbibliothek angegeben ist.
 
 ## <a name="absolute-values"></a>Absolute Werte
 
@@ -236,7 +236,7 @@ lldiv_t lldiv(long long int numer, long long int denom);
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktionen haben die Semantik, die in der C++-Standardbibliothek angegeben.
+Diese Funktionen verfügen über die Semantik, die in der C-Standardbibliothek angegeben ist.
 
 ## <a name="functions"></a>Funktionen
 
@@ -251,6 +251,6 @@ void qsort(void* base, size_t nmemb, size_t size, compare-pred * compar);
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Übersicht über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_assignable
 ms.assetid: 53444287-c8be-4ad2-9487-a85c066a4f84
-ms.openlocfilehash: b1357bf8c5ad4dfd5035855e34a8fd6a7ed73d15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33b0ce6112119c935ff70e5d619b284acc6ee8c2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391009"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456669"
 ---
 # <a name="isassignable-class"></a>is_assignable-Klasse
 
@@ -26,15 +26,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-*Aktion*<br/>
+*An*\
 Der Typ des Objekts, das die Zuweisung empfängt.
 
-*From*<br/>
+*Von*\
 Der Typ des Objekts, das den Wert bereitstellt.
 
 ## <a name="remarks"></a>Hinweise
 
-Der ausgewertete Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein. Beide `From` und `To` müssen vollständige Typen werden **"void"**, oder Arrays mit Unbekannter Grenze.
+Der ausgewertete Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein. Sowohl `From` als `To` auch müssen komplette Typen, **void**oder Arrays mit unbekannter Grenze sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,4 +44,4 @@ Der ausgewertete Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sei
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

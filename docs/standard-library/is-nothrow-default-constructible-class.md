@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_default_constructible
 ms.assetid: c576fcc9-5be1-43aa-b93a-64d3f1848887
-ms.openlocfilehash: d635c8a06d3acc45d214dbe7cb1eb7800f56dc86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76b58800a454f42f6b5b6fcea23df161c37564b2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148483"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455934"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>is_nothrow_default_constructible-Klasse
 
@@ -26,12 +26,12 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* Nothrow über einen Standardkonstruktor verfügt, andernfalls er false enthält. Eine Instanz des Typprädikats entspricht `is_nothrow_constructible<Ty>`.
+Eine Instanz des typprädikats ist "true",  wenn die typentität einen nothrow-Standardkonstruktor aufweist; andernfalls "false". Eine Instanz des Typprädikats entspricht `is_nothrow_constructible<Ty>`.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,4 +41,4 @@ Eine Instanz des typprädikats ist true, wenn der Typ *Ty* Nothrow über einen S
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

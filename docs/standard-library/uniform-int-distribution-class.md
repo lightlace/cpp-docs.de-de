@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 5e37f21e19be730d3437507e83f2417fa2dc020a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348171"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454957"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution-Klasse
 
@@ -71,8 +71,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*IntType*<br/>
-Der Ergebnistyp für ganze Zahl, Standardwert **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*Inttype*\
+Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -191,20 +191,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*a*<br/>
+*ein*\
 Die Untergrenze (einschließend) für Zufallswerte.
 
-*b*<br/>
+*b*\
 Die Obergrenze (ausschließend) für Zufallswerte.
 
-*parm*<br/>
+*parm*\
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
 
 **Vorbedingung:** `a ≤ b`
 
-Der erste Konstruktor konstruiert ein Objekt, dessen gespeicherte *eine* Wert enthält den Wert *eine* und dessen gespeicherter *b* Wert enthält den Wert *b*.
+Der erste Konstruktor konstruiert ein Objekt, dessen *gespeicherter* -Wert den Wert *a* enthält und dessen gespeicherter *b* -Wert den Wert *b*enthält.
 
 Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter aus *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.
 
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*a*<br/>
+*ein*\
 Die Untergrenze (einschließend) für Zufallswerte.
 
-*b*<br/>
+*b*\
 Die Obergrenze (ausschließend) für Zufallswerte.
 
-*right*<br/>
+*Richting*\
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -244,4 +244,4 @@ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteil
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

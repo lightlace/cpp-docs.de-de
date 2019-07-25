@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-ms.openlocfilehash: a7238d36e27b516aa30ad89b7322e6830f57e403
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1ac1bf2772e7eb6b2f61aa7b4f79de21fb675afe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243464"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454762"
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
 
@@ -24,7 +24,7 @@ Definiert die Containervorlagenklassen [unordered_map](../standard-library/unord
 ```
 
 > [!NOTE]
-> Die \<"unordered_map" > Bibliothek verwendet auch die `#include <initializer_list>` Anweisung.
+> Die \<unordered_map-> Bibliothek verwendet auch `#include <initializer_list>` die-Anweisung.
 
 ### <a name="classes"></a>Klassen
 
@@ -46,5 +46,5 @@ Definiert die Containervorlagenklassen [unordered_map](../standard-library/unord
 
 ## <a name="see-also"></a>Siehe auch
 
-[unordered_multiset-Klasse](../standard-library/unordered-multiset-class.md)<br/>
-[unordered_set-Klasse](../standard-library/unordered-set-class.md)<br/>
+[unordered_multiset-Klasse](../standard-library/unordered-multiset-class.md)\
+[unordered_set-Klasse](../standard-library/unordered-set-class.md)

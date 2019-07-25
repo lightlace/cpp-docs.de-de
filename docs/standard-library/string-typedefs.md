@@ -7,12 +7,12 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: 534c51e8a627ca893ea42e023f12d8bc62d6fb5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1ade5547b98e4376a00f33d45d695a328b772d3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412331"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459235"
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;string&gt;-Typdefinitionen
 
@@ -23,7 +23,7 @@ ms.locfileid: "62412331"
 
 ## <a name="string"></a> string
 
-Ein Typ, der eine Spezialisierung der Vorlagenklasse beschreibt ["basic_string"](../standard-library/basic-string-class.md) mit Elementen des Typs **Char**.
+Ein Typ, der eine Spezialisierung der Vorlagen Klasse [basic_string](../standard-library/basic-string-class.md) mit Elementen des Typs **char**beschreibt.
 
 Andere `basic_string` spezialisierende Typdefinitionen umfassen [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string) und [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -73,7 +73,7 @@ Eine Liste der String-Konstruktoren finden Sie unter [basic_string::basic_string
 
 ## <a name="wstring"></a> wstring
 
-Ein Typ, der eine Spezialisierung der Vorlagenklasse beschreibt ["basic_string"](../standard-library/basic-string-class.md) mit Elementen des Typs **"wchar_t"**.
+Ein Typ, der eine Spezialisierung der Vorlagen Klasse [basic_string](../standard-library/basic-string-class.md) mit Elementen des Typs **wchar_t**beschreibt.
 
 Andere `basic_string` spezialisierende Typdefinitionen umfassen [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) und [u32string](../standard-library/string-typedefs.md#u32string).
 
@@ -94,8 +94,8 @@ basic_string<wchar_t> wstr(L"");
 Eine Liste der String-Konstruktoren finden Sie unter [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> Die Größe des **"wchar_t"** wird durch die Implementierung definiert. Wenn Ihr Code abhängt **"wchar_t"** um eine bestimmte Größe aufzuweisen, überprüfen Sie die Implementierung der Plattform (z. B. mit `sizeof(wchar_t)`). Wenn Sie einen Zeichenfolgentyp mit einer Breite benötigen, die auf allen Plattformen garantiert dieselbe ist, verwenden Sie [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) oder [u32string](../standard-library/string-typedefs.md#u32string).
+> Die Größe von **wchar_t** ist Implementierungs definiert. Wenn Ihr Code davon abhängt, dass **wchar_t** eine bestimmte Größe hat, überprüfen Sie die Implementierung Ihrer Plattform (z `sizeof(wchar_t)`. b. mit). Wenn Sie einen Zeichenfolgentyp mit einer Breite benötigen, die auf allen Plattformen garantiert dieselbe ist, verwenden Sie [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) oder [u32string](../standard-library/string-typedefs.md#u32string).
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<string>](../standard-library/string.md)<br/>
+[\<string>](../standard-library/string.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 2e39c0de5b11c9aa0a4c69f0142841469ef798c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ad27bf849e8d4b9188868b9a29bf423b4cafafa
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413280"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458733"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -29,8 +29,8 @@ Definiert die Vorlagenklasse basic_istream, die Extraktionen für die Iostreams 
 
 |Typname|Beschreibung|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|Ein Typ `basic_iostream` auf **Char**.|
-|[istream](../standard-library/istream-typedefs.md#istream)|Ein Typ `basic_istream` auf **Char**.|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|Ein Typ `basic_iostream` , der auf **char**spezialisiert ist.|
+|[istream](../standard-library/istream-typedefs.md#istream)|Ein Typ `basic_istream` , der auf **char**spezialisiert ist.|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|Ein `basic_iostream`-Typ, der auf **wchar** spezialisiert ist.|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|Ein `basic_istream`-Typ, der auf **wchar** spezialisiert ist.|
 
@@ -52,10 +52,10 @@ Definiert die Vorlagenklasse basic_istream, die Extraktionen für die Iostreams 
 |Klasse|Beschreibung|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Eine Streamklasse für Ein- und Ausgabe.|
-|[basic_istream](../standard-library/basic-istream-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das steuert, Extrahieren von Elementen und codierten Objekten aus einem Streampuffer mit Elementen des Typs `Elem`, auch bekannt als [Char_type](../standard-library/basic-ios-class.md#char_type), dessen Zeichenmerkmale von der Klasse ermittelt werden `Tr`, auch bekannt als [Traits_type](../standard-library/basic-ios-class.md#traits_type).|
+|[basic_istream](../standard-library/basic-istream-class.md)|Die Vorlagen Klasse beschreibt ein Objekt, das das Extrahieren von Elementen und codierten Objekten aus einem Streampuffer mit Elementen `Elem`des Typs steuert, der auch als [char_type](../standard-library/basic-ios-class.md#char_type)bezeichnet wird, dessen Zeichen Merkmale `Tr`von der Klasse bestimmt werden. wird als [Traits_type](../standard-library/basic-ios-class.md#traits_type)bezeichnet.|
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
-[iostreams-Konventionen](../standard-library/iostreams-conventions.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream-Programmierung](../standard-library/iostream-programming.md)\
+[iostreams-Konventionen](../standard-library/iostreams-conventions.md)

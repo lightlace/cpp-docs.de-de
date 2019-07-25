@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 719377be2ac130100e3f9e9ea608c5c27be3101f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377269"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456769"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt;-Funktionen
 
-Die \<Array >-Header enthält zwei nicht-Memberfunktionen, `get` und `swap`, arbeiten auf **Array** Objekte.
+Der \<Array >-Header enthält zwei nicht-Member- `get` Funktionen `swap`, und, die auf **Array** -Objekten angewendet werden.
 
 |||
 |-|-|
@@ -42,16 +42,16 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Index*<br/>
+*Sin*\
 Der Offset des Elements.
 
-*T*<br/>
+*BUND*\
 Der Typ eines Elements.
 
-*N*<br/>
+*NR*\
 Die Anzahl der Elemente im Array.
 
-*arr*<br/>
+*r*\
 Das Array, aus dem die Auswahl erfolgt.
 
 ### <a name="example"></a>Beispiel
@@ -88,7 +88,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-Eine nicht-Member-vorlagenspezialisierung von `std::swap` , die tauscht zwei **Array** Objekte.
+Eine nicht-Member-Vorlagen Spezialisierung `std::swap` von, die zwei **Array** Objekte tauscht.
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,16 +97,16 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der Typ eines Elements.
 
-*N*<br/>
+*NR*\
 Die Größe des Arrays.
 
-*left*<br/>
+*linken*\
 Das erste auszutauschende Array.
 
-*right*<br/>
+*Richting*\
 Das zweite auszutauschende Array.
 
 ### <a name="remarks"></a>Hinweise
@@ -161,4 +161,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

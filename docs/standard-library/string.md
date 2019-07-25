@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3f3874b1d439326c97b015007ad8d5ede06341f7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245393"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459191"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -32,14 +32,14 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 
 - Auf NULL endende Zeichenarrays werden häufig als C-Zeichenfolgen bezeichnet.
 
-- Vorlagenklassenobjekte des Typs `basic_string`, verarbeiten alle **Char**--ähnlichen Vorlagenargumente.
+- Vorlagen Klassen Objekte des Typs `basic_string`, die alle **char**-like-Vorlagen Argumente verarbeiten.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Typname|Beschreibung|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Ein Typ, der eine Spezialisierung der Vorlagenklasse beschreibt `basic_string` mit Elementen des Typs **Char** als eine `string`.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Ein Typ, der eine Spezialisierung der Vorlagenklasse beschreibt `basic_string` mit Elementen des Typs **"wchar_t"** als eine `wstring`.|
+|[string](../standard-library/string-typedefs.md#string)|Ein Typ, der eine Spezialisierung der Vorlagen Klasse `basic_string` mit Elementen des Typs  `string`char als beschreibt.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Ein Typ, der eine Spezialisierung der Vorlagen Klasse `basic_string` mit Elementen des Typs  `wstring`wchar_t als beschreibt.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Ein Typ, der eine Spezialisierung der Vorlagenklasse `basic_string` basierend auf Elementen des Typs `char16_t` beschreibt.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Ein Typ, der eine Spezialisierung der Vorlagenklasse `basic_string` basierend auf Elementen des Typs `char32_t` beschreibt.|
 
@@ -63,13 +63,13 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 |-|-|
 |[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|Tauscht die Arrays von Zeichen für zwei Zeichenfolgen aus.|
-|[stod](../standard-library/string-functions.md#stod)|Konvertiert eine Zeichenfolge in eine **doppelte**.|
-|[stof](../standard-library/string-functions.md#stof)|Konvertiert eine Zeichenfolge in eine **"float"** .|
+|[stod](../standard-library/string-functions.md#stod)|Konvertiert eine Zeichen Sequenz in einen **Double**-Typ.|
+|[stof](../standard-library/string-functions.md#stof)|Konvertiert eine Zeichenfolge in einen **float**-Wert.|
 |[stoi](../standard-library/string-functions.md#stoi)|Konvertiert eine Zeichenfolge in eine Ganzzahl.|
-|[stold](../standard-library/string-functions.md#stold)|Konvertiert eine Zeichenfolge in eine **long double**.|
-|[stoll](../standard-library/string-functions.md#stoll)|Konvertiert eine Zeichenfolge in eine **long long**.|
-|[stoul](../standard-library/string-functions.md#stoul)|Konvertiert eine Zeichenfolge in eine **unsigned long**.|
-|[stoull](../standard-library/string-functions.md#stoull)|Konvertiert eine Zeichenfolge in eine **long long ohne Vorzeichen**.|
+|[stold](../standard-library/string-functions.md#stold)|Konvertiert eine Zeichen Sequenz in einen **long Double**-Typ.|
+|[stoll](../standard-library/string-functions.md#stoll)|Konvertiert eine Zeichenfolge in eine **lange Länge**.|
+|[stoul](../standard-library/string-functions.md#stoul)|Konvertiert eine Zeichenfolge in eine **lange Zahl ohne**Vorzeichen.|
+|[stoull](../standard-library/string-functions.md#stoull)|Konvertiert eine Zeichen Sequenz in eine **unsignierte lange Länge**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Konvertiert einen Wert in einen `string`-Wert.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Konvertiert einen Wert in eine breite `string`.|
 
@@ -77,7 +77,7 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 
 |Funktion|Beschreibung|
 |-|-|
-|[GetLine-Vorlage](../standard-library/string-functions.md#getline)|Extrahiert Zeichenfolgen aus dem Eingabestream zeilenweise.|
+|[getline-Vorlage](../standard-library/string-functions.md#getline)|Extrahiert Zeichenfolgen aus dem Eingabestream zeilenweise.|
 
 ### <a name="classes"></a>Klassen
 
@@ -103,5 +103,5 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

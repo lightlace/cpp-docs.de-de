@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411070"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456432"
 ---
 # <a name="allocatorbase-class"></a>allocator_base-Klasse
 
@@ -60,7 +60,7 @@ class allocator_base
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Type*|Der Elementtyp, die durch die Zuweisung zugeordnet wird.|
+|*Typ*|Der Elementtyp, die durch die Zuweisung zugeordnet wird.|
 |*Sync*|Die Synchronisierungsrichtlinie für die Zuweisung: [sync_none-Klasse](../standard-library/sync-none-class.md), [sync_per_container-Klasse](../standard-library/sync-per-container-class.md), [sync_per_thread-Klasse](../standard-library/sync-per-thread-class.md) oder [sync_shared-Klasse](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Konstruktoren
@@ -85,8 +85,8 @@ class allocator_base
 
 |Member-Funktion|Beschreibung|
 |-|-|
-|[_Charalloc](#charalloc)|Belegt Speicher für ein Array vom Typ **Char**.|
-|[_Chardealloc](#chardealloc)|Speicherplatz für das Array mit Elementen des Typs frei **Char**.|
+|[_Charalloc](#charalloc)|Ordnet Speicher für ein Array vom Typ " **char**" zu.|
+|[_Chardealloc](#chardealloc)|Gibt Speicher für das Array frei, das Elemente vom Typ **char**enthält.|
 |[address](#address)|Sucht die Adresse eines Objekts, dessen Wert angegeben wird.|
 |[allocate](#allocate)|Ordnet einen Speicherblock zu, der groß genug ist, um mindestens eine angegebene Anzahl von Elementen zu speichern.|
 |[construct](#construct)|Erstellt eine bestimmte Art von Objekt an einer bestimmten Adresse, die mit einem angegebenen Wert initialisiert wird.|
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="charalloc"></a> allocator_base::_Charalloc
 
-Belegt Speicher für ein Array vom Typ **Char**.
+Ordnet Speicher für ein Array vom Typ " **char**" zu.
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -124,7 +124,7 @@ Diese Memberfunktion wird von Containers verwendet, wenn sie mit einem Compiler 
 
 ## <a name="chardealloc"></a> allocator_base::_Chardealloc
 
-Speicherplatz für das Array mit Elementen des Typs frei **Char**.
+Gibt Speicher für das Array frei, das Elemente vom Typ **char**enthält.
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parameter
 
-*val*<br/>
+*ster*\
 Der konstante oder nicht konstante Wert des Objekts, nach dessen Adresse gesucht wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -341,4 +341,4 @@ typedef Type value_type;
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

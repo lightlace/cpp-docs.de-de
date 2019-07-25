@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244577"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457381"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -24,7 +24,7 @@ Für diesen Header wird "Concurrency Runtime (ConcRT)" verwendet, sodass er zusa
 **Namespace:** std
 
 > [!NOTE]
-> Im Code, der kompiliert wird **"/ CLR"** , dieser Header blockiert.
+> In Code, der mit **/CLR**kompiliert wird, wird dieser Header blockiert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -49,15 +49,15 @@ Die `condition_variable_any`- und `condition_variable`- Klassen verfügen über 
 
 - `wait_for` wartet, bis zu einer angegebenen Dauer (`time interval`).
 
-Jede dieser Methoden verfügt über zwei überladene Versionen. Eine davon wartet einfach und kann fälschlicherweise aufwachen. Die andere verwendet ein zusätzliches Vorlagenargument, das ein Prädikat definiert. Die Methode wird nicht zurückgegeben werden, bis das Prädikat **"true"** .
+Jede dieser Methoden verfügt über zwei überladene Versionen. Eine davon wartet einfach und kann fälschlicherweise aufwachen. Die andere verwendet ein zusätzliches Vorlagenargument, das ein Prädikat definiert. Die Methode wird erst zurückgegeben, wenn das Prädikat " **true**" ist.
 
-Jede Klasse verfügt auch über zwei Methoden, mit denen eine Bedingungsvariable benachrichtigt wird, die die Bedingung den Wert **"true"** .
+Jede Klasse verfügt auch über zwei Methoden, mit denen eine Bedingungs Variable benachrichtigt wird, dass die Bedingung **true**ist.
 
 - `notify_one` weckt einen der Threads auf, der auf die Bedingungsvariable wartet.
 
 - `notify_all` weckt alle Threads auf, die auf die Bedingungsvariable warten.
 
-## <a name="functions-and-enums"></a>Funktionen und Enumerationen
+## <a name="functions-and-enums"></a>Funktionen und Aufstände
 
 ```cpp
 void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
@@ -67,6 +67,6 @@ enum class cv_status { no_timeout, timeout };
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[condition_variable-Klasse](../standard-library/condition-variable-class.md)<br/>
-[condition_variable_any-Klasse](../standard-library/condition-variable-any-class.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[condition_variable-Klasse](../standard-library/condition-variable-class.md)\
+[condition_variable_any-Klasse](../standard-library/condition-variable-any-class.md)

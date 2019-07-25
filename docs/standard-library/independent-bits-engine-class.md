@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: 8f420ca054d20cd222b8eda9a4a35a383a8e535a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a90e4be4ff6e92734f6b2e6804f8059be78e66b9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159222"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456341"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine-Klasse
 
@@ -26,13 +26,13 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parameter
 
-*Engine*<br/>
+*Ge*\
 Der Typ der Basis-Engine.
 
-*W*<br/>
+*LÖW*\
 **Wortgröße**. Größe jeder generierten Zahl in Bits. **Vorbedingung**:`0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType*<br/>
+*Uinttype*\
 Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="members"></a>Member
@@ -46,7 +46,7 @@ Weitere Informationen über Engine-Member finden Sie unter [\<random&gt;](../sta
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse beschreibt ein *Moduladapter* , der Werte produziert, indem Sie die Rückgabewerte von seinem Moduladapter, wodurch Moduladapter *W*-bit-Werten.
+Diese Vorlagen Klasse beschreibt einen *Engine-Adapter* , der Werte erzeugt, indem Bits aus den Werten, die von der Basis-Engine zurückgegeben werden, wieder hergestellt werden, was zu *W*-Bit-Werten führt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,4 +56,4 @@ Diese Vorlagenklasse beschreibt ein *Moduladapter* , der Werte produziert, indem
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

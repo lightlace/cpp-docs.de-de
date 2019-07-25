@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 37001815710b197ec77ed0d45a16ea971ad1edce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cc63558ea392976bd6a3c5a43735c592e4606b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411226"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456592"
 ---
 # <a name="addcv-class"></a>add_cv-Klasse
 
-Macht **const Volatile** Typ vom Typ.
+Wandelt den Typ in einen **Konstanten flüchtigen** Typ um.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,12 +30,12 @@ using add_cv_t = typename add_cv<T>::type;
 
 ### <a name="parameters"></a>Parameter
 
-*T*<br/>
+*BUND*\
 Der zu ändernde Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz von den geänderten Typ `add_cv<T>` verfügt über eine `type` Member **Typedef** entspricht *T* geändert, indem beide [Add_volatile](../standard-library/add-volatile-class.md) und [ Add_const](../standard-library/add-const-class.md), es sei denn, *T* bereits verfügt über die cv-Qualifizierer, ist ein Verweis oder eine Funktion.
+Eine Instanz des geänderten Typs `add_cv<T>` weist einen `type` Member **typedef** auf, der von " [add_volatile](../standard-library/add-volatile-class.md) " und " [add_const](../standard-library/add-const-class.md)" geändert wird, es sei denn, " *t* " verfügt bereits über die CV-Qualifizierer, ist ein Verweis oder ist ein  Funktion.
 
 Das `add_cv_t<T>`-Hilfsprogramm ist eine Verknüpfung für den Zugriff auf den `add_cv<T>`typedef-Member`type`.
 
@@ -92,6 +92,6 @@ invoked const volatile S.f()
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_const-Klasse](../standard-library/remove-const-class.md)<br/>
-[remove_volatile-Klasse](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_const-Klasse](../standard-library/remove-const-class.md)\
+[remove_volatile-Klasse](../standard-library/remove-volatile-class.md)
