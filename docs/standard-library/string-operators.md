@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb66e7c0120da9f140ce33da7ecc61299a4d2867
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412357"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459256"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt;-Operatoren
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*linken*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*right*<br/>
+*Richting*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -115,7 +115,7 @@ Die Zeichenfolge, die die Verkettung der Eingabezeichenfolgen ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Jede der Funktionen überlädt `operator+`, um zwei Objekte der Vorlagenklasse [basic_string-Klasse](../standard-library/basic-string-class.md) zu verketten. Alle zurück `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Weitere Informationen finden Sie unter [Anfügen](../standard-library/basic-string-class.md#append).
+Jede der Funktionen überlädt `operator+`, um zwei Objekte der Vorlagenklasse [basic_string-Klasse](../standard-library/basic-string-class.md) zu verketten. Alle zurückgeben `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Weitere Informationen finden Sie unter [Anfügen](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Beispiel
 
@@ -192,10 +192,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*linken*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*right*<br/>
+*Richting*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -283,10 +283,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*linken*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*right*<br/>
+*Richting*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -374,10 +374,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*linken*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*right*<br/>
+*Richting*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -470,10 +470,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*linken*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*right*<br/>
+*Richting*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -563,10 +563,10 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-*_Ostr*<br/>
+*_Ostr*\
 Der Ausgabestream, in den geschrieben wird.
 
-*str*<br/>
+*SRT*\
 Die in den Ausgabestream einzugebende Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -575,7 +575,7 @@ Schreibt den Wert der angegebenen Zeichenfolge in den Ausgabestream *_Ostr*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion überlädt **Operator <<** zum Einfügen eines Objekts *str* der Vorlagenklasse ["basic_string"](../standard-library/basic-string-class.md) in den Stream  *\_ Ostr*. Gibt die Funktion `_Ostr.write( str.c_str, str.size )`.
+Die Vorlagen Funktion überlädt den **Operator < <** , um ein Objekt *Str* der Vorlagen Klasse [basic_string](../standard-library/basic-string-class.md) in den Stream  *\_Ostr*einzufügen. Die Funktion gibt effektiv `_Ostr.write( str.c_str, str.size )`zurück.
 
 ## <a name="op_gt"></a> operator&gt;
 
@@ -600,10 +600,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*linken*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*right*<br/>
+*Richting*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -703,10 +703,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*left*<br/>
+*linken*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
-*right*<br/>
+*Richting*\
 Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string`, die oder das verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -796,21 +796,21 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parameter
 
-*_Istr*<br/>
+*_Istr*\
 Der Eingabestream, mit dem die Sequenz extrahiert wird
 
-*right*<br/>
+*Richting*\
 Die Zeichenfolge, die aus dem Eingabestream extrahiert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Liest den Wert der angegebenen Zeichenfolge aus *_Istr* und gibt ihn in *rechten*.
+Liest den Wert der angegebenen Zeichenfolge aus *_Istr* und gibt ihn an der *rechten Seite*zurück.
 
 ### <a name="remarks"></a>Hinweise
 
 Der Operator überspringt die führenden Leerzeichen, sofern das `skipws`-Flag nicht festgelegt ist. Es liest alle folgenden Zeichen, bis das nächste Zeichen ein Leerzeichen ist oder das Ende der Datei erreicht wird.
 
-Die Vorlagenfunktion überlädt **Operator >>** ersetzt die gesteuerte Sequenz durch *rechten* mit einer Sequenz von Elementen aus dem Datenstrom extrahiert *_Istr*. Die Extraktion stoppt:
+Die Vorlagen Funktion überlädt den **Operator > >** , um die von *Rechts* gesteuerte Sequenz durch eine Sequenz von Elementen zu ersetzen, die aus dem Stream *_Istr*extrahiert werden. Die Extraktion stoppt:
 
 - Am Ende der Datei.
 
@@ -818,9 +818,9 @@ Die Vorlagenfunktion überlädt **Operator >>** ersetzt die gesteuerte Sequenz d
 
 Nachdem die Funktion `_Istr` extrahiert hat. [max_size](../standard-library/basic-string-class.md#max_size) Elemente.
 
-- Nachdem die Funktion ein Element extrahiert *ch* für die [Use_facet](../standard-library/basic-filebuf-class.md#open)< **Ctype** \< **CharType**> > ( `getloc`). **ist**( **Ctype** \< **CharType**>:: **Speicherplatz**, *ch*) ist "true" in diesem Fall wird das Zeichen zurückgestellt .
+- Nachdem die Funktion ein Element *ch* extrahiert hat, für das [Use_facet](../standard-library/basic-filebuf-class.md#open)< **CType** \< **CharType**> `getloc`> () ist. **ist** ( **CType** \< **CharType**>:: **Space**, *ch*) ist true. in diesem Fall wird das Zeichen zurückgesetzt.
 
-Wenn die Funktion keine Elemente extrahiert, ruft es [Setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). In jedem Fall ruft **Istr**. **Breite**(0) und gibt \* **dies**.
+Wenn die Funktion keine Elemente extrahiert, ruft Sie [SetState](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`) auf. In jedem Fall wird **ISTR**aufgerufen. **Breite** (0) und gibt \* **diesen**zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<string>](../standard-library/string.md)<br/>
+[\<string>](../standard-library/string.md)

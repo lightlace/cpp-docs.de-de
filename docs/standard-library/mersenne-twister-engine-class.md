@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: 9949d1cab5a97b30df0b156289dff2dfbe15d851
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ed5380e36e71d7366d2b4b84528bbd35b87cc775
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449680"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451863"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine-Klasse
 
@@ -29,31 +29,31 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parameter
 
-*UIntType*<br/>
+*Uinttype*\
 Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*W*<br/>
+*LÖW*\
 **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**:`2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N*<br/>
+*NR*\
 **Zustandsgröße**. Die Anzahl von Elementen (Werten) in der Zustandssequenz.
 
-*M*<br/>
+*800*\
 **Verschiebungsgröße**. Die Anzahl von Elementen, die während jeder Verzerrung übersprungen werden sollen. **Vorbedingung**:`0 < M ≤ N`
 
-*R*<br/>
+*R*\
 **Maskenbits**. **Vorbedingung**:`R ≤ W`
 
-*A*<br/>
+*EIN*\
 **XOR-Maske**. **Vorbedingung**:`A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L*<br/>
+*U*, *S*, *T*, *L*\
 **Tempering der Verschiebungsparameter**. Werden während der Verschlüsselung (Tempering) als Verschiebungswerte verwendet. Vorbedingung: `U,S,T,L ≤ W`
 
-*D*, *B*, *C*<br/>
+*D*, *B*, *C*\
 **Tempering von Bitmaskenparametern**. Werden während der Verschlüsselung (Tempering) als Maskenwerte verwendet. Vorbedingung: `D,B,C ≤ (1u<<W) - 1u`
 
-*F*<br/>
+*C*\
 **Initialisierungsmultiplikator**. Wird verwendet, um die Initialisierung der Sequenz zu unterstützen. Vorbedingung: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Member
@@ -69,9 +69,9 @@ Weitere Informationen über Engine-Member finden Sie unter [\<random&gt;](../sta
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse beschreibt eine Zufallszahlen-Engine und gibt Werte zum geschlossenen Intervall [`0`, `2`<sup>W</sup> - `1`] zurück. Sie enthält einen großen Integralwert mit `W * (N - 1) + R` Bits. Er extrahiert *W* Bits auf einmal aus diesem großen Wert, und wenn sie alle Bits verwendet hat verzerrt es den großen Wert von verschoben und die Bits kombiniert werden, damit sie einen neuen Satz von Bits aus extrahieren aufweist. Der Zustand der Engine ist die letzte `N` `W`-bit-Werten verwendet, wenn `operator()` mindestens aufgerufen wurde *N* Timeout, andernfalls die `M` `W`-Werte, die verwendet wurden und die letzten `N - M` -Werte des Startwerts.
+Diese Vorlagenklasse beschreibt eine Zufallszahlen-Engine und gibt Werte zum geschlossenen Intervall [`0`, `2`<sup>W</sup> - `1`] zurück. Sie enthält einen großen Integralwert mit `W * (N - 1) + R` Bits. Es extrahiert gleichzeitig den großen Wert aus dem gesamten Wert von " *W* ", und wenn alle Bits verwendet wurden, wird der große Wert verzerrt, indem die Bits verschoben und gemischt werden, sodass Sie über einen neuen Satz von Bits verfügen, aus denen extrahiert werden soll. Der Zustand der Engine ist die Last `N` `W`-Bit-Werte, `operator()` die verwendet werden, wenn mindestens *N* -Mal aufgerufen `M` wurde, andernfalls die `W`verwendeten-Bitwerte und die `N - M` letzten Werte des säen.
 
-Der Generator verzerrt den großen Wert, der ihn enthält, indem Sie durch die Verschiebungswerte definiert eine gedrehte generalisiertes Feedback-Schieberegister *N* und *M*, einen verzerrungswert *R*, und ein Bedingte XOR-Maske *ein*. Darüber hinaus die Bits eines das unformatierte Schieberegister schieberegisters (getempert) entsprechend einer Bit-scrambling-Matrix, die durch Werte definiert *U*, *D*, *S*, *B* , *T*, *C*, und *L*.
+Der Generator verzerrt den großen Wert, den er enthält, indem er ein Verdrehtes generalisiertes, von Shift-Werten *N* und *M*, einen drehwert *R*und eine bedingte XOR-mask *a*definierte UMSCHALT Register verwendet. Darüber hinaus werden die Bits des rohverschiebungs Registers entsprechend einer bitrührenden Matrix, die durch die Werte *U*, *D*, *S*, *B*, *T*, *C*und *L*definiert ist, Durcheinander gesetzt (gemildert).
 
 Das Vorlagenargument `UIntType`muss groß genug sein, um Werte bis zu `2`<sup>W</sup> - `1` zu enthalten. Die Werte der anderen Vorlagenargumente müssen die folgenden Anforderungen erfüllen: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 
@@ -113,4 +113,4 @@ Ein Codebeispiel finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

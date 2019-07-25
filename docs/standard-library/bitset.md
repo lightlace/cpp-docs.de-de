@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: b0a5a01ca04d01d9535291e3c4a254143bc09e5a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5de13e66523ee5a5dbcb4c2c54d38037909a4c95
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243296"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449704"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
@@ -44,5 +44,5 @@ Definiert die Vorlagenklasse "bitset" und zwei unterstützende Vorlagenfunktione
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

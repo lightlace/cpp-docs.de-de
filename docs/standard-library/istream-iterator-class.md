@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: f8fc1593db8ddacefb4a231be76ca6d7cbd30849
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413319"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447754"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator-Klasse
 
@@ -36,16 +36,16 @@ class istream_iterator
 
 ### <a name="parameters"></a>Parameter
 
-*Type*<br/>
+*Sorte*\
 Der Typ des Objekts, das aus dem Eingabestream extrahiert werden soll.
 
-*CharType*<br/>
-Der Typ, der den Zeichentyp für `istream_iterator` darstellt. Dieses Argument ist optional, und der Standardwert ist **Char**.
+*CharType*\
+Der Typ, der den Zeichentyp für `istream_iterator` darstellt. Dieses Argument ist optional, und der Standardwert ist **char**.
 
-*Merkmale*<br/>
+*Aufweisen*\
 Der Typ, der den Zeichentyp für `istream_iterator` darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`< `CharType`.
 
-*Distance*<br/>
+*Flüge*\
 Ein ganzzahliger Typ mit Vorzeichen, der den Differenztyp für den `istream_iterator` darstellt. Dieses Argument ist optional, und der Standardwert ist `ptrdiff_t`.
 
 Nachdem ein Objekt der Klasse istream_iterator mit einem ungleich NULL gespeicherten Zeiger erstellt oder erhöht wurde, versucht das Objekt, ein Objekt vom Typ `Type` aus dem zugewiesenen Eingabestream zu extrahieren und zu speichern. Wenn die Extraktion fehlschlägt, ersetzt das Objekt den gespeicherten Zeiger durch einen NULL-Zeiger und erstellt so einen Indikator für das Ende der Sequenz.
@@ -138,12 +138,12 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Parameter
 
-*_Istr*<br/>
+*_Istr*\
 Der zu lesende Eingabestream verwendet `istream_iterator` zum Initialisieren.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert den Eingabestreamzeiger mit einem NULL-Zeiger und erstellt einen End-of-Stream-Iterator. Der zweite Konstruktor initialisiert den Eingabestreamzeiger mit *& _Istr*, anschließend versucht, extrahieren und speichern ein Objekt des Typs `Type`.
+Der erste Konstruktor initialisiert den Eingabestreamzeiger mit einem NULL-Zeiger und erstellt einen End-of-Stream-Iterator. Der zweite Konstruktor initialisiert den Eingabestreamzeiger mit *& _Istr*und versucht dann, ein Objekt vom Typ `Type`zu extrahieren und zu speichern.
 
 Der End-of-Stream-Iterator kann verwendet werden, um zu testen, ob ein `istream_iterator` das Ende eines Streams erreicht hat.
 
@@ -255,7 +255,7 @@ Der Wert eines Members, falls vorhanden.
 
 ### <a name="remarks"></a>Hinweise
 
-`i->m` ist gleich `(*i).m`
+`i->m`entspricht`(*i).m`
 
 Der Operator gibt `&*this` zurück.
 
@@ -303,7 +303,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der erste Memberoperator gibt einen Verweis auf das inkrementierte Objekt des Typs `Type` extrahierten aus dem Eingabestream und die zweite Member-Funktion zurückgibt, die eine Kopie des Objekts.
+Der erste Member-Operator gibt einen Verweis auf das inkrementierte `Type` Objekt vom Typ zurück, das aus dem Eingabestream extrahiert wurde, und die zweite Element Funktion gibt eine Kopie des Objekts zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -386,8 +386,8 @@ int main( )
 
 ## <a name="see-also"></a>Siehe auch
 
-[input_iterator_tag-Struktur](../standard-library/input-iterator-tag-struct.md)<br/>
-[iterator-Struktur](../standard-library/iterator-struct.md)<br/>
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[input_iterator_tag-Struktur](../standard-library/input-iterator-tag-struct.md)\
+[iterator-Struktur](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

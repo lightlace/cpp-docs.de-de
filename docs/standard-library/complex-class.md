@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: db04569d3938c673653ac36eeebdabc9cb725c1e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244727"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453177"
 ---
 # <a name="complex-class"></a>complex-Klasse
 
-Die Vorlagenklasse beschreibt ein Objekt, das zwei Objekte vom Typ speichert `Type`, eines entspricht dem Realteil einer komplexen Zahl und eine, die den imaginären Teil darstellt.
+Die Vorlagen Klasse beschreibt ein Objekt, das zwei Objekte vom Typ `Type`speichert, eine, die den Realteil einer komplexen Zahl darstellt, und eine, die den imaginären Teil darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,9 +38,9 @@ Ein Objekt der Klasse `Type`:
 
 - Es definiert nach Bedarf die arithmetischen Operatoren und mathematischen Funktionen, die für die Gleitkommatypen definiert sind (mit üblichem Verhalten).
 
-Insbesondere dürfen keine feinen Unterschiede zwischen einer Kopierkonstruktion und einer Standardkonstruktion bestehen, auf die eine Zuweisung folgt. Keiner der Vorgänge für Objekte der Klasse `Type` möglicherweise Ausnahmen auslösen.
+Insbesondere dürfen keine feinen Unterschiede zwischen einer Kopierkonstruktion und einer Standardkonstruktion bestehen, auf die eine Zuweisung folgt. Keiner der Vorgänge für Objekte der Klasse `Type` kann Ausnahmen auslösen.
 
-Für die drei Gleitkommatypen sind explizite Spezialisierungen der Vorlagenklasse „complex“ vorhanden. In dieser Implementierung wird der Wert eines anderen Typs `Type` umgewandelt zu **doppelte** für tatsächliche Berechnungen, mit der **doppelte** Ergebnis zurück, die das gespeicherte Objekt vom Typ zugewiesen `Type`.
+Für die drei Gleitkommatypen sind explizite Spezialisierungen der Vorlagenklasse „complex“ vorhanden. In dieser Implementierung wird ein Wert eines beliebigen anderen Typs `Type` für tatsächliche Berechnungen in **Double** umgewandelt, wobei das **doppelte** Ergebnis dem gespeicherten Objekt vom Typ `Type`zurück zugewiesen wird.
 
 ## <a name="members"></a>Member
 
@@ -75,7 +75,7 @@ Für die drei Gleitkommatypen sind explizite Spezialisierungen der Vorlagenklass
 
 
 
-## <a name="complex"></a> komplexe
+## <a name="complex"></a>viel
 
 Erstellt eine komplexe Zahl aus den angegebenen reellen und imaginären Teilen oder eine Kopie einer anderen komplexen Zahl.
 
@@ -97,12 +97,12 @@ Der Wert des reellen Teils, der zum Initialisieren der zu erstellenden komplexen
 *_ImagVal*\
 Der Wert des imaginären Teils, der zum Initialisieren der zu erstellenden komplexen Zahl verwendet wird.
 
-*complexNum*\
+*complexnum*\
 Die komplexe Zahl, deren reelle und imaginäre Teile zum Initialisieren der zu erstellenden komplexen Zahl verwendet werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert den gespeicherten reellen Teil in  *\_RealVal* und den gespeicherten imaginären Teil in  *\_Imagval*. Der zweite Konstruktor initialisiert den gespeicherten reellen Teil in `complexNum.real()` und den gespeicherten imaginären Teil in `complexNum.imag()`.
+Der erste Konstruktor initialisiert den gespeicherten reellen Teil in  *\_RealVal* und den gespeicherten imaginären Teil in  *\_Imagval*. Der zweite Konstruktor initialisiert den gespeicherten reellen Teil `complexNum.real()` in und den gespeicherten imaginären Teil `complexNum.imag()`in.
 
 In dieser Implementierung wird, falls ein Konvertierungsprogramm Memberfunktionen der Vorlage nicht unterstützt, die Vorlage:
 
@@ -159,7 +159,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a> imag
+## <a name="imag"></a>IMAG
 
 Extrahiert die imaginäre Komponente einer komplexen Zahl.
 
@@ -180,7 +180,7 @@ Der imaginäre Teil der komplexen Zahl.
 
 ### <a name="remarks"></a>Hinweise
 
-Für eine komplexe Zahl *a + Bi*, ist der imaginäre Teil bzw. Komponente *Im(a + bi) = b*.
+Für eine komplexe Zahl *a + BI*ist der Imaginärteil bzw. die imaginäre Komponente *im (a + BI) = b*.
 
 ### <a name="example"></a>Beispiel
 
@@ -213,7 +213,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a> Operator * =
+## <a name="op_star_eq"></a>Operator * =
 
 Multipliziert eine komplexe Zielzahl mit einem komplexen Faktor oder einem Faktor vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl
 
@@ -298,7 +298,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a> Operator +=
+## <a name="op_add_eq"></a>Operator + =
 
 Fügt der komplexen Zielzahl eine Zahl hinzu, die komplex ist oder vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl, der sie hinzugefügt wird
 
@@ -401,7 +401,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a> Operator =
+## <a name="operator-_eq"></a>Operator-=
 
 Subtrahiert eine Zahl von der komplexen Zielzahl, wobei die subtrahiert Zahl komplex ist oder vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl, von der sie subtrahiert wurde
 
@@ -416,7 +416,7 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-*complexNum*\
+*complexnum*\
 Eine komplexe Zahl, die von der komplexen Zielzahl subtrahiert werden soll
 
 *_RealPart*\
@@ -509,7 +509,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a> Operator / =
+## <a name="op_div_eq"></a>Operator/=
 
 Dividiert eine komplexe Zielzahl durch einen komplexen Faktor oder einen Faktor vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl
 
@@ -524,7 +524,7 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-*complexNum*\
+*complexnum*\
 Eine komplexe Zahl, die von der komplexen Zielzahl subtrahiert werden soll
 
 *_RealPart*\
@@ -613,7 +613,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a> Operator =
+## <a name="op_eq"></a>Operator =
 
 Weist der komplexen Zielzahl eine Zahl hinzu, die komplex ist oder vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl, der sie hinzugefügt wird
 
@@ -691,7 +691,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a> Real
+## <a name="real"></a>wirkliche
 
 Ruft die reelle Komponente einer komplexen Zahl ab, oder legt diese fest.
 
@@ -712,7 +712,7 @@ Der reelle Teil der komplexen Zahl.
 
 ### <a name="remarks"></a>Hinweise
 
-Für eine komplexe Zahl *a + Bi*, ist der reelle Teil bzw. Komponente *Re(a + BI) = eine*.
+Für eine komplexe Zahl *a + BI*ist der reelle Teil bzw. die reelle Komponente *re (a + BI) = a*.
 
 ### <a name="example"></a>Beispiel
 
@@ -745,7 +745,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Ein Typ, der den Datentyp darstellt, der für die Darstellung der Real- und Imaginärteile einer komplexen Zahl verwendet wird
 
@@ -755,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Hinweise
 
-`value_type` ist ein Synonym für die Klasse komplexen `Type` Template-Parameter.
+`value_type`ist ein Synonym für den komplexen `Type` Vorlagen Parameter der Klasse.
 
 ### <a name="example"></a>Beispiel
 
@@ -784,4 +784,4 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

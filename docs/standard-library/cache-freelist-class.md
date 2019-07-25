@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05260d6800597b64908ff0aeffac47b09fed9a0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352111"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449685"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist-Klasse
 
@@ -37,9 +37,9 @@ class cache_freelist
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse Cache_freelist verwaltet eine Freiliste von Speicherblöcken der Größe *Sz*. Wenn die Freiliste voll ist, die sie verwendet **Delete-Operator** um Speicherblöcke freizugeben. Wenn die Freiliste leer ist, verwendet **new-Operator** um neue Speicherblöcke zuzuordnen. Die maximale Größe der Freiliste richtet sich nach der Klasse, die max-Klasse übergeben wird, in der *Max* Parameter.
+Die cache_freelist-Vorlagen Klasse verwaltet eine freie Liste mit Speicherblöcken der Größe *SZ*. Wenn die freie Liste voll ist, verwendet Sie den **Operator Delete** zum Freigeben von Speicherblöcken. Wenn die Freiliste leer ist, verwendet Sie den **New-Operator** , um neue Speicherblöcke zuzuordnen. Die maximale Größe der Freiliste wird von der Klasse max-Klasse bestimmt, die im *Max* -Parameter übergeben wird.
 
-Jeder Speicherblock enthält *Sz* Bytes Speicherkapazität und die Daten, die **new-Operator** und **Delete-Operator** erfordern.
+Jeder Speicherblock enthält *SZ* -Bytes an nutzbarem Speicher und die Daten, die der **Operator new** und der **Operator Delete** erfordern.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -109,4 +109,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

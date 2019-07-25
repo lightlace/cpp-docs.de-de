@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: 99477f57dc44d63f663a6db38250cc0620151ec9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511c7b2d8629f1a052137c7997daf5913c976ab
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411993"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459989"
 ---
 # <a name="timepoint-class"></a>time_point-Klasse
 
@@ -67,7 +67,7 @@ class time_point;
 
 **Namespace:** std::chrono
 
-## <a name="max"></a>  time_point:: Max
+## <a name="max"></a>time_point:: Max
 
 Statische Methode, von der die Obergrenze für Werte vom Typ `time_point::ref` zurückgegeben wird.
 
@@ -79,7 +79,7 @@ static constexpr time_point max();
 
 Tatsächlich wird `time_point(duration::max())` zurückgegeben.
 
-## <a name="min"></a>  time_point:: Min
+## <a name="min"></a>time_point:: min
 
 Statische Methode, von der die Untergrenze für Werte vom Typ `time_point::ref` zurückgegeben wird.
 
@@ -101,7 +101,7 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Dur*<br/>
+*Local*\
 Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -118,7 +118,7 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Dur*<br/>
+*Local*\
 Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -140,21 +140,21 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parameter
 
-*Dur*<br/>
+*Local*\
 Ein [duration](../standard-library/duration-class.md)-Objekt.
 
-*Tp*<br/>
+*TP*\
 Ein `time_point`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
 Mit dem ersten Konstruktor wird ein Objekt erstellt, dessen gespeicherter `duration`-Wert [duration::zero](../standard-library/duration-class.md#zero) entspricht.
 
-Der zweite Konstruktor erstellt ein Objekt, dessen gespeicherte Duration-Wert gleich ist *Dur*. Es sei denn, `is_convertible<Duration2, duration>` enthält "true", der zweite Konstruktor nicht an der überladungsauflösung beteiligt. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).
+Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherter Duration-Wert gleich " *Dur*" ist. Sofern `is_convertible<Duration2, duration>` nicht true ist, wird der zweite Konstruktor nicht an der Überladungs Auflösung beteiligt. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).
 
 Mit dem dritten Konstruktor wird der `duration`-Wert initialisiert, indem `Tp.time_since_epoch()` verwendet wird.
 
-## <a name="time_since_epoch"></a>  time_point:: time_since_epoch
+## <a name="time_since_epoch"></a>time_point::time_since_epoch
 
 Ruft den gespeicherten [duration](../standard-library/duration-class.md)-Wert ab.
 
@@ -164,5 +164,5 @@ constexpr duration time_since_epoch() const;
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

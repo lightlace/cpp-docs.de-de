@@ -9,12 +9,12 @@ f1_keywords:
 - chrono/std::chrono::system_clock::is_monotonic Constant
 - chrono/std::chrono::system_clock::is_steady Constant
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
-ms.openlocfilehash: 66710f94d96f069d6d388d6b49c76747c618a0d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a9fd83840883de5172df8b2e1e451984a95ea47
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412149"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450186"
 ---
 # <a name="systemclock-structure"></a>system_clock-Struktur
 
@@ -50,7 +50,7 @@ Eine Uhr ist *gleichmäßig*, wenn sie *monoton* und die Zeit zwischen den Teils
 |Name|Beschreibung|
 |----------|-----------------|
 |[from_time_t](#from_time_t)|Statisch Gibt einen `time_point` zurück, der einer bestimmten Zeit am besten entspricht.|
-|[jetzt](#now)|Statisch Gibt die aktuelle Uhrzeit zurück.|
+|[gerade](#now)|Statisch Gibt die aktuelle Uhrzeit zurück.|
 |[to_time_t](#to_time_t)|Statisch Gibt ein `time_t`-Objekt zurück, das einer bestimmten `time_point` am besten entspricht.|
 
 ### <a name="public-constants"></a>Öffentliche Konstanten
@@ -66,9 +66,9 @@ Eine Uhr ist *gleichmäßig*, wenn sie *monoton* und die Zeit zwischen den Teils
 
 **Namespace:** std::chrono
 
-## <a name="from_time_t"></a>  system_clock:: from_time_t
+## <a name="from_time_t"></a>system_clock::from_time_t
 
-Statische Methode, die gibt eine [Time_point](../standard-library/time-point-class.md) , das am ehesten der Zeit, die durch dargestellt wird *Tm*.
+Statische Methode, die ein [time_point](../standard-library/time-point-class.md) zurückgibt, das am ehesten der von *TM*dargestellten Zeit entspricht.
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -76,7 +76,7 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Tm*<br/>
+*Ausnutzt*\
 Ein [time_t](../c-runtime-library/standard-types.md)-Objekt.
 
 ## <a name="is_monotonic_constant"></a> system_clock::is_monotonic-Konstante
@@ -89,7 +89,7 @@ static const bool is_monotonic = false;
 
 ### <a name="return-value"></a>Rückgabewert
 
-In dieser Implementierung `system_clock::is_monotonic` gibt immer **"false"**.
+In dieser Implementierung `system_clock::is_monotonic` gibt immer **false**zurück.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -105,13 +105,13 @@ static const bool is_steady = false;
 
 ### <a name="return-value"></a>Rückgabewert
 
-In dieser Implementierung `system_clock::is_steady` gibt immer **"false"**.
+In dieser Implementierung `system_clock::is_steady` gibt immer **false**zurück.
 
 ### <a name="remarks"></a>Hinweise
 
 Eine Uhr ist *gleichmäßig*, wenn sie [monoton](#is_monotonic_constant) und die Zeit zwischen den Teilstrichen konstant ist.
 
-## <a name="now"></a>  system_clock:: Now
+## <a name="now"></a>system_clock:: Now
 
 Statische Methode, die die aktuellen Uhrzeit zurückgibt.
 
@@ -123,9 +123,9 @@ static time_point now() noexcept;
 
 Ein [time_point](../standard-library/time-point-class.md)-Objekt, das die aktuelle Uhrzeit darstellt.
 
-## <a name="to_time_t"></a>  system_clock:: to_time_t
+## <a name="to_time_t"></a>system_clock::to_time_t
 
-Statische Methode, die gibt eine [Time_t](../c-runtime-library/standard-types.md) , das am ehesten der Zeit, die durch dargestellt wird *Zeit*.
+Statische Methode, die ein [time_t](../c-runtime-library/standard-types.md) zurückgibt, das am ehesten der Zeit entspricht, die durch die *Zeit*dargestellt wird.
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -133,11 +133,11 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Zeit*<br/>
+*Zeit*\
 Ein [time_point](../standard-library/time-point-class.md)-Objekt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[steady_clock-Struktur](../standard-library/steady-clock-struct.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)\
+[steady_clock-Struktur](../standard-library/steady-clock-struct.md)

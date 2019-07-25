@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_base_of class
 - is_base_of
 ms.assetid: 436f6213-1d4c-4ffc-a588-fc7c4887dd86
-ms.openlocfilehash: 345301b5eeed7b66f18a54e56b9bee6346078634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d56222f218033d00583e5e3def9790720ef7bb94
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383671"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456622"
 ---
 # <a name="isbaseof-class"></a>is_base_of-Klasse
 
@@ -27,15 +27,15 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Parameter
 
-*Basis*<br/>
+*Sock*\
 Die Basisklasse zum Testen.
 
-*Abgeleitete*<br/>
+*Gewonnen*\
 Der abgeleitete Typ zum Testen.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Basis* ist eine Basisklasse des Typs *abgeleiteten*, andernfalls ist Sie false.
+Eine Instanz des typprädikats ist "true",  wenn die typbasis eine Basisklasse des *abgeleiteten*Typs ist; andernfalls "false".
 
 ## <a name="example"></a>Beispiel
 
@@ -80,5 +80,5 @@ is_base_of<derived, base> == false
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_convertible-Klasse](../standard-library/is-convertible-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_convertible-Klasse](../standard-library/is-convertible-class.md)

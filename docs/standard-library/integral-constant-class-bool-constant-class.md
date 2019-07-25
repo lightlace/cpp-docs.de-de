@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: f7b9217560bc94c536a7c819276266fd16fa4b07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c85da1f3be7821f8d82cd2b19dab2a5864426a5a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404870"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452045"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant Class, bool_constant-Klasse
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Parameter
 
-*T*<br/>
+*BUND*\
 Der Typ der Konstante.
 
-*v*<br/>
+*Ramelow*\
 Der Wert der Konstante.
 
 ## <a name="remarks"></a>Hinweise
 
 Die `integral_constant`-Vorlagenklasse, sofern mit einem integralen Typ *T* und einem Wert *v* dieses Typs definiert, stellt ein Objekt dar, das eine Konstante dieses integralen Typs mit dem angegebenen Wert hält. Beim Member `type` handelt es sich um ein Alias des erstellten Vorlagenspezialisierungstypen, und der Member `value` hält den Wert *v*, der beim Erstellen der Spezialisierung verwendet wurde.
 
-Die `bool_constant` Vorlagenklasse ist eine explizite teilspezialisierung von `integral_constant` verwendet **"bool"** als die *T* Argument.
+Die `bool_constant` Vorlagen Klasse ist eine explizite partielle Spezialisierung `integral_constant` von, die **bool** als *T* -Argument verwendet.
 
 ## <a name="example"></a>Beispiel
 
@@ -80,6 +80,6 @@ integral_constant<bool, false> == false
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[false_type](../standard-library/type-traits-typedefs.md#false_type)<br/>
-[true_type](../standard-library/type-traits-typedefs.md#true_type)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[false_type](../standard-library/type-traits-typedefs.md#false_type)\
+[true_type](../standard-library/type-traits-typedefs.md#true_type)

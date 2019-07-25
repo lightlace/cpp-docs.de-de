@@ -7,12 +7,12 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 6fe9e2d576afcacc7d014d4f5c920ecab3a83fc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224037"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455579"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits-Struktur
 
@@ -41,13 +41,13 @@ Die Vorlagenstruktur definiert die Membertypen.
 
 - `difference_type`: ein Synonym für `Iterator::difference_type`.
 
-- `distance_type`: ein Synonym für `Iterator::difference_type.`
+- `distance_type`: ein Synonym für`Iterator::difference_type.`
 
 - `pointer`: ein Synonym für `Iterator::pointer`.
 
 - `reference`: ein Synonym für `Iterator::reference`.
 
-Die teilspezialisierungen bestimmen die kritischen Typen mit einem Zeiger vom Typ **Typ** <strong>\*</strong> oder **const-Typ**  <strong>\*</strong>.
+Die partiellen Spezialisierungs Typen bestimmen die kritischen Typen, die einem Objekt Zeiger vom Typ <strong>\*</strong> **Type oder dem** **Konstanten Typ** <strong>\*</strong>zugeordnet sind.
 
 In dieser Implementierung können Sie auch mehrere Vorlagenfunktionen verwenden, die keine Teilspezialisierung benutzen:
 
@@ -124,6 +124,6 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

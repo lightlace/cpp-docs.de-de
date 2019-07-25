@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: d2776e658b511208d9a295cd84a961d7691d29e0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246807"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451887"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -48,9 +48,9 @@ Definiert eine Klasse, einen Operator und mehrere Vorlagen, die beim Zuordnen un
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|Einem Garbage Collector wird mitgeteilt, dass die bei einer bestimmten Adresse startenden und in der angegebenen Blockgröße fallenden Zeichen keine nachweisbaren Zeiger enthalten.|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Der Garbage Collection wird mitgeteilt, dass die angegebene Adresse von zugewiesenem Speicher erreichbar ist.|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|Es werden Objekte gelöscht, die `operator new` zugeordnet sind. Kann mit `unique_ptr` verwendet werden.|
-|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Kurzschreibweise `destroy` Methode.|
-|[destroy](../standard-library/memory-functions.md#destroy)|Kurzschreibweise `destroy` Methode.|
-|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Kurzschreibweise `destroy` Methode.|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Kurzformen `destroy` -Methode.|
+|[destroy](../standard-library/memory-functions.md#destroy)|Kurzformen `destroy` -Methode.|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Kurzformen `destroy` -Methode.|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Dynamische Umwandlung in `shared_ptr`.|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|Rufen Sie den Deleter von `shared_ptr` ab.|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Gibt den Typ der Zeigersicherheit zurück, der von einem Garbage Collector angenommen wird.|
@@ -65,14 +65,14 @@ Definiert eine Klasse, einen Operator und mehrere Vorlagen, die beim Zuordnen un
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|`garbage_collector` wird mitgeteilt, dass eine angegebene Speicheradresse nicht erreichbar ist.|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|Es werden Objekte aus einem angegebenen Eingabebereich in einen nicht initialisierten Zielbereich kopiert.|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|Eine Kopie einer angegebenen Anzahl von Elementen aus einem Eingabeiterator wird erstellt. Die Kopien werden in einen Forward-Iterator abgelegt.|
-|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Kurzschreibweise `uninitialized_default_construct` Methode.|
-|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Kurzschreibweise `uninitialized_construct` Methode.|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Kurzformen `uninitialized_default_construct` -Methode.|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Kurzformen `uninitialized_construct` -Methode.|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|Objekte eines angegebenen Werts werden in einen nicht initialisierten Zielbereich kopiert.|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|Objekte einer angegebenen Anzahl von Elementen werden in einen nicht initialisierten Zielbereich kopiert.|
-|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Kurzschreibweise `uninitialized_move` Methode.|
-|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Kurzschreibweise `uninitialized_move` Methode.|
-|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Kurzschreibweise `uninitialized_value_construct` Methode.|
-|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Kurzschreibweise `uninitialized_value_construct` Methode.|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Kurzformen `uninitialized_move` -Methode.|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Kurzformen `uninitialized_move` -Methode.|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Kurzformen `uninitialized_value_construct` -Methode.|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Kurzformen `uninitialized_value_construct` -Methode.|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>Operatoren
@@ -93,7 +93,7 @@ Definiert eine Klasse, einen Operator und mehrere Vorlagen, die beim Zuordnen un
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objektarrays des Typs **Type** verwaltet.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Beschreibt ein Objekt, das alle Informationen bestimmt, die für einen zuweisungsfähigen Container erforderlich ist.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das einen Zeiger auf ein zugeordnetes Objekt des Typs speichert **Typ** <strong>\*</strong> wird sichergestellt, dass das Objekt, das auf das Löschen, wenn das einschließende Auto_ptr Ruft zerstört.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|Die Vorlagen Klasse beschreibt ein Objekt, das einen Zeiger auf ein zugeordneter Objekt vom Typ **Type** <strong>\*</strong> speichert, das sicherstellt, dass das Objekt, auf das es verweist, gelöscht wird, wenn das einschließende auto_ptr zerstört wird.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Meldet eine ungültige weak_ptr-Ausnahme.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Hilft bei der Erstellung von `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Stellt Informationen bereit, die für ein Objekt der Vorlagenklasse `allocator_traits` erforderlich sind, um eine Zuweisung mit Zeigertyp `Ptr` zu beschreiben.|
@@ -120,5 +120,5 @@ Definiert eine Klasse, einen Operator und mehrere Vorlagen, die beim Zuordnen un
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

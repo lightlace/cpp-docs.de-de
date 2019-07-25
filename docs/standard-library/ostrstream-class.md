@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: 2d4a7a780f1a7db27bcb600c13430deaa0dc35cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c73ab13d3cb2531ff3d741766bc86f8354a0be9d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370867"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458065"
 ---
 # <a name="ostrstream-class"></a>ostrstream-Klasse
 
@@ -67,8 +67,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parameter
 
-*_Freezeit*<br/>
-Ein **"bool"** , der angibt, ob den Stream fixiert werden soll.
+*_Freezeit*\
+Ein  boolescher Wert, der angibt, ob der Stream eingefroren werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -76,7 +76,7 @@ Die Memberfunktion ruft [rdbuf](#rdbuf) -> [freeze](../standard-library/strstrea
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [strstream:: Freeze](../standard-library/strstreambuf-class.md#freeze) für ein Beispiel, verwendet `freeze`.
+Ein Beispiel, in dem verwendet `freeze`wird, finden Sie unter " [stranstream:: Freeze](../standard-library/strstreambuf-class.md#freeze) "
 
 ## <a name="ostrstream"></a> ostrstream::ostrstream
 
@@ -92,22 +92,22 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Parameter
 
-*ptr*<br/>
+*PTR*\
 Der Puffer.
 
-*count*<br/>
+*Countdown*\
 Die Größe des Puffers in Byte.
 
-*_Mode*<br/>
+*_Mode*\
 Der Eingabe- und Ausgabemodus des Puffers. Weitere Informationen finden Sie unter [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="remarks"></a>Hinweise
 
-Beide Konstruktoren initialisieren die Basisklasse durch Aufrufen von [Ostream](../standard-library/ostream-typedefs.md#ostream)(**Sb**), wobei `sb` das gespeicherte Objekt der Klasse [Strstreambuf](../standard-library/strstreambuf-class.md). Der erste Konstruktor initialisiert zudem `sb` durch Aufrufen von `strstreambuf`. Der zweite Konstruktor initialisiert die Basisklasse auf eine von zwei Arten:
+Beide Konstruktoren initialisieren die Basisklasse durch Aufrufen von [ostream](../standard-library/ostream-typedefs.md#ostream)(**SB**), `sb` wobei das gespeicherte Objekt [der Klasse "](../standard-library/strstreambuf-class.md)". Der erste Konstruktor wird auch initialisiert `sb` , indem aufgerufen `strstreambuf`wird. Der zweite Konstruktor initialisiert die Basisklasse auf eine von zwei Arten:
 
-- Wenn `_Mode`  &  **ios_base:: trunc**== 0, dann `ptr` müssen festlegen, das erste Element eines Arrays von `count` Elemente und der Konstruktor ruft `strstreambuf`(`ptr`, `count`, `ptr`).
+- Wenn `_Mode` **ios_base::** `ptr` `count` `count` App=`strstreambuf`= 0 ist, mussdasersteElementeinesArraysvonElementenfestlegen,undderKonstruktorruft(,,`ptr`  &  `ptr`).
 
-- Andernfalls `ptr` müssen festlegen, das erste Element eines Arrays an Count-Elementen, die eine C-Zeichenfolge enthält, deren erstes Element erhalten Sie, `ptr`, und der Konstruktor ruft `strstreambuf`(`ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- `count``ptr` `strstreambuf` `ptr`Andernfalls muss das erste Element eines Arrays von count-Elementen festlegen, das eine C-Zeichenfolge enthält, deren erstes Element von bestimmt wird, und der Konstruktor ruft (,, `ptr` `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a> ostrstream::pcount
 
@@ -143,7 +143,7 @@ Ein Zeiger auf das dem Stream zugeordnete strstreambuf-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt die Adresse des gespeicherten Streampuffers des Typs `pointer` zu [Strstreambuf](../standard-library/strstreambuf-class.md).
+Die Member-Funktion gibt die Adresse des gespeicherten Streampuffers des `pointer` Typs in " [straustreambuf](../standard-library/strstreambuf-class.md)" zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -167,11 +167,11 @@ Die Memberfunktion gibt [rdbuf](#rdbuf) -> [str](../standard-library/strstreambu
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [strstream:: str](../standard-library/strstreambuf-class.md#str) für ein Beispiel, verwendet `str`.
+Ein Beispiel, das verwendet `str`, finden Sie unter [strinstream:: Str](../standard-library/strstreambuf-class.md#str) .
 
 ## <a name="see-also"></a>Siehe auch
 
-[ostream](../standard-library/ostream-typedefs.md#ostream)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
-[iostreams-Konventionen](../standard-library/iostreams-conventions.md)<br/>
+[ostream](../standard-library/ostream-typedefs.md#ostream)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream-Programmierung](../standard-library/iostream-programming.md)\
+[iostreams-Konventionen](../standard-library/iostreams-conventions.md)

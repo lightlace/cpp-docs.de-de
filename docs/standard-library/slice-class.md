@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: f2c054626b36083d67f9dbc4c87cf6283c12f001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412526"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450356"
 ---
 # <a name="slice-class"></a>slice-Klasse
 
@@ -25,7 +25,7 @@ Eine Hilfsklasse für valarray, die dazu verwendet wird, eindimensionale Teilmen
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse speichert die Parameter, die ein Objekt des Typs [slice_array](../standard-library/slice-array-class.md) charakterisieren. Die Teilmenge eines valarray wird indirekt erstellt, wenn ein Objekt der slice-Klasse als Argument für ein Objekt der Klasse [valarray](../standard-library/valarray-class.md#op_at)**\<Typ>** verwendet wird. Die gespeicherten Werte, die die aus dem übergeordneten valarray ausgewählte Teilmenge angeben, enthalten:
+Die Klasse speichert die Parameter, die ein Objekt des Typs [slice_array](../standard-library/slice-array-class.md) charakterisieren. Die Teilmenge eines valarray wird indirekt erstellt, wenn ein Objekt der slice-Klasse als Argument für ein Objekt der Klasse [valarray](../standard-library/valarray-class.md#op_at) **\<Typ>** verwendet wird. Die gespeicherten Werte, die die aus dem übergeordneten valarray ausgewählte Teilmenge angeben, enthalten:
 
 - Den Anfangsindex im valarray
 
@@ -136,18 +136,18 @@ slice(
 
 ### <a name="parameters"></a>Parameter
 
-*_StartIndex*<br/>
+*_StartIndex*\
 Der valarray-Index des ersten Elements der Teilmenge.
 
-*_Len*<br/>
+*_Len*\
 Die Anzahl von Elementen in der Teilmenge.
 
-*stride*<br/>
+*Schritt*\
 Der Abstand zwischen Elementen in der Teilmenge.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Standardkonstruktor speichert Nullen für Startindex, Gesamtlänge und Segment. Der zweite Konstruktor speichert *_StartIndex* für den Startindex, *_Len* für die Gesamtlänge und *stride* für das Segment.
+Der Standardkonstruktor speichert Nullen für Startindex, Gesamtlänge und Segment. Der zweite Konstruktor speichert *_StartIndex* für den Start Index, *_Len* für die Gesamtlänge und *Stride* für den Schritt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -312,4 +312,4 @@ The stride of slice vaSlice is: 3.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

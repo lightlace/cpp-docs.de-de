@@ -1,5 +1,5 @@
 ---
-title: Invoke_result-Klasse
+title: invoke_result-Klasse
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::invoke_result
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: 7c03240d3ee666fcda30562279a8dbda2ca8dc7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b2051b0c854151cff9b439f5ec0a951c25a6387
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404846"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447638"
 ---
-# <a name="invokeresult-class"></a>Invoke_result-Klasse
+# <a name="invokeresult-class"></a>invoke_result-Klasse
 
-Bestimmt den Rückgabetyp des aufrufbaren Typs, der die angegebenen Argumenttypen zum Zeitpunkt der Kompilierung verwendet. In C ++ 17-hinzugefügt.
+Bestimmt den Rückgabetyp des Aufruf baren Typs, der die angegebenen Argument Typen zur Kompilierzeit annimmt. Hinzugefügt in c++ 17.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,15 +33,15 @@ template<lass Callable, class... Args>
 
 ### <a name="parameters"></a>Parameter
 
-*aufrufbare*<br/>
+*Callable*\
 Der abzufragende, aufgerufene Typ.
 
-*Args*<br/>
+*Args*\
 Die Typen der Argumentliste für den aufrufbaren, abzufragenden Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Vorlage, um zu bestimmen, den Ergebnistyp des *Callable*(*Args*...) zum Zeitpunkt der Kompilierung, in denen *Callable* und alle Typen im *Args* sind vollständigen Typ, ein Array mit Unbekannter Grenze oder eine möglicherweise cv-qualifizierte `void`. Die `type` Datenmember der Vorlagenklasse benennt den Rückgabetyp der *Callable* Wenn aufgerufen, wobei die Argumente *Args*... Die `type` Element wird nur definiert, wenn *Callable* kann aufgerufen werden, wenn aufgerufen, wobei die Argumente *Args*... in einem nicht ausgewerteten Kontext. Andernfalls hat die Vorlagenklasse keinen Member `type`, wodurch der SFINAE für einen bestimmten Satz von Argumenttypen zum Zeitpunkt der Kompilierung überprüft.
+Verwenden Sie diese Vorlage, um den Ergebnistyp der *Aufruf baren*(*args*...) zur Kompilierzeit zu bestimmen, wobei *Callable* und alle Typen in *args* ein beliebiger vollständiger Typ, ein Array mit unbekannter Grenze `void`oder eine möglicherweise CV qualifizierte sind. Der `type` Member der Vorlagen Klasse benennt den Rückgabetyp von *Callable* , wenn er mithilfe *der Argumente Argumente*... aufgerufen wird. Der `type` Member wird nur definiert, wenn *Callable* aufgerufen werden kann, wenn er mithilfe *der Argumente Argumente*... in einem nicht ausgewerteten Kontext. Andernfalls hat die Vorlagen Klasse keinen Member `type`, der sfinae-Tests für einen bestimmten Satz von Argument Typen zur Kompilierzeit zulässt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,5 +51,5 @@ Verwenden Sie diese Vorlage, um zu bestimmen, den Ergebnistyp des *Callable*(*Ar
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
 [invoke](functional-functions.md#invoke)

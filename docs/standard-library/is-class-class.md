@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 43a4211d9841e754cefbe1bdf405001f0f4657d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383645"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456640"
 ---
 # <a name="isclass-class"></a>is_class-Klasse
 
@@ -27,12 +27,12 @@ struct is_class;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein Typ definiert als eine **Klasse** oder ein **Struktur**, oder ein `cv-qualified` -Formular von einem davon ist, andernfalls er false enthält.
+Eine Instanz des typprädikats ist "true", wenn der Typ " *Ty* " ein Typ ist, der als **Klasse** oder `cv-qualified` **Struktur**definiert ist, oder eine Instanz des typprädikats, andernfalls "false".
 
 ## <a name="example"></a>Beispiel
 
@@ -71,6 +71,6 @@ is_class<int> == false
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound-Klasse](../standard-library/is-compound-class.md)<br/>
-[is_union-Klasse](../standard-library/is-union-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_compound-Klasse](../standard-library/is-compound-class.md)\
+[is_union-Klasse](../standard-library/is-union-class.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412214"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447430"
 ---
 # <a name="submatch-class"></a>sub_match-Klasse
 
@@ -41,7 +41,7 @@ class sub_match
 
 ## <a name="parameters"></a>Parameter
 
-*BidIt*<br/>
+*Bidit*\
 Der Itertatortyp für Teilübereinstimmungen.
 
 ## <a name="remarks"></a>Hinweise
@@ -50,7 +50,7 @@ Die Vorlagenklasse beschreibt ein Objekt, das eine Folge von Zeichen kennzeichne
 
 Gab es keine Übereinstimmung mit der Erfassungsgruppe, ist das `matched` -Datenmember des Objekts gleich „false“, und die beiden Iteratoren `first` und `second` (geerbt von der Basisklasse `std::pair`) gleich sind. Gab es eine Übereinstimmung mit der Erfassungsgruppe, ist `matched` gleich „true“, der Iterator `first` zeigt auf das erste Zeichen in der Zielsequenz, die mit der Erfassungsgruppe übereinstimmte, und der Iterator `second` zeigt auf die erste Position hinter dem letzten Zeichen in der Zielsequenz, die mit der Erfassungsgruppe übereinstimmte. Für eine Übereinstimmung der Länge 0 (null) gilt Folgendes: Der Member `matched` enthält „true“, die beiden Iteratoren sind gleich, und beide zeigen auf die Position der Übereinstimmung.
 
-Eine Übereinstimmung der Länge 0 (null) kann auftreten, wenn eine Erfassungsgruppe ausschließlich aus einer Assertion oder aus einer Wiederholung besteht, die 0 (null) Wiederholungen zulässt. Zum Beispiel:
+Eine Übereinstimmung der Länge 0 (null) kann auftreten, wenn eine Erfassungsgruppe ausschließlich aus einer Assertion oder aus einer Wiederholung besteht, die 0 (null) Wiederholungen zulässt. Beispiel:
 
 „^“ stimmt mit der Zielsequenz „a“ überein; das `sub_match` -Objekt, das der Erfassungsgruppe 0 entspricht, enthält Iteratoren, die beide auf das erste Zeichen in der Sequenz zeigen.
 
@@ -70,14 +70,14 @@ Eine Übereinstimmung der Länge 0 (null) kann auftreten, wenn eine Erfassungsgr
 |-|-|
 |[compare](#compare)|Vergleichen einer Teilübereinstimmung mit einer Sequenz.|
 |[length](#length)|Gibt die Länge einer Teilübereinstimmung zurück.|
-|[matched](#matched)|Gibt an, ob eine Übereinstimmung erfolgreich war.|
+|[Kommunen](#matched)|Gibt an, ob eine Übereinstimmung erfolgreich war.|
 |[str](#str)|Konvertiert eine Teilübereinstimmung in eine Zeichenfolge.|
 
 ### <a name="operators"></a>Operatoren
 
 |Operator|Beschreibung|
 |-|-|
-|[operator basic_string<value_type>](#op_basic_string_lt_value_type_gt)|Wandelt eine Teilübereinstimmung in eine Zeichenfolge um.|
+|[Operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Wandelt eine Teilübereinstimmung in eine Zeichenfolge um.|
 
 ## <a name="example"></a>Beispiel
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Die Teilübereinstimmung, mit der verglichen werden soll.
 
-*str*<br/>
+*SRT*\
 Die Zeichenfolge, mit der verglichen wird.
 
-*ptr*<br/>
+*PTR*\
 Die mit NULL endende Sequenz, mit der verglichen werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Member nimmt **"true"** nur dann, wenn die Erfassungsgruppe zugeordnete `*this` war Bestandteil der Übereinstimmung des regulären Ausdrucks.
+Der Member ist nur **dann true** , wenn die zugeordnete `*this` Erfassungs Gruppe Teil der regulären Ausdrucks Übereinstimmung war.
 
 ## <a name="op_basic_string_lt_value_type_gt"></a> sub_match::operator basic_string&lt;value_type&gt;
 
@@ -256,5 +256,5 @@ Die Typedef ist ein Synonym für `iterator_traits<BidIt>::value_type`.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<regex>](../standard-library/regex.md)<br/>
-[sub_match](../standard-library/sub-match-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[sub_match](../standard-library/sub-match-class.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: 346dd4f681432143c954ca125c3862fc6827db60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9dff8a871895eee6774b75ca1c83dca6fd42ff3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383541"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460232"
 ---
 # <a name="moneyput-class"></a>money_put-Klasse
 
@@ -37,10 +37,10 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*<br/>
+*CharType*\
 Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
-*OutputIterator*<br/>
+*OutputIterator*\
 Der Typ des Iterators, in den die monetären Put-Funktionen ihre Ausgabe schreiben.
 
 ## <a name="remarks"></a>Hinweise
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parameter
 
-*next*<br/>
+*weiter*\
 Ein Iterator, der das erste Element in der eingefügten Zeichenfolge adressiert.
 
-*_Intl*<br/>
+*_Intl*\
 Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*_Fill*<br/>
+*_Fill*\
 Ein Zeichen, das Leerzeichen einfügt.
 
-*val*<br/>
+*ster*\
 Ein zu konvertierendes Zeichenfolgenobjekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -129,9 +129,9 @@ Ein Ausgabeiterator, der auf die erste Position nach dem jeweils letzten Element
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste virtuelle geschützte Memberfunktion generiert sequenzielle Elemente ab *Weiter* zum Erzeugen der Ausgabefelder für monetäre Werte aus der ["string_type"](#string_type) Objekt *Val*. Die gesteuerte Sequenz durch *Val* muss beginnen mit einem oder mehreren Dezimalstellen, optional mit vorangestelltem Minuszeichen (-), die den Betrag darstellen. Die Funktion gibt einen Iterator zurück, der das erste Element nach dem generierten Ausgabefeld für monetäre Werte festlegt.
+Die erste virtuelle geschützte Member-Funktion generiert sequenzielle Elemente, beginnend bei *Next* , um ein monetäre Ausgabefeld aus dem [string_type](#string_type) -Objekt *Val*zu erzeugen. Die von *Val* gesteuerte Sequenz muss mit einer oder mehreren Dezimalziffern beginnen, wobei optional ein Minuszeichen (-) vorangestellt wird, das den Betrag darstellt. Die Funktion gibt einen Iterator zurück, der das erste Element nach dem generierten Ausgabefeld für monetäre Werte festlegt.
 
-Der zweite virtuelle geschützte Memberfunktion verhält sich genauso wie die erste, außer, dass die It effektiv zuerst *Val* konvertiert Sie in eine Folge von Dezimalziffern, optional mit vorangestelltem ein Minuszeichen (-), klicken Sie dann diese Sequenz wie oben beschrieben.
+Die zweite virtuelle geschützte Member-Funktion verhält sich wie die erste, mit der Ausnahme, dass Sie zuerst *Val* in eine Folge von Dezimalziffern konvertiert, optional mit einem Minuszeichen, und dann diese Sequenz wie oben beschrieben konvertiert.
 
 Das Format eines Eingabefelds für monetäre Werte richtet sich nach dem [Gebietsschemafacet](../standard-library/locale-class.md#facet_class) „fac“, das durch den (effektiven) Aufruf [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) zurückgegeben wird.
 
@@ -191,22 +191,22 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs*<br/>
+*_Refs*\
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
+Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
 - 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
-- \> 1: Diese Werte sind nicht definiert.
+- \>1: diese Werte sind nicht definiert.
 
 Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
 ## <a name="put"></a> money_put::put
 
@@ -230,19 +230,19 @@ iter_type put(
 
 ### <a name="parameters"></a>Parameter
 
-*next*<br/>
+*weiter*\
 Ein Iterator, der das erste Element in der eingefügten Zeichenfolge adressiert.
 
-*_Intl*<br/>
+*_Intl*\
 Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*_Fill*<br/>
+*_Fill*\
 Ein Zeichen, das Leerzeichen einfügt.
 
-*val*<br/>
+*ster*\
 Ein zu konvertierendes Zeichenfolgenobjekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -295,6 +295,6 @@ Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [basic_string](../sta
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Facet-Klasse](../standard-library/locale-class.md#facet_class)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet-Klasse](../standard-library/locale-class.md#facet_class)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

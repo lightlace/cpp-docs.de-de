@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380116"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449657"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc-Klasse
 
@@ -36,9 +36,9 @@ class cache_suballoc
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse Cache_suballoc speichert freigegebene Speicherblöcke in einer Freiliste mit unbegrenzter Länge unter Verwendung `freelist<sizeof(Type), max_unbounded>`, und führt eine unterzuweisung von Speicherblöcken aus einem größeren Block zugeordnet **new-Operator** bei der Freiliste hinzugefügt wird leer.
+Die Cache_suballoc-Vorlagen Klasse speichert frei zugeordnete Speicherblöcke in einer frei Liste mit begrenzter Länge, `freelist<sizeof(Type), max_unbounded>`unter Verwendung von und unterordnet Speicherblöcke von einem größeren Block, der mit **Operator new** zugeordnet wird, wenn die Freiliste leer ist.
 
-Jeder Block enthält `Sz * Nelts` Bytes Speicherkapazität und die Daten, die **new-Operator** und **Delete-Operator** erfordern. Zugeordnete Blöcke werden niemals freigegeben.
+Jeder Block enthält `Sz * Nelts` Bytes des verwendbaren Speichers und die Daten, die der **Operator new** und der **Operator Delete** erfordern. Zugeordnete Blöcke werden niemals freigegeben.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -108,4 +108,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

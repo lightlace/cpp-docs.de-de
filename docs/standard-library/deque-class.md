@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-ms.openlocfilehash: ef01b7872f94694d0bc22f89c51f12bfc1f4f080
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d78bbc6e66fe97af1049fa6976ac8c5fa806ef43
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244438"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448562"
 ---
 # <a name="deque-class"></a>deque-Klasse
 
@@ -108,11 +108,11 @@ class deque
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*\
+*Sorte*\
 Der in der Doppelschlange zu speichernde Elementdatentyp.
 
-*Zuweisung*\
-Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Doppelschlange kapselt. Dieses Argument ist optional, und der Standardwert ist **Allocator\<Typ >** .
+*Allocator*\
+Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Doppelschlange kapselt. Dieses Argument ist optional, und der Standardwert ist der **\<zuordnertyp >** .
 
 ## <a name="remarks"></a>Hinweise
 
@@ -138,7 +138,7 @@ Andernfalls werden alle Iteratoren und Verweise durch das Einfügen und Löschen
 
 |||
 |-|-|
-|[deque](#deque)|Erstellt ein Objekt vom Typ `deque`. Mehrere Konstruktoren werden bereitgestellt, um den Inhalt der neuen `deque` auf unterschiedliche Weise: für die leer, das mit einer angegebenen Anzahl leerer Elemente geladen, Inhalte, verschoben oder kopiert, von einem anderen `deque`; Inhalte mithilfe eines Iterators verschoben oder kopiert und ein Element in kopiert die `deque` `count` Zeiten. Einige der Konstruktoren ermöglichen die Verwendung eines benutzerdefinierten `allocator` zum Erstellen von Elementen.|
+|[deque](#deque)|Erstellt ein Objekt vom Typ `deque`. Es werden mehrere Konstruktoren bereitgestellt, um den Inhalt der neuen `deque` auf unterschiedliche Weise einzurichten: leer, mit einer angegebenen Anzahl leerer Elemente geladen, Inhalte verschoben oder aus anderen `deque`kopiert, Inhalte, die mit einem Iterator kopiert oder verschoben wurden. ein Element, das in `deque` die `count` Zeiten kopiert wurde. Einige der Konstruktoren ermöglichen die Verwendung eines benutzerdefinierten `allocator` zum Erstellen von Elementen.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -148,7 +148,7 @@ Andernfalls werden alle Iteratoren und Verweise durch das Einfügen und Löschen
 |[const_iterator](#const_iterator)|Ein Typ, der einen Iterator mit zufälligem Zugriff bereitstellt, mit dem auf Elemente in der `deque` als `const` zugegriffen, und mit dem diese Elemente gelesen werden können.|
 |[const_pointer](#const_pointer)|Ein Typ, der einen Zeiger auf ein Element in einer `deque`-als `const.` bereitstellt.|
 |[const_reference](#const_reference)|Ein Typ, der einen Verweis auf ein Element in einer `deque` zum Lesen und für andere Vorgänge als `const.` bereitstellt|
-|[const_reverse_iterator](#const_reverse_iterator)|Eine Typ, der einem Iterator mit zufälligem Zugriff bereitstellt, kann Zugriff auf und Lesen von Elementen in der `deque` als **const**. Die Doppelschlange wird umgekehrt angezeigt. Weitere Informationen finden Sie unter [reverse_iterator-Klasse](../standard-library/reverse-iterator-class.md).|
+|[const_reverse_iterator](#const_reverse_iterator)|Ein Typ, der einen Iterator mit zufälligem Zugriff bereitstellt, der auf Elemente in `deque` der **als Konstante**zugreifen und diese lesen kann. Die Doppelschlange wird umgekehrt angezeigt. Weitere Informationen finden Sie unter [reverse_iterator-Klasse](../standard-library/reverse-iterator-class.md).|
 |[difference_type](#difference_type)|Ein Typ, der den Unterschied zwischen zwei Iteratoren mit zufälligem Zugriff, die auf Elemente in derselben `deque` verweisen, bereitstellt.|
 |[Iterator](#iterator)|Ein Typ, der einen Iterator mit zufälligem Zugriff bereitstellt, mit dem jedes Element in einer `deque` gelesen oder geändert werden kann.|
 |[Zeiger](#pointer)|Ein Typ, der einen Zeiger auf ein Element in einer `deque` bereitstellt.|
@@ -166,14 +166,14 @@ Andernfalls werden alle Iteratoren und Verweise durch das Einfügen und Löschen
 |[Rückseite](#back)|Gibt einen Verweis auf das letzte Element der `deque` zurück.|
 |[begin](#begin)|Gibt ein Iterator mit zufälligem Zugriff zurück, der das erste Element in der `deque` adressiert.|
 |[cbegin](#cbegin)|Gibt einen const-Iterator auf das erste Element im `deque`-Objekt zurück.|
-|[cend](#cend)|Gibt ein random-Access **const** Iterator, der direkt hinter das Ende des zeigt die `deque`.|
+|[cend](#cend)|Gibt einen **Konstanten** Iterator mit Wahl freiem Zugriff zurück, der direkt hinter das Ende der `deque`verweist.|
 |[clear](#clear)|Löscht alle Elemente einer `deque` auf.|
 |[crbegin](#crbegin)|Gibt einen direkten const-Iterator mit zufälligem Zugriff zum ersten Element in der `deque` zurück, das in umgekehrter Reihenfolge angezeigt wird.|
 |[crend](#crend)|Gibt einen direkten const-Iterator mit zufälligem Zugriff zum ersten Element in der `deque` zurück, das in umgekehrter Reihenfolge angezeigt wird.|
 |[emplace](#emplace)|Fügt ein direkt konstruiertes Element an einer angegebenen Position in die `deque` ein.|
 |[emplace_back](#emplace_back)|Fügt ein direkt konstruiertes Element am Ende der `deque` ein.|
 |[emplace_front](#emplace_front)|Fügt ein direkt konstruiertes Element am Anfang der `deque` ein.|
-|[empty](#empty)|Gibt **"true"** Wenn die `deque` 0 Elemente enthält und **"false"** , wenn sie eine oder mehrere Elemente enthält.|
+|[empty](#empty)|Gibt **true** zurück, `deque` wenn die Elemente 0 (null) enthält, und **false** , wenn Sie mindestens ein Element enthält.|
 |[end](#end)|Gibt einen Iterator mit zufälligem Zugriff zurück, der auf eine Position unmittelbar nach dem Ende der `deque` verweist.|
 |[erase](#erase)|Entfernt ein Element oder eine Reihe von Elementen in einer `deque` aus angegebenen Speicherorten.|
 |[Vorderseite](#front)|Gibt einen Verweis auf das erste Element in einer `deque` zurück.|
@@ -198,7 +198,7 @@ Andernfalls werden alle Iteratoren und Verweise durch das Einfügen und Löschen
 |[operator&#91;&#93;](#op_at)|Gibt einen Verweis auf das `deque`-Element an einer angegebenen Position zurück.|
 |[operator=](#op_eq)|Ersetzt die Elemente der `deque` mit einer Kopie einer anderen `deque`.|
 
-## <a name="allocator_type"></a> allocator_type
+## <a name="allocator_type"></a>allocator_type
 
 Ein Typ, der die Zuweisungsklasse für das deque-Objekt darstellt.
 
@@ -214,7 +214,7 @@ typedef Allocator allocator_type;
 
 Siehe das Beispiel für [get_allocator](#get_allocator).
 
-## <a name="assign"></a> Weisen Sie
+## <a name="assign"></a>einräumen
 
 Löscht Elemente aus einer Doppelschlange und kopiert einen neuen Satz von Elementen in die Zieldoppelschlange.
 
@@ -233,16 +233,16 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*\
+*Erstes*\
 Die Position des ersten Elements in dem aus der Argumentdoppelschlange zu kopierenden Elementbereich.
 
-*letzte*\
+*Letzten*\
 Die Position des ersten Elements hinter dem aus der Argumentdoppelschlange zu kopierenden Elementbereich.
 
-*Anzahl*\
+*Countdown*\
 Die Anzahl von Kopien eines Elements, das in die Doppelschlange eingefügt wird.
 
-*val*\
+*Ster*\
 Der Wert des Elements, das in die Doppelschlange eingefügt wird.
 
 *IList*\
@@ -306,7 +306,7 @@ int main()
 d1 = 5678c1 =102030c1 =5060c1 =4444444
 ```
 
-## <a name="at"></a> an
+## <a name="at"></a>an
 
 Gibt einen Verweis auf das Element an einer angegebenen Position in der Doppelschlange zurück.
 
@@ -323,7 +323,7 @@ Der Feldindex (oder die Positionsnummer) des Elements, das auf die Doppelschlang
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn *pos* ist größer als die Größe der doppelschlange, `at` löst eine Ausnahme aus.
+Wenn *POS* größer als die Größe der Doppel Schlange ist, `at` wird von eine Ausnahme ausgelöst.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -357,7 +357,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a> Zurück
+## <a name="back"></a>Zurück
 
 Gibt einen Verweis auf das letzte Element der Doppelschlange zurück.
 
@@ -406,7 +406,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a> beginnen
+## <a name="begin"></a>beginnen
 
 Gibt einen Iterator zurück, der das erste Element in der Doppelschlange adressiert.
 
@@ -421,7 +421,7 @@ Ein Iterator mit direktem Zugriff, der das erste Element in der Doppelschlange a
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Rückgabewert von `begin` einem `const_iterator` zugewiesen wird, kann das deque-Objekt nicht geändert werden. Wenn der Rückgabewert von `begin` zugewiesen ist ein `iterator`, kann das Deque-Objekt geändert werden.
+Wenn der Rückgabewert von `begin` einem `const_iterator` zugewiesen wird, kann das deque-Objekt nicht geändert werden. Wenn der Rückgabewert von `begin` einem `iterator`zugewiesen wird, kann das Debug-Objekt geändert werden.
 
 ### <a name="example"></a>Beispiel
 
@@ -458,9 +458,9 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a> cbegin
+## <a name="cbegin"></a>cbegin
 
-Gibt eine **const** -Iterator, der das erste Element im Bereich adressiert.
+Gibt einen **Konstanten** Iterator zurück, der das erste Element im Bereich adressiert.
 
 ```cpp
 const_iterator cbegin() const;
@@ -468,7 +468,7 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein **const** Iterator mit wahlfreiem Zugriff, der verweist auf das erste Element des Bereichs, oder die Position direkt hinter das Ende eines leeren Bereichs (für einen leeren Bereich gilt `cbegin() == cend()`).
+Ein **konstanter** Random-Access-Iterator, der auf das erste Element des Bereichs zeigt oder die Position direkt hinter dem Ende eines leeren Bereichs (für einen leeren Bereich `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -484,9 +484,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a> cend
+## <a name="cend"></a>cend
 
-Gibt eine **const** Iterator, der die Position direkt hinter dem letzten Element in einem Bereich.
+Gibt einen **Konstanten** Iterator zurück, der die Position direkt hinter dem letzten Element in einem Bereich adressiert.
 
 ```cpp
 const_iterator cend() const;
@@ -500,7 +500,7 @@ Ein Random-Access-Iterator, der auf eine Position unmittelbar nach dem Ende des 
 
 `cend` wird verwendet, um zu testen, ob ein Iterator das Ende seines Bereichs übergeben hat.
 
-Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel können Sie auch `Container` ein beliebiger änderbarer (nicht- **const**) Container jeder Art, die unterstützt `end()` und `cend()`.
+Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. `Container` In diesem Beispiel sollte ein änderbarer (nicht **konstanter) Container**sein, der und `end()` `cend()`unterstützt.
 
 ```cpp
 auto i1 = Container.end();
@@ -512,7 +512,7 @@ auto i2 = Container.cend();
 
 Der von `cend` zurückgegebene Wert darf nicht dereferenziert werden.
 
-## <a name="clear"></a> Deaktivieren
+## <a name="clear"></a>Klartext
 
 Löscht alle Elemente einer Doppelschlange auf.
 
@@ -548,7 +548,7 @@ The size of the deque is initially 3
 The size of the deque after clearing is 0
 ```
 
-## <a name="const_iterator"></a> const_iterator
+## <a name="const_iterator"></a>const_iterator
 
 Ein Typ, der einen Iterator mit direktem Zugriff bereitstellt, mit dem auf ein **const**-Element in der Doppelschlange zugegriffen, und mit dem dieses Element gelesen werden kann.
 
@@ -564,9 +564,9 @@ Ein `const_iterator`-Typ kann nicht zum Ändern des Werts eines Elements verwend
 
 Ein Beispiel hierfür finden Sie unter [back](#back).
 
-## <a name="const_pointer"></a> const_pointer
+## <a name="const_pointer"></a>const_pointer
 
-Gibt einen Zeiger auf eine **const** Element in einer doppelschlange.
+Stellt einen Zeiger auf ein **Konstanten** Element in einer Doppel Schlange bereit.
 
 ```cpp
 typedef typename Allocator::const_pointer const_pointer;
@@ -576,7 +576,7 @@ typedef typename Allocator::const_pointer const_pointer;
 
 Ein `const_pointer`-Typ kann nicht zum Ändern des Werts eines Elements verwendet werden. Ein [Iterator](#iterator) wird häufiger für den Zugriff auf ein deque-Element verwendet.
 
-## <a name="const_reference"></a> const_reference
+## <a name="const_reference"></a>const_reference
 
 Ein Typ, der einen Verweis auf ein **const**-Element bereitstellt, das in einer Liste zum Lesen und Ausführen von **const**-Vorgängen gespeichert ist.
 
@@ -620,7 +620,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a> const_reverse_iterator
+## <a name="const_reverse_iterator"></a>const_reverse_iterator
 
 Ein Typ, der einen Iterator mit direktem Zugriff bereitstellt, mit dem jedes **const**-Element in der Doppelschlange gelesen werden kann.
 
@@ -636,7 +636,7 @@ Ein `const_reverse_iterator`-Typ kann nicht den Wert eines Elements ändern und 
 
 Im Beispiel für [rbegin](#rbegin) wird verdeutlicht, wie ein Iterator deklariert und verwendet wird.
 
-## <a name="crbegin"></a> crbegin
+## <a name="crbegin"></a>crbegin
 
 Gibt einen const-Iterator zum ersten Element in einer umgekehrten Doppelschlange zurück.
 
@@ -685,7 +685,7 @@ The first element of deque is 1.
 The first element of the reversed deque is 2.
 ```
 
-## <a name="crend"></a> crend
+## <a name="crend"></a>crend
 
 Gibt einen const-Iterator zurück, mit dem die Position adressiert wird, die dem letzten Element einer umgekehrten Doppelschlange folgt.
 
@@ -734,7 +734,7 @@ int main( )
 1
 ```
 
-## <a name="deque"></a> deque
+## <a name="deque"></a>Deque
 
 Die Anzahl von Elementen in der erstellten Liste.
 
@@ -766,22 +766,22 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 
 ### <a name="parameters"></a>Parameter
 
-*Al*\
+*Irdische*\
 Die mit diesem Objekt zu verwendende Zuweisungsklasse.
 
-*Anzahl*\
+*Countdown*\
 Die Anzahl von Elementen in der erstellten Doppelschlange.
 
-*val*\
+*Ster*\
 Der Wert der Elemente in der erstellten Doppelschlange.
 
 *Richting*\
 Die Doppelschlange, deren Kopie die erstellte Doppelschlange ist.
 
-*Erste*\
+*Erstes*\
 Die Position des ersten Elements in dem zu kopierenden Elementbereich.
 
-*letzte*\
+*Letzten*\
 Die Position des ersten Elements nach dem zu kopierenden Elementbereich.
 
 *IList*\
@@ -789,19 +789,19 @@ Das zu kopierende initializer_list-Element.
 
 ### <a name="remarks"></a>Hinweise
 
-Alle Konstruktoren speichern ein Zuweisungsobjekt (*Al*) und die doppelschlange initialisiert.
+Alle Konstruktoren speichern ein Zuordnungs Objekt (*Al*) und initialisieren die Doppel Schlange.
 
 Die ersten beiden Konstruktoren geben eine leere ursprüngliche Doppelschlange an, der zweite gibt auch den zu verwendenden Belegungsfunktionstyp (`_Al`).
 
 Der dritte Konstruktor gibt eine Wiederholung einer angegebenen Anzahl (`count`) von Elementen des Standardwerts für die Klasse `Type` an.
 
-Die vierten und fünften Konstruktoren geben eine Wiederholung von (*Anzahl*)-Elementen des Werts `val`.
+Der vierte und fünfte Konstruktoren geben eine Wiederholung von-Elementen (*count*) von `val`value an.
 
-Der sechste Konstruktor gibt eine Kopie der doppelschlange *rechts*.
+Der sechste Konstruktor gibt eine Kopie der Doppel Schlange *Rechts*an.
 
 Mit den siebten und achten Konstruktoren wird der Bereich `[First, Last)` einer Doppelschlange kopiert.
 
-Der siebte Konstruktor verschiebt die doppelschlange *rechts*.
+Der siebte Konstruktor verschiebt die Doppel Schlange nach *Rechts*.
 
 Der achte Konstruktor kopiert den Inhalt eines initializer_list-Elements.
 
@@ -1011,7 +1011,7 @@ int main( )
 }
 ```
 
-## <a name="difference_type"></a> difference_type
+## <a name="difference_type"></a>difference_type
 
 Ein Typ, der den Unterschied zwischen zwei Iteratoren bereitstellt, die auf Elemente innerhalb derselben Doppelschlange verweisen.
 
@@ -1066,7 +1066,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a> emplace-
+## <a name="emplace"></a>emplace
 
 Fügt ein direkt konstruiertes Element an einer angegebenen Position in die Doppelschlange ein.
 
@@ -1081,7 +1081,7 @@ iterator emplace(
 *_Where*\
 Die Position in der [Doppelschlange](../standard-library/deque-class.md), an der das erste Element eingefügt wird.
 
-*val*\
+*ster*\
 Der Wert des Elements, das in den `deque` eingefügt wird.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1134,7 +1134,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30
 ```
 
-## <a name="emplace_back"></a> emplace_back
+## <a name="emplace_back"></a>emplace_back
 
 Fügt ein direkt konstruiertes Element am Ende der Doppelschlange ein.
 
@@ -1144,7 +1144,7 @@ void emplace_back(Type&& val);
 
 ### <a name="parameters"></a>Parameter
 
-*val*\
+*ster*\
 Das Element, das am Ende der [Doppelschlange](../standard-library/deque-class.md) hinzugefügt wird.
 
 ### <a name="example"></a>Beispiel
@@ -1183,7 +1183,7 @@ New last element: 2
 Moved last element: 2
 ```
 
-## <a name="emplace_front"></a> emplace_front
+## <a name="emplace_front"></a>emplace_front
 
 Fügt ein direkt konstruiertes Element am Ende der Doppelschlange ein.
 
@@ -1193,7 +1193,7 @@ void emplace_front(Type&& val);
 
 ### <a name="parameters"></a>Parameter
 
-*val*\
+*ster*\
 Das am Anfang der [Doppelschlange](../standard-library/deque-class.md) hinzugefügte Element.
 
 ### <a name="example"></a>Beispiel
@@ -1232,7 +1232,7 @@ New last element: 2
 Moved last element: 2
 ```
 
-## <a name="empty"></a> leere
+## <a name="empty"></a>leer
 
 Testet, ob eine Doppelschlange leer ist.
 
@@ -1269,7 +1269,7 @@ int main( )
 The deque is not empty.
 ```
 
-## <a name="end"></a> Ende
+## <a name="end"></a>Schließlich
 
 Gibt einen Iterator zurück, mit dem die Position adressiert wird, die dem letzten Element einer Doppelschlange folgt.
 
@@ -1285,7 +1285,7 @@ Ein Iterator mit direktem Zugriff, mit dem die Position adressiert wird, die dem
 
 ### <a name="remarks"></a>Hinweise
 
-`end` wird verwendet, um zu testen, ob ein Iterator das Ende der doppelschlange erreicht hat.
+`end`wird verwendet, um zu testen, ob ein Iterator das Ende der Doppel Schlange erreicht hat.
 
 ### <a name="example"></a>Beispiel
 
@@ -1329,7 +1329,7 @@ The new next-to-last integer of c1 is 400
 The deque is now: 10 400 30
 ```
 
-## <a name="erase"></a> Löschen
+## <a name="erase"></a>Löschen
 
 Entfernt ein Element oder eine Reihe von Elementen in einer Doppelschlange aus angegebenen Positionen.
 
@@ -1344,10 +1344,10 @@ iterator erase(iterator first, iterator last);
 *_Where*\
 Die Position des Elements, das in der Doppelschlange entfernt werden soll.
 
-*Erste*\
+*erstes*\
 Die Position des ersten Elements, das in der Doppelschlange entfernt werden soll.
 
-*letzte*\
+*letzten*\
 Die Position direkt nach dem letzten in der Doppelschlange entfernten Element.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1402,7 +1402,7 @@ After erasing the first element, the deque becomes:  20 30 40 50
 After erasing all elements but the first, deque becomes: 20
 ```
 
-## <a name="front"></a> Vorderseite
+## <a name="front"></a>Beifahrer
 
 Gibt einen Verweis auf das erste Element in einer Doppelschlange zurück.
 
@@ -1452,7 +1452,7 @@ The first integer of c1 is 10
 The second integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 Gibt eine Kopie des allocator-Objekts zurück, das zum Erstellen der Doppelschlange verwendet wird.
 
@@ -1491,7 +1491,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a> Einfügen
+## <a name="insert"></a>setze
 
 Fügt ein Element oder mehrere Elemente oder ein Reihe von Elementen an einer bestimmten Position in die Doppelschlange ein.
 
@@ -1522,19 +1522,19 @@ IList);
 
 ### <a name="parameters"></a>Parameter
 
-*WHERE*\
+*Was*\
 Die Position in der Zieldoppelschlange, an der das erste Element eingefügt wird.
 
-*val*\
+*Ster*\
 Der Wert des Elements, das in die Doppelschlange eingefügt wird.
 
-*Anzahl*\
+*Countdown*\
 Die Anzahl von Elementen, die in die Doppelschlange eingefügt werden.
 
-*Erste*\
+*Erstes*\
 Die Position des ersten Elements in dem Elementbereich in der Argumentdoppelschlange, die kopiert werden soll.
 
-*letzte*\
+*Letzten*\
 Die Position des ersten Elements hinter dem Elementbereich in der Argumentdoppelschlange, die kopiert werden soll.
 
 *IList*\
@@ -1548,7 +1548,7 @@ Die ersten zwei Einfügefunktionen geben ein Iterator zurück, der auf den Speic
 
 Jeder Einfügevorgang kann ressourcenintensiv sein.
 
-## <a name="iterator"></a> Iterator
+## <a name="iterator"></a>Iterator
 
 Ein Typ, der einen Iterator mit direktem Zugriff bereitstellt, mit dem jedes Element in einer Doppelschlange gelesen oder geändert werden kann.
 
@@ -1558,13 +1558,13 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Typ `iterator` kann zum Ändern des Werts eines Elements verwendet werden.
+Ein- `iterator` Typ kann zum Ändern des Werts eines Elements verwendet werden.
 
 ### <a name="example"></a>Beispiel
 
 Ein Beispiel hierfür finden Sie unter [begin](#begin).
 
-## <a name="max_size"></a> max_size
+## <a name="max_size"></a>max_size
 
 Gibt die Maximallänge der Doppelschlange zurück.
 
@@ -1595,7 +1595,7 @@ int main( )
 }
 ```
 
-## <a name="op_at"></a> []-Operator
+## <a name="op_at"></a>[]-Operator
 
 Gibt einen Verweis auf das deque-Element an einer angegebenen Position zurück.
 
@@ -1646,7 +1646,7 @@ The first integer of c1 is 10
 The second integer of c1 is 20
 ```
 
-## <a name="op_eq"></a> Operator =
+## <a name="op_eq"></a>Operator =
 
 Ersetzt die Elemente für diese Doppelschlange mithilfe der Elemente aus einer anderen Doppelschlange.
 
@@ -1663,7 +1663,7 @@ Die Doppelschlange, die den neuen Inhalt bereitstellt.
 
 ### <a name="remarks"></a>Hinweise
 
-Beim ersten überschreiben kopiert die Elemente in diese doppelschlange aus *rechten*, die Quelle der Zuordnung. Beim zweiten Überschreiben verschiebt die Elemente in diese doppelschlange aus *rechten*.
+Die erste Überschreibung kopiert Elemente von *Rechts*in diese Doppel Schlange, die Quelle der Zuweisung. Mit der zweiten außer Kraft Setzung werden Elemente von *Rechts*in diese Doppel Schlange verschoben.
 
 Elemente, die in dieser Doppelschlange enthalten sind, bevor der Operator ausgeführt wird, werden entfernt.
 
@@ -1720,7 +1720,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a> Zeiger
+## <a name="pointer"></a>Zeichner
 
 Stellt einen Zeiger auf ein Element in einer [Doppelschlange](../standard-library/deque-class.md) bereit.
 
@@ -1730,9 +1730,9 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Typ `pointer` kann zum Ändern des Werts eines Elements verwendet werden. Ein [Iterator](#iterator) wird häufiger für den Zugriff auf ein deque-Element verwendet.
+Ein- `pointer` Typ kann zum Ändern des Werts eines Elements verwendet werden. Ein [Iterator](#iterator) wird häufiger für den Zugriff auf ein deque-Element verwendet.
 
-## <a name="pop_back"></a> pop_back
+## <a name="pop_back"></a>pop_back
 
 Löscht das Element am Ende der Doppelschlange.
 
@@ -1774,7 +1774,7 @@ The last element is: 2
 After deleting the element at the end of the deque, the last element is: 1
 ```
 
-## <a name="pop_front"></a> pop_front
+## <a name="pop_front"></a>pop_front
 
 Löscht das Element am Anfang einer Doppelschlange.
 
@@ -1816,7 +1816,7 @@ The second element is: 2
 After deleting the element at the beginning of the deque, the first element is: 2
 ```
 
-## <a name="push_back"></a> push_back
+## <a name="push_back"></a>push_back
 
 Fügt ein Element am Ende der Doppelschlange hinzu.
 
@@ -1828,14 +1828,14 @@ void push_back(Type&& val);
 
 ### <a name="parameters"></a>Parameter
 
-*val*\
+*ster*\
 Das Element, das am Ende der Doppelschlange hinzugefügt wird.
 
 ### <a name="remarks"></a>Hinweise
 
 Wenn eine Ausnahme ausgelöst wird, bleibt die Doppelschlange unverändert, und die Ausnahme wird erneut ausgelöst.
 
-## <a name="push_front"></a> push_front
+## <a name="push_front"></a>push_front
 
 Fügt am Anfang einer Doppelschlange ein Element hinzu.
 
@@ -1846,7 +1846,7 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>Parameter
 
-*val*\
+*ster*\
 Das am Anfang der Doppelschlange hinzugefügte Element.
 
 ### <a name="remarks"></a>Hinweise
@@ -1890,7 +1890,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a> rbegin
+## <a name="rbegin"></a>rbegin
 
 Gibt einen Iterator an das erste Element in einer umgekehrten Doppelschlange zurück.
 
@@ -1966,7 +1966,7 @@ The reversed deque is: 30 20 10
 Last element in deque is now 40.
 ```
 
-## <a name="reference"></a> Referenz
+## <a name="reference"></a>Angabe
 
 Ein Typ, der einen Verweis auf ein in einer Doppelschlange gespeichertes Element bereitstellt.
 
@@ -2002,7 +2002,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="rend"></a> REND
+## <a name="rend"></a>rend
 
 Gibt einen Iterator zurück, mit dem die Position adressiert wird, die dem letzten Element einer umgekehrten Doppelschlange folgt.
 
@@ -2087,7 +2087,7 @@ The reversed deque is: 30 20 10
 The modified reversed deque is: 30 20 40
 ```
 
-## <a name="resize"></a> Ändern der Größe
+## <a name="resize"></a>Größe
 
 Gibt für eine Doppelschlange eine neue Größe an.
 
@@ -2102,14 +2102,14 @@ void resize(size_type _Newsize, Type val);
 *_Newsize*\
 Die neue Größe der Doppelschlange.
 
-*val*\
+*ster*\
 Der Wert der neuen Elemente, die zur Doppelschlange hinzugefügt werden sollen, wenn die neue Größe die ursprüngliche Größe überschreitet. Wenn der Wert ausgelassen wird, werden dem Standardwert die neuen Elemente für die Klasse zugewiesen.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die Größe der doppelschlange kleiner als die angeforderte Größe ist *_Newsize*, werden der doppelschlange Elemente hinzugefügt, bis die angeforderte Größe erreicht.
+Wenn die Größe der Doppel Schlange kleiner als die angeforderte Größe ist, werden *_Newsize*-Elemente der Doppel Schlange hinzugefügt, bis Sie die angeforderte Größe erreicht.
 
-Wenn die Größe der doppelschlange die angeforderte Größe übersteigt, werden die Elemente am Ende der doppelschlange gelöscht, bis die Größe die doppelschlange erreicht, *_Newsize*.
+Wenn die Größe der Doppel Schlange größer ist als die angeforderte Größe, werden die Elemente, die dem Ende der Doppel Schlange am nächsten sind, gelöscht, bis die Doppel Schlange die Größe *_Newsize*erreicht.
 
 Wenn die vorhandene Größe der Doppelschlange der angeforderten Größe entspricht, wird keine Aktion durchgeführt.
 
@@ -2155,7 +2155,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse_iterator"></a> reverse_iterator
+## <a name="reverse_iterator"></a>reverse_iterator
 
 Ein Typ, der einen Iterator mit direktem Zugriff bereitstellt, mit dem ein Element in einer umgekehrten Doppelschlange gelesen oder geändert werden kann.
 
@@ -2212,7 +2212,7 @@ Current size of v1 = 1
 Current size of v1 = 1
 ```
 
-## <a name="size"></a> Größe
+## <a name="size"></a>Größe
 
 Gibt die Anzahl der Elemente in der Doppelschlange zurück.
 
@@ -2253,7 +2253,7 @@ The deque length is 1.
 The deque length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 Ein Typ, der die Anzahl von Elementen in einer Doppelschlange zählt.
 
@@ -2265,7 +2265,7 @@ typedef typename Allocator::size_type size_type;
 
 Ein Beispiel hierfür finden Sie unter [size](#size).
 
-## <a name="swap"></a> Swap
+## <a name="swap"></a>Wechsel
 
 Tauscht die Elemente von zwei deque-Objekten aus.
 
@@ -2281,8 +2281,8 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 *Richting*\
 Die Doppelschlange, in der die auszutauschenden Elemente bereitgestellt werden, oder die Doppelschlange, deren Elemente mit denen der Doppelschlange `left` ausgetauscht werden sollen.
 
-*Links*\
-Eine doppelschlange, deren Elemente mit denen der doppelschlange ausgetauscht werden sollen *rechten*.
+*linken*\
+Eine Doppel Schlange, deren Elemente mit denen der Doppel Schlange nach *Rechts*ausgetauscht werden sollen.
 
 ### <a name="example"></a>Beispiel
 
@@ -2339,7 +2339,7 @@ After swapping with c3, deque c1 is: 100
 After swapping with c2, deque c1 is: 1 2 3
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 Ein Typ, der den in einer Doppelschlange gespeicherten Datentyp darstellt.
 
@@ -2373,5 +2373,5 @@ int main( )
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

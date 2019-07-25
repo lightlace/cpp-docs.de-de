@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: c7d0d8b8572c26bfa75b9fab81900c0ae21fb932
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a367bb06f49dd2c9c64f0c257a3573add5645efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336492"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456238"
 ---
 # <a name="isintegral-class"></a>is_integral-Klasse
 
@@ -27,14 +27,14 @@ struct is_integral;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eines der ganzzahligen Typen oder ein `cv-qualified` -Form eines dieser die ganzzahligen Typen ist, andernfalls er false enthält.
+Eine Instanz des typprädikats ist "true",  wenn die typität einer der ganzzahligen Typen `cv-qualified` oder ein Formular eines ganzzahligen Typs ist; andernfalls "false".
 
-Ein ganzzahliger Typ ist eine der **"bool"**, **Char**, **unsigned Char**, **signiert Char**, **"wchar_t"**, **kurze**, **unsigned short**, **Int**, **ganze Zahl ohne Vorzeichen**, **lange**, und **unsigned long**. Darüber hinaus mit Compilern, die sie bereitstellen, ein ganzzahliger Typ kann eine der **long long**, **long long ohne Vorzeichen**, **__int64**, und **__int64 ohne Vorzeichen**.
+Ein ganzzahliger Typ ist "  **bool**", " **char**", " **Ganzzahl ohne Vorzeichen char**", " **signed char**, **wchar_t**", " **Short**", " **Ganzzahl ohne Vorzeichen Short**", " **int**", " **Ganzzahl ohne Vorzeichen int**", " **Long**" Mit Compilern, die Sie bereitstellen, kann ein ganzzahliger Typ außerdem einen von **Long Long**-, **Ganzzahl ohne Vorzeichen long long**-, **__int64**-und **Ganzzahl ohne Vorzeichen __int64**-Wert aufweisen.
 
 ## <a name="example"></a>Beispiel
 
@@ -76,6 +76,6 @@ is_integral<float> == false
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_enum-Klasse](../standard-library/is-enum-class.md)<br/>
-[is_floating_point-Klasse](../standard-library/is-floating-point-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_enum-Klasse](../standard-library/is-enum-class.md)\
+[is_floating_point-Klasse](../standard-library/is-floating-point-class.md)

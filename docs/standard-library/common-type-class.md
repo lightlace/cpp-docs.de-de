@@ -7,12 +7,12 @@ helpviewer_keywords:
 - common_type class
 - common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
-ms.openlocfilehash: f627705109315d3fee84c1777390f00e1e2010ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3605b34a2bfc50831c889976ac5ea884053bb642
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405117"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449492"
 ---
 # <a name="commontype-class"></a>common_type-Klasse
 
@@ -92,7 +92,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>Ausgabe
 
 ```Output
 Test for typedefs of common_type int
@@ -122,4 +122,4 @@ ClassType: true
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

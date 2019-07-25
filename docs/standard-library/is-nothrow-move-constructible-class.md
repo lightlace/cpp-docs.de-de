@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_constructible
 ms.assetid: d186d97b-7b89-470a-8d30-993046a83379
-ms.openlocfilehash: f1f98a6172e37bd72182ccc043ca4612b71675d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f1ccdba11f62fcbeaf54162f80f0717feaa2fa1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413649"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455860"
 ---
 # <a name="isnothrowmoveconstructible-class"></a>is_nothrow_move_constructible-Klasse
 
@@ -26,12 +26,12 @@ struct is_nothrow_move_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* verfügt über einen Nothrow bewegungskonstruktor, andernfalls er false enthält.
+Eine Instanz des typprädikats ist "true",  wenn die typentität einen nothrow-bewegungskonstruktor aufweist; andernfalls "false".
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,4 +41,4 @@ Eine Instanz des typprädikats ist true, wenn der Typ *Ty* verfügt über einen 
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aba7026fa60045720c893478c1ea637dbaa037c1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377503"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456918"
 ---
 # <a name="array-class-c-standard-library"></a>array-Klasse (C++-Standardvorlagenbibliothek)
 
@@ -192,7 +192,7 @@ array(const array& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Einzufügendes Objekt bzw. einzufügender Bereich.
 
 ### <a name="remarks"></a>Hinweise
@@ -247,12 +247,12 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Parameter
 
-*val*<br/>
+*ster*\
 Der Wert, der zugewiesen werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion ersetzt die gesteuerte Sequenz durch `*this` durch eine Wiederholung von `N` -Elementen des Werts *Val*.
+Die Member-Funktion ersetzt die von gesteuerte `*this` Sequenz durch eine Wiederholung `N` von Elementen des Werts *Val*.
 
 ### <a name="example"></a>Beispiel
 
@@ -303,12 +303,12 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*off*<br/>
+*abgeschrieben*\
 Position des Elements, auf das zugegriffen wird
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktionen geben einen Verweis auf das Element der kontrollierten Sequenz an der Position *aus*. Wenn diese Position ungültig ist, löst die Funktion ein Objekt der `out_of_range`-Klasse aus.
+Die Member-Funktionen geben einen Verweis auf das Element der kontrollierten Sequenz an der Position *Off*zurück. Wenn diese Position ungültig ist, löst die Funktion ein Objekt der `out_of_range`-Klasse aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -432,7 +432,7 @@ int main()
 
 ## <a name="cbegin"></a> array::cbegin
 
-Gibt eine **const** -Iterator, der das erste Element im Bereich adressiert.
+Gibt einen **Konstanten** Iterator zurück, der das erste Element im Bereich adressiert.
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -440,13 +440,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein **const** Iterator mit wahlfreiem Zugriff, der verweist auf das erste Element des Bereichs, oder die Position direkt hinter das Ende eines leeren Bereichs (für einen leeren Bereich gilt `cbegin() == cend()`).
+Ein **konstanter** Random-Access-Iterator, der auf das erste Element des Bereichs zeigt oder die Position direkt hinter dem Ende eines leeren Bereichs (für einen leeren Bereich `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Hinweise
 
 Bei dem Rückgabewert `cbegin` können die Elemente im Bereich nicht geändert werden.
 
-Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel können Sie auch `Container` ein beliebiger änderbarer (nicht- **const**) Container jeder Art, die unterstützt `begin()` und `cbegin()`.
+Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. `Container` In diesem Beispiel sollte ein änderbarer (nicht **konstanter) Container**sein, der und `begin()` `cbegin()`unterstützt.
 
 ```cpp
 auto i1 = Container.begin();
@@ -458,7 +458,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a> array::cend
 
-Gibt eine **const** Iterator, der die Position direkt hinter dem letzten Element in einem Bereich.
+Gibt einen **Konstanten** Iterator zurück, der die Position direkt hinter dem letzten Element in einem Bereich adressiert.
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -472,7 +472,7 @@ Ein Random-Access-Iterator, der auf eine Position unmittelbar nach dem Ende des 
 
 `cend` wird verwendet, um zu testen, ob ein Iterator das Ende seines Bereichs übergeben hat.
 
-Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel können Sie auch `Container` ein beliebiger änderbarer (nicht- **const**) Container jeder Art, die unterstützt `end()` und `cend()`.
+Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. `Container` In diesem Beispiel sollte ein änderbarer (nicht **konstanter) Container**sein, der und `end()` `cend()`unterstützt.
 
 ```cpp
 auto i1 = Container.end();
@@ -1149,14 +1149,14 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parameter
 
-*off*<br/>
+*abgeschrieben*\
 Position des Elements, auf das zugegriffen wird
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktionen geben einen Verweis auf das Element der kontrollierten Sequenz an der Position *aus*. Wenn diese Position ungültig ist, ist das Verhalten nicht definiert.
+Die Member-Funktionen geben einen Verweis auf das Element der kontrollierten Sequenz an der Position *Off*zurück. Wenn diese Position ungültig ist, ist das Verhalten nicht definiert.
 
-Es gibt auch eine nicht-Memberfunktion [erhalten](array-functions.md#get) verfügbar, um einen Verweis auf ein Element der Funktion ein **Array**.
+Es ist auch eine nicht-Member- [Get](array-functions.md#get) -Funktion verfügbar, um einen Verweis auf ein Element eines **Arrays**zu erhalten.
 
 ### <a name="example"></a>Beispiel
 
@@ -1201,12 +1201,12 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Der zu kopierende Container.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Memberoperator weist jedem Element des *rechten* dem entsprechenden Element der kontrollierten Sequenz, dann gibt `*this`. Damit können Sie die kontrollierte Sequenz durch eine Kopie der kontrollierten Sequenz in ersetzen *rechten*.
+Der Member-Operator weist jedes Element von *right* dem entsprechenden Element der gesteuerten Sequenz zu und gibt dann `*this`zurück. Sie verwenden es, um die gesteuerte Sequenz durch eine Kopie der kontrollierten Sequenz in der *rechten*Ecke zu ersetzen.
 
 ### <a name="example"></a>Beispiel
 
@@ -1571,14 +1571,14 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Container für den Tausch von Inhalten.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `*this` und *rechten*. Sie führt verschiedene Elementzuweisungen und Konstruktoraufrufe proportional zu `N` durch.
+Die Member-Funktion tauscht die kontrollierten Sequenzen `*this` zwischen und *Rechts*aus. Sie führt verschiedene Elementzuweisungen und Konstruktoraufrufe proportional zu `N` durch.
 
-Es gibt auch eine nicht-Memberfunktion [Swap](array-functions.md#swap) miteinander tauschen zwei **Array** Instanzen.
+Es ist auch eine [Swap](array-functions.md#swap) -Funktion ohne Member zum Austauschen von zwei **Array** Instanzen verfügbar.
 
 ### <a name="example"></a>Beispiel
 
@@ -1677,4 +1677,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

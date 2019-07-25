@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c537b7dfdd23ba641438e0caf6306cf5549b2d7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413800"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454304"
 ---
 # <a name="duration-class"></a>duration-Klasse
 
@@ -50,7 +50,7 @@ Mit dem Vorlagenargument `Rep` wird der Typ beschrieben, der zum Aufnehmen der A
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[duration](#duration)|Erstellt ein `duration`-Objekt.|
+|[auf](#duration)|Erstellt ein `duration`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -109,29 +109,29 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Rep2*<br/>
+*Rep2*\
 Ein arithmetischer Typ, der die Anzahl von Zeiteinheiten darstellt.
 
-*Period2*<br/>
+*Period2*\
 Eine `std::ratio`-Vorlagenspezialisierung zur Darstellung des Zeitraums von Zeiteinheiten in Sekunden.
 
-*R*<br/>
+*R*\
 Die Anzahl der Zeiteinheiten der Standardperiode.
 
-*Dur*<br/>
-Die Anzahl von Zeiteinheiten des Zeitraums, der von *Period2*.
+*Local*\
+Die Anzahl der Ticks des durch *Period2*angegebenen Zeitraums.
 
 ### <a name="remarks"></a>Hinweise
 
 Vom Standardkonstruktor wird ein nicht initialisiertes Objekt erstellt. Durch die Wertinitialisierung mithilfe von leeren Klammern wird ein Objekt initialisiert, das ein Zeitintervall mit null Zeiteinheiten darstellt.
 
-Die zweite Datei, ein Template-Argument-Konstruktor erstellt ein Objekt, das ein Zeitintervall von darstellt *R* unter Verwendung einer Standardperiode von Teilstrichen `std::ratio<1>`. Runden von taktanzahlen zu vermeiden, ist es Fehler beim Erstellen eines dauerobjekts aus einem Darstellungstyp *Rep2* , das als Gleitkommatyp behandelt werden können eingeben, wenn `duration::rep` nicht als Gleitkommatyp behandelt werden.
+Mit dem zweiten, einem Vorlagen Argument-Konstruktor wird ein-Objekt erstellt, das ein Zeitintervall von *R* -Takt Ticks `std::ratio<1>`mit einem Standard Zeitraum von darstellt. Um das Abrunden der Takt Anzahl zu vermeiden, ist es ein Fehler, ein Duration-Objekt aus einem Darstellungstyp zu erstellen *Rep2* , das als Gleit kommatyp `duration::rep` behandelt werden kann, wenn nicht als Gleit kommatyp behandelt werden kann.
 
-Die dritte, zwei Vorlage-Argument-Konstruktor erstellt ein Objekt, das ein Zeitintervall darstellt, dessen Länge ist das Zeitintervall, das angegeben wird *Dur*. Um die Verkürzung von Taktanzahlen zu vermeiden, ist das Erstellen eines Dauerobjekts aus einem anderen Dauerobjekt, dessen Typ mit dem Zieltyp *unvereinbar* ist, ein Fehler.
+Der dritte, zwei Vorlagen Argument-Konstruktor erstellt ein-Objekt, das ein Zeitintervall darstellt, dessen Länge das von *Dur*angegebene Zeitintervall ist. Um die Verkürzung von Taktanzahlen zu vermeiden, ist das Erstellen eines Dauerobjekts aus einem anderen Dauerobjekt, dessen Typ mit dem Zieltyp *unvereinbar* ist, ein Fehler.
 
 Ein `D1`-Dauertyp ist mit einem anderen Dauertyp `D2` *unvereinbar*, wenn `D2` nicht als Gleitkommatyp behandelt werden kann und [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) nicht 1 ist.
 
-Es sei denn, *Rep2* wird implizit in `rep` und entweder `treat_as_floating_point<rep>` *gilt* oder `treat_as_floating_point<Rep2>` *ist Sie false*, der zweite Konstruktor nimmt an der überladungsauflösung nicht Teil. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).
+Wenn *Rep2* nicht implizit in `rep` konvertierbar ist `treat_as_floating_point<rep>`und entweder " `treat_as_floating_point<Rep2>` *true* " oder " *false" enthält*, wird der zweite Konstruktor nicht an der Überladungs Auflösung beteiligt. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).
 
 Sofern kein Überlauf in die Konvertierung induziert wurde und `treat_as_floating_point<rep>` nicht *TRUE* ist bzw. beide `ratio_divide<Period2, period>::den` nicht 1 entsprechen und `treat_as_floating_point<Rep2>` nicht *FALSE* ist, wird der dritte Konstruktor nicht an der Überladungsauflösung beteiligt. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).
 
@@ -195,8 +195,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parameter
 
-*Div*<br/>
-Bei der ersten Methode *Div* eine Taktanzahl dar. Für die zweite Methode *Div* ist eine `duration` -Objekt, das eine Taktanzahl enthält.
+*Div*\
+Für die erste Methode stellt *div* eine Takt Anzahl dar. Bei der zweiten Methode ist *div* ein `duration` -Objekt, das eine Takt Anzahl enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -212,7 +212,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parameter
 
-*Mult*<br/>
+*Mult*\
 Ein Wert des von `duration::rep` angegebenen Typs.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -229,7 +229,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parameter
 
-*Div*<br/>
+*Div*\
 Ein Wert des von `duration::rep` angegebenen Typs.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -270,7 +270,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Dur*<br/>
+*Local*\
 Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -287,7 +287,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-*Dur*<br/>
+*Local*\
 Ein `duration`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -312,7 +312,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parameter
 
-*Div*<br/>
+*Div*\
 Der Divisor, der ein Duration-Objekt oder ein Wert ist, der Taktzähler darstellt.
 
 ### <a name="remarks"></a>Hinweise
@@ -321,6 +321,6 @@ Die erste Memberfunktion reduziert die gespeicherte Taktanzahl-Modulo Div und gi
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[duration_values-Struktur](../standard-library/duration-values-structure.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)\
+[duration_values-Struktur](../standard-library/duration-values-structure.md)

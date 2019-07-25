@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 05b10c27d8e0cf4c0300bb307d8b7ceda43ddb2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413306"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447786"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;iStream&gt;-Operatoren
 
@@ -56,16 +56,16 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Parameter
 
-*Ch*<br/>
+*Ch*\
 Ein Zeichen.
 
-*Istr*<br/>
+*ISTR*\
 Ein Stream.
 
-*str*<br/>
+*SRT*\
 Eine Zeichenfolge.
 
-*val*<br/>
+*ster*\
 Ein Typ.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -84,9 +84,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-extrahiert bis zu *N*-1-Elemente und speichert sie in das Array, beginnend mit _*Str*. Wenn `Istr`. [Breite](../standard-library/ios-base-class.md#width) ist größer als 0 (null), *N* ist `Istr`. **Breite**ist, andernfalls ist die Größe des größten Arrays von `Elem` , deklariert werden. Die Funktion speichert immer den Wert `Elem()` nach beliebigen extrahierten-Elementen speichert. Die Extraktion hält früh am Ende der Datei, an einem Zeichen mit dem Wert **Elem**(0) (das nicht extrahiert wurde), oder an einem beliebigen Element (das nicht extrahiert wurde), welches von [ws](../standard-library/istream-functions.md#ws) verworfen werden würde. Wenn die Funktion keine Elemente extrahiert, ruft es `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). In jedem Fall ruft `Istr`. **Breite**(0) und gibt *Istr*.
+extrahiert bis zu *N*-1-Elemente und speichert sie in das Array, beginnend mit _*Str*. Wenn `Istr`. [Breite](../standard-library/ios-base-class.md#width) ist größer als 0 (  null) `Istr`, N ist. **Breite**; Andernfalls ist es die Größe des größten Arrays von `Elem` , das deklariert werden kann. Die Funktion speichert den Wert `Elem()` immer nach allen extrahierten Elementen, die er speichert. Die Extraktion hält früh am Ende der Datei, an einem Zeichen mit dem Wert **Elem**(0) (das nicht extrahiert wurde), oder an einem beliebigen Element (das nicht extrahiert wurde), welches von [ws](../standard-library/istream-functions.md#ws) verworfen werden würde. Wenn die Funktion keine Elemente extrahiert, ruft `Istr`Sie auf. [SetState](../standard-library/basic-ios-class.md#setstate) (**Failbit**). In jedem Fall ruft `Istr`Sie auf. **Breite** (0) und gibt *ISTR*zurück.
 
-**Sicherheitshinweis** die Null-terminierte Zeichenfolge, die aus dem Eingabestream extrahiert wird darf die Größe des Zielpuffers nicht überschreiten *str*. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Sicherheitshinweis** Die aus dem Eingabestream extrahierte aus null endenden Zeichenfolge darf die Größe des Ziel Puffers *Str*nicht überschreiten. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 Die Vorlagenfunktion:
 
@@ -96,7 +96,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-extrahiert ein Element, sofern dies möglich ist, und ihn in speichert *Ch*. Andernfalls ruft sie **ist**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf. In jedem Fall gibt *Istr*.
+extrahiert ein Element, sofern möglich, und speichert es in *ch*. Andernfalls **wird**aufgerufen. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf. In jedem Fall wird *ISTR*zurückgegeben.
 
 Die Vorlagenfunktion:
 
@@ -147,7 +147,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-Gibt `Istr >> val` (und konvertiert einen Rvalue-Verweis um `Istr` zu einem Lvalue im Prozess).
+gibt `Istr >> val` zurück (und konvertiert einen Rvalue- `Istr` Verweis in einen lvalue im Prozess).
 
 ### <a name="example"></a>Beispiel
 
@@ -170,4 +170,4 @@ int main( )
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)

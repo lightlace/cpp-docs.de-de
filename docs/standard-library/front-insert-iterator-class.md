@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 322b513dc648bf10fe593d9541560c4d22da21fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159586"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454119"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator-Klasse
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Parameter
 
-*Container*<br/>
+*Kum*\
 Der Typ des Containers, an dessen Anfang Elemente von einem `front_insert_iterator` eingefügt werden sollen.
 
 ## <a name="remarks"></a>Hinweise
@@ -54,9 +54,9 @@ Der Container muss den Anforderungen einer Sequenz zum Einfügen am Anfang entsp
 
 |Operator|Beschreibung|
 |-|-|
-|[operator*](#op_star)|Der Dereferenzierungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x` für eine Einfügung am Anfang.|
+|[operator*](#op_star)|Der Dereferenzierungsoperator, der verwendet wird, um \* den Ausgabeiterator-Ausdruck `i`  =  `x` für eine Front-|
 |[operator++](#op_add_add)|Inkrementiert `front_insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.|
-|[operator=](#op_eq)|Zuweisungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x` für eine Einfügung am Anfang.|
+|[operator=](#op_eq)|Der Zuweisungs Operator, der verwendet wird, um \* den Ausgabeiterator-Ausdruck `i`  =  `x` für eine Front-|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -116,7 +116,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parameter
 
-*_Cont*<br/>
+*_Cont*\
 Das Containerobjekt, in das `front_insert_iterator` Elemente einfügen soll
 
 ### <a name="return-value"></a>Rückgabewert
@@ -169,7 +169,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>  front_insert_iterator:: Operator\*
+## <a name="op_star"></a>Front_insert_iterator:: Operator\*
 
 Dereferenziert den Iterator zum Einfügen und gibt das Element zurück, das es adressiert
 
@@ -183,7 +183,7 @@ Die Memberfunktion gibt den Wert des adressierten Elements zurück
 
 ### <a name="remarks"></a>Hinweise
 
-Wird zum Implementieren des Ausgabeiteratorausdrucks **\*Iter** = **value** verwendet. Wenn `Iter` wird ein Iterator, der ein Element in einer Sequenz, klicken Sie dann  **\*Iter** = **Wert** ersetzt das Element mit dem Wert und die Gesamtzahl der nicht ändert Elemente in der Sequenz.
+Wird zum Implementieren des Ausgabeiteratorausdrucks **\*Iter** = **value** verwendet. Wenn `Iter` ein Iterator ist, der ein Element in einer Sequenz adressiert  **\*** , ersetzt der ITER = -**Wert** dieses Element durch value und ändert nicht die Gesamtzahl der Elemente in der Sequenz.
 
 ### <a name="example"></a>Beispiel
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Parameter
 
-*val*<br/>
+*ster*\
 Der Wert, der dem Container zugewiesen werden soll
 
 ### <a name="return-value"></a>Rückgabewert
@@ -389,6 +389,6 @@ The first element in the list L is: 30.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

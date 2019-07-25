@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 115d1c6f3298ea08b7c97061d37d4e27829247ea
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450669"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453924"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution-Klasse
 
@@ -66,10 +66,10 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*IntType*<br/>
-Der Ergebnistyp für ganze Zahl, Standardwert **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*Inttype*\
+Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
+*URNG*\
 Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*p*<br/>
+*cker*\
 Der `p`-Verteilungsparameter.
 
-*parm*<br/>
+*parm*\
 Die für die Erstellung der Verteilung verwendete Parameterstruktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*p*<br/>
+*cker*\
 Der `p`-Verteilungsparameter.
 
-*right*<br/>
+*Richting*\
 Die `param_type`-Instanz, mit der verglichen wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -265,4 +265,4 @@ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteil
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

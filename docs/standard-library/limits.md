@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: e23c47b3eaecec92e462af7b2cc47627c5bad86a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: de8f815cd59b84a1e63c231e18e4882d0b5d6f09
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245320"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447569"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -26,7 +26,7 @@ Definiert die Vorlagenklasse `numeric_limits` und zwei Enumerationen zu Gleitkom
 
 ## <a name="remarks"></a>Hinweise
 
-Explizite spezialisierungen der `numeric_limits` -Klasse beschreiben viele Eigenschaften der grundlegenden Typen, einschließlich der Zeichen, ganze Zahl und Gleitkomma-Datentypen und **"bool"** , die Implementierung definiert und nicht als unveränderlich sind die Regeln der Programmiersprache C++. In \<limits> beschriebene Eigenschaften umfassen Genauigkeit, Darstellungen minimaler und maximaler Größe, Rundung und Fehler des Signalisierungstyps.
+Explizite Spezialisierungs spezizierungen `numeric_limits` der-Klasse beschreiben viele Eigenschaften der grundlegenden Typen, einschließlich der Zeichen-, ganzzahligen und Gleit Komma Typen sowie boolescher Wert, die implementiert werden, anstatt durch die Regeln des  C++Sprache. In \<limits> beschriebene Eigenschaften umfassen Genauigkeit, Darstellungen minimaler und maximaler Größe, Rundung und Fehler des Signalisierungstyps.
 
 ## <a name="members"></a>Member
 
@@ -45,5 +45,5 @@ Explizite spezialisierungen der `numeric_limits` -Klasse beschreiben viele Eigen
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

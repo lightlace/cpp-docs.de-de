@@ -6,16 +6,16 @@ f1_keywords:
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-ms.openlocfilehash: 13af0c26b765aa7ebbbd1ec22b5a0ed1b8cce0ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36944c3c3bdc58272d87bbcdfb119d1c52c43995
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377256"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447407"
 ---
 # <a name="atomicflag-structure"></a>atomic_flag-Struktur
 
-Beschreibt ein Objekt, das atomisch festlegt und löscht eine **"bool"** Flag. Vorgänge auf atomischen Flags sind immer sperrenfrei.
+Beschreibt ein Objekt, das ein **bool** -Flag atomisch festlegt und löscht. Vorgänge auf atomischen Flags sind immer sperrenfrei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,8 +29,8 @@ struct atomic_flag;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[clear](#clear)|Legt das gespeicherte Flag auf **"false"**.|
-|[test_and_set](#test_and_set)|Legt das gespeicherte Flag auf **"true"** und gibt Sie den ursprünglichen Flagwert zurück.|
+|[clear](#clear)|Legt das gespeicherte Flag auf **false**fest.|
+|[test_and_set](#test_and_set)|Legt das gespeicherte Flag auf **true** fest und gibt den ursprünglichen Flagwert zurück.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -42,9 +42,9 @@ struct atomic_flag;
 
 **Namespace:** std
 
-## <a name="clear"></a>  atomic_flag:: Clear
+## <a name="clear"></a>atomic_flag:: Clear
 
-Legt die **"bool"** Flag, das in gespeichert ist `*this` zu **"false"**, innerhalb des angegebenen [Memory_order](../standard-library/atomic-enums.md#memory_order_enum) Einschränkungen.
+Legt das  boolesche Flag, das in `*this` gespeichert ist, innerhalb der angegebenen [memory_order](../standard-library/atomic-enums.md#memory_order_enum) -Einschränkungen auf **false**fest.
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -53,12 +53,12 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Reihenfolge*<br/>
+*Reihenfolge*\
 Ein [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="test_and_set"></a>  atomic_flag:: test_and_set
+## <a name="test_and_set"></a>atomic_flag::test_and_set
 
-Legt die **"bool"** Flag, das in gespeichert ist `*this` zu **"true"**, innerhalb des angegebenen [Memory_order](../standard-library/atomic-enums.md#memory_order_enum) Einschränkungen.
+Legt das  boolesche Flag, das in `*this` gespeichert ist, innerhalb der angegebenen [memory_order](../standard-library/atomic-enums.md#memory_order_enum) -Einschränkungen auf **true**fest.
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -67,7 +67,7 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>Parameter
 
-*Reihenfolge*<br/>
+*Reihenfolge*\
 Ein [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -76,4 +76,4 @@ Der Anfangswert des im `*this` gespeicherten Flags.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<atomic>](../standard-library/atomic.md)<br/>
+[\<atomic>](../standard-library/atomic.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_function class
 - is_function
 ms.assetid: e5c0dbcd-829b-415f-853f-8c5be47c5040
-ms.openlocfilehash: ea1f2ae025823a700ca4e91f3f6b3c05ed79e1cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e436d205c7569aeac7b9dc65b122f3fe289f334
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336568"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456273"
 ---
 # <a name="isfunction-class"></a>is_function-Klasse
 
@@ -27,12 +27,12 @@ struct is_function;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ein Funktionstyp ist, andernfalls er false enthält.
+Eine Instanz des typprädikats ist "true",  wenn die typität ein Funktionstyp ist; andernfalls "false".
 
 ## <a name="example"></a>Beispiel
 
@@ -79,5 +79,5 @@ is_function<float()> == true
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_object-Klasse](../standard-library/is-object-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_object-Klasse](../standard-library/is-object-class.md)

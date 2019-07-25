@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 96f329bfdcc13bb557ef0cc487a1f414612e96c5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5992e368031b59c9b892167b135fa30a870c73f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240965"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448066"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -20,7 +20,7 @@ Definiert den Containervorlagenklassenvektor und einige unterstützende Vorlagen
 Der `vector` ist ein Container, der Elemente eines bestimmten Typs in einer linearen Sequenz organisiert. Er ermöglicht schnellen zufälligen Zugriff auf alle Elemente sowie dynamische Hinzufügungen und Entfernungen zu und aus der Sequenz. Der `vector` ist der bevorzugte Container für eine Sequenz, wenn die Leistung mit wahlfreiem Zugriff ein wichtiger Faktor ist.
 
 > [!NOTE]
-> Die \<Vektor > Bibliothek verwendet auch die `#include <initializer_list>` Anweisung.
+> Die \<Vektor > Bibliothek verwendet auch die `#include <initializer_list>` -Anweisung.
 
 Weitere Informationen zur `vector`-Klasse finden Sie unter [vector-Klasse](../standard-library/vector-class.md). Weitere Informationen zu der Spezialisierung `vector<bool>` finden Sie unter [vector\<bool>-Klasse](../standard-library/vector-bool-class.md).
 
@@ -77,13 +77,13 @@ void swap (
 
 ### <a name="parameters"></a>Parameter
 
-*Typ*\
+*Sorte*\
 Der Vorlagenparameter für den Typ der Daten, die im Vektor gespeichert sind.
 
-*Zuweisung*\
+*Allocator*\
 Der Vorlagenparameter für das gespeicherte Zuweisungsobjekt, das für die Speicherbelegung und -freigabe verantwortlich ist.
 
-*Links*\
+*linken*\
 Der erste (linke) Vektor in einem Vergleichsvorgang.
 
 *Richting*\
@@ -123,6 +123,6 @@ Der zweite (rechte) Vektor in einem Vergleichsvorgang.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

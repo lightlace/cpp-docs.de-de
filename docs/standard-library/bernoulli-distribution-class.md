@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: dbd5229e8b8a2c2b368688635d9d596a8538356b
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: faadc99b6351af884331e6658e1e11de8def2195
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450865"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447774"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution-Klasse
 
@@ -66,12 +66,12 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*URNG*<br/>
+*URNG*\
 Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse beschreibt eine Verteilung, die Werte des Typs **"bool"** , verteilte entsprechend der diskreten Wahrscheinlichkeitsfunktion Bernoulli-Verteilung. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klasse beschreibt eine Verteilung, die Werte vom Typ " **bool**" erzeugt, die entsprechend der diskreten Wahrscheinlichkeitsfunktion der Bernoulli-Verteilung verteilt werden. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -169,10 +169,10 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*p*<br/>
+*cker*\
 Der gespeicherte `p`-Verteilungsparameter.
 
-*parm*<br/>
+*parm*\
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -187,13 +187,13 @@ Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parame
 
 Enthält die Parameter der Verteilung.
 
-struct param_type { typedef bernoulli_distribution distribution_type; param_type(double p = 0.5); double p() const;
+struct param_type {typedef bernoulli_distribution distribution_type; param_type (Double p = 0,5); Double p () Konstanten;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parameter
 
-*p*<br/>
+*cker*\
 Der gespeicherte `p`-Verteilungsparameter.
 
 ### <a name="remarks"></a>Hinweise
@@ -204,4 +204,4 @@ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteil
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

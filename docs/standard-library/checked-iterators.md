@@ -10,12 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 163729b401fa917d7df0002c621998f5021757f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5a31843386d2246f5d74eae1f40b93f0ae35c90
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279163"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452137"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
@@ -25,12 +25,12 @@ Aktivierte Iteratoren stellen sicher, dass die Grenzen des Containers nicht übe
 
 Informationen über das Deaktivieren der Warnungen, die für überprüfte Iteratoren generiert werden, finden Sie unter [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
-Sie können das Präprozessormakro [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) verwenden, um die Funktion der überprüften Iteratoren zu aktivieren oder zu deaktivieren. Wenn _ITERATOR_DEBUG_LEVEL als 1 oder 2 definiert ist, bewirkt, dass unsichere Verwendung von Iteratoren einen Laufzeitfehler und das Programm wird beendet. Lautet die Definition 0, werden aktivierte Iteratoren deaktiviert. Standardmäßig ist der Wert für _ITERATOR_DEBUG_LEVEL 0 für Releasebuilds und 2 für Debugbuilds.
+Sie können das Präprozessormakro [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) verwenden, um die Funktion der überprüften Iteratoren zu aktivieren oder zu deaktivieren. Wenn _ITERATOR_DEBUG_LEVEL als 1 oder 2 definiert ist, verursacht die unsichere Verwendung von Iteratoren einen Laufzeitfehler, und das Programm wird beendet. Lautet die Definition 0, werden aktivierte Iteratoren deaktiviert. Standardmäßig ist der Wert für _ITERATOR_DEBUG_LEVEL 0 für Releasebuilds und 2 für Debugbuilds.
 
 > [!IMPORTANT]
-> Ältere Dokumentationen und Quellcode beziehen sich möglicherweise auf das [_SECURE_SCL](../standard-library/secure-scl.md)-Makro. Verwenden Sie _ITERATOR_DEBUG_LEVEL _SECURE_SCL steuern. Weitere Informationen finden Sie unter [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> Ältere Dokumentationen und Quellcode beziehen sich möglicherweise auf das [_SECURE_SCL](../standard-library/secure-scl.md)-Makro. Verwenden Sie _ITERATOR_DEBUG_LEVEL, um _SECURE_SCL zu steuern. Weitere Informationen finden Sie unter [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
-Wenn _ITERATOR_DEBUG_LEVEL als 1 oder 2 definiert ist, werden diese Überprüfungen Iterator ausgeführt:
+Wenn _ITERATOR_DEBUG_LEVEL als 1 oder 2 definiert ist, werden diese iteratorüberprüfungen ausgeführt:
 
 - Alle Standarditeratoren (beispielsweise [vector::iterator](../standard-library/vector-class.md#iterator)) werden überprüft.
 
@@ -60,7 +60,7 @@ Die Iteratoradaptoren, die überprüfte Iteratoren unterstützen, sind die [chec
 
 ## <a name="example"></a>Beispiel
 
-Beim Kompilieren mit _ITERATOR_DEBUG_LEVEL auf 1 oder 2 festgelegt, wird ein Laufzeitfehler auftreten, wenn Sie versuchen, ein Element zuzugreifen, der mit dem Indizierungsoperator bestimmter Klassen außerhalb der Grenzen des Containers ist.
+Wenn Sie mit _ITERATOR_DEBUG_LEVEL auf 1 oder 2 festlegen, tritt ein Laufzeitfehler auf, wenn Sie versuchen, mit dem Indizierungs Operator bestimmter Klassen auf ein Element zuzugreifen, das sich außerhalb der Grenzen des Containers befindet.
 
 ```cpp
 // checked_iterators_1.cpp
@@ -89,7 +89,7 @@ Dieses Programm gibt „67“ aus und zeigt dann ein Assertionsfehlerdialogfeld 
 
 ## <a name="example"></a>Beispiel
 
-Auf ähnliche Weise beim Kompilieren mit _ITERATOR_DEBUG_LEVEL auf 1 oder 2 festgelegt wird ein Laufzeitfehler auf, wenn Sie versuchen, ein Element mit zuzugreifen `front` oder `back` in Containerklassen, wenn der Container leer ist.
+Wenn Sie mit _ITERATOR_DEBUG_LEVEL auf 1 oder 2 kompilieren, tritt ein Laufzeitfehler auf, wenn Sie versuchen, mithilfe `front` von oder `back` in Containerklassen auf ein Element zuzugreifen, wenn der Container leer ist.
 
 ```cpp
 // checked_iterators_2.cpp
@@ -113,7 +113,7 @@ Dieses Programm zeigt ein Assertionsfehlerdialogfeld mit zusätzlichen Informati
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Code werden verschiedene Anwendungsfälle für Iteratoren mit Kommentaren veranschaulicht. Standardmäßig wird die _ITERATOR_DEBUG_LEVEL auf 2 in der Debug-Builds und in Verkaufsversionen auf 0 festgelegt.
+Im folgenden Code werden verschiedene Anwendungsfälle für Iteratoren mit Kommentaren veranschaulicht. Standardmäßig ist _ITERATOR_DEBUG_LEVEL in Debugbuilds auf 2 und in Einzelhandels Builds auf 0 festgelegt.
 
 ```cpp
 // checked_iterators_3.cpp
@@ -219,5 +219,5 @@ a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 
 ## <a name="see-also"></a>Siehe auch
 
-[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)<br/>
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
+[Übersicht über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)\
+[Debug Iterator Support (Unterstützung für Iteratordebugging)](../standard-library/debug-iterator-support.md)

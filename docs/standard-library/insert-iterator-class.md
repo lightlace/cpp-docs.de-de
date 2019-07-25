@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: fb18c67b6e7949486c33e95c7daf6bc6868d0baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404885"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447664"
 ---
 # <a name="insertiterator-class"></a>insert_iterator-Klasse
 
@@ -30,12 +30,12 @@ class insert_iterator;
 
 ### <a name="parameters"></a>Parameter
 
-*Container*<br/>
+*Kum*\
 Der Typ des Containers, in den Elementen von einem `insert_iterator` eingefügt werden sollen.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Container vom Typ `Container` muss die Anforderungen für einen Container variabler Größe erfüllen und über eine Memberfunktion zum Einfügen von zwei Argumenten, in dem die Parameter vom Typ `Container::iterator` und `Container::value_type` , das einen Typ zurückgibt `Container::iterator`. Die C++-Standardbibliothekssequenz und sortierte assoziative Container erfüllen diese Anforderungen und können mit `insert_iterator`-Objekten angepasst werden. Für assoziative Container wird das Positionsargument als Hinweis behandelt, der die Leistung je nach Qualität potenziell verbessern oder verschlechtern kann. Ein `insert_iterator` muss immer mit seinem Container initialisiert werden.
+Der Container vom Typ `Container` muss die Anforderungen für einen Container variabler Größe erfüllen und über eine Funktion mit zwei Argumenten als INSERT-Member verfügen, bei der die `Container::iterator` Parameter `Container::value_type` vom Typ und sind und `Container::iterator`einen Typ zurückgeben. Die C++-Standardbibliothekssequenz und sortierte assoziative Container erfüllen diese Anforderungen und können mit `insert_iterator`-Objekten angepasst werden. Für assoziative Container wird das Positionsargument als Hinweis behandelt, der die Leistung je nach Qualität potenziell verbessern oder verschlechtern kann. Ein `insert_iterator` muss immer mit seinem Container initialisiert werden.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -116,10 +116,10 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>Parameter
 
-*_Cont*<br/>
+*_Cont*\
 Der Container, in den `insert_iterator` Elemente einfügen soll.
 
-*_It*<br/>
+*_It*\
 Die Position, an der eingefügt werden soll.
 
 ### <a name="remarks"></a>Hinweise
@@ -186,7 +186,7 @@ Die Memberfunktion gibt den Wert des adressierten Elements zurück
 
 ### <a name="remarks"></a>Hinweise
 
-Wird zum Implementieren des Ausgabeiteratorausdrucks **\*Iter** = **value** verwendet. Wenn `Iter` wird ein Iterator, der ein Element in einer Sequenz, klicken Sie dann  **\*Iter** = **Wert** ersetzt das Element mit dem Wert und die Gesamtzahl der nicht ändert Elemente in der Sequenz.
+Wird zum Implementieren des Ausgabeiteratorausdrucks **\*Iter** = **value** verwendet. Wenn `Iter` ein Iterator ist, der ein Element in einer Sequenz adressiert  **\*** , ersetzt der ITER = -**Wert** dieses Element durch value und ändert nicht die Gesamtzahl der Elemente in der Sequenz.
 
 ### <a name="example"></a>Beispiel
 
@@ -310,7 +310,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>Parameter
 
-*val*<br/>
+*ster*\
 Der Wert, der dem Container zugewiesen werden soll
 
 ### <a name="return-value"></a>Rückgabewert
@@ -429,6 +429,6 @@ The first element in the list L is: 10.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

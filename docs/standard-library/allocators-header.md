@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: 064afd4467a2aedebe3a9892fc80b14597c8552f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de872080bc02f4654f53d94928b5e44dbc36816
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375404"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453695"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -77,7 +77,7 @@ std::list<int, alloc<int> > _List1;
 
 „_Lst1“ weist Knoten mit `allocator_chunklist` und dem Synchronisierungsfilter [sync_per_thread](../standard-library/sync-per-thread-class.md) zu.
 
-Eine Blockzuweisung ist ein Cache oder ein Filter. Ein Cache ist eine Vorlagenklasse, die ein Argument des Typs std::size_t akzeptiert. Er definiert eine Blockzuweisung, die Speicherblöcke einheitlicher Größe zuweist und freigibt. Sie benötigen Speicherplatz mit Operator **neue**, jedoch müssen einen separaten Aufruf von Operator **neue** für jeden Block. Möglicherweise stellt er Unterzuordnungen aus einem größeren Block her, oder er zwischenspeichert möglicherweise freigegebene Blöcke für eine darauffolgende Freigabe.
+Eine Blockzuweisung ist ein Cache oder ein Filter. Ein Cache ist eine Vorlagenklasse, die ein Argument des Typs std::size_t akzeptiert. Er definiert eine Blockzuweisung, die Speicherblöcke einheitlicher Größe zuweist und freigibt. Er muss mithilfe des **New**-Operators Speicher abrufen, er muss jedoch keinen separaten Operator **New** für jeden Block erstellen. Möglicherweise stellt er Unterzuordnungen aus einem größeren Block her, oder er zwischenspeichert möglicherweise freigegebene Blöcke für eine darauffolgende Freigabe.
 
 Bei einem Compiler, der keine Neubindungen kompilieren kann, ist der Wert des Arguments std::size_t, das verwendet wurde, als die Vorlage instanziieert wurde, nicht unbedingt der Wert des Arguments _Sz, das an die Memberfunktionen „allocate“ und „deallocate“ eines Caches übergeben wurde.
 
@@ -141,7 +141,7 @@ Die Cachevorlage `cache_freelist` akzeptiert ein Argument der max-Klasse, das di
 |[allocator_base](../standard-library/allocator-base-class.md)|Definiert die Basisklasse und allgemeine Funktionen, die zum Erstellen einer benutzerdefinierten Zuweisung von einem Synchronisierungsfilter erforderlich sind.|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|Beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objekte, die einen Zwischenspeicher des Typs [cache_chunklist](../standard-library/cache-chunklist-class.md) verwenden.|
 |[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|Beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objekte des Typs `Type` verwaltet, die einen Cache des Typs [cache_freelist](../standard-library/cache-freelist-class.md) mit einer von [max_fixed_size](../standard-library/max-fixed-size-class.md) verwalteten Länge verwenden.|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementiert einen Allocator, der verwendet **Delete-Operator** um einen Speicherblock freizugeben Block und **new-Operator** auf einen Speicherblock zuzuweisen.|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|Implementiert einen Allocator, der den **Operator Delete** verwendet, um einen Speicherblock freizugeben, und den **New-Operator** , um einen Speicherblock zuzuweisen.|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|Beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objekte des Typs `Type` verwaltet, die einen Cache des Typs [cache_suballoc](../standard-library/cache-suballoc-class.md) verwenden.|
 |[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|Beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objekte des Typs `Type` verwaltet, die einen Cache des Typs [cache_freelist](../standard-library/cache-freelist-class.md) mit einer von [max_unbound](../standard-library/max-unbounded-class.md) verwalteten Länge verwenden.|
 |[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|Beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objekte des Typs `Type` verwaltet, die einen Cache des Typs [cache_freelist](../standard-library/cache-freelist-class.md) mit einer von [max_variable_size](../standard-library/max-variable-size-class.md) verwalteten Länge verwenden.|
@@ -167,4 +167,4 @@ Die Cachevorlage `cache_freelist` akzeptiert ein Argument der max-Klasse, das di
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)

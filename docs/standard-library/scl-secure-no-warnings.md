@@ -8,22 +8,22 @@ helpviewer_keywords:
 - _SCL_SECURE_NO_DEPRECATE
 - _SCL_SECURE_NO_WARNINGS
 ms.assetid: ef0ddea9-7c62-4b53-8b64-5f4fd369776f
-ms.openlocfilehash: 77c60aed511fc3dbbea2d74e83e36dae735dcb0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d19d47fe7120301740e1431765fc6edbeaa48c60
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348307"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448190"
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 
-Aufruf einer der potenziell unsicheren Methoden in der C++-Standardbibliothek führt zu [Compilerwarnung (Stufe 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Um diese Warnung zu deaktivieren, definieren Sie das Makro _SCL_SECURE_NO_WARNINGS in Ihrem Code ein:
+Wenn eine der potenziell unsicheren Methoden in der C++ Standard Bibliothek aufgerufen wird, führt dies zu einer Compilerwarnung [(Ebene 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Um diese Warnung zu deaktivieren, definieren Sie das Makro _SCL_SECURE_NO_WARNINGS im Code:
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
 ```
 
-Bei Verwendung vorkompilierter Header fügen Sie diese Richtlinie in der vorkompilierten Headerdatei ein, bevor Sie alle C-Laufzeitbibliothek oder standard-Bibliothek-Header einfügen. Wenn Sie es in einer einzelnen Quellcodedatei, setzen bevor Sie die vorkompilierte Headerdatei einschließen, wird es vom Compiler ignoriert.
+Wenn Sie vorkompilierte Header verwenden, fügen Sie diese Direktive in die vorkompilierte Header Datei ein, bevor Sie eine C-Lauf Zeit Bibliothek oder Standard Bibliotheks Header einschließen. Wenn Sie Sie in einer einzelnen Quell Code Datei ablegen, bevor Sie die vorkompilierte Header Datei einschließen, wird Sie vom Compiler ignoriert.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -31,11 +31,11 @@ Weitere Methoden zum Deaktivieren der Warnung C4996 sind u.a.:
 
 - Mithilfe der Compileroption [/D (Präprozessordefinitionen)](../build/reference/d-preprocessor-definitions.md):
 
-   > CL /D_SCL_SECURE_NO_WARNINGS [andere Compileroptionen] myfile.cpp
+   > cl/D_SCL_SECURE_NO_WARNINGS [sonstige Compileroptionen] MyFile. cpp
 
 - Mithilfe der Compileroption [/w](../build/reference/compiler-option-warning-level.md):
 
-   > CL-/wd4996 [andere Compileroptionen] myfile.cpp
+   > cl/wd4996 [sonstige Compileroptionen] MyFile. cpp
 
 - Mithilfe der Anweisung [#pragma warning](../preprocessor/warning.md):
 
@@ -45,10 +45,10 @@ Weitere Methoden zum Deaktivieren der Warnung C4996 sind u.a.:
 
 Sie können die Stufe der Warnung C4996 mit der Compileroption **/w\<l >\<n >** auch manuell ändern. Um beispielsweise die Warnung C4996 auf Stufe 4 festzulegen:
 
-> CL-/w44996 [andere Compileroptionen] myfile.cpp
+> cl/w44996 [sonstige Compileroptionen] MyFile. cpp
 
 Weitere Informationen finden Sie unter [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (Warnstufe)](../build/reference/compiler-option-warning-level.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Sichere Bibliotheken: C++-Standardbibliothek](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[Sichere Bibliotheken: C++-Standardbibliothek](../standard-library/safe-libraries-cpp-standard-library.md)

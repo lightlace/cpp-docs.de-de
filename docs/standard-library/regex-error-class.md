@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-ms.openlocfilehash: eed961ea698591935c22fc748ff79583ae636b27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52b6bfd74a08200f7d924d2601b85718a941dd85
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369617"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451651"
 ---
 # <a name="regexerror-class"></a>regex_error-Klasse
 
@@ -104,20 +104,20 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>Parameter
 
-*error*<br/>
+*Zeit*\
 Der Fehlercode.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Konstruktor erstellt ein Objekt, das den Wert enthält *Fehler*.
+Der-Konstruktor erstellt ein-Objekt, das den Wert *Fehler*enthält.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants-Klasse](../standard-library/regex-constants-class.md)<br/>
-[\<regex>-Funktionen](../standard-library/regex-functions.md)<br/>
-[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)<br/>
-[\<regex>-Operatoren](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits-Klasse](../standard-library/regex-traits-class.md)<br/>
-[\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants-Klasse](../standard-library/regex-constants-class.md)\
+[\<Regex-> Funktionen](../standard-library/regex-functions.md)\
+[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)\
+[\<Regex-> Operatoren](../standard-library/regex-operators.md)\
+[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)\
+[regex_traits-Klasse](../standard-library/regex-traits-class.md)\
+[\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)

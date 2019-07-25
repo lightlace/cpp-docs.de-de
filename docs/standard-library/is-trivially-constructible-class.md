@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_constructible
 ms.assetid: 3fa918c1-e66f-4d0e-a11b-be1fb2c02e7b
-ms.openlocfilehash: c83bea8be5c88876ffa25337464caa62b998ab45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f177463b985d3e7b2f7ab7783f9c3db0dcd5722
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413475"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448010"
 ---
 # <a name="istriviallyconstructible-class"></a>Is_trivially_constructible-Klasse
 
@@ -26,15 +26,15 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-*T*<br/>
+*BUND*\
 Der abzufragende Typ.
 
-*Args*<br/>
-Die Argumenttypen in einem Konstruktor, der entsprechend *T*.
+*Args*\
+Die Argument Typen, die in einem Konstruktor von *T*abgeglichen werden sollen.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *T* Trivial konstruierbar ist mit den Argumenttypen in *Args*, andernfalls ist Sie false. Typ *T* Trivial konstruierbar ist; wenn die Variablendefinition `T t(std::declval<Args>()...);` wohlgeformt ist, und ist bekannt, dass keine nicht trivialen Operationen aufruft. Beide *T* und alle Typen in *Args* müssen vollständige Typen werden **"void"**, oder Arrays mit Unbekannter Grenze.
+Eine Instanz des typprädikats ist "true", wenn der Typ *T* mit den Argument Typen in *args*trivial konstruiert werden kann; andernfalls "false". Typ *T* ist trivial konstruierbar, wenn die Variablen `T t(std::declval<Args>()...);` Definition wohl geformt ist und bekanntermaßen keine nicht trivialen Vorgänge aufruft. Sowohl *T* als auch alle Typen in *args* müssen vollständige Typen, **void**oder Arrays mit unbekannter Grenze sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,4 +44,4 @@ Eine Instanz des typprädikats ist true, wenn der Typ *T* Trivial konstruierbar 
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

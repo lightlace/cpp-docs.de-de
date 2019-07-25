@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - streambuf header
 ms.assetid: 4365b25c-5831-488b-b9c2-867bfe961b89
-ms.openlocfilehash: 15bfa86a3c697442b66a5f77aa6ea7a9aba5643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87fb74f62abffdd62b8c0179b13f53d96439d6c6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412370"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449576"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -27,8 +27,8 @@ Fügen Sie den iostreams-Standardheader \<streambuf> ein, um die Vorlagenklasse 
 
 |Typname|Beschreibung|
 |-|-|
-|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Eine Spezialisierung der `basic_streambuf` verwendet **Char** als Vorlagenparameter.|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Eine Spezialisierung der `basic_streambuf` verwendet **"wchar_t"** als Vorlagenparameter.|
+|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Eine Spezialisierung von `basic_streambuf` , die **char** als Vorlagen Parameter verwendet.|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Eine Spezialisierung von `basic_streambuf` , die **wchar_t** als Vorlagen Parameter verwendet.|
 
 ### <a name="classes"></a>Klassen
 
@@ -38,7 +38,7 @@ Fügen Sie den iostreams-Standardheader \<streambuf> ein, um die Vorlagenklasse 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
-[iostreams-Konventionen](../standard-library/iostreams-conventions.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream-Programmierung](../standard-library/iostream-programming.md)\
+[iostreams-Konventionen](../standard-library/iostreams-conventions.md)

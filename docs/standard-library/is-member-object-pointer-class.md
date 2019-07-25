@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_object_pointer class
 - is_member_object_pointer
 ms.assetid: 64f9cdf3-4621-4310-a076-a7bc986926b9
-ms.openlocfilehash: 401beed2a45be0492ba1a5cbd57cc92153dbaa91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37d836c3626b492750ffa28c378413757119c9d3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351078"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456169"
 ---
 # <a name="ismemberobjectpointer-class"></a>is_member_object_pointer-Klasse
 
@@ -27,12 +27,12 @@ struct is_member_object_pointer;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein Zeiger auf ein Memberobjekt oder ein `cv-qualified` Zeiger auf Memberobjekt ist, andernfalls er false enthält. Beachten Sie, dass `is_member_object_pointer` false enthält, wenn *Ty* ist ein Zeiger auf Member-Funktion.
+Eine Instanz des typprädikats ist true, wenn die *typty* ein Zeiger auf Member-Objekt oder `cv-qualified` ein Zeiger auf Member-Objekt ist; andernfalls false. Beachten Sie `is_member_object_pointer` , dass false enthält, wenn *Ty* ein Zeiger auf eine Element Funktion ist.
 
 ## <a name="example"></a>Beispiel
 
@@ -85,5 +85,5 @@ is_member_object_pointer<int (functional::*)()> == false
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_pointer-Klasse](../standard-library/is-member-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_member_pointer-Klasse](../standard-library/is-member-pointer-class.md)

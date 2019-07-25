@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
-ms.openlocfilehash: 4b7fff1bef091a9d47e6ea4dc0e53e86ce39ad7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e057a6229c903402a51b34a8f4e844e80ace187
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365288"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452374"
 ---
 # <a name="valuecompare-class"></a>value_compare-Klasse
 
@@ -39,7 +39,7 @@ protected:
 
 ## <a name="remarks"></a>Hinweise
 
-Die von Value_compare bereitgestellten Vergleichskriterien `value_types` ganzer, in einer Hash_map enthaltener Elemente durch einen Vergleich der Schlüssel der jeweiligen Elemente durch die erweiterungsklassenkonstruktion induziert ausgelöst wird. Operator der Memberfunktion verwendet das Objekt `comp` des Typs `key_compare` gespeichert, in dem Funktionsobjekt, das von Value_compare für den Vergleich der sortierschlüsselkomponenten von zwei Elementen bereitgestellt.
+Die von Value_compare bereitgestellten Vergleichskriterien `value_types` zwischen den vollständigen Elementen in einer hash_map werden von einem Vergleich zwischen den Schlüsseln der entsprechenden Elemente durch die Erweiterung der Erweiterungs Klasse verursacht. Der Member-Funktions Operator verwendet das `comp` -Objekt `key_compare` vom Typ, das im von Value_compare bereitgestellten Funktions Objekt gespeichert ist, um die Sortierschlüssel Komponenten von zwei Elementen zu vergleichen.
 
 Bei hash_sets und hash_multisets, bei denen es sich um einfache Container handelt, bei denen die Schlüsselwerte mit den Elementwerten übereinstimmen, stimmt value_compare mit `key_compare` überein; bei hash_maps und hash_multimaps nicht, da der Wert von Elementen vom Typ `pair` nicht mit dem Wert des Elementschlüssels identisch ist.
 
@@ -55,6 +55,6 @@ Im Beispiel für [hash_map::value_comp](../standard-library/hash-map-class.md#va
 
 ## <a name="see-also"></a>Siehe auch
 
-[binary_function-Struktur](../standard-library/binary-function-struct.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[binary_function Struct (binary_function-Struktur)](../standard-library/binary-function-struct.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

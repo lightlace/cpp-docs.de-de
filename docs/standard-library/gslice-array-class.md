@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-ms.openlocfilehash: 1485b68f29651c0c42048fea02a8320ced8748aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c54d09fdfe920c832c4baa7984fee4e090d04a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159552"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448917"
 ---
 # <a name="gslicearray-class"></a>gslice_array-Klasse
 
@@ -54,15 +54,15 @@ public:
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse beschreibt ein Objekt, das einen Verweis auf ein Objekt speichert `va` Klasse [Valarray](../standard-library/valarray-class.md)**\<Typ >**, zusammen mit einem Objekt `gs` Klasse [ Gslice](../standard-library/gslice-class.md) beschreibt, die die Sequenz von Elementen aus der `valarray<Type>` Objekt.
+Die Klasse beschreibt ein Objekt, das einen Verweis auf ein Objekt `va` der Klasse [Valarray](../standard-library/valarray-class.md) **\<Type >** speichert, zusammen mit einem `gs` Objekt der Klasse [gslice](../standard-library/gslice-class.md) , das die Reihenfolge der Elemente beschreibt, aus denen Sie auswählen können. Das `valarray<Type>` -Objekt.
 
-Sie erstellen eine `gslice_array<Type>` -Objekt nur, indem Sie das Schreiben eines Ausdrucks des Formulars [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Die Memberfunktionen der Gslice_array-Klasse Verhalten sich dann wie die entsprechenden Funktionssignaturen für definiert `valarray<Type>`, außer dass nur die Reihenfolge der ausgewählten Elemente betroffen ist.
+Sie erstellen ein `gslice_array<Type>` -Objekt nur, indem Sie einen Ausdruck der [Form&#91;VA&#93;GS](../standard-library/valarray-class.md#op_at)schreiben. Die Member-Funktionen der-Klasse Gslice_array Verhalten sich dann wie die entsprechenden Funktions `valarray<Type>`Signaturen, die für definiert sind, mit dem Unterschied, dass nur die Sequenz ausgewählter Elemente betroffen ist.
 
 Die Vorlagenklasse wird indirekt durch bestimmte valarray-Operationen erstellt und kann nicht direkt in der Anwendung verwendet werden. Eine interne auxiliary-Vorlagenklasse wird stattdessen von dem Segment-Indexoperator verwendet:
 
-`gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` (**constgslice&**).
+`gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` (**constgslice&** ).
 
-Sie erstellen eine `gslice_array<Type>` -Objekt nur, indem Sie das Schreiben eines Ausdrucks des Formulars `va[gsl]`, für einen Slice `gsl` valarray-Objekts `va`. Die Memberfunktionen der Gslice_array-Klasse Verhalten sich dann wie die entsprechenden Funktionssignaturen für definiert `valarray<Type>`, außer dass nur die Reihenfolge der ausgewählten Elemente betroffen ist. Die Sequenz, die vom gslice_array gesteuert wird, wird durch die drei Parameter des Segmentkonstruktors, den Index des ersten Elements im ersten Segment und die Anzahl der Elemente in jedem Segment und den Abstand zwischen den Elementen in jedem Segment definiert.
+Sie erstellen ein `gslice_array<Type>` -Objekt nur, indem Sie einen Ausdruck des `va[gsl]`Formulars für einen Slice `gsl` eines Valarray `va`-Objekts schreiben. Die Member-Funktionen der-Klasse Gslice_array Verhalten sich dann wie die entsprechenden Funktions `valarray<Type>`Signaturen, die für definiert sind, mit dem Unterschied, dass nur die Sequenz ausgewählter Elemente betroffen ist. Die Sequenz, die vom gslice_array gesteuert wird, wird durch die drei Parameter des Segmentkonstruktors, den Index des ersten Elements im ersten Segment und die Anzahl der Elemente in jedem Segment und den Abstand zwischen den Elementen in jedem Segment definiert.
 
 Im folgenden Beispiel:
 
@@ -89,4 +89,4 @@ Im Beispiel für [gslice::gslice](../standard-library/gslice-class.md#gslice) wi
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

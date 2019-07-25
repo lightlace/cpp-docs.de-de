@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_all_extents class
 - remove_all_extents
 ms.assetid: 548dc536-82e7-423a-b8c1-443d66d9632e
-ms.openlocfilehash: 1c8972889272a4621d6357758cde6d174bb2abd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0909da3f08cec62bcb915a65c353abdd33c96c9d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368954"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451406"
 ---
 # <a name="removeallextents-class"></a>remove_all_extents-Klasse
 
@@ -30,12 +30,12 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 
 ### <a name="parameters"></a>Parameter
 
-*T*<br/>
+*BUND*\
 Der zu ändernde Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz von `remove_all_extents<T>` enthält einen geänderten Typ, der den Elementtyp des Arraytyps *T* wobei alle Arraydimensionen entfernt, oder *T* Wenn *T* ist kein Arraytyp.
+Eine Instanz von `remove_all_extents<T>` enthält einen geänderten Typ, bei dem es sich um den Elementtyp des Arraytyps *T* handelt, bei dem alle Array Dimensionen entfernt wurden, oder *t* , wenn *t* kein Arraytyp ist.
 
 ## <a name="example"></a>Beispiel
 
@@ -67,5 +67,5 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[remove_extent-Klasse](../standard-library/remove-extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[remove_extent-Klasse](../standard-library/remove-extent-class.md)

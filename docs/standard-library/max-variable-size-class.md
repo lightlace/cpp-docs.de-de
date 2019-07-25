@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: a7fde40352a878575ddce8b48b4c97093ae7a960
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8b3c61676f784bf9369c22b5db97d7b251f7ac6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412929"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447283"
 ---
 # <a name="maxvariablesize-class"></a>max_variable_size-Klasse
 
@@ -71,7 +71,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion fügt *_Nx* gespeicherten Wert `_Nallocs`. Diese Memberfunktion aufgerufen wird, nach jedem erfolgreichen Aufruf von `cache_freelist::allocate` Operator **neue**. Das Argument *_Nx* ist die Anzahl der Speicherblöcke im Segment von Operator zugeordneten **neue**.
+Diese Member-Funktion fügt *_Nx* dem gespeicherten Wert `_Nallocs`hinzu. Diese Member-Funktion wird nach jedem erfolgreichen Aufruf von `cache_freelist::allocate` für den **New**-Operator aufgerufen. Das Argument *_Nx* ist die Anzahl der Speicherblöcke in dem Block, der von Operator **New**zugeordnet wird.
 
 ## <a name="deallocated"></a> max_variable_size::deallocated
 
@@ -89,7 +89,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion entfernt *_Nx* vom gespeicherten Wert `_Nallocs`. Diese Memberfunktion aufgerufen wird, nach jedem Aufruf von `cache_freelist::deallocate` Operator **löschen**. Das Argument *_Nx* ist die Anzahl der Speicherblöcke im Segment vom Operator aufgehoben **löschen**.
+Die Member-Funktion subtrahiert *_Nx* vom `_Nallocs`gespeicherten Wert. Diese Member-Funktion wird nach jedem Aufruf von `cache_freelist::deallocate` zum **Delete**-Operator aufgerufen. Das Argument *_Nx* gibt die Anzahl der Speicherblöcke in dem Block an, dessen Zuordnung durch den Operator **Delete**aufgehoben wird.
 
 ## <a name="full"></a> max_variable_size::full
 
@@ -101,11 +101,11 @@ bool full();
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn `_Nallocs / 16 + 16 <= _Nblocks`.
+**true** , `_Nallocs / 16 + 16 <= _Nblocks`wenn.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion wird von `cache_freelist::deallocate` aufgerufen. Wenn der Aufruf zurückgegeben **"true"**, `deallocate` den Speicherblock der Freiliste hinzugefügt; versetzt, wenn "false" zurückgegeben `deallocate` Aufrufe Operator **löschen** beim Aufheben der Zuordnung des Blocks.
+Diese Memberfunktion wird von `cache_freelist::deallocate` aufgerufen. Wenn der Aufruf **true**zurückgibt `deallocate` , wird der Speicherblock in die freie Liste eingefügt; Wenn false zurück `deallocate` gegeben wird, ruft der Operator Delete auf, um den Block zu **Entfernen** .
 
 ## <a name="max_variable_size"></a> max_variable_size::max_variable_size
 
@@ -145,4 +145,4 @@ Diese Memberfunktion inkrementiert den gespeicherten `_Nblocks`-Wert. Diese Memb
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

@@ -21,12 +21,12 @@ f1_keywords:
 - regex/std::wsregex_token_iterator
 - regex/std::wssub_match
 ms.assetid: e6a69067-106c-4a24-9e08-7c867a3a2260
-ms.openlocfilehash: 33217388ff7e0826efcee413b39adaeba569399a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82067819d144cbbdd2790e92aa6de5a1e7c0386a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369136"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451464"
 ---
 # <a name="ltregexgt-typedefs"></a>&lt;regex&gt;-Typdefinitionen
 
@@ -97,7 +97,7 @@ typedef basic_regex<char> regex;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [Basic_regex-Klasse](../standard-library/basic-regex-class.md) für Elemente des Typs **Char**.
+Der Typ beschreibt eine Spezialisierung der Vorlagen Klasse [basic_regex-Klasse](../standard-library/basic-regex-class.md) für Elemente des Typs **char**.
 
 > [!NOTE]
 > High Bit-Zeichen werden bei `regex` unvorhersehbare Ergebnisse haben. Werte außerhalb des Bereichs von 0 bis 127 können zu nicht definiertem Verhalten führen.
@@ -208,7 +208,7 @@ typedef basic_regex<wchar_t> wregex;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [Basic_regex-Klasse](../standard-library/basic-regex-class.md) für Elemente des Typs **"wchar_t"**.
+Der Typ beschreibt eine Spezialisierung der Vorlagen Klasse [basic_regex-Klasse](../standard-library/basic-regex-class.md) für Elemente des Typs **wchar_t**.
 
 ## <a name="wsmatch"></a> wsmatch-Typdefinition
 
@@ -260,11 +260,11 @@ Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [sub_match-Klasse](..
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants-Klasse](../standard-library/regex-constants-class.md)<br/>
-[regex_error-Klasse](../standard-library/regex-error-class.md)<br/>
-[\<regex>-Funktionen](../standard-library/regex-functions.md)<br/>
-[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)<br/>
-[\<regex>-Operatoren](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits-Klasse](../standard-library/regex-traits-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants-Klasse](../standard-library/regex-constants-class.md)\
+[regex_error-Klasse](../standard-library/regex-error-class.md)\
+[\<Regex-> Funktionen](../standard-library/regex-functions.md)\
+[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)\
+[\<Regex-> Operatoren](../standard-library/regex-operators.md)\
+[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)\
+[regex_traits-Klasse](../standard-library/regex-traits-class.md)

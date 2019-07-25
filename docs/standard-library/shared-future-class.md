@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b08a1341ed450dd5d5cee93cdfcbab57f8d6760
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412604"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450493"
 ---
 # <a name="sharedfuture-class"></a>shared_future-Klasse
 
@@ -72,7 +72,7 @@ Rufen Sie keine anderen Methoden als `valid`, `operator=` und den Destruktor ein
 
 **Namespace:** std
 
-## <a name="get"></a>  shared_future:: Get
+## <a name="get"></a>shared_future:: Get
 
 Ruft das Ergebnis ab, das im *zugeordneten asynchronen Zustand* gespeichert ist.
 
@@ -92,7 +92,7 @@ Bevor sie das Ergebnis abruf, blockiert diese Methode den aktuellen Thread, bis 
 
 Für die Teilspezialisierung `shared_future<Ty&>` ist der gespeicherte Wert praktisch ein Verweis auf das Objekt, das dem asynchronen *Anbieter als Rückgabewert* übergeben wurde.
 
-Da kein gespeicherter Wert, für die Spezialisierung vorhanden `shared_future<void>`, gibt die Methode zurück **"void"**.
+Da für die Spezialisierung `shared_future<void>`kein gespeicherter Wert vorhanden ist, gibt die Methode " **void**" zurück.
 
 ## <a name="op_eq"></a> shared_future::operator=
 
@@ -105,7 +105,7 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts*<br/>
+*Richting*\
 Ein `shared_future`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -114,9 +114,9 @@ Ein `shared_future`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Für den ersten Operator *rechts* mehr verfügt über keinen zugeordneten asynchronen Zustand nach Abschluss des Vorgangs.
+Für den ersten Operator verfügt *right* nach dem Vorgang nicht mehr über einen zugeordneten asynchronen Zustand.
 
-Für die zweite Methode *rechts* den assoziierte asynchronen Zustand verwaltet.
+Bei der zweiten Methode behält *right* den zugeordneten asynchronen Zustand bei.
 
 ## <a name="shared_future"></a> shared_future::shared_future-Konstruktor
 
@@ -131,18 +131,18 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts*<br/>
+*Richting*\
 Ein [zukünftiges](../standard-library/future-class.md) oder `shared_future`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
 Der erste Konstruktor erstellt ein `shared_future`-Objekt, das über keinen *zugeordneten asynchronen Zustand* verfügt.
 
-Die zweiten und dritten Konstruktoren erstellen ein `shared_future` Objekt aus, und übertragen Sie den zugeordneten asynchronen Zustand aus *rechts*. *Rechts* mehr verfügt über keinen zugeordneten asynchronen Zustand.
+Mit dem zweiten und dritten Konstruktoren wird `shared_future` ein-Objekt erstellt und der zugehörige asynchrone Zustand von *Rechts*übertragen. *Right* weist keinen zugeordneten asynchronen Zustand mehr auf.
 
-Der vierte Konstruktor erstellt ein `shared_future` Objekt mit dem gleichen zugeordneten asynchronen Zustand als *rechts*.
+Der vierte Konstruktor erstellt ein `shared_future` -Objekt, das denselben zugeordneten asynchronen Zustand aufweist wie *Rechts*.
 
-## <a name="valid"></a>  shared_future:: Valid
+## <a name="valid"></a>shared_future:: valid
 
 Gibt an, ob das Objekt einen *zugeordneten asynchronen Zustand* hat.
 
@@ -152,9 +152,9 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** verfügt das Objekt einen zugeordneten asynchronen Zustand ist; andernfalls **"false"**.
+**true** , wenn das Objekt über einen zugeordneten asynchronen Zustand verfügt. andernfalls **false**.
 
-## <a name="wait"></a>  shared_future:: wait
+## <a name="wait"></a>shared_future:: Wait
 
 Blockiert den aktuellen Thread, bis der *zugeordnete asynchrone Zustand* *bereit* ist.
 
@@ -166,7 +166,7 @@ void wait() const;
 
 Ein zugeordneter asynchroner Zustand ist nur dann bereit, wenn sein asynchroner Anbieter einen Rückgabewert oder eine Ausnahme gespeichert hat.
 
-## <a name="wait_for"></a>  shared_future:: wait_for
+## <a name="wait_for"></a>shared_future::wait_for
 
 Blockiert den aktuellen Thread, bis der zugeordnete asynchrone Zustand *bereit* oder eine angegebene Zeit verstrichen ist.
 
@@ -178,7 +178,7 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Parameter
 
-*Rel_time*<br/>
+*Rel_time*\
 Ein [chrono::duration](../standard-library/duration-class.md)-Objekt, das ein maximales Zeitintervall angibt, das der Thread blockiert.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -189,7 +189,7 @@ Ein [future_status](../standard-library/future-enums.md#future_status), das den 
 
 Ein zugeordneter asynchroner Zustand ist nur dann *bereit*, wenn sein asynchroner Anbieter einen Rückgabewert oder eine Ausnahme gespeichert hat.
 
-## <a name="wait_until"></a>  shared_future:: wait_until
+## <a name="wait_until"></a>shared_future::wait_until
 
 Blockiert den aktuelle Thread, bis der zugeordnete asynchrone Zustand *bereit* oder ein angegebener Zeitpunkt verstrichen ist.
 
@@ -201,7 +201,7 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Parameter
 
-*Abs_time*<br/>
+*Abs_time*\
 Ein [chrono::time_point](../standard-library/time-point-class.md)-Objekt, das eine Zeit angibt, nach der der Thread die Blockierung aufheben kann.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -214,5 +214,5 @@ Ein zugeordneter asynchroner Zustand ist nur dann bereit, wenn sein asynchroner 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

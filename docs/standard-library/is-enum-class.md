@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_enum class
 - is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
-ms.openlocfilehash: 623bda13a12ac311618e1b9fffdbc3f676013df6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c8ac69bacf72cc9a281e239263a14a42f4a0efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336505"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452684"
 ---
 # <a name="isenum-class"></a>is_enum-Klasse
 
@@ -27,12 +27,12 @@ struct is_enum;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein Enumerationstyp oder ein `cv-qualified` bestehen aus einem Enumerationstyp ist, andernfalls er false enthält.
+Eine Instanz des typprädikats ist "true",  wenn die typität ein Enumerationstyp oder ein `cv-qualified` Formular eines Enumerationstyps ist; andernfalls "false".
 
 ## <a name="example"></a>Beispiel
 
@@ -77,5 +77,5 @@ is_enum<int> == false
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_integral-Klasse](../standard-library/is-integral-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_integral-Klasse](../standard-library/is-integral-class.md)

@@ -444,16 +444,7 @@
                 - name: Eigenschaftenseite „Verwaltete Ressourcen“
                   href: build/reference/managed-resources-property-page.md
                 - name: MIDL-Eigenschaftenseiten
-                  expanded: false
-                  items:
-                    - name: MIDL-Eigenschaftenseiten
-                      href: build/reference/midl-property-pages.md
-                    - name: 'MIDL-Eigenschaftenseiten: Allgemein'
-                      href: build/reference/midl-property-pages-general.md
-                    - name: 'MIDL-Eigenschaftenseiten: Output'
-                      href: build/reference/midl-property-pages-output.md
-                    - name: 'MIDL-Eigenschaftenseiten: Erweitert'
-                      href: build/reference/midl-property-pages-advanced.md
+                  href: build/reference/midl-property-pages.md
                 - name: Eigenschaftenseite „Webverweise“
                   href: build/reference/web-references-property-page.md
                 - name: Tool zum Generieren von XML-Daten (Eigenschaftenseite)

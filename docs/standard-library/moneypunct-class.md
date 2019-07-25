@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349120"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460192"
 ---
 # <a name="moneypunct-class"></a>moneypunct-Klasse
 
-Die Vorlagenklasse beschreibt ein Objekt, das als gebietsschemafacet zur beschrieben, der Sequenzen vom Typ dienen kann *CharType* verwendet, um ein Monetäres Eingabefeld oder ein Monetäres Ausgabefeld darzustellen. Wenn der Vorlagenparameter *Intl* ist *"true"*, internationale Konventionen beachtet.
+Die Vorlagen Klasse beschreibt ein Objekt, das als Gebiets Schema Aspekt dienen kann, um die Sequenzen vom Typ *CharType* zu beschreiben, die zur Darstellung eines monetären Eingabe Felds oder eines monetären Ausgabe Felds verwendet werden. Wenn der Vorlagen Parameter " *Intl* " den Wert " *true*" hat, werden internationale Konventionen beachtet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*<br/>
+*CharType*\
 Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.
 
-*Intl*<br/>
+*Intl*\
 Ein Flag, das festlegt, ob internationale Konventionen beachtet werden sollen.
 
 ## <a name="remarks"></a>Hinweise
@@ -277,7 +277,7 @@ Eine gebietsschemaspezifische Regel, die festlegt, wie Ziffern auf der linken Se
 
 ### <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [gruppieren](#grouping), bei dem die virtuelle Memberfunktion, indem aufgerufen wird `grouping`.
+Siehe das Beispiel für die [Gruppierung](#grouping), bei der die Funktion des virtuellen Members `grouping`von aufgerufen wird.
 
 ## <a name="do_neg_format"></a> moneypunct::do_neg_format
 
@@ -289,19 +289,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die geschützte virtuelle Memberfunktion gibt eine gebietsschemaspezifische Regel zurück, mit der festgelegt wird, wie für einen negativen Betrag Ausgabefelder für monetäre Werte generiert werden. Jede der vier Elemente von `pattern::field` können die Werte aufweisen:
+Die geschützte virtuelle Memberfunktion gibt eine gebietsschemaspezifische Regel zurück, mit der festgelegt wird, wie für einen negativen Betrag Ausgabefelder für monetäre Werte generiert werden. Jedes der vier Elemente von `pattern::field` kann die folgenden Werte aufweisen:
 
-- `none` auf NULL oder mehr Leerzeichen abzustimmen bzw. nichts zu generieren.
+- `none`, wenn NULL oder mehr Leerzeichen abgeglichen werden sollen
 
-- `sign` übereinstimmen oder ein positiven oder negativen Vorzeichen zu generieren.
+- `sign`, um ein positives oder negatives Vorzeichen abzugleichen oder zu generieren.
 
-- `space` NULL oder mehr Leerzeichen abzustimmen, oder ein Leerzeichen zu generieren.
+- `space`, wenn NULL oder mehr Leerzeichen gefunden werden oder ein Leerzeichen generiert werden soll
 
-- `symbol` übereinstimmen oder ein Währungssymbol zu generieren.
+- `symbol`, um ein Währungssymbol abzugleichen oder zu generieren.
 
-- `value` Um abzustimmen bzw. einen monetären Wert zu generieren.
+- `value`, um einen monetären Wert abzugleichen oder zu generieren.
 
-Komponenten des Ausgabefelder für monetäre Werte generiert werden und die Komponenten eines Eingabefelds abgeglichen werden, in der Reihenfolge, in dem diese Elemente im werden `pattern::field`. Alle Werte des `sign`, `symbol`, `value`, und entweder `none` oder `space` muss genau einmal angezeigt werden. Der Wert `none` muss nicht zuerst angezeigt. Der Wert **space** darf weder an erster noch an letzter Stelle angezeigt werden. Wenn `Intl` ist "true", die Reihenfolge ist `symbol`, `sign`, `none`, klicken Sie dann `value`.
+Komponenten eines monetären Ausgabe Felds werden generiert, und die Komponenten eines monetären Eingabe Felds werden in der Reihenfolge abgeglichen, in der diese `pattern::field`Elemente angezeigt werden. Alle `sign`-Werte `value`, `symbol`, und`none` oder`space` müssen genau einmal angezeigt werden. Der Wert `none` darf nicht zuerst angezeigt werden. Der Wert **space** darf weder an erster noch an letzter Stelle angezeigt werden. Wenn `Intl` den Wert true hat, ist `symbol`die `sign`Reihen `none`Folge, `value`, und.
 
 Die Vorlagenversion von `moneypunct`\< **CharType**, **Intl**> returns `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -523,14 +523,14 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs*<br/>
+*_Refs*\
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
+Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebiets Schemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
