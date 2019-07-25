@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: eb73c77f0e2658cf750cf17ca85549a09d1cbe51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de66718dab10b5c95e8c1ab7fd0bd17e9b4ee5e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370930"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448174"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -29,8 +29,8 @@ Definiert die Vorlagenklasse [basic_ostream](../standard-library/basic-ostream-c
 
 |Typname|Beschreibung|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|Erstellt einen Typ aus `basic_ostream` , das speziell auf **Char** und `char_traits` auf **Char**.|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|Erstellt einen Typ aus `basic_ostream` , das speziell auf **"wchar_t"** und `char_traits` auf **"wchar_t"**.|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Erstellt einen Typ aus `basic_ostream` , der auf **char** spezialisiert und `char_traits` auf **char**spezialisiert ist.|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Erstellt einen Typ aus `basic_ostream` , der auf **wchar_t** spezialisiert ist `char_traits` und auf **wchar_t**spezialisiert ist.|
 
 ### <a name="manipulators"></a>Manipulatoren
 
@@ -55,7 +55,7 @@ Definiert die Vorlagenklasse [basic_ostream](../standard-library/basic-ostream-c
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
-[iostreams-Konventionen](../standard-library/iostreams-conventions.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream-Programmierung](../standard-library/iostream-programming.md)\
+[iostreams-Konventionen](../standard-library/iostreams-conventions.md)

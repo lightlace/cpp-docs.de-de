@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: 47b3ae9d59db7c39d7b9667038d216f24530d5dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2be3e4a830113ee86a05fea0d39fd8e12ec3e9a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369604"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451593"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt;-Funktionen
 
@@ -27,9 +27,9 @@ ms.locfileid: "62369604"
 |[regex_match](#regex_match)|Testet, ob ein regulärer Ausdruck der gesamten Zielzeichenfolge entspricht.|
 |[regex_replace](#regex_replace)|Ersetzt übereinstimmende reguläre Ausdrücke.|
 |[regex_search](#regex_search)|Sucht nach einer Übereinstimmung mit einem regulären Ausdruck.|
-|[swap](#swap)|Tauscht zwei `basic_regex` oder `match_results` Objekte.|
+|[swap](#swap)|Tauscht zwei `basic_regex` - `match_results` oder-Objekte aus.|
 
-## <a name="regex_match"></a>  regex_match
+## <a name="regex_match"></a>regex_match
 
 Testet, ob ein regulärer Ausdruck der gesamten Zielzeichenfolge entspricht.
 
@@ -84,51 +84,51 @@ bool regex_match(
 
 ### <a name="parameters"></a>Parameter
 
-*BidIt*<br/>
-Der Itertatortyp für Teilübereinstimmungen. Allgemeine dies einer der Fällen `string::const_iterator`, `wstring::const_iterator`, `const char*` oder `const wchar_t*`.
+*Bidit*\
+Der Itertatortyp für Teilübereinstimmungen. In allgemeinen Fällen ist dies eine `string::const_iterator`von `wstring::const_iterator` `const char*` , oder `const wchar_t*`.
 
-*Alloc*<br/>
+*Zuordnungseinheits*\
 Die Zuweisungsklasse des Übereinstimmungsergebnisses.
 
-*Elem*<br/>
-Der zu entsprechende Elementtyp. Allgemeinen Fällen ist `string`, `wstring`, `char*` oder `wchar_t*`.
+*Elem*\
+Der zu entsprechende Elementtyp. In allgemeinen `string`Fällen ist dies `char*` , `wstring`oder `wchar_t*`.
 
-*RXtraits*<br/>
+*Rxcharakteristika*\
 Merkmalklasse für Elemente.
 
-*Alloc2*<br/>
+*Alloc2*\
 Die Zuweisungsklasse des regulären Ausdrucks.
 
-*IOtraits*<br/>
+*Iocharakteristika*\
 Die Trait-Klasse der Zeichenfolge.
 
-*IOalloc*<br/>
+*Iozuweisung*\
 Die Zuweisungsklasse der Zeichenfolge.
 
-*flags*<br/>
+*fahren*\
 Flags für Übereinstimmungen.
 
-*first*<br/>
+*erstes*\
 Anfang der Sequenz, die übereinstimmen soll.
 
-*last*<br/>
+*letzten*\
 Ende der Sequenz, die übereinstimmen soll.
 
-*match*<br/>
-Die Übereinstimmungsergebnisse. Elementtyp entspricht: [Smatch](../standard-library/regex-typedefs.md#smatch) für `string`, [Wsmatch](../standard-library/regex-typedefs.md#wsmatch) für `wstring`, [Cmatch](../standard-library/regex-typedefs.md#cmatch) für `char*` oder [Wcmatch](../standard-library/regex-typedefs.md#wcmatch) für `wchar_t*`.
+*übereinstimmen*\
+Die Übereinstimmungsergebnisse. Entspricht dem Elem-Typ [: smatch](../standard-library/regex-typedefs.md#smatch) `string`für [, wsmatch](../standard-library/regex-typedefs.md#wsmatch) für `wstring`, [cmatch](../standard-library/regex-typedefs.md#cmatch) for `char*` oder [wcmatch](../standard-library/regex-typedefs.md#wcmatch) for `wchar_t*`.
 
-*ptr*<br/>
-Zeiger auf den Anfang der Sequenz, die übereinstimmen soll. Wenn *Ptr* ist `char*`, verwenden Sie dann `cmatch` und `regex`. Wenn *Ptr* ist `wchar_t*` dann `wcmatch` und `wregex`.
+*PTR*\
+Zeiger auf den Anfang der Sequenz, die übereinstimmen soll. Wenn *ptr* ist `char*`, verwenden `cmatch` Sie und `regex`. Wenn *ptr* dann `wchar_t*` `wcmatch` und`wregex`verwendet wird.
 
-*re*<br/>
-Der reguläre Ausdruck, der übereinstimmen soll. Typ `regex` für `string` und `char*`, oder `wregex` für `wstring` und `wchar_t*`.
+*Turm*\
+Der reguläre Ausdruck, der übereinstimmen soll. Geben `regex` Sie `string` für und`char*`, oder`wregex` für`wstring` und ein`wchar_t*`.
 
-*str*<br/>
-Zeichenfolge, die übereinstimmen soll. Entspricht dem Typ der *Elem*.
+*SRT*\
+Zeichenfolge, die übereinstimmen soll. Entspricht dem Typ von *Elem*.
 
 ### <a name="remarks"></a>Hinweise
 
-Jede Vorlagenfunktion gibt "true" zurück, wenn nur die gesamte operandensequenz *str* entspricht genau der reguläres Ausdrucksargument *re*. Verwendung [Regex_search](../standard-library/regex-functions.md#regex_search) mit eine Teilzeichenfolge in einer Zielsequenz übereinstimmen und `regex_iterator` mehrere Übereinstimmungen gefunden. Die Funktionen, die ein `match_results`-Objekt übernehmen, legen dessen Member fest, um wiederzugeben, ob die Suche nach der Übereinstimmung erfolgreich war, und wenn ja, was die verschiedenen Erfassungsgruppen im regulären Ausdruck erfasst haben.
+Jede Vorlagen Funktion gibt nur dann true zurück, wenn der gesamte operandensequenz- *Str* genau mit *dem Argument für*reguläre Ausdrücke übereinstimmt. Verwenden Sie [regex_search](../standard-library/regex-functions.md#regex_search) , um eine Teil Zeichenfolge innerhalb einer `regex_iterator` Zielsequenz abzugleichen und mehrere Übereinstimmungen zu finden. Die Funktionen, die ein `match_results`-Objekt übernehmen, legen dessen Member fest, um wiederzugeben, ob die Suche nach der Übereinstimmung erfolgreich war, und wenn ja, was die verschiedenen Erfassungsgruppen im regulären Ausdruck erfasst haben.
 
 Die Funktionen, die ein `match_results`-Objekt übernehmen, legen dessen Member fest, um wiederzugeben, ob die Suche nach der Übereinstimmung erfolgreich war, und wenn ja, was die verschiedenen Erfassungsgruppen im regulären Ausdruck erfasst haben.
 
@@ -196,7 +196,7 @@ Regex found in Drizzle
 The matching text is: 2014-04-02
 ```
 
-## <a name="regex_replace"></a>  regex_replace
+## <a name="regex_replace"></a>regex_replace
 
 Ersetzt übereinstimmende reguläre Ausdrücke.
 
@@ -220,45 +220,45 @@ basic_string<Elem> regex_replace(
 
 ### <a name="parameters"></a>Parameter
 
-*OutIt*<br/>
+*OutIt*\
 Der Itertatortyp für Ersetzungen.
 
-*BidIt*<br/>
+*Bidit*\
 Der Itertatortyp für Teilübereinstimmungen.
 
-*RXtraits*<br/>
+*Rxcharakteristika*\
 Merkmalklasse für Elemente.
 
-*Alloc*<br/>
+*Zuordnungseinheits*\
 Die Zuweisungsklasse des regulären Ausdrucks.
 
-*Elem*<br/>
+*Elem*\
 Der zu entsprechende Elementtyp.
 
-*flags*<br/>
+*fahren*\
 Flags für Übereinstimmungen.
 
-*first*<br/>
+*erstes*\
 Anfang der Sequenz, die übereinstimmen soll.
 
-*fmt*<br/>
+*fmt*\
 Das Format für Ersetzungen.
 
-*last*<br/>
+*letzten*\
 Ende der Sequenz, die übereinstimmen soll.
 
-*out*<br/>
+*out*\
 Der Ausgabeiterator.
 
-*re*<br/>
+*Turm*\
 Der reguläre Ausdruck, der übereinstimmen soll.
 
-*str*<br/>
+*SRT*\
 Zeichenfolge, die übereinstimmen soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Funktion erstellt eine [Regex_iterator-Klasse](../standard-library/regex-iterator-class.md) Objekt `iter(first, last, re, flags)` und wird verwendet, um den Eingabebereich teilen `[first, last)` in eine Reihe von Untersequenzen `T0 M0 T1 M1...TN-1 MN-1 TN`, wobei `Mn` die n-ten Übereinstimmung ermittelt, indem wird die Iterator. Wenn keine Übereinstimmungen gefunden werden, ist `T0` der gesamte Bereich für die Eingabe und `N` ist null. Wenn `(flags & format_first_only) != 0` nur die erste Übereinstimmung verwendet, sind `T1` alle Eingabetexte, die der Übereinstimmung folgen und `N` ist 1. Für jede `i` im Bereich von `[0, N)`, wenn `(flags & format_no_copy) == 0` kopiert es alle Texte im Bereich von `Ti` des Iterators *out*. Es ruft dann `m.format(out, fmt, flags)` auf, wobei `m` das vom Iteratorobjekt `iter` zurückgegebene Objekt `match_results` für die Untersequenz `Mi` ist. Zum Schluss Wenn `(flags & format_no_copy) == 0` kopiert es alle Texte im Bereich von `TN` des Iterators *out*. Die Funktion gibt *out*.
+Die erste Funktion erstellt ein [regex_iterator](../standard-library/regex-iterator-class.md) -Klassen `iter(first, last, re, flags)` Objekt und verwendet es, um den Eingabe `[first, last)` Bereich in eine Reihe von unter `T0 M0 T1 M1...TN-1 MN-1 TN`Sequenzen aufzuteilen `Mn` , wobei die vom Iterator erkannte ten-Entsprechung ist. Wenn keine Übereinstimmungen gefunden werden, ist `T0` der gesamte Bereich für die Eingabe und `N` ist null. Wenn `(flags & format_first_only) != 0` nur die erste Übereinstimmung verwendet, sind `T1` alle Eingabetexte, die der Übereinstimmung folgen und `N` ist 1. Für jede `i` `[0, N)`im Bereich, wenn `(flags & format_no_copy) == 0` der Text im Bereich `Ti` in den Iterator kopiert wird.  Es ruft dann `m.format(out, fmt, flags)` auf, wobei `m` das vom Iteratorobjekt `iter` zurückgegebene Objekt `match_results` für die Untersequenz `Mi` ist. Schließlich wird `(flags & format_no_copy) == 0` der Text im Bereich `TN` in den Iterator *out*kopiert. Die *Funktion gibt zurück*.
 
 Die zweite Funktion erstellt eine lokale Variable `result` des Typs `basic_string<charT>` und ruft `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)` auf. Er gibt `result` zurück.
 
@@ -304,7 +304,7 @@ replacement == AdAeAf
 replacement == Adaeaf
 ```
 
-## <a name="regex_search"></a>  regex_search
+## <a name="regex_search"></a>regex_search
 
 Sucht nach einer Übereinstimmung mit einem regulären Ausdruck.
 
@@ -353,51 +353,51 @@ bool regex_search(
 
 ### <a name="parameters"></a>Parameter
 
-*BidIt*<br/>
+*Bidit*\
 Der Itertatortyp für Teilübereinstimmungen.
 
-*Alloc*<br/>
+*Zuordnungseinheits*\
 Die Zuweisungsklasse des Übereinstimmungsergebnisses.
 
-*Elem*<br/>
+*Elem*\
 Der zu entsprechende Elementtyp.
 
-*RXtraits*<br/>
+*Rxcharakteristika*\
 Merkmalklasse für Elemente.
 
-*Alloc2*<br/>
+*Alloc2*\
 Die Zuweisungsklasse des regulären Ausdrucks.
 
-*IOtraits*<br/>
+*Iocharakteristika*\
 Die Trait-Klasse der Zeichenfolge.
 
-*IOalloc*<br/>
+*Iozuweisung*\
 Die Zuweisungsklasse der Zeichenfolge.
 
-*flags*<br/>
+*fahren*\
 Flags für Übereinstimmungen.
 
-*first*<br/>
+*erstes*\
 Anfang der Sequenz, die übereinstimmen soll.
 
-*last*<br/>
+*letzten*\
 Ende der Sequenz, die übereinstimmen soll.
 
-*match*<br/>
+*übereinstimmen*\
 Die Übereinstimmungsergebnisse.
 
-*ptr*<br/>
+*PTR*\
 Zeiger auf den Anfang der Sequenz, die übereinstimmen soll.
 
-*re*<br/>
+*Turm*\
 Der reguläre Ausdruck, der übereinstimmen soll.
 
-*str*<br/>
+*SRT*\
 Zeichenfolge, die übereinstimmen soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Jede Vorlagenfunktion gibt nur true, wenn eine Suche nach reguläres Ausdrucksargument *re* gesamten operandensequenz übereinstimmt. Die Funktionen, die ein `match_results`-Objekt übernehmen, legen dessen Member fest, um wiederzugeben, ob die Suche nach der Übereinstimmung erfolgreich war, und wenn ja, was die verschiedenen Erfassungsgruppen im regulären Ausdruck erfasst haben.
+Jede Vorlagen Funktion gibt nur dann true zurück, wenn eine Suche nach dem regulären *Ausdrucks Argument in* der operandensequenz erfolgreich ist. Die Funktionen, die ein `match_results`-Objekt übernehmen, legen dessen Member fest, um wiederzugeben, ob die Suche nach der Übereinstimmung erfolgreich war, und wenn ja, was die verschiedenen Erfassungsgruppen im regulären Ausdruck erfasst haben.
 
 ### <a name="example"></a>Beispiel
 
@@ -457,7 +457,7 @@ search(string, "abc") == true
 
 ## <a name="swap"></a>  swap
 
-Tauscht zwei `basic_regex` oder `match_results` Objekte.
+Tauscht zwei `basic_regex` - `match_results` oder-Objekte aus.
 
 ```cpp
 template <class Elem, class RXtraits>
@@ -473,10 +473,10 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*Elem*<br/>
+*Elem*\
 Der zu entsprechende Elementtyp.
 
-*RXtraits*<br/>
+*Rxcharakteristika*\
 Merkmalklasse für Elemente.
 
 ### <a name="remarks"></a>Hinweise
@@ -520,11 +520,11 @@ string == aaa
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants-Klasse](../standard-library/regex-constants-class.md)<br/>
-[regex_error-Klasse](../standard-library/regex-error-class.md)<br/>
-[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)<br/>
-[\<regex>-Operatoren](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits-Klasse](../standard-library/regex-traits-class.md)<br/>
-[\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants-Klasse](../standard-library/regex-constants-class.md)\
+[regex_error-Klasse](../standard-library/regex-error-class.md)\
+[regex_iterator-Klasse](../standard-library/regex-iterator-class.md)\
+[\<Regex-> Operatoren](../standard-library/regex-operators.md)\
+[regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md)\
+[regex_traits-Klasse](../standard-library/regex-traits-class.md)\
+[\<regex>-Typdefinitionen](../standard-library/regex-typedefs.md)

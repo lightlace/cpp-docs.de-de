@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cmath header
 ms.assetid: 80df1dba-60ca-4918-9c2e-fbf446eaa7d6
-ms.openlocfilehash: 1b581e19d53be6faddb983f12d739f2a199b2e9c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d01b02d8fa169aa7fddbc3e51d75e5328b400d2b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244750"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459266"
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 
@@ -217,7 +217,7 @@ float hypotf(float x, float y);
 long double hypotl(long double x, long double y);
 ```
 
-## <a name="three-dimensional-hypotenuse"></a>Dreidimensionale hypotenuse
+## <a name="three-dimensional-hypotenuse"></a>Dreidimensionale Hypotenuse
 
 ```cpp
 float hypot(float x, float y, float z);
@@ -358,7 +358,7 @@ float fmaf(float x, float y, float z);
 long double fmal(long double x, long double y, long double z);
 ```
 
-## <a name="classification--comparison-functions"></a>Klassifizierung / Vergleichsfunktionen
+## <a name="classification--comparison-functions"></a>Klassifizierungs-/Vergleichsfunktionen
 
 ```cpp
 int fpclassify(float x);
@@ -409,7 +409,7 @@ float assoc_laguerref(unsigned n, unsigned m, float x);
 long double assoc_laguerrel(unsigned n, unsigned m, long double x);
 ```
 
-### <a name="associated-legendre-functions"></a>Zugeordneten Legendre-Funktionen
+### <a name="associated-legendre-functions"></a>Zugehörige Legendre-Funktionen
 
 ```cpp
 double assoc_legendre(unsigned l, unsigned m, double x);
@@ -425,7 +425,7 @@ float betaf(float x, float y);
 long double betal(long double x, long double y);
 ```
 
-### <a name="complete-elliptic-integral-of-the-first-kind"></a>Vollständigen elliptischen integrals der ersten Art
+### <a name="complete-elliptic-integral-of-the-first-kind"></a>Complete Elliptic Integral der ersten Art
 
 ```cpp
 double comp_ellint_1(double k);
@@ -433,7 +433,7 @@ float comp_ellint_1f(float k);
 long double comp_ellint_1l(long double k);
 ```
 
-### <a name="complete-elliptic-integral-of-the-second-kind"></a>Vollständigen elliptischen integrals der zweiten Art
+### <a name="complete-elliptic-integral-of-the-second-kind"></a>Complete Elliptic Integral der zweiten Art
 
 ```cpp
 double comp_ellint_2(double k);
@@ -441,7 +441,7 @@ float comp_ellint_2f(float k);
 long double comp_ellint_2l(long double k);
 ```
 
-### <a name="complete-elliptic-integral-of-the-third-kind"></a>Die dritte Art vollständigen elliptischen integrals
+### <a name="complete-elliptic-integral-of-the-third-kind"></a>Complete Elliptic Integral der dritten Art
 
 ```cpp
 double comp_ellint_3(double k, double nu);
@@ -449,7 +449,7 @@ float comp_ellint_3f(float k, float nu);
 long double comp_ellint_3l(long double k, long double nu);
 ```
 
-### <a name="regular-modified-cylindrical-bessel-functions"></a>Reguläre geändert zylindrische Bessel-Funktionen
+### <a name="regular-modified-cylindrical-bessel-functions"></a>Regulär geänderte zylindrische Bessel-Funktionen
 
 ```cpp
 double cyl_bessel_i(double nu, double x);
@@ -457,7 +457,7 @@ float cyl_bessel_if(float nu, float x);
 long double cyl_bessel_il(long double nu, long double x);
 ```
 
-### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>Der erste Art zylindrische Bessel-Funktionen
+### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>Zylindrische Bessel-Funktionen der ersten Art
 
 ```cpp
 double cyl_bessel_j(double nu, double x);
@@ -465,7 +465,7 @@ float cyl_bessel_jf(float nu, float x);
 long double cyl_bessel_jl(long double nu, long double x);
 ```
 
-### <a name="irregular-modified-cylindrical-bessel-functions"></a>Irregulär geändert zylindrische Bessel-Funktionen
+### <a name="irregular-modified-cylindrical-bessel-functions"></a>Irregulär geänderte zylindrische Bessel-Funktionen
 
 ```cpp
 double cyl_bessel_k(double nu, double x);
@@ -473,7 +473,7 @@ float cyl_bessel_kf(float nu, float x);
 long double cyl_bessel_kl(long double nu, long double x);
 ```
 
-### <a name="cylindrical-neumann-functions"></a>Zylindrisches Neumann-Funktionen
+### <a name="cylindrical-neumann-functions"></a>Zylindrische Neumann-Funktionen
 
 ```cpp
 double cyl_neumann(double nu, double x);
@@ -481,7 +481,7 @@ float cyl_neumannf(float nu, float x);
 long double cyl_neumannl(long double nu, long double x);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-first-kind"></a>Unvollständigen elliptischen integrals der ersten Art
+### <a name="incomplete-elliptic-integral-of-the-first-kind"></a>Unvollständige elliptische Ganzzahl der ersten Art
 
 ```cpp
 double ellint_1(double k, double phi);
@@ -489,7 +489,7 @@ float ellint_1f(float k, float phi);
 long double ellint_1l(long double k, long double phi);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-second-kind"></a>Die zweite Art unvollständigen elliptischen integrals
+### <a name="incomplete-elliptic-integral-of-the-second-kind"></a>Unvollständige elliptische Ganzzahl der zweiten Art
 
 ```cpp
 double ellint_2(double k, double phi);
@@ -497,7 +497,7 @@ float ellint_2f(float k, float phi);
 long double ellint_2l(long double k, long double phi);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-third-kind"></a>Die dritte Art unvollständigen elliptischen integrals
+### <a name="incomplete-elliptic-integral-of-the-third-kind"></a>Unvollständige elliptische Ganzzahl der dritten Art
 
 ```cpp
 double ellint_3(double k, double nu, double phi);
@@ -505,7 +505,7 @@ float ellint_3f(float k, float nu, float phi);
 long double ellint_3l(long double k, long double nu, long double phi);
 ```
 
-### <a name="exponential-integral"></a>Exponentiellen integralfunktion
+### <a name="exponential-integral"></a>Exponentielle Ganzzahl
 
 ```cpp
 double expint(double x);
@@ -537,7 +537,7 @@ float legendref(unsigned l, float x);
 long double legendrel(unsigned l, long double x);
 ```
 
-### <a name="riemann-zeta-function"></a>Riemannsche Zeta-Funktion
+### <a name="riemann-zeta-function"></a>Riemann-Zeta-Funktion
 
 ```cpp
 double riemann_zeta(double x);
@@ -545,7 +545,7 @@ float riemann_zetaf(float x);
 long double riemann_zetal(long double x);
 ```
 
-### <a name="spherical-bessel-functions-of-the-first-kind"></a>Der erste Art sphärischen Bessel-Funktionen
+### <a name="spherical-bessel-functions-of-the-first-kind"></a>Kugelförmige Bessel-Funktionen der ersten Art
 
 ```cpp
 double sph_bessel(unsigned n, double x);
@@ -553,7 +553,7 @@ float sph_besself(unsigned n, float x);
 long double sph_bessell(unsigned n, long double x);
 ```
 
-### <a name="spherical-associated-legendre-functions"></a>Sphärischen zugeordneten Legendre-Funktionen
+### <a name="spherical-associated-legendre-functions"></a>Sphärischen zugeordnete Legenden-Funktionen
 
 ```cpp
 double sph_legendre(unsigned l, unsigned m, double theta);
@@ -561,7 +561,7 @@ float sph_legendref(unsigned l, unsigned m, float theta);
 long double sph_legendrel(unsigned l, unsigned m, long double theta);
 ```
 
-### <a name="spherical-neumann-functions"></a>Sphärischen Neumann-Funktionen
+### <a name="spherical-neumann-functions"></a>Kugelförmige Neumann-Funktionen
 
 ```cpp
 double sph_neumann(unsigned n, double x);
@@ -575,6 +575,6 @@ Durch Einschließen dieses Headers wird sichergestellt, dass die mit externer Bi
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Übersicht über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

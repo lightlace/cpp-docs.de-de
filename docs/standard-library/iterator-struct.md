@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: 1dd62a6141e690d3bd4dcad69aa107c126a0f386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64c9be76cb92d818e40714dd141ded3a8cc17c8a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224102"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455621"
 ---
 # <a name="iterator-struct"></a>iterator-Struktur
 
-Eine leere Basisstruktur verwendet, um sicherzustellen, dass eine benutzerdefinierte iteratorklasse ordnungsgemäß mit funktioniert `iterator_trait`s.
+Eine leere Basis Struktur, mit der sichergestellt wird, dass eine benutzerdefinierte iteratorklasse `iterator_trait`ordnungsgemäß mit s funktioniert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ Die Vorlagenstruktur wird als Basistyp für alle Iteratoren verwendet. Definiert
 
 - `reference` (ein Synonym für den Vorlagenparameter `Reference`).
 
-Beachten Sie, dass `value_type` sollte sich nicht auf eine Konstanten Typs selbst wenn `pointer` verweist auf ein Objekt vom **const** `Type` und Verweis bezieht sich auf ein Objekt des **const** `Type`.
+Beachten Sie `value_type` , dass kein konstanter Typ sein sollte, `pointer` auch wenn Punkte an `Type` einem Objekt von "Konstanten **" und "** Reference" ein Objekt von  `Type`"Konstanten" bezeichnen.
 
 ## <a name="example"></a>Beispiel
 
@@ -61,6 +61,6 @@ Unter [iterator_traits](../standard-library/iterator-traits-struct.md) finden Si
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: bee6fec3e09f7c5758112ba8b0c171a300797f9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159469"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448897"
 ---
 # <a name="gslice-class"></a>gslice-Klasse
 
@@ -25,13 +25,13 @@ Eine Hilfsprogrammklasse zu valarray, die zum Definieren von mehrdimensionaler T
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse speichert die Parameter, die ein Objekt des Typs [gslice_array](../standard-library/gslice-array-class.md) charakterisieren. Die Teilmenge von einem valarray wird indirekt erstellt, wenn ein Objekt der gslice-Klasse als ein Argument für ein Objekt der Klasse [valarray](../standard-library/valarray-class.md#op_at)**\<Typ>** erscheint. Die gespeicherten Werte, die die aus dem übergeordneten valarray ausgewählte Teilmenge angeben, enthalten:
+Die Klasse speichert die Parameter, die ein Objekt des Typs [gslice_array](../standard-library/gslice-array-class.md) charakterisieren. Die Teilmenge von einem valarray wird indirekt erstellt, wenn ein Objekt der gslice-Klasse als ein Argument für ein Objekt der Klasse [valarray](../standard-library/valarray-class.md#op_at) **\<Typ>** erscheint. Die gespeicherten Werte, die die aus dem übergeordneten valarray ausgewählte Teilmenge angeben, enthalten:
 
 - Einen Startindex.
 
-- Ein Längenvektor der Klasse `valarray<size_t>`.
+- Ein Längen Vektor der- `valarray<size_t>`Klasse.
 
-- Ein sprungvektor der Klasse `valarray<size_t>`.
+- Ein Stride-Vektor der `valarray<size_t>`-Klasse.
 
 Die beiden Vektoren müssen dieselbe Länge haben.
 
@@ -74,22 +74,22 @@ gslice(
 
 ### <a name="parameters"></a>Parameter
 
-*_StartIndex*<br/>
+*_StartIndex*\
 Der valarray-Index des ersten Elements der Teilmenge.
 
-*_LenArray*<br/>
+*_LenArray*\
 Ein Array, das die Anzahl der Elemente in jedem Segment angibt.
 
-*_IncArray*<br/>
+*_IncArray*\
 Ein Array, das die Sprünge in jedem Segment angibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Standardkonstruktor speichert 0 (null) für den Startindex und leere Vektoren für die Längen- und Sprungvektoren. Der zweite Konstruktor speichert *_StartIndex* für den Startindex, *_LenArray* für das Längenarray und *_IncArray* für das sprungarray.
+Der Standardkonstruktor speichert 0 (null) für den Startindex und leere Vektoren für die Längen- und Sprungvektoren. Der zweite Konstruktor speichert *_StartIndex* für den Start Index, *_LenArray* für das Längen Array und *_IncArray* für das STRIDE-Array.
 
 ### <a name="remarks"></a>Hinweise
 
-**gslice** definiert eine Teilmenge eines valarray, die aus mehreren Segmenten des valarray besteht, und die jeweils am gleichen angegebenen Element beginnen. Die Möglichkeit, Arrays zu verwenden, um mehrere Segmente zu definieren, ist der einzige Unterschied zwischen `gslice` und [slice:: slice](../standard-library/slice-class.md#slice). Das erste Segment verfügt über ein erstes Element mit dem Index *_StartIndex*, eine angegebene Anzahl von Elementen durch das erste Element der *_LenArray*, und ein Sprung durch das erste Element der *_IncArray* . Der erste Satz der orthogonalen Segmente hat erste Elemente, die durch das erste Segment angegeben wurden. Das zweite Element der *_LenArray* gibt die Anzahl der Elemente. Der Sprung wird durch das zweite Element der *_IncArray*. Eine dritte Dimension der Segmente würde die Elemente des zweidimensionalen Arrays als Startelemente nehmen und analog verfahren.
+**gslice** definiert eine Teilmenge eines valarray, die aus mehreren Segmenten des valarray besteht, und die jeweils am gleichen angegebenen Element beginnen. Die Möglichkeit, Arrays zu verwenden, um mehrere Segmente zu definieren, ist der einzige Unterschied zwischen `gslice` und [slice:: slice](../standard-library/slice-class.md#slice). Der erste Slice verfügt über ein erstes Element mit dem Index *_StartIndex*, eine Reihe von Elementen, die durch das erste Element von *_LenArray*angegeben werden, und einen Stride, der durch das erste Element von *_IncArray*angegeben wird. Der erste Satz der orthogonalen Segmente hat erste Elemente, die durch das erste Segment angegeben wurden. Das zweite Element von *_LenArray* gibt die Anzahl der Elemente an. Der Stride wird durch das zweite Element von *_IncArray*angegeben. Eine dritte Dimension der Segmente würde die Elemente des zweidimensionalen Arrays als Startelemente nehmen und analog verfahren.
 
 ### <a name="example"></a>Beispiel
 
@@ -349,4 +349,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

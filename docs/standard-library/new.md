@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: bc873f278461fcdc6dbb42e7c968c691e3dc7f73
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243548"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457687"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
@@ -33,7 +33,7 @@ Einige der Funktionen, die in diesem Header deklariert sind, können ersetzt wer
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|Stellt ein Objekt als Argument für die **Nothrow** Versionen von **neue** und **löschen**.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|Stellt ein Objekt bereit, das als Argument für die **nothrow** -Versionen von **New** und **Delete**verwendet werden soll.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -48,7 +48,7 @@ Einige der Funktionen, die in diesem Header deklariert sind, können ersetzt wer
 |||
 |-|-|
 |[get_new_handler](../standard-library/new-functions.md#get_new_handler)||
-|[Profis](../standard-library/new-functions.md#launder)||
+|[launter](../standard-library/new-functions.md#launder)||
 |[set_new_handler](../standard-library/new-functions.md#set_new_handler)|Installiert eine Benutzerfunktion, die aufgerufen wird, wenn "new" nicht in der Lage ist, Arbeitsspeicher zu belegen.|
 
 ### <a name="operators"></a>Operatoren
@@ -71,10 +71,10 @@ Einige der Funktionen, die in diesem Header deklariert sind, können ersetzt wer
 |||
 |-|-|
 |[bad_alloc Class (bad_alloc-Klasse)](../standard-library/bad-alloc-class.md)|Die Klasse beschreibt eine Ausnahme, die ausgelöst wurde, um anzugeben, dass eine Belegungsanforderung nicht erfolgreich war.|
-|[Bad_array_new_length-Klasse](../standard-library/bad-array-new-length.md)||
+|[bad_array_new_length-Klasse](../standard-library/bad-array-new-length.md)||
 |[nothrow_t Class (nothrow_t-Klasse)](../standard-library/nothrow-t-structure.md)|Die Klasse wird als Funktionsparameter für den new-Operator verwendet, um anzugeben, dass die Funktion zum Mitteilen eines Belegungsfehlers keine Ausnahme auslösen, sondern einen NULL-Zeiger zurückgeben soll.|
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

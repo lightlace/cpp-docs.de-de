@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_union class
 - is_union
 ms.assetid: 80eda256-40b8-4db5-9ac1-d58bb8032a3e
-ms.openlocfilehash: 511dfba92629cfbf71c805a9ea50b8e27f775c54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b4383fd96c359661d225433dbe9e7dd8b7f939f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413371"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458897"
 ---
 # <a name="isunion-class"></a>is_union-Klasse
 
@@ -27,12 +27,12 @@ struct is_union;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein union-Typ oder ein `cv-qualified` Form eines union-Typs, andernfalls er false enthält.
+Eine Instanz des typprädikats ist "true",  wenn die typität ein Union- `cv-qualified` Typ oder ein Formular eines Union-Typs ist; andernfalls "false".
 
 ## <a name="example"></a>Beispiel
 
@@ -80,5 +80,5 @@ is_union<ints> == true
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_class-Klasse](../standard-library/is-class-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_class-Klasse](../standard-library/is-class-class.md)

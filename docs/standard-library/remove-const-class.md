@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_const class
 - remove_const
 ms.assetid: feb76fb3-9228-41d6-80f6-2fbb04daec43
-ms.openlocfilehash: 04f7c6475d88f843ef381563f80559529e6b59e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0091c77d33e1fcd2be5b361680c9422210866be2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368967"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451357"
 ---
 # <a name="removeconst-class"></a>remove_const-Klasse
 
@@ -32,12 +32,12 @@ using remove_const_t = typename remove_const<T>::type;
 
 ### <a name="parameters"></a>Parameter
 
-*T*<br/>
+*BUND*\
 Der zu ändernde Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz von `remove_const<T>` enthält einen geänderten Typ, der `T1` beim *T* hat das Format `const T1`, andernfalls *T*.
+Eine Instanz von `remove_const<T>` enthält einen geänderten Typ, der ist `T1` , wenn *t* das Formular `const T1`hat, andernfalls *t*.
 
 ## <a name="example"></a>Beispiel
 
@@ -69,6 +69,6 @@ remove_const_t<const int> == int
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_const-Klasse](../standard-library/add-const-class.md)<br/>
-[remove_cv-Klasse](../standard-library/remove-cv-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_const-Klasse](../standard-library/add-const-class.md)\
+[remove_cv-Klasse](../standard-library/remove-cv-class.md)

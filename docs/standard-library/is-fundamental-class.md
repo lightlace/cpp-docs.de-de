@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: d16dfeebabd5909212425fcc27b355110e891d89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5643aa6a2d4bbfaafc86cba4251df162b59b4692
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348444"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456261"
 ---
 # <a name="isfundamental-class"></a>is_fundamental-Klasse
 
@@ -27,12 +27,12 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein grundlegender Typ ist, d. h. **"void"**, ein ganzzahliger Typ, ein Gleitkommawert lassen, oder ein `cv-qualified` -Formular von einem davon ist, andernfalls er false enthält.
+Eine Instanz des typprädikats ist "true",  wenn die typität ein grundlegender Typ ist, d. h. **void**, ein ganzzahliger Typ, `cv-qualified` ein Gleit kommatyp oder ein-Formular, andernfalls enthält er false.
 
 ## <a name="example"></a>Beispiel
 
@@ -77,5 +77,5 @@ is_fundamental<void> == true
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_compound-Klasse](../standard-library/is-compound-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_compound-Klasse](../standard-library/is-compound-class.md)

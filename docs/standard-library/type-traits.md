@@ -7,16 +7,16 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: c83949a2c74447735f6863c5f1af68b4dfe2ee4e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 703038ed435de36d60fcf97aa5100197602e7130
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243526"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455051"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
-Definiert Vorlagen, die für Konstanten zur Kompilierzeit, die Informationen zu den Eigenschaften ihrer Typargumente geben oder transformierte Typen erstellen.
+Definiert Vorlagen für Kompilierzeit Konstanten, die Informationen über die Eigenschaften ihrer Typargumente oder transformierte Typen liefern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,22 +26,22 @@ Definiert Vorlagen, die für Konstanten zur Kompilierzeit, die Informationen zu 
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klassen und Vorlagen in \<Type_traits > werden verwendet, um den Typrückschluss, Klassifizierung und Transformation zum Zeitpunkt der Kompilierung zu unterstützen. Sie dienen auch um typbezogene Fehler zu erkennen und Ihnen helfen, den generischen Code zu optimieren. Unäre typmerkmale Beschreiben einer Eigenschaft eines Typs, binäre typmerkmale beschreiben eine Beziehung zwischen Typen und transformationsmerkmale Ändern einer Eigenschaft eines Typs.
+Die Klassen und Vorlagen in \<type_traits-> werden zur Unterstützung des Typrückschlusses, der Klassifizierung und der Transformation zum Zeitpunkt der Kompilierung verwendet. Sie werden auch zum Erkennen von typbezogenen Fehlern und zur Optimierung des generischen Codes verwendet. Unäre Typmerkmale beschreiben eine Eigenschaft eines Typs, binäre Typmerkmale beschreiben eine Beziehung zwischen Typen, und Transformations Merkmale ändern eine Eigenschaft eines Typs.
 
-Die Hilfsklasse `integral_constant` und die vorlagenspezialisierungen `true_type` und `false_type` die Basisklassen für typprädikate bilden. Ein *Typprädikat* ist eine Vorlage, die ein oder mehrere Typargumente entgegennimmt. Wenn ein typprädikat *gilt*, öffentlich abgeleitet wurde, direkt oder indirekt von [True_type](../standard-library/type-traits-typedefs.md#true_type). Wenn ein typprädikat *ist Sie false*, öffentlich abgeleitet wurde, direkt oder indirekt von [False_type](../standard-library/type-traits-typedefs.md#false_type).
+Die Hilfsklasse `integral_constant` und deren Vorlagen Spezialisierungs `true_type` - `false_type` und-bilden die Basisklassen für typprädikate. Ein *Typprädikat* ist eine Vorlage, die ein oder mehrere Typargumente entgegennimmt. Wenn ein typprädikat *true*ist, wird es öffentlich, direkt oder indirekt von [true_type](../standard-library/type-traits-typedefs.md#true_type)abgeleitet. Wenn ein typprädikat *false enthält*, wird es direkt oder indirekt von [false_type](../standard-library/type-traits-typedefs.md#false_type)öffentlich abgeleitet.
 
 Ein *Typmodifizierer* oder *Transformationsmerkmal* ist eine Vorlage, die ein oder mehrere Vorlagenargumente entgegennimmt und über einen Member `type` verfügt, der ein Synonym für den geänderten Typ ist.
 
 ### <a name="alias-templates"></a>Alias-Vorlagen
 
-Um die typmerkmalausdrücke zu vereinfachen [aliasvorlagen](../cpp/aliases-and-typedefs-cpp.md) für `typename some_trait<T>::type` zur Verfügung, wobei *Some_trait* der vorlagenklassenname ist. Zum Beispiel verfügt [add_const](../standard-library/add-const-class.md) über eine Aliasvorlage für seinen Typ `add_const_t`, definiert als:
+Zum Vereinfachen von Ausdrücken von typmerkmalen werden [Alias Vorlagen](../cpp/aliases-and-typedefs-cpp.md) für `typename some_trait<T>::type` bereitgestellt, wobei *some_trait* der Vorlagen Klassenname ist. Zum Beispiel verfügt [add_const](../standard-library/add-const-class.md) über eine Aliasvorlage für seinen Typ `add_const_t`, definiert als:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Hierbei handelt es sich um die angegebenen Aliase für die `type` Mitglieder:
+Dies sind die bereitgestellten Aliase für `type` die Member:
 
 ||||
 |-|-|-|
@@ -68,7 +68,7 @@ Primäre Typkategorien
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|Testet, ob der Typ ist **"void"** .|
+|[is_void](../standard-library/is-void-class.md)|Testet, ob der Typ " **void**" ist.|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Testet, ob der Typ `std::nullptr_t` ist.|
 |[is_integral](../standard-library/is-integral-class.md)|Testet, ob der Typ eine Ganzzahl ist.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Testet, ob der Typ ein Gleitkomma ist.|
@@ -89,7 +89,7 @@ Zusammengesetzte Typkategorien
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Testet, ob der Typ ein Verweis ist.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Testet, ob der Typ arithmetisch ist.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|Testet, ob der Typ ist **"void"** oder arithmetische.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Testet, ob der Typ **ungültig** oder arithmetisch ist.|
 |[is_object](../standard-library/is-object-class.md)|Testet, ob der Typ ein Objekttyp ist.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Testet, ob der Typ skalar ist.|
 |[is_compound](../standard-library/is-compound-class.md)|Testet, ob der Typ nicht skalar ist.|
@@ -99,8 +99,8 @@ Typeigenschaften
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|Testet, ob der Typ ist **const**.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Testet, ob der Typ ist **flüchtige**.|
+|[is_const](../standard-library/is-const-class.md)|Testet, ob der Typ **konstant**ist.|
+|[is_volatile](../standard-library/is-volatile-class.md)|Testet, ob der Typ **flüchtig**ist.|
 |[is_trivial](../standard-library/is-trivial-class.md)|Testet, ob der Typ trivial ist.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Testet, ob der Typ trivial kopierbar ist.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Testet, ob der Typ ein Standardlayouttyp ist.|
@@ -143,10 +143,10 @@ Typeigenschaften
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Testet, ob der Typ zerstörbar ist und der Destruktor keine Ausnahmefehler auslöst.|
 |`has_virtual_destructor`|Testet, ob der Typ einen virtuellen Destruktor aufweist.|
 |`has_unique_object_representations`||
-| [is_invocable](is-invocable-classes.md) | Testet, ob ein aufrufbaren Typs mit den angegebenen Argumenttypen aufgerufen werden kann.<br/> In C ++ 17-hinzugefügt. |
-| [is_invocable_r](is-invocable-classes.md) | Testet, ob ein aufrufbaren Typs mit den angegebenen Argumenttypen und das Ergebnis aufgerufen werden kann in den angegebenen Typ konvertiert werden kann.<br/> In C ++ 17-hinzugefügt. |
-| [is_nothrow_invocable](is-invocable-classes.md) | Testet, ob ein aufrufbaren Typs aufgerufen werden kann, mit dem angegebenen Argument Typen und ist keine Ausnahmen auslösen.<br/> In C ++ 17-hinzugefügt. |
-| [is_nothrow_invocable_r](is-invocable-classes.md) | Testet, ob ein aufrufbaren Typs mit den angegebenen Argumenttypen aufgerufen werden kann, und ist bekannt, nicht zum Auslösen von Ausnahmen, und das Ergebnis in den angegebenen Typ konvertiert wird.<br/> In C ++ 17-hinzugefügt. |
+| [is_invocable](is-invocable-classes.md) | Testet, ob ein Aufruf barer Typ mit den angegebenen Argument Typen aufgerufen werden kann.<br/> Hinzugefügt in c++ 17. |
+| [is_invocable_r](is-invocable-classes.md) | Testet, ob ein Aufruf barer Typ mit den angegebenen Argument Typen aufgerufen werden kann, und das Ergebnis kann in den angegebenen Typ konvertiert werden.<br/> Hinzugefügt in c++ 17. |
+| [is_nothrow_invocable](is-invocable-classes.md) | Testet, ob ein Aufruf barer Typ mit den angegebenen Argument Typen aufgerufen werden kann, und es ist bekannt, dass keine Ausnahmen ausgelöst werden.<br/> Hinzugefügt in c++ 17. |
+| [is_nothrow_invocable_r](is-invocable-classes.md) | Testet, ob ein Aufruf barer Typ mit den angegebenen Argument Typen aufgerufen werden kann und bekanntermaßen keine Ausnahmen auslöst, und dass das Ergebnis in den angegebenen Typ konvertiert werden kann.<br/> Hinzugefügt in c++ 17. |
 
 Typeigenschaftsabfragen
 
@@ -168,9 +168,9 @@ Typbeziehungen
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Erzeugt eine **const** Typ vom Typ.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Erzeugt eine **flüchtige** Typ vom Typ.|
-|[add_cv](../standard-library/add-cv-class.md)|Erzeugt eine **const Volatile** Typ vom Typ.|
+|[add_const](../standard-library/add-const-class.md)|Erzeugt einen **Konstanten** Typ aus dem Typ.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Erzeugt einen **flüchtigen** Typ aus dem Typ.|
+|[add_cv](../standard-library/add-cv-class.md)|Erzeugt einen **Konstanten flüchtigen** Typ aus dem Typ.|
 |[remove_const](../standard-library/remove-const-class.md)|Wandelt den Typ in einen nicht konstanten Typ um.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Wandelt den Typ in einen nicht flüchtigen Typ um.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Wandelt den Typ in einen nicht konstanten nicht flüchtigen Typ um.|
@@ -214,18 +214,18 @@ Weitere Transformationen
 |[conditional](../standard-library/conditional-class.md)|Wenn die Bedingung TRUE ist, wird der erste angegebene Typ erzeugt, andernfalls der zweite angegebene Typ.|
 |[decay](../standard-library/decay-class.md)|Erzeugt den Typ bei der Übergabe durch einen Wert. Erstellt einen non-reference-, non-const- oder non-volatile-Typ oder erstellt einen Zeiger auf den Typ.|
 |[enable_if](../standard-library/enable-if-class.md)|Wenn die Bedingung TRUE ist, wird der angegebene Typ erzeugt, andernfalls kein Typ.|
-|[invoke_result](invoke-result-class.md)|Bestimmt den Rückgabetyp des aufrufbaren Typs, der die angegebenen Argumenttypen akzeptiert. <br/>In C ++ 17-hinzugefügt. |
-|[result_of](../standard-library/result-of-class.md)|Bestimmt den Rückgabetyp des aufrufbaren Typs, der die angegebenen Argumenttypen akzeptiert. <br/>Hinzugefügt in C ++ 14, C ++ 17 veraltet. |
+|[invoke_result](invoke-result-class.md)|Bestimmt den Rückgabetyp des aufrufbaren Typs, der die angegebenen Argumenttypen akzeptiert. <br/>Hinzugefügt in c++ 17. |
+|[result_of](../standard-library/result-of-class.md)|Bestimmt den Rückgabetyp des aufrufbaren Typs, der die angegebenen Argumenttypen akzeptiert. <br/>In c++ 14 hinzugefügt, veraltet in c++ 17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Erzeugt für einen Enumerationstyp den zugrunde liegenden ganzzahligen Typ.|
 
-Logischer Operator "traits"
+Logische Operator Merkmale
 
 |||
 |-|-|
 |[Verbindung](../standard-library/conjunction-class.md)||
 |[Disjunktion](../standard-library/disjunction-class.md)||
-|[Negation](../standard-library/negation-class.md)||
+|[Verleugnung](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<functional>](../standard-library/functional.md)<br/>
+[\<functional>](../standard-library/functional.md)

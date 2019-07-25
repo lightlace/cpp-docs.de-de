@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - messages_base class
 ms.assetid: 9aad38c6-4c13-445d-b096-364bd0836efb
-ms.openlocfilehash: 750c9f36ce7f96a065e0e29111ea379a48595328
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79b6cb5f0b0c219e959f53fdc667f4c8af273cef
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167763"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451852"
 ---
 # <a name="messagesbase-class"></a>messages_base-Klasse
 
-Die Basisklasse beschreibt einen **Int** -Typ für den Katalog von Meldungen.
+Die Basisklasse beschreibt einen **int** -Typ für den Katalog von Meldungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,7 +28,7 @@ struct messages_base : locale::facet {
 
 ## <a name="remarks"></a>Hinweise
 
-Der Typkatalog ist ein Synonym für den Typ **Int** , beschreibt die möglichen Rückgabewerte von Messages:: [Do_open](../standard-library/messages-class.md#do_open).
+Der typkatalog ist ein Synonym für den Typ " **int** ", der die möglichen Rückgabewerte von "Messages:: [Do_open](../standard-library/messages-class.md#do_open)" beschreibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,4 +38,4 @@ Der Typkatalog ist ein Synonym für den Typ **Int** , beschreibt die möglichen 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

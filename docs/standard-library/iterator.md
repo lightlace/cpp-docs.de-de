@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: f859c2e11d8a800c44b93e69e4b862300c6d3a13
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5faf55eebecf473f45074f862ef64929df6f4374
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245769"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452973"
 ---
 # <a name="ltiteratorgt"></a>&lt;Iterator&gt;
 
@@ -40,7 +40,7 @@ Iteratoren sind eine Verallgemeinerung von Zeigern. Die Anforderungen werden so 
 
 Iteratoren mit höheren Anforderungen und besserem Zugriff auf Elemente können anstelle von Iteratoren mit geringeren Anforderungen verwendet werden. Wird beispielsweise ein Forward-Iterator aufgerufen, kann stattdessen auch ein Random-Access-Iterator verwendet werden.
 
-Visual Studio besitzt zusätzliche Erweiterungen für C++-Standardbibliotheksiteratoren, um eine Vielzahl von Debugmodussituationen für aktivierte und nicht aktivierte Iteratoren zu unterstützen. Weitere Informationen finden Sie unter [sichere Bibliotheken: C++Standard-Bibliothek](../standard-library/safe-libraries-cpp-standard-library.md).
+Visual Studio besitzt zusätzliche Erweiterungen für C++-Standardbibliotheksiteratoren, um eine Vielzahl von Debugmodussituationen für aktivierte und nicht aktivierte Iteratoren zu unterstützen. Weitere Informationen finden [Sie unter Sichere Bibliotheken: C++Standard Bibliothek](../standard-library/safe-libraries-cpp-standard-library.md).
 
 ## <a name="members"></a>Member
 
@@ -87,27 +87,27 @@ Visual Studio besitzt zusätzliche Erweiterungen für C++-Standardbibliotheksite
 
 |||
 |-|-|
-|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Die Vorlagenklasse beschreibt einen Output-Iterator. Er fügt Elemente an, in einen Container des Typs `Container`, der Zugriff erfolgt über das geschützte `pointer` -Objekt namens Container.|
-|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp für eine eine `iterator_category` -Funktion, die einen bidirektionalen Iterator darstellt.|
+|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Die Vorlagenklasse beschreibt einen Output-Iterator. Elemente werden in einen Container des Typs `Container`eingefügt, auf den über das geschützte `pointer` Objekt zugegriffen wird, das als Container bezeichnet wird.|
+|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp `iterator_category` für eine Funktion bereitstellt, die einen bidirektionalen Iterator darstellt.|
 |[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Eine Klasse, die auf ein Array mit einem Iterator vom Typ "Random-Access, Checked" zugreift. **Hinweis**:  Bei dieser Klasse handelt es sich um eine Microsoft-Erweiterung der C++-Standardbibliothek. Der Code, der mit dieser Funktion implementiert wird, ist nicht auf C++-Standardbuildumgebungen übertragbar, die die Microsoft-Erweiterung nicht unterstützen.|
-|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp für eine eine `iterator_category` -Funktion, die einen forward-Iterator darstellt.|
-|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|Die Vorlagenklasse beschreibt einen Output-Iterator. Er fügt Elemente an, in einen Container des Typs `Container`, der Zugriff erfolgt über das geschützte `pointer` -Objekt namens Container.|
-|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp für eine eine `iterator_category` -Funktion, die einen eingabeiterator darstellt.|
-|[insert_iterator](../standard-library/insert-iterator-class.md)|Die Vorlagenklasse beschreibt einen Output-Iterator. Er fügt Elemente an, in einen Container des Typs `Container`, der Zugriff erfolgt über das geschützte `pointer` -Objekt namens Container. Außerdem speichert er die geschützte `iterator` -Objekt der Klasse `Container::iterator`namens `iter`.|
-|[istream_iterator](../standard-library/istream-iterator-class.md)|Die Vorlagenklasse beschreibt einen Input-Iterator. Anschließend extrahiert Sie Objekte der Klasse `Ty` aus einem Eingabedatenstrom, der Zugriff über ein Objekt gespeichert erfolgt, ein Zeiger auf `basic_istream` \< **Elem**, **Tr**>.|
-|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|Die Vorlagenklasse beschreibt einen Input-Iterator. Es fügt die Elemente der Klasse `Elem` in einen Datenstrom-Ausgabepuffer, der Zugriff darauf erfolgt durch ein Objekt es speichert, des Typs `pointer` zu `basic_streambuf` \< **Elem**, **Tr** >.|
+|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp `iterator_category` für eine Funktion bereitstellt, die einen forward-Iterator darstellt.|
+|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|Die Vorlagenklasse beschreibt einen Output-Iterator. Elemente werden in einen Container des Typs `Container`eingefügt, auf den über das geschützte `pointer` Objekt zugegriffen wird, das als Container bezeichnet wird.|
+|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp `iterator_category` für eine Funktion bereitstellt, die einen eingabeiterator darstellt.|
+|[insert_iterator](../standard-library/insert-iterator-class.md)|Die Vorlagenklasse beschreibt einen Output-Iterator. Elemente werden in einen Container des Typs `Container`eingefügt, auf den über das geschützte `pointer` Objekt zugegriffen wird, das als Container bezeichnet wird. Außerdem wird das geschützte `iterator` Objekt der Klasse `Container::iterator`mit dem Namen `iter`gespeichert.|
+|[istream_iterator](../standard-library/istream-iterator-class.md)|Die Vorlagenklasse beschreibt einen Input-Iterator. Sie extrahiert Objekte der Klasse `Ty` aus einem Eingabestream, auf den Sie über ein gespeicheres Objekt zugreift `basic_istream`, vom Typ Zeiger \<auf **Elem**, **TR**>.|
+|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|Die Vorlagenklasse beschreibt einen Input-Iterator. Sie fügt die Elemente der `Elem` Klasse in einen ausgabestreampuffer ein, auf den Sie über ein Objekt, `pointer` das es speichert, vom Typ `basic_streambuf`auf \< **Elem**, **TR**> zugreift.|
 |[Iterator](../standard-library/iterator-struct.md)|Die Vorlagenklasse wird als Basistyp für alle Iteratoren verwendet.|
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|Eine Hilfsklasse für Vorlagen, die wichtige Typen bereitstellt, die mit verschiedenen Iterator-Typen verknüpft sind, damit die Verweise auf dieselbe Weise funktionieren.|
 |[move_iterator](../standard-library/move-iterator-class.md)|Ein `move_iterator`-Objekt speichert einen Random-Access-Iterator des Typs `RandomIterator`. Es verhält sich wie ein Rand-Access-Iterator, außer bei einer Dereferenzierung. Das Ergebnis von `operator*` wird implizit umgewandelt in `value_type&&:`, um `rvalue reference` zu erhalten.|
-|[ostream_iterator](../standard-library/ostream-iterator-class.md)|Die Vorlagenklasse beschreibt einen Output-Iterator. Er fügt Objekte der Klasse `Type` in einen Ausgabestream, der Zugriff darauf erfolgt durch ein Objekt es speichert, des Typs `pointer` zu `basic_ostream` \< **Elem**, **Tr**>.|
-|[ostreambuf_iterator Class](../standard-library/ostreambuf-iterator-class.md)|Die Vorlagenklasse beschreibt einen Output-Iterator. Es fügt die Elemente der Klasse `Elem` in einem Datenstrom-Ausgabepuffer, der Zugriff über ein Objekt gespeichert erfolgt, ein Zeiger auf `basic_streambuf` \< **Elem**, **Tr**>.|
-|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp für eine `iterator_category` -Funktion, die einen Ausgabeiterator darstellt.|
-|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp für eine `iterator_category` -Funktion, die einen random-Access-Iterator darstellt.|
+|[ostream_iterator](../standard-library/ostream-iterator-class.md)|Die Vorlagenklasse beschreibt einen Output-Iterator. Sie fügt Objekte der Klasse `Type` in einen Ausgabestream ein, auf den Sie über ein Objekt, das `pointer` Sie `basic_ostream`speichert, vom Typ auf \< **Elem**, **TR**-> zugreift.|
+|[ostreambuf_iterator Class](../standard-library/ostreambuf-iterator-class.md)|Die Vorlagenklasse beschreibt einen Output-Iterator. Sie fügt Elemente der Klasse `Elem` in einen ausgabestreampuffer ein, auf den Sie über ein gespeicheres Objekt zugreift, vom Typ Zeiger auf `basic_streambuf` \< **Elem**, **TR**>.|
+|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp für `iterator_category` eine Funktion bereitstellt, die einen Ausgabeiterator darstellt|
+|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Eine Klasse, die einen Rückgabetyp für `iterator_category` eine Funktion bereitstellt, die einen Random-Access-Iterator darstellt.|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das sich wie ein Random-Access-Iterator verhält, nur in umgekehrter Reihenfolge.|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Eine Klasse, die auf ein Array mit einem Iterator vom Typ "Random-Access, Unchecked" zugreift. **Hinweis**:  Bei dieser Klasse handelt es sich um eine Microsoft-Erweiterung der C++-Standardbibliothek. Der Code, der mit dieser Funktion implementiert wird, ist nicht auf C++-Standardbuildumgebungen übertragbar, die die Microsoft-Erweiterung nicht unterstützen.|
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

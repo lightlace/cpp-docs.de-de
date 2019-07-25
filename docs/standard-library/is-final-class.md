@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_final
 ms.assetid: 9dbad82f-6685-4909-94e8-98e4a93994b9
-ms.openlocfilehash: f605b160f6ed71aaafcc7c391e17180e4b243444
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 14efbeb33193cc674c6e766b880e89d9b76d140a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346441"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452651"
 ---
 # <a name="isfinal-class"></a>is_final-Klasse
 
@@ -26,12 +26,12 @@ struct is_final;
 
 ### <a name="parameters"></a>Parameter
 
-*T*<br/>
+*BUND*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *T* ist ein Klassentyp gekennzeichnet `final`, andernfalls ist Sie false. Wenn *T* ist ein Klassentyp, es muss ein vollständiger Typ sein.
+Eine Instanz des typprädikats ist true, wenn der Typ *T* ein als markierter `final`Klassentyp ist; andernfalls false. Wenn *T* ein Klassentyp ist, muss es sich um einen kompletten Typ handeln.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,5 +41,5 @@ Eine Instanz des typprädikats ist true, wenn der Typ *T* ist ein Klassentyp gek
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[final-Bezeichner](../cpp/final-specifier.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[final-Bezeichner](../cpp/final-specifier.md)

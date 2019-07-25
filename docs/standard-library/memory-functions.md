@@ -74,16 +74,16 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 6199c97e19c18075007d5c682c2199a2e5886b29
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 14818e93e79a0be9960ba67088f81d51d402b717
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243836"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448493"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt;-Funktionen
 
-## <a name="addressof"></a> AddressOf
+## <a name="addressof"></a>AddressOf
 
 Ruft die echte Adresse eines Objekts ab.
 
@@ -94,16 +94,16 @@ template <class T>
 
 ### <a name="parameters"></a>Parameter
 
-*val*\
+*Ster*\
 Das Objekt oder die Funktion, für das bzw. die die echte Adresse abgerufen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die tatsächliche Adresse des Objekts oder der Funktion verwiesen wird, indem *Val*, selbst wenn ein überladenes `operator&()` vorhanden ist.
+Die tatsächliche Adresse des Objekts oder der Funktion, auf die von *Val*verwiesen wird, `operator&()` selbst wenn ein überladener vorhanden ist.
 
 ### <a name="remarks"></a>Hinweise
 
-## <a name="align"></a> Ausrichten
+## <a name="align"></a>abzustimmen
 
 Passt Speicher in der vorgegebenen Größe – ausgerichtet mithilfe der festgelegten Ausrichtungsspezifikation – in die erste mögliche Adresse des angegebenen Speichers ein.
 
@@ -118,27 +118,27 @@ void* align(
 
 ### <a name="parameters"></a>Parameter
 
-*Ausrichtung*\
+*Richt*\
 Die auszuprobierende Ausrichtungsgrenze.
 
 *Größe*\
 Die Größe in Bytes für den ausgerichteten Speicher.
 
 *PTR*\
-Die Startadresse des verfügbaren zusammenhängenden Speicherpools, der verwendet werden soll. Dieser Parameter ist auch ein Output-Parameter, und es wird festgelegt, um die neue Startadresse enthalten, wenn die Ausrichtung erfolgreich ist. Wenn `align()` nicht erfolgreich ist, wird dieser Parameter nicht geändert.
+Die Startadresse des verfügbaren zusammenhängenden Speicherpools, der verwendet werden soll. Dieser Parameter ist auch ein Output-Parameter und wird so festgelegt, dass die neue Startadresse enthalten ist, wenn die Ausrichtung erfolgreich ist. Wenn `align()` nicht erfolgreich ist, wird dieser Parameter nicht geändert.
 
-*Speicherplatz*\
+*BRaum*\
 Der gesamte verfügbare Speicherplatz, den `align()` beim Erstellen des ausgerichteten Speichers verwendet. Dieser Parameter ist auch ein Ausgabeparameter und enthält den angepassten Speicherplatz, der im Speicherpuffer verblieben ist, nachdem der ausgerichtete Speicher und der zugeordnete Mehraufwand subtrahiert wurden.
 
 Wenn `align()` nicht erfolgreich ist, wird dieser Parameter nicht geändert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein null-Zeiger, wenn der angeforderte ausgerichtete Puffer nicht in den verfügbaren Speicherplatz passt; andernfalls der neue Wert des *Ptr*.
+Ein NULL-Zeiger, wenn der angeforderte ausgerichtete Puffer nicht in den verfügbaren Platz passt. andernfalls der neue Wert von *ptr*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geänderte *Ptr* und *Speicherplatz* Parameter ermöglichen es Ihnen, rufen Sie `align()` wiederholt auf dem gleichen Puffer, möglicherweise mit verschiedenen Werten für *Ausrichtung* und  *Größe*. Im folgenden Codeausschnitt wird eine Verwendung von `align()` veranschaulicht:
+Mit den geänderten *ptr* -und *Space* -Parametern `align()` können Sie wiederholt im gleichen Puffer aufzurufen, möglicherweise mit verschiedenen Werten für *Ausrichtung* und *Größe*. Im folgenden Codeausschnitt wird eine Verwendung von `align()` veranschaulicht:
 
 ```cpp
 #include <type_traits> // std::alignment_of()
@@ -163,7 +163,7 @@ while (std::align(alignment, sizeof(MyObj), ptr, space)) {
 // possible to allow more aligned storage in this buffer.
 ```
 
-## <a name="allocate_shared"></a> allocate_shared
+## <a name="allocate_shared"></a>allocate_shared
 
 Erstellt einen `shared_ptr` auf Objekte, die einem angegebenen Typ mit einer angegebenen Zuweisung zugeordnet und dafür erstellt werden. Gibt `shared_ptr` zurück.
 
@@ -174,94 +174,94 @@ template <class Type, class Allocator, class... Types>
 
 ### <a name="parameters"></a>Parameter
 
-*Alloc*\
+*Zuordnungseinheits*\
 Die Zuweisung wird zur Erstellung von Objekten verwendet.
 
-*args*\
+*Args*\
 Keine oder mehrere Argumente, die zu Objekten werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion erstellt das Objekt `shared_ptr<Type>`, ein Zeiger auf `Type(Args...)` wie zugewiesen und erstellt vom *Alloc*.
+Die-Funktion erstellt das `shared_ptr<Type>`Objekt, ein Zeiger `Type(Args...)` auf, *wie von der*Zuweisung zugeordnet und erstellt.
 
-## <a name="atomic_compare_exchange_strong"></a> atomic_compare_exchange_strong
+## <a name="atomic_compare_exchange_strong"></a>atomic_compare_exchange_strong
 
 ```cpp
 template<class T>
     bool atomic_compare_exchange_strong(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w);
 ```
 
-## <a name="atomic_compare_exchange_weak"></a> atomic_compare_exchange_weak
+## <a name="atomic_compare_exchange_weak"></a>atomic_compare_exchange_weak
 
 ```cpp
 template<class T>
     bool atomic_compare_exchange_weak(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w);
 ```
 
-## <a name="atomic_compare_exchange_strong_explicit"></a> atomic_compare_exchange_strong_explicit
+## <a name="atomic_compare_exchange_strong_explicit"></a>atomic_compare_exchange_strong_explicit
 
 ```cpp
 template<class T>
     bool atomic_compare_exchange_strong_explicit(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w, memory_order success, memory_order failure);
 ```
 
-## <a name="atomic_compare_exchange_weak_explicit"></a> atomic_compare_exchange_weak_explicit
+## <a name="atomic_compare_exchange_weak_explicit"></a>atomic_compare_exchange_weak_explicit
 
 ```cpp
 template<class T>
     bool atomic_compare_exchange_weak_explicit(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w, memory_order success, memory_order failure);
 ```
 
-## <a name="atomic_exchange"></a> atomic_exchange
+## <a name="atomic_exchange"></a>atomic_exchange
 
 ```cpp
 template<class T>
     shared_ptr<T> atomic_exchange(shared_ptr<T>* p, shared_ptr<T> r);
 ```
 
-## <a name="atomic_exchange_explicit"></a> atomic_exchange_explicit
+## <a name="atomic_exchange_explicit"></a>atomic_exchange_explicit
 
 ```cpp
 template<class T>
     shared_ptr<T> atomic_exchange_explicit(shared_ptr<T>* p, shared_ptr<T> r, memory_order mo);
 ```
 
-## <a name="atomic_is_lock_free"></a> atomic_is_lock_free
+## <a name="atomic_is_lock_free"></a>atomic_is_lock_free
 
 ```cpp
 template<class T>
     bool atomic_is_lock_free(const shared_ptr<T>* p);
 ```
 
-## <a name="atomic_load"></a> atomic_load
+## <a name="atomic_load"></a>atomic_load
 
 ```cpp
 template<class T>
     shared_ptr<T> atomic_load(const shared_ptr<T>* p);
 ```
 
-## <a name="atomic_load_explicit"></a> atomic_load_explicit
+## <a name="atomic_load_explicit"></a>atomic_load_explicit
 
 ```cpp
 template<class T>
     shared_ptr<T> atomic_load_explicit(const shared_ptr<T>* p, memory_order mo);
 ```
 
-## <a name="atomic_store"></a> atomic_store
+## <a name="atomic_store"></a>atomic_store
 
 ```cpp
 template<class T>
     void atomic_store(shared_ptr<T>* p, shared_ptr<T> r);
 ```
 
-## <a name="atomic_store_explicit"></a> atomic_store_explicit
+## <a name="atomic_store_explicit"></a>atomic_store_explicit
 
 ```cpp
 template<class T>
     void atomic_store_explicit(shared_ptr<T>* p, shared_ptr<T> r, memory_order mo);
 ```
 
-## <a name="const_pointer_cast"></a> const_pointer_cast
+## <a name="const_pointer_cast"></a>const_pointer_cast
 
 Konstantenumwandlung in shared_ptr (gemeinsamer Zeiger).
 
@@ -272,18 +272,18 @@ template <class Ty, class Other>
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*\
+*Genossenschaft*\
 Der Typ, der vom zurückgegebenen gemeinsamen Zeiger (shared pointer) gesteuert wird.
 
-*Andere*\
+*Außer*\
 Der Typ, der vom Argument für den gemeinsamen Zeiger gesteuert wird.
 
-*Andere*\
+*Außer*\
 Das Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion gibt ein leeres Shared_ptr-Objekt zurück, wenn `const_cast<Ty*>(sp.get())` einen null-Zeiger zurückgibt; andernfalls wird eine [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md)\<Ty >-Objekt, das die Ressource besitzt, die im Besitz ist `sp`. Der Ausdruck `const_cast<Ty*>(sp.get())` muss gültig sein.
+Die Vorlagen Funktion gibt ein leeres shared_ptr-Objekt `const_cast<Ty*>(sp.get())` zurück, wenn einen NULL-Zeiger zurückgibt; andernfalls gibt Sie ein [shared_ptr Class](../standard-library/shared-ptr-class.md)\<Ty-> Objekt zurück, `sp`das die Ressource besitzt, die im Besitz von ist. Der Ausdruck `const_cast<Ty*>(sp.get())` muss gültig sein.
 
 ### <a name="example"></a>Beispiel
 
@@ -310,7 +310,7 @@ int main()
 sp1 == 3
 ```
 
-## <a name="declare_no_pointers"></a> declare_no_pointers
+## <a name="declare_no_pointers"></a>declare_no_pointers
 
 Einem Garbage Collector wird mitgeteilt, dass die Zeichen im Speicherblock, der von einem Basisadressenzeiger und -blockgröße definiert wurde, keine nachweisbaren Zeiger enthalten.
 
@@ -323,14 +323,14 @@ void declare_no_pointers(char* ptr, size_t _Size);
 *PTR*\
 Adresse des ersten Zeichens, das keinen nachweisbaren Zeiger mehr enthält.
 
-*_Größe*\
-Größe des Blocks, die bei beginnt *Ptr* , die keine nachweisbaren Zeiger enthält.
+*_Size*\
+Blockgröße, die bei *ptr* beginnt und keine nachvollziehbaren Zeiger enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion informiert jeden Garbage Collector, der den Bereich der Adressen `[ ptr, ptr + _Size)` nachweisbaren Zeiger ohne mehr enthält. (Alle Zeiger auf zugewiesenen Speicher müssen nicht dereferenziert werden, es sei denn, erreichbar gemacht.)
+Die-Funktion informiert alle Garbage Collector, dass der Adress `[ ptr, ptr + _Size)` Bereich keine nachvollziehbaren Zeiger mehr enthält. (Alle Zeiger auf zugeordneten Speicher dürfen nicht dereferenziert werden, es sei denn, Sie wurden erreichbar gemacht.)
 
-## <a name="declare_reachable"></a> declare_reachable
+## <a name="declare_reachable"></a>declare_reachable
 
 Der Garbage Collection wird mitgeteilt, dass die angegebene Adresse von zugewiesenem Speicher erreichbar ist.
 
@@ -345,11 +345,11 @@ Ein Zeiger auf einen erreichbaren zugewiesenen gültigen Speicherbereich.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn *Ptr* ist nicht null ist, die Funktion informiert jeden Garbage Collector, *Ptr* wird zukünftig erreichbar ist (zeigt auf gültigen zugewiesenen Speicher).
+Wenn *ptr* nicht NULL ist, informiert die Funktion jeden Garbage Collector, dass *ptr* im Anschluss erreichbar ist (verweist auf gültigen zugeordneten Speicher).
 
-## <a name="default_delete"></a> default_delete
+## <a name="default_delete"></a>default_delete
 
-Löscht Objekte, die mit zugeordneten **new-Operator**. Kann mit `unique_ptr` verwendet werden.
+Löscht mit **Operator new**zugeordnete-Objekte. Kann mit `unique_ptr` verwendet werden.
 
 ```cpp
 struct default_delete {
@@ -365,14 +365,14 @@ struct default_delete {
 *PTR*\
 Zeiger auf das zu löschende Objekt.
 
-*Andere*\
+*Außer*\
 Die anderen Typen von Elementen im Array, die gelöscht werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt ein `deleter` , die der skalare Objekte mit zugeordneten gelöscht **new-Operator**geeignet für die Verwendung mit der Vorlagenklasse `unique_ptr`. Außerdem ist die explizite Spezialisierung `default_delete<Type[]>` vorhanden.
+Die Vorlagen Klasse beschreibt einen `deleter` , mit dem skalare Objekte gelöscht werden, die mit dem **Operator new**zugeordnet sind `unique_ptr`und für die Verwendung mit der Vorlagen Klasse geeignet Außerdem ist die explizite Spezialisierung `default_delete<Type[]>` vorhanden.
 
-## <a name="destroy_at"></a> destroy_at
+## <a name="destroy_at"></a>destroy_at
 
 ```cpp
 template <class T>
@@ -381,7 +381,7 @@ template <class T>
 
 Wie in `location->~T()`.
 
-## <a name="destroy"></a> Zerstören
+## <a name="destroy"></a>zerstören
 
 ```cpp
 template <class ForwardIterator>
@@ -390,7 +390,7 @@ template <class ForwardIterator>
 
 Wie in `for (; first!=last; ++first) destroy_at(addressof(*first)); `.
 
-## <a name="destroy_n"></a> destroy_n
+## <a name="destroy_n"></a>destroy_n
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -399,7 +399,7 @@ template <class ForwardIterator, class Size>
 
 Wie in `for (; n > 0; (void)++first, --n) destroy_at(addressof(*first)); return first;`.
 
-## <a name="dynamic_pointer_cast"></a> dynamic_pointer_cast
+## <a name="dynamic_pointer_cast"></a>dynamic_pointer_cast
 
 Dynamische Umwandlung in shared_ptr (gemeinsamer Zeiger).
 
@@ -410,18 +410,18 @@ template <class Ty, class Other>
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*\
+*Genossenschaft*\
 Der Typ, der vom zurückgegebenen gemeinsamen Zeiger (shared pointer) gesteuert wird.
 
-*Andere*\
+*Außer*\
 Der Typ, der vom Argument für den gemeinsamen Zeiger gesteuert wird.
 
-*SP*\
+*El*\
 Das Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion gibt ein leeres Shared_ptr-Objekt zurück, wenn `dynamic_cast<Ty*>(sp.get())` einen null-Zeiger zurückgibt; andernfalls wird eine [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md)\<Ty >-Objekt, das die Ressource besitzt, die im Besitz ist *sp* . Der Ausdruck `dynamic_cast<Ty*>(sp.get())` muss gültig sein.
+Die Vorlagen Funktion gibt ein leeres shared_ptr-Objekt `dynamic_cast<Ty*>(sp.get())` zurück, wenn einen NULL-Zeiger zurückgibt; andernfalls gibt Sie ein [shared_ptr Class](../standard-library/shared-ptr-class.md)\<Ty-> Objekt zurück, das die Ressource besitzt, die im Besitz von *SP*ist. Der Ausdruck `dynamic_cast<Ty*>(sp.get())` muss gültig sein.
 
 ### <a name="example"></a>Beispiel
 
@@ -459,7 +459,7 @@ int main()
 sp1->val == 3
 ```
 
-## <a name="get_deleter"></a> get_deleter
+## <a name="get_deleter"></a>get_deleter
 
 Einen Deleter aus shared_ptr abrufen.
 
@@ -473,15 +473,15 @@ template <class D, class Ty>
 *D*\
 Der Deleter-Typ.
 
-*Ty*\
+*Genossenschaft*\
 Der vom freigegebenen Zeiger gesteuerte Typ.
 
-*SP*\
+*El*\
 Der freigegebene Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion gibt einen Zeiger auf den Deleter des Typs *D* gehört, die die [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md) Objekt *sp*. Wenn *sp* keinen Deleter besitzt oder wenn die Deleter nicht vom Typ *D* gibt die Funktion 0 zurück.
+Die Vorlagen Funktion gibt einen Zeiger auf den Deleter des Typs *D* zurück, der zum [shared_ptr-Klassen](../standard-library/shared-ptr-class.md) Objekt *SP*gehört. Wenn *SP* keinen Deleter hat oder der Deleter nicht vom Typ *D* ist, gibt die Funktion 0 zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -527,7 +527,7 @@ get_deleter(sp0) != 0 == false
 get_deleter(sp1) != 0 == true
 ```
 
-## <a name="get_pointer_safety"></a> get_pointer_safety
+## <a name="get_pointer_safety"></a>get_pointer_safety
 
 Gibt den Typ der Zeigersicherheit zurück, der von einem Garbage Collector angenommen wird.
 
@@ -537,9 +537,9 @@ pointer_safety get_pointer_safety();
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion gibt den Typ der zeigersicherheit davon ausgegangen, dass von einem automatischen Garbage Collector.
+Die-Funktion gibt den Typ der Zeiger Sicherheit zurück, der von allen automatischen Garbage Collector angenommen wird.
 
-## <a name="get_temporary_buffer"></a> get_temporary_buffer
+## <a name="get_temporary_buffer"></a>get_temporary_buffer
 
 Weist temporären Speicher für eine Elementsequenz zu, die eine bestimmte Anzahl von Elementen nicht überschreitet.
 
@@ -550,7 +550,7 @@ template <class Type>
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl*\
+*Countdown*\
 Die maximale Anzahl der angeforderten Elemente, denen Speicher zugewiesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -596,7 +596,7 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 9.
 ```
 
-## <a name="make_shared"></a> make_shared
+## <a name="make_shared"></a>make_shared
 
 Erstellt `shared_ptr`, das auf die zugeordneten Objekte, die mithilfe der Standardbelegung von keinen oder mehreren Argumenten erstellt werden, oder gibt es zurück. Weist sowohl ein Objekt des angegebenen Typs als auch `shared_ptr` zu und erstellt sie, um die Freigabe des Objekts zu verwalten, und gibt `shared_ptr` zurück.
 
@@ -689,7 +689,7 @@ Playing Yesterday by The Beatles, use count: 3
 Playing Blackbird by The Beatles, use count: 3
 ```
 
-## <a name="make_unique"></a> make_unique
+## <a name="make_unique"></a>make_unique
 
 Erstellt ein [unique_ptr](../standard-library/unique-ptr-class.md)-Element und gibt es an ein Objekt des angegebenen Typs zurück, das mithilfe der angegebenen Argumente erstellt wird.
 
@@ -715,14 +715,14 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parameter
 
-*T*\
+*BUND*\
 Der Typ des Objekts, auf das `unique_ptr` zeigt.
 
 *Typen*\
-Die Typen der Konstruktorargumente gemäß *Args*.
+Die von *args*angegebenen Typen der Konstruktorargumente.
 
-*args*\
-Die Argumente an den Konstruktor des Objekts vom Typ zu übergebenden *T*.
+*Args*\
+Die Argumente, die an den Konstruktor des Objekts vom Typ *T*übergeben werden.
 
 *Elem*\
 Ein Array von Elementen des Typs *T*.
@@ -732,21 +732,21 @@ Die Anzahl von Elementen, denen im neue Array ein Bereich zugeordnet werden soll
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Überladung wird für einzelne Objekte verwendet, die zweite Überladung wird für Arrays aufgerufen und die dritte Überladung verhindert, dass Sie Angabe einer Arraygröße im Typargument (Make_unique\<T [N] >); diese Konstruktion wird nicht unterstützt, von der aktuellen Standard. Wenn Sie `make_unique` verwenden, um `unique_ptr` in ein Array zu erstellen, müssen die Arrayelemente separat initialisiert werden. Bei Berücksichtigung dieser Überladung ist die Verwendung von [std::vector](../standard-library/vector-class.md) eventuell besser.
+Die erste Überladung wird für einzelne Objekte verwendet, die zweite Überladung wird für Arrays aufgerufen, und die dritte Überladung verhindert die Angabe einer Array Größe im Typargument (make_unique\<T [N] >). diese Konstruktion wird vom aktuellen-Objekt nicht unterstützt. Norm. Wenn Sie `make_unique` verwenden, um `unique_ptr` in ein Array zu erstellen, müssen die Arrayelemente separat initialisiert werden. Bei Berücksichtigung dieser Überladung ist die Verwendung von [std::vector](../standard-library/vector-class.md) eventuell besser.
 
 Da `make_unique` sorgfältig für die Ausnahmesicherheit implementiert wird, wird empfohlen, `make_unique` zu verwenden, anstatt `unique_ptr` -Konstruktoren direkt aufzurufen.
 
 ### <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung von `make_unique`. Weitere Beispiele finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Unique_ptr-Instanzen](../cpp/how-to-create-and-use-unique-ptr-instances.md).
+Das folgende Beispiel veranschaulicht die Verwendung von `make_unique`. Weitere Beispiele finden Sie unter [Vorgehensweise: Erstellen und Verwenden von unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md)-Instanzen.
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
 Wenn der Fehler "C2280" in Verbindung mit `unique_ptr` angezeigt wird, ist der Grund dafür fast sicherlich, der Versuch, den Kopierkonstruktor aufzurufen, der eine gelöschte Funktion ist.
 
-## <a name="owner_less"></a> owner_less
+## <a name="owner_less"></a>owner_less
 
-Ermöglicht Mischvergleiche, die auf Besitz basieren, freigegebener und schwacher Zeiger. Gibt **"true"** Wenn der linke Parameter vor den rechten Parameter, von der Memberfunktion sortiert ist `owner_before`.
+Ermöglicht Mischvergleiche, die auf Besitz basieren, freigegebener und schwacher Zeiger. Gibt " **true** " zurück, wenn der linke Parameter von der Element Funktion `owner_before`vor dem rechten Parameter geordnet ist.
 
 ```cpp
 template <class Type>
@@ -795,7 +795,7 @@ Ein freigegebener oder schwacher Zeiger.
 
 Die Vorlagenklassen definieren, dass alle ihre Memberoperatoren `left.owner_before(right)` zurückgeben.
 
-## <a name="return_temporary_buffer"></a> return_temporary_buffer
+## <a name="return_temporary_buffer"></a>return_temporary_buffer
 
 Gibt den temporären Speicher frei, der mithilfe der `get_temporary_buffer`-Vorlagenfunktion zugeordnet wurde.
 
@@ -851,7 +851,7 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 7.
 ```
 
-## <a name="static_pointer_cast"></a> static_pointer_cast
+## <a name="static_pointer_cast"></a>static_pointer_cast
 
 Statische Umwandlung in shared_ptr (gemeinsamer Zeiger).
 
@@ -862,18 +862,18 @@ template <class Ty, class Other>
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*\
+*Genossenschaft*\
 Der Typ, der vom zurückgegebenen gemeinsamen Zeiger (shared pointer) gesteuert wird.
 
-*Andere*\
+*Außer*\
 Der Typ, der vom Argument für den gemeinsamen Zeiger gesteuert wird.
 
-*Andere*\
+*Außer*\
 Das Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion gibt ein leeres Shared_ptr-Objekt zurück, wenn `sp` ist eine leere `shared_ptr` Objekt; andernfalls ein [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md)\<Ty >-Objekt, das die Ressource besitzt, die gehört`sp`. Der Ausdruck `static_cast<Ty*>(sp.get())` muss gültig sein.
+Die Vorlagen Funktion gibt ein leeres shared_ptr-Objekt `sp` zurück, wenn `shared_ptr` ein leeres-Objekt ist; andernfalls gibt Sie ein [shared_ptr Class](../standard-library/shared-ptr-class.md)\<Ty-> Objekt zurück, das `sp`die Ressource besitzt, die im Besitz von ist. Der Ausdruck `static_cast<Ty*>(sp.get())` muss gültig sein.
 
 ### <a name="example"></a>Beispiel
 
@@ -910,7 +910,7 @@ int main()
 sp1->val == 3
 ```
 
-## <a name="swap"></a> Swap
+## <a name="swap"></a>Wechsel
 
 Tauscht zwei shared_ptr- oder weak_ptr-Objekte.
 
@@ -924,13 +924,13 @@ template <class Ty, class Other>
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*\
+*Genossenschaft*\
 Der vom linken gemeinsamen/schwachen Zeiger gesteuerte Typ.
 
-*Andere*\
+*Außer*\
 Der vom rechten gemeinsamen/schwachen Zeiger gesteuerte Typ.
 
-*Links*\
+*linken*\
 Der linke gemeinsame/schwache Zeiger.
 
 *Richting*\
@@ -993,7 +993,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="undeclare_no_pointers"></a> undeclare_no_pointers
+## <a name="undeclare_no_pointers"></a>undeclare_no_pointers
 
 Einem Garbage Collector wird mitgeteilt, dass die Zeichen im Speicherblock, der von einem Basisadressenzeiger und -blockgröße definiert wurde, jetzt möglicherweise nachweisbare Zeiger enthalten.
 
@@ -1003,11 +1003,11 @@ void undeclare_no_pointers(char* ptr, size_t _Size);
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion informiert jeden Garbage Collector, der den Bereich der Adressen `[ptr, ptr + _Size)` kann jetzt nachweisbaren Zeiger enthalten.
+Die-Funktion informiert alle Garbage Collector, dass der Adress `[ptr, ptr + _Size)` Bereich nun möglicherweise nachvollziehbare Zeiger enthält.
 
-## <a name="undeclare_reachable"></a> undeclare_reachable
+## <a name="undeclare_reachable"></a>undeclare_reachable
 
-Widerruft eine Deklaration der Erreichbarkeit für eine angegebene Speicheradresse.
+Widerruft eine Deklaration der Erreichbarkeit für einen angegebenen Speicher Speicherort.
 
 ```cpp
 template <class Type>
@@ -1021,9 +1021,9 @@ Ein Zeiger auf die Speicheradresse, die als nicht erreichbar deklariert werden s
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn *Ptr* nicht **"nullptr"** , die Funktion informiert jeden Garbage Collector, *Ptr* ist nicht mehr erreichbar. Es gibt einen sicher abgeleitete Zeiger, der vergleicht gleich *Ptr*.
+Wenn *ptr* nicht **nullptr**ist, informiert die Funktion alle Garbage Collector, dass *ptr* nicht mehr erreichbar ist. Es gibt einen sicheren abgeleiteten Zeiger zurück, der mit *ptr*übereinstimmt.
 
-## <a name="uninitialized_copy"></a> "uninitialized_copy"
+## <a name="uninitialized_copy"></a>uninitialized_copy
 
 Es werden Objekte aus einem angegebenen Quellbereich in einen nicht initialisierten Zielbereich kopiert.
 
@@ -1034,10 +1034,10 @@ template <class InputIterator, class ForwardIterator>
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*\
+*erstes*\
 Ein Eingabeiterator, der das erste Element im Quellbereich adressiert.
 
-*letzte*\
+*letzten*\
 Ein Eingabeiterator, der das letzte Element im Quellbereich adressiert.
 
 *dest*\
@@ -1045,7 +1045,7 @@ Ein Forward-Iterator, der das erste Element im Zielbereich adressiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein forward-Iterator, der die erste Position über dem Zielbereich hinaus adressiert, es sei denn, der Quellbereich leer war.
+Ein forward-Iterator, der die erste Position über dem Zielbereich hinaus adressiert, es sei denn, der Quellbereich war leer.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1128,7 +1128,7 @@ int main()
 }
 ```
 
-## <a name="uninitialized_copy_n"></a> "uninitialized_copy_n"
+## <a name="uninitialized_copy_n"></a>uninitialized_copy_n
 
 Eine Kopie einer angegebenen Anzahl von Elementen aus einem Eingabeiterator wird erstellt. Die Kopien werden in einen Forward-Iterator abgelegt.
 
@@ -1142,10 +1142,10 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*\
+*erstes*\
 Ein Eingabeiterator, der auf das zu kopierende Objekt verweist.
 
-*Anzahl*\
+*Countdown*\
 Ein Ganzzahltyp mit oder ohne Vorzeichen, der die Anzahl von Kopiervorgängen für das Objekt angibt.
 
 *dest*\
@@ -1153,7 +1153,7 @@ Ein Forward-Iterator, der auf den Speicherort der neuen Kopien verweist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Forward-Iterator, der die erste Position nach dem Ziel adressiert. Wenn der Quellbereich leer war, adressiert der Iterator *erste*.
+Ein Forward-Iterator, der die erste Position nach dem Ziel adressiert. Wenn der Quellbereich leer war, adressiert der Iterator *zuerst*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1168,7 +1168,7 @@ Die Vorlagenfunktion führt effektiv Folgendes aus:
 
 es sei denn, der Code löst eine Ausnahme aus. In diesem Fall sind alle erstellten Objekte zerstört und die Ausnahme wird erneut ausgelöst.
 
-## <a name="uninitialized_default_construct"></a> uninitialized_default_construct
+## <a name="uninitialized_default_construct"></a>uninitialized_default_construct
 
 ```cpp
 template <class ForwardIterator>
@@ -1185,7 +1185,7 @@ for (; first != last; ++first)
         typename iterator_traits<ForwardIterator>::value_type;
 ```
 
-## <a name="uninitialized_default_construct_n"></a> uninitialized_default_construct_n
+## <a name="uninitialized_default_construct_n"></a>uninitialized_default_construct_n
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1202,7 +1202,7 @@ for (; n>0; (void)++first, --n)
         typename iterator_traits<ForwardIterator>::value_type; return first;
 ```
 
-## <a name="uninitialized_fill"></a> "uninitialized_fill"
+## <a name="uninitialized_fill"></a>uninitialized_fill
 
 Objekte eines angegebenen Werts werden in einen nicht initialisierten Zielbereich kopiert.
 
@@ -1213,13 +1213,13 @@ template <class ForwardIterator, class Type>
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*\
+*erstes*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu initiierenden Zielbereich adressiert.
 
-*letzte*\
+*letzten*\
 Ein Forward-Iterator, der die Position des letzten Elements im zu initiierenden Zielbereich adressiert.
 
-*val*\
+*ster*\
 Der Wert, der zum Initialisieren des Zielbereichs verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -1274,7 +1274,7 @@ int main( )
 The initialized Array contains: 25 25 25 25 25 25 25 25 25 25
 ```
 
-## <a name="uninitialized_fill_n"></a> uninitialized_fill_n
+## <a name="uninitialized_fill_n"></a>uninitialized_fill_n
 
 Objekte einer angegebenen Anzahl von Elementen werden in einen nicht initialisierten Zielbereich kopiert.
 
@@ -1285,13 +1285,13 @@ template <class FwdIt, class Size, class Type>
 
 ### <a name="parameters"></a>Parameter
 
-*Erste*\
+*erstes*\
 Ein Forward-Iterator, der die Position des ersten Elements im zu initiierenden Zielbereich adressiert.
 
-*Anzahl*\
+*Countdown*\
 Die Anzahl von zu initialisierenden Elementen.
 
-*val*\
+*ster*\
 Der Wert, der zum Initialisieren des Zielbereichs verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -1338,7 +1338,7 @@ int main() {
 }
 ```
 
-## <a name="uninitialized_move"></a> uninitialized_move
+## <a name="uninitialized_move"></a>uninitialized_move
 
 ```cpp
 template <class InputIterator, class ForwardIterator>
@@ -1356,9 +1356,9 @@ for (; first != last; (void)++result, ++first)
         return result;
 ```
 
-Wenn eine Ausnahme ausgelöst wird, können einige Objekte im Bereich in einem Zustand gültig, aber nicht festgelegt bleiben.
+Wenn eine Ausnahme ausgelöst wird, bleiben einige Objekte im Bereich möglicherweise in einem gültigen, aber nicht angegebenen Zustand.
 
-## <a name="uninitialized_move_n"></a> uninitialized_move_n
+## <a name="uninitialized_move_n"></a>uninitialized_move_n
 
 ```cpp
 template <class InputIterator, class Size, class ForwardIterator>
@@ -1375,9 +1375,9 @@ for (; n > 0; ++result, (void) ++first, --n)
         typename iterator_traits<ForwardIterator>::value_type(std::move(*first)); return {first,result};
 ```
 
-Wenn eine Ausnahme ausgelöst wird, können einige Objekte im Bereich in einem Zustand gültig, aber nicht festgelegt bleiben.
+Wenn eine Ausnahme ausgelöst wird, bleiben einige Objekte im Bereich möglicherweise in einem gültigen, aber nicht angegebenen Zustand.
 
-## <a name="uninitialized_value_construct"></a> uninitialized_value_construct
+## <a name="uninitialized_value_construct"></a>uninitialized_value_construct
 
 ```cpp
 template <class ForwardIterator>
@@ -1394,7 +1394,7 @@ for (; first != last; ++first)
         typename iterator_traits<ForwardIterator>::value_type();
 ```
 
-## <a name="uninitialized_value_construct_n"></a> uninitialized_value_construct_n
+## <a name="uninitialized_value_construct_n"></a>uninitialized_value_construct_n
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1408,7 +1408,7 @@ for (; n>0; (void)++first, --n)
         typename iterator_traits<ForwardIterator>::value_type(); return first;
 ```
 
-## <a name="uses_allocator_v"></a> uses_allocator_v
+## <a name="uses_allocator_v"></a>uses_allocator_v
 
 ```cpp
 template <class T, class Alloc>
@@ -1417,4 +1417,4 @@ template <class T, class Alloc>
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<memory>](../standard-library/memory.md)<br/>
+[\<memory>](../standard-library/memory.md)

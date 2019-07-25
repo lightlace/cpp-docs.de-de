@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 8f6552d9f9b0b34b1cb721e726c95845210c8bb9
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 11e705629675903803f7230d540417846417cc77
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449267"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456959"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution-Klasse
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*IntType*<br/>
-Der Ergebnistyp für ganze Zahl, Standardwert **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*Inttype*\
+Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine Verteilung, Werte eines benutzerdefinierten ganzzahligen produziert, Typs **Int** Wenn none angegeben wird, entsprechend der diskreten Wahrscheinlichkeitsfunktion Negative Binomialverteilung verteilter Wert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der diskreten Wahrscheinlichkeitsfunktion zur negativen binomialen Verteilung verteilter Wert ausgegeben wird, geben Sie **int** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-Die Eigenschaftenmember `k()` und `p()` Parameterwerte für die aktuell gespeicherten verteilungsparameterwerte zurückzugeben *k* und *p* bzw.
+Die Eigenschaftenmember `k()` und `p()` geben die aktuell gespeicherten Verteilungsparameter Werte *k* bzw. *p* zurück.
 
 Das Eigenschaftsmember `param()` gibt das aktuell gespeicherte Verteilungspaket `param_type` zurück oder legt es fest.
 
@@ -95,7 +95,7 @@ Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entwe
 
 Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).
 
-Ausführliche Informationen über die diskrete Wahrscheinlichkeitsfunktion negative binomiale Verteilung, finden Sie im Wolfram MathWorld-Artikel [Negative Binomialverteilung](https://go.microsoft.com/fwlink/p/?linkid=400516).
+Ausführliche Informationen über die diskrete Wahrscheinlichkeitsfunktion zur negativen binomialen Verteilung finden Sie im Wolfram MathWorld-Artikel [Negative Binomial Distribution](https://go.microsoft.com/fwlink/p/?linkid=400516).
 
 ## <a name="example"></a>Beispiel
 
@@ -232,13 +232,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*k*<br/>
+*km*\
 Der `k`-Verteilungsparameter.
 
-*p*<br/>
+*cker*\
 Der `p`-Verteilungsparameter.
 
-*parm*<br/>
+*parm*\
 Die für die Erstellung der Verteilung verwendete Parameterstruktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -253,19 +253,19 @@ Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parame
 
 Speichert die Parameter der Verteilung.
 
-struct param_type { typedef negative_binomial_distribution`<`result_type> distribution_type; param_type(result_type k = 1, double p = 0.5); result_type k() const; double p() const;
+struct param_type {typedef negative_binomial_distribution`<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () Konstanten; Double p () Konstanten;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parameter
 
-*k*<br/>
+*km*\
 Der `k`-Verteilungsparameter.
 
-*p*<br/>
+*cker*\
 Der `p`-Verteilungsparameter.
 
-*right*<br/>
+*Richting*\
 Die `param_type`-Struktur, mit der verglichen wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -276,4 +276,4 @@ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteil
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

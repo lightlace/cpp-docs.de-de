@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: 7b341f3e1dbf76021911c70560b83932b5302191
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8fe1ab2db792819831f5c50aa99a02559f71cdd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404792"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451804"
 ---
 # <a name="messagesbyname-class"></a>messages_byname-Klasse
 
@@ -39,15 +39,15 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-*_Locname*<br/>
+*_Locname*\
 Ein benanntes Gebietsschema.
 
-*_Refs*<br/>
+*_Refs*\
 Eine initiale Verweisanzahl.
 
 ## <a name="remarks"></a>Hinweise
 
-Das Verhalten wird durch das benannte Gebietsschema bestimmt *_Locname*. Jeder Konstruktor initialisiert sein Basisobjekt mit [messages](../standard-library/messages-class.md#messages)\<CharType>(`_Refs`).
+Das Verhalten wird durch das benannte Gebiets Schema *_Locname*festgelegt. Jeder Konstruktor initialisiert sein Basisobjekt mit [messages](../standard-library/messages-class.md#messages)\<CharType>(`_Refs`).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,4 +57,4 @@ Das Verhalten wird durch das benannte Gebietsschema bestimmt *_Locname*. Jeder K
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

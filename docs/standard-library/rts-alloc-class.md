@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409745"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451135"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc-Klasse
 
@@ -74,7 +74,7 @@ Zeiger auf das zugewiesene Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt `caches[_IDX].allocate(count)`, wobei der Index `_IDX` richtet sich nach der Größe der angeforderten Blocks *Anzahl*, oder wenn *Anzahl* ist zu groß ist, gibt `operator new(count)`. `cache`, das das Cache-Objekt darstellt.
+Die Member-Funktion `caches[_IDX].allocate(count)`gibt zurück, wobei `_IDX` der Index durch die angeforderte Block *Größe bestimmt*wird, oder wenn *count* zu groß ist, wird `operator new(count)`zurückgegeben. `cache`, das das Cache-Objekt darstellt.
 
 ## <a name="deallocate"></a> rts_alloc::deallocate
 
@@ -93,7 +93,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion ruft `caches[_IDX].deallocate(ptr, count)`, wobei der Index `_IDX` richtet sich nach der Größe der angeforderten Blocks *Anzahl*, oder wenn *Anzahl* ist zu groß ist, gibt `operator delete(ptr)`.
+Die Member-Funktion `caches[_IDX].deallocate(ptr, count)`Ruft auf, wobei `_IDX` der Index durch die angeforderte Block *Größe bestimmt*wird, oder wenn *count* zu groß ist, wird `operator delete(ptr)`zurückgegeben.
 
 ## <a name="equals"></a> rts_alloc::equals
 
@@ -112,9 +112,9 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="remarks"></a>Hinweise
 
-**"true"** Wenn das Ergebnis des `caches[0].equals(other.caches[0])`ist, andernfalls **"false"**. `caches` stellt das Array von Cache-Objekten dar.
+**true** , wenn das Ergebnis `caches[0].equals(other.caches[0])`von ist, andernfalls **false**. `caches` stellt das Array von Cache-Objekten dar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)<br/>
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
+[\<allocators>](../standard-library/allocators-header.md)

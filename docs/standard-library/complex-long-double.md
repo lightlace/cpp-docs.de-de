@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 19d4569523879911209bf0c05e762eba2c9852a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 280fb4c15219b11d2325ff37a296e133810bf2b5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389165"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449477"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-Diese explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **long double**, wird das erste Objekt den reellen Teil einer komplexen Zahl und das zweite Objekt dem imaginären Teil.
+Diese explizit spezialisierte Vorlagen Klasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten speichert, die beide den Typ **long Double**haben, wobei das erste Objekt den reellen Teil einer komplexen Zahl und das zweite Objekt den imaginären Teil darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,26 +38,26 @@ complex(
 
 ### <a name="parameters"></a>Parameter
 
-*_RealVal*<br/>
+*_RealVal*\
 Der Wert des Typs **long double** für den Realteil der komplexen Zahl, die erstellt wird
 
-*_ImagVal*<br/>
-Der Wert des Typs **long double** für den imaginären Teil der komplexen Zahl, die erstellt wird.
+*_ImagVal*\
+Der Wert des Typs **long Double** für den imaginären Teil der komplexen Zahl, die erstellt wird.
 
-*complexNum*<br/>
-Die komplexe Zahl vom Typ **doppelte** oder eines Typs **"float"** , deren tatsächliche und imaginäre Teile werden verwendet, um eine komplexe Zahl des Typs initialisieren **long double** erstellt wird.
+*complexnum*\
+Die komplexe Zahl vom Typ **Double** oder vom Typ **float** , deren reelle und imaginäre Teile verwendet werden, um eine komplexe Zahl vom Typ **long Double** zu initialisieren, der erstellt wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine komplexe Zahl vom Typ **long double**.
+Eine komplexe Zahl vom Typ **long Double**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die explizite Spezialisierung der Vorlagenklasse `complex` in eine komplexe Klasse des Typs **long double** unterscheidet sich von der Vorlagenklasse nur in den Konstruktoren, die sie definiert. Die Konvertierung von **long double** zu **"float"** darf implizit erfolgen, aber die Konvertierung von **doppelte** zu **long double** ist erforderlich sollen **explizite**. Die Verwendung einer **expliziten** Konvertierung schließt die Initiierung mit Typkonvertierung über die Zuweisungssyntax aus.
+Die explizite Spezialisierung der Vorlagen Klasse `complex` auf eine komplexe Klasse des Typs **long Double** unterscheidet sich von der Vorlagen Klasse nur in den Konstruktoren, die Sie definiert. Die Konvertierung von **long Double** in **float** darf implizit erfolgen, aber die Konvertierung von **Double** in **long Double** muss **explizit**erfolgen. Die Verwendung einer **expliziten** Konvertierung schließt die Initiierung mit Typkonvertierung über die Zuweisungssyntax aus.
 
-Weitere Informationen zur Vorlagenklasse `complex` und ihre Member, finden Sie unter [complex-Klasse](../standard-library/complex-class.md).
+Weitere Informationen zur Vorlagen Klasse `complex` und ihren Membern finden Sie unter [Complex-Klasse](../standard-library/complex-class.md).
 
-**Microsoft-spezifisch**: Die **long double** und **doppelte** Typen die gleiche Darstellung haben, aber unterschiedliche Typen sind. Weitere Informationen finden Sie unter [Basistypen](../cpp/fundamental-types-cpp.md).
+**Microsoft-spezifisch**: Der **long Double** -Typ und der **Double** -Typ verfügen über die gleiche Darstellung, sind jedoch unterschiedliche Typen. Weitere Informationen finden Sie unter [grundlegende Typen](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -123,5 +123,5 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="see-also"></a>Siehe auch
 
-[complex-Klasse](../standard-library/complex-class.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[complex-Klasse](../standard-library/complex-class.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

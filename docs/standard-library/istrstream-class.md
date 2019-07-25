@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 70e71ac5a6fd523f0b7589625f4e88fdb41ee0e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59b69d3f862715840e1557a10d6087350488a3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224272"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448079"
 ---
 # <a name="istrstream-class"></a>istrstream-Klasse
 
@@ -72,15 +72,15 @@ istrstream(
 
 ### <a name="parameters"></a>Parameter
 
-*count*<br/>
-Die Länge des Puffers (*Ptr*).
+*Countdown*\
+Die Länge des Puffers (*ptr*).
 
-*ptr*<br/>
+*PTR*\
 Der Inhalt, mit dem der Puffer initialisiert wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Alle Konstruktoren initialisieren die Basisklasse durch Aufrufen von [Istream](../standard-library/istream-typedefs.md#istream)(**Sb**), wobei `sb` das gespeicherte Objekt der Klasse [Strstreambuf](../standard-library/strstreambuf-class.md). Die ersten beiden Konstruktoren initialisieren auch `sb` durch Aufrufen von `strstreambuf`(( **const** `char` \*) `ptr`, 0). Stattdessen rufen die verbleibenden beiden Konstruktoren `strstreambuf`((**const**`char` *) `ptr`, `count`) auf.
+Alle Konstruktoren initialisieren die Basisklasse durch Aufrufen von [IStream](../standard-library/istream-typedefs.md#istream)(**SB**), wobei `sb` das gespeicherte Objekt der Klasse "" von " [strauf](../standard-library/strstreambuf-class.md)" ist. Die ersten `sb` beiden Konstruktoren initialisieren auch durch Aufrufen `strstreambuf`von (( **konstant** `char` \*) `ptr`, 0). Stattdessen rufen die verbleibenden beiden Konstruktoren `strstreambuf`((**const**`char` *) `ptr`, `count`) auf.
 
 ## <a name="rdbuf"></a> istrstream::rdbuf
 
@@ -120,11 +120,11 @@ Die Memberfunktion gibt [rdbuf](#rdbuf) -> [str](../standard-library/strstreambu
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [strstream:: str](../standard-library/strstreambuf-class.md#str) für ein Beispiel, verwendet `str`.
+Ein Beispiel, das verwendet `str`, finden Sie unter [strinstream:: Str](../standard-library/strstreambuf-class.md#str) .
 
 ## <a name="see-also"></a>Siehe auch
 
-[istream](../standard-library/istream-typedefs.md#istream)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
-[iostreams-Konventionen](../standard-library/iostreams-conventions.md)<br/>
+[istream](../standard-library/istream-typedefs.md#istream)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream-Programmierung](../standard-library/iostream-programming.md)\
+[iostreams-Konventionen](../standard-library/iostreams-conventions.md)

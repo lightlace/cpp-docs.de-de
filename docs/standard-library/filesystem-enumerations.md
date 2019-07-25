@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240747"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457710"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;-Enumerationen
 
@@ -86,7 +86,7 @@ enum class directory_options {
 
 ## <a name="file_type"></a> file_type
 
-Eine Enumeration für Dateitypen. Die unterstützten Werte sind regulär, Verzeichnis, Not_found und unbekannt.
+Eine Enumeration für Dateitypen. Die unterstützten Werte sind regulär, Verzeichnis, NOT_FOUND und unbekannt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -120,9 +120,9 @@ enum class file_type {
 |`socket`|7|Stellt ein Socket auf UNIX-basierten Systemen dar. (Nicht unterstützt.)|
 |`unknown`|8|Stellt eine Datei dar, deren Status nicht ermittelt werden kann.|
 
-## <a name="perm_options"></a>  perm_options
+## <a name="perm_options"></a>perm_options
 
-Enthält Werte `replace`, `add`, `remove`, und `nofollow`.
+Schließt die `replace`Werte `add`, `remove`, und`nofollow`ein.
 
 ```cpp
 enum class perm_options;
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

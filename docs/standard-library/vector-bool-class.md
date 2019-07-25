@@ -15,16 +15,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: f7663987b2759c762d1f6c1604923478915f5726
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4ae53f9a14f04d5656a13c32e75494688c5cdd0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364999"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452268"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt;-Klasse
 
-Die `vector<bool>` -Klasse ist eine teilweise Spezialisierung von [Vektor](../standard-library/vector-class.md) für Elemente des Typs **"bool"**. Es wurde eine Zuweisung für den zugrunde liegenden Typ, der von der Spezialisierung, die leerzeichenoptimierung verwendet wird durch Speichern von einem bietet **"bool"** -Wert pro Bit.
+Die `vector<bool>` -Klasse ist eine partielle Spezialisierung von [Vector](../standard-library/vector-class.md) für Elemente des Typs **bool**. Sie verfügt über eine Zuweisung für den zugrunde liegenden Typ, der von der Spezialisierung verwendet wird, der die Speicherplatz Optimierung  durch Speichern eines booleschen Werts pro Bit bereitstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,14 +37,14 @@ class vector<bool, Allocator>
 
 Diese Spezialisierung einer Klassenvorlage verhält sich wie vector, abgesehen von den Unterschieden, die in diesem Artikel erklärt werden.
 
-Vorgänge, die Behandlung der **"bool"** Typ entsprechen Werten im containerspeicher. `allocator_traits::construct` wird nicht verwendet, um diese Werte zu erstellen.
+Vorgänge mit dem booleschen Typ entsprechen den Werten im Container Speicher. `allocator_traits::construct` wird nicht verwendet, um diese Werte zu erstellen.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Typname|Beschreibung|
 |-|-|
 |[const_pointer](#const_pointer)|Eine Typedef für ein `const_iterator`-Element, das als konstanter Zeiger auf ein boolesches Element des `vector<bool>`-Elements dienen kann.|
-|[const_reference](#const_reference)|Eine Typedef für **"bool"**. Nach der Initialisierung werden keine Updates auf den ursprünglichen Wert berücksichtigt.|
+|[const_reference](#const_reference)|Eine typedef für **bool**. Nach der Initialisierung werden keine Updates auf den ursprünglichen Wert berücksichtigt.|
 |[pointer](#pointer)|Eine Typedef für ein `iterator`-Element, das als Zeiger auf ein boolesches Element des `vector<bool>`-Elements dienen kann.|
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -152,7 +152,7 @@ Wenn die angegebene Position größer oder gleich der Größe des Containers ist
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn Sie mit _ITERATOR_DEBUG_LEVEL kompilieren, tritt ein Laufzeitfehler auf, wenn Sie versuchen, auf ein Element außerhalb der Grenzen des Vektors zuzugreifen.  Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
+Wenn Sie mit _ITERATOR_DEBUG_LEVEL Set kompilieren, tritt ein Laufzeitfehler auf, wenn Sie versuchen, auf ein Element außerhalb der Grenzen des Vektors zuzugreifen.  Weitere Informationen finden Sie unter [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -257,7 +257,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a> vector\<bool>::reference::operator bool
 
-Stellt eine implizite Konvertierung von `vector<bool>::reference` zu **"bool"**.
+Stellt eine implizite Konvertierung von `vector<bool>::reference` in **bool**bereit.
 
 ```cpp
 operator bool() const;
@@ -282,10 +282,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts*<br/>
+*Richting*\
 Der Elementverweis, dessen Wert dem Bit zugewiesen werden soll.
 
-*val*<br/>
+*Ster*\
 Der boolesche Wert, der dem Bit zugewiesen werden soll.
 
 #### <a name="example"></a>Beispiel
@@ -371,11 +371,11 @@ static void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*<br/>
-Das Element, das mit ausgetauscht werden, die *rechts* Element.
+*Linken*\
+Das Element, das mit dem *richtigen* Element ausgetauscht werden soll.
 
-*Rechts*<br/>
-Das Element, das mit ausgetauscht werden, die *Links* Element.
+*Richting*\
+Das Element, das mit dem *linken* Element ausgetauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -383,5 +383,5 @@ Diese Überladung unterstützt die besonderen Proxyanforderungen von `vector<boo
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

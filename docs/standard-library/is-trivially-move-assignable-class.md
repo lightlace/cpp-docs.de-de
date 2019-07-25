@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_assignable
 ms.assetid: 374f7322-0706-4bc1-a1a5-4191d0315e28
-ms.openlocfilehash: b25d16658def4e3cf620ab707d2dabacb2620f33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 324e4a1f1bd3528f09f21c5e485ac814038b7517
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413389"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448379"
 ---
 # <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable-Klasse
 
@@ -26,20 +26,20 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, die einen trivialen verschiebezuweisungsoperator, andernfalls er false enthält.
+Eine Instanz des typprädikats ist "true",  wenn die typität eine Klasse ist, die einen trivialen Verschiebungs Zuweisungs Operator aufweist; andernfalls "false".
 
-Ein bewegungszuweisungsoperator für eine Klasse *Ty* ist trivial wenn:
+Ein Verschiebungs Zuweisungs Operator für eine Klassen- *Ty* ist in folgenden Fällen trivial:
 
 Er wird impliziert bereitgestellt
 
-die Klasse *Ty* verfügt über keine virtuellen Funktionen
+die Klasse *Ty* hat keine virtuellen Funktionen.
 
-die Klasse *Ty* hat keine virtuellen Basen
+die Klasse *Ty* hat keine virtuellen Basen.
 
 Die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Verschiebungszuweisungsoperatoren
 
@@ -53,4 +53,4 @@ Die Klassen aller nicht statischen Datenmember des Typarrays der Klasse haben tr
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

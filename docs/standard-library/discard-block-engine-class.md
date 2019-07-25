@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: a0df754f53b52c134b9eb1126f90882ceaaf1e2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386199"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454398"
 ---
 # <a name="discardblockengine-class"></a>discard_block_engine-Klasse
 
@@ -26,13 +26,13 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Parameter
 
-*Engine*<br/>
+*Ge*\
 Der Typ der Basis-Engine.
 
-*P*<br/>
+*CKER*\
 **Blockgröße**. Die Anzahl von Werten in jedem Block.
 
-*R*<br/>
+*R*\
 **Verwendeter Block**. Die Anzahl von Werten in jedem Block, die verwendet werden. Der Rest wird verworfen (`P` - `R`). **Vorbedingung**:`0 < R ≤ P`
 
 ## <a name="members"></a>Member
@@ -56,4 +56,4 @@ Diese Vorlagenklasse beschreibt einen Engine-Adapter, der Werte produziert, inde
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

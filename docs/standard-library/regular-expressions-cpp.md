@@ -4,37 +4,37 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - regular expressions [C++]
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-ms.openlocfilehash: 291b25959f790db328080aa74a6320775a33e981
-ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
+ms.openlocfilehash: db5a7eacc136b3f30187692c7ea10792b84eb3fc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "65220310"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451375"
 ---
 # <a name="regular-expressions-c"></a>Reguläre Ausdrücke (C++)
 
-Die C++-Standardbibliothek unterstützt mehrere Grammatiken für reguläre Ausdrücke. Dieses Thema behandelt die Grammatik Varianten zur Verfügung, bei Verwendung von regulären Ausdrücken.
+Die C++ Standardbibliothek unterstützt mehrere reguläre Ausdrucks Grammatiken. In diesem Thema werden die bei der Verwendung regulärer Ausdrücke verfügbaren Grammatik Variationen erläutert.
 
 ## <a name="regexgrammar"></a> Grammatik für reguläre Ausdrücke
 
-Die Grammatik regulärer Ausdrücke zu verwenden, wird von durch die Verwendung eines angegeben. die `std::regex_constants::syntax_option_type` -Enumerationswerte fest. Diese Grammatiken für reguläre Ausdrücke sind in std::regex_constants definiert:
+Die zu verwendende Grammatik für reguläre Ausdrücke wird durch die Verwendung `std::regex_constants::syntax_option_type` eines der-Enumerationswerte angegeben. Diese Grammatiken für reguläre Ausdrücke werden in "Std:: regex_constants" definiert:
 
-- `ECMAScript`: Dies ist die Grammatik, die von JavaScript und der .NET-Sprachen verwendet am nächsten.
-- `basic`: Der POSIX grundlegende reguläre Ausdrücke oder eine Geschäftsregelmodul.
-- `extended`: Der POSIX erweiterte reguläre Ausdrücke oder ERE.
-- `awk`: Dies ist `extended`, verfügt aber über zusätzliche Escapezeichen für nicht druckbare Zeichen.
-- `grep`: Dies ist `basic`, sondern ermöglicht auch die neue-Zeile-Zeichen ('\n') um alternierungen zu trennen.
-- `egrep`: Dies ist `extended`, sondern ermöglicht auch die neue Zeilenumbruchzeichen, um alternierungen zu trennen.
+- `ECMAScript`: Dies entspricht der von JavaScript und .NET-Sprachen verwendeten Grammatik.
+- `basic`: Die grundlegenden regulären Ausdrücke POSIX oder Bre.
+- `extended`: Die erweiterten regulären Ausdrücke POSIX oder ere.
+- `awk`: Dies ist `extended`, aber es gibt zusätzliche Escapezeichen für nicht druckbare Zeichen.
+- `grep`: Das heißt `basic`, aber es erlaubt auch Zeilen Umleitungs Zeichen (' \n '), um die Alterungen voneinander zu trennen.
+- `egrep`: Dies ist `extended`, aber es erlaubt auch Zeilen Umleitungs Zeichen, um die alternungen voneinander zu trennen.
 
-Wenn keine Grammatik angegeben wird, standardmäßig `ECMAScript` wird angenommen. Nur eine Grammatik kann angegeben werden.
+Wenn keine Grammatik angegeben ist, `ECMAScript` wird standardmäßig angenommen. Es kann nur eine Grammatik angegeben werden.
 
-Zusätzlich zu der Grammatik können mehrere Flags angewendet werden:
-- `icase`: Ignorieren Sie Groß-/Kleinschreibung beim Vergleich mit.
-- `nosubs`: Ignorieren Sie die markierte Übereinstimmungen (d. h., Ausdrücke in Klammern angegeben); keine: substitutionen werden gespeichert.
-- `optimize`: Stellen Sie schneller auf Kosten der Erstellungszeit größer Übereinstimmung.
-- `collate`: Verwenden von gebietsschemabezogenen Sortierreihenfolgen (z. B. Bereiche im Format "[a-Z]").
+Zusätzlich zur Grammatik können mehrere Flags angewendet werden:
+- `icase`: Fall beim Abgleich ignorieren.
+- `nosubs`: Markierte Übereinstimmungen ignorieren (d. h. Ausdrücke in Klammern); Es werden keine Substitutionen gespeichert.
+- `optimize`: Erhöhen Sie den Abgleich auf mögliche Kosten höherer Konstruktionszeit.
+- `collate`: Verwenden Sie Gebiets Schema abhängige Sortierungs Sequenzen (z. b. Bereiche der Form "[a-z]").
 
-0 (null) oder mehrere Flags können mit der Grammatik an die Engine-Verhalten von regulären Ausdrücken kombiniert werden. Wenn nur Flags angegeben sind, `ECMAScript` wird als die Grammatik ausgegangen.
+NULL oder mehr Flags können mit der Grammatik kombiniert werden, um das Engine-Verhalten regulärer Ausdrücke anzugeben. Wenn nur Flags angegeben werden, `ECMAScript` wird als Grammatik angenommen.
 
 ### <a name="element"></a>Element
 
@@ -80,7 +80,7 @@ In `ECMAScript`, `basic` und `grep` kann ein Element auch ein *Rückverweis* im 
 
 In `ECMAScript` kann ein Element auch Folgendes sein:
 
-- Ein *nichterfassungsgruppe* im Format "(?: *Teilausdruck* )". Entspricht der Folge von Zeichen in der Zielsequenz, die anhand des Musters zwischen den Trennzeichen verglichen wird.
+- Eine *nicht Erfassungs Gruppe* im Format "( *?: Teil* Ausdruck)". Entspricht der Folge von Zeichen in der Zielsequenz, die anhand des Musters zwischen den Trennzeichen verglichen wird.
 
 - Ein eingeschränktes *Dateiformat-Escapezeichen* im Format "\f", "\n", "\r", "\t" oder "\v". Diese Zeichen entsprechen einem Seitenvorschub, einem Zeilenumbruch, einem Wagenrücklauf, einem horizontalen bzw. einem vertikalen Tabulator in der Zielsequenz.
 
@@ -120,7 +120,7 @@ In `awk` kann ein Element auch Folgendes sein:
 
 ### <a name="repetition"></a>Wiederholen
 
-Auf jedes Element außer einer *positiven Assertion*, einer *negativen Assertion* oder einem *Anker* kann eine Wiederholungsanzahl folgen. Die häufigste Art der Wiederholungsanzahl hat das Format "{`min`,`max`}" oder "\\{`min`,`max`\\}" in `basic` und `grep`. Ein Element, auf das dieses Format der Wiederholungsanzahl folgt, entspricht mindestens `min` aufeinander folgenden Vorkommen und nicht mehr als `max` aufeinander folgenden Vorkommen einer Sequenz, die mit dem Element übereinstimmt. Z. B. "eine{2,3}" entspricht der Zielsequenz "aa" und der Zielsequenz "aaa", aber nicht der Zielsequenz "a" oder der Zielsequenz "Aaaa".
+Auf jedes Element außer einer *positiven Assertion*, einer *negativen Assertion* oder einem *Anker* kann eine Wiederholungsanzahl folgen. Die häufigste Art der Wiederholungsanzahl hat das Format "{`min`,`max`}" oder "\\{`min`,`max`\\}" in `basic` und `grep`. Ein Element, auf das dieses Format der Wiederholungsanzahl folgt, entspricht mindestens `min` aufeinander folgenden Vorkommen und nicht mehr als `max` aufeinander folgenden Vorkommen einer Sequenz, die mit dem Element übereinstimmt. Beispielsweise entspricht "a{2,3}" der Zielsequenz "AA" und der Zielsequenz "AAA", aber nicht der Zielsequenz "a" oder der Zielsequenz "AAAA".
 
 Für eine Wiederholungsanzahl können auch folgende Formate verwendet werden:
 
@@ -132,11 +132,11 @@ Für eine Wiederholungsanzahl können auch folgende Formate verwendet werden:
 
 Beispiele:
 
-- "eine{2}" entspricht der Zielsequenz "aa", aber nicht der Zielsequenz "a" oder der Zielsequenz "aaa".
+- "a{2}" entspricht der Zielsequenz "AA", jedoch nicht der Zielsequenz "a" oder der Zielsequenz "AAA".
 
-- "eine{2,}" entspricht der Zielsequenz "aa", der Zielsequenz "aaa" usw., aber entspricht nicht die Zielsequenz "a".
+- "a{2,}" entspricht der Zielsequenz "AA", der Zielsequenz "AAA" usw., stimmt jedoch nicht mit der Zielsequenz "a" überein.
 
-- "eine\*" entspricht der Zielsequenz "", das Ziel Sequenz "a", der Zielsequenz "aa" und so weiter.
+- "a\*" entspricht der Zielsequenz "", der Zielsequenz "a", der Zielsequenz "AA" usw.
 
 Für alle Grammatiken außer `basic` und `grep` können für eine Wiederholungsanzahl folgende Formate verwendet werden:
 
@@ -146,15 +146,15 @@ Für alle Grammatiken außer `basic` und `grep` können für eine Wiederholungsa
 
 Beispiele:
 
-- "a?" entspricht der Zielsequenz "" und der Zielsequenz "a", aber nicht der Zielsequenz "aa".
+- "a?" entspricht der Zielsequenz "" und der Zielsequenz "a", jedoch nicht der Zielsequenz "AA".
 
 - "a+" entspricht der Zielsequenz "a", der Zielsequenz "aa" usw., jedoch nicht der Zielsequenz "".
 
-In `ECMAScript`, alle Formate für die Wiederholungsanzahl folgen können das Zeichen '?', bezeichnet einen *nicht gierige Wiederholung*.
+In `ECMAScript`können allen Formen der Wiederholungs Anzahl das Zeichen "?" folgen, das eine *nicht gierige Wiederholung*angibt.
 
 ### <a name="concatenation"></a>Verkettung
 
-Elemente des regulären Ausdrucks mit oder ohne *Wiederholungsanzahl* können verkettet werden, um längere reguläre Ausdrücke zu bilden. Der resultierende Ausdruck entspricht einer Zielsequenz, die eine Verkettung der Sequenzen ist, der die einzelnen Elemente entsprechen. Z. B. "eine{2,3}b" entspricht die Ziel-Sequenz "Aab" und der Zielsequenz "Aaab", aber entspricht nicht der Zielsequenz "Ab" oder der Zielsequenz "Aaaab".
+Elemente des regulären Ausdrucks mit oder ohne *Wiederholungsanzahl* können verkettet werden, um längere reguläre Ausdrücke zu bilden. Der resultierende Ausdruck entspricht einer Zielsequenz, die eine Verkettung der Sequenzen ist, der die einzelnen Elemente entsprechen. Beispielsweise entspricht "a{2,3}b" der Zielsequenz "AaB" und der Zielsequenz "aaab", stimmt jedoch nicht mit der Zielsequenz "ab" oder der Zielsequenz "AAAAB" überein.
 
 ### <a name="alternation"></a>Alternierung
 
@@ -195,7 +195,7 @@ In der folgenden Tabelle sind die Funktionen zusammengefasst, die in verschieden
 |Positive Assertion|||+||||
 |Wiederholung mit "{}"||+|+||+|+|
 |Wiederholung mit "\\{\\}"|+|||+|||
-|Wiederholung mit "\*"|+|+|+|+|+|+|
+|Wiederholung mit '\*'|+|+|+|+|+|+|
 |Wiederholung mit "?" und "+"||+|+||+|+|
 |Unicode-Escapesequenz|||+||||
 |Platzhalterzeichen|+|+|+|+|+|+|
@@ -203,7 +203,7 @@ In der folgenden Tabelle sind die Funktionen zusammengefasst, die in verschieden
 
 ## <a name="semanticdetails"></a> Semantische Details
 
-### <a name="anchor"></a>Anchor
+### <a name="anchor"></a>Anker
 
 Ein Anker entspricht einer Position in der Zielzeichenfolge, keinem Zeichen. Ein "^" entspricht dem Anfang der Zielzeichenfolge, und ein "$" entspricht dem Ende der Zielzeichenfolge.
 
@@ -302,7 +302,7 @@ Ein DSW-Escapezeichen ist ein Kurzname für eine Zeichenklasse, wie in der folge
 |"\s"|"[[:s:]]"|"[[:space:]]"|
 |"\S"|"[^[:s:]]"|"[^[:space:]]"|
 |"\w"|"[[:w:]]"|"[a-zA-Z0-9_]"\*|
-|"\W"|"[^[:w:]]"|"[^a-zA-Z0-9_]"\*|
+|"\W"|"[^[:w:]]"|"[^ a-zA-Z0-9_]"\*|
 
 \*ASCII-Zeichensatz
 
@@ -320,11 +320,11 @@ Eine hexadezimale Escapesequenz ist ein umgekehrter Schrägstrich, gefolgt vom B
 
 ### <a name="identity-escape"></a>Identitätsescapezeichen
 
-Ein Identitätsescapezeichen ist ein umgekehrter Schrägstrich, auf den ein einzelnes Zeichen folgt. Es entspricht diesem Zeichen. Das Escapezeichen ist erforderlich, wenn das Zeichen eine besondere Bedeutung hat. Durch das Identitätsescapezeichen wird die besondere Bedeutung aufgehoben. Zum Beispiel:
+Ein Identitätsescapezeichen ist ein umgekehrter Schrägstrich, auf den ein einzelnes Zeichen folgt. Es entspricht diesem Zeichen. Das Escapezeichen ist erforderlich, wenn das Zeichen eine besondere Bedeutung hat. Durch das Identitätsescapezeichen wird die besondere Bedeutung aufgehoben. Beispiel:
 
-- "eine\*" entspricht der Zielsequenz "aaa", stimmt jedoch nicht mit der Zielsequenz "eine\*".
+- "a\*" entspricht der Zielsequenz "AAA", stimmt jedoch nicht mit der Zielsequenz "a\*" überein.
 
-- "eine\\\*" entspricht nicht die Zielsequenz "aaa", aber entspricht der Zielsequenz "eine\*".
+- "a\\\*" stimmt nicht mit der Zielsequenz "AAA" überein, stimmt jedoch mit der Zielsequenz\*"a" überein.
 
 Der Satz von Zeichen, die in einem Identitätsescapezeichen zulässig sind, hängt von der Grammatik für die regulären Ausdrücke ab, wie in der folgenden Tabelle dargestellt.
 
@@ -333,7 +333,7 @@ Der Satz von Zeichen, die in einem Identitätsescapezeichen zulässig sind, hän
 |`basic`, `grep`|{ '(', ')', '{', '}', '.', '[', '\\', '\*', '^', '$' }|
 |`extended`, `egrep`|{ '(', ')', '{', '.', '[', '\\', '\*', '^', '$', '+', '?', '&#124;' }|
 |`awk`|`extended` plus { '"', '/' }|
-|`ECMAScript`|Alle Zeichen außer denjenigen, die Bestandteil eines Bezeichners sein können. In der Regel umfasst dies Buchstaben, Ziffern, "$", "\_", und die Unicode-Escapesequenzen. Weitere Informationen finden Sie in der ECMAScript-Sprachspezifikation.|
+|`ECMAScript`|Alle Zeichen außer denjenigen, die Bestandteil eines Bezeichners sein können. In der Regel umfasst dies Buchstaben, Ziffern, "$"\_, "" und Unicode-Escapesequenzen. Weitere Informationen finden Sie in der ECMAScript-Sprachspezifikation.|
 
 ### <a name="individual-character"></a>Einzelnes Zeichen
 
@@ -367,7 +367,7 @@ Beispiele:
 
 ### <a name="negative-assert"></a>Negative Assertion
 
-Eine negative Assertion entspricht allem, außer ihrem Inhalt. Sie verarbeitet keine Zeichen in der Zielsequenz. Z. B. "(!aa) (eine\*)" entspricht der Zielsequenz "a" und ordnet die Erfassungsgruppe 1 der Untersequenz "a". Die Sequenz entspricht nicht der Zielsequenz "aa" oder der Zielsequenz "aaa".
+Eine negative Assertion entspricht allem, außer ihrem Inhalt. Sie verarbeitet keine Zeichen in der Zielsequenz. Beispiel: "(! AA) (a\*)" entspricht der Zielsequenz "a" und ordnet die Erfassungs Gruppe 1 der unter Sequenz "a" zu. Die Sequenz entspricht nicht der Zielsequenz "aa" oder der Zielsequenz "aaa".
 
 ### <a name="negative-word-boundary-assert"></a>Negative Wortgrenzenassertion
 
@@ -375,11 +375,11 @@ Eine negative Wortgrenzenassertion stimmt überein, wenn die aktuelle Position i
 
 ### <a name="non-capture-group"></a>Nichterfassungsgruppe
 
-Eine Nichterfassungsgruppe markiert ihren Inhalt als einzelne Einheit in der Grammatik für reguläre Ausdrücke, versieht den Zieltext jedoch nicht mit einer Bezeichnung. Z. B. "(a)(?:b)\*(c)" entspricht dem Zieltext "Abbc" und ordnet die Erfassungsgruppe 1 der Untersequenz "ein"und die Erfassungsgruppe 2 der Untersequenz "c".
+Eine Nichterfassungsgruppe markiert ihren Inhalt als einzelne Einheit in der Grammatik für reguläre Ausdrücke, versieht den Zieltext jedoch nicht mit einer Bezeichnung. Beispiel: "(a) (?: b)\*(c)" entspricht dem Zieltext "abbc" und ordnet die Erfassungs Gruppe 1 der unter Sequenz "a" und die Erfassungs Gruppe 2 der unter Sequenz "c" zu.
 
 ### <a name="non-greedy-repetition"></a>Nicht gierige Wiederholung
 
-Eine nicht gierige Wiederholung nutzt die kürzeste Untersequenz der Zielsequenz, die dem Muster entspricht. Eine gierige Wiederholung verwendet die längste Untersequenz. Z. B. "(a+) (eine\*b)" entspricht der Zielsequenz "Aaab". Wenn eine nicht gierige Wiederholung verwendet wird, wird die Erfassungsgruppe 1 der Untersequenz "a" am Anfang der Zielsequenz und die Erfassungsgruppe 2 der Untersequenz "aab" am Ende der Zielsequenz zugeordnet. Wenn eine gierige Übereinstimmung verwendet wird, wird die Erfassungsgruppe 1 der Untersequenz "aaa" und die Erfassungsgruppe 2 der Untersequenz "b" zugeordnet.
+Eine nicht gierige Wiederholung nutzt die kürzeste Untersequenz der Zielsequenz, die dem Muster entspricht. Eine gierige Wiederholung verwendet die längste Untersequenz. Beispiel: "(a +) (a\*b)" entspricht der Zielsequenz "aaab". Wenn eine nicht gierige Wiederholung verwendet wird, wird die Erfassungsgruppe 1 der Untersequenz "a" am Anfang der Zielsequenz und die Erfassungsgruppe 2 der Untersequenz "aab" am Ende der Zielsequenz zugeordnet. Wenn eine gierige Übereinstimmung verwendet wird, wird die Erfassungsgruppe 1 der Untersequenz "aaa" und die Erfassungsgruppe 2 der Untersequenz "b" zugeordnet.
 
 ### <a name="octal-escape-sequence"></a>Oktale Escapesequenz
 
@@ -391,15 +391,15 @@ Ein normales Zeichen ist ein beliebiges gültiges Zeichen, das in der aktuellen 
 
 In `ECMAScript` haben die folgenden Zeichen eine besondere Bedeutung:
 
-- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }  &#124;
+- ^  $  \  .  \*+  ?  (  )  \[  ]  {  }&#124;
 
 In `basic` und `grep` haben die folgenden Zeichen eine besondere Bedeutung:
 
-- sein.   \[   \
+- .   \[   \
 
 In `basic` und `grep` verfügen die folgenden Zeichen außerdem über eine besondere Bedeutung, wenn sie in einem bestimmten Kontext verwendet werden:
 
-- "\*' hat eine besondere Bedeutung in allen Fällen, es sei denn, es das erste Zeichen in einem regulären Ausdruck oder das erste Zeichen, das folgt einen anfänglichen" ^ "in einem regulären Ausdruck, oder wenn es das erste Zeichen ist einer Aufzeichnungsinstanz Gruppe oder das erste Zeichen ein, folgt einen anfänglichen "^" in einer Erfassungsgruppe.
+- "\*" hat in allen Fällen eine besondere Bedeutung, außer wenn es das erste Zeichen in einem regulären Ausdruck oder das erste Zeichen ist, das einem anfänglichen "^" in einem regulären Ausdruck folgt, oder wenn es das erste Zeichen einer Erfassungs Gruppe oder das erste Zeichen ist, das folgt einem anfänglichen "^" in einer Erfassungs Gruppe.
 
 - "^" hat eine besondere Bedeutung, wenn es das erste Zeichen eines regulären Ausdrucks ist.
 
@@ -407,7 +407,7 @@ In `basic` und `grep` verfügen die folgenden Zeichen außerdem über eine beson
 
 In `extended`, `egrep` und `awk` haben die folgenden Zeichen eine besondere Bedeutung:
 
-- sein.   \[   \   (   \*   +   ?   {   &#124;
+- .   \[\   (   \*   +   ?   {   &#124;
 
 In `extended`, `egrep` und `awk` verfügen die folgenden Zeichen außerdem über eine besondere Bedeutung, wenn sie in einem bestimmten Kontext verwendet werden:
 
@@ -425,9 +425,9 @@ Eine positive Assertion entspricht ihrem Inhalt, verwendet jedoch keine Zeichen 
 
 Beispiele:
 
-- "(=AA) (eine\*)" entspricht der Zielsequenz "Aaaa" und ordnet die Erfassungsgruppe 1 der Untersequenz "Aaaa".
+- "(= AA) (a\*)" entspricht der Zielsequenz "AAAA" und ordnet die Erfassungs Gruppe 1 der unter Sequenz "AAAA" zu.
 
-- "(aa) (eine\*)" entspricht der Zielsequenz "Aaaa" und ordnet die Erfassungsgruppe 1 der Untersequenz "aa" am Anfang der Sequenz und zeichnen Sie Zielgruppe 2 der Untersequenz "aa" am Ende der Zielsequenz.
+- "(AA) (a\*)" entspricht der Zielsequenz "AAAA" und ordnet die Erfassungs Gruppe 1 der unter Sequenz "AA" am Anfang der Zielsequenz und die Erfassungs Gruppe 2 der unter Sequenz "AA" am Ende der Zielsequenz zu.
 
 - "(=aa)(a)&#124;(a)" entspricht der Zielsequenz "a" und ordnet die Erfassungsgruppe 1 einer leeren Sequenz (aufgrund eines Fehlers bei der positiven Assertion) und die Erfassungsgruppe 2 der Untersequenz "a" zu. Außerdem entspricht die Zielsequenz "aa" und ordnet die Erfassungsgruppe 1 der Untersequenz "aa" und die Erfassungsgruppe 2 einer leeren Sequenz zu.
 
@@ -478,12 +478,12 @@ Eine partielle Übereinstimmung ist erfolgreich, wenn die Übereinstimmung das E
 |"$&"|"&"|Die Zeichensequenz, die dem gesamten regulären Ausdruck entspricht (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`" (Dollarzeichen gefolgt vom Graviszeichen)||Die Zeichensequenz, die der Untersequenz vorausgeht, die dem regulären Ausdruck entspricht (`[match.prefix().first, match.prefix().second)`)|
+|"$\`" (Dollarzeichen gefolgt von backanführungs Zeichen)||Die Zeichensequenz, die der Untersequenz vorausgeht, die dem regulären Ausdruck entspricht (`[match.prefix().first, match.prefix().second)`)|
 |"$ '" (Dollarzeichen gefolgt vom Vorwärtsanführungszeichen)||Die Zeichensequenz, die der Untersequenz folgt, die dem regulären Ausdruck entspricht (`[match.suffix().first, match.suffix().second)`)|
-|"$n"|"\n"|Die Zeichensequenz, die die Erfassungsgruppe in Position entspricht `n`, wobei `n` ist eine Zahl zwischen 0 und 9 (`[match[n].first, match[n].second)`)|
+|"$n"|"\n"|Die Zeichen Sequenz, die der Erfassungs Gruppe an `n`der Position `n` entspricht, wobei eine Zahl zwischen 0 und`[match[n].first, match[n].second)`9 () ist.|
 ||"\\\n"|"\n"|
-|"$nn"||Die Zeichensequenz, die die Erfassungsgruppe in Position entspricht `nn`, wobei `nn` ist eine Zahl zwischen 10 und 99 (`[match[nn].first, match[nn].second)`)|
+|"$nn"||Die Zeichen Sequenz, die der Erfassungs Gruppe an `nn`der Position `nn` entspricht, wobei eine Zahl zwischen 10 und`[match[nn].first, match[nn].second)`99 () ist.|
 
 ## <a name="see-also"></a>Siehe auch
 
-[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)<br/>
+[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)

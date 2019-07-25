@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: f2c04bb73bfa379ea87ba4c950bf805931c16ba1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8eb497e6a4380affd0f13f41c7b55990c562b7d3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245567"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453658"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -25,7 +25,7 @@ Definiert die Containervorlagenklasseliste und einige unterstützende Vorlagen.
 ```
 
 > [!NOTE]
-> Die \<Liste > Bibliothek verwendet auch die `#include <initializer_list>` Anweisung.
+> Die \<Liste > Bibliothek verwendet auch die `#include <initializer_list>` -Anweisung.
 
 ## <a name="members"></a>Member
 
@@ -54,6 +54,6 @@ Definiert die Containervorlagenklasseliste und einige unterstützende Vorlagen.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)
