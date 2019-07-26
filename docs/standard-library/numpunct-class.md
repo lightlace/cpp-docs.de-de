@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371476"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454187"
 ---
 # <a name="numpunct-class"></a>numpunct-Klasse
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*<br/>
+*CharType*\
 Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
 ## <a name="remarks"></a>Hinweise
@@ -76,7 +76,7 @@ Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen
 |-|-|
 |[decimal_point](#decimal_point)|Gibt ein gebietsschemaspezifisches Element zurück, das als Dezimaltrennzeichen verwendet werden soll.|
 |[do_decimal_point](#do_decimal_point)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um ein gebietsschemaspezifisches Element zurückzugeben, das als Dezimaltrennzeichen verwendet werden soll.|
-|[do_falsename](#do_falsename)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge, die als eine Textdarstellung des Werts verwendet zurückzugeben **"false"**.|
+|[do_falsename](#do_falsename)|Eine geschützte virtuelle Member-Funktion, die aufgerufen wird, um eine Zeichenfolge zurückzugeben, die als Textdarstellung des Werts **false**verwendet werden soll.|
 |[do_grouping](#do_grouping)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine gebietsschemaspezifische Regel zur Bestimmung zurückzugeben, wie Ziffern auf der linken Seite eines Dezimaltrennzeichens gruppiert werden.|
 |[do_thousands_sep](#do_thousands_sep)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um ein gebietsschemaspezifisches Element zurückzugeben, das als Tausendertrennzeichen verwendet werden soll.|
 |[do_truename](#do_truename)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge zurückzugeben, die als Textdarstellung des Werts **TRUE** verwendet werden soll.|
@@ -200,7 +200,7 @@ Die geschützte virtuelle Memberfunktion gibt eine gebietsschemaspezifische Rege
 
 ### <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [gruppieren](#grouping), bei dem die virtuelle Memberfunktion, indem aufgerufen wird `grouping`.
+Siehe das Beispiel für die [Gruppierung](#grouping), bei der die Funktion des virtuellen Members `grouping`von aufgerufen wird.
 
 ## <a name="do_thousands_sep"></a> numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ Gibt ein gebietsschemaspezifisches Element zurück, das als Tausendertrennzeiche
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Memberfunktion gibt ein gebietsschemaspezifisches Element des Typs `CharType` als Gruppentrennzeichen auf der linken Seite eines Dezimaltrennzeichens verwenden.
+Die geschützte virtuelle Member-Funktion gibt ein Gebiets Schema spezifisches Element vom `CharType` Typ zurück, das auf der linken Seite eines Dezimal Trennzeichens als Gruppen Trennzeichen verwendet werden soll.
 
 ### <a name="example"></a>Beispiel
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Eine Zeichenfolge, die eine Sequenz von `CharType`e zur Verwendung als eine Textdarstellung des Werts **"false"**.
+Eine Zeichenfolge mit einer Sequenz `CharType`von s, die als Textdarstellung des Werts **false**verwendet werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -345,14 +345,14 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs*<br/>
+*_Refs*\
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
+Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebiets Schemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
@@ -360,7 +360,7 @@ Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **Locale::**[Facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [](../standard-library/locale-class.md#facet_class)Face(`_Refs`).
 
 ## <a name="string_type"></a> numpunct::string_type
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Facet-Klasse](../standard-library/locale-class.md#facet_class)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet-Klasse](../standard-library/locale-class.md#facet_class)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
