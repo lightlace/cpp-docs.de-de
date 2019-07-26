@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: e5e658f16657c0021b78175e87d122a3accd11eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64694f2428c1dd536df4d242a17f3f011cfb290c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411165"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456523"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference-Klasse
 
@@ -29,14 +29,14 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parameter
 
-*T*<br/>
+*BUND*\
 Der zu ändernde Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Die `add_rvalue_reference` -Klasse verfügt über ein Element mit dem Namen `type`, d.h. ein Alias für den Typ des Rvalue-Verweis auf die Template-Parameter *T*. Die Semantik der verweisreduzierung impliziert, dass für nicht-Objekt und nicht-Funktion *T*, `T&&` ist eine *T*. Zum Beispiel wenn *T* ist ein Lvalue-Verweistyp, `add_rvalue_reference<T>::type` Lvalue-Verweistyp nicht in einen Rvalue-Verweis ist.
+Die `add_rvalue_reference` -Klasse verfügt über einen `type`Member mit dem Namen, bei dem es sich um einen Alias für den Typ eines Rvalue-Verweises auf den Vorlagen Parameter *T*handelt. Die Semantik der Verweis Reduzierung impliziert, dass für nicht-Objekt-und nicht-Funktions Typen t `T&&` ein *t*ist. Wenn *T* beispielsweise ein Lvalue-Verweistyp ist, `add_rvalue_reference<T>::type` ist der lvalue-Verweistyp und kein rvalue-Verweis.
 
-Der Einfachheit halber \<Type_traits > eine hilfsprogrammvorlage definiert `add_rvalue_reference_t`, die Aliase der `type` Mitglied `add_rvalue_reference`.
+Zur einfacheren Handhabung definiert `add_rvalue_reference_t` `type` `add_rvalue_reference`type_traits > eine hilfsvorlage,, die das Element von Alias Aliase. \<
 
 ## <a name="example"></a>Beispiel
 
@@ -73,10 +73,10 @@ All static_assert tests of add_rvalue_reference passed.
 
 Header: \<type_traits>
 
-Namespace: std
+Namespace: Std
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_lvalue_reference-Klasse](../standard-library/add-lvalue-reference-class.md)<br/>
-[is_rvalue_reference-Klasse](../standard-library/is-rvalue-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_lvalue_reference-Klasse](../standard-library/add-lvalue-reference-class.md)\
+[is_rvalue_reference-Klasse](../standard-library/is-rvalue-reference-class.md)
