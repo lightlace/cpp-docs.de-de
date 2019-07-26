@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.openlocfilehash: d1405062ef553dbfea3b60b5f39e0546707343b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f663034cdc7985dd440a1cdfdd659358c4e250f4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412071"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458587"
 ---
 # <a name="thread-class"></a>thread-Klasse
 
@@ -42,7 +42,7 @@ class thread;
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können eine **Thread** Objekt zum Überwachen und Verwalten eines Ausführungsthreads innerhalb einer Anwendung. Ein Threadobjekt, das mithilfe eines Standardkonstruktors erstellt wird, ist keinem Ausführungsthread zugeordnet. Mit einem Threadobjekt, das mithilfe eines aufrufbaren Objekts erstellt wird, wird ein neuer Ausführungsthread erstellt, und das aufrufbare Objekt in diesem Thread wird aufgerufen. Threadobjekte können verschoben aber nicht kopiert werden. Daher kann ein Ausführungsthread nur einem Threadobjekt zugeordnet werden.
+Sie können ein **Thread** Objekt verwenden, um einen Ausführungs Thread innerhalb einer Anwendung zu überwachen und zu verwalten. Ein Threadobjekt, das mithilfe eines Standardkonstruktors erstellt wird, ist keinem Ausführungsthread zugeordnet. Mit einem Threadobjekt, das mithilfe eines aufrufbaren Objekts erstellt wird, wird ein neuer Ausführungsthread erstellt, und das aufrufbare Objekt in diesem Thread wird aufgerufen. Threadobjekte können verschoben aber nicht kopiert werden. Daher kann ein Ausführungsthread nur einem Threadobjekt zugeordnet werden.
 
 Jeder Ausführungsthread besitzt einen eindeutigen Bezeichner des Typs `thread::id`. Die `this_thread::get_id`-Funktion gibt den Bezeichner des aufrufenden Threads zurück. Die `thread::get_id`-Memberfunktion gibt den Bezeichner des von einem Threadobjekt verwalteten Threads zurück. Ein nach Standard erstelltes Threadobjekt gibt die `thread::get_id`-Methode ein Objekt zurück, das über einen Wert verfügt, der für alle nach Standard erstellten Threadobjekte gleich ist und sich von dem von `this_thread::get_id` zurückgegebenen Wert für jeden Ausführungsthread, der zum Zeitpunkt des Aufrufs verknüpft werden kann, unterschiedet.
 
@@ -58,25 +58,25 @@ Jeder Ausführungsthread besitzt einen eindeutigen Bezeichner des Typs `thread::
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[thread](#thread)|Erstellt eine **Thread** Objekt.|
+|[thread](#thread)|Erstellt ein **Thread** Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[detach](#detach)|Trennt den zugeordneten Thread aus dem **Thread** Objekt.|
+|[Trennen](#detach)|Trennt den zugeordneten Thread vom **Thread** Objekt.|
 |[get_id](#get_id)|Gibt den eindeutigen Bezeichner des zugeordneten Threads zurück.|
 |[hardware_concurrency](#hardware_concurrency)|Statisch Gibt eine Schätzung der Anzahl von Hardwarethreadkontexten zurück.|
 |[join](#join)|Blockiert, bis der zugeordnete Thread abgeschlossen ist.|
 |[joinable](#joinable)|Gibt an, ob dem zugehörigen Thread beigetreten werden kann.|
 |[native_handle](#native_handle)|Gibt den implementierungsspezifischen Typ zurück, der das Threadhandle darstellt.|
-|[swap](#swap)|Tauscht den Objektzustand mit einem angegebenen **Thread** Objekt.|
+|[swap](#swap)|Tauscht den Objektzustand mit einem angegebenen **Thread** Objekt aus.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[thread::operator=](#op_eq)|Weist einem Thread mit der aktuellen **Thread** Objekt.|
+|[thread::operator=](#op_eq)|Ordnet dem aktuellen **Thread** Objekt einen Thread zu.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,7 +84,7 @@ Jeder Ausführungsthread besitzt einen eindeutigen Bezeichner des Typs `thread::
 
 **Namespace:** std
 
-## <a name="detach"></a>  Thread:: Detach
+## <a name="detach"></a>Thread::d Etach
 
 Trennt den zugeordneten Thread. Das Betriebssystem wird zum Freigeben von Threadressourcen zuständig.
 
@@ -100,7 +100,7 @@ Wenn der Thread, der dem aufrufenden Objekt zugeordnet ist, nicht beitreten kann
 
 Wenn der Thread, der dem aufrufenden Objekt zugeordnet ist, ungültig ist, löst die Funktion einen `system_error` mit Fehlercode `no_such_process` aus.
 
-## <a name="get_id"></a>  Thread:: get_id
+## <a name="get_id"></a>Thread:: get_id
 
 Gibt den eindeutigen Bezeichner für den zugeordneten Threads zurück.
 
@@ -112,7 +112,7 @@ id get_id() const noexcept;
 
 Ein [thread::id](#id_class)-Objekt, das den zugeordneten Thread eindeutig ausweist, oder `thread::id()`, wenn kein Thread dem Objekt zugeordnet ist.
 
-## <a name="hardware_concurrency"></a>  Thread:: hardware_concurrency
+## <a name="hardware_concurrency"></a>Thread:: hardware_concurrency
 
 Statische Methode, diet eine Schätzung der Anzahl von Hardwarethreadkontexten zurückgibt.
 
@@ -140,7 +140,7 @@ Der Standardkonstruktor erstellt ein Objekt, das nicht gleich dem `thread::id`-O
 
 Alle mit dem Standwert konstruierten `thread::id`-Objekte gelten als gleich.
 
-## <a name="join"></a>  Thread:: Join
+## <a name="join"></a>Thread:: Join
 
 Blockiert, bis der Thread der Ausführung, der das aufrufende Objekt zugeordnet wurde, abgeschlossen ist.
 
@@ -152,7 +152,7 @@ void join();
 
 Wenn der Aufruf erfolgreich ist, geben nachfolgende Aufrufe von [get_id](#get_id) für das aufrufende Objekt eine Standard-[Thread:: ID](#id_class) zurück, die nicht gleich `thread::id` eines beliebigen vorhandenen Threads ist. Wenn der Aufruf nicht erfolgreich ist, ist der Wert, der von `get_id` zurückgegeben wird, unverändert.
 
-## <a name="joinable"></a>  Thread:: joinable
+## <a name="joinable"></a>Thread:: joinable
 
 Gibt an, ob dem zugeordneten Thread *beigetreten* werden kann.
 
@@ -162,13 +162,13 @@ bool joinable() const noexcept;
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** ist der zugeordnete Thread *beigetreten*ist, andernfalls **"false"**.
+**true** , wenn der zugeordnete Thread verknüpft werden *kann*. andernfalls **false**.
 
 ### <a name="remarks"></a>Hinweise
 
 Einem Thread-Objekt kann *beigetreten* werden, wenn `get_id() != id()`.
 
-## <a name="native_handle"></a>  Thread:: native_handle
+## <a name="native_handle"></a>Thread:: native_handle
 
 Gibt den implementierungsspezifischen Typ zurück, der das Threadhandle darstellt. Das Threadhandle kann je nach Implementierung auf die jeweils entsprechende Weise verwendet werden.
 
@@ -190,7 +190,7 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Andere*<br/>
+*Außer*\
 Ein **Thread** Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -203,9 +203,9 @@ Die Methodenaufrufe trennen, wenn dem aufrufenden Objekt beigetreten werden kann
 
 Nach dem Erstellen die Zuordnung wird `Other` auf einen standardmäßig konstruierten Zustand festgelegt.
 
-## <a name="swap"></a>  Thread:: Swap
+## <a name="swap"></a>Thread:: Swap
 
-Tauscht den Objektzustand mit dem eines angegebenen **Thread** Objekt.
+Tauscht den Objektzustand mit dem eines angegebenen **Thread** Objekts aus.
 
 ```cpp
 void swap(thread& Other) noexcept;
@@ -213,12 +213,12 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Andere*<br/>
+*Außer*\
 Ein **Thread** Objekt.
 
 ## <a name="thread"></a> thread::thread-Konstruktor
 
-Erstellt eine **Thread** Objekt.
+Erstellt ein **Thread** Objekt.
 
 ```cpp
 thread() noexcept;
@@ -230,24 +230,24 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*F*<br/>
+*C*\
 Eine anwendungsdefinierte Funktion, die vom Thread ausgeführt werden soll.
 
-*A*<br/>
-Eine Liste der zu übergebenden Argumente *F*.
+*EIN*\
+Eine Liste von Argumenten, die an *F*übermittelt werden sollen.
 
-*Andere*<br/>
-Eine vorhandene **Thread** Objekt.
+*Außer*\
+Ein vorhandenes **Thread** Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
 Der erste Konstruktor erstellt ein Objekt, das nicht einem Thread der Ausführung zugeordnet ist. Der Wert, der durch einen Aufruf von `get_id` für das erstellte Objekt zurückgegeben wird, ist `thread::id()`.
 
-Der zweite Konstruktor erstellt ein Objekt, das einem neuen Thread der Ausführung zugeordnet ist und die Pseudofunktion `INVOKE` ausführt, die in [\<functional>](../standard-library/functional.md) definiert ist. Wenn nicht genügend Ressourcen zum Starten eines neuen Threads verfügbar sind, löst die Funktion ein [system_error](../standard-library/system-error-class.md)-Objekt mit dem Fehlercode `resource_unavailable_try_again` aus. Wenn der Aufruf von *F* wird mit einer nicht abgefangenen Ausnahme beendet [beenden](../standard-library/exception-functions.md#terminate) aufgerufen wird.
+Der zweite Konstruktor erstellt ein Objekt, das einem neuen Thread der Ausführung zugeordnet ist und die Pseudofunktion `INVOKE` ausführt, die in [\<functional>](../standard-library/functional.md) definiert ist. Wenn nicht genügend Ressourcen zum Starten eines neuen Threads verfügbar sind, löst die Funktion ein [system_error](../standard-library/system-error-class.md)-Objekt mit dem Fehlercode `resource_unavailable_try_again` aus. Wenn der Aufruf von *F* mit einer nicht abgefangenen Ausnahme beendet wird, wird [Beenden](../standard-library/exception-functions.md#terminate) aufgerufen.
 
 Der dritte Konstruktor erstellt ein Objekt, das mit dem Thread verknüpft ist, der `Other` zugeordnet ist. `Other` wird dann auf einen standardmäßig konstruierten Zustand festgelegt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<thread>](../standard-library/thread.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[\<thread>](../standard-library/thread.md)

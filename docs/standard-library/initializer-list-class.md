@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: de925f73ac206113aafb8661a8d5b347503150c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acd11f3b3a3bf0ba17e34a802cc8988410e17b12
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159300"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455361"
 ---
 # <a name="initializerlist-class"></a>initializer_list-Klasse
 
@@ -34,7 +34,7 @@ class initializer_list
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Type*|Der in `initializer_list` zu speichernde Elementdatentyp.|
+|*Typ*|Der in `initializer_list` zu speichernde Elementdatentyp.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -116,8 +116,8 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Erste*|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|
-|*letzte*|Die Position des ersten Elements nach dem zu kopierenden Elementbereich.|
+|*Erstes*|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|
+|*Letzten*|Die Position des ersten Elements nach dem zu kopierenden Elementbereich.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -202,4 +202,4 @@ Die Anzahl von Elementen in der Liste.
 
 ## <a name="see-also"></a>Siehe auch
 
-[<forward_list>](../standard-library/forward-list.md)<br/>
+[<forward_list>](../standard-library/forward-list.md)

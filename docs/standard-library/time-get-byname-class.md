@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-ms.openlocfilehash: e18f210dba03d66fa3a4ea111a6dfc61f0d0c12a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b466f8a893a14f7a94ee7b9e54b72e43aa6cf6e3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412006"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460027"
 ---
 # <a name="timegetbyname-class"></a>time_get_byname-Klasse
 
@@ -40,15 +40,15 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-*_Locname*<br/>
+*_Locname*\
 Ein benanntes Gebietsschema.
 
-*_Refs*<br/>
+*_Refs*\
 Eine initiale Verweisanzahl.
 
 ## <a name="requirements"></a>Anforderungen
 
-Das Verhalten wird durch das benannte Gebietsschema bestimmt *_Locname*. Alle Konstruktoren initialisieren ihr jeweiliges Basisobjekt mit [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).
+Das Verhalten wird durch das benannte Gebiets Schema *_Locname*festgelegt. Alle Konstruktoren initialisieren ihr jeweiliges Basisobjekt mit [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,4 +58,4 @@ Das Verhalten wird durch das benannte Gebietsschema bestimmt *_Locname*. Alle Ko
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

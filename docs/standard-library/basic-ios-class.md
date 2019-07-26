@@ -55,16 +55,16 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-ms.openlocfilehash: c22e048d01665deed83a9474525f414dfd874fe0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2341dcc0f2f03fbfa212d1ea49993016e193638
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400655"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460107"
 ---
 # <a name="basicios-class"></a>basic_ios-Klasse
 
-Die Vorlagenklasse beschreibt die Speicher- und Memberfunktionen, die sowohl Eingabestreams (der Vorlagenklasse [basic_istream](../standard-library/basic-istream-class.md)) als auch Ausgabestreams (der Vorlagenklasse [basic_ostream](../standard-library/basic-ostream-class.md)) gemeinsam sind, die von den Vorlagenparametern abhängen. (Die Klasse [ios_base](../standard-library/ios-base-class.md) beschreibt, welche Funktionen gemeinsam und nicht von Vorlagenparametern abhängig sind.) Ein Objekt der Klasse **Basic_ios\<class Elem, class Traits >** steuert einen Stream mit Elementen des Typs `Elem`, dessen Zeichenmerkmale von der Klasse ermittelt werden `Traits`.
+Die Vorlagenklasse beschreibt die Speicher- und Memberfunktionen, die sowohl Eingabestreams (der Vorlagenklasse [basic_istream](../standard-library/basic-istream-class.md)) als auch Ausgabestreams (der Vorlagenklasse [basic_ostream](../standard-library/basic-ostream-class.md)) gemeinsam sind, die von den Vorlagenparametern abhängen. (Die Klasse [ios_base](../standard-library/ios-base-class.md) beschreibt, welche Funktionen gemeinsam und nicht von Vorlagenparametern abhängig sind.) Ein Objekt der Klasse **basic_ios\<Class Elem, Class Merkmalen >** unterstützt die Steuerung eines Streams mit Elementen `Elem`des Typs, dessen Zeichen Merkmale von der Klasse `Traits`bestimmt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -76,19 +76,19 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Parameter
 
-*Elem*<br/>
+*Elem*\
 Ein Typ.
 
-*Merkmale*<br/>
+*Aufweisen*\
 Eine Variable des Typs `char_traits`.
 
 ## <a name="remarks"></a>Hinweise
 
 Ein Objekt der Klasse **basic_ios\<class Elem, class Traits>** speichert Folgendes:
 
-- Einen tie-Zeiger auf ein Objekt des Typs [basic_istream](../standard-library/basic-istream-class.md)**\<Elem, Traits>**.
+- Einen tie-Zeiger auf ein Objekt des Typs [basic_istream](../standard-library/basic-istream-class.md) **\<Elem, Traits>** .
 
-- Einen Streampufferzeiger auf ein Objekt des Typs [basic_streambuf](../standard-library/basic-streambuf-class.md)**\<Elem, Traits >**.
+- Einen Streampufferzeiger auf ein Objekt des Typs [basic_streambuf](../standard-library/basic-streambuf-class.md) **\<Elem, Traits >** .
 
 - [Formatierungsinformationen](../standard-library/ios-base-class.md).
 
@@ -140,7 +140,7 @@ Ein Objekt der Klasse **basic_ios\<class Elem, class Traits>** speichert Folgend
 
 |Operator|Beschreibung|
 |-|-|
-|[explicit operator bool](#op_bool)|Ermöglicht die Verwendung von einem `basic_ios` als Objekt ein **"bool"**. Die automatische Typkonvertierung wird deaktiviert, um häufig vorkommende unbeabsichtigte Nebeneffekte zu verhindern.|
+|[explicit operator bool](#op_bool)|Ermöglicht die Verwendung `basic_ios` eines-Objekts als **bool**. Die automatische Typkonvertierung wird deaktiviert, um häufig vorkommende unbeabsichtigte Nebeneffekte zu verhindern.|
 |[operator void *](#op_void_star)|Gibt an, ob der Stream weiterhin brauchbar ist.|
 |[operator!](#op_not)|Gibt an, ob der Stream nicht unbrauchbar ist.|
 
@@ -160,7 +160,7 @@ bool bad() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn `rdstate & badbit` ungleich NULL ist; andernfalls **"false"**.
+**true** , `rdstate & badbit` Wenn ungleich NULL ist, andernfalls **false**.
 
 Weitere Informationen zu `badbit` finden Sie unter [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
@@ -194,12 +194,12 @@ basic_ios();
 
 ### <a name="parameters"></a>Parameter
 
-*sb*<br/>
+*SB*\
 Standardpuffer zum Speichern von Eingabe- oder Ausgabeelementen.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert die Memberobjekte durch Aufrufen von [init](#init)(_ *Sb*). Der zweite (geschützte) Konstruktor initialisiert seine Memberobjekte nicht. Ein späterer Aufruf von `init` muss das Objekt initialisieren, bevor es sicher zerstört werden kann.
+Der erste Konstruktor initialisiert die Memberobjekte durch Aufrufen von [init](#init)(_ *Sb*). Der zweite (geschützte) Konstruktor initialisiert seine Memberobjekte nicht. Ein späterer- `init` Rückruf muss das-Objekt initialisieren, bevor es sicher zerstört werden kann.
 
 ## <a name="char_type"></a> basic_ios::char_type
 
@@ -220,25 +220,25 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Parameter
 
-*state*<br/>
-(Optional) Die Flags, die Sie nach dem Löschen aller Flags festlegen möchten. Wird standardmäßig auf `goodbit` festgelegt.
+*Land*\
+Optionale Die Flags, die Sie nach dem Löschen aller Flags festlegen möchten. Wird standardmäßig auf `goodbit` festgelegt.
 
-*reraise*<br/>
-(Optional) Gibt an, ob die Ausnahme erneut ausgelöst werden soll. Standardmäßig **"false"** (wird nicht erneut auslösen die Ausnahme).
+*Reraise*\
+Optionale Gibt an, ob die Ausnahme erneut ausgelöst werden soll. Der Standardwert ist **false** (die Ausnahme wird nicht erneut ausgelöst).
 
 ### <a name="remarks"></a>Hinweise
 
-Die Flags sind `goodbit`, `failbit`, `eofbit`, und `badbit`. Testen Sie auf diese Flags mit [good](#good), [bad](#bad), [eof](#eof) und [fail](#fail).
+Die Flags `goodbit`lauten, `failbit`, `eofbit`und. `badbit` Testen Sie auf diese Flags mit [good](#good), [bad](#bad), [eof](#eof) und [fail](#fail).
 
 Die Memberfunktion ersetzt die gespeicherten Informationen zum Streamstatus durch:
 
 `state` &#124; `(`[rdbuf](#rdbuf) != 0 **goodbit** : **badbit**)
 
-Wenn `state`**&**[exceptions](#exceptions) ungleich null ist, wird ein Objekt der Klasse [failure](../standard-library/ios-base-class.md#failure) ausgelöst.
+Wenn `state` **&** [exceptions](#exceptions) ungleich null ist, wird ein Objekt der Klasse [failure](../standard-library/ios-base-class.md#failure) ausgelöst.
 
 ### <a name="example"></a>Beispiel
 
-Finden Sie unter [Rdstate](#rdstate) und [Getline](../standard-library/string-functions.md#getline) Beispiele zur Verwendung `clear`.
+Beispiele für die Verwendung von finden Sie `clear`unter [Rdstate](#rdstate) und [getline](../standard-library/string-functions.md#getline) .
 
 ## <a name="copyfmt"></a> basic_ios::copyfmt
 
@@ -251,7 +251,7 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Der Stream, dessen Flags Sie kopieren möchten.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -260,7 +260,7 @@ Das **this**-Objekt für den Stream, in den Sie die Flags kopieren möchten.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt das Rückrufereignis **löschen\_Ereignis**. Anschließend kopiert aus *rechten* in  **\*dies** das Füllzeichen, den Tie-Zeiger und der Formatierungsinformationen. Vor dem Ändern der ausnahmemaske, meldet er das Rückrufereignis `copyfmt_event`. Wenn **state &**[exceptions](#exceptions) nach Abschluss der Kopie ungleich null ist, ruft die Funktion effektiv [clear](#clear) mit dem Argument [rdstate](#rdstate) auf. Sie gibt **\*this** zurück.
+Die Member-Funktion meldet das **Ereignis zum\_löschen**von Rückruf Ereignissen. Anschließend werden Sie von *Rechts* in  **\*das** Füll Zeichen, den Tie-Zeiger und die Formatierungsinformationen kopiert. Vor dem Ändern der Ausnahme Maske meldet Sie das Rückruf Ereignis `copyfmt_event`. Wenn **state &** [exceptions](#exceptions) nach Abschluss der Kopie ungleich null ist, ruft die Funktion effektiv [clear](#clear) mit dem Argument [rdstate](#rdstate) auf. Sie gibt **\*this** zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -293,11 +293,11 @@ bool eof() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn das Ende des Streams erreicht wurde, **"false"** andernfalls.
+**true** , wenn das Ende des Streams erreicht wurde, andernfalls **false** .
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt **"true"** Wenn [Rdstate](#rdstate) `& eofbit` ungleich NULL ist. Weitere Informationen zu `eofbit` finden Sie unter [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
+Die Member-Funktion gibt **true** zurück, wenn [Rdstate](#rdstate) `& eofbit` ungleich 0 (null) ist. Weitere Informationen zu `eofbit` finden Sie unter [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
 ### <a name="example"></a>Beispiel
 
@@ -333,7 +333,7 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Parameter
 
-*Newexcept*<br/>
+*"Netwexcept"* \
 Die Flags, die eine Ausnahme auslösen sollen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -390,7 +390,7 @@ bool fail() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn [Rdstate](#rdstate) `& (badbit|failbit)` ungleich NULL ist, andernfalls **"false"**.
+**true** , wenn [Rdstate](#rdstate) `& (badbit|failbit)` ungleich 0 (null) ist, andernfalls **false**.
 
 Weitere Informationen zu `failbit` finden Sie unter [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
@@ -421,7 +421,7 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Parameter
 
-*Char*<br/>
+*Char*\
 Das Zeichen, das als das Füllzeichen dienen soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -430,7 +430,7 @@ Das aktuelle Füllzeichen.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Memberfunktion gibt die gespeicherten Füllzeichen zurück. Die zweite Memberfunktion speichert *Char* in den Füllzeichen und gibt den zuletzt gespeicherten Wert zurück.
+Die erste Memberfunktion gibt die gespeicherten Füllzeichen zurück. Die zweite Member-Funktion speichert *char* im Füll Zeichen und gibt den vorherigen gespeicherten Wert zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -467,7 +467,7 @@ bool good() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn [Rdstate](#rdstate) `== goodbit` (keine Statusflags festgelegt), andernfalls **"false"**.
+**true** , wenn [Rdstate](#rdstate) `== goodbit` (keine Statusflags festgelegt sind), andernfalls **false**.
 
 Weitere Informationen zu `goodbit` finden Sie unter [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
@@ -485,7 +485,7 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Parameter
 
-*Loc*<br/>
+*A.a.o.* \
 Eine lokale Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -528,10 +528,10 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Parameter
 
-*_Sb*<br/>
+*_Sb*\
 Standardpuffer zum Speichern von Eingabe- oder Ausgabeelementen.
 
-*_Isstd*<br/>
+*_Isstd*\
 Gibt an, ob es sich um einen Standardstream handelt.
 
 ### <a name="remarks"></a>Hinweise
@@ -542,9 +542,9 @@ Die Memberfunktion speichert Werte in allen Memberobjekten, sodass:
 
 - [tie](#tie) einen NULL-Zeiger zurückgibt.
 
-- [Rdstate](#rdstate) gibt [Goodbit](../standard-library/ios-base-class.md#iostate) Wenn *_Sb* ungleich NULL ist; andernfalls gibt [Badbit](../standard-library/ios-base-class.md#iostate).
+- [Rdstate](#rdstate) gibt [Goodbit](../standard-library/ios-base-class.md#iostate) zurück, wenn *_Sb* nicht NULL ist. Andernfalls wird [Badbit](../standard-library/ios-base-class.md#iostate)zurückgegeben.
 
-- [Ausnahmen](#exceptions) gibt `goodbit`.
+- [Ausnahmen](#exceptions) gibt `goodbit`zurück.
 
 - [flags](../standard-library/ios-base-class.md#flags) [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags) zurückgibt.
 
@@ -576,12 +576,12 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Das `ios_base`-Objekt, aus dem Werte verschoben werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Memberfunktion verschiebt alle Werte, die in gespeicherten *rechten* zu `*this` mit Ausnahme des gespeicherten `stream buffer pointer`, die unverändert ist, in *rechten* und legen Sie auf ein null-Zeiger in `*this`. Das gespeicherte `tie pointer` nastaven NA hodnotu null-Zeiger in *rechten*.
+Die geschützte Member-Funktion verschiebt `*this` *alle in gespeicherten* Werte mit Ausnahme des gespeicherten `stream buffer pointer`, das in der *rechten* Ecke unverändert ist und auf einen NULL-Zeiger `*this`in festgelegt ist. Der gespeicherte `tie pointer` wird auf einen NULL-Zeiger in der *rechten*Ecke festgelegt.
 
 ## <a name="narrow"></a> basic_ios::narrow
 
@@ -593,19 +593,19 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Parameter
 
-*Char*<br/>
-Die **Char** konvertieren.
+*Char*\
+Der zu konvertierende **char** .
 
-*Default*<br/>
-Die **Char** , zurückgegeben werden sollen, wenn keine Entsprechung gefunden wird.
+*Default*\
+Der **char** -Wert, der zurückgegeben werden soll, wenn keine Entsprechung gefunden wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die entsprechende **Char** zu einer bestimmten `char_type`.
+Das entsprechende **char** zu einem angegebenen `char_type`.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt [Use_facet](../standard-library/basic-filebuf-class.md#open)\<Ctype\<E >> ( [Getloc](../standard-library/ios-base-class.md#getloc)()).`narrow` ( `Char`, `Default`).
+Die Member-Funktion gibt [Use_facet](../standard-library/basic-filebuf-class.md#open)\<CType\<E > > ( [getloc](../standard-library/ios-base-class.md#getloc)())`narrow` zurück. ( `Char`, `Default`).
 
 ### <a name="example"></a>Beispiel
 
@@ -698,7 +698,7 @@ int main( )
 
 ## <a name="op_bool"></a> basic_ios::operator bool
 
-Ermöglicht die Verwendung von einem `basic_ios` als Objekt ein **"bool"**. Die automatische Typkonvertierung wird deaktiviert, um häufig vorkommende unbeabsichtigte Nebeneffekte zu verhindern.
+Ermöglicht die Verwendung `basic_ios` eines-Objekts als **bool**. Die automatische Typkonvertierung wird deaktiviert, um häufig vorkommende unbeabsichtigte Nebeneffekte zu verhindern.
 
 ```cpp
 explicit operator bool() const;
@@ -706,7 +706,7 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Operator gibt einen Wert konvertiert werden kann, um **"false"** nur, wenn `fail()`. Der Rückgabetyp ist in nur **"bool"**, nicht zu `void *` oder anderen bekannten skalaren Typen.
+Der-Operator gibt einen Wert zurück  , der nur `fail()`bei false konvertiert werden soll. Der Rückgabetyp kann nur in den booleschen `void *` Wert konvertiert werden, nicht in den oder einen anderen bekannten skalaren Typ.
 
 ## <a name="pos_type"></a> basic_ios::pos_type
 
@@ -728,14 +728,14 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Parameter
 
-*_Sb*<br/>
+*_Sb*\
 Ein Stream.
 
 ### <a name="remarks"></a>Hinweise
 
 Die erste Memberfunktion gibt den gespeicherten Streampufferzeiger zurück.
 
-Die zweite Memberfunktion speichert *_Sb* in den gespeicherten streampufferzeiger und gibt den zuvor gespeicherten Wert zurück.
+Die zweite Member-Funktion speichert *_Sb* im gespeicherten streampufferzeiger und gibt den zuvor gespeicherten Wert zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -820,7 +820,7 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Parameter
 
-*_State*<br/>
+*_State*\
 Zusätzlich festzulegende Flags.
 
 ### <a name="remarks"></a>Hinweise
@@ -870,12 +870,12 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Parameter
 
-*strbuf*<br/>
+*strbuf*\
 Der Streampuffer, der zum Lesepuffer werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Memberfunktion speichert *Strbuf* in die `stream buffer pointer`. Wird nicht aufgerufen `clear`.
+Die geschützte Member-Funktion speichert " *strinbuf* " in der `stream buffer pointer`. Es wird nicht aufgerufen `clear`.
 
 ## <a name="tie"></a> basic_ios::tie
 
@@ -889,12 +889,12 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Parameter
 
-*str*<br/>
+*SRT*\
 Ein Stream.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die erste Memberfunktion gibt den gespeicherten tie-Zeiger zurück. Die zweite Memberfunktion speichert *str* im Tie-Zeiger und gibt den zuletzt gespeicherten Wert.
+Die erste Memberfunktion gibt den gespeicherten tie-Zeiger zurück. Die zweite Member-Funktion speichert *Str* im Tie-Zeiger und gibt den vorherigen gespeicherten Wert zurück.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -928,7 +928,7 @@ typedef Traits traits_type;
 
 ## <a name="widen"></a> basic_ios::widen
 
-Sucht den entsprechenden `char_type` zu einem bestimmten **Char**.
+Sucht den entsprechenden `char_type` zu einem angegebenen **char**.
 
 ```cpp
 char_type widen(char Char) const;
@@ -936,12 +936,12 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Char*<br/>
+*Char*\
 Das zu konvertierende Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Sucht den entsprechenden `char_type` zu einem bestimmten **Char**.
+Sucht den entsprechenden `char_type` zu einem angegebenen **char**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -977,15 +977,15 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Das `basic_ios`-Objekt, das zum Austauschen von Werten verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Memberfunktion tauscht alle Werte, die in gespeicherten *rechten* mit `*this` mit Ausnahme des gespeicherten `stream buffer pointer`.
+Die geschützte Member-Funktion tauscht alle Werte, die in gespeichert `*this` sind, mit `stream buffer pointer`Ausnahme der *gespeicherten aus.*
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
-[iostreams-Konventionen](../standard-library/iostreams-conventions.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream-Programmierung](../standard-library/iostream-programming.md)\
+[iostreams-Konventionen](../standard-library/iostreams-conventions.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: 20191b84e4bbad760de1035fdb027fcbe827c874
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d409928de4bf66bcc6d6dda3008131f87e790c3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412942"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460168"
 ---
 # <a name="maxnone-class"></a>max_none-Klasse
 
@@ -72,7 +72,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion bleibt untätig. Sie wird aufgerufen, nach jedem erfolgreichen Aufruf von `cache_freelist::allocate` Operator **neue**. Das Argument *_Nx* ist die Anzahl der Speicherblöcke im Segment von Operator zugeordneten **neue**.
+Die Memberfunktion bleibt untätig. Sie wird nach jedem erfolgreichen Aufruf von `cache_freelist::allocate` für den **New**-Operator aufgerufen. Das Argument *_Nx* ist die Anzahl der Speicherblöcke in dem Block, der von Operator **New**zugeordnet wird.
 
 ## <a name="deallocated"></a> max_none::deallocated
 
@@ -90,7 +90,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion bleibt untätig. Diese Memberfunktion aufgerufen wird, nach jedem Aufruf von `cache_freelist::deallocate` Operator **löschen**. Das Argument *_Nx* ist die Anzahl der Speicherblöcke im Segment vom Operator aufgehoben **löschen**.
+Die Memberfunktion bleibt untätig. Diese Member-Funktion wird nach jedem Aufruf von `cache_freelist::deallocate` zum **Delete**-Operator aufgerufen. Das Argument *_Nx* gibt die Anzahl der Speicherblöcke in dem Block an, dessen Zuordnung durch den Operator **Delete**aufgehoben wird.
 
 ## <a name="full"></a> max_none::full
 
@@ -102,11 +102,11 @@ bool full();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Memberfunktion gibt immer zurück **"true"**.
+Diese Member-Funktion gibt immer **true**zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion wird von `cache_freelist::deallocate` aufgerufen. Wenn der Aufruf zurückgegeben **"true"**, `deallocate` den Speicherblock der Freiliste hinzugefügt; versetzt, wenn "false" zurückgegeben `deallocate` Aufrufe Operator **löschen** beim Aufheben der Zuordnung des Blocks.
+Diese Memberfunktion wird von `cache_freelist::deallocate` aufgerufen. Wenn der Aufruf **true**zurückgibt `deallocate` , wird der Speicherblock in die freie Liste eingefügt; Wenn false zurück `deallocate` gegeben wird, ruft der Operator Delete auf, um den Block zu **Entfernen** .
 
 ## <a name="released"></a> max_none::released
 
@@ -134,4 +134,4 @@ Die Memberfunktion bleibt untätig. Sie wird durch `cache_freelist::deallocate` 
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

@@ -9,16 +9,16 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: c44789c958b3fc24441b95178acc85ce3ba337fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377334"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456768"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt;-Operatoren
 
-Die \<Array >-Header enthält diese **Array** nicht-Member den vorlagenvergleich.
+Der \<Array >-Header schließt diese **Array** Funktionen für Vergleichs Vorlagen aus, die nicht Mitglied sind.
 
 ||||
 |-|-|-|
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der Typ eines Elements.
 
-*N*<br/>
+*NR*\
 Die Größe des Arrays.
 
-*left*<br/>
+*linken*\
 Linker zu vergleichender Container.
 
-*right*<br/>
+*Richting*\
 Rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
@@ -111,16 +111,16 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der Typ eines Elements.
 
-*N*<br/>
+*NR*\
 Die Größe des Arrays.
 
-*left*<br/>
+*linken*\
 Linker zu vergleichender Container.
 
-*right*<br/>
+*Richting*\
 Rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der Typ eines Elements.
 
-*N*<br/>
+*NR*\
 Die Größe des Arrays.
 
-*left*<br/>
+*linken*\
 Linker zu vergleichender Container.
 
-*right*<br/>
+*Richting*\
 Rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
@@ -257,16 +257,16 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der Typ eines Elements.
 
-*N*<br/>
+*NR*\
 Die Größe des Arrays.
 
-*left*<br/>
+*linken*\
 Linker zu vergleichender Container.
 
-*right*<br/>
+*Richting*\
 Rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der Typ eines Elements.
 
-*N*<br/>
+*NR*\
 Die Größe des Arrays.
 
-*left*<br/>
+*linken*\
 Linker zu vergleichender Container.
 
-*right*<br/>
+*Richting*\
 Rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der Typ eines Elements.
 
-*N*<br/>
+*NR*\
 Die Größe des Arrays.
 
-*left*<br/>
+*linken*\
 Linker zu vergleichender Container.
 
-*right*<br/>
+*Richting*\
 Rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
@@ -465,4 +465,4 @@ false
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

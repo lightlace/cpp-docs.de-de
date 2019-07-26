@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_unsigned class
 - is_unsigned
 ms.assetid: ba5bec3d-796b-4e54-8595-a3941ec6a8dc
-ms.openlocfilehash: fc27689eb367950daf9dfdf113e1472b0945f9af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3da9f71543815b507307f2cf4969e8f19c79e8c5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413423"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458879"
 ---
 # <a name="isunsigned-class"></a>is_unsigned-Klasse
 
@@ -27,12 +27,12 @@ struct is_unsigned;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ein Integraltyp ohne Vorzeichen ist oder ein `cv-qualified` vorzeichenloser Ganzzahltyp ist, andernfalls er false enthält.
+Eine Instanz des typprädikats ist "true",  wenn die typität ein ganzzahliger Typ `cv-qualified` ohne Vorzeichen oder ein ganzzahliger Typ ohne Vorzeichen ist; andernfalls "false".
 
 ## <a name="example"></a>Beispiel
 
@@ -77,5 +77,5 @@ is_unsigned<float> == false
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_signed-Klasse](../standard-library/is-signed-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_signed-Klasse](../standard-library/is-signed-class.md)

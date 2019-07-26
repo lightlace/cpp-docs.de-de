@@ -134,12 +134,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-ms.openlocfilehash: 34fb3e16dc7369526895a011c7e192d2f51edf14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 836b7f9b0116b41dad57c150f87faf2d41f8f8b9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278552"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454736"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset-Klasse
 
@@ -294,7 +294,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="remarks"></a>Hinweise
 
-Die beiden ersten Memberfunktionen geben einen Vorwärtsiterator zurück, der auf das erste Element der Sequenz zeigt (bzw. unmittelbar hinter das Ende einer leeren Sequenz). Die beiden letzten Memberfunktionen geben einen vorwärtsiterator zurück, der auf das erste Element des Buckets zeigt *Nbucket* (bzw. unmittelbar hinter das Ende eines leeren Buckets).
+Die beiden ersten Memberfunktionen geben einen Vorwärtsiterator zurück, der auf das erste Element der Sequenz zeigt (bzw. unmittelbar hinter das Ende einer leeren Sequenz). Die letzten zwei Member-Funktionen geben einen forward-Iterator zurück, der auf das erste Element des Bucket *nbucket* zeigt (oder direkt hinter dem Ende eines leeren Bucket).
 
 ### <a name="example"></a>Beispiel
 
@@ -350,7 +350,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyval*<br/>
+*keyVal*\
 Der zuzuordnende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -491,12 +491,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parameter
 
-*nbucket*<br/>
+*nbucket*\
 Die Bucketnummer.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt die Größe der bucketnummer *Nbucket*.
+Die Member-Funktionen gibt die Größe der Bucket-Nummer *nbucket*zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -539,7 +539,7 @@ bucket_size(7) == 1
 
 ## <a name="cbegin"></a> unordered_multiset::cbegin
 
-Gibt eine **const** -Iterator, der das erste Element im Bereich adressiert.
+Gibt einen **Konstanten** Iterator zurück, der das erste Element im Bereich adressiert.
 
 ```cpp
 const_iterator cbegin() const;
@@ -547,13 +547,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein **const** Forward-Access-Iterator, der zeigt auf das erste Element des Bereichs, oder die Position direkt hinter das Ende eines leeren Bereichs (für einen leeren Bereich gilt `cbegin() == cend()`).
+Ein **konstanter** Forward-Access-Iterator, der auf das erste Element des Bereichs zeigt oder die Position direkt hinter dem Ende eines leeren Bereichs (für einen leeren Bereich `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Hinweise
 
 Bei dem Rückgabewert `cbegin` können die Elemente im Bereich nicht geändert werden.
 
-Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel können Sie auch `Container` ein beliebiger änderbarer (nicht- **const**) Container jeder Art, die unterstützt `begin()` und `cbegin()`.
+Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. `Container` In diesem Beispiel sollte ein änderbarer (nicht **konstanter) Container**sein, der und `begin()` `cbegin()`unterstützt.
 
 ```cpp
 auto i1 = Container.begin();
@@ -565,7 +565,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a> unordered_multiset::cend
 
-Gibt eine **const** Iterator, der die Position direkt hinter dem letzten Element in einem Bereich.
+Gibt einen **Konstanten** Iterator zurück, der die Position direkt hinter dem letzten Element in einem Bereich adressiert.
 
 ```cpp
 const_iterator cend() const;
@@ -573,13 +573,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein **const** Forward-Access-Iterator, der direkt hinter das Ende des Bereichs verweist.
+Ein **konstanter** Forward-Access-Iterator, der direkt hinter das Ende des Bereichs zeigt.
 
 ### <a name="remarks"></a>Hinweise
 
 `cend` wird verwendet, um zu testen, ob ein Iterator das Ende seines Bereichs übergeben hat.
 
-Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel können Sie auch `Container` ein beliebiger änderbarer (nicht- **const**) Container jeder Art, die unterstützt `end()` und `cend()`.
+Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. `Container` In diesem Beispiel sollte ein änderbarer (nicht **konstanter) Container**sein, der und `end()` `cend()`unterstützt.
 
 ```cpp
 auto i1 = Container.end();
@@ -851,7 +851,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyval*<br/>
+*keyVal*\
 Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -1092,12 +1092,12 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parameter
 
-*nbucket*<br/>
+*nbucket*\
 Die Bucketnummer.
 
 ### <a name="remarks"></a>Hinweise
 
-Die ersten beiden Memberfunktionen geben einen Vorwärtsiterator zurück, der direkt hinter das Ende der Sequenz verweist. Die beiden letzten Memberfunktionen geben einen vorwärtsiterator zurück, der direkt hinter das Ende von Bucket zeigt *Nbucket*.
+Die ersten beiden Memberfunktionen geben einen Vorwärtsiterator zurück, der direkt hinter das Ende der Sequenz verweist. Die letzten zwei Member-Funktionen geben einen forward-Iterator zurück, der direkt hinter das Ende des Bucket *nbucket*zeigt.
 
 ### <a name="example"></a>Beispiel
 
@@ -1159,12 +1159,12 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parameter
 
-*keyval*<br/>
+*keyVal*\
 Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt ein Paar von Iteratoren `X` so, dass `[X.first, X.second)` nur die Elemente der gesteuerten Sequenz, die entsprechende Sortierung mit begrenzt *Keyval*. Wenn keine solchen Elemente vorhanden sind, sind beide Iteratoren `end()`.
+Die Member-Funktion gibt ein paar von Iteratoren `X` zurück, `[X.first, X.second)` die nur die Elemente der kontrollierten Sequenz begrenzt, die eine äquivalente Reihenfolge mit *keyVal*aufweisen. Wenn keine solchen Elemente vorhanden sind, sind beide Iteratoren `end()`.
 
 ### <a name="example"></a>Beispiel
 
@@ -1232,16 +1232,16 @@ size_type erase(
 
 ### <a name="parameters"></a>Parameter
 
-*Where*<br/>
+*Was*\
 Die Position des zu entfernenden Elements.
 
-*Erste*<br/>
+*Erstes*\
 Die Position des ersten zu entfernenden Elements.
 
-*letzte*<br/>
+*Letzten*\
 Die Position direkt hinter dem letzten zu entfernenden Element.
 
-*Key*<br/>
+*Wichtigen*\
 Der Schlüsselwert der zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -1264,7 +1264,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-*keyval*<br/>
+*keyVal*\
 Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
@@ -1470,11 +1470,11 @@ IList);
 
 |Parameter|Beschreibung|
 |-|-|
-|*val*|Der Wert eines in das unordered_multiset-Element einzufügenden Elements.|
+|*Ster*|Der Wert eines in das unordered_multiset-Element einzufügenden Elements.|
 |*Where*|Die Position, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird.|
-|*ValTy*|Vorlagenparameter, der der Argumenttyp angegeben wird, die das unordered_multiset-Element verwenden können, erstellen Sie ein Element der [Value_type](../standard-library/map-class.md#value_type), und perfekt *Val* als Argument.|
-|*Erste*|Die Position des ersten zu kopierenden Elements.|
-|*letzte*|Die Position direkt über den letzten zu kopierenden Elements.|
+|*ValTy*|Ein Vorlagen Parameter, der den Argumenttyp angibt, den der unordered_multiset verwenden kann, um ein Element von [value_type](../standard-library/map-class.md#value_type)zu erstellen und *perfekt als Argument* weiterzuleiten.|
+|*Erstes*|Die Position des ersten zu kopierenden Elements.|
+|*Letzten*|Die Position direkt über den letzten zu kopierenden Elements.|
 |*InputIterator*|Das Vorlagenfunktionsargument, das den Anforderungen eines [Eingabeiterators](../standard-library/input-iterator-tag-struct.md) erfüllt, der auf Elemente eines Typs zeigt, der zum Erstellen von [value_type](../standard-library/map-class.md#value_type)-Objekten verwendet werden kann.|
 |*IList*|Das [initializer_list](../standard-library/initializer-list.md)-Element, aus dem die Elemente kopiert werden sollen.|
 
@@ -1492,7 +1492,7 @@ Wird beim Einfügen von nur einem Element eine Ausnahme ausgelöst, die jedoch n
 
 Das [value_type](../standard-library/map-class.md#value_type)-Element eines Containers ist eine Typdefinition, die dem Container angehört, und bei Menge ist `unordered_multiset<V>::value_type` vom Typ `const V`.
 
-Die bereichsmemberfunktion (5) Fügt die Sequenz von Elementwerten in ein unordered_multiset-Element, das jedes Element von einem Iterator im Bereich adressiert entspricht `[First, Last)`daher *letzten* nicht eingefügt. Die Containermemberfunktion `end()` bezieht sich auf die Position direkt hinter dem letzten Element im Container. Z. B fügt die Anweisung `m.insert(v.begin(), v.end());` alle Elemente von `v` in `m` ein.
+Die Bereichs Element Funktion (5) fügt die Sequenz von Element Werten in ein unordered_multiset-Element ein, das jedem Element entspricht, das von einem Iterator im Bereich `[First, Last)`adressiert wird. Daher wird der *Letzte* nicht eingefügt. Die Containermemberfunktion `end()` bezieht sich auf die Position direkt hinter dem letzten Element im Container. Z. B fügt die Anweisung `m.insert(v.begin(), v.end());` alle Elemente von `v` in `m` ein.
 
 Die Memberfunktion für die Initialisiererliste (6) verwendet eine [initializer_list](../standard-library/initializer-list.md), um Elemente in die unordered_multiset zu kopieren.
 
@@ -1860,12 +1860,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parameter
 
-*factor*<br/>
+*gebend*\
 Der neue maximale Lastfaktor.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Memberfunktion gibt den gespeicherten maximalen Lastfaktor zurück. Die zweite Memberfunktion ersetzt den gespeicherten maximalen Lastfaktor durch *Faktor*.
+Die erste Memberfunktion gibt den gespeicherten maximalen Lastfaktor zurück. Die zweite Member-Funktion ersetzt den gespeicherten maximalen Lastfaktor durch den *Faktor*.
 
 ### <a name="example"></a>Beispiel
 
@@ -1994,7 +1994,7 @@ unordered_multiset& operator=(unordered_multiset&& right);
 
 ### <a name="remarks"></a>Hinweise
 
-Nach dem Löschen alle vorhandenen Elemente in einem `unordered_multiset`, `operator=` kopiert oder verschiebt den Inhalt der *rechten* in die `unordered_multiset`.
+Nachdem alle `unordered_multiset`vorhandenen Elemente in einem gelöscht wurden, `operator=` kopiert oder verschiebt den Inhalt von *direkt* in den. `unordered_multiset`
 
 ### <a name="example"></a>Beispiel
 
@@ -2137,12 +2137,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parameter
 
-*nbuckets*<br/>
+*nbucket*\
 Die angeforderte Anzahl von Buckets.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion ändert die Anzahl der Buckets in mindestens *Nbuckets* und erstellt die Hashtabelle nach Bedarf neu.
+Die Member-Funktion ändert die Anzahl von Buchern in mindestens *nbucket* und erstellt die Hash Tabelle nach Bedarf neu.
 
 ### <a name="example"></a>Beispiel
 
@@ -2318,12 +2318,12 @@ void swap(unordered_multiset& right);
 
 ### <a name="parameters"></a>Parameter
 
-*right*<br/>
+*Richting*\
 Der Container für den Tauschvorgang.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `*this` und *rechten*. Wenn [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()` gilt, führt sie dies in einer konstanten Zeit aus, sie löst eine Ausnahme nur als Reaktion auf das Kopieren des gespeicherter Merkmalobjekts vom Typ `Tr` aus, und sie macht keine Verweise, Zeiger oder Iteratoren ungültig, die Elemente in den beiden kontrollierten Sequenzen bestimmen. Andernfalls führt Sie proportional zur Anzahl der Elemente in den beiden kontrollierten Sequenzen eine Reihe von Elementzuweisungen und Konstruktoraufrufe aus.
+Die Member-Funktion tauscht die kontrollierten Sequenzen `*this` zwischen und *Rechts*aus. Wenn [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()` gilt, führt sie dies in einer konstanten Zeit aus, sie löst eine Ausnahme nur als Reaktion auf das Kopieren des gespeicherter Merkmalobjekts vom Typ `Tr` aus, und sie macht keine Verweise, Zeiger oder Iteratoren ungültig, die Elemente in den beiden kontrollierten Sequenzen bestimmen. Andernfalls führt Sie proportional zur Anzahl der Elemente in den beiden kontrollierten Sequenzen eine Reihe von Elementzuweisungen und Konstruktoraufrufe aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -2437,8 +2437,8 @@ unordered_multiset(
 |Parameter|Beschreibung|
 |-|-|
 |*InputIterator*|Der Iteratortyp.|
-|*Al*|Das zu speichernde Zuweisungsobjekt.|
-|*Comp*|Das zu speichernde Vergleichsfunktionsobjekt.|
+|*Irdische*|Das zu speichernde Zuweisungsobjekt.|
+|*Zuschreiben*|Das zu speichernde Vergleichsfunktionsobjekt.|
 |*Hash*|Das zu speichernde Hashfunktionsobjekt.|
 |*Bucket_count*|Die Mindestanzahl von Buckets.|
 |*Rechts*|Der zu kopierende Container.|
@@ -2446,17 +2446,17 @@ unordered_multiset(
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor gibt eine Kopie der gesteuerte Sequenz durch *rechts*. Mit dem zweiten Konstruktor wird eine leere gesteuerte Sequenz angegeben. Mit dem dritten Konstruktor wird die Elementwertesequenz `[First, Last)` eingefügt. Der vierte Konstruktor gibt eine Kopie der Sequenz, indem Sie verschieben *rechts*.
+Der erste Konstruktor gibt eine Kopie der Sequenz an, die von *Rechts*gesteuert wird. Mit dem zweiten Konstruktor wird eine leere gesteuerte Sequenz angegeben. Mit dem dritten Konstruktor wird die Elementwertesequenz `[First, Last)` eingefügt. Der vierte Konstruktor gibt eine Kopie der Sequenz an, indem nach *Rechts*verschoben wird.
 
-Alle Konstruktoren initialisieren auch einige gespeicherte Werte. Für den Kopierkonstruktor werden die Werte erhalten Sie vom *rechts*. Andernfalls gilt:
+Alle Konstruktoren initialisieren auch einige gespeicherte Werte. Für den Kopierkonstruktor werden die Werte von *Rechts*abgerufen. Andernfalls gilt:
 
-Die minimale Anzahl von Buckets ist das Argument *Bucket_count*, wenn vorhanden; andernfalls den Standardwert beschrieben wird hier als der implementierungsdefinierte Wert `N0`.
+Die Mindestanzahl von Buchern ist das Argument *Bucket_count*, falls vorhanden. Andernfalls ist es ein Standardwert, der hier als durch die Implementierung definierter `N0`Wert beschrieben wird.
 
-Das hashfunktionsobjekt ist das Argument *Hash*, wenn vorhanden; andernfalls es ist `Hash()`.
+Das Hash Funktions Objekt ist der Argument *Hash*, falls vorhanden. Andernfalls ist `Hash()`der Wert.
 
-Das vergleichsfunktionsobjekt ist das Argument *Comp*, wenn vorhanden; andernfalls es ist `Comp()`.
+Das Vergleichs Funktions Objekt ist das Argument *Comp*, falls es vorhanden ist. Andernfalls ist `Comp()`der Wert.
 
-Das Zuweisungsobjekt ist das Argument *Al*, wenn vorhanden; andernfalls es ist `Alloc()`.
+Das Zuordnungs Objekt ist das Argument *Al*, falls es vorhanden ist. Andernfalls ist `Alloc()`der Wert.
 
 ## <a name="value_type"></a> unordered_multiset::value_type
 
@@ -2514,7 +2514,7 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[<unordered_set>](../standard-library/unordered-set.md)<br/>
-[Container](../cpp/containers-modern-cpp.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[<unordered_set>](../standard-library/unordered-set.md)\
+[Containers](../cpp/containers-modern-cpp.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

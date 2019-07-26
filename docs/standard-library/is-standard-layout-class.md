@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: 75691c1b09b71580474cc22cdc8382bff55a5e29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f999eaa4a5c1ea7e9672a5efdc6000a4d3d9759
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413494"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457418"
 ---
 # <a name="isstandardlayout-class"></a>is_standard_layout-Klasse
 
@@ -33,7 +33,7 @@ struct is_standard_layout;
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz dieses typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, die ein Standardlayout der Memberobjekte im Arbeitsspeicher, andernfalls er false enthält.
+Eine Instanz dieses typprädikats ist "true",  wenn die typität eine Klasse ist, die über ein Standardlayout von Element Objekten im Arbeitsspeicher verfügt, andernfalls "false".
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,4 +43,4 @@ Eine Instanz dieses typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, d
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

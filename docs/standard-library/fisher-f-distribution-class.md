@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 643c564d7407a79bd9e2e776946c4b8df37a2974
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: c5e45af5d350ba9c3f1e4e240dec2c13366318c3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449919"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457037"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution-Klasse
 
@@ -69,15 +69,15 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType*<br/>
-Der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType*\
+Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
+*URNG*\
 Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert geben **doppelte** Wenn none angegeben wird, entsprechend der Fisher-F-Verteilung verteilter Wert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleit Komma Typs produziert, oder den Typ **Double** , wenn kein Wert bereitgestellt wird, der nach der-F-Distribution von Fisher verteilt wird. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -157,7 +157,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>Ausgabe
 
 Erste Ausführung:
 
@@ -248,13 +248,13 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*m*<br/>
+*800*\
 Der `m`-Verteilungsparameter.
 
-*n*<br/>
+*n*\
 Der `n`-Verteilungsparameter.
 
-*parm*<br/>
+*parm*\
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -283,13 +283,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*m*<br/>
+*800*\
 Der `m`-Verteilungsparameter.
 
-*n*<br/>
+*n*\
 Der `n`-Verteilungsparameter.
 
-*right*<br/>
+*Richting*\
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -300,4 +300,4 @@ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteil
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

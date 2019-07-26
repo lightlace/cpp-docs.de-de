@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4df8096603b53d05e050750a860c76528a44b28c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159365"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454074"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Funktionsobjekte in der C++-Standardbibliothek
 
@@ -43,7 +43,7 @@ int main()
 }
 ```
 
-Die letzte Zeile der `main` -Funktion zeigt, wie Sie das Funktionsobjekt aufrufen. Dieser Aufruf ähnelt einem Aufruf einer Funktion, aber es tatsächlich aufrufende operator() des Typs "Funktionselement" aus. Diese Ähnlichkeit zwischen dem Aufruf eines Funktionsobjekts und einer Funktion hat zum Begriff „Funktionsobjekt“ geführt.
+Die letzte Zeile der `main` -Funktion zeigt, wie Sie das Funktionsobjekt aufrufen. Dieser Aufruf ähnelt einem Aufruf einer Funktion, ruft aber tatsächlich den Operator () des Funktions Typs auf. Diese Ähnlichkeit zwischen dem Aufruf eines Funktionsobjekts und einer Funktion hat zum Begriff „Funktionsobjekt“ geführt.
 
 ## <a name="function-objects-and-containers"></a>Funktionsobjekte und Container
 
@@ -56,7 +56,7 @@ template <class Key,
 class set
 ```
 
-Das zweite Vorlagenargument ist das Funktionsobjekt „ `less`“. Dieses Funktionsobjekt gibt **"true"** , wenn der erste Parameter kleiner ist als der zweite Parameter. Da einige Container ihre Elemente sortieren, benötigt der Container eine Möglichkeit zum Vergleichen von zwei Elementen. Der Vergleich erfolgt mithilfe der Function-Objekt. Sie können eigene Sortierungskriterien für Container definieren, indem Sie ein Funktionsobjekt erstellen und es in der Vorlagenliste für den Container angeben.
+Das zweite Vorlagenargument ist das Funktionsobjekt „ `less`“. Dieses Funktions Objekt gibt **true** zurück, wenn der erste Parameter kleiner als der zweite Parameter ist. Da einige Container ihre Elemente sortieren, benötigt der Container eine Möglichkeit zum Vergleichen von zwei Elementen. Der Vergleich erfolgt mithilfe des Funktions Objekts. Sie können eigene Sortierungskriterien für Container definieren, indem Sie ein Funktionsobjekt erstellen und es in der Vorlagenliste für den Container angeben.
 
 ## <a name="function-objects-and-algorithms"></a>Funktionsobjekte und Algorithmen
 
@@ -70,8 +70,8 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-Das letzte Argument für `remove_if` ist ein Funktionsobjekt, das einen booleschen Wert zurückgibt (ein *Prädikat*). Wenn das Ergebnis des Funktionsobjekts **"true"**, und klicken Sie dann das Element entfernt wird, aus dem Container, die Zugriff auf die Iteratoren `first` und `last`. Sie können eines der Funktionsobjekte verwenden, die im Header [\<functional>](../standard-library/functional.md) für das Argument `pred` deklariert sind, oder ein eigenes erstellen.
+Das letzte Argument für `remove_if` ist ein Funktionsobjekt, das einen booleschen Wert zurückgibt (ein *Prädikat*). Wenn das Ergebnis des Funktions Objekts **true**ist, wird das Element aus dem Container entfernt, auf den die Iteratoren `first` und `last`zugreifen. Sie können eines der Funktionsobjekte verwenden, die im Header [\<functional>](../standard-library/functional.md) für das Argument `pred` deklariert sind, oder ein eigenes erstellen.
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 0c8f2de77255015254eabe018399f913b4582b7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220471"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454549"
 ---
 # <a name="safe-libraries-c-standard-library"></a>Sichere Bibliotheken: C++-Standardbibliothek
 
-Mehrere Verbesserungen wurden vorgenommen, um die Bibliotheken, die im Lieferumfang von Microsoft C++, einschließlich der C++ Standardbibliothek, um sie sicherer zu machen.
+An den Bibliotheken, die mit Microsoft C++ausgeliefert werden, einschließlich der C++ Standard Bibliothek, wurden mehrere Verbesserungen vorgenommen, um Sie sicherer zu machen.
 
 Einige Methoden in der C++-Standardbibliothek wurden als möglicherweise unsicher identifiziert, da sie zu einem Pufferüberlauf oder anderen Codefehlern führen könnten. Von der Verwendung dieser Methoden wird abgeraten, und es wurden neue, sicherere Methoden erstellt, um diese zu ersetzen. Diese neuen Methoden enden alle mit `_s`.
 
@@ -46,4 +46,4 @@ Wenn Sie eine der oben genannten potenziell unsicheren Methoden aufrufen oder di
 
 ## <a name="see-also"></a>Siehe auch
 
-[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)<br/>
+[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)

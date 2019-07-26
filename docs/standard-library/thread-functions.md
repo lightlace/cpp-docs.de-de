@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: c0a8e42cb7ee78c399459be82e50ef37ab203816
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279033"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458500"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt;-Funktionen
 
@@ -52,12 +52,12 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parameter
 
-*Rel_time*<br/>
+*Rel_time*\
 Ein [Dauer](../standard-library/duration-class.md)-Objekt, das ein Zeitintervall angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion sperrt den aufrufenden Thread für mindestens die Zeit, die angegebenen *Rel_time*. Diese Funktion löst keine Ausnahmen aus.
+Die-Funktion sperrt den aufrufenden Thread für mindestens die Zeit, die von *Rel_time*angegeben wird. Diese Funktion löst keine Ausnahmen aus.
 
 ## <a name="sleep_until"></a> sleep_until
 
@@ -72,7 +72,7 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Parameter
 
-*Abs_time*<br/>
+*Abs_time*\
 Stellt einen Zeitpunkt dar.
 
 ### <a name="remarks"></a>Hinweise
@@ -81,7 +81,7 @@ Diese Funktion löst keine Ausnahmen aus.
 
 ## <a name="swap"></a>  swap
 
-Vertauscht die Zustände von zwei **Thread** Objekte.
+Vertauscht die Zustände von zwei **Thread** -Objekten.
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,11 +89,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Links*<br/>
-Der linken Seite **Thread** Objekt.
+*Linken*\
+Das linke **Thread** Objekt.
 
-*Rechts*<br/>
-Das Recht **Thread** Objekt.
+*Richting*\
+Das Rechte **Thread** Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<thread>](../standard-library/thread.md)

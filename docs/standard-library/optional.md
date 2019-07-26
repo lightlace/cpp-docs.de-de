@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - <optional>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: c73ad2ad94a5de29bc2c457fdf6ca8b9c783615c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 83a0ad52735f92d731dafb32ad1be5a8278776b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268482"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447184"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Definiert die containervorlagenklasse optional und einige unterstützende Vorlagen.
+Definiert die Container Vorlagen Klasse optional und einige unterstützende Vorlagen.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<optional >
+**Header:** \<optionale >
 
 **Namespace:** std
 
@@ -37,13 +37,13 @@ Definiert die containervorlagenklasse optional und einige unterstützende Vorlag
 |[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Testet, ob das `optional`-Objekt links vom Operator größer oder gleich dem `optional`-Objekt auf der rechten Seite ist.|
 
 > [!NOTE]
-> Neben relationalen vergleicht \<optional > Operatoren unterstützt auch den Vergleich mit **Nullopt** und `T`.
+> Neben relationalen vergleichen \<unterstützen optionale >-Operatoren auch Vergleiche mit **nullopt** und. `T`
 
 ### <a name="functions"></a>Funktionen
 
 |||
 |-|-|
-|[make_optional](../standard-library/optional-functions.md#make_optional)|Ist ein Objekt optional.|
+|[make_optional](../standard-library/optional-functions.md#make_optional)|Macht ein-Objekt optional.|
 |[swap](../standard-library/optional-functions.md#swap)||
 
 ### <a name="classes-and-structs"></a>Klassen und Strukturen
@@ -51,9 +51,9 @@ Definiert die containervorlagenklasse optional und einige unterstützende Vorlag
 |||
 |-|-|
 |[hash]()||
-|[Optionale-Klasse](../standard-library/optional-class.md)|Beschreibt ein Objekt, die möglicherweise einen Wert möglicherweise nicht enthalten.|
-|[Nullopt_t-Struktur](../standard-library/nullopt-t-structure.md)|Beschreibt ein Objekt, das nicht mit einem Wert.|
-|[Bad_optional_access-Klasse](../standard-library/bad-optional-access-class.md)|Beschreibt ein Objekt, das als einen Zugriffsversuch auf einen Wert nicht vorhanden gemeldet Ausnahme ausgelöst.|
+|[optionale Klasse](../standard-library/optional-class.md)|Beschreibt ein Objekt, das einen Wert enthalten kann.|
+|[nullopt_t-Struktur](../standard-library/nullopt-t-structure.md)|Beschreibt ein Objekt, das keinen Wert enthält.|
+|[bad_optional_access-Klasse](../standard-library/bad-optional-access-class.md)|Beschreibt ein Objekt, das als Ausnahme ausgelöst wurde, um einen Versuch, auf einen Wert zuzugreifen, zu melden.|
 
 ### <a name="objects"></a>erzwingen
 
@@ -63,4 +63,4 @@ Definiert die containervorlagenklasse optional und einige unterstützende Vorlag
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)

@@ -5,12 +5,12 @@ f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
-ms.openlocfilehash: 505739861771a05dd39741f432579a6e9b2d0c26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 178b489d92a4ed7340084490329fdf8fa16c2aa7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412383"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449590"
 ---
 # <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt;-Typdefinition
 
@@ -20,7 +20,7 @@ ms.locfileid: "62412383"
 
 ## <a name="streambuf"></a> streambuf
 
-Eine Spezialisierung der `basic_streambuf` verwendet **Char** als Vorlagenparameter.
+Eine Spezialisierung von `basic_streambuf` , die **char** als Vorlagen Parameter verwendet.
 
 ```cpp
 typedef basic_streambuf<char, char_traits<char>> streambuf;
@@ -28,11 +28,11 @@ typedef basic_streambuf<char, char_traits<char>> streambuf;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse ["basic_streambuf"](../standard-library/basic-streambuf-class.md), die auf Elemente des Typs **Char** mit Standard-Zeichenmerkmale.
+Der Typ ist ein Synonym für die Vorlagen Klasse [basic_streambuf](../standard-library/basic-streambuf-class.md), die auf Elemente des Typs **char** mit Standard Zeichen Merkmalen spezialisiert ist.
 
 ## <a name="wstreambuf"></a> wstreambuf
 
-Eine Spezialisierung der `basic_streambuf` verwendet **"wchar_t"** als Vorlagenparameter.
+Eine Spezialisierung von `basic_streambuf` , die **wchar_t** als Vorlagen Parameter verwendet.
 
 ```cpp
 typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
@@ -40,8 +40,8 @@ typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse ["basic_streambuf"](../standard-library/basic-streambuf-class.md), die auf Elemente des Typs **"wchar_t"** mit Standard-Zeichenmerkmale.
+Der Typ ist ein Synonym für die Vorlagen Klasse [basic_streambuf](../standard-library/basic-streambuf-class.md), die auf Elemente vom Typ **wchar_t** mit Standard Zeichen Merkmalen spezialisiert ist.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<streambuf>](../standard-library/streambuf.md)<br/>
+[\<streambuf>](../standard-library/streambuf.md)

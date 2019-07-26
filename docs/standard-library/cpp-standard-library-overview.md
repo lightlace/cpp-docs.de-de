@@ -7,16 +7,16 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1e5226db751605d5352b1c5195759c34d080f5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210800"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452448"
 ---
 # <a name="c-standard-library-overview"></a>Übersicht über die C++-Standardbibliothek
 
-Alle C++-Bibliotheken werden in Standardheadern deklariert oder definiert. Diese Implementierung beinhaltet zwei zusätzliche Header, \<Hash_map > und \<Hash_set >, nicht erforderlich sind die C++ Standard. Eine vollständige Liste der Header, die diese Implementierung unterstützt, finden Sie unter [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md).
+Alle C++-Bibliotheken werden in Standardheadern deklariert oder definiert. Diese Implementierung beinhaltet zwei zusätzliche Header \<, hash_map > \<und hash_set >, die vom C++ Standard nicht benötigt werden. Eine vollständige Liste der Header, die diese Implementierung unterstützt, finden Sie unter [Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md).
 
 Eine freistehende Implementierung der C++-Bibliothek enthält nur eine Teilmenge dieser Header:
 
@@ -60,4 +60,4 @@ Weitere Informationen zu Visual C++-Laufzeitbibliotheken finden Sie unter [CRT-B
 
 ## <a name="see-also"></a>Siehe auch
 
-[C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

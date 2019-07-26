@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245237"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449131"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,16 +20,16 @@ Definiert verschiedene Typen und Funktionen, die grundlegend für den Umgang mit
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header**: \<Ios >
+**Kopfzeile**: \<IOS->
 
 **Namespace:** std
 
 > [!NOTE]
-> Die \<Ios >-Bibliothek verwendet die `#include <iosfwd>` Anweisung.
+> Die \<IOS-> Bibliothek verwendet `#include <iosfwd>` die-Anweisung.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine große Gruppe von Funktionen sind Manipulatoren. Ein in \<ios> deklarierter Manipulator ändert die Werte, die im Argumentobjekt der Klasse [ios_base](../standard-library/ios-base-class.md) gespeichert sind. Andere Manipulatoren führen Aktionen für Streams aus, die von Objekten eines Typs gesteuert werden, der von dieser Klasse abgeleitet wurde, z.B. eine Spezialisierung einer der Vorlagenklassen [basic_istream](../standard-library/basic-istream-class.md) oder [basic_ostream](../standard-library/basic-ostream-class.md). Z. B. [Noskipws](../standard-library/ios-functions.md#noskipws)(**str**) Löscht das formatflag `ios_base::skipws` im Objekt `str`, das von einem dieser Typen sein kann.
+Eine große Gruppe von Funktionen sind Manipulatoren. Ein in \<ios> deklarierter Manipulator ändert die Werte, die im Argumentobjekt der Klasse [ios_base](../standard-library/ios-base-class.md) gespeichert sind. Andere Manipulatoren führen Aktionen für Streams aus, die von Objekten eines Typs gesteuert werden, der von dieser Klasse abgeleitet wurde, z.B. eine Spezialisierung einer der Vorlagenklassen [basic_istream](../standard-library/basic-istream-class.md) oder [basic_ostream](../standard-library/basic-ostream-class.md). Beispielsweise löscht [noskipws](../standard-library/ios-functions.md#noskipws)(**Str**) das formatflag `ios_base::skipws` im-Objekt `str`, das einen dieser Typen aufweisen kann.
 
 Aufgrund von speziellen Einfüge- und Extraktionsvorgängen für die aus `ios_base` abgeleiteten Klassen können Sie einen Manipulator auch aufrufen, indem Sie ihn in einen Ausgabestream einfügen oder ihn aus einem Eingabestream extrahieren. Beispiel:
 
@@ -101,7 +101,7 @@ Ruft [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**) auf.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
-[iostreams-Konventionen](../standard-library/iostreams-conventions.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream-Programmierung](../standard-library/iostream-programming.md)\
+[iostreams-Konventionen](../standard-library/iostreams-conventions.md)

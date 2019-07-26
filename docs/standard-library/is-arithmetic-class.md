@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_arithmetic class
 - is_arithmetic
 ms.assetid: ea427b7e-0141-4a04-848f-561054c53001
-ms.openlocfilehash: 7aff4b051786c3d77dacb65ddbdbd29fa695ca48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2c148b7cb58cf38e5f73d4e3d2297eac099ef7e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404805"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456690"
 ---
 # <a name="isarithmetic-class"></a>is_arithmetic-Klasse
 
@@ -27,12 +27,12 @@ struct is_arithmetic;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein arithmetischer Typ, d. h. ein ganzzahliger Typ oder einen Gleitkommawert lassen, oder ein `cv-qualified` -Formular von einem davon ist, andernfalls er false enthält.
+Eine Instanz des typprädikats ist "true",  wenn die typty ein arithmetischer Typ ist, d. h., ein ganzzahliger Typ `cv-qualified` , ein Gleit kommatyp oder ein-Formular, andernfalls "false".
 
 ## <a name="example"></a>Beispiel
 
@@ -74,6 +74,6 @@ is_arithmetic<float> == true
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_floating_point-Klasse](../standard-library/is-floating-point-class.md)<br/>
-[is_integral-Klasse](../standard-library/is-integral-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_floating_point-Klasse](../standard-library/is-floating-point-class.md)\
+[is_integral-Klasse](../standard-library/is-integral-class.md)

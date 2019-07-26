@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d33b67ed17a95b6717878aaca2f61682b1807c15
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159859"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454006"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -26,7 +26,7 @@ Für diesen Header wird "Concurrency Runtime (ConcRT)" verwendet, sodass er zusa
 ## <a name="remarks"></a>Hinweise
 
 > [!NOTE]
-> Im Code, der kompiliert wird **"/ CLR"**, dieser Header blockiert.
+> In Code, der mit **/CLR**kompiliert wird, wird dieser Header blockiert.
 
 In einem *asynchronen Anbieter* wird das Ergebnis eines Funktionsaufrufs gespeichert. Ein a*synchrones Rückgabeobjekt* wird zum Abrufen des Ergebnisses eines Funktionsaufrufs verwendet. Ein *asynchroner zugeordneter Zustand* ermöglicht die Kommunikation zwischen einem asynchronen Anbieter und mindestens einem asynchronen Rückgabeobjekt.
 
@@ -38,9 +38,9 @@ Ein zugeordneter asynchroner Zustand ist nur dann *bereit*, wenn sein asynchrone
 
 Die Vorlagenfunktion `async` und die Vorlagenklassen `promise` sowie `packaged_task` sind asynchrone Anbieter. Mit den Vorlagenklassen `future` und `shared_future` werden asynchrone Rückgabeobjekte beschrieben.
 
-Jede der Vorlagenklassen `promise`, `future`, und `shared_future` verfügt über eine Spezialisierung für den Typ **"void"** und eine teilweise Spezialisierung für das Speichern und Abrufen eines Werts durch einen Verweis. Diese Spezialisierungen unterscheiden sich von der primären Vorlage nur durch die Signaturen und die Semantik der Funktionen, die den zurückgegebenen Wert speichern und abrufen.
+Jede der Vorlagen `promise`Klassen, `future`und `shared_future` verfügt über eine Spezialisierung für den Typ **void** und eine partielle Spezialisierung zum Speichern und Abrufen eines Werts als Verweis. Diese Spezialisierungen unterscheiden sich von der primären Vorlage nur durch die Signaturen und die Semantik der Funktionen, die den zurückgegebenen Wert speichern und abrufen.
 
-Die Vorlagenklassen `future` und `shared_future` nie-block, in deren Destruktoren, außer in einem Fall, das für die Abwärtskompatibilität beibehalten wird: Im Gegensatz zu anderen Futures für eine `future`– oder das letzte `shared_future`–, die Schritte mit der Aufgabe angefügt wird `std::async`, der Destruktor blockiert, wenn die Aufgabe nicht abgeschlossen wurde; das heißt, er blockiert, wenn dieser Thread nicht aufgerufen wurde `.get()` oder `.wait()`und die Aufgabe noch ausgeführt wird. Benutzerfreundlichkeit wird im folgenden Hinweis wurde in der Beschreibung der `std::async` im Draft Standard: "[Hinweis: Wenn eine Zukunft std::async abgerufenes außerhalb des lokalen Bereichs verschoben wird, muss anderer Code, die die Zukunft verwendet Beachten Sie, dass damit der Freigabezustand bereit. wird die Zukunft der Destruktor blockiert sein – Ende des Hinweises] "In allen anderen Fällen `future` und `shared_future` Destruktoren sind erforderlich und werden garantiert nie blockiert.
+Die Vorlagen Klassen `future` und `shared_future` blockieren nie in ihren debilitoren, außer in einem Fall, der aus Gründen der Abwärtskompatibilität beibehalten wird: Im Gegensatz zu allen anderen Futures, `future`bei einem – oder `shared_future`dem letzten –, das an eine Aufgabe angefügt ist, die mit `std::async`gestartet wurde, blockiert der Dekonstruktor, wenn die Aufgabe nicht abgeschlossen wurde. das heißt, `.get()` es wird blockiert, wenn der Thread noch nicht aufgerufen `.wait()`wurde.und die Aufgabe wird noch ausgeführt. Der Beschreibung von `std::async` im Entwurfs Standard wurde die folgende Verwendbarkeits Notiz hinzugefügt: "[Hinweis: Wenn eine aus Std:: Async abzurufende Zukunft außerhalb des lokalen Bereichs verschoben wird, muss anderer Code, der die Zukunft verwendet, beachten, dass der Dekonstruktor der Zukunft blockieren kann, damit der freigegebene Status bereit ist. – End Note `future` ] `shared_future` "in allen anderen Fällen und dededektoren sind erforderlich und werden garantiert nie blockiert.
 
 ## <a name="members"></a>Member
 
@@ -81,4 +81,4 @@ Die Vorlagenklassen `future` und `shared_future` nie-block, in deren Destruktore
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)

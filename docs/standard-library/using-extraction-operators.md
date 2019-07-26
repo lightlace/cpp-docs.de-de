@@ -6,12 +6,12 @@ helpviewer_keywords:
 - '&gt;&gt; operator [C++], extraction operators'
 - operators [C++], extraction
 ms.assetid: a961e1a9-4897-41de-b210-89d5b2d051ae
-ms.openlocfilehash: 1fc6ffd2f033dfe3df60260f734d93b79d6824f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7950984973f8df236905128ce4b5336ecb874b7f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362425"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458037"
 ---
 # <a name="using-extraction-operators"></a>Verwenden von Extraktionsoperatoren
 
@@ -21,4 +21,4 @@ Bei Extraktionsoperatoren für die Eingabe von formatiertem Text werden eingehen
 
 ## <a name="see-also"></a>Siehe auch
 
-[Eingabestreams](../standard-library/input-streams.md)<br/>
+[Eingabestreams](../standard-library/input-streams.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: 991df549168456112afe27bed6f4991a7ccfb88e
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 560339dee5b13ddc13ff2f8af8283ea8615d804a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400870"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458365"
 ---
 # <a name="promise-class"></a>promise-Klasse
 
@@ -97,7 +97,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Andere*<br/>
+*Außer*\
 Ein `promise`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -106,7 +106,7 @@ Ein `promise`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Dieser Operator überträgt den zugeordneten asynchronen Zustand aus *andere*. Nach der Übertragung *andere* ist *leere*.
+Dieser Operator überträgt den zugeordneten asynchronen Zustand von einem *anderen*. Nach der Übertragung  ist andere *leer*.
 
 ## <a name="promise"></a> promise::promise-Konstruktor
 
@@ -121,19 +121,19 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Al*<br/>
+*Irdische*\
 Eine Speicherbelegung. Siehe [\<allocators>](../standard-library/allocators-header.md) für weitere Informationen.
 
-*Andere*<br/>
+*Außer*\
 Ein `promise`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor erstellt ein *leere* `promise` Objekt.
+Der erste Konstruktor erstellt ein *leeres* `promise` -Objekt.
 
-Der zweite Konstruktor erstellt ein leeres `promise` -Objekt und verwendet *Al* für speicherbelegung.
+Der zweite Konstruktor erstellt ein leeres `promise` -Objekt und verwendet *Al* für die Speicher Belegung.
 
-Der dritte Konstruktor erstellt ein `promise` Objekt aus, und überträgt den zugeordneten asynchronen Zustand aus *andere*, und lässt *andere* leer.
+Der dritte Konstruktor erstellt ein `promise` -Objekt und überträgt den zugeordneten asynchronen Zustand von einem *anderen*und lässt *andere* leer.
 
 ## <a name="set_exception"></a> promise::set_exception
 
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parameter
 
-*Exc*<br/>
+*Exkl*\
 Ein [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), der von dieser Methode als Ausnahmeergebnis gespeichert ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -166,7 +166,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parameter
 
-*Exc*<br/>
+*Exkl*\
 Ein [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), der von dieser Methode als Ausnahmeergebnis gespeichert ist.
 
 ### <a name="remarks"></a>Hinweise
@@ -190,7 +190,7 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>Parameter
 
-*val*<br/>
+*Ster*\
 Der als Ergebnis zu speichernde Wert.
 
 ### <a name="remarks"></a>Hinweise
@@ -201,11 +201,11 @@ Wenn [set_exception](#set_exception), [set_exception_at_thread_exit](#set_except
 
 Aufgrund dieser Methode wird die Blockierung aller Threads, die auf dem zugeordneten asynchronen Zustand blockiert werden, aufgehoben.
 
-Die erste Methode löst auch jede Ausnahme, die ausgelöst wird, wenn *Val* in den zugeordneten asynchronen Zustand kopiert wird. In dieser Situation wird der zugeordnete asynchrone Zustand nicht auf "vorbereitet" festgelegt.
+Die erste Methode löst auch jede Ausnahme aus, die ausgelöst wird, wenn *Val* in den zugeordneten asynchronen Zustand kopiert wird. In dieser Situation wird der zugeordnete asynchrone Zustand nicht auf "vorbereitet" festgelegt.
 
-Die zweite Methode löst auch jede Ausnahme, die ausgelöst wird, wenn *Val* in den zugeordneten asynchronen Zustand verschoben. In dieser Situation wird der zugeordnete asynchrone Zustand nicht auf "vorbereitet" festgelegt.
+Die zweite Methode löst auch jede Ausnahme aus, die ausgelöst wird, wenn *Val* in den zugeordneten asynchronen Zustand verschoben wird. In dieser Situation wird der zugeordnete asynchrone Zustand nicht auf "vorbereitet" festgelegt.
 
-Für die teilweise Spezialisierung `promise<Ty&>`, der gespeicherte Wert ist faktisch ein Verweis auf *Val*.
+Bei der partiellen `promise<Ty&>`Spezialisierung ist der gespeicherte Wert ein Verweis auf *Val*.
 
 Für die Spezialisierung `promise<void>` ist kein gespeicherter Wert vorhanden.
 
@@ -222,7 +222,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>Parameter
 
-*val*<br/>
+*Ster*\
 Der als Ergebnis zu speichernde Wert.
 
 ### <a name="remarks"></a>Hinweise
@@ -233,11 +233,11 @@ Wenn [set_exception](#set_exception), [set_exception_at_thread_exit](#set_except
 
 Im Gegensatz zu `set_value`, wird der zugeordnete asynchrone Zustand erst auf "vorbereitet" festgelegt, nachdem alle Objekte eines lokalen Threads im aktuellen Thread zerstört wurden. Normalerweise kann die Blockierung von Threads, die auf dem zugeordneten asynchronen Zustand blockiert werden, nicht aufgehoben werden, bis der aktuelle Thread beendet wird.
 
-Die erste Methode löst auch jede Ausnahme, die ausgelöst wird, wenn *Val* in den zugeordneten asynchronen Zustand kopiert wird.
+Die erste Methode löst auch jede Ausnahme aus, die ausgelöst wird, wenn *Val* in den zugeordneten asynchronen Zustand kopiert wird.
 
-Die zweite Methode löst auch jede Ausnahme, die ausgelöst wird, wenn *Val* in den zugeordneten asynchronen Zustand verschoben.
+Die zweite Methode löst auch jede Ausnahme aus, die ausgelöst wird, wenn *Val* in den zugeordneten asynchronen Zustand verschoben wird.
 
-Für die teilweise Spezialisierung `promise<Ty&>`, der gespeicherte Wert ist tatsächlich ein Verweis auf *Val*.
+Bei der partiellen `promise<Ty&>`Spezialisierung ist der gespeicherte Wert tatsächlich ein Verweis auf *Val*.
 
 Für die Spezialisierung `promise<void>` ist kein gespeicherter Wert vorhanden.
 
@@ -251,9 +251,9 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Andere*<br/>
+*Außer*\
 Ein `promise`-Objekt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)

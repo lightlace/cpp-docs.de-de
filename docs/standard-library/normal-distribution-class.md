@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: df30ddb910cf2fa266a603a3ab285379ea45ec7c
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: daf9ab6b91eb4af19fdd563937b626515c4bc99b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449857"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457659"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution-Klasse
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType*<br/>
-Der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType*\
+Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine Verteilung, Werte eines benutzerdefinierten ganzzahligen produziert, Typs **doppelte** Wenn none angegeben wird, entsprechend der Normalverteilung verteilter Wert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der normal Verteilung verteilter Wert vorhanden ist, geben Sie **Double** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-Die Eigenschaftsfunktionen `mean()` und `stddev()` die Werte für die gespeicherten verteilungsparameter zurück *bedeuten* und *Stddev* bzw.
+Die Eigenschafts `mean()` Funktionen `stddev()` und geben die Werte für die gespeicherten Verteilungsparameter *Mean* bzw. *StdDev* zurück.
 
 Das Eigenschaftsmember `param()` gibt das aktuell gespeicherte Verteilungspaket `param_type` zurück oder legt es fest.
 
@@ -198,13 +198,13 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*mean*<br/>
+*bedeutete*\
 Der `mean`-Verteilungsparameter.
 
-*stddev*<br/>
+*STDDEV*\
 Der `stddev`-Verteilungsparameter.
 
-*parm*<br/>
+*parm*\
 Die für die Erstellung der Verteilung verwendete Parameterstruktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -233,13 +233,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*mean*<br/>
+*bedeutete*\
 Der `mean`-Verteilungsparameter.
 
-*stddev*<br/>
+*STDDEV*\
 Der `stddev`-Verteilungsparameter.
 
-*right*<br/>
+*Richting*\
 Die `param_type`-Struktur, mit der verglichen wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -250,4 +250,4 @@ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteil
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

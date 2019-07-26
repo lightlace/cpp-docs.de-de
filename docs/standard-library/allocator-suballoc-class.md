@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator_suballoc class
 ms.assetid: 50c6a5c0-d00d-4276-9285-d908fd4f6483
-ms.openlocfilehash: 9136a2ce744e19754b3a660e7bc9c15f05babbbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e5b69ef3f47a173ef768283bbae4f6e3b5f5190
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411005"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458146"
 ---
 # <a name="allocatorsuballoc-class"></a>allocator_suballoc-Klasse
 
-Beschreibt ein Objekt, das speicherbelegung und-Freigabe für Objekte des Typs verwaltet *Typ* mithilfe eines Caches vom Typ [Cache_suballoc](../standard-library/cache-suballoc-class.md).
+Beschreibt ein Objekt, das die Speicher Belegung und-Freigabe für Objekte des Typs *Type mithilfe eines* Caches vom Typ [Cache_suballoc](../standard-library/cache-suballoc-class.md)verwaltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,11 +29,11 @@ class allocator_suballoc;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Type*|Der Elementtyp, die durch die Zuweisung zugeordnet wird.|
+|*Typ*|Der Elementtyp, die durch die Zuweisung zugeordnet wird.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) Makro übergibt diese Klasse als die *Namen* Parameter in der folgenden Anweisung: `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
+Das [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) -Makro übergibt diese Klasse als *Name* -Parameter in der folgenden Anweisung:`ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,4 +43,4 @@ Die [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

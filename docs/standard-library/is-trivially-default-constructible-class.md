@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_default_constructible
 ms.assetid: 653ecd73-909f-4dd8-b95a-d1164d1c2da4
-ms.openlocfilehash: b35458ca280285eb699c9b12b15b705660299ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a5e8afedf3e59d5dafa937af4f7d35343eb7d9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413410"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459651"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible-Klasse
 
@@ -26,22 +26,22 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-*Ty*<br/>
+*Genossenschaft*\
 Der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, die einen trivialen Konstruktor aufweist; andernfalls ist Sie false.
+Eine Instanz des typprädikats ist "true",  wenn die typty eine Klasse ist, die einen trivialen Konstruktor aufweist; andernfalls "false".
 
-Einen Standardkonstruktor für eine Klasse *Ty* ist trivial wenn:
+Ein Standardkonstruktor für eine Klasse *Ty* ist in folgenden Fällen trivial:
 
 - es ist eine implizit deklarierte Standardkonstruktor
 
-- die Klasse *Ty* verfügt über keine virtuellen Funktionen
+- die Klasse *Ty* hat keine virtuellen Funktionen.
 
-- die Klasse *Ty* hat keine virtuellen Basen
+- die Klasse *Ty* hat keine virtuellen Basen.
 
-- alle direkten Basisklassen der Klasse *Ty* haben triviale Konstruktoren
+- alle direkten Basen der Klasse *Ty* haben triviale Konstruktoren.
 
 - die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Konstruktoren
 
@@ -55,4 +55,4 @@ Einen Standardkonstruktor für eine Klasse *Ty* ist trivial wenn:
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

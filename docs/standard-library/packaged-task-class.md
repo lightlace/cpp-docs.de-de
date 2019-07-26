@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bb04b84b723f239c338c02befa8cd3468cec3f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370670"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450078"
 ---
 # <a name="packagedtask-class"></a>packaged_task-Klasse
 
@@ -113,7 +113,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts*<br/>
+*Richting*\
 Ein `packaged_task`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -122,7 +122,7 @@ Ein `packaged_task`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Nach dem Vorgang *rechts* mehr verfügt über keinen zugeordneten asynchronen Zustand.
+Nach dem-Vorgang verfügt *right* nicht mehr über einen zugeordneten asynchronen Zustand.
 
 ## <a name="op_call"></a> packaged_task::operator()
 
@@ -150,7 +150,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** verfügt das Objekt einen zugeordneten asynchronen Zustand ist; andernfalls **"false"**.
+**true** , wenn das Objekt über einen zugeordneten asynchronen Zustand verfügt. andernfalls **false**.
 
 ## <a name="packaged_task"></a> packaged_task::packaged_task-Konstruktor
 
@@ -169,24 +169,24 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts*<br/>
+*Richting*\
 Ein `packaged_task`-Objekt.
 
-*alloc*<br/>
+*Zuordnungseinheits*\
 Eine Speicherbelegung. Siehe [\<allocators>](../standard-library/allocators-header.md) für weitere Informationen.
 
-*fn*<br/>
+*Extreme*\
 Ein Funktionsobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
 Der erste Konstruktor erstellt ein `packaged_task`-Objekt, das über keinen *zugeordneten asynchronen Zustand* verfügt.
 
-Der zweite Konstruktor erstellt ein `packaged_task` Objekt aus, und überträgt den zugeordneten asynchronen Zustand aus *rechts*. Nach dem Vorgang *rechts* mehr verfügt über keinen zugeordneten asynchronen Zustand.
+Der zweite Konstruktor erstellt ein `packaged_task` -Objekt und überträgt den zugeordneten asynchronen Zustand von *Rechts*. Nach dem-Vorgang verfügt *right* nicht mehr über einen zugeordneten asynchronen Zustand.
 
-Der dritte Konstruktor erstellt ein `packaged_task` -Objekt, das eine Kopie des ist *fn* in dessen zugeordnetem asynchronen Zustand gespeichert.
+Mit dem dritten Konstruktor wird `packaged_task` ein-Objekt erstellt, das über eine in seinem zugeordneten asynchronen Zustand gespeicherte Kopie von *FN* verfügt.
 
-Der vierte Konstruktor erstellt ein `packaged_task` -Objekt, das eine Kopie des ist *fn* in dessen zugeordnetem asynchronen Zustand gespeichert, und verwendet `alloc` für speicherbelegung.
+Mit dem vierten Konstruktor wird `packaged_task` ein-Objekt erstellt, das über eine in seinem zugeordneten asynchronen Zustand gespeicherte Kopie `alloc` von *FN* verfügt und für die Speicher Belegung verwendet.
 
 ## <a name="dtorpackaged_task_destructor"></a> packaged_task::~packaged_task-Destruktor
 
@@ -222,7 +222,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-*Rechts*<br/>
+*Richting*\
 Ein `packaged_task`-Objekt.
 
 ## <a name="valid"></a> packaged_task::valid
@@ -235,9 +235,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** verfügt das Objekt einen zugeordneten asynchronen Zustand ist; andernfalls **"false"**.
+**true** , wenn das Objekt über einen zugeordneten asynchronen Zustand verfügt. andernfalls **false**.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

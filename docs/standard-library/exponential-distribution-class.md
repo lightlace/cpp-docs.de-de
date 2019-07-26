@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: a8dd8168075a0fff3b61154098c0bee100961f98
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 8fd47b6acd4d991741f7ae45332d6cacc1903977
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451247"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457886"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution-Klasse
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType*<br/>
-Der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType*\
+Der Gleit Komma Ergebnistyp, der Standardwert ist **Double**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
-Die zufällige Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*URNG*\
+Die Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine Verteilung, Werte eines benutzerdefinierten ganzzahligen produziert, Typs **doppelte** Wenn none angegeben wird, entsprechend der exponentiellen Verteilung verteilter Wert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Vorlagen Klasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der exponentiellen Verteilung verteilter Wert vorhanden ist, geben Sie **Double** ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -182,10 +182,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*Lambda*<br/>
+*Lambda*\
 Der `lambda`-Verteilungsparameter.
 
-*parm*<br/>
+*parm*\
 Das für die Erstellung der Verteilung verwendete Parameterpaket.
 
 ### <a name="remarks"></a>Hinweise
@@ -213,10 +213,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*Lambda*<br/>
+*Lambda*\
 Der `lambda`-Verteilungsparameter.
 
-*right*<br/>
+*Richting*\
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -227,4 +227,4 @@ Diese Struktur kann bei der Instanziierung an den Klassenkonstruktor des Verteil
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

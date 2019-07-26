@@ -5,12 +5,12 @@ f1_keywords:
 - mutex/std::lock_guard
 - mutex/std::lock_guard::lock_guard
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
-ms.openlocfilehash: 45a01c5fdd431bcfad1eeb5ab0531c11c89e9767
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f59860c3aaa9ef7458fe5e30b85b119dede52c72
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413137"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453854"
 ---
 # <a name="lockguard-class"></a>lock_guard-Klasse
 
@@ -60,14 +60,14 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>Parameter
 
-*Mtx*<br/>
+*MTX*\
 Ein *mutex type*-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor konstruiert ein Objekt des Typs `lock_guard` und Sperren *Mtx*. Wenn *Mtx* ist keiner rekursiven Mutex entspricht, muss dieses entsperrt werden, wenn dieser Konstruktor aufgerufen wird.
+Der erste Konstruktor erstellt ein Objekt vom Typ `lock_guard` und sperrt *MTX*. Wenn *MTX* kein rekursiver Mutex ist, muss es entsperrt werden, wenn dieser Konstruktor aufgerufen wird.
 
-Der zweite Konstruktor sperrt nicht *Mtx*. *Mtx* muss gesperrt werden, wenn dieser Konstruktor aufgerufen wird. Der Konstruktor löst keine Ausnahmen aus.
+Der zweite Konstruktor sperrt *MTX*nicht. *MTX* muss gesperrt werden, wenn dieser Konstruktor aufgerufen wird. Der Konstruktor löst keine Ausnahmen aus.
 
 ## <a name="dtorlock_guard_destructor"></a> lock_guard::~lock_guard-Destruktor
 
@@ -83,5 +83,5 @@ Wenn das `mutex`-Objekt nicht vorhanden ist, wenn der Destruktor ausgeführt wir
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

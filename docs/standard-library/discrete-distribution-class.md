@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 7ad375c14e9034a55d280a2927d6ef00f098ddbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce668ebfdafc4a53bfc71ecf1f2fa76abb1c7532
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413839"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454385"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution-Klasse
 
@@ -72,8 +72,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*IntType*<br/>
-Der Ergebnistyp für ganze Zahl, Standardwert **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*Inttype*\
+Der ganzzahlige Ergebnistyp, der Standardwert ist **int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -200,28 +200,28 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*firstW*<br/>
+*firstW*\
 Der erste Iterator in der Liste, aus der die Verteilung konstruiert werden soll.
 
-*lastW*<br/>
+*lastw*\
 Der letzte Iterator in der Liste, aus der die Verteilung konstruiert werden soll (nicht inklusiv, da Iteratoren für das Ende ein leeres Element verwenden).
 
-*weightlist*<br/>
+*weightlist*\
 Die [initializer_list](../cpp/initializers.md), aus der die Verteilung erstellt werden soll.
 
-*count*<br/>
+*Countdown*\
 Die Anzahl von Elementen im Verteilungsbereich. Wenn `count==0` ist, äquivalent zum Standardkonstruktor (generiert immer Null).
 
-*low*<br/>
+*Preis*\
 Der niedrigste Wert im Verteilungsbereich.
 
-*high*<br/>
+*hochrangiger*\
 Der höchste Wert im Verteilungsbereich.
 
-*weightfunc*<br/>
-Das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Die Parameter und der Rückgabewert müssen konvertierbar sein **doppelte**.
+*weightfunc*\
+Das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Sowohl der-Parameter als auch der Rückgabewert müssen in den **Double**-Wert konvertiert werden können.
 
-*parm*<br/>
+*parm*\
 Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
@@ -230,12 +230,12 @@ Der Standardkonstruktor erstellt ein Objekt, dessen gespeicherter Wahrscheinlich
 
 Der Iteratorbereichskonstruktor mit den Parametern *firstW* und *lastW* erstellt mithilfe von Gewichtungswerten, die den Iteratoren während der Intervallsequenz [*firstW*, *lastW*] entnommen werden, ein Verteilungsobjekt.
 
-Der initialisiererlistenkonstruktor, die eine *Weightlist* Parameter erstellt ein Verteilungsobjekt mit Gewichten aus der Initialisiererliste *Weightlist*.
+Der Konstruktor für die Initialisiererliste mit einem *weightlist* -Parameter erstellt ein Verteilungs Objekt mit Gewichtungen aus der Liste Gewichtungs Liste für Initialisierer.
 
 Der Konstruktor mit den Parametern *count*, *low*, *high* und *weightfunc* erstellt ein Verteilungsobjekt, das anhand der folgenden Regeln initialisiert wird:
 
 - Wenn *count* < 1, **n** = 1, und gleich dem Standardkonstruktor, der immer Null generiert.
-- Wenn *count* > 0, **n** = *count*. Bereitgestellten **d** = (*hohe* - *niedrige*) / **n** ist größer als 0 (null), mit **d** uniform Unterbereiche, jedes Gewicht wie folgt zugewiesen: `weight[k] = weightfunc(x)`, wobei **x** = *niedrige* + **k**  *  **d** + **d** / 2, für die **k** = 0,..., **n** - 1.
+- Wenn *count* > 0, **n** = *count*. Die **angegebene d** = (*höchst* - *niedrig*)/ **n** ist größer als 0 (null). bei Verwendung von **d-Uniform-** Unterbereichen wird `weight[k] = weightfunc(x)`jede Gewichtung wie folgt zugewiesen:, wobei **x** = *niedrig*  + ist. **k**    d d/2, für k = 0,..., n-1. +  * 
 
 Der Konstruktor mit einem `param_type`-Parameter *parm* erstellt ein Verteilungsobjekt und verwendet dabei *parm* als gespeicherte Parameterstruktur.
 
@@ -268,28 +268,28 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*firstW*<br/>
+*firstW*\
 Der erste Iterator in der Liste, aus der die Verteilung konstruiert werden soll.
 
-*lastW*<br/>
+*lastw*\
 Der letzte Iterator in der Liste, aus der die Verteilung konstruiert werden soll (nicht inklusiv, da Iteratoren für das Ende ein leeres Element verwenden).
 
-*weightlist*<br/>
+*weightlist*\
 Die [initializer_list](../cpp/initializers.md), aus der die Verteilung erstellt werden soll.
 
-*count*<br/>
+*Countdown*\
 Die Anzahl von Elementen im Verteilungsbereich. Wenn *count* 0 ist, entspricht dies dem Standardkonstruktor (generiert immer Null).
 
-*low*<br/>
+*Preis*\
 Der niedrigste Wert im Verteilungsbereich.
 
-*high*<br/>
+*hochrangiger*\
 Der höchste Wert im Verteilungsbereich.
 
-*weightfunc*<br/>
-Das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Die Parameter und der Rückgabewert müssen konvertierbar sein **doppelte**.
+*weightfunc*\
+Das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Sowohl der-Parameter als auch der Rückgabewert müssen in den **Double**-Wert konvertiert werden können.
 
-*right*<br/>
+*Richting*\
 Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
@@ -298,4 +298,4 @@ Dieses Parameterpaket kann an `operator()` übergeben werden, um den Rückgabewe
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

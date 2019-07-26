@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-ms.openlocfilehash: c59c3623f9c9548a7b7e59d0c56a2acd4d3883a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ee8b5f97c92b6eb378db40f93696e5e6c554205
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383619"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456023"
 ---
 # <a name="isnothrowassignable-class"></a>Is_nothrow_assignable-Klasse
 
-Testet, ob der Wert *aus* Typ zugewiesen werden kann, um *zu* Typ und die Zuweisung ist bekanntermaßen nicht auslösen.
+Testet *,* ob ein Wert *vom* Typ dem Typ zugewiesen werden kann und die Zuweisung bekanntermaßen nicht ausgelöst wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,15 +26,15 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-*Aktion*<br/>
+*An*\
 Der Typ des Objekts, das die Zuweisung empfängt.
 
-*From*<br/>
+*Von*\
 Der Typ des Objekts, das den Wert bereitstellt.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein und der Compiler muss wissen, dass er nicht auslöst. Beide *aus* und *zu* müssen vollständige Typen werden **"void"**, oder Arrays mit Unbekannter Grenze.
+Der Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein und der Compiler muss wissen, dass er nicht auslöst. Sowohl *von* als auch *bis* müssen komplette Typen, **void**oder Arrays mit unbekannter Grenze sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,4 +44,4 @@ Der Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein und der Com
 
 ## <a name="see-also"></a>Siehe auch
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

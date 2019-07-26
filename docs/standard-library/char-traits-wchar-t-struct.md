@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<wchar_t> class
 ms.assetid: 31f34072-04d6-4871-88fe-48e17d473484
-ms.openlocfilehash: ef40a34b5aa874c8bdf48aeb7657ae3496160eec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2f8a882020ddb3d87436d08b3d85ea9407b1c08
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379219"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458966"
 ---
 # <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt;-Struktur
 
-Eine Klasse, die eine Spezialisierung der Vorlagenstruktur **Char_traits\<CharType >** auf ein Element vom Typ **"wchar_t"**.
+Eine Klasse, die eine Spezialisierung der Vorlagen Struktur **Char_traits\<CharType >** zu einem Element vom Typ **wchar_t**ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,7 +27,7 @@ struct char_traits<wchar_t>;
 
 ## <a name="remarks"></a>Hinweise
 
-Dank der Spezialisierung kann die Struktur Bibliotheksfunktionen nutzen, die Objekte dieses Typs zu bearbeiten **"wchar_t"**.
+Durch die Spezialisierung kann die Struktur Bibliotheksfunktionen nutzen, die Objekte dieses Typs **wchar_t**bearbeiten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,5 +37,5 @@ Dank der Spezialisierung kann die Struktur Bibliotheksfunktionen nutzen, die Obj
 
 ## <a name="see-also"></a>Siehe auch
 
-[char_traits-Struktur](../standard-library/char-traits-struct.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[char_traits-Struktur](../standard-library/char-traits-struct.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

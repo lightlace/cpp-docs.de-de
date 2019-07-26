@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 9aae1205866a0bf982ab7c41b792aac0f63ea149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b9785dc41791be63d585d18802953eade370b2a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411954"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459924"
 ---
 # <a name="timedmutex-class"></a>timed_mutex-Klasse
 
@@ -60,7 +60,7 @@ class timed_mutex;
 
 **Namespace:** std
 
-## <a name="lock"></a>  timed_mutex:: lock
+## <a name="lock"></a>timed_mutex:: Lock
 
 Blockiert den aufrufenden Thread, bis der Thread in den Besitz von `mutex` gelangt.
 
@@ -92,7 +92,7 @@ Gibt alle Ressourcen frei, die vom `mutex`-Objekt verwendet werden.
 
 Wenn das Objekt gesperrt ist, wenn der Destruktor ausgeführt wird, ist das Verhalten nicht definiert.
 
-## <a name="try_lock"></a>  timed_mutex:: try_lock
+## <a name="try_lock"></a>timed_mutex::try_lock
 
 Versucht, ohne Blockierung in den Besitz von `mutex` zu gelangen.
 
@@ -102,13 +102,13 @@ bool try_lock();
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex`ist, andernfalls **"false"**.
+**true** , wenn die Methode erfolgreich in den `mutex`Besitz von gelangt; andernfalls **false**.
 
 ### <a name="remarks"></a>Hinweise
 
 Wenn der aufrufende Thread bereits im Besitz von `mutex` ist, so ist das Verhalten nicht definiert.
 
-## <a name="try_lock_for"></a>  timed_mutex:: try_lock_for
+## <a name="try_lock_for"></a>timed_mutex::try_lock_for
 
 Versucht, ohne Blockierung in den Besitz von `mutex` zu gelangen.
 
@@ -119,18 +119,18 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parameter
 
-*Rel_time*<br/>
+*Rel_time*\
 Ein [chrono::duration](../standard-library/duration-class.md)-Objekt, das angibt, wie lange die Methode höchstens versucht, in den Besitz von `mutex` zu gelangen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex`ist, andernfalls **"false"**.
+**true** , wenn die Methode erfolgreich in den `mutex`Besitz von gelangt; andernfalls **false**.
 
 ### <a name="remarks"></a>Hinweise
 
 Wenn der aufrufende Thread bereits im Besitz von `mutex` ist, so ist das Verhalten nicht definiert.
 
-## <a name="try_lock_until"></a>  timed_mutex:: try_lock_until
+## <a name="try_lock_until"></a>timed_mutex::try_lock_until
 
 Versucht, ohne Blockierung in den Besitz von `mutex` zu gelangen.
 
@@ -143,18 +143,18 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parameter
 
-*Abs_time*<br/>
+*Abs_time*\
 Ein Zeitpunkt, der den Schwellenwert angibt, nach dem die Methode nicht mehr versucht, in den Besitz von `mutex` zu gelangen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex`ist, andernfalls **"false"**.
+**true** , wenn die Methode erfolgreich in den `mutex`Besitz von gelangt; andernfalls **false**.
 
 ### <a name="remarks"></a>Hinweise
 
 Wenn der aufrufende Thread bereits im Besitz von `mutex` ist, so ist das Verhalten nicht definiert.
 
-## <a name="unlock"></a>  timed_mutex:: Unlock
+## <a name="unlock"></a>timed_mutex:: Unlock
 
 Gibt den Besitz von `mutex` frei.
 
@@ -168,5 +168,5 @@ Wenn der aufrufende Thread nicht im Besitz von `mutex` ist, so ist das Verhalten
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Headerdateienreferenz](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

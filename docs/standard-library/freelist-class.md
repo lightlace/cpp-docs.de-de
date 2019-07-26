@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: ef1f2e617e93869a1084dc030c6496c819f1ed96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a504f58f9f64aa8b0d26b17090387c5c2b5de21
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159391"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454139"
 ---
 # <a name="freelist-class"></a>freelist-Klasse
 
@@ -37,7 +37,7 @@ class freelist : public Max
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse verwaltet eine Liste von Speicherblöcken der Größe *Sz* mit die maximale Länge der Liste bestimmt, indem die max-Klasse übergeben *Max*.
+Diese Vorlagen Klasse verwaltet eine Liste von Speicherblöcken der Größe- *SZ* mit der maximalen Länge der Liste, die durch die max-Klasse festgelegt wird, die maximal überschritten *wird.*
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -82,7 +82,7 @@ Gibt einen Zeiger auf den Speicherblock zurück, der aus der Liste entfernt wurd
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt NULL zurück, wenn die Liste leer ist. Andernfalls entfernt sie den ersten Speicherblock aus der Liste.
+Die Member-Funktion gibt NULL zurück, wenn die Liste leer ist. Andernfalls entfernt sie den ersten Speicherblock aus der Liste.
 
 ## <a name="push"></a> freelist::push
 
@@ -100,12 +100,12 @@ bool push(void* ptr);
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn die `full` Funktionsergebnis ist eine der max-Klasse **"false"** ist, andernfalls die `push` -Funktion zurückgegeben **"false"**.
+**true** , wenn `full` die Funktion der Max-Klasse **false**zurückgibt; andernfalls `push` gibt die Funktion **false**zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die `full` Funktionsergebnis ist eine der max-Klasse **"false"**, diese Memberfunktion fügt den Speicherblock verweist *Ptr* an den Anfang der Liste.
+Wenn die `full` -Funktion der Max-Klasse **false**zurückgibt, fügt diese Member-Funktion den Speicherblock hinzu, auf den *ptr* zeigt, auf den Anfang der Liste.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

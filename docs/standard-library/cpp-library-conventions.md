@@ -11,12 +11,12 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-ms.openlocfilehash: f1790b75baea340d0b3ab1044290317055ac81d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8747ef490c0997b1fa3fd5186618b7189fa00970
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210774"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450697"
 ---
 # <a name="c-library-conventions"></a>C++-Bibliothekskonventionen
 
@@ -50,5 +50,5 @@ Andererseits bestehen durchaus einige Einschränkungen:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Überblick über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Übersicht über die C++-Standardbibliothek](../standard-library/cpp-standard-library-overview.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

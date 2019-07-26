@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::ostreambuf_iterator [C++], traits_type
 - std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
-ms.openlocfilehash: 5114a658cfde965556f4663d2ba92c9ba4d1eaeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 815647deb7c11f4d7be5650e0ec2e635338551ad
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370949"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448176"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator Class
 
@@ -35,10 +35,10 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*<br/>
-Der Typ, der den Zeichentyp für das ostreambuf_iterator-Objekt darstellt. Dieses Argument ist optional, und der Standardwert ist **Char**.
+*CharType*\
+Der Typ, der den Zeichentyp für das ostreambuf_iterator-Objekt darstellt. Dieses Argument ist optional, und der Standardwert ist **char**.
 
-*Merkmale*<br/>
+*Aufweisen*\
 Der Typ, der den Zeichentyp für das ostreambuf_iterator-Objekt darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Hinweise
@@ -70,7 +70,7 @@ Die ostreambuf_iterator-Klasse muss den Anforderungen für einen Ausgabeiterator
 
 |Operator|Beschreibung|
 |-|-|
-|[operator*](#op_star)|Der Dereferenzierungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x`.|
+|[operator*](#op_star)|Dereferenzierungsoperator, der \* zum Implementieren des ausgabeiteratorausdrucks `i`  =  `x`verwendet wird.|
 |[operator++](#op_add_add)|Ein nicht funktionaler Inkrementoperator, der einen `ostreambuf_iterator` zum gleichen Objekt zurückgibt, das er adressiert hat, bevor der Vorgang aufgerufen wurde.|
 |[operator=](#op_eq)|Der Operator fügt ein Zeichen in den zugeordneten Streampuffer ein.|
 
@@ -181,7 +181,7 @@ No insertions failed.
 */
 ```
 
-## <a name="op_star"></a>  ostreambuf_iterator:: Operator\*
+## <a name="op_star"></a>Ostreambuf_iterator:: Operator\*
 
 Ein nicht funktionaler Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks \* *i* = *x* verwendet wird.
 
@@ -286,7 +286,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Parameter
 
-*_Char*<br/>
+*_Char*\
 Das in den Streampuffer einzufügende Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -339,15 +339,15 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Parameter
 
-*strbuf*<br/>
+*strbuf*\
 Das zur Initialiserung des Ausgabestreampufferzeigers verwendete streambuf-Ausgabeobjekt.
 
-*Ostr*<br/>
+*Ostr*\
 Das zur Initialiserung des Ausgabestreampufferzeigers verwendete Streamausgabeobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert den Zeiger auf den ausgabestreampuffer mit *Strbuf*.
+Der erste Konstruktor initialisiert den Ausgabestream-Puffer Zeiger mit " *strinbuf*".
 
 Der zweite Konstruktor initialisiert den Zeiger auf den Ausgabestreampuffer mit `Ostr`. `rdbuf`. Der gespeicherte Zeiger darf kein NULL-Zeiger sein.
 
@@ -410,7 +410,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für `basic_streambuf` \< **CharType**, **"traits"**>, eine Stream-Klasse für die e/a-Puffer, der wird `streambuf` beim auf Zeichentyp spezialisierte**Char**.
+Der Typ ist ein Synonym für `basic_streambuf` \< **CharType**, **Merkmale**>, eine Streamklasse für e/a-Puffer, `streambuf` die bei der Spezialisierung auf den Zeichentyp **char**wird.
 
 ### <a name="example"></a>Beispiel
 
@@ -468,6 +468,6 @@ by charOutBuf are: OUT.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

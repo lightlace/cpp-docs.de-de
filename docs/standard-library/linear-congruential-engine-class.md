@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 41ce5590476a8327c9449ece5e3173146a04760f
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: f5b448fbf158cf9e9cfb8331c6ec7a228859fffc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449894"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447590"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine-Klasse
 
@@ -45,17 +45,17 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Parameter
 
-*UIntType*<br/>
+*Uinttype*\
 Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*A*<br/>
-**Multiplikator**. **Vorbedingung**: Siehe Abschnitt Hinweise.
+*EIN*\
+**Multiplikator**. **Vorbedingung**: Siehe Abschnitt "Hinweise".
 
-*C*<br/>
-**Inkrement**. **Vorbedingung**: Siehe Abschnitt Hinweise.
+*SCHER*\
+**Inkrement**. **Vorbedingung**: Siehe Abschnitt "Hinweise".
 
-*M*<br/>
-**Modulo**. **Vorbedingung**: Finden Sie unter "Hinweise".
+*800*\
+**Modulo**. **Vorbedingung**: Siehe Hinweise.
 
 ## <a name="members"></a>Member
 
@@ -74,9 +74,9 @@ Die Vorlagenklasse `linear_congruential_engine` ist die einfachste Generator-Eng
 
 Diese Engine produziert Werte eines benutzerdefinierten Ganzzahltyps ohne Vorzeichen mithilfe der Wiederholungsrelation (*period*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Wenn *M* ist 0 (null), der für diese modulooperation verwendete Wert lautet `numeric_limits<result_type>::max() + 1`. Der Zustand der Engine ist der letzte zurückgegebene Wert oder der Startwert, wenn `operator()` nicht aufgerufen wurde.
+Wenn *M* 0 (null) ist, ist `numeric_limits<result_type>::max() + 1`der für diese modulooperation verwendete Wert. Der Zustand der Engine ist der letzte zurückgegebene Wert oder der Startwert, wenn `operator()` nicht aufgerufen wurde.
 
-Wenn *M* nicht gleich NULL ist, die Werte der Vorlagenargumente *ein* und *C* muss weniger als *M*.
+Wenn *M* nicht 0 (null) ist, müssen die Werte der Vorlagen Argumente *A* und *C* kleiner als *M*sein.
 
 Obwohl Sie direkt aus dieser Engine einen Generator konstruieren können, können Sie auch eine dieser voreingestellten Typdefinitionen verwenden.
 
@@ -102,4 +102,4 @@ Ausführliche Informationen über den Algorithmus für die lineare Kongruenz-Eng
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)
