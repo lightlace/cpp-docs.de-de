@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c506a6a2e1e2c0610f8a6129d2bfb42f762e998a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405169"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458605"
 ---
 # <a name="collate-class"></a>collate-Klasse
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*<br/>
+*CharType*\
 Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.
 
 ## <a name="remarks"></a>Hinweise
@@ -108,23 +108,23 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs*<br/>
+*_Refs*\
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
-*_Locname*<br/>
+*_Locname*\
 Der Name des Gebietsschemas.
 
 ### <a name="remarks"></a>Hinweise
 
-Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
+Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebiets Schemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
 - \> 1: Diese Werte sind nicht definiert.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **Locale::**[Facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [](../standard-library/locale-class.md#facet_class)Face(`_Refs`).
 
 ## <a name="compare"></a> collate::compare
 
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*First1*\
 Zeiger auf das erste Element in der ersten zu vergleichenden Sequenz.
 
-*last1*<br/>
+*Last1*\
 Zeiger auf das letzte Element in der ersten zu vergleichenden Sequenz.
 
-*first2*<br/>
+*First2*\
 Zeiger auf das erste Element in der zweiten zu vergleichenden Sequenz.
 
-*last2*<br/>
+*Last2*\
 Zeiger auf das letzte Element in der zweiten zu vergleichenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parameter
 
-*first1*<br/>
+*First1*\
 Zeiger auf das erste Element in der ersten zu vergleichenden Sequenz.
 
-*last1*<br/>
+*Last1*\
 Zeiger auf das letzte Element in der ersten zu vergleichenden Sequenz.
 
-*first2*<br/>
+*First2*\
 Zeiger auf das erste Element in der zweiten zu vergleichenden Sequenz.
 
-*last2*<br/>
+*Last2*\
 Zeiger auf das letzte Element in der zweiten zu vergleichenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -229,7 +229,7 @@ Die Memberfunktion gibt Folgendes zurück:
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Memberfunktion vergleicht die Sequenz an [* first1, Last1) * mit der Sequenz an *[first2, last2*). Sie vergleicht Werte durch Anwenden von `operator<` zwischen Paaren entsprechender Elemente des Typs `CharType`. Die erste Sequenz ist im Vergleich kleiner, wenn sie im frühesten ungleichen Paar in den Sequenzen das kleinere Element enthält oder wenn zwar keine ungleichen Paare vorhanden sind, die erste Sequenz aber kürzer ist.
+Die geschützte virtuelle Member-Funktion vergleicht die Sequenz bei [* First1, Last1) * mit der Sequenz bei *[First2, Last2*). Er vergleicht Werte, indem `operator<` er zwischen Paaren entsprechender Elemente vom Typ `CharType`anwendet. Die erste Sequenz ist im Vergleich kleiner, wenn sie im frühesten ungleichen Paar in den Sequenzen das kleinere Element enthält oder wenn zwar keine ungleichen Paare vorhanden sind, die erste Sequenz aber kürzer ist.
 
 ### <a name="example"></a>Beispiel
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Ein Zeiger auf das erste Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
-*last*<br/>
+*letzten*\
 Ein Zeiger auf das letzte Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Ein Zeiger auf das erste Zeichen in der zu konvertierenden Sequenz.
 
-*last*<br/>
+*letzten*\
 Ein Zeiger auf das letzte Zeichen in der zu konvertierenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Ein Zeiger auf das erste Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
-*last*<br/>
+*letzten*\
 Ein Zeiger auf das letzte Zeichen in der Sequenz, dessen Hashwert bestimmt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Ein Zeiger auf das erste Zeichen in der zu konvertierenden Sequenz.
 
-*last*<br/>
+*letzten*\
 Ein Zeiger auf das letzte Zeichen in der zu konvertierenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -383,7 +383,7 @@ Eine Zeichenfolge, die die transformierte Zeichensequenz enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt [Do_transform](#do_transform)(`first`, `last`).
+Die Member-Funktion [](#do_transform)gibt Do_transform`first`( `last`,) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

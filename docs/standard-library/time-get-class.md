@@ -38,12 +38,12 @@ helpviewer_keywords:
 - std::time_get [C++], get_weekday
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
-ms.openlocfilehash: df5a6da3995b1485585a3105ac027f19a27dc8eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45eeb7bdf944682ca168b8bff01b42815cfa7f28
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412032"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460011"
 ---
 # <a name="timeget-class"></a>time_get-Klasse
 
@@ -59,10 +59,10 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*<br/>
+*CharType*\
 Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.
 
-*InputIterator*<br/>
+*InputIterator*\
 Der Iterator, von dem die Zeitwerte gelesen werden.
 
 ## <a name="remarks"></a>Hinweise
@@ -217,34 +217,34 @@ iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Ein Eingabeiterator, der den Anfang der zu konvertierenden Sequenz angibt.
 
-*last*<br/>
+*letzten*\
 Ein Eingabeiterator, der das Ende der Sequenz angibt.
 
-*iosbase*<br/>
+*iosbase*\
 Ein Streamobjekt.
 
-*state*<br/>
-Ein Feld in Iosbase, in dem entsprechende bitmaskenelemente festgelegt werden, um Fehler anzugeben.
+*Land*\
+Ein Feld in iosbase, in dem geeignete Bitmasken Elemente festgelegt werden, um Fehler anzugeben.
 
-*ptm*<br/>
+*PTM*\
 Ein Zeiger auf die Zeitstruktur, in der die Zeit gespeichert werden soll.
 
-*fmt*<br/>
+*fmt*\
 Eine Konvertierungsspezifiziererzeichen.
 
-*mod*<br/>
+*mod*\
 Ein optionales Modifiziererzeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Iterator zurück, der das erste nicht konvertierte Element kennzeichnet. Ein Konvertierungsfehler bewirkt, dass `ios_base::failbit` in `state` und gibt *erste*.
+Gibt einen Iterator zurück, der das erste nicht konvertierte Element kennzeichnet. Bei einem Konvertierungs `ios_base::failbit` Fehler `state` wird in festgelegt und *zuerst*zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Die virtuelle Memberfunktion konvertiert und überspringt mindestens ein oder mehrere Elemente im Bereich Eingabe [`first`, `last`) zur Bestimmung der Werte in eine oder mehrere Mitglieder der gespeicherten `*pt`. Ein Konvertierungsfehler bewirkt, dass `ios_base::failbit` in `state` und gibt *erste*. Andernfalls gibt die Funktion einen Iterator zurück, der das erste nicht konvertierte Element festlegt.
+Die Funktion für virtuelle Member konvertiert und überspringt ein oder mehrere Eingabeelemente im Bereich [`first`, `last`), um die Werte zu ermitteln, die in einem oder `*pt`mehreren Membern von gespeichert werden. Bei einem Konvertierungs `ios_base::failbit` Fehler `state` wird in festgelegt und *zuerst*zurückgegeben. Andernfalls gibt die Funktion einen Iterator zurück, der das erste nicht konvertierte Element festlegt.
 
 Es gibt die folgenden Konvertierungsspezifizierer:
 
@@ -310,19 +310,19 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*<br/>
+*letzten*\
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*<br/>
+*iosbase*\
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*state*<br/>
+*Land*\
 Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*<br/>
+*PTM*\
 Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -331,7 +331,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen, und beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Datumseingabefeld erkannt hat. Wenn erfolgreich, sie dieses Feld in seinen äquivalenten Wert als Komponenten konvertiert **tm::tm\_Mon**, **tm::tm\_Tag**, und **tm::tm\_Jahr** , und speichert die Ergebnisse in `ptm->tm_mon`, `ptm->tm_day`, und `ptm->tm_year`bzw. Sie gibt einen Iterator zurück, der das erste Element nach dem Datumseingabefeld festlegt. Andernfalls legt die Funktion fest `iosbase::failbit` in *Zustand*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Datumseingabefelds festlegt. In beiden Fällen, wenn der Rückgabewert *letzten*, legt die Funktion `ios_base::eofbit` in *Zustand*.
+Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen, und beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Datumseingabefeld erkannt hat. Wenn erfolgreich, konvertiert Sie dieses Feld in den entsprechenden Wert als Komponenten **TM:: TM\_Mon**, **TM:: TM\_Day**und **TM:: TM\_Year**und speichert die Ergebnisse in `ptm->tm_mon`, `ptm->tm_day`, und `ptm->tm_year`bzw. Sie gibt einen Iterator zurück, der das erste Element nach dem Datumseingabefeld festlegt. Andernfalls legt `iosbase::failbit` die Funktion den *Status fest*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Datumseingabefelds festlegt. In beiden Fällen legt `ios_base::eofbit` die Funktion den *Status fest*, wenn der Rückgabewert " *Last*" ist.
 
 Das Format für das Datumseingabefeld ist vom Gebietsschema abhängig. Für das Standardgebietsschema hat das Datumseingabefeld die Form MMM DD, YYYY:
 
@@ -361,19 +361,19 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*<br/>
+*letzten*\
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*<br/>
+*iosbase*\
 Nicht verwendet.
 
-*state*<br/>
+*Land*\
 Ein Ausgabeparameter, der die entsprechenden Bitmaskenelemente für den Streamstatus festlegt, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*<br/>
+*PTM*\
 Ein Zeiger auf den Ort, an dem die Monatsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -382,7 +382,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen, und beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Monatseingabefeld erkannt hat. Wenn erfolgreich, sie dieses Feld in seinen äquivalenten Wert als Komponente konvertiert **tm::tm\_Mon**, und speichert das Ergebnis in `ptm->tm_mon`. Sie gibt einen Iterator zurück, der das erste Element nach dem Monatseingabefeld festlegt. Andernfalls legt die Funktion fest `ios_base::failbit` in *Zustand*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Monatseingabefelds festlegt. In beiden Fällen, wenn der Rückgabewert *letzten*, legt die Funktion `ios_base::eofbit` in *Zustand*.
+Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen, und beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Monatseingabefeld erkannt hat. Im Erfolgsfall konvertiert Sie dieses Feld in den entsprechenden Wert als Komponente **TM::\_TM Mon**und speichert das Ergebnis in. `ptm->tm_mon` Sie gibt einen Iterator zurück, der das erste Element nach dem Monatseingabefeld festlegt. Andernfalls legt `ios_base::failbit` die Funktion den *Status fest*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Monatseingabefelds festlegt. In beiden Fällen legt `ios_base::eofbit` die Funktion den *Status fest*, wenn der Rückgabewert " *Last*" ist.
 
 Das Monatseingabefeld ist eine Sequenz, die die längste aus einer Reihe von gebietsschemaspezifischen Zeichenfolgen wie Jan, Januar, Feb, Februar usw. zuordnet. Der konvertierte Wert ist die Anzahl von Monaten seit Januar.
 
@@ -404,19 +404,19 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*<br/>
+*letzten*\
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*<br/>
+*iosbase*\
 Nicht verwendet.
 
-*state*<br/>
+*Land*\
 Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*<br/>
+*PTM*\
 Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -425,7 +425,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen, und beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Zeiteingabefeld erkannt hat. Wenn erfolgreich, sie dieses Feld in seinen äquivalenten Wert als Komponenten konvertiert `tm::tm_hour`, `tm::tm_min`, und `tm::tm_sec`, und speichert die Ergebnisse in `ptm->tm_hour`, `ptm->tm_min`, und `ptm->tm_sec`bzw. Sie gibt einen Iterator zurück, der das erste Element nach dem Zeiteingabefeld festlegt. Andernfalls legt die Funktion fest `ios_base::failbit` in *Zustand*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Zeiteingabefelds festlegt. In beiden Fällen, wenn der Rückgabewert *letzten*, legt die Funktion `ios_base::eofbit` in *Zustand*.
+Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen, und beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Zeiteingabefeld erkannt hat. Im Erfolgsfall konvertiert Sie dieses Feld in den entsprechenden Wert als die Komponenten `tm::tm_hour`, `tm::tm_min`und `ptm->tm_sec` `tm::tm_sec`und speichert die Ergebnisse in `ptm->tm_hour`, `ptm->tm_min`bzw. Sie gibt einen Iterator zurück, der das erste Element nach dem Zeiteingabefeld festlegt. Andernfalls legt `ios_base::failbit` die Funktion den *Status fest*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Zeiteingabefelds festlegt. In beiden Fällen legt `ios_base::eofbit` die Funktion den *Status fest*, wenn der Rückgabewert " *Last*" ist.
 
 In dieser Implementierung hat das Zeiteingabefeld die Form HH:MM:SS:
 
@@ -455,19 +455,19 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*<br/>
+*letzten*\
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*<br/>
+*iosbase*\
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*state*<br/>
+*Land*\
 Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*<br/>
+*PTM*\
 Ein Zeiger auf den Ort, an dem die Wochentagsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -476,7 +476,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente ab *erste* in der Sequenz [ `first`, `last`) bis ein vollständiges erkannt hat, nicht leeres wochentagseingabefeld. Wenn erfolgreich, sie dieses Feld in seinen äquivalenten Wert als Komponente konvertiert **tm::tm\_"wDay"**, und speichert das Ergebnis in `ptm->tm_wday`. Sie gibt einen Iterator zurück, der das erste Element nach dem Wochentagseingabefeld festlegt. Andernfalls legt die Funktion fest `ios_base::failbit` in *Zustand*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Wochentagseingabefelds festlegt. In beiden Fällen, wenn der Rückgabewert *letzten*, legt die Funktion `ios_base::eofbit` in *Zustand*.
+Die virtuelle geschützte Member-Funktion versucht, sequenzielle Elemente abzugleichen, beginnend an *erster Stelle* in der Sequenz [ `first`, `last`), bis Sie ein umfassendes, nicht leeres Wochentag-Eingabefeld erkannt hat. Im Erfolgsfall konvertiert Sie dieses Feld in den entsprechenden Wert als Komponente **TM:: TM\_wday**und speichert das Ergebnis in. `ptm->tm_wday` Sie gibt einen Iterator zurück, der das erste Element nach dem Wochentagseingabefeld festlegt. Andernfalls legt `ios_base::failbit` die Funktion den *Status fest*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Wochentagseingabefelds festlegt. In beiden Fällen legt `ios_base::eofbit` die Funktion den *Status fest*, wenn der Rückgabewert " *Last*" ist.
 
 Das Wochentagseingabefeld ist eine Sequenz, die die längste aus einer Reihe von gebietsschemaspezifischen Zeichenfolgen wie So, Sonntag, Mo, Montag usw. zuordnet. Der konvertierte Wert ist die Anzahl von Tagen seit Sonntag.
 
@@ -498,19 +498,19 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*<br/>
+*letzten*\
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*<br/>
+*iosbase*\
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*state*<br/>
+*Land*\
 Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*<br/>
+*PTM*\
 Ein Zeiger auf den Ort, an dem die Jahresinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -519,7 +519,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente ab *erste* in der Sequenz [ `first`, `last`) bis ein vollständiges erkannt hat, nicht leeres jahreseingabefeld. Wenn erfolgreich, sie dieses Feld in seinen äquivalenten Wert als Komponente konvertiert **tm::tm\_Jahr**, und speichert das Ergebnis in `ptm->tm_year`. Sie gibt einen Iterator zurück, der das erste Element nach dem Jahreseingabefeld festlegt. Andernfalls legt die Funktion fest `ios_base::failbit` in *Zustand*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Jahreseingabefelds festlegt. In beiden Fällen, wenn der Rückgabewert *letzten*, legt die Funktion `ios_base::eofbit` in *Zustand*.
+Die virtuelle geschützte Member-Funktion versucht, sequenzielle Elemente abzugleichen, beginnend an *erster Stelle* in der Sequenz [ `first`, `last`), bis Sie ein ganzes, nicht leeres Jahr-Eingabefeld erkannt hat. Im Erfolgsfall konvertiert Sie dieses Feld in den entsprechenden Wert als Komponente **TM::\_TM Year**und speichert das Ergebnis in. `ptm->tm_year` Sie gibt einen Iterator zurück, der das erste Element nach dem Jahreseingabefeld festlegt. Andernfalls legt `ios_base::failbit` die Funktion den *Status fest*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Jahreseingabefelds festlegt. In beiden Fällen legt `ios_base::eofbit` die Funktion den *Status fest*, wenn der Rückgabewert " *Last*" ist.
 
 Das Jahreseingabefeld ist eine Folge von Dezimalziffern, deren entsprechender numerischer Wert im Bereich [1900, 2036) liegen muss. Der gespeicherte Wert ist dieser Wert minus 1900. In dieser Implementierung repräsentieren Werte im Bereich [69, 136) den Bereich von Jahren [1969, 2036). Werte im Bereich [0, 69) sind ebenfalls zulässig, können jedoch abhängig von der jeweiligen Übersetzungsumgebung entweder den Bereich von Jahren [1900, 1969) oder [2000, 2069) darstellen.
 
@@ -553,36 +553,36 @@ iter_type get(
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Eingabeiterator, der angibt, wo die zu konvertierende Sequenz beginnt.
 
-*last*<br/>
+*letzten*\
 Eingabeiterator, der das Ende der zu konvertierenden Sequenz angibt.
 
-*iosbase*<br/>
+*iosbase*\
 Der Stream (Datenstrom).
 
-*state*<br/>
+*Land*\
 Die entsprechenden Bitmaskenelemente werden für den Streamzustand festgelegt, um Fehler zu kennzeichnen.
 
-*ptm*<br/>
+*PTM*\
 Zeiger auf die Zeitstruktur, in der die Zeit gespeichert werden soll.
 
-*fmt*<br/>
+*fmt*\
 Eine Konvertierungsspezifiziererzeichen.
 
-*mod*<br/>
+*mod*\
 Ein optionales Modifiziererzeichen.
 
-*fmt_first*<br/>
+*fmt_first*\
 Zeigt auf die Stelle, an der die Formatanweisungen beginnen.
 
-*fmt_last*<br/>
+*fmt_last*\
 Zeigt auf das Ende der Formatanweisungen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Iterator zum ersten Zeichen zurück, nachdem die Daten, die zum Zuordnen der Uhrzeit-Struktur verwendet wurde `*ptm`.
+Gibt einen Iterator zum ersten Zeichen nach den Daten zurück, die verwendet wurden, um die Zeit `*ptm`Struktur zuzuweisen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -590,11 +590,11 @@ Die erste Memberfunktion gibt `do_get(first, last, iosbase, state, ptm, fmt, mod
 
 Die zweite Memberfunktion ruft `do_get` unter der Kontrolle des Formats auf, das durch `[fmt_first, fmt_last)` begrenzt ist. Die Funktion behandelt das Format als Sequenz von Feldern, von denen jedes die Konvertierung von null oder mehr Eingabeelementen bestimmt, die durch `[first, last)` begrenzt sind. Sie gibt einen Iterator zurück, der das erste nicht konvertierte Element festlegt. Es gibt drei Arten von Feldern:
 
-Ein Prozentzeichen (%) in das Format, gefolgt von der ein optionaler Modifizierer *mod* im festgelegten [eoq#], gefolgt von einem Konvertierungsspezifizierer *Fmt*, ersetzt *erste* mit den Rückgabewert von `do_get(first, last, iosbase, state, ptm, fmt, mod)`. Ein Konvertierungsfehler bewirkt, dass `ios_base::failbit` in *Zustand* und zurückgibt.
+Ein Prozent (%) im-Format, gefolgt von einem optionalen Modifizierer *mod* in der Menge [EOQ #], gefolgt von einem Konvertierungsspezifizierer *,* wird *zuerst* durch den Wert ersetzt `do_get(first, last, iosbase, state, ptm, fmt, mod)`, der von zurückgegeben wird. Bei einem Konvertierungs `ios_base::failbit` Fehler wird der *Zustand fest* gelegt und zurückgegeben.
 
 Ein Leerzeichenelement im Format bewirkt ein Überspringen von eingegebenen Leerzeichenelementen.
 
-Jedes weitere Element im Format muss mit dem nächsten Eingabeelement übereinstimmen, das übersprungen wird. Ein Übereinstimmungsfehler bewirkt, dass `ios_base::failbit` in *Zustand* und zurückgibt.
+Jedes weitere Element im Format muss mit dem nächsten Eingabeelement übereinstimmen, das übersprungen wird. Ein Übereinstimmungs `ios_base::failbit` Fehler legt den *Status fest* und gibt zurück.
 
 ## <a name="get_date"></a> time_get::get_date
 
@@ -610,19 +610,19 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*<br/>
+*letzten*\
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*<br/>
+*iosbase*\
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*state*<br/>
+*Land*\
 Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*<br/>
+*PTM*\
 Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -631,7 +631,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt [Do_get_date](#do_get_date)(`first`, `last`, `iosbase`, `state`, `ptm`).
+Die Member-Funktion [](#do_get_date)gibt Do_get_date`first`( `last`, `iosbase`, `state`, `ptm`,) zurück.
 
 Beachten Sie, dass Monate von 0 bis 11 gezählt werden.
 
@@ -704,19 +704,19 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*<br/>
+*letzten*\
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*<br/>
+*iosbase*\
 Nicht verwendet.
 
-*state*<br/>
+*Land*\
 Ein Ausgabeparameter, der die entsprechenden Bitmaskenelemente für den Streamstatus festlegt, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*<br/>
+*PTM*\
 Ein Zeiger auf den Ort, an dem die Monatsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -725,7 +725,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt [Do_get_monthname](#do_get_monthname)(`first`, `last`, `iosbase`, `state`, `ptm`).
+Die Member-Funktion [](#do_get_monthname)gibt Do_get_monthname`first`( `last`, `iosbase`, `state`, `ptm`,) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -796,19 +796,19 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*<br/>
+*letzten*\
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*<br/>
+*iosbase*\
 Nicht verwendet.
 
-*state*<br/>
+*Land*\
 Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*<br/>
+*PTM*\
 Ein Zeiger auf den Ort, an dem die Datumsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -817,7 +817,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt [Do_get_time](#do_get_time)(`first`, `last`, `iosbase`, `state`, `ptm`).
+Die Member-Funktion [](#do_get_time)gibt Do_get_time`first`( `last`, `iosbase`, `state`, `ptm`,) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -877,19 +877,19 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*<br/>
+*letzten*\
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*<br/>
+*iosbase*\
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*state*<br/>
+*Land*\
 Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*<br/>
+*PTM*\
 Ein Zeiger auf den Ort, an dem die Wochentagsinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -898,7 +898,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt [Do_get_weekday](#do_get_weekday)(`first`, `last`, `iosbase`, `state`, `ptm`).
+Die Member-Funktion [](#do_get_weekday)gibt do_get_weekday`first`( `last`, `iosbase`, `state`, `ptm`,) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -954,19 +954,19 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*<br/>
+*letzten*\
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*iosbase*<br/>
+*iosbase*\
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*state*<br/>
+*Land*\
 Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*ptm*<br/>
+*PTM*\
 Ein Zeiger auf den Ort, an dem die Jahresinformation gespeichert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -975,7 +975,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt [Do_get_year](#do_get_year)(`first`, `last`, `iosbase`, `state`, `ptm`).
+Die Member-Funktion [](#do_get_year)gibt Do_get_year`first`( `last`, `iosbase`, `state`, `ptm`,) zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -1040,14 +1040,14 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*refs*<br/>
+*Refs*\
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Die möglichen Werte für die *Refs* Parameter und ihre Bedeutung:
+Die möglichen Werte für den *Refs* -Parameter und ihre Bedeutung lauten:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebiets Schemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
@@ -1055,10 +1055,10 @@ Die möglichen Werte für die *Refs* Parameter und ihre Bedeutung:
 
 Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **Locale::**[Facet](../standard-library/locale-class.md#facet_class)(`refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [](../standard-library/locale-class.md#facet_class)Face(`refs`).
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<locale>](../standard-library/locale.md)<br/>
-[time_base-Klasse](../standard-library/time-base-class.md)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[time_base-Klasse](../standard-library/time-base-class.md)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -7,32 +7,32 @@ helpviewer_keywords:
 - output_iterator_tag class
 - output_iterator_tag struct
 ms.assetid: c23a4331-b069-4fa0-9c3a-1c9be7095553
-ms.openlocfilehash: cb2a59d2c81e6d7cc80de2714ba86476c5fa837f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 942e2214f42f97e262d4daf7836e8b6ced0e0ab2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370852"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453023"
 ---
 # <a name="outputiteratortag-struct"></a>output_iterator_tag-Struktur
 
-Eine Klasse, die einen Rückgabetyp für eine `iterator_category` -Funktion, die einen Ausgabeiterator darstellt.
+Eine Klasse, die einen Rückgabetyp für `iterator_category` eine Funktion bereitstellt, die einen Ausgabeiterator darstellt
 
 ## <a name="syntax"></a>Syntax
 
-Struktur Output_iterator_tag {};
+Struktur output_iterator_tag {};
 
 ## <a name="remarks"></a>Hinweise
 
-Die Kategorietagklassen werden als Kompiliertags für die Auswahl des Algorithmus verwendet. Die Vorlagenfunktion muss herausfinden, welche die spezifischste Kategorie ihres Iteratorarguments ist, um zur Kompilierzeit den effizientesten Algorithmus verwenden zu können. Für jeden Iterator des Typs `Iterator` muss `iterator_traits`< `Iterator`> **::iterator_category** definiert werden, um das spezifischste Kategorietag zu werden, das das Iteratorverhalten beschreibt.
+Die Kategorietagklassen werden als Kompiliertags für die Auswahl des Algorithmus verwendet. Die Vorlagenfunktion muss herausfinden, welche die spezifischste Kategorie ihres Iteratorarguments ist, um zur Kompilierzeit den effizientesten Algorithmus verwenden zu können. Für jeden Iterator des Typs `Iterator` muss `iterator_traits`< `Iterator`>  **::iterator_category** definiert werden, um das spezifischste Kategorietag zu werden, das das Iteratorverhalten beschreibt.
 
-Der Typ ist identisch mit **Iterator** \< **Iter**> **:: Iterator_category** beim `Iter` beschreibt ein Objekt, das als dienen kann ein der Ausgabeiterator.
+Der Typ ist identisch mit **Iterator** \< **ITER**>  **:: Iterator_category** , wenn `Iter` ein Objekt beschreibt, das als Ausgabeiterator fungieren kann.
 
 Dieses Tag ist nicht auf die `value_type` oder `difference_type` für den Iterator parametrisiert, wie bei anderen Iteratortags, da Ausgabe -Iteratoren nicht entweder `value_type` oder `difference_type` haben.
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter [Iterator_traits](../standard-library/iterator-traits-struct.md) oder [Random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) ein Beispiel zur Verwendung für `iterator_tag`s.
+Ein Beispiel für [](../standard-library/random-access-iterator-tag-struct.md) die Verwendung `iterator_tag`von s finden Sie unter [Iterator_traits](../standard-library/iterator-traits-struct.md) oder Random_access_iterator_tag.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,5 +42,5 @@ Finden Sie unter [Iterator_traits](../standard-library/iterator-traits-struct.md
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)

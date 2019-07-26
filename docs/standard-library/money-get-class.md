@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb5e1a7b83db561687f83be96c79add8b54589e8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383528"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455554"
 ---
 # <a name="moneyget-class"></a>money_get-Klasse
 
@@ -36,10 +36,10 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType*<br/>
+*CharType*\
 Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
 
-*InputIterator*<br/>
+*InputIterator*\
 Der Typ des Iterators, von dem die get-Funktionen ihre Eingabe lesen.
 
 ## <a name="remarks"></a>Hinweise
@@ -105,22 +105,22 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*<br/>
+*letzten*\
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*Intl*<br/>
+*Intl*\
 Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*Iosbase*<br/>
+*Iosbase*\
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*Zustand*<br/>
+*Land*\
 Je nachdem, ob die Vorgänge erfolgreich waren, legt dieses Element die entsprechenden Bitmaskenelemente für den Streamstatus fest.
 
-*val*<br/>
+*ster*\
 Eine Zeichenfolge zum Speichern der konvertierten Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -129,9 +129,9 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld für den monetär
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen. Sie beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Eingabefeld für monetäre Werte erkannt hat. Wenn erfolgreich, sie dieses Feld in eine Sequenz von ein oder mehrere Dezimalstellen sind konvertiert, optional mit vorangestelltem Minuszeichen ( `-`), um den Betrag darstellen und speichert das Ergebnis in der ["string_type"](#string_type) Objekt *Val*. Sie gibt einen Iterator zurück, der das erste Element nach dem Eingabefeld für monetäre Werte festlegt. Die Funktion speichert, andernfalls eine leere Sequenz in *Val* und `ios_base::failbit` in *Zustand*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für monetäre Werte festlegt. In beiden Fällen legt die Funktion `State` für `ios_base::eofbit` fest, wenn der Rückgabewert `last` entspricht.
+Die erste virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen. Sie beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Eingabefeld für monetäre Werte erkannt hat. Wenn erfolgreich, konvertiert Sie dieses Feld in eine Sequenz von einer oder mehreren Dezimalziffern, wobei optional ein Minuszeichen ( `-`) vorangestellt wird, um den Betrag darzustellen, und speichert das Ergebnis im [string_type](#string_type) -Objekt *Val*. Sie gibt einen Iterator zurück, der das erste Element nach dem Eingabefeld für monetäre Werte festlegt. Andernfalls speichert die Funktion eine leere Sequenz in *Val* und legt `ios_base::failbit` den *Status fest*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für monetäre Werte festlegt. In beiden Fällen legt die Funktion `State` für `ios_base::eofbit` fest, wenn der Rückgabewert `last` entspricht.
 
-Der zweite virtuelle geschützte Memberfunktion verhält sich genauso wie die erste, außer dass bei erfolgreicher Ausführung der Tasksequenz optionalem Vorzeichen allerdings sie in einen Wert vom Typ konvertiert **long double** und speichert diesen Wert in *Val*.
+Die zweite virtuelle geschützte Member-Funktion verhält sich wie die erste, mit der Ausnahme, dass bei erfolgreicher Ausführung die optional signierte Ziffern Sequenz in einen Wert vom Typ **long Double** konvertiert und dieser Wert in *Val*gespeichert wird.
 
 Das Format eines Eingabefelds für monetäre Werte richtet sich nach dem [Gebietsschemafacet](../standard-library/locale-class.md#facet_class) **fac**, das durch den effektiven Aufruf [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
@@ -187,22 +187,22 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-*first*<br/>
+*erstes*\
 Der Eingabeiterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-*last*<br/>
+*letzten*\
 Der Eingabeiterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-*Intl*<br/>
+*Intl*\
 Ein boolescher Wert, der den Typ des in der Sequenz vorgesehenen Währungssymbols angibt (**TRUE**, wenn international; **FALSE**, wenn national).
 
-*Iosbase*<br/>
+*Iosbase*\
 Ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist. Ansonsten ist das Währungssymbol erforderlich.
 
-*Zustand*<br/>
+*Land*\
 Legt die entsprechenden Bitmaskenelemente für den Streamstatus fest, je nachdem, ob die Vorgänge erfolgreich waren.
 
-*val*<br/>
+*ster*\
 Eine Zeichenfolge zum Speichern der konvertierten Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -211,7 +211,7 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld für den monetär
 
 ### <a name="remarks"></a>Hinweise
 
-Beide Memberfunktionen geben [Do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`.
+Beide Member-Funktionen geben [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -284,14 +284,14 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs*<br/>
+*_Refs*\
 Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
+Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
-- 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, die es enthalten ist.
+- 0: Die Lebensdauer des Objekts wird von den Gebiets Schemas verwaltet, in denen es enthalten ist.
 
 - 1: Die Lebensdauer des Objekts muss manuell verwaltet werden.
 
@@ -299,7 +299,7 @@ Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **Locale::**[Facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [](../standard-library/locale-class.md#facet_class)Face( *_Refs*).
 
 ## <a name="string_type"></a> money_get::string_type
 
@@ -315,6 +315,6 @@ Der Typ beschreibt eine Spezialisierung der Vorlagenklasse [basic_string](../sta
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Facet-Klasse](../standard-library/locale-class.md#facet_class)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet-Klasse](../standard-library/locale-class.md#facet_class)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)
