@@ -5,24 +5,24 @@ helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-ms.openlocfilehash: e13874bad44610821bed9c588af6bd9124162116
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 421930088dcbf9762d50b5af37d994b9008890eb
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222208"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606378"
 ---
 # <a name="compiler-com-support"></a>COM-Unterstützung des Compilers
 
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch
 
-Microsoft C++ Compiler direkt lesen Komponente Objekt Model (COM) Typbibliotheken und übersetzt den Inhalt in C++ Quellcode, die in die Kompilierung aufgenommen werden kann. Es sind Spracherweiterungen verfügbar, um die COM-Programmierung auf der Clientseite zu erleichtern.
+Der Microsoft C++ -Compiler kann COM-Typbibliotheken (Component Object Model) direkt lesen und den Inhalt C++ in Quellcode übersetzen, der in die Kompilierung aufgenommen werden kann. Spracherweiterungen sind verfügbar, um die COM-Programmierung auf Clientseite für Desktop-Apps zu vereinfachen.
 
-Mithilfe der [#import-präprozessoranweisung](../preprocessor/hash-import-directive-cpp.md), der Compiler kann eine Typbibliothek lesen und konvertiert ihn in eine C++-Headerdatei, die beschreibt, die COM-als Schnittstellen Klassen. Ein Satz von `#import`-Attributen ist für die Benutzersteuerung des Inhalts der resultierenden Typbibliothek-Headerdateien verfügbar.
+Mithilfe der [#import Präprozessordirektive](../preprocessor/hash-import-directive-cpp.md)kann der Compiler eine Typbibliothek lesen und in eine C++ Header Datei konvertieren, die die COM-Schnittstellen als Klassen beschreibt. Ein Satz von `#import`-Attributen ist für die Benutzersteuerung des Inhalts der resultierenden Typbibliothek-Headerdateien verfügbar.
 
-Sie können der [__declspec](../cpp/declspec.md) erweitertes Attribut [Uuid](../cpp/uuid-cpp.md) ein COM-Objekt einen global eindeutigen Bezeichner (GUID) zuweisen. Das Schlüsselwort [__uuidof](../cpp/uuidof-operator.md) können verwendet werden, um die COM-Objekt zugeordnete GUID zu extrahieren. Eine andere **__declspec** Attribut [Eigenschaft](../cpp/property-cpp.md), kann verwendet werden, um anzugeben der `get` und `set` Methoden für einen Datenmember eines COM-Objekts.
+Sie können das erweiterte [__declspec](../cpp/declspec.md) -Attribut [UUID](../cpp/uuid-cpp.md) verwenden, um einem COM-Objekt eine Globally Unique Identifier (GUID) zuzuweisen. Das Schlüsselwort [__uuidof](../cpp/uuidof-operator.md) kann zum Extrahieren der einem COM-Objekt zugeordneten GUID verwendet werden. Ein weiteres **__declspec** -Attribut ( [Eigenschaft](../cpp/property-cpp.md)) kann verwendet werden, `get` um `set` die-Methode und die-Methode für einen Datenmember eines COM-Objekts anzugeben.
 
-Ein Satz von COM-Unterstützung globale Funktionen und Klassen dient zur Unterstützung der `VARIANT` und `BSTR` Typen, intelligente Zeiger zu implementieren und zu kapseln die Error-Objekt, das ausgelöst wird, indem `_com_raise_error`:
+Eine Reihe von com-Unterstützung für globale Funktionen und Klassen wird bereit `VARIANT` gestellt `BSTR` , um die Typen und zu unterstützen, intelligente Zeiger zu implementieren und `_com_raise_error`das von ausgelöste Fehler Objekt zu Kapseln:
 
 - [Globale COM-Funktionen des Compilers](../cpp/compiler-com-global-functions.md)
 
