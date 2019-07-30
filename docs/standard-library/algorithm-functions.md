@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: cf6c1267b1dea86c2cad62708192a4c0a1970ed8
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313397"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661531"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorithmusfunktionen&gt;
 
@@ -611,6 +611,14 @@ int main()
 }
 ```
 
+```Output
+List1 = ( 5 10 20 25 30 50 )
+There is an element in list List1 with a value equal to 10.
+There is an element in list List1 with a value greater than 10 under greater than.
+Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
+There is an element with a value equivalent to -3 under mod_lesser.
+```
+
 ## <a name="clamp"></a>gekl
 
 Vergleicht einen Wert mit einer oberen und unteren Grenze und gibt einen Verweis auf den Wert zurück, wenn er zwischen den Begrenzungen liegt, oder einen Verweis auf die obere oder untere Grenze, wenn der Wert oberhalb oder unterhalb der Grenze liegt.
@@ -646,7 +654,7 @@ Ein Prädikat, das zum Vergleichen des Werts mit dem *unteren* oder *oberen* *We
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Verweis auf  den unteren `value < lower`if-Wert oder einen Verweis auf `upper < value`den *oberen* if-Wert zurück. Andernfalls wird ein Verweis auf den *Wert*zurückgegeben.
+Gibt einen Verweis auf den unteren `value < lower`if-Wert oder einen Verweis auf `upper < value`den *oberen* if-Wert zurück. Andernfalls wird ein Verweis auf den *Wert*zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -845,6 +853,13 @@ int main() {
 }
 ```
 
+```Output
+v1 = ( 0 10 20 30 40 50 )
+v2 = ( 0 3 6 9 12 15 18 21 24 27 30 )
+v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
+v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
+```
+
 ## <a name="copy_if"></a>copy_if
 
 Kopiert in einem Bereich von Elementen die Elemente, die für die angegebene Bedingung **true** sind.
@@ -885,7 +900,7 @@ Die Bedingung, auf die jedes Element im Bereich geprüft wird. Diese Bedingung w
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Ausgabeiterator  , der für jedes Element, das die Bedingung erfüllt Anders ausgedrückt: der Rückgabewert minus *dest* gleicht der Anzahl der kopierten Elemente.
+Ein Ausgabeiterator , der für jedes Element, das die Bedingung erfüllt Anders ausgedrückt: der Rückgabewert minus *dest* gleicht der Anzahl der kopierten Elemente.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -894,6 +909,61 @@ Die Vorlagen Funktion wertet aus.
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
 einmal für jeden `N` im Bereich `[0, last - first)`, für streng zunehmende Werte von `N` , beginnend mit dem niedrigsten Wert. Wenn " *dest* " und das *erste* Speicherbereich angeben, darf " *dest* " nicht `[ first, last )`im Bereich liegen.
+
+### <a name="example"></a>Beispiel
+
+```cpp
+// alg_copy_if.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+void listlist(std::list<int> l)
+{
+    std::cout << "( ";
+    for (auto const& el : l)
+        std::cout << el << " ";
+    std::cout << ")" << std::endl;
+}
+
+int main()
+{
+    using namespace std;
+    list<int> li{ 46, 59, 88, 72, 79, 71, 60, 5, 40, 84 };
+    list<int> le(li.size()); // le = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    list<int> lo(li.size()); // lo = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    cout << "li = ";
+    listlist(li);
+
+    // is_even checks if the element is even.
+    auto is_even = [](int const elem) { return !(elem % 2); };
+    // use copy_if to select only even elements from li 
+    // and copy them to le, starting from le's begin position
+    auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
+    le.resize(std::distance(le.begin(), ec));  // shrink le to new size
+
+    cout << "Even numbers are le = ";
+    listlist(le);
+
+    // is_odd checks if the element is odd.
+    auto is_odd = [](int const elem) { return (elem % 2); };
+    // use copy_if to select only odd elements from li
+    // and copy them to lo, starting from lo's begin position
+    auto oc = copy_if(li.begin(), li.end(), lo.begin(), is_odd);
+    lo.resize(std::distance(lo.begin(), oc));  // shrink lo to new size
+
+    cout << "Odd numbers are lo = ";
+    listlist(lo);
+}
+```
+
+```Output
+li = ( 46 59 88 72 79 71 60 5 40 84 )
+Even numbers are le = ( 46 88 72 60 40 84 )
+Odd numbers are lo = ( 59 79 71 5 )
+```
 
 ## <a name="copy_n"></a>copy_n
 
@@ -2975,7 +3045,7 @@ Gibt den *letzten* zurück, wenn der angegebene Bereich einen Heap bildet oder e
 
 Die erste Vorlagen Funktion gibt den letzten Iterator `next` in `[first, last)` zurück `[first, next)` , wobei ein Heap ist, der vom `std::less<>`Funktions Objekt geordnet ist. Wenn die Entfernung `last - first` kleiner als 2 ist, gibt die Funktion *Last*zurück.
 
-Die zweite Vorlagen Funktion verhält sich wie die erste, mit der Ausnahme, dass Sie anstelle der  Heap Reihenfolge Bedingung `std::less<>` die Prädikat präd anstelle von verwendet.
+Die zweite Vorlagen Funktion verhält sich wie die erste, mit der Ausnahme, dass Sie anstelle der Heap Reihenfolge Bedingung `std::less<>` die Prädikat präd anstelle von verwendet.
 
 ## <a name="is_partitioned"></a>is_partitioned
 
@@ -3068,7 +3138,7 @@ Ein forward-Iterator, der für den Vergleich auf das erste Element eines zweiten
 Ein forward-Iterator, der für den Vergleich auf eine Stelle hinter dem letzten Element eines zweiten Bereichs verweist.
 
 *pred*\
-Ein Prädikat, das auf Äquivalenz prüft und einen booleschen Wert zurückgibt.
+Ein Prädikat, das auf Äquivalenz prüft undeinen booleschen Wert zurückgibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4777,13 +4847,13 @@ Ein benutzerdefiniertes Prädikat Funktions Objekt, das den Sinn definiert, in d
 
 Rückgabewert
 
-`pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`
+`pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`.
 
 ### <a name="remarks"></a>Hinweise
 
 Die erste Vorlagenfunktion gibt Folgendes zurück:
 
-`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`
+`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`.
 
 Die zweite Vorlagenfunktion verhält sich genauso; der einzige Unterschied ist, dass sie `operator<(X, Y)` durch `pred(X, Y)` ersetzt.
 
@@ -4833,7 +4903,7 @@ Die `initializer_list` , die die zu vergleichenden Member enthält.
 
 Die erste Vorlagen Funktion gibt `pair<const Type&, const Type&>( right, left )` zurück, wenn *Rechts* kleiner als *Links*ist. Andernfalls wird `pair<const Type&, const Type&>( left, right )`zurückgegeben.
 
-Die zweite Member-Funktion gibt ein paar zurück, bei dem das erste Element das kleinere und das zweite das größere ist, wenn es durch das Prädikat Prädikat verglichen wird.
+Die zweite Member-Funktion gibt ein paar zurück, bei dem das erste Element das kleinere und das zweite das größere ist, wenn esdurch das Prädikat Prädikat verglichen wird.
 
 Die übrigen Vorlagen Funktionen Verhalten sich identisch, mit dem Unterschied, dass Sie die *linken* und *rechten* Parameter durch *InList*ersetzen.
 
