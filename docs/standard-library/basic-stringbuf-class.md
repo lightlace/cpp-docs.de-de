@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0445c2f8868fc9f2863ad4a2a12cc00261546c75
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409758"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447845"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf-Klasse
 
@@ -51,13 +51,13 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parameter
 
-*Alloc*<br/>
+*Zuordnungseinheits*\
 Die Zuweisungsklasse.
 
-*Elem*<br/>
+*Elem*\
 Der Typ des grundlegenden Elements der Zeichenfolge.
 
-*Tr*<br/>
+*Stadtrat*\
 Die für das grundlegende Element der Zeichenfolge spezialisierten Zeichenmerkmale.
 
 ## <a name="remarks"></a>Hinweise
@@ -80,11 +80,11 @@ Ein Objekt der Klasse basic_stringbuf< `Elem`, `Tr`, `Alloc`> speichert eine Kop
 
 |Typname|Beschreibung|
 |-|-|
-|[allocator_type](#allocator_type)|Der Typ ist ein Synonym für den Vorlagenparameter *Alloc*.|
+|[allocator_type](#allocator_type)|Der Typ ist ein Synonym für den Vorlagen Parameter " *Zuweisung*".|
 |[char_type](#char_type)|Verknüpft einen Typnamen mit dem Vorlagenparameter *Elem*.|
-|[int_type](#int_type)|Stellt den Typ im `basic_filebuf`der Bereich entspricht den Typ mit dem gleichen Namen in der *Tr* Bereich.|
-|[off_type](#off_type)|Stellt den Typ im `basic_filebuf`der Bereich entspricht den Typ mit dem gleichen Namen in der *Tr* Bereich.|
-|[pos_type](#pos_type)|Stellt den Typ im `basic_filebuf`der Bereich entspricht den Typ mit dem gleichen Namen in der *Tr* Bereich.|
+|[int_type](#int_type)|Macht diesen Typ innerhalb `basic_filebuf`des Gültigkeits Bereichs, der dem Typ desselben Namens im *TR* -Bereich entspricht.|
+|[off_type](#off_type)|Macht diesen Typ innerhalb `basic_filebuf`des Gültigkeits Bereichs, der dem Typ desselben Namens im *TR* -Bereich entspricht.|
+|[pos_type](#pos_type)|Macht diesen Typ innerhalb `basic_filebuf`des Gültigkeits Bereichs, der dem Typ desselben Namens im *TR* -Bereich entspricht.|
 |[traits_type](#traits_type)|Verknüpft einen Typnamen mit dem *Tr*-Vorlagenparameter.|
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -107,7 +107,7 @@ Ein Objekt der Klasse basic_stringbuf< `Elem`, `Tr`, `Alloc`> speichert eine Kop
 
 ## <a name="allocator_type"></a> basic_stringbuf::allocator_type
 
-Der Typ ist ein Synonym für den Vorlagenparameter *Alloc*.
+Der Typ ist ein Synonym für den Vorlagen Parameter " *Zuweisung*".
 
 ```cpp
 typedef Alloc allocator_type;
@@ -128,17 +128,17 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Parameter
 
-*_Mode*<br/>
+*_Mode*\
 Eine der Enumerationen in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*str*<br/>
+*SRT*\
 Ein Objekt vom Typ [basic_string](../standard-library/basic-string-class.md).
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor speichert einen NULL-Zeiger in allen Zeigern, die den Eingabe- und Ausgabepuffer steuern. Weitere Informationen finden Sie im Abschnitt „Hinweise“ unter [basic_streambuf-Klasse](../standard-library/basic-streambuf-class.md). Er speichert auch *_Modus* als Stringbuf-Modus. Weitere Informationen finden Sie im Abschnitt „Hinweise“ unter [basic_stringbuf-Klasse](../standard-library/basic-stringbuf-class.md).
+Der erste Konstruktor speichert einen NULL-Zeiger in allen Zeigern, die den Eingabe- und Ausgabepuffer steuern. Weitere Informationen finden Sie im Abschnitt „Hinweise“ unter [basic_streambuf-Klasse](../standard-library/basic-streambuf-class.md). Außerdem speichert Sie *_Mode* als Stringbuf-Modus. Weitere Informationen finden Sie im Abschnitt „Hinweise“ unter [basic_stringbuf-Klasse](../standard-library/basic-stringbuf-class.md).
 
-Der zweite Konstruktor weist eine Kopie der Sequenz, die vom Zeichenfolgenobjekt gesteuert *str*. Wenn `_Mode & ios_base::in` ungleich null ist, wird festgelegt, dass der Eingabepuffer den Lesevorgang am Anfang der Sequenz beginnt. Wenn `_Mode & ios_base::out` ungleich null ist, wird festgelegt, dass der Ausgabepuffer den Schreibvorgang am Anfang der Sequenz beginnt. Er speichert auch *_Modus* als Stringbuf-Modus. Weitere Informationen finden Sie im Abschnitt „Hinweise“ unter [basic_stringbuf-Klasse](../standard-library/basic-stringbuf-class.md).
+Der zweite Konstruktor ordnet eine Kopie der Sequenz zu, die vom Zeichen folgen Objekt *Str*gesteuert wird. Wenn `_Mode & ios_base::in` ungleich null ist, wird festgelegt, dass der Eingabepuffer den Lesevorgang am Anfang der Sequenz beginnt. Wenn `_Mode & ios_base::out` ungleich null ist, wird festgelegt, dass der Ausgabepuffer den Schreibvorgang am Anfang der Sequenz beginnt. Außerdem speichert Sie *_Mode* als Stringbuf-Modus. Weitere Informationen finden Sie im Abschnitt „Hinweise“ unter [basic_stringbuf-Klasse](../standard-library/basic-stringbuf-class.md).
 
 ## <a name="char_type"></a> basic_stringbuf::char_type
 
@@ -150,7 +150,7 @@ typedef Elem char_type;
 
 ## <a name="int_type"></a> basic_stringbuf::int_type
 
-Stellt den Typ im Bereich von Basic_filebuf dem Typ mit dem gleichen Namen in der `Tr` Bereich.
+Legt diesen Typ innerhalb des basic_filebuf's-Bereichs entsprechend dem Typ desselben Namens im `Tr` Bereich ab.
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -158,7 +158,7 @@ typedef typename traits_type::int_type int_type;
 
 ## <a name="off_type"></a> basic_stringbuf::off_type
 
-Stellt den Typ im Bereich von Basic_filebuf dem Typ mit dem gleichen Namen in der `Tr` Bereich.
+Legt diesen Typ innerhalb des basic_filebuf's-Bereichs entsprechend dem Typ desselben Namens im `Tr` Bereich ab.
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -174,16 +174,16 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parameter
 
-*_Meta*<br/>
+*_Meta*\
 Das Zeichen, das in den Puffer eingefügt werden soll, oder `traits_type::eof`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `traits_type::eof` zurückgegeben. Andernfalls wird **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) zurückgegeben.
+Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `traits_type::eof` zurückgegeben. Andernfalls wird **traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn  *\_Meta* ist nicht gleich **Traits_type::**[eof](../standard-library/char-traits-struct.md#eof), die geschützte virtuelle Memberfunktion versucht, das Element eingefügt  **Traits_type::**[To_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) in den Ausgabepuffer. Hierfür gibt es verschiedene Möglichkeiten:
+*Wenn\_Meta* nicht gleich **traits_type::** [EOF](../standard-library/char-traits-struct.md#eof)ist, versucht die Funktion des geschützten virtuellen Members, das Element **traits_type::** [To_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*) in den Ausgabepuffer. Hierfür gibt es verschiedene Möglichkeiten:
 
 - Wenn eine Schreibposition verfügbar ist, kann das Element in der Schreibposition gespeichert werden, und der nächste Zeiger für den Ausgabepuffer kann inkrementiert werden.
 
@@ -199,16 +199,16 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parameter
 
-*_Meta*<br/>
+*_Meta*\
 Das Zeichen, das in den Puffer eingefügt werden soll, oder `traits_type::eof`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `traits_type::eof` zurückgegeben. Andernfalls wird **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) zurückgegeben.
+Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `traits_type::eof` zurückgegeben. Andernfalls wird **traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn *_Meta* übereinstimmt **Traits_type::**[eof](../standard-library/char-traits-struct.md#eof), das Element, das Pushback ist bereits in den Stream vor dem aktuellen Element. Andernfalls wird dieses Element durch **byte** = **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*) ersetzt. Ein Element kann auf verschiedene Arten durch die Funktion wiederhergestellt werden:
+Wenn *_Meta* gleich **traits_type::** [EOF](../standard-library/char-traits-struct.md#eof)ist, handelt es sich bei dem Element, das zurückgesendet werden soll, tatsächlich um das Element, das sich bereits vor dem aktuellen Element im Stream befindet. Andernfalls wird dieses Element durch **byte** = **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*) ersetzt. Ein Element kann auf verschiedene Arten durch die Funktion wiederhergestellt werden:
 
 - Wenn eine Position zur Wiederherstellung verfügbar ist, und das Element, das dort gespeichert ist, „byte“ entspricht, kann der nächste Zeiger für den Eingabepuffer verringert werden.
 
@@ -216,7 +216,7 @@ Wenn *_Meta* übereinstimmt **Traits_type::**[eof](../standard-library/char-trai
 
 ## <a name="pos_type"></a> basic_stringbuf::pos_type
 
-Stellt den Typ im Bereich von Basic_filebuf dem Typ mit dem gleichen Namen in der `Tr` Bereich.
+Legt diesen Typ innerhalb des basic_filebuf's-Bereichs entsprechend dem Typ desselben Namens im `Tr` Bereich ab.
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -235,13 +235,13 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*<br/>
-Die Position, die für die Suche, relativ zum *_Way*. Weitere Informationen finden Sie unter [basic_stringbuf::off_type](#off_type).
+*_Off*\
+Die Position, die relativ zu *_Way*gesucht werden soll. Weitere Informationen finden Sie unter [basic_stringbuf::off_type](#off_type).
 
-*_Way*<br/>
+*_Way*\
 Gibt den Startpunkt für Offsetvorgänge an. Mögliche Werte sind unter [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
 
-*_Mode*<br/>
+*_Mode*\
 Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden. Weitere Informationen finden Sie unter [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Rückgabewert
@@ -254,13 +254,13 @@ Für ein Objekt der Klasse `basic_stringbuf<Elem, Tr, Alloc>` besteht eine Strea
 
 Die neue Position wird wie folgt bestimmt:
 
-- Wenn `_Way`  ==  `ios_base::beg`, die neue Position ist der Anfang des Streams plus *_Off*.
+- Wenn `_Way` der == Wertist, ist die neue Position der Anfang des Streams Plus *_Off.* `ios_base::beg`
 
-- Wenn `_Way`  ==  `ios_base::cur`, ist die neue Position die aktuelle Streamposition plus *_Off*.
+- Wenn `_Way` der == Wertist, ist die neue Position die aktuelle Streamposition Plus *_Off.* `ios_base::cur`
 
-- Wenn `_Way`  ==  `ios_base::end`, ist die neue Position das Ende des Streams plus *_Off*.
+- Wenn `_Way` der == Wertist, ist die neue Position das Ende des Streams Plus *_Off.* `ios_base::end`
 
-Wenn `_Mode & ios_base::in` ungleich null ist, ändert die Funktion die nächste Position, die im Eingabepuffer gelesen werden soll. Wenn `_Mode & ios_base::out` ungleich null ist, ändert die Funktion die nächste Position, die im Ausgabepuffer gelesen werden soll. Damit ein Stream betroffen wird, muss ein Puffer bestehen. Damit eine Positionierung erfolgreich ist, muss die resultierende Streamposition innerhalb der kontrollierten Sequenz liegen. Wenn die Funktion beide streampositionen betrifft *_Way* muss `ios_base::beg` oder `ios_base::end` und beide Streams am gleichen Element positioniert werden. Andernfalls (oder wenn keine Position betroffen ist) tritt bei der Positionierung ein Fehler ein.
+Wenn `_Mode & ios_base::in` ungleich null ist, ändert die Funktion die nächste Position, die im Eingabepuffer gelesen werden soll. Wenn `_Mode & ios_base::out` ungleich null ist, ändert die Funktion die nächste Position, die im Ausgabepuffer gelesen werden soll. Damit ein Stream betroffen wird, muss ein Puffer bestehen. Damit eine Positionierung erfolgreich ist, muss die resultierende Streamposition innerhalb der kontrollierten Sequenz liegen. Wenn sich die Funktion auf beide streampositionen auswirkt, muss `ios_base::beg` *_Way* `ios_base::end` oder lauten, und beide Streams werden am gleichen Element positioniert. Andernfalls (oder wenn keine Position betroffen ist) tritt bei der Positionierung ein Fehler ein.
 
 Wenn die Funktion erfolgreich eine der beiden Streampositionen ändern kann, gibt sie die resultierende Streamposition zurück. Andernfalls schlägt sie fehl und gibt eine ungültige Streamposition zurück.
 
@@ -274,10 +274,10 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>Parameter
 
-*_Sp*<br/>
+*_Sp*\
 Die Position, nach der gesucht werden soll.
 
-*_Mode*<br/>
+*_Mode*\
 Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -302,7 +302,7 @@ void str(
 
 ### <a name="parameters"></a>Parameter
 
-*_Newstr*<br/>
+*_Newstr*\
 Die neue Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -319,7 +319,7 @@ Die erste Memberfunktion gibt ein Objekt der Klasse basic_string< **Elem**, **Tr
 
 - Andernfalls ist die kopierte Sequenz leer.
 
-Die zweite Memberfunktion gibt alle Sequenzen frei, die von **\*this** kontrolliert werden. Sie weist dann eine Kopie der gesteuerte Sequenz durch *_Newstr*. Wenn **mode & ios_base::in** ungleich null ist, wird festgelegt, dass der Eingabepuffer den Lesevorgang am Anfang der Sequenz beginnt. Wenn **mode & ios_base::out** ungleich null ist, wird festgelegt, dass der Ausgabepuffer den Schreibvorgang am Anfang der Sequenz beginnt.
+Die zweite Memberfunktion gibt alle Sequenzen frei, die von **\*this** kontrolliert werden. Anschließend wird eine von *_Newstr*gesteuerte Kopie der Sequenz zugeordnet. Wenn **mode & ios_base::in** ungleich null ist, wird festgelegt, dass der Eingabepuffer den Lesevorgang am Anfang der Sequenz beginnt. Wenn **mode & ios_base::out** ungleich null ist, wird festgelegt, dass der Ausgabepuffer den Schreibvorgang am Anfang der Sequenz beginnt.
 
 ### <a name="example"></a>Beispiel
 
@@ -375,11 +375,11 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) zurückgegeben. Andernfalls wird das aktuelle Element, das konvertiert wurde, in den Eingabestream zurückgegeben.
+Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird **traits_type::** [eof](../standard-library/char-traits-struct.md#eof) zurückgegeben. Andernfalls wird das aktuelle Element, das konvertiert wurde, in den Eingabestream zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Memberfunktion versucht, das aktuelle Element extrahieren `byte` aus dem Eingabepuffer fahren fort, um die aktuelle Streamposition und Zurückgeben des Elements als **Traits_type::**[To_int_type](../standard-library/char-traits-struct.md#to_int_type)( **Byte**). Dies kann auf eine Weise erfolgen: Wenn eine Leseposition verfügbar ist, dauert es `byte` wie das Element in der Leseposition gespeichert, und den nächsten Zeiger für den Eingabepuffer verschiebt.
+Die geschützte virtuelle Member-Funktion versucht, das aktuelle Element `byte` aus dem Eingabepuffer zu extrahieren, die aktuelle Streamposition fortzusetzen und das Element als **traits_type::** [To_int_type](../standard-library/char-traits-struct.md#to_int_type)( **Byte**) zurückzugeben. Dies kann auf eine Weise durchzuführen sein: Wenn eine Lese Position verfügbar ist, nimmt `byte` Sie als das an der Lese Position gespeicherte Element an und verschiebt den nächsten Zeiger für den Eingabepuffer.
 
 ## <a name="swap"></a> basic_streambuf::swap
 
@@ -391,7 +391,7 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>Parameter
 
-*other*<br/>
+*außer*\
 Der „basic_stringbuf“, dessen Inhalt mit diesem „basic_stringbuf“ getauscht wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -406,13 +406,13 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>Parameter
 
-*other*<br/>
+*außer*\
 Ein basic_stringbuf, dessen Inhalt, einschließlich Gebietsschema-Merkmalen, dem Stringbuf auf der linken Seite des Operators zugewiesen wird.
 
 ### <a name="remarks"></a>Hinweise
 
 ## <a name="see-also"></a>Siehe auch
 
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
-[iostreams-Konventionen](../standard-library/iostreams-conventions.md)<br/>
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream-Programmierung](../standard-library/iostream-programming.md)\
+[iostreams-Konventionen](../standard-library/iostreams-conventions.md)
