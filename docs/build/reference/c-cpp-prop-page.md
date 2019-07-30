@@ -3,14 +3,12 @@ title: C-C++ /Projekteigenschaften (Visual Studio)
 ms.date: 7/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bf457366f1818593e937d4c9e95651f48db64528
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
-ms.translationtype: HT
+ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
+ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68342261"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537569"
 ---
 # <a name="cc-property-pages"></a>C/C++ Eigenschaften Seiten
 
@@ -436,7 +434,7 @@ Wählen Sie die Standard Aufruf Konvention für Ihre Anwendung aus (kann von ein
 **Optionen**
 
 - **__cdecl** : gibt die __cdecl-Aufruf Konvention für alle Funktionen C++ außer Element Funktionen und Funktionen an, die als __stdcall oder __fastcall gekennzeichnet sind.
-- **__fastcall** : gibt die __fastcall-Aufruf Konvention für alle Funktionen C++ außer Member Sfunctions und Funktionen an, die als __cdecl oder __stdcall gekennzeichnet sind. Alle __fastcall-Funktionen müssen über Prototypen verfügen.
+- **__fastcall** : gibt die __fastcall-Aufruf Konvention für alle Funktionen C++ außer Element Funktionen und Funktionen an, die als __cdecl oder __stdcall gekennzeichnet sind. Alle __fastcall-Funktionen müssen über Prototypen verfügen.
 - **__stdcall** : gibt die __stdcall-Aufruf Konvention für alle Funktionen C++ außer Element Funktionen und Funktionen an, die als __cdecl oder __fastcall gekennzeichnet sind. Alle __stdcall-Funktionen müssen über Prototypen verfügen.
 - **__vectorcall** : gibt die __vectorcall-Aufruf Konvention für alle Funktionen C++ außer Element Funktionen und Funktionen an, die als __cdecl, __fastcall oder __stdcall markiert sind. Alle __vectorcall-Funktionen müssen über Prototypen verfügen.
 

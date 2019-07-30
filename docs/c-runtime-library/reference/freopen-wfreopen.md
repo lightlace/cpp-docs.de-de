@@ -29,12 +29,12 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-ms.openlocfilehash: 4c570837bddea1f5e986ae5f767279ab2637ea21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f31f0eeacaf573fe0f6489f4dc8b5da03bf9b64f
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332987"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376096"
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 
@@ -68,7 +68,7 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt einen Zeiger an die gerade geöffnete Datei zurück. Wenn ein Fehler auftritt, die ursprüngliche Datei geschlossen wird und die Funktion gibt eine **NULL** Zeigerwert. Wenn *Pfad*, *Modus*, oder *Stream* ein null-Zeiger ist oder wenn *Filename* ist eine leere Zeichenfolge ist, rufen diese Funktionen den ungültigen Parameter Handler, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und zurückgeben **NULL**.
+Jede dieser Funktionen gibt einen Zeiger an die gerade geöffnete Datei zurück. Wenn ein Fehler auftritt, wird die ursprüngliche Datei geschlossen und die Funktion gibt einen **null** -Zeiger Wert zurück. Wenn *path*, *Mode*oder *Stream* ein NULL-Zeiger ist, oder wenn *filename* eine leere Zeichenfolge ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen **errno** auf **EINVAL** fest und geben **null**zurück.
 
 Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -76,7 +76,7 @@ Weitere Informationen zu diesen und anderen Fehlercodes finden Sie unter [_doser
 
 Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [freopen_s, _wfreopen_s](freopen-s-wfreopen-s.md).
 
-Die **Freopen** -Funktion schließt die derzeit zugeordnete Datei *Stream* und weist *Stream* auf die angegebene Datei *Pfad*. **_wfreopen** ist eine Breitzeichen-Version von **_freopen**; die *Pfad* und *Modus* Argumente **_wfreopen** sind Zeichenfolgen mit Breitzeichen. **_wfreopen** und **_freopen** Verhalten sich andernfalls identisch.
+Die **freopen** -Funktion schließt die Datei, die derzeit mit *Stream* verknüpft ist, und weist den *Stream* der durch *path*angegebenen Datei neu zu. **_wfreopen** ist eine breit Zeichen Version von **_freopen**. die *path* -und *Mode* -Argumente für **_wfreopen** sind Zeichen folgen mit breit Zeichen. **_wfreopen** und **_freopen** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -84,33 +84,33 @@ Die **Freopen** -Funktion schließt die derzeit zugeordnete Datei *Stream* und w
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tfreopen**|**freopen**|**freopen**|**_wfreopen**|
 
-**Freopen** wird normalerweise verwendet, um die bereits geöffneten Dateien umzuleiten **Stdin**, **"stdout"**, und **"stderr"** auf Dateien, die vom Benutzer angegeben wird. Die neue Datei mit dem zugeordneten *Stream* wird geöffnet, mit *Modus*, ist eine Zeichenfolge, die den Typ des angeforderten Zugriffstyp für die Datei wie folgt angibt:
+**freopen** wird normalerweise verwendet, um die vorab geöffneten Dateien **stdin**, **stdout**und **stderr** in Dateien umzuleiten, die vom Benutzer angegeben werden. Die neue Datei, die dem *Stream* zugeordnet ist, wird mit dem- *Modus*geöffnet. dabei handelt es sich um eine Zeichenfolge, die den für die Datei angeforderten Zugriffstyp wie folgt angibt:
 
 |*mode*|Zugriff|
 |-|-|
-| **"r"** | Öffnet zum Lesen. Wenn die Datei nicht vorhanden ist oder wurde nicht gefunden, die **Freopen** -Aufruf fehl. |
+| **"r"** | Öffnet zum Lesen. Wenn die Datei nicht vorhanden ist oder nicht gefunden werden kann, schlägt der **freopen** -Befehl fehl. |
 | **"w"** | Öffnet eine leere Datei zum Schreiben. Wenn die angegebene Datei vorhanden ist, wird ihr Inhalt zerstört. |
 | **„a“** | Wird vor dem Schreiben neuer Daten in die Datei zum Schreiben am Ende der Datei (Anfügen) geöffnet, ohne die EOF-Markierung (end-of-file, Dateiende) zu entfernen. Erstellt die Datei, wenn sie nicht vorhanden ist. |
 | **„r+“** | Öffnet sowohl zum Lesen als auch zum Schreiben. Die Datei muss vorhanden sein. |
 | **„w+“** | Öffnet eine leere Datei zum Lesen und Schreiben. Wenn die Datei vorhanden ist, wird ihr Inhalt zerstört. |
 | **„a+“** | Öffnet sich zum Lesen und Anfügen. Der Anfügevorgang umfasst das Entfernen der EOF-Markierung, bevor neue Daten in die Datei geschrieben werden. Die EOF-Markierung wird nach Abschluss des Schreibvorgangs nicht wiederhergestellt. Erstellt die Datei, wenn sie nicht vorhanden ist. |
 
-Verwenden der **"w"** und **"w +"** Typen mit Bedacht, da sie vorhandene Dateien zerstören können.
+Verwenden Sie die Typen **"w"** und **"w +"** mit Sorgfalt, da Sie vorhandene Dateien zerstören können.
 
-Wenn eine Datei geöffnet wird, mit der **"a"** oder **"a +"** Zugriffstyp alle Schreibvorgänge erfolgen am Ende der Datei. Obwohl der Dateizeiger positioniert werden kann, mit [Fseek](fseek-fseeki64.md) oder [rewind](rewind.md), der Dateizeiger wird immer wieder zurück verschoben an das Ende der Datei, bevor ein Schreibvorgang durchgeführt wird. Folglich können vorhandene Daten nicht überschrieben werden.
+Wenn eine Datei mit dem Zugriffstyp **"a"** oder **"a +"** geöffnet wird, erfolgen alle Schreibvorgänge am Ende der Datei. Obwohl der Dateizeiger mithilfe von [fseek](fseek-fseeki64.md) oder [Rewind](rewind.md)neu positioniert werden kann, wird der Dateizeiger immer wieder an das Ende der Datei verschoben, bevor ein Schreibvorgang durchgeführt wird. Folglich können vorhandene Daten nicht überschrieben werden.
 
-Die **"a"** Modus wird nicht die EOF-Markierung entfernt, bevor die Daten an die Datei angefügt. Nach dem Anfügen werden durch den MS-DOS-Befehl TYPE nur Daten bis zur ursprünglichen EOF-Markierung angezeigt, aber keine Daten, die an die Datei angefügt wurden. Die **"a +"** Modus wird die EOF-Markierung entfernt, bevor Daten an die Datei angefügt. Nach dem Anhängen werden mit dem Befehl MS-DOS TYPE alle Daten in der Datei angezeigt. Die **"a +"** Modus ist erforderlich, zum Anfügen an eine streamdatei, die mit der STRG + Z EOF-Markierung beendet wird.
+Der **"a"** -Modus entfernt die EOF-Markierung nicht, bevor Sie an die Datei angehängt wird. Nach dem Anfügen werden durch den MS-DOS-Befehl TYPE nur Daten bis zur ursprünglichen EOF-Markierung angezeigt, aber keine Daten, die an die Datei angefügt wurden. Der **"+"** -Modus entfernt die EOF-Markierung, bevor Sie an die Datei angehängt wird. Nach dem Anhängen werden mit dem Befehl MS-DOS TYPE alle Daten in der Datei angezeigt. Der Modus **"a +"** ist zum Anfügen an eine streamdatei erforderlich, die mit der EOF-Markierung STRG + Z beendet wird.
 
-Wenn die **"R +"**, **"w +"**, oder **"a +"** angegeben wird, sind Lese- und Schreibvorgänge zulässig (die Datei gilt als für "Update" geöffnet). Wenn Sie jedoch zwischen Lese- und Schreibvorgängen wechseln, muss ein sich dazwischen befindender Vorgang wie [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) oder [rewind](rewind.md) vorhanden sein. Die aktuelle Position kann angegeben werden, für die [Fsetpos](fsetpos.md) oder [Fseek](fseek-fseeki64.md) Vorgang, bei Bedarf. Zusätzlich zu den oben aufgeführten Werten kann eines der folgenden Zeichen im enthalten sein kann die *Modus* Zeichenfolge, die den Übersetzungsmodus für neue Zeilen anzugeben.
+Wenn der Zugriffstyp **"r +"** , **"w +"** oder **"a +** " angegeben wird, sind sowohl Lese-als auch Schreibvorgänge zulässig (die Datei ist zum Aktualisieren geöffnet). Wenn Sie jedoch zwischen Lese- und Schreibvorgängen wechseln, muss ein sich dazwischen befindender Vorgang wie [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) oder [rewind](rewind.md) vorhanden sein. Wenn gewünscht, kann die aktuelle Position für den Vorgang " [f](fsetpos.md) " oder " [f](fseek-fseeki64.md) " angegeben werden. Zusätzlich zu den oben aufgeführten Werten kann eines der folgenden Zeichen in der *Mode* -Zeichenfolge enthalten sein, um den Übersetzungsmodus für neue Zeilen anzugeben.
 
-|*Modus* Modifizierer|Commit-Modus|
+|modusmodifizierer|Übersetzungsmodus|
 |-|-|
 | **t** | Öffnen im Textmodus (übersetzt). |
-| **b** | Öffnen im binären (unübersetzten) Modus; Übersetzungen von Wagenrücklauf- und Zeilenvorschubzeichen werden unterdrückt. |
+| **b** | Im binären (nicht übersetzten) Modus öffnen; Übersetzungen mit Wagen Rücklauf-und Zeilenvorschub Zeichen werden unterdrückt. |
 
-Im Textmodus (übersetzt) werden die Carriage Return-Zeilenvorschub (CR-LF) Kombinationen in Zeilenvorschubzeichen (LF) bei Eingabe übersetzt; LF-Zeichen werden bei der Ausgabe in CR-LF-Kombinationen aus übersetzt. Außerdem wird STRG+Z bei der Eingabe als EOF-Zeichen interpretiert. In Dateien, die zum Lesen oder geöffnet werden, für Lese- und Schreibvorgänge mit **"a +"**, die Laufzeitbibliothek STRG + Z am Ende der Datei gesucht und entfernt, wenn möglich die Markierung. Dies geschieht, da mit [Fseek](fseek-fseeki64.md) und [Ftell](ftell-ftelli64.md) zum Navigieren innerhalb einer Datei verursachen [Fseek](fseek-fseeki64.md) am Ende der Datei nicht ordnungsgemäß verhält. Die **t** Option ist eine Microsoft-Erweiterung, die nicht verwendet werden soll, wo ANSI-Portabilität gewünscht wird.
+Im Text Modus (übersetzt) werden die Kombinationen aus Wagen Rücklauf-und Zeilenvorschub (CR-LF) bei der Eingabe in Einzel Zeilenvorschub Zeichen (LF) übersetzt. LF-Zeichen werden bei der Ausgabe in CR-LF-Kombinationen übersetzt. Außerdem wird STRG+Z bei der Eingabe als EOF-Zeichen interpretiert. In Dateien, die zum Lesen oder schreiben und lesen mit **"a +"** geöffnet sind, prüft die Lauf Zeit Bibliothek, ob am Ende der Datei STRG + Z angezeigt wird, und entfernt Sie nach Möglichkeit. Dies geschieht, da die Verwendung von [fseek](fseek-fseeki64.md) und [ftell](ftell-ftelli64.md) zum Verschieben innerhalb einer Datei dazu führen kann, dass sich [fseek](fseek-fseeki64.md) in der Nähe des Datei Endes nicht ordnungsgemäß verhält. Die **t** -Option ist eine Microsoft-Erweiterung, die nicht verwendet werden sollte, wenn ANSI-Portabilität gewünscht wird.
 
-Wenn **t** oder **b** nicht erhält, *Modus*, wird der standardübersetzungsmodus durch die globale Variable definiert [_fmode](../../c-runtime-library/fmode.md). Wenn **t** oder **b** ist das Argument, die Funktion schlägt fehl und gibt mit dem Präfix **NULL**.
+Wenn " **t** " oder " **b** " im *Modus*nicht angegeben wird, wird der Standard Übersetzungsmodus durch die globale Variable " [_fmode](../../c-runtime-library/fmode.md)" definiert. Wenn **t** oder **b** dem Argument vorangestellt wird, schlägt die Funktion fehl und gibt **null**zurück.
 
 Eine Erörterung von Text- und Binärmodi finden Sie unter [Text- und Binärmodus-Datei-E/A](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
@@ -121,7 +121,7 @@ Eine Erörterung von Text- und Binärmodi finden Sie unter [Text- und Binärmodu
 |**freopen**|\<stdio.h>|
 |**_wfreopen**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die-Konsole wird in universelle Windows-Plattform-Apps (UWP) nicht unterstützt. Die Standarddaten Strom Handles, die der Konsole, **stdin**, **stdout**und **stderr**zugeordnet sind, müssen umgeleitet werden, bevor Sie von C-Lauf Zeitfunktionen in UWP-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 
