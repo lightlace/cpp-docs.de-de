@@ -1,29 +1,29 @@
 ---
 title: if-else-Anweisung (C++)
-ms.date: 07/17/2017
+ms.date: 07/20/2019
+description: Verwenden Sie If-Else- C++ Anweisungen in, um bedingte Verzweigungen zu steuern.
 f1_keywords:
 - else_cpp
 - if_cpp
 helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
-- if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183647"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661640"
 ---
 # <a name="if-else-statement-c"></a>if-else-Anweisung (C++)
 
-Steuert den bedingten Branch. Anweisungen in der *If-Block* werden nur ausgeführt, wenn die *If-Ausdruck* ergibt einen Wert ungleich Null (oder "true"). Wenn der Wert des *Ausdruck* ungleich NULL ist, *statement1* und alle anderen Anweisungen im Block ausgeführt werden, und der else-Block, falls vorhanden, wird übersprungen. Wenn der Wert des *Ausdruck* 0 (null), wird der If-Block wird übersprungen, und der else-Block, falls vorhanden, wird ausgeführt. Ausdrücke, die ungleich NULL ausgewertet, werden.
+Steuert den bedingten Branch. Anweisungen im *If-Block* werden nur ausgeführt, wenn der *if-Expression* einen Wert ungleich 0 (null) ergibt (oder true). Wenn der Wert des *Ausdrucks* ungleich 0 (null) ist, werden *Anweisung1* und alle anderen Anweisungen im Block ausgeführt, und der Else-Block wird übersprungen. Wenn der Wert von *Expression* NULL ist, wird der If-Block ausgelassen, und der Else-Block wird ausgeführt, falls vorhanden. Ausdrücke, die als ungleich NULL ausgewertet werden, sind
 
 - true
-- ein nicht-Null-Zeiger ist,
-- alle arithmetischen Wert ungleich NULL, oder
-- Geben Sie ein Klassentyp, der eine eindeutige Konvertierung in ein arithmetischer "," Boolean "oder" Zeiger definiert. (Weitere Informationen über Konvertierungen finden Sie unter [Standardkonvertierungen](../cpp/standard-conversions.md).)
+- ein nicht-NULL-Zeiger,
+- ein arithmetischer Wert ungleich 0 (null) oder
+- ein Klassentyp, der eine eindeutige Konvertierung in einen arithmetischen, booleschen oder Zeigertyp definiert. (Informationen zu Konvertierungen finden Sie unter [Standard Konvertierungen](../cpp/standard-conversions.md).)
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ else  // optional
    ...
 }
 
-// Visual Studio 2017 version 15.3 and later:
+// C++17 - Visual Studio 2017 version 15.3 and later:
 if ( initialization; expression )
 {
    statement1;
@@ -51,7 +51,7 @@ else  // optional
    ...
 }
 
-// Visual Studio 2017 version 15.3 and later:
+// C++17 - Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
 {
     statement1;
@@ -111,9 +111,9 @@ int main()
 }
 ```
 
-## <a name="if_with_init"></a> Wenn die Anweisung mit einem Initialisierer
+## <a name="if_with_init"></a>if-Anweisung mit einem Initialisierer
 
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Ein **Wenn** Anweisung enthält möglicherweise auch einen Ausdruck, der deklariert und initialisiert eine benannte Variable. Verwenden Sie diese Form der If-Anweisung aus, wenn die Variable nur innerhalb des Bereichs der If-Block erforderlich ist.
+**Visual Studio 2017 Version 15,3 und** höher (verfügbar mit [/Std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Eine **if** -Anweisung kann auch einen Ausdruck enthalten, der eine benannte Variable deklariert und initialisiert. Verwenden Sie diese Form der if-Anweisung, wenn die Variable nur im Bereich des If-Blocks benötigt wird.
 
 ## <a name="example"></a>Beispiel
 
@@ -159,13 +159,13 @@ int main()
 }
 ```
 
-In allen Arten von der **Wenn** Anweisung *Ausdruck*, die einen beliebigen Wert außer einer Struktur verfügen können ausgewertet wird, einschließlich aller Nebeneffekte. Wird die Steuerung von der **Wenn** Anweisung, um die nächste Anweisung im Programm, wenn eines der *Anweisung*s enthält eine [Break](../cpp/break-statement-cpp.md), [weiterhin](../cpp/continue-statement-cpp.md), oder [Goto](../cpp/goto-statement-cpp.md).
+In allen Formen der **if** -Anweisung wird *Ausdruck*, der einen beliebigen Wert außer einer Struktur aufweisen kann, ausgewertet, einschließlich aller Nebeneffekte. Das Steuerelement **wird** von der if-Anweisung an die nächste Anweisung im Programm weitergeleitet, es sei denn, eine der *Anweisungen s enthält*eine [break](../cpp/break-statement-cpp.md)-, [Continue](../cpp/continue-statement-cpp.md)-oder [goto](../cpp/goto-statement-cpp.md)-Anweisung.
 
-Die **else** -Klausel eine `if...else` Anweisung bezieht sich auf die nächstgelegene vorherigen **Wenn** -Anweisung im gleichen Gültigkeitsbereich, der einen entsprechenden keinen **else** -Anweisung.
+Die **else** -Klausel `if...else` einer-Anweisung ist mit der nächstliegenden **if** -Anweisung in demselben Bereich verknüpft, der keine entsprechende **else** -Anweisung hat.
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Wenn "constexpr"-Anweisungen
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">if-Anweisungen (constexpr)
 
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): In Funktionsvorlagen, können Sie eine **Wenn "constexpr"** Anweisung, damit Verzweigungen Entscheidungen während der Kompilierung ohne auf mehreren funktionsüberladungen zurückgreifen. Beispielsweise können Sie einer einzelnen Funktion schreiben, diese Handles Parameter Entpacken (keine Überladung für die NULL-Parameter ist erforderlich):
+**Visual Studio 2017 Version 15,3 und** höher (verfügbar mit [/Std: c++ 17](../build/reference/std-specify-language-standard-version.md)): In Funktions Vorlagen können Sie eine **if constexpr** -Anweisung verwenden, um Entscheidungen zur Kompilierzeit Verzweigung zu treffen, ohne auf mehrere Funktions Überladungen zurückgreifen zu müssen. Sie können z. b. eine einzelne Funktion schreiben, die das Entpacken von Parametern behandelt (keine NULL-Parameter Überladung erforderlich):
 
 ```cpp
 template <class T, class... Rest>

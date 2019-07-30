@@ -1,19 +1,17 @@
 ---
 title: Initialisierer
-ms.date: 11/19/2018
+ms.date: 07/29/2019
+description: Initialisieren von Klassen, Strukturen, Arrays und grundlegenden Typen in C++.
 helpviewer_keywords:
-- array-element initializers
-- initializing arrays [C++], initializers
 - arrays [C++], array-element initializers
-- declarators, as initializers
-- initializers, array element
+- aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183523"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661616"
 ---
 # <a name="initializers"></a>Initialisierer
 
@@ -83,11 +81,11 @@ Die Initialisierung mit 0 (NULL) ist die Festlegung einer Variablen auf einen NU
 
 - Numerische Variablen werden mit 0 initialisiert (oder 0,0 oder 0,0000000000 usw.).
 
-- Char-Variablen werden initialisiert, um `'\0'`.
+- Char-Variablen werden mit `'\0'`initialisiert.
 
-- Zeiger werden initialisiert, um **"nullptr"**.
+- Zeiger werden mit " **nullptr**" initialisiert.
 
-- Arrays, [POD](../standard-library/is-pod-class.md) Klassen, Strukturen und Unions, haben Sie ihre Member mit einem Wert von 0 (null) initialisiert.
+- Arrays, [Pod](../standard-library/is-pod-class.md) -Klassen, Strukturen und Unions werden mit einem Wert von 0 (null) initialisiert.
 
 Die Initialisierung mit 0 (NULL) wird zu unterschiedlichen Zeiten ausgeführt:
 
@@ -116,9 +114,9 @@ int main() {
 }
 ```
 
-### <a name="default_initialization"></a> Standardinitialisierung
+### <a name="default_initialization"></a>Standard Initialisierung
 
-Die Standardinitialisierung für Klassen, Strukturen und Unions ist die Initialisierung mit einem Standardkonstruktor. Der Standardkonstruktor kann aufgerufen werden, indem kein Initialisierungsausdruck oder mit der **neue** Schlüsselwort:
+Die Standardinitialisierung für Klassen, Strukturen und Unions ist die Initialisierung mit einem Standardkonstruktor. Der Standardkonstruktor kann ohne Initialisierungs Ausdruck oder mit dem **New** -Schlüsselwort aufgerufen werden:
 
 ```cpp
 MyClass mc1;
@@ -175,7 +173,7 @@ int main() {
 }
 ```
 
-Weitere Informationen zur Initialisierung von globalen statischen Objekten finden Sie unter [zusätzliche Überlegungen zur Startseite](../cpp/additional-startup-considerations.md).
+Weitere Informationen zur Initialisierung von globalen statischen Objekten finden Sie unter [zusätzliche Überlegungen zum Start](../cpp/additional-startup-considerations.md).
 
 ### <a name="value-initialization"></a>Wertinitialisierung
 
@@ -185,7 +183,7 @@ Wertinitialisierung findet in den folgenden Fällen statt:
 
 - Ein anonymes temporäres Objekt wird mithilfe von leeren runden oder geschweiften Klammern initialisiert.
 
-- ein Objekt wird initialisiert, mit der **neue** Schlüsselwort sowie leere runde oder geschweifte Klammern
+- ein Objekt wird mit dem **New** -Schlüsselwort und leeren Klammern oder geschweiften Klammern initialisiert.
 
 Eine Wertinitialisierung führt Folgendes aus:
 
@@ -226,7 +224,7 @@ Die Kopierinitialisierung ist die Initialisierung eines Objekts mithilfe eines a
 
 - Ein nicht statisches Datenmember wird mithilfe eines Gleichheitszeichens initialisiert.
 
-- Klassen-, Struktur- und Union-Member werden anhand der Kopierinitialisierung während der Aggregatinitialisierung initialisiert. Finden Sie unter [aggregatinitialisierung](#agginit) Beispiele.
+- Klassen-, Struktur- und Union-Member werden anhand der Kopierinitialisierung während der Aggregatinitialisierung initialisiert. Beispiele finden Sie unter [Aggregat Initialisierung](#agginit) .
 
 Der folgende Code zeigt mehrere Beispiele für die Kopierinitialisierung:
 
@@ -276,9 +274,9 @@ Die direkte Initialisierung verwendet (nicht leere) geschweifte oder runde Klamm
 
 - Eine Variable wird mithilfe von nicht leeren geschweiften oder runden Klammern initialisiert.
 
-- eine Variable wird initialisiert, mit der **neue** Schlüsselwort sowie nicht leere geschweifte oder runde Klammern
+- eine Variable wird mit dem **New** -Schlüsselwort zuzüglich nicht leerer geschweifter Klammern oder Klammern initialisiert.
 
-- eine Variable wird initialisiert, mit **"static_cast"**
+- eine Variable wird mit **static_cast** initialisiert.
 
 - In einem Konstruktor werden Basisklassen und nicht statische Member mithilfe einer Initialisierungsliste initialisiert.
 
@@ -319,7 +317,7 @@ Listeninitialisierung findet statt, wenn eine Variable mithilfe einer Initialisi
 
 - Eine Variable wird initialisiert.
 
-- eine Klasse initialisiert wird, mit der **neue** Schlüsselwort
+- eine Klasse wird mit dem **New** -Schlüsselwort initialisiert.
 
 - Ein Objekt wird von einer Funktion zurückgegeben.
 
@@ -364,7 +362,7 @@ int main() {
 }
 ```
 
-### <a name="agginit"></a> Aggregatinitialisierung
+### <a name="agginit"></a>Aggregat Initialisierung
 
 Die Aggregatinitialisierung ist eine Form der Listeninitialisierung für Arrays oder Klassentypen (häufig Strukturen oder Unions), die Folgendes aufweisen:
 
@@ -377,7 +375,7 @@ Die Aggregatinitialisierung ist eine Form der Listeninitialisierung für Arrays 
 - Keine virtuellen Memberfunktionen
 
 > [!NOTE]
-> <!--conformance note-->In Visual Studio 2015 und früher wird ein Aggregat ist nicht zulässig, Klammern oder-gleich-Initialisierer für nicht statische Member haben. Diese Einschränkung wurde in der C ++ 14-Standard entfernt und in Visual Studio 2017 implementiert.
+> <!--conformance note-->In Visual Studio 2015 und früheren Versionen ist es für ein Aggregat nicht zulässig, für nicht statische Member geschweifter Klammern oder gleichmäßige Initialisierer zu haben. Diese Einschränkung wurde im c++ 14-Standard entfernt und in Visual Studio 2017 implementiert.
 
 Aggregatinitialisierer bestehen wie im folgenden Beispiel aus einer Initialisierungsliste in geschweiften Klammern mit oder ohne Gleichheitszeichen:
 
@@ -390,9 +388,14 @@ struct MyAggregate{
     char myChar;
 };
 
+struct MyAggregate2{
+    int myInt;
+    char myChar = 'Z'; // member-initializer OK in C++14
+};
+
 int main() {
     MyAggregate agg1{ 1, 'c' };
-
+    MyAggregate2 agg2{2};
     cout << "agg1: " << agg1.myChar << ": " << agg1.myInt << endl;
     cout << "agg2: " << agg2.myChar << ": " << agg2.myInt << endl;
 
@@ -418,13 +421,13 @@ Die folgende Ausgabe wird angezeigt:
 
 ```Output
 agg1: c: 1
-agg2: d: 2
+agg2: Z: 2
 myArr1: 1 2 3 4
 myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> Arraymember, die deklariert, aber während der aggregatinitialisierung nicht explizit initialisiert werden, werden 0 (null) initialisiert wie in `myArr3` oben.
+> Arraymember, die deklariert, aber während der Aggregat Initialisierung nicht explizit initialisiert werden, werden mit `myArr3` 0 (null) initialisiert, wie oben beschrieben.
 
 #### <a name="initializing-unions-and-structs"></a>Initialisieren von Unions und Strukturen
 
@@ -477,7 +480,7 @@ int main() {
 
 ### <a name="reference-initialization"></a>Verweisinitialisierung
 
-Variablen des Referenztyps müssen mit einem Objekt des Typs, von dem der Referenztyp abgeleitet wird, oder mit einem Objekt eines Typs initialisiert werden, der in den Typ konvertiert werden kann, von dem der Referenztyp abgeleitet wird. Zum Beispiel:
+Variablen des Referenztyps müssen mit einem Objekt des Typs, von dem der Referenztyp abgeleitet wird, oder mit einem Objekt eines Typs initialisiert werden, der in den Typ konvertiert werden kann, von dem der Referenztyp abgeleitet wird. Beispiel:
 
 ```cpp
 // initializing_references.cpp
@@ -502,25 +505,25 @@ Da beide ein Argument des Referenztyps an eine Funktion übergeben und einen Wer
 
 Referenztypvariablen können ohne Initialisierer nur in folgenden Objekten deklariert werden:
 
-- Funktionsdeklarationen (Prototypen). Zum Beispiel:
+- Funktionsdeklarationen (Prototypen). Beispiel:
 
     ```cpp
     int func( int& );
     ```
 
-- Funktionsrückgabetyp-Deklarationen. Zum Beispiel:
+- Funktionsrückgabetyp-Deklarationen. Beispiel:
 
     ```cpp
     int& func( int& );
     ```
 
-- Deklaration eines Referenztypklassenmembers. Zum Beispiel:
+- Deklaration eines Referenztypklassenmembers. Beispiel:
 
     ```cpp
     class c {public:   int& i;};
     ```
 
-- Deklaration einer Variablen, die explizit **"extern"**. Zum Beispiel:
+- Deklaration einer Variablen, die explizit als **extern**angegeben wird. Beispiel:
 
     ```cpp
     extern int& iVal;
@@ -528,13 +531,13 @@ Referenztypvariablen können ohne Initialisierer nur in folgenden Objekten dekla
 
 Bei der Initialisierung einer Referenztypvariable verwendet der Compiler das Entscheidungsdiagramm, wie in der folgenden Abbildung gezeigt, um zwischen dem Erstellen eines Verweises auf ein Objekt und dem Erstellen eines temporären Objekts auszuwählen, auf das der Verweis zeigt.
 
-![Entscheidungsdiagramm zur Initialisierung von Verweistypen](../cpp/media/vc38s71.gif "entscheidungsdiagramm zur Initialisierung von Verweistypen") <br/>
-Entscheidungsdiagramm zur Initialisierung von Verweistypen
+![Entscheidungs Diagramm für die Initialisierung von Verweis Typen](../cpp/media/vc38s71.gif "Entscheidungs Diagramm für die Initialisierung von Verweis Typen") <br/>
+Entscheidungs Diagramm für die Initialisierung von Verweis Typen
 
-Verweise auf **flüchtige** Typen (deklariert als **flüchtige** *Typename* <strong>&</strong> *Bezeichner*) kann mit initialisiert werden **flüchtige** Objekte desselben Typs oder mit Objekten, die nicht als deklarierten **flüchtige**. Sie können jedoch nicht, initialisiert werden, mit **const** Objekte dieses Typs. Auf ähnliche Weise Verweise auf **const** Typen (deklariert als **const** *Typename* <strong>&</strong> *Bezeichner* ) initialisiert werden kann, mit **const** Objekte des gleichen Typs (oder ein beliebiges Element, das ist eine Konvertierung auf diesen Typ oder mit Objekten, die nicht als deklarierten **const**). Sie können jedoch nicht, initialisiert werden, mit **flüchtige** Objekte dieses Typs.
+Verweise auf **flüchtige** Typen (als **flüchtiger** *Typname* <strong>&</strong> *Bezeichner*deklariert) können mit **flüchtigen** Objekten desselben Typs oder mit Objekten initialisiert werden, die nicht als **flüchtig** deklariert wurden. . Sie können jedoch nicht mit **Konstanten** Objekten dieses Typs initialisiert werden. Ebenso können Verweise auf **Konstante Typen (** die als " **Konstanten** *Typname* <strong>&</strong> -Bezeichner" deklariert sind) mit Konstanten Objekten desselben Typs (oder mit Objekten, die eine Konvertierung in diesen Typ oder mit Objekten aufweisen) initialisiert werden **.** die nicht als **konstant**deklariert wurden. Sie können jedoch nicht mit **flüchtigen** Objekten dieses Typs initialisiert werden.
 
-Verweise, die nicht mit einem qualifiziert sind die **const** oder **flüchtige** Schlüsselwort kann nur mit Objekten, die deklariert werden, weil keiner initialisiert werden **const** noch  **flüchtige**.
+Verweise, die nicht mit dem Schlüsselwort " **Konstanten** " oder " **volatile** " qualifiziert sind, können nur mit Objekten initialisiert werden, die entweder als " **konstant** " oder " **flüchtig**" deklariert
 
 ### <a name="initialization-of-external-variables"></a>Initialisierung von externen Variablen
 
-Deklarationen von automatischen, statischen und externen Variablen können Initialisierer enthalten. Allerdings können Deklarationen von externen Variablen Initialisierer enthalten, nur dann, wenn die Variablen nicht, als deklariert werden **"extern"**.
+Deklarationen von automatischen, statischen und externen Variablen können Initialisierer enthalten. Deklarationen externer Variablen können jedoch nur Initialisierer enthalten, wenn die Variablen nicht als **extern**deklariert werden.
