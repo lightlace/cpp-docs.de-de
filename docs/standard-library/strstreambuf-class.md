@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f24d8fe99bc211e026172e42669cf5e430ad31e8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412279"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459074"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf-Klasse
 
-Beschreibt einen Streampuffer, der die Übertragung von Elementen in eine bzw. aus einer Sequenz von Elementen, die in gespeicherten steuert eine **Char** Array-Objekt.
+Beschreibt einen Streampuffer, der die Übertragung von Elementen in eine und aus einer Sequenz von Elementen steuert, die in einem **char** -Array Objekt gespeichert sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -93,12 +93,12 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parameter
 
-*_Freezeit*<br/>
-Ein **"bool"** , der angibt, ob den Stream fixiert werden soll.
+*_Freezeit*\
+Ein boolescher Wert, der angibt, ob der Stream eingefroren werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn *_Freezeit* ist "true" ändert die Funktion den gespeicherten `strstreambuf` Modus die kontrollierte Sequenz zu fixieren. Andernfalls ist es die kontrollierte Sequenz nicht fixiert.
+Wenn *_Freezeit* den Wert true hat, ändert die Funktion `strstreambuf` den gespeicherten Modus, damit die gesteuerte Sequenz fixiert wird. Andernfalls ist es die kontrollierte Sequenz nicht fixiert.
 
 [str](#str) impliziert `freeze`.
 
@@ -181,16 +181,16 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parameter
 
-*_Meta*<br/>
+*_Meta*\
 Das Zeichen, das in den Puffer eingefügt werden soll, oder `EOF`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `EOF` zurückgegeben. Andernfalls gilt: Wenn  *\_Meta* == `EOF`, es gibt einige Wert außer `EOF`. Andernfalls wird  *\_Meta*.
+Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `EOF` zurückgegeben. Andernfalls wird bei  *\_Meta* ==  `EOF`einandererWertalszurückgegeben.`EOF` Andernfalls wird  *\_Meta*zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn  *\_Meta* ! = `EOF`, die geschützte virtuelle Memberfunktion versucht, das Element eingefügt `(char)_Meta` in den Ausgabepuffer. Hierfür gibt es verschiedene Möglichkeiten:
+`EOF`Wenn  *\_Meta* ! =, versucht die Funktion des geschützten virtuellen Members, das Element `(char)_Meta` in den Ausgabepuffer einzufügen. Hierfür gibt es verschiedene Möglichkeiten:
 
 - Wenn eine Schreibposition verfügbar ist, kann das Element in der Schreibposition gespeichert werden, und der nächste Zeiger für den Ausgabepuffer kann inkrementiert werden.
 
@@ -206,22 +206,22 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parameter
 
-*_Meta*<br/>
+*_Meta*\
 Das Zeichen, das in den Puffer eingefügt werden soll, oder `EOF`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `EOF` zurückgegeben. Andernfalls gilt: Wenn  *\_Meta* == `EOF`, es gibt einige Wert außer `EOF`. Andernfalls wird  *\_Meta*.
+Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `EOF` zurückgegeben. Andernfalls wird bei  *\_Meta* ==  `EOF`einandererWertalszurückgegeben.`EOF` Andernfalls wird  *\_Meta*zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
 Die geschützte virtuelle Memberfunktion versucht, ein Element im Eingabepuffer wiederherzustellen und es dann zum aktuellen Element zu machen (der nächste Zeiger zeigt auf das Element).
 
-Wenn  *\_Meta* == `EOF`, das Element, das Pushback ist bereits in den Stream vor dem aktuellen Element. Andernfalls wird dieses Element durch ersetzt `ch = (char)_Meta`. Ein Element kann auf verschiedene Arten durch die Funktion wiederhergestellt werden:
+*Wenn\_Meta*,istdas`EOF`Element, das zurück abgelegt werden soll, das, das sich bereits vor dem aktuellen Element im Stream befindet. ==  Andernfalls wird dieses Element durch `ch = (char)_Meta`ersetzt. Ein Element kann auf verschiedene Arten durch die Funktion wiederhergestellt werden:
 
-- Wenn eine Position zur Wiederherstellung zur Verfügung steht, und das Element dort gespeicherten gleich `ch`, kann er den nächsten Zeiger für den Eingabepuffer verringert.
+- Wenn eine rückgabeposition verfügbar ist und das Element, das dort gespeichert ist `ch`, gleich ist, kann der nächste Zeiger für den Eingabepuffer verringert werden.
 
-- Wenn eine Position zur Wiederherstellung zur Verfügung steht, und wenn der Strstreambuf-Modus angezeigt wird, die kontrollierte Sequenz kann geändert werden, kann die Funktion speichern `ch` in die Position zur Wiederherstellung und Verringern der nächste Zeiger für den Eingabepuffer.
+- Wenn eine Position für die Wiederherstellung verfügbar ist und der Modus "straustreambuf" besagt, dass die gesteuerte Sequenz geändert werden kann, `ch` kann die Funktion in der Putback-Position speichern und den nächsten Zeiger für den Eingabepuffer verringern.
 
 ## <a name="pcount"></a> strstreambuf::pcount
 
@@ -237,7 +237,7 @@ Ein Zähler der Anzahl von Elementen, die in die kontrollierte Sequenz geschrieb
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn [pptr](../standard-library/basic-streambuf-class.md#pptr) ein NULL-Zeiger ist, gibt die Funktion null zurück. Andernfalls wird `pptr`  -  [Pbase](../standard-library/basic-streambuf-class.md#pbase).
+Wenn [pptr](../standard-library/basic-streambuf-class.md#pptr) ein NULL-Zeiger ist, gibt die Funktion null zurück. Andernfalls wird " `pptr` [pbase](../standard-library/basic-streambuf-class.md#pbase)" zurück  - gegeben.
 
 ### <a name="example"></a>Beispiel
 
@@ -270,13 +270,13 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Parameter
 
-*_Off*<br/>
-Die Position, die für die Suche, relativ zum *_Way*.
+*_Off*\
+Die Position, die relativ zu *_Way*gesucht werden soll.
 
-*_Way*<br/>
+*_Way*\
 Gibt den Startpunkt für Offsetvorgänge an. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
 
-*_Which*<br/>
+*_Which*\
 Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -289,15 +289,15 @@ Die geschützte virtuelle Memberfunktion versucht, die aktuellen Positionen für
 
 Die neue Position wird wie folgt bestimmt:
 
-- Wenn `_Way == ios_base::beg`, die neue Position ist der Anfang des Streams plus *_Off*.
+- Wenn `_Way == ios_base::beg`der Wert ist, ist die neue Position der Anfang des Streams Plus *_Off*.
 
-- Wenn `_Way == ios_base::cur`, ist die neue Position die aktuelle Streamposition plus *_Off*.
+- Wenn `_Way == ios_base::cur`der Wert ist, ist die neue Position die aktuelle Streamposition Plus *_Off*.
 
-- Wenn `_Way == ios_base::end`, ist die neue Position das Ende des Streams plus *_Off*.
+- Wenn `_Way == ios_base::end`der Wert ist, ist die neue Position das Ende des Streams Plus *_Off*.
 
-Wenn `_Which & ios_base::in` ungleich NULL ist und der Eingabepuffer vorhanden sind, ändert die Funktion die nächste Position, die im Eingabepuffer gelesen. Wenn `_Which & ios_base::out` ebenfalls ungleich NULL ist, `_Way != ios_base::cur`, und der Ausgabepuffer vorhanden ist, wird die Funktion legt auch die nächste zu schreibende Position auf der nächsten zu lesenden Position entspricht.
+Wenn `_Which & ios_base::in` ungleich 0 (null) ist und der Eingabepuffer vorhanden ist, ändert die Funktion die nächste Position, die im Eingabepuffer gelesen werden soll. Wenn `_Which & ios_base::out` auch ungleich NULL ist, `_Way != ios_base::cur`und der Ausgabepuffer vorhanden ist, legt die Funktion auch die nächste zu schreibende Position fest, damit Sie der nächsten zu lesenden Position entspricht.
 
-Andernfalls gilt: Wenn `_Which & ios_base::out` ungleich NULL ist und der Ausgabepuffer vorhanden ist, ändert die Funktion die nächste Position, die in den Ausgabepuffer geschrieben. Andernfalls schlägt der Positionierungsvorgang fehl. Damit eine Positionierung erfolgreich ist, muss die resultierende Streamposition innerhalb der kontrollierten Sequenz liegen.
+Wenn `_Which & ios_base::out` andernfalls ungleich 0 (null) ist und der Ausgabepuffer vorhanden ist, ändert die Funktion die nächste Position, die in den Ausgabepuffer geschrieben werden soll. Andernfalls schlägt der Positionierungsvorgang fehl. Damit eine Positionierung erfolgreich ist, muss die resultierende Streamposition innerhalb der kontrollierten Sequenz liegen.
 
 ## <a name="seekpos"></a> strstreambuf::seekpos
 
@@ -309,10 +309,10 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Parameter
 
-*_Sp*<br/>
+*_Sp*\
 Die Position, nach der gesucht werden soll.
 
-*_Which*<br/>
+*_Which*\
 Gibt den Modus für die Zeigerposition an. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
@@ -321,7 +321,7 @@ Wenn die Funktion eine der beiden Streampositionen erfolgreich ändert, gibt sie
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Memberfunktion versucht, die aktuellen Positionen für die gesteuerten Streams zu ändern. Für ein Objekt der Klasse strstreambuf besteht eine Streamposition lediglich aus einem Streamoffset. Das Offset null legt das erste Element der kontrollierten Sequenz fest. Die neue Position richtet sich nach *_Sp*.
+Die geschützte virtuelle Memberfunktion versucht, die aktuellen Positionen für die gesteuerten Streams zu ändern. Für ein Objekt der Klasse strstreambuf besteht eine Streamposition lediglich aus einem Streamoffset. Das Offset null legt das erste Element der kontrollierten Sequenz fest. Die neue Position wird von *_Sp*bestimmt.
 
 Wenn `_Which` & **ios_base::in** ungleich null ist, ändert die Funktion die nächste Position, die im Eingabepuffer gelesen werden soll. Wenn `_Which` & `ios_base::out` ungleich null und der Ausgabepuffer vorhanden ist, legt die Funktion auch die nächste zu schreibende Position so fest, dass sie der nächsten zu lesenden Position entspricht. Ansonsten ändert die Funktion die nächste Position, die im Ausgabepuffer geschrieben werden soll, wenn `_Which` & `ios_base::out` ungleich null ist. Andernfalls schlägt der Positionierungsvorgang fehl. Damit eine Positionierung erfolgreich ist, muss die resultierende Streamposition innerhalb der kontrollierten Sequenz liegen.
 
@@ -379,26 +379,26 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Parameter
 
-*_Allocfunc*<br/>
+*_Allocfunc*\
 Funktion, mit der Speicher zugewiesen wird.
 
-*count*<br/>
-Bestimmt die Länge des Puffers verweist *_Getptr*. Wenn *_Getptr* ist kein Argument (erste Konstruktor Form), eine empfohlene Zuweisungsgröße für Puffer.
+*Countdown*\
+Bestimmt die Länge des Puffers, auf den von *_Getptr*verwiesen wird. Wenn *_Getptr* kein Argument (erstes konstruktorformular) ist, wird eine vorgeschlagene Zuordnungs Größe für die Puffer angezeigt.
 
-*_Freefunc*<br/>
+*_Freefunc*\
 Zum Freigeben von Pufferspeicher verwendete Funktion.
 
-*_Getptr*<br/>
+*_Getptr*\
 Ein Puffer, der für die Eingabe verwendet wird.
 
-*_Putptr*<br/>
+*_Putptr*\
 Ein Puffer, der für die Ausgabe verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor speichert einen NULL-Zeiger in allen Zeigern, die den Eingabepuffer, den Ausgabepuffer und die strstreambuf-Zuweisung steuern. Legt den strstreambuf-Modus so fest, dass die kontrollierte Sequenz änderbar und erweiterbar ist. Er akzeptiert auch *Anzahl* als empfohlene anfängliche Speichergröße.
+Der erste Konstruktor speichert einen NULL-Zeiger in allen Zeigern, die den Eingabepuffer, den Ausgabepuffer und die strstreambuf-Zuweisung steuern. Legt den strstreambuf-Modus so fest, dass die kontrollierte Sequenz änderbar und erweiterbar ist. Außerdem wird die *Anzahl* als vorgeschlagene anfängliche Zuordnungs Größe akzeptiert.
 
-Der zweite Konstruktor verhält sich wie die erste, außer dass es speichert  *\_Allocfunc* als Zeiger auf die Funktion aufrufen, um Speicher zu belegen und  *\_Freefunc* Zeiger um die Funktion zum Aufrufen dieses Speichers.
+Der zweite Konstruktor verhält sich wie der erste, mit der Ausnahme, dass er  *\_allocfunc* als Zeiger auf die Funktion speichert, die aufruft, um Speicher und  *\_freefunc* als Zeiger auf die Funktion zuzuordnen, die aufgerufen werden soll, um diesen Speicher freizugeben.
 
 Die drei Konstruktoren:
 
@@ -418,11 +418,11 @@ strstreambuf(unsigned char *_Getptr,
 
 verhalten sich wie der erste, außer dass `_Getptr` das Arrayobjekt festlegt, das die kontrollierte Sequenz enthält. (Daher darf es kein NULL-Zeiger sein.) Die Anzahl der Elemente *N* im Array wird wie folgt bestimmt:
 
-- Wenn (`count` > 0), klicken Sie dann *N* ist `count`.
+- Wenn (`count` > 0), dann ist `count`N.
 
-- Wenn (`count` == 0), klicken Sie dann *N* ist `strlen`(( **const** `char` *) `_Getptr` ).
+- Wenn (`count` = = 0), dann ist `strlen`N (( **konstant** `char` *) `_Getptr` ).
 
-- Wenn (`count` < 0), klicken Sie dann *N* ist **INT_MAX**.
+- Wenn (`count` < 0), dann ist N **INT_MAX**.
 
 Wenn `_Putptr` ein NULL-Zeiger ist, legt die Funktion nur einen Eingabepuffer fest indem sie Folgendes ausführt:
 
@@ -480,11 +480,11 @@ Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `EOF` zurüc
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Memberfunktion versucht, das aktuelle Element extrahieren `ch` aus dem Eingabepuffer, dann fahren fort, um die aktuelle Streamposition aus, und geben Sie das Element als zurück (`int`) (`unsigned char`) **ch**. Hierfür in nur eine Möglichkeit: Wenn eine Leseposition verfügbar ist, dauert es `ch` wie das Element in der Leseposition gespeichert, und den nächsten Zeiger für den Eingabepuffer verschiebt.
+Die geschützte virtuelle Member-Funktion versucht, das aktuelle Element `ch` aus dem Eingabepuffer zu extrahieren, dann die aktuelle Streamposition fortzusetzen und das Element als`int`()`unsigned char`() **ch**zurückzugeben. Dies ist nur eine Möglichkeit: Wenn eine Lese Position verfügbar ist, wird Sie als das an `ch` der Lese Position gespeicherte Element benötigt und der nächste Zeiger für den Eingabepuffer erhöht.
 
 ## <a name="see-also"></a>Siehe auch
 
-[streambuf](../standard-library/streambuf-typedefs.md#streambuf)<br/>
-[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream-Programmierung](../standard-library/iostream-programming.md)<br/>
-[iostreams-Konventionen](../standard-library/iostreams-conventions.md)<br/>
+[streambuf](../standard-library/streambuf-typedefs.md#streambuf)\
+[Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream-Programmierung](../standard-library/iostream-programming.md)\
+[iostreams-Konventionen](../standard-library/iostreams-conventions.md)
