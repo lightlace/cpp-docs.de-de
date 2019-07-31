@@ -1,6 +1,6 @@
 ---
 title: '&lt;memory&gt;-Funktionen'
-ms.date: 02/06/2019
+ms.date: 07/30/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -12,10 +12,13 @@ f1_keywords:
 - memory/std::dynamic_pointer_cast
 - memory/std::get_deleter
 - memory/std::get_pointer_safety
+- memory/std::get_temporary_buffer
 - xmemory/std::get_temporary_buffer
 - memory/std::make_shared
 - memory/std::make_unique
 - memory/std::owner_less
+- memory/std::reinterpret_pointer_cast
+- memory/std::return_temporary_buffer
 - xmemory/std::return_temporary_buffer
 - memory/std::static_pointer_cast
 - memory/std::swap
@@ -74,12 +77,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 14818e93e79a0be9960ba67088f81d51d402b717
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 67b5dbb70222d215de4d0457e6acfcd0987763cd
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448493"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682579"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt;-Funktionen
 
@@ -89,30 +92,39 @@ Ruft die echte Adresse eines Objekts ab.
 
 ```cpp
 template <class T>
-    T* addressof(T& Val);
+T* addressof(
+    T& value) noexcept;    // before C++17
+
+template <class T>
+constexpr T* addressof(
+    T& value) noexcept;    // C++17
+
+template <class T>
+const T* addressof(
+    const T&& value) = delete;   // C++17
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Ster*\
+*value*\
 Das Objekt oder die Funktion, für das bzw. die die echte Adresse abgerufen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die tatsächliche Adresse des Objekts oder der Funktion, auf die von *Val*verwiesen wird, `operator&()` selbst wenn ein überladener vorhanden ist.
+Die tatsächliche Adresse des Objekts oder der Funktion, auf die als *Wert*verwiesen wird, `operator&()` selbst wenn ein überladener vorhanden ist.
 
 ### <a name="remarks"></a>Hinweise
 
 ## <a name="align"></a>abzustimmen
 
-Passt Speicher in der vorgegebenen Größe – ausgerichtet mithilfe der festgelegten Ausrichtungsspezifikation – in die erste mögliche Adresse des angegebenen Speichers ein.
+Passt den Speicher der angegebenen Größe, die durch die angegebene Ausrichtungs Spezifikation ausgerichtet ist, in die erste mögliche Adresse des angegebenen Speichers an.
 
 ```cpp
 void* align(
-    size_t Alignment, // input
-    size_t Size,      // input
-    void*& Ptr,        // input/output
-    size_t& Space     // input/output
+    size_t alignment, // input
+    size_t size,      // input
+    void*& ptr,       // input/output
+    size_t& space     // input/output
 );
 ```
 
@@ -127,7 +139,7 @@ Die Größe in Bytes für den ausgerichteten Speicher.
 *PTR*\
 Die Startadresse des verfügbaren zusammenhängenden Speicherpools, der verwendet werden soll. Dieser Parameter ist auch ein Output-Parameter und wird so festgelegt, dass die neue Startadresse enthalten ist, wenn die Ausrichtung erfolgreich ist. Wenn `align()` nicht erfolgreich ist, wird dieser Parameter nicht geändert.
 
-*BRaum*\
+*space*\
 Der gesamte verfügbare Speicherplatz, den `align()` beim Erstellen des ausgerichteten Speichers verwendet. Dieser Parameter ist auch ein Ausgabeparameter und enthält den angepassten Speicherplatz, der im Speicherpuffer verblieben ist, nachdem der ausgerichtete Speicher und der zugeordnete Mehraufwand subtrahiert wurden.
 
 Wenn `align()` nicht erfolgreich ist, wird dieser Parameter nicht geändert.
@@ -165,11 +177,13 @@ while (std::align(alignment, sizeof(MyObj), ptr, space)) {
 
 ## <a name="allocate_shared"></a>allocate_shared
 
-Erstellt einen `shared_ptr` auf Objekte, die einem angegebenen Typ mit einer angegebenen Zuweisung zugeordnet und dafür erstellt werden. Gibt `shared_ptr` zurück.
+Erstellt ein [shared_ptr](shared-ptr-class.md) -Objekt, das für einen angegebenen Typ mithilfe einer angegebenen Zuweisung zugeordnet und erstellt wird. Gibt `shared_ptr` zurück.
 
 ```cpp
-template <class Type, class Allocator, class... Types>
-    shared_ptr<Type> allocate_shared(Allocator Alloc, Types&&... Args);
+template <class T, class Allocator, class... Args>
+shared_ptr<T> allocate_shared(
+    Allocator alloc,
+    Args&&... args);
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -177,113 +191,148 @@ template <class Type, class Allocator, class... Types>
 *Zuordnungseinheits*\
 Die Zuweisung wird zur Erstellung von Objekten verwendet.
 
-*Args*\
+*args*\
 Keine oder mehrere Argumente, die zu Objekten werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Die-Funktion erstellt das `shared_ptr<Type>`Objekt, ein Zeiger `Type(Args...)` auf, *wie von der*Zuweisung zugeordnet und erstellt.
+Die-Funktion erstellt das `shared_ptr<T>`Objekt, ein Zeiger `T(args...)` auf, *wie von der*Zuweisung zugeordnet und erstellt.
 
 ## <a name="atomic_compare_exchange_strong"></a>atomic_compare_exchange_strong
 
 ```cpp
 template<class T>
-    bool atomic_compare_exchange_strong(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w);
+bool atomic_compare_exchange_strong(
+    shared_ptr<T>* u,
+    shared_ptr<T>* v,
+    shared_ptr<T> w);
 ```
 
 ## <a name="atomic_compare_exchange_weak"></a>atomic_compare_exchange_weak
 
 ```cpp
 template<class T>
-    bool atomic_compare_exchange_weak(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w);
+bool atomic_compare_exchange_weak(
+    shared_ptr<T>* u,
+    shared_ptr<T>* v,
+    shared_ptr<T> w);
 ```
 
 ## <a name="atomic_compare_exchange_strong_explicit"></a>atomic_compare_exchange_strong_explicit
 
 ```cpp
 template<class T>
-    bool atomic_compare_exchange_strong_explicit(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w, memory_order success, memory_order failure);
+bool atomic_compare_exchange_strong_explicit(
+    shared_ptr<T>* u,
+    shared_ptr<T>* v,
+    shared_ptr<T> w,
+    memory_order success,
+    memory_order failure);
 ```
 
 ## <a name="atomic_compare_exchange_weak_explicit"></a>atomic_compare_exchange_weak_explicit
 
 ```cpp
 template<class T>
-    bool atomic_compare_exchange_weak_explicit(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w, memory_order success, memory_order failure);
+bool atomic_compare_exchange_weak_explicit(
+    shared_ptr<T>* u,
+    shared_ptr<T>* v,
+    shared_ptr<T> w,
+    memory_order success,
+    memory_order failure);
 ```
 
 ## <a name="atomic_exchange"></a>atomic_exchange
 
 ```cpp
 template<class T>
-    shared_ptr<T> atomic_exchange(shared_ptr<T>* p, shared_ptr<T> r);
+shared_ptr<T> atomic_exchange(
+    shared_ptr<T>* u,
+    shared_ptr<T> r);
 ```
 
 ## <a name="atomic_exchange_explicit"></a>atomic_exchange_explicit
 
 ```cpp
 template<class T>
-    shared_ptr<T> atomic_exchange_explicit(shared_ptr<T>* p, shared_ptr<T> r, memory_order mo);
+shared_ptr<T> atomic_exchange_explicit(
+    shared_ptr<T>* u,
+    shared_ptr<T> r,
+    memory_order mo);
 ```
 
 ## <a name="atomic_is_lock_free"></a>atomic_is_lock_free
 
 ```cpp
 template<class T>
-    bool atomic_is_lock_free(const shared_ptr<T>* p);
+bool atomic_is_lock_free(
+    const shared_ptr<T>* u);
 ```
 
 ## <a name="atomic_load"></a>atomic_load
 
 ```cpp
 template<class T>
-    shared_ptr<T> atomic_load(const shared_ptr<T>* p);
+shared_ptr<T> atomic_load(
+    const shared_ptr<T>* u);
 ```
 
 ## <a name="atomic_load_explicit"></a>atomic_load_explicit
 
 ```cpp
 template<class T>
-    shared_ptr<T> atomic_load_explicit(const shared_ptr<T>* p, memory_order mo);
+shared_ptr<T> atomic_load_explicit(
+    const shared_ptr<T>* u,
+    memory_order mo);
 ```
 
 ## <a name="atomic_store"></a>atomic_store
 
 ```cpp
 template<class T>
-    void atomic_store(shared_ptr<T>* p, shared_ptr<T> r);
+void atomic_store(
+    shared_ptr<T>* u,
+    shared_ptr<T> r);
 ```
 
 ## <a name="atomic_store_explicit"></a>atomic_store_explicit
 
 ```cpp
 template<class T>
-    void atomic_store_explicit(shared_ptr<T>* p, shared_ptr<T> r, memory_order mo);
+void atomic_store_explicit(
+    shared_ptr<T>* u,
+    shared_ptr<T> r,
+    memory_order mo);
 ```
 
 ## <a name="const_pointer_cast"></a>const_pointer_cast
 
-Konstantenumwandlung in shared_ptr (gemeinsamer Zeiger).
+Konstante Umwandlung in [shared_ptr](shared-ptr-class.md).
 
 ```cpp
-template <class Ty, class Other>
-    shared_ptr<Ty> const_pointer_cast(const shared_ptr<Other>& sp);
+template <class T, class Other>
+shared_ptr<T> const_pointer_cast(
+    const shared_ptr<Other>& sp) noexcept;
+
+template <class T, class Other>
+shared_ptr<T> const_pointer_cast(
+    shared_ptr<Other>&& sp) noexcept;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Genossenschaft*\
+*BUND*\
 Der Typ, der vom zurückgegebenen gemeinsamen Zeiger (shared pointer) gesteuert wird.
 
 *Außer*\
 Der Typ, der vom Argument für den gemeinsamen Zeiger gesteuert wird.
 
-*Außer*\
+*El*\
 Das Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagen Funktion gibt ein leeres shared_ptr-Objekt `const_cast<Ty*>(sp.get())` zurück, wenn einen NULL-Zeiger zurückgibt; andernfalls gibt Sie ein [shared_ptr Class](../standard-library/shared-ptr-class.md)\<Ty-> Objekt zurück, `sp`das die Ressource besitzt, die im Besitz von ist. Der Ausdruck `const_cast<Ty*>(sp.get())` muss gültig sein.
+Die Vorlagen Funktion gibt ein leeres `shared_ptr` -Objekt `const_cast<T*>(sp.get())` zurück, wenn einen NULL-Zeiger zurückgibt `shared_ptr<T>` ; andernfalls wird ein-Objekt zurückgegeben, das die Ressource besitzt, die im Besitz von *SP*ist. Der Ausdruck `const_cast<T*>(sp.get())` muss gültig sein.
 
 ### <a name="example"></a>Beispiel
 
@@ -299,7 +348,7 @@ int main()
     std::shared_ptr<const int> sp1 =
         std::const_pointer_cast<const int>(sp0);
 
-*sp0 = 3;
+    *sp0 = 3;
     std::cout << "sp1 == " << *sp1 << std::endl;
 
     return (0);
@@ -315,7 +364,9 @@ sp1 == 3
 Einem Garbage Collector wird mitgeteilt, dass die Zeichen im Speicherblock, der von einem Basisadressenzeiger und -blockgröße definiert wurde, keine nachweisbaren Zeiger enthalten.
 
 ```cpp
-void declare_no_pointers(char* ptr, size_t _Size);
+void declare_no_pointers(
+    char* ptr,
+    size_t size);
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -323,19 +374,20 @@ void declare_no_pointers(char* ptr, size_t _Size);
 *PTR*\
 Adresse des ersten Zeichens, das keinen nachweisbaren Zeiger mehr enthält.
 
-*_Size*\
+*Größe*\
 Blockgröße, die bei *ptr* beginnt und keine nachvollziehbaren Zeiger enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Die-Funktion informiert alle Garbage Collector, dass der Adress `[ ptr, ptr + _Size)` Bereich keine nachvollziehbaren Zeiger mehr enthält. (Alle Zeiger auf zugeordneten Speicher dürfen nicht dereferenziert werden, es sei denn, Sie wurden erreichbar gemacht.)
+Die-Funktion informiert alle Garbage Collector, dass die Adressen im `[ ptr, ptr + size)` Bereich keine nachvollziehbaren Zeiger mehr enthalten. (Alle Zeiger auf zugeordneten Speicher dürfen nicht dereferenziert werden, es sei denn, Sie wurden erreichbar gemacht.)
 
 ## <a name="declare_reachable"></a>declare_reachable
 
 Der Garbage Collection wird mitgeteilt, dass die angegebene Adresse von zugewiesenem Speicher erreichbar ist.
 
 ```cpp
-void declare_reachable(void* ptr);
+void declare_reachable(
+    void* ptr);
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -345,18 +397,21 @@ Ein Zeiger auf einen erreichbaren zugewiesenen gültigen Speicherbereich.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn *ptr* nicht NULL ist, informiert die Funktion jeden Garbage Collector, dass *ptr* im Anschluss erreichbar ist (verweist auf gültigen zugeordneten Speicher).
+Wenn *ptr* nicht NULL ist, informiert die Funktion jeden Garbage Collector, dass *ptr* nun erreichbar ist, d. h., er verweist auf einen gültigen zugeordneten Speicher.
 
 ## <a name="default_delete"></a>default_delete
 
-Löscht mit **Operator new**zugeordnete-Objekte. Kann mit `unique_ptr` verwendet werden.
+Löscht mit **Operator new**zugeordnete-Objekte. Geeignet für die Verwendung mit [unique_ptr](unique-ptr-class.md).
 
 ```cpp
-struct default_delete {
-   constexpr default_delete() noexcept = default;
-   template <class Other, class = typename enable_if<is_convertible<Other*, T*>::value, void>::type>>
-        default_delete(const default_delete<Other>&) noexcept;
-   void operator()(T* Ptr) const noexcept;
+struct default_delete
+{
+    constexpr default_delete() noexcept = default;
+
+    template <class Other, class = typename enable_if<is_convertible<Other*, T*>::value, void>::type>>
+    default_delete(const default_delete<Other>&) noexcept;
+
+    void operator()(T* ptr) const noexcept;
 };
 ```
 
@@ -370,13 +425,14 @@ Die anderen Typen von Elementen im Array, die gelöscht werden sollen.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagen Klasse beschreibt einen `deleter` , mit dem skalare Objekte gelöscht werden, die mit dem **Operator new**zugeordnet sind `unique_ptr`und für die Verwendung mit der Vorlagen Klasse geeignet Außerdem ist die explizite Spezialisierung `default_delete<Type[]>` vorhanden.
+Die Vorlagen Klasse beschreibt einen Deleter, der mit **Operator new**zugewiesene skalare Objekte löscht, die für die Verwendung mit `unique_ptr`der Vorlagen Klasse geeignet sind. Außerdem ist die explizite Spezialisierung `default_delete<T[]>` vorhanden.
 
 ## <a name="destroy_at"></a>destroy_at
 
 ```cpp
 template <class T>
-    void destroy_at(T* location);
+void destroy_at(
+    T* location);
 ```
 
 Wie in `location->~T()`.
@@ -385,32 +441,52 @@ Wie in `location->~T()`.
 
 ```cpp
 template <class ForwardIterator>
-    void destroy(ForwardIterator first, ForwardIterator last);
+void destroy(
+    ForwardIterator first,
+    ForwardIterator last);
 ```
 
-Wie in `for (; first!=last; ++first) destroy_at(addressof(*first)); `.
+Identisch mit:
+
+```cpp
+for (; first != last; ++first)
+    destroy_at(addressof(*first));
+```
 
 ## <a name="destroy_n"></a>destroy_n
 
 ```cpp
 template <class ForwardIterator, class Size>
-    ForwardIterator destroy_n(ForwardIterator first, Size n);
+ForwardIterator destroy_n(
+    ForwardIterator first,
+    Size count);
 ```
 
-Wie in `for (; n > 0; (void)++first, --n) destroy_at(addressof(*first)); return first;`.
+Identisch mit:
+
+```cpp
+for (; count > 0; (void)++first, --count)
+    destroy_at(addressof(*first));
+return first;
+```
 
 ## <a name="dynamic_pointer_cast"></a>dynamic_pointer_cast
 
-Dynamische Umwandlung in shared_ptr (gemeinsamer Zeiger).
+Dynamische Umwandlung in [shared_ptr](shared-ptr-class.md).
 
 ```cpp
-template <class Ty, class Other>
-    shared_ptr<Ty> dynamic_pointer_cast(const shared_ptr<Other>& sp);
+template <class T, class Other>
+shared_ptr<T> dynamic_pointer_cast(
+    const shared_ptr<Other>& sp) noexcept;
+
+template <class T, class Other>
+shared_ptr<T> dynamic_pointer_cast(
+    shared_ptr<Other>&& sp) noexcept;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Genossenschaft*\
+*BUND*\
 Der Typ, der vom zurückgegebenen gemeinsamen Zeiger (shared pointer) gesteuert wird.
 
 *Außer*\
@@ -421,7 +497,7 @@ Das Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagen Funktion gibt ein leeres shared_ptr-Objekt `dynamic_cast<Ty*>(sp.get())` zurück, wenn einen NULL-Zeiger zurückgibt; andernfalls gibt Sie ein [shared_ptr Class](../standard-library/shared-ptr-class.md)\<Ty-> Objekt zurück, das die Ressource besitzt, die im Besitz von *SP*ist. Der Ausdruck `dynamic_cast<Ty*>(sp.get())` muss gültig sein.
+Die Vorlagen Funktion gibt ein leeres `shared_ptr` -Objekt `dynamic_cast<T*>(sp.get())` zurück, wenn einen NULL-Zeiger zurückgibt `shared_ptr<T>` ; andernfalls wird ein-Objekt zurückgegeben, das die Ressource besitzt, die im Besitz von *SP*ist. Der Ausdruck `dynamic_cast<T*>(sp.get())` muss gültig sein.
 
 ### <a name="example"></a>Beispiel
 
@@ -434,7 +510,7 @@ Die Vorlagen Funktion gibt ein leeres shared_ptr-Objekt `dynamic_cast<Ty*>(sp.ge
 struct base
 {
     virtual ~base() {}
-    int val;
+    int value;
 };
 
 struct derived
@@ -448,32 +524,33 @@ int main()
     std::shared_ptr<derived> sp1 =
         std::dynamic_pointer_cast<derived>(sp0);
 
-    sp0->val = 3;
-    std::cout << "sp1->val == " << sp1->val << std::endl;
+    sp0->value = 3;
+    std::cout << "sp1->value == " << sp1->value << std::endl;
 
     return (0);
 }
 ```
 
 ```Output
-sp1->val == 3
+sp1->value == 3
 ```
 
 ## <a name="get_deleter"></a>get_deleter
 
-Einen Deleter aus shared_ptr abrufen.
+Löschen Sie den Deleter von einem [shared_ptr](shared-ptr-class.md).
 
 ```cpp
-template <class D, class Ty>
-    D* get_deleter(const shared_ptr<Ty>& sp);
+template <class Deleter, class T>
+Deleter* get_deleter(
+    const shared_ptr<T>& sp) noexcept;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*D*\
+*Deleter*\
 Der Deleter-Typ.
 
-*Genossenschaft*\
+*BUND*\
 Der vom freigegebenen Zeiger gesteuerte Typ.
 
 *El*\
@@ -481,7 +558,7 @@ Der freigegebene Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagen Funktion gibt einen Zeiger auf den Deleter des Typs *D* zurück, der zum [shared_ptr-Klassen](../standard-library/shared-ptr-class.md) Objekt *SP*gehört. Wenn *SP* keinen Deleter hat oder der Deleter nicht vom Typ *D* ist, gibt die Funktion 0 zurück.
+Die Vorlagen Funktion gibt einen Zeiger auf den Deleter vom Typ *Deleter* zurück, der zum `shared_ptr` Objekt *SP*gehört. Wenn *SP* keinen Deleter hat oder der Deleter nicht vom Typ *Deleter*ist, gibt die Funktion 0 zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -493,14 +570,14 @@ Die Vorlagen Funktion gibt einen Zeiger auf den Deleter des Typs *D* zurück, de
 
 struct base
 {
-    int val;
+    int value;
 };
 
 struct deleter
 {
-    void operator()(base *p)
+    void operator()(base *pb)
     {
-        delete p;
+        delete pb;
     }
 };
 
@@ -508,13 +585,13 @@ int main()
 {
     std::shared_ptr<base> sp0(new base);
 
-    sp0->val = 3;
+    sp0->value = 3;
     std::cout << "get_deleter(sp0) != 0 == " << std::boolalpha
         << (std::get_deleter<deleter>(sp0) != 0) << std::endl;
 
     std::shared_ptr<base> sp1(new base, deleter());
 
-    sp0->val = 3;
+    sp0->value = 3;
     std::cout << "get_deleter(sp1) != 0 == " << std::boolalpha
         << (std::get_deleter<deleter>(sp1) != 0) << std::endl;
 
@@ -532,7 +609,7 @@ get_deleter(sp1) != 0 == true
 Gibt den Typ der Zeigersicherheit zurück, der von einem Garbage Collector angenommen wird.
 
 ```cpp
-pointer_safety get_pointer_safety();
+pointer_safety get_pointer_safety() noexcept;
 ```
 
 ### <a name="remarks"></a>Hinweise
@@ -541,11 +618,12 @@ Die-Funktion gibt den Typ der Zeiger Sicherheit zurück, der von allen automatis
 
 ## <a name="get_temporary_buffer"></a>get_temporary_buffer
 
-Weist temporären Speicher für eine Elementsequenz zu, die eine bestimmte Anzahl von Elementen nicht überschreitet.
+Weist temporären Speicher für eine Sequenz von Elementen zu, die eine angegebene Anzahl von Elementen nicht überschreitet.
 
 ```cpp
-template <class Type>
-    pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
+template <class T>
+pair<T *, ptrdiff_t> get_temporary_buffer(
+    ptrdiff_t count);
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -561,7 +639,7 @@ Ein `pair`, dessen erste Komponente ein Zeiger auf den zugewiesenen Speicher ist
 
 Die Funktion fordert Speicher an; möglicherweise wird diese Anforderung aber zurückgewiesen. Wenn kein Puffer zugewiesen ist, gibt die Funktion „pair“ zurück; dabei ist die zweite Komponente entspricht null und die erste Komponente dem NULL-Zeiger.
 
-Diese Funktion sollte nur für temporären Speicher verwendet werden.
+Verwenden Sie diese Funktion nur für temporären Speicherplatz.
 
 ### <a name="example"></a>Beispiel
 
@@ -575,16 +653,16 @@ using namespace std;
 
 int main( )
 {
-   // Create an array of ints
-   int intArray [ ] = { 10, 20, 30, 40, 100, 200, 300, 1000, 2000 };
-   int count = sizeof ( intArray ) / sizeof ( int );
-   cout << "The number of integers in the array is: "
-      << count << "." << endl;
+    // Create an array of ints
+    int intArray [] = { 10, 20, 30, 40, 100, 200, 300, 1000, 2000 };
+    int count = sizeof ( intArray ) / sizeof ( int );
+    cout << "The number of integers in the array is: "
+        << count << "." << endl;
 
-   pair<int *, ptrdiff_t> resultPair;
-   resultPair = get_temporary_buffer<int>( count );
+    pair<int *, ptrdiff_t> resultPair;
+    resultPair = get_temporary_buffer<int>( count );
 
-   cout << "The number of elements that the allocated memory\n"
+    cout << "The number of elements that the allocated memory\n"
         << "could store is given by: resultPair.second = "
         << resultPair.second << "." << endl;
 }
@@ -598,16 +676,17 @@ could store is given by: resultPair.second = 9.
 
 ## <a name="make_shared"></a>make_shared
 
-Erstellt `shared_ptr`, das auf die zugeordneten Objekte, die mithilfe der Standardbelegung von keinen oder mehreren Argumenten erstellt werden, oder gibt es zurück. Weist sowohl ein Objekt des angegebenen Typs als auch `shared_ptr` zu und erstellt sie, um die Freigabe des Objekts zu verwalten, und gibt `shared_ptr` zurück.
+Erstellt ein [shared_ptr](shared-ptr-class.md) -Objekt, das auf die zugeordneten Objekte zeigt, die mithilfe der Standard Zuweisung aus null oder mehr Argumenten erstellt werden, und gibt es zurück. Weist sowohl ein Objekt des angegebenen Typs als auch `shared_ptr` zu und erstellt sie, um die Freigabe des Objekts zu verwalten, und gibt `shared_ptr` zurück.
 
 ```cpp
-template <class Type, class... Types>
-    shared_ptr<Type> make_shared(Types&&... _Args);
+template <class T, class... Args>
+shared_ptr<T> make_shared(
+    Args&&... args);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Args*\
+*args*\
 Null oder mehr Konstruktorargumente. Die Funktion leitet auf Grundlage der bereitgestellten Argumente die erforderliche die Konstruktorüberladung ab.
 
 ### <a name="remarks"></a>Hinweise
@@ -619,9 +698,9 @@ auto sp = std::shared_ptr<Example>(new Example(argument));
 auto msp = std::make_shared<Example>(argument);
 ```
 
-Die erste Anweisung ergibt jedoch zwei Zuordnungen, und wenn die Zuordnung von `shared_ptr` fehlschlägt, nachdem die Zuordnung des `Example`-Objekts erfolgreich war, geht das unbenannte `Example`-Objekt verloren. Die Anweisung, die `make_shared` verwendet, ist einfacher, da nur ein Funktionsaufruf beteiligt ist. Sie ist effizienter, da die Bibliothek eine einzige Zuordnung für das Objekt und den intelligenten Zeiger vornehmen kann. Dies ist schneller und führt zu einer geringeren Speicherfragmentierung; zudem kann es nicht bei nur einer Zuordnung zu einer Ausnahme kommen. Die Leistung wird durch einen besseren Speicherort für den Code verbessert, der auf das Objekt verweist und den Verweiszähler im intelligenten Zeiger aktualisiert.
+Die erste Anweisung ergibt jedoch zwei Zuordnungen, und wenn die Zuordnung von `shared_ptr` fehlschlägt, nachdem die Zuordnung des `Example`-Objekts erfolgreich war, geht das unbenannte `Example`-Objekt verloren. Die Anweisung, die `make_shared` verwendet, ist einfacher, da nur ein Funktionsaufruf beteiligt ist. Sie ist effizienter, da die Bibliothek eine einzige Zuordnung für das Objekt und den intelligenten Zeiger vornehmen kann. Diese Funktion ist schneller und führt zu einer geringeren Speicherfragmentierung, und es besteht keine Möglichkeit, eine Ausnahme für eine Zuordnung, aber nicht für die andere zu erhalten. Die Leistung wird durch einen besseren Speicherort für den Code verbessert, der auf das Objekt verweist und den Verweiszähler im intelligenten Zeiger aktualisiert.
 
-Ziehen Sie die Verwendung von [make_unique](../standard-library/memory-functions.md#make_unique) in Betracht, wenn Sie keinen gemeinsamen Zugriff auf das Objekt benötigen. Verwenden Sie [allocate_shared](../standard-library/memory-functions.md#allocate_shared), wenn Sie eine benutzerdefinierte Zuweisung für das Objekt angeben müssen. Sie können `make_shared` nicht verwenden, wenn das Objekt einen benutzerdefinierten Deleter benötigt, da es keine Möglichkeit gibt, den Deleter als Argument zu übergeben.
+Verwenden Sie [make_unique](memory-functions.md#make_unique) , wenn Sie keinen gemeinsamen Zugriff auf das Objekt benötigen. Verwenden Sie [allocate_shared](memory-functions.md#allocate_shared), wenn Sie eine benutzerdefinierte Zuweisung für das Objekt angeben müssen. Sie können nicht `make_shared` verwenden, wenn das Objekt einen benutzerdefinierten Deleter benötigt, da es keine Möglichkeit gibt, den Deleter als Argument zu übergeben.
 
 Im folgenden Beispiel wird die Erstellung freigegebener Zeiger auf einen Typ mithilfe bestimmter Konstruktorüberladungen veranschaulicht.
 
@@ -637,44 +716,47 @@ Im folgenden Beispiel wird die Erstellung freigegebener Zeiger auf einen Typ mit
 
 class Song {
 public:
-   std::wstring title_;
-   std::wstring artist_;
+    std::wstring title_;
+    std::wstring artist_;
 
-   Song(std::wstring title, std::wstring artist) : title_(title), artist_(artist) {}
-   Song(std::wstring title) : title_(title), artist_(L"Unknown") {}
+    Song(std::wstring title, std::wstring artist) : title_(title), artist_(artist) {}
+    Song(std::wstring title) : title_(title), artist_(L"Unknown") {}
 };
 
-void CreateSharedPointers() {
-   // Okay, but less efficient to have separate allocations for
-   // Song object and shared_ptr control block.
-   auto song = new Song(L"Ode to Joy", L"Beethoven");
-   std::shared_ptr<Song> sp0(song);
+void CreateSharedPointers()
+{
+    // Okay, but less efficient to have separate allocations for
+    // Song object and shared_ptr control block.
+    auto song = new Song(L"Ode to Joy", L"Beethoven");
+    std::shared_ptr<Song> sp0(song);
 
-   // Use make_shared function when possible. Memory for control block
-   // and Song object are allocated in the same call:
-   auto sp1 = std::make_shared<Song>(L"Yesterday", L"The Beatles");
-   auto sp2 = std::make_shared<Song>(L"Blackbird", L"The Beatles");
+    // Use make_shared function when possible. Memory for control block
+    // and Song object are allocated in the same call:
+    auto sp1 = std::make_shared<Song>(L"Yesterday", L"The Beatles");
+    auto sp2 = std::make_shared<Song>(L"Blackbird", L"The Beatles");
 
-   // make_shared infers which constructor to use based on the arguments.
-   auto sp3 = std::make_shared<Song>(L"Greensleeves");
+    // make_shared infers which constructor to use based on the arguments.
+    auto sp3 = std::make_shared<Song>(L"Greensleeves");
 
-   // The playlist vector makes copies of the shared_ptr pointers.
-   std::vector<std::shared_ptr<Song>> playlist;
-   playlist.push_back(sp0);
-   playlist.push_back(sp1);
-   playlist.push_back(sp2);
-   playlist.push_back(sp3);
-   playlist.push_back(sp1);
-   playlist.push_back(sp2);
-   for (auto&& sp : playlist) {
-      std::wcout << L"Playing " << sp->title_ <<
-         L" by " << sp->artist_ << L", use count: " <<
-         sp.use_count() << std::endl;
-   }
+    // The playlist vector makes copies of the shared_ptr pointers.
+    std::vector<std::shared_ptr<Song>> playlist;
+    playlist.push_back(sp0);
+    playlist.push_back(sp1);
+    playlist.push_back(sp2);
+    playlist.push_back(sp3);
+    playlist.push_back(sp1);
+    playlist.push_back(sp2);
+    for (auto&& sp : playlist)
+    {
+        std::wcout << L"Playing " << sp->title_ <<
+            L" by " << sp->artist_ << L", use count: " <<
+            sp.use_count() << std::endl;
+    }
 }
 
-int main() {
-   CreateSharedPointers();
+int main()
+{
+    CreateSharedPointers();
 }
 ```
 
@@ -691,26 +773,26 @@ Playing Blackbird by The Beatles, use count: 3
 
 ## <a name="make_unique"></a>make_unique
 
-Erstellt ein [unique_ptr](../standard-library/unique-ptr-class.md)-Element und gibt es an ein Objekt des angegebenen Typs zurück, das mithilfe der angegebenen Argumente erstellt wird.
+Erstellt ein [unique_ptr](unique-ptr-class.md)-Element und gibt es an ein Objekt des angegebenen Typs zurück, das mithilfe der angegebenen Argumente erstellt wird.
 
 ```cpp
 // make_unique<T>
-template <class T, class... Types>
-    unique_ptr<T> make_unique(Types&&... Args)
+template <class T, class... Args>
+unique_ptr<T> make_unique(Args&&... args)
     {
-        return (unique_ptr<T>(new T(forward<Types>(Args)...)));
+        return (unique_ptr<T>(new T(forward<Args>(args)...)));
     }
 
 // make_unique<T[]>
 template <class T>
-    make_unique(size_t Size)
+make_unique(size_t size)
     {
-        return (unique_ptr<T>(new Elem[Size]()));
+        return (unique_ptr<T>(new elements[size]()));
     }
 
 // make_unique<T[N]> disallowed
-template <class T, class... Types>
-    typename enable_if<extent<T>::value != 0, void>::type make_unique(Types&&...) = delete;
+template <class T, class... Args>
+typename enable_if<extent<T>::value != 0, void>::type make_unique(Args&&...) = delete;
 ```
 
 ### <a name="parameters"></a>Parameter
@@ -718,13 +800,13 @@ template <class T, class... Types>
 *BUND*\
 Der Typ des Objekts, auf das `unique_ptr` zeigt.
 
-*Typen*\
+*Args*\
 Die von *args*angegebenen Typen der Konstruktorargumente.
 
-*Args*\
+*args*\
 Die Argumente, die an den Konstruktor des Objekts vom Typ *T*übergeben werden.
 
-*Elem*\
+*Aspekte*\
 Ein Array von Elementen des Typs *T*.
 
 *Größe*\
@@ -732,7 +814,7 @@ Die Anzahl von Elementen, denen im neue Array ein Bereich zugeordnet werden soll
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Überladung wird für einzelne Objekte verwendet, die zweite Überladung wird für Arrays aufgerufen, und die dritte Überladung verhindert die Angabe einer Array Größe im Typargument (make_unique\<T [N] >). diese Konstruktion wird vom aktuellen-Objekt nicht unterstützt. Norm. Wenn Sie `make_unique` verwenden, um `unique_ptr` in ein Array zu erstellen, müssen die Arrayelemente separat initialisiert werden. Bei Berücksichtigung dieser Überladung ist die Verwendung von [std::vector](../standard-library/vector-class.md) eventuell besser.
+Die erste Überladung wird für einzelne Objekte verwendet. Die zweite Überladung wird für Arrays aufgerufen. Die dritte Überladung verhindert die Angabe einer Array Größe im Typargument (\<make_unique T [N] >). diese Konstruktion wird nicht vom aktuellen Standard unterstützt. Wenn Sie `make_unique` verwenden, um `unique_ptr` in ein Array zu erstellen, müssen die Arrayelemente separat initialisiert werden. Anstatt diese Überladung zu verwenden, ist die Verwendung von [Std:: Vector](vector-class.md)möglicherweise eine bessere Wahl.
 
 Da `make_unique` sorgfältig für die Ausnahmesicherheit implementiert wird, wird empfohlen, `make_unique` zu verwenden, anstatt `unique_ptr` -Konstruktoren direkt aufzurufen.
 
@@ -749,43 +831,67 @@ Wenn der Fehler "C2280" in Verbindung mit `unique_ptr` angezeigt wird, ist der G
 Ermöglicht Mischvergleiche, die auf Besitz basieren, freigegebener und schwacher Zeiger. Gibt " **true** " zurück, wenn der linke Parameter von der Element Funktion `owner_before`vor dem rechten Parameter geordnet ist.
 
 ```cpp
-template <class Type>
+template <class T>
     struct owner_less; // not defined
 
-template <class Type>
-struct owner_less<shared_ptr<Type>> {
+template <class T>
+struct owner_less<shared_ptr<T>>
+{
     bool operator()(
-    const shared_ptr<Type>& left,
-    const shared_ptr<Type>& right);
+        const shared_ptr<T>& left,
+        const shared_ptr<T>& right) const noexcept;
 
     bool operator()(
-    const shared_ptr<Type>& left,
-    const weak_ptr<Type>& right);
+        const shared_ptr<T>& left,
+        const weak_ptr<T>& right) const noexcept;
 
     bool operator()(
-    const weak_ptr<Type>& left,
-    const shared_ptr<Type>& right);
+        const weak_ptr<T>& left,
+        const shared_ptr<T>& right) const noexcept;
 };
 
-template <class Type>
-struct owner_less<weak_ptr<Type>>
+template <class T>
+struct owner_less<weak_ptr<T>>
     bool operator()(
-    const weak_ptr<Type>& left,
-    const weak_ptr<Type>& right);
+        const weak_ptr<T>& left,
+        const weak_ptr<T>& right) const noexcept;
 
     bool operator()(
-    const weak_ptr<Type>& left,
-    const shared_ptr<Ty>& right);
+        const weak_ptr<T>& left,
+        const shared_ptr<T>& right) const noexcept;
 
     bool operator()(
-    const shared_ptr<Type>& left,
-    const weak_ptr<Type>& right);
+        const shared_ptr<T>& left,
+        const weak_ptr<T>& right) const noexcept;
+};
+
+template<> struct owner_less<void>
+{
+    template<class T, class U>
+    bool operator()(
+        const shared_ptr<T>& left,
+        const shared_ptr<U>& right) const noexcept;
+
+    template<class T, class U>
+    bool operator()(
+        const shared_ptr<T>& left,
+        const weak_ptr<U>& right) const noexcept;
+
+    template<class T, class U>
+    bool operator()(
+        const weak_ptr<T>& left,
+        const shared_ptr<U>& right) const noexcept;
+
+    template<class T, class U>
+    bool operator()(
+        const weak_ptr<T>& left,
+        const weak_ptr<U>& right) const noexcept;
 };
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_left*\
+*linken*\
 Ein freigegebener oder schwacher Zeiger.
 
 *Richting*\
@@ -795,23 +901,49 @@ Ein freigegebener oder schwacher Zeiger.
 
 Die Vorlagenklassen definieren, dass alle ihre Memberoperatoren `left.owner_before(right)` zurückgeben.
 
+## <a name="reinterpret_pointer_cast"></a>reinterpret_pointer_cast
+
+Erstellt eine neue `shared_ptr` aus einem vorhandenen freigegebenen Zeiger mithilfe einer Umwandlung.
+
+```cpp
+template<class T, class U>
+shared_ptr<T> reinterpret_pointer_cast(
+    const shared_ptr<U>& ptr) noexcept;
+
+template<class T, class U>
+shared_ptr<T> reinterpret_pointer_cast(
+    shared_ptr<U>&& ptr) noexcept;
+```
+
+### <a name="parameters"></a>Parameter
+
+*PTR*\
+Ein Verweis auf einen `shared_ptr<U>`.
+
+### <a name="remarks"></a>Hinweise
+
+Wenn *ptr* leer ist, ist das `shared_ptr` neue ebenfalls leer; andernfalls wird der Besitz mit *ptr*geteilt. Der neue freigegebene Zeiger ist das Ergebnis der `reinterpret_cast<Y*>(ptr.get())`Auswertung von `Y` , `typename std::shared_ptr<T>::element_type`wobei den Wert hat. Das Verhalten ist nicht definiert `reinterpret_cast<T*>((U*)nullptr)` , wenn nicht wohl geformt ist.
+
+Die Vorlagen Funktion, die einen Lvalue-Verweis annimmt, ist neu in c++ 17. Die Vorlagen Funktion, die einen rvalue-Verweis annimmt, ist neu in c++ 20.
+
 ## <a name="return_temporary_buffer"></a>return_temporary_buffer
 
 Gibt den temporären Speicher frei, der mithilfe der `get_temporary_buffer`-Vorlagenfunktion zugeordnet wurde.
 
 ```cpp
-template <class Type>
-    void return_temporary_buffer(Type* _Pbuf);
+template <class T>
+void return_temporary_buffer(
+    T* buffer);
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*_Pbuf*\
+*ert*\
 Ein Zeiger auf dem freizugebenden Speicher.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion sollte nur für temporären Speicher verwendet werden.
+Verwenden Sie diese Funktion nur für temporären Speicherplatz.
 
 ### <a name="example"></a>Beispiel
 
@@ -825,23 +957,23 @@ using namespace std;
 
 int main( )
 {
-   // Create an array of ints
-   int intArray [ ] = { 10, 20, 30, 40, 100, 200, 300 };
-   int count = sizeof ( intArray ) / sizeof ( int );
-   cout << "The number of integers in the array is: "
+    // Create an array of ints
+    int intArray [] = { 10, 20, 30, 40, 100, 200, 300 };
+    int count = sizeof ( intArray ) / sizeof ( int );
+    cout << "The number of integers in the array is: "
          << count << "." << endl;
 
-   pair<int *, ptrdiff_t> resultPair;
-   resultPair = get_temporary_buffer<int>( count );
+    pair<int *, ptrdiff_t> resultPair;
+    resultPair = get_temporary_buffer<int>( count );
 
-   cout << "The number of elements that the allocated memory\n"
+    cout << "The number of elements that the allocated memory\n"
          << " could store is given by: resultPair.second = "
          << resultPair.second << "." << endl;
 
-   int* tempBuffer = resultPair.first;
+    int* tempBuffer = resultPair.first;
 
-   // Deallocates memory allocated with get_temporary_buffer
-   return_temporary_buffer ( tempBuffer );
+    // Deallocates memory allocated with get_temporary_buffer
+    return_temporary_buffer( tempBuffer );
 }
 ```
 
@@ -853,27 +985,32 @@ could store is given by: resultPair.second = 7.
 
 ## <a name="static_pointer_cast"></a>static_pointer_cast
 
-Statische Umwandlung in shared_ptr (gemeinsamer Zeiger).
+Statische Umwandlung in [shared_ptr](shared-ptr-class.md).
 
 ```cpp
-template <class Ty, class Other>
-    shared_ptr<Ty> static_pointer_cast(const shared_ptr<Other>& sp);
+template <class T, class Other>
+shared_ptr<T> static_pointer_cast(
+    const shared_ptr<Other>& sp) noexcept;
+
+template <class T, class Other>
+shared_ptr<T> static_pointer_cast(
+    shared_ptr<Other>&& sp) noexcept;
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Genossenschaft*\
+*BUND*\
 Der Typ, der vom zurückgegebenen gemeinsamen Zeiger (shared pointer) gesteuert wird.
 
 *Außer*\
 Der Typ, der vom Argument für den gemeinsamen Zeiger gesteuert wird.
 
-*Außer*\
+*El*\
 Das Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagen Funktion gibt ein leeres shared_ptr-Objekt `sp` zurück, wenn `shared_ptr` ein leeres-Objekt ist; andernfalls gibt Sie ein [shared_ptr Class](../standard-library/shared-ptr-class.md)\<Ty-> Objekt zurück, das `sp`die Ressource besitzt, die im Besitz von ist. Der Ausdruck `static_cast<Ty*>(sp.get())` muss gültig sein.
+Die Vorlagen Funktion gibt ein leeres `shared_ptr` -Objekt zurück, wenn SP `shared_ptr` ein leeres-Objekt ist. `shared_ptr<T>` andernfalls wird ein-Objekt zurückgegeben, das die Ressource besitzt, die im Besitz von *SP*ist. Der Ausdruck `static_cast<T*>(sp.get())` muss gültig sein.
 
 ### <a name="example"></a>Beispiel
 
@@ -885,7 +1022,7 @@ Die Vorlagen Funktion gibt ein leeres shared_ptr-Objekt `sp` zurück, wenn `shar
 
 struct base
 {
-    int val;
+    int value;
 };
 
 struct derived
@@ -899,42 +1036,52 @@ int main()
     std::shared_ptr<derived> sp1 =
         std::static_pointer_cast<derived>(sp0);
 
-    sp0->val = 3;
-    std::cout << "sp1->val == " << sp1->val << std::endl;
+    sp0->value = 3;
+    std::cout << "sp1->value == " << sp1->value << std::endl;
 
     return (0);
 }
 ```
 
 ```Output
-sp1->val == 3
+sp1->value == 3
 ```
 
 ## <a name="swap"></a>Wechsel
 
-Tauscht zwei shared_ptr- oder weak_ptr-Objekte.
+Tauschen Sie zwei [shared_ptr](shared-ptr-class.md)-, [unique_ptr](unique-ptr-class.md)-oder [weak_ptr](weak-ptr-class.md) -Objekte aus.
 
 ```cpp
-template <class Ty, class Other>
-    void swap(shared_ptr<Ty>& left, shared_ptr<Other>& right);
+template <class T>
+void swap(
+    shared_ptr<T>& left,
+    shared_ptr<T>& right) noexcept;
 
-template <class Ty, class Other>
-    void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
+template <class T, class Deleter>
+void swap(
+    unique_ptr<T, Deleter>& left,
+    unique_ptr<T, Deleter>& right) noexcept;
+
+template <class T>
+void swap(
+    weak_ptr<T>& left,
+    weak_ptr<T>& right) noexcept;
+
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*Genossenschaft*\
-Der vom linken gemeinsamen/schwachen Zeiger gesteuerte Typ.
+*BUND*\
+Der vom Argumentzeiger gesteuerte Typ.
 
-*Außer*\
-Der vom rechten gemeinsamen/schwachen Zeiger gesteuerte Typ.
+*Deleter*\
+Der Deleter des eindeutigen Zeiger Typs.
 
 *linken*\
-Der linke gemeinsame/schwache Zeiger.
+Der linke Zeiger.
 
 *Richting*\
-Der rechte gemeinsame/schwache Zeiger.
+Der Rechte Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -947,14 +1094,6 @@ Die Vorlagenfunktionen rufen `left.swap(right)` auf.
 // compile with: /EHsc
 #include <memory>
 #include <iostream>
-
-struct deleter
-{
-    void operator()(int *p)
-    {
-        delete p;
-    }
-};
 
 int main()
 {
@@ -998,30 +1137,41 @@ int main()
 Einem Garbage Collector wird mitgeteilt, dass die Zeichen im Speicherblock, der von einem Basisadressenzeiger und -blockgröße definiert wurde, jetzt möglicherweise nachweisbare Zeiger enthalten.
 
 ```cpp
-void undeclare_no_pointers(char* ptr, size_t _Size);
+void undeclare_no_pointers(
+    char* ptr,
+    size_t size);
 ```
+
+### <a name="parameters"></a>Parameter
+
+*PTR*\
+Ein Zeiger auf die Speicheradresse, die zuvor mit [declare_no_pointers](#declare_no_pointers)gekennzeichnet wurde.
+
+*Größe*\
+Die Anzahl der Bytes im Speicherbereich. Dieser Wert muss der im `declare_no_pointers` -Befehl verwendeten Zahl entsprechen.
 
 ### <a name="remarks"></a>Hinweise
 
-Die-Funktion informiert alle Garbage Collector, dass der Adress `[ptr, ptr + _Size)` Bereich nun möglicherweise nachvollziehbare Zeiger enthält.
+Die-Funktion informiert alle Garbage Collector, dass der Adress `[ptr, ptr + size)` Bereich nun möglicherweise nachvollziehbare Zeiger enthält.
 
 ## <a name="undeclare_reachable"></a>undeclare_reachable
 
 Widerruft eine Deklaration der Erreichbarkeit für einen angegebenen Speicher Speicherort.
 
 ```cpp
-template <class Type>
-    Type *undeclare_reachable(Type* ptr);
+template <class T>
+T *undeclare_reachable(
+    T* ptr);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *PTR*\
-Ein Zeiger auf die Speicheradresse, die als nicht erreichbar deklariert werden soll.
+Ein Zeiger auf die Speicheradresse, die zuvor mit [declare_reachable](#declare_reachable)gekennzeichnet wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn *ptr* nicht **nullptr**ist, informiert die Funktion alle Garbage Collector, dass *ptr* nicht mehr erreichbar ist. Es gibt einen sicheren abgeleiteten Zeiger zurück, der mit *ptr*übereinstimmt.
+Wenn *ptr* nicht **nullptr**ist, informiert die Funktion alle Garbage Collector, dass *ptr* nicht mehr erreichbar ist. Er gibt einen sicheren abgeleiteten Zeiger zurück, der mit *ptr*übereinstimmt.
 
 ## <a name="uninitialized_copy"></a>uninitialized_copy
 
@@ -1029,10 +1179,23 @@ Es werden Objekte aus einem angegebenen Quellbereich in einen nicht initialisier
 
 ```cpp
 template <class InputIterator, class ForwardIterator>
-    ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, ForwardIterator dest);
+ForwardIterator uninitialized_copy(
+    InputIterator first,
+    InputIterator last,
+    ForwardIterator dest);
+
+template <class ExecutionPolicy, class InputIterator, class ForwardIterator>
+ForwardIterator uninitialized_copy(
+    ExecutionPolicy&& policy,
+    InputIterator first,
+    InputIterator last,
+    ForwardIterator dest);
 ```
 
 ### <a name="parameters"></a>Parameter
+
+*Policy*\
+Die zu verwendende Ausführungs Richtlinie.
 
 *erstes*\
 Ein Eingabeiterator, der das erste Element im Quellbereich adressiert.
@@ -1054,7 +1217,8 @@ Dieser Algorithmus ermöglicht die Entkopplung der Speicherbelegung von der Obje
 Die Vorlagenfunktion führt Folgendes aus:
 
 ```cpp
-while (first != last) {
+while (first != last)
+{
     new (static_cast<void*>(&* dest++))
         typename iterator_traits<InputIterator>::value_type(*first++);
 }
@@ -1062,6 +1226,8 @@ return dest;
 ```
 
 es sei denn, der Code löst eine Ausnahme aus. In diesem Fall sind alle erstellten Objekte zerstört und die Ausnahme wird erneut ausgelöst.
+
+Die Überladung mit einer Ausführungs Richtlinie ist neu in c++ 17.
 
 ### <a name="example"></a>Beispiel
 
@@ -1076,10 +1242,10 @@ using namespace std;
 class Integer
 {
 public:
-    Integer(int x) : val(x) {}
-    int get() { return val; }
+    Integer(int x) : value(x) {}
+    int get() { return value; }
 private:
-    int val;
+    int value;
 };
 
 int main()
@@ -1087,9 +1253,8 @@ int main()
     int Array[] = { 10, 20, 30, 40 };
     const int N = sizeof(Array) / sizeof(int);
 
-    int i;
     cout << "The initialized Array contains " << N << " elements: ";
-    for (i = 0; i < N; i++)
+    for (int i = 0; i < N; i++)
     {
         cout << " " << Array[i];
     }
@@ -1138,9 +1303,19 @@ ForwardIterator uninitialized_copy_n(
     InputIterator first,
     Size count,
     ForwardIterator dest);
+
+template <class ExecutionPolicy, class InputIterator, class Size, class ForwardIterator>
+ForwardIterator uninitialized_copy_n(
+    ExecutionPolicy&& policy,
+    InputIterator first,
+    Size count,
+    ForwardIterator dest);
 ```
 
 ### <a name="parameters"></a>Parameter
+
+*Policy*\
+Die zu verwendende Ausführungs Richtlinie.
 
 *erstes*\
 Ein Eingabeiterator, der auf das zu kopierende Objekt verweist.
@@ -1157,7 +1332,7 @@ Ein Forward-Iterator, der die erste Position nach dem Ziel adressiert. Wenn der 
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion führt effektiv Folgendes aus:
+Die Vorlagen Funktion führt effektiv den folgenden Code aus:
 
 ```cpp
     for (; 0 < count; --count)
@@ -1168,16 +1343,39 @@ Die Vorlagenfunktion führt effektiv Folgendes aus:
 
 es sei denn, der Code löst eine Ausnahme aus. In diesem Fall sind alle erstellten Objekte zerstört und die Ausnahme wird erneut ausgelöst.
 
+Die Überladung mit einer Ausführungs Richtlinie ist neu in c++ 17.
+
 ## <a name="uninitialized_default_construct"></a>uninitialized_default_construct
+
+Standardmäßig erstellt Objekte der Iteratoren `value_type` im angegebenen Bereich.
 
 ```cpp
 template <class ForwardIterator>
-    void uninitialized_default_construct(ForwardIterator first, ForwardIterator last); 
+void uninitialized_default_construct(
+    ForwardIterator first,
+    ForwardIterator last);
+
+template <class ExecutionPolicy, class ForwardIterator>
+void uninitialized_default_construct(
+    ExecutionPolicy&& policy,
+    ForwardIterator first,
+    ForwardIterator last);
 ```
+
+### <a name="parameters"></a>Parameter
+
+*Policy*\
+Die zu verwendende Ausführungs Richtlinie.
+
+*erstes*\
+Ein Iterator, der das erste Element im zu erstellende Bereich adressiert.
+
+*letzten*\
+Ein Iterator, der ein Element hinter dem letzten Element im zu erstellende Bereich adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Identisch mit:
+Die Version ohne Ausführungs Richtlinie ist praktisch identisch mit der folgenden:
 
 ```cpp
 for (; first != last; ++first)
@@ -1185,41 +1383,92 @@ for (; first != last; ++first)
         typename iterator_traits<ForwardIterator>::value_type;
 ```
 
+Wenn eine Ausnahme ausgelöst wird, werden zuvor erstellte Objekte in einer nicht angegebenen Reihenfolge zerstört.
+
+Die Version mit einer Ausführungs Richtlinie hat dasselbe Ergebnis, wird aber entsprechend der angegebenen *Richtlinie*ausgeführt.
+
+Diese Funktionen sind neu in c++ 17.
+
 ## <a name="uninitialized_default_construct_n"></a>uninitialized_default_construct_n
+
+Standard erstellt eine angegebene Anzahl von Objekten des Iterators `value_type`, beginnend an der angegebenen Position.
 
 ```cpp
 template <class ForwardIterator, class Size>
-    ForwardIterator uninitialized_default_construct_n(ForwardIterator first, Size n)
+ForwardIterator uninitialized_default_construct_n(
+    ForwardIterator first,
+    Size count);
+
+template <class ExecutionPolicy, class ForwardIterator, class Size>
+ForwardIterator uninitialized_default_construct_n(
+    ExecutionPolicy&& policy,
+    ForwardIterator first,
+    Size count);
 ```
+
+### <a name="parameters"></a>Parameter
+
+*Policy*\
+Die zu verwendende Ausführungs Richtlinie.
+
+*erstes*\
+Ein Iterator, der das erste Element im Zielbereich adressiert, der erstellt werden soll.
+
+*Countdown*\
+Die Anzahl der Elemente im zu erstellenden Zielbereich.
+
+### <a name="return-value"></a>Rückgabewert
+
+Ein forward-Iterator, der die erste Position über dem Zielbereich hinaus adressiert, es sei denn, der Quellbereich war leer.
 
 ### <a name="remarks"></a>Hinweise
 
-Identisch mit:
+Die Version ohne Ausführungs Richtlinie ist praktisch identisch mit der folgenden:
 
 ```cpp
-for (; n>0; (void)++first, --n)
+for (; count>0; (void)++first, --count)
     ::new (static_cast<void*>(addressof(*first)))
-        typename iterator_traits<ForwardIterator>::value_type; return first;
+        typename iterator_traits<ForwardIterator>::value_type;
+return first;
 ```
+
+Wenn eine Ausnahme ausgelöst wird, werden zuvor erstellte Objekte in einer nicht angegebenen Reihenfolge zerstört.
+
+Die Version mit einer Ausführungs Richtlinie hat dasselbe Ergebnis, wird aber entsprechend der angegebenen *Richtlinie*ausgeführt.
+
+Diese Funktionen sind neu in c++ 17.
 
 ## <a name="uninitialized_fill"></a>uninitialized_fill
 
 Objekte eines angegebenen Werts werden in einen nicht initialisierten Zielbereich kopiert.
 
 ```cpp
-template <class ForwardIterator, class Type>
-    void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type& val);
+template <class ForwardIterator, class T>
+void uninitialized_fill(
+    ForwardIterator first,
+    ForwardIterator last,
+    const T& value);
+
+template <class ExecutionPolicy, class ForwardIterator, class T>
+void uninitialized_fill(
+    ExecutionPolicy&& policy,
+    ForwardIterator first,
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
+*Policy*\
+Die zu verwendende Ausführungs Richtlinie.
+
 *erstes*\
-Ein Forward-Iterator, der die Position des ersten Elements im zu initiierenden Zielbereich adressiert.
+Ein forward-Iterator, der das erste Element im Zielbereich adressiert, das initialisiert werden soll.
 
 *letzten*\
-Ein Forward-Iterator, der die Position des letzten Elements im zu initiierenden Zielbereich adressiert.
+Ein forward-Iterator, der das letzte Element im Zielbereich adressiert, das initialisiert werden soll.
 
-*ster*\
+*value*\
 Der Wert, der zum Initialisieren des Zielbereichs verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
@@ -1231,10 +1480,12 @@ Die Vorlagenfunktion führt Folgendes aus:
 ```cpp
 while (first != last)
     new (static_cast<void*>(&* first ++))
-        typename iterator_traits<ForwardIterator>::value_type (val);
+        typename iterator_traits<ForwardIterator>::value_type (value);
 ```
 
 es sei denn, der Code löst eine Ausnahme aus. In diesem Fall sind alle erstellten Objekte zerstört und die Ausnahme wird erneut ausgelöst.
+
+Die Überladung mit einer Ausführungs Richtlinie ist neu in c++ 17.
 
 ### <a name="example"></a>Beispiel
 
@@ -1246,27 +1497,28 @@ es sei denn, der Code löst eine Ausnahme aus. In diesem Fall sind alle erstellt
 
 using namespace std;
 
-class Integer {         // No default constructor
-   public:
-      Integer( int x ) : val( x ) {}
-      int get( ) { return val; }
-   private:
-      int val;
+class Integer
+{
+public:
+    // No default constructor
+    Integer( int x ) : value( x ) {}
+    int get() { return value; }
+private:
+    int value;
 };
 
-int main( )
+int main()
 {
-   const int N = 10;
-   Integer val ( 25 );
-   Integer* Array = ( Integer* ) malloc( N * sizeof( int ) );
-   uninitialized_fill( Array, Array + N, val );
-   int i;
-   cout << "The initialized Array contains: ";
-      for ( i = 0 ; i < N; i++ )
-      {
-         cout << Array [ i ].get( ) << " ";
-      }
-   cout << endl;
+    const int N = 10;
+    Integer value ( 25 );
+    Integer* Array = ( Integer* ) malloc( N * sizeof( int ) );
+    uninitialized_fill( Array, Array + N, value );
+    cout << "The initialized Array contains: ";
+    for ( int i = 0; i < N; i++ )
+        {
+            cout << Array[ i ].get() << " ";
+        }
+    cout << endl;
 }
 ```
 
@@ -1276,23 +1528,36 @@ The initialized Array contains: 25 25 25 25 25 25 25 25 25 25
 
 ## <a name="uninitialized_fill_n"></a>uninitialized_fill_n
 
-Objekte einer angegebenen Anzahl von Elementen werden in einen nicht initialisierten Zielbereich kopiert.
+Kopiert Objekte eines angegebenen Werts in die angegebene Anzahl von Elementen eines nicht initialisierten Zielbereichs.
 
 ```cpp
-template <class FwdIt, class Size, class Type>
-    void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
+template <class ForwardIterator, class Size, class T>
+ForwardIterator uninitialized_fill_n(
+    ForwardIterator first,
+    Size count,
+    const T& value);
+
+template <class ExecutionPolicy, class ForwardIterator, class Size, class T>
+ForwardIterator uninitialized_fill_n(
+    ExecutionPolicy&& policy,
+    ForwardIterator first,
+    Size count,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Parameter
 
+*Policy*\
+Die zu verwendende Ausführungs Richtlinie.
+
 *erstes*\
-Ein Forward-Iterator, der die Position des ersten Elements im zu initiierenden Zielbereich adressiert.
+Ein forward-Iterator, der das erste Element im Zielbereich adressiert, das initialisiert werden soll.
 
 *Countdown*\
-Die Anzahl von zu initialisierenden Elementen.
+Die Anzahl der zu initialisierenden Elemente.
 
-*ster*\
-Der Wert, der zum Initialisieren des Zielbereichs verwendet wird.
+*value*\
+Der Wert, der zum Initialisieren des Zielbereichs verwendet werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1303,10 +1568,13 @@ Die Vorlagenfunktion führt Folgendes aus:
 ```cpp
 while (0 < count--)
     new (static_cast<void*>(&* first++))
-        typename iterator_traits<ForwardIterator>::value_type(val);
+        typename iterator_traits<ForwardIterator>::value_type(value);
+return first;
 ```
 
 es sei denn, der Code löst eine Ausnahme aus. In diesem Fall sind alle erstellten Objekte zerstört und die Ausnahme wird erneut ausgelöst.
+
+Die Überladung mit einer Ausführungs Richtlinie ist neu in c++ 17.
 
 ### <a name="example"></a>Beispiel
 
@@ -1318,75 +1586,159 @@ es sei denn, der Code löst eine Ausnahme aus. In diesem Fall sind alle erstellt
 
 using namespace std;
 
-class Integer {   // No default constructor
+class Integer
+{
 public:
-   Integer( int x ) : val( x ) {}
-   int get( ) { return val; }
+    // No default constructor
+    Integer( int x ) : value( x ) {}
+    int get() { return value; }
 private:
-   int val;
+    int value;
 };
 
-int main() {
-   const int N = 10;
-   Integer val ( 60 );
-   Integer* Array = ( Integer* ) malloc( N * sizeof( int ) );
-   uninitialized_fill_n( Array, N, val );  // C4996
-   int i;
-   cout << "The uninitialized Array contains: ";
-   for ( i = 0 ; i < N; i++ )
-      cout << Array [ i ].get( ) <<  " ";
+int main()
+{
+    const int N = 10;
+    Integer value( 60 );
+    Integer* Array = ( Integer* ) malloc( N * sizeof( int ) );
+    uninitialized_fill_n( Array, N, value );  // C4996
+    cout << "The uninitialized Array contains: ";
+    for ( int i = 0; i < N; i++ )
+        cout << Array[ i ].get() <<  " ";
 }
 ```
 
 ## <a name="uninitialized_move"></a>uninitialized_move
 
+Verschiebt Elemente aus einem Quellbereich in einen nicht initialisierten Zielspeicher Bereich.
+
 ```cpp
 template <class InputIterator, class ForwardIterator>
-    ForwardIterator uninitialized_move(InputIterator first, InputIterator last, ForwardIterator result); 
+ForwardIterator uninitialized_move(
+    InputIterator first,
+    InputIterator last,
+    ForwardIterator dest);
+
+template <class ExecutionPolicy, class InputIterator, class ForwardIterator>
+ForwardIterator uninitialized_move(
+    ExecutionPolicy&& policy,
+    InputIterator first,
+    InputIterator last,
+    ForwardIterator dest);
 ```
+
+### <a name="parameters"></a>Parameter
+
+*Policy*\
+Die zu verwendende Ausführungs Richtlinie.
+
+*erstes*\
+Ein eingabeiterator, der das erste Element im Quellbereich adressiert, das verschoben werden soll.
+
+*letzten*\
+Ein eingabeiterator, der ein Element hinter dem letzten Element im zu verschiebende Quellbereich adressiert.
+
+*dest*\
+Der Anfang des Zielbereichs.
 
 ### <a name="remarks"></a>Hinweise
 
-Identisch mit:
+Die Version ohne Ausführungs Richtlinie ist praktisch identisch mit der folgenden:
 
 ```cpp
-for (; first != last; (void)++result, ++first)
-    ::new (static_cast<void*>(addressof(*result)))
-        typename iterator_traits<ForwardIterator>::value_type(std::move(*first)); 
-        return result;
+for (; first != last; (void)++dest, ++first)
+    ::new (static_cast<void*>(addressof(*dest)))
+        typename iterator_traits<ForwardIterator>::value_type(std::move(*first));
+return dest;
 ```
 
-Wenn eine Ausnahme ausgelöst wird, bleiben einige Objekte im Bereich möglicherweise in einem gültigen, aber nicht angegebenen Zustand.
+Wenn eine Ausnahme ausgelöst wird, bleiben einige Objekte im Quellbereich möglicherweise in einem gültigen, aber nicht angegebenen Zustand. Zuvor erstellte Objekte werden in einer nicht angegebenen Reihenfolge zerstört.
+
+Die Version mit einer Ausführungs Richtlinie hat dasselbe Ergebnis, wird aber entsprechend der angegebenen *Richtlinie*ausgeführt.
+
+Diese Funktionen sind neu in c++ 17.
 
 ## <a name="uninitialized_move_n"></a>uninitialized_move_n
 
+Verschiebt eine angegebene Anzahl von Elementen aus einem Quellbereich in einen nicht initialisierten Zielspeicher Bereich.
+
 ```cpp
 template <class InputIterator, class Size, class ForwardIterator>
-    pair<InputIterator, ForwardIterator> uninitialized_move_n(InputIterator first, Size n, ForwardIterator result);
+pair<InputIterator, ForwardIterator> uninitialized_move_n(
+    InputIterator first,
+    Size count,
+    ForwardIterator dest);
+
+template <class ExecutionPolicy, class InputIterator, class Size, class ForwardIterator>
+pair<InputIterator, ForwardIterator> uninitialized_move_n(
+    ExecutionPolicy&& policy,
+    InputIterator first,
+    Size count,
+    ForwardIterator dest);
 ```
+
+### <a name="parameters"></a>Parameter
+
+*Policy*\
+Die zu verwendende Ausführungs Richtlinie.
+
+*erstes*\
+Ein eingabeiterator, der das erste Element im Quellbereich adressiert, das verschoben werden soll.
+
+*Countdown*\
+Die Anzahl der Elemente im zu verschiebenden Quellbereich.
+
+*dest*\
+Der Anfang des Zielbereichs.
 
 ### <a name="remarks"></a>Hinweise
 
-Identisch mit:
+Die Version ohne Ausführungs Richtlinie ist praktisch identisch mit der folgenden:
 
 ```cpp
-for (; n > 0; ++result, (void) ++first, --n)
-    ::new (static_cast<void*>(addressof(*result)))
-        typename iterator_traits<ForwardIterator>::value_type(std::move(*first)); return {first,result};
+for (; count > 0; ++dest, (void) ++first, --count)
+    ::new (static_cast<void*>(addressof(*dest)))
+        typename iterator_traits<ForwardIterator>::value_type(std::move(*first));
+return {first, dest};
 ```
 
-Wenn eine Ausnahme ausgelöst wird, bleiben einige Objekte im Bereich möglicherweise in einem gültigen, aber nicht angegebenen Zustand.
+Wenn eine Ausnahme ausgelöst wird, bleiben einige Objekte im Quellbereich möglicherweise in einem gültigen, aber nicht angegebenen Zustand. Zuvor erstellte Objekte werden in einer nicht angegebenen Reihenfolge zerstört.
+
+Die Version mit einer Ausführungs Richtlinie hat dasselbe Ergebnis, wird aber entsprechend der angegebenen *Richtlinie*ausgeführt.
+
+Diese Funktionen sind neu in c++ 17.
 
 ## <a name="uninitialized_value_construct"></a>uninitialized_value_construct
 
+Erstellt Objekte der Iteratoren `value_type` nach Wert Initialisierung im angegebenen Bereich.
+
 ```cpp
 template <class ForwardIterator>
-    void uninitialized_value_construct(ForwardIterator first, ForwardIterator last);
+void uninitialized_value_construct(
+    ForwardIterator first,
+    ForwardIterator last);
+
+template <class ExecutionPolicy, class ForwardIterator>
+void uninitialized_value_construct(
+    ExecutionPolicy&& policy,
+    ForwardIterator first,
+    ForwardIterator last);
 ```
+
+### <a name="parameters"></a>Parameter
+
+*Policy*\
+Die zu verwendende Ausführungs Richtlinie.
+
+*erstes*\
+Ein Iterator, der das erste Element im zu-Wert-Konstrukt adressiert.
+
+*letzten*\
+Ein Iterator, der ein Element hinter dem letzten Element im "Range to Value"-Konstrukt adressiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Identisch mit:
+Die Version ohne Ausführungs Richtlinie ist praktisch identisch mit der folgenden:
 
 ```cpp
 for (; first != last; ++first)
@@ -1394,27 +1746,70 @@ for (; first != last; ++first)
         typename iterator_traits<ForwardIterator>::value_type();
 ```
 
+Wenn eine Ausnahme ausgelöst wird, werden zuvor erstellte Objekte in einer nicht angegebenen Reihenfolge zerstört.
+
+Die Version mit einer Ausführungs Richtlinie hat dasselbe Ergebnis, wird aber entsprechend der angegebenen *Richtlinie*ausgeführt.
+
+Wenn ein Fehler bei der Speicher Belegung auftritt `std::bad_alloc` , wird eine-Ausnahme ausgelöst.
+
+Diese Funktionen sind neu in c++ 17.
+
 ## <a name="uninitialized_value_construct_n"></a>uninitialized_value_construct_n
+
+Erstellt eine angegebene Anzahl von Objekten der `value_type` nach Wert Initialisierung des Iterators, beginnend an der angegebenen Position.
 
 ```cpp
 template <class ForwardIterator, class Size>
-    ForwardIterator uninitialized_value_construct_n(ForwardIterator first, Size n);
+ForwardIterator uninitialized_value_construct_n(
+    ForwardIterator first,
+    Size count);
+
+template <class ExecutionPolicy, class ForwardIterator, class Size>
+ForwardIterator uninitialized_value_construct_n(
+    ExecutionPolicy&& policy,
+    ForwardIterator first,
+    Size count);
 ```
 
-Identisch mit:
+### <a name="parameters"></a>Parameter
+
+*Policy*\
+Die zu verwendende Ausführungs Richtlinie.
+
+*erstes*\
+Ein Iterator, der das erste Element im Zielbereich adressiert, der erstellt werden soll.
+
+*Countdown*\
+Die Anzahl der Elemente im zu erstellenden Zielbereich.
+
+### <a name="remarks"></a>Hinweise
+
+Die Version ohne Ausführungs Richtlinie ist praktisch identisch mit der folgenden:
+
 ```cpp
-for (; n>0; (void)++first, --n)
+for (; count > 0; (void)++first, --count)
     ::new (static_cast<void*>(addressof(*first)))
-        typename iterator_traits<ForwardIterator>::value_type(); return first;
+        typename iterator_traits<ForwardIterator>::value_type();
+return first;
 ```
+
+Wenn eine Ausnahme ausgelöst wird, werden zuvor erstellte Objekte in einer nicht angegebenen Reihenfolge zerstört.
+
+Die Version mit einer Ausführungs Richtlinie hat dasselbe Ergebnis, wird aber entsprechend der angegebenen *Richtlinie*ausgeführt.
+
+Wenn ein Fehler bei der Speicher Belegung auftritt `std::bad_alloc` , wird eine-Ausnahme ausgelöst.
+
+Diese Funktionen sind neu in c++ 17.
 
 ## <a name="uses_allocator_v"></a>uses_allocator_v
 
+Eine hilfsvariablenvorlage für den Zugriff auf den `uses_allocator` Wert der Vorlage.
+
 ```cpp
 template <class T, class Alloc>
-    inline constexpr bool uses_allocator_v = uses_allocator<T, Alloc>::value;
+inline constexpr bool uses_allocator_v = uses_allocator<T, Alloc>::value;
 ```
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<memory>](../standard-library/memory.md)
+[\<memory>](memory.md)
