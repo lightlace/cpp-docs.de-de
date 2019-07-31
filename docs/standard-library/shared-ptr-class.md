@@ -1,6 +1,6 @@
 ---
 title: shared_ptr-Klasse
-ms.date: 11/04/2016
+ms.date: 07/29/2019
 f1_keywords:
 - memory/std::shared_ptr
 - memory/std::shared_ptr::element_type
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: ca427bd364a5ab66112f23e0a920598ad8ba190b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 59346dfded63aec315304f76c9bed753a4db1224
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246374"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682438"
 ---
 # <a name="sharedptr-class"></a>shared_ptr-Klasse
 
@@ -46,18 +46,18 @@ Umschließt einen intelligenten Zeiger mit Verweiszählung um ein dynamisch zuge
 
 ```cpp
 template <class T>
-    class shared_ptr;
+class shared_ptr;
 ```
 
 ## <a name="remarks"></a>Hinweise
 
-Mit der shared_ptr-Klasse wird ein Objekt beschrieben, das Ressourcen durch das Zählen von Verweisen verwaltet. Ein Objekt vom Typ `shared_ptr` enthält einen Zeiger auf die Ressource, die es besitzt, oder es enthält einen NULL-Zeiger. Es können mehrere `shared_ptr`-Objekte eine Ressource besitzen. Wird das letzte `shared_ptr`-Objekt beschädigt, das eine bestimmte Ressource besitzt, wird die Ressource freigegeben.
+Die `shared_ptr` Klasse beschreibt ein Objekt, das die Verweis Zählung verwendet, um Ressourcen zu verwalten. Ein Objekt vom Typ `shared_ptr` enthält einen Zeiger auf die Ressource, die es besitzt, oder es enthält einen NULL-Zeiger. Es können mehrere `shared_ptr`-Objekte eine Ressource besitzen. Wird das letzte `shared_ptr`-Objekt beschädigt, das eine bestimmte Ressource besitzt, wird die Ressource freigegeben.
 
-Ein `shared_ptr` ist nicht mehr Besitzer einer Ressource, wenn diese zurückgesetzt oder neu zugewiesen wird.
+Ein `shared_ptr` beendet den Besitz einer Ressource, wenn diese erneut zugewiesen oder zurückgesetzt wird.
 
 Das Vorlagenargument `T` kann ein unvollständiger Typ sein, außer wie für bestimmte Memberfunktionen aufgeführt.
 
-Wenn ein `shared_ptr<T>`-Objekt von einem Ressourcenzeiger des Typs `G*` oder von einem `shared_ptr<G>` erstellt wird, muss der Zeigertyp `G*` konvertierbar sein in `T*`. Wenn dies nicht der Fall ist, wird der Code nicht berechnet. Beispiel:
+Wenn ein `shared_ptr<T>`-Objekt von einem Ressourcenzeiger des Typs `G*` oder von einem `shared_ptr<G>` erstellt wird, muss der Zeigertyp `G*` konvertierbar sein in `T*`. Wenn Sie nicht konvertierbar ist, wird der Code nicht kompiliert. Beispiel:
 
 ```cpp
 #include <memory>
@@ -81,9 +81,9 @@ Ein `shared_ptr`-Objekt besitzt in diesen Fällen eine Ressource:
 
 - Es wurde von einem `shared_ptr`-Objekt erstellt, das diese Ressource besitzt.
 
-- Wenn von der Erstellung einer [Weak_ptr-Klasse](../standard-library/weak-ptr-class.md) Objekt, das auf diese Ressource verweist oder
+- Wenn Sie aus einem [weak_ptr](weak-ptr-class.md) -Objekt erstellt wurde, das auf diese Ressource verweist, oder
 
-- Wenn sie entweder mit Besitz dieser Ressource zugewiesen wurde [shared_ptr:: Operator =](#op_eq) oder durch Aufrufen der Memberfunktion [shared_ptr:: Reset](#reset).
+- Wenn der Besitz dieser Ressource zugewiesen wurde, entweder mit [shared_ptr:: Operator =](#op_eq) oder durch Aufrufen der Member-Funktion [shared_ptr:: Reset](#reset).
 
 Von den `shared_ptr`-Objekten, die eine Ressource besitzen, wird ein Kontrollblock gemeinsam verwendet. Der Kontrollblock enthält:
 
@@ -107,17 +107,17 @@ Von einigen Funktionen wird eine Argumentliste verwendet, mit der Eigenschaften 
 
 Keine Argumente -- das resultierende Objekt ist ein leeres `shared_ptr`-Objekt oder ein leeres `weak_ptr`-Objekt.
 
-`ptr` --ein Zeiger des Typs `Other*` auf die zu verwaltende Ressource. `T` muss ein vollständiger Typ sein. Wenn bei der Funktion Fehler auftreten (da der Kontrollblock nicht zugeordnet werden kann), wird der Ausdruck `delete ptr` ausgewertet.
+`ptr` --ein Zeiger des Typs `Other*` auf die zu verwaltende Ressource. `T` muss ein vollständiger Typ sein. Wenn die Funktion fehlschlägt (da der Kontroll Block nicht zugeordnet werden kann), wird der `delete ptr`Ausdruck ausgewertet.
 
-`ptr, dtor` -- ein Zeiger des Typs `Other*` auf die zu verwaltende Ressource und ein Deleter für diese Ressource. Wenn bei der Funktion Fehler auftreten (da der Kontrollblock nicht zugeordnet werden kann), wird `dtor(ptr)` aufgerufen (muss klar definiert sein).
+`ptr, deleter` -- ein Zeiger des Typs `Other*` auf die zu verwaltende Ressource und ein Deleter für diese Ressource. Wenn die Funktion fehlschlägt (da der Kontroll Block nicht zugeordnet werden kann), `deleter(ptr)`wird aufgerufen, was klar definiert sein muss.
 
-`ptr, dtor, alloc` -- ein Zeiger des Typs `Other*` auf die zu verwaltende Ressource, ein Deleter für diese Ressource und eine Zuweisung zum Verwalten von Speicher, der zugeordnet und freigegeben werden muss. Wenn bei der Funktion Fehler auftreten (da der Kontrollblock nicht zugeordnet werden kann), wird `dtor(ptr)` aufgerufen (muss klar definiert sein).
+`ptr, deleter, alloc` -- ein Zeiger des Typs `Other*` auf die zu verwaltende Ressource, ein Deleter für diese Ressource und eine Zuweisung zum Verwalten von Speicher, der zugeordnet und freigegeben werden muss. Wenn die Funktion fehlschlägt (da der Kontroll Block nicht zugeordnet werden kann), `deleter(ptr)`wird aufgerufen, was klar definiert sein muss.
 
 `sp` -- ein `shared_ptr<Other>`-Objekt, das die zu verwaltende Ressource besitzt.
 
 `wp` -- ein `weak_ptr<Other>`-Objekt, das auf die zu verwaltende Ressource zeigt.
 
-`ap` -- ein `auto_ptr<Other>`-Objekt, das einen Zeiger auf die zu verwaltende Ressource enthält. Wenn die Funktion erfolgreich ist, wird `ap.release()` aufgerufen. Andernfalls bleibt `ap` unverändert.
+`ap` -- ein `auto_ptr<Other>`-Objekt, das einen Zeiger auf die zu verwaltende Ressource enthält. Wenn die Funktion erfolgreich ausgeführt wird, `ap.release()`wird aufgerufen. andernfalls `ap` bleibt sie unverändert.
 
 In allen Fällen muss der Zeigertyp `Other*` konvertiert werden können in `T*`.
 
@@ -127,81 +127,41 @@ Mehrere Threads können verschiedene `shared_ptr`-Objekte gleichzeitig lesen und
 
 ## <a name="members"></a>Member
 
-### <a name="constructors"></a>Konstruktoren
-
 |||
 |-|-|
+| **Konstruktoren** | |
 |[shared_ptr](#shared_ptr)|Erstellt ein Objekt vom Typ `shared_ptr`.|
-|[~ Shared_ptr](#dtorshared_ptr)|Beschädigt ein Objekt vom Typ `shared_ptr`.|
-
-### <a name="typedefs"></a>Typedefs
-
-|||
-|-|-|
+|[~ shared_ptr](#dtorshared_ptr)|Beschädigt ein Objekt vom Typ `shared_ptr`.|
+| **Typedefs** | |
 |[element_type](#element_type)|Der Typ eines Elements.|
-
-### <a name="functions"></a>Funktionen
-
-|||
-|-|-|
-|[allocate_shared](#allocate_shared)||
-|[const_pointer_cast](#const_pointer_cast)||
-|[dynamic_pointer_cast](#dynamic_pointer_cast)||
+|[weak_type](#weak_type)|Der Typ eines schwachen Zeigers auf ein Element.|
+| **Member-Funktionen** | |
 |[get](#get)|Ruft die Adresse der Ressource ab, die Eigentum ist.|
-|[get_deleter](#get_deleter)||
-|[make_shared](#make_shared)||
 |[owner_before](#owner_before)|Gibt True zurück, wenn dieses `shared_ptr` vor dem bereitgestellten Zeiger sortiert wird (Operator "Before" oder "Less than").|
-|[reinterpret_pointer_cast](#reinterpret_pointer_cast)||
 |[reset](#reset)|Ersetzt die Ressource, die Eigentum ist.|
-|[static_pointer_cast](#static_pointer_cast)||
 |[swap](#swap)|Tauscht zwei `shared_ptr`-Objekte.|
 |[unique](#unique)|Prüft, ob die Ressource eindeutig ist, die Eigentum ist.|
 |[use_count](#use_count)|Zählt Ressourcenbesitzer.|
-
-### <a name="operators"></a>Operatoren
-
-|||
-|-|-|
+| **Operatoren** | |
 |[operator bool](#op_bool)|Prüft, ob eine Ressource vorhanden ist, die Eigentum ist.|
 |[operator*](#op_star)|Ruft den angegebenen Wert ab.|
 |[operator=](#op_eq)|Ersetzt die Ressource, die Eigentum ist.|
-|[Operator-&gt;](#op_arrow)|Ruft einen Zeiger auf den angegebenen Wert ab.|
-|[operator&lt;&lt;](#op_arrowarrow)||
+|[KOM&gt;](#op_arrow)|Ruft einen Zeiger auf den angegebenen Wert ab.|
 
-### <a name="allocate_shared"></a> allocate_shared
-
-```cpp
-template<class T, class A, class... Args>
-    shared_ptr<T> allocate_shared(const A& a, Args&&... args);
-```
-
-### <a name="const_pointer_cast"></a> const_pointer_cast
-
-```cpp
-template<class T, class U>
-    shared_ptr<T> const_pointer_cast(const shared_ptr<U>& r) noexcept;
-```
-
-### <a name="dynamic_pointer_cast"></a> dynamic_pointer_cast
-
-```cpp
-template<class T, class U>
-    shared_ptr<T> dynamic_pointer_cast(const shared_ptr<U>& r) noexcept;
-```
-
-### <a name="element_type"></a> ELEMENT_TYPE
+## <a name="element_type"></a>element_type
 
 Der Typ eines Elements.
 
 ```cpp
-typedef T element_type;
+typedef T element_type;                  // before C++17
+using element_type = remove_extent_t<T>; // C++17
 ```
 
-#### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Hinweise
 
-Der Type stellt ein Synonym für den Vorlagenparameter `T` dar.
+Der `element_type` Typ ist ein Synonym für den Vorlagen Parameter `T`.
 
-#### <a name="example"></a>Beispiel
+### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__shared_ptr_element_type.cpp
@@ -224,19 +184,19 @@ int main()
 *sp0 == 5
 ```
 
-### <a name="get"></a> Erhalten
+## <a name="get"></a>Erhalten
 
 Ruft die Adresse der Ressource ab, die Eigentum ist.
 
 ```cpp
-T *get() const;
+element_type* get() const noexcept;
 ```
 
-#### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt die Adresse der im Besitz befindlichen Ressource zurück. Wenn das Objekt eine Ressource nicht besitzt, wird 0 zurückgegeben.
+Die Memberfunktion gibt die Adresse der im Besitz befindlichen Ressource zurück. Wenn das Objekt nicht Besitzer einer Ressource ist, wird 0 zurückgegeben.
 
-#### <a name="example"></a>Beispiel
+### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__shared_ptr_get.cpp
@@ -262,21 +222,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-### <a name="get_deleter"></a> get_deleter
-
-```cpp
-template<class D, class T>
-    D* get_deleter(const shared_ptr<T>& p) noexcept;
-```
-
-### <a name="make_shared"></a> make_shared
-
-```cpp
-template<class T, class... Args>
-    shared_ptr<T> make_shared(Args&&... args);
-```
-
-### <a name="op_bool"></a> Operator bool
+## <a name="op_bool"></a>Operator bool
 
 Prüft, ob eine Ressource vorhanden ist, die Eigentum ist.
 
@@ -284,11 +230,11 @@ Prüft, ob eine Ressource vorhanden ist, die Eigentum ist.
 explicit operator bool() const noexcept;
 ```
 
-#### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Hinweise
 
-Der Operator gibt einen Wert zurück. **"true"** beim `get() != nullptr`, andernfalls **"false"** .
+Der-Operator gibt den Wert **true** zurück `get() != nullptr`, wenn, andernfalls **false**.
 
-#### <a name="example"></a>Beispiel
+### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__shared_ptr_operator_bool.cpp
@@ -315,19 +261,19 @@ int main()
 (bool)sp1 == true
 ```
 
-### <a name="op_star"></a> Operator *
+## <a name="op_star"></a>KOM
 
 Ruft den angegebenen Wert ab.
 
 ```cpp
-T& operator*() const;
+T& operator*() const noexcept;
 ```
 
-#### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Hinweise
 
 Der Dereferenzierungsoperator gibt `*get()` zurück. Daher darf der gespeicherte Zeiger nicht NULL sein.
 
-#### <a name="example"></a>Beispiel
+### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__shared_ptr_operator_st.cpp
@@ -349,42 +295,50 @@ int main()
 *sp0 == 5
 ```
 
-### <a name="op_eq"></a> Operator =
+## <a name="op_eq"></a>Operator =
 
 Ersetzt die Ressource, die Eigentum ist.
 
 ```cpp
-shared_ptr& operator=(const shared_ptr& sp);
+shared_ptr& operator=(const shared_ptr& sp) noexcept;
+
+shared_ptr& operator=(shared_ptr&& sp) noexcept;
 
 template <class Other>
-    shared_ptr& operator=(const shared_ptr<Other>& sp);
+shared_ptr& operator=(const shared_ptr<Other>& sp) noexcept;
 
 template <class Other>
-    shared_ptr& operator=(auto_ptr<Other>& ap);
+shared_ptr& operator=(shared_ptr<Other>&& sp) noexcept;
 
 template <class Other>
-    shared_ptr& operator=(auto_ptr<Other>& ap);
+shared_ptr& operator=(auto_ptr<Other>&& ap);    // deprecated in C++11, removed in C++17
 
-template <class Other>
-    shared_ptr& operator=(auto_ptr<Other>&& ap);
-
-template <class Other, class Deletor>
-    shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
+template <class Other, class Deleter>
+shared_ptr& operator=(unique_ptr<Other, Deleter>&& up);
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*SP*\
-Der zu kopierende gemeinsame Zeiger
+*El*\
+Der freigegebene Zeiger, von dem kopiert oder verschoben werden soll.
 
-*AP*\
-Der zu kopierende automatische Zeiger
+*Unglücks*\
+Der zu Verschieb gende automatische Zeiger. Die `auto_ptr` Überladung ist in c++ 11 veraltet und wurde in c++ 17 entfernt.
 
-#### <a name="remarks"></a>Hinweise
+*gegründet*\
+Der eindeutige Zeiger auf das-Objekt, dessen Besitz übernommen werden soll. *up* besitzt nach dem-Befehl kein-Objekt.
 
-Alle Operatoren verringern die Verweisanzahl für die Ressource frei, die derzeit im Besitz von `*this` steht, und weisen den Besitz der Ressource, die von der Operatorsequenz benannt wird, `*this` zu. Wenn die Verweisanzahl auf 0 (null) fällt, wird die Ressource freigegeben. Wenn bei einem Operator ein Fehler auftritt, bleibt `*this` unverändert.
+*Außer*\
+Der Typ des Objekts, auf das von *SP*, *AP*oder *up*verwiesen wird.
 
-#### <a name="example"></a>Beispiel
+*Deleter*\
+Der Typ des Löschvorgangs für das besitzende Objekt, das zum späteren Löschen des Objekts gespeichert wird.
+
+### <a name="remarks"></a>Hinweise
+
+Alle Operatoren verringern die Verweisanzahl für die Ressource frei, die derzeit im Besitz von `*this` steht, und weisen den Besitz der Ressource, die von der Operatorsequenz benannt wird, `*this` zu. Wenn die Verweisanzahl auf 0 (null) fällt, wird die Ressource freigegeben. Wenn ein Operator fehlschlägt, bleibt `*this` er unverändert.
+
+### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__shared_ptr_operator_as.cpp
@@ -396,12 +350,12 @@ int main()
 {
     std::shared_ptr<int> sp0;
     std::shared_ptr<int> sp1(new int(5));
-    std::auto_ptr<int> ap(new int(10));
+    std::unique_ptr<int> up(new int(10));
 
     sp0 = sp1;
     std::cout << "*sp0 == " << *sp0 << std::endl;
 
-    sp0 = ap;
+    sp0 = up;
     std::cout << "*sp0 == " << *sp0 << std::endl;
 
     return (0);
@@ -413,19 +367,19 @@ int main()
 *sp0 == 10
 ```
 
-### <a name="op_arrow"></a> Operator-&gt;
+## <a name="op_arrow"></a>Operator->
 
 Ruft einen Zeiger auf den angegebenen Wert ab.
 
 ```cpp
-T * operator->() const;
+T* operator->() const noexcept;
 ```
 
-#### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Hinweise
 
 Der Auswahloperator gibt `get()` zurück, sodass der Ausdruck `sp->member` sich wie `(sp.get())->member` verhält, wobei `sp` ein Objekt von Klasse `shared_ptr<T>` ist. Daher darf der gespeicherte Zeiger nicht NULL sein, und `T` muss eine Klasse, eine Struktur oder ein Union-Typ mit einem member-`member` sein.
 
-#### <a name="example"></a>Beispiel
+### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__shared_ptr_operator_ar.cpp
@@ -450,83 +404,74 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-### <a name="op_arrowarrow"></a> Operator&lt;&lt;
-
-```cpp
-template<class E, class T, class Y>
-    basic_ostream<E, T>& operator<< (basic_ostream<E, T>& os, const shared_ptr<Y>& p);
-```
-
-### <a name="owner_before"></a> owner_before
+## <a name="owner_before"></a>owner_before
 
 Gibt True zurück, wenn dieses `shared_ptr` vor dem bereitgestellten Zeiger sortiert wird (Operator "Before" oder "Less than").
 
 ```cpp
 template <class Other>
-    bool owner_before(const shared_ptr<Other>& ptr);
+bool owner_before(const shared_ptr<Other>& ptr) const noexcept;
 
 template <class Other>
-    bool owner_before(const weak_ptr<Other>& ptr);
+bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 *PTR*\
-Ein `lvalue`-Verweis auf `shared_ptr` oder `weak_ptr`.
+Ein Lvalue-Verweis auf ein `shared_ptr` oder ein `weak_ptr`.
 
-#### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Hinweise
 
-Die vorlagenmemberfunktion gibt True zurück, wenn `*this` ist `ordered before` `ptr`.
+Die Template-Member-Funktion gibt `*this` true zurück, `ptr`wenn vor geordnet ist.
 
-### <a name="reinterpret_pointer_cast"></a> reinterpret_pointer_cast
-
-```cpp
-template<class T, class U>
-    shared_ptr<T> reinterpret_pointer_cast(const shared_ptr<U>& r) noexcept;
-```
-
-### <a name="reset"></a> Zurücksetzen
+## <a name="reset"></a>Festlegen
 
 Ersetzt die Ressource, die Eigentum ist.
 
 ```cpp
-void reset();
+void reset() noexcept;
 
 template <class Other>
-    void reset(Other *ptr;);
+void reset(Other *ptr);
 
-template <class Other, class D>
-    void reset(Other *ptr, D dtor);
+template <class Other, class Deleter>
+void reset(
+    Other *ptr,
+    Deleter deleter);
 
-template <class Other, class D, class A>
-    void reset(Other *ptr, D dtor, A alloc);
+template <class Other, class Deleter, class Allocator>
+void reset(
+    Other *ptr,
+    Deleter deleter,
+    Allocator alloc);
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Andere*\
+*Außer*\
 Der vom Argumentzeiger gesteuerte Typ.
 
-*D*\
+*Deleter*\
 Der Deleter-Typ.
 
 *PTR*\
 Der zu kopierende Zeiger.
 
-*DTOR*\
+*Deleter*\
 Der zu kopierende Deleter.
 
-*EIN*\
+*Allocator*\
 Der Zuweisungstyp.
 
-*Alloc*\
+*Zuordnungseinheits*\
 Der zu kopierende Zuweiser.
 
-#### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Hinweise
 
-Alle Operatoren verringern die Verweisanzahl für die Ressource frei, die derzeit im Besitz von `*this` steht, und weisen den Besitz der Ressource, die von der Operatorsequenz benannt wird, `*this` zu. Wenn die Verweisanzahl auf 0 (null) fällt, wird die Ressource freigegeben. Wenn bei einem Operator ein Fehler auftritt, bleibt `*this` unverändert.
+Alle Operatoren verringern die Verweisanzahl für die Ressource frei, die derzeit im Besitz von `*this` steht, und weisen den Besitz der Ressource, die von der Operatorsequenz benannt wird, `*this` zu. Wenn die Verweisanzahl auf 0 (null) fällt, wird die Ressource freigegeben. Wenn ein Operator fehlschlägt, bleibt `*this` er unverändert.
 
-#### <a name="example"></a>Beispiel
+### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__shared_ptr_reset.cpp
@@ -572,90 +517,113 @@ int main()
 *sp == 15
 ```
 
-### <a name="shared_ptr"></a> "shared_ptr"
+## <a name="shared_ptr"></a>shared_ptr
 
 Erstellt ein Objekt vom Typ `shared_ptr`.
 
 ```cpp
-shared_ptr();
+constexpr shared_ptr() noexcept;
 
-shared_ptr(nullptr_t);
+constexpr shared_ptr(nullptr_t) noexcept : shared_ptr() {}
 
-shared_ptr(const shared_ptr& sp);
+shared_ptr(const shared_ptr& sp) noexcept;
 
-shared_ptr(shared_ptr&& sp);
-
-template <class Other>
-    explicit shared_ptr(Other* ptr);
-
-template <class Other, class D>
-    shared_ptr(Other* ptr, D dtor);
-
-template <class D>
-    shared_ptr(nullptr_t ptr, D dtor);
-
-template <class Other, class D, class A>
-    shared_ptr(Other* ptr, D dtor, A  alloc);
-
-template <class D, class A>
-    shared_ptr(nullptr_t ptr, D dtor, A alloc);
+shared_ptr(shared_ptr&& sp) noexcept;
 
 template <class Other>
-    shared_ptr(const shared_ptr<Other>& sp);
+explicit shared_ptr(Other* ptr);
+
+template <class Other, class Deleter>
+shared_ptr(
+    Other* ptr,
+    Deleter deleter);
+
+template <class Deleter>
+shared_ptr(
+    nullptr_t ptr,
+    Deleter deleter);
+
+template <class Other, class Deleter, class Allocator>
+shared_ptr(
+    Other* ptr,
+    Deleter deleter,
+    Allocator alloc);
+
+template <class Deleter, class Allocator>
+shared_ptr(
+    nullptr_t ptr,
+    Deleter deleter,
+    Allocator alloc);
 
 template <class Other>
-    shared_ptr(const weak_ptr<Other>& wp);
+shared_ptr(
+    const shared_ptr<Other>& sp) noexcept;
+
+template <class Other>
+explicit shared_ptr(
+    const weak_ptr<Other>& wp);
 
 template <class &>
-    shared_ptr(std::auto_ptr<Other>& ap);
+shared_ptr(
+    std::auto_ptr<Other>& ap);
 
 template <class &>
-    shared_ptr(std::auto_ptr<Other>&& ap);
+shared_ptr(
+    std::auto_ptr<Other>&& ap);
 
-template <class Other, class D>
-    shared_ptr(unique_ptr<Other, D>&& up);
+template <class Other, class Deleter>
+shared_ptr(
+    unique_ptr<Other, Deleter>&& up);
 
 template <class Other>
-    shared_ptr(const shared_ptr<Other>& sp, T* ptr);
+shared_ptr(
+    const shared_ptr<Other>& sp,
+    element_type* ptr) noexcept;
 
-template <class Other, class D>
-    shared_ptr(const unique_ptr<Other, D>& up) = delete;
+template <class Other>
+shared_ptr(
+    shared_ptr<Other>&& sp,
+    element_type* ptr) noexcept;
+
+template <class Other, class Deleter>
+shared_ptr(
+    const unique_ptr<Other, Deleter>& up) = delete;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Andere*\
+*Außer*\
 Der vom Argumentzeiger gesteuerte Typ.
 
 *PTR*\
 Der zu kopierende Zeiger.
 
-*D*\
+*Deleter*\
 Der Deleter-Typ.
 
-*EIN*\
+*Allocator*\
 Der Zuweisungstyp.
 
-*DTOR*\
+*Deleter*\
 Der Deleter.
 
-*Vergleichsoperators*\
+*Zuordnungseinheits*\
 Die Zuweisung.
 
-*SP*\
+*El*\
 Der zu kopierende intelligente Zeiger.
 
-*WP*\
+*UA*\
 Der schwache Zeiger.
 
-*AP*\
+*Unglücks*\
 Der zu kopierende automatische Zeiger
 
-#### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Hinweise
 
-Die Konstruktoren erstellen jeweils ein Objekt, dem die Ressource gehört, die von der Operatorensequenz benannt wird. Der Konstruktor `shared_ptr(const weak_ptr<Other>& wp)` löst ein Ausnahmeobjekt des Typs [bad_weak_ptr-Klasse](../standard-library/bad-weak-ptr-class.md) aus, wenn `wp.expired()`.
+Die Konstruktoren erstellen jeweils ein Objekt, dem die Ressource gehört, die von der Operatorensequenz benannt wird. Der-Konstruktor `shared_ptr(const weak_ptr<Other>& wp)` löst ein Exception-Objekt vom Typ `wp.expired()` [bad_weak_ptr](bad-weak-ptr-class.md) if aus.
 
-#### <a name="example"></a>Beispiel
+### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__shared_ptr_construct.cpp
@@ -707,7 +675,7 @@ int main()
 *sp5 == 15
 ```
 
-### <a name="dtorshared_ptr"></a> ~ Shared_ptr
+## <a name="dtorshared_ptr"></a>~ shared_ptr
 
 Beschädigt ein Objekt vom Typ `shared_ptr`.
 
@@ -715,25 +683,17 @@ Beschädigt ein Objekt vom Typ `shared_ptr`.
 ~shared_ptr();
 ```
 
-#### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Hinweise
 
 Der Destruktor verringert die Verweisanzahl für die Ressource, die derzeit im Besitz von `*this` ist. Wenn die Verweisanzahl auf 0 (null) fällt, wird die Ressource freigegeben.
 
-#### <a name="example"></a>Beispiel
+### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__shared_ptr_destroy.cpp
 // compile with: /EHsc
 #include <memory>
 #include <iostream>
-
-struct deleter
-{
-    void operator()(int *p)
-    {
-        delete p;
-    }
-};
 
 int main()
 {
@@ -762,45 +722,30 @@ use count == 2
 use count == 1
 ```
 
-### <a name="static_pointer_cast"></a> static_pointer_cast
-
-```cpp
-template<class T, class U>
-shared_ptr<T> static_pointer_cast(const shared_ptr<U>& r) noexcept;
-```
-
-### <a name="swap"></a> Swap
+## <a name="swap"></a>Wechsel
 
 Tauscht zwei `shared_ptr`-Objekte.
 
 ```cpp
-void swap(shared_ptr& sp);
+void swap(shared_ptr& sp) noexcept;
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*SP*\
+*El*\
 Der gemeinsame Zeiger, mit dem getauscht werden soll.
 
-#### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion belässt die Ressource, die ursprünglich im Besitz `*this` anschließend Besitz *sp*, und die Ressource, die ursprünglich im Besitz *sp* anschließend Besitz `*this`. Die Funktion ändert die Verweisanzahlen für die beiden Ressourcen nicht und löst auch keine Ausnahmen aus.
+Die Member-Funktion verlässt die Ressource, die `*this` sich ursprünglich im Besitz von *SP*befand, und die Ressource, die ursprünglich im `*this`Besitz von *SP* war, danach im Besitz von. Die Funktion ändert die Verweisanzahlen für die beiden Ressourcen nicht und löst auch keine Ausnahmen aus.
 
-#### <a name="example"></a>Beispiel
+### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__shared_ptr_swap.cpp
 // compile with: /EHsc
 #include <memory>
 #include <iostream>
-
-struct deleter
-{
-    void operator()(int *p)
-    {
-        delete p;
-    }
-};
 
 int main()
 {
@@ -833,39 +778,30 @@ int main()
 *sp1 == 5
 *sp1 == 10
 *sp1 == 5
-
 *wp1 == 5
 *wp1 == 10
 *wp1 == 5
 ```
 
-### <a name="unique"></a> eindeutige
+## <a name="unique"></a>gem
 
-Prüft, ob die Ressource eindeutig ist, die Eigentum ist.
+Prüft, ob die Ressource eindeutig ist, die Eigentum ist. Diese Funktion wurde in c++ 17 als veraltet markiert und in c++ 20 entfernt.
 
 ```cpp
-bool unique() const;
+bool unique() const noexcept;
 ```
 
-#### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt **"true"** Wenn kein weiterer `shared_ptr` -Objekt die Ressource besitzt, die im Besitz ist `*this`, andernfalls **"false"** .
+Die Member-Funktion **gibt true** zurück, `shared_ptr` wenn kein anderes Objekt die Ressource besitzt, `*this`die sich im Besitz von befindet, andernfalls **false**.
 
-#### <a name="example"></a>Beispiel
+### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__shared_ptr_unique.cpp
 // compile with: /EHsc
 #include <memory>
 #include <iostream>
-
-struct deleter
-{
-    void operator()(int *p)
-    {
-        delete p;
-    }
-};
 
 int main()
 {
@@ -886,19 +822,19 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-### <a name="use_count"></a> use_count
+## <a name="use_count"></a>use_count
 
 Zählt Ressourcenbesitzer.
 
 ```cpp
-long use_count() const;
+long use_count() const noexcept;
 ```
 
-#### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Hinweise
 
 Die Memberfunktion gibt die Anzahl von `shared_ptr`-Objekten zurück, die die Ressource besitzen, die im Besitz von `*this` ist.
 
-#### <a name="example"></a>Beispiel
+### <a name="example"></a>Beispiel
 
 ```cpp
 // std__memory__shared_ptr_use_count.cpp
@@ -924,3 +860,22 @@ int main()
 sp1.use_count() == 1
 sp1.use_count() == 2
 ```
+
+## <a name="weak_type"></a>weak_type
+
+Der Typ eines schwachen Zeigers auf ein Element.
+
+```cpp
+using weak_type = weak_ptr<T>; // C++17
+```
+
+### <a name="remarks"></a>Hinweise
+
+Die `weak_type` Definition wurde in c++ 17 hinzugefügt.
+
+## <a name="see-also"></a>Siehe auch
+
+[Headerdateienreferenz](cpp-standard-library-header-files.md)\
+[\<memory>](memory.md)\
+[unique_ptr](unique-ptr-class.md)\
+[weak_ptr-Klasse](weak-ptr-class.md)
