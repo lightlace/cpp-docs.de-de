@@ -1,6 +1,6 @@
 ---
 title: task-Klasse (Concurrency Runtime)
-ms.date: 11/04/2016
+ms.date: 07/30/2019
 f1_keywords:
 - task
 - PPLTASKS/concurrency::task
@@ -14,37 +14,31 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0f876b3c0971e70763f36622fb72a3dea671461
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385205"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682519"
 ---
 # <a name="task-class-concurrency-runtime"></a>task-Klasse (Concurrency Runtime)
 
-Die Parallel Patterns Library (PPL) `task`-Klasse. Ein `task`-Objekt stellt Arbeit dar, die asynchron und übereinstimmend mit anderen Tasks und paralleler Arbeit , die von parallelen Algorithmen in der Concurrency Runtime erzeugt wird, ausgeführt werden kann. Es enthält bei erfolgreichem Abschluss ein Ergebnis vom Typ `_ResultType`. Tasks des Typs `task<void>` führen zu keinem Ergebnis. Eine Aufgabe kann erwartet und unabhängig von anderen Aufgaben abgebrochen werden. Sie können auch mit anderen Aufgaben, die mithilfe von Fortsetzungen, bestehen ( `then`), und verbinden ( `when_all`) und Auswahl ( `when_any`) Muster.
+Die Parallel Patterns Library (PPL) `task`-Klasse. Ein `task` -Objekt stellt Arbeit dar, die asynchron und gleichzeitig mit anderen Tasks und paralleler Arbeit, die von parallelen Algorithmen in der Concurrency Runtime erzeugt wird, ausgeführt werden kann. Es enthält bei erfolgreichem Abschluss ein Ergebnis vom Typ `_ResultType`. Tasks des Typs `task<void>` führen zu keinem Ergebnis. Eine Aufgabe kann erwartet und unabhängig von anderen Aufgaben abgebrochen werden. Sie kann auch mit anderen Aufgaben mithilfe von Fortsetzungen ( `then`) und Join ( `when_all`)-und Choice ( `when_any`)-Mustern zusammengesetzt werden. Wenn ein Task-Objekt einer neuen Variablen zugewiesen wird, entspricht das Verhalten dem von `std::shared_ptr`, d. h., beide Objekte stellen dieselbe zugrunde liegende Aufgabe dar.
 
 ## <a name="syntax"></a>Syntax
 
 ```
-template <typename T>
-class task;
-
 template <>
 class task<void>;
 
-template<typename _ReturnType>
+template<typename _ResultType>
 class task;
 ```
 
 #### <a name="parameters"></a>Parameter
 
-*T*<br/>
-Der Typ des Task-Objekt.
-
-*_ReturnType*<br/>
-Der Ergebnistyp dieses Tasks.
+*_ResultType*<br/>
+Der Typ des Ergebnisses, das von der Aufgabe erzeugt wird. 
 
 ## <a name="members"></a>Member
 
@@ -81,7 +75,7 @@ Der Ergebnistyp dieses Tasks.
 
 ## <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Weitere Informationen finden Sie unter [Aufgaben Parallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -93,12 +87,12 @@ Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel
 
 **Namespace:** Parallelität
 
-##  <a name="get"></a> Erhalten
+##  <a name="get"></a>Erhalten
 
 Gibt das von diesem Task erstellte Ergebnis zurück. Wenn sich die Aufgabe nicht in einem abschließenden Zustand befindet, wird mit dem `get`-Aufruf gewartet, bis die Aufgabe fertig gestellt wurde. Diese Methode gibt bei dem Aufruf einer Aufgabe mit einem `result_type` von `void` keinen Wert zurück.
 
 ```
-_ReturnType get() const;
+_ResultType get() const;
 
 void get() const;
 ```
@@ -109,10 +103,10 @@ Das Ergebnis der Aufgabe.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die Aufgabe abgebrochen wird, einen Aufruf von `get` löst eine [Task_canceled](task-canceled-class.md) Ausnahme. Wenn die Aufgabe eine Ausnahme während der Ausführung feststellt oder an sie eine Ausnahme aus einer vorherigen Aufgabe weitergegeben wurde, löst ein Aufruf von `get` diese Ausnahme aus.
+Wenn die Aufgabe abgebrochen wird, löst ein `get` -Aufrufvorgang eine [task_canceled](task-canceled-class.md) -Ausnahme aus. Wenn die Aufgabe eine Ausnahme während der Ausführung feststellt oder an sie eine Ausnahme aus einer vorherigen Aufgabe weitergegeben wurde, löst ein Aufruf von `get` diese Ausnahme aus.
 
 > [!IMPORTANT]
->  Rufen Sie in einer app (Universelle Windows Plattform) nicht [Concurrency:: Task::](#wait) oder `get` ( `wait` Aufrufe `get`) im Code, der auf dem UI-Thread ausgeführt wird. Andernfalls löst die Laufzeit [invalid_operation](invalid-operation-class.md) daran, dass diese Methoden den aktuellen Thread blockieren, und dazu führen, die app dass kann reagiert. Sie können jedoch die `get`-Methode aufrufen, um das Ergebnis der vorangegangenen Aufgabe in einer aufgabenbasierten Fortsetzung zu erhalten, da das Ergebnis sofort verfügbar ist.
+>  Rufen Sie in einer universelle Windows-Plattform-app (UWP) nicht "parallelcurrency [:: Task:: Wait](#wait) " `wait` oder `get` `get` "(Calls)" in Code auf, der auf dem Benutzeroberflächen Thread ausgeführt wird. Andernfalls löst die Laufzeit " [parallelcurrency:: Invalid_operation](invalid-operation-class.md) " aus, da diese Methoden den aktuellen Thread blockieren und bewirken können, dass die APP nicht mehr reagiert. Sie können jedoch die `get`-Methode aufrufen, um das Ergebnis der vorangegangenen Aufgabe in einer aufgabenbasierten Fortsetzung zu erhalten, da das Ergebnis sofort verfügbar ist.
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
@@ -124,9 +118,9 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Aufgabe entpackt ein `IAsyncInfo` -Schnittstelle oder von einer solchen Aufgabe abgeleitet wird **"false"** andernfalls.
+**true** , wenn die Aufgabe eine `IAsyncInfo` Schnittstelle entpackt oder von einer solchen Aufgabe abgeleitet wird, andernfalls **false** .
 
-##  <a name="is_done"></a>  Task:: is_done-Methode (Concurrency Runtime)
+##  <a name="is_done"></a>Task:: is_done-Methode (Concurrency Runtime)
 
 Bestimmt, ob die Aufgabe abgeschlossen wurde.
 
@@ -142,12 +136,12 @@ bool is_done() const;
 
 Die Funktion gibt "true" zurück, wenn die Aufgabe abgeschlossen oder abgebrochen wurde (mit oder ohne Benutzerausnahme).
 
-##  <a name="operator_neq"></a> Operator! =
+##  <a name="operator_neq"></a>Operator! =
 
 Bestimmt, ob zwei `task`-Objekte unterschiedliche interne Aufgaben darstellen.
 
 ```
-bool operator!= (const task<_ReturnType>& _Rhs) const;
+bool operator!= (const task<_ResultType>& _Rhs) const;
 
 bool operator!= (const task<void>& _Rhs) const;
 ```
@@ -155,13 +149,13 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="parameters"></a>Parameter
 
 *_Rhs*<br/>
-Die Aufgabe, die verglichen werden soll.
+Der zu vergleichende Task.
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** Wenn die Objekte auf unterschiedliche zugrunde liegenden Aufgaben beziehen und **"false"** andernfalls.
+**true** , wenn die Objekte auf verschiedene zugrunde liegende Aufgaben verweisen, andernfalls **false** .
 
-##  <a name="operator_eq"></a> operator=
+##  <a name="operator_eq"></a>Operator =
 
 Ersetzt den Inhalt eines `task`-Objekts durch einen anderen.
 
@@ -182,12 +176,12 @@ Das `task`-Quellobjekt.
 
 Da sich `task` wie ein intelligenter Zeiger verhält, stellt dieses `task`-Objekt nach einer Kopierzuweisung die gleiche Aufgabe dar wie `_Other`.
 
-##  <a name="operator_eq_eq"></a> Operator ==
+##  <a name="operator_eq_eq"></a>Operator = =
 
 Bestimmt, ob zwei `task`-Objekte die gleiche interne Aufgabe darstellen.
 
 ```
-bool operator== (const task<_ReturnType>& _Rhs) const;
+bool operator== (const task<_ResultType>& _Rhs) const;
 
 bool operator== (const task<void>& _Rhs) const;
 ```
@@ -195,13 +189,13 @@ bool operator== (const task<void>& _Rhs) const;
 ### <a name="parameters"></a>Parameter
 
 *_Rhs*<br/>
-Die Aufgabe, die verglichen werden soll.
+Der zu vergleichende Task.
 
 ### <a name="return-value"></a>Rückgabewert
 
-**"true"** , wenn die Objekte auf die gleiche zugrunde liegende Aufgabe verweisen und **"false"** andernfalls.
+**true** , wenn die Objekte auf dieselbe zugrunde liegende Aufgabe verweisen, andernfalls **false** .
 
-##  <a name="scheduler"></a>  Task:: Scheduler-Methode (Concurrency Runtime)
+##  <a name="scheduler"></a>Task:: Scheduler-Methode (Concurrency Runtime)
 
 Gibt den Planer für diesen Task zurück.
 
@@ -213,7 +207,7 @@ scheduler_ptr scheduler() const;
 
 Ein Zeiger auf den Planer.
 
-##  <a name="ctor"></a> Aufgabe
+##  <a name="ctor"></a>Task
 
 Erstellt ein `task`-Objekt.
 
@@ -241,7 +235,7 @@ task(
 Der Typ des Parameters, von dem die Aufgabe erstellt werden soll.
 
 *_Param*<br/>
-Der Parameter, von dem der Task erstellt werden soll. Ist dies möglicherweise einen Lambda-Ausdruck, der ein Funktionsobjekt, einem `task_completion_event<result_type>` Objekt oder eine iasyncinfo, wenn Sie Aufgaben in Ihrer Windows-Runtime-app verwenden. Lambda-Ausdrucks oder Funktion muss ein Typ wie `std::function<X(void)>`, wobei X eine Variable des Typs sein kann `result_type`, `task<result_type>`, oder eine iasyncinfo in Windows-Runtime-apps.
+Der Parameter, von dem der Task erstellt werden soll. Dies kann ein Lambda-, ein Funktions Objekt, ein `task_completion_event<result_type>` -Objekt oder ein Windows:: Foundation:: iasyncinfo sein, wenn Sie Aufgaben in Ihrer Windows-Runtime-App verwenden. Das Lambda-oder Funktions Objekt sollte ein Typ sein `std::function<X(void)>`, der entspricht, wobei X eine Variable vom Typ `result_type`, `task<result_type>`oder ein Windows:: Foundation:: iasyncinfo in Windows-Runtime-apps sein kann.
 
 *_TaskOptions*<br/>
 Die Aufgabenoptionen enthalten Abbruchtoken, Planer usw.
@@ -251,7 +245,7 @@ Das `task`-Quellobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Standardkonstruktor für `task` ist nur vorhanden, damit Aufgaben in Containern verwendet werden können. Eine erstellte Standardaufgabe kann nicht verwendet werden, bis Sie ihr eine gültige Aufgabe zuweisen. Methoden, z. B. `get`, `wait` oder `then` löst eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) Ausnahme aus, wenn für eine erstellte Standardaufgabe aufgerufen.
+Der Standardkonstruktor für `task` ist nur vorhanden, damit Aufgaben in Containern verwendet werden können. Eine erstellte Standardaufgabe kann nicht verwendet werden, bis Sie ihr eine gültige Aufgabe zuweisen. Methoden wie `get`, oder `wait` `then` lösen eine [Invalid_argument](../../../standard-library/invalid-argument-class.md) -Ausnahme aus, wenn Sie für eine erstellte Standard Aufgabe aufgerufen werden.
 
 Eine Aufgabe, die aus einem `task_completion_event` erstellt wird, wird abgeschlossen (und danach werden ihre Fortsetzungen geplant), wenn das Aufgabenabschlussereignis festgelegt ist.
 
@@ -261,11 +255,11 @@ Die Aufgaben, die aus einer `Windows::Foundation::IAsyncInfo`-Schnittstelle oder
 
 `task` verhält sich wie ein intelligenter Zeiger und kann mehrmals als Wert übergeben werden. Ein Zugriff ist durch mehrere Threads ohne Sperren möglich.
 
-Konstruktorüberladungen, die eine iasyncinfo-Schnittstelle oder einen Lambda-Ausdruck, der eine solche Schnittstelle zurückgibt, sind nur für Windows-Runtime-apps verfügbar.
+Die Konstruktorüberladungen, die eine Windows:: Foundation:: iasyncinfo-Schnittstelle oder einen Lambda-Wert verwenden, der eine solche Schnittstelle zurückgibt, sind nur für Windows-Runtime-apps verfügbar.
 
-Weitere Informationen finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Weitere Informationen finden Sie unter [Aufgaben Parallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-##  <a name="then"></a> Klicken Sie dann
+##  <a name="then"></a>Seitdem
 
 Fügt diesem Task einen Fortsetzungstask hinzu.
 
@@ -273,20 +267,20 @@ Fügt diesem Task einen Fortsetzungstask hinzu.
 template<typename _Function>
 __declspec(
     noinline) auto then(const _Function& _Func) const -> typename details::_ContinuationTypeTraits<_Function,
-    _ReturnType>::_TaskOfType;
+    _ResultType>::_TaskOfType;
 
 template<typename _Function>
 __declspec(
     noinline) auto then(const _Function& _Func,
     const task_options& _TaskOptions) const -> typename details::_ContinuationTypeTraits<_Function,
-    _ReturnType>::_TaskOfType;
+    _ResultType>::_TaskOfType;
 
 template<typename _Function>
 __declspec(
     noinline) auto then(const _Function& _Func,
     cancellation_token _CancellationToken,
     task_continuation_context _ContinuationContext) const -> typename details::_ContinuationTypeTraits<_Function,
-    _ReturnType>::_TaskOfType;
+    _ResultType>::_TaskOfType;
 
 template<typename _Function>
 __declspec(
@@ -317,7 +311,7 @@ Die Aufgabenoptionen umfassen das Abbruchtoken, den Planer und den Fortsetzungsk
 Das Abbruchtoken, das der Fortsetzungsaufgabe zugeordnet werden soll. Eine Fortsetzungsaufgabe, die ohne ein Abbruchtoken erstellt wird, erbt das Token von der Vorgängeraufgabe.
 
 *_ContinuationContext*<br/>
-Eine Variable, die angibt, wo die Fortsetzung ausgeführt werden soll. Diese Variable ist nur nützlich, wenn in einer UWP-app verwendet. Weitere Informationen finden Sie unter [Task_continuation_context](task-continuation-context-class.md)
+Eine Variable, die angibt, wo die Fortsetzung ausgeführt werden soll. Diese Variable ist nur nützlich, wenn Sie in einer UWP-App verwendet wird. Weitere Informationen finden Sie unter [task_continuation_context](task-continuation-context-class.md)
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -325,11 +319,11 @@ Die neu erstellte Fortsetzungsaufgabe. Der Ergebnistyp der zurückgegebenen Aufg
 
 ### <a name="remarks"></a>Hinweise
 
-Die Überladungen der `then` , dass ein Lambda oder Funktionselement ist, eine iasyncinfo-Schnittstelle zurückgibt, sind nur für Windows-Runtime-apps verfügbar.
+Die über Ladungen von `then` , die einen Lambda-oder Funktions tüktor verwenden, der eine Windows:: Foundation:: iasyncinfo-Schnittstelle zurückgibt, sind nur für Windows-Runtime-apps verfügbar.
 
-Weitere Informationen zur Verwendung von aufgabenfortsetzungen für asynchrone Aufgaben finden Sie unter [Aufgabenparallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Weitere Informationen zum Verwenden von Aufgaben Fortsetzungen zum Verfassen von asynchronen Aufgaben finden Sie unter [Aufgaben Parallelität](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-##  <a name="wait"></a> Warte
+##  <a name="wait"></a>Warte
 
 Erwartet, dass dieser Task einen Terminalzustand erreicht. Es ist möglich, dass das `wait`-Element den Task inline ausführt, wenn alle Taskabhängigkeiten erfüllt sind und er nicht bereits zur Ausführung durch einen Hintergrundworker aufgehoben wurde.
 
@@ -344,7 +338,7 @@ Ein `task_status`-Wert, der entweder `completed` oder `canceled` ist. Wenn die A
 ### <a name="remarks"></a>Hinweise
 
 > [!IMPORTANT]
->  Rufen Sie in einer app (Universelle Windows Plattform) nicht `wait` im Code, der auf dem UI-Thread ausgeführt wird. Andernfalls löst die Laufzeit [concurrency::invalid_operation](invalid-operation-class.md) aus, da diese Methode den aktuellen Thread blockiert und die App dadurch möglicherweise nicht mehr reagiert. Sie können jedoch die [concurrency::task::get](#get) -Methode aufrufen, um das Ergebnis der Vorgängeraufgabe in einer aufgabenbasierten Fortsetzung zu erhalten.
+>  In einer universelle Windows-Plattform-app (UWP) nicht in Code `wait` aufzurufen, der auf dem Benutzeroberflächen Thread ausgeführt wird. Andernfalls löst die Laufzeit [concurrency::invalid_operation](invalid-operation-class.md) aus, da diese Methode den aktuellen Thread blockiert und die App dadurch möglicherweise nicht mehr reagiert. Sie können jedoch die [concurrency::task::get](#get) -Methode aufrufen, um das Ergebnis der Vorgängeraufgabe in einer aufgabenbasierten Fortsetzung zu erhalten.
 
 ## <a name="see-also"></a>Siehe auch
 
