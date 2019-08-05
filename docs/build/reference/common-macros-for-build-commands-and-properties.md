@@ -1,6 +1,6 @@
 ---
-title: Gängige Makros für MSBuild-Befehlen und Eigenschaften
-ms.date: 03/20/2019
+title: Allgemeine Makros für MSBuild-Befehle und-Eigenschaften
+ms.date: 08/02/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -93,26 +93,26 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: abb42db6a44f1c48d120eff1f117e06c970b6b44
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0de96306e645ec85562e414a96283923e93a00ad
+ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221779"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787101"
 ---
-# <a name="common-macros-for-msbuild-commands-and-properties"></a>Gängige Makros für MSBuild-Befehlen und Eigenschaften
+# <a name="common-macros-for-msbuild-commands-and-properties"></a>Allgemeine Makros für MSBuild-Befehle und-Eigenschaften
 
-Je nach Ihrer Installationsoptionen kann Visual Studio Hunderte von Makros für Sie in einem Visual Studio-Projekt (basierend auf MSBuild) zur Verfügung. Diese entsprechen den MSBuild-Eigenschaften, die standardmäßig, in PROPS- oder TARGETS-Dateien oder in Ihren Projekteinstellungen festgelegt sind. Sie können diese Makros an einer beliebigen Stelle im Dialogfeld **Eigenschaftenseiten** eines Projekts verwenden, an der Zeichenfolgen akzeptiert werden. Bei diesen Makros wird keine Groß-/Kleinschreibung berücksichtigt.
+Abhängig von den Installationsoptionen können Sie in Visual Studio hunderte von Makros in einem Visual Studio-Projekt (basierend auf MSBuild) zur Verfügung stellen. Sie entsprechen den MSBuild-Eigenschaften, die standardmäßig festgelegt sind, oder in. Properties-oder Targets-Dateien oder in den Projekteinstellungen. Sie können diese Makros an einer beliebigen Stelle im Dialogfeld **Eigenschaftenseiten** eines Projekts verwenden, an der Zeichenfolgen akzeptiert werden. Bei diesen Makros wird keine Groß-/Kleinschreibung beachtet.
 
 ## <a name="view-the-current-properties-and-macros"></a>Anzeigen der aktuellen Eigenschaften und Makros
 
-Zum Anzeigen aller derzeit verfügbaren Makros, in der **Eigenschaftenseiten** Dialogfeld unter **VC++-Verzeichnisse**, wählen Sie den Dropdown-Pfeil am Ende der Zeile mit einer Eigenschaft. Klicken Sie auf **bearbeiten** und wählen Sie dann im Dialogfeld "Bearbeiten" die **Makros** Schaltfläche. Die aktuell für Visual Studio sichtbaren Eigenschaften und Makros werden jeweils zusammen mit dem aktuellen Wert aufgeführt. Weitere Informationen finden Sie unter den **Specifying User-Defined Werte** Abschnitt [C++-Projekt Referenz zur](property-pages-visual-cpp.md).
+Wenn Sie alle momentan verfügbaren Makros anzeigen möchten, klicken Sie im Dialogfeld **Eigenschaften Seiten** unter **VC + +-Verzeichnisse**auf den Dropdown Pfeil am Ende einer Eigenschaften Zeile. Klicken Sie auf **Bearbeiten** , und wählen Sie dann im Dialogfeld bearbeiten die Schaltfläche **Makros** aus. Die aktuell für Visual Studio sichtbaren Eigenschaften und Makros werden jeweils zusammen mit dem aktuellen Wert aufgeführt. Weitere Informationen finden Sie im Abschnitt **Angeben von benutzerdefinierten Werten** der [ C++ Projekteigenschaften Seite-Referenz](property-pages-visual-cpp.md).
 
-![Schaltfläche für VC++-Makros](../media/vcppdir_libdir_macros.png "\"Makros\"")
+![Schaltfläche für VC + +-Makros](../media/vcppdir_libdir_macros.png "Makros (Menü") )
 
 ## <a name="list-of-common-macros"></a>Liste der häufig verwendeten Makros
 
-Diese Tabelle wird beschrieben, eine häufig verwendete Teilmenge der verfügbaren Makros; Es gibt viele der hier nicht mehr aufgeführt. Wechseln Sie zu der **Makros** Dialogfeld, um alle Eigenschaften und deren aktuelle Werte in Ihrem Projekt angezeigt. Ausführliche Informationen zum Erstellen von MSBuild-Eigenschaftsdefinitionen und wie diese als Makros in PROPS, TARGETS und VCXPROJ-Dateien verwendet werden, finden Sie unter [MSBuild-Eigenschaften](/visualstudio/msbuild/msbuild-properties).
+Diese Tabelle beschreibt eine häufig verwendete Teilmenge der verfügbaren Makros. Hier sind noch viele weitere nicht aufgeführt. Wechseln Sie zum Dialogfeld **Makros** , um alle Eigenschaften und deren aktuelle Werte in Ihrem Projekt anzuzeigen. Ausführliche Informationen zum Erstellen von MSBuild-Eigenschaftsdefinitionen und wie diese als Makros in PROPS, TARGETS und VCXPROJ-Dateien verwendet werden, finden Sie unter [MSBuild-Eigenschaften](/visualstudio/msbuild/msbuild-properties).
 
 |Makro|Beschreibung|
 |-----------|-----------------|
@@ -121,16 +121,17 @@ Diese Tabelle wird beschrieben, eine häufig verwendete Teilmenge der verfügbar
 |**$(FrameworkDir)**|Das Verzeichnis, in dem .NET Framework installiert wurde.|
 |**$(FrameworkSDKDir)**|Das Verzeichnis, in dem Sie .NET Framework installiert haben. .NET Framework könnte als Teil von Visual Studio oder separat installiert worden sein.|
 |**$(FrameworkVersion)**|Die Version von .NET Framework, die von Visual Studio verwendet wurde. In Kombination mit **$(FrameworkDir)** stellt dies den vollständigen Pfad zu der Version von .NET Framework dar, die von Visual Studio verwendet wurde.|
-|**$(FxCopDir)**|Der Pfad zur Datei „fxcop.cmd“. Die Datei "fxcop.cmd" ist in allen Editionen von Visual Studio nicht installiert.|
-|**$(IntDir)**|Der Pfad zum Verzeichnis, das für Zwischendateien angegeben wurde. Ist dies ein relativer Pfad, gelangen die Zwischendateien in diesen Pfad, der an das Projektverzeichnis angefügt wird. Dieser Pfad sollte über einen nachgestellten Schrägstrich verfügen. Dies wird in den Wert für die **Intermediate Directory** -Eigenschaft aufgelöst. Verwenden Sie nicht **$(OutDir)** , um diese Eigenschaft zu definieren.|
-|**$(OutDir)**|Der Pfad zum Ausgabedateiverzeichnis. Ist dies ein relativer Pfad, gelangen die Ausgabedateien in diesen Pfad, der an das Projektverzeichnis angefügt wird. Dieser Pfad sollte über einen nachgestellten Schrägstrich verfügen. Dies wird in den Wert für die **Output Directory** -Eigenschaft aufgelöst. Verwenden Sie nicht **$(IntDir)** , um diese Eigenschaft zu definieren.|
+|**$(FxCopDir)**|Der Pfad zur Datei „fxcop.cmd“. Die Datei "FxCop. cmd" wird nicht mit allen Editionen von Visual Studio installiert.|
+|**$(IntDir)**|Der Pfad zum Verzeichnis, das für Zwischendateien angegeben wurde. Wenn es sich um einen relativen Pfad handelt, werden zwischen Dateien an diesen Pfad angehängt, der an das Projektverzeichnis angefügt wird. Dieser Pfad sollte über einen nachgestellten Schrägstrich verfügen. Sie wird in den Wert für die Eigenschaft **zwischen Verzeichnis** aufgelöst. Verwenden Sie " **$ (OutDir)** " nicht, um diese Eigenschaft zu definieren.|
+|**$(OutDir)**|Der Pfad zum Ausgabedateiverzeichnis. Wenn es sich um einen relativen Pfad handelt, werden Ausgabedateien an diesen Pfad weitergeleitet, der an das Projektverzeichnis angefügt wird. Dieser Pfad sollte über einen nachgestellten Schrägstrich verfügen. Sie wird in den Wert für die Eigenschaft **Ausgabeverzeichnis** aufgelöst. Verwenden Sie " **$ (IntDir)** " nicht, um diese Eigenschaft zu definieren.|
 |**$(Platform)**|Der Name der aktuellen Projektplattform (z.B. „Win32“).|
-|**$(PlatformShortName)**|Der Kurzname der aktuellen Architektur, z. B. "X86" oder "X64".|
+|**$(PlatformShortName)**|Der Kurzname der aktuellen Architektur, z. b. "x86" oder "x64".|
 |**$(ProjectDir)**|Das Verzeichnis des Projekts (als „Laufwerk + Pfad“ definiert). Es enthält den nachgestellten umgekehrten Schrägstrich „\\“.|
 |**$(ProjectExt)**|Die Dateierweiterung des Projekts. Sie umfasst den „.“ vor der Dateierweiterung.|
 |**$(ProjectFileName)**|Der Dateiname des Projekts (als „Basisname + Dateierweiterung“ definiert).|
 |**$(ProjectName)**|Der Basisname des Projekts.|
 |**$(ProjectPath)**|Der absolute Pfadname des Projekts (als „Laufwerk + Pfad + Basisname + Dateierweiterung“ definiert).|
+|**$ (PublishDir)**|Der Ausgabe Speicherort für das Veröffentlichungsziel. schließt den nachfolgenden umgekehrten schräg\\Strich "" ein. Der Standardwert ist der Ordner " **$ (OutDir\\ ) app. Publish** ".|
 |**$(RemoteMachine)**|Auf der Debugeigenschaftenseite auf den Wert der **Remote Machine** -Eigenschaft festgelegt. Weitere Informationen finden Sie unter [Projekteinstellungen für eine C- oder C++-Debugkonfiguration](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) .|
 |**$(RootNameSpace)**|Der Namespace, falls vorhanden, der die Anwendung enthält.|
 |**$(SolutionDir)**|Das Verzeichnis der Projektmappe (als „Laufwerk + Pfad“ definiert). Es enthält den nachgestellten umgekehrten Schrägstrich „\\“. Wird nur bei der Erstellung einer Projektmappe in der IDE definiert.|
@@ -143,22 +144,22 @@ Diese Tabelle wird beschrieben, eine häufig verwendete Teilmenge der verfügbar
 |**$(TargetFileName)**|Der Dateiname der primären Ausgabedatei für den Build (als „Basisname + Dateierweiterung“ definiert).|
 |**$(TargetName)**|Der Basisname der primären Ausgabedatei für den Build.|
 |**$(TargetPath)**|Der absolute Pfadname der primären Ausgabedatei für den Build (als „Laufwerk + Pfad + Basisname + Dateierweiterung“ definiert).|
-|**$(VCInstallDir)**|Das Verzeichnis, das den C++-Inhalt Ihrer Visual Studio-Installation enthält. Diese Eigenschaft enthält die Version des entsprechenden Microsoft C++ (MSVC)-Toolset, das u. u., die vom Visual Studio-Host. Beispielsweise wird beim Erstellen mit `$(PlatformToolset) = v140`, **$(VCInstallDir)** enthält den Pfad zur Installation von Visual Studio 2015.|
+|**$(VCInstallDir)**|Das Verzeichnis, das den C++-Inhalt Ihrer Visual Studio-Installation enthält. Diese Eigenschaft enthält die Version des zielsets von C++ Microsoft (MSVC), die sich möglicherweise vom Visual Studio-Host unterscheidet. Wenn Sie z. b. `$(PlatformToolset) = v140`mit dem-Element aufbauen, enthält **$ (VCInstallDir)** den Pfad zur Installation von Visual Studio 2015.|
 |**$(VSInstallDir)**|Das Verzeichnis, in dem Visual Studio installiert wurde. Diese Eigenschaft enthält die Version des angezielten Visual Studio-Toolsets, die sich möglicherweise vom Visual Studio-Host unterscheidet. Beim Erstellen mit `$(PlatformToolset) = v110`, enthält **$(VSInstallDir)** z. B. den Pfad zur Installation von Visual Studio 2012.|
 |**$(WebDeployPath)**|Der relative Pfad vom Stamm der Webbereitstellung zum Speicherort der Projektausgaben. Gibt denselben Wert zurück wie <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|
-|**$(WebDeployRoot)**|Der absolute Pfad zum Speicherort von **\<localhost>**. Beispiel: „c:\inetpub\wwwroot“.|
+|**$(WebDeployRoot)**|Der absolute Pfad zum Speicherort von **\<localhost>** . Beispiel: „c:\inetpub\wwwroot“.|
 
 ## <a name="obsolete-macros"></a>Veraltete Makros
 
-Das Buildsystem wurde zwischen Visual Studio 2008 und Visual Studio 2010 erheblich geändert. Viele Makros, die in früheren Projekttypen verwendet wurden, wurden durch neue ersetzt. Diese Makros werden nicht mehr verwendet oder wurden durch mindestens eine entsprechende Eigenschaft oder ein Makro für [Elementmetadatenwerte](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(**_name_**)**) ersetzt. Makros, die als „Migriert“ markiert sind, können mithilfe des Migrationstools für Projekte aktualisiert werden. Wenn das Projekt, das das Makro enthält, zudem von Visual Studio 2008 oder früher zu Visual Studio 2010 migriert wird, konvertiert Visual Studio das Makro in das entsprechende aktuelle Makro. Höhere Versionen von Visual Studio können Projekte von Visual Studio 2008 und früher nicht in den neuen Projekttyp konvertieren. Sie müssen diese Projekte in zwei Schritten konvertieren. Konvertieren Sie sie zunächst in Visual Studio 2010, und konvertieren Sie das Ergebnis anschließend in ihre neuere Version von Visual Studio. Weitere Informationen finden Sie in der [Übersicht über potenzielle Probleme beim Upgrade](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
+Das Buildsystem wurde zwischen Visual Studio 2008 und Visual Studio 2010 erheblich geändert. Viele Makros, die in früheren Projekttypen verwendet wurden, wurden durch neue ersetzt. Diese Makros werden nicht mehr verwendet oder wurden durch mindestens eine entsprechende Eigenschaft oder ein Makro für [Elementmetadatenwerte](/visualstudio/msbuild/itemmetadata-element-msbuild) ( **%(** _name_ **)** ) ersetzt. Makros, die als „Migriert“ markiert sind, können mithilfe des Migrationstools für Projekte aktualisiert werden. Wenn das Projekt, das das Makro enthält, zudem von Visual Studio 2008 oder früher zu Visual Studio 2010 migriert wird, konvertiert Visual Studio das Makro in das entsprechende aktuelle Makro. Höhere Versionen von Visual Studio können Projekte von Visual Studio 2008 und früher nicht in den neuen Projekttyp konvertieren. Sie müssen diese Projekte in zwei Schritten konvertieren. Konvertieren Sie sie zunächst in Visual Studio 2010, und konvertieren Sie das Ergebnis anschließend in ihre neuere Version von Visual Studio. Weitere Informationen finden Sie in der [Übersicht über potenzielle Probleme beim Upgrade](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
 
 |Makro|Beschreibung|
 |-----------|-----------------|
-|**$(InputDir)**|(Migriert) Das Verzeichnis der Eingabedatei (als „Laufwerk + Pfad“ definiert). Es enthält den nachgestellten umgekehrten Schrägstrich „\\“. Wenn das Projekt die Eingabe darstellt, entspricht dieses Makro **$(ProjectDir)**.|
-|**$(InputExt)**|(Migriert) Die Dateierweiterung der Eingabedatei. Sie umfasst den „.“ vor der Dateierweiterung. Wenn das Projekt die Eingabe darstellt, entspricht dieses Makro **$(ProjectExt)**. Für Quelldateien entspricht dies **%(Extension)**.|
-|**$(InputFileName)**|(Migriert) Der Dateiname der Eingabedatei (als „Basisname + Dateierweiterung“ definiert). Wenn das Projekt die Eingabe darstellt, entspricht dieses Makro **$(ProjectFileName)**. Für Quelldateien entspricht dies **%(Identity)**.|
-|**$(InputName)**|(Migriert) Der Basisname der Eingabedatei. Wenn das Projekt die Eingabe darstellt, entspricht dieses Makro **$(ProjectName)**. Für Quelldateien entspricht dies **%(Filename)**.|
-|**$(InputPath)**|(Migriert) Der absolute Pfadname der Eingabedatei (als „Laufwerk + Pfad + Basisname + Dateierweiterung“ definiert). Wenn das Projekt die Eingabe darstellt, entspricht dieses Makro **$(ProjectPath)**. Für Quelldateien entspricht dies **%(FullPath)**.|
+|**$(InputDir)**|(Migriert) Das Verzeichnis der Eingabedatei (als „Laufwerk + Pfad“ definiert). Es enthält den nachgestellten umgekehrten Schrägstrich „\\“. Wenn das Projekt die Eingabe darstellt, entspricht dieses Makro **$(ProjectDir)** .|
+|**$(InputExt)**|(Migriert) Die Dateierweiterung der Eingabedatei. Sie umfasst den „.“ vor der Dateierweiterung. Wenn das Projekt die Eingabe darstellt, entspricht dieses Makro **$(ProjectExt)** . Für Quelldateien entspricht dies **%(Extension)** .|
+|**$(InputFileName)**|(Migriert) Der Dateiname der Eingabedatei (als „Basisname + Dateierweiterung“ definiert). Wenn das Projekt die Eingabe darstellt, entspricht dieses Makro **$(ProjectFileName)** . Für Quelldateien entspricht dies **%(Identity)** .|
+|**$(InputName)**|(Migriert) Der Basisname der Eingabedatei. Wenn das Projekt die Eingabe darstellt, entspricht dieses Makro **$(ProjectName)** . Für Quelldateien entspricht dies **%(Filename)** .|
+|**$(InputPath)**|(Migriert) Der absolute Pfadname der Eingabedatei (als „Laufwerk + Pfad + Basisname + Dateierweiterung“ definiert). Wenn das Projekt die Eingabe darstellt, entspricht dieses Makro **$(ProjectPath)** . Für Quelldateien entspricht dies **%(FullPath)** .|
 |**$(ParentName)**|Der Name des Elements, das dieses Projektelement enthält. Dies wird der Name des übergeordneten Ordners oder der Projektname sein.|
 |**$(SafeInputName)**|Der Name der Datei als gültiger Klassenname, ohne die Dateierweiterung. Für diese Eigenschaft gibt es keine genaue Entsprechung.|
 |**$(SafeParentName)**|Der Name des unmittelbar übergeordneten Elements im gültigen Namensformat. Ein Formular ist beispielsweise das übergeordnete Element einer RESX-Datei. Für diese Eigenschaft gibt es keine genaue Entsprechung.|
@@ -166,6 +167,6 @@ Das Buildsystem wurde zwischen Visual Studio 2008 und Visual Studio 2010 erhebli
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Studio-Projekte: C++](../creating-and-managing-visual-cpp-projects.md)
-- [Visual C++-Handbuch: Portieren und Aktualisieren](../../porting/visual-cpp-porting-and-upgrading-guide.md)
-- [Überblick über potenzielle Upgradeprobleme (Visual C++)](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)
+[Visual Studio-Projekte:C++](../creating-and-managing-visual-cpp-projects.md)\
+[Leitfaden C++ für die visuelle Portierung und Aktualisierung](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
+[Überblick über potenzielle Upgradeprobleme (Visual C++)](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)
