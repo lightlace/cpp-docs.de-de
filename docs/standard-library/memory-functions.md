@@ -1,6 +1,6 @@
 ---
 title: '&lt;memory&gt;-Funktionen'
-ms.date: 07/30/2019
+ms.date: 08/05/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -77,12 +77,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 67b5dbb70222d215de4d0457e6acfcd0987763cd
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 4d33240edc326b03b0ef184ac14e233a90acd5f4
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682579"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821327"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt;-Funktionen
 
@@ -196,7 +196,7 @@ Keine oder mehrere Argumente, die zu Objekten werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Die-Funktion erstellt das `shared_ptr<T>`Objekt, ein Zeiger `T(args...)` auf, *wie von der*Zuweisung zugeordnet und erstellt.
+Die-Funktion erstellt das `shared_ptr<T>`Objekt, ein Zeiger `T(args...)` auf, wie von derZuweisung zugeordnet und erstellt.
 
 ## <a name="atomic_compare_exchange_strong"></a>atomic_compare_exchange_strong
 
@@ -778,21 +778,15 @@ Erstellt ein [unique_ptr](unique-ptr-class.md)-Element und gibt es an ein Objekt
 ```cpp
 // make_unique<T>
 template <class T, class... Args>
-unique_ptr<T> make_unique(Args&&... args)
-    {
-        return (unique_ptr<T>(new T(forward<Args>(args)...)));
-    }
+unique_ptr<T> make_unique(Args&&... args);
 
 // make_unique<T[]>
 template <class T>
-make_unique(size_t size)
-    {
-        return (unique_ptr<T>(new elements[size]()));
-    }
+unique_ptr<T> make_unique(size_t size);
 
 // make_unique<T[N]> disallowed
 template <class T, class... Args>
-typename enable_if<extent<T>::value != 0, void>::type make_unique(Args&&...) = delete;
+/* unspecified */ make_unique(Args&&...) = delete;
 ```
 
 ### <a name="parameters"></a>Parameter

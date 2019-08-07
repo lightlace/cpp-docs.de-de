@@ -1,6 +1,6 @@
 ---
 title: 'Syntax der Formatangabe: printf- und wprintf-Funktionen'
-ms.date: 07/02/2019
+ms.date: 07/30/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 95573821ff2b213765184e7c121e693e1eb0ac0a
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552252"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682355"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntax der Formatangabe: printf- und wprintf-Funktionen
 
-Die verschiedenen `printf`- und `wprintf`-Funktionen nehmen eine Formatzeichenfolge sowie optionale Argumente an und generieren eine formatierte Zeichenfolgensequenz für die Ausgabe. Die Formatzeichenfolge enthält 0 oder mehr *Anweisungen*, die entweder literale Zeichen für die Ausgabe oder codierte *Konvertierungsangaben* sind, die beschreiben, wie ein Argument in der Ausgabe formatiert wird. Dieses Thema beschreibt die Syntax, die zum Codieren von Konvertierungsangaben in der Formatzeichenfolge verwendet wird. Eine Auflistung dieser Funktionen finden Sie unter [Stream E/A](../c-runtime-library/stream-i-o.md).
+Die verschiedenen `printf`- und `wprintf`-Funktionen nehmen eine Formatzeichenfolge sowie optionale Argumente an und generieren eine formatierte Zeichenfolgensequenz für die Ausgabe. Die Formatzeichenfolge enthält 0 oder mehr *Anweisungen*, die entweder literale Zeichen für die Ausgabe oder codierte *Konvertierungsangaben* sind, die beschreiben, wie ein Argument in der Ausgabe formatiert wird. Dieser Artikel beschreibt die Syntax, die zum Codieren von Konvertierungsangaben in der Formatzeichenfolge verwendet wird. Eine Auflistung dieser Funktionen finden Sie unter [Stream E/A](../c-runtime-library/stream-i-o.md).
 
 Eine Konvertierungsangabe besteht aus optionalen Feldern und Pflichtfeldern in folgender Form:
 
@@ -62,7 +62,7 @@ Ganzzahlige Typen wie `short`, `int`, `long`, `long long` und ihre `unsigned`-Va
 |**n**|Ganze Zahl|Ganze Dezimalzahl ohne Vorzeichen|
 |**w**|Ganze Zahl|Ganze Hexadezimalzahl ohne Vorzeichen; verwendet „abcdef“.|
 |**X**|Ganze Zahl|Ganze Hexadezimalzahl ohne Vorzeichen; verwendet „ABCDEF“.|
-|**e**|Gleitkomma|Ein Wert mit Vorzeichen im Format [–]*d.dddd*__e±__*dd*[*d*], wobei *d* eine Dezimalzahl ist, *dddd* eine oder mehrere Dezimalstellen sind, je nach angegebener Präzision, oder standardmäßig sechs. *dd*[*d*] stellt zwei oder drei Dezimalstellen dar, je nach [Ausgabeformat](../c-runtime-library/set-output-format.md) und Exponentengröße.|
+|**e**|Gleitkomma|Ein Wert mit Vorzeichen im Format [-]*d.dddd*__e±__*dd*\[*d*], wobei *d* eine Dezimalzahl ist, *dddd* eine oder mehrere Dezimalstellen sind, je nach angegebener Präzision, oder standardmäßig sechs. *dd*\[*d*] stellt zwei oder drei Dezimalstellen dar, je nach [Ausgabeformat](../c-runtime-library/set-output-format.md) und Exponentengröße.|
 |**E**|Gleitkomma|Identisch mit dem **e**-Format mit der Ausnahme, dass **E** anstelle von **e** den Exponenten einführt.|
 |**f**|Gleitkomma|Ein Wert mit Vorzeichen im Format [–]*dddd* __.__ *dddd*, wobei *dddd* eine oder mehrere Dezimalstellen sind. Die Anzahl der Ziffern vor dem Dezimaltrennzeichen ist abhängig von der Größe der Zahl, und die Anzahl der Ziffern nach dem Dezimaltrennzeichen ist abhängig von der angeforderten Genauigkeit oder standardmäßig sechs.|
 |**F**|Gleitkomma|Identisch mit dem Format **f**, außer dass die infinity- und die NaN-Ausgabe groß geschrieben werden.|
@@ -82,7 +82,7 @@ Ab Visual Studio 2015 entspricht die formatierte Ausgabe dem C99-Standard, wenn 
 |-----------|------------|
 |infinity|`inf`|
 |Stiller NaN|`nan`|
-|Signalisiert NaN|`nan(snan)`|
+|Signalisierender NaN|`nan(snan)`|
 |Unbestimmter NaN|`nan(ind)`|
 
 All diesen Werten kann ein Vorzeichen vorangestellt werden. Wenn ein Gleitkomma-Konvertierungsspezifizierer*typ* ein Großbuchstabe ist,dann wird die Ausgabe auch in Großbuchstaben formatiert. Wenn der Formatbezeichner beispielsweise `%F` statt `%f` ist, wird infinity als `INF` statt `inf` formatiert. Die `scanf`-Funktionen können diese Zeichenfolgen auch analysieren, damit diese Werte einen Roundtrip für `printf`- und `scanf`-Funktionen durchführen können.
@@ -135,7 +135,7 @@ Die Breitenangabe sorgt nie dafür, dass ein Wert abgeschnitten wird. Wenn die A
 
 Wenn die Genauigkeitsangabe ein Sternchen (`*`) ist, stellt ein `int`-Argument aus der Argumentliste den Wert bereit. In der Argumentliste muss das *width*-Argument vor dem Wert stehen, der formatiert wird, wie im folgenden Beispiel gezeigt:
 
-`printf("%0*f", 5, 3);  /* 00003 is output */`
+`printf("%0*d", 5, 3);  /* 00003 is output */`
 
 Ein fehlender oder kleiner Wert *width* sorgt in einer Konvertierungsangabe nicht dafür, dass ein Ausgabewert abgeschnitten wird. Wenn das Ergebnis einer Konvertierung breiter als der Wert *width* ist, wird das Feld erweitert, damit es das Konvertierungsergebnis aufnehmen kann.
 
@@ -171,7 +171,7 @@ Das *Typ*zeichen bestimmt entweder die Interpretation von *precision* oder die S
 
 ## <a name="argument-size-specification"></a>Angabe der Argumentgröße
 
-In einer Konvertierungsangabe ist das *size*-Feld ein Argumentlängenmodifizierer für den Konvertierungsspezifizierer*typ*. Das *size*-Feld fungiert als Präfix für das *Typ*feld; **hh**, **h**, **j**, **l** (L als Kleinbuchstabe), **L**, **ll**, **t**, **w**, **z**, **I** (i als Großbuchstabe), **I32** und **I64** geben je nach dem Konvertierungsspezifizierer, den sie ändern, die „Größe“ des entsprechenden Arguments an: lang oder kurz, 32 Bit oder 64 Bit, Einzelbytezeichen oder Breitzeichen. Diese Größenpräfixe werden zusammen mit *Typ*zeichen in den Familien `printf` und `wprintf` der Funktionen verwendet, um der Interpretation von Argumentlängen gemäß der Darstellung in der folgenden Tabelle anzugeben. Das *size*-Feld ist für einige Argumenttypen optional. Wenn kein Größenpräfix angegeben ist, konsumiert das Formatierungsprogramm ganzzahlige Argumente, z.B. `char`, `short`, `int`, `long` mit oder ohne Vorzeichen und Aufzählungstypen, wie etwa 32-Bit `int`-Typen und `float`, `double` sowie `long double`, während Gleitkommaargumente als 64-Bit-`double`-Typen konsumiert werden. Dies stimmt mit den standardmäßigen Typerweiterungsregeln für Listen von Variablenargumenten überein. Weitere Informationen zur Typerweiterung bei Argumenten finden Sie unter „Ellipsen und Standardargumente“ in [Postfixausdrücke](../cpp/postfix-expressions.md). Sowohl auf 32-Bit als auch auf 64-Bit-Systemen muss die Konvertierungsangabe eines ganzzahligen 64-Bit-Arguments das Größenpräfix **ll** oder **I64** beinhalten. Andernfalls ist das Verhalten des Formatierungsprogramms nicht definiert.
+In einer Konvertierungsangabe ist das *size*-Feld ein Argumentlängenmodifizierer für den Konvertierungsspezifizierer*typ*. Das *size*-Feld fungiert als Präfix für das *Typ*feld; **hh**, **h**, **j**, **l** (L als Kleinbuchstabe), **L**, **ll**, **t**, **w**, **z**, **I** (i als Großbuchstabe), **I32** und **I64** geben je nach dem Konvertierungsspezifizierer, den sie ändern, die „Größe“ des entsprechenden Arguments an: lang oder kurz, 32 Bit oder 64 Bit, Einzelbytezeichen oder Breitzeichen. Diese Größenpräfixe werden zusammen mit *Typ*zeichen in den Familien `printf` und `wprintf` der Funktionen verwendet, um der Interpretation von Argumentlängen gemäß der Darstellung in der folgenden Tabelle anzugeben. Das *size*-Feld ist für einige Argumenttypen optional. Wenn kein Größenpräfix angegeben ist, konsumiert das Formatierungsprogramm ganzzahlige Argumente, z.B. `char`, `short`, `int`, `long` mit oder ohne Vorzeichen und Aufzählungstypen, wie etwa 32-Bit `int`-Typen und `float`, `double` sowie `long double`, während Gleitkommaargumente als 64-Bit-`double`-Typen konsumiert werden. Dieses Verhalten stimmt mit den standardmäßigen Typerweiterungsregeln für Listen von Variablenargumenten überein. Weitere Informationen zur Typerweiterung bei Argumenten finden Sie unter „Ellipsen und Standardargumente“ in [Postfixausdrücke](../cpp/postfix-expressions.md). Sowohl auf 32-Bit als auch auf 64-Bit-Systemen muss die Konvertierungsangabe eines ganzzahligen 64-Bit-Arguments das Größenpräfix **ll** oder **I64** beinhalten. Andernfalls ist das Verhalten des Formatierungsprogramms nicht definiert.
 
 Einige Typen weisen in 32-Bit- und 64-Bit-Code verschiedene Größen auf. Beispielsweise ist `size_t` in für x86-Systeme kompiliertem Code 32 Bit lang, bei Code für X64-Systeme jedoch 64 Bit lang. Zum Erstellen von plattformunabhängigem Formatierungscode für Typen mit variabler Breite können Sie einen Argumentgrößenmodifizierer mit variabler Breite verwenden. Verwenden Sie alternativ einen Argumentgrößenmodifizierer mit 64-Bit, und stufen Sie den Argumenttyp mit variabler Breite explizit auf 64 Bit herauf. Der Microsoft-spezifische Argumentgrößenmodifizierer **I** (i als Großbuchstabe) verarbeitet Integerargumente mit variabler Breite. Es empfiehlt sich jedoch, die typspezifischen Modifizierer **j**, **t** und **z** für Portabilität zu verwenden.
 

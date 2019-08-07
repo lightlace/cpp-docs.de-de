@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: 01b6937ee597766922597fda5664c78f75be6b67
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: d1dc8ef6e801623aa96cb4b47936413cd17f24f0
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772162"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821237"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton-Klasse
 
@@ -40,12 +40,12 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 |Name|Beschreibung|
 |----------|-----------------|
 |`CMFCRibbonApplicationButton::CreateObject`|Wird vom Framework verwendet, um eine dynamische Instanz dieses Klassentyps zu erstellen.|
-|`CMFCRibbonApplicationButton::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|
-|[CMFCRibbonApplicationButton::SetImage](#setimage)|Weist ein Bild der Schaltfläche des Menübands-Anwendung.|
+|`CMFCRibbonApplicationButton::GetThisClass`|Wird vom Framework verwendet, um einen Zeiger auf das [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt abzurufen, das diesem Klassentyp zugeordnet ist.|
+|[CMFCRibbonApplicationButton::SetImage](#setimage)|Weist der Menüband-Anwendungs Schaltfläche ein Bild zu.|
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCRibbonApplicationButton` -Klasse. Das Beispiel zeigt, wie Sie die Schaltfläche "Application" ein Bild zuzuweisen, und die QuickInfo festlegen. Dieser Codeausschnitt ist Teil des [Draw Client-Beispiels](../../overview/visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCRibbonApplicationButton` -Klasse. Das Beispiel zeigt, wie der Anwendungs Schaltfläche ein Bild zugewiesen wird und wie die QuickInfo festgelegt wird. Dieser Codeausschnitt ist Teil des [Draw Client-Beispiels](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]
@@ -62,33 +62,33 @@ Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in d
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxRibbonBar.h
+**Header:** afxribbonbar. h
 
-##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
+##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton:: CMFCRibbonApplicationButton
 
-Erstellt und initialisiert ein [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) Objekt.
+Erstellt und initialisiert ein [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) -Objekt.
 
 ```
 CMFCRibbonApplicationButton();
 CMFCRibbonApplicationButton(UINT uiBmpResID);
-  CMFCRibbonApplicationButton(HBITMAP hBmp);
+CMFCRibbonApplicationButton(HBITMAP hBmp);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *uiBmpResID*<br/>
-Die Ressourcen-ID des Images, die auf die Schaltfläche "Anwendung" angezeigt.
+Die Ressourcen-ID des Bilds, das auf der Anwendungs Schaltfläche angezeigt werden soll.
 
 *hBmp*<br/>
-Ein Handle für eine Bitmap, die auf die Schaltfläche "Anwendung" angezeigt.
+Ein Handle für eine Bitmap, die auf der Anwendungs Schaltfläche angezeigt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Menübandschaltfläche für die Anwendung ist eine spezielle Schaltfläche, die in der oberen linken Ecke des Anwendungsfensters befindet. Wenn ein Benutzer diese Schaltfläche klickt, wird die Anwendung öffnet ein Menü mit in der Regel häufig **Datei** Befehle wie **öffnen**, **speichern**, und **beenden**.
+Die Schaltfläche für die Menüband-Anwendung ist eine spezielle Schaltfläche, die sich in der oberen linken Ecke des Anwendungsfensters befindet. Wenn ein Benutzer auf diese Schaltfläche klickt, öffnet die Anwendung ein Menü, das normalerweise allgemeine **Datei** Befehle wie **Öffnen**, **Speichern**und **Beenden**enthält.
 
-##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage
+##  <a name="setimage"></a>CMFCRibbonApplicationButton:: stimage
 
-Weist ein Bild an die Anwendungsschaltfläche an.
+Weist der Anwendungs Schaltfläche ein Bild zu.
 
 ```
 void SetImage(UINT uiBmpResID);
@@ -98,14 +98,14 @@ void SetImage(HBITMAP hBmp);
 ### <a name="parameters"></a>Parameter
 
 *uiBmpResID*<br/>
-[in] Die Ressourcen-ID des Images, die auf die Schaltfläche "Anwendung" angezeigt.
+in Die Ressourcen-ID des Bilds, das auf der Anwendungs Schaltfläche angezeigt werden soll.
 
 *hBmp*<br/>
-[in] Ein Handle für eine Bitmap, die auf die Schaltfläche "Anwendung" angezeigt.
+in Ein Handle für eine Bitmap, die auf der Anwendungs Schaltfläche angezeigt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Methode die Menübandschaltfläche für die Anwendung nach der Erstellung der Schaltfläche ein neues Abbild zuweisen. Die Schaltfläche "Anwendung" befindet sich in der oberen linken Ecke des Anwendungsfensters.
+Verwenden Sie diese Methode, um ein neues Bild der Menüband-Anwendungs Schaltfläche zuzuweisen, nachdem Sie die Schaltfläche erstellt haben. Die Anwendungs Schaltfläche befindet sich in der oberen linken Ecke des Anwendungsfensters.
 
 ## <a name="see-also"></a>Siehe auch
 

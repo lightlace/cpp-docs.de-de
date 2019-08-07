@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonButton-Klasse
+title: Cmfcribbonbutton-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonButton
@@ -114,18 +114,18 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: 9d0d16062f6808cbeb2d3e73fac9f4bbdfd7e69c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3c0af8b608afd4effab710479108f1eb07fdaba
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358204"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821290"
 ---
-# <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton-Klasse
+# <a name="cmfcribbonbutton-class"></a>Cmfcribbonbutton-Klasse
 
 Die `CMFCRibbonButton`-Klasse implementiert Schaltflächen, die auf Menübandleisten-Elementen wie Bereichen, Symbolleisten für den Schnellzugriff und Popupmenüs positioniert werde können.
 
-Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.
+Weitere Informationen finden Sie im Quellcode, der sich im **Ordner\\VC atlmfc\\\\src MFC** Ihrer Visual Studio-Installation befindet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -146,31 +146,31 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |Name|Beschreibung|
 |----------|-----------------|
 |[CMFCRibbonButton::AddSubItem](#addsubitem)|Fügt ein Menüelement zu dem Popup-Menü hinzu, dem die Schaltfläche zugeordnet ist.|
-|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(Überschreibt [cmfcribbonbaseelement:: Canbestretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched).)|
-|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(Überschreibt [cmfcribbonbaseelement:: Cleanupsizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes).)|
-|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(Überschreibt [cmfcribbonbaseelement:: Closepopupmenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu).)|
+|[Cmfcribbonbutton:: canbegestreckt](#canbestretched)|(Überschreibt [CMF cribbonbaseelement:: canbestret.](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched))|
+|[Cmfcribbonbutton:: cleanupsizes](#cleanupsizes)|(Überschreibt [CMF cribbonbaseelement:: cleanupsizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes).)|
+|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(Überschreibt [cmscribbonbaseelement:: closepopupmenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu).)|
 |[CMFCRibbonButton::DrawBottomText](#drawbottomtext)||
-|[CMFCRibbonButton::DrawImage](#drawimage)|(Überschreibt [cmfcribbonbaseelement:: DrawImage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage).)|
+|[CMFCRibbonButton::DrawImage](#drawimage)|(Überschreibt [CMF cribbonbaseelement::D rawImage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage).)|
 |[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||
 |[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Gibt den Index eines Popupmenü-Elements zurück, das der angegebenen Befehls-ID zugeordnet ist.|
 |[CMFCRibbonButton::GetCommandRect](#getcommandrect)||
-|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Gibt die komprimierte Größe des Menübandelements zurück. (Overrides [CMFCRibbonBaseElement::GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
+|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Gibt die komprimierte Größe des Menübandelements zurück. (Überschreibt [CMF cribbonbaseelement:: getcompactsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
 |[CMFCRibbonButton::GetIcon](#geticon)||
 |[CMFCRibbonButton::GetImageIndex](#getimageindex)|Gibt den Index des Bilds zurück, das der Schaltfläche zugeordnet ist.|
-|[CMFCRibbonButton::GetImageSize](#getimagesize)|Gibt die Bildgröße des Menübandelements zurück. (Überschreibt [cmfcribbonbaseelement:: Getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
-|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Gibt die Größe des Menübandelements im Zwischenstatus zurück. (Überschreibt [cmfcribbonbaseelement:: Getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
+|[CMFCRibbonButton::GetImageSize](#getimagesize)|Gibt die Bildgröße des Menübandelements zurück. (Überschreibt [CMF cribbonbaseelement:: getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
+|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Gibt die Größe des Menübandelements im Zwischenstatus zurück. (Überschreibt [CMF cribbonbaseelement:: getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
 |[CMFCRibbonButton::GetMenu](#getmenu)|Gibt ein Handle für ein Windows-Menü zurück, das der Menüband-Schaltfläche zugewiesen ist.|
 |[CMFCRibbonButton::GetMenuRect](#getmenurect)||
-|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Gibt die reguläre Größe des Menübandelements zurück. (Überschreibt [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Gibt die reguläre Größe des Menübandelements zurück. (Überschreibt [CMF cribbonbaseelement:: getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
 |[CMFCRibbonButton::GetSubItems](#getsubitems)||
 |[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||
-|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Gibt den QuickInfo-Text des Menübandelements zurück. (Overrides [CMFCRibbonBaseElement::GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
-|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Gibt an, ob das Menübandelement über einen Komprimierungsmodus verfügt. (Überschreibt [cmfcribbonbaseelement:: Hascompactmode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|
-|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Gibt an, ob das Menübandelement über einen Zwischenstatus verfügt (Überschreibt [cmfcribbonbaseelement:: Hasintermediatemode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|
-|[CMFCRibbonButton::HasLargeMode](#haslargemode)|Legt fest, ob das Menübandelement über einen Großbildmodus verfügt. (Überschreibt [cmfcribbonbaseelement:: Haslargemode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|
-|[CMFCRibbonButton::HasMenu](#hasmenu)|(Überschreibt [cmfcribbonbaseelement:: HasMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu).)|
+|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Gibt den QuickInfo-Text des Menübandelements zurück. (Überschreibt [CMF cribbonbaseelement:: GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
+|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Gibt an, ob das Menübandelement über einen Komprimierungsmodus verfügt. (Überschreibt [CMF cribbonbaseelement:: hascompactmode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|
+|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Gibt an, ob das Menübandelement über einen Zwischenstatus verfügt (Überschreibt [CMF cribbonbaseelement:: hasintermediatemode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|
+|[CMFCRibbonButton::HasLargeMode](#haslargemode)|Legt fest, ob das Menübandelement über einen Großbildmodus verfügt. (Überschreibt [CMF cribbonbaseelement:: haslargemode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|
+|[CMFCRibbonButton::HasMenu](#hasmenu)|(Überschreibt [CMF cribbonbaseelement:: HasMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu).)|
 |[CMFCRibbonButton::IsAlwaysDrawBorder](#isalwaysdrawborder)||
-|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(Überschreibt [cmfcribbonbaseelement:: Isalwayslargeimage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage).)|
+|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(Überschreibt [CMF cribbonbaseelement:: isalwayslargeimage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage).)|
 |[CMFCRibbonButton::IsApplicationButton](#isapplicationbutton)||
 |[CMFCRibbonButton::IsCommandAreaHighlighted](#iscommandareahighlighted)||
 |[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|Legt fest, ob Sie den Standardbefehl für eine Menüband-Schaltfläche aktiviert haben.|
@@ -182,21 +182,21 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::IsPopupDefaultMenuLook](#ispopupdefaultmenulook)||
 |[CMFCRibbonButton::IsRightAlignMenu](#isrightalignmenu)|Legt fest, ob das Menü rechts ausgerichtet ist.|
 |[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||
-|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(Überschreibt [cmfcribbonbaseelement:: Oncalctextsize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).)|
+|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(Überschreibt [CMF cribbonbaseelement:: oncalctextsize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).)|
 |[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||
-|[CMFCRibbonButton::OnDraw](#ondraw)|Wird vom Framework aufgerufen, um das Menübandelement zu zeichnen. (Überschreibt [cmfcribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFCRibbonButton::OnDraw](#ondraw)|Wird vom Framework aufgerufen, um das Menübandelement zu zeichnen. (Überschreibt [CMF cribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
 |[CMFCRibbonButton::OnFillBackground](#onfillbackground)||
 |[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|Entfernt alle Menüelemente aus dem Popupmenü.|
 |[CMFCRibbonButton::RemoveSubItem](#removesubitem)|Entfernt ein Menüelement aus dem Popupmenü.|
-|[CMFCRibbonButton::SetACCData](#setaccdata)|(Überschreibt [cmfcribbonbaseelement:: Setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
+|[CMFCRibbonButton::SetACCData](#setaccdata)|(Überschreibt [CMF cribbonbaseelement:: setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
 |[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Gibt an, ob für die Schaltfläche ein großes oder ein kleines Bild angezeigt wird, wenn die Schaltfläche vom Benutzer reduziert wird.|
 |[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|Aktiviert den Standardbefehl für die Menübandschaltfläche.|
-|[CMFCRibbonButton::SetDescription](#setdescription)|Legt die Beschreibung für das Menübandelement fest. (Überschreibt [cmfcribbonbaseelement:: setDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).)|
+|[CMFCRibbonButton::SetDescription](#setdescription)|Legt die Beschreibung für das Menübandelement fest. (Überschreibt [CMF cribbonbaseelement:: setDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).)|
 |[CMFCRibbonButton::SetImageIndex](#setimageindex)|Weist dem Schaltflächenbild einen Index zu.|
 |[CMFCRibbonButton::SetMenu](#setmenu)|Weist der Menüband-Schaltfläche ein Popupmenü zu.|
-|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(Überschreibt [cmfcribbonbaseelement:: Setparentcategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|
+|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(Überschreibt [CMF cribbonbaseelement:: setbientcategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|
 |[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|Richtet das Popupmenü rechts neben der Schaltfläche aus.|
-|[CMFCRibbonButton::SetText](#settext)|Legt den Text für das Menübandelement fest. (Überschreibt [cmfcribbonbaseelement:: SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext).)|
+|[CMFCRibbonButton::SetText](#settext)|Legt den Text für das Menübandelement fest. (Überschreibt [CMF cribbonbaseelement:: SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext).)|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
@@ -212,9 +212,9 @@ Im folgenden Beispiel wird die Verwendung der unterschiedlichen Methoden in der 
 
 ## <a name="remarks"></a>Hinweise
 
-Um eine Schaltfläche des Menübands in eine Anwendung zu verwenden, erstellen Sie das Button-Objekt, und das entsprechende Menüband hinzufügen [Bereich](../../mfc/reference/cmfcribbonpanel-class.md).
+Um eine Menü Band Schaltfläche in einer Anwendung zu verwenden, erstellen Sie das Schaltflächen Objekt, und fügen Sie es dem entsprechenden [Menü](../../mfc/reference/cmfcribbonpanel-class.md)Band Bereich hinzu
 
-```
+```cpp
 CMFCRibbonPanel* pPanel = pCategory->AddPanel (
     _T("Clipboard"), // Panel name
     m_PanelIcons.ExtractIcon (0)); // Panel icon
@@ -246,7 +246,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 **Header:** afxribbonbutton.h
 
-##  <a name="addsubitem"></a>  CMFCRibbonButton::AddSubItem
+##  <a name="addsubitem"></a>Cmfcribbonbutton:: addsubitem
 
 Fügt ein Menüelement zu dem Popup-Menü hinzu, dem die Schaltfläche zugeordnet ist.
 
@@ -259,12 +259,12 @@ void AddSubItem(
 ### <a name="parameters"></a>Parameter
 
 *pSubItem*<br/>
-[in] Gibt einen Zeiger auf das neue Element hinzufügen.
+in Gibt einen Zeiger auf das hinzu zufügende neue Element an.
 
 *nIndex*<br/>
-[in] Gibt den Index, an dem das Element dem Array mit Menüelementen der Schaltfläche hinzufügen. 1, um das Element am Ende des Arrays der Menüelemente hinzufügen.
+in Gibt den Index an, an dem das Element dem Array von Menü Elementen der Schaltfläche hinzugefügt werden soll. -1, um das Element am Ende des Arrays von Menü Elementen hinzuzufügen.
 
-##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched
+##  <a name="canbestretched"></a>Cmfcribbonbutton:: canbegestreckt
 
 ```
 virtual BOOL CanBeStretched();
@@ -274,7 +274,7 @@ virtual BOOL CanBeStretched();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="cleanupsizes"></a>  CMFCRibbonButton::CleanUpSizes
+##  <a name="cleanupsizes"></a>Cmfcribbonbutton:: cleanupsizes
 
 ```
 virtual void CleanUpSizes();
@@ -282,7 +282,7 @@ virtual void CleanUpSizes();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="closepopupmenu"></a>  CMFCRibbonButton::ClosePopupMenu
+##  <a name="closepopupmenu"></a>Cmfcribbonbutton:: closepopupmenu
 
 ```
 virtual void ClosePopupMenu();
@@ -290,7 +290,7 @@ virtual void ClosePopupMenu();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="cmfcribbonbutton"></a>  CMFCRibbonButton::CMFCRibbonButton
+##  <a name="cmfcribbonbutton"></a>Cmfcribbonbutton:: cmfcribbonbutton
 
 Erstellt ein Menüband-Schaltflächenobjekt.
 
@@ -315,27 +315,27 @@ CMFCRibbonButton(
 ### <a name="parameters"></a>Parameter
 
 *nID*<br/>
-[in] Gibt die Befehls-ID der Schaltfläche an.
+in Gibt die Befehls-ID der Schaltfläche an.
 
 *lpszText*<br/>
-[in] Gibt die Beschriftung der Schaltfläche an.
+in Gibt die Text Bezeichnung der Schaltfläche an.
 
 *nSmallImageIndex*<br/>
-[in] Gibt einen nullbasierten Index des kleines Bild der Schaltfläche in der Bildliste der übergeordneten Kategorie an.
+in Gibt einen NULL basierten Index des kleinen Bilds der Schaltfläche in der Bildliste der übergeordneten Kategorie an.
 
 *nLargeImageIndex*<br/>
-[in] Gibt einen nullbasierten Index des großes Bild der Schaltfläche in der Bildliste der übergeordneten Kategorie an.
+in Gibt einen NULL basierten Index des großen Bilds der Schaltfläche in der Bildliste der übergeordneten Kategorie an.
 
 *hIcon*<br/>
-[in] Gibt ein Handle auf das Symbol, das die Anwendung als das Bild der Schaltfläche verwendet.
+in Gibt ein Handle für das Symbol an, das die Anwendung als Bild der Schaltfläche verwendet.
 
 ### <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCRibbonButton` Objekt.
+Im folgenden Beispiel wird veranschaulicht, wie ein `CMFCRibbonButton` -Objekt erstellt wird.
 
 [!code-cpp[NVC_MFC_RibbonApp#6](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]
 
-##  <a name="drawbottomtext"></a>  CMFCRibbonButton::DrawBottomText
+##  <a name="drawbottomtext"></a>Cmfcribbonbutton::D rawbottomtext
 
 ```
 CSize DrawBottomText(
@@ -346,13 +346,13 @@ CSize DrawBottomText(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *bCalcOnly*<br/>
+in *bcally*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="drawimage"></a>  CMFCRibbonButton::DrawImage
+##  <a name="drawimage"></a>Cmfcribbonbutton::D rawImage
 
 ```
 virtual void DrawImage(
@@ -364,12 +364,12 @@ virtual void DrawImage(
 ### <a name="parameters"></a>Parameter
 
 [in] *pDC*<br/>
-[in] *type*<br/>
-[in] *rectImage*<br/>
+in *Typ*<br/>
+in *rectimage*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="drawribbontext"></a>  CMFCRibbonButton::DrawRibbonText
+##  <a name="drawribbontext"></a>Cmfcribbonbutton::D raschreibbontext
 
 ```
 virtual int DrawRibbonText(
@@ -384,15 +384,15 @@ virtual int DrawRibbonText(
 
 [in] *pDC*<br/>
 [in] *strText*<br/>
-[in] *rectText*<br/>
-[in] *UiDTFlags*<br/>
+in *recttext*<br/>
+in *uidtflags*<br/>
 [in] *clrText*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="findsubitemindexbyid"></a>  CMFCRibbonButton::FindSubItemIndexByID
+##  <a name="findsubitemindexbyid"></a>Cmfcribbonbutton:: findsubitemindexbyid
 
 Gibt den Index eines Popupmenü-Elements zurück, das der angegebenen Befehls-ID zugeordnet ist.
 
@@ -403,13 +403,13 @@ int FindSubItemIndexByID(UINT uiID) const;
 ### <a name="parameters"></a>Parameter
 
 *uiID*<br/>
-[in] Gibt die Befehls-ID des Elements im Popupmenü an.
+in Gibt die Befehls-ID des Popup Menü Elements an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der nullbasierte Index des untergeordneten Elements, das zugeordnet ist die *UiID*. 1, wenn kein solcher untergeordnete Element vorhanden ist.
+Der null basierte Index des unter Elements, das mit der *uiid*verknüpft ist. -1, wenn kein solches Unterelement vorhanden ist.
 
-##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect
+##  <a name="getcommandrect"></a>Cmfcribbonbutton:: getcommandrect
 
 ```
 CRect GetCommandRect() const;
@@ -419,7 +419,7 @@ CRect GetCommandRect() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getcompactsize"></a>  Cmfcribbonbutton:: Getcompactsize
+##  <a name="getcompactsize"></a>Cmfcribbonbutton:: getcompactsize
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -433,7 +433,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="geticon"></a>  CMFCRibbonButton::GetIcon
+##  <a name="geticon"></a>Cmfcribbonbutton:: getIcon
 
 ```
 HICON GetIcon(BOOL bLargeIcon = TRUE) const;
@@ -447,7 +447,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getimageindex"></a>  CMFCRibbonButton::GetImageIndex
+##  <a name="getimageindex"></a>Cmfcribbonbutton:: getimagein DEX
 
 Gibt den Index des Bilds zurück, das der Schaltfläche zugeordnet ist.
 
@@ -458,13 +458,13 @@ int GetImageIndex(BOOL bLargeImage) const;
 ### <a name="parameters"></a>Parameter
 
 *bLargeImage*<br/>
-[in] Wenn "true" gibt den Index des Bildes in der Bildliste an, die die große Bilder enthält zurück. andernfalls gibt Sie den Index des Bildes zurück, in der Bildliste an, die die kleine Bilder enthält.
+in Wenn true, wird der Bildindex in der Bildliste zurückgegeben, die die großen Bilder enthält. gibt andernfalls den Image Index in der Bildliste zurück, die die kleinen Bilder enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Index, der das Bild der Schaltfläche in der Liste zugeordnete Bild.
+Der Index des Schaltflächen Bilds in der zugeordneten Bildliste.
 
-##  <a name="getimagesize"></a>  CMFCRibbonButton::GetImageSize
+##  <a name="getimagesize"></a>Cmfcribbonbutton:: getimagesize
 
 ```
 virtual CSize GetImageSize(RibbonImageType type) const;
@@ -472,13 +472,13 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 
 ### <a name="parameters"></a>Parameter
 
-[in] *type*<br/>
+in *Typ*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getintermediatesize"></a>  Cmfcribbonbutton:: Getintermediatesize
+##  <a name="getintermediatesize"></a>Cmfcribbonbutton:: getintermediatesize
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -492,7 +492,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getmenu"></a>  CMFCRibbonButton::GetMenu
+##  <a name="getmenu"></a>Cmfcribbonbutton:: getMenu
 
 Gibt ein Handle für ein Windows-Menü zurück, das der Menüband-Schaltfläche zugewiesen ist.
 
@@ -502,9 +502,9 @@ HMENU GetMenu() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Handle zu einem Windows-Menü, das der Schaltfläche zugeordneten; NULL, wenn kein Menü zugewiesen vorhanden ist.
+Ein Handle für ein Windows-Menü, das der Schaltfläche zugewiesen ist. NULL, wenn kein Menü zugewiesen ist.
 
-##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect
+##  <a name="getmenurect"></a>Cmfcribbonbutton:: getmenurect
 
 ```
 CRect GetMenuRect() const;
@@ -514,7 +514,7 @@ CRect GetMenuRect() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getregularsize"></a>  Cmfcribbonbutton:: Getregularsize
+##  <a name="getregularsize"></a>Cmfcribbonbutton:: getregularsize
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -528,7 +528,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getsubitems"></a>  CMFCRibbonButton::GetSubItems
+##  <a name="getsubitems"></a>Cmfcribbonbutton:: getsubitems
 
 ```
 const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() const;
@@ -538,7 +538,7 @@ const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() cons
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="gettextrowheight"></a>  CMFCRibbonButton::GetTextRowHeight
+##  <a name="gettextrowheight"></a>Cmfcribbonbutton:: gettextrowheight
 
 ```
 int GetTextRowHeight() const;
@@ -548,7 +548,7 @@ int GetTextRowHeight() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="gettooltiptext"></a>  CMFCRibbonButton::GetToolTipText
+##  <a name="gettooltiptext"></a>Cmfcribbonbutton:: GetToolTipText
 
 ```
 virtual CString GetToolTipText() const;
@@ -558,7 +558,7 @@ virtual CString GetToolTipText() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="hascompactmode"></a>  CMFCRibbonButton::HasCompactMode
+##  <a name="hascompactmode"></a>Cmfcribbonbutton:: hascompactmode
 
 ```
 virtual BOOL HasCompactMode() const;
@@ -568,7 +568,7 @@ virtual BOOL HasCompactMode() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="hasintermediatemode"></a>  CMFCRibbonButton::HasIntermediateMode
+##  <a name="hasintermediatemode"></a>Cmfcribbonbutton:: hasintermediatemode
 
 ```
 virtual BOOL HasIntermediateMode() const;
@@ -578,7 +578,7 @@ virtual BOOL HasIntermediateMode() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="haslargemode"></a>  CMFCRibbonButton::HasLargeMode
+##  <a name="haslargemode"></a>Cmfcribbonbutton:: haslargemode
 
 ```
 virtual BOOL HasLargeMode() const;
@@ -588,7 +588,7 @@ virtual BOOL HasLargeMode() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="hasmenu"></a>  CMFCRibbonButton::HasMenu
+##  <a name="hasmenu"></a>Cmfcribbonbutton:: HasMenu
 
 ```
 virtual BOOL HasMenu() const;
@@ -598,7 +598,7 @@ virtual BOOL HasMenu() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isalwaysdrawborder"></a>  CMFCRibbonButton::IsAlwaysDrawBorder
+##  <a name="isalwaysdrawborder"></a>Cmfcribbonbutton:: isalwaysdrawborder
 
 ```
 virtual BOOL IsAlwaysDrawBorder() const;
@@ -608,7 +608,7 @@ virtual BOOL IsAlwaysDrawBorder() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isalwayslargeimage"></a>  CMFCRibbonButton::IsAlwaysLargeImage
+##  <a name="isalwayslargeimage"></a>Cmfcribbonbutton:: isalwayslargeimage
 
 ```
 virtual BOOL IsAlwaysLargeImage() const;
@@ -618,7 +618,7 @@ virtual BOOL IsAlwaysLargeImage() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isapplicationbutton"></a>  CMFCRibbonButton::IsApplicationButton
+##  <a name="isapplicationbutton"></a>Cmfcribbonbutton:: isapplicationbutton
 
 ```
 virtual BOOL IsApplicationButton() const;
@@ -628,7 +628,7 @@ virtual BOOL IsApplicationButton() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="iscommandareahighlighted"></a>  CMFCRibbonButton::IsCommandAreaHighlighted
+##  <a name="iscommandareahighlighted"></a>Cmfcribbonbutton:: iscommandareamarkierte
 
 ```
 virtual BOOL IsCommandAreaHighlighted() const;
@@ -638,9 +638,9 @@ virtual BOOL IsCommandAreaHighlighted() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isdefaultcommand"></a>  CMFCRibbonButton::IsDefaultCommand
+##  <a name="isdefaultcommand"></a>Cmfcribbonbutton:: isdefaultcommand
 
-Gibt an, ob es sich bei der Standardbefehl für eine Schaltfläche des Menübands aktiviert ist.
+Gibt an, ob der Standardbefehl für eine Menüband-Schaltfläche aktiviert ist.
 
 ```
 BOOL IsDefaultCommand() const;
@@ -648,9 +648,9 @@ BOOL IsDefaultCommand() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn Sie den Standardbefehl für eine Schaltfläche des Menübands aktiviert haben. "False" andernfalls.
+TRUE, wenn Sie den Standardbefehl für eine Menüband-Schaltfläche aktiviert haben. Andernfalls false.
 
-##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton
+##  <a name="isdefaultpanelbutton"></a>Cmfcribbonbutton:: isdefaultpanelbutton
 
 ```
 virtual BOOL IsDefaultPanelButton() const;
@@ -660,7 +660,7 @@ virtual BOOL IsDefaultPanelButton() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isdrawtooltipimage"></a>  CMFCRibbonButton::IsDrawTooltipImage
+##  <a name="isdrawtooltipimage"></a>Cmfcribbonbutton:: isdrawtooltipimage
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -670,7 +670,7 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="islargeimage"></a>  CMFCRibbonButton::IsLargeImage
+##  <a name="islargeimage"></a>Cmfcribbonbutton:: islargeimage
 
 ```
 BOOL IsLargeImage() const;
@@ -680,7 +680,7 @@ BOOL IsLargeImage() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="ismenuareahighlighted"></a>  CMFCRibbonButton::IsMenuAreaHighlighted
+##  <a name="ismenuareahighlighted"></a>Cmfcribbonbutton:: ismenuareahervor gehoben
 
 ```
 virtual BOOL IsMenuAreaHighlighted() const;
@@ -690,7 +690,7 @@ virtual BOOL IsMenuAreaHighlighted() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="ismenuonbottom"></a>  CMFCRibbonButton::IsMenuOnBottom
+##  <a name="ismenuonbottom"></a>Cmfcribbonbutton:: ismenuonbottom
 
 ```
 BOOL IsMenuOnBottom() const;
@@ -700,7 +700,7 @@ BOOL IsMenuOnBottom() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="ispopupdefaultmenulook"></a>  CMFCRibbonButton::IsPopupDefaultMenuLook
+##  <a name="ispopupdefaultmenulook"></a>Cmfcribbonbutton:: ispopupdefaultmenulook
 
 ```
 virtual BOOL IsPopupDefaultMenuLook() const;
@@ -710,9 +710,9 @@ virtual BOOL IsPopupDefaultMenuLook() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isrightalignmenu"></a>  CMFCRibbonButton::IsRightAlignMenu
+##  <a name="isrightalignmenu"></a>Cmfcribbonbutton:: isrightalignmenu
 
-Gibt an, ob Sie im Menü rechts ausgerichtet wird.
+Gibt an, ob das Menü rechtsbündig ausgerichtet ist.
 
 ```
 BOOL IsRightAlignMenu() const;
@@ -720,9 +720,9 @@ BOOL IsRightAlignMenu() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn Sie im Menü rechts ausgerichtet wird. andernfalls "false".
+TRUE, wenn das Menü rechtsbündig ausgerichtet ist. andernfalls false.
 
-##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText
+##  <a name="issinglelinetext"></a>Cmfcribbonbutton:: issinglelinetext
 
 ```
 BOOL IsSingleLineText() const;
@@ -732,7 +732,7 @@ BOOL IsSingleLineText() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="oncalctextsize"></a>  CMFCRibbonButton::OnCalcTextSize
+##  <a name="oncalctextsize"></a>Cmfcribbonbutton:: oncalctextsize
 
 ```
 virtual void OnCalcTextSize(CDC* pDC);
@@ -744,7 +744,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="onclick"></a>  CMFCRibbonButton::OnClick
+##  <a name="onclick"></a>Cmfcribbonbutton:: OnClick
 
 Wird vom Framework aufgerufen, wenn der Benutzer auf die Schaltfläche klickt.
 
@@ -755,13 +755,13 @@ virtual void OnClick(CPoint point);
 ### <a name="parameters"></a>Parameter
 
 *point*<br/>
-[in] Gibt die Position des Mausklicks.
+in Gibt die Position des Mausklicks an.
 
 ### <a name="remarks"></a>Hinweise
 
 Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie dieses Ereignis behandeln möchten.
 
-##  <a name="ondraw"></a>  Cmfcribbonbutton:: OnDraw
+##  <a name="ondraw"></a>Cmfcribbonbutton:: OnDraw
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -773,7 +773,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="ondrawborder"></a>  CMFCRibbonButton::OnDrawBorder
+##  <a name="ondrawborder"></a>Cmfcribbonbutton:: ondrawborder
 
 ```
 virtual void OnDrawBorder(CDC* pDC);
@@ -785,7 +785,7 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="onfillbackground"></a>  CMFCRibbonButton::OnFillBackground
+##  <a name="onfillbackground"></a>Cmfcribbonbutton:: onfillbackground
 
 ```
 virtual COLORREF OnFillBackground(CDC* pDC);
@@ -799,7 +799,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="removeallsubitems"></a>  CMFCRibbonButton::RemoveAllSubItems
+##  <a name="removeallsubitems"></a>Cmfcribbonbutton:: removeallsubitems
 
 Entfernt alle Menüelemente aus dem Popupmenü.
 
@@ -807,7 +807,7 @@ Entfernt alle Menüelemente aus dem Popupmenü.
 void RemoveAllSubItems();
 ```
 
-##  <a name="removesubitem"></a>  CMFCRibbonButton::RemoveSubItem
+##  <a name="removesubitem"></a>Cmfcribbonbutton:: removesubitem
 
 Entfernt ein Menüelement aus dem Popupmenü.
 
@@ -818,13 +818,13 @@ BOOL RemoveSubItem(int nIndex);
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Gibt den nullbasierten Index des Menüelements, das Sie entfernen möchten.
+in Gibt den NULL basierten Index des Menü Elements an, das Sie entfernen möchten.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn das angegebene Element erfolgreich entfernt wurde. andernfalls FALSE zurück, wenn *nIndex* ist negativ oder überschreitet die Anzahl der Elemente im Popup-Menü.
+TRUE, wenn das angegebene Element erfolgreich entfernt wurde. andernfalls false, wenn *nIndex* negativ ist oder die Anzahl der Menü Elemente im Popupmenü überschreitet.
 
-##  <a name="setaccdata"></a>  Cmfcribbonbutton:: Setaccdata
+##  <a name="setaccdata"></a>Cmfcribbonbutton:: setaccdata
 
 Legt die Barrierefreiheitsdaten für die Menübandschaltfläche fest.
 
@@ -844,11 +844,11 @@ Die Barrierefreiheitsdaten für das Menübandelement.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt true zurück, wenn erfolgreich; andernfalls "false".
+Gibt true zurück, wenn erfolgreich; andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="setalwayslargeimage"></a>  CMFCRibbonButton::SetAlwaysLargeImage
+##  <a name="setalwayslargeimage"></a>Cmfcribbonbutton::-Abbild
 
 Gibt an, ob für die Schaltfläche ein großes oder ein kleines Bild angezeigt wird, wenn die Schaltfläche vom Benutzer reduziert wird.
 
@@ -858,10 +858,10 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bSet*<br/>
-[in] Bei "true", zeigt die Schaltfläche ein großes Bild. Andernfalls zeigt die Schaltfläche ein kleines Bild enthält.
+*BSET*<br/>
+in TRUE gibt an, dass die Schaltfläche ein großes Bild anzeigt. Andernfalls wird auf der Schaltfläche ein kleines Bild angezeigt.
 
-##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand
+##  <a name="setdefaultcommand"></a>Cmfcribbonbutton:: setdefaultcommand
 
 Aktiviert den Standardbefehl für die Menübandschaltfläche.
 
@@ -871,14 +871,14 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bSet*<br/>
-[in] Bei "true", kann die Schaltfläche "die Standardbefehl ausführen. Wenn "FALSE" kann nicht die Schaltfläche der Standardbefehl ausgeführt.
+*BSET*<br/>
+in TRUE gibt an, dass die Schaltfläche ihren Standardbefehl ausführen kann. FALSE gibt an, dass die Schaltfläche ihren Standardbefehl nicht ausführen kann.
 
 ### <a name="remarks"></a>Hinweise
 
-*bSet* gilt nur, wenn die Schaltfläche ein Menü aufweist. Wenn *bSet* ist "true", die Schaltfläche mit der kann die Standardbefehl ausführen, und das zugewiesenen Popup-Menü angezeigt wird, nur, wenn ein Benutzer den Pfeil am rechten Rand der Schaltfläche klickt. Andernfalls die Schaltfläche "die Standardbefehl kann nicht ausgeführt werden, und im Popupmenü angezeigt wird, unabhängig davon, welchem Bereich die Schaltfläche geklickt.
+*BSET* ist nur relevant, wenn die Schaltfläche über ein Menü verfügt. Wenn *BSET* den Wert true hat, kann die Schaltfläche den Standardbefehl ausführen, und das zugewiesene Popup Menü wird nur angezeigt, wenn ein Benutzer auf den Pfeil am rechten Rand der Schaltfläche klickt. Andernfalls kann die Schaltfläche nicht Ihren Standardbefehl ausführen, und das Popup Menü wird unabhängig davon angezeigt, auf welchem Bereich der Schaltfläche der Benutzer klickt.
 
-##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription
+##  <a name="setdescription"></a>Cmfcribbonbutton:: setDescription
 
 ```
 virtual void SetDescription(LPCTSTR lpszText);
@@ -890,7 +890,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="setimageindex"></a>  CMFCRibbonButton::SetImageIndex
+##  <a name="setimageindex"></a>Cmfcribbonbutton:: setimageindex
 
 Weist dem Schaltflächenbild einen Index zu.
 
@@ -903,12 +903,12 @@ void SetImageIndex(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Gibt den Index des Bildes an.
+in Gibt den Abbild Index an.
 
 *bLargeImage*<br/>
-[in] Bei "true", bezieht sich der angegebene Index in die Liste der großen Bildern. Andernfalls verweist der Index der Liste der kleinen Bilder.
+in TRUE gibt an, dass der angegebene Index auf die Liste der großen Bilder verweist. Andernfalls verweist der Index auf die Liste der kleinen Bilder.
 
-##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu
+##  <a name="setmenu"></a>Cmfcribbonbutton:: setMenu
 
 Weist der Menüband-Schaltfläche ein Popupmenü zu.
 
@@ -930,19 +930,19 @@ void SetMenu(
 Ein Handle für ein Windows-Menü.
 
 *bIsDefaultCommand*<br/>
-Bei "true", kann die Schaltfläche "die Standardbefehl ausführen; Andernfalls wird die Schaltfläche ein Popupmenü angezeigt.
+TRUE gibt an, dass die Schaltfläche ihren Standardbefehl ausführen kann. Andernfalls wird auf der Schaltfläche ein Popup Menü angezeigt.
 
 *bRightAlign*<br/>
-Bei "true", ist das Menü rechts ausgerichtet. Andernfalls ist das Menü linksbündig ausgerichtet.
+TRUE gibt an, dass das Menü rechtsbündig ausgerichtet ist. Andernfalls wird das Menü linksbündig ausgerichtet.
 
 *uiMenuResID*<br/>
-Eine Menü-Ressourcen-ID
+Eine Menü Ressourcen-ID.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die Anwendung im Menü auf die Schaltfläche mit den zugewiesen werden, wird ein Pfeil die Schaltfläche auf der rechten Seite angezeigt. Wenn *bIsDefaultCommand* ist "true", klicken Sie im Menü angezeigt wird, nur, wenn der Benutzer den Pfeil klickt. Wenn der Benutzer die Schaltfläche klickt, wird die Standardbefehl ausgeführt. Wenn *bIsDefaultCommand* ist "false", klicken Sie im Menü angezeigt wird, indem Sie auf eine beliebige Stelle, auf die Schaltfläche.
+Wenn die Anwendung das Menü der Schaltfläche zuweist, wird auf der rechten Seite ein Pfeil angezeigt. Wenn *bisdefaultcommand* den Wert true hat, wird das Menü nur angezeigt, wenn der Benutzer auf den Pfeil klickt. Wenn der Benutzer auf die Schaltfläche klickt, wird der Standardbefehl ausgeführt. Wenn *bisdefaultcommand* den Wert false hat, wird das Menü angezeigt, wenn Sie auf die Schaltfläche klicken.
 
-##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory
+##  <a name="setparentcategory"></a>Cmfcribbonbutton:: setbientcategory
 
 ```
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
@@ -950,13 +950,13 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pParent*<br/>
+in *pparent*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="setrightalignmenu"></a>  CMFCRibbonButton::SetRightAlignMenu
+##  <a name="setrightalignmenu"></a>Cmfcribbonbutton:: abtaghtalignmenu
 
-Richtet das Popupmenü am Rand der Schaltfläche aus.
+Richtet das Popup Menü an den Rand der Schaltfläche aus.
 
 ```
 void SetRightAlignMenu(BOOL bSet=TRUE);
@@ -964,10 +964,10 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bSet*<br/>
-[in] Bei "true", ist das Menü rechts ausgerichtet. Andernfalls ist Klicken Sie im Menü linksbündig ausgerichtet
+*BSET*<br/>
+in TRUE gibt an, dass das Menü rechtsbündig ausgerichtet ist. Andernfalls wird das Menü linksbündig ausgerichtet.
 
-##  <a name="settext"></a>  CMFCRibbonButton::SetText
+##  <a name="settext"></a>Cmfcribbonbutton:: SetText
 
 ```
 virtual void SetText(LPCTSTR lpszText);
