@@ -1,70 +1,23 @@
 ---
-title: Portieren von UNIX auf Win32
-ms.date: 05/02/2019
+title: Ausführen von Linux-Programmen unter Windows
+ms.date: 07/31/2019
 helpviewer_keywords:
-- APIs [C++], porting to Win32
-- Windows API [C++], migrating from UNIX
-- migration [C++]
-- UNIX [C++], porting to Win32
-- porting to Win32 [C++], from UNIX
-- porting to Win32 [C++]
-- Win32 applications [C++], migrating from UNIX
+- Linux [C++], porting to Win32
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 66ac5b478929a42b37d6d0b712063552cfae9104
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 6b59d7685aaada3ba44c03da2e5c27c75c8a473a
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449024"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682387"
 ---
-# <a name="porting-from-unix-to-win32"></a>Portieren von UNIX auf Win32
+# <a name="running-linux-programs-on-windows"></a>Ausführen von Linux-Programmen unter Windows
 
-Bei der Anwendungsmigration von UNIX auf Windows stehen eine Reihe von Optionen zur Verfügung:
+Sie haben folgende Möglichkeiten, wenn Sie ein Linux-Programm unter Windows ausführen möchten:
 
-- Verwenden von UNIX-Bibliotheken, um Anwendungen von UNIX auf Win32 zu portieren
+- Führen Sie das Programm unverändert auf dem Windows-Subsystem für Linux (WSL) aus. Im WSL wird Ihr Programm direkt auf der Computerhardware ausgeführt und nicht auf einem virtuellen Computer. Das WSL ermöglicht auch direkte Dateisystemaufrufe zwischen Windows- und Linux-Systemen, wodurch SSL-Datentransport überflüssig ist. Das WSL ist als Befehlszeilenumgebung konzipiert und wird für grafikintensive Anwendungen nicht empfohlen. Weitere Informationen finden Sie [in der Dokumentation für das Windows-Subsystem für Linux](/windows/wsl/about).
+- Führen Sie das Programm wie gewohnt auf einem virtuellen Linux-Computer oder in einem Docker-Container aus, entweder auf Ihrem lokalen Computer oder in Azure. Weitere Informationen finden Sie unter [Virtuelle Computer](https://azure.microsoft.com/services/virtual-machines/) oder [Docker in Azure](https://docs.microsoft.com/azure/docker/).
+- Kompilieren Sie das Programm mithilfe von gcc oder clang in den Umgebungen [MinGW](http://MinGW.org/) oder [MinGW-w64](https://MinGW-w64.org/doku.php). Dadurch wird eine Übersetzungsebene von Linux für Windows-Systemaufrufe bereitgestellt.
+- Kompilieren Sie das Programm, und führen Sie es mithilfe von gcc oder clang in der [Cygwin](https://www.cygwin.com/)-Umgebung aus. So erhalten Sie im Vergleich zu MinGW oder MinGW-w64 eine vollständigere Linux-Umgebung.
+- Portieren Sie Ihren Code manuell von Linux, und kompilieren Sie ihn mithilfe von Microsoft C++ (MSVC) für Windows. Dies umfasst das Umgestalten von plattformunabhängigem Code in separate Bibliotheken und das anschließende Neuschreiben des Linux-spezifischen Codes für die Verwendung des Windows-spezifischen Codes (z. B. Win32- oder DirectX-APIs). Dies ist wahrscheinlich die beste Option für Anwendungen, für die Hochleistungsgrafiken erforderlich sind.
 
-- Direktes Portieren von UNIX-Anwendungen auf Win32
-
-- Ausführen von UNIX-Anwendungen unter Windows mit dem POSIX-Subsystem
-
-## <a name="unix-libraries"></a>UNIX-Bibliotheken
-
-Eine Option, die UNIX-Programmierer in der Regel in Betracht ziehen, ist das Verwenden von UNIX-Bibliotheken von Drittanbietern, um ihren UNIX-Code als Win32-Anwendung zu kompilieren. Mehrere kommerzielle Bibliotheken (sowie mindestens eine Public Domain-Bibliothek) erfüllen diesen Zweck. Dieses Verfahren kann für einige Anwendungen sinnvoll sein. Der Vorteil dieser Portierungsbibliotheken besteht darin, dass sie den Anfangsaufwand für die Portierung minimieren. Der Hauptnachteil liegt insbesondere für konkurrierende Softwareprodukte darin, dass eine direkte Win32-Portierung einer Anwendung in der Regel schneller ist und zwangsläufig eine größere Funktionalität besitzt. Es kann sich für eine Anwendung als hinderlich erweisen, zur Durchführung von Win32-Aufrufen ihre UNIX-Shell zu verlassen, um unter Windows leistungsfähiger zu sein.
-
-In der folgenden Liste sind Ressourcen von Microsoft und von Drittanbietern aufgeführt, die dem Portieren und der Unterstützung der UNIX-Migration auf Visual C++ dienen:
-
-### <a name="unix-migration-guides"></a>UNIX-Migrationshandbücher
-
-Technische Hilfe zur Codemigration von UNIX zur Win32-Umgebung finden Sie im [UNIX Custom Application Migration Guide](https://technet.microsoft.com/library/bb656290.aspx).
-
-Der [Unix Migration Project Guide](https://technet.microsoft.com/library/bb656287.aspx) ergänzt den UNIX Custom Application Migration Guide mit weiterführender Hilfe zur Migration grundlegender Projekte von UNIX zu Win32. Das Handbuch stellt einen Ratgeber zu Themen in jeder Phase der Projektmigration dar.
-
-### <a name="c-boost-web-site"></a>Website C++ Boost
-
-[https://www.boost.org/](https://www.boost.org/)
-
-## <a name="porting-unix-applications-directly-to-win32"></a>Direktes Portieren von UNIX-Anwendungen auf Win32
-
-Eine weitere Möglichkeit besteht in dem direkten Portieren von UNIX-Anwendungen auf Win32. Durch die Verwendung von ANSI C/C++-Bibliotheken und kommerziellen C-Compilerbibliotheken sind die herkömmlichen Systemaufrufe, die von UNIX-Anwendungen verwendet werden, größtenteils auch in Win32-Anwendungen verfügbar.
-
-Das Ausgabemodell der **stdio**-basierten Anwendungen muss nicht geändert werden, da die Win32-Konsolen-APIs das **stdio**-Modell imitieren und Versionen von *curses* vorhanden sind, die Win32-Konsolen-APIs verwenden. Weitere Informationen finden Sie unter [SetConsoleCursorPosition](/windows/console/setconsolecursorposition).
-
-Auf Berkeley-Sockets basierende Anwendungen müssen nur geringfügig geändert werden, um als Win32-Anwendungen ausgeführt werden zu können. Beim Entwerfen der Windows Sockets-Schnittstelle wurde auf Portabilität mit BSD-Sockets geachtet, wobei nur minimale Änderungen, die in der Einführung der WinSock-Spezifikation beschrieben werden, in Kauf genommen werden müssen.
-
-Windows unterstützt den DCE-kompatiblen RPC, sodass RPC-Anwendungen problemlos verwendet werden können. Weitere Informationen finden Sie unter [RPC Functions (RPC-Funktionen)](/windows/desktop/Rpc/rpc-functions).
-
-Einer der Bereiche mit den deutlichsten Unterschieden ist das Prozessmodell. UNIX verfügt über `fork`, Win32 nicht. Abhängig davon, wie `fork` und die Codebasis verwendet werden, können in Win32 zwei APIs verwendet werden: `CreateProcess` und `CreateThread`. Eine UNIX-Anwendung, die mehrere Kopien von sich selbst erstellt, kann in Win32 so überarbeitet werden, dass sie entweder mehrere Prozesse oder einen Prozess mit mehreren Threads besitzt. Bei Verwendung mehrerer Prozesse stehen mehrere IPC-Methoden für die Kommunikation zwischen Prozessen zur Verfügung (und eventuell auch für die Aktualisierung von Code und Daten des neuen Prozesses in Anpassung an den übergeordneten Prozess, falls die von `fork` bereitgestellte Funktionalität benötigt wird). Weitere Informationen zu IPC finden Sie unter [Interprocess Communications (Prozessübergreifende Kommunikation)](/windows/desktop/ipc/interprocess-communications).
-
-Die Grafikmodelle von Windows und UNIX weisen große Unterschiede auf. UNIX verwendet die X Window System GUI, während Windows GDI verwendet. Obwohl beide Schnittstellen ähnlich konzipiert sind, ist keine einfache Zuordnung zwischen X-APIs und GDI-APIs möglich. Jedoch ist OpenGL-Unterstützung für die Migration von OpenGL-basierten UNIX-Anwendungen verfügbar. Außerdem stehen X-Clients und X-Server für Windows zur Verfügung. Informationen über GDI finden Sie unter [Gerätekontexte](/windows/desktop/gdi/device-contexts).
-
-UNIX-Basisanwendungen, darunter zahlreiche CGI-Anwendungen, sollten in der Regel leicht auf Visual C++, das unter Windows ausgeführt wird, portierbar sein. Funktionen wie `open`, `fopen`, `read`, `write` und andere sind in der Visual C++-Laufzeitbibliothek verfügbar. Darüber hinaus werden C-UNIX-APIs und Win32-APIs in einem Verhältnis von 1:1 zugeordnet: `open` zu `CreateFile`, `read` zu `ReadFile`, `write` zu `WriteFile`, `ioctl` zu `DeviceIOControl`, `close` zu `CloseFile` usw.
-
-## <a name="windows-posix-subsystem"></a>POSIX-Subsystem unter Windows
-
-Eine weitere Option für UNIX-Programmierer stellt das POSIX-Subsystem unter Windows dar. Dies unterstützt jedoch nur POSIX 1003.1, die einzige standardisierte POSIX-Version, als Windows NT entwickelt wurde. Seitdem bestand wenig Nachfrage nach Erweiterungen dieses Subsystems, da die meisten Anwendungen in Win32 konvertiert wurden. Das 1003.1-System ist für Anwendungen mit einem vollständigen Funktionsumfang wenig interessant, da viele Funktionen darin fehlen (z. B. die Funktionen von 1003.2 wie Netzwerkunterstützung usw.). Anwendungen mit vollem Featureumfang, die unter dem POSIX-Subsystem von Windows ausgeführt werden, haben keinen Zugriff auf die in Win32-Anwendungen verfügbaren Windows-Funktionen wie Speicherabbilddateien oder Netzwerk- und Grafikfunktionen. Anwendungen wie VI, LS und GREP sind das Hauptanwendungsgebiet für das POSIX-Subsystem unter Windows.
-
-## <a name="see-also"></a>Siehe auch
-
-[Visual C++-Handbuch: Portieren und Aktualisieren](visual-cpp-change-history-2003-2015.md)<br/>
-[UNIX](../c-runtime-library/unix.md)<br/>
-[Rückschlussregeln](../build/reference/inference-rules.md)

@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridFileProperty-Klasse
+title: Cmfcpropertygridfileproperty-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridFileProperty
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-ms.openlocfilehash: 20a0a50198357602d70a2111c6884058f7578af7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b64d18a67ea499c202b81481684227200846483
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326699"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821282"
 ---
-# <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty-Klasse
+# <a name="cmfcpropertygridfileproperty-class"></a>Cmfcpropertygridfileproperty-Klasse
 
-Die `CMFCPropertyGridFileProperty` Klasse unterstützt, einem Eigenschaftenlisten-Steuerelement ein Element, das ein Dialogfeld zur Dateiauswahl geöffnet wird.
+Die `CMFCPropertyGridFileProperty` -Klasse unterstützt ein Eigenschaften Listen-Steuerelement, das ein Dialogfeld zur Dateiauswahl öffnet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,8 +38,8 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 
 |Name|Beschreibung|
 |----------|-----------------|
-|`CMFCPropertyGridFileProperty::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|
-|`CMFCPropertyGridFileProperty::OnClickButton`|(Überschreibt [cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
+|`CMFCPropertyGridFileProperty::GetThisClass`|Wird vom Framework verwendet, um einen Zeiger auf das [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt abzurufen, das diesem Klassentyp zugeordnet ist.|
+|`CMFCPropertyGridFileProperty::OnClickButton`|(Überschreibt [cmfcpropertygridproperty:: onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -53,9 +53,9 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxpropertygridctrl.h
+**Header:** afxpropertygridctrl. h
 
-##  <a name="cmfcpropertygridfileproperty"></a>  CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty
+##  <a name="cmfcpropertygridfileproperty"></a>Cmfcpropertygridfileproperty:: cmfcpropertygridfileproperty
 
 Erstellt ein `CMFCPropertyGridFileProperty`-Objekt.
 
@@ -74,38 +74,38 @@ CMFCPropertyGridFileProperty(
 ### <a name="parameters"></a>Parameter
 
 *strName*<br/>
-[in] Der Eigenschaftenname.
+in Der Eigenschaftsname.
 
 *bOpenFileDialog*<br/>
-[in] "True" Öffnen Sie eine **Datei öffnen** Dialogfeld "False" zum Öffnen einer **Datei speichern** Dialogfeld.
+in TRUE, um das Dialogfeld **Datei öffnen** zu öffnen. FALSE, um das Dialogfeld **Datei speichern** zu öffnen.
 
 *strFileName*<br/>
-[in] Der ursprüngliche Dateiname.
+in Der ursprüngliche Dateiname.
 
 *lpszDefExt*<br/>
-[in] Eine Zeichenfolge, der eine oder mehrere Dateierweiterungen. Der Standardwert ist NULL.
+in Eine Zeichenfolge mit einer oder mehreren Dateinamen Erweiterungen. Der Standardwert ist NULL.
 
 *dwFlags*<br/>
-[in] Dialogfeldflags. Der Standardwert ist eine bitweise Kombination (OR) von OFN_HIDEREADONLY und OFN_OVERWRITEPROMPT.
+in Dialog Feld-Flags. Der Standardwert ist eine bitweise Kombination (OR) von OFN_HIDEREADONLY und OFN_OVERWRITEPROMPT.
 
 *lpszFilter*<br/>
-[in] Eine Zeichenfolge mit einem oder mehreren dateinfiltern. Der Standardwert ist NULL.
+in Eine Zeichenfolge mit einem oder mehreren Dateifiltern. Der Standardwert ist NULL.
 
 *lpszDescr*<br/>
-[in] Die Beschreibung des Eigenschaftenelements. Der Standardwert ist NULL.
+in Die Beschreibung des Eigenschafts Elements. Der Standardwert ist NULL.
 
 *dwData*<br/>
-[in] Anwendungsspezifische Daten, die dem Eigenschaftenelement zugeordnet ist. Zum Beispiel eine 32-Bit-Ganzzahl oder ein Zeiger auf andere Daten. Der Standardwert ist 0.
+in Anwendungsspezifische Daten, die dem Eigenschaften Element zugeordnet sind. Zum Beispiel eine 32-Bit-Ganzzahl oder ein Zeiger auf andere Daten. Der Standardwert ist 0.
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-Eine vollständige Liste der verfügbaren Flags finden Sie unter [OPENFILENAME-Struktur](/windows/desktop/api/commdlg/ns-commdlg-tagofna).
+Eine vollständige Liste der verfügbaren Flags finden Sie unter [OpenFileName-Struktur](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie ein Objekt mit dem Konstruktor der `CMFCPropertyGridFileProperty` Klasse erstellt wird. In diesem Beispiel ist Teil der [Visual Studio-Demobeispiel](../../overview/visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie ein Objekt mit dem Konstruktor der `CMFCPropertyGridFileProperty` Klasse erstellt wird. Dieses Beispiel ist Teil des [Visual Studio-Demo](../../overview/visual-cpp-samples.md)Beispiels.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]
 
