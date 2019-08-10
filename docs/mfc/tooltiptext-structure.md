@@ -7,16 +7,16 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: 7d77ca7dc55273e6084e919323ed71e55fa68a2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2eb899e66acbadbe45aae2c8adbb356bf4730191
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181846"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915252"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT-Struktur
 
-Schreiben Ihrer [QuickInfo-Benachrichtigungshandler](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), müssen Sie die **TOOLTIPTEXT** Struktur. Die Mitglieder der **TOOLTIPTEXT** -Struktur sind:
+Beim Schreiben des QuickInfo- [Benachrichtigungs Handlers](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)müssen Sie die **ToolTipText** -Struktur verwenden. Die Member der **ToolTipText** -Struktur sind:
 
 ```cpp
 typedef struct {
@@ -31,24 +31,24 @@ typedef struct {
 ```
 
 *hdr*<br/>
-Identifiziert das Tool, das Text benötigt. Das einzige Mitglied dieser Struktur, die Sie möglicherweise ist das Steuerelement die Befehls-ID Befehls-ID des Steuerelements befinden sich in der *IdFrom* Mitglied der **NMHDR** Struktur, die mit der Syntax zugegriffen `hdr.idFrom`. Finden Sie unter [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) eine Erläuterung der Mitglieder der **NMHDR** Struktur.
+Identifiziert das Tool, das Text benötigt. Der einzige Member dieser Struktur, den Sie möglicherweise benötigen, ist die Befehls-ID des Steuer Elements. Die Befehls-ID des Steuer Elements befindet sich im *idfrom* -Member der **NMHDR** -Struktur, auf die `hdr.idFrom`mit der-Syntax zugegriffen wird. Eine Erörterung der Member der **NMHDR** -Struktur finden Sie unter [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) .
 
 *lpszText*<br/>
-Die Adresse einer Zeichenfolge in den Text für ein Tool zu erhalten.
+Die Adresse einer Zeichenfolge, die den Text für ein Tool empfängt.
 
 *szText*<br/>
-Puffer, der den QuickInfo-Text empfängt. Eine Anwendung kann den Text für diesen Puffer als Alternative zur Angabe einer Adresse Zeichenfolge kopieren.
+Puffer, der den QuickInfo-Text empfängt. Eine Anwendung kann den Text als Alternative zum Angeben einer Zeichen folgen Adresse in diesen Puffer kopieren.
 
 *hinst*<br/>
-Handle der Instanz, die eine Zeichenfolge als den QuickInfo-Text verwendet werden soll. Wenn *LpszText* ist die Adresse, der den QuickInfo-Text, dieses Element NULL ist.
+Handle der-Instanz, die eine Zeichenfolge enthält, die als QuickInfo-Text verwendet werden soll. Wenn *lpszText* die Adresse des QuickInfo-Texts ist, ist dieser Member NULL.
 
-Bei der Behandlung der `TTN_NEEDTEXT` Benachrichtigung angezeigt wird, geben Sie die Zeichenfolge, die in einem der folgenden Arten angezeigt werden:
+Wenn Sie die `TTN_NEEDTEXT` Benachrichtigungs Meldung verarbeiten, geben Sie die anzuzeigende Zeichenfolge auf eine der folgenden Arten an:
 
-- Kopieren Sie den Text in den Puffer, die gemäß der *SzText* Member.
+- Kopieren Sie den Text in den Puffer, der durch den *szText* -Member angegeben wird.
 
-- Kopieren Sie die Adresse des Puffers, der den Text enthält die *LpszText* Member.
+- Kopieren Sie die Adresse des Puffers, der den Text enthält, in den *lpszText* -Member.
 
-- Kopieren Sie den Bezeichner der Ressource, eine Zeichenfolge, die *LpszText* Member, und kopieren Sie das Handle der Instanz, die die Ressource enthält die *Hinst* Member.
+- Kopieren Sie den Bezeichner einer Zeichen folgen Ressource in das *lpszText* -Element, und kopieren Sie das Handle der-Instanz, die die Ressource enthält, in das *hInst* -Member.
 
 ## <a name="see-also"></a>Siehe auch
 

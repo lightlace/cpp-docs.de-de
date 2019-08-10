@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbd369d282df1cac59e6966a2d832e23b8ff6da0
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323673"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916739"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -103,48 +103,48 @@ class CToolTipCtrl : public CWnd
 |----------|-----------------|
 |[CToolTipCtrl::Activate](#activate)|Aktiviert und deaktiviert das QuickInfo-Steuerelement.|
 |[CToolTipCtrl::AddTool](#addtool)|Registriert ein Tool mit dem QuickInfo-Steuerelement.|
-|[CToolTipCtrl::AdjustRect](#adjustrect)|Konvertiert zwischen einer QuickInfo-Steuerelements Text anzeigen Rechteck und das Fenster-Rechteck.|
-|[CToolTipCtrl::Create](#create)|Erstellt ein QuickInfo-Steuerelement, und fügt sie an einer `CToolTipCtrl` Objekt.|
-|[CToolTipCtrl::CreateEx](#createex)|Erstellt ein QuickInfo-Steuerelement mit dem angegebenen erweiterten Stile für Windows und fügt sie an einer `CToolTipCtrl` Objekt.|
+|[CToolTipCtrl::AdjustRect](#adjustrect)|Konvertiert zwischen dem Textanzeige Rechteck eines QuickInfo-Steuer Elements und dem zugehörigen Fenster Rechteck.|
+|[CToolTipCtrl::Create](#create)|Erstellt ein QuickInfo-Steuerelement und fügt es `CToolTipCtrl` an ein-Objekt an.|
+|[CToolTipCtrl::CreateEx](#createex)|Erstellt ein QuickInfo-Steuerelement mit den angegebenen erweiterten Windows-Stilen und fügt `CToolTipCtrl` es an ein-Objekt an.|
 |[CToolTipCtrl::DelTool](#deltool)|Entfernt ein Tool aus dem QuickInfo-Steuerelement.|
 |[CToolTipCtrl::GetBubbleSize](#getbubblesize)|Ruft die Größe der QuickInfo ab.|
-|[CToolTipCtrl::GetCurrentTool](#getcurrenttool)|Ruft Informationen wie Größe, Position und Text, der den QuickInfo-Fenster, das das aktuelle QuickInfo-Steuerelement anzeigt.|
-|[CToolTipCtrl::GetDelayTime](#getdelaytime)|Ruft ab, die ursprüngliche, Popup und Reshow Dauer, die derzeit für ein Tool festgelegt sind QuickInfo-Steuerelement.|
-|[CToolTipCtrl::GetMargin](#getmargin)|Ruft ab, der oben, linken, unteren und rechten Rändern, die für eine QuickInfo-Fenster festgelegt werden.|
+|[CToolTipCtrl::GetCurrentTool](#getcurrenttool)|Ruft Informationen (z. b. die Größe, Position und den Text) des QuickInfo-Fensters ab, das im aktuellen QuickInfo-Steuerelement angezeigt wird.|
+|[CToolTipCtrl::GetDelayTime](#getdelaytime)|Ruft die Anfangs-, Popup-und neueinblenden Dauer ab, die derzeit für ein QuickInfo-Steuerelement festgelegt sind.|
+|[CToolTipCtrl::GetMargin](#getmargin)|Ruft die oberen, linken, unteren und rechten Ränder ab, die für ein QuickInfo-Fenster festgelegt werden.|
 |[CToolTipCtrl::GetMaxTipWidth](#getmaxtipwidth)|Ruft die maximale Breite für ein QuickInfo-Fenster ab.|
-|[CToolTipCtrl::GetText](#gettext)|Ruft den Text ab, dem ein QuickInfo-Steuerelement für ein Tool verwaltet.|
-|[CToolTipCtrl::GetTipBkColor](#gettipbkcolor)|Ruft die Hintergrundfarbe in einer QuickInfo-Fenster ab.|
-|[CToolTipCtrl::GetTipTextColor](#gettiptextcolor)|Ruft die Textfarbe in einer QuickInfo-Fenster ab.|
-|[CToolTipCtrl::GetTitle](#gettitle)|Ruft den Titel des aktuellen QuickInfo-Steuerelements ab.|
-|[CToolTipCtrl::GetToolCount](#gettoolcount)|Ruft die Anzahl der durch ein QuickInfo-Steuerelement verwaltet Tools ab.|
-|[CToolTipCtrl::GetToolInfo](#gettoolinfo)|Ruft ab, der ein QuickInfo-Steuerelement verwaltet Informationen zu einem Tool aus.|
-|[CToolTipCtrl::HitTest](#hittest)|Testet einen Punkt, um festzustellen, ob es das umschließende Rechteck des angegebenen Tools befindet. Wenn dies der Fall ist, ruft Informationen über das Tool ab.|
-|[CToolTipCtrl::Pop](#pop)|Entfernt eine angezeigte QuickInfo-Fenster aus der Ansicht.|
-|[CToolTipCtrl::Popup](#popup)|Bewirkt, dass das aktuelle QuickInfo-Steuerelement an den Koordinaten der Maus letzten Nachricht angezeigt.|
-|[CToolTipCtrl::RelayEvent](#relayevent)|Übergibt eine Maus-Nachricht an ein QuickInfo-Steuerelement für die Verarbeitung.|
-|[CToolTipCtrl::SetDelayTime](#setdelaytime)|Legt den ersten, Popup und Wiederholungsdauern für ein QuickInfo-Steuerelement.|
-|[CToolTipCtrl::SetMargin](#setmargin)|Legt fest, der oben, linken, unteren und rechten Rändern für ein QuickInfo-Fenster.|
+|[CToolTipCtrl::GetText](#gettext)|Ruft den Text ab, der von einem QuickInfo-Steuerelement für ein Tool verwaltet wird.|
+|[CToolTipCtrl::GetTipBkColor](#gettipbkcolor)|Ruft die Hintergrundfarbe in einem QuickInfo-Fenster ab.|
+|[CToolTipCtrl::GetTipTextColor](#gettiptextcolor)|Ruft die Textfarbe in einem QuickInfo-Fenster ab.|
+|[CToolTipCtrl::GetTitle](#gettitle)|Ruft den Titel des aktuellen QuickInfo-Steuer Elements ab.|
+|[CToolTipCtrl::GetToolCount](#gettoolcount)|Ruft die Anzahl der Tools ab, die von einem QuickInfo-Steuerelement verwaltet werden.|
+|[CToolTipCtrl::GetToolInfo](#gettoolinfo)|Ruft die Informationen ab, die ein QuickInfo-Steuerelement zu einem Tool beibehält.|
+|[CToolTipCtrl::HitTest](#hittest)|Testet einen Punkt, um zu bestimmen, ob er sich innerhalb des umgebenden Rechtecks des angegebenen Tools befindet. Wenn dies der Fall ist, ruft Informationen über das Tool ab.|
+|[CToolTipCtrl::Pop](#pop)|Entfernt ein angezeigtes QuickInfo-Fenster aus der Ansicht.|
+|[CToolTipCtrl::Popup](#popup)|Bewirkt, dass das aktuelle QuickInfo-Steuerelement an den Koordinaten der letzten Maus Meldung angezeigt wird.|
+|[CToolTipCtrl::RelayEvent](#relayevent)|Übergibt eine Maus Meldung an ein QuickInfo-Steuerelement zur Verarbeitung.|
+|[CToolTipCtrl::SetDelayTime](#setdelaytime)|Legt die Anfangs-, Popup-und Wiederholungs Dauer für ein QuickInfo-Steuerelement fest.|
+|[CToolTipCtrl::SetMargin](#setmargin)|Legt die oberen, linken, unteren und rechten Ränder für ein QuickInfo-Fenster fest.|
 |[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|Legt die maximale Breite für ein QuickInfo-Fenster fest.|
-|[CToolTipCtrl::SetTipBkColor](#settipbkcolor)|Legt die Farbe des Hintergrunds in ein QuickInfo-Fenster fest.|
-|[CToolTipCtrl::SetTipTextColor](#settiptextcolor)|Legt die Textfarbe in einer QuickInfo-Fenster fest.|
-|[CToolTipCtrl::SetTitle](#settitle)|Fügt eine Standardzeichenfolge Symbol und dem Titel, eine QuickInfo an.|
-|[CToolTipCtrl::SetToolInfo](#settoolinfo)|Legt fest, die Informationen, die eine QuickInfo für ein Tool verwaltet.|
-|[CToolTipCtrl::SetToolRect](#settoolrect)|Legt ein neues umschließendes Rechteck für ein Tool an.|
-|[CToolTipCtrl::SetWindowTheme](#setwindowtheme)|Legt fest, der die visuelle Darstellung der QuickInfo-Fenster.|
-|[CToolTipCtrl::Update](#update)|Erzwingt, dass die aktuelle Tools neu gezeichnet wird.|
+|[CToolTipCtrl::SetTipBkColor](#settipbkcolor)|Legt die Hintergrundfarbe in einem QuickInfo-Fenster fest.|
+|[CToolTipCtrl::SetTipTextColor](#settiptextcolor)|Legt die Textfarbe in einem QuickInfo-Fenster fest.|
+|[CToolTipCtrl::SetTitle](#settitle)|Fügt einer QuickInfo ein Standard Symbol und eine Titel Zeichenfolge hinzu.|
+|[CToolTipCtrl::SetToolInfo](#settoolinfo)|Legt die Informationen fest, die eine QuickInfo für ein Tool beibehält.|
+|[CToolTipCtrl::SetToolRect](#settoolrect)|Legt ein neues Begrenzungs Rechteck für ein Tool fest.|
+|[CToolTipCtrl::SetWindowTheme](#setwindowtheme)|Legt den visuellen Stil des QuickInfo-Fensters fest.|
+|[CToolTipCtrl::Update](#update)|Erzwingt, dass das aktuelle Tool neu gezeichnet wird.|
 |[CToolTipCtrl::UpdateTipText](#updatetiptext)|Legt den QuickInfo-Text für ein Tool fest.|
 
 ## <a name="remarks"></a>Hinweise
 
-Ein "Tool" ist entweder ein Fenster, z. B. eines untergeordneten Fensters oder Steuerelements einen anwendungsdefinierten rechteckigen Bereich im Clientbereich eines Fensters. Eine QuickInfo wird ausgeblendet, in den meisten Fällen, angezeigt werden, nur, wenn der Benutzer platziert den Cursor auf einem Tool und bewirkt, dass sie es für ca. eine halbe Sekunde. Die QuickInfo wird angezeigt, in der Nähe des Cursors und verschwindet, wenn der Benutzer eine Maustaste klickt oder den Cursor aus dem Tool verschiebt.
+Ein "Tool" ist entweder ein Fenster, z. b. ein untergeordnetes Fenster oder Steuerelement, oder ein Anwendungs definierter rechteckiger Bereich im Client Bereich eines Fensters. Eine QuickInfo wird in den meisten Fällen ausgeblendet. Sie wird nur angezeigt, wenn der Benutzer den Cursor auf ein Tool setzt und ihn für ungefähr eine halbe Sekunde verlässt. Die QuickInfo wird in der Nähe des Cursors angezeigt und verschwindet, wenn der Benutzer auf eine Maustaste klickt oder den Cursor aus dem Tool verschiebt.
 
-`CToolTipCtrl` Stellt die Funktionalität, um zu steuern, die die Anfangszeit und die Dauer der QuickInfo, die Margin-Breite Zusammenhang mit den QuickInfo-Text, die Breite des das QuickInfo-Fenster selbst und die Hintergrund- und Textfarbe der QuickInfo bereit. Ein einzelnes QuickInfo-Steuerelement kann es sich um Informationen zu mehr als ein Tool bereit.
+`CToolTipCtrl`stellt die Funktionalität bereit, um die anfängliche Zeit und Dauer der QuickInfo, die Randbreite für den QuickInfo-Text, die Breite des QuickInfo-Fensters selbst und die Hintergrund-und Textfarbe der QuickInfo zu steuern. Ein einzelnes QuickInfo-Steuerelement kann Informationen für mehr als ein Tool bereitstellen.
 
-Die `CToolTipCtrl` Klasse stellt die Funktionalität Windows allgemeine QuickInfo-Steuerelements bereit. Dieses Steuerelement (und somit die `CToolTipCtrl` Klasse) ist nur für Programme, die unter Versionen des Windows 95/98 und Windows NT 3.51 und höher.
+Die `CToolTipCtrl` -Klasse stellt die Funktionalität des allgemeinen Windows-QuickInfo-Steuer Elements bereit. Dieses Steuerelement (und damit `CToolTipCtrl` auch die-Klasse) ist nur für Programme verfügbar, die unter Windows 95/98 und Windows NT, Version 3,51 und höher, ausgeführt werden.
 
-Weitere Informationen zu QuickInfos finden Sie unter [QuickInfos in Windows nicht von CFrameWnd abgeleitet](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
+Weitere Informationen zum Aktivieren von Quick Infos finden Sie unter Quick Infos [in Windows, die nicht von CFrameWnd abgeleitet](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)werden.
 
-Weitere Informationen zur Verwendung von `CToolTipCtrl`, finden Sie unter [Steuerelemente](../../mfc/controls-mfc.md) und [Verwenden von CToolTipCtrl](../../mfc/using-ctooltipctrl.md).
+Weitere Informationen zum Verwenden von `CToolTipCtrl`finden Sie unter Steuer [Elemente](../../mfc/controls-mfc.md) und [Verwenden von CToolTipCtrl](../../mfc/using-ctooltipctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -160,9 +160,9 @@ Weitere Informationen zur Verwendung von `CToolTipCtrl`, finden Sie unter [Steue
 
 **Header:** afxcmn.h
 
-##  <a name="activate"></a>  CToolTipCtrl::Activate
+##  <a name="activate"></a>CToolTipCtrl:: Aktivieren
 
-Rufen Sie diese Funktion aktivieren oder deaktivieren ein QuickInfo-Steuerelement.
+Diese Funktion wird aufgerufen, um ein QuickInfo-Steuerelement zu aktivieren oder zu deaktivieren.
 
 ```
 void Activate(BOOL bActivate);
@@ -170,20 +170,20 @@ void Activate(BOOL bActivate);
 
 ### <a name="parameters"></a>Parameter
 
-*bActivate*<br/>
-Gibt an, ob das QuickInfo-Steuerelement aktiviert oder deaktiviert wird.
+*bactivate*<br/>
+Gibt an, ob das QuickInfo-Steuerelement aktiviert oder deaktiviert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn *bActivate* ist "true", das Steuerelement aktiviert ist; Wenn FALSE, wird es deaktiviert.
+Wenn *bactivate* den Wert true hat, wird das Steuerelement aktiviert. der Wert false gibt an, dass er deaktiviert ist.
 
-Wenn ein QuickInfo-Steuerelement aktiv ist, wird der dem QuickInfo-Informationen angezeigt, wenn der Cursor auf einem Tool befindet, die mit dem Steuerelement registriert ist; Wenn sie inaktiv ist, die dem QuickInfo-Informationen nicht angezeigt wird, selbst wenn sich der Cursor auf einem Tool befindet.
+Wenn ein QuickInfo-Steuerelement aktiv ist, werden die QuickInfo-Informationen angezeigt, wenn sich der Cursor auf einem Tool befindet, das beim Steuerelement registriert ist. Wenn Sie inaktiv ist, werden die QuickInfo-Informationen nicht angezeigt, auch wenn sich der Cursor auf einem Tool befindet.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
+  Weitere Informationen finden Sie im Beispiel für [CPropertySheet:: gettabcontrol](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="addtool"></a>  CToolTipCtrl::AddTool
+##  <a name="addtool"></a>CToolTipCtrl:: AddTool
 
 Registriert ein Tool mit dem QuickInfo-Steuerelement.
 
@@ -204,19 +204,19 @@ BOOL AddTool(
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-Zeiger auf das Fenster, das Tool enthält.
+Zeiger auf das Fenster, das das Tool enthält.
 
 *nIDText*<br/>
-ID der Zeichenfolgenressource, die den Text für das Tool enthält.
+ID der Zeichen folgen Ressource, die den Text für das Tool enthält.
 
 *lpRectTool*<br/>
-Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur mit der Koordinaten des Tools umschließenden Rechtecks. Die Koordinaten sind relativ zu der oberen linken Ecke des Clientbereichs des Fensters identifizierte *aufnehmen*.
+Ein Zeiger auf eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die Koordinaten des umschließenden Rechtecks des Tools enthält. Die Koordinaten sind relativ zur oberen linken Ecke des Client Bereichs des Fensters, das durch *pwnd*identifiziert wird.
 
 *nIDTool*<br/>
-Die ID des Tools.
+ID des Tools.
 
 *lpszText*<br/>
-Zeiger auf den Text für das Tool. Wenn dieser Parameter den Wert LPSTR_TEXTCALLBACK enthält, wechseln Sie TTN_NEEDTEXT-Benachrichtigung an das übergeordnete Element des Fensters, *aufnehmen* verweist auf.
+Zeiger auf den Text für das Tool. Wenn dieser Parameter den Wert LPSTR_TEXTCALLBACK enthält, werden TTN_NEEDTEXT-Benachrichtigungs Meldungen an das übergeordnete Element des Fensters gesendet, auf das *pwnd* zeigt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -224,20 +224,20 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Die *LpRectTool* und *nIDTool* Parameter müssen beide gültig sein, oder wenn *LpRectTool* NULL ist, *nIDTool* muss 0 sein.
+Der *lprecttool* -Parameter und der *nidtool* -Parameter müssen gültig sein, oder wenn *lprecttool* NULL ist, muss " *nidtool* " den Wert "0" aufweisen.
 
-Ein QuickInfo-Steuerelement kann mehr als ein Tool zugeordnet werden. Rufen Sie diese Funktion, um ein Tool für das QuickInfo-Steuerelement, zu registrieren, sodass die Informationen gespeichert, in der QuickInfo angezeigt wird, wenn der Cursor auf das Tool befindet.
+Ein QuickInfo-Steuerelement kann mehr als einem Tool zugeordnet werden. Diese Funktion wird aufgerufen, um ein Tool mit dem QuickInfo-Steuerelement zu registrieren, sodass die in der QuickInfo gespeicherten Informationen angezeigt werden, wenn sich der Cursor auf dem Tool befindet.
 
 > [!NOTE]
->  Sie können eine QuickInfo auf ein statisches Steuerelement mit festlegen `AddTool`.
+>  Mithilfe `AddTool`von kann keine QuickInfo auf ein statisches Steuerelement festgelegt werden.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
+  Weitere Informationen finden Sie im Beispiel für [CPropertySheet:: gettabcontrol](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="adjustrect"></a>  CToolTipCtrl::AdjustRect
+##  <a name="adjustrect"></a>CToolTipCtrl:: TRL Rect
 
-Konvertiert zwischen Text eine QuickInfo-Steuerelements anzeigen Rechteck und das Fenster-Rechteck.
+Konvertiert zwischen dem Textanzeige Rechteck eines QuickInfo-Steuer Elements und dem zugehörigen Fenster Rechteck.
 
 ```
 BOOL AdjustRect(
@@ -248,24 +248,24 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parameter
 
 *lprc*<br/>
-Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die entweder ein Tool QuickInfo-Fenster Rechteck oder eine Anzeigerechteck Text enthält.
+Ein Zeiger auf eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die entweder ein QuickInfo-Fenster Rechteck oder ein Textanzeige Rechteck enthält.
 
 *bLarger*<br/>
-True gibt an, *Lprc* dient zum Angeben eines Rechtecks Anzeigen von Text und das entsprechende fensterrechtecke erhält. False gibt an, *Lprc* dient zum Angeben eines Rechtecks Fenster, und das entsprechende Textfeld Anzeigerechteck erhält.
+TRUE gibt an, dass *LPRC* zum Angeben eines Textanzeige Rechtecks verwendet wird, und empfängt das entsprechende Fenster Rechteck. FALSE gibt an, dass *LPRC* zum Angeben eines Fenster Rechtecks verwendet wird, und empfängt das entsprechende Textanzeige Rechteck.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn das Rechteck, erfolgreich angepasst wird; andernfalls 0.
+Ungleich 0 (null), wenn das Rechteck erfolgreich angepasst wurde. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion berechnet eine QuickInfo-Steuerelements Text Anzeigerechteck aus dessen fensterrechtecke oder das Tool Tipp fensterrechtecke erforderlich, um einen angegebenen Text Anzeigerechteck anzuzeigen.
+Diese Member-Funktion berechnet das Textanzeige Rechteck eines QuickInfo-Steuer Elements aus dem Fenster Rechteck oder das QuickInfo-Fenster Rechteck, das zum Anzeigen eines angegebenen Textanzeige Rechtecks erforderlich ist.
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_ADJUSTRECT](/windows/desktop/Controls/ttm-adjustrect), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_ADJUSTRECT](/windows/desktop/Controls/ttm-adjustrect), wie im Windows SDK beschrieben.
 
-##  <a name="create"></a>  CToolTipCtrl::Create
+##  <a name="create"></a>CToolTipCtrl:: Create
 
-Erstellt ein QuickInfo-Steuerelement, und fügt sie an einer `CToolTipCtrl` Objekt.
+Erstellt ein QuickInfo-Steuerelement und fügt es `CToolTipCtrl` an ein-Objekt an.
 
 ```
 virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
@@ -274,37 +274,37 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 ### <a name="parameters"></a>Parameter
 
 *pParentWnd*<br/>
-Gibt an, das QuickInfo-Steuerelement des übergeordneten Fensters, in der Regel eine `CDialog`. Es darf nicht NULL sein.
+Gibt das übergeordnete Fenster des QuickInfo-Steuer Elements `CDialog`an, in der Regel ein. Er darf nicht NULL sein.
 
 *dwStyle*<br/>
-Gibt den QuickInfo-Steuerelements-Stil. Finden Sie unter den **"Hinweise"** Abschnitt, um weitere Informationen.
+Gibt den Stil des QuickInfo-Steuer Elements an. Weitere Informationen finden Sie im Abschnitt " **Hinweise** ".
 
 ### <a name="return-value"></a>Rückgabewert
 
-Einen Wert ungleich null der `CToolTipCtrl` Objekt ist, wurde erfolgreich erstellt wurde, andernfalls 0.
+Ungleich 0 (NULL `CToolTipCtrl` ), wenn das Objekt erfolgreich erstellt wurde, andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Sie erstellen eine `CToolTipCtrl` in zwei Schritten. Rufen Sie zunächst den Konstruktor zum Erstellen der `CToolTipCtrl` Objekt aus, und rufen dann `Create` erstellen das QuickInfo-Steuerelement, und fügen Sie ihn auf die `CToolTipCtrl` Objekt.
+Sie erstellen einen `CToolTipCtrl` in zwei Schritten. Rufen Sie zuerst den-Konstruktor auf, `CToolTipCtrl` um das-Objekt zu `Create` erstellen, und rufen Sie dann auf, um das QuickInfo-Steuerelement zu erstellen und es dem `CToolTipCtrl` -Objekt
 
-Die *DwStyle* Parameter kann eine beliebige Kombination von sein [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles). Darüber hinaus weist ein QuickInfo-Steuerelement zwei mandantenklassen geltenden schemaanpassungen Formate an: TTS_ALWAYSTIP und TTS_NOPREFIX.
+Der Parameter " *dwstyle* " kann eine beliebige Kombination von [Fenster Stilen](../../mfc/reference/styles-used-by-mfc.md#window-styles)sein. Außerdem verfügt ein QuickInfo-Steuerelement über zwei klassenspezifische Stile: TTS_ALWAYSTIP und TTS_NOPREFIX.
 
 |Stil|Bedeutung|
 |-----------|-------------|
-|TTS_ALWAYSTIP|Gibt an, der die QuickInfo angezeigt wird, wenn der Cursor auf einem Tool, unabhängig davon, ob das QuickInfo-Steuerelement die besitzende Fenster aktiv oder inaktiv ist. Ohne diesen Stil wird das QuickInfo-Steuerelement angezeigt, wenn das besitzende Fenster des aktiv ist, aber nicht, wenn sie inaktiv ist.|
-|TTS_NOPREFIX|Dieses Format wird verhindert, dass das System das kaufmännische und-Zeichen aus einer Zeichenfolge (&) zu beschränken. Wenn ein QuickInfo-Steuerelement keinen styl TTS_NOPREFIX, entfernt das System automatisch kaufmännische und-Zeichen, dem eine Anwendung die gleiche Zeichenfolge als sowohl ein Menüelement und als Text in ein QuickInfo-Steuerelement zu verwenden.|
+|TTS_ALWAYSTIP|Gibt an, dass die QuickInfo angezeigt wird, wenn sich der Cursor auf einem Tool befindet, unabhängig davon, ob das Besitzer Fenster des QuickInfo-Steuer Elements aktiv oder inaktiv ist. Ohne diesen Stil wird das QuickInfo-Steuerelement angezeigt, wenn das Besitzer Fenster des Tools aktiv ist, aber nicht, wenn es inaktiv ist.|
+|TTS_NOPREFIX|Dieser Stil hindert das System daran, das kaufmännische und-Zeichen (&) aus einer Zeichenfolge zu entfernen. Wenn ein QuickInfo-Steuerelement nicht den TTS_NOPREFIX-Stil hat, entfernt das System automatisch kaufmännische und-Zeichen und ermöglicht einer Anwendung, dieselbe Zeichenfolge wie ein Menü Element und als Text in einem QuickInfo-Steuerelement zu verwenden.|
 
-Ein QuickInfo-Steuerelement verfügt über die WS_POPUP und WS_EX_TOOLWINDOW Window-Stile, unabhängig davon, ob Sie sie angeben, wenn das Steuerelement erstellt.
+Ein QuickInfo-Steuerelement verfügt über die Fenster Stile WS_POPUP und WS_EX_TOOLWINDOW, unabhängig davon, ob Sie Sie beim Erstellen des Steuer Elements angeben.
 
-Rufen Sie zum Erstellen einer QuickInfo-Steuerelement mit erweiterten Fensterstile [CToolTipCtrl::CreateEx](#createex) anstelle von `Create`.
+Um ein QuickInfo-Steuerelement mit erweiterten Windows-Stilen zu erstellen, rufen Sie [CToolTipCtrl::](#createex) up-Ex anstelle von `Create`auf.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
+  Weitere Informationen finden Sie im Beispiel für [CPropertySheet:: gettabcontrol](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="createex"></a>  CToolTipCtrl::CreateEx
+##  <a name="createex"></a>CToolTipCtrl:: kreateex
 
-Erstellt ein Steuerelement (ein untergeordnetes Fenster), und ordnen Sie sie der `CToolTipCtrl` Objekt.
+Erstellt ein-Steuerelement (ein untergeordnetes Fenster) und ordnet `CToolTipCtrl` es dem-Objekt zu.
 
 ```
 virtual BOOL CreateEx(
@@ -316,23 +316,23 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parameter
 
 *pParentWnd*<br/>
-Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.
+Ein Zeiger auf das Fenster, das das übergeordnete Element des Steuer Elements ist.
 
 *dwStyle*<br/>
-Gibt den QuickInfo-Steuerelements-Stil. Finden Sie unter den **"Hinweise"** Abschnitt [erstellen](#create) für Weitere Informationen.
+Gibt den Stil des QuickInfo-Steuer Elements an. Weitere Informationen finden Sie im Abschnitt " **Hinweise** " unter " [Erstellen](#create) ".
 
 *dwStyleEx*<br/>
-Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.
+Gibt die erweiterte Art des zu erstellenden Steuer Elements an. Eine Liste erweiterter Windows-Stile finden Sie unter dem *dwExStyle* -Parameter für " [kreatewindowex](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " in der Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn erfolgreich, andernfalls 0.
+Ungleich 0 (null), wenn erfolgreich, andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung `CreateEx` anstelle von `Create` anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_**.
+Verwenden `CreateEx` Sie anstelle `Create` von, um erweiterte Windows-Stile anzuwenden, die durch den erweiterten Windows-Stil **WS_EX_** angegeben werden.
 
-##  <a name="ctooltipctrl"></a>  CToolTipCtrl::CToolTipCtrl
+##  <a name="ctooltipctrl"></a>CToolTipCtrl:: CToolTipCtrl
 
 Erstellt ein `CToolTipCtrl`-Objekt.
 
@@ -342,15 +342,15 @@ CToolTipCtrl();
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie `Create` nach dem Erstellen des Objekts.
+Sie müssen nach `Create` dem Erstellen des-Objekts aufzurufen.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCControlLadenDialog#74](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]
 
-##  <a name="deltool"></a>  CToolTipCtrl::DelTool
+##  <a name="deltool"></a>CToolTipCtrl::D eltool
 
-Entfernt das Tool gemäß *aufnehmen* und *nIDTool* aus der Sammlung von Tools, die durch ein QuickInfo-Steuerelement unterstützt.
+Entfernt das von *pwnd* und *nidtool* angegebene Tool aus der Sammlung von Tools, die von einem QuickInfo-Steuerelement unterstützt werden.
 
 ```
 void DelTool(
@@ -361,12 +361,12 @@ void DelTool(
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-Zeiger auf das Fenster, das Tool enthält.
+Zeiger auf das Fenster, das das Tool enthält.
 
 *nIDTool*<br/>
-Die ID des Tools.
+ID des Tools.
 
-##  <a name="getbubblesize"></a>  CToolTipCtrl::GetBubbleSize
+##  <a name="getbubblesize"></a>CToolTipCtrl:: getbubblesize
 
 Ruft die Größe der QuickInfo ab.
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>Parameter
 
 *lpToolInfo*<br/>
-Ein Zeiger auf der QuickInfo [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) Struktur.
+Ein Zeiger auf die [toolinfo](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) -Struktur der QuickInfo.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -385,11 +385,11 @@ Die Größe der QuickInfo.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_GETBUBBLESIZE](/windows/desktop/Controls/ttm-getbubblesize), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_GETBUBBLESIZE](/windows/desktop/Controls/ttm-getbubblesize), wie im Windows SDK beschrieben.
 
-##  <a name="getcurrenttool"></a>  CToolTipCtrl::GetCurrentTool
+##  <a name="getcurrenttool"></a>CToolTipCtrl:: getcurrenttool
 
-Ruft die Informationen, z. B. die Größe, Position und Text, der das QuickInfo-Fenster angezeigt, die für das aktuelle QuickInfo-Steuerelement ab.
+Ruft Informationen (z. b. die Größe, Position und den Text) des QuickInfo-Fensters ab, das vom aktuellen QuickInfo-Steuerelement angezeigt wird.
 
 ```
 BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
@@ -399,11 +399,11 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*lpToolInfo*|[out] Zeiger auf eine [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) -Struktur, die Informationen über das aktuelle QuickInfo-Fenster empfängt.|
+|*lpToolInfo*|vorgenommen Ein Zeiger auf eine [toolinfo](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) -Struktur, die Informationen über das aktuelle QuickInfo-Fenster empfängt.|
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Informationen erfolgreich abgerufen wird. andernfalls "false".
+TRUE, wenn die Informationen erfolgreich abgerufen werden. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -411,13 +411,13 @@ Diese Methode sendet die [TTM_GETCURRENTTOOL](/windows/desktop/Controls/ttm-getc
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Codebeispiel ruft Informationen über das aktuelle QuickInfo-Fenster ab.
+Im folgenden Codebeispiel werden Informationen zum aktuellen QuickInfo-Fenster abgerufen.
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]
 
-##  <a name="getdelaytime"></a>  CToolTipCtrl::GetDelayTime
+##  <a name="getdelaytime"></a>CToolTipCtrl:: getdelta aytime
 
-Ruft den ersten, Popup und Wiederholungsdauern, die derzeit für ein QuickInfo-Steuerelement festgelegt.
+Ruft die Anfangs-, Popup-und neuanschau Dauer ab, die für ein QuickInfo-Steuerelement aktuell festgelegt ist.
 
 ```
 int GetDelayTime(DWORD dwDuration) const;
@@ -426,25 +426,25 @@ int GetDelayTime(DWORD dwDuration) const;
 ### <a name="parameters"></a>Parameter
 
 *dwDuration*<br/>
-Flag, die angibt, welche Duration-Wert abgerufen wird. Dieser Parameter kann einen der folgenden Werte sein:
+Flag, das angibt, welcher Duration-Wert abgerufen wird. Dieser Parameter kann einen der folgenden Werte aufweisen:
 
-- TTDT_AUTOPOP abrufen, bleibt die Zeitspanne, die den QuickInfo-Fenster angezeigt, wenn der Zeiger innerhalb der umschließenden Rechtecks des Tools nicht bewegt wird.
+- TTDT_AUTOPOP Ruft die Zeitspanne ab, die das QuickInfo-Fenster sichtbar bleibt, wenn der Zeiger innerhalb des umgebenden Rechtecks eines Tools stationär ist.
 
-- TTDT_INITIAL abzurufen, wird die Zeitspanne, die der Zeiger innerhalb der umschließenden Rechtecks des Tools, bevor das QuickInfo-Fenster feststehend bleiben soll muss angezeigt.
+- TTDT_INITIAL rufen Sie die Zeitspanne ab, in der der Zeiger innerhalb des umgebenden Rechtecks eines Tools stationär bleiben muss, bevor das QuickInfo-Fenster angezeigt wird.
 
-- TTDT_RESHOW abrufen verschiebt die Länge des Zeitaufwands für nachfolgende QuickInfo-Fenster als des Zeigers angezeigt werden, von einem einzigen Tool.
+- TTDT_RESHOW rufen Sie ab, wie lange es dauert, bis nachfolgende QuickInfo-Fenster angezeigt werden, wenn der Zeiger von einem Tool zu einem anderen verschoben wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die angegebene Verzögerungszeit in Millisekunden
+Die angegebene Verzögerungszeit in Millisekunden.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_GETDELAYTIME](/windows/desktop/Controls/ttm-getdelaytime), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_GETDELAYTIME](/windows/desktop/Controls/ttm-getdelaytime), wie im Windows SDK beschrieben.
 
-##  <a name="getmargin"></a>  CToolTipCtrl::GetMargin
+##  <a name="getmargin"></a>CToolTipCtrl:: getMargin
 
-Ruft ab, der oben, linken, unteren und rechten Rändern legen Sie für eine QuickInfo-Fenster.
+Ruft die oberen, linken, unteren und rechten Ränder für ein QuickInfo-Fenster ab.
 
 ```
 void GetMargin(LPRECT lprc) const;
@@ -453,20 +453,20 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>Parameter
 
 *lprc*<br/>
-Adresse von einem `RECT` -Struktur, die die Informationen im Indikatorrand erhält. Die Mitglieder der [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur ist kein umschließendes Rechteck definiert. Im Rahmen dieser Meldung sind die Strukturmember wie folgt interpretiert:
+Die Adresse einer `RECT` Struktur, die die Rand Informationen empfängt. Die Elemente der [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur definieren kein Begrenzungs Rechteck. Für den Zweck dieser Nachricht werden die Strukturmember wie folgt interpretiert:
 
 |Member|Darstellung|
 |------------|--------------------|
-|`top`|Abstand zwischen dem oberen Rahmen und dem oberen Rand der QuickInfo-Text, in Pixel.|
-|`left`|Der Abstand zwischen linkem Rahmen und linken Ende des QuickInfo-Text, in Pixel.|
-|`bottom`|Abstand zwischen dem unteren Rahmen und dem unteren Rand in Pixel der QuickInfo-Text.|
-|`right`|Der Abstand zwischen rechtem Rahmen und das rechte Ende der QuickInfo-Text, in Pixel.|
+|`top`|Abstand zwischen dem oberen Rand und dem oberen Rand des QuickInfo-Texts in Pixel.|
+|`left`|Abstand zwischen dem linken Rand und dem linken Ende des Tip-Texts in Pixel.|
+|`bottom`|Abstand zwischen dem unteren und dem unteren Rand des Tip-Texts in Pixel.|
+|`right`|Abstand zwischen dem rechten Rand und dem rechten Ende des Tip-Texts in Pixel.|
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_GETMARGIN](/windows/desktop/Controls/ttm-getmargin), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_GETMARGIN](/windows/desktop/Controls/ttm-getmargin), wie im Windows SDK beschrieben.
 
-##  <a name="getmaxtipwidth"></a>  CToolTipCtrl::GetMaxTipWidth
+##  <a name="getmaxtipwidth"></a>CToolTipCtrl:: GetMaxTipWidth
 
 Ruft die maximale Breite für ein QuickInfo-Fenster ab.
 
@@ -480,11 +480,11 @@ Die maximale Breite für ein QuickInfo-Fenster.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_GETMAXTIPWIDTH](/windows/desktop/Controls/ttm-getmaxtipwidth), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_GETMAXTIPWIDTH](/windows/desktop/Controls/ttm-getmaxtipwidth), wie im Windows SDK beschrieben.
 
-##  <a name="gettext"></a>  CToolTipCtrl::GetText
+##  <a name="gettext"></a>CToolTipCtrl:: gettext
 
-Ruft den Text ab, dem ein QuickInfo-Steuerelement für ein Tool verwaltet.
+Ruft den Text ab, der von einem QuickInfo-Steuerelement für ein Tool verwaltet wird.
 
 ```
 void GetText(
@@ -496,21 +496,21 @@ void GetText(
 ### <a name="parameters"></a>Parameter
 
 *str*<br/>
-Ein Verweis auf eine `CString` -Objekt, das Tool den Text empfängt.
+Verweis auf ein `CString` -Objekt, das den tooltext empfängt.
 
 *pWnd*<br/>
-Zeiger auf das Fenster, das Tool enthält.
+Zeiger auf das Fenster, das das Tool enthält.
 
 *nIDTool*<br/>
-Die ID des Tools.
+ID des Tools.
 
 ### <a name="remarks"></a>Hinweise
 
-Die *aufnehmen* und *nIDTool* Parameter identifiziert das Tool. Wenn Sie dieses Tool in der QuickInfo-Steuerelement durch einen vorherigen Aufruf von zuvor registriert wurde `CToolTipCtrl::AddTool`, das Objekt, das auf die *str* Parameter ist das Tool den Text zugewiesen.
+Das Tool wird mit den Parametern *pwnd* und *nidtool* identifiziert. Wenn das Tool bereits zuvor mit dem QuickInfo-Steuerelement über einen vorherigen `CToolTipCtrl::AddTool`-Befehl registriert wurde, wird das Objekt, auf das der *Str* -Parameter verweist, dem tooltext zugewiesen.
 
-##  <a name="gettipbkcolor"></a>  CToolTipCtrl::GetTipBkColor
+##  <a name="gettipbkcolor"></a>CToolTipCtrl:: gettipbkcolor
 
-Ruft die Hintergrundfarbe in einer QuickInfo-Fenster ab.
+Ruft die Hintergrundfarbe in einem QuickInfo-Fenster ab.
 
 ```
 COLORREF GetTipBkColor() const;
@@ -518,15 +518,15 @@ COLORREF GetTipBkColor() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [COLORREF](/windows/desktop/gdi/colorref) Wert, der die Hintergrundfarbe darstellt.
+Ein [COLORREF](/windows/desktop/gdi/colorref) -Wert, der die Hintergrundfarbe darstellt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_GETTIPBKCOLOR](/windows/desktop/Controls/ttm-gettipbkcolor), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_GETTIPBKCOLOR](/windows/desktop/Controls/ttm-gettipbkcolor), wie im Windows SDK beschrieben.
 
-##  <a name="gettiptextcolor"></a>  CToolTipCtrl::GetTipTextColor
+##  <a name="gettiptextcolor"></a>CToolTipCtrl:: gettiptextcolor
 
-Ruft die Textfarbe in einer QuickInfo-Fenster ab.
+Ruft die Textfarbe in einem QuickInfo-Fenster ab.
 
 ```
 COLORREF GetTipTextColor() const;
@@ -534,15 +534,15 @@ COLORREF GetTipTextColor() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [COLORREF](/windows/desktop/gdi/colorref) Wert, der die Textfarbe darstellt.
+Ein [COLORREF](/windows/desktop/gdi/colorref) -Wert, der die Textfarbe darstellt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_GETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-gettiptextcolor), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_GETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-gettiptextcolor), wie im Windows SDK beschrieben.
 
-##  <a name="gettitle"></a>  CToolTipCtrl::GetTitle
+##  <a name="gettitle"></a>CToolTipCtrl:: getTitle
 
-Ruft den Titel des aktuellen QuickInfo-Steuerelements ab.
+Ruft den Titel des aktuellen QuickInfo-Steuer Elements ab.
 
 ```
 void GetTitle(PTTGETTITLE pttgt) const;
@@ -552,15 +552,15 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*pttgt*|[out] Zeiger auf eine [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) -Struktur, die Informationen über das QuickInfo-Steuerelement enthält. Bei der Rückgabe dieser Methode die *PszTitle* Mitglied der [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) Struktur zeigt auf den Text des Titels.|
+|*pttgt*|vorgenommen Zeiger auf eine [ttgettitle](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle) -Struktur, die Informationen über das QuickInfo-Steuerelement enthält. Wenn diese Methode zurückgegeben wird, zeigt das *psztitle* -Member der [ttgettitle](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle) -Struktur auf den Text des Titels.|
 
 ### <a name="remarks"></a>Hinweise
 
 Diese Methode sendet die [TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle) -Nachricht, die im Windows SDK beschrieben wird.
 
-##  <a name="gettoolcount"></a>  CToolTipCtrl::GetToolCount
+##  <a name="gettoolcount"></a>CToolTipCtrl:: gettoolcount
 
-Ruft die Anzahl von den Tools, die das QuickInfo-Steuerelement registriert.
+Ruft die Anzahl der mit dem QuickInfo-Steuerelement registrierten Tools ab.
 
 ```
 int GetToolCount() const;
@@ -568,11 +568,11 @@ int GetToolCount() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Anzahl von Tools, die bei das QuickInfo-Steuerelement registriert werden.
+Gibt die Anzahl der mit dem QuickInfo-Steuerelement registrierten Tools an.
 
-##  <a name="gettoolinfo"></a>  CToolTipCtrl::GetToolInfo
+##  <a name="gettoolinfo"></a>CToolTipCtrl:: gettoolinfo
 
-Ruft ab, der ein QuickInfo-Steuerelement verwaltet Informationen zu einem Tool aus.
+Ruft die Informationen ab, die ein QuickInfo-Steuerelement zu einem Tool beibehält.
 
 ```
 BOOL GetToolInfo(
@@ -584,13 +584,13 @@ BOOL GetToolInfo(
 ### <a name="parameters"></a>Parameter
 
 *ToolInfo*<br/>
-Ein Verweis auf eine `TOOLINFO` -Objekt, das Tool den Text empfängt.
+Verweis auf ein `TOOLINFO` -Objekt, das den tooltext empfängt.
 
 *pWnd*<br/>
-Zeiger auf das Fenster, das Tool enthält.
+Zeiger auf das Fenster, das das Tool enthält.
 
 *nIDTool*<br/>
-Die ID des Tools.
+ID des Tools.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -598,11 +598,11 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Die `hwnd` und `uId` Mitglied der [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) Struktur verweist *CToolInfo* identifizieren Sie das Tool. Wenn dieses Tool, mit dem QuickInfo-Steuerelement durch einen vorherigen Aufruf von registriert wurde `AddTool`, `TOOLINFO` Struktur mit Informationen zu diesem Tool gefüllt ist.
+Das-Element und das- `uId` Element der [toolinfo](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) -Struktur, auf die *ctoolinfo* verweist, identifizieren das Tool. `hwnd` Wenn dieses Tool über einen vorherigen `AddTool`-Befehl mit dem QuickInfo-Steuerelement registriert wurde, wird die `TOOLINFO` -Struktur mit Informationen über das Tool gefüllt.
 
-##  <a name="hittest"></a>  CToolTipCtrl::HitTest
+##  <a name="hittest"></a>CToolTipCtrl:: HitTest
 
-Testet einen Punkt, um zu bestimmen, ob es das umschließende Rechteck des angegebenen Tools befindet und, wenn dies der Fall ist, rufen Informationen zu diesem Tool.
+Testet einen Punkt, um zu bestimmen, ob er sich innerhalb des umgebenden Rechtecks des angegebenen Tools befindet, und ruft, wenn dies der Fall ist, Informationen über das Tool ab.
 
 ```
 BOOL HitTest(
@@ -614,23 +614,23 @@ BOOL HitTest(
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-Zeiger auf das Fenster, das Tool enthält.
+Zeiger auf das Fenster, das das Tool enthält.
 
 *pt*<br/>
-Zeiger auf eine `CPoint` mit den Koordinaten des Punkts zu testende Objekt.
+Zeiger auf ein `CPoint` -Objekt, das die Koordinaten des zu testenden Punkts enthält.
 
 *lpToolInfo*<br/>
-Zeiger auf [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) Struktur, die Informationen über das Tool enthält.
+Ein Zeiger auf die [toolinfo](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) -Struktur, die Informationen über das Tool enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich null der durch die Informationen des Treffertests angegebene Punkt innerhalb des Tools umschließenden Rechtecks ist; andernfalls 0.
+Ungleich 0 (null), wenn sich der durch die Treffer Test Informationen angegebene Punkt innerhalb des umgebenden Rechtecks des Tools befindet. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn diese Funktion einen Wert ungleich NULL zurückgibt, die Struktur verweist *LpToolInfo* mit Informationen über das Tool an, innerhalb dessen Rechtecks der Punkt liegt, gefüllt ist.
+Wenn diese Funktion einen Wert ungleich 0 (null) zurückgibt, wird die Struktur, auf die von *lptoolinfo* verwiesen wird, mit Informationen zu dem Tool gefüllt, in dessen Rechteck der Punkt liegt.
 
-Die `TTHITTESTINFO` Struktur ist folgendermaßen definiert:
+Die `TTHITTESTINFO` -Struktur ist wie folgt definiert:
 
 ```cpp
 typedef struct _TT_HITTESTINFO { // tthti
@@ -642,19 +642,19 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 - `hwnd`
 
-   Gibt das Tool den Handle.
+   Gibt das Handle des Tools an.
 
 - `pt`
 
-   Gibt die Koordinaten eines Punkts an, ob es sich bei der Punkt umschließenden ist, in des Tools des Rechtecks.
+   Gibt die Koordinaten eines Punkts an, wenn sich der Punkt im umgebenden Rechteck des Tools befindet.
 
 - `ti`
 
-   Informationen zu diesem Tool. Weitere Informationen zu den `TOOLINFO` Struktur, siehe [CToolTipCtrl::GetToolInfo](#gettoolinfo).
+   Informationen zum Tool. Weitere Informationen `TOOLINFO` zur-Struktur finden Sie unter [CToolTipCtrl:: gettoolinfo](#gettoolinfo).
 
-##  <a name="pop"></a>  CToolTipCtrl::Pop
+##  <a name="pop"></a>CToolTipCtrl::P op
 
-Eine angezeigte QuickInfo-Fenster aus der Ansicht gelöscht.
+Entfernt ein angezeigtes QuickInfo-Fenster aus der Ansicht.
 
 ```
 void Pop();
@@ -662,11 +662,11 @@ void Pop();
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_POP](/windows/desktop/Controls/ttm-pop), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_POP](/windows/desktop/Controls/ttm-pop), wie im Windows SDK beschrieben.
 
-##  <a name="popup"></a>  CToolTipCtrl::Popup
+##  <a name="popup"></a>CToolTipCtrl::P-opup
 
-Bewirkt, dass das aktuelle QuickInfo-Steuerelement an den Koordinaten der Maus letzten Nachricht angezeigt.
+Bewirkt, dass das aktuelle QuickInfo-Steuerelement an den Koordinaten der letzten Maus Meldung angezeigt wird.
 
 ```
 void Popup();
@@ -678,13 +678,13 @@ Diese Methode sendet die [TTM_POPUP](/windows/desktop/Controls/ttm-popup) -Nachr
 
 ### <a name="example"></a>Beispiel
 
-Das folgende Codebeispiel zeigt ein QuickInfo-Fenster.
+Im folgenden Codebeispiel wird ein QuickInfo-Fenster angezeigt.
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]
 
-##  <a name="relayevent"></a>  CToolTipCtrl:: RelayEvent
+##  <a name="relayevent"></a>CToolTipCtrl:: relayevent
 
-Übergibt eine Maus-Nachricht an ein QuickInfo-Steuerelement für die Verarbeitung.
+Übergibt eine Maus Meldung an ein QuickInfo-Steuerelement zur Verarbeitung.
 
 ```
 void RelayEvent(LPMSG lpMsg);
@@ -693,11 +693,11 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Parameter
 
 *lpMsg*<br/>
-Zeiger auf eine [MSG](/windows/desktop/api/winuser/ns-winuser-msg) Struktur, die die Nachricht an das Relay enthält.
+Zeiger auf eine [msg](/windows/desktop/api/winuser/ns-winuser-msg) -Struktur, die die zu relaynachricht enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein QuickInfo-Steuerelement verarbeitet nur die folgenden Meldungen, die an sie gesendet werden `RelayEvent`:
+Ein QuickInfo-Steuerelement verarbeitet nur die folgenden Nachrichten, die von `RelayEvent`ihm gesendet werden:
 
 |WM_LBUTTONDOWN|WM_MOUSEMOVE|
 |---------------------|-------------------|
@@ -707,9 +707,9 @@ Ein QuickInfo-Steuerelement verarbeitet nur die folgenden Meldungen, die an sie 
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
+  Weitere Informationen finden Sie im Beispiel für [CPropertySheet:: gettabcontrol](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="setdelaytime"></a>  CToolTipCtrl::SetDelayTime
+##  <a name="setdelaytime"></a>CToolTipCtrl:: setdelta Time
 
 Legt die Verzögerungszeit für ein QuickInfo-Steuerelement fest.
 
@@ -727,18 +727,18 @@ void SetDelayTime(
 Gibt die neue Verzögerungszeit in Millisekunden an.
 
 *dwDuration*<br/>
-Flag, die angibt, welche Duration-Wert abgerufen wird. Finden Sie unter [CToolTipCtrl::GetDelayTime](#getdelaytime) eine Beschreibung der gültigen Werte.
+Flag, das angibt, welcher Duration-Wert abgerufen wird. Eine Beschreibung der gültigen Werte finden Sie unter [CToolTipCtrl:: getdelta-Time](#getdelaytime) .
 
 *iTime*<br/>
-Die Zeit der angegebenen Verzögerung in Millisekunden.
+Die angegebene Verzögerungszeit in Millisekunden.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Verzögerung ist die Zeitspanne, die der Cursor auf einem Tool bleiben muss, bevor das QuickInfo-Fenster angezeigt wird. Die Standardzeit für die Verzögerung beträgt 500 Millisekunden.
+Die Verzögerungszeit ist die Zeitspanne, die der Cursor in einem Tool verbleiben muss, bevor das QuickInfo-Fenster angezeigt wird. Die Standard Verzögerungszeit beträgt 500 Millisekunden.
 
-##  <a name="setmargin"></a>  CToolTipCtrl::SetMargin
+##  <a name="setmargin"></a>CToolTipCtrl:: setMargin
 
-Legt fest, der oben, linken, unteren und rechten Rändern für ein QuickInfo-Fenster.
+Legt die oberen, linken, unteren und rechten Ränder für ein QuickInfo-Fenster fest.
 
 ```
 void SetMargin(LPRECT lprc);
@@ -747,13 +747,13 @@ void SetMargin(LPRECT lprc);
 ### <a name="parameters"></a>Parameter
 
 *lprc*<br/>
-Adresse von einem `RECT` -Struktur, enthält die Informationen im Indikatorrand festgelegt werden. Die Mitglieder der `RECT` Struktur ist kein umschließendes Rechteck definiert. Finden Sie unter [CToolTipCtrl::GetMargin](#getmargin) eine Beschreibung der Informationen im Indikatorrand.
+Adresse einer `RECT` Struktur, die die zu festzulegenden Rand Informationen enthält. Die Member der `RECT` Struktur definieren kein Begrenzungs Rechteck. Eine Beschreibung der Rand Informationen finden Sie unter [CToolTipCtrl:: getMargin](#getmargin) .
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_SETMARGIN](/windows/desktop/Controls/ttm-setmargin), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_SETMARGIN](/windows/desktop/Controls/ttm-setmargin), wie im Windows SDK beschrieben.
 
-##  <a name="setmaxtipwidth"></a>  CToolTipCtrl::SetMaxTipWidth
+##  <a name="setmaxtipwidth"></a>CToolTipCtrl:: SetMaxTipWidth
 
 Legt die maximale Breite für ein QuickInfo-Fenster fest.
 
@@ -764,19 +764,19 @@ int SetMaxTipWidth(int iWidth);
 ### <a name="parameters"></a>Parameter
 
 *iWidth*<br/>
-Die maximale Tool Tip-Fensterbreite festgelegt werden.
+Die maximale ToolTip-Fensterbreite, die festgelegt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die vorherigen maximale Tip-Breite.
+Die vorherige maximale Tip-Breite.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_SETMAXTIPWIDTH](/windows/desktop/Controls/ttm-setmaxtipwidth), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_SETMAXTIPWIDTH](/windows/desktop/Controls/ttm-setmaxtipwidth), wie im Windows SDK beschrieben.
 
-##  <a name="settipbkcolor"></a>  CToolTipCtrl::SetTipBkColor
+##  <a name="settipbkcolor"></a>CToolTipCtrl:: Setup-bkcolor
 
-Legt die Farbe des Hintergrunds in ein QuickInfo-Fenster fest.
+Legt die Hintergrundfarbe in einem QuickInfo-Fenster fest.
 
 ```
 void SetTipBkColor(COLORREF clr);
@@ -789,11 +789,11 @@ Die neue Hintergrundfarbe.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_SETTIPBKCOLOR](/windows/desktop/Controls/ttm-settipbkcolor), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_SETTIPBKCOLOR](/windows/desktop/Controls/ttm-settipbkcolor), wie im Windows SDK beschrieben.
 
-##  <a name="settiptextcolor"></a>  CToolTipCtrl::SetTipTextColor
+##  <a name="settiptextcolor"></a>CToolTipCtrl:: Setup TextColor
 
-Legt die Textfarbe in einer QuickInfo-Fenster fest.
+Legt die Textfarbe in einem QuickInfo-Fenster fest.
 
 ```
 void SetTipTextColor(COLORREF clr);
@@ -806,11 +806,11 @@ Die neue Textfarbe.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_SETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-settiptextcolor), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_SETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-settiptextcolor), wie im Windows SDK beschrieben.
 
-##  <a name="settitle"></a>  CToolTipCtrl::SetTitle
+##  <a name="settitle"></a>CToolTipCtrl:: SetTitle
 
-Fügt eine Standardzeichenfolge Symbol und dem Titel, eine QuickInfo an.
+Fügt einer QuickInfo ein Standard Symbol und eine Titel Zeichenfolge hinzu.
 
 ```
 BOOL SetTitle(
@@ -821,10 +821,10 @@ BOOL SetTitle(
 ### <a name="parameters"></a>Parameter
 
 *uIcon*<br/>
-Finden Sie unter *Symbol* in [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle) im Windows SDK.
+Siehe das *Symbol* in [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle) im Windows SDK.
 
 *lpstrTitle*<br/>
-Zeiger auf die Title-Zeichenfolge.
+Ein Zeiger auf die Titel Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -832,11 +832,11 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle), wie im Windows SDK beschrieben.
 
-##  <a name="settoolinfo"></a>  CToolTipCtrl::SetToolInfo
+##  <a name="settoolinfo"></a>CToolTipCtrl:: SetToolInfo
 
-Legt fest, die Informationen, die eine QuickInfo für ein Tool verwaltet.
+Legt die Informationen fest, die eine QuickInfo für ein Tool beibehält.
 
 ```
 void SetToolInfo(LPTOOLINFO lpToolInfo);
@@ -845,11 +845,11 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>Parameter
 
 *lpToolInfo*<br/>
-Ein Zeiger auf eine [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) -Struktur, die Informationen festlegen angibt.
+Ein Zeiger auf eine [toolinfo](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) -Struktur, die die festzulegenden Informationen angibt.
 
-##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect
+##  <a name="settoolrect"></a>CToolTipCtrl:: SetToolRect
 
-Legt ein neues umschließendes Rechteck für ein Tool an.
+Legt ein neues Begrenzungs Rechteck für ein Tool fest.
 
 ```
 void SetToolRect(
@@ -861,17 +861,17 @@ void SetToolRect(
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-Zeiger auf das Fenster, das Tool enthält.
+Zeiger auf das Fenster, das das Tool enthält.
 
 *nIDTool*<br/>
-Die ID des Tools.
+ID des Tools.
 
 *lpRect*<br/>
-Zeiger auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die das neue umschließende Rechteck angibt.
+Ein Zeiger auf eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die das neue umschließende Rechteck angibt.
 
-##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
+##  <a name="setwindowtheme"></a>CToolTipCtrl:: SetWindowTheme
 
-Legt fest, der die visuelle Darstellung der QuickInfo-Fenster.
+Legt den visuellen Stil des QuickInfo-Fensters fest.
 
 ```
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
@@ -880,7 +880,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ### <a name="parameters"></a>Parameter
 
 *pszSubAppName*<br/>
-Ein Zeiger auf eine Unicode-Zeichenfolge mit den visuellen Stil festlegen.
+Ein Zeiger auf eine Unicode-Zeichenfolge, die den festzulegenden visuellen Stil enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -888,19 +888,19 @@ Der Rückgabewert wird nicht verwendet.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion emuliert die Funktionen des die [TTM_SETWINDOWTHEME](/windows/desktop/Controls/ttm-setwindowtheme) Nachricht, wie im Windows SDK beschrieben.
+Diese Member-Funktion emuliert die Funktionalität der [TTM_SETWINDOWTHEME](/windows/desktop/Controls/ttm-setwindowtheme) -Nachricht, wie im Windows SDK beschrieben.
 
-##  <a name="update"></a>  CToolTipCtrl::Update
+##  <a name="update"></a>CToolTipCtrl:: Update
 
-Erzwingt, dass die aktuelle Tools neu gezeichnet wird.
+Erzwingt, dass das aktuelle Tool neu gezeichnet wird.
 
 ```
 void Update();
 ```
 
-##  <a name="updatetiptext"></a>  CToolTipCtrl::UpdateTipText
+##  <a name="updatetiptext"></a>CToolTipCtrl:: updatetiptext
 
-Aktualisiert den QuickInfo-Text für dieses Steuerelements Tools.
+Aktualisiert den QuickInfo-Text für die Tools dieses Steuer Elements.
 
 ```
 void UpdateTipText(
@@ -920,13 +920,13 @@ void UpdateTipText(
 Zeiger auf den Text für das Tool.
 
 *pWnd*<br/>
-Zeiger auf das Fenster, das Tool enthält.
+Zeiger auf das Fenster, das das Tool enthält.
 
 *nIDTool*<br/>
-Die ID des Tools.
+ID des Tools.
 
 *nIDText*<br/>
-ID der Zeichenfolgenressource, die den Text für das Tool enthält.
+ID der Zeichen folgen Ressource, die den Text für das Tool enthält.
 
 ## <a name="see-also"></a>Siehe auch
 

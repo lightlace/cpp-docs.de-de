@@ -5,21 +5,21 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: cb888c1f3efe3ae0ecf35bc0f14ac0cda66112f9
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 3370736ebea81bdd19350f6236d2716cb9e54844
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611699"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68917009"
 ---
 # <a name="structures-used-by-mfc"></a>Von MFC verwendete Strukturen
 
-Die folgende Tabelle enthält die Strukturen, die von verschiedenen Memberfunktionen aufgerufen werden. Weitere Informationen über die Verwendung der einzelnen Struktur finden Sie in die Klassen und Member-Funktionen, die in der Liste "Siehe auch" für jede Struktur notiert haben.
+In der folgenden Tabelle werden die Strukturen aufgelistet, die von verschiedenen Element Funktionen aufgerufen werden. Weitere Informationen zur Verwendung einzelner Strukturen finden Sie in den Klassen und Element Funktionen, die in der Liste "Siehe auch" für jede Struktur aufgeführt sind.
 
 |||
 |-|-|
-|[ABC-Struktur](/windows/desktop/api/wingdi/ns-wingdi-_abc)|[HSE_VERSION_INFO-Struktur](../../mfc/reference/hse-version-info-structure.md)|
-|[ABCFLOAT-Struktur](/windows/desktop/api/wingdi/ns-wingdi-_abcfloat)|[LINGER-Struktur](/windows/desktop/api/winsock/ns-winsock-linger)|
+|[ABC-Struktur](/windows/desktop/api/wingdi/ns-wingdi-abc)|[HSE_VERSION_INFO-Struktur](../../mfc/reference/hse-version-info-structure.md)|
+|[ABCFLOAT-Struktur](/windows/desktop/api/wingdi/ns-wingdi-abcfloat)|[LINGER-Struktur](/windows/desktop/api/winsock/ns-winsock-linger)|
 |[AFX_EXTENSION_MODULE-Struktur](../../mfc/reference/afx-extension-module-structure.md)|[LOGBRUSH-Struktur](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
 |[BITMAP-Struktur](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|[LOGPEN-Struktur](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
 |[BITMAPINFO-Struktur](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo)|[MEASUREITEMSTRUCT-Struktur](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)|
@@ -27,9 +27,9 @@ Die folgende Tabelle enthält die Strukturen, die von verschiedenen Memberfunkti
 |[CDaoErrorInfo-Struktur](../../mfc/reference/cdaoerrorinfo-structure.md)|[MSG-Struktur](/windows/desktop/api/winuser/ns-winuser-tagmsg)|
 |[CDaoFieldInfo-Struktur](../../mfc/reference/cdaofieldinfo-structure.md)|[NCCALCSIZE_PARAMS-Struktur](/windows/desktop/api/winuser/ns-winuser-tagnccalcsize_params)|
 |[CDaoIndexFieldInfo-Struktur](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[PAINTSTRUCT-Struktur](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)|
-|[CDaoIndexInfo-Struktur](../../mfc/reference/cdaoindexinfo-structure.md)|[POINT-Struktur](/windows/desktop/api/windef/ns-windef-tagpoint)|
-|[CDaoParameterInfo-Struktur](../../mfc/reference/cdaoparameterinfo-structure.md)|[RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect)|
-|[CDaoQueryDefInfo-Struktur](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA-Struktur](/windows/desktop/api/wingdi/ns-wingdi-_rgndata)|
+|[CDaoIndexInfo-Struktur](../../mfc/reference/cdaoindexinfo-structure.md)|[Punkt Struktur](/windows/desktop/api/windef/ns-windef-tagpoint)|
+|[CDaoParameterInfo-Struktur](../../mfc/reference/cdaoparameterinfo-structure.md)|[Rect-Struktur](/windows/desktop/api/windef/ns-windef-tagrect)|
+|[CDaoQueryDefInfo-Struktur](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA-Struktur](/windows/desktop/api/wingdi/ns-wingdi-rgndata)|
 |[CDaoRelationFieldInfo-Struktur](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[SOCKADDR-Struktur](/windows/desktop/winsock/sockaddr-2)|
 |[CDaoRelationInfo-Struktur](../../mfc/reference/cdaorelationinfo-structure.md)|[SOCKADDR_IN-Struktur](/windows/desktop/winsock/sockaddr-2)|
 |[CDaoTableDefInfo-Struktur](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME-Struktur](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)

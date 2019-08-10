@@ -1,5 +1,5 @@
 ---
-title: CMFCToolBarComboBoxButton-Klasse
+title: Cmfctoolbarcomboboxbutton-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarComboBoxButton
@@ -64,16 +64,16 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: e3c124103aa95d9db5095e438a6b21d46c7cb35d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 639a5f98ff4780bd26388796039e85b812621b36
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218405"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915968"
 ---
-# <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton-Klasse
+# <a name="cmfctoolbarcomboboxbutton-class"></a>Cmfctoolbarcomboboxbutton-Klasse
 
-Eine Symbolleisten-Schaltfläche, die ein Kombinationsfeld-Steuerelement enthält ( [CComboBox-Klasse](../../mfc/reference/ccombobox-class.md)).
+Eine Symbolleisten-Schaltfläche, die ein Kombinations Feld-Steuerelement ( [CComboBox-Klasse](../../mfc/reference/ccombobox-class.md)) enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -93,50 +93,50 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMFCToolBarComboBoxButton::AddItem](#additem)|Fügt ein Element am Ende der Liste des Kombinationsfelds.|
-|[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Fügt ein Element auf der Liste des Kombinationsfelds. Die Reihenfolge der Elemente in der Liste wird angegeben, indem `Compare`.|
-|[CMFCToolBarComboBoxButton::Compare](#compare)|Vergleicht zwei Elemente. Wird aufgerufen, zum Sortieren von Elementen, `AddSortedItems` fügt der Liste des Kombinationsfelds hinzu.|
-|[CMFCToolBarComboBoxButton::CreateEdit](#createedit)|Erstellt ein neues Bearbeitungssteuerelement für die Kombinationsfelds-Schaltfläche.|
-|[CMFCToolBarComboBoxButton::DeleteItem](#deleteitem)|Löscht ein Element aus der Liste des Kombinationsfelds.|
-|[CMFCToolBarComboBoxButton::FindItem](#finditem)|Gibt den Index des Elements, das eine angegebene Zeichenfolge enthält.|
-|[CMFCToolBarComboBoxButton::GetByCmd](#getbycmd)|Gibt einen Zeiger auf die Kombinationsfelds-Schaltfläche mit einem angegebenen Befehls-ID|
-|[CMFCToolBarComboBoxButton::GetComboBox](#getcombobox)|Gibt einen Zeiger auf das Kombinationsfeld-Steuerelement, das in der kombinationsfeldschaltfläche eingebettet ist.|
-|[CMFCToolBarComboBoxButton::GetCount](#getcount)|Gibt die Anzahl der Elemente in das Kombinationsfeld-Liste zurück.|
-|[CMFCToolBarComboBoxButton::GetCountAll](#getcountall)|Das Kombinationsfeld für den Box-Schaltfläche, die eine angegebenen Befehls-ID gesucht. Gibt die Anzahl der Elemente in das Kombinationsfeld für Liste der Schaltfläche zurück.|
-|[CMFCToolBarComboBoxButton::GetCurSel](#getcursel)|Gibt den Index des ausgewählten Elements in das Kombinationsfeld-Liste zurück.|
-|[CMFCToolBarComboBoxButton::GetCurSelAll](#getcurselall)|Sucht das Kombinationsfeld für Kontrollkästchen-Schaltfläche, die eine angegebene Befehls-ID und gibt den Index des ausgewählten Elements in das Kombinationsfeld für Liste der Schaltfläche.|
-|[CMFCToolBarComboBoxButton::GetEditCtrl](#geteditctrl)|Gibt einen Zeiger auf das Steuerelement zum Bearbeiten, das in der kombinationsfeldschaltfläche eingebettet ist.|
-|[CMFCToolBarComboBoxButton::GetItem](#getitem)|Gibt die Zeichenfolge, die mit einem angegebenen Index in das Kombinationsfeld für den zugeordneten Liste zurück.|
-|[CMFCToolBarComboBoxButton::GetItemAll](#getitemall)|Sucht das Kombinationsfeld für Kontrollkästchen-Schaltfläche, die eine angegebene Befehls-ID und gibt die Zeichenfolge, die einen Index in der Liste des Kombinationsfelds der Schaltfläche zugeordnet ist.|
-|[CMFCToolBarComboBoxButton::GetItemData](#getitemdata)|Gibt die 32-Bit-Wert, der mit einem angegebenen Index in das Kombinationsfeld für den verknüpft ist Liste zurück.|
-|[CMFCToolBarComboBoxButton::GetItemDataAll](#getitemdataall)|Sucht das Kombinationsfeld für Kontrollkästchen-Schaltfläche, die eine angegebene Befehls-ID und gibt zurück, die 32-Bit-Wert, der einen Index in der Liste des Kombinationsfelds der Schaltfläche zugeordnet ist.|
-|[CMFCToolBarComboBoxButton::GetItemDataPtrAll](#getitemdataptrall)|Das Kombinationsfeld für den Box-Schaltfläche, die eine angegebenen Befehls-ID gesucht. Ruft zugeordnete der 32-Bit-Wert, der einen Index in der Liste des Kombinationsfelds dieser Schaltfläche, und gibt die 32-Bit-Wert als Zeiger zurück.|
-|[CMFCToolBarComboBoxButton::GetText](#gettext)|Gibt den Text in das Bearbeitungssteuerelement des Kombinationsfelds.|
-|[CMFCToolBarComboBoxButton::GetTextAll](#gettextall)|Sucht das Kombinationsfeld für Kontrollkästchen-Schaltfläche, die eine angegebene Befehls-ID und gibt den Text aus der Edit-Steuerelements der Schaltfläche.|
-|[CMFCToolBarComboBoxButton::IsCenterVert](#iscentervert)|Bestimmt, ob Schaltflächen in der Anwendung zentriert oder am oberen Rand der Symbolleiste ausgerichtet sind.|
-|[CMFCToolBarComboBoxButton::IsFlatMode](#isflatmode)|Bestimmt, ob Schaltflächen in der Anwendung eine flache Darstellung haben.|
-|[CMFCToolBarComboBoxButton::RemoveAllItems](#removeallitems)|Entfernt, die alle Elemente aus der Liste ein und Bearbeitungssteuerelement des Kombinationsfelds.|
-|[CMFCToolBarComboBoxButton::SelectItem](#selectitem)|Wählt ein Element nach dessen Index, eine 32-Bit-Wert oder eine Zeichenfolge im Kombinationsfeld und benachrichtigt das Kombinationsfeld-Steuerelement zur Auswahl.|
-|[CMFCToolBarComboBoxButton::SelectItemAll](#selectitemall)|Das Kombinationsfeld für den Box-Schaltfläche, die eine angegebenen Befehls-ID gesucht. Aufrufe `SelectItem` um ein Element der Schaltfläche entsprechend der Zeichenfolge, einem Index oder einer 32-Bit-Wert im Kombinationsfeld auszuwählen.|
-|[CMFCToolBarComboBoxButton::SetCenterVert](#setcentervert)|Gibt an, ob Schaltflächen in der Anwendung vertikal zentriert oder am oberen Rand der Symbolleiste ausgerichtet sind.|
-|[CMFCToolBarComboBoxButton::SetDropDownHeight](#setdropdownheight)|Legt die Höhe des im Dropdown-Listenfeld an.|
-|[CMFCToolBarComboBoxButton::SetFlatMode](#setflatmode)|Gibt an, ob Schaltflächen in der Anwendung eine flache Darstellung verfügen.|
+|[CMFCToolBarComboBoxButton::AddItem](#additem)|Fügt am Ende der Kombinations Feld Liste ein Element hinzu.|
+|[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Fügt der Kombinations Feld Liste ein Element hinzu. Die Reihenfolge der Elemente in der Liste wird durch `Compare`angegeben.|
+|[CMFCToolBarComboBoxButton::Compare](#compare)|Vergleicht zwei Elemente. Wird aufgerufen, um Elemente `AddSortedItems` zu sortieren, die der Kombinations Feld Liste hinzugefügt werden.|
+|[CMFCToolBarComboBoxButton::CreateEdit](#createedit)|Erstellt ein neues Bearbeitungs Steuerelement für die Kombinations Feld Schaltfläche.|
+|[CMFCToolBarComboBoxButton::DeleteItem](#deleteitem)|Löscht ein Element aus der Kombinations Feld Liste.|
+|[CMFCToolBarComboBoxButton::FindItem](#finditem)|Gibt den Index des Elements zurück, das eine angegebene Zeichenfolge enthält.|
+|[CMFCToolBarComboBoxButton::GetByCmd](#getbycmd)|Gibt einen Zeiger auf die Kombinations Feld Schaltfläche mit einer angegebenen Befehls-ID zurück.|
+|[CMFCToolBarComboBoxButton::GetComboBox](#getcombobox)|Gibt einen Zeiger auf das Kombinations Feld-Steuerelement zurück, das in die Kombinations Feld Schaltfläche eingebettet ist.|
+|[CMFCToolBarComboBoxButton::GetCount](#getcount)|Gibt die Anzahl der Elemente in der Kombinations Feld Liste zurück.|
+|[CMFCToolBarComboBoxButton::GetCountAll](#getcountall)|Sucht die Kombinations Feld Schaltfläche, die über eine angegebene Befehls-ID verfügt. Gibt die Anzahl der Elemente in der Kombinations Feld Liste dieser Schaltfläche zurück.|
+|[CMFCToolBarComboBoxButton::GetCurSel](#getcursel)|Gibt den Index des ausgewählten Elements in der Kombinations Feld Liste zurück.|
+|[CMFCToolBarComboBoxButton::GetCurSelAll](#getcurselall)|Sucht die Kombinations Feld Schaltfläche, die über eine angegebene Befehls-ID verfügt, und gibt den Index des ausgewählten Elements in der Kombinations Feld Liste dieser Schaltfläche zurück.|
+|[CMFCToolBarComboBoxButton::GetEditCtrl](#geteditctrl)|Gibt einen Zeiger auf das Bearbeitungs Steuerelement zurück, das in die Kombinations Feld Schaltfläche eingebettet ist.|
+|[CMFCToolBarComboBoxButton::GetItem](#getitem)|Gibt die Zeichenfolge zurück, die einem angegebenen Index in der Kombinations Feld Liste zugeordnet ist.|
+|[CMFCToolBarComboBoxButton::GetItemAll](#getitemall)|Sucht die Kombinations Feld Schaltfläche, die über eine angegebene Befehls-ID verfügt, und gibt die Zeichenfolge zurück, die einem Index in der Kombinations Feld Liste dieser Schaltfläche zugeordnet ist.|
+|[CMFCToolBarComboBoxButton::GetItemData](#getitemdata)|Gibt den 32-Bit-Wert zurück, der einem angegebenen Index in der Kombinations Feld Liste zugeordnet ist.|
+|[CMFCToolBarComboBoxButton::GetItemDataAll](#getitemdataall)|Sucht die Kombinations Feld Schaltfläche, die über eine angegebene Befehls-ID verfügt, und gibt den 32-Bit-Wert zurück, der einem Index in der Kombinations Feld Liste dieser Schaltfläche zugeordnet ist.|
+|[CMFCToolBarComboBoxButton::GetItemDataPtrAll](#getitemdataptrall)|Sucht die Kombinations Feld Schaltfläche, die über eine angegebene Befehls-ID verfügt. Ruft den 32-Bit-Wert ab, der einem Index in der Kombinations Feld Liste dieser Schaltfläche zugeordnet ist, und gibt den 32-Bit-Wert als Zeiger zurück.|
+|[CMFCToolBarComboBoxButton::GetText](#gettext)|Gibt den Text aus dem Bearbeitungs Steuerelement des Kombinations Felds zurück.|
+|[CMFCToolBarComboBoxButton::GetTextAll](#gettextall)|Sucht die Kombinations Feld Schaltfläche, die über eine angegebene Befehls-ID verfügt, und gibt den Text aus dem Bearbeitungs Steuerelement dieser Schaltfläche zurück.|
+|[CMFCToolBarComboBoxButton::IsCenterVert](#iscentervert)|Bestimmt, ob Kombinations Feld-Schaltflächen in der Anwendung zentriert oder am oberen Rand der Symbolleiste ausgerichtet werden.|
+|[CMFCToolBarComboBoxButton::IsFlatMode](#isflatmode)|Bestimmt, ob Kombinations Feld-Schaltflächen in der Anwendung flach dargestellt werden.|
+|[CMFCToolBarComboBoxButton::RemoveAllItems](#removeallitems)|Entfernt alle Elemente aus dem Listenfeld und das Bearbeitungs Steuerelement des Kombinations Felds.|
+|[CMFCToolBarComboBoxButton::SelectItem](#selectitem)|Wählt ein Element im Kombinations Feld gemäß dem Index, dem 32-Bit-Wert oder der Zeichenfolge aus und benachrichtigt das Kombinations Feld-Steuerelement über die Auswahl.|
+|[CMFCToolBarComboBoxButton::SelectItemAll](#selectitemall)|Sucht die Kombinations Feld Schaltfläche, die über eine angegebene Befehls-ID verfügt. Ruft `SelectItem` auf, um ein Element im Kombinations Feld dieser Schaltfläche entsprechend der Zeichenfolge, des Indexes oder des 32-Bit-Werts auszuwählen.|
+|[CMFCToolBarComboBoxButton::SetCenterVert](#setcentervert)|Gibt an, ob Kombinations Feld-Schaltflächen in der Anwendung vertikal zentriert oder am oberen Rand der Symbolleiste ausgerichtet werden.|
+|[CMFCToolBarComboBoxButton::SetDropDownHeight](#setdropdownheight)|Legt die Höhe des Dropdown-Listen Felds fest.|
+|[CMFCToolBarComboBoxButton::SetFlatMode](#setflatmode)|Gibt an, ob Kombinations Feld-Schaltflächen in der Anwendung flach dargestellt werden.|
 
 ## <a name="remarks"></a>Hinweise
 
-Um eine Kombinationsfelds-Schaltfläche einer Symbolleiste hinzuzufügen, gehen Sie folgendermaßen vor:
+Führen Sie die folgenden Schritte aus, um einer Symbolleiste eine Kombinations Feld Schaltfläche hinzuzufügen:
 
 1. Reservieren Sie eine Platzhalterressourcen-ID für die Schaltfläche in der übergeordneten Symbolleistenressource.
 
 2. Konstruieren Sie ein `CMFCToolBarComboBoxButton`-Objekt.
 
-3. Ersetzen Sie in der Message-Handler, die die AFX_WM_RESETTOOLBAR-Nachricht verarbeitet, die Schaltfläche "dummy" mit der neuen kombinationsfeldschaltfläche mit [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
+3. Ersetzen Sie im Meldungs Handler, der die AFX_WM_RESETTOOLBAR-Nachricht verarbeitet, die Dummy-Schaltfläche durch die Schaltfläche Neues Kombinations Feld, indem Sie [cmfctoolbar:: replacebutton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)verwenden.
 
-Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../../mfc/walkthrough-putting-controls-on-toolbars.md). Ein Beispiel für eine Symbolleiste kombinationsfeldschaltfläche finden Sie das Beispielprojekt VisualStudioDemo.
+Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen in](../../mfc/walkthrough-putting-controls-on-toolbars.md)Symbolleisten. Ein Beispiel für eine Kombinations Feld-Symbolleisten Schaltfläche finden Sie im Beispiel Projekt visualstudiodemo.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCToolBarComboBoxButton` -Klasse. Das Beispiel zeigt, wie Sie die Felder bearbeiten und das Kombinationsfeld zu aktivieren, legen die vertikale Position des Kombinationsfeld-Schaltflächen in der Anwendung, die Höhe des Listenfelds festlegen, wenn er, nach unten gelöscht wird, die flache Darstellung der Schaltflächen in der Anwendung festgelegt , und legen Sie den Text im Eingabefeld des Kombinationsfeld-Schaltfläche. Dieser Codeausschnitt ist Teil der [Visual Studio-Demobeispiel](../../overview/visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCToolBarComboBoxButton` -Klasse. Das Beispiel zeigt, wie Sie die Bearbeitungs-und Kombinations Felder aktivieren, die vertikale Position von Kombinations Feld-Schaltflächen in der Anwendung festlegen, die Höhe des Listen Felds beim Ablegen festlegen, die Darstellung der Kombinations Feld Schaltflächen in der Anwendung festlegen. , und legen Sie den Text im Bearbeitungsfeld der Kombinations Feld Schaltfläche fest. Dieser Code Ausschnitt ist Teil des [Visual Studio-Demo](../../overview/visual-cpp-samples.md)Beispiels.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]
@@ -151,11 +151,11 @@ Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in d
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxtoolbarcomboboxbutton.h
+**Header:** afxtoolbarcomboboxbutton. h
 
-##  <a name="additem"></a>  CMFCToolBarComboBoxButton::AddItem
+##  <a name="additem"></a>Cmfctoolbarcomboboxbutton:: AddItem
 
-Fügt ein eindeutiges Element in das Listenfeld an.
+Fügt ein eindeutiges Element an das Listenfeld an.
 
 ```
 virtual INT_PTR AddItem(
@@ -166,10 +166,10 @@ virtual INT_PTR AddItem(
 ### <a name="parameters"></a>Parameter
 
 *lpszItem*<br/>
-[in] Der Text des Elements, das im Listenfeld hinzugefügt werden soll.
+in Der Text des Elements, das dem Listenfeld hinzugefügt werden soll.
 
 *dwData*<br/>
-[in] Die Daten, die dem Element im Listenfeld hinzuzufügende zugeordnet.
+in Die Daten, die dem Element zugeordnet sind, das dem Listenfeld hinzugefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -177,13 +177,13 @@ Der Index des letzten Elements im Listenfeld.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Methode nicht aus, wenn die Knotenart Liste sortiert wird.
+Verwenden Sie diese Methode nicht, wenn das Listenfeld Format sortiert ist.
 
-Wenn der Elementtext bereits im Listenfeld ist, werden die neuen Daten mit dem vorhandenen Element gespeichert. Der Suche für das Element wird Groß-/Kleinschreibung beachtet.
+Wenn sich der Element Text bereits im Listenfeld befindet, werden die neuen Daten mit dem vorhandenen Element gespeichert. Beim Suchen nach dem Element wird die Groß-/Kleinschreibung beachtet.
 
-##  <a name="addsorteditem"></a>  CMFCToolBarComboBoxButton::AddSortedItem
+##  <a name="addsorteditem"></a>Cmfctoolbarcomboboxbutton:: addsorteditem
 
-Fügt ein Element in das Listenfeld in der Reihenfolge, die durch definiert die [vergleichen](#compare) Methode.
+Fügt dem Listenfeld ein Element in der Reihenfolge hinzu, die durch die [Compare](#compare) -Methode definiert wird.
 
 ```
 virtual INT_PTR AddSortedItem(
@@ -194,22 +194,22 @@ virtual INT_PTR AddSortedItem(
 ### <a name="parameters"></a>Parameter
 
 *lpszItem*<br/>
-[in] Der Text des Elements, das im Listenfeld hinzugefügt werden soll.
+in Der Text des Elements, das dem Listenfeld hinzugefügt werden soll.
 
 *dwData*<br/>
-[in] Die Daten, die dem Element im Listenfeld hinzuzufügende zugeordnet.
+in Die Daten, die dem Element zugeordnet sind, das dem Listenfeld hinzugefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Index des Elements, das im Listenfeld hinzugefügt wurde.
+Der Index des Elements, das dem Listenfeld hinzugefügt wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Funktion in einer bestimmten Reihenfolge in die Liste Elemente hinzuzufügen.
+Verwenden Sie diese Funktion, um dem Listenfeld Elemente in einer bestimmten Reihenfolge hinzuzufügen.
 
-##  <a name="canbestretched"></a>  CMFCToolBarComboBoxButton::CanBeStretched
+##  <a name="canbestretched"></a>Cmfctoolbarcomboboxbutton:: canbegestreckt
 
-Gibt an, ob die Größe des Kombinationsfelds Schaltfläche ändern kann.
+Gibt an, ob die Kombinations Feld-Schaltflächen Größe geändert werden kann.
 
 ```
 virtual BOOL CanBeStretched() const;
@@ -217,11 +217,11 @@ virtual BOOL CanBeStretched() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt "true" zurück.
+Gibt true zurück.
 
-##  <a name="cmfctoolbarcomboboxbutton"></a>  CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton
+##  <a name="cmfctoolbarcomboboxbutton"></a>Cmfctoolbarcomboboxbutton:: cmfctoolbarcomboboxbutton
 
-Erstellt eine [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) Objekt.
+Erstellt ein [cmfctoolbarcomboboxbutton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) -Objekt.
 
 ```
 CMFCToolBarComboBoxButton(
@@ -234,26 +234,26 @@ CMFCToolBarComboBoxButton(
 ### <a name="parameters"></a>Parameter
 
 *uiID*<br/>
-[in] Die Befehls-ID von der Schaltfläche "Neu".
+in Die Befehls-ID der neuen Schaltfläche.
 
 *iImage*<br/>
-[in] Der Bildindex des Bilds der Schaltfläche "Neu" zugeordnet.
+in Der Bildindex des Bilds, das der neuen Schaltfläche zugeordnet ist.
 
 *dwStyle*<br/>
-[in] Die Darstellung der Schaltfläche "Neu".
+in Der Stil der neuen Schaltfläche.
 
 *iWidth*<br/>
-[in] Die Breite in Pixel der Schaltfläche "Neu".
+in Die Breite der neuen Schaltfläche in Pixel.
 
 ### <a name="remarks"></a>Hinweise
 
 Die Standardbreite beträgt 150 Pixel.
 
-Eine Liste der Formatvorlagen für Symbolleistenschaltflächen finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md)
+Eine Liste der Symbolleisten-Schaltflächen Stile finden Sie unter [Toolbar-Steuer](../../mfc/reference/toolbar-control-styles.md) Element
 
-##  <a name="cleardata"></a>  CMFCToolBarComboBoxButton::ClearData
+##  <a name="cleardata"></a>Cmfctoolbarcomboboxbutton:: ClearData
 
-Löscht den benutzerdefinierten Daten.
+Löscht benutzerdefinierte Daten.
 
 ```
 virtual void ClearData();
@@ -261,9 +261,9 @@ virtual void ClearData();
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig führt diese Methode keine Aktion. Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie eine benutzerdefinierte Daten löschen möchten.
+Standardmäßig führt diese Methode keine Aktion aus. Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie benutzerdefinierte Daten löschen möchten.
 
-##  <a name="compare"></a>  CMFCToolBarComboBoxButton::Compare
+##  <a name="compare"></a>Cmfctoolbarcomboboxbutton:: Compare
 
 Vergleicht zwei Zeichenfolgen.
 
@@ -276,32 +276,32 @@ virtual int Compare(
 ### <a name="parameters"></a>Parameter
 
 *lpszItem1*<br/>
-[in] Die erste zu vergleichende Zeichenfolge.
+in Die erste zu vergleichende Zeichenfolge.
 
 *lpszItem2*<br/>
-[in] Die zweite zu vergleichende Zeichenfolge.
+in Die zweite zu vergleichende Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Wert, der die Groß-/Kleinschreibung lexikografische Beziehung zwischen den Zeichenfolgen angibt. In der folgende Tabelle sind die möglichen Werte aufgeführt:
+Ein Wert, der die zwischen Groß-und Kleinschreibung abhängige lexikografische Beziehung zwischen den Zeichen folgen angibt. In der folgenden Tabelle sind die möglichen Werte aufgeführt:
 
 |Wert|Beschreibung|
 |-----------|-----------------|
-|\<0|Die erste Zeichenfolge ist kleiner als der zweite.|
-|0|Die erste Zeichenfolge gleich der zweiten ist.|
-|>0|Die erste Zeichenfolge ist größer als der zweite.|
+|\<0|Die erste Zeichenfolge ist kleiner als die zweite Zeichenfolge.|
+|0|Die erste Zeichenfolge ist mit der zweiten Zeichenfolge.|
+|>0|Die erste Zeichenfolge ist größer als die zweite Zeichenfolge.|
 
 ### <a name="remarks"></a>Hinweise
 
-Überschreiben Sie diese Methode zum Ändern der Sortierung der Elemente im Listenfeld ein.
+Überschreiben Sie diese Methode, um zu ändern, wie Elemente im Listenfeld sortiert werden.
 
-Beim Vergleich wird Groß-/Kleinschreibung beachtet.
+Beim Vergleich wird die Groß-/Kleinschreibung beachtet.
 
-Diese Methode wird aufgerufen, nur über die [AddSortedItem](#addsorteditem) Methode.
+Diese Methode wird nur von der [addsorteditem](#addsorteditem) -Methode aufgerufen.
 
-##  <a name="copyfrom"></a>  CMFCToolBarComboBoxButton::CopyFrom
+##  <a name="copyfrom"></a>Cmfctoolbarcomboboxbutton:: CopyFrom
 
-Kopiert den Zustand des angegebenen `CMFCToolBarComboBoxButton` auf das aktuelle Objekt.
+Kopiert den Zustand des angegebenen `CMFCToolBarComboBoxButton` in das aktuelle-Objekt.
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -310,11 +310,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="parameters"></a>Parameter
 
 *src*<br/>
-[in] Die Quelle `CMFCToolBarComboBoxButton` Objekt.
+in Das Quell `CMFCToolBarComboBoxButton` Objekt.
 
-##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo
+##  <a name="createcombo"></a>Cmfctoolbarcomboboxbutton:: comatecombo
 
-Erstellt ein neues Kombinationsfeld für den Kombinationsfelds-Schaltfläche.
+Erstellt ein neues Kombinations Feld für die Kombinations Feld Schaltfläche.
 
 ```
 virtual CComboBox* CreateCombo(
@@ -325,18 +325,18 @@ virtual CComboBox* CreateCombo(
 ### <a name="parameters"></a>Parameter
 
 *pWndParent*<br/>
-[in] Ein Zeiger auf das übergeordnete Fenster der Schaltfläche.
+in Ein Zeiger auf das übergeordnete Fenster der Schaltfläche.
 
-*rect*<br/>
-[in] Umschließende Rechteck des Kombinationsfelds.
+*Rect*<br/>
+in Begrenzungs Rechteck des Kombinations Felds.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf das neue Kombinationsfeld, wenn die Methode erfolgreich war; andernfalls NULL.
+Ein Zeiger auf das neue Kombinations Feld, wenn die Methode erfolgreich war. andernfalls NULL.
 
-##  <a name="createedit"></a>  CMFCToolBarComboBoxButton::CreateEdit
+##  <a name="createedit"></a>Cmfctoolbarcomboboxbutton:: kreateedit
 
-Erstellt ein neues Eingabefeld für den Kombinationsfelds-Schaltfläche.
+Erstellt ein neues Bearbeitungsfeld für die Kombinations Feld Schaltfläche.
 
 ```
 virtual CMFCToolBarComboBoxEdit* CreateEdit(
@@ -348,52 +348,52 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ### <a name="parameters"></a>Parameter
 
 *pWndParent*<br/>
-[in] Ein Zeiger auf das übergeordnete Fenster der Schaltfläche.
+in Ein Zeiger auf das übergeordnete Fenster der Schaltfläche.
 
-*rect*<br/>
-[in] Umschließende Rechteck des neuen im Bearbeitungsfeld.
+*Rect*<br/>
+in Begrenzungs Rechteck des neuen Bearbeitungs Felds.
 
 *dwEditStyle*<br/>
-[in] Format des neuen Steuerelements im Bearbeitungsfeld.
+in Steuerelement Stil des neuen Bearbeitungs Felds.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf den neuen Eingabefeld zurück, wenn die Methode erfolgreich war; andernfalls NULL.
+Ein Zeiger auf das neue Bearbeitungsfeld, wenn die Methode erfolgreich war. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode auf, wenn es sich um ein neues Eingabefeld für eine kombinationsfeldschaltfläche erstellt. Überschreiben Sie diese Methode so ändern Sie wie [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) erstellt wird.
+Das Framework ruft diese Methode auf, wenn ein neues Bearbeitungsfeld für eine Kombinations Feld Schaltfläche erstellt wird. Überschreiben Sie diese Methode, um zu ändern, wie [cmfctoolbarcomboboxedit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) erstellt wird.
 
-##  <a name="deleteitem"></a>  CMFCToolBarComboBoxButton::DeleteItem
+##  <a name="deleteitem"></a>Cmfctoolbarcomboboxbutton::D eleteitem
 
-Löscht ein angegebenes Element aus dem Listenfeld aus.
+Löscht ein angegebenes Element aus dem Listenfeld.
 
 ```
 BOOL DeleteItem(int iIndex);
 BOOL DeleteItem(DWORD_PTR dwData);
-  BOOL DeleteItem(LPCTSTR lpszText);
+BOOL DeleteItem(LPCTSTR lpszText);
 ```
 
 ### <a name="parameters"></a>Parameter
 
 *iIndex*<br/>
-[in] Der nullbasierte Index des Elements, das gelöscht werden.
+in Der null basierte Index des zu löschenden Elements.
 
 *dwData*<br/>
-[in] Die Daten, die zu löschenden Elements zugeordnet.
+in Die Daten, die dem zu löschenden Element zugeordnet sind.
 
 *lpszText*<br/>
-[in] Der Text des Elements, das gelöscht werden. Wenn mehrere Elemente mit dem gleichen Text vorhanden sind, wird das erste Element gelöscht.
+in Der Text des zu löschenden Elements. Wenn mehrere Elemente mit demselben Text vorhanden sind, wird das erste Element gelöscht.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn das Element gefunden und erfolgreich gelöscht wurde. andernfalls "false".
+TRUE, wenn das Element gefunden und erfolgreich gelöscht wurde. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="duplicatedata"></a>  CMFCToolBarComboBoxButton::DuplicateData
+##  <a name="duplicatedata"></a>Cmfctoolbarcomboboxbutton::D uplicatedata
 
-Duplikate mit benutzerdefinierten Daten.
+Dupliziert benutzerdefinierte Daten.
 
 ```
 virtual void DuplicateData();
@@ -401,11 +401,11 @@ virtual void DuplicateData();
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig führt diese Methode keine Aktion. Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn keine benutzerdefinierten Daten kopiert werden sollen.
+Standardmäßig führt diese Methode keine Aktion aus. Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie benutzerdefinierte Daten kopieren möchten.
 
-##  <a name="enablewindow"></a>  CMFCToolBarComboBoxButton::EnableWindow
+##  <a name="enablewindow"></a>Cmfctoolbarcomboboxbutton:: EnableWindow
 
-Aktiviert oder deaktiviert die Felder bearbeiten und Kombinationsfelder.
+Aktiviert oder deaktiviert die Bearbeitungs-und Kombinations Felder.
 
 ```
 virtual void EnableWindow(BOOL bEnable = TRUE);
@@ -414,15 +414,15 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bEnable*<br/>
-[in] True, um die Felder bearbeiten und das Kombinationsfeld zu aktivieren. So deaktivieren Sie die Felder bearbeiten und Kombinationsfeld wird false ZURÜCKGEGEBEN.
+in "True", um die Bearbeitungs-und Kombinations Felder zu aktivieren. FALSE zum Deaktivieren der Bearbeitungs-und Kombinations Felder.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn deaktiviert, werden die Steuerelemente können nicht aktiv und können keine Benutzereingaben akzeptieren.
+Wenn diese Option deaktiviert ist, können die Steuerelemente nicht aktiviert werden und können keine Benutzereingaben akzeptieren.
 
-##  <a name="exporttomenubutton"></a>  CMFCToolBarComboBoxButton::ExportToMenuButton
+##  <a name="exporttomenubutton"></a>Cmfctoolbarcomboboxbutton:: exporttomendubutton
 
-Kopiert eine Zeichenfolge aus der Anwendung Zeichenfolgentabelle auf das angegebene Menü mithilfe des Kombinationsfeld-Box-Schaltfläche-Befehls-ID.
+Kopiert eine Zeichenfolge aus der Anwendungs Zeichen folgen Tabelle in das angegebene Menü mithilfe der Befehls-ID für die Kombinations Feld-Schaltfläche.
 
 ```
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
@@ -431,15 +431,15 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ### <a name="parameters"></a>Parameter
 
 *menuButton*<br/>
-[out] Verweis auf eine Schaltfläche.
+vorgenommen Verweis auf eine Menü Schaltfläche.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Immer "true".
+Immer true.
 
-##  <a name="finditem"></a>  CMFCToolBarComboBoxButton::FindItem
+##  <a name="finditem"></a>Cmfctoolbarcomboboxbutton:: FindItem
 
-Gibt den Index des ersten Elements in das Listenfeld, das eine angegebene Zeichenfolge enthält.
+Gibt den Index des ersten Elements im Listenfeld zurück, das eine angegebene Zeichenfolge enthält.
 
 ```
 int FindItem(LPCTSTR lpszText) const;
@@ -448,17 +448,17 @@ int FindItem(LPCTSTR lpszText) const;
 ### <a name="parameters"></a>Parameter
 
 *lpszText*<br/>
-[in] Der Text für die Sie in das Listenfeld gesucht werden soll.
+in Der Text, für den im Listenfeld gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Index des Elements, andernfalls oder CB_ERR, wenn das Element nicht gefunden wird.
+Der Index des Elements. oder CB_ERR, wenn das Element nicht gefunden wird.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getbycmd"></a>  CMFCToolBarComboBoxButton::GetByCmd
+##  <a name="getbycmd"></a>Cmfctoolbarcomboboxbutton:: getbycmd
 
-Ruft einen Zeiger auf die Kombinationsfelds-Schaltfläche, die eine angegebenen Befehls-ID.
+Ruft einen Zeiger auf die Kombinations Feld-Schaltfläche ab, die über eine angegebene Befehls-ID verfügt.
 
 ```
 static CMFCToolBarComboBoxButton* GetByCmd(
@@ -469,20 +469,20 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Die Befehls-ID des Kombinationsfelds-Schaltfläche.
+in Die Befehls-ID einer Kombinations Feld Schaltfläche.
 
 *bIsFocus*<br/>
-[in] Konzentrieren Schaltflächen, "true" nur gesucht; "False", um alle Schaltflächen zu suchen.
+in TRUE, wenn nur fokussierte Schaltflächen gesucht werden sollen. FALSE zum Durchsuchen aller Schaltflächen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine kombinationsfeldschaltfläche; oder NULL, wenn die Schaltfläche "nicht gefunden wird.
+Ein Zeiger auf eine Kombinations Feld Schaltfläche. oder NULL, wenn die Schaltfläche nicht gefunden wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getcombobox"></a>  CMFCToolBarComboBoxButton::GetComboBox
+##  <a name="getcombobox"></a>Cmfctoolbarcomboboxbutton:: getcombobox
 
-Gibt einen Zeiger zurück auf das Kombinationsfeld in das Kombinationsfeld für Kontrollkästchen-Schaltfläche.
+Gibt einen Zeiger auf das Kombinations Feld in der Kombinations Feld Schaltfläche zurück.
 
 ```
 CComboBox* GetComboBox() const;
@@ -490,13 +490,13 @@ CComboBox* GetComboBox() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die [CComboBox-Klasse](../../mfc/reference/ccombobox-class.md) Objekt, wenn die Methode erfolgreich war; andernfalls NULL.
+Ein Zeiger auf das [CComboBox-Klassen](../../mfc/reference/ccombobox-class.md) Objekt, wenn die Methode erfolgreich war. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getcontextmenuid"></a>  CMFCToolBarComboBoxButton::GetContextMenuID
+##  <a name="getcontextmenuid"></a>Cmfctoolbarcomboboxbutton:: getContextMenuId
 
-Ruft die Tastenkombination im Menü-Ressourcen-ID für die Kombinationsfelds-Schaltfläche ab.
+Ruft die Ressourcen-ID des Kontextmenüs für die Kombinations Feld Schaltfläche ab.
 
 ```
 UINT GetContextMenuID();
@@ -504,9 +504,9 @@ UINT GetContextMenuID();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Verknüpfung im Menü-Ressourcen-ID.
+Die Ressourcen-ID des Kontextmenüs.
 
-##  <a name="getcount"></a>  CMFCToolBarComboBoxButton::GetCount
+##  <a name="getcount"></a>Cmfctoolbarcomboboxbutton:: GetCount
 
 Gibt die Anzahl der Elemente im Listenfeld zurück.
 
@@ -520,9 +520,9 @@ Die Anzahl der Elemente im Listenfeld.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getcountall"></a>  CMFCToolBarComboBoxButton::GetCountAll
+##  <a name="getcountall"></a>Cmfctoolbarcomboboxbutton:: getgräfin
 
-Ruft die Anzahl der Elemente in das Listenfeld ein Kombinationsfelds-Schaltfläche, die eine angegebenen Befehls-ID.
+Ruft die Anzahl der Elemente im Listenfeld einer Kombinations Feld-Schaltfläche ab, die über eine angegebene Befehls-ID verfügt.
 
 ```
 static int GetCountAll(UINT uiCmd);
@@ -531,15 +531,15 @@ static int GetCountAll(UINT uiCmd);
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Die Befehls-ID des Kombinationsfelds-Schaltfläche.
+in Die Befehls-ID einer Kombinations Feld Schaltfläche.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der Elemente im Listenfeld; Andernfalls wird CB_ERR, wenn das Kombinationsfeld für den Schaltfläche Feld nicht gefunden.
+Die Anzahl der Elemente im Listenfeld. Andernfalls CB_ERR, wenn die Kombinations Feld Schaltfläche nicht gefunden wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getcursel"></a>  CMFCToolBarComboBoxButton::GetCurSel
+##  <a name="getcursel"></a>Cmfctoolbarcomboboxbutton:: getcurrsel
 
 Ruft den Index des derzeit ausgewählten Elements im Listenfeld ab.
 
@@ -549,15 +549,15 @@ int GetCurSel() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Index des derzeit ausgewählten Elements im Listenfeld; oder CB_ERR, wenn kein Element ausgewählt ist.
+Der Index des derzeit ausgewählten Elements im Listenfeld. oder CB_ERR, wenn kein Element ausgewählt ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Die listenfeldindex ist nullbasiert.
+Der Listenfeld Index ist NULL basiert.
 
-##  <a name="getcurselall"></a>  CMFCToolBarComboBoxButton::GetCurSelAll
+##  <a name="getcurselall"></a>Cmfctoolbarcomboboxbutton:: getcurrselall
 
-Gibt den Index des derzeit ausgewählten Elements in das Listenfeld eines Kombinationsfelds-Schaltfläche, die eine angegebenen Befehls-ID.
+Gibt den Index des derzeit ausgewählten Elements im Listenfeld einer Kombinations Feld Schaltfläche zurück, die über eine angegebene Befehls-ID verfügt.
 
 ```
 static int GetCurSelAll(UINT uiCmd);
@@ -566,19 +566,19 @@ static int GetCurSelAll(UINT uiCmd);
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Die Befehls-ID des Kombinationsfelds-Schaltfläche.
+in Die Befehls-ID einer Kombinations Feld Schaltfläche.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Index des derzeit ausgewählten Elements im Listenfeld; CB_ERR, wenn kein Element ausgewählt ist oder ein kombinationsfeldschaltfläche ist, andernfalls nicht gefunden.
+Der Index des derzeit ausgewählten Elements im Listenfeld. Andernfalls CB_ERR, wenn kein Element ausgewählt ist oder eine Kombinations Feld-Schaltfläche nicht gefunden wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Die listenfeldindex ist nullbasiert.
+Der Listenfeld Index ist NULL basiert.
 
-##  <a name="geteditctrl"></a>  CMFCToolBarComboBoxButton::GetEditCtrl
+##  <a name="geteditctrl"></a>Cmfctoolbarcomboboxbutton:: geteditctrl
 
-Gibt einen Zeiger zurück in das Bearbeitungsfeld in das Kombinationsfeld für Kontrollkästchen-Schaltfläche.
+Gibt einen Zeiger auf das Bearbeitungsfeld in der Kombinations Feld Schaltfläche zurück.
 
 ```
 virtual CEdit* GetEditCtrl();
@@ -586,13 +586,13 @@ virtual CEdit* GetEditCtrl();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf das Bearbeitungsfeld, wenn die Methode erfolgreich war; andernfalls NULL.
+Ein Zeiger auf das Bearbeitungsfeld, wenn die Methode erfolgreich war. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="gethwnd"></a>  CMFCToolBarComboBoxButton::GetHwnd
+##  <a name="gethwnd"></a>Cmfctoolbarcomboboxbutton:: GetHwnd
 
-Gibt das Fensterhandle für das Kombinationsfeld zurück.
+Gibt das Fenster Handle für das Kombinations Feld zurück.
 
 ```
 virtual HWND GetHwnd();
@@ -600,11 +600,11 @@ virtual HWND GetHwnd();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Das Fensterhandle oder NULL, wenn das Kombinationsfeld kein Window-Objekt zugeordnet ist.
+Das Fenster Handle oder NULL, wenn das Kombinations Feld nicht mit einem Window-Objekt verknüpft ist.
 
-##  <a name="getitem"></a>  CMFCToolBarComboBoxButton::GetItem
+##  <a name="getitem"></a>Cmfctoolbarcomboboxbutton:: GetItem
 
-Gibt die Zeichenfolge, die ein Element am angegebenen Index in das Listenfeld zugeordnet.
+Gibt die Zeichenfolge zurück, die mit einem Element an einem angegebenen Index im Listenfeld verknüpft ist.
 
 ```
 LPCTSTR GetItem(int iIndex=-1) const;
@@ -613,19 +613,19 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ### <a name="parameters"></a>Parameter
 
 *iIndex*<br/>
-[in] Nullbasierte Index eines Elements in das Listenfeld.
+in NULL basierter Index eines Elements im Listenfeld.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Zeichenfolge, die dem Element zugeordnet ist; andernfalls, NULL, wenn der Indexparameter ungültig ist, oder wenn der Indexparameter ist-1 und gibt es kein ausgewähltes Element im Kombinationsfeld ist.
+Ein Zeiger auf die Zeichenfolge, die dem Element zugeordnet ist. andernfalls NULL, wenn der Index Parameter ungültig ist, oder wenn der Index Parameter-1 ist und kein ausgewähltes Element im Kombinations Feld vorhanden ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Indexparameter von-1 gibt die Zeichenfolge des Elements, das derzeit ausgewählt ist.
+Der Index-Parameter-1 gibt die Zeichenfolge des aktuell ausgewählten Elements zurück.
 
-##  <a name="getitemall"></a>  CMFCToolBarComboBoxButton::GetItemAll
+##  <a name="getitemall"></a>Cmfctoolbarcomboboxbutton:: getitemall
 
-Gibt die Zeichenfolge, die ein Element am angegebenen Index in das Listenfeld ein Kombinationsfelds-Schaltfläche, die eine angegebenen Befehls-ID zugeordnet
+Gibt die Zeichenfolge zurück, die einem Element an einem angegebenen Index im Listenfeld einer Kombinations Feld-Schaltfläche zugeordnet ist, die über eine angegebene Befehls-ID verfügt.
 
 ```
 static LPCTSTR GetItemAll(
@@ -636,22 +636,22 @@ static LPCTSTR GetItemAll(
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Die Befehls-ID des Kombinationsfelds-Schaltfläche.
+in Die Befehls-ID einer Kombinations Feld Schaltfläche.
 
 *iIndex*<br/>
-[in] Der nullbasierte Index eines Elements in das Listenfeld.
+in Der null basierte Index eines Elements im Listenfeld.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf Zeichenfolge des Elements, wenn die Methode erfolgreich war; andernfalls, NULL, wenn der Indexwert ungültig ist, eine kombinationsfeldschaltfläche nicht gefunden wird, oder wenn der Index ist 1, und es ist kein ausgewählte Element im Kombinationsfeld.
+Ein Zeiger auf die Zeichenfolge des Elements, wenn die Methode erfolgreich war. andernfalls NULL, wenn der Index ungültig ist, eine Kombinations Feld Schaltfläche nicht gefunden wird oder wenn der Index-1 ist und kein ausgewähltes Element im Kombinations Feld vorhanden ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Indexwert von 1, gibt die Zeichenfolge des Elements, das derzeit ausgewählt ist.
+Der Indexwert-1 gibt die Zeichenfolge des aktuell ausgewählten Elements zurück.
 
-##  <a name="getitemdata"></a>  CMFCToolBarComboBoxButton::GetItemData
+##  <a name="getitemdata"></a>Cmfctoolbarcomboboxbutton:: GetItemData
 
-Gibt ein Element am angegebenen Index in das Listenfeld zugeordneten Daten zurück.
+Gibt die Daten zurück, die einem Element an einem bestimmten Index im Listenfeld zugeordnet sind.
 
 ```
 DWORD_PTR GetItemData(int iIndex=-1) const;
@@ -660,19 +660,19 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ### <a name="parameters"></a>Parameter
 
 *iIndex*<br/>
-[in] Der nullbasierte Index eines Elements in das Listenfeld.
+in Der null basierte Index eines Elements im Listenfeld.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Daten, die dem Element zugeordnet, oder 0, wenn das Element nicht vorhanden ist.
+Die Daten, die dem Element zugeordnet sind. oder 0, wenn das Element nicht vorhanden ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Indexparameter von-1 gibt das aktuell ausgewählte Element zugeordneten Daten zurück.
+Der Index-Parameter-1 gibt die Daten zurück, die dem aktuell ausgewählten Element zugeordnet sind.
 
-##  <a name="getitemdataall"></a>  CMFCToolBarComboBoxButton::GetItemDataAll
+##  <a name="getitemdataall"></a>Cmfctoolbarcomboboxbutton:: getitemdataall
 
-Gibt zurück, die ein Element am angegebenen Index in das Listenfeld ein Kombinationsfelds-Schaltfläche, die eine bestimmte Befehls-ID zugeordneten Daten
+Gibt die Daten zurück, die mit einem Element an einem bestimmten Index im Listenfeld einer Kombinations Feld Schaltfläche mit einer bestimmten Befehls-ID verknüpft sind.
 
 ```
 static DWORD_PTR GetItemDataAll(
@@ -683,22 +683,22 @@ static DWORD_PTR GetItemDataAll(
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Die Befehls-ID des Kombinationsfelds-Schaltfläche.
+in Die Befehls-ID einer Kombinations Feld Schaltfläche.
 
 *iIndex*<br/>
-[in] Der nullbasierte Index eines Elements in das Listenfeld.
+in Der null basierte Index eines Elements im Listenfeld.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Daten, die dem Element zugeordnet, wenn die Methode erfolgreich war; andernfalls 0, wenn der angegebene Index nicht gültig ist oder CB_ERR, wenn das Kombinationsfeld für den Schaltfläche Feld wurde nicht gefunden.
+Die Daten, die dem Element zugeordnet sind, wenn die Methode erfolgreich war. andernfalls 0, wenn der angegebene Index ungültig ist, oder CB_ERR, wenn die Kombinations Feld Schaltfläche nicht gefunden wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Indexparameter von-1 gibt das aktuell ausgewählte Element zugeordneten Daten zurück.
+Der Index-Parameter-1 gibt die Daten zurück, die dem aktuell ausgewählten Element zugeordnet sind.
 
-##  <a name="getitemdataptrall"></a>  CMFCToolBarComboBoxButton::GetItemDataPtrAll
+##  <a name="getitemdataptrall"></a>Cmfctoolbarcomboboxbutton:: getitemdataptrall
 
-Gibt zurück, die ein Element am angegebenen Index in das Listenfeld ein Kombinationsfelds-Schaltfläche, die eine bestimmte Befehls-ID zugeordneten Daten Diese Daten werden als Zeiger zurückgegeben.
+Gibt die Daten zurück, die mit einem Element an einem bestimmten Index im Listenfeld einer Kombinations Feld Schaltfläche mit einer bestimmten Befehls-ID verknüpft sind. Diese Daten werden als Zeiger zurückgegeben.
 
 ```
 static void* GetItemDataPtrAll(
@@ -709,20 +709,20 @@ static void* GetItemDataPtrAll(
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Die Befehls-ID des Kombinationsfelds-Schaltfläche.
+in Die Befehls-ID der Kombinations Feld Schaltfläche.
 
 *iIndex*<br/>
-[in] Der nullbasierte Index eines Elements in das Listenfeld.
+in Der null basierte Index eines Elements im Listenfeld.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger, der dem Element zugeordnet, wenn die Methode erfolgreich war; andernfalls-1, wenn ein Fehler auftritt, oder NULL, wenn das Kombinationsfeld für den Schaltfläche Feld wurde nicht gefunden.
+Ein Zeiger, der dem Element zugeordnet ist, wenn die Methode erfolgreich war. andernfalls-1, wenn ein Fehler auftritt, oder NULL, wenn die Kombinations Feld Schaltfläche nicht gefunden wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getprompt"></a>  CMFCToolBarComboBoxButton::GetPrompt
+##  <a name="getprompt"></a>Cmfctoolbarcomboboxbutton:: getPrompt
 
-Gibt die eingabeaufforderungs-Zeichenfolge für das Kombinationsfeld-Schaltfläche im zurück.
+Gibt die Aufforderungs Zeichenfolge für die Kombinations Feld Schaltfläche zurück
 
 ```
 virtual CString GetPrompt() const;
@@ -730,15 +730,15 @@ virtual CString GetPrompt() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die eingabeaufforderungs-Zeichenfolge.
+Die Zeichenfolge der Eingabeaufforderung.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird derzeit nicht implementiert.
+Diese Methode ist zurzeit nicht implementiert.
 
-##  <a name="gettext"></a>  CMFCToolBarComboBoxButton::GetText
+##  <a name="gettext"></a>Cmfctoolbarcomboboxbutton:: gettext
 
-Ruft den Text im Eingabefeld.
+Ruft den Text im Bearbeitungsfeld ab.
 
 ```
 LPCTSTR GetText() const;
@@ -746,13 +746,13 @@ LPCTSTR GetText() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Text im Eingabefeld.
+Der Text im Bearbeitungsfeld.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="gettextall"></a>  CMFCToolBarComboBoxButton::GetTextAll
+##  <a name="gettextall"></a>Cmfctoolbarcomboboxbutton:: gettextall
 
-Ruft den Text im Eingabefeld des eine Kombinationsfelds-Schaltfläche, die eine angegebenen Befehls-ID ab
+Ruft den Text im Bearbeitungsfeld einer Kombinations Feld-Schaltfläche ab, die über eine angegebene Befehls-ID verfügt.
 
 ```
 static LPCTSTR GetTextAll(UINT uiCmd);
@@ -761,7 +761,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Die Befehls-ID von einer bestimmten Kombinationsfelds-Schaltfläche.
+in Die Befehls-ID einer bestimmten Kombinations Feld Schaltfläche.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -769,9 +769,9 @@ Der Text im Bearbeitungsfeld, wenn die Methode erfolgreich war. andernfalls NULL
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="hasfocus"></a>  CMFCToolBarComboBoxButton::HasFocus
+##  <a name="hasfocus"></a>Cmfctoolbarcomboboxbutton:: HasFocus
 
-Gibt an, ob das Kombinationsfeld zurzeit den Fokus besitzt.
+Gibt an, ob das Kombinations Feld aktuell den Fokus besitzt.
 
 ```
 virtual BOOL HasFocus() const;
@@ -779,15 +779,15 @@ virtual BOOL HasFocus() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn das Kombinationsfeld zurzeit den Fokus besitzt. andernfalls "false".
+TRUE, wenn das Kombinations Feld derzeit den Fokus besitzt. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode gibt auch "true" zurück, wenn beliebige untergeordnete Fenster des Kombinationsfelds aktuell den Fokus besitzt.
+Diese Methode gibt auch true zurück, wenn ein untergeordnetes Fenster des Kombinations Felds aktuell den Fokus besitzt.
 
-##  <a name="iscentervert"></a>  CMFCToolBarComboBoxButton::IsCenterVert
+##  <a name="iscentervert"></a>Cmfctoolbarcomboboxbutton:: iscentervert
 
-Gibt die vertikale Position der Schaltflächen in der Anwendung zurück.
+Gibt die vertikale Position von Kombinations Feld-Schaltflächen in der Anwendung zurück.
 
 ```
 static BOOL IsCenterVert();
@@ -795,13 +795,13 @@ static BOOL IsCenterVert();
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Schaltflächen zentriert werden. "False", wenn die Schaltflächen oben ausgerichtet sind.
+TRUE, wenn die Schaltflächen zentriert sind. FALSE, wenn die Schaltflächen am oberen Rand ausgerichtet sind.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isflatmode"></a>  CMFCToolBarComboBoxButton::IsFlatMode
+##  <a name="isflatmode"></a>Cmfctoolbarcomboboxbutton:: isflatmode
 
-Gibt die flache Darstellung der Schaltflächen in der Anwendung zurück.
+Gibt die flache Darstellung von Kombinations Feld-Schaltflächen in der Anwendung zurück.
 
 ```
 static BOOL IsFlatMode();
@@ -809,15 +809,15 @@ static BOOL IsFlatMode();
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn Schaltflächen flach sind; andernfalls "false".
+TRUE, wenn die Schaltflächen einen flachen Stil aufweisen. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Die flache Standardstil für Schaltflächen ist "false".
+Der standardmäßige flache Stil für Kombinations Feld-Schaltflächen ist false.
 
-##  <a name="isownerof"></a>  CMFCToolBarComboBoxButton::IsOwnerOf
+##  <a name="isownerof"></a>Cmfctoolbarcomboboxbutton:: isownerof
 
-Gibt an, ob das angegebene Handle der kombinationsfeldschaltfläche oder eines seiner untergeordneten Elemente zugeordnet ist.
+Gibt an, ob das angegebene Handle der Kombinations Feld Schaltfläche oder einem untergeordneten Element zugeordnet ist.
 
 ```
 virtual BOOL IsOwnerOf(HWND hwnd);
@@ -825,16 +825,16 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Parameter
 
-*hwnd*<br/>
-[in] Ein Fensterhandle.
+*HWND*<br/>
+in Ein Fenster handle.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn das Handle zugeordnetes mit der kombinationsfeldschaltfläche oder eines seiner untergeordneten Elemente. andernfalls "false".
+TRUE, wenn das Handle mit der Kombinations Feld Schaltfläche oder einem seiner untergeordneten Elemente zugeordnet ist. andernfalls false.
 
-##  <a name="isribbonbutton"></a>  CMFCToolBarComboBoxButton::IsRibbonButton
+##  <a name="isribbonbutton"></a>Cmfctoolbarcomboboxbutton:: isribbonbutton
 
-Gibt an, ob die Kombinationsfelds-Schaltfläche in einem Menübandbereich befindet.
+Gibt an, ob sich die Kombinations Feld Schaltfläche in einem Menü Band Bereich befindet.
 
 ```
 BOOL IsRibbonButton() const;
@@ -842,15 +842,15 @@ BOOL IsRibbonButton() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Immer "false".
+Immer false.
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig gibt diese Methode immer "false", was bedeutet, dass der kombinationsfeldschaltfläche niemals in einem Menübandbereich angezeigt wird.
+Standardmäßig gibt diese Methode immer false zurück, was bedeutet, dass die Schaltfläche Kombinations Feld nie in einem Menü Band Bereich angezeigt wird.
 
-##  <a name="iswindowvisible"></a>  CMFCToolBarComboBoxButton::IsWindowVisible
+##  <a name="iswindowvisible"></a>Cmfctoolbarcomboboxbutton:: iswindowvisible
 
-Gibt den Sichtbarkeitszustand des Kombinationsfeld-Schaltfläche im zurück.
+Gibt den Sichtbarkeits Zustand der Kombinations Feld Schaltfläche zurück.
 
 ```
 virtual BOOL IsWindowVisible();
@@ -858,11 +858,11 @@ virtual BOOL IsWindowVisible();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Sichtbarkeitszustand des Kombinationsfelds-Schaltfläche.
+Der Sichtbarkeits Zustand der Kombinations Feld Schaltfläche.
 
-##  <a name="notifycommand"></a>  CMFCToolBarComboBoxButton::NotifyCommand
+##  <a name="notifycommand"></a>Cmfctoolbarcomboboxbutton:: notifycommand
 
-Gibt an, ob der kombinationsfeldschaltfläche die Nachricht verarbeitet.
+Gibt an, ob die Kombinations Feld-Schaltfläche die Meldung verarbeitet.
 
 ```
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -871,23 +871,23 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ### <a name="parameters"></a>Parameter
 
 *iNotifyCode*<br/>
-[in] Die Benachrichtigung, die mit dem Befehl zugeordnet ist.
+in Die Benachrichtigungs Meldung, die dem Befehl zugeordnet ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt an, ob der kombinationsfeldschaltfläche die Nachricht verarbeitet.
+Gibt an, ob die Kombinations Feld-Schaltfläche die Meldung verarbeitet.
 
-##  <a name="onaddtocustomizepage"></a>  CMFCToolBarComboBoxButton::OnAddToCustomizePage
+##  <a name="onaddtocustomizepage"></a>Cmfctoolbarcomboboxbutton:: onaddto customizepage
 
-Vom Framework aufgerufen, wenn die Schaltfläche hinzugefügt wird die **anpassen** Dialogfeld.
+Wird von Framework aufgerufen, wenn die Schaltfläche zum Dialogfeld **Anpassen** hinzugefügt wird.
 
 ```
 virtual void OnAddToCustomizePage();
 ```
 
-##  <a name="oncalculatesize"></a>  CMFCToolBarComboBoxButton::OnCalculateSize
+##  <a name="oncalculatesize"></a>Cmfctoolbarcomboboxbutton:: oncalculatesize
 
-Wird aufgerufen, durch das Framework, um die Größe der Schaltfläche zu berechnen.
+Wird von Framework aufgerufen, um die Größe der Schaltfläche zu berechnen.
 
 ```
 virtual SIZE OnCalculateSize(
@@ -899,21 +899,21 @@ virtual SIZE OnCalculateSize(
 ### <a name="parameters"></a>Parameter
 
 *pDC*<br/>
-[in] Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.
+in Der Gerätekontext, der die Kombinations Feld Schaltfläche anzeigt.
 
 *sizeDefault*<br/>
-[in] Die Standardgröße des Kombinationsfelds-Schaltfläche.
+in Die Standardgröße der Kombinations Feld Schaltfläche.
 
 *bHorz*<br/>
-[in] Der Status der Andocken der übergeordneten Symbolleiste. TRUE, wenn die Symbolleiste horizontal und "false" verankert ist, wenn die Symbolleiste vertikal verankert ist.
+in Der Andock Zustand der übergeordneten Symbolleiste. TRUE, wenn die Symbolleiste horizontal angedockt ist, und false, wenn die Symbolleiste vertikal angedockt ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `SIZE` Struktur, die die Abmessungen der Schaltfläche im Kombinationsfeld in Pixel enthält.
+Eine `SIZE` -Struktur, die die Dimensionen der Kombinations Feld Schaltfläche in Pixel enthält.
 
-##  <a name="onchangeparentwnd"></a>  CMFCToolBarComboBoxButton::OnChangeParentWnd
+##  <a name="onchangeparentwnd"></a>Cmfctoolbarcomboboxbutton:: onchangeparameentwnd
 
-Vom Framework aufgerufen, wenn der kombinationsfeldschaltfläche in eine neue Symbolleiste eingefügt wird.
+Wird von Framework aufgerufen, wenn die Kombinations Feld Schaltfläche in eine neue Symbolleiste eingefügt wird.
 
 ```
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -922,11 +922,11 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="parameters"></a>Parameter
 
 *pWndParent*<br/>
-[in] Zeiger auf den neuen übergeordneten Symbolleiste.
+in Ein Zeiger auf die neue übergeordnete Symbolleiste.
 
-##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick
+##  <a name="onclick"></a>Cmfctoolbarcomboboxbutton:: OnClick
 
-Vom Framework aufgerufen, wenn der Benutzer die Kombinationsfelds-Schaltfläche klickt.
+Wird von Framework aufgerufen, wenn der Benutzer auf die Schaltfläche Kombinations Feld klickt.
 
 ```
 virtual BOOL OnClick(
@@ -937,18 +937,18 @@ virtual BOOL OnClick(
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-[in] Zeiger auf das übergeordnete Fenster des Kombinationsfelds-Schaltfläche.
+in Zeiger auf das übergeordnete Fenster der Kombinations Feld Schaltfläche.
 
 *bDelay*<br/>
-[in] Für die Verwendung in einer abgeleiteten Klasse reserviert.
+in Reserviert für die Verwendung in einer abgeleiteten Klasse.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Methode das Ereignis behandelt. andernfalls "false".
+TRUE, wenn die Methode das Ereignis behandelt. andernfalls false.
 
-##  <a name="onctlcolor"></a>  CMFCToolBarComboBoxButton::OnCtlColor
+##  <a name="onctlcolor"></a>Cmfctoolbarcomboboxbutton:: onctlcolor
 
-Vom Framework aufgerufen, wenn der Benutzer die Farbe des übergeordneten-Symbolleiste an, legen Sie das Kombinationsfeld für den Box-Farbe für Schaltfläche ändert.
+Wird von Framework aufgerufen, wenn der Benutzer die übergeordnete Symbolleisten Farbe ändert, um die Kombinations Feld-Schaltflächen Farbe festzulegen.
 
 ```
 virtual HBRUSH OnCtlColor(
@@ -959,22 +959,22 @@ virtual HBRUSH OnCtlColor(
 ### <a name="parameters"></a>Parameter
 
 *pDC*<br/>
-[in] Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.
+in Der Gerätekontext, der die Kombinations Feld Schaltfläche anzeigt.
 
 *nCtlColor*<br/>
-[in] Nicht verwendet.
+in Genutzt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Handle für den Pinsel aus, dem das Framework verwendet, um den Hintergrund der kombinationsfeldschaltfläche zu zeichnen.
+Handle für den Pinsel, den das Framework zum Zeichnen des Hintergrunds der Kombinations Feld Schaltfläche verwendet.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird auch die Textfarbe einer Schaltfläche der Combo Box.
+Diese Methode legt auch die Textfarbe der Kombinations Feld Schaltfläche fest.
 
-##  <a name="ondraw"></a>  CMFCToolBarComboBoxButton::OnDraw
+##  <a name="ondraw"></a>Cmfctoolbarcomboboxbutton:: OnDraw
 
-Wird aufgerufen, durch das Framework der kombinationsfeldschaltfläche zu zeichnen, indem Sie mit der angegebenen Formate und -Optionen.
+Wird von Framework aufgerufen, um die Kombinations Feld Schaltfläche mithilfe der angegebenen Stile und Optionen zu zeichnen.
 
 ```
 virtual void OnDraw(
@@ -991,32 +991,32 @@ virtual void OnDraw(
 ### <a name="parameters"></a>Parameter
 
 *Pdc*<br/>
-[in] Der Gerätekontext, in dem die Schaltfläche angezeigt.
+in Der Gerätekontext, der die Schaltfläche anzeigt.
 
-*rect*<br/>
-[in] Das umschließende Rechteck der Schaltfläche.
+*Rect*<br/>
+in Das umgebende Rechteck der Schaltfläche.
 
-*pImages*<br/>
-[in] Die Auflistung der Bilder, die mit der Schaltfläche zugeordnet ist.
+*pimages*<br/>
+in Die Auflistung von Bildern, die der Schaltfläche zugeordnet ist.
 
 *bHorz*<br/>
-[in] Der Status der Andocken der übergeordneten Symbolleiste. TRUE, wenn die Symbolleiste horizontal und "false" verankert ist, wenn die Symbolleiste vertikal verankert ist.
+in Der Andock Zustand der übergeordneten Symbolleiste. TRUE, wenn die Symbolleiste horizontal angedockt ist, und false, wenn die Symbolleiste vertikal angedockt ist.
 
-*bCustomizeMode*<br/>
-[in] Gibt an, ob die Anwendung im Anpassungsmodus aktiviert ist.
+*bcustomizemode*<br/>
+in Gibt an, ob sich die Anwendung im Anpassungsmodus befindet.
 
 *bHighlight*<br/>
-[in] Angibt, ob zum Zeichnen der kombinationsfeldschaltfläche hervorgehoben.
+in Gibt an, ob die Kombinations Feld Schaltfläche hervorgehoben wird.
 
 *bDrawBorder*<br/>
-[in] Ob der kombinationsfeldschaltfläche mit einem Rahmen gezeichnet werden soll.
+in Ob die Kombinations Feld Schaltfläche mit einem Rahmen gezeichnet werden soll.
 
 *bGrayDisabledButtons*<br/>
-[in] Deaktivierte Schaltflächen schattiert ist "true" Draw; FALSE, wenn die Auflistung der deaktivierten Bilder verwendet werden soll.
+in TRUE zum Zeichnen schattierter deaktivierter Schaltflächen. FALSE, um die deaktivierte Bilder Auflistung zu verwenden.
 
-##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList
+##  <a name="ondrawoncustomizelist"></a>Cmfctoolbarcomboboxbutton:: ondrawoncustomizelist
 
-Wird aufgerufen, durch das Framework für das Zeichnen der kombinationsfeldschaltfläche der **Befehle** im Bereich der **anpassen** Dialogfeld.
+Wird von Framework aufgerufen, um die Kombinations Feld-Schaltfläche im **Befehls** Bereich des Dialog Felds **Anpassen** zu zeichnen.
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -1028,37 +1028,37 @@ virtual int OnDrawOnCustomizeList(
 ### <a name="parameters"></a>Parameter
 
 *pDC*<br/>
-[in] Der Gerätekontext, in dem der kombinationsfeldschaltfläche angezeigt.
+in Der Gerätekontext, der die Kombinations Feld Schaltfläche anzeigt.
 
-*rect*<br/>
-[in] Das umschließende Rechteck des Kombinationsfelds-Schaltfläche.
+*Rect*<br/>
+in Das umgebende Rechteck der Kombinations Feld Schaltfläche.
 
-*bSelected*<br/>
-[in] True, wenn der kombinationsfeldschaltfläche ausgewählt ist. andernfalls "false".
+*bausgewählt*<br/>
+in TRUE, wenn die Schaltfläche Kombinations Feld ausgewählt ist. andernfalls false.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Breite des Kombinationsfelds-Schaltfläche in Pixel.
+Die Breite der Kombinations Feld Schaltfläche in Pixel.
 
-##  <a name="onglobalfontschanged"></a>  CMFCToolBarComboBoxButton::OnGlobalFontsChanged
+##  <a name="onglobalfontschanged"></a>Cmfctoolbarcomboboxbutton:: onglobalfontschge
 
-Wird aufgerufen, durch das Framework das Kombinationsfeld für den Schaltfläche Schriftart festgelegt, wenn die Anwendungsschriftart geändert wird.
+Wird von Framework aufgerufen, um die Schriftart der Kombinations Feld-Schaltfläche beim Ändern der Schriftart der Anwendung festzulegen.
 
 ```
 virtual void OnGlobalFontsChanged();
 ```
 
-##  <a name="onmove"></a>  CMFCToolBarComboBoxButton::OnMove
+##  <a name="onmove"></a>Cmfctoolbarcomboboxbutton:: OnMove
 
-Wird aufgerufen, durch das Framework zum Ändern der Position der kombinationsfeldschaltfläche, wechselt die übergeordneten Symbolleiste.
+Wird von Framework aufgerufen, um den Speicherort der Kombinations Feld Schaltfläche zu ändern, wenn die übergeordnete Symbolleiste verschoben wird.
 
 ```
 virtual void OnMove();
 ```
 
-##  <a name="onshow"></a>  CMFCToolBarComboBoxButton::OnShow
+##  <a name="onshow"></a>Cmfctoolbarcomboboxbutton:: onShow
 
-Vom Framework aufgerufen, wenn der kombinationsfeldschaltfläche angezeigt oder ausgeblendet wird.
+Wird von Framework aufgerufen, wenn die Kombinations Feld Schaltfläche ausgeblendet oder angezeigt wird.
 
 ```
 virtual void OnShow(BOOL bShow);
@@ -1067,11 +1067,11 @@ virtual void OnShow(BOOL bShow);
 ### <a name="parameters"></a>Parameter
 
 *bShow*<br/>
-[in] Ob der kombinationsfeldschaltfläche anzeigen oder ausblenden.
+in Ob die Kombinations Feld Schaltfläche ausgeblendet oder angezeigt werden soll.
 
-##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize
+##  <a name="onsize"></a>Cmfctoolbarcomboboxbutton:: OnSize
 
-Wird aufgerufen, durch das Framework zum Ändern der Größe der kombinationsfeldschaltfläche, wenn die übergeordneten Symbolleiste Größe ändert.
+Wird von Framework aufgerufen, um die Größe der Kombinations Feld Schaltfläche zu ändern, wenn die Größe der übergeordneten Symbolleiste geändert wird.
 
 ```
 virtual void OnSize(int iSize);
@@ -1080,11 +1080,11 @@ virtual void OnSize(int iSize);
 ### <a name="parameters"></a>Parameter
 
 *iSize*<br/>
-[in] Die neue Breite des Kombinationsfelds-Schaltfläche.
+in Die neue Breite der Kombinations Feld Schaltfläche.
 
-##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip
+##  <a name="onupdatetooltip"></a>Cmfctoolbarcomboboxbutton:: onupdatetooltip
 
-Vom Framework aufgerufen, wenn der Benutzer die QuickInfo für die kombinationsfeldschaltfläche ändert.
+Wird von Framework aufgerufen, wenn der Benutzer die QuickInfo für die Kombinations Feld Schaltfläche ändert.
 
 ```
 virtual BOOL OnUpdateToolTip(
@@ -1097,24 +1097,24 @@ virtual BOOL OnUpdateToolTip(
 ### <a name="parameters"></a>Parameter
 
 *pWndParent*<br/>
-[in] Zeiger auf das übergeordnete Fenster für die Kombinationsfelds-Schaltfläche.
+in Zeiger auf das übergeordnete Fenster für die Kombinations Feld Schaltfläche.
 
 *iButtonIndex*<br/>
-[in] ID des Kombinationsfelds-Schaltfläche.
+in Die ID der Kombinations Feld Schaltfläche.
 
 *wndToolTip*<br/>
-[in] Die QuickInfo der kombinationsfeldschaltfläche zugeordnet werden soll.
+in Die QuickInfo, die der Kombinations Feld Schaltfläche zugeordnet werden soll.
 
 *str*<br/>
-[in] Der QuickInfo-Text.
+in Der QuickInfo-Text.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Methode das Ereignis behandelt. andernfalls "false".
+TRUE, wenn die Methode das Ereignis behandelt. andernfalls false.
 
-##  <a name="removeallitems"></a>  CMFCToolBarComboBoxButton::RemoveAllItems
+##  <a name="removeallitems"></a>Cmfctoolbarcomboboxbutton:: RemoveAllItems
 
-Löscht alle Elemente aus der Liste "und" Bearbeiten-Feldern.
+Löscht alle Elemente aus den Feldern "Liste" und "Bearbeiten".
 
 ```
 void RemoveAllItems();
@@ -1122,11 +1122,11 @@ void RemoveAllItems();
 
 ### <a name="remarks"></a>Hinweise
 
-Entfernt, die alle Elemente aus der Liste ein, und bearbeiten die Kontrolle über ein Kombinationsfeld.
+Entfernt alle Elemente aus dem Listenfeld und bearbeitet das Steuerelement eines Kombinations Felds.
 
-##  <a name="selectitem"></a>  CMFCToolBarComboBoxButton::SelectItem
+##  <a name="selectitem"></a>Cmfctoolbarcomboboxbutton:: SelectItem
 
-Wählt ein Element im Listenfeld an.
+Wählt ein Element im Listenfeld aus.
 
 ```
 BOOL SelectItem(
@@ -1140,26 +1140,26 @@ BOOL SelectItem(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parameter
 
 *iIndex*<br/>
-[in] Der nullbasierte Index eines Elements in das Listenfeld.
+in Der null basierte Index eines Elements im Listenfeld.
 
 *bNotify*<br/>
-[in] True, um der Auswahl der kombinationsfeldschaltfläche zu benachrichtigen. andernfalls "false".
+in TRUE, um die Kombinations Feld-Schaltfläche der Auswahl zu benachrichtigen. andernfalls false.
 
 *dwData*<br/>
-[in] Die Daten, die einem Element im Listenfeld zugeordnet wird.
+in Die Daten, die einem Element im Listenfeld zugeordnet sind.
 
 *lpszText*<br/>
-[in] Der Text eines Elements in das Listenfeld.
+in Der Text eines Elements im Listenfeld.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Methode erfolgreich war. andernfalls "false".
+TRUE, wenn die Methode erfolgreich war. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="selectitemall"></a>  CMFCToolBarComboBoxButton::SelectItemAll
+##  <a name="selectitemall"></a>Cmfctoolbarcomboboxbutton:: selectitemall
 
-Wählt ein Element in das Listenfeld ein Kombinationsfelds-Schaltfläche, die eine angegebenen Befehls-ID.
+Wählt ein Element im Listenfeld einer Kombinations Feld-Schaltfläche aus, die über eine angegebene Befehls-ID verfügt.
 
 ```
 static BOOL SelectItemAll(
@@ -1178,26 +1178,26 @@ static BOOL SelectItemAll(
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Die Befehls-ID von der kombinationsfeldschaltfläche, die im Listenfeld enthält.
+in Die Befehls-ID der Kombinations Feld-Schaltfläche, die das Listenfeld enthält.
 
 *iIndex*<br/>
-[in] Der nullbasierte Index des Elements im Listenfeld. Der Wert-1 wird eine aktuelle Auswahl im Listenfeld entfernt und löscht im Bearbeitungsfeld.
+in Der null basierte Index des Elements im Listenfeld. Mit dem Wert-1 wird die aktuelle Auswahl im Listenfeld entfernt, und das Bearbeitungsfeld wird gelöscht.
 
 *dwData*<br/>
-[in] Die Daten eines Elements in das Listenfeld.
+in Die Daten eines Elements im Listenfeld.
 
 *lpszText*<br/>
-[in] Der Text eines Elements in das Listenfeld.
+in Der Text eines Elements im Listenfeld.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Methode erfolgreich war. andernfalls "false".
+TRUE, wenn die Methode erfolgreich war. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="serialize"></a>  CMFCToolBarComboBoxButton::Serialize
+##  <a name="serialize"></a>Cmfctoolbarcomboboxbutton:: Serialize
 
-Dieses Objekt aus einem Archiv liest oder schreibt dieses in ein Archiv.
+Liest dieses Objekt aus einem Archiv oder schreibt es in ein Archiv.
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -1206,15 +1206,15 @@ virtual void Serialize(CArchive& ar);
 ### <a name="parameters"></a>Parameter
 
 *ar*<br/>
-[in, out] Die `CArchive` zu serialisierende Objekt.
+[in, out] Das `CArchive` zu serialisierende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Einstellungen in der `CArchive` Objekt zu ermitteln, ob diese Methode liest oder schreibt in das Archiv.
+Einstellungen im `CArchive` -Objekt bestimmen, ob diese Methode das Archiv liest oder schreibt.
 
-##  <a name="setaccdata"></a>  CMFCToolBarComboBoxButton::SetACCData
+##  <a name="setaccdata"></a>Cmfctoolbarcomboboxbutton:: setaccdata
 
-Füllt das angegebene `CAccessibilityData` -Objekt mithilfe von barrierefreiheitsdaten aus dem Kombinationsfelds-Schaltfläche.
+Füllt das angegebene `CAccessibilityData` -Objekt mithilfe von Barrierefreiheits Daten aus der Kombinations Feld Schaltfläche auf.
 
 ```
 virtual BOOL SetACCData(
@@ -1225,18 +1225,18 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>Parameter
 
 *pParent*<br/>
-[in] Das übergeordnete Fenster von der kombinationsfeldschaltfläche.
+in Das übergeordnete Fenster der Kombinations Feld Schaltfläche.
 
 *data*<br/>
-[out] Ein `CAccessibilityData` Objekt, das die barrierefreiheitsdaten aus der kombinationsfeldschaltfläche empfängt.
+vorgenommen Ein `CAccessibilityData` -Objekt, das die Barrierefreiheits Daten von der Kombinations Feld Schaltfläche empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Methode erfolgreich war. andernfalls "false".
+TRUE, wenn die Methode erfolgreich war. andernfalls false.
 
-##  <a name="setcentervert"></a>  CMFCToolBarComboBoxButton::SetCenterVert
+##  <a name="setcentervert"></a>Cmfctoolbarcomboboxbutton:: setcentervert
 
-Legt die vertikale Position der Schaltflächen in der Anwendung fest.
+Legt die vertikale Position von Kombinations Feld-Schaltflächen in der Anwendung fest.
 
 ```
 static void SetCenterVert(BOOL bCenterVert=TRUE);
@@ -1245,15 +1245,15 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bCenterVert*<br/>
-[in] "True" Center die Kombinationsfelds-Schaltfläche auf der Symbolleiste "False" an das die Kombinationsfelds-Schaltfläche am oberen Rand der Symbolleiste.
+in TRUE, um die Kombinations Feld Schaltfläche auf der Symbolleiste zu zentrieren FALSE, um die Kombinations Feld-Schaltfläche am oberen Rand der Symbolleiste auszurichten.
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig werden die Schaltflächen oben ausgerichtet.
+Standardmäßig werden Kombinations Feld Schaltflächen am oberen Rand ausgerichtet.
 
-##  <a name="setcontextmenuid"></a>  CMFCToolBarComboBoxButton::SetContextMenuID
+##  <a name="setcontextmenuid"></a>Cmfctoolbarcomboboxbutton:: setcontextmenuid
 
-Legt die Verknüpfung im Menü-Ressourcen-ID für das Kombinationsfeld-Schaltfläche im fest.
+Legt die Ressourcen-ID des Kontextmenüs für die Kombinations Feld Schaltfläche fest.
 
 ```
 void SetContextMenuID(UINT uiResID);
@@ -1262,11 +1262,11 @@ void SetContextMenuID(UINT uiResID);
 ### <a name="parameters"></a>Parameter
 
 *uiResID*<br/>
-[in] Die Verknüpfung im Menü-Ressourcen-ID.
+in Die Ressourcen-ID des Kontextmenüs.
 
-##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight
+##  <a name="setdropdownheight"></a>Cmfctoolbarcomboboxbutton:: setdropdownheight
 
-Legt die Höhe des Listenfelds fest, wenn sie nach unten gelöscht wird.
+Legt die Höhe des Listen Felds fest, wenn es gelöscht wird.
 
 ```
 void SetDropDownHeight(int nHeight);
@@ -1274,16 +1274,16 @@ void SetDropDownHeight(int nHeight);
 
 ### <a name="parameters"></a>Parameter
 
-*nHeight*<br/>
-[in] Die Höhe in Pixel des Listenfelds.
+*nheight*<br/>
+in Die Höhe des Listen Felds in Pixel.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Standardhöhe ist 150 Pixel.
+Die Standardhöhe beträgt 150 Pixel.
 
-##  <a name="setflatmode"></a>  CMFCToolBarComboBoxButton::SetFlatMode
+##  <a name="setflatmode"></a>Cmfctoolbarcomboboxbutton:: setflatmode
 
-Legt die flache Darstellung der Schaltflächen in der Anwendung fest.
+Legt die flache Darstellung von Kombinations Feld-Schaltflächen in der Anwendung fest.
 
 ```
 static void SetFlatMode(BOOL bFlat=TRUE);
@@ -1292,15 +1292,15 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bFlat*<br/>
-[in] "True" für eine flache Darstellung; andernfalls "false".
+in TRUE für eine flache Darstellung; andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Die flache Standardstil für Schaltflächen ist "false".
+Der standardmäßige flache Stil für Kombinations Feld-Schaltflächen ist false.
 
-##  <a name="setstyle"></a>  CMFCToolBarComboBoxButton::SetStyle
+##  <a name="setstyle"></a>Cmfctoolbarcomboboxbutton:: SetStyle
 
-Legt das angegebene Format für das Kombinationsfeld für den-Schaltfläche im und zeichnet das Steuerelement neu, wenn es nicht deaktiviert ist.
+Legt den angegebenen Stil für die Kombinations Feld Schaltfläche fest und zeichnet das Steuerelement neu, wenn es nicht deaktiviert ist.
 
 ```
 virtual void SetStyle(UINT nStyle);
@@ -1309,15 +1309,15 @@ virtual void SetStyle(UINT nStyle);
 ### <a name="parameters"></a>Parameter
 
 *nStyle*<br/>
-[in] Eine bitweise Kombination (OR) von Toolbar-Stile.
+in Eine bitweise Kombination (or) von Symbolleisten Stilen.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Liste der Formatvorlagen für Symbolleistenschaltflächen finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md)
+Eine Liste der Symbolleisten-Schaltflächen Stile finden Sie unter [Toolbar-Steuer](../../mfc/reference/toolbar-control-styles.md) Element
 
-##  <a name="settext"></a>  CMFCToolBarComboBoxButton::SetText
+##  <a name="settext"></a>Cmfctoolbarcomboboxbutton:: SetText
 
-Legt den Text im Eingabefeld des Kombinationsfeld-Schaltfläche im fest.
+Legt den Text im Bearbeitungsfeld der Kombinations Feld Schaltfläche fest.
 
 ```
 void SetText(LPCTSTR lpszText);
@@ -1326,7 +1326,7 @@ void SetText(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parameter
 
 *lpszText*<br/>
-[in] Zeiger auf eine Zeichenfolge, die den Text für das Bearbeitungsfeld enthält.
+in Ein Zeiger auf eine Zeichenfolge, die den Text für das Bearbeitungsfeld enthält.
 
 ## <a name="see-also"></a>Siehe auch
 

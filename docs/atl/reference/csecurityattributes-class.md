@@ -1,5 +1,5 @@
 ---
-title: CSecurityAttributes-Klasse
+title: Csecurityattribute-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CSecurityAttributes
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: b26de7a2a3426ed2fe86bd7ef50f6c5410fa5364
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503195"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915730"
 ---
-# <a name="csecurityattributes-class"></a>CSecurityAttributes-Klasse
+# <a name="csecurityattributes-class"></a>Csecurityattribute-Klasse
 
-Diese Klasse ist ein einfacher Wrapper für die Struktur der Sicherheits-Attribute.
+Diese Klasse ist ein schlanker Wrapper für die Struktur der Sicherheits Attribute.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+>  Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,19 +35,19 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|Der Konstruktor.|
+|[Csecurityattribute:: csecurityattribute](#csecurityattributes)|Der Konstruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CSecurityAttributes::Set](#set)|Rufen Sie diese Methode, um die Attribute der Festlegen der `CSecurityAttributes` Objekt.|
+|[Csecurityattribute:: Set](#set)|Ruft diese Methode auf, um die Attribute des `CSecurityAttributes` -Objekts festzulegen.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die `SECURITY_ATTRIBUTES` Struktur enthält eine [Sicherheitsbeschreibung](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) für die Erstellung eines Objekts verwendet, und gibt an, ob das Handle abgerufen werden, durch Angeben dieser Struktur geerbt werden kann.
+Die `SECURITY_ATTRIBUTES` -Struktur enthält eine [Sicherheits Beschreibung](/windows/desktop/api/winnt/ns-winnt-security_descriptor) , die für die Erstellung eines-Objekts verwendet wird, und gibt an, ob das durch Angeben dieser Struktur abgerufene handle vererbbar ist.
 
-Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](/windows/desktop/SecAuthZ/access-control) im Windows SDK.
+Eine Einführung zum Zugriffs Steuerungsmodell in Windows finden Sie unter [Access Control](/windows/desktop/SecAuthZ/access-control) in der Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -57,9 +57,9 @@ Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Z
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlsecurity.h
+**Header:** ATLSecurity. h
 
-##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes
+##  <a name="csecurityattributes"></a>Csecurityattribute:: csecurityattribute
 
 Der Konstruktor.
 
@@ -76,9 +76,9 @@ Verweis auf den Sicherheitsdeskriptor.
 *bInheritsHandle*<br/>
 Gibt an, ob das zurückgegebene Handle geerbt wird, wenn ein neuer Prozess erstellt wird. Wenn dieses Element auf true festgelegt ist, erbt der neue Prozess das Handle.
 
-##  <a name="set"></a>  CSecurityAttributes:: Set
+##  <a name="set"></a>Csecurityattribute:: Set
 
-Rufen Sie diese Methode, um die Attribute der Festlegen der `CSecurityAttributes` Objekt.
+Ruft diese Methode auf, um die Attribute des `CSecurityAttributes` -Objekts festzulegen.
 
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
@@ -94,12 +94,12 @@ Gibt an, ob das zurückgegebene Handle geerbt wird, wenn ein neuer Prozess erste
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird verwendet, durch den Konstruktor zum Initialisieren der `CSecurityAttributes` Objekt.
+Diese Methode wird vom Konstruktor verwendet, um das `CSecurityAttributes` Objekt zu initialisieren.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Beispiel für die Sicherheit](../../overview/visual-cpp-samples.md)<br/>
+[Sicherheits Beispiel](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[Sicherheitsbeschreibung](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
+[Sicherheits Beschreibung](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[Klassen Übersicht](../../atl/atl-class-overview.md)<br/>
 [Globale Sicherheitsfunktionen](../../atl/reference/security-global-functions.md)

@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-ms.openlocfilehash: 292a1c6606585dc0694ee678ba8bc9b5fbc42681
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d875a039b01b7458a1df46a2539cf5c68aa67e41
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261445"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915932"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
-Der Name der Funktion durch den dritten Parameter des NOTIFY_HANDLER Makros in der meldungszuordnung identifiziert.
+Der Name der Funktion, die durch den dritten Parameter des NOTIFY_HANDLER-Makros in der Meldungs Zuordnung identifiziert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,21 +28,21 @@ LRESULT NotifyHandler(
 #### <a name="parameters"></a>Parameter
 
 *idCtrl*<br/>
-Der Bezeichner des Steuerelements, das Sie die Nachricht gesendet.
+Der Bezeichner des Steuer Elements, das die Nachricht sendet.
 
 *pnmh*<br/>
-Adresse von einem [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) Struktur, die der Benachrichtigungscode und zusätzliche Informationen enthält. Für einige Benachrichtigungen, zeigt dieser Parameter auf einer größeren Struktur, die die `NMHDR` Struktur wie des ersten Elements.
+Adresse einer [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die den Benachrichtigungs Code und zusätzliche Informationen enthält. Bei einigen Benachrichtigungs Meldungen verweist dieser Parameter auf eine größere Struktur, die über `NMHDR` die Struktur als erstes Element verfügt.
 
 *bHandled*<br/>
-Die Zuordnung Nachrichtensätze *bHandled* auf "true", bevor Sie *NotifyHandler* aufgerufen wird. Wenn *NotifyHandler* ist nicht vollständig verarbeitet die Nachricht sollte *bHandled* zu **"false"** an, dass noch weitere Verarbeitung die Nachricht erforderlich.
+In der Meldungs Zuordnung wird *bbehandelte* auf true festgelegt, bevor *notifyhandler* aufgerufen wird. Wenn *notifyhandler* die Nachricht nicht vollständig verarbeitet, sollte *bbehandelte* auf **false** festgelegt werden, um anzugeben, dass die Nachricht weiterverarbeitet werden muss.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das Ergebnis der Nachrichtenverarbeitung. Bei Erfolg 0.
+Das Ergebnis der Nachrichtenverarbeitung. 0, wenn erfolgreich.
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Beispiel für die Verwendung dieser Nachrichtenhandler in einer meldungszuordnung, finden Sie unter [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).
+Ein Beispiel für die Verwendung dieses Nachrichten Handlers in einer Meldungs Zuordnung finden Sie unter [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).
 
 ## <a name="see-also"></a>Siehe auch
 

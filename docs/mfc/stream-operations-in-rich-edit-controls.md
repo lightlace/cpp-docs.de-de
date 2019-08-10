@@ -9,20 +9,20 @@ helpviewer_keywords:
 - stream operations in CRichEditCtrl
 - stream storage and CRichEditCtrl
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
-ms.openlocfilehash: 04cf0b06773937bf66defccbb0e5e880c06e8d88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04bf49371b3ab5eaaad2775b532d8d35bf990ce3
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306680"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915294"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Streamoperationen in RichEdit-Steuerelementen
 
-Sie können die Streams verwenden, zum Übertragen von Daten in oder aus einem rich Edit-Steuerelement ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Ein Datenstrom wird definiert, indem ein [EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-_editstream) -Struktur, die einen Puffer und einer anwendungsdefinierten Rückruffunktion angibt.
+Sie können Datenströme zum Übertragen von Daten in ein oder aus einem Rich-Edit-Steuerelement ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) verwenden. Ein Stream wird durch eine [editstream](/windows/desktop/api/richedit/ns-richedit-editstream) -Struktur definiert, die einen Puffer und eine Anwendungs definierte Rückruffunktion angibt.
 
-Zum Lesen von Daten in einem Rich edit-Steuerelement (d. h. die Daten im stream), verwenden Sie die [Memberfunktion StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) Member-Funktion. Das Steuerelement ruft wiederholt die anwendungsdefinierten Rückruffunktion, die einen Teil der Daten in den Puffer, jedes Mal überträgt.
+Verwenden Sie zum Lesen von Daten in ein Rich-Edit-Steuerelement (d. h. zum Streamen der Daten in) die Funktion " [StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) -Member". Das-Steuerelement ruft wiederholt die Anwendungs definierte Rückruffunktion auf, die jedes Mal einen Teil der Daten in den Puffer überträgt.
 
-Zum Speichern der Inhalte von einem Rich-edit-Steuerelement (d. h. beim Streamen der Daten), können Sie die [Memberfunktion StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) Member-Funktion. Das Steuerelement wiederholt schreibt in den Puffer und ruft dann die anwendungsdefinierten Rückruffunktion. Für jeden Aufruf speichert die Callback-Funktion den Inhalt des Puffers.
+Um den Inhalt eines Rich-Edit-Steuer Elements (d. h. das Streamen der Daten) zu speichern, können Sie die Funktion " [StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) -Member" verwenden. Das-Steuerelement schreibt wiederholt in den Puffer und ruft dann die Anwendungs definierte Rückruffunktion auf. Für jeden-Befehl speichert die Rückruffunktion den Inhalt des Puffers.
 
 ## <a name="see-also"></a>Siehe auch
 

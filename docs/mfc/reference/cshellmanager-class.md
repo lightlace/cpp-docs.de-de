@@ -1,5 +1,5 @@
 ---
-title: CShellManager-Klasse
+title: Cshellmanager-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CShellManager
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: ec2abf243e7f3865609f81fa4f3bf81e1b4c3d92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14e8da573621f712ae9e27647122d305be54b7b0
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325090"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916687"
 ---
-# <a name="cshellmanager-class"></a>CShellManager-Klasse
+# <a name="cshellmanager-class"></a>Cshellmanager-Klasse
 
 Implementiert mehrere Möglichkeiten für die Verwendung von Zeigern auf Bezeichnerlisten (PIDLs).
 
@@ -57,36 +57,36 @@ class CShellManager : public CObject
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CShellManager::BrowseForFolder](#browseforfolder)|Zeigt ein Dialogfeld an, die dem Benutzer ermöglicht, einen Shellordner auszuwählen.|
-|[CShellManager::ConcatenateItem](#concatenateitem)|Verkettet zwei PIDLs an.|
-|[CShellManager::CopyItem](#copyitem)|Erstellt eine neue PIDL und kopiert die angegebene PIDL dorthin.|
-|[CShellManager::CreateItem](#createitem)|Erstellt eine neue PIDL der angegebenen Größe an.|
-|[CShellManager::FreeItem](#freeitem)|Löscht die angegebene PIDL an.|
+|[CShellManager::BrowseForFolder](#browseforfolder)|Zeigt ein Dialogfeld an, in dem der Benutzer einen Shellordner auswählen kann.|
+|[CShellManager::ConcatenateItem](#concatenateitem)|Verkettet zwei pidls.|
+|[CShellManager::CopyItem](#copyitem)|Erstellt eine neue PIDL und kopiert die angegebene PIDL in diese.|
+|[CShellManager::CreateItem](#createitem)|Erstellt eine neue PIDL der angegebenen Größe.|
+|[CShellManager::FreeItem](#freeitem)|Löscht die angegebene PIDL.|
 |[CShellManager::GetItemCount](#getitemcount)|Gibt die Anzahl der Elemente in der angegebenen PIDL zurück.|
 |[CShellManager::GetItemSize](#getitemsize)|Gibt die Größe der bereitgestellten PIDL zurück.|
 |[CShellManager::GetNextItem](#getnextitem)|Gibt das nächste Element aus der PIDL zurück.|
 |[CShellManager::GetParentItem](#getparentitem)|Ruft das übergeordnete Element des angegebenen Elements ab.|
-|[CShellManager::ItemFromPath](#itemfrompath)|Ruft ab, der PIDL für das Element, das durch den angegebenen Pfad identifiziert wird.|
+|[CShellManager::ItemFromPath](#itemfrompath)|Ruft die PIDL für das durch den angegebenen Pfad identifizierte Element ab.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die Methoden der `CShellManager` alle viel mit PIDLs Klasse. Eine PIDL ist ein eindeutiger Bezeichner für ein PowerShell-Objekt.
+Die Methoden der `CShellManager` -Klasse behandeln alle pidls. Eine PIDL ist ein eindeutiger Bezeichner für ein Shellobjekt.
 
-Erstellen Sie keine `CShellManager` Objekt manuell. Es wird automatisch durch das Framework der Anwendung erstellt werden. Sie sollten jedoch aufrufen [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager) während der Initialisierung der Anwendung. Um einen Zeiger an dem Shell-Manager für Ihre Anwendung zu erhalten, rufen [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager).
+Ein `CShellManager` -Objekt sollte nicht manuell erstellt werden. Sie wird automatisch vom Framework der Anwendung erstellt. Sie sollten jedoch beim Initialisierungs Prozess der Anwendung [CWinAppEx:: initshellmanager](../../mfc/reference/cwinappex-class.md#initshellmanager) aufrufen. Rufen Sie [CWinAppEx:: getshellmanager](../../mfc/reference/cwinappex-class.md#getshellmanager)auf, um einen Zeiger auf den Shellmanager für Ihre Anwendung zu erhalten.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CShellManager](../../mfc/reference/cshellmanager-class.md)
+[Cshellmanager](../../mfc/reference/cshellmanager-class.md)
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxshellmanager.h
+**Header:** afxshellmanager. h
 
-##  <a name="browseforfolder"></a>  CShellManager::BrowseForFolder
+##  <a name="browseforfolder"></a>Cshellmanager:: browsegforfolder
 
-Zeigt ein Dialogfeld an, die dem Benutzer ermöglicht, einen Shellordner auszuwählen.
+Zeigt ein Dialogfeld an, in dem der Benutzer einen Shellordner auswählen kann.
 
 ```
 BOOL BrowseForFolder(
@@ -101,40 +101,40 @@ BOOL BrowseForFolder(
 ### <a name="parameters"></a>Parameter
 
 *strOutFolder*<br/>
-[out] Die Zeichenfolge, die von der Methode zum Speichern des Pfads des ausgewählten Ordners verwendet wird.
+vorgenommen Die Zeichenfolge, die von der-Methode verwendet wird, um den Pfad des ausgewählten Ordners zu speichern.
 
 *pWndParent*<br/>
-[in] Ein Zeiger auf das übergeordnete Fenster.
+in Ein Zeiger auf das übergeordnete Fenster.
 
 *lplszInitialFolder*<br/>
-[in] Eine Zeichenfolge mit dem Ordner, der standardmäßig ausgewählt ist, wenn das Dialogfeld angezeigt wird.
+in Eine Zeichenfolge, die den Ordner enthält, der standardmäßig ausgewählt wird, wenn das Dialogfeld angezeigt wird.
 
 *lpszTitle*<br/>
-[in] Der Titel für das Dialogfeld.
+in Der Titel für das Dialogfeld.
 
 *ulFlags*<br/>
-[in] Flags, die Optionen für das Dialogfeld angeben. Finden Sie unter [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) für die ausführliche Beschreibung.
+in Flags, die Optionen für das Dialogfeld angeben. Die ausführliche Beschreibung finden Sie unter [Browseinfo](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) .
 
 *piFolderImage*<br/>
-[out] Ein Zeiger auf den ganzzahligen Wert, der die Methode den Bildindex des ausgewählten Ordners schreibt.
+vorgenommen Ein Zeiger auf den ganzzahligen Wert, in dem die-Methode den Image Index des ausgewählten Ordners schreibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL ist, wenn der Benutzer einen Ordner aus dem Dialogfeld auswählt; andernfalls 0.
+Ungleich 0 (null), wenn der Benutzer einen Ordner aus dem Dialogfeld auswählt. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn Sie diese Methode aufrufen, wird die Anwendung erstellt und zeigt ein Dialogfeld an, die dem Benutzer ermöglicht, einen Ordner auszuwählen. Die Methode schreibt den Pfad des Ordners, in der *StrOutFolder* Parameter.
+Wenn Sie diese Methode aufgerufen haben, erstellt die Anwendung ein Dialogfeld und zeigt ein Dialogfeld an, in dem der Benutzer einen Ordner auswählen kann. Mit der-Methode wird der Pfad des Ordners in den *stroutfolder* -Parameter geschrieben.
 
 ### <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie zum Abrufen eines Verweises auf eine `CShellManager` -Objekt unter Verwendung der `CWinAppEx::GetShellManager` -Methode und zum Verwenden der `BrowseForFolder` Methode. Dieser Codeausschnitt ist Teil der [Explorer-Beispiel](../../overview/visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie ein Verweis auf ein `CShellManager` -Objekt mithilfe der `CWinAppEx::GetShellManager` -Methode abgerufen wird und wie `BrowseForFolder` die-Methode verwendet wird. Dieser Code Ausschnitt ist Teil des [Explorer](../../overview/visual-cpp-samples.md)-Beispiels.
 
 [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]
 
-##  <a name="concatenateitem"></a>  CShellManager::ConcatenateItem
+##  <a name="concatenateitem"></a>Cshellmanager:: concatenateitem
 
-Erstellt eine neue Liste, die zwei PIDLs enthält.
+Erstellt eine neue Liste, die zwei pidls enthält.
 
 ```
 LPITEMIDLIST ConcatenateItem(
@@ -145,22 +145,22 @@ LPITEMIDLIST ConcatenateItem(
 ### <a name="parameters"></a>Parameter
 
 *pidl1*<br/>
-[in] Das erste Element.
+in Das erste Element.
 
 *pidl2*<br/>
-[in] Das zweite Element.
+in Das zweite Element.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die neue Elementliste aus, wenn die Funktion erfolgreich ist, andernfalls NULL.
+Ein Zeiger auf die neue Elementliste, wenn die Funktion erfolgreich ausgeführt wird, andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode erstellt ein neues [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) groß genug für beide *pidl1* und *pidl2*. Anschließend kopiert *pidl1* und *pidl2* in die neue Liste.
+Diese Methode erstellt eine neue [itemittel List](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) , die groß genug ist, um sowohl *pidl1* als auch *pidl2*zu enthalten. Anschließend werden *pidl1* und *pidl2* in die neue Liste kopiert.
 
-##  <a name="copyitem"></a>  CShellManager::CopyItem
+##  <a name="copyitem"></a>Cshellmanager:: CopyItem
 
-Kopiert eine Elementliste an.
+Kopiert eine Elementliste.
 
 ```
 LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
@@ -169,19 +169,19 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ### <a name="parameters"></a>Parameter
 
 *pidlSource*<br/>
-[in] Der ursprünglichen Elementliste.
+in Die ursprüngliche Elementliste.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die neu erstellte Element-Liste, wenn erfolgreich; andernfalls NULL.
+Ein Zeiger auf die neu erstellte Elementliste, wenn erfolgreich. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Liste der neu erstellte Element verfügt über die gleiche Größe wie der Item Quellliste.
+Die neu erstellte Elementliste hat dieselbe Größe wie die Quell Elementliste.
 
-##  <a name="createitem"></a>  CShellManager::CreateItem
+##  <a name="createitem"></a>Cshellmanager:: kreateitem
 
-Erstellt eine neue PIDL an.
+Erstellt eine neue PIDL.
 
 ```
 LPITEMIDLIST CreateItem(UINT cbSize);
@@ -190,13 +190,13 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ### <a name="parameters"></a>Parameter
 
 *cbSize*<br/>
-[in] Die Größe der Elementliste.
+in Die Größe der Elementliste.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf das erstellte Element-Liste, wenn erfolgreich; andernfalls NULL.
+Ein Zeiger auf die erstellte Elementliste, wenn erfolgreich. andernfalls NULL.
 
-##  <a name="cshellmanager"></a>  CShellManager::CShellManager
+##  <a name="cshellmanager"></a>Cshellmanager:: cshellmanager
 
 Erstellt ein `CShellManager`-Objekt.
 
@@ -206,11 +206,11 @@ CShellManager();
 
 ### <a name="remarks"></a>Hinweise
 
-In den meisten Fällen, Sie müssen keine Erstellung einer `CShellManager` direkt. Standardmäßig erstellt das Framework für Sie. Um einen Zeiger auf die `CShellManager`, rufen Sie [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager). Wenn Sie erstellen eine `CShellManager` manuell müssen initialisiert es mit der Methode [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).
+In den meisten Fällen ist es nicht erforderlich, einen `CShellManager` direkt zu erstellen. Standardmäßig erstellt das Framework eines. Rufen Sie `CShellManager` [CWinAppEx:: getshellmanager](../../mfc/reference/cwinappex-class.md#getshellmanager)auf, um einen Zeiger auf den zu erhalten. Wenn Sie einen `CShellManager` manuell erstellen, müssen Sie ihn mit der-Methode [CWinAppEx:: initshellmanager](../../mfc/reference/cwinappex-class.md#initshellmanager)initialisieren.
 
-##  <a name="freeitem"></a>  CShellManager::FreeItem
+##  <a name="freeitem"></a>Cshellmanager:: freeitem
 
-Löscht eine Elementliste an.
+Löscht eine Elementliste.
 
 ```
 void FreeItem(LPITEMIDLIST pidl);
@@ -218,12 +218,12 @@ void FreeItem(LPITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parameter
 
-*pidl*<br/>
-[in] Eine Elementliste zu löschen.
+*PIDL*<br/>
+in Eine Elementliste, die gelöscht werden soll.
 
-##  <a name="getitemcount"></a>  CShellManager::GetItemCount
+##  <a name="getitemcount"></a>Cshellmanager:: GetItemCount
 
-Gibt die Anzahl der Elemente in der Liste ein Element zurück.
+Gibt die Anzahl der Elemente in einer Elementliste zurück.
 
 ```
 UINT GetItemCount(LPCITEMIDLIST pidl);
@@ -231,16 +231,16 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parameter
 
-*pidl*<br/>
-[in] Ein Zeiger auf eine Elementliste.
+*PIDL*<br/>
+in Ein Zeiger auf eine Elementliste.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Die Anzahl der Elemente in der Elementliste.
 
-##  <a name="getitemsize"></a>  CShellManager::GetItemSize
+##  <a name="getitemsize"></a>Cshellmanager:: getitemsize
 
-Gibt die Größe der Liste ein Element zurück.
+Gibt die Größe einer Elementliste zurück.
 
 ```
 UINT GetItemSize(LPCITEMIDLIST pidl);
@@ -248,16 +248,16 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parameter
 
-*pidl*<br/>
-[in] Ein Zeiger auf eine Elementliste.
+*PIDL*<br/>
+in Ein Zeiger auf eine Elementliste.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Die Größe der Elementliste.
 
-##  <a name="getnextitem"></a>  CShellManager::GetNextItem
+##  <a name="getnextitem"></a>Cshellmanager:: GetNextItem
 
-Ruft das nächste Element von einem Zeiger auf eine Elementliste Bezeichner (PIDL) ab.
+Ruft das nächste Element von einem Zeiger auf eine Element Bezeichner Liste (PIDL) ab.
 
 ```
 LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
@@ -265,8 +265,8 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>Parameter
 
-*pidl*<br/>
-[in] Die Liste der Elemente, die durchlaufen werden soll.
+*PIDL*<br/>
+in Die Liste der Elemente, die durchlaufen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -274,11 +274,11 @@ Ein Zeiger auf das nächste Element in der Liste.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn in der Liste keine Elemente mehr vorhanden sind, gibt diese Methode NULL zurück.
+Wenn in der Liste keine weiteren Elemente vorhanden sind, gibt diese Methode NULL zurück.
 
-##  <a name="getparentitem"></a>  CShellManager::GetParentItem
+##  <a name="getparentitem"></a>Cshellmanager:: getparameentitem
 
-Ruft das übergeordnete Element eines Zeigers auf eine Elementliste Bezeichner (PIDL) ab.
+Ruft das übergeordnete Element eines Zeigers auf eine elementbezeichnerliste (PIDL) ab.
 
 ```
 int GetParentItem(
@@ -289,22 +289,22 @@ int GetParentItem(
 ### <a name="parameters"></a>Parameter
 
 *lpidl*<br/>
-[in] Eine PIDL, dessen übergeordnetes Element abgerufen werden.
+in Eine PIDL, deren übergeordnetes Element abgerufen wird.
 
 *lpidlParent*<br/>
-[out] Ein Verweis auf eine PIDL, in denen die Methode das Ergebnis gespeichert werden.
+vorgenommen Ein Verweis auf eine PIDL, in der die-Methode das Ergebnis speichert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Ebene des übergeordneten Elements PIDL.
+Die Ebene der übergeordneten PIDL.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Ebene von einem PIDL ist relativ zum Desktop. Der desktop PIDL gilt ein gewisses Maß an 0.
+Die Ebene einer PIDL ist relativ zum Desktop. Die Desktop-PIDL wird als 0 (null) eingestuft.
 
-##  <a name="itemfrompath"></a>  CShellManager::ItemFromPath
+##  <a name="itemfrompath"></a>Cshellmanager:: itemfrompath
 
-Ruft die Zeiger auf eine Elementliste Bezeichner (PIDL) ab, aus dem Element, das von einem zeichenfolgepfad identifiziert.
+Ruft den Zeiger auf eine Element Bezeichner Liste (PIDL) aus dem durch einen Zeichen folgen Pfad identifizierten Element ab.
 
 ```
 HRESULT ItemFromPath(
@@ -315,14 +315,14 @@ HRESULT ItemFromPath(
 ### <a name="parameters"></a>Parameter
 
 *lpszPath*<br/>
-[in] Eine Zeichenfolge, die den Pfad für das Element angibt.
+in Eine Zeichenfolge, die den Pfad für das Element angibt.
 
-*pidl*<br/>
-[out] Ein Verweis auf eine PIDL. Die Methode verwendet diesen PIDL zum Speichern des Zeigers auf den Rückgabewert an.
+*PIDL*<br/>
+vorgenommen Ein Verweis auf eine PIDL. Die-Methode verwendet diese PIDL, um den Zeiger auf seinen Rückgabewert zu speichern.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt "noError" ZURÜCKGEGEBEN, wenn erfolgreich; ein OLE definierter Fehlerwert.
+Gibt noError zurück, wenn erfolgreich; ein OLE-definierter Fehlerwert.
 
 ## <a name="see-also"></a>Siehe auch
 

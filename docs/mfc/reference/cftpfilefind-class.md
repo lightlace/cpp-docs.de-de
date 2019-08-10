@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 885005cc04da94ff4339a5f538956b1bfc96b4c3
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 9afe2bf563ffa80a3238548d75efa69178fa1f64
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503681"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916064"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind-Klasse
 
@@ -43,21 +43,21 @@ class CFtpFileFind : public CFileFind
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CFtpFileFind::FindFile](#findfile)|Sucht nach einer Datei auf einem FTP-Server.|
-|[CFtpFileFind::FindNextFile](#findnextfile)|Weiterhin eine Dateisuche in einem vorherigen Aufruf von [FindFile](#findfile).|
-|[CFtpFileFind::GetFileURL](#getfileurl)|Ruft die URL, einschließlich Pfad, der die gefundene Datei ab.|
+|[CFtpFileFind::FindFile](#findfile)|Sucht eine Datei auf einem FTP-Server.|
+|[CFtpFileFind::FindNextFile](#findnextfile)|Setzt eine Dateisuche von einem vorherigen Befehl von " [FindFile](#findfile)" fort.|
+|[CFtpFileFind::GetFileURL](#getfileurl)|Ruft die URL (einschließlich Pfad) der gefundenen Datei ab.|
 
 ## <a name="remarks"></a>Hinweise
 
-`CFtpFileFind` enthält die Member-Funktionen, die eine Suche zu starten, suchen Sie nach einer Datei und die URL oder sonstige beschreibende Informationen zu der Datei zurück.
+`CFtpFileFind`umfasst Member-Funktionen, die eine Suche starten, eine Datei suchen und die URL oder andere beschreibende Informationen über die Datei zurückgeben.
 
-Andere MFC-Klassen für Internet und die lokale Datei durchsucht enthalten [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) und [CFileFind](../../mfc/reference/cfilefind-class.md). Zusammen mit `CFtpFileFind`, diese Klassen bieten einen nahtlose Mechanismus für den Client Dateien, die unabhängig von dem Server-Protokoll oder der Dateityp (einem lokalen Computer oder einem Remoteserver) gefunden. Beachten Sie, dass es keine MFC-Klasse ist für die Suche auf HTTP-Servern, da HTTP nicht die direkten Bearbeitung erforderlich, die für Suchvorgänge unterstützt.
+Andere MFC-Klassen, die für das Internet und die lokale Datei durchsucht wurden, umfassen [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) und [CFileFind](../../mfc/reference/cfilefind-class.md). In Kombi `CFtpFileFind`Nieren diese Klassen eine nahtlose Methode, mit der der Client bestimmte Dateien suchen kann, unabhängig vom Server Protokoll oder Dateityp (entweder ein lokaler Computer oder ein Remote Server). Beachten Sie, dass es keine MFC-Klasse für die Suche von HTTP-Servern gibt, da HTTP die für Suchvorgänge erforderliche direkte Dateibearbeitung nicht unterstützt.
 
-Weitere Informationen zur Verwendung von `CFtpFileFind` und die andere WinInet-Klassen finden Sie im Artikel [Internet zu programmieren, mit WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Weitere Informationen zur Verwendung `CFtpFileFind` von und der anderen WinInet-Klassen finden Sie im Artikel [Internet Programmierung mit WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt, wie alle Dateien im aktuellen Verzeichnis des FTP-Servers aufgelistet werden.
+Der folgende Code veranschaulicht, wie alle Dateien im aktuellen Verzeichnis des FTP-Servers aufgelistet werden.
 
 [!code-cpp[NVC_MFCWinInet#8](../../mfc/codesnippet/cpp/cftpfilefind-class_1.cpp)]
 
@@ -73,9 +73,9 @@ Der folgende Code zeigt, wie alle Dateien im aktuellen Verzeichnis des FTP-Serve
 
 **Header:** afxinet.h
 
-##  <a name="cftpfilefind"></a>  CFtpFileFind::CFtpFileFind
+##  <a name="cftpfilefind"></a>CFtpFileFind:: CFtpFileFind
 
-Diese Memberfunktion wird aufgerufen, um das Erstellen einer `CFtpFileFind` Objekt.
+Diese Member-Funktion wird aufgerufen, um `CFtpFileFind` ein-Objekt zu erstellen.
 
 ```
 explicit CFtpFileFind(
@@ -86,22 +86,22 @@ explicit CFtpFileFind(
 ### <a name="parameters"></a>Parameter
 
 *pConnection*<br/>
-Ein Zeiger auf ein `CFtpConnection` -Objekt. Sie erhalten eine FTP-Verbindung durch den Aufruf [CInternetSession:: GetFTPConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).
+Ein Zeiger auf ein `CFtpConnection` -Objekt. Sie können eine FTP-Verbindung abrufen, indem Sie [cinternetzession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)aufrufen.
 
 *dwContext*<br/>
-Der Kontextbezeichner für den `CFtpFileFind` Objekt. Finden Sie unter **"Hinweise"** für Weitere Informationen zu diesem Parameter.
+Der Kontext Bezeichner für `CFtpFileFind` das-Objekt. Weitere Informationen zu diesem Parameter finden Sie unter " **Hinweise** ".
 
 ### <a name="remarks"></a>Hinweise
 
-Der Standardwert für *DwContext* wird gesendet, von MFC über die `CFtpFileFind` -Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) -Objekt, das erstellt die `CFtpFileFind` Objekt. Sie können die Standardeinstellung, um den Kontextbezeichner auf einen Wert Ihrer Wahl festgelegt überschreiben. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zu Status für das Objekt mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen zu den Kontextbezeichner.
+Der Standardwert für *dwcontext* wird von MFC an das `CFtpFileFind` -Objekt aus dem [cinternetzession](../../mfc/reference/cinternetsession-class.md) -Objekt gesendet, `CFtpFileFind` das das Objekt erstellt hat. Sie können die Standardeinstellung überschreiben, um den Kontext Bezeichner auf einen Wert Ihrer Wahl festzulegen. Der Kontext Bezeichner wird an [cinternetzession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zurückgegeben, um den Status für das Objekt bereitzustellen, mit dem es identifiziert wird. Weitere Informationen finden [Sie im Artikel Internet First Steps: WinInet](../../mfc/wininet-basics.md) für weitere Informationen zum Kontext Bezeichner.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel in der Übersicht über die Klasse weiter oben in diesem Thema.
+  Siehe das Beispiel in der Übersicht über die-Klasse weiter oben in diesem Thema.
 
-##  <a name="findfile"></a>  CFtpFileFind:: FindFile
+##  <a name="findfile"></a>CFtpFileFind:: FindFile
 
-Rufen Sie diese Memberfunktion, um eine FTP-Datei zu suchen.
+Diese Member-Funktion wird aufgerufen, um eine FTP-Datei zu suchen.
 
 ```
 virtual BOOL FindFile(
@@ -112,36 +112,36 @@ virtual BOOL FindFile(
 ### <a name="parameters"></a>Parameter
 
 *pstrName*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem Namen des zu suchenden Datei. Wenn der Wert NULL ist, führt der Aufruf eine Suche mit Platzhalterzeichen (*).
+Ein Zeiger auf eine Zeichenfolge, die den Namen der zu suchenden Datei enthält. Wenn der Wert NULL ist, führt der-Befehl eine Platzhalter Suche (*) aus.
 
 *dwFlags*<br/>
-Die Flags, die beschreibt, wie diese Sitzung behandelt. Diese Flags können mit dem bitweisen OR-Operator kombiniert werden (&#124;) und lauten wie folgt:
+Die Flags, die beschreiben, wie diese Sitzung behandelt werden soll. Diese Flags können mit dem bitweisen OR-Operator (&#124;) kombiniert werden und lauten wie folgt:
 
-- INTERNET_FLAG_RELOAD rufen Sie Daten aus der Übertragung, auch wenn es lokal zwischengespeichert werden. Dies ist der Standard-Flag.
+- INTERNET_FLAG_RELOAD die Daten aus dem Netzwerk auch dann, wenn Sie lokal zwischengespeichert werden. Dies ist das Standardflag.
 
-- INTERNET_FLAG_DONT_CACHE Zwischenspeichern nicht der Daten, entweder lokal oder in der Gateways.
+- INTERNET_FLAG_DONT_CACHE speichern Sie die Daten weder lokal noch in Gateways.
 
-- INTERNET_FLAG_RAW_DATA überschreiben die Standardeinstellung, um die unformatierten Daten zurückzugeben ( [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-_win32_find_dataa) Strukturen für FTP).
+- INTERNET_FLAG_RAW_DATA überschreiben Sie den Standardwert, um die Rohdaten ( [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa) -Strukturen für FTP) zurückzugeben.
 
-- Sichert die INTERNET_FLAG_SECURE Transaktionen, bei der Übertragung mit Secure Sockets Layer "oder" Prozent Dieses Flag gilt nur für HTTP-Anforderungen.
+- INTERNET_FLAG_SECURE sichert Transaktionen bei der Übertragung mit Secure Sockets Layer oder PCT. Dieses Flag gilt nur für HTTP-Anforderungen.
 
-- INTERNET_FLAG_EXISTING_CONNECT Wenn möglich, alle bestehenden Verbindungen mit dem Server wiederverwenden, für den neuen `FindFile` -Anforderungen und nicht das Erstellen einer neuen Sitzung für jede Anforderung.
+- INTERNET_FLAG_EXISTING_CONNECT verwenden Sie nach Möglichkeit die vorhandenen Verbindungen mit dem Server für neue `FindFile` Anforderungen, anstatt eine neue Sitzung für jede Anforderung zu erstellen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Um erweiterte Fehlerinformationen abzurufen, nennen Sie die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 
-Nach dem Aufruf `FindFile` um die erste FTP-Datei abzurufen, können Sie aufrufen [FindNextFile](#findnextfile) nachfolgenden Dateien über FTP abrufen.
+Nachdem Sie `FindFile` aufgerufen haben, um die erste FTP-Datei abzurufen, können Sie [FindNextFile](#findnextfile) aufrufen, um nachfolgende FTP-Dateien abzurufen.
 
 ### <a name="example"></a>Beispiel
 
-  Finden Sie unter dem früheren Beispiel in diesem Thema.
+  Weitere Informationen finden Sie im vorherigen Beispiel in diesem Thema.
 
-##  <a name="findnextfile"></a>  CFtpFileFind:: FindNextFile
+##  <a name="findnextfile"></a>CFtpFileFind:: FindNextFile
 
-Rufen Sie diese Memberfunktion zum Fortsetzen einer der Dateisuche begonnen, die mit einem Aufruf von der [FindFile](#findfile) Member-Funktion.
+Diese Member-Funktion wird aufgerufen, um eine Dateisuche fortzusetzen, die mit einem Aufrufder [FindFile](#findfile) -Element Funktion begonnen wurde.
 
 ```
 virtual BOOL FindNextFile();
@@ -149,21 +149,21 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL ist, wenn weitere Dateien vorhanden sind; NULL, wenn die Datei im Verzeichnis das letzte ist oder ein Fehler aufgetreten ist. Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Wenn die Datei die letzte Datei im Verzeichnis ist, oder wenn keine übereinstimmenden Dateien gefunden werden können, die `GetLastError` Funktionsergebnis ERROR_NO_MORE_FILES.
+Ungleich 0 (null), wenn weitere Dateien vorhanden sind. 0 (null), wenn die gefundene Datei das letzte im Verzeichnis ist, oder, wenn ein Fehler aufgetreten ist. Um erweiterte Fehlerinformationen abzurufen, nennen Sie die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Wenn es sich bei der gefundenen Datei um die letzte Datei im Verzeichnis handelt oder wenn keine übereinstimmenden Dateien gefunden `GetLastError` werden können, gibt die Funktion ERROR_NO_MORE_FILES zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Funktion muss sich mindestens einmal, bevor Sie eine Attribut-Funktion aufrufen (siehe [CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).
+Sie müssen diese Funktion mindestens einmal aufrufen, bevor Sie eine beliebige Attribut Funktion aufrufen (siehe [CFileFind:: FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).
 
-`FindNextFile` Dient als Wrapper für die Win32-Funktion [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea).
+`FindNextFile`umschließt die Win32-Funktion " [FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)".
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel weiter oben in diesem Thema.
+  Weitere Informationen finden Sie im Beispiel weiter oben in diesem Thema.
 
-##  <a name="getfileurl"></a>  CFtpFileFind::GetFileURL
+##  <a name="getfileurl"></a>CFtpFileFind:: getfileurl
 
-Rufen Sie diese Memberfunktion zum Abrufen der URL der angegebenen Datei.
+Mit dieser Member-Funktion können Sie die URL der angegebenen Datei abrufen.
 
 ```
 CString GetFileURL() const;
@@ -171,11 +171,11 @@ CString GetFileURL() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Datei und der Pfad der Universal Resource Locator (URL).
+Die Datei und der Pfad der URL (Universal Resource Locator).
 
 ### <a name="remarks"></a>Hinweise
 
-`GetFileURL` die Memberfunktion ähnelt [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), außer dass sie die URL im Format zurückgibt `ftp://moose/dir/file.txt`.
+`GetFileURL`ähnelt der Member-Funktion [CFileFind:: GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), mit dem Unterschied, dass die URL im Formular `ftp://moose/dir/file.txt`zurückgegeben wird.
 
 ## <a name="see-also"></a>Siehe auch
 

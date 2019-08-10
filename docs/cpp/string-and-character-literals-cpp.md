@@ -1,7 +1,7 @@
 ---
 title: Zeichen folgen-und Zeichen Literale (C++)
 description: Deklarieren und Definieren von Zeichen folgen-und Zeichen Literalen in C++.
-ms.date: 07/29/2019
+ms.date: 08/06/2019
 f1_keywords:
 - R
 - L
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: 9fce1ef9636aaa85be71cafffb5c4247e5c2e2d9
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661524"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866095"
 ---
-# <a name="string-and-character-literals--c"></a>Zeichen folgen-und Zeichen Literale (C++)
+# <a name="string-and-character-literals-c"></a>Zeichen folgen-und Zeichen Literale (C++)
 
 C++ unterstützt verschiedene Zeichenfolgen- und Zeichentypen und bietet Möglichkeiten Literalwerte dieser einzelnen Typen auszudrücken. In Ihrem Quellcode stellen Sie die Inhalte Ihrer Zeichen- und Zeichenfolgenliterale mit einem Zeichensatz dar. Universelle Zeichennamen und Escapezeichen ermöglichen es Ihnen, eine beliebige Zeichenfolge darzustellen, indem Sie nur den grundlegenden Quellzeichensatz verwenden. Ein unformatiertes Zeichenfolgenliteral ermöglicht es Ihnen, die Verwendung von Escapezeichen zu vermeiden, und kann verwendet werden, um alle Typen von Zeichenfolgenliteralen auszudrücken. Sie können auch Literale erstellen `std::string` , ohne zusätzliche Konstruktions-oder Konvertierungs Schritte ausführen zu müssen.
 
@@ -37,6 +37,9 @@ int main()
     auto c2 =  L'A'; // wchar_t
     auto c3 =  u'A'; // char16_t
     auto c4 =  U'A'; // char32_t
+
+    // Multicharacter literals
+    auto m0 = 'abcd'; // int, value 0x61626364
 
     // String literals
     auto s0 =   "hello"; // const char*
@@ -76,7 +79,7 @@ Ein *Zeichenfolgenliteral* besteht aus einem konstanten Zeichen. Es wird durch d
 
 - Gewöhnliche Zeichen Literale vom Typ " **char**", z. b.`'a'`
 
-- UTF-8-Zeichen Literale vom Typ " **char**", z. b.`u8'a'`
+- UTF-8-Zeichen Literale vom Typ **char** (**char8_t** in c++ 20), z. b.`u8'a'`
 
 - Breite Zeichenliterale vom Typ `wchar_t`, beispielsweise `L'a'`
 
@@ -90,9 +93,9 @@ Das Zeichen, das für ein zeichenliteralzeichen verwendet wird, kann ein beliebi
 
 Zeichen Literale werden basierend auf dem Präfix unterschiedlich codiert.
 
-- Ein Zeichenliteral ohne ein Präfix ist ein normales Zeichenliteral. Der Wert eines normalen Zeichenliterals, das ein einzelnes Zeichen, eine Escapesequenz oder einen universellen Zeichennamen enthält, der im Ausführungs Zeichensatz dargestellt werden kann, hat einen Wert, der dem numerischen Wert seiner Codierung im Ausführungs Zeichensatz entspricht. Ein normales Zeichenliteral, das mehr als ein Zeichen, eine Escapesequenz oder einen universellen Zeichennamen enthält, ist ein *multizeichenliteral*. Ein multizeichenliteral oder ein normales Zeichenliteral, das nicht im Ausführungs Zeichensatz dargestellt werden kann, wird bedingt unterstützt, weist den Typ " **int**" auf, und sein Wert ist Implementierungs definiert.
+- Ein Zeichenliteral ohne ein Präfix ist ein normales Zeichenliteral. Der Wert eines normalen Zeichenliterals, das ein einzelnes Zeichen, eine Escapesequenz oder einen universellen Zeichennamen enthält, der im Ausführungs Zeichensatz dargestellt werden kann, hat einen Wert, der dem numerischen Wert seiner Codierung im Ausführungs Zeichensatz entspricht. Ein normales Zeichenliteral, das mehr als ein Zeichen, eine Escapesequenz oder einen universellen Zeichennamen enthält, ist ein *multizeichenliteral*. Ein multizeichenliteral oder ein normales Zeichenliteral, das nicht im Ausführungs Zeichensatz dargestellt werden kann, weist den Typ " **int**" auf, und sein Wert ist Implementierungs definiert. Informationen zu MSVC finden Sie unten im **Microsoft-spezifischen** Abschnitt.
 
-- Ein Zeichenliteral, das `L` mit dem Präfix beginnt, ist ein breit Zeichenliteral. Der Wert eines breit Zeichenliterals, das ein einzelnes Zeichen, eine Escapesequenz oder einen universellen Zeichennamen enthält, hat einen Wert, der gleich dem numerischen Wert der zugehörigen Codierung in der Ausführungs weite Zeichen Gruppe ist, es sei denn, das Zeichenliteral hat keine Darstellung im der Ausführungs weite Zeichensatz. in diesem Fall ist der Wert Implementierungs definiert. Der Wert eines breit Zeichenliterals mit mehreren Zeichen, Escapesequenzen oder universellen Zeichennamen ist Implementierungs definiert.
+- Ein Zeichenliteral, das `L` mit dem Präfix beginnt, ist ein breit Zeichenliteral. Der Wert eines breit Zeichenliterals, das ein einzelnes Zeichen, eine Escapesequenz oder einen universellen Zeichennamen enthält, hat einen Wert, der gleich dem numerischen Wert der zugehörigen Codierung in der Ausführungs weite Zeichen Gruppe ist, es sei denn, das Zeichenliteral hat keine Darstellung im der Ausführungs weite Zeichensatz. in diesem Fall ist der Wert Implementierungs definiert. Der Wert eines breit Zeichenliterals mit mehreren Zeichen, Escapesequenzen oder universellen Zeichennamen ist Implementierungs definiert. Informationen zu MSVC finden Sie unten im **Microsoft-spezifischen** Abschnitt.
 
 - Ein Zeichen Literale, das mit `u8` dem Präfix beginnt, ist ein UTF-8-Zeichenliteral. Der Wert eines UTF-8-Zeichenliterals, das ein einzelnes Zeichen, eine Escapesequenz oder einen universellen Zeichennamen enthält, weist einen Wert auf, der mit seinem ISO 10646-Code Punkt Wert identisch ist, wenn er durch eine einzelne UTF-8-Code Einheit dargestellt werden kann (entspricht den C0-Steuerelementen und dem Unicode-Block). Wenn der Wert nicht durch eine einzelne UTF-8-Code Einheit dargestellt werden kann, ist das Programm falsch formatiert. Ein UTF-8-Zeichenliteral, das mehr als ein Zeichen, eine Escapesequenz oder einen universellen Zeichennamen enthält, ist falsch formatiert.
 
@@ -121,6 +124,10 @@ Es gibt drei Arten von Escapesequenzen: einfache, oktale und hexadezimale. Escap
 | Warnung (Glocke) | \\a |
 | Hexadezimal | \\xhhh |
 
+Eine oktale Escapesequenz ist ein umgekehrter Schrägstrich, gefolgt von einer Sequenz von einer bis drei Oktalziffern. Eine oktale Escapesequenz endet am ersten Zeichen, das keine oktale Ziffer ist, wenn Sie früher als die dritte Ziffer vorkommt. Der höchstmögliche Oktalwert ist `\377`.
+
+Eine hexadezimale Escapesequenz ist ein umgekehrter schräg `x`Strich, gefolgt von dem Zeichen, gefolgt von einer Sequenz aus einer oder mehreren hexadezimalen Ziffern. Führende Nullen werden ignoriert. In einem normalen oder mit einem vorangestellten vorangestellten Zeichen literalen ist der höchste Hexadezimalwert 0xFF. In einem Breitzeichenliteral mit dem Präfix L oder u ist 0xFFFF der höchste Hexadezimalwert. In einem Breitzeichenliteral mit dem Präfix U ist 0xFFFFFFFF der höchste Hexadezimalwert.
+
 Dieser Beispielcode zeigt einige Beispiele für Escapezeichen mit normalen Zeichen Literalen. Die gleiche Escapesequenzsyntax ist für die anderen zeichenliteraltypen gültig.
 
 ```cpp
@@ -143,23 +150,26 @@ int main() {
 }
 ```
 
+Der umgekehrte Schrägstrich (\\) ist ein Zeilen Fortsetzungs Zeichen, wenn er am Ende einer Zeile platziert wird. Wenn ein umgekehrter Schrägstrich als Zeichenliteral angezeigt werden soll, müssen Sie zwei umgekehrte Schrägstriche in einer Zeile (`\\`) eingeben. Weitere Informationen zum Zeilenfortsetzungszeichen finden Sie unter [Phases of Translation](../preprocessor/phases-of-translation.md).
+
 **Microsoft-spezifisch**
 
-Zum Erstellen eines Werts aus einem normalen zeichenliteralzeichen (eines ohne ein Präfix) konvertiert der Compiler das Zeichen oder die Zeichen Sequenz zwischen einfachen Anführungszeichen in 8-Bit-Werte innerhalb einer 32-Bit-Ganzzahl. Mehrere Zeichen im Literal belegen entsprechende Bytes nach Bedarf vom höherwertigen zum niederwertigen Byte. Zum Erstellen eines **char** -Werts nimmt der Compiler das nieder wertige Byte an. Um einen **wchar_t** oder `char16_t` einen Wert zu erstellen, nimmt der Compiler das nieder wertige Wort an. Der Compiler warnt, dass das Ergebnis abgeschnitten wird, wenn irgendwelche Bits über dem zugewiesenen Byte oder Word Bits festgelegt sind.
+Um einen Wert aus einem schmalen multizeichenliterals zu erstellen, konvertiert der Compiler das Zeichen oder die Zeichen Sequenz zwischen einfachen Anführungszeichen in 8-Bit-Werte innerhalb einer 32-Bit-Ganzzahl. Mehrere Zeichen im Literal belegen entsprechende Bytes nach Bedarf vom höherwertigen zum niederwertigen Byte. Der Compiler konvertiert dann die Ganzzahl nach den üblichen Regeln in den Zieltyp. Um z. b. einen **char** -Wert zu erstellen, nimmt der Compiler das nieder wertige Byte an. Um einen **wchar_t** oder `char16_t` einen Wert zu erstellen, nimmt der Compiler das nieder wertige Wort an. Der Compiler warnt, dass das Ergebnis abgeschnitten wird, wenn irgendwelche Bits über dem zugewiesenen Byte oder Word Bits festgelegt sind.
 
 ```cpp
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'
+int i0     = 'abcd';    // 0x61626364
 ```
 
-Eine oktale Escapesequenz ist ein umgekehrter Schrägstrich gefolgt von einer Sequenz von bis 3 Oktalziffern. Das Verhalten einer oktalen Escapesequenz, die scheinbar mehr als drei Ziffern enthält, wird als eine 3-stellige oktale Sequenz behandelt, gefolgt von den nachfolgenden Ziffern als Zeichen, was zu überraschenden Ergebnissen führen kann. Beispiel:
+Eine oktale Escapesequenz, die scheinbar mehr als drei Ziffern enthält, wird als eine 3-stellige oktale Sequenz behandelt, gefolgt von den nachfolgenden Ziffern als Zeichen in einem multizeichenliteralzeichen, das überraschende Ergebnisse liefern kann. Beispiel:
 
 ```cpp
 char c1 = '\100';   // '@'
 char c2 = '\1000';  // C4305, C4309, truncates to '0'
 ```
 
-Eine Escapesequenzen, die scheinbar nicht oktale Zeichen enthält, wird als eine oktale Sequenz bis zu dem letzten oktalen Zeichen gefolgt von den verbleibenden Zeichen ausgewertet. Beispiel:
+Escapesequenzen, die scheinbar nicht oktale Zeichen enthalten, werden als eine oktale Sequenz bis zum letzten oktalen Zeichen ausgewertet, gefolgt von den restlichen Zeichen als nachfolgende Zeichen in einem multizeichenliteral. Warnung C4125 wird generiert, wenn das erste nicht-oktale Zeichen eine Dezimal Ziffer ist. Beispiel:
 
 ```cpp
 char c3 = '\009';   // '9'
@@ -167,14 +177,16 @@ char c4 = '\089';   // C4305, C4309, truncates to '9'
 char c5 = '\qrs';   // C4129, C4305, C4309, truncates to 's'
 ```
 
-Eine hexadezimale Escapesequenz ist ein umgekehrter Schrägstrich, gefolgt von dem Zeichen `x`, gefolgt von einer Sequenz von hexadezimalen Zeichen. Eine Escapesequenz, die keine Hexadezimalziffern enthält, verursacht den Compilerfehler C2153 "Hexadezimale Literale müssen mindestens eine hexadezimale Ziffer enthalten". Führende Nullen werden ignoriert. Eine Escapesequenz, die anscheinend hexadezimale und nicht hexadezimale Zeichen beinhaltet, wird als eine hexadezimale Escapesequenz bis zum letzten hexadezimalen Zeichen gefolgt von den nicht hexadezimalen Zeichen ausgewertet. In einem normalen oder mit einem vorangestellten vorangestellten Zeichen literalen ist der höchste Hexadezimalwert 0xFF. In einem Breitzeichenliteral mit dem Präfix L oder u ist 0xFFFF der höchste Hexadezimalwert. In einem Breitzeichenliteral mit dem Präfix U ist 0xFFFFFFFF der höchste Hexadezimalwert.
+Eine oktale Escapesequenz, die einen höheren `\377` Wert aufweist als Fehler C2022: '*value-in-Decimal*': zu groß für Zeichen.
+
+Eine Escapesequenz, die anscheinend hexadezimale und nicht hexadezimale Zeichen enthält, wird als ein multizeichenliteralzeichen ausgewertet, das eine hexadezimale Escapesequenz bis zum letzten hexadezimal Zeichen gefolgt von den nicht hexadezimalen Zeichen enthält. Eine hexadezimale Escapesequenz, die keine hexadezimal Ziffern enthält, verursacht Compilerfehler C2153: "hexadezimale Literale müssen mindestens eine hexadezimale Ziffer aufweisen
 
 ```cpp
 char c6 = '\x0050'; // 'P'
 char c7 = '\x0pqr'; // C4305, C4309, truncates to 'r'
 ```
 
-Enthält ein Breitzeichenliteral mit dem Präfix `L` mehr als ein Zeichen, wird der Wert des ersten Zeichens übernommen. Nachfolgende Zeichen werden ignoriert, anders als das Verhalten des entsprechenden normalen Zeichenliterals.
+Wenn ein breit Zeichenliteral mit `L` dem Präfix eine multizeichensequenz enthält, wird der Wert aus dem ersten Zeichen entnommen, und der Compiler löst die Warnung C4066 aus. Nachfolgende Zeichen werden ignoriert, anders als das Verhalten des entsprechenden normalen multizeichenliterals.
 
 ```cpp
 wchar_t w1 = L'\100';   // L'@'
@@ -187,8 +199,6 @@ wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
 ```
 
 **Microsoft-spezifisch beenden**
-
-Der umgekehrte Schrägstrich (\\) ist ein Zeilen Fortsetzungs Zeichen, wenn er am Ende einer Zeile platziert wird. Wenn ein umgekehrter Schrägstrich als Zeichenliteral angezeigt werden soll, müssen Sie zwei umgekehrte Schrägstriche in einer Zeile (`\\`) eingeben. Weitere Informationen zum Zeilenfortsetzungszeichen finden Sie unter [Phases of Translation](../preprocessor/phases-of-translation.md).
 
 ###  <a name="bkmk_UCN"></a> Universelle Zeichennamen
 
@@ -241,7 +251,7 @@ const wchar_t* wide = L"zyxw";
 const wchar_t* newline = L"hello\ngoodbye";
 ```
 
-#### <a name="char16t-and-char32t-c11"></a>char16_t und char32_t (C ++ 11)
+#### <a name="char16_t-and-char32_t-c11"></a>char16_t und char32_t (C ++ 11)
 
 C ++ 11 stellt die portablen `char16_t` (16-Bit-Unicode) und `char32_t` (32-Bit-Unicode)-Zeichentypen vor:
 
@@ -333,7 +343,7 @@ wchar_t* str = L"hello";
 str[2] = L'a'; // run-time error: access violation
 ```
 
-Sie können bewirken, dass der Compiler einen Fehler ausgibt, wenn ein Zeichenfolgenliterals in einen Non_const-Zeichen Zeiger konvertiert wird, wenn Sie die Compileroption [/Zc: strictstrings (String-literaltypkonvertierung deaktivieren)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) festlegen. Dies empfiehlt sich für mit den Standards kompatiblen portablen Code. Außerdem empfiehlt es sich, das Schlüsselwort " **Auto** " zu verwenden, um zeichenfolgenliteralinitialisierte Zeiger zu deklarieren, da es in den richtigen (Konstanten) Typ aufgelöst wird. In diesem Codebeispiel wird ein Versuch abgefangen, zur Kompilierungszeit in ein Zeichenfolgenliteral zu schreiben:
+Sie können bewirken, dass der Compiler einen Fehler ausgibt, wenn ein Zeichenfolgenliteralzeichen in einen nicht konstanten Zeichen Zeiger konvertiert wird, wenn Sie die Compileroption [/Zc: strictstrings (String-literaltypkonvertierung deaktivieren)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) festlegen. Dies empfiehlt sich für mit den Standards kompatiblen portablen Code. Außerdem empfiehlt es sich, das Schlüsselwort " **Auto** " zu verwenden, um zeichenfolgenliteralinitialisierte Zeiger zu deklarieren, da es in den richtigen (Konstanten) Typ aufgelöst wird. In diesem Codebeispiel wird ein Versuch abgefangen, zur Kompilierungszeit in ein Zeichenfolgenliteral zu schreiben:
 
 ```cpp
 auto str = L"hello";
@@ -410,6 +420,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 
 ## <a name="see-also"></a>Siehe auch
 
-[Zeichensätze](../cpp/character-sets.md)<br/>
-[Numerische, boolesche und Zeigerliterale](../cpp/numeric-boolean-and-pointer-literals-cpp.md)<br/>
+[Character Sets](../cpp/character-sets.md)\
+[Numerische, boolesche und Zeiger Literale](../cpp/numeric-boolean-and-pointer-literals-cpp.md)\
 [Benutzerdefinierte Literale](../cpp/user-defined-literals-cpp.md)
