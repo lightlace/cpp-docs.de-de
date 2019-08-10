@@ -1,6 +1,6 @@
 ---
 title: /Ob (Inlinefunktionserweiterung)
-ms.date: 09/25/2017
+ms.date: 08/08/2019
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
 - VC.Project.VCCLCompilerTool.InlineFunctionExpansion
@@ -24,52 +24,77 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: 6bf16e5725916e81e64d80c0a1f96bf502c8826c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7eb3db1e359349eaf5125a6c8a46a3ac7d847f2f
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320226"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915479"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Inlinefunktionserweiterung)
 
-Steuert die Inlineerweiterung von Funktionen.
+Steuert die Inlineerweiterung von Funktionen. Standardmäßig erfolgt die Erweiterung bei der Optimierung bei allen Funktionen, die häufig als *Automatische Inlining*bezeichnet werden, nach dem Ermessen des Compilers.
 
 ## <a name="syntax"></a>Syntax
 
-> /Ob{0|1|2}
+::: moniker range=">=vs-2019"
+
+> **/Ob** {**0**|12|**3**}|
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+> **/Ob** {**0**|12|}
+
+::: moniker-end
 
 ## <a name="arguments"></a>Argumente
 
-**0**<br/>
-Deaktiviert Inline-Erweiterungen. In der Standardeinstellung Erweiterung erfolgt nach Ermessen des Compilers bei allen Funktionen, bezeichnet als *Automatisches inlining*.
+**1,0**\
+Der Standardwert unter [/od](od-disable-debug.md). Deaktiviert Inline-Erweiterungen.
 
-**1**<br/>
-Ermöglicht die Erweiterung wird nur für Funktionen mit dem [Inline](../../cpp/inline-functions-cpp.md), `__inline`, oder `__forceinline`, oder in einer C++-Memberfunktion, die in einer Klassendeklaration definiert.
+**1**\
+Ermöglicht nur die Erweiterung von Funktionen, die als [Inline](../../cpp/inline-functions-cpp.md), [__inline](../../cpp/inline-functions-cpp.md)oder [__forceinline](../../cpp/inline-functions-cpp.md)gekennzeichnet sind C++ , oder in einer Element Funktion, die in einer Klassen Deklaration definiert ist.
 
-**2**<br/>
-Der Standardwert. Ermöglicht die Erweiterung von Funktionen, die als `inline`, `__inline` oder `__forceinline` gekennzeichnet sind, sowie aller anderen Funktionen, für die sich der Compiler entscheidet.
+**2,2**\
+Der Standardwert unter [/O1](o1-o2-minimize-size-maximize-speed.md) und [/O2](o1-o2-minimize-size-maximize-speed.md). Ermöglicht dem Compiler, jede Funktion zu erweitern, die nicht explizit für das Inlining markiert ist.
 
-**/ Ob2** ist gültig, wenn [/O1, / O2 (Größe minimieren, Geschwindigkeit maximieren)](o1-o2-minimize-size-maximize-speed.md) oder [/Ox (ermöglichen die meisten Geschwindigkeitsoptimierungen)](ox-full-optimization.md) verwendet wird.
+::: moniker range=">=vs-2019"
 
-Diese Option erfordert, dass Sie Optimierungen mithilfe aktivieren **"/ O1"**, **"/ O2"**, **/Ox**, oder **"/ Og"**.
+**3**\
+Diese Option gibt einen aggressiveren Inlining als **/Ob2**an, hat jedoch dieselben Einschränkungen. Die **/Ob3** -Option ist ab Visual Studio 2019 verfügbar.
+
+::: moniker-end
 
 ## <a name="remarks"></a>Hinweise
 
-Der Compiler behandelt die Inlineerweiterungsoptionen und -Schlüsselwörter als Vorschläge. Es gibt keine Garantie dafür, dass eine bestimmte Funktion inline erweitert wird. Sie können die Inlineerweiterung deaktivieren, Sie können den Compiler aber nicht dazu zwingen, für eine bestimmte Funktion Inlining auszuführen, auch nicht mithilfe des Schlüsselworts `__forceinline`.
+Der Compiler behandelt die Inlineerweiterungsoptionen und -Schlüsselwörter als Vorschläge. Es gibt keine Garantie dafür, dass eine Funktion Inline erweitert wird. Sie können Inline Erweiterungen deaktivieren, aber Sie können den Compiler nicht zwingen, eine bestimmte Funktion Inline zu verwenden, selbst `__forceinline` Wenn Sie das-Schlüsselwort verwenden.
 
-Sie können die `#pragma` [Auto_inline](../../preprocessor/auto-inline.md) Direktive, um die Funktionen von der Berücksichtigung als Kandidaten für die Inlineerweiterung auszuschließen. Siehe auch die `#pragma` [systeminterne](../../preprocessor/intrinsic.md) Richtlinie.
+Zum Ausschließen von Funktionen, die als Kandidaten für die Inline Erweiterung berücksichtigt werden sollen, können Sie [__declspec (noinline)](../../cpp/noinline.md)oder eine Region verwenden, die durch #pragma auto_inline-Direktiven [(Off)](../../preprocessor/auto-inline.md) und [#pragma auto_inline (on)](../../preprocessor/auto-inline.md) -Direktiven gekennzeichnet ist. Informationen zu einer anderen Möglichkeit zum Bereitstellen von Inlining-Hinweisen für den Compiler finden Sie in der [#pragma intrinsischen](../../preprocessor/intrinsic.md) Direktive.
 
 > [!NOTE]
-> Informationen, die profilerstellung gesammelt werden, überschreiben Optimierungen, die andernfalls gültig wäre, wenn Sie angeben, **tatsächlich**, **/OS**, oder **/Ot**. Weitere Informationen finden Sie unter [Profile-Guided Optimizations](../profile-guided-optimizations.md).
+> Informationen, die bei der Profilerstellung für Testläufe gesammelt werden, überschreiben Optimierungen, die andernfalls wirksam wären, weil Sie **/ob**, **/OS**oder **/OT**angegeben haben. Weitere Informationen finden Sie unter [Profilgesteuerte Optimierungen](../profile-guided-optimizations.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
-1. Erweitern Sie **Konfigurationseigenschaften**, **C/C++-**, und wählen Sie **Optimierung**.
+1. Wählen Sie die **Eigenschaften Seite Konfigurations Eigenschaften** > **C++C/**  > Optimierung aus.
 
-1. Ändern der **Inlinefunktionserweiterung** Eigenschaft.
+1. Ändern Sie die Eigenschaft **Inline Funktionserweiterung** .
+
+::: moniker range=">=vs-2019"
+
+Die **/Ob3** -Option ist in der Eigenschaft " **Inline Funktionserweiterung** " nicht verfügbar. So legen Sie **/Ob3**fest:
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
+
+1. Wählen Sie die **Eigenschaften Seite Konfigurations Eigenschaften** > **CC++ /** > Befehlszeile aus.
+
+1. Geben Sie **/Ob3** in **zusätzliche Optionen**ein.
+
+::: moniker-end
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 
@@ -77,6 +102,6 @@ Sie können die `#pragma` [Auto_inline](../../preprocessor/auto-inline.md) Direk
 
 ## <a name="see-also"></a>Siehe auch
 
-[/O-Optionen (Code optimieren)](o-options-optimize-code.md)<br/>
-[MSVC-Compileroptionen](compiler-options.md)<br/>
+[/O-Optionen (Code optimieren)](o-options-optimize-code.md)\
+[MSVC-Compileroptionen](compiler-options.md)\
 [Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)

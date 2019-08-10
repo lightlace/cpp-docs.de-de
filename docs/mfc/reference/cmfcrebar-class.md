@@ -1,5 +1,5 @@
 ---
-title: CMFCReBar-Klasse
+title: Cmatkrebar-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCReBar
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: 7776bf504d502feee8ef51949b8adc8e44f94c8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd500547bdcf65e922f7b5e5ca8d30e0423933d
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410134"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866166"
 ---
-# <a name="cmfcrebar-class"></a>CMFCReBar-Klasse
+# <a name="cmfcrebar-class"></a>Cmatkrebar-Klasse
 
-Ein `CMFCReBar` Objekt ist eine Steuerleiste, die Layout-, Persistenz- und Zustandsinformationen für Grundleisten-Steuerelemente bereitstellt.
-Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.
+Ein `CMFCReBar` -Objekt ist eine Steuerleiste, die Layout-, Persistenz-und Zustandsinformationen für Grund leisten-Steuerelemente bereitstellt.
+Weitere Informationen finden Sie im Quellcode, der sich im **Ordner\\VC atlmfc\\\\src MFC** Ihrer Visual Studio-Installation befindet.
 ## <a name="syntax"></a>Syntax
 
 ```
@@ -51,44 +51,47 @@ class CMFCReBar : public CPane
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMFCReBar::AddBar](#addbar)|Eine grundleiste wird ein Band hinzugefügt.|
-|[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(Überschreibt [cbasepane:: Calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
-|[CMFCReBar::CanFloat](#canfloat)|(Überschreibt [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|
-|[CMFCReBar::Create](#create)|Erstellt das Grundleistensteuerelement, und fügt es der `CMFCReBar` Objekt.|
-|[CMFCReBar::EnableDocking](#enabledocking)|(Überschreibt [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|
+|[CMFCReBar::AddBar](#addbar)|Fügt ein Band zu einer Info Leiste hinzu.|
+|[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(Überschreibt [cbasepane:: calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
+|[CMFCReBar::CanFloat](#canfloat)|(Überschreibt [cbasepane:: canfloat](../../mfc/reference/cbasepane-class.md#canfloat).)|
+|[Cmatkrebar:: Create](#create)|Erstellt das Grund leisten-Steuerelement und fügt es `CMFCReBar` an das-Objekt an.|
+|[CMFCReBar::EnableDocking](#enabledocking)|(Überschreibt [cbasepane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|
 |[CMFCReBar::GetReBarBandInfoSize](#getrebarbandinfosize)||
-|[CMFCReBar::GetReBarCtrl](#getrebarctrl)|Bietet direkten Zugriff auf die zugrunde liegende [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) Standardsteuerelements.|
-|[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(Überschreibt [cpane:: Onshowcontrolbarmenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|
-|[CMFCReBar::OnToolHitTest](#ontoolhittest)|(Überschreibt [CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest).)|
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Überschreibt [CBasePane::OnUpdateCmdUI](cbasepane-class.md).)|
-|[CMFCReBar::SetPaneAlignment](#setpanealignment)|(Überschreibt [CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment).)|
+|[CMFCReBar::GetReBarCtrl](#getrebarctrl)|Ermöglicht den direkten Zugriff auf das zugrunde liegende allgemeine " [krebarctrl](../../mfc/reference/crebarctrl-class.md) "-Steuerelement.|
+|[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(Überschreibt [CPANE:: onshowcontrolbarmenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|
+|[CMFCReBar::OnToolHitTest](#ontoolhittest)|(Überschreibt [CWnd:: ontoolhittest](../../mfc/reference/cwnd-class.md#ontoolhittest).)|
+|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Überschreibt [cbasepane:: OnUpdateCmdUI](cbasepane-class.md).)|
+|[CMFCReBar::SetPaneAlignment](#setpanealignment)|(Überschreibt [cbasepane:: setpanealignment](../../mfc/reference/cbasepane-class.md#setpanealignment).)|
 
 ## <a name="remarks"></a>Hinweise
 
-Ein `CMFCReBar` Objekt kann eine Vielzahl von untergeordneten Fenstern enthalten. Dies schließt Bearbeitungsfelder, Symbolleisten und Listenfelder. Sie können die Größe der Infoleiste programmgesteuert oder des Benutzers kann manuell grundleiste durch Ziehen der Ziehpunktleiste. Sie können auch den Hintergrund eines Grundleisten-Objekts in eine Bitmap Ihrer Wahl festlegen.
+Ein `CMFCReBar` -Objekt kann eine Vielzahl untergeordneter Fenster enthalten. Dies schließt Bearbeitungsfelder, Symbolleisten und Listenfelder ein. Sie können die Größe der Info Leiste Programm gesteuert ändern, oder der Benutzer kann die Größe der Info Leiste manuell ändern, indem er seine Zieh Punkt Leiste zieht. Sie können auch den Hintergrund eines Grund leisten-Objekts auf eine Bitmap Ihrer Wahl festlegen.
 
-Einem Grundleisten-Objekt verhält sich ähnlich wie ein Symbolleistenobjekt. Einem Grundleisten-Steuerelement kann eine oder mehrere Bänder enthalten, und jedes Band kann eine Ziehpunktleiste, eine Bitmap, einer textbezeichnung und einem untergeordneten Fenster enthalten.
+Ein Grund leisten-Objekt verhält sich ähnlich wie ein Toolbar-Objekt. Ein Grund leisten-Steuerelement kann ein oder mehrere Bänder enthalten, und jedes Band kann eine Zieh Punkt Leiste, eine Bitmap, eine Text Bezeichnung und ein untergeordnetes Fenster enthalten.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCReBar` -Klasse. Das Beispiel zeigt das Erstellen eines Grundleisten-Steuerelements, und fügen Sie ein Band hinzu. Das Band fungiert als eine interne-Symbolleiste. Dieser Codeausschnitt ist Teil der [Grundleisten-Testbeispiel](../../overview/visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCReBar` -Klasse. Das Beispiel zeigt, wie Sie ein Grund leisten-Steuerelement erstellen und diesem ein Band hinzufügen. Das Band fungiert als interne Symbolleiste. Dieser Code Ausschnitt ist Teil des Info leisten- [Test](../../overview/visual-cpp-samples.md)Beispiels.
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
-[CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
-
-[CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CMFCReBar](../../mfc/reference/cmfcrebar-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Cbasepane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CPANE](../../mfc/reference/cpane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMF-Leiste](../../mfc/reference/cmfcrebar-class.md)
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxRebar.h
+**Header:** afxrebar. h
 
-##  <a name="addbar"></a>  CMFCReBar::AddBar
+##  <a name="addbar"></a>CMF-Leiste:: addbar
 
-Eine grundleiste wird ein Band hinzugefügt.
+Fügt ein Band zu einer Info Leiste hinzu.
 
 ```
 BOOL AddBar(
@@ -108,30 +111,30 @@ BOOL AddBar(
 ### <a name="parameters"></a>Parameter
 
 *pBar*<br/>
-[in, out] Ein Zeiger auf das untergeordnete Fenster, in die Infoleiste eingefügt werden soll. Das referenzierte Objekt müssen die **WS_CHILD** Fensterstil.
+[in, out] Ein Zeiger auf das untergeordnete Fenster, das in die Info Leiste eingefügt werden soll. Das Objekt, auf das verwiesen wird, muss über das Fenster **WS_CHILD** verfügen.
 
 *pszText*<br/>
-[in] Gibt den Text auf der grundleiste angezeigt werden. Der Text ist nicht Teil des untergeordneten Fensters. Stattdessen wird er auf sich selbst grundleiste angezeigt.
+in Gibt den Text an, der auf der Info Leiste angezeigt werden soll. Der Text ist nicht Teil des untergeordneten Fensters. Stattdessen wird er auf der Info Leiste angezeigt.
 
 *pbmp*<br/>
-[in, out] Gibt an, die Bitmap auf den Hintergrund der Infoleiste angezeigt werden.
+[in, out] Gibt die Bitmap an, die auf dem Hintergrund der Info Leiste angezeigt werden soll.
 
 *dwStyle*<br/>
-[in] Enthält die Formatvorlage, die auf dem Band angewendet. Eine vollständige Liste der-Band-Formate, finden Sie in der Beschreibung für `fStyle` in die [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) Struktur in der Windows SDK-Dokumentation.
+in Enthält den Stil, der auf das Band angewendet werden soll. Eine komplette Liste der Band Stile finden Sie in der Beschreibung für `fStyle` in der [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) -Struktur in der Windows SDK-Dokumentation.
 
 *clrFore*<br/>
-[in] Stellt die Vordergrundfarbe der Infoleiste dar.
+in Stellt die Vordergrundfarbe der Info Leiste dar.
 
 *clrBack*<br/>
-[in] Stellt die Hintergrundfarbe der Infoleiste dar.
+in Stellt die Hintergrundfarbe der Info Leiste dar.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn das Band der Infoleiste wurde erfolgreich hinzugefügt wurde. andernfalls "false".
+TRUE, wenn das Band erfolgreich der Info Leiste hinzugefügt wurde. andernfalls false.
 
-##  <a name="create"></a>  CMFCReBar::Create
+##  <a name="create"></a>Cmatkrebar:: Create
 
-Erstellt das Grundleistensteuerelement, und fügt es der [CMFCReBar](../../mfc/reference/cmfcrebar-class.md) Objekt.
+Erstellt das Grund leisten-Steuerelement und fügt es an das [cmfkrebar](../../mfc/reference/cmfcrebar-class.md) -Objekt an.
 
 ```
 BOOL Create(
@@ -144,26 +147,26 @@ BOOL Create(
 ### <a name="parameters"></a>Parameter
 
 *pParentWnd*<br/>
-[in, out] Ein Zeiger auf das übergeordnete Fenster dieses Grundleisten-Steuerelements.
+[in, out] Ein Zeiger auf das übergeordnete Fenster dieses Grund leisten-Steuer Elements.
 
 *dwCtrlStyle*<br/>
-[in] Gibt den Stil für das Grundleistensteuerelement. Der Standardwert für das Format ist **RBS_BANDBORDERS**, zeigt Einschränken der Zeilen aus, um benachbarte Bänder für das Grundleistensteuerelement zu trennen. Eine Liste der gültigen Stile, finden Sie unter [Stile für Grundleisten-Steuerelemente](/windows/desktop/Controls/rebar-control-styles) in der Windows SDK-Dokumentation.
+in Gibt den Stil für das Grund leisten-Steuerelement an. Der Standardformat Wert ist **RBS_BANDBORDERS**, in dem schmale Linien angezeigt werden, um angrenzende Bänder im Info leisten-Steuerelement voneinander zu trennen. Eine Liste gültiger Stile finden Sie Untergrund leisten- [Steuerelement Stile](/windows/desktop/Controls/rebar-control-styles) in der Windows SDK-Dokumentation.
 
 *dwStyle*<br/>
-[in] Der Fensterstil des Infoleisten-Steuerelements. Eine Liste der gültigen Stile, finden Sie unter [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+in Der Fenster Stil des Grund leisten-Steuer Elements. Eine Liste gültiger Stile finden Sie unter [Fenster Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
 *nID*<br/>
-[in] Die Infoleiste untergeordneten Fensters-ID.
+in Die ID des untergeordneten Fensters der Info Leiste.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn der Infoleiste wurde erfolgreich erstellt wurde. andernfalls "false".
+TRUE, wenn die Info Leiste erfolgreich erstellt wurde. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getrebarctrl"></a>  CMFCReBar::GetReBarCtrl
+##  <a name="getrebarctrl"></a>Cmberkrebar:: GetReBarCtrl
 
-Bietet direkten Zugriff auf `CReBarCtrl` das zugrunde liegende allgemeine Steuerelement für `CMFCReBar` Objekte.
+Bietet direkten Zugriff auf `CReBarCtrl` das zugrunde liegende allgemeine Steuer `CMFCReBar` Element für-Objekte.
 
 ```
 CReBarCtrl& GetReBarCtrl() const;
@@ -171,13 +174,13 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Verweis auf die zugrunde liegende `CReBarCtrl` Objekt.
+Ein Verweis auf das zugrunde `CReBarCtrl` liegende-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode, um Sie beim Anpassen Ihrer Infoleiste allgemeine Windows Grundleisten-Steuerelement-Funktionen nutzen.
+Verwenden Sie diese Methode, um die gemeinsame Steuerung von Windows-Funktionen beim Anpassen der Info Leiste zu nutzen.
 
-##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout
+##  <a name="calcfixedlayout"></a>Cmatkrebar:: calcfixedlayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -187,14 +190,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bStretch*<br/>
+in *bstretch*<br/>
 [in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="canfloat"></a>  CMFCReBar::CanFloat
+##  <a name="canfloat"></a>CMF-Leiste:: canfloat
 
 ```
 virtual BOOL CanFloat() const;
@@ -204,7 +207,7 @@ virtual BOOL CanFloat() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking
+##  <a name="enabledocking"></a>Cmatkrebar:: EnableDocking
 
 ```
 void EnableDocking(DWORD dwDockStyle);
@@ -212,11 +215,11 @@ void EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *dwDockStyle*<br/>
+in *dwdockstyle*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize
+##  <a name="getrebarbandinfosize"></a>Cmberkrebar:: getrebarbandinfosize
 
 ```
 UINT GetReBarBandInfoSize() const;
@@ -226,7 +229,7 @@ UINT GetReBarBandInfoSize() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu
+##  <a name="onshowcontrolbarmenu"></a>Cmberkrebar:: onshowcontrolbarmenu
 
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -234,13 +237,13 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *CPoint*<br/>
+in *CPoint*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest
+##  <a name="ontoolhittest"></a>CMF-Leiste:: ontoolhittest
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -250,14 +253,14 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *point*<br/>
+in *Punkt*<br/>
 [in] *pTI*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI
+##  <a name="onupdatecmdui"></a>CMF-Leiste:: OnUpdateCmdUI
 
 ```
 virtual void OnUpdateCmdUI(
@@ -267,12 +270,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pTarget*<br/>
-[in] *bDisableIfNoHndler*<br/>
+in *pTARGET*<br/>
+in *bdisableifnohndler*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment
+##  <a name="setpanealignment"></a>Cmatkrebar:: setpanealignment
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -280,7 +283,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *DwAlignment*<br/>
+in *dwalignment*<br/>
 
 ### <a name="remarks"></a>Hinweise
 

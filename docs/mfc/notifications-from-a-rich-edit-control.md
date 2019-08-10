@@ -7,28 +7,28 @@ helpviewer_keywords:
 - rich edit controls [MFC], notifications
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
-ms.openlocfilehash: fcb1dda1d915dc13e01effed9ba99070b825a15e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc4c027ff26df89539b22c6d04f1d1dc95fc459a
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238209"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916401"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Benachrichtigungen von einem RichEdit-Steuerelement
 
-Benachrichtigung Nachrichten Bericht Ereignisse, die Auswirkungen auf eine Rich-edit-Steuerelement ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Sie können durch das übergeordnete Fenster verarbeitet werden oder mithilfe von Reflektion Nachricht vom Rich edit-Steuerelement selbst. Rich-Edit-Steuerelemente unterstützen alle die Verwendung der Edit-Steuerelemente sowie einige zusätzliche Benachrichtigungsnachrichten erstellt werden. Sie können bestimmen, welche Benachrichtigungen ein rich-Edit-Steuerelement das übergeordnete Fenster sendet durch Festlegen der "Ereignismaske".
+Benachrichtigungs Meldungen melden Ereignisse, die ein Rich Edit-Steuerelement ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) betreffen. Sie können vom übergeordneten Fenster oder mithilfe der Nachrichten Reflektion durch das Rich Edit-Steuerelement selbst verarbeitet werden. Rich Edit-Steuerelemente unterstützen alle Benachrichtigungs Meldungen, die mit Bearbeitungs Steuerelementen verwendet werden, sowie mehrere zusätzliche. Sie können bestimmen, welche Benachrichtigungs Meldungen von einem Rich-Edit-Steuerelement durch Festlegen der "Ereignis Maske" gesendet werden.
 
-Verwenden Sie zum Festlegen der Ereignismaske für eine Rich--Steuerelement Edit die [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) Member-Funktion. Sie können die aktuelle Ereignismaske für ein Steuerelement mit RichEdit-Abrufen der [GetEventMask](../mfc/reference/cricheditctrl-class.md#geteventmask) Member-Funktion.
+Um die Ereignis Maske für ein Rich-Edit-Steuerelement festzulegen, verwenden Sie die Member-Funktion [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) . Sie können die aktuelle Ereignis Maske für ein Rich Edit-Steuerelement mithilfe der [GetEventMask](../mfc/reference/cricheditctrl-class.md#geteventmask) -Member-Funktion abrufen.
 
-In den folgenden Abschnitten Listen einige bestimmte Benachrichtigungen und deren Verwendung:
+In den folgenden Abschnitten werden einige spezifische Benachrichtigungen und ihre Verwendungsmöglichkeiten aufgelistet:
 
-- EN_MSGFILTER durch Verarbeiten der Benachrichtigung EN_MSGFILTER können einer Klasse entweder das rich-Edit-Steuerelement oder das übergeordnete Fenster, die alle Tastatur- und Mauseingaben an das Steuerelement zu filtern. Der Ereignishandler kann verhindern, dass die Tastatur oder Maus-Nachricht verarbeitet wird, oder ändern Sie die Nachricht kann durch Ändern der angegebenen [MSGFILTER](/windows/desktop/api/richedit/ns-richedit-_msgfilter) Struktur.
+- EN_MSGFILTER durch die Verarbeitung der EN_MSGFILTER-Benachrichtigung kann eine Klasse, entweder das Rich Edit-Steuerelement oder das übergeordnete Fenster, alle Tastatur-und Maus Eingaben für das Steuerelement filtern. Der Handler kann die Verarbeitung der Tastatur-oder Maus Meldung verhindern oder die Meldung ändern, indem er die angegebene [msgfilter](/windows/desktop/api/richedit/ns-richedit-msgfilter) -Struktur ändert.
 
-- EN_PROTECTED durch Behandeln der EN_PROTECTED-Benachrichtigung erkennen, wenn der Benutzer versucht, geschützten Text zu ändern. Um einen Textbereich als geschützt zu markieren, können Sie die Auswirkungen der geschützten Zeichen festlegen. Weitere Informationen finden Sie unter [Zeichenformatierung in Rich-Edit-Steuerelemente](../mfc/character-formatting-in-rich-edit-controls.md).
+- EN_PROTECTED behandeln Sie die EN_PROTECTED-Benachrichtigungs Meldung, um zu ermitteln, wann der Benutzer versucht, geschützten Text zu ändern. Um einen Textbereich als geschützt zu markieren, können Sie den Effekt geschützter Zeichen festlegen. Weitere Informationen finden Sie unter [Zeichen Formatierung in Rich Edit](../mfc/character-formatting-in-rich-edit-controls.md)-Steuerelementen.
 
-- EN_DROPFILES Sie können den Benutzer auf Dateien in einem rich-Edit-Steuerelement löschen, indem Sie die Verarbeitung der benachrichtigungsmeldung EN_DROPFILES aktivieren. Das angegebene [ENDROPFILES](/windows/desktop/api/richedit/ns-richedit-_endropfiles) Struktur enthält Informationen zu den Dateien, die gelöscht wird.
+- EN_DROPFILES Sie können es Benutzern ermöglichen, Dateien in einem Rich-Edit-Steuerelement zu löschen, indem Sie die EN_DROPFILES-Benachrichtigungs Meldung verarbeiten. Die angegebene [endropfiles](/windows/desktop/api/richedit/ns-richedit-endropfiles) -Struktur enthält Informationen zu den Dateien, die gelöscht werden.
 
-- EN_SELCHANGE-Ereignis eine Anwendung kann erkennen, wenn die aktuelle Auswahl geändert wird, durch die Verarbeitung der benachrichtigungsmeldung EN_SELCHANGE-Ereignis. Gibt an, die Nachricht eine [SELCHANGE](/windows/desktop/api/richedit/ns-richedit-_selchange) Struktur mit Informationen über die neue Auswahl.
+- EN_SELCHANGE eine Anwendung kann erkennen, wenn sich die aktuelle Auswahl ändert, indem die EN_SELCHANGE-Benachrichtigungs Meldung verarbeitet wird. Die Benachrichtigungs Meldung gibt eine [selChange](/windows/desktop/api/richedit/ns-richedit-selchange) -Struktur an, die Informationen über die neue Auswahl enthält.
 
 ## <a name="see-also"></a>Siehe auch
 

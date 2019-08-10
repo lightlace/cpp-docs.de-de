@@ -1,5 +1,5 @@
 ---
-title: CDockablePaneAdapter-Klasse
+title: Cdockablepaneadapter-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CDockablePaneAdapter
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-ms.openlocfilehash: 8f184bab564b4867138608b735c67b328e1a21cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88c125c63f9dbfe272f5d543e996366575fc533b
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391243"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866225"
 ---
-# <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter-Klasse
+# <a name="cdockablepaneadapter-class"></a>Cdockablepaneadapter-Klasse
 
 Bietet Andockunterstützung für von `CWnd`abgeleitete Bereiche.
 
@@ -44,25 +44,27 @@ class CDockablePaneAdapter : public CDockablePane
 
 ## <a name="remarks"></a>Hinweise
 
-Das Framework instanziiert in der Regel Objekte dieser Klasse, bei der Verwendung der [:: addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) oder [cmfcbasetabctrl:: insertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) Methoden.
+Normalerweise instanziiert das Framework Objekte dieser Klasse, wenn Sie die [cmfcbasetabctrl:: addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) -Methode oder die [cmfcbasetabctrl:: InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) -Methode verwenden.
 
-Wenn Sie anpassen möchten die `CDockablePaneAdapter` Verhalten einfach eine neue Klasse davon ableiten und die laufzeitklasseninformationen für ein Fenster im Registerkartenformat, mithilfe von [cmfcbasetabctrl:: Setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
+Wenn Sie das `CDockablePaneAdapter` Verhalten anpassen möchten, leiten Sie einfach eine neue Klasse davon ab, und legen Sie die Lauf Zeit Klassen Informationen mithilfe von [cmfcbasetabctrl:: setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc)auf ein Fenster im Registerkarten Format fest.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
-[CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
-
-[CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)
-
-[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Cbasepane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CPANE](../../mfc/reference/cpane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CDockablePane](../../mfc/reference/cdockablepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Cdockablepaneadapter](../../mfc/reference/cdockablepaneadapter-class.md)
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxDockablePaneAdapter.h
+**Header:** afxdockablepaneadapter. h
 
-##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd
+##  <a name="getwrappedwnd"></a>Cdockablepaneadapter:: getwrappeer dwnd
 
-Gibt das zugrunde liegende Fenster für die Karte des andockbaren Bereich zurück.
+Gibt das zugrunde liegende Fenster für den Adapter des andockbaren Bereichs zurück.
 
 ```
 virtual CWnd* GetWrappedWnd() const;
@@ -70,13 +72,13 @@ virtual CWnd* GetWrappedWnd() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf das umschlossene Fenster.
+Ein Zeiger auf das umschließende Fenster.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Funktion, um das umschlossene Fenster zuzugreifen.
+Verwenden Sie diese Funktion, um auf das umschließende Fenster zuzugreifen.
 
-##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState
+##  <a name="loadstate"></a>Cdockablepaneadapter:: LoadState
 
 Lädt den Zustand des Bereichs aus der Registrierung.
 
@@ -90,19 +92,19 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parameter
 
 *lpszProfileName*<br/>
-[in] Der Profilname.
+in Der Profilname.
 
 *nIndex*<br/>
-[in] Der Index des Profils.
+in Der Profil Index.
 
 *uiID*<br/>
-[in] Der Bereich-ID
+in Die Bereichs-ID.
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState
+##  <a name="savestate"></a>Cdockablepaneadapter:: SaveState
 
 Speichert den Zustand des Bereichs in der Registrierung.
 
@@ -116,21 +118,21 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parameter
 
 *lpszProfileName*<br/>
-[in] Der Profilname.
+in Der Profilname.
 
 *nIndex*<br/>
-[in] Der Profil-Index (standardmäßig die Steuerelement-ID des Fensters).
+in Der Profil Index (standardmäßig die Steuerelement-ID des Fensters).
 
 *uiID*<br/>
-[in] Der Bereich-ID
+in Die Bereichs-ID.
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd
+##  <a name="setwrappedwnd"></a>Cdockablepaneadapter:: setwrappeer dwnd
 
-Das zugrunde liegende Fenster festgelegt für die Karte des andockbaren Bereich.
+Legt das zugrunde liegende Fenster für den Adapter des andockbaren Bereichs fest.
 
 ```
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
@@ -139,7 +141,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-[in] Ein Zeiger auf das Fenster für den Bereich-Adapter zum umschließen.
+in Ein Zeiger auf das Fenster, in dem der Bereichs Adapter umschlossen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 

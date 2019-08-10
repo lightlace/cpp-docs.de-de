@@ -6,32 +6,32 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-ms.openlocfilehash: a1baa5274dbd33bb1e88b57ccfab2b5ed2085f6d
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: f1afa95d7c20d54f2015255a7e4e0d7ad9ae9c2b
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611298"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916515"
 ---
 # <a name="dispatch-maps"></a>Dispatchzuordnungen
 
-OLE-Automatisierung bietet Möglichkeiten zum Aufrufen von Methoden und Eigenschaften in Anwendungen zugreifen. Der Mechanismus, der vom Microsoft Foundation Class-Bibliothek für die Verteilung dieser Anforderungen ist die "Dispatchzuordnung" die internen und externen Namen des Objekt-Funktionen und Eigenschaften als auch die Datentypen, die von den Eigenschaften selbst und ausweist Argumente der Funktion.
+OLE-Automatisierung bietet Möglichkeiten zum Aufrufen von Methoden und zum Zugreifen auf Eigenschaften über Anwendungen hinweg. Der Mechanismus, der vom Microsoft Foundation Class-Bibliothek zum Verteilen dieser Anforderungen bereitgestellt wird, ist die "dispatchmap", die die internen und externen Namen von Objektfunktionen und-Eigenschaften sowie die Datentypen der Eigenschaften selbst und von angibt. Funktionsargumente.
 
-|Dispatch-Map-Makro|Beschreibung|
+|Dispatch-Zuordnungs Makro|Beschreibung|
 |-|-|
-|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Deklariert, dass eine Dispatchzuordnung verwendet wird, um Methoden und Eigenschaften (muss in der Klassendeklaration verwendet werden) einer Klasse verfügbar zu machen.|
-|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Startet die Definition eine Dispatchzuordnung.|
-|[END_DISPATCH_MAP](#end_dispatch_map)|Beendet die Definition eine Dispatchzuordnung.|
-|[DISP_FUNCTION](#disp_function)|In einer Dispatchzuordnung verwendet, um eine OLE-Automatisierung-Funktion zu definieren.|
-|[DISP_PROPERTY](#disp_property)|Definiert eine Eigenschaft der OLE-Automatisierung.|
-|[DISP_PROPERTY_EX](#disp_property_ex)|Definiert eine Eigenschaft der OLE-Automatisierung und benennt die Get- und Set-Funktionen.|
-|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Definiert ein OLE-Automatisierungseigenschaft mit der Benachrichtigung.|
-|[DISP_PROPERTY_PARAM](#disp_property_param)|Definiert eine Eigenschaft der OLE-Automatisierung, die Namen und Parameter die Get- und Set-Funktionen akzeptiert.|
-|[DISP_DEFVALUE](#disp_defvalue)|Wird einer vorhandenen Eigenschaft den Standardwert eines Objekts an.|
+|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Deklariert, dass eine dispatchmap verwendet wird, um die Methoden und Eigenschaften einer Klasse verfügbar zu machen (muss in der Klassen Deklaration verwendet werden).|
+|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Startet die Definition einer Dispatchzuordnung.|
+|[END_DISPATCH_MAP](#end_dispatch_map)|Beendet die Definition einer Dispatchzuordnung.|
+|[DISP_FUNCTION](#disp_function)|Wird in einer Dispatchzuordnung verwendet, um eine OLE-Automatisierungsfunktion zu definieren.|
+|[DISP_PROPERTY](#disp_property)|Definiert eine OLE-Automatisierungs Eigenschaft.|
+|[DISP_PROPERTY_EX](#disp_property_ex)|Definiert eine OLE-Automatisierungs Eigenschaft und benennt die Get-und Set-Funktionen.|
+|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Definiert eine OLE-Automatisierungs Eigenschaft mit Benachrichtigung.|
+|[DISP_PROPERTY_PARAM](#disp_property_param)|Definiert eine OLE-Automatisierungs Eigenschaft, die Parameter annimmt und die Get-und Set-Funktionen benennt.|
+|[DISP_DEFVALUE](#disp_defvalue)|Erstellt eine vorhandene Eigenschaft als Standardwert eines Objekts.|
 
-## <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP
+## <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP
 
-Wenn eine `CCmdTarget`-abgeleiteten Klasse in Ihrem Programm unterstützt die OLE-Automatisierung, dass die Klasse eine Dispatchzuordnung, um seine Methoden und Eigenschaften verfügbar zu machen bereitstellen muss.
+Wenn eine `CCmdTarget`von abgeleitete Klasse in Ihrem Programm OLE-Automatisierung unterstützt, muss diese Klasse eine Dispatchzuordnung bereitstellen, um die zugehörigen Methoden und Eigenschaften verfügbar zu machen.
 
 ```cpp
 DECLARE_DISPATCH_MAP()
@@ -39,12 +39,12 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie das DECLARE_DISPATCH_MAP-Makro, am Ende der Klassendeklaration. Klicken Sie auf der. CPP-Datei, die die Member-Funktionen für die Klasse definiert. verwenden Sie das BEGIN_DISPATCH_MAP-Makro. Klicken Sie dann enthalten Sie Makroeinträge, für alle Ihre Klasse verfügbar gemachten Methoden und Eigenschaften (DISP_FUNCTION DISP_PROPERTY und So weiter). Verwenden Sie abschließend die END_DISPATCH_MAP-Makro.
+Verwenden Sie das DECLARE_DISPATCH_MAP-Makro am Ende der Klassen Deklaration. Klicken Sie anschließend in der auf. Cpp-Datei, die die Element Funktionen für die Klasse definiert. verwenden Sie das BEGIN_DISPATCH_MAP-Makro. Fügen Sie anschließend Makro Einträge für jede verfügbar gemachten Methoden und Eigenschaften der Klasse (DISP_FUNCTION, DISP_PROPERTY usw.) ein. Verwenden Sie abschließend das END_DISPATCH_MAP-Makro.
 
 > [!NOTE]
-> Wenn Sie Mitglieder nach DECLARE_DISPATCH_MAP deklarieren, müssen Sie einen neuen Zugriffstyp angeben ( **öffentliche**, **private**, oder **geschützt**) für sie.
+> Wenn Sie nach DECLARE_DISPATCH_MAP Member deklarieren, müssen Sie einen neuen Zugriffstyp ( **öffentlich**, **Privat**oder **geschützt**) für Sie angeben.
 
-Die Anwendungs-Assistenten und Code-Assistenten helfen bei der Erstellung des Automation-Klassen und Verwaltung von Dispatchzuordnungen. Weitere Informationen zu Dispatchzuordnungen, finden Sie unter [Automatisierungsserver](../../mfc/automation-servers.md).
+Der Anwendungs-Assistent und die Code-Assistenten unterstützen Sie beim Erstellen von Automatisierungs Klassen und bei der Verwaltung von Dispatch Weitere Informationen zu dispatchmaps finden Sie unter [Automation Servers (Automatisierungsserver](../../mfc/automation-servers.md)).
 
 ### <a name="example"></a>Beispiel
 
@@ -54,9 +54,9 @@ Die Anwendungs-Assistenten und Code-Assistenten helfen bei der Erstellung des Au
 
 **Header:** afxwin.h
 
-## <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP
+## <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP
 
-Deklariert die Definition Ihrer Dispatchzuordnung.
+Deklariert die Definition ihrer Dispatchzuordnung.
 
 ```cpp
 BEGIN_DISPATCH_MAP(theClass, baseClass)
@@ -64,23 +64,23 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*<br/>
-Gibt den Namen der Klasse, die diese Dispatchzuordnung besitzt.
+*spiegeln*<br/>
+Gibt den Namen der Klasse an, die diese Dispatchzuordnung besitzt.
 
 *baseClass*<br/>
-Gibt den Namen der Basisklasse des *TheClass*.
+Gibt den Basisklassen Namen von *TheClass*an.
 
 ### <a name="remarks"></a>Hinweise
 
-Starten Sie in der Implementierungsdatei (.cpp), die die Member-Funktionen für die Klasse definiert die Dispatchzuordnung, mit dem BEGIN_DISPATCH_MAP-Makro, fügen Sie die Makroeinträge für jede Ihrer Dispatch-Funktionen und Eigenschaften und abgeschlossen die Dispatchzuordnung, mit der END_DISPATCH_ MAP-Makro.
+Starten Sie in der Implementierungs Datei (CPP-Datei), in der die Element Funktionen für die Klasse definiert sind, die Dispatchzuordnung mit dem BEGIN_DISPATCH_MAP-Makro, fügen Sie Makro Einträge für die einzelnen dispatchfunktionen und-Eigenschaften hinzu, und vervollständigen Sie die Dispatchzuordnung mit dem END_DISPATCH_ Map-Makro.
 
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxdisp.h
 
-## <a name="end_dispatch_map"></a>  END_DISPATCH_MAP
+## <a name="end_dispatch_map"></a>END_DISPATCH_MAP
 
-Beendet die Definition Ihrer Dispatchzuordnung.
+Beendet die Definition ihrer Dispatchzuordnung.
 
 ```cpp
 END_DISPATCH_MAP()
@@ -88,45 +88,45 @@ END_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Hinweise
 
-Es muss in Verbindung mit BEGIN_DISPATCH_MAP verwendet werden.
+Es muss zusammen mit BEGIN_DISPATCH_MAP verwendet werden.
 
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxdisp.h
 
-## <a name="disp_function"></a>  DISP_FUNCTION
+## <a name="disp_function"></a>DISP_FUNCTION
 
-Definiert eine Funktion der OLE-Automatisierung in eine Dispatchzuordnung.
+Definiert eine OLE-Automatisierungsfunktion in einer dispatchmap.
 
 ```cpp
 DISP_FUNCTION(
-  theClass,
-  pszName,
-  pfnMember,
-  vtRetVal,
-  vtsParams)
+    theClass,
+    pszName,
+    pfnMember,
+    vtRetVal,
+    vtsParams)
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*<br/>
+*spiegeln*<br/>
 Der Name der Klasse.
 
 *pszName*<br/>
 Externer Name der Funktion.
 
 *pfnMember*<br/>
-Der Name der Elementfunktion.
+Der Name der Member-Funktion.
 
 *vtRetVal*<br/>
-Ein Wert, der Rückgabetyp der Funktion angibt.
+Ein-Wert, der den Rückgabetyp der Funktion angibt.
 
 *vtsParams*<br/>
-Eine durch Leerzeichen getrennte Liste von einer oder mehrerer Konstanten, die Parameterliste der Funktion angeben.
+Eine durch Leerzeichen getrennte Liste von einer oder mehreren Konstanten, die die Parameterliste der Funktion angeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Die *VtRetVal* Argument ist vom Typ VARTYPE. Die folgenden möglichen Werte für dieses Argument stammen aus der `VARENUM` Enumeration:
+Das *vtretval* -Argument weist den Typ VarType auf. Die folgenden möglichen Werte für dieses Argument stammen aus der `VARENUM` -Enumeration:
 
 |Symbol|Rückgabetyp|
 |------------|-----------------|
@@ -144,11 +144,11 @@ Die *VtRetVal* Argument ist vom Typ VARTYPE. Die folgenden möglichen Werte für
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-Die *VtsParams* Argument ist eine durch Leerzeichen getrennte Liste von Werten aus der `VTS_*` Konstanten. Eine oder mehrere dieser Werte getrennt durch Leerzeichen (nicht Kommas) gibt die Parameterliste der Funktion an. Ein auf ein Objekt angewendeter
+Das *vtsParams* -Argument ist eine durch Leerzeichen getrennte Liste mit Werten `VTS_*` aus den Konstanten. Einer oder mehrere dieser Werte, getrennt durch Leerzeichen (nicht Kommas), gibt die Parameterliste der Funktion an. Ein auf ein Objekt angewendeter
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
-Gibt eine Liste, enthält eine kurze ganze Zahl, gefolgt von einem Zeiger in einen short Integer.
+gibt eine Liste mit einer kurzen Ganzzahl an, gefolgt von einem Zeiger auf eine kurze Ganzzahl.
 
 Die `VTS_` Konstanten und ihre Bedeutungen lauten wie folgt:
 
@@ -169,7 +169,7 @@ Die `VTS_` Konstanten und ihre Bedeutungen lauten wie folgt:
 |VTS_PI2|__short\*__|
 |VTS_PI4|__long\*__|
 |VTS_PR4|__float\*__|
-|VTS_PR8|__double\*__|
+|VTS_PR8|__Maß\*__|
 |VTS_PCY|`CY*`|
 |VTS_PDATE|`DATE*`|
 |VTS_PBSTR|`BSTR*`|
@@ -178,41 +178,41 @@ Die `VTS_` Konstanten und ihre Bedeutungen lauten wie folgt:
 |VTS_PBOOL|`BOOL*`|
 |VTS_PVARIANT|`VARIANT*`|
 |VTS_PUNKNOWN|`LPUNKNOWN*`|
-|VTS_NONE|Ohne Parameter|
+|VTS_NONE|Keine Parameter|
 
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxdisp.h
 
-## <a name="disp_property"></a>  DISP_PROPERTY
+## <a name="disp_property"></a>DISP_PROPERTY
 
-Definiert eine Eigenschaft der OLE-Automatisierung in eine Dispatchzuordnung.
+Definiert eine OLE-Automatisierungs Eigenschaft in einer Dispatchzuordnung.
 
 ```cpp
 DISP_PROPERTY(
-  theClass,
-  pszName,
-  memberName,
-  vtPropType)
+    theClass,
+    pszName,
+    memberName,
+    vtPropType)
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*<br/>
+*spiegeln*<br/>
 Der Name der Klasse.
 
 *pszName*<br/>
 Externer Name der Eigenschaft.
 
 *memberName*<br/>
-Der Name der Membervariablen, die in der die Eigenschaft gespeichert wird.
+Der Name der Element Variablen, in der die Eigenschaft gespeichert wird.
 
 *vtPropType*<br/>
-Ein Wert, der den Typ der Eigenschaft angibt.
+Ein-Wert, der den Eigenschaftentyp angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die *VtPropType* Argument ist vom Typ **VARTYPE**. Mögliche Werte für dieses Argument stammen aus der Enumeration VARENUM:
+Das *vtPropType* -Argument weist den Typ **VarType**auf. Mögliche Werte für dieses Argument stammen aus der varenumeration-Enumeration:
 
 |Symbol|Eigenschaftentyp|
 |------------|-----------------------|
@@ -229,87 +229,87 @@ Die *VtPropType* Argument ist vom Typ **VARTYPE**. Mögliche Werte für dieses A
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-Wenn ein externer Client ändert die Eigenschaft, die den Wert der Membervariable gemäß *MemberName* Änderungen; es erfolgt keine Benachrichtigung über die Änderung.
+Wenn ein externer Client die-Eigenschaft ändert, ändert sich der Wert der Element Variablen, die durch *Mitgliedschafts Name* angegeben wird. Es gibt keine Benachrichtigung über die Änderung.
 
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxdisp.h
 
-## <a name="disp_property_ex"></a>  DISP_PROPERTY_EX
+## <a name="disp_property_ex"></a>DISP_PROPERTY_EX
 
-Einen OLE-Automatisierungseigenschaft und den Namen definiert der Funktionen, die abgerufen, und legen Sie den Wert der Eigenschaft in eine Dispatchzuordnung.
+Definiert eine OLE-Automatisierungs Eigenschaft und gibt die Funktionen an, die zum erhalten und Festlegen des Eigenschafts Werts in einer Dispatchzuordnung verwendet werden.
 
 ```cpp
 DISP_PROPERTY_EX(
-  theClass,
-  pszName,
-  memberGet,
-  memberSet,
-  vtPropType)
+    theClass,
+    pszName,
+    memberGet,
+    memberSet,
+    vtPropType)
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*<br/>
+*spiegeln*<br/>
 Der Name der Klasse.
 
 *pszName*<br/>
 Externer Name der Eigenschaft.
 
 *memberGet*<br/>
-Der Name der Memberfunktion verwendet, um die Eigenschaft abzurufen.
+Der Name der Member-Funktion, die zum erhalten der Eigenschaft verwendet wird.
 
 *memberSet*<br/>
-Der Name der Memberfunktion verwendet, um die Eigenschaft festzulegen.
+Der Name der Member-Funktion, die zum Festlegen der Eigenschaft verwendet wird.
 
 *vtPropType*<br/>
-Ein Wert, der den Typ der Eigenschaft angibt.
+Ein-Wert, der den Eigenschaftentyp angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die *MemberGet* und *"MemberSet"* Funktionen haben Signaturen, die bestimmt, indem die *VtPropType* Argument. Die *MemberGet* Funktion akzeptiert keine Argumente und gibt einen Wert, der den vom angegebenen Typ *VtPropType*. Die *"MemberSet"* Funktion akzeptiert ein Argument des Typs vom angegebenen *VtPropType* und gibt nichts zurück.
+Die mitgliedsatz-und *mitgliedsatz* Funktionen verfügen über Signaturen, die vom *vtPropType* -Argument bestimmt *werden* . Die Funktion " *Membership Get* " nimmt keine Argumente an und gibt einen Wert des Typs zurück, der von *vtPropType*angegeben wird. Die- *mitgliedsatz* Funktion nimmt ein Argument des von *vtPropType* angegebenen Typs an und gibt nichts zurück.
 
-Die *VtPropType* Argument ist vom Typ VARTYPE. Mögliche Werte für dieses Argument stammen aus der Enumeration VARENUM. Eine Liste der Werte, finden Sie unter den Hinweisen zu den *VtRetVal* Parameter im [DISP_FUNCTION](#disp_function). Beachten Sie, die VT_EMPTY, aufgeführt in den Hinweisen DISP_FUNCTION als Datentyp für eine Eigenschaft nicht zulässig ist.
+Das *vtPropType* -Argument weist den Typ VarType auf. Mögliche Werte für dieses Argument stammen aus der varenumeration-Enumeration. Eine Liste dieser Werte finden Sie in den Hinweisen für den *vtretval* -Parameter in [DISP_FUNCTION](#disp_function). Beachten Sie, dass VT_EMPTY, das in den DISP_FUNCTION-Anmerkungen aufgeführt ist, nicht als Eigenschafts Datentyp zulässig ist.
 
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxdisp.h
 
-## <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY
+## <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY
 
-Definiert ein OLE-Automatisierungseigenschaft mit der Benachrichtigung in eine Dispatchzuordnung.
+Definiert eine OLE-Automatisierungs Eigenschaft mit Benachrichtigung in einer dispatchmap.
 
 ```cpp
 DISP_PROPERTY_NOTIFY(
-  theClass,
-  szExternalName,
-  memberName,
-  pfnAfterSet,
-  vtPropType)
+    theClass,
+    szExternalName,
+    memberName,
+    pfnAfterSet,
+    vtPropType)
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*<br/>
+*spiegeln*<br/>
 Der Name der Klasse.
 
 *szExternalName*<br/>
 Externer Name der Eigenschaft.
 
 *memberName*<br/>
-Der Name der Membervariablen, die in der die Eigenschaft gespeichert wird.
+Der Name der Element Variablen, in der die Eigenschaft gespeichert wird.
 
 *pfnAfterSet*<br/>
-Name der Benachrichtigungsfunktion für *SzExternalName*.
+Name der Benachrichtigungsfunktion für *szexternalname*.
 
 *vtPropType*<br/>
-Ein Wert, der den Typ der Eigenschaft angibt.
+Ein-Wert, der den Eigenschaftentyp angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Im Gegensatz zu Eigenschaften, die mit DISP_PROPERTY definiert werden, ruft eine Eigenschaft mit DISP_PROPERTY_NOTIFY definiert automatisch die Funktion anhand des *PfnAfterSet* Wenn die Eigenschaft geändert wird.
+Anders als Eigenschaften, die mit DISP_PROPERTY definiert werden, ruft eine mit DISP_PROPERTY_NOTIFY definierte Eigenschaft automatisch die von *pfnafterset* angegebene Funktion auf, wenn die-Eigenschaft geändert wird.
 
-Die *VtPropType* Argument ist vom Typ VARTYPE. Mögliche Werte für dieses Argument stammen aus der Enumeration VARENUM:
+Das *vtPropType* -Argument weist den Typ VarType auf. Mögliche Werte für dieses Argument stammen aus der varenumeration-Enumeration:
 
 |Symbol|Eigenschaftentyp|
 |------------|-----------------------|
@@ -330,59 +330,59 @@ Die *VtPropType* Argument ist vom Typ VARTYPE. Mögliche Werte für dieses Argum
 
 **Header:** afxdisp.h
 
-## <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM
+## <a name="disp_property_param"></a>DISP_PROPERTY_PARAM
 
-Definiert eine Eigenschaft zugegriffen wird, mit separaten `Get` und `Set` Memberfunktionen.
+Definiert eine Eigenschaft, auf die `Get` mit `Set` separaten-und Element Funktionen zugegriffen wird.
 
 ```cpp
 DISP_PROPERTY_PARAM(
-  theClass,
-  pszExternalName,
-  pfnGet,
-  pfnSet,
-  vtPropType,
-  vtsParams)
+    theClass,
+    pszExternalName,
+    pfnGet,
+    pfnSet,
+    vtPropType,
+    vtsParams)
 ```
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*<br/>
+*spiegeln*<br/>
 Der Name der Klasse.
 
 *pszExternalName*<br/>
 Externer Name der Eigenschaft.
 
 *pfnGet*<br/>
-Der Name der Memberfunktion verwendet, um die Eigenschaft abzurufen.
+Der Name der Member-Funktion, die zum erhalten der Eigenschaft verwendet wird.
 
 *pfnSet*<br/>
-Der Name der Memberfunktion verwendet, um die Eigenschaft festzulegen.
+Der Name der Member-Funktion, die zum Festlegen der Eigenschaft verwendet wird.
 
 *vtPropType*<br/>
-Ein Wert, der den Typ der Eigenschaft angibt.
+Ein-Wert, der den Eigenschaftentyp angibt.
 
 *vtsParams*<br/>
-Eine Zeichenfolge mit durch Leerzeichen getrennte `VTS_*` variant Parametertypen, eine für jeden Parameter.
+Eine Zeichenfolge mit durch leer `VTS_*` Zeichen getrennten Variant-Parametertypen, eine für jeden Parameter.
 
 ### <a name="remarks"></a>Hinweise
 
-Im Gegensatz zu den DISP_PROPERTY_EX-Makro ermöglicht Ihnen die Angabe eine Liste der Parameter für die Eigenschaft dieses Makro. Dies ist nützlich für die Implementierung der Eigenschaften, die indiziert oder parametrisiert werden.
+Im Gegensatz zum DISP_PROPERTY_EX-Makro können Sie mit diesem Makro eine Parameterliste für die-Eigenschaft angeben. Dies ist nützlich, um indizierte oder parametrisierte Eigenschaften zu implementieren.
 
 ### <a name="example"></a>Beispiel
 
-Betrachten Sie die folgende Deklaration der Get und -Member-Funktionen, die der Benutzer einer bestimmten Zeile und Spalte angefordert wird, wenn die Eigenschaft zugreifen können:
+Beachten Sie die folgende Deklaration von Get-und Set-Member-Funktionen, die es dem Benutzer ermöglichen, beim Zugriff auf die-Eigenschaft eine bestimmte Zeile und Spalte anzufordern:
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-Diese entsprechen den folgenden DISP_PROPERTY_PARAM-Makro in die Dispatchzuordnung Steuerelement:
+Diese entsprechen folgendem DISP_PROPERTY_PARAM-Makro in der Steuerelement dispatchkarte:
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
-Wenn Sie beispielsweise sollten Sie die folgende Get und -Member Funktionen:
+Sehen Sie sich als weiteres Beispiel die folgenden Get-und Set Member-Funktionen an:
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-Diese entsprechen den folgenden DISP_PROPERTY_PARAM-Makro in die Dispatchzuordnung Steuerelement:
+Diese entsprechen folgendem DISP_PROPERTY_PARAM-Makro in der Steuerelement dispatchkarte:
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 
@@ -390,9 +390,9 @@ Diese entsprechen den folgenden DISP_PROPERTY_PARAM-Makro in die Dispatchzuordnu
 
 **Header:** afxdisp.h
 
-## <a name="disp_defvalue"></a>  DISP_DEFVALUE
+## <a name="disp_defvalue"></a>DISP_DEFVALUE
 
-Wird einer vorhandenen Eigenschaft den Standardwert eines Objekts an.
+Erstellt eine vorhandene Eigenschaft als Standardwert eines Objekts.
 
 ```cpp
 DISP_DEFVALUE(theClass, pszName)
@@ -400,17 +400,17 @@ DISP_DEFVALUE(theClass, pszName)
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*<br/>
+*spiegeln*<br/>
 Der Name der Klasse.
 
 *pszName*<br/>
-Externer Name der Eigenschaft, die die "Value" des Objekts darstellt.
+Externer Name der Eigenschaft, die den "Wert" des Objekts darstellt.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Standardwert macht das Programmieren von des Automatisierungsobjekts für Visual Basic-Anwendungen.
+Die Verwendung eines Standardwerts kann das Programmieren Ihres Automation-Objekts für Visual Basic Anwendungen vereinfachen.
 
-Der "Default Value" des Objekts ist die Eigenschaft, die abgerufen oder festgelegt werden, wenn ein Verweis auf ein Objekt eine Eigenschaft oder das Member-Funktion nicht angegeben wird.
+Der "Standardwert" des Objekts ist die Eigenschaft, die abgerufen oder festgelegt wird, wenn ein Verweis auf ein Objekt keine Eigenschaft oder Member-Funktion angibt.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -418,4 +418,4 @@ Der "Default Value" des Objekts ist die Eigenschaft, die abgerufen oder festgele
 
 ## <a name="see-also"></a>Siehe auch
 
-[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
+[Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md)

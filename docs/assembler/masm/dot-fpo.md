@@ -6,40 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 83d6e81ea7dd35038f27f2721f3cc41fe49ef1bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bdb6af98aa71fef3d4af24091dc7463d917ce15
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204057"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915959"
 ---
 # <a name="fpo"></a>.FPO
 
-Die. FPO-Richtlinie steuert die Ausgabe der Compilerdiagnose eines Debug-Datensätze zum .debug$ F-Segment oder Abschnitt.
+Die. Die FPO-Direktive steuert die Ausgabe von debugdatensätzen in das Debug $ F-Segment bzw. den Abschnitt.
 
 ## <a name="syntax"></a>Syntax
 
-> FPO (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
+> FPO (*cdwlocals*, *cdwpara AMS*, *cbprolog*, *cbregs*, *fuseebp*, *cbframe*)
 
 ### <a name="parameters"></a>Parameter
 
 *cdwLocals*<br/>
-Die Anzahl der lokalen Variablen, eine vorzeichenlose 32-Bit-Wert.
+Anzahl der lokalen Variablen, ein 32-Bit-Wert ohne Vorzeichen.
 
 *cdwParams*<br/>
-Die Größe der Parameter in DWORDS, eine vorzeichenlose 16-Bit-Wert.
+Die Größe der Parameter in DWords, ein 16-Bit-Wert ohne Vorzeichen.
 
 *cbProlog*<br/>
-Anzahl der Bytes im Prolog Funktionscode, eine vorzeichenlose 8-Bit-Wert.
+Anzahl von Bytes im Prologcode der Funktion, ein 8-Bit-Wert ohne Vorzeichen.
 
 *cbRegs*<br/>
-Anzahl der gespeicherten Register.
+Anzahl gespeicherter Nummern.
 
 *fUseBP*<br/>
-Gibt an, ob das EBP-Register zugeordnet wurde. 0 oder 1.
+Gibt an, ob das EBP-Register zugeordnet wurde. entweder 0 oder 1.
 
 *cbFrame*<br/>
-Gibt den Rahmentyp.  Finden Sie unter [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data) für Weitere Informationen.
+Gibt den Rahmentyp an.  Weitere Informationen finden Sie unter [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-fpo_data) .
 
 ## <a name="see-also"></a>Siehe auch
 
