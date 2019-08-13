@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d2b209e29b0690ec2003031e160ce9fd1f749b13
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740476"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915317"
 ---
 # <a name="standard-types"></a>Standardtypen
 
@@ -189,7 +189,7 @@ Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeD
 |int_fast64_t, uint_fast64_t|long long, unsigned long long|
 |intmax_t, uintmax_t|long long, unsigned long long|
 
-|Typ|Beschreibung|Deklariert in|
+|Typ|BESCHREIBUNG|Deklariert in|
 |----------|-----------------|-----------------|
 |`clock_t` (lang)|Speichert Zeitwerte, die von [clock](../c-runtime-library/reference/clock.md) verwendet werden.|TIME.H|
 |`_complex`-Struktur|Speicher tatsächliche und imaginäre Teile komplexer Zahlen, die von [_cabs](../c-runtime-library/reference/cabs.md) verwendet werden.|MATH.H|
@@ -202,7 +202,7 @@ Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeD
 |`div_t`-, `ldiv_t`- und `lldiv_t`-Strukturen|Speichern Werte, die von [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) und [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) zurückgegeben werden.|STDLIB.H|
 |`errno_t`-Integer|Wird für einen Parameter oder einen Funktionsrückgabetyp verwendet, der Fehlercodes von `errno` behandelt.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |`_exception`-Struktur|Speichert Fehlerinformationen für [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
-|`_EXCEPTION_POINTERS`|Enthält einen Ausnahmedatensatz. Weitere Informationen finden Sie unter [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers).|FPIEEE.H|
+|`_EXCEPTION_POINTERS`|Enthält einen Ausnahmedatensatz. Weitere Informationen finden Sie unter [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-exception_pointers).|FPIEEE.H|
 |`FILE`-Struktur|Speichert Informationen zum aktuellen Zustand des Streams; wird in allen E/A-Operationen eines Streams verwendet.|STDIO.H|
 |`_finddata_t`-, `_wfinddata_t`-, `_finddata32_t`-, `_wfinddata32_t`-, `_finddatai64_t`-, `_wfinddatai64_t`-, `__finddata64_t`-, `__wfinddata64_t`-, `__finddata32i64_t`-, `__wfinddata32i64_t`-, `__finddata64i32_t`-, `__wfinddata64i32_t`-Strukturen|Speichern Dateiattributinformationen, die von [_findfirst, _wfindfirst und verwandten Funktionen](../c-runtime-library/reference/findfirst-functions.md) sowie [_findnext, _wfindnext und verwandten Funktionen](../c-runtime-library/reference/findnext-functions.md) zurückgegeben werden. Informationen über Strukturmember finden Sie unter [Dateinamen-Suchfunktionen](../c-runtime-library/filename-search-functions.md).|IO.H, WCHAR.H|
 |`_FPIEEE_RECORD`-Struktur|Enthält Informationen zur IEEE-Gleitkommaausnahme; wird an einen benutzerdefinierten Traphandler durch [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md) übergeben.|FPIEEE.H|

@@ -1,21 +1,20 @@
 ---
 title: '&lt;optional&gt;'
-ms.date: 11/04/2016
+ms.date: 08/06/2019
 f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: 83a0ad52735f92d731dafb32ad1be5a8278776b4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f3b4896a3cb4774e46b36480dd9769fa131fc287
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447184"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957179"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Definiert die Container Vorlagen Klasse optional und einige unterstützende Vorlagen.
+Definiert die Containervorlagenklasse `optional` und einige unterstützende Vorlagen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -29,12 +28,12 @@ Definiert die Container Vorlagen Klasse optional und einige unterstützende Vorl
 
 |||
 |-|-|
-|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Testet, ob das `optional`-Objekt links vom Operator gleich dem `optional`-Objekt rechts vom Operator ist.|
-|[Operator!=](../standard-library/optional-operators.md#op_neq)|Testet, ob das `optional`-Objekt links vom Operator ungleich dem `optional`-Objekt rechts vom Operator ist.|
-|[operator<](../standard-library/optional-operators.md#op_lt)|Testet, ob das `optional`-Objekt links vom Operator kleiner als das `optional`-Objekt auf der rechten Seite ist.|
-|[operator<=](../standard-library/optional-operators.md#op_lt_eq)|Testet, ob das `optional`-Objekt links vom Operator kleiner oder gleich dem `optional`-Objekt auf der rechten Seite ist.|
-|[operator>](../standard-library/optional-operators.md#op_gt)|Testet, ob das `optional`-Objekt links vom Operator größer als das `optional`-Objekt auf der rechten Seite ist.|
-|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Testet, ob das `optional`-Objekt links vom Operator größer oder gleich dem `optional`-Objekt auf der rechten Seite ist.|
+|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Testet, ob ein Objekt gleich einem anderen Objekt ist.|
+|[Operator!=](../standard-library/optional-operators.md#op_neq)|Testet, ob ein Objekt ungleich einem anderen Objekt ist.|
+|[operator<](../standard-library/optional-operators.md#op_lt)|Testet, ob das Objekt auf der linken Seite kleiner ist als das Objekt auf der rechten Seite.|
+|[operator<=](../standard-library/optional-operators.md#op_lt_eq)|Testet, ob das-Objekt Links kleiner als oder gleich dem-Objekt auf der rechten Seite ist.|
+|[operator>](../standard-library/optional-operators.md#op_gt)|Testet, ob das-Objekt auf der linken Seite größer als das-Objekt auf der rechten Seite ist.|
+|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Testet, ob das-Objekt auf der linken Seite größer als oder gleich dem-Objekt auf der rechten Seite ist.|
 
 > [!NOTE]
 > Neben relationalen vergleichen \<unterstützen optionale >-Operatoren auch Vergleiche mit **nullopt** und. `T`
@@ -44,13 +43,13 @@ Definiert die Container Vorlagen Klasse optional und einige unterstützende Vorl
 |||
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|Macht ein-Objekt optional.|
-|[swap](../standard-library/optional-functions.md#swap)||
+|[swap](../standard-library/optional-functions.md#swap)|Vertauscht die enthaltenen Werte von `optional` zwei-Objekten.|
 
 ### <a name="classes-and-structs"></a>Klassen und Strukturen
 
 |||
 |-|-|
-|[hash]()||
+|Hashindizes|Gibt einen Hash des enthaltenen-Objekts zurück.|
 |[optionale Klasse](../standard-library/optional-class.md)|Beschreibt ein Objekt, das einen Wert enthalten kann.|
 |[nullopt_t-Struktur](../standard-library/nullopt-t-structure.md)|Beschreibt ein Objekt, das keinen Wert enthält.|
 |[bad_optional_access-Klasse](../standard-library/bad-optional-access-class.md)|Beschreibt ein Objekt, das als Ausnahme ausgelöst wurde, um einen Versuch, auf einen Wert zuzugreifen, zu melden.|
@@ -59,7 +58,7 @@ Definiert die Container Vorlagen Klasse optional und einige unterstützende Vorl
 
 |||
 |-|-|
-|[nullopt](../standard-library/optional-functions.md#nullopt)||
+|[nullopt](../standard-library/optional-functions.md#nullopt)|Eine Instanz von `nullopt_t` für Vergleiche.|
 
 ## <a name="see-also"></a>Siehe auch
 
