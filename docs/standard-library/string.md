@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459191"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957140"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -38,8 +38,8 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 
 |Typname|Beschreibung|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Ein Typ, der eine Spezialisierung der Vorlagen Klasse `basic_string` mit Elementen des Typs  `string`char als beschreibt.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Ein Typ, der eine Spezialisierung der Vorlagen Klasse `basic_string` mit Elementen des Typs  `wstring`wchar_t als beschreibt.|
+|[string](../standard-library/string-typedefs.md#string)|Ein Typ, der eine Spezialisierung der Vorlagen Klasse `basic_string` mit Elementen des Typs `string`char als beschreibt.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Ein Typ, der eine Spezialisierung der Vorlagen Klasse `basic_string` mit Elementen des Typs `wstring`wchar_t als beschreibt.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Ein Typ, der eine Spezialisierung der Vorlagenklasse `basic_string` basierend auf Elementen des Typs `char16_t` beschreibt.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Ein Typ, der eine Spezialisierung der Vorlagenklasse `basic_string` basierend auf Elementen des Typs `char32_t` beschreibt.|
 
@@ -61,7 +61,7 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 
 |||
 |-|-|
-|[hash]()||
+|Hashindizes|Erzeugt einen Hashwert einer Zeichenfolge.|
 |[swap](../standard-library/string-functions.md#swap)|Tauscht die Arrays von Zeichen für zwei Zeichenfolgen aus.|
 |[stod](../standard-library/string-functions.md#stod)|Konvertiert eine Zeichen Sequenz in einen **Double**-Typ.|
 |[stof](../standard-library/string-functions.md#stof)|Konvertiert eine Zeichenfolge in einen **float**-Wert.|

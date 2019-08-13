@@ -9,11 +9,11 @@ helpviewer_keywords:
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151493"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62326078"
 ---
 # <a name="initializing-aggregate-types"></a>Initialisierung von Aggregattypen
 
@@ -22,8 +22,8 @@ Ein *aggregierter* Typ ist eine Struktur, eine Union oder ein Arraytyp. Wenn ein
 ## <a name="syntax"></a>Syntax
 
 *initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **}** /* Für Aggregatinitialisierung \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* Für Aggregatinitialisierung \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
@@ -35,7 +35,7 @@ Für jede Initialisiererliste werden den entsprechenden Membern der aggregierten
 
 Wenn *initializer-list* über weniger Werte als ein aggregierter Typ verfügt, werden die verbleibenden Member oder Elemente des aggregierten Typs auf 0 (null) initialisiert. Der Anfangswert eines automatischen Bezeichners, der nicht explizit initialisiert wird, ist nicht definiert. Wenn *initializer-list* mehr Werte als ein aggregierter Typ aufweist, wird ein Fehler ausgegeben. Diese Regeln gelten für jede eingebettete Initialisiererliste sowie für das Aggregat als Ganzes.
 
-Der Initialisierer einer Struktur ist entweder ein Ausdruck vom gleichen Typ oder eine Liste mit Initialisierern für seine Member, die in geschweifte Klammern (**{ }**) stehen. Unbenannte Bitfeldmember werden nicht initialisiert.
+Der Initialisierer einer Struktur ist entweder ein Ausdruck vom gleichen Typ oder eine Liste mit Initialisierern für seine Member, die in geschweifte Klammern ( **{ }** ) stehen. Unbenannte Bitfeldmember werden nicht initialisiert.
 
 Wenn eine Union initialisiert wird, muss *initializer-list* ein einzelner konstanter Ausdruck sein. Der Wert des konstanten Ausdrucks wird dem ersten Member der Union zugewiesen.
 

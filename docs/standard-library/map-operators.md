@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: e05aca75f527e1bc78912ab6b4b5a9de6dcd54c5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246421"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956963"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt;-Operatoren
 
@@ -37,7 +37,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*linken*\
 Ein Objekt vom Typ `map`.
 
 *Richting*\
@@ -102,7 +102,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*linken*\
 Ein Objekt vom Typ `map`.
 
 *Richting*\
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="op_lt_eq"></a> Operator&lt;=
+## <a name="op_lt_eq"></a>KOM&lt;=
 
 Testet, ob das map-Objekt links vom Operator kleiner als das map-Objekt oder gleich diesem Objekt auf der rechten Seite ist.
 
@@ -167,7 +167,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*linken*\
 Ein Objekt vom Typ `map`.
 
 *Richting*\
@@ -223,7 +223,7 @@ The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
 ```
 
-## <a name="op_eq_eq"></a> Operator ==
+## <a name="op_eq_eq"></a>Operator = =
 
 Testet, ob das map-Objekt links vom Operator gleich dem map-Objekt rechts vom Operator ist.
 
@@ -235,7 +235,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*linken*\
 Ein Objekt vom Typ `map`.
 
 *Richting*\
@@ -300,7 +300,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*linken*\
 Ein Objekt vom Typ `map`.
 
 *Richting*\
@@ -364,7 +364,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*linken*\
 Ein Objekt vom Typ `map`.
 
 *Richting*\
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="op_neq_multimap"></a> Operator! = (Multimap)
+## <a name="op_neq_multimap"></a>Operator! = (Multimap)
 
 Überprüft, ob das multimap-Objekt links vom Operator ungleich dem multimap-Objekt rechts vom Operator ist.
 
@@ -432,7 +432,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*linken*\
 Ein Objekt vom Typ `multimap`.
 
 *Richting*\
@@ -497,7 +497,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*linken*\
 Ein Objekt vom Typ `multimap`.
 
 *Richting*\
@@ -550,11 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-<<<<<<< HEAD
-## <a name="eq_multimap"></a> Operator&lt;=
-=======
 ## <a name="op_lt_eq_multimap"></a> operator&lt;=
->>>>>>> 009c7ce384664f2a62ffb0bc61d6586b585ed38a
 
 Überprüft, ob das multimap-Objekt links vom Operator kleiner als das multimap-Objekt rechts vom Operator ist oder diesem entspricht.
 
@@ -566,7 +562,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*linken*\
 Ein Objekt vom Typ `multimap`.
 
 *Richting*\
@@ -622,7 +618,7 @@ m1 is greater than m3
 m1 is less than or equal to m4
 ```
 
-## <a name="op_eq_eq_multimap"></a> Operator ==
+## <a name="op_eq_eq_multimap"></a>Operator = =
 
 Überprüft, ob das multimap-Objekt links vom Operator dem multimap-Objekt rechts vom Operator entspricht.
 
@@ -634,7 +630,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*linken*\
 Ein Objekt vom Typ `multimap`.
 
 *Richting*\
@@ -699,7 +695,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*linken*\
 Ein Objekt vom Typ `multimap`.
 
 *Richting*\
@@ -752,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="op_gt_eq_multimap"></a> Operator&gt;=
+## <a name="op_gt_eq_multimap"></a>KOM&gt;=
 
 Überprüft, ob das multimap-Objekt links vom Operator größer als das multimap-Objekt rechts vom Operator ist oder diesem entspricht.
 
@@ -764,7 +760,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-*Links*\
+*linken*\
 Ein Objekt vom Typ `multimap`.
 
 *Richting*\

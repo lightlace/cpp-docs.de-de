@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661531"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956984"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorithmusfunktionen&gt;
 
@@ -1605,7 +1605,7 @@ ForwardIterator fill_n(
 Die zu verwendende Ausführungs Richtlinie.
 
 *erstes*\
-Ein Ausgabeiterator, der die Position des ersten Elements im Bereich adressiert, dem der Wert Wert zugewiesen werden *soll.*
+Ein Ausgabeiterator, der die Position des ersten Elements im Bereich adressiert, demder Wert Wert zugewiesen werden soll.
 
 *Countdown*\
 Ein Ganzzahltyp mit oder ohne Vorzeichen, der die Anzahl der dem Wert zuzuweisenden Elemente angibt.
@@ -2074,7 +2074,7 @@ Benutzerdefiniertes Prädikatfunktionsobjekt oder [Lambdaausdruck](../cpp/lambda
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein eingabeiterator, der auf das erste Element im Bereich verweist, das die vom Prädikat angegebene Bedingung erfüllt (das Prädikat ergibt **true**). Wenn kein Element gefunden wird, das das Prädikat erfüllt, wird der Wert von zurück *gegeben.*
+Ein eingabeiterator, der auf das erste Element im Bereich verweist, das die vom Prädikat angegebene Bedingung erfüllt (das Prädikat ergibt **true**). Wenn kein Element gefunden wird, das das Prädikat erfüllt,wird der Wert von zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2991,7 +2991,7 @@ Die erste Vorlagen Funktion gibt [is_heap_until](../standard-library/algorithm-f
 
 Die zweite Vorlagen Funktion gibt zurück.
 
-`is_heap_until(first, last, pred) == last`
+`is_heap_until(first, last, pred) == last`.
 
 ## <a name="is_heap_until"></a>is_heap_until
 
@@ -4853,7 +4853,7 @@ Rückgabewert
 
 Die erste Vorlagenfunktion gibt Folgendes zurück:
 
-`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`.
+`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`
 
 Die zweite Vorlagenfunktion verhält sich genauso; der einzige Unterschied ist, dass sie `operator<(X, Y)` durch `pred(X, Y)` ersetzt.
 
@@ -7646,7 +7646,7 @@ Ein Forward-Iterator, der die Position hinter dem letzten Element im abzugleiche
 Benutzerdefiniertes Prädikatfunktionsobjekt, das die zu erfüllende Bedingung definiert, wenn zwei Elemente als gleichwertig akzeptiert werden. Ein binäres Prädikat akzeptiert zwei Argumente und gibt bei Erfüllung **true** und bei Nichterfüllung **false** zurück.
 
 *Searcher*\
-Der Searcher, der das zu suchende Muster und den zu verwendenden Suchalgorithmus kapselt.
+Der Searcher, der das zu suchende Muster und den zu verwendenden Suchalgorithmus kapselt. Weitere Informationen zu searchern finden Sie unter [default_searcher Class](default-searcher-class.md), [boyer_moore_horspool_searcher Class](boyer-moore-horspool-searcher-class.md)und [boyer_moore_searcher Class](boyer-moore-searcher-class.md).
 
 ### <a name="return-value"></a>Rückgabewert
 
