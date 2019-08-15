@@ -33,14 +33,14 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 5284685f56a73c4c7e48fce981745220651399a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03eb36573abe8e26c47e6dd38c009e5819e60f8f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156160"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499600"
 ---
-# <a name="popen-wpopen"></a>_popen, _wpopen
+# <a name="_popen-_wpopen"></a>_popen, _wpopen
 
 Erstellt eine Pipe und führt einen Befehl aus.
 
@@ -70,13 +70,13 @@ Modus des zurückgegebenen Streams.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Stream zurück, der einem Ende der erstellten Pipe zugeordnet ist. Das andere Ende der Pipe ist der Standardeingabe oder Standardausgabe des erzeugten Befehls zugeordnet. Die Funktionen geben bei einem Fehler **NULL** zurück. Wenn der Fehler ein ungültiger Parameter, z. B. wenn *Befehl* oder *Modus* ist ein null-Zeiger oder *Modus* ist kein gültiger Modus ist, **Errno** auf festgelegt ist **EINVAL**. Gültige Modi können Sie dem Abschnitt mit den Hinweisen entnehmen.
+Gibt einen Stream zurück, der einem Ende der erstellten Pipe zugeordnet ist. Das andere Ende der Pipe ist der Standardeingabe oder Standardausgabe des erzeugten Befehls zugeordnet. Die Funktionen geben bei einem Fehler **NULL** zurück. Wenn der Fehler ein ungültiger Parameter ist, z. b. wenn der *Befehl* oder der *Modus* ein NULL-Zeiger ist oder der *Modus* kein gültiger Modus ist, wird **errno** auf **EINVAL**festgelegt. Gültige Modi können Sie dem Abschnitt mit den Hinweisen entnehmen.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_popen** Funktion erstellt eine Pipe und führt asynchron eine generierte Kopie des Befehlsprozessors mit der angegebenen Zeichenfolge *Befehl*. Die Zeichenfolge *mode* gibt den angeforderten Zugriffstyp wie folgt an.
+Die **_popen** -Funktion erstellt eine Pipe und führt asynchron eine generierte Kopie des Befehls Prozessors mit dem angegebenen Zeichen folgen *Befehl*aus. Die Zeichenfolge *mode* gibt den angeforderten Zugriffstyp wie folgt an.
 
 |Zugriffsmodus|Beschreibung|
 |-|-|
@@ -86,9 +86,9 @@ Die **_popen** Funktion erstellt eine Pipe und führt asynchron eine generierte 
 |**"t"**|Öffnen im Textmodus.|
 
 > [!NOTE]
-> Wenn in einem Windows-Programm verwendet die **_popen** Funktionsergebnis ist einen Ungültiger Dateizeiger, der bewirkt, die Anwendung dass reagiert auf unbestimmte Zeit. **_popen** in einer Konsolenanwendung ordnungsgemäß funktioniert. Zum Erstellen einer Windows-Anwendung, die Eingabe und Ausgabe umleitet, finden Sie unter [Erstellen eines untergeordneten Prozesses mit umgeleiteter Eingabe und Ausgabe](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) im Windows SDK.
+> Wenn die **_popen** -Funktion in einem Windows-Programm verwendet wird, gibt Sie einen ungültigen Dateizeiger zurück, der bewirkt, dass das Programm unbegrenzt nicht mehr reagiert. **_popen** funktioniert ordnungsgemäß in einer Konsolenanwendung. Informationen zum Erstellen einer Windows-Anwendung, die die Eingabe und Ausgabe umleitet, finden Sie unter [Erstellen eines untergeordneten Prozesses mit umgeleiteter Eingabe und Ausgabe](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) in der Windows SDK.
 
-**_wpopen** ist eine Breitzeichen-Version von **_popen**; die *Pfad* Argument **_wpopen** ist eine Breitzeichen-Zeichenfolge. **_wpopen** und **_popen** Verhalten sich andernfalls identisch.
+**_wpopen** ist eine breit Zeichen Version von **_popen**. Das *path* -Argument für **_wpopen** ist eine Zeichenfolge mit breit Zeichen. **_wpopen** und **_popen** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

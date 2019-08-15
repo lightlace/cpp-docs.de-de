@@ -1,5 +1,5 @@
 ---
-title: CGlobalHeap-Klasse
+title: Cglobalheap-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CGlobalHeap
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
-ms.openlocfilehash: cba15421fd0329df7a66a35979ed54b863b7cca0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b5aa09357ddcc77b6b10de58545bea86eff2488
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258818"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496763"
 ---
-# <a name="cglobalheap-class"></a>CGlobalHeap-Klasse
+# <a name="cglobalheap-class"></a>Cglobalheap-Klasse
 
-Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mithilfe der Win32-Heap der globalen Funktionen.
+Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mithilfe der globalen Win32-Heap Funktionen.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+>  Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,20 +38,20 @@ class CGlobalHeap : public IAtlMemMgr
 |Name|Beschreibung|
 |----------|-----------------|
 |[CGlobalHeap::Allocate](#allocate)|Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.|
-|[CGlobalHeap::Free](#free)|Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.|
-|[CGlobalHeap::GetSize](#getsize)|Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.|
+|[CGlobalHeap::Free](#free)|Mit dieser Methode wird ein Speicherblock freigegeben, der von diesem Speicher-Manager zugeordnet wird.|
+|[CGlobalHeap::GetSize](#getsize)|Mit dieser Methode können Sie die zugeordnete Größe eines Speicherblocks abrufen, der von diesem Speicher-Manager zugeordnet wird.|
 |[CGlobalHeap::Reallocate](#reallocate)|Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.|
 
 ## <a name="remarks"></a>Hinweise
 
-`CGlobalHeap` implementiert mithilfe der globalen Heapfunktionen Win32-speicherbelegungsfunktionen an.
+`CGlobalHeap`implementiert Speicher Belegungs Funktionen mithilfe der globalen Win32-Heap Funktionen.
 
 > [!NOTE]
->  Die globalen Heap-Funktionen sind langsamer als die anderen Speicherverwaltungsfunktionen und bieten keine so viele Features. Neue Anwendungen sollten daher verwenden die [Heapfunktionen](/windows/desktop/Memory/heap-functions). Diese stehen in der [CWin32Heap](../../atl/reference/cwin32heap-class.md) Klasse. Globale Funktionen sind immer noch von DDE und Funktionen der Zwischenablage verwendet.
+>  Die globalen Heap Funktionen sind langsamer als andere Speicherverwaltungsfunktionen und bieten nicht so viele Features. Daher sollten neue Anwendungen die [Heap Funktionen](/windows/win32/Memory/heap-functions)verwenden. Diese sind in der [CWin32Heap](../../atl/reference/cwin32heap-class.md) -Klasse verfügbar. Globale Funktionen werden von DDE und den Zwischenablage Funktionen weiterhin verwendet.
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
+Weitere Informationen finden Sie im Beispiel für [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -61,9 +61,9 @@ Siehe das Beispiel für [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlmem.h
+**Header:** atlmem. h
 
-##  <a name="allocate"></a>  Cglobalheap:: Allocate
+##  <a name="allocate"></a>Cglobalheap:: zuordnen
 
 Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.
 
@@ -82,13 +82,13 @@ Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie [cglobalheap:: Free](#free) oder [cglobalheap:: ReAllocate](#reallocate) um den von dieser Methode belegten Arbeitsspeicher freizugeben.
+Verwenden Sie [cglobalheap:: Free](#free) oder [cglobalheap:: rezuordnen](#reallocate) , um den von dieser Methode belegten Arbeitsspeicher freizugeben.
 
-Mithilfe von implementiert [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) mit einem Flag-Parameter von GMEM_FIXED.
+Wird mithilfe von [globalzuordc](/windows/win32/api/winbase/nf-winbase-globalalloc) mit dem Flag-Parameter GMEM_FIXED implementiert.
 
-##  <a name="free"></a>  Cglobalheap:: Free
+##  <a name="free"></a>Cglobalheap:: Free
 
-Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.
+Mit dieser Methode wird ein Speicherblock freigegeben, der von diesem Speicher-Manager zugeordnet wird.
 
 ```
 virtual void Free(void* p) throw();
@@ -97,15 +97,15 @@ virtual void Free(void* p) throw();
 ### <a name="parameters"></a>Parameter
 
 *p*<br/>
-Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde. NULL ist ein gültiger Wert und hat keine Auswirkungen.
+Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde. NULL ist ein gültiger Wert und bewirkt nichts.
 
 ### <a name="remarks"></a>Hinweise
 
-Mithilfe von implementiert [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree).
+Implementiert mithilfe von [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree).
 
-##  <a name="getsize"></a>  CGlobalHeap::GetSize
+##  <a name="getsize"></a>Cglobalheap:: GetSize
 
-Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.
+Mit dieser Methode können Sie die zugeordnete Größe eines Speicherblocks abrufen, der von diesem Speicher-Manager zugeordnet wird.
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -122,9 +122,9 @@ Gibt die Größe des belegten Speicherblocks in Bytes zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Mithilfe von implementiert [GlobalSize ist](/windows/desktop/api/winbase/nf-winbase-globalsize).
+Implementiert mithilfe von [globalsize](/windows/win32/api/winbase/nf-winbase-globalsize).
 
-##  <a name="reallocate"></a>  Cglobalheap:: ReAllocate
+##  <a name="reallocate"></a>Cglobalheap:: neu zuordnen
 
 Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.
 
@@ -146,13 +146,13 @@ Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie [cglobalheap:: Free](#free) um den von dieser Methode belegten Arbeitsspeicher freizugeben.
+Ruft [cglobalheap:: Free](#free) auf, um den von dieser Methode belegten Arbeitsspeicher freizugeben.
 
-Mithilfe von implementiert [GlobalReAlloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).
+Implementiert mithilfe von [globalrezuweisungen](/windows/win32/api/winbase/nf-winbase-globalrealloc).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
+[Klassen Übersicht](../../atl/atl-class-overview.md)<br/>
 [CComHeap-Klasse](../../atl/reference/ccomheap-class.md)<br/>
 [CWin32Heap-Klasse](../../atl/reference/cwin32heap-class.md)<br/>
 [CLocalHeap-Klasse](../../atl/reference/clocalheap-class.md)<br/>

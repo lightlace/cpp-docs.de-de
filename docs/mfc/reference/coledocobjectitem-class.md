@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: 454be491fe5875b1b1ac9b2b85fdebe2f1663ebc
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c6e00bf42cf20b46c949c218efe1820cc7ce0f9b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916977"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504010"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem-Klasse
 
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
 Der Bezeichner des auszuführenden Befehls. Muss in der durch *pguidcmdgroup*identifizierten Gruppe sein.
 
 *nCmdExecOpt*<br/>
-Gibt Befehls Ausführungs Optionen an. Standardmäßig legen Sie fest, um den Befehl auszuführen, ohne den Benutzer aufzufordern. Eine Liste der Werte finden Sie unter [olecmdexecopt](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) .
+Gibt Befehls Ausführungs Optionen an. Standardmäßig legen Sie fest, um den Befehl auszuführen, ohne den Benutzer aufzufordern. Eine Liste der Werte finden Sie unter [olecmdexecopt](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) .
 
 *pguidCmdGroup*<br/>
 Eindeutiger Bezeichner der Befehlsgruppe. Standardmäßig ist der Wert NULL, der die Standardgruppe angibt. Der in *nCmdId* über gegebene Befehl muss zur Gruppe gehören.
@@ -176,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die [IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) -Schnittstelle der derzeit aktiven Ansicht. Wenn keine aktuelle Ansicht vorhanden ist, wird NULL zurückgegeben.
+Ein Zeiger auf die [IOleDocumentView](/windows/win32/api/docobj/nn-docobj-ioledocumentview) -Schnittstelle der derzeit aktiven Ansicht. Wenn keine aktuelle Ansicht vorhanden ist, wird NULL zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -270,21 +270,21 @@ HRESULT QueryCommand(
 der Bezeichner des Befehls, der abgefragt wird.
 
 *pdwStatus*<br/>
-Ein Zeiger auf die Flags, die als Ergebnis der Abfrage zurückgegeben werden. Eine Liste möglicher Werte finden Sie unter [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf).
+Ein Zeiger auf die Flags, die als Ergebnis der Abfrage zurückgegeben werden. Eine Liste möglicher Werte finden Sie unter [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf).
 
 *pCmdText*<br/>
-Ein Zeiger auf eine [olecmdtext](/windows/desktop/api/docobj/ns-docobj-olecmdtext) -Struktur, in der die Namen-und Statusinformationen für einen einzelnen Befehl zurückgegeben werden sollen. Kann NULL sein, um anzugeben, dass der Aufrufer diese Informationen nicht benötigt.
+Ein Zeiger auf eine [olecmdtext](/windows/win32/api/docobj/ns-docobj-olecmdtext) -Struktur, in der die Namen-und Statusinformationen für einen einzelnen Befehl zurückgegeben werden sollen. Kann NULL sein, um anzugeben, dass der Aufrufer diese Informationen nicht benötigt.
 
 *pguidCmdGroup*<br/>
 Eindeutiger Bezeichner der Befehlsgruppe; kann NULL sein, um die Standardgruppe anzugeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Eine umfassende Liste der Rückgabewerte finden Sie unter [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) in der Windows SDK.
+Eine umfassende Liste der Rückgabewerte finden Sie unter [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) in der Windows SDK.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion emuliert die Funktionalität der [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) -Methode, wie im Windows SDK beschrieben.
+Diese Member-Funktion emuliert die Funktionalität der [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) -Methode, wie im Windows SDK beschrieben.
 
 ##  <a name="release"></a>COleDocObjectItem:: Release
 

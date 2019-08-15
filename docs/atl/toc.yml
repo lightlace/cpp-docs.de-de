@@ -240,7 +240,7 @@
             - name: Erstellen von Registrierungsskripts
               href: creating-registrar-scripts.md
             - name: Einführung in die BNF-Syntax (Backus Naur Form)
-              href: understanding-backus-nauer-form-bnf-syntax.md
+              href: understanding-backus-naur-form-bnf-syntax.md
             - name: Einführung in Analysestrukturen
               href: understanding-parse-trees.md
             - name: Beispiele für die Registrierungsskripterstellung

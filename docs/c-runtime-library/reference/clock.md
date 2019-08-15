@@ -25,12 +25,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 4b58b33b533250447cf964134de9869bddee4498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fabd18fb28cb5ea13dfb156ea21e8743c2afd49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347469"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500267"
 ---
 # <a name="clock"></a>clock
 
@@ -44,13 +44,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die verstrichene Zeit seit der CRT-Initialisierung beim Start des Prozesses, gemessen in **CLOCKS_PER_SEC** Einheiten pro Sekunde. Wenn die verstrichene Zeit nicht verfügbar ist oder überschritten. die maximale positive Zeit, die als aufgezeichnet werden, kann eine **clock_t erweitert** Typ, der die Funktion gibt den Wert `(clock_t)(-1)`.
+Die verstrichene Zeit seit der CRT-Initialisierung zu Beginn des Prozesses, gemessen in **CLOCKS_PER_SEC** -Einheiten pro Sekunde. Wenn die verstrichene Zeit nicht verfügbar ist oder die maximale positive Zeit überschreitet, die als **clock_t** -Typ aufgezeichnet werden kann, gibt `(clock_t)(-1)`die Funktion den Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Uhr** -Funktion informiert darüber, wie viel wanduhrzeit seit der CRT-Initialisierung beim Start des Prozesses vergangen ist. Beachten Sie, dass diese Funktion nicht streng mit ISO C konform ist, welche die Netto-CPU-Zeit als Rückgabewert nennt. Verwenden Sie zum Abrufen von CPU-Zeiten die Win32-Funktion [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes). Um die verstrichene Zeit in Sekunden zu ermitteln, teilen Sie den Rückgabewert von der **Uhr** Funktion durch das Makro **CLOCKS_PER_SEC**.
+Die **Clock** -Funktion gibt an, wie viel Zeit seit der CRT-Initialisierung während des Prozess Starts vergangen ist. Beachten Sie, dass diese Funktion nicht streng mit ISO C konform ist, welche die Netto-CPU-Zeit als Rückgabewert nennt. Verwenden Sie zum Abrufen von CPU-Zeiten die Win32-Funktion [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes). Um die verstrichene Zeit in Sekunden zu ermitteln, teilen Sie den von der **Clock** -Funktion zurückgegebenen Wert durch das Makro **CLOCKS_PER_SEC**.
 
-Wenn genügend Zeit, der zurückgegebene Wert von **Uhr** können überschreiten der maximalen positiven Wert von **clock_t erweitert**. Wenn der Prozess ausgeführt wurde mehr, den Rückgabewert von **Uhr** ist immer `(clock_t)(-1)`, indem Sie die ISO C99-Standard (7.23.2.1) und ISO C11-Standard (7.27.2.1) angegeben. Microsoft implementiert **clock_t erweitert** als eine **lange**, signierten 32-Bit-Ganzzahl, und die **CLOCKS_PER_SEC** -Makro ist definiert als 1000. Dadurch wird eine maximale **Uhr** Funktion der Rückgabewert von 2147483,647 Sekunden oder rund 24,8 Tage. Verlassen Sie sich nicht auf den Rückgabewert von **Uhr** in Prozesse, die länger als für diesen Zeitraum ausgeführt wurden. Können Sie die 64-Bit [Zeit](time-time32-time64.md) Funktion oder der Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) Funktion, um Datensätze verstrichene Prozesszeit für mehrere Jahre.
+Wenn genug Zeit ist, kann der von **Clock** zurückgegebene Wert den maximalen positiven Wert von **clock_t**überschreiten. Wenn der Prozess länger ausgeführt wurde, ist der von der **Uhr** zurückgegebene `(clock_t)(-1)`Wert immer, wie vom ISO C99-Standard (7.23.2.1) und ISO C11 Standard (7.27.2.1) angegeben. Microsoft implementiert **clock_t** als **Long**, eine ganze Zahl mit Vorzeichen und 32 eine ganze Zahl mit Vorzeichen, und das **CLOCKS_PER_SEC** -Makro wird als 1000 definiert. Dies ergibt einen maximalen Wert für die Zeit Rückgabewert von 2147483,647 Sekunden oder etwa 24,8 Tage. Verlassen Sie sich nicht auf den von der **Uhr** zurückgegebenen Wert in Prozessen, die länger als diesen Zeitraum ausgeführt wurden. Sie können die 64-Bit- [Zeit](time-time32-time64.md) Funktion oder die Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) -Funktion verwenden, um Prozess verstrichene Zeiten von vielen Jahren aufzuzeichnen.
 
 ## <a name="requirements"></a>Anforderungen
 

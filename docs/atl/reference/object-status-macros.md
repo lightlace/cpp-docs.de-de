@@ -1,31 +1,31 @@
 ---
-title: Objektstatus-Makros
+title: Objektstatusmakros
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::DECLARE_OLEMISC_STATUS
 ms.assetid: 727dbef2-a342-4157-9d64-a421805d9747
-ms.openlocfilehash: cb5ff6d7570b03b32852fc450f58043446f721f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc50825d6b6e74dc263a097e86d8ea0d42989825
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198173"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495323"
 ---
-# <a name="object-status-macros"></a>Objektstatus-Makros
+# <a name="object-status-macros"></a>Objektstatusmakros
 
-Dieses Makro legt die Flags, die für ActiveX-Steuerelemente gehören.
+Dieses Makro legt Flags fest, die zu ActiveX-Steuerelementen gehören.
 
 |||
 |-|-|
-|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|In ATL-ActiveX-Steuerelementen verwendet, werden die OLEMISC-Flags festgelegt.|
+|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Wird in ATL-ActiveX-Steuerelementen zum Festlegen der OLEMISC-Flags verwendet.|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlcom.h
+**Header:** Atlcom. h
 
-##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS
+##  <a name="declare_olemisc_status"></a>DECLARE_OLEMISC_STATUS
 
-In ATL-ActiveX-Steuerelementen verwendet, werden die OLEMISC-Flags festgelegt.
+Wird in ATL-ActiveX-Steuerelementen zum Festlegen der OLEMISC-Flags verwendet.
 
 ```
 DECLARE_OLEMISC_STATUS( miscstatus )
@@ -34,11 +34,11 @@ DECLARE_OLEMISC_STATUS( miscstatus )
 ### <a name="parameters"></a>Parameter
 
 *miscstatus*<br/>
-Alle geltenden OLEMISC-Flags.
+Alle anwendbaren OLEMISC-Flags.
 
 ### <a name="remarks"></a>Hinweise
 
-Dieses Makro wird verwendet, werden die OLEMISC-Flags für ein ActiveX-Steuerelement festgelegt. Finden Sie unter [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) Weitere Details.
+Dieses Makro wird verwendet, um die OLEMISC-Flags für ein ActiveX-Steuerelement festzulegen. Weitere Informationen finden Sie unter [IOleObject:: getfehlstatus](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) .
 
 ### <a name="example"></a>Beispiel
 

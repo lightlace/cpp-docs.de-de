@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 885cce09707e1c067efdeb0bdc8b7d8a40841c02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337712"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512815"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Concurrency Runtime im Vergleich zu anderen Parallelitätsmodellen
 
@@ -33,7 +33,7 @@ Das präemptive Modell und kooperative Planungsmodelle sind zwei allgemeine Verf
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Präemptive und kooperative Planung
 
-*Präemptive Planung* ist ein prioritätsbasierter Roundrobin-Mechanismus, bei dem Aufgaben nacheinander jeweils für einen bestimmten Zeitraum exklusiven Zugriff auf eine Computerressource erhalten. Präemptive Planung wird häufig in Multitasking-Betriebssystemen wie Windows. *Kooperative Planung* ist ein Mechanismus, der jeder Aufgabe exklusiven Zugriff auf eine Computerressource gibt, bis die Aufgabe abgeschlossen ist oder die Aufgabe den Zugriff auf die Ressource übergibt. Concurrency Runtime verwendet die kooperative Planung zusammen mit dem präemptiven Planer des Betriebssystems, um eine maximale Nutzung der Verarbeitungsressourcen zu erreichen.
+*Präemptive Planung* ist ein prioritätsbasierter Roundrobin-Mechanismus, bei dem Aufgaben nacheinander jeweils für einen bestimmten Zeitraum exklusiven Zugriff auf eine Computerressource erhalten. Die präemptiver Planung erfolgt häufig in Multitasking-Betriebssystemen wie Windows. *Kooperative Planung* ist ein Mechanismus, der jeder Aufgabe exklusiven Zugriff auf eine Computer Ressource gibt, bis die Aufgabe abgeschlossen ist oder die Aufgabe den Zugriff auf die Ressource gewährt. Concurrency Runtime verwendet die kooperative Planung zusammen mit dem präemptiven Planer des Betriebssystems, um eine maximale Nutzung der Verarbeitungsressourcen zu erreichen.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Unterschiede zwischen präemptiven und kooperativen Planern
 
@@ -63,7 +63,7 @@ Die Windows-API verwendet die Programmiersprache C, um das Programmiermodell ver
 
 ### <a name="threads-and-thread-pools"></a>Threads und Threadpools
 
-Der zentrale Parallelitätsmechanismus in der Windows-API ist der Thread. In der Regel verwenden Sie die [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) -Funktion zum Erstellen von Threads. Obwohl Threads relativ einfach zu erstellen sind, weist das Betriebssystem viel Zeit und Ressourcen für deren Verwaltung zu. Obwohl jeder Thread garantiert die gleiche Ausführungszeit wie alle anderen Threads auf gleicher Prioritätsebene erhält, erfordert der zugeordnete Mehraufwand, dass Sie ausreichend große Aufgaben erstellen. Für kleinere oder differenziertere Aufgaben kann der Aufwand, der mit der Parallelität verbunden ist, den Vorteil, dass die Aufgaben parallel ausgeführt werden zunichte machen.
+Der zentrale Parallelitätsmechanismus in der Windows-API ist der Thread. In der Regel verwenden Sie die [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) -Funktion zum Erstellen von Threads. Obwohl Threads relativ einfach zu erstellen sind, weist das Betriebssystem viel Zeit und Ressourcen für deren Verwaltung zu. Obwohl jeder Thread garantiert die gleiche Ausführungszeit wie alle anderen Threads auf gleicher Prioritätsebene erhält, erfordert der zugeordnete Mehraufwand, dass Sie ausreichend große Aufgaben erstellen. Für kleinere oder differenziertere Aufgaben kann der Aufwand, der mit der Parallelität verbunden ist, den Vorteil, dass die Aufgaben parallel ausgeführt werden zunichte machen.
 
 Threadpools sind eine Möglichkeit, die Kosten der Threadverwaltung zu reduzieren. Benutzerdefinierte Threadpools und die Threadpoolimplementierung, die von der Windows-API bereitgestellt wird, ermöglichen kleine Arbeitselemente effizient parallel auszuführen. Der Windows-Threadpool verwaltet die Arbeitselemente in einer FIFO-Warteschlange (First in, First Out). Jedes Arbeitselement wird in der Reihenfolge gestartet, in der es dem Pool hinzugefügt wurde.
 
@@ -77,7 +77,7 @@ Unter Windows XP und Windows Vista verhalten sich Anwendungen, die die Concurren
 
 Unter Windows 7 und Windows Server 2008 R2 unterstützt das Betriebssystem Parallelität und Skalierbarkeit. Diese Betriebssysteme unterstützen beispielsweise Computer, die mehr als 64 Hardwarethreads aufweisen. Eine vorhandene Anwendung, die die Windows-API verwendet, muss geändert werden, um diese neuen Funktionen nutzen zu können. Allerdings wird eine Anwendung, die Concurrency Runtime verwendet, automatisch diese Funktionen verwenden und keine Änderungen erfordern.
 
-[base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)
+[base.user-mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
 
 [[Nach oben](#top)]
 

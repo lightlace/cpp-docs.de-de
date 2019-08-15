@@ -34,14 +34,14 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 464a254775d9a1d2488247d6dafb4b85cd763f10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f6ae99ae74bb21c9462abcb37e466d63b86f8af
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331830"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501027"
 ---
-# <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
+# <a name="_getdcwd-_wgetdcwd"></a>_getdcwd, _wgetdcwd
 
 Ruft den vollständigen Pfad des aktuellen Arbeitsverzeichnisses auf dem angegebenen Laufwerk ab.
 
@@ -62,38 +62,38 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>Parameter
 
-*drive*<br/>
+*Antrie*<br/>
 Eine nicht negative ganze Zahl, die das Laufwerk angibt (0 = Standardlaufwerk, 1 = A, 2 = B usw.).
 
-Wenn das angegebene Laufwerk nicht verfügbar ist, oder die Art des Laufwerks (z. B. Wechseldatenträger, festes Laufwerk, CD-ROM, RAM-Datenträger, oder Netzlaufwerk) nicht bestimmt werden kann, wird der Handler für ungültige Parameter aufgerufen. Weitere Informationen finden Sie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Wenn das angegebene Laufwerk nicht verfügbar ist oder die Art des Laufwerks (z. b. Wechsel Datenträger, Festplattenlaufwerke, CD-ROM, RAM-Datenträger oder Netzlaufwerk) nicht bestimmt werden kann, wird der Handler für ungültige Parameter aufgerufen. Weitere Informationen finden Sie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
 
 *buffer*<br/>
 Speicherort für den Pfad, oder **NULL**.
 
-Wenn **NULL** angegeben ist, wird diese Funktion weist einen Puffer mit mindestens *Maxlen* mit Größe **Malloc**, und der Rückgabewert von **_getdcwd**ist ein Zeiger auf den zugeordneten Puffer. Der Puffer kann freigegeben werden, durch den Aufruf **kostenlose** und der Zeiger übergeben wird.
+Wenn **null** angegeben wird, weist diese Funktion einen Puffer mit einer Größe von mindestens *maxlen* mithilfe von **malloc**zu, und der Rückgabewert von **_getdcwd** ist ein Zeiger auf den zugeordneten Puffer. Der Puffer kann freigegeben werden, indem aufgerufen und der Zeiger übergeben wird.
 
 *maxlen*<br/>
-Eine positive ganze Zahl ungleich NULL, der angibt, die maximale Länge des Pfads in Zeichen: **Char** für **_getdcwd** und **"wchar_t"** für **_wgetdcwd**.
+Eine positive ganze Zahl ungleich NULL, die die maximale Länge des Pfads angibt, in Zeichen: **char** für **_getdcwd** und **wchar_t** für **_wgetdcwd**.
 
-Wenn *Maxlen* ist kleiner als oder gleich 0 (null), wird der Handler für ungültige Parameter aufgerufen. Weitere Informationen finden Sie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
+Wenn *maxlen* kleiner oder gleich 0 (null) ist, wird der Handler für ungültige Parameter aufgerufen. Weitere Informationen finden Sie unter [Parametervalidierung](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="return-value"></a>Rückgabewert
 
-Zeiger auf eine Zeichenfolge, die den vollständigen Pfad des aktuellen Arbeitsverzeichnisses auf dem angegebenen Laufwerk, darstellt oder **NULL**, wodurch ein Fehler.
+Ein Zeiger auf eine Zeichenfolge, die den vollständigen Pfad des aktuellen Arbeitsverzeichnisses auf dem angegebenen Laufwerk darstellt, oder **null**, was auf einen Fehler hinweist.
 
-Wenn *Puffer* angegeben ist, als **NULL** und es ist nicht genügend Arbeitsspeicher zum Zuordnen *Maxlen* -Zeichen, die ein Fehler auftritt und **Errno** ist Legen Sie auf **ENOMEM**. Wenn die Länge des Pfads einschließlich des abschließenden Zeichens Null überschreitet *Maxlen*, ein Fehler auftritt, und **Errno** nastaven NA hodnotu **ERANGE**. Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Wenn *buffer* als **null** angegeben ist und nicht genügend Arbeitsspeicher zum Zuordnen von *maxlen* -Zeichen vorhanden ist, tritt ein Fehler auf, und **errno** ist auf **ENOMEM**festgelegt. Wenn die Länge des Pfads einschließlich des abschließenden NULL-Zeichens *maxlen*überschreitet, tritt ein Fehler auf, und **errno** ist auf **ERANGE**festgelegt. Weitere Informationen zu diesen Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_getdcwd** Funktion ruft den vollständigen Pfad des aktuellen Arbeitsverzeichnisses auf dem angegebenen Laufwerk ab und speichert ihn unter *Puffer*. Wenn das aktuelle Arbeitsverzeichnis auf das Stammverzeichnis festgelegt ist, endet die Zeichenfolge mit einem umgekehrten Schrägstrich (\\). Wenn das aktuelle Arbeitsverzeichnis nicht auf das Stammverzeichnis festgelegt ist, endet die Zeichenfolge mit dem Namen des Verzeichnisses und nicht mit einem umgekehrten Schrägstrich.
+Die **_getdcwd** -Funktion Ruft den vollständigen Pfad des aktuellen Arbeitsverzeichnisses auf dem angegebenen Laufwerk ab und speichert Sie im *Puffer*. Wenn das aktuelle Arbeitsverzeichnis auf das Stammverzeichnis festgelegt ist, endet die Zeichenfolge mit einem umgekehrten Schrägstrich (\\). Wenn das aktuelle Arbeitsverzeichnis nicht auf das Stammverzeichnis festgelegt ist, endet die Zeichenfolge mit dem Namen des Verzeichnisses und nicht mit einem umgekehrten Schrägstrich.
 
-**_wgetdcwd** ist eine Breitzeichen-Version von **_getdcwd**, und die zugehörige *Puffer* Parameter und Rückgabewert sind Breitzeichen Zeichenfolgen. Andernfalls **_wgetdcwd** und **_getdcwd** Verhalten sich identisch.
+**_wgetdcwd** ist eine breit Zeichen Version von **_getdcwd**, und der *Puffer* Parameter und der Rückgabewert sind Zeichen folgen mit breit Zeichen. Andernfalls Verhalten sich **_wgetdcwd** und **_getdcwd** identisch.
 
-Diese Funktion ist threadsicher, obwohl sie von der Funktion **GetFullPathName**abhängig ist, die selbst nicht threadsicher ist. Aber Sie können Verletzung der Threadsicherheit kommen, wenn die Multithreadanwendung sowohl diese Funktion aufruft und [GetFullPathNameA](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
+Diese Funktion ist threadsicher, obwohl sie von der Funktion **GetFullPathName**abhängig ist, die selbst nicht threadsicher ist. Es kann jedoch zu einer Verletzung der Threadsicherheit kommen, wenn die Multithreadanwendung sowohl diese Funktion als auch [GetFullPathName](/windows/win32/api/fileapi/nf-fileapi-getfullpathnamew)aufruft.
 
-Die Version dieser Funktion, die die **_nolock** -Suffix für diese Funktion mit dem Unterschied, dass es nicht threadsicher und nicht vor Störungen durch andere Threads geschützt. Weitere Informationen finden Sie unter [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
+Die Version dieser Funktion mit dem **_nolock** -Suffix verhält sich identisch mit dieser Funktion, mit dem Unterschied, dass Sie nicht Thread sicher ist und nicht vor Störungen durch andere Threads geschützt ist. Weitere Informationen finden Sie unter [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
 
-Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** definiert sind, werden Aufrufe von **_getdcwd** und **_wgetdcwd** werden durch Aufrufe von ersetzt **_getdcwd_dbg** und **_wgetdcwd_dbg** , damit Sie speicherbelegungen Debuggen können. Weitere Informationen finden Sie unter[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md)
+Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** definiert sind, werden Aufrufe von **_getdcwd** und **_wgetdcwd** durch Aufrufe von **_getdcwd_dbg** und **_wgetdcwd_dbg** ersetzt, sodass Sie Speicher Belegungen Debuggen können. Weitere Informationen finden Sie unter[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md)
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

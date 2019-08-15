@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 779fd1008f6763f4b5ca95938018a5129e89aa1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154876"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498715"
 ---
-# <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
+# <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
 **Microsoft-spezifisch**
 
-Erstellt eine **_com_ptr_t** Objekt.
+Erstellt ein **_com_ptr_t** -Objekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -135,32 +135,32 @@ explicit _com_ptr_t(
 
 #### <a name="parameters"></a>Parameter
 
-*pInterface*<br/>
+*pinterface*<br/>
 Ein unformatierter Schnittstellenzeiger.
 
 *fAddRef*<br/>
-True gibt an, `AddRef` aufgerufen, um den Verweiszähler des gekapselten Schnittstellenzeigers zu inkrementieren.
+TRUE gibt an `AddRef` , dass aufgerufen wird, um den Verweis Zähler für den gekapselten Schnittstellen Zeiger zu erhöhen.
 
 *cp*<br/>
-Ein **_com_ptr_t** Objekt.
+Ein **_com_ptr_t** -Objekt.
 
 *p*<br/>
-Ein unformatierter Schnittstellenzeiger, dessen Typ sich von den Typ dieses intelligenten Zeigers **_com_ptr_t** Objekt.
+Ein unformatierter Schnittstellen Zeiger, dessen Typ sich vom Typ des intelligenten Zeigers dieses **_com_ptr_t** -Objekts unterscheidet.
 
 *varSrc*<br/>
 Ein `_variant_t`-Objekt.
 
 *clsid*<br/>
-Die `CLSID` einer Co-Klasse.
+Der `CLSID` einer Co-Klasse.
 
 *dwClsContext*<br/>
 Kontext für die Ausführung von ausführbarem Code.
 
 *lpcStr*<br/>
-Eine multibyte-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.
+Eine Multibytezeichenfolge, `CLSID` die entweder eine (beginnend mit " **{** `ProgID`") oder enthält.
 
 *pOuter*<br/>
-Die äußere unbekannte für [Aggregation](/windows/desktop/com/aggregation).
+Das äußere unbekannte für die [Aggregation](/windows/win32/com/aggregation).
 
 ## <a name="see-also"></a>Siehe auch
 

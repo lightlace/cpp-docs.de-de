@@ -30,16 +30,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5afbc907356d4c5b14b749de5de0c8d36280891e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288822"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499963"
 ---
-# <a name="endthread-endthreadex"></a>_endthread, _endthreadex
+# <a name="_endthread-_endthreadex"></a>_endthread, _endthreadex
 
-Beendet einen Thread; **_endthread** beendet einen Thread, der erstellt wird **_beginthread** und **_endthreadex** beendet einen Thread, der erstellt wird **_beginthreadex**.
+Beendet einen Thread. **_endthread** beendet einen Thread, der von **_beginthread** erstellt wird, und **_endthreadex** beendet einen von **_beginthreadex**erstellten Thread.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,17 +57,17 @@ Threadexitcode.
 
 ## <a name="remarks"></a>Hinweise
 
-Rufen Sie **_endthread** oder **_endthreadex** explizit auf einen Thread zu beenden. allerdings **_endthread** oder **_endthreadex** aufgerufen wird automatisch, wenn der Thread von der Routine zurück als Parameter an übergeben **_beginthread** oder **_beginthreadex**. Beenden eines Threads durch einen Aufruf von **Endthread** oder **_endthreadex** stellt ordnungsgemäße Wiederherstellung der dem Thread zugeordneten Ressourcen sicher.
+Sie können **_endthread** oder **_endthreadex** explizit zum Beenden eines Threads aufruft. **_endthread** oder **_endthreadex** wird jedoch automatisch aufgerufen, wenn der Thread aus der als Parameter an **_beginthread** oder **_beginthreadex**übergebenen Routine zurückgegeben wird. Durch das Beenden eines Threads mit einem -Endpunkt oder **_endthreadex** wird sichergestellt, dass die für den Thread zugewiesenen Ressourcen ordnungsgemäß wieder hergestellt werden.
 
 > [!NOTE]
-> Rufen Sie für eine mit „Libcmt.lib“ verknüpfte ausführbare Datei die [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) -Win32-API nicht auf, damit das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen gehindert wird. **_endthread** und **_endthreadex** zugeordnete Threadressourcen, und rufen dann **ExitThread**.
+> Rufen Sie für eine mit „Libcmt.lib“ verknüpfte ausführbare Datei die [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) -Win32-API nicht auf, damit das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen gehindert wird. **_endthread** und **_endthreadex** rufen zugeordnete Thread Ressourcen frei und rufen dann **ExitThread**auf.
 
-**_endthread** schließt das Threadhandle automatisch. (Dieses Verhalten unterscheidet sich vom Win32- **ExitThread** API.) Aus diesem Grund bei Verwendung von **_beginthread** und **_endthread**, explizit schließen Sie nicht das Threadhandle durch Aufrufen der Win32- ["CloseHandle"](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API.
+**_endthread** schließt das Thread Handle automatisch. (Dieses Verhalten unterscheidet sich von der Win32- **ExitThread** -API.) Wenn Sie also **_beginthread** und **_endthread**verwenden, schließen Sie das Thread Handle nicht explizit, indem Sie die Win32- [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) -API aufrufen.
 
-Wie Sie die Win32 **ExitThread** -API, **_endthreadex** schließt das Threadhandle nicht. Aus diesem Grund bei Verwendung von **_beginthreadex** und **_endthreadex**, müssen Sie das Threadhandle durch Aufrufen der Win32-schließen **"CloseHandle"** API.
+Wie bei der **ExitThread** -API von Win32 schließt **_endthreadex** nicht das Thread handle. Wenn Sie also **_beginthreadex** und **_endthreadex**verwenden, müssen Sie das Thread handle schließen, indem Sie die Win32- **CloseHandle** -API aufrufen.
 
 > [!NOTE]
-> **_endthread** und **_endthreadex** dazu führen, dass C++ ausstehende Destruktoren im Thread nicht aufgerufen werden.
+> **_endthread** und **_endthreadex** bewirken C++ , dass deerausstehende deerdektoren im Thread nicht aufgerufen werden.
 
 ## <a name="requirements"></a>Anforderungen
 

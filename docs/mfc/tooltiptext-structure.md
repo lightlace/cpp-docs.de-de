@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: 2eb899e66acbadbe45aae2c8adbb356bf4730191
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 80b95225a277a7985c30e5ea453597b06e501753
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915252"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513303"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT-Struktur
 
@@ -31,7 +31,7 @@ typedef struct {
 ```
 
 *hdr*<br/>
-Identifiziert das Tool, das Text benötigt. Der einzige Member dieser Struktur, den Sie möglicherweise benötigen, ist die Befehls-ID des Steuer Elements. Die Befehls-ID des Steuer Elements befindet sich im *idfrom* -Member der **NMHDR** -Struktur, auf die `hdr.idFrom`mit der-Syntax zugegriffen wird. Eine Erörterung der Member der **NMHDR** -Struktur finden Sie unter [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) .
+Identifiziert das Tool, das Text benötigt. Der einzige Member dieser Struktur, den Sie möglicherweise benötigen, ist die Befehls-ID des Steuer Elements. Die Befehls-ID des Steuer Elements befindet sich im *idfrom* -Member der **NMHDR** -Struktur, auf die `hdr.idFrom`mit der-Syntax zugegriffen wird. Eine Erörterung der Member der **NMHDR** -Struktur finden Sie unter [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) .
 
 *lpszText*<br/>
 Die Adresse einer Zeichenfolge, die den Text für ein Tool empfängt.

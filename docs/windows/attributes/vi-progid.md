@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbf5ab2bc4263356a1cfcf789865a3f7e286ccd7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404766"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514866"
 ---
-# <a name="viprogid"></a>vi_progid
+# <a name="vi_progid"></a>vi_progid
 
-Gibt eine Art versionsunabhängige Programm-ID an.
+Gibt eine Versions unabhängige Form der ProgID an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,23 +26,23 @@ Gibt eine Art versionsunabhängige Programm-ID an.
 ### <a name="parameters"></a>Parameter
 
 *name*<br/>
-Die versionsunabhängigen-ProgID, die das Objekt darstellt.
+Die Versions unabhängige ProgID, die das-Objekt darstellt.
 
-Versionsabhängige Programm-IDs präsentieren eine lesbaren Version von den Klassenbezeichner (CLSID) verwendet, um COM/ActiveX-Objekte zu identifizieren.
+ProgIDs stellen eine lesbare Version des Klassen Bezeichners (CLSID) dar, mit der com-/ActiveX-Objekte identifiziert werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Vi_progid** C++ Attribut können Sie eine versionsunabhängige ProgID eines COM-Objekts angeben. Eine ProgID hat das Format *name1.name2.version*. Eine versionsunabhängige Programm-ID verfügt nicht über eine *Version*. Es ist möglich, beide geben die `progid` und **Vi_progid** Attribute einer `coclass`. Wenn Sie keinen angeben **Vi_progid**, wird die versionsunabhängige Programm-ID ist der Wert von der [progid](progid.md) Attribut.
+Mit dem **Vi_progid** C++ -Attribut können Sie eine Versions unabhängige ProgID für ein COM-Objekt angeben. Eine ProgID hat das Format *Name1. name2. Version*. Eine Versions unabhängige ProgID hat keine *Version*. Es ist möglich, sowohl das `progid` -Attribut als auch das **Vi_progid** - `coclass`Attribut in einem anzugeben. Wenn Sie **Vi_progid**nicht angeben, ist die Versions unabhängige ProgID der Wert, der durch das [ProgID](progid.md) -Attribut angegeben wird.
 
-**Vi_progid** impliziert die `coclass` -Attributs, d. h. Wenn Sie angeben, **Vi_progid**, es ist dasselbe wie beim Angeben der `coclass` und **Vi_progid** Attribute.
+**Vi_progid** impliziert das `coclass` -Attribut, d. h., wenn Sie **Vi_progid**angeben, ist dies dasselbe wie das `coclass` angeben der Attribute und **Vi_progid** .
 
-Die **Vi_progid** Attribut bewirkt, dass eine Klasse automatisch unter dem angegebenen Namen registriert werden. Der generierten IDL-Datei wird den ProgID-Wert nicht angezeigt werden.
+Das **Vi_progid** -Attribut bewirkt, dass eine Klasse automatisch unter dem angegebenen Namen registriert wird. In der generierten IDL-Datei wird der ProgID-Wert nicht angezeigt.
 
-In ATL-Projekte Wenn die [Co-Klasse](coclass.md) Attribut ebenfalls vorhanden ist, wird durch die angegebene ProgID verwendet die `GetVersionIndependentProgID` Funktion (eingefügt, indem die `coclass` Attribut).
+Wenn in ATL-Projekten auch das [Co-Klasse](coclass.md) -Attribut vorhanden ist, wird die angegebene ProgID von der `GetVersionIndependentProgID` Funktion verwendet (eingefügt durch `coclass` das-Attribut).
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter den [Co-Klasse](coclass.md) Beispiel für ein Beispiel für die Verwendung von **Vi_progid**.
+Ein Beispiel für die Verwendung von **Vi_progid**finden Sie unter dem [Co-Klasse](coclass.md) -Beispiel.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,10 +50,10 @@ Finden Sie unter den [Co-Klasse](coclass.md) Beispiel für ein Beispiel für die
 
 |||
 |-|-|
-|**Betrifft**|**class**, **struct**|
+|**Betrifft**|**Klasse**, **Struktur**|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
@@ -62,4 +62,4 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 [IDL-Attribute](idl-attributes.md)<br/>
 [typedef-, enum-, union- und struct-Attribute](typedef-enum-union-and-struct-attributes.md)<br/>
 [Klassenattribute](class-attributes.md)<br/>
-[Programm-ID-Schlüssel](/windows/desktop/com/-progid--key)
+[ProgID-Schlüssel](/windows/win32/com/-progid--key)

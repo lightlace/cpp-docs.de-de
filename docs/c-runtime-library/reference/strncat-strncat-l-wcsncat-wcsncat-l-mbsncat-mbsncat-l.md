@@ -58,19 +58,19 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 477d80ec170463a2315e2e891998ed32d84c75dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2165ab1c379c89be658341b154f2d5823b2add0b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209856"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499436"
 ---
-# <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
+# <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
 Fügt Zeichen einer Zeichenfolge an. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dafür finden Sie unter [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) .
 
 > [!IMPORTANT]
-> **_mbsncat** und **_mbsncat_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat** und **_mbsncat_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -143,12 +143,12 @@ Gibt einen Zeiger zur Zielzeichenfolge zurück. Kein Rückgabewert ist zur Fehle
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strncat** Funktion fügt höchstens die ersten *Anzahl* Zeichen *StrSource* zu *StrDest*. Das erste Zeichen von *StrSource* überschreibt das abschließende Nullzeichen von *StrDest*. Wenn ein Null-Zeichen wird, in angezeigt *StrSource* vor *Anzahl* Zeichen angehängt wurden, **Strncat** fügt alle Zeichen von *StrSource*, bis zu dem Null-Zeichen. Wenn *Anzahl* ist größer als die Länge des *StrSource*, die Länge des *StrSource* dient anstelle von *Anzahl*. In jedem Fall wird die Ergebniszeichenfolge mit einem NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die " **strinncat** "-Funktion fügt höchstens die ersten *Anzahl* Zeichen von " *darsource* " an " *strandest*" an. Das Anfangs Zeichen von "grasource" überschreibt das abschließende Null-Zeichen von " *strandest*". Wenn ein NULL-Zeichen in "darsource" angezeigt wird, bevor *count* -Zeichen angehängt werden, fügt " **strinncat** " alle Zeichen von " *strausource*" bis zum NULL-Zeichen an. Wenn *count* größer als die Länge von "-" ist, wird die Länge von "chansource" anstelle von " *count*" verwendet. In jedem Fall wird die Ergebniszeichenfolge mit einem NULL-Zeichen beendet. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
 > [!IMPORTANT]
-> **Strncat** überprüft nicht auf genügend Speicherplatz *StrDest*; daher ist es eine mögliche Ursache von Pufferüberläufen. Beachten Sie, dass *Anzahl* begrenzt die Anzahl der angefügten Zeichen; es handelt es sich nicht um eine Begrenzung auf die Größe des *StrDest*. Siehe das unten aufgeführte Beispiel. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> " **strauncat** " prüft nicht, ob ausreichendSpeicherplatz in der Daher ist dies eine mögliche Ursache von Pufferüberläufen. Beachten Sie, dass *count* die Anzahl der angefügten Zeichen beschränkt. Es handelt sich nicht um eine Begrenzung der Größe von " *strandest*". Siehe das unten aufgeführte Beispiel. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**Wcsncat** und **_mbsncat** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strncat**. Die Zeichenfolgenargumente und der Rückgabewert von **Wcsncat** sind Breitzeichen-Zeichenfolgen, die von **_mbsncat** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**wcsncat** und **_mbsncat** sind breit Zeichen-und multibytezeichenversionen von " **strinncat**". Die Zeichen folgen Argumente und der Rückgabewert von **wcsncat** sind Zeichen folgen mit breit Zeichen. bei den **_mbsncat** handelt es sich um Multibyte-Zeichen folgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
 Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
@@ -162,7 +162,7 @@ In C++ gibt es für diese Funktionen Vorlagenüberladungen. Weitere Informatione
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** und **_wcsncat_l** haben keine gebietsschemaabhängigkeit und sind nicht dafür vorgesehen, direkt aufgerufen werden. Sie dienen zur internen Verwendung durch **_tcsncat_l**.
+> **_strncat_l** und **_wcsncat_l** haben keine Gebiets Schema Abhängigkeit und sollen nicht direkt aufgerufen werden. Sie werden für die interne Verwendung durch **_tcsncat_l**bereitgestellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -214,7 +214,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 string can hold up to 39 characters
@@ -222,7 +222,7 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)
 ```
 
-Beachten Sie, dass **BadAppend** einen Pufferüberlauf verursacht hat.
+Beachten Sie, dass **badappend** einen Pufferüberlauf verursacht hat.
 
 ## <a name="see-also"></a>Siehe auch
 

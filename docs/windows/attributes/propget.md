@@ -1,21 +1,21 @@
 ---
-title: Propget (C++-COM-Attribut)
+title: Propget (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propget
 helpviewer_keywords:
 - propget attribute
 ms.assetid: c9d4a97f-36dd-4b61-8eb0-b1a217598f14
-ms.openlocfilehash: 8f60e8e8fc98ba3b75acefe80812069bfac78e6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 044562ba870d6e36ddfcec0c7e84253b111a9eea
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407626"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514207"
 ---
 # <a name="propget"></a>propget
 
-Gibt eine Eigenschaft Accessor-Funktion.
+Gibt eine eigenschaftenaccessorfunktion an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Gibt eine Eigenschaft Accessor-Funktion.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Propget** C++-Attribut hat die gleiche Funktionalität wie die [Propget](/windows/desktop/Midl/propget) MIDL-Attribut.
+Das **propget** C++ -Attribut verfügt über die gleiche Funktionalität wie das-Attribut von [propget](/windows/win32/Midl/propget) .
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [bindbare](bindable.md) für ein Beispiel für die Verwendung von **Propget**.
+Eine Beispiel Verwendung von **propget finden Sie**im Beispiel für [bindbare](bindable.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,7 +39,7 @@ Siehe das Beispiel für [bindbare](bindable.md) für ein Beispiel für die Verwe
 |-|-|
 |**Betrifft**|Methode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
 |**Ungültige Attribute**|`propput`, `propputref`|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).

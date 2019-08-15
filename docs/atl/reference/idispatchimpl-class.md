@@ -14,19 +14,19 @@ helpviewer_keywords:
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-ms.openlocfilehash: bf6b416337c58f5e9b8a62dda841615412573666
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e9cb903742cdc31c1d9bba2c4aabbb0472407c1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275346"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495953"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl-Klasse
 
-Stellt eine Standardimplementierung für die `IDispatch` eine duale Schnittstelle Teil.
+Stellt eine Standard Implementierung für den `IDispatch` Teil einer Dual-Schnittstelle bereit.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+>  Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,22 +43,22 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 #### <a name="parameters"></a>Parameter
 
 *T*<br/>
-[in] Eine duale Schnittstelle.
+in Eine duale Schnittstelle.
 
 *piid*<br/>
-[in] Ein Zeiger auf die IID der *T*.
+in Ein Zeiger auf die IID von *T*.
 
 *plibid*<br/>
-[in] Ein Zeiger auf die LIBID der Typbibliothek, die Informationen über die Schnittstelle enthält. Standardmäßig wird die Bibliothek auf Serverebene übergeben.
+in Ein Zeiger auf die LIBID der Typbibliothek, die Informationen über die Schnittstelle enthält. Standardmäßig wird die Typbibliothek auf Serverebene übermittelt.
 
 *wMajor*<br/>
-[in] Die Hauptversion der Typbibliothek. Standardmäßig ist der Wert 1.
+in Die Hauptversion der Typbibliothek. Standardmäßig ist der Wert 1.
 
 *wMinor*<br/>
-[in] Die Nebenversion der Typbibliothek. Standardmäßig ist der Wert 0.
+in Die neben Version der Typbibliothek. Standardmäßig ist der Wert 0.
 
 *tihclass*<br/>
-[in] Die Klasse, die zum Verwalten von Informationen für den *T*. In der Standardeinstellung ist der Wert `CComTypeInfoHolder`.
+in Die Klasse, mit der die Typinformationen für *T*verwaltet werden. In der Standardeinstellung ist der Wert `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Member
 
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Der Konstruktor. Aufrufe `AddRef` für die geschützten Member-Variable, die die Typinformationen für die duale Schnittstelle verwaltet. Der Destruktor ruft `Release` auf.|
+|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Der Konstruktor. Ruft `AddRef` die geschützte Member-Variable auf, die die Typinformationen für die duale Schnittstelle verwaltet. Der Destruktor ruft `Release` auf.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -74,20 +74,20 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 |----------|-----------------|
 |[IDispatchImpl::GetIDsOfNames](#getidsofnames)|Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.|
 |[IDispatchImpl::GetTypeInfo](#gettypeinfo)|Ruft die Typinformationen für die duale Schnittstelle ab.|
-|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|Bestimmt, ob Typinformationen für die duale Schnittstelle verfügbar ist.|
-|[IDispatchImpl::Invoke](#invoke)|Bietet Zugriff auf die Methoden und Eigenschaften, die von der duale Schnittstelle verfügbar gemacht werden.|
+|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|Bestimmt, ob für die duale Schnittstelle Typinformationen verfügbar sind.|
+|[IDispatchImpl::Invoke](#invoke)|Bietet Zugriff auf die Methoden und Eigenschaften, die von der Dual-Schnittstelle verfügbar gemacht werden.|
 
 ## <a name="remarks"></a>Hinweise
 
-`IDispatchImpl` Stellt eine Standardimplementierung für die `IDispatch` Teil einer dualen Schnittstelle für ein Objekt. Eine duale Schnittstelle leitet sich von `IDispatch` und werden nur Automation-kompatiblen Typen verwendet. Wie eine Disp-Schnittstelle unterstützt eine duale Schnittstelle frühen und späten Bindung. eine duale Schnittstelle unterstützt jedoch auch Vtable-Bindung.
+`IDispatchImpl`stellt eine Standard Implementierung für den `IDispatch` Teil einer beliebigen Dual-Schnittstelle für ein Objekt bereit. Eine duale Schnittstelle wird `IDispatch` von abgeleitet und verwendet nur Automatisierungs kompatible Typen. Wie eine dispinterface unterstützt eine duale Schnittstelle eine frühe Bindung und spätes Binden. eine duale Schnittstelle unterstützt jedoch auch die Vtable-Bindung.
 
-Das folgende Beispiel zeigt eine typische Implementierung der `IDispatchImpl`.
+Das folgende Beispiel zeigt eine typische Implementierung von `IDispatchImpl`.
 
 [!code-cpp[NVC_ATL_COM#47](../../atl/codesnippet/cpp/idispatchimpl-class_1.h)]
 
-In der Standardeinstellung die `IDispatchImpl` Klasse sucht die Typinformationen für *T* in der Registrierung. Um eine nicht registrierte Schnittstelle zu implementieren, können Sie die `IDispatchImpl` Klasse ohne Zugriff auf die Registrierung mit einer vordefinierten Versionsnummer. Bei der Erstellung einer `IDispatchImpl` Objekt mit 0xFFFF als Wert für *wMajor* und 0xFFFF als Wert für *wMinor*, `IDispatchImpl` Klasse ruft die Typbibliothek aus der DLL-Datei anstelle von der die Registrierung.
+Standardmäßig sucht die `IDispatchImpl` -Klasse in der Registrierung nach den Typinformationen für *T* . Um eine nicht registrierte Schnittstelle zu implementieren, können Sie `IDispatchImpl` die-Klasse verwenden, ohne auf die Registrierung zuzugreifen, indem Sie eine vordefinierte Versionsnummer verwenden. Wenn Sie ein `IDispatchImpl` Objekt erstellen, das 0xFFFF als Wert für *wMajor* und 0xFFFF als Wert für *wMinor*hat, ruft die `IDispatchImpl` -Klasse die Typbibliothek aus der DLL-Datei anstelle der Registrierung ab.
 
-`IDispatchImpl` enthält einen statischen Member des Typs `CComTypeInfoHolder` , der die Typinformationen für die duale Schnittstelle verwaltet. Wenn Sie mehrere Objekte verfügen, die die gleiche duale implementieren Schnittstelle ist, wird nur eine Instanz des `CComTypeInfoHolder` verwendet wird.
+`IDispatchImpl`enthält einen statischen Member vom Typ `CComTypeInfoHolder` , der die Typinformationen für die duale Schnittstelle verwaltet. Wenn Sie über mehrere Objekte verfügen, die dieselbe duale Schnittstelle implementieren, wird nur `CComTypeInfoHolder` eine Instanz von verwendet.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -97,9 +97,9 @@ In der Standardeinstellung die `IDispatchImpl` Klasse sucht die Typinformationen
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlcom.h
+**Header:** Atlcom. h
 
-##  <a name="getidsofnames"></a>  IDispatchImpl::GetIDsOfNames
+##  <a name="getidsofnames"></a>IDispatchImpl:: GetIDsOfNames
 
 Ordnet eine Reihe von Namen einer entsprechenden Reihe von Dispatchbezeichnern zu.
 
@@ -114,9 +114,9 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) in das Windows SDK.
+Weitere Informationen finden Sie unter [IDispatch:: GetIDsOfNames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) im Windows SDK.
 
-##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo
+##  <a name="gettypeinfo"></a>IDispatchImpl:: gettypeingefo
 
 Ruft die Typinformationen für die duale Schnittstelle ab.
 
@@ -129,11 +129,11 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IDispatch:: GetTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) in das Windows SDK.
+Weitere Informationen finden Sie unter [IDispatch:: gettypeingefo](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfo) im Windows SDK.
 
-##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount
+##  <a name="gettypeinfocount"></a>IDispatchImpl:: gettypanfocount
 
-Bestimmt, ob Typinformationen für die duale Schnittstelle verfügbar ist.
+Bestimmt, ob für die duale Schnittstelle Typinformationen verfügbar sind.
 
 ```
 STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
@@ -141,19 +141,19 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter `IDispatch::GetTypeInfoCount` in das Windows SDK.
+Weitere `IDispatch::GetTypeInfoCount` Informationen finden Sie in der Windows SDK.
 
-##  <a name="idispatchimpl"></a>  IDispatchImpl::IDispatchImpl
+##  <a name="idispatchimpl"></a>IDispatchImpl:: IDispatchImpl
 
-Der Konstruktor. Aufrufe `AddRef` für die geschützten Member-Variable, die die Typinformationen für die duale Schnittstelle verwaltet. Der Destruktor ruft `Release` auf.
+Der Konstruktor. Ruft `AddRef` die geschützte Member-Variable auf, die die Typinformationen für die duale Schnittstelle verwaltet. Der Destruktor ruft `Release` auf.
 
 ```
 IDispatchImpl();
 ```
 
-##  <a name="invoke"></a>  IDispatchImpl::Invoke
+##  <a name="invoke"></a>IDispatchImpl:: aufrufen
 
-Bietet Zugriff auf die Methoden und Eigenschaften, die von der duale Schnittstelle verfügbar gemacht werden.
+Bietet Zugriff auf die Methoden und Eigenschaften, die von der Dual-Schnittstelle verfügbar gemacht werden.
 
 ```
 STDMETHOD(Invoke)(
@@ -169,8 +169,8 @@ STDMETHOD(Invoke)(
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) in das Windows SDK.
+Siehe [IDispatch:: Aufrufen](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) in der Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)
+[Klassen Übersicht](../../atl/atl-class-overview.md)
