@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5652123d4866262515f804dba790af51610eb426
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182937"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500518"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray-Klasse
 
 Stellt ein eindimensionales Array dar, das als Eingabeparameter verwendet wird, wenn der Aufrufer ein Array für die zu füllende Methode übergibt.
 
-Diese Verweisklasse wird als privat in vccorlib.h deklariert. Daher wird sie nicht in Metadaten ausgegeben und kann nur von C++ verwendet werden. Diese Klasse ist nur zur Verwendung als Eingabeparameter vorgesehen, der ein Array empfängt, das der Aufrufer zugeordnet hat. Sie ist nicht vom Benutzercode konstruierbar. Sie ermöglicht es einer C++-Methode, direkt in dieses Array zu schreiben – ein Muster, das als *FillArray* -Muster bezeichnet wird. Weitere Informationen finden Sie unter [Array und WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Diese Verweisklasse wird als privat in vccorlib.h deklariert. Daher wird sie nicht in Metadaten ausgegeben und kann nur von C++ verwendet werden. Diese Klasse ist nur zur Verwendung als Eingabeparameter vorgesehen, der ein Array empfängt, das der Aufrufer zugeordnet hat. Sie ist nicht vom Benutzercode konstruierbar. Sie ermöglicht es einer C++-Methode, direkt in dieses Array zu schreiben – ein Muster, das als *FillArray* -Muster bezeichnet wird. Weitere Informationen finden Sie unter [Array und beschreiteonlyarray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,9 +54,9 @@ Diese Methoden verfügen über interne Zugreifbarkeit, das heißt, sie sind nur 
 
 Compileroption: **/ZW**
 
-**Metadaten:** Platform.winmd
+**Benötigten** Platform. winmd
 
-**Namespace:** Plattform
+**Namespace:** Platform
 
 ## <a name="begin"></a>  WriteOnlyArray::begin-Methode
 
@@ -126,7 +126,7 @@ property bool FastPass{
 
 Boolescher Wert, der angibt, ob das Array FastPass ist.
 
-## <a name="get"></a>  Writeonlyarray:: Get-Methode
+## <a name="get"></a>Write-onlyarray:: Get-Methode
 
 Gibt das Element am angegebenen Index zurück.
 
@@ -139,7 +139,7 @@ T& get(unsigned int indexArg) const;
 ### <a name="parameters"></a>Parameter
 
 *indexArg*<br/>
-Der Index verwendet werden soll.
+Der zu verwendende Index.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -185,9 +185,9 @@ Ein Verweis auf das Element, das gerade festgelegt wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen zur Interpretation des HRESULT-Werts finden Sie unter [Struktur von COM-Fehlercodes](/windows/desktop/com/structure-of-com-error-codes).
+Weitere Informationen zur Interpretation des HRESULT-Werts finden Sie unter [Struktur von com-Fehler Codes](/windows/win32/com/structure-of-com-error-codes).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Plattform-Namespace](platform-namespace-c-cx.md)<br/>
+[Platform-Namespace](platform-namespace-c-cx.md)<br/>
 [Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

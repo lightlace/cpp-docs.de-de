@@ -1,5 +1,5 @@
 ---
-title: CInternetException-Klasse
+title: Cinternettexception-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CInternetException
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CInternetException [MFC], m_dwContext
 - CInternetException [MFC], m_dwError
 ms.assetid: 44fb3cbe-523e-4754-8843-a77909990b14
-ms.openlocfilehash: dedf8926f02dd36dc8d6ac8ab5ff4056b60dfc91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4f4c7a5b7594270aff9dfbc224e9a66ba09be3f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345707"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505905"
 ---
-# <a name="cinternetexception-class"></a>CInternetException-Klasse
+# <a name="cinternetexception-class"></a>Cinternettexception-Klasse
 
 Stellt eine Ausnahmebedingung dar, die sich auf einen Internetvorgang bezieht.
 
@@ -41,14 +41,14 @@ class CInternetException : public CException
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CInternetException::m_dwContext](#m_dwcontext)|Der Kontextwert verknüpft ist, mit dem Vorgang, der die Ausnahme verursacht hat.|
+|[CInternetException::m_dwContext](#m_dwcontext)|Der Kontextwert, der dem Vorgang zugeordnet ist, der die Ausnahme verursacht hat.|
 |[CInternetException::m_dwError](#m_dwerror)|Der Fehler, der die Ausnahme verursacht hat.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die `CInternetException` Klasse enthält zwei öffentliche Datenmember: eine enthält den Fehlercode der Ausnahme zugeordnet, und der andere enthält den Kontextbezeichner des Internet-Anwendung, die dem Fehler zugeordnet.
+Die `CInternetException` -Klasse enthält zwei öffentliche Datenmember: eine enthält den Fehlercode, der der Ausnahme zugeordnet ist, und die andere enthält den Kontext Bezeichner der Internet Anwendung, die dem Fehler zugeordnet ist.
 
-Weitere Informationen zu Kontext-IDs für Internet-Anwendungen finden Sie im Artikel [Internet zu programmieren, mit WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Weitere Informationen zu Kontext Bezeichners für Internet Anwendungen finden Sie im Artikel [Internet Programmierung mit WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -62,9 +62,9 @@ Weitere Informationen zu Kontext-IDs für Internet-Anwendungen finden Sie im Art
 
 **Header:** afxinet.h
 
-##  <a name="cinternetexception"></a>  CInternetException::CInternetException
+##  <a name="cinternetexception"></a>Cinternettexception:: cinternettexception
 
-Diese Memberfunktion wird aufgerufen, wenn eine `CInternetException` Objekt erstellt wird.
+Diese Member-Funktion wird aufgerufen, `CInternetException` wenn ein-Objekt erstellt wird.
 
 ```
 CInternetException(DWORD dwError);
@@ -77,11 +77,11 @@ Der Fehler, der die Ausnahme verursacht hat.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie die globale MFC-Funktion zum Auslösen einer CInternetException [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).
+Um eine cinterntexception auszulösen, nennen Sie die globale MFC-Funktion [afxthrowinternettexception](internet-url-parsing-globals.md#afxthrowinternetexception).
 
-##  <a name="m_dwcontext"></a>  CInternetException::m_dwContext
+##  <a name="m_dwcontext"></a>Cinterverschachteltexception:: m_dwContext
 
-Der Kontextwert, der dem entsprechenden Internet-Vorgang zugeordnet wird.
+Der Kontextwert, der dem verbundenen Internet Vorgang zugeordnet ist.
 
 ```
 DWORD_PTR m_dwContext;
@@ -89,9 +89,9 @@ DWORD_PTR m_dwContext;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Kontextbezeichner wird ursprünglich in angegeben [CInternetSession](../../mfc/reference/cinternetsession-class.md) und übergeben von MFC zum [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- und [CInternetFile](../../mfc/reference/cinternetfile-class.md)-abgeleiteten Klassen. Sie können diesen Standardwert überschreiben, und weisen Sie einem *DwContext* Parameter einen Wert Ihrer Wahl. *DwContext* jeder Vorgang in das angegebene Objekt zugeordnet ist. *DwContext* identifiziert des Vorgangs der vom zurückgegebenen Statusinformationen [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).
+Der Kontext Bezeichner wird ursprünglich in [cinternetzession](../../mfc/reference/cinternetsession-class.md) angegeben und von MFC an [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-und von [CInternetFile](../../mfc/reference/cinternetfile-class.md)abgeleitete Klassen übergeben. Sie können diese Standardeinstellung außer Kraft setzen und einem beliebigen *dwcontext* -Parameter einen Wert Ihrer Wahl zuweisen. *dwcontext* ist einem beliebigen Vorgang des angegebenen Objekts zugeordnet. *dwcontext* identifiziert die von [cinternetzession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)zurückgegebenen Statusinformationen des Vorgangs.
 
-##  <a name="m_dwerror"></a>  CInternetException::m_dwError
+##  <a name="m_dwerror"></a>Cinterverschachteltexception:: m_dwError
 
 Der Fehler, der die Ausnahme verursacht hat.
 
@@ -101,9 +101,9 @@ DWORD m_dwError;
 
 ### <a name="remarks"></a>Hinweise
 
-Dieser Fehlerwert kann ein System sein Fehlercode in WINERROR gefunden. H oder einen Fehlerwert aus WININET. H.
+Dieser Fehlerwert kann ein Systemfehler Code sein, der in WinError gefunden wurde. H oder einen Fehlerwert aus WinInet. Micha.
 
-Eine Liste der Win32-Fehlercodes, finden Sie unter [Fehlercodes](/windows/desktop/Debug/system-error-codes). Eine Liste der Internet-spezifische Fehlermeldungen angezeigt werden soll finden Sie unter. Beide Themen werden im Windows SDK.
+Eine Liste der Win32-Fehlercodes finden Sie unter [Fehlercodes](/windows/win32/Debug/system-error-codes). Eine Liste der Internet spezifischen Fehlermeldungen finden Sie unter. Beide Themen sind im Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 

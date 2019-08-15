@@ -1,21 +1,21 @@
 ---
-title: eingeschränkt (C++ COM-Attribut)
+title: eingeschränkt (C++ com-Attribut)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407353"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514059"
 ---
 # <a name="restricted"></a>restricted
 
-Gibt an, dass ein Mitglied aus einem Modul, Schnittstelle oder Disp-Schnittstelle nicht beliebig aufgerufen werden kann.
+Gibt an, dass ein Member eines Moduls, einer Schnittstelle oder einer dispinterface nicht willkürlich aufgerufen werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,15 +28,15 @@ Gibt an, dass ein Mitglied aus einem Modul, Schnittstelle oder Disp-Schnittstell
 ### <a name="parameters"></a>Parameter
 
 *interfaces*<br/>
-Eine oder mehrere Schnittstellen, die auf ein COM-Objekt nicht beliebig aufgerufen werden können. Dieser Parameter ist nur gültig, wenn Sie auf eine Klasse angewendet werden.
+Eine oder mehrere Schnittstellen, die möglicherweise nicht willkürlich für ein COM-Objekt aufgerufen werden. Dieser Parameter ist nur gültig, wenn er auf eine Klasse angewendet wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **eingeschränkten** C++-Attribut hat die gleiche Funktionalität wie die [eingeschränkten](/windows/desktop/Midl/restricted) MIDL-Attribut.
+Das **restricted** C++ -Attribut verfügt über die gleiche Funktionalität wie das [Eingeschränkte](/windows/win32/Midl/restricted) Mittel l-Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt, wie Sie mit der **eingeschränkten** Attribut:
+Der folgende Code zeigt die Verwendung des **eingeschränkten** Attributs:
 
 ```cpp
 // cpp_attr_ref_restricted.cpp
@@ -67,10 +67,10 @@ class c : public a, public b
 
 |||
 |-|-|
-|**Betrifft**|-Schnittstellenmethode, **Schnittstelle**, **Klasse**, **Struktur**|
+|**Betrifft**|Schnittstellen Methode, **Schnittstelle**, **Klasse**, **Struktur**|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|**Co-Klasse** (bei Anwendung auf **Klasse** oder **Struktur**)|
-|**Ungültige Attribute**|Keiner|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

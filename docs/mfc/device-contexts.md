@@ -32,46 +32,46 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-ms.openlocfilehash: 7893b446c224dd84514ab63dc97cae467792750c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5337e8d8b83a641458a15612803feeec3b6361c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405975"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508660"
 ---
 # <a name="device-contexts"></a>Gerätekontexte
 
-Ein Gerätekontext ist eine Windows-Datenstruktur, die mit Informationen über die Zeichnungsattribute eines Geräts z. B. einer Bildschirmanzeige oder einen Drucker. Alle Zeichenbefehle erfolgen über ein Gerät-Context-Objekt, die der Windows-APIs zum Zeichnen von Linien, Formen und Text kapselt. Gerätekontexte ermöglichen geräteunabhängige Zeichnung in Windows. Gerätekontexte können verwendet werden, auf dem Bildschirm, an den Drucker oder auf einer Metadatei zu zeichnen.
+Ein Gerätekontext ist eine Windows-Datenstruktur, die Informationen über die Zeichnungs Attribute eines Geräts (z. b. eine Anzeige oder einen Drucker) enthält. Alle Zeichnungs Aufrufe werden über ein Gerätekontext Objekt durchgeführt, das die Windows-APIs zum Zeichnen von Linien, Formen und Text kapselt. Geräte Kontexte ermöglichen eine geräteunabhängige Zeichnung in Windows. Geräte Kontexte können verwendet werden, um auf den Bildschirm, den Drucker oder eine Metadatei zu zeichnen.
 
-[CPaintDC](../mfc/reference/cpaintdc-class.md) Objekte kapseln, die allgemeine Vorgehensweise von Windows, das Aufrufen der `BeginPaint` -Funktion, und klicken Sie dann in den Gerätekontext zu zeichnen, wird beim Aufruf der `EndPaint` Funktion. Die `CPaintDC` Konstruktoraufrufe `BeginPaint` für Sie und der Destruktor ruft `EndPaint`. Vereinfachte Prozess ist die Erstellung der [CDC](../mfc/reference/cdc-class.md) Objekt gezeichnet werden soll, und anschließend Zerstören der `CDC` Objekt. Im Framework ist ein Großteil dieses Prozesses automatisiert. Insbesondere Ihre `OnDraw` Funktion übergeben wird eine `CPaintDC` bereits vorbereitet (über `OnPrepareDC`), und ziehen Sie einfach hinein. Es wird durch das Framework zerstört und der zugrunde liegenden Gerätekontext für Windows freigegeben ist, bei der Rückgabe aus dem Aufruf von Ihrem `OnDraw` Funktion.
+[CPaintDC](../mfc/reference/cpaintdc-class.md) -Objekte kapseln das gängige Idiom von Fenstern, den Aufruf `BeginPaint` der Funktion, das anschließende zeichnen im Gerätekontext und das anschließende `EndPaint` Aufrufen der Funktion. Der `CPaintDC` Konstruktor ruft `BeginPaint` für Sie auf, und der Dekonstruktor ruft `EndPaint`auf. Der vereinfachte Prozess besteht darin, das [CDC](../mfc/reference/cdc-class.md) -Objekt zu erstellen, zu zeichnen und `CDC` dann das Objekt zu zerstören. Im Rahmen des Frameworks ist ein Großteil dieses Prozesses auch automatisiert. Insbesondere wird Ihrer `OnDraw` Funktion ein `CPaintDC` bereits vorbereitetes (via)- `OnPrepareDC`Wert übermittelt, und Sie zeichnen sich einfach darauf aus. Sie wird durch das Framework zerstört, und der zugrunde liegende Gerätekontext wird für Windows bei Rückgabe des Aufrufes `OnDraw` der Funktion freigegeben.
 
-[CClientDC](../mfc/reference/cclientdc-class.md) Objekte kapseln arbeiten mit einem Gerätekontext, die nur den Clientbereich eines Fensters darstellt. Die `CClientDC` Konstruktor ruft die `GetDC` -Funktion und der Destruktor ruft die `ReleaseDC` Funktion. [CWindowDC](../mfc/reference/cwindowdc-class.md) Objekte kapseln einen Gerätekontext, die das gesamte Fenster, einschließlich des Rahmens darstellt.
+[CClientDC](../mfc/reference/cclientdc-class.md) -Objekte kapseln das Arbeiten mit einem Gerätekontext, der nur den Client Bereich eines Fensters darstellt. Der `CClientDC` Konstruktor ruft die `GetDC` -Funktion auf, und der Dekonstruktor Ruft die `ReleaseDC` -Funktion auf. [Cwindowdc](../mfc/reference/cwindowdc-class.md) -Objekte Kapseln einen Gerätekontext, der das gesamte Fenster einschließlich seines Frames darstellt.
 
-[CMetaFileDC](../mfc/reference/cmetafiledc-class.md) Objekte zeichnen in einer Windows-Metadatei zu kapseln. Im Gegensatz zu den `CPaintDC` übergeben `OnDraw`, müssen Sie in diesem Fall aufrufen [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) selbst.
+[Cmetafiledc](../mfc/reference/cmetafiledc-class.md) -Objekte kapseln das Zeichnen in eine Windows-Metadatendatei. Im Gegensatz zu der `CPaintDC` an `OnDraw`übergebenen muss in diesem Fall [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) selbst aufgerufen werden.
 
-## <a name="mouse-drawing"></a>Zeichnen mit der Maus
+## <a name="mouse-drawing"></a>Maus Zeichnung
 
-Die meisten Zeichnen in einem Frameworkprogramm – und somit die meisten-Gerätekontext – erfolgt in der Ansicht `OnDraw` Member-Funktion. Sie können allerdings weiterhin gerätekontextobjekten für andere Zwecke verwenden. Z. B. um nachverfolgung Feedback für das Verschieben der Maus in einer Ansicht bereitzustellen, müssen Sie direkt in die Ansicht zu zeichnen, ohne zu warten `OnDraw` aufgerufen werden.
+Die meisten Zeichen in einem Framework- `OnDraw` Programm – und damit die meisten Gerätekontext arbeiten – werden in der Member-Funktion der Sicht ausgeführt. Sie können jedoch weiterhin Gerätekontext Objekte für andere Zwecke verwenden. Um z. b. nach Verfolgungs Feedback für die Mausbewegung in einer Ansicht bereitzustellen, müssen Sie direkt in die Ansicht ziehen `OnDraw` , ohne darauf warten zu müssen, dass aufgerufen wird.
 
-In diesem Fall können Sie eine [CClientDC](../mfc/reference/cclientdc-class.md) gerätkontextobjekt direkt in die Ansicht zu zeichnen.
+In einem solchen Fall können Sie ein [CClientDC](../mfc/reference/cclientdc-class.md) -Gerätekontext Objekt verwenden, um direkt in die Ansicht zu zeichnen.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren?
 
-- [Gerätekontexte (Definition)](/windows/desktop/gdi/device-contexts)
+- [Geräte Kontexte (Definition)](/windows/win32/gdi/device-contexts)
 
 - [Zeichnen in einer Ansicht](../mfc/drawing-in-a-view.md)
 
 - [Interpretieren der Benutzereingaben in einer Ansicht](../mfc/interpreting-user-input-through-a-view.md)
 
-- [Linien und Kurven](/windows/desktop/gdi/lines-and-curves)
+- [Linien und Kurven](/windows/win32/gdi/lines-and-curves)
 
-- [Gefüllte Formen](/windows/desktop/gdi/filled-shapes)
+- [Gefüllte Formen](/windows/win32/gdi/filled-shapes)
 
-- [Schriftarten und text](/windows/desktop/gdi/fonts-and-text)
+- [Schriftarten und Text](/windows/win32/gdi/fonts-and-text)
 
-- [Farben](/windows/desktop/gdi/colors)
+- [Farben](/windows/win32/gdi/colors)
 
-- [Koordinatensysteme und Transformationen](/windows/desktop/gdi/coordinate-spaces-and-transformations)
+- [Koordinaten Bereiche und Transformationen](/windows/win32/gdi/coordinate-spaces-and-transformations)
 
 ## <a name="see-also"></a>Siehe auch
 

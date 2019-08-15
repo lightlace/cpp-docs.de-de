@@ -1,5 +1,5 @@
 ---
-title: Für Visual Studio-Datei erstellt C++ Projekte
+title: Für Visual Studio C++ -Projekte erstellte Dateitypen
 ms.date: 04/08/2019
 helpviewer_keywords:
 - header files [C++], Visual Studio projects
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 42040854b7a038ebe32d67e305c947d095d5391a
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 078c83a9c95c1b143af2037240d5cc0a16211827
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446288"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492868"
 ---
-# <a name="file-types-created-for-visual-studio-c-projects"></a>Für Visual Studio C++-Projekte erstellte Dateitypen
+# <a name="file-types-created-for-visual-studio-c-projects"></a>Für Visual Studio C++ -Projekte erstellte Dateitypen
 
-Viele Arten von Dateien sind mit Visual Studio-Projekten für klassische desktopcomputeranwendungen verknüpft. Die in Ihrem Projekt tatsächlich enthaltenen Dateien sind vom Projekttyp und von Ihnen mithilfe eines Assistenten ausgewählten Optionen abhängig.
+Viele Typen von Dateien sind Visual Studio-Projekten für klassische Desktop Anwendungen zugeordnet. Die in Ihrem Projekt tatsächlich enthaltenen Dateien sind vom Projekttyp und von Ihnen mithilfe eines Assistenten ausgewählten Optionen abhängig.
 
 - [Projekt- und Projektmappendateien](project-and-solution-files.md)
 
@@ -41,11 +41,11 @@ Viele Arten von Dateien sind mit Visual Studio-Projekten für klassische desktop
 
 - [Hinweisdateien](hint-files.md)
 
-Wenn Sie Visual Studio-Projekt erstellen, können Sie ihn in eine neue Projektmappe erstellen oder Sie können ein Projekt zu einer vorhandenen Projektmappe hinzufügen. Nicht triviale Anwendungen werden häufig mit mehreren Projekten in einer Projektmappe entwickelt.
+Wenn Sie ein Visual Studio-Projekt erstellen, können Sie es in einer neuen Projekt Mappe erstellen, oder Sie können ein Projekt zu einer vorhandenen Projekt Mappe hinzufügen. Nicht triviale Anwendungen werden häufig mit mehreren Projekten in einer Projektmappe entwickelt.
 
-Projekte generieren für gewöhnlich entweder eine EXE- oder eine DLL-Datei. Projekte können voneinander abhängig sein; während des Buildprozesses überprüft Visual Studio-Umgebung Abhängigkeiten in und zwischen Projekten. Jedes Projekt hat in der Regel die Core-Quellcodes. Je nach Art des Projekts kann es viele andere Dateien, die verschieden Aspekte des Projekts verfügen. Die Inhalte dieser Dateien werden durch die Dateierweiterung angegeben. Die Visual Studio-Entwicklungsumgebung verwendet die Dateierweiterungen, um zu bestimmen, wie die Dateiinhalte während eines Builds verarbeitet werden.
+Projekte generieren für gewöhnlich entweder eine EXE- oder eine DLL-Datei. Projekte können voneinander abhängig sein. während des Buildprozesses überprüft die Visual Studio-Umgebung Abhängigkeiten sowohl innerhalb von als auch zwischen Projekten. Jedes Projekt verfügt üblicherweise über Kern Quell Code. Abhängig von der Art des Projekts sind möglicherweise viele weitere Dateien vorhanden, die verschiedene Aspekte des Projekts enthalten. Die Inhalte dieser Dateien werden durch die Dateierweiterung angegeben. Die Visual Studio-Entwicklungsumgebung verwendet die Dateierweiterungen, um zu bestimmen, wie die Dateiinhalte während eines Builds verarbeitet werden.
 
-In der folgende Tabelle wird gemeinsame Dateien in einem Visual Studio-Projekt, und sie mit der Dateierweiterung identifiziert.
+In der folgenden Tabelle werden allgemeine Dateien in einem Visual Studio-Projekt angezeigt und mit ihrer Dateierweiterung identifiziert.
 
 |Dateierweiterung|Typ|Inhalt|
 |--------------------|----------|--------------|
@@ -54,7 +54,7 @@ In der folgende Tabelle wird gemeinsame Dateien in einem Visual Studio-Projekt, 
 |.atp|Projekt|Anwendungsvorlagen-Projektdatei.|
 |.bmp, .dib, .gif, .jpg, .jpeg, .png|Ressource|Allgemeine Bilddateien.|
 |.bsc|Kompilieren|Browsercodedatei.|
-|.cpp, .c|Source|Haupt-Quellcodedateien für Ihre Anwendung.|
+|. cpp,. c|Source|Haupt-Quellcodedateien für Ihre Anwendung.|
 |.cur|Ressource|Cursorbitmap-Grafikdatei.|
 |.dbp|Projekt|Datenbankprojektdatei.|
 |.disco|Source|Dynamische Ermittlungsdokumentdatei. Verarbeitet die XML-Webdienstermittlung.|
@@ -63,11 +63,11 @@ In der folgende Tabelle wird gemeinsame Dateien in einem Visual Studio-Projekt, 
 |.htm, .html, .xsp, .asp, .htc, .hta, .xml|Ressource|Allgemeine Webdateien.|
 |.HxC|Projekt|Hilfsprojektdatei.|
 |.ico|Ressource|Symbolbitmap-Grafikdatei.|
-|.idb|Kompilieren|Die enthaltende Statusdatei Abhängigkeitsinformationen zwischen Quelldateien und Klassendefinitionen. Es kann vom Compiler während der inkrementellen Kompilierung verwendet werden. Verwenden Sie die Compileroption [/Fd](fd-program-database-file-name.md) zum Angeben des Namens der IDB-Datei.|
-|.idl|Kompilieren|Eine IDL-Datei. Weitere Informationen finden Sie im Windows SDK unter [Interface Definition (IDL) File (Schnittstellendefinitionsdatei)](/windows/desktop/Rpc/the-interface-definition-language-idl-file).|
-|.ilk|Verknüpfen|Datei für inkrementelle Verknüpfung. Weitere Informationen finden Sie unter [/INCREMENTAL](incremental-link-incrementally.md).|
-|.map|Verknüpfen|Eine Textdatei mit Linkerinformationen. Verwenden Sie die Compileroption [/Fm](fm-name-mapfile.md) , um die MAP-Datei zu benennen. Weitere Informationen finden Sie unter [/MAP](map-generate-mapfile.md).|
-|.mfcribbon-ms|Ressource|Eine Ressourcendatei, die den XML-Code enthält, der die MFC-Schaltflächen, Steuerelemente und Attribute im Menüband definiert. Weitere Informationen finden Sie unter [Ribbon Designer](../../mfc/ribbon-designer-mfc.md).|
+|.idb|Kompilieren|Die Zustands Datei mit Abhängigkeitsinformationen zwischen Quelldateien und Klassendefinitionen. Sie kann vom Compiler während der inkrementellen Kompilierung verwendet werden. Verwenden Sie die Compileroption [/Fd](fd-program-database-file-name.md) zum Angeben des Namens der IDB-Datei.|
+|.idl|Kompilieren|Eine IDL-Datei. Weitere Informationen finden Sie im Windows SDK unter [Interface Definition (IDL) File (Schnittstellendefinitionsdatei)](/windows/win32/Rpc/the-interface-definition-language-idl-file).|
+|.ilk|Verknüpfen|Datei für inkrementelle Verknüpfung. Weitere Informationen finden Sie unter [/Incremental](incremental-link-incrementally.md).|
+|.map|Verknüpfen|Eine Textdatei mit Linkerinformationen. Verwenden Sie die Compileroption [/Fm](fm-name-mapfile.md) , um die MAP-Datei zu benennen. Weitere Informationen finden Sie unter [/map](map-generate-mapfile.md).|
+|.mfcribbon-ms|Ressource|Eine Ressourcen Datei, die den XML-Code enthält, der die MFC-Schaltflächen, Steuerelemente und Attribute im Menüband definiert. Weitere Informationen finden Sie unter [Ribbon Designer](../../mfc/ribbon-designer-mfc.md).|
 |.obj, .o||Objektdateien, kompiliert, aber nicht verknüpft.|
 |.pch|Debug|Vorkompilierte Headerdatei.|
 |.rc, .rc2|Ressource|[Ressourcenskriptdateien](../../windows/working-with-resource-files.md) zum Generieren von Ressourcen.|
@@ -78,20 +78,20 @@ In der folgende Tabelle wird gemeinsame Dateien in einem Visual Studio-Projekt, 
 |.vap|Projekt|Eine Visual Studio Analyzer-Projektdatei.|
 |.vbg|Lösung|Eine kompatible Projektgruppendatei.|
 |.vbp, .vip, .vbproj|Projekt|Die Visual Basic-Projektdatei.|
-|.vcxitems|Projekt|Ein Projekt mit freigegebenen Elementen zum Freigeben von Codedateien zwischen mehreren C++-Projekten. Weitere Informationen finden Sie unter [Projekt- und Projektmappendateien](project-and-solution-files.md).|
-|.vcxproj|Projekt|Die Visual Studio-Projektdatei. Weitere Informationen finden Sie unter [Projekt- und Projektmappendateien](project-and-solution-files.md).|
-|.vcxproj.filters|Projekt|Verwendet, wenn Sie Projektmappen-Explorer verwenden, um eine Datei zu einem Projekt hinzuzufügen. Die Filterdatei definiert die Position in der Strukturansicht der Projektmappen-Explorer die Datei, die anhand der Dateierweiterung hinzugefügt.|
+|.vcxitems|Projekt|Ein Projekt mit freigegebenen Elementen zum Freigeben von Codedateien zwischen mehreren C++-Projekten. Weitere Informationen finden Sie unter [Projekt-und Projektmappendateien](project-and-solution-files.md).|
+|.vcxproj|Projekt|Die Visual Studio-Projektdatei. Weitere Informationen finden Sie unter [Projekt-und Projektmappendateien](project-and-solution-files.md).|
+|.vcxproj.filters|Projekt|Wird verwendet, wenn Sie Projektmappen-Explorer zum Hinzufügen einer Datei zu einem Projekt verwenden. Die Filterdatei definiert, wo die Datei in der Projektmappen-Explorer Strukturansicht basierend auf der Dateinamenerweiterung hinzugefügt wird.|
 |.vdproj|Projekt|Die Visual Studio-Bereitstellungsprojektdatei.|
 |.vmx|Projekt|Die Makro-Projektdatei.|
 |.vup|Projekt|Der Hilfsprogramm-Projektdatei.|
 
 Weitere Informationen über andere mit Visual Studio verknüpfte Dateien finden Sie unter [Dateitypen und Dateierweiterungen in Visual Studio .NET](/visualstudio/ide/reference/project-and-solution-file-types).
 
-Projektdateien sind in Ordnern im Projektmappen-Explorer organisiert. Visual Studio erstellt einen Ordner für Quelldateien, Headerdateien und Ressourcendateien, aber Sie können diese Ordner neu zu organisieren oder neu erstellen. Sie können Ordner verwenden, um logische Cluster von Dateien innerhalb der Hierarchie eines Projekts explizit zu organisieren. Beispielsweise können Sie Ordner, um alle Ihre Benutzeroberflächen-Quelldateien enthalten erstellen. Oder Ordner für die Spezifikationen, Dokumentation oder Testsammlungen. Alle Dateiordnernamen sollten eindeutig sein.
+Projektdateien sind in Ordnern im Projektmappen-Explorer organisiert. Visual Studio erstellt einen Ordner für Quelldateien, Header Dateien und Ressourcen Dateien. Sie können diese Ordner jedoch neu organisieren oder neue erstellen. Sie können Ordner verwenden, um logische Cluster von Dateien innerhalb der Hierarchie eines Projekts explizit zu organisieren. Beispielsweise könnten Sie Ordner erstellen, die alle Ihre Benutzeroberflächen-Quelldateien enthalten. Oder, Ordner für Spezifikationen, Dokumentationen oder Test Sammlungen. Alle Dateiordnernamen sollten eindeutig sein.
 
-Wenn Sie ein Element zu einem Projekt hinzufügen, fügen Sie das Element für alle Konfigurationen für das betreffende Projekt. Das Element wird hinzugefügt, ob es oder nicht erstellt werden kann. Wenn Sie beispielsweise über ein Projekt mit dem Namen „MeinProjekt“ verfügen, wird das Element durch das Hinzufügen zu den Debug- und Release-Projektkonfigurationen hinzugefügt.
+Wenn Sie einem Projekt ein Element hinzufügen, fügen Sie das Element allen Konfigurationen für dieses Projekt hinzu. Das Element wird hinzugefügt, unabhängig davon, ob es Erstell Bar ist. Wenn Sie beispielsweise über ein Projekt mit dem Namen „MeinProjekt“ verfügen, wird das Element durch das Hinzufügen zu den Debug- und Release-Projektkonfigurationen hinzugefügt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Erstellen und Verwalten von Visual Studio C++-Projekte](../creating-and-managing-visual-cpp-projects.md)<br>
-[Visual Studio C++-Projekttypen](visual-cpp-project-types.md)<br>
+[Erstellen und Verwalten von Visual C++ Studio-Projekten](../creating-and-managing-visual-cpp-projects.md)<br>
+[Visual Studio C++ -Projekttypen](visual-cpp-project-types.md)<br>

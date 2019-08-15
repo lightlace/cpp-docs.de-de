@@ -41,14 +41,14 @@ helpviewer_keywords:
 - _vcwprintf_p_l function
 - _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-ms.openlocfilehash: 59e601d5cd03d58fe2d1725ba509a9fa3b2f3422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d2346237181299b3497fade37827a3abc5e7749
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364882"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499366"
 ---
-# <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
+# <a name="_vcprintf_p-_vcprintf_p_l-_vcwprintf_p-_vcwprintf_p_l"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
 Schreibt formatierte Ausgabe in die Konsole unter Verwendung eines Zeigers auf eine Liste von Argumenten und unterstützt positionelle Parameter in der Formatzeichenfolge.
 
@@ -93,22 +93,22 @@ Weitere Informationen finden Sie unter [Format Specification Syntax: printf and 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl geschriebener Zeichen oder ein negativer Wert im Falle eines Ausgabefehlers. Wenn *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und-1 zurückgegeben.
+Die Anzahl geschriebener Zeichen oder ein negativer Wert im Falle eines Ausgabefehlers. Wenn *Format* ein NULL-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und-1 wird zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und verwendet dann die **_putch** -Funktion zum Formatieren und die angegebenen Daten in die Konsole geschrieben. (**_vcwprintf_p** verwendet **_putwch** anstelle von **_putch**. **_vcwprintf_p** ist die Breitzeichen-Version von **_vcprintf_p**. Eine Zeichenfolge mit Breitzeichen wird als Argument akzeptiert.)
+Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und verwendet dann die **_putch** -Funktion, um die angegebenen Daten zu formatieren und in die Konsole zu schreiben. ( **_vcwprintf_p** verwendet **_putwch** anstelle von **_putch**. **_vcwprintf_p** ist die breit Zeichen Version von **_vcprintf_p**. Eine Zeichenfolge mit Breitzeichen wird als Argument akzeptiert.)
 
-Die Versionen dieser Funktionen, die **_l** -Suffix sind beinahe identisch, außer dass sie verwenden den Gebietsschemaparameter, der übergeben wird, anstelle des aktuellen Gebietsschemas.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Gebiets Schemas übergeben wurde.
 
-Jede *Argument* (sofern vorhanden) in konvertiert wird und die Ausgabe entsprechend der jeweiligen Formatangabe in *Format*. Die Formatangabe unterstützt positionelle Parameter, damit Sie die Reihenfolge, in der die Argumente verwendet werden, in der Formatzeichenfolge angeben können. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
+Jedes *Argument* (sofern vorhanden) wird konvertiert und entsprechend der entsprechenden Format Spezifikation im- *Format*ausgegeben. Die Formatangabe unterstützt positionelle Parameter, damit Sie die Reihenfolge, in der die Argumente verwendet werden, in der Formatzeichenfolge angeben können. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Diese Funktionen übersetzen keine Zeilenvorschubzeichen in Carriage Return-Zeilenvorschub (CR-LF) Kombinationen bei der Ausgabe. 
+Diese Funktionen übersetzen keine Zeilenvorschubzeichen in Carriage Return-Zeilenvorschub (CR-LF) Kombinationen bei der Ausgabe.
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Diese Funktionen überprüfen den Eingabezeiger und die Formatzeichenfolge. Wenn *Format* oder *Argument* ist **NULL**, oder wenn die Formatzeichenfolge ungültige Formatierungszeichen enthält, rufen diese Funktionen den Handler für ungültige Parameter an, wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
+Diese Funktionen überprüfen den Eingabezeiger und die Formatzeichenfolge. Wenn *Format* oder *Argument* **null**ist oder wenn die Format Zeichenfolge ungültige Formatierungszeichen enthält, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen-1 zurück und legen **errno** auf **EINVAL**fest.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

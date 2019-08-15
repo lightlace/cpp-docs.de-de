@@ -1,27 +1,27 @@
 ---
-title: 'CAtlServiceModuleT:: ServiceMain-Funktion'
+title: "\"-Funktion (\") \": ServiceMain-Funktion"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ServiceMain method
 ms.assetid: f21408c1-1919-4dec-88d8-bf5b39ac9808
-ms.openlocfilehash: 81cd8fcbdf275063b243e215301eff504a2b5cc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b79767d4c1696174f90a325ea152ccc7939ed9fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223208"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491713"
 ---
-# <a name="catlservicemoduletservicemain-function"></a>CAtlServiceModuleT:: ServiceMain-Funktion
+# <a name="catlservicemoduletservicemain-function"></a>"-Funktion (") ": ServiceMain-Funktion
 
-Der dienststeuerungs-Manager (SCM) Ruft `ServiceMain` Wenn Sie die Systemsteuerung für die Dienste-Anwendung öffnen, wählen Sie den Dienst, und klicken Sie auf **starten**.
+Der Dienststeuerungs-Manager (SCM) `ServiceMain` Ruft auf, wenn Sie die System Steuerungsanwendung "Dienste" öffnen, den Dienst auswählen und auf " **starten**" klicken.
 
-Nach dem dienststeuerungs-Manager ruft `ServiceMain`, ein Dienst muss dienststeuerungs-Manager eine Handlerfunktion erteilen. Mithilfe dieser Funktion können den SCM-Status des Diensts zu erhalten und übergeben Sie spezifische Anweisungen (z. B. durch das Anhalten oder Beenden). Dienststeuerungs-Manager ruft diese Funktion ab, wenn der Dienst übergibt `_Handler` an die Win32-API-Funktion, [' RegisterServiceCtrlHandler '](/windows/desktop/api/winsvc/nf-winsvc-registerservicectrlhandlera). (`_Handler` ist eine statische Memberfunktion, die die nicht statische Memberfunktion ruft [Handler](../atl/reference/catlservicemodulet-class.md#handler).)
+Nachdem der SCM aufgerufen `ServiceMain`hat, muss ein Dienst dem SCM eine Handlerfunktion einräumen. Mit dieser Funktion kann der SCM den Dienststatus abrufen und bestimmte Anweisungen (z. b. anhalten oder beenden) übergeben. Diese Funktion wird vom SCM abgerufen, wenn der `_Handler` Dienst an die Win32-API-Funktion, [registerservicectrlhandler](/windows/win32/api/winsvc/nf-winsvc-registerservicectrlhandlerw), übergibt. (`_Handler` ist eine statische Member-Funktion, die den nicht statischen Member-Funktions [Handler](../atl/reference/catlservicemodulet-class.md#handler)aufruft.)
 
-Beim Start sollte ein Dienst dienststeuerungs-Manager von den aktuellen Status auch darüber informieren. Dies geschieht durch die Übergabe von SERVICE_START_PENDING an die Win32-API-Funktion, [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus).
+Beim Start sollte ein Dienst auch den SCM über seinen aktuellen Status informieren. Dies geschieht durch Übergeben von SERVICE_START_PENDING an die Win32-API-Funktion [SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus).
 
-`ServiceMain` Ruft dann `CAtlExeModuleT::InitializeCom`, die Win32-API-Funktion aufruft [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex). In der Standardeinstellung `InitializeCom` übergibt das Flag COINIT_MULTITHREADED an die Funktion. Dieses Flag gibt an, dass das Programm ein Freethread-Server sein.
+`ServiceMain`Anschließend wird `CAtlExeModuleT::InitializeCom`aufgerufen, wodurch die Win32-API-Funktion [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)aufgerufen wird. Standardmäßig `InitializeCom` übergibt das COINIT_MULTITHREADED-Flag an die-Funktion. Dieses Flag gibt an, dass das Programm ein frei Thread Server sein soll.
 
-Jetzt `CAtlServiceModuleT::Run` wird aufgerufen, um die eigentliche Arbeit des Diensts führen. `Run` wird weiterhin ausgeführt, bis der Dienst beendet wird.
+Nun wird `CAtlServiceModuleT::Run` aufgerufen, um die Hauptarbeit des Dienstanbieter auszuführen. `Run`wird weiter ausgeführt, bis der Dienst beendet wird.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: Version (C++-COM-Attribut)
+title: Version (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.version
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: fe1df9e12b9adbf9ce55978fd3479f7e740ddc96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a432267632b1f2a716a833a485b182cd93a27e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407158"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514877"
 ---
 # <a name="version-c"></a>version (C++)
 
-Identifiziert eine bestimmte Version mehrere Versionen einer Klasse.
+Identifiziert eine bestimmte Version in mehreren Versionen einer Klasse.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,15 +27,15 @@ Identifiziert eine bestimmte Version mehrere Versionen einer Klasse.
 ### <a name="parameters"></a>Parameter
 
 *version*<br/>
-Die Versionsnummer der `coclass`. Wenn nicht angegeben, wird 1.0 in der IDL-Datei platziert werden.
+Die Versionsnummer von `coclass`. Wenn nichts angegeben wird, wird 1,0 in die IDL-Datei eingefügt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Version** C++-Attribut hat die gleiche Funktionalität wie die [Version](/windows/desktop/Midl/version) MIDL-Attribut, und wird in der generierten IDL-Datei übergeben.
+Das **Versions** C++ Attribut verfügt über die gleiche Funktionalität wie das runl-Attribut der [Version](/windows/win32/Midl/version) und wird an die generierte IDL-Datei übermittelt.
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter den [bindbare](bindable.md) Beispiel für ein Beispiel für die Verwendung von **Version**.
+Ein Beispiel für die Verwendung der- **Version**finden Sie im [bindbare](bindable.md) -Beispiel.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,10 +43,10 @@ Finden Sie unter den [bindbare](bindable.md) Beispiel für ein Beispiel für die
 
 |||
 |-|-|
-|**Betrifft**|**class**, **struct**|
+|**Betrifft**|**Klasse**, **Struktur**|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|**coclass**|
-|**Ungültige Attribute**|Keiner|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

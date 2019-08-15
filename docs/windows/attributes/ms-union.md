@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 3f83eeff4fd9b2177b862b101b7a2d4faeaaab87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26207c3c2c20fb039eb39e26f4d24e141c4dff07
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409108"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514369"
 ---
-# <a name="msunion"></a>ms_union
+# <a name="ms_union"></a>ms_union
 
-Steuert die Netzwerk-datenausrichtung Darstellung nonencapsulated Unions.
+Steuert die Ausrichtung der Netzwerkdaten Darstellung von nicht gekapselten Unions.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,7 +25,7 @@ Steuert die Netzwerk-datenausrichtung Darstellung nonencapsulated Unions.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Ms_union** C++ Attribut hat die gleiche Funktionalität wie die [Ms_union](/windows/desktop/Midl/ms-union-attrib) MIDL-Attribut.
+Das **Ms_union** C++ -Attribut verfügt über die gleiche Funktionalität wie das [Ms_union](/windows/win32/Midl/ms-union-attrib) -Mittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
@@ -60,9 +60,9 @@ __interface IFireTabCtrl {
 
 |||
 |-|-|
-|**Betrifft**|Nonencapsulated unions|
+|**Betrifft**|Nicht gekapselt Unions|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
 |**Ungültige Attribute**|`dispinterface`|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).

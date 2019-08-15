@@ -7,26 +7,26 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1634eee30063a48041d60fc1b7116ca9543c9de2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309196"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511459"
 ---
 # <a name="ribbon-designer-mfc"></a>Menüband-Designer (MFC)
 
-Mit dem Menüband-Designer können Sie Menübänder in MFC-Anwendungen erstellen und anpassen. Ein Menüband ist ein Element der Benutzeroberfläche (UI), auf dem Befehle in logischen Gruppen organisiert werden. Diese Gruppen werden auf separaten Registerkarten in einem Streifen entlang des oberen Fensterrahmens angezeigt. Das Menüband ersetzt die Menü- und Symbolleisten. Mit einem Menüband kann die Benutzerfreundlichkeit von Anwendungen erheblich verbessert werden. Weitere Informationen finden Sie unter [Menübänder](/windows/desktop/uxguide/cmd-ribbons). Die folgende Abbildung zeigt ein Menüband.
+Mit dem Menüband-Designer können Sie Menübänder in MFC-Anwendungen erstellen und anpassen. Ein Menüband ist ein Element der Benutzeroberfläche (UI), auf dem Befehle in logischen Gruppen organisiert werden. Diese Gruppen werden auf separaten Registerkarten in einem Streifen entlang des oberen Fensterrahmens angezeigt. Das Menüband ersetzt die Menü- und Symbolleisten. Mit einem Menüband kann die Benutzerfreundlichkeit von Anwendungen erheblich verbessert werden. Weitere Informationen finden Sie unter Menü [Bänder](/windows/win32/uxguide/cmd-ribbons). Die folgende Abbildung zeigt ein Menüband.
 
-![MFC-Menüband-Ressourcensteuerung](../mfc/media/ribbon_no_callouts.png "MFC-Menüband-Ressourcensteuerung")
+![MFC-Menüband-Ressourcen Steuerung](../mfc/media/ribbon_no_callouts.png "MFC-Menüband-Ressourcen Steuerung")
 
-In früheren Versionen von Visual Studio Menübänder erstellt werden, indem Sie Code schreiben, der die MFC-Menübandklassen, wie z. B. verwendet musste [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md). In Visual Studio 2010 und höher bietet der Menüband-Designer eine alternative Methode zum Erstellen von Menübändern dar. Zunächst erstellen Sie ein Menüband als Ressource und passen es an. Dann laden Sie die Menübandressource vom Code in der MFC-Anwendung. Sie können Menübandressourcen und MFC-Menübandklassen sogar zusammen verwenden. Beispielsweise können Sie eine menübandressource erstellen und dann programmgesteuert weitere Elemente hinzufügen, zur Laufzeit mithilfe von Code.
+In früheren Versionen von Visual Studio mussten Multifunktionsleisten durch Schreiben von Code erstellt werden, der die MFC-Menü Band Klassen wie die [CMFCRibbonBar-Klasse](../mfc/reference/cmfcribbonbar-class.md)verwendet. In Visual Studio 2010 und höher stellt der Menüband-Designer eine alternative Methode zum Entwickeln von Multifunktionsleisten dar. Zunächst erstellen Sie ein Menüband als Ressource und passen es an. Dann laden Sie die Menübandressource vom Code in der MFC-Anwendung. Sie können Menübandressourcen und MFC-Menübandklassen sogar zusammen verwenden. Beispielsweise können Sie eine Menü Band Ressource erstellen und der Laufzeit mithilfe von Code Programm gesteuert weitere Elemente hinzufügen.
 
 ## <a name="understanding-the-ribbon-designer"></a>Der Menüband-Designer
 
 Mit dem Menüband-Designer wird das Menüband als Ressource erstellt und gespeichert. Wenn Sie eine Menübandressource erstellen, werden vom Menüband-Designer die folgenden drei Aktionen ausgeführt:
 
-- Hinzufügen eines Eintrags im Projektressourcen-Definitionsskript (*.rc) Im folgenden Beispiel IDR_RIBBON ist der eindeutige Name, der die menübandressource identifiziert, RT_RIBBON_XML ist der Ressourcentyp und ribbon.mfcribbon-ms-ist der Name der Ressourcendatei.
+- Hinzufügen eines Eintrags im Projektressourcen-Definitionsskript (*.rc) Im folgenden Beispiel ist IDR_RIBBON der eindeutige Name, der die Menüband-Ressource identifiziert, RT_RIBBON_XML ist der Ressourcentyp, und Ribbon. MF cribbon-MS ist der Name der Ressourcen Datei.
 
 ```
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"
@@ -38,7 +38,7 @@ Mit dem Menüband-Designer wird das Menüband als Ressource erstellt und gespeic
 #define IDR_RIBBON            307
 ```
 
-- Eine Menübandressourcendatei (*.mfcribbon-ms), die den XML-Code enthält, mit dem die Schaltflächen des Menübands, die Steuerelemente und Attribute im Menüband definiert werden, wird erstellt. Änderungen, die im Menüband-Designer am Menüband vorgenommen werden, werden in der Ressourcendatei als XML gespeichert. Im folgenden Codebeispiel wird veranschaulicht, die Inhalte von einem \*.mfcribbon-ms-Datei:
+- Eine Menübandressourcendatei (*.mfcribbon-ms), die den XML-Code enthält, mit dem die Schaltflächen des Menübands, die Steuerelemente und Attribute im Menüband definiert werden, wird erstellt. Änderungen, die im Menüband-Designer am Menüband vorgenommen werden, werden in der Ressourcendatei als XML gespeichert. Das folgende Codebeispiel zeigt einen Teil des Inhalts einer \*MF cribbon-MS-Datei:
 
 ```
 <RIBBON_BAR>
@@ -50,17 +50,17 @@ Mit dem Menüband-Designer wird das Menüband als Ressource erstellt und gespeic
 </ID>
 ```
 
-Um die menübandressource in der MFC-Anwendung zu verwenden, laden Sie die Ressource durch Aufrufen von [CMFCRibbonBar::LoadFromResource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).
+Wenn Sie die Menü Band Ressource in der MFC-Anwendung verwenden möchten, laden Sie die Ressource durch Aufrufen von [CMFCRibbonBar:: loadfromresource](../mfc/reference/cmfcribbonbar-class.md#loadfromresource).
 
 ## <a name="creating-a-ribbon-by-using-the-ribbon-designer"></a>Erstellen eines Menübands mit dem Menüband-Designer
 
 Dies sind die zwei Möglichkeiten, dem MFC-Projekt eine Menübandressource hinzuzufügen:
 
-- Erstellen einer MFC-Anwendung und konfigurieren des MFC-Projekt-Assistenten zum Erstellen des Menübands. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer Menübandanwendung mithilfe von MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+- Erstellen einer MFC-Anwendung und konfigurieren des MFC-Projekt-Assistenten zum Erstellen des Menübands. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer Menü Bandanwendung mithilfe von MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
-- Erstellen Sie in einem vorhandenen MFC-Projekt eine Menübandressource und laden Sie sie. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+- Erstellen Sie in einem vorhandenen MFC-Projekt eine Menübandressource und laden Sie sie. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Aktualisieren der MFC Scribble-Anwendung (Teil 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)).
 
-Wenn das Projekt bereits über ein manuell codiertes Menüband verfügt, können Sie das vorhandene Menüband mit MFC Funktionen in eine Menübandressource konvertieren. Weitere Informationen finden Sie unter [Vorgehensweise: Konvertieren ein vorhandenes MFC-Menübands in eine Menübandressource](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).
+Wenn das Projekt bereits über ein manuell codiertes Menüband verfügt, können Sie das vorhandene Menüband mit MFC Funktionen in eine Menübandressource konvertieren. Weitere Informationen finden Sie unter [Vorgehensweise: Konvertieren eines vorhandenen MFC-Menübands in eine](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)Menü Band Ressource.
 
 > [!NOTE]
 >  Menübänder können nicht in Anwendungen erstellt werden, die auf Dialogfeldern basieren. Weitere Informationen finden Sie unter [Anwendungstyp, MFC-Anwendungs-Assistent](../mfc/reference/application-type-mfc-application-wizard.md).
@@ -73,15 +73,15 @@ Die folgende Abbildung zeigt die verschiedenen Komponenten im Menüband-Designer
 
 ![MFC-Menüband-Designer](../mfc/media/ribbon_designer.png "MFC-Menüband-Designer")
 
-- **Toolbox:** Enthält Steuerelemente, die auf die Designeroberfläche gezogen werden können.
+- **Stens** Enthält Steuerelemente, die auf die Designer Oberfläche gezogen werden können.
 
-- **Designer-Oberfläche:** Enthält die visuelle Darstellung der menübandressource.
+- **Oberfläche des Designers:** Enthält die visuelle Darstellung der Menüband-Ressource.
 
-- **Fenster "Eigenschaften":** Listet die Attribute des Elements, das auf der Entwurfsoberfläche ausgewählt ist.
+- **Eigenschaftenfenster:** Listet die Attribute des Elements auf, das auf der Designer Oberfläche ausgewählt ist.
 
-- **Ressourcenansicht (Fenster):** Zeigt die Ressourcen, die Menübandressourcen in Ihr Projekt einbinden.
+- **Ressourcenansicht Fenster:** Zeigt die Ressourcen an, die Menü Band Ressourcen in Ihrem Projekt enthalten.
 
-- **Ribbon-Editor-Symbolleiste:** Enthält Befehle, mit denen Sie die Vorschau im Menübands aus, und das visuelle Design ändern.
+- **Toolbar-Editor-Symbolleiste:** Enthält Befehle, mit denen Sie eine Vorschau der Multifunktionsleiste anzeigen und das visuelle Design ändern können.
 
 In den folgenden Themen wird die Verwendung der Funktionen im Menüband-Designer beschrieben:
 
@@ -95,19 +95,19 @@ In den folgenden Themen wird die Verwendung der Funktionen im Menüband-Designer
 
 ## <a name="definitions-of-ribbon-elements"></a>Definitionen von Menübandelementen
 
-![MFC Ribbon](../mfc/media/ribbon.png "MFC Ribbon")
+![MFC-Menüband](../mfc/media/ribbon.png "MFC-Menüband")
 
-- **Schaltfläche "Anwendung":** Die Schaltfläche, die in der oberen linken Ecke eines Menübands angezeigt wird. Die Anwendungsschaltfläche ersetzt das Datei-Menü und ist sichtbar, wenn das Menüband minimiert wird. Wenn auf die Schaltfläche geklickt wird, wird ein Menü mit einer Liste von Befehlen angezeigt.
+- **Anwendungs Schaltfläche:** Die Schaltfläche, die in der oberen linken Ecke eines Menübands angezeigt wird. Die Anwendungsschaltfläche ersetzt das Datei-Menü und ist sichtbar, wenn das Menüband minimiert wird. Wenn auf die Schaltfläche geklickt wird, wird ein Menü mit einer Liste von Befehlen angezeigt.
 
-- **Symbolleiste für den Schnellzugriff:** Eine kleine, anpassbare Symbolleiste, die zeigt häufig verwendete Befehle.
+- **Symbolleiste für den schnell Zugriff:** Eine kleine, anpassbare Symbolleiste, auf der häufig verwendete Befehle angezeigt werden.
 
 - **Kategorie**: Die logische Gruppierung, die den Inhalt einer Registerkarte des Menübands darstellt.
 
-- **Kategorien-Standardschaltfläche:** Die Schaltfläche, die auf dem Menüband angezeigt wird, wenn das Menüband minimiert wird. Wenn auf die Schaltfläche geklickt wird, erscheint die Kategorie als Menü neu.
+- **Standard Schaltfläche für Kategorie:** Die Schaltfläche, die auf dem Menüband angezeigt wird, wenn das Menüband minimiert wird. Wenn auf die Schaltfläche geklickt wird, erscheint die Kategorie als Menü neu.
 
-- **Bereich:** Ein Bereich des Menübands, das eine Gruppe von verwandten Steuerelementen anzeigt. In jeder Menübandkategorie ist mindestens ein Menübandbereich enthalten.
+- **Verkleidung** Ein Bereich der Menü Band Leiste, in dem eine Gruppe verwandter Steuerelemente angezeigt wird. In jeder Menübandkategorie ist mindestens ein Menübandbereich enthalten.
 
-- **Menübandelemente:** Steuert, in den Bereichen, z. B. Schaltflächen und Kombinationsfelder. Die verschiedenen Steuerelemente, die gehostet werden können, auf einem Menüband, finden Sie unter [RibbonGadgets-Beispiel: Menüband der Anwendung für Minianwendungen](../overview/visual-cpp-samples.md).
+- **Menü Band Elemente:** Steuerelemente in den Panels, z. b. Schaltflächen und Kombinations Felder. Die verschiedenen Steuerelemente, die auf einem Menüband gehostet werden können, [finden Sie unter ribbongadgets Sample: Menüband Gadgets](../overview/visual-cpp-samples.md)-Anwendung.
 
 ## <a name="see-also"></a>Siehe auch
 

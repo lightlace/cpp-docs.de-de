@@ -1,21 +1,21 @@
 ---
-title: Size_is (C++ com-Attribut)
+title: size_is (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407327"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514039"
 ---
-# <a name="sizeis"></a>size_is
+# <a name="size_is"></a>size_is
 
-Geben Sie die Größe des Arbeitsspeichers für Größe Zeiger zugewiesen, Größe der Zeiger auf Zeiger, die Größe und Einzel- oder mehrdimensionale Arrays.
+Geben Sie die Größe des zugeordneten Arbeitsspeichers für Größen Zeiger, große Zeiger auf Größen Zeiger und einzelne oder mehrdimensionale Arrays an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,15 +26,15 @@ Geben Sie die Größe des Arbeitsspeichers für Größe Zeiger zugewiesen, Grö�
 ### <a name="parameters"></a>Parameter
 
 *expression*<br/>
-Die Größe des Arbeitsspeichers für Größe Zeiger.
+Die Größe des zugeordneten Arbeitsspeichers für Größen Zeiger.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Size_is** C++ Attribut hat die gleiche Funktionalität wie die [Size_is](/windows/desktop/Midl/size-is) MIDL-Attribut.
+Das **size_is** C++ -Attribut verfügt über die gleiche Funktionalität wie das [size_is](/windows/win32/Midl/size-is) -Mittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [First_is](first-is.md) ein Beispiel dafür, wie Sie einen Abschnitt eines Arrays an.
+Im Beispiel für [First_is](first-is.md) finden Sie ein Beispiel für die Angabe eines Abschnitts eines Arrays.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,9 +42,9 @@ Siehe das Beispiel für [First_is](first-is.md) ein Beispiel dafür, wie Sie ein
 
 |||
 |-|-|
-|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|
+|**Betrifft**|Feld in **Struktur** oder **Union**, Schnittstellenparameter, Schnittstellen Methode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
 |**Ungültige Attribute**|`max_is`|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).

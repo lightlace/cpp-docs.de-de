@@ -12,12 +12,12 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-ms.openlocfilehash: 5ca1f33a809bc81b7dcc090231e507ba66775205
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2281effaa94c32454e88100c8b7020961f748d9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407054"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514843"
 ---
 # <a name="choosing-a-deployment-method"></a>Auswählen einer Bereitstellungsmethode
 
@@ -42,7 +42,7 @@ In Ihren Bereitstellungen können Sie jede Version einer Visual C++-Bibliothek w
 
 Wenn eine Bereitstellung verteilbare Mergemodule verwendet und eine Installation von einem Benutzer ausgeführt wird, der nicht über Administratorrechte verfügt, werden die Visual C++-DLLs nicht installiert, und die Anwendung wird nicht ausgeführt. Zudem installieren Anwendungsinstallationsprogramm, die mit Mergemodulen erstellt wurden, die die Installation pro Benutzer ermöglichen, die Bibliotheken an einem freigegebenen Speicherort, was sich auf alle Benutzer des Systems auswirkt. Sie können mithilfe einer lokalen Bereitstellung die erforderlichen Visual C++-DLLs im Verzeichnis einer Anwendung eines bestimmten Benutzers installieren, ohne dass sich dies auf andere Benutzer auswirkt oder Administratorrechte erforderlich sind. Weil dies zu Problemen bei der Wartbarkeit führen kann, wird die lokale Bereitstellung von verteilbaren Visual C++-DLLs nicht empfohlen.
 
-Die falsche Bereitstellung von Visual C++-Bibliotheken kann Laufzeitfehler während der Ausführung einer Anwendung, die diese Bibliotheken benötigt, verursachen. Wenn das Betriebssystem die Anwendung lädt, verwendet es die Suchreihenfolge, die in beschriebenen [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
+Die falsche Bereitstellung von Visual C++-Bibliotheken kann Laufzeitfehler während der Ausführung einer Anwendung, die diese Bibliotheken benötigt, verursachen. Wenn das Betriebssystem die Anwendung lädt, wird die Such Reihenfolge verwendet, die in [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)beschrieben wird.
 
 ## <a name="dynamic-linking-is-better-than-static-linking"></a>Dynamisches Verknüpfen ist besser als statisches Verknüpfen
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: d1d18336a20644338a50ab66c7fcb06959e5760a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1067b74191dcde98dd9c85a246db2acd26eff9c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407015"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514853"
 ---
-# <a name="wiremarshal"></a>wire_marshal
+# <a name="wire_marshal"></a>wire_marshal
 
-Gibt einen Datentyp, der für die Übertragung anstelle eines Typs anwendungsspezifische Daten verwendet wird.
+Gibt einen Datentyp an, der anstelle eines anwendungsspezifischen Datentyps für die Übertragung verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Gibt einen Datentyp, der für die Übertragung anstelle eines Typs anwendungsspe
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Wire_marshal** C++ Attribut hat die gleiche Funktionalität wie die [Wire_marshal](/windows/desktop/Midl/wire-marshal) MIDL-Attribut.
+Das **Wire_marshal** C++ -Attribut verfügt über die gleiche Funktionalität wie das [Wire_marshal](/windows/win32/Midl/wire-marshal) -Mittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code veranschaulicht die Verwendung der **Wire_marshal**:
+Der folgende Code zeigt die Verwendung von **Wire_marshal**:
 
 ```cpp
 // cpp_attr_ref_wire_marshal.cpp
@@ -55,8 +55,8 @@ Der folgende Code veranschaulicht die Verwendung der **Wire_marshal**:
 |-|-|
 |**Betrifft**|**typedef**|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Clipboard, operations in CRichEditCtrl
 - rich edit controls [MFC], Clipboard operations
 ms.assetid: 15ce66bc-2636-4a35-a2ae-d52285dc1af6
-ms.openlocfilehash: 882c589d0d25b54650affa7fd41f916ecf6097d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e232010b443ace245844f1c28649477cccc8e9e4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327105"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508971"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Zwischenablageoperationen in RichEdit-Steuerelementen
 
-Ihre Anwendung kann den Inhalt der Zwischenablage in eine rich-Edit-Steuerelement einfügen ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) mit den am besten verfügbaren das Format der Zwischenablage oder ein bestimmtes Zwischenablageformat. Sie können auch bestimmen, ob ein rich-Edit-Steuerelement eine das Format der Zwischenablage einfügen kann.
+Die Anwendung kann den Inhalt der Zwischenablage in ein Rich-Edit-Steuerelement ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) einfügen, indem Sie entweder das beste verfügbare Zwischenablage Format oder ein bestimmtes Zwischenablage Format verwendet. Sie können auch bestimmen, ob ein Rich-Edit-Steuerelement in der Lage ist, ein Zwischenablage Format einzufügen.
 
-Können Sie kopieren oder Ausschneiden den Inhalt der aktuellen Auswahl mithilfe der [Kopie](../mfc/reference/cricheditctrl-class.md#copy) oder [Ausschneiden](../mfc/reference/cricheditctrl-class.md#cut) Member-Funktion. Sie können auf ähnliche Weise den Inhalt der Zwischenablage in eine rich-Edit-Steuerelement einfügen, mit der [einfügen](../mfc/reference/cricheditctrl-class.md#paste) Member-Funktion. Das Steuerelement fügt das erste verfügbare Format, das er erkennt, d. h., vermutlich der am häufigsten aussagekräftigen Format.
+Sie können den Inhalt der aktuellen Auswahl mithilfe der [Kopier](../mfc/reference/cricheditctrl-class.md#copy) -oder [Ausschneide](../mfc/reference/cricheditctrl-class.md#cut) Element Funktion kopieren oder Ausschneiden. Entsprechend können Sie den Inhalt der Zwischenablage mithilfe der Funktion Member [Einfügen](../mfc/reference/cricheditctrl-class.md#paste) in ein Rich-Edit-Steuerelement einfügen. Das Steuerelement fügt das erste verfügbare Format, das es erkennt, ein, das vermutlich das beschreibende Format darstellt.
 
-Um ein bestimmtes Zwischenablageformat einzufügen, können Sie die [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) Member-Funktion. Diese Funktion ist nützlich für Anwendungen mit einem Befehl Inhalte einfügen, der dem Benutzer ermöglicht, wählen Sie das Format der Zwischenablage. Sie können die [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) Memberfunktion, um zu bestimmen, ob es sich bei ein bestimmtes Format, die vom Steuerelement erkannt wird.
+Wenn Sie ein bestimmtes Zwischenablage Format einfügen möchten, können Sie die " [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) "-Member-Funktion verwenden. Diese Funktion ist nützlich für Anwendungen mit einem speziellen Befehl zum Einfügen, mit dem Benutzer das Zwischenablage Format auswählen können. Mithilfe der [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) -Member-Funktion können Sie ermitteln, ob ein bestimmtes Format vom Steuerelement erkannt wird.
 
-Sie können auch `CanPaste` zu bestimmen, ob alle verfügbaren Format der Zwischenablage von einem rich-Edit-Steuerelement erkannt wird. Diese Funktion ist nützlich, in der `OnInitMenuPopup` Handler. Eine Anwendung kann aktiviert oder graue der Befehl "Einfügen", je nachdem, ob das Steuerelement ein verfügbares Format einfügen kann.
+Sie können auch verwenden `CanPaste` , um zu bestimmen, ob ein verfügbares Zwischenablage Format von einem Rich Edit-Steuerelement erkannt wird. Diese Funktion ist im `OnInitMenuPopup` -Handler nützlich. Eine Anwendung kann den Einfüge Befehl in Abhängigkeit davon aktivieren oder grauen, ob das Steuerelement ein beliebiges verfügbares Format einfügen kann.
 
-Rich-Edit-Steuerelemente registrieren zwei Zwischenablageformate: Rich-Text-Format und ein Format namens RichEdit-Text und Objekte. Eine Anwendung kann diese Formate registrieren, indem Sie mit der [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) ordnungsgemäß verwendet werden, Angeben der **Werte CF_RTF** und **CF_RETEXTOBJ angegeben werden müssen** Werte.
+Rich Edit-Steuerelemente registrieren zwei Zwischenablage Formate: Rich-Text-Format und ein Format namens RichEdit-Text und-Objekte. Eine Anwendung kann diese Formate mithilfe der [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) -Funktion registrieren, wobei die Werte **CF_RTF** und **CF_RETEXTOBJ** angegeben werden.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,21 +1,21 @@
 ---
-title: Zeichenfolge (C++-COM-Attribut)
+title: String (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: e1b528fb922a15655de403c6099ee1d36e2fb3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407275"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514004"
 ---
 # <a name="string-c"></a>string (C++)
 
-Gibt an, dass das eindimensionale **Char**, **"wchar_t"**, `byte` (oder Äquivalent) Array oder der Zeiger auf ein solches Array muss als Zeichenfolge behandelt werden.
+Gibt an, dass das eindimensionale **char**-, `byte` **wchar_t**-, (oder äquivalente) Array oder der Zeiger auf ein solches Array als Zeichenfolge behandelt werden muss.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Gibt an, dass das eindimensionale **Char**, **"wchar_t"**, `byte` (oder Äquival
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Zeichenfolge** C++-Attribut hat die gleiche Funktionalität wie die [Zeichenfolge](/windows/desktop/Midl/string) MIDL-Attribut.
+Das **String** C++ -Attribut verfügt über die gleiche Funktionalität wie das-Attribut der- [Zeichenfolge](/windows/win32/Midl/string) .
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt, wie Sie mit **Zeichenfolge** auf eine Schnittstelle und eine Typdefinition:
+Der folgende Code zeigt, wie Sie die **Zeichenfolge** für eine Schnittstelle und für eine typedef verwenden:
 
 ```cpp
 // cpp_attr_ref_string.cpp
@@ -50,10 +50,10 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Betrifft**|Array oder Zeiger auf ein Array, das Parameter für die, die Schnittstellenmethode|
+|**Betrifft**|Array oder Zeiger auf ein Array, Schnittstellenparameter, Schnittstellen Methode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

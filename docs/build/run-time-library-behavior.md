@@ -1,5 +1,5 @@
 ---
-title: DLLs und Verhalten von Visual C++-Laufzeitbibliothek
+title: DLLs und Verhalten C++ der visuellen Lauf Zeit Bibliothek
 ms.date: 05/06/2019
 f1_keywords:
 - _DllMainCRTStartup
@@ -15,35 +15,35 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: d3f3197b6b7b01e7f69767b72286d6d21470cb0e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: d44f3bf7a8b06f567b1af221e17085d589e56aca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217748"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492618"
 ---
-# <a name="dlls-and-visual-c-run-time-library-behavior"></a>DLLs und Verhalten von Visual C++-Laufzeitbibliothek
+# <a name="dlls-and-visual-c-run-time-library-behavior"></a>DLLs und Verhalten C++ der visuellen Lauf Zeit Bibliothek
 
-Wenn Sie einer Dynamic Link Library (DLL) werden standardmäßig mithilfe von Visual Studio erstellen, enthält der Linker das visuelle Element C++ -Laufzeitbibliothek (VCRuntime). Die VCRuntime enthält Code zum Initialisieren und beenden eine C/C++-exe-Datei. Wenn in einer DLL verknüpft wird, handelt es sich bei der VCRuntime-Code enthält eine interne DLL-Einstiegspunkt-Funktion wird aufgerufen, `_DllMainCRTStartup` , die Windows-Betriebssystem-Nachrichten an die DLL an anfügen oder trennen Sie einen Prozess oder Thread verarbeitet. Die `_DllMainCRTStartup` Funktion führt wichtige Aufgaben wie das Stack-Puffer-Sicherheit eingerichtet, C-Laufzeitbibliothek (CRT)-Initialisierung und Beendigung und Aufrufe an die Konstruktoren und Destruktoren für statische und globale Objekte. `_DllMainCRTStartup` auch Hookfunktionen Aufrufe für andere Bibliotheken wie z. B. WinRT, MFC- und ATL-eigene Initialisierung und Beendigung ausführen. Ohne diese Initialisierung, der CRT und anderen Bibliotheken, sowie die statische Variablen würde in einem nicht initialisierten Zustand verbleiben. Die gleichen internen VCRuntime-Initialisierung und Beendigung Routinen heißen, ob die DLL einer statisch verknüpften CRT oder einen dynamisch verknüpfte CRT-DLL verwendet wird.
+Wenn Sie eine Dynamic Link Library (dll) mithilfe von Visual Studio erstellen, enthält der Linker standardmäßig die visuelle C++ Lauf Zeit Bibliothek (vcruntime). Die vcruntime enthält den Code, der zum Initialisieren und Beenden einerC++ C/ausführbaren Datei erforderlich ist. Beim Verknüpfen mit einer dll stellt der vcruntime-Code eine interne DLL-Einstiegspunkt Funktion `_DllMainCRTStartup` bereit, die Windows-Betriebssystem Meldungen an die dll verarbeitet, die an einen Prozess oder Thread angefügt oder von diesem getrennt werden sollen. Die `_DllMainCRTStartup` -Funktion führt wichtige Aufgaben aus, z. b. das Einrichten von Stapelpuffer Sicherheit, die Initialisierung der C-Lauf Zeit Bibliothek (CRT) und die Beendigung sowie Aufrufe von Konstruktoren und Debuggern für statische und globale Objekte. `_DllMainCRTStartup`Ruft auch Hook-Funktionen für andere Bibliotheken wie WinRT, MFC und ATL auf, um eine eigene Initialisierung und Beendigung auszuführen. Ohne diese Initialisierung würden die CRT und andere Bibliotheken sowie die statischen Variablen in einem nicht initialisierten Zustand verbleiben. Die gleichen vcruntime-internen Initialisierungs-und Beendigungs Routinen werden aufgerufen, unabhängig davon, ob Ihre DLL eine statisch verknüpfte CRT oder eine dynamisch verknüpfte CRT-DLL verwendet.
 
-## <a name="default-dll-entry-point-dllmaincrtstartup"></a>Standard-DLL Eintrag Punkt _DllMainCRTStartup
+## <a name="default-dll-entry-point-_dllmaincrtstartup"></a>Standard-DLL-Einstiegspunkt _DllMainCRTStartup
 
-In Windows, können alle DLLs eine optionale Einstiegspunktfunktion, in der Regel dem Namen enthalten `DllMain`, d. h. für Initialisierung und Beendigung aufgerufen. Dadurch haben Sie die Möglichkeit, zusätzliche Ressourcen je nach Bedarf zu reservieren oder freizugeben. Windows ruft die Einstiegspunktfunktion in den folgenden vier Situationen auf: Anfügen an bzw. Trennen von einem Prozess und Anfügen an einen bzw. Trennen von einem Thread. Wenn eine DLL-Datei in einen Prozessadressbereich, geladen wird, wenn eine Anwendung, die es verwendet, geladen wird oder wenn die Anwendung die DLL zur Laufzeit anfordert, erstellt das Betriebssystem eine separate Kopie der DLL-Daten. Dies wird als bezeichnet *prozessanfügung*. *Fügen Sie den Thread* tritt auf, wenn der Prozess, der die DLL, in geladen wird einen neuen Thread erstellt. *Trennen von einem Thread* tritt auf, wenn der Thread beendet wird, und *prozesstrennung* ist, wenn die DLL nicht mehr erforderlich ist und wird von einer Anwendung freigegeben. Das Betriebssystem stellt einen separaten Aufruf von DLL-Einstiegspunkts für jedes dieser Ereignisse, und übergeben einen *Grund* Argument für jeden Ereignistyp. Das Betriebssystem sendet beispielsweise `DLL_PROCESS_ATTACH` als die *Grund* anfügen Argument für den Prozess zu signalisieren.
+In Windows können alle DLLs eine optionale Einstiegspunkt Funktion enthalten, die in der Regel `DllMain`als bezeichnet wird und für Initialisierung und Beendigung aufgerufen wird. Dadurch haben Sie die Möglichkeit, zusätzliche Ressourcen je nach Bedarf zu reservieren oder freizugeben. Windows ruft die Einstiegspunktfunktion in den folgenden vier Situationen auf: Anfügen an bzw. Trennen von einem Prozess und Anfügen an einen bzw. Trennen von einem Thread. Wenn eine DLL in einen Prozess Adressraum geladen wird, entweder wenn eine Anwendung, die Sie verwendet, geladen wird, oder wenn die Anwendung die dll zur Laufzeit anfordert, erstellt das Betriebssystem eine separate Kopie der DLL-Daten. Dies wird als *Prozess anfügen*bezeichnet. *Thread anfügen* tritt auf, wenn der Prozess, in den die dll geladen wird, einen neuen Thread erstellt. *Thread* Trennung tritt auf, wenn der Thread beendet wird, und der *Prozess trennt* , wenn die dll nicht mehr benötigt wird und von einer Anwendung freigegeben wird. Das Betriebssystem führt einen separaten Rückruf für den DLL-Einstiegspunkt für jedes dieser Ereignisse aus und übergibt ein Argument für jeden Ereignistyp. Das Betriebssystem sendet `DLL_PROCESS_ATTACH` z. b. als Argument Argument, um das Anfügen von Prozessen zu signalisieren.
 
-Die VCRuntime-Bibliothek stellt eine Einstiegspunktfunktion namens `_DllMainCRTStartup` Standardvorgänge Initialisierungs- und Terminierungscode behandelt. Prozess anfügen, die `_DllMainCRTStartup` Funktion Puffer-sicherheitsüberprüfungen richtet, initialisiert die CRT und andere Bibliotheken, initialisiert die Laufzeit Typinformationen, initialisiert und ruft Konstruktoren für statische und nicht lokale Daten, initialisiert threadlokaler Speicher , erhöht einen interne statische Zähler für jede Anfügen und ruft dann ein Benutzer oder Bibliothek-bereitgestellten `DllMain`. Prozess trennen, die Funktion durchläuft diese Schritte in umgekehrter Reihenfolge. Ruft `DllMain`, verringert der interne Indikator, der Destruktor aufgerufen, und Aufrufe CRT Beendigung Funktionen registriert `atexit` Funktionen und alle anderen Bibliotheken der Beendigung benachrichtigt. Die Funktion gibt zurück, wenn die Anlage Zähler auf NULL zurückgeht, `FALSE` Windows an, dass die DLL entladen werden kann. Die `_DllMainCRTStartup` Funktion wird auch aufgerufen, während der Thread Anfügen und Trennen von einem Thread. In diesen Fällen die VCRuntime-Code ist zusätzliche Initialisierung oder Terminierung selbst und ruft nur `DllMain` zum Übergeben der Nachricht an. Wenn `DllMain` gibt `FALSE` vom Prozess anfügen signalisiert Fehler auftritt, `_DllMainCRTStartup` Aufrufe `DllMain` wieder und übergibt `DLL_PROCESS_DETACH` als die *Grund* -Argument, durchläuft dann die restlichen der verbindungsbeendigungs-Prozess.
+Die vcruntime-Bibliothek bietet eine Einstiegspunkt Funktion, `_DllMainCRTStartup` die aufgerufen wird, um standardmäßige Initialisierungs-und Beendigungs Vorgänge zu verarbeiten. Beim Anfügen des Prozesses `_DllMainCRTStartup` richtet die Funktion Puffer Sicherheitsüberprüfungen ein, initialisiert die CRT und andere Bibliotheken, initialisiert Lauf Zeittyp Informationen, initialisiert und ruft Konstruktoren für statische und nicht lokale Daten auf, initialisiert den Thread lokalen Speicher. , Inkremente einen internen statischen Zählers für jede Anfügung und dann einen von einem Benutzer oder einer `DllMain`Bibliothek bereitgestellten. Beim Prozess trennen durchläuft die Funktion diese Schritte in umgekehrter Reihenfolge. Sie ruft `DllMain`auf, Dekremente den internen-Wert, ruft Dekonstruktoren auf, ruft CRT `atexit` -Beendigungs Funktionen und registrierte Funktionen auf und benachrichtigt alle anderen Bibliotheken der Beendigung. Wenn der Anlagen Indikator null wechselt, gibt die Funktion zurück `FALSE` , um Windows anzuzeigen, dass die DLL entladen werden kann. Die `_DllMainCRTStartup` -Funktion wird auch beim Anfügen und trennen von Threads aufgerufen. In diesen Fällen führt der vcruntime-Code weder eine zusätzliche Initialisierung noch eine Beendigung aus, und es wird `DllMain` lediglich aufgerufen, um die Nachricht zu übergeben. Wenn `DllMain` von `FALSE` der Prozess Anfügung zurückgibt, `_DllMainCRTStartup` das Signal fehlschlägt `DLL_PROCESS_DETACH` , erneut aufruft `DllMain` und als *reason* -Argument übergibt, durchläuft den Rest des Beendigungs Vorgangs.
 
-Beim Erstellen von DLLs in Visual Studio den Standardeinstiegspunkt `_DllMainCRTStartup` vom VCRuntime in automatisch verknüpft ist. Sie müssen sich nicht an eine Einstiegspunktfunktion für Ihre DLL-Datei mithilfe der [/Entry (Einstiegspunktsymbol)](reference/entry-entry-point-symbol.md) -Linkeroption.
+Beim Aufbau von DLLs in Visual Studio wird der von vcruntime angegebene Standard Einstiegspunkt `_DllMainCRTStartup` automatisch verknüpft. Sie müssen keine Einstiegspunkt Funktion für die DLL angeben, indem Sie die Linkeroption [/Entry (Einstiegspunkt Symbol)](reference/entry-entry-point-symbol.md) verwenden.
 
 > [!NOTE]
-> Es ist zwar möglich, eine andere Einstiegspunktfunktion für eine DLL zu angeben, indem Sie den/Entry:-Linkeroption, es wird nicht empfohlen, da die Einstiegspunktfunktion müssten alle, `_DllMainCRTStartup` der Fall ist, in der gleichen Reihenfolge. Die VCRuntime bietet Funktionen, die Ihnen ermöglichen, die dessen Verhalten zu reproduzieren. Sie können z. B. Aufrufen ["__security_init_cookie"](../c-runtime-library/reference/security-init-cookie.md) sofort auf den Prozess anfügen, zur Unterstützung der [/GS (Puffer-sicherheitsüberprüfung)](reference/gs-buffer-security-check.md) Puffer, die Option aktivieren, wird. Rufen Sie die `_CRT_INIT` Funktion auf und übergibt die gleichen Parameter wie die Einstiegspunktfunktion, um den Rest der DLL-Initialisierung oder Terminierung Funktionen auszuführen.
+> Obwohl es möglich ist, eine andere Einstiegspunkt Funktion für eine DLL mithilfe der/Entry: Linker-Option anzugeben, wird Sie nicht empfohlen, da die Einstiegspunkt Funktion alle Elemente in derselben Reihenfolge duplizieren `_DllMainCRTStartup` muss. Die vcruntime stellt Funktionen bereit, die es Ihnen ermöglichen, das Verhalten zu duplizieren. Sie können z. b. [__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md) sofort für den Prozess anfügen, um die Puffer Überprüfungs Option [/GS (Buffer Security Check)](reference/gs-buffer-security-check.md) zu unterstützen. Sie können die `_CRT_INIT` -Funktion aufzurufen und die gleichen Parameter wie die Einstiegspunkt Funktion übergeben, um die restlichen Funktionen der DLL-Initialisierung oder-Beendigung auszuführen.
 
 <a name="initializing-a-dll"></a>
 
 ## <a name="initialize-a-dll"></a>Initialisieren einer DLL
 
-Die DLL möglicherweise Initialisierungscode, die beim Laden der DLL ausgeführt werden muss. In der Reihenfolge für Sie Ihren eigenen DLL Initialisierungs- und Terminierungscode Funktionen `_DllMainCRTStartup` Ruft eine Funktion namens `DllMain` , die Sie bereitstellen können. Ihre `DllMain` müssen die Signatur für eine DLL-Einstiegspunkt erforderlich sind. Die Standard-Einstiegspunktfunktion `_DllMainCRTStartup` Aufrufe `DllMain` mit denselben Parametern übergeben von Windows. Standardmäßig, wenn Sie keinen angeben einer `DllMain` -Funktion, Visual Studio bietet eine für Sie und verknüpft es im, damit `_DllMainCRTStartup` verfügt immer über eine Funktion aufrufen. Dies bedeutet, dass wenn Sie nicht benötigen, um die DLL jedoch initialisiert werden, keine besonderen man dazu Unternehmen muss beim Erstellen der DLL sind.
+Die dll verfügt möglicherweise über Initialisierungs Code, der beim Laden der DLL ausgeführt werden muss. Damit Sie Ihre eigenen dll-Initialisierungs-und Beendigungs Funktionen ausführen können `_DllMainCRTStartup` , ruft eine Funktion `DllMain` mit dem Namen auf, die Sie bereitstellen können. Ihr `DllMain` muss über die erforderliche Signatur für einen DLL-Einstiegspunkt verfügen. Die Standard-Einstiegspunkt `_DllMainCRTStartup` Funktion `DllMain` Ruft mit denselben Parametern auf, die von Windows übermittelt werden. Wenn Sie keine `DllMain` Funktion bereitstellen, stellt Visual Studio standardmäßig einen für Sie bereit und verknüpft ihn darin, `_DllMainCRTStartup` damit immer etwas aufgerufen werden kann. Dies bedeutet Folgendes: Wenn Sie die dll nicht initialisieren müssen, müssen Sie bei der Erstellung der dll nichts Besonderes tun.
 
-Dies ist die Signatur, die zum `DllMain`:
+Dies ist die Signatur, die `DllMain`für Folgendes verwendet wird:
 
 ```cpp
 #include <windows.h>
@@ -54,16 +54,16 @@ extern "C" BOOL WINAPI DllMain (
     LPVOID    const reserved); // reserved
 ```
 
-Einige Bibliotheken umschließen der `DllMain` -Funktion für Sie. In einer regulären MFC-DLL, z. B. Implementieren der `CWinApp` des Objekts `InitInstance` und `ExitInstance` Member-Funktionen zum Ausführen der Initialisierung und Beendigung, die die DLL erforderlich sind. Weitere Informationen finden Sie unter den [regular MFC-DLLs initialisieren](#initializing-regular-dlls) Abschnitt.
+Einige Bibliotheken schließen die `DllMain` Funktion für Sie ein. Implementieren Sie z. b. in einer regulären MFC- `CWinApp` dll die `InitInstance` - `ExitInstance` und-Member-Funktionen des-Objekts, um für die dll erforderliche Initialisierung und Beendigung auszuführen. Weitere Informationen finden Sie im Abschnitt [Initialisieren regulärer MFC-DLLs](#initializing-regular-dlls) .
 
 > [!WARNING]
-> Es gibt erhebliche Einschränkungen auf sichere Weise in eine DLL-Einstiegspunkt Möglichkeiten. Finden Sie unter [allgemein empfohlene Vorgehensweisen](/windows/desktop/Dlls/dynamic-link-library-best-practices) für bestimmte Windows-APIs, die in Aufrufen unsicher sind `DllMain`. Wenn Sie einen anderen Wert müssen die einfachste Initialisierung klicken Sie dann verwenden Sie keine Initialisierungsfunktion für die DLL. Sie können festlegen, müssen die Initialisierungsfunktion, nach dem Aufrufen von, `DllMain` hat ausgeführt wurde und bevor sie anderen Funktionen in die DLL aufrufen.
+> Es gibt erhebliche Beschränkungen hinsichtlich der Sicherheit eines dll-Einstiegs Punkts. Weitere Informationen finden Sie unter [allgemeine bewährte Methoden](/windows/win32/Dlls/dynamic-link-library-best-practices) für bestimmte Windows-APIs, `DllMain`die nicht für den aufzurufenden Wenn Sie etwas außer der einfachsten Initialisierung benötigen, führen Sie dies in einer Initialisierungsfunktion für die dll aus. Sie können erfordern, dass Anwendungen die Initialisierungsfunktion aufruft `DllMain` , nachdem ausgeführt wurde und bevor Sie andere Funktionen in der DLL aufruft.
 
 <a name="initializing-non-mfc-dlls"></a>
 
-### <a name="initialize-ordinary-non-mfc-dlls"></a>Normale (MFC-Fremd)-DLLs initialisieren
+### <a name="initialize-ordinary-non-mfc-dlls"></a>Initialisieren von normalen DLLs (nicht-MFC)
 
-Für die eigene Initialisierung in normalen (MFC-Fremd) DLLs, mit denen die VCRuntime bereitgestellter `_DllMainCRTStartup` Einstiegspunkt, enthalten Ihre DLL-Quellcode muss eine Funktion namens `DllMain`. Der folgende Code zeigt einen grundlegenden Skelett, mit welcher der Definition der `DllMain` beispielsweise wie folgt aussehen:
+Um Ihre eigene Initialisierung in normalen (nicht-MFC-DLLs) auszuführen, die den von vcruntime `_DllMainCRTStartup` angegebenen Einstiegspunkt verwenden, muss der DLL-Quellcode eine Funktion `DllMain`mit dem Namen enthalten. Der folgende Code zeigt ein einfaches Gerüst, das zeigt, wie `DllMain` die Definition von aussehen könnte:
 
 ```cpp
 #include <windows.h>
@@ -98,31 +98,31 @@ extern "C" BOOL WINAPI DllMain (
 ```
 
 > [!NOTE]
-> Ältere Windows-SDK-Dokumentation besagt, dass es sich bei der tatsächliche Namen der DLL-Einstiegspunkt-Funktion in der Linkerbefehlszeile mit der Option/Entry angegeben werden muss. Mit Visual Studio, Sie müssen nicht die Option/Entry verwenden, wenn der Name Ihrer Funktion Einstiegspunkt `DllMain`. In der Tat bei Verwendung der Option/Entry und Name Ihr Einstiegspunkt funktioniert etwas anders als `DllMain`, die CRT ist nicht ordnungsgemäß initialisiert abrufen, es sei denn, Ihre Einstiegspunktfunktion der gleichen Initialisierung, die aufruft `_DllMainCRTStartup` macht.
+> Ältere Windows SDK Dokumentation besagt, dass der tatsächliche Name der DLL-Einstiegspunkt Funktion in der Linker-Befehlszeile mit der/Entry-Option angegeben werden muss. In Visual Studio müssen Sie die Option/Entry nicht verwenden, wenn der Name der Einstiegspunkt Funktion ist `DllMain`. Tatsächlich wird die CRT nicht ordnungsgemäß initialisiert, wenn Sie die/Entry-Option verwenden und die `DllMain`Einstiegspunkt Funktion mit einem anderen Namen als benennen, es sei denn, die Einstiegspunkt Funktion führt dieselben Initialisierungs `_DllMainCRTStartup` Aufrufe aus, die von ausgeführt werden.
 
 <a name="initializing-regular-dlls"></a>
 
 ### <a name="initialize-regular-mfc-dlls"></a>Reguläre MFC-DLLs initialisieren
 
-Da die reguläre MFC-DLLs haben eine `CWinApp` Objekt ist, sollten sie ihre Aufgaben Initialisierungs- und Terminierungscode in am gleichen Speicherort wie einer MFC-Anwendung ausführen: in der `InitInstance` und `ExitInstance` Memberfunktionen von der DLLs `CWinApp`-abgeleitet -Klasse. Da MFC bietet eine `DllMain` -Funktion, die aufgerufen wird, werden `_DllMainCRTStartup` für `DLL_PROCESS_ATTACH` und `DLL_PROCESS_DETACH`, sollten Sie keinen eigenen `DllMain` Funktion. Der vom MFC bereitgestellten `DllMain` Funktionsaufrufe `InitInstance` beim Laden der DLL, und er ruft `ExitInstance` , bevor die DLL entladen wird.
+Da reguläre MFC-DLLs über `CWinApp` ein `CWinApp`-Objekt verfügen, sollten Sie die Initialisierungs-und Beendigungs Aufgaben am gleichen Speicherort wie eine MFC `InitInstance` - `ExitInstance` Anwendung ausführen: in den-und-Member-Funktionen der von der dll abgeleiteten klassi. Da `DllMain` MFC eine Funktion bereitstellt, die von `_DllMainCRTStartup` für `DLL_PROCESS_ATTACH` und `DLL_PROCESS_DETACH`aufgerufen wird, sollten Sie keine eigene `DllMain` Funktion schreiben. Die von MFC bereit `DllMain` gestellte Funktion `InitInstance` Ruft auf, wenn die dll geladen wird `ExitInstance` , und ruft auf, bevor die DLL entladen wird.
 
-Einer regulären MFC DLL kann von mehreren Threads durch verfolgt Aufrufen [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) und [TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue) in seine `InitInstance` Funktion. Diese Funktionen ermöglichen die DLL für threadspezifische Daten nachzuverfolgen.
+Eine reguläre MFC-DLL kann mehrere Threads nachverfolgen, indem Sie [TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc) und [TlsGetValue](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue) in `InitInstance` der Funktion aufrufen. Diese Funktionen ermöglichen es der dll, Thread spezifische Daten zu verfolgen.
 
-In der regulären MFC-DLL, die dynamisch mit MFC, verknüpft Wenn Sie alle MFC-OLE, MFC-Datenbank (oder DAO) verwenden oder MFC-Sockets, bzw. unterstützt die Debug-MFC-Erweiterungs-DLLs MFCO*Version*D.dll, MFCD*Version*D.dll und MFCN*Version*D.dll (wobei *Version* ist die Versionsnummer) automatisch verknüpft sind. Müssen Sie eine der folgenden vordefinierten Initialisierungsfunktionen aufrufen, für jede dieser DLLs, die Sie in Ihrem regulären MFC DLL des verwenden `CWinApp::InitInstance`.
+In ihrer regulären MFC-DLL, die dynamisch mit MFC verknüpft ist, wenn Sie eine MFC-OLE-, MFC-Datenbank-(oder DAO-) oder MFC-Socketunterstützung verwenden, sind die Debug-MFC-Erweiterungs-DLLs mfco*Version*d. dll, MFCD*Version*d. dll und mfcn*Version*d. dll ( Wenn *Version* die Versionsnummer ist, werden Sie automatisch verknüpft. Sie müssen eine der folgenden vordefinierten Initialisierungs Funktionen für jede dieser DLLs aufzurufen, die Sie in ihren regulären MFC-DLL-Assemblys `CWinApp::InitInstance`verwenden.
 
-|Typ der MFC-Unterstützung|Die Initialisierungsfunktion aufrufen|
+|MFC-Unterstützung|Aufzurufende Initialisierungsfunktion|
 |-------------------------|-------------------------------------|
-|MFC-OLE (MFCO*Version*D.dll)|`AfxOleInitModule`|
-|MFC-Datenbank (MFCD*Version*D.dll)|`AfxDbInitModule`|
-|MFC-Sockets (MFCN*Version*D.dll)|`AfxNetInitModule`|
+|MFC-OLE (mfco*Version*D. dll)|`AfxOleInitModule`|
+|MFC-Datenbank (MFCD*Version*D. dll)|`AfxDbInitModule`|
+|MFC-Sockets (mfcn*Version*D. dll)|`AfxNetInitModule`|
 
 <a name="initializing-extension-dlls"></a>
 
 ### <a name="initialize-mfc-extension-dlls"></a>MFC-Erweiterungs-DLLs initialisieren
 
-Da MFC-Erweiterungs-DLLs keine `CWinApp`-abgeleitete Objekt (wie reguläre MFC-DLLs), sollten Sie Ihre Initialisierungs- und Terminierungscode Code zum Hinzufügen der `DllMain` Funktion, die die MFC-DLL-Assistenten generiert.
+Da MFC `CWinApp`-Erweiterungs-DLLs über kein von abgeleitetes Objekt verfügen (wie reguläre MFC-DLLs), sollten Sie den Initialisierungs-und Beendigungs Code der `DllMain` Funktion hinzufügen, die vom MFC-DLL-Assistenten generiert wird.
 
-Der Assistent bietet den folgenden Code für die MFC-Erweiterungs-DLLs. Im Code `PROJNAME` ist ein Platzhalter für den Namen des Projekts.
+Der Assistent stellt den folgenden Code für MFC-Erweiterungs-DLLs bereit. Im Code `PROJNAME` ist ein Platzhalter für den Namen des Projekts.
 
 ```cpp
 #include "stdafx.h"
@@ -157,29 +157,29 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 }
 ```
 
-Erstellen eines neuen `CDynLinkLibrary` Objekt während der Initialisierung ermöglicht die MFC-Erweiterungs-DLL exportieren `CRuntimeClass` Objekte oder Ressourcen, um die Client-Anwendung.
+Das Erstellen eines `CDynLinkLibrary` neuen Objekts während der Initialisierung ermöglicht der MFC-Erweiterungs `CRuntimeClass` -dll das Exportieren von Objekten oder Ressourcen in die Client Anwendung.
 
-Wenn Sie beabsichtigen, die MFC-Erweiterungs-DLL von ein oder mehrere reguläre MFC-DLLs verwenden, müssen Sie keine Initialisierungsfunktion, die erstellt Exportieren einer `CDynLinkLibrary` Objekt. Von jedem der regulären MFC-DLLs, die die MFC-Erweiterungs-DLL zu verwenden, muss diese Funktion aufgerufen werden. Befindet sich in eine geeignete Stelle zum Aufrufen dieser Initialisierungsfunktion der `InitInstance` Memberfunktion die regulären MFC DLL `CWinApp`-abgeleitetes Objekt vor der Verwendung von der MFC-Erweiterungs-DLLs exportierten Klassen oder Funktionen.
+Wenn Sie die MFC-Erweiterungs-DLL aus einer oder mehreren regulären MFC-DLLs verwenden möchten, müssen Sie eine Initialisierungsfunktion exportieren, die `CDynLinkLibrary` ein-Objekt erstellt. Diese Funktion muss von allen regulären MFC-DLLs aufgerufen werden, die die MFC-Erweiterungs-DLL verwenden. Eine geeignete Stelle zum Abrufen dieser Initialisierungsfunktion ist in der `InitInstance` Member `CWinApp`-Funktion des von abgeleiteten MFC-DLL-Objekts, bevor eine der exportierten Klassen oder Funktionen der MFC-Erweiterungs-DLL verwendet wird.
 
-In der `DllMain` , dass die MFC-DLL-Assistenten generiert, den Aufruf von `AfxInitExtensionModule` erfasst die Modul Laufzeit-Klassen (`CRuntimeClass` Strukturen) sowie die Objektfactory (`COleObjectFactory` Objekte) für die Verwendung der `CDynLinkLibrary` Objekt erstellt wird. Sie sollten überprüfen, dass den Rückgabewert von `AfxInitExtensionModule`; Wenn ein NULL-Wert, von zurückgegeben wird `AfxInitExtensionModule`, Zurückgeben von 0 (null), von Ihrer `DllMain` Funktion.
+In der `DllMain` , die der MFC-DLL-Assistent generiert, `AfxInitExtensionModule` erfasst der Aufruf von die Lauf Zeit Klassen (`CRuntimeClass` Strukturen) des Moduls sowie die zugehörigen objektfactorys (`COleObjectFactory` -Objekte `CDynLinkLibrary` ), die beim Erstellen des Objekts verwendet werden sollen. Sie sollten den Rückgabewert von `AfxInitExtensionModule`überprüfen. wenn der Wert 0 (null) von `AfxInitExtensionModule`zurückgegeben wird `DllMain` , wird von der Funktion NULL zurückgegeben.
 
-Wenn der MFC-Erweiterungs-DLL in eine ausführbare Datei explizit verknüpft wird (d. h. die ausführbare Datei ruft `AfxLoadLibrary` zur DLL verknüpfen), sollten Sie einen Aufruf hinzufügen `AfxTermExtensionModule` auf `DLL_PROCESS_DETACH`. Mit dieser Funktion können MFC zum Bereinigen von den MFC-Erweiterungs-DLL, wird jeder Prozess von der MFC-Erweiterungs-DLL getrennt (Dies ist der Fall, wenn der Prozess beendet wird oder die DLL, aufgrund entladen wird einer `AfxFreeLibrary` aufrufen). Wenn der MFC-Erweiterungs-DLL implizit an die Anwendung, die den Aufruf von verknüpft wird `AfxTermExtensionModule` ist nicht erforderlich.
+Wenn Ihre MFC-Erweiterungs-DLL explizit mit einer ausführbaren Datei verknüpft wird (d `AfxLoadLibrary` . h. die ausführbaren Aufrufe zum Verknüpfen mit der dll) `AfxTermExtensionModule` , `DLL_PROCESS_DETACH`sollten Sie einen Aufruf von auf hinzufügen. Diese Funktion ermöglicht MFC das Bereinigen der MFC-Erweiterungs-DLL, wenn jeder Prozess von der MFC-Erweiterungs-DLL trennt (was geschieht, wenn der Prozess beendet wird oder wenn die dll als `AfxFreeLibrary` Ergebnis eines-Aufrufes entladen wird). Wenn Ihre MFC-Erweiterungs-DLL implizit mit der Anwendung verknüpft wird, `AfxTermExtensionModule` ist der-Vorgang nicht erforderlich.
 
-Anwendungen, die explizit die Verknüpfung mit MFC-Erweiterungs-DLLs aufrufen muss `AfxTermExtensionModule` beim Freigeben von der DLL. Sie sollten auch verwenden, `AfxLoadLibrary` und `AfxFreeLibrary` (anstelle der Win32-Funktionen `LoadLibrary` und `FreeLibrary`) Wenn die Anwendung mehrere Threads verwendet. Mithilfe von `AfxLoadLibrary` und `AfxFreeLibrary` wird sichergestellt, dass den starten und Herunterfahren Code, der ausgeführt wird, wenn die MFC-Erweiterungs-DLL geladen und entladen den globalen MFC-Status nicht beschädigt ist.
+Anwendungen, die explizit mit MFC-Erweiterungs-DLLs `AfxTermExtensionModule` verknüpfen, müssen beim Freigeben der dll aufgerufen werden. Sie sollten außerdem und `AfxLoadLibrary` `AfxFreeLibrary` (anstelle der Win32-Funktionen `LoadLibrary` und `FreeLibrary`) verwenden, wenn die Anwendung mehrere Threads verwendet. Durch `AfxLoadLibrary` die `AfxFreeLibrary` Verwendung von und wird sichergestellt, dass beim Laden und Entladen der MFC-Erweiterungs-DLL der globale MFC-Status durch das Starten und Herunterfahren des Codes beschädigt wird.
 
-Da MFCx0.dll vollständig, mit der Zeit initialisiert wurde `DllMain` ist aufgerufen wird, können Sie Speicher zuordnen und Aufrufen von MFC-Funktionen in `DllMain` (im Gegensatz zu den 16-Bit-Version von MFC).
+Da die Datei MFCx0. dll vollständig initialisiert ist, `DllMain` wenn aufgerufen wird, können Sie Arbeitsspeicher zuweisen und MFC- `DllMain` Funktionen in aufrufen (im Gegensatz zur 16-Bit-Version von MFC).
 
-Erweiterungs-DLLs kümmern multithreading durch Behandeln der `DLL_THREAD_ATTACH` und `DLL_THREAD_DETACH` Fälle, der `DllMain` Funktion. Diese Fälle werden übergeben, um `DllMain` Wenn Threads Anfügen und Trennen von aus der DLL. Aufrufen von [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) beim Anfügen an eine DLL ist, kann die DLL zu Threads Verwalten lokaler Speicher (TLS) indiziert werden, für jeden Thread angefügt wird, auf die DLL.
+Erweiterungs-DLLs können das Multithreading behandeln, indem Sie `DLL_THREAD_ATTACH` die `DLL_THREAD_DETACH` -und- `DllMain` Fälle in der-Funktion verarbeiten. Diese Fälle werden an den `DllMain` , wenn Threads an die dll anfügen und trennen. Wenn Sie [TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc) aufrufen, wenn eine DLL angefügt wird, kann die dll lokale TLS-Indizes (Thread Local Storage) für jeden an die dll angefügten Thread verwalten.
 
-Beachten Sie, dass die Headerdatei "afxdllx.h" spezielle Definitionen für Strukturen, die in MFC-Erweiterungs-DLLs, z. B. die Definition für die verwendete enthält `AFX_EXTENSION_MODULE` und `CDynLinkLibrary`. Sie sollten diese Headerdatei in der MFC-Erweiterungs-DLL verwenden.
+Beachten Sie, dass die Header Datei Afxdllx. h spezielle Definitionen für Strukturen enthält, die in MFC-Erweiterungs-DLLs verwendet `AFX_EXTENSION_MODULE` werden `CDynLinkLibrary`, z. b. die Definition für und. Sie sollten diese Header Datei in der MFC-Erweiterungs-DLL einschließen.
 
 > [!NOTE]
->  Es ist wichtig, dass Sie weder definieren noch keines der `_AFX_NO_XXX` Makros in "stdafx.h". Diese Makros sind nur zum Überprüfen, ob eine bestimmte Zielplattform dieses Feature oder nicht unterstützt vorhanden. Sie können das Programm überprüft diese Makros schreiben (z. B. `#ifndef _AFX_NO_OLE_SUPPORT`), aber Ihr Programm sollte nie definieren, oder heben Sie die Definition dieser Makros.
+>  Es ist wichtig, dass Sie keines der `_AFX_NO_XXX` Makros in stdafx. h definieren und nicht definieren. Diese Makros sind nur zum Zweck der Überprüfung vorhanden, ob eine bestimmte Zielplattform diese Funktion unterstützt. Sie können Ihr Programm schreiben, um diese Makros zu überprüfen ( `#ifndef _AFX_NO_OLE_SUPPORT`z. b.), aber Ihr Programm sollte diese Makros nie definieren bzw. nicht definieren.
 
-Eine Beispiel-Initialisierung-Funktion, die multithreading behandelt befindet sich im [Using Thread Local Storage in einer Dynamic Link Library](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library) im Windows SDK. Beachten Sie, dass das Beispiel eine Einstiegspunktfunktion Namens enthält `LibMain`, aber Sie sollten diese Funktion benennen `DllMain` , damit sie mit der MFC und C-Laufzeitbibliotheken funktioniert.
+Eine Beispiel Initialisierungsfunktion, die Multithreading behandelt, ist in die [Verwendung von lokalem Thread Speicher in einer Dynamic Link Library](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library) im Windows SDK eingeschlossen. Beachten Sie, dass das Beispiel eine Einstiegspunkt Funktion `LibMain`mit dem Namen enthält. Sie sollten diese Funktion `DllMain` jedoch benennen, damit Sie mit den MFC-und C-Laufzeitbibliotheken funktioniert.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Erstellen von C/C++-DLLs in Visual Studio](dlls-in-visual-cpp.md)<br/>
-[DllMain-Einstiegspunkt](/windows/desktop/Dlls/dllmain)<br/>
-[Dynamic Link Library, bewährte Methoden](/windows/desktop/Dlls/dynamic-link-library-best-practices)
+[DllMain-Einstiegspunkt](/windows/win32/Dlls/dllmain)<br/>
+[Bewährte Methoden für die Dynamic Link Library](/windows/win32/Dlls/dynamic-link-library-best-practices)

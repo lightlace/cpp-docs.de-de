@@ -19,26 +19,26 @@ helpviewer_keywords:
 - TVS_HASBUTTONS [MFC]
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
-ms.openlocfilehash: d03961c1c905689af5894897a59262c8f00e73fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5f28025d0349e9bcd95aba50d4110d304fed376
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181522"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510941"
 ---
 # <a name="tree-control-styles"></a>Struktursteuerelementstile
 
-Strukturansicht-Steuerelementen ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) Stile bestimmen Aspekte der Darstellung einer Struktur des Steuerelements. Die anfänglichen Formate wird festgelegt, wenn Sie die Strukturansicht-Steuerelement erstellen. Können Sie abrufen und ändern Sie die Stile, nach dem Erstellen der Strukturansicht mit der [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) und [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows-Funktionen, die Angabe **GWL_STYLE** für die *nIndex* Parameter. Eine vollständige Liste der Formate, finden Sie unter [Ansicht Fenster Struktursteuerelementstile](/windows/desktop/Controls/tree-view-control-window-styles) im Windows SDK.
+Struktur Steuerelement-Stile ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) steuern Aspekte der Darstellung eines Struktur Steuer Elements. Sie legen die anfänglichen Stile fest, wenn Sie das Struktur Steuerelement erstellen. Sie können die Stile abrufen und ändern, nachdem Sie das Struktur Steuerelement mithilfe der Windows-Funktionen [GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw) und [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) erstellt und **GWL_STYLE** für den *nIndex* -Parameter angegeben haben. Eine umfassende Liste der Stile finden Sie Unterstruktur [Ansicht-Steuerelement Fenster Stile](/windows/win32/Controls/tree-view-control-window-styles) in der Windows SDK.
 
-Die **Formate TVS_HASLINES** Stil verbessert die grafische Darstellung der Hierarchie für ein Strukturansicht-Steuerelement durch Zeichnen von Linien, die untergeordneten Elemente mit ihren entsprechenden übergeordneten Element verknüpft. Dieses Format wird nicht auf Elemente am Stamm der Hierarchie verknüpft. Zu diesem Zweck müssen Sie zum Kombinieren der **Formate TVS_HASLINES** und **TVS_LINESATROOT** Stile.
+Der **TVS_HASLINES** -Stil erweitert die grafische Darstellung der Hierarchie eines Struktur Steuer Elements durch das Zeichnen von Linien, die untergeordnete Elemente mit dem entsprechenden übergeordneten Element verknüpfen. Dieser Stil verknüpft keine Elemente am Stamm der Hierarchie. Zu diesem Zweck müssen Sie die Stile **TVS_HASLINES** und **TVS_LINESATROOT** kombinieren.
 
-Der Benutzer kann erweitert oder durch Doppelklicken auf das übergeordnete Element eines übergeordneten Elements der Liste der untergeordneten Elemente zu reduzieren. Ein Strukturansicht-Steuerelement, die die **TVS_SINGLEEXPAND** Format bewirkt, dass die zum Erweitern ausgewählt wird und das Element wird deaktiviert, um Sie zu reduzieren. Wenn der Mauszeiger verwendet wird, um das ausgewählte Element Klick, und dieses Element wird geschlossen, wird dieses erweitert. Wenn das ausgewählte Element Single-geklickt wird, wenn er geöffnet ist, wird er reduziert werden.
+Der Benutzer kann die Liste der untergeordneten Elemente eines übergeordneten Elements durch Doppelklicken auf das übergeordnete Element erweitern oder reduzieren. Ein Struktur Steuerelement, das über den **TVS_SINGLEEXPAND** -Stil verfügt, bewirkt, dass das ausgewählte Element erweitert wird und das Element nicht ausgewählt wird. Wenn mit dem Mauszeiger auf das ausgewählte Element geklickt wird und dieses Element geschlossen ist, wird es erweitert. Wenn beim Öffnen auf das ausgewählte Element geklickt wird, wird es reduziert.
 
-Ein Strukturansicht-Steuerelement, die die **TVS_HASBUTTONS** Stil wird eine Schaltfläche auf der linken Seite jedes übergeordneten Elements hinzugefügt. Der Benutzer kann die Schaltfläche zum Erweitern oder reduzieren die untergeordneten Elemente als Alternative zur durch Doppelklicken auf das übergeordnete Element klicken. **TVS_HASBUTTONS** Elemente am Stamm der Hierarchie nicht Schaltflächen hinzu. Zu diesem Zweck müssen Sie kombinieren **Formate TVS_HASLINES**, **TVS_LINESATROOT**, und **TVS_HASBUTTONS**.
+Ein Struktur Steuerelement mit dem **TVS_HASBUTTONS** -Stil fügt eine Schaltfläche auf der linken Seite jedes übergeordneten Elements hinzu. Der Benutzer kann auf die Schaltfläche klicken, um die untergeordneten Elemente als Alternative zum Doppelklicken auf das übergeordnete Element zu erweitern oder zu reduzieren. **TVS_HASBUTTONS** fügt den Elementen im Stamm der Hierarchie keine Schaltflächen hinzu. Zu diesem Zweck müssen Sie **TVS_HASLINES**, **TVS_LINESATROOT**und **TVS_HASBUTTONS**kombinieren.
 
-Die **TVS_EDITLABELS** Stil ermöglicht es dem Benutzer, die Bezeichnungen von Elementen der Strukturansicht-Steuerelement zu bearbeiten. Weitere Informationen zum Bearbeiten von Bezeichnungen finden Sie unter [Strukturansicht-Steuerelement Bezeichnungsbearbeitung](../mfc/tree-control-label-editing.md) weiter unten in diesem Thema.
+Der **TVS_EDITLABELS** -Stil ermöglicht dem Benutzer das Bearbeiten der Bezeichnungen von Struktur Steuerelementen. Weitere Informationen zum Bearbeiten von Bezeichnungen finden Sie unter Bearbeiten von Struktur [Steuer](../mfc/tree-control-label-editing.md) Element Bezeichnungen weiter unten in diesem Thema.
 
-Die **TVS_NOTOOLTIPS** -Stil deaktiviert die automatische QuickInfo-Funktion des Strukturansicht-Steuerelemente. Diese Funktion zeigt automatisch eine QuickInfo, die mit den Titel des Elements unter dem Cursor, wenn es sich bei der gesamte Titel derzeit nicht angezeigt wird.
+Der **TVS_NOTOOLTIPS** -Stil deaktiviert das automatische QuickInfo-Feature von Strukturansicht-Steuerelementen. Diese Funktion zeigt automatisch eine QuickInfo an, die den Titel des Elements unter dem Mauszeiger enthält, wenn der gesamte Titel derzeit nicht sichtbar ist.
 
 ## <a name="see-also"></a>Siehe auch
 

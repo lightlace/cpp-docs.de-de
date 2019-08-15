@@ -1,32 +1,32 @@
 ---
-title: 'Exemplarische Vorgehensweise: Anpassen von vorhandenem Code Verwendung einfache Aufgaben'
+title: 'Exemplarische Vorgehensweise: Anpassen von vorhandenem Code für die Verwendung von Lightweight-Aufgaben'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: 658cc82442bf362b7f50e787169ce75373275d9c
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 406d4d24d0042c7bded4f94dcef1e7731ab3947f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857027"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512153"
 ---
-# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Exemplarische Vorgehensweise: Anpassen von vorhandenem Code Verwendung einfache Aufgaben
+# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Exemplarische Vorgehensweise: Anpassen von vorhandenem Code für die Verwendung von Lightweight-Aufgaben
 
 In diesem Thema wird erläutert, wie vorhandener Code, der die Windows-API verwendet, zum Erstellen und Ausführen eines Threads für die Ausführung einer einfachen Aufgabe angepasst wird.
 
-Ein *einfache Aufgabe* ist eine Aufgabe, die Sie direkt aus Planen einer [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) oder [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) Objekt. Einfache Aufgaben sind nützlich, wenn Sie vorhandenen Code anpassen, um die Planungsfunktionalität der Concurrency Runtime zu verwenden.
+Eine *leichte Aufgabe* ist eine Aufgabe, die Sie direkt aus einem [parallelcurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) -oder einem [parallelcurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) -Objekt planen. Einfache Aufgaben sind nützlich, wenn Sie vorhandenen Code anpassen, um die Planungsfunktionalität der Concurrency Runtime zu verwenden.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Bevor Sie in dieser exemplarischen Vorgehensweise beginnen, lesen Sie das Thema [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Lesen Sie das Thema [Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md), bevor Sie mit dieser exemplarischen Vorgehensweise beginnen.
 
 ## <a name="example"></a>Beispiel
 
 ### <a name="description"></a>Beschreibung
 
-Das folgende Beispiel veranschaulicht die typische Verwendung der Windows-API zum Erstellen und Ausführen eines Threads. Dieses Beispiel verwendet die [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) aufzurufenden Funktion der `MyThreadFunction` in einem separaten Thread.
+Das folgende Beispiel veranschaulicht die typische Verwendung der Windows-API zum Erstellen und Ausführen eines Threads. In diesem Beispiel wird die Funktion " [kreatethread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) " `MyThreadFunction` verwendet, um die in einem separaten Thread aufzurufen.
 
 ### <a name="code"></a>Code
 
@@ -56,15 +56,15 @@ Die folgenden Schritte geben an, wie das Codebeispiel angepasst wird, um die Con
 
 [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]
 
-1. Ändern der `MyData` -Struktur so, dass eine [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) -Objekt, für die hauptanwendung signalisiert, dass der Vorgang abgeschlossen ist.
+1. Ändern Sie `MyData` die Struktur so, dass Sie ein parallelcurrency [:: Event](../../parallel/concrt/reference/event-class.md) -Objekt enthält, das der Hauptanwendung signalisiert, dass der Task abgeschlossen wurde.
 
 [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]
 
-1. Ersetzen Sie den Aufruf von `CreateThread` durch einen Aufruf der [Concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask) Methode.
+1. Ersetzen Sie `CreateThread` den-Befehl durch einen-Rückruf der [Concurrency:: CurrentScheduler:: ScheduleTask](reference/currentscheduler-class.md#scheduletask) -Methode.
 
 [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]
 
-1. Ersetzen Sie den Aufruf von `WaitForSingleObject` durch einen Aufruf der [Concurrency](reference/event-class.md#wait) Methode, um auf den Abschluss der Aufgabe warten.
+1. Ersetzen Sie den `WaitForSingleObject` -Befehl durch einen-Befehl der parallelcurrency [:: Event:: Wait](reference/event-class.md#wait) -Methode, um auf den Abschluss der Aufgabe zu warten.
 
 [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]
 
@@ -74,7 +74,7 @@ Die folgenden Schritte geben an, wie das Codebeispiel angepasst wird, um die Con
 
 [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]
 
-9. Am Ende der `MyThreadFunction` funktioniert, rufen Sie die [Concurrency::event::set](reference/event-class.md#set) Methode, um der hauptanwendung signalisiert, dass der Vorgang abgeschlossen ist.
+9. Wenden Sie am Ende der `MyThreadFunction` -Funktion die Methode "parallelcurrency [:: Event:: set](reference/event-class.md#set) " an, um der Hauptanwendung zu signalisieren, dass die Aufgabe abgeschlossen wurde.
 
 [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]
 
@@ -94,5 +94,5 @@ Im folgenden vollständigen Beispiel wird eine einfache Aufgabe verwendet, um di
 
 ## <a name="see-also"></a>Siehe auch
 
-[Aufgabenplanung](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+[Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Scheduler-Klasse](../../parallel/concrt/reference/scheduler-class.md)

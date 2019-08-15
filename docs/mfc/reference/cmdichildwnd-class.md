@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09a9846cc3d242ef7d812cb31b4dcdd515d5f6ef
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403931"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506076"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd-Klasse
 
@@ -45,53 +45,53 @@ class CMDIChildWnd : public CFrameWnd
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMDIChildWnd::CMDIChildWnd](#cmdichildwnd)|Erstellt ein `CMDIChildWnd`-Objekt.|
+|[CMDIChildWnd:: CMDIChildWnd](#cmdichildwnd)|Erstellt ein `CMDIChildWnd`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMDIChildWnd::Create](#create)|Erstellt die zugeordneten untergeordneten Windows-MDI-Fensters der `CMDIChildWnd` Objekt.|
-|[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Gibt das übergeordnete MDI-Frame, der das MDI-Clientfenster zurück.|
-|[CMDIChildWnd::MDIActivate](#mdiactivate)|Aktiviert dieses untergeordneten MDI-Fensters.|
-|[CMDIChildWnd::MDIDestroy](#mdidestroy)|Löscht dieses untergeordneten MDI-Fensters.|
-|[CMDIChildWnd::MDIMaximize](#mdimaximize)|Wird diese untergeordnete MDI-Fenster maximiert.|
-|[CMDIChildWnd::MDIRestore](#mdirestore)|Diese untergeordneten MDI-Fensters wiederhergestellt von maximierte oder minimierte Größe.|
-|[CMDIChildWnd::SetHandles](#sethandles)|Legt fest, die Handles für Menüs und Accelerator-Ressourcen.|
+|[CMDIChildWnd:: Create](#create)|Erstellt das untergeordnete Windows MDI-Fenster, `CMDIChildWnd` das dem-Objekt zugeordnet ist.|
+|[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Gibt den übergeordneten MDI-Frame des MDI-Client Fensters zurück.|
+|[CMDIChildWnd:: mdiaktivierungs](#mdiactivate)|Aktiviert dieses untergeordnete MDI-Fenster.|
+|[CMDIChildWnd:: mdidestroy](#mdidestroy)|Zerstört dieses untergeordnete MDI-Fenster.|
+|[CMDIChildWnd:: mdimaximi](#mdimaximize)|Maximiert dieses untergeordnete MDI-Fenster.|
+|[CMDIChildWnd:: mumgeleitet Store](#mdirestore)|Stellt dieses untergeordnete MDI-Fenster von der maximierten oder minimierten Größe wieder her.|
+|[CMDIChildWnd:: Sekunden](#sethandles)|Legt die Handles für Menü-und Beschleunigungs Ressourcen fest.|
 
 ## <a name="remarks"></a>Hinweise
 
-Untergeordnete MDI-Fensters sieht ähnlich wie einem typischen Rahmenfenster, mit dem Unterschied, dass die untergeordneten MDI-Fensters in ein MDI-Rahmenfenster und nicht auf dem Desktop angezeigt wird. Ein untergeordneten MDI-Fensters verfügt nicht über eine eigene Menüleiste, aber stattdessen teilt das Menü des MDI-Rahmenfenster. Das Framework ändert sich automatisch im MDI-Frame-Menü das momentan aktive untergeordnete MDI-Fenster darstellt.
+Ein untergeordnetes MDI-Fenster ähnelt einem typischen Rahmen Fenster, mit dem Unterschied, dass das untergeordnete MDI-Fenster in einem MDI-Rahmen Fenster statt auf dem Desktop angezeigt wird. Ein untergeordnetes MDI-Fenster verfügt nicht über eine eigene Menüleiste, sondern verwendet stattdessen das Menü des MDI-Rahmen Fensters. Das Framework ändert das MDI-Frame Menü automatisch so, dass es das momentan aktive untergeordnete MDI-Fenster darstellt.
 
-Um eine nützliche untergeordneten MDI-Fensters für Ihre Anwendung zu erstellen, leiten Sie eine Klasse von `CMDIChildWnd`. Hinzufügen von Membervariablen des Typs der abgeleiteten Klasse zum Speichern von Daten, die spezifisch für Ihre Anwendung. Implementieren Sie Meldungshandler-Memberfunktionen und eine Meldungszuordnung in der abgeleiteten Klasse, um anzugeben, was passiert, wenn Meldungen an das Fenster weitergeleitet werden.
+Um ein nützliches untergeordnetes MDI-Fenster für die Anwendung zu erstellen, leiten `CMDIChildWnd`Sie eine Klasse von ab. Fügen Sie der abgeleiteten Klasse Element Variablen hinzu, um Daten zu speichern, die für Ihre Anwendung spezifisch sind. Implementieren Sie Meldungshandler-Memberfunktionen und eine Meldungszuordnung in der abgeleiteten Klasse, um anzugeben, was passiert, wenn Meldungen an das Fenster weitergeleitet werden.
 
-Es gibt drei Möglichkeiten zum Erstellen eines untergeordneten MDI-Fensters aus:
+Es gibt drei Möglichkeiten, ein untergeordnetes MDI-Fenster zu erstellen:
 
-- Erstellen Sie direkt mit `Create`.
+- Erstellen Sie es direkt `Create`mithilfe von.
 
-- Erstellen Sie direkt mit `LoadFrame`.
+- Erstellen Sie es direkt `LoadFrame`mithilfe von.
 
-- Erstellen Sie sie indirekt über eine Dokumentvorlage ein.
+- Erstellen Sie es indirekt über eine Dokument Vorlage.
 
-Vor dem Aufruf `Create` oder `LoadFrame`, müssen Sie die Frame-Window-Objekt, auf dem Heap mit C++ erstellen **neue** Operator. Vor dem Aufruf `Create` können Sie auch eine Fensterklasse mit Registrieren der [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) -Funktion verwenden, um die Stile-Symbol und die Klasse für den Frame festgelegt.
+Bevor Sie oder `Create` `LoadFrame`aufruft, müssen Sie das Rahmen Fenster Objekt auf dem Heap mit dem C++ **New** -Operator erstellen. Vor dem `Create` Aufrufen von können Sie auch eine Fenster Klasse mit der globalen Funktion [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) registrieren, um das Symbol und die Klassen Stile für den Frame festzulegen.
 
-Verwenden der `Create` Member-Funktion, Parameter zum Erstellen des Frames als sofortige Argumente übergeben.
+Verwenden Sie `Create` die Member-Funktion, um die Erstellungs Parameter des Frames als unmittelbare Argumente zu übergeben.
 
-`LoadFrame` erfordert weniger Argumente als `Create`, und ruft stattdessen die meisten von den Standardwerten aus Ressourcen, einschließlich der Beschriftung, Symbol, Zugriffstastentabelle und im Menü des Frames. Zugänglich sein `LoadFrame`, alle diese Ressourcen müssen die Ressourcen-ID (z. B. IDR_MAINFRAME).
+`LoadFrame`erfordert weniger Argumente als `Create`und ruft stattdessen die meisten Standardwerte aus Ressourcen ab, einschließlich der Beschriftung, des Symbols, der Zugriffstasten Tabelle und des Menüs des Frames. Um auf zugreifen zu `LoadFrame`können, müssen alle diese Ressourcen dieselbe Ressourcen-ID aufweisen (z. b. IDR_MAINFRAME).
 
-Wenn eine `CMDIChildWnd` Objekt enthält Ansichten und Dokumente, indirekt vom Framework nicht direkt vom Programmierer erstellt werden. Die `CDocTemplate` Objekt orchestriert die Erstellung des Frames, die Erstellung der Ansichten enthält und die Verbindung der Ansichten für das entsprechende Dokument. Die Parameter der `CDocTemplate` Konstruktor Festlegen der `CRuntimeClass` der drei Klassen beteiligt (Dokument, Rahmen und Ansicht). Ein `CRuntimeClass` Objekt wird durch das Framework verwendet, um neue Frames an, wenn vom Benutzer angegeben (z. B. mithilfe der neuen Datei Befehl oder den MDI-Fensters neuen Befehl) dynamisch zu erstellen.
+Wenn ein `CMDIChildWnd` -Objekt Sichten und Dokumente enthält, werden diese indirekt durch das Framework anstatt direkt vom Programmierer erstellt. Das `CDocTemplate` -Objekt orchestriert die Erstellung des Frames, die Erstellung der enthaltenden Sichten und die Verbindung der Ansichten mit dem entsprechenden Dokument. Die Parameter des `CDocTemplate` -Konstruktors geben den `CRuntimeClass` der drei beteiligten Klassen an (Dokument, Rahmen und Ansicht). Ein `CRuntimeClass` -Objekt wird vom Framework verwendet, um neue Frames dynamisch zu erstellen, wenn Sie vom Benutzer angegeben werden (z. b. mit dem Befehl "Datei neu" oder dem MDI-Fenster "neu").
 
-Eine Rahmenfenster abgeleitete Klasse `CMDIChildWnd` muss mit DECLARE_DYNCREATE deklariert werden, in der Reihenfolge für die oben genannten RUNTIME_CLASS-Mechanismus ordnungsgemäß funktioniert.
+Eine von `CMDIChildWnd` abgeleitete Frame-Window-Klasse muss mit DECLARE_DYNCREATE deklariert werden, damit der obige RUNTIME_CLASS-Mechanismus ordnungsgemäß funktioniert.
 
-Die `CMDIChildWnd` Klasse erbt einen Großteil von der Standardimplementierung von `CFrameWnd`. Eine ausführliche Liste dieser Funktionen, finden Sie in der [CFrameWnd](../../mfc/reference/cframewnd-class.md) klassenbeschreibung. Die `CMDIChildWnd` -Klasse verfügt über die folgenden zusätzlichen Funktionen:
+Die `CMDIChildWnd` -Klasse erbt einen Großteil der Standard Implementierung `CFrameWnd`von. Eine ausführliche Liste dieser Features finden Sie in der Beschreibung der [CFrameWnd](../../mfc/reference/cframewnd-class.md) -Klasse. Die `CMDIChildWnd` -Klasse verfügt über die folgenden zusätzlichen Funktionen:
 
-- In Verbindung mit der `CMultiDocTemplate` -Klasse, die mehrere `CMDIChildWnd` Objekte mit der gleichen Dokumentvorlage nutzen dasselbe Menü, speichern die Windows-Systemressourcen.
+- In Verbindung mit der `CMultiDocTemplate` -Klasse verwenden `CMDIChildWnd` mehrere Objekte aus derselben Dokument Vorlage dasselbe Menü, das Windows-Systemressourcen speichert.
 
-- Die derzeit aktive untergeordneten MDI-Fenstermenü vollständig ersetzt des MDI-Frame-Fensters im Menü und die Beschriftung der derzeit aktiven untergeordneten MDI-Fensters wird die Beschriftung für das MDI-Rahmenfenster hinzugefügt. Weitere Beispiele für MDI-untergeordneten Fensterfunktionen, die in Verbindung mit einem MDI-Rahmenfenster implementiert werden, finden Sie unter den `CMDIFrameWnd` klassenbeschreibung.
+- Das momentan aktive untergeordnete MDI-Fenstermenü ersetzt vollständig das Menü Fenster des MDI-Frame Fensters, und die Beschriftung des momentan aktiven untergeordneten MDI-Fensters wird der Beschriftung des MDI-Frame Fensters hinzugefügt. Weitere Beispiele für untergeordnete MDI-Fenster Funktionen, die in Verbindung mit einem MDI-Rahmen Fenster implementiert werden `CMDIFrameWnd` , finden Sie in der Beschreibung der-Klasse.
 
-Verwenden Sie nicht die C++ **löschen** Operator, um ein Rahmenfenster zu zerstören. Verwenden Sie stattdessen `CWnd::DestroyWindow`. Die `CFrameWnd` Implementierung `PostNcDestroy` löscht das C++-Objekt aus, wenn das Fenster zerstört wird. Der Benutzer schließt das Rahmenfenster, der Standardwert `OnClose` Handler ruft `DestroyWindow`.
+Verwenden Sie nicht den C++ **Delete** -Operator, um ein Rahmen Fenster zu zerstören. Verwenden Sie stattdessen `CWnd::DestroyWindow`. Die `CFrameWnd` Implementierung von `PostNcDestroy` löscht das C++ -Objekt, wenn das Fenster zerstört wird. Wenn der Benutzer das Rahmen Fenster schließt, ruft `OnClose` `DestroyWindow`der Standard Handler auf.
 
-Weitere Informationen zu `CMDIChildWnd`, finden Sie unter [Frame Windows](../../mfc/frame-windows.md).
+Weitere Informationen zu `CMDIChildWnd`finden Sie unter [Rahmen Fenster](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -109,9 +109,9 @@ Weitere Informationen zu `CMDIChildWnd`, finden Sie unter [Frame Windows](../../
 
 **Header:** afxwin.h
 
-##  <a name="cmdichildwnd"></a>  CMDIChildWnd::CMDIChildWnd
+##  <a name="cmdichildwnd"></a>CMDIChildWnd:: CMDIChildWnd
 
-Aufruf zum Erstellen einer `CMDIChildWnd` Objekt.
+Ruft auf, um `CMDIChildWnd` ein-Objekt zu erstellen.
 
 ```
 CMDIChildWnd();
@@ -119,15 +119,15 @@ CMDIChildWnd();
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie `Create` zum Erstellen des Fensters sichtbar.
+Rufen `Create` Sie auf, um das sichtbare Fenster zu erstellen.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CMDIChildWnd::Create](#create).
+  Weitere Informationen finden Sie im Beispiel für [CMDIChildWnd:: Create](#create).
 
-##  <a name="create"></a>  CMDIChildWnd::Create
+##  <a name="create"></a>CMDIChildWnd:: Create
 
-Diese Memberfunktion zum Erstellen eines untergeordneten Windows-MDI-Fensters, und fügen Sie ihn zum Aufrufen der `CMDIChildWnd` Objekt.
+Rufen Sie diese Member-Funktion auf, um ein untergeordnetes Windows MDI-Fenster `CMDIChildWnd` zu erstellen und an das-Objekt anzufügen.
 
 ```
 virtual BOOL Create(
@@ -142,22 +142,22 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parameter
 
 *lpszClassName*<br/>
-Verweist auf eine Null-terminierte Zeichenfolge, die Namen die Windows-Klasse (ein [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Struktur). Der Klassenname kann einen beliebigen Namen registriert werden die [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) globale Funktion. Sollte NULL sein, für die Standard `CMDIChildWnd`.
+Verweist auf eine mit NULL endenden Zeichenfolge, die die Windows-Klasse benennt (eine [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) -Struktur). Der Klassenname kann ein beliebiger Name sein, der bei der globalen Funktion [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) registriert ist. Muss für einen Standard `CMDIChildWnd`Wert NULL sein.
 
 *lpszWindowName*<br/>
-Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen darstellt. Als Text verwendet der Titelleiste.
+Verweist auf eine mit NULL endenden Zeichenfolge, die den Fensternamen darstellt. Wird als Text für die Titelleiste verwendet.
 
 *dwStyle*<br/>
-Gibt das Zeitfenster [Stil](../../mfc/reference/styles-used-by-mfc.md#window-styles) Attribute. Das Format WS_CHILD ist erforderlich.
+Gibt die Fenster [Stil](../../mfc/reference/styles-used-by-mfc.md#window-styles) Attribute an. Der WS_CHILD-Stil ist erforderlich.
 
-*rect*<br/>
-Enthält die Größe und Position des Fensters. Die `rectDefault` Wert ermöglicht Windows zum Angeben der Größe und Position des neuen `CMDIChildWnd`.
+*Rect*<br/>
+Enthält die Größe und Position des Fensters. Der `rectDefault` -Wert ermöglicht es Windows, die Größe und Position der neuen `CMDIChildWnd`anzugeben.
 
 *pParentWnd*<br/>
-Gibt an, das Fenster des übergeordneten. Wenn der Wert NULL ist, wird das Hauptanwendungsfenster verwendet.
+Gibt das übergeordnete Fenster des Fensters an. Wenn der Wert NULL ist, wird das Hauptanwendungsfenster verwendet.
 
 *pContext*<br/>
-Gibt an, eine [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) Struktur. Dieser Parameter kann NULL sein.
+Gibt eine [ckreatecontext](../../mfc/reference/ccreatecontext-structure.md) -Struktur an. Dieser Parameter kann NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -165,9 +165,9 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Der derzeit aktive untergeordneten-MDI-Rahmenfenster kann die Beschriftung des übergeordneten Rahmenfensters bestimmen. Dieses Feature ist deaktiviert, durch das FWS_ADDTOTITLE-Formatbit auf, von dem untergeordneten Rahmenfenster deaktivieren.
+Das momentan aktive untergeordnete MDI-Rahmen Fenster kann die Beschriftung des übergeordneten Rahmen Fensters bestimmen. Diese Funktion wird deaktiviert, indem das FWS_ADDTOTITLE-Stilbit des untergeordneten Rahmen Fensters ausgeschaltet wird.
 
-Das Framework ruft diese Memberfunktion als Reaktion auf einen Benutzerbefehl zum Erstellen eines untergeordneten Fensters, und das Framework verwendet die *"pContext"* Parameter, um das untergeordnete Fenster ordnungsgemäß mit der Anwendung herzustellen. Beim Aufruf `Create`, *"pContext"* kann NULL sein.
+Das Framework ruft diese Member-Funktion als Reaktion auf einen Benutzer Befehl auf, um ein untergeordnetes Fenster zu erstellen, und das Framework verwendet den *pContext* -Parameter, um das untergeordnete Fenster ordnungsgemäß mit der Anwendung zu verbinden. Wenn Sie aufzurufen `Create`, kann *pContext* NULL sein.
 
 ### <a name="example"></a>Beispiel
 
@@ -183,9 +183,9 @@ Beispiel 2:
 
 [!code-cpp[NVC_MFCWindowing#9](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]
 
-##  <a name="getmdiframe"></a>  CMDIChildWnd::GetMDIFrame
+##  <a name="getmdiframe"></a>CMDIChildWnd:: getmdiframe
 
-Rufen Sie diese Funktion zum Zurückgeben von übergeordneten MDI-Rahmens.
+Mit dieser Funktion wird der übergeordnete MDI-Frame zurückgegeben.
 
 ```
 CMDIFrameWnd* GetMDIFrame();
@@ -193,19 +193,19 @@ CMDIFrameWnd* GetMDIFrame();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf das übergeordnete MDI-Rahmenfenster.
+Ein Zeiger auf das übergeordnete MDI-Rahmen Fenster.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Frame, der zurückgegeben wird zwei übergeordnete Elemente daraus die `CMDIChildWnd` und das übergeordnete Element des Fensters des Typs MDICLIENT, die verwaltet die `CMDIChildWnd` Objekt. Rufen Sie die [GetParent](../../mfc/reference/cwnd-class.md#getparent) Memberfunktion zurückgegeben der `CMDIChildWnd` unmittelbar übergeordnete Objekt im MDICLIENT als vorübergehende `CWnd` Zeiger.
+Der zurückgegebene Frame besteht aus zwei übergeordneten `CMDIChildWnd` Elementen, die aus dem entfernt werden, und ist das übergeordnete Element des `CMDIChildWnd` Windows-Typs, das das Objekt verwaltet. Aufrufen der [GetParent](../../mfc/reference/cwnd-class.md#getparent) -Member-Funktion, `CMDIChildWnd` um das unmittelbare MdiClient-übergeordnete Element `CWnd` des Objekts als temporären Zeiger zurückzugeben.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
+  Weitere Informationen finden Sie im Beispiel für [CMDIFrameWnd:: mdisetmenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
 
-##  <a name="mdiactivate"></a>  CMDIChildWnd::MDIActivate
+##  <a name="mdiactivate"></a>CMDIChildWnd:: mdiaktivierungs
 
-Rufen Sie diese Memberfunktion, um einen untergeordneten MDI-Fensters, unabhängig von der MDI-Rahmenfenster zu aktivieren.
+Diese Member-Funktion wird aufgerufen, um ein untergeordnetes MDI-Fenster unabhängig vom MDI-Rahmen Fenster zu aktivieren.
 
 ```
 void MDIActivate();
@@ -213,15 +213,15 @@ void MDIActivate();
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Frame aktiv wird, wird das untergeordnete Fenster, das zuletzt aktiviert war ebenfalls aktiviert.
+Wenn der Frame aktiv wird, wird auch das untergeordnete Fenster aktiviert, das zuletzt aktiviert wurde.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
+  Weitere Informationen finden Sie im Beispiel für [CMDIFrameWnd:: getwindowmenupopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
 
-##  <a name="mdidestroy"></a>  CMDIChildWnd::MDIDestroy
+##  <a name="mdidestroy"></a>CMDIChildWnd:: mdidestroy
 
-Rufen Sie diese Memberfunktion zum Zerstören eines untergeordneten MDI-Fensters.
+Diese Member-Funktion zum Zerstören eines untergeordneten MDI-Fensters aufzurufen.
 
 ```
 void MDIDestroy();
@@ -229,15 +229,15 @@ void MDIDestroy();
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion entfernt den Titel des untergeordneten Fensters aus dem Rahmenfenster und das untergeordnete Fenster deaktiviert.
+Die Member-Funktion entfernt den Titel des untergeordneten Fensters aus dem Rahmen Fenster und deaktiviert das untergeordnete Fenster.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCWindowing#10](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]
 
-##  <a name="mdimaximize"></a>  CMDIChildWnd::MDIMaximize
+##  <a name="mdimaximize"></a>CMDIChildWnd:: mdimaximi
 
-Rufen Sie diese Memberfunktion, um einen untergeordneten MDI-Fensters zu maximieren.
+Diese Member-Funktion zum Maximieren eines untergeordneten MDI-Fensters aufzurufen.
 
 ```
 void MDIMaximize();
@@ -245,15 +245,15 @@ void MDIMaximize();
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn ein untergeordnetes Fenster maximiert ist, wird Windows, um seinen Clientbereich, geben Sie den Clientbereich des Rahmenfensters zu machen. Windows Steuerelementmenü des untergeordneten Fensters in der Menüleiste des Frames so anordnet, dass der Benutzer die Wiederherstellung oder das untergeordnete Fenster zu schließen und den Titel des untergeordneten Fensters auf den Titel des Rahmenfensters hinzugefügt.
+Wenn ein untergeordnetes Fenster maximiert ist, ändert Windows seine Größe, damit der Client Bereich den Client Bereich des Rahmen Fensters auffüllen kann. Windows legt das Steuerelement Menü des untergeordneten Fensters in der Menüleiste des Frames ab, sodass der Benutzer das untergeordnete Fenster wiederherstellen oder schließen und dem Rahmen Fenstertitel den Titel des untergeordneten Fensters hinzufügen kann.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCWindowing#11](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]
 
-##  <a name="mdirestore"></a>  CMDIChildWnd::MDIRestore
+##  <a name="mdirestore"></a>CMDIChildWnd:: mumgeleitet Store
 
-Rufen Sie diese Memberfunktion zum Wiederherstellen eines untergeordneten MDI-Fensters von maximierte oder minimierte Größe an.
+Diese Member-Funktion wird aufgerufen, um ein untergeordnetes MDI-Fenster von maximierter oder minimierter Größe wiederherzustellen.
 
 ```
 void MDIRestore();
@@ -263,9 +263,9 @@ void MDIRestore();
 
 [!code-cpp[NVC_MFCWindowing#12](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]
 
-##  <a name="sethandles"></a>  CMDIChildWnd::SetHandles
+##  <a name="sethandles"></a>CMDIChildWnd:: Sekunden
 
-Legt fest, die Handles für Menüs und Accelerator-Ressourcen.
+Legt die Handles für Menü-und Beschleunigungs Ressourcen fest.
 
 ```
 void SetHandles(
@@ -276,18 +276,18 @@ void SetHandles(
 ### <a name="parameters"></a>Parameter
 
 *hMenu*<br/>
-Das Handle einer Ressource im Menü.
+Das Handle einer Menü Ressource.
 
 *hAccel*<br/>
-Das Handle einer Ressource für die Zugriffstaste.
+Das Handle einer Zugriffstasten-Ressource.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Funktion zum Festlegen von Menüs und Accelerator das MDI-untergeordnete Fenster-Objekt verwendeten Ressourcen.
+Mit dieser Funktion werden die Menü-und Zugriffstasten Ressourcen festgelegt, die vom untergeordneten MDI-Fenster Objekt verwendet werden.
 
 ## <a name="see-also"></a>Siehe auch
 
-[MDI MFC-Beispiel](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel-MDI](../../overview/visual-cpp-samples.md)<br/>
 [MFC-Beispiel MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [MFC-Beispiel SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd-Klasse](../../mfc/reference/cframewnd-class.md)<br/>

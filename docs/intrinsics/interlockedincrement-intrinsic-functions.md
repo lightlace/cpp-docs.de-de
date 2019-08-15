@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58c71c577e3d87ca72836134a4f895f32170fe7f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350087"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509360"
 ---
-# <a name="interlockedincrement-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedIncrement“
+# <a name="_interlockedincrement-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedIncrement“
 
 **Microsoft-spezifisch**
 
-Geben Sie die systeminterne Compiler-Unterstützung für das Win32-Windows-SDK [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement) Funktion.
+Bereitstellen von System interner Compilerunterstützung für die Win32-Windows SDK [interlockedinkrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement) -Funktion.
 
 ## <a name="syntax"></a>Syntax
 
@@ -101,7 +101,7 @@ __int64 _InterlockedIncrement64_nf(
 #### <a name="parameters"></a>Parameter
 
 *lpAddend*<br/>
-[in, out] Zeiger auf die Variable inkrementiert werden soll.
+[in, out] Ein Zeiger auf die Variable, die inkrementiert werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -122,7 +122,7 @@ Während die `_InterlockedIncrement`-Funktion mit 32-Bit-Ganzzahlwerten arbeitet
 
 Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken zum Abrufen bzw. Freigeben benötigen, wie am Anfang und Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit dem Suffix `_nf` („keine Umgrenzung“) fungieren nicht als Arbeitsspeicherbarriere.
 
-Die Variable, auf die der `lpAddend`-Parameter zeigt, muss an einer 32-Bit-Grenze ausgerichtet sein; andernfalls schlägt diese Funktion auf x86-Multiprozessorsystemen und allen Nicht-x86-Systemen fehl. Weitere Informationen finden Sie unter [ausrichten](../cpp/align-cpp.md).
+Die Variable, auf die der `lpAddend`-Parameter zeigt, muss an einer 32-Bit-Grenze ausgerichtet sein; andernfalls schlägt diese Funktion auf x86-Multiprozessorsystemen und allen Nicht-x86-Systemen fehl. Weitere Informationen finden Sie unter [Ausrichten](../cpp/align-cpp.md).
 
 Die Win32-Funktion wird in `Wdm.h` oder `Ntddk.h` deklariert.
 
@@ -130,7 +130,7 @@ Diese Routinen sind nur als systeminterne Funktionen verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel zur Verwendung `_InterlockedIncrement`, finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Ein Beispiel für die Verwendung `_InterlockedIncrement`von finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 **Ende Microsoft-spezifisch**
 

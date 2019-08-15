@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409277"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514430"
 ---
-# <a name="maxis"></a>max_is
+# <a name="max_is"></a>max_is
 
-Legt fest, den maximalen Wert für ein gültiges Array-Index.
+Legt den maximalen Wert für einen gültigen Array Index fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,11 +26,11 @@ Legt fest, den maximalen Wert für ein gültiges Array-Index.
 ### <a name="parameters"></a>Parameter
 
 *expression*<br/>
-Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argumentliste Slots sind zulässig.
+Mindestens ein C-sprach Ausdruck. Leere Argument Slots sind zulässig.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Max_is** C++ Attribut hat die gleiche Funktionalität wie die [Max_is](/windows/desktop/Midl/max-is) MIDL-Attribut.
+Das **Max_is** C++ -Attribut verfügt über die gleiche Funktionalität wie das [Max_is](/windows/win32/Midl/max-is) -Mittell-Attribut.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,16 +38,16 @@ Die **Max_is** C++ Attribut hat die gleiche Funktionalität wie die [Max_is](/wi
 
 |||
 |-|-|
-|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|
+|**Betrifft**|Feld in **Struktur** oder **Union**, Schnittstellenparameter, Schnittstellen Methode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
 |**Ungültige Attribute**|**size_is**|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter [First_is](first-is.md) ein Beispiel für einen Abschnitt eines Arrays angeben.
+Ein Beispiel für die Angabe eines Abschnitts eines Arrays finden Sie unter [First_is](first-is.md) .
 
 ## <a name="see-also"></a>Siehe auch
 

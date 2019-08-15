@@ -40,19 +40,19 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: 7e88bcf5bf7ffc5eba6feecd545cda8f7950829c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a937f8fcd18dd62bb7c63cf60c250cf7986b69b7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353880"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500906"
 ---
-# <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
+# <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
 Setzt einen Zeichenfolgenzeiger um ein Zeichen zurück.
 
 > [!IMPORTANT]
-> **Mbsdec** und **Mbsdec_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsdec** und **mbsdec_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -79,28 +79,28 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>Parameter
 
 *start*<br/>
-Zeiger auf ein beliebiges Zeichen (oder für **_mbsdec** und **_mbsdec_l**, das erste Byte eines multibytezeichens) in der Quellzeichenfolge *starten* muss vorangehen *aktuelle* in der Quellzeichenfolge.
+Zeiger auf ein beliebiges Zeichen (oder für **_mbsdec** und **_mbsdec_l**, das erste Byte eines multibytezeichens) in der Quell Zeichenfolge. der *Start* muss dem *aktuellen* in der Quell Zeichenfolge vorangestellt sein.
 
 *current*<br/>
-Zeiger auf ein beliebiges Zeichen (oder für **_mbsdec** und **_mbsdec_l**, das erste Byte eines multibytezeichens) in der Quellzeichenfolge *aktuelle* müssen *starten* in der Quellzeichenfolge.
+Zeiger auf ein beliebiges Zeichen (oder für **_mbsdec** und **_mbsdec_l**, das erste Byte eines multibytezeichens) in der Quell Zeichenfolge. *Current* muss in der Quell Zeichenfolge auf *Start* folgen.
 
 *locale*<br/>
 Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_mbsdec**, **_mbsdec_l**, **_strdec**, und **_wcsdec** jeweils einen Zeiger zurück, auf das Zeichen, die unmittelbar vorangestellt *aktuelle*; **_mbsdec** gibt **NULL** Wenn der Wert des *starten* ist größer als oder gleich dem des *aktuelle*. **_tcsdec** Zuordnungen, die diese Funktionen und der Rückgabewert hängt von der Zuordnung.
+**_mbsdec**, **_mbsdec_l**, **_strdec**und **_wcsdec** geben einen Zeiger auf das Zeichen zurück, das unmittelbar vor dem *aktuellen*liegt. **_mbsdec** gibt **null** zurück, wenn der Wert von *Start* größer oder gleich dem der *aktuellen*ist. **_tcsdec** wird einer dieser Funktionen zugeordnet, und der Rückgabewert hängt von der Zuordnung ab.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbsdec** und **_mbsdec_l** Funktionen geben einen Zeiger auf das erste Byte des multibytezeichens, die unmittelbar vorangestellt *aktuelle* in die Zeichenfolge, enthält *starten*.
+Die **_mbsdec** -Funktion und die **_mbsdec_l** -Funktion geben einen Zeiger auf das erste Byte des multibytezeichens zurück, das unmittelbar vor dem *aktuellen* in der Zeichenfolge steht, die den *Start*enthält.
 
-Der Ausgabewert wird von der Einstellung beeinflusst die **LC_CTYPE** -kategorieeinstellung des Gebietsschemas, siehe [Setlocale, _wsetlocale](setlocale-wsetlocale.md) für Weitere Informationen.  **_mbsdec** erkennt multibytezeichensequenzen gemäß dem Gebietsschema, das derzeit verwendet wird, wird beim **_mbsdec_l** ist identisch, verwendet jedoch stattdessen den Gebietsschemaparameter, der übergeben wird. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert wird von der Einstellung der **LC_CTYPE** -Kategorieeinstellung des Gebiets Schemas beeinflusst. Weitere Informationen finden Sie [unter setlocale, _wsetlocale](setlocale-wsetlocale.md) .  **_mbsdec** erkennt multibytezeichensequenzen gemäß dem Gebiets Schema, das derzeit verwendet wird, während **_mbsdec_l** identisch ist, mit dem Unterschied, dass es stattdessen den übergebenen Gebiets Schema Parameter verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Wenn *starten* oder *aktuelle* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Diese Funktion gibt zurück, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **EINVAL** und **Errno** zu **EINVAL**.
+Wenn *Start* oder *Current* **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt diese Funktion **EINVAL** zurück und legt **errno** auf **EINVAL**fest.
 
 > [!IMPORTANT]
-> Diese Funktionen sind möglicherweise für Pufferüberlaufrisiken anfällig. Pufferüberläufe können für Systemangriffe eingesetzt werden, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Diese Funktionen sind möglicherweise für Pufferüberlaufrisiken anfällig. Pufferüberläufe können für Systemangriffe eingesetzt werden, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -108,7 +108,7 @@ Wenn *starten* oder *aktuelle* ist **NULL**, Handler für ungültige Parameter a
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec** und **_wcsdec** sind Single-Byte-Zeichen und Breitzeichen von **_mbsdec** und **_mbsdec_l**. **_strdec** und **_wcsdec** werden nur für diese Zuordnung bereitgestellt und sollte nicht anderweitig verwendet werden.
+**_strdec** und **_wcsdec** sind Einzel Byte Zeichen-und breit Zeichen Versionen von **_mbsdec** und **_mbsdec_l**. **_strdec** und **_wcsdec** werden nur für diese Zuordnung bereitgestellt und sollten andernfalls nicht verwendet werden.
 
 Weitere Informationen finden Sie unter [Verwenden von Zuordnungen für generischen Text](../../c-runtime-library/using-generic-text-mappings.md) und [Textzuordnungen für generischen Text](../../c-runtime-library/generic-text-mappings.md).
 
@@ -125,7 +125,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung von **_tcsdec**.
+Das folgende Beispiel zeigt die Verwendung von **_tcsdec**.
 
 ```cpp
 // crt_tcsdec.cpp
@@ -151,7 +151,7 @@ int main()
 }
 ```
 
-Das folgende Beispiel veranschaulicht die Verwendung von **_mbsdec**.
+Das folgende Beispiel zeigt die Verwendung von **_mbsdec**.
 
 ```cpp
 // crt_mbsdec.cpp

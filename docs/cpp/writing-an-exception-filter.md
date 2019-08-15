@@ -4,21 +4,21 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-ms.openlocfilehash: 2bc159247604877fb22ff6084e1fda36946561a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0234d36fb70c646e2d97540cbfa6ce5ae1e0ba9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209376"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498447"
 ---
 # <a name="writing-an-exception-filter"></a>Schreiben eines Ausnahmefilters
 
-Sie können eine Ausnahme behandeln, indem Sie entweder auf die Ebene des Ausnahmehandlers wechseln oder die Ausführung fortsetzen. Anstatt den Code im Ausnahmehandler, um die Ausnahme und das durchfallen zu behandeln, können Sie *Filter* bereinigen Sie das Problem, und klicken Sie dann durch-1 zurückzugeben, normalen Fluss fortzusetzen, ohne dass den Stapel gelöscht.
+Sie können eine Ausnahme behandeln, indem Sie entweder auf die Ebene des Ausnahmehandlers wechseln oder die Ausführung fortsetzen. Anstatt den ausnahmehandlercode zur Behandlung der Ausnahme zu verwenden und zu durchlaufen, können Sie *Filter* verwenden, um das Problem zu bereinigen, und dann durch Zurückgeben von-1 den normalen Flow fortsetzen, ohne den Stapel zu löschen.
 
 > [!NOTE]
->  Einige Ausnahmen können nicht fortgesetzt werden. Wenn *Filter* ausgewertet wird auf-1 für eine derartige Ausnahme, löst das System eine neue Ausnahme aus. Beim Aufruf [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552), Sie bestimmen, ob die Ausnahme fortgesetzt wird.
+>  Einige Ausnahmen können nicht fortgesetzt werden. Wenn *Filter* für eine solche Ausnahme zu-1 ausgewertet wird, löst das System eine neue Ausnahme aus. Wenn Sie [raianexception](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception)aufzurufen, bestimmen Sie, ob die Ausnahme fortgesetzt wird.
 
-Der folgende Code verwendet beispielsweise einen Funktionsaufruf in der *Filter* Ausdruck: Diese Funktion behandelt das Problem, und klicken Sie dann gibt-1 zurück, um die normalen ablaufsteuerung fortzufahren:
+Beispielsweise verwendet der folgende Code einen Funktions aufrufim *Filter* Ausdruck: Diese Funktion behandelt das Problem und gibt dann-1 zurück, um die normale Ablauf Steuerung fortzusetzen:
 
 ```cpp
 // exceptions_Writing_an_Exception_Filter.cpp
@@ -45,11 +45,11 @@ int Eval_Exception ( int n_except ) {
 }
 ```
 
-Es ist eine gute Idee, einen Funktionsaufruf im Verwenden der *Filter* Ausdruck immer *Filter* komplexe Funktionen ausführen muss. Das Auswerten des Ausdrucks verursacht die Ausführung der Funktion, in diesem Fall `Eval_Exception`.
+Es empfiehlt sich, einen Funktionsaufruf im *Filter* Ausdruck zu verwenden, wenn der *Filter* einen komplexen Vorgang ausführen muss. Das Auswerten des Ausdrucks verursacht die Ausführung der Funktion, in diesem Fall `Eval_Exception`.
 
-Beachten Sie die Verwendung von [GetExceptionCode](/windows/desktop/Debug/getexceptioncode) , die die Ausnahme zu bestimmen. Sie müssen diese Funktion innerhalb des Filters selbst aufrufen. `Eval_Exception` kann nicht aufgerufen werden `GetExceptionCode`, jedoch muss ihr den Ausnahmecode übergeben.
+Beachten Sie die Verwendung von [GetExceptionCode](/windows/win32/Debug/getexceptioncode) , um die Ausnahme zu bestimmen. Sie müssen diese Funktion innerhalb des Filters selbst aufrufen. `Eval_Exception`kann nicht `GetExceptionCode`aufgerufen werden, es muss jedoch der Ausnahme Code an ihn übermittelt werden.
 
-Dieser Handler übergibt die Steuerung an einen anderen Handler, sofern die Ausnahme keine Ganzzahl oder ein Gleitkommaüberlauf ist. Wenn dies der Fall ist, ruft der Handler eine Funktion (`ResetVars` ist nur ein Beispiel, keine API-Funktion) auf, um mehrere globale Variablen zurückzusetzen. *Anweisung Anweisungsblock 2*, die in diesem Beispiel leer ist, kann nicht ausgeführt werden, da `Eval_Exception` gibt nie EXCEPTION_EXECUTE_HANDLER (1) zurück.
+Dieser Handler übergibt die Steuerung an einen anderen Handler, sofern die Ausnahme keine Ganzzahl oder ein Gleitkommaüberlauf ist. Wenn dies der Fall ist, ruft der Handler eine Funktion (`ResetVars` ist nur ein Beispiel, keine API-Funktion) auf, um mehrere globale Variablen zurückzusetzen. *Statement-Block-2*, das in diesem Beispiel leer ist, kann nie ausgeführt werden, `Eval_Exception` da nie EXCEPTION_EXECUTE_HANDLER (1) zurückgibt.
 
 Die Verwendung eines Funktionsaufrufs ist ein gutes allgemeines Verfahren für die Behandlung von komplexen Filterausdrücken. Zwei andere hilfreiche Funktionen der Programmiersprache C sind:
 
@@ -57,7 +57,7 @@ Die Verwendung eines Funktionsaufrufs ist ein gutes allgemeines Verfahren für d
 
 - Der Kommaoperator
 
-Der bedingte Operator ist häufig nützlich, da er verwendet werden kann, um nach einem bestimmten Rückgabecode zu suchen und dann einen von zwei unterschiedlichen Werten zurückzugeben. Beispielsweise erkennt der Filter in den folgenden Code die Ausnahme nur dann, wenn die Ausnahme STATUS_INTEGER_OVERFLOW ist:
+Der bedingte Operator ist häufig nützlich, da er verwendet werden kann, um nach einem bestimmten Rückgabecode zu suchen und dann einen von zwei unterschiedlichen Werten zurückzugeben. Beispielsweise erkennt der Filter im folgenden Code die Ausnahme nur, wenn die Ausnahme STATUS_INTEGER_OVERFLOW ist:
 
 ```cpp
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ? 1 : 0 ) {
@@ -69,7 +69,7 @@ Der bedingte Operator ist in diesem Fall in erster Linie dafür verantwortlich, 
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 ```
 
-Der bedingte Operator ist nützlicher in Situationen, in denen Sie möglicherweise der Filter-1, EXCEPTION_CONTINUE_EXECUTION auswerten möchten.
+Der bedingte Operator ist in Situationen, in denen der Filter möglicherweise als "-1", "EXCEPTION_CONTINUE_EXECUTION" ausgewertet werden soll, nützlicher.
 
 Der Komma-Operator ermöglicht die Ausführung mehrerer unabhängiger Vorgänge innerhalb eines einzelnen Ausdrucks. Die Wirkung gleicht ungefähr der Ausführung mehrerer Anweisungen und der anschließenden Rückgabe des Wertes des letzten Ausdrucks. Der folgenden Code speichert z. B. den Ausnahmecode in einer Variablen und testet dann auf:
 

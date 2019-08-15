@@ -49,19 +49,19 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 4a12c87f1cff14582e21fbb7d617100fc2853dab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7736e1e7889642c41a5e3853ac13221ab22f6d03
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362282"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500922"
 ---
-# <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
+# <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
 Ruft die Länge einer Zeichenfolge mithilfe des aktuellen Gebietsschemas oder einem angegebenen Gebietsschema ab. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md)
 
 > [!IMPORTANT]
-> **_mbslen**, **_mbslen_l**, **_mbstrlen**, und **_mbstrlen_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslen**, **_mbslen_l**, **_mbstrlen**und **_mbstrlen_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -98,13 +98,13 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt die Anzahl der Zeichen in *str*, mit Ausnahme den Terminaldienste Null. Kein Rückgabewert ist, mit Ausnahme von Fehleranzeige reserviert **_mbstrlen** und **_mbstrlen_l**, zurückgeben `((size_t)(-1))` Wenn die Zeichenfolge ein ungültiges Multibytezeichen enthält.
+Jede dieser Funktionen gibt die Anzahl der Zeichen in *Str*zurück, ohne das Terminal NULL. Kein Rückgabewert ist zur Angabe eines Fehlers reserviert, mit Ausnahme von **_mbstrlen** und **_mbstrlen_l**, die `((size_t)(-1))` zurückgeben, wenn die Zeichenfolge ein ungültiges Multibytezeichen enthält.
 
 ## <a name="remarks"></a>Hinweise
 
-**Strlen** interpretiert die Zeichenfolge als Einzelbyte-Zeichenfolge, sodass der Rückgabewert immer gleich der Anzahl von Bytes, ist auch wenn die Zeichenfolge Multibytezeichen enthält. **Wcslen** ist eine Breitzeichen-Version von **Strlen**; das Argument der **Wcslen** ist eine Breitzeichen-Zeichenfolge und die Anzahl von Zeichen in Breite Zeichen (zwei Bytes) ist. **Wcslen** und **Strlen** Verhalten sich andernfalls identisch.
+die Zeichenfolge wird von der Zeichenfolge als Einzel Byte-Zeichenfolge interpretiert, sodass der Rückgabewert immer der Anzahl von Bytes entspricht, selbst wenn die Zeichenfolge Multibytezeichen enthält. **wcslen** ist eine breit Zeichen Version von **strinlen**. Das Argument von **wcslen** ist eine Zeichenfolge mit breit Zeichen, und die Anzahl der Zeichen ist breit Zeichen (zwei Byte). **wcslen** und **Straume** Verhalten sich andernfalls identisch.
 
-**Sicherheitshinweis**: Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Sicherheitshinweis**: Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -114,7 +114,7 @@ Jede dieser Funktionen gibt die Anzahl der Zeichen in *str*, mit Ausnahme den Te
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen** und **_mbslen_l** Geben Sie die Anzahl von Multibytezeichen in einer Multibyte Zeichenfolge zurück, überprüfen jedoch nicht für die Gültigkeit der Multibytezeichen. **_mbstrlen** und **_mbstrlen_l** test für die Gültigkeit von Multibytezeichen und erkennen Multibyte-Zeichenfolgen. Wenn die Zeichenfolge, um übergeben **_mbstrlen** oder **_mbstrlen_l** enthält ein ungültiges Multibytezeichen für die Codepage, die Funktion gibt-1 zurück und legt **Errno** zu **EILSEQ**.
+**_mbslen** und **_mbslen_l** geben die Anzahl von Multibytezeichen in einer Multibytezeichenfolge zurück, überprüfen jedoch nicht die Gültigkeit von Multibytezeichen. **_mbstrlen** und **_mbstrlen_l** testen die Gültigkeit von Multibytezeichen und erkennen Multibyte-Zeichen folgen. Wenn die an **_mbstrlen** oder **_mbstrlen_l** über gegebene Zeichenfolge ein ungültiges Multibytezeichen für die Codepage enthält, gibt die Funktion-1 zurück und legt **errno** auf **EILSEQ**fest.
 
 Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 

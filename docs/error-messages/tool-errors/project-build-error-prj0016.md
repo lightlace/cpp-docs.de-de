@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
-ms.openlocfilehash: ada89b074fd8e0c2bfc75ba833e9c5966a145312
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6733ef1f390f2ff377356dda3f7cd3ebfe10cc2b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359422"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509880"
 ---
 # <a name="project-build-error-prj0016"></a>Projektbuildfehler PRJ0016
 
-Sicherheitseinstellungen des Benutzers verhindern, dass den Prozess erstellt werden. Diese Einstellungen sind zum Erstellen erforderlich.
+Die Sicherheitseinstellungen des Benutzers verhindern, dass der Prozess erstellt wird. Diese Einstellungen sind zum entwickeln erforderlich.
 
-Sie sind als Benutzer angemeldet, die keine Berechtigungen zum Erstellen von Prozessen unter Verwendung eines Prozesses. Sie müssen die Berechtigungsebenen für dieses Benutzerkonto ändern oder wenden Sie sich an den Administrator Ihres Kontos.
+Sie sind als Benutzer angemeldet, der nicht über die Berechtigung zum Erstellen von Prozessen mit einem Prozess verfügt. Sie müssen die Berechtigungsstufen für dieses Benutzerkonto ändern oder Ihren Konto Administrator kontaktieren.
 
-Dieser Fehler kann auch auftreten, wenn Sie der folgenden Registrierungsschlüssel festgelegt ist:
+Dieser Fehler kann auch auftreten, wenn der folgende Registrierungsschlüssel festgelegt ist:
 
 \\\HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun
 
-Löschen Sie den RestrictRun-Schlüssel, um diesen Fehler zu beheben. Wenn dieser Registrierungsschlüssel erforderlich ist, fügen Sie **vcspawn.exe** zur Liste der Einträge im Schlüssel.
+Löschen Sie den Schlüssel RestrictRun, um diesen Fehler zu beheben. Wenn dieser Registrierungsschlüssel benötigt wird, fügen Sie " **vcspawn. exe** " an die Liste der Einträge im Schlüssel an.
 
-Eine weitere Ursache für diesen Fehler ist, dass es sich bei Ihrem richtlinieneinstellung VCSpawn.exe als zulässige Fenster Programm für dieses Benutzerkonto nicht unter dem Registrierungsschlüssel HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun enthalten ist.
+Eine weitere Ursache für diesen Fehler besteht darin, dass die Richtlinien Einstellung "VCSPAWN. exe" nicht unter dem Registrierungsschlüssel HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun als zulässiges Fensterprogramm für dieses Benutzerkonto enthält.
 
-Weitere Informationen finden Sie unter [Systemrichtlinieneinstellungen Einhaltung](https://msdn.microsoft.com/library/aa372139), im Abschnitt "nur zulässig, führen Sie Windows-Anwendungen".
+Weitere Informationen finden Sie unter [einhalten von System Richtlinien Einstellungen](/previous-versions/windows/desktop/Policy/adhering-to-system-policy-settings)im Abschnitt "nur zulässige Windows-Anwendungen ausführen".

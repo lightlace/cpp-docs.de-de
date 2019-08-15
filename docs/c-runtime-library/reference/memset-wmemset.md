@@ -26,12 +26,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: d517c5565ef07a834d7ef864e495a4bb33351007
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7b57292f582491a7750b4e12a8072112eac4dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285147"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501013"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
@@ -65,13 +65,13 @@ Anzahl der Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert des *Dest*.
+Der Wert von *dest*.
 
 ## <a name="remarks"></a>Hinweise
 
-Legt die ersten *Anzahl* Zeichen *Dest* auf das Zeichen *c*.
+Legt die ersten *count* -Zeichen von *dest* auf das Zeichen *c*fest.
 
-**Sicherheitshinweis** stellen Sie sicher, dass der Zielpuffer genug Platz für mindestens über *Anzahl* Zeichen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Sicherheitshinweis** Stellen Sie sicher, dass der Ziel Puffer über ausreichend Platz für mindestens *count* -Zeichen verfügt. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,7 +107,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Before: This is a test of the memset function
@@ -135,7 +135,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Before: This is a test of the wmemset function

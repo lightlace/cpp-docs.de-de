@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: e4e60f0e6e4ee22712e4bbce344fd6437cf3db7e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: fb307d5557c0e136c1c44c29f08af6062bb1c19d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916409"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508611"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Darstellen von Bildern aus einer Bildliste
 
@@ -28,7 +28,7 @@ Die Stile **ILD_BLEND25** und **ILD_BLEND50** weisen das Bild mit der Hervorhebu
 
 Ein nicht maskiertes Bild wird mithilfe des `SRCCOPY` Raster Vorgangs in den Zielgeräte Kontext kopiert. Die Farben im Bild erscheinen unabhängig von der Hintergrundfarbe des Geräte Kontexts identisch. Die in `Draw` angegebenen Zeichnungs Stile haben auch keine Auswirkung auf das Aussehen eines nicht maskierten Bilds.
 
-Zusätzlich zur Draw-Member-Funktion erweitert eine andere Funktion, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), die Fähigkeit zum Rendering eines Bilds. `DrawIndirect`übernimmt als Parameter eine [imagelistdrawparameams](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) -Struktur. Diese Struktur kann zum Anpassen des Renderings des aktuellen Bilds verwendet werden, einschließlich der Verwendung von "Raster Operation (ROP)"-Codes. Weitere Informationen zu den Code-Codes finden Sie unter [Raster Vorgangs Codes](/windows/desktop/gdi/raster-operation-codes) und [Bitmaps als Pinsel](/windows/desktop/gdi/bitmaps-as-brushes) in der Windows SDK.
+Zusätzlich zur Draw-Member-Funktion erweitert eine andere Funktion, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), die Fähigkeit zum Rendering eines Bilds. `DrawIndirect`übernimmt als Parameter eine [imagelistdrawparameams](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) -Struktur. Diese Struktur kann zum Anpassen des Renderings des aktuellen Bilds verwendet werden, einschließlich der Verwendung von "Raster Operation (ROP)"-Codes. Weitere Informationen zu den Code-Codes finden Sie unter [Raster Vorgangs Codes](/windows/win32/gdi/raster-operation-codes) und [Bitmaps als Pinsel](/windows/win32/gdi/bitmaps-as-brushes) in der Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 

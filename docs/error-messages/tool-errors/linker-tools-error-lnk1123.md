@@ -5,12 +5,12 @@ f1_keywords:
 - LNK1123
 helpviewer_keywords:
 - LNK1123
-ms.openlocfilehash: b67a2a4ddad13988967b7cc7d827862a2a6fe933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31fd634291bfb0af17348197ae8a6225ac490c89
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255228"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509903"
 ---
 # <a name="linker-tools-error-lnk1123"></a>Linkertoolfehler LNK1123
 
@@ -25,13 +25,13 @@ Eingabedateien müssen das Common Object File Format(COFF)-Format haben. Besitzt
 
 - Übernehmen Sie alle Servicepacks und Updates für Ihre Version von Visual Studio. Dies ist besonders wichtig für Visual Studio 2010.
 
-- Versuchen Sie das Erstellen mit deaktivierten inkrementellen Verknüpfen. Wählen Sie in der Menüleiste **Projekt** und **Eigenschaften** aus. In der **Eigenschaftenseiten** Dialogfeld erweitern Sie **Konfigurationseigenschaften**, **Linker**. Ändern Sie den Wert der **inkrementelles Verknüpfen aktivieren** zu **keine**.
+- Versuchen Sie das Erstellen mit deaktivierten inkrementellen Verknüpfen. Wählen Sie in der Menüleiste **Projekt** und **Eigenschaften** aus. Erweitern Sie im Dialogfeld Eigenschaften **Seiten** die Option **Konfigurations Eigenschaften**, **Linker**. Ändern Sie den Wert von **inkrementelles Verknüpfen aktivieren** in **Nein**.
 
 - Überprüfen Sie, ob die Version von CVTRES.EXE, die zuerst in Ihrer PATH-Umgebungsvariable gefunden wird, der Version der in Ihrem Projekt verwendeten Buildtoos oder der Version des Plattformtoolsets entspricht.
 
-- Versuchen Sie, die Option „Manifest einbetten“ zu deaktivieren. Wählen Sie in der Menüleiste **Projekt** und **Eigenschaften** aus. In der **Eigenschaftenseiten** Dialogfeld erweitern Sie **Konfigurationseigenschaften**, **Manifesttool**, **ein- und Ausgabe**. Ändern Sie den Wert der **Manifest einbetten** zu **keine**.
+- Versuchen Sie, die Option „Manifest einbetten“ zu deaktivieren. Wählen Sie in der Menüleiste **Projekt** und **Eigenschaften** aus. Erweitern Sie im Dialogfeld Eigenschaften **Seiten** die Option **Konfigurations Eigenschaften**, **Manifest-Tool**, **Eingabe und Ausgabe**. Ändern Sie den Wert des **Einbettungs Manifests** in **Nein**.
 
-- Stellen Sie sicher, dass der Dateityp gültig ist. Stellen Sie zum Beispiel sicher, dass ein OMF-Objekt ein 32-Bit-Objekt und kein 16-Bit-Objekt ist. Weitere Informationen finden Sie unter [. OBJ-Dateien als Linkereingabe](../../build/reference/dot-obj-files-as-linker-input.md) und [PE-Format](/windows/desktop/Debug/pe-format).
+- Stellen Sie sicher, dass der Dateityp gültig ist. Stellen Sie zum Beispiel sicher, dass ein OMF-Objekt ein 32-Bit-Objekt und kein 16-Bit-Objekt ist. Weitere Informationen finden Sie unter [. OBJ-Dateien als Eingabe](../../build/reference/dot-obj-files-as-linker-input.md) -und [PE-Format](/windows/win32/Debug/pe-format)für den Linker.
 
 - Stellen Sie sicher, dass die Datei nicht beschädigt ist. Erstellen Sie neu, falls erforderlich.
 

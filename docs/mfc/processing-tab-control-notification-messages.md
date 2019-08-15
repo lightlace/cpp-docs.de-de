@@ -8,18 +8,18 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - tab controls [MFC], processing notifications
 ms.assetid: 758ccb7a-9e73-48f8-9073-23f7cb09918c
-ms.openlocfilehash: 4be9074f3e7d7ce4321402d27fc26283a52436e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97abde8285a3baf307df79fd97d4f9a379c8f58f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391386"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507832"
 ---
 # <a name="processing-tab-control-notification-messages"></a>Verarbeiten von Benachrichtigungsmeldungen des Registersteuerelements
 
-Da der Benutzer klicken Sie auf Registerkarten oder Schaltflächen, das Registerkarten-Steuerelement ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) sendet benachrichtigungsmeldungen an das übergeordnete Fenster. Behandeln Sie diese Nachrichten, wenn Sie darauf reagieren möchten. Klickt der Benutzer eine Registerkarte, sollten Sie beispielsweise Daten des Steuerelements auf der Seite vor der Anzeige die Voreinstellung.
+Wenn Benutzer auf Tabstopps oder Schaltflächen klicken, sendet das Registerkarten-Steuerelement ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) Benachrichtigungs Meldungen an das übergeordnete Fenster. Behandeln Sie diese Nachrichten, wenn Sie darauf reagieren möchten. Wenn der Benutzer beispielsweise auf eine Registerkarte klickt, empfiehlt es sich, die Steuerelement Daten vor der Anzeige auf der Seite vorzulegen.
 
-Prozess WM_NOTIFY-Meldungen aus dem Registerkarten-Steuerelement in Ihrer Klasse Ansichts- oder Dialogfeldobjekt. Verwenden Sie das Fenster "Eigenschaften" zum Erstellen einer [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) Handlerfunktion mit einer Switch-Anweisung basierend auf der Nachricht behandelt wird. Eine Liste der Benachrichtigungen ein Registerkarten-Steuerelement an sein übergeordnetes Fenster senden kann, finden Sie unter den **Benachrichtigungen** Abschnitt [Registerkarte Steuerelementverweis](/windows/desktop/controls/tab-control-reference) im Windows SDK.
+Verarbeiten von WM_NOTIFY-Nachrichten aus dem Registerkarten-Steuerelement in der Ansicht oder Dialogfeld Klasse Verwenden Sie die Eigenschaftenfenster, um eine [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) -Handlerfunktion mit einer Switch-Anweisung zu erstellen, die darauf basiert, welche Benachrichtigungs Meldung verarbeitet wird. Eine Liste der Benachrichtigungen, die ein Registerkarten-Steuerelement an das übergeordnete Fenster senden kann, finden Sie im Abschnitt " **Benachrichtigungen** " unter Registerkarten- [Steuerelement Verweis](/windows/win32/controls/tab-control-reference) in der Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 

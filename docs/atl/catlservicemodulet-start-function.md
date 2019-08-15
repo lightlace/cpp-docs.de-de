@@ -1,24 +1,24 @@
 ---
-title: 'CAtlServiceModuleT:: Start-Funktion'
+title: '-Funktion für die Funktion "-Start":'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Start method
 ms.assetid: b5193a23-41bc-42d2-8d55-3eb43dc62238
-ms.openlocfilehash: 204d02a1122ee78b38850bedae5f98b1f338ab1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6de15f40e89bfffba504db04ee7a16b2a68cac9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250744"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491662"
 ---
-# <a name="catlservicemoduletstart-function"></a>CAtlServiceModuleT:: Start-Funktion
+# <a name="catlservicemoduletstart-function"></a>-Funktion für die Funktion "-Start":
 
-Wenn der Dienst ausgeführt wird, `_tWinMain` Aufrufe `CAtlServiceModuleT::WinMain`, die wiederum ruft `CAtlServiceModuleT::Start`.
+Wenn der Dienst ausgeführt wird, `_tWinMain` ruft `CAtlServiceModuleT::WinMain`auf, der wiederum aufruft `CAtlServiceModuleT::Start`.
 
-`CAtlServiceModuleT::Start` ein Array von richtet `SERVICE_TABLE_ENTRY` Strukturen, die jeder Dienst seine Startfunktion beim zugeordnet. Dieses Array wird dann an die Win32-API-Funktion übergeben [StartServiceCtrlDispatcher](/windows/desktop/api/winsvc/nf-winsvc-startservicectrldispatchera). Theoretisch kann eine EXE-Datei mehrere Dienste behandeln und das Array möglicherweise mehrere `SERVICE_TABLE_ENTRY` Strukturen. Allerdings unterstützt ein ATL generierte-Dienst derzeit nur ein Dienst pro exe-Datei. Daher verfügt das Array über einen einzelnen Eintrag, der den Dienstnamen enthält, und `_ServiceMain` als die Startfunktion. `_ServiceMain` ist eine statischen Memberfunktion `CAtlServiceModuleT` aufruft, die nicht statische Memberfunktion `ServiceMain`.
+`CAtlServiceModuleT::Start`richtet ein Array von `SERVICE_TABLE_ENTRY` -Strukturen ein, die jeden Dienst seiner Start Funktion zuordnen. Dieses Array wird dann an die Win32-API-Funktion [StartServiceCtrlDispatcher](/windows/win32/api/winsvc/nf-winsvc-startservicectrldispatcherw)übergeben. Theoretisch könnte eine exe mehrere Dienste verarbeiten, und das Array könnte mehrere `SERVICE_TABLE_ENTRY` Strukturen aufweisen. Derzeit unterstützt ein ATL-generierter Dienst jedoch nur einen Dienst pro exe. Daher verfügt das Array über einen einzelnen Eintrag, der den Dienstnamen und `_ServiceMain` als Start Funktion enthält. `_ServiceMain`ist eine statische Member-Funktion `CAtlServiceModuleT` von, die die nicht statische Member- `ServiceMain`Funktion aufruft.
 
 > [!NOTE]
->  Fehler des `StartServiceCtrlDispatcher` zur Verbindung mit der dienststeuerungs-Manager (SCM)-wahrscheinlich bedeutet, dass das Programm nicht als Dienst ausgeführt wird. In diesem Fall die Anwendung ruft `CAtlServiceModuleT::Run` direkt, damit das Programm als lokaler Server ausführen kann. Weitere Informationen zu Ausführung des Programms als lokaler Server, finden Sie unter [Debuggen Tipps](../atl/debugging-tips.md).
+>  `StartServiceCtrlDispatcher` Wenn Sie keine Verbindung mit dem Dienststeuerungs-Manager (SCM) herstellen, bedeutet dies wahrscheinlich, dass das Programm nicht als Dienst ausgeführt wird. In diesem Fall ruft `CAtlServiceModuleT::Run` das Programm direkt auf, sodass das Programm als lokaler Server ausgeführt werden kann. Weitere Informationen zum Ausführen des Programms als lokaler Server finden Sie unter [Tipps zum Debuggen](../atl/debugging-tips.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -48,18 +48,18 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: baa3131a7ca533af30e9ed73cd2698c06011488e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344440"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509446"
 ---
-# <a name="interlockedcompareexchange-intrinsic-functions"></a>Systeminterne Funktionen "_InterlockedCompareExchange"
+# <a name="_interlockedcompareexchange-intrinsic-functions"></a>Systeminterne Funktionen "_InterlockedCompareExchange"
 
 **Microsoft-spezifisch**
 
-Eine interlocked vergleichen und austauschen.
+Führt einen Interlocked-Vergleich und-Austausch durch.
 
 ## <a name="syntax"></a>Syntax
 
@@ -182,10 +182,10 @@ __int64 _InterlockedCompareExchange64_rel(
 [in, out] Zeiger auf den Zielwert. Das Zeichen wird ignoriert.
 
 *Exchange*<br/>
-[in] Exchange-Wert. Das Zeichen wird ignoriert.
+in Austausch Wert. Das Zeichen wird ignoriert.
 
 *Comparand*<br/>
-[in] Wert, der Vergleich mit dem Ziel. Das Zeichen wird ignoriert.
+in Wert, der mit dem Ziel verglichen werden soll. Das Zeichen wird ignoriert.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -202,27 +202,27 @@ Der Rückgabewert ist der Anfangswert des `Destination`-Zeigers.
 
 ## <a name="remarks"></a>Hinweise
 
-`_InterlockedCompareExchange` enthält einen atomarischen Vergleich der `Destination` Wert mit dem `Comparand` Wert. Wenn der `Destination`-Wert gleich dem `Comparand`-Wert ist, wird der `Exchange`-Wert in der von `Destination` angegebenen Adresse gespeichert. Andernfalls wird kein Vorgang.
+`_InterlockedCompareExchange`führt einen atomaren Vergleich des- `Destination` Werts mit dem `Comparand` -Wert aus. Wenn der `Destination`-Wert gleich dem `Comparand`-Wert ist, wird der `Exchange`-Wert in der von `Destination` angegebenen Adresse gespeichert. Andernfalls führt keine Operation aus.
 
-`_InterlockedCompareExchange` bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) Funktion.
+`_InterlockedCompareExchange`bietet systeminterne Compilerunterstützung für die Win32-Windows SDK [interlockedcompareexchange](/windows/win32/api/winnt/nf-winnt-interlockedcompareexchange) -Funktion.
 
-Es gibt mehrere Varianten von `_InterlockedCompareExchange` , variieren je nach den Datentypen, die sie betreffen und gibt an, ob prozessorspezifische erwerben oder Release-Semantik verwendet werden.
+Es gibt verschiedene Variationen `_InterlockedCompareExchange` , die abhängig von den Datentypen, die Sie einbeziehen, und davon, ob eine prozessorspezifische Abruf-oder releasesemantik verwendet wird, variieren.
 
-Während der `_InterlockedCompareExchange` -Funktion arbeitet mit langen ganzen Zahlen, `_InterlockedCompareExchange8` funktioniert mit ganzzahligen 8-Bit-Werten, `_InterlockedCompareExchange16` funktioniert mit kurzen ganzen Zahlen, und `_InterlockedCompareExchange64` funktioniert mit ganzzahligen 64-Bit-Werten.
+Während die `_InterlockedCompareExchange` -Funktion für lange ganzzahlige `_InterlockedCompareExchange8` Werte arbeitet, funktioniert mit ganzzahligen `_InterlockedCompareExchange16` 8-Bit-Werten, funktioniert `_InterlockedCompareExchange64` mit kurzen ganzzahligen Werten und arbeitet mit ganzzahligen 64-Bit-Werten.
 
-Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel` für Semantiken zum Abrufen bzw. Freigeben, z. B. am Beginn und am Ende eines kritischen Abschnitts. Die systeminternen ARM-Funktionen mit einer `_nf` ("no Fence")-Suffix nicht als Arbeitsspeicherbarriere fungieren.
+Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel` für Semantiken zum Abrufen bzw. Freigeben, z. B. am Beginn und am Ende eines kritischen Abschnitts. Die systeminternen Arm-Funktionen `_nf` mit dem Suffix ("No fence") fungieren nicht als Arbeitsspeicher Barriere.
 
 Die systeminternen Funktionen mit dem Suffix `_np` („no prefetch“) verhindern, dass ein möglicher Vorabrufvorgang vom Compiler eingefügt wird.
 
-Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen, die HLE nicht unterstützen aufgerufen werden, wird der Hinweis ignoriert.
+Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen aufgerufen werden, die hle nicht unterstützen, wird der Hinweis ignoriert.
 
 Diese Routinen sind nur als systeminterne Funktionen verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird `_InterlockedCompareExchange` für die einfache Low-Level-Threadsynchronisierung verwendet. Der Ansatz unterliegt gewissen Einschränkungen als Grundlage für die Multithreadprogrammierung; Es wird angezeigt, um der typischen Verwendung von ineinandergreifenden systeminternen Funktionen zu veranschaulichen. Verwenden Sie für optimale Ergebnisse die Windows-API. Weitere Informationen zur Multithreadprogrammierung finden Sie unter [Schreiben von Win32-Multithreadprogrammen](../parallel/writing-a-multithreaded-win32-program.md).
+Im folgenden Beispiel wird `_InterlockedCompareExchange` für die einfache Low-Level-Threadsynchronisierung verwendet. Der Ansatz hat seine Einschränkungen als Grundlage für die Multithreadprogrammierung. Es wird gezeigt, wie Sie die typische Verwendung der intrinsie systeminternen Funktionen veranschaulichen. Verwenden Sie für optimale Ergebnisse die Windows-API. Weitere Informationen zur Multithreadprogrammierung finden Sie unter [Schreiben eines multithreadwin32-Programms](../parallel/multithreading-with-c-and-win32.md#writing-a-multithreaded-win32-program).
 
-```
+```cpp
 // intrinExample.cpp
 // compile with: /EHsc /O2
 // Simple example of using _Interlocked* intrinsics to

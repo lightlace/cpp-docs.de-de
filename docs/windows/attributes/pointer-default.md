@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407509"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514257"
 ---
-# <a name="pointerdefault"></a>pointer_default
+# <a name="pointer_default"></a>pointer_default
 
-Gibt an, das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der obersten Ebene Zeigern, die in der Parameterliste angezeigt werden.
+Gibt das Standard Zeiger Attribut für alle Zeiger an, ausgenommen Zeiger der obersten Ebene, die in Parameterlisten angezeigt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,15 +26,15 @@ Gibt an, das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der
 ### <a name="parameters"></a>Parameter
 
 *value*<br/>
-Ein Wert, der der Zeigertyp beschreibt: **Ptr**, **Ref**, oder **eindeutige**.
+Ein Wert, der den Zeigertyp beschreibt: " **ptr**", " **ref**" oder " **Unique**".
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Pointer_default** C++ Attribut hat die gleiche Funktionalität wie die [Pointer_default](/windows/desktop/Midl/pointer-default) MIDL-Attribut.
+Das **Pointer_default** C++ -Attribut verfügt über die gleiche Funktionalität wie das [Pointer_default](/windows/win32/Midl/pointer-default) -Mittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [Defaultvalue](defaultvalue.md) für ein Beispiel für die Verwendung von **Pointer_default**.
+Im Beispiel für [DefaultValue](defaultvalue.md) finden Sie eine Beispiel Verwendung von **Pointer_default**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,8 +44,8 @@ Siehe das Beispiel für [Defaultvalue](defaultvalue.md) für ein Beispiel für d
 |-|-|
 |**Betrifft**|**interface**|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

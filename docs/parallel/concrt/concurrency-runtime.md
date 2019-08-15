@@ -6,38 +6,38 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: a96c54a01788f03158b9fcdcd0bf72eb2b1ce84d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449693"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510550"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 
 Die Concurrency Runtime für C++ hilft Ihnen beim Schreiben robuster, skalierbarer und reaktionsschneller paralleler Anwendungen. Es stellt eine höhere Abstraktionsebene bereit, sodass Sie die Infrastrukturdetails im Zusammenhang mit der Parallelität nicht verwalten müssen. Sie können mit ihm außerdem Planungsrichtlinien angeben, die den Servicequalitätsforderungen Ihrer Anwendungen entsprechen. Verwenden Sie diese Ressourcen für die ersten Schritte beim Arbeiten mit der Concurrency Runtime.
 
-Referenzdokumentation finden Sie unter [Verweis](../../parallel/concrt/reference/reference-concurrency-runtime.md).
+Die Referenz Dokumentation finden Sie unter [Referenz](../../parallel/concrt/reference/reference-concurrency-runtime.md).
 
 > [!TIP]
->  Die Concurrency Runtime basiert stark auf C++11-Funktionen und übernimmt den moderneren C++-Stil. Lesen Sie weitere [Willkommen zurück bei C++](../../cpp/welcome-back-to-cpp-modern-cpp.md).
+>  Die Concurrency Runtime basiert stark auf C++11-Funktionen und übernimmt den moderneren C++-Stil. Weitere Informationen finden Sie unter [Willkommen zurück bei C++ ](../../cpp/welcome-back-to-cpp-modern-cpp.md).
 
 ## <a name="choosing-concurrency-runtime-features"></a>Auswählen von Concurrency Runtime-Funktionen
 
 |||
 |-|-|
 |[Übersicht](../../parallel/concrt/overview-of-the-concurrency-runtime.md)|Erläutert die Bedeutung der Concurrency Runtime und beschreibt ihre wichtigsten Funktionen.|
-|[Vergleich mit anderen Parallelitätsmodellen](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|Beschreibt die Concurrency Runtime im Vergleich mit anderen Parallelitätsmodellen, z. B. dem Windows-Threadpool und OpenMP, damit Sie das Parallelitätsmodell verwenden können, das die Anforderungen Ihrer Anwendungen am besten erfüllt.|
+|[Vergleich mit anderen Parallelitäts Modellen](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|Beschreibt die Concurrency Runtime im Vergleich mit anderen Parallelitätsmodellen, z. B. dem Windows-Threadpool und OpenMP, damit Sie das Parallelitätsmodell verwenden können, das die Anforderungen Ihrer Anwendungen am besten erfüllt.|
 |[Migrieren von OpenMP zur Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)|Vergleicht OpenMP mit der Concurrency Runtime und enthält Beispiele, in denen das Migrieren von vorhandenem OpenMP-Code für die Verwendung der Concurrency Runtime gezeigt wird.|
 |[Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Stellt die PPL vor, die parallele Schleifen, Aufgaben und parallele Container bereitstellt.|
 |[Asynchrone Agents Library](../../parallel/concrt/asynchronous-agents-library.md)|Erläutert die Verwendung von asynchronen Agents und asynchroner Nachrichtenübergabe, um auf einfache Weise Datenfluss- und Pipelineaufgaben in die Anwendungen zu integrieren.|
-|[Aufgabenplanung](../../parallel/concrt/task-scheduler-concurrency-runtime.md)|Stellt den Aufgabenplaner vor, mit dem Sie die Leistung Ihrer Desktop-Apps, die die Concurrency Runtime verwenden, optimieren können.|
+|[Taskplaner](../../parallel/concrt/task-scheduler-concurrency-runtime.md)|Stellt den Aufgabenplaner vor, mit dem Sie die Leistung Ihrer Desktop-Apps, die die Concurrency Runtime verwenden, optimieren können.|
 
 ## <a name="task-parallelism-in-the-ppl"></a>Aufgabenparallelität in der PPL
 
 |||
 |-|-|
-|[Aufgabenparallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [Vorgehensweise: Verwenden von „parallel_invoke“ zum Schreiben einer Routine für paralleles Sortieren](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von „parallel_invoke“](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [Vorgehensweise: Erstellen eines Tasks, der nach einer Verzögerung abgeschlossen wird](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Beschreibt Aufgaben und Aufgabengruppen, mit denen Sie asynchronen Code schreiben und parallele Arbeit in kleinere Teile zerlegen können.|
+|[Aufgaben Parallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [Vorgehensweise: Verwenden von „parallel_invoke“ zum Schreiben einer Routine für paralleles Sortieren](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von „parallel_invoke“](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [Vorgehensweise: Erstellen eines Tasks, der nach einer Verzögerung abgeschlossen wird](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Beschreibt Aufgaben und Aufgabengruppen, mit denen Sie asynchronen Code schreiben und parallele Arbeit in kleinere Teile zerlegen können.|
 |[Exemplarische Vorgehensweise: Implementieren von Futures](../../parallel/concrt/walkthrough-implementing-futures.md)|Veranschaulicht, wie Concurrency Runtime-Funktionen kombiniert werden, um den Funktionsumfang zu erweitern.|
 |[Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|Veranschaulicht, wie die Arbeit, die vom UI-Thread in einer MFC-Anwendung ausgeführt wird, in einen Arbeitsthread verschoben wird.|
 |[Bewährte Methoden in der Parallel Patterns Library](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [Allgemein bewährte Methoden in der Concurrency Runtime](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|Bietet Tipps und empfohlene Vorgehensweisen für das Arbeiten mit der PPL.|
@@ -61,9 +61,9 @@ Referenzdokumentation finden Sie unter [Verweis](../../parallel/concrt/reference
 
 |||
 |-|-|
-|[Erstellen von asynchronen Vorgängen in C++ für UWP-Apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Beschreibt einige der wichtigsten Punkte zu bedenken, bei der Verwendung der Concurrency Runtime asynchrone Vorgänge in einer UWP-app erstellt.|
-|[Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Zeigt, wie PPL-Aufgaben mit kombiniert die `IXMLHTTPRequest2` und `IXMLHTTPRequest2Callback` Schnittstellen zum Senden von HTTP GET- und POST-Anforderungen an einen Webdienst in einer UWP-app.|
-|[Windows-Runtime-app-Beispiele](https://code.msdn.microsoft.com/windowsapps)|Enthält herunterladbare Codebeispiele und Demo-apps für Windows 8.x. Die C++-Beispiele verwenden Concurrency Runtime-Funktionen wie PPL-Aufgaben, um Daten im Hintergrund zu verarbeiten und so die Reaktionsfähigkeit aufrechtzuerhalten.|
+|[Erstellen von asynchronen Vorgängen in C++ für UWP-Apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Beschreibt einige der wichtigsten Punkte, die Sie berücksichtigen sollten, wenn Sie die Concurrency Runtime verwenden, um asynchrone Vorgänge in einer UWP-APP zu entwickeln.|
+|[Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Zeigt, wie ppl-Aufgaben mit den `IXMLHTTPRequest2` Schnitt `IXMLHTTPRequest2Callback` stellen und kombiniert werden, um HTTP-Get-und Post-Anforderungen an einen Webdienst in einer UWP-APP zu senden.|
+|[Windows-Runtime App-Beispiele](https://code.msdn.microsoft.com/windowsapps)|Enthält herunterladbare Codebeispiele und Demo-Apps für Windows 8. x. Die C++-Beispiele verwenden Concurrency Runtime-Funktionen wie PPL-Aufgaben, um Daten im Hintergrund zu verarbeiten und so die Reaktionsfähigkeit aufrechtzuerhalten.|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Datenflussprogrammierung in der Asynchronous Agents Library
 
@@ -98,10 +98,10 @@ Referenzdokumentation finden Sie unter [Verweis](../../parallel/concrt/reference
 
 |||
 |-|-|
-|[Muster und Tipps für die asynchrone Programmierung in Hilo (Windows Store-Apps mit C++ und XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Erfahren Sie, wie wir die Concurrency Runtime verwendet, um asynchrone Vorgänge in Hilo, einer Windows-Runtime-app, die mit C++ und XAML implementiert.|
+|[Muster und Tipps für die asynchrone Programmierung in Hilo (Windows Store-Apps mit C++ und XAML)](/previous-versions/windows/apps/jj160321(v=win.10))|Erfahren Sie, wie wir die Concurrency Runtime verwendet haben, um asynchrone Vorgänge in Hilo zu implementieren C++ , einer Windows-Runtime-APP, die und XAML verwendet.|
 |[Parallel Programming in Native Code blog (Blog zum Thema paralleles Programmieren in nativem Code)](https://go.microsoft.com/fwlink/p/?linkid=183873)|Bietet zusätzliche ausführliche Blogartikel zur parallelen Programmierung in der Concurrency Runtime.|
 |[Parallel Computing in C++ and Native Code forum (Forum zum Thema paralleles Computing in C++ und nativem Code)](https://go.microsoft.com/fwlink/p/?linkid=183874)|Ermöglicht Ihnen die Teilnahme an Communitydiskussionen über die Concurrency Runtime.|
-|[Parallele Programmierung](/dotnet/standard/parallel-programming/index)|Erfahren Sie, das parallel-Programmiermodell, das in .NET Framework verfügbar ist.|
+|[Parallele Programmierung](/dotnet/standard/parallel-programming/index)|Vermittelt Ihnen das parallele Programmiermodell, das in der .NET Framework verfügbar ist.|
 
 ## <a name="see-also"></a>Siehe auch
 

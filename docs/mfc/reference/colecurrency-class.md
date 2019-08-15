@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: 6fac62e396791da69d8d94f6c42337c8c3afd528
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 00515e6822dad000c6745063c72d0ffaf367670b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916986"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504253"
 ---
 # <a name="colecurrency-class"></a>COleCurrency-Klasse
 
@@ -128,15 +128,15 @@ Alle diese Konstruktoren erstellen neue `COleCurrency` Objekte, die mit dem ange
 
 - COleCurrency () erstellt ein `COleCurrency` -Objekt, das mit 0 (null) initialisiert wird.
 
-- COleCurrency (`cySrc`) erstellt ein `COleCurrency` -Objekt aus einem [Währungs](/windows/desktop/api/wtypes/ns-wtypes-tagcy) Wert.
+- COleCurrency (`cySrc`) erstellt ein `COleCurrency` -Objekt aus einem [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy) Wert.
 
 - COleCurrency (`curSrc`) erstellt ein `COleCurrency` -Objekt aus einem `COleCurrency` vorhandenen-Objekt. Das neue-Objekt hat denselben Status wie das Quell Objekt.
 
-- COleCurrency (`varSrc`) erstellt ein `COleCurrency` -Objekt. Versucht, eine [Variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) -Struktur oder `COleVariant` ein Variant-Objekt in einen Currency-Wert (VT_CY) zu konvertieren. Wenn diese Konvertierung erfolgreich ist, wird der konvertierte Wert in das neue `COleCurrency` -Objekt kopiert. Wenn dies nicht der Fall ist, wird der `COleCurrency` Wert des-Objekts auf NULL (0) und seinen Status auf ungültig festgelegt.
+- COleCurrency (`varSrc`) erstellt ein `COleCurrency` -Objekt. Versucht, eine [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) -Struktur oder `COleVariant` ein Variant-Objekt in einen Currency-Wert (VT_CY) zu konvertieren. Wenn diese Konvertierung erfolgreich ist, wird der konvertierte Wert in das neue `COleCurrency` -Objekt kopiert. Wenn dies nicht der Fall ist, wird der `COleCurrency` Wert des-Objekts auf NULL (0) und seinen Status auf ungültig festgelegt.
 
 - `COleCurrency(`nunits`, `nfractionalunits`) Constructs a `COleCurrency-Objekt aus den angegebenen numerischen Komponenten. Wenn der absolute Wert des Bruchteils größer als 10.000 ist, wird die entsprechende Anpassung an den Einheiten vorgenommen. Beachten Sie, dass die Einheiten und die Bruchteile durch signierte Long-Werte angegeben werden.
 
-Weitere Informationen finden Sie in den [Währungs](/windows/desktop/api/wtypes/ns-wtypes-tagcy) -und [Variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) -Einträgen in der Windows SDK.
+Weitere Informationen finden Sie in den [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy) -und [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) -Einträgen in der Windows SDK.
 
 ### <a name="example"></a>Beispiel
 
@@ -236,14 +236,14 @@ Weitere Informationen zu Vorgängen, die den Status als ungültig festlegen kön
 
 ##  <a name="m_cur"></a>COleCurrency:: m_cur
 
-Die zugrunde liegende [Währungs](/windows/desktop/api/wtypes/ns-wtypes-tagcy) Struktur für `COleCurrency` dieses-Objekt.
+Die zugrunde liegende [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy) Struktur für `COleCurrency` dieses-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
 > [!CAUTION]
 >  Wenn Sie den Wert in `CURRENCY` der Struktur ändern, auf die der von dieser Funktion zurückgegebene Zeiger zugreift `COleCurrency` , wird der Wert dieses Objekts geändert. Der Status dieses `COleCurrency` Objekts wird nicht geändert.
 
-Weitere Informationen finden Sie im [Währungs](/windows/desktop/api/wtypes/ns-wtypes-tagcy) Eintrag in der Windows SDK.
+Weitere Informationen finden Sie im [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy) Eintrag in der Windows SDK.
 
 ##  <a name="m_status"></a>COleCurrency:: m_status
 
@@ -314,7 +314,7 @@ Eine kurze Beschreibung der einzelnen Operatoren folgt:
 
 - **Operator = (** *varSrc* **)** Wenn die Konvertierung `VARIANT` des Werts (oder des [COleVariant](../../mfc/reference/colevariant-class.md) -Objekts) in eine Währung `VT_CY`() erfolgreich ist, wird der konvertierte Wert in `COleCurrency` dieses Objekt kopiert und sein Status auf "gültig" festgelegt. Wenn die Konvertierung nicht erfolgreich ist, wird der Wert des `COleCurrency` -Objekts auf 0 und dessen Status auf ungültig festgelegt.
 
-Weitere Informationen finden Sie in den [Währungs](/windows/desktop/api/wtypes/ns-wtypes-tagcy) -und [Variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) -Einträgen in der Windows SDK.
+Weitere Informationen finden Sie in den [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy) -und [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) -Einträgen in der Windows SDK.
 
 ### <a name="example"></a>Beispiel
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetActiveObject method [C++]
 ms.assetid: 2fa94853-0410-4620-91f2-136dae923f9f
-ms.openlocfilehash: 84e43de9c40baa3c596c68ed7739471c059cbac7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f13a42878392f63096cdfcb405f3f91cc0efe451
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154850"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498895"
 ---
-# <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
+# <a name="_com_ptr_tgetactiveobject"></a>_com_ptr_t::GetActiveObject
 
 **Microsoft-spezifisch**
 
-Fügt zu einer vorhandenen Instanz eines angegebenen Objekts an eine `CLSID` oder `ProgID`.
+Hängt an eine vorhandene Instanz eines-Objekts an, `CLSID` Wenn `ProgID`ein oder ein angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,23 +36,23 @@ HRESULT GetActiveObject(
 #### <a name="parameters"></a>Parameter
 
 *rclsid*<br/>
-Die `CLSID` eines Objekts.
+Der `CLSID` eines Objekts.
 
 *clsidString*<br/>
-Eine Unicode-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.
+Eine Unicode-Zeichenfolge, die `CLSID` entweder eine (beginnend mit " **{** `ProgID`") oder enthält.
 
 *clsidStringA*<br/>
-Eine mehrbytezeichenfolge mit der ANSI-Codepage, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.
+Eine Multibytezeichenfolge, die die ANSI-Codepage verwendet `CLSID` , die entweder eine (beginnend mit " **{** ") oder eine `ProgID`enthält.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Memberfunktionen rufen **GetActiveObject** um einen Zeiger auf ein ausgeführtes Objekt abzurufen, die mit OLE registriert wurde, und klicken Sie dann Abfragen für dieses intelligenten Zeigers Schnittstellentyp. Das Zeigerergebnis wird dann innerhalb dieses `_com_ptr_t`-Objekts gekapselt. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern. Diese Routine gibt zurück, das HRESULT, um den Erfolg oder Fehler anzuzeigen.
+Diese Member-Funktionen rufen **GetActiveObject** auf, um einen Zeiger auf ein aktuell registriertes Objekt abzurufen, das bei OLE registriert wurde, und dann Abfragen für den Schnittstellentyp dieses intelligenten Zeigers. Das Zeigerergebnis wird dann innerhalb dieses `_com_ptr_t`-Objekts gekapselt. `Release`wird aufgerufen, um den Verweis Zähler für den zuvor gekapselten Zeiger zu verringern. Diese Routine gibt das HRESULT zurück, um einen Erfolg oder Fehler anzugeben.
 
-- **GetActiveObject (**`rclsid`**)** fügt zu einer vorhandenen Instanz eines angegebenen Objekts an eine `CLSID`.
+- **GetActiveObject (** `rclsid` **)** wird an eine vorhandene Instanz `CLSID`eines Objekts angefügt.
 
-- **GetActiveObject (**`clsidString`**)** fügt sich einer vorhandenen Instanz eines Objekts, dem eine Unicodezeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder eine `ProgID`.
+- **GetActiveObject (** `clsidString` **)** wird an eine vorhandene Instanz eines Objekts angehängt, wenn eine Unicode-Zeichenfolge vorhanden `CLSID` ist, die entweder einen (beginnend mit " `ProgID` **{** ") oder eine enthält.
 
-- **GetActiveObject (**`clsidStringA`**)** fügt zu einer vorhandenen Instanz eines Objekts, dem eine Multibyte-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`. Aufrufe [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), dem wird davon ausgegangen, dass die Zeichenfolge in die ANSI-Codepage anstatt eine OEM-Codepage.
+- **GetActiveObject (** `clsidStringA` **)** wird an eine vorhandene Instanz eines Objekts angehängt, wenn eine Multibytezeichenfolge angegeben `CLSID` wird, die entweder einen (beginnend mit " `ProgID` **{** ") oder eine enthält. Ruft [multibytedewidechar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)auf, bei dem davon ausgegangen wird, dass die Zeichenfolge in der ANSI-Codepage statt in einer OEM-Codepage ist.
 
 **Ende Microsoft-spezifisch**
 

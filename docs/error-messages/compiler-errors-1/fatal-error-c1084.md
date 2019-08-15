@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1084
 ms.assetid: b2f273ef-3a14-4d5f-8ce0-7a11a0388fe6
-ms.openlocfilehash: 8c90616165a7b47d4251ace998fd49c613f244b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0c8e6a8f8321dccdfd7cee128a4cf06cebda991
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208814"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501136"
 ---
 # <a name="fatal-error-c1084"></a>Schwerwiegender Fehler C1084
 
 Lesen der Dateityp-Datei 'Datei' nicht möglich: Meldung
 
-Dieser Fehler ist im Allgemeinen das Ergebnis eines fehlgeschlagenen internen System-API-Aufrufs durch den Compiler. Die Meldung angezeigt, wenn dieser Fehler wird häufig durch eine generiert [_wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) oder [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).
+Dieser Fehler ist im Allgemeinen das Ergebnis eines fehlgeschlagenen internen System-API-Aufrufs durch den Compiler. Die Meldung, die angezeigt wird, wenn dieser Fehler auftritt, wird häufig durch [_wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) oder [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage)generiert.
 
 Mit den folgenden Schritten können Sie C1084 möglicherweise beheben:
 
@@ -25,9 +25,9 @@ Mit den folgenden Schritten können Sie C1084 möglicherweise beheben:
 
 - Stellen Sie sicher, dass die geeigneten Berechtigungen festgelegt sind, um auf die angegebene Datei zuzugreifen.
 
-- Stellen Sie sicher, die Befehlszeilensyntax die unter beschriebenen Regeln entspricht [Compiler Command-Line Syntax](../../build/reference/compiler-command-line-syntax.md).
+- Stellen Sie sicher, dass die Befehlszeilen Syntax den in der [compilerbefehlszeilensyntax](../../build/reference/compiler-command-line-syntax.md)beschriebenen Regeln entspricht.
 
-- Stellen Sie sicher, dass die Umgebungsvariablen sicher **TMP** und **TEMP** sind ordnungsgemäß Satz als auch die entsprechenden Berechtigungen, um den Zugriff auf die Verzeichnisse diese Umgebungsvariablen beziehen. Außerdem stellen Sie sicher, dass die Laufwerke, die auf die verwiesen wird durch die **TMP** und **TEMP** Umgebungsvariablen enthalten eine ausreichende Menge des freien Speicherplatzes.
+- Stellen Sie sicher, dass die Umgebungsvariablen " **tmp** " und " **Temp** " ordnungsgemäß festgelegt sind, sowie die entsprechenden Berechtigungen, um auf die Verzeichnisse zuzugreifen, auf die diese Umgebungsvariablen verweisen. Stellen Sie außerdem sicher, dass die Laufwerke, auf die die Umgebungsvariablen " **tmp** " und " **Temp** " verweisen, ausreichend freien Speicherplatz enthalten.
 
 - Wenn die Meldung „Ungültige Dateinummer“ enthält, wurde die angegebene Datei möglicherweise im Vordergrund geschlossen, während sie im Hintergrund kompiliert wurde.
 

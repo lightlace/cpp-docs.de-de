@@ -28,53 +28,53 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: ec6e638a1099db8baeefe220215485b6480c30e4
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: b88b745e3b70cf030f77f247ab03cd69d910109f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174762"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502087"
 ---
 # <a name="message-map-macros-mfc"></a>Meldungszuordnungsmakros (MFC)
 
-Um meldungszuordnungen zu unterstützen, stellt MFC die folgenden Makros:
+Um Nachrichten Zuordnungen zu unterstützen, stellt MFC die folgenden Makros bereit:
 
-### <a name="message-map-declaration-and-demarcation-macros"></a>Meldungszuordnung Deklaration und Demarkation-Makros
-
-|||
-|-|-|
-|[DECLARE_MESSAGE_MAP](#declare_message_map)|Deklariert, dass eine meldungszuordnung in einer Klasse verwendet wird, Nachrichten Funktionen zuzuordnen (muss in der Klassendeklaration verwendet werden).|
-|[BEGIN_MESSAGE_MAP](#begin_message_map)|Beginn der Definition einer meldungszuordnung (muss in der klassenimplementierung verwendet werden).|
-|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_message_map)|Beginn der Definition einer meldungszuordnung für einen Klassentyp mit einem einzelnen Vorlagenargument an. |
-|[END_MESSAGE_MAP](#end_message_map)|Beendet die Definition einer meldungszuordnung (muss in der klassenimplementierung verwendet werden).|
-
-### <a name="message-mapping-macros"></a>Nachrichtenzuordnung Makros
+### <a name="message-map-declaration-and-demarcation-macros"></a>Message-Map-Deklaration und-Abgrenzungs Makros
 
 |||
 |-|-|
-|[ON_COMMAND](#on_command)|Gibt an, welche Funktion eine angegebenen Nachricht behandelt.|
-|[ON_COMMAND_EX](#on_command_ex)|Gibt an, welche Funktion eine angegebenen Nachricht behandelt.|
-|[ON_CONTROL](#on_control)|Gibt an, welche Funktion angegebenen Steuerelement-Benachrichtigung behandelt.|
+|[DECLARE_MESSAGE_MAP](#declare_message_map)|Deklariert, dass eine Meldungs Zuordnung in einer Klasse verwendet wird, um Nachrichten zu Funktionen zuzuordnen (muss in der Klassen Deklaration verwendet werden).|
+|[BEGIN_MESSAGE_MAP](#begin_message_map)|Beginnt die Definition einer Meldungs Zuordnung (muss in der Klassen Implementierung verwendet werden).|
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_message_map)|Beginnt die Definition einer Meldungs Zuordnung für einen Klassentyp, der ein einzelnes Vorlagen Argument enthält. |
+|[END_MESSAGE_MAP](#end_message_map)|Beendet die Definition einer Meldungs Zuordnung (muss in der Klassen Implementierung verwendet werden).|
+
+### <a name="message-mapping-macros"></a>Nachrichten Zuordnungs Makros
+
+|||
+|-|-|
+|[ON_COMMAND](#on_command)|Gibt an, welche Funktion eine angegebene Befehls Meldung behandelt.|
+|[ON_COMMAND_EX](#on_command_ex)|Gibt an, welche Funktion eine angegebene Befehls Meldung behandelt.|
+|[ON_CONTROL](#on_control)|Gibt an, welche Funktion eine angegebene Steuerelement Benachrichtigungs Meldung behandelt.|
 |[ON_MESSAGE](#on_message)|Gibt an, welche Funktion eine benutzerdefinierte Meldung behandelt.|
-|[ON_OLECMD](#on_olecmd)|Gibt an, welche Funktion einen Menübefehl aus DocObject oder den Container behandelt.|
-|[ON_REGISTERED_MESSAGE](#on_registered_message)|Gibt an, welche Funktion eine registrierte benutzerdefinierten Meldung behandelt.|
-|[ON_REGISTERED_THREAD_MESSAGE](#on_registered_thread_message)|Gibt an, welche Funktion bei eine registrierte benutzerdefinierten Meldung behandelt eine `CWinThread` Klasse.|
-|[ON_THREAD_MESSAGE](#on_thread_message)|Gibt an, welche Funktion bei eine benutzerdefinierten Meldung behandelt eine `CWinThread` Klasse.|
-|[ON_UPDATE_COMMAND_UI](#on_update_command_ui)|Gibt an, welche Funktion eine angegebenen Benutzeroberflächen-Update-Befehlsnachricht behandelt.|
+|[ON_OLECMD](#on_olecmd)|Gibt an, welche Funktion einen Menübefehl aus einem DocObject-Objekt oder dessen Container behandelt.|
+|[ON_REGISTERED_MESSAGE](#on_registered_message)|Gibt an, welche Funktion eine registrierte benutzerdefinierte Meldung behandelt.|
+|[ON_REGISTERED_THREAD_MESSAGE](#on_registered_thread_message)|Gibt an, welche Funktion eine registrierte benutzerdefinierte Meldung behandelt, wenn Sie über `CWinThread` eine-Klasse verfügen.|
+|[ON_THREAD_MESSAGE](#on_thread_message)|Gibt an, welche Funktion eine benutzerdefinierte Meldung behandelt, wenn Sie über `CWinThread` eine-Klasse verfügen.|
+|[ON_UPDATE_COMMAND_UI](#on_update_command_ui)|Gibt an, welche Funktion eine angegebene Benutzeroberflächen-Aktualisierungs Befehls Meldung behandelt.|
 
-### <a name="message-map-range-macros"></a>Meldungszuordnung Range-Makros
+### <a name="message-map-range-macros"></a>Nachrichten Zuordnungs Bereich-Makros
 
 |||
 |-|-|
-|[ON_COMMAND_RANGE](#on_command_range)|Gibt an, welche Funktion den Bereich der Befehls-IDs angegeben werden, in die ersten beiden Parameter in das Makro behandelt.|
-|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Gibt an, welche updatehandler den Bereich der Befehls-IDs angegeben werden, in die ersten beiden Parameter in das Makro behandelt.|
-|[ON_CONTROL_RANGE](#on_control_range)|Gibt an, welche Funktion das Behandeln von Benachrichtigungen aus dem Bereich von Steuerelement-IDs, die in der zweiten und dritten Parameter in das Makro angegeben zu werden. Der erste Parameter ist eine Steuerelement-Benachrichtigung, z. B. BN_CLICKED.|
+|[ON_COMMAND_RANGE](#on_command_range)|Gibt an, welche Funktion den Bereich der Befehls-IDs behandelt, die in den ersten beiden Parametern für das Makro angegeben sind.|
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Gibt an, welcher Update Handler den Bereich der Befehls-IDs behandelt, die in den ersten beiden Parametern für das Makro angegeben sind.|
+|[ON_CONTROL_RANGE](#on_control_range)|Gibt an, welche Funktion Benachrichtigungen aus dem Bereich von Steuerelement-IDs verarbeitet, die im zweiten und dritten Parameter für das Makro angegeben werden. Der erste Parameter ist eine Steuerelement Benachrichtigungs Meldung, z. b. BN_CLICKED.|
 
-Weitere Informationen auf meldungszuordnungen, die meldungszuordnung Deklaration und demarkation-Makros und die Nachricht-Zuordnungs-Makros finden Sie unter [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md) und [Nachrichtenbehandlung und Zuordnung Themen](../../mfc/message-handling-and-mapping.md). Weitere Informationen zu Meldungszuordnungsbereiche, finden Sie unter [Handler für Meldungszuordnungsbereiche](../../mfc/handlers-for-message-map-ranges.md).
+Weitere Informationen zu Meldungs Zuordnungen, der Nachrichten Zuordnungs Deklaration und den Abgrenzungs Makros sowie den Nachrichten Zuordnungs Makros finden Sie unter [Nachrichten](../../mfc/reference/message-maps-mfc.md) Zuordnungen und [Themen zur Nachrichten Behandlung und-Zuordnung](../../mfc/message-handling-and-mapping.md). Weitere Informationen zu Nachrichten Zuordnungs Bereichen finden Sie unter [Handler für](../../mfc/handlers-for-message-map-ranges.md)Meldungs Zuordnungs Bereiche.
 
-## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
+## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
 
-Beginn der Definition Ihrer meldungszuordnung.
+Beginnt die Definition der Meldungs Zuordnung.
 
 ### <a name="syntax"></a>Syntax
 
@@ -84,17 +84,17 @@ BEGIN_MESSAGE_MAP( theClass, baseClass )
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*<br/>
-Gibt an, dass der Name der Klasse, dessen Meldung eine Zuordnung, ist.
+*spiegeln*<br/>
+Gibt den Namen der Klasse an, deren Meldungs Zuordnung ist.
 
 *baseClass*<br/>
-Gibt den Namen der Basisklasse der *TheClass*.
+Gibt den Namen der Basisklasse von *TheClass*an.
 
 ### <a name="remarks"></a>Hinweise
 
-Klicken Sie in der Implementierungsdatei (.cpp), die die Member-Funktionen für die Klasse definiert, starten Sie die meldungszuordnung, mit dem BEGIN_MESSAGE_MAP-Makro, und klicken Sie dann fügen Sie Makroeinträge für jede der Meldungshandler-Funktionen hinzu, und schließen Sie die meldungszuordnung, mit der END_MESSAGE_MAP -Makro.
+Starten Sie in der Implementierungs Datei (. cpp), in der die Member-Funktionen für Ihre Klasse definiert sind, die Meldungs Zuordnung mit dem BEGIN_MESSAGE_MAP-Makro, fügen Sie anschließend Makro Einträge für jede Ihrer nachrichtenhandlerfunktionen hinzu, und vervollständigen Sie die Meldungs Zuordnung mit dem END_MESSAGE_MAP Hilfen.
 
-Weitere Informationen über meldungszuordnungen finden Sie unter [Meldungszuordnungen](message-maps-mfc.md)
+Weitere Informationen zu Meldungs Zuordnungen finden Sie unter [Message Maps](message-maps-mfc.md) .
 
 ### <a name="example"></a>Beispiel
 
@@ -108,9 +108,9 @@ END_MESSAGE_MAP()
 
 **Header:** afxwin.h
 
-## <a name="begin_template_message_map"></a> BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
 
-Beginn der Definition einer meldungszuordnung für einen Klassentyp mit einem einzelnen Vorlagenargument an.
+Beginnt die Definition einer Meldungs Zuordnung für einen Klassentyp, der ein einzelnes Vorlagen Argument enthält.
 
 ### <a name="syntax"></a>Syntax
 
@@ -120,30 +120,30 @@ BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 
 ### <a name="parameters"></a>Parameter
 
-*theClass*<br/>
-Gibt an, dass der Name der Klasse, dessen Meldung eine Zuordnung, ist.
+*spiegeln*<br/>
+Gibt den Namen der Klasse an, deren Meldungs Zuordnung ist.
 
 *type_name*<br/>
-Der Name des Vorlagenparameters für die Klasse angegeben.
+Der Name des für die-Klasse angegebenen Vorlagen Parameters.
 
 *baseClass*<br/>
-Gibt den Namen der Basisklasse der *TheClass*.
+Gibt den Namen der Basisklasse von *TheClass*an.
 
 ### <a name="remarks"></a>Hinweise
 
-Dieses Makro ähnelt den [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) Makro; dieses Makro ist jedoch für Klassen, die mit einem einzelnen Vorlagenargument vorgesehen.
+Dieses Makro ähnelt dem [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) -Makro. Dieses Makro ist jedoch für Klassen vorgesehen, die ein einzelnes Vorlagen Argument enthalten.
 
-Starten Sie in der Methode Implementation-Abschnitt der Klasse die meldungszuordnung, mit dem Makro BEGIN_TEMPLATE_MESSAGE_MAP; Fügen Sie Makroeinträge klicken Sie dann für jede Ihrer Meldungshandler-Methoden, wie bei einer Standardnachricht-Zuordnung aus. Mit dem BEGIN_MESSAGE_MAP-Makro, mit die Vorlage-meldungszuordnung Abschließen der [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) Makro.
+Starten Sie im Abschnitt zur Methoden Implementierung Ihrer Klasse die Meldungs Zuordnung mit dem BEGIN_TEMPLATE_MESSAGE_MAP-Makro. Fügen Sie anschließend Makro Einträge für jede Ihrer nachrichtenhandlermethoden hinzu, wie dies für eine standardmäßige Meldungs Zuordnung der Fall wäre. Vervollständigen Sie wie beim BEGIN_MESSAGE_MAP-Makro die Vorlagen Nachrichten Zuordnung mit dem [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) -Makro.
 
-Weitere Informationen zum Implementieren von meldungszuordnungen für Vorlagenklassen finden Sie unter [Vorgehensweise: Erstellen einer Meldungszuordnung für eine Vorlagenklasse](../how-to-create-a-message-map-for-a-template-class.md).
+Weitere Informationen zum Implementieren von Meldungs Zuordnungen für Vorlagen Klassen finden [Sie unter Gewusst wie: Erstellen Sie eine Meldungs Zuordnung für eine](../how-to-create-a-message-map-for-a-template-class.md)Vorlagen Klasse.
 
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxwin.h
 
-## <a name="declare_message_map"></a>  DECLARE_MESSAGE_MAP
+## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
 
-Deklariert, dass die Klasse eine meldungszuordnung definiert. Jede `CCmdTarget`-abgeleiteten Klasse in Ihrem Programm muss eine meldungszuordnung, um Nachrichten zu verarbeiten bereitstellen.
+Deklariert, dass die-Klasse eine Meldungs Zuordnung definiert. Jede `CCmdTarget`von abgeleitete Klasse in Ihrem Programm muss eine Meldungs Zuordnung für die Verarbeitung von Nachrichten bereitstellen.
 
 ### <a name="syntax"></a>Syntax
 
@@ -153,12 +153,12 @@ DECLARE_MESSAGE_MAP( )
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie das DECLARE_MESSAGE_MAP-Makro, am Ende der Klassendeklaration. Klicken Sie dann in der CPP-Datei, die die Member-Funktionen für die Klasse definiert, verwenden Sie im BEGIN_MESSAGE_MAP-Makro Makroeinträge für jede der Meldungshandler funktioniert und die END_MESSAGE_MAP-Makro.
+Verwenden Sie das DECLARE_MESSAGE_MAP-Makro am Ende der Klassen Deklaration. Verwenden Sie dann in der CPP-Datei, die die-Member-Funktionen für die-Klasse definiert, das BEGIN_MESSAGE_MAP-Makro, Makro Einträge für jede der Nachrichten Handler-Funktionen und das END_MESSAGE_MAP-Makro.
 
 > [!NOTE]
->  Wenn Sie einen beliebigen Member nach DECLARE_MESSAGE_MAP deklarieren, müssen Sie einen neuen Zugriffstyp angeben (**öffentliche**, **private**, oder **geschützt**) für sie.
+>  Wenn Sie nach DECLARE_MESSAGE_MAP ein Element deklarieren, müssen Sie einen neuen Zugriffstyp (**öffentlich**, **Privat**oder **geschützt**) für Sie angeben.
 
-Weitere Informationen zu nachrichtenzuordnungen und die DECLARE_MESSAGE_MAP-Makro, finden Sie unter [Nachrichtenbehandlung und Zuordnen von Themen](../../mfc/message-handling-and-mapping.md).
+Weitere Informationen zu Nachrichten Zuordnungen und zum DECLARE_MESSAGE_MAP-Makro finden Sie unter [Themen zur Nachrichten Behandlung und-Zuordnung](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -174,9 +174,9 @@ class CMainFrame : public CMDIFrameWnd
 
 **Header:** afxwin.h
 
-## <a name="end_message_map"></a>  END_MESSAGE_MAP
+## <a name="end_message_map"></a>END_MESSAGE_MAP
 
-Beendet die Definition der Zuordnung Nachricht.
+Beendet die Definition der Meldungs Zuordnung.
 
 ### <a name="syntax"></a>Syntax
 
@@ -186,15 +186,15 @@ END_MESSAGE_MAP( )
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu nachrichtenzuordnungen und die END_MESSAGE_MAP-Makro, finden Sie unter [Nachrichtenbehandlung und Zuordnen von Themen](../../mfc/message-handling-and-mapping.md).
+Weitere Informationen zu Nachrichten Zuordnungen und zum END_MESSAGE_MAP-Makro finden Sie unter [Themen zur Nachrichten Behandlung und-Zuordnung](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="requirements"></a>Anforderungen
 
 **Header:** afxwin.h
 
-## <a name="on_command"></a>  ON_COMMAND
+## <a name="on_command"></a>ON_COMMAND
 
-Dieses Makro wird eine Nachricht auf eine Memberfunktion zugeordnet.
+Dieses Makro ordnet eine Befehls Meldung einer Member-Funktion zu.
 
 ### <a name="syntax"></a>Syntax
 
@@ -208,15 +208,15 @@ ON_COMMAND( commandId, memberFxn )
 Die Befehls-ID.
 
 *memberFxn*<br/>
-Der Name der Meldungshandler-Funktion, die der Befehl zugeordnet ist.
+Der Name der nachrichtenhandlerfunktion, der der Befehl zugeordnet ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Er gibt an, welche Funktion behandelt eine Nachricht aus einem Befehl Benutzeroberflächen-Objekt, z. B. eine Menü oder eine Symbolleisten-Schaltfläche.
+Gibt an, welche Funktion eine Befehls Meldung von einem Befehls Benutzeroberflächen Objekt behandelt, z. b. einem Menü Element oder einer Symbolleisten Schaltfläche.
 
-Wenn ein Befehlsziel Objekt auf eine Windows-WM_COMMAND-Meldung mit der angegebenen ID empfängt, ruft ON_COMMAND die Memberfunktion `memberFxn` zur Verarbeitung der Nachricht.
+Wenn ein Befehls Zielobjekt eine Windows WM_COMMAND-Nachricht mit der angegebenen ID empfängt, ruft ON_COMMAND die Member-Funktion `memberFxn` auf, um die Nachricht zu verarbeiten.
 
-Verwenden Sie ON_COMMAND, um einen einzelnen Befehl auf eine Memberfunktion zuzuordnen. Verwendung [ON_COMMAND_RANGE](#on_command_range) , einen Bereich für Befehls-IDs auf eine Memberfunktion zuzuordnen. Nur ein Meldungszuordnungseintrags kann eine angegebenen Befehls-ID überein. Sie können nicht mehr als einen Handler, also einen Befehl zuordnen. Weitere Informationen und Beispiele finden Sie unter [Nachrichtenbehandlung und Zuordnen von Themen](../../mfc/message-handling-and-mapping.md).
+Verwenden Sie ON_COMMAND, um einer Element Funktion einen einzelnen Befehl zuzuordnen. Verwenden Sie [ON_COMMAND_RANGE](#on_command_range) , um einer Element Funktion einen Bereich von Befehls-IDs zuzuordnen. Nur ein Nachrichten Zuordnungs Eintrag kann mit einer angegebenen Befehls-ID verglichen werden. Das heißt, Sie können einen Befehl nicht mehreren Handlern zuordnen. Weitere Informationen und Beispiele finden Sie unter [Themen zur Nachrichten Behandlung und-Zuordnung](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -228,11 +228,11 @@ END_MESSAGE_MAP()
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxmsg_.h
+**Header:** afxmsg_. h
 
-## <a name="on_command_ex"></a>  ON_COMMAND_EX
+## <a name="on_command_ex"></a>ON_COMMAND_EX
 
-Erweiterte Befehlshandler Member-Funktion.
+Erweiterte befehlshandlermember-Funktion.
 
 ### <a name="syntax"></a>Syntax
 
@@ -246,21 +246,21 @@ ON_COMMAND_EX(commandId, memberFxn);
 Die Befehls-ID.
 
 *memberFxn*<br/>
-Der Name der Meldungshandler-Funktion, die der Befehl zugeordnet ist.
+Der Name der nachrichtenhandlerfunktion, der der Befehl zugeordnet ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine erweiterte Form der Nachricht Befehlshandler ist verfügbar für erweiterte verwendet. Die ON_COMMAND_EX-Makro wird für solche Meldungshandler verwendet, und es bietet eine Obermenge der der [ON_COMMAND](message-map-macros-mfc.md#on_command) Funktionalität. Erweiterte Befehlshandler Member-Funktionen auf einen einzelnen Parameter, UINT, enthält die Befehls-ID und einen booleschen Wert zurückzugeben. Der Rückgabewert muss auf "true", um anzugeben, dass der Befehl behandelt wurde; Andernfalls wird auf anderen Befehl Zielobjekte weiterzuleiten.
+Eine erweiterte Form von Befehls Meldungs Handlern ist für erweiterte Verwendungszwecke verfügbar. Das ON_COMMAND_EX-Makro wird für solche Meldungs Handler verwendet und stellt einen Obermenge der [ON_COMMAND](message-map-macros-mfc.md#on_command) -Funktionalität bereit. Erweiterte befehlshandlermember-Funktionen akzeptieren einen einzelnen Parameter, einen uint, der die Befehls-ID enthält, und geben einen booleschen Wert zurück. Der Rückgabewert sollte true sein, um anzugeben, dass der Befehl behandelt wurde. Andernfalls wird das Routing mit anderen Befehls Ziel Objekten fortgesetzt.
 
-Weitere Informationen finden Sie im technischen Hinweis [TN006: Meldungszuordnungen] tm006-Nachricht-maps.md).
+Weitere Informationen finden Sie unter Technical Note [TN006: Meldungs Zuordnungen] tm006-Message-Maps.MD).
 
 ### <a name="requirements"></a>Anforderungen
 
-Headerdatei: afxmsg_.h
+Header Datei: afxmsg_. h
 
-## <a name="on_control"></a>  ON_CONTROL
+## <a name="on_control"></a>ON_CONTROL
 
-Gibt an, welche Funktion eine Benachrichtigung für benutzerdefinierte Steuerelemente behandelt.
+Gibt an, welche Funktion eine benutzerdefinierte Benachrichtigungs Meldung behandelt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -271,27 +271,27 @@ ON_CONTROL( wNotifyCode, commandId, memberFxn )
 ### <a name="parameters"></a>Parameter
 
 *wNotifyCode*<br/>
-Der Benachrichtigungscode des Steuerelements.
+Der Benachrichtigungs Code des Steuer Elements.
 
 *commandId*<br/>
 Die Befehls-ID.
 
 *memberFxn*<br/>
-Der Name der Meldungshandler-Funktion, die der Befehl zugeordnet ist.
+Der Name der nachrichtenhandlerfunktion, der der Befehl zugeordnet ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Benachrichtigungsmeldungen des Registersteuerelements stammen, von einem Steuerelement an das übergeordnete Fenster gesendet.
+Steuerelement-Benachrichtigungs Meldungen werden von einem Steuerelement an das übergeordnete Fenster gesendet.
 
-Es sollte genau eine ON_CONTROL-Makro-Anweisung in der meldungszuordnung für jedes Steuerelement-Benachrichtigung, die auf eine Message-Handler-Funktion zugeordnet werden muss.
+Es sollte genau eine ON_CONTROL-Makro Anweisung in der Meldungs Zuordnung für jede Benachrichtigungs Meldung angezeigt werden, die einer nachrichtenhandlerfunktion zugeordnet werden muss.
 
-Weitere Informationen und Beispiele finden Sie unter [Nachrichtenbehandlung und Zuordnen von Themen](../../mfc/message-handling-and-mapping.md).
+Weitere Informationen und Beispiele finden Sie unter [Themen zur Nachrichten Behandlung und-Zuordnung](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxmsg_.h
+**Header:** afxmsg_. h
 
-## <a name="on_message"></a>  ON_MESSAGE
+## <a name="on_message"></a>ON_MESSAGE
 
 Gibt an, welche Funktion eine benutzerdefinierte Meldung behandelt.
 
@@ -307,20 +307,20 @@ ON_MESSAGE( message, memberFxn )
 Die Meldungs-ID.
 
 *memberFxn*<br/>
-Der Name der Meldungshandler-Funktion, die die Nachricht zugeordnet ist.
+Der Name der nachrichtenhandlerfunktion, der die Nachricht zugeordnet ist.
 
-Der Typ der Funktion muss `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.
+Der Typ der Funktion muss sein `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.
 
 ### <a name="remarks"></a>Hinweise
 
-Benutzerdefinierte Meldungen sind alle Nachrichten, die nicht standardmäßige Windows-WM_MESSAGE Nachrichten sind. Wenn Sie eine Meldungs-ID auswählen zu können, müssen Sie Werte in den Bereich der WM_USER (0 x 0400) zu 0xBFFF 0x7FFF oder WM_APP (0 x 8000) verwenden. Weitere Informationen in Bezug auf die Meldungs-IDs finden Sie unter [WM_APP](/windows/desktop/winmsg/wm-app).
+Benutzerdefinierte Meldungen sind Meldungen, bei denen es sich nicht um standardmäßige Windows-WM_MESSAGE-Nachrichten handelt. Wenn Sie eine Nachrichten-ID auswählen, müssen Sie Werte im Bereich von WM_USER (0x0400) bis 0x7FFF oder WM_APP (0X8000) bis 0xbfff verwenden. Weitere Informationen zu Nachrichten-IDs finden Sie unter [WM_APP](/windows/win32/winmsg/wm-app).
 
-Es sollte genau eine ON_MESSAGE-Makro-Anweisung in der meldungszuordnung für jede benutzerdefinierte Nachricht, die eine Message-Handler-Funktion zugeordnet werden muss.
+Es sollte genau eine ON_MESSAGE-Makro Anweisung in der Meldungs Zuordnung für jede benutzerdefinierte Nachricht vorhanden sein, die einer nachrichtenhandlerfunktion zugeordnet werden muss.
 
 > [!NOTE]
->  Zusätzlich zu den benutzerdefinierten Nachrichten behandelt ON_MESSAGE weniger gängige Windows-Meldungen. Weitere Informationen finden Sie unter [Meldungszuordnungen](../../mfc/tn006-message-maps.md).
+>  Zusätzlich zu benutzerdefinierten Meldungen verarbeitet ON_MESSAGE weniger häufige Windows-Meldungen. Weitere Informationen finden Sie unter [Message Maps](../../mfc/tn006-message-maps.md).
 
-Weitere Informationen und Beispiele finden Sie unter [Nachrichtenbehandlung und Zuordnen von Themen](../../mfc/message-handling-and-mapping.md) und [benutzerdefinierte Handler](user-defined-handlers.md)
+Weitere Informationen und Beispiele finden Sie unter [Themen zur Nachrichten Behandlung und-Zuordnung](../../mfc/message-handling-and-mapping.md) und [benutzerdefinierte Handler](user-defined-handlers.md) .
 
 ### <a name="example"></a>Beispiel
 
@@ -347,11 +347,11 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxmsg_.h
+**Header:** afxmsg_. h
 
-## <a name="on_olecmd"></a>  ON_OLECMD
+## <a name="on_olecmd"></a>ON_OLECMD
 
-Leitet Befehle über die Dispatch-Befehlsschnittstelle `IOleCommandTarget`.
+Leitet Befehle über die Befehls Dispatchschnittstelle `IOleCommandTarget`weiter.
 
 ### <a name="syntax"></a>Syntax
 
@@ -362,125 +362,125 @@ ON_OLECMD( pguid, olecmdid, commandId )
 ### <a name="parameters"></a>Parameter
 
 *pguid*<br/>
-Der Bezeichner der Befehlsgruppe, zu der der Befehl gehört. Verwenden Sie NULL für den "standard"-Gruppe an.
+Der Bezeichner der Befehlsgruppe, zu der der Befehl gehört. Verwenden Sie für die Standardgruppe den Wert NULL.
 
 *olecmdid*<br/>
-Der Bezeichner der der OLE-Befehl.
+Der Bezeichner des OLE-Befehls.
 
 *commandId*<br/>
-Die Menü-ID, Symbolleisten-ID, Schaltflächen-ID oder andere-ID der Ressource oder des Objekts, die Sie den Befehl ausgeben.
+Menü-ID, Symbolleisten-ID, Schaltflächen-ID oder andere ID der Ressource oder des Objekts, das den Befehl ausgibt.
 
 ### <a name="remarks"></a>Hinweise
 
-`IOleCommandTarget` ermöglicht einen Container, um Befehle zu empfangen, die in DocObjects-Benutzeroberfläche stammen und der Container kann die gleichen Befehle zu senden (z. B. neu "," Open "," SaveAs "und" auf das Menü "Datei"; Drucken, und kopieren, einfügen, rückgängig zu machen, und so weiter auf das Menü "Bearbeiten"), DocObject.
+`IOleCommandTarget`ermöglicht einem Container das Empfangen von Befehlen, die aus der Benutzeroberfläche eines DocObject stammen, und ermöglicht es dem Container, dieselben Befehle zu senden (z. b. New, Open, SaveAs und Print im Menü Datei) und in ein DocObject-Objekt zu kopieren, einzufügen, rückgängig zu machen usw.
 
-`IOleCommandTarget` ist einfacher als OLE-Automatisierung des `IDispatch`. `IOleCommandTarget` beruht vollständig auf einen Standardsatz von Befehlen, die nur selten haben Argumente aus, und keine Typinformationen beteiligt ist (die typsicherheit wird auch die Befehlsargumente verringert). Wenn Sie benötigen, um Befehle mit Argumenten zu senden, verwenden Sie [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).
+`IOleCommandTarget`ist einfacher als OLE- `IDispatch`Automatisierung. `IOleCommandTarget`basiert vollständig auf einem Standardsatz von Befehlen, die nur selten Argumente aufweisen, und es sind keine Typinformationen beteiligt (die Typsicherheit wird auch für Befehlsargumente verringert). Wenn Sie Befehle mit Argumenten versenden müssen, verwenden Sie [COleServerDoc:: onexecolecmd](coleserverdoc-class.md#onexecolecmd).
 
-Die `IOleCommandTarget` standardmäßigen Menübefehle von MFC in der folgenden Makros implementiert wurden:
+Die `IOleCommandTarget` Standardmenü Befehle wurden in den folgenden Makros von MFC implementiert:
 
 **ON_OLECMD_CLEARSELECTION( )**
 
-Sendet den Befehl zum Löschen bearbeiten. Als implementiert:
+Sendet den Befehl "Clear bearbeiten". Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`
 
 **ON_OLECMD_COPY( )**
 
-Sendet den Befehl Copy bearbeiten. Als implementiert:
+Sendet den Befehl zum Bearbeiten von Kopien. Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`
 
 **ON_OLECMD_CUT( )**
 
-Sendet den Befehl Cut bearbeiten. Als implementiert:
+Sendet den Befehl "Ausschneiden bearbeiten". Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`
 
 **ON_OLECMD_NEW( )**
 
-Sendet die neue Datei-Befehl. Als implementiert:
+Sendet den Datei neuen Befehl. Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`
 
 **ON_OLECMD_OPEN( )**
 
-Sendet die Datei öffnen-Befehl. Als implementiert:
+Sendet den Befehl zum Öffnen von Dateien. Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`
 
 **ON_OLECMD_PAGESETUP( )**
 
-Sendet die Datei Seite Setup-Befehlsoption. Als implementiert:
+Sendet den Befehl "Datei Seite einrichten". Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`
 
 **ON_OLECMD_PASTE( )**
 
-Sendet den Befehl Paste bearbeiten. Als implementiert:
+Sendet den Befehl "einfügen bearbeiten". Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`
 
 **ON_OLECMD_PASTESPECIAL( )**
 
-Sendet den Befehl Bearbeiten Inhalte einfügen. Als implementiert:
+Sendet den speziellen Befehl zum Einfügen von "Einfügen". Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`
 
 **ON_OLECMD_PRINT( )**
 
-Sendet die Datei drucken-Befehl. Als implementiert:
+Sendet den File Print-Befehl. Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`
 
 **ON_OLECMD_PRINTPREVIEW( )**
 
-Sendet den Befehl "Datei Seitenansicht". Als implementiert:
+Sendet den Befehl Datei Druckvorschau. Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`
 
 **ON_OLECMD_REDO( )**
 
-Sendet den Befehl Bearbeiten wiederherstellen. Als implementiert:
+Sendet den Befehl "wiederholen bearbeiten". Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`
 
 **ON_OLECMD_SAVE( )**
 
-Sendet den Befehl Datei zu speichern. Als implementiert:
+Sendet den Befehl zum Speichern von Dateien. Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`
 
 **ON_OLECMD_SAVE_AS( )**
 
-Sendet die Datei speichern unter-Befehl. Als implementiert:
+Sendet den file-Befehl "Speichern unter". Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`
 
 **ON_OLECMD_SAVE_COPY_AS( )**
 
-Sendet die Datei Kopie speichern unter-Befehl. Als implementiert:
+Sendet den Datei Kopiervorgang als Befehl. Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`
 
 **ON_OLECMD_SELECTALL( )**
 
-Sendet den Befehl wählen Sie alle bearbeiten. Als implementiert:
+Sendet den Befehl Select All (alle auswählen). Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`
 
 **ON_OLECMD_UNDO( )**
 
-Sendet den Befehl Rückgängig bearbeiten. Als implementiert:
+Sendet den Befehl "rückgängig bearbeiten". Implementiert als:
 
 `ON_OLECMD(NULL, OLECMDID_UNDO, ID_EDIT_UNDO)`
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxdocob.h
+**Header:** afxdocob. h
 
-## <a name="on_registered_message"></a>  ON_REGISTERED_MESSAGE
+## <a name="on_registered_message"></a>ON_REGISTERED_MESSAGE
 
-Die Windows `RegisterWindowMessage` Funktion wird verwendet, um eine neue Fensternachricht zu definieren, die garantiert im gesamten System eindeutig sein.
+Die Windows `RegisterWindowMessage` -Funktion wird verwendet, um eine neue Fenster Meldung zu definieren, die im gesamten System eindeutig ist.
 
 ### <a name="syntax"></a>Syntax
 
@@ -491,16 +491,16 @@ ON_REGISTERED_MESSAGE( nMessageVariable, memberFxn )
 ### <a name="parameters"></a>Parameter
 
 *nMessageVariable*<br/>
-Die registrierten fenstermeldung-ID-Variable.
+Die registrierte Window-Message-ID-Variable.
 
 *memberFxn*<br/>
-Der Name der Meldungshandler-Funktion, die die Nachricht zugeordnet ist.
+Der Name der nachrichtenhandlerfunktion, der die Nachricht zugeordnet ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Dieses Makro gibt an, welche Funktion wird die registrierte Meldung zu behandeln.
+Dieses Makro gibt an, welche Funktion die registrierte Nachricht behandelt.
 
-Weitere Informationen und Beispiele finden Sie unter [Nachrichtenbehandlung und Zuordnen von Themen](../../mfc/message-handling-and-mapping.md).
+Weitere Informationen und Beispiele finden Sie unter [Themen zur Nachrichten Behandlung und-Zuordnung](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -514,11 +514,11 @@ END_MESSAGE_MAP()
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxmsg_.h
+**Header:** afxmsg_. h
 
-## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
+## <a name="on_registered_thread_message"></a>ON_REGISTERED_THREAD_MESSAGE
 
-Gibt an, welche Funktion behandelt die Meldung von der Windows-RegisterWindowMessage registriert-Funktion registriert.
+Gibt an, welche Funktion die von der Windows RegisterWindowMessage-Funktion registrierte Nachricht behandelt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -529,20 +529,20 @@ ON_REGISTERED_THREAD_MESSAGE(nMessageVariable, memberFxn )
 ### <a name="parameters"></a>Parameter
 
 *nMessageVariable*<br/>
-Die registrierten fenstermeldung-ID-Variable.
+Die registrierte Window-Message-ID-Variable.
 
 *memberFxn*<br/>
-Der Name der Funktion CWinThread-Message-Handler, die die Nachricht zugeordnet ist.
+Der Name der CWinThread-Message-Handler-Funktion, der die Nachricht zugeordnet ist.
 
 ### <a name="remarks"></a>Hinweise
 
-RegisterWindowMessage registriert wird verwendet, um eine neue fenstermeldung definieren, die garantiert im gesamten System eindeutig sein. ON_REGISTERED_THREAD_MESSAGE muss anstelle von ON_REGISTERED_MESSAGE verwendet werden, wenn Sie eine CWinThread-Klasse haben.
+RegisterWindowMessage wird verwendet, um eine neue Fenster Meldung zu definieren, die im gesamten System eindeutig ist. Wenn Sie über eine CWinThread-Klasse verfügen, muss ON_REGISTERED_THREAD_MESSAGE anstelle von ON_REGISTERED_MESSAGE verwendet werden.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxmsg_.h
+**Header:** afxmsg_. h
 
-## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE
+## <a name="on_thread_message"></a>ON_THREAD_MESSAGE
 
 Gibt an, welche Funktion eine benutzerdefinierte Meldung behandelt.
 
@@ -558,19 +558,19 @@ ON_THREAD_MESSAGE( message, memberFxn )
 Die Meldungs-ID.
 
 *memberFxn*<br/>
-Der Name des der `CWinThread`-Message-Handler-Funktion, der die Nachricht zugeordnet ist.
+Der Name `CWinThread`der-Message-Handler-Funktion, der die Nachricht zugeordnet ist.
 
 ### <a name="remarks"></a>Hinweise
 
-ON_THREAD_MESSAGE muss anstelle von ON_MESSAGE verwendet werden, wenn Sie haben eine `CWinThread` Klasse. Benutzerdefinierte Meldungen sind alle Nachrichten, die nicht standardmäßige Windows-WM_MESSAGE Nachrichten sind. Es sollte genau eine ON_THREAD_MESSAGE-Makro-Anweisung in der meldungszuordnung für jede benutzerdefinierte Nachricht, die eine Message-Handler-Funktion zugeordnet werden muss.
+ON_THREAD_MESSAGE muss anstelle von ON_MESSAGE verwendet werden, wenn Sie über `CWinThread` eine-Klasse verfügen. Benutzerdefinierte Meldungen sind Meldungen, bei denen es sich nicht um standardmäßige Windows-WM_MESSAGE-Nachrichten handelt. Es sollte genau eine ON_THREAD_MESSAGE-Makro Anweisung in der Meldungs Zuordnung für jede benutzerdefinierte Nachricht vorhanden sein, die einer nachrichtenhandlerfunktion zugeordnet werden muss.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxole.h
+**Header:** Afxole. h
 
-## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI
+## <a name="on_update_command_ui"></a>ON_UPDATE_COMMAND_UI
 
-Dieses Makro gibt an, welche Funktion eine Benutzeroberflächen-Update-Befehlsnachricht behandelt.
+Dieses Makro gibt an, welche Funktion eine Benutzeroberflächen-Aktualisierungs Befehlsnachricht behandelt.
 
 ### <a name="syntax"></a>Syntax
 
@@ -584,21 +584,21 @@ ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 Die Meldungs-ID.
 
 *memberFxn*<br/>
-Der Name der Meldungshandler-Funktion, die die Nachricht zugeordnet ist.
+Der Name der nachrichtenhandlerfunktion, der die Nachricht zugeordnet ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Es sollte genau eine ON_UPDATE_COMMAND_UI-Makro-Anweisung in der meldungszuordnung für jeden Benutzeroberflächen-Update-Befehl, der eine Message-Handler-Funktion zugeordnet werden muss.
+Es sollte genau eine ON_UPDATE_COMMAND_UI-Makro Anweisung in der Meldungs Zuordnung für jeden Benutzeroberflächen-Update Befehl vorhanden sein, der einer nachrichtenhandlerfunktion zugeordnet werden muss.
 
-Weitere Informationen und Beispiele finden Sie unter [Nachrichtenbehandlung und Zuordnen von Themen](../../mfc/message-handling-and-mapping.md).
+Weitere Informationen und Beispiele finden Sie unter [Themen zur Nachrichten Behandlung und-Zuordnung](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxole.h
+**Header:** Afxole. h
 
-## <a name="on_command_range"></a>  ON_COMMAND_RANGE
+## <a name="on_command_range"></a>ON_COMMAND_RANGE
 
-Verwenden Sie dieses Makro, um einen zusammenhängenden Bereich von Befehls-IDs für eine einzelne Nachricht Handler-Funktion zuzuordnen.
+Verwenden Sie dieses Makro, um einen zusammenhängenden Bereich von Befehls-IDs einer einzelnen nachrichtenhandlerfunktion zuzuordnen.
 
 ### <a name="syntax"></a>Syntax
 
@@ -609,21 +609,21 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 ### <a name="parameters"></a>Parameter
 
 *id1*<br/>
-Befehls-ID am Anfang des einen zusammenhängenden Bereich von Befehls-IDs.
+Befehls-ID am Anfang eines zusammenhängenden Bereichs von Befehls-IDs.
 
 *id2*<br/>
-Befehls-ID am Ende einen zusammenhängenden Bereich von Befehls-IDs.
+Befehls-ID am Ende eines zusammenhängenden Bereichs von Befehls-IDs.
 
 *memberFxn*<br/>
-Der Name der Meldungshandler-Funktion, die die Befehle zugeordnet sind.
+Der Name der nachrichtenhandlerfunktion, der die Befehle zugeordnet sind.
 
 ### <a name="remarks"></a>Hinweise
 
-Die ID-Bereich beginnt mit *"id1"* und endet mit *id2*.
+Der Bereich der IDs beginnt mit *id1* und endet mit *id2*.
 
-Verwenden Sie ON_COMMAND_RANGE, um einen Bereich für Befehls-IDs auf eine Memberfunktion zuzuordnen. Verwendung [ON_COMMAND](#on_command) um einen einzelnen Befehl auf eine Memberfunktion zuzuordnen. Nur ein Meldungszuordnungseintrags kann eine angegebenen Befehls-ID überein. Sie können nicht mehr als einen Handler, also einen Befehl zuordnen. Weitere Informationen zum Mapping meldungsbereiche, finden Sie unter [Handler für Meldungszuordnungsbereiche](../../mfc/handlers-for-message-map-ranges.md).
+Verwenden Sie ON_COMMAND_RANGE, um einer Element Funktion einen Bereich von Befehls-IDs zuzuordnen. Verwenden Sie [ON_COMMAND](#on_command) , um einer Element Funktion einen einzelnen Befehl zuzuordnen. Nur ein Nachrichten Zuordnungs Eintrag kann mit einer angegebenen Befehls-ID verglichen werden. Das heißt, Sie können einen Befehl nicht mehreren Handlern zuordnen. Weitere Informationen zum Zuordnen von Nachrichten Bereichen finden Sie unter [Handler für](../../mfc/handlers-for-message-map-ranges.md)Meldungs Zuordnungs Bereiche.
 
-Es gibt keine automatische Unterstützung für Meldungszuordnungsbereiche, damit Sie das Makro selbst platzieren müssen.
+Es gibt keine automatische Unterstützung für Meldungs Zuordnungs Bereiche, deshalb müssen Sie das Makro selbst platzieren.
 
 ### <a name="example"></a>Beispiel
 
@@ -649,11 +649,11 @@ void CChildFrame::OnRangeCmds(UINT nID)
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxmsg_.h
+**Header:** afxmsg_. h
 
-## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE
+## <a name="on_update_command_ui_range"></a>ON_UPDATE_COMMAND_UI_RANGE
 
-Ordnet einen zusammenhängenden Bereich von Befehls-IDs ein einzelnes Update Message-Handler-Funktion.
+Ordnet einen zusammenhängenden Bereich von Befehls-IDs einer einzelnen Update-nachrichtenhandlerfunktion zu.
 
 ### <a name="syntax"></a>Syntax
 
@@ -664,27 +664,27 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 ### <a name="parameters"></a>Parameter
 
 *id1*<br/>
-Befehls-ID am Anfang des einen zusammenhängenden Bereich von Befehls-IDs.
+Befehls-ID am Anfang eines zusammenhängenden Bereichs von Befehls-IDs.
 
 *id2*<br/>
-Befehls-ID am Ende einen zusammenhängenden Bereich von Befehls-IDs.
+Befehls-ID am Ende eines zusammenhängenden Bereichs von Befehls-IDs.
 
 *memberFxn*<br/>
-Der Name der Update-Nachrichtenhandler-Funktion, die die Befehle zugeordnet sind.
+Der Name der nachrichtenhandlerfunktion für den Update, der die Befehle zugeordnet sind.
 
 ### <a name="remarks"></a>Hinweise
 
-Update-Meldungshandler aktualisieren Sie den Status der Menüelemente und Symbolleisten-Schaltflächen, die dem Befehl zugeordnet. Die ID-Bereich beginnt mit *"id1"* und endet mit *id2*.
+Aktualisieren von Meldungs Handlern aktualisiert den Zustand von Menü Elementen und Symbolleisten-Schaltflächen, die dem Befehl zugeordnet sind. Der Bereich der IDs beginnt mit *id1* und endet mit *id2*.
 
-Es gibt keine automatische Unterstützung für Meldungszuordnungsbereiche, damit Sie das Makro selbst platzieren müssen.
+Es gibt keine automatische Unterstützung für Meldungs Zuordnungs Bereiche, deshalb müssen Sie das Makro selbst platzieren.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxmsg_.h
+**Header:** afxmsg_. h
 
-## <a name="on_control_range"></a>  ON_CONTROL_RANGE
+## <a name="on_control_range"></a>ON_CONTROL_RANGE
 
-Verwenden Sie dieses Makro, um einen zusammenhängenden Bereich von Steuerelement-IDs für eine einzelne Nachricht Handler-Funktion für eine angegebene Windows-benachrichtigungsmeldung, wie z. B. BN_CLICKED zuzuordnen.
+Verwenden Sie dieses Makro, um einen zusammenhängenden Bereich von Steuerelement-IDs einer einzelnen nachrichtenhandlerfunktion für eine angegebene Windows-Benachrichtigungs Meldung, wie z. b. BN_CLICKED, zuzuordnen.
 
 ### <a name="syntax"></a>Syntax
 
@@ -695,28 +695,28 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
 ### <a name="parameters"></a>Parameter
 
 *wNotifyCode*<br/>
-Der Benachrichtigungscode, der auf dem der Handler geantwortet wird.
+Der Benachrichtigungs Code, auf den der Handler antwortet.
 
 *id1*<br/>
-Befehls-ID am Anfang des einen zusammenhängenden Bereich von Steuerelement-IDs.
+Befehls-ID am Anfang eines zusammenhängenden Bereichs von Steuerelement-IDs.
 
 *id2*<br/>
-Befehls-ID am Ende einen zusammenhängenden Bereich von Steuerelement-IDs.
+Befehls-ID am Ende eines zusammenhängenden Bereichs von Steuerelement-IDs.
 
 *memberFxn*<br/>
-Der Name der Meldungshandler-Funktion, die die Steuerelemente zugeordnet sind.
+Der Name der nachrichtenhandlerfunktion, der die Steuerelemente zugeordnet sind.
 
 ### <a name="remarks"></a>Hinweise
 
-Die ID-Bereich beginnt mit *"id1"* und endet mit *id2*. Der Ereignishandler für die angegebene Benachrichtigung, die von einem der zugeordneten Steuerelemente aufgerufen.
+Der Bereich der IDs beginnt mit *id1* und endet mit *id2*. Der-Handler wird für die angegebene Benachrichtigung aufgerufen, die von einem der zugeordneten-Steuerelemente stammt.
 
-Es gibt keine automatische Unterstützung für Meldungszuordnungsbereiche, damit Sie das Makro selbst platzieren müssen.
+Es gibt keine automatische Unterstützung für Meldungs Zuordnungs Bereiche, deshalb müssen Sie das Makro selbst platzieren.
 
-Weitere Informationen zum Implementieren von Handlerfunktionen für einen Bereich von Steuerelement-IDs finden Sie unter [Handler für Meldungszuordnungsbereiche](../../mfc/handlers-for-message-map-ranges.md).
+Weitere Informationen zum Implementieren von Handlerfunktionen für einen Bereich von Steuerelement-IDs finden Sie unter [Handler für](../../mfc/handlers-for-message-map-ranges.md)Meldungs Zuordnungs Bereiche.
 
 ### <a name="requirements"></a>Anforderungen
 
-**Header:** afxmsg_.h
+**Header:** afxmsg_. h
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -724,6 +724,6 @@ Weitere Informationen zum Implementieren von Handlerfunktionen für einen Bereic
 [TN006: Meldungszuordnungen](../tn006-message-maps.md)<br/>
 [COleCmdUI-Klasse](colecmdui-class.md)<br/>
 [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)<br/>
-[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
+[RegisterWindowMessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew)<br/>
 [Benutzerdefinierte Handler](user-defined-handlers.md)<br/>
 [CCmdUI-Klasse](ccmdui-class.md)

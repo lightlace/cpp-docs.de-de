@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: bff7f87fbdebbff9a1823ae8718c64be4f47a2ea
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 83b7beafe537f6b271b254d16505b515a41acf27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707455"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496689"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, ATL COM+ 1.0-Komponenten-Assistent
 
@@ -45,8 +45,8 @@ Weitere Informationen zu ATL-Projekten und ATL-COM-Klassen finden Sie unter [ATL
    |Option|Beschreibung|
    |------------|-----------------|
    |**ISupportErrorInfo**|Erstellt Unterstützung für die [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md)-Schnittstelle, damit das Objekt Fehlerinformationen an den Client zurückgeben kann.|
-   |**IObjectControl**|Ermöglicht Ihrem Objekt Zugriff auf die drei [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol)-Methoden: [Activate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled) und [Deactivate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
-   |**IObjectConstruct**|Erstellt Unterstützung für die [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct)-Schnittstelle, um Parameter zu verwalten, die von anderen Methoden oder Objekten übergeben wurden.|
+   |**IObjectControl**|Ermöglicht Ihrem Objekt Zugriff auf die drei [IObjectControl](/windows/win32/api/comsvcs/nn-comsvcs-iobjectcontrol)-Methoden: [Activate](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled) und [Deactivate](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
+   |**IObjectConstruct**|Erstellt Unterstützung für die [IObjectConstruct](/windows/win32/api/comsvcs/nn-comsvcs-iobjectconstruct)-Schnittstelle, um Parameter zu verwalten, die von anderen Methoden oder Objekten übergeben wurden.|
 
 - **Transaktion**
 

@@ -112,18 +112,18 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bb033b7ba366d233c8a0a81f36251d8b3f62808
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164019"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505562"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx-Klasse
 
-Die `CMDIChildWndEx` Klasse stellt die Funktionalität von einem Windows untergeordnete-Fensters von multiple Document Interface (MDI). Es erweitert die Funktionalität von [CMDIChildWnd-Klasse](../../mfc/reference/cmdichildwnd-class.md). Das Framework benötigt diese Klasse, wenn eine MDI-Anwendung bestimmte MFC-Klassen verwendet.
+Die `CMDIChildWndEx` -Klasse stellt die Funktionalität eines untergeordneten Windows-MDI-Fensters (Multiple Document Interface) bereit. Dadurch wird die Funktionalität der [CMDIChildWnd-Klasse](../../mfc/reference/cmdichildwnd-class.md)erweitert. Das Framework benötigt diese Klasse, wenn eine MDI-Anwendung bestimmte MFC-Klassen verwendet.
 
-Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.
+Weitere Informationen finden Sie im Quellcode, der sich im **Ordner\\VC atlmfc\\\\src MFC** Ihrer Visual Studio-Installation befindet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -137,71 +137,71 @@ class CMDIChildWndEx : public CMDIChildWnd
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Intern vom Framework aufgerufen, um die obersten Ebene Rahmen zu aktivieren, wenn die Anwendung von einer Registerkarte für die Taskleiste aktiviert werden soll.|
+|[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Wird intern vom Framework aufgerufen, um Frame auf oberster Ebene zu aktivieren, wenn die Anwendung über eine Task leisten Registerkarte aktiviert werden soll.|
 |`CMDIChildWndEx::AddDockSite`|Diese Methode wird nicht verwendet oder implementiert.|
 |[CMDIChildWndEx::AddPane](#addpane)|Fügt einen Bereich hinzu.|
-|[CMDIChildWndEx::AddTabbedPane](#addtabbedpane)|Fügt einen Bereich im Registerkartenformat hinzu.|
-|[CMDIChildWndEx::AdjustDockingLayout](#adjustdockinglayout)|Passt das Layout des Docks an.|
+|[CMDIChildWndEx::AddTabbedPane](#addtabbedpane)|Fügt einen Bereich im Registerkarten Format hinzu.|
+|[CMDIChildWndEx::AdjustDockingLayout](#adjustdockinglayout)|Passt das Andock Layout an.|
 |[CMDIChildWndEx::CanShowOnMDITabs](#canshowonmditabs)||
-|[CMDIChildWndEx::CanShowOnTaskBarTabs](#canshowontaskbartabs)|Das Framework angewiesen wird, ob dieser untergeordneten MDI-Elements auf Windows 7-Taskleiste Registerkarten angezeigt werden kann.|
-|[CMDIChildWndEx::CanShowOnWindowsList](#canshowonwindowslist)|Gibt TRUE zurück, wenn der Name der MDI-untergeordneten Fenster kann, in angezeigt werden der [CMFCWindowsManagerDialog-Klasse](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) Dialogfeld. Andernfalls wird false ZURÜCKGEGEBEN.|
-|`CMDIChildWndEx::CreateObject`|Wird aufgerufen, durch das Framework, um eine dynamische Instanz dieses Klassentyps zu erstellen.|
+|[CMDIChildWndEx::CanShowOnTaskBarTabs](#canshowontaskbartabs)|Weist das Framework an, ob dieses untergeordnete MDI-Element auf Windows 7-Task leisten Registerkarten angezeigt werden kann.|
+|[CMDIChildWndEx::CanShowOnWindowsList](#canshowonwindowslist)|Gibt true zurück, wenn der Name des untergeordneten MDI-Fensters im Dialogfeld [cmfcwindowsmanagerdialog-Klasse](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) angezeigt werden kann. Andernfalls wird false zurückgegeben.|
+|`CMDIChildWndEx::CreateObject`|Wird von Framework aufgerufen, um eine dynamische Instanz dieses Klassen Typs zu erstellen.|
 |[CMDIChildWndEx::DockPane](#dockpane)|Dockt einen Bereich an.|
 |[CMDIChildWndEx::DockPaneLeftOf](#dockpaneleftof)|Dockt einen Bereich auf der linken Seite eines anderen Bereichs an.|
-|[CMDIChildWndEx::EnableAutoHidePanes](#enableautohidepanes)|Ermöglicht das automatischen Ausblendemodus für Bereiche, wenn diese an den angegebenen Seiten des Fensters angedockt sind.|
-|[CMDIChildWndEx::EnableDocking](#enabledocking)|Ermöglicht das Andocken des untergeordneten Fensters zum Hauptframe auf.|
-|[CMDIChildWndEx::EnableTaskbarThumbnailClipRect](#enabletaskbarthumbnailcliprect)|Aktiviert oder deaktiviert die automatische Auswahl eines Teils des Clientbereichs eines Fensters als Miniaturansicht des Fensters, in der Taskleiste angezeigt werden soll.|
+|[CMDIChildWndEx::EnableAutoHidePanes](#enableautohidepanes)|Aktiviert den Modus für Automatisches Ausblenden von Bereichen, wenn diese an den angegebenen Seiten des Fensters angedockt werden.|
+|[CMDIChildWndEx::EnableDocking](#enabledocking)|Aktiviert das Andocken des untergeordneten Fensters in den Hauptrahmen.|
+|[CMDIChildWndEx::EnableTaskbarThumbnailClipRect](#enabletaskbarthumbnailcliprect)|Aktiviert oder deaktiviert die automatische Auswahl eines Teils des Client Bereichs eines Fensters, der in der Taskleiste als Miniaturansicht dieses Fensters angezeigt werden soll.|
 |[CMDIChildWndEx::GetDockingManager](#getdockingmanager)||
-|[CMDIChildWndEx::GetDocumentName](#getdocumentname)|Gibt den Namen des Dokuments, das in der untergeordneten MDI-Fensters angezeigt wird.|
-|[CMDIChildWndEx::GetFrameIcon](#getframeicon)|Wird aufgerufen, durch das Framework zum Abrufen der untergeordneten MDI-Symbol.|
-|[CMDIChildWndEx::GetFrameText](#getframetext)|Wird aufgerufen, durch das Framework, um den Text für die untergeordneten MDI-Fensters abzurufen.|
-|[CMDIChildWndEx::GetPane](#getpane)|Sucht einen Bereich von der angegebenen Steuerelement-ID.|
+|[CMDIChildWndEx::GetDocumentName](#getdocumentname)|Gibt den Namen des Dokuments zurück, das im untergeordneten MDI-Fenster angezeigt wird.|
+|[CMDIChildWndEx::GetFrameIcon](#getframeicon)|Wird von Framework aufgerufen, um das untergeordnete MDI-Fenster Symbol abzurufen.|
+|[CMDIChildWndEx::GetFrameText](#getframetext)|Wird von Framework aufgerufen, um den Text für das untergeordnete MDI-Fenster abzurufen.|
+|[CMDIChildWndEx::GetPane](#getpane)|Sucht einen Bereich anhand der angegebenen Steuerelement-ID.|
 |[CMDIChildWndEx::GetRelatedTabGroup](#getrelatedtabgroup)||
-|[CMDIChildWndEx::GetTabbedPane](#gettabbedpane)|Gibt einen Zeiger auf eine eingebettete andockbaren Bereich, der in ein Dokument im Registerkartenformat konvertiert wurde.|
-|[CMDIChildWndEx::GetTabProxyWnd](#gettabproxywnd)|Gibt die Registerkarte Proxy-Fenster mit Registerkarten für Windows 7-Taskleiste nicht registriert.|
-|[CMDIChildWndEx::GetTaskbarPreviewWnd](#gettaskbarpreviewwnd)|Vom Framework aufgerufen, wenn ein untergeordnetes Fenster (normalerweise ein Ansichts- oder Splitterfenster-Fenster) auf Windows 7-Taskleistenminiaturansicht für Registerkarte angezeigt werden abgerufen werden muss.|
-|[CMDIChildWndEx::GetTaskbarThumbnailClipRect](#gettaskbarthumbnailcliprect)|Vom Framework aufgerufen, wenn auf einen Teil des Clientbereichs eines Fensters als Miniaturansicht des Fensters, in der Taskleiste angezeigt werden muss.|
-|`CMDIChildWndEx::GetThisClass`|Wird aufgerufen, durch das Framework einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|
-|[CMDIChildWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Wird aufgerufen, durch das Framework zum Abrufen einer QuickInfo für eine Symbolleisten-Schaltfläche.|
-|[CMDIChildWndEx::InsertPane](#insertpane)|Registriert den angegebenen Bereich beim Dock-Manager.|
-|[CMDIChildWndEx::InvalidateIconicBitmaps](#invalidateiconicbitmaps)|Erklärt die iconic-Bitmap-Darstellung des untergeordneten MDI-Elements.|
-|[CMDIChildWndEx::IsPointNearDockSite](#ispointneardocksite)|Bestimmt, ob ein angegebene Punkt befindet sich in der Nähe der DockPosition.|
-|[CMDIChildWndEx::IsReadOnly](#isreadonly)|Gibt TRUE zurück, wenn das Dokument, das in das untergeordnete Fenster angezeigt wird, schreibgeschützt ist. Andernfalls wird false ZURÜCKGEGEBEN.|
-|[CMDIChildWndEx::IsRegisteredWithTaskbarTabs](#isregisteredwithtaskbartabs)|Gibt TRUE zurück, wenn untergeordnete MDI-Fenster mit Registerkarten für Windows 7-Taskleiste erfolgreich registriert wurde.|
-|[CMDIChildWndEx::IsTabbedPane](#istabbedpane)|Gibt TRUE zurück, wenn die untergeordneten MDI-Fensters einen andockbaren Bereich enthält. Andernfalls wird false ZURÜCKGEGEBEN.|
-|[CMDIChildWndEx::IsTaskbarTabsSupportEnabled](#istaskbartabssupportenabled)|Erfahren Sie, ob untergeordneten MDI-Fensters auf Windows 7-Taskleiste Registerkarten angezeigt werden kann.|
-|[CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled](#istaskbarthumbnailcliprectenabled)|Erfahren Sie, ob die automatische Auswahl eines Teils des Clientbereichs eines Fensters als Miniaturansicht des Fensters, in der Taskleiste anzeigen aktiviert oder deaktiviert ist.|
-|[CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags](#m_dwdefaulttaskbartabpropertyflags)|Eine Kombination von Flags, die durch das Framework an die SetTaskbarTabProperties-Methode übergeben wird, wenn eine Registerkarte (untergeordnete MDI-Element) mit Windows 7-Taskleiste Registerkarten registriert wird. Die Standardkombination ist STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.|
-|[CMDIChildWndEx::OnGetIconicLivePreviewBitmap](#ongeticoniclivepreviewbitmap)|Wird vom Framework aufgerufen, wenn eine Bitmap für die Livevorschau des untergeordneten MDI-Elements abgerufen werden muss.|
-|[CMDIChildWndEx::OnGetIconicThumbnail](#ongeticonicthumbnail)|Wird vom Framework aufgerufen, wenn eine Bitmap für iconic Miniaturansicht des untergeordneten MDI-Elements abgerufen werden muss.|
-|[CMDIChildWndEx::OnMoveMiniFrame](#onmoveminiframe)|Wird aufgerufen, durch das Framework zum Verschieben eines Minirahmenfensters.|
-|[CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton](#onpresstaskbarthmbnailclosebutton)|Vom Framework aufgerufen, wenn der Benutzer die Schaltfläche "Schließen" auf der Registerkarte Taskleistenminiaturansicht drückt...|
-|[CMDIChildWndEx::OnSetPreviewMode](#onsetpreviewmode)|Wird aufgerufen, durch das Framework die Seitenansicht-Modus starten oder beenden.|
-|[CMDIChildWndEx::OnTaskbarTabThumbnailActivate](#ontaskbartabthumbnailactivate)|Vom Framework aufgerufen, wenn die Registerkarte Taskleistenminiaturansicht WM_ACTIVATE Nachricht verarbeiten soll.|
-|[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|Vom Framework aufgerufen, wenn die Registerkarte Taskleistenminiaturansicht WM_MOUSEACTIVATE Nachricht verarbeiten soll.|
-|[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Vom Framework aufgerufen, wenn eine Bitmap für Windows 7-Taskleiste Registerkarte Vorschau der Miniaturansicht untergeordnete MDI-Element gestreckt werden muss.|
-|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Wird aufgerufen, durch das Framework auf den Frametitel zu aktualisieren. (Überschreibt `CMDIChildWnd::OnUpdateFrameTitle`.)|
-|[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Gibt den Bereich, der den angegebenen Punkt enthält.|
-|`CMDIChildWndEx::PreTranslateMessage`|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) gesendet werden. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CMDIChildWndEx::RecalcLayout](#recalclayout)|Berechnet das Layout des Fensters.|
-|[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Registriert untergeordnete MDI-Fenster mit Registerkarten für Windows 7-Taskleiste ein.|
-|[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Entfernt einen Bereich von Dock-Manager.|
+|[CMDIChildWndEx::GetTabbedPane](#gettabbedpane)|Gibt einen Zeiger auf einen eingebetteten Andock Bereich zurück, der in ein Dokument im Registerkarten Format konvertiert wurde.|
+|[CMDIChildWndEx::GetTabProxyWnd](#gettabproxywnd)|Gibt das Registerkarten Proxy Fenster zurück, das tatsächlich bei Windows 7-Task leisten Registerkarten registriert|
+|[CMDIChildWndEx::GetTaskbarPreviewWnd](#gettaskbarpreviewwnd)|Wird von Framework aufgerufen, wenn es ein untergeordnetes Fenster (normalerweise ein Ansichts-oder Splitter Fenster) abrufen muss, das auf der Registerkarte der Windows 7-Taskleiste angezeigt wird.|
+|[CMDIChildWndEx::GetTaskbarThumbnailClipRect](#gettaskbarthumbnailcliprect)|Wird von Framework aufgerufen, wenn ein Teil des Client Bereichs eines Fensters ausgewählt werden muss, der in der Taskleiste als Miniaturansicht dieses Fensters angezeigt werden soll.|
+|`CMDIChildWndEx::GetThisClass`|Wird von Framework aufgerufen, um einen Zeiger auf das [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt zu erhalten, das diesem Klassentyp zugeordnet ist.|
+|[CMDIChildWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Wird von Framework aufgerufen, um eine QuickInfo für eine Symbolleisten-Schaltfläche abzurufen.|
+|[CMDIChildWndEx::InsertPane](#insertpane)|Registriert den angegebenen Bereich beim Docking-Manager.|
+|[CMDIChildWndEx::InvalidateIconicBitmaps](#invalidateiconicbitmaps)|Erklärt eine Zeichen folgen Darstellung des untergeordneten MDI-Elements als ungültig.|
+|[CMDIChildWndEx::IsPointNearDockSite](#ispointneardocksite)|Bestimmt, ob sich ein angegebener Punkt in der Nähe des Dock Standorts befindet|
+|[CMDIChildWndEx::IsReadOnly](#isreadonly)|Gibt "true" zurück, wenn das im untergeordneten Fenster angezeigte Dokument schreibgeschützt ist. Andernfalls wird false zurückgegeben.|
+|[CMDIChildWndEx:: isregisteredwithtaskbartabs](#isregisteredwithtaskbartabs)|Gibt true zurück, wenn das untergeordnete MDI-Element bei Windows 7-Task leisten Registerkarten registriert wurde.|
+|[CMDIChildWndEx::IsTabbedPane](#istabbedpane)|Gibt true zurück, wenn das untergeordnete MDI-Fenster einen andockbaren Bereich enthält. Andernfalls wird false zurückgegeben.|
+|[CMDIChildWndEx:: istaskbartabssupportenabled](#istaskbartabssupportenabled)|Gibt an, ob das untergeordnete MDI-Element auf Windows 7-Task leisten Registerkarten angezeigt werden kann|
+|[CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled](#istaskbarthumbnailcliprectenabled)|Gibt an, ob die automatische Auswahl eines Teils des Client Bereichs eines Fensters, der angezeigt wird, wenn die Miniaturansicht dieses Fensters in der Taskleiste aktiviert oder deaktiviert ist.|
+|[CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags](#m_dwdefaulttaskbartabpropertyflags)|Eine Kombination von Flags, die vom Framework an die settaskbartabproperties-Methode übermittelt wird, wenn eine Registerkarte (untergeordnetes MDI) bei Windows 7-Task leisten Registerkarten registriert wird. Die Standardkombination ist STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.|
+|[CMDIChildWndEx::OnGetIconicLivePreviewBitmap](#ongeticoniclivepreviewbitmap)|Wird von Framework aufgerufen, wenn es eine Bitmap für die Live Vorschau des untergeordneten MDI-Elements abrufen muss.|
+|[CMDIChildWndEx::OnGetIconicThumbnail](#ongeticonicthumbnail)|Wird von Framework aufgerufen, wenn es eine Bitmap für die Miniaturansicht eines untergeordneten MDI-Elements abrufen muss.|
+|[CMDIChildWndEx::OnMoveMiniFrame](#onmoveminiframe)|Wird von Framework aufgerufen, um ein Mini Rahmen Fenster zu verschieben.|
+|[CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton](#onpresstaskbarthmbnailclosebutton)|Wird von Framework aufgerufen, wenn der Benutzer auf die Schaltfläche Schließen auf der Taskleiste der Registerkarte Miniaturansicht drückt.|
+|[CMDIChildWndEx::OnSetPreviewMode](#onsetpreviewmode)|Wird von Framework aufgerufen, um den Seiten Ansichtsmodus einzugeben oder zu beenden.|
+|[CMDIChildWndEx::OnTaskbarTabThumbnailActivate](#ontaskbartabthumbnailactivate)|Wird von Framework aufgerufen, wenn auf der Registerkarte der Taskleiste die WM_ACTIVATE-Nachricht verarbeitet werden soll.|
+|[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|Wird von Framework aufgerufen, wenn auf der Registerkarte der Taskleiste die WM_MOUSEACTIVATE-Nachricht verarbeitet werden soll.|
+|[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Wird von Framework aufgerufen, wenn eine Bitmap für die Windows 7-Task leisten Registerkarte Vorschauversion des untergeordneten MDI-Elements gestreckt werden muss.|
+|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Wird von Framework aufgerufen, um den Frame Titel zu aktualisieren. (Überschreibt `CMDIChildWnd::OnUpdateFrameTitle`.)|
+|[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Gibt den Bereich zurück, der den angegebenen Punkt enthält.|
+|`CMDIChildWndEx::PreTranslateMessage`|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) gesendet werden. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMDIChildWndEx:: Neuberechnung](#recalclayout)|Berechnet das Layout des Fensters neu.|
+|[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Registriert untergeordnetes MDI-Element bei Windows 7-Task leisten Registerkarten.|
+|[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Entfernt einen Bereich aus dem Docking-Manager.|
 |[CMDIChildWndEx::SetRelatedTabGroup](#setrelatedtabgroup)||
-|[CMDIChildWndEx::SetTaskbarTabActive](#settaskbartabactive)|Aktiviert die entsprechende Registerkarte von Windows 7-Taskleiste.|
-|[CMDIChildWndEx::SetTaskbarTabOrder](#settaskbartaborder)|Fügt ein untergeordnetes MDI-Element vor dem angegebenen Fenster auf Windows 7-Taskleiste Registerkarten.|
-|[CMDIChildWndEx::SetTaskbarTabProperties](#settaskbartabproperties)|Legt Eigenschaften für eine Registerkarte der Windows 7-Taskleiste fest.|
-|[CMDIChildWndEx::SetTaskbarThumbnailClipRect](#settaskbarthumbnailcliprect)|Wird intern aufgerufen, durch das Framework festzulegende Clippingrechteck, wählen Sie einen Teil des Clientbereichs eines Fensters als Miniaturansicht des Fensters, in der Taskleiste angezeigt werden soll.|
+|[CMDIChildWndEx:: settaskbartabactive](#settaskbartabactive)|Aktiviert die entsprechende Registerkarte der Windows 7-Taskleiste.|
+|[CMDIChildWndEx:: settaskbartaborder](#settaskbartaborder)|Fügt ein untergeordnetes MDI-Element vor dem angegebenen Fenster auf Windows 7-Task leisten Registerkarten|
+|[CMDIChildWndEx:: settaskbartabproperties](#settaskbartabproperties)|Legt Eigenschaften für eine Registerkarte der Windows 7-Taskleiste fest.|
+|[CMDIChildWndEx::SetTaskbarThumbnailClipRect](#settaskbarthumbnailcliprect)|Wird intern vom Framework aufgerufen, um das Clippingrechteck festzulegen, um einen Teil des Client Bereichs eines Fensters auszuwählen, der als Miniaturansicht dieses Fensters auf der Taskleiste angezeigt werden soll.|
 |[CMDIChildWndEx::ShowPane](#showpane)||
-|[CMDIChildWndEx::UnregisterTaskbarTab](#unregistertaskbartab)|Entfernt untergeordnete MDI-Fenster über Registerkarten für Windows 7-Taskleiste an.|
-|[CMDIChildWndEx::UpdateTaskbarTabIcon](#updatetaskbartabicon)|Windows 7-Taskleiste Registerkartensymbol wird aktualisiert.|
+|[CMDIChildWndEx::UnregisterTaskbarTab](#unregistertaskbartab)|Entfernt ein untergeordnetes MDI-Element aus Windows 7-Task leisten Registerkarten|
+|[CMDIChildWndEx::UpdateTaskbarTabIcon](#updatetaskbartabicon)|Aktualisiert das Registerkarten Symbol der Taskleiste von Windows 7.|
 
 ## <a name="remarks"></a>Hinweise
 
-Leiten Sie zur Nutzung von erweiterten docking-Features in MDI-Anwendungen die MDI-untergeordneten Fenster-Klasse, der Anwendung aus `CMDIChildWndEx` anstelle von [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md).
+Um erweiterte Andock Features in MDI-Anwendungen zu nutzen, leiten Sie anstelle von [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)die `CMDIChildWndEx` Klasse des untergeordneten MDI-Fensters der Anwendung ab.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird eine Klasse von abgeleitet `CMDIChildWndEx`. Dieser Codeausschnitt stammt aus dem [VisualStudioDemo-Beispiel: Visual Studio-Mfc_anwendung](../../overview/visual-cpp-samples.md).
+Im folgenden Beispiel wird eine Klasse von `CMDIChildWndEx`abgeleitet. Dieser Code Ausschnitt stammt aus dem [visualstudiodemo-Beispiel: MFC-Visual Studio](../../overview/visual-cpp-samples.md)-Anwendung.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -221,9 +221,9 @@ Im folgende Beispiel wird eine Klasse von abgeleitet `CMDIChildWndEx`. Dieser Co
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxMDIChildWndEx.h
+**Header:** afxmdichildwndex. h
 
-##  <a name="addpane"></a>  CMDIChildWndEx::AddPane
+##  <a name="addpane"></a>CMDIChildWndEx:: addpane
 
 Fügt einen Bereich hinzu.
 
@@ -236,18 +236,18 @@ BOOL AddPane(
 ### <a name="parameters"></a>Parameter
 
 *pControlBar*<br/>
-[in] Ein Zeiger auf den Bereich.
+in Ein Zeiger auf den Bereich.
 
 *bTail*<br/>
-[in] True, um den Bereich am Ende der Liste der Bereiche für Dock-Manager hinzufügen. andernfalls "false".
+in "True", um den Bereich am Ende der Liste der Bereiche für den Docking-Manager hinzuzufügen. andernfalls false.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn der Bereich beim Dock-Manager erfolgreich registriert wurde. andernfalls "false".
+TRUE, wenn der Bereich erfolgreich beim Docking-Manager registriert wurde. andernfalls false.
 
-##  <a name="addtabbedpane"></a>  CMDIChildWndEx::AddTabbedPane
+##  <a name="addtabbedpane"></a>CMDIChildWndEx:: addtabbedpane
 
-Fügt einen Bereich im Registerkartenformat hinzu.
+Fügt einen Bereich im Registerkarten Format hinzu.
 
 ```
 void AddTabbedPane(CDockablePane* pControlBar);
@@ -256,11 +256,11 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ### <a name="parameters"></a>Parameter
 
 *pControlBar*<br/>
-[in] Ein Zeiger auf den Bereich.
+in Ein Zeiger auf den Bereich.
 
-##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout
+##  <a name="adjustdockinglayout"></a>CMDIChildWndEx:: Anpassungen dockinglayout
 
-Passt das Layout des Docks an.
+Passt das Andock Layout an.
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
@@ -269,9 +269,9 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="parameters"></a>Parameter
 
 *hdwp*<br/>
-[in] Handle für eine verzögerte Fenster Position-Struktur.
+in Handle für eine verzögerte Fenster Positions Struktur.
 
-##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs
+##  <a name="canshowonmditabs"></a>CMDIChildWndEx:: canshowonmditabs
 
 ```
 virtual BOOL CanShowOnMDITabs();
@@ -281,9 +281,9 @@ virtual BOOL CanShowOnMDITabs();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="canshowonwindowslist"></a>  CMDIChildWndEx::CanShowOnWindowsList
+##  <a name="canshowonwindowslist"></a>CMDIChildWndEx:: canshowonwindowslist
 
-Gibt an, ob der Name der MDI-untergeordneten Fenster kann, in angezeigt werden der [CMFCWindowsManagerDialog-Klasse](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) Dialogfeld.
+Gibt an, ob der Name des untergeordneten MDI-Fensters im Dialogfeld [cmfcwindowsmanagerdialog-Klasse](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) angezeigt werden kann.
 
 ```
 virtual BOOL CanShowOnWindowsList();
@@ -291,13 +291,13 @@ virtual BOOL CanShowOnWindowsList();
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn das Fenster in angezeigt werden kann die **Windows** (Dialogfeld), andernfalls FALSE.
+TRUE, wenn das Fenster im Dialogfeld **Windows** angezeigt werden kann. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode in einer abgeleiteten Klasse überschreiben und "false" zurückgegeben, wenn das Fenster nicht soll, können Sie in angezeigt werden der **Windows** Dialogfeld. Diese Funktion wird aufgerufen, von `CMFCWindowsManagerDialog`.
+Überschreiben Sie diese Methode in einer abgeleiteten Klasse, und geben Sie false zurück, wenn das Fenster nicht im Dialogfeld **Windows** angezeigt werden soll. Diese Funktion wird von `CMFCWindowsManagerDialog`aufgerufen.
 
-##  <a name="dockpane"></a>  CMDIChildWndEx::DockPane
+##  <a name="dockpane"></a>CMDIChildWndEx::D ockpane
 
 Dockt einen Bereich an.
 
@@ -311,19 +311,19 @@ void DockPane(
 ### <a name="parameters"></a>Parameter
 
 *pBar*<br/>
-[in] Ein Zeiger auf den Bereich.
+in Ein Zeiger auf den Bereich.
 
 *nDockBarID*<br/>
-[in] Die ID des Bereichs.
+in Die ID des Bereichs.
 
 *lpRect*<br/>
-[in] Ein Zeiger auf ein Rechteck.
+in Ein Zeiger auf ein Rechteck.
 
 ### <a name="remarks"></a>Hinweise
 
-Die *LpRect* Parameter wird nicht verwendet.
+Der *lprect* -Parameter wird nicht verwendet.
 
-##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf
+##  <a name="dockpaneleftof"></a>CMDIChildWndEx::D ockpaneleftof
 
 Dockt einen Bereich auf der linken Seite eines anderen Bereichs an.
 
@@ -336,24 +336,24 @@ BOOL DockPaneLeftOf(
 ### <a name="parameters"></a>Parameter
 
 *pBar*<br/>
-Ein Zeiger auf den Bereich, der angedockt werden.
+Ein Zeiger auf den Bereich, der angedockt werden soll.
 
 *pLeftOf*<br/>
 Ein Zeiger auf den Bereich, der als Bezugspunkt dient.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg TRUE zurück, "false" bei einem Fehler.
+TRUE bei Erfolg, false bei Fehler.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode nimmt im Bereich gemäß *pBar* und Dockt sie auf der linken Seite des Bereichs gemäß *pLeftOf*.
+Diese Methode nimmt den von *pbar* angegebenen Bereich an und dockt ihn auf der linken Seite des Bereichs an, der von *pleftof*angegeben wird.
 
-Rufen Sie diese Methode auf, wenn Sie mehrere Informationsbereiche in einer vordefinierten Reihenfolge andocken möchten.
+Wenn Sie mehrere Bereiche in der vordefinierten Reihenfolge andocken möchten, wird diese Methode aufgerufen.
 
-##  <a name="enableautohidepanes"></a>  CMDIChildWndEx::EnableAutoHidePanes
+##  <a name="enableautohidepanes"></a>CMDIChildWndEx:: enableautohidebereiche
 
-Ermöglicht das automatischen Ausblendemodus für Bereiche, wenn diese an den angegebenen Seiten des Fensters angedockt sind.
+Aktiviert den Modus für Automatisches Ausblenden von Bereichen, wenn diese an den angegebenen Seiten des Fensters angedockt werden.
 
 ```
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -362,7 +362,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ### <a name="parameters"></a>Parameter
 
 *dwDockStyle*<br/>
-[in] Gibt die Seiten im Hauptrahmenfenster, die aktiviert ist. Verwenden Sie eine oder mehrere der folgenden Flags.
+in Gibt die Seiten des Hauptrahmen Fensters an, das aktiviert ist. Verwenden Sie mindestens eines der folgenden Flags.
 
 - CBRS_ALIGN_LEFT
 
@@ -374,11 +374,11 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Methode erfolgreich ist. andernfalls "false".
+TRUE, wenn die Methode erfolgreich ist. andernfalls false.
 
-##  <a name="enabledocking"></a>  CMDIChildWndEx::EnableDocking
+##  <a name="enabledocking"></a>CMDIChildWndEx:: EnableDocking
 
-Ermöglicht das Andocken des untergeordneten Fensters zum Hauptframe auf.
+Aktiviert das Andocken des untergeordneten Fensters in den Hauptrahmen.
 
 ```
 BOOL EnableDocking(DWORD dwDockStyle);
@@ -387,17 +387,17 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ### <a name="parameters"></a>Parameter
 
 *dwDockStyle*<br/>
-[in] Gibt die andockbare Ausrichtung zu aktivieren.
+in Gibt die zu aktivierbare Andock Ausrichtung an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Methode erfolgreich ist. andernfalls "false".
+TRUE, wenn die Methode erfolgreich ist. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode zum Andocken Ausrichtung zum Hauptframe zu ermöglichen. Sie können eine Kombination von Flags für CBRS_ALIGN_ übergeben (Weitere Informationen finden Sie unter [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).
+Ruft diese Methode auf, um die Andock Ausrichtung an den Hauptrahmen zu aktivieren. Sie können eine Kombination von CBRS_ALIGN_-Flags übergeben (Weitere Informationen finden Sie unter [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).
 
-##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager
+##  <a name="getdockingmanager"></a>CMDIChildWndEx:: getdockingmanager
 
 ```
 CDockingManager* GetDockingManager();
@@ -407,9 +407,9 @@ CDockingManager* GetDockingManager();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getdocumentname"></a>  CMDIChildWndEx::GetDocumentName
+##  <a name="getdocumentname"></a>CMDIChildWndEx:: getdocumentname
 
-Gibt den Namen des Dokuments, das in der untergeordneten MDI-Fensters angezeigt wird.
+Gibt den Namen des Dokuments zurück, das im untergeordneten MDI-Fenster angezeigt wird.
 
 ```
 virtual LPCTSTR GetDocumentName(CObject** pObj);
@@ -421,23 +421,23 @@ Ein Zeiger auf eine Zeichenfolge, die den Namen eines Dokuments enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Es ist ein Dokument, das die untergeordneten MDI-Fensters angezeigt. Im Allgemeinen zeigt das Fenster Daten, die aus geladen oder in einer Datei gespeichert. Aus diesem Grund ist der Name des Dokuments, den Namen der Datei. Die standardmäßige Implementierung des `GetDocumentName` gibt eine Zeichenfolge, die aus abgerufen `CDocument::GetPathName`.
+In einem Dokument wird das untergeordnete MDI-Fenster angezeigt. Im Allgemeinen werden im Fenster Daten angezeigt, die aus einer Datei geladen oder in einer Datei gespeichert werden. Daher ist der Name des Dokuments der Name der Datei. Die Standard Implementierung von `GetDocumentName` gibt eine Zeichenfolge zurück `CDocument::GetPathName`, die aus abgerufen wurde.
 
-Wenn das Fenster ein Dokument angezeigt wird, die nicht aus einer Datei geladen wird, überschreiben Sie diese Methode in einer abgeleiteten Klasse, und geben Sie einen eindeutige Bezeichner des Dokuments zurück.
+Wenn im Fenster ein Dokument angezeigt wird, das nicht aus einer Datei geladen wurde, überschreiben Sie diese Methode in einer abgeleiteten Klasse, und geben Sie einen eindeutigen Dokument Bezeichner zurück.
 
-`GetDocumentName` wird vom Framework aufgerufen, wenn den Status aller geöffneten Dokumente gespeichert. Die zurückgegebene Zeichenfolge wird in der Registrierung geschrieben.
+`GetDocumentName`wird vom Framework aufgerufen, wenn der Zustand aller geöffneten Dokumente gespeichert wird. Die zurückgegebene Zeichenfolge wird in die Registrierung geschrieben.
 
-Wenn Sie das Framework Status später wiederherstellen, wird den Namen des Dokuments aus der Registrierung gelesene und an [CMDIFrameWndEx::CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow). Überschreiben Sie diese Methode in einer [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)-abgeleitete Klasse, und erstellen oder öffnen Sie ein Dokument, das diesen Namen aufweist, und in der Datei mit diesem Namen zu lesen. Wenn das Dokument nicht in einer Datei basiert, erstellen Sie das Dokument auf Grundlage des Dokument-ID selbst. Sie sollten die vorherigen Aktionen ausführen, nur, wenn Sie beabsichtigen, speichern und Wiederherstellen von Dokumenten.
+Wenn das Framework den Zustand zu einem späteren Zeitpunkt wiederherstellt, wird der Dokument Name aus der Registrierung gelesen und an [CMDIFrameWndEx::-webdocumentwindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow)übergeben. Überschreiben Sie diese Methode in einer von [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)abgeleiteten Klasse, erstellen oder öffnen Sie ein Dokument mit diesem Namen, und lesen Sie die Datei mit diesem Namen. Wenn das Dokument nicht auf einer Datei basiert, erstellen Sie das Dokument auf der Grundlage des Dokument Bezeichners. Sie sollten die vorangehenden Aktionen nur ausführen, wenn Sie Dokumente speichern und wiederherstellen möchten.
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird die Verwendung der `GetDocumentName`-Methode gezeigt. Dieser Codeausschnitt stammt aus dem [VisualStudioDemo-Beispiel: Visual Studio-Mfc_anwendung](../../overview/visual-cpp-samples.md).
+Im folgenden Beispiel wird die Verwendung der `GetDocumentName`-Methode gezeigt. Dieser Code Ausschnitt stammt aus dem [visualstudiodemo-Beispiel: MFC-Visual Studio](../../overview/visual-cpp-samples.md)-Anwendung.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
-##  <a name="getframeicon"></a>  CMDIChildWndEx::GetFrameIcon
+##  <a name="getframeicon"></a>CMDIChildWndEx:: getframeicon
 
-Wird aufgerufen, durch das Framework das Symbol des untergeordneten MDI-Fensters abrufen.
+Wird von Framework aufgerufen, um das Symbol des untergeordneten MDI-Fensters abzurufen.
 
 ```
 virtual HICON GetFrameIcon() const;
@@ -445,17 +445,17 @@ virtual HICON GetFrameIcon() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Handle für das Symbol "Fenster".
+Ein Handle für das Fenster Symbol.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, durch das Framework, um zu bestimmen, welches Symbol auf der MDI-Registerkarte angezeigt, die die untergeordneten MDI-Rahmenfenster enthält.
+Diese Methode wird vom Framework aufgerufen, um zu bestimmen, welches Symbol auf der MDI-Registerkarte angezeigt werden soll, die das untergeordnete MDI-Rahmen Fenster enthält.
 
-Standardmäßig gibt diese Methode das Fenstersymbol an. Außer Kraft setzen `GetFrameIcon` in einem `CMDIChildWndEx`-abgeleitete Klasse, um dieses Verhalten anzupassen.
+Standardmäßig gibt diese Methode das Fenster Symbol zurück. Über `GetFrameIcon` schreiben Sie `CMDIChildWndEx`in einer von abgeleiteten Klasse, um dieses Verhalten anzupassen.
 
-##  <a name="getframetext"></a>  CMDIChildWndEx::GetFrameText
+##  <a name="getframetext"></a>CMDIChildWndEx:: getframetext
 
-Wird aufgerufen, durch das Framework, um den Text für die untergeordneten MDI-Fensters abzurufen.
+Wird von Framework aufgerufen, um den Text für das untergeordnete MDI-Fenster abzurufen.
 
 ```
 virtual CString GetFrameText() const;
@@ -463,17 +463,17 @@ virtual CString GetFrameText() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Eine Zeichenfolge, die den rahmenfenstertext enthält.
+Eine Zeichenfolge, die den Rahmen Fenster Text enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, durch das Framework, um zu bestimmen, welcher Text auf der MDI-Registerkarte angezeigt, die die untergeordneten MDI-Rahmenfenster enthält.
+Diese Methode wird vom Framework aufgerufen, um zu bestimmen, welcher Text auf der MDI-Registerkarte angezeigt werden soll, die das untergeordnete MDI-Rahmen Fenster enthält.
 
-Diese Methode gibt standardmäßig den Fenstertext zurück. Außer Kraft setzen `GetFrameText` in einem `CMDIChildWndEx`-abgeleitete Klasse, um dieses Verhalten anzupassen.
+Standardmäßig gibt diese Methode den Fenster Text zurück. Über `GetFrameText` schreiben Sie `CMDIChildWndEx`in einer von abgeleiteten Klasse, um dieses Verhalten anzupassen.
 
-##  <a name="getpane"></a>  CMDIChildWndEx::GetPane
+##  <a name="getpane"></a>CMDIChildWndEx:: GetPane
 
-Sucht einen Bereich von der angegebenen Steuerelement-ID.
+Sucht einen Bereich anhand der angegebenen Steuerelement-ID.
 
 ```
 CBasePane* GetPane(UINT nID);
@@ -482,13 +482,13 @@ CBasePane* GetPane(UINT nID);
 ### <a name="parameters"></a>Parameter
 
 *nID*<br/>
-[in] Die Steuerelement-ID des Bereichs zu suchen.
+in Die Steuerelement-ID des zu suchenden Bereichs.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ein Zeiger auf den Bereich, sofern gefunden, andernfalls NULL.
 
-##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup
+##  <a name="getrelatedtabgroup"></a>CMDIChildWndEx:: getrelatedtabgroup
 
 ```
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -498,9 +498,9 @@ CMFCTabCtrl* GetRelatedTabGroup();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="gettabbedpane"></a>  CMDIChildWndEx::GetTabbedPane
+##  <a name="gettabbedpane"></a>CMDIChildWndEx:: gettabbedpane
 
-Gibt zurück, der ein Zeiger auf einen andockbaren Bereich, die Teil einer Gruppe von MDI Dokumente im Registerkartenformat.
+Gibt einen Zeiger auf einen Andock Bereich zurück, der Teil einer Gruppe von Dokumenten im Registerkarten Format ist.
 
 ```
 CDockablePane* GetTabbedPane() const;
@@ -508,11 +508,11 @@ CDockablePane* GetTabbedPane() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf einen andockbaren Bereich, der Teil einer Gruppe von MDI ist die Dokumente im Registerformat.
+Ein Zeiger auf einen andockbaren Bereich, der Teil einer Gruppe von Dokumenten im Registerkarten Format ist.
 
-##  <a name="gettoolbarbuttontooltiptext"></a>  CMDIChildWndEx::GetToolbarButtonToolTipText
+##  <a name="gettoolbarbuttontooltiptext"></a>CMDIChildWndEx:: gettoolbarbuttontooltiptext
 
-Wird aufgerufen, durch das Framework zum Abrufen einer QuickInfo für eine Symbolleisten-Schaltfläche.
+Wird von Framework aufgerufen, um eine QuickInfo für eine Symbolleisten-Schaltfläche abzurufen.
 
 ```
 virtual BOOL GetToolbarButtonToolTipText(
@@ -522,15 +522,15 @@ virtual BOOL GetToolbarButtonToolTipText(
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn die QuickInfo angezeigt wurde. Die Standardimplementierung gibt "false" zurück.
+TRUE, wenn die QuickInfo angezeigt wird. Die Standard Implementierung gibt false zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Überschreiben Sie diese Methode, wenn Sie benutzerdefinierte QuickInfos für Schaltflächen der Symbolleiste angezeigt werden soll.
+Überschreiben Sie diese Methode, wenn Sie benutzerdefinierte Quick Infos für Symbolleisten-Schaltflächen anzeigen möchten.
 
-##  <a name="insertpane"></a>  CMDIChildWndEx::InsertPane
+##  <a name="insertpane"></a>CMDIChildWndEx:: insertpane
 
-Registriert den angegebenen Bereich beim Dock-Manager.
+Registriert den angegebenen Bereich beim Docking-Manager.
 
 ```
 BOOL InsertPane(
@@ -542,21 +542,21 @@ BOOL InsertPane(
 ### <a name="parameters"></a>Parameter
 
 *pControlBar*<br/>
-[in] Ein Zeiger auf den Bereich eingefügt.
+in Ein Zeiger auf den einzufügenden Bereich.
 
 *pTarget*<br/>
-[in] Ein Zeiger auf angrenzenden Bereich.
+in Ein Zeiger auf den angrenzenden Bereich.
 
 *bAfter*<br/>
-[in] True gibt an, *pControlBar* eingefügt wird, nach dem *pTarget*. False gibt an, *pControlBar* eingefügt wird, bevor Sie *pTarget*.
+in TRUE gibt an, dass *pcontrolbar* nach " *pTARGET*" eingefügt wird. Wenn false, wird *pcontrolbar* vor *pTARGET*eingefügt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn die Methode erfolgreich ist; FALSE andernfalls.
+TRUE, wenn die Methode erfolgreich ist, andernfalls false.
 
-##  <a name="ispointneardocksite"></a>  CMDIChildWndEx::IsPointNearDockSite
+##  <a name="ispointneardocksite"></a>CMDIChildWndEx:: ispointneardocksite
 
-Bestimmt, ob ein angegebene Punkt befindet sich in der Nähe der DockPosition.
+Bestimmt, ob sich ein angegebener Punkt in der Nähe des Dock Standorts befindet
 
 ```
 BOOL IsPointNearDockSite(
@@ -568,25 +568,25 @@ BOOL IsPointNearDockSite(
 ### <a name="parameters"></a>Parameter
 
 *point*<br/>
-[in] Der angegebene Punkt.
+in Der angegebene Punkt.
 
 *dwBarAlignment*<br/>
-[in] Gibt an, welchen Rand, in der Nähe der Punkt ist. Mögliche Werte sind CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP und CBRS_ALIGN_BOTTOM
+in Gibt an, an welchem Rand sich der Punkt nähert. Mögliche Werte sind CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP und CBRS_ALIGN_BOTTOM.
 
 *bOuterEdge*<br/>
-[in] True, wenn der Punkt in der Nähe von der äußere Rahmen der DockPosition ist. "False" andernfalls.
+in TRUE, wenn sich der Punkt in der Nähe des äußeren Rahmens der Dock Site befindet. Andernfalls false.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn der Punkt in der Nähe der DockPosition ist. andernfalls "false".
+TRUE, wenn sich der Punkt in der Nähe der Dock Site befindet. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Punkt ist in der Nähe der DockPosition, wenn es innerhalb der Vertraulichkeit, die im Dock-Manager festgelegt ist. Die Vertraulichkeit der Standardwert ist 15 Pixel.
+Der Punkt befindet sich in der Nähe der Dock Site, wenn er sich innerhalb der Vertraulichkeits Gruppe im Docking-Manager befindet. Die Standard Sensitivität beträgt 15 Pixel.
 
-##  <a name="isreadonly"></a>  CMDIChildWndEx::IsReadOnly
+##  <a name="isreadonly"></a>CMDIChildWndEx:: isread Only
 
-Gibt an, ob das Dokument, das in das untergeordnete Fenster angezeigt wird, schreibgeschützt ist.
+Gibt an, ob das im untergeordneten Fenster angezeigte Dokument schreibgeschützt ist.
 
 ```
 virtual BOOL IsReadOnly();
@@ -594,21 +594,21 @@ virtual BOOL IsReadOnly();
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn das Dokument schreibgeschützt ist. andernfalls "false".
+TRUE, wenn das Dokument schreibgeschützt ist. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion wird verwendet, um zu verhindern, dass nur-Lese Dokumente speichern.
+Diese Funktion wird verwendet, um zu verhindern, dass schreibgeschützte Dokumente gespeichert werden.
 
 ### <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht das Überschreiben der `IsReadOnly` Methode. Dieser Codeausschnitt stammt aus dem [VisualStudioDemo-Beispiel: Visual Studio-Mfc_anwendung](../../overview/visual-cpp-samples.md).
+Im folgenden Beispiel wird das über `IsReadOnly` Schreiben der-Methode veranschaulicht. Dieser Code Ausschnitt stammt aus dem [visualstudiodemo-Beispiel: MFC-Visual Studio](../../overview/visual-cpp-samples.md)-Anwendung.
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
-##  <a name="istabbedpane"></a>  CMDIChildWndEx::IsTabbedPane
+##  <a name="istabbedpane"></a>CMDIChildWndEx:: istabbedpane
 
-Gibt an, ob die untergeordneten MDI-Fensters einen andockbaren Bereich enthält.
+Gibt an, ob das untergeordnete MDI-Fenster einen andockbaren Bereich enthält.
 
 ```
 BOOL IsTabbedPane() const;
@@ -616,11 +616,11 @@ BOOL IsTabbedPane() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die untergeordneten MDI-Fensters einen andockbaren Bereich enthält, der in ein Dokument im Registerkartenformat konvertiert wurde. andernfalls "false".
+TRUE, wenn das untergeordnete MDI-Fenster einen andockbaren Bereich enthält, der in ein Dokument im Registerkarten Format konvertiert wurde. andernfalls false.
 
-##  <a name="onmoveminiframe"></a>  CMDIChildWndEx::OnMoveMiniFrame
+##  <a name="onmoveminiframe"></a>CMDIChildWndEx:: onmoveminiframe
 
-Wird aufgerufen, durch das Framework zum Verschieben eines Minirahmenfensters.
+Wird von Framework aufgerufen, um ein Mini Rahmen Fenster zu verschieben.
 
 ```
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
@@ -629,15 +629,15 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ### <a name="parameters"></a>Parameter
 
 *pFrame*<br/>
-[in] Ein Zeiger auf ein Minirahmenfenster.
+in Ein Zeiger auf ein Mini Rahmen Fenster.
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn die Methode erfolgreich ist, andernfalls "false".
+TRUE, wenn die Methode erfolgreich ist, andernfalls false.
 
-##  <a name="onsetpreviewmode"></a>  CMDIChildWndEx::OnSetPreviewMode
+##  <a name="onsetpreviewmode"></a>CMDIChildWndEx:: onsetpreviewmode
 
-Wird aufgerufen, durch das Framework die Seitenansicht-Modus starten oder beenden.
+Wird von Framework aufgerufen, um den Seiten Ansichtsmodus einzugeben oder zu beenden.
 
 ```
 virtual void OnSetPreviewMode(
@@ -648,14 +648,14 @@ virtual void OnSetPreviewMode(
 ### <a name="parameters"></a>Parameter
 
 *bPreview*<br/>
-[in] True gibt an, geben Sie die Seitenansicht. False gibt an, beendet die Seitenansicht-Modus.
+in Wenn true, geben Sie den Seiten Ansichtsmodus ein. Wenn false, beenden Sie den Seiten Ansichtsmodus.
 
 *pState*<br/>
-[in] Ein Zeiger auf die Seitenansicht-Status-Struktur.
+in Ein Zeiger auf die Status Struktur der Druckvorschau.
 
-##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle
+##  <a name="onupdateframetitle"></a>CMDIChildWndEx:: onupdateframetitle
 
-Wird aufgerufen, durch das Framework auf den Frametitel zu aktualisieren.
+Wird von Framework aufgerufen, um den Frame Titel zu aktualisieren.
 
 ```
 virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
@@ -664,11 +664,11 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ### <a name="parameters"></a>Parameter
 
 *bAddToTitle*<br/>
-[in] True gibt an, fügen Sie den Namen des Dokuments, auf den Titel.
+in Wenn der Wert true ist, fügen Sie den Dokumentnamen dem Titel hinzu.
 
-##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint
+##  <a name="panefrompoint"></a>CMDIChildWndEx::P anefrompoint
 
-Gibt den Bereich, der den angegebenen Punkt enthält.
+Gibt den Bereich zurück, der den angegebenen Punkt enthält.
 
 ```
 CBasePane* PaneFromPoint(
@@ -687,33 +687,33 @@ CBasePane* PaneFromPoint(
 ### <a name="parameters"></a>Parameter
 
 *point*<br/>
-[in] Gibt den Punkt in Bildschirmkoordinaten, um zu überprüfen.
+in Gibt den Punkt in Bildschirm Koordinaten an, der überprüft werden soll.
 
-*nSensitivity*<br/>
-[in] Erhöhen Sie den Suchbereich, um diesen Betrag. Ein Bereich erfüllt die Suchkriterien, fällt die der angegebene Punkt in der höheren Bereich.
+*nsensitivität*<br/>
+in Vergrößern Sie den Suchbereich um diesen Betrag. Ein Bereich erfüllt die Suchkriterien, wenn der angegebene Punkt in den erweiterten Bereich fällt.
 
 *bExactBar*<br/>
-[in] "True", ignoriert der *nSensitivity* Parameter ist, andernfalls FALSE.
+in TRUE, um den *nsensitivitäts* -Parameter zu ignorieren. andernfalls false.
 
 *pRTCBarType*<br/>
-[in] Wenn nicht NULL ist, sucht die Methode nur Bereiche des angegebenen Typs.
+in Wenn nicht NULL, durchsucht die Methode nur Bereiche des angegebenen Typs.
 
 *dwAlignment*<br/>
-[in] Wenn Sie ein Bereich am angegebenen Punkt gefunden wird, enthält dieser Parameter den Rand des Bereichs, der dem angegebenen Punkt am nächsten war. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+in Wenn ein Bereich am angegebenen Punkt gefunden wird, enthält dieser Parameter die Seite des Bereichs, die dem angegebenen Punkt am nächsten liegt. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `CBasePane`-abgeleitete Objekt, das die angegebenen Punkt enthält, oder NULL, wenn kein Bereich gefunden wurde.
+Ein Zeiger auf das `CBasePane`von abgeleitete Objekt, das den angegebenen Punkt enthält, oder NULL, wenn kein Bereich gefunden wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode, um zu bestimmen, ob ein Bereich über den angegebenen Punkt gemäß den angegebenen Bedingungen wie z. B.-Runtime-Klasse und Sichtbarkeit enthält.
+Ruft diese Methode auf, um zu bestimmen, ob ein Bereich den angegebenen Punkt gemäß den angegebenen Bedingungen (z. b. Lauf Zeit Klasse und Sichtbarkeit) enthält.
 
-Wenn die Funktion zurückgibt und ein Bereich gefunden wurde, *DwAlignment* die Ausrichtung des angegebenen Punkt enthält. Wenn der Punkt am nächsten am Anfang des Bereichs befand sich z. B. *DwAlignment* auf CBRS_ALIGN_TOP festgelegt ist.
+Wenn die Funktion zurückgibt und ein Bereich gefunden wurde, enthält *dwalignment* die Ausrichtung des angegebenen Punkts. Wenn der Punkt z. b. am oberen Rand des Bereichs liegt, wird *dwalignment* auf CBRS_ALIGN_TOP festgelegt.
 
-##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout
+##  <a name="recalclayout"></a>CMDIChildWndEx:: Neuberechnung
 
-Berechnet das Layout des Fensters.
+Berechnet das Layout des Fensters neu.
 
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -722,11 +722,11 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bNotify*<br/>
-[in] True gibt an, erhält das aktive direkte-Element für das Fenster eine Benachrichtigung von der layoutänderung.
+in TRUE gibt an, dass das aktive direkte Element für das Fenster eine Benachrichtigung über die Layoutänderung erhält.
 
-##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager
+##  <a name="removepanefromdockmanager"></a>CMDIChildWndEx:: removepanefromdockmanager
 
-Entfernt einen Bereich von Dock-Manager.
+Entfernt einen Bereich aus dem Docking-Manager.
 
 ```
 void RemovePaneFromDockManager(
@@ -740,21 +740,21 @@ void RemovePaneFromDockManager(
 ### <a name="parameters"></a>Parameter
 
 *pControlBar*<br/>
-[in] Ein Zeiger auf den Bereich zu entfernen.
+in Ein Zeiger auf den Bereich, der entfernt werden soll.
 
 *bDestroy*<br/>
-[in] Wenn "true", Bereich entfernte zerstört wird.
+in TRUE gibt an, dass der entfernte Bereich zerstört wird.
 
 *bAdjustLayout*<br/>
-[in] True gibt an, passen Sie sofort das docking-Layout.
+in Wenn true, passen Sie das Andock Layout sofort an.
 
 *bAutoHide*<br/>
-[in] Bei "true", bezieht sich das docking-Layout der Liste der automatisch im Hintergrund Balken. False gibt an, bezieht sich das docking-Layout auf die Liste der regulären Bereiche.
+in TRUE gibt an, dass das Andock Layout mit der Liste der Automatisches Ausblenden-Balken verknüpft ist. FALSE gibt an, dass das Andock Layout mit der Liste der regulären Bereiche verknüpft ist.
 
 *pBarReplacement*<br/>
-[in] Ein Zeiger auf einen Bereich, der Bereich entfernten ersetzt.
+in Ein Zeiger auf einen Bereich, der den entfernten Bereich ersetzt.
 
-##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup
+##  <a name="setrelatedtabgroup"></a>CMDIChildWndEx:: abtrelatedtabgroup
 
 ```
 void SetRelatedTabGroup(CMFCTabCtrl* p);
@@ -766,7 +766,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane
+##  <a name="showpane"></a>CMDIChildWndEx:: ShowPane
 
 ```
 void ShowPane(
@@ -784,13 +784,13 @@ void ShowPane(
 
 [in] *bDelay*<br/>
 
-[in] *bActivate*<br/>
+in *bactivate*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="updatetaskbartabicon"></a>  CMDIChildWndEx::UpdateTaskbarTabIcon
+##  <a name="updatetaskbartabicon"></a>CMDIChildWndEx:: updatetaskbartabicon
 
-Aktualisiert das Registerkartensymbol für Windows 7-Taskleiste an.
+Aktualisiert das Symbol für die Windows 7-Task leisten-Registerkarte.
 
 ```
 virtual void UpdateTaskbarTabIcon(HICON hIcon);
@@ -799,13 +799,13 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 ### <a name="parameters"></a>Parameter
 
 *hIcon*<br/>
-Ein Handle für ein Symbol auf der Registerkarte der Windows 7-Taskleiste angezeigt.
+Ein Handle für ein Symbol, das auf der Registerkarte Windows 7-Taskleiste angezeigt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="unregistertaskbartab"></a>  CMDIChildWndEx::UnregisterTaskbarTab
+##  <a name="unregistertaskbartab"></a>CMDIChildWndEx:: unregistertaskbartab
 
-Entfernt das untergeordnete MDI-Element von Windows 7-Taskleiste Registerkarten.
+Entfernt das untergeordnete MDI-Element aus den Windows 7-Task leisten Registerkarten.
 
 ```
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
@@ -814,13 +814,13 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bCheckRegisteredMDIChildCount*<br/>
-Gibt an, ob diese Funktion die Anzahl von untergeordneten MDI-Objekte registriert MDI-Registerkarten zu überprüfen muss. Diese Zahl 0 ist, entfernt, wenn diese Funktion das Clippingrechteck an von der Anwendung Taskleistenminiaturansicht.
+Gibt an, ob diese Funktion die Anzahl der untergeordneten MDI-Elemente überprüfen muss, die bei MDI registriert sind. Wenn diese Zahl 0 ist, wird das Clippingrechteck aus der Task leisten-Miniaturansicht der Anwendung entfernt.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="settaskbarthumbnailcliprect"></a>  CMDIChildWndEx::SetTaskbarThumbnailClipRect
+##  <a name="settaskbarthumbnailcliprect"></a>CMDIChildWndEx:: settaskbarthumbnailcliprect
 
-Vom Framework aufgerufen wird, legen Sie das Clippingrechteck an, wählen Sie einen Teil des Clientbereichs eines Fensters als Miniaturansicht des Fensters, in der Taskleiste angezeigt werden soll.
+Wird von Framework aufgerufen, um das Clippingrechteck festzulegen, um einen Teil des Client Bereichs eines Fensters auszuwählen, der als Miniaturansicht dieses Fensters auf der Taskleiste angezeigt werden soll.
 
 ```
 virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
@@ -828,8 +828,8 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 
 ### <a name="parameters"></a>Parameter
 
-*rect*<br/>
-Gibt das neue Auswahlrechteck. Wenn das Rechteck leer oder null ist, wird das Clipping entfernt.
+*Rect*<br/>
+Gibt das neue Clippingrechteck an. Wenn das Rechteck leer oder NULL ist, wird das Clipping entfernt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -837,7 +837,7 @@ TRUE, wenn erfolgreich, andernfalls FALSE.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="settaskbartabproperties"></a>  CMDIChildWndEx::SetTaskbarTabProperties
+##  <a name="settaskbartabproperties"></a>CMDIChildWndEx:: settaskbartabproperties
 
 Legt Eigenschaften für eine Registerkarte der Windows 7-Taskleiste fest.
 
@@ -848,13 +848,13 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 ### <a name="parameters"></a>Parameter
 
 *dwFlags*<br/>
-Eine Kombination von STPFLAG-Werten. Weitere Informationen finden Sie unter [itaskbarlist4:: Settabproperties](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-itaskbarlist4-settabproperties).
+Eine Kombination von STPFLAG-Werten. Weitere Informationen finden Sie unter [ITaskbarList4:: settabproperties](/windows/win32/api/shobjidl_core/nf-shobjidl_core-itaskbarlist4-settabproperties).
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="settaskbartaborder"></a>  CMDIChildWndEx::SetTaskbarTabOrder
+##  <a name="settaskbartaborder"></a>CMDIChildWndEx:: settaskbartaborder
 
-Fügt der untergeordneten MDI-Elements, bevor das angegebene Fenster auf Windows 7-Taskleiste Registerkarten.
+Fügt das untergeordnete MDI-Element vor dem angegebenen Fenster auf den Windows 7-Task leisten Registerkarten ein.
 
 ```
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
@@ -863,13 +863,13 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ### <a name="parameters"></a>Parameter
 
 *pWndBefore*<br/>
-Ein Zeiger auf die untergeordneten MDI-Fensters, dessen Miniaturansicht auf der linken Seite eingefügt wird. In diesem Fenster muss bereits registriert sein, über `RegisterTaskbarTab`. Wenn dieser Wert NULL ist, wird das neue Miniaturbild an das Ende der Liste hinzugefügt.
+Ein Zeiger auf das untergeordnete MDI-Fenster, dessen Miniaturansicht auf der linken Seite eingefügt wird. Dieses Fenster muss bereits über `RegisterTaskbarTab`registriert werden. Wenn dieser Wert NULL ist, wird die neue Miniaturansicht am Ende der Liste hinzugefügt.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="settaskbartabactive"></a>  CMDIChildWndEx::SetTaskbarTabActive
+##  <a name="settaskbartabactive"></a>CMDIChildWndEx:: settaskbartabactive
 
-Aktiviert die entsprechende Registerkarte für die Windows 7-Taskleiste an.
+Aktiviert die entsprechende Registerkarte für die Windows 7-Taskleiste.
 
 ```
 void SetTaskbarTabActive();
@@ -877,9 +877,9 @@ void SetTaskbarTabActive();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="registertaskbartab"></a>  CMDIChildWndEx::RegisterTaskbarTab
+##  <a name="registertaskbartab"></a>CMDIChildWndEx:: registertaskbartab
 
-Das untergeordnete MDI-registriert Registerkarten für Windows 7-Taskleiste.
+Registriert das untergeordnete MDI-Element bei Windows 7-Task leisten Registerkarten.
 
 ```
 virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
@@ -888,13 +888,13 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
 ### <a name="parameters"></a>Parameter
 
 *pWndBefore*<br/>
-Ein Zeiger auf die untergeordneten MDI-Fensters, dessen Miniaturansicht auf der linken Seite eingefügt wird. In diesem Fenster muss bereits registriert sein, über `RegisterTaskbarTab`. Wenn dieser Wert NULL ist, wird das neue Miniaturbild an das Ende der Liste hinzugefügt.
+Ein Zeiger auf das untergeordnete MDI-Fenster, dessen Miniaturansicht auf der linken Seite eingefügt wird. Dieses Fenster muss bereits über `RegisterTaskbarTab`registriert werden. Wenn dieser Wert NULL ist, wird die neue Miniaturansicht am Ende der Liste hinzugefügt.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="ontaskbartabthumbnailstretch"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailStretch
+##  <a name="ontaskbartabthumbnailstretch"></a>CMDIChildWndEx:: ontaskbartabthumbnailstretch
 
-Vom Framework aufgerufen, wenn für die ein Bitmuster für ein Windows 7-Taskleiste Registerkarte Miniaturbildansicht von untergeordneten MDI-Fensters stretching durchgeführt werden muss.
+Wird von Framework aufgerufen, wenn eine Bitmap für eine Windows 7-Task leisten Registerkarte Vorschauversion des untergeordneten MDI-Elements gestreckt werden muss.
 
 ```
 virtual BOOL OnTaskbarTabThumbnailStretch(
@@ -910,21 +910,21 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 Ein Handle für eine Zielbitmap.
 
 *rectDst*<br/>
-Gibt an, das Zielrechteck.
+Gibt das Ziel Rechteck an.
 
 *hBmpSrc*<br/>
-Ein Handle für eine Quell-Bitmap.
+Ein Handle für eine Quell Bitmap.
 
 *rectSrc*<br/>
-Gibt an, das Quellrechteck.
+Gibt das Quell Rechteck an.
 
 ### <a name="remarks"></a>Hinweise
 
-Voraussetzung: afxmdichildwndex.h
+Anforderung: afxmdichildwndex. h
 
-##  <a name="ontaskbartabthumbnailmouseactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate
+##  <a name="ontaskbartabthumbnailmouseactivate"></a>CMDIChildWndEx:: ontaskbartabthumbnailmousetter
 
-Vom Framework aufgerufen, wenn die Registerkarte Taskleistenminiaturansicht WM_MOUSEACTIVATE Nachricht verarbeiten soll.
+Wird von Framework aufgerufen, wenn auf der Registerkarte der Taskleiste die WM_MOUSEACTIVATE-Nachricht verarbeitet werden soll.
 
 ```
 virtual int OnTaskbarTabThumbnailMouseActivate(
@@ -936,21 +936,21 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ### <a name="parameters"></a>Parameter
 
 *pDesktopWnd*<br/>
-Gibt einen Zeiger zum obersten übergeordneten Fenster des Fensters aktiviert wird. Der Zeiger kann temporär sein und sollten nicht gespeichert werden.
+Gibt einen Zeiger auf das übergeordnete Fenster der obersten Ebene des Fensters an, das aktiviert wird. Der Zeiger kann temporär sein und sollte nicht gespeichert werden.
 
 *nHitTest*<br/>
-Gibt an, die Ortskennzahl Treffertests. Ein Treffertest ist ein Test, der die Position des Cursors bestimmt.
+Gibt den Code des Treffer Testbereichs an. Ein Treffer Test ist ein Test, der die Position des Cursors bestimmt.
 
 *message*<br/>
-Gibt die Anzahl der Maus-Nachricht.
+Gibt die Nummer der Maus Nachricht an.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Standardimplementierung wird aktiviert, die zugehörigen untergeordneten MDI-Rahmens.
+Die Standard Implementierung aktiviert den zugehörigen untergeordneten MDI-Frame.
 
-##  <a name="ontaskbartabthumbnailactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailActivate
+##  <a name="ontaskbartabthumbnailactivate"></a>CMDIChildWndEx:: ontaskbartabthumbnailaktivierungs
 
-Vom Framework aufgerufen, wenn die Registerkarte Taskleistenminiaturansicht WM_ACTIVATE Nachricht verarbeiten soll.
+Wird von Framework aufgerufen, wenn auf der Registerkarte der Taskleiste die WM_ACTIVATE-Nachricht verarbeitet werden soll.
 
 ```
 virtual void OnTaskbarTabThumbnailActivate(
@@ -962,21 +962,21 @@ virtual void OnTaskbarTabThumbnailActivate(
 ### <a name="parameters"></a>Parameter
 
 *nState*<br/>
-Gibt an, ob die `CWnd` aktiviert oder deaktiviert.
+Gibt an, `CWnd` ob der aktiviert oder deaktiviert wird.
 
 *pWndOther*<br/>
-Zeiger auf die `CWnd` aktiviert oder deaktiviert. Der Zeiger kann NULL sein, und es kann temporär sein.
+Zeiger auf den `CWnd` , der aktiviert oder deaktiviert wird. Der Zeiger kann NULL sein, und er kann temporär sein.
 
 *bMinimized*<br/>
-Gibt den minimierten Zustand der `CWnd` aktiviert oder deaktiviert. Der Wert "true" gibt an, dass das Fenster minimiert ist.
+Gibt den minimierten Zustand der `CWnd` aktivierten oder deaktivierten an. Der Wert true gibt an, dass das Fenster minimiert wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Standardimplementierung wird aktiviert, die zugehörigen untergeordneten MDI-Rahmens.
+Die Standard Implementierung aktiviert den zugehörigen untergeordneten MDI-Frame.
 
-##  <a name="onpresstaskbarthmbnailclosebutton"></a>  CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton
+##  <a name="onpresstaskbarthmbnailclosebutton"></a>CMDIChildWndEx:: onpresstaskbarthmbnailclosebutton
 
-Wird vom Framework aufgerufen, wenn der Benutzer die Schaltfläche "Schließen" auf der Registerkarte Taskleistenminiaturansicht drückt.
+Wird von Framework aufgerufen, wenn der Benutzer auf der Registerkarte der Taskleiste auf die Schaltfläche Schließen drückt.
 
 ```
 virtual void OnPressTaskbarThmbnailCloseButton();
@@ -984,9 +984,9 @@ virtual void OnPressTaskbarThmbnailCloseButton();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="ongeticonicthumbnail"></a>  CMDIChildWndEx::OnGetIconicThumbnail
+##  <a name="ongeticonicthumbnail"></a>CMDIChildWndEx:: ongetisubicminiatur
 
-Wird vom Framework aufgerufen, wenn eine Bitmap für die Symbol-Miniaturansicht des untergeordneten MDI-Elements abgerufen werden muss.
+Wird von Framework aufgerufen, wenn es eine Bitmap für die Miniaturansicht des untergeordneten MDI-Elements abrufen muss.
 
 ```
 virtual HBITMAP OnGetIconicThumbnail(
@@ -997,16 +997,16 @@ virtual HBITMAP OnGetIconicThumbnail(
 ### <a name="parameters"></a>Parameter
 
 *nWidth*<br/>
-Gibt die Breite der Bitmap erforderlich.
+Gibt die Breite der erforderlichen Bitmap an.
 
-*nHeight*<br/>
-Gibt die Höhe der Bitmap erforderlich.
+*nheight*<br/>
+Gibt die Höhe der erforderlichen Bitmap an.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="ongeticoniclivepreviewbitmap"></a>  CMDIChildWndEx::OnGetIconicLivePreviewBitmap
+##  <a name="ongeticoniclivepreviewbitmap"></a>CMDIChildWndEx:: ongeticoniclivepreviewbitmap
 
-Wird vom Framework aufgerufen, wenn eine Bitmap für die Livevorschau des untergeordneten MDI-Elements abgerufen werden muss.
+Wird von Framework aufgerufen, wenn es eine Bitmap für die Live Vorschau des untergeordneten MDI-Elements abrufen muss.
 
 ```
 virtual HBITMAP OnGetIconicLivePreviewBitmap(
@@ -1017,22 +1017,22 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ### <a name="parameters"></a>Parameter
 
 *bIsMDIChildActive*<br/>
-Dieser Parameter ist "true", wenn die Bitmap wird angefordert, für die untergeordneten MDI-Fensters, die gerade aktiv ist und das Hauptfenster nicht minimiert. In diesem Fall die standardverarbeitung Momentaufnahme eine des Hauptfensters.
+Dieser Parameter ist true, wenn die Bitmap für das untergeordnete MDI-Element angefordert wird, das derzeit aktiv ist und das Hauptfenster nicht minimiert wird. Die Standard Verarbeitung in diesem Fall erstellt eine Momentaufnahme des Hauptfensters.
 
 *ptLocation*<br/>
-Gibt den Speicherort der Bitmap im Hauptbearbeitungsfenster (der obersten Ebene) Fenster Clientkoordinaten. Dieser Punkt muss vom aufgerufenen angegeben werden.
+Gibt den Speicherort der Bitmap in den Client Koordinaten des Hauptfensters (obere Ebene) an. Dieser Punkt sollte vom aufgerufenen bereitgestellt werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn verarbeitet, NULL gibt ein Handle zu einer gültigen 32bpp-Bitmap, andernfalls.
+Bei der Verarbeitung wird ein Handle für eine gültige 32 bpp-Bitmap zurückgegeben, andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode in einer abgeleiteten Klasse überschreiben, und geben Sie eine gültige 32 bpp-Bitmap für live-Vorschau von untergeordneten MDI-Elements zurück. Diese Methode wird aufgerufen, nur, wenn das untergeordnete MDI-Element auf Registerkarten für Windows 7-Taskleiste angezeigt wird. Wenn Sie NULL zurückgeben, MFC die Standardhandler aufruft und mithilfe von Bitmaps abruft `PrintClient` oder `PrintWindow`.
+Überschreiben Sie diese Methode in einer abgeleiteten Klasse und geben Sie eine gültige 32 bpp-Bitmap für die Live Vorschau des untergeordneten MDI-Elements zurück Diese Methode wird nur aufgerufen, wenn das untergeordnete MDI-Element auf den Registerkarten der Windows 7-Taskleiste angezeigt wird. Wenn Sie NULL zurückgeben, ruft MFC die Standard Handler auf und ruft Bitmaps `PrintClient` mithilfe `PrintWindow`von oder ab.
 
-##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>  CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags
+##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>CMDIChildWndEx:: m_dwDefaultTaskbarTabPropertyFlags
 
-Eine Kombination von Flags, die durch das Framework zu übergeben, wird die `SetTaskbarTabProperties` Methode, wenn Sie eine Registerkarte (untergeordnete MDI-Element) mit Windows 7-Taskleiste Registerkarten registriert wird.
+Eine Kombination von-Flags, die vom Framework an die `SetTaskbarTabProperties` -Methode übermittelt wird, wenn eine Registerkarte (MDI-untergeordnetes Element) bei Windows 7-Task leisten Registerkarten registriert wird.
 
 ```
 AFX_IMPORT_DATA static DWORD m_dwDefaultTaskbarTabPropertyFlags;
@@ -1042,9 +1042,9 @@ AFX_IMPORT_DATA static DWORD m_dwDefaultTaskbarTabPropertyFlags;
 
 Die Standardkombination ist STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.
 
-##  <a name="istaskbarthumbnailcliprectenabled"></a>  CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled
+##  <a name="istaskbarthumbnailcliprectenabled"></a>CMDIChildWndEx:: istaskbarthumbnailcliprectenabled
 
-Erfahren Sie, ob die automatische Auswahl eines Teils des Clientbereichs eines Fensters als Miniaturansicht des Fensters, in der Taskleiste anzeigen aktiviert oder deaktiviert ist.
+Gibt an, ob die automatische Auswahl eines Teils des Client Bereichs eines Fensters, der angezeigt wird, wenn die Miniaturansicht dieses Fensters in der Taskleiste aktiviert oder deaktiviert ist.
 
 ```
 BOOL IsTaskbarThumbnailClipRectEnabled() const;
@@ -1052,13 +1052,13 @@ BOOL IsTaskbarThumbnailClipRectEnabled() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt "true", wenn das automatische Auswahl eines Teils des Clientbereichs eines Fensters anzeigen aktiviert ist. andernfalls "false".
+Gibt true zurück, wenn die automatische Auswahl eines Teils des Client Bereichs eines Fensters aktiviert ist, der angezeigt werden soll. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="istaskbartabssupportenabled"></a>  CMDIChildWndEx::IsTaskbarTabsSupportEnabled
+##  <a name="istaskbartabssupportenabled"></a>CMDIChildWndEx:: istaskbartabssupportenabled
 
-Erfahren Sie, ob untergeordneten MDI-Fensters auf Windows 7-Taskleiste Registerkarten angezeigt werden kann.
+Gibt an, ob das untergeordnete MDI-Element auf Windows 7-Task leisten Registerkarten angezeigt werden kann
 
 ```
 BOOL IsTaskbarTabsSupportEnabled();
@@ -1066,13 +1066,13 @@ BOOL IsTaskbarTabsSupportEnabled();
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die untergeordneten MDI-Fensters auf Windows 7-Taskleiste Registerkarten angezeigt werden kann. FALSE, wenn die untergeordneten MDI-Fensters nicht auf Windows 7-Taskleiste Registerkarten angezeigt werden kann.
+TRUE, wenn das untergeordnete MDI-Element auf Windows 7-Task leisten Registerkarten angezeigt werden kann. FALSE, wenn das untergeordnete MDI-Element nicht auf Windows 7-Task leisten Registerkarten angezeigt werden kann.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isregisteredwithtaskbartabs"></a>  CMDIChildWndEx::IsRegisteredWithTaskbarTabs
+##  <a name="isregisteredwithtaskbartabs"></a>CMDIChildWndEx:: isregisteredwithtaskbartabs
 
-Gibt TRUE zurück, wenn das untergeordnete MDI-Registerkarten für Windows 7-Taskleiste erfolgreich registriert wurde.
+Gibt true zurück, wenn das untergeordnete MDI-Element bei Windows 7-Task leisten Registerkarten erfolgreich registriert wurde.
 
 ```
 BOOL IsRegisteredWithTaskbarTabs();
@@ -1080,13 +1080,13 @@ BOOL IsRegisteredWithTaskbarTabs();
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn das untergeordnete MDI-Registerkarten für Windows 7-Taskleiste registriert ist. andernfalls "false".
+TRUE, wenn das untergeordnete MDI-Element bei Windows 7-Task leisten Registerkarten registriert ist. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="invalidateiconicbitmaps"></a>  CMDIChildWndEx::InvalidateIconicBitmaps
+##  <a name="invalidateiconicbitmaps"></a>CMDIChildWndEx:: invalidateisubicbitmaps
 
-Erklärt eine iconic Bitmapdarstellung eines untergeordneten MDI-Elements.
+Erklärt eine legendäre Bitmap-Darstellung eines untergeordneten MDI-Elements für ungültig.
 
 ```
 BOOL InvalidateIconicBitmaps();
@@ -1094,15 +1094,15 @@ BOOL InvalidateIconicBitmaps();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt "false", wenn die Unterstützung für Windows 7-Taskleiste deaktiviert ist oder das untergeordnete MDI-Element ist nicht mit Windows 7-Taskleiste Registerkarten registriert werden; Andernfalls wird "true" zurückgegeben.
+Gibt false zurück, wenn die Windows 7-Task leisten Unterstützung deaktiviert ist oder das untergeordnete MDI-Element nicht bei Windows 7-Task leisten Registerkarten registriert ist. Andernfalls wird true zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Sollte aufgerufen werden, wenn sich die live-Inhalten oder die Größe eines untergeordneten MDI-Elements geändert hat.
+Sollte aufgerufen werden, wenn sich der Live Inhalt oder die Größe eines untergeordneten MDI-Elements geändert hat.
 
-##  <a name="gettaskbarthumbnailcliprect"></a>  CMDIChildWndEx::GetTaskbarThumbnailClipRect
+##  <a name="gettaskbarthumbnailcliprect"></a>CMDIChildWndEx:: gettaskbarthumbnailcliprect
 
-Vom Framework aufgerufen, wenn auf einen Teil des Clientbereichs eines Fensters als Miniaturansicht des Fensters, in der Taskleiste angezeigt werden muss.
+Wird von Framework aufgerufen, wenn ein Teil des Client Bereichs eines Fensters ausgewählt werden muss, der in der Taskleiste als Miniaturansicht dieses Fensters angezeigt werden soll.
 
 ```
 virtual CRect GetTaskbarThumbnailClipRect() const;
@@ -1110,13 +1110,13 @@ virtual CRect GetTaskbarThumbnailClipRect() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Rechteck in Windows-Koordinaten. Dieses Rechteck wird auf den Clientbereich des Frames auf oberster Ebene zugeordnet. Das Rechteck sollte leer ist, deaktivieren Sie das Clippingrechteck.
+Ein Rechteck in Windows-Koordinaten. Dieses Rechteck wird dem Client Bereich des Frames der obersten Ebene zugeordnet. Das Rechteck sollte leer sein, um das Clippingrechteck zu löschen.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="gettaskbarpreviewwnd"></a>  CMDIChildWndEx::GetTaskbarPreviewWnd
+##  <a name="gettaskbarpreviewwnd"></a>CMDIChildWndEx:: gettaskbarpreviewwnd
 
-Vom Framework aufgerufen, wenn ein untergeordnetes Fenster (normalerweise ein Ansichts- oder Splitterfenster-Fenster) auf einem Windows 7-Taskleistenminiaturansicht Registerkarte angezeigt werden abgerufen werden muss.
+Wird von Framework aufgerufen, wenn es ein untergeordnetes Fenster (normalerweise ein Ansichts-oder Splitter Fenster) abrufen muss, das auf einer Windows 7-Task leisten-Registerkarte angezeigt wird.
 
 ```
 virtual CWnd* GetTaskbarPreviewWnd();
@@ -1124,13 +1124,13 @@ virtual CWnd* GetTaskbarPreviewWnd();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Sollte einen gültigen Zeiger zum Zurückgeben einer `CWnd` Objekt, das auf einer Registerkarte für Windows 7-Taskleiste, deren Vorschau angezeigt werden soll, die sich auf dieses untergeordnete MDI-Element beziehen. Die Standardimplementierung gibt ein untergeordnetes Fenster von diesem untergeordneten MDI-Elements mit AFX_IDW_PANE_FIRST Steuerelement-ID zurück. (Dies ist in der Regel eine `CView`-abgeleitete Klasse).
+Sollte einen gültigen Zeiger auf ein `CWnd` -Objekt zurückgeben, dessen Vorschau auf einer Windows 7-Task leisten Registerkarte angezeigt werden soll, die sich auf dieses untergeordnete MDI-Element bezieht. Die Standard Implementierung gibt ein untergeordnetes Fenster dieses untergeordneten MDI-Elements mit der AFX_IDW_PANE_FIRST-Steuerelement `CView`-ID zurück (in der Regel eine von abgeleitete Klasse).
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="gettabproxywnd"></a>  CMDIChildWndEx::GetTabProxyWnd
+##  <a name="gettabproxywnd"></a>CMDIChildWndEx:: gettabproxywnd
 
-Gibt die Registerkarte Proxy-Fenster mit Registerkarten für Windows 7-Taskleiste registriert zurück.
+Gibt das Registerkarten Proxy Fenster zurück, das bei Windows 7-Task leisten Registerkarten registriert ist
 
 ```
 CMDITabProxyWnd* GetTabProxyWnd();
@@ -1138,13 +1138,13 @@ CMDITabProxyWnd* GetTabProxyWnd();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine `CMDITabProxyWnd` -Objekt, das mit Windows 7-Taskleiste Registerkarten registriert ist.
+Ein Zeiger auf ein `CMDITabProxyWnd` -Objekt, das bei Windows 7-Task leisten Registerkarten registriert wird.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="enabletaskbarthumbnailcliprect"></a>  CMDIChildWndEx::EnableTaskbarThumbnailClipRect
+##  <a name="enabletaskbarthumbnailcliprect"></a>CMDIChildWndEx:: enabletaskbarthumbnailcliprect
 
-Aktiviert oder deaktiviert die automatische Auswahl eines Teils des Clientbereichs eines Fensters als Miniaturansicht des Fensters, in der Taskleiste angezeigt werden soll.
+Aktiviert oder deaktiviert die automatische Auswahl eines Teils des Client Bereichs eines Fensters, der in der Taskleiste als Miniaturansicht dieses Fensters angezeigt werden soll.
 
 ```
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
@@ -1153,13 +1153,13 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bEnable*<br/>
-Gibt an, ob aktiviert (TRUE) oder deaktiviert (FALSE), automatische Auswahl eines Teils des Clientbereichs eines Fensters angezeigt.
+Gibt an, ob die automatische Auswahl eines Teils des Client Bereichs eines Fensters aktiviert werden soll (true) oder deaktiviert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="canshowontaskbartabs"></a>  CMDIChildWndEx::CanShowOnTaskBarTabs
+##  <a name="canshowontaskbartabs"></a>CMDIChildWndEx:: canshowontaskbartabs
 
-Das Framework angewiesen wird, ob dieser untergeordneten MDI-Elements auf Windows 7-Taskleiste Registerkarten angezeigt werden kann.
+Weist das Framework an, ob dieses untergeordnete MDI-Element auf Windows 7-Task leisten Registerkarten angezeigt werden kann.
 
 ```
 virtual BOOL CanShowOnTaskBarTabs();
@@ -1167,15 +1167,15 @@ virtual BOOL CanShowOnTaskBarTabs();
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn der Inhalt der untergeordneten MDI-Fensters auf Windows 7-Taskleistenminiaturansichten angezeigt werden kann.
+TRUE, wenn der Inhalt des untergeordneten MDI-Elements in Windows 7-Task leisten Miniaturansichten angezeigt werden kann.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode in einer abgeleiteten Klasse überschreiben, und gibt "false", um die Darstellung von diesem untergeordneten MDI-Elements auf Windows 7-Taskleiste Registerkarten zu deaktivieren.
+Überschreiben Sie diese Methode in einer abgeleiteten Klasse, und geben Sie false zurück, um die Darstellung dieses untergeordneten MDI-Elements auf Windows 7-Task leisten Registerkarten
 
-##  <a name="activatetoplevelframe"></a>  CMDIChildWndEx::ActivateTopLevelFrame
+##  <a name="activatetoplevelframe"></a>CMDIChildWndEx:: activatetoplevelframe
 
-Wird aufgerufen, durch das Framework den obersten Ebene Frame zu aktivieren, wenn die Anwendung auf einer Registerkarte "Taskleiste" aktiviert ist.
+Wird von Framework aufgerufen, um den Frame auf oberster Ebene zu aktivieren, wenn die Anwendung über eine Task leisten Registerkarte aktiviert wird.
 
 ```
 virtual void ActivateTopLevelFrame();

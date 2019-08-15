@@ -6,35 +6,35 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 9b985799849a268010dff63f9f7bc25e474b365e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448517"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491056"
 ---
 # <a name="c-attributes-for-com-and-net"></a>C++-Attribute für COM und .NET
 
-Microsoft definiert einen Satz von C++-Attribute, die COM-Programmierung und .NET Framework common Language Runtime-Entwicklung zu vereinfachen. Wenn Sie Attribute in Ihren Quelldateien einschließen, arbeitet der Compiler, mit dem Anbieter-DLLs zum Einfügen von Code oder ändern den Code in die generierten Objektdateien. Diese Attribute bei der die Erstellung von IDL-Dateien, Schnittstellen, Typbibliotheken und anderen COM-Elementen. In der integrierten Entwicklungsumgebung (IDE) werden die Attribute von den Assistenten und das Fenster "Eigenschaften" unterstützt.
+Microsoft definiert einen Satz von C++ Attributen, die die COM-Programmierung vereinfachen und die Entwicklung von .NET Framework Common Language Runtime vereinfachen. Wenn Sie Attribute in die Quelldateien einschließen, arbeitet der Compiler mit Anbieter-DLLs, um Code einzufügen oder den Code in den generierten Objektdateien zu ändern. Diese Attribute helfen bei der Erstellung von IDL-Dateien, Schnittstellen, Typbibliotheken und anderen com-Elementen. In der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) werden Attribute von den Assistenten und vom Eigenschaftenfenster unterstützt.
 
-Während einige der ausführliche das Schreiben von Code zum Schreiben von COM-Objekte erforderlich sind Attribute vermeiden, benötigen Sie einen Hintergrund in [com-Grundlagen](/windows/desktop/com/the-component-object-model) optimal genutzt werden.
+Attribute, die für das Schreiben von COM-Objekten erforderlich sind, werden zwar durch Attribute entfernt, Sie benötigen aber einen Hintergrund der [com-Grundlagen](/windows/win32/com/the-component-object-model) , um Sie optimal zu verwenden
 
 > [!NOTE]
-> Wenn Sie für C++-standard-Attribute suchen, finden Sie unter [Attribute](../../cpp/attributes.md).
+> Wenn Sie C++ Standard Attribute suchen, finden Sie weitere Informationen unter [Attribute](../../cpp/attributes.md).
 
 ## <a name="purpose-of-attributes"></a>Attributzwecke
 
-Attribute erweitern C++ in Anweisungen, die derzeit nicht möglich, ohne die klassischen Struktur der Sprache. Attribute können Anbieter (separate DLLs), um Funktionalität Language dynamisch zu erweitern. Das Hauptziel von Attributen ist zur Vereinfachung der Erstellung von COM-Komponenten sowie gleichzeitig die Produktivität der Komponentenentwickler. Es können Attribute angewendet werden, nahezu jedem C++-Konstrukt, wie z. B. Klassen, die Datenmember oder Memberfunktionen. Im folgenden finden eine Hervorhebung der Vorteile dieser neuen Technologie:
+Attribute erweitern C++ in Richtungen, die derzeit nicht möglich sind, ohne die klassische Struktur der Sprache zu unterbrechen. Attribute ermöglichen es Anbietern (separaten DLLs), die sprach Funktionalität dynamisch zu erweitern. Das Hauptziel von Attributen besteht darin, die Erstellung von COM-Komponenten zu vereinfachen und die Produktivität des Komponenten Entwicklers zu erhöhen. Attribute können auf fast alle C++ Konstrukte angewendet werden, z. b. Klassen, Datenmember oder Element Funktionen. Im folgenden finden Sie eine Hervorhebung der Vorteile dieser neuen Technologie:
 
-- Stellt eine vertraute und einfache Aufrufkonvention.
+- Macht eine vertraute und einfache Aufruf Konvention verfügbar.
 
-- Verwendet eingefügten Code, der, im Gegensatz zu Makros, die vom Debugger erkannt wird.
+- Verwendet eingefügten Code, der im Gegensatz zu Makros vom Debugger erkannt wird.
 
 - Ermöglicht die einfache Ableitung von Basisklassen ohne aufwändige Implementierungsdetails.
 
-- Ersetzt die große Menge der IDL-Code, die von einer COM‑Komponente, einige Attribute, die präzise erforderlich.
+- Ersetzt die große Menge an IDL-Code, der für eine COM-Komponente erforderlich ist, mit wenigen präzisen Attributen.
 
-Beispielsweise um einen einfachen Ereignisempfänger für eine generische ATL-Klasse zu implementieren, Sie können Anwenden der [Event_receiver](event-receiver.md) Attribut für eine bestimmte Objektklasse, z. B. `CMyReceiver`. Die `event_receiver` Attribut wird dann kompiliert, das Microsoft C++ -Compiler, der den entsprechenden Code in der Objektdatei einfügt.
+Wenn Sie z `CMyReceiver`. b. eine einfache Ereignis Senke für eine generische ATL-Klasse implementieren möchten, können Sie das [event_receiver](event-receiver.md) -Attribut auf eine bestimmte Klasse, z. b., anwenden. Das `event_receiver` -Attribut wird dann vom Microsoft C++ -Compiler kompiliert, der den richtigen Code in die Objektdatei einfügt.
 
 ```cpp
 [event_receiver(com)]
@@ -45,26 +45,26 @@ class CMyReceiver
 }
 ```
 
-Anschließend können Sie festlegen, um die `CMyReceiver` Methoden `handler1` und `handler2` zum Behandeln von Ereignissen (verwenden die intrinsische Funktion [__hook](../../cpp/hook.md)) aus einer Ereignisquelle, die Sie erstellen können, mit [Event_source](event-source.md).
+Anschließend können Sie `CMyReceiver` die Methoden `handler1` einrichten und `handler2` Ereignisse (mit der intrinsischen Funktion [__hook](../../cpp/hook.md)) aus einer Ereignis Quelle behandeln, die Sie mit [event_source](event-source.md)erstellen können.
 
 ## <a name="basic-mechanics-of-attributes"></a>Grundlegende Funktionsweise der Attribute
 
-Es gibt drei Möglichkeiten zum Einfügen von Attributen in Ihr Projekt. Erstens können Sie sie manuell in Ihren Quellcode einfügen. Zweitens können Sie sie mit dem Eigenschaftenraster eines Objekts in Ihrem Projekt einfügen. Schließlich können Sie mithilfe der verschiedenen Assistenten einfügen. Weitere Informationen zur Verwendung der **Eigenschaften** Fenster und die verschiedenen Assistenten, finden Sie unter [Visual Studio-Projekte – C++ ](../../build/creating-and-managing-visual-cpp-projects.md).
+Es gibt drei Möglichkeiten, Attribute in das Projekt einzufügen. Zuerst können Sie Sie manuell in den Quellcode einfügen. Zweitens können Sie Sie mithilfe des Eigenschaften Rasters eines Objekts in Ihrem Projekt einfügen. Schließlich können Sie Sie mit den verschiedenen Assistenten einfügen. Weitere Informationen zur Verwendung des Fensters **Eigenschaften** und der verschiedenen Assistenten finden Sie unter [Visual Studio-Projekte C++- ](../../build/creating-and-managing-visual-cpp-projects.md).
 
-Als wenn das Projekt erstellt wird, analysiert, der Compiler jede C++-Quelldatei, erzeugt eine Objektdatei. Allerdings ist es, wenn der Compiler ein Attribut trifft, analysiert und syntaktisch überprüft. Der Compiler ruft dann dynamisch ein Attributanbieters zum Einfügen von Code oder andere Änderungen vornehmen, zum Zeitpunkt der Kompilierung. Die-Implementierung des Anbieters, hängt von den Typ des Attributs ab. ATL-bezogene Attribute werden beispielsweise durch Atlprov.dll implementiert.
+Wenn das Projekt erstellt wird, analysiert der Compiler jede Quelldatei, wobei C++ eine Objektdatei erzeugt wird. Wenn der Compiler jedoch auf ein Attribut trifft, wird er analysiert und syntaktisch überprüft. Der Compiler ruft dann dynamisch einen Attribut Anbieter auf, um zum Zeitpunkt der Kompilierung Code einzufügen oder andere Änderungen vorzunehmen. Die Implementierung des Anbieters variiert abhängig vom Typ des Attributs. Beispielsweise werden ATL-bezogene Attribute von "atlprov. dll" implementiert.
 
-Die folgende Abbildung veranschaulicht die Beziehung zwischen dem Compiler und Attributanbieter.
+In der folgenden Abbildung wird die Beziehung zwischen dem Compiler und dem Attribut Anbieter veranschaulicht.
 
-![Komponentenattributkommunikation](../media/vccompattrcomm.gif "komponentenattributkommunikation")
+![Komponenten Attribut Kommunikation](../media/vccompattrcomm.gif "Komponenten Attribut Kommunikation")
 
 > [!NOTE]
-> Verwendung von Attributen wird den Inhalt der Quelldatei nicht geändert werden. Nur dann, die der generierten Attributcode sichtbar ist, ist während des Debuggens von Sitzungen. Darüber hinaus können für jede Quelldatei im Projekt, eine Textdatei generiert werden, in dem die Ergebnisse der Ersetzung Attribut angezeigt. Weitere Informationen zu dieser Vorgehensweise finden Sie unter [/FX (eingefügten Code zusammenführen)](../../build/reference/fx-merge-injected-code.md) und [Debuggen von Injiziertem Code](/visualstudio/debugger/how-to-debug-injected-code).
+> Die Attribut Verwendung ändert nicht den Inhalt der Quelldatei. Der generierte Attribut Code ist nur während des Debuggens von Sitzungen sichtbar. Außerdem können Sie für jede Quelldatei im Projekt eine Textdatei generieren, in der die Ergebnisse der Attribut Ersetzung angezeigt werden. Weitere Informationen zu diesem Verfahren finden Sie unter [/FX (](../../build/reference/fx-merge-injected-code.md) eingefügten Code zusammenführen) und eingefügten [Code Debuggen](/visualstudio/debugger/how-to-debug-injected-code).
 
--Attribute haben eine Reihe von Eigenschaften, die ihre ordnungsgemäße Nutzung definiert, wie die meisten C++-Konstrukte. Dies wird als den Kontext des Attributs bezeichnet und ist in der Tabelle der Attribut-Kontext für jedes Attribut-Referenzthema behoben wurden. Z. B. die [Co-Klasse](coclass.md) Attribut kann nur auf einer vorhandenen Klasse oder Struktur angewendet werden, im Gegensatz zu der [Cpp_quote](cpp-quote.md) -Attribut, das in eine beliebige Stelle eingefügt werden, kann eine C++ Quelldatei.
+Wie die C++ meisten Konstrukte verfügen Attribute über eine Reihe von Merkmalen, die ihre ordnungsgemäße Verwendung definieren. Dies wird als Kontext des-Attributs bezeichnet und in der Attribut Kontext Tabelle für jedes Attribut Verweis Thema behandelt. Beispielsweise kann das [Co-Klasse](coclass.md) -Attribut nur auf eine vorhandene Klasse oder Struktur angewendet werden, im Gegensatz zum [cpp_quote](cpp-quote.md) -Attribut, das an beliebiger Stelle in einer C++ Quelldatei eingefügt werden kann.
 
 ## <a name="building-an-attributed-program"></a>Erstellen eines attributierten Programms
 
-Nachdem Sie Visual einfügen C++ Attribute in Ihren Quellcode, sollten Sie die Microsoft C++ Compiler eine Typ-Bibliothek und IDL-Datei für Sie erstellt. Die folgenden Linkeroptionen können Sie TLB-Datei und IDL-Dateien:
+Nachdem Sie visuelle C++ Attribute in den Quellcode eingefügt haben, möchten Sie möglicherweise, C++ dass der Microsoft-Compiler eine Typbibliothek und eine IDL-Datei für Sie erzeugt. Die folgenden Optionen für den Linker helfen Ihnen beim Erstellen von tlb-und IDL-Dateien:
 
 - [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 
@@ -74,31 +74,31 @@ Nachdem Sie Visual einfügen C++ Attribute in Ihren Quellcode, sollten Sie die M
 
 - [/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)
 
-Einige Projekte enthalten mehrere unabhängige IDL-Dateien. Diese werden verwendet, um zwei oder mehr .tlb-Dateien erstellen und binden sie optional in den Ressourcenblock. Dieses Szenario ist nicht aktuell in Visual C++ unterstützt.
+Einige Projekte enthalten mehrere unabhängige IDL-Dateien. Diese werden verwendet, um zwei oder mehr TLB-Dateien zu entwickeln und Sie optional an den Ressourcenblock zu binden. Dieses Szenario wird in Visual C++derzeit nicht unterstützt.
 
-Darüber hinaus gibt der Visual C++-Linker alle IDL-Attribut-Informationen in eine einzelne MIDL-Datei. Es werden keine Möglichkeit, zwei Typbibliotheken aus einem einzelnen Projekt zu generieren.
+Außerdem gibt der visuelle C++ Linker alle IDL-bezogenen Attributinformationen in eine einzelne Mittel l-Datei aus. Es gibt keine Möglichkeit, zwei Typbibliotheken aus einem einzelnen Projekt zu generieren.
 
-## <a name="contexts"></a> Attributkontexte
+## <a name="contexts"></a>Attribut Kontexte
 
-C++-Attribute können mithilfe von vier grundlegende Felder beschrieben werden: das Ziel, die sie auf angewendet werden können (**gilt für**), wenn sie wiederholbar oder nicht sind (**wiederholbare**), wird die Vorhandenseins anderer Attribute (erforderlich **Erforderliche Attribute**), und die Inkompatibilitäten mit anderen Attributen (**ungültige Attribute**). Diese Felder sind in einer zugehörigen Tabelle im Referenzthema für jedes Attribut des aufgeführt. Jedes dieser Felder wird unten beschrieben.
+C++Attribute können über vier grundlegende Felder beschrieben werden: das Ziel, auf das Sie angewendet werden können (**gilt für**), wenn Sie wiederholbar sind oder nicht (**wiederholbar**), das erforderliche vorhanden sein anderer Attribute (**erforderliche Attribute**) und Inkompatibilitäten. mit anderen Attributen (**ungültige Attribute**). Diese Felder sind in einer begleitenden Tabelle im Referenz Thema jedes Attributs aufgelistet. Jedes dieser Felder wird unten beschrieben.
 
 ### <a name="applies-to"></a>Gilt für
 
-Dieses Feld beschreibt die verschiedenen C++-Sprachelemente, die sind rechtliche Ziele für das angegebene Attribut. Z. B. wenn ein Attribut "Class" in gibt der **gilt für** Feld Dies gibt an, dass das Attribut nur auf eine rechtliche C++-Klasse angewendet werden kann. Wenn das Attribut auf eine Memberfunktion einer Klasse angewendet wird, führt ein Syntaxfehler.
+In diesem Feld werden die C++ verschiedenen Sprachelemente beschrieben, die für das angegebene Attribut gültige Ziele sind. Wenn ein Attribut beispielsweise im Feld **gilt für** den Wert "Class" angibt, gibt dies an, dass das Attribut nur auf eine gültige C++ Klasse angewendet werden kann. Wenn das-Attribut auf eine Member-Funktion einer Klasse angewendet wird, würde ein Syntax Fehler entstehen.
 
-Weitere Informationen finden Sie unter [Attribute nach Verwendung](attributes-by-usage.md).
+Weitere Informationen finden Sie unter [Attribute by Usage (Attribute nach Verwendung](attributes-by-usage.md)).
 
 ### <a name="repeatable"></a>Wiederholbar
 
-Dieses Feld gibt an, ob das Attribut mehrmals an dasselbe Ziel angewendet werden kann. Die meisten Attribute sind nicht wiederholbar.
+Dieses Feld gibt an, ob das Attribut wiederholt auf dasselbe Ziel angewendet werden kann. Die meisten Attribute sind nicht wiederholbar.
 
 ### <a name="required-attributes"></a>Erforderliche Attribute
 
-Dieses Feld Listet weitere Attribute, die sich für das angegebene Attribut ordnungsgemäß funktioniert (die an dasselbe Ziel angewendet werden) vorhanden. Es ist ungewöhnlich, dass ein Attribut aus, die Einträge für dieses Feld vorhanden sind.
+In diesem Feld werden andere Attribute aufgelistet, die vorhanden sein müssen (d. h. auf dasselbe Ziel angewendet), damit das angegebene Attribut ordnungsgemäß funktioniert. Es ist nicht üblich, dass für ein Attribut Einträge für dieses Feld vorhanden sind.
 
 ### <a name="invalid-attributes"></a>Ungültige Attribute
 
-Dieses Feld Listet weitere Attribute, die mit dem angegebenen Attribut nicht kompatibel sind. Es ist ungewöhnlich, dass ein Attribut aus, die Einträge für dieses Feld vorhanden sind.
+In diesem Feld werden andere Attribute aufgelistet, die mit dem angegebenen Attribut nicht kompatibel sind. Es ist nicht üblich, dass für ein Attribut Einträge für dieses Feld vorhanden sind.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

@@ -33,14 +33,14 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: d079bd17912c0711a4e1fbadadf12430520f2c96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5aab68524c0833bff0e09927587c0362c5194f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355002"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500995"
 ---
-# <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
+# <a name="_splitpath-_wsplitpath"></a>_splitpath, _wsplitpath
 
 Unterteilen Sie einen Pfadnamen in Komponenten. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
@@ -68,23 +68,23 @@ void _wsplitpath(
 *path*<br/>
 Vollständiger Pfad
 
-*drive*<br/>
-Laufwerkbuchstabe, gefolgt von einem Doppelpunkt (**:**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie nicht der Buchstabe des Laufwerks erforderlich ist.
+*Antrie*<br/>
+Laufwerk Buchstabe, gefolgt von einem Doppelpunkt ( **:** ). Sie können **null** für diesen Parameter übergeben, wenn Sie den Laufwerk Buchstaben nicht benötigen.
 
 *dir*<br/>
-Verzeichnispfad, einschl. nachstehender Schrägstrich. Schrägstriche ( **/** ), umgekehrte Schrägstriche ( **\\** ), oder beides verwendet werden können. Sie können übergeben **NULL** für diesen Parameter, wenn Sie den Verzeichnispfad nicht erforderlich ist.
+Verzeichnispfad, einschl. nachstehender Schrägstrich. Schrägstriche ( **/** ), umgekehrte Schrägstriche ( **\\** ) oder beides können verwendet werden. Sie können **null** für diesen Parameter übergeben, wenn Sie den Verzeichnispfad nicht benötigen.
 
 *fname*<br/>
-Basisdateiname (ohne Erweiterung). Sie können übergeben **NULL** für diesen Parameter, wenn Sie den Dateinamen nicht erforderlich ist.
+Basisdateiname (ohne Erweiterung). Sie können **null** für diesen Parameter übergeben, wenn Sie den Dateinamen nicht benötigen.
 
-*ext*<br/>
-Dateierweiterung, einschl. führender Punkt (**.**). Sie können übergeben **NULL** für diesen Parameter, wenn Sie die Dateierweiterung nicht erforderlich ist.
+*Antrags*<br/>
+Erweiterung des Datei namens, einschließlich des führenden Zeitraums ( **.** ). Sie können **null** für diesen Parameter übergeben, wenn Sie die Dateinamenerweiterung nicht benötigen.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_splitpath** -Funktion teilt einen Pfad in seine vier Komponenten. **_splitpath** behandelt automatisch Multibyte-Zeichenfolge nach Bedarf erkennt multibytezeichensequenzen gemäß dem multibyte-Codepage aktuell. **_wsplitpath** ist eine Breitzeichen-Version von **_splitpath**; die Argumente für **_wsplitpath** sind Breitzeichen Zeichenfolgen. Anderenfalls verhalten sich diese Funktionen identisch.
+Die **_splitpath** -Funktion unterteilt einen Pfad in seine vier Komponenten. **_splitpath** verarbeitet nach Bedarf automatisch Multibytezeichen-Zeichen folgen Argumente und erkennt multibytezeichensequenzen gemäß der derzeit verwendeten Multibytezeichen-Codepage. **_wsplitpath** ist eine breit Zeichen Version von **_splitpath**. die Argumente für **_wsplitpath** sind Zeichen folgen mit breit Zeichen. Anderenfalls verhalten sich diese Funktionen identisch.
 
-**Sicherheitshinweis:** Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns). Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
+**Sicherheitshinweis:** Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns). Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -92,7 +92,7 @@ Die **_splitpath** -Funktion teilt einen Pfad in seine vier Komponenten. **_spli
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-Jede Komponente des vollständigen Pfads wird in einem separaten Puffer gespeichert. die Manifestkonstanten **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, und **_MAX_EXT** (definiert in STDLIB. H) Geben Sie die maximale Größe für jede Dateikomponente an. Dateikomponenten, die größer als die entsprechenden Manifestkonstanten sind, können zur Beschädigung des Heaps führen.
+Jede Komponente des vollständigen Pfads wird in einem separaten Puffer gespeichert. Die Manifest-Konstanten **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**und **_MAX_EXT** (in stdlib definiert). H) geben Sie die maximale Größe für jede Datei Komponente an. Dateikomponenten, die größer als die entsprechenden Manifestkonstanten sind, können zur Beschädigung des Heaps führen.
 
 Jeder Puffer muss so groß wie die entsprechende Manifestkonstante sein, damit ein potenzieller Pufferüberlauf vermieden werden kann.
 
@@ -105,11 +105,11 @@ In der folgenden Tabelle werden die Werte der Manifestkonstanten aufgelistet.
 |**_MAX_FNAME**|256|
 |**_MAX_EXT**|256|
 
-Wenn der vollständige Pfad keine Komponente (z. B. Dateiname), enthält **_splitpath** leere Zeichenfolgen zu den entsprechenden Puffern.
+Wenn der vollständige Pfad keine Komponente (z. b. ein Dateiname) enthält, weist **_splitpath** den entsprechenden Puffern leere Zeichen folgen zu.
 
-Sie können übergeben **NULL** zu **_splitpath** für alle Parameter außer *Pfad* , das ist nicht erforderlich.
+Sie können **null** an **_splitpath** übergeben, wenn Sie nicht über den *Pfad* verfügen, den Sie nicht benötigen.
 
-Wenn *Pfad* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt **EINVAL**.
+Wenn *path* **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktion gibt **EINVAL**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

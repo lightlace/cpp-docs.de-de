@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: d6e1be0b06beed8cf68a1ec90571281b592af21d
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: 3b00bf78d286ba530dee85240236a2a9ea171113
+ms.sourcegitcommit: a146b169664c001406a0cccc7fbda1b8d7be5078
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980468"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69024648"
 ---
 # <a name="delete-operator-c"></a>delete-Operator (C++)
 
@@ -21,7 +21,8 @@ Gibt einen Speicherblock frei.
 
 ## <a name="syntax"></a>Syntax
 
-> [`::``::`] Cast-Expression [ ]`delete []` Cast-Ausdruck `delete`
+> [`::`] `delete` *Cast-Ausdruck*\
+> [`::`] `delete []` *Cast-Ausdruck*
 
 ## <a name="remarks"></a>Hinweise
 
@@ -35,7 +36,7 @@ delete MyDialog;
 
 Die Verwendung von **Delete** für einen Zeiger auf ein Objekt, das nicht mit **New** zugewiesen wurde, liefert unvorhersehbare Ergebnisse. Sie können jedoch **Delete** für einen Zeiger mit dem Wert 0 verwenden. Diese Bereitstellung bedeutet, dass, wenn **New** bei einem Fehler 0 zurückgibt, das Löschen des Ergebnisses eines fehlgeschlagenen **neuen** Vorgangs harmlos ist. Weitere Informationen finden Sie [unter den Operatoren "New" und "Delete](../cpp/new-and-delete-operators.md)".
 
-Die **New** -und **Delete** -Operatoren können auch für integrierte Typen, einschließlich Arrays, verwendet werden. Wenn `pointer` auf ein Array verweist, platzieren Sie leere Klammern vor `pointer`:
+Die **New** -und **Delete** -Operatoren können auch für integrierte Typen, einschließlich Arrays, verwendet werden. Wenn `pointer` auf ein Array verweist, platzieren Sie leere Klammern`[]`() `pointer`vor:
 
 ```cpp
 int* set = new int[100];
@@ -89,10 +90,10 @@ Beispiele für die Verwendung von **Delete**finden Sie unter [New-Operator](../c
 
 Der Delete-Operator Ruft den Funktions **Operator Delete**auf.
 
-Für Objekte, die nicht den Klassentyp ([Klasse](../cpp/class-cpp.md), [Struktur](../cpp/struct-cpp.md)oder [Union](../cpp/unions.md)) haben, wird der globale Delete-Operator aufgerufen. Für Objekte des Klassentyps wird der Name der Funktion zum Aufheben der Zuordnung im globalen Bereich aufgelöst, wenn der Löschausdruck mit dem unären Bereichsauflösungsoperator (::) beginnt. Andernfalls ruft der delete-Operator den Destruktor für ein Objekt vor dem Freigeben des Speichers auf (wenn der Zeiger nicht NULL ist). Der delete-Operator kann auf Basis einer einzelnen Klasse definiert werden; wenn keine solche Definition für eine bestimmte Klasse vorliegt, wird der globale delete-Operator aufgerufen. Wenn der Löschausdruck verwendet wird, um ein Klassenobjekt freizugeben, dessen statischer Typ einen virtuellen Destruktor aufweist, wird die Funktion zum Aufheben der Zuordnung vom virtuellen Destruktor des dynamischen Typs des Objekts aufgelöst.
+Für Objekte, die nicht den Klassentyp ([Klasse](../cpp/class-cpp.md), [Struktur](../cpp/struct-cpp.md)oder [Union](../cpp/unions.md)) haben, wird der globale Delete-Operator aufgerufen. Bei Objekten des Klassen Typs wird der Name der Funktion zum Aufheben der Zuordnung im globalen Gültigkeitsbereich aufgelöst, wenn der DELETE-Ausdruck mit dem unären Bereichs`::`Auflösungs Operator () beginnt. Andernfalls ruft der delete-Operator den Destruktor für ein Objekt vor dem Freigeben des Speichers auf (wenn der Zeiger nicht NULL ist). Der delete-Operator kann auf Basis einer einzelnen Klasse definiert werden; wenn keine solche Definition für eine bestimmte Klasse vorliegt, wird der globale delete-Operator aufgerufen. Wenn der Löschausdruck verwendet wird, um ein Klassenobjekt freizugeben, dessen statischer Typ einen virtuellen Destruktor aufweist, wird die Funktion zum Aufheben der Zuordnung vom virtuellen Destruktor des dynamischen Typs des Objekts aufgelöst.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausdrücke mit unären Operatoren](../cpp/expressions-with-unary-operators.md)<br/>
-[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[Ausdrücke mit unären Operatoren](../cpp/expressions-with-unary-operators.md)\
+[Stichwörter](../cpp/keywords-cpp.md)\
 [Operatoren "new" und "delete"](../cpp/new-and-delete-operators.md)

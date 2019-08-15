@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 889b722c91fd56613c5902eb4ce6439763a49bd9
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606487"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498412"
 ---
 # <a name="comptr-class"></a>ComPtr-Klasse
 
@@ -84,7 +84,7 @@ Eine Klasse, zu der der `ComPtr` aktuelle ein Freund ist. (Die Vorlage, die dies
 
 `ComPtr<>`deklariert einen Typ, der den zugrunde liegenden Schnittstellen Zeiger darstellt. Verwenden `ComPtr<>` Sie, um eine Variable zu deklarieren, und verwenden Sie dann den`->`Pfeil Element Zugriffs Operator (), um auf eine Schnittstellenmember-Funktion zuzugreifen.
 
-Weitere Informationen zu intelligenten Zeigern finden Sie im Abschnitt "com Intelligent Pointer" des Themas [com-Codierungspraktiken](/windows/desktop/LearnWin32/com-coding-practices) in der MSDN Library.
+Weitere Informationen zu intelligenten Zeigern finden Sie im Abschnitt "com Intelligent Pointer" des Themas [com-Codierungspraktiken](/windows/win32/LearnWin32/com-coding-practices) in der MSDN Library.
 
 ## <a name="members"></a>Member
 

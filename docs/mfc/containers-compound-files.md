@@ -1,5 +1,5 @@
 ---
-title: 'Container: Verbunddateien'
+title: 'Container: Verbund Dateien'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compound files [MFC]
@@ -14,73 +14,73 @@ helpviewer_keywords:
 - OLE containers [MFC], compound files
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
-ms.openlocfilehash: 8ae701af3dbf45a1b48ef223f421d17f6abee213
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc34f5ed32ee48d538b67cab080b0a52b2e00ae8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152617"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508878"
 ---
-# <a name="containers-compound-files"></a>Container: Verbunddateien
+# <a name="containers-compound-files"></a>Container: Verbund Dateien
 
-Dieser Artikel beschreibt die Komponenten und die Implementierung der compound-Dateien und deren vor- und Nachteile der Verwendung in Ihren Anwendungen OLE-compound-Dateien.
+In diesem Artikel werden die Komponenten und die Implementierung von Verbund Dateien sowie die vor-und Nachteile der Verwendung von Verbund Dateien in ihren OLE-Anwendungen erläutert.
 
-Compound-Dateien sind ein wesentlicher Bestandteil OLE. Sie werden verwendet, um die Datenübertragung und OLE-Dokumentspeicher zu vereinfachen. Compound-Dateien sind eine Implementierung des Modells Active strukturierten Speicher. Konsistente Schnittstellen Verbunddateien ein Speicherkonto, einen Stream oder ein Dateiobjekt. Compound-Dateien werden in der Microsoft Foundation Class-Bibliothek von Klassen unterstützt `COleStreamFile` und `COleDocument`.
+Verbund Dateien sind integraler Bestandteil von OLE. Sie werden verwendet, um die Datenübertragung und den OLE-Dokument Speicher zu vereinfachen. Verbund Dateien sind eine Implementierung des aktiven strukturierten Speicher Modells. Es gibt konsistente Schnittstellen, die die Serialisierung in einem Speicher, einem Stream oder einem Datei Objekt unterstützen. Verbund Dateien werden im-Microsoft Foundation Class-Bibliothek von den-Klassen `COleStreamFile` und `COleDocument`unterstützt.
 
 > [!NOTE]
->  Verwenden einer Verbunddatei bedeutet nicht, dass die Informationen von einem OLE-dienstdokument oder einem Verbunddokument stammt. Compound-Dateien stellen lediglich eine der Möglichkeiten zum Speichern von zusammengesetzten Dokumenten, OLE-Dokumente und andere Daten.
+>  Die Verwendung einer Verbund Datei impliziert nicht, dass die Informationen aus einem OLE-Dokument oder einem Verbund Dokument stammen. Verbund Dateien sind nur eine der Möglichkeiten, Verbund Dokumente, OLE-Dokumente und andere Daten zu speichern.
 
-##  <a name="_core_components_of_a_compound_file"></a> Komponenten einer Verbunddatei
+##  <a name="_core_components_of_a_compound_file"></a>Komponenten einer Verbund Datei
 
-Die OLE-Implementierung von Verbunddateien verwendet drei Objekttypen: Streamobjekte, Speicherobjekte und `ILockBytes` Objekte. Diese Objekte sind ähnlich wie die Komponenten von einer standard-Dateisystem auf folgende Weise:
+Die OLE-Implementierung von Verbund Dateien verwendet drei Objekttypen: Streamobjekte, Speicher Objekte und `ILockBytes` Objekte. Diese Objekte ähneln den Komponenten eines Standarddatei Systems auf folgende Weise:
 
-- Stream-Objekte, z. B. Dateien, speichern Daten eines beliebigen Typs.
+- Stream-Objekte, wie z. b. Dateien, speichern Daten eines beliebigen Typs.
 
-- Storage-Objekte, z. B. Verzeichnisse können andere Speicherkonto und Stream-Objekten enthalten.
+- Speicher Objekte, wie z. b. Verzeichnisse, können andere Speicher-und Streamobjekte enthalten.
 
-- `LockBytes` Objekte repräsentieren die Schnittstelle zwischen dem Storage-Objekte und die physische Hardware. Sie bestimmen, wie die tatsächlichen Bytes geschrieben werden, auf ein Speichergerät die `LockBytes` -Objekt zugegriffen wird, z. B. eine Festplatte oder einen Teil der globalen Arbeitsspeicher. Weitere Informationen zu `LockBytes` Objekte und die `ILockBytes` Schnittstelle, finden Sie unter den *OLE-Programmierreferenz*.
+- `LockBytes`-Objekte stellen die Schnittstelle zwischen den Speicher Objekten und der physischen Hardware dar. Sie bestimmen, wie die tatsächlichen Bytes auf das Speichergerät geschrieben werden `LockBytes` , auf das das Objekt zugreift, z. b. auf eine Festplatte oder einen Bereich des globalen Speichers. Weitere Informationen zu `LockBytes` Objekten und der `ILockBytes` -Schnittstelle finden Sie in der *OLE-Programmier Referenz*.
 
-##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Vor- und Nachteile von Verbunddateien
+##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a>Vor-und Nachteile von Verbund Dateien
 
-Compound-Dateien bieten Vorteile, die nicht verfügbar, mit früheren Methoden von File Storage. Dazu zählen:
+Verbund Dateien bieten Vorteile, die mit früheren Methoden zum Speichern von Dateien nicht verfügbar sind. Dazu zählen:
 
-- Inkrementelle Datei zugreifen zu können.
+- Inkrementeller Dateizugriff.
 
-- Zugriffsmodi für die Datei.
+- Datei Zugriffs Modi.
 
-- Die Standardisierung der Struktur der Datei.
+- Standardisierung der Dateistruktur.
 
-Den möglichen Nachteilen der Verbunddateien – große Netzwerkgröße und-Leistung-Probleme im Zusammenhang mit Speicher auf Disketten – sollten werden als bei entscheiden, ob Sie sie in Ihrer Anwendung verwenden.
+Mögliche Nachteile von Verbund Dateien – große Größen-und Leistungsprobleme im Zusammenhang mit dem Speicher auf Disketten Scheiben – sollten bei der Entscheidung berücksichtigt werden, ob Sie in Ihrer Anwendung verwendet werden sollen.
 
-###  <a name="_core_incremental_access_to_files"></a> Inkrementelle Zugriff auf Dateien
+###  <a name="_core_incremental_access_to_files"></a>Inkrementeller Zugriff auf Dateien
 
-Inkrementelle Zugriff auf Dateien ist ein automatischer Vorteil der Verwendung von compound-Dateien. Da es sich bei eine Verbunddatei als eine "File System in einer Datei" angezeigt werden kann, können einzelne Objekttypen, z. B. Stream oder Speicher, ohne dass die gesamte Datei laden zugegriffen werden. Dies kann die Zeit erheblich verringern, die eine Anwendung den Zugriff auf neue Objekte für die Bearbeitung durch den Benutzer muss. Inkrementelle Aktualisierung, basierend auf dem gleichen Konzept, ähnliche Vorteile bietet. Statt die gesamte Datei zu speichern Sie die Änderungen an einem Objekt speichern Speichert OLE nur das Stream oder Speicher-Objekt, die vom Benutzer bearbeitet.
+Der inkrementelle zugreifen auf Dateien ist ein automatischer Vorteil der Verwendung von Verbund Dateien. Da eine Verbund Datei als "Dateisystem in einer Datei" angezeigt werden kann, kann auf einzelne Objekttypen wie Stream oder Speicher zugegriffen werden, ohne dass die gesamte Datei geladen werden muss. Dies kann die Zeit, die eine Anwendung benötigt, um für die Bearbeitung durch den Benutzer auf neue Objekte zuzugreifen, drastisch verkürzen. Ein inkrementelles Update, das auf dem gleichen Konzept basiert, bietet ähnliche Vorteile. Anstatt die gesamte Datei zu speichern, um die an einem Objekt vorgenommenen Änderungen zu speichern, speichert OLE nur den Stream oder das Speicher Objekt, das vom Benutzer bearbeitet wurde.
 
-###  <a name="_core_file_access_modes"></a> Zugriffsmodi für Datei
+###  <a name="_core_file_access_modes"></a>Datei Zugriffs Modi
 
-Um zu bestimmen, wann Änderungen an Objekten in einer Verbunddatei auf den Datenträger ein Commit ausgeführt werden können, ist ein weiterer Vorteil der Verwendung von Verbunddateien. Der Modus, in dem Dateien, entweder transaktiven oder direkte zugegriffen werden, bestimmt, wann Änderungen ein Commit ausgeführt werden.
+Wenn Sie feststellen können, wann Änderungen an Objekten in einer Verbund Datei auf den Datenträger übertragen werden, ist dies ein weiterer Vorteil der Verwendung von Verbund Dateien. Der Modus, in dem auf Dateien zugegriffen wird, entweder transaktiv oder direkt, bestimmt, wann für Änderungen ein Commit ausgeführt wird.
 
-- Transaktiven Modus verwendet einen Zweiphasen-Commit-Vorgang, um nehmen Änderungen an Objekten in einer Verbunddatei, bleibt dabei sowohl der alte als auch die neuen Kopien des Dokuments zur Verfügung, bis der Benutzer entscheidet, die entweder gespeichert oder die Änderungen rückgängig machen.
+- Der transaktive Modus verwendet einen Zweiphasencommit-Vorgang, um Änderungen an Objekten in einer Verbund Datei vorzunehmen, sodass sowohl die alte als auch die neue Kopie des Dokuments verfügbar bleiben, bis der Benutzer die Änderungen entweder speichern oder rückgängig machen möchte.
 
-- Direkten Modus umfasst Änderungen am Dokument an, wie sie ohne die Möglichkeit, die später rückgängig gemacht werden.
+- Der direkte Modus schließt Änderungen am Dokument ein, während diese vorgenommen werden, ohne dass diese später rückgängig gemacht werden können.
 
-Weitere Informationen zu Access-Modi finden Sie unter den *OLE-Programmierreferenz*.
+Weitere Informationen zu Zugriffs Modi finden Sie in der *OLE-Programmier Referenz*.
 
-###  <a name="_core_standardization"></a> Standardisierung
+###  <a name="_core_standardization"></a>Standardisierung
 
-Die standardisierte Struktur von Verbunddateien kann andere OLE-Anwendungen durchsuchen, compound-Dateien erstellt, die von der OLE-Anwendung ohne Kenntnis der Anwendung, die tatsächlich die Datei erstellt.
+Die standardisierte Struktur von Verbund Dateien ermöglicht unterschiedlichen OLE-Anwendungen das Durchsuchen von Verbund Dateien, die von Ihrer OLE-Anwendung erstellt wurden, ohne dass die Anwendung, die die Datei tatsächlich erstellt hat, bekannt ist.
 
-###  <a name="_core_size_and_performance_considerations"></a> Größe und Überlegungen zur Leistung
+###  <a name="_core_size_and_performance_considerations"></a>Überlegungen zur Größe und Leistung
 
-Aufgrund der Komplexität der Speicherstruktur Verbunddatei sowie die Möglichkeit zum Speichern von Daten inkrementell, Dateien, die mit diesem Format sind meist größer als die anderen Dateien mit unstrukturierten oder "Flatfileformat" gespeichert. Wenn Ihre Anwendung häufig Dateien lädt und speichert, kann die mit compound-Dateien die Dateigröße erhöhen deutlich schneller als Verbunddateien führen. Da Verbunddateien groß werden können, kann die Zugriffszeit für Dateien gespeichert, und Laden von Disketten auch beeinflusst werden resultierende verzögerten Zugriff auf Dateien.
+Aufgrund der Komplexität der Verbund Dateispeicher Struktur und der inkrementellen Speicherung von Daten sind Dateien, die dieses Format verwenden, tendenziell größer als andere Dateien, die unstrukturierte oder Flatfile-Speicher verwenden. Wenn Ihre Anwendung häufig Dateien lädt und speichert, kann die Verwendung von Verbund Dateien dazu führen, dass die Dateigröße viel schneller als nicht Verbund Dateien erhöht wird. Da Verbund Dateien sehr groß werden können, kann die Zugriffszeit für Dateien, die auf Disketten Datenträgern gespeichert und geladen werden, ebenfalls beeinträchtigt werden, wodurch der Zugriff auf Dateien langsamer wird.
 
-Ein weiteres Problem, das auf die Leistung auswirkt, ist Compound-Dateifragmentierung. Die Größe einer Verbunddatei richtet sich nach den Unterschieden zwischen den vor- und Nachnamen Datenträgersektoren, die von der Datei verwendet. Eine fragmentierte Datei kann viele Bereiche des freien Speicherplatzes enthalten, die enthalten keine Daten werden gezählt, wenn die Größe zu berechnen. Während der Lebensdauer einer Verbunddatei werden diese Bereiche durch das Einfügen oder Löschen von Speicherobjekten erstellt.
+Ein weiteres Problem, das die Leistung beeinträchtigt, ist die Fragmentierung der Verbund Datei. Die Größe einer Verbund Datei wird durch den Unterschied zwischen der ersten und der letzten Datenträger Sektoren festgelegt, die von der Datei verwendet werden. Eine fragmentierte Datei kann viele Bereiche von freiem Speicherplatz enthalten, die keine Daten enthalten, sondern beim Berechnen der Größe gezählt werden. Während der Lebensdauer einer Verbund Datei werden diese Bereiche durch das Einfügen oder Löschen von Speicher Objekten erstellt.
 
-##  <a name="_core_using_compound_files_format_for_your_data"></a> Mithilfe von Verbunddateien-Formats für Ihre Daten
+##  <a name="_core_using_compound_files_format_for_your_data"></a>Verwenden des zusammengesetzten Datei Formats für Ihre Daten
 
-Nach dem erfolgreichen Erstellen einer Anwendung, die eine Dokumentklasse abgeleitet wurde `COleDocument`, stellen Sie sicher, dass Ihr Hauptdokument-Konstruktor aufruft `EnableCompoundFile`. Wenn OLE-containeranwendungen mit der Anwendungs-Assistent erstellt wird, wird dieser Aufruf für Sie eingefügt.
+Nachdem Sie eine Anwendung erfolgreich erstellt haben, die über eine von `COleDocument`abgeleitete Dokument Klasse verfügt, stellen Sie sicher `EnableCompoundFile`, dass der Hauptdokumentkonstruktor aufruft. Wenn der Anwendungs-Assistent OLE-Container Anwendungen erstellt, wird dieser Befehl für Sie eingefügt.
 
-In der *OLE-Programmierreferenz*, finden Sie unter [IStream](/windows/desktop/api/objidl/nn-objidl-istream), [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage), und [ILockBytes](/windows/desktop/api/objidl/nn-objidl-ilockbytes).
+Informationen zum *OLE-Programmierer*finden Sie unter [IStream](/windows/win32/api/objidl/nn-objidl-istream), [IStorage](/windows/win32/api/objidl/nn-objidl-istorage)und [ILockBytes](/windows/win32/api/objidl/nn-objidl-ilockbytes).
 
 ## <a name="see-also"></a>Siehe auch
 

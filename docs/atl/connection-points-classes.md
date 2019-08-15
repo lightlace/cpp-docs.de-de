@@ -1,37 +1,37 @@
 ---
-title: Verbindungspunkte Klassen (ATL)
+title: Verbindungspunkt Klassen (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - classes [C++], connection points
 - connection points classes
 ms.assetid: 076365fa-299a-4dce-84c3-a5dff0e0da1f
-ms.openlocfilehash: 8e1ee67f75af1fa38693f7ddb487580ab733cc58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dba06b072e1e9ca545ccbea196fcfe371b02157
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250813"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492443"
 ---
-# <a name="connection-points-classes"></a>Verbindungspunkteklassen
+# <a name="connection-points-classes"></a>Klassen für Verbindungspunkte
 
-Die folgenden Klassen bieten Unterstützung für Verbindungspunkte an:
+Die folgenden Klassen unterstützen Verbindungspunkte:
 
-- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) eine Verbindungspunktcontainer implementiert.
+- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) Implementiert einen Verbindungspunkt Container.
 
-- [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) implementiert einen Verbindungspunkt.
+- [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) Implementiert einen Verbindungspunkt.
 
-- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implementiert ein Connection Point, die [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) Schnittstelle.
+- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) Implementiert einen Verbindungspunkt, der die [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) -Schnittstelle darstellt.
 
-- [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) verwaltet unbegrenzte Verbindungen zwischen einem Verbindungspunkt und die senken.
+- [Ccomdynamicunkarray](../atl/reference/ccomdynamicunkarray-class.md) Verwaltet unbegrenzte Verbindungen zwischen einem Verbindungspunkt und seinen senken.
 
-- [CComUnkArray](../atl/reference/ccomunkarray-class.md) verwaltet eine feste Anzahl von Verbindungen zwischen einem Verbindungspunkt und die senken.
+- [Ccomunkarray](../atl/reference/ccomunkarray-class.md) Verwaltet eine Fixed Anzahl von Verbindungen zwischen einem Verbindungspunkt und seinen senken.
 
-- [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) benachrichtigt der Senke eines Clients, die die Eigenschaft eines Objekts geändert hat oder zu ändern.
+- [Cfirepropnotischyevent](../atl/reference/cfirepropnotifyevent-class.md) Benachrichtigt die Senke eines Clients, dass die-Eigenschaft eines Objekts geändert wurde oder gerade geändert wird.
 
-- [IDispEventImpl](../atl/reference/idispeventimpl-class.md) bietet Unterstützung für die Verbindungspunkte für ein ATL-COM-Objekt. Mit einer Ereignis-Senke-Karte, die von COM-Objekts bereitgestellt wird, werden diese Verbindungspunkte zugeordnet.
+- [IDispEventImpl](../atl/reference/idispeventimpl-class.md) Bietet Unterstützung für Verbindungspunkte für ein ATL-COM-Objekt. Diese Verbindungspunkte werden einer Ereignis Senk Karte zugeordnet, die von Ihrem com-Objekt bereitgestellt wird.
 
-- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) funktioniert in Verbindung mit die Ereignissenke zugeordnet, in der Klasse zum Weiterleiten von Ereignissen an die entsprechenden Handler-Funktion.
+- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) Arbeitet in Verbindung mit der Ereignis senkenzuordnung in der-Klasse, um Ereignisse an die entsprechende Handlerfunktion weiterzuleiten.
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
@@ -41,6 +41,6 @@ Die folgenden Klassen bieten Unterstützung für Verbindungspunkte an:
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../atl/atl-class-overview.md)<br/>
+[Klassen Übersicht](../atl/atl-class-overview.md)<br/>
 [Verbindungspunkt-Makros](../atl/reference/connection-point-macros.md)<br/>
 [Globale Verbindungspunkt-Funktionen](../atl/reference/connection-point-global-functions.md)

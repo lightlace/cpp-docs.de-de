@@ -16,19 +16,19 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-ms.openlocfilehash: f1a9a2d0628b3683f047ce9858d809040438db03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b57eaf105bfca1a49d53b5e5e99969b0fa2fc82f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260239"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497336"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl-Klasse
 
-Diese Klasse stellt die Methoden erforderlich, um ein zusammengesetztes Steuerelement zu implementieren.
+Diese Klasse stellt die Methoden bereit, die zum Implementieren eines zusammengesetzten Steuer Elements erforderlich sind.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+>  Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 #### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über andere Schnittstellen für das zusammengesetzte Steuerelement unterstützt werden soll.
+Ihre Klasse, abgeleitet von [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), sowie von anderen Schnittstellen, die Sie für Ihr zusammengesetztes Steuerelement unterstützen möchten.
 
 ## <a name="members"></a>Member
 
@@ -55,34 +55,34 @@ Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-cl
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Rufen Sie diese Methode oder alle Steuerelemente, die durch das zusammengesetzte Steuerelement gehostet abzumelden.|
-|[CComCompositeControl::CalcExtent](#calcextent)|Rufen Sie diese Methode, um die Größe in HIMETRIC-Einheiten der Dialogfeldressource zum Hosten des zusammengesetzten Steuerelements zu berechnen.|
-|[CComCompositeControl::Create](#create)|Diese Methode wird aufgerufen, um die Steuerelementfenster für das zusammengesetzte Steuerelement zu erstellen.|
-|[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|Rufen Sie diese Methode, um das Fenster des Steuerelements zu erstellen und zu beraten alle gehosteten Steuerelements.|
-|[CComCompositeControl::SetBackgroundColorFromAmbient](#setbackgroundcolorfromambient)|Rufen Sie diese Methode, um die Hintergrundfarbe des zusammengesetzten Steuerelements mit der Hintergrundfarbe des Containers festgelegt.|
+|[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Mit dieser Methode können Sie alle Steuerelemente, die vom zusammengesetzten Steuerelement gehostet werden, informieren oder deren Empfehlung deaktivieren|
+|[CComCompositeControl::CalcExtent](#calcextent)|Mit dieser Methode können Sie die Größe in den HIMETRIC-Einheiten der Dialog Ressource berechnen, die zum Hosten des zusammengesetzten Steuer Elements verwendet wird.|
+|[CComCompositeControl::Create](#create)|Diese Methode wird aufgerufen, um das Steuerelement Fenster für das zusammengesetzte Steuerelement zu erstellen.|
+|[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|Rufen Sie diese Methode auf, um das Steuerelement Fenster zu erstellen und alle gehosteten Steuerelemente zu|
+|[CComCompositeControl::SetBackgroundColorFromAmbient](#setbackgroundcolorfromambient)|Mit dieser Methode können Sie die Hintergrundfarbe des zusammengesetzten Steuer Elements mit der Hintergrundfarbe des Containers festlegen.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|Der Hintergrundpinsel.|
-|[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|Das Handle des Fensters, das gerade den Fokus besitzt.|
+|[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|Der Hintergrund Pinsel.|
+|[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|Das Handle des Fensters, das derzeit den Fokus besitzt.|
 
 ## <a name="remarks"></a>Hinweise
 
-Abgeleitete Klassen von Klasse `CComCompositeControl` erben die Funktionalität eines zusammengesetzten ActiveX-Steuerelements. ActiveX-Steuerelemente, die von abgeleiteten `CComCompositeControl` von ein Standarddialogfeld gehostet werden. Diese Arten von Steuerelementen sind zusammengesetzte Steuerelemente wird aufgerufen, da sie andere Steuerelemente (systemeigene Windows-Steuerelemente und ActiveX-Steuerelemente) hosten können.
+Von der-Klasse `CComCompositeControl` abgeleitete Klassen erben die Funktionalität eines zusammengesetzten ActiveX-Steuer Elements. Von abgeleitete `CComCompositeControl` ActiveX-Steuerelemente werden von einem Standard Dialogfeld gehostet. Diese Steuerelement Typen werden als zusammengesetzte Steuerelemente bezeichnet, da Sie andere Steuerelemente (systemeigene Windows-Steuerelemente und ActiveX-Steuerelemente) hosten können.
 
-`CComCompositeControl` identifiziert die Ressource beim Erstellen des zusammengesetzten Steuerelements anhand der für einen enumerierten Datenmember in der untergeordneten Klasse an. Das Element IDD dieser untergeordneten Klasse wird auf die Ressourcen-ID der Dialogfeldressource festgelegt, der als das Fenster des Steuerelements verwendet wird. Folgendes ist ein Beispiel für das Datenelement, das von die Klasse abgeleitet `CComCompositeControl` sollten enthalten, um die Ressource, die für das Fenster des Steuerelements verwendet werden zu identifizieren:
+`CComCompositeControl`Gibt die für die Erstellung des zusammengesetzten Steuer Elements zu verwendende Dialog Ressource an, indem nach einem enumerierten Datenmember in der untergeordneten Klasse gesucht wird. Das IDD-Element dieser untergeordneten Klasse ist auf die Ressourcen-ID der Dialogfeld Ressource festgelegt, die als Fenster des Steuer Elements verwendet wird. Im folgenden finden Sie ein Beispiel für den Datenmember, den die von `CComCompositeControl` abgeleitete Klasse enthalten sollte, um die für das Fenster des Steuer Elements zu verwendende Dialog Ressource zu identifizieren:
 
 [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]
 
 > [!NOTE]
->  Zusammengesetzte Steuerelemente werden immer im Fenstermodus, obwohl sie Fensterlose Steuerelemente enthalten können.
+>  Zusammengesetzte Steuerelemente sind immer Fenster Steuerelemente, obwohl Sie Fensterlose Steuerelemente enthalten können.
 
-Ein Steuerelement implementiert, indem eine `CComCompositeControl`-abgeleitete Klasse verfügt über Standardverhalten integriert. Wenn das Steuerelement den Fokus erhält, durch Sie wird im Registerkartenformat in einer Anwendung, nach Drücken der TAB-Taste führt dazu, dass den Fokus auf das zusammengesetzte Steuerelement enthaltenen Steuerelemente, und klicken Sie dann aus der zusammengesetzten Steuerelements und dem nächsten Element in durchlaufen werden die die Aktivierreihenfolge des Containers. Die Aktivierreihenfolge des den gehosteten Steuerelementen richtet sich nach der Dialogfeldressource und bestimmt die Reihenfolge, in die TAB-Taste erfolgt.
+Ein-Steuerelement, `CComCompositeControl`das von einer von abgeleiteten Klasse implementiert wird, verfügt über ein in integriertes Standardverhalten. Wenn das Steuerelement den Fokus erhält, indem es in einer enthaltenden Anwendung als Registerkarte verwendet wird, führt die durch Drücken der Tab-Taste dazu, dass der Fokus durch alle enthaltenen Steuerelemente des zusammengesetzten Steuer Elements, dann vom zusammengesetzten Steuerelement bis zum nächsten Element im Aktivier Reihenfolge des Containers. Die Aktivier Reihenfolge der gehosteten Steuerelemente wird von der Dialogfeld Ressource bestimmt und bestimmt die Reihenfolge, in der Tabulatoren ausgeführt werden.
 
 > [!NOTE]
->  In der Reihenfolge für Accelerators ordnungsgemäß funktioniert mit einer `CComCompositeControl`, es ist notwendig, laden eine Zugriffstastentabelle, wie das Steuerelement erstellt wurde, übergeben Sie das Handle und die Anzahl von Schnellinfos wieder [IOleControlImpl::GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo), und Zerstören Sie schließlich in der Tabelle auf, wenn das Steuerelement freigegeben wird.
+>  Damit Accelerators ordnungsgemäß mit einem `CComCompositeControl`funktionieren, muss bei der Erstellung des Steuer Elements eine Zugriffstasten Tabelle geladen, das Handle und die Anzahl von Accelerators zurück an [iolecontrolimpl:: GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo)übergeben und schließlich die Tabelle zerstört werden. Wenn das Steuerelement freigegeben wird.
 
 ## <a name="example"></a>Beispiel
 
@@ -102,9 +102,9 @@ Ein Steuerelement implementiert, indem eine `CComCompositeControl`-abgeleitete K
 
 **Header:** atlctl.h
 
-##  <a name="advisesinkmap"></a>  :: AdviseSinkMap
+##  <a name="advisesinkmap"></a>CComCompositeControl:: AdviseSinkMap
 
-Rufen Sie diese Methode oder alle Steuerelemente, die durch das zusammengesetzte Steuerelement gehostet abzumelden.
+Mit dieser Methode können Sie alle Steuerelemente, die vom zusammengesetzten Steuerelement gehostet werden, informieren oder deren Empfehlung deaktivieren
 
 ```
 HRESULT AdviseSinkMap(bool bAdvise);
@@ -113,26 +113,26 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="parameters"></a>Parameter
 
 *bAdvise*<br/>
-True, wenn alle Steuerelemente sind, darüber informiert zu werden. andernfalls "false".
+True, wenn alle Steuerelemente empfohlen werden sollen. andernfalls false.
 
 ### <a name="return-value"></a>Rückgabewert
 
 |||
 |-|-|
-|S_OK  |Alle Steuerelemente im Ereignisprotokoll Sink-Zuordnung verbunden oder getrennt von ihrer Ereignisquelle erfolgreich waren.|
-|E_FAIL  |Nicht alle Steuerelemente im Ereignisprotokoll Sink-Zuordnung verbunden oder getrennt von ihrer Ereignisquelle wurde erfolgreich sein kann.|
-|E_POINTER  |Dieser Fehler in der Regel gibt an, ein Problem mit einem Eintrag in die Senke-ereigniszuordnung des Steuerelements oder ein Problem mit einem Vorlagenargument verwendet eine `IDispEventImpl` oder `IDispEventSimpleImpl` Basisklasse.|
-|CONNECT_E_ADVISELIMIT  |Der Verbindungspunkt hat bereits die maximale Anzahl von Verbindungen erreicht und kann nicht mehr annehmen.|
-|CONNECT_E_CANNOTCONNECT  |Die Senke unterstützt nicht die von diesem Verbindungspunkt erforderliche Schnittstelle.|
-|CONNECT_E_NOCONNECTION  |Der Cookiewert stellt keine gültige Verbindung dar. Dieser Fehler in der Regel gibt an, ein Problem mit einem Eintrag in die Senke-ereigniszuordnung des Steuerelements oder ein Problem mit einem Vorlagenargument verwendet eine `IDispEventImpl` oder `IDispEventSimpleImpl` Basisklasse.|
+|S_OK  |Alle Steuerelemente in der Ereignis Senke-Zuordnung waren erfolgreich verbunden oder von ihrer Ereignis Quelle getrennt.|
+|E_FAIL  |Nicht alle Steuerelemente in der Ereignis Senk Karte können erfolgreich verbunden oder von ihrer Ereignis Quelle getrennt werden.|
+|E_POINTER  |Dieser Fehler weist normalerweise auf ein Problem mit einem Eintrag in der Ereignis sendermap des Steuer Elements oder auf ein Problem mit einem `IDispEventImpl` in `IDispEventSimpleImpl` einer-oder-Basisklasse verwendeten Vorlagen Argument hin.|
+|CONNECT_E_ADVISELIMIT  |Der Verbindungspunkt hat das Limit von Verbindungen bereits erreicht und kann nicht mehr akzeptiert werden.|
+|CONNECT_E_CANNOTCONNECT  |Die Senke unterstützt nicht die für diesen Verbindungspunkt erforderliche Schnittstelle.|
+|CONNECT_E_NOCONNECTION  |Der Cookie-Wert stellt keine gültige Verbindung dar. Dieser Fehler weist normalerweise auf ein Problem mit einem Eintrag in der Ereignis sendermap des Steuer Elements oder auf ein Problem mit einem `IDispEventImpl` in `IDispEventSimpleImpl` einer-oder-Basisklasse verwendeten Vorlagen Argument hin.|
 
 ### <a name="remarks"></a>Hinweise
 
-Die grundlegende Implementierung dieser Methode durchsucht die Einträge in der ereignismeldung Sink-Zuordnung. Anschließend weist oder hebt Anweisungen für die Verbindungspunkte, die COM-Objekte, die von der Senke ereigniszuordnung der Senke Einträge beschrieben. Diese Membermethode auch ist es erforderlich, die eine Instanz die abgeleitete Klasse erbt `IDispEventImpl` für jedes Steuerelement in der Senke-Zuordnung, die empfohlen oder abzumelden sein.
+Die Basis Implementierung dieser Methode durchsucht die Einträge in der Ereignis Senke-Zuordnung. Anschließend werden die Verbindungspunkte für die COM-Objekte, die durch die Senke-Einträge der Ereignis Senke beschrieben werden, von der Ereignis Senke benachrichtigt oder Diese Member-Methode basiert auch darauf, dass die abgeleitete Klasse von einer Instanz von `IDispEventImpl` für jedes Steuerelement in der Senke-Zuordnung erbt, das empfohlen oder nicht empfohlen wird.
 
-##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent
+##  <a name="calcextent"></a>CComCompositeControl:: calcblock
 
-Rufen Sie diese Methode, um die Größe in HIMETRIC-Einheiten der Dialogfeldressource zum Hosten des zusammengesetzten Steuerelements zu berechnen.
+Mit dieser Methode können Sie die Größe in den HIMETRIC-Einheiten der Dialog Ressource berechnen, die zum Hosten des zusammengesetzten Steuer Elements verwendet wird.
 
 ```
 BOOL CalcExtent(SIZE& size);
@@ -141,19 +141,19 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="parameters"></a>Parameter
 
 *size*<br/>
-Ein Verweis auf eine `SIZE` Struktur, die von dieser Methode gefüllt werden.
+Ein Verweis auf eine `SIZE` -Struktur, die von dieser Methode aufgefüllt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn das Steuerelement von einem Dialogfeld gehostet wird. andernfalls "false".
+TRUE, wenn das Steuerelement von einem Dialogfeld gehostet wird. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Größe wird zurückgegeben, der *Größe* Parameter.
+Die Größe wird im *size* -Parameter zurückgegeben.
 
-##  <a name="create"></a>  CComCompositeControl::Create
+##  <a name="create"></a>CComCompositeControl:: Create
 
-Diese Methode wird aufgerufen, um die Steuerelementfenster für das zusammengesetzte Steuerelement zu erstellen.
+Diese Methode wird aufgerufen, um das Steuerelement Fenster für das zusammengesetzte Steuerelement zu erstellen.
 
 ```
 HWND Create(
@@ -165,23 +165,23 @@ HWND Create(
 ### <a name="parameters"></a>Parameter
 
 *hWndParent*<br/>
-Ein Handle für das übergeordnete Fenster des Steuerelements.
+Ein Handle für das übergeordnete Fenster des Steuer Elements.
 
 *rcPos*<br/>
 Reserviert.
 
 *dwInitParam*<br/>
-Die Daten während der steuerelementerstellung das Steuerelement übergeben werden soll. Die Daten zu übergeben, als *DwInitParam* als der LPARAM-Parameter, der angezeigt wird der [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) -Nachricht, die an das zusammengesetzte Steuerelement gesendet wird, wenn sie erstellt wird.
+An das Steuerelement bei der Erstellung des Steuer Elements zu über gebenden Daten. Die als *dwinitparam* übergebenen Daten werden als lParam-Parameter der [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) -Nachricht angezeigt, die beim Erstellen an das zusammengesetzte Steuerelement gesendet wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Handle für das Dialogfeld für die neu erstellte zusammengesetztes Steuerelement.
+Ein Handle für das neu erstellte zusammengesetzte Steuerelement Dialogfeld.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird in der Regel während der direkten Aktivierung des Steuerelements aufgerufen.
+Diese Methode wird in der Regel während der direkten Aktivierung des Steuer Elements aufgerufen.
 
-##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl
+##  <a name="ccomcompositecontrol"></a>CComCompositeControl:: CComCompositeControl
 
 Der Konstruktor.
 
@@ -191,9 +191,9 @@ CComCompositeControl();
 
 ### <a name="remarks"></a>Hinweise
 
-Initialisiert die [CComCompositeControl::m_hbrBackground](#m_hbrbackground) und [CComCompositeControl::m_hWndFocus](#m_hwndfocus) Datenmember auf NULL.
+Initialisiert die Datenmember " [CComCompositeControl:: m_hbrBackground](#m_hbrbackground) " und " [CComCompositeControl:: m_hWndFocus](#m_hwndfocus) " in NULL.
 
-##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl
+##  <a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl
 
 Der Destruktor.
 
@@ -203,11 +203,11 @@ Der Destruktor.
 
 ### <a name="remarks"></a>Hinweise
 
-Löscht das Hintergrund-Objekt, falls vorhanden.
+Löscht das Hintergrund Objekt, falls es vorhanden ist.
 
-##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow
+##  <a name="createcontrolwindow"></a>CComCompositeControl:: kreatecontrolwindow
 
-Rufen Sie diese Methode, um das Fenster des Steuerelements zu erstellen und alle gehosteten Steuerelemente empfehlen.
+Rufen Sie diese Methode auf, um das Steuerelement Fenster zu erstellen und alle gehosteten Steuerelemente zu
 
 ```
 virtual HWND CreateControlWindow(
@@ -218,38 +218,38 @@ virtual HWND CreateControlWindow(
 ### <a name="parameters"></a>Parameter
 
 *hWndParent*<br/>
-Ein Handle für das übergeordnete Fenster des Steuerelements.
+Ein Handle für das übergeordnete Fenster des Steuer Elements.
 
 *rcPos*<br/>
-Das Positionsrechteck des zusammengesetzten Steuerelements in Client-Koordinaten relativ zum *hWndParent*.
+Das Positions Rechteck des zusammengesetzten Steuer Elements in Client Koordinaten relativ zu *hwndParent*.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt ein Handle an das Dialogfeld für die neu erstellte zusammengesetzten Steuerelements zurück.
+Gibt ein Handle für das neu erstellte zusammengesetzte Steuerelement-Dialogfeld zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft [CComCompositeControl::Create](#create) und [:: AdviseSinkMap](#advisesinkmap).
+Diese Methode ruft [CComCompositeControl:: Create](#create) und [CComCompositeControl:: AdviseSinkMap](#advisesinkmap)auf.
 
-##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground
+##  <a name="m_hbrbackground"></a>CComCompositeControl:: m_hbrBackground
 
-Der Hintergrundpinsel.
+Der Hintergrund Pinsel.
 
 ```
 HBRUSH m_hbrBackground;
 ```
 
-##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus
+##  <a name="m_hwndfocus"></a>CComCompositeControl:: m_hWndFocus
 
-Das Handle des Fensters, das gerade den Fokus besitzt.
+Das Handle des Fensters, das derzeit den Fokus besitzt.
 
 ```
 HWND m_hWndFocus;
 ```
 
-##  <a name="setbackgroundcolorfromambient"></a>  CComCompositeControl::SetBackgroundColorFromAmbient
+##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl:: setbackgroundcolorfromambient
 
-Rufen Sie diese Methode, um die Hintergrundfarbe des zusammengesetzten Steuerelements mit der Hintergrundfarbe des Containers festgelegt.
+Mit dieser Methode können Sie die Hintergrundfarbe des zusammengesetzten Steuer Elements mit der Hintergrundfarbe des Containers festlegen.
 
 ```
 HRESULT SetBackgroundColorFromAmbient();
@@ -257,10 +257,10 @@ HRESULT SetBackgroundColorFromAmbient();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
 ## <a name="see-also"></a>Siehe auch
 
 [CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)<br/>
 [Grundlagen von zusammengesetzten Steuerelementen](../../atl/atl-composite-control-fundamentals.md)<br/>
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)
+[Klassen Übersicht](../../atl/atl-class-overview.md)

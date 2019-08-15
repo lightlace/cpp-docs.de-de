@@ -1,16 +1,16 @@
 ---
-title: 'Vorgehensweise: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen von .h-Dateien aus Windows-Metadaten'
+title: 'Vorgehensweise: Verwenden von „winmdidl.exe“ und „midlrt.exe“ zum Erstellen von H-Dateien aus Windows-Metadaten'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8288fc11fd53fdef423a57d0faefbaa7c06326aa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398107"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500431"
 ---
-# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Vorgehensweise: Verwenden von winmdidl.exe und midlrt.exe zum Erstellen von .h-Dateien aus Windows-Metadaten
+# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Vorgehensweise: Verwenden von „winmdidl.exe“ und „midlrt.exe“ zum Erstellen von H-Dateien aus Windows-Metadaten
 
 "Winmdidl.exe" und "midlrt.exe" aktivieren Interaktionen auf COM-Ebene zwischen systemeigenem C++-Code und Komponenten für Windows-Runtime. "Winmdidl.exe" verwendet als Eingabe eine WINMD-Datei, die Metadaten für eine Komponente für Windows-Runtime enthält, und gibt eine IDL-Datei aus. "Midlrt.exe" konvertiert diese IDL-Datei in Headerdateien, die der C++-Code verarbeiten kann. Beide Tools werden an der Befehlszeile ausgeführt.
 
@@ -18,13 +18,13 @@ Sie verwenden diese Tools in zwei Hauptszenarien:
 
 - Erstellen von benutzerdefinierten IDL-Dateien und Headerdateien, sodass eine C++-App, die mithilfe der Vorlagenbibliothek für Windows-Runtime geschrieben wurde, eine benutzerdefinierte Komponente für Windows-Runtime verarbeiten kann
 
-- Generieren von Proxy- und Stub-Dateien für benutzerdefinierte Ereignistypen in einer Komponente für Windows-Runtime Weitere Informationen finden Sie unter [benutzerdefinierte Ereignisse und ereigniszugriffsmethoden in Windows-Runtime-Komponenten](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
+- Generieren von Proxy- und Stub-Dateien für benutzerdefinierte Ereignistypen in einer Komponente für Windows-Runtime Weitere Informationen finden Sie unter [benutzerdefinierte Ereignisse und Ereignisaccessoren in Windows-Runtime-Komponenten](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
 
-Diese Tools sind nur für das Analysieren von benutzerdefinierten WINMD-Dateien erforderlich. Die IDL- und H-Dateien für Komponenten des Windows-Betriebssystems sind bereits für Sie generiert. Wird standardmäßig in Windows 8.1, befinden sie sich die Dateien (x86) \Windows Kits\8.1\Include\winrt \Programme\\.
+Diese Tools sind nur für das Analysieren von benutzerdefinierten WINMD-Dateien erforderlich. Die IDL- und H-Dateien für Komponenten des Windows-Betriebssystems sind bereits für Sie generiert. Standardmäßig befinden sich diese in Windows 8.1 in \Programme (x86) \Windows kits\8.1\include\winrt\\.
 
 ## <a name="location-of-the-tools"></a>Speicherort der Tools
 
-Standardmäßig in [Windows 8.1, winmdidl.exe und midlrt.exe befinden sich in C:\Program Files (x86) \Windows Kits\8.1\\. Versionen der Tools sind auch in den Ordnern "\bin\x86\" und "\bin\x64\" verfügbar.
+Windows 8.1 Standardmäßig befinden sich die Datei "winmdidl. exe" und die Datei ". exe" im Verzeichnis "c:\Programme (x86) \Windows kits\8.1\\". Versionen der Tools sind auch in den Ordnern "\bin\x86\" und "\bin\x64\" verfügbar.
 
 ## <a name="winmdidl-command-line-arguments"></a>Winmdidl-Befehlszeilenargumente
 
@@ -36,15 +36,15 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 Verhindert die Anzeige der winmdidl-Copyrightmeldung und -Versionsnummer auf der Konsole.
 
 **/suppressversioncheck**<br/>
-Nicht verwendet.
+Wird nicht verwendet.
 
-**/time**<br/>
+**/Time**<br/>
 Zeigt die gesamte Ausführungszeit in der Konsolenausgabe an.
 
-**/outdir:**<em>dir</em><br/>
-Gibt ein Ausgabeverzeichnis an. Wenn der Pfad Leerzeichen enthält, verwenden Sie Anführungszeichen. Das standardausgabeverzeichnis ist  *\<Laufwerk >*: \Users\\*\<Benutzername >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.
+**/outdir:** <em>dir</em><br/>
+Gibt ein Ausgabeverzeichnis an. Wenn der Pfad Leerzeichen enthält, verwenden Sie Anführungszeichen. Das Standardausgabe Verzeichnis ist  *\<Laufwerk >* : \Users\\ *\<username >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12,0\\.
 
-**/banner:**<em>file</em><br/>
+**/Banner:** <em>Datei</em><br/>
 Gibt eine Datei an, die benutzerdefinierten Text enthält, der am Anfang der generierten IDL-Datei der standardmäßigen Copyrightmeldung und winmdidl-Versionsnummer vorangestellt wird. Wenn der Pfad Leerzeichen enthält, verwenden Sie Anführungszeichen.
 
 **/utf8**<br/>
@@ -55,7 +55,7 @@ Der Dateiname der zu analysierenden WINMD-Datei. Wenn der Pfad Leerzeichen enth�
 
 ## <a name="midlrt-command-line-arguments"></a>Midlrt-Befehlszeilenargumente
 
-Finden Sie unter [MIDLRT und Windows-Runtime-Komponenten](/windows/desktop/Midl/midlrt-and-windows-runtime-components).
+Weitere Informationen finden Sie unter [mittlere und Windows-Runtime Komponenten](/windows/win32/Midl/midlrt-and-windows-runtime-components).
 
 ## <a name="examples"></a>Beispiele
 
@@ -65,9 +65,9 @@ Das folgende Beispiel zeigt einen winmdidl-Befehl an einer Visual Studio-x86-Ein
 
 Im folgenden Beispiel wird die Konsolenanzeige von "winmdidl" gezeigt, die angibt, dass der Vorgang erfolgreich war.
 
-**Generieren von c:\users\giraffe\documents\\\Test_for_winmdidl.idl**
+**C:\users\giraffe\documents\\\Test_for_winmdidl.idl wird erzeugt**
 
-Anschließend wird "midlrt" auf der generierten IDL-Datei ausgeführt. Beachten Sie, dass die **Metadata_dir** Argument nach dem Namen der IDL-Datei angegeben ist. Der Pfad von "\WinMetadata\" ist erforderlich – es ist der Speicherort für "windows.winmd".
+Anschließend wird "midlrt" auf der generierten IDL-Datei ausgeführt. Beachten Sie, dass das **metadata_dir** -Argument nach dem Namen der IDL-Datei angegeben wird. Der Pfad von "\WinMetadata\" ist erforderlich – es ist der Speicherort für "windows.winmd".
 
 `C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
 
@@ -75,4 +75,4 @@ Anschließend wird "midlrt" auf der generierten IDL-Datei ausgeführt. Beachten 
 
 Die Ausgabedatei eines winmdidl-Vorgangs weist denselben Namen wie die Eingabedatei auf, hat aber die Dateierweiterung IDL.
 
-Wenn Sie eine Komponente für Windows-Runtime entwickeln, auf die von WRL zugegriffen wird, können Sie "winmdidl.exe" und "midlrt.exe" angeben, um als Postbuildschritte ausgeführt zu werden, sodass die IDL- und H-Dateien für jedes Build erzeugt werden. Ein Beispiel finden Sie unter [Auslösen von Ereignissen in Windows-Runtime-Komponenten](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).
+Wenn Sie eine Komponente für Windows-Runtime entwickeln, auf die von WRL zugegriffen wird, können Sie "winmdidl.exe" und "midlrt.exe" angeben, um als Postbuildschritte ausgeführt zu werden, sodass die IDL- und H-Dateien für jedes Build erzeugt werden. Ein Beispiel finden Sie unter [Ereignis erbenden Ereignisse in Windows-Runtime-Komponenten](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).

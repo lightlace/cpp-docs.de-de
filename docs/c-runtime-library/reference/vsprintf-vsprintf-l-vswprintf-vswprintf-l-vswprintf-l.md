@@ -46,14 +46,14 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 4b6dd55f90a3766dc250040e27b80f9b1c64fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb73a5149c1127332b9b8e464da02c6d528610e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383424"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499026"
 ---
-# <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
+# <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 
 Schreiben von formatierter Ausgabe mithilfe eines Zeigers, der auf eine Liste von Argumenten zeigt. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
 
@@ -124,7 +124,7 @@ int _vswprintf_l(
 Speicherort für die Ausgabe.
 
 *count*<br/>
-Maximale Anzahl von Zeichen in der Breitzeichen-Version von dieser Funktion zu speichern.
+Maximale Anzahl der zu Speicher enden Zeichen in den breiten Zeichen folgen Versionen dieser Funktion.
 
 *format*<br/>
 Formatangabe.
@@ -137,20 +137,20 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Vsprintf** und **Vswprintf** Zurückgeben der Anzahl der geschriebenen Zeichen nicht einschließlich des abschließenden Zeichens Null oder ein negativer Wert, wenn ein Ausgabefehler auftritt. Wenn *Puffer* oder *Format* ist ein null-Zeiger rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
+**vsprintf** und **vtauprintf** geben die Anzahl der geschriebenen Zeichen ohne das abschließende Null Zeichen zurück oder einen negativen Wert, wenn ein Ausgabefehler auftritt. Wenn *buffer* oder *Format* ein NULL-Zeiger ist, rufen diese Funktionen den Handler für ungültige Parameter auf, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen-1 zurück und legen **errno** auf **EINVAL**fest.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt die angegebenen Daten in den Speicher verweist *Puffer*.
+Jede dieser Funktionen nimmt einen Zeiger auf eine Argumentliste und formatiert und schreibt dann die angegebenen Daten in den Speicher, auf den von *buffer*verwiesen wird.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 > [!IMPORTANT]
-> Mithilfe von **Vsprintf**, gibt es keine Möglichkeit, die Anzahl der Zeichen begrenzen geschrieben wird, was bedeutet, dass der Code mit dieser Funktion für Pufferüberläufe anfällig ist. Verwenden Sie stattdessen [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), oder rufen Sie [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) auf, um zu bestimmen, welche Puffergröße benötigt wird. Stellen Sie außerdem sicher, dass *Format* ist keine benutzerdefinierte Zeichenfolge. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Mit **vsprintf**gibt es keine Möglichkeit, die Anzahl der geschriebenen Zeichen einzuschränken. Dies bedeutet, dass der Code, der diese Funktion verwendet, für Pufferüberläufe anfällig ist. Verwenden Sie stattdessen [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), oder rufen Sie [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) auf, um zu bestimmen, welche Puffergröße benötigt wird. Stellen Sie außerdem sicher, dass das *Format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**Vswprintf** entspricht dem ISO C-Standard, die den zweiten Parameter erfordert, *Anzahl*, des Typs **"size_t"**. Um das alte, nicht dem Standard entsprechende Verhalten zu erzwingen, definieren **_CRT_NON_CONFORMING_SWPRINTFS**. Das alte Verhalten möglicherweise nicht in einer zukünftigen Version, sodass der Code geändert werden soll, um das neue konforme Verhalten verwendet.
+**vtauprintf** entspricht dem ISO C-Standard, der den zweiten Parameter *count*vom Typ **size_t**erfordert. Um das alte, nicht dem Standard entsprechende Verhalten zu erzwingen, definieren Sie **_CRT_NON_CONFORMING_SWPRINTFS**. Da das alte Verhalten möglicherweise nicht in einer zukünftigen Version liegt, sollte Code so geändert werden, dass er das neue konforme Verhalten verwendet.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

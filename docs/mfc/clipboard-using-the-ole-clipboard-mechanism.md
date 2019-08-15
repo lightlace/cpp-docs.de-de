@@ -1,5 +1,5 @@
 ---
-title: 'Zwischenablage: Verwenden des OLE-Zwischenablagemechanismus'
+title: 'Zwischenablage: Verwenden des OLE-Zwischenablage Mechanismus'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], Clipboard
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-ms.openlocfilehash: d8ef93b306c0968adf2c23c841c792d2f7af5de3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f2c10f4a88b723d1ab9f4bb0ca903987359c9fd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327041"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508907"
 ---
-# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Zwischenablage: Verwenden des OLE-Zwischenablagemechanismus
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Zwischenablage: Verwenden des OLE-Zwischenablage Mechanismus
 
-OLE verwendet standard-Formate und einige spezifische OLE-Formate für die Übertragung von Daten über die Zwischenablage.
+OLE verwendet Standardformate und einige OLE-spezifische Formate zum Übertragen von Daten über die Zwischenablage.
 
-Wenn Sie Ausschneiden oder Kopieren von Daten aus einer Anwendung, ist die Daten in die Zwischenablage, die weiter unten in der Einfügevorgänge verwendet werden gespeichert. Diese Daten sind in einer Vielzahl von Formaten. Wenn ein Benutzer auswählt, um Daten aus der Zwischenablage einzufügen, können die Anwendung die der folgenden Formate verwenden. Wählen Sie das Format, die meisten Informationen bereitstellen, es sei denn, der speziell für ein bestimmtes Format Frage mit Inhalte einfügen, sollte die Anwendung geschrieben werden. Bevor Sie fortfahren, sollten Sie zum Lesen der [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md) Themen. Beschreiben sie die Grundlagen der wie von Datenübertragungen, und wie Sie diese in Ihren Anwendungen implementieren.
+Wenn Sie Daten aus einer Anwendung Ausschneiden oder kopieren, werden die Daten in der Zwischenablage gespeichert, damit Sie später in Einfügevorgängen verwendet werden. Diese Daten befinden sich in einer Vielzahl von Formaten. Wenn ein Benutzer sich für das Einfügen von Daten aus der Zwischenablage entscheidet, kann die Anwendung auswählen, welche dieser Formate verwendet werden sollen. Die Anwendung sollte geschrieben werden, um das Format auszuwählen, das die meisten Informationen bereitstellt, es sei denn, der Benutzer fordert explizit ein bestimmtes Format mithilfe von "Einfügen" an. Bevor Sie fortfahren, sollten Sie die Themen zu [Datenobjekten und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md) lesen. Sie beschreiben die Grundlagen der Funktionsweise von Datenübertragungen und deren Implementierung in Ihren Anwendungen.
 
-Windows definiert eine Anzahl von standard-Formate, die zum Übertragen von Daten über die Zwischenablage verwendet werden können. Dazu gehören Metadateien, Bitmaps, Text und andere. OLE wird eine Anzahl von OLE-spezifische Formate, ebenfalls definiert. Für Anwendungen, die mehr Details als Angabe durch diese Standardformate benötigen, ist es ratsam, eigene benutzerdefinierte Zwischenablageformate registriert. Verwenden Sie die Win32-API-Funktion [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) dazu.
+Windows definiert eine Reihe von Standardformaten, die zum Übertragen von Daten über die Zwischenablage verwendet werden können. Dazu zählen Metadateien, Text, Bitmaps und andere. OLE definiert auch eine Reihe von OLE-spezifischen Formaten. Bei Anwendungen, die mehr Details benötigen, als von diesen Standardformaten angegeben werden, empfiehlt es sich, eigene benutzerdefinierte Zwischenablage Formate zu registrieren. Verwenden Sie hierfür die Win32-API-Funktion [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) .
 
-Microsoft Excel wird beispielsweise ein benutzerdefiniertes Format für Tabellen registriert. Dieses Format enthält, weit mehr Informationen als z. B., eine Bitmap ist. Wenn diese Daten in eine Anwendung, die das Arbeitsblattformat unterstützt eingefügt werden, werden alle Formeln und Werte aus dem Arbeitsblatt werden beibehalten und können bei Bedarf aktualisiert werden. Microsoft Excel überträgt Daten in der Zwischenablage in Formaten, damit sie als OLE-Element eingefügt werden können. Alle OLE-Document-Container kann diese Informationen als eingebettetes Element einfügen. Diese eingebetteten Elements kann mithilfe von Microsoft Excel geändert werden. Die Zwischenablage enthält auch eine einfache Bitmap des Bilds des ausgewählten Bereichs in der Kalkulationstabelle. Dies kann auch in OLE-Document-Container oder in Bitmap-Editor wie Paint eingefügt werden. Für eine Bitmap allerdings besteht keine Möglichkeit, die Daten als Tabelle zu bearbeiten.
+Microsoft Excel registriert z. b. ein benutzerdefiniertes Format für Kalkulations Tabellen. Dieses Format enthält wesentlich mehr Informationen, als z. b. eine Bitmap. Wenn diese Daten in eine Anwendung eingefügt werden, die das Tabellenformat unterstützt, werden alle Formeln und Werte aus der Kalkulations Tabelle beibehalten und können bei Bedarf aktualisiert werden. In Microsoft Excel werden auch Daten in die Zwischenablage eingefügt, sodass Sie als OLE-Element eingefügt werden können. Diese Informationen können von jedem OLE-Dokument Container als eingebettetes Element eingefügt werden. Dieses eingebettete Element kann mithilfe von Microsoft Excel geändert werden. Die Zwischenablage enthält auch eine einfache Bitmap des Bilds des ausgewählten Bereichs in der Tabelle. Dies kann auch in OLE-Dokument Container oder in Bitmap-Editoren wie Paint eingefügt werden. Im Fall einer Bitmap gibt es jedoch keine Möglichkeit, die Daten als Kalkulations Tabelle zu bearbeiten.
 
-Um die maximale Menge an Informationen aus der Zwischenablage abzurufen, sollten Anwendungen für diese benutzerdefinierte Formate überprüfen, bevor Sie die Daten aus der Zwischenablage einfügen.
+Zum Abrufen der maximalen Menge von Informationen aus der Zwischenablage sollten Anwendungen vor dem Einfügen von Daten aus der Zwischenablage diese benutzerdefinierten Formate überprüfen.
 
-Beispielsweise können damit kann der Befehl "Ausschneiden", Sie einen Handler etwa wie folgt schreiben:
+Wenn Sie z. b. den Befehl "Ausschneiden" aktivieren möchten, können Sie einen Handler schreiben, der etwa wie folgt aussieht:
 
 [!code-cpp[NVC_MFCListView#3](../atl/reference/codesnippet/cpp/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]
 
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren?
 
 - [Kopieren und Einfügen von Daten](../mfc/clipboard-copying-and-pasting-data.md)
 
@@ -41,7 +41,7 @@ Beispielsweise können damit kann der Befehl "Ausschneiden", Sie einen Handler e
 
 - [OLE](../mfc/ole-background.md)
 
-- [OLE-Objekte und Daten-Datenquellen und einheitliche Datenübertragung](../mfc/data-objects-and-data-sources-ole.md)
+- [OLE-Datenobjekte und Datenquellen und einheitliche Datenübertragung](../mfc/data-objects-and-data-sources-ole.md)
 
 ## <a name="see-also"></a>Siehe auch
 

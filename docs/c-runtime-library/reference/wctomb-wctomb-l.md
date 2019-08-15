@@ -29,14 +29,14 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: df0abdd644027f9bab8cd177dfd4d0af4c98df35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6902ff925e49d894f70b0d7083b99388d5271d1d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188544"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500742"
 ---
-# <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
+# <a name="wctomb-_wctomb_l"></a>wctomb, _wctomb_l
 
 Konvertiert ein Breitzeichen in das entsprechende Multibytezeichen. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md).
 
@@ -64,13 +64,13 @@ Ein Breitzeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn **Wctomb** konvertiert das Breitzeichen in ein Multibytezeichen, gibt die Anzahl der Bytes (, und ist nie größer als **MB_CUR_MAX**) im Breitzeichen. Wenn *Wchar* ist das Breitzeichen-Zeichen Null (L '\0'), **Wctomb** gibt 1 zurück. Wenn der Zielzeiger *Mbchar* ist **NULL**, **Wctomb** gibt 0 zurück. Wenn die Konvertierung nicht möglich, im aktuellen Gebietsschema ist **Wctomb** gibt-1 zurück und **Errno** nastaven NA hodnotu **EILSEQ**.
+Wenn **wctomb** das breit Zeichen in ein Multibytezeichen konvertiert, wird die Anzahl von Bytes (die nie größer als **MB_CUR_MAX**ist) im breit Zeichen zurückgegeben. Wenn *WCHAR* das breit Zeichen NULL-Zeichen (L ' \ 0 ') ist, gibt **wcgrab** 1 zurück. Wenn der Ziel Zeiger *mbchar* **null**ist, gibt **wctomb** 0 zurück. Wenn die Konvertierung im aktuellen Gebiets Schema nicht möglich ist, gibt **wctomb** -1 zurück, und **errno** ist auf **EILSEQ**festgelegt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Wctomb** -Funktion konvertiert die *Wchar* Argument für das entsprechende Multibytezeichen und speichert das Ergebnis in *Mbchar*. Sie können die Funktion von einem beliebigen Punkt in einem beliebigen Programm aufrufen. **Wctomb** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_wctomb_l** ist identisch mit **Wctomb** mit dem Unterschied, dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **wctomb** -Funktion konvertiert das *WCHAR* -Argument in das entsprechende Multibytezeichen und speichert das Ergebnis bei *mbchar*. Sie können die Funktion von einem beliebigen Punkt in einem beliebigen Programm aufrufen. **wctomb** verwendet das aktuelle Gebiets Schema für jedes vom Gebiets Schema abhängige Verhalten. **_wctomb_l** ist mit **wctomb** identisch, mit dem Unterschied, dass es stattdessen das übergebene Gebiets Schema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-**Wctomb** überprüft die eigenen Parameter. Wenn *Mbchar* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktion gibt-1 zurück.
+**wctomb** überprüft seine Parameter. Wenn *mbchar* **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird **errno** auf **EINVAL** festgelegt, und die Funktion gibt-1 zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -118,4 +118,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

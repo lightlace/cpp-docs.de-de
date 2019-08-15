@@ -41,14 +41,14 @@ helpviewer_keywords:
 - _vsctprintf_p function
 - vscprintf_p_l function
 ms.assetid: 5da920b3-8652-4ee9-b19e-5aac3ace9d03
-ms.openlocfilehash: 357cc1f28e5495385b67fdb7c1b86bbc15f79950
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74082f0b5ed15b807c626ce08c283724441fc15c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386186"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499118"
 ---
-# <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
+# <a name="_vscprintf_p-_vscprintf_p_l-_vscwprintf_p-_vscwprintf_p_l"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 
 Gibt die Anzahl von Zeichen in der formatierten Zeichenfolge mit einem Zeiger auf eine Liste von Argumenten mit der Möglichkeit zurück, die Reihenfolge anzugeben, in der die Argumente verwendet werden.
 
@@ -90,18 +90,18 @@ Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/f
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_vscprintf_p** gibt die Anzahl der Zeichen, die erzeugt wird, wenn die Zeichenfolge, zeigt die Liste der Argumente, gedruckt oder an eine Datei gesendet wurde oder Puffer, die mit der angegebenen Formatierung Fehlercodes zurück. Der Rückgabewert umfasst nicht das abschließende NULL-Zeichen. **_vscwprintf_p** führt dieselbe Funktion für Breitzeichen.
+**_vscprintf_p** gibt die Anzahl der Zeichen zurück, die generiert werden, wenn die Zeichenfolge, auf die durch die Liste der Argumente verwiesen wird, gedruckt oder mithilfe der angegebenen Formatierungscodes an eine Datei oder einen Puffer gesendet wurde. Der Rückgabewert umfasst nicht das abschließende NULL-Zeichen. **_vscwprintf_p** führt die gleiche Funktion für breit Zeichen aus.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen unterscheiden sich von **_vscprintf** und **_vscwprintf** nur darin, dass sie es ermöglichen, die Reihenfolge anzugeben, in der die Argumente verwendet werden. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
+Diese Funktionen unterscheiden sich von **_vscprintf** und **_vscwprintf** nur darin, dass Sie die Möglichkeit unterstützen, die Reihenfolge anzugeben, in der die Argumente verwendet werden. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
-Wenn *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
+Wenn *Format* ein NULL-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen-1 zurück und legen **errno** auf **EINVAL**fest.
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass bei *Format* eine benutzerdefinierte Zeichenfolge ist, ist es Null-Terminierung und die richtige Anzahl und Typ der Parameter. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Stellen Sie sicher, dass, wenn *Format* eine benutzerdefinierte Zeichenfolge ist, Null beendet wird und die richtige Anzahl und den Typ der Parameter aufweist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

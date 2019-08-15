@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 14e8da573621f712ae9e27647122d305be54b7b0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916687"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502618"
 ---
 # <a name="cshellmanager-class"></a>Cshellmanager-Klasse
 
@@ -113,7 +113,7 @@ in Eine Zeichenfolge, die den Ordner enthält, der standardmäßig ausgewählt w
 in Der Titel für das Dialogfeld.
 
 *ulFlags*<br/>
-in Flags, die Optionen für das Dialogfeld angeben. Die ausführliche Beschreibung finden Sie unter [Browseinfo](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) .
+in Flags, die Optionen für das Dialogfeld angeben. Die ausführliche Beschreibung finden Sie unter [Browseinfo](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) .
 
 *piFolderImage*<br/>
 vorgenommen Ein Zeiger auf den ganzzahligen Wert, in dem die-Methode den Image Index des ausgewählten Ordners schreibt.
@@ -156,7 +156,7 @@ Ein Zeiger auf die neue Elementliste, wenn die Funktion erfolgreich ausgeführt 
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode erstellt eine neue [itemittel List](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) , die groß genug ist, um sowohl *pidl1* als auch *pidl2*zu enthalten. Anschließend werden *pidl1* und *pidl2* in die neue Liste kopiert.
+Diese Methode erstellt eine neue [itemittel List](/windows/win32/api/shtypes/ns-shtypes-itemidlist) , die groß genug ist, um sowohl *pidl1* als auch *pidl2*zu enthalten. Anschließend werden *pidl1* und *pidl2* in die neue Liste kopiert.
 
 ##  <a name="copyitem"></a>Cshellmanager:: CopyItem
 

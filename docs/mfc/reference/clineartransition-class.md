@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransition [MFC], m_dblFinalValue
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
-ms.openlocfilehash: 4aa2d9955d2bbf98d2d7829806c4bcbd76340847
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a6348d1afd0117683bd31af61324b14e16f710c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392530"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505743"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition-Klasse
 
@@ -37,24 +37,24 @@ class CLinearTransition : public CBaseTransition;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CLinearTransition::CLinearTransition](#clineartransition)|Ein linearer Übergang-Objekt erstellt und initialisiert sie mit der Dauer und endgültigen Wert.|
+|[CLinearTransition::CLinearTransition](#clineartransition)|Erstellt ein lineares Übergangs Objekt und initialisiert es mit Duration und Endwert.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CLinearTransition::Create](#create)|Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CLinearTransition::Create](#create)|Ruft die Übergangs Bibliothek auf, um ein gekapseltes Übergangs-com- (Überschreibt [cbasetransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|Der Wert der Animationsvariablen am Ende des Übergangs.|
+|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|Der Wert der Animations Variablen am Ende des Übergangs.|
 |[CLinearTransition::m_duration](#m_duration)|Die Dauer des Übergangs.|
 
 ## <a name="remarks"></a>Hinweise
 
-Während ein linearer Übergang geht der Wert der Animationsvariablen linear vom Anfangswert auf einem angegebenen Endwert. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, sie mit dem Operator new. Das gekapselte IUIAnimationTransition COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen des Typs an, nach der Erstellung dieses COM-Objekt hat keine Auswirkungen.
+Während eines linearen Übergangs wechselt der Wert der Animations Variablen linear von seinem Anfangswert in einen angegebenen Endwert. Da alle Übergänge automatisch gelöscht werden, empfiehlt es sich, diese mithilfe des new-Operators zuzuweisen. Das gekapselte iuianimationtransition com-Objekt wird von canimationcontroller:: animategroup erstellt, bis es NULL ist. Das Ändern von Element Variablen nach der Erstellung dieses COM-Objekts hat keine Auswirkungen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -68,9 +68,9 @@ Während ein linearer Übergang geht der Wert der Animationsvariablen linear vom
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition
+##  <a name="clineartransition"></a>Clineartransition:: clineartransition
 
-Ein linearer Übergang-Objekt erstellt und initialisiert sie mit der Dauer und endgültigen Wert.
+Erstellt ein lineares Übergangs Objekt und initialisiert es mit Duration und Endwert.
 
 ```
 CLinearTransition(
@@ -80,15 +80,15 @@ CLinearTransition(
 
 ### <a name="parameters"></a>Parameter
 
-*duration*<br/>
+*auf*<br/>
 Die Dauer des Übergangs.
 
 *dblFinalValue*<br/>
-Der Wert der Animationsvariablen am Ende des Übergangs.
+Der Wert der Animations Variablen am Ende des Übergangs.
 
-##  <a name="create"></a>  CLinearTransition::Create
+##  <a name="create"></a>Clineartransition:: Create
 
-Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen.
+Ruft die Übergangs Bibliothek auf, um ein gekapseltes Übergangs-com-
 
 ```
 virtual BOOL Create(
@@ -99,21 +99,21 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parameter
 
 *pLibrary*<br/>
-Ein Zeiger auf ein [IUIAnimationTransitionLibrary Schnittstelle](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), das eine Bibliothek mit standard-Übergänge definiert.
+Ein Zeiger auf eine [iuianimationtransitionlibrary-Schnittstelle](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), die eine Bibliothek von Standard Übergängen definiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn der Übergang erfolgreich erstellt wurde. andernfalls "false".
+TRUE, wenn der Übergang erfolgreich erstellt wurde. andernfalls false.
 
-##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue
+##  <a name="m_dblfinalvalue"></a>Clineartransition:: m_dblFinalValue
 
-Der Wert der Animationsvariablen am Ende des Übergangs.
+Der Wert der Animations Variablen am Ende des Übergangs.
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_duration"></a>  CLinearTransition::m_duration
+##  <a name="m_duration"></a>Clineartransition:: m_duration
 
 Die Dauer des Übergangs.
 

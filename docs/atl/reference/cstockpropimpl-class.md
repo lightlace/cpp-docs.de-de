@@ -1,5 +1,5 @@
 ---
-title: CStockPropImpl-Klasse
+title: Cstockpropimpl-Klasse
 ms.date: 05/06/2019
 f1_keywords:
 - CStockPropImpl
@@ -64,19 +64,19 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 246e2a26db6adde0fec06523c1b8db09c5f552f3
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 29b4337679f05d780d3d6cd5de6bf6f889a6ea30
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221073"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496327"
 ---
-# <a name="cstockpropimpl-class"></a>CStockPropImpl-Klasse
+# <a name="cstockpropimpl-class"></a>Cstockpropimpl-Klasse
 
-Diese Klasse stellt Methoden zur Unterstützung der vordefinierten Werte.
+Diese Klasse stellt Methoden zum unterstützen von Aktien Eigenschafts Werten bereit.
 
 > [!IMPORTANT]
-> Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+> Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -96,16 +96,16 @@ class ATL_NO_VTABLE CStockPropImpl :
 #### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Die Klasse, die das Steuerelement zu implementieren und Ableiten von `CStockPropImpl`.
+Die Klasse, die das Steuerelement implementiert `CStockPropImpl`und von abgeleitet wird.
 
-*InterfaceName*<br/>
-Eine duale Schnittstelle, die die vordefinierten Eigenschaften verfügbar zu machen.
+*Schnittstellenname*<br/>
+Eine duale Schnittstelle, die die Lagereigenschaften verfügbar macht.
 
 *piid*<br/>
-Ein Zeiger auf die IID der `InterfaceName`.
+Ein Zeiger auf die IID von `InterfaceName`.
 
 *plibid*<br/>
-Ein Zeiger auf die LIBID der Typbibliothek mit der Definition der `InterfaceName`.
+Ein Zeiger auf die LIBID der Typbibliothek, die die Definition von `InterfaceName`enthält.
 
 *wMajor*<br/>
 Die Hauptversion der Typbibliothek Der Standardwert ist 1.
@@ -114,7 +114,7 @@ Die Hauptversion der Typbibliothek Der Standardwert ist 1.
 Die Nebenversion der Typbibliothek Der Standardwert ist 0.
 
 *tihclass*<br/>
-Die Klasse, die zum Verwalten von Informationen für den *T*. Der Standardwert ist `CComTypeInfoHolder`.
+Die Klasse, mit der die Typinformationen für *T*verwaltet werden. Der Standardwert ist `CComTypeInfoHolder`sein.
 
 ## <a name="members"></a>Member
 
@@ -122,71 +122,71 @@ Die Klasse, die zum Verwalten von Informationen für den *T*. Der Standardwert i
 
 |||
 |-|-|
-|[get_Appearance](#get_appearance)|Rufen Sie diese Methode zum Abrufen der Paint-Stil, die vom Steuerelement verwendet, z. B., flach oder 3D.|
-|[get_AutoSize](#get_autosize)|Rufen Sie diese Methode, um den Status des Flags erhalten, die angibt, ob das Steuerelement eine beliebige andere Größe aufweisen, kann nicht an.|
-|[get_BackColor](#get_backcolor)|Rufen Sie diese Methode, um die Hintergrundfarbe des Steuerelements zu erhalten.|
-|[get_BackStyle](#get_backstyle)|Rufen Sie diese Methode, um den Hintergrundformat des Steuerelements, entweder transparenten oder deckenden zu erhalten.|
-|[get_BorderColor](#get_bordercolor)|Rufen Sie diese Methode, um die Farbe des Rahmens des Steuerelements zu erhalten.|
-|[get_BorderStyle](#get_borderstyle)|Rufen Sie diese Methode, um die Rahmenart des Steuerelements zu erhalten.|
-|[get_BorderVisible](#get_bordervisible)|Rufen Sie diese Methode, um den Status des Flags erhalten, die angibt, ob der Rahmen des Steuerelements sichtbar ist.|
-|[get_BorderWidth](#get_borderwidth)|Rufen Sie diese Methode, um die Breite (in Pixel), der den Rahmen des Steuerelements abzurufen.|
-|[get_Caption](#get_caption)|Rufen Sie diese Methode zum Abrufen des Texts in ein Objekt mit der Beschriftung angegeben.|
-|[get_DrawMode](#get_drawmode)|Rufen Sie diese Methode zum Abrufen des Steuerelements Zeichnungsmodus des, z. B. XOR Stift oder Farben umkehren.|
-|[get_DrawStyle](#get_drawstyle)|Rufen Sie diese Methode zum Abrufen des Steuerelements Zeichnungsart, z. B. solid, gestrichelt oder gepunktet.|
-|[get_DrawWidth](#get_drawwidth)|Rufen Sie diese Methode, um die Zeichnung Breite (in Pixel) ein, die die Methoden des Steuerelements zeichnen abzurufen.|
-|[get_Enabled](#get_enabled)|Rufen Sie diese Methode, um den Status des Flags erhalten, die angibt, ob das Steuerelement aktiviert ist.|
-|[get_FillColor](#get_fillcolor)|Rufen Sie diese Methode, um die Füllfarbe des Steuerelements zu erhalten.|
-|[get_FillStyle](#get_fillstyle)|Rufen Sie diese Methode zum Abrufen von Füllformat des Steuerelements, z. B. ein, solid, transparente oder schraffiert.|
-|[get_Font](#get_font)|Rufen Sie diese Methode, um einen Zeiger auf die Schriftarteigenschaften des Steuerelements abzurufen.|
-|[get_ForeColor](#get_forecolor)|Rufen Sie diese Methode, um die Vordergrundfarbe des Steuerelements zu erhalten.|
-|[get_HWND](#get_hwnd)|Rufen Sie diese Methode, um das Fensterhandle, das dem Steuerelement zugeordnete zu erhalten.|
-|[get_MouseIcon](#get_mouseicon)|Rufen Sie diese Methode zum Abrufen der Bildeigenschaften der Grafik (Symbol, Bitmap oder Metadatei) angezeigt werden, wenn der Mauszeiger über dem Steuerelement befindet.|
-|[get_MousePointer](#get_mousepointer)|Rufen Sie diese Methode zum Abrufen des Typs des Mauszeiger-auf, die angezeigt wird, wenn der Mauszeiger über dem Steuerelement, z. B., Pfeil, übergreifende oder Sanduhr dargestellt.|
-|[get_Picture](#get_picture)|Rufen Sie diese Methode zum Abrufen eines Zeigers auf die Bildeigenschaften, der eine Grafik (Symbol, Bitmap oder Metadatei) angezeigt werden.|
-|[get_ReadyState](#get_readystate)|Rufen Sie diese Methode rufen Sie den Zustand des Steuerelements bereit, z. B., laden oder geladen wird.|
-|[get_TabStop](#get_tabstop)|Rufen Sie diese Methode, um das Flag ab, die angibt, ob das Steuerelement einen Tabstopp oder nicht darstellt.|
-|[get_Text](#get_text)|Rufen Sie diese Methode zum Abrufen des Texts, der mit dem Steuerelement angezeigt wird.|
-|[getvalid](#get_valid)|Rufen Sie diese Methode, um den Status des Flags erhalten, die angibt, ob das Steuerelement gültig oder nicht ist.|
-|[get_Window](#get_window)|Rufen Sie diese Methode, um das Fensterhandle, das dem Steuerelement zugeordnete zu erhalten. Identisch mit [CStockPropImpl::get_HWND](#get_hwnd).|
-|[put_Appearance](#put_appearance)|Rufen Sie diese Methode, um die Paint-Stil, die vom Steuerelement verwendet, z. B., flach oder 3D festgelegt.|
-|[put_AutoSize](#put_autosize)|Rufen Sie diese Methode, um den Wert des Flags festlegen, die angibt, ob das Steuerelement eine beliebige andere Größe aufweisen, kann nicht an.|
-|[put_BackColor](#put_backcolor)|Rufen Sie diese Methode, um die Hintergrundfarbe des Steuerelements festzulegen.|
-|[put_BackStyle](#put_backstyle)|Rufen Sie diese Methode zum Festlegen von Hintergrund-Format des Steuerelements.|
-|[put_BorderColor](#put_bordercolor)|Rufen Sie diese Methode, um die Farbe des Rahmens des Steuerelements festgelegt.|
-|[put_BorderStyle](#put_borderstyle)|Rufen Sie diese Methode, um die Rahmenart des Steuerelements festgelegt.|
-|[put_BorderVisible](#put_bordervisible)|Rufen Sie diese Methode, um den Wert des Flags festlegen, die angibt, ob der Rahmen des Steuerelements sichtbar ist.|
-|[put_BorderWidth](#put_borderwidth)|Rufen Sie diese Methode, um die Breite des Rahmens des Steuerelements festgelegt.|
-|[put_Caption](#put_caption)|Rufen Sie diese Methode zum Festlegen des Texts, der mit dem Steuerelement angezeigt werden.|
-|[put_DrawMode](#put_drawmode)|Rufen Sie diese Methode zum Festlegen des Steuerelements Zeichnungsmodus des, z. B. XOR Stift oder Farben umkehren.|
-|[put_DrawStyle](#put_drawstyle)|Rufen Sie diese Methode, um das Format des Steuerelements zeichnen, legen Sie z. B. solid, gestrichelt oder gepunktet.|
-|[put_DrawWidth](#put_drawwidth)|Rufen Sie diese Methode, um die Breite (in Pixel) ein, die die Methoden des Steuerelements zeichnen festgelegt.|
-|[put_Enabled](#put_enabled)|Rufen Sie diese Methode, um das Flag festgelegt, die angibt, ob das Steuerelement aktiviert ist.|
-|[put_FillColor](#put_fillcolor)|Rufen Sie diese Methode, um die Füllfarbe des Steuerelements festgelegt.|
-|[put_FillStyle](#put_fillstyle)|Rufen Sie diese Methode, um das Füllformat des Steuerelements, legen Sie z. B. solid, transparente oder schraffiert.|
-|[put_Font](#put_font)|Rufen Sie diese Methode, um die Schriftarteigenschaften des Steuerelements festgelegt.|
-|[put_ForeColor](#put_forecolor)|Rufen Sie diese Methode zum Festlegen der Vordergrundfarbe des Steuerelements.|
+|[get_Appearance](#get_appearance)|Mit dieser Methode können Sie den vom Steuerelement verwendeten Zeichenstil abrufen, z. b. Flat oder 3D.|
+|[get_AutoSize](#get_autosize)|Mit dieser Methode können Sie den Status des Flags abrufen, das angibt, ob das Steuerelement keine andere Größe aufweisen kann.|
+|[get_BackColor](#get_backcolor)|Mit dieser Methode können Sie die Hintergrundfarbe des Steuer Elements abrufen.|
+|[get_BackStyle](#get_backstyle)|Mit dieser Methode können Sie den Hintergrund Stil des Steuer Elements abrufen, entweder transparent oder nicht transparent.|
+|[get_BorderColor](#get_bordercolor)|Mit dieser Methode können Sie die Rahmenfarbe des Steuer Elements abrufen.|
+|[get_BorderStyle](#get_borderstyle)|Ruft diese Methode auf, um die Rahmenart des Steuer Elements abzurufen.|
+|[get_BorderVisible](#get_bordervisible)|Mit dieser Methode können Sie den Status des Flags abrufen, das angibt, ob der Rahmen des Steuer Elements sichtbar ist.|
+|[get_BorderWidth](#get_borderwidth)|Mit dieser Methode können Sie die Breite (in Pixel) des Rahmens des Steuer Elements abrufen.|
+|[get_Caption](#get_caption)|Mit dieser Methode wird der in der Beschriftung eines Objekts angegebene Text abzurufen.|
+|[get_DrawMode](#get_drawmode)|Mit dieser Methode können Sie den Zeichnungsmodus des Steuer Elements abrufen, z. b. Xor Pen oder Invert Farben.|
+|[get_DrawStyle](#get_drawstyle)|Mit dieser Methode können Sie die Zeichnungs Art des Steuer Elements abrufen, z. b. mit Solid, gestrichelt oder gepunkteten.|
+|[get_DrawWidth](#get_drawwidth)|Mit dieser Methode können Sie die Zeichnungs Breite (in Pixel) abrufen, die von den Zeichnungs Methoden des Steuer Elements verwendet wird.|
+|[get_Enabled](#get_enabled)|Mit dieser Methode können Sie den Status des Flags abrufen, das angibt, ob das Steuerelement aktiviert ist.|
+|[get_FillColor](#get_fillcolor)|Ruft diese Methode auf, um die Füllfarbe des Steuer Elements abzurufen.|
+|[get_FillStyle](#get_fillstyle)|Mit dieser Methode können Sie den Füllstil des Steuer Elements abrufen, z. b. durchgezogen, transparent oder Kreuz.|
+|[get_Font](#get_font)|Mit dieser Methode können Sie einen Zeiger auf die Schriftart Eigenschaften des Steuer Elements abrufen.|
+|[get_ForeColor](#get_forecolor)|Mit dieser Methode können Sie die Vordergrundfarbe des Steuer Elements abrufen.|
+|[get_HWND](#get_hwnd)|Mit dieser Methode wird das Fenster Handle aufgerufen, das dem Steuerelement zugeordnet ist.|
+|[get_MouseIcon](#get_mouseicon)|Mit dieser Methode können Sie die Bildeigenschaften der Grafik (Symbol, Bitmap oder Metadatei) abrufen, die angezeigt werden soll, wenn sich der Mauszeiger über dem Steuerelement befindet.|
+|[get_MousePointer](#get_mousepointer)|Mit dieser Methode können Sie den Typ des Mauszeigers abrufen, der angezeigt wird, wenn sich der Mauszeiger über dem Steuerelement befindet, z. b. Pfeil, Kreuz oder Sanduhr.|
+|[get_Picture](#get_picture)|Mit dieser Methode können Sie einen Zeiger auf die Bildeigenschaften einer Grafik (Symbol, Bitmap oder Metadatei) abrufen, die angezeigt werden soll.|
+|[get_ReadyState](#get_readystate)|Mit dieser Methode können Sie den Zustand des Steuer Elements abrufen, z. b. Laden oder laden.|
+|[get_TabStop](#get_tabstop)|Mit dieser Methode wird das Flag aufgerufen, das angibt, ob es sich bei dem Steuerelement um einen Tabstopp handelt.|
+|[get_Text](#get_text)|Mit dieser Methode können Sie den Text abrufen, der mit dem-Steuerelement angezeigt wird.|
+|[getvalid](#get_valid)|Mit dieser Methode können Sie den Status des Flags abrufen, das angibt, ob das Steuerelement gültig ist.|
+|[get_Window](#get_window)|Mit dieser Methode wird das Fenster Handle aufgerufen, das dem Steuerelement zugeordnet ist. Identisch mit [cstockpropimpl:: get_HWND](#get_hwnd).|
+|[put_Appearance](#put_appearance)|Mit dieser Methode können Sie die vom Steuerelement verwendete Zeichnungs Art festlegen, z. b. Flat oder 3D.|
+|[put_AutoSize](#put_autosize)|Mit dieser Methode wird der Wert des Flags festgelegt, das angibt, ob das Steuerelement keine andere Größe aufweisen kann.|
+|[put_BackColor](#put_backcolor)|Mit dieser Methode wird die Hintergrundfarbe des Steuer Elements festgelegt.|
+|[put_BackStyle](#put_backstyle)|Ruft diese Methode auf, um den Hintergrund Stil des Steuer Elements festzulegen.|
+|[put_BorderColor](#put_bordercolor)|Mit dieser Methode wird die Rahmenfarbe des Steuer Elements festgelegt.|
+|[put_BorderStyle](#put_borderstyle)|Ruft diese Methode auf, um die Rahmenart des Steuer Elements festzulegen.|
+|[put_BorderVisible](#put_bordervisible)|Ruft diese Methode auf, um den Wert des Flags festzulegen, das angibt, ob der Rahmen des Steuer Elements sichtbar ist.|
+|[put_BorderWidth](#put_borderwidth)|Ruft diese Methode auf, um die Breite des Rahmens des Steuer Elements festzulegen.|
+|[put_Caption](#put_caption)|Mit dieser Methode können Sie den Text festlegen, der mit dem Steuerelement angezeigt werden soll.|
+|[put_DrawMode](#put_drawmode)|Mit dieser Methode können Sie den Zeichnungsmodus des Steuer Elements festlegen, z. b. Xor Pen oder Invert Farben.|
+|[put_DrawStyle](#put_drawstyle)|Mit dieser Methode können Sie die Zeichnungsart des Steuer Elements festlegen, z. b. mit Solid, gestrichelt oder gepunkteten.|
+|[put_DrawWidth](#put_drawwidth)|Ruft diese Methode auf, um die Breite (in Pixel) festzulegen, die von den Zeichnungs Methoden des Steuer Elements verwendet wird.|
+|[put_Enabled](#put_enabled)|Mit dieser Methode können Sie das Flag festlegen, das angibt, ob das Steuerelement aktiviert ist.|
+|[put_FillColor](#put_fillcolor)|Mit dieser Methode wird die Füllfarbe des Steuer Elements festgelegt.|
+|[put_FillStyle](#put_fillstyle)|Mit dieser Methode können Sie den Füllstil des Steuer Elements festlegen, z. b. Solid, transparent oder Cross-.|
+|[put_Font](#put_font)|Ruft diese Methode auf, um die Schriftart Eigenschaften des Steuer Elements festzulegen.|
+|[put_ForeColor](#put_forecolor)|Ruft diese Methode auf, um die Vordergrundfarbe des Steuer Elements festzulegen.|
 |[put_HWND](#put_hwnd)|Diese Methode gibt E_FAIL zurück.|
-|[put_MouseIcon](#put_mouseicon)|Rufen Sie diese Methode zum Festlegen der Bildeigenschaften der Grafik (Symbol, Bitmap oder Metadatei) angezeigt werden, wenn der Mauszeiger über dem Steuerelement befindet.|
-|[put_MousePointer](#put_mousepointer)|Rufen Sie diese Methode, um den Typ des Mauszeiger-auf, die angezeigt wird, wenn der Mauszeiger über dem Steuerelement, z. B., Pfeil, übergreifende oder Sanduhr dargestellt.|
-|[put_Picture](#put_picture)|Rufen Sie diese Methode zum Festlegen der Bildeigenschaften, der eine Grafik (Symbol, Bitmap oder Metadatei) angezeigt werden.|
-|[put_ReadyState](#put_readystate)|Rufen Sie diese Methode, um den Zustand des Steuerelements bereit, legen Sie z. B. Laden oder geladen.|
-|[put_TabStop](#put_tabstop)|Rufen Sie diese Methode, um den Wert des Flags festgelegt, der angibt, ob das Steuerelement einen Tabstopp oder nicht.|
-|[put_Text](#put_text)|Rufen Sie diese Methode, um den Text festlegen, der mit dem Steuerelement angezeigt wird.|
-|[putvalid](#put_valid)|Rufen Sie diese Methode, um das Flag festgelegt, die angibt, ob das Steuerelement gültig oder nicht ist.|
-|[put_Window](#put_window)|Diese Methode ruft [CStockPropImpl::put_HWND](#put_hwnd), E_FAIL zurückgegeben.|
-|[putref_Font](#putref_font)|Rufen Sie diese Methode, um die Schriftarteigenschaften des Steuerelements, mit einer Verweisanzahl festgelegt.|
-|[putref_MouseIcon](#putref_mouseicon)|Rufen Sie diese Methode zum Festlegen der Bildeigenschaften der Grafik (Symbol, Bitmap oder Metadatei) angezeigt werden, wenn der Mauszeiger über dem Steuerelement, mit einer Verweisanzahl ein.|
-|[putref_Picture](#putref_picture)|Rufen Sie diese Methode zum Festlegen der Bildeigenschaften, der eine Grafik (Symbol, Bitmap oder Metadatei) angezeigt werden, mit einer Verweisanzahl ein.|
+|[put_MouseIcon](#put_mouseicon)|Mit dieser Methode können Sie die Bildeigenschaften der Grafik (Symbol, Bitmap oder Metadatendatei) festlegen, die angezeigt werden soll, wenn sich der Mauszeiger über dem Steuerelement befindet.|
+|[put_MousePointer](#put_mousepointer)|Mit dieser Methode können Sie den Typ des Mauszeigers festlegen, der angezeigt wird, wenn sich der Mauszeiger über dem Steuerelement befindet, z. b. Pfeil, Kreuz oder Sanduhr.|
+|[put_Picture](#put_picture)|Mit dieser Methode können Sie die Bildeigenschaften einer Grafik (Symbol, Bitmap oder Metadatei) festlegen, die angezeigt werden soll.|
+|[put_ReadyState](#put_readystate)|Mit dieser Methode können Sie den Zustand des Steuer Elements festlegen, z. b. Laden oder laden.|
+|[put_TabStop](#put_tabstop)|Mit dieser Methode können Sie den Wert des Flags festlegen, das angibt, ob es sich bei dem Steuerelement um einen Tabstopp handelt.|
+|[put_Text](#put_text)|Mit dieser Methode können Sie den Text festlegen, der mit dem-Steuerelement angezeigt wird.|
+|[putvalid](#put_valid)|Ruft diese Methode auf, um das Flag festzulegen, das angibt, ob das Steuerelement gültig ist.|
+|[put_Window](#put_window)|Diese Methode ruft [cstockpropimpl::p ut_hwnd](#put_hwnd)auf, wodurch E_FAIL zurückgegeben wird.|
+|[putref_Font](#putref_font)|Mit dieser Methode können Sie die Schriftart Eigenschaften des Steuer Elements mit einem Verweis Zähler festlegen.|
+|[putref_MouseIcon](#putref_mouseicon)|Mit dieser Methode können Sie die Bildeigenschaften der Grafik (Symbol, Bitmap oder Metadatendatei) festlegen, die angezeigt werden soll, wenn sich der Mauszeiger über dem Steuerelement befindet, mit einem Verweis Zähler.|
+|[putref_Picture](#putref_picture)|Mit dieser Methode können Sie die Bildeigenschaften einer Grafik (Symbol, Bitmap oder Metadatei), die angezeigt werden soll, mit einem Verweis Zähler festlegen.|
 
 ## <a name="remarks"></a>Hinweise
 
-`CStockPropImpl` bietet **put** und **erhalten** Methoden für jede Eigenschaft. Diese Methoden geben Sie den Code zum Festlegen oder Abrufen des Datenmembers, der jede Eigenschaft zugeordnet, und informieren und mit dem Container synchronisiert werden, wenn sich eine Eigenschaft ändert.
+`CStockPropImpl`stellt **Put** -und **Get** -Methoden für jede Aktien Eigenschaft bereit. Diese Methoden stellen den Code bereit, der erforderlich ist, um das Datenelement, das den einzelnen Eigenschaften zugeordnet ist, festzulegen oder zu erhalten und mit dem Container zu benachrichtigen, wenn sich eine Eigenschaft ändert
 
-Visual Studio bietet Unterstützung für vordefinierte Eigenschaften, die über den zugehörigen Assistenten. Weitere Informationen zu Hinzufügen von vordefinierten Eigenschaften auf ein Steuerelement, finden Sie unter den [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md).
+Visual Studio bietet Unterstützung für Bestands Eigenschaften durch die Assistenten. Weitere Informationen zum Hinzufügen von Aktien Eigenschaften zu einem Steuerelement finden Sie im [ATL-Tutorial](../../atl/active-template-library-atl-tutorial.md).
 
-Für die Abwärtskompatibilität `CStockPropImpl` außerdem `get_Window` und `put_Window` Methoden, die einfach aufrufen `get_HWND` und `put_HWND`bzw. Die standardmäßige Implementierung des `put_HWND` gibt E_FAIL zurück, da HWND eine schreibgeschützte Eigenschaft sein sollte.
+Aus Gründen der abwärts `CStockPropImpl` Kompatibilität macht `get_Window` auch `put_Window` die `get_HWND` -Methode und die `put_HWND`-Methode verfügbar, die einfach und bzw. Die Standard Implementierung von `put_HWND` gibt E_FAIL zurück, da HWND eine schreibgeschützte Eigenschaft sein sollte.
 
-Die folgenden Eigenschaften verfügen, auch ein **Putref** Implementierung:
+Die folgenden Eigenschaften verfügen auch über eine **PutRef** -Implementierung:
 
 - Schriftart
 
@@ -194,7 +194,7 @@ Die folgenden Eigenschaften verfügen, auch ein **Putref** Implementierung:
 
 - Picture
 
-Die gleichen drei vordefinierten Eigenschaften erfordern ihre entsprechenden Datenmember des Typs `CComPtr` oder beliebigen anderen Klasse, die richtige Schnittstelle Referenz bietet mithilfe des Zuweisungsoperators zählen.
+Die gleichen drei vordefinierten Eigenschaften erfordern, dass Ihr zugehöriger Datenmember vom `CComPtr` Typ oder einer anderen Klasse ist, die mithilfe des Zuweisungs Operators die korrekte Zählung der Schnittstellen Verweise bereitstellt.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -208,9 +208,9 @@ Die gleichen drei vordefinierten Eigenschaften erfordern ihre entsprechenden Dat
 
 **Header:** atlctl.h
 
-##  <a name="get_appearance"></a>  CStockPropImpl::get_Appearance
+##  <a name="get_appearance"></a>Cstockpropimpl:: get_Appearance
 
-Rufen Sie diese Methode zum Abrufen der Paint-Stil, die vom Steuerelement verwendet, z. B., flach oder 3D.
+Mit dieser Methode können Sie den vom Steuerelement verwendeten Zeichenstil abrufen, z. b. Flat oder 3D.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
@@ -219,15 +219,15 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 ### <a name="parameters"></a>Parameter
 
 *pnAppearance*<br/>
-Eine Variable, die Paint-Format des Steuerelements empfängt.
+Eine Variable, die die Zeichnungs Art des Steuer Elements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_autosize"></a>  CStockPropImpl::get_AutoSize
+##  <a name="get_autosize"></a>Cstockpropimpl:: get_AutoSize
 
-Rufen Sie diese Methode, um den Status des Flags erhalten, die angibt, ob das Steuerelement eine beliebige andere Größe aufweisen, kann nicht an.
+Mit dieser Methode können Sie den Status des Flags abrufen, das angibt, ob das Steuerelement keine andere Größe aufweisen kann.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
@@ -236,15 +236,15 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 ### <a name="parameters"></a>Parameter
 
 *pbAutoSize*<br/>
-Variablen, die den Kennzeichnungsstatus empfängt. TRUE gibt an, dass das Steuerelement eine beliebige andere Größe sein kann.
+Variable, die den FlagStatus empfängt. TRUE gibt an, dass das Steuerelement keine andere Größe aufweisen kann.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_backcolor"></a>  CStockPropImpl::get_BackColor
+##  <a name="get_backcolor"></a>Cstockpropimpl:: get_BackColor
 
-Rufen Sie diese Methode, um die Hintergrundfarbe des Steuerelements zu erhalten.
+Mit dieser Methode können Sie die Hintergrundfarbe des Steuer Elements abrufen.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
@@ -253,15 +253,15 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 ### <a name="parameters"></a>Parameter
 
 *pclrBackColor*<br/>
-Variablen, die Hintergrundfarbe des Steuerelements empfängt.
+Eine Variable, die die Hintergrundfarbe des Steuer Elements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_backstyle"></a>  CStockPropImpl::get_BackStyle
+##  <a name="get_backstyle"></a>Cstockpropimpl:: get_BackStyle
 
-Rufen Sie diese Methode, um den Hintergrundformat des Steuerelements, entweder transparenten oder deckenden zu erhalten.
+Mit dieser Methode können Sie den Hintergrund Stil des Steuer Elements abrufen, entweder transparent oder nicht transparent.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
@@ -270,15 +270,15 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 ### <a name="parameters"></a>Parameter
 
 *pnBackStyle*<br/>
-Eine Variable, die Hintergrund-Format des Steuerelements empfängt.
+Eine Variable, die den Hintergrund Stil des Steuer Elements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_bordercolor"></a>  CStockPropImpl::get_BorderColor
+##  <a name="get_bordercolor"></a>Cstockpropimpl:: get_BorderColor
 
-Rufen Sie diese Methode, um die Farbe des Rahmens des Steuerelements zu erhalten.
+Mit dieser Methode können Sie die Rahmenfarbe des Steuer Elements abrufen.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
@@ -287,15 +287,15 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 ### <a name="parameters"></a>Parameter
 
 *pclrBorderColor*<br/>
-Eine Variable, die Farbe des Rahmens des Steuerelements empfängt.
+Eine Variable, die die Rahmenfarbe des Steuer Elements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_borderstyle"></a>  CStockPropImpl::get_BorderStyle
+##  <a name="get_borderstyle"></a>Cstockpropimpl:: get_BorderStyle
 
-Rufen Sie diese Methode, um die Rahmenart des Steuerelements zu erhalten.
+Ruft diese Methode auf, um die Rahmenart des Steuer Elements abzurufen.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
@@ -304,15 +304,15 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 ### <a name="parameters"></a>Parameter
 
 *pnBorderStyle*<br/>
-Eine Variable, die Rahmenart des Steuerelements empfängt.
+Eine Variable, die die Rahmenart des Steuer Elements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_bordervisible"></a>  CStockPropImpl::get_BorderVisible
+##  <a name="get_bordervisible"></a>Cstockpropimpl:: get_BorderVisible
 
-Rufen Sie diese Methode, um den Status des Flags erhalten, die angibt, ob der Rahmen des Steuerelements sichtbar ist.
+Mit dieser Methode können Sie den Status des Flags abrufen, das angibt, ob der Rahmen des Steuer Elements sichtbar ist.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
@@ -321,15 +321,15 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 ### <a name="parameters"></a>Parameter
 
 *pbBorderVisible*<br/>
-Variablen, die den Kennzeichnungsstatus empfängt. TRUE gibt an, dass der Rahmen des Steuerelements sichtbar ist.
+Variable, die den FlagStatus empfängt. TRUE gibt an, dass der Rahmen des Steuer Elements sichtbar ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_borderwidth"></a>  CStockPropImpl::get_BorderWidth
+##  <a name="get_borderwidth"></a>Cstockpropimpl:: get_BorderWidth
 
-Rufen Sie diese Methode, um die Breite des Rahmens des Steuerelements zu erhalten.
+Mit dieser Methode können Sie die Breite des Rahmens des Steuer Elements abrufen.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
@@ -338,15 +338,15 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 ### <a name="parameters"></a>Parameter
 
 *pnBorderWidth*<br/>
-Eine Variable, die Breite des Rahmens des Steuerelements empfängt.
+Eine Variable, die die Rahmenbreite des Steuer Elements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_caption"></a>  CStockPropImpl::get_Caption
+##  <a name="get_caption"></a>Cstockpropimpl:: get_Caption
 
-Rufen Sie diese Methode zum Abrufen des Texts in ein Objekt mit der Beschriftung angegeben.
+Mit dieser Methode wird der in der Beschriftung eines Objekts angegebene Text abzurufen.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
@@ -355,15 +355,15 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 ### <a name="parameters"></a>Parameter
 
 *pbstrCaption*<br/>
-Der Text, mit dem Steuerelement angezeigt werden.
+Der Text, der mit dem Steuerelement angezeigt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_drawmode"></a>  CStockPropImpl::get_DrawMode
+##  <a name="get_drawmode"></a>Cstockpropimpl:: get_DrawMode
 
-Rufen Sie diese Methode zum Abrufen des Steuerelements Zeichnungsmodus des, z. B. XOR Stift oder Farben umkehren.
+Mit dieser Methode können Sie den Zeichnungsmodus des Steuer Elements abrufen, z. b. Xor Pen oder Invert Farben.
 
 ```
 HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
@@ -372,15 +372,15 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 ### <a name="parameters"></a>Parameter
 
 *pnDrawMode*<br/>
-Eine Variable, die Zeichnungsmodus des Steuerelements empfängt.
+Eine Variable, die den Zeichnungsmodus des-Steuer Elements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_drawstyle"></a>  CStockPropImpl::get_DrawStyle
+##  <a name="get_drawstyle"></a>Cstockpropimpl:: get_DrawStyle
 
-Rufen Sie diese Methode zum Abrufen des Steuerelements Zeichnungsart, z. B. solid, gestrichelt oder gepunktet.
+Mit dieser Methode können Sie die Zeichnungs Art des Steuer Elements abrufen, z. b. mit Solid, gestrichelt oder gepunkteten.
 
 ```
 HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
@@ -389,15 +389,15 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 ### <a name="parameters"></a>Parameter
 
 *pnDrawStyle*<br/>
-Eine Variable, die Zeichnungsart des Steuerelements empfängt.
+Eine Variable, die die Zeichnungsart des Steuer Elements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_drawwidth"></a>  CStockPropImpl::get_DrawWidth
+##  <a name="get_drawwidth"></a>Cstockpropimpl:: get_DrawWidth
 
-Rufen Sie diese Methode, um die Zeichnung Breite (in Pixel) ein, die die Methoden des Steuerelements zeichnen abzurufen.
+Mit dieser Methode können Sie die Zeichnungs Breite (in Pixel) abrufen, die von den Zeichnungs Methoden des Steuer Elements verwendet wird.
 
 ```
 HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
@@ -406,15 +406,15 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 ### <a name="parameters"></a>Parameter
 
 *pnDrawWidth*<br/>
-Variablen, empfängt den Wert des Steuerelements Breite, in Pixel.
+Eine Variable, die den Breitenwert des Steuer Elements in Pixel empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_enabled"></a>  CStockPropImpl::get_Enabled
+##  <a name="get_enabled"></a>Cstockpropimpl:: get_Enabled
 
-Rufen Sie diese Methode, um den Status des Flags erhalten, die angibt, ob das Steuerelement aktiviert ist.
+Mit dieser Methode können Sie den Status des Flags abrufen, das angibt, ob das Steuerelement aktiviert ist.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
@@ -422,16 +422,16 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 
 ### <a name="parameters"></a>Parameter
 
-*pbEnabled*<br/>
-Variablen, die den Kennzeichnungsstatus empfängt. TRUE gibt an, dass das Steuerelement aktiviert ist.
+*pbenabled*<br/>
+Variable, die den FlagStatus empfängt. TRUE gibt an, dass das Steuerelement aktiviert ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_fillcolor"></a>  CStockPropImpl::get_FillColor
+##  <a name="get_fillcolor"></a>Cstockpropimpl:: get_FillColor
 
-Rufen Sie diese Methode, um die Füllfarbe des Steuerelements zu erhalten.
+Ruft diese Methode auf, um die Füllfarbe des Steuer Elements abzurufen.
 
 ```
 HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
@@ -440,15 +440,15 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 ### <a name="parameters"></a>Parameter
 
 *pclrFillColor*<br/>
-Eine Variable, die Füllfarbe des Steuerelements empfängt.
+Eine Variable, die die Füllfarbe des Steuer Elements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_fillstyle"></a>  CStockPropImpl::get_FillStyle
+##  <a name="get_fillstyle"></a>Cstockpropimpl:: get_FillStyle
 
-Rufen Sie diese Methode zum Abrufen von Füllformat des Steuerelements, z. B. ein, solid, transparente oder schraffierten.
+Mit dieser Methode können Sie den Füllstil des Steuer Elements abrufen, z. b. Solid, transparent oder crosshatched.
 
 ```
 HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
@@ -457,15 +457,15 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 ### <a name="parameters"></a>Parameter
 
 *pnFillStyle*<br/>
-Variablen, die Füllformat des Steuerelements empfängt.
+Eine Variable, die den Füllstil des Steuer Elements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_font"></a>  CStockPropImpl::get_Font
+##  <a name="get_font"></a>Cstockpropimpl:: get_Font
 
-Rufen Sie diese Methode, um einen Zeiger auf die Schriftarteigenschaften des Steuerelements abzurufen.
+Mit dieser Methode können Sie einen Zeiger auf die Schriftart Eigenschaften des Steuer Elements abrufen.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
@@ -474,15 +474,15 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 ### <a name="parameters"></a>Parameter
 
 *ppFont*<br/>
-Variable, die einen Zeiger auf die Schriftarteigenschaften des Steuerelements empfängt.
+Eine Variable, die einen Zeiger auf die Schriftart Eigenschaften des Steuer Elements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_forecolor"></a>  CStockPropImpl::get_ForeColor
+##  <a name="get_forecolor"></a>Cstockpropimpl:: get_ForeColor
 
-Rufen Sie diese Methode, um die Vordergrundfarbe des Steuerelements zu erhalten.
+Mit dieser Methode können Sie die Vordergrundfarbe des Steuer Elements abrufen.
 
 ```
 HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
@@ -491,15 +491,15 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 ### <a name="parameters"></a>Parameter
 
 *pclrForeColor*<br/>
-Eine Variable, die die Vordergrundfarbe der Steuerelemente empfängt.
+Variable, die die Vordergrundfarbe der Steuerelemente empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_hwnd"></a>  CStockPropImpl::get_HWND
+##  <a name="get_hwnd"></a>Cstockpropimpl:: get_HWND
 
-Rufen Sie diese Methode, um das Fensterhandle, das dem Steuerelement zugeordnete zu erhalten.
+Mit dieser Methode wird das Fenster Handle aufgerufen, das dem Steuerelement zugeordnet ist.
 
 ```
 HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
@@ -508,15 +508,15 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 ### <a name="parameters"></a>Parameter
 
 *phWnd*<br/>
-Das Fensterhandle, das dem Steuerelement zugeordnet.
+Das Fenster Handle, das dem Steuerelement zugeordnet ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_mouseicon"></a>  CStockPropImpl::get_MouseIcon
+##  <a name="get_mouseicon"></a>Cstockpropimpl:: get_MouseIcon
 
-Rufen Sie diese Methode zum Abrufen der Bildeigenschaften der Grafik (Symbol, Bitmap oder Metadatei) angezeigt werden, wenn der Mauszeiger über dem Steuerelement befindet.
+Mit dieser Methode können Sie die Bildeigenschaften der Grafik (Symbol, Bitmap oder Metadatei) abrufen, die angezeigt werden soll, wenn sich der Mauszeiger über dem Steuerelement befindet.
 
 ```
 HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
@@ -524,16 +524,16 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Parameter
 
-*ppPicture*<br/>
-Variable, die einen Zeiger auf die Bildeigenschaften der Grafik empfängt.
+*pppicture*<br/>
+Eine Variable, die einen Zeiger auf die Bildeigenschaften der Grafik empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_mousepointer"></a>  CStockPropImpl::get_MousePointer
+##  <a name="get_mousepointer"></a>Cstockpropimpl:: get_MousePointer
 
-Rufen Sie diese Methode zum Abrufen des Typs des Mauszeiger-auf, die angezeigt wird, wenn der Mauszeiger über dem Steuerelement, z. B., Pfeil, übergreifende oder Sanduhr dargestellt.
+Mit dieser Methode können Sie den Typ des Mauszeigers abrufen, der angezeigt wird, wenn sich der Mauszeiger über dem Steuerelement befindet, z. b. Pfeil, Kreuz oder Sanduhr.
 
 ```
 HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
@@ -542,15 +542,15 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
 ### <a name="parameters"></a>Parameter
 
 *pnMousePointer*<br/>
-Eine Variable, die den Typ des Mauszeigers empfängt.
+Variable, die den Typ des Mauszeigers empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_picture"></a>  CStockPropImpl::get_Picture
+##  <a name="get_picture"></a>Cstockpropimpl:: get_Picture
 
-Rufen Sie diese Methode zum Abrufen eines Zeigers auf die Bildeigenschaften, der eine Grafik (Symbol, Bitmap oder Metadatei) angezeigt werden.
+Mit dieser Methode können Sie einen Zeiger auf die Bildeigenschaften einer Grafik (Symbol, Bitmap oder Metadatei) abrufen, die angezeigt werden soll.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
@@ -558,16 +558,16 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Parameter
 
-*ppPicture*<br/>
-Variable, die einen Zeiger auf das Bild in den Eigenschaften empfängt. Finden Sie unter [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) Weitere Details.
+*pppicture*<br/>
+Eine Variable, die einen Zeiger auf die Eigenschaften des Bilds empfängt. Weitere Informationen finden Sie unter [IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) .
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_readystate"></a>  CStockPropImpl::get_ReadyState
+##  <a name="get_readystate"></a>Cstockpropimpl:: get_ReadyState
 
-Rufen Sie diese Methode rufen Sie den Zustand des Steuerelements bereit, z. B., laden oder geladen wird.
+Mit dieser Methode können Sie den Zustand des Steuer Elements abrufen, z. b. Laden oder laden.
 
 ```
 HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
@@ -576,15 +576,15 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
 ### <a name="parameters"></a>Parameter
 
 *pnReadyState*<br/>
-Eine Variable, die Status "bereit" des Steuerelements empfängt.
+Eine Variable, die den Zustand "bereit" des Steuer Elements empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_tabstop"></a>  CStockPropImpl::get_TabStop
+##  <a name="get_tabstop"></a>Cstockpropimpl:: get_TabStop
 
-Rufen Sie diese Methode, um den Status des Flags erhalten, der angibt, ob das Steuerelement einen Tabstopp oder nicht.
+Mit dieser Methode können Sie den Status des Flags abrufen, das angibt, ob es sich bei dem Steuerelement um einen Tabstopp handelt.
 
 ```
 HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
@@ -593,15 +593,15 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 ### <a name="parameters"></a>Parameter
 
 *pbTabStop*<br/>
-Variablen, die den Kennzeichnungsstatus empfängt. TRUE gibt an, dass das Steuerelement einen Tabstopp.
+Variable, die den FlagStatus empfängt. TRUE gibt an, dass das Steuerelement ein Tabstopp ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_text"></a>  CStockPropImpl::get_Text
+##  <a name="get_text"></a>Cstockpropimpl:: get_Text
 
-Rufen Sie diese Methode zum Abrufen des Texts, der mit dem Steuerelement angezeigt wird.
+Mit dieser Methode können Sie den Text abrufen, der mit dem-Steuerelement angezeigt wird.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
@@ -610,15 +610,15 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 ### <a name="parameters"></a>Parameter
 
 *pbstrText*<br/>
-Der Text, der mit dem Steuerelement angezeigt wird.
+Der Text, der mit dem-Steuerelement angezeigt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_valid"></a>  CStockPropImpl::getvalid
+##  <a name="get_valid"></a>Cstockpropimpl:: GetValID
 
-Rufen Sie diese Methode, um den Status des Flags erhalten, die angibt, ob das Steuerelement gültig oder nicht ist.
+Mit dieser Methode können Sie den Status des Flags abrufen, das angibt, ob das Steuerelement gültig ist.
 
 ```
 HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
@@ -627,15 +627,15 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 ### <a name="parameters"></a>Parameter
 
 *pbValid*<br/>
-Variablen, die den Kennzeichnungsstatus empfängt. TRUE gibt an, dass das Steuerelement gültig ist.
+Variable, die den FlagStatus empfängt. TRUE gibt an, dass das Steuerelement gültig ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="get_window"></a>  CStockPropImpl::get_Window
+##  <a name="get_window"></a>Cstockpropimpl:: get_Window
 
-Rufen Sie diese Methode, um das Fensterhandle, das dem Steuerelement zugeordnete zu erhalten. Identisch mit [CStockPropImpl::get_HWND](#get_hwnd).
+Mit dieser Methode wird das Fenster Handle aufgerufen, das dem Steuerelement zugeordnet ist. Identisch mit [cstockpropimpl:: get_HWND](#get_hwnd).
 
 ```
 HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
@@ -644,15 +644,15 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 ### <a name="parameters"></a>Parameter
 
 *phWnd*<br/>
-Das Fensterhandle, das dem Steuerelement zugeordnet.
+Das Fenster Handle, das dem Steuerelement zugeordnet ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_appearance"></a>  CStockPropImpl::put_Appearance
+##  <a name="put_appearance"></a>Cstockpropimpl::p ut_appearance
 
-Rufen Sie diese Methode, um die Paint-Stil, die vom Steuerelement verwendet, z. B., flach oder 3D festgelegt.
+Mit dieser Methode können Sie die vom Steuerelement verwendete Zeichnungs Art festlegen, z. b. Flat oder 3D.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
@@ -660,16 +660,16 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 
 ### <a name="parameters"></a>Parameter
 
-*nAppearance*<br/>
-Der neue Paint-Stil, der vom Steuerelement verwendet werden.
+*nappearance*<br/>
+Der neue Zeichnungs Stil, der vom-Steuerelement verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_autosize"></a>  CStockPropImpl::put_AutoSize
+##  <a name="put_autosize"></a>Cstockpropimpl::p ut_autosize
 
-Rufen Sie diese Methode, um den Wert des Flags festlegen, die angibt, ob das Steuerelement eine beliebige andere Größe aufweisen, kann nicht an.
+Mit dieser Methode wird der Wert des Flags festgelegt, das angibt, ob das Steuerelement keine andere Größe aufweisen kann.
 
 ```
 HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
@@ -678,15 +678,15 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 ### <a name="parameters"></a>Parameter
 
 *bAutoSize*<br/>
-TRUE, wenn das Steuerelement eine beliebige andere Größe darf nicht sein.
+TRUE, wenn das Steuerelement keine andere Größe aufweisen kann.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_backcolor"></a>  CStockPropImpl::put_BackColor
+##  <a name="put_backcolor"></a>Cstockpropimpl::p ut_backcolor
 
-Rufen Sie diese Methode, um die Hintergrundfarbe des Steuerelements festzulegen.
+Mit dieser Methode wird die Hintergrundfarbe des Steuer Elements festgelegt.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
@@ -695,15 +695,15 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
 ### <a name="parameters"></a>Parameter
 
 *clrBackColor*<br/>
-Die neue Hintergrundfarbe Steuerelement.
+Die neue Hintergrundfarbe des Steuer Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_backstyle"></a>  CStockPropImpl::put_BackStyle
+##  <a name="put_backstyle"></a>Cstockpropimpl::p ut_backstyle
 
-Rufen Sie diese Methode zum Festlegen von Hintergrund-Format des Steuerelements.
+Ruft diese Methode auf, um den Hintergrund Stil des Steuer Elements festzulegen.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
@@ -712,15 +712,15 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 ### <a name="parameters"></a>Parameter
 
 *nBackStyle*<br/>
-Das neue Steuerelement Hintergrundformat.
+Der neue Steuerelement Hintergrund Stil.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_bordercolor"></a>  CStockPropImpl::put_BorderColor
+##  <a name="put_bordercolor"></a>Cstockpropimpl::p ut_bordercolor
 
-Rufen Sie diese Methode, um die Farbe des Rahmens des Steuerelements festgelegt.
+Mit dieser Methode wird die Rahmenfarbe des Steuer Elements festgelegt.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
@@ -729,15 +729,15 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 ### <a name="parameters"></a>Parameter
 
 *clrBorderColor*<br/>
-Farbe des neuen Rahmens. Der Datentyp OLE_COLOR wird intern als eine 32-Bit-Ganzzahl dargestellt.
+Die neue Rahmenfarbe. Der OLE_COLOR-Datentyp wird intern als 32-Bit-Ganzzahl (Long) dargestellt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_borderstyle"></a>  CStockPropImpl::put_BorderStyle
+##  <a name="put_borderstyle"></a>Cstockpropimpl::p ut_borderstyle
 
-Rufen Sie diese Methode, um die Rahmenart des Steuerelements festgelegt.
+Ruft diese Methode auf, um die Rahmenart des Steuer Elements festzulegen.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
@@ -750,11 +750,11 @@ Die neue Rahmenart.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_bordervisible"></a>  CStockPropImpl::put_BorderVisible
+##  <a name="put_bordervisible"></a>Cstockpropimpl::p ut_bordervisible
 
-Rufen Sie diese Methode, um den Wert des Flags festlegen, die angibt, ob der Rahmen des Steuerelements sichtbar ist.
+Ruft diese Methode auf, um den Wert des Flags festzulegen, das angibt, ob der Rahmen des Steuer Elements sichtbar ist.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
@@ -763,15 +763,15 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 ### <a name="parameters"></a>Parameter
 
 *bBorderVisible*<br/>
-TRUE, wenn der Rahmen sichtbar ist.
+TRUE, wenn der Rahmen sichtbar sein soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_borderwidth"></a>  CStockPropImpl::put_BorderWidth
+##  <a name="put_borderwidth"></a>Cstockpropimpl::p ut_borderwidth
 
-Rufen Sie diese Methode, um die Breite des Rahmens des Steuerelements festgelegt.
+Ruft diese Methode auf, um die Breite des Rahmens des Steuer Elements festzulegen.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
@@ -780,15 +780,15 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 ### <a name="parameters"></a>Parameter
 
 *nBorderWidth*<br/>
-Die neue Breite des Rahmens des Steuerelements.
+Die neue Breite des Rahmens des Steuer Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_caption"></a>  CStockPropImpl::put_Caption
+##  <a name="put_caption"></a>Cstockpropimpl::p ut_caption
 
-Rufen Sie diese Methode zum Festlegen des Texts, der mit dem Steuerelement angezeigt werden.
+Mit dieser Methode können Sie den Text festlegen, der mit dem Steuerelement angezeigt werden soll.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
@@ -797,15 +797,15 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 ### <a name="parameters"></a>Parameter
 
 *bstrCaption*<br/>
-Der Text, mit dem Steuerelement angezeigt werden.
+Der Text, der mit dem Steuerelement angezeigt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_drawmode"></a>  CStockPropImpl::put_DrawMode
+##  <a name="put_drawmode"></a>Cstockpropimpl::p ut_drawmode
 
-Rufen Sie diese Methode zum Festlegen des Steuerelements Zeichnungsmodus des, z. B. XOR Stift oder Farben umkehren.
+Mit dieser Methode können Sie den Zeichnungsmodus des Steuer Elements festlegen, z. b. Xor Pen oder Invert Farben.
 
 ```
 HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
@@ -814,15 +814,15 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 ### <a name="parameters"></a>Parameter
 
 *nDrawMode*<br/>
-Die neue Zeichnungsmodus für das Steuerelement.
+Der neue Zeichnungsmodus für das Steuerelement.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_drawstyle"></a>  CStockPropImpl::put_DrawStyle
+##  <a name="put_drawstyle"></a>Cstockpropimpl::p ut_drawstyle
 
-Rufen Sie diese Methode, um das Format des Steuerelements zeichnen, legen Sie z. B. solid, gestrichelt oder gepunktet.
+Mit dieser Methode können Sie die Zeichnungsart des Steuer Elements festlegen, z. b. mit Solid, gestrichelt oder gepunkteten.
 
 ```
 HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
@@ -835,11 +835,11 @@ Die neue Zeichnungsart für das Steuerelement.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_drawwidth"></a>  CStockPropImpl::put_DrawWidth
+##  <a name="put_drawwidth"></a>Cstockpropimpl::p ut_drawwidth
 
-Rufen Sie diese Methode, um die Breite (in Pixel) ein, die die Methoden des Steuerelements zeichnen festgelegt.
+Ruft diese Methode auf, um die Breite (in Pixel) festzulegen, die von den Zeichnungs Methoden des Steuer Elements verwendet wird.
 
 ```
 HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
@@ -848,15 +848,15 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 ### <a name="parameters"></a>Parameter
 
 *nDrawWidth*<br/>
-Die neue Breite auf, die vom Steuerelement verwendet werden, die Methoden zeichnen.
+Die neue Breite, die von den Zeichnungs Methoden des Steuer Elements verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_enabled"></a>  CStockPropImpl::put_Enabled
+##  <a name="put_enabled"></a>Cstockpropimpl::p ut_enabled
 
-Rufen Sie diese Methode, um den Wert des Flags festlegen, die angibt, ob das Steuerelement aktiviert ist.
+Mit dieser Methode können Sie den Wert des Flags festlegen, das angibt, ob das Steuerelement aktiviert ist.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
@@ -864,16 +864,16 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>Parameter
 
-*bEnabled*<br/>
+*benabled*<br/>
 TRUE, wenn das Steuerelement aktiviert ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_fillcolor"></a>  CStockPropImpl::put_FillColor
+##  <a name="put_fillcolor"></a>Cstockpropimpl::p ut_fillcolor
 
-Rufen Sie diese Methode, um die Füllfarbe des Steuerelements festgelegt.
+Mit dieser Methode wird die Füllfarbe des Steuer Elements festgelegt.
 
 ```
 HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
@@ -882,15 +882,15 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
 ### <a name="parameters"></a>Parameter
 
 *clrFillColor*<br/>
-Die neue Füllfarbe für das Steuerelement.
+Die neue Füllfarbe für das-Steuerelement.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_fillstyle"></a>  CStockPropImpl::put_FillStyle
+##  <a name="put_fillstyle"></a>Cstockpropimpl::p ut_fillstyle
 
-Rufen Sie diese Methode, um das Füllformat des Steuerelements, legen Sie z. B. solid, transparente oder schraffiert.
+Mit dieser Methode können Sie den Füllstil des Steuer Elements festlegen, z. b. Solid, transparent oder Cross-.
 
 ```
 HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
@@ -899,15 +899,15 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 ### <a name="parameters"></a>Parameter
 
 *nFillStyle*<br/>
-Die neue Füllformat für das Steuerelement.
+Der neue Füllstil für das Steuerelement.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_font"></a>  CStockPropImpl::put_Font
+##  <a name="put_font"></a>Cstockpropimpl::p ut_font
 
-Rufen Sie diese Methode, um die Schriftarteigenschaften des Steuerelements festgelegt.
+Ruft diese Methode auf, um die Schriftart Eigenschaften des Steuer Elements festzulegen.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
@@ -916,15 +916,15 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 ### <a name="parameters"></a>Parameter
 
 *pFont*<br/>
-Ein Zeiger auf die Schriftarteigenschaften des Steuerelements.
+Ein Zeiger auf die Schriftart Eigenschaften des Steuer Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_forecolor"></a>  CStockPropImpl::put_ForeColor
+##  <a name="put_forecolor"></a>Cstockpropimpl::p ut_forecolor
 
-Rufen Sie diese Methode zum Festlegen der Vordergrundfarbe des Steuerelements.
+Ruft diese Methode auf, um die Vordergrundfarbe des Steuer Elements festzulegen.
 
 ```
 HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
@@ -933,13 +933,13 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
 ### <a name="parameters"></a>Parameter
 
 *clrForeColor*<br/>
-Die neue Vordergrundfarbe des Steuerelements.
+Die neue Vordergrundfarbe des-Steuer Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_hwnd"></a>  CStockPropImpl::put_HWND
+##  <a name="put_hwnd"></a>Cstockpropimpl::p ut_hwnd
 
 Diese Methode gibt E_FAIL zurück.
 
@@ -954,15 +954,15 @@ Reserviert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Returns E_FAIL.
+Gibt E_FAIL zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Handle des Fensters ist ein schreibgeschützter Wert.
+Das Fenster Handle ist ein Schreib geschützter-Wert.
 
-##  <a name="put_mouseicon"></a>  CStockPropImpl::put_MouseIcon
+##  <a name="put_mouseicon"></a>Cstockpropimpl::p ut_mouseicon
 
-Rufen Sie diese Methode zum Festlegen der Bildeigenschaften der Grafik (Symbol, Bitmap oder Metadatei) angezeigt werden, wenn der Mauszeiger über dem Steuerelement befindet.
+Mit dieser Methode können Sie die Bildeigenschaften der Grafik (Symbol, Bitmap oder Metadatendatei) festlegen, die angezeigt werden soll, wenn sich der Mauszeiger über dem Steuerelement befindet.
 
 ```
 HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
@@ -970,16 +970,16 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parameter
 
-*pPicture*<br/>
+*ppicture*<br/>
 Ein Zeiger auf die Bildeigenschaften der Grafik.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_mousepointer"></a>  CStockPropImpl::put_MousePointer
+##  <a name="put_mousepointer"></a>Cstockpropimpl::p ut_mousepointer
 
-Rufen Sie diese Methode, um den Typ des Mauszeiger-auf, die angezeigt wird, wenn der Mauszeiger über dem Steuerelement, z. B., Pfeil, übergreifende oder Sanduhr dargestellt.
+Mit dieser Methode können Sie den Typ des Mauszeigers festlegen, der angezeigt wird, wenn sich der Mauszeiger über dem Steuerelement befindet, z. b. Pfeil, Kreuz oder Sanduhr.
 
 ```
 HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
@@ -992,11 +992,11 @@ Der Typ des Mauszeigers.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_picture"></a>  CStockPropImpl::put_Picture
+##  <a name="put_picture"></a>Cstockpropimpl::p ut_picture
 
-Rufen Sie diese Methode zum Festlegen der Bildeigenschaften, der eine Grafik (Symbol, Bitmap oder Metadatei) angezeigt werden.
+Mit dieser Methode können Sie die Bildeigenschaften einer Grafik (Symbol, Bitmap oder Metadatei) festlegen, die angezeigt werden soll.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
@@ -1004,16 +1004,16 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parameter
 
-*pPicture*<br/>
-Ein Zeiger auf das Bild der Eigenschaften. Finden Sie unter [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) Weitere Details.
+*ppicture*<br/>
+Ein Zeiger auf die Eigenschaften des Bilds. Weitere Informationen finden Sie unter [IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) .
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_readystate"></a>  CStockPropImpl::put_ReadyState
+##  <a name="put_readystate"></a>Cstockpropimpl::p ut_readystate
 
-Rufen Sie diese Methode, um den Zustand des Steuerelements bereit, legen Sie z. B. Laden oder geladen.
+Mit dieser Methode können Sie den Zustand des Steuer Elements festlegen, z. b. Laden oder laden.
 
 ```
 HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
@@ -1022,15 +1022,15 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 ### <a name="parameters"></a>Parameter
 
 *nReadyState*<br/>
-Der Zustand des Steuerelements bereit.
+Der bereite Zustand des-Steuer Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_tabstop"></a>  CStockPropImpl::put_TabStop
+##  <a name="put_tabstop"></a>Cstockpropimpl::p ut_tabstop
 
-Rufen Sie diese Methode, um das Flag festgelegt, die angibt, ob das Steuerelement einen Tabstopp oder nicht.
+Mit dieser Methode können Sie das Flag festlegen, das angibt, ob es sich bei dem Steuerelement um einen Tabstopp handelt.
 
 ```
 HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
@@ -1039,15 +1039,15 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
 ### <a name="parameters"></a>Parameter
 
 *bTabStop*<br/>
-TRUE, wenn das Steuerelement einen Tabstopp darstellt.
+TRUE, wenn das Steuerelement ein Tabstopp ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_text"></a>  CStockPropImpl::put_Text
+##  <a name="put_text"></a>Cstockpropimpl::p ut_text
 
-Rufen Sie diese Methode, um den Text festlegen, der mit dem Steuerelement angezeigt wird.
+Mit dieser Methode können Sie den Text festlegen, der mit dem-Steuerelement angezeigt wird.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
@@ -1056,15 +1056,15 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 ### <a name="parameters"></a>Parameter
 
 *bstrText*<br/>
-Der Text, der mit dem Steuerelement angezeigt wird.
+Der Text, der mit dem-Steuerelement angezeigt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_valid"></a>  CStockPropImpl::putvalid
+##  <a name="put_valid"></a>Cstockpropimpl::p utvalid
 
-Rufen Sie diese Methode, um das Flag festgelegt, die angibt, ob das Steuerelement gültig oder nicht ist.
+Ruft diese Methode auf, um das Flag festzulegen, das angibt, ob das Steuerelement gültig ist.
 
 ```
 HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
@@ -1077,11 +1077,11 @@ TRUE, wenn das Steuerelement gültig ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
-##  <a name="put_window"></a>  CStockPropImpl::put_Window
+##  <a name="put_window"></a>Cstockpropimpl::p ut_window
 
-Diese Methode ruft [CStockPropImpl::put_HWND](#put_hwnd), E_FAIL zurückgegeben.
+Diese Methode ruft [cstockpropimpl::p ut_hwnd](#put_hwnd)auf, wodurch E_FAIL zurückgegeben wird.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
@@ -1094,15 +1094,15 @@ Das Fensterhandle.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Returns E_FAIL.
+Gibt E_FAIL zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Handle des Fensters ist ein schreibgeschützter Wert.
+Das Fenster Handle ist ein Schreib geschützter-Wert.
 
-##  <a name="putref_font"></a>  CStockPropImpl::putref_Font
+##  <a name="putref_font"></a>Cstockpropimpl::p utref_font
 
-Rufen Sie diese Methode, um die Schriftarteigenschaften des Steuerelements, mit einer Verweisanzahl festgelegt.
+Mit dieser Methode können Sie die Schriftart Eigenschaften des Steuer Elements mit einem Verweis Zähler festlegen.
 
 ```
 HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
@@ -1111,19 +1111,19 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 ### <a name="parameters"></a>Parameter
 
 *pFont*<br/>
-Ein Zeiger auf die Schriftarteigenschaften des Steuerelements.
+Ein Zeiger auf die Schriftart Eigenschaften des Steuer Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Identisch mit [CStockPropImpl::put_Font](#put_font), jedoch mit einer Verweisanzahl.
+Identisch mit [cstockpropimpl::p ut_font](#put_font), jedoch mit einem Verweis Zähler.
 
-##  <a name="putref_mouseicon"></a>  CStockPropImpl::putref_MouseIcon
+##  <a name="putref_mouseicon"></a>Cstockpropimpl::p utref_mouseicon
 
-Rufen Sie diese Methode zum Festlegen der Bildeigenschaften der Grafik (Symbol, Bitmap oder Metadatei) angezeigt werden, wenn der Mauszeiger über dem Steuerelement, mit einer Verweisanzahl ein.
+Mit dieser Methode können Sie die Bildeigenschaften der Grafik (Symbol, Bitmap oder Metadatendatei) festlegen, die angezeigt werden soll, wenn sich der Mauszeiger über dem Steuerelement befindet, mit einem Verweis Zähler.
 
 ```
 HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
@@ -1131,20 +1131,20 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parameter
 
-*pPicture*<br/>
+*ppicture*<br/>
 Ein Zeiger auf die Bildeigenschaften der Grafik.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Identisch mit [CStockPropImpl::put_MouseIcon](#put_mouseicon), jedoch mit einer Verweisanzahl.
+Identisch mit [cstockpropimpl::p ut_mouseicon](#put_mouseicon), jedoch mit einem Verweis Zähler.
 
-##  <a name="putref_picture"></a>  CStockPropImpl::putref_Picture
+##  <a name="putref_picture"></a>Cstockpropimpl::p utref_picture
 
-Rufen Sie diese Methode zum Festlegen der Bildeigenschaften, der eine Grafik (Symbol, Bitmap oder Metadatei) angezeigt werden, mit einer Verweisanzahl ein.
+Mit dieser Methode können Sie die Bildeigenschaften einer Grafik (Symbol, Bitmap oder Metadatei), die angezeigt werden soll, mit einem Verweis Zähler festlegen.
 
 ```
 HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
@@ -1152,18 +1152,18 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parameter
 
-*pPicture*<br/>
-Ein Zeiger auf das Bild der Eigenschaften. Finden Sie unter [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) Weitere Details.
+*ppicture*<br/>
+Ein Zeiger auf die Eigenschaften des Bilds. Weitere Informationen finden Sie unter [IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) .
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Gibt bei Erfolg S_OK oder einen fehlerhaften HRESULT bei einem Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Identisch mit [CStockPropImpl::put_Picture](#put_picture), jedoch mit einer Verweisanzahl.
+Identisch mit [cstockpropimpl::p ut_picture](#put_picture), jedoch mit einem Verweis Zähler.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
+[Klassen Übersicht](../../atl/atl-class-overview.md)<br/>
 [IDispatchImpl-Klasse](../../atl/reference/idispatchimpl-class.md)

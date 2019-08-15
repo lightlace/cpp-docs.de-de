@@ -1,6 +1,6 @@
 ---
 title: Threadlokaler Speicher (TLS)
-ms.date: 11/04/2016
+ms.date: 08/09/2019
 helpviewer_keywords:
 - multithreading [C++], Thread Local Storage
 - TLS [C++]
@@ -9,68 +9,68 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 5c7bf2ae7cb5bfe71be9a1d72147e97c894064b3
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7e308f7ba23503879f8ebbcacde481cf72055229
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448912"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510389"
 ---
 # <a name="thread-local-storage-tls"></a>Threadlokaler Speicher (TLS)
 
-Durch den lokalen Threadspeicher (Thread Local Storage, TLS) kann jeder Thread in einem bestimmten Multithreadprozess Speicherplätze für threadspezifische Daten zuordnen. Dynamisch gebundene (Laufzeit) threadspezifische Daten über die TLS-API unterstützt ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 und Microsoft C++ Compiler konvertiert nun Unterstützung für die (Ladezeit) threadspezifische Daten zusätzlich zu den vorhandenen API-Implementierung statisch gebunden.
+Durch den lokalen Threadspeicher (Thread Local Storage, TLS) kann jeder Thread in einem bestimmten Multithreadprozess Speicherplätze für threadspezifische Daten zuordnen. Dynamisch gebundene (Laufzeit-) Thread spezifische Daten werden über die TLS-API ([TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)) unterstützt. Win32 und der Microsoft C++ -Compiler unterstützen jetzt zusätzlich zur vorhandenen API-Implementierung statisch gebundene Daten (Lade Zeit) pro Thread.
 
-##  <a name="_core_compiler_implementation_for_tls"></a> Compilerimplementierung für TLS
+## <a name="_core_compiler_implementation_for_tls"></a>Compilerimplementierung für TLS
 
-**C++11:**  Die `thread_local` -Speicherklassenspezifizierer ist die empfohlene Methode zum Angeben von lokalem Threadspeicher für Objekte und Klassenmember. Weitere Informationen finden Sie unter [Speicherklassen (C++)](../cpp/storage-classes-cpp.md).
+**C++11:**  Der `thread_local` Speicherklassenspezifizierer ist die empfohlene Methode zum Angeben von lokalem Thread Speicher für Objekte und Klassenmember. Weitere Informationen finden Sie unter [Speicher Klassen (C++)](../cpp/storage-classes-cpp.md).
 
-Visual C++ bietet auch ein Microsoft-spezifische Attribut [Thread](../cpp/thread.md), als erweiterten Speicherklassenmodifizierer. Verwenden der **__declspec** -Schlüsselwort zu deklarieren, ein **Thread** Variable. Mit folgendem Code wird z. B. eine Ganzzahl-TLS-Variable deklariert und mit einem Wert initialisiert:
+MSVC bietet auch ein Microsoft-spezifisches Attribut, [Thread](../cpp/thread.md), als erweiterten Speicherklassenmodifizierer. Verwenden Sie das Schlüsselwort **__declspec** , um eine **Thread** Variable zu deklarieren. Mit folgendem Code wird z. B. eine Ganzzahl-TLS-Variable deklariert und mit einem Wert initialisiert:
 
-```
+```C
 __declspec( thread ) int tls_i = 1;
 ```
 
 ## <a name="rules-and-limitations"></a>Regeln und Einschränkungen
 
-Die folgenden Richtlinien müssen bei der Deklaration von statisch gebundenen lokalen Threadobjekten und -variablen beachtet werden: Diese Richtlinien gelten für [Thread](../cpp/thread.md)und größtenteils auch mit [Thread_local](../cpp/storage-classes-cpp.md):
+Die folgenden Richtlinien müssen bei der Deklaration von statisch gebundenen lokalen Threadobjekten und -variablen beachtet werden: Diese Richtlinien gelten sowohl für [Thread](../cpp/thread.md) -als auch für [thread_local](../cpp/storage-classes-cpp.md):
 
-- Die **Thread** Attribut kann nur auf Klassen- und Datendeklarationen und-Definitionen angewendet werden. Die Verwendung in Funktionsdeklarationen oder -definitionen ist nicht zulässig. Beispielsweise verursacht der folgende Code einen Compilerfehler:
+- Das **Thread** -Attribut kann nur auf Klassen-und Datendeklarationen und-Definitionen angewendet werden. Sie kann nicht für Funktions Deklarationen oder-Definitionen verwendet werden. Beispielsweise verursacht der folgende Code einen Compilerfehler:
 
-    ```
+    ```C
     __declspec( thread )void func();     // This will generate an error.
     ```
 
-- Die **Thread** Modifizierer kann angegeben werden, nur für Datenelemente mit **statische** Block. Hierzu zählen globale Datenobjekte (sowohl **statische** und **"extern"**), lokale statische Objekte sowie statische Datenmember von C++-Klassen. Automatische Datenobjekte können nicht deklariert werden, mit der **Thread** Attribut. Im folgenden Code werden Compilerfehler generiert:
+- Der **Thread** -Modifizierer kann nur für Datenelemente mit **statischem** Wertebereich angegeben werden. Dazu zählen globale Datenobjekte (sowohl **statische** als auch **extern**), lokale statische Objekte sowie statische Datenmember von C++ Klassen. Automatische Datenobjekte können nicht mit dem **Thread** -Attribut deklariert werden. Im folgenden Code werden Compilerfehler generiert:
 
-    ```
+    ```C
     void func1()
     {
         __declspec( thread )int tls_i;            // This will generate an error.
     }
 
-    int func2(__declspec( thread )int tls_i )    // This will generate an error.
+    int func2(__declspec( thread )int tls_i )     // This will generate an error.
     {
         return tls_i;
     }
     ```
 
-- Deklarationen und die Definitionen eines threadlokalen Objekts alle angeben muss. die **Thread** Attribut. Durch folgenden Code wird z. B. ein Fehler verursacht:
+- Die Deklarationen und die Definition eines Thread lokalen Objekts müssen alle das **Thread** -Attribut angeben. Durch folgenden Code wird z. B. ein Fehler verursacht:
 
-    ```
+    ```C
     #define Thread  __declspec( thread )
     extern int tls_i;        // This will generate an error, since the
     int __declspec( thread )tls_i;        // declaration and definition differ.
     ```
 
-- Die **Thread** Attribut kann nicht als Typmodifizierer verwendet werden. Beispielsweise verursacht der folgende Code einen Compilerfehler:
+- Das **Thread** -Attribut kann nicht als Typmodifizierer verwendet werden. Beispielsweise verursacht der folgende Code einen Compilerfehler:
 
-    ```
+    ```C
     char __declspec( thread ) *ch;        // Error
     ```
 
-- Da die Deklaration von C++, verwenden Objekte die **Thread** Attribut zulässig ist, die folgenden beiden Beispiele semantisch gleichwertig:
+- Da die Deklaration C++ von Objekten, die das **Thread** -Attribut verwenden, zulässig ist, sind die folgenden beiden Beispiele semantisch äquivalent:
 
-    ```
+    ```cpp
     __declspec( thread ) class B
     {
     // Code
@@ -83,28 +83,28 @@ Die folgenden Richtlinien müssen bei der Deklaration von statisch gebundenen lo
     __declspec( thread ) B BObject;  // OK--BObject is declared thread local.
     ```
 
-- Die Adresse eines threadlokalen Objekts wird nicht als konstant angesehen und jeder Ausdruck mit einer solchen Adresse wird nicht als konstanter Ausdruck angesehen. In Standard-C bedeutet dies, dass die Verwendung der Adresse einer threadlokalen Variablen als Initialisierer für ein Objekt oder einen Zeiger nicht zulässig ist. Folgender Code wird z. B. vom C-Compiler mit einem Fehlerflag versehen:
+- Die Adresse eines Thread lokalen Objekts wird nicht als konstant angesehen, und jeder Ausdruck mit einer solchen Adresse wird nicht als konstanter Ausdruck angesehen. In Standard-C ist der Effekt, dass die Verwendung der Adresse einer Thread lokalen Variablen als Initialisierer für ein Objekt oder einen Zeiger nicht zulässig ist. Folgender Code wird z. B. vom C-Compiler mit einem Fehlerflag versehen:
 
-    ```
-    __declspec( thread )int tls_i;
+    ```C
+    __declspec( thread ) int tls_i;
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-   Diese Einschränkung gilt nicht für C++. Da C++ die dynamische Initialisierung aller Objekte gestattet, kann ein Objekt mit einem Ausdruck initialisiert werden, der die Adresse einer threadlokalen Variablen verwendet. Die Vorgehensweise ist hierbei identisch mit der Konstruktion eines lokalen Threadobjekts. Durch den zuvor aufgeführten Code wird z. B. kein Fehler generiert, wenn er als C++-Quelldatei kompiliert wird. Beachten Sie, dass die Adresse einer lokalen Threadvariablen nur solange gültig ist, solange der Thread vorhanden ist, aus dem die jeweilige Adresse stammt.
+   Diese Einschränkung gilt nicht für C++. Da C++ die dynamische Initialisierung aller Objekte gestattet, kann ein Objekt mit einem Ausdruck initialisiert werden, der die Adresse einer threadlokalen Variablen verwendet. Dies erfolgt genau wie bei der Erstellung von Thread lokalen Objekten. Beispielsweise generiert der zuvor gezeigte Code keinen Fehler, wenn er als C++ Quelldatei kompiliert wird. Die Adresse einer Thread lokalen Variablen ist nur gültig, solange der Thread, in dem die Adresse erstellt wurde, noch vorhanden ist.
 
-- In Standard-C ist die Initialisierung eines Objekts oder einer Variablen mit einem Ausdruck zulässig, der einen Verweis auf sich selbst enthält. Dies gilt jedoch nur für Objekte, die keinen static-Extent aufweisen. Obwohl in C++ diese Art der dynamischen Initialisierung von Objekten mit einem Ausdruck, der einen Verweis auf sich selbst enthält, normalerweise zulässig ist, ist dies für threadlokale Objekte nicht zutreffend. Zum Beispiel:
+- Standard C ermöglicht die Initialisierung eines Objekts oder einer Variablen mit einem Ausdruck, der einen Verweis auf sich selbst beinhaltet, jedoch nur für Objekte, die nicht statisch sind. Obwohl C++ in der Regel eine solche dynamische Initialisierung von Objekten mit einem Ausdruck ermöglicht, der einen Verweis auf sich selbst beinhaltet, ist diese Art der Initialisierung mit Thread lokalen Objekten nicht zulässig. Beispiel:
 
-    ```
+    ```C
     __declspec( thread )int tls_i = tls_i;                // Error in C and C++
     int j = j;                               // OK in C++, error in C
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-   Beachten Sie, dass ein `sizeof`-Ausdruck, der das Objekt enthält, das derzeit initialisiert wird, keinen Verweis auf sich selbst darstellt und sowohl in C als auch in C++ gültig ist.
+   Ein `sizeof` -Ausdruck, der das Objekt enthält, das initialisiert wird, stellt keinen Verweis auf sich selbst dar und ist C++sowohl in C als auch in aktiviert.
 
-   In C++ ist diese Art der dynamischen Initialisierung von Threaddaten aufgrund möglicher zukünftiger Verbesserungen der lokalen Threadspeicherfunktion nicht zulässig.
+   C++lässt eine solche dynamische Initialisierung von Thread Daten aufgrund möglicher zukünftiger Verbesserungen an der lokalen Thread Speicherfunktion nicht zu.
 
-- Unter Windows-Betriebssystemen vor Windows Vista `__declspec`(Thread) weist einige Einschränkungen. Wenn durch eine DLL beliebige Daten oder Objekte als `__declspec` (Thread) deklariert werden, kann beim dynamischen Ladevorgang eine allgemeine Schutzverletzung auftreten. Nach dem Laden der DLL mit [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), es Systemausfall verursacht, wenn der Code verweist auf die `__declspec`(Thread)-Daten. Da der globale Variablenspeicher für einen Thread zur Laufzeit reserviert wird, basiert die Größe dieses Speichers auf der Berechnung der Anforderungen der jeweiligen Anwendung sowie der Anforderungen aller DLLs, die statisch gebunden sind. Bei der Verwendung von `LoadLibrary` können Sie diesen Speicher nicht für die threadlokalen Variablen erweitern, die mit `__declspec` (Thread) deklariert wurden. Verwenden Sie die TLS-APIs, wie z. B. [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), in der DLL TLS zuweisen, wenn die DLL geladen werden kann, mit `LoadLibrary`.
+- Unter Windows-Betriebssystemen vor Windows Vista `__declspec( thread )` sind einige Einschränkungen zu beachten. Wenn eine DLL Daten oder Objekte als `__declspec( thread )`deklariert, kann dies zu einem Schutz Fehler führen, wenn Sie dynamisch geladen werden. Nachdem die DLL mit [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)geladen wurde, verursacht Sie einen Systemfehler, wenn der Code `__declspec( thread )` auf die Daten verweist. Da der globale Variablenspeicher für einen Thread zur Laufzeit reserviert wird, basiert die Größe dieses Speichers auf der Berechnung der Anforderungen der jeweiligen Anwendung sowie der Anforderungen aller DLLs, die statisch gebunden sind. Wenn Sie verwenden `LoadLibrary`, können Sie diesen Bereich nicht erweitern, um die mit `__declspec( thread )`deklarierten Thread lokalen Variablen zuzulassen. Verwenden Sie die TLS-APIs, wie z. b. [TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc), in der dll, um TLS zuzuweisen, `LoadLibrary`wenn die dll möglicherweise mit geladen wird.
 
 ## <a name="see-also"></a>Siehe auch
 

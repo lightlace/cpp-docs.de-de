@@ -1,21 +1,21 @@
 ---
-title: UIDefault (C++-COM-Attribut)
+title: Uidefault (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.uidefault
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: a5bb8d3ad869d9ee60b2ab04743f5a926a10dd2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4090011aade4ebab2f5c07a8e56e91253cc7c49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407093"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513898"
 ---
 # <a name="uidefault"></a>uidefault
 
-Gibt an, dass der Typinformationsmember das Standardelement für die Anzeige in der Benutzeroberfläche.
+Gibt an, dass der Typinformationsmember der Standard Member für die Anzeige in der Benutzeroberfläche ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,7 +25,7 @@ Gibt an, dass der Typinformationsmember das Standardelement für die Anzeige in 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Uidefault** C++-Attribut hat die gleiche Funktionalität wie die [Uidefault](/windows/desktop/Midl/uidefault) MIDL-Attribut.
+Das **Uidefault** C++ -Attribut verfügt über die gleiche Funktionalität wie das [Uidefault](/windows/win32/Midl/uidefault) -Attribut "Mittel".
 
 ## <a name="example"></a>Beispiel
 
@@ -56,8 +56,8 @@ __interface ICustom{
 |-|-|
 |**Betrifft**|Schnittstellenmethode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

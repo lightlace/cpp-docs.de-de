@@ -1,5 +1,5 @@
 ---
-title: Versionsinfo-Editor (C++)
+title: Versionsinformationen-EditorC++()
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.version.F1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: a17539d0a9fb94c440d65275e9d032182088ae6e
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: e68e1480d2cd9a8d8a4d862252e6eb4384a5cd68
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504483"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513645"
 ---
-# <a name="version-information-editor-c"></a>Versionsinfo-Editor (C++)
+# <a name="version-information-editor-c"></a>Versionsinformationen-EditorC++()
 
-Versionsinformationen bestehen aus einer Firmen- und einer Produkt-ID, einer Produktseriennummer und Copyright- und Markenbestimmungen. Mit der **Versionsinfo-Editor**, Sie erstellen und verwalten Sie diese Daten, die in der Versionsinformationsressource gespeichert wird. Die Versionsinformationsressource ist nicht von einer Anwendung erforderlich, aber es ist eine nützliche Möglichkeit zum Sammeln von Informationen, die die Anwendung identifiziert. Versionsinformationen werden auch von Setup-APIs verwendet.
+Versionsinformationen bestehen aus einer Firmen- und einer Produkt-ID, einer Produktseriennummer und Copyright- und Markenbestimmungen. Mit dem **Versionsinformationen-Editor**erstellen und verwalten Sie diese Daten, die in der Versions Informations Ressource gespeichert sind. Die Versions Informations Ressource ist für eine Anwendung nicht erforderlich, aber Sie ist ein nützlicher Ort, um Informationen zu sammeln, die die Anwendung identifizieren. Versionsinformationen werden auch von Setup-APIs verwendet.
 
 > [!NOTE]
 > Der Windows-Standard sieht nur eine Versionsressource mit dem Namen VS_VERSION_INFO vor.
@@ -40,29 +40,29 @@ Versionsinformationen bestehen aus einer Firmen- und einer Produkt-ID, einer Pro
 Eine Versionsinformationsressource weist einen oberen Block und mindestens einen unteren Block auf: ein einzelner Block mit unveränderlichen Informationen oben und mindestens ein weiterer Versionsinformationsblock darunter (für andere Sprachen und/oder Zeichensätze). Der obere Block weist sowohl editierbare Zahlenfelder als auch auswählbare Dropdownlisten auf. Die unteren Blöcke weisen nur editierbare Textfelder auf.
 
 > [!NOTE]
-> Bei der Verwendung der **Versionsinfo-Editor**, können Sie in vielen Fällen mit der rechten Maustaste ein Kontextmenü mit ressourcenspezifische Befehle angezeigt. Beispielsweise wenn Sie auswählen, während Sie auf einen Blockheadereintrag zeigen, zeigt das Kontextmenü der **neue Versionsblockinformationen** und **Versionsblockinformationen löschen** Befehle.
+> Wenn Sie den **Versionsinformationen-Editor**verwenden, können Sie in vielen Fällen mit der rechten Maustaste klicken, um ein Kontextmenü mit Ressourcen spezifischen Befehlen anzuzeigen. Wenn Sie z. b. auswählen, während Sie auf einen Block Header Eintrag zeigen, zeigt das Kontextmenü die Befehle " **neue Versions Block Informationen** " und " **Versions Block Informationen löschen** " an.
 
 ## <a name="how-to"></a>Gewusst wie
 
-Die **Versionsinfo-Editor** können Sie:
+Der **Versions Informations-Editor** ermöglicht Ihnen Folgendes:
 
 ### <a name="to-edit-a-string-in-a-version-information-resource"></a>So bearbeiten Sie eine Zeichenfolge in einer Versionsinformationsressource
 
-Wählen Sie das Element einmal an, klicken Sie dann erneut mit der Bearbeitung anfangen möchten. Nehmen Sie Änderungen direkt in die **Versionsinformationen** Tabelle oder in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Die vorgenommenen Änderungen werden an beiden Orten berücksichtigt.
+Wählen Sie das Element einmal aus, um es auszuwählen, und klicken Sie dann erneut, um es zu bearbeiten. Nehmen Sie Änderungen direkt in der **Versions Informations** Tabelle oder im [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window)vor. Die vorgenommenen Änderungen werden an beiden Orten berücksichtigt.
 
-Beim Bearbeiten der `FILEFLAGS` -Schlüssel in der **Versionsinfo-Editor**, beachten Sie, dass Sie nicht Festlegen der **Debuggen**, **Private Build**, oder **Special Build**  Eigenschaften in der **Eigenschaften** Fenster für die RC-Dateien:
+Beachten Sie beim `FILEFLAGS` Bearbeiten des Schlüssels im Versionsinformationen- **Editor**, dass Sie die Eigenschaften **Debug**, **private Build**oder **Special Build** im **Eigenschaften** Fenster für RC-Dateien nicht festlegen können:
 
-   - Die **Versionsinfo-Editor** legt diese fest der **Debuggen** Eigenschaft mit einer `#ifdef` im Ressourcenskript, basierend auf der `_DEBUG` build-Flag.
+   - Der **Versions Informations-Editor** legt die **Debug** -Eigenschaft `#ifdef` mit einem im Ressourcen Skript fest, basierend `_DEBUG` auf dem Build-Flag.
 
-  - Wenn die `Private Build` Schlüssel besitzt eine **Wert** legen Sie in der **Versionsinformationen** Tabelle, die entsprechende **Private Build** -Eigenschaft in der **Eigenschaften**  Fenster für die `FILEFLAGS` Schlüssel **"true"** . Wenn **Wert** ist leer, wird sein. die Eigenschaft **"false"** . Ebenso die **Special Build** -Schlüssel in der **Versionsinformationen** an die Tabelle gebunden ist die **Special Build** -Eigenschaft für die `FILEFLAGS` Schlüssel.
+  - Wenn für `Private Build` den Schlüssel ein **Wert** in der **Versions Informations** Tabelle festgelegt ist, ist die zugehörige **private Build** -Eigenschaft im `FILEFLAGS` **Eigenschaften** Fenster für den Schlüssel auf **true**festgelegt. Wenn **value** leer ist, ist die Eigenschaft **false**. Ebenso ist der **spezielle** buildschlüssel in der **Versions Informations** Tabelle an die **spezielle Build** -Eigenschaft für den `FILEFLAGS` Schlüssel gebunden.
 
-Sie können die Sequenz der Informationen des Zeichenfolgenblocks sortieren, indem Sie die Auswahl der **Schlüssel** oder **Wert** Spaltenüberschriften. Mithilfe dieser Überschriften können die Informationen automatisch in der ausgewählten Reihenfolge neu angeordnet werden.
+Sie können die Informations Sequenz des Zeichen folgen Blocks sortieren, indem Sie entweder die Spaltenüberschriften **Key** oder **value** auswählen. Mithilfe dieser Überschriften können die Informationen automatisch in der ausgewählten Reihenfolge neu angeordnet werden.
 
-### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>Hinzufügen von Versionsinformationen für eine andere Sprache (Neuer Versionsinformationsblock)
+### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>So fügen Sie Versionsinformationen für eine andere Sprache hinzu (neuer Versions Informationsblock)
 
 1. Öffnen Sie eine Versionsinformationsressource, indem Sie in der [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources)darauf doppelklicken.
 
-1. Mit der rechten Maustaste in der versionsinformationstabelle, und wählen Sie **Neuer Versionsinformationsblock**.
+1. Klicken Sie mit der rechten Maustaste in der Versions Informations Tabelle, und wählen Sie **neuer Versions Informations Block**aus.
 
    Dieser Befehl fügt der aktuellen Versionsinformationsressource einen zusätzlichen Informationsblock hinzu und öffnet dessen entsprechende Eigenschaften im [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window).
 
@@ -72,13 +72,13 @@ Sie können die Sequenz der Informationen des Zeichenfolgenblocks sortieren, ind
 
 1. Öffnen Sie die Versionsinformationsressource, indem Sie in der [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources)auf ihr Symbol doppelklicken.
 
-1. Mit der rechten Maustaste den Blockheader, den Sie löschen möchten und wählen Sie **Versionsinformationsblock löschen**.
+1. Klicken Sie mit der rechten Maustaste auf den Block Header, den Sie löschen möchten, und wählen Sie **Versions Informationsblock löschen**.
 
-   Dieser Befehl löscht den ausgewählten Header und den Rest der Versionsinformationen bleiben intakt. Sie können nicht rückgängig gemacht werden.
+   Mit diesem Befehl wird der ausgewählte Header gelöscht, und die restlichen Versionsinformationen bleiben intakt. Die Aktion kann nicht rückgängig gemacht werden.
 
 ### <a name="to-access-version-information-from-within-your-program"></a>So greifen Sie aus Ihrem Programm auf Versionsinformationen zu
 
-Wenn Sie aus ihrem Programm auf die Versionsinformationen zugreifen möchten, verwenden Sie die Funktion [GetFileVersionInfo](/windows/desktop/api/winver/nf-winver-getfileversioninfoa) und die Funktion [VerQueryValue](/windows/desktop/api/winver/nf-winver-verqueryvaluea) .
+Wenn Sie aus ihrem Programm auf die Versionsinformationen zugreifen möchten, verwenden Sie die Funktion [GetFileVersionInfo](/windows/win32/api/winver/nf-winver-getfileversioninfow) und die Funktion [VerQueryValue](/windows/win32/api/winver/nf-winver-verqueryvaluew) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,5 +87,5 @@ Win32
 ## <a name="see-also"></a>Siehe auch
 
 [Ressourcen-Editor](../windows/resource-editors.md)<br/>
-[Menüs und weitere Ressourcen](/windows/desktop/menurc/resources)<br/>
-[Versionsinformationen (Windows)](/windows/desktop/menurc/version-information)
+[Menüs und weitere Ressourcen](/windows/win32/menurc/resources)<br/>
+[Versionsinformationen (Windows)](/windows/win32/menurc/version-information)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: 3efd77c38508df8302fa4e1dd5c9b51f66cd5e43
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 7f28b9e64c88a5be440417dd9d22f129ee7d6edf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915468"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495269"
 ---
 # <a name="worker-archetype"></a>Workerarchetype
 
@@ -74,7 +74,7 @@ Das zu verarbeitende Arbeits Element. Das Arbeits Element ist vom gleichen Typ w
 Ein benutzerdefinierter Parameter, der von der Worker-Klasse verstanden wird. Wird auch an `WorkerArchetype::Initialize` und `Terminate`übermittelt.
 
 *pOverlapped*<br/>
-Ein Zeiger auf die [über](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur, die verwendet wird, um die Warteschlange zu erstellen, in der die Arbeitselemente in die Warteschlange
+Ein Zeiger auf die [über](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur, die verwendet wird, um die Warteschlange zu erstellen, in der die Arbeitselemente in die Warteschlange
 
 ## <a name="initialize"></a>Workerarchetype:: Initialize
 

@@ -6,25 +6,25 @@ helpviewer_keywords:
 - COM interfaces
 - interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-ms.openlocfilehash: 5416fb8a99420f0f6c84318753ee3399ccf5db2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2373351330982623ffa602fd81bec61d0bc257b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250309"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492139"
 ---
 # <a name="interfaces-atl"></a>Schnittstellen (ATL)
 
-Eine Schnittstelle ist die Möglichkeit, in der ein Objekt seine Funktionalität für die Außenwelt verfügbar macht. Bei COM ist eine Schnittstelle für eine Tabelle von Zeigern (z. B. eine C++-Vtable) auf Funktionen, die vom Objekt implementiert. In der Tabelle stellt die Schnittstelle dar, und die Funktionen, die auf denen er zeigt, sind die Methoden dieser Schnittstelle. Ein Objekt kann beliebig viele Schnittstellen verfügbar machen.
+Eine Schnittstelle ist die Methode, mit der ein Objekt seine Funktionalität der Außenwelt verfügbar macht. In com ist eine Schnittstelle eine Tabelle mit Zeigern (z C++ . b. eine Vtable) für Funktionen, die vom-Objekt implementiert werden. Die Tabelle stellt die-Schnittstelle dar, und die Funktionen, auf die Sie verweist, sind die Methoden dieser Schnittstelle. Ein-Objekt kann beliebig viele Schnittstellen verfügbar machen.
 
-Jede Schnittstelle basiert darauf, dass die grundlegende Schnittstelle für COM- [IUnknown](../atl/iunknown.md). Die Methoden der `IUnknown` verhindert die Navigation zu anderen Schnittstellen, die vom Objekt verfügbar gemacht.
+Jede Schnittstelle basiert auf der grundlegenden com-Schnittstelle [IUnknown](../atl/iunknown.md). Die Methoden von `IUnknown` ermöglichen die Navigation zu anderen Schnittstellen, die vom-Objekt verfügbar gemacht werden.
 
-Darüber hinaus wird jeder Schnittstelle eine eindeutige ID (IID)-Schnittstelle angegeben. Diese Eindeutigkeit erleichtert die Unterstützung. Eine neue Version einer Schnittstelle ist einfach eine neue Schnittstelle mit einer neuen IID.
+Außerdem erhält jede Schnittstelle eine eindeutige Schnittstellen-ID (IID). Diese Eindeutigkeit erleichtert die Unterstützung der Schnittstellen Versionsverwaltung. Eine neue Version einer Schnittstelle ist einfach eine neue Schnittstelle mit einer neuen IID.
 
 > [!NOTE]
->  Die IIDs für die standard-COM und OLE-Schnittstellen sind vordefiniert.
+>  IIDs für die Standard-com-und OLE-Schnittstellen sind vordefiniert.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Einführung in COM](../atl/introduction-to-com.md)<br/>
-[COM-Objekte und Schnittstellen](/windows/desktop/com/com-objects-and-interfaces)
+[COM-Objekte und-Schnittstellen](/windows/win32/com/com-objects-and-interfaces)

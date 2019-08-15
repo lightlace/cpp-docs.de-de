@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: f9116306fd2bd6145096b055025bd4dd2075b0c1
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 6a6223708c83f7a5b3e6532a2016660d558f8270
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916880"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502805"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage-Klasse
 
@@ -71,7 +71,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|
 |[CPropertyPage::CancelToClose](#canceltoclose)|Ändert die Schaltfläche OK, um den Lesevorgang zu schließen, und deaktiviert die Schaltfläche Abbrechen nach einer nicht BEHEB baren Änderung auf der Seite eines modalen Eigenschaften Blatts.|
 |[CPropertyPage:: Construct](#construct)|Erstellt ein `CPropertyPage`-Objekt. Verwenden `Construct` Sie, wenn Sie die Parameter zur Laufzeit angeben möchten, oder wenn Sie Arrays verwenden.|
-|[CPropertyPage::GetPSP](#getpsp)|Ruft die Windows- [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) -Struktur ab, `CPropertyPage` die dem-Objekt zugeordnet ist.|
+|[CPropertyPage::GetPSP](#getpsp)|Ruft die Windows- [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) -Struktur ab, `CPropertyPage` die dem-Objekt zugeordnet ist.|
 |[CPropertyPage::OnApply](#onapply)|Wird von Framework aufgerufen, wenn auf die Schaltfläche "jetzt anwenden" geklickt wird.|
 |[CPropertyPage::OnCancel](#oncancel)|Wird von Framework aufgerufen, wenn auf die Schaltfläche Abbrechen geklickt wird.|
 |[CPropertyPage::OnKillActive](#onkillactive)|Wird von Framework aufgerufen, wenn die aktuelle Seite nicht mehr die aktive Seite ist. Führen Sie hier die Datenüberprüfung aus.|
@@ -89,7 +89,7 @@ class CPropertyPage : public CDialog
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CPropertyPage::m_psp](#m_psp)|Die Windows- [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) -Struktur. Ermöglicht den Zugriff auf grundlegende Eigenschaften Seiten Parameter.|
+|[CPropertyPage::m_psp](#m_psp)|Die Windows- [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) -Struktur. Ermöglicht den Zugriff auf grundlegende Eigenschaften Seiten Parameter.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -261,7 +261,7 @@ Wenn Sie über mehrere Parameter verfügen (z. b. Wenn Sie ein Array verwenden),
 
 ##  <a name="getpsp"></a>CPropertyPage:: getpsp
 
-Ruft die Windows- [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) -Struktur ab, `CPropertyPage` die dem-Objekt zugeordnet ist.
+Ruft die Windows- [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) -Struktur ab, `CPropertyPage` die dem-Objekt zugeordnet ist.
 
 ```
 const PROPSHEETPAGE& GetPSP() const;
@@ -275,7 +275,7 @@ Ein Verweis auf die `PROPSHEETPAGE` -Struktur.
 
 ##  <a name="m_psp"></a>CPropertyPage:: m_psp
 
-`m_psp`ist eine-Struktur, deren Member die Merkmale von [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2)speichern.
+`m_psp`ist eine-Struktur, deren Member die Merkmale von [PROPSHEETPAGE](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)speichern.
 
 ```
 PROPSHEETPAGE m_psp;
@@ -311,7 +311,7 @@ Wenn das Framework diese Funktion aufruft, werden Änderungen, die an allen Eige
 
 Die Standard Implementierung von `OnApply` - `OnOK`aufrufen.
 
-Weitere Informationen zu Benachrichtigungs Meldungen, die gesendet werden, wenn der Benutzer die Schaltfläche "jetzt anwenden" oder "OK" in einem Eigenschaften Blatt drückt, finden Sie unter [PSN_APPLY](/windows/desktop/Controls/psn-apply) im Windows SDK.
+Weitere Informationen zu Benachrichtigungs Meldungen, die gesendet werden, wenn der Benutzer die Schaltfläche "jetzt anwenden" oder "OK" in einem Eigenschaften Blatt drückt, finden Sie unter [PSN_APPLY](/windows/win32/Controls/psn-apply) im Windows SDK.
 
 ### <a name="example"></a>Beispiel
 
@@ -367,7 +367,7 @@ virtual void OnOK();
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Benutzer entweder die Schaltfläche OK oder die Schaltfläche jetzt anwenden auswählt, empfängt das Framework die [PSN_APPLY](/windows/desktop/Controls/psn-apply) -Benachrichtigung von der Eigenschaften Seite. Der-Vorgang `OnOK` wird nicht durchgeführt, wenn Sie [CPropertySheet::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton) aufrufen, da die-Eigenschaften Seite die Benachrichtigung in diesem Fall nicht sendet.
+Wenn der Benutzer entweder die Schaltfläche OK oder die Schaltfläche jetzt anwenden auswählt, empfängt das Framework die [PSN_APPLY](/windows/win32/Controls/psn-apply) -Benachrichtigung von der Eigenschaften Seite. Der-Vorgang `OnOK` wird nicht durchgeführt, wenn Sie [CPropertySheet::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton) aufrufen, da die-Eigenschaften Seite die Benachrichtigung in diesem Fall nicht sendet.
 
 Überschreiben Sie diese Member-Funktion, um zusätzliches Verhalten zu implementieren, das für die derzeit aktive Seite spezifisch ist, wenn der Benutzer das gesamte Eigenschaften Blatt schließt.
 
@@ -481,7 +481,7 @@ Wenn ein Benutzer auf die Schaltfläche **Fertig** stellen in einem Assistenten 
 
 Sie können diese Element Funktion überschreiben, um eine Aktion anzugeben, die der Benutzer beim Drücken der Schaltfläche Fertigstellen ausführen muss. Wenn Sie diese Funktion überschreiben, geben Sie false zurück, um zu verhindern, dass das Eigenschaften Blatt zerstört wird.
 
-Weitere Informationen zu Benachrichtigungs Meldungen, die gesendet werden, wenn der Benutzer die Schaltfläche Fertigstellen auf einem Eigenschaften Blatt eines Assistenten drückt, finden Sie unter [PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) im Windows SDK.
+Weitere Informationen zu Benachrichtigungs Meldungen, die gesendet werden, wenn der Benutzer die Schaltfläche Fertigstellen auf einem Eigenschaften Blatt eines Assistenten drückt, finden Sie unter [PSN_WIZFINISH](/windows/win32/Controls/psn-wizfinish) im Windows SDK.
 
 Weitere Informationen zum Erstellen eines Eigenschaften Blatts für einen Assistenten finden Sie unter [CPropertySheet::](../../mfc/reference/cpropertysheet-class.md#setwizardmode)"".
 
