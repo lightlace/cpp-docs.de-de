@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148174"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490998"
 ---
 # <a name="custom-c"></a>custom (C++)
 
-Definiert die Metadaten für ein Objekt in der Typbibliothek.
+Definiert Metadaten für ein Objekt in der Typbibliothek.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,13 +32,13 @@ Definiert die Metadaten für ein Objekt in der Typbibliothek.
 Eine eindeutige ID.
 
 *value*<br/>
-Ein Wert, der in eine Variante platziert werden kann.
+Ein Wert, der in eine Variante eingefügt werden kann.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **benutzerdefinierte** C++-Attribut bewirkt, dass die Informationen in der Typbibliothek versetzt werden soll. Sie benötigen ein Tool, das den benutzerdefinierten Wert aus der Typbibliothek liest.
+Das **benutzerdefinierte** C++ Attribut bewirkt, dass Informationen in die Typbibliothek eingefügt werden. Sie benötigen ein Tool, das den benutzerdefinierten Wert aus der Typbibliothek liest.
 
-Die **benutzerdefinierte** Attribut hat die gleiche Funktionalität wie die [benutzerdefinierte](/windows/desktop/Midl/custom) MIDL-Attribut.
+Das **benutzerdefinierte** Attribut verfügt über die gleiche Funktionalität wie das [benutzerdefinierte](/windows/win32/Midl/custom) Attribut "Mittel l".
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,10 +46,10 @@ Die **benutzerdefinierte** Attribut hat die gleiche Funktionalität wie die [ben
 
 |||
 |-|-|
-|**Betrifft**|Nicht-COM- **Schnittstelle**, **Klasse**, **Enum**s, `idl_module` Methoden, die Schnittstellenmember, die Parameter für die Benutzeroberfläche, **Typedef**s, **Union**s, **Struktur**s|
+|**Betrifft**|Nicht-com- **Schnittstelle**, **Klasse**, Enumeration `idl_module` s, Methoden, Schnittstellenmember, Schnittstellenparameter, **typedef**s, **Union**s, **Struktur**s|
 |**Wiederholbar**|Ja|
-|**Erforderliche Attribute**|**Co-Klasse** (wenn es sich um eine Klasse verwendet wird)|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|**Co-Klasse** (bei Verwendung in der-Klasse)|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

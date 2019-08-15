@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransitionFromSpeed [MFC], m_dblFinalValue
 - CLinearTransitionFromSpeed [MFC], m_dblSpeed
 ms.assetid: 8f159a1c-8893-4017-951e-09e5758aba7d
-ms.openlocfilehash: 1efa9806267958b4221ee112e56f242c7e25a8f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50c958a092478f4b9ec4e94f9e5e973a74c334c2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392504"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505712"
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed-Klasse
 
@@ -37,24 +37,24 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Erstellt einen Übergang mit linearer Geschwindigkeit-Objekt und initialisiert sie mit der Geschwindigkeit und endgültigen Wert.|
+|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Erstellt ein lineares Geschwindigkeits Übergangs Objekt und initialisiert es mit der Geschwindigkeit und dem endgültigen Wert.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed::Create](#create)|Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CLinearTransitionFromSpeed::Create](#create)|Ruft die Übergangs Bibliothek auf, um ein gekapseltes Übergangs-com- (Überschreibt [cbasetransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|Der Wert der Animationsvariablen am Ende des Übergangs.|
-|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|Der Absolute Wert der Geschwindigkeit der Variable.|
+|[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|Der Wert der Animations Variablen am Ende des Übergangs.|
+|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|Der absolute Wert der Geschwindigkeit der Variablen.|
 
 ## <a name="remarks"></a>Hinweise
 
-Bei einem Übergang mit linearer Geschwindigkeit, den Wert der Variablen ändert sich die Animation mit einer angegebenen Rate. Die Dauer des Übergangs richtet sich nach den Unterschieden zwischen den ursprünglichen Wert und dem angegebenen Endwert. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, sie mit dem Operator new. Das gekapselte IUIAnimationTransition COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen des Typs an, nach der Erstellung dieses COM-Objekt hat keine Auswirkungen.
+Während eines Übergangs der linearen Geschwindigkeit ändert sich der Wert der Animations Variablen zu einer bestimmten Rate. Die Dauer des Übergangs wird durch den Unterschied zwischen dem Anfangswert und dem angegebenen Endwert bestimmt. Da alle Übergänge automatisch gelöscht werden, empfiehlt es sich, diese mithilfe des new-Operators zuzuweisen. Das gekapselte iuianimationtransition com-Objekt wird von canimationcontroller:: animategroup erstellt, bis es NULL ist. Das Ändern von Element Variablen nach der Erstellung dieses COM-Objekts hat keine Auswirkungen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -68,9 +68,9 @@ Bei einem Übergang mit linearer Geschwindigkeit, den Wert der Variablen ändert
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed
+##  <a name="clineartransitionfromspeed"></a>Clineartransitionfromspeed:: clineartransitionfromspeed
 
-Erstellt einen Übergang mit linearer Geschwindigkeit-Objekt und initialisiert sie mit der Geschwindigkeit und endgültigen Wert.
+Erstellt ein lineares Geschwindigkeits Übergangs Objekt und initialisiert es mit der Geschwindigkeit und dem endgültigen Wert.
 
 ```
 CLinearTransitionFromSpeed(
@@ -81,14 +81,14 @@ CLinearTransitionFromSpeed(
 ### <a name="parameters"></a>Parameter
 
 *dblSpeed*<br/>
-Der Absolute Wert der Geschwindigkeit der Variable.
+Der absolute Wert der Geschwindigkeit der Variablen.
 
 *dblFinalValue*<br/>
-Der Wert der Animationsvariablen am Ende des Übergangs.
+Der Wert der Animations Variablen am Ende des Übergangs.
 
-##  <a name="create"></a>  CLinearTransitionFromSpeed::Create
+##  <a name="create"></a>Clineartransitionfromspeed:: Create
 
-Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen.
+Ruft die Übergangs Bibliothek auf, um ein gekapseltes Übergangs-com-
 
 ```
 virtual BOOL Create(
@@ -99,23 +99,23 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parameter
 
 *pLibrary*<br/>
-Ein Zeiger auf ein [IUIAnimationTransitionLibrary Schnittstelle](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), das eine Bibliothek mit standard-Übergänge definiert.
+Ein Zeiger auf eine [iuianimationtransitionlibrary-Schnittstelle](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), die eine Bibliothek von Standard Übergängen definiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn der Übergang erfolgreich erstellt wurde. andernfalls "false".
+TRUE, wenn der Übergang erfolgreich erstellt wurde. andernfalls false.
 
-##  <a name="m_dblfinalvalue"></a>  CLinearTransitionFromSpeed::m_dblFinalValue
+##  <a name="m_dblfinalvalue"></a>Clineartransitionfromspeed:: m_dblFinalValue
 
-Der Wert der Animationsvariablen am Ende des Übergangs.
+Der Wert der Animations Variablen am Ende des Übergangs.
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_dblspeed"></a>  CLinearTransitionFromSpeed::m_dblSpeed
+##  <a name="m_dblspeed"></a>Clineartransitionfromspeed:: m_dblSpeed
 
-Der Absolute Wert der Geschwindigkeit der Variable.
+Der absolute Wert der Geschwindigkeit der Variablen.
 
 ```
 DOUBLE m_dblSpeed;

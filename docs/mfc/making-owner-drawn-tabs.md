@@ -7,16 +7,16 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], owner-drawn tabs
 - drawing [MFC], tabs
 ms.assetid: 11af2926-41d7-47e3-9eec-c595283f6371
-ms.openlocfilehash: 8c52bb325764f0edfff315edf21128f117c1a67b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ade5cd6b7d9bcb3dc398993c1758c7849fdc1f20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391399"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508292"
 ---
 # <a name="making-owner-drawn-tabs"></a>Erstellen von Ownerdrawn-Registerkarten
 
-Sie können einzelne Elemente eines Registersteuerelements definieren ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) ownerdrawn-Elemente sein. Weitere Informationen finden Sie unter [Drawn Registerkarten](/windows/desktop/Controls/tab-controls) im Windows SDK.
+Sie können einzelne Elemente eines Registerkarten-Steuer Elements ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) als vom Besitzer gezeichnete Elemente definieren. Weitere Informationen finden Sie unter vom [Besitzer gezeichnete Registerkarten](/windows/win32/Controls/tab-controls) im Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: Verweiszählung (ATL)
+title: Verweis Zählung (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - AddRef method [C++], reference counting
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - reference counts
 - references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-ms.openlocfilehash: fa160cb40af632321e1b14fd3ca88a4dd578b972
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 565b74956280d4e80c41376ead4249e69980a80e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249651"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492222"
 ---
-# <a name="reference-counting"></a>Zählen der Verweise
+# <a name="reference-counting"></a>Verweis Zählung
 
-COM selbst versucht automatisch nicht, ein Objekt aus dem Arbeitsspeicher entfernen, wenn er davon ausgeht, dass das Objekt nicht mehr verwendet wird. Stattdessen muss der Objektprogrammierer, das nicht verwendete Objekt entfernen. Der Programmierer bestimmt, ob ein Objekt basierend auf einen Verweiszähler entfernt werden kann.
+Das com selbst versucht nicht automatisch, ein Objekt aus dem Arbeitsspeicher zu entfernen, wenn es meint, dass das Objekt nicht mehr verwendet wird. Der Objekt Programmierer muss stattdessen das nicht verwendete Objekt entfernen. Der Programmierer bestimmt, ob ein Objekt basierend auf einem Verweis Zähler entfernt werden kann.
 
-COM verwendet die `IUnknown` Methoden ["AddRef"](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) und [Version](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), um den Verweiszähler der Schnittstellen für ein Objekt zu verwalten. Die allgemeinen Regeln für das Aufrufen dieser Methoden sind:
+COM verwendet die `IUnknown` Methoden, [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) und [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release), um den Verweis Zähler der Schnittstellen für ein Objekt zu verwalten. Die allgemeinen Regeln zum Aufrufen dieser Methoden lauten wie folgt:
 
-- Wenn ein Client einen Schnittstellenzeiger, empfängt `AddRef` muss für die Schnittstelle aufgerufen werden.
+- Wenn ein Client einen Schnittstellen Zeiger empfängt, `AddRef` muss für die-Schnittstelle aufgerufen werden.
 
-- Wenn der Client mit den Schnittstellenzeiger auf abgeschlossen ist, muss er Aufrufen `Release`.
+- Wenn der Client den Schnittstellen Zeiger nicht mehr verwendet, muss er aufgerufen `Release`werden.
 
-In einer einfachen Implementierung jedes `AddRef` aufrufen, inkrementiert bzw. jede `Release` aufrufen, wird eine Counter-Variable innerhalb des Objekts. Wenn die Anzahl auf 0 (null) zurückgegeben wird, wird die Schnittstelle nicht mehr hat alle Benutzer und selbst aus dem Arbeitsspeicher entfernen kann.
+In einer einfachen Implementierung dekrementierungen jeder `AddRef` -Rückruf, und jeder `Release` -Befehl dekremenkt eine Counter-Variable innerhalb des-Objekts. Wenn die Anzahl auf 0 (null) zurückgesetzt wird, verfügt die Schnittstelle nicht mehr über Benutzer und kann sich selbst aus dem Arbeitsspeicher entfernen.
 
-Verweiszählung kann auch implementiert werden, damit an, dass jeder Verweis auf das Objekt (nicht zu einer einzelnen Schnittstelle) gezählt wird. In diesem Fall jeder `AddRef` und `Release` Aufrufen des Delegaten an eine zentrale Implementierung für das Objekt und `Release` das gesamte Objekt frei, wenn der Verweiszähler null erreicht.
+Die Verweis Zählung kann auch so implementiert werden, dass jeder Verweis auf das Objekt (nicht auf eine einzelne Schnittstelle) gezählt wird. In diesem Fall delegiert jeder `AddRef` - `Release` und-Rückruf an eine zentrale Implementierung für das-Objekt `Release` und gibt das gesamte-Objekt frei, wenn der Verweis Zähler Null erreicht.
 
 > [!NOTE]
->  Wenn eine `CComObject`-abgeleiteten Objekt wird erstellt, mit der **neue** -Operator, der Verweiszähler ist 0. Aus diesem Grund einen Aufruf `AddRef` müssen vorgenommen werden, nach erfolgreicher Erstellung der `CComObject`-abgeleitetes Objekt.
+>  Wenn ein `CComObject`von abgeleitetes Objekt mit dem **New** -Operator erstellt wird, ist der Verweis Zähler 0. Daher `AddRef` muss nach der erfolgreichen Erstellung des `CComObject`von abgeleiteten Objekts ein-Rückruf durchgeführt werden.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Einführung in COM](../atl/introduction-to-com.md)<br/>
-[Verwalten der Lebensdauer von Objekten über die Verweiszählung](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
+[Verwalten von Objekt Lebensdauern durch Verweis Zählung](/windows/win32/com/managing-object-lifetimes-through-reference-counting)

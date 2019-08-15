@@ -2,26 +2,26 @@
 title: ARM-Ausnahmebehandlung
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: a3d1a5f3becefc064c5bb38dc566892ae8da8530
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450483"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493365"
 ---
 # <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
-Windows auf ARM verwendet denselben strukturierten Mechanismus für die Ausnahmebehandlung bei asynchronen – von der Hardware generierten – und synchronen – von der Software generierten – Ausnahmen. Sprachspezifische Ausnahmehandler werden auf von Windows strukturierter Ausnahmebehandlung mithilfe von Sprachhilfsfunktionen erstellt. Dieses Dokument beschreibt die Behandlung von Ausnahmen in Windows auf ARM und die sprachhilfen, die von Code, der von der Microsoft-ARM-Assembler und der MSVC-Compiler generiert wird verwendet.
+Windows auf ARM verwendet denselben strukturierten Mechanismus für die Ausnahmebehandlung bei asynchronen – von der Hardware generierten – und synchronen – von der Software generierten – Ausnahmen. Sprachspezifische Ausnahmehandler werden auf von Windows strukturierter Ausnahmebehandlung mithilfe von Sprachhilfsfunktionen erstellt. In diesem Dokument wird die Ausnahmebehandlung in Windows auf Arm und die sprach Hilfsprogramme beschrieben, die von Code verwendet werden, der vom Microsoft-Arm-Assembler und dem MSVC-Compiler generiert wird.
 
 ## <a name="arm-exception-handling"></a>ARM-Ausnahmebehandlung
 
-Windows auf ARM verwendet *entladungscodes* zur Steuerung der stapelentladung während der [strukturierte Ausnahmebehandlung](/windows/desktop/debug/structured-exception-handling) (SEH). Entladungscodes sind eine Folge von Bytes, die im „.xdata“-Abschnitt des ausführbaren Images gespeichert sind. Sie beschreiben den Betrieb von Funktionseinleitungs- und -epilogcode auf abstrakte Weise, sodass die Wirkung eines Funktionsprologs sich als Vorbereitung auf die Entladung des Stapelrahmens des Aufrufers rückgängig machen lässt.
+Windows on Arm verwendet Entladungs *Codes* zum Steuern der Stapel Entladung während der [strukturierten Ausnahmebehandlung](/windows/win32/debug/structured-exception-handling) (SEH). Entladungscodes sind eine Folge von Bytes, die im „.xdata“-Abschnitt des ausführbaren Images gespeichert sind. Sie beschreiben den Betrieb von Funktionseinleitungs- und -epilogcode auf abstrakte Weise, sodass die Wirkung eines Funktionsprologs sich als Vorbereitung auf die Entladung des Stapelrahmens des Aufrufers rückgängig machen lässt.
 
 Das ARM EABI (Embedded Application Binary Interface) legt ein Ausnahmeentladungsmodell fest, das Entladungscodes verwendet, aber für SEH-Entladung in Windows nicht ausreichend ist. Denn hier müssen asynchrone Fälle gehandhabt werden, in denen der Prozessor inmitten des Prologs oder Epilogs einer Funktion ist. Windows teilt außerdem die Entladungssteuerung in Entladung auf Funktionsebene und für den sprachspezifischen Bereich auf, was in der ARM EABI nicht definiert ist. Deshalb legt Windows auf ARM mehr Details für die Entladung von Daten und Verfahren fest.
 
 ### <a name="assumptions"></a>Annahmen
 
-Ausführbare Dateien für Windows auf ARM verwenden das portierbare ausführbare Format (Portable Executable, PE). Weitere Informationen finden Sie unter [Microsoft PE- und COFF-Spezifikation](https://go.microsoft.com/fwlink/p/?linkid=84140). Ausnahmebehandlungsinformationen werden in den Abschnitten .pdata und .xdata des Bilds gespeichert.
+Ausführbare Dateien für Windows auf ARM verwenden das portierbare ausführbare Format (Portable Executable, PE). Weitere Informationen finden Sie in der [Microsoft PE-und COFF-Spezifikation](https://go.microsoft.com/fwlink/p/?linkid=84140). Ausnahmebehandlungsinformationen werden in den Abschnitten .pdata und .xdata des Bilds gespeichert.
 
 Der Ausnahmebehandlungsmechanismus geht von bestimmten Annahmen über den Code aus, der ABI für Windows auf ARM folgt:
 
@@ -59,9 +59,9 @@ Jeder .pdata-Datensatz für ARM ist 8 Byte lang. Das allgemeine Format für eine
 
 |Wortoffset|Bits|Zweck|
 |-----------------|----------|-------------|
-|0|0-31|*Funktion RVA starten* ist die 32-Bit-RVA des Starts der Funktion. Wenn die Funktion Thumb-Code enthält, muss der niedrigste Bitwert dieser Adresse festgelegt werden.|
-|1|0-1|*Flag* ist ein 2-Bit-Feld, wie Sie die verbleibenden 30 Bit des zweiten .pdata-Worts zu interpretieren angibt. Wenn *Flag* 0 ist, dann bilden die verbleibenden bits eine *Ausnahme Informationen RVA* (mit der die beiden niedrigsten Bitwerte implizit 0). Wenn *Flag* ungleich NULL ist, ist, dann bilden die verbleibenden bits eine *gepackte Entladedaten Daten* Struktur.|
-|1|2-31|*Informationen zur Ausnahme RVA* oder *gepackte Entladedaten*.<br /><br /> *Ausnahme Informationen RVA* ist die Adresse der variabler Länge, die Struktur für Ausnahmeinformationen, im Abschnitt .xdata gespeichert. Diese Daten müssen 4-Bytes ausgerichtet sein.<br /><br /> *Gepackte Entladedaten Daten* ist eine komprimierte Beschreibung der Vorgänge zum Entladen von einer Funktion, wenn eine kanonische Form erforderlich. In diesem Fall ist kein .xdata-Datensatz erforderlich.|
+|0|0-31|*RVA für Funktions Start* ist die 32-Bit-RVA des Starts der Funktion. Wenn die Funktion Thumb-Code enthält, muss der niedrigste Bitwert dieser Adresse festgelegt werden.|
+|1|0-1|*Flag* ist ein 2-Bit-Feld, das angibt, wie die verbleibenden 30 Bits des zweiten. pdata-Worts interpretiert werden. Wenn *Flag* gleich 0 ist, bilden die übrigen Bits eine *RVA der Ausnahme Informationen* (mit den unteren zwei Bits implizit 0). Wenn das *Flag* ungleich 0 (null) ist, bilden die übrigen Bits eine *gepackte Entladedaten* Struktur.|
+|1|2-31|*Ausnahme Informationen RVA* oder *gepackte Entladedaten*.<br /><br /> *Ausnahme Informationen RVA* ist die Adresse der Struktur der Ausnahme Informationen mit variabler Länge, die im Abschnitt. XData gespeichert ist. Diese Daten müssen 4-Bytes ausgerichtet sein.<br /><br /> *Gepackte Entladedaten* sind eine komprimierte Beschreibung der Vorgänge, die zum Entladen von einer Funktion erforderlich sind, vorausgesetzt, eine kanonische Form. In diesem Fall ist kein .xdata-Datensatz erforderlich.|
 
 ### <a name="packed-unwind-data"></a>Gepackte Entladedaten
 
@@ -71,124 +71,124 @@ Diese Tabelle zeigt das Format eines .pdata-Datensatzes, der Entladedaten gepack
 
 |Wortoffset|Bits|Zweck|
 |-----------------|----------|-------------|
-|0|0-31|*Funktion RVA starten* ist die 32-Bit-RVA des Starts der Funktion. Wenn die Funktion Thumb-Code enthält, muss der niedrigste Bitwert dieser Adresse festgelegt werden.|
-|1|0-1|*Flag* ist ein 2-Bit-Feld, das folgende Bedeutungen hat:<br /><br />-00 = gepackte Entladedaten nicht verwendet. Verbleibende Bits zeigen auf .xdata-Datensatz.<br />– 01 = gepackte Entladedaten.<br />– 10 = gepackte Entladedaten, in dem die Funktion wird davon ausgegangen, dass keinen Prolog haben. Das ist nützlich beim Beschreiben von Funktionsfragmenten, die nicht mit dem Start der Funktion verbunden sind.<br />– 11 = reserviert.|
-|1|2-12|*Länge-Funktion* ist ein 11-Bit-Feld, das die Länge der gesamten Funktion in Bytes geteilt durch 2 enthält. Wenn die Funktion größer als 4 KB ist, muss stattdessen ein voller .xdata-Datensatz verwendet werden.|
-|1|13-14|*Ret* ist ein 2-Bit-Feld, der angibt, wie die Funktion zurückgibt:<br /><br />-00 = Rückgabe über Pop {pc} (die *L* flagbit muss in diesem Fall auf 1 festgelegt werden).<br />– 01 = gibt mithilfe einer 16-Bit-Verzweigung.<br />– 10 = gibt mithilfe einer 32-Bit-Verzweigung.<br />– 11 = Sie gar kein Epilog. Das ist nützlich, wenn ein nicht verbundenes Funktionsfragment beschrieben werden soll, das nur aus ein Prolog bestehen kann, aber dessen Epilog sich anderswo befindet.|
-|1|15|*H* ist ein 1-Bit-Flag, das angibt, ob die Funktion "die herausgreift" (r0-r3) registriert, indem sie am Anfang der Funktion zu übertragen, und die 16 Bytes des Stapel vor der Rückgabe freigibt. (0 = greift die Register nicht heraus, 1 = Greift Register heraus.)|
-|1|16-18|*Reg* ein 3-Bit-Feld, das der Index des letzten gibt nicht flüchtigen Register gespeichert. Wenn die *R* Bit 0, dann werden nur die Ganzzahlregister gespeichert werden, und wird angenommen, dass im Bereich r4-rn, wobei N gleich 4 ist + *Reg*. Wenn die *R* Bit 1 ist, dann werden nur die Gleitkommaregister gespeichert werden, und wird angenommen, dass im Bereich d8-dN befinden, wobei N gleich 8 + *Reg*. Die spezielle Kombination von *R* = 1 und *Reg* = 7 gibt an, dass keine Register gespeichert werden.|
-|1|19|*R* ist ein 1-Bit-Flag, der angibt, ob die gespeicherten nicht flüchtigen Register Ganzzahlregister (0) oder Gleitkommaregister (1). Wenn *R* auf 1 festgelegt ist und die *Reg* Feld auf 7 festgelegt ist, wird keine nicht flüchtigen Register per Push abgelegt.|
-|1|20|*L* ist ein 1-Bit-Flag, das angibt, ob die Funktion speichert und LR, zusammen mit anderen Registern Wiederherstellung der *Reg* Feld. (0 = speichert nicht/stellt nicht wieder her, 1 = speichert/stellt wieder her.)|
-|1|21|*C* ist ein 1-Bit-Flag, das angibt, ob die Funktion zusätzliche Anweisungen zum Einrichten einer rahmenkette für schnelles Stack walking (1), oder nicht (0) enthält. Wen das Bit festgelegt wurde, wird r11 implizit in der Liste nicht flüchtiger Ganzzahlregister gespeichert. (Finden Sie unter Einschränkungen unten für den Fall der *C* Flag verwendet wird.)|
-|1|22-31|*Passen Sie Stack* ist ein 10-Bit-Feld, das die Anzahl der Bytes vom Stapel gibt an, die für diese Funktion, geteilt durch 4 zugeordnet sind. Es lassen sich allerdings nur Werte zwischen 0x000 und 0x3F3 direkt codieren. Funktionen, die über 4044 Bytes an Stapel zuzuordnen, müssen einen vollständigen .xdata-Datensatz verwenden. Wenn die *Stack anpassen* Feld 0x3f4 oder größer ist, und klicken Sie dann die niedrigste 4 Bits eine besondere Bedeutung haben:<br /><br />-Bits 0-1-geben die Anzahl der Worte der stapelanpassung (1-4) minus 1.<br />-Bit-2 wird auf 1 festgelegt, wenn der Prolog diese Anpassung in seinen pushübertagungsvorgang kombiniert.<br />-Bit-3 wird auf 1 festgelegt, wenn der Epilog diese Anpassung in seinen popvorgang kombiniert.|
+|0|0-31|*RVA für Funktions Start* ist die 32-Bit-RVA des Starts der Funktion. Wenn die Funktion Thumb-Code enthält, muss der niedrigste Bitwert dieser Adresse festgelegt werden.|
+|1|0-1|*Flag* ist ein 2-Bit-Feld, das die folgenden Bedeutungen hat:<br /><br />-00 = gepackte Entladedaten werden nicht verwendet. verbleibende Bits zeigen auf. XData-Datensatz.<br />-01 = entpackte Entladedaten.<br />-10 = gepackte Entladedaten, bei denen davon ausgegangen wird, dass die Funktion keinen Prolog hat. Das ist nützlich beim Beschreiben von Funktionsfragmenten, die nicht mit dem Start der Funktion verbunden sind.<br />-11 = reserviert.|
+|1|2-12|Die *Funktions Länge* ist ein 11-Bit-Feld, das die Länge der gesamten Funktion in Bytes geteilt durch 2 bereitstellt. Wenn die Funktion größer als 4 KB ist, muss stattdessen ein voller .xdata-Datensatz verwendet werden.|
+|1|13-14|*Ret* ist ein 2-Bit-Feld, das angibt, wie die Funktion zurückgibt:<br /><br />-00 = Return via Pop {PC} (das *L* -flagbit muss in diesem Fall auf 1 festgelegt werden).<br />-01 = Rückgabe mithilfe einer 16-Bit-Verzweigung.<br />-10 = Rückgabe mithilfe eines 32-Bit-Zweigs.<br />-11 = kein Epilog. Das ist nützlich, wenn ein nicht verbundenes Funktionsfragment beschrieben werden soll, das nur aus ein Prolog bestehen kann, aber dessen Epilog sich anderswo befindet.|
+|1|15|*H* ist ein 1-Bit-Flag, das angibt, ob die Funktion den ganzzahligen Parameter registriert (r0-r3), indem Sie Sie an den Anfang der Funktion übertragen und die 16 Bytes des Stapels vor der Rückgabe aufheben. (0 = greift die Register nicht heraus, 1 = Greift Register heraus.)|
+|1|16-18|*Reg* ist ein 3-Bit-Feld, das den Index des letzten gespeicherten nicht flüchtigen Registers angibt. Wenn das *R* -Bit 0 ist, werden nur ganzzahlige Register gespeichert, und es wird davon ausgegangen, dass Sie sich im Bereich von R4-RN befinden, wobei N gleich 4 + *reg*ist. Wenn das *R* -Bit 1 ist, werden nur Gleit Komma Register gespeichert, und es wird davon ausgegangen, dass Sie sich im Bereich von D8-DN befinden, wobei N gleich 8 + *reg*ist. Die besondere Kombination von *R* = 1 und *reg* = 7 gibt an, dass keine Register gespeichert werden.|
+|1|19|*R* ist ein 1-Bit-Flag, das angibt, ob es sich bei den gespeicherten nicht flüchtigen Registern um ganzzahlige Register (0) oder Gleit Komma Register (1) handelt. Wenn *R* auf 1 festgelegt ist und das Feld *reg* auf 7 festgelegt ist, wurden keine nicht flüchtigen Register per pushübertragung übermittelt.|
+|1|20|*L* ist ein 1-Bit-Flag, das angibt, ob die Funktion LR zusammen mit anderen Registern speichert/wiederherstellt, die durch das *reg* -Feld angegeben werden. (0 = speichert nicht/stellt nicht wieder her, 1 = speichert/stellt wieder her.)|
+|1|21|*C* ist ein 1-Bit-Flag, das angibt, ob die Funktion zusätzliche Anweisungen zum Einrichten einer Frame Kette für schnelles Stapel laufen (1) oder nicht (0) enthält. Wen das Bit festgelegt wurde, wird r11 implizit in der Liste nicht flüchtiger Ganzzahlregister gespeichert. (Weitere Informationen finden Sie unter Einschränkungen, wenn das *C* -Flag verwendet wird.)|
+|1|22-31|Die *Stapel Anpassung* ist ein 10-Bit-Feld, das die Anzahl der für diese Funktion zugeordneten Stapel Stapel angibt, dividiert durch 4. Es lassen sich allerdings nur Werte zwischen 0x000 und 0x3F3 direkt codieren. Funktionen, die über 4044 Bytes an Stapel zuzuordnen, müssen einen vollständigen .xdata-Datensatz verwenden. Wenn das Feld für die *Stapel Anpassung* 0x3f 4 oder größer ist, haben die unteren 4 Bits eine besondere Bedeutung:<br /><br />-Bits 0-1 zeigt die Anzahl der Wörter der Stapel Anpassung (1-4) minus 1 an.<br />-Bit 2 wird auf 1 festgelegt, wenn der Prolog diese Anpassung in seinen Pushvorgang kombiniert hat.<br />-Bit 3 wird auf 1 festgelegt, wenn der Epilog diese Anpassung in seinen Pop-Vorgang kombiniert hat.|
 
 Wegen möglicher Redundanzen in den oben genannten Codierungen gelten folgende Einschränkungen:
 
-- Wenn die *C* Flag auf 1 festgelegt ist:
+- Wenn das *C* -Flag auf 1 festgelegt ist:
 
-   - Die *L* Flag muss ebenfalls auf 1 festgelegt werden, da rahmenverknüpfung sowohl r11 und LR erforderlich.
+   - Das *L* -Flag muss auch auf 1 festgelegt werden, da für die Frame Verkettung sowohl die-als auch die-LR erforderlich sind
 
-   - R11 darf nicht enthalten sein, in der Menge der Register beschriebenen *Reg*. Das heißt, wenn r4-r11 per Push übertragen werden, *Reg* sollte nur r4-r10 beschreiben, da die *C* Flag impliziert r11.
+   - R11 dürfen nicht in den von *reg*beschriebenen Register Satz enthalten sein. Das heißt, wenn R4-R11 übermittelt werden, sollte *reg* nur R4-R10 beschreiben, da das *C* -Flag R11 impliziert.
 
-- Wenn die *Ret* Feld ist auf 0 (null) festgelegt die *L* Flag auf 1 festgelegt werden muss.
+- Wenn das Feld " *ret* " auf 0 festgelegt ist, muss das *L* -Flag auf 1 festgelegt werden.
 
 Werden diese Einschränkungen übergangen, kann dies eine nicht unterstützte Sequenz hervorrufen.
 
-Für Rahmen die erläuterungen unten werden zwei pseudoflags von abgeleitet *Stack anpassen*:
+In der nachfolgenden Diskussion werden zwei Pseudo-Flags von der *Stapel Anpassung*abgeleitet:
 
-- *PF* oder "Prologue folding" zeigt an, dass *Stack anpassen* 0x3f4 oder größer ist und Bit 2 festgelegt ist.
+- *PF* oder "prologfold" gibt an, dass die *Stapel Anpassung* 0x3f 4 oder größer und Bit 2 festgelegt ist.
 
-- *EF* oder "Epilogue folding" zeigt an, dass *Stack anpassen* 0x3f4 oder größer ist und Bit 3 festgelegt ist.
+- *EF* oder "epilogfold" gibt an, dass die *Stapel Anpassung* 0x3f 4 oder größer und Bit 3 festgelegt ist.
 
 Prologe für nicht kanonische Funktionen können bis zu 5 Anweisungen haben (beachten Sie, dass 3a und 3b sich gegenseitig ausschließen):
 
 |Anweisung|Es wird davon ausgegangen, dass Opcode vorhanden ist, wenn:|Größe|Opcode|Entladungscodes|
 |-----------------|-----------------------------------|----------|------------|------------------|
 |1|*H*==1|16|`push {r0-r3}`|04|
-|2|*C*== 1 oder *L*== 1 oder *R*== 0 oder PF == 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
-|3a|*C*== 1 und (*L*== 0 und *R*== 1 und PF == 0)|16|`mov r11,sp`|C0-CF/FB|
-|3b|*C*== 1 und (*L*== 1 oder *R*== 0 oder PF == 1)|32|`add r11,sp,#xx`|FC|
-|4|*R*== 1 und *Reg* ! = 7|32|`vpush {d8-dE}`|E0-E7|
-|5|*Anpassen von Stack* ! = 0 und PF == 0|16/32|`sub sp,sp,#xx`|00-7F/E8-EB|
+|2|*C*= = 1 oder *L*= = 1 oder *R*= = 0 oder PF = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
+|3a|*C*= = 1 und (*L*= = 0 und *R*= = 1 und PF = = 0)|16|`mov r11,sp`|C0-CF/FB|
+|3b|*C*= = 1 und (*L*= = 1 oder *R*= = 0 oder PF = = 1)|32|`add r11,sp,#xx`|FC|
+|4|*R*= = 1 und *reg* ! = 7|32|`vpush {d8-dE}`|E0-E7|
+|5|*Stapel Anpassung* ! = 0 und PF = = 0|16/32|`sub sp,sp,#xx`|00-7F/E8-EB|
 
-Anweisung 1 wird immer angezeigt, wenn die *H* Bit auf 1 festgelegt ist.
+Anweisung 1 ist immer vorhanden, wenn das *H* -Bit auf 1 festgelegt ist.
 
-Um die rahmenverknüpfung festzulegen, entweder Anweisung 3a oder 3 b vorhanden ist wenn die *C* Bit festgelegt ist. Es ist ein 16-Bit-`mov`, wenn kein Register außer r11 und LR per Push abgelegt wird; ansonsten ist es ein 32-Bit-`add`.
+Zum Einrichten der Frame Verkettung ist entweder die Anweisung 3a oder 3B vorhanden, wenn das *C* -Bit festgelegt ist. Es ist ein 16-Bit-`mov`, wenn kein Register außer r11 und LR per Push abgelegt wird; ansonsten ist es ein 32-Bit-`add`.
 
 Wird eine nicht gefaltete Anpassung festgelegt, ist Anweisung die ausdrückliche Stapelanpassung.
 
-Die Anweisungen 2 und 4 werden abhängig davon festgelegt, ob eine Pushübertagung erforderlich ist. Diese Tabelle wird zusammengefasst, welche Register basierend auf gespeichert wurden die *C*, *L*, *R*, und *PF* Felder. In allen Fällen *N* gleich *Reg* + 4, *E* gleich *Reg* + 8 und *S* ist gleich (~*Stack anpassen*) und 3.
+Die Anweisungen 2 und 4 werden abhängig davon festgelegt, ob eine Pushübertagung erforderlich ist. In dieser Tabelle ist zusammengefasst, welche Register auf der Grundlage der *C*-, *L*-, *R*-und *PF* -Felder gespeichert werden. In allen Fällen ist *N* gleich *reg* + 4, *E* ist gleich *reg* + 8, und *S* ist gleich (~*Stapel Anpassung*) & 3.
 
-|C|L|R|PF|Ganzzahlregister per Push abgelegt|VFP-Register per Push abgelegt|
+|c|L|R|PF|Ganzzahlregister per Push abgelegt|VFP-Register per Push abgelegt|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|r4-r*N*|none|
-|0|0|0|1|R*S*- R*N*|none|
-|0|0|1|0|none|d8-d*E*|
-|0|0|1|1|r*S*-r3|d8-d*E*|
-|0|1|0|0|r4-r*N*, LR|none|
+|0|0|0|0|R4-r*N*|none|
+|0|0|0|1|r*S*-r*N*|none|
+|0|0|1|0|none|D8-d*E*|
+|0|0|1|1|r*S*-R3|D8-d*E*|
+|0|1|0|0|R4-r*N*, LR|none|
 |0|1|0|1|r*S*-r*N*, LR|none|
-|0|1|1|0|LR|d8-d*E*|
-|0|1|1|1|r*S*-r3, LR|d8-d*E*|
-|1|0|0|0|r4-r*N*, r11|none|
-|1|0|0|1|r*S*-r*N*, r11|none|
-|1|0|1|0|r11|d8-d*E*|
-|1|0|1|1|r*S*-r3, r11|d8-d*E*|
-|1|1|0|0|r4-r*N*, r11, LR|none|
-|1|1|0|1|r*S*-r*N*, r11, LR|none|
-|1|1|1|0|r11, LR|d8-d*E*|
-|1|1|1|1|r*S*-r3, r11, LR|d8-d*E*|
+|0|1|1|0|LR|D8-d*E*|
+|0|1|1|1|r*S*-R3, LR|D8-d*E*|
+|1|0|0|0|R4-r*N*, R11|none|
+|1|0|0|1|r*S*-r*N*, R11|none|
+|1|0|1|0|r11|D8-d*E*|
+|1|0|1|1|r*S*-R3, R11|D8-d*E*|
+|1|1|0|0|R4-r*N*, R11, LR|none|
+|1|1|0|1|r*S*-r*N*, R11, LR|none|
+|1|1|1|0|r11, LR|D8-d*E*|
+|1|1|1|1|r*S*-R3, R11, LR|D8-d*E*|
 
 Die Epiloge für kanonische Funktionen ermöglichen es, einer ähnlichen Form zu folgen, doch rückwärts und mit ein paar zusätzlichen Optionen. Der Epiloge kann bis zu 5 Anweisungen lang sein und seine Form wird streng durch das Format des Prologs diktiert.
 
 |Anweisung|Es wird davon ausgegangen, dass Opcode vorhanden ist, wenn:|Größe|Opcode|
 |-----------------|-----------------------------------|----------|------------|
-|6|*Anpassen von Stack*! = 0 und *EF*== 0|16/32|`add   sp,sp,#xx`|
-|7|*R*== 1 und *Reg*! = 7|32|`vpop  {d8-dE}`|
-|8|*C*== 1 oder (*L*== 1 und *H*== 0) oder *R*== 0 oder *EF*== 1|16/32|`pop   {registers}`|
-|9a|*H*== 1 und *L*== 0|16|`add   sp,sp,#0x10`|
-|9b|*H*== 1 und *L*== 1|32|`ldr   pc,[sp],#0x14`|
-|10a|*Ret*==1|16|`bx    reg`|
-|10b|*Ret*== 2|32|`b     address`|
+|6|*Stapel Anpassung*! = 0 und *EF*= = 0|16/32|`add   sp,sp,#xx`|
+|7|*R*= = 1 und *reg*! = 7|32|`vpop  {d8-dE}`|
+|8|*C*= = 1 oder (*L*= = 1 und *H*= = 0) oder *R*= = 0 oder *EF*= = 1|16/32|`pop   {registers}`|
+|9a|*H*= = 1 und *L*= = 0|16|`add   sp,sp,#0x10`|
+|9b|*H*= = 1 und *L*= = 1|32|`ldr   pc,[sp],#0x14`|
+|10a|*Ret*= = 1|16|`bx    reg`|
+|10b|*Ret*= = 2|32|`b     address`|
 
-Anweisung 6 ist die ausdrückliche Stapelanpassung, wenn eine nicht gefaltete Anpassung festgelegt wurde. Da *PF* ist unabhängig von *EF*, es ist möglich, dass Anweisung 5 ohne 6 vorhanden, oder umgekehrt.
+Anweisung 6 ist die ausdrückliche Stapelanpassung, wenn eine nicht gefaltete Anpassung festgelegt wurde. Da *PF* unabhängig von *EF*ist, ist es möglich, dass Anweisung 5 ohne Anweisung 6 vorhanden ist, oder umgekehrt.
 
-Anweisungen 7 und 8 verwenden dieselbe Logik wie des Prologs um zu bestimmen, welche Register aus dem Stapel wiederhergestellt werden, jedoch mit diesen beiden folgenden Änderungen: Erstens *EF* dient anstelle von *PF*; Zweitens, wenn *Ret*  = 0, dann LR durch PC in der Registerliste ersetzt und der Epilog sofort endet.
+In den Anweisungen 7 und 8 wird die gleiche Logik wie der Prolog verwendet, um zu bestimmen, welche Register aus dem Stapel wieder hergestellt werden, jedoch mit diesen beiden Änderungen: zuerst wird *EF* anstelle von *PF*verwendet. Zweitens: Wenn *ret* = 0 ist, wird LR durch den PC in der Registerliste ersetzt, und der Epilog wird sofort beendet.
 
-Wenn *H* festgelegt ist, und klicken Sie dann entweder Anweisung 9a oder 9 b vorhanden ist. Anweisung 9a wird verwendet, wenn *L* ist 0, um anzugeben, dass sich LR nicht auf dem Stapel befindet. In diesem Fall wird der Stapel manuell angepasst und *Ret* muss 1 oder 2, um eine explizite Rückgabe festgelegt sein. Anweisung 9 b wird verwendet, wenn *L* ist 1, um ein frühes Ende des Epilogs anzuzeigen und um zurückzugeben, und passen Sie den Stapel zur gleichen Zeit.
+Wenn *H* festgelegt ist, ist entweder die Anweisung 9a oder 9B vorhanden. Anweisung 9a wird verwendet, wenn *L* 0 ist, um anzugeben, dass sich die LR nicht auf dem Stapel befindet. In diesem Fall wird der Stapel manuell angepasst und der *ret* muss 1 oder 2 sein, um eine explizite Rückgabe anzugeben. Anweisung 9B wird verwendet, wenn *L* 1 ist, um ein frühes Ende des Epilogs anzugeben und den Stapel gleichzeitig zurückzugeben und anzupassen.
 
-Wenn der Epilog hat nicht bereits beendet wurde, dann ist entweder Anweisung 10a oder 10 b vorhanden ist, an einen 16-Bit- oder 32-Bit-Branch, basierend auf dem Wert des *Ret*.
+Wenn der Epilog noch nicht beendet wurde, ist entweder die Anweisung 10A oder 10B vorhanden, um eine 16-Bit-oder 32-Bit-Verzweigung anzugeben, die auf dem Wert von *ret*basiert.
 
 ### <a name="xdata-records"></a>.xdata-Datensätze
 
 Wenn das gepackte Entladeformat nicht zur Beschreibung der Entladung einer Funktion ausreicht, muss ein .xdata-Datensatz mit variabler Länge erstellt werden. Die Adresse dieses Datensatzes wird im zweiten Wort des .pdata-Datensatzes gespeichert. Das Format von .xdata ist ein gepackter Satz an Worten mit variabler Länge, der vier Abschnitte hat:
 
-1. Ein 1- oder 2-Wort-Header, der die Gesamtgröße der .xdata-Struktur beschreibt und wichtige Funktionsdaten enthält. Das zweite Worte ist nur vorhanden, wenn die *Epiloganzahl* und *Code Wörter* Felder sind beide auf 0 festgelegt. Die Felder sind in dieser Tabelle aufgeteilt:
+1. Ein 1- oder 2-Wort-Header, der die Gesamtgröße der .xdata-Struktur beschreibt und wichtige Funktionsdaten enthält. Das zweite Wort ist nur vorhanden, wenn die Felder *epilogcount* und *Code Words* beide auf 0 festgelegt sind. Die Felder sind in dieser Tabelle aufgeteilt:
 
    |Word|Bits|Zweck|
    |----------|----------|-------------|
-   |0|0-17|*Länge-Funktion* ist ein 18-Bit-Feld, der die Gesamtlänge der Funktion in Bytes geteilt durch 2 angibt. Wenn eine Funktion größer als 512 KB ist, dann müssen mehrere .pdata- und .xdata-Datensätze verwendet werden, um die Funktion zu beschreiben. Weitere Informationen finden Sie im Abschnitt "Große Funktionen" in diesem Dokument.|
-   |0|18-19|*Vers* ist ein 2-Bit-Feld, das die Version der verbleibenden Xdata beschreibt. Nur Version 0 ist derzeit definiert; die Werte 1-3 sind reserviert.|
-   |0|20|*X* ist ein 1-Bit-Feld, das Vorhandensein (1) oder fehlen (0) von Ausnahmedaten angibt.|
-   |0|21|*E* ist ein 1-Bit-Feld, der angibt, dass die Informationen, die ein einzelner Epilog in den Header (1) verpackt wird damit nicht muss der zusätzliche Bereich Wörter höher (0).|
-   |0|22|*F* ist ein 1-Bit-Feld, der angibt, dass dieser Datensatz ein funktionsfragment (1) oder eine vollständige Funktion (0) beschreibt. Ein Fragment impliziert, dass es keinen Prolog gibt und dass sämtliche Prologverarbeitung ignoriert werden soll.|
-   |0|23-27|*Epiloganzahl* ist ein 5-Bit-Feld mit zwei Bedeutungen, abhängig vom Zustand der *E* Bit:<br /><br /> -If *E* gleich 0 ist, ist dieses Feld die Anzahl der Gesamtzahl von ausnahmebereichen, die in Abschnitt 3 beschrieben. Wenn mehr als 31 Bereiche in der Funktion, und klicken Sie dann auf dieses Feld vorhanden sind und die *Code Wörter* Feld muss beide werden auf 0 festgelegt, um anzugeben, dass ein ausnahmewort erforderlich ist.<br />-If *E* 1, ist dieses Feld gibt den Index des ersten entladungscodes, die der nur den Epilog beschreibt.|
-   |0|28-31|*Code Wörter* ist ein 4-Bit-Feld, der angibt, die Anzahl der 32-Bit-Wörter benötigt, damit alle entladungscodes in Abschnitt 4 enthalten. Wenn mehr als 15 Worte für mehr als 63 entladungscodebytes, dieses Feld erforderlich sind und die *Epiloganzahl* Feld muss beide werden auf 0 festgelegt, um anzugeben, dass ein ausnahmewort erforderlich ist.|
-   |1|0-15|*Erweiterte Epiloganzahl* ist ein 16-Bit-Feld, das mehr Speicherplatz für das encoding bietet eine ungewöhnlich große Anzahl von epilogen. Das erweiterungswort, das enthält dieses Feld ist nur vorhanden, wenn die *Epiloganzahl* und *Code Wörter* Felder im ersten headerwort beide auf 0 festgelegt sind.|
-   |1|16-23|*Erweiterte Code Wörter* ist eine 8-Bit-Feld, das mehr Speicherplatz für das encoding bietet eine ungewöhnlich große Anzahl von entladungscodeworten. Das erweiterungswort, das enthält dieses Feld ist nur vorhanden, wenn die *Epiloganzahl* und *Code Wörter* Felder im ersten headerwort beide auf 0 festgelegt sind.|
+   |0|0-17|Die *Funktions Länge* ist ein 18-Bit-Feld, das die Gesamtlänge der Funktion in Byte (dividiert durch 2) angibt. Wenn eine Funktion größer als 512 KB ist, dann müssen mehrere .pdata- und .xdata-Datensätze verwendet werden, um die Funktion zu beschreiben. Weitere Informationen finden Sie im Abschnitt "Große Funktionen" in diesem Dokument.|
+   |0|18-19|*Vers* ist ein 2-Bit-Feld, das die Version der restlichen XData beschreibt. Nur Version 0 ist derzeit definiert; die Werte 1-3 sind reserviert.|
+   |0|20|*X* ist ein 1-Bit-Feld, das das vorhanden sein (1) oder das Fehlen (0) von Ausnahme Daten angibt.|
+   |0|21|*E* ist ein 1-Bit-Feld, das angibt, dass Informationen, die einen einzelnen Epilog beschreiben, in den Header (1) gepackt werden, anstatt zusätzliche Bereichs Wörter später (0) zu erfordern.|
+   |0|22|*F* ist ein 1-Bit-Feld, das angibt, dass dieser Datensatz ein Funktions Fragment (1) oder eine vollständige Funktion (0) beschreibt. Ein Fragment impliziert, dass es keinen Prolog gibt und dass sämtliche Prologverarbeitung ignoriert werden soll.|
+   |0|23-27|*Epilogcount* ist ein 5-Bit-Feld, das je nach Status des *E* -Bit zwei Bedeutungen hat:<br /><br /> -Wenn *E* 0 ist, ist dieses Feld die Anzahl der in Abschnitt 3 beschriebenen Ausnahme Bereiche. Wenn in der Funktion mehr als 31 Bereiche vorhanden sind, müssen dieses Feld und das Feld " *Code Wörter* " beide auf "0" festgelegt werden, um anzugeben, dass ein Erweiterungs Wort erforderlich ist.<br />Wenn *E* 1 ist, gibt dieses Feld den Index des ersten Entladungs Codes an, der den einzigen Epilog beschreibt.|
+   |0|28-31|*Code Wörter* sind ein 4-Bit-Feld, das die Anzahl der 32-Bit-Wörter angibt, die erforderlich sind, um alle Entladungs Codes in Abschnitt 4 zu enthalten. Wenn mehr als 15 Wörter für mehr als 63 Entladungs Code Bytes erforderlich sind, müssen sowohl dieses Feld als auch das Feld *epilogcount* auf 0 festgelegt werden, um anzugeben, dass ein Erweiterungs Wort erforderlich ist.|
+   |1|0-15|Die *Erweiterte epiloganzahl* ist ein 16-Bit-Feld, das mehr Platz für die Codierung einer ungewöhnlich großen Anzahl von epilogen bereitstellt. Das Erweiterungs Wort, das dieses Feld enthält, ist nur vorhanden, wenn die Felder *epilogcount* und *Code Words* des ersten Header Worts beide auf 0 festgelegt sind.|
+   |1|16-23|*Erweiterte Codewörter* sind ein 8-Bit-Feld, das mehr Platz zum Codieren einer ungewöhnlich großen Anzahl von Entladungs Codewörtern bereitstellt. Das Erweiterungs Wort, das dieses Feld enthält, ist nur vorhanden, wenn die Felder *epilogcount* und *Code Words* des ersten Header Worts beide auf 0 festgelegt sind.|
    |1|24-31|Reserviert|
 
-1. Nach den Ausnahmedaten (wenn die *E* -Bit im Header auf 0 festgelegt wurde) wird eine Liste mit Informationen über epilogbereiche, die auf ein Wort gepackt und in der Reihenfolge zunehmender startoffsets gespeichert werden. Jeder Bereich enthält folgende Felder:
+1. Nach den Ausnahme Daten (wenn das *E* -Bit in der Kopfzeile auf 0 festgelegt wurde) ist eine Liste mit Informationen zu epilogbereichen, die in ein Wort gepackt und in der Reihenfolge der Erhöhung des Start Offsets gespeichert werden. Jeder Bereich enthält folgende Felder:
 
    |Bits|Zweck|
    |----------|-------------|
-   |0-17|*Epilog starten Offset* ist ein 18-Bit-Feld, das den Offset des Epilogs in Bytes geteilt durch 2, relativ zum Start der Funktion beschreibt.|
-   |18-19|*Res* ist ein 2-Bit-Feld, das für zukünftige Erweiterungen reserviert. Sein Wert muss 0 sein.|
-   |20-23|*Bedingung* ist ein 4-Bit-Feld, das die Bedingung liefert, unter denen der Epilog ausgeführt wird. Für bedingungslose Epiloge muss es auf 0xE festgelegt sein, was "immer" bedeutet. (Ein Epilog muss vollständig beginnt oder bedingungslos sein und im Thumb-2-Modus beginnt der Epilog mit der ersten Anweisung nach dem IT-Opcode.)|
-   |24-31|*StartIndex Epilog* ist eine 8-Bit-Feld, das den Byte-Index des ersten entladungscodes angibt, der diesen Epilog beschreibt.|
+   |0-17|Der *Epilog-Start Offset* ist ein 18-Bit-Feld, das den Offset des Epilogs in Byte dividiert durch 2 relativ zum Anfang der Funktion beschreibt.|
+   |18-19|*Res* ist ein 2-Bit-Feld, das für zukünftige Erweiterungen reserviert ist. Sein Wert muss 0 sein.|
+   |20-23|*Bedingung* ist ein 4-Bit-Feld, das die Bedingung für die Ausführung des Epilogs gibt. Für bedingungslose Epiloge muss es auf 0xE festgelegt sein, was "immer" bedeutet. (Ein Epilog muss vollständig beginnt oder bedingungslos sein und im Thumb-2-Modus beginnt der Epilog mit der ersten Anweisung nach dem IT-Opcode.)|
+   |24-31|Der *Epilog-Start Index* ist ein 8-Bit-Feld, das den Byte Index des ersten Entladungs Codes angibt, der diesen Epilog beschreibt.|
 
 1. Nach der Liste von Epilogbereichen kommt ein Array von Bytes, das Entladungscodes enthält. Diese werden detailliert im Abschnitt Entladungscodes dieses Artikels beschrieben. Dieses Array ist am Ende aufgefüllt bis zur nächsten vollen Wortgrenze. Die Bytes werden in Little-Endian-Reihenfolge gespeichert, sodass sie im Little-Endian-Modus direkt abgerufen werden können.
 
-1. Wenn die *X* -Feld im Header 1 ist, folgt den entladungscodebytes die ausnahmehandlerinformationen. Dies besteht aus einem *Ausnahme-Handler RVA* , enthält die Adresse des ausnahmehandlers, unmittelbar gefolgt von der (mit variabler Länge) Datenmenge, die vom Ausnahmehandler erforderlich.
+1. Wenn das *X* -Feld im Header 1 ist, folgen die Ausnahmehandler-Informationen den Entladungs Code bytes. Dies besteht aus einem *Ausnahmehandler-RVA* , der die Adresse des Ausnahme Handlers enthält, gefolgt von der (Variablen Länge) Menge der Daten, die vom Ausnahmehandler benötigt werden.
 
 Der .xdata-Datensatz ist so gestaltet, dass es möglich ist, die ersten 8 Bytes abzurufen und die volle Größe des Datensatzes zu berechnen, ausgenommen die Länge der folgenden Ausnahmedaten mit variabler Größe. Dieser Codeausschnitt berechnet die Datensatzgröße:
 
@@ -220,7 +220,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Obwohl der Prolog und jeder Epilog einen Index in den entladungscodes sind in der Tabelle werden gemeinsam verwendet. Es ist nicht ungewöhnlich, dass alle denselben Entladungscode teilen. Wir empfehlen, dass Compiler-Autoren für diesen Fall optimieren, denn der größte Index, der festgelegt werden kann, ist 255 und das begrenzt die Gesamtzahl der Entladungscodes, die für eine bestimmte Funktion mögliche sind.
+Obwohl der Prolog und jeder Epilog über einen Index für die Entladungs Codes verfügen, wird die Tabelle zwischen Ihnen gemeinsam genutzt. Es ist nicht ungewöhnlich, dass alle denselben Entladungscode teilen. Wir empfehlen, dass Compiler-Autoren für diesen Fall optimieren, denn der größte Index, der festgelegt werden kann, ist 255 und das begrenzt die Gesamtzahl der Entladungscodes, die für eine bestimmte Funktion mögliche sind.
 
 ### <a name="unwind-codes"></a>Entladungscodes
 
@@ -238,32 +238,32 @@ Die folgende Tabelle zeigt die Zuordnung von Entladungscodes zu Opcodes. Die hä
 
 |Byte 1|Byte 2|Byte 3|Byte 4|Opsize|Erklärung|
 |------------|------------|------------|------------|------------|-----------------|
-|00-7F||||16|`add   sp,sp,#X`<br /><br /> wobei X ist (Code & 0x7F) \* 4|
-|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> wobei LR per pop ausgelesen wird, wenn Code & 0 x 2000 und r0-r12 per pop ausgelesen werden, wenn das entsprechende Bit in Code & 0x1FFF festgelegt wurde|
-|C0-CF||||16|`mov   sp,rX`<br /><br /> wobei X Code & 0x0F ist|
-|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> wobei X (Code & 0 x 03) + 4 ist und LR per pop ausgelesen wird Wenn Code & 0 x 04|
-|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> wobei X (Code & 0 x 03) + 8 ist und LR per pop ausgelesen wird Wenn Code & 0 x 04|
-|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> in denen X (Code & 0 x 07) + 8|
-|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> wobei X ist (Code & 0x03FF) \* 4|
-|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> wobei LR per pop ausgelesen wird, wenn Code & 0 x 0100 und r0-r7 per pop ausgelesen werden, wenn das entsprechende Bit in Code & 0x00FF festgelegt wurde|
+|00-7F||||16|`add   sp,sp,#X`<br /><br /> where X ist (Code & 0x7F) \* 4|
+|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> Wenn LR per pop ausgelesen wird, wenn der Code & 0x2000 und R0-R12 per pop ausgelesen werden, wenn das entsprechende Bit im Code & 0x1fff festgelegt ist.|
+|C0-CF||||16|`mov   sp,rX`<br /><br /> wobei X Code & 0x0f ist.|
+|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> wobei X (Code & 0x03) + 4 ist und LR per Pop ausgeblendet wird, wenn Code & 0x04|
+|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> wobei X (Code & 0x03) + 8 und LR per Pop ausgeblendet wird, wenn Code & 0x04|
+|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> wobei X (Code & 0x07) + 8 ist.|
+|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> where X ist (Code & 0x03ff) \* 4|
+|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> Wenn LR per pop ausgelesen wird, wenn Code & 0x0100 und R0-R7 per pop ausgelesen werden, wenn das entsprechende Bit im Code & 0x00FF festgelegt ist.|
 |EE|00-0F|||16|Microsoft-spezifisch|
 |EE|10-FF|||16|Verfügbar|
-|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> wobei X ist (Code & 0x000F) \* 4|
+|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> where X ist (Code & 0x000f) \* 4|
 |EF|10-FF|||32|Verfügbar|
 |F0-F4||||-|Verfügbar|
-|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> Wenn S ist (Code & 0x00F0) >> wird von 4 und E Code & 0x000F|
-|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> Wenn S ist ((Code & 0x00F0) >> 4) + 16 und E (Code & 0x000F) + 16|
-|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> wobei X ist (Code & 0x00FFFF) \* 4|
-|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> wobei X ist (Code & 0x00FFFFFF) \* 4|
-|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> wobei X ist (Code & 0x00FFFF) \* 4|
-|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> wobei X ist (Code & 0x00FFFFFF) \* 4|
+|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> wobei S (Code & 0x00f 0) > > 4 und E Code & 0x000f ist.|
+|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> Where S ist ((Code & 0x00f 0) > > 4) + 16 und E ist (Code & 0x000f) + 16|
+|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> where X ist (Code & 0x00ffff) \* 4|
+|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> where X ist (Code & 0x00ffffff) \* 4|
+|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> where X ist (Code & 0x00ffff) \* 4|
+|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> where X ist (Code & 0x00ffffff) \* 4|
 |FB||||16|nop (16-Bit)|
 |FC||||32|nop (32-Bit)|
 |FD||||16|end + 16-Bit nop im Epilog|
 |FE||||32|end + 32-Bit nop im Epilog|
 |FF||||-|end|
 
-Dies zeigt einen Bereich hexadezimaler Werte für jedes Byte in einem entladungscode *Code*, zusammen mit der opcodegröße *Opsize* und die entsprechenden ursprünglichen anweisungsinterpretation. Leere Zellen weisen auf kürzere Entladungscodes hin. Die Anweisungen mit großen Werten umfassen mehrere Bytes, wobei die signifikanten zuerst gespeichert sind. Die *Opsize* Feld zeigt die implizite opcodegröße, die jedem Thumb-2-Vorgang zugeordnet. Die offensichtlichen Doppeleinträge in der Tabelle bei verschiedenen Codierungen werden verwendet, damit zwischen den verschiedenen Opcodegrößen unterschieden werden kann.
+Dadurch wird der Bereich der hexadezimalen Werte für jedes Byte in einem Entladungs Code *Code*zusammen mit der Opcode size *opsize* und der entsprechenden ursprünglichen Anweisungs Interpretation angezeigt. Leere Zellen weisen auf kürzere Entladungscodes hin. Die Anweisungen mit großen Werten umfassen mehrere Bytes, wobei die signifikanten zuerst gespeichert sind. Das Feld *opsize* zeigt die implizite opcodegröße an, die jedem Thumb-2-Vorgang zugeordnet ist. Die offensichtlichen Doppeleinträge in der Tabelle bei verschiedenen Codierungen werden verwendet, damit zwischen den verschiedenen Opcodegrößen unterschieden werden kann.
 
 Die Entladungscodes wurden entwickelt, sodass das erste Byte des Codes sowohl die Gesamtgröße des Codes in Bytes als auch die Größe des entsprechenden Opcodes im Anweisungsstream verrät. Um die Größe von Prolog oder Epilog berechnen zu können, gehen Sie die Entladungscodes vom Beginn der Sequenz bis zum Ende durch und verwenden eine Nachschlagetabelle oder eine vergleichbare Methode, um zu bestimmen, wie lange der entsprechende Opcode ist.
 
@@ -298,9 +298,9 @@ Neben jedem Opcode befindet sich der entsprechende Entladungscode, der diesen Vo
 
 Der Code 0xFD ist ein Spezialcode für das Ende der Sequenz und bedeutet, dass der Epilog eine 16-Bit-Anweisung länger als der Prolog ist. Damit ist es öfter möglich, Entladungscodes gemeinsam zu nutzen.
 
-Im Beispiel beginnt die Entladung mit dem Epilogfall, wenn beim Ausführen des Funktionstextes zwischen Prolog und Epilog eine Ausnahme auftritt, und zwar bei Offset 0 im Epilogcode. Das entspricht dem Offset 0x140 im Beispiel. Der Entlader führt die volle Entladesequenz aus, da keine Bereinigung vorgenommen wurde. Wenn stattdessen die Ausnahme eine Anweisung nach dem Beginn des Epilogcodes auftritt, kann der Entlader erfolgreich entladen, indem er den ersten Entladungscode überspringt. Erhalten eine 1: 1-Zuordnung von Opcodes und entladungscodes, wenn die Entladung von Anweisung *n* im Epilog der Entlader die ersten überspringen soll *n* entladungscodes.
+Im Beispiel beginnt die Entladung mit dem Epilogfall, wenn beim Ausführen des Funktionstextes zwischen Prolog und Epilog eine Ausnahme auftritt, und zwar bei Offset 0 im Epilogcode. Das entspricht dem Offset 0x140 im Beispiel. Der Entlader führt die volle Entladesequenz aus, da keine Bereinigung vorgenommen wurde. Wenn stattdessen die Ausnahme eine Anweisung nach dem Beginn des Epilogcodes auftritt, kann der Entlader erfolgreich entladen, indem er den ersten Entladungscode überspringt. Bei einer eins-zu-Eins-Zuordnung zwischen Opcodes und Entladungs Codes sollte der Entlader die ersten *n* Entladungs Codes überspringen, wenn die Entladung von Anweisung *n* im Epilog entlädt.
 
-Die gleiche Logik gilt umgekehrt für den Prolog. Findet die Entladung von Offset 0 im Prolog statt, muss nichts ausgeführt werden. Findet die Entladung von einer Anweisung weiter innen statt, sollte die Entladungssequenz einen Entladungscode vom Ende starten, da Prolog-Entladungscodes in umgekehrter Reihenfolge gespeichert werden. Im Allgemeinen, wenn die Entladung von Anweisung *n* im Prolog entladen soll beginnen *n* entladungscodes vom Ende der Liste der Codes.
+Die gleiche Logik gilt umgekehrt für den Prolog. Findet die Entladung von Offset 0 im Prolog statt, muss nichts ausgeführt werden. Findet die Entladung von einer Anweisung weiter innen statt, sollte die Entladungssequenz einen Entladungscode vom Ende starten, da Prolog-Entladungscodes in umgekehrter Reihenfolge gespeichert werden. Im allgemeinen Fall, wenn das Entladen von der Anweisung *n* im Prolog ausgeführt wird, sollte das Entladen mit *n* Entladungs Codes am Ende der Liste der Codes beginnen.
 
 Prolog- und Epilog-Entladungscodes stimmen nicht immer genau überein. In diesem Fall muss das Entladungscode-Array eine Reihe von Codesequenzen enthalten. Verwenden Sie folgende Logik, um den Offset für den Beginn der Verarbeitungscodes zu bestimmen:
 
@@ -326,13 +326,13 @@ Angenommen der Funktionsprolog befindet sich am Beginn der Funktion und kann nic
 
 - Nur Epilog; Prolog und möglicherweise weitere Epiloge in anderen Fragmenten.
 
-In ersterem Fall muss nur der Prolog beschrieben werden. Dies kann erfolgen im kompakten .pdata-Formats den Prolog normalerweise beschreiben, und geben eine *Ret* Wert 3, dass kein Epilog vorhanden. Im vollen .xdata-Format kann das erledigt werden, indem man wie üblich die Prologentladungscodes in Index 0 festlegt und eine Epiloganzahl von 0 angibt.
+In ersterem Fall muss nur der Prolog beschrieben werden. Dies kann im Compact. pdata-Formular erfolgen, indem der Prolog normal beschrieben und ein *ret* -Wert von 3 angegeben wird, um einen Epilog anzugeben. Im vollen .xdata-Format kann das erledigt werden, indem man wie üblich die Prologentladungscodes in Index 0 festlegt und eine Epiloganzahl von 0 angibt.
 
 Der zweite Fall ist genauso wie eine normale Funktion. Wenn es nur einen Epilog im Fragment gibt und sich dieser am Ende des Fragments befindet, dann kann ein kompakter .pdata-Datensatz verwendet werden. Andernfalls muss ein vollständiger .xdata-Datensatzes eingesetzt werden. Beachten Sie, dass die für den Epilogstart festgelegten Offsets relativ zum Start des Fragments und nicht dem ursprünglichen Start der Funktion sind.
 
 Der dritte und vierte Fall ist jeweils eine Variante des ersten und zweiten Falls, außer dass kein Prolog enthalten ist. In diesen Situationen wird davon ausgegangen, dass es Code vor dem Start des Epilogs gibt und er wird als Teil des Funktionstexts betrachtet, der normalerweise durch das Rückgängigmachen des Prologeffekts entladen wird. Diese Fälle müssen deshalb mit einem Pseudoprolog codiert werden, der beschreibt, wie im Text entladen wird, aber als 0-Länge bei der Bestimmung behandelt wird, ob beim Start des Fragments eine teilweise Entladung durchgeführt wird. Alternativ lässt sich dieser Pseudoprolog beschreiben, indem dieselben Entladungscodes wie beim Epilog verwendet werden, denn sie führen mutmaßlich gleiche Vorgänge durch.
 
-In der dritten und vierten Fall wird das Vorhandensein eines pseudoprologs angegeben, entweder durch Festlegen der *Flag* Feld die .pdata-Datensatz auf 2 oder durch Festlegen der *F* Flag im .xdata-Header auf 1. In beiden Fällen wird die Überprüfung auf eine teilweise Prologentladung ignoriert und alle Nicht-Epilogentladungen werden als voll betrachtet.
+Im dritten und vierten Fall wird das vorhanden sein eines Pseudo Prologs festgelegt, indem das Flagfeld des Compact. pdata-Datensatzes auf 2 festgelegt wird, oder indem das *F* -Flag im. XData-Header auf 1 festgelegt wird. In beiden Fällen wird die Überprüfung auf eine teilweise Prologentladung ignoriert und alle Nicht-Epilogentladungen werden als voll betrachtet.
 
 #### <a name="large-functions"></a>Große Funktionen
 
@@ -344,7 +344,7 @@ Wenn ein Fragment keinen Prolog und Epilog hat, erfordert er dennoch einen eigen
 
 #### <a name="shrink-wrapping"></a>Shrink-Wrapping
 
-Ist ein komplexerer Spezialfall von funktionsfragmenten *Shrink*, eine Technik für das Verschieben von registerspeicherungen vom Start der Funktion, die weiter unten in der Funktion wird für einfache Fälle optimiert, die registerspeicherung nicht erforderlich. Das lässt sich als eine äußere Region beschreiben, die den Stapelspeicher zuweist, aber einen minimalen Registersatz speichert sowie einer inneren Region, die weitere Register speichert und wiederherstellt.
+Ein komplexerer Sonderfall von Funktions Fragmenten istVerkleinerungs Umbrüchen, eine Technik zum verzögern von Register, die vom Anfang der Funktion bis zu einem späteren Zeitpunkt in der Funktion gespeichert wird, um für einfache Fälle zu optimieren, für die keine Register Speicherung erforderlich ist. Das lässt sich als eine äußere Region beschreiben, die den Stapelspeicher zuweist, aber einen minimalen Registersatz speichert sowie einer inneren Region, die weitere Register speichert und wiederherstellt.
 
 ```asm
 ShrinkWrappedFunction
@@ -386,7 +386,7 @@ ShrinkWrappedFunction
     pop    {r4, pc}          ; C: restore non-volatile registers
 ```
 
-Entscheidend ist hier, dass der Stapel bei jeder Anweisungsgrenze ganz mit den Entladungscodes für die Region übereinstimmt. Findet eine Entladung vor der inneren Pushübertagung in diesem Beispiel statt, wird sie als Teil von Region A betrachtet und nur der Region-A-Prolog wird entladen. Wenn die Entladung nach der inneren pushübertagung auftritt, wird davon ausgegangen, dass der Teil von Region B, die keinen Prolog, aber entladungscodes, die beschreiben, sowohl für die innere pushübertragung als auch für den ursprünglichen Prolog aus Region a ähnliche Logik ist für den inneren Pop enthält.
+Entscheidend ist hier, dass der Stapel bei jeder Anweisungsgrenze ganz mit den Entladungscodes für die Region übereinstimmt. Findet eine Entladung vor der inneren Pushübertagung in diesem Beispiel statt, wird sie als Teil von Region A betrachtet und nur der Region-A-Prolog wird entladen. Wenn die Entladung nach dem inneren Push erfolgt, wird Sie als Teil von Region B betrachtet, die keinen Prolog hat, aber Entladungs Codes enthält, die sowohl den inneren Push als auch den ursprünglichen Prolog aus Region A beschreiben. eine ähnliche Logik gilt für den inneren Pop.
 
 ### <a name="encoding-optimizations"></a>Optimierungen codieren
 
@@ -424,25 +424,25 @@ Epilogue:
 
 - Word 0
 
-   - *Funktionsstarts RVA* = 0x000535F8 (= 0x004535F8-0 x 00400000)
+   - *Funktions Start RVA* = 0x000535f 8 (= 0x004535f 8-0x00400000)
 
 - Word 1
 
-   - *Flag* = 1 ist, der angibt, kanonische Prolog- und Epilog-Formate
+   - *Flag* = 1, das kanonische Prolog-und epilogformate angibt
 
-   - *Länge-Funktion* 0x31 = (0 x 62/2 =)
+   - *Funktions Länge* = 0x31 (= 0x62/2)
 
-   - *Ret* = 1, gibt einen 16-Bit-Branch zurück
+   - *Ret* = 1, gibt eine 16-Bit-Verzweigungs Rückgabe an
 
-   - *H* = 0 (null), der angibt, die Parameter nicht herausgegriffen wurden
+   - *H* = 0, gibt an, dass die Parameter nicht in den vernetzt
 
-   - *R*= 0 und *Reg* = 1 ist, der angibt, Push/Pop von r4-R5 an
+   - *R*= 0 und *reg* = 1, gibt Push/Pop von R4-R5 an
 
-   - *L* = 0, gibt kein LR gespeichert/wiederhergestellt
+   - *L* = 0, bedeutet, dass keine LR-Speicherung/-Wiederherstellung
 
-   - *C* = 0, gibt keine rahmenverknüpfung gibt
+   - *C* = 0, gibt an, dass keine Frame Verkettung
 
-   - *Passen Sie Stack* = 0, gibt keine stapelanpassungen gibt
+   - *Stapel* Anpassung = 0, gibt keine Stapel Anpassung an
 
 ### <a name="example-2-nested-function-with-local-allocation"></a>Beispiel 2: Geschachtelte Funktion mit lokaler Zuteilung
 
@@ -459,25 +459,25 @@ Epilogue:
 
 - Word 0
 
-   - *Funktionsstarts RVA* = 0x000533AC (= 0x004533AC-0 x 00400000)
+   - *Funktions Start RVA* = 0x000533ac (= 0x004533ac-0x00400000)
 
 - Word 1
 
-   - *Flag* = 1 ist, der angibt, kanonische Prolog- und Epilog-Formate
+   - *Flag* = 1, das kanonische Prolog-und epilogformate angibt
 
-   - *Länge-Funktion* = 0 x 35 (0x6A/2 =)
+   - *Funktions Länge* = 0x35 (= 0x6a/2)
 
-   - *Ret* = 0, gibt eine POP-{pc} return
+   - *Ret* = 0, gibt eine Pop-{PC}-Rückgabe an
 
-   - *H* = 0 (null), der angibt, die Parameter nicht herausgegriffen wurden
+   - *H* = 0, gibt an, dass die Parameter nicht in den vernetzt
 
-   - *R*= 0 und *Reg* = 3, der angibt, Push/Pop von r4-R7 an
+   - *R*= 0 und *reg* = 3, angeben von Push/Pop von R4-R7
 
-   - *L* = 1 ist, der angibt, LR gespeichert/wiederhergestellt wurde
+   - *L* = 1, gibt an, dass LR gespeichert/wieder hergestellt wurde
 
-   - *C* = 0, gibt keine rahmenverknüpfung gibt
+   - *C* = 0, gibt an, dass keine Frame Verkettung
 
-   - *Anpassen von Stack* = 3 (0x0C/4 =)
+   - *Stapel Anpassung* = 3 (= 0x0c/4)
 
 ### <a name="example-3-nested-variadic-function"></a>Beispiel 3: Geschachtelte Variadic-Funktion
 
@@ -494,25 +494,25 @@ Epilogue:
 
 - Word 0
 
-   - *Funktionsstarts RVA* = 0x00053988 (= 0x00453988-0 x 00400000)
+   - *Funktions Start-RVA* = 0x00053988 (= 0x00453988-0x00400000)
 
 - Word 1
 
-   - *Flag* = 1 ist, der angibt, kanonische Prolog- und Epilog-Formate
+   - *Flag* = 1, das kanonische Prolog-und epilogformate angibt
 
-   - *Länge-Funktion* 0x2A = (0 x 54/2 =)
+   - *Funktions Länge* = 0x2A (= 0x54/2)
 
-   - *Ret* = 0, gibt eine POP-{pc}-Stil zurückgegeben (in diesem Fall eine Ldr pc, [sp], #, 0 x 14 zurückgeben)
+   - *Ret* = 0, gibt an, dass eine Pop {PC}-Rückgabe Rückgabe (in diesem Fall ein LDR-PC, [SP], #0x14 Return)
 
-   - *H* = 1 ist, der angibt, die Parameter herausgegriffen wurden
+   - *H* = 1, gibt an, dass die Parameter in einem Heim angegeben wurden
 
-   - *R*= 0 und *Reg* = 2, der angibt, Push/Pop von r4-R6 an
+   - *R*= 0 und *reg* = 2, gibt Push/Pop von R4-R6 an
 
-   - *L* = 1 ist, der angibt, LR gespeichert/wiederhergestellt wurde
+   - *L* = 1, gibt an, dass LR gespeichert/wieder hergestellt wurde
 
-   - *C* = 0, gibt keine rahmenverknüpfung gibt
+   - *C* = 0, gibt an, dass keine Frame Verkettung
 
-   - *Passen Sie Stack* = 0, gibt keine stapelanpassungen gibt
+   - *Stapel* Anpassung = 0, gibt keine Stapel Anpassung an
 
 ### <a name="example-4-function-with-multiple-epilogues"></a>Beispiel 4: Funktionen mit mehreren Epilogen
 
@@ -540,37 +540,37 @@ Epilogues:
 
 - Word 0
 
-   - *Funktionsstarts RVA* = 0x000592F4 (= 0x004592F4-0 x 00400000)
+   - *Funktions Start RVA* = 0x000592f 4 (= 0x004592f 4-0x00400000)
 
 - Word 1
 
-   - *Flag* = 0 (null), die angibt, .xdata-Datensatz vorhanden (aufgrund mehrerer Epiloge erforderlich)
+   - *Flag* = 0, gibt an, dass ein. XData-Datensatz vorhanden ist (erforderlich aufgrund mehrerer Epiloge)
 
-   - *.XData-Adresse* -0 x 00400000
+   - *. XData-Adresse* -0x00400000
 
 .xdata (variabel, 6 Worte):
 
 - Word 0
 
-   - *Länge-Funktion* = 0x0001A3 (0x000346/2 =)
+   - *Funktions Länge* = 0x0001a3 (= 0x000346/2)
 
    - *Vers* = 0, gibt die erste Version von XData an
 
-   - *X* = 0, gibt keine Ausnahmedaten vorhanden sind
+   - *X* = 0, gibt keine Ausnahme Daten an
 
-   - *E* = 0, gibt eine Liste von epilogbereichen
+   - *E* = 0, gibt eine Liste von epilogbereichen an
 
-   - *F* = 0, gibt eine volle funktionsbeschreibung einschließlich Prolog an
+   - *F* = 0, gibt eine vollständige Funktionsbeschreibung an, einschließlich Prolog
 
-   - *Epiloganzahl* = 0 x 04, der angibt, die insgesamt 4 epilogbereiche
+   - *Epilogcount* = 0x04, gibt die vier gesamten epilogbereiche an
 
-   - *Code Wörter* = 0 x 01, der angibt, eine 32-Bit-Wort mit entladungscodes
+   - *Code Wörter* = 0x01, was 1 32-Bit-Wort von Entladungs Codes angibt
 
 - Worte 1-4 beschreiben 4 Epilogbereiche an 4 Stellen. Jeder Bereich besitzt einen gemeinsamen Satz an Entladungscodes, der mit dem Prolog geteilt wird mit einem Offset 0x00; er ist bedingungslos, legt die Bedingung 0x0E (immer) fest.
 
-- Entladungscodes, beginnend bei Wort 5: (gemeinsam von Prolog und Epilog genutzt)
+- Entladungs Codes, beginnend bei Wort 5: (Shared between Prolog/Epilog)
 
-   - Entladungscode 0 = 0 x 06: sp += (6 << 2)
+   - Entladungs Code 0 = 0x06: SP + = (6 < < 2)
 
    - Entladungscode 1 = 0xDE: pop {r4-r10, lr}
 
@@ -600,41 +600,41 @@ Epilogue:
 
 - Word 0
 
-   - *Funktionsstarts RVA* = 0x00085A20 (= 0x00485A20-0 x 00400000)
+   - *Funktions Start RVA* = 0x00085a20 (= 0x00485a20-0x00400000)
 
 - Word 1
 
-   - *Flag* = 0 (null), die angibt, .xdata-Datensatz vorhanden (aufgrund mehrerer Epiloge erforderlich)
+   - *Flag* = 0, gibt an, dass ein. XData-Datensatz vorhanden ist (aufgrund mehrerer Epiloge erforderlich)
 
-   - *.XData-Adresse* -0 x 00400000
+   - *. XData-Adresse* -0x00400000
 
 .xdata (variabel, 3 Worte):
 
 - Word 0
 
-   - *Länge-Funktion* = 0x0001A3 (0x000346/2 =)
+   - *Funktions Länge* = 0x0001a3 (= 0x000346/2)
 
    - *Vers* = 0, gibt die erste Version von XData an
 
-   - *X* = 0, gibt keine Ausnahmedaten vorhanden sind
+   - *X* = 0, gibt keine Ausnahme Daten an
 
-   - *E* = 0, gibt eine Liste von epilogbereichen
+   - *E* = 0, gibt eine Liste von epilogbereichen an
 
-   - *F* = 0, gibt eine volle funktionsbeschreibung einschließlich Prolog an
+   - *F* = 0, gibt eine vollständige Funktionsbeschreibung an, einschließlich Prolog
 
-   - *Epiloganzahl* = 0 x 001, der angibt, die insgesamt 1 epilogbereich
+   - *Epilogcount* = 0x001, gibt den gesamten epilogbereich an.
 
-   - *Code Wörter* = 0 x 01, der angibt, eine 32-Bit-Wort mit entladungscodes
+   - *Code Wörter* = 0x01, was 1 32-Bit-Wort von Entladungs Codes angibt
 
 - Wort 1: Epilogbereich bei einem Offset von 0xC6 (= 0x18C/2), beginnt den Entladungscodeindex bei 0x00 und mit der Bedingung 0x0E (immer)
 
-- Entladungscodes, beginnend bei Wort 2: (gemeinsam von Prolog und Epilog genutzt)
+- Entladungs Codes, beginnend bei Wort 2: (Shared between Prolog/Epilog)
 
    - Entladungscode 0 = 0xC6: sp = r6
 
    - Entladungscode 1 = 0xDC: pop {r4-r8, lr}
 
-   - Entladungscode 2 = 0 x 04: sp += (4 << 2)
+   - Entladungs Code 2 = 0x04: SP + = (4 < < 2)
 
    - Entladungscode 3 = 0xFD: Ende, zählt als 16-Bit-Anweisung für Epilog
 
@@ -658,43 +658,43 @@ Epilogue:
 
 - Word 0
 
-   - *Funktionsstarts RVA* = 0x00088C24 (= 0x00488C24-0 x 00400000)
+   - *Funktions Start RVA* = 0x00088c24 (= 0x00488c24-0x00400000)
 
 - Word 1
 
-   - *Flag* = 0 (null), die angibt, .xdata-Datensatz vorhanden (aufgrund mehrerer Epiloge erforderlich)
+   - *Flag* = 0, gibt an, dass ein. XData-Datensatz vorhanden ist (aufgrund mehrerer Epiloge erforderlich)
 
-   - *.XData-Adresse* -0 x 00400000
+   - *. XData-Adresse* -0x00400000
 
 .xdata (variabel, 5 Worte):
 
 - Word 0
 
-   - *Länge-Funktion* = 0x000027 (0x00004E/2 =)
+   - *Funktions Länge* = 0x000027 (= 0x00004e/2)
 
    - *Vers* = 0, gibt die erste Version von XData an
 
-   - *X* = 1 ist, der angibt, Ausnahmedaten vorhanden sind
+   - *X* = 1, gibt die vorhandenen Ausnahme Daten an
 
    - *E* = 1, gibt einen einzelnen Epilog an
 
-   - *F* = 0, gibt eine volle funktionsbeschreibung einschließlich Prolog an
+   - *F* = 0, gibt eine vollständige Funktionsbeschreibung an, einschließlich Prolog
 
-   - *Epiloganzahl* = 0 x 00, der angibt, Epilog-entladungscodes beginnen bei Offset 0 x 00
+   - *Epilogcount* = 0x00, gibt an, dass Epilog-Entlade Codes bei Offset 0x00 beginnen.
 
-   - *Code Wörter* = 0 x 02, der angibt, der zwei 32-Bit-Worte an entladungscodes
+   - *Code Wörter* = 0x02, das 2 32-Bit-Wörter der Entladungs Codes angibt
 
 - Entladungscodes, beginnend bei Wort 1:
 
    - Entladungscode 0 = 0xC7: sp = r7
 
-   - Unwind code 1 = 0x05: sp += (5 << 2)
+   - Entladungs Code 1 = 0x05: SP + = (5 < < 2)
 
    - Entladungscode 2 = 0xED/0x90: pop {r4, r7, lr}
 
    - Entladungscode 4 = 0xFF: end
 
-- Wort 3 legt einen Ausnahmehandler fest = 0x0019A7ED (= 0x0059A7ED – 0 x 00400000)
+- Word 3 gibt einen Ausnahmehandler an = 0x0019a7ed (= 0x0059a7ed-0x00400000).
 
 - Worte 4 und darüber hinaus sind inline gesetzte Ausnahmedaten
 
@@ -717,25 +717,25 @@ Function:
 
 - Word 0
 
-   - *Funktionsstarts RVA* = 0x00088C72 (= 0x00488C72-0 x 00400000)
+   - *Funktions Start-RVA* = 0x00088c72 (= 0x00488c72-0x00400000)
 
 - Word 1
 
-   - *Flag* = 1 ist, der angibt, kanonische Prolog- und Epilog-Formate
+   - *Flag* = 1, das kanonische Prolog-und epilogformate angibt
 
-   - *Länge-Funktion* 0x0B = (0 x 16/2 =)
+   - *Funktions Länge* = 0x0B (= 0x16/2)
 
-   - *Ret* = 0, gibt eine POP-{pc} return
+   - *Ret* = 0, gibt eine Pop-{PC}-Rückgabe an
 
-   - *H* = 0 (null), der angibt, die Parameter nicht herausgegriffen wurden
+   - *H* = 0, gibt an, dass die Parameter nicht in den vernetzt
 
-   - *R*= 0 und *Reg* = 7, der angibt, der keine Register gespeichert/wiederhergestellt wurden
+   - *R*= 0 und *reg* = 7, gibt an, dass keine Register gespeichert/wieder hergestellt wurden
 
-   - *L* = 1 ist, der angibt, LR gespeichert/wiederhergestellt wurde
+   - *L* = 1, gibt an, dass LR gespeichert/wieder hergestellt wurde
 
-   - *C* = 0, gibt keine rahmenverknüpfung gibt
+   - *C* = 0, gibt an, dass keine Frame Verkettung
 
-   - *Passen Sie Stack* = 1, gibt eine 1 × 4-Byte-stapelanpassung
+   - *Stapel* Anpassung = 1, was eine 1 × 4-Byte-Stapel Anpassung angibt
 
 ## <a name="see-also"></a>Siehe auch
 

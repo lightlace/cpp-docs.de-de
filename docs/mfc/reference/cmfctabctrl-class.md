@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: db2dcf7c60d164f9d04eb98f8eaac79ae14e3e73
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821254"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504889"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -177,7 +177,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Wird von Framework aufgerufen, wenn der Cursor zum ersten Mal in das Registerkarten-Steuerelement Fenster gezogen wird.|
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Wird von Framework während eines Zieh Vorgangs aufgerufen, wenn die Maus über das Ablage Zielfenster bewegt wird. (Überschreibt [cmfcbasetabctrl:: OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Zeigt ein Popupmenü mit Fenstern im Registerkarten Format an, wartet, bis der Benutzer eine Registerkarte auswählt, und macht die ausgewählte Registerkarte zur aktiven Registerkarte.|
-|`CMFCTabCtrl::PreTranslateMessage`|Übersetzt Fenster Meldungen, bevor diese an die Windows-Funktionen [translatemess](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) gesendet werden. (Überschreibt [cmfcbasetabctrl::P retranslatemess Age](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
+|`CMFCTabCtrl::PreTranslateMessage`|Übersetzt Fenster Meldungen, bevor diese an die Windows-Funktionen [translatemess](/windows/win32/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) gesendet werden. (Überschreibt [cmfcbasetabctrl::P retranslatemess Age](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
 |`CMFCTabCtrl::RecalcLayout`|Berechnet das interne Layout des Registerkarten-Steuer Elements neu. (Überschreibt [cmfcbasetabctrl:: neueyout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Legt die aktuelle Registerkarte eines Registerkarten-Steuer Elements als aktive Registerkarte in einer Registerkarten Gruppe mit mehreren Dokumenten Schnittstellen fest.|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktiviert eine Registerkarte. (Überschreibt [cmfcbasetabctrl:: abtativetab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 in Verweist auf ein Datenobjekt, das Daten enthält, die der Benutzer zieht.
 
 *dwKeyState*<br/>
-in Enthält den Zustand der Modifizierertasten. Dieser Parameter ist eine bitweise Kombination (oder) der folgenden Werte: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON. Weitere Informationen finden Sie im Abschnitt " **Nachrichten Parameter** " unter [Informationen zu Maus Eingaben](/windows/desktop/inputdev/about-mouse-input).
+in Enthält den Zustand der Modifizierertasten. Dieser Parameter ist eine bitweise Kombination (oder) der folgenden Werte: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON. Weitere Informationen finden Sie im Abschnitt " **Nachrichten Parameter** " unter [Informationen zu Maus Eingaben](/windows/win32/inputdev/about-mouse-input).
 
 *point*<br/>
 in Enthält die aktuelle Position des Cursors in Client Koordinaten.
@@ -906,7 +906,7 @@ virtual DROPEFFECT OnDragOver(
 in Zeiger auf ein [COleDataObject](../../mfc/reference/coledataobject-class.md) -Objekt, das über das Ablage Ziel gezogen wird.
 
 *dwKeyState*<br/>
-in Der Zustand der Modifizierertasten, bei dem es sich um eine bitweise Kombination (or) von MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON handelt. Weitere Informationen finden Sie unter "Nachrichten Parameter" in " [about Mouse Input](/windows/desktop/inputdev/about-mouse-input)".
+in Der Zustand der Modifizierertasten, bei dem es sich um eine bitweise Kombination (or) von MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON handelt. Weitere Informationen finden Sie unter "Nachrichten Parameter" in " [about Mouse Input](/windows/win32/inputdev/about-mouse-input)".
 
 *point*<br/>
 in Die aktuelle Mausposition.

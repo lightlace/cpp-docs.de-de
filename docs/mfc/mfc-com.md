@@ -11,42 +11,42 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-ms.openlocfilehash: 67c7ea3e93b3158abc552c552c450c31c109be80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eab688022c311f3d20fc092736ee4c7d37232a43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239192"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508095"
 ---
 # <a name="mfc-com"></a>MFC COM
 
-Eine Teilmenge von MFC dient zur Unterstützung von COM, während die meisten von der Active Template Library (ATL) dient für COM-Programmierung. Dieser Abschnitt der Themen befasst, MFC Unterstützung für COM.
+Eine Teilmenge von MFC ist für die Unterstützung von com konzipiert, während die meisten Active Template Library (ATL) für die COM-Programmierung entwickelt wurden. In diesem Abschnitt von Themen wird die MFC-Unterstützung für com beschrieben.
 
-Active Technologien (z. B. ActiveX-Steuerelemente, Active Document-Container, OLE und So weiter), die das Component Object Model (COM) verwenden, um Softwarekomponenten, die miteinander interagieren mit dem sie waren, in einer vernetzten Umgebung, unabhängig von der Sprache ermöglichen erstellt. Active Technology können verwendet werden, zum Erstellen von Anwendungen, die auf dem Desktop oder im Internet ausgeführt wird. Weitere Informationen finden Sie unter [Einführung in COM](../atl/introduction-to-com.md) oder [das Component Object Model](/windows/desktop/com/the-component-object-model).
+Aktive Technologien (z. b. ActiveX-Steuerelemente, Active Document Containment, OLE usw.) verwenden die Component Object Model (com), damit Softwarekomponenten in einer vernetzten Umgebung miteinander interagieren können, unabhängig von der Sprache, mit der Sie Schaff. Aktive Technologien können verwendet werden, um Anwendungen zu erstellen, die auf dem Desktop oder im Internet ausgeführt werden. Weitere Informationen finden [Sie unter Einführung in com](../atl/introduction-to-com.md) oder [die Component Object Model](/windows/win32/com/the-component-object-model).
 
-Active Technology umfassen sowohl Client-als auch Technologien, einschließlich der folgenden:
+Zu den aktiven Technologien zählen sowohl Client-als auch Server Technologien, einschließlich der folgenden:
 
-- ActiveX-Steuerelemente sind interaktive Objekte, die in Containern, z. B. eine Website verwendet werden können. Weitere Informationen zu ActiveX-Steuerelementen finden Sie unter:
+- ActiveX-Steuerelemente sind interaktive Objekte, die in Containern wie z. b. einer Website verwendet werden können. Weitere Informationen zu ActiveX-Steuerelementen finden Sie unter:
 
    - [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)
 
    - [ActiveX-Steuerelemente für das Internet](../mfc/activex-controls-on-the-internet.md)
 
-   - [Übersicht: Internet](../mfc/mfc-internet-programming-basics.md)
+   - [Übersicht über Im](../mfc/mfc-internet-programming-basics.md)
 
-   - [Aktualisieren eines vorhandenen ActiveX-Steuerelements auf das Internet verwendet werden](../mfc/upgrading-an-existing-activex-control.md)
+   - [Aktualisieren eines vorhandenen ActiveX-Steuer Elements für die Verwendung im Internet](../mfc/upgrading-an-existing-activex-control.md)
 
-   - [Debuggen von ActiveX-Steuerelement](/visualstudio/debugger/how-to-debug-an-activex-control)
+   - [Debugging eines ActiveX-Steuer Elements](/visualstudio/debugger/how-to-debug-an-activex-control)
 
-- Active scripting steuert das integrierte Verhalten von ein oder mehrere ActiveX-Steuerelementen in einem Browser oder Server. Weitere Informationen zu active scripting, finden Sie unter [Active Technology für das Internet](../mfc/active-technology-on-the-internet.md).
+- Active Scripting steuert das integrierte Verhalten von mindestens einem ActiveX-Steuerelement von einem Browser oder Server aus. Weitere Informationen zur aktiven Skripterstellung finden Sie unter [aktive Technologie im Internet](../mfc/active-technology-on-the-internet.md).
 
-- [Automation](../mfc/automation.md) (früher als OLE-Automatisierung) ermöglicht es einer Anwendung in einer anderen Anwendung implementierten Objekte zu bearbeiten oder "Objekte verfügbar zu machen", damit sie bearbeitet werden können.
+- [Automatisierung](../mfc/automation.md) (früher als OLE-Automatisierung bezeichnet) ermöglicht es einer Anwendung, die in einer anderen Anwendung implementierten Objekte zu bearbeiten oder Objekte verfügbar zu machen, sodass Sie bearbeitet werden können.
 
-   Das automatisierte Objekt kann lokal oder remote (auf einem anderen Computer, die über ein Netzwerk zugegriffen werden kann) sein. Automation ist für OLE und COM-Objekte verfügbar.
+   Das automatisierte Objekt kann lokal oder Remote sein (auf einem anderen Computer, auf den über ein Netzwerk zugegriffen werden kann). Automation ist für OLE und COM-Objekte verfügbar.
 
-- Dieser Abschnitt enthält auch Informationen zum Schreiben von COM-Komponenten, die mithilfe von MFC, z. B. [Verbindungspunkte](../mfc/connection-points.md).
+- In diesem Abschnitt finden Sie auch Informationen zum Schreiben von COM-Komponenten mithilfe von MFC, z. b. in [Verbindungs Punkten](../mfc/connection-points.md).
 
-Eine Erläuterung der zuerst immer noch eine so genannte OLE im Vergleich zu, die jetzt active-Technologie bezeichnet wird, finden Sie in den Themen zu [OLE](../mfc/ole-in-mfc.md).
+Eine Erläuterung dazu, was noch als OLE bezeichnet wird und was jetzt als "aktive Technologie" bezeichnet wird, finden Sie in den Themen zu [OLE](../mfc/ole-in-mfc.md).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

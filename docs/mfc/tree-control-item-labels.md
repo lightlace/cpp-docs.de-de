@@ -8,20 +8,20 @@ helpviewer_keywords:
 - item labels, tree controls
 - item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
-ms.openlocfilehash: c945556ff9236db1ca61b15f1072efdc2f49541f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1f7fb8b558ff4726f7787cbf355a059fbcce8b5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371950"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513378"
 ---
 # <a name="tree-control-item-labels"></a>Elementbezeichnungen in Struktursteuerelementen
 
-Der Text, der die Bezeichnung eines Elements wird in der Regel angeben, wenn Sie das Element das Strukturansicht-Steuerelement hinzufügen ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Die `InsertItem` kann Member-Funktion übergeben, eine [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) Struktur, die die Eigenschaften des Elements, einschließlich der Zeichenfolge mit dem Text der Bezeichnung definiert. `InsertItem` verfügt über mehrere Überladungen, die mit verschiedenen Kombinationen von Parametern aufgerufen werden kann.
+Sie geben in der Regel den Text der Bezeichnung eines Elements an, wenn Sie das Element dem Struktur Steuerelement hinzufügen ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Die `InsertItem` Member-Funktion kann eine [tvitem](/windows/win32/api/commctrl/ns-commctrl-tvitemw) -Struktur übergeben, die die Eigenschaften des Elements definiert, einschließlich einer Zeichenfolge, die den Text der Bezeichnung enthält. `InsertItem`verfügt über mehrere über Ladungen, die mit verschiedenen Kombinationen von Parametern aufgerufen werden können.
 
-Ein Strukturansicht-Steuerelement weist Speichern jedes Element Speicher; der Text, der den Elementnamen beansprucht einen großen Teil dieser Arbeitsspeicher ab. Wenn Ihre Anwendung eine Kopie der Zeichenfolgen in der Strukturansicht verwaltet, können Sie die arbeitsspeicheranforderungen für das Steuerelement verringern, durch Angabe der **LPSTR_TEXTCALLBACK** Wert in der *PszText* Mitglied `TV_ITEM` oder *LpszItem* Parameter anstelle der Übergabe der eigentlichen Zeichenfolgen, die dem Strukturansicht-Steuerelement. Mithilfe von **LPSTR_TEXTCALLBACK** bewirkt, dass das Strukturansicht-Steuerelement den Text, der die Bezeichnung eines Elements aus der Anwendung abrufen, wenn das Element neu gezeichnet werden muss. Zum Abrufen des Texts, sendet das Strukturansicht-Steuerelement eine [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo) -benachrichtigungsmeldung und enthält die Adresse einer [NMTVDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvdispinfoa) Struktur. Sie müssen reagieren, durch Festlegen der entsprechenden Member der Struktur enthalten.
+Ein Struktur Steuerelement ordnet Speicher zum Speichern der einzelnen Elemente zu. der Text der Element Bezeichnungen nimmt einen signifikanten Teil dieses Speichers an. Wenn Ihre Anwendung eine Kopie der Zeichen folgen im Struktur Steuerelement beibehält, können Sie die Arbeitsspeicher Anforderungen des Steuer Elements verringern, indem Sie den **LPSTR_TEXTCALLBACK** -Wert im *pszText* -Member von `TV_ITEM` oder das *lpszitem* -Element angeben. , anstatt tatsächliche Zeichen folgen an das Struktur Steuerelement zu übergeben. Die Verwendung von **LPSTR_TEXTCALLBACK** bewirkt, dass das Struktur Steuerelement den Text der Bezeichnung eines Elements von der Anwendung abruft, wenn das Element neu gezeichnet werden muss. Zum Abrufen des Texts sendet das Struktur Steuerelement eine [TVN_GETDISPINFO](/windows/win32/Controls/tvn-getdispinfo) -Benachrichtigungs Meldung, die die Adresse einer [NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-tvdispinfow) -Struktur enthält. Sie müssen Antworten, indem Sie die entsprechenden Member der enthaltenen Struktur festlegen.
 
-Ein Strukturansicht-Steuerelement verwendet die Speichermenge, die aus dem Heap des Prozesses, der den Strukturansicht-Steuerelement erstellt. Die maximale Anzahl von Elementen in einem Strukturansicht-Steuerelement basiert auf der Menge an Arbeitsspeicher im Heap verfügbar. Jedes Element hat 64 Bytes.
+Ein Struktur Steuerelement verwendet Arbeitsspeicher, der vom Heap des Prozesses belegt wird, der das Struktur Steuerelement erstellt. Die maximale Anzahl von Elementen in einem Struktur Steuerelement basiert auf der Menge an Arbeitsspeicher, die im Heap verfügbar ist. Jedes Element benötigt 64 Bytes.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - label editing in CTreeCtrl class [MFC]
 - tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
-ms.openlocfilehash: 446db94ec49859e2213f00d205df57e332c85af2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10148ef0dd8ccb2cf82c14c1c80ade6e8e5aa2b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388149"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513310"
 ---
 # <a name="tree-control-label-editing"></a>Bearbeiten der Struktursteuerelement-Bezeichnung
 
-Der Benutzer die Bezeichnungen von Elementen in einem Strukturansicht-Steuerelement direkt bearbeiten kann ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)), bei dem die **TVS_EDITLABELS** Stil. Der Benutzer beginnt, bearbeiten, indem Sie auf die Bezeichnung des Elements, das den Fokus besitzt. Eine Anwendung beginnt mit der Bearbeitung mit der [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) Member-Funktion. Das Struktursteuerelement sendet die Benachrichtigung, wenn Bearbeitung beginnt, und wenn sie abgebrochen oder abgeschlossen ist. Wenn die Bearbeitung abgeschlossen ist, können Sie für die Aktualisierung der elementbezeichnung verantwortlich, bei Bedarf.
+Der Benutzer kann die Bezeichnungen von Elementen in einem Struktur Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)), das den **TVS_EDITLABELS** -Stil hat, direkt bearbeiten. Der Benutzer beginnt mit der Bearbeitung, indem er auf die Bezeichnung des Elements klickt, das den Fokus besitzt. Eine Anwendung beginnt mit der Bearbeitung mithilfe der [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) -Member-Funktion. Das Struktur Steuerelement sendet die Benachrichtigung, wenn die Bearbeitung beginnt und abgebrochen oder abgeschlossen wird. Wenn die Bearbeitung abgeschlossen ist, müssen Sie ggf. die Bezeichnung des Elements aktualisieren.
 
-Wenn bezeichnungsbearbeitung beginnt, ein Strukturansicht-Steuerelement sendet eine [TVN_BEGINLABELEDIT](/windows/desktop/Controls/tvn-beginlabeledit) Benachrichtigung. Verarbeiten diese Benachrichtigung, Sie können einige Bezeichnungen bearbeitet und anderer Bearbeitung verhindern. Zurückgeben von 0 ermöglicht das Bearbeiten und ungleich NULL zurückgegeben wird verhindert, dass es.
+Wenn die Bezeichnungs Bearbeitung beginnt, sendet ein Struktur Steuerelement eine [TVN_BEGINLABELEDIT](/windows/win32/Controls/tvn-beginlabeledit) -Benachrichtigungs Meldung. Wenn Sie diese Benachrichtigung verarbeiten, können Sie die Bearbeitung einiger Bezeichnungen zulassen und die Bearbeitung anderer Bezeichnungen verhindern. Wenn 0 zurückgegeben wird, wird die Bearbeitung ermöglicht, und das Zurückgeben von Null verhindert
 
-Bei der bezeichnungsbearbeitung abgebrochen oder abgeschlossen ist, sendet ein Strukturansicht-Steuerelement eine [TVN_ENDLABELEDIT](/windows/desktop/Controls/tvn-endlabeledit) Benachrichtigung. Die *lParam* Parameter ist die Adresse von einem [NMTVDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvdispinfoa) Struktur. Die **Element** Member ist ein [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) -Struktur, identifiziert das Element und den bearbeiteten Text enthält. Sie sind verantwortlich für die Aktualisierung der elementbezeichnung ggf. vielleicht nach der Überprüfung der bearbeiteten Zeichenfolge. Die *PszText* Mitglied `TV_ITEM` ist 0, wenn die Bearbeitung abgebrochen wird.
+Wenn die Bezeichnungs Bearbeitung abgebrochen oder abgeschlossen wird, sendet ein Struktur Steuerelement eine [TVN_ENDLABELEDIT](/windows/win32/Controls/tvn-endlabeledit) -Benachrichtigungs Meldung. Der *LPARAM* -Parameter ist die Adresse einer [NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-tvdispinfow) -Struktur. Das **Element Element** ist eine [tvitem](/windows/win32/api/commctrl/ns-commctrl-tvitemw) -Struktur, die das Element identifiziert und den bearbeiteten Text enthält. Sie sind dafür verantwortlich, die Bezeichnung des Elements ggf. nach der Validierung der bearbeiteten Zeichenfolge zu aktualisieren. Der *pszText* -Member `TV_ITEM` von ist 0, wenn die Bearbeitung abgebrochen wird.
 
-Beim Bearbeiten der Beschriftung in der Regel als Reaktion auf die [TVN_BEGINLABELEDIT](/windows/desktop/Controls/tvn-beginlabeledit) -benachrichtigungsmeldung und erhalten Sie einen Zeiger auf das Bearbeitungssteuerelement zum Bearbeiten von Bezeichnungen mithilfe der [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) Member -Funktion. Sie können des Steuerelements zum Bearbeiten des Aufrufen [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) Memberfunktion versucht, der ein Benutzer eingeben kann Text oder Unterklasse Bearbeitungssteuerelement abfangen und verwerfen ungültige Zeichen begrenzt. Beachten Sie jedoch, dass das Bearbeitungssteuerelement nur angezeigt wird, *nach* **TVN_BEGINLABELEDIT** gesendet wird.
+Während der Bezeichnungs Bearbeitung können Sie in der Regel als Reaktion auf die [TVN_BEGINLABELEDIT](/windows/win32/Controls/tvn-beginlabeledit) -Benachrichtigungs Meldung einen Zeiger auf das Bearbeitungs Steuerelement erhalten, das für die Bezeichnungs Bearbeitung mithilfe der [geteditcontrol](../mfc/reference/ctreectrl-class.md#geteditcontrol) -Member-Funktion verwendet wird. Sie können die [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) -Member-Funktion des Edit-Steuer Elements aufrufen, um die Menge an Text einzuschränken, die ein Benutzer in das Bearbeitungs Steuerelement eingeben oder eine Unterklasse zum Abfangen und Verwerfen von ungültigen Zeichen Beachten Sie jedoch, dass das Bearbeitungs Steuerelement nur angezeigt wird, *nachdem* **TVN_BEGINLABELEDIT** gesendet wurde.
 
 ## <a name="see-also"></a>Siehe auch
 

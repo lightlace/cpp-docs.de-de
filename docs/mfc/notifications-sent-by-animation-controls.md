@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [MFC], animation
 - animation controls [MFC], notifications
 ms.assetid: 584f5824-446b-4a1a-85f7-ef61842c8186
-ms.openlocfilehash: 2a736e4315091b1b26daceb4fe0ce9672ab33ff6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68ede3bc55669a29eef192d38b29b8c1ab433e4b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238308"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508017"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Von Animationssteuerelementen gesendete Benachrichtigungen
 
-Ein Animationssteuerelement ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) zwei verschiedene Arten von Benachrichtigungen sendet. Die Benachrichtigungen werden gesendet, in Form von [WM_COMMAND](/windows/desktop/menurc/wm-command) Nachrichten.
+Ein Animations Steuerelement ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) sendet zwei verschiedene Typen von Benachrichtigungs Meldungen. Die Benachrichtigungen werden in Form von [WM_COMMAND](/windows/win32/menurc/wm-command) -Nachrichten gesendet.
 
-Die [ACN_START](/windows/desktop/Controls/acn-start) Nachricht wird gesendet, wenn das Animationssteuerelement gestartet wurde, einen Audioclip abspielen. Die [ACN_STOP](/windows/desktop/Controls/acn-stop) Nachricht wird gesendet, wenn das Animationssteuerelement abgeschlossen oder beendet einen Audioclip abspielen.
+Die [ACN_START](/windows/win32/Controls/acn-start) -Nachricht wird gesendet, wenn das Animations Steuerelement mit der Wiedergabe eines Clips begonnen hat. Die [ACN_STOP](/windows/win32/Controls/acn-stop) -Nachricht wird gesendet, wenn das Animations Steuerelement beendet wurde oder die Wiedergabe eines Clips beendet hat.
 
 ## <a name="see-also"></a>Siehe auch
 

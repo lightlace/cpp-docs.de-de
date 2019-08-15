@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: da247524dae77627bbf041b83bc1534a75c3b073
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c167745eed45b7081e62a2c3be225a33e7ee0520
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916700"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502438"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl-Klasse
 
@@ -117,7 +117,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parameter
 
 *dwStyle*<br/>
-Gibt den Stil des Drehfeld-Steuer Elements an. Anwenden einer beliebigen Kombination von Drehfeld-Steuerelement Stilen auf das-Steuerelement. Diese Stile werden in den [Steuer](/windows/desktop/Controls/up-down-control-styles) Element Formaten im Windows SDK beschrieben.
+Gibt den Stil des Drehfeld-Steuer Elements an. Anwenden einer beliebigen Kombination von Drehfeld-Steuerelement Stilen auf das-Steuerelement. Diese Stile werden in den [Steuer](/windows/win32/Controls/up-down-control-styles) Element Formaten im Windows SDK beschrieben.
 
 *Rect*<br/>
 Gibt die Größe und Position des Drehfeld-Steuer Elements an. Dies kann entweder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt oder eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur sein.
@@ -154,10 +154,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parameter
 
 *dwExStyle*<br/>
-Gibt die erweiterte Art des zu erstellenden Steuer Elements an. Eine Liste erweiterter Windows-Stile finden Sie unter dem *dwExStyle* -Parameter für " [kreatewindowex](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " in der Windows SDK.
+Gibt die erweiterte Art des zu erstellenden Steuer Elements an. Eine Liste erweiterter Windows-Stile finden Sie unter dem *dwExStyle* -Parameter für " [kreatewindowex](/windows/win32/api/winuser/nf-winuser-createwindowexw) " in der Windows SDK.
 
 *dwStyle*<br/>
-Gibt den Stil des Drehfeld-Steuer Elements an. Anwenden einer beliebigen Kombination von Drehfeld-Steuerelement Stilen auf das-Steuerelement. Diese Stile werden in den [Steuer](/windows/desktop/Controls/up-down-control-styles) Element Formaten im Windows SDK beschrieben.
+Gibt den Stil des Drehfeld-Steuer Elements an. Anwenden einer beliebigen Kombination von Drehfeld-Steuerelement Stilen auf das-Steuerelement. Diese Stile werden in den [Steuer](/windows/win32/Controls/up-down-control-styles) Element Formaten im Windows SDK beschrieben.
 
 *Rect*<br/>
 Ein Verweis auf eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Größe und Position des zu erstellenden Fensters in Client Koordinaten von *pparser*beschreibt.
@@ -200,7 +200,7 @@ UINT GetAccel(
 Anzahl der Elemente im Array, das von *paccel*angegeben wird.
 
 *pAccel*<br/>
-Ein Zeiger auf ein Array von [udaccel](/windows/desktop/api/commctrl/ns-commctrl-udaccel) -Strukturen, das Beschleunigungs Informationen empfängt.
+Ein Zeiger auf ein Array von [udaccel](/windows/win32/api/commctrl/ns-commctrl-udaccel) -Strukturen, das Beschleunigungs Informationen empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -298,7 +298,7 @@ BOOL SetAccel(
 ### <a name="parameters"></a>Parameter
 
 *nAccel*<br/>
-Anzahl der durch *paccel*angegebenen [udaccel](/windows/desktop/api/commctrl/ns-commctrl-udaccel) -Strukturen.
+Anzahl der durch *paccel*angegebenen [udaccel](/windows/win32/api/commctrl/ns-commctrl-udaccel) -Strukturen.
 
 *pAccel*<br/>
 Zeiger auf ein Array von udaccel-Strukturen, die Beschleunigungs Informationen enthalten. Elemente müssen in aufsteigender Reihenfolge basierend auf dem `nSec` Element sortiert werden.

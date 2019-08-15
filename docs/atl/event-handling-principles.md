@@ -1,5 +1,5 @@
 ---
-title: Ereignisbehandlung-Prinzipien (ATL)
+title: Ereignis Behandlungsprinzipien (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, implementing
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - dual interfaces, event interfaces
 - event handling, dual event interfaces
 ms.assetid: d17ca7cb-54f2-4658-ab8b-b721ac56801d
-ms.openlocfilehash: b882a1d356a431f75be1feb6e7bd997abed41c33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 066c8db60afed31ceba1c9ef6f4a10d5f842e608
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234770"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492145"
 ---
-# <a name="event-handling-principles"></a>Ereignisbehandlungsrichtlinien
+# <a name="event-handling-principles"></a>Grundlagen der Ereignis Behandlung
 
-Es sind drei Schritte für alle Ereignisbehandlung. Sie müssen:
+Es gibt drei Schritte, die bei der Ereignis Behandlung üblich sind. Folgendes ist erforderlich:
 
-- Implementieren Sie die Schnittstelle für das Objekt an.
+- Implementieren Sie die-Ereignis Schnittstelle für das-Objekt.
 
-- Empfehlen Sie, dass das Objekt zum Empfangen von Ereignissen soll der Ereignisquelle.
+- Informieren Sie die Ereignis Quelle, dass Ihr Objekt Ereignisse empfangen möchte.
 
-- Abzumelden Sie die Ereignisquelle, wenn das Objekt nicht mehr benötigt wird, um Ereignisse zu empfangen.
+- Deaktivieren Sie die Ereignis Quelle, wenn das Objekt keine Ereignisse mehr empfangen muss.
 
-Die Möglichkeit, dass Sie die Schnittstelle implementieren werden hängt von den Typ ab. Eine Ereignisschnittstelle möglich Vtable, Dual oder eine Disp-Schnittstelle. Es liegt in den Designer der Ereignisquelle, die Schnittstelle zu definieren; Es liegt an Ihnen, diese Schnittstelle implementieren.
+Die Art und Weise, in der die Ereignis Schnittstelle implementiert wird, hängt vom Typ ab. Eine Ereignis Schnittstelle kann "Vtable", "Dual" oder "dispinterface" sein. Es liegt an dem Designer der Ereignis Quelle, die Schnittstelle zu definieren. Sie müssen diese Schnittstelle implementieren.
 
 > [!NOTE]
->  Es gibt, zwar keine aus technischen Gründen, die eine Ereignisschnittstelle dual sein kann gibt es jedoch aus verschiedenen Gründen ein guter Entwurf, um die Verwendung von duale Schnittstellen zu vermeiden. Dies ist jedoch durch die Designer/Implementierung des Ereignisses anhängig *Quelle*. Da Sie aus der Perspektive des Ereignisses arbeiten `sink`, müssen Sie die Möglichkeit zu ermöglichen, dass Sie keine Wahl haben, können jedoch eine duale Ereignisschnittstelle implementieren. Weitere Informationen zu duale Schnittstellen, finden Sie unter [duale Schnittstellen und ATL](../atl/dual-interfaces-and-atl.md).
+>  Obwohl es keine technischen Gründe gibt, dass eine Ereignis Schnittstelle nicht Dual sein kann, gibt es eine Reihe guter Entwurfs Gründe, um die Verwendung von Duals zu vermeiden. Dies ist jedoch eine Entscheidung, die vom Designer/Implementierer der Ereignis *Quelle*getroffen wird. Da Sie aus der Perspektive des Ereignisses `sink`arbeiten, müssen Sie möglicherweise keine Auswahl treffen, sondern eine Dual-Event-Schnittstelle implementieren. Weitere Informationen zu Dual Schnittstellen finden Sie unter [duale Schnittstellen und ATL](../atl/dual-interfaces-and-atl.md).
 
-Anmelden der Ereignisquelle kann in drei Schritte unterteilt werden:
+Die Beratung der Ereignis Quelle kann in drei Schritte unterteilt werden:
 
-- Das Quellobjekt für Abfragen [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer).
+- Abfragen des Quell Objekts für [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer).
 
-- Rufen Sie [IConnectionPointContainer:: FindConnectionPoint](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) übergeben Sie die IID der Ereignisschnittstelle, die Sie interessiert sind. Wenn der Erfolg dieser zurückgibt, die [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) Schnittstelle für ein-Objekt.
+- Nennen Sie [IConnectionPointContainer:: FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) , indem Sie die IID der Ereignis Schnittstelle übergeben, die Sie interessiert. Bei erfolgreicher Ausführung wird die [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) -Schnittstelle für ein Verbindungspunkt Objekt zurückgegeben.
 
-- Rufen Sie [IConnectionPoint:: Advise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-advise) übergeben die `IUnknown` der Ereignissenke. Wenn der Erfolg dieser zurückgibt, eine `DWORD` Cookie, das die Verbindung darstellt.
+- Wenden Sie [IConnectionPoint:: Rat](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) an `IUnknown` , und übergeben Sie die der Ereignis Senke. Bei erfolgreicher Ausführung wird ein `DWORD` Cookie zurückgegeben, das die Verbindung darstellt.
 
-Nachdem Sie Ihr Interesse am Empfang von Ereignissen registriert haben, werden Methoden für die Senkenereignis-Schnittstelle des Objekts gemäß der durch das Quellobjekt ausgelöste Ereignisse aufgerufen werden. Wenn Sie sich nicht mehr benötigen, die zum Empfangen von Ereignissen, können Sie das Cookie zurück an den Verbindungspunkt über übergeben [IConnectionPoint:: Unadvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectionpoint-unadvise). Dadurch wird die Verbindung zwischen Quelle und Senke unterbrochen.
+Nachdem Sie Ihr Interesse am Empfang von Ereignissen erfolgreich registriert haben, werden die Methoden der Ereignis Schnittstelle Ihres Objekts entsprechend den Ereignissen aufgerufen, die vom Quell Objekt ausgelöst werden. Wenn Sie keine Ereignisse mehr empfangen müssen, können Sie das Cookie über [IConnectionPoint:: UN-Empfehlung](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise)an den Verbindungspunkt zurückgeben. Dadurch wird die Verbindung zwischen Quelle und Senke unterbricht.
 
-Achten Sie darauf, dass Sie zu vermeiden Zyklen, wenn Sie Ereignisse behandeln.
+Achten Sie darauf, bei der Behandlung von Ereignissen Verweis Zyklen zu vermeiden.
 
 ## <a name="see-also"></a>Siehe auch
 

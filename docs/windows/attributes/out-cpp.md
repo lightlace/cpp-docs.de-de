@@ -1,17 +1,17 @@
 ---
-title: Out (C++-COM-Attribut)
+title: Out (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.out
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 7020bd6cfcf8bcdbfb773908e693c6364a29e343
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407600"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514289"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -25,7 +25,7 @@ Gibt die Zeigerparameter an, die von der aufgerufenen Prozedur an die aufrufende
 
 ## <a name="remarks"></a>Hinweise
 
-Das C++-Attribut **out** hat die gleiche Funktion wie das MIDL-Attribut [out](/windows/desktop/Midl/out-idl) .
+Das C++-Attribut **out** hat die gleiche Funktion wie das MIDL-Attribut [out](/windows/win32/Midl/out-idl) .
 
 ## <a name="example"></a>Beispiel
 
@@ -39,8 +39,8 @@ Ein Beispiel für die Verwendung von [bindable](bindable.md) finden Sie im Beisp
 |-|-|
 |**Betrifft**|Schnittstellenparameter|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

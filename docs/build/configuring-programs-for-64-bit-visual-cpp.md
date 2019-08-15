@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von C++-Projekten für 64-Bit-X64 Ziele
+title: Konfigurieren C++ von Projekten für 64-Bit-, x64-Ziele
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 64-bit compiler [C++], options
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - 64-bit programming [C++], about 64-bit programming
 - programming [C++], 64-bit
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-ms.openlocfilehash: 0e2e4dcd1e7dabc2ffc8ac87b1670245101c16d0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 906591544717ed107c284dfb41bbbf2dfdd3c253
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240865"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493291"
 ---
-# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Konfigurieren von C++-Projekten für 64-Bit-X64 Ziele
+# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Konfigurieren C++ von Projekten für 64-Bit-, x64-Ziele
 
-Dieser Abschnitt enthält Themen über die Zielgruppenadressierung von 64-Bit-X64 Hardware mit dem Visual C++-Buildtools.
+Dieser Abschnitt enthält Themen zum Ziel einer 64-Bit-x64-Hardware C++ mit den Visual Build-Tools.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 - [Vorgehensweise: Konfigurieren von Visual C++-Projekten für 64-Bit-Zielplattformen (x64)](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [Vorgehensweise: Aktivieren eines 64-Bit, X64 gehostete MSVC-Toolsets in der Befehlszeile](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Vorgehensweise: Aktivieren eines 64-Bit-, x64-gehosteten MSVC-Toolsets in der Befehlszeile](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Häufig auftretende 64-Bit-Migrationsprobleme bei Visual C++](common-visual-cpp-64-bit-migration-issues.md)
 
@@ -30,7 +30,7 @@ Dieser Abschnitt enthält Themen über die Zielgruppenadressierung von 64-Bit-X6
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[.NET Framework-64-Bit-Anwendungen](/dotnet/framework/64-bit-apps)
+[.NET Framework von 64-Bit-Anwendungen](/dotnet/framework/64-bit-apps)
 
 [align](../cpp/align-cpp.md)
 
@@ -38,7 +38,7 @@ Dieser Abschnitt enthält Themen über die Zielgruppenadressierung von 64-Bit-X6
 
 [/favor (Für Architektureigenschaften optimieren)](reference/favor-optimize-for-architecture-specifics.md)
 
-[Programmierhandbuch für 64-Bit-Windows](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)
+[Programmier Handbuch für 64-Bit-Windows](/windows/win32/WinProg64/programming-guide-for-64-bit-windows)
 
 [MASM für x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)
 

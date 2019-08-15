@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 8940b1d028edc76383470f913ccbe16cb8c0e9f0
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 977a8c9fc6dd653a59434d29bb72b0fe28900001
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503704"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506374"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection-Klasse
 
-Verwaltet die FTP-Verbindung mit einem Internetserver und ermöglicht die direkte Bearbeitung von Verzeichnissen und Dateien auf dem Server.
+Verwaltet die FTP-Verbindung mit einem Internet Server und ermöglicht die direkte Bearbeitung von Verzeichnissen und Dateien auf diesem Server.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,35 +53,35 @@ class CFtpConnection : public CInternetConnection
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CFtpConnection::CFtpConnection](#cftpconnection)|Erstellt ein `CFtpConnection`-Objekt.|
+|[CFtpConnection:: CFtpConnection](#cftpconnection)|Erstellt ein `CFtpConnection`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CFtpConnection::Command](#command)|Sendet einen Befehl direkt an einen FTP-Server.|
+|[CFtpConnection:: Command](#command)|Sendet einen Befehl direkt an einen FTP-Server.|
 |[CFtpConnection::CreateDirectory](#createdirectory)|Erstellt ein Verzeichnis auf dem Server.|
 |[CFtpConnection::GetCurrentDirectory](#getcurrentdirectory)|Ruft das aktuelle Verzeichnis für diese Verbindung ab.|
 |[CFtpConnection::GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)|Ruft das aktuelle Verzeichnis für diese Verbindung als URL ab.|
-|[CFtpConnection::GetFile](#getfile)|Ruft eine Datei aus dem verbundenen Server ab.|
+|[CFtpConnection::GetFile](#getfile)|Ruft eine Datei vom verbundenen Server ab.|
 |[CFtpConnection::OpenFile](#openfile)|Öffnet eine Datei auf dem verbundenen Server.|
-|[CFtpConnection::PutFile](#putfile)|Fügt eine Datei auf dem Server.|
-|[CFtpConnection::Remove](#remove)|Entfernt eine Datei vom Server an.|
-|[CFtpConnection::RemoveDirectory](#removedirectory)|Entfernt das angegebene Verzeichnis auf dem Server.|
-|[CFtpConnection::Rename](#rename)|Benennt eine Datei auf dem Server.|
+|[CFtpConnection::PutFile](#putfile)|Platziert eine Datei auf dem Server.|
+|[CFtpConnection::Remove](#remove)|Entfernt eine Datei vom Server.|
+|[CFtpConnection::RemoveDirectory](#removedirectory)|Entfernt das angegebene Verzeichnis vom Server.|
+|[CFtpConnection:: Rename](#rename)|Benennt eine Datei auf dem Server um.|
 |[CFtpConnection::SetCurrentDirectory](#setcurrentdirectory)|Legt das aktuelle FTP-Verzeichnis fest.|
 
 ## <a name="remarks"></a>Hinweise
 
-FTP ist eines der drei Internetdienste erkannt, die von den MFC-WinInet-Klassen.
+FTP ist einer der drei Internet Dienste, die von den MFC-WinInet-Klassen erkannt werden.
 
-Mit einem FTP-IIS-Server kommunizieren kann, müssen Sie zuerst eine Instanz von erstellen [CInternetSession](../../mfc/reference/cinternetsession-class.md), und erstellen Sie eine `CFtpConnection` Objekt. Erstellen Sie nie eine `CFtpConnection` direkt, sondern rufen [CInternetSession:: GetFTPConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), erstellt die `CFtpConnection` Objekt und gibt einen Zeiger darauf zurück.
+Um mit einem FTP-Internet Server zu kommunizieren, müssen Sie zuerst eine Instanz von [cinternetzession](../../mfc/reference/cinternetsession-class.md)erstellen und dann ein `CFtpConnection` -Objekt erstellen. Sie erstellen ein `CFtpConnection` -Objekt niemals direkt. Rufen Sie stattdessen [cinternetzession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)auf, das `CFtpConnection` das Objekt erstellt und einen Zeiger darauf zurückgibt.
 
-Weitere Informationen finden Sie `CFtpConnection` funktioniert mit den anderen Internet von MFC-Klassen finden Sie im Artikel [Internet zu programmieren, mit WinInet](../../mfc/win32-internet-extensions-wininet.md). Weitere Informationen über die Kommunikation mit den anderen beiden unterstützten Dienste, HTTP und Gopher, finden Sie unter den Klassen [CHttpConnection](../../mfc/reference/chttpconnection-class.md) und [CGopherConnection](../../mfc/reference/cgopherconnection-class.md).
+Weitere Informationen `CFtpConnection` zum Arbeiten mit den anderen MFC-Internet Klassen finden Sie im Artikel [Internet Programmierung mit WinInet](../../mfc/win32-internet-extensions-wininet.md). Weitere Informationen zur Kommunikation mit den anderen beiden unterstützten Diensten, http und Gopher, finden Sie unter den Klassen " [CHttpConnection](../../mfc/reference/chttpconnection-class.md) " und " [CGopherConnection](../../mfc/reference/cgopherconnection-class.md)".
 
 ## <a name="example"></a>Beispiel
 
-  Siehe das Beispiel in der [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) Übersicht über die Klasse.
+  Weitere Informationen finden Sie im Beispiel in der Übersicht über die [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) -Klasse.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -95,9 +95,9 @@ Weitere Informationen finden Sie `CFtpConnection` funktioniert mit den anderen I
 
 **Header:** afxinet.h
 
-##  <a name="cftpconnection"></a>  CFtpConnection::CFtpConnection
+##  <a name="cftpconnection"></a>CFtpConnection:: CFtpConnection
 
-Diese Memberfunktion wird aufgerufen, um das Erstellen einer `CFtpConnection` Objekt.
+Diese Member-Funktion wird aufgerufen, um `CFtpConnection` ein-Objekt zu erstellen.
 
 ```
 CFtpConnection(
@@ -119,41 +119,41 @@ CFtpConnection(
 ### <a name="parameters"></a>Parameter
 
 *pSession*<br/>
-Ein Zeiger auf den zugehörigen [CInternetSession](../../mfc/reference/cinternetsession-class.md) Objekt.
+Ein Zeiger auf das zugehörige [cinternetzession](../../mfc/reference/cinternetsession-class.md) -Objekt.
 
 *hConnected*<br/>
-Das Windows-Handle von der aktuellen Internet-Sitzung.
+Das Windows-Handle der aktuellen Internet Sitzung.
 
 *pstrServer*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem Namen des FTP-Server.
+Ein Zeiger auf eine Zeichenfolge, die den FTP-Servernamen enthält.
 
 *dwContext*<br/>
-Der Kontextbezeichner für den Vorgang. *DwContext* identifiziert des Vorgangs der vom zurückgegebenen Statusinformationen [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Der Standardwert ist auf 1 festgelegt. Allerdings können Sie eine bestimmten Kontext-ID für den Vorgang explizit zuweisen. Das Objekt und Arbeit ist, werden diese Kontext-ID zugeordnet werden.
+Der Kontext Bezeichner für den Vorgang. *dwcontext* identifiziert die von [cinternetzession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)zurückgegebenen Statusinformationen des Vorgangs. Der Standardwert wird auf 1 festgelegt. Sie können jedoch explizit eine bestimmte Kontext-ID für den Vorgang zuweisen. Das-Objekt und alle Aufgaben, die es durchführt, werden mit dieser Kontext-ID verknüpft.
 
 *pstrUserName*<br/>
-Zeiger auf eine auf Null endende Zeichenfolge, die den Namen des Benutzers für die Anmeldung angibt. Wenn der Wert NULL ist, ist die Standardeinstellung anonym.
+Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen des Benutzers angibt, der angemeldet werden soll. Wenn der Wert NULL ist, ist der Standardwert Anonymous.
 
 *pstrPassword*<br/>
-Ein Zeiger auf eine auf Null endende Zeichenfolge, die das Kennwort für die Anmeldung angibt. Wenn beide *PstrPassword* und *PstrUserName* NULL sind, die das anonymen Standard-Kennwort wird den e-Mail-Adresse des Benutzers. Wenn *PstrPassword* ist NULL (oder eine leere Zeichenfolge), aber *PstrUserName* ist nicht NULL ist, wird ein leeres Kennwort verwendet. Die folgende Tabelle beschreibt das Verhalten für die vier möglichen Einstellungen der *PstrUserName* und *PstrPassword*:
+Ein Zeiger auf eine mit NULL endende Zeichenfolge, die das Kennwort für die Anmeldung angibt. Wenn sowohl *pstraupassword* als auch *pstrusername* NULL sind, ist das anonyme Standard Kennwort der e-Mail-Name des Benutzers. Wenn *pstraupassword* NULL (oder eine leere Zeichenfolge) ist, aber *pstrusername* nicht NULL ist, wird ein leeres Kennwort verwendet. In der folgenden Tabelle wird das Verhalten der vier möglichen Einstellungen von *pstrusername* und *pstrinpassword*beschrieben:
 
-|*pstrUserName*|*pstrPassword*|FTP-Server gesendeten Benutzernamen|Kennwort für FTP-Server gesendet wird.|
+|*pstrUserName*|*pstrPassword*|An FTP-Server gesendeter Benutzername|Kennwort an FTP-Server gesendet|
 |--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL oder ""|NULL oder ""|"Anonym"|Die e-Mail-Adresse des Benutzers|
-|Nicht-NULL-Zeichenfolge|NULL oder ""|*pstrUserName*|" "|
-|NULL-nicht-NULL-Zeichenfolge|ERROR|ERROR||
-|Nicht-NULL-Zeichenfolge|Nicht-NULL-Zeichenfolge|*pstrUserName*|*pstrPassword*|
+|NULL oder ""|NULL oder ""|Anonymous|E-Mail-Name des Benutzers|
+|Zeichenfolge ungleich NULL|NULL oder ""|*pstrUserName*|" "|
+|NULL-Zeichenfolge ungleich NULL|Fehler|Fehler||
+|Zeichenfolge ungleich NULL|Zeichenfolge ungleich NULL|*pstrUserName*|*pstrPassword*|
 
 *nPort*<br/>
-Eine Zahl, die TCP/IP-Port für die Verwendung auf dem Server identifiziert.
+Eine Zahl, die den auf dem Server zu verwendenden TCP/IP-Port identifiziert.
 
 *bPassive*<br/>
-Gibt den passiven oder aktiven Modus für diese FTP-Sitzung an. Wenn Sie auf "true" festgelegt, die Win32-API wird *DwFlag* zu INTERNET_FLAG_PASSIVE.
+Gibt den passiven oder aktiven Modus für diese FTP-Sitzung an. Wenn der Wert auf true festgelegt ist, wird das Win32-API- *dwFlag* auf INTERNET_FLAG_PASSIVE festgelegt.
 
 ### <a name="remarks"></a>Hinweise
 
-Erstellen Sie nie eine `CFtpConnection` direkt. Rufen Sie stattdessen [CInternetSession:: GetFTPConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), erstellt die `CFptConnection` Objekt.
+Sie erstellen niemals direkt `CFtpConnection` ein-Objekt. Aufrufen Sie stattdessen [cinternetzession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), die das `CFptConnection` -Objekt erstellt.
 
-##  <a name="command"></a>  CFtpConnection::Command
+##  <a name="command"></a>CFtpConnection:: Command
 
 Sendet einen Befehl direkt an einen FTP-Server.
 
@@ -170,15 +170,15 @@ CInternetFile* Command(
 *pszCommand*<br/>
 Ein Zeiger auf eine Zeichenfolge, die den zu sendenden Befehl enthält.
 
-*eResponse*<br/>
+*eresponse*<br/>
 Bestimmt, ob eine Antwort vom FTP-Server erwartet wird. Kann einer der folgenden Werte sein:
 
-- `CmdRespNone` Es wird keine Antwort erwartet.
+- `CmdRespNone`Es wird keine Antwort erwartet.
 
-- `CmdRespRead` Es wird eine Antwort erwartet.
+- `CmdRespRead`Es wird eine Antwort erwartet.
 
 *dwFlags*<br/>
-Ein Wert mit den Flags, die diese Funktion steuern. Eine vollständige Liste finden Sie unter [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda).
+Ein Wert mit den Flags, die diese Funktion steuern. Eine komplette Liste finden Sie unter [ftpcommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw).
 
 *dwContext*<br/>
 Ein Zeiger auf einen Wert mit einem anwendungsdefinierten Wert, der zur Identifizierung des Anwendungskontexts in Rückrufen verwendet wird.
@@ -189,13 +189,13 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion emuliert die Funktionen des die [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda) Funktion, wie im Windows SDK beschrieben.
+Diese Member-Funktion emuliert die Funktionalität der [ftpcommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw) -Funktion, wie im Windows SDK beschrieben.
 
-Wenn ein Fehler auftritt, löst MFC eine Ausnahme vom Typ [CInternetException](../../mfc/reference/cinternetexception-class.md).
+Wenn ein Fehler auftritt, löst MFC eine Ausnahme vom Typ [cinternettexception](../../mfc/reference/cinternetexception-class.md)aus.
 
-##  <a name="createdirectory"></a>  CFtpConnection::CreateDirectory
+##  <a name="createdirectory"></a>CFtpConnection:: kreatedirectory
 
-Rufen Sie diese Memberfunktion zum Erstellen eines Verzeichnisses auf dem verbundenen Server.
+Rufen Sie diese Member-Funktion auf, um ein Verzeichnis auf dem verbundenen Server zu erstellen.
 
 ```
 BOOL CreateDirectory(LPCTSTR pstrDirName);
@@ -204,21 +204,21 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 ### <a name="parameters"></a>Parameter
 
 *pstrDirName*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem Namen des Verzeichnisses, das erstellt werden soll.
+Ein Zeiger auf eine Zeichenfolge, die den Namen des zu erstellenden Verzeichnisses enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Windows-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
+Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, kann die Windows-Funktion [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung `GetCurrentDirectory` um das aktuelle Arbeitsverzeichnis für diese Verbindung an den Server zu ermitteln. Gehen Sie nicht, dass Sie das Remotesystem in das Stammverzeichnis verbunden ist.
+Verwenden `GetCurrentDirectory` Sie, um das aktuelle Arbeitsverzeichnis für diese Verbindung mit dem Server zu ermitteln. Gehen Sie nicht davon aus, dass das Remote System eine Verbindung mit dem Stammverzeichnis hergestellt hat.
 
-Die `pstrDirName` Parameter kann es sich um eine teilweise oder ein vollqualifizierter Dateiname relativ zum aktuellen Verzeichnis. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als das Verzeichnistrennzeichen entweder Namen verwendet werden kann. `CreateDirectory` Verzeichnistrennzeichen Namen in die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.
+Der `pstrDirName` -Parameter kann entweder ein teilweise oder ein voll qualifizierter Dateiname sein, der relativ zum aktuellen Verzeichnis ist. Ein umgekehrter schräg\\Strich () oder ein Schrägstrich (/) kann als Verzeichnis Trennzeichen für beide Namen verwendet werden. `CreateDirectory`übersetzt die Verzeichnisnamen Trennzeichen in die entsprechenden Zeichen, bevor Sie verwendet werden.
 
-##  <a name="getcurrentdirectory"></a>  CFtpConnection:: GetCurrentDirectory
+##  <a name="getcurrentdirectory"></a>CFtpConnection:: GetCurrentDirectory
 
-Rufen Sie diese Memberfunktion zum Abrufen des Namens des aktuellen Verzeichnisses.
+Mit dieser Member-Funktion können Sie den Namen des aktuellen Verzeichnisses abrufen.
 
 ```
 BOOL GetCurrentDirectory(CString& strDirName) const;
@@ -231,32 +231,32 @@ BOOL GetCurrentDirectory(
 ### <a name="parameters"></a>Parameter
 
 *strDirName*<br/>
-Ein Verweis auf eine Zeichenfolge, die den Namen des Verzeichnisses erhalten sollen.
+Ein Verweis auf eine Zeichenfolge, die den Namen des Verzeichnisses empfängt.
 
 *pstrDirName*<br/>
-Ein Zeiger auf eine Zeichenfolge, die den Namen des Verzeichnisses erhalten sollen.
+Ein Zeiger auf eine Zeichenfolge, die den Namen des Verzeichnisses empfängt.
 
 *lpdwLen*<br/>
-Ein Zeiger auf ein DWORD, die folgende Informationen enthält:
+Ein Zeiger auf ein DWORD, das die folgenden Informationen enthält:
 
 |||
 |-|-|
-|Auf Eintrag|Die Größe des Puffers verweist *PstrDirName*.|
-|Bei der Rückgabe|Die Anzahl der Zeichen gespeichert, um *PstrDirName*. Wenn die Member-Funktion ein Fehler auftritt und ERROR_INSUFFICIENT_BUFFER, klicken Sie dann zurückgegeben wird *LpdwLen* enthält die Anzahl der Bytes, die die Anwendung reserviert werden muss, um die Zeichenfolge zu erhalten.|
+|Bei Eintrag|Die Größe des Puffers, auf den von *pstrindirname*verwiesen wird.|
+|Bei Rückgabe|Die Anzahl der in " *pstrindirname*" gespeicherten Zeichen. Wenn die Member-Funktion fehlschlägt und ERROR_INSUFFICIENT_BUFFER zurückgegeben wird, enthält *lpdwlen* die Anzahl von Bytes, die die Anwendung zuordnen muss, um die Zeichenfolge zu empfangen.|
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
+Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, kann die Win32-Funktion [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
 
 ### <a name="remarks"></a>Hinweise
 
-Um den Namen des Verzeichnisses stattdessen als eine URL zu erhalten, rufen [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).
+Wenn Sie stattdessen den Verzeichnisnamen als URL abrufen möchten, müssen Sie [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)aufrufen.
 
-Die Parameter *PstrDirName* oder *StrDirName* kann entweder teilweise qualifizierten Dateinamen, relativ zum aktuellen Verzeichnis oder voll qualifiziert. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als das Verzeichnistrennzeichen entweder Namen verwendet werden kann. `GetCurrentDirectory` Verzeichnistrennzeichen Namen in die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.
+Bei den Parametern " *pstrindirname* " oder " *Strauch Name* " kann es sich entweder um teilweise qualifizierte Dateinamen in Bezug auf das aktuelle Verzeichnis oder um einen voll qualifizierten Ein umgekehrter schräg\\Strich () oder ein Schrägstrich (/) kann als Verzeichnis Trennzeichen für beide Namen verwendet werden. `GetCurrentDirectory`übersetzt die Verzeichnisnamen Trennzeichen in die entsprechenden Zeichen, bevor Sie verwendet werden.
 
-##  <a name="getcurrentdirectoryasurl"></a>  CFtpConnection::GetCurrentDirectoryAsURL
+##  <a name="getcurrentdirectoryasurl"></a>CFtpConnection:: getcurrentdirector yasurl
 
-Rufen Sie diese Memberfunktion um den aktuellen Namen des Verzeichnisses als URL zu erhalten.
+Mit dieser Member-Funktion können Sie den Namen des aktuellen Verzeichnisses als URL abrufen.
 
 ```
 BOOL GetCurrentDirectoryAsURL(CString& strDirName) const;
@@ -269,32 +269,32 @@ BOOL GetCurrentDirectoryAsURL(
 ### <a name="parameters"></a>Parameter
 
 *strDirName*<br/>
-Ein Verweis auf eine Zeichenfolge, die den Namen des Verzeichnisses erhalten sollen.
+Ein Verweis auf eine Zeichenfolge, die den Namen des Verzeichnisses empfängt.
 
 *pstrDirName*<br/>
-Ein Zeiger auf eine Zeichenfolge, die den Namen des Verzeichnisses erhalten sollen.
+Ein Zeiger auf eine Zeichenfolge, die den Namen des Verzeichnisses empfängt.
 
 *lpdwLen*<br/>
-Ein Zeiger auf ein DWORD, die folgende Informationen enthält:
+Ein Zeiger auf ein DWORD, das die folgenden Informationen enthält:
 
 |||
 |-|-|
-|Auf Eintrag|Die Größe des Puffers verweist *PstrDirName*.|
-|Bei der Rückgabe|Die Anzahl der Zeichen gespeichert, um *PstrDirName*. Wenn die Member-Funktion ein Fehler auftritt und ERROR_INSUFFICIENT_BUFFER, klicken Sie dann zurückgegeben wird *LpdwLen* enthält die Anzahl der Bytes, die die Anwendung reserviert werden muss, um die Zeichenfolge zu erhalten.|
+|Bei Eintrag|Die Größe des Puffers, auf den von *pstrindirname*verwiesen wird.|
+|Bei Rückgabe|Die Anzahl der in " *pstrindirname*" gespeicherten Zeichen. Wenn die Member-Funktion fehlschlägt und ERROR_INSUFFICIENT_BUFFER zurückgegeben wird, enthält *lpdwlen* die Anzahl von Bytes, die die Anwendung zuordnen muss, um die Zeichenfolge zu empfangen.|
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
+Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, kann die Win32-Funktion [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
 
 ### <a name="remarks"></a>Hinweise
 
-`GetCurrentDirectoryAsURL` verhält sich wie [GetCurrentDirectory](#getcurrentdirectory)
+`GetCurrentDirectoryAsURL`verhält sich wie [GetCurrentDirectory](#getcurrentdirectory)
 
-Der Parameter *StrDirName* kann entweder teilweise qualifizierten Dateinamen, relativ zum aktuellen Verzeichnis oder voll qualifiziert. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als das Verzeichnistrennzeichen entweder Namen verwendet werden kann. `GetCurrentDirectoryAsURL` Verzeichnistrennzeichen Namen in die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.
+Der Parameter "" "" "" "" "" "" "" "" "" "" "" "". Ein umgekehrter schräg\\Strich () oder ein Schrägstrich (/) kann als Verzeichnis Trennzeichen für beide Namen verwendet werden. `GetCurrentDirectoryAsURL`übersetzt die Verzeichnisnamen Trennzeichen in die entsprechenden Zeichen, bevor Sie verwendet werden.
 
-##  <a name="getfile"></a>  CFtpConnection::GetFile
+##  <a name="getfile"></a>CFtpConnection:: GetFile
 
-Rufen Sie diese Memberfunktion zum Abrufen einer Datei von einem FTP-Server und auf dem lokalen Computer zu speichern.
+Mit dieser Member-Funktion können Sie eine Datei von einem FTP-Server abrufen und auf dem lokalen Computer speichern.
 
 ```
 BOOL GetFile(
@@ -309,56 +309,56 @@ BOOL GetFile(
 ### <a name="parameters"></a>Parameter
 
 *pstrRemoteFile*<br/>
-Ein Zeiger auf einen Null-terminierte Zeichenfolge, die mit dem Namen einer Datei vom FTP-Server abgerufen.
+Ein Zeiger auf eine NULL-terminierte Zeichenfolge mit dem Namen einer Datei, die vom FTP-Server abgerufen werden soll.
 
 *pstrLocalFile*<br/>
-Ein Zeiger auf eine Null-terminierte Zeichenfolge, die mit dem Namen der Datei, die auf dem lokalen System erstellt.
+Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen der Datei enthält, die auf dem lokalen System erstellt werden soll.
 
 *bFailIfExists*<br/>
-Gibt an, ob der Dateiname bereits von einer vorhandenen Datei verwendet werden kann. Wenn der Name der lokalen Datei bereits vorhanden ist, und dieser Parameter ist "true", `GetFile` ein Fehler auftritt. Andernfalls `GetFile` wird die vorhandene Kopie der Datei zu löschen.
+Gibt an, ob der Dateiname bereits von einer vorhandenen Datei verwendet werden kann. Wenn der Name der lokalen Datei bereits vorhanden ist und dieser Parameter true ist `GetFile` , schlägt fehl. `GetFile` Andernfalls löscht die vorhandene Kopie der Datei.
 
 *dwAttributes*<br/>
-Gibt die Attribute der Datei an. Dies kann eine beliebige Kombination der folgenden FILE_ATTRIBUTE_ * Flags sein.
+Gibt die Attribute der Datei an. Dabei kann es sich um eine beliebige Kombination der folgenden FILE_ATTRIBUTE_ *-Flags handeln.
 
-- FILE_ATTRIBUTE_ARCHIVE die Datei ist eine Archivdatei. Anwendungen verwenden Sie dieses Attribut zum Markieren von Dateien für die Sicherung oder zum Entfernen.
+- FILE_ATTRIBUTE_ARCHIVE bei der Datei handelt es sich um eine Archivdatei. Anwendungen verwenden dieses Attribut, um Dateien für die Sicherung oder Entfernung zu markieren.
 
-- FILE_ATTRIBUTE_COMPRESSED Datei oder des Verzeichnisses werden komprimiert. Bei einer Datei also Komprimierung aller Daten in der Datei komprimiert wird. Für ein Verzeichnis ist die Komprimierung der Standardwert für neu erstellte Dateien und Unterverzeichnisse.
+- FILE_ATTRIBUTE_COMPRESSED die Datei oder das Verzeichnis ist komprimiert. Bei einer Datei bedeutet die Komprimierung, dass alle Daten in der Datei komprimiert sind. Für ein Verzeichnis ist die Komprimierung der Standardwert für neu erstellte Dateien und Unterverzeichnisse.
 
 - FILE_ATTRIBUTE_DIRECTORY die Datei ist ein Verzeichnis.
 
-- FILE_ATTRIBUTE_NORMAL die Datei verfügt über keine anderen Attribute festgelegt. Dieses Attribut ist nur gültig, wenn allein verwendet wird. Alle anderen Dateiattribute überschreiben FILE_ATTRIBUTE_NORMAL:
+- FILE_ATTRIBUTE_NORMAL für die Datei sind keine anderen Attribute festgelegt. Dieses Attribut ist nur gültig, wenn es allein verwendet wird. Alle anderen Dateiattribute überschreiben FILE_ATTRIBUTE_NORMAL:
 
-- FILE_ATTRIBUTE_HIDDEN die Datei ist ausgeblendet. Es ist nicht in einer normalen Verzeichnisliste enthalten sein.
+- FILE_ATTRIBUTE_HIDDEN die Datei ist ausgeblendet. Er darf nicht in eine gewöhnliche Verzeichnis Auflistung eingeschlossen werden.
 
-- FILE_ATTRIBUTE_READONLY die Datei ist schreibgeschützt. Anwendungen kann nicht lesen die Datei, aber in ihn schreiben oder löschen.
+- FILE_ATTRIBUTE_READONLY die Datei ist schreibgeschützt. Anwendungen können die Datei lesen, aber nicht schreiben oder löschen.
 
-- FILE_ATTRIBUTE_SYSTEM, die Datei gehört, oder wird ausschließlich durch das Betriebssystem verwendet.
+- FILE_ATTRIBUTE_SYSTEM die Datei ist Teil von oder wird ausschließlich vom Betriebs System verwendet.
 
-- FILE_ATTRIBUTE_TEMPORARY die Datei wird für die temporäre Speicherung verwendet. Anwendungen sollten in die Datei schreiben, der nur, wenn es unbedingt erforderlich ist. Die meisten der die Daten der Datei verbleibt im Arbeitsspeicher, ohne auf die Medien geleert werden, da die Datei wird bald gelöscht werden.
+- FILE_ATTRIBUTE_TEMPORARY die Datei wird für den temporären Speicher verwendet. Anwendungen sollten nur dann in die Datei schreiben, wenn dies unbedingt erforderlich ist. Die meisten Daten der Datei verbleiben im Arbeitsspeicher, ohne auf die Medien geleert zu werden, da die Datei in Kürze gelöscht wird.
 
 *dwFlags*<br/>
-Gibt die Bedingungen, unter denen die Übertragung erfolgt. Dieser Parameter kann sein, eines der *DwFlags* Werte, die in beschriebenen [FtpGetFile](/windows/desktop/api/wininet/nf-wininet-ftpgetfilea) im Windows SDK.
+Gibt die Bedingungen an, unter denen die Übertragung erfolgt. Dieser Parameter kann ein beliebiger *dwFlags* -Wert sein, der in der Windows SDK unter [ftpgetfile](/windows/win32/api/wininet/nf-wininet-ftpgetfilew) beschrieben wird.
 
 *dwContext*<br/>
-Der Kontextbezeichner für den Dateiabruf. Finden Sie unter **"Hinweise"** für Weitere Informationen zu *DwContext*.
+Der Kontext Bezeichner für das Abrufen von Dateien. Weitere Informationen zu *dwcontext*finden Sie unter " **Hinweise** ".
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
+Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, kann die Win32-Funktion [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
 
 ### <a name="remarks"></a>Hinweise
 
-`GetFile` ist eine Routine auf oberster Ebene, die alle der Overhead beim Lesen einer Datei aus einem FTP-Server, und speichern es lokal verarbeitet. Anwendungen, die nur Daten abzurufen, oder schließen Kontrolle über die Dateiübertragung erfordern, sollten verwenden `OpenFile` und [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) stattdessen.
+`GetFile`ist eine allgemeine Routine, die den gesamten mehr Aufwand für das Lesen einer Datei von einem FTP-Server und die lokale Speicherung behandelt. Anwendungen, die nur Datei Daten abrufen oder die eine schließende Kontrolle über die Dateiübertragung benötigen, `OpenFile` sollten stattdessen und [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) verwenden.
 
-Wenn *DwFlags* FILE_TRANSFER_TYPE_ASCII, Übersetzung von Dateidaten auch konvertiert Steuerelement und Formatieren von Zeichen in Windows-Entsprechungen. Die Standard-Übertragung ist binären Modus, in dem die Datei im gleichen Format heruntergeladen, auf dem Server gespeichert werden.
+Wenn *dwFlags* den Wert FILE_TRANSFER_TYPE_ASCII hat, konvertiert die Übersetzung von Datei Daten auch Steuerzeichen und Formatierungszeichen in Windows-Entsprechungen. Die Standard Übertragung ist der binäre Modus, bei dem die Datei im gleichen Format wie auf dem Server heruntergeladen wird.
 
-Beide *PstrRemoteFile* und *PstrLocalFile* kann entweder teilweise qualifizierten Dateinamen, relativ zum aktuellen Verzeichnis oder voll qualifiziert. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als das Verzeichnistrennzeichen entweder Namen verwendet werden kann. `GetFile` Verzeichnistrennzeichen Namen in die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.
+Sowohl *pstrauremotefile* als auch *pstrinlocalfile* können entweder teilweise qualifizierte Dateinamen in Relation zum aktuellen Verzeichnis oder voll qualifiziert sein. Ein umgekehrter schräg\\Strich () oder ein Schrägstrich (/) kann als Verzeichnis Trennzeichen für beide Namen verwendet werden. `GetFile`übersetzt die Verzeichnisnamen Trennzeichen in die entsprechenden Zeichen, bevor Sie verwendet werden.
 
-Überschreiben der *DwContext* standardmäßig den Kontextbezeichner auf einen Wert Ihrer Wahl festgelegt. Der Kontextbezeichner wird diesem bestimmten Vorgang des zugeordnet der `CFtpConnection` von erstelltes Objekt seine [CInternetSession](../../mfc/reference/cinternetsession-class.md) Objekt. Der Wert wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Vorgangs bereitzustellen mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen zu den Kontextbezeichner.
+Überschreiben Sie den *dwcontext* -Standard, um den Kontext Bezeichner auf einen Wert Ihrer Wahl festzulegen. Der Kontext Bezeichner ist diesem speziellen Vorgang des Objekts zugeordnet `CFtpConnection` , das vom [cinternetzession](../../mfc/reference/cinternetsession-class.md) -Objekt erstellt wurde. Der Wert wird an [cinternetzession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zurückgegeben, um den Status für den Vorgang bereitzustellen, mit dem er identifiziert wird. Weitere Informationen finden [Sie im Artikel Internet First Steps: WinInet](../../mfc/wininet-basics.md) für weitere Informationen zum Kontext Bezeichner.
 
-##  <a name="openfile"></a>  CFtpConnection:: OpenFile
+##  <a name="openfile"></a>CFtpConnection:: OpenFile
 
-Rufen Sie diese Memberfunktion zum Öffnen einer Datei befindet sich auf einem FTP-Server zum Lesen oder schreiben.
+Mit dieser Member-Funktion können Sie eine Datei öffnen, die sich auf einem FTP-Server zum Lesen oder schreiben befindet.
 
 ```
 CInternetFile* OpenFile(
@@ -371,44 +371,44 @@ CInternetFile* OpenFile(
 ### <a name="parameters"></a>Parameter
 
 *pstrFileName*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der Datei, die geöffnet werden.
+Ein Zeiger auf eine Zeichenfolge, die den Namen der zu öffnenden Datei enthält.
 
 *dwAccess*<br/>
-Bestimmt, wie die Datei zugegriffen werden soll. Entweder GENERIC_READ oder GENERIC_WRITE, jedoch nicht beides kann sein.
+Bestimmt, wie auf die Datei zugegriffen wird. Kann entweder GENERIC_READ oder GENERIC_WRITE sein, aber nicht beides.
 
 *dwFlags*<br/>
-Gibt die Bedingungen, unter denen nachfolgende Übertragungen auftreten. Dies kann eine der folgenden FTP_TRANSFER_ *-Konstanten sein:
+Gibt die Bedingungen an, unter denen nachfolgende Übertragungen stattfinden. Dies kann eine der folgenden FTP_TRANSFER_ *-Konstanten sein:
 
-- FTP_TRANSFER_TYPE_ASCII der Datei werden übertragen, mit der Übertragungsmethode für FTP-ASCII (Typ A). Konvertiert-Steuerelement und Formatierungsinformationen für die lokalen Entsprechungen.
+- FTP_TRANSFER_TYPE_ASCII die Dateiübertragung mithilfe der FTP-ASCII-Übertragungsmethode (Typ A). Konvertiert Steuerelement-und Formatierungsinformationen in lokale Entsprechungen.
 
-- FTP_TRANSFER_TYPE_BINARY der Datei überträgt Daten, die mit der Übertragungsmethode bei Image (Typ I). Die Datei überträgt Daten genau wie vorhanden ist, ohne Änderungen. Dies ist die Standardmethode für die Übertragung.
+- FTP_TRANSFER_TYPE_BINARY die Datei überträgt Daten mithilfe der FTP-Abbild Übertragungsmethode (Typ I). Die Datei überträgt Daten genau so, wie Sie vorhanden sind, ohne Änderungen. Dies ist die Standard Übertragungsmethode.
 
 *dwContext*<br/>
-Der Kontextbezeichner für die Datei zu öffnen. Finden Sie unter **"Hinweise"** für Weitere Informationen zu *DwContext*.
+Der Kontext Bezeichner zum Öffnen der Datei. Weitere Informationen zu *dwcontext*finden Sie unter " **Hinweise** ".
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine [CInternetFile](../../mfc/reference/cinternetfile-class.md) Objekt.
+Ein Zeiger auf ein [CInternetFile](../../mfc/reference/cinternetfile-class.md) -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-`OpenFile` sollte in den folgenden Situationen verwendet werden:
+`OpenFile`sollte in den folgenden Situationen verwendet werden:
 
-- Eine Anwendung kann Daten, die jedoch, dass keine Daten in einer lokalen Datei gesendet und als Datei auf dem FTP-Server erstellt werden müssen. Einmal `OpenFile` öffnet eine Datei, die Anwendung verwendet [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write) auf die Daten einer FTP-Datei an den Server gesendet.
+- Eine Anwendung verfügt über Daten, die als Datei auf dem FTP-Server gesendet und erstellt werden müssen, diese Daten befinden sich jedoch nicht in einer lokalen Datei. Sobald `OpenFile` eine Datei geöffnet wird, verwendet die Anwendung [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write) , um die FTP-Datei Daten an den Server zu senden.
 
-- Eine Anwendung muss eine Datei vom Server abzurufen, und platzieren Sie sie in der Anwendung gesteuert Arbeitsspeicher, anstatt auf den Datenträger geschrieben. Die Anwendung verwendet [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) nach der Verwendung von `OpenFile` zum Öffnen der Datei.
+- Eine Anwendung muss eine Datei vom Server abrufen und in Anwendungs gesteuerten Speicher platzieren, anstatt Sie auf den Datenträger zu schreiben. Die Anwendung verwendet [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read) nach der `OpenFile` Verwendung von, um die Datei zu öffnen.
 
-- Eine Anwendung benötigt eine hochgradige Kontrolle über die Dateiübertragung. Die Anwendung kann z. B. einen Fortschritt angezeigt zeigt an, dass der Status, der den dateiübertragungsstatus beim Herunterladen einer Datei.
+- Eine Anwendung benötigt eine gute Steuerungsebene für eine Dateiübertragung. Die Anwendung kann z. b. ein Status-Steuerelement anzeigen, das den Fortschritt des Datei Übertragungs Status beim Herunterladen einer Datei anzeigt.
 
-Nach dem Aufruf `OpenFile` und bis zum Aufruf `CInternetConnection::Close`, die Anwendung kann nur aufrufen [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write), `CInternetConnection::Close`, oder [ CFtpFileFind:: FindFile](../../mfc/reference/cftpfilefind-class.md#findfile). Aufrufe von anderen FTP-Funktionen für die gleiche FTP-Sitzung fehl und den Fehlercode auf FTP_ETRANSFER_IN_PROGRESS festgelegt.
+Nach dem `OpenFile` Aufrufen von und `CInternetConnection::Close`bis zum Aufrufen von kann die Anwendung nur [CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write), `CInternetConnection::Close`oder [CFtpFileFind:: FindFile](../../mfc/reference/cftpfilefind-class.md#findfile)aufrufen. Aufrufe an andere FTP-Funktionen für dieselbe FTP-Sitzung schlagen fehl, und der Fehlercode wird auf FTP_ETRANSFER_IN_PROGRESS festgelegt.
 
-Die *PstrFileName* Parameter kann entweder einen teilweise qualifizierten Dateinamen in das aktuelle Verzeichnis relativen oder vollqualifizierten sein. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als das Verzeichnistrennzeichen entweder Namen verwendet werden kann. `OpenFile` übersetzt die Name-Verzeichnistrennzeichen in die entsprechenden Zeichen vor der Verwendung.
+Der *pstrinfilename* -Parameter kann entweder ein teilweise qualifizierter Dateiname relativ zum aktuellen Verzeichnis oder voll qualifiziert sein. Ein umgekehrter schräg\\Strich () oder ein Schrägstrich (/) kann als Verzeichnis Trennzeichen für beide Namen verwendet werden. `OpenFile`übersetzt die Verzeichnisnamen Trennzeichen vor der Verwendung in die entsprechenden Zeichen.
 
-Überschreiben der *DwContext* standardmäßig den Kontextbezeichner auf einen Wert Ihrer Wahl festgelegt. Der Kontextbezeichner wird diesem bestimmten Vorgang des zugeordnet der `CFtpConnection` von erstelltes Objekt seine [CInternetSession](../../mfc/reference/cinternetsession-class.md) Objekt. Der Wert wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Vorgangs bereitzustellen mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen zu den Kontextbezeichner.
+Überschreiben Sie den *dwcontext* -Standard, um den Kontext Bezeichner auf einen Wert Ihrer Wahl festzulegen. Der Kontext Bezeichner ist diesem speziellen Vorgang des Objekts zugeordnet `CFtpConnection` , das vom [cinternetzession](../../mfc/reference/cinternetsession-class.md) -Objekt erstellt wurde. Der Wert wird an [cinternetzession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zurückgegeben, um den Status für den Vorgang bereitzustellen, mit dem er identifiziert wird. Weitere Informationen finden [Sie im Artikel Internet First Steps: WinInet](../../mfc/wininet-basics.md) für weitere Informationen zum Kontext Bezeichner.
 
-##  <a name="putfile"></a>  CFtpConnection::PutFile
+##  <a name="putfile"></a>CFtpConnection::P utfile
 
-Rufen Sie diese Memberfunktion zum Speichern einer Datei auf einem FTP-Server.
+Mit dieser Member-Funktion können Sie eine Datei auf einem FTP-Server speichern.
 
 ```
 BOOL PutFile(
@@ -421,30 +421,30 @@ BOOL PutFile(
 ### <a name="parameters"></a>Parameter
 
 *pstrLocalFile*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der Datei, die aus dem lokalen System zu senden.
+Ein Zeiger auf eine Zeichenfolge, die den Namen der Datei enthält, die vom lokalen System gesendet werden soll.
 
 *pstrRemoteFile*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der Datei, die auf dem FTP-Server zu erstellen.
+Ein Zeiger auf eine Zeichenfolge, die den Namen der Datei enthält, die auf dem FTP-Server erstellt werden soll.
 
 *dwFlags*<br/>
-Gibt die Bedingungen, unter denen die Übertragung der Datei erfolgt. Die FTP_TRANSFER_ *-Konstanten, die in beschriebenen möglich [OpenFile](#openfile).
+Gibt die Bedingungen an, unter denen die Übertragung der Datei erfolgt. Kann eine der in [OpenFile](#openfile)beschriebenen FTP_TRANSFER_ *-Konstanten sein.
 
 *dwContext*<br/>
-Der Kontextbezeichner für die Platzierung der das. Finden Sie unter **"Hinweise"** für Weitere Informationen zu *DwContext*.
+Der Kontext Bezeichner zum Platzieren der Datei. Weitere Informationen zu *dwcontext*finden Sie unter " **Hinweise** ".
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
+Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, kann die Win32-Funktion [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
 
 ### <a name="remarks"></a>Hinweise
 
-`PutFile` ist eine Routine auf oberster Ebene, die vollständig von der Operationen, die für das Speichern einer Datei auf einem FTP-Server übernommen wird. Anwendungen, die nur Daten senden, oder erfordern eine bessere Kontrolle über die Dateiübertragung, sollten verwenden [OpenFile](#openfile) und [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write).
+`PutFile`ist eine allgemeine Routine, die alle Vorgänge behandelt, die mit dem Speichern einer Datei auf einem FTP-Server verbunden sind. Anwendungen, die nur Daten senden oder eine genauere Kontrolle über die Dateiübertragung benötigen, sollten [OpenFile](#openfile) und [CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write)verwenden.
 
-Überschreiben Sie den `dwContext`-Standard, um den Kontextbezeichner auf einen ausgewählten Wert festzulegen. Der Kontextbezeichner wird diesem bestimmten Vorgang des zugeordnet der `CFtpConnection` von erstelltes Objekt seine [CInternetSession](../../mfc/reference/cinternetsession-class.md) Objekt. Der Wert wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Vorgangs bereitzustellen mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen zu den Kontextbezeichner.
+Überschreiben Sie den `dwContext`-Standard, um den Kontextbezeichner auf einen ausgewählten Wert festzulegen. Der Kontext Bezeichner ist diesem speziellen Vorgang des Objekts zugeordnet `CFtpConnection` , das vom [cinternetzession](../../mfc/reference/cinternetsession-class.md) -Objekt erstellt wurde. Der Wert wird an [cinternetzession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zurückgegeben, um den Status für den Vorgang bereitzustellen, mit dem er identifiziert wird. Weitere Informationen finden [Sie im Artikel Internet First Steps: WinInet](../../mfc/wininet-basics.md) für weitere Informationen zum Kontext Bezeichner.
 
-##  <a name="remove"></a>  CFtpConnection:: Remove
+##  <a name="remove"></a>CFtpConnection:: Remove
 
-Rufen Sie diese Memberfunktion, um die angegebene Datei aus dem verbundenen Server zu löschen.
+Mit dieser Member-Funktion wird die angegebene Datei vom verbundenen Server gelöscht.
 
 ```
 BOOL Remove(LPCTSTR pstrFileName);
@@ -453,19 +453,19 @@ BOOL Remove(LPCTSTR pstrFileName);
 ### <a name="parameters"></a>Parameter
 
 *pstrFileName*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem Dateinamen entfernen.
+Ein Zeiger auf eine Zeichenfolge, die den Dateinamen enthält, der entfernt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
+Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, kann die Win32-Funktion [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
 
 ### <a name="remarks"></a>Hinweise
 
-Die *PstrFileName* Parameter kann entweder einen teilweise qualifizierten Dateinamen in das aktuelle Verzeichnis relativen oder vollqualifizierten sein. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als das Verzeichnistrennzeichen entweder Namen verwendet werden kann. Die `Remove` Funktion Verzeichnistrennzeichen Namen in die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.
+Der *pstrinfilename* -Parameter kann entweder ein teilweise qualifizierter Dateiname relativ zum aktuellen Verzeichnis oder voll qualifiziert sein. Ein umgekehrter schräg\\Strich () oder ein Schrägstrich (/) kann als Verzeichnis Trennzeichen für beide Namen verwendet werden. Die `Remove` -Funktion übersetzt die Verzeichnisnamen Trennzeichen in die entsprechenden Zeichen, bevor Sie verwendet werden.
 
-##  <a name="removedirectory"></a>  CFtpConnection::RemoveDirectory
+##  <a name="removedirectory"></a>CFtpConnection:: RemoveDirectory
 
-Rufen Sie diese Memberfunktion, um das angegebene Verzeichnis aus dem verbundenen Server zu entfernen.
+Mit dieser Member-Funktion wird das angegebene Verzeichnis vom verbundenen Server entfernt.
 
 ```
 BOOL RemoveDirectory(LPCTSTR pstrDirName);
@@ -474,21 +474,21 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 ### <a name="parameters"></a>Parameter
 
 *pstrDirName*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem Verzeichnis entfernt werden soll.
+Ein Zeiger auf eine Zeichenfolge, die das zu entfernende Verzeichnis enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
+Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, kann die Win32-Funktion [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung [GetCurrentDirectory](#getcurrentdirectory) zum aktuellen Verzeichnis des Servers zu bestimmen. Gehen Sie nicht, dass Sie das Remotesystem in das Stammverzeichnis verbunden ist.
+Verwenden Sie [GetCurrentDirectory](#getcurrentdirectory) , um das aktuelle Arbeitsverzeichnis des Servers zu bestimmen. Gehen Sie nicht davon aus, dass das Remote System eine Verbindung mit dem Stammverzeichnis hergestellt hat.
 
-Die *PstrDirName* Parameter kann entweder ein Teil- oder vollqualifizierter Dateiname relativ zum aktuellen Verzeichnis sein. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als das Verzeichnistrennzeichen entweder Namen verwendet werden kann. `RemoveDirectory` Verzeichnistrennzeichen Namen in die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.
+Der *pstrindirname* -Parameter kann entweder ein teilweise oder voll qualifizierter Dateiname relativ zum aktuellen Verzeichnis sein. Ein umgekehrter schräg\\Strich () oder ein Schrägstrich (/) kann als Verzeichnis Trennzeichen für beide Namen verwendet werden. `RemoveDirectory`übersetzt die Verzeichnisnamen Trennzeichen in die entsprechenden Zeichen, bevor Sie verwendet werden.
 
-##  <a name="rename"></a>  CFtpConnection::Rename
+##  <a name="rename"></a>CFtpConnection:: Rename
 
-Rufen Sie diese Memberfunktion zum Umbenennen der angegebenen Datei auf dem verbundenen Server.
+Mit dieser Member-Funktion können Sie die angegebene Datei auf dem verbundenen Server umbenennen.
 
 ```
 BOOL Rename(
@@ -499,22 +499,22 @@ BOOL Rename(
 ### <a name="parameters"></a>Parameter
 
 *pstrExisting*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem aktuellen Namen der Datei, die umbenannt werden.
+Ein Zeiger auf eine Zeichenfolge, die den aktuellen Namen der Datei enthält, die umbenannt werden soll.
 
-*pstrNew*<br/>
-Ein Zeiger auf eine Zeichenfolge mit dem neuen Dateinamen.
+*pstraunew*<br/>
+Ein Zeiger auf eine Zeichenfolge, die den neuen Namen der Datei enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
+Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, kann die Win32-Funktion [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
 
 ### <a name="remarks"></a>Hinweise
 
-Die *PstrExisting* und *PstrNew* Parameter können entweder einen teilweise qualifizierten Dateinamen in das aktuelle Verzeichnis relativen oder vollqualifizierten sein. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als das Verzeichnistrennzeichen entweder Namen verwendet werden kann. `Rename` Verzeichnistrennzeichen Namen in die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.
+Die Parameter *pstrexisting* und *pstrenew* können entweder ein teilweise qualifizierter Dateiname relativ zum aktuellen Verzeichnis oder voll qualifiziert sein. Ein umgekehrter schräg\\Strich () oder ein Schrägstrich (/) kann als Verzeichnis Trennzeichen für beide Namen verwendet werden. `Rename`übersetzt die Verzeichnisnamen Trennzeichen in die entsprechenden Zeichen, bevor Sie verwendet werden.
 
-##  <a name="setcurrentdirectory"></a>  CFtpConnection:: SetCurrentDirectory
+##  <a name="setcurrentdirectory"></a>CFtpConnection:: SetCurrentDirectory
 
-Rufen Sie diese Memberfunktion so ändern Sie in einem anderen Verzeichnis auf dem FTP-Server.
+Mit dieser Member-Funktion können Sie in ein anderes Verzeichnis auf dem FTP-Server wechseln.
 
 ```
 BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
@@ -523,17 +523,17 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
 ### <a name="parameters"></a>Parameter
 
 *pstrDirName*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem Namen des Verzeichnisses.
+Ein Zeiger auf eine Zeichenfolge, die den Namen des Verzeichnisses enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
+Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, kann die Win32-Funktion [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.
 
 ### <a name="remarks"></a>Hinweise
 
-Die *PstrDirName* Parameter kann entweder ein Teil- oder vollqualifizierter Dateiname relativ zum aktuellen Verzeichnis sein. Ein umgekehrter Schrägstrich (\\) oder einen Schrägstrich (/) als das Verzeichnistrennzeichen entweder Namen verwendet werden kann. `SetCurrentDirectory` Verzeichnistrennzeichen Namen in die entsprechenden Zeichen übersetzt, bevor sie verwendet werden.
+Der *pstrindirname* -Parameter kann entweder ein teilweise oder voll qualifizierter Dateiname relativ zum aktuellen Verzeichnis sein. Ein umgekehrter schräg\\Strich () oder ein Schrägstrich (/) kann als Verzeichnis Trennzeichen für beide Namen verwendet werden. `SetCurrentDirectory`übersetzt die Verzeichnisnamen Trennzeichen in die entsprechenden Zeichen, bevor Sie verwendet werden.
 
-Verwendung [GetCurrentDirectory](#getcurrentdirectory) zum aktuellen Arbeitsverzeichnis in einem FTP-Server zu ermitteln. Gehen Sie nicht, dass Sie das Remotesystem in das Stammverzeichnis verbunden ist.
+Verwenden Sie [GetCurrentDirectory](#getcurrentdirectory) , um das aktuelle Arbeitsverzeichnis eines FTP-Servers zu bestimmen. Gehen Sie nicht davon aus, dass das Remote System eine Verbindung mit dem Stammverzeichnis hergestellt hat.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,21 +1,21 @@
 ---
-title: Defaultbind (C++-COM-Attribut)
+title: Defaultbind (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultbind
 helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-ms.openlocfilehash: f0dd9101966f22253e6c4098c3c64d22d0a0cba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2f612c4869a62a84a6a2af99057ced365f875f2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148067"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490992"
 ---
 # <a name="defaultbind"></a>defaultbind
 
-Gibt an, die einfache, bindbare Eigenschaft, die das Objekt am besten darstellt.
+Gibt die einzelne, bindbare Eigenschaft an, die das Objekt am besten darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Gibt an, die einfache, bindbare Eigenschaft, die das Objekt am besten darstellt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Defaultbind** C++-Attribut hat die gleiche Funktionalität wie die [Defaultbind](/windows/desktop/Midl/defaultbind) MIDL-Attribut.
+Das **Defaultbind** C++ -Attribut verfügt über die gleiche Funktionalität wie das [Defaultbind](/windows/win32/Midl/defaultbind) -Attribut "mittlerer l".
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [bindbare](bindable.md) ein Beispiel zur Verwendung für **Defaultbind**.
+Ein Beispiel für die Verwendung von **Defaultbind**finden Sie im Beispiel für [bindbare](bindable.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,8 +39,8 @@ Siehe das Beispiel für [bindbare](bindable.md) ein Beispiel zur Verwendung für
 |-|-|
 |**Betrifft**|Schnittstellenmethode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

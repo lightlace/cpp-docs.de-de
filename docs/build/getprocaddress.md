@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-ms.openlocfilehash: 7b480314d195f50e4867f646208f2d9c70ce9b14
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 2d322cfe7d3bd60d8d702a226e181eb7b4ede963
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220805"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493254"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-Prozesse, die explizit Verknüpfen mit einer DLL-Aufrufs [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) zum Abrufen der Adresse einer exportierten Funktion in der DLL. Sie rufen die DLL-Funktion dann über den zurückgegebenen Funktionszeiger auf. **GetProcAddress** nimmt als Parameter das DLL-Modulhandle (entweder vom **LoadLibrary**, `AfxLoadLibrary`, oder **GetModuleHandle**), und Sie gelangen Sie entweder den Namen der gewünschten-Funktion zum Aufruf oder die Ordnungszahl für einen Export der Funktion.
+Prozesse, die explizit eine Verknüpfung mit einer DLL herstellen, rufen [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) auf, um die Adresse einer exportierten Funktion in der dll zu erhalten. Sie rufen die DLL-Funktion dann über den zurückgegebenen Funktionszeiger auf. **GetProcAddress** übernimmt als Parameter das dll-Modul handle (wird entweder von **LoadLibrary**, `AfxLoadLibrary`oder **GetModuleHandle**zurückgegeben) und übernimmt entweder den Namen der Funktion, die Sie aufrufen möchten, oder die Export Ordinalzahl der Funktion.
 
-Da Sie die DLL-Funktion über einen Zeiger aufrufen und zur Kompilierungszeit keine Typüberprüfung erfolgt, sollten Sie sicherstellen, dass die Parameter für die Funktion korrekt sind, damit Sie nicht den auf dem Stapel belegten Speicherbereich überschreiten und eine Zugriffsverletzung verursachen. Eine Möglichkeit die Typsicherheit zu gewährleisten besteht darin, sich die Funktionsprototypen der exportierten Funktionen anzusehen und entsprechende Typdefinitionen für die Funktionszeiger zu erstellen. Zum Beispiel:
+Da Sie die DLL-Funktion über einen Zeiger aufrufen und zur Kompilierungszeit keine Typüberprüfung erfolgt, sollten Sie sicherstellen, dass die Parameter für die Funktion korrekt sind, damit Sie nicht den auf dem Stapel belegten Speicherbereich überschreiten und eine Zugriffsverletzung verursachen. Eine Möglichkeit die Typsicherheit zu gewährleisten besteht darin, sich die Funktionsprototypen der exportierten Funktionen anzusehen und entsprechende Typdefinitionen für die Funktionszeiger zu erstellen. Beispiel:
 
 ```
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);
@@ -49,9 +49,9 @@ if (hDLL != NULL)
 }
 ```
 
-Wie Sie die Funktion sollen angeben, wenn der Aufruf von **GetProcAddress** abhängig, wie die DLL erstellt wurde.
+Wie Sie die gewünschte Funktion beim Aufrufen von **GetProcAddress** angeben, hängt davon ab, wie die dll erstellt wurde.
 
-Sie können die Exportordinalzahl nur ermitteln, wenn die DLL, die Sie zum Verknüpfen mit einer Moduldefinitionsdatei (.def) erstellt wurde und die Ordinalzahlen zusammen mit den Funktionen im aufgeführt sind die **EXPORTE** Abschnitt der DEF-Datei der DLL. Aufrufen von **GetProcAddress** Exportordinalzahl und hat den Namen der Funktion, mit einem Export ist etwas schneller, wenn die DLL zahlreiche exportierte Funktionen aufweist, da die Exportordinalzahlen dienen, wie die Tabelle Indizes in der DLLs zu exportieren. Mit einer Exportordinalzahl **GetProcAddress** Exportordinalzahl kann die Funktion direkt und nicht den angegebenen Namen auf den Funktionsnamen in der Exporttabelle der DLL verglichen. Sie sollten jedoch aufrufen **GetProcAddress** mit einer Exportordinalzahl nur dann, wenn Sie die Kontrolle über die Zuordnung der Ordinalzahlen zu den exportierten Funktionen in der DEF-Datei haben.
+Sie können nur die Export Ordinalzahl abrufen, wenn die dll, mit der Sie Verknüpfungen erstellen, mit einer Modul Definitionsdatei (. def) erstellt wurde und die Ordinalzahlen mit den Funktionen im Abschnitt **Exports** der DEF-Datei der dll aufgelistet werden. Der Aufruf von **GetProcAddress** mit einer Export Ordinalzahl (im Gegensatz zum Funktionsnamen) ist etwas schneller, wenn die dll viele exportierte Funktionen hat, da die Export Ordinalzahlen als Indizes für die Export Tabelle der dll fungieren. Mit einer Export Ordinalzahl kann **GetProcAddress** die Funktion direkt finden, anstatt den angegebenen Namen mit den Funktionsnamen in der Export Tabelle der dll zu vergleichen. Allerdings sollten Sie **GetProcAddress** nur mit einer Export Ordinalzahl aufrufen, wenn Sie die Zuweisung der Ordinalzahlen zu den exportierten Funktionen in der DEF-Datei steuern können.
 
 ## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?
 
@@ -63,7 +63,7 @@ Sie können die Exportordinalzahl nur ermitteln, wenn die DLL, die Sie zum Verkn
 
 - [LoadLibrary und AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
+- [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 - [Exportieren aus einer DLL mithilfe von DEF-Dateien](exporting-from-a-dll-using-def-files.md)
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFESTDEPENDENCY linker option
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-ms.openlocfilehash: 676059b8d398fd108d8f8fc163c85a3da3c657b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43239efe70cc555d1a7e03c5d67e99e40ccd480e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321591"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492710"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Angeben von Manifestabhängigkeiten)
 
@@ -23,25 +23,25 @@ ms.locfileid: "62321591"
 
 ## <a name="remarks"></a>Hinweise
 
-/ MANIFESTDEPENDENCY können Sie die Attribute angeben, die aufgenommen werden sollen die \<Dependency > im Abschnitt der Manifestdatei.
+/MANIFESTDEPENDENCY ermöglicht Ihnen das Angeben von Attributen, die in den \<Abhängigkeits > Abschnitt der Manifest-Datei eingefügt werden.
 
-Finden Sie unter ["/ manifest" (Create-Seite-an-Seite-Assemblymanifest)](manifest-create-side-by-side-assembly-manifest.md) Informationen zur Vorgehensweise: Erstellen Sie eine Manifestdatei.
+Weitere Informationen zum Erstellen einer Manifest-Datei finden Sie unter [/Manifest (erstellen](manifest-create-side-by-side-assembly-manifest.md) eines parallelen Assemblymanifests).
 
-Weitere Informationen zu den \<Abhängigkeit > Abschnitt finden Sie in der Manifestdatei, [Herausgeberkonfigurationsdateien](/windows/desktop/SbsCs/publisher-configuration-files).
+Weitere Informationen \<zum Abhängigkeits > Abschnitt der Manifest-Datei finden Sie unter [Verleger Konfigurationsdateien](/windows/win32/SbsCs/publisher-configuration-files).
 
-/ MANIFESTDEPENDENCY-Informationen können an den Linker auf zwei Arten übergeben werden:
+/MANIFESTDEPENDENCY-Informationen können auf zwei Arten an den Linker übermittelt werden:
 
-- Direkt in der Befehlszeile (oder in einer Antwortdatei) mit Linkerkommentar.
+- Direkt in der Befehlszeile (oder in einer Antwortdatei) mit/MANIFESTDEPENDENCY.
 
-- Über die [Kommentar](../../preprocessor/comment-c-cpp.md) Pragma.
+- Über das [comment](../../preprocessor/comment-c-cpp.md) -Pragma.
 
-Das folgende Beispiel zeigt einen Linkerkommentar Kommentar über Pragma übergeben,
+Das folgende Beispiel zeigt einen/MANIFESTDEPENDENCY-Kommentar, der über das Pragma übermittelt wird.
 
 ```cpp
 #pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")
 ```
 
-Dadurch ist in den folgenden Eintrag in der Manifestdatei:
+Dies führt zu folgendem Eintrag in der Manifest-Datei:
 
 ```xml
 <dependency>
@@ -51,21 +51,21 @@ Dadurch ist in den folgenden Eintrag in der Manifestdatei:
 </dependency>
 ```
 
-Die gleichen Linkerkommentar Kommentare können wie folgt in der Befehlszeile übergeben werden:
+Dieselben/MANIFESTDEPENDENCY-Kommentare können wie folgt an der Befehlszeile übermittelt werden:
 
 ```cmd
 "/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"
 ```
 
-Der Linker Linkerkommentar Kommentare sammeln, doppelte Einträge, und klicken Sie dann die resultierende XML-Zeichenfolge zur Manifestdatei hinzufügen.  Wenn der Linker sucht nach widersprüchliche Einträge, die Manifestdatei ist beschädigt, und die Anwendung kann nicht gestartet (ein Eintrag kann hinzugefügt werden im Ereignisprotokoll zu erfassen, der angibt, die Ursache des Fehlers).
+Der Linker sammelt/MANIFESTDEPENDENCY-Kommentare, entfernt doppelte Einträge und fügt dann die resultierende XML-Zeichenfolge der Manifest-Datei hinzu.  Wenn der Linker widersprüchliche Einträge findet, wird die Manifestressource beschädigt, und die Anwendung kann nicht gestartet werden (es kann ein Eintrag zum Ereignisprotokoll hinzugefügt werden, der die Fehlerquelle anzeigt).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
 
-1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
-1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Manifestdatei** Eigenschaftenseite.
+1. Wählen Sie die **Eigenschaften** > Seite der > linkermanifestressourcendatei aus.
 
-1. Ändern der **zusätzliche Manifestabhängigkeiten** Eigenschaft.
+1. Ändern Sie die Eigenschaft **zusätzliche Manifest-Abhängigkeiten** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: c0738128d20839046e0885e7489b494d84349e4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3155889f2fd4002286340ccec7f4a35d1a6a9c20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297267"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508799"
 ---
 # <a name="controls-mfc"></a>Steuerelemente (MFC)
 
@@ -49,7 +49,7 @@ In der folgenden Tabelle werden die einzelnen allgemeinen Windows-Steuerelemente
 
 ### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Allgemeine Windows-Steuerelemente und MFC-Klassen
 
-|Steuerelement|MFC-Klasse|Beschreibung|Neues in Windows 95|
+|Steuerelement|MFC-Klasse|Beschreibung|Neu in Windows 95|
 |-------------|---------------|-----------------|------------------------|
 |[Animation](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Zeigt aufeinander folgende Rahmen eines AVI-Videoclips an|Ja|
 |Schaltfläche|[CButton](../mfc/reference/cbutton-class.md)|Druckknöpfe, die eine Aktion auslösen; wird auch für Kontrollkästchen, Optionsfelder und Gruppenfelder verwendet|Nein|
@@ -76,7 +76,7 @@ In der folgenden Tabelle werden die einzelnen allgemeinen Windows-Steuerelemente
 |[QuickInfo](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Kleines Popupfenster, in dem der Zweck einer Symbolleisten-Schaltfläche oder eines anderen Werkzeugs beschrieben wird|Ja|
 |[Struktur](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Fenster, in dem eine hierarchische Liste von Elementen angezeigt wird|Ja|
 
-### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren?
 
 - Ein einzelnes Steuerelement: Links zu allen Steuerelementen finden Sie in der Tabelle [Allgemeine Windows-Steuerelemente und MFC-Klassen](#_core_windows_common_controls_and_mfc_classes) in diesem Thema
 
@@ -102,7 +102,7 @@ In der folgenden Tabelle werden die einzelnen allgemeinen Windows-Steuerelemente
 
 - [Beispiele](../mfc/common-control-sample-list.md)
 
-Informationen zu allgemeinen Windows-Steuerelementen in der Windows-SDK finden Sie unter [Standardsteuerelementen](/windows/desktop/Controls/common-controls-intro).
+Informationen zu allgemeinen Windows-Steuerelementen in der Windows SDK finden Sie unter [Allgemeine Steuerelemente](/windows/win32/Controls/common-controls-intro).
 
 ## <a name="see-also"></a>Siehe auch
 

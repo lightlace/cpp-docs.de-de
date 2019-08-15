@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4242
 ms.assetid: 8df742e1-fbf1-42f3-8e93-c0e1c222dc7e
-ms.openlocfilehash: e0582f3dfdd223b4571e361dc69fae1990aeea1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed145444d6eec583c448a3a49167ca1f82644f0b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401006"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510008"
 ---
 # <a name="compiler-warning-level-4-c4242"></a>Compilerwarnung (Stufe 4) C4242
 
-'Bezeichner': Konvertierung von 'type1' in 'type2', möglicher Datenverlust
+' Identifier ': Konvertierung von ' Typ1 ' in ' Typ2 ', möglicher Datenverlust
 
-Die Typen unterscheiden. Typkonvertierung kann zu Datenverlust führen. Der Compiler stellt die typkonvertierung.
+Die Typen unterscheiden sich. Die Typkonvertierung kann zu Datenverlusten führen. Der Compiler führt die Typkonvertierung durch.
 
 Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Weitere Informationen über C4242, finden Sie unter [Häufige Compilerfehler](/windows/desktop/WinProg64/common-compiler-errors).
+Weitere Informationen zu C4242 finden Sie unter [Häufige Compilerfehler](/windows/win32/WinProg64/common-compiler-errors).
 
-Im folgende Beispiel wird die C4242 generiert:
+Im folgenden Beispiel wird C4242 generiert:
 
 ```
 // C4242.cpp

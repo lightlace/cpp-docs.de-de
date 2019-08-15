@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: a7287b2e3011159573f44e9247e016d81d893491
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: c301766b64af7fc1523b39adad91d9b52a5e88f7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821071"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506594"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog-Klasse
 
@@ -258,11 +258,11 @@ Um ein `CFileDialog` -Objekt zu verwenden, erstellen Sie zunächst das- `CFileDi
 Nachdem Sie die Dialogfeld Steuerelemente initialisiert haben, können Sie die [CFileDialog::D omodal](#domodal) -Methode aufrufen, um das Dialogfeld anzuzeigen, sodass der Benutzer den Pfad und den Dateinamen eingeben kann. `DoModal`Gibt zurück, ob der Benutzer auf die Schaltfläche OK (IDOK) oder Abbrechen (IDCANCEL) geklickt hat. Wenn `DoModal` IDOK zurückgibt, können Sie eine `CFileDialog` der öffentlichen Member-Funktionen verwenden, um die Informationen abzurufen, die vom Benutzer eingefügt werden.
 
 > [!NOTE]
-> Unter Windows Vista oder höher verursachen mehrere Aufrufe von [ifiledialog:: SetFileTypes](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) einen Fehler. Der zweite `SetFileTypes` -Vorgang für eine beliebige Instanz `CFileDialog` von gibt E_UNEXPECTED in Windows Vista oder höher zurück. Einige `CFileDialog` Methoden Funktionsaufrufe `SetFileTypes`. Beispielsweise generieren zwei Aufrufe `CFileDialog::DoModal` von für die gleiche Instanz von eine `CFileDialog` [Assert](diagnostic-services.md#assert)-Methode.
+> Unter Windows Vista oder höher verursachen mehrere Aufrufe von [ifiledialog:: SetFileTypes](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) einen Fehler. Der zweite `SetFileTypes` -Vorgang für eine beliebige Instanz `CFileDialog` von gibt E_UNEXPECTED in Windows Vista oder höher zurück. Einige `CFileDialog` Methoden Funktionsaufrufe `SetFileTypes`. Beispielsweise generieren zwei Aufrufe `CFileDialog::DoModal` von für die gleiche Instanz von eine `CFileDialog` [Assert](diagnostic-services.md#assert)-Methode.
 
 `CFileDialog`umfasst mehrere geschützte Member, mit denen Sie die benutzerdefinierte Behandlung von Freigabe Verstößen, Dateinamen Validierung und Listenfeld-Änderungs Benachrichtigung durchführen können. Diese geschützten Member sind Rückruf Funktionen, die von den meisten Anwendungen nicht verwendet werden müssen, da die Standardbehandlung automatisch erfolgt. Meldungs Zuordnungs Einträge für diese Funktionen sind nicht erforderlich, da es sich hierbei um virtuelle Standardfunktionen handelt.
 
-Mit der Windows-Funktion [commdlgextendederror](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) können Sie feststellen, ob ein Fehler während der Initialisierung des Dialog Felds aufgetreten ist, und weitere Informationen zu diesem Fehler erhalten.
+Mit der Windows-Funktion [commdlgextendederror](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) können Sie feststellen, ob ein Fehler während der Initialisierung des Dialog Felds aufgetreten ist, und weitere Informationen zu diesem Fehler erhalten.
 
 Die Zerstörung von `CFileDialog` Objekten wird automatisch durchgeführt. [CDialog:: EndDialog](../../mfc/reference/cdialog-class.md#enddialog)muss nicht aufgerufen werden.
 
@@ -604,7 +604,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Rückgabewert
 
-IDOK oder IDCANCEL. Wenn IDCANCEL zurückgegeben wird, rufen Sie die Windows-Funktion [commdlgextendederror](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) auf, um zu bestimmen, ob ein Fehler aufgetreten ist.
+IDOK oder IDCANCEL. Wenn IDCANCEL zurückgegeben wird, rufen Sie die Windows-Funktion [commdlgextendederror](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) auf, um zu bestimmen, ob ein Fehler aufgetreten ist.
 
 IDOK und IDCANCEL sind Konstanten, die angeben, ob der Benutzer die Schaltfläche OK oder Abbrechen ausgewählt hat.
 
@@ -827,7 +827,7 @@ Der Zeiger auf das interne com-Objekt für `CFileDialog`das-Objekt. Es liegt in 
 
 Verwenden Sie diese Funktion nur unter Windows Vista oder höher mit einem Objekt, für das *bVistaStyle* auf true festgelegt ist. Wenn Sie diese Funktion verwenden, wenn *bVistaStyle* den Wert false hat, wird im Releasemodus NULL zurückgegeben und eine-Assertion im Debugmodus ausgelöst.
 
-Weitere Informationen `IFileDialogCustomize` zur-Schnittstelle finden Sie unter [IFileDialogCustomize](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
+Weitere Informationen `IFileDialogCustomize` zur-Schnittstelle finden Sie unter [IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
 
 ### <a name="example"></a>Beispiel
 
@@ -851,7 +851,7 @@ Der Zeiger auf das interne com-Objekt für `CFileDialog`das-Objekt. Es liegt in 
 
 Verwenden Sie diese Funktion nur unter Windows Vista oder höher mit einem Objekt, für das *bVistaStyle* auf true festgelegt ist. Diese Funktion gibt NULL zurück, `CFileDialog` wenn es sich nicht um ein **offenes** Dialogfeld handelt oder wenn *bVistaStyle* auf false festgelegt ist. In diesem abschließenden Fall gibt die Funktion nur NULL im Releasemodus zurück. im Debugmodus wird eine-Assertion ausgelöst.
 
-Weitere Informationen `IFileOpenDialog` zur-Schnittstelle finden Sie unter [IFileOpenDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog).
+Weitere Informationen `IFileOpenDialog` zur-Schnittstelle finden Sie unter [IFileOpenDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog).
 
 ### <a name="example"></a>Beispiel
 
@@ -875,7 +875,7 @@ Der Zeiger auf das interne com-Objekt für `CFileDialog`das-Objekt. Es liegt in 
 
 Verwenden Sie diese Funktion nur unter Windows Vista oder höher mit einem Objekt, für das *bVistaStyle* auf true festgelegt ist. Diese Funktion gibt NULL zurück, wenn `CFileDialog` es sich nicht um ein **Speicher** Dialogfeld handelt oder wenn *bVistaStyle* auf false festgelegt ist. In diesem abschließenden Fall gibt die Funktion nur NULL im Releasemodus zurück. im Debugmodus wird eine-Assertion ausgelöst.
 
-Weitere Informationen `IFileSaveDialog` zur-Schnittstelle finden Sie unter [IFileSaveDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog).
+Weitere Informationen `IFileSaveDialog` zur-Schnittstelle finden Sie unter [IFileSaveDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog).
 
 ### <a name="example"></a>Beispiel
 
@@ -1185,7 +1185,7 @@ virtual void OnFileNameChange();
 
 Das System sendet die CDN_SELCHANGE-Nachricht, wenn der Benutzer eine neue Datei oder einen neuen Ordner in der Datei Liste des Dialog Felds **Öffnen** oder **Speichern** unter auswählt. Überschreiben Sie diese Methode, wenn Sie in Reaktion auf diese Nachricht Aktionen ausführen möchten.
 
-Das System sendet diese Nachricht nur, wenn das Dialogfeld mit aktiviertem OFN_EXPLORER-Flag erstellt wurde. Weitere Informationen zur Benachrichtigung finden Sie unter [CDN_SELCHANGE](/windows/desktop/dlgbox/cdn-selchange). Weitere Informationen zum OFN_EXPLORER-Flag finden Sie in der [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) -Struktur und [in den Dialog Feldern "Öffnen" und "Speichern](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)unter".
+Das System sendet diese Nachricht nur, wenn das Dialogfeld mit aktiviertem OFN_EXPLORER-Flag erstellt wurde. Weitere Informationen zur Benachrichtigung finden Sie unter [CDN_SELCHANGE](/windows/win32/dlgbox/cdn-selchange). Weitere Informationen zum OFN_EXPLORER-Flag finden Sie in der [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) -Struktur und [in den Dialog Feldern "Öffnen" und "Speichern](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)unter".
 
 ##  <a name="onfilenameok"></a>CFileDialog:: onfileameok
 
@@ -1217,7 +1217,7 @@ virtual void OnFolderChange();
 
 Die Benachrichtigungs Meldung wird gesendet, wenn im Dialogfeld Öffnen oder speichern unter ein neuer Ordner geöffnet wird.
 
-Die Benachrichtigung wird nur gesendet, wenn das Dialogfeld mit dem OFN_EXPLORER-Stil erstellt wurde. Weitere Informationen zur Benachrichtigung finden Sie unter [CDN_FOLDERCHANGE](/windows/desktop/dlgbox/cdn-folderchange). Weitere Informationen zum OFN_EXPLORER-Format finden Sie in der [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) -Struktur und [in den Dialog Feldern "Öffnen" und "Speichern](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)unter".
+Die Benachrichtigung wird nur gesendet, wenn das Dialogfeld mit dem OFN_EXPLORER-Stil erstellt wurde. Weitere Informationen zur Benachrichtigung finden Sie unter [CDN_FOLDERCHANGE](/windows/win32/dlgbox/cdn-folderchange). Weitere Informationen zum OFN_EXPLORER-Format finden Sie in der [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) -Struktur und [in den Dialog Feldern "Öffnen" und "Speichern](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)unter".
 
 ##  <a name="oninitdone"></a>CFileDialog:: oninitdone
 
@@ -1231,7 +1231,7 @@ virtual void OnInitDone();
 
 Das System sendet diese Benachrichtigungs Meldung, wenn das System das Anordnen von Steuerelementen im Dialogfeld **Öffnen** oder **Speichern** unter abgeschlossen hat, um Platz für die Steuerelemente des untergeordneten Dialog Felds zu schaffen.
 
-Das System sendet dies nur, wenn das Dialogfeld mit dem OFN_EXPLORER-Stil erstellt wurde. Weitere Informationen zur Benachrichtigung finden Sie unter [CDN_INITDONE](/windows/desktop/dlgbox/cdn-initdone). Weitere Informationen zum OFN_EXPLORER-Format finden Sie in der [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) -Struktur und [in den Dialog Feldern "Öffnen" und "Speichern](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)unter".
+Das System sendet dies nur, wenn das Dialogfeld mit dem OFN_EXPLORER-Stil erstellt wurde. Weitere Informationen zur Benachrichtigung finden Sie unter [CDN_INITDONE](/windows/win32/dlgbox/cdn-initdone). Weitere Informationen zum OFN_EXPLORER-Format finden Sie in der [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) -Struktur und [in den Dialog Feldern "Öffnen" und "Speichern](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)unter".
 
 > [!NOTE]
 > Diese Funktion wird von den Dialogfeldern für Windows Vista oder spätere Formatvorlagen nicht unterstützt. Wenn Sie versuchen, diese Funktion in einem Dialogfeld für eine Formatvorlage in Windows Vista oder höher zu verwenden, wird [cnotsupportedexception](../../mfc/reference/cnotsupportedexception-class.md)ausgelöst.
@@ -1331,7 +1331,7 @@ virtual void OnTypeChange();
 
 Die Benachrichtigungs Meldung wird gesendet, wenn der Benutzer einen neuen Dateityp aus der Liste der Dateitypen im Dialogfeld "Öffnen" oder "Speichern unter" auswählt.
 
-Die Benachrichtigung wird nur gesendet, wenn das Dialogfeld mit dem OFN_EXPLORER-Stil erstellt wurde. Weitere Informationen zur Benachrichtigung finden Sie unter [CDN_TYPECHANGE](/windows/desktop/dlgbox/cdn-typechange). Weitere Informationen zum OFN_EXPLORER-Format finden Sie in der [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) -Struktur und [in den Dialog Feldern "Öffnen" und "Speichern](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)unter".
+Die Benachrichtigung wird nur gesendet, wenn das Dialogfeld mit dem OFN_EXPLORER-Stil erstellt wurde. Weitere Informationen zur Benachrichtigung finden Sie unter [CDN_TYPECHANGE](/windows/win32/dlgbox/cdn-typechange). Weitere Informationen zum OFN_EXPLORER-Format finden Sie in der [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) -Struktur und [in den Dialog Feldern "Öffnen" und "Speichern](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)unter".
 
 ##  <a name="removecontrolitem"></a>CFileDialog:: removecontrolitem
 
@@ -1594,7 +1594,7 @@ in Enthält den Namen der Vorlagen Ressource des Explorer `CFileDialog` -Objekts
 Das System verwendet nur eine der angegebenen Vorlagen. Das System bestimmt, welche Vorlage verwendet werden soll, basierend auf dem vorhanden sein des OFN_EXPLORER-Stils und dem Betriebssystem, auf dem die Anwendung ausgeführt wird. Wenn Sie sowohl eine nicht-Explorer-Vorlage als auch eine Explorer-Vorlage angeben, ist es einfach, Windows NT 3,51, Windows NT 4,0 und höhere Versionen und Windows 95 und höhere Versionen zu unterstützen.
 
 > [!NOTE]
-> Diese Funktion wird von den Dialogfeldern Windows Vista oder höher Formatierungs Datei nicht unterstützt. Wenn Sie versuchen, diese Funktion im Dialogfeld Format Datei in Windows Vista oder höher zu verwenden, wird [cnotsupportedexception](../../mfc/reference/cnotsupportedexception-class.md)ausgelöst. Eine Alternative ist die Verwendung eines angepassten Dialog Felds. Weitere Informationen zur Verwendung eines benutzerdefinierten `CFileDialog`finden Sie unter [IFileDialogCustomize](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
+> Diese Funktion wird von den Dialogfeldern Windows Vista oder höher Formatierungs Datei nicht unterstützt. Wenn Sie versuchen, diese Funktion im Dialogfeld Format Datei in Windows Vista oder höher zu verwenden, wird [cnotsupportedexception](../../mfc/reference/cnotsupportedexception-class.md)ausgelöst. Eine Alternative ist die Verwendung eines angepassten Dialog Felds. Weitere Informationen zur Verwendung eines benutzerdefinierten `CFileDialog`finden Sie unter [IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
 
 ##  <a name="startvisualgroup"></a>CFileDialog:: startvisualgroup
 
@@ -1628,7 +1628,7 @@ void UpdateOFNFromShellDialog();
 
 In Windows-Versionen vor Windows Vista wurde die Datenstruktur des [OpenFileName](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) -Members fortlaufend mit dem Zustand von `CFileDialog`synchronisiert. Alle Änderungen an der [m_ofn](#m_ofn) -Member-Variable haben direkt Auswirkungen auf den Status des Dialog Felds. Außerdem wurde durch alle Änderungen am Zustand des Dialog Felds die m_ofn-Member-Variable sofort aktualisiert.
 
-In Windows Vista oder höher wird die `m_ofn` Datenstruktur nicht automatisch aktualisiert. Um die Genauigkeit der Daten in der `m_ofn` Element Variablen sicherzustellen, sollten Sie die `UpdateOFNFromShellDialog` -Funktion aufrufen, bevor Sie auf die Daten zugreifen. Diese Funktion wird von Windows bei der Verarbeitung von [ifiledialog:: OnFileOk](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)automatisch aufgerufen.
+In Windows Vista oder höher wird die `m_ofn` Datenstruktur nicht automatisch aktualisiert. Um die Genauigkeit der Daten in der `m_ofn` Element Variablen sicherzustellen, sollten Sie die `UpdateOFNFromShellDialog` -Funktion aufrufen, bevor Sie auf die Daten zugreifen. Diese Funktion wird von Windows bei der Verarbeitung von [ifiledialog:: OnFileOk](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)automatisch aufgerufen.
 
 Weitere Informationen zur Verwendung der `CFileDialog` -Klasse unter Windows Vista oder höher finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).
 

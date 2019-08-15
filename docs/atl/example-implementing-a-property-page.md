@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 68b4aaef06e40a8ec7b00f9ba744d83ce3388da2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707101"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492385"
 ---
 # <a name="example-implementing-a-property-page"></a>Beispiel: Implementieren einer Eigenschaftenseite
 
@@ -71,7 +71,7 @@ Nach dem Generieren der Eigenschaftenseite müssen Sie der Dialogfeldressource, 
 Mit diesen Steuerelementen werden der Dateiname und der schreibgeschützte Status des Dokuments angezeigt.
 
 > [!NOTE]
->  Die Dialogfeldressource enthält weder einen Frame noch Befehlsschaltflächen und weist auch nicht Registerkartenformat auf, das Sie möglicherweise erwartet haben. Diese Features werden durch einen Eigenschaftenseitenframe bereitgestellt, z.B. durch den, der durch den Aufruf von [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe) erstellt wird.
+>  Die Dialogfeldressource enthält weder einen Frame noch Befehlsschaltflächen und weist auch nicht Registerkartenformat auf, das Sie möglicherweise erwartet haben. Diese Features werden durch einen Eigenschaftenseitenframe bereitgestellt, z.B. durch den, der durch den Aufruf von [OleCreatePropertyFrame](/windows/win32/api/olectl/nf-olectl-olecreatepropertyframe) erstellt wird.
 
 ##  <a name="vcconadding_message_handlers"></a> Hinzufügen von Meldungshandlern
 

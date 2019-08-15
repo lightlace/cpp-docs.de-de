@@ -14,12 +14,12 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: e7f0d4291aeb2e3d8dc1eac4dd08ef3e961468ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866095"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498529"
 ---
 # <a name="string-and-character-literals-c"></a>Zeichen folgen-und Zeichen Literale (C++)
 
@@ -216,7 +216,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 Universelle Zeichennamen können keine Werte im Ersatz Zeichencode punktbereich D800 und-DFFF codieren. Für Unicode-Ersatzzeichenpaare geben Sie den universellen Zeichennamen an, indem Sie `\UNNNNNNNN`verwenden, wobei NNNNNNNN ein achtstellige Codepunkt für das Zeichen ist. Der Compiler generiert ggf. ein Ersatz Zeichenpaar.
 
-In C++03 kann in der Sprache nur eine Teilmenge der Zeichen durch deren universelle Zeichennamen dargestellt werden und sind einige universelle Zeichennamen zulässig, die tatsächlich keine gültigen Unicode-Zeichen darstellen. Dieser Fehler wurde im Standard c++ 11 korrigiert. In C++11 können sowohl für Zeichen- und Zeichenfolgenliterale als auch für Bezeichner universelle Zeichennamen verwendet werden.  Weitere Informationen zu universellen Zeichennamen finden Sie unter [Character Sets](../cpp/character-sets.md). Weitere Informationen zu Unicode finden Sie unter [Unicode](https://msdn.microsoft.com/library/dd374081). Weitere Informationen zu Ersatzzeichenpaaren finden Sie im Artikel über [Ersatzzeichenpaare und zusätzliche Zeichen](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+In C++03 kann in der Sprache nur eine Teilmenge der Zeichen durch deren universelle Zeichennamen dargestellt werden und sind einige universelle Zeichennamen zulässig, die tatsächlich keine gültigen Unicode-Zeichen darstellen. Dieser Fehler wurde im Standard c++ 11 korrigiert. In C++11 können sowohl für Zeichen- und Zeichenfolgenliterale als auch für Bezeichner universelle Zeichennamen verwendet werden.  Weitere Informationen zu universellen Zeichennamen finden Sie unter [Character Sets](../cpp/character-sets.md). Weitere Informationen zu Unicode finden Sie unter [Unicode](/windows/win32/intl/unicode). Weitere Informationen zu Ersatzzeichenpaaren finden Sie im Artikel über [Ersatzzeichenpaare und zusätzliche Zeichen](/windows/win32/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Zeichen folgen Literale
 

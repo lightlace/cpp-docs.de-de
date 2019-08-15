@@ -26,14 +26,14 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: c02d1a636db75b4a26891a93fa20327b7430443d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13ac8ad139cc12310663fbd23a21a461cd207236
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156615"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499731"
 ---
-# <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
+# <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
 Konvertieren von Multibytezeichen in entsprechendes Breitzeichen.
 
@@ -56,7 +56,7 @@ int _mbtowc_l(
 ### <a name="parameters"></a>Parameter
 
 *wchar*<br/>
-Die Adresse eines Breitzeichens (Typ **"wchar_t"**).
+Adresse eines breit Zeichens (Type **wchar_t**).
 
 *mbchar*<br/>
 Adresse einer Sequenz von Bytes (ein Multibytezeichen).
@@ -69,11 +69,11 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn **Mbchar** nicht **NULL** und, wenn das Objekt, das *Mbchar* verweist, ein gültiges Multibytezeichen **Mbtowc** gibt die Länge in Byte des multibytezeichens. Wenn *Mbchar* ist **NULL** oder das Objekt, das es verweist ein Null-Breitzeichen-Zeichen (L '\0'), die Funktion gibt 0 zurück. Wenn das Objekt, das *Mbchar* verweist auf ein gültiges Multibytezeichen innerhalb der ersten nicht bildet *Anzahl* Zeichen gibt-1 zurück.
+Wenn **mbchar** nicht **null** ist und das Objekt, auf das *mbchar* verweist, ein gültiges Multibytezeichen bildet, gibt **mbtowc** die Länge des multibytezeichens in Byte zurück. Wenn *mbchar* **null** ist oder das Objekt, auf das es verweist, ein breit Zeichen-NULL Zeichen (L ' \ 0 ') ist, gibt die Funktion 0 zurück. Wenn das Objekt, auf das *mbchar* verweist, kein gültiges Multibytezeichen innerhalb der ersten *count* -Zeichen bildet, wird-1 zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Mbtowc** -Funktion konvertiert *Anzahl* oder weniger Bytes verweist *Mbchar*, wenn *Mbchar* nicht **NULL**, um ein entsprechendes Breitzeichen. **Mbtowc** speichert das resultierende Breitzeichen in *Wchar* Wenn *Wchar* nicht **NULL**. **Mbtowc** untersucht nicht mehr als **MB_CUR_MAX** Bytes. **Mbtowc** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige Verhalten. **_mbtowc_l** ist identisch, außer dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **mbtowc** -Funktion konvertiert *Anzahl* oder weniger Bytes, auf die *mbchar*zeigt, wenn *mbchar* nicht **null**ist, auf ein entsprechendes breit Zeichen. **mbtowc** speichert das resultierende breit Zeichen bei *WCHAR,* Wenn *WCHAR* nicht **null**ist. **mbtowc** untersucht nicht mehr als **MB_CUR_MAX** bytes. **mbtowc** verwendet das aktuelle Gebiets Schema für vom Gebiets Schema abhängiges Verhalten. **_mbtowc_l** ist beinahe identisch, verwendet jedoch stattdessen das übergebene Gebiets Schema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -147,7 +147,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>Siehe auch
 
 [Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Locale](../../c-runtime-library/locale.md)<br/>
 [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

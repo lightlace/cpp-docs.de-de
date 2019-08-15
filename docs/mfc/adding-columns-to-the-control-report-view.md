@@ -8,28 +8,28 @@ helpviewer_keywords:
 - columns [MFC], adding to CListCtrl
 - CListCtrl class [MFC], report view
 ms.assetid: 7392c0d7-f8a5-4e7b-9ae7-b53dc9dd80ae
-ms.openlocfilehash: d414c5f597628576916c5091fa63a4bf673c8c44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9321a582f223269ee998dccd01721f47d90eb7fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394822"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509344"
 ---
 # <a name="adding-columns-to-the-control-report-view"></a>Hinzufügen von Spalten zum Steuerelement (Berichtsansicht)
 
 > [!NOTE]
->  Das folgende Verfahren gilt entweder eine [CListView](../mfc/reference/clistview-class.md) oder [CListCtrl](../mfc/reference/clistctrl-class.md) Objekt.
+>  Das folgende Verfahren gilt für ein [CListView](../mfc/reference/clistview-class.md) -oder [CListCtrl](../mfc/reference/clistctrl-class.md) -Objekt.
 
-Wenn ein Listensteuerelement in der Berichtsansicht ist, werden Spalten angezeigt, die eine Methode zum Organisieren von verschiedenen Unterelemente für jedes Listenelement-Steuerelement. Dieser Organisation wird durch eine direkte Kommunikation zwischen einer Spalte im Steuerelement und dem Unterelement des Listenelements, an das Steuerelement implementiert. Weitere Informationen über Unterelemente finden Sie unter [Hinzufügen von Elementen zum Steuerelement](../mfc/adding-items-to-the-control.md). Ein Beispiel für ein Listensteuerelement, in der Berichtsansicht wird von der Ansicht in Windows 95 und Windows 98-Explorer bereitgestellt. Die erste Spalte listet die Ordner, Dateisymbole und Bezeichnungen. Andere Spalten enthalten die Dateigröße, Dateityp, Datum der letzten Änderung und So weiter.
+Wenn sich ein Listen Steuerelement in der Berichtsansicht befindet, werden Spalten angezeigt, die eine Methode zum Organisieren der verschiedenen unter Elemente der einzelnen Listen Steuerelement Elemente bereitstellen. Diese Organisation wird mit einer eins-zu-eins-Entsprechung zwischen einer Spalte im Listen Steuerelement und dem zugehörigen Unterelement des Listen Steuerungs Elements implementiert. Weitere Informationen zu unter [Elementen finden Sie unter Hinzufügen von Elementen zum-Steuer](../mfc/adding-items-to-the-control.md)Element. Ein Beispiel für ein Listen Steuerelement in der Berichtsansicht wird von der Detailansicht in Windows 95 und Windows 98 Explorer bereitgestellt. In der ersten Spalte werden Ordner, Dateisymbole und Bezeichnungen aufgelistet. Andere Spalten Listen Dateigröße, Dateityp, Datum der letzten Änderung usw.
 
-Auch wenn die Spalten einem Listensteuerelement zu einem beliebigen Zeitpunkt hinzugefügt werden können, die Spalten sind sichtbar nur, wenn das Steuerelement enthält die `LVS_REPORT` Formatbit aktiviert.
+Obwohl Spalten jederzeit zu einem Listen Steuerelement hinzugefügt werden können, sind die Spalten nur sichtbar, wenn das Format Bit für `LVS_REPORT` das Steuerelement aktiviert ist.
 
-Jede Spalte besitzt einen zugehörigen Headerelement (finden Sie unter [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) Objekt, das die Spalte "Bezeichnungen" und ermöglicht es Benutzern, die Größe der Spalte ändern.
+Jede Spalte verfügt über ein zugeordnetes Header Element (siehe [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)), das die Spalte bezeichnet und es Benutzern ermöglicht, die Größe der Spalte zu ändern.
 
-Wenn Ihr Listensteuerelement eine Berichtsansicht unterstützt, müssen Sie eine Spalte für jedes mögliche Unterelement in einem Steuerelement ein Element hinzuzufügen. Fügen Sie eine Spalte mit dem Vorbereiten einer [LV_COLUMN](/windows/desktop/api/commctrl/ns-commctrl-taglvcolumna) Struktur und durch einen Aufruf von [InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn). Nach dem Hinzufügen der erforderlichen Spalten (auch als Header-Elemente "bezeichnet), können neu angeordnet werden mithilfe von Memberfunktionen und Stile, die zu dem eingebetteten Kopfzeilen-Steuerelement gehören. Weitere Informationen finden Sie unter [Anordnen von Elementen im Headersteuerelement](../mfc/ordering-items-in-the-header-control.md).
+Wenn das Listen Steuerelement eine Berichtsansicht unterstützt, müssen Sie eine Spalte für jedes mögliche Unterelement in einem Listen Steuerelement hinzufügen. Fügen Sie eine Spalte hinzu, indem Sie eine [LVCOLUMN](/windows/win32/api/commctrl/ns-commctrl-lvcolumnw) -Struktur vorbereiten und dann [InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn)aufzurufen. Nachdem Sie die erforderlichen Spalten hinzugefügt haben (manchmal auch als Header Elemente bezeichnet), können Sie Sie mithilfe von Element Funktionen und Stilen, die zum eingebetteten Header-Steuerelement gehören, neu anordnen. Weitere Informationen finden Sie unter [Anordnen von Elementen im Header Steuer](../mfc/ordering-items-in-the-header-control.md)Element.
 
 > [!NOTE]
->  Wenn das Strukturelement-Steuerelement erstellt wird, mit der **LVS_NOCOLUMNHEADER** Stil, jeder Versuch, fügen Sie Spalten ignoriert werden.
+>  Wenn das Listen Steuerelement mit dem **LVS_NOCOLUMNHEADER** -Stil erstellt wird, werden alle Versuche, Spalten einzufügen, ignoriert.
 
 ## <a name="see-also"></a>Siehe auch
 

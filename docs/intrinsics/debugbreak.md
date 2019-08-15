@@ -8,14 +8,14 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: 97932dfe0e187a13b72ae5fe70d761224721c3ff
-ms.sourcegitcommit: 1acb6755e11379026a96f63facac4d33f4dc47ae
+ms.openlocfilehash: ed75b94e8bf0aca9369c56f23e8ff00ea6953642
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314255"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509499"
 ---
-# <a name="debugbreak"></a>__debugbreak
+# <a name="__debugbreak"></a>__debugbreak
 
 **Microsoft-spezifisch**
 
@@ -35,12 +35,12 @@ void __debugbreak();
 
 ## <a name="remarks"></a>Hinweise
 
-Die `__debugbreak` systeminterne Compilerfunktion ähnelt ["DebugBreak"](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), ist eine portable Win32-Methode, die einen Haltepunkt bewirkt.
+Der `__debugbreak` systeminterne Compiler ist, ähnlich wie bei der [Debugger](/windows/win32/api/debugapi/nf-debugapi-debugbreak), eine Portable Win32-Methode, um einen Breakpoint auszulösen.
 
 > [!NOTE]
->  Beim Kompilieren mit **"/ CLR"** , eine Funktion, `__debugbreak` in MSIL kompiliert wird. `asm int 3` bewirkt, dass eine Funktion in systemeigenem Code kompiliert wird. Weitere Informationen finden Sie unter [__asm](../assembler/inline/asm.md).
+>  Beim Kompilieren mit **/CLR**wird eine Funktion, `__debugbreak` die enthält, in MSIL kompiliert. `asm int 3` bewirkt, dass eine Funktion in systemeigenem Code kompiliert wird. Weitere Informationen finden Sie unter [__asm](../assembler/inline/asm.md).
 
-Zum Beispiel:
+Beispiel:
 
 ```
 main() {
@@ -60,7 +60,7 @@ main() {
 
 auf einem x86-Computer.
 
-Auf ARM64 die `__debugbreak` systemintern in die Anweisung kompiliert `brk #0xF000`.
+Auf ARM64 wird der `__debugbreak` systeminterne in die Anweisung `brk #0xF000`kompiliert.
 
 Diese Routine ist nur als systeminterne Funktion verfügbar.
 

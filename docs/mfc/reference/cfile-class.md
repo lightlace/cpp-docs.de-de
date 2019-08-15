@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: a258773633f503dc0638d76509953b3410dafbd8
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375757"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506587"
 ---
 # <a name="cfile-class"></a>CFile-Klasse
 
@@ -166,7 +166,7 @@ virtual void Abort();
 
 Wenn Sie die Datei vor dem Zerstören des Objekts nicht geschlossen haben, wird Sie vom debugtor für Sie geschlossen.
 
-Bei der Behandlung von `CFile::Abort` Ausnahmen unter `CFile::Close` scheidet sich von in zweierlei Hinsicht von. Erstens löst die `Abort` Funktion bei Fehlern keine Ausnahme aus, da Fehler von `Abort`ignoriert werden. Zweitens wird nicht bestätigt, wenn die Datei nicht geöffnet oder zuvor geschlossen wurde.  `Abort`
+Bei der Behandlung von `CFile::Abort` Ausnahmen unter `CFile::Close` scheidet sich von in zweierlei Hinsicht von. Erstens löst die `Abort` Funktion bei Fehlern keine Ausnahme aus, da Fehler von `Abort`ignoriert werden. Zweitens wird nicht bestätigt, wenn die Datei nicht geöffnet oder zuvor geschlossen wurde. `Abort`
 
 Wenn Sie **New** verwendet haben, um `CFile` das Objekt auf dem Heap zuzuordnen, müssen Sie es nach dem Schließen der Datei löschen. `Abort`legt `m_hFile` auf`CFile::hFileNull`fest.
 
@@ -382,7 +382,7 @@ Der Titel der zugrunde liegenden Datei.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) auf, um den Titel der Datei abzurufen. Bei erfolgreicher Ausführung gibt die Methode die Zeichenfolge zurück, die das System verwendet, um dem Benutzer den Dateinamen anzuzeigen. Andernfalls ruft die-Methode [pathfindfilename](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) auf, um den Dateinamen (einschließlich der Dateierweiterung) der zugrunde liegenden Datei abzurufen. Dies bedeutet, dass die Dateierweiterung nicht immer in der zurückgegebenen Datei Titel Zeichenfolge enthalten ist. Weitere Informationen finden Sie unter " [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) " und " [pathfindfilename](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) " in der Windows SDK.
+Diese Methode ruft [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) auf, um den Titel der Datei abzurufen. Bei erfolgreicher Ausführung gibt die Methode die Zeichenfolge zurück, die das System verwendet, um dem Benutzer den Dateinamen anzuzeigen. Andernfalls ruft die-Methode [pathfindfilename](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) auf, um den Dateinamen (einschließlich der Dateierweiterung) der zugrunde liegenden Datei abzurufen. Dies bedeutet, dass die Dateierweiterung nicht immer in der zurückgegebenen Datei Titel Zeichenfolge enthalten ist. Weitere Informationen finden Sie unter " [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) " und " [pathfindfilename](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) " in der Windows SDK.
 
 Um den gesamten Pfad der Datei zurückzugeben, einschließlich des Namens, nennen Sie [GetFilePath](#getfilepath). Um nur den Namen der Datei zurückzugeben, nennen Sie [GetFileName](#getfilename).
 
@@ -613,7 +613,7 @@ In der folgenden Tabelle werden die möglichen Ergebnisse `Open`von beschrieben.
 
 ##  <a name="operator_handle"></a>CFile:: Operator handle
 
-Verwenden Sie diesen Operator, um ein Handle an `CFile` ein-Objekt an Funktionen wie "read [fileex](/windows/desktop/api/fileapi/nf-fileapi-readfileex) " und " [GetFileTime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime) " zu übergeben, die einen `HANDLE`erwarten.
+Verwenden Sie diesen Operator, um ein Handle an `CFile` ein-Objekt an Funktionen wie "read [fileex](/windows/win32/api/fileapi/nf-fileapi-readfileex) " und " [GetFileTime](/windows/win32/api/fileapi/nf-fileapi-getfiletime) " zu übergeben, die einen `HANDLE`erwarten.
 
 ```
 operator HANDLE() const;

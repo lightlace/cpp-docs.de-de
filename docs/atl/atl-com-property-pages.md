@@ -9,35 +9,35 @@ helpviewer_keywords:
 - COM objects, ATL
 - ATL property pages
 ms.assetid: 663c7caa-2e5e-4b5c-b8ea-fd434ceb1654
-ms.openlocfilehash: d374569c6c3e9bb63b6b026d2b0f86226d158f36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6f549388e69e9549c64645de758d92822205fd5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252454"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491860"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM-Eigenschaftenseiten
 
-Com-Eigenschaftenseiten bieten eine Benutzeroberfläche zum Festlegen der Eigenschaften (oder Aufrufen der Methoden) von ein oder mehrere COM-Objekten. Eigenschaftenseiten werden häufig von ActiveX-Steuerelementen verwendet, für die Bereitstellung umfassender Benutzeroberflächen, mit die Eigenschaften des Steuerelements zur Entwurfszeit festgelegt werden können.
+COM-Eigenschaften Seiten stellen eine Benutzeroberfläche zum Festlegen der Eigenschaften (oder des Aufrufs der Methoden) von einem oder mehreren COM-Objekten bereit. Eigenschaften Seiten werden häufig von ActiveX-Steuerelementen für die Bereitstellung umfassender Benutzeroberflächen verwendet, mit denen Steuerelement Eigenschaften zur Entwurfszeit festgelegt werden können.
 
-Eigenschaftenseiten sind COM-Objekte, implementieren die [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) oder [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) Schnittstelle. Diese Schnittstellen bieten Methoden, mit denen die Seite zugeordnet werden können. eine `site` (ein COM-Objekt, das den Container der Seite darstellt) und eine Reihe von *Objekte* (COM-Objekte, deren Methoden, als Reaktion auf Änderungen aufgerufen werden, vom Benutzer vorgenommene der Eigenschaftenseite auf). Die Seite Eigenschaftencontainer ist verantwortlich für das Aufrufen von Methoden für die Schnittstelle der Eigenschaftenseite auf die Seite informiert, wenn es sich bei ein- oder Ausblenden der Benutzeroberfläche und beim Anwenden die Änderungen durch den Benutzer an der zugrunde liegenden Objekten vorgenommen.
+Eigenschaften Seiten sind COM-Objekte, die die [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) -oder [IPropertyPage2](/windows/win32/api/ocidl/nn-ocidl-ipropertypage2) -Schnittstelle implementieren. Diese Schnittstellen stellen Methoden bereit, die es ermöglichen, dass die `site` Seite einem (einem COM-Objekt, das den Container der Seite darstellt) und einer Anzahl von *Objekten* (COM-Objekte, deren Methoden aufgerufen werden, als Reaktion auf Änderungen durch den Benutzer des Eigenschaften Seite). Der Container für die Eigenschaften Seite ist für das Aufrufen von Methoden auf der Eigenschaften Seiten Schnittstelle zuständig, um der Seite mitzuteilen, wann die Benutzeroberfläche angezeigt oder ausgeblendet werden soll und wann die vom Benutzer vorgenommenen Änderungen auf die zugrunde liegenden Objekte angewendet werden sollen.
 
-Jede Eigenschaftenseite kann vollständig unabhängig von der Objekte erstellt werden, dessen Eigenschaften festgelegt werden können. Alles ist auf einer Eigenschaftenseite muss zu einer bestimmten Schnittstelle (oder eine Gruppe von Schnittstellen) und eine Benutzeroberfläche bereitstellen, für das Aufrufen von Methoden in dieser Schnittstelle.
+Jede Eigenschaften Seite kann vollständig unabhängig von den Objekten erstellt werden, deren Eigenschaften festgelegt werden können. Eine Eigenschaften Seite muss lediglich eine bestimmte Schnittstelle (oder einen Satz von Schnittstellen) verstehen und eine Benutzeroberfläche zum Aufrufen von Methoden für diese Schnittstelle bereitstellen.
 
-Weitere Informationen finden Sie unter [Eigenschaftenblätter und Eigenschaftenseiten](/windows/desktop/com/property-sheets-and-property-pages) im Windows SDK.
+Weitere Informationen finden Sie unter [Eigenschaften Blätter und Eigenschaften Seiten](/windows/win32/com/property-sheets-and-property-pages) im Windows SDK.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 [Festlegen der Eigenschaftenseiten](../atl/specifying-property-pages.md)<br/>
-Listet die Schritte zum Festlegen der Eigenschaftenseiten für ein Steuerelement, und zeigt eine Beispielklasse.
+Listet die Schritte zum Angeben von Eigenschaften Seiten für die Steuerung auf und zeigt eine Beispiel Klasse an.
 
 [Implementieren der Eigenschaftenseiten](../atl/implementing-property-pages.md)<br/>
-Listet die Schritte zum Implementieren der Eigenschaftenseiten, einschließlich Methoden zum Überschreiben. Führt Sie durch ein vollständiges Beispiel für das Beispielprogramm ATLPages Grundlage.
+Listet die Schritte zum Implementieren von Eigenschaften Seiten, einschließlich Methoden zum überschreiben. Führt Sie durch ein umfassendes Beispiel, das auf dem ATLPages-Beispielprogramm basiert.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
 [ATLPages-Beispiel](../overview/visual-cpp-samples.md)<br/>
-Der Beispiel-Zusammenfassung für das ATLPages-Beispiel implementiert eine Eigenschaft mit `IPropertyPageImpl`.
+Das Beispiel Abstract für das ATLPages-Beispiel, das eine Eigenschaften Seite mithilfe `IPropertyPageImpl`von implementiert.
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Enthält Links zu konzeptionellen Themen über die Programmierung mit der Active Template Library.

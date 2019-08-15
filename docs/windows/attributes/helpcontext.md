@@ -1,21 +1,21 @@
 ---
-title: HelpContext (C++-COM-Attribut)
+title: HelpContext (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpcontext
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 22023b4087c67b62d540d021fa06fd3582c7e4e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ec13d785ae491a4082d0bbdc908448cb1b8a49c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409667"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490913"
 ---
 # <a name="helpcontext"></a>helpcontext
 
-Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der **Hilfe** Datei.
+Gibt eine Kontext-ID an, mit der der Benutzerinformationen zu diesem Element in der **Hilfe** Datei anzeigen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,15 +26,15 @@ Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der
 ### <a name="parameters"></a>Parameter
 
 *ID*<br/>
-Die Kontext-ID des Hilfethemas. Finden Sie unter [HTML-Hilfe: Kontextbezogene Hilfe für Programme](../../mfc/html-help-context-sensitive-help-for-your-programs.md) Weitere Informationen zum Kontext-IDs.
+Die Kontext-ID des Hilfe Themas. Siehe [HTML-Hilfe: Kontextbezogene Hilfe für Ihre Programme](../../mfc/html-help-context-sensitive-help-for-your-programs.md) , um weitere Informationen zu Kontext-IDs zu finden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Helpcontext** C++-Attribut hat die gleiche Funktionalität wie die [Helpcontext](/windows/desktop/Midl/helpcontext) MIDL-Attribut.
+Das **HelpContext** C++ -Attribut verfügt über die gleiche Funktionalität wie das " [HelpContext](/windows/win32/Midl/helpcontext) "-Attribut "Mittel l".
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [Defaultvalue](defaultvalue.md) ein Beispiel zur Verwendung für **Helpcontext**.
+Ein Beispiel für die Verwendung von **HelpContext**finden Sie im Beispiel für [DefaultValue](defaultvalue.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,10 +42,10 @@ Siehe das Beispiel für [Defaultvalue](defaultvalue.md) ein Beispiel zur Verwend
 
 |||
 |-|-|
-|**Betrifft**|**Schnittstelle**, **Typedef**, **Klasse**, Methode, Eigenschaft|
+|**Betrifft**|**Schnittstelle**, **typedef**, **Klasse**, Methode, Eigenschaft|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

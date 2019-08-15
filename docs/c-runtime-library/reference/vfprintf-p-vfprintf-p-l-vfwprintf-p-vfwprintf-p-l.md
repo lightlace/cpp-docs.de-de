@@ -43,14 +43,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - vfwprintf_p function
 ms.assetid: 4d4a0914-4175-4b65-9ca1-037c4ef29147
-ms.openlocfilehash: 7e93972ccd77d730d873177fe92f958877c83fe4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f3a1fa472949d6d1f7880acc942a99c0f32c7ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365363"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499270"
 ---
-# <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
+# <a name="_vfprintf_p-_vfprintf_p_l-_vfwprintf_p-_vfwprintf_p_l"></a>_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l
 
 Schreibt mithilfe eines Zeigers auf eine Argumentliste eine formatierte Ausgabe mit der Möglichkeit, die Reihenfolge anzugeben, in der die Argumente in der Formatzeichenfolge verwendet werden.
 
@@ -99,20 +99,20 @@ Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/f
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_vfprintf_p** und **_vfwprintf_p** Zurückgeben der Anzahl der geschriebenen Zeichen nicht einschließlich des abschließenden Zeichens Null oder ein negativer Wert, wenn ein Ausgabefehler auftritt.
+**_vfprintf_p** und **_vfwprintf_p** geben die Anzahl der geschriebenen Zeichen ohne das abschließende Null Zeichen zurück oder einen negativen Wert, wenn ein Ausgabefehler auftritt.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt die angegebenen Daten in *Stream*. Diese Funktionen unterscheiden sich von der **_vfprint_s** und **_vfwprint_s** Versionen nur darin, dass sie Positionsparameter unterstützen. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
+Jede dieser Funktionen nimmt einen Zeiger auf eine Argumentliste und formatiert und schreibt dann die angegebenen Daten in den *Stream*. Diese Funktionen unterscheiden sich von der **_vfprint_s** -Version und der **_vfwprint_s** -Version nur darin, dass Sie Positions Parameter unterstützen. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**_vfwprintf_p** ist die Breitzeichen-Version von **_vprintf_p**; die zwei Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **_vprintf_p** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
+**_vfwprintf_p** ist die breit Zeichen Version von **_vprintf_p**; die beiden Funktionen Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **_vprintf_p** unterstützt derzeit nicht die Ausgabe in einen Unicode-Stream.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Wenn entweder *Stream* oder *Format* ein null-Zeiger ist oder wenn die Formatzeichenfolge ungültige Formatierungszeichen enthält, wird der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
+Wenn entweder *Stream* oder *Format* ein NULL-Zeiger ist oder wenn die Format Zeichenfolge ungültige Formatierungszeichen enthält, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben die Funktionen-1 zurück und legen **errno** auf **EINVAL**fest.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

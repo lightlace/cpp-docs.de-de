@@ -1,5 +1,5 @@
 ---
-title: CMFCToolBar-Klasse
+title: Cmfctoolbar-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBar
@@ -311,18 +311,18 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2af7a808e07e0368dd43ed920b6d8736a90b995
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218363"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504898"
 ---
-# <a name="cmfctoolbar-class"></a>CMFCToolBar-Klasse
+# <a name="cmfctoolbar-class"></a>Cmfctoolbar-Klasse
 
-Die `CMFCToolBar` ähnelt [CToolBar-Klasse](../../mfc/reference/ctoolbar-class.md), bietet aber zusätzliche Unterstützung für Benutzeroberflächenfunktionen. Dazu gehören flache Symbolleisten, Symbolleisten mit hervorgehobenen Bilder, große Symbole, Pagerschaltflächen, gesperrte Symbolleisten, Grundleisten-Steuerelemente, Texte unter Bildern, Hintergrundbilder und Symbolleisten im Registerkartenformat. Die `CMFCToolBar` -Klasse enthält auch integrierte Unterstützung zur Anpassung folgender Elemente und Funktionen: Symbolleisten und Menüs, Drag &amp; Drop zwischen Symbolleisten und Menüs, Schaltflächen für Kombinations- und Bearbeitungsfelder, Farbwähler und Rollup-Schaltflächen.
+Die `CMFCToolBar` -Klasse ähnelt der [CToolBar-Klasse](../../mfc/reference/ctoolbar-class.md), bietet jedoch zusätzliche Unterstützung für Benutzeroberflächen Features. Dazu gehören flache Symbolleisten, Symbolleisten mit hervorgehobenen Bilder, große Symbole, Pagerschaltflächen, gesperrte Symbolleisten, Grundleisten-Steuerelemente, Texte unter Bildern, Hintergrundbilder und Symbolleisten im Registerkartenformat. Die `CMFCToolBar` -Klasse enthält auch integrierte Unterstützung zur Anpassung folgender Elemente und Funktionen: Symbolleisten und Menüs, Drag &amp; Drop zwischen Symbolleisten und Menüs, Schaltflächen für Kombinations- und Bearbeitungsfelder, Farbwähler und Rollup-Schaltflächen.
 
-Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.
+Weitere Informationen finden Sie im Quellcode, der sich im **Ordner\\VC atlmfc\\\\src MFC** Ihrer Visual Studio-Installation befindet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -343,196 +343,196 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Fügt einen Menübefehl in die Liste der Befehle, die immer angezeigt werden, wenn ein Benutzer ein Menü geöffnet wird.|
-|[CMFCToolBar::AddCommandUsage](#addcommandusage)|Inkrementiert durch eine der Zähler, der den angegebenen Befehl zugeordnet ist.|
-|[CMFCToolBar::AddToolBarForImageCollection](#addtoolbarforimagecollection)|Die Auflistung der Bilder in der Anwendung hinzugefügt Bilder aus den Ressourcen der Benutzeroberfläche.|
-|[CMFCToolBar::AdjustLayout](#adjustlayout)|Berechnet die Größe und Position einer Symbolleiste an. (Überschreibt [cbasepane:: Adjustlayout](../../mfc/reference/cbasepane-class.md#adjustlayout)).|
-|[CMFCToolBar::AdjustSize](#adjustsize)|Berechnet die Größe der Symbolleiste an.|
-|[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)|Gibt an, ob Beschriftungen unter Bildern, auf die Symbolleisten-Schaltflächen angezeigt werden können.|
-|[CMFCToolBar::AreTextLabels](#aretextlabels)|Gibt an, ob Beschriftungen unter Images derzeit auf die Symbolleisten-Schaltflächen angezeigt werden.|
-|[CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages)|Aktiviert oder deaktiviert die automatische Generierung von inaktiven Schaltflächenbilder.|
-|[CMFCToolBar::ButtonToIndex](#buttontoindex)|Gibt den Index eines angegebenen [CMFCToolBarButton-Klasse](../../mfc/reference/cmfctoolbarbutton-class.md) Objekt in diese Symbolleiste.|
-|[CMFCToolBar::CalcFixedLayout](#calcfixedlayout)|Berechnet die horizontale Größe der Symbolleiste. (Überschreibt [cbasepane:: Calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
-|[CMFCToolBar::CalcSize](#calcsize)|Wird aufgerufen, durch das Framework als Teil der Berechnungsprozess Layout. (Überschreibt [CPane::CalcSize](../../mfc/reference/cpane-class.md#calcsize).)|
+|[Cmfctoolbar:: addbasiccommand](#addbasiccommand)|Fügt der Liste der Befehle, die immer angezeigt werden, wenn ein Benutzer ein Menü öffnet, einen Menübefehl hinzu.|
+|[CMFCToolBar::AddCommandUsage](#addcommandusage)|Inkremente um einen der mit dem angegebenen Befehl verknüpften Zählers.|
+|[CMFCToolBar::AddToolBarForImageCollection](#addtoolbarforimagecollection)|Fügt der Auflistung von Bildern in der Anwendung Bilder aus den Benutzeroberflächen Ressourcen hinzu.|
+|[Cmfctoolbar::-Layout](#adjustlayout)|Berechnet die Größe und Position einer Symbolleiste neu. (Überschreibt [cbasepane:: "Layout](../../mfc/reference/cbasepane-class.md#adjustlayout)").|
+|[Cmfctoolbar::-Größe](#adjustsize)|Berechnet die Größe der Symbolleiste neu.|
+|[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)|Gibt an, ob Text Bezeichnungen auf den Symbolleisten-Schaltflächen unter Bilder angezeigt werden können.|
+|[CMFCToolBar::AreTextLabels](#aretextlabels)|Gibt an, ob Text Beschriftungen Unterbildern momentan auf den Symbolleisten Schaltflächen angezeigt werden.|
+|[CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages)|Aktiviert oder deaktiviert die automatische Generierung von inaktiven Schaltflächen Bildern.|
+|[CMFCToolBar::ButtonToIndex](#buttontoindex)|Gibt den Index eines angegebenen [cmfctoolbarbutton-Klassen](../../mfc/reference/cmfctoolbarbutton-class.md) Objekts in dieser Symbolleiste zurück.|
+|[CMFCToolBar::CalcFixedLayout](#calcfixedlayout)|Berechnet die horizontale Größe der Symbolleiste. (Überschreibt [cbasepane:: calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
+|[Cmfctoolbar:: calcsize](#calcsize)|Wird von Framework als Teil des layoutberechnungs Prozesses aufgerufen. (Überschreibt [CPANE:: calcsize](../../mfc/reference/cpane-class.md#calcsize).)|
 |[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|Bestimmt, ob sich die Symbolleiste und gleichgeordnete Elemente im gleichen Bereich befinden.|
-|[CMFCToolBar::CleanUpImages](#cleanupimages)|Gibt die für Symbolleistenbilder zugeordneten Systemressourcen frei.|
-|[CMFCToolBar::CleanUpLockedImages](#cleanuplockedimages)|Gibt die für gesperrte Symbolleistenbilder zugeordneten Systemressourcen frei.|
-|[CMFCToolBar::CanBeClosed](#canbeclosed)|Gibt an, ob ein Benutzer auf die Symbolleiste schließen kann. (Überschreibt [cbasepane:: Canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed).)|
-|[CMFCToolBar::CanBeRestored](#canberestored)|Bestimmt, ob das System nach der Anpassung eine Symbolleiste in seinen ursprünglichen Zustand wiederherstellen können.|
-|[CMFCToolBar::CanFocus](#canfocus)|Gibt an, ob der Bereich den Fokus erhalten kann. (Überschreibt [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus).)|
+|[Cmfctoolbar:: cleanupimages](#cleanupimages)|Gibt die für Symbolleisten Bilder zugewiesenen Systemressourcen frei.|
+|[Cmfctoolbar:: cleanuplockedimages](#cleanuplockedimages)|Gibt die für gesperrte Symbolleisten Bilder zugewiesenen Systemressourcen frei.|
+|[Cmfctoolbar:: canbeclosed](#canbeclosed)|Gibt an, ob ein Benutzer die Symbolleiste schließen kann. (Überschreibt [cbasepane:: canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed).)|
+|[CMFCToolBar::CanBeRestored](#canberestored)|Bestimmt, ob das System nach der Anpassung den ursprünglichen Zustand einer Symbolleiste wiederherstellen kann.|
+|[CMFCToolBar::CanFocus](#canfocus)|Gibt an, ob der Bereich den Fokus erhalten kann. (Überschreibt [cbasepane:: CanFocus](../../mfc/reference/cbasepane-class.md#canfocus).)|
 |[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|Bestimmt, ob sich die Symbolleiste und gleichgeordnete Elemente im gleichen Bereich befinden.|
-|[CMFCToolBar::CommandToIndex](#commandtoindex)|Gibt den Index der Schaltfläche in der Symbolleiste mit einem angegebenen Befehls-ID|
+|[CMFCToolBar::CommandToIndex](#commandtoindex)|Gibt den Index der Schaltfläche auf der Symbolleiste mit einer angegebenen Befehls-ID zurück.|
 |[CMFCToolBar::Create](#create)|Erstellt ein `CMFCToolBar`-Objekt.|
-|[CMFCToolBar::CreateEx](#createex)|Erstellt eine `CMFCToolBar` Objekt, das zusätzliche Formatoptionen, z. B. große Symbole verwendet.|
-|[CMFCToolBar::Deactivate](#deactivate)|Deaktiviert die Symbolleiste an.|
-|[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)|Aktiviert oder deaktiviert die **Schaltflächen hinzufügen oder entfernen** Schaltfläche, auf der Seite der Symbolleiste angezeigt wird.|
-|[CMFCToolBar::EnableDocking](#enabledocking)|Ermöglicht das Andocken des Bereichs zum Hauptframe auf. (Überschreibt [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|
-|[CMFCToolBar::EnableLargeIcons](#enablelargeicons)|Aktiviert oder deaktiviert die große Symbole auf Symbolleisten-Schaltflächen.|
-|[CMFCToolBar::EnableQuickCustomization](#enablequickcustomization)|Aktiviert oder deaktiviert die schnelle Anpassung von Symbolleisten, damit der Benutzer durch Drücken von kann die **Alt** gedrückt, und ziehen Sie eine Schaltfläche in einem neuen Speicherort.|
-|[CMFCToolBar::EnableReflections](#enablereflections)|Aktiviert oder deaktiviert die Reflektion des Befehls.|
-|[CMFCToolBar::EnableTextLabels](#enabletextlabels)|Aktiviert oder deaktiviert die Beschriftungen unter Symbolleisten-Schaltflächen.|
-|[CMFCToolBar::FromHandlePermanent](#fromhandlepermanent)|Ruft einen Zeiger auf die `CMFCToolBar` -Objekt, das das angegebene Fenster-Handle enthält.|
-|[CMFCToolBar::GetAllButtons](#getallbuttons)|Gibt eine schreibgeschützte Liste der Schaltflächen in einer Symbolleiste zurück.|
-|[CMFCToolBar::GetAllToolbars](#getalltoolbars)|Gibt eine schreibgeschützte Liste alle Symbolleisten in der Anwendung zurück.|
-|[CMFCToolBar::GetBasicCommands](#getbasiccommands)|Gibt eine Liste für schreibgeschützten Zugriff von den grundlegenden Befehlen, die in der Anwendung definiert.|
-|[CMFCToolBar::GetButton](#getbutton)|Gibt einen Zeiger auf die `CMFCToolBarButton` -Objekt, das über einen Index der angegebene Symbolleisten-Schaltfläche verfügt.|
-|[CMFCToolBar::GetButtonInfo](#getbuttoninfo)|Gibt zurück, die die Befehls-ID, Stil und Image-Index der Schaltfläche an einem angegebenen Index.|
-|[CMFCToolBar::GetButtonSize](#getbuttonsize)|Gibt die Dimensionen der einzelnen Schaltflächen auf der Symbolleiste zurück.|
-|[CMFCToolBar::GetButtonStyle](#getbuttonstyle)|Gibt den aktuellen Stil, der Symbolleisten-Schaltfläche, die sich am angegebenen Index befindet.|
-|[CMFCToolBar::GetButtonText](#getbuttontext)|Gibt die textbezeichnung des einer Schaltfläche mit einem angegebenen Index zurück.|
-|[CMFCToolBar::GetColdImages](#getcoldimages)|Gibt einen Zeiger auf die Auflistung von kalten Symbolleisten-Schaltflächen in der Anwendung an.|
-|[CMFCToolBar::GetColumnWidth](#getcolumnwidth)|Gibt die Breite der Symbolleisten-Schaltflächen.|
-|[CMFCToolBar::GetCommandButtons](#getcommandbuttons)|Gibt eine Liste der Schaltflächen mit einer angegebenen Befehls-ID aus dem alle Symbolleisten in der Anwendung zurück.|
+|[CMFCToolBar::CreateEx](#createex)|Erstellt ein `CMFCToolBar` -Objekt, das zusätzliche Stil Optionen wie große Symbole verwendet.|
+|[CMFCToolBar::Deactivate](#deactivate)|Deaktiviert die Symbolleiste.|
+|[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)|Aktiviert oder deaktiviert die Schaltflächen Schaltfläche **Hinzufügen oder entfernen** , die am Ende der Symbolleiste angezeigt wird.|
+|[CMFCToolBar::EnableDocking](#enabledocking)|Ermöglicht das Andocken des Bereichs in den Hauptframe. (Überschreibt [cbasepane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|
+|[CMFCToolBar::EnableLargeIcons](#enablelargeicons)|Aktiviert oder deaktiviert große Symbole auf Symbolleisten-Schaltflächen.|
+|[Cmfctoolbar:: enablequickcustomi](#enablequickcustomization)|Aktiviert oder deaktiviert die schnelle Anpassung von Symbolleisten, sodass der Benutzer die **alt** -Taste drücken und eine Schaltfläche an eine neue Position ziehen kann.|
+|[CMFCToolBar::EnableReflections](#enablereflections)|Aktiviert oder deaktiviert die Befehls Reflektion.|
+|[CMFCToolBar::EnableTextLabels](#enabletextlabels)|Aktiviert oder deaktiviert Text Bezeichnungen unter Symbolleisten-Schaltflächen Bilder.|
+|[CMFCToolBar::FromHandlePermanent](#fromhandlepermanent)|Ruft einen Zeiger auf das `CMFCToolBar` -Objekt ab, das das angegebene Fenster Handle enthält.|
+|[CMFCToolBar::GetAllButtons](#getallbuttons)|Gibt eine schreibgeschützte Liste von Schaltflächen in einer Symbolleiste zurück.|
+|[CMFCToolBar::GetAllToolbars](#getalltoolbars)|Gibt eine schreibgeschützte Liste aller Symbolleisten in der Anwendung zurück.|
+|[Cmfctoolbar:: getbasiccommands](#getbasiccommands)|Gibt eine schreibgeschützte Liste der grundlegenden Befehle zurück, die in der Anwendung definiert sind.|
+|[CMFCToolBar::GetButton](#getbutton)|Gibt einen Zeiger auf das `CMFCToolBarButton` -Objekt zurück, das einen angegebenen Symbolleisten-Schaltflächen Index aufweist.|
+|[CMFCToolBar::GetButtonInfo](#getbuttoninfo)|Gibt die Befehls-ID, den Stil und den Bild Index der Schaltfläche an einem angegebenen Index zurück.|
+|[Cmfctoolbar:: getbuttonsize](#getbuttonsize)|Gibt die Dimensionen der einzelnen Schaltflächen auf der Symbolleiste zurück.|
+|[CMFCToolBar::GetButtonStyle](#getbuttonstyle)|Gibt den aktuellen Stil der Symbolleisten Schaltfläche zurück, die sich am angegebenen Index befindet.|
+|[CMFCToolBar::GetButtonText](#getbuttontext)|Gibt die Text Bezeichnung einer Schaltfläche zurück, die über einen angegebenen Index verfügt.|
+|[CMFCToolBar::GetColdImages](#getcoldimages)|Gibt einen Zeiger auf die Auflistung kalter Symbolleisten-Schaltflächen Bilder in der Anwendung zurück.|
+|[CMFCToolBar::GetColumnWidth](#getcolumnwidth)|Gibt die Breite der Symbolleisten-Schaltflächen zurück.|
+|[CMFCToolBar::GetCommandButtons](#getcommandbuttons)|Gibt eine Liste von Schaltflächen zurück, die über eine angegebene Befehls-ID aus allen Symbolleisten in der Anwendung verfügen.|
 |[CMFCToolBar::GetCount](#getcount)|Gibt die Anzahl der Schaltflächen und Trennzeichen auf der Symbolleiste zurück.|
-|[CMFCToolBar::GetCustomizeButton](#getcustomizebutton)|Ruft einen Zeiger auf die `CMFCCustomizeButton` Objekt, das der Symbolleiste zugeordnet ist.|
-|[CMFCToolBar::GetDefaultImage](#getdefaultimage)|Gibt den Index des Standardbilds für eine Symbolleisten-Schaltfläche mit einem angegebenen Befehls-ID|
-|[CMFCToolBar::GetDisabledImages](#getdisabledimages)|Gibt einen Zeiger auf die Sammlung von Images, die für deaktivierte Symbolleisten-Schaltflächen in der Anwendung verwendet werden.|
-|[CMFCToolBar::GetDisabledMenuImages](#getdisabledmenuimages)|Gibt einen Zeiger auf die Sammlung von Images, die für deaktivierte Schaltflächen in der Anwendung verwendet werden.|
-|[CMFCToolBar::GetDroppedDownMenu](#getdroppeddownmenu)|Ruft einen Zeiger auf das Objekt der Menü-Schaltfläche, das aktuell dem Untermenü angezeigt wird.|
-|[CMFCToolBar::GetGrayDisabledButtons](#getgraydisabledbuttons)|Gibt an, ob die Images von deaktivierte Schaltflächen abgeblendet Versionen der normale Schaltfläche Images, oder die Auflistung der deaktivierte Schaltflächenbilder entnommen.|
-|[CMFCToolBar::GetHighlightedButton](#gethighlightedbutton)|Gibt einen Zeiger auf die Symbolleisten-Schaltfläche, die derzeit ausgewählt ist.|
-|[CMFCToolBar::GetHotBorder](#gethotborder)|Bestimmt, ob die Symbolleisten-Schaltflächen "Hot" nachverfolgt werden.|
-|[CMFCToolBar::GetHotTextColor](#gethottextcolor)|Gibt zurück, der die Textfarbe für die markierten Symbolleistenschaltflächen.|
-|[CMFCToolBar::GetHwndLastFocus](#gethwndlastfocus)|Gibt ein Handle für das Fenster, das den Eingabefokus hatte, kurz bevor die Symbolleiste hat.|
-|[CMFCToolBar::GetIgnoreSetText](#getignoresettext)|Gibt an, ob Aufrufe zum Festlegen von schaltflächenbeschriftungen ignoriert werden.|
-|[CMFCToolBar::GetImageSize](#getimagesize)|Gibt die aktuelle Größe der Symbolleisten-Schaltflächen zurück.|
-|[CMFCToolBar::GetImages](#getimages)|Gibt einen Zeiger auf die Auflistung von standardmäßigen Schaltflächenbilder in der Anwendung.|
-|[CMFCToolBar::GetImagesOffset](#getimagesoffset)|Gibt den Index Offset verwendet, um der Symbolleiste die Schaltflächenbilder für diese Symbolleiste in der globalen Liste der Symbolleisten-Schaltflächen suchen.|
-|[CMFCToolBar::GetInvalidateItemRect](#getinvalidateitemrect)|Ruft ab, die Region des Clientbereichs, der für die Schaltfläche am angegebenen Index neu gezeichnet werden muss.|
-|[CMFCToolBar::GetItemID](#getitemid)|Gibt die Befehls-ID der Symbolleisten-Schaltfläche am angegebenen Index zurück.|
-|[CMFCToolBar::GetItemRect](#getitemrect)|Gibt das umschließende Rechteck der Schaltfläche an einem angegebenen Index zurück.|
-|[CMFCToolBar::GetLargeColdImages](#getlargecoldimages)|Gibt einen Zeiger auf die Auflistung von großen kalte Symbolleisten-Schaltflächen in der Anwendung an.|
-|[CMFCToolBar::GetLargeDisabledImages](#getlargedisabledimages)|Gibt einen Zeiger auf die Auflistung von großen deaktiviert Symbolleisten-Schaltflächen in der Anwendung an.|
-|[CMFCToolBar::GetLargeImages](#getlargeimages)|Gibt einen Zeiger auf die Auflistung von großen Symbolleisten-Schaltflächen in der Anwendung an.|
-|[CMFCToolBar::GetLockedColdImages](#getlockedcoldimages)|Gibt einen Zeiger auf die Auflistung von gesperrten kalte Bilder auf der Symbolleiste an.|
-|[CMFCToolBar::GetLockedDisabledImages](#getlockeddisabledimages)|Gibt einen Zeiger auf die Auflistung von gesperrten deaktiviert Bilder auf der Symbolleiste an.|
-|[CMFCToolBar::GetLockedImages](#getlockedimages)|Gibt einen Zeiger auf die Auflistung von gesperrten Schaltflächenbilder auf der Symbolleiste an.|
-|[CMFCToolBar::GetLockedImageSize](#getlockedimagesize)|Gibt die Standardgröße des gesperrten Symbolleistenbilder zurück.|
-|[CMFCToolBar::GetLockedMenuImages](#getlockedmenuimages)|Gibt einen Zeiger auf die Auflistung von gesperrten Symbolleiste Menübilder in der Symbolleiste.|
-|[CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize)|Gibt die Größe der Schaltflächen in der Anwendung zurück.|
-|[CMFCToolBar::GetMenuImageSize](#getmenuimagesize)|Gibt die Größe der Schaltfläche Menübilder in der Anwendung zurück.|
-|[CMFCToolBar::GetMenuImages](#getmenuimages)|Gibt einen Zeiger auf die Auflistung der Schaltfläche Menübilder in der Anwendung.|
-|[CMFCToolBar::GetOrigButtons](#getorigbuttons)|Ruft die Auflistung der nicht benutzerdefinierten Schaltflächen der Symbolleiste ab.|
-|[CMFCToolBar::GetOrigResetButtons](#getorigresetbuttons)|Ruft die Auflistung der nicht angepasste Reset-Schaltflächen der Symbolleiste ab.|
+|[CMFCToolBar::GetCustomizeButton](#getcustomizebutton)|Ruft einen Zeiger auf das `CMFCCustomizeButton` -Objekt ab, das der Symbolleiste zugeordnet ist.|
+|[CMFCToolBar::GetDefaultImage](#getdefaultimage)|Gibt den Index des Standard Bilds für eine Symbolleisten-Schaltfläche mit einer angegebenen Befehls-ID zurück.|
+|[CMFCToolBar::GetDisabledImages](#getdisabledimages)|Gibt einen Zeiger auf die Auflistung von Bildern zurück, die für deaktivierte Symbolleisten-Schaltflächen in der Anwendung verwendet werden.|
+|[CMFCToolBar::GetDisabledMenuImages](#getdisabledmenuimages)|Gibt einen Zeiger auf die Auflistung von Bildern zurück, die in der Anwendung für deaktivierte Menü Schaltflächen verwendet werden.|
+|[CMFCToolBar::GetDroppedDownMenu](#getdroppeddownmenu)|Ruft einen Zeiger auf das Menü Schaltflächen Objekt ab, das derzeit sein Untermenü anzeigt.|
+|[CMFCToolBar::GetGrayDisabledButtons](#getgraydisabledbuttons)|Gibt an, ob die Bilder deaktivierter Schaltflächen Abbilder von regulären Schaltflächen Bildern sind oder aus der Auflistung von deaktivierten Schaltflächen Bildern entnommen werden.|
+|[CMFCToolBar::GetHighlightedButton](#gethighlightedbutton)|Gibt einen Zeiger auf die Symbolleisten Schaltfläche zurück, die derzeit hervorgehoben ist.|
+|[CMFCToolBar::GetHotBorder](#gethotborder)|Bestimmt, ob die Symbolleisten Schaltflächen Hot-nachverfolgt werden.|
+|[CMFCToolBar::GetHotTextColor](#gethottextcolor)|Gibt die Textfarbe der markierten Symbolleisten-Schaltflächen zurück.|
+|[CMFCToolBar::GetHwndLastFocus](#gethwndlastfocus)|Gibt ein Handle für das Fenster zurück, das den Eingabefokus unmittelbar vor der Symbolleiste enthielt.|
+|[CMFCToolBar::GetIgnoreSetText](#getignoresettext)|Gibt an, ob Aufrufe zum Festlegen von Schaltflächen Bezeichnungen ignoriert werden.|
+|[CMFCToolBar::GetImageSize](#getimagesize)|Gibt die aktuelle Größe von Symbolleisten-Schaltflächen Bildern zurück.|
+|[CMFCToolBar::GetImages](#getimages)|Gibt einen Zeiger auf die Auflistung von standardmäßigen Schaltflächen Bildern in der Anwendung zurück.|
+|[CMFCToolBar::GetImagesOffset](#getimagesoffset)|Gibt den Index Offset zurück, mit dem die Symbolleisten-Schaltflächen Bilder für diese Symbolleiste in der globalen Liste der Symbolleisten-Schaltflächen Bilder gefunden werden|
+|[CMFCToolBar::GetInvalidateItemRect](#getinvalidateitemrect)|Ruft den Bereich des Client Bereichs ab, der für die Schaltfläche am angegebenen Index neu gezeichnet werden muss.|
+|[CMFCToolBar::GetItemID](#getitemid)|Gibt die Befehls-ID der Symbolleisten-Schaltfläche an einem angegebenen Index zurück.|
+|[CMFCToolBar::GetItemRect](#getitemrect)|Gibt das umgebende Rechteck der Schaltfläche an einem angegebenen Index zurück.|
+|[CMFCToolBar::GetLargeColdImages](#getlargecoldimages)|Gibt einen Zeiger auf die Auflistung von großen kalten Symbolleisten-Schaltflächen Bildern in der Anwendung zurück.|
+|[CMFCToolBar::GetLargeDisabledImages](#getlargedisabledimages)|Gibt einen Zeiger auf die Auflistung von großen deaktivierten Symbolleisten-Schaltflächen Bildern in der Anwendung zurück.|
+|[CMFCToolBar::GetLargeImages](#getlargeimages)|Gibt einen Zeiger auf die Auflistung großer Symbolleisten-Schaltflächen Bilder in der Anwendung zurück.|
+|[CMFCToolBar::GetLockedColdImages](#getlockedcoldimages)|Gibt einen Zeiger auf die Auflistung der gesperrten kalten Bilder auf der Symbolleiste zurück.|
+|[CMFCToolBar::GetLockedDisabledImages](#getlockeddisabledimages)|Gibt einen Zeiger auf die Auflistung der gesperrten deaktivierten Images auf der Symbolleiste zurück.|
+|[CMFCToolBar::GetLockedImages](#getlockedimages)|Gibt einen Zeiger auf die Auflistung der gesperrten Schaltflächen Bilder auf der Symbolleiste zurück.|
+|[CMFCToolBar::GetLockedImageSize](#getlockedimagesize)|Gibt die Standardgröße der gesperrten Symbolleisten Images zurück.|
+|[CMFCToolBar::GetLockedMenuImages](#getlockedmenuimages)|Gibt einen Zeiger auf die Auflistung der gesperrten Symbolleisten-Menü Bilder auf der Symbolleiste zurück.|
+|[CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize)|Gibt die Größe der Menü Schaltflächen in der Anwendung zurück.|
+|[CMFCToolBar::GetMenuImageSize](#getmenuimagesize)|Gibt die Größe der Menü Schaltflächen Bilder in der Anwendung zurück.|
+|[CMFCToolBar::GetMenuImages](#getmenuimages)|Gibt einen Zeiger auf die Auflistung von Menü Schaltflächen Bildern in der Anwendung zurück.|
+|[CMFCToolBar::GetOrigButtons](#getorigbuttons)|Ruft die Auflistung nicht angepasster Schaltflächen der Symbolleiste ab.|
+|[CMFCToolBar::GetOrigResetButtons](#getorigresetbuttons)|Ruft die Auflistung nicht angepasster Reset-Schaltflächen der Symbolleiste ab.|
 |[CMFCToolBar::GetResourceID](#getresourceid)|Ruft die Ressourcen-ID der Symbolleiste ab.|
-|[CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)|Bestimmt, welches Objekt, übergeordneten Rahmens oder der Besitzer, sendet Befehle an der Symbolleiste.|
-|[CMFCToolBar::GetRowHeight](#getrowheight)|Gibt die Höhe von Symbolleisten-Schaltflächen.|
-|[CMFCToolBar::GetShowTooltips](#getshowtooltips)|Gibt an, ob QuickInfos für Symbolleisten-Schaltflächen angezeigt werden.|
-|[CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar)|Ruft das gleichgeordnete Element in der Symbolleiste ab.|
-|[CMFCToolBar::GetUserImages](#getuserimages)|Gibt einen Zeiger auf die Auflistung von benutzerdefinierten Symbolleisten-Schaltflächen in der Anwendung an.|
-|[CMFCToolBar::HitTest](#hittest)|Gibt den Index der Symbolleisten-Schaltfläche, die an der angegebenen Position befindet.|
-|[CMFCToolBar::InsertButton](#insertbutton)|Fügt der Symbolleiste eine Schaltfläche hinzu.|
-|[CMFCToolBar::InsertSeparator](#insertseparator)|Fügt ein Trennzeichen in der Symbolleiste ein.|
-|[CMFCToolBar::InvalidateButton](#invalidatebutton)|Macht den Clientbereich des der Symbolleisten-Schaltfläche, die am angegebenen Index vorhanden ist ungültig.|
-|[CMFCToolBar::IsAddRemoveQuickCustomize](#isaddremovequickcustomize)|Bestimmt, ob ein Benutzer kann hinzufügen oder Entfernen von Symbolleisten-Schaltflächen mit den **anpassen** Option des Menüs.|
-|[CMFCToolBar::IsAltCustomizeMode](#isaltcustomizemode)|Gibt an, ob *schnelle Anpassung* wird verwendet, um eine Schaltfläche zu ziehen.|
-|[CMFCToolBar::IsAutoGrayInactiveImages](#isautograyinactiveimages)|Gibt an, ob die automatische Generierung von inaktiv (nicht hervorgehobenen) Schaltflächenbilder aktiviert ist.|
-|[CMFCToolBar::IsBasicCommand](#isbasiccommand)|Bestimmt, ob ein Befehl in der Liste der Basisbefehle enthalten ist.|
-|[CMFCToolBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Bestimmt, ob die Symbolleiste Schaltflächen angezeigt werden kann, die Rahmen erweitert haben.|
+|[CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)|Bestimmt, welches Objekt, der übergeordnete Frame oder der Besitzer, Befehle an die Symbolleiste sendet.|
+|[CMFCToolBar::GetRowHeight](#getrowheight)|Gibt die Höhe von Symbolleisten-Schaltflächen zurück.|
+|[CMFCToolBar::GetShowTooltips](#getshowtooltips)|Gibt an, ob Quick Infos für Symbolleisten Schaltflächen angezeigt werden.|
+|[CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar)|Ruft das gleich geordnete Element der Symbolleiste ab.|
+|[CMFCToolBar::GetUserImages](#getuserimages)|Gibt einen Zeiger auf die Auflistung von benutzerdefinierten Symbolleisten-Schaltflächen Bildern in der Anwendung zurück.|
+|[CMFCToolBar::HitTest](#hittest)|Gibt den Index der Symbolleisten Schaltfläche zurück, die sich an der angegebenen Position befindet.|
+|[CMFCToolBar::InsertButton](#insertbutton)|Fügt eine Schaltfläche in die Symbolleiste ein.|
+|[CMFCToolBar::InsertSeparator](#insertseparator)|Fügt ein Trennzeichen in die Symbolleiste ein.|
+|[CMFCToolBar::InvalidateButton](#invalidatebutton)|Macht den Client Bereich der Symbolleisten Schaltfläche ungültig, die am angegebenen Index vorhanden ist.|
+|[Cmfctoolbar:: isadressmuvequickcustomize](#isaddremovequickcustomize)|Bestimmt, ob ein Benutzer Symbolleisten Schaltflächen mithilfe der Menüoption **Anpassen** hinzufügen oder entfernen kann.|
+|[Cmfctoolbar:: isaltcustomizemode](#isaltcustomizemode)|Gibt an, ob die *schnelle Anpassung* verwendet wird, um eine Schaltfläche zu ziehen.|
+|[CMFCToolBar::IsAutoGrayInactiveImages](#isautograyinactiveimages)|Gibt an, ob die automatische Generierung von inaktiven Schaltflächen Bildern aktiviert ist.|
+|[Cmfctoolbar:: isbasiccommand](#isbasiccommand)|Bestimmt, ob ein Befehl in der Liste der grundlegenden Befehle enthalten ist.|
+|[CMFCToolBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Bestimmt, ob die Symbolleiste Schaltflächen mit erweiterten Rahmen anzeigen kann.|
 |[CMFCToolBar::IsButtonHighlighted](#isbuttonhighlighted)|Bestimmt, ob eine Schaltfläche auf der Symbolleiste hervorgehoben ist.|
-|[CMFCToolBar::IsCommandPermitted](#iscommandpermitted)|Bestimmt, ob ein Befehl zulässig ist.|
-|[CMFCToolBar::IsCommandRarelyUsed](#iscommandrarelyused)|Bestimmt, ob ein Befehl nur selten verwendet wird (siehe [CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions)).|
-|[CMFCToolBar::IsCustomizeMode](#iscustomizemode)|Gibt an, ob das Framework für die Symbolleiste im Anpassungsmodus befindet.|
-|[CMFCToolBar::IsDragButton](#isdragbutton)|Bestimmt, ob eine Symbolleisten-Schaltfläche gezogen wird.|
-|[CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton)|Bestimmt, ob die Symbolleiste enthält die **anpassen** Schaltfläche.|
+|[Cmfctoolbar:: iscommandzugelassene](#iscommandpermitted)|Bestimmt, ob ein Befehl zulässig ist.|
+|[Cmfctoolbar:: iscommandrarelyused](#iscommandrarelyused)|Bestimmt, ob ein Befehl selten verwendet wird (siehe [cmfctoolbar:: setcommandusageoptions](#setcommandusageoptions)).|
+|[Cmfctoolbar:: iscustomizemode](#iscustomizemode)|Gibt an, ob sich das Symbolleisten Framework im Anpassungsmodus befindet.|
+|[CMFCToolBar::IsDragButton](#isdragbutton)|Bestimmt, ob eine Symbolleisten Schaltfläche gezogen wird.|
+|[Cmfctoolbar:: isexistcustomizebutton](#isexistcustomizebutton)|Bestimmt, ob die Symbolleiste die Schaltfläche **Anpassen** enthält.|
 |[CMFCToolBar::IsFloating](#isfloating)|Bestimmt, ob die Symbolleiste unverankert ist.|
-|[CMFCToolBar::IsLargeIcons](#islargeicons)|Gibt an, ob Symbolleisten in der Anwendung derzeit große Symbole angezeigt.|
-|[CMFCToolBar::IsLastCommandFromButton](#islastcommandfrombutton)|Bestimmt, ob die zuletzt ausgeführten Befehl über die angegebene Symbolleisten-Schaltfläche gesendet wurde.|
-|[CMFCToolBar::IsLocked](#islocked)|Bestimmt, ob die Symbolleiste gesperrt ist.|
-|[CMFCToolBar::IsOneRowWithSibling](#isonerowwithsibling)|Bestimmt, ob die Symbolleiste und gleichgeordnete Symbolleisten auf derselben Zeile positioniert sind.|
-|[CMFCToolBar::IsUserDefined](#isuserdefined)|Gibt an, ob die Symbolleiste benutzerdefiniert ist.|
+|[CMFCToolBar::IsLargeIcons](#islargeicons)|Gibt an, ob Symbolleisten in der Anwendung derzeit große Symbole anzeigen.|
+|[CMFCToolBar::IsLastCommandFromButton](#islastcommandfrombutton)|Bestimmt, ob der zuletzt ausgeführte Befehl von der angegebenen Symbolleisten Schaltfläche gesendet wurde.|
+|[Cmfctoolbar:: IsLocked](#islocked)|Bestimmt, ob die Symbolleiste gesperrt ist.|
+|[CMFCToolBar::IsOneRowWithSibling](#isonerowwithsibling)|Bestimmt, ob die Symbolleiste und die gleich geordnete Symbolleiste in derselben Zeile positioniert werden.|
+|[Cmfctoolbar:: isuserdefined](#isuserdefined)|Gibt an, ob die Symbolleiste Benutzer definiert ist.|
 |[CMFCToolBar::LoadBitmap](#loadbitmap)|Lädt Symbolleistenbilder aus Anwendungsressourcen.|
-|[CMFCToolBar::LoadBitmapEx](#loadbitmapex)|Lädt Symbolleistenbilder aus Anwendungsressourcen. Enthält die große Bilder.|
-|[CMFCToolBar::LoadParameters](#loadparameters)|Lädt globale Symbolleistenoptionen aus der Windows-Registrierung.|
-|[CMFCToolBar::LoadState](#loadstate)|Lädt die Zustandsinformationen für die Symbolleiste aus der Windows-Registrierung. (Überschreibt [CPane::LoadState](../../mfc/reference/cpane-class.md#loadstate).)|
-|[CMFCToolBar::LoadToolBar](#loadtoolbar)|Lädt die Symbolleiste aus Anwendungsressourcen.|
-|[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)|Lädt die Symbolleiste aus Anwendungsressourcen mithilfe der `CMFCToolBarInfo` Hilfsklasse für die Anwendung große Bilder verwenden kann.|
-|[CMFCToolBar::OnChangeHot](#onchangehot)|Vom Framework aufgerufen, wenn ein Benutzer auf der Symbolleiste eine Schaltfläche auswählt.|
-|[CMFCToolBar::OnFillBackground](#onfillbackground)|Wird aufgerufen, durch das Framework aus [CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint) den Symbolleistenhintergrund ausgefüllt.|
-|[CMFCToolBar::OnReset](#onreset)|Auf der Symbolleiste wiederhergestellt auf den ursprünglichen Zustand.|
-|[CMFCToolBar::OnSetAccData](#onsetaccdata)|(Überschreibt [cbasepane:: Onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|
-|[CMFCToolBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|Stellt den Text einer Symbolleisten-Schaltfläche auf den Standardzustand.|
+|[CMFCToolBar::LoadBitmapEx](#loadbitmapex)|Lädt Symbolleistenbilder aus Anwendungsressourcen. Schließt große Bilder ein.|
+|[CMFCToolBar::LoadParameters](#loadparameters)|Lädt globale Symbolleisten Optionen aus der Windows-Registrierung.|
+|[CMFCToolBar::LoadState](#loadstate)|Lädt die Symbolleisten Zustandsinformationen aus der Windows-Registrierung. (Überschreibt [CPANE:: LoadState](../../mfc/reference/cpane-class.md#loadstate).)|
+|[CMFCToolBar::LoadToolBar](#loadtoolbar)|Lädt die Symbolleiste aus den Anwendungs Ressourcen.|
+|[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)|Lädt die Symbolleiste aus Anwendungs Ressourcen mithilfe der `CMFCToolBarInfo` -Hilfsklasse, damit die Anwendung große Bilder verwenden kann.|
+|[CMFCToolBar::OnChangeHot](#onchangehot)|Wird von Framework aufgerufen, wenn ein Benutzer auf der Symbolleiste eine Schaltfläche auswählt.|
+|[CMFCToolBar::OnFillBackground](#onfillbackground)|Wird von Framework aus [cbasepane::D opaint](../../mfc/reference/cbasepane-class.md#dopaint) aufgerufen, um den Symbolleisten Hintergrund zu füllen.|
+|[CMFCToolBar::OnReset](#onreset)|Stellt den ursprünglichen Zustand der Symbolleiste wieder her.|
+|[CMFCToolBar::OnSetAccData](#onsetaccdata)|(Überschreibt [cbasepane:: onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|
+|[CMFCToolBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|Stellt den Text einer Symbolleisten-Schaltfläche im Standardzustand wieder her.|
 |`CMFCToolBar::OnUpdateCmdUI`|Wird intern verwendet.|
-|[CMFCToolBar::RemoveAllButtons](#removeallbuttons)|Entfernt alle Schaltflächen auf der Symbolleiste an.|
-|[CMFCToolBar::RemoveButton](#removebutton)|Entfernt die Schaltfläche mit dem angegebenen Index aus der Symbolleiste an.|
+|[CMFCToolBar::RemoveAllButtons](#removeallbuttons)|Entfernt alle Schaltflächen aus der Symbolleiste.|
+|[CMFCToolBar::RemoveButton](#removebutton)|Entfernt die Schaltfläche mit dem angegebenen Index aus der Symbolleiste.|
 |[CMFCToolBar::RemoveStateFromRegistry](#removestatefromregistry)|Löscht die Zustandsinformationen für die Symbolleiste aus der Windows-Registrierung.|
-|[CMFCToolBar::ReplaceButton](#replacebutton)|Ersetzt eine Symbolleisten-Schaltfläche mit einer anderen Symbolleistenschaltfläche an.|
-|[CMFCToolBar::ResetAll](#resetall)|Alle Symbolleisten wiederhergestellt in den ursprünglichen Zustand.|
-|[CMFCToolBar::ResetAllImages](#resetallimages)|Löscht alle Bildersammlungen der Symbolleiste in der Anwendung an.|
+|[CMFCToolBar::ReplaceButton](#replacebutton)|Ersetzt eine Symbolleisten-Schaltfläche durch eine andere Symbolleisten-Schalt|
+|[CMFCToolBar::ResetAll](#resetall)|Stellt alle Symbolleisten in den ursprünglichen Zustand wieder her.|
+|[CMFCToolBar::ResetAllImages](#resetallimages)|Löscht alle Symbolleisten-Bild Auflistungen in der Anwendung.|
 |[CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)|Stellt den originalen Zustand einer Symbolleiste wieder her.|
-|[CMFCToolBar::SaveState](#savestate)|Speichert die Statusinformationen für die Symbolleiste in der Windows-Registrierung. (Überschreibt [CPane::SaveState](../../mfc/reference/cpane-class.md#savestate).)|
+|[CMFCToolBar::SaveState](#savestate)|Speichert die Zustandsinformationen für die Symbolleiste in der Windows-Registrierung. (Überschreibt [CPANE:: SaveState](../../mfc/reference/cpane-class.md#savestate).)|
 |`CMFCToolBar::Serialize`|(Überschreibt `CBasePane::Serialize`.)|
-|[CMFCToolBar::SetBasicCommands](#setbasiccommands)|Legt die Liste der Befehle, die immer angezeigt werden, wenn ein Benutzer ein Menü geöffnet wird.|
-|[CMFCToolBar::SetButtonInfo](#setbuttoninfo)|Legt fest, die die Befehls-ID, Stil und Image-ID des eine Symbolleisten-Schaltfläche.|
-|[CMFCToolBar::SetButtonStyle](#setbuttonstyle)|Legt das Format der Symbolleisten-Schaltfläche am angegebenen Index fest.|
-|[CMFCToolBar::SetButtonText](#setbuttontext)|Legt die Beschriftung für eine Symbolleisten-Schaltfläche fest.|
-|[CMFCToolBar::SetButtons](#setbuttons)|Legt fest, die Schaltflächen für die Symbolleiste.|
-|[CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions)|Gibt an, wenn nur selten verwendeten Befehle im Menü der Anwendung nicht angezeigt werden.|
-|[CMFCToolBar::SetCustomizeMode](#setcustomizemode)|Aktiviert oder deaktiviert die Anpassungsmodus für alle Symbolleisten in der Anwendung.|
-|[CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons)|Gibt an, ob der deaktivierten Schaltflächen auf der Symbolleiste ausgeblendet oder deaktiviert Images für die deaktivierten Schaltflächen verwendet werden.|
-|[CMFCToolBar::SetHeight](#setheight)|Legt die Höhe der Symbolleiste.|
-|[CMFCToolBar::SetHotBorder](#sethotborder)|Gibt an, ob Symbolleisten-Schaltflächen vorselektierten sind.|
-|[CMFCToolBar::SetHotTextColor](#sethottextcolor)|Legt die Textfarbe für "Hot" Symbolleisten-Schaltflächen an.|
-|[CMFCToolBar::SetLargeIcons](#setlargeicons)|Gibt an, ob Symbolleisten-Schaltflächen große Symbole angezeigt.|
-|[CMFCToolBar::SetLockedSizes](#setlockedsizes)|Legt die Größe der gesperrten Schaltflächen und gesperrte Bilder auf der Symbolleiste.|
-|[CMFCToolBar::SetMenuSizes](#setmenusizes)|Legt die Größe der Schaltflächen der Symbolleiste im Menü und Images fest.|
-|[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)|Legt die Liste der Befehle, die vom Benutzer ausgeführt werden kann.|
-|[CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling)|Die Symbolleiste und gleichgeordnete positioniert derselben Zeile.|
-|[CMFCToolBar::SetPermament](#setpermament)|Gibt an, ob ein Benutzer auf die Symbolleiste schließen kann.|
-|[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)|Gibt an, ob die übergeordneten Rahmens oder der Besitzer die Befehle an die Symbolleiste sendet.|
-|[CMFCToolBar::SetShowTooltips](#setshowtooltips)|Gibt an, ob das Framework QuickInfos angezeigt.|
-|[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)|Gibt an, das gleichgeordnete Element in der Symbolleiste.|
-|[CMFCToolBar::SetSizes](#setsizes)|Gibt die Größe der Schaltflächen und Bilder auf allen Symbolleisten an.|
-|[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)|Gibt die Eigenschaften einer Schaltfläche auf der Symbolleiste an.|
-|[CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling)|Positioniert die Symbolleiste und gleichgeordnete in separaten Zeilen an.|
-|[CMFCToolBar::SetUserImages](#setuserimages)|Legt die Auflistung von benutzerdefinierten Images in der Anwendung fest.|
-|[CMFCToolBar::StretchPane](#stretchpane)|Wird die Symbolleiste gestreckt, vertikal oder horizontal. (Überschreibt [cbasepane:: Stretchpane](../../mfc/reference/cbasepane-class.md#stretchpane).)|
-|[CMFCToolBar::TranslateChar](#translatechar)|Führt einen schaltflächenbefehl aus, wenn der angegebene Schlüssel-Code eine gültige Tastenkombination entspricht.|
+|[Cmfctoolbar:: setbasiccommands](#setbasiccommands)|Legt die Liste der Befehle fest, die immer angezeigt werden, wenn ein Benutzer ein Menü öffnet.|
+|[CMFCToolBar::SetButtonInfo](#setbuttoninfo)|Legt die Befehls-ID, den Stil und die Bild-ID einer Symbolleisten Schaltfläche fest.|
+|[CMFCToolBar::SetButtonStyle](#setbuttonstyle)|Legt den Stil der Symbolleisten-Schaltfläche am angegebenen Index fest.|
+|[CMFCToolBar::SetButtonText](#setbuttontext)|Legt die Text Bezeichnung einer Symbolleisten Schaltfläche fest.|
+|[Cmfctoolbar:: SetButtons](#setbuttons)|Legt die Schaltflächen für die Symbolleiste fest.|
+|[CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions)|Gibt an, dass selten verwendete Befehle nicht im Menü der Anwendung angezeigt werden.|
+|[Cmfctoolbar:: setcustomizemode](#setcustomizemode)|Aktiviert oder deaktiviert den Anpassungsmodus für alle Symbolleisten in der Anwendung.|
+|[CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons)|Gibt an, ob die deaktivierten Schaltflächen auf der Symbolleiste Abbild Abbilder oder deaktivierte Bilder für die deaktivierten Schaltflächen|
+|[Cmfctoolbar:: Ort](#setheight)|Legt die Höhe der Symbolleiste fest.|
+|[CMFCToolBar::SetHotBorder](#sethotborder)|Gibt an, ob die Symbolleisten Schaltflächen nachverfolgt werden.|
+|[CMFCToolBar::SetHotTextColor](#sethottextcolor)|Legt die Textfarbe für heiße Symbolleisten Schaltflächen fest.|
+|[CMFCToolBar::SetLargeIcons](#setlargeicons)|Gibt an, ob Symbolleisten Schaltflächen große Symbole anzeigen|
+|[CMFCToolBar::SetLockedSizes](#setlockedsizes)|Legt die Größe der gesperrten Schaltflächen und gesperrten Bilder auf der Symbolleiste fest.|
+|[CMFCToolBar::SetMenuSizes](#setmenusizes)|Legt die Größe der Symbolleisten Menü Schaltflächen und ihrer Bilder fest.|
+|[Cmfctoolbar:: setnonpermittedcommands](#setnonpermittedcommands)|Legt die Liste der Befehle fest, die vom Benutzer nicht ausgeführt werden können.|
+|[CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling)|Positioniert die Symbolleiste und deren gleich geordnetes Element in derselben Zeile.|
+|[CMFCToolBar::SetPermament](#setpermament)|Gibt an, ob ein Benutzer die Symbolleiste schließen kann.|
+|[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)|Gibt an, ob der übergeordnete Frame oder der Besitzer Befehle an die Symbolleiste sendet.|
+|[CMFCToolBar::SetShowTooltips](#setshowtooltips)|Gibt an, ob das Framework Quick Infos anzeigt.|
+|[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)|Gibt das gleich geordnete Element der Symbolleiste an.|
+|[CMFCToolBar::SetSizes](#setsizes)|Gibt die Größe von Schaltflächen und Bildern auf allen Symbolleisten an.|
+|[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)|Gibt Eigenschaften einer Schaltfläche auf der Symbolleiste an.|
+|[CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling)|Positioniert die Symbolleiste und das gleich geordnete Element in separaten Zeilen.|
+|[CMFCToolBar::SetUserImages](#setuserimages)|Legt die Auflistung benutzerdefinierter Bilder in der Anwendung fest.|
+|[Cmfctoolbar:: stretchpane](#stretchpane)|Dehnt die Symbolleiste vertikal oder horizontal aus. (Überschreibt [cbasepane:: stretchpane](../../mfc/reference/cbasepane-class.md#stretchpane).)|
+|[CMFCToolBar::TranslateChar](#translatechar)|Führt einen Schaltflächen Befehl aus, wenn der angegebene Schlüsselcode einer gültigen Tastenkombination entspricht.|
 |[CMFCToolBar::UpdateButton](#updatebutton)|Aktualisiert den Zustand der angegebenen Schaltfläche.|
-|[CMFCToolBar::WrapToolBar](#wraptoolbar)|Automatisch neu positioniert und Symbolleisten-Schaltflächen in die angegebenen Abmessungen.|
+|[CMFCToolBar::WrapToolBar](#wraptoolbar)|Positioniert Symbolleisten Schaltflächen innerhalb der angegebenen Dimensionen neu.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Bestimmt, ob die Symbolleiste in der Liste angezeigt wird, auf die **Symbolleisten** im Bereich der **anpassen** Dialogfeld.|
-|[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Berechnet die maximale Höhe einer Schaltfläche auf der Symbolleiste an.|
+|[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Bestimmt, ob die Symbolleiste in der Liste im Bereich **Symbolleisten** des Dialog Felds **Anpassen** angezeigt wird.|
+|[Cmfctoolbar:: calcmaxbuttonheight](#calcmaxbuttonheight)|Berechnet die maximale Höhe einer Schaltfläche auf der Symbolleiste.|
 |[CMFCToolBar::DoPaint](#dopaint)|Zeichnet eine Symbolleiste neu.|
-|[CMFCToolBar::DrawButton](#drawbutton)|Zeichnet eine Symbolleisten-Schaltfläche neu.|
-|[CMFCToolBar::DrawSeparator](#drawseparator)|Zeichnet ein Trennzeichen in einer Symbolleiste neu.|
-|[CMFCToolBar::OnUserToolTip](#onusertooltip)|Vom Framework aufgerufen, wenn die QuickInfo für eine Schaltfläche gerade angezeigt werden soll.|
+|[CMFCToolBar::DrawButton](#drawbutton)|Zeichnet eine Symbolleisten Schaltfläche neu.|
+|[CMFCToolBar::DrawSeparator](#drawseparator)|Zeichnet ein Trennzeichen auf einer Symbolleiste auf.|
+|[CMFCToolBar::OnUserToolTip](#onusertooltip)|Wird von Framework aufgerufen, wenn die QuickInfo für eine Schaltfläche angezeigt wird.|
 
 ### <a name="data-members"></a>Datenmember
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Gibt an, ob Skalierung oder keine Symbolleistenbilder im Modus für hohe DPI-Wert.|
-|[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Gibt das Verhältnis zwischen der Dimension (Höhe oder Breite) von Bildern und die Dimension von regulären Abbildern.|
+|[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Gibt an, ob die Skalierung von Bildern im Modus mit hoher dpi skaliert werden soll.|
+|[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Gibt das Verhältnis zwischen der Dimension (Höhe oder Breite) von großen Bildern und der Dimension regulärer Images an.|
 
 ## <a name="remarks"></a>Hinweise
 
-Integrieren einer `CMFCToolBar` -Objekt in Ihrer Anwendung, gehen Sie folgendermaßen vor:
+Führen Sie die `CMFCToolBar` folgenden Schritte aus, um ein-Objekt in Ihre Anwendung zu integrieren:
 
-1. Hinzufügen einer `CMFCToolBar` Objekt an das Hauptrahmenfenster.
+1. Fügen Sie `CMFCToolBar` dem Hauptrahmen Fenster ein-Objekt hinzu.
 
-1. Wenn Sie die WM_CREATE-Meldung für das Hauptrahmenfenster verarbeiten, rufen Sie entweder [CMFCToolBar::Create](#create) oder [CMFCToolBar::CreateEx](#createex) , erstellen Sie die Symbolleiste, und geben Sie den Stil.
+1. Wenn Sie die WM_CREATE-Nachricht für das Hauptrahmen Fenster verarbeiten, rufen Sie entweder [cmfctoolbar:: Create](#create) oder [cmfctoolbar:: kreateex](#createex) auf, um die Symbolleiste zu erstellen, und geben Sie den Stil an.
 
-1. Rufen Sie [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) den andockstil angeben.
+1. [Cbasepane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) wird aufgerufen, um die Andock Art anzugeben.
 
-Um eine spezielle Schaltfläche eingefügt werden soll, z. B. ein Kombinationsfeld oder das Dropdown-Symbolleisten, reservieren Sie eine dummy-Schaltfläche in der übergeordneten Ressource, und Ersetzen Sie die platzhalterschaltfläche zur Laufzeit durch [CMFCToolBar::ReplaceButton](#replacebutton). Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf der Symbolleiste](../walkthrough-putting-controls-on-toolbars.md).
+Um eine spezielle Schaltfläche (z. b. ein Kombinations Feld oder eine Dropdown-Symbolleiste) einzufügen, reservieren Sie in der übergeordneten Ressource eine Pseudo Schaltfläche, und ersetzen Sie die dummyschaltfläche zur Laufzeit mithilfe von [cmfctoolbar:: replacebutton](#replacebutton) Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen in](../walkthrough-putting-controls-on-toolbars.md)Symbolleisten.
 
-`CMFCToolBar` ist die Basisklasse für die MFC-Bibliotheksklassen [CMFCMenuBar-Klasse](../../mfc/reference/cmfcmenubar-class.md), [CMFCPopupMenuBar-Klasse](../../mfc/reference/cmfcpopupmenubar-class.md), und [CMFCDropDownToolBar-Klasse](../../mfc/reference/cmfcdropdowntoolbar-class.md).
+`CMFCToolBar`ist die Basisklasse für die MFC-Bibliotheks Klassen [cmfcmenubar-Klasse](../../mfc/reference/cmfcmenubar-class.md), [cmfcpopupmenubar](../../mfc/reference/cmfcpopupmenubar-class.md)-Klasse und [cmfcdropdowntoolbar-Klasse](../../mfc/reference/cmfcdropdowntoolbar-class.md).
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCToolBar` -Klasse. Das Beispiel veranschaulicht die legen Sie den Text der Bezeichnung Fenster der Symbolleiste, legen Sie die Rahmen, Festlegen des Formats für den Bereich, und aktivieren die **Schaltflächen hinzufügen oder entfernen** Schaltfläche, auf der Seite der Symbolleiste angezeigt wird. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../overview/visual-cpp-samples.md).
+Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in der `CMFCToolBar` -Klasse. Das Beispiel zeigt, wie Sie den Text der Fenster Bezeichnung der Symbolleiste festlegen, die Rahmen festlegen, den Stil des Bereichs festlegen und die Schaltfläche Schaltflächen **Hinzufügen oder entfernen** , die am Ende der Symbolleiste angezeigt wird, aktivieren. Dieser Code Ausschnitt ist Teil des IE- [Demo](../../overview/visual-cpp-samples.md)Beispiels.
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxtoolbar.h
+**Header:** afxtoolbar. h
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -550,9 +550,9 @@ Das folgende Beispiel veranschaulicht die Verwendung verschiedener Methoden in d
 
 `CMFCToolBar`
 
-##  <a name="addbasiccommand"></a>  CMFCToolBar::AddBasicCommand
+##  <a name="addbasiccommand"></a>Cmfctoolbar:: addbasiccommand
 
-Fügt einen Menübefehl in die Liste der Befehle, die immer angezeigt werden, wenn ein Benutzer ein Menü geöffnet wird.
+Fügt der Liste der Befehle, die immer angezeigt werden, wenn ein Benutzer ein Menü öffnet, einen Menübefehl hinzu.
 
 ```
 static void __stdcall AddBasicCommand(UINT uiCmd);
@@ -561,17 +561,17 @@ static void __stdcall AddBasicCommand(UINT uiCmd);
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Gibt an, den Befehl zum Hinzufügen.
+in Gibt den hinzu zufügenden Befehl an.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein einfachen Befehl wird immer angezeigt, wenn das Menü geöffnet wird. Diese Methode ist sinnvoll, wenn der Benutzer auswählt, zuletzt verwendeten Befehle anzuzeigen.
+Ein grundlegender Befehl wird immer angezeigt, wenn das Menü geöffnet wird. Diese Methode ist sinnvoll, wenn sich der Benutzer entscheidet, zuletzt verwendete Befehle anzuzeigen.
 
-Verwenden der [CMFCToolBar::SetBasicCommands](#setbasiccommands) Methode, um die Liste der Befehle festzulegen, die immer angezeigt werden, wenn ein Benutzer ein Menü geöffnet wird. Verwenden der [CMFCToolBar::GetBasicCommands](#getbasiccommands) Methode, um die Liste der grundlegenden Befehlen abzurufen, die von Ihrer Anwendung verwendet wird.
+Verwenden Sie die [cmfctoolbar:: setbasiccommands](#setbasiccommands) -Methode, um die Liste der Befehle festzulegen, die immer angezeigt werden, wenn ein Benutzer ein Menü öffnet. Verwenden Sie die [cmfctoolbar:: getbasiccommands](#getbasiccommands) -Methode, um die Liste der grundlegenden Befehle abzurufen, die von der Anwendung verwendet werden.
 
-##  <a name="addcommandusage"></a>  CMFCToolBar::AddCommandUsage
+##  <a name="addcommandusage"></a>Cmfctoolbar:: addcommandusage
 
-Inkrementiert durch eine der Zähler, der den angegebenen Befehl zugeordnet ist.
+Inkremente um einen der mit dem angegebenen Befehl verknüpften Zählers.
 
 ```
 static void __stdcall AddCommandUsage(UINT uiCommand);
@@ -579,20 +579,20 @@ static void __stdcall AddCommandUsage(UINT uiCommand);
 
 ### <a name="parameters"></a>Parameter
 
-*uiCommand*<br/>
-[in] Gibt an, der Befehl Zähler erhöht.
+*uicommand*<br/>
+in Gibt den zu Inkrement des Befehls Zählers an.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode auf, wenn der Benutzer ein Menüelement auswählt.
+Das Framework ruft diese Methode auf, wenn der Benutzer ein Menü Element auswählt.
 
-Das Framework verwendet Befehl ein, die Leistungsindikatoren, die kürzlich Menüelemente verwendet.
+Das Framework verwendet Befehls Zähler, um zuletzt verwendete Menü Elemente anzuzeigen.
 
-Diese Methode inkrementiert den Leistungsindikator der Befehl mithilfe der [CMFCCmdUsageCount::AddCmd](../../mfc/reference/cmfccmdusagecount-class.md#addcmd) Methode.
+Diese Methode erhöht den Befehls Zähler mithilfe der [CMF ccmdusagecount:: addcmd](../../mfc/reference/cmfccmdusagecount-class.md#addcmd) -Methode.
 
-##  <a name="addtoolbarforimagecollection"></a>  CMFCToolBar::AddToolBarForImageCollection
+##  <a name="addtoolbarforimagecollection"></a>Cmfctoolbar:: addtoolbarforimagecollection
 
-Die Auflistung der Bilder in der Anwendung hinzugefügt Bilder aus den Ressourcen der Benutzeroberfläche.
+Fügt der Auflistung von Bildern in der Anwendung Bilder aus den Benutzeroberflächen Ressourcen hinzu.
 
 ```
 static BOOL __stdcall AddToolBarForImageCollection(
@@ -607,34 +607,34 @@ static BOOL __stdcall AddToolBarForImageCollection(
 ### <a name="parameters"></a>Parameter
 
 *uiResID*<br/>
-[in] Ressourcen-ID einer Symbolleiste mit Bildern zu laden.
+in Die Ressourcen-ID einer Symbolleiste mit zu ladenden Bildern.
 
 *uiBmpResID*<br/>
-[in] Ressourcen-ID einer Bitmap mit Symbolleistenbilder.
+in Die Ressourcen-ID einer Bitmap mit Symbolleisten Bildern.
 
 *uiColdResID*<br/>
-[in] Ressourcen-ID einer Bitmap mit "kalt" Symbolleistenbilder.
+in Die Ressourcen-ID einer Bitmap mit "kalten" Symbolleisten Bildern.
 
 *uiMenuResID*<br/>
-[in] Ressourcen-ID einer Bitmap mit Menübilder.
+in Die Ressourcen-ID einer Bitmap mit Menü Bildern.
 
 *uiDisabledResID*<br/>
-[in] Ressourcen-ID einer Bitmap mit deaktivierten Symbolleistenbilder.
+in Die Ressourcen-ID einer Bitmap mit deaktivierten Symbolleisten Bildern.
 
 *uiMenuDisabledResID*<br/>
-[in] Ressourcen-ID einer Bitmap mit deaktivierten Menübilder.
+in Die Ressourcen-ID einer Bitmap mit deaktivierten Menü Bildern.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Methode erfolgreich ist. FALSE, wenn *UiResID* oder *UiBmpResID* Geben Sie keine gültige Ressourcen oder ein anderer Fehler auftritt.
+TRUE, wenn die Methode erfolgreich ist. FALSE, wenn *uiresid* oder *uibmpresid* keine gültigen Ressourcen angibt, oder ein anderer Fehler auftritt.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode, um eine Bitmap mit Symbolleistenbilder laden, und fügen Sie es auf die Auflistung von symbolleistenbildern hinzu. Diese Methode erstellt eine temporäre Symbolleistenobjekt und ruft [CMFCToolBar::LoadToolBar](#loadtoolbar).
+Mit dieser Methode wird eine Bitmap mit Symbolleisten Bildern geladen und der Auflistung von Symbolleisten Bildern hinzugefügt. Diese Methode erstellt ein temporäres Symbolleisten Objekt und ruft [cmfctoolbar:: LoadToolBar](#loadtoolbar)auf.
 
-##  <a name="adjustlayout"></a>  CMFCToolBar::AdjustLayout
+##  <a name="adjustlayout"></a>Cmfctoolbar::-Layout
 
-Berechnet die Größe und Position einer Symbolleiste an.
+Berechnet die Größe und Position einer Symbolleiste neu.
 
 ```
 virtual void AdjustLayout();
@@ -642,15 +642,15 @@ virtual void AdjustLayout();
 
 ### <a name="remarks"></a>Hinweise
 
-Aufgerufen Sie diese Methode wird, wenn die Symbolleiste zum Neuberechnen von seiner Größe und Position erstellt wurde.
+Ruft diese Methode auf, wenn die Symbolleiste erstellt wurde, um die Größe und Position neu zu berechnen.
 
-Das Framework ruft diese Methode jedes Mal, das das Layout der Symbolleiste geändert werden muss. Beispielsweise muss das Layout ändern, wenn der Benutzer einen anderen Steuerleiste verschiebt, wird ein Anwendungsfenster oder passt die Symbolleiste an.
+Das Framework ruft diese Methode jedes Mal auf, wenn das Layout der Symbolleiste geändert werden muss. Beispielsweise muss sich das Layout ändern, wenn der Benutzer eine andere Steuerleiste verschiebt, die Größe eines Anwendungsfensters ändert oder die Symbolleiste anpasst.
 
-Überschreiben Sie diese Methode, um Ihre eigenen dynamischen Layout in Klassen bereit, die Sie eine Ableitung aus `CMFCToolbar`.
+Überschreiben Sie diese Methode, um ein eigenes dynamisches Layout in Klassen bereitzustellen `CMFCToolbar`, von denen Sie abgeleitet sind.
 
-##  <a name="adjustsize"></a>  CMFCToolBar::AdjustSize
+##  <a name="adjustsize"></a>Cmfctoolbar::-Größe
 
-Berechnet die Größe der Symbolleiste an.
+Berechnet die Größe der Symbolleiste neu.
 
 ```
 void AdjustSize();
@@ -658,13 +658,13 @@ void AdjustSize();
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird sichergestellt, dass es sich bei die Symbolleiste die Grenzen des übergeordneten Rahmens geeignet ist. Diese Methode bewirkt nichts, wenn es sich bei die Symbolleiste keine übergeordneten Rahmen hat.
+Diese Methode stellt sicher, dass die Symbolleiste in die Grenzen des übergeordneten Frames passt. Diese Methode führt keine Aktion aus, wenn die Symbolleiste über keinen übergeordneten Frame verfügt.
 
-Die [CMFCToolBar::AdjustLayout](#adjustlayout) -Methode ruft diese Methode, um die Größe neu zu berechnen, wenn das übergeordnete Element der Symbolleiste nicht ist eine `CMFCReBar` Objekt.
+Die [cmfctoolbar:: accesslayout](#adjustlayout) -Methode ruft diese Methode auf, um die Größe neu zu berechnen, wenn das übergeordnete Element `CMFCReBar` der Symbolleiste kein-Objekt ist.
 
-##  <a name="allowchangetextlabels"></a>  CMFCToolBar::AllowChangeTextLabels
+##  <a name="allowchangetextlabels"></a>Cmfctoolbar:: allowchangetextlabels
 
-Gibt an, ob Beschriftungen unter Bildern, auf die Symbolleisten-Schaltflächen angezeigt werden können.
+Gibt an, ob Text Bezeichnungen auf den Symbolleisten-Schaltflächen unter Bilder angezeigt werden können.
 
 ```
 virtual BOOL AllowChangeTextLabels() const;
@@ -672,19 +672,19 @@ virtual BOOL AllowChangeTextLabels() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn er zulässig ist, um Beschriftungen unterhalb Bilder anzuzeigen. andernfalls "false".
+TRUE, wenn es zulässig ist, Text Bezeichnungen unterhalb von Bildern anzuzeigen. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, im Dialogfeld "anpassen" zu bestimmen, ob zum Aktivieren einer **Beschriftungen anzeigen** Kontrollkästchen auf der **Symbolleisten** Seite für die ausgewählte Symbolleiste.
+Diese Methode wird im Dialogfeld Anpassung aufgerufen, um zu bestimmen, ob das Kontrollkästchen **Text Bezeichnungen anzeigen** auf der Seite **Symbolleisten** für die ausgewählte Symbolleiste aktiviert werden soll.
 
-Die Standardimplementierung gibt "true" zurück.
+Die Standard Implementierung gibt true zurück.
 
-Überschreiben Sie diese Methode in einem Objekt abgeleitet `CMFCToolBar` und "false" zurückgeben, wenn Sie nicht möchten, den Benutzer entscheiden, ob Beschriftungen auf Symbolleisten-Schaltflächen unter die Bilder angezeigt werden.
+Überschreiben Sie diese Methode in einem von `CMFCToolBar` abgeleiteten Objekt, und geben Sie "false" zurück, wenn der Benutzer nicht entscheiden soll, ob Text Bezeichnungen auf Symbolleisten Schaltflächen unter den Bildern angezeigt werden.
 
-##  <a name="allowshowonlist"></a>  CMFCToolBar::AllowShowOnList
+##  <a name="allowshowonlist"></a>Cmfctoolbar:: allowshowonlist
 
-Bestimmt, ob die Symbolleiste in der Liste der Symbolleisten angezeigt wird, auf die **Symbolleisten** im Bereich der **anpassen** Dialogfeld.
+Bestimmt, ob die Symbolleiste in der Liste der Symbolleisten im Bereich **Symbol** leisten des Dialog Felds **Anpassen** angezeigt wird.
 
 ```
 virtual BOOL AllowShowOnList() const;
@@ -692,17 +692,17 @@ virtual BOOL AllowShowOnList() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn das Symbolleistenobjekt im Listenfeld auf der Seite der Symbolleiste Anpassung angezeigt werden kann. andernfalls "false".
+TRUE, wenn das Symbolleisten Objekt im Listenfeld auf der Seite zur Anpassung der Symbolleiste angezeigt werden kann. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, durch das Framework, um zu bestimmen, ob die Liste auf der Seite der Symbolleiste Anpassung ein bestimmtes Objekt abgeleitet werden sollen `CMFCToolBar`.
+Diese Methode wird vom Framework aufgerufen, um zu bestimmen, ob die Liste auf der Seite der Symbolleisten Anpassung ein bestimmtes, `CMFCToolBar`von abgeleitetes Objekt enthalten soll.
 
-Immer die Standardimplementierung gibt "true" zurück. Überschreiben Sie diese Methode, wenn Sie nicht, eine Symbolleiste in der Liste der Symbolleisten im Dialogfeld "anpassen" angezeigt werden möchten.
+Die Standard Implementierung gibt immer true zurück. Überschreiben Sie diese Methode, wenn Sie nicht möchten, dass eine Symbolleiste in der Liste Symbolleisten im Anpassungs Dialogfeld angezeigt wird.
 
-##  <a name="aretextlabels"></a>  CMFCToolBar::AreTextLabels
+##  <a name="aretextlabels"></a>Cmfctoolbar:: aretextlabels
 
-Gibt an, ob Beschriftungen unter Images derzeit auf die Symbolleisten-Schaltflächen angezeigt werden.
+Gibt an, ob Text Beschriftungen Unterbildern momentan auf den Symbolleisten Schaltflächen angezeigt werden.
 
 ```
 BOOL AreTextLabels() const;
@@ -710,15 +710,15 @@ BOOL AreTextLabels() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Symbolleisten-Schaltflächen unten Images die Beschriftungen angezeigt. andernfalls "false".
+TRUE, wenn die Symbolleisten Schaltflächen Text Bezeichnungen unterhalb von Bildern anzeigen. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung [CMFCToolBar::EnableTextLabels](#enabletextlabels) angeben, ob der Text angezeigt wird. Der Standardwert ist "false". Rufen Sie [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) angeben, ob der Benutzer diese Einstellung im Dialogfeld für die Anpassung ändern kann.
+Verwenden Sie [cmfctoolbar:: enabletextlabels](#enabletextlabels) , um anzugeben, ob der Text angezeigt wird. Der Standardwert ist false. Geben Sie [cmfctoolbar:: allowchangetextlabels](#allowchangetextlabels) an, um anzugeben, ob der Benutzer diese Einstellung im Dialogfeld Anpassung ändern kann.
 
-##  <a name="autograyinactiveimages"></a>  CMFCToolBar::AutoGrayInactiveImages
+##  <a name="autograyinactiveimages"></a>Cmfctoolbar:: autograyinactiveimages
 
-Aktiviert oder deaktiviert die automatische Generierung von inaktiven Schaltflächenbilder.
+Aktiviert oder deaktiviert die automatische Generierung von inaktiven Schaltflächen Bildern.
 
 ```
 static void AutoGrayInactiveImages(
@@ -730,23 +730,23 @@ static void AutoGrayInactiveImages(
 ### <a name="parameters"></a>Parameter
 
 *bEnable*<br/>
-[in] Ein boolescher Wert, der angibt, ob inaktive Images dim angibt. Wenn dieser Parameter TRUE ist, sind inaktiv Images abgeblendet. Inaktive Bilder sind, andernfalls nicht abgeblendet.
+in Ein boolescher Wert, der angibt, ob inaktive Bilder abgeblendet werden sollen. Wenn dieser Parameter den Wert true hat, sind inaktive Bilder abbildet. Andernfalls werden inaktive Images nicht abbildet.
 
 *nGrayImagePercentage*<br/>
-[in] Gibt den Prozentsatz der Leuchtdichte für inaktive Images. Wenn *bAktivieren* "false", ist dieser Wert wird ignoriert.
+in Gibt den Beleuchtungs Prozentsatz für inaktive Images an. Wenn *benable* auf false festgelegt ist, wird dieser Wert ignoriert.
 
 *bRedrawAllToolbars*<br/>
-[in] Ein boolescher Wert, der angibt, ob alle Symbolleisten in der Anwendung neu gezeichnet werden soll. Wenn dieser Parameter TRUE ist, zeichnet diese Methode alle Symbolleisten.
+in Ein boolescher Wert, der angibt, ob alle Symbolleisten in der Anwendung neu gezeichnet werden sollen. Wenn dieser Parameter true ist, zeichnet diese Methode alle Symbolleisten neu.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn *bAktivieren* ist "true", das Framework verwendet *nGrayImagePercentage* inaktiv Abbilder von regulären Abbildern zu generieren. Andernfalls müssen Sie den Satz von inaktiven Images bereitstellen, mit der [CMFCToolBar::GetColdImages](#getcoldimages) Methode. Standardmäßig ist diese Option deaktiviert.
+Wenn *benable* auf true festgelegt ist, verwendet das Framework *ngrayimageprozent* , um inaktive Bilder aus den regulären Images zu generieren. Andernfalls müssen Sie den Satz inaktiver Images mithilfe der [cmfctoolbar:: getcoldimages](#getcoldimages) -Methode bereitstellen. Standardmäßig ist diese Option deaktiviert.
 
-Weitere Informationen zu den *nGrayImagePercentage* Parameter finden Sie unter [CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages).
+Weitere Informationen zum *ngrayimageprozent* -Parameter finden Sie unter [cmfctoolbarimages:: grayimages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages).
 
-##  <a name="buttontoindex"></a>  CMFCToolBar::ButtonToIndex
+##  <a name="buttontoindex"></a>Cmfctoolbar:: buttononindex
 
-Gibt den Index eines angegebenen [CMFCToolBarButton-Klasse](../../mfc/reference/cmfctoolbarbutton-class.md) Objekt in diese Symbolleiste.
+Gibt den Index eines angegebenen [cmfctoolbarbutton-Klassen](../../mfc/reference/cmfctoolbarbutton-class.md) Objekts in dieser Symbolleiste zurück.
 
 ```
 int ButtonToIndex(const CMFCToolBarButton* pButton) const;
@@ -755,13 +755,13 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 ### <a name="parameters"></a>Parameter
 
 *pButton*<br/>
-[in] Ein Zeiger auf die Symbolleiste Button-Objekt.
+in Ein Zeiger auf das Symbolleisten-Schaltflächen Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Index *pButton* in der internen Liste der Symbolleisten-Schaltflächen; oder -1, wenn die angegebene Schaltfläche nicht auf diese Symbolleiste ist.
+Index von *pbutton* in der internen Liste der Symbolleisten Schaltflächen. oder-1, wenn die angegebene Schaltfläche nicht auf dieser Symbolleiste angezeigt wird.
 
-##  <a name="calcfixedlayout"></a>  CMFCToolBar::CalcFixedLayout
+##  <a name="calcfixedlayout"></a>Cmfctoolbar:: calcfixedlayout
 
 Berechnet die horizontale Größe der Symbolleiste.
 
@@ -774,10 +774,10 @@ virtual CSize CalcFixedLayout(
 ### <a name="parameters"></a>Parameter
 
 *bStretch*<br/>
-[in] "True" für die die Symbolleiste, um die Größe des übergeordneten Rahmens stretching durchgeführt werden.
+in TRUE, wenn die Symbolleiste auf die Größe des übergeordneten Frames gestreckt werden soll.
 
 *bHorz*<br/>
-[in] True, um die Symbolleiste horizontal ausrichten. "False" auf die Symbolleiste vertikal auszurichten.
+in TRUE zum horizontalen Ausrichten der Symbolleiste. FALSE, um die Symbolleiste vertikal auszurichten.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -785,13 +785,13 @@ Ein `CSize` -Objekt, das die Größe der Symbolleiste angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode berechnet die Größe der Symbolleiste mithilfe der `CMFCToolBar::CalcLayout` Methode. Er übergibt das LM_STRETCH-Flag für die *DwMode* Parameter Wenn *bStretch* ist "true". Das Flag LM_HORZ übergeben, sofern *bHorz* ist "true".
+Diese Methode berechnet die Größe der Symbolleiste mithilfe der `CMFCToolBar::CalcLayout` -Methode. Sie übergibt das Flag LM_STRETCH für den *dwmode* -Parameter, wenn *bstretch* den Wert true hat. Sie übergibt das LM_HORZ-Flag, wenn *bhorz* true ist.
 
-Siehe Beispiel VisualStudioDemo ein Beispiel für die diese Methode verwendet.
+Ein Beispiel für die Verwendung dieser Methode finden Sie im visualstudiodemo-Beispiel.
 
-##  <a name="calcmaxbuttonheight"></a>  CMFCToolBar::CalcMaxButtonHeight
+##  <a name="calcmaxbuttonheight"></a>Cmfctoolbar:: calcmaxbuttonheight
 
-Berechnet die maximale Höhe der Schaltflächen auf der Symbolleiste an.
+Berechnet die maximale Höhe von Schaltflächen auf der Symbolleiste.
 
 ```
 virtual int CalcMaxButtonHeight();
@@ -799,17 +799,17 @@ virtual int CalcMaxButtonHeight();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die maximale Höhe der Schaltflächen.
+Die maximale Höhe von Schaltflächen.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode berechnet die maximale Höhe für alle Schaltflächen der Symbolleiste auf der Symbolleiste. Die Höhe variieren abhängig von Faktoren wie der aktuelle Zustand der Symbolleiste andocken.
+Diese Methode berechnet die maximale Höhe zwischen allen Symbolleisten-Schaltflächen auf der Symbolleiste. Die Höhe kann je nach Faktoren variieren, z. b. dem aktuellen Symbolleisten-Andock Zustand.
 
-Überschreiben Sie diese Methode in einer Klasse abgeleitet `CMFCToolBar` um eigene Berechnungen Höhe bereitzustellen.
+Überschreiben Sie diese Methode in einer von `CMFCToolBar` abgeleiteten Klasse, um eine eigene Höhenberechnung bereitzustellen.
 
-##  <a name="calcsize"></a>  CMFCToolBar::CalcSize
+##  <a name="calcsize"></a>Cmfctoolbar:: calcsize
 
-Wird aufgerufen, durch das Framework als Teil der Berechnungsprozess Layout.
+Wird von Framework als Teil des layoutberechnungs Prozesses aufgerufen.
 
 ```
 virtual CSize CalcSize(BOOL bVertDock);
@@ -818,21 +818,21 @@ virtual CSize CalcSize(BOOL bVertDock);
 ### <a name="parameters"></a>Parameter
 
 *bVertDock*<br/>
-[in] True, um anzugeben, dass die Symbolleiste vertikal verankert ist. "False", um anzugeben, dass die Symbolleiste horizontal angedockt ist.
+in TRUE, um anzugeben, dass die Symbolleiste vertikal angedockt ist. FALSE, um anzugeben, dass die Symbolleiste horizontal angedockt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `CSize` Objekt, das die Gesamtgröße der Schaltflächen auf der Symbolleiste angibt.
+Ein `CSize` -Objekt, das die Gesamtgröße der Schaltflächen auf der Symbolleiste angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode werden die Attribute, die Einfluss auf die Größe der einzelnen Schaltflächen, z. B. Bereich die Bezeichnung und der Border Size berücksichtigt.
+Diese Methode berücksichtigt die Attribute, die sich auf die Größe der einzelnen Schaltflächen auswirken, z. b. den Bereich der Text Bezeichnung und die Rahmengröße.
 
-Wenn es sich bei die Symbolleiste keine Schaltflächen enthält, gibt diese Methode die Größe der reservierte einer einzigen Schaltfläche mit den [CMFCToolBar::GetButtonSize](#getbuttonsize) Methode.
+Wenn die Symbolleiste keine Schaltflächen enthält, gibt diese Methode die reservierte Größe einer einzelnen Schaltfläche zurück, indem die [cmfctoolbar:: getbuttonsize](#getbuttonsize) -Methode verwendet wird.
 
-##  <a name="canbeclosed"></a>  CMFCToolBar::CanBeClosed
+##  <a name="canbeclosed"></a>Cmfctoolbar:: canbeclosed
 
-Gibt an, ob ein Benutzer auf die Symbolleiste schließen kann.
+Gibt an, ob ein Benutzer die Symbolleiste schließen kann.
 
 ```
 virtual BOOL CanBeClosed() const;
@@ -840,17 +840,17 @@ virtual BOOL CanBeClosed() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Symbolleiste, die vom Benutzer geschlossen werden kann. andernfalls "false".
+TRUE, wenn die Symbolleiste vom Benutzer geschlossen werden kann. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode, um zu bestimmen, ob der Benutzer eine Symbolleiste schließen kann. Wenn die Methode "true" zurückgibt, das Framework ermöglicht die SC_CLOSE-Befehl in das Systemmenü der Symbolleiste, und der Benutzer kann schließen Sie die Symbolleiste mithilfe eines Kontrollkästchens in der Liste der Symbolleisten im Dialogfeld "anpassen".
+Das Framework ruft diese Methode auf, um zu bestimmen, ob der Benutzer eine Symbolleiste schließen kann. Wenn die Methode true zurückgibt, aktiviert das Framework den SC_CLOSE-Befehl im Systemmenü der Symbolleiste, und der Benutzer kann die Symbolleiste mit einem Kontrollkästchen in der Liste der Symbolleisten im Anpassungs Dialogfeld schließen.
 
-Die Standardimplementierung gibt "true" zurück. Überschreiben Sie diese Methode in einer Klasse abgeleitet `CMFCToolBar` Symbolleistenobjekte vornehmen, die vom Benutzer nicht geschlossen werden kann.
+Die Standard Implementierung gibt true zurück. Überschreiben Sie diese Methode in einer von `CMFCToolBar` abgeleiteten Klasse, um Toolbar-Objekte zu erstellen, die vom Benutzer nicht geschlossen werden können.
 
-##  <a name="canberestored"></a>  CMFCToolBar::CanBeRestored
+##  <a name="canberestored"></a>Cmfctoolbar:: canberestored
 
-Bestimmt, ob das System nach der Anpassung eine Symbolleiste in seinen ursprünglichen Zustand wiederherstellen können.
+Bestimmt, ob das System nach der Anpassung den ursprünglichen Zustand einer Symbolleiste wiederherstellen kann.
 
 ```
 virtual BOOL CanBeRestored() const;
@@ -858,19 +858,19 @@ virtual BOOL CanBeRestored() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Symbolleiste aus den Anwendungsressourcen wiederhergestellt werden kann. andernfalls "false".
+TRUE, wenn die Symbolleiste aus den Anwendungs Ressourcen wieder hergestellt werden kann. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode, um zu bestimmen, ob eine Symbolleiste nach der Anpassung in seinen ursprünglichen Zustand zurückgegeben werden kann. Der ursprüngliche Zustand wird aus den Anwendungsressourcen geladen.
+Das Framework ruft diese Methode auf, um zu bestimmen, ob eine Symbolleiste nach der Anpassung an ihren ursprünglichen Zustand zurückgegeben werden kann. Der ursprüngliche Zustand wird aus den Anwendungs Ressourcen geladen.
 
-Wenn `CanBeRestored` gibt TRUE zurück, die **Symbolleisten** auf der Seite im Dialogfeld "anpassen" können die **zurücksetzen** Schaltfläche für die ausgewählte Symbolleiste.
+Wenn `CanBeRestored` true zurückgibt, aktiviert die **Symbolleisten** Seite des Anpassungs Dialogfelds die Schaltfläche **Zurücksetzen** für die ausgewählte Symbolleiste.
 
-Die Standardimplementierung gibt "true" zurück, wenn die ursprüngliche Ressourcen-ID der Symbolleiste, wenn es geladen wurde, ungleich NULL ist. Nur benutzerdefinierte Symbolleisten können in der Regel können nicht wiederhergestellt werden.
+Die Standard Implementierung gibt true zurück, wenn die ursprüngliche Ressourcen-ID der Symbolleiste beim Laden ungleich 0 (null) ist. Normalerweise können nur benutzerdefinierte Symbolleisten wieder hergestellt werden.
 
-Sie können außer Kraft setzen der `CanBeRestored` Methode zum Anpassen dieses Verhalten in abgeleiteten Klassen.
+Sie können die `CanBeRestored` -Methode überschreiben, um dieses Verhalten in abgeleiteten Klassen anzupassen.
 
-##  <a name="canfocus"></a>  CMFCToolBar::CanFocus
+##  <a name="canfocus"></a>Cmfctoolbar:: CanFocus
 
 Gibt an, ob der Bereich den Fokus erhalten kann.
 
@@ -880,13 +880,13 @@ virtual BOOL CanFocus() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt FALSE zurück.
+Diese Methode gibt false zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die basisklassenimplementierung [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus), da Symbolleistenobjekte keinen Fokus erhalten können.
+Diese Methode überschreibt die Basisklassen Implementierung [cbasepane:: CanFocus](../../mfc/reference/cbasepane-class.md#canfocus), da Symbolleisten Objekte keinen Fokus erhalten können.
 
-##  <a name="canhandlesiblings"></a>  CMFCToolBar::CanHandleSiblings
+##  <a name="canhandlesiblings"></a>Cmfctoolbar:: canlenker-neben geordnete Elemente
 
 Bestimmt, ob sich die Symbolleiste und gleichgeordnete Elemente im gleichen Bereich befinden.
 
@@ -896,17 +896,17 @@ BOOL CanHandleSiblings();
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Symbolleiste über ein gleichgeordnetes Element verfügt und die Symbolleiste und gleichgeordnete werden im gleichen Bereich positioniert. andernfalls "false".
+TRUE, wenn die Symbolleiste über ein gleich geordnetes Element verfügt und die Symbolleiste und das gleich geordnete Element im selben Bereich positioniert sind. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Die interne cmfccustomizebutton:: CreatePopupMenu-Methode ruft diese Methode, um zu bestimmen, wie zum Anzeigen der **anpassen** Popup-Menü. Wenn diese Methode TRUE zurückgibt, zeigt das Framework die **Schaltflächen in einer Zeile anzeigen** oder **Schaltflächen in zwei Reihen anzeigen** Schaltflächen.
+Die interne cmfccustomizebutton:: upatepopupmenu-Methode ruft diese Methode auf, um zu bestimmen, wie das Popup Menü **Anpassen** angezeigt werden soll. Wenn diese Methode true zurückgibt, zeigt das Framework die Schaltflächen **Show Buttons on a row** or **Show Buttons on two rows an** .
 
-Sie müssen dieser Methode normalerweise nicht verwenden. So aktivieren Sie die **anpassen** , auf der Symbolleiste des Aufrufs erscheint, der [cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton) Methode. So aktivieren Sie die **Schaltflächen in einer Zeile anzeigen** oder **Schaltflächen in zwei Reihen anzeigen** , rufen [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar).
+Sie müssen dieser Methode normalerweise nicht verwenden. Um die Schaltfläche **Anpassen** zu aktivieren, die auf der Symbolleiste angezeigt wird, müssen Sie die [cmfctoolbar:: enablecustomizebutton](#enablecustomizebutton) -Methode aufrufen. Um die Schaltflächen **anzeigen in einer Zeile** oder **Schaltflächen auf zwei Zeilen anzeigen** zu aktivieren, müssen Sie [cmfctoolbar:: setsiblingtoolbar](#setsiblingtoolbar)aufrufen.
 
-##  <a name="cleanupimages"></a>  CMFCToolBar::CleanUpImages
+##  <a name="cleanupimages"></a>Cmfctoolbar:: cleanupimages
 
-Gibt die für Symbolleistenbilder zugeordneten Systemressourcen frei.
+Gibt die für Symbolleisten Bilder zugewiesenen Systemressourcen frei.
 
 ```
 static void CMFCToolBar::CleanUpImages();
@@ -914,11 +914,11 @@ static void CMFCToolBar::CleanUpImages();
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode auf, wenn eine Anwendung beendet wird.
+Das Framework ruft diese Methode auf, wenn eine Anwendung heruntergefahren wird.
 
-##  <a name="cleanuplockedimages"></a>  CMFCToolBar::CleanUpLockedImages
+##  <a name="cleanuplockedimages"></a>Cmfctoolbar:: cleanuplockedimages
 
-Gibt die für gesperrte Symbolleistenbilder zugeordneten Systemressourcen frei.
+Gibt die für gesperrte Symbolleisten Bilder zugewiesenen Systemressourcen frei.
 
 ```
 void CleanUpLockedImages();
@@ -926,11 +926,11 @@ void CleanUpLockedImages();
 
 ### <a name="remarks"></a>Hinweise
 
-Aufgerufen Sie diese Methode wird, wenn sich die visuelle Darstellung Ihrer Anwendung ändert. Siehe Beispiel VisualStudioDemo ein Beispiel für die diese Methode verwendet.
+Ruft diese Methode auf, wenn sich der visuelle Stil der Anwendung ändert. Ein Beispiel für die Verwendung dieser Methode finden Sie im visualstudiodemo-Beispiel.
 
-##  <a name="commandtoindex"></a>  CMFCToolBar::CommandToIndex
+##  <a name="commandtoindex"></a>Cmfctoolbar:: commanddeindex
 
-Gibt den Index der Schaltfläche in der Symbolleiste mit einem angegebenen Befehls-ID
+Gibt den Index der Schaltfläche auf der Symbolleiste mit einer angegebenen Befehls-ID zurück.
 
 ```
 int CommandToIndex(
@@ -941,22 +941,22 @@ int CommandToIndex(
 ### <a name="parameters"></a>Parameter
 
 *nIDFind*<br/>
-[in] Gibt an, die Befehls-ID.
+in Gibt die Befehls-ID an.
 
-*iIndexFirst*<br/>
-[in] Gibt den ersten Index aus starten.
+*iindexfirst*<br/>
+in Gibt den Anfangs Index an, ab dem begonnen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Nullbasierte Index des der Symbolleisten-Schaltfläche, wenn die Methode erfolgreich war. 1, wenn es keine Schaltfläche mit der angegebenen ID. ist
+NULL basierter Index der Symbolleisten-Schaltfläche, wenn die Methode erfolgreich war. -1, wenn keine Schaltfläche mit der angegebenen ID vorhanden ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein `CMFCToolBar` -Objekt verwaltet eine interne Liste der Schaltflächen auf der Symbolleiste. Rufen Sie diese Funktion zum Abrufen des Index einer Schaltfläche in der Liste auf der Grundlage der Befehls-ID der Schaltfläche.
+Ein `CMFCToolBar` -Objekt verwaltet eine interne Liste der Schaltflächen auf der Symbolleiste. Rufen Sie diese Funktion auf, um den Index einer Schaltfläche in der Liste abzurufen, wenn die Befehls-ID der Schaltfläche angegeben ist.
 
-Wenn *iIndex* größer als 0 (null) ist diese Methode ignoriert eine beliebige Schaltfläche in der Symbolleiste, die einen Index verfügt über weniger als *iIndex*.
+Wenn *iIndex* größer als 0 ist, ignoriert diese Methode jede Schaltfläche auf der Symbolleiste, die einen Index kleiner als *iIndex*aufweist.
 
-##  <a name="create"></a>  CMFCToolBar::Create
+##  <a name="create"></a>Cmfctoolbar:: Create
 
 Erstellt ein `CMFCToolBar`-Objekt.
 
@@ -970,25 +970,25 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parameter
 
 *pParentWnd*<br/>
-[in] Ein Zeiger auf das übergeordnete Fenster der Symbolleiste.
+in Ein Zeiger auf das übergeordnete Fenster der Symbolleiste.
 
 *dwStyle*<br/>
-[in] Der Stil für die Symbolleiste. Finden Sie unter [Toolbar-Steuerelement und Button-Stile](/windows/desktop/Controls/toolbar-control-and-button-styles) im Windows SDK für die Liste der Stile.
+in Der Symbolleisten Stil. Die Liste der Stile finden Sie unter [Symbolleisten-Steuerelement-und Schaltflächen Stile](/windows/win32/Controls/toolbar-control-and-button-styles) in der Windows SDK.
 
 *nID*<br/>
-[in] Die ID des untergeordneten Fensters der Symbolleiste.
+in Die ID des untergeordneten Fensters der Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn diese Methode erfolgreich ist. andernfalls "false".
+TRUE, wenn diese Methode erfolgreich ist. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode erstellt eine Steuerleiste und fügt ihn der Symbolleiste. Die Steuerleiste erstellt im TBSTYLE_FLAT-Format. Rufen Sie [CMFCToolBar::CreateEx](#createex) ggf. ein anderes Steuerelement Standardstil der Statusleiste.
+Diese Methode erstellt eine Steuerleiste und fügt Sie an die Symbolleiste an. Er erstellt die Steuerleiste mit dem TBSTYLE_FLAT-Stil. Wenn Sie einen anderen Steuer leisten Stil verwenden möchten, können Sie [cmfctoolbar:: deateex](#createex) aufrufen.
 
-##  <a name="createex"></a>  CMFCToolBar::CreateEx
+##  <a name="createex"></a>Cmfctoolbar:: kreateex
 
-Erstellt eine `CMFCToolBar` Objekt, das zusätzliche Formatoptionen, z. B. große Symbole verwendet.
+Erstellt ein `CMFCToolBar` -Objekt, das zusätzliche Stil Optionen wie große Symbole verwendet.
 
 ```
 virtual BOOL CreateEx(
@@ -1005,40 +1005,40 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parameter
 
 *pParentWnd*<br/>
-[in] Ein Zeiger auf das übergeordnete Fenster der Symbolleiste.
+in Ein Zeiger auf das übergeordnete Fenster der Symbolleiste.
 
 *dwCtrlStyle*<br/>
-[in] Weitere Formate für die Erstellung der eingebetteten Steuerleistenobjekt.
+in Zusätzliche Stile zum Erstellen des eingebetteten Steuer leisten Objekts.
 
 *dwStyle*<br/>
-[in] Der Stil für die Symbolleiste. Finden Sie unter [Toolbar-Steuerelement und Button-Stile](/windows/desktop/Controls/toolbar-control-and-button-styles) eine Liste der entsprechenden Stile.
+in Der Symbolleisten Stil. Eine Liste geeigneter Stile finden Sie unter [Symbolleisten-Steuerelement-und Schaltflächen Stile](/windows/win32/Controls/toolbar-control-and-button-styles) .
 
-*rcBorders*<br/>
-[in] Ein `CRect` Objekt, das die Breite der Symbolleiste im Fensterrahmen angibt.
+*rcborders*<br/>
+in Ein `CRect` -Objekt, das die Breite des Symbolleisten Fensterrahmens angibt.
 
 *nID*<br/>
-[in] Die ID des untergeordneten Fensters der Symbolleiste.
+in Die ID des untergeordneten Fensters der Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn diese Methode erfolgreich ist. andernfalls 0.
+Ungleich 0 (null), wenn diese Methode erfolgreich ist. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode erstellt eine Steuerleiste und fügt ihn der Symbolleiste.
+Diese Methode erstellt eine Steuerleiste und fügt Sie an die Symbolleiste an.
 
-Rufen Sie diese Methode anstelle von [CMFCToolBar::Create](#create) Wenn Sie bestimmte Formate bereitstellen möchten. Legen Sie z. B. *DwCtrlStyle* zu TBSTYLE_FLAT | TBSTYLE_TRANSPARENT zum Erstellen einer Symbolleiste, die die Symbolleisten ähnelt, die von Internet Explorer 4 verwendet werden.
+Rufen Sie diese Methode anstelle von [cmfctoolbar:: Create](#create) auf, wenn Sie bestimmte Stile bereitstellen möchten. Legen Sie z. b. *dwctrlstyle* auf TBSTYLE_FLAT fest. TBSTYLE_TRANSPARENT erstellen Sie eine Symbolleiste, die den Symbolleisten ähnelt, die von Internet Explorer 4 verwendet werden.
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `CreateEx` Methode der `CMFCToolBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../overview/visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `CreateEx` -Methode `CMFCToolBar` der-Klasse verwendet wird. Dieser Code Ausschnitt ist Teil des IE- [Demo](../../overview/visual-cpp-samples.md)Beispiels.
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
 
-##  <a name="deactivate"></a>  CMFCToolBar::Deactivate
+##  <a name="deactivate"></a>Cmfctoolbar::D eaktivierung
 
-Deaktiviert die Symbolleiste an.
+Deaktiviert die Symbolleiste.
 
 ```
 virtual void Deactivate();
@@ -1046,9 +1046,9 @@ virtual void Deactivate();
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird die Symbolleiste deaktiviert, durch das Entfernen des Fokus von den hervorgehobenen Symbolleisten-Schaltfläche. Das Framework ruft diese Methode auf, wenn die Symbolleiste den Fokus verliert oder zerstört wird.
+Diese Methode deaktiviert die Symbolleiste, indem der Fokus von der hervorgehobenen Symbolleisten Schaltfläche entfernt wird. Das Framework ruft diese Methode auf, wenn die Symbolleiste den Fokus verliert oder zerstört wird.
 
-##  <a name="dopaint"></a>  CMFCToolBar::DoPaint
+##  <a name="dopaint"></a>Cmfctoolbar::D opaint
 
 Zeichnet eine Symbolleiste neu.
 
@@ -1059,17 +1059,17 @@ virtual void DoPaint(CDC* pDC);
 ### <a name="parameters"></a>Parameter
 
 *pDC*<br/>
-[in] Ein Zeiger auf einen Gerätekontext.
+in Ein Zeiger auf einen Gerätekontext.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird vom Framework aufgerufen, wenn ein Teil der Symbolleiste neu gezeichnet werden muss.
+Diese Methode wird von Framework aufgerufen, wenn ein Teil der Symbolleiste neu gezeichnet werden muss.
 
-Überschreiben Sie diese Methode zum Anpassen der Darstellung eines Objekts abgeleitet `CMFCToolBar`.
+Überschreiben Sie diese Methode, um die Darstellung eines von `CMFCToolBar`abgeleiteten Objekts anzupassen.
 
-##  <a name="drawbutton"></a>  CMFCToolBar::DrawButton
+##  <a name="drawbutton"></a>Cmfctoolbar::D rawbutton
 
-Zeichnet eine Symbolleisten-Schaltfläche neu.
+Zeichnet eine Symbolleisten Schaltfläche neu.
 
 ```
 virtual BOOL DrawButton(
@@ -1083,33 +1083,33 @@ virtual BOOL DrawButton(
 ### <a name="parameters"></a>Parameter
 
 *pDC*<br/>
-[in] Ein Zeiger auf einen Gerätekontext.
+in Ein Zeiger auf einen Gerätekontext.
 
 *pButton*<br/>
-[in] Ein Zeiger auf eine Schaltfläche gezeichnet werden soll.
+in Ein Zeiger auf eine zu zeichnende Schaltfläche.
 
-*pImages*<br/>
-[in] Ein Zeiger auf die Symbolleistenbilder.
+*pimages*<br/>
+in Ein Zeiger auf die Symbolleisten Bilder.
 
 *bHighlighted*<br/>
-[in] True, wenn die Schaltfläche markiert wird. andernfalls "false".
+in TRUE, wenn die Schaltfläche hervorgehoben ist. andernfalls false.
 
 *bDrawDisabledImages*<br/>
-[in] True, wenn deaktivierte Schaltflächen abgeblendet sind. andernfalls "false".
+in TRUE, wenn deaktivierte Schaltflächen abausgeblendet sind. andernfalls false.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Schaltfläche neu gezeichnet wurde. "False", wenn die Schaltfläche ausgeblendet ist.
+TRUE, wenn die Schaltfläche neu gezeichnet wurde. FALSE, wenn die Schaltfläche ausgeblendet ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Die [CMFCToolBar::DrawButton](#drawbutton) -Methode ruft diese Methode auf, wenn eine Symbolleisten-Schaltfläche neu gezeichnet werden muss.
+Die [cmfctoolbar::D rawbutton](#drawbutton) -Methode ruft diese Methode auf, wenn eine Symbolleisten-Schaltfläche neu gezeichnet werden muss.
 
-Überschreiben Sie diese Methode, wenn Sie die Darstellung der Schaltflächen auf der Symbolleiste anpassen möchten.
+Überschreiben Sie diese Methode, wenn Sie die Darstellung von Schaltflächen auf der Symbolleiste anpassen möchten.
 
-##  <a name="drawseparator"></a>  CMFCToolBar::DrawSeparator
+##  <a name="drawseparator"></a>Cmfctoolbar::D rawseparator
 
-Zeichnet ein Trennzeichen in einer Symbolleiste neu.
+Zeichnet ein Trennzeichen auf einer Symbolleiste auf.
 
 ```
 virtual void DrawSeparator(
@@ -1121,21 +1121,21 @@ virtual void DrawSeparator(
 ### <a name="parameters"></a>Parameter
 
 *pDC*<br/>
-[in] Ein Zeiger auf einen Gerätekontext.
+in Ein Zeiger auf einen Gerätekontext.
 
-*rect*<br/>
-[in] Das umschließende Rechteck des Speicherorts, in dem das Trennzeichen in Pixel gezeichnet wird.
+*Rect*<br/>
+in Das umgebende Rechteck der Position, an der das Trennzeichen gezeichnet wird, in Pixel.
 
 *bHorz*<br/>
-[in] TRUE, wenn das Trennzeichen horizontal, "false" ist das Trennzeichen vertikal ist.
+in TRUE, wenn das Trennzeichen horizontal ist, false, wenn das Trennzeichen vertikal ist.
 
 ### <a name="remarks"></a>Hinweise
 
-[CMFCToolBar::DoPaint](#dopaint) ruft diese Methode für die einzelnen [CMFCToolBar::DrawSeparator](#drawseparator) Objekt, das den Stil TBBS_SEPARATOR, statt verfügt [CMFCToolBar::DrawButton](#drawbutton) für Benutzer Schaltflächen.
+[Cmfctoolbar::D opaint](#dopaint) ruft diese Methode für jedes [cmfctoolbar::D rawseparator](#drawseparator) -Objekt auf, das den TBBS_SEPARATOR-Stil hat, anstatt [cmfctoolbar::D rawbutton](#drawbutton) für diese Schaltflächen aufzurufen.
 
-Überschreiben Sie diese Methode in einer Klasse abgeleitet [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) anpassen die Darstellung von Trennzeichen auf der Symbolleiste. Die Standardimplementierung ruft [CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator) Trennzeichen zeichnen, deren Darstellung wird vom aktuellen visuellen Manager bestimmt.
+Überschreiben Sie diese Methode in einer Klasse, die von [cmfctoolbar](../../mfc/reference/cmfctoolbar-class.md) abgeleitet wurde, um die Darstellung von Trennzeichen auf der Symbolleiste anzupassen. Die Standard Implementierung ruft [CMFCVisualManager:: ondrawseparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator) auf, um ein Trennzeichen zu zeichnen, dessen Darstellung vom aktuellen visuellen Manager bestimmt wird.
 
-##  <a name="enablecustomizebutton"></a>  Cmfctoolbar:: Enablecustomizebutton
+##  <a name="enablecustomizebutton"></a>Cmfctoolbar:: enablecustomizebutton
 
 Aktiviert oder deaktiviert die Schaltfläche "anpassen", die auf der Symbolleiste angezeigt wird.
 
@@ -1156,31 +1156,31 @@ void EnableCustomizeButton(
 ### <a name="parameters"></a>Parameter
 
 *bEnable*<br/>
-[in] Aktiviert oder deaktiviert die Schaltfläche "anpassen".
+in Aktiviert oder deaktiviert die Schaltfläche anpassen.
 
-*iCustomizeCmd*<br/>
-[in] Die Befehls-ID von der Schaltfläche "anpassen".
+*icustomizecmd*<br/>
+in Die Befehls-ID der Schaltfläche anpassen.
 
 *strCustomizeText*<br/>
-[in] Die textbezeichnung des der Schaltfläche "anpassen".
+in Die Text Bezeichnung der Schaltfläche anpassen.
 
 *uiCustomizeTextResId*<br/>
-[in] Die Ressourcen-ID der Zeichenfolge der die Beschriftung der Schaltfläche anpassen.
+in Die Ressourcen Zeichen folgen-ID der Bezeichnungs Schaltfläche.
 
 *bQuickCustomize*<br/>
-[in] Aktiviert oder deaktiviert die **Schaltflächen hinzufügen oder entfernen** im Menü "", die über die Schaltfläche angezeigt wird.
+in Aktiviert oder deaktiviert die Option **Schaltflächen hinzufügen oder entfernen** im Menü, das von der Schaltfläche abfällt.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn *iCustomizeCmd* ist-1. das Framework zeigt Schaltfläche anpassen, wenn nicht passen mehrere Schaltflächen der Symbolleiste auf der Symbolleiste angezeigt. Die Schaltfläche angezeigt, die einen doppelten nach links zeigenden Pfeil oder Chevron, was bedeutet, dass weitere Schaltflächen vorhanden sind.
+Wenn *icustomizecmd* den Wert-1 aufweist, zeigt das Framework die Schaltfläche Anpassen an, wenn mehrere Symbolleisten-Schaltflächen nicht in den Symbolleisten Bereich passen. Die Schaltfläche zeigt einen doppelten nach links zeigenden Pfeil oder Chevron an, der angibt, dass weitere Schaltflächen vorhanden sind.
 
-Wenn *iCustomizeCmd* gibt an, eine gültige Befehls-ID, und *bAktivieren* ist "true" wird die Schaltfläche wird immer angezeigt, anpassen. Die Schaltfläche verfügt über einen geringen Pfeil nach unten, und öffnet ein Menü, das einen Befehl enthält. Dieser Befehl verwendet die textbezeichnung gemäß *StrCustomizeText*. Wenn *bQuickCustomize* gilt auch, zeigt das Menü der **Schaltflächen hinzufügen oder entfernen** Option.
+Wenn *icustomizecmd* eine gültige Befehls-ID angibt und *benable den Wert* true hat, wird immer die Schaltfläche Anpassen angezeigt. Die Schaltfläche weist einen kleinen Pfeil nach unten auf und öffnet ein Menü, das einen Befehl enthält. Dieser Befehl verwendet die von " *straucustomizetext*" angegebene Text Bezeichnung. Wenn *bquickcustomize* ebenfalls true ist, wird im Menü die Option **Schaltflächen hinzufügen oder entfernen** angezeigt.
 
-Das Framework fügt dynamisch zum Menü Schaltflächen, die nicht im Symbolleistenbereich vor dem Element, das angegeben wird *iCustomizeCmd*. Die Chevron-Schaltfläche wird neben den Pfeil nach unten angezeigt.
+Das Framework fügt dem Menü dynamisch alle Schaltflächen hinzu, die nicht in den Symbolleisten Bereich passen, bevor das durch *icustomizecmd*angegebene Element eingefügt wird. Das Chevron wird neben dem Pfeil nach unten angezeigt.
 
-##  <a name="enabledocking"></a>  CMFCToolBar::EnableDocking
+##  <a name="enabledocking"></a>Cmfctoolbar:: EnableDocking
 
-Ermöglicht das Andocken des Bereichs zum Hauptframe auf.
+Ermöglicht das Andocken des Bereichs in den Hauptframe.
 
 ```
 virtual void EnableDocking(DWORD dwAlignment);
@@ -1189,15 +1189,15 @@ virtual void EnableDocking(DWORD dwAlignment);
 ### <a name="parameters"></a>Parameter
 
 *dwAlignment*<br/>
-[in] Gibt die andockbare Ausrichtung zu aktivieren.
+in Gibt die zu aktivierbare Andock Ausrichtung an.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode erweitert die basisklassenimplementierung [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), durch Festlegen der `CBasePane::m_dwControlBarStyle` Datenmember, AFX_CBRS_FLOAT. Diese Methode übergibt dann *DwAlignment* für die Implementierung der Basisklasse.
+Diese Methode erweitert die Basisklassen Implementierung [cbasepane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)durch Festlegen des `CBasePane::m_dwControlBarStyle` Datenmembers auf AFX_CBRS_FLOAT. Diese Methode übergibt dann *dwalignment* an die Basisklassen Implementierung.
 
-##  <a name="enablelargeicons"></a>  CMFCToolBar::EnableLargeIcons
+##  <a name="enablelargeicons"></a>Cmfctoolbar:: enablelargeicons
 
-Aktiviert oder deaktiviert die große Symbole auf Symbolleisten-Schaltflächen.
+Aktiviert oder deaktiviert große Symbole auf Symbolleisten-Schaltflächen.
 
 ```
 void EnableLargeIcons(BOOL bEnable);
@@ -1206,15 +1206,15 @@ void EnableLargeIcons(BOOL bEnable);
 ### <a name="parameters"></a>Parameter
 
 *bEnable*<br/>
-[in] "True", um große Symbole, "false" zu aktivieren, um große Symbole zu deaktivieren.
+in TRUE, um große Symbole zu aktivieren, false, um große Symbole zu deaktivieren.
 
 ### <a name="remarks"></a>Hinweise
 
 Standardmäßig sind große Symbole aktiviert.
 
-##  <a name="enablequickcustomization"></a>  CMFCToolBar::EnableQuickCustomization
+##  <a name="enablequickcustomization"></a>Cmfctoolbar:: enablequickcustomi
 
-Aktiviert oder deaktiviert die schnelle Anpassung von Symbolleisten, damit der Benutzer durch Drücken von kann die **Alt** gedrückt, und ziehen Sie eine Schaltfläche in einem neuen Speicherort.
+Aktiviert oder deaktiviert die schnelle Anpassung von Symbolleisten, sodass der Benutzer die **alt** -Taste drücken und eine Schaltfläche an eine neue Position ziehen kann.
 
 ```
 static void EnableQuickCustomization(BOOL bEnable=TRUE);
@@ -1223,11 +1223,11 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bEnable*<br/>
-[in] TRUE, um schnelle Anpassung, "false" zu aktivieren, um schnelle Anpassung zu deaktivieren.
+in TRUE, um die schnelle Anpassung zu aktivieren, false, um die schnelle Anpassung zu deaktivieren.
 
-##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections
+##  <a name="enablereflections"></a>Cmfctoolbar:: enablereflections
 
-Aktiviert oder deaktiviert die Reflektion des Befehls.
+Aktiviert oder deaktiviert die Befehls Reflektion.
 
 ```
 void EnableReflections(BOOL bEnable = TRUE);
@@ -1236,17 +1236,17 @@ void EnableReflections(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bEnable*<br/>
-[in] True, um den Befehl Reflektion zu aktivieren. So deaktivieren Sie den Befehl Reflektion wird false ZURÜCKGEGEBEN.
+in TRUE zum Aktivieren der Befehls Reflektion. FALSE zum Deaktivieren der Befehls Reflektion.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode, um den Befehl Reflektion für Schaltflächen der Symbolleiste zu aktivieren, die eingebettete Steuerelemente wie Kombinationsfelder enthalten.
+Mit dieser Methode können Sie die Befehls Reflektion für Symbolleisten Schaltflächen aktivieren, die eingebettete Steuerelemente wie Kombinations Felder enthalten.
 
-Weitere Informationen zum Befehl Reflektion finden Sie unter [TN062: Nachricht Reflektion für Windows-Steuerelemente](../../mfc/tn062-message-reflection-for-windows-controls.md).
+Weitere Informationen zur Befehls Reflektion finden [Sie unter TN062: Nachrichten Reflektion für Windows](../../mfc/tn062-message-reflection-for-windows-controls.md)-Steuerelemente.
 
-##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels
+##  <a name="enabletextlabels"></a>Cmfctoolbar:: enabletextlabels
 
-Aktiviert oder deaktiviert die Beschriftungen unter Symbolleisten-Schaltflächen.
+Aktiviert oder deaktiviert Text Bezeichnungen unter Symbolleisten-Schaltflächen Bilder.
 
 ```
 void EnableTextLabels(BOOL bEnable=TRUE);
@@ -1255,15 +1255,15 @@ void EnableTextLabels(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bEnable*<br/>
-True, wenn die Beschriftungen unter Symbolleisten-Schaltflächen angezeigt werden. andernfalls "false".
+TRUE, wenn Text Bezeichnungen unter Symbolleisten-Schaltflächen Bilder angezeigt werden. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn Beschriftungen aktiviert sind, werden alle Schaltflächen auf der Symbolleiste Vollbild Geben Sie Speicherplatz für die Bezeichnungen in den Images angezeigt wird. Das Dialogfeld für die Anpassung verfügt über eine **textbezeichnung anzeigen** Kontrollkästchen auf der **Symbolleisten** Seite. Wenn der Benutzer eine Symbolleiste wählt und diese Option prüft, um das Framework ruft `EnableTextLabels` für die ausgewählte Symbolleiste. Sie können das Kontrollkästchen deaktivieren, für ein Objekt abgeleitet [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) durch "false" zurückgeben [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) .
+Wenn Text Bezeichnungen aktiviert sind, werden alle Schaltflächen auf der Symbolleiste vergrößert, um Platz für die Bezeichnungen zu bieten, die unter den Bildern angezeigt werden. Im Dialogfeld Anpassung ist das Kontrollkästchen **Text Bezeichnung anzeigen** auf der Seite **Symbolleisten** enthalten. Wenn der Benutzer eine Symbolleiste auswählt und diese Option überprüft, ruft `EnableTextLabels` das Framework die ausgewählte Symbolleiste auf. Sie können das Kontrollkästchen für ein von [cmfctoolbar](../../mfc/reference/cmfctoolbar-class.md) abgeleitetes Objekt deaktivieren, indem Sie false von [cmfctoolbar:: allowchangetextlabels](#allowchangetextlabels) zurückgeben.
 
-##  <a name="fromhandlepermanent"></a>  CMFCToolBar::FromHandlePermanent
+##  <a name="fromhandlepermanent"></a>Cmfctoolbar:: fromlenker permanent
 
-Ruft einen Zeiger auf die `CMFCToolBar` -Objekt, das das angegebene Fenster-Handle enthält.
+Ruft einen Zeiger auf das `CMFCToolBar` -Objekt ab, das das angegebene Fenster Handle enthält.
 
 ```
 static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
@@ -1271,20 +1271,20 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 
 ### <a name="parameters"></a>Parameter
 
-*hwnd*<br/>
-[in] Das Fensterhandle, der gesucht werden soll.
+*HWND*<br/>
+in Das Fenster Handle, nach dem gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `CMFCToolBar` -Objekt, das angegebene Fensterhandle oder NULL enthält, wenn kein entsprechender `CMFCToolBar` Objekt vorhanden ist.
+Ein Zeiger auf das `CMFCToolBar` Objekt, das das angegebene Fenster Handle enthält, oder NULL, wenn `CMFCToolBar` kein entsprechendes Objekt vorhanden ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese freigegebenen Methode untersucht jede Symbolleiste in der Anwendung für die `CMFCToolBar` -Objekt, das das angegebene Fenster-Handle enthält.
+Diese freigegebene Methode untersucht jede Symbolleiste in der `CMFCToolBar` Anwendung für das Objekt, das das angegebene Fenster Handle enthält.
 
-##  <a name="getallbuttons"></a>  CMFCToolBar::GetAllButtons
+##  <a name="getallbuttons"></a>Cmfctoolbar:: getallbuttons
 
-Gibt eine schreibgeschützte Liste der Schaltflächen in einer Symbolleiste zurück.
+Gibt eine schreibgeschützte Liste von Schaltflächen in einer Symbolleiste zurück.
 
 ```
 const CObList& GetAllButtons() const;
@@ -1292,11 +1292,11 @@ const CObList& GetAllButtons() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein konstanter Verweis auf eine [CObList-Klasse](../../mfc/reference/coblist-class.md) -Objekt, das eine Auflistung von enthält [CMFCToolBarButton-Klasse](../../mfc/reference/cmfctoolbarbutton-class.md) Objekte.
+Ein konstanter Verweis auf ein [CObList-Klassen](../../mfc/reference/coblist-class.md) Objekt, das eine Auflistung von [cmfctoolbarbutton-Klassen](../../mfc/reference/cmfctoolbarbutton-class.md) Objekten enthält.
 
-##  <a name="getalltoolbars"></a>  CMFCToolBar::GetAllToolbars
+##  <a name="getalltoolbars"></a>Cmfctoolbar:: getalltoolbars
 
-Gibt eine schreibgeschützte Liste alle Symbolleisten in der Anwendung zurück.
+Gibt eine schreibgeschützte Liste aller Symbolleisten in der Anwendung zurück.
 
 ```
 static const CObList& GetAllToolbars();
@@ -1304,11 +1304,11 @@ static const CObList& GetAllToolbars();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Einen konstanten Verweis auf eine [CObList-Klasse](../../mfc/reference/coblist-class.md) -Objekt, das eine Auflistung von enthält `CMFCToolBar` Objekte.
+Ein konstanter Verweis auf ein [CObList-Klassen](../../mfc/reference/coblist-class.md) Objekt, das eine Auflistung von `CMFCToolBar` -Objekten enthält.
 
-##  <a name="getbasiccommands"></a>  CMFCToolBar::GetBasicCommands
+##  <a name="getbasiccommands"></a>Cmfctoolbar:: getbasiccommands
 
-Gibt eine Liste für schreibgeschützten Zugriff von den grundlegenden Befehlen, die in der Anwendung definiert.
+Gibt eine schreibgeschützte Liste der grundlegenden Befehle zurück, die in der Anwendung definiert sind.
 
 ```
 static const CList<UINT,UINT>& GetBasicCommands();
@@ -1316,15 +1316,15 @@ static const CList<UINT,UINT>& GetBasicCommands();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Einen konstanten Verweis auf eine [CList-Klasse](../../mfc/reference/clist-class.md) -Objekt, das eine Auflistung von grundlegende Befehle enthält.
+Ein konstanter Verweis auf ein [CLIST-Klassen](../../mfc/reference/clist-class.md) Objekt, das eine Auflistung von grundlegenden Befehlen enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Grundlegende Befehle hinzufügen, indem Aufrufen [CMFCToolBar::AddBasicCommand](#addbasiccommand) oder [CMFCToolBar::SetBasicCommands](#setbasiccommands).
+Fügen Sie grundlegende Befehle hinzu, indem Sie [cmfctoolbar:: addbasiccommand](#addbasiccommand) oder [cmfctoolbar:: setbasiccommands](#setbasiccommands)aufrufen.
 
-##  <a name="getbutton"></a>  CMFCToolBar::GetButton
+##  <a name="getbutton"></a>Cmfctoolbar:: getbutton
 
-Gibt einen Zeiger auf die [CMFCToolBarButton-Klasse](../../mfc/reference/cmfctoolbarbutton-class.md) Objekt am angegebenen Index.
+Gibt einen Zeiger auf das [cmfctoolbarbutton-Klassen](../../mfc/reference/cmfctoolbarbutton-class.md) Objekt an einem angegebenen Index zurück.
 
 ```
 CMFCToolBarButton* GetButton(int iIndex) const;
@@ -1333,15 +1333,15 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 ### <a name="parameters"></a>Parameter
 
 *iIndex*<br/>
-[in] Gibt den Index der Schaltfläche zurück.
+in Gibt den Index der zurück zugebende Schaltfläche an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Symbolleisten-Schaltfläche, falls vorhanden; oder NULL, wenn diese Schaltfläche nicht vorhanden ist.
+Ein Zeiger auf die Symbolleisten Schaltfläche, wenn Sie vorhanden ist. oder NULL, wenn keine solche Schaltfläche vorhanden ist.
 
-##  <a name="getbuttoninfo"></a>  CMFCToolBar::GetButtonInfo
+##  <a name="getbuttoninfo"></a>Cmfctoolbar:: getbuttoninfo
 
-Gibt zurück, die die Befehls-ID, Stil und Image-Index der Schaltfläche an einem angegebenen Index.
+Gibt die Befehls-ID, den Stil und den Bild Index der Schaltfläche an einem angegebenen Index zurück.
 
 ```
 void GetButtonInfo(
@@ -1354,24 +1354,24 @@ void GetButtonInfo(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Gibt den Index der Schaltfläche in der Liste der Schaltflächen auf der Symbolleiste an.
+in Gibt den Index der Schaltfläche in der Liste der Schaltflächen auf der Symbolleiste an.
 
 *nID*<br/>
-[out] Die Befehls-ID einer Schaltfläche.
+vorgenommen Die Befehls-ID einer Schaltfläche.
 
 *nStyle*<br/>
-[out] Der Stil der Schaltfläche.
+vorgenommen Der Stil der Schaltfläche.
 
 *iImage*<br/>
-[out] Der Index des Bilds für die Schaltfläche.
+vorgenommen Der Index des Bilds für die Schaltfläche.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `GetButtonInfo` Methode sucht nach einer Symbolleisten-Schaltfläche am angegebenen Index und ruft den Befehls-ID "," Stil "und" Image Index der Schaltfläche ab.
+Die `GetButtonInfo` -Methode findet eine Symbolleisten-Schaltfläche am angegebenen Index und ruft die Befehls-ID, den Stil und den Bild Index der Schaltfläche ab.
 
-Das Framework legt fest, wenn die Schaltfläche am angegebenen Index nicht vorhanden ist, *nID* und *nStyle* auf 0 (null) und *iImage* -1, wenn die Methode zurückgegeben wird.
+Wenn die Schaltfläche am angegebenen Index nicht vorhanden ist, legt das Framework *NID* und *nstyle* auf 0 und *iImage* auf-1 fest, wenn die Methode zurückgibt.
 
-##  <a name="getbuttonsize"></a>  CMFCToolBar::GetButtonSize
+##  <a name="getbuttonsize"></a>Cmfctoolbar:: getbuttonsize
 
 Gibt die Dimensionen der einzelnen Schaltflächen auf der Symbolleiste zurück.
 
@@ -1381,15 +1381,15 @@ CSize GetButtonSize() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [CSize-Klasse](../../atl-mfc-shared/reference/csize-class.md) Objekt, das die Dimensionen der einzelnen Schaltflächen auf der Symbolleiste angibt.
+Ein [CSize-Klassen](../../atl-mfc-shared/reference/csize-class.md) Objekt, das die Dimensionen der einzelnen Schaltflächen auf der Symbolleiste angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie [CMFCToolBar::SetSizes](#setsizes) oder [CMFCToolBar::SetLockedSizes](#setlockedsizes) , legen Sie die Dimensionen der einzelnen Schaltflächen auf der Symbolleiste.
+Sie können [cmfctoolbar:: setSizes](#setsizes) oder [cmfctoolbar:: setlockedsizes](#setlockedsizes) aufrufen, um die Dimensionen der einzelnen Schaltflächen auf der Symbolleiste festzulegen.
 
-##  <a name="getbuttonstyle"></a>  CMFCToolBar::GetButtonStyle
+##  <a name="getbuttonstyle"></a>Cmfctoolbar:: GetButtonStyle
 
-Gibt den aktuellen Stil, der Symbolleisten-Schaltfläche, die sich am angegebenen Index befindet.
+Gibt den aktuellen Stil der Symbolleisten Schaltfläche zurück, die sich am angegebenen Index befindet.
 
 ```
 UINT GetButtonStyle(int nIndex) const;
@@ -1398,19 +1398,19 @@ UINT GetButtonStyle(int nIndex) const;
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Gibt den Index einer Symbolleisten-Schaltfläche.
+in Gibt den Index einer Symbolleisten-Schaltfläche an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Wert, der das Format der Symbolleisten-Schaltfläche angibt. sein. Finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md) eine Liste der möglichen Formate.
+Ein-Wert, der den Stil der Symbolleisten Schaltfläche angibt. . Eine Liste möglicher Stile finden Sie unter Symbolleisten- [Steuerelement Stile](../../mfc/reference/toolbar-control-styles.md) .
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie [CMFCToolBar::SetButtonStyle](#setbuttonstyle) der Stil, der eine Symbolleisten-Schaltfläche festlegen
+[Cmfctoolbar:: setbuttonstyle](#setbuttonstyle) aufrufen, um den Stil einer Symbolleisten-Schaltfläche festzulegen
 
-##  <a name="getbuttontext"></a>  CMFCToolBar::GetButtonText
+##  <a name="getbuttontext"></a>Cmfctoolbar:: getbuttontext
 
-Gibt die textbezeichnung des einer Schaltfläche mit einem angegebenen Index zurück.
+Gibt die Text Bezeichnung einer Schaltfläche zurück, die über einen angegebenen Index verfügt.
 
 ```
 CString GetButtonText(int nIndex) const;
@@ -1423,22 +1423,22 @@ void GetButtonText(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Der Index des eine Symbolleisten-Schaltfläche.
+in Der Index einer Symbolleisten-Schaltfläche.
 
 *rString*<br/>
-[out] Der Bezeichnungstext der Symbolleisten-Schaltfläche.
+vorgenommen Der Beschriftungs Text der Symbolleisten-Schaltfläche.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Bezeichnungstext der Symbolleisten-Schaltfläche.
+Der Beschriftungs Text der Symbolleisten-Schaltfläche.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie [CMFCToolBar::SetButtonText](#setbuttontext) oder [CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext) textbezeichnung festlegen.
+[Verwenden Sie cmfctoolbar:: SetButtonText](#setbuttontext) oder [cmfctoolbar:: settoolbarbtntext](#settoolbarbtntext) , um die Text Bezeichnung festzulegen.
 
-##  <a name="getcoldimages"></a>  CMFCToolBar::GetColdImages
+##  <a name="getcoldimages"></a>Cmfctoolbar:: getcoldimages
 
-Gibt einen Zeiger auf die Auflistung von kalten Symbolleisten-Schaltflächen in der Anwendung an.
+Gibt einen Zeiger auf die Auflistung kalter Symbolleisten-Schaltflächen Bilder in der Anwendung zurück.
 
 ```
 static CMFCToolBarImages* GetColdImages();
@@ -1446,15 +1446,15 @@ static CMFCToolBarImages* GetColdImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Auflistung der Symbolleisten-Schaltflächen kalt.
+Ein Zeiger auf die Auflistung von Bildern für kalte Symbolleisten-Schaltflächen.
 
 ### <a name="remarks"></a>Hinweise
 
-Cold-Images sind die Images, die verwendet werden, wenn der Benutzer nicht mit der Symbolleisten-Schaltflächen interagiert. Rufen Sie [CMFCToolBar::LoadBitmapEx](#loadbitmapex) oder [CMFCToolBar::LoadBitmap](#loadbitmap) kalte Bilder zu laden.
+Kalte Bilder sind die Bilder, die verwendet werden, wenn der Benutzer nicht mit den Schaltflächen der Symbolleiste interagiert. Sie können [cmfctoolbar:: loadbitmapex](#loadbitmapex) oder [cmfctoolbar:: LoadBitmap](#loadbitmap) aufrufen, um die kalten Bilder zu laden.
 
-##  <a name="getcolumnwidth"></a>  CMFCToolBar::GetColumnWidth
+##  <a name="getcolumnwidth"></a>Cmfctoolbar:: getColumnWidth
 
-Gibt die Breite der Symbolleisten-Schaltflächen.
+Gibt die Breite der Symbolleisten-Schaltflächen zurück.
 
 ```
 virtual int GetColumnWidth() const;
@@ -1462,15 +1462,15 @@ virtual int GetColumnWidth() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Wert, der die Breite des Symbolleisten-Schaltflächen angibt.
+Ein-Wert, der die Breite von Symbolleisten Schaltflächen angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode, um die Symbolleistenlayout zu berechnen. Überschreiben Sie diese Methode in einer abgeleiteten Klasse an eine andere Spaltenbreite für die Symbolleiste an.
+Das Framework ruft diese Methode auf, um das Symbolleisten Layout zu berechnen. Überschreiben Sie diese Methode in einer abgeleiteten Klasse, um eine andere Spaltenbreite für die Symbolleiste anzugeben.
 
-##  <a name="getcommandbuttons"></a>  CMFCToolBar::GetCommandButtons
+##  <a name="getcommandbuttons"></a>Cmfctoolbar:: getcommandbuttons
 
-Gibt eine Liste der Schaltflächen mit einer angegebenen Befehls-ID aus dem alle Symbolleisten in der Anwendung zurück.
+Gibt eine Liste von Schaltflächen zurück, die über eine angegebene Befehls-ID aus allen Symbolleisten in der Anwendung verfügen.
 
 ```
 static int GetCommandButtons(
@@ -1481,16 +1481,16 @@ static int GetCommandButtons(
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Die Befehls-ID der Schaltflächen.
+in Die Befehls-ID der Schaltflächen.
 
 *listButtons*<br/>
-[out] Ein Verweis auf eine [CObList-Klasse](../../mfc/reference/coblist-class.md) Objekt, das die Liste der Symbolleisten-Schaltflächen empfängt.
+vorgenommen Ein Verweis auf ein [CObList-Klassen](../../mfc/reference/coblist-class.md) Objekt, das die Liste der Symbolleisten Schaltflächen empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Die Anzahl der Schaltflächen mit der angegebenen Befehls-ID.
 
-##  <a name="getcount"></a>  CMFCToolBar::GetCount
+##  <a name="getcount"></a>Cmfctoolbar:: GetCount
 
 Gibt die Anzahl der Schaltflächen und Trennzeichen auf der Symbolleiste zurück.
 
@@ -1502,9 +1502,9 @@ int GetCount() const;
 
 Die Anzahl der Schaltflächen und Trennzeichen auf der Symbolleiste.
 
-##  <a name="getcustomizebutton"></a>  CMFCToolBar::GetCustomizeButton
+##  <a name="getcustomizebutton"></a>Cmfctoolbar:: getcustomizebutton
 
-Ruft einen Zeiger auf die `CMFCCustomizeButton` Objekt, das der Symbolleiste zugeordnet ist.
+Ruft einen Zeiger auf das `CMFCCustomizeButton` -Objekt ab, das der Symbolleiste zugeordnet ist.
 
 ```
 CMFCCustomizeButton* GetCustomizeButton();
@@ -1512,17 +1512,17 @@ CMFCCustomizeButton* GetCustomizeButton();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `CMFCCustomizeButton` Objekt, das der Symbolleiste zugeordnet ist.
+Ein Zeiger auf das `CMFCCustomizeButton` -Objekt, das der Symbolleiste zugeordnet ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die **anpassen** Schaltfläche, die am Ende der Symbolleiste angezeigt wird. Verwenden der [cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton) -Methode zum Hinzufügen der **anpassen** Schaltfläche der Symbolleiste.
+Diese Methode ruft die Schaltfläche **Anpassen** ab, die am Ende der Symbolleiste angezeigt wird. Verwenden Sie die [cmfctoolbar:: enablecustomizebutton](#enablecustomizebutton) -Methode, um der Symbolleiste die Schaltfläche **Anpassen** hinzuzufügen.
 
-Rufen Sie die [CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton) Methode, um zu bestimmen, ob die Symbolleiste enthält ein gültiger `CMFCCustomizeButton` Objekt.
+Sie können die [cmfctoolbar:: isexistcustomizebutton](#isexistcustomizebutton) -Methode aufrufen, um zu bestimmen, ob die `CMFCCustomizeButton` Symbolleiste ein gültiges-Objekt enthält.
 
-##  <a name="getdefaultimage"></a>  CMFCToolBar::GetDefaultImage
+##  <a name="getdefaultimage"></a>Cmfctoolbar:: getdefaultimage
 
-Gibt den Index des Standardbilds für eine Symbolleisten-Schaltfläche mit einem angegebenen Befehls-ID
+Gibt den Index des Standard Bilds für eine Symbolleisten-Schaltfläche mit einer angegebenen Befehls-ID zurück.
 
 ```
 static int GetDefaultImage(UINT uiID);
@@ -1531,19 +1531,19 @@ static int GetDefaultImage(UINT uiID);
 ### <a name="parameters"></a>Parameter
 
 *uiID*<br/>
-[in] Gibt die Befehls-ID der Schaltfläche an.
+in Gibt die Befehls-ID der Schaltfläche an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Index des Bilds Symbolleiste in der freigegebenen Liste der Images.
+Der Index des Symbolleisten Bilds in der freigegebenen Liste der Bilder.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese freigegebene Methode, um den Index des Standardbilds für eine Symbolleisten-Schaltfläche, mit der angegebenen Befehls-ID abzurufen Der Rückgabewert ist ein Index in die gemeinsam genutzten Auflistung der Symbolleisten-Schaltflächen für alle Symbolleisten in der Anwendung. Rufen Sie die [CMFCToolBar::GetImages](#getimages) Methode, um einen Zeiger auf dieser Auflistung abzurufen.
+Verwenden Sie diese freigegebene Methode, um den Index des Standard Bilds für eine Symbolleisten-Schaltfläche mit der angegebenen Befehls-ID abzurufen. Der Rückgabewert ist ein Index in der freigegebenen Auflistung von Symbolleisten-Schaltflächen Bildern für alle Symbolleisten in der Anwendung. Rufen Sie die [cmfctoolbar:: getImages](#getimages) -Methode auf, um einen Zeiger auf diese Auflistung zu erhalten.
 
-##  <a name="getdisabledimages"></a>  CMFCToolBar::GetDisabledImages
+##  <a name="getdisabledimages"></a>Cmfctoolbar:: getdisabledimages
 
-Gibt einen Zeiger auf die Sammlung von Images, die für deaktivierte Symbolleisten-Schaltflächen in der Anwendung verwendet werden.
+Gibt einen Zeiger auf die Auflistung von Bildern zurück, die für deaktivierte Symbolleisten-Schaltflächen in der Anwendung verwendet werden.
 
 ```
 static CMFCToolBarImages* __stdcall GetDisabledImages();
@@ -1551,15 +1551,15 @@ static CMFCToolBarImages* __stdcall GetDisabledImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Auflistung der Symbolleisten-Schaltflächen deaktiviert.
+Ein Zeiger auf die Auflistung deaktivierter Symbolleisten-Schaltflächen Bilder.
 
 ### <a name="remarks"></a>Hinweise
 
-Laden Sie die deaktivierten Symbolleistenbilder Schaltfläche mithilfe der [CMFCToolBarEditBoxButton-Klasse](../../mfc/reference/cmfctoolbareditboxbutton-class.md) und [CMFCToolBar::LoadBitmap](#loadbitmap) Methoden.
+Laden Sie die deaktivierten Symbolleisten-Schaltflächen Bilder mithilfe der [cmfctoolbareditboxbutton-Klasse](../../mfc/reference/cmfctoolbareditboxbutton-class.md) und der [cmfctoolbar:: LoadBitmap](#loadbitmap) -Methode.
 
-##  <a name="getdisabledmenuimages"></a>  CMFCToolBar::GetDisabledMenuImages
+##  <a name="getdisabledmenuimages"></a>Cmfctoolbar:: getdisabledmenuimages
 
-Gibt einen Zeiger auf die Sammlung von Images, die für deaktivierte Schaltflächen in der Anwendung verwendet werden.
+Gibt einen Zeiger auf die Auflistung von Bildern zurück, die in der Anwendung für deaktivierte Menü Schaltflächen verwendet werden.
 
 ```
 static CMFCToolBarImages* __stdcall GetDisabledMenuImages();
@@ -1567,15 +1567,15 @@ static CMFCToolBarImages* __stdcall GetDisabledMenuImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Auflistung der deaktivierten Menübilder.
+Ein Zeiger auf die Auflistung deaktivierter Menü Bilder.
 
 ### <a name="remarks"></a>Hinweise
 
-Laden Sie die deaktivierte Bilder mithilfe der [CMFCToolBarEditBoxButton-Klasse](../../mfc/reference/cmfctoolbareditboxbutton-class.md) Methode.
+Laden Sie die deaktivierten Images mithilfe der [cmfctoolbareditboxbutton-Klassen](../../mfc/reference/cmfctoolbareditboxbutton-class.md) Methode.
 
-##  <a name="getdroppeddownmenu"></a>  CMFCToolBar::GetDroppedDownMenu
+##  <a name="getdroppeddownmenu"></a>Cmfctoolbar:: getdroppeddownmenu
 
-Ruft einen Zeiger auf das Objekt der Menü-Schaltfläche, das aktuell dem Untermenü angezeigt wird.
+Ruft einen Zeiger auf das Menü Schaltflächen Objekt ab, das derzeit sein Untermenü anzeigt.
 
 ```
 CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
@@ -1584,19 +1584,19 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 ### <a name="parameters"></a>Parameter
 
 *pIndex*<br/>
-[out] Erhält den Index der Schaltfläche in der Auflistung der Symbolleisten-Schaltflächen an.
+vorgenommen Empfängt den Index der Schaltfläche in der Auflistung von Symbolleisten-Schaltflächen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf das Menü-Schaltfläche-Objekt, das die Untermenü oder NULL angezeigt wird, wenn kein Menü dem Untermenü angezeigt wird.
+Ein Zeiger auf das Menü Schaltflächen Objekt, das das Untermenü anzeigt, oder NULL, wenn das Untermenü des Menüs nicht angezeigt wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn diese Methode einen Wert ungleich NULL zurückgibt und *pIndex* ist nicht NULL ist, der Wert verweist *pIndex* festgelegt ist, auf den Index der Menü-Schaltfläche in der Auflistung der Symbolleisten-Schaltflächen.
+Wenn diese Methode einen nicht-NULL-Wert zurückgibt und *pIndex* nicht NULL ist, wird der Wert, auf den von *pIndex* verwiesen wird, auf den Index der Menü Schaltfläche in der Auflistung der Symbolleisten Schaltflächen festgelegt.
 
-##  <a name="getgraydisabledbuttons"></a>  CMFCToolBar::GetGrayDisabledButtons
+##  <a name="getgraydisabledbuttons"></a>Cmfctoolbar:: getgraydisabledbuttons
 
-Gibt an, ob die Images von deaktivierte Schaltflächen abgeblendet Versionen der normale Schaltfläche Images, oder die Auflistung der deaktivierte Schaltflächenbilder entnommen.
+Gibt an, ob die Bilder deaktivierter Schaltflächen Abbilder von regulären Schaltflächen Bildern sind oder aus der Auflistung von deaktivierten Schaltflächen Bildern entnommen werden.
 
 ```
 BOOL GetGrayDisabledButtons() const;
@@ -1604,15 +1604,15 @@ BOOL GetGrayDisabledButtons() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, um die Bilder der deaktivierte Schaltflächen abgeblendet. "False", um Images aus der Auflistung der deaktivierten Images zu erhalten.
+TRUE, um die Bilder deaktivierter Schaltflächen zu verdunkeln. FALSE zum Abrufen von Bildern aus der Auflistung deaktivierter Images.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung [CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons) abgeblendet Bilder und die Bilder aus der Auflistung der deaktivierten Images wechseln.
+Verwenden Sie [cmfctoolbar:: setgraydisabledbuttons](#setgraydisabledbuttons) , um zwischen Abbild Bildern und Bildern aus der Auflistung deaktivierter Bilder zu wechseln.
 
-##  <a name="gethighlightedbutton"></a>  CMFCToolBar::GetHighlightedButton
+##  <a name="gethighlightedbutton"></a>Cmfctoolbar:: gethighlightedbutton
 
-Gibt einen Zeiger auf die Symbolleisten-Schaltfläche, die derzeit ausgewählt ist.
+Gibt einen Zeiger auf die Symbolleisten Schaltfläche zurück, die derzeit hervorgehoben ist.
 
 ```
 CMFCToolBarButton* GetHighlightedButton() const;
@@ -1620,15 +1620,15 @@ CMFCToolBarButton* GetHighlightedButton() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf ein Schaltflächenobjekt Symbolleiste; oder NULL, wenn keine Schaltfläche markiert wird.
+Ein Zeiger auf ein Symbolleisten-Schaltflächen Objekt. oder NULL, wenn keine Schaltfläche hervorgehoben ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Symbolleisten-Schaltfläche wird hervorgehoben, wenn es den Tastaturfokus verfügt. Eine Symbolleisten-Schaltfläche wird ebenfalls hervorgehoben, wenn die Symbolleisten-Schaltflächen hot Track-in dieser Anwendung sind (Weitere Informationen finden Sie unter [CMFCToolBar::GetHotBorder](#gethotborder) und [CMFCToolBar::SetHotBorder](#sethotborder)) und die Maus handelt es verweist, wenn keine Symbolleiste oder das Standardmenüelement über den Tastaturfokus verfügt.
+Eine Symbolleisten-Schaltfläche wird hervorgehoben, wenn Sie den Tastaturfokus besitzt Eine Symbolleisten Schaltfläche wird auch hervorgehoben, wenn die Symbolleisten Schaltflächen in dieser Anwendung in der Anwendung überwacht werden. (Weitere Informationen finden Sie unter [cmfctoolbar:: gethotborder](#gethotborder) und [cmfctoolbar:: sethotborder](#sethotborder)) und die Maus darauf zeigt, wenn keine Symbolleisten Schaltfläche oder Menü Element hat Tastaturfokus.
 
-##  <a name="gethotborder"></a>  CMFCToolBar::GetHotBorder
+##  <a name="gethotborder"></a>Cmfctoolbar:: gethotborder
 
-Bestimmt, ob die Symbolleisten-Schaltflächen sind *vorselektierten*. Ist eine Schaltfläche vorselektierten, wird sie hervorgehoben, wenn der Mauszeiger darüber bewegt wird.
+Bestimmt, ob die Symbolleisten *Schaltflächen Hot-nachverfolgt*werden. Wenn eine Schaltfläche nachverfolgt wird, wird Sie hervorgehoben, wenn der Mauszeiger über die Schaltfläche bewegt wird.
 
 ```
 BOOL GetHotBorder() const;
@@ -1636,15 +1636,15 @@ BOOL GetHotBorder() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Symbolleisten-Schaltflächen "Hot" nachverfolgt werden. andernfalls "false".
+TRUE, wenn die Symbolleisten Schaltflächen Hot-nachverfolgt werden. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig sind die Symbolleistenschaltflächen vorselektierten.
+Standardmäßig werden Symbolleisten Schaltflächen nachverfolgt.
 
-##  <a name="gethottextcolor"></a>  CMFCToolBar::GetHotTextColor
+##  <a name="gethottextcolor"></a>Cmfctoolbar:: gethottextcolor
 
-Gibt zurück, der die Textfarbe für die markierten Symbolleistenschaltflächen.
+Gibt die Textfarbe der markierten Symbolleisten-Schaltflächen zurück.
 
 ```
 static COLORREF GetHotTextColor();
@@ -1652,15 +1652,15 @@ static COLORREF GetHotTextColor();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [COLORREF](/windows/desktop/gdi/colorref) -Wert, der die aktuelle Farbe des hervorgehobenen Text darstellen.
+Ein [COLORREF](/windows/win32/gdi/colorref) -Wert, der die aktuelle markierte Textfarbe darstellt.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie [CMFCToolBar::SetHotTextColor](#sethottextcolor) um eine neue Farbe für die markierten Symbolleistenschaltflächen festzulegen.
+Fordern Sie [cmfctoolbar:: sethottextcolor](#sethottextcolor) an, um eine neue Textfarbe für hervorgehobene Symbolleisten Schaltflächen festzulegen.
 
-##  <a name="gethwndlastfocus"></a>  CMFCToolBar::GetHwndLastFocus
+##  <a name="gethwndlastfocus"></a>Cmfctoolbar:: gethwndlastfocus
 
-Gibt ein Handle für das Fenster, das den Eingabefokus hatte, kurz bevor die Symbolleiste hat.
+Gibt ein Handle für das Fenster zurück, das den Eingabefokus unmittelbar vor der Symbolleiste enthielt.
 
 ```
 HWND GetHwndLastFocus() const;
@@ -1668,15 +1668,15 @@ HWND GetHwndLastFocus() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Handle für Fenster, die nicht von abgeleitet ist [CMFCBaseToolBar-Klasse](../../mfc/reference/cmfcbasetoolbar-class.md), die bisher der Eingabe zu konzentrieren, oder NULL, wenn kein solches Fenster vorhanden ist.
+Ein Handle für Fenster, das nicht von der [cmfcbasetoolbar-Klasse](../../mfc/reference/cmfcbasetoolbar-class.md)abgeleitet ist, die zuvor den Eingabefokus hatte. oder NULL, wenn kein solches Fenster vorhanden ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn eine `CMFCToolBar` Steuerelement den Eingabefokus erhält, die sie speichert ein Handle für das Fenster, das den Fokus verliert, damit sie später wiederhergestellt werden kann.
+Wenn ein `CMFCToolBar` Steuerelement den Eingabefokus erhält, speichert es ein Handle für das Fenster, das den Fokus verliert, damit es später wieder hergestellt werden kann.
 
-##  <a name="getignoresettext"></a>  CMFCToolBar::GetIgnoreSetText
+##  <a name="getignoresettext"></a>Cmfctoolbar:: getignoresettext
 
-Gibt an, ob Aufrufe zum Festlegen von schaltflächenbeschriftungen ignoriert werden.
+Gibt an, ob Aufrufe zum Festlegen von Schaltflächen Bezeichnungen ignoriert werden.
 
 ```
 BOOL GetIgnoreSetText() const;
@@ -1684,13 +1684,13 @@ BOOL GetIgnoreSetText() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Aufrufe zum Festlegen von schaltflächenbeschriftungen ignoriert werden. andernfalls "false".
+TRUE, wenn Aufrufe zum Festlegen von Schaltflächen Bezeichnungen ignoriert werden. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getimages"></a>  CMFCToolBar::GetImages
+##  <a name="getimages"></a>Cmfctoolbar:: getImages
 
-Gibt einen Zeiger auf die Auflistung von standardmäßigen Schaltflächenbilder in der Anwendung.
+Gibt einen Zeiger auf die Auflistung von standardmäßigen Schaltflächen Bildern in der Anwendung zurück.
 
 ```
 static CMFCToolBarImages* GetImages();
@@ -1698,15 +1698,15 @@ static CMFCToolBarImages* GetImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die [CMFCToolBarImages-Klasse](../../mfc/reference/cmfctoolbarimages-class.md) -Objekt, das die Auflistung der Standard-Images für alle Symbolleisten in der Anwendung enthält.
+Ein Zeiger auf das [cmfctoolbarimages-Klassen](../../mfc/reference/cmfctoolbarimages-class.md) Objekt, das die Auflistung der Standardbilder für alle Symbolleisten in der Anwendung enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese freigegebenen Methode bietet Zugriff auf die Auflistung von allen Symbolleistenbilder, für die Anwendung. Rufen Sie die [CMFCToolBar::LoadBitmap](#loadbitmap) Methode zum Hinzufügen von Bildern in der Auflistung.
+Diese freigegebene Methode ermöglicht den Zugriff auf die Auflistung aller standardmäßigen Symbolleisten Images für die Anwendung. Ruft die [cmfctoolbar:: LoadBitmap](#loadbitmap) -Methode auf, um der Auflistung Bilder hinzuzufügen.
 
-##  <a name="getimagesize"></a>  CMFCToolBar::GetImageSize
+##  <a name="getimagesize"></a>Cmfctoolbar:: getimagesize
 
-Gibt die aktuelle Größe der Symbolleisten-Schaltflächen zurück.
+Gibt die aktuelle Größe von Symbolleisten-Schaltflächen Bildern zurück.
 
 ```
 CSize GetImageSize() const;
@@ -1714,11 +1714,11 @@ CSize GetImageSize() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [CSize-Klasse](../../atl-mfc-shared/reference/csize-class.md) Objekt, das die aktuelle Größe der Symbolleisten-Schaltflächen darstellt.
+Ein [CSize-Klassen](../../atl-mfc-shared/reference/csize-class.md) Objekt, das die aktuelle Größe von Symbolleisten-Schaltflächen Bildern darstellt.
 
-##  <a name="getimagesoffset"></a>  CMFCToolBar::GetImagesOffset
+##  <a name="getimagesoffset"></a>Cmfctoolbar:: getimagesoffset
 
-Gibt den Index Offset verwendet, um der Symbolleiste die Schaltflächenbilder für diese Symbolleiste in der globalen Liste der Symbolleisten-Schaltflächen suchen.
+Gibt den Index Offset zurück, mit dem die Symbolleisten-Schaltflächen Bilder für diese Symbolleiste in der globalen Liste der Symbolleisten-Schaltflächen Bilder gefunden werden
 
 ```
 int GetImagesOffset() const;
@@ -1726,19 +1726,19 @@ int GetImagesOffset() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der indexoffset, der die Symbolleistenbilder werden soll.
+Der Index Offset der Symbolleisten Bilder.
 
 ### <a name="remarks"></a>Hinweise
 
-Alle Standardbilder der Symbolleiste befinden sich im globalen [CMFCToolBarImages-Klasse](../../mfc/reference/cmfctoolbarimages-class.md) Liste. Die Images für jede Schaltfläche auf der Symbolleiste werden nacheinander in der Liste gespeichert. Um den Index des Bilds zu berechnen, fügen Sie den Index der Schaltfläche auf der Symbolleiste den Offset des Anfangs der Liste der Images für diese Symbolleisten-Schaltfläche.
+Alle Symbolleisten-Standard Images werden in der globalen [cmfctoolbarimages-Klassen](../../mfc/reference/cmfctoolbarimages-class.md) Liste gespeichert. Die Bilder für die einzelnen Schaltflächen in der Symbolleiste werden in der Liste nacheinander gespeichert. Um den Index des Bilds zu berechnen, fügen Sie den Index der Schaltfläche auf der Symbolleiste dem Offset des Anfangs der Liste der Bilder für die Symbolleisten Schaltfläche hinzu.
 
-Rufen Sie [CMFCToolBar::ButtonToIndex](#buttontoindex) den Index einer Symbolleisten-Schaltfläche, die einen Zeiger auf die Schaltfläche mit den angegebenen erhalten.
+Rufen Sie [cmfctoolbar:: buttonumindex](#buttontoindex) auf, um den Index einer Symbolleisten-Schaltfläche mit einem Zeiger auf die Schaltfläche zu erhalten.
 
-Rufen Sie [CMFCToolBar::GetImages](#getimages) auf einen Zeiger auf die Auflistung der Symbolleistenbilder abrufen.
+Rufen Sie [cmfctoolbar:: getImages](#getimages) auf, um einen Zeiger auf die Auflistung von Symbolleisten Bildern zu erhalten.
 
-##  <a name="getinvalidateitemrect"></a>  CMFCToolBar::GetInvalidateItemRect
+##  <a name="getinvalidateitemrect"></a>Cmfctoolbar:: getinvalidateitemrect
 
-Ruft ab, die Region des Clientbereichs, der für die Schaltfläche am angegebenen Index neu gezeichnet werden muss.
+Ruft den Bereich des Client Bereichs ab, der für die Schaltfläche am angegebenen Index neu gezeichnet werden muss.
 
 ```
 virtual void GetInvalidateItemRect(
@@ -1749,18 +1749,18 @@ virtual void GetInvalidateItemRect(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Der Index der Schaltfläche für den Clientbereich abgerufen werden soll.
+in Der Index der Schaltfläche, für die der Client Bereich abgerufen werden soll.
 
 *lpRect*<br/>
-[out] Ein Zeiger auf eine RECT-Objekt, das den Bereich des Clientbereichs empfängt.
+vorgenommen Ein Zeiger auf ein Rect-Objekt, das den Bereich des Client Bereichs empfängt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die *LpRect* Parameter darf nicht NULL sein. Wenn keine Schaltfläche am angegebenen Index vorhanden ist *LpRect* empfängt ein RECT-Objekt, das 0 (null) initialisiert wird.
+Der *lprect* -Parameter darf nicht NULL sein. Wenn am angegebenen Index keine Schaltfläche vorhanden ist, empfängt *lprect* ein Rect-Objekt, das mit 0 (null) initialisiert wird.
 
-##  <a name="getitemid"></a>  CMFCToolBar::GetItemID
+##  <a name="getitemid"></a>Cmfctoolbar:: getItemID
 
-Gibt die Befehls-ID der Symbolleisten-Schaltfläche am angegebenen Index zurück.
+Gibt die Befehls-ID der Symbolleisten-Schaltfläche an einem angegebenen Index zurück.
 
 ```
 UINT GetItemID(int nIndex) const;
@@ -1769,15 +1769,15 @@ UINT GetItemID(int nIndex) const;
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Gibt den Index der Symbolleisten-Schaltfläche.
+in Gibt den Index der Symbolleisten Schaltfläche an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Befehls-ID der Symbolleisten-Schaltfläche; oder 0 (null), wenn die Schaltfläche mit dem angegebenen Index nicht vorhanden ist.
+Die Befehls-ID der Symbolleisten-Schaltfläche. oder 0 (null), wenn die Schaltfläche mit dem angegebenen Index nicht vorhanden ist.
 
-##  <a name="getitemrect"></a>  CMFCToolBar::GetItemRect
+##  <a name="getitemrect"></a>Cmfctoolbar:: GetItemRect
 
-Gibt das umschließende Rechteck der Schaltfläche an einem angegebenen Index zurück.
+Gibt das umgebende Rechteck der Schaltfläche an einem angegebenen Index zurück.
 
 ```
 virtual void GetItemRect(
@@ -1788,25 +1788,25 @@ virtual void GetItemRect(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Gibt den Index einer Symbolleisten-Schaltfläche.
+in Gibt den Index einer Symbolleisten-Schaltfläche an.
 
 *lpRect*<br/>
-[out] Ein Zeiger auf `CRect` Objekt, das die Koordinaten des umgebenden Rechtecks Images empfängt.
+vorgenommen Ein Zeiger auf `CRect` ein-Objekt, das die Koordinaten des umgebenden Rechtecks des Bilds empfängt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `CRect` -Objekt, dem *LpRect* Punkte auf 0 festgelegt ist, wenn eine Schaltfläche am angegebenen Index nicht vorhanden ist.
+Das `CRect` Objekt, auf das *lprect* -Punkte festgelegt werden, wenn eine Schaltfläche am angegebenen Index nicht vorhanden ist.
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `GetItemRect` Methode der `CMFCToolBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../overview/visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `GetItemRect` -Methode `CMFCToolBar` der-Klasse verwendet wird. Dieser Code Ausschnitt ist Teil des IE- [Demo](../../overview/visual-cpp-samples.md)Beispiels.
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]
 
-##  <a name="getlargecoldimages"></a>  CMFCToolBar::GetLargeColdImages
+##  <a name="getlargecoldimages"></a>Cmfctoolbar:: getlargecoldimages
 
-Gibt einen Zeiger auf die Auflistung von großen kalte Symbolleisten-Schaltflächen in der Anwendung an.
+Gibt einen Zeiger auf die Auflistung von großen kalten Symbolleisten-Schaltflächen Bildern in der Anwendung zurück.
 
 ```
 static CMFCToolBarImages* GetLargeColdImages();
@@ -1814,15 +1814,15 @@ static CMFCToolBarImages* GetLargeColdImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Auflistung von kalten Bildern.
+Ein Zeiger auf die Auflistung von großen kalten Bildern.
 
 ### <a name="remarks"></a>Hinweise
 
-Cold-Images sind die Images, die verwendet werden, wenn der Benutzer nicht mit der Symbolleisten-Schaltflächen interagiert. Rufen Sie [CMFCToolBar::LoadBitmapEx](#loadbitmapex) kalte große Bilder zu laden.
+Kalte Bilder sind die Bilder, die verwendet werden, wenn der Benutzer nicht mit den Schaltflächen der Symbolleiste interagiert. Sie können [cmfctoolbar:: loadbitmapex](#loadbitmapex) aufrufen, um die großen kalten Bilder zu laden.
 
-##  <a name="getlargedisabledimages"></a>  CMFCToolBar::GetLargeDisabledImages
+##  <a name="getlargedisabledimages"></a>Cmfctoolbar:: getlargedisabledimages
 
-Gibt einen Zeiger auf die Auflistung von großen deaktiviert Symbolleisten-Schaltflächen in der Anwendung an.
+Gibt einen Zeiger auf die Auflistung von großen deaktivierten Symbolleisten-Schaltflächen Bildern in der Anwendung zurück.
 
 ```
 static CMFCToolBarImages* GetLargeDisabledImages();
@@ -1830,15 +1830,15 @@ static CMFCToolBarImages* GetLargeDisabledImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Auflistung von großen deaktiviert die Symbolleisten-Schaltflächen.
+Ein Zeiger auf die Auflistung von großen deaktivierten Symbolleisten-Schaltflächen Bildern.
 
 ### <a name="remarks"></a>Hinweise
 
-Große Bilder sind große Versionen von der regulären Symbolleisten-Schaltflächen. Rufen Sie [CMFCToolBar::LoadBitmapEx](#loadbitmapex) oder [CMFCToolBar::LoadBitmap](#loadbitmap) große Bilder zu laden.
+Große Bilder sind große Versionen der regulären Symbolleisten-Schaltflächen Bilder. Sie können [cmfctoolbar:: loadbitmapex](#loadbitmapex) oder [cmfctoolbar:: LoadBitmap](#loadbitmap) aufrufen, um die großen Bilder zu laden.
 
-##  <a name="getlargeimages"></a>  CMFCToolBar::GetLargeImages
+##  <a name="getlargeimages"></a>Cmfctoolbar:: getlargeimages
 
-Gibt einen Zeiger auf die Auflistung von großen Symbolleisten-Schaltflächen in der Anwendung an.
+Gibt einen Zeiger auf die Auflistung großer Symbolleisten-Schaltflächen Bilder in der Anwendung zurück.
 
 ```
 static CMFCToolBarImages* GetLargeImages();
@@ -1846,15 +1846,15 @@ static CMFCToolBarImages* GetLargeImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Auflistung der Symbolleisten-Schaltflächen groß.
+Ein Zeiger auf die Auflistung großer Symbolleisten-Schaltflächen Bilder.
 
 ### <a name="remarks"></a>Hinweise
 
-Große Bilder sind große Versionen von der regulären Symbolleisten-Schaltflächen. Rufen Sie [CMFCToolBar::LoadBitmapEx](#loadbitmapex) große Bilder zu laden.
+Große Bilder sind große Versionen der regulären Symbolleisten-Schaltflächen Bilder. Sie können [cmfctoolbar:: loadbitmapex](#loadbitmapex) aufrufen, um die großen Bilder zu laden.
 
-##  <a name="getlockedcoldimages"></a>  CMFCToolBar::GetLockedColdImages
+##  <a name="getlockedcoldimages"></a>Cmfctoolbar:: getlockedcoldimages
 
-Gibt einen Zeiger auf die Auflistung von gesperrten kalte Bilder auf der Symbolleiste an.
+Gibt einen Zeiger auf die Auflistung der gesperrten kalten Bilder auf der Symbolleiste zurück.
 
 ```
 CMFCToolBarImages* GetLockedColdImages();
@@ -1862,19 +1862,19 @@ CMFCToolBarImages* GetLockedColdImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Auflistung von gesperrten kalte Bilder oder NULL, wenn die Symbolleiste nicht gesperrt ist.
+Ein Zeiger auf die Auflistung gesperrter kalter Bilder oder NULL, wenn die Symbolleiste nicht gesperrt ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Gesperrte-Images sind Versionen von der regulären Symbolleisten-Schaltflächen, die das Framework verwendet, wenn der Benutzer die Symbolleiste kann nicht angepasst werden. Cold-Images sind die Images, die verwendet werden, wenn der Benutzer nicht mit der Symbolleisten-Schaltflächen interagiert.
+Gesperrte Bilder sind Versionen der regulären Symbolleisten-Schaltflächen Bilder, die vom Framework verwendet werden, wenn der Benutzer die Symbolleiste nicht anpassen kann. Kalte Bilder sind die Bilder, die verwendet werden, wenn der Benutzer nicht mit den Schaltflächen der Symbolleiste interagiert.
 
-Diese Methode gibt NULL zurück, wenn die Symbolleiste nicht gesperrt ist. Diese Methode generiert in Debugbuilds auch ein Assertionsfehler ausgelöst, wenn die Symbolleiste nicht gesperrt ist. Weitere Informationen zu gesperrte Symbolleisten, finden Sie unter [CMFCToolBar::IsLocked](#islocked).
+Diese Methode gibt NULL zurück, wenn die Symbolleiste nicht gesperrt ist. Diese Methode generiert außerdem einen Fehler bei der Übersetzung in Debugbuilds, wenn die Symbolleiste nicht gesperrt ist. Weitere Informationen zu gesperrten Symbolleisten finden Sie unter [cmfctoolbar:: IsLocked](#islocked).
 
-Rufen Sie die [CMFCToolBar::LoadBitmapEx](#loadbitmapex) Methode, um die gesperrten kalte Bilder zu laden.
+Aufrufen der [cmfctoolbar:: loadbitmapex](#loadbitmapex) -Methode, um die gesperrten kalten Bilder zu laden.
 
-##  <a name="getlockeddisabledimages"></a>  CMFCToolBar::GetLockedDisabledImages
+##  <a name="getlockeddisabledimages"></a>Cmfctoolbar:: getlockeddisabledimages
 
-Gibt einen Zeiger auf die Auflistung von gesperrten deaktiviert Bilder auf der Symbolleiste an.
+Gibt einen Zeiger auf die Auflistung der gesperrten deaktivierten Images auf der Symbolleiste zurück.
 
 ```
 CMFCToolBarImages* GetLockedDisabledImages();
@@ -1882,19 +1882,19 @@ CMFCToolBarImages* GetLockedDisabledImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Auflistung von gesperrten deaktiviert Bilder oder NULL, wenn die Symbolleiste nicht gesperrt ist.
+Ein Zeiger auf die Auflistung gesperrter deaktivierter Bilder oder NULL, wenn die Symbolleiste nicht gesperrt ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Gesperrte-Images sind Versionen von der regulären Symbolleisten-Schaltflächen, die das Framework verwendet, wenn der Benutzer die Symbolleiste kann nicht angepasst werden. Deaktiviert-Images sind die Images, die das Framework verwendet, wenn den Stil TBBS_DISABLED über eine Schaltfläche verfügt.
+Gesperrte Bilder sind Versionen der regulären Symbolleisten-Schaltflächen Bilder, die vom Framework verwendet werden, wenn der Benutzer die Symbolleiste nicht anpassen kann. Deaktivierte Bilder sind die Bilder, die vom Framework verwendet werden, wenn eine Schaltfläche den TBBS_DISABLED-Stil hat.
 
-Diese Methode gibt NULL zurück, wenn die Symbolleiste nicht gesperrt ist. Diese Methode generiert in Debugbuilds auch ein Assertionsfehler ausgelöst, wenn die Symbolleiste nicht gesperrt ist. Weitere Informationen zu gesperrte Symbolleisten, finden Sie unter [CMFCToolBar::IsLocked](#islocked).
+Diese Methode gibt NULL zurück, wenn die Symbolleiste nicht gesperrt ist. Diese Methode generiert außerdem einen Fehler bei der Übersetzung in Debugbuilds, wenn die Symbolleiste nicht gesperrt ist. Weitere Informationen zu gesperrten Symbolleisten finden Sie unter [cmfctoolbar:: IsLocked](#islocked).
 
-Rufen Sie die [CMFCToolBar::LoadBitmapEx](#loadbitmapex) Methode, um die gesperrten laden deaktiviert Images.
+Aufrufen der [cmfctoolbar:: loadbitmapex](#loadbitmapex) -Methode zum Laden der gesperrten deaktivierten Images.
 
-##  <a name="getlockedimages"></a>  CMFCToolBar::GetLockedImages
+##  <a name="getlockedimages"></a>Cmfctoolbar:: getlockedimages
 
-Gibt einen Zeiger auf die Auflistung von gesperrten Schaltflächenbilder auf der Symbolleiste an.
+Gibt einen Zeiger auf die Auflistung der gesperrten Schaltflächen Bilder auf der Symbolleiste zurück.
 
 ```
 CMFCToolBarImages* GetLockedImages();
@@ -1902,17 +1902,17 @@ CMFCToolBarImages* GetLockedImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Auflistung der Symbolleisten-Schaltflächen gesperrt oder NULL, wenn die Symbolleiste nicht gesperrt ist.
+Ein Zeiger auf die Auflistung gesperrter Symbolleisten-Schaltflächen Bilder oder NULL, wenn die Symbolleiste nicht gesperrt ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Gesperrte-Images sind Versionen von der regulären Symbolleisten-Schaltflächen, die das Framework verwendet, wenn der Benutzer die Symbolleiste kann nicht angepasst werden.
+Gesperrte Bilder sind Versionen der regulären Symbolleisten-Schaltflächen Bilder, die vom Framework verwendet werden, wenn der Benutzer die Symbolleiste nicht anpassen kann.
 
-Diese Methode gibt NULL zurück, wenn die Symbolleiste nicht gesperrt ist. Diese Methode generiert in Debugbuilds auch ein Assertionsfehler ausgelöst, wenn die Symbolleiste nicht gesperrt ist. Weitere Informationen zu gesperrte Symbolleisten, finden Sie unter [CMFCToolBar::IsLocked](#islocked).
+Diese Methode gibt NULL zurück, wenn die Symbolleiste nicht gesperrt ist. Diese Methode generiert außerdem einen Fehler bei der Übersetzung in Debugbuilds, wenn die Symbolleiste nicht gesperrt ist. Weitere Informationen zu gesperrten Symbolleisten finden Sie unter [cmfctoolbar:: IsLocked](#islocked).
 
-##  <a name="getlockedimagesize"></a>  CMFCToolBar::GetLockedImageSize
+##  <a name="getlockedimagesize"></a>Cmfctoolbar:: getlockedimagesize
 
-Gibt die Standardgröße des gesperrten Symbolleistenbilder zurück.
+Gibt die Standardgröße der gesperrten Symbolleisten Images zurück.
 
 ```
 CSize GetLockedImageSize() const;
@@ -1920,19 +1920,19 @@ CSize GetLockedImageSize() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `CSize` Struktur, der angibt, die Größe des gesperrten Symbolleistenbilder oder eine leere `CSize` Struktur, wenn die Symbolleiste nicht gesperrt ist.
+Eine `CSize` -Struktur, die die Größe der gesperrten Symbolleisten Bilder oder `CSize` eine leere Struktur angibt, wenn die Symbolleiste nicht gesperrt ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Gesperrte-Images sind Versionen von der regulären Symbolleisten-Schaltflächen, die das Framework verwendet, wenn der Benutzer die Symbolleiste kann nicht angepasst werden.
+Gesperrte Bilder sind Versionen der regulären Symbolleisten-Schaltflächen Bilder, die vom Framework verwendet werden, wenn der Benutzer die Symbolleiste nicht anpassen kann.
 
-Diese Methode gibt eine `CSize` Struktur mit größer als NULL sein und keine Höhe, wenn die Symbolleiste nicht gesperrt ist. Diese Methode generiert in Debugbuilds auch ein Assertionsfehler ausgelöst, wenn die Symbolleiste nicht gesperrt ist. Weitere Informationen zu gesperrte Symbolleisten, finden Sie unter [CMFCToolBar::IsLocked](#islocked).
+Diese Methode gibt eine `CSize` -Struktur mit der Breite 0 (null) und 0 (null) zurück, wenn die Symbolleiste nicht Diese Methode generiert außerdem einen Fehler bei der Übersetzung in Debugbuilds, wenn die Symbolleiste nicht gesperrt ist. Weitere Informationen zu gesperrten Symbolleisten finden Sie unter [cmfctoolbar:: IsLocked](#islocked).
 
-Rufen Sie die [CMFCToolBar::SetLockedSizes](#setlockedsizes) Methode, um die Imagegröße des gesperrten angeben.
+Aufrufen der [cmfctoolbar:: setlockedsizes](#setlockedsizes) -Methode, um die gesperrte Bildgröße anzugeben.
 
-##  <a name="getlockedmenuimages"></a>  CMFCToolBar::GetLockedMenuImages
+##  <a name="getlockedmenuimages"></a>Cmfctoolbar:: getlockedmenuimages
 
-Gibt einen Zeiger auf die Auflistung von gesperrten Symbolleiste Menübilder in der Symbolleiste.
+Gibt einen Zeiger auf die Auflistung der gesperrten Symbolleisten-Menü Bilder auf der Symbolleiste zurück.
 
 ```
 CMFCToolBarImages* GetLockedMenuImages();
@@ -1940,19 +1940,19 @@ CMFCToolBarImages* GetLockedMenuImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Auflistung von gesperrten Menü Symbolleistenbilder oder NULL, wenn die Symbolleiste nicht gesperrt ist.
+Ein Zeiger auf die Auflistung gesperrter Symbolleisten-Menü Bilder oder NULL, wenn die Symbolleiste nicht gesperrt ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Gesperrte-Images sind die Versionen die reguläre Menü Symbolleistenbilder, die das Framework verwendet, wenn der Benutzer die Symbolleiste kann nicht angepasst werden.
+Gesperrte Images sind Versionen der regulären Symbolleisten-Menü Bilder, die vom Framework verwendet werden, wenn der Benutzer die Symbolleiste nicht anpassen kann.
 
-Diese Methode gibt NULL zurück, wenn die Symbolleiste nicht gesperrt ist. Diese Methode generiert in Debugbuilds auch ein Assertionsfehler ausgelöst, wenn die Symbolleiste nicht gesperrt ist. Weitere Informationen zu gesperrte Symbolleisten, finden Sie unter [CMFCToolBar::IsLocked](#islocked).
+Diese Methode gibt NULL zurück, wenn die Symbolleiste nicht gesperrt ist. Diese Methode generiert außerdem einen Fehler bei der Übersetzung in Debugbuilds, wenn die Symbolleiste nicht gesperrt ist. Weitere Informationen zu gesperrten Symbolleisten finden Sie unter [cmfctoolbar:: IsLocked](#islocked).
 
-Rufen Sie die [CMFCToolBar::LoadBitmapEx](#loadbitmapex) Methode, um die gesperrten Menübilder zu laden.
+Aufrufen der [cmfctoolbar:: loadbitmapex](#loadbitmapex) -Methode zum Laden der gesperrten Menü Bilder.
 
-##  <a name="getmenubuttonsize"></a>  CMFCToolBar::GetMenuButtonSize
+##  <a name="getmenubuttonsize"></a>Cmfctoolbar:: getmenubuttonsize
 
-Gibt die Größe der Schaltflächen in der Anwendung zurück.
+Gibt die Größe der Menü Schaltflächen in der Anwendung zurück.
 
 ```
 static CSize GetMenuButtonSize();
@@ -1960,17 +1960,17 @@ static CSize GetMenuButtonSize();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `CSize` -Objekt, das die Größe der Menüschaltflächen im in Pixel darstellt.
+Ein `CSize` -Objekt, das die Größe der Menü Schaltflächen in Pixel darstellt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Größe der Schaltflächen auf der Symbolleiste wird beibehalten, wie eine globale Variable und kann diese statische Methode abgerufen werden.
+Die Größe der Menü Schaltflächen auf Symbolleisten wird als globale Variable beibehalten und kann von dieser statischen Methode abgerufen werden.
 
-Rufen Sie [CMFCToolBar::SetMenuSizes](#setmenusizes) diese globale Variable festlegen.
+[Verwenden Sie cmfctoolbar:: setmenusizes](#setmenusizes) , um diese globale Variable festzulegen.
 
-##  <a name="getmenuimages"></a>  CMFCToolBar::GetMenuImages
+##  <a name="getmenuimages"></a>Cmfctoolbar:: getmenuimages
 
-Gibt einen Zeiger auf die Auflistung der Schaltfläche Menübilder in der Anwendung.
+Gibt einen Zeiger auf die Auflistung von Menü Schaltflächen Bildern in der Anwendung zurück.
 
 ```
 static CMFCToolBarImages* GetMenuImages();
@@ -1978,17 +1978,17 @@ static CMFCToolBarImages* GetMenuImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Auflistung der Menübilder.
+Ein Zeiger auf die Auflistung von Menü Bildern.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie die [CMFCToolBar::LoadBitmapEx](#loadbitmapex) Methode, um die Menübilder zu laden.
+Aufrufen der [cmfctoolbar:: loadbitmapex](#loadbitmapex) -Methode, um die Menü Bilder zu laden.
 
-Rufen Sie die [CMFCToolBar::SetMenuSizes](#setmenusizes) Methode zum Festlegen der Größe der Schaltflächen und Bilder.
+Aufrufen der [cmfctoolbar:: setmenusizes](#setmenusizes) -Methode, um die Größe der Schaltflächen und ihrer Bilder festzulegen.
 
-##  <a name="getmenuimagesize"></a>  CMFCToolBar::GetMenuImageSize
+##  <a name="getmenuimagesize"></a>Cmfctoolbar:: getmenuimagesize
 
-Gibt die Größe der Schaltfläche Menübilder in der Anwendung zurück.
+Gibt die Größe der Menü Schaltflächen Bilder in der Anwendung zurück.
 
 ```
 static CSize GetMenuImageSize();
@@ -1996,15 +1996,15 @@ static CSize GetMenuImageSize();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `CSize` -Objekt, das die Größe des Menübilder darstellt.
+Ein `CSize` -Objekt, das die Größe von Menü Bildern darstellt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode gibt die Größe von Bildern für Schaltflächen der Symbolleiste im Menü, die als globale Variable verwaltet wird. Rufen Sie [CMFCToolBar::SetMenuSizes](#setmenusizes) diese globale Variable festlegen.
+Diese Methode gibt die Größe der Bilder auf Symbolleisten-Menü Schaltflächen zurück, die als globale Variable verwaltet werden. [Verwenden Sie cmfctoolbar:: setmenusizes](#setmenusizes) , um diese globale Variable festzulegen.
 
-##  <a name="getorigbuttons"></a>  CMFCToolBar::GetOrigButtons
+##  <a name="getorigbuttons"></a>Cmfctoolbar:: getorigbuttons
 
-Ruft die Auflistung der nicht benutzerdefinierten Schaltflächen der Symbolleiste ab.
+Ruft die Auflistung nicht angepasster Schaltflächen der Symbolleiste ab.
 
 ```
 const CObList& GetOrigButtons() const;
@@ -2012,17 +2012,17 @@ const CObList& GetOrigButtons() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Verweis auf die Liste der nicht benutzerdefinierten Schaltflächen der Symbolleiste.
+Ein Verweis auf die Liste nicht angepasster Schaltflächen der Symbolleiste.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework erstellt eine Kopie des Symbolleisten-Schaltflächen aus, bevor sie vom Benutzer angepasst werden. Die [CMFCToolBar::SetButtons](#setbuttons) Methode fügt eine Kopie der einzelnen Schaltflächen im angegebenen Array zur Liste der ursprünglichen Schaltflächen. Die [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate) Methode stellt den ursprünglichen Zustand der Symbolleiste wieder her, indem Sie sie aus der Ressourcendatei zu laden.
+Das Framework erstellt eine Kopie von Symbolleisten-Schaltflächen, bevor Sie vom Benutzer angepasst werden. Die [cmfctoolbar:: setButtons](#setbuttons) -Methode fügt der Liste der Original Schaltflächen eine Kopie jeder Schaltfläche im bereitgestellten Array hinzu. Die [cmfctoolbar:: restoreoriginalstate](#restoreoriginalstate) -Methode stellt den ursprünglichen Zustand der Symbolleiste wieder her, indem Sie aus der Ressourcen Datei geladen wird.
 
-Zum Festlegen der Liste der ursprünglichen Schaltflächen für die Symbolleiste rufen die [CMFCToolBar::SetOrigButtons](#setorigbuttons) Methode.
+Um die Liste der ursprünglichen Schaltflächen für die Symbolleiste festzulegen, müssen Sie die [cmfctoolbar:: setorigbuttons](#setorigbuttons) -Methode verwenden.
 
-##  <a name="getorigresetbuttons"></a>  CMFCToolBar::GetOrigResetButtons
+##  <a name="getorigresetbuttons"></a>Cmfctoolbar:: getorigresetbuttons
 
-Ruft die Auflistung der nicht angepasste Reset-Schaltflächen der Symbolleiste ab.
+Ruft die Auflistung nicht angepasster Reset-Schaltflächen der Symbolleiste ab.
 
 ```
 const CObList& GetOrigResetButtons() const;
@@ -2030,15 +2030,15 @@ const CObList& GetOrigResetButtons() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Verweis auf die Liste der nicht angepasste Reset-Schaltflächen der Symbolleiste.
+Ein Verweis auf die Liste der nicht angepassten Reset-Schaltflächen der Symbolleiste.
 
 ### <a name="remarks"></a>Hinweise
 
-Klickt der Benutzer die **zurücksetzen** Schaltfläche während der Anpassungsmodus aktiviert, das Framework verwendet diese Methode zum Wiederherstellen von Schaltflächen, die über die Symbolleiste entfernt wurden.
+Wenn der Benutzer im Anpassungsmodus auf die Schaltfläche **Zurücksetzen** klickt, verwendet das Framework diese Methode zum Wiederherstellen von Schaltflächen, die von der Symbolleiste entfernt wurden.
 
-Die [CMFCToolBar::SetButtons](#setbuttons) Methode fügt eine Kopie der einzelnen Schaltflächen der Symbolleiste die Liste mit den ursprünglichen Reset-Schaltflächen, nach dem Aufruf der [CMFCToolBar::OnReset](#onreset) Methode. Können Sie überschreiben die [CMFCToolBar::OnReset](#onreset) Methode zum Anpassen der Darstellung der Schaltflächen nach der Benutzer drückt die **zurücksetzen** Schaltfläche.
+Die [cmfctoolbar:: setButtons](#setbuttons) -Methode fügt der Liste der ursprünglichen Reset-Schaltflächen eine Kopie jeder Symbolleisten-Schaltfläche hinzu, nachdem Sie die [cmfctoolbar:: onreset](#onreset) -Methode aufgerufen hat. Sie können die [cmfctoolbar:: onreset](#onreset) -Methode außer Kraft setzen, um die Darstellung von Schaltflächen anzupassen, nachdem der Benutzer die Schaltfläche **Zurücksetzen** gedrückt hat.
 
-##  <a name="getresourceid"></a>  CMFCToolBar::GetResourceID
+##  <a name="getresourceid"></a>Cmfctoolbar:: getresourceid
 
 Ruft die Ressourcen-ID der Symbolleiste ab.
 
@@ -2052,11 +2052,11 @@ Die Ressourcen-ID der Symbolleiste.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie die [cmfctoolbar:: Loadtoolbarex](#loadtoolbarex) Methode, um die Ressourcen-ID der Symbolleiste festzulegen.
+Aufrufen der [cmfctoolbar:: loadtoolbarex](#loadtoolbarex) -Methode, um die Ressourcen-ID der Symbolleiste festzulegen.
 
-##  <a name="getroutecommandsviaframe"></a>  CMFCToolBar::GetRouteCommandsViaFrame
+##  <a name="getroutecommandsviaframe"></a>Cmfctoolbar:: getroutecommandsviaframe
 
-Bestimmt, welches Objekt, übergeordneten Rahmens oder der Besitzer, sendet Befehle an der Symbolleiste.
+Bestimmt, welches Objekt, der übergeordnete Frame oder der Besitzer, Befehle an die Symbolleiste sendet.
 
 ```
 BOOL GetRouteCommandsViaFrame();
@@ -2064,17 +2064,17 @@ BOOL GetRouteCommandsViaFrame();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Legen Sie ungleich NULL, wenn es sich bei der übergeordneten Frame Befehle an die Symbolleiste sendet; 0, wenn der Besitzer Befehle an die Symbolleiste sendet.
+Ungleich 0 (null), wenn der übergeordnete Frame Befehle an die Symbolleiste sendet. 0, wenn der Besitzer Befehle an die Symbolleiste sendet.
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig sendet der übergeordneten Frame Befehle auf der Symbolleiste. Rufen Sie [CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe) , dieses Verhalten ändern.
+Standardmäßig sendet der übergeordnete Frame Befehle an die Symbolleiste. Um dieses Verhalten zu ändern, können Sie [cmfctoolbar:: stroutecommandsviaframe](#setroutecommandsviaframe) anfordern.
 
-Wenn diese Methode einen Wert ungleich NULL zurückgibt, können Sie einen Zeiger auf das übergeordnete-Frame-Objekt abrufen, indem Sie mit der `CMFCToolBar::GetCommandTarget` Methode. Siehe Beispiel VisualStudioDemo ein Beispiel für die diese Methode verwendet.
+Wenn diese Methode einen Wert ungleich 0 (null) zurückgibt, können Sie einen Zeiger auf das übergeordnete Frame `CMFCToolBar::GetCommandTarget` Objekt mithilfe der-Methode abrufen. Ein Beispiel für die Verwendung dieser Methode finden Sie im visualstudiodemo-Beispiel.
 
-##  <a name="getrowheight"></a>  CMFCToolBar::GetRowHeight
+##  <a name="getrowheight"></a>Cmfctoolbar:: getRowHeight
 
-Gibt die Höhe von Symbolleisten-Schaltflächen.
+Gibt die Höhe von Symbolleisten-Schaltflächen zurück.
 
 ```
 virtual int GetRowHeight() const;
@@ -2082,15 +2082,15 @@ virtual int GetRowHeight() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Höhe des Symbolleisten-Schaltflächen in Pixel.
+Die Höhe von Symbolleisten Schaltflächen in Pixel.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode, um die Symbolleistenlayout zu berechnen. Überschreiben Sie diese Methode in einer abgeleiteten Klasse eine unterschiedliche Höhe für die Symbolleiste an.
+Das Framework ruft diese Methode auf, um das Symbolleisten Layout zu berechnen. Überschreiben Sie diese Methode in einer abgeleiteten Klasse, um eine andere Höhe für die Symbolleiste anzugeben.
 
-##  <a name="getshowtooltips"></a>  CMFCToolBar::GetShowTooltips
+##  <a name="getshowtooltips"></a>Cmfctoolbar:: getshowtooltips
 
-Gibt an, ob QuickInfos für Symbolleisten-Schaltflächen angezeigt werden.
+Gibt an, ob Quick Infos für Symbolleisten Schaltflächen angezeigt werden.
 
 ```
 static BOOL GetShowTooltips();
@@ -2098,15 +2098,15 @@ static BOOL GetShowTooltips();
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn QuickInfos für Schaltflächen der Symbolleiste angezeigt werden. andernfalls "false".
+TRUE, wenn Quick Infos für Symbolleisten Schaltflächen angezeigt werden. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig werden QuickInfos angezeigt. Sie können dieses statische Flag ändern, durch den Aufruf [CMFCToolBar::SetShowTooltips](#setshowtooltips).
+Standardmäßig werden Quick Infos angezeigt. Sie können dieses statische Flag ändern, indem Sie [cmfctoolbar:: setshowtooltips](#setshowtooltips)aufrufen.
 
-##  <a name="getsiblingtoolbar"></a>  CMFCToolBar::GetSiblingToolBar
+##  <a name="getsiblingtoolbar"></a>Cmfctoolbar:: getsiblingtoolbar
 
-Ruft das gleichgeordnete Element in der Symbolleiste ab.
+Ruft das gleich geordnete Element der Symbolleiste ab.
 
 ```
 CMFCToolBar* GetSiblingToolBar();
@@ -2114,15 +2114,15 @@ CMFCToolBar* GetSiblingToolBar();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf der Symbolleiste gleichgeordnetes Element.
+Ein Zeiger auf die gleich geordnete Symbolleiste.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen zum Aktivieren der **Schaltflächen in einer Zeile anzeigen** und **Schaltflächen in zwei Reihen anzeigen** Schaltflächen finden Sie unter [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar).
+Weitere Informationen zum Aktivieren der Schaltflächen **anzeigen in einer Zeile** und **Anzeigen von Schaltflächen auf zwei Zeilen** finden Sie unter [cmfctoolbar:: setsiblingtoolbar](#setsiblingtoolbar).
 
-##  <a name="getuserimages"></a>  CMFCToolBar::GetUserImages
+##  <a name="getuserimages"></a>Cmfctoolbar:: getuserimages
 
-Gibt einen Zeiger auf die Auflistung von benutzerdefinierten Symbolleisten-Schaltflächen in der Anwendung an.
+Gibt einen Zeiger auf die Auflistung von benutzerdefinierten Symbolleisten-Schaltflächen Bildern in der Anwendung zurück.
 
 ```
 static CMFCToolBarImages* GetUserImages();
@@ -2130,15 +2130,15 @@ static CMFCToolBarImages* GetUserImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die Auflistung der benutzerdefinierten Symbolleisten-Schaltflächen für alle Symbolleisten in der Anwendung.
+Ein Zeiger auf die Auflistung benutzerdefinierter Symbolleisten-Schaltflächen Bilder für alle Symbolleisten in der Anwendung.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie die [CMFCToolBar::SetUserImages](#setuserimages) Methode, um die Sammlung von benutzerdefinierten Images in der Anwendung festgelegt.
+Rufen Sie die [cmfctoolbar:: setuserimages](#setuserimages) -Methode auf, um die Auflistung benutzerdefinierter Images in der Anwendung festzulegen.
 
-##  <a name="hittest"></a>  CMFCToolBar::HitTest
+##  <a name="hittest"></a>Cmfctoolbar:: HitTest
 
-Gibt den Index der Symbolleisten-Schaltfläche, die an der angegebenen Position befindet.
+Gibt den Index der Symbolleisten Schaltfläche zurück, die sich an der angegebenen Position befindet.
 
 ```
 virtual int HitTest(CPoint point);
@@ -2147,15 +2147,15 @@ virtual int HitTest(CPoint point);
 ### <a name="parameters"></a>Parameter
 
 *point*<br/>
-[in] Der Punkt, die in Clientkoordinaten getestet werden.
+in Der Punkt, der getestet werden soll, in Client Koordinaten.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Index der Schaltfläche, die an der angegebenen Position oder -1 befindet, sofern es gibt keine solche Schaltfläche oder auf ist ein Trennzeichen.
+Der Index der Schaltfläche, die sich an der angegebenen Position befindet, oder-1, wenn keine solche Schaltfläche vorhanden ist oder die Schaltfläche ein Trennzeichen ist.
 
-##  <a name="insertbutton"></a>  CMFCToolBar::InsertButton
+##  <a name="insertbutton"></a>Cmfctoolbar:: InsertButton
 
-Fügt der Symbolleiste eine Schaltfläche hinzu.
+Fügt eine Schaltfläche in die Symbolleiste ein.
 
 ```
 virtual int InsertButton(
@@ -2170,24 +2170,24 @@ virtual int InsertButton(
 ### <a name="parameters"></a>Parameter
 
 *button*<br/>
-[in] Gibt die Schaltfläche zum Einfügen.
+in Gibt die einzufügende Schaltfläche an.
 
 *iInsertAt*<br/>
-[in] Gibt die nullbasierte Position, um auf die Schaltfläche einzufügen.
+in Gibt die null basierte Position an, an der die Schaltfläche eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Position, an dem die Schaltfläche eingefügt wurde oder -1, wenn ein Fehler auftritt.
+Die Position, an der die Schaltfläche eingefügt wurde, oder-1, wenn ein Fehler auftritt.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn *iInsertAt* -1 ist, diese Methode fügt die Schaltfläche am Ende der Liste der Symbolleisten-Schaltflächen hinzu.
+Wenn *iinsertat* den Wert-1 hat, fügt diese Methode die Schaltfläche am Ende der Liste der Symbolleisten-Schaltflächen hinzu.
 
-Rufen Sie die [CMFCToolBar::InsertSeparator](#insertseparator) Methode zum Einfügen von Trennzeichen in der Symbolleiste.
+Verwenden Sie die [cmfctoolbar:: InsertSeparator](#insertseparator) -Methode, um ein Trennzeichen in die Symbolleiste einzufügen.
 
-##  <a name="insertseparator"></a>  CMFCToolBar::InsertSeparator
+##  <a name="insertseparator"></a>Cmfctoolbar:: InsertSeparator
 
-Fügt ein Trennzeichen in der Symbolleiste ein.
+Fügt ein Trennzeichen in die Symbolleiste ein.
 
 ```
 virtual int InsertSeparator(INT_PTR iInsertAt=-1);
@@ -2196,23 +2196,23 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
 ### <a name="parameters"></a>Parameter
 
 *iInsertAt*<br/>
-[in] Gibt die nullbasierte Position zum Einfügen von Trennzeichen am. Dieser Parameter muss größer als 0 sein.
+in Gibt die null basierte Position an, an der das Trennzeichen eingefügt werden soll. Dieser Parameter muss größer als 0 (null) sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Position, an dem das Trennzeichen eingefügt wurde, oder -1, wenn ein Fehler auftritt, wird.
+Die Position, an der das Trennzeichen eingefügt wurde, oder-1, wenn ein Fehler auftritt.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode, um ein Trennzeichen zwischen zwei vorhandenen Schaltflächen einfügen. Wenn *iInsertAt* -1 ist, diese Methode fügt das Trennzeichen an das Ende der Liste der Symbolleisten-Schaltflächen hinzu.
+Mit dieser Methode wird ein Trennzeichen zwischen zwei vorhandenen Schaltflächen eingefügt. Wenn *iinsertat* den Wert-1 hat, fügt diese Methode das Trennzeichen am Ende der Liste der Symbolleisten-Schaltflächen hinzu.
 
-Sie können nicht auf diese Methode verwenden, ein Trennzeichen eine leere Symbolleiste hinzu.
+Sie können diese Methode nicht verwenden, um einer leeren Symbolleiste ein Trennzeichen hinzuzufügen.
 
-Rufen Sie die [CMFCToolBar::InsertButton](#insertbutton) Methode, um in der Symbolleiste eine Schaltfläche eingefügt werden soll.
+Verwenden Sie die [cmfctoolbar:: InsertButton](#insertbutton) -Methode, um eine Schaltfläche in die Symbolleiste einzufügen.
 
-##  <a name="invalidatebutton"></a>  CMFCToolBar::InvalidateButton
+##  <a name="invalidatebutton"></a>Cmfctoolbar:: invalidatebutton
 
-Macht den Clientbereich des der Symbolleisten-Schaltfläche, die am angegebenen Index vorhanden ist ungültig.
+Macht den Client Bereich der Symbolleisten Schaltfläche ungültig, die am angegebenen Index vorhanden ist.
 
 ```
 CMFCToolBarButton* InvalidateButton(int nIndex);
@@ -2221,19 +2221,19 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Der nullbasierte Index der Schaltfläche auf der Symbolleiste.
+in Der null basierte Index der Schaltfläche auf der Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `CMFCToolBarButton` -Objekt, das am angegebenen Index oder NULL vorhanden ist, wenn kein entsprechendes Objekt vorhanden ist.
+Ein Zeiger auf das `CMFCToolBarButton` Objekt, das am angegebenen Index vorhanden ist, oder NULL, wenn kein solches Objekt vorhanden ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode auf, wenn den Client-Bereich aktualisiert wird, der eine Symbolleisten-Schaltfläche zugeordnet ist. Ruft die [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect) -Methode mit Clientrechteck des der `CMFCToolBarButton` -Objekt, das am angegebenen Index vorhanden ist.
+Das Framework ruft diese Methode auf, wenn der Client Bereich aktualisiert wird, der einer Symbolleisten Schaltfläche zugeordnet ist. Sie ruft die [CWnd:: invalidatup](../../mfc/reference/cwnd-class.md#invalidaterect) -Methode mit dem Client Rechteck des `CMFCToolBarButton` Objekts auf, das am angegebenen Index vorhanden ist.
 
-##  <a name="isaddremovequickcustomize"></a>  CMFCToolBar::IsAddRemoveQuickCustomize
+##  <a name="isaddremovequickcustomize"></a>Cmfctoolbar:: isadressmuvequickcustomize
 
-Bestimmt, ob ein Benutzer kann hinzufügen oder Entfernen von Symbolleisten-Schaltflächen mit den **anpassen** Option des Menüs.
+Bestimmt, ob ein Benutzer Symbolleisten Schaltflächen mithilfe der Menüoption **Anpassen** hinzufügen oder entfernen kann.
 
 ```
 BOOL IsAddRemoveQuickCustomize();
@@ -2241,13 +2241,13 @@ BOOL IsAddRemoveQuickCustomize();
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn ein Benutzer verwenden kann die **anpassen** Option des Menüs so ändern Sie die Symbolleiste; andernfalls "false".
+"True", wenn ein Benutzer die Menüoption " **Anpassen** " zum Ändern der Symbolleiste verwenden kann. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isaltcustomizemode"></a>  CMFCToolBar::IsAltCustomizeMode
+##  <a name="isaltcustomizemode"></a>Cmfctoolbar:: isaltcustomizemode
 
-Gibt an, ob *schnelle Anpassung* wird verwendet, um eine Schaltfläche zu ziehen. Wenn schnelle Anpassung aktiviert ist, kann ein Benutzer drücken Sie die und halten Sie Alt gedrückt und ziehen Sie eine Schaltfläche in einem neuen Speicherort.
+Gibt an, ob die *schnelle Anpassung* verwendet wird, um eine Schaltfläche zu ziehen. Wenn die schnelle Anpassung aktiviert ist, kann ein Benutzer die Alt-Taste gedrückt halten und eine Schaltfläche an eine neue Stelle ziehen.
 
 ```
 static BOOL __stdcall IsAltCustomizeMode();
@@ -2255,13 +2255,13 @@ static BOOL __stdcall IsAltCustomizeMode();
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn der schnelle Anpassung verwendet wird, um eine Schaltfläche zu ziehen. andernfalls "false".
+TRUE, wenn die schnelle Anpassung verwendet wird, um eine Schaltfläche zu ziehen. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isautograyinactiveimages"></a>  CMFCToolBar::IsAutoGrayInactiveImages
+##  <a name="isautograyinactiveimages"></a>Cmfctoolbar:: isautograyinactiveimages
 
-Gibt an, ob die automatische Generierung von inaktiv (nicht hervorgehobenen) Schaltflächenbilder aktiviert ist.
+Gibt an, ob die automatische Generierung von inaktiven Schaltflächen Bildern aktiviert ist.
 
 ```
 static BOOL IsAutoGrayInactiveImages();
@@ -2269,15 +2269,15 @@ static BOOL IsAutoGrayInactiveImages();
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Möglichkeit, automatisch inaktiv Images dim aktiviert ist. andernfalls "false".
+TRUE, wenn die Option zum automatischen Abblenden inaktiver Images aktiviert ist. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Sie können aktivieren oder deaktivieren Sie die automatische abblendet inaktiv Images durch den Aufruf [CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages).
+Sie können das automatische Abbild inaktiver Images aktivieren bzw. deaktivieren, indem Sie [cmfctoolbar:: autograyinactiveimages](#autograyinactiveimages)aufrufen.
 
-##  <a name="isbasiccommand"></a>  CMFCToolBar::IsBasicCommand
+##  <a name="isbasiccommand"></a>Cmfctoolbar:: isbasiccommand
 
-Bestimmt, ob ein Befehl in der Liste der Basisbefehle enthalten ist.
+Bestimmt, ob ein Befehl in der Liste der grundlegenden Befehle enthalten ist.
 
 ```
 static BOOL IsBasicCommand(UINT uiCmd);
@@ -2286,19 +2286,19 @@ static BOOL IsBasicCommand(UINT uiCmd);
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Gibt den Befehl aus, um zu überprüfen.
+in Gibt den zu überprüfen Befehl an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn der angegebene Befehl die Liste mit den grundlegenden Befehlen gehört. andernfalls "false".
+TRUE, wenn der angegebene Befehl zur Liste der grundlegenden Befehle gehört. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese statische Methode bestimmt, ob der Befehl vom angegeben *UiCmd* gehört zu der globalen Liste der Basisbefehle. Sie können die Liste der Basisbefehle ändern, durch den Aufruf [CMFCToolBar::AddBasicCommand](#addbasiccommand) oder [CMFCToolBar::SetBasicCommands](#setbasiccommands).
+Diese statische Methode bestimmt, ob der von *uicmd* angegebene Befehl zur globalen Liste der grundlegenden Befehle gehört. Sie können die Liste der grundlegenden Befehle ändern, indem Sie [cmfctoolbar:: addbasiccommand](#addbasiccommand) oder [cmfctoolbar:: setbasiccommands](#setbasiccommands)aufrufen.
 
-##  <a name="isbuttonextrasizeavailable"></a>  CMFCToolBar::IsButtonExtraSizeAvailable
+##  <a name="isbuttonextrasizeavailable"></a>Cmfctoolbar:: isbuttonextrasizeavailable
 
-Bestimmt, ob die Symbolleiste Schaltflächen angezeigt werden kann, die Rahmen erweitert haben.
+Bestimmt, ob die Symbolleiste Schaltflächen mit erweiterten Rahmen anzeigen kann.
 
 ```
 virtual BOOL IsButtonExtraSizeAvailable() const;
@@ -2306,17 +2306,17 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Leiste Schaltflächen mit den zusätzlichen Rahmenstärke angezeigt werden kann. andernfalls "false".
+TRUE, wenn in der Leiste Schaltflächen mit der zusätzlichen Rahmengröße angezeigt werden können. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Toolbar-Objekt gibt TRUE zurück, wenn Schaltflächen angezeigt werden können, die Rahmen erweitert haben. Eine Symbolleisten-Schaltfläche ruft diese Methode auf, wenn er behandelt die [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd) Benachrichtigung und wird die zusätzliche Innenrahmen Größe-Flag entsprechend festlegen. Dieses Flag interne kann später abgerufen werden, durch den Aufruf [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).
+Das Symbolleisten Objekt gibt true zurück, wenn es Schaltflächen mit erweiterten Rahmen anzeigen kann. Eine Symbolleisten-Schaltfläche ruft diese Methode auf, wenn Sie die [cmfctoolbarbutton:: onchangeparser](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd) -Benachrichtigung behandelt und das interne Flag für die zusätzliche Rahmengröße entsprechend festgelegt wird. Dieses interne Flag kann später abgerufen werden, indem [cmfctoolbarbutton:: isextrasize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)aufgerufen wird.
 
-Überschreiben Sie diese Methode in einer Klasse abgeleitet `CMFCToolBar` und gibt WAHR zurück, wenn Ihre Leiste die Symbolleisten-Schaltflächen mit der zusätzlichen Border Size anzeigen und gibt andernfalls "false". Die Standardimplementierung gibt "true" zurück.
+Überschreiben Sie diese Methode in einer von `CMFCToolBar` abgeleiteten Klasse, und geben Sie true zurück, wenn die Leiste die Symbolleisten Schaltflächen mit der zusätzlichen Rahmengröße anzeigen und andernfalls false zurückgeben kann Die Standard Implementierung gibt true zurück.
 
-##  <a name="isbuttonhighlighted"></a>  CMFCToolBar::IsButtonHighlighted
+##  <a name="isbuttonhighlighted"></a>Cmfctoolbar:: isbuttongehobene
 
-Bestimmt, ob die angegebene Schaltfläche markiert wird.
+Bestimmt, ob die angegebene Schaltfläche hervorgehoben ist.
 
 ```
 BOOL IsButtonHighlighted(int iButton) const;
@@ -2325,15 +2325,15 @@ BOOL IsButtonHighlighted(int iButton) const;
 ### <a name="parameters"></a>Parameter
 
 *iButton*<br/>
-[in] Gibt den Index einer Symbolleisten-Schaltfläche.
+in Gibt den Index einer Symbolleisten-Schaltfläche an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die angegebene Schaltfläche markiert ist. andernfalls "false".
+TRUE, wenn die angegebene Schaltfläche hervorgehoben ist. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="iscommandpermitted"></a>  CMFCToolBar::IsCommandPermitted
+##  <a name="iscommandpermitted"></a>Cmfctoolbar:: iscommandzugelassene
 
 Bestimmt, ob ein Befehl zulässig ist.
 
@@ -2344,21 +2344,21 @@ static BOOL IsCommandPermitted(UINT uiCmd);
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Gibt den Befehl aus, um zu überprüfen.
+in Gibt den zu überprüfen Befehl an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn der angegebene Befehl zulässig ist. andernfalls "false".
+TRUE, wenn der angegebene Befehl zulässig ist. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese statische Methode bestimmt, ob der Befehl vom angegeben *UiCmd* gehört zu der globalen Liste der Befehle nicht zulässig.
+Diese statische Methode bestimmt, ob der von *uicmd* angegebene Befehl zur globalen Liste nicht zulässiger Befehle gehört.
 
-Sie können die Liste der Befehle nicht zugelassene ändern, durch den Aufruf [CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands).
+Sie können die Liste der nicht zulässigen Befehle ändern, indem Sie [cmfctoolbar:: setnonpermittedcommands](#setnonpermittedcommands)aufrufen.
 
-##  <a name="iscommandrarelyused"></a>  CMFCToolBar::IsCommandRarelyUsed
+##  <a name="iscommandrarelyused"></a>Cmfctoolbar:: iscommandrarelyused
 
-Bestimmt, ob ein Befehl nur selten verwendet wird.
+Bestimmt, ob ein Befehl selten verwendet wird.
 
 ```
 static BOOL IsCommandRarelyUsed(UINT uiCmd);
@@ -2367,29 +2367,29 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Gibt den Befehl aus, um zu überprüfen.
+in Gibt den zu überprüfen Befehl an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn der angegebene Befehl nur selten verwendet wird. andernfalls "false".
+TRUE, wenn der angegebene Befehl selten verwendet wird. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `IsCommandRarelyUsed` Methode gibt "false", wenn eine oder mehrere der folgenden Bedingungen auftreten:
+Die `IsCommandRarelyUsed` Methode gibt false zurück, wenn eine oder mehrere der folgenden Bedingungen eintreten:
 
-- Der angegebene Befehl gehört zur Liste der Basisbefehle
+- Der angegebene Befehl gehört der Liste der grundlegenden Befehle an.
 
-- Der angegebene Befehl ist einer der Standardbefehle
+- Der angegebene Befehl ist einer der Standard Befehle.
 
-- Das Framework ist im Anpassungsmodus
+- Das Framework befindet sich im Anpassungsmodus.
 
-- Die Liste der Basisbefehle ist leer.
+- Die Liste der grundlegenden Befehle ist leer.
 
-- Mehr als 20 % der Befehl ruft sind Aufrufe an den angegebenen Befehl.
+- Mehr als 20% der Befehls Aufrufe sind Aufrufe zum angegebenen Befehl.
 
-##  <a name="iscustomizemode"></a>  CMFCToolBar::IsCustomizeMode
+##  <a name="iscustomizemode"></a>Cmfctoolbar:: iscustomizemode
 
-Gibt an, ob das Framework für die Symbolleiste im Anpassungsmodus befindet.
+Gibt an, ob sich das Symbolleisten Framework im Anpassungsmodus befindet.
 
 ```
 static BOOL IsCustomizeMode();
@@ -2397,17 +2397,17 @@ static BOOL IsCustomizeMode();
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn das Framework im Anpassungsmodus befindet. andernfalls "false".
+TRUE, wenn sich das Framework im Anpassungsmodus befindet. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Sie können den Anpassungsmodus wechseln, durch den Aufruf [CMFCToolBar::SetCustomizeMode](#setcustomizemode).
+Sie können den Anpassungsmodus umschalten, indem Sie [cmfctoolbar:: setcustomizemode](#setcustomizemode)aufrufen.
 
-Das Framework ändert den Modus an, wenn der Benutzer das Dialogfeld "anpassen" aufruft ( [CMFCToolBarsCustomizeDialog-Klasse](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)).
+Das Framework ändert den Modus, wenn der Benutzer das Anpassungs Dialogfeld ( [cmfctoolbarscustomizedialog-Klasse](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) aufruft.
 
-##  <a name="isdragbutton"></a>  CMFCToolBar::IsDragButton
+##  <a name="isdragbutton"></a>Cmfctoolbar:: isdragbutton
 
-Bestimmt, ob eine Symbolleisten-Schaltfläche gezogen wird.
+Bestimmt, ob eine Symbolleisten Schaltfläche gezogen wird.
 
 ```
 BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
@@ -2416,17 +2416,17 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
 ### <a name="parameters"></a>Parameter
 
 *pButton*<br/>
-[in] Zeiger auf eine Symbolleisten-Schaltfläche.
+in Zeiger auf eine Symbolleisten Schaltfläche.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die angegebene Schaltfläche gezogen wird. andernfalls "false".
+TRUE, wenn die angegebene Schaltfläche gezogen wird; andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isexistcustomizebutton"></a>  CMFCToolBar::IsExistCustomizeButton
+##  <a name="isexistcustomizebutton"></a>Cmfctoolbar:: isexistcustomizebutton
 
-Bestimmt, ob die Symbolleiste enthält die **anpassen** Schaltfläche.
+Bestimmt, ob die Symbolleiste die Schaltfläche **Anpassen** enthält.
 
 ```
 BOOL IsExistCustomizeButton();
@@ -2434,15 +2434,15 @@ BOOL IsExistCustomizeButton();
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn die Symbolleiste enthält die **anpassen** Schaltfläche; andernfalls "false".
+TRUE, wenn die Symbolleiste die Schaltfläche **Anpassen** enthält. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn diese Methode gibt "true" zurück, die [CMFCToolBar::GetCustomizeButton](#getcustomizebutton) Methode gibt einen Zeiger auf die **anpassen** Schaltfläche, die am Ende der Symbolleiste angezeigt wird.
+Wenn diese Methode true zurückgibt, gibt die [cmfctoolbar:: getcustomizebutton](#getcustomizebutton) -Methode einen Zeiger auf die Schaltfläche **Anpassen** zurück, die am Ende der Symbolleiste angezeigt wird.
 
-Verwenden der [cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton) -Methode zum Hinzufügen der **anpassen** Schaltfläche der Symbolleiste.
+Verwenden Sie die [cmfctoolbar:: enablecustomizebutton](#enablecustomizebutton) -Methode, um der Symbolleiste die Schaltfläche **Anpassen** hinzuzufügen.
 
-##  <a name="isfloating"></a>  CMFCToolBar::IsFloating
+##  <a name="isfloating"></a>Cmfctoolbar:: IsFloating
 
 Bestimmt, ob die Symbolleiste unverankert ist.
 
@@ -2452,11 +2452,11 @@ virtual BOOL IsFloating() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Symbolleiste unverankert ist. andernfalls "false".
+TRUE, wenn die Symbolleiste unverankert ist. andernfalls false.
 
-##  <a name="islargeicons"></a>  CMFCToolBar::IsLargeIcons
+##  <a name="islargeicons"></a>Cmfctoolbar:: islargeicons
 
-Gibt an, ob Symbolleisten in der Anwendung derzeit große Symbole angezeigt.
+Gibt an, ob Symbolleisten in der Anwendung derzeit große Symbole anzeigen.
 
 ```
 static BOOL IsLargeIcons();
@@ -2464,17 +2464,17 @@ static BOOL IsLargeIcons();
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Anwendung große Symbole verwendet. andernfalls "false".
+TRUE, wenn die Anwendung große Symbole verwendet. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie [CMFCToolBar::SetLargeIcons](#setlargeicons) zwischen große Symbole und reguläre Symbole wechseln.
+Sie können [cmfctoolbar:: setlargeicons](#setlargeicons) aufrufen, um zwischen großen Symbolen und regulären Symbolen zu wechseln.
 
-Das Framework ändert automatisch den Modus beim Umschalten der **große Symbole** Kontrollkästchen auf der **Optionen** auf der Seite die **Anpassung** Dialogfeld.
+Das Framework ändert den Modus automatisch, wenn der Benutzer das Kontrollkästchen **große Symbole** auf der **options** Seite des **Anpassungs** Dialogfelds schaltet.
 
-##  <a name="islastcommandfrombutton"></a>  CMFCToolBar::IsLastCommandFromButton
+##  <a name="islastcommandfrombutton"></a>Cmfctoolbar:: islastcommandfrombutton
 
-Bestimmt, ob die zuletzt ausgeführten Befehl über die angegebene Symbolleisten-Schaltfläche gesendet wurde.
+Bestimmt, ob der zuletzt ausgeführte Befehl von der angegebenen Symbolleisten Schaltfläche gesendet wurde.
 
 ```
 static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
@@ -2483,17 +2483,17 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 ### <a name="parameters"></a>Parameter
 
 *pButton*<br/>
-[in] Zeiger auf die Schaltfläche.
+in Zeiger auf Schaltfläche.
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn Sie über die Schaltfläche mit dem letzte Befehl gesendet wurde, *pButton* gibt; andernfalls "false".
+TRUE, wenn der letzte Befehl von der Schaltfläche gesendet wurde, die von *pbutton* angegeben wird. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft einen Zeiger auf eine [MSG-Struktur](/windows/desktop/api/winuser/ns-winuser-tagmsg) durch Aufrufen von `CWnd::GetCurrentMessage`. Es vergleicht dann das HWND des mit der Schaltfläche mit den `MSG::lParam` und `MSG::hwnd` Elemente zu bestimmen, ob die Schaltfläche mit der die Quelle des Befehls war.
+Diese Methode erhält einen Zeiger auf eine [MSG-Struktur](/windows/win32/api/winuser/ns-winuser-msg) durch `CWnd::GetCurrentMessage`Aufrufen von. Anschließend wird das HWND der Schaltfläche mit den `MSG::lParam` Elementen und `MSG::hwnd` verglichen, um zu bestimmen, ob die Schaltfläche die Quelle des Befehls war.
 
-##  <a name="islocked"></a>  CMFCToolBar::IsLocked
+##  <a name="islocked"></a>Cmfctoolbar:: IsLocked
 
 Bestimmt, ob die Symbolleiste gesperrt ist.
 
@@ -2503,17 +2503,17 @@ BOOL IsLocked() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Symbolleiste gesperrt ist. andernfalls "false".
+TRUE, wenn die Symbolleiste gesperrt ist. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode gibt TRUE zurück, wenn der Benutzer Aufgaben zur Anpassung der z. B. Neupositionieren von Schaltflächen der Symbolleiste nicht ausführen kann.
+Diese Methode gibt true zurück, wenn der Benutzer keine Anpassungs Aufgaben wie das Neupositionieren von Symbolleisten-Schaltflächen ausführen kann.
 
-Gesperrte Symbolleisten verwenden Sie separate Bildlisten. Weitere Informationen zu diesen Bildlisten, finden Sie unter [CMFCToolBar::LoadBitmapEx](#loadbitmapex).
+Gesperrte Symbolleisten verwenden separate Bildlisten. Weitere Informationen zu diesen Bildlisten finden Sie unter [cmfctoolbar:: loadbitmapex](#loadbitmapex).
 
-##  <a name="isonerowwithsibling"></a>  Cmfctoolbar:: Isonerowwithsibling
+##  <a name="isonerowwithsibling"></a>Cmfctoolbar:: isonerowwithsierend
 
-Bestimmt, ob die Symbolleiste und gleichgeordnete Symbolleisten auf derselben Zeile positioniert sind.
+Bestimmt, ob die Symbolleiste und die gleich geordnete Symbolleiste in derselben Zeile positioniert werden.
 
 ```
 BOOL IsOneRowWithSibling();
@@ -2521,15 +2521,15 @@ BOOL IsOneRowWithSibling();
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Symbolleiste und gleichgeordnete auf derselben Zeile positioniert ist. andernfalls "false".
+TRUE, wenn die Symbolleiste und das gleich geordnete Element in derselben Zeile positioniert sind; andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Die [cmfccustomizebutton:: CreatePopupMenu](internal-classes.md) Methode ruft diese Methode, um zu bestimmen, wie zum Anzeigen der **anpassen** Popup-Menü. Wenn diese Methode TRUE zurückgibt, zeigt das Framework die **Schaltflächen in einer Zeile anzeigen** Schaltfläche. Andernfalls zeigt das Framework die **Schaltflächen in zwei Reihen anzeigen** Schaltfläche.
+Die [cmfccustomizebutton:: deepopupmenu](internal-classes.md) -Methode ruft diese Methode auf, um zu bestimmen, wie das Popup Menü **Anpassen** angezeigt werden soll. Wenn diese Methode true zurückgibt, zeigt das Framework die Schaltflächen **Anzeigen auf einer Zeilen** Schaltfläche an. Andernfalls zeigt das Framework die Schaltflächen **Show Buttons on two rows an** .
 
-Sie müssen dieser Methode normalerweise nicht verwenden. So aktivieren Sie die **Schaltflächen in einer Zeile anzeigen** oder **Schaltflächen in zwei Reihen anzeigen** , rufen [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar).
+Sie müssen dieser Methode normalerweise nicht verwenden. Um die Schaltflächen **anzeigen in einer Zeile** oder **Schaltflächen auf zwei Zeilen anzeigen** zu aktivieren, müssen Sie [cmfctoolbar:: setsiblingtoolbar](#setsiblingtoolbar)aufrufen.
 
-##  <a name="isresourcechanged"></a>  CMFCToolBar::IsResourceChanged
+##  <a name="isresourcechanged"></a>Cmfctoolbar:: isresourcechanged
 
 ```
 virtual BOOL IsResourceChanged() const;
@@ -2539,7 +2539,7 @@ virtual BOOL IsResourceChanged() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="issibling"></a>  CMFCToolBar::IsSibling
+##  <a name="issibling"></a>Cmfctoolbar:: issiists
 
 ```
 BOOL IsSibling();
@@ -2549,9 +2549,9 @@ BOOL IsSibling();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="isuserdefined"></a>  CMFCToolBar::IsUserDefined
+##  <a name="isuserdefined"></a>Cmfctoolbar:: isuserdefined
 
-Gibt an, ob die Symbolleiste benutzerdefiniert ist.
+Gibt an, ob die Symbolleiste Benutzer definiert ist.
 
 ```
 BOOL IsUserDefined() const;
@@ -2559,9 +2559,9 @@ BOOL IsUserDefined() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Symbolleiste, die vom Benutzer erstellt wurde. andernfalls "false".
+TRUE, wenn die Symbolleiste vom Benutzer erstellt wurde. andernfalls false.
 
-##  <a name="loadbitmap"></a>  CMFCToolBar::LoadBitmap
+##  <a name="loadbitmap"></a>Cmfctoolbar:: LoadBitmap
 
 Lädt Symbolleistenbilder aus Anwendungsressourcen.
 
@@ -2578,22 +2578,22 @@ virtual BOOL LoadBitmap(
 ### <a name="parameters"></a>Parameter
 
 *uiResID*<br/>
-[in] Die Ressourcen-ID der Bitmap, die auf die aktiven Symbolleistenbilder verweist.
+in Die Ressourcen-ID der Bitmap, die auf die aktiven Symbolleisten Bilder verweist.
 
 *uiColdResID*<br/>
-[in] Die Ressourcen-ID der Bitmap, die auf die inaktiven Symbolleistenbilder verweist.
+in Die Ressourcen-ID der Bitmap, die auf die kalten Symbolleisten Bilder verweist.
 
 *uiMenuResID*<br/>
-[in] Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.
+in Die Ressourcen-ID der Bitmap, die auf die regulären Menü Bilder verweist.
 
 *bLocked*<br/>
-[in] True, um die Symbolleiste zu sperren. andernfalls "false".
+in TRUE, um die Symbolleiste zu sperren. andernfalls false.
 
 *uiDisabledResID*<br/>
-[in] Die Ressourcen-ID der Bitmap, die auf die deaktivierten Symbolleistenbilder verweist.
+in Die Ressourcen-ID der Bitmap, die auf die deaktivierten Symbolleisten Bilder verweist.
 
 *uiMenuDisabledResID*<br/>
-[in] Die Ressourcen-ID der Bitmap, die auf die deaktivierten Menübilder verweist.
+in Die Ressourcen-ID der Bitmap, die auf die deaktivierten Menü Bilder verweist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2605,7 +2605,7 @@ Die [CMFCToolBar::LoadToolBarEx](#loadtoolbarex) -Methode ruft diese Methode auf
 
 Rufen Sie die `LoadBitmapEx` -Methode auf, um nach der Erstellung der Symbolleiste weitere Bilder zu laden.
 
-##  <a name="loadbitmapex"></a>  CMFCToolBar::LoadBitmapEx
+##  <a name="loadbitmapex"></a>Cmfctoolbar:: loadbitmapex
 
 ```
 virtual BOOL LoadBitmapEx(
@@ -2615,14 +2615,14 @@ virtual BOOL LoadBitmapEx(
 
 ### <a name="parameters"></a>Parameter
 
-[in] *params*<br/>
-[in] *bLocked*<br/>
+in Parameter<br/>
+in *blockiert*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="loadlargeiconsstate"></a>  CMFCToolBar::LoadLargeIconsState
+##  <a name="loadlargeiconsstate"></a>Cmfctoolbar:: loadlargeisstate
 
 ```
 static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
@@ -2630,15 +2630,15 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *lpszProfileName*<br/>
+in *lpszprofilename*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="loadparameters"></a>  CMFCToolBar::LoadParameters
+##  <a name="loadparameters"></a>Cmfctoolbar:: loadparameters
 
-Lädt globale Symbolleistenoptionen aus der Windows-Registrierung.
+Lädt globale Symbolleisten Optionen aus der Windows-Registrierung.
 
 ```
 static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
@@ -2647,7 +2647,7 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
 ### <a name="parameters"></a>Parameter
 
 *lpszProfileName*<br/>
-[in] Gibt den relativen Pfad des Windows-Registrierungsschlüssels.
+in Gibt den relativen Pfad des Windows-Registrierungsschlüssels an.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2655,13 +2655,13 @@ Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, ander
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode lädt globale Parameter wie den Menü-Animation-Typ, dem Stil Schatten und angibt, ob große Symbole aus der Windows-Registrierung angezeigt.
+Diese Methode lädt globale Parameter, wie z. b. den Menü Animationstyp, den Menü Schattenstil und ob große Symbole aus der Windows-Registrierung angezeigt werden sollen.
 
-Die [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) -Methode ruft diese Methode als Teil des Initialisierungsvorgangs der Anwendung.
+Die [CWinAppEx:: LoadState](../../mfc/reference/cwinappex-class.md#loadstate) -Methode ruft diese Methode im Rahmen des Initialisierungs Prozesses der Anwendung auf.
 
-##  <a name="loadstate"></a>  CMFCToolBar::LoadState
+##  <a name="loadstate"></a>Cmfctoolbar:: LoadState
 
-Lädt die Zustandsinformationen für die Symbolleiste aus der Windows-Registrierung.
+Lädt die Symbolleisten Zustandsinformationen aus der Windows-Registrierung.
 
 ```
 virtual BOOL LoadState(
@@ -2673,13 +2673,13 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parameter
 
 *lpszProfileName*<br/>
-[in] Gibt den relativen Pfad des Windows-Registrierungsschlüssels.
+in Gibt den relativen Pfad des Windows-Registrierungsschlüssels an.
 
 *nIndex*<br/>
-[in] Gibt die Steuerelement-ID der Symbolleiste an.
+in Gibt die Steuerelement-ID der Symbolleiste an.
 
 *uiID*<br/>
-[in] Gibt die Ressourcen-ID der Symbolleiste an.
+in Gibt die Ressourcen-ID der Symbolleiste an.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2687,11 +2687,11 @@ Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, ander
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode als Teil des Initialisierungsvorgangs der Anwendung. Weitere Informationen finden Sie unter [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).
+Das Framework ruft diese Methode im Rahmen des Initialisierungs Prozesses der Anwendung auf. Weitere Informationen finden Sie unter [CWinAppEx:: LoadState](../../mfc/reference/cwinappex-class.md#loadstate).
 
-##  <a name="loadtoolbar"></a>  CMFCToolBar::LoadToolBar
+##  <a name="loadtoolbar"></a>Cmfctoolbar:: LoadToolBar
 
-Lädt die Symbolleiste aus Anwendungsressourcen.
+Lädt die Symbolleiste aus den Anwendungs Ressourcen.
 
 ```
 virtual BOOL LoadToolBar(
@@ -2707,25 +2707,25 @@ virtual BOOL LoadToolBar(
 ### <a name="parameters"></a>Parameter
 
 *uiResID*<br/>
-[in] Die Ressourcen-ID der Symbolleiste.
+in Die Ressourcen-ID der Symbolleiste.
 
 *uiColdResID*<br/>
-[in] Die Ressourcen-ID der Bitmap, die auf die inaktiven Symbolleistenbilder verweist.
+in Die Ressourcen-ID der Bitmap, die auf die kalten Symbolleisten Bilder verweist.
 
 *uiMenuResID*<br/>
-[in] Die Ressourcen-ID der Bitmap, die auf die normalen Menübilder verweist.
+in Die Ressourcen-ID der Bitmap, die auf die regulären Menü Bilder verweist.
 
 *bLocked*<br/>
-[in] Ein boolescher Wert, der angibt, ob die Symbolleiste oder nicht gesperrt ist. Wenn dieser Parameter ist *"true"*, die Symbolleiste ist gesperrt. Andernfalls wird die Symbolleiste nicht gesperrt werden.
+in Ein boolescher Wert, der angibt, ob die Symbolleiste gesperrt ist. Wenn dieser Parameter *true*ist, wird die Symbolleiste gesperrt. Andernfalls ist die Symbolleiste nicht gesperrt.
 
 *uiDisabledResID*<br/>
-[in] Die Ressourcen-ID der Bitmap, die auf die deaktivierten Symbolleistenbilder verweist.
+in Die Ressourcen-ID der Bitmap, die auf die deaktivierten Symbolleisten Bilder verweist.
 
 *uiMenuDisabledResID*<br/>
-[in] Die Ressourcen-ID der Bitmap, die auf die deaktivierten Menübilder verweist.
+in Die Ressourcen-ID der Bitmap, die auf die deaktivierten Menü Bilder verweist.
 
 *uiHotResID*<br/>
-[in] Die Ressourcen-ID der Bitmap, die auf die aktiven Symbolleistenbilder verweist.
+in Die Ressourcen-ID der Bitmap, die auf die aktiven Symbolleisten Bilder verweist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2733,18 +2733,18 @@ Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, ander
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode während der Initialisierung Bilder zu laden, die der Symbolleiste zugeordnet sind.
+Das Framework ruft diese Methode während der Initialisierung auf, um die Bilder zu laden, die der Symbolleiste zugeordnet sind.
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `LoadToolBar` -Methode in der die `CMFCToolBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../overview/visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `LoadToolBar` -Methode in `CMFCToolBar` der-Klasse verwendet wird. Dieser Code Ausschnitt ist Teil des IE- [Demo](../../overview/visual-cpp-samples.md)Beispiels.
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
 
-##  <a name="loadtoolbarex"></a>  Cmfctoolbar:: Loadtoolbarex
+##  <a name="loadtoolbarex"></a>Cmfctoolbar:: loadtoolbarex
 
-Lädt die Symbolleiste aus Anwendungsressourcen mithilfe der `CMFCToolBarInfo` Hilfsklasse für die Anwendung große Bilder verwenden kann.
+Lädt die Symbolleiste aus Anwendungs Ressourcen mithilfe der `CMFCToolBarInfo` -Hilfsklasse, damit die Anwendung große Bilder verwenden kann.
 
 ```
 virtual BOOL LoadToolBarEx(
@@ -2756,13 +2756,13 @@ virtual BOOL LoadToolBarEx(
 ### <a name="parameters"></a>Parameter
 
 *uiToolbarResID*<br/>
-[in] Die Ressourcen-ID der Symbolleiste.
+in Die Ressourcen-ID der Symbolleiste.
 
 *params*<br/>
-[in] Ein Verweis auf eine `CMFCToolBarInfo` Objekt, das die Ressourcen-IDs für die Symbolleistenbilder enthält.
+in Ein Verweis auf ein `CMFCToolBarInfo` -Objekt, das die Ressourcen-IDs für die Symbolleisten Bilder enthält.
 
 *bLocked*<br/>
-[in] Ein boolescher Wert, der angibt, ob die Symbolleiste oder nicht gesperrt ist. Wenn dieser Parameter TRUE ist, wird die Symbolleiste gesperrt. Andernfalls wird die Symbolleiste nicht gesperrt werden.
+in Ein boolescher Wert, der angibt, ob die Symbolleiste gesperrt ist. Wenn dieser Parameter true ist, wird die Symbolleiste gesperrt. Andernfalls ist die Symbolleiste nicht gesperrt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2770,11 +2770,11 @@ Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, ander
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode zum Laden von Symbolleistenbilder aus Anwendungsressourcen.
+Mit dieser Methode können Sie Symbolleisten Bilder aus den Anwendungs Ressourcen laden.
 
-##  <a name="m_dbllargeimageratio"></a>  CMFCToolBar::m_dblLargeImageRatio
+##  <a name="m_dbllargeimageratio"></a>Cmfctoolbar:: m_dblLargeImageRatio
 
-Gibt das Verhältnis zwischen der Dimension (Höhe oder Breite) von Bildern und die Dimension von regulären Abbildern.
+Gibt das Verhältnis zwischen der Dimension (Höhe oder Breite) von großen Bildern und der Dimension regulärer Images an.
 
 ```
 AFX_IMPORT_DATA static double m_dblLargeImageRatio;
@@ -2782,11 +2782,11 @@ AFX_IMPORT_DATA static double m_dblLargeImageRatio;
 
 ### <a name="remarks"></a>Hinweise
 
-Das Verhältnis der Standardwert ist 2. Sie können diesen Wert, um große Symbolleistenbilder vergrößert oder verkleinert werden ändern.
+Das Standard Verhältnis ist 2. Sie können diesen Wert ändern, um große Symbolleisten Bilder zu vergrößern oder zu verkleinern.
 
-Das Framework verwendet dieses Datenelement an, wenn Sie einen Satz von großen Bildern nicht angeben. Angenommen, legen Sie Sie stellen nur die kleine Bilder mit einer Größe von 16 x 16- und die große Bilder haben die Größe 24 x 24, dieses Datenelement 1.5.
+Das Framework verwendet dieses Datenmember, wenn Sie keinen Satz großer Images angeben. Wenn Sie z. b. nur den Satz kleiner Bilder mit einer Größe von 16x16 bereitstellen und möchten, dass für die großen Bilder die Größe rund um die Uhr beträgt, legen Sie dieses Datenmember auf 1,5 fest.
 
-##  <a name="nextmenu"></a>  CMFCToolBar::NextMenu
+##  <a name="nextmenu"></a>Cmfctoolbar:: nextmenu
 
 ```
 virtual BOOL NextMenu();
@@ -2796,7 +2796,7 @@ virtual BOOL NextMenu();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="onbeforeremovebutton"></a>  CMFCToolBar::OnBeforeRemoveButton
+##  <a name="onbeforeremovebutton"></a>Cmfctoolbar:: onbeforeremovebutton
 
 ```
 virtual BOOL OnBeforeRemoveButton(
@@ -2807,18 +2807,18 @@ virtual BOOL OnBeforeRemoveButton(
 ### <a name="parameters"></a>Parameter
 
 *pButton*<br/>
-[in] Nicht verwendet.
+in Genutzt.
 
 *dropEffect*<br/>
-[in] Nicht verwendet.
+in Genutzt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="onchangehot"></a>  CMFCToolBar::OnChangeHot
+##  <a name="onchangehot"></a>Cmfctoolbar:: onchangehot
 
-Vom Framework aufgerufen, wenn ein Benutzer auf der Symbolleiste eine Schaltfläche auswählt.
+Wird von Framework aufgerufen, wenn ein Benutzer auf der Symbolleiste eine Schaltfläche auswählt.
 
 ```
 virtual void OnChangeHot(int iHot);
@@ -2827,13 +2827,13 @@ virtual void OnChangeHot(int iHot);
 ### <a name="parameters"></a>Parameter
 
 *iHot*<br/>
-[in] Gibt den Index des der Symbolleisten-Schaltfläche, die ausgewählt ist; oder -1, wenn keine Symbolleisten-Schaltfläche aktiviert ist.
+in Gibt den Index der ausgewählten Symbolleisten Schaltfläche an. oder-1, wenn keine Symbolleisten-Schaltfläche ausgewählt ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Überschreiben Sie diese Methode zum Verarbeiten von Benachrichtigungen, dass der Benutzer eine Schaltfläche auf einer Symbolleiste ausgewählt.
+Überschreiben Sie diese Methode, um Benachrichtigungen zu verarbeiten, die vom Benutzer auf einer Symbolleiste ausgewählt wurden.
 
-##  <a name="onchangevisualmanager"></a>  CMFCToolBar::OnChangeVisualManager
+##  <a name="onchangevisualmanager"></a>Cmfctoolbar:: onchangevisualmanager
 
 ```
 virtual void OnChangeVisualManager();
@@ -2841,9 +2841,9 @@ virtual void OnChangeVisualManager();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="onfillbackground"></a>  CMFCToolBar::OnFillBackground
+##  <a name="onfillbackground"></a>Cmfctoolbar:: onfillbackground
 
-Wird aufgerufen, durch das Framework aus [CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint) den Symbolleistenhintergrund ausgefüllt.
+Wird von Framework aus [cbasepane::D opaint](../../mfc/reference/cbasepane-class.md#dopaint) aufgerufen, um den Symbolleisten Hintergrund zu füllen.
 
 ```
 virtual void OnFillBackground(CDC* pDC);
@@ -2852,15 +2852,15 @@ virtual void OnFillBackground(CDC* pDC);
 ### <a name="parameters"></a>Parameter
 
 *pDC*<br/>
-[in] Ein Zeiger auf einen Gerätekontext.
+in Ein Zeiger auf einen Gerätekontext.
 
 ### <a name="remarks"></a>Hinweise
 
-[CMFCToolBar::DoPaint](#dopaint) ruft diese Methode auf, wenn der Hintergrund einer Symbolleiste gefüllt wurde. Bei der Standardimplementierung wird keine Aktion ausgeführt.
+[Cmfctoolbar::D opaint](#dopaint) ruft diese Methode auf, wenn der Hintergrund einer Symbolleiste aufgefüllt wurde. Bei der Standardimplementierung wird keine Aktion ausgeführt.
 
-Überschreiben Sie diese Methode, um die benutzerdefinierten Hintergrund in abgeleiteten Klassen zu zeichnen.
+Überschreiben diese Methode, um benutzerdefinierten Hintergrund in abgeleiteten Klassen zu zeichnen.
 
-##  <a name="onglobalfontschanged"></a>  CMFCToolBar::OnGlobalFontsChanged
+##  <a name="onglobalfontschanged"></a>Cmfctoolbar:: onglobalfontschge
 
 ```
 virtual void OnGlobalFontsChanged();
@@ -2868,9 +2868,9 @@ virtual void OnGlobalFontsChanged();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="onreset"></a>  CMFCToolBar::OnReset
+##  <a name="onreset"></a>Cmfctoolbar:: onreset
 
-Auf der Symbolleiste wiederhergestellt auf den ursprünglichen Zustand.
+Stellt den ursprünglichen Zustand der Symbolleiste wieder her.
 
 ```
 virtual void OnReset();
@@ -2878,11 +2878,11 @@ virtual void OnReset();
 
 ### <a name="remarks"></a>Hinweise
 
-Überschreiben Sie diese Methode zum Behandeln der Benachrichtigung über eine Symbolleiste zurücksetzen.
+Überschreiben Sie diese Methode, um Benachrichtigungen über eine Symbolleisten Zurücksetzung zu behandeln
 
-Bei der Standardimplementierung wird keine Aktion ausgeführt. Außer Kraft setzen `OnReset` in einer Klasse abgeleitet `CMFCToolBar` bei die Symbolleiste dummy-Schaltflächen, die ersetzt werden müssen, wenn die Symbolleiste auf den ursprünglichen Zustand zurückgegeben hat.
+Bei der Standardimplementierung wird keine Aktion ausgeführt. Über `OnReset` schreiben Sie in einer von `CMFCToolBar` abgeleiteten Klasse, wenn die Symbolleiste dummyschaltflächen enthält, die ersetzt werden müssen, wenn die Symbolleiste in ihren ursprünglichen Zustand
 
-##  <a name="onsetaccdata"></a>  CMFCToolBar::OnSetAccData
+##  <a name="onsetaccdata"></a>Cmfctoolbar:: onsetaccdata
 
 ```
 virtual BOOL OnSetAccData(long lVal);
@@ -2896,9 +2896,9 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="onsetdefaultbuttontext"></a>  CMFCToolBar::OnSetDefaultButtonText
+##  <a name="onsetdefaultbuttontext"></a>Cmfctoolbar:: onsetdefaultbuttontext
 
-Stellt den Text einer Symbolleisten-Schaltfläche auf den Standardzustand.
+Stellt den Text einer Symbolleisten-Schaltfläche im Standardzustand wieder her.
 
 ```
 virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
@@ -2907,21 +2907,21 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ### <a name="parameters"></a>Parameter
 
 *pButton*<br/>
-[in] Verweist auf eine Schaltfläche, deren Text festgelegt wird.
+in Verweist auf eine Schaltfläche, deren Text festgelegt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-"True" Ifthe Text wurde erfolgreich wiederhergestellt werden; andernfalls "false".
+TRUE IfDer Text wurde erfolgreich wieder hergestellt. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Überschreiben Sie diese Methode zum Verarbeiten von Benachrichtigungen, dass der Text, der eine Symbolleisten-Schaltfläche auf den Standardwert geändert wird.
+Überschreiben Sie diese Methode, um Benachrichtigungen zu verarbeiten, dass der Text einer Symbolleisten-Schaltfläche auf den Standardwert geändert wird.
 
-Die Standardimplementierung lädt den Text einer Schaltfläche aus den Anwendungsressourcen.
+Die Standard Implementierung lädt den Text einer Schaltfläche aus den Anwendungs Ressourcen.
 
-##  <a name="onusertooltip"></a>  CMFCToolBar::OnUserToolTip
+##  <a name="onusertooltip"></a>Cmfctoolbar:: onusertooltip
 
-Vom Framework aufgerufen, wenn die QuickInfo für eine Schaltfläche gerade angezeigt werden soll.
+Wird von Framework aufgerufen, wenn die QuickInfo für eine Schaltfläche angezeigt wird.
 
 ```
 virtual BOOL OnUserToolTip(
@@ -2932,22 +2932,22 @@ virtual BOOL OnUserToolTip(
 ### <a name="parameters"></a>Parameter
 
 *pButton*<br/>
-[in] Verweist auf eine Symbolleisten-Schaltfläche, die für die eine QuickInfo angezeigt werden.
+in Verweist auf eine Symbolleisten-Schaltfläche, für die eine QuickInfo angezeigt werden soll.
 
 *strTTText*<br/>
-[out] Ein Verweis auf `CString` Objekt, das den Text der QuickInfo empfängt.
+vorgenommen Ein Verweis auf `CString` das-Objekt, das den Text der QuickInfo empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn *StrTTText* wurde mit dem QuickInfo-Text aufgefüllt; andernfalls "false".
+TRUE, wenn " *stretttext* " mit QuickInfo-Text aufgefüllt wurde. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode auf, wenn die QuickInfo für eine Symbolleisten-Schaltfläche angezeigt wird. Wenn `OnUserToolTip` gibt TRUE zurück, das Framework zeigt eine QuickInfo enthält der zurückgegebene Text `OnUserToolTip` in *StrTTText*. Die QuickInfo enthält, andernfalls den Text der Schaltfläche.
+Das Framework ruft diese Methode auf, wenn die QuickInfo für eine Symbolleisten-Schaltfläche angezeigt wird. Wenn `OnUserToolTip` true zurückgibt, zeigt das Framework eine QuickInfo an, die den `OnUserToolTip` Text enthält, der von in *erstrantttext*zurückgegeben wird Andernfalls enthält die QuickInfo den Schaltflächen Text.
 
-Außer Kraft setzen `OnUserToolTip` zum Anpassen von QuickInfos von Symbolleisten-Schaltflächen. Die Standardimplementierung ruft [CMFCToolBar::OnUserToolTip](#onusertooltip) zum Abrufen des QuickInfo-Texts.
+Über `OnUserToolTip` schreiben, um Quick Infos von Symbolleisten-Schaltflächen anzupassen. Die Standard Implementierung ruft [cmfctoolbar:: onusertooltip](#onusertooltip) auf, um den QuickInfo-Text abzurufen.
 
-##  <a name="prevmenu"></a>  CMFCToolBar::PrevMenu
+##  <a name="prevmenu"></a>Cmfctoolbar::P revmenu
 
 ```
 virtual BOOL PrevMenu();
@@ -2957,9 +2957,9 @@ virtual BOOL PrevMenu();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="processcommand"></a>  CMFCToolBar::ProcessCommand
+##  <a name="processcommand"></a>Cmfctoolbar::P rocess Command
 
-Stellt eine WM_COMMAND-Meldung an das Fenster, das die Symbolleiste besitzt.
+Sendet eine WM_COMMAND-Meldung an das Fenster, das die Symbolleiste besitzt.
 
 ```
 BOOL ProcessCommand(CMFCToolBarButton* pButton);
@@ -2968,21 +2968,21 @@ BOOL ProcessCommand(CMFCToolBarButton* pButton);
 ### <a name="parameters"></a>Parameter
 
 *pButton*<br/>
-[in] Zeiger auf eine Schaltfläche auf der Symbolleiste.
+in Zeiger auf eine Schaltfläche auf der Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Methode sollte immer "true" zurückgeben. FALSE-Werte wird von MFC intern verwendet.
+Diese Methode sollte immer "true" zurückgeben. MFC verwendet intern false-Werte.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet eine WM_COMMAND-Meldung an das Fenster, das durch Aufrufen der Besitzer die Symbolleiste ist [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) und übergeben die Befehls-ID der angegebenen Schaltfläche als die *wParam* Parameter.
+Diese Methode sendet eine WM_COMMAND-Nachricht an das Fenster, das die Symbolleiste besitzt, indem Sie [CWnd::P ostmessage](../../mfc/reference/cwnd-class.md#postmessage) aufrufen und die Befehls-ID der angegebenen Schaltfläche als *wParam* -Parameter übergibt.
 
-Verwenden der [ON_COMMAND](message-map-macros-mfc.md#on_command) Makro, um die WM_COMMAND-Meldung an eine Memberfunktion zuzuordnen.
+Verwenden Sie das [ON_COMMAND](message-map-macros-mfc.md#on_command) -Makro, um die WM_COMMAND-Nachricht einer Member-Funktion zuzuordnen.
 
-##  <a name="removeallbuttons"></a>  CMFCToolBar::RemoveAllButtons
+##  <a name="removeallbuttons"></a>Cmfctoolbar:: removeallbuttons
 
-Entfernt alle Schaltflächen und Trennzeichen auf der Symbolleiste an.
+Entfernt alle Schaltflächen und Trennzeichen auf der Symbolleiste.
 
 ```
 virtual void RemoveAllButtons();
@@ -2990,11 +2990,11 @@ virtual void RemoveAllButtons();
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode auf, wenn er neu erstellt oder eine Symbolleiste zerstört.
+Das Framework ruft diese Methode auf, wenn eine Symbolleiste neu erstellt oder zerstört wird.
 
-##  <a name="removebutton"></a>  CMFCToolBar::RemoveButton
+##  <a name="removebutton"></a>Cmfctoolbar:: RemoveButton
 
-Entfernt aus der Symbolleiste die Schaltfläche, die dem angegebenen Index ab.
+Entfernt aus der Symbolleiste die Schaltfläche mit dem angegebenen Index.
 
 ```
 virtual BOOL RemoveButton(int iIndex);
@@ -3003,19 +3003,19 @@ virtual BOOL RemoveButton(int iIndex);
 ### <a name="parameters"></a>Parameter
 
 *iIndex*<br/>
-[in] Gibt an, der nullbasierte Index der Schaltfläche zu entfernen.
+in Gibt den NULL basierten Index der zu entfernenden Schaltfläche an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn die Methode erfolgreich ist, oder FALSE, wenn der angegebene Indexwert ungültig ist oder der Index bezieht sich auf die **anpassen** Schaltfläche.
+TRUE, wenn die Methode erfolgreich ist, oder false, wenn der angegebene Index ungültig ist oder der Index auf die Schaltfläche " **Anpassen** " verweist.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode aktualisiert die zusätzliche Toolbar-Attribute, die durch das Entfernen der Schaltfläche betroffen sind. Beispielsweise wird diese Methode entfernt alle unwesentlichen Trennzeichen auf der Symbolleiste, und erstellt die Tabelle mit Tastenkombinationen neu.
+Diese Methode aktualisiert zusätzliche Symbolleisten Attribute, die durch das Entfernen der Schaltfläche beeinträchtigt werden. Diese Methode entfernt beispielsweise nicht erforderliche Trennzeichen aus der Symbolleiste und erstellt die Tabelle mit den Tastenkombinationen neu.
 
-Weitere Informationen zu den **anpassen** Schaltfläche, finden Sie unter [cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton).
+Weitere Informationen zur Schaltfläche **Anpassen** finden Sie unter [cmfctoolbar:: enablecustomizebutton](#enablecustomizebutton).
 
-##  <a name="removestatefromregistry"></a>  CMFCToolBar::RemoveStateFromRegistry
+##  <a name="removestatefromregistry"></a>Cmfctoolbar:: removestatus-romregistry
 
 Löscht die Zustandsinformationen für die Symbolleiste aus der Windows-Registrierung.
 
@@ -3029,13 +3029,13 @@ virtual BOOL RemoveStateFromRegistry(
 ### <a name="parameters"></a>Parameter
 
 *lpszProfileName*<br/>
-[in] Gibt den Registrierungsschlüssel auf dem sich die Informationen über den Zustand befindet.
+in Gibt den Registrierungsschlüssel an, in dem sich die Zustandsinformationen befinden.
 
 *nIndex*<br/>
-[in] Die Steuerelement-ID der Symbolleiste.
+in Die Steuerelement-ID der Symbolleiste.
 
 *uiID*<br/>
-[in] Die Ressourcen-ID der Symbolleiste. Wenn dieser Parameter-1 ist, wird diese Methode verwendet die [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) Methode, um die Ressourcen-ID abrufen
+in Die Ressourcen-ID der Symbolleiste. Wenn dieser Parameter-1 ist, verwendet diese Methode die [CWnd:: getdlgctrlid](../../mfc/reference/cwnd-class.md#getdlgctrlid) -Methode, um die Ressourcen-ID abzurufen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -3043,13 +3043,13 @@ Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, ander
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode auf, wenn sie eine benutzerdefinierte Symbolleiste gelöscht wird.
+Das Framework ruft diese Methode auf, wenn eine benutzerdefinierte Symbolleiste gelöscht wird.
 
 Überschreiben Sie diese Methode, wenn Sie zusätzliche Zustandsinformationen in der Windows-Registrierung speichern.
 
-##  <a name="replacebutton"></a>  CMFCToolBar::ReplaceButton
+##  <a name="replacebutton"></a>Cmfctoolbar:: replacebutton
 
-Ersetzt eine Symbolleisten-Schaltfläche mit einer anderen Symbolleistenschaltfläche an.
+Ersetzt eine Symbolleisten-Schaltfläche durch eine andere Symbolleisten-Schalt
 
 ```
 int ReplaceButton(
@@ -3061,32 +3061,32 @@ int ReplaceButton(
 ### <a name="parameters"></a>Parameter
 
 *uiCmd*<br/>
-[in] Die Befehls-ID der Schaltfläche zu ersetzen.
+in Die Befehls-ID der zu ersetzenden Schaltfläche.
 
 *button*<br/>
-[in] Ein Verweis auf die `CMFCToolBarButton` eingefügt.
+in Ein Verweis auf den `CMFCToolBarButton` , der eingefügt werden soll.
 
-*bAll*<br/>
-[in] Ein boolescher Wert, der angibt, ob alle Schaltflächen ersetzt, die die Befehls-ID gemäß *UiCmd*. Wenn dieser Parameter TRUE ist, werden alle Schaltflächen mit der angegebenen Befehls-ID ersetzt. Andernfalls wird die erste Schaltfläche ersetzt.
+*Kopf*<br/>
+in Ein boolescher Wert, der angibt, ob alle Schaltflächen ersetzt werden sollen, die über die von *uicmd*angegebene Befehls-ID verfügen. Wenn dieser Parameter true ist, werden alle Schaltflächen mit der angegebenen Befehls-ID ersetzt. Andernfalls wird die erste Schaltfläche ersetzt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der Schaltflächen, die ersetzt werden. Diese Methode gibt 0 zurück, wenn eine Schaltfläche mit der angegebenen Befehls-ID auf der Symbolleiste nicht vorhanden ist.
+Die Anzahl der Schaltflächen, die ersetzt werden. Diese Methode gibt 0 zurück, wenn auf der Symbolleiste keine Schaltfläche mit der angegebenen Befehls-ID vorhanden ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode auf, wenn Sie möchten, auf die Symbolleisten-Schaltflächen hinzufügen, die aus Ressourcen geladen werden kann. Sie können eine Platzhalter-Schaltfläche "erstellen" bei der Entwicklung und beim Initialisieren der Symbolleiste die Schaltfläche mit einer benutzerdefinierten Schaltfläche zu ersetzen. Siehe Beispiel VisualStudioDemo ein Beispiel für die diese Methode verwendet.
+Ruft diese Methode auf, wenn Sie Symbolleisten Schaltflächen hinzufügen möchten, die nicht aus Ressourcen geladen werden können. Sie können zur Entwurfszeit eine Platzhalter Schaltfläche erstellen und diese Schaltfläche durch eine benutzerdefinierte Schaltfläche ersetzen, wenn Sie die Symbolleiste initialisieren. Ein Beispiel für die Verwendung dieser Methode finden Sie im visualstudiodemo-Beispiel.
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `ReplaceButton` -Methode in der die `CMFCToolBar` Klasse. Dieser Codeausschnitt ist Teil der [IE Demobeispiel](../../overview/visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie die `ReplaceButton` -Methode in `CMFCToolBar` der-Klasse verwendet wird. Dieser Code Ausschnitt ist Teil des IE- [Demo](../../overview/visual-cpp-samples.md)Beispiels.
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]
 
-##  <a name="resetall"></a>  CMFCToolBar::ResetAll
+##  <a name="resetall"></a>Cmfctoolbar:: ResetAll
 
-Alle Symbolleisten wiederhergestellt in den ursprünglichen Zustand.
+Stellt alle Symbolleisten in den ursprünglichen Zustand wieder her.
 
 ```
 static void __stdcall ResetAll();
@@ -3094,11 +3094,11 @@ static void __stdcall ResetAll();
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate) Methode für jede Symbolleiste in der Anwendung, die wiederhergestellt werden kann. Er verwendet den [CMFCToolBar::CanBeRestored](#canberestored) Methode, um zu bestimmen, ob eine Symbolleiste, die wiederhergestellt werden kann.
+Diese Methode ruft die [cmfctoolbar:: restoreoriginalstate](#restoreoriginalstate) -Methode auf jeder Symbolleiste in der Anwendung auf, die wieder hergestellt werden kann. Er verwendet die [cmfctoolbar:: canberestored](#canberestored) -Methode, um zu bestimmen, ob eine Symbolleiste wieder hergestellt werden kann.
 
-##  <a name="resetallimages"></a>  CMFCToolBar::ResetAllImages
+##  <a name="resetallimages"></a>Cmfctoolbar:: Reort
 
-Löscht alle Bildersammlungen der Symbolleiste in der Anwendung an.
+Löscht alle Symbolleisten-Bild Auflistungen in der Anwendung.
 
 ```
 static void __stdcall ResetAllImages();
@@ -3106,9 +3106,9 @@ static void __stdcall ResetAllImages();
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode löscht die Image-Sammlungen, die vom initialisiert sind die [CMFCToolBar::LoadToolBar](#loadtoolbar) und [CMFCToolBar::LoadBitmap](#loadbitmap) Methoden.
+Diese Methode löscht die Bild Auflistungen, die von den Methoden [cmfctoolbar:: LoadToolBar](#loadtoolbar) und [cmfctoolbar:: LoadBitmap](#loadbitmap) initialisiert werden.
 
-##  <a name="resetimages"></a>  CMFCToolBar::ResetImages
+##  <a name="resetimages"></a>Cmfctoolbar:: Re-timages
 
 ```
 virtual void ResetImages();
@@ -3116,7 +3116,7 @@ virtual void ResetImages();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="restorefocus"></a>  CMFCToolBar::RestoreFocus
+##  <a name="restorefocus"></a>Cmfctoolbar:: RestoreFocus
 
 ```
 virtual void RestoreFocus();
@@ -3124,7 +3124,7 @@ virtual void RestoreFocus();
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="restoreoriginalstate"></a>  CMFCToolBar::RestoreOriginalState
+##  <a name="restoreoriginalstate"></a>Cmfctoolbar:: restoreoriginalstate
 
 Stellt den originalen Zustand einer Symbolleiste wieder her.
 
@@ -3134,15 +3134,15 @@ virtual BOOL RestoreOriginalState();
 
 ### <a name="return-value"></a>Rückgabewert
 
-TRUE, wenn die Methode erfolgreich ist, oder "false", wenn die Methode fehlschlägt oder die Symbolleiste benutzerdefiniert ist.
+TRUE, wenn die Methode erfolgreich ist, oder false, wenn die Methode fehlschlägt oder die Symbolleiste Benutzer definiert ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode lädt die Symbolleiste aus der Ressourcendatei mit dem [CMFCToolBar::LoadToolBar](#loadtoolbar) Methode.
+Diese Methode lädt die Symbolleiste mithilfe der [cmfctoolbar:: LoadToolBar](#loadtoolbar) -Methode aus der Ressourcen Datei.
 
-Das Framework ruft diese Methode aus, wenn der Benutzer wählt die **alle zurücksetzen** Schaltfläche der **Symbolleisten** eines Anpassungsdialogfelds auf der Seite.
+Das Framework ruft diese Methode auf, wenn der Benutzer auf der Seite **Symbolleisten** eines Anpassungs Dialogfelds die Schaltfläche **Alle zurücksetzen** auswählt.
 
-##  <a name="saveparameters"></a>  CMFCToolBar::SaveParameters
+##  <a name="saveparameters"></a>Cmfctoolbar:: saveparameters
 
 ```
 static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
@@ -3150,15 +3150,15 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *lpszProfileName*<br/>
+in *lpszprofilename*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="savestate"></a>  CMFCToolBar::SaveState
+##  <a name="savestate"></a>Cmfctoolbar:: SaveState
 
-Speichert die Statusinformationen für die Symbolleiste in der Windows-Registrierung.
+Speichert die Zustandsinformationen für die Symbolleiste in der Windows-Registrierung.
 
 ```
 virtual BOOL SaveState(
@@ -3170,13 +3170,13 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parameter
 
 *lpszProfileName*<br/>
-[in] Gibt den relativen Pfad des Windows-Registrierungsschlüssels.
+in Gibt den relativen Pfad des Windows-Registrierungsschlüssels an.
 
 *nIndex*<br/>
-[in] Die Steuerelement-ID der Symbolleiste.
+in Die Steuerelement-ID der Symbolleiste.
 
 *uiID*<br/>
-[in] Die Ressourcen-ID der Symbolleiste.
+in Die Ressourcen-ID der Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -3184,11 +3184,11 @@ Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, ander
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode beim Speichern des Anwendungsstatus in der Registrierung. Weitere Informationen finden Sie unter [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).
+Das Framework ruft diese Methode auf, wenn der Anwendungs Zustand in der Registrierung gespeichert wird. Weitere Informationen finden Sie unter [CWinAppEx:: SaveState](../../mfc/reference/cwinappex-class.md#savestate).
 
-##  <a name="setbasiccommands"></a>  CMFCToolBar::SetBasicCommands
+##  <a name="setbasiccommands"></a>Cmfctoolbar:: setbasiccommands
 
-Legt die Liste der Befehle, die immer angezeigt werden, wenn ein Benutzer ein Menü geöffnet wird.
+Legt die Liste der Befehle fest, die immer angezeigt werden, wenn ein Benutzer ein Menü öffnet.
 
 ```
 static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
@@ -3197,19 +3197,19 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 ### <a name="parameters"></a>Parameter
 
 *lstCommands*<br/>
-[in] Ein Verweis auf eine `CList` Objekt, das eine Auflistung von Befehlen enthält.
+in Ein Verweis auf ein `CList` -Objekt, das eine Auflistung von Befehlen enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein einfachen Befehl wird immer angezeigt, wenn das Menü geöffnet wird. Diese Methode ist sinnvoll, wenn der Benutzer auswählt, zuletzt verwendeten Befehle anzuzeigen.
+Ein grundlegender Befehl wird immer angezeigt, wenn das Menü geöffnet wird. Diese Methode ist sinnvoll, wenn sich der Benutzer entscheidet, zuletzt verwendete Befehle anzuzeigen.
 
-Verwenden der [CMFCToolBar::AddBasicCommand](#addbasiccommand) Methode, um einen Befehl zur Liste der grundlegenden Befehle hinzuzufügen. Verwenden der [CMFCToolBar::GetBasicCommands](#getbasiccommands) Methode, um die Liste der grundlegenden Befehlen abzurufen, die von Ihrer Anwendung verwendet wird.
+Verwenden Sie die [cmfctoolbar:: addbasiccommand](#addbasiccommand) -Methode, um der Liste der grundlegenden Befehle einen Befehl hinzuzufügen. Verwenden Sie die [cmfctoolbar:: getbasiccommands](#getbasiccommands) -Methode, um die Liste der grundlegenden Befehle abzurufen, die von der Anwendung verwendet werden.
 
-Finden Sie im Explorer-Beispiel für ein Beispiel, das diese Methode verwendet ein.
+Ein Beispiel für die Verwendung dieser Methode finden Sie im Explorer-Beispiel.
 
-##  <a name="setbuttoninfo"></a>  CMFCToolBar::SetButtonInfo
+##  <a name="setbuttoninfo"></a>Cmfctoolbar:: SetButtonInfo
 
-Legt fest, die die Befehls-ID, Stil und Image-ID des eine Symbolleisten-Schaltfläche.
+Legt die Befehls-ID, den Stil und die Bild-ID einer Symbolleisten Schaltfläche fest.
 
 ```
 void SetButtonInfo(
@@ -3222,28 +3222,28 @@ void SetButtonInfo(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Der nullbasierte Index der Schaltfläche, dessen Eigenschaften festgelegt werden.
+in Der null basierte Index der Schaltfläche, deren Eigenschaften festgelegt werden.
 
 *nID*<br/>
-[in] Die Befehls-ID der Schaltfläche.
+in Die Befehls-ID der Schaltfläche.
 
 *nStyle*<br/>
-[in] Der Stil der Schaltfläche. Finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md) für die Liste der Formatvorlagen für Symbolleistenschaltflächen von verfügbar.
+in Der Stil der Schaltfläche. Die Liste der verfügbaren Symbolleisten-Schaltflächen Stile finden Sie unter [ToolBar-Steuerelement Stile](../../mfc/reference/toolbar-control-styles.md)
 
 *iImage*<br/>
-[in] Der nullbasierte Bildindex der Schaltfläche (d. h. der Index in der Auflistung von symbolleistenbildern).
+in Der null basierte Bild Index der Schaltfläche (d. h. der Index in der Auflistung der Symbolleisten Bilder).
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode zum Festlegen der Eigenschaften einer Symbolleisten-Schaltfläche auf.
+Ruft diese Methode auf, um die Eigenschaften einer Symbolleisten-Schaltfläche festzulegen.
 
-In der Debug-Builds: Diese Methode generiert ein Assertionsfehler ausgelöst, wenn der Index, der angegebenen *nIndex* ist ungültig.
+In Debugbuilds generiert diese Methode einen Assertionsfehler, wenn der durch *nIndex* angegebene Index ungültig ist.
 
-Rufen Sie die [CMFCToolBar::SetButtonStyle](#setbuttonstyle) Methode, um nur den Stil der Schaltfläche festzulegen.
+Aufrufen der [cmfctoolbar:: setbuttonstyle](#setbuttonstyle) -Methode, um nur den Stil der Schaltfläche festzulegen.
 
-##  <a name="setbuttons"></a>  CMFCToolBar::SetButtons
+##  <a name="setbuttons"></a>Cmfctoolbar:: SetButtons
 
-Legt fest, die Schaltflächen für die Symbolleiste.
+Legt die Schaltflächen für die Symbolleiste fest.
 
 ```
 virtual BOOL SetButtons(
@@ -3255,13 +3255,13 @@ virtual BOOL SetButtons(
 ### <a name="parameters"></a>Parameter
 
 *lpIDArray*<br/>
-[in] Ein Zeiger auf das Array der Befehls-IDs der Schaltflächen zum Einfügen.
+in Ein Zeiger auf das Array von Befehls-IDs der einzufügenden Schaltflächen.
 
 *nIDCount*<br/>
-[in] Die Anzahl der Elemente in *LpIDArray*.
+in Die Anzahl der Elemente in *lpidarray*.
 
 *bRemapImages*<br/>
-[in] Ein boolescher Wert, der angibt, ob die eingefügten Schaltflächen der vorhandenen Schaltflächenbilder zugeordnet. Wenn dieser Parameter TRUE ist, werden die Images neu zugeordnet werden.
+in Ein boolescher Wert, der angibt, ob die vorhandenen Schaltflächen Bilder mit den eingefügten Schaltflächen verknüpft werden sollen. Wenn dieser Parameter true ist, werden die Bilder neu zugeordnet.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -3269,13 +3269,13 @@ Ein Wert ungleich 0 (null), wenn die Methode erfolgreich ausgeführt wird, ander
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode zum Entfernen von vorhandener Schaltflächen von einer Symbolleiste, und legen eine Auflistung von neuen Schaltflächen an.
+Mit dieser Methode können Sie vorhandene Schaltflächen aus einer Symbolleiste entfernen und eine Auflistung von neuen Schaltflächen einfügen.
 
-Diese Methode fügt die **anpassen** Schaltfläche der Symbolleiste, und sendet die AFX_WM_RESETTOOLBAR Nachricht für das übergeordnete Fenster der Symbolleiste. Weitere Informationen zu den **anpassen** Schaltfläche, finden Sie unter [cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton).
+Diese Methode fügt der Symbolleiste die Schaltfläche **Anpassen** hinzu und sendet die AFX_WM_RESETTOOLBAR-Nachricht an das übergeordnete Fenster der Symbolleiste. Weitere Informationen zur Schaltfläche **Anpassen** finden Sie unter [cmfctoolbar:: enablecustomizebutton](#enablecustomizebutton).
 
-##  <a name="setbuttonstyle"></a>  CMFCToolBar::SetButtonStyle
+##  <a name="setbuttonstyle"></a>Cmfctoolbar:: setbuttonstyle
 
-Legt das Format der Symbolleisten-Schaltfläche am angegebenen Index fest.
+Legt den Stil der Symbolleisten-Schaltfläche am angegebenen Index fest.
 
 ```
 virtual void SetButtonStyle(
@@ -3286,18 +3286,18 @@ virtual void SetButtonStyle(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Der nullbasierte Index der Symbolleisten-Schaltfläche, dessen Stil ist, festgelegt werden.
+in Der null basierte Index der Symbolleisten Schaltfläche, deren Stil festgelegt werden soll.
 
 *nStyle*<br/>
-[in] Der Stil der Schaltfläche. Finden Sie unter [ToolBar-Steuerelement-Stile](../../mfc/reference/toolbar-control-styles.md) für die Liste der Formatvorlagen für Symbolleistenschaltflächen von verfügbar.
+in Der Stil der Schaltfläche. Die Liste der verfügbaren Symbolleisten-Schaltflächen Stile finden Sie unter [ToolBar-Steuerelement Stile](../../mfc/reference/toolbar-control-styles.md)
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode entfernt den TBBS_PRESSED-Stil aus, wenn *nStyle* TBBS_DISABLED ist, da der Benutzer nicht auf eine nicht aktive Schaltfläche klicken kann.
+Diese Methode entfernt den TBBS_PRESSED-Stil, wenn *nstyle* TBBS_DISABLED ist, da der Benutzer nicht auf eine deaktivierte Schaltfläche klicken kann.
 
-##  <a name="setbuttontext"></a>  CMFCToolBar::SetButtonText
+##  <a name="setbuttontext"></a>Cmfctoolbar:: SetButtonText
 
-Legt die Beschriftung für eine Symbolleisten-Schaltfläche fest.
+Legt die Text Bezeichnung einer Symbolleisten Schaltfläche fest.
 
 ```
 BOOL SetButtonText(
@@ -3308,22 +3308,22 @@ BOOL SetButtonText(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Der Index des der Symbolleisten-Schaltfläche.
+in Der Index der Symbolleisten Schaltfläche.
 
 *lpszText*<br/>
-[in] Die textbezeichnung des der Symbolleisten-Schaltfläche. Darf nicht NULL sein.
+in Die Text Bezeichnung der Symbolleisten Schaltfläche. Darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn die Methode erfolgreich ist. andernfalls "false".
+TRUE, wenn die Methode erfolgreich ist. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode gibt FALSE zurück, wenn der angegebene Index nicht auf eine gültige Symbolleisten-Schaltfläche verwiesen wird.
+Diese Methode gibt false zurück, wenn der angegebene Index nicht auf eine gültige Symbolleisten Schaltfläche verweist.
 
-##  <a name="setcommandusageoptions"></a>  CMFCToolBar::SetCommandUsageOptions
+##  <a name="setcommandusageoptions"></a>Cmfctoolbar:: setcommandusageoptions
 
-Gibt an, wenn nur selten verwendeten Befehle im Menü der Anwendung nicht angezeigt werden.
+Gibt an, dass selten verwendete Befehle nicht im Menü der Anwendung angezeigt werden.
 
 ```
 static BOOL SetCommandUsageOptions(
@@ -3334,24 +3334,24 @@ static BOOL SetCommandUsageOptions(
 ### <a name="parameters"></a>Parameter
 
 *nStartCount*<br/>
-[in] Gibt an, dass die Anzahl der Male, die Befehle ausgeführt werden muss, bevor das Framework nur die grundlegenden und kürzlich verwendete Befehle angezeigt.
+in Gibt an, wie oft Befehle ausgeführt werden müssen, bevor das Framework nur die grundlegenden und zuletzt verwendeten Befehle anzeigt.
 
 *nMinUsagePercentage*<br/>
-[in] Der Prozentsatz der Fälle, in denen ein Befehl ausgeführt werden muss, um einen kürzlich verwendete Befehl berücksichtigt zu werden.
+in Der Prozentsatz der Zeiten, für die ein Befehl ausgeführt werden muss, um als zuletzt verwendeter Befehl angesehen zu werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-FALSE, wenn *nMinUsagePercentage* gleich oder größer als 100 ist; andernfalls "true".
+FALSE, wenn *nminusageprozent* gleich oder größer als 100 ist. andernfalls true.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode, um den Algorithmus anpassen, die das Framework verwendet, um zu bestimmen, wie grundlegende und zuletzt verwendeten Elemente angezeigt werden. Weitere Informationen zu den grundlegenden Befehlen, finden Sie unter [CMFCToolBar::AddBasicCommand](#addbasiccommand).
+Mit dieser Methode können Sie den Algorithmus anpassen, den das Framework verwendet, um zu bestimmen, wie die Menü Elemente Basic und zuletzt verwendet angezeigt werden. Weitere Informationen zu grundlegenden Befehlen finden Sie unter [cmfctoolbar:: addbasiccommand](#addbasiccommand).
 
-Diese Klasse verwendet die `CMFCCmdUsageCount` Klasse die Anzahl der Befehle für die Nutzung verfolgen. Weitere Informationen zu dieser Klasse finden Sie unter [CMFCCmdUsageCount-Klasse](../../mfc/reference/cmfccmdusagecount-class.md).
+Diese Klasse verwendet die `CMFCCmdUsageCount` -Klasse, um die Verwendungs Anzahl von Befehlen zu verfolgen. Weitere Informationen zu dieser Klasse finden Sie unter [CMF ccmdusagecount Class](../../mfc/reference/cmfccmdusagecount-class.md).
 
-##  <a name="setcustomizemode"></a>  CMFCToolBar::SetCustomizeMode
+##  <a name="setcustomizemode"></a>Cmfctoolbar:: setcustomizemode
 
-Aktiviert oder deaktiviert die Anpassungsmodus für alle Symbolleisten in der Anwendung.
+Aktiviert oder deaktiviert den Anpassungsmodus für alle Symbolleisten in der Anwendung.
 
 ```
 static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
@@ -3359,20 +3359,20 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Parameter
 
-*bSet*<br/>
-[in] Ein boolescher Wert, der angibt, ob zum Aktivieren oder Deaktivieren der Anpassungsmodus aktiviert. Legen Sie diesen Parameter auf "true" Anpassungsmodus aktivieren oder "false", um ihn zu deaktivieren.
+*BSET*<br/>
+in Ein boolescher Wert, der angibt, ob der Anpassungsmodus aktiviert oder deaktiviert werden soll. Legen Sie diesen Parameter auf "true" fest, um den Anpassungsmodus zu aktivieren.
 
 ### <a name="return-value"></a>Rückgabewert
 
-"True" ändert, wenn diese Methode aufrufen, den Anpassungsmodus; andernfalls "false".
+TRUE, wenn beim Aufrufen dieser Methode der Anpassungsmodus geändert wird. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode passt das Layout und zeichnet jeden Symbolleiste in der Anwendung neu. Rufen Sie die [CMFCToolBar::IsCustomizeMode](#iscustomizemode) Methode, um zu bestimmen, ob die Anwendung im Modus "Anpassung"
+Diese Methode passt das Layout von an und zeichnet jede Symbolleiste in der Anwendung neu. Aufrufen der [cmfctoolbar:: iscustomizemode](#iscustomizemode) -Methode, um zu bestimmen, ob sich die Anwendung im Anpassungsmodus befindet
 
-##  <a name="setgraydisabledbuttons"></a>  CMFCToolBar::SetGrayDisabledButtons
+##  <a name="setgraydisabledbuttons"></a>Cmfctoolbar:: setgraydisabledbuttons
 
-Gibt an, ob nicht verfügbare in der Symbolleiste die Schaltflächen abgeblendet sind, oder gibt an, ob die Schaltfläche nicht verfügbar ist Images verwendet werden.
+Gibt an, ob nicht verfügbare Schaltflächen auf der Symbolleiste abdimmt sind oder ob nicht verfügbare Bilder verwendet werden.
 
 ```
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
@@ -3381,15 +3381,15 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ### <a name="parameters"></a>Parameter
 
 *bGrayDisabledButtons*<br/>
-[in] Ein boolescher Wert, der angibt, wie nicht verfügbar angezeigt werden sollen. Wenn dieser Parameter TRUE ist, wird das Framework die Schaltflächen abgeblendet. Andernfalls verwendet das Framework die Auflistung der Bilder der Schaltfläche nicht verfügbar ist.
+in Ein boolescher Wert, der angibt, wie nicht verfügbare Schaltflächen angezeigt werden. Wenn dieser Parameter true ist, werden die Schaltflächen vom Framework ausgeblendet. Andernfalls verwendet das Framework die Auflistung von Bildern, die für die Schaltfläche nicht verfügbar sind.
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig sind nicht verfügbare-Schaltflächen abgeblendet.
+Standardmäßig sind die Schaltflächen nicht verfügbar.
 
-##  <a name="setheight"></a>  CMFCToolBar::SetHeight
+##  <a name="setheight"></a>Cmfctoolbar:: Ort
 
-Legt die Höhe der Symbolleiste.
+Legt die Höhe der Symbolleiste fest.
 
 ```
 void SetHeight(int cyHeight);
@@ -3397,14 +3397,14 @@ void SetHeight(int cyHeight);
 
 ### <a name="parameters"></a>Parameter
 
-*cyHeight*<br/>
-[in] Die Höhe der Symbolleiste, in Pixel.
+*cyheight*<br/>
+in Die Höhe der Symbolleiste in Pixel.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode zeichnet die Symbolleiste neu, nachdem er legt die Höhe fest.
+Diese Methode zeichnet die Symbolleiste neu, nachdem Sie die Höhe festgelegt hat.
 
-##  <a name="sethelpmode"></a>  CMFCToolBar::SetHelpMode
+##  <a name="sethelpmode"></a>Cmfctoolbar:: Setup Mode
 
 ```
 static void __stdcall SetHelpMode(BOOL bOn = TRUE);
@@ -3416,7 +3416,7 @@ static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="sethot"></a>  CMFCToolBar::SetHot
+##  <a name="sethot"></a>Cmfctoolbar::.
 
 ```
 BOOL SetHot(CMFCToolBarButton* pMenuButton);
@@ -3424,15 +3424,15 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *pMenuButton*<br/>
+in *pmenubutton*<br/>
 
 ### <a name="return-value"></a>Rückgabewert
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="sethotborder"></a>  CMFCToolBar::SetHotBorder
+##  <a name="sethotborder"></a>Cmfctoolbar:: sethotborder
 
-Gibt an, ob Symbolleisten-Schaltflächen vorselektierten sind.
+Gibt an, ob die Symbolleisten Schaltflächen nachverfolgt werden.
 
 ```
 void SetHotBorder(BOOL bShowHotBorder);
@@ -3441,17 +3441,17 @@ void SetHotBorder(BOOL bShowHotBorder);
 ### <a name="parameters"></a>Parameter
 
 *bShowHotBorder*<br/>
-[in] Ein boolescher Wert, der angibt, ob Symbolleisten-Schaltflächen HotTracking angibt. Wenn dieser Parameter "true", "Hot": verfolgt die Symbolleiste die Schaltflächen. Andernfalls der Symbolleiste ist nicht "Hot" – die Schaltflächen nachverfolgen.
+in Ein boolescher Wert, der angibt, ob Symbolleisten Schaltflächen Hot-Track sind. Wenn dieser Parameter true ist, werden die Schaltflächen auf der Symbolleiste heiß nachverfolgt. Andernfalls werden die Schaltflächen auf der Symbolleiste nicht in der richtigen Weise nachverfolgt.
 
 ### <a name="remarks"></a>Hinweise
 
-Ist eine Schaltfläche vorselektierten, werden das Framework die Schaltfläche mit den hervorgehoben, wenn der Mauszeiger darüber bewegt wird. Standardmäßig ist jeder Symbolleiste "Hot": verfolgt die Schaltflächen.
+Wenn eine Schaltfläche nachverfolgt wird, hebt das Framework die Schaltfläche hervor, wenn der Mauszeiger über die Schaltfläche bewegt wird. Standardmäßig verfolgt jede Symbolleiste ihre Schaltflächen in der Standardeinstellung.
 
-Rufen Sie die [CMFCToolBar::GetHotBorder](#gethotborder) Methode, um zu bestimmen, ob die Symbolleiste "Hot": verfolgt die Schaltflächen.
+Aufrufen der [cmfctoolbar:: gethotborder](#gethotborder) -Methode, um zu bestimmen, ob die Symbolleiste ihre Schaltflächen Hot-nachverfolgt.
 
-##  <a name="sethottextcolor"></a>  CMFCToolBar::SetHotTextColor
+##  <a name="sethottextcolor"></a>Cmfctoolbar:: Abort TextColor
 
-Legt die Textfarbe für "Hot" Symbolleisten-Schaltflächen an.
+Legt die Textfarbe für heiße Symbolleisten Schaltflächen fest.
 
 ```
 static void SetHotTextColor(COLORREF clrText);
@@ -3460,13 +3460,13 @@ static void SetHotTextColor(COLORREF clrText);
 ### <a name="parameters"></a>Parameter
 
 *clrText*<br/>
-[in] Gibt die Textfarbe für Schaltflächen der Symbolleiste, die "Hot" nachverfolgt werden.
+in Gibt die Textfarbe für Symbolleisten Schaltflächen an, die Hot-nachverfolgt werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu hot Track-Symbolleisten-Schaltflächen, finden Sie unter [CMFCToolBar::GetHotBorder](#gethotborder) und [CMFCToolBar::SetHotBorder](#sethotborder).
+Weitere Informationen zu Symbolleisten Schaltflächen mit Hot-Tracking finden Sie unter [cmfctoolbar:: gethotborder](#gethotborder) und [cmfctoolbar:: sethotborder](#sethotborder).
 
-##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText
+##  <a name="setignoresettext"></a>Cmfctoolbar:: Abort-noresettext
 
 ```
 void SetIgnoreSetText(BOOL bValue);
@@ -3474,13 +3474,13 @@ void SetIgnoreSetText(BOOL bValue);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bValue*<br/>
+in *bvalue*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="setlargeicons"></a>  CMFCToolBar::SetLargeIcons
+##  <a name="setlargeicons"></a>Cmfctoolbar:: setlargeicons
 
-Gibt an, ob Symbolleisten-Schaltflächen große Symbole angezeigt.
+Gibt an, ob Symbolleisten Schaltflächen große Symbole anzeigen
 
 ```
 static void SetLargeIcons(BOOL bLargeIcons=TRUE);
@@ -3489,19 +3489,19 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bLargeIcons*<br/>
-[in] Ein boolescher Wert, der angibt, welche Symbole verwenden. Wenn dieser Parameter TRUE ist, zeigt das Framework große Symbole an. Andernfalls zeigt das Framework regulären Symbole an.
+in Ein boolescher Wert, der angibt, welche Symbole verwendet werden sollen. Wenn dieser Parameter true ist, zeigt das Framework große Symbole an. Andernfalls zeigt das Framework reguläre Symbole an.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode aus, wenn der Benutzer den Zustand ändert die **große Symbole** Kontrollkästchen in der **Optionen** auf der Registerkarte die **anpassen** Dialogfeld. Diese Methode ändert alle Symbolleisten in der Anwendung.
+Das Framework ruft diese Methode auf, wenn der Benutzer den Zustand des **großen Symbolen** im Dialogfeld **Anpassen** auf der Registerkarte **Optionen** ändert. Diese Methode ändert die Größe aller Symbolleisten in der Anwendung.
 
-Standardmäßig zeigt das Framework regulären Symbole.
+Standardmäßig zeigt das Framework reguläre Symbole an.
 
-Weitere Informationen zu den **anpassen** im Dialogfeld finden Sie unter [CMFCToolBarsCustomizeDialog-Klasse](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).
+Weitere Informationen zum Dialogfeld **Anpassen** finden Sie unter [cmfctoolbarscustomizedialog-Klasse](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).
 
-##  <a name="setlockedsizes"></a>  CMFCToolBar::SetLockedSizes
+##  <a name="setlockedsizes"></a>Cmfctoolbar:: setlockedsizes
 
-Legt die Größe der gesperrten Schaltflächen und gesperrte Bilder auf der Symbolleiste.
+Legt die Größe der gesperrten Schaltflächen und gesperrten Bilder auf der Symbolleiste fest.
 
 ```
 void SetLockedSizes(
@@ -3513,21 +3513,21 @@ void SetLockedSizes(
 ### <a name="parameters"></a>Parameter
 
 *sizeButton*<br/>
-[in] Gibt die Größe von gesperrte Symbolleisten-Schaltflächen.
+in Gibt die Größe der gesperrten Symbolleisten Schaltflächen an.
 
 *sizeImage*<br/>
-[in] Gibt die Größe des gesperrten Symbolleistenbilder an.
+in Gibt die Größe der gesperrten Symbolleisten Images an.
 
 *bDontScale*<br/>
-Gibt an, ob Skalierung Symbolleistenbilder im Modus für hohe DPI-Wert gesperrt.
+Gibt an, ob Symbolleisten Images im hohen dpi-Modus skaliert oder nicht gesperrt werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Standardgröße des gesperrten Schaltflächen ist 23 x 22 Pixel. Die Standardgröße des gesperrten Images ist 16 x 15 Pixel.
+Die Standardgröße der gesperrten Schaltflächen ist 23x22 Pixel. Die Standardgröße der gesperrten Bilder beträgt 16X 15 Pixel.
 
-Rufen Sie die [CMFCToolBar::GetLockedImageSize](#getlockedimagesize) Methode zum Abrufen der Größe der gesperrt Images. Rufen Sie die [CMFCToolBar::GetButtonSize](#getbuttonsize) Methode zum Abrufen der Größe der gesperrt Symbolleisten-Schaltflächen.
+Rufen Sie die [cmfctoolbar:: getlockedimagesize](#getlockedimagesize) -Methode auf, um die Größe der gesperrten Bilder abzurufen. Rufen Sie die [cmfctoolbar:: getbuttonsize](#getbuttonsize) -Methode auf, um die Größe der gesperrten Symbolleisten Schaltflächen abzurufen.
 
-##  <a name="setmaskmode"></a>  CMFCToolBar::SetMaskMode
+##  <a name="setmaskmode"></a>Cmfctoolbar:: Abort
 
 ```
 void SetMaskMode(BOOL bMasked);
@@ -3535,13 +3535,13 @@ void SetMaskMode(BOOL bMasked);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *bMasked*<br/>
+in *bmgestellte*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="setmenusizes"></a>  CMFCToolBar::SetMenuSizes
+##  <a name="setmenusizes"></a>Cmfctoolbar:: setmenusizes
 
-Legt die Größe der Schaltflächen der Symbolleiste im Menü und Images fest.
+Legt die Größe der Symbolleisten Menü Schaltflächen und ihrer Bilder fest.
 
 ```
 static void __stdcall SetMenuSizes(
@@ -3552,22 +3552,22 @@ static void __stdcall SetMenuSizes(
 ### <a name="parameters"></a>Parameter
 
 *sizeButton*<br/>
-[in] Gibt die Größe der Schaltflächen der Symbolleiste in Pixel an.
+in Gibt die Größe der Symbolleisten Schaltflächen in Pixel an.
 
 *sizeImage*<br/>
-[in] Gibt die Größe des Symbolleistenbilder, in Pixel an.
+in Gibt die Größe von Symbolleisten Bildern in Pixel an.
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig haben Menüschaltflächen und Images eine nicht definierte Größe.
+Standardmäßig haben Menü Schaltflächen und Ihre Bilder eine nicht definierte Größe.
 
-Rufen Sie die [CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize) Methode zur Bestimmung der Größe der Menüschaltflächen und die [CMFCToolBar::GetMenuImageSize](#getmenuimagesize) Methode, um die Größe der Schaltfläche Menübilder festzulegen.
+Verwenden Sie die [cmfctoolbar:: getmenubuttonsize](#getmenubuttonsize) -Methode, um die Größe der Menü Schaltflächen und die [cmfctoolbar:: getmenuimagesize](#getmenuimagesize) -Methode zu bestimmen, um die Größe der Menü Schaltflächen Bilder zu bestimmen.
 
-Siehe die Beispiele IEDemo und MSMoneyDemo Beispiele, in denen diese Methode verwenden.
+Beispiele für die Verwendung dieser Methode finden Sie in den Beispielen für IEDemo und MSMoneyDemo.
 
-##  <a name="setnonpermittedcommands"></a>  CMFCToolBar::SetNonPermittedCommands
+##  <a name="setnonpermittedcommands"></a>Cmfctoolbar:: setnonpermittedcommands
 
-Legt die Liste der Befehle, die vom Benutzer ausgeführt werden kann.
+Legt die Liste der Befehle fest, die vom Benutzer nicht ausgeführt werden können.
 
 ```
 static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
@@ -3576,17 +3576,17 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 ### <a name="parameters"></a>Parameter
 
 *lstCommands*<br/>
-[in] Ein Verweis auf eine `CList` -Objekt, das die Befehle enthält, die vom Benutzer ausgeführt werden kann.
+in Ein Verweis auf ein `CList` -Objekt, das die Befehle enthält, die vom Benutzer nicht ausgeführt werden können.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Methode aus, um zu verhindern, dass den Benutzer bestimmte Befehle auswählen. Beispielsweise empfiehlt es sich um zu verhindern, dass den Benutzer bestimmte Befehle aus Sicherheitsgründen auswählen. Siehe die Beispiele MDITabsDemo und MenuSubSet Beispiele, in denen diese Methode verwenden.
+Ruft diese Methode auf, um zu verhindern, dass der Benutzer bestimmte Befehle auswählt. Beispielsweise möchten Sie möglicherweise verhindern, dass der Benutzer bestimmte Befehle aus Sicherheitsgründen auswählt. Beispiele für die Verwendung dieser Methode finden Sie in den Beispielen für MDITabsDemo und menusubset.
 
-Diese Methode löscht die vorherige Liste der Befehle nicht zulässig. Standardmäßig ist die Liste der Befehle nicht zugelassene leer.
+Diese Methode löscht die vorherige Liste nicht zulässiger Befehle. Standardmäßig ist die Liste der nicht zulässigen Befehle leer.
 
-##  <a name="setonerowwithsibling"></a>  Cmfctoolbar:: Setonerowwithsibling
+##  <a name="setonerowwithsibling"></a>Cmfctoolbar:: "abtonerowwithsierend"
 
-Die Symbolleiste und gleichgeordnete positioniert derselben Zeile.
+Positioniert die Symbolleiste und deren gleich geordnetes Element in derselben Zeile.
 
 ```
 void SetOneRowWithSibling();
@@ -3594,13 +3594,13 @@ void SetOneRowWithSibling();
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode aus, wenn der Benutzer klickt auf die **Schaltflächen in einer Zeile anzeigen** Schaltfläche.
+Das Framework ruft diese Methode auf, wenn der Benutzer auf die Schaltfläche Schaltflächen **auf einer Zeile zeigt** .
 
-Rufen Sie die [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar) Methode zum Aktivieren der **Schaltflächen in einer Zeile anzeigen** oder **Schaltflächen in zwei Reihen anzeigen** Schaltflächen. Wenn Sie aufrufen [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar) für diese Symbolleiste, wird die gleichgeordneten-Symbolleiste auf die Zeile, der diese Symbolleiste verschoben. Andernfalls wird diese Symbolleiste auf die Zeile des nebengeordneten Elements verschoben.
+Aufrufen der [cmfctoolbar:: setsiblingtoolbar](#setsiblingtoolbar) -Methode, um die Schaltflächen **Anzeigen von Schaltflächen in einer Zeile** oder **Anzeigen von Schaltflächen auf zwei Zeilen** zu aktivieren. Wenn Sie [cmfctoolbar:: setsiblingtoolbar](#setsiblingtoolbar) für diese Symbolleiste aufrufen, wird die gleich geordnete Symbolleiste in die Zeile dieser Symbolleiste verschoben. Andernfalls wird diese Symbolleiste in die Zeile des gleich geordneten Elements verschoben.
 
-Das Framework Ruft die [cmfctoolbar:: Settworowswithsibling](#settworowswithsibling) Methode, wenn der Benutzer klickt auf die **Schaltflächen in zwei Reihen anzeigen** Schaltfläche.
+Das Framework ruft die [cmfctoolbar:: settworowswithsierend](#settworowswithsibling) -Methode auf, wenn der Benutzer auf die Schaltfläche Schaltflächen **auf zwei Zeilen anzeigen** klickt.
 
-##  <a name="setorigbuttons"></a>  CMFCToolBar::SetOrigButtons
+##  <a name="setorigbuttons"></a>Cmfctoolbar:: abktorigbuttons
 
 ```
 void SetOrigButtons(const CObList& lstOrigButtons);
@@ -3608,13 +3608,13 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 
 ### <a name="parameters"></a>Parameter
 
-[in] *LstOrigButtons*<br/>
+in *lstorigbuttons*<br/>
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="setpermament"></a>  CMFCToolBar::SetPermament
+##  <a name="setpermament"></a>Cmfctoolbar:: setpermament
 
-Gibt an, ob ein Benutzer auf die Symbolleiste schließen kann.
+Gibt an, ob ein Benutzer die Symbolleiste schließen kann.
 
 ```
 void SetPermament(BOOL bPermament=TRUE);
@@ -3623,17 +3623,17 @@ void SetPermament(BOOL bPermament=TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bPermament*<br/>
-[in] Ein boolescher Wert, der angibt, ob ein Benutzer auf die Symbolleiste schließen kann. Wenn dieser Parameter TRUE ist, kann Benutzer die Symbolleiste nicht schließen. Andernfalls kann ein Benutzer die Symbolleiste schließen.
+in Ein boolescher Wert, der angibt, ob ein Benutzer die Symbolleiste schließen kann. Wenn dieser Parameter true ist, kann der Benutzer die Symbolleiste nicht schließen. Andernfalls kann ein Benutzer die Symbolleiste schließen.
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig kann Benutzer jeder Symbolleiste schließen.
+Standardmäßig kann ein Benutzer jede Symbolleiste schließen.
 
-Rufen Sie die [CMFCToolBar::CanBeClosed](#canbeclosed) Methode, um zu bestimmen, ob ein Benutzer auf die Symbolleiste schließen kann.
+Verwenden Sie die [cmfctoolbar:: canbeclosed](#canbeclosed) -Methode, um zu bestimmen, ob ein Benutzer die Symbolleiste schließen kann.
 
-##  <a name="setroutecommandsviaframe"></a>  CMFCToolBar::SetRouteCommandsViaFrame
+##  <a name="setroutecommandsviaframe"></a>Cmfctoolbar:: Abort-/aus-commandsviaframe
 
-Gibt an, ob die übergeordneten Rahmens oder der Besitzer die Befehle an die Symbolleiste sendet.
+Gibt an, ob der übergeordnete Frame oder der Besitzer Befehle an die Symbolleiste sendet.
 
 ```
 void SetRouteCommandsViaFrame(BOOL bValue);
@@ -3642,15 +3642,15 @@ void SetRouteCommandsViaFrame(BOOL bValue);
 ### <a name="parameters"></a>Parameter
 
 *bValue*<br/>
-[in] Wenn dieser Parameter TRUE ist, sendet der übergeordneten Rahmen Befehle an der Symbolleiste. Andernfalls sendet der Besitzer Befehle auf der Symbolleiste.
+in Wenn dieser Parameter true ist, sendet der übergeordnete Frame Befehle an die Symbolleiste. Andernfalls sendet der Besitzer Befehle an die Symbolleiste.
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig sendet der übergeordneten Frame Befehle auf der Symbolleiste. Rufen Sie die [CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe) Methode, um zu bestimmen, ob die übergeordneten Rahmens oder der Besitzer die Befehle an die Symbolleiste sendet.
+Standardmäßig sendet der übergeordnete Frame Befehle an die Symbolleiste. Aufrufen der [cmfctoolbar:: getroutecommandsviaframe](#getroutecommandsviaframe) -Methode, um zu bestimmen, ob der übergeordnete Frame oder der Besitzer Befehle an die Symbolleiste sendet.
 
-##  <a name="setshowtooltips"></a>  CMFCToolBar::SetShowTooltips
+##  <a name="setshowtooltips"></a>Cmfctoolbar:: setshowtooltips
 
-Gibt an, ob das Framework QuickInfos angezeigt.
+Gibt an, ob das Framework Quick Infos anzeigt.
 
 ```
 static void SetShowTooltips(BOOL bValue);
@@ -3659,17 +3659,17 @@ static void SetShowTooltips(BOOL bValue);
 ### <a name="parameters"></a>Parameter
 
 *bValue*<br/>
-[in] Wenn dieser Parameter TRUE ist, zeigt das Framework QuickInfos an. Andernfalls wird das Framework QuickInfos ausgeblendet.
+in Wenn dieser Parameter true ist, zeigt das Framework Quick Infos an. Andernfalls verbirgt das Framework Quick Infos.
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig zeigt das Framework QuickInfos.
+Standardmäßig zeigt das Framework Quick Infos an.
 
-Rufen Sie die [CMFCToolBar::GetShowTooltips](#getshowtooltips) Methode, um zu bestimmen, ob das Framework QuickInfos angezeigt wird.
+Aufrufen der [cmfctoolbar:: getshowtooltips](#getshowtooltips) -Methode, um zu bestimmen, ob das Framework Quick Infos anzeigt.
 
-##  <a name="setsiblingtoolbar"></a>  Cmfctoolbar:: Setsiblingtoolbar
+##  <a name="setsiblingtoolbar"></a>Cmfctoolbar:: setsiblingtoolbar
 
-Gibt an, das gleichgeordnete Element in der Symbolleiste.
+Gibt das gleich geordnete Element der Symbolleiste an.
 
 ```
 void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
@@ -3678,19 +3678,19 @@ void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ### <a name="parameters"></a>Parameter
 
 *pBrotherToolbar*<br/>
-[in] Ein Zeiger auf der Symbolleiste gleichgeordnetes Element.
+in Ein Zeiger auf die gleich geordnete Symbolleiste.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ermöglicht die **Schaltflächen in einer Zeile anzeigen** oder **Schaltflächen in zwei Reihen anzeigen** Schaltflächen, die angezeigt werden, wenn der Benutzer zeigt die **anpassen** Popup-Menü. Rufen Sie diese Methode auf, wenn Sie möchten, damit der Benutzer an, ob verwandte Symbolleisten auf der gleichen Zeile oder auf unterschiedlichen Zeilen angezeigt werden.
+Diese Methode aktiviert die Schaltflächen **Anzeigen von Schaltflächen auf einer Zeile** oder **Anzeigen von Schaltflächen auf zwei Zeilen** , die angezeigt werden, wenn der Benutzer das Popup Menü **Anpassen** anzeigt. Ruft diese Methode auf, wenn Sie es dem Benutzer ermöglichen möchten, anzugeben, ob Verwandte Symbolleisten in derselben Zeile oder in verschiedenen Zeilen angezeigt werden.
 
-Rufen Sie diese Methode nach der Aktivierung der **anpassen** Schaltfläche, auf der Symbolleiste angezeigt wird. So aktivieren Sie die **anpassen** Schaltfläche, rufen Sie die [cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton) Methode.
+Wenn Sie die Schaltfläche **Anpassen** aktivieren, die auf der Symbolleiste angezeigt wird, können Sie diese Methode abrufen. Um die Schaltfläche **Anpassen** zu aktivieren, müssen Sie die [cmfctoolbar:: enablecustomizebutton](#enablecustomizebutton) -Methode aufrufen.
 
-Um das gleichgeordnete Element des eine Symbolleiste abzurufen, rufen [CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar).
+Um das gleich geordnete Element einer Symbolleiste abzurufen, rufen Sie [cmfctoolbar:: getsiblingtoolbar](#getsiblingtoolbar)auf.
 
-##  <a name="setsizes"></a>  CMFCToolBar::SetSizes
+##  <a name="setsizes"></a>Cmfctoolbar:: setSizes
 
-Gibt die Größe der Schaltflächen und Bilder auf allen Symbolleisten an.
+Gibt die Größe von Schaltflächen und Bildern auf allen Symbolleisten an.
 
 ```
 static void __stdcall SetSizes(
@@ -3701,20 +3701,20 @@ static void __stdcall SetSizes(
 ### <a name="parameters"></a>Parameter
 
 *sizeButton*<br/>
-[in] Die Größe der Schaltflächen der Symbolleiste in Pixel.
+in Die Größe der Symbolleisten Schaltflächen in Pixel.
 
 *sizeImage*<br/>
-[in] Die Größe des Symbolleisten-Schaltflächen, in Pixel.
+in Die Größe von Symbolleisten-Schaltflächen Bildern in Pixel.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Standardgröße des Symbolleisten-Schaltflächen ist 23 x 22 Pixel. Die Standardgröße des Symbolleisten-Schaltflächen ist 16 x 15 Pixel.
+Die Standardgröße von Symbolleisten Schaltflächen beträgt 23x22 Pixel. Die Standardgröße von Symbolleisten-Schaltflächen Bildern beträgt 16X 15 Pixel.
 
-Rufen Sie die [CMFCToolBar::GetImageSize](#getimagesize) Methode, um die Größe der Symbolleisten-Schaltflächen abzurufen. Rufen Sie die [CMFCToolBar::GetButtonSize](#getbuttonsize) Methode, um die Größe der Schaltflächen der Symbolleiste abzurufen.
+Rufen Sie die [cmfctoolbar:: getimagesize](#getimagesize) -Methode auf, um die Größe der Symbolleisten-Schaltflächen Bilder abzurufen. Rufen Sie die [cmfctoolbar:: getbuttonsize](#getbuttonsize) -Methode auf, um die Größe von Symbolleisten-Schaltflächen abzurufen.
 
-##  <a name="settoolbarbtntext"></a>  CMFCToolBar::SetToolBarBtnText
+##  <a name="settoolbarbtntext"></a>Cmfctoolbar:: settoolbarbtntext
 
-Gibt die Eigenschaften einer Schaltfläche auf der Symbolleiste an.
+Gibt Eigenschaften einer Schaltfläche auf der Symbolleiste an.
 
 ```
 void SetToolBarBtnText(
@@ -3727,26 +3727,26 @@ void SetToolBarBtnText(
 ### <a name="parameters"></a>Parameter
 
 *nBtnIndex*<br/>
-[in] Der nullbasierte Index der Symbolleisten-Schaltfläche in der Liste der Symbolleisten-Schaltflächen.
+in Der null basierte Index der Symbolleisten-Schaltfläche in der Liste der Symbolleisten Schaltflächen.
 
 *szText*<br/>
-[in] Gibt an, die textbezeichnung des der Symbolleisten-Schaltfläche.
+in Gibt die Text Bezeichnung der Symbolleisten-Schaltfläche an.
 
 *bShowText*<br/>
-[in] Wenn dieser Parameter TRUE ist, zeigt das Framework die textbezeichnung. Andernfalls wird das Framework die textbezeichnung ausgeblendet.
+in Wenn dieser Parameter true ist, zeigt das Framework die Text Bezeichnung an. Andernfalls verbirgt das Framework die Text Bezeichnung.
 
 *bShowImage*<br/>
-[in] Wenn dieser Parameter TRUE ist, zeigt das Framework das Symbolleistenbild-Schaltfläche. Andernfalls wird das Framework das Symbolleistenbild für die Schaltfläche ausgeblendet.
+in Wenn dieser Parameter true ist, zeigt das Framework das Symbolleisten-Schaltflächen Bild an. Andernfalls verbirgt das Framework das Symbol für die Symbolleisten Schaltfläche.
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig wird das Framework zeigt das Bild der Symbolleisten-Schaltflächen, aber die textbezeichnung des Symbolleisten-Schaltflächen nicht angezeigt.
+Standardmäßig zeigt das Framework die Bilder von Symbolleisten Schaltflächen an, aber nicht die Text Bezeichnung von Symbolleisten-Schaltflächen.
 
-In der Debug-Builds: Diese Methode generiert ein Assertionsfehler ausgelöst, wenn *nBtnIndex* verweist nicht auf eine gültige Symbolleiste-Schaltfläche oder die Symbolleisten-Schaltfläche ein Trennzeichen ist.
+In Debugbuilds generiert diese Methode einen Assertionsfehler, wenn *nbtnindex* nicht auf eine gültige Symbolleisten Schaltfläche verweist oder die Symbolleisten Schaltfläche ein Trennzeichen ist.
 
-##  <a name="settworowswithsibling"></a>  Cmfctoolbar:: Settworowswithsibling
+##  <a name="settworowswithsibling"></a>Cmfctoolbar:: settworowswithsierend
 
-Positioniert die Symbolleiste und gleichgeordnete in separaten Zeilen an.
+Positioniert die Symbolleiste und das gleich geordnete Element in separaten Zeilen.
 
 ```
 void SetTwoRowsWithSibling();
@@ -3754,15 +3754,15 @@ void SetTwoRowsWithSibling();
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode aus, wenn der Benutzer klickt auf die **Schaltflächen in zwei Reihen anzeigen** Schaltfläche.
+Das Framework ruft diese Methode auf, wenn der Benutzer auf die Schaltfläche Schaltflächen **auf zwei Zeilen anzeigen** klickt.
 
-Rufen Sie die [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar) Methode zum Aktivieren der **Schaltflächen in einer Zeile anzeigen** oder **Schaltflächen in zwei Reihen anzeigen** Schaltflächen. Wenn Sie aufrufen [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar) für diese Symbolleiste, die gleichgeordnete-Symbolleiste in einer separaten Zeile verschoben. Andernfalls wird diese Symbolleiste in einer separaten Zeile verschoben.
+Aufrufen der [cmfctoolbar:: setsiblingtoolbar](#setsiblingtoolbar) -Methode, um die Schaltflächen **Anzeigen von Schaltflächen in einer Zeile** oder **Anzeigen von Schaltflächen auf zwei Zeilen** zu aktivieren. Wenn Sie [cmfctoolbar:: setsiblingtoolbar](#setsiblingtoolbar) für diese Symbolleiste aufrufen, wird die gleich geordnete Symbolleiste in eine separate Zeile verschoben. Andernfalls wird diese Symbolleiste in eine separate Zeile verschoben.
 
-Das Framework Ruft die [cmfctoolbar:: Setonerowwithsibling](#setonerowwithsibling) Methode, wenn der Benutzer klickt auf die **Schaltflächen in einer Zeile anzeigen** Schaltfläche.
+Das Framework ruft die [cmfctoolbar:: abtonerowwithsierend](#setonerowwithsibling) -Methode auf, wenn der Benutzer auf die Schaltfläche Schaltflächen **auf einer Zeile zeigen** klickt.
 
-##  <a name="setuserimages"></a>  CMFCToolBar::SetUserImages
+##  <a name="setuserimages"></a>Cmfctoolbar:: setuserimages
 
-Legt die Auflistung von benutzerdefinierten Images in der Anwendung fest.
+Legt die Auflistung benutzerdefinierter Bilder in der Anwendung fest.
 
 ```
 static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
@@ -3771,25 +3771,25 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
 ### <a name="parameters"></a>Parameter
 
 *pUserImages*<br/>
-[in] Ein Zeiger auf die Sammlung von benutzerdefinierten Images.
+in Ein Zeiger auf die Auflistung benutzerdefinierter Images.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn die Methode erfolgreich ist; andernfalls 0, wenn das angegebene `CMFCToolBarImages` Objekt ist ungültig oder weist eine Imagegröße, die von der Symbolleiste die Standard-Bildgröße abweicht.
+Ungleich 0 (null), wenn die Methode erfolgreich ist. andernfalls 0, wenn das `CMFCToolBarImages` angegebene Objekt ungültig ist oder eine Bildgröße aufweist, die von der Standard Bildgröße der Symbolleiste abweicht.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework verwendet eine benutzerdefinierte Images zum Zeichnen von Symbolleisten-Schaltflächen, die vom Benutzer angepasst werden. Die Liste der Bilder anhand des *pUserImages* alle Symbolleisten, die in der Anwendung freigegeben ist.
+Das Framework verwendet benutzerdefinierte Bilder zum Zeichnen von Symbolleisten Schaltflächen, die vom Benutzer angepasst werden. Die von *puserimages* angegebene Bildliste wird von allen Symbolleisten in der Anwendung gemeinsam verwendet.
 
-Diese Methode einen Assertionsfehler in Debugbuilds generiert, wenn das angegebene `CMFCToolBarImages` Objekt ist ungültig oder weist eine Imagegröße, die von der Symbolleiste die Standard-Bildgröße abweicht.
+Diese Methode generiert einen Assertionsfehler in Debugbuilds `CMFCToolBarImages` , wenn das angegebene Objekt ungültig ist oder eine Bildgröße aufweist, die von der Standard Bildgröße der Symbolleiste abweicht.
 
-Die Beispiele OutlookDemo ToolTipDemo und VisualStudioDemo verwenden Sie diese Methode die globale Auflistung von benutzerdefinierten Images festlegen. Sie laden Sie die Datei mit dem Namen UserImages.bmp, die sich in das Arbeitsverzeichnis der Anwendung befindet.
+Die Beispiele "OutlookDemo", "ToolTipDemo" und "visualstudiodemo" verwenden diese Methode, um die globale Auflistung benutzerdefinierter Images festzulegen. Sie laden die Datei mit dem Namen "userimages. bmp", die sich im Arbeitsverzeichnis der Anwendung befindet.
 
-Rufen Sie die [CMFCToolBar::GetUserImages](#getuserimages) Methode, um die Sammlung von benutzerdefinierten Images in der Anwendung abzurufen.
+Rufen Sie die [cmfctoolbar:: getuserimages](#getuserimages) -Methode auf, um die Auflistung benutzerdefinierter Images in der Anwendung abzurufen.
 
-##  <a name="stretchpane"></a>  CMFCToolBar::StretchPane
+##  <a name="stretchpane"></a>Cmfctoolbar:: stretchpane
 
-Die Symbolleiste wird gestreckt, vertikal oder horizontal und automatisch neu positioniert und die Schaltflächen, falls erforderlich.
+Streckt die Symbolleiste vertikal oder horizontal und positioniert die Schaltflächen bei Bedarf neu.
 
 ```
 virtual CSize StretchPane(
@@ -3800,24 +3800,24 @@ virtual CSize StretchPane(
 ### <a name="parameters"></a>Parameter
 
 *nLength*<br/>
-[in] Das Ausmaß in Pixel, um stretch-Bereich.
+in Der Betrag in Pixel, um den der Bereich gestreckt werden soll.
 
 *bVert*<br/>
-[in] Bei "true", wird den Bereich vertikal gestreckt. False gibt an, wird den Bereich horizontal gestreckt.
+in Wenn true, wird der Bereich vertikal gestreckt. Wenn der Wert false ist, wird der Bereich horizontal gestreckt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `CSize` -Objekt, das die Größe des Clientbereichs Symbolleiste angibt.
+Ein `CSize` -Objekt, das die Größe des Symbolleisten Client Bereichs angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft [CMFCToolBar::WrapToolBar](#wraptoolbar) um die Schaltflächen auf der Symbolleiste gestreckten neu zu positionieren.
+Diese Methode ruft [cmfctoolbar:: wraptoolbar](#wraptoolbar) auf, um die Schaltflächen innerhalb der Stretch-Symbolleiste neu zu positionieren.
 
-Der Rückgabewert bestimmt, indem [CMFCToolBar::CalcSize](#calcsize).
+Der Rückgabewert wird durch den Aufruf von [cmfctoolbar:: calcsize](#calcsize)bestimmt.
 
-##  <a name="translatechar"></a>  CMFCToolBar::TranslateChar
+##  <a name="translatechar"></a>Cmfctoolbar:: TranslateChar
 
-Führt einen schaltflächenbefehl aus, wenn der angegebene Schlüssel-Code eine gültige Tastenkombination entspricht.
+Führt einen Schaltflächen Befehl aus, wenn der angegebene Schlüsselcode einer gültigen Tastenkombination entspricht.
 
 ```
 virtual BOOL TranslateChar(UINT nChar);
@@ -3826,17 +3826,17 @@ virtual BOOL TranslateChar(UINT nChar);
 ### <a name="parameters"></a>Parameter
 
 *nChar*<br/>
-[in] Gibt ein virtueller Tastencode an. Eine Liste der standardmäßige virtuelle Tastencodes finden Sie in der Winuser.h
+in Gibt einen Code für den virtuellen Schlüssel an. Eine Liste der virtuellen Standardschlüssel Codes finden Sie unter Winuser. h.
 
 ### <a name="return-value"></a>Rückgabewert
 
-FALSE, wenn der angegebene Schlüssel-Code ist nicht mehr gedruckt oder entspricht keine gültige Tastenkombination; True, wenn der angegebene Schlüssel-Code eine Option im Dropdownmenü entspricht. andernfalls der Rückgabewert von [CMFCToolBar::ProcessCommand](#processcommand).
+FALSE, wenn der angegebene Schlüsselcode entweder nicht druckbar ist oder keine gültige Tastenkombination entspricht. TRUE, wenn der angegebene Schlüsselcode einer Dropdown Menüoption entspricht. andernfalls der Rückgabewert von [cmfctoolbar::P rocess Command](#processcommand).
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft diese Methode auf, wenn eine Taste zusammen mit der Alt-Taste gedrückt wird.
+Das Framework ruft diese Methode auf, wenn eine Taste mit der Alt-Taste gedrückt wird.
 
-##  <a name="updatebutton"></a>  CMFCToolBar::UpdateButton
+##  <a name="updatebutton"></a>Cmfctoolbar:: UpdateButton
 
 Aktualisiert den Zustand der angegebenen Schaltfläche.
 
@@ -3847,13 +3847,13 @@ void UpdateButton(int nIndex);
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-[in] Gibt an, der nullbasierte Index der Schaltfläche zu aktualisieren.
+in Gibt den NULL basierten Index der zu aktualisierenden Schaltfläche an.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="wraptoolbar"></a>  CMFCToolBar::WrapToolBar
+##  <a name="wraptoolbar"></a>Cmfctoolbar:: wraptoolbar
 
-Automatisch neu positioniert und Symbolleisten-Schaltflächen in die angegebenen Abmessungen.
+Positioniert Symbolleisten Schaltflächen innerhalb der angegebenen Dimensionen neu.
 
 ```
 int WrapToolBar(
@@ -3867,30 +3867,30 @@ int WrapToolBar(
 ### <a name="parameters"></a>Parameter
 
 *nWidth*<br/>
-[in] Maximale Breite der Symbolleiste.
+in Maximale Breite der Symbolleiste.
 
-*nHeight*<br/>
-[in] Maximale Höhe der Symbolleiste. Nicht verwendet, wenn die Symbolleiste unverankert ist.
+*nheight*<br/>
+in Maximale Höhe der Symbolleiste. Wird nicht verwendet, wenn die Symbolleiste unverankert ist.
 
 *pDC*<br/>
-[in] Zeiger auf einen Gerätekontext. Wenn der Wert NULL ist, wird der Gerätekontext für die Symbolleiste verwendet.
+in Zeiger auf einen Gerätekontext. Wenn der Wert NULL ist, wird der Gerätekontext für die Symbolleiste verwendet.
 
 *nColumnWidth*<br/>
-[in] Breite der Schaltfläche. Wenn-1 ist, wird die aktuelle Breite verwendet.
+in Schaltflächen breite. Wenn-1, wird die aktuelle Breite verwendet.
 
-[in] m *nRowHeight* Schaltfläche Höhe. Wenn-1 ist, wird die aktuelle Höhe verwendet.
+[in] m *nrowheight* -Schaltflächen Höhe. Wenn-1, wird die aktuelle Höhe verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der Zeilen der Schaltflächen auf der Symbolleiste.
+Die Anzahl der Zeilen von Schaltflächen auf der Symbolleiste.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode automatisch neu positioniert und Schaltflächen auf der Symbolleiste in zusätzliche Zeilen ggf. die Schaltflächen zu umschließen.
+Mit dieser Methode werden Schaltflächen auf der Symbolleiste neu positioniert und ggf. die Schaltflächen in zusätzliche Zeilen umwickelt
 
-##  <a name="m_bdontscaleimages"></a>  CMFCToolBar::m_bDontScaleImages
+##  <a name="m_bdontscaleimages"></a>Cmfctoolbar:: m_bDontScaleImages
 
-Gibt an, ob Symbolleistenbilder im Modus für hohe DPI-Wert zu skalieren.
+Gibt an, ob Symbolleisten Bilder im Modus mit hoher dpi-Größe skaliert werden sollen.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bDontScaleImages;

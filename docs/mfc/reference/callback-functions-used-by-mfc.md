@@ -7,16 +7,16 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 84581a4a1147a5b0b046e1bf2fbe412bffe9c662
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 9e51774b2158a81fce05dc0bd27e296e4ad94faa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612248"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507702"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Von MFC verwendete Rückruffunktionen
 
-Drei Rückruffunktionen werden in der Microsoft Foundation Class-Bibliothek angezeigt. An dieser Rückruffunktionen übergeben werden [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), und [CDC:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc). Beachten Sie, dass alle Rückruffunktionen MFC-Ausnahmen abfangen müssen, bevor an Windows, zurückgegeben werden, da Ausnahmen hinweg Rückruf ausgelöst werden, können nicht an. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).
+Drei Rückruf Funktionen werden in der Microsoft Foundation Class-Bibliothek angezeigt. Diese Rückruf Funktionen werden an [CDC:: enujubjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring)und [CDC:: abtabortproc](../../mfc/reference/cdc-class.md#setabortproc)übermittelt. Beachten Sie, dass alle Rückruf Funktionen vor der Rückgabe an Windows MFC-Ausnahmen abfangen müssen, da Ausnahmen nicht über Rückruf Grenzen hinweg ausgelöst werden können. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).
 
 |Name||
 |----------|-----------------|
@@ -28,9 +28,9 @@ Drei Rückruffunktionen werden in der Microsoft Foundation Class-Bibliothek ange
 
 **Header:** afxwin.h
 
-## <a name="enum_objects"></a> Rückruffunktion für CDC:: EnumObjects
+## <a name="enum_objects"></a>Rückruffunktion für CDC:: enumujects
 
-Die *ObjectFunc* Name ist ein Platzhalter für den Namen der Anwendung bereitgestellte Funktion.
+Der *objectfunc* -Name ist ein Platzhalter für den von der Anwendung bereitgestellten Funktionsnamen.
 
 ### <a name="syntax"></a>Syntax
 
@@ -43,22 +43,22 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="parameters"></a>Parameter
 
 *lpszLogObject*<br/>
-Verweist auf eine [LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen) oder [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) -Datenstruktur, die Informationen zu den logischen Attributen des Objekts enthält.
+Verweist auf eine [logpen](/windows/win32/api/Wingdi/ns-wingdi-logpen) -oder [logbrush](/windows/win32/api/wingdi/ns-wingdi-logbrush) -Datenstruktur, die Informationen zu den logischen Attributen des-Objekts enthält.
 
 *lpData*<br/>
-Verweist auf die Anwendung bereitgestellte Daten, die an die `EnumObjects` Funktion.
+Verweist auf die von der Anwendung bereitgestellten Daten, `EnumObjects` die an die Funktion übergeben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Callback-Funktion gibt ein **Int**. Der Wert von diesem Return wird vom Benutzer festgelegt. Wenn die Callback-Funktion gibt 0 (null) zurück, `EnumObjects` Enumeration frühzeitig beendet.
+Die Rückruffunktion gibt einen **int**-Wert zurück. Der Wert dieser Rückgabe ist Benutzer definiert. Wenn die Rückruffunktion 0 zurückgibt `EnumObjects` , hält die Enumeration frühzeitig an.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Name muss exportiert werden.
+Der tatsächliche Name muss exportiert werden.
 
-## <a name="graystring"></a>  Rückruffunktion für CDC:: graystring
+## <a name="graystring"></a>Rückruffunktion für CDC:: graystring
 
-*OutputFunc* ist ein Platzhalter für den Namen der Anwendung bereitgestellten Rückruffunktion.
+*OutputFunc* ist ein Platzhalter für den von der Anwendung bereitgestellten Rückruf Funktionsnamen.
 
 ### <a name="syntax"></a>Syntax
 
@@ -72,25 +72,25 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="parameters"></a>Parameter
 
 *hDC*<br/>
-Identifiziert einen Speichergerätekontext mit einer Bitmap mit mindestens der Breite und Höhe gemäß `nWidth` und `nHeight` zu `GrayString`.
+Identifiziert einen Speichergeräte Kontext mit einer Bitmap von mindestens der von `nWidth` `GrayString`und `nHeight` angegebenen Breite und Höhe.
 
 *lpData*<br/>
 Zeigt auf die zu zeichnende Zeichenfolge.
 
 *nCount*<br/>
-Gibt die Anzahl von Zeichen ausgegeben.
+Gibt die Anzahl von Zeichen an, die ausgegeben werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Callback-Funktion zurückgegebene Wert muss "true", um den Erfolg mitzuteilen, Andernfalls ist er "false".
+Der Rückgabewert der Rückruffunktion muss "true" sein, um den Erfolg anzugeben. Andernfalls ist Sie false.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Callback-Funktion (*OutputFunc*) müssen Zeichnen eines Bilds relativ zu den Koordinaten (0,0) statt (*x*, *y*).
+Die Rückruffunktion (*OutputFunc*) muss ein Bild relativ zu den Koordinaten (0, 0) anstelle von (*x*, *y*) zeichnen.
 
-## <a name="setabortproc"></a>  Rückruffunktion für CDC:: setabortproc
+## <a name="setabortproc"></a>Rückruffunktion für CDC:: abtabortproc
 
-Der Name *AbortFunc* ist ein Platzhalter für den Namen der Anwendung bereitgestellte Funktion.
+Der Name *abortfunc* ist ein Platzhalter für den von der Anwendung bereitgestellten Funktionsnamen.
 
 ### <a name="syntax"></a>Syntax
 
@@ -103,18 +103,18 @@ BOOL CALLBACK EXPORT AbortFunc(
 ### <a name="parameters"></a>Parameter
 
 *hPr*<br/>
-Gibt den Gerätekontext.
+Identifiziert den Gerätekontext.
 
 *Code*<br/>
-Gibt an, ob ein Fehler aufgetreten ist. Es ist 0, wenn kein Fehler aufgetreten ist. Es ist SP_OUTOFDISK, wenn der Druck-Manager befindet sich derzeit nicht genügend Speicherplatz und mehr Speicherplatz zur Verfügung stehen, wenn die Anwendung wartet. Wenn *Code* SP_OUTOFDISK, wird die Anwendung muss nicht den Druckauftrag abbrechen. Wenn dies nicht der Fall ist, muss, führt dies zu den Druck-Manager durch Aufrufen der `PeekMessage` oder `GetMessage` Windows-Funktion.
+Gibt an, ob ein Fehler aufgetreten ist. Der Wert ist 0, wenn kein Fehler aufgetreten ist. Dies ist SP_OUTOFDISK, wenn der Druck-Manager zurzeit nicht über genügend Speicherplatz verfügt und bei der Wartezeit der Anwendung mehr Speicherplatz zur Verfügung steht. Wenn *Code* SP_OUTOFDISK ist, muss die Anwendung den Druckauftrag nicht abbrechen. Wenn dies nicht der Fall ist, muss Sie dem Druck-Manager durch Aufrufen `PeekMessage` der `GetMessage` -oder der Windows-Funktion zurückzugeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert der Funktion Abort-Handler ist ungleich NULL, wenn der Druckauftrag wird, um den Vorgang fortzusetzen, und 0, wenn sie abgebrochen wird.
+Der Rückgabewert der Abort-Handler-Funktion ist ungleich 0 (null), wenn der Druckauftrag fortgesetzt werden soll, und 0, wenn er abgebrochen wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Name muss exportiert werden, wie beschrieben im Abschnitt "Hinweise" des [CDC:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc).
+Der tatsächliche Name muss exportiert werden, wie im Abschnitt "Hinweise" von [CDC:: abtabortproc](../../mfc/reference/cdc-class.md#setabortproc)beschrieben.
 
 ## <a name="see-also"></a>Siehe auch
 

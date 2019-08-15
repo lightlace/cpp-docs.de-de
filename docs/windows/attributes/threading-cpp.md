@@ -1,21 +1,21 @@
 ---
-title: Threading (C++-COM-Attribut)
+title: Threading (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.threading
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: cdebf06a62ebbd1d8648b9777fe200bc7a373261
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db2940ec3536ae8ea29ba40db84ea869ecb3d0ac
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407236"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513930"
 ---
 # <a name="threading-c"></a>threading (C++)
 
-Gibt das Threadingmodell für eine COM-Objekt.
+Gibt das Threading Modell für ein COM-Objekt an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,31 +26,31 @@ Gibt das Threadingmodell für eine COM-Objekt.
 ### <a name="parameters"></a>Parameter
 
 *model*<br/>
-(Optional) Eine der folgenden threading Modelle:
+Optionale Eines der folgenden Threading Modelle:
 
-- `apartment` (Apartmentthreading für Anwendungen)
+- `apartment`(Apartment Threading)
 
-- `neutral` (.NET Framework-Komponenten ohne Benutzeroberfläche)
+- `neutral`(.NET Framework Komponenten ohne Benutzeroberfläche)
 
-- `single` (einfaches threading)
+- `single`(einfaches Threading)
 
-- `free` (freies threading)
+- `free`(freies Threading)
 
-- `both` ("Apartment" und "Freies threading")
+- `both`(Apartment und freies Threading)
 
 Der Standardwert ist `apartment`.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **threading** C++-Attribut nicht in der generierten IDL-Datei angezeigt, aber in der Implementierung des COM-Objekts verwendet werden.
+Das **Threading** C++ Attribut wird nicht in der generierten IDL-Datei angezeigt, wird jedoch in der Implementierung des COM-Objekts verwendet.
 
-In ATL-Projekte Wenn die [Co-Klasse](coclass.md) Attribut vorhanden ist, wird das Threadingmodell gemäß *Modell* wird als der Vorlagenparameter übergeben, die [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) Klasse , eingefügt, indem die `coclass` Attribut.
+Wenn in ATL-Projekten auch das [Co-Klasse](coclass.md) -Attribut vorhanden ist, wird das von *Model* angegebene Threading Modell als Vorlagen Parameter an die [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) -Klasse übergeben, die durch `coclass` das-Attribut eingefügt wird.
 
-Die **threading** Attribut schützt auch den Zugriff auf eine [Event_source](event-source.md).
+Das **Threading** Attribut schützt auch den Zugriff auf eine [event_source](event-source.md).
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter den [lizenziert](licensed.md) Beispiel für ein Beispiel für die Verwendung von **threading**.
+Ein Beispiel für die Verwendung von **Threading**finden Sie im [lizenzierten](licensed.md) Beispiel.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,10 +58,10 @@ Finden Sie unter den [lizenziert](licensed.md) Beispiel für ein Beispiel für d
 
 |||
 |-|-|
-|**Betrifft**|**class**, **struct**|
+|**Betrifft**|**Klasse**, **Struktur**|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|**coclass**|
-|**Ungültige Attribute**|Keiner|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
@@ -71,4 +71,4 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 [typedef-, enum-, union- und struct-Attribute](typedef-enum-union-and-struct-attributes.md)<br/>
 [Klassenattribute](class-attributes.md)<br/>
 [Multithreadingunterstützung für älteren Code (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
-[Neutrale-Apartments](/windows/desktop/cossdk/neutral-apartments)
+[Neutrale Apartments](/windows/win32/cossdk/neutral-apartments)

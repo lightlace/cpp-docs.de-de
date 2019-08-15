@@ -8,16 +8,16 @@ helpviewer_keywords:
 - controls [MFC], header
 - owner-drawn header controls [MFC]
 ms.assetid: 455c113b-e8d0-400c-8690-dbb92cba0d05
-ms.openlocfilehash: 145134a4c3a0518d5248d72c098927ed4ee5042a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9147708f672a5aec26f58a3c81ed7a5dfcf8cad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310847"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508326"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Erstellen von Ownerdrawn-Headersteuerelementen
 
-Sie können einzelne Elemente von einem Kopfzeilen-Steuerelement definieren ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) ownerdrawn-Elemente sein. Weitere Informationen finden Sie unter [Drawn Headersteuerelemente](/windows/desktop/Controls/header-controls) im Windows SDK.
+Sie können einzelne Elemente eines Header Steuer Elements ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) als vom Besitzer gezeichnete Elemente definieren. Weitere Informationen finden Sie unter vom [Besitzer gezeichnete Header Steuerelemente](/windows/win32/Controls/header-controls) in der Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 

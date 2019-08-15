@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 31fadc0a960ddfcf216951e1af481983b122ea0f
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: db99c5e72e84bb359184f4c62594fcddff7d8ff6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821303"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505357"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Cmsceditbrowsectrl-Klasse
 
@@ -65,7 +65,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[Cmsceditbrowsectrl:: onchangelayout](#onchangelayout)|Zeichnet das aktuelle Edit Browse-Steuerelement neu.|
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Wird von Framework aufgerufen, um die Schaltfläche zum Durchsuchen zu zeichnen.|
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Wird von Framework aufgerufen, wenn ein unzulässiger Dateiname in das Bearbeitungs Steuerelement eingegeben wurde.|
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Übersetzt Fenster Meldungen, bevor diese an die Windows-Funktionen [translatemess](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) gesendet werden. Syntax und weitere Informationen finden Sie unter [CWnd::P retranslatemess Age](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Übersetzt Fenster Meldungen, bevor diese an die Windows-Funktionen [translatemess](/windows/win32/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) gesendet werden. Syntax und weitere Informationen finden Sie unter [CWnd::P retranslatemess Age](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Legt ein benutzerdefiniertes Bild für die Schaltfläche Durchsuchen fest.|
 
 ## <a name="remarks"></a>Hinweise

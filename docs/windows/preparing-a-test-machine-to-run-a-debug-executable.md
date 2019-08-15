@@ -4,12 +4,12 @@ ms.date: 07/02/2019
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 87d2bf434aef3a85bf7fa19f5886bec106515809
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: ae751b1632473fa316c7965bc751e91b782a89ea
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552331"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513663"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Vorbereiten eines Testcomputers zum Ausführen einer ausführbaren Debugdatei
 
@@ -25,7 +25,7 @@ Es gibt drei Möglichkeiten, Debugversionen von DLLs für Visual C++-Bibliothek
 - Verwenden Sie eine lokale Bereitstellung, um die Debugversion einer bestimmten Visual C++-DLL im Installationsverzeichnis der Anwendung zu installieren, indem Sie die im Verzeichnis „Programme“ oder „Programme (x86)“ unter „\Microsoft Visual Studio \<Version>\VC\redist\Debug_NonRedist\\“ bereitgestellten Dateien verwenden.
 
     > [!NOTE]
-    >  Für das Remotedebuggen Ihrer Anwendung mit Visual Studio 2005 oder Visual Studio 2008 auf einem anderen Computer erstellt haben, müssen Sie Debugversionen der Visual bereitstellen C++ Bibliotheks-DLLs als freigegebene Side-by-Side Assemblys. Sie können ein Setup-Projekt oder Windows Installer zum Installieren von entsprechenden Mergemodulen verwenden.
+    >  Zum Remote Debuggen Ihrer Anwendung, die mit Visual Studio 2005 oder Visual Studio 2008 auf einem anderen Computer erstellt wurde, müssen Sie Debugversionen von visuellen C++ Bibliotheks-DLLs als freigegebene parallele Assemblys bereitstellen. Sie können ein Setup-Projekt oder Windows Installer zum Installieren von entsprechenden Mergemodulen verwenden.
 
 - Verwenden Sie in Visual Studio die Option **Bereitstellen** im Dialogfeld **Konfigurations-Manager**, um die Ausgabe des Projekts und andere Dateien zum Remotecomputer zu kopieren.
 
@@ -34,6 +34,6 @@ Nach der Installation von Visual C++-DLLs können Sie einen Remotedebugger auf 
 ## <a name="see-also"></a>Siehe auch
 
 [Bereitstellung in Visual C++](deployment-in-visual-cpp.md)<br>
-[Windows Installer-Befehlszeilenoptionen](/windows/desktop/Msi/command-line-options)<br>
+[Windows Installer-Befehlszeilenoptionen](/windows/win32/Msi/command-line-options)<br>
 [Bereitstellungsbeispiele](deployment-examples.md)<br>
 [Remote Debugging](/visualstudio/debugger/remote-debugging)

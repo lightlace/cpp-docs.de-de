@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridToolTipCtrl-Klasse
+title: Cmfcpropertygridtooltipctrl-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridToolTipCtrl
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: 6c14ed1f11a7a414332b34566a314459d76b911b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1b6f626b5f9844c73cd2225a7d6311f5b2f7d4f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310473"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505093"
 ---
-# <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl-Klasse
+# <a name="cmfcpropertygridtooltipctrl-class"></a>Cmfcpropertygridtooltipctrl-Klasse
 
-Implementiert eine QuickInfo zu steuern, die die [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) verwendet, um QuickInfos anzuzeigen.
+Implementiert ein QuickInfo-Steuerelement, das von der [cmfcpropertygridctrl-Klasse](../../mfc/reference/cmfcpropertygridctrl-class.md) verwendet wird, um Quick Infos anzuzeigen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,22 +53,22 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |-|-|
 |Name|Beschreibung|
 |[CMFCPropertyGridToolTipCtrl::Create](#create)|Erstellt ein Fenster für das QuickInfo-Steuerelement.|
-|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Deaktiviert, und blendet Sie aus dem QuickInfo-Steuerelement.|
-|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Gibt die Koordinaten der letzten Position des QuickInfo-Steuerelements zurück.|
-|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Blendet das QuickInfo-Steuerelement.|
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) gesendet werden. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Legt den Abstand zwischen der QuickInfo-Text und dem Rahmen des QuickInfo-Fensters fest.|
-|[CMFCPropertyGridToolTipCtrl::Track](#track)|Zeigt das QuickInfo-Steuerelement.|
+|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Deaktiviert das ToolTip-Steuerelement und blendet es aus.|
+|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Gibt die Koordinaten der letzten Position des QuickInfo-Steuer Elements zurück.|
+|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Verbirgt das ToolTip-Steuerelement.|
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) gesendet werden. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Legt den Abstand zwischen dem QuickInfo-Text und dem Rahmen des QuickInfo-Fensters fest.|
+|[CMFCPropertyGridToolTipCtrl::Track](#track)|Zeigt das ToolTip-Steuerelement an.|
 
 ## <a name="remarks"></a>Hinweise
 
-QuickInfos werden angezeigt, wenn der Zeiger auf einen Eigenschaftennamen verbleibt. Die [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) Klasse zeigt eine QuickInfo an, sodass er vom Benutzer leicht lesbar ist. Die Position der QuickInfo wird in der Regel durch die Position des Zeigers bestimmt. Durch die Verwendung dieser Klasse wird die QuickInfo angezeigt wird, über den Eigenschaftennamen und die natürliche eigenschaftenerweiterung ähnelt, so dass der Eigenschaftenname vollständig sichtbar ist.
+Quick Infos werden angezeigt, wenn der Zeiger auf einen Eigenschaftsnamen zeigt. Die [cmfcpropertygridtooltipctrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) -Klasse zeigt eine QuickInfo an, sodass Sie vom Benutzer leicht lesbar ist. Normalerweise wird die Position einer QuickInfo durch die Position des Zeigers bestimmt. Mit dieser Klasse wird die QuickInfo über dem Eigenschaftsnamen angezeigt und ähnelt der Erweiterung der natürlichen Eigenschaft, sodass der Eigenschaftsname vollständig sichtbar ist.
 
-MFC automatisch dieses Steuerelements erstellt und verwendet ihn in das [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md).
+MFC erstellt dieses Steuerelement automatisch und verwendet es in der [cmfcpropertygridctrl-Klasse](../../mfc/reference/cmfcpropertygridctrl-class.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie zum Erstellen eines Objekts von der `CMFCPropertyGridToolTipCtrl` -Klasse, und wie das QuickInfo-Steuerelement angezeigt.
+Im folgenden Beispiel wird veranschaulicht, wie ein Objekt der `CMFCPropertyGridToolTipCtrl` -Klasse erstellt wird und wie das ToolTip-Steuerelement angezeigt wird.
 
 [!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]
 
@@ -84,9 +84,9 @@ Im folgende Beispiel wird veranschaulicht, wie zum Erstellen eines Objekts von d
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxpropertygridtooltipctrl.h
+**Header:** afxpropertygridtooltipctrl. h
 
-##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl
+##  <a name="cmfcpropertygridtooltipctrl"></a>Cmfcpropertygridtooltipctrl:: cmfcpropertygridtooltipctrl
 
 Erstellt ein `CMFCPropertyGridToolTipCtrl`-Objekt.
 
@@ -94,7 +94,7 @@ Erstellt ein `CMFCPropertyGridToolTipCtrl`-Objekt.
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```
 
-##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create
+##  <a name="create"></a>Cmfcpropertygridtooltipctrl:: Create
 
 Erstellt ein Fenster für das QuickInfo-Steuerelement.
 
@@ -105,15 +105,15 @@ BOOL Create(CWnd* pWndParent);
 ### <a name="parameters"></a>Parameter
 
 *pWndParent*<br/>
-[in] Ein Zeiger auf das übergeordnete Fenster.
+in Ein Zeiger auf das übergeordnete Fenster.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn das Fenster erfolgreich erstellt wurde. andernfalls "false".
+TRUE, wenn das Fenster erfolgreich erstellt wurde. andernfalls false.
 
-##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate
+##  <a name="deactivate"></a>Cmfcpropertygridtooltipctrl::D eaktivierungs
 
-Deaktiviert, und blendet Sie aus dem QuickInfo-Steuerelement.
+Deaktiviert das ToolTip-Steuerelement und blendet es aus.
 
 ```
 void Deactivate();
@@ -121,11 +121,11 @@ void Deactivate();
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode legt fest, die letzte Position und den Text für leere Werte, sodass zukünftige Aufrufe [CMFCPropertyGridToolTipCtrl::Track](#track) zeigen Sie die QuickInfo.
+Diese Methode legt die letzte Position und den Text auf leere Werte fest, sodass in zukünftigen Aufrufen von [cmfcpropertygridtooltipctrl:: Track](#track) die QuickInfo angezeigt wird.
 
-##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect
+##  <a name="getlastrect"></a>Cmfcpropertygridtooltipctrl:: getlastrect
 
-Gibt die Koordinaten der letzten Position des QuickInfo-Steuerelements zurück.
+Gibt die Koordinaten der letzten Position des QuickInfo-Steuer Elements zurück.
 
 ```
 void GetLastRect(CRect& rect) const;
@@ -133,20 +133,20 @@ void GetLastRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parameter
 
-*rect*<br/>
-[out] Enthält die letzte Position des QuickInfo-Steuerelements.
+*Rect*<br/>
+vorgenommen Enthält die letzte Position des QuickInfo-Steuer Elements.
 
-##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide
+##  <a name="hide"></a>Cmfcpropertygridtooltipctrl:: Hide
 
-Blendet das QuickInfo-Steuerelement.
+Verbirgt das ToolTip-Steuerelement.
 
 ```
 void Hide();
 ```
 
-##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin
+##  <a name="settextmargin"></a>Cmfcpropertygridtooltipctrl:: settextmargin
 
-Legt den Abstand zwischen der QuickInfo-Text und dem Rahmen des QuickInfo-Fensters fest.
+Legt den Abstand zwischen dem QuickInfo-Text und dem Rahmen des QuickInfo-Fensters fest.
 
 ```
 void SetTextMargin(int nTextMargin);
@@ -155,11 +155,11 @@ void SetTextMargin(int nTextMargin);
 ### <a name="parameters"></a>Parameter
 
 *nTextMargin*<br/>
-[in] Gibt den Abstand zwischen der QuickInfo-Text-Steuerelement und dem Rahmen des QuickInfo-Fensters. Der Standardwert ist 10 Pixel.
+in Gibt den Abstand zwischen dem QuickInfo-Steuerelement Text und dem Rahmen des QuickInfo-Fensters an. Der Standardwert ist 10 Pixel.
 
-##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track
+##  <a name="track"></a>Cmfcpropertygridtooltipctrl:: Track
 
-Zeigt das QuickInfo-Steuerelement.
+Zeigt das ToolTip-Steuerelement an.
 
 ```
 void Track(
@@ -169,15 +169,15 @@ void Track(
 
 ### <a name="parameters"></a>Parameter
 
-*rect*<br/>
-[in] Gibt an, die Position und Größe des QuickInfo-Steuerelements.
+*Rect*<br/>
+in Gibt die Position und die Größe des QuickInfo-Steuer Elements an.
 
 *strText*<br/>
-[in] Gibt den Text in der QuickInfo angezeigt werden.
+in Gibt den Text an, der in der QuickInfo angezeigt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode zeigt das QuickInfo-Steuerelement an die Position und Größe, die anhand des *Rect*. Wenn die Position, Größe und Text nicht seit dem letzten geändert haben, die diese Methode aufgerufen wurde, hat diese Methode keine Auswirkungen.
+Diese Methode zeigt das QuickInfo-Steuerelement an der von *Rect*angegebenen Position und Größe an. Wenn Position, Größe und Text seit dem letzten Aufruf dieser Methode nicht geändert wurden, hat diese Methode keine Auswirkungen.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -5,50 +5,50 @@ helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-ms.openlocfilehash: e1ee9364cfcd382c8699014fd2ef4a807b63bb0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dab865215a357a29be2ff1cd187ceb1c44af897c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223397"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491886"
 ---
 # <a name="atl-com-desktop-components"></a>ATL-COM-Desktop-Komponenten
 
-Die ATL-dokumentiert die Active Vorlage Library (ATL), einen Satz von Template-basierten C++-Klassen, die die Programmierung von Component Object Model (COM)-Objekten zu vereinfachen. COM ist eine binäre Spezifikation zum Erstellen und auf Windows-Software-Komponenten nutzen. Um die Vorteile von ATL voll nutzen zu können, wird mit COM auszukennen dringend empfohlen. Weitere Informationen zu COM, finden Sie unter [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
+Der ATL-Verweis dokumentiert die Active Template Library (ATL), eine Reihe von Vorlagen basierten C++ Klassen, die die Programmierung von COM-Objekten (Component Object Model) vereinfachen. COM ist eine binäre Spezifikation zum Erstellen und Verarbeiten von Softwarekomponenten unter Windows. Um ATL vollständig nutzen zu können, wird dringend eine funktionierende Vertrautheit mit com empfohlen. Weitere Informationen zu com finden Sie unter [Component Object Model (com)](/windows/win32/com/component-object-model--com--portal).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 [ATL-Klassenübersicht](../atl/atl-class-overview.md)<br/>
-Enthält Links zu und kurze Beschreibungen der ATL-Klassen, die nach Kategorie gruppiert sind.
+Enthält Links zu und kurze Beschreibungen der ATL-Klassen, geordnet nach Kategorie.
 
 [ATL-Klassen und -Strukturen](../atl/reference/atl-classes.md)<br/>
-Enthält Referenzmaterial für die Klassen und Strukturen, die alphabetisch geordnet.
+Bietet Referenzmaterial zu den Klassen und Strukturen, die alphabetisch angeordnet sind.
 
 [ATL-Funktionen](../atl/reference/atl-functions.md)<br/>
-Enthält Referenzmaterial für die globalen Funktionen, die alphabetisch geordnet. Enthält Themen, die die Funktionen in Kategorien organisieren.
+Bietet Referenzmaterial zu den globalen Funktionen, die alphabetisch angeordnet sind. Enthält Themen, in denen die Funktionen in Kategorien organisiert werden.
 
 [Globale ATL-Variablen](../atl/reference/atl-global-variables.md)<br/>
-Enthält Referenzmaterial für die globalen Variablen alphabetisch geordnet.
+Bietet Referenzmaterial zu den globalen Variablen, die alphabetisch angeordnet sind.
 
 [ATL-Makros](../atl/reference/atl-macros.md)<br/>
-Enthält Referenzmaterial für die Makros, die alphabetisch geordnet. Enthält Themen, die die Makros, die in Kategorien organisieren.
+Bietet Referenzmaterial zu den in alphabetischer Reihenfolge sortierten Makros. Enthält Themen, in denen die Makros in Kategorien organisiert werden.
 
 [ATL-TypeDefs](../atl/reference/atl-typedefs.md)<br/>
-Enthält Referenzmaterial für die Typdefinitionen alphabetisch geordnet
+Bietet Referenzmaterial zu den Typdefinitionen, die alphabetisch angeordnet sind
 
 [Worker Archetype](../atl/reference/worker-archetype.md)<br/>
-Enthält Links zu den Archetyp ATL-Worker an.
+Stellt einen Link zum ATL-Worker-Archetype bereit.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
-Enthält Themen über die Programmierung mit der Active Template Library (ATL).
+Enthält Themen zum Programmieren mit dem Active Template Library (ATL).
 
-[ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md)<br/>
-Führt Sie durch die Erstellung eines Steuerelements und zeigt einige ATL-Grundlagen im Prozess.
+[ATL-Tutorial](../atl/active-template-library-atl-tutorial.md)<br/>
+Führt Sie durch die Erstellung eines Steuerelements und veranschaulicht dabei einige ATL-Grundlagen.
 
 [ATL-Beispiele](../overview/visual-cpp-samples.md)<br/>
-Beispielcode, der zeigt, wie mit ATL um COM-Objekte zu schreiben.
+Beispielcode, der zeigt, wie ATL zum Schreiben von COM-Objekten verwendet wird.
 
 [OLE DB-Vorlagen](../data/oledb/ole-db-templates.md)<br/>
 Enthält Referenzmaterial zu den OLE DB-Consumer- und -Anbietervorlagen, einer Gruppe von Vorlagenklassen, die zahlreiche häufig verwendete OLE DB-Schnittstellen implementieren.

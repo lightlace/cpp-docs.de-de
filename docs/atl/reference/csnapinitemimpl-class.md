@@ -1,5 +1,5 @@
 ---
-title: CSnapInItemImpl-Klasse
+title: Csnapinitemimpl-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CSnapInItemImpl
@@ -27,19 +27,19 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 27f3e8a17a9538a72a6592177a88a9b415b1a27c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9ebcf8827d79a9613ce14251d361dd607aa6af3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277707"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496551"
 ---
-# <a name="csnapinitemimpl-class"></a>CSnapInItemImpl-Klasse
+# <a name="csnapinitemimpl-class"></a>Csnapinitemimpl-Klasse
 
-Diese Klasse stellt Methoden zum Implementieren eines-Snap-in-Node-Objekts.
+Diese Klasse stellt Methoden zum Implementieren eines Snap-in-Knoten Objekts bereit.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+>  Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,10 +51,10 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 #### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Abgeleitet von die Klasse `CSnapInItemImpl`.
+Die von `CSnapInItemImpl`abgeleitete Klasse.
 
 *bIsExtension*<br/>
-True, wenn das Objekt eine-Snap-in-Erweiterung. andernfalls "false".
+TRUE, wenn das Objekt eine Snap-in-Erweiterung ist. andernfalls false.
 
 ## <a name="members"></a>Member
 
@@ -68,31 +68,31 @@ True, wenn das Objekt eine-Snap-in-Erweiterung. andernfalls "false".
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CSnapInItemImpl::AddMenuItems](#addmenuitems)|Eine Kontextmenü hinzugefügt Menüelemente.|
-|[CSnapInItemImpl::Command](#command)|Wird von der Konsole aufgerufen, wenn ein benutzerdefiniertes Menüelement ausgewählt ist.|
-|[CSnapInItemImpl::CreatePropertyPages](#createpropertypages)|Das Eigenschaftenblatt des Snap-Ins werden Seiten hinzugefügt.|
-|[CSnapInItemImpl::FillData](#filldata)|Kopiert die Informationen für das Snap-In-Objekt in einen angegebenen Stream.|
-|[CSnapInItemImpl::GetResultPaneInfo](#getresultpaneinfo)|Ruft die `RESULTDATAITEM` Struktur das Snap-in.|
-|[CSnapInItemImpl::GetResultViewType](#getresultviewtype)|Bestimmt den Typ der Ansicht, die von den Ergebnisbereich verwendet.|
-|[CSnapInItemImpl::GetScopePaneInfo](#getscopepaneinfo)|Ruft die `SCOPEDATAITEM` Struktur das Snap-in.|
-|[CSnapInItemImpl::Notify](#notify)|Wird aufgerufen, von der Konsole, um das Snap-in von Aktionen, die vom Benutzer zu benachrichtigen.|
-|[CSnapInItemImpl::QueryPagesFor](#querypagesfor)|Wird aufgerufen, um festzustellen, ob der Knoten-Snap-in-Eigenschaftenseiten unterstützt.|
-|[CSnapInItemImpl::SetMenuInsertionFlags](#setmenuinsertionflags)|Ändert die Menü-Einfügen-Flags für ein Objekt-Snap-in.|
-|[CSnapInItemImpl::SetToolbarButtonInfo](#settoolbarbuttoninfo)|Legt fest, die Informationen der angegebenen Symbolleisten-Schaltfläche.|
-|[CSnapInItemImpl::UpdateMenuState](#updatemenustate)|Aktualisiert den Zustand eines Menüelements Kontext.|
-|[CSnapInItemImpl::UpdateToolbarButton](#updatetoolbarbutton)|Aktualisiert den Zustand der angegebenen Symbolleisten-Schaltfläche.|
+|[CSnapInItemImpl::AddMenuItems](#addmenuitems)|Fügt einem Kontextmenü Menü Elemente hinzu.|
+|[Csnapinitemimpl:: Command](#command)|Wird von der-Konsole aufgerufen, wenn ein benutzerdefiniertes Menü Element ausgewählt wird.|
+|[CSnapInItemImpl::CreatePropertyPages](#createpropertypages)|Fügt dem Eigenschaften Blatt des Snap-Ins Seiten hinzu.|
+|[CSnapInItemImpl::FillData](#filldata)|Kopiert Informationen über das Snap-in-Objekt in einen angegebenen Stream.|
+|[CSnapInItemImpl::GetResultPaneInfo](#getresultpaneinfo)|Ruft die `RESULTDATAITEM` Struktur des Snap-Ins ab.|
+|[CSnapInItemImpl::GetResultViewType](#getresultviewtype)|Bestimmt den Ansichtstyp, der vom Ergebnisbereich verwendet wird.|
+|[CSnapInItemImpl::GetScopePaneInfo](#getscopepaneinfo)|Ruft die `SCOPEDATAITEM` Struktur des Snap-Ins ab.|
+|[CSnapInItemImpl::Notify](#notify)|Wird von der Konsole aufgerufen, um das Snap-in der vom Benutzer ausgeführten Aktionen zu benachrichtigen.|
+|[CSnapInItemImpl::QueryPagesFor](#querypagesfor)|Wird aufgerufen, um festzustellen, ob der Snap-in-Knoten Eigenschaften Seiten unterstützt.|
+|[CSnapInItemImpl::SetMenuInsertionFlags](#setmenuinsertionflags)|Ändert die Menü einfügeflags für ein Snap-in-Objekt.|
+|[CSnapInItemImpl::SetToolbarButtonInfo](#settoolbarbuttoninfo)|Legt die Informationen der angegebenen Symbolleisten Schaltfläche fest.|
+|[CSnapInItemImpl::UpdateMenuState](#updatemenustate)|Aktualisiert den Zustand eines Kontextmenü Elements.|
+|[CSnapInItemImpl::UpdateToolbarButton](#updatetoolbarbutton)|Aktualisiert den Zustand der angegebenen Symbolleisten Schaltfläche.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|Der Name des Objekts-Snap-in.|
-|[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Die Windows `RESULTDATAITEM` Struktur, die verwendet werden, indem die `CSnapInItemImpl` Objekt.|
-|[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Die Windows `SCOPEDATAITEM` Struktur, die verwendet werden, indem die `CSnapInItemImpl` Objekt.|
+|[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|Der Name des Snap-in-Objekts.|
+|[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|`RESULTDATAITEM` Die`CSnapInItemImpl` vom-Objekt verwendete Windows-Struktur.|
+|[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|`SCOPEDATAITEM` Die`CSnapInItemImpl` vom-Objekt verwendete Windows-Struktur.|
 
 ## <a name="remarks"></a>Hinweise
 
-`CSnapInItemImpl` Stellt eine grundlegende Implementierung für ein Snap-in-Knotenobjekt, z. B. hinzugefügt werden, Menüelemente und Symbolleisten und Befehle für den Knoten-Snap-in für die entsprechenden Handler-Funktion weiterleiten. Diese Funktionen werden mithilfe von mehrere Schnittstellen implementiert und Zuordnungstypen. Die Standardimplementierung verarbeitet Benachrichtigungen, die von der richtigen Instanz der abgeleiteten Klasse bestimmen und das anschließende Weiterleiten der Nachricht an die richtige Instanz an das Node-Objekt gesendet werden.
+`CSnapInItemImpl`stellt eine grundlegende Implementierung für ein Snap-in-Knoten Objekt bereit, z. b. das Hinzufügen von Menü Elementen und Symbolleisten und das Weiterleiten von Befehlen für den Snap-in-Knoten zur entsprechenden Handlerfunktion. Diese Features werden mithilfe verschiedener Schnittstellen und Kartentypen implementiert. Die Standard Implementierung verarbeitet Benachrichtigungen, die an das Knoten Objekt gesendet werden, indem die richtige Instanz der abgeleiteten Klasse ermittelt und die Nachricht dann an die richtige Instanz weitergeleitet wird.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -102,11 +102,11 @@ True, wenn das Objekt eine-Snap-in-Erweiterung. andernfalls "false".
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlsnap.h
+**Header:** atlsnap. h
 
-##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems
+##  <a name="addmenuitems"></a>Csnapinitemimpl:: AddMenuItems
 
-Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::AddMenuItems](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems).
+Diese Methode implementiert die Win32-Funktion [IExtendContextMenu:: AddMenuItems](/windows/win32/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems).
 
 ```
 AddMenuItems(
@@ -118,33 +118,33 @@ AddMenuItems(
 ### <a name="parameters"></a>Parameter
 
 *piCallback*<br/>
-[in] Zeiger auf die `IContextMenuCallback` können, die im Kontextmenü Elemente hinzufügen.
+in Ein Zeiger auf `IContextMenuCallback` den, der dem Kontextmenü Elemente hinzufügen kann.
 
-*pInsertionAllowed*<br/>
-[in, out] Bezeichnet die Microsoft Management Console MMC benutzerdefinierte Menüelemente Einfügemarken, die verwendet werden können. Dies kann eine Kombination der folgenden Flags sein:
+*pinsertionallowed*<br/>
+[in, out] Identifiziert von Microsoft Management Console (MMC) definierte Einfügepunkte für Menü Elemente, die verwendet werden können. Dabei kann es sich um eine Kombination der folgenden Flags handeln:
 
 - CCM_INSERTIONALLOWED_TOP Elemente können am oberen Rand eines Kontextmenüs eingefügt werden.
 
-- CCM_INSERTIONALLOWED_NEW Elemente können im Untermenü "neu erstellen" eingefügt werden.
+- CCM_INSERTIONALLOWED_NEW Items können im Untermenü neue erstellen eingefügt werden.
 
-- CCM_INSERTIONALLOWED_TASK Elemente können im Untermenü Aufgabe eingefügt werden.
+- CCM_INSERTIONALLOWED_TASK Items können im Untermenü "Aufgabe" eingefügt werden.
 
-- CCM_INSERTIONALLOWED_VIEW Elemente können im Menü Ansicht Symbolleiste oder im Untermenü anzeigen des Kontextmenüs Ergebnis Bereich eingefügt werden.
+- CCM_INSERTIONALLOWED_VIEW Items können im Menü der Symbolleisten Ansicht oder im Untermenü Ansicht des Kontextmenüs für den Ergebnisbereich eingefügt werden.
 
 *Typ*<br/>
-[in] Gibt den Typ des Objekts. Es kann einen der folgenden Werte aufweisen:
+in Gibt den Objekttyp an. Sie kann einen der folgenden Werte aufweisen:
 
-- CCT_SCOPE Datenobjekt, das für den Bereich im Bereich-Kontext.
+- CCT_SCOPE-Datenobjekt für den Kontext Bereichs Kontext.
 
-- CCT_RESULT Datenobjekt, das für den Bereich der Ergebniskontext.
+- CCT_RESULT-Datenobjekt für den Kontext des Ergebnis Bereichs.
 
-- CCT_SNAPIN_MANAGER Datenobjekt, das für den Kontext-Snap-in-Managers.
+- CCT_SNAPIN_MANAGER-Datenobjekt für den Snap-In-Manager-Kontext.
 
-- CCT_UNINITIALIZED Datenobjekt weist einen ungültigen Typ.
+- Das CCT_UNINITIALIZED-Datenobjekt weist einen ungültigen Typ auf.
 
-##  <a name="command"></a>  CSnapInItemImpl::Command
+##  <a name="command"></a>Csnapinitemimpl:: Command
 
-Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::Command](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-command).
+Diese Methode implementiert die Win32-Funktion [IExtendContextMenu:: Command](/windows/win32/api/mmc/nf-mmc-iextendcontextmenu-command).
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -153,22 +153,22 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 ### <a name="parameters"></a>Parameter
 
 *lCommandID*<br/>
-[in] Gibt den Befehlsbezeichner des Menüelements.
+in Gibt den Befehls Bezeichner des Menü Elements an.
 
 *Typ*<br/>
-[in] Gibt den Typ des Objekts. Es kann einen der folgenden Werte aufweisen:
+in Gibt den Objekttyp an. Sie kann einen der folgenden Werte aufweisen:
 
-- CCT_SCOPE Datenobjekt, das für den Bereich im Bereich-Kontext.
+- CCT_SCOPE-Datenobjekt für den Kontext Bereichs Kontext.
 
-- CCT_RESULT Datenobjekt, das für den Bereich der Ergebniskontext.
+- CCT_RESULT-Datenobjekt für den Kontext des Ergebnis Bereichs.
 
-- CCT_SNAPIN_MANAGER Datenobjekt, das für den Kontext-Snap-in-Managers.
+- CCT_SNAPIN_MANAGER-Datenobjekt für den Snap-In-Manager-Kontext.
 
-- CCT_UNINITIALIZED Datenobjekt weist einen ungültigen Typ.
+- Das CCT_UNINITIALIZED-Datenobjekt weist einen ungültigen Typ auf.
 
-##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages
+##  <a name="createpropertypages"></a>Csnapinitemimpl:: "deatepropertypages"
 
-Diese Methode implementiert die Win32-Funktion [IExtendPropertySheet::CreatePropertyPages](/windows/desktop/api/mmc/nn-mmc-iextendpropertysheet2).
+Diese Methode implementiert die Win32-Funktion [IExtendPropertySheet:: deatepropertypages](/windows/win32/api/mmc/nn-mmc-iextendpropertysheet2).
 
 ```
 CreatePropertyPages(
@@ -181,26 +181,26 @@ CreatePropertyPages(
 ### <a name="parameters"></a>Parameter
 
 *lpProvider*<br/>
-[in] Zeiger auf die `IPropertySheetCallback` Schnittstelle.
+in Ein Zeiger auf `IPropertySheetCallback` die-Schnittstelle.
 
-*handle*<br/>
-[in] Gibt das Handle, das die benachrichtigungsmeldung MMCN_PROPERTY_CHANGE an die entsprechenden Datenklasse weitergeleitet.
+*bewältigen*<br/>
+in Gibt das Handle an, das zum Weiterleiten der MMCN_PROPERTY_CHANGE-Benachrichtigungs Meldung an die entsprechende Datenklasse verwendet wird.
 
 *pUnk*<br/>
-[in] Zeiger auf die `IExtendPropertySheet` Schnittstelle für das Objekt, das Kontextinformationen über den Knoten enthält.
+in Ein Zeiger auf `IExtendPropertySheet` die-Schnittstelle für das-Objekt, das Kontextinformationen über den Knoten enthält.
 
 *Typ*<br/>
-[in] Gibt den Typ des Objekts. Es kann einen der folgenden Werte aufweisen:
+in Gibt den Objekttyp an. Sie kann einen der folgenden Werte aufweisen:
 
-- CCT_SCOPE Datenobjekt, das für den Bereich im Bereich-Kontext.
+- CCT_SCOPE-Datenobjekt für den Kontext Bereichs Kontext.
 
-- CCT_RESULT Datenobjekt, das für den Bereich der Ergebniskontext.
+- CCT_RESULT-Datenobjekt für den Kontext des Ergebnis Bereichs.
 
-- CCT_SNAPIN_MANAGER Datenobjekt, das für den Kontext-Snap-in-Managers.
+- CCT_SNAPIN_MANAGER-Datenobjekt für den Snap-In-Manager-Kontext.
 
-- CCT_UNINITIALIZED Datenobjekt weist einen ungültigen Typ.
+- Das CCT_UNINITIALIZED-Datenobjekt weist einen ungültigen Typ auf.
 
-##  <a name="csnapinitemimpl"></a>  CSnapInItemImpl::CSnapInItemImpl
+##  <a name="csnapinitemimpl"></a>Csnapinitemimpl:: csnapinitemimpl
 
 Erstellt ein `CSnapInItemImpl`-Objekt.
 
@@ -208,7 +208,7 @@ Erstellt ein `CSnapInItemImpl`-Objekt.
 CSnapInItemImpl();
 ```
 
-##  <a name="filldata"></a>  CSnapInItemImpl::FillData
+##  <a name="filldata"></a>Csnapinitemimpl:: filldata
 
 Diese Funktion wird aufgerufen, um Informationen über das Element abzurufen.
 
@@ -219,18 +219,18 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="parameters"></a>Parameter
 
 *cf*<br/>
-[in] Das Format (Text, rich-Text oder rich-Text mit OLE-Elemente) aus der Zwischenablage.
+in Das Format (Text, Rich-Text oder Rich Text mit OLE-Elementen) der Zwischenablage.
 
 *pStream*<br/>
-[in] Ein Zeiger auf den Stream, der die Daten des Objekts enthält.
+in Ein Zeiger auf den Stream, der die Objektdaten enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Um diese Funktion ordnungsgemäß zu implementieren, kopieren Sie die richtige Informationen in den Datenstrom (*pStream*), je nachdem, auf das Format der Zwischenablage erkennbar *Cf*.
+Um diese Funktion ordnungsgemäß zu implementieren, kopieren Sie die richtigen Informationen in den Stream (*pStream*), abhängig vom Zwischenablage Format, das von *CF*angegeben wird.
 
-##  <a name="getresultviewtype"></a>  CSnapInItemImpl::GetResultViewType
+##  <a name="getresultviewtype"></a>Csnapinitemimpl:: getresultviewtype
 
-Rufen Sie diese Funktion, um den Typ der Ansicht für den Ergebnisbereich des Objekts-Snap-in abzurufen.
+Rufen Sie diese Funktion auf, um den Typ der Ansicht für den Ergebnisbereich des Snap-in-Objekts abzurufen.
 
 ```
 GetResultViewType(
@@ -241,18 +241,18 @@ GetResultViewType(
 ### <a name="parameters"></a>Parameter
 
 *ppViewType*<br/>
-[out] Zeiger auf die Adresse des sichttyps zurückgegeben.
+vorgenommen Ein Zeiger auf die Adresse des zurückgegebenen Ansichts Typs.
 
 *pViewOptions*<br/>
-[out] Zeiger auf die MMC_VIEW_OPTIONS-Enumeration, die Konsole mit den Optionen, die gemäß der besitzenden-Snap-in bietet. Dieser Wert kann eine der folgenden sein:
+vorgenommen Ein Zeiger auf die MMC_VIEW_OPTIONS-Enumeration, die der Konsole die Optionen bereitstellt, die vom besitzenden Snap-in angegeben werden. Folgende Werte sind möglich:
 
-- MMC_VIEW_OPTIONS_NOLISTVIEWS = 0 x 00000001 weisen Sie die Konsole, davon absehen, von der Vorlage der Standardliste Ansicht Auswahl in der **Ansicht** Menü. Das Snap-in zum Anzeigen von eigenen benutzerdefinierten Ansichten nur im Ergebnisbereich anzeigen können. Dies ist das einzige Optionsflag zu diesem Zeitpunkt definiert.
+- MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 weist die Konsole an, keine Standardoptionen für die Listenansicht im Menü **Ansicht anzuzeigen** . Ermöglicht dem Snap-in, seine eigenen benutzerdefinierten Ansichten nur im Ergebnis Ansichts Bereich anzuzeigen. Dies ist das einzige zu diesem Zeitpunkt definierte Optionsflag.
 
-- MMC_VIEW_OPTIONS_NONE = 0 ermöglicht die Standardoptionen für die Ansicht.
+- MMC_VIEW_OPTIONS_NONE = 0 ermöglicht die Standard Ansichtsoptionen.
 
-##  <a name="getscopepaneinfo"></a>  CSnapInItemImpl::GetScopePaneInfo
+##  <a name="getscopepaneinfo"></a>Csnapinitemimpl:: getscopepaneinfo
 
-Mit dieser Funktion wird zum Abrufen der `SCOPEDATAITEM` Struktur das Snap-in.
+Rufen Sie diese Funktion auf, `SCOPEDATAITEM` um die Struktur des Snap-Ins abzurufen.
 
 ```
 GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
@@ -261,11 +261,11 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 ### <a name="parameters"></a>Parameter
 
 *pScopeDataItem*<br/>
-[out] Ein Zeiger auf die `SCOPEDATAITEM` Struktur der `CSnapInItemImpl` Objekt.
+vorgenommen Ein Zeiger auf die `SCOPEDATAITEM` Struktur `CSnapInItemImpl` des-Objekts.
 
-##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
+##  <a name="getresultpaneinfo"></a>Csnapinitemimpl:: getresultpaneingefo
 
-Mit dieser Funktion wird zum Abrufen der `RESULTDATAITEM` Struktur das Snap-in.
+Rufen Sie diese Funktion auf, `RESULTDATAITEM` um die Struktur des Snap-Ins abzurufen.
 
 ```
 GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
@@ -274,35 +274,35 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 ### <a name="parameters"></a>Parameter
 
 *pResultDataItem*<br/>
-[out] Ein Zeiger auf die `RESULTDATAITEM` Struktur der `CSnapInItemImpl` Objekt.
+vorgenommen Ein Zeiger auf die `RESULTDATAITEM` Struktur `CSnapInItemImpl` des-Objekts.
 
-##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
+##  <a name="m_bstrdisplayname"></a>Csnapinitemimpl:: m_bstrDisplayName
 
-Enthält die Zeichenfolge, die für das Knotenelement angezeigt.
+Enthält die Zeichenfolge, die für das Knoten Element angezeigt wird.
 
 ```
 CComBSTR m_bstrDisplayName;
 ```
 
-##  <a name="m_scopedataitem"></a>  CSnapInItemImpl::m_scopeDataItem
+##  <a name="m_scopedataitem"></a>Csnapinitemimpl:: m_scopeDataItem
 
-Die `SCOPEDATAITEM` Objektstruktur-Snap-in-Daten.
+Die `SCOPEDATAITEM` Struktur des Snap-in-Datenobjekts.
 
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```
 
-##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem
+##  <a name="m_resultdataitem"></a>Csnapinitemimpl:: m_resultDataItem
 
-Die [RESULTDATAITEM](/windows/desktop/api/mmc/ns-mmc-resultdataitem) Objektstruktur-Snap-in-Daten.
+Die [RESULTDATAITEM](/windows/win32/api/mmc/ns-mmc-resultdataitem) -Struktur des Snap-in-Datenobjekts.
 
 ```
 RESULTDATAITEM m_resultDataItem;
 ```
 
-##  <a name="notify"></a>  CSnapInItemImpl::Notify
+##  <a name="notify"></a>Csnapinitemimpl:: notify
 
-Aufgerufen, wenn das Snap-In-Objekt auf der Benutzer ausgeführt wird.
+Wird aufgerufen, wenn das Snap-in-Objekt vom Benutzer bearbeitet wird.
 
 ```
 STDMETHOD(Notify)(
@@ -317,70 +317,70 @@ STDMETHOD(Notify)(
 ### <a name="parameters"></a>Parameter
 
 *event*<br/>
-[in] Gibt eine Aktion, die von einem Benutzer an. Die folgenden Benachrichtigungen sind möglich:
+in Identifiziert eine Aktion, die von einem Benutzer ausgeführt wird. Die folgenden Benachrichtigungen sind möglich:
 
-- MMCN_ACTIVATE gesendet, wenn ein Fenster wird aktiviert und deaktiviert.
+- MMCN_ACTIVATE wird gesendet, wenn ein Fenster aktiviert und deaktiviert wird.
 
-- MMCN_ADD_IMAGES gesendet, um den Ergebnisbereich Bilder hinzuzufügen.
+- MMCN_ADD_IMAGES wird gesendet, um dem Ergebnisbereich Bilder hinzuzufügen.
 
-- MMCN_BTN_CLICK gesendet, wenn der Benutzer eine Symbolleisten-Schaltflächen klickt.
+- MMCN_BTN_CLICK wird gesendet, wenn der Benutzer auf eine der Symbolleisten Schaltflächen klickt.
 
-- MMCN_CLICK wird gesendet, wenn ein Benutzer eine Maustaste drückt, die auf ein Listenansichtselement.
+- MMCN_CLICK wird gesendet, wenn ein Benutzer in einem Listen Ansichts Element auf eine Maustaste klickt.
 
-- MMCN_DBLCLICK gesendet, wenn ein Benutzer auf eine Maustaste auf ein Listenansichtselement doppelklickt.
+- MMCN_DBLCLICK wird gesendet, wenn ein Benutzer auf eine Maustaste auf ein Listen Ansichts Element doppelklickt.
 
-- MMCN_DELETE gesendet wird, um das Snap-in zu informieren, die das Objekt sollte gelöscht.
+- MMCN_DELETE gesendet, um das Snap-in zu informieren, dass das Objekt gelöscht werden soll.
 
-- MMCN_EXPAND wird gesendet, wenn Sie ein Ordner erweitert oder verkürzt werden muss.
+- MMCN_EXPAND wird gesendet, wenn ein Ordner erweitert oder verkleinert werden muss.
 
-- MMCN_MINIMIZED gesendet, wenn ein Fenster wird minimiert oder maximiert.
+- MMCN_MINIMIZED wird gesendet, wenn ein Fenster minimiert oder maximiert wird.
 
-- MMCN_PROPERTY_CHANGE gesendet, um eine Objekt-Snap-in zu benachrichtigen die Ansicht für das Snap-In-Objekt zu ändern.
+- MMCN_PROPERTY_CHANGE wird gesendet, um ein Snap-in-Objekt zu benachrichtigen, dass die Ansicht des Snap-in-Objekts gerade geändert wird.
 
-- MMCN_REMOVE_CHILDREN gesendet, wenn das Snap-in die gesamte Teilstruktur löschen muss, ist es unter dem angegebenen Knoten hinzugefügt.
+- MMCN_REMOVE_CHILDREN wird gesendet, wenn das Snap-in die gesamte Unterstruktur löschen muss, die unterhalb des angegebenen Knotens hinzugefügt wurde.
 
-- MMCN_RENAME werden zum ersten Mal zur Umbenennung einer Abfrage und beim zweiten Mal gesendet, um die Umbenennung ist.
+- MMCN_RENAME hat das erste Mal gesendet, um eine Umbenennung abzufragen, und das zweite Mal zum Umbenennen.
 
-- MMCN_SELECT wird gesendet, wenn ein Element im Ansichtsbereich Bereich oder das Ergebnis ausgewählt ist.
+- MMCN_SELECT wird gesendet, wenn ein Element im Bereich Bereich oder Ergebnis Ansicht ausgewählt ist.
 
-- MMCN_SHOW wird gesendet, wenn ein Bereich ausgewählt oder zum ersten Mal abgewählt.
+- MMCN_SHOW wird gesendet, wenn ein Bereichs Element zum ersten Mal ausgewählt oder deaktiviert wird.
 
-- MMCN_VIEW_CHANGE wird gesendet, wenn das Snap-in allen Ansichten aktualisieren, wenn eine Änderung vorgenommen wird.
+- MMCN_VIEW_CHANGE wird gesendet, wenn das Snap-in alle Ansichten aktualisieren kann, wenn eine Änderung auftritt.
 
 *arg*<br/>
-[in] Hängt von der Benachrichtigungstyp.
+in Hängt vom Benachrichtigungstyp ab.
 
 *param*<br/>
-[in] Hängt von der Benachrichtigungstyp.
+in Hängt vom Benachrichtigungstyp ab.
 
 *pComponentData*<br/>
-[out] Ein Zeiger auf die objektimplementierung `IComponentData`. Dieser Parameter ist NULL, wenn die Benachrichtigung nicht über weitergeleitet wird `IComponentData::Notify`.
+vorgenommen Ein Zeiger auf das Objekt, `IComponentData`das implementiert. Dieser Parameter ist NULL, wenn die Benachrichtigung nicht von `IComponentData::Notify`weitergeleitet wird.
 
 *pComponent*<br/>
-[out] Ein Zeiger auf das Objekt, das implementiert `IComponent`. Dieser Parameter ist NULL, wenn die Benachrichtigung nicht über weitergeleitet wird `IComponent::Notify`.
+vorgenommen Ein Zeiger auf das Objekt, das `IComponent`implementiert. Dieser Parameter ist NULL, wenn die Benachrichtigung nicht von `IComponent::Notify`weitergeleitet wird.
 
 *Typ*<br/>
-[in] Gibt den Typ des Objekts. Es kann einen der folgenden Werte aufweisen:
+in Gibt den Objekttyp an. Sie kann einen der folgenden Werte aufweisen:
 
-- CCT_SCOPE Datenobjekt, das für den Bereich im Bereich-Kontext.
+- CCT_SCOPE-Datenobjekt für den Kontext Bereichs Kontext.
 
-- CCT_RESULT Datenobjekt, das für den Bereich der Ergebniskontext.
+- CCT_RESULT-Datenobjekt für den Kontext des Ergebnis Bereichs.
 
-- CCT_SNAPIN_MANAGER Datenobjekt, das für den Kontext-Snap-in-Managers.
+- CCT_SNAPIN_MANAGER-Datenobjekt für den Snap-In-Manager-Kontext.
 
-- CCT_UNINITIALIZED Datenobjekt weist einen ungültigen Typ.
+- Das CCT_UNINITIALIZED-Datenobjekt weist einen ungültigen Typ auf.
 
-##  <a name="querypagesfor"></a>  CSnapInItemImpl::QueryPagesFor
+##  <a name="querypagesfor"></a>Csnapinitemimpl:: querypgesfor
 
-Wird aufgerufen, um festzustellen, ob der Knoten-Snap-in-Eigenschaftenseiten unterstützt.
+Wird aufgerufen, um festzustellen, ob der Snap-in-Knoten Eigenschaften Seiten unterstützt.
 
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```
 
-##  <a name="setmenuinsertionflags"></a>  CSnapInItemImpl::SetMenuInsertionFlags
+##  <a name="setmenuinsertionflags"></a>Csnapinitemimpl:: setmenuinsertionflags
 
-Mit dieser Funktion können Sie ändern, die im Menü Einfügen Flags, die gemäß *pInsertionAllowed*, für das Snap-In-Objekt.
+Mit dieser Funktion können Sie für das Snap-in-Objekt die durch *pinsertionallowed*angegebenen Menü einfügeflags ändern.
 
 ```
 void SetMenuInsertionFlags(
@@ -391,28 +391,28 @@ void SetMenuInsertionFlags(
 ### <a name="parameters"></a>Parameter
 
 *bBeforeInsertion*<br/>
-[in] Ungleich NULL ist, wenn die Funktion aufgerufen werden soll, bevor Sie das Kontextmenü Elemente hinzugefügt werden; andernfalls 0.
+in Ein Wert ungleich 0 (null), wenn die Funktion aufgerufen werden soll, bevor Elemente zum Kontextmenü hinzugefügt werden. andernfalls 0.
 
-*pInsertionAllowed*<br/>
-[in, out] Bezeichnet die Microsoft Management Console MMC benutzerdefinierte Menüelemente Einfügemarken, die verwendet werden können. Dies kann eine Kombination der folgenden Flags sein:
+*pinsertionallowed*<br/>
+[in, out] Identifiziert von Microsoft Management Console (MMC) definierte Einfügepunkte für Menü Elemente, die verwendet werden können. Dabei kann es sich um eine Kombination der folgenden Flags handeln:
 
 - CCM_INSERTIONALLOWED_TOP Elemente können am oberen Rand eines Kontextmenüs eingefügt werden.
 
-- CCM_INSERTIONALLOWED_NEW Elemente können im Untermenü "neu erstellen" eingefügt werden.
+- CCM_INSERTIONALLOWED_NEW Items können im Untermenü neue erstellen eingefügt werden.
 
-- CCM_INSERTIONALLOWED_TASK Elemente können im Untermenü Aufgabe eingefügt werden.
+- CCM_INSERTIONALLOWED_TASK Items können im Untermenü "Aufgabe" eingefügt werden.
 
-- CCM_INSERTIONALLOWED_VIEW Elemente können im Menü Ansicht Symbolleiste oder im Untermenü anzeigen des Kontextmenüs Ergebnis Bereich eingefügt werden.
+- CCM_INSERTIONALLOWED_VIEW Items können im Menü der Symbolleisten Ansicht oder im Untermenü Ansicht des Kontextmenüs für den Ergebnisbereich eingefügt werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn Sie einen primären-Snap-in entwickeln, können Sie diese Zurücksetzen eines der einfügen-Flags als eine Möglichkeit zum Einschränken der Art der Menüelemente, die eine Erweiterung von Drittanbietern hinzufügen können. Die primäre-Snap-in kann z. B. das CCM_INSERTIONALLOWED_NEW-Flag, um zu verhindern, dass Erweiterungen ihre eigenen erstellen neue Menüelemente hinzufügen löschen.
+Wenn Sie ein primäres Snap-in entwickeln, können Sie alle einfügeflags als Möglichkeit zum Einschränken der Art von Menü Elementen zurücksetzen, die von einer Drittanbieter Erweiterung hinzugefügt werden können. Beispielsweise kann das primäre Snap-in das Flag CCM_INSERTIONALLOWED_NEW löschen, um zu verhindern, dass Erweiterungen eigene Menü Elemente erstellen.
 
-Sie sollten nicht versuchen, zum Festlegen von Bits im *pInsertionAllowed* , wurden ursprünglich deaktiviert. Zukünftige Versionen von MMC können Bits, die derzeit nicht definiert wurden, sodass Sie Bits, die derzeit nicht definiert sind, nicht ändern sollten.
+Sie sollten nicht versuchen, Bits in *pinsertionallowed* festzulegen, die ursprünglich gelöscht wurden. In zukünftigen Versionen von MMC werden möglicherweise Bits verwendet, die derzeit nicht definiert sind. Daher sollten Sie keine Bits ändern, die derzeit nicht definiert sind.
 
-##  <a name="settoolbarbuttoninfo"></a>  CSnapInItemImpl::SetToolbarButtonInfo
+##  <a name="settoolbarbuttoninfo"></a>Csnapinitemimpl:: settoolbarbuttoninfo
 
-Rufen Sie diese Funktion, um alle Formatvorlagen für Symbolleistenschaltflächen, der das Snap-in-Objekt, vor der Erstellung der Symbolleiste zu ändern.
+Mit dieser Funktion können Sie alle Symbolleisten-Schaltflächen Stile des Snap-in-Objekts ändern, bevor die Symbolleiste erstellt wird.
 
 ```
 void SetToolbarButtonInfo(
@@ -424,39 +424,39 @@ void SetToolbarButtonInfo(
 ### <a name="parameters"></a>Parameter
 
 *ID*<br/>
-[in] Die ID des der Symbolleisten-Schaltfläche festgelegt werden.
+in Die ID der festzulegenden Symbolleisten-Schaltfläche.
 
 *fsState*<br/>
-[in] Die Zustandsflags der Schaltfläche. Hierbei kann es sich um eine oder mehrere der folgenden sein:
+in Die Statusflags der Schaltfläche. Kann eine oder mehrere der folgenden sein:
 
-- TBSTATE_CHECKED die Schaltfläche mit den hat des Format TBSTYLE_CHECKED und ist gedrückt wird.
+- TBSTATE_CHECKED die Schaltfläche hat den TBSTYLE_CHECKED-Stil und wird gedrückt.
 
-- TBSTATE_ENABLED die Schaltfläche mit den akzeptiert Benutzereingaben. Eine Schaltfläche, die keine von diesem Status akzeptiert keine Benutzereingaben und abgeblendet.
+- TBSTATE_ENABLED die Schaltfläche akzeptiert Benutzereingaben. Eine Schaltfläche, die nicht über diesen Zustand verfügt, akzeptiert keine Benutzereingaben und ist ausgegraut.
 
-- TBSTATE_HIDDEN die Schaltfläche nicht sichtbar ist, und es keine Benutzereingaben empfangen.
+- TBSTATE_HIDDEN die Schaltfläche ist nicht sichtbar und kann keine Benutzereingaben empfangen.
 
 - TBSTATE_INDETERMINATE die Schaltfläche ist abgeblendet.
 
-- TBSTATE_PRESSED die Schaltfläche wird gedrückt wird.
+- TBSTATE_PRESSED die Schaltfläche wird gedrückt.
 
-- TBSTATE_WRAP ein Zeilenumbruch folgt auf die Schaltfläche. Die Schaltfläche muss auch die TBSTATE_ENABLED verfügen.
+- TBSTATE_WRAP ein Zeilenumbruch folgt der Schaltfläche. Die Schaltfläche muss auch über das TBSTATE_ENABLED verfügen.
 
 *fsType*<br/>
-[in] Die Zustandsflags der Schaltfläche. Hierbei kann es sich um eine oder mehrere der folgenden sein:
+in Die Statusflags der Schaltfläche. Kann eine oder mehrere der folgenden sein:
 
-- TBSTYLE_BUTTON erstellt eine Standardschaltflächen.
+- TBSTYLE_BUTTON erstellt eine Standard-pushschaltfläche.
 
-- TBSTYLE_CHECK erstellt eine Schaltfläche, die zwischen den gedrückt- oder nicht gedrückt-Zuständen jedes Mal den Benutzer schaltet darauf klickt. Die Schaltfläche "hat eine andere Hintergrundfarbe aus, wenn es im gedrückten Zustand ist.
+- TBSTYLE_CHECK erstellt eine Schaltfläche, die jedes Mal zwischen den gedrückten und nicht gedrückten Zuständen wechselt, wenn der Benutzer darauf klickt. Die Schaltfläche hat eine andere Hintergrundfarbe, wenn Sie sich im gedrückten Zustand befindet.
 
-- TBSTYLE_CHECKGROUP erstellt, für das eine Kontrollkästchen-Schaltfläche, die bleibt gedrückt, bis in der Gruppe eine andere Schaltfläche gedrückt wird.
+- TBSTYLE_CHECKGROUP erstellt eine Check-Taste, die gedrückt bleibt, bis eine andere Schaltfläche in der Gruppe gedrückt wird.
 
-- TBSTYLE_GROUP erstellt, für das eine Schaltfläche, die bleibt gedrückt, bis in der Gruppe eine andere Schaltfläche gedrückt wird.
+- TBSTYLE_GROUP erstellt eine Schaltfläche, die gedrückt bleibt, bis eine andere Schaltfläche in der Gruppe gedrückt wird.
 
-- TBSTYLE_SEP erstellt ein Trennzeichen, die eine kleine zeitliche Lücke zwischen Schaltflächengruppen bereitstellen. Eine Schaltfläche mit diesem Format erhält keine Benutzereingaben.
+- TBSTYLE_SEP erstellt ein Trennzeichen, das eine kleine Lücke zwischen Schaltflächen Gruppen bereitstellt. Eine Schaltfläche mit diesem Stil erhält keine Benutzereingaben.
 
-##  <a name="updatemenustate"></a>  CSnapInItemImpl::UpdateMenuState
+##  <a name="updatemenustate"></a>Csnapinitemimpl:: updatemenustate
 
-Rufen Sie diese Funktion, um ein Menüelement zu ändern, bevor es in das Kontextmenü der Snap-In-Objekt eingefügt wird.
+Mit dieser Funktion können Sie ein Menü Element ändern, bevor es in das Kontextmenü des Snap-in-Objekts eingefügt wird.
 
 ```
 void UpdateMenuState(
@@ -468,45 +468,45 @@ void UpdateMenuState(
 ### <a name="parameters"></a>Parameter
 
 *ID*<br/>
-[in] Die ID des Menüelements festgelegt werden.
+in Die ID des festzulegenden Menü Elements.
 
 *pBuf*<br/>
-[in] Ein Zeiger auf die Zeichenfolge für das Menüelement aktualisiert werden.
+in Ein Zeiger auf die Zeichenfolge für das zu Aktualisier Ende Menü Element.
 
 *flags*<br/>
-[in] Gibt die neue Statusflags. Dies kann eine Kombination der folgenden Flags sein:
+in Gibt die neuen Statusflags an. Dabei kann es sich um eine Kombination der folgenden Flags handeln:
 
-- MF_POPUP gibt an, dass dies ein Untermenü innerhalb des Kontextmenüs. Menüelemente, Einfügemarken und weiteren Untermenüs können hinzugefügt werden diese Untermenü mithilfe der `lCommandID` als ihre `IInsertionPointID`.
+- MF_POPUP gibt an, dass es sich um ein Untermenü im Kontextmenü handelt. Menü Elemente, Einfügepunkte und weitere Untermenüs können zu diesem Untermenü `lCommandID` `IInsertionPointID`hinzugefügt werden.
 
-- MF_BITMAP und MF_OWNERDRAW, die diese Flags sind nicht zulässig und führt dazu, dass ein Wert, der E_INVALIDARG zurückgegeben.
+- MF_BITMAP und MF_OWNERDRAW diese Flags sind nicht zulässig und führen zu einem Rückgabewert von E_INVALIDARG.
 
-- MF_SEPARATOR zeichnet eine horizontale Trennlinie. Nur `IContextMenuProvider` Menüelemente mit MF_SEPARATOR hinzufügen können.
+- MF_SEPARATOR zeichnet eine horizontale Trennlinie. Nur `IContextMenuProvider` mit MF_SEPARATOR Set können Menü Elemente hinzugefügt werden.
 
-- MF_CHECKED wird ein Häkchen neben dem Menüelement platziert.
+- MF_CHECKED platziert ein Häkchen neben dem Menü Element.
 
-- MF_DISABLED deaktiviert das Menüelement, damit es nicht ausgewählt werden kann, aber das Flag wird nicht grau, es.
+- MF_DISABLED deaktiviert das Menü Element, sodass es nicht ausgewählt werden kann, aber das Flag ist nicht grau.
 
-- MF_ENABLED ermöglicht dem Menüelement, das sie ausgewählt werden kann es vom grau Zustand wiederherstellen, mit.
+- MF_ENABLED aktiviert das Menü Element, sodass es ausgewählt werden kann, sodass es aus seinem ausgefallenen Zustand wieder hergestellt werden kann.
 
-- MF_GRAYED deaktiviert das Menüelement, das es abblendet, damit es nicht ausgewählt werden kann.
+- MF_GRAYED deaktiviert das Menü Element, sodass es nicht ausgewählt werden kann.
 
-- Identisch mit der MF_MENUBREAK für eine Menüleiste flag MF_MENUBARBREAK-Funktionen. Für eine Dropdown-Menü, Untermenüs oder im Kontextmenü ist die neue Spalte durch eine vertikale Linie von der alten Spalte getrennt.
+- MF_MENUBARBREAK funktioniert genauso wie das MF_MENUBREAK-Flag für eine Menüleiste. Für ein Dropdown Menü, ein Untermenü oder ein Kontextmenü wird die neue Spalte durch eine vertikale Linie von der alten Spalte getrennt.
 
-- MF_MENUBREAK platziert das Element in einer neuen Zeile (für eine Menüleiste) oder in einer neuen Spalte (für eine Dropdown-Menü, Untermenüs oder Kontextmenü), ohne die Trennung von Spalten.
+- MF_MENUBREAK platziert das Element in einer neuen Zeile (für eine Menüleiste) oder in einer neuen Spalte (für ein Dropdown Menü, ein Untermenü oder ein Kontextmenü), ohne Spalten zu trennen.
 
-- MF_UNCHECKED ist platzieren kein Häkchen neben dem Element (Standard).
+- MF_UNCHECKED platziert kein Häkchen neben dem Element (Standard).
 
-Die folgenden Gruppen von Flags können nicht zusammen verwendet werden:
+Die folgenden Gruppen von Flags können nicht gleichzeitig verwendet werden:
 
-- MF_DISABLED MF_ENABLED und MF_GRAYED.
+- MF_DISABLED, MF_ENABLED und MF_GRAYED.
 
 - MF_MENUBARBREAK und MF_MENUBREAK.
 
 - MF_CHECKED und MF_UNCHECKED.
 
-##  <a name="updatetoolbarbutton"></a>  CSnapInItemImpl::UpdateToolbarButton
+##  <a name="updatetoolbarbutton"></a>Csnapinitemimpl:: updatetoolbarbutton
 
-Rufen Sie diese Funktion aus, um eine Symbolleisten-Schaltfläche des-Snap-in-Objekts, zu ändern, bevor er angezeigt wird.
+Mit dieser Funktion können Sie eine Symbolleisten-Schaltfläche des Snap-in-Objekts ändern, bevor Sie angezeigt wird.
 
 ```
 BOOL UpdateToolbarButton(UINT id, BYTE fsState);
@@ -515,21 +515,21 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 ### <a name="parameters"></a>Parameter
 
 *ID*<br/>
-Gibt an, der Schaltflächen-ID der Symbolleisten-Schaltfläche aktualisiert werden.
+Gibt die Schaltflächen-ID der zu aktualisierenden Symbolleisten-Schaltfläche an
 
 *fsState*<br/>
-Gibt den Symbolleisten-Schaltfläche-Status an. Wenn dieser Status ist festgelegt werden, TRUE zurück. Dies kann eine Kombination der folgenden Flags sein:
+Gibt einen Symbolleisten-Schaltflächen Zustand an. Wenn dieser Status festgelegt werden soll, geben Sie "true" zurück. Dabei kann es sich um eine Kombination der folgenden Flags handeln:
 
-- AKTIVIERT die Schaltfläche mit der Benutzereingaben akzeptiert. Eine Schaltfläche, die keine von diesem Status akzeptiert keine Benutzereingaben und abgeblendet.
+- Aktiviert die Schaltfläche akzeptiert Benutzereingaben. Eine Schaltfläche, die nicht über diesen Zustand verfügt, akzeptiert keine Benutzereingaben und ist ausgegraut.
 
-- ÜBERPRÜFT die Formatierung aktiviert wurde und gedrückt wird.
+- Aktiviert: die Schaltfläche verfügt über den aktivierten Stil und wird gedrückt.
 
-- HIDDEN die Schaltfläche nicht sichtbar ist, und es keine Benutzereingaben empfangen.
+- Ausgeblendet: die Schaltfläche ist nicht sichtbar und kann keine Benutzereingaben empfangen.
 
-- UNBESTIMMT ist die Schaltfläche abgeblendet.
+- Unbestimmt: die Schaltfläche ist abgeblendet.
 
-- BUTTONPRESSED die Schaltfläche wird gedrückt wird.
+- ButtonPressed: die Schaltfläche wird gedrückt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)
+[Klassen Übersicht](../../atl/atl-class-overview.md)

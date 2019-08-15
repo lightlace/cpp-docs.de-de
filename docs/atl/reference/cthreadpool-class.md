@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 07fd470a6aeab0575f2733d72650bd695b8e2752
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: f0b732efdce5cf04349f468363b8d86621d90204
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915686"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496306"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool-Klasse
 
@@ -78,7 +78,7 @@ Threads im Pool werden erstellt und zerstört, wenn der Pool initialisiert, verk
 
 Nach der Erstellung eines Threads wird *Worker*::`Initialize` für das diesem Thread zugeordnete Objekt aufgerufen. Vor der Zerstörung eines Threads wird " *Worker*::`Terminate` " aufgerufen. Beide Methoden müssen ein **void** <strong>\*</strong> -Argument akzeptieren. Der Wert dieses Arguments wird über den *pvworkerparam* -Parameter von [CThreadPool:: Initialize](#initialize)an den Thread Pool übergeben.
 
-Wenn Arbeitselemente in der Warteschlange vorhanden sind und Arbeitsthreads für die Arbeit verfügbar sind, Ruft ein Arbeits Thread ein Element aus der Warteschlange `Execute` ab und ruft die-Methode des workerobjekts für diesen Thread auf. Anschließend werden drei Elemente an die-Methode weitergegeben: das Element aus der Warteschlange `pvWorkerParam` , das an den *Worker*:: `Initialize` und *Worker*:: `Terminate`weitergegeben wurde, und ein Zeiger auf die [über](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur, die für die e/a-Abschlussport-Warteschlange .
+Wenn Arbeitselemente in der Warteschlange vorhanden sind und Arbeitsthreads für die Arbeit verfügbar sind, Ruft ein Arbeits Thread ein Element aus der Warteschlange `Execute` ab und ruft die-Methode des workerobjekts für diesen Thread auf. Anschließend werden drei Elemente an die-Methode weitergegeben: das Element aus der Warteschlange `pvWorkerParam` , das an den *Worker*:: `Initialize` und *Worker*:: `Terminate`weitergegeben wurde, und ein Zeiger auf die [über](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur, die für die e/a-Abschlussport-Warteschlange .
 
 Die *Worker* -Klasse deklariert den Typ der Elemente, die in die Warteschlange für den Thread Pool eingereiht werden, indem Sie eine typedef, *Worker*:: `RequestType`, bereitstellt. Dieser Typ muss in und aus einem ULONG_PTR umgewandelt werden können.
 
@@ -344,7 +344,7 @@ Die angeforderte maximale Zeit in Millisekunden, die der Thread Pool darauf wart
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet eine Anforderung zum Herunterfahren an alle Threads im Pool. Wenn das Timeout abläuft, ruft diese Methode [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) für jeden Thread auf, der nicht beendet wurde. Diese Methode wird automatisch vom Dekonstruktor der-Klasse aufgerufen.
+Diese Methode sendet eine Anforderung zum Herunterfahren an alle Threads im Pool. Wenn das Timeout abläuft, ruft diese Methode [TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) für jeden Thread auf, der nicht beendet wurde. Diese Methode wird automatisch vom Dekonstruktor der-Klasse aufgerufen.
 
 ## <a name="see-also"></a>Siehe auch
 

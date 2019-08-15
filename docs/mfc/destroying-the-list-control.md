@@ -5,20 +5,20 @@ helpviewer_keywords:
 - list controls [MFC], destroying
 - CListCtrl class [MFC], destroying controls
 ms.assetid: 513ec820-3a02-49d2-b073-a6a7a3fc91b3
-ms.openlocfilehash: 963da9e6db2f0fe063dee1ca19ab23f545ed5e76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5004026da6bb309cc2c966384724b7b98e254e1d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392884"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508697"
 ---
 # <a name="destroying-the-list-control"></a>Zerstören des Listensteuerelements
 
-Wenn Sie einbetten Ihrer [CListCtrl](../mfc/reference/clistctrl-class.md) als Datenmember einer Klasse Ansichts- oder Dialogfeldobjekt Objekt zerstört wird, wenn der Besitzer zerstört wird. Bei Verwendung einer [CListView](../mfc/reference/clistview-class.md), das Framework zerstört das Steuerelement beim Zerstören der Ansicht.
+Wenn Sie das [CListCtrl](../mfc/reference/clistctrl-class.md) -Objekt als Datenmember einer Sicht oder Dialogfeld Klasse einbetten, wird es zerstört, wenn der Besitzer zerstört wird. Wenn Sie eine [CListView](../mfc/reference/clistview-class.md)verwenden, zerstört das Framework das Steuerelement, wenn es die Ansicht zerstört.
 
-Wenn Sie für Ihre Liste-Daten in die Anwendung statt auf das Strukturelement-Steuerelement zu speichernde anordnen möchten, müssen Sie für deren Freigabe gesorgt. Weitere Informationen finden Sie unter [Rückrufelemente und Rückrufmaske](/windows/desktop/Controls/using-list-view-controls) im Windows SDK.
+Wenn Sie festlegen, dass einige der Listen Daten in der Anwendung und nicht im Listen Steuerelement gespeichert werden sollen, müssen Sie die Aufhebung der Zuordnung anordnen. Weitere Informationen finden Sie unter [Rückruf Elemente und Rückruf Maske](/windows/win32/Controls/using-list-view-controls) in der Windows SDK.
 
-Darüber hinaus sind Sie verantwortlich für das Aufheben der Zuordnung Bildlisten, die Sie erstellt und mit dem Listensteuerelement-Objekt verknüpft.
+Außerdem sind Sie verantwortlich für das Aufheben der Zuordnung von Image Listen, die Sie erstellt und mit dem Listen Steuerelement-Objekt verknüpft haben.
 
 ## <a name="see-also"></a>Siehe auch
 
