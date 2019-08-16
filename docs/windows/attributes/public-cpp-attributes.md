@@ -1,21 +1,21 @@
 ---
-title: Public (C++-Attribute) (C++-COM-Attribut)
+title: Public (C++ Attribute) (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.public
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: a12ab0905064a72057dffac03340b667f07b3ae5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 274af011f2d61521885e93d4ce1eddad149748ad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407548"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514174"
 ---
 # <a name="public-c-attributes"></a>public (C++-Attribute)
 
-Wird sichergestellt, dass eine Typdefinition in der Typbibliothek wird, auch wenn es nicht in der IDL-Datei verweist.
+Stellt sicher, dass eine typedef in die Typbibliothek wechselt, auch wenn in der IDL-Datei nicht auf Sie verwiesen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Wird sichergestellt, dass eine Typdefinition in der Typbibliothek wird, auch wen
 
 ## <a name="remarks"></a>Hinweise
 
-Die **öffentliche** C++-Attribut hat die gleiche Funktionalität wie die [öffentliche](/windows/desktop/Midl/public) MIDL-Attribut.
+Das **Public** C++ -Attribut verfügt über die gleiche Funktionalität wie das [öffentliche](/windows/win32/Midl/public) -Attribut "Mittel l".
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt, wie Sie mit der **öffentliche** Attribut:
+Der folgende Code zeigt, wie das **Public** -Attribut verwendet wird:
 
 ```cpp
 // cpp_attr_ref_public.cpp
@@ -53,8 +53,8 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**Betrifft**|**typedef**|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

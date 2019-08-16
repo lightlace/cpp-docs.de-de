@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396742"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509389"
 ---
-# <a name="interlockedexchange-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedExchange“
+# <a name="_interlockedexchange-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedExchange“
 
 **Microsoft-spezifisch**
 
@@ -145,10 +145,10 @@ __int64 _InterlockedExchange64_rel(
 #### <a name="parameters"></a>Parameter
 
 *Target*<br/>
-[in, out] Zeiger auf den Wert ausgetauscht werden sollen. Die Funktion legt diese Variable auf `Value` fest und gibt ihren vorherigen Wert zurück.
+[in, out] Zeiger auf den auszutauschenden Wert. Die Funktion legt diese Variable auf `Value` fest und gibt ihren vorherigen Wert zurück.
 
 *Wert*<br/>
-[in] Wert, der mit dem Wert ausgetauscht werden verweist `Target`.
+in Der Wert, der mit dem Wert ausgetauscht werden soll `Target`, auf den verweist.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -164,7 +164,7 @@ Gibt den Anfangswert zurück, auf den von `Target` gezeigt wird.
 
 ## <a name="remarks"></a>Hinweise
 
-`_InterlockedExchange` bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange) Funktion.
+`_InterlockedExchange`bietet systeminterne Compilerunterstützung für die Win32-Windows SDK [interlockedexchange](/windows/win32/api/winnt/nf-winnt-interlockedexchange) -Funktion.
 
 Es gibt mehrere Varianten von `_InterlockedExchange`, die sich basierend auf den beinhalteten Datentypen und in Abhängigkeit davon unterscheiden, ob prozessorspezifische Semantiken zum Abrufen bzw. Freigeben verwendet werden.
 
@@ -178,7 +178,7 @@ Diese Routinen sind nur als systeminterne Funktionen verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel zur Verwendung `_InterlockedExchange`, finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Ein Beispiel für die Verwendung `_InterlockedExchange`von finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 **Ende Microsoft-spezifisch**
 

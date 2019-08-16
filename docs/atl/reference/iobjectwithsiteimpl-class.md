@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-ms.openlocfilehash: ad27c4288d7e16949fe38ea6b8a686e3d6916ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e857f739e3ff7235c473e99abbef6aab0d3f4205
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275229"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495832"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl-Klasse
 
-Diese Klasse stellt die Methoden, dass ein Objekt mit dem Standort kommunizieren.
+Diese Klasse stellt Methoden bereit, mit denen ein Objekt mit seiner Website kommunizieren kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,7 +33,7 @@ template <class T>
 #### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Abgeleitet von die Klasse `IObjectWithSiteImpl`.
+Die von `IObjectWithSiteImpl`abgeleitete Klasse.
 
 ## <a name="members"></a>Member
 
@@ -41,23 +41,23 @@ Abgeleitet von die Klasse `IObjectWithSiteImpl`.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[IObjectWithSiteImpl::GetSite](#getsite)|Fragt den Standort für einen Schnittstellenzeiger auf.|
-|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Stellt das Objekt mit des Standorts des `IUnknown` Zeiger.|
-|[IObjectWithSiteImpl::SetSite](#setsite)|Stellt das Objekt mit des Standorts des `IUnknown` Zeiger.|
+|[IObjectWithSiteImpl::GetSite](#getsite)|Fragt die Site nach einem Schnittstellen Zeiger ab.|
+|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Stellt das-Objekt mit dem- `IUnknown` Zeiger der Site bereit.|
+|[IObjectWithSiteImpl::SetSite](#setsite)|Stellt das-Objekt mit dem- `IUnknown` Zeiger der Site bereit.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Verwaltet den Standort des `IUnknown` Zeiger.|
+|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Verwaltet den `IUnknown` Zeiger der Website.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) Schnittstelle ermöglicht es, ein Objekt mit dem Standort kommunizieren. Klasse `IObjectWithSiteImpl` stellt eine Standardimplementierung dieser Schnittstelle bereit und implementiert `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.
+Die [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) -Schnittstelle ermöglicht es einem Objekt, mit seiner Website zu kommunizieren. Die `IObjectWithSiteImpl` -Klasse stellt eine Standard Implementierung dieser Schnittstelle `IUnknown` bereit und implementiert durch das Senden von Informationen an das dumpgerät in Debugbuilds.
 
-`IObjectWithSiteImpl` gibt zwei Methoden an. Der Client ruft zuerst `SetSite`, und übergeben des Standorts `IUnknown` Zeiger. This-Zeiger wird innerhalb des Objekts gespeichert und können später abgerufen werden, durch einen Aufruf von `GetSite`.
+`IObjectWithSiteImpl`gibt zwei Methoden an. Der Client ruft `SetSite`zuerst auf und übergibt den `IUnknown` Zeiger der Site. Dieser Zeiger wird im-Objekt gespeichert und kann später durch einen-aufgerufenen `GetSite`abgerufen werden.
 
-In der Regel, leiten Sie Ihre Klasse von `IObjectWithSiteImpl` ein Objekt, das für die Erstellung ist kein Steuerelement. Für Steuerelemente, leiten Sie Ihre Klasse von [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), die bietet auch eines Standort-Zeigers. Leiten Sie die Klasse nicht von beiden `IObjectWithSiteImpl` und `IOleObjectImpl`.
+Normalerweise leiten Sie die Klasse von `IObjectWithSiteImpl` ab, wenn Sie ein Objekt erstellen, das kein Steuerelement ist. Leiten Sie die Klasse für Steuerelemente von [ioleobjectimpl](../../atl/reference/ioleobjectimpl-class.md)ab, das auch einen Website Zeiger bereitstellt. Leiten Sie die Klasse nicht sowohl `IObjectWithSiteImpl` von als auch `IOleObjectImpl`von ab.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -67,11 +67,11 @@ In der Regel, leiten Sie Ihre Klasse von `IObjectWithSiteImpl` ein Objekt, das f
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlcom.h
+**Header:** Atlcom. h
 
-##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite
+##  <a name="getsite"></a>IObjectWithSiteImpl:: GetSite
 
-Fragt den Standort für einen Zeiger auf die Schnittstelle identifizierte `riid`.
+Fragt die Site nach einem Zeiger auf die-Schnittstelle `riid`ab, die durch identifiziert wird.
 
 ```
 STDMETHOD(GetSite)(
@@ -81,13 +81,13 @@ STDMETHOD(GetSite)(
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Standort über diese Schnittstelle unterstützt, wird der Zeiger über zurückgegeben `ppvSite`. Andernfalls `ppvSite` auf NULL festgelegt ist.
+Wenn die Site diese Schnittstelle unterstützt, wird der Zeiger `ppvSite`über zurückgegeben. `ppvSite` Andernfalls wird auf NULL festgelegt.
 
-Finden Sie unter [IObjectWithSite::GetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-getsite) in das Windows SDK.
+Weitere Informationen finden Sie unter [IObjectWithSite:: GetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-getsite) im Windows SDK.
 
-##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite
+##  <a name="m_spunksite"></a>IObjectWithSiteImpl:: m_spUnkSite
 
-Verwaltet den Standort des `IUnknown` Zeiger.
+Verwaltet den `IUnknown` Zeiger der Website.
 
 ```
 CComPtr<IUnknown> m_spUnkSite;
@@ -95,11 +95,11 @@ CComPtr<IUnknown> m_spUnkSite;
 
 ### <a name="remarks"></a>Hinweise
 
-`m_spUnkSite` anfänglich empfängt diese Zeiger durch einen Aufruf von [SetSite](#setsite).
+`m_spUnkSite`empfängt diesen Zeiger anfänglich durch einen Aufrufen von [SetSite](#setsite).
 
-##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite
+##  <a name="setchildsite"></a>IObjectWithSiteImpl:: setchildsite
 
-Stellt das Objekt mit des Standorts des `IUnknown` Zeiger.
+Stellt das-Objekt mit dem- `IUnknown` Zeiger der Site bereit.
 
 ```
 HRESULT SetChildSite(IUnknown* pUnkSite);
@@ -108,15 +108,15 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="parameters"></a>Parameter
 
 *pUnkSite*<br/>
-[in] Zeiger auf die `IUnknown` -Schnittstellenzeiger des Standorts, der dieses Objekt zu verwalten. Wenn der Wert NULL ist, sollte das Objekt aufrufen `IUnknown::Release` an einem vorhandenen Standort, die zu diesem Zeitpunkt das Objekt nicht mehr den Standort weiß.
+in Zeiger auf den `IUnknown` Schnittstellen Zeiger der Site, die dieses-Objekt verwaltet. Wenn der Wert NULL ist, sollte `IUnknown::Release` das Objekt an einer beliebigen vorhandenen Site anrufen, an der das Objekt seine Website nicht mehr kennt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Gibt S_OK zurück.
 
-##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite
+##  <a name="setsite"></a>IObjectWithSiteImpl:: SetSite
 
-Stellt das Objekt mit des Standorts des `IUnknown` Zeiger.
+Stellt das-Objekt mit dem- `IUnknown` Zeiger der Site bereit.
 
 ```
 STDMETHOD(SetSite)(IUnknown* pUnkSite);
@@ -124,8 +124,8 @@ STDMETHOD(SetSite)(IUnknown* pUnkSite);
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite) in das Windows SDK.
+Weitere Informationen finden Sie unter [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite) im Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)
+[Klassen Übersicht](../../atl/atl-class-overview.md)

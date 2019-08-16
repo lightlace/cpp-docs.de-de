@@ -5,43 +5,43 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: 639a5a98da03307e3edf22deb6d32956c3f73374
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 42e70f9e48339eddb2a5af4fa288400cce01f490
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611767"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502042"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistenz der OLE-Steuerelemente
 
-Eine Funktion der OLE-Steuerelemente ist Persistenz (oder Serialisierung), wodurch die OLE-Steuerelements, das Lesen und Schreiben von Eigenschaftswerten in und aus einer Datei oder den Stream. Eine Container-Anwendung kann die Serialisierung verwenden, um Eigenschaftswerte des Steuerelements zu speichern, auch nachdem die Anwendung das Steuerelement gelöscht wurde. Die Eigenschaftswerte des OLE-Steuerelements können Sie dann aus der Datei gelesen werden, oder Stream, wenn eine neue Instanz des Steuerelements zu einem späteren Zeitpunkt erstellt wird.
+Eine Funktion von OLE-Steuerelementen ist die Eigenschafts Persistenz (oder Serialisierung), die es dem OLE-Steuerelement ermöglicht, Eigenschaftswerte in eine Datei oder einen Stream zu lesen oder zu schreiben. Eine Containeranwendung kann die Serialisierung verwenden, um die Eigenschaftswerte eines Steuer Elements zu speichern, auch nachdem die Anwendung das Steuerelement zerstört hat. Die Eigenschaftswerte des OLE-Steuer Elements können dann aus der Datei oder dem Datenstrom gelesen werden, wenn eine neue Instanz des Steuer Elements zu einem späteren Zeitpunkt erstellt wird.
 
 ### <a name="persistence-of-ole-controls"></a>Persistenz der OLE-Steuerelemente
 
 |||
 |-|-|
-|[PX_Blob](#px_blob)|Tauscht die Eigenschaft eines Steuerelements, in der binary large Object (BLOB)-Daten gespeichert.|
-|[PX_Bool](#px_bool)|Tauscht die Eigenschaft eines Steuerelements vom Typ **"bool"**.|
-|[PX_Color](#px_color)|Tauscht eine Color-Eigenschaft eines Steuerelements an.|
-|[PX_Currency](#px_currency)|Tauscht die Eigenschaft eines Steuerelements vom Typ **CY**.|
-|[PX_DataPath](#px_datapath)|Tauscht die Eigenschaft eines Steuerelements vom Typ `CDataPathProperty`.|
-|[PX_Double](#px_double)|Tauscht die Eigenschaft eines Steuerelements vom Typ **doppelte**.|
-|[PX_Font](#px_font)|Tauscht eine Font-Eigenschaft eines Steuerelements an.|
-|[PX_Float](#px_float)|Tauscht die Eigenschaft eines Steuerelements vom Typ **"float"**.|
-|[PX_IUnknown](#px_iunknown)|Tauscht die eine Steuerelementeigenschaft eines undefinierten Typs.|
-|[PX_Long](#px_long)|Tauscht die Eigenschaft eines Steuerelements vom Typ **lange**.|
-|[PX_Picture](#px_picture)|Tauscht eine Picture-Eigenschaft eines Steuerelements an.|
-|[PX_Short](#px_short)|Tauscht die Eigenschaft eines Steuerelements vom Typ **kurze**.|
-|[PX_ULong](#px_ulong)|Tauscht die Eigenschaft eines Steuerelements vom Typ **ULONG**.|
-|[PX_UShort](#px_ushort)|Tauscht die Eigenschaft eines Steuerelements vom Typ **USHORT**.|
-|[PXstring](#px_string)|Tauscht die eine Steuerelementeigenschaft für Zeichen-Zeichenfolge.|
-|[PX_VBXFontConvert](#px_vbxfontconvert)|Tauscht schriftartbezogene Eigenschaften eines VBX-Steuerelements in eine OLE-Steuerelementeigenschaft Schriftart an.|
+|[PX_Blob](#px_blob)|Tauscht eine Steuerelement Eigenschaft aus, die Binary Large Object (BLOB)-Daten speichert.|
+|[PX_Bool](#px_bool)|Tauscht eine Steuerelement Eigenschaft vom Typ **bool**aus.|
+|[PX_Color](#px_color)|Tauscht eine Farb Eigenschaft eines-Steuer Elements aus.|
+|[PX_Currency](#px_currency)|Tauscht eine Steuerelement Eigenschaft des Typs **CY**aus.|
+|[PX_DataPath](#px_datapath)|Tauscht eine Steuerelement Eigenschaft vom `CDataPathProperty`Typ aus.|
+|[PX_Double](#px_double)|Tauscht eine Steuerelement Eigenschaft vom Typ **Double**aus.|
+|[PX_Font](#px_font)|Tauscht eine Schriftart Eigenschaft eines-Steuer Elements aus.|
+|[PX_Float](#px_float)|Tauscht eine Steuerelement Eigenschaft vom Typ **float**aus.|
+|[PX_IUnknown](#px_iunknown)|Tauscht eine Steuerelement Eigenschaft von undefiniertem Typ aus.|
+|[PX_Long](#px_long)|Tauscht eine Steuerelement Eigenschaft vom Typ **Long**aus.|
+|[PX_Picture](#px_picture)|Tauscht eine Bild Eigenschaft eines-Steuer Elements aus.|
+|[PX_Short](#px_short)|Tauscht eine Steuerelement Eigenschaft vom Typ **Short**aus.|
+|[PX_ULong](#px_ulong)|Tauscht eine Steuerelement Eigenschaft vom Typ **ulong**aus.|
+|[PX_UShort](#px_ushort)|Tauscht eine Steuerelement Eigenschaft vom Typ " **UShort**" aus.|
+|[Pxstring](#px_string)|Tauscht eine Zeichen folgen-Steuerelement Eigenschaft aus.|
+|[PX_VBXFontConvert](#px_vbxfontconvert)|Tauscht die Schriftart bezogenen Eigenschaften eines VBX-Steuer Elements in eine Schriftart Eigenschaft des OLE-Steuer Elements aus.|
 
-Darüber hinaus die `AfxOleTypeMatchGuid` globale Funktion wird bereitgestellt, um nach einer Übereinstimmung zwischen TYPEDESC und einer angegebenen GUID zu testen.
+Außerdem wird die `AfxOleTypeMatchGuid` globale Funktion bereitgestellt, um eine Entsprechung zwischen einer TYPEDESC und einer angegebenen GUID zu testen.
 
-##  <a name="px_blob"></a>  PX_Blob
+##  <a name="px_blob"></a>PX_Blob
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder eine Eigenschaft, die speichert binary large Object (BLOB)-Daten zu initialisieren.
+Sie können diese Funktion innerhalb der Member `DoPropExchange` -Funktion des Steuer Elements zum Serialisieren oder Initialisieren einer Eigenschaft, die Binary Large Object (BLOB)-Daten speichert, abrufen.
 
 ```
 BOOL PX_Blob(
@@ -54,36 +54,36 @@ BOOL PX_Blob(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *hBlob*<br/>
-Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf die Variable, in der die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 *hBlobDefault*<br/>
-Der Standardwert für die Eigenschaft.
+Der Standardwert für die-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft wird gelesen oder geschrieben werden, auf die verwiesen wird, indem Sie Variable *hBlob*je nach Bedarf. Diese Variable sollte vor dem ersten Aufrufen auf NULL initialisiert werden `PX_Blob` zum ersten Mal (in der Regel, dies kann erfolgen im Konstruktor des Steuerelements). Wenn *hBlobDefault* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund des Steuerelements Initialisierungs- oder Serialisierungswerte Prozess ein Fehler auftritt.
+Der Wert der Eigenschaft wird von der Variablen, auf die von *hblob*verwiesen wird, gelesen oder in diese geschrieben. Diese Variable sollte mit NULL initialisiert werden, bevor Sie `PX_Blob` zum ersten Mal aufgerufen wird (in der Regel kann dies im Konstruktor des Steuer Elements erfolgen). Wenn *hblobdefault* angegeben wird, wird es als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Initialisierungs-oder Serialisierungsprozess des-Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-Die Handles *hBlob* und *hBlobDefault* finden Sie in einen Speicherblock, die Folgendes enthält:
+Die Handles *hblob* und *hblobdefault* verweisen auf einen Speicherblock, der Folgendes enthält:
 
-- Ein DWORD, der die Länge in Bytes, der Binärdaten, die folgt enthält, unmittelbar gefolgt von
+- Ein DWORD, das die Länge der folgenden Binärdaten (in Bytes) enthält, gefolgt von
 
-- Ein Speicherblock, der die Binärdaten enthält.
+- Ein Speicherblock, der die eigentlichen Binärdaten enthält.
 
-Beachten Sie, dass `PX_Blob` wird Arbeitsspeicher zuweisen, mit der Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) -API, die beim Laden von Eigenschaften des BLOB-Typ. Sie sind verantwortlich für das Freigeben dieses Speichers. Aus diesem Grund sollte der Destruktor des Steuerelements aufrufen [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) auf einer beliebigen BLOB-Type-Eigenschaft Handles für kostenlose zu Ihrem Steuerelement zugewiesener Speicher einrichten.
+Beachten Sie `PX_Blob` , dass beim Laden von BLOB-Typeigenschaften mithilfe der Windows [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) -API Arbeitsspeicher belegt. Sie sind dafür verantwortlich, diesen Arbeitsspeicher freizugeben. Daher sollte der Dekonstruktor des Steuer Elements [Global Free](/windows/win32/api/winbase/nf-winbase-globalfree) für alle Eigenschaften Handles des BLOB-Typs aufgerufen werden, um den Arbeitsspeicher freizugeben, der dem Steuerelement zugeordnet ist.
 
-##  <a name="px_bool"></a>  PX_Bool
+##  <a name="px_bool"></a>PX_Bool
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zu serialisierenden bzw. zu eine Eigenschaft vom Typ "bool" zu initialisieren.
+Mit dieser Funktion innerhalb der Member- `DoPropExchange` Funktion des Steuer Elements können Sie eine Eigenschaft des Typs bool Serialisieren oder initialisieren.
 
 ```
 BOOL PX_Bool(
@@ -101,28 +101,28 @@ BOOL PX_Bool(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *bValue*<br/>
-Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf die Variable, in der die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 *bDefault*<br/>
-Der Standardwert für die Eigenschaft.
+Der Standardwert für die-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft wird gelesen oder geschrieben werden, auf die verwiesen wird, indem Sie Variable *bValue*je nach Bedarf. Wenn *bStandardstufe* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt.
+Der Wert der Eigenschaft wird nach Bedarf aus der Variablen gelesen oder in diese geschrieben, auf die von *bvalue*verwiesen wird. Wenn *bdefault* angegeben wird, wird es als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-##  <a name="px_color"></a>  PX_Color
+##  <a name="px_color"></a>PX_Color
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder eine Eigenschaft des Typs OLE_COLOR zu initialisieren.
+Mit dieser Funktion können Sie innerhalb der `DoPropExchange` Member-Funktion des Steuer Elements eine Eigenschaft vom Typ OLE_COLOR Serialisieren oder initialisieren.
 
 ```
 BOOL PX_Color(
@@ -140,28 +140,28 @@ BOOL PX_Color(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *clrValue*<br/>
-Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf die Variable, in der die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 *clrDefault*<br/>
-Der Standardwert für die Eigenschaft, die vom Entwickler Steuerelements definiert.
+Der Standardwert für die Eigenschaft, wie vom Steuerelement Entwickler definiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft wird gelesen oder geschrieben werden, auf die verwiesen wird, indem Sie Variable *ClrValue*je nach Bedarf. Wenn *ClrDefault* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt.
+Der Wert der Eigenschaft wird nach Bedarf aus der Variablen gelesen oder in diese geschrieben. Wenn *clrdefault* angegeben wird, wird es als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-##  <a name="px_currency"></a>  PX_Currency
+##  <a name="px_currency"></a>PX_Currency
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ **Währung**.
+Mit dieser Funktion innerhalb der Member- `DoPropExchange` Funktion des Steuer Elements können Sie eine Eigenschaft vom Typ **Currency**Serialisieren oder initialisieren.
 
 ```
 BOOL PX_Currency(
@@ -179,28 +179,28 @@ BOOL PX_Currency(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *cyValue*<br/>
-Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf die Variable, in der die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 *cyDefault*<br/>
-Der Standardwert für die Eigenschaft.
+Der Standardwert für die-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft wird gelesen oder geschrieben werden, auf die verwiesen wird, indem Sie Variable *CyValue*je nach Bedarf. Wenn *CyDefault* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt.
+Der Wert der Eigenschaft wird in der Variablen, auf die von *cyvalue*verwiesen wird, gelesen oder in diese geschrieben. Wenn *cydefault* angegeben wird, wird es als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-##  <a name="px_datapath"></a>  PX_DataPath
+##  <a name="px_datapath"></a>PX_DataPath
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder initialisieren eine Datenpfad-Eigenschaft des Typs [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).
+Verwenden Sie diese Funktion innerhalb der Member `DoPropExchange` -Funktion des Steuer Elements, um eine Daten Pfadeigenschaft des Typs " [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)" zu serialisieren oder zu initialisieren.
 
 ```
 BOOL PX_DataPath(
@@ -216,25 +216,25 @@ BOOL PX_DataPath(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *dataPathProperty*<br/>
-Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf die Variable, in der die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Pfadeigenschaften Daten implementieren asynchroner Steuerelementeigenschaften. Der Wert der Eigenschaft wird gelesen oder geschrieben werden, auf die verwiesen wird, indem Sie Variable *DataPathProperty*je nach Bedarf.
+Daten Pfad Eigenschaften implementieren asynchrone Steuerelement Eigenschaften. Der Wert der Eigenschaft wird von der Variablen, auf die von *datapathproperty*verwiesen wird, gelesen oder in diese geschrieben.
 
-##  <a name="px_double"></a>  PX_Double
+##  <a name="px_double"></a>PX_Double
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ **doppelte**.
+Sie können diese Funktion innerhalb der Member `DoPropExchange` -Funktion des Steuer Elements zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ **Double**abrufen.
 
 ```
 BOOL PX_Double(
@@ -252,28 +252,28 @@ BOOL PX_Double(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *doubleValue*<br/>
-Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf die Variable, in der die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 *doubleDefault*<br/>
-Der Standardwert für die Eigenschaft.
+Der Standardwert für die-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist *DoubleValue*je nach Bedarf. Wenn *DoubleDefault* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt.
+Der Wert der Eigenschaft wird in der Variablen, auf die von *Double value*verwiesen wird, gelesen oder in diese geschrieben. Wenn *Double default* angegeben wird, wird es als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-##  <a name="px_font"></a>  PX_Font
+##  <a name="px_font"></a>PX_Font
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder eine Eigenschaft der TrueType-Schriftart zu initialisieren.
+Sie können diese Funktion innerhalb der Member `DoPropExchange` -Funktion des Steuer Elements zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ Schriftart abrufen.
 
 ```
 BOOL PX_Font(
@@ -287,31 +287,31 @@ BOOL PX_Font(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *font*<br/>
-Ein Verweis auf eine `CFontHolder` -Objekt, das die Schriftarteigenschaft enthält.
+Ein Verweis auf ein `CFontHolder` -Objekt, das die Font-Eigenschaft enthält.
 
 *pFontDesc*<br/>
-Ein Zeiger auf eine `FONTDESC` Struktur, die die Werte beim Initialisieren der Standardzustand der Font-Eigenschaft, in dem Fall verwendet, in denen *pFontDispAmbient* ist NULL.
+Ein Zeiger auf eine `FONTDESC` -Struktur, die die Werte enthält, die beim Initialisieren des Standardstatus der Schriftart Eigenschaft verwendet werden sollen, falls *pfontdispambient* NULL ist.
 
 *pFontDispAmbient*<br/>
-Ein Zeiger auf die `IFontDisp` Schnittstelle eines Fonts, verwenden Sie in den Standardzustand der Font-Eigenschaft zu initialisieren.
+Ein Zeiger auf die `IFontDisp` -Schnittstelle einer Schriftart, die beim Initialisieren des Standardstatus der Schriftart Eigenschaft verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft gelesen oder geschrieben `font`, `CFontHolder` verweisen, bei Bedarf. Wenn *pFontDesc* und *pFontDispAmbient* angegeben sind, werden sie zum Initialisieren der Standardwert der Eigenschaft, bei Bedarf verwendet werden. Diese Werte werden verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt. In der Regel, übergeben Sie NULL für *pFontDesc* und der ambient-Wert von zurückgegebenen `COleControl::AmbientFont` für *pFontDispAmbient*. Beachten Sie, die von der Font-Objekt zurückgegeben `COleControl::AmbientFont` müssen freigegeben werden, durch einen Aufruf der `IFontDisp::Release` Member-Funktion.
+Der Wert der Eigenschaft wird bei Bedarf aus einem `font` `CFontHolder` Verweis gelesen oder geschrieben. Wenn *pfontde SC* und *pfontdispambient* angegeben werden, werden Sie bei Bedarf zum Initialisieren des Standardwerts der Eigenschaft verwendet. Diese Werte werden verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt. In der Regel übergeben Sie NULL für *pfontbesc* und den von `COleControl::AmbientFont` zurückgegebenen Ambient-Wert für *pfontdispambient*. Beachten Sie, dass das von `COleControl::AmbientFont` zurückgegebene Schriftart Objekt durch einen-Rückruf der `IFontDisp::Release` Member-Funktion freigegeben werden muss.
 
-##  <a name="px_float"></a>  PX_Float
+##  <a name="px_float"></a>PX_Float
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ **"float"**.
+Sie können diese Funktion innerhalb der Member `DoPropExchange` -Funktion des Steuer Elements zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ " **float**" aufzurufen.
 
 ```
 BOOL PX_Float(
@@ -329,28 +329,28 @@ BOOL PX_Float(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *floatValue*<br/>
-Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf die Variable, in der die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 *floatDefault*<br/>
-Der Standardwert für die Eigenschaft.
+Der Standardwert für die-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist *FloatValue*je nach Bedarf. Wenn *FloatDefault* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt.
+Der Wert der Eigenschaft wird in der Variablen, auf die von *floatvalue*verwiesen wird, gelesen oder in diese geschrieben. Wenn *floatdefault* angegeben wird, wird es als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-##  <a name="px_iunknown"></a>  PX_IUnknown
+##  <a name="px_iunknown"></a>PX_IUnknown
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder Initialisieren einer Eigenschaft dargestellt wird, indem Sie ein Objekt eine `IUnknown`-Schnittstelle abgeleitet.
+Aufrufen Sie diese Funktion innerhalb der Member `DoPropExchange` -Funktion des Steuer Elements, um eine Eigenschaft zu serialisieren oder zu initialisieren `IUnknown`, die von einem-Objekt mit einer von abgeleiteten Schnittstelle
 
 ```
 BOOL PX_IUnknown(
@@ -364,31 +364,31 @@ BOOL PX_IUnknown(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *pUnk*<br/>
-Verweis auf eine Variable, enthält die Schnittstelle des Objekts, das den Wert der Eigenschaft darstellt.
+Verweis auf eine Variable, die die-Schnittstelle des-Objekts enthält, das den Wert der-Eigenschaft darstellt.
 
 *iid*<br/>
-Eine Schnittstellen-ID, der angibt, welche Schnittstelle des Eigenschaftenobjekts vom Steuerelement verwendet wird.
+Eine Schnittstellen-ID, die angibt, welche Schnittstelle des Eigenschafts Objekts vom Steuerelement verwendet wird.
 
 *pUnkDefault*<br/>
-Der Standardwert für die Eigenschaft.
+Der Standardwert für die-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist *pUnk*je nach Bedarf. Wenn *pUnkDefault* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt.
+Der Wert der Eigenschaft wird in der Variablen, auf die von *Punk*verwiesen wird, gelesen oder in diese geschrieben. Wenn " *punkdefault* " angegeben ist, wird es als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-##  <a name="px_long"></a>  PX_Long
+##  <a name="px_long"></a>PX_Long
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ **lange**.
+Sie können diese Funktion innerhalb der Member `DoPropExchange` -Funktion des Steuer Elements zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ **Long**abrufen.
 
 ```
 BOOL PX_Long(
@@ -406,28 +406,28 @@ BOOL PX_Long(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *lValue*<br/>
-Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf die Variable, in der die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 *lDefault*<br/>
-Der Standardwert für die Eigenschaft.
+Der Standardwert für die-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist *lValue*je nach Bedarf. Wenn *lDefault* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt.
+Der Wert der Eigenschaft wird nach Bedarf aus der Variablen gelesen oder in diesegeschrieben. Wenn " *ldefault* " angegeben ist, wird es als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-##  <a name="px_picture"></a>  PX_Picture
+##  <a name="px_picture"></a>PX_Picture
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder eine Bildeigenschaft des Steuerelements zu initialisieren.
+Mit dieser Funktion innerhalb der Member- `DoPropExchange` Funktion des Steuer Elements können Sie eine Bild Eigenschaft des Steuer Elements Serialisieren oder initialisieren.
 
 ```
 BOOL PX_Picture(
@@ -445,28 +445,28 @@ BOOL PX_Picture(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *pict*<br/>
-Ein Verweis auf eine [CPictureHolder](../../mfc/reference/cpictureholder-class.md) Objekt, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf ein [CPictureHolder](../../mfc/reference/cpictureholder-class.md) -Objekt, in dem die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 *pictDefault*<br/>
-Der Standardwert für die Eigenschaft.
+Der Standardwert für die-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist *Pict*je nach Bedarf. Wenn *PictDefault* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt.
+Der Wert der Eigenschaft wird nach Bedarf aus der Variablen gelesen oder in diesegeschrieben. Wenn *pictdefault* angegeben wird, wird es als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-##  <a name="px_short"></a>  PX_Short
+##  <a name="px_short"></a>PX_Short
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ **kurze**.
+Sie können diese Funktion innerhalb der Member `DoPropExchange` -Funktion des Steuer Elements zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ **Short**aufruft.
 
 ```
 BOOL PX_Short(
@@ -484,28 +484,28 @@ BOOL PX_Short(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *sValue*<br/>
-Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf die Variable, in der die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 *sDefault*<br/>
-Der Standardwert für die Eigenschaft.
+Der Standardwert für die-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist *sValue*je nach Bedarf. Wenn *sDefault* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt.
+Der Wert der Eigenschaft wird in der Variablen, auf die von *sValue*verwiesen wird, gelesen oder in diese geschrieben. Wenn *sdefault* angegeben wird, wird es als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-##  <a name="px_ulong"></a>  PX_ULong
+##  <a name="px_ulong"></a>PX_ULong
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ **ULONG**.
+Mit dieser Funktion innerhalb der Member- `DoPropExchange` Funktion des Steuer Elements können Sie eine Eigenschaft des Typs **ulong**Serialisieren oder initialisieren.
 
 ```
 BOOL PX_ULong(
@@ -523,28 +523,28 @@ BOOL PX_ULong(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der auszutauschenden Eigenschaft.
 
 *ulValue*<br/>
-Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf die Variable, in der die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 *ulDefault*<br/>
-Der Standardwert für die Eigenschaft.
+Der Standardwert für die-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist *UlValue*je nach Bedarf. Wenn *UlDefault* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt.
+Der Wert der Eigenschaft wird in der Variablen, auf die von *ULValue*verwiesen wird, gelesen oder in diese geschrieben. Wenn *uldefault* angegeben wird, wird es als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-##  <a name="px_ushort"></a>  PX_UShort
+##  <a name="px_ushort"></a>PX_UShort
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ **unsigned short**.
+Sie können diese Funktion innerhalb der Member `DoPropExchange` -Funktion des Steuer Elements zum Serialisieren oder Initialisieren einer Eigenschaft vom Typ **Ganzzahl ohne Vorzeichen Short**abrufen.
 
 ```
 BOOL PX_UShort(
@@ -562,28 +562,28 @@ BOOL PX_UShort(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der auszutauschenden Eigenschaft.
 
 *usValue*<br/>
-Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf die Variable, in der die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 *usDefault*<br/>
-Der Standardwert für die Eigenschaft.
+Der Standardwert für die-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist *UsValue*je nach Bedarf. Wenn *UsDefault* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt.
+Der Wert der Eigenschaft wird nach Bedarf aus der Variablen gelesen oder in diesegeschrieben. Wenn " *Standard* Wert" angegeben wird, wird er als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-##  <a name="px_string"></a>  PXstring
+##  <a name="px_string"></a>Pxstring
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion, die zum Serialisieren oder eine Zeichenfolgeneigenschaft Zeichen zu initialisieren.
+Mit dieser Funktion können Sie in der `DoPropExchange` Member-Funktion des Steuer Elements eine Zeichen folgen Eigenschaft serialisieren oder initialisieren.
 
 ```
 BOOL PXstring(
@@ -601,28 +601,28 @@ BOOL PXstring(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *pszPropName*<br/>
-Der Name der Eigenschaft, die ausgetauscht werden.
+Der Name der Eigenschaft, die ausgetauscht wird.
 
 *strValue*<br/>
-Verweis auf die Variable, in dem die Eigenschaft gespeichert wird (in der Regel eine Membervariable der Klasse).
+Verweis auf die Variable, in der die Eigenschaft gespeichert ist (in der Regel eine Member-Variable ihrer Klasse).
 
 *strDefault*<br/>
-Der Standardwert für die Eigenschaft.
+Der Standardwert für die-Eigenschaft.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert der Eigenschaft gelesen oder geschrieben werden, auf die Variable verweist *StrValue*je nach Bedarf. Wenn *StrDefault* angegeben ist, er wird als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn aus irgendeinem Grund Serialisierungsprozess des Steuerelements ein Fehler auftritt.
+Der Wert der Eigenschaft wird nach Bedarf aus der Variablen gelesen oder in diesegeschrieben. Wenn "- *Standard* " angegeben ist, wird es als Standardwert der Eigenschaft verwendet. Dieser Wert wird verwendet, wenn der Serialisierungsprozess des Steuer Elements aus irgendeinem Grund fehlschlägt.
 
-##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert
+##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert
 
-Mit dieser Funktion wird innerhalb des Steuerelements `DoPropExchange` Memberfunktion eine Font-Eigenschaft, die durch die Konvertierung eines VBX-Steuerelements schriftartbezogene Eigenschaften initialisiert werden.
+Mit dieser Funktion können Sie in der `DoPropExchange` Member-Funktion des Steuer Elements eine Schriftart Eigenschaft initialisieren, indem Sie die Schriftart bezogenen Eigenschaften eines VBX-Steuer Elements umrechnen.
 
 ```
 BOOL PX_VBXFontConvert(
@@ -633,24 +633,24 @@ BOOL PX_VBXFontConvert(
 ### <a name="parameters"></a>Parameter
 
 *pPX*<br/>
-Zeiger auf die [CPropExchange](../../mfc/reference/cpropexchange-class.md) Objekt (i. d. r. als Parameter an übergeben `DoPropExchange`).
+Zeiger auf das [CPropExchange](../../mfc/reference/cpropexchange-class.md) -Objekt (in der Regel als Parameter `DoPropExchange`an übergeben).
 
 *font*<br/>
-Die Schriftarteigenschaft des OLE-Steuerelements, die die konvertierte VBX Schriftarteigenschaften enthält.
+Die Font-Eigenschaft des OLE-Steuer Elements, die die konvertierten VBX-Schriftart bezogenen Eigenschaften enthalten soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn der Vorgang fehlschlägt.
+Ungleich 0 (null), wenn der Austausch erfolgreich war. 0, wenn nicht erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion sollte nur von OLE-Steuerelements verwendet werden, die als direkte Ersatz für ein Steuerelement VBX entwickelt wurde. Wenn die Visual Basic-Entwicklungsumgebung ein Formular mit einem VBX-Steuerelements zur Verwendung von OLE-Steuerelements über der entsprechenden Ersetzung konvertiert, wird es des Steuerelements aufrufen `IDataObject::SetData` Funktion auf und übergibt in einem Eigenschaftensatz, der Eigenschaftendaten der VBX-Steuerelements enthält. Dieser Vorgang wiederum des Steuerelements `DoPropExchange` Funktion aufgerufen werden. `DoPropExchange` Aufrufen `PX_VBXFontConvert` schriftartbezogene Eigenschaften des VBX-Steuerelements zu konvertieren (z. B. "FontName" "FontSize", usw.) in die entsprechenden Komponenten der Font-Eigenschaft des OLE-Steuerelements.
+Diese Funktion sollte nur von einem OLE-Steuerelement verwendet werden, das als direkter Ersatz für ein VBX-Steuerelement konzipiert ist. Wenn in der Visual Basic Entwicklungsumgebung ein Formular mit einem VBX-Steuerelement konvertiert wird, um das entsprechende Replace OLE-Steuerelement zu `IDataObject::SetData` verwenden, wird die-Funktion des Steuer Elements aufgerufen und ein Eigenschaften Satz übergeben, der die Eigenschaften Daten des VBX-Steuer Elements enthält. Dieser Vorgang bewirkt wiederum, dass die `DoPropExchange` Funktion des Steuer Elements aufgerufen wird. `DoPropExchange`kann aufgerufen `PX_VBXFontConvert` werden, um die Schriftart bezogenen Eigenschaften des VBX-Steuer Elements (z. b. FontName, "FontSize" usw.) in die entsprechenden Komponenten der Schriftart Eigenschaft des OLE-Steuer Elements zu konvertieren.
 
-`PX_VBXFontConvert` sollte nur aufgerufen werden, wenn das Steuerelement tatsächlich aus einer Anwendung der VBX-Format konvertiert wird. Zum Beispiel:
+`PX_VBXFontConvert`sollte nur aufgerufen werden, wenn das Steuerelement tatsächlich von einer VBX-Formular Anwendung konvertiert wird. Beispiel:
 
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]
 
 ## <a name="see-also"></a>Siehe auch
 
-[Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)
+[Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md)

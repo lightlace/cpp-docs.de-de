@@ -1,21 +1,21 @@
 ---
-title: Appobject (C++-COM-Attribut)
+title: appobject (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: 8219c8fdd1b1df93f92fc6c1d0324a2475d3384b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e02cedff70ac32f7edfdb92b240269c34befee7e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409706"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490934"
 ---
 # <a name="appobject"></a>appobject
 
-Identifiziert die Co-Klasse als ein Anwendungsobjekt, die mit einer vollständigen .exe-Anwendung verknüpft und gibt an, dass die Funktionen und Eigenschaften der Co-Klasse in diesem global verfügbare [Typbibliothek](../../mfc/automation-clients-using-type-libraries.md).
+Identifiziert die Co-Klasse als Anwendungs Objekt, das einer Full. exe-Anwendung zugeordnet ist, und gibt an, dass die Funktionen und Eigenschaften der Co-Klasse in dieser [Typbibliothek](../../mfc/automation-clients-using-type-libraries.md)global verfügbar sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Identifiziert die Co-Klasse als ein Anwendungsobjekt, die mit einer vollständig
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Appobject** C++-Attribut hat die gleiche Funktionalität wie die [Appobject](/windows/desktop/Midl/appobject) MIDL-Attribut.
+Das **appobject** C++ -Attribut verfügt über die gleiche Funktionalität wie das " [appobject](/windows/win32/Midl/appobject) "-Attribut "mittlerer l".
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt eine einfache Klassendefinition vorangestellt wird ein Attributblock, die enthält **Appobject**:
+Der folgende Code zeigt eine einfache Klassendefinition mit vorangestelltem Attribut Block, der **appobject**umfasst:
 
 ```cpp
 // cpp_attr_ref_appobject.cpp
@@ -52,10 +52,10 @@ class A : public ICustom {
 
 |||
 |-|-|
-|**Betrifft**|**class**, **struct**|
+|**Betrifft**|**Klasse**, **Struktur**|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|`coclass`|
-|**Ungültige Attribute**|Keiner|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

@@ -32,14 +32,14 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 0b1dbc72124188d06da48f47e47c11ae6d06e771
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: b57ed2b26428c48efbe544c2b4802e347b915c29
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376197"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499938"
 ---
-# <a name="fopen-wfopen"></a>fopen, _wfopen
+# <a name="fopen-_wfopen"></a>fopen, _wfopen
 
 Öffnet eine Datei. Es sind sicherere Versionen dieser Funktionen verfügbar, die eine zusätzliche Parameterüberprüfung durchführen und Fehlercodes zurückgeben. Siehe dazu [fopen_s, _wfopen_s](fopen-s-wfopen-s.md).
 
@@ -72,7 +72,7 @@ Weitere Informationen finden Sie unter [errno, _doserrno, _sys_errlist und _sys_
 
 ## <a name="remarks"></a>Hinweise
 
-Die Funktion " **f Open** " öffnet die Datei, die durch *filename*angegeben wird. Standardmäßig wird eine schmale *namens* Zeichenfolge mit der ANSI-Codepage (CP_ACP) interpretiert. In Windows-Desktopanwendungen kann dies in die OEM-Codepage (CP_OEMCP) geändert werden, indem Sie die [SetFileApisToOEM](/windows/desktop/api/fileapi/nf-fileapi-setfileapistooem) -Funktion verwenden. Mithilfe der [arefileapisansi](/windows/desktop/api/fileapi/nf-fileapi-arefileapisansi) -Funktion können Sie ermitteln, ob *filename* mit der ANSI-Codepage oder der standardmäßigen OEM-Codepage des Systems interpretiert wird. **_wfopen** ist eine breit Zeichen Version von " **f Open**". die Argumente für **_wfopen** sind Zeichen folgen mit breit Zeichen. Andernfalls Verhalten sich **_wfopen** und **f Open** identisch. Die Verwendung von **_wfopen** wirkt sich nicht auf den codierten Zeichensatz aus, der im Dateistream verwendet wird.
+Die Funktion " **f Open** " öffnet die Datei, die durch *filename*angegeben wird. Standardmäßig wird eine schmale *namens* Zeichenfolge mit der ANSI-Codepage (CP_ACP) interpretiert. In Windows-Desktopanwendungen kann dies in die OEM-Codepage (CP_OEMCP) geändert werden, indem Sie die [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) -Funktion verwenden. Mithilfe der [arefileapisansi](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) -Funktion können Sie ermitteln, ob *filename* mit der ANSI-Codepage oder der standardmäßigen OEM-Codepage des Systems interpretiert wird. **_wfopen** ist eine breit Zeichen Version von " **f Open**". die Argumente für **_wfopen** sind Zeichen folgen mit breit Zeichen. Andernfalls Verhalten sich **_wfopen** und **f Open** identisch. Die Verwendung von **_wfopen** wirkt sich nicht auf den codierten Zeichensatz aus, der im Dateistream verwendet wird.
 
 **fopen** akzeptiert Pfade, die zum Zeitpunkt der Ausführung im Dateisystem gültig sind. **fopen** akzeptiert UNC-Pfade und Pfade mit zugeordneten Netzlaufwerken, solange das System, das den Code ausführt, zum Zeitpunkt der Ausführung Zugriff auf die Freigabe oder das zugeordnete Laufwerk hat. Stellen Sie beim Erstellen von Pfaden für " **f Open**" sicher, dass Laufwerke, Pfade oder Netzwerkfreigaben in der Ausführungsumgebung verfügbar sind. Als Verzeichnistrennzeichen in einem Pfad können Sie entweder den Schrägstrich (/) oder den umgekehrten Schrägstrich (\\) verwenden.
 
@@ -128,7 +128,7 @@ Wenn eine Datei mit dem Zugriffstyp **"a"** oder dem Zugriffstyp **"a +"** geöf
 
 Der **"a"** -Modus entfernt die EOF-Markierung nicht, bevor Sie an die Datei angefügt wird. Nach dem Anfügen werden durch den MS-DOS-Befehl TYPE nur Daten bis zur ursprünglichen EOF-Markierung angezeigt, aber keine Daten, die an die Datei angefügt wurden. Bevor Sie an die Datei angefügt wird, wird die EOF-Markierung durch den Modus **"a +"** entfernt. Nach dem Anhängen werden mit dem Befehl MS-DOS TYPE alle Daten in der Datei angezeigt. Der Modus **"a +"** ist zum Anfügen an eine streamdatei erforderlich, die mit der EOF-Markierung STRG + Z beendet wird.
 
-Wenn der Zugriffstyp **"r +"** , **"w +"** oder **"a +** " angegeben wird, sind sowohl Lese-als auch Schreibvorgänge aktiviert (die Datei ist zum Aktualisieren geöffnet). Wenn Sie jedoch vom Lesevorgang in den Schreibvorgang wechseln, muss die Eingabeoperation eine EOF-Markierung antreffen. Wenn keine EOF-Markierung vorhanden ist, müssen Sie einen zwischenzeitlichen Aufruf einer dateipositionierenden Funktion verwenden. Die Datei Positionierungsfunktionen sind " **f**", " [f Seek](fseek-fseeki64.md)" und " [Rewind](rewind.md)". Wenn Sie vom Schreibvorgang in den Lesevorgang wechseln, müssen **Sie entweder einen** zwischenzeitlichen oder einen zwischenzeitlichen aufzurufenden oder zu einer Datei positionierenden Funktion verwenden.
+Wenn der Zugriffstyp **"r +"** , **"w +"** oder **"a +** " angegeben wird, sind sowohl Lese-als auch Schreibvorgänge aktiviert (die Datei ist zum Aktualisieren geöffnet). Wenn Sie jedoch vom Lesevorgang in den Schreibvorgang wechseln, muss die Eingabeoperation eine EOF-Markierung antreffen. Wenn keine EOF-Markierung vorhanden ist, müssen Sie einen zwischenzeitlichen Aufruf einer dateipositionierenden Funktion verwenden. Die Datei Positionierungsfunktionen sind " **f**", " [f Seek](fseek-fseeki64.md)" und " [Rewind](rewind.md)". Wenn Sie vom Schreibvorgang in den Lesevorgang wechseln, müssen Sie entweder einen zwischen zeitlichen oder einen zwischenzeitlichen aufzurufenden oder zu einer Datei positionierenden Funktion verwenden.
 
 Zusätzlich zu den früheren Werten können die folgenden Zeichen an den- *Modus* angehängt werden, um den Übersetzungsmodus für Zeilen Umleitungs Zeichen anzugeben.
 
@@ -191,7 +191,7 @@ Wenn Sie den **RB** -Modus verwenden, müssen Sie Ihren Code nicht portieren. We
 
 **_wfopen** ist eine Microsoft-Erweiterung. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
-Die *Optionen "* **c**", " **n**", " **t** **", "** **R**", " **t**" und " **D** " sind Microsoft-Erweiterungen für " **f Open** " und " **_fdopen** " und sollten nicht verwendet werden, wenn die ANSI
+Die Optionen " **c**", " **n**", " **t**", " **R**", " **t**" und " **D** " sind Microsoft-Erweiterungen für " **f Open** " und " **_fdopen** " und sollten nicht verwendet werden, wenn die ANSI
 
 ## <a name="example-1"></a>Beispiel 1
 

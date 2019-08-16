@@ -1,21 +1,21 @@
 ---
-title: Cpp_quote (C++ com-Attribut)
+title: cpp_quote (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.cpp_quote
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-ms.openlocfilehash: 378435ced5a541785b7b32bc9d2f408034d5a2d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 905c9fc41b1b42dffe9c7b39fae0b096cdc24950
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148236"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501769"
 ---
-# <a name="cppquote"></a>cpp_quote
+# <a name="cpp_quote"></a>cpp_quote
 
-Gibt die angegebene Zeichenfolge verwendet werden, ohne die Anführungszeichen in der generierten IDL-Datei aus.
+Gibt die angegebene Zeichenfolge ohne Anführungszeichen in der generierten IDL-Datei aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,19 +26,19 @@ Gibt die angegebene Zeichenfolge verwendet werden, ohne die Anführungszeichen i
 ### <a name="parameters"></a>Parameter
 
 *statement*<br/>
-Eine C#-Anweisung.
+Eine C-Anweisung.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Cpp_quote** C++ Attribut ist nützlich, wenn eine Präprozessordirektive in einer IDL-Datei aufgenommen werden soll.
+Das **cpp_quote** C++ -Attribut ist nützlich, wenn Sie eine Präprozessordirektive in eine IDL-Datei einfügen möchten.
 
-Sie können auch **Cpp_quote** und eine h-Datei als Teil der Kompilierung von MIDL generiert werden soll. Z. B. Wenn Sie eine C++-Headerdatei, die C++-IDL-Attribute verwendet, aber verwenden Sie diese Datei kann nicht für eine Aufgabe verfügen, können Sie kompilieren es dann zum Erstellen einer MIDL-generierten h-Datei, die Sie verwenden können sollen.
+Sie können auch **cpp_quote** verwenden und eine h-Datei als Teil der Mittell-Kompilierung generieren. Wenn Sie z. b. über C++ eine Header Datei verfügen C++ , die IDL-Attribute verwendet, diese Datei jedoch nicht für eine Aufgabe verwenden kann, können Sie Sie kompilieren, um eine von der Mittel l generierte h-Datei zu erstellen, die Sie verwenden können.
 
-Die **Cpp_quote** Attribut hat die gleiche Funktionalität wie die [Cpp_quote](/windows/desktop/Midl/cpp-quote) MIDL-Attribut.
+Das **cpp_quote** -Attribut verfügt über die gleiche Funktionalität wie das [cpp_quote](/windows/win32/Midl/cpp-quote) -Mittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [dual](dual.md) verwenden Sie ein Beispiel mit **Cpp_quote**.
+Ein Beispiel für die Verwendung von **cpp_quote**finden Sie im Beispiel für [Dual](dual.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,8 +48,8 @@ Siehe das Beispiel für [dual](dual.md) verwenden Sie ein Beispiel mit **Cpp_quo
 |-|-|
 |**Betrifft**|Überall|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

@@ -26,14 +26,14 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: b9178f64dd698ff517ea5b376ed19e97981c511d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cae1034d0bcb9789f5cb709399d4992de44cae9d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156654"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499783"
 ---
-# <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
+# <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
 Konvertiert eine Multibyte-Zeichensequenz in eine entsprechende Breitzeichensequenz. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_mbsnbcpy_s, _mbsnbcpy_s_l](mbstowcs-s-mbstowcs-s-l.md).
 
@@ -82,20 +82,20 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn **Mbstowcs** die Quellzeichenfolge erfolgreich konvertiert wird, dass die Anzahl von konvertierten Multibytezeichen. Wenn die *Wcstr* Argument **NULL**, die Funktion gibt die erforderliche Größe (in Breitzeichen), der die Zielzeichenfolge zurück. Wenn **Mbstowcs** ein ungültiges Multibytezeichen erkennt, wird-1 zurückgegeben. Wenn der Rückgabewert ist *Anzahl*, die Breitzeichen-Zeichenfolge ist kein Null-terminiert.
+Wenn **mbstowcs** die Quell Zeichenfolge erfolgreich konvertiert, wird die Anzahl der konvertierten Multibytezeichen zurückgegeben. Wenn das *wcstr* -Argument **null**ist, gibt die Funktion die erforderliche Größe (in breit Zeichen) der Ziel Zeichenfolge zurück. Wenn **mbstowcs** auf ein ungültiges Multibytezeichen stößt, wird-1 zurückgegeben. Wenn der Rückgabewert " *count*" ist, wird die Zeichenfolge mit breit Zeichen nicht auf Null beendet.
 
 > [!IMPORTANT]
-> Sicherstellen, dass *Wcstr* und *Mbstr* nicht überlappen und dass *Anzahl* die Anzahl zu konvertierendermultibytezeichen korrekt darstellt.
+> Stellen Sie sicher, dass sich *wcstr* und *mbstr* nicht über Lappen und dass die Anzahl der zu konvertierenden Multibytezeichen korrekt widerspiegelt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Mbstowcs** -Funktion konvertiert wird, bis eine maximale Anzahl von *Anzahl* Multibytezeichen verweist *Mbstr* in eine entsprechende Breitzeichenfolge, die Zeichenfolge durch das aktuelle Gebietsschema bestimmt. Sie speichert die resultierende Breitzeichen-Zeichenfolge an der Adresse durch dargestellt *Wcstr*. Das Ergebnis ähnelt einer Reihe von Aufrufen an [Mbtowc](mbtowc-mbtowc-l.md). Wenn **Mbstowcs** das Einzelbyte-Null-Zeichen ('\0') erkennt, entweder vor oder bei *Anzahl* auftritt, konvertiert der Null-Zeichen, ein Breitzeichen Null-Zeichen (L '\0') und beenden. Daher wird die Breitzeichen-Zeichenfolge an *Wcstr* ist Null-terminierte nur dann, wenn ein Null-Zeichen, die während der Konvertierung erkannt wird. Wenn die Sequenzen, zeigt *Wcstr* und *Mbstr* überlappen, ist das Verhalten nicht definiert.
+Die **mbstowcs** -Funktion konvertiert eine maximale Anzahl von Multibytezeichen, auf die *mbstr* zeigt, auf eine Zeichenfolge mit entsprechenden breit Zeichen, die vom aktuellen Gebiets Schema bestimmt werden. Die resultierende breit Zeichen Zeichenfolge wird in der durch *wcstr*dargestellten Adresse gespeichert. Das Ergebnis ähnelt einer Reihe von Aufrufen von [mbtowc](mbtowc-mbtowc-l.md). Wenn **mbstowcs** das Single-Byte-Null Zeichen (' \ 0 ') erkennt, entweder vor oder wenn *count* auftritt, konvertiert es das NULL-Zeichen in ein breit Zeichen-NULL Zeichen (L ' \ 0 ') und wird beendet. Folglich ist die Zeichenfolge mit breit Zeichen bei *wcstr* nur dann NULL-terminiert, wenn während der Konvertierung ein NULL-Zeichen gefunden wird. Wenn die Sequenzen, auf die von *wcstr* und *mbstr* verwiesen wird, überlappen, ist das Verhalten nicht definiert.
 
-Wenn die *Wcstr* Argument **NULL**, **Mbstowcs** gibt die Anzahl der Breitzeichen, die von der Konvertierung, einschließlich nicht auf einen null-Terminator führen würden. Die Quellzeichenfolge muss auf NULL enden, damit der korrekte Wert zurückgegeben wird. Wenn Sie wollen, dass die resultierende Breitzeichenfolge auf NULL endet, fügen Sie dem Rückgabewert 1 hinzu.
+Wenn das *wcstr* -Argument **null**ist, gibt **mbstowcs** die Anzahl der breit Zeichen zurück, die sich aus der Konvertierung ergeben würden, ohne ein NULL-Terminator zu einschließen. Die Quellzeichenfolge muss auf NULL enden, damit der korrekte Wert zurückgegeben wird. Wenn Sie wollen, dass die resultierende Breitzeichenfolge auf NULL endet, fügen Sie dem Rückgabewert 1 hinzu.
 
-Wenn die *Mbstr* Argument ist **NULL**, oder wenn *Anzahl* ist > **INT_MAX**, Handler für ungültige Parameter aufgerufen, siehe [ Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, wird Errno auf festgelegt **EINVAL** und die Funktion gibt-1 zurück.
+Wenn das *mbstr* -Argument **null**ist, oder wenn *count* > **INT_MAX**, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md) Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, wird errno auf **EINVAL** festgelegt, und die Funktion gibt-1 zurück.
 
-**Mbstowcs** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_mbstowcs_l** ist identisch, außer dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**mbstowcs** verwendet das aktuelle Gebiets Schema für jedes vom Gebiets Schema abhängige Verhalten. **_mbstowcs_l** ist beinahe identisch, verwendet jedoch stattdessen das übergebene Gebiets Schema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -212,4 +212,4 @@ Convert back to wide-character string:
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>

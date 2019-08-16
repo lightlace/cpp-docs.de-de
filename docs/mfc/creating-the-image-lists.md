@@ -6,23 +6,23 @@ helpviewer_keywords:
 - image lists [MFC], creating for CListCtrl
 - lists [MFC], image
 ms.assetid: c2768515-deba-49e8-a6f3-5be6482afb19
-ms.openlocfilehash: 844bfe71f7b03f299f57b0fd4558b7e9eacf67c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6687b62b70103894d957a21019008e8781385feb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242236"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508785"
 ---
 # <a name="creating-the-image-lists"></a>Erstellen der Bildliste
 
-Erstellen von Bildlisten identisch ist, unabhängig davon, ob Sie [CListView](../mfc/reference/clistview-class.md) oder [CListCtrl](../mfc/reference/clistctrl-class.md).
+Das Erstellen von Image Listen ist identisch, unabhängig davon, ob Sie [CListView](../mfc/reference/clistview-class.md) oder [CListCtrl](../mfc/reference/clistctrl-class.md)verwenden.
 
 > [!NOTE]
->  Sie nur müssen image aufgelistet, wenn das Listensteuerelement enthält die `LVS_ICON` Stil.
+>  Sie benötigen nur Bildlisten, wenn das Listen Steuerelement `LVS_ICON` den Stil enthält.
 
-Verwenden Sie Klasse `CImageList` erstellen Sie eine oder mehrere Bildlisten (für in voller Größe Symbole, kleine Symbole und Zustände). Finden Sie unter [CImageList](../mfc/reference/cimagelist-class.md), und finden Sie unter [List View Image Lists](/windows/desktop/Controls/using-list-view-controls) im Windows SDK.
+Verwenden Sie `CImageList` die-Klasse, um eine oder mehrere Bildlisten zu erstellen (für Symbole in voller Größe, kleine Symbole und Zustände). Weitere Informationen finden Sie unter [CImageList](../mfc/reference/cimagelist-class.md)und [Bildlisten](/windows/win32/Controls/using-list-view-controls) der Listenansicht im Windows SDK.
 
-Rufen Sie [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) für jede Liste image, übergeben Sie einen Zeiger auf die entsprechenden `CImageList` Objekt.
+[CListCtrl:: SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) für jede Bildliste abrufen übergeben Sie einen Zeiger auf das `CImageList` entsprechende-Objekt.
 
 ## <a name="see-also"></a>Siehe auch
 

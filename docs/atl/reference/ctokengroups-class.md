@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 4e5d06ca01201bf415afedbe6f6e5bca096f68fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 88096747f45d4a81c873837cdd4975da9d8c24e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915578"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496294"
 ---
 # <a name="ctokengroups-class"></a>Cdekengroups-Klasse
 
@@ -67,11 +67,11 @@ class CTokenGroups
 
 ## <a name="remarks"></a>Hinweise
 
-Ein [Zugriffs Token](/windows/desktop/SecAuthZ/access-tokens) ist ein Objekt, das den Sicherheitskontext eines Prozesses oder Threads beschreibt und jedem Benutzer zugeordnet ist, der bei einem Windows-System angemeldet ist.
+Ein [Zugriffs Token](/windows/win32/SecAuthZ/access-tokens) ist ein Objekt, das den Sicherheitskontext eines Prozesses oder Threads beschreibt und jedem Benutzer zugeordnet ist, der bei einem Windows-System angemeldet ist.
 
-Die `CTokenGroups` -Klasse ist ein Wrapper für die [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) -Struktur, die Informationen über die Gruppen Sicherheits-IDs (SIDs) in einem Zugriffs Token enthält.
+Die `CTokenGroups` -Klasse ist ein Wrapper für die [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) -Struktur, die Informationen über die Gruppen Sicherheits-IDs (SIDs) in einem Zugriffs Token enthält.
 
-Eine Einführung zum Zugriffs Steuerungsmodell in Windows finden Sie unter [Access Control](/windows/desktop/SecAuthZ/access-control) in der Windows SDK.
+Eine Einführung zum Zugriffs Steuerungsmodell in Windows finden Sie unter [Access Control](/windows/win32/SecAuthZ/access-control) in der Windows SDK.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,7 +95,7 @@ Ein [CSID](../../atl/reference/csid-class.md) -Objekt.
 Die Attribute, die dem `CSid` -Objekt zugeordnet werden sollen.
 
 *rTokenGroups*<br/>
-Eine [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) -Struktur.
+Eine [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) -Struktur.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -114,7 +114,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="parameters"></a>Parameter
 
 *rhs*<br/>
-Die `CTokenGroups` Objekt-oder [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) -Struktur, mit der `CTokenGroups` das Objekt erstellt werden soll.
+Die `CTokenGroups` Objekt-oder [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) -Struktur, mit der `CTokenGroups` das Objekt erstellt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -191,7 +191,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ruft einen Zeiger auf die [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) -Struktur ab, die `CTokenGroups` zum zugriffstokenobjekt gehört.
+Ruft einen Zeiger auf die [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) -Struktur ab, die `CTokenGroups` zum zugriffstokenobjekt gehört.
 
 ##  <a name="getsidsandattributes"></a>CTokenGroups:: getsidsandattribute
 
@@ -253,7 +253,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="parameters"></a>Parameter
 
 *rhs*<br/>
-Die `CTokenGroups` Objekt-oder [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) -Struktur, die `CTokenGroups` dem-Objekt zugewiesen werden soll.
+Die `CTokenGroups` Objekt-oder [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) -Struktur, die `CTokenGroups` dem-Objekt zugewiesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -269,7 +269,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ### <a name="remarks"></a>Hinweise
 
-Wandelt einen Wert in einen Zeiger auf die [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) -Struktur um.
+Wandelt einen Wert in einen Zeiger auf die [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) -Struktur um.
 
 ## <a name="see-also"></a>Siehe auch
 

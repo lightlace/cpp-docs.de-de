@@ -5,26 +5,26 @@ helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: 4fa0d3fbf3457bfafab731275584d206206161dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d58431ae3f9859677302010f15a75b37ebedbf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414034"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510594"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Vergleich der Synchronisierungsdatenstrukturen mit der Windows-API
 
 In diesem Thema wird das Verhalten der von der Concurrency Runtime bereitgestellten Synchronisierungsdatenstrukturen mit den von der Windows-API bereitgestellten Synchronisierungsdatenstrukturen verglichen.
 
-Die von der Concurrency Runtime bereitgestellten Synchronisierungsdatenstrukturen führen Sie die *kooperativen Threadingmodell*. Im kooperativen Threadingmodell halten Synchronisierungsprimitiven ihre Verarbeitungsressourcen zugunsten von anderen Threads explizit zurück. Dies unterscheidet sich von der *präemptiven Threadingmodell*, in dem Verarbeitungsressourcen vom Planer oder Betriebssystem für andere Threads übertragen werden.
+Die von der Concurrency Runtime bereitgestellten Synchronisierungs Datenstrukturen folgen dem *kooperativen Threading Modell*. Im kooperativen Threadingmodell halten Synchronisierungsprimitiven ihre Verarbeitungsressourcen zugunsten von anderen Threads explizit zurück. Dies unterscheidet sich vom präemptiven *Threading Modell*, in dem Verarbeitungs Ressourcen durch den steuernden Planer oder das Betriebssystem an andere Threads übertragen werden.
 
-## <a name="criticalsection"></a>critical_section
+## <a name="critical_section"></a>critical_section
 
-Die [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) -Klasse ähnelt der Windows `CRITICAL_SECTION` Struktur, da es nur von den Threads eines Prozesses verwendet werden kann. Weitere Informationen zu kritischen Abschnitten in der Windows-API finden Sie unter [Critical Section Objects](/windows/desktop/Sync/critical-section-objects).
+Die [parallelcurrency:: CRITICAL_SECTION](../../parallel/concrt/reference/critical-section-class.md) -Klasse ähnelt der `CRITICAL_SECTION` Windows-Struktur, da Sie nur von den Threads eines Prozesses verwendet werden kann. Weitere Informationen zu kritischen Abschnitten in der Windows-API finden Sie unter [Critical Section Objects](/windows/win32/Sync/critical-section-objects).
 
-## <a name="readerwriterlock"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a>reader_writer_lock
 
-Die [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) ähnelt Windows slim Reader-/Writer (SRW) sperren. In der folgenden Tabelle werden die Übereinstimmungen und Unterschiede aufgelistet.
+Die Klasse " [parallelcurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) " ähnelt den SRW-Sperren (Windows Slim Reader/Writer). In der folgenden Tabelle werden die Übereinstimmungen und Unterschiede aufgelistet.
 
 |Feature|`reader_writer_lock`|SRW-Sperre|
 |-------------|--------------------------|--------------|
@@ -34,11 +34,11 @@ Die [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-wr
 |write-preference-Sperre|Ja|Nein|
 |FIFO-Zugriff auf Writer|Ja|Nein|
 
-Weitere Informationen zu SRW-sperren, finden Sie unter [Slim Reader-/Writer (SRW) Locks](https://msdn.microsoft.com/library/windows/desktop/aa904937) im Platform SDK.
+Weitere Informationen zu SRW-Sperren finden Sie unter [SRW-Sperren (Slim Reader/Writer)](/windows/win32/sync/slim-reader-writer--srw--locks) im Platform SDK.
 
 ## <a name="event"></a>event
 
-Die [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) ähnelt einem unbenannten, Windows-Ereignis für manuelles Zurücksetzen. Das Verhalten eines `event`-Objekts ist jedoch kooperativ, das Verhalten eines Windows-Ereignisses hingegen präemptiv. Weitere Informationen zu Windows-Ereignissen finden Sie unter [Ereignisobjekte](/windows/desktop/Sync/event-objects).
+Die " [parallelcurrency:: Event](../../parallel/concrt/reference/event-class.md) "-Klasse ähnelt einem unbenannten Windows-Ereignis für manuelles Zurücksetzen. Das Verhalten eines `event`-Objekts ist jedoch kooperativ, das Verhalten eines Windows-Ereignisses hingegen präemptiv. Weitere Informationen zu Windows-Ereignissen finden Sie unter [Event Objects](/windows/win32/Sync/event-objects).
 
 ## <a name="example"></a>Beispiel
 
@@ -83,7 +83,7 @@ Windows event:
 
 Da das Verhalten der `event`-Klasse kooperativ ist, kann der Planer Verarbeitungsressourcen einem anderen Kontext zuweisen, während auf die Signalisierung eines Ereignisses gewartet wird. Aus diesem Grund bewerkstelligt die Version, die die `event`-Klasse verwendet, einen höheren Arbeitsaufwand. In der Version, die Windows-Ereignisse verwendet, muss jede wartende Aufgabe den signalisierten Zustand aufweisen, bevor die nächste Aufgabe gestartet werden kann.
 
-Weitere Informationen zu Aufgaben, finden Sie unter [Aufgabenparallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Weitere Informationen zu Aufgaben finden Sie Unteraufgaben [Parallelität](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
 ## <a name="see-also"></a>Siehe auch
 

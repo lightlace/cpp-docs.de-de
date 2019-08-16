@@ -29,14 +29,14 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 08e8cb0ddaac342682776600fd0fd8b3d26b8953
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1eaa6f0b81daaa7d8c7626398fe30b45ead979c3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188484"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498916"
 ---
-# <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
+# <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
 Konvertiert ein Breitzeichen in das entsprechende Multibytezeichen. Eine Version von [wctomb, _wctomb_l](wctomb-wctomb-l.md) mit Sicherheitserweiterungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -67,7 +67,7 @@ Die Anzahl von Bytes oder ein Code, der das Ergebnis angibt.
 Die Adresse eines Multibytezeichens.
 
 *sizeInBytes*<br/>
-Größe des Puffers *Mbchar*.
+Größe des Puffers *mbchar*.
 
 *wchar*<br/>
 Ein Breitzeichen.
@@ -87,15 +87,15 @@ Fehlerbedingungen
 |any|>**INT_MAX**|**EINVAL**|nicht geändert|
 |any|zu klein|**EINVAL**|nicht geändert|
 
-Wenn eine der oben genannten Fehlerbedingungen auftritt, wird ein Handler für ungültige Parameter aufgerufen (siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md)). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Wctomb** gibt **EINVAL** und **Errno** zu **EINVAL**.
+Wenn eine der oben genannten Fehlerbedingungen auftritt, wird ein Handler für ungültige Parameter aufgerufen (siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md)). Wenn die weitere Ausführung zugelassen wird, gibt **wctomb** **EINVAL** zurück und legt **errno** auf **EINVAL**fest.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Wctomb_s** -Funktion konvertiert die *Wchar* Argument für das entsprechende Multibytezeichen und speichert das Ergebnis in *Mbchar*. Sie können die Funktion von einem beliebigen Punkt in einem beliebigen Programm aufrufen.
+Die **wctomb_s** -Funktion konvertiert das *WCHAR* -Argument in das entsprechende Multibytezeichen und speichert das Ergebnis bei *mbchar*. Sie können die Funktion von einem beliebigen Punkt in einem beliebigen Programm aufrufen.
 
-Wenn **Wctomb_s** konvertiert das Breitzeichen in ein Multibytezeichen ist, wird die Anzahl von Bytes (, und ist nie größer als **MB_CUR_MAX**) im Breitzeichen in die ganze Zahl, die verweist *pRetValue*. Wenn *Wchar* ist das Breitzeichen-Zeichen Null (L '\0'), **Wctomb_s** füllt *pRetValue* mit 1. Wenn der Zielzeiger *Mbchar* ist **NULL**, **Wctomb_s** setzt 0 in *pRetValue*. Wenn die Konvertierung nicht möglich, im aktuellen Gebietsschema ist **Wctomb_s** setzt-1 in *pRetValue*.
+Wenn **wctomb_s** das breit Zeichen in ein Multibytezeichen konvertiert, wird die Anzahl von Bytes (die nie größer als **MB_CUR_MAX**ist) im breit Zeichen in die ganze Zahl eingefügt, auf die von *pRetValue*verwiesen wird. Wenn *WCHAR* das breit Zeichen NULL-Zeichen (L ' \ 0 ') ist, füllt wctomb_s *pRetValue* mit 1. Wenn der Ziel Zeiger *mbchar* **null**ist, setzt **wctomb_s** den Wert 0 in *pRetValue*. Wenn die Konvertierung im aktuellen Gebiets Schema nicht möglich ist, legt **wctomb_s** -1 in *pRetValue*ab.
 
-**Wctomb_s** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige Informationen **_wctomb_s_l** ist identisch, außer dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**wctomb_s** verwendet das aktuelle Gebiets Schema für Gebiets Schema abhängige Informationen; **_wctomb_s_l** ist beinahe identisch, verwendet jedoch stattdessen das übergebene Gebiets Schema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,7 +108,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm stellt das Verhalten der **Wctomb** Funktion.
+Dieses Programm veranschaulicht das Verhalten der **wctomb** -Funktion.
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -142,4 +142,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

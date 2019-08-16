@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CMFCAcceleratorKeyAssignCtrl [MFC], PreTranslateMessage
 - CMFCAcceleratorKeyAssignCtrl [MFC], ResetKey
 ms.assetid: 89fb8e62-596e-4e71-8c9a-32740347aaab
-ms.openlocfilehash: c6ce8c75b1b764d1d2b66b86147035f069805d25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e57bf149fdbc293692c613afcabcf2d11d32221
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403907"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505471"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl-Klasse
 
-Die `CMFCAcceleratorKeyAssignCtrl` -Klasse erweitert die [CEdit-Klasse](../../mfc/reference/cedit-class.md) um zusätzliche Systemschaltflächen wie ALT, STRG und UMSCHALTTASTE zu unterstützen.
+Die `CMFCAcceleratorKeyAssignCtrl` -Klasse erweitert die [CEdit-Klasse](../../mfc/reference/cedit-class.md) , um zusätzliche System Schaltflächen wie alt, Control und Shift zu unterstützen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl](#cmfcacceleratorkeyassignctrl)|Erstellt ein `CMFCAcceleratorKeyAssignCtrl`-Objekt.|
+|[Cmfcacceleratorkeyzuzuzutragstrg:: cmfcacceleratorkeyzuzuzuordnung](#cmfcacceleratorkeyassignctrl)|Erstellt ein `CMFCAcceleratorKeyAssignCtrl`-Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
@@ -50,14 +50,14 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 |[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|Ruft die `ACCEL`-Struktur für eine im `CMFCAcceleratorKeyAssignCtrl`-Objekt gedrückte Tastenkombination ab.|
 |[CMFCAcceleratorKeyAssignCtrl::IsFocused](#isfocused)||
 |[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|Bestimmt, ob eine Tastenkombination definiert wurde.|
-|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) gesendet werden. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Wird von der [CWinApp](../../mfc/reference/cwinapp-class.md) -Klasse verwendet, um Fenstermeldungen zu übersetzen, bevor diese an die Windows-Funktionen [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) und [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) gesendet werden. (Überschreibt [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Setzt die Tastenkombination zurück.|
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Klasse erweitert die Funktionalität der `CEdit`-Klasse, indem Sie Unterstützung von Tastenkombinationen hinzufügt, auch bekannt als Zugriffstasten. Die `CMFCAcceleratorKeyAssignCtrl` -Klasse funktioniert als eine [CEdit-Klasse](../../mfc/reference/cedit-class.md) und es kann Systemschaltflächen erkennen.
+Diese Klasse erweitert die Funktionalität der `CEdit`-Klasse, indem Sie Unterstützung von Tastenkombinationen hinzufügt, auch bekannt als Zugriffstasten. Die `CMFCAcceleratorKeyAssignCtrl` -Klasse fungiert als [CEdit-Klasse](../../mfc/reference/cedit-class.md) und kann auch System Schaltflächen erkennen.
 
-Diese Klasse ordnet Zeichenfolgenwerten physische Tastenkombinationen zu. Angenommen die Tastenkombination ALT+B ist der Zeichenfolge „Alt + B“ zugeordnet. Wenn der Benutzer diese Tastenkombination in einem `CMFCAcceleratorKeyAssignCtrl`-Objekt drückt, wird ihm „Alt+B“ angezeigt. Weitere Informationen zum Zuordnen von Tastenkombinationen und Zeichenfolgenformaten finden Sie unter [CMFCAcceleratorKey-Klasse](../../mfc/reference/cmfcacceleratorkey-class.md).
+Diese Klasse ordnet Zeichenfolgenwerten physische Tastenkombinationen zu. Angenommen die Tastenkombination ALT+B ist der Zeichenfolge „Alt + B“ zugeordnet. Wenn der Benutzer diese Tastenkombination in einem `CMFCAcceleratorKeyAssignCtrl`-Objekt drückt, wird ihm „Alt+B“ angezeigt. Weitere Informationen zur Zuordnung zwischen Tastenkombinationen und einem Zeichen folgen Format finden Sie unter [cmfcacceleratorkey-Klasse](../../mfc/reference/cmfcacceleratorkey-class.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -79,19 +79,19 @@ Das folgende Beispiel veranschaulicht das Erstellen eines `CMFCAcceleratorKeyAss
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxacceleratorkeyassignctrl.h
+**Header:** afxacceleratorkeyzuzuzutragstrg. h
 
-##  <a name="cmfcacceleratorkeyassignctrl"></a>  CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl
+##  <a name="cmfcacceleratorkeyassignctrl"></a>Cmfcacceleratorkeyzuzuzutragstrg:: cmfcacceleratorkeyzuzuzuordnung
 
-Erstellt eine [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) Objekt.
+Erstellt ein [cmfcacceleratorkeyzuzuzurichtstrg](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) -Objekt.
 
 ```
 CMFCAcceleratorKeyAssignCtrl();
 ```
 
-##  <a name="getaccel"></a>  CMFCAcceleratorKeyAssignCtrl::GetAccel
+##  <a name="getaccel"></a>Cmfcacceleratorkeyzuzuzutragstrg:: GetAccel
 
-Ruft die `ACCEL` -Struktur für eine Tastenkombination gedrückt der [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) Objekt.
+Ruft die `ACCEL` -Struktur für eine Tastenkombination ab, die im [cmfcacceleratorkeyzuzu-](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) Objekt gedrückt wurde.
 
 ```
 ACCEL const* GetAccel() const;
@@ -99,15 +99,15 @@ ACCEL const* GetAccel() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `ACCEL` Struktur, die die Tastenkombination beschreibt.
+Eine `ACCEL` -Struktur, die die Tastenkombination beschreibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Funktion zum Abrufen der `ACCEL` Struktur für eine Tastenkombination, die der Benutzer in eingegeben Ihre `CMFCAcceleratorKeyAssignCtrl` Objekt.
+Verwenden Sie diese Funktion, um `ACCEL` die Struktur für eine Tastenkombination abzurufen, die der Benutzer `CMFCAcceleratorKeyAssignCtrl` in Ihr Objekt eingegeben hat.
 
-##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused
+##  <a name="isfocused"></a>Cmfcacceleratorkeyzuzuzutragstrg:: isfokussiert
 
-Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.
+Weitere Informationen finden Sie im Quellcode, der sich im **Ordner\\VC atlmfc\\\\src MFC** Ihrer Visual Studio-Installation befindet.
 
 ```
 BOOL IsFocused() const;
@@ -117,9 +117,9 @@ BOOL IsFocused() const;
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="iskeydefined"></a>  CMFCAcceleratorKeyAssignCtrl::IsKeyDefined
+##  <a name="iskeydefined"></a>Cmfcacceleratorkeyzuzuzutragstrg:: iskeydefined
 
-Bestimmt, ob in eine Tastenkombination definiert wurde die [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) Objekt.
+Bestimmt, ob eine Tastenkombination im [cmfcacceleratorkeyzuzu-](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) Objekt definiert wurde.
 
 ```
 BOOL IsKeyDefined() const;
@@ -127,15 +127,15 @@ BOOL IsKeyDefined() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Benutzer bereits eine gültige Kombination von Tasten gedrückt hat, die eine Tastenkombination zu definieren; andernfalls 0.
+Ein Wert ungleich 0 (null), wenn der Benutzer bereits eine gültige Tastenkombination gedrückt hat, die eine Tastenkombination definiert. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion verwenden, um festzustellen, ob der Benutzer eine gültige Tastenkombination in eingegeben Ihre `CMFCAcceleratorKeyAssignCtrl` Objekt. Wenn eine Tastenkombination vorhanden ist, können Sie [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) Methode zum Abrufen der `ACCEL` Struktur dieser Tastenkombination zugeordnet ist.
+Verwenden Sie diese Funktion, um zu bestimmen, ob der Benutzer eine gültige Tasten `CMFCAcceleratorKeyAssignCtrl` Kombination in das Objekt eingegeben hat. Wenn eine Tastenkombination vorhanden ist, können Sie die [cmfcacceleratorkeyzuzuordnermethode](#getaccel) verwenden, um die Struktur `ACCEL` abzurufen, die dieser Tastenkombination zugeordnet ist.
 
-##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage
+##  <a name="pretranslatemessage"></a>Cmfcacceleratorkeyzuzutragstrg::P retranslatemess Age
 
-Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.
+Weitere Informationen finden Sie im Quellcode, der sich im **Ordner\\VC atlmfc\\\\src MFC** Ihrer Visual Studio-Installation befindet.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -149,7 +149,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="resetkey"></a>  CMFCAcceleratorKeyAssignCtrl::ResetKey
+##  <a name="resetkey"></a>Cmfcacceleratorkeyzuzuzutragstrg:: Resetkey
 
 Setzt die Tastenkombination zurück.
 
@@ -159,7 +159,7 @@ void ResetKey();
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion löscht den Text des bearbeiten-Steuerelement. Dies schließt alle Tastenkombinationen, die der Benutzer geklickt hat.
+Die-Funktion löscht den Bearbeitungs Steuerelement Text. Dies schließt alle Tastenkombinationen ein, die der Benutzer gedrückt hat.
 
 ## <a name="see-also"></a>Siehe auch
 

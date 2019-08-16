@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive method
 - Microsoft::WRL::Wrappers::SRWLock::TryLockShared method
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
-ms.openlocfilehash: 6d4a504d9465c858af59a88cf0ef611bf88c3fde
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 079f1abe652d8c1610a084f5e1158cc5798d61c4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403081"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498296"
 ---
 # <a name="srwlock-class"></a>SRWLock-Klasse
 
-Stellt eine slim Reader-/Writer-Sperre.
+Stellt eine schlanke Lese-/Schreibsperre dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ class SRWLock;
 
 ## <a name="remarks"></a>Hinweise
 
-Eine slim Reader-/Writer-Sperre wird zum Synchronisieren des Zugriffs über Threads auf ein Objekt oder eine Ressource verwendet. Weitere Informationen finden Sie unter [Synchronisierungsfunktionen](/windows/desktop/Sync/synchronization-functions).
+Eine schlanke Lese-/Schreibsperre wird zum Synchronisieren des Zugriffs über Threads auf ein Objekt oder eine Ressource verwendet. Weitere Informationen finden Sie unter [Synchronisierungs Funktionen](/windows/win32/Sync/synchronization-functions).
 
 ## <a name="members"></a>Member
 
@@ -48,30 +48,30 @@ Eine slim Reader-/Writer-Sperre wird zum Synchronisieren des Zugriffs über Thre
 
 Name                | Beschreibung
 ------------------- | -------------------------------------------------------------------
-`SyncLockExclusive` | Synonym für einen `SRWLock` -Objekt, das im exklusiven Modus abgerufen wird.
-`SyncLockShared`    | Synonym für einen `SRWLock` -Objekt, das im freigegebenen Modus abgerufen wird.
+`SyncLockExclusive` | Synonym für ein `SRWLock` Objekt, das im exklusiven Modus abgerufen wird.
+`SyncLockShared`    | Synonym für ein `SRWLock` Objekt, das im freigegebenen Modus abgerufen wird.
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
 Name                                     | Beschreibung
 ---------------------------------------- | --------------------------------------------------
 [SRWLock::SRWLock](#srwlock-constructor) | Initialisiert eine neue Instanz der `SRWLock`-Klasse.
-[SRWLock::~SRWLock](#tilde-srwlock)      | Hebt die Initialisierung einer Instanz von der `SRWLock` Klasse.
+[SRWLOCK:: ~ SRWLOCK](#tilde-srwlock)      | Deinitialisiert eine Instanz der `SRWLock` -Klasse.
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 Name                                           | Beschreibung
 ---------------------------------------------- | -------------------------------------------------------------------------------------------------------
-[SRWLock::LockExclusive](#lockexclusive)       | Ruft eine `SRWLock` Objekt im exklusiven Modus.
-[SRWLock::LockShared](#lockshared)             | Ruft eine `SRWLock` Objekt im freigegebenen Modus.
-[SRWLock::TryLockExclusive](#trylockexclusive) | Versucht, für eine `SRWLock` Objekt im exklusiven Modus für den aktuellen oder angegebenen `SRWLock` Objekt.
-[SRWLock::TryLockShared](#trylockshared)       | Versucht, für eine `SRWLock` Objekt im freigegebenen Modus für den aktuellen oder angegebenen `SRWLock` Objekt.
+[SRWLock::LockExclusive](#lockexclusive)       | Ruft ein `SRWLock` -Objekt im exklusiven Modus ab.
+[SRWLock::LockShared](#lockshared)             | Ruft ein `SRWLock` Objekt im freigegebenen Modus ab.
+[SRWLock::TryLockExclusive](#trylockexclusive) | Versucht, ein `SRWLock` -Objekt im exklusiven Modus für das aktuelle oder das `SRWLock` angegebene-Objekt abzurufen.
+[SRWLock::TryLockShared](#trylockshared)       | Versucht, ein `SRWLock` -Objekt im freigegebenen Modus für das aktuelle oder `SRWLock` das angegebene-Objekt abzurufen.
 
-### <a name="protected-data-member"></a>Geschützte Datenmember
+### <a name="protected-data-member"></a>Geschützter Datenmember
 
 Name                                      | Beschreibung
 ----------------------------------------- | -----------------------------------------------------------------------
-[SRWLock::SRWLock_](#srwlock-data-member) | Enthält die zugrunde liegende Sperre-Variable für den aktuellen `SRWLock` Objekt.
+[SRWLock::SRWLock_](#srwlock-data-member) | Enthält die zugrunde liegende Sperr Variable für das `SRWLock` aktuelle-Objekt.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -79,13 +79,13 @@ Name                                      | Beschreibung
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** corewrappers.h
+**Header:** corewrappers. h
 
-**Namespace:** Microsoft::WRL::Wrappers
+**Namespace:** Microsoft:: WRL:: Wrapper
 
-## <a name="tilde-srwlock"></a>SRWLock::~SRWLock
+## <a name="tilde-srwlock"></a>SRWLOCK:: ~ SRWLOCK
 
-Hebt die Initialisierung einer Instanz von der `SRWLock` Klasse.
+Deinitialisiert eine Instanz der `SRWLock` -Klasse.
 
 ```cpp
 ~SRWLock();
@@ -93,7 +93,7 @@ Hebt die Initialisierung einer Instanz von der `SRWLock` Klasse.
 
 ## <a name="lockexclusive"></a>SRWLock::LockExclusive
 
-Ruft eine `SRWLock` Objekt im exklusiven Modus.
+Ruft ein `SRWLock` -Objekt im exklusiven Modus ab.
 
 ```cpp
 SyncLockExclusive LockExclusive();
@@ -106,15 +106,15 @@ static SyncLockExclusive LockExclusive(
 ### <a name="parameters"></a>Parameter
 
 *lock*<br/>
-Zeiger auf ein `SRWLock` Objekt.
+Zeiger auf ein `SRWLock` -Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `SRWLock` Objekt im exklusiven Modus.
+Ein `SRWLock` -Objekt im exklusiven Modus.
 
 ## <a name="lockshared"></a>SRWLock::LockShared
 
-Ruft eine `SRWLock` Objekt im freigegebenen Modus.
+Ruft ein `SRWLock` Objekt im freigegebenen Modus ab.
 
 ```cpp
 SyncLockShared LockShared();
@@ -127,11 +127,11 @@ static SyncLockShared LockShared(
 ### <a name="parameters"></a>Parameter
 
 *lock*<br/>
-Zeiger auf ein `SRWLock` Objekt.
+Zeiger auf ein `SRWLock` -Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `SRWLock` Objekt im freigegebenen Modus.
+Ein `SRWLock` -Objekt im freigegebenen Modus.
 
 ## <a name="srwlock-constructor"></a>SRWLock::SRWLock
 
@@ -143,7 +143,7 @@ SRWLock();
 
 ## <a name="srwlock-data-member"></a>SRWLock::SRWLock_
 
-Enthält die zugrunde liegende Sperre-Variable für den aktuellen `SRWLock` Objekt.
+Enthält die zugrunde liegende Sperr Variable für das `SRWLock` aktuelle-Objekt.
 
 ```cpp
 SRWLOCK SRWLock_;
@@ -151,7 +151,7 @@ SRWLOCK SRWLock_;
 
 ## <a name="trylockexclusive"></a>SRWLock::TryLockExclusive
 
-Versucht, für eine `SRWLock` Objekt im exklusiven Modus für den aktuellen oder angegebenen `SRWLock` Objekt. Wenn der Aufruf erfolgreich ist, wird der aufrufende Thread den Besitz der Sperre.
+Versucht, ein `SRWLock` -Objekt im exklusiven Modus für das aktuelle oder das `SRWLock` angegebene-Objekt abzurufen. Wenn der Aufruf erfolgreich ist, übernimmt der aufrufende Thread den Besitz der Sperre.
 
 ```cpp
 SyncLockExclusive TryLockExclusive();
@@ -164,15 +164,15 @@ static SyncLockExclusive TryLockExclusive(
 ### <a name="parameters"></a>Parameter
 
 *lock*<br/>
-Zeiger auf ein `SRWLock` Objekt.
+Zeiger auf ein `SRWLock` -Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreicher Ausführung einen `SRWLock` Objekt im exklusiven Modus und der aufrufende Thread übernimmt den Besitz der Sperre. Andernfalls ein `SRWLock` Objekt, dessen Status ungültig ist.
+Bei erfolgreicher Ausführung übernimmt `SRWLock` ein Objekt im exklusiven Modus, und der aufrufende Thread übernimmt den Besitz der Sperre. Andernfalls ein `SRWLock` Objekt, dessen Zustand ungültig ist.
 
 ## <a name="trylockshared"></a>SRWLock::TryLockShared
 
-Versucht, für eine `SRWLock` Objekt im freigegebenen Modus für den aktuellen oder angegebenen `SRWLock` Objekt.
+Versucht, ein `SRWLock` -Objekt im freigegebenen Modus für das aktuelle oder `SRWLock` das angegebene-Objekt abzurufen.
 
 ```cpp
 WRL_NOTHROW SyncLockShared TryLockShared();
@@ -184,8 +184,8 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 ### <a name="parameters"></a>Parameter
 
 *lock*<br/>
-Zeiger auf ein `SRWLock` Objekt.
+Zeiger auf ein `SRWLock` -Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreicher Ausführung einen `SRWLock` Objekt im Modus für gemeinsame Nutzung und der aufrufende Thread übernimmt den Besitz der Sperre. Andernfalls ein `SRWLock` Objekt, dessen Status ungültig ist.
+Bei erfolgreicher Ausführung übernimmt `SRWLock` ein Objekt im freigegebenen Modus und der aufrufende Thread den Besitz der Sperre. Andernfalls ein `SRWLock` Objekt, dessen Zustand ungültig ist.

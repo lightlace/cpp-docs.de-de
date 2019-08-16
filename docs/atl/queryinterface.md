@@ -7,22 +7,22 @@ helpviewer_keywords:
 - interfaces, availability
 - QueryInterface method
 ms.assetid: 62fce95e-aafa-4187-b50b-e6611b74c3b3
-ms.openlocfilehash: 28f3781706981b06d49829c0277014c09574ef6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de2762cff3d697261e159336d866a5a7cb10fafa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250353"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492004"
 ---
 # <a name="queryinterface"></a>QueryInterface
 
-Es gibt, aber Mechanismen mit dem express ein Objekt kann die Funktionalität bietet statisch (vor er instanziiert wird) der grundlegende Mechanismus für die COM-ist die Verwendung der `IUnknown` aufgerufene Methode [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
+Obwohl es Mechanismen gibt, mit denen ein Objekt die Funktionalität Ausdrücken kann, die es statisch bereitstellt (vor der instanziierten), besteht der grundlegende com- `IUnknown` Mechanismus in der Verwendung der Methode " [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))".
 
-Jede Schnittstelle stammt aus `IUnknown`, sodass jede Schnittstelle keine Implementierung von besitzt `QueryInterface`. Unabhängig von der Implementierung fragt diese Methode ein Objekt mit die IID der Schnittstelle, die vom Aufrufer eines Zeigers, auf. Wenn das Objekt über die Schnittstelle unterstützt `QueryInterface` ruft Sie einen Zeiger auf die Schnittstelle, bei gleichzeitigem Aufrufen `AddRef`. Andernfalls wird den Fehlercode E_NOINTERFACE zurückgegeben.
+Jede Schnittstelle wird von `IUnknown`abgeleitet, sodass jede Schnittstelle über eine `QueryInterface`Implementierung von verfügt. Unabhängig von der Implementierung fragt diese Methode ein Objekt mithilfe der IID der Schnittstelle ab, zu der der Aufrufer einen Zeiger wünscht. Wenn das-Objekt diese Schnittstelle `QueryInterface` unterstützt, Ruft einen Zeiger auf die-Schnittstelle `AddRef`ab, während auch aufgerufen wird. Andernfalls wird der E_NOINTERFACE-Fehlercode zurückgegeben.
 
-Beachten Sie, die Sie bei der standardeinhaltung [Verweiszählung](../atl/reference-counting.md) Regeln immer. Wenn Sie aufrufen `Release` auf einen Schnittstellenzeiger, den Verweiszähler auf 0 (null) dekrementiert werden soll, verwenden Sie nicht diesen Zeiger erneut aus. Gelegentlich müssen Sie möglicherweise einen schwachen Verweis auf ein Objekt zu erhalten (d. h. möglicherweise möchten Sie einen Zeiger auf eine der Schnittstellen abzurufen, ohne den Verweiszähler zu inkrementieren), aber es ist nicht zulässig, durch den Aufruf dazu `QueryInterface` gefolgt von `Release`. Der Zeiger auf diese Weise erhalten ist ungültig und sollte nicht verwendet werden. Dadurch wird schneller deutlich Wenn [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) definiert ist, ist dieses Makro definieren eine gute Möglichkeit für das Zählen von Fehlern suchen von verweisen.
+Beachten Sie, dass Sie immer die [Verweis zählungs](../atl/reference-counting.md) Regeln befolgen müssen. Wenn Sie für `Release` einen Schnittstellen Zeiger aufzurufen, um den Verweis Zähler auf 0 (null) zu verringern, sollten Sie diesen Zeiger nicht erneut verwenden. Gelegentlich müssen Sie möglicherweise einen schwachen Verweis auf ein Objekt abrufen (d. h., Sie möchten möglicherweise einen Zeiger auf eine der Schnittstellen abrufen, ohne den Verweis Zähler zu erhöhen), dies ist jedoch nicht akzeptabel, indem `QueryInterface` Sie gefolgt `Release`von aufrufen. Der in einer solchen Weise erhaltene Zeiger ist ungültig und sollte nicht verwendet werden. Dies wird leichter ersichtlich, wenn [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) definiert ist. Daher ist das definieren dieses Makros eine hilfreiche Möglichkeit, um Verweis Zählfehler zu finden.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Einführung in COM](../atl/introduction-to-com.md)<br/>
-[QueryInterface: Navigieren in einem Objekt](/windows/desktop/com/queryinterface--navigating-in-an-object)
+[QueryInterface Navigieren in einem Objekt](/windows/win32/com/queryinterface--navigating-in-an-object)

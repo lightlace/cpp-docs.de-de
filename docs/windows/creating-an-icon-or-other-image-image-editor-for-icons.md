@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen eines Symbols oder anderen Bilds'
+title: 'Vorgehensweise: Erstellen eines Symbols oder eines anderen Bilds'
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
@@ -87,24 +87,24 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: d10593ffbae7aef55adc3334057402b6952d8ba7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2605644533d55527a07904ac89fa937db1b2eec5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345525"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513747"
 ---
-# <a name="how-to-create-an-icon-or-other-image"></a>Vorgehensweise: Erstellen eines Symbols oder anderen Bilds
+# <a name="how-to-create-an-icon-or-other-image"></a>Vorgehensweise: Erstellen eines Symbols oder eines anderen Bilds
 
-Sie können ein neues Image, Bitmap, Symbol, Cursor, oder der Symbolleiste zu erstellen, und dann die **Bildbearbeitung** um ihre Darstellung anzupassen. Sie können auch eine neue Bitmap Standardressource erstellen eine [Ressourcenvorlage](../windows/how-to-use-resource-templates.md).
+Sie können ein neues Bild, eine Bitmap, ein Symbol, einen Cursor oder eine Symbolleiste erstellen und dann mit dem **Bild-Editor** die Darstellung anpassen. Sie können auch eine neue Bitmap erstellen, die nach einer [Ressourcen Vorlage](../windows/how-to-use-resource-templates.md)gemustert ist.
 
-## <a name="icons-and-cursors-image-resources-for-display-devices"></a>Symbole und Cursor: Bildressourcen für Anzeigegeräte
+## <a name="icons-and-cursors-image-resources-for-display-devices"></a>Symbole und Cursor: Bild Ressourcen für Anzeigegeräte
 
-Symbole und Cursor sind grafische Ressourcen, die mehrere Bilder in verschiedenen Größen und Farbschemas für verschiedene Arten von Anzeigegeräten enthalten können. Ein Cursor verfügt auch über einen Hotspot, der Speicherort Windows zum Nachverfolgen seiner Position verwendet. Sowohl Symbole und Cursor werden erstellt und bearbeitet, mithilfe der **Bildbearbeitung**, wie Bitmaps und andere Bilder auch.
+Symbole und Cursor sind grafische Ressourcen, die mehrere Bilder in verschiedenen Größen und Farbschemas für verschiedene Arten von Anzeigegeräten enthalten können. Ein Cursor verfügt auch über einen Hotspot, den Speicherort, den Windows zum Nachverfolgen seiner Position verwendet. Sowohl Symbole als auch Cursor werden mit dem Bild- **Editor**erstellt und bearbeitet, ebenso wie Bitmaps und andere Bilder.
 
-Bei der Erstellung eines neuen Symbols oder Cursors, der **Bildbearbeitung** erstellt zunächst ein Bild eines Standardtyps. Das Bild ist anfänglich mit der Bildschirmfarbe (transparent) gefüllt. Wenn das Bild eines Cursors ist, den Hotspot ist anfänglich mit den Koordinaten der oberen linken Ecke `0,0`.
+Wenn Sie ein neues Symbol oder einen neuen Cursor erstellen, erstellt der **Bild-Editor** zunächst ein Bild eines Standard Typs. Das Bild ist anfänglich mit der Bildschirmfarbe (transparent) gefüllt. Wenn es sich bei dem Bild um einen Cursor handelt, befindet sich der Hotspot anfänglich in der `0,0`oberen linken Ecke mit den Koordinaten.
 
-In der Standardeinstellung die **Bildbearbeitung** unterstützt die Erstellung weiterer Bilder für die Geräte, die in der folgenden Tabelle gezeigt. Sie können Bilder für andere Geräte erstellen, geben Sie die Breite, Höhe und Anzahl der Farben Parameter in der **benutzerdefiniertes Image** Dialogfeld.
+Standardmäßig unterstützt der **Bild-Editor** die Erstellung zusätzlicher Images für die Geräte, die in der folgenden Tabelle aufgeführt sind. Sie können Bilder für andere Geräte erstellen, indem Sie im Dialogfeld **benutzerdefiniertes Bild** die Parameter width, Height und Color-count eingeben.
 
 |Farbe|Breite (in Pixel)|Höhe (in Pixel)|
 |-----------|----------------------|-----------------------|
@@ -124,198 +124,198 @@ In der Standardeinstellung die **Bildbearbeitung** unterstützt die Erstellung w
 |256|64|64|
 |256|96|96|
 
-### <a name="create-a-device-image-icon-or-cursor"></a>Erstellen eines gerätebilds (Symbol oder Cursor)
+### <a name="create-a-device-image-icon-or-cursor"></a>Erstellen eines Geräte Bilds (Symbol oder Cursor)
 
-Bei der Erstellung ein neues Symbol oder Cursor-Ressource, die **Bildbearbeitung** erstellt zunächst ein Image eines bestimmten Formats (32 × 32, 16 Farben für Symbole und 32 × 32, Monochrom für Cursor). Sie können dann Hinzufügen von Bildern in verschiedenen Größen und Formate zu dem ersten Symbol oder Cursor und jedes zusätzliche Image Bedarf bearbeiten, für die verschiedenen Anzeigegeräten. Sie können auch ein Bild mit einem Ausschneiden und Einfügen-Vorgang aus einem vorhandenen Imagetyp oder aus einer Bitmap in einem Grafikprogramm erstellte bearbeiten.
+Wenn Sie ein neues Symbol oder eine neue Cursor Ressource erstellen, erstellt der **Bild-Editor** zunächst ein Bild in einem bestimmten Format (32 × 32, 16 Farben für Symbole und 32 × 32, monochrome für Cursor). Anschließend können Sie dem ersten Symbol oder Cursor Bilder in verschiedenen Größen und Formaten hinzufügen und jedes weitere Bild nach Bedarf für die verschiedenen Anzeigegeräte bearbeiten. Sie können ein Bild auch bearbeiten, indem Sie einen Ausschneide-und Einfügevorgang aus einem vorhandenen Bildtyp oder einer Bitmap verwenden, die in einem Grafikprogramm erstellt wurde.
 
-Beim Öffnen der Ressource Symbol oder Cursor in die [Bildbearbeitung](../windows/image-editor-for-icons.md), das Bild, das das aktuelle Anzeigegerät am ehesten entspricht, wird standardmäßig geöffnet.
+Wenn Sie das Symbol bzw. die Cursor Ressource im [Bild-Editor](../windows/image-editor-for-icons.md)öffnen, wird das Bild, das mit dem aktuellen Anzeigegerät am ehesten übereinstimmt, standardmäßig geöffnet.
 
 > [!NOTE]
-> Wenn Ihr Projekt noch keine RC-Datei enthält, finden Sie unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
+> Wenn das Projekt noch keine RC-Datei enthält, finden Sie weitere Informationen unter [Erstellen einer neuen Ressourcen Skriptdatei](../windows/how-to-create-a-resource-script-file.md).
 
-Die **neu &lt;Gerät&gt; Bildtyp** Dialogfeld können Sie ein neues Gerätebild eines angegebenen Typs erstellt. Zum Öffnen der **neu \<Gerät > Image** (Dialogfeld), wechseln Sie zum Menü **Image** > **Neuer Bildtyp**. Die folgenden Eigenschaften enthalten sind **Image Zieltyp** und **benutzerdefinierte**.
+Im **Dialog &lt;Feld&gt; neuer Geräte Abbildtyp** können Sie ein neues Geräte Image eines angegebenen Typs erstellen. Um das Dialog **Feld \<neues Gerät >** Abbild zu öffnen, navigieren Sie zu Menu **Image** > **New Image Type**. Die folgenden Eigenschaften sind **Ziel Bildtyp** und **Benutzer**definiert.
 
-Die **Image Zieltyp** -Eigenschaft listet die verfügbaren imagetypen, die in dem Sie das Image auswählen geben, die Sie öffnen möchten:
+Die Eigenschaft **Ziel Bildtyp** listet die verfügbaren Bildtypen auf, in denen Sie den Bildtyp auswählen, den Sie öffnen möchten:
 
 ||||
 |-|-|-|
-|– 16 x 16, 16 Farben|-48 x 48, 16 Farben|-96 x 96, 16 Farben|
-|– 16 x 16, 256 Farben|-48 x 48, 256 Farben|-96 x 96, 256 Farben|
-|- 16 x 16, Monochrome|-48 x 48, Monochrom|-96 x 96, Monochrom|
-|-32 x 32, 16 Farben|-64 x 64-16 Farben||
+|-16 x 16, 16 Farben|-48 x 48, 16 Farben|-96 x 96, 16 Farben|
+|-16 x 16, 256 Farben|-48 x 48, 256 Farben|-96 x 96, 256 Farben|
+|-16 x 16, monochrome|-48 x 48, monochrome|-96 x 96, monochrome|
+|-32 x 32, 16 Farben|-64 x 64, 16 Farben||
 |-32 x 32, 256 Farben|-64 x 64, 256 Farben||
-|-32 x 32, Monochrom|-64 x 64, Monochrom||
+|-32 x 32, monochrome|-64 x 64, monochrome||
 
 > [!NOTE]
-> Alle vorhandenen Bilder werden in dieser Liste nicht angezeigt werden.
+> Alle vorhandenen Images werden in dieser Liste nicht angezeigt.
 
-Die **benutzerdefinierte** Eigenschaft öffnet die **benutzerdefiniertes Image** Dialogfeld, in dem Sie ein neues Image mit einer benutzerdefinierten Größe und Anzahl der Farben erstellen können.
+Die **benutzerdefinierte** Eigenschaft öffnet das Dialogfeld **benutzerdefiniertes Bild** , in dem Sie ein neues Bild mit einer benutzerdefinierten Größe und einer benutzerdefinierten Anzahl von Farben erstellen können.
 
-Die **benutzerdefiniertes Image** Dialogfeld können Sie ein neues Image mit einer benutzerdefinierten Größe und Anzahl der Farben zu erstellen. Die folgenden Eigenschaften enthalten sind:
+Das Dialogfeld **benutzerdefiniertes Bild** ermöglicht das Erstellen eines neuen Bilds mit benutzerdefinierter Größe und Anzahl von Farben. Die folgenden Eigenschaften sind enthalten:
 
 |Eigenschaft|Beschreibung|
 |---|---|
-|**Width**|Dient zur Eingabe der Breite des benutzerdefinierten Images in Pixel (1-512, Max. 2048).|
-|**Height**|Dient zur Eingabe der Höhe für das benutzerdefinierte Image in Pixel (1-512, Max. 2048).|
-|**Farben**|Ein Eingabefeld für die Anzahl der Farben für das benutzerdefinierte Image auswählen: 2, 16 und 256.|
+|**Width**|Ermöglicht das Eingeben der Breite des benutzerdefinierten Bilds in Pixel (1-512, Limit von 2048).|
+|**Height**|Ermöglicht das Eingeben der Höhe des benutzerdefinierten Bilds in Pixel (1-512, Limit von 2048).|
+|**Farben**|Bietet Ihnen die Möglichkeit, die Anzahl der Farben für das benutzerdefinierte Image auszuwählen: 2, 16 oder 256.|
 
-Verwenden der **öffnen &lt;Gerät&gt; Image** Dialogfeld zum Öffnen von Gerätebildern in C++-Projekten. Vorhandene Images mit der Geräte in der aktuellen Ressourcendatei (Bilder, die Teil der aktuellen Ressource) aufgeführt. Die folgende Eigenschaft enthalten ist:
+Verwenden Sie das Dialogfeld **Geräte &lt;&gt; Abbild öffnen** , um Geräte C++ Images in-Projekten zu öffnen. Sie listet vorhandene Geräte Images in der aktuellen Ressource auf (Images, die Teil der aktuellen Ressource sind). Die folgende Eigenschaft ist enthalten:
 
 |Eigenschaft|Beschreibung|
 |---|---|
-|**Aktuellen Images**|Listet die Images, die in der Ressource enthalten. Wählen Sie den Image-Typ, die, den Sie öffnen möchten.|
+|**Aktuelle Bilder**|Listet die Bilder auf, die in der Ressource enthalten sind. Wählen Sie den Bildtyp aus, den Sie öffnen möchten.|
 
-#### <a name="to-create-a-new-icon-or-cursor"></a>Erstellen Sie ein neues Symbol oder cursor
+#### <a name="to-create-a-new-icon-or-cursor"></a>So erstellen Sie ein neues Symbol oder einen neuen Cursor
 
-1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), mit der rechten Maustaste Ihre *RC* -Datei, und wählen Sie **Ressource einfügen**. Wenn Sie eine vorhandene imageressource bereits in haben Ihrer *RC* -Datei, z. B. einen Cursor, Sie können mit der rechten Maustaste die **Cursor** Ordner, und wählen **Cursor einfügen**.
+1. Klicken Sie in [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources)mit der rechten Maustaste auf die *RC* -Datei, und wählen Sie dann **Ressource einfügen**aus. Wenn Sie bereits über eine vorhandene Image-Ressource in der RC-Datei verfügen (z *.* b. einen Cursor), können Sie mit der rechten Maustaste auf den **Cursor** Ordner klicken und **Cursor einfügen**auswählen.
 
-1. In der [Ressource einfügen (Dialogfeld)](../windows/add-resource-dialog-box.md)Option **Symbol** oder **Cursor** , und wählen Sie **neu**. Für Symbole erstellt diese Aktion eine Symbolressource mit 32 × 32 Pixel, 16 Farben. Bei Cursorn 32 × 32 Pixel, wird die Monochrome (2 Farben)-Abbild erstellt.
+1. Wählen Sie im [Dialogfeld Ressource einfügen](../windows/add-resource-dialog-box.md)das **Symbol** oder den **Cursor** aus, und wählen Sie **neu**aus. Bei Symbolen erstellt diese Aktion eine Symbol Ressource mit einem Symbol 32 × 32 und 16 Farben. Bei Cursorn wird ein 32 × 32, monochrome Bild (2 Farben) erstellt.
 
-   Wenn ein Pluszeichen (**+**) wird neben der Image-Ressourcentyp in der **Ressource einfügen** Dialogfeld es bedeutet, dass die Symbolleistenvorlagen verfügbar sind. Wählen Sie das Pluszeichen, um die Liste der Vorlagen erweitern, wählen Sie eine Vorlage aus, und wählen **neu**.
+   Wenn ein Pluszeichen ( **+** ) neben dem Bild Ressourcentyp im Dialogfeld **Ressource einfügen** angezeigt wird, bedeutet dies, dass Toolbar-Vorlagen verfügbar sind. Wählen Sie das Pluszeichen aus, um die Liste der Vorlagen zu erweitern, wählen Sie eine Vorlage aus, und wählen Sie **neu**aus.
 
-### <a name="to-add-an-image-for-a-different-display-device"></a>Hinzufügen eines Bilds für ein anderes Anzeigegerät
+### <a name="to-add-an-image-for-a-different-display-device"></a>So fügen Sie ein Bild für ein anderes Anzeigegerät hinzu
 
-1. Wechseln Sie zum Menü **Image** > **neues Gerätebild**, oder mit der rechten Maustaste den **Bildbearbeitung** Bereich, und wählen Sie **neues Gerätebild**.
+1. Wechseln Sie zum Menü **Bild** > **Neues Geräte Image**, oder klicken Sie mit der rechten Maustaste in den Bereich **Bild-Editor** , und wählen Sie **Neues Geräte Image**aus.
 
-1. Wählen Sie den Typ des Bilds, die Sie hinzufügen möchten. Sie können auch auswählen, **benutzerdefinierte** Erstellen eines Symbols, dessen Größe nicht in der Standardliste zur Verfügung.
+1. Wählen Sie den Typ des Bilds aus, das Sie hinzufügen möchten. Sie können auch **Benutzer** definiert auswählen, um ein Symbol zu erstellen, dessen Größe nicht in der Standardliste verfügbar ist.
 
-### <a name="to-copy-a-device-image"></a>Kopieren ein Gerätebildes
+### <a name="to-copy-a-device-image"></a>So kopieren Sie ein Geräte Image
 
-1. Wechseln Sie zum Menü **Image** > **Bildtyp öffnen** , und wählen Sie ein Image aus der aktuellen Images aus. Wählen Sie beispielsweise ein Symbol mit 32 × 32 Pixel, 16 Farben.
+1. Wechseln Sie zu Menu **Image** > **Open Device Image** , und wählen Sie ein Bild aus der Liste Aktuelle Bilder aus. Wählen Sie z. b. die Version 32 × 32, 16 Farben eines Symbols aus.
 
-1. Kopieren Sie das aktuell angezeigte Symbolbild (**STRG**+**C**).
+1. Kopiert das aktuell angezeigte Symbolbild (**STRG**+**C**).
 
-1. Öffnen Sie ein anderes Bild des Symbols in einer anderen **Bildbearbeitung** Fenster. Öffnen Sie z. B. 16 × 16 Pixel und 16 Farben-Version des Symbols.
+1. Öffnen Sie ein anderes Bild des Symbols in einem anderen **Bild-Editor** -Fenster. Öffnen Sie z. b. die 16 × 16-farbige Version des Symbols.
 
-1. Fügen Sie das Symbolbild (**STRG**+**V**) von einem **Bildbearbeitung** Fenster in den anderen. Wenn Sie eine größere Größe in eine kleinere Größe einfügen, können Sie die Ziehpunkte des Symbols, zum Ändern der Bildgröße.
+1. Fügen Sie das Symbolbild (**STRG**+**V**) aus einem **Bild-Editor** -Fenster in das andere ein. Wenn Sie eine größere Größe in eine kleinere Größe einfügen, können Sie die Symbol Handles verwenden, um die Größe des Bilds zu ändern.
 
-### <a name="to-delete-a-device-image"></a>Löschen ein Gerätebildes
+### <a name="to-delete-a-device-image"></a>So löschen Sie ein Geräte Abbild
 
-Während das Symbolbild, in angezeigt wird der **Bildbearbeitung**, navigieren Sie zum Menü **Image** > **Bildtyp löschen**. Wenn Sie das letzte Symbol-Abbild in der Ressource löschen, wird die Ressource ebenfalls gelöscht.
-
-> [!NOTE]
-> Beim Drücken der **Del** drücken, Bildern und Farben, die Sie auf ein Symbol gezeichnet haben werden gelöscht, jedoch bleibt das Symbol und Sie können jetzt Umgestalten. Wenn Sie drücken **Del** versehentlich, drücken Sie **STRG**+**Z** , rückgängig gemacht werden.
-
-### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Zum Erstellen transparenter oder invertierter Bereiche in Gerätebildern
-
-In der [Bildbearbeitung](../windows/image-editor-for-icons.md), das erste Symbol oder Cursor Abbild ein transparent Attribut aufweist. Obwohl das Symbol und der Cursor rechteckigen sind, nicht viele angezeigt, da Teile des Bilds transparent sind, und der zugrunde liegenden Bildes auf dem Bildschirm durch das Symbol oder Cursor zeigt. Wenn Sie ein Symbol ziehen, möglicherweise Teile des Bilds in eine invertierte Farbe angezeigt. Sie erstellen diese Auswirkungen durch Festlegen der Bildschirmfarbe und invertierte Farbe in der [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md).
-
-Die Bildschirm- und invertierte Farben, die Sie auf die Symbole anwenden und Cursor entweder Form und Farbe des abgeleiteten Bildes oder umgekehrte Bereiche zuweisen. Teile des Bilds, die diese Attribute geben Sie die Farben an. Sie können die Farben ändern, die die Attribute Fensterfarbe und Inverse Farbe im Bearbeitungsmodus darstellen. Diese Änderungen wirken sich nicht auf die Darstellung des Symbols oder Cursors in Ihrer Anwendung aus.
+Wenn das Symbolbild im **Bild-Editor**angezeigt wird, wechseln Sie zu Menu **Image** > **Delete Device Image**. Wenn Sie das letzte Symbolbild in der Ressource löschen, wird auch die Ressource gelöscht.
 
 > [!NOTE]
-> Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der **Hilfe** beschriebenen. Um Ihre Einstellungen zu ändern, wechseln Sie zum Menü **Tools** > **Einstellungen importieren und exportieren**. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Wenn Sie die Taste ENTF drücken, werden die Bilder und Farben, die Sie auf einem Symbol gezeichnet haben, gelöscht, aber das Symbol bleibt erhalten, und Sie können es nun umgestalten. Wenn Sie " **del** " per Fehler drücken, drücken Sie **STRG**+**Z** , um die Aktion rückgängig zu machen.
 
-#### <a name="to-create-transparent-or-inverse-regions"></a>Erstellen transparenter oder invertierter Bereiche
+### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>So erstellen Sie transparente oder umgekehrte Bereiche in Geräte Bildern
 
-1. In der **Farben** Fenster, wählen Sie im Auswahlbereich **Fensterfarbe** oder **Inverse Farbe**.
+Im [Bild-Editor](../windows/image-editor-for-icons.md)weist das erste Symbol oder das Cursor Bild ein transparentes Attribut auf. Obwohl Symbol-und Cursor Bilder rechteckig sind, werden viele nicht angezeigt, da Teile des Bilds transparent sind und das zugrunde liegende Bild auf dem Bildschirm durch das Symbol oder den Cursor angezeigt wird. Wenn Sie ein Symbol ziehen, werden Teile des Bilds möglicherweise in einer umgekehrten Farbe angezeigt. Sie erstellen diesen Effekt, indem Sie die Bildschirm Farbe und die umgekehrte Farbe im [Fenster "Farben](../windows/colors-window-image-editor-for-icons.md)" festlegen.
 
-1. Wenden Sie den Bildschirm oder eine invertierte Farbe auf Ihrem Image mithilfe eines Tools zeichnen. Weitere Informationen zum Zeichnen des Tools finden Sie unter [mithilfe eines Tools zeichnen](using-a-drawing-tool-image-editor-for-icons.md).
+Der Bildschirm und die umgekehrten Farben, die Sie auf Symbole und Cursor anwenden, werden entweder vom abgeleiteten Bild geformt und gefärbt, oder es werden umgekehrte Bereiche zugewiesen Die Farben geben Teile des Bilds an, die über diese Attribute verfügen. Sie können die Farben, die die Attribute für die Bildschirm Farbe und die Umkehrung der Farbe darstellen, bei der Bearbeitung ändern. Diese Änderungen wirken sich nicht auf die Darstellung des Symbols oder Cursors in der Anwendung aus.
 
-#### <a name="to-change-the-screen-or-inverse-color"></a>So ändern Sie den Bildschirm oder Inverse Farbe
+> [!NOTE]
+> Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der **Hilfe** beschriebenen. Wechseln Sie zu den Menü **Tools** > **Einstellungen importieren und exportieren**, um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-1. Wählen Sie entweder die **Fensterfarbe** Auswahl oder das **Inverse Farbe** Selektor.
+#### <a name="to-create-transparent-or-inverse-regions"></a>So erstellen Sie transparente oder umgekehrte Bereiche
 
-1. Wählen Sie eine Farbe aus der **Farben** Palette in der **Farben** Fenster.
+1. Wählen Sie im Fenster **Farben** die Auswahl **Bildschirm Farbe** oder die **umgekehrte Farbe**aus.
 
-   Die Komplementärfarbe wird automatisch für die andere zugewiesen.
+1. Wenden Sie den Bildschirm oder die umgekehrte Farbe mithilfe eines Zeichnungs Tools auf das Bild an. Weitere Informationen zu Zeichnungs Tools finden Sie unter [Verwenden eines Zeichnungs](using-a-drawing-tool-image-editor-for-icons.md)Tools.
+
+#### <a name="to-change-the-screen-or-inverse-color"></a>So ändern Sie den Bildschirm oder die umgekehrte Farbe
+
+1. Wählen Sie entweder den **Bildschirm** farbselektor oder den **umgekehrten** farbselektor aus.
+
+1. Wählen Sie im Fenster **Farben** aus der Farbpalette eine Farbe aus.
+
+   Die ergänzende Farbe wird automatisch für den anderen Selektor zugewiesen.
 
    > [!TIP]
-   > Doppelklicken auf die **Fensterfarbe** oder **Inverse Farbe** Auswahl der [benutzerdefinierte Farbauswahl (Dialogfeld)](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) angezeigt wird.
+   > Wenn Sie auf die **Bildschirm Farbe** doppelklicken, wird das [Dialogfeld Benutzerdefinierte Farbauswahl](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) angezeigt.
 
-### <a name="use-the-256-color-palette"></a>Verwenden der 256-Farben-palette
+### <a name="use-the-256-color-palette"></a>Verwenden der 256-Farbpalette
 
-Mithilfe der **Bildbearbeitung**, Symbole und Cursor aus mit einem 256-Farben-Palette auswählen große (64 × 64) angepasst werden können. Nach dem Erstellen der Ressource wird ein Stil für das Gerät ausgewählt.
+Mit dem **Bild-Editor**können Symbole und Cursor groß sein (64 × 64) mit einer zu wählenden Palette von 256 Farben. Nach dem Erstellen der Ressource wird ein Geräte Abbild Stil ausgewählt.
 
-#### <a name="to-create-a-256-color-icon-or-cursor"></a>Erstellen eines 256-Farben-Symbols oder Cursors
+#### <a name="to-create-a-256-color-icon-or-cursor"></a>So erstellen Sie ein Symbol oder einen Cursor mit der 256-Farbe
 
-1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), mit der rechten Maustaste Ihre *RC* -Datei, und wählen Sie **Ressource einfügen**. Wenn Sie eine vorhandene imageressource bereits in haben Ihrer *RC* -Datei, z. B. einen Cursor, Sie können mit der rechten Maustaste die **Cursor** Ordner, und wählen **Cursor einfügen**.
+1. Klicken Sie in [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources)mit der rechten Maustaste auf die *RC* -Datei, und wählen Sie dann **Ressource einfügen**aus. Wenn Sie bereits über eine vorhandene Image-Ressource in der RC-Datei verfügen (z *.* b. einen Cursor), können Sie mit der rechten Maustaste auf den **Cursor** Ordner klicken und **Cursor einfügen**auswählen.
 
-1. In der [Ressource einfügen (Dialogfeld)](../windows/add-resource-dialog-box.md)Option **Symbol** oder **Cursor** , und wählen Sie **neu**.
+1. Wählen Sie im [Dialogfeld Ressource einfügen](../windows/add-resource-dialog-box.md)das **Symbol** oder den **Cursor** aus, und wählen Sie **neu**aus.
 
-1. Wechseln Sie zum Menü **Image** > **neues Gerätebild** , und wählen Sie die gewünschten 256-Farben-Image-Format.
+1. Wechseln Sie zum Menü **Bild** > **Neues Geräte Image** , und wählen Sie das gewünschte 256-farbige Bildformat aus.
 
-#### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Wählen Sie eine Farbe aus der 256-Farben-Palette für große Symbole
+#### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>So wählen Sie eine Farbe aus der 256-Farbpalette für große Symbole aus
 
-Um mit einer Auswahl aus der 256-Farben-Palette zu zeichnen, müssen Sie die Farben auswählen der **Farben** Palette in der [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md).
+Um mit einer Auswahl aus der 256-Farbpalette zu zeichnen, müssen Sie die Farben aus der Farb Palette im [Fenster Farben](../windows/colors-window-image-editor-for-icons.md)auswählen.
 
-1. Wählen Sie die große Symbole oder Cursor, oder erstellen Sie eine neue große Symbole oder Cursor.
+1. Wählen Sie das große Symbol oder den Cursor aus, oder erstellen Sie ein neues großes Symbol oder einen neuen Cursor.
 
-1. Wählen Sie eine Farbe aus der 256 Farben der **Farben** Palette in der **Farben** Fenster.
+1. Wählen Sie eine Farbe aus den 256 Farben aus, die im Fenster **Farben** in der Palette **Farben** angezeigt werden.
 
-   Die ausgewählte Farbe wird die aktuelle Farbe in der **Farben** Palette in der **Farben** Fenster.
+   Die ausgewählte Farbe wird zur aktuellen Farbe in der Farb Palette im Fenster " **Farben** ".
 
    > [!NOTE]
-   > Die anfängliche Palette verwendet für 256-Farben-Images entspricht die Palette von zurückgegebenen der `CreateHalftonePalette` Windows-API. Alle Symbole, die für die Windows-Shell vorgesehen, sollten diese Palette verwenden, um Flimmern während der Realisierung der Palette zu vermeiden.
+   > Die anfängliche Palette für 256-farbige Bilder stimmt mit der Palette überein, die `CreateHalftonePalette` von der Windows-API zurückgegeben wird. Bei allen für die Windows-Shell vorgesehenen Symbolen sollte diese Palette verwendet werden, um Flimmern während der palettenrealisierung zu verhindern.
 
-### <a name="to-set-a-cursors-hot-spot"></a>Festlegen des Hotspots eines Cursors
+### <a name="to-set-a-cursors-hot-spot"></a>So legen Sie den Hotspot eines Cursors fest
 
-Die Hotspots eines Cursors ist der Punkt, auf die Windows verweist, in die Position des Cursors nachverfolgen. In der Standardeinstellung den Hotspot festgelegt ist, klicken Sie auf der linken oberen Ecke des Cursors mit Koordinaten `0,0`. Die **Hotspot** -Eigenschaft in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) zeigt die Koordinaten des HotSpot.
+Der Hotspot eines Cursors ist der Punkt, auf den sich Windows bei der Nachverfolgung der Cursorposition bezieht. Standardmäßig wird der Hotspot auf die obere linke Ecke des Cursors mit Koordinaten `0,0`festgelegt. Die Eigenschaft "Hotspot" in der [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window) zeigt die **Hotspot** Koordinaten an.
 
-1. Auf der [Symbolleiste der Bildbearbeitung](../windows/toolbar-image-editor-for-icons.md), wählen Sie die **Hotspot festlegen** Tool.
+1. Wählen Sie auf der [Symbolleiste Bild](../windows/toolbar-image-editor-for-icons.md)Bearbeitung das Tool **Hotspot festlegen** aus.
 
-1. Wählen Sie das Pixel, die, das Sie als den Cursorhotspot zuweisen möchten.
+1. Wählen Sie das Pixel aus, das Sie als Hotspot des Cursors zuweisen möchten.
 
-   Die **Hotspot** -Eigenschaft in der **Eigenschaften** Fenster zeigt die neuen Koordinaten.
+   Die Eigenschaft " **Hotspot** " im Fenster " **Eigenschaften** " zeigt die neuen Koordinaten an.
 
-### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Zum Erstellen und speichern eine Bitmap als GIF- oder JPEG
+### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>So erstellen und speichern Sie eine Bitmap als GIF-oder JPEG-Datei
 
-Wenn Sie eine Bitmap zu erstellen, wird das Bild im Bitmapformat (BMP) erstellt. Sie können jedoch das Image als GIF- oder JPEG oder in anderen Grafikformaten speichern.
+Wenn Sie eine Bitmap erstellen, wird das Bild im Bitmapformat (BMP) erstellt. Sie können das Bild jedoch als GIF oder JPEG oder in anderen Grafikformaten speichern.
 
 > [!NOTE]
-> Dieser Prozess gilt nicht, Symbole und Cursor.
+> Dieser Vorgang gilt nicht für Symbole und Cursor.
 
-1. Wechseln Sie zum Menü **Datei** > **öffnen**, und wählen Sie dann **Datei**.
+1. Wechseln Sie zu Menü **Datei** > **Öffnen**, und wählen Sie dann **Datei**aus.
 
-1. In der **neuen Dateidialogfeld**, wählen Sie die **Visual C++** Ordner, wählen Sie dann **Bitmapdatei (BMP)** in der **Vorlagen** und wählen Sie  **Open**.
+1. Wählen Sie im **Dialogfeld neue Datei**den Ordner **Visual C++**  aus, und wählen Sie dann im Feld **Vorlagen** die Option **Bitmapdatei (. BMP)** aus, und wählen Sie **Öffnen**aus.
 
-   Die Bitmap wird im der **Bildbearbeitung**.
+   Die Bitmap wird im **Bild-Editor**geöffnet.
 
-1. Nehmen Sie Änderungen an der neuen Bitmap, je nach Bedarf.
+1. Nehmen Sie bei Bedarf Änderungen an der neuen Bitmap vor.
 
-1. Mit der Bitmap, die noch geöffnet, in der **Bild-Editor**, navigieren Sie zum Menü **Datei** > **speichern *Filename*BMP als**.
+1. Wenn die Bitmap weiterhin im Bild- **Editor**geöffnet ist, wechseln Sie zu Menü **Datei** > **Dateiname. bmp als**.
 
-1. In der **Datei speichern unter** Dialogfeld Geben Sie den Namen, erhalten die Datei und die Erweiterung, die das Dateiformat gibt an, Sie in möchten, sollen, die **Dateiname** Feld. Z. B. *: MeineDatei.gif*.
+1. Geben Sie im Dialogfeld **Datei speichern** unter im Feld **Dateiname** den gewünschten Namen für die Datei und die Erweiterung ein, die das gewünschte Dateiformat angibt. Beispiel: *MyFile. gif*.
 
    > [!NOTE]
-   > Sie müssen erstellen oder öffnen die Bitmap außerhalb des Projekts, um ihn als ein anderes Dateiformat zu speichern. Wenn Sie beim Erstellen oder öffnen Sie diese in Ihrem Projekt die **speichern** Befehl nicht verfügbar. Weitere Informationen finden Sie unter [Anzeigen von Ressourcen eine Ressource außerhalb eines Projekts (eigenständig)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+   > Sie müssen die Bitmap außerhalb des Projekts erstellen oder öffnen, um Sie in einem anderen Dateiformat zu speichern. Wenn Sie die Datei in Ihrem Projekt erstellen oder öffnen, ist der Befehl " **Speichern** unter" nicht verfügbar. Weitere Informationen finden Sie unter [Anzeigen von Ressourcen in einer Ressourcen Skriptdatei außerhalb eines Projekts (eigenständig)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 
 1. Klicken Sie auf **Speichern**.
 
-### <a name="to-convert-an-image-from-one-format-to-another"></a>Um ein Image von einem Format in eine andere zu konvertieren.
+### <a name="to-convert-an-image-from-one-format-to-another"></a>So konvertieren Sie ein Bild von einem Format in ein anderes
 
-Sie öffnen können, GIF- oder JPEG-Bilder in der **Bildbearbeitung** und speichern Sie sie als Bitmaps. Darüber hinaus können Sie eine Bitmap-Datei zu öffnen und speichern Sie ihn als GIF- oder JPEG. Sie arbeiten mit Images müssen nicht Teil eines Projekts für die Bearbeitung in der Entwicklungsumgebung sein (finden Sie unter [unabhängig bearbeiten](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).
+Sie können GIF-oder JPEG-Bilder im **Bild-Editor** öffnen und als Bitmaps speichern. Außerdem können Sie eine Bitmapdatei öffnen und als GIF oder JPEG speichern. Images, mit denen Sie arbeiten, müssen nicht Teil eines Projekts zur Bearbeitung in der Entwicklungsumgebung sein (siehe [eigenständige Bildbearbeitung](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).
 
-1. Öffnen Sie das Abbild in der **Bildbearbeitung**.
+1. Öffnen Sie das Bild im **Bild-Editor**.
 
-1. Wechseln Sie zum Menü **Datei** > **speichern *Filename* als**.
+1. Wechseln Sie zu Menü **Datei** > **Dateiname speichern** unter.
 
-1. In der **Datei speichern unter** Dialogfeld die **Dateiname** geben den Dateinamen und die Erweiterung ein, das Format angezeigt werden sollen.
+1. Geben Sie im Dialogfeld **Datei speichern** unter im Feld **Dateiname** den Dateinamen und die Erweiterung ein, die das gewünschte Format angibt.
 
 1. Klicken Sie auf **Speichern**.
 
-### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Beim Hinzufügen einer neuen imageressource zu einem nicht verwalteten C++-Projekt
+### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>So fügen Sie einem nicht verwalteten C++ Projekt eine neue Bildressource hinzu
 
-1. In [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources), mit der rechten Maustaste Ihre *RC* -Datei, und wählen Sie **Ressource einfügen**. Wenn Sie eine vorhandene imageressource bereits in haben Ihrer *RC* -Datei, z. B. einen Cursor, Sie können einfach mit der rechten Maustaste die **Cursor** Ordner, und wählen **Cursor einfügen**.
+1. Klicken Sie in [Ressourcenansicht](how-to-create-a-resource-script-file.md#create-resources)mit der rechten Maustaste auf die *RC* -Datei, und wählen Sie dann **Ressource einfügen**aus. Wenn Sie bereits über eine vorhandene Image-Ressource in der RC-Datei verfügen (z *.* b. einen Cursor), können Sie einfach mit der rechten Maustaste auf den **Cursor** Ordner klicken und **Cursor einfügen**auswählen.
 
-1. In der [Ressource einfügen (Dialogfeld)](../windows/add-resource-dialog-box.md), wählen Sie den Typ der Bildressource, die Sie erstellen möchten (**Bitmap**, z. B.) Wählen Sie dann **neu**.
+1. Wählen Sie im [Dialogfeld Ressource einfügen](../windows/add-resource-dialog-box.md)den Typ der Abbild Ressource aus, den Sie erstellen möchten (z. b.**Bitmap**), und wählen Sie dann **neu**aus.
 
-   Wenn ein Pluszeichen (**+**) wird neben der Image-Ressourcentyp in der **Ressource einfügen** Dialogfeld es bedeutet, dass die Symbolleistenvorlagen verfügbar sind. Wählen Sie das Pluszeichen, um die Liste der Vorlagen erweitern, wählen Sie eine Vorlage aus, und wählen **neu**.
+   Wenn ein Pluszeichen ( **+** ) neben dem Bild Ressourcentyp im Dialogfeld **Ressource einfügen** angezeigt wird, bedeutet dies, dass Toolbar-Vorlagen verfügbar sind. Wählen Sie das Pluszeichen aus, um die Liste der Vorlagen zu erweitern, wählen Sie eine Vorlage aus, und wählen Sie **neu**aus.
 
-### <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>Beim Hinzufügen einer neuen imageressource zu einem Projekt in einer Programmiersprache.
+### <a name="to-add-a-new-image-resource-to-a-project-in-a-net-programming-language"></a>So fügen Sie einem Projekt eine neue Bildressource in einer .NET-Programmiersprache hinzu
 
-1. In **Projektmappen-Explorer**, mit der rechten Maustaste in des Projektordners (z. B. *WindowsApplication1*).
+1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektordner (z. b. *WindowsApplication1*).
 
-1. Wählen Sie im Kontextmenü den Befehl **hinzufügen**, wählen Sie dann **neues Element hinzufügen**.
+1. Klicken Sie im Kontextmenü auf **Hinzufügen**, und wählen Sie dann **Neues Element hinzufügen**aus.
 
-1. In der **Kategorien** Bereich, erweitern Sie die **Lokale Projektelemente** Ordner, wählen Sie dann **Ressourcen**.
+1. Erweitern Sie im Bereich **Kategorien** den Ordner **lokale Projekt Elemente** , und wählen Sie dann **Ressourcen**aus.
 
-1. In der **Vorlagen** Bereich, wählen Sie den Ressourcentyp, die Sie Ihrem Projekt hinzufügen möchten.
+1. Wählen Sie im Bereich **Vorlagen** den Ressourcentyp aus, den Sie dem Projekt hinzufügen möchten.
 
-   Die Ressource wird hinzugefügt, um das Projekt im **Projektmappen-Explorer** und die Ressource wird geöffnet, der [Bildbearbeitung](../windows/image-editor-for-icons.md). Können Sie jetzt alle Tools zur Verfügung, in der **Bildbearbeitung** so ändern Sie Ihr Image. Weitere Informationen zum Hinzufügen von Bildern zu einem verwalteten Projekt finden Sie unter [Laden eines Bildes zur Entwurfszeit](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms).
+   Die Ressource wird in **Projektmappen-Explorer** dem Projekt hinzugefügt, und die Ressource wird im [Bild-Editor](../windows/image-editor-for-icons.md)geöffnet. Sie können jetzt alle im **Bild-Editor** verfügbaren Tools verwenden, um das Bild zu ändern. Weitere Informationen zum Hinzufügen von Bildern zu einem verwalteten Projekt finden Sie [unter Laden eines Bilds zur Entwurfszeit](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms).
 
 ## <a name="requirements"></a>Anforderungen
 
-Keiner
+None
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -327,5 +327,5 @@ Keiner
 <!--
 [Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>
 [Creating New Toolbars](../windows/creating-new-toolbars.md)<br/>
-[Icons](/windows/desktop/menurc/icons)<br/>
-[Cursors](/windows/desktop/menurc/cursors)<br/>-->
+[Icons](/windows/win32/menurc/icons)<br/>
+[Cursors](/windows/win32/menurc/cursors)<br/>-->

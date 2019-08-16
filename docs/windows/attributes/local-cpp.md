@@ -1,21 +1,21 @@
 ---
-title: lokal (C++-COM-Attribut)
+title: local (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 678968bb7b0f2e7af94124bea5b0967df27e43f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409225"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514414"
 ---
 # <a name="local-c"></a>local (C++)
 
-Wenn in der Kopfzeile der Schnittstelle verwendet wird, können Sie Sie den MIDL-Compiler als ein Header-Generator zu verwenden. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.
+Wenn Sie im Schnittstellen Header verwendet wird, können Sie den Mittel l-Compiler als Header Generator verwenden. Gibt bei Verwendung in einer einzelnen Funktion eine lokale Prozedur an, für die keine stubals generiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Wenn in der Kopfzeile der Schnittstelle verwendet wird, können Sie Sie den MIDL
 
 ## <a name="remarks"></a>Hinweise
 
-Die **lokalen** C++-Attribut hat die gleiche Funktionalität wie die [lokalen](/windows/desktop/Midl/local) MIDL-Attribut.
+Das **lokale** C++ Attribut verfügt über die gleiche Funktionalität wie das [lokale](/windows/win32/Midl/local) Attribut "Mittel l".
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter [Call_as](call-as.md) ein Beispiel zur Verwendung für **lokalen**.
+Ein Beispiel für die Verwendung von **local**finden Sie unter [Call_as](call-as.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Finden Sie unter [Call_as](call-as.md) ein Beispiel zur Verwendung für **lokale
 
 |||
 |-|-|
-|**Betrifft**|**Schnittstelle**,-Schnittstellenmethode|
+|**Betrifft**|**Schnittstelle**, Schnittstellen Methode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
 |**Ungültige Attribute**|`dispinterface`|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).

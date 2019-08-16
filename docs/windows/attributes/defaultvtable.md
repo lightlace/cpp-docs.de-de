@@ -1,21 +1,21 @@
 ---
-title: Defaultvtable (C++-COM-Attribut)
+title: defaultvtable (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 813fb9dd4edf2f6e522e7310ba1e8bfcd55ed2b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ab37af4deab516dc01f55f986811668737cf18c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147950"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501645"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
-Definiert eine Schnittstelle als die standardmäßige Vtable-Schnittstelle für ein COM-Objekt.
+Definiert eine Schnittstelle als standardmäßige Vtable-Schnittstelle für ein COM-Objekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,15 +26,15 @@ Definiert eine Schnittstelle als die standardmäßige Vtable-Schnittstelle für 
 ### <a name="parameters"></a>Parameter
 
 *interface*<br/>
-Die angegebene-Schnittstelle, die Sie die Standard-Vtable für das COM-Objekt möchten.
+Die angegebene Schnittstelle, für die die Standard-Vtable für das COM-Objekt festgelegt werden soll.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Defaultvtable** C++-Attribut hat die gleiche Funktionalität wie die [Defaultvtable](/windows/desktop/Midl/defaultvtable) MIDL-Attribut.
+Das **defaultvtable** C++ -Attribut verfügt über die gleiche Funktionalität wie das Attribut " [defaultvtable](/windows/win32/Midl/defaultvtable) " in der Mitte.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt die Attribute für eine Klasse, mit denen **Defaultvtable** eine Standardschnittstelle an:
+Der folgende Code zeigt Attribute für eine Klasse, die **defaultvtable** verwenden, um eine Standardschnittstelle anzugeben:
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp
@@ -68,10 +68,10 @@ class CMyC3 : public IMyI3 {};
 
 |||
 |-|-|
-|**Betrifft**|**class**, **struct**|
+|**Betrifft**|**Klasse**, **Struktur**|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|**coclass**|
-|**Ungültige Attribute**|Keiner|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

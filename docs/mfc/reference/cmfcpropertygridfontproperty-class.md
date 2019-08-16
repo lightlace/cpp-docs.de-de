@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridFontProperty-Klasse
+title: Cmfcpropertygridfontproperty-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridFontProperty
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-ms.openlocfilehash: b348dc2ac68ced89fb0702073f57a114befaf1cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3c5b806482a97d64a9ffab92877781cb8778b6b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310577"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505114"
 ---
-# <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty-Klasse
+# <a name="cmfcpropertygridfontproperty-class"></a>Cmfcpropertygridfontproperty-Klasse
 
-Die `CMFCPropertyGridFileProperty` Klasse unterstützt, einem Eigenschaftenlisten-Steuerelement ein Element, das ein Dialogfeld zur Schriftartauswahl öffnet.
+Die `CMFCPropertyGridFileProperty` -Klasse unterstützt ein Eigenschaften Listen-Steuerelement, das ein Dialogfeld zur Schriftart Auswahl öffnet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 
 |Name|Beschreibung|
 |----------|-----------------|
-|`CMFCPropertyGridFontProperty::FormatProperty`|Formatiert die Textdarstellung eines Eigenschaftswerts. (Überschreibt [cmfcpropertygridproperty:: Formatproperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
-|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Ruft die Schriftfarbe, die der Benutzer im Dialogfeld "Schriftart" auswählt.|
-|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Ruft die Schriftart, die der Benutzer im Dialogfeld "Schriftart" auswählt.|
-|`CMFCPropertyGridFontProperty::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|
-|`CMFCPropertyGridFontProperty::OnClickButton`|Wird vom Framework aufgerufen, wenn der Benutzer auf eine Schaltfläche klickt, die in einer Eigenschaft enthalten ist. (Überschreibt [cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
+|`CMFCPropertyGridFontProperty::FormatProperty`|Formatiert die Textdarstellung eines Eigenschaftswerts. (Überschreibt [cmfcpropertygridproperty:: formatproperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
+|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Ruft die Schriftart Farbe ab, die der Benutzer aus dem Dialogfeld Schriftart auswählt.|
+|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Ruft die Schriftart ab, die der Benutzer aus dem Dialogfeld Schriftart auswählt.|
+|`CMFCPropertyGridFontProperty::GetThisClass`|Wird vom Framework verwendet, um einen Zeiger auf das [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt abzurufen, das diesem Klassentyp zugeordnet ist.|
+|`CMFCPropertyGridFontProperty::OnClickButton`|Wird vom Framework aufgerufen, wenn der Benutzer auf eine Schaltfläche klickt, die in einer Eigenschaft enthalten ist. (Überschreibt [cmfcpropertygridproperty:: onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -60,9 +60,9 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxpropertygridctrl.h
+**Header:** afxpropertygridctrl. h
 
-##  <a name="cmfcpropertygridfontproperty"></a>  CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty
+##  <a name="cmfcpropertygridfontproperty"></a>Cmfcpropertygridfontproperty:: cmfcpropertygridfontproperty
 
 Erstellt ein `CMFCPropertyGridFontProperty`-Objekt.
 
@@ -79,36 +79,36 @@ CMFCPropertyGridFontProperty(
 ### <a name="parameters"></a>Parameter
 
 *strName*<br/>
-[in] Der Name der Eigenschaft.
+in Der Name der Eigenschaft.
 
 *lf*<br/>
-[in] Eine logische Schriftart-Struktur, die die Attribute der Schriftart angibt.
+in Eine logische Schriftart Struktur, die die Attribute der Schriftart angibt.
 
 *dwFontDialogFlags*<br/>
-[in] Formatvorlagen, die auf das Dialogfeld Schriftart angewendet werden, die angezeigt wird, wenn Sie die Eigenschaft Wert Dropdown-Schaltfläche klicken. Der Standardwert ist die bitweise Kombination (OR) von CF_EFFECTS und CF_SCREENFONTS. Weitere Informationen finden Sie unter den *Flags* Parameter, der die [CHOOSEFONT Struktur](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).
+in Stile, die auf das Dialogfeld Schriftart angewendet werden, das angezeigt wird, wenn Sie auf die Dropdown Schaltfläche Eigenschafts Wert klicken. Der Standardwert ist die bitweise Kombination (or) von CF_EFFECTS und CF_SCREENFONTS. Weitere Informationen finden Sie unter dem *Flags* -Parameter der [chooonfont-Struktur](/windows/win32/api/commdlg/ns-commdlg-choosefontw).
 
 *lpszDescr*<br/>
-[in] Beschreibung der Font-Eigenschaft. Der Standardwert ist NULL.
+in Beschreibung der Schriftart Eigenschaft. Der Standardwert ist NULL.
 
 *dwData*<br/>
-[in] Anwendungsspezifische Daten, z. B. eine ganze Zahl oder ein Zeiger auf andere Daten, die der Eigenschaft zugeordnet ist. Der Standardwert ist 0.
+in Anwendungsspezifische Daten, z. b. eine ganze Zahl oder ein Zeiger auf andere Daten, die der-Eigenschaft zugeordnet sind. Der Standardwert ist 0.
 
-*color*<br/>
-[in] Die Farbe der Schriftart. Der Standardwert ist die Standardfarbe.
+*Farbe*<br/>
+in Die Farbe der Schriftart. Der Standardwert ist die Standardfarbe.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein `CMFCPropertyGridFontProperty` -Objekt stellt eine Font-Eigenschaft im Eigenschaftenraster-Steuerelement eine Schriftart dar.
+Ein `CMFCPropertyGridFontProperty` -Objekt stellt eine Schriftart Eigenschaft in einem Eigenschaften Raster-Schriftart Steuerelement dar.
 
 ### <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird veranschaulicht, wie erstellen Sie ein Objekt von der `CMFCPropertyGridFontProperty` Klasse. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../overview/visual-cpp-samples.md).
+Im folgenden Beispiel wird veranschaulicht, wie ein Objekt der `CMFCPropertyGridFontProperty` -Klasse erstellt wird. Dieses Beispiel ist Teil des Beispiels " [neue Steuerelemente](../../overview/visual-cpp-samples.md)".
 
 [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]
 
-##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor
+##  <a name="getcolor"></a>Cmfcpropertygridfontproperty:: GetColor
 
-Ruft die Schriftfarbe, die der Benutzer im Dialogfeld "Schriftart" auswählt.
+Ruft die Schriftart Farbe ab, die der Benutzer aus dem Dialogfeld Schriftart auswählt.
 
 ```
 COLORREF GetColor() const;
@@ -116,13 +116,13 @@ COLORREF GetColor() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein RGB-Farbwert, der die Farbe der ausgewählten Schriftart darstellt.
+Ein RGB-Farbwert, der die ausgewählte Schriftfarbe darstellt.
 
 ### <a name="remarks"></a>Hinweise
 
-##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont
+##  <a name="getlogfont"></a>Cmfcpropertygridfontproperty:: getlogfont
 
-Ruft die Schriftart, die der Benutzer im Dialogfeld "Schriftart" auswählt.
+Ruft die Schriftart ab, die der Benutzer aus dem Dialogfeld Schriftart auswählt.
 
 ```
 LPLOGFONT GetLogFont();
@@ -130,7 +130,7 @@ LPLOGFONT GetLogFont();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur, die die ausgewählte Schriftart beschreibt.
+Ein Zeiger auf eine [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) -Struktur, die die ausgewählte Schriftart beschreibt.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -1,17 +1,17 @@
 ---
-title: ausgeblendet (C++-COM-Attribut)
+title: Hidden (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.hidden
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: d1d87ea057b22984a0e0f8f5518899e36f7d0221
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75b03877b1204d6e1c4770f5ba9c8c88338b3394
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409511"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501445"
 ---
 # <a name="hidden"></a>hidden
 
@@ -25,11 +25,11 @@ Gibt an, dass das Element vorhanden ist, aber nicht in einem benutzerorientierte
 
 ## <a name="remarks"></a>Hinweise
 
-Die **ausgeblendeten** C++-Attribut hat die gleiche Funktionalität wie die [ausgeblendeten](/windows/desktop/Midl/hidden) MIDL-Attribut.
+Das **Hidden** C++ -Attribut verfügt über die gleiche Funktionalität wie das [verborgene](/windows/win32/Midl/hidden) Mittel l-Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [bindbare](bindable.md) ein Beispiel zur Verwendung für **ausgeblendeten**.
+Ein Beispiel für die Verwendung von **Hidden**finden Sie im Beispiel für [bindbare](bindable.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -40,7 +40,7 @@ Siehe das Beispiel für [bindbare](bindable.md) ein Beispiel zur Verwendung für
 |**Betrifft**|**Schnittstelle**, **Klasse**, **Struktur**, Methode, Eigenschaft|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|**Co-Klasse** (bei Anwendung auf **Klasse** oder **Struktur**)|
-|**Ungültige Attribute**|Keiner|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

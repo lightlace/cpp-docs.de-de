@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 436c9c47d7e08176860144ce62cc874919351029
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: 57414bd56c72b951d3f1948e658243e9036f0179
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313445"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498124"
 ---
 # <a name="set-compiler-and-build-properties"></a>Festlegen von compilerund Buildeigenschaften
 
@@ -39,7 +39,7 @@ Die folgende Abbildung zeigt dieselbe Eigenschaftenseite des Projekts, allerding
 
 ## <a name="target-platforms"></a>Zielplattformen
 
-*Zielplattform* bezieht sich auf den Gerätetyp und/oder das Betriebssystem, auf dem die ausführbare Datei ausgeführt wird. Sie können ein Projekt für mehr als eine Plattform erstellen. Die verfügbaren Zielplattformen für C++-Projekte hängen von der Art des Projekts ab. Unter anderem sind Win32, x64, ARM, Android und iOS verfügbar.     Die Zielplattform **x86**, die im **Konfigurations-Manager** angezeigt wird, entspricht **Win32** in nativen C++-Projekten. Win32 bedeutet 32-Bit-Windows, und **x64** bedeutet 64-Bit-Windows. Weitere Informationen zu diesen beiden Plattformen finden Sie unter [Ausführung von 32-Bit-Anwendungen](/windows/desktop/WinProg64/running-32-bit-applications).
+*Zielplattform* bezieht sich auf den Gerätetyp und/oder das Betriebssystem, auf dem die ausführbare Datei ausgeführt wird. Sie können ein Projekt für mehr als eine Plattform erstellen. Die verfügbaren Zielplattformen für C++-Projekte hängen von der Art des Projekts ab. Unter anderem sind Win32, x64, ARM, Android und iOS verfügbar.     Die Zielplattform **x86**, die im **Konfigurations-Manager** angezeigt wird, entspricht **Win32** in nativen C++-Projekten. Win32 bedeutet 32-Bit-Windows, und **x64** bedeutet 64-Bit-Windows. Weitere Informationen zu diesen beiden Plattformen finden Sie unter [Ausführung von 32-Bit-Anwendungen](/windows/win32/WinProg64/running-32-bit-applications).
 
 Der Wert **Beliebige CPU**, den Sie im **Konfigurations-Manager** für die Zielplattform sehen, hat keine Auswirkung auf native C++-Projekte. Er ist nur für C++/CLI- und andere .NET-Projekttypen relevant. Weitere Informationen finden Sie unter [/CLRIMAGETYPE (Angeben des CLR-Bildtyps)](reference/clrimagetype-specify-type-of-clr-image.md).
 

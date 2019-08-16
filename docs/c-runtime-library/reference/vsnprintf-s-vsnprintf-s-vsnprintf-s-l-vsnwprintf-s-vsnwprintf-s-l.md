@@ -40,14 +40,14 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: 255c3b760dec1495a4f9a82915878a5504844f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50e38e3177462f17436727cf26d1e7dade9cb882
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188725"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499083"
 ---
-# <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
+# <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
 Schreiben von formatierter Ausgabe mithilfe eines Zeigers, der auf eine Liste von Argumenten zeigt. Dies sind Versionen von [vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) mit Sicherheitsverbesserungen, wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -113,7 +113,7 @@ int _vsnwprintf_s(
 Speicherort für die Ausgabe.
 
 *sizeOfBuffer*<br/>
-Die Größe der *Puffer* für die Ausgabe als die Anzahl der Zeichen.
+Die Größe des *Puffers* für die Ausgabe als Zeichen Anzahl.
 
 *count*<br/>
 Die maximale Anzahl von zu schreibenden Zeichen (ohne das abschließende Zeichen NULL) oder [_TRUNCATE](../../c-runtime-library/truncate.md).
@@ -131,34 +131,34 @@ Weitere Informationen finden Sie unter [Formatangaben](../../c-runtime-library/f
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Vsnprintf_s**, **_vsnprintf_s** und **_vsnwprintf_s** Zurückgeben der Anzahl der Zeichen geschrieben, ohne das abschließende Zeichen Null oder ein negativer Wert, wenn ein Ausgabefehler auftritt. **Vsnprintf_s** ist identisch mit **_vsnprintf_s**. **Vsnprintf_s** wird aus Gründen der Kompatibilität mit ANSI-Standard. **_vnsprintf** Gründen der Abwärtskompatibilität beibehalten.
+**vsnprintf_s**, **_vsnprintf_s** und **_vsnwprintf_s** geben die Anzahl der geschriebenen Zeichen ohne das abschließende Null-Zeichen oder einen negativen Wert zurück, wenn ein Ausgabefehler auftritt. **vsnprintf_s** ist mit **_vsnprintf_s**identisch. **vsnprintf_s** ist für die Kompatibilität mit dem ANSI-Standard enthalten. **_vnsprintf** wird aus Gründen der Abwärtskompatibilität beibehalten.
 
-Überschreitet der Speicher zum Speichern von Daten und eines abschließenden Nullzeichens erforderlich *SizeOfBuffer*, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md), es sei denn, *Anzahl*  ist [_TRUNCATE](../../c-runtime-library/truncate.md), in diesem Fall so großen Teil der Zeichenfolge passt *Puffer* geschrieben und-1 zurückgegeben. Wenn die Ausführung nach dem Handler für ungültige Parameter fortgesetzt werden soll, legen diese Funktionen *Puffer* auf eine leere Zeichenfolge festgelegt **Errno** zu **ERANGE**, und geben-1 zurück.
+Wenn der Speicher, der zum Speichern der Daten und der abschließende NULL-Wert erforderlich ist, *sizeOfBuffer*überschreitet, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben, es sei denn, *count* ist [_TRUNCATE](../../c-runtime-library/truncate.md). in diesem Fall Zeichenfolge, die in den *Puffer* passt, wird geschrieben, und-1 wird zurückgegeben. Wenn die Ausführung nach dem Handler für ungültige Parameter fortgesetzt wird, legen diese Funktionen den *Puffer* auf eine leere Zeichenfolge fest, legen **errno** auf **ERANGE**fest und geben-1 zurück.
 
-Wenn *Puffer* oder *Format* ist eine **NULL** -Zeiger ist, oder wenn *Anzahl* ist kleiner als oder gleich 0 (null), wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und geben-1 zurück.
+Wenn der *Puffer* oder das *Format* ein **null** -Zeiger ist oder die *Anzahl* kleiner oder gleich 0 (null) ist, wird der Handler für ungültige Parameter aufgerufen. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen **errno** auf **EINVAL** fest und geben-1 zurück.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|**Condition**|Zurück|**errno**|
+|**Bedingung**|Zurück|**errno**|
 |-----------------|------------|-------------|
-|*Puffer* ist **NULL**|-1|**EINVAL**|
-|*Format* ist **NULL**|-1|**EINVAL**|
-|*count* <= 0|-1|**EINVAL**|
-|*SizeOfBuffer* zu klein ist (und *Anzahl* ! = **_TRUNCATE**)|-1 (und *Puffer* auf eine leere Zeichenfolge festgelegt)|**ERANGE**|
+|der *Puffer* ist **null** .|-1|**EINVAL**|
+|*Format* ist **null**|-1|**EINVAL**|
+|*Anzahl* < = 0|-1|**EINVAL**|
+|*sizeOfBuffer* zu klein (und *count* ! = **_TRUNCATE**)|-1 (und der *Puffer* auf eine leere Zeichenfolge festgelegt)|**ERANGE**|
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt bis zu *Anzahl* Zeichen des angegebenen Daten in den Speicher verweist *Puffer* und fügt ein abschließendes Nullzeichen.
+Jede dieser Funktionen nimmt einen Zeiger auf eine Argumentliste und formatiert und schreibt dann bis zu *Zähl* Zeichen der angegebenen Daten in den Speicher, auf den der *Puffer* zeigt, und fügt einen abschließenden NULL-Wert an.
 
-Wenn *Anzahl* ist [_TRUNCATE](../../c-runtime-library/truncate.md), Schreiben diese Funktionen so viel von der Zeichenfolge wie in passt *Puffer* während Platz für ein abschließendes Null bleibt. Wenn die gesamte Zeichenfolge (mit abschließenden Nullzeichen) in passt *Puffer*, klicken Sie dann diese Funktionen geben die Anzahl von Zeichen geschrieben (einschließlich der nicht das abschließende Zeichen Null) zurück; andernfalls geben diese Funktionen-1 zurück, um anzugeben, um ein Abschneiden zurück ist aufgetreten.
+Wenn *count* gleich [_TRUNCATE](../../c-runtime-library/truncate.md)ist, schreiben diese Funktionen den Großteil der Zeichenfolge, da Sie in den *Puffer* passt, wobei Platz für das abschließende Null-Zeichen bleibt. Wenn die gesamte Zeichenfolge (mit abschließendem NULL-Wert) in den *Puffer*passt, geben diese Funktionen die Anzahl der geschriebenen Zeichen zurück (ohne das abschließende Null-Zeichen). Andernfalls geben diese Funktionen "-1" zurück, um anzugeben, dass ein Abschneiden aufgetreten ist.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!NOTE]
-> Um sicherzustellen, dass genügend Platz für das abschließende Nullzeichen vorhanden ist, stellen sicher, dass *Anzahl* kleiner als die Länge des Puffers, oder verwenden **_TRUNCATE**.
+> Um sicherzustellen, dass genügend Platz für das abschließende Null-Zeichen vorhanden ist, stellen Sie sicher, dass die *Anzahl* streng kleiner als die Pufferlänge ist, oder verwenden Sie **_TRUNCATE**.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

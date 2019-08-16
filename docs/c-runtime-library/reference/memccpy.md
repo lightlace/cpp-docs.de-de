@@ -22,14 +22,14 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 5cd037974d8580b6ee90b1af736e8f2c6897fe8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 704aab84ea3e39c91def1d4ac8b6d2d9d3650759
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156602"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499686"
 ---
-# <a name="memccpy"></a>_memccpy
+# <a name="_memccpy"></a>_memccpy
 
 Kopiert Zeichen aus einem Puffer.
 
@@ -60,13 +60,13 @@ Anzahl der Zeichen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn das Zeichen *c* kopiert wurde, **_memccpy** gibt einen Zeiger auf "Char" in *Dest* , die unmittelbar auf das Zeichen folgt. Wenn *c* nicht kopiert wurde, gibt **NULL**.
+Wenn das Zeichen *c* kopiert wird, gibt **_memccpy** einen Zeiger auf das Char-Zeichen in *dest* zurück, das unmittelbar auf das Zeichen folgt. Wenn *c* nicht kopiert wird, wird **null**zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_memccpy** -Funktion kopiert 0 oder mehr Zeichen von *Src* zu *Dest*, anhalten, wenn das Zeichen *c* kopiert wurde oder wenn *Anzahl* -Zeichen kopiert wurden, welcher Fall zuerst eintritt.
+Die **_memccpy** -Funktion kopiert 0 oder mehr Zeichen von *src* in *dest*und stoppt, wenn das Zeichen *c* kopiert wurde oder wenn *count* -Zeichen kopiert wurden, je nachdem, was zuerst eintritt.
 
-**Sicherheitshinweis** Stellen Sie sicher, dass der Zielpuffer dieselbe Größe wie der Quellpuffer aufweist bzw. größer ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Sicherheitshinweis** Stellen Sie sicher, dass der Zielpuffer dieselbe Größe wie der Quellpuffer aufweist bzw. größer ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,7 +105,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Function: _memccpy 60 characters or to character 's'

@@ -1,35 +1,35 @@
 ---
-title: Implementierung eines benutzerdefinierten Zeichenfolgenmanagers (grundlegende Methode)
+title: Implementierung eines benutzerdefinierten Zeichen folgen-Managers (Basic-Methode)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-ms.openlocfilehash: c30c08217a09f600f8801bec9f50c4341e983a6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92c1c46f5251980f9cefb55e052e9aff395e0e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235900"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491317"
 ---
-# <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementierung eines benutzerdefinierten Zeichenfolgenmanagers (grundlegende Methode)
+# <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementierung eines benutzerdefinierten Zeichen folgen-Managers (Basic-Methode)
 
-Die einfachste Möglichkeit zum Anpassen von die Speicherbelegungsschema für Zeichenfolgendaten ist die Verwendung der ATL bereitgestellten `CAtlStringMgr` -Klasse, doch bieten Sie Ihren eigenen Arbeitsspeicher speicherbelegungsroutinen. Der Konstruktor für `CAtlStringMgr` verwendet einen einzigen Parameter: einen Zeiger auf ein `IAtlMemMgr` Objekt. `IAtlMemMgr` ist eine abstrakte Basisklasse, die eine generische Schnittstelle zu einem Heap bereitstellt. Mithilfe der `IAtlMemMgr` -Schnittstelle, die `CAtlStringMgr` ordnet zuordnet, und gibt den Arbeitsspeicher frei, die zum Speichern von Zeichenfolgendaten verwendet. Sie können entweder zuerst die `IAtlMemMgr` -Schnittstelle selbst, oder verwenden Sie eine der Klassen, fünf ATL bereitgestellten Speicher-Manager. Die bereitgestellte ATL-Speicher-Manager umschließen einfach vorhandenen Memory Allocation Möglichkeiten:
+Die einfachste Möglichkeit, das Speicher Belegungs Schema für Zeichen folgen Daten anzupassen, besteht darin, die von `CAtlStringMgr` ATL bereitgestellte Klasse zu verwenden, aber eigene Speicher Belegungs Routinen bereitzustellen. Der Konstruktor für `CAtlStringMgr` nimmt einen einzelnen Parameter an: einen Zeiger auf `IAtlMemMgr` ein Objekt. `IAtlMemMgr`ist eine abstrakte Basisklasse, die eine generische Schnittstelle für einen Heap bereitstellt. Mithilfe der `IAtlMemMgr` -Schnittstelle `CAtlStringMgr` wird der Arbeitsspeicher, der zum Speichern von Zeichen folgen Daten verwendet wird, zugeordnet, neu zugeordnet und freigegeben. Sie können entweder die `IAtlMemMgr` -Schnittstelle selbst implementieren oder eine der fünf vom ATL bereitgestellten Speicher-Manager-Klassen verwenden. Die von ATL bereitgestellten Speicher-Manager schließen einfach vorhandene Speicher Belegungs Funktionen ein:
 
-- [CCRTHeap](../atl/reference/ccrtheap-class.md) dient als Wrapper für die CRT-Heap-Standardfunktionen ([Malloc](../c-runtime-library/reference/malloc.md), [kostenlose](../c-runtime-library/reference/free.md), und [Realloc](../c-runtime-library/reference/realloc.md))
+- [Ccrtheiap](../atl/reference/ccrtheap-class.md) Umschließt die standardcrt-Heap Funktionen ([malloc](../c-runtime-library/reference/malloc.md), [Free](../c-runtime-library/reference/free.md)und [rezuweisung](../c-runtime-library/reference/realloc.md)).
 
-- [CWin32Heap](../atl/reference/cwin32heap-class.md) umschließt, die mit ein Win32-Heap zu behandeln, [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc), [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree), und [HeapRealloc](/windows/desktop/api/heapapi/nf-heapapi-heaprealloc)
+- [CWin32Heap](../atl/reference/cwin32heap-class.md) Umschließt ein Win32-Heap Handle mithilfe von [Heapzuweisung](/windows/win32/api/heapapi/nf-heapapi-heapalloc), [HeapFree](/windows/win32/api/heapapi/nf-heapapi-heapfree)und [heaprezuweisung](/windows/win32/api/heapapi/nf-heapapi-heaprealloc) .
 
-- [Clocalheap –](../atl/reference/clocalheap-class.md) dient als Wrapper für die Win32-APIs: [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc), [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree), und [LocalRealloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)
+- [Clocalheap](../atl/reference/clocalheap-class.md) Umschließt die Win32-APIs: [Localzuweisung](/windows/win32/api/winbase/nf-winbase-localalloc), [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree)und [localrezuweisungen](/windows/win32/api/winbase/nf-winbase-localrealloc)
 
-- [CGlobalHeap](../atl/reference/cglobalheap-class.md) dient als Wrapper für die Win32-APIs: [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree), und [GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).
+- [Cglobalheap](../atl/reference/cglobalheap-class.md) Umschließt die Win32-APIs: [Globalzugewiesenen](/windows/win32/api/winbase/nf-winbase-globalalloc), [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)und [globalrezuweisungen](/windows/win32/api/winbase/nf-winbase-globalrealloc).
 
-- [CComHeap](../atl/reference/ccomheap-class.md) dient als Wrapper für die COM-Aufgabe Allocator-APIs: [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), und [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
+- [CComHeap](../atl/reference/ccomheap-class.md) Umschließt die com-Task zuordnerapis: [Cotaskmemzuweisung](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)und [cotaskmemrezuweisung](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
 
-Für die Verwaltung die nützlichste-Klasse ist `CWin32Heap` , da es Ihnen ermöglicht, mehrere unabhängige Heaps zu erstellen. Sie auf einen separaten Heap nur für Zeichenfolgen verwenden möchten, könnten Sie z. B. Folgendes tun:
+Zum Zweck der Zeichen folgen Speicherverwaltung ist `CWin32Heap` die nützlichste Klasse, da Sie mehrere unabhängige Heaps erstellen kann. Wenn Sie z. b. einen separaten Heap nur für Zeichen folgen verwenden möchten, können Sie wie folgt vorgehen:
 
 [!code-cpp[NVC_ATLMFC_Utilities#180](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_1.cpp)]
 
-Um diese private Zeichenfolgen-Manager verwenden, um die Verwaltung des Speichers für einen `CString` Variable, übergeben Sie einen Zeiger an den Manager als Parameter an die `CString` der Variablen-Konstruktor:
+Um diesen privaten Zeichen folgen-Manager zum Verwalten des Arbeits `CString` Speichers für eine Variable zu verwenden, übergeben Sie einen Zeiger an den `CString` Manager als Parameter an den Konstruktor der Variablen:
 
 [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]
 

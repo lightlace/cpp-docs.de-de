@@ -30,14 +30,14 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 9bf994d16362ef461d8d25d72466721ba9a5890f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cdd3feb177ef44c5dad32563d09a0bb8c820b22
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155536"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500751"
 ---
-# <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
+# <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
 Generiert Namen, die Sie verwenden können, um temporäre Dateien zu erstellen. Dabei handelt es sich um Versionen von [tmpnam und _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) mit den unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschriebenen Erweiterungen.
 
@@ -80,17 +80,17 @@ Beide Funktionen geben bei Erfolg 0 zurück und bei einem Fehler eine Fehlernumm
 |-|-|-|-|
 |*str*|*sizeInChars*|**Rückgabewert**|**Inhalt der**  *str*|
 |**NULL**|any|**EINVAL**|nicht geändert|
-|Nicht **NULL** (zeigt auf gültigen Speicher)|zu kurz|**ERANGE**|nicht geändert|
+|Not **null** (zeigt auf gültigen Speicher)|zu kurz|**ERANGE**|nicht geändert|
 
-Wenn *str* ist **NULL**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und zurückgeben **EINVAL**.
+Wenn *Str* **null**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen " **errno** " auf " **EINVAL** " fest und geben " **EINVAL**" zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen gibt den Namen einer Datei zurück, die derzeit nicht vorhanden ist. **Tmpnam_s** gibt einen Namen in das angegebene temporäre Verzeichnis mit Windows zurückgegebenes [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). Wenn einem Dateinamen ohne Pfadinformationen ein umgekehrter Schrägstrich vorangestellt ist, wie z.B. \fname21, weist dies darauf hin, dass der Name für das aktuelle Arbeitsverzeichnis gültig ist.
+Jede dieser Funktionen gibt den Namen einer Datei zurück, die derzeit nicht vorhanden ist. **tmpnam_s** gibt einen eindeutigen Namen im angegebenen temporären Windows-Verzeichnis zurück, das von [gettemppathw](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)zurückgegeben wurde. Wenn einem Dateinamen ohne Pfadinformationen ein umgekehrter Schrägstrich vorangestellt ist, wie z.B. \fname21, weist dies darauf hin, dass der Name für das aktuelle Arbeitsverzeichnis gültig ist.
 
-Für **Tmpnam_s**, können Sie in diesen generierten Dateinamen speichern *str*. Die maximale Länge einer Zeichenfolge, die vom **Tmpnam_s** ist **L_tmpnam_s**, definiert in STDIO. H. Wenn *str* ist **NULL**, klicken Sie dann **Tmpnam_s** bewirkt, dass das Ergebnis in einem internen statischen Puffer. Alle nachfolgenden Aufrufe zerstören deshalb diesen Wert. Der Name, der vom **Tmpnam_s** besteht aus einem Programm generierten Dateinamen und nach dem ersten Aufruf von **Tmpnam_s**, eine Dateierweiterung aus aufeinanderfolgenden Zahlen mit Basis 32 (.1-. 1vvvvvu Wenn **TMP _MAX_S** in STDIO. H **INT_MAX**).
+In **tmpnam_s**können Sie diesen generierten Dateinamen in *Str*speichern. Die maximale Länge einer Zeichenfolge, die von **tmpnam_s** zurückgegeben wird, ist **L_tmpnam_s**, die in stdio definiert ist. Micha. Wenn *Str* **null**ist, verlässt **tmpnam_s** das Ergebnis in einem internen statischen Puffer. Alle nachfolgenden Aufrufe zerstören deshalb diesen Wert. Der von **tmpnam_s** generierte Name besteht aus einem Programm generierten Dateinamen und nach dem ersten **tmpnam_s**-Befehl eine Dateierweiterung von sequenziellen Zahlen in Basis 32 (. 1-. 1vvvvvu, wenn **TMP_MAX_S** in stdio. H ist **INT_MAX**).
 
-**Tmpnam_s** behandelt Multibyte-Zeichensätze Zeichenfolgenargumente, erkennt Multibyte-Zeichenfolgen entsprechend der OEM-Codepage automatisch abgerufen, von dem Betriebssystem. **_wtmpnam_s** ist eine Breitzeichen-Version von **Tmpnam_s**; der Wert Argument- und Rückgabetypen der **_wtmpnam_s** sind Breitzeichen Zeichenfolgen. **_wtmpnam_s** und **Tmpnam_s** Verhalten sich identisch, außer dass **_wtmpnam_s** verarbeitet keine Multibyte-Zeichenfolgen.
+**tmpnam_s** verarbeitet nach Bedarf automatisch Multibyte-Zeichen folgen Argumente und erkennt multibytezeichensequenzen entsprechend der OEM-Codepage, die vom Betriebssystem abgerufen wird. **_wtmpnam_s** ist eine breit Zeichen Version von **tmpnam_s**. Das Argument und der Rückgabewert von **_wtmpnam_s** sind Zeichen folgen mit breit Zeichen. **_wtmpnam_s** und **tmpnam_s** Verhalten sich identisch, mit dem Unterschied, dass **_wtmpnam_s** keine Multibyte-Zeichen folgen verarbeitet.
 
 Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen vorhanden) vereinfacht. Überladungen können automatisch die Pufferlänge ableiten, sodass kein Größenargument angegeben werden muss. Weitere Informationen finden Sie unter [Secure Template Overloads (Sichere Vorlagenüberladungen)](../../c-runtime-library/secure-template-overloads.md).
 

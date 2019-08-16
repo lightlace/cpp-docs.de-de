@@ -1,21 +1,21 @@
 ---
-title: Exportieren Sie (C++-COM-Attribut)
+title: Export (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.export
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: 5ffa4283b8a2b265809d06b72be96e217cf8bf9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771bfdfe4eab2acf31e97a606795066e8938a8a1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409615"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501608"
 ---
 # <a name="export"></a>"export"
 
-Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.
+Bewirkt, dass eine Datenstruktur in der IDL-Datei platziert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,17 +25,17 @@ Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **exportieren** C++-Attribut bewirkt, dass eine Datenstruktur, die in der IDL-Datei platziert werden und dann in der Typbibliothek in eine Binärdatei-kompatiblen Format zur Verfügung, die sie für die Verwendung mit einer beliebigen Sprache zur Verfügung stellt.
+Das **Export** C++ -Attribut bewirkt, dass eine Datenstruktur in der IDL-Datei platziert und dann in der Typbibliothek in einem Binär kompatiblen Format verfügbar ist, das Sie für die Verwendung in einer beliebigen Sprache verfügbar macht.
 
-Können nicht angewendet werden die **exportieren** -Attribut auf eine Klasse, auch wenn die Klasse nur öffentliche Member hat (das Äquivalent einer **Struktur**).
+Das **Export** Attribut kann nicht auf eine Klasse angewendet werden, auch wenn die Klasse nur öffentliche Member hat (entspricht einer **Struktur**).
 
-Wenn Sie eine nicht benannte exportieren **Enum** oder **Struktur**, erhält sie einen Namen, die mit beginnt **__unnamed**<em>x</em>, wobei *x* ist eine sequenzielle Zahl.
+Wenn Sie eine unbenannte Enumeration oder **Struktur**exportieren, erhält Sie einen Namen, der mit **__unnamed**<em>x</em>beginnt, wobei *x* eine sequenzielle Zahl ist.
 
-Die Typdefinitionen für den Export gültig sind, Basistypen, Strukturen, Unions, Enumerationen, oder geben Bezeichner.  Finden Sie unter [Typedef](/windows/desktop/Midl/typedef) für Weitere Informationen.
+Die für den Export gültigen Typedefs sind Basis Typen, Strukturen, Unions, Enumerationstypen oder Typbezeichner.  Weitere Informationen finden Sie unter [typedef](/windows/win32/Midl/typedef) .
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt, wie Sie mit der **exportieren** Attribut:
+Der folgende Code zeigt, wie das **Export** -Attribut verwendet wird:
 
 ```cpp
 // cpp_attr_ref_export.cpp
@@ -54,10 +54,10 @@ struct MyStruct {
 
 |||
 |-|-|
-|**Betrifft**|**Union**, **Typedef**, **Enum**, **Struktur**, oder **Schnittstelle**|
+|**Betrifft**|**Union**, **typedef**,Aufzählung, **Struktur**oder **Schnittstelle**|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

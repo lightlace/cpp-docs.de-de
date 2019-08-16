@@ -1,5 +1,5 @@
 ---
-title: CRTThreadTraits-Klasse
+title: Crtthreadtrait-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CRTThreadTraits
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
-ms.openlocfilehash: b5fa9273e3d24f5c912ebe30fab93baa6c9ff5c1
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 9e12e64041e38b8fa014815870132a75885014bf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503153"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496565"
 ---
-# <a name="crtthreadtraits-class"></a>CRTThreadTraits-Klasse
+# <a name="crtthreadtraits-class"></a>Crtthreadtrait-Klasse
 
-Diese Klasse stellt die Erstellungsfunktion für einen Thread CRT. Verwenden Sie diese Klasse aus, wenn der Thread die CRT-Funktionen verwenden möchten.
+Diese Klasse stellt die Erstellungs Funktion für einen CRT-Thread bereit. Verwenden Sie diese Klasse, wenn der Thread CRT-Funktionen verwendet.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+>  Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,27 +36,27 @@ class CRTThreadTraits
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CRTThreadTraits::CreateThread](#createthread)|(Statisch) Rufen Sie diese Funktion zur Erstellung eines Threads, das CRT-Funktionen verwenden können.|
+|[CRTThreadTraits::CreateThread](#createthread)|Kum Rufen Sie diese Funktion auf, um einen Thread zu erstellen, der CRT-Funktionen verwenden kann.|
 
 ## <a name="remarks"></a>Hinweise
 
-Thread "traits" sind Klassen, die eine Funktion für einen bestimmten Typ des Threads zu ermöglichen. Die Erstellungsfunktion weist die gleiche Signatur und die gleiche Semantik wie die Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) Funktion.
+Thread Merkmale sind Klassen, die eine Erstellungs Funktion für einen bestimmten Typ von Thread bereitstellen. Die Erstellungs Funktion verfügt über dieselbe Signatur und Semantik wie die Windows-Funktion " [kreatethread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) ".
 
-Thread "traits" werden die folgenden Klassen verwendet:
+Thread Merkmale werden von den folgenden Klassen verwendet:
 
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)
 
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)
 
-Wenn der Thread nicht CRT-Funktionen verwenden, verwenden Sie [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) stattdessen.
+Wenn der Thread keine CRT-Funktionen verwendet, verwenden Sie stattdessen [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlbase.h
+**Header:** atlbase. h
 
-##  <a name="createthread"></a>  CRTThreadTraits::CreateThread
+##  <a name="createthread"></a>Crtthreadtrait:: kreatethread
 
-Rufen Sie diese Funktion zur Erstellung eines Threads, das CRT-Funktionen verwenden können.
+Rufen Sie diese Funktion auf, um einen Thread zu erstellen, der CRT-Funktionen verwenden kann.
 
 ```
 static HANDLE CreateThread(
@@ -71,33 +71,33 @@ static HANDLE CreateThread(
 ### <a name="parameters"></a>Parameter
 
 *lpsa*<br/>
-Die Sicherheitsattribute für den neuen Thread.
+Die Sicherheits Attribute für den neuen Thread.
 
 *dwStackSize*<br/>
 Die Stapelgröße für den neuen Thread.
 
 *pfnThreadProc*<br/>
-Die Threadprozedur des neuen Threads.
+Die Thread Prozedur des neuen Threads.
 
 *pvParam*<br/>
-Der Parameter an die Threadprozedur übergeben werden.
+Der Parameter, der an die Thread Prozedur übergeben werden soll.
 
 *dwCreationFlags*<br/>
-Die Erstellung flags ("0" oder "CREATE_SUSPENDED").
+Die erstellungsflags (0 oder CREATE_SUSPENDED).
 
 *pdwThreadId*<br/>
-[out] Adresse der DWORD-Variable, die bei Erfolg die Thread-ID des neu erstellten Threads empfängt.
+vorgenommen Adresse der DWORD-Variablen, die bei Erfolg die Thread-ID des neu erstellten Threads empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle auf das neu erstellte Thread oder NULL bei einem Fehler zurück. Rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) um erweiterte Fehlerinformationen abzurufen.
+Gibt das Handle für den neu erstellten Thread oder NULL bei einem Fehler zurück. [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufrufen, um erweiterte Fehlerinformationen abzurufen.
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) für Weitere Informationen zu den Parametern für diese Funktion.
+Weitere Informationen zu den Parametern für diese Funktion finden Sie unter " [kreatethread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) ".
 
-Diese Funktion ruft [_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) um den Thread erstellen.
+Diese Funktion ruft [_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) auf, um den Thread zu erstellen.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)
+[Klassen Übersicht](../../atl/atl-class-overview.md)

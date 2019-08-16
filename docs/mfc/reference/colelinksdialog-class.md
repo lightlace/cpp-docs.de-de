@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleLinksDialog [MFC], DoModal
 - COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
-ms.openlocfilehash: c5069bc63d61016e6f3c2f983de23901b9f35814
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 911108f9a231b752790abfdf86d1b4042d30b149
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224435"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504118"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog-Klasse
 
@@ -41,24 +41,24 @@ class COleLinksDialog : public COleDialog
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[COleLinksDialog::DoModal](#domodal)|Zeigt das Dialogfeld OLE Verknüpfungen bearbeiten.|
+|[COleLinksDialog::DoModal](#domodal)|Zeigt das OLE-Dialogfeld Links bearbeiten an.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[COleLinksDialog::m_el](#m_el)|Eine Struktur vom Typ OLEUIEDITLINKS, die das Verhalten des Dialogfelds steuert.|
+|[COleLinksDialog::m_el](#m_el)|Eine Struktur vom Typ oleuieditlinks, die das Verhalten des Dialog Felds steuert.|
 
 ## <a name="remarks"></a>Hinweise
 
-Erstellen Sie ein Objekt der Klasse `COleLinksDialog` Wenn das Dialogfeld aufgerufen werden soll. Nach einer `COleLinksDialog` -Objekts wird, können Sie mit der [M_el](#m_el) Struktur zum Initialisieren der Werte oder Zustände von Steuerelementen im Dialogfeld. Die `m_el` Struktur des Typs OLEUIEDITLINKS ist. Weitere Informationen zur Verwendung dieser Dialogfeldklasse finden Sie unter den [DoModal](#domodal) Member-Funktion.
+Erstellen Sie ein Objekt der `COleLinksDialog` -Klasse, wenn Sie dieses Dialogfeld aufzurufen. Nachdem ein `COleLinksDialog` -Objekt erstellt wurde, können Sie die [m_el](#m_el) -Struktur verwenden, um die Werte oder Zustände von Steuerelementen im Dialogfeld zu initialisieren. Die `m_el` Struktur ist vom Typ oleuieditlinks. Weitere Informationen zum Verwenden dieser Dialogfeld Klasse finden Sie unter der [DoModal](#domodal) -Member-Funktion.
 
 > [!NOTE]
->  Vom Assistenten generierten Container-Anwendungscode verwendet diese Klasse.
+>  Vom Anwendungs-Assistenten generierter Container Code verwendet diese Klasse.
 
-Weitere Informationen finden Sie unter den [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) Struktur im Windows SDK.
+Weitere Informationen finden Sie in der Struktur von [oleuieditlinks](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw) im Windows SDK.
 
-Weitere Informationen zu OLE-spezifische Dialogfelder, finden Sie im Artikel [Dialogfelder in OLE](../../mfc/dialog-boxes-in-ole.md).
+Weitere Informationen zu OLE-spezifischen Dialogfeldern finden Sie in den Artikel [Dialogfeldern in OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -78,11 +78,11 @@ Weitere Informationen zu OLE-spezifische Dialogfelder, finden Sie im Artikel [Di
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxodlgs.h
+**Header:** afxodlgs. h
 
-##  <a name="domodal"></a>  COleLinksDialog::DoModal
+##  <a name="domodal"></a>COleLinksDialog::D omodal
 
-Zeigt das Dialogfeld OLE Verknüpfungen bearbeiten.
+Zeigt das OLE-Dialogfeld Links bearbeiten an.
 
 ```
 virtual INT_PTR DoModal();
@@ -90,19 +90,19 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Abschlussstatus für das Dialogfeld. Einer der folgenden Werte:
+Abschluss Status für das Dialogfeld. Einer der folgenden Werte:
 
 - IDOK, wenn das Dialogfeld erfolgreich angezeigt wurde.
 
 - IDCANCEL, wenn der Benutzer das Dialogfeld abgebrochen hat.
 
-- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) -Funktion in das Windows SDK.
+- Idabort, wenn ein Fehler aufgetreten ist. Wenn idabort zurückgegeben wird, können `COleDialog::GetLastError` Sie die Member-Funktion abrufen, um weitere Informationen zum aufgetretenen Fehlertyp abzurufen. Eine Auflistung möglicher Fehler finden Sie unter der Funktion [oleuieditlinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) im Windows SDK.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn Sie die verschiedenen Dialogfeldsteuerelemente zu initialisieren, indem Sie Mitglieder festlegen möchten die [M_el](#m_el) Struktur die, Sie tun es vor dem Aufruf `DoModal`, allerdings nachdem das Dialogfeldobjekt erstellt wird.
+Wenn Sie die verschiedenen Dialogfeld-Steuerelemente durch Festlegen der Member der [m_el](#m_el) -Struktur initialisieren möchten, sollten Sie diese vor `DoModal`dem Aufrufen von verwenden, nachdem das Dialogfeld Objekt erstellt wurde.
 
-##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog
+##  <a name="colelinksdialog"></a>COleLinksDialog:: COleLinksDialog
 
 Erstellt ein `COleLinksDialog`-Objekt.
 
@@ -117,24 +117,24 @@ COleLinksDialog (
 ### <a name="parameters"></a>Parameter
 
 *pDoc*<br/>
-Verweist auf das OLE-Dokument, das den zu bearbeitenden enthält.
+Verweist auf das OLE-Dokument, das die zu bearbeitenden Links enthält.
 
 *pView*<br/>
-Wiederherstellungspunkte für die aktuelle Ansicht *pDoc*.
+Verweist auf die aktuelle Ansicht in *Pdoc*.
 
 *dwFlags*<br/>
-Erstellung-Flag, die enthält entweder 0 oder ELF_SHOWHELP angeben, ob die Schaltfläche "Hilfe" angezeigt wird, wenn das Dialogfeld angezeigt wird.
+Erstellungsflag, das entweder 0 oder ELF_SHOWHELP enthält, um anzugeben, ob die Hilfe Schaltfläche angezeigt wird, wenn das Dialogfeld angezeigt wird.
 
 *pParentWnd*<br/>
-Verweist auf das übergeordnete Element oder Besitzer Window-Objekt (des Typs `CWnd`) zu dem das Dialogfeldobjekt gehört. Wenn es NULL ist, wird das übergeordnete Fenster des Dialogfelds auf das Hauptanwendungsfenster festgelegt.
+Zeigt auf das übergeordnete oder Besitzer Fenster Objekt (vom `CWnd`Typ), zu dem das Dialog Objekt gehört. Wenn er NULL ist, wird das übergeordnete Fenster des Dialog Felds auf das Hauptanwendungsfenster festgelegt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion erstellt nur eine `COleLinksDialog` Objekt. Um das Dialogfeld anzuzeigen, rufen die [DoModal](#domodal) Funktion.
+Diese Funktion erstellt nur ein `COleLinksDialog` -Objekt. Um das Dialogfeld anzuzeigen, müssen Sie die Funktion [DoModal](#domodal) aufrufen.
 
-##  <a name="m_el"></a>  COleLinksDialog::m_el
+##  <a name="m_el"></a>COleLinksDialog:: m_el
 
-Struktur des Typs OLEUIEDITLINKS verwendet zur Steuerung des Verhaltens im Dialogfeld "Verknüpfungen bearbeiten".
+Struktur vom Typ "oleuieditlinks", die zum Steuern des Verhaltens des Dialog Felds "Links bearbeiten" verwendet wird.
 
 ```
 OLEUIEDITLINKS m_el;
@@ -142,9 +142,9 @@ OLEUIEDITLINKS m_el;
 
 ### <a name="remarks"></a>Hinweise
 
-Mitglieder dieser Struktur können entweder direkt oder über Memberfunktionen geändert werden.
+Member dieser Struktur können entweder direkt oder über Element Funktionen geändert werden.
 
-Weitere Informationen finden Sie unter den [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) Struktur im Windows SDK.
+Weitere Informationen finden Sie in der Struktur von [oleuieditlinks](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw) im Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 

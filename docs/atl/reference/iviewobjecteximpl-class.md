@@ -22,19 +22,19 @@ helpviewer_keywords:
 - advise sinks
 - IViewObjectExImpl class
 ms.assetid: ad6de760-1ee5-4883-b033-ae57beffc369
-ms.openlocfilehash: 4ed7a7e4a6070ba52c54c4dace687111cf7d33d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3aead41f317d175eac9dcb094aa2070d82dc6185
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198212"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495502"
 ---
 # <a name="iviewobjecteximpl-class"></a>IViewObjectExImpl-Klasse
 
-Diese Klasse implementiert `IUnknown` und stellt standardimplementierungen der [IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2), und [IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex) Schnittstellen.
+Diese Klasse implementiert `IUnknown` und stellt Standard Implementierungen der Schnittstellen [IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)und [IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex) bereit.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+>  Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ class ATL_NO_VTABLE IViewObjectExImpl
 #### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Abgeleitet von die Klasse `IViewObjectExImpl`.
+Die von `IViewObjectExImpl`abgeleitete Klasse.
 
 ## <a name="members"></a>Member
 
@@ -55,22 +55,22 @@ Abgeleitet von die Klasse `IViewObjectExImpl`.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[IViewObjectExImpl::Draw](#draw)|Zeichnet eine Darstellung des Steuerelements auf einen Gerätekontext.|
-|[IViewObjectExImpl::Freeze](#freeze)|Friert die gezeichnete Darstellung eines Steuerelements, sodass sich diese nicht bis zum Ändern einer `Unfreeze`. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
-|[IViewObjectExImpl::GetAdvise](#getadvise)|Ruft eine vorhandene Advise-Senke-Verbindung auf das Steuerelement ab, sofern vorhanden.|
-|[IViewObjectExImpl::GetColorSet](#getcolorset)|Gibt die logische Palette, die vom Steuerelement verwendet wird, für das Zeichnen zurück. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
-|[IViewObjectExImpl::GetExtent](#getextent)|Ruft die Größe des Steuerelements in HIMETRIC-Einheiten (0,01 Millimeter pro Einheit) ab, aus der Steuerelement-Klassendatenmember [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).|
-|[IViewObjectExImpl::GetNaturalExtent](#getnaturalextent)|Stellt Größenhinweise vom Container für das Objekt verwenden, wie der Benutzer die Größe ändert.|
-|[IViewObjectExImpl::GetRect](#getrect)|Gibt ein Rechteck, das einen angeforderten Zeichenaspekt beschreibt. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
-|[IViewObjectExImpl::GetViewStatus](#getviewstatus)|Gibt Informationen über die Durchlässigkeit des Objekts und Zeichenaspekte unterstützt werden.|
-|[IViewObjectExImpl::QueryHitPoint](#queryhitpoint)|Überprüft, ob der angegebene Punkt befindet sich in das angegebene Rechteck und gibt eine [HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult) Wert `pHitResult`.|
-|[IViewObjectExImpl::QueryHitRect](#queryhitrect)|Überprüft, ob das Rechteck des Steuerelements anzeigen überschneidet sich mit einem beliebigen Zeitpunkt im angegebenen Speicherort Rechteck und einen Wert HITRESULT in gibt `pHitResult`.|
-|[IViewObjectExImpl::SetAdvise](#setadvise)|Legt fest, um eine Verbindung zwischen dem Steuerelement und einer Advise-Senke, damit die Senke über Änderungen in der Ansicht des Steuerelements benachrichtigt werden kann.|
-|[IViewObjectExImpl::Unfreeze](#unfreeze)|Hebt die Fixierung der gezeichneten Darstellung des Steuerelements. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
+|[IViewObjectExImpl::Draw](#draw)|Zeichnet eine Darstellung des-Steuer Elements auf einen Gerätekontext.|
+|[IViewObjectExImpl:: Freeze](#freeze)|Friert die gezeichnete Darstellung eines-Steuer Elements, sodass es bis `Unfreeze`zum nicht geändert wird. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
+|[IViewObjectExImpl::GetAdvise](#getadvise)|Ruft eine vorhandene beratungssenke-Verbindung auf dem Steuerelement ab, sofern vorhanden.|
+|[IViewObjectExImpl::GetColorSet](#getcolorset)|Gibt die logische Palette zurück, die vom Steuerelement für die Zeichnung verwendet wird. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
+|[IViewObjectExImpl::GetExtent](#getextent)|Ruft die Anzeige Größe des Steuer Elements in HIMETRIC-Einheiten (0,01 Millimeter pro Einheit) aus dem Steuerelement-Klassendatenmember [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)ab.|
+|[IViewObjectExImpl::GetNaturalExtent](#getnaturalextent)|Stellt Größen Hinweise aus dem Container für das Objekt bereit, das verwendet werden soll, wenn der Benutzer die Größe ändert.|
+|[IViewObjectExImpl::GetRect](#getrect)|Gibt ein Rechteck zurück, das einen angeforderten Zeichnungs Aspekt beschreibt. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
+|[IViewObjectExImpl::GetViewStatus](#getviewstatus)|Gibt Informationen über die Durchlässigkeit des Objekts zurück und welche Zeichnungs Aspekte unterstützt werden.|
+|[IViewObjectExImpl::QueryHitPoint](#queryhitpoint)|Überprüft, ob der angegebene Punkt im angegebenen Rechteck ist, und gibt in `pHitResult`einen [HitResult](/windows/win32/api/ocidl/ne-ocidl-hitresult) -Wert zurück.|
+|[IViewObjectExImpl::QueryHitRect](#queryhitrect)|Überprüft, ob das Anzeige Rechteck des Steuer Elements einen beliebigen Punkt im angegebenen Positions Rechteck überlappt und einen HitResult `pHitResult`-Wert in zurückgibt.|
+|[IViewObjectExImpl::SetAdvise](#setadvise)|Richtet eine Verbindung zwischen dem-Steuerelement und einer Benachrichtigungs Senke ein, damit die Senke über Änderungen in der Ansicht des Steuer Elements benachrichtigt werden kann.|
+|[IViewObjectExImpl::Unfreeze](#unfreeze)|Entfriert die gezeichnete Darstellung des-Steuer Elements. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die [IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2), und [IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex) Schnittstellen aktivieren ein Steuerelements, sich direkt anzuzeigen und zu erstellen und verwalten eine Advise-Senke zu benachrichtigen, die Container mit Änderungen in der Steuerelementanzeige. Die `IViewObjectEx` Schnittstelle bietet Unterstützung für erweiterten Steuerelements Features wie z. B. flimmerfreie zeichnen, viereckig noch transparent Steuerelemente und Treffertests (z. B., wie weit ein Mausklick sein muss auf dem Steuerelement berücksichtigt werden). Klasse `IViewObjectExImpl` stellt eine Standardimplementierung dieser Schnittstellen bereit, und implementiert `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.
+Mit den Schnittstellen [IViewObject](/windows/win32/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)und [IViewObjectEx](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex) kann ein Steuerelement sich direkt anzeigen lassen und eine Benachrichtigungs Senke erstellen und verwalten, um den Container über Änderungen in der Steuerelement Anzeige zu benachrichtigen. Die `IViewObjectEx` -Schnittstelle bietet Unterstützung für erweiterte Steuerelement Features, wie z. b. flimmerfreies zeichnen, nicht rechteckige und transparente Steuerelemente und Treffer Tests (z. b., wie nahe ein Mausklick im Steuerelement berücksichtigt werden muss). Die `IViewObjectExImpl` -Klasse stellt eine Standard Implementierung dieser Schnittstellen `IUnknown` bereit und implementiert durch das Senden von Informationen an das dumpgerät in Debugbuilds.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -82,9 +82,9 @@ Die [IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObje
 
 **Header:** atlctl.h
 
-##  <a name="draw"></a>  IViewObjectExImpl::Draw
+##  <a name="draw"></a>IViewObjectExImpl::D RAW
 
-Zeichnet eine Darstellung des Steuerelements auf einen Gerätekontext.
+Zeichnet eine Darstellung des-Steuer Elements auf einen Gerätekontext.
 
 ```
 STDMETHOD(Draw)(
@@ -101,13 +101,13 @@ STDMETHOD(Draw)(
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft `CComControl::OnDrawAdvanced` die ruft der Steuerelementklasse `OnDraw` Methode. Ein `OnDraw` Methode wird automatisch der Steuerelement-Klasse hinzugefügt, wenn Sie das Steuerelement mit dem ATL-Steuerelement-Assistenten erstellen. Des Assistenten standardmäßig `OnDraw` zeichnet ein Rechteck mit der Bezeichnung "ATL 3.0".
+Diese Methode ruft `CComControl::OnDrawAdvanced` auf, die wiederum die- `OnDraw` Methode der Steuerelement Klasse aufruft. Wenn `OnDraw` Sie das Steuerelement mit dem ATL-Steuerelement-Assistenten erstellen, wird der Steuerelement Klasse automatisch eine-Methode hinzugefügt. Der Standard `OnDraw` des Assistenten zeichnet ein Rechteck mit der Bezeichnung "ATL 3,0".
 
-Finden Sie unter [IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw) in das Windows SDK.
+Weitere Informationen finden Sie unter [IViewObject::D RAW](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw) in der Windows SDK.
 
-##  <a name="freeze"></a>  IViewObjectExImpl::Freeze
+##  <a name="freeze"></a>IViewObjectExImpl:: Freeze
 
-Friert die gezeichnete Darstellung eines Steuerelements, sodass sich diese nicht bis zum Ändern einer `Unfreeze`. Die ATL-Implementierung gibt E_NOTIMPL zurück.
+Friert die gezeichnete Darstellung eines-Steuer Elements, sodass es bis `Unfreeze`zum nicht geändert wird. Die ATL-Implementierung gibt E_NOTIMPL zurück.
 
 ```
 STDMETHOD(Freeze)(
@@ -119,11 +119,11 @@ STDMETHOD(Freeze)(
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IViewObject::Freeze](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-freeze) in das Windows SDK.
+Weitere Informationen finden Sie unter [IViewObject:: Freeze](/windows/win32/api/oleidl/nf-oleidl-iviewobject-freeze) in der Windows SDK.
 
-##  <a name="getadvise"></a>  IViewObjectExImpl::GetAdvise
+##  <a name="getadvise"></a>IViewObjectExImpl:: getrat
 
-Ruft eine vorhandene Advise-Senke-Verbindung auf das Steuerelement ab, sofern vorhanden.
+Ruft eine vorhandene beratungssenke-Verbindung auf dem Steuerelement ab, sofern vorhanden.
 
 ```
 STDMETHOD(GetAdvise)(
@@ -134,13 +134,13 @@ STDMETHOD(GetAdvise)(
 
 ### <a name="remarks"></a>Hinweise
 
-Die Advise-Senke befindet sich in der Steuerelement-Klassendatenmember [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink).
+Die Beratungs Senke wird im Steuerelement-Klassendatenmember [CComControlBase:: m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink)gespeichert.
 
-Finden Sie unter [IViewObject::GetAdvise](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-getadvise) in das Windows SDK.
+Weitere Informationen finden Sie unter [IViewObject:: getrat](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getadvise) im Windows SDK.
 
-##  <a name="getcolorset"></a>  IViewObjectExImpl::GetColorSet
+##  <a name="getcolorset"></a>IViewObjectExImpl:: GetColorSet
 
-Gibt die logische Palette, die vom Steuerelement verwendet wird, für das Zeichnen zurück. Die ATL-Implementierung gibt E_NOTIMPL zurück.
+Gibt die logische Palette zurück, die vom Steuerelement für die Zeichnung verwendet wird. Die ATL-Implementierung gibt E_NOTIMPL zurück.
 
 ```
 STDMETHOD(GetColorSet)(
@@ -154,11 +154,11 @@ STDMETHOD(GetColorSet)(
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IViewObject::GetColorSet](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-getcolorset) in das Windows SDK.
+Siehe [IViewObject:: GetColorSet](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getcolorset) in der Windows SDK.
 
-##  <a name="getextent"></a>  IViewObjectExImpl::GetExtent
+##  <a name="getextent"></a>IViewObjectExImpl:: GetExtent
 
-Ruft die Größe des Steuerelements in HIMETRIC-Einheiten (0,01 Millimeter pro Einheit) ab, aus der Steuerelement-Klassendatenmember [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
+Ruft die Anzeige Größe des Steuer Elements in HIMETRIC-Einheiten (0,01 Millimeter pro Einheit) aus dem Steuerelement-Klassendatenmember [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)ab.
 
 ```
 STDMETHOD(GetExtent)(
@@ -170,11 +170,11 @@ STDMETHOD(GetExtent)(
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IViewObject2::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-iviewobject2-getextent) in das Windows SDK.
+Weitere Informationen finden Sie unter [IViewObject2:: GetExtent](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) in der Windows SDK.
 
-##  <a name="getnaturalextent"></a>  IViewObjectExImpl::GetNaturalExtent
+##  <a name="getnaturalextent"></a>IViewObjectExImpl:: getnaturalextent
 
-Stellt Größenhinweise vom Container für das Objekt verwenden, wie der Benutzer die Größe ändert.
+Stellt Größen Hinweise aus dem Container für das Objekt bereit, das verwendet werden soll, wenn der Benutzer die Größe ändert.
 
 ```
 STDMETHOD(GetNaturalExtent)(
@@ -188,13 +188,13 @@ STDMETHOD(GetNaturalExtent)(
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `dwAspect` DVASPECT_CONTENT ist und *pExtentInfo -> DwExtentMode* DVEXTENT_CONTENT ist, legt * `psizel` in der Steuerelementklasse-Datenmember [CComControlBase::m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural). Andernfalls wird ein fehlerhaftes HRESULT zurückgegeben.
+Wenn `dwAspect` DVASPECT_CONTENT und *pextentinfo-> dwextentmode* auf DVEXTENT_CONTENT festgelegt ist, `psizel` wird * auf den Datenmember der Steuerelement Klasse [CComControlBase:: m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural)festgelegt. Andernfalls wird ein HRESULT-Fehler zurückgegeben.
 
-Finden Sie unter [IViewObjectEx::GetNaturalExtent](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent) in das Windows SDK.
+Weitere Informationen finden Sie unter [IViewObjectEx:: getnaturalextent](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent) in der Windows SDK.
 
-##  <a name="getrect"></a>  IViewObjectExImpl::GetRect
+##  <a name="getrect"></a>IViewObjectExImpl:: GetRect
 
-Gibt ein Rechteck, das einen angeforderten Zeichenaspekt beschreibt. Die ATL-Implementierung gibt E_NOTIMPL zurück.
+Gibt ein Rechteck zurück, das einen angeforderten Zeichnungs Aspekt beschreibt. Die ATL-Implementierung gibt E_NOTIMPL zurück.
 
 ```
 STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
@@ -202,11 +202,11 @@ STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IViewObjectEx::GetRect](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getrect) in das Windows SDK.
+Weitere Informationen finden Sie im Windows SDK unter [IViewObjectEx:: GetRect](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getrect) .
 
-##  <a name="getviewstatus"></a>  IViewObjectExImpl::GetViewStatus
+##  <a name="getviewstatus"></a>IViewObjectExImpl:: getviewstatus
 
-Gibt Informationen über die Durchlässigkeit des Objekts und Zeichenaspekte unterstützt werden.
+Gibt Informationen über die Durchlässigkeit des Objekts zurück und welche Zeichnungs Aspekte unterstützt werden.
 
 ```
 STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
@@ -214,13 +214,13 @@ STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig legt ATL `pdwStatus` um anzugeben, dass das Steuerelement VIEWSTATUS_OPAQUE unterstützt (mögliche Werte sind in der [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) Enumeration).
+Standardmäßig wird ATL fest `pdwStatus` gelegt, um anzugeben, dass das Steuerelement VIEWSTATUS_OPAQUE unterstützt (mögliche Werte sind in der [VIEWSTATUS](/windows/win32/api/ocidl/ne-ocidl-viewstatus) -Enumeration).
 
-Finden Sie unter [IViewObjectEx::GetViewStatus](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus) in das Windows SDK.
+Weitere Informationen finden Sie unter [IViewObjectEx:: getviewstatus](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus) im Windows SDK.
 
-##  <a name="queryhitpoint"></a>  IViewObjectExImpl::QueryHitPoint
+##  <a name="queryhitpoint"></a>IViewObjectExImpl:: queryhitpoint
 
-Überprüft, ob der angegebene Punkt befindet sich in das angegebene Rechteck und gibt eine [HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult) Wert `pHitResult`.
+Überprüft, ob der angegebene Punkt im angegebenen Rechteck ist, und gibt in `pHitResult`einen [HitResult](/windows/win32/api/ocidl/ne-ocidl-hitresult) -Wert zurück.
 
 ```
 STDMETHOD(QueryHitPoint)(
@@ -233,15 +233,15 @@ STDMETHOD(QueryHitPoint)(
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert kann entweder HITRESULT_HIT oder HITRESULT_OUTSIDE sein.
+Der Wert kann entweder "HITRESULT_HIT" oder "HITRESULT_OUTSIDE" lauten.
 
-Wenn `dwAspect` gleich [DVASPECT_CONTENT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect), die Methode gibt S_OK zurück. Andernfalls gibt die Methode E_FAIL zurück.
+Wenn `dwAspect` [DVASPECT_CONTENT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)ist, gibt die Methode S_OK zurück. Andernfalls gibt die Methode E_FAIL zurück.
 
-Finden Sie unter [IViewObjectEx::QueryHitPoint](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint) in das Windows SDK.
+Weitere Informationen finden Sie im Windows SDK unter [IViewObjectEx:: queryhitpoint](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint) .
 
-##  <a name="queryhitrect"></a>  IViewObjectExImpl::QueryHitRect
+##  <a name="queryhitrect"></a>IViewObjectExImpl:: queryhitrect
 
-Überprüft, ob das Rechteck des Steuerelements anzeigen, überschneidet sich mit einem beliebigen Zeitpunkt im angegebenen Speicherort Rechteck, und gibt eine [HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult) Wert `pHitResult`.
+Überprüft, ob das Anzeige Rechteck des Steuer Elements einen beliebigen Punkt im angegebenen Positions Rechteck überlappt und einen [HitResult](/windows/win32/api/ocidl/ne-ocidl-hitresult) -Wert in `pHitResult`zurückgibt.
 
 ```
 STDMETHOD(QueryHitRect)(
@@ -254,15 +254,15 @@ STDMETHOD(QueryHitRect)(
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert kann entweder HITRESULT_HIT oder HITRESULT_OUTSIDE sein.
+Der Wert kann entweder "HITRESULT_HIT" oder "HITRESULT_OUTSIDE" lauten.
 
-Wenn `dwAspect` gleich [DVASPECT_CONTENT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect), die Methode gibt S_OK zurück. Andernfalls gibt die Methode E_FAIL zurück.
+Wenn `dwAspect` [DVASPECT_CONTENT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)ist, gibt die Methode S_OK zurück. Andernfalls gibt die Methode E_FAIL zurück.
 
-Finden Sie unter [IViewObjectEx::QueryHitRect](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect) in das Windows SDK.
+Weitere Informationen finden Sie unter [IViewObjectEx:: queryhitrect](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect) in der Windows SDK.
 
-##  <a name="setadvise"></a>  IViewObjectExImpl::SetAdvise
+##  <a name="setadvise"></a>IViewObjectExImpl:: setrat
 
-Legt fest, um eine Verbindung zwischen dem Steuerelement und einer Advise-Senke, damit die Senke über Änderungen in der Ansicht des Steuerelements benachrichtigt werden kann.
+Richtet eine Verbindung zwischen dem-Steuerelement und einer Benachrichtigungs Senke ein, damit die Senke über Änderungen in der Ansicht des Steuer Elements benachrichtigt werden kann.
 
 ```
 STDMETHOD(SetAdvise)(
@@ -273,13 +273,13 @@ STDMETHOD(SetAdvise)(
 
 ### <a name="remarks"></a>Hinweise
 
-Der Zeiger auf die [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) -Schnittstelle der Advise-Senke befindet sich in der Steuerelement-Klassendatenmember [CComControlBase::m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink).
+Der Zeiger auf die [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) -Schnittstelle in der "Hinweis"-Senke wird im Steuerelement-Klassendatenmember " [CComControlBase:: m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink)" gespeichert.
 
-Finden Sie unter [IViewObject::SetAdvise](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-setadvise) in das Windows SDK.
+Weitere Informationen finden Sie unter [IViewObject:: setrat](/windows/win32/api/oleidl/nf-oleidl-iviewobject-setadvise) im Windows SDK.
 
-##  <a name="unfreeze"></a>  IViewObjectExImpl::Unfreeze
+##  <a name="unfreeze"></a>IViewObjectExImpl:: unfreeze
 
-Hebt die Fixierung der gezeichneten Darstellung des Steuerelements. Die ATL-Implementierung gibt E_NOTIMPL zurück.
+Entfriert die gezeichnete Darstellung des-Steuer Elements. Die ATL-Implementierung gibt E_NOTIMPL zurück.
 
 ```
 STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
@@ -287,11 +287,11 @@ STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IViewObject::Unfreeze](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-unfreeze) in das Windows SDK.
+Weitere Informationen finden Sie unter [IViewObject:: unfreeze](/windows/win32/api/oleidl/nf-oleidl-iviewobject-unfreeze) in der Windows SDK.
 
-##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle
+##  <a name="closehandle"></a>Iworkerthreadclient:: CloseHandle
 
-Implementieren Sie diese Methode, um das Handle, das diesem Objekt zugeordneten zu schließen.
+Implementieren Sie diese Methode, um das Handle zu schließen, das diesem Objekt zugeordnet ist.
 
 ```
 HRESULT CloseHandle(HANDLE hHandle);
@@ -300,25 +300,25 @@ HRESULT CloseHandle(HANDLE hHandle);
 ### <a name="parameters"></a>Parameter
 
 *hHandle*<br/>
-Das Handle geschlossen werden.
+Das Handle, das geschlossen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Rückgabe von "S_OK" bei Erfolg oder Fehler "HRESULT" bei einem Fehler.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Handle, das an diese Methode übergeben wurde bereits zugeordnet. dieses Objekt durch einen Aufruf von [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+Das an diese Methode über gegebene Handle wurde diesem-Objekt zuvor durch einen [CWorkerThread:: addhandle](../../atl/reference/cworkerthread-class.md#addhandle)-Befehl zugeordnet.
 
 ### <a name="example"></a>Beispiel
 
-Der folgende Code zeigt eine einfache Implementierung der `IWorkerThreadClient::CloseHandle`.
+Der folgende Code zeigt eine einfache Implementierung von `IWorkerThreadClient::CloseHandle`.
 
 [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iviewobjecteximpl-class_1.cpp)]
 
-##  <a name="execute"></a>  IWorkerThreadClient::Execute
+##  <a name="execute"></a>Iworkerthreadclient:: Execute
 
-Implementieren Sie diese Methode, um Code auszuführen, wenn das diesem Objekt zugeordnete Handle signalisiert wird.
+Implementieren Sie diese Methode, um Code auszuführen, wenn das Handle, das diesem Objekt zugeordnet ist, signalisiert wird.
 
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
@@ -329,27 +329,27 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 *dwParam*<br/>
 Der Benutzerparameter.
 
-*hObject*<br/>
+*hobject*<br/>
 Das Handle, das signalisiert wurde.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.
+Rückgabe von "S_OK" bei Erfolg oder Fehler "HRESULT" bei einem Fehler.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Handle und die DWORD/Zeiger an diese Methode übergeben wurden zuvor mit diesem Objekt durch einen Aufruf von verknüpften [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+Das Handle und der DWORD/Zeiger, die an diese Methode übergeben wurden, wurden diesem-Objekt zuvor durch einen [CWorkerThread:: addhandle](../../atl/reference/cworkerthread-class.md#addhandle)-Befehl zugeordnet.
 
 ### <a name="example"></a>Beispiel
 
-Der folgende Code zeigt eine einfache Implementierung der `IWorkerThreadClient::Execute`.
+Der folgende Code zeigt eine einfache Implementierung von `IWorkerThreadClient::Execute`.
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iviewobjecteximpl-class_2.cpp)]
 
 ## <a name="see-also"></a>Siehe auch
 
 [CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)<br/>
-[ActiveX-Steuerelemente Schnittstellen](/windows/desktop/com/activex-controls-interfaces)<br/>
+[ActiveX-Steuerelement Schnittstellen](/windows/win32/com/activex-controls-interfaces)<br/>
 [Tutorial](../../atl/active-template-library-atl-tutorial.md)<br/>
 [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)<br/>
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)
+[Klassen Übersicht](../../atl/atl-class-overview.md)

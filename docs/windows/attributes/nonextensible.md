@@ -1,21 +1,21 @@
 ---
-title: nonextensible (C++ COM-Attribut)
+title: nicht erweiterbar (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: ed396b3d55e16cf195949c713ab574812b796a1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407574"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514396"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Gibt an, dass die `IDispatch` -Implementierung enthält nur die Eigenschaften und Methoden aufgeführt, die in der schnittstellenbeschreibung und können nicht zur Laufzeit zusätzliche Member erweitert werden.
+Gibt an, `IDispatch` dass die Implementierung nur die Eigenschaften und Methoden enthält, die in der Schnittstellen Beschreibung aufgeführt sind, und kann zur Laufzeit nicht mit zusätzlichen Membern erweitert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,13 +25,13 @@ Gibt an, dass die `IDispatch` -Implementierung enthält nur die Eigenschaften un
 
 ## <a name="remarks"></a>Hinweise
 
-Die **nonextensible** C++-Attribut hat die gleiche Funktionalität wie die [nonextensible](/windows/desktop/Midl/nonextensible) MIDL-Attribut.
+Das **nonextensible** C++ -Attribut verfügt über die gleiche Funktionalität wie das [nicht erweiterbare](/windows/win32/Midl/nonextensible) Mittel l-Attribut.
 
-Verwenden von **nonextensible** erfordert außerdem die [Oleautomation](oleautomation.md) Attribut.
+Die Verwendung von " **nonextensible** " erfordert auch das [oleautomation](oleautomation.md) -Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt eine Verwendung der **nonextensible** Attribut:
+Der folgende Code zeigt eine Verwendung des **nicht erweiterbaren** Attributs:
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -56,8 +56,8 @@ __interface IFireTabCtrl
 |-|-|
 |**Betrifft**|**interface**|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|`dual` und `oleautomation`, oder `dispinterface`|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|`dual`und `oleautomation`oder`dispinterface`|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

@@ -1,5 +1,5 @@
 ---
-title: 'Benutzeroberflächenautomatisierungs-Clients: Verwenden von Typbibliotheken'
+title: 'Automatisierungs Clients: Verwenden von Typbibliotheken'
 ms.date: 11/04/2016
 f1_keywords:
 - MkTypLib
@@ -14,49 +14,49 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-ms.openlocfilehash: 32179f3913b52ca46f9ea7314b9957f4f4970713
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 480f8fca46b13d445f372311ed837475c71a1e9d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374193"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509222"
 ---
-# <a name="automation-clients-using-type-libraries"></a>Benutzeroberflächenautomatisierungs-Clients: Verwenden von Typbibliotheken
+# <a name="automation-clients-using-type-libraries"></a>Automatisierungs Clients: Verwenden von Typbibliotheken
 
-Benutzeroberflächenautomatisierungs-Clients benötigen Informationen zu Eigenschaften und Methoden von Server-Objekte, wenn die Clients sind, die Server Objekte zu bearbeiten. Datentypen weisen Eigenschaften auf. Methoden werden häufig Rückgabewerte und Parameter akzeptieren. Der Client benötigt Informationen zu den Datentypen, der alle diese zum statisch in Server-Objekt zu binden.
+Automatisierungs Clients müssen Informationen zu den Eigenschaften und Methoden von Server Objekten aufweisen, wenn die Clients die Objekte der Server bearbeiten. Eigenschaften weisen Datentypen auf. Methoden geben häufig Werte zurück und akzeptieren Parameter. Der Client benötigt Informationen zu den Datentypen aller diese, um statisch an den Server Objekttyp gebunden zu werden.
 
-Diese Typinformationen kann auf verschiedene Weise bekannte vorgenommen werden. Die empfohlene Methode ist die Erstellung eine Typbibliothek.
+Diese Typinformationen können auf verschiedene Weise bekannt gemacht werden. Die empfohlene Vorgehensweise ist das Erstellen einer Typbibliothek.
 
-Informationen zum [MkTypLib](/windows/desktop/Midl/differences-between-midl-and-mktyplib), finden Sie im Windows SDK.
+Weitere Informationen zu [MkTypLib](/windows/win32/Midl/differences-between-midl-and-mktyplib)finden Sie in der Windows SDK.
 
-Visual C++ kann eine Typbibliothek-Datei zu lesen und erstellen Sie eine Dispatchklasse abgeleitet [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). Ein Objekt dieser Klasse verfügt über Eigenschaften und Operationen des Serverobjekts diese duplizieren. Die Anwendung aufruft, Eigenschaften und Operationen des Objekts und Funktionalität von geerbten `COleDispatchDriver` leitet diese Aufrufe für das OLE-System, der diese wiederum auf das Serverobjekt weiterleitet.
+Visual C++ kann eine Typbibliotheks Datei lesen und eine Dispatch-Klasse erstellen, die von [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)abgeleitet ist. Ein Objekt dieser Klasse verfügt über Eigenschaften und Vorgänge, die die des Server Objekts duplizieren. Die Anwendung ruft die Eigenschaften und Vorgänge dieses Objekts auf, und die von `COleDispatchDriver` geerbte Funktionalität leitet diese Aufrufe an das OLE-System weiter, das Sie wiederum an das Server Objekt weiterleitet.
 
-Visual C++ verwaltet diese Typbibliothek-Datei automatisch für Sie, wenn Sie Automation einbeziehen, wenn es sich bei der Erstellung des Projekts ausgewählt haben. Im Rahmen jedes Builds wird die TLB-Datei mit MkTypLib erstellt werden.
+Visual C++ verwaltet diese Typbibliotheks Datei automatisch für Sie, wenn Sie die Automatisierung beim Erstellen des Projekts ausgewählt haben. Als Teil jedes Builds wird die TLB-Datei mit MkTypLib erstellt.
 
-### <a name="to-create-a-dispatch-class-from-a-type-library-tlb-file"></a>Erstellen eine Dispatchklasse aus einem Typbibliotheksdatei (.tlb)
+### <a name="to-create-a-dispatch-class-from-a-type-library-tlb-file"></a>So erstellen Sie eine Dispatch-Klasse aus einer Typbibliotheks Datei (. tlb)
 
-1. Klicken Sie in der Klassenansicht oder Projektmappen-Explorer, mit der rechten Maustaste in des Projekts, und klicken Sie auf **hinzufügen** , und klicken Sie dann auf **Klasse hinzufügen** im Kontextmenü auf.
+1. Klicken Sie entweder in Klassenansicht oder Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und klicken Sie auf **Hinzufügen** und dann im Kontextmenü auf **Klasse hinzufügen** .
 
-1. In der **Klasse hinzufügen** wählen Sie im Dialogfeld die **Visual c++ / MFC** Ordner im linken Bereich. Wählen Sie die **MFC-Klassen aus der Typbibliothek** Symbol aus dem rechten Bereich und auf **öffnen**.
+1. Wählen Sie im Dialogfeld **Klasse hinzufügen** den **Ordner C++Visual/MFC** im linken Bereich aus. Wählen Sie im rechten Bereich die **MFC-Klasse vom TypeLib** -Symbol aus, und klicken Sie auf **Öffnen**.
 
-1. In der **Assistenten zum Hinzufügen von Klassen aus der Typbibliothek** Dialogfeld wählen eine Typbibliothek aus der **Verfügbare Typbibliotheken** Dropdown-Liste. Die **Schnittstellen** Feld zeigt die Schnittstellen, die für die ausgewählte Bibliothek verfügbar.
-
-    > [!NOTE]
-    >  Sie können Schnittstellen aus mehr als eine Typbibliothek auswählen.
-
-   Wählen Sie die Schnittstellen, darauf doppelklicken, oder klicken Sie auf die **hinzufügen** Schaltfläche. Wenn Sie dies tun, Namen für die Dispatchklassen werden in der **generierte Klassen** Feld. Sie können den Klassennamen in Bearbeiten der `Class` Feld.
-
-   Die **Datei** Feld zeigt die Datei, die in der Klasse deklariert werden. (Sie können diesen sowie den Dateinamen bearbeiten). Sie können auch die Schaltfläche zum Durchsuchen verwenden, wählen Sie andere Dateien, wenn Sie lieber die Header- und Implementierungsdateien Informationen, die in vorhandenen Dateien oder in einem anderen Verzeichnis als dem Projektverzeichnis geschrieben haben.
+1. Wählen Sie im Dialogfeld **Klasse aus TypeLib hinzufügen** eine Typbibliothek aus der Dropdown Liste **Verfügbare Typbibliotheken** aus. Im Feld **Schnittstellen** werden die Schnittstellen angezeigt, die für die ausgewählte Typbibliothek verfügbar sind.
 
     > [!NOTE]
-    >  Die Dispatchklassen für die ausgewählten Schnittstellen werden in der hier angegebenen Datei platziert. Wenn Sie die Schnittstellen deklariert werden, in verschiedenen Headern möchten, müssen Sie diesen Assistenten für jeden Header-Datei ausführen, die Sie erstellen möchten.
+    >  Sie können Schnittstellen aus mehr als einer Typbibliothek auswählen.
+
+   Um Schnittstellen auszuwählen, doppelklicken Sie darauf, oder klicken Sie auf die Schaltfläche **Hinzufügen** . Wenn Sie dies tun, werden die Namen für die Dispatch-Klassen im Feld **generierte Klassen** angezeigt. Sie können die Klassennamen im `Class` Feld bearbeiten.
+
+   Im Feld **Datei** wird die Datei angezeigt, in der die Klasse deklariert wird. (Sie können diesen Dateinamen auch bearbeiten.) Sie können auch die Schaltfläche Durchsuchen verwenden, um andere Dateien auszuwählen, wenn Sie möchten, dass die Header-und Implementierungs Informationen in vorhandenen Dateien oder in einem anderen Verzeichnis als dem Projektverzeichnis geschrieben werden.
 
     > [!NOTE]
-    >  Einige Informationen in der Typbibliothek kann in Dateien gespeichert werden. -DLL. OCX, oder. Erweiterungen der OLB-Datei.
+    >  Alle Dispatchklassen für die ausgewählten Schnittstellen werden in die hier angegebene Datei eingefügt. Wenn Sie möchten, dass die Schnittstellen in separaten Headern deklariert werden, müssen Sie diesen Assistenten für jede Header Datei ausführen, die Sie erstellen möchten.
+
+    > [!NOTE]
+    >  Einige Typbibliotheks Informationen können in Dateien mit gespeichert werden. DLL,. OCX oder. OLB-Dateierweiterungen.
 
 1. Klicken Sie auf **Fertig stellen**.
 
-   Der Assistent wird dann den Code für die Dispatchklassen, die mit den angegebenen Klassen- und Dateinamen schreiben.
+   Der Assistent schreibt dann den Code für die Dispatch-Klassen mithilfe der angegebenen Klassen-und Dateinamen.
 
 ## <a name="see-also"></a>Siehe auch
 

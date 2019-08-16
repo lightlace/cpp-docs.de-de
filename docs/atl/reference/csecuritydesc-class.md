@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: a9e0eb01608edf29f99209dffc932630ad08807a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 90f8cfd66fbab88bfa29c39ff27189f02447a7c7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915709"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496491"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc-Klasse
 
@@ -107,7 +107,7 @@ Die `SECURITY_DESCRIPTOR` -Struktur enthält die einem Objekt zugeordneten Siche
 
 Anwendungen sollten die `SECURITY_DESCRIPTOR` Struktur nicht direkt ändern und stattdessen die bereitgestellten Klassen Methoden verwenden.
 
-Eine Einführung zum Zugriffs Steuerungsmodell in Windows finden Sie unter [Access Control](/windows/desktop/SecAuthZ/access-control) in der Windows SDK.
+Eine Einführung zum Zugriffs Steuerungsmodell in Windows finden Sie unter [Access Control](/windows/win32/SecAuthZ/access-control) in der Windows SDK.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -155,7 +155,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="parameters"></a>Parameter
 
 *pstr*<br/>
-Zeiger auf eine auf NULL endende Zeichenfolge, die die zu konvertierende [Sicherheits Beschreibung](/windows/desktop/SecAuthZ/security-descriptor-string-format) für das Zeichen folgen Format enthält.
+Zeiger auf eine auf NULL endende Zeichenfolge, die die zu konvertierende [Sicherheits Beschreibung](/windows/win32/SecAuthZ/security-descriptor-string-format) für das Zeichen folgen Format enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -165,7 +165,7 @@ Gibt bei Erfolg TRUE zurück. Löst bei einem Fehler eine Ausnahme aus.
 
 Die Zeichenfolge kann mithilfe von [CSecurityDesc:: destring](#tostring)erstellt werden. Wenn die Sicherheits Beschreibung in eine Zeichenfolge umgewandelt wird, ist Sie leichter zu speichern und zu übertragen.
 
-Diese Methode ruft [convertstringsecuritydescriptortosecuritydescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)auf.
+Diese Methode ruft [convertstringsecuritydescriptortosecuritydescriptor](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)auf.
 
 ##  <a name="getcontrol"></a>CSecurityDesc:: GetControl
 
@@ -186,7 +186,7 @@ Gibt true zurück, wenn die Methode erfolgreich ist, andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft [getsecuritydescriptorcontrol](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol)auf.
+Diese Methode ruft [getsecuritydescriptorcontrol](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol)auf.
 
 ##  <a name="getdacl"></a>CSecurityDesc:: GetDacl
 
@@ -268,7 +268,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf die [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor) -Struktur zurück.
+Gibt einen Zeiger auf die [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor) -Struktur zurück.
 
 ##  <a name="getsacl"></a>CSecurityDesc:: gezacl
 
@@ -480,7 +480,7 @@ bool IsSelfRelative() const throw();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt true zurück, wenn die Sicherheits Beschreibung in einem selbst relativen Format mit allen Sicherheitsinformationen in einem zusammenhängenden Speicherblock vorliegt. Gibt false zurück, wenn die Sicherheits Beschreibung im absoluten Format vorliegt. Weitere Informationen finden Sie unter [absolute und selbst relative Sicherheits Deskriptoren](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Gibt true zurück, wenn die Sicherheits Beschreibung in einem selbst relativen Format mit allen Sicherheitsinformationen in einem zusammenhängenden Speicherblock vorliegt. Gibt false zurück, wenn die Sicherheits Beschreibung im absoluten Format vorliegt. Weitere Informationen finden Sie unter [absolute und selbst relative Sicherheits Deskriptoren](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
 ##  <a name="makeabsolute"></a>CSecurityDesc:: makeabsolute
 
@@ -496,7 +496,7 @@ Gibt true zurück, wenn die Methode erfolgreich ist, andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Sicherheits Beschreibung im absoluten Format enthält Zeiger auf die enthaltenen Informationen anstelle der Informationen selbst. Eine Sicherheits Beschreibung in einem selbst relativen Format enthält die Informationen in einem zusammenhängenden Speicherblock. In einer selbst relativen Sicherheits Beschreibung werden die Informationen immer `SECURITY_DESCRIPTOR` von einer Struktur gestartet, aber die anderen Komponenten der Sicherheits Beschreibung können der Struktur in beliebiger Reihenfolge folgen. Anstatt Speicheradressen zu verwenden, werden die Komponenten der selbst relativen Sicherheits Beschreibung durch Offsets vom Anfang der Sicherheits Beschreibung identifiziert. Dieses Format ist nützlich, wenn eine Sicherheits Beschreibung auf einem Datenträger gespeichert oder mithilfe eines Kommunikationsprotokolls übertragen werden muss. Weitere Informationen finden Sie unter [absolute und selbst relative Sicherheits Deskriptoren](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Eine Sicherheits Beschreibung im absoluten Format enthält Zeiger auf die enthaltenen Informationen anstelle der Informationen selbst. Eine Sicherheits Beschreibung in einem selbst relativen Format enthält die Informationen in einem zusammenhängenden Speicherblock. In einer selbst relativen Sicherheits Beschreibung werden die Informationen immer `SECURITY_DESCRIPTOR` von einer Struktur gestartet, aber die anderen Komponenten der Sicherheits Beschreibung können der Struktur in beliebiger Reihenfolge folgen. Anstatt Speicheradressen zu verwenden, werden die Komponenten der selbst relativen Sicherheits Beschreibung durch Offsets vom Anfang der Sicherheits Beschreibung identifiziert. Dieses Format ist nützlich, wenn eine Sicherheits Beschreibung auf einem Datenträger gespeichert oder mithilfe eines Kommunikationsprotokolls übertragen werden muss. Weitere Informationen finden Sie unter [absolute und selbst relative Sicherheits Deskriptoren](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
 ##  <a name="makeselfrelative"></a>CSecurityDesc:: MakeSelfRelative
 
@@ -512,7 +512,7 @@ Gibt true zurück, wenn die Methode erfolgreich ist, andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Sicherheits Beschreibung im absoluten Format enthält Zeiger auf die enthaltenen Informationen, anstatt die Informationen selbst zu enthalten. Eine Sicherheits Beschreibung in einem selbst relativen Format enthält die Informationen in einem zusammenhängenden Speicherblock. In einer selbst relativen Sicherheits Beschreibung werden die Informationen immer `SECURITY_DESCRIPTOR` von einer Struktur gestartet, aber die anderen Komponenten der Sicherheits Beschreibung können der Struktur in beliebiger Reihenfolge folgen. Anstatt Speicheradressen zu verwenden, werden die Komponenten der Sicherheits Beschreibung durch Offsets vom Anfang der Sicherheits Beschreibung identifiziert. Dieses Format ist nützlich, wenn eine Sicherheits Beschreibung auf einem Datenträger gespeichert oder mithilfe eines Kommunikationsprotokolls übertragen werden muss. Weitere Informationen finden Sie unter [absolute und selbst relative Sicherheits Deskriptoren](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Eine Sicherheits Beschreibung im absoluten Format enthält Zeiger auf die enthaltenen Informationen, anstatt die Informationen selbst zu enthalten. Eine Sicherheits Beschreibung in einem selbst relativen Format enthält die Informationen in einem zusammenhängenden Speicherblock. In einer selbst relativen Sicherheits Beschreibung werden die Informationen immer `SECURITY_DESCRIPTOR` von einer Struktur gestartet, aber die anderen Komponenten der Sicherheits Beschreibung können der Struktur in beliebiger Reihenfolge folgen. Anstatt Speicheradressen zu verwenden, werden die Komponenten der Sicherheits Beschreibung durch Offsets vom Anfang der Sicherheits Beschreibung identifiziert. Dieses Format ist nützlich, wenn eine Sicherheits Beschreibung auf einem Datenträger gespeichert oder mithilfe eines Kommunikationsprotokolls übertragen werden muss. Weitere Informationen finden Sie unter [absolute und selbst relative Sicherheits Deskriptoren](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
 ##  <a name="operator_eq"></a>CSecurityDesc:: Operator =
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>Parameter
 
 *ControlBitsOfInterest*<br/>
-Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die festzulegenden Steuerungs Bits angibt. Eine Liste der Flags, die festgelegt werden können, finden Sie unter [SETSECURITYDESCRIPTOR Control](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
+Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die festzulegenden Steuerungs Bits angibt. Eine Liste der Flags, die festgelegt werden können, finden Sie unter [SETSECURITYDESCRIPTOR Control](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 *ControlBitsToSet*<br/>
 Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die neuen Werte für die von der *controlbitsofinterest* -Maske angegebenen Steuer Bits angibt. Dieser Parameter kann eine Kombination der Flags sein, die für den Parameter " *controlbitsofinterest* " aufgeführt sind.
@@ -564,7 +564,7 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft [setsecuritydescriptorcontrol](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)auf.
+Diese Methode ruft [setsecuritydescriptorcontrol](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)auf.
 
 ##  <a name="setdacl"></a>CSecurityDesc:: SetDacl
 
@@ -673,7 +673,7 @@ bool ToString(
 ### <a name="parameters"></a>Parameter
 
 *pstr*<br/>
-Zeiger auf eine auf NULL endenden Zeichenfolge, die die [Sicherheits Beschreibung des Zeichen folgen Formats](/windows/desktop/SecAuthZ/security-descriptor-string-format)empfängt.
+Zeiger auf eine auf NULL endenden Zeichenfolge, die die [Sicherheits Beschreibung des Zeichen folgen Formats](/windows/win32/SecAuthZ/security-descriptor-string-format)empfängt.
 
 *si*<br/>
 Gibt eine Kombination von SECURITY_INFORMATION-Bitflags an, um die Komponenten der Sicherheits Beschreibung anzugeben, die in die Ausgabe Zeichenfolge eingeschlossen werden sollen.
@@ -697,13 +697,13 @@ Der *Si* -Parameter kann die folgenden SECURITY_INFORMATION-Flags enthalten:
 
 Wenn die DACL NULL ist und das SE_DACL_PRESENT-Steuerelement Bit in der Eingabe Sicherheits Beschreibung festgelegt ist, schlägt die Methode fehl.
 
-Wenn die DACL NULL ist und das SE_DACL_PRESENT-Steuerelement Bit nicht in der Eingabe Sicherheits Beschreibung festgelegt ist, hat die resultierende Sicherheits Beschreibungszeichenfolge keine D:-Komponente. Weitere Informationen finden Sie unter [Sicherheits Deskriptor-Zeichen folgen Format](/windows/desktop/SecAuthZ/security-descriptor-string-format) .
+Wenn die DACL NULL ist und das SE_DACL_PRESENT-Steuerelement Bit nicht in der Eingabe Sicherheits Beschreibung festgelegt ist, hat die resultierende Sicherheits Beschreibungszeichenfolge keine D:-Komponente. Weitere Informationen finden Sie unter [Sicherheits Deskriptor-Zeichen folgen Format](/windows/win32/SecAuthZ/security-descriptor-string-format) .
 
-Diese Methode ruft [convertstringsecuritydescriptortosecuritydescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)auf.
+Diese Methode ruft [convertstringsecuritydescriptortosecuritydescriptor](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)auf.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Sicherheits Beispiel](../../overview/visual-cpp-samples.md)<br/>
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Klassen Übersicht](../../atl/atl-class-overview.md)<br/>
 [Globale Sicherheitsfunktionen](../../atl/reference/security-global-functions.md)

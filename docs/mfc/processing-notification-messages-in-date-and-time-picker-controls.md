@@ -14,34 +14,34 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-ms.openlocfilehash: ce84863744629d30248f94b94448d776177f9841
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fead5643299aee4beace55abde0b6a6c801a324f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339566"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507877"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Verarbeiten von Benachrichtigungsmeldungen in Steuerelementen für Zeit und Datum
 
-Da Benutzer mit das Datum und Uhrzeit Datumsauswahl-Steuerelement, das Steuerelement interagieren (`CDateTimeCtrl`) sendet benachrichtigungsmeldungen an das übergeordnete Fenster, normalerweise ein Ansichts- oder Dialogfeldobjekt-Objekt. Behandeln Sie diese Nachrichten, wenn Sie darauf reagieren möchten. Wenn der Benutzer die Datums- / Zeitauswahl anzuzeigende das eingebettete Monatskalender-Steuerelement geöffnet wird, wird z. B. die DTN_DROPDOWN-Benachrichtigung gesendet.
+Wenn Benutzer mit dem Steuerelement für die Datums-und Uhrzeit Auswahl interagieren`CDateTimeCtrl`, sendet das Steuerelement () Benachrichtigungs Meldungen an das übergeordnete Fenster, in der Regel eine Ansicht oder ein Dialog Objekt. Behandeln Sie diese Nachrichten, wenn Sie darauf reagieren möchten. Wenn der Benutzer z. b. die Datums-und Zeitauswahl öffnet, um das eingebettete Monatskalender-Steuerelement anzuzeigen, wird die DTN_DROPDOWN-Benachrichtigung gesendet.
 
 Verwenden Sie das Eigenschaftenfenster, um der übergeordneten Klasse Benachrichtigungshandler für die Nachrichten hinzuzufügen, die Sie implementieren möchten.
 
-Die folgende Liste beschreibt die verschiedenen Benachrichtigungen, die von den Datums- / Zeitauswahl-Steuerelement gesendet werden.
+In der folgenden Liste werden die verschiedenen Benachrichtigungen beschrieben, die vom Steuerelement für Datums-und Zeitauswahl gesendet werden.
 
-- DTN_DROPDOWN benachrichtigt ist das übergeordnete Element, das das eingebettete Monatskalender-Steuerelement angezeigt wird. Diese Benachrichtigung wird nur gesendet, wenn der DTS_UPDOWN-Stil nicht festgelegt wurde. Weitere Informationen über diese Benachrichtigung finden Sie unter [den Zugriff auf das eingebettete Monatskalender-Steuerelement](../mfc/accessing-the-embedded-month-calendar-control.md).
+- DTN_DROPDOWN benachrichtigt das übergeordnete Element, dass das eingebettete Monatskalender-Steuerelement angezeigt wird. Diese Benachrichtigung wird nur gesendet, wenn der DTS_UPDOWN-Stil nicht festgelegt wurde. Weitere Informationen zu dieser Benachrichtigung finden Sie unter [zugreifen auf das eingebettete Monatskalender-Steuer](../mfc/accessing-the-embedded-month-calendar-control.md)Element.
 
-- DTN_CLOSEUP benachrichtigt wird das übergeordnete Element, das das eingebettete Monatskalender-Steuerelement geschlossen werden. Diese Benachrichtigung wird nur gesendet, wenn der DTS_UPDOWN-Stil nicht festgelegt wurde.
+- DTN_CLOSEUP benachrichtigt das übergeordnete Element, dass das eingebettete Monatskalender-Steuerelement geschlossen wird. Diese Benachrichtigung wird nur gesendet, wenn der DTS_UPDOWN-Stil nicht festgelegt wurde.
 
-- DTN_DATETIMECHANGE Benachrichtigt das übergeordnete Element, das im Steuerelement eine Änderung vorgenommen wurde.
+- DTN_DATETIMECHANGE benachrichtigt das übergeordnete Element, dass eine Änderung im Steuerelement aufgetreten ist.
 
-- Erforderlich, DTN_FORMAT benachrichtigt das übergeordnete Element, das Text, der im Rückruffeld angezeigt werden. Weitere Informationen über diese Benachrichtigung und Rückruffeldern finden Sie unter [Verwenden von Rückruffeldern in einem Datums- und Zeitauswahl-Steuerelement](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
+- DTN_FORMAT benachrichtigt das übergeordnete Element, dass Text in einem Rückruf Feld angezeigt werden muss. Weitere Informationen zu diesen Benachrichtigungs-und Rückruf Feldern finden [Sie unter Verwenden von Rückruf Feldern in einem Steuerelement für Datums-und Zeit](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)Auswahl.
 
-- DTN_FORMATQUERY Fordert das übergeordnete Element, das die maximale zulässige Größe der Zeichenfolge angeben, der im Rückruffeld angezeigt wird. Behandeln diese Benachrichtigung kann das Steuerelement ordnungsgemäß Anzeigeausgabe jederzeit aktiv, vermindern des Flackerns in der Anzeige des Steuerelements. Weitere Informationen über diese Benachrichtigung finden Sie unter [Verwenden von Rückruffeldern in einem Datums- und Zeitauswahl-Steuerelement](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
+- DTN_FORMATQUERY fordert das übergeordnete Element auf, die maximal zulässige Größe der Zeichenfolge anzugeben, die in einem Rückruf Feld angezeigt wird. Wenn Sie diese Benachrichtigung verarbeiten, kann das Steuerelement die Ausgabe jederzeit ordnungsgemäß anzeigen, sodass Flimmern innerhalb der Anzeige des Steuer Elements reduziert wird. Weitere Informationen zu dieser Benachrichtigung finden Sie unter [Verwenden von Rückruf Feldern in einem Steuerelement für Datums-und Zeit](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)Auswahl.
 
-- DTN_USERSTRING Benachrichtigt das übergeordnete Element, das Bearbeiten des Inhalts der Datums- / Zeitauswahl-Steuerelement beendet ist. Diese Benachrichtigung wird nur gesendet, wenn der Stil DTS_APPCANPARSE festgelegt wurde.
+- DTN_USERSTRING benachrichtigt das übergeordnete Element, dass der Benutzer die Bearbeitung des Inhalts des Steuer Elements für die Datums-und Uhrzeit Auswahl abgeschlossen hat. Diese Benachrichtigung wird nur gesendet, wenn der DTS_APPCANPARSE-Stil festgelegt wurde.
 
-- DTN_WMKEYDOWN benachrichtigt das übergeordnete Element aus, wenn der Benutzer im Rückruffeld eingibt. Behandeln Sie diese Benachrichtigung, um die für nicht-Rückruffeldern in einem Datums- / Zeitauswahl-Steuerelement unterstützt Tastaturantworten zu emulieren. Weitere Informationen über diese Benachrichtigung finden Sie unter [Unterstützung von Rückruffeldern in einem DTP-Steuerelement](/windows/desktop/Controls/date-and-time-picker-controls) im Windows SDK.
+- DTN_WMKEYDOWN benachrichtigt das übergeordnete Element, wenn der Benutzer ein Rückruf Feld eingibt. Behandeln Sie diese Benachrichtigung, um dieselbe Tastatur Antwort zu emulieren, die für nicht-Rückruf Felder in einem Datums-und Zeitauswahl Steuerelement unterstützt wird. Weitere Informationen zu dieser Benachrichtigung finden Sie [unter unterstützen von Rückruf Feldern in einem DTP-Steuer](/windows/win32/Controls/date-and-time-picker-controls) Element in der Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 

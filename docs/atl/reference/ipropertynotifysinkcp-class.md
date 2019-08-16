@@ -9,19 +9,19 @@ helpviewer_keywords:
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-ms.openlocfilehash: b96e5345923d04de74dace173a80b8c4d3ee917f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9838a48b078cbc59a5ae86669ad9f26792d9816e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197889"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495629"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP-Klasse
 
-Diese Klasse stellt [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) Schnittstelle als Ausgangsschnittstelle auf einem verbindungsfähigen Objekt.
+Diese Klasse macht die [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) -Schnittstelle als ausgehende Schnittstelle für ein Verbindungs fähiges Objekt verfügbar.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+>  Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,20 +34,20 @@ class IPropertyNotifySinkCP
 #### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Abgeleitet von die Klasse `IPropertyNotifySinkCP`.
+Die von `IPropertyNotifySinkCP`abgeleitete Klasse.
 
 *CDV*<br/>
-Eine Klasse, die Verbindungen zwischen einem Verbindungspunkt und die senken verwaltet. Der Standardwert ist [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), womit unbegrenzte Verbindungen. Sie können auch [CComUnkArray](../../atl/reference/ccomunkarray-class.md), die eine feste Anzahl von Verbindungen angibt.
+Eine Klasse, die die Verbindungen zwischen einem Verbindungspunkt und seinen senken verwaltet. Der Standardwert ist [ccomdynamicunkarray](../../atl/reference/ccomdynamicunkarray-class.md), der unbegrenzte Verbindungen zulässt. Sie können auch [ccomunkarray](../../atl/reference/ccomunkarray-class.md)verwenden, das eine festgelegte Anzahl von Verbindungen angibt.
 
 ## <a name="remarks"></a>Hinweise
 
-`IPropertyNotifySinkCP` erbt alle Methoden über seine Basisklasse, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).
+`IPropertyNotifySinkCP`erbt alle Methoden über die Basisklasse " [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)".
 
-Die [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) Schnittstelle ermöglicht es einem Senkenobjekts zum Empfangen von Benachrichtigungen über eigenschaftsänderungen. Klasse `IPropertyNotifySinkCP` macht diese Schnittstelle als Ausgangsschnittstelle auf einem verbindungsfähigen Objekt verfügbar. Der Client implementieren muss die `IPropertyNotifySink` Methoden für die Senke.
+Die [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) -Schnittstelle ermöglicht einem Sink-Objekt das Empfangen von Benachrichtigungen über Eigenschafts Änderungen. Die `IPropertyNotifySinkCP` Klasse macht diese Schnittstelle als ausgehende Schnittstelle für ein Verbindungs fähiges Objekt verfügbar. Der Client muss die `IPropertyNotifySink` Methoden für die Senke implementieren.
 
-Leiten Sie eine Klasse von `IPropertyNotifySinkCP` Wenn Sie einen Verbindungspunkt erstellen, das darstellt möchten die `IPropertyNotifySink` Schnittstelle.
+Leiten Sie die Klasse `IPropertyNotifySinkCP` von ab, wenn Sie einen Verbindungspunkt erstellen möchten, `IPropertyNotifySink` der die Schnittstelle darstellt.
 
-Weitere Informationen zur Verwendung von Verbindungspunkten in ATL finden Sie im Artikel [Verbindungspunkte](../../atl/atl-connection-points.md).
+Weitere Informationen zum Verwenden von Verbindungs Punkten in ATL finden Sie im Artikel [Verbindungspunkte](../../atl/atl-connection-points.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,4 +57,4 @@ Weitere Informationen zur Verwendung von Verbindungspunkten in ATL finden Sie im
 
 [IConnectionPointImpl-Klasse](../../atl/reference/iconnectionpointimpl-class.md)<br/>
 [IConnectionPointContainerImpl-Klasse](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)
+[Klassen Übersicht](../../atl/atl-class-overview.md)

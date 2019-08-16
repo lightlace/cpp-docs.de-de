@@ -25,12 +25,12 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: 988af1c2678e20ea40ce4dfe331a3b6c49db0547
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27811f56f1956bcaaea4ec589f7e6c71afaca380
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156563"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499619"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
@@ -60,19 +60,19 @@ Zielobjekt.
 Quellobjekt.
 
 *count*<br/>
-Anzahl von Bytes (**Memmove**) oder Zeichen (**Wmemmove**) zu kopieren.
+Anzahl der zu kopierenden Bytes (**memmove**) oder Zeichen (**wmemmove**).
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert des *Dest*.
+Der Wert von *dest*.
 
 ## <a name="remarks"></a>Hinweise
 
-Kopien *Anzahl* Bytes (**Memmove**) oder Zeichen (**Wmemmove**) von *Src* zu *Dest*. Wenn einige Bereiche des Quell- und des Zielbereichs überlappen, stellen beide Funktionen sicher, dass die ursprünglichen Quellbytes im überlappenden Bereich kopiert werden, bevor es sie überschreibt.
+Kopiert *Anzahl* bytes (**memmove**) oder Zeichen (**wmemmove**) von *src* in *dest*. Wenn einige Bereiche des Quell- und des Zielbereichs überlappen, stellen beide Funktionen sicher, dass die ursprünglichen Quellbytes im überlappenden Bereich kopiert werden, bevor es sie überschreibt.
 
-**Sicherheitshinweis** Stellen Sie sicher, dass der Zielpuffer dieselbe Größe wie der Quellpuffer aufweist bzw. größer ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Sicherheitshinweis** Stellen Sie sicher, dass der Zielpuffer dieselbe Größe wie der Quellpuffer aufweist bzw. größer ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Die **Memmove** und **Wmemmove** Funktionen sind nur veraltet, wenn die Konstante **_CRT_SECURE_DEPRECATE_MEMORY** vor der inklusionsanweisung für nacheinander definiert ist die Funktionen werden als veraltet markierte, z. B. wie im folgenden Beispiel:
+Die **memmove** -Funktion und die **wmemmove** -Funktion sind nur veraltet, wenn die Konstante **_CRT_SECURE_DEPRECATE_MEMORY** vor der Einschluss Anweisung definiert wird, damit die Funktionen als veraltet markiert werden, z. b. im folgenden Beispiel:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY

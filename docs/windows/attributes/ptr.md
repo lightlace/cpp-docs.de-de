@@ -1,21 +1,21 @@
 ---
-title: PTR (C++-COM-Attribut)
+title: PTR (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ptr
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: 2c712a2d9c85e0fe8fd8c4dbad5c7f48812ab1a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5f2d694f3525f27e4a8371f04efa28940f21bba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407392"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514154"
 ---
 # <a name="ptr"></a>ptr
 
-Kennzeichnet einen Zeiger als vollständige Zeiger.
+Legt einen Zeiger als vollständigen Zeiger fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Kennzeichnet einen Zeiger als vollständige Zeiger.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Ptr** C++-Attribut hat die gleiche Funktionalität wie die [Ptr](/windows/desktop/Midl/ptr) MIDL-Attribut.
+Das **ptr** C++ -Attribut verfügt über die gleiche Funktionalität wie das-Attribut des [ptr](/windows/win32/Midl/ptr) -Attributs.
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [Defaultvalue](defaultvalue.md) für ein Beispiel für die Verwendung von **Ptr**.
+Ein Beispiel für die Verwendung von **ptr**finden Sie im Beispiel für [DefaultValue](defaultvalue.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,10 +37,10 @@ Siehe das Beispiel für [Defaultvalue](defaultvalue.md) für ein Beispiel für d
 
 |||
 |-|-|
-|**Betrifft**|Schnittstellenparameter, Schnittstellenmethode **Typedef**|
+|**Betrifft**|Schnittstellenparameter, Schnittstellen Methode, **typedef**|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
