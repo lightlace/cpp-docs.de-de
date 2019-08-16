@@ -26,14 +26,14 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 18af20b5722364ea306daebdcb77f5771d8ea2b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a1c29118c48bbbb5358e7d7ea57296f7ec908a8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331155"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499771"
 ---
-# <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
+# <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s, _mbstowcs_s_l
 
 Konvertiert eine Multibyte-Zeichensequenz in eine entsprechende Breitzeichensequenz. Versionen von [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md) mit Sicherheitsverbesserungen wie in [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -81,13 +81,13 @@ Die Anzahl von konvertierten Zeichen.
 Pufferadresse zum Speichern der resultierenden konvertierten Breitzeichenfolge.
 
 *sizeInWords*<br/>
-Die Größe der *Wcstr* Puffers in Worten.
+Die Größe des *wcstr* -Puffers in Wörtern.
 
 *mbstr*<br/>
 Adresse einer Multibyte-Zeichensequenz.
 
 *count*<br/>
-Die maximale Anzahl von Breitzeichen, das Speichern in der *Wcstr* Puffer, ohne das abschließende Nullzeichen oder [_TRUNCATE](../../c-runtime-library/truncate.md).
+Die maximale Anzahl von breit Zeichen, die im *wcstr* -Puffer gespeichert werden sollen, ohne das abschließende Null-Zeichen oder [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *locale*<br/>
 Das zu verwendende Gebietsschema.
@@ -96,39 +96,39 @@ Das zu verwendende Gebietsschema.
 
 Null, wenn erfolgreich, Fehlercode bei Fehler.
 
-|Fehlerbedingung|Rückgabewert und **Errno**|
+|Fehlerbedingung|Rückgabewert und **errno**|
 |---------------------|------------------------------|
-|*Wcstr* ist **NULL** und *SizeInWords* > 0|**EINVAL**|
-|*Mbstr* ist **NULL**|**EINVAL**|
-|Der Zielpuffer ist zu klein, um die konvertierte Zeichenfolge enthalten (es sei denn, *Anzahl* ist **_TRUNCATE**; Siehe Hinweise unten)|**ERANGE**|
-|*Wcstr* nicht **NULL** und *SizeInWords* == 0|**EINVAL**|
+|*wcstr* ist **null** , und *sizeIn Words* > 0|**EINVAL**|
+|*mbstr* ist **null** .|**EINVAL**|
+|Der Ziel Puffer ist zu klein, um die konvertierte Zeichenfolge zu enthalten (es sei denn, *count* ist **_TRUNCATE**; siehe Hinweise unten).|**ERANGE**|
+|*wcstr* ist nicht **null** , und *sizeIn Words* = = 0|**EINVAL**|
 
-Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion einen Fehlercode zurück und legt **Errno** wie in der Tabelle angegeben.
+Wenn eine dieser Bedingungen auftritt, wird die Ausnahme für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion einen Fehlercode zurück und legt **errno** wie in der Tabelle angegeben fest.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Mbstowcs_s** -Funktion konvertiert eine Zeichenfolge mit Multibytezeichen verweist *Mbstr* in Breitzeichen, die in den Puffer, die auf gespeicherten *Wcstr*. Die Konvertierung wird für jedes Zeichen fortgesetzt, bis eine der folgenden Bedingungen eintritt:
+Die **mbstowcs_s** -Funktion konvertiert eine Zeichenfolge von Multibytezeichen, auf die von *mbstr* gezeigt wird, in breit Zeichen, die im Puffer gespeichert sind, auf den *wcstr*zeigt. Die Konvertierung wird für jedes Zeichen fortgesetzt, bis eine der folgenden Bedingungen eintritt:
 
 - Ein Multibyte-Nullzeichen wird erkannt.
 
 - Ein ungültiges Multibytezeichen wird erkannt.
 
-- Die Anzahl der gespeicherten Breitzeichen die *Wcstr* Puffer ist gleich *Anzahl*.
+- Die Anzahl der breit Zeichen, die im *wcstr* -Puffer gespeichert sind, ist " *count*".
 
 Die Zielzeichenfolge endet immer mit NULL, selbst bei einem Fehler.
 
-Wenn *Anzahl* der spezielle Wert [_TRUNCATE](../../c-runtime-library/truncate.md), klicken Sie dann **Mbstowcs_s** konvertiert Anteil der Zeichenfolge wie in den Zielpuffer passt, und weiterhin Platz für ein NULL-Wert Abschlusszeichen.
+Wenn *count* der besondere Wert [_TRUNCATE](../../c-runtime-library/truncate.md)ist, konvertiert **mbstowcs_s** so viele der Zeichen folgen, wie er in den Ziel Puffer passt, während er weiterhin Platz für ein NULL-Terminator bleibt.
 
-Wenn **Mbstowcs_s** die Quellzeichenfolge erfolgreich konvertiert wird die Größe in Breitzeichen der konvertierten Zeichenfolge ist, einschließlich der null-Terminator in  *&#42;pReturnValue* (bereitgestellt von *pReturnValue* nicht **NULL**). Dies tritt auf, auch wenn die *Wcstr* Argument **NULL** und bietet eine Möglichkeit, um die Größe des erforderlichen Puffers zu bestimmen. Beachten Sie, dass bei *Wcstr* ist **NULL**, *Anzahl* ignoriert, und *SizeInWords* muss 0 sein.
+Wenn **mbstowcs_s** die Quell Zeichenfolge erfolgreich konvertiert, wird die Größe der konvertierten Zeichenfolge (einschließlich des NULL-Terminator) in den  *&#42;pReturnValue* -Wert eingefügt (vorausgesetzt, dass *pReturnValue* nicht **null**ist). Dies tritt auch dann auf, wenn das *wcstr* -Argument **null** ist und eine Möglichkeit bietet, die erforderliche Puffergröße zu bestimmen. Beachten Sie Folgendes: Wenn *wcstr* den Wert **null**hat, wird *count* ignoriert, und *sizanwords* muss 0 sein.
 
-Wenn **Mbstowcs_s** ein ungültiges Multibytezeichen erkennt, schreibt es 0 in  *&#42;pReturnValue*, festgelegt, der Zielpuffer auf eine leere Zeichenfolge **Errno** zu  **EILSEQ**, und gibt **EILSEQ**.
+Wenn **mbstowcs_s** auf ein ungültiges Multibytezeichen stößt, wird 0 in  *&#42;pReturnValue*eingefügt, der Ziel Puffer auf eine leere Zeichenfolge festgelegt, **errno** auf **EILSEQ**festgelegt und " **EILSEQ**" zurückgegeben.
 
-Wenn die Sequenzen, zeigt *Mbstr* und *Wcstr* überlappen, ist das Verhalten der **Mbstowcs_s** ist nicht definiert.
+Wenn die Sequenzen, auf die von *mbstr* und *wcstr* verwiesen wird, überlappen, ist das Verhalten von **mbstowcs_s** nicht definiert.
 
 > [!IMPORTANT]
-> Sicherstellen, dass *Wcstr* und *Mbstr* nicht überlappen und dass *Anzahl* die Anzahl zu konvertierendermultibytezeichen korrekt darstellt.
+> Stellen Sie sicher, dass sich *wcstr* und *mbstr* nicht über Lappen und dass die Anzahl der zu konvertierenden Multibytezeichen korrekt widerspiegelt.
 
-**Mbstowcs_s** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_mbstowcs_s_l** ist identisch, außer dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**mbstowcs_s** verwendet das aktuelle Gebiets Schema für jedes vom Gebiets Schema abhängige Verhalten. **_mbstowcs_s_l** ist beinahe identisch, verwendet jedoch stattdessen das übergebene Gebiets Schema. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -145,7 +145,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 [Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
 [Locale](../../c-runtime-library/locale.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Interpretation von Multibyte-Zeichensequenzen](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

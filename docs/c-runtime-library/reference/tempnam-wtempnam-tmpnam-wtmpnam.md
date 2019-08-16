@@ -40,14 +40,14 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-ms.openlocfilehash: 29fa8fc836b1b52bcf66247b3f6aaba47b8c2eaa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e8e11182948e9bccf1c55685cc7c3d55ff697c8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284867"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500765"
 ---
-# <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
+# <a name="_tempnam-_wtempnam-tmpnam-_wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 
 Generiert Namen, die Sie verwenden können, um temporäre Dateien zu erstellen. Sicherere Versionen einiger dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [tmpnam_s, _wtmpnam_s](tmpnam-s-wtmpnam-s.md).
 
@@ -73,7 +73,7 @@ wchar_t *_wtmpnam(
 ### <a name="parameters"></a>Parameter
 
 *prefix*<br/>
-Die Zeichenfolge, die von zurückgegebenen Namen vorangestellt werden **_tempnam**.
+Die Zeichenfolge, die den von **_tempnam**zurückgegebenen Namen vorangestellt wird.
 
 *dir*<br/>
 Der im Dateinamen verwendete Pfad, wenn es keine TMP-Umgebungsvariable gibt oder wenn TMP kein gültiges Verzeichnis ist.
@@ -83,30 +83,30 @@ Zeiger, der den generierten Namen enthält und mit dem von der Funktion zurückg
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt einen Zeiger auf den erzeugten Namen zurück oder **NULL** , wenn ein Fehler auftritt. Fehler kann auftreten, wenn Sie versuchen, mehr als **TMP_MAX** (Siehe STDIO. H) Aufrufe mit **Tmpnam** oder bei Verwendung von **_tempnam** und es ist ein Ungültiger Verzeichnisname angegeben, in der TMP-Umgebungsvariable und die *Dir* Parameter.
+Jede dieser Funktionen gibt einen Zeiger auf den generierten Namen oder **null** zurück, wenn ein Fehler auftritt. Ein Fehler kann auftreten, wenn Sie mehr als **TMP_MAX** versuchen (siehe stdio). H) wird mit **tmpnam** aufgerufen, oder wenn Sie **_tempnam** verwenden und in der TMP-Umgebungsvariablen und im *dir* -Parameter ein ungültiger Verzeichnisname angegeben ist.
 
 > [!NOTE]
-> Der zurückgegebene Zeiger **Tmpnam** und **_wtmpnam** zeigen Sie auf die internen statischen Puffer. [free](free.md) sollte nicht aufgerufen werden, um die Zuordnung dieser Zeiger aufzuheben. **Kostenlose** für zugeordnete durch Zeiger aufgerufen werden muss, **_tempnam** und **_wtempnam**.
+> Die von **tmpnam** und **_wtmpnam** zurückgegebenen Zeiger zeigen auf interne statische Puffer. [free](free.md) sollte nicht aufgerufen werden, um die Zuordnung dieser Zeiger aufzuheben. für Zeiger, die von **_tempnam** und **_wtempnam**zugeordnet werden, muss **Free** aufgerufen werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen gibt den Namen einer Datei zurück, die derzeit nicht vorhanden ist. **Tmpnam** gibt einen eindeutigen Namen in das angegebene temporäre Verzeichnis mit Windows zurückgegebenes [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). **\_Tempnam** generiert einen eindeutigen Namen in einem Verzeichnis als dem angegebenen. Wenn einem Dateinamen ohne Pfadinformationen ein umgekehrter Schrägstrich vorangestellt ist, wie z.B. \fname21, weist dies darauf hin, dass der Name für das aktuelle Arbeitsverzeichnis gültig ist.
+Jede dieser Funktionen gibt den Namen einer Datei zurück, die derzeit nicht vorhanden ist. **tmpnam** gibt einen Namen zurück, der im angegebenen temporären Windows-Verzeichnis, das von [gettemppathw](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)zurückgegeben wurde, eindeutig ist. tempnam generiert einen eindeutigen Namen in einem anderen Verzeichnis als dem vorgesehenen.  **\_** Wenn einem Dateinamen ohne Pfadinformationen ein umgekehrter Schrägstrich vorangestellt ist, wie z.B. \fname21, weist dies darauf hin, dass der Name für das aktuelle Arbeitsverzeichnis gültig ist.
 
-Für **Tmpnam**, können Sie in diesen generierten Dateinamen speichern *str*. Wenn *str* ist **NULL**, klicken Sie dann **Tmpnam** bewirkt, dass das Ergebnis in einem internen statischen Puffer. Alle nachfolgenden Aufrufe zerstören deshalb diesen Wert. Der Name, der vom **Tmpnam** besteht aus einem Programm generierten Dateinamen und nach dem ersten Aufruf von **Tmpnam**, eine Dateierweiterung aus aufeinanderfolgenden Zahlen mit Basis 32 (.1-.vvu, wenn **TMP_MAX**  in STDIO. H beträgt 32.767.).
+Für **tmpnam**können Sie diesen generierten Dateinamen in *Str*speichern. Wenn *Str* **null**ist, verlässt **tmpnam** das Ergebnis in einem internen statischen Puffer. Alle nachfolgenden Aufrufe zerstören deshalb diesen Wert. Der von **tmpnam** generierte Name besteht aus einem Programm generierten Dateinamen und nach dem ersten **tmpnam**-Rückruf eine Dateierweiterung von sequenziellen Zahlen in Basis 32 (... vvu, wenn **TMP_MAX** in stdio. H ist 32.767).
 
-**_tempnam** generiert einen eindeutigen Dateinamen für ein Verzeichnis, das die folgenden Regeln ausgewählt:
+**_tempnam** generiert einen eindeutigen Dateinamen für ein Verzeichnis, das durch die folgenden Regeln ausgewählt wird:
 
 - Wenn die TMP-Umgebungsvariable definiert und auf einen gültigen Verzeichnisnamen festgelegt ist, werden eindeutige Dateinamen für das von TMP angegebene Verzeichnis generiert.
 
-- Wenn die TMP-Umgebungsvariable nicht definiert ist, oder wenn sie auf den Namen eines Verzeichnisses festgelegt ist, die nicht vorhanden ist, **_tempnam** verwendet die *Dir* Parameter als Pfad für die sie eindeutige Namen generiert.
+- Wenn die TMP-Umgebungsvariable nicht definiert ist oder wenn Sie auf den Namen eines nicht vorhandenen Verzeichnisses festgelegt ist, verwendet **_tempnam** den *dir* -Parameter als Pfad, für den eindeutige Namen generiert werden.
 
-- Wenn die TMP-Umgebungsvariable nicht definiert ist oder wenn sie auf den Namen eines Verzeichnisses festgelegt ist, die nicht vorhanden ist, und wenn *Dir* ist entweder **NULL** oder legen Sie auf den Namen eines Verzeichnisses, das nicht vorhanden ist, **_ Tempnam** wird das aktuelle Arbeitsverzeichnis verwenden, um eindeutige Namen zu generieren. Aktuell, wenn TMP und *Dir* Geben Sie Namen von Verzeichnissen, die nicht vorhanden sind, die **_tempnam** Funktionsaufruf fehl.
+- Wenn die TMP-Umgebungsvariable nicht definiert ist oder wenn Sie auf den Namen eines Verzeichnisses festgelegt ist, das nicht vorhanden ist, und wenn *dir* entweder **null** ist oder auf den Namen eines nicht vorhandenen Verzeichnisses festgelegt ist, verwendet **_tempnam** das aktuelle Arbeitsverzeichnis für das-Objekt. Bewerten Sie eindeutige Namen. Wenn sowohl tmp als auch *dir* Namen von Verzeichnissen angeben, die nicht vorhanden sind, kann der **_tempnam** -Funktions Aufrufvorgang nicht ausgeführt werden.
 
-Der Name, der vom **_tempnam** werden eine Verkettung von *Präfix* und einer sequentiellen Nummer, die kombiniert werden, um einen eindeutigen Dateinamen für das angegebene Verzeichnis zu erstellen. **_tempnam** generiert Dateinamen, die keine Erweiterung haben. **_tempnam** verwendet [Malloc](malloc.md) zum Zuweisen von Speicherplatz für den Dateinamen des Programms ist verantwortlich für die Freigabe dieses Speicherplatzes, wenn es nicht mehr benötigt wird.
+Der von **_tempnam** zurückgegebene Name ist eine Verkettung von *Präfix* und eine sequenzielle Zahl, die kombiniert wird, um einen eindeutigen Dateinamen für das angegebene Verzeichnis zu erstellen. **_tempnam** generiert Dateinamen, die keine Erweiterung haben. **_tempnam** verwendet [malloc](malloc.md) , um Speicherplatz für den Dateinamen zuzuweisen. Das Programm ist dafür verantwortlich, diesen Speicherplatz freizugeben, wenn er nicht mehr benötigt wird.
 
-**_tempnam** und **Tmpnam** Handle Multibyte-Zeichensätze Zeichenfolgenargumente, erkennt Multibyte-Zeichenfolgen entsprechend der OEM-Codepage automatisch abgerufen, von dem Betriebssystem. **_wtempnam** ist eine Breitzeichen-Version von **_tempnam**; die Argumente und der Rückgabewert von **_wtempnam** sind Breitzeichen Zeichenfolgen. **_wtempnam** und **_tempnam** Verhalten sich identisch, außer dass **_wtempnam** verarbeitet keine Multibyte-Zeichenfolgen. **_wtmpnam** ist eine Breitzeichen-Version von **Tmpnam**; der Wert Argument- und Rückgabetypen der **_wtmpnam** sind Breitzeichen Zeichenfolgen. **_wtmpnam** und **Tmpnam** Verhalten sich identisch, außer dass **_wtmpnam** verarbeitet keine Multibyte-Zeichenfolgen.
+**_tempnam** und **tmpnam** behandeln nach Bedarf automatisch Multibyte-Zeichen folgen Argumente und erkennen Multibyte-Zeichen folgen entsprechend der OEM-Codepage, die vom Betriebssystem abgerufen wird. **_wtempnam** ist eine breit Zeichen Version von **_tempnam**. die Argumente und der Rückgabewert von **_wtempnam** sind Zeichen folgen mit breit Zeichen. **_wtempnam** und **_tempnam** Verhalten sich identisch, mit dem Unterschied, dass **_wtempnam** keine Multibyte-Zeichen folgen verarbeitet. **_wtmpnam** ist eine breit Zeichen Version von **tmpnam**. Das Argument und der Rückgabewert von **_wtmpnam** sind Zeichen folgen mit breit Zeichen. **_wtmpnam** und **tmpnam** Verhalten sich identisch, mit dem Unterschied, dass **_wtmpnam** keine Multibyte-Zeichen folgen verarbeitet.
 
-Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** definiert sind, **_tempnam** und **_wtempnam** werden durch Aufrufe von ersetzt [_tempnam _dbg und _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md).
+Wenn **_DEBUG** und **_CRTDBG_MAP_ALLOC** definiert sind, werden **_tempnam** und **_wtempnam** durch Aufrufe von [_tempnam_dbg und _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md)ersetzt.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

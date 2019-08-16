@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: 7fb0ad3eef781be1b5ca358e825c09a88c0109e3
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 56283b56a1c0832d34ce23c7db47c47d9480aec8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503824"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504566"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile-Klasse
 
-Stellt einen Datenstrom ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)) mit dem Namen durch ein [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).
+Stellt einen Datenstrom ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)) dar, der von einem [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker)benannt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,26 +47,26 @@ class CMonikerFile : public COleStreamFile
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMonikerFile::Close](#close)|Trennt und den Stream frei und gibt den Moniker.|
-|[CMonikerFile::Detach](#detach)|Trennt die `IMoniker` aus diesem `CMonikerFile` Objekt.|
+|[CMonikerFile::Close](#close)|Trennt und gibt den Datenstrom frei und gibt den Moniker frei.|
+|[CMonikerFile::Detach](#detach)|Trennt den `IMoniker` von diesem `CMonikerFile` -Objekt.|
 |[CMonikerFile::GetMoniker](#getmoniker)|Gibt den aktuellen Moniker zurück.|
-|[CMonikerFile::Open](#open)|Öffnet die angegebene Datei aus, um kein Stream abgerufen werden.|
+|[CMonikerFile::Open](#open)|Öffnet die angegebene Datei zum Abrufen eines Streams.|
 
 ### <a name="protected-methods"></a>Geschützte Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CMonikerFile::CreateBindContext](#createbindcontext)|Ruft den Bindungskontext ab oder erstellt einen Bindungskontext standardmäßig initialisiert.|
+|[CMonikerFile::CreateBindContext](#createbindcontext)|Ruft den Bindungs Kontext ab oder erstellt einen standardmäßigen initialisierten Bindungs Kontext.|
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Moniker enthält Informationen wie einen Pfadnamen in eine Datei. Wenn Sie einen Zeiger auf ein monikerobjekt haben `IMoniker` -Schnittstelle, Sie erhalten Zugriff auf die identifizierte Datei ohne andere spezifische Informationen über die auf dem sich die Datei tatsächlich befindet.
+Ein Moniker enthält Informationen ähnlich wie ein Pfadname zu einer Datei. Wenn Sie einen Zeiger auf die-Schnittstelle eines Monikers- `IMoniker` Objekts haben, können Sie auf die identifizierte Datei zugreifen, ohne weitere spezifische Informationen dazu zu erhalten, wo sich die Datei tatsächlich befindet.
 
-Abgeleitet von `COleStreamFile`, `CMonikerFile` nimmt einen Moniker oder eine Zeichenfolgendarstellung in einen Moniker vorzunehmen, und bindet Sie in den Stream für die der Moniker ein Name ist. Sie können dann lesen und Schreiben in den Stream. Der eigentliche Zweck von `CMonikerFile` besteht darin, bieten einfachen Zugriff auf `IStream`s mit dem Namen von `IMoniker`s, damit Sie nicht selbst die Bindung an einen Stream aus, die Sie verfügen noch nicht `CFile` Funktionalität in den Stream.
+Wird von `COleStreamFile`abgeleitet `CMonikerFile` und übernimmt einen Moniker oder eine Zeichen folgen Darstellung, die er in einem Moniker erstellen kann, und bindet an den Datenstrom, für den der Moniker ein Name ist. Sie können dann in diesen Stream lesen und schreiben. Der eigentliche Zweck von `CMonikerFile` ist das Bereitstellen von einfachem Zugriff auf `IMoniker` `IStream`s, die von s benannt werden, damit Sie sich nicht selbst an einen Stream `CFile` binden müssen, aber über Funktionen für den Stream verfügen.
 
-`CMonikerFile` kann nicht zum Binden an etwas anderes als ein Datenstrom verwendet werden. Wenn Sie an Speicher oder ein Objekt zu binden möchten, müssen Sie verwenden die `IMoniker` -Schnittstelle direkt.
+`CMonikerFile`kann nicht verwendet werden, um eine Bindung an nichts anderes als einen Datenstrom herzustellen. Wenn Sie eine Bindung an den Speicher oder ein Objekt herstellen möchten, müssen Sie `IMoniker` die-Schnittstelle direkt verwenden.
 
-Weitere Informationen zu Streams und den Moniker, finden Sie unter [COleStreamFile](../../mfc/reference/colestreamfile-class.md) in die *MFC-Referenz* und [IStream](/windows/desktop/api/objidl/nn-objidl-istream) und [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker) in der Windows SDK.
+Weitere Informationen zu Streams und Monikern finden Sie unter [colestreamfile](../../mfc/reference/colestreamfile-class.md) in der *MFC-Referenz* und in [IStream](/windows/win32/api/objidl/nn-objidl-istream) und [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) in der Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -80,11 +80,11 @@ Weitere Informationen zu Streams und den Moniker, finden Sie unter [COleStreamFi
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxole.h
+**Header:** Afxole. h
 
-##  <a name="close"></a>  CMonikerFile::Close
+##  <a name="close"></a>CMonikerFile:: Close
 
-Mit dieser Funktion wird zum Trennen und den Stream freizugeben und den Moniker freizugeben.
+Mit dieser Funktion können Sie den Stream trennen und freigeben und den Moniker freigeben.
 
 ```
 virtual void Close();
@@ -92,9 +92,9 @@ virtual void Close();
 
 ### <a name="remarks"></a>Hinweise
 
-Kann für nicht geöffneten oder bereits geschlossenen Streams aufgerufen werden.
+Kann bei ungeöffneten oder bereits geschlossenen Streams aufgerufen werden.
 
-##  <a name="cmonikerfile"></a>  CMonikerFile::CMonikerFile
+##  <a name="cmonikerfile"></a>CMonikerFile:: CMonikerFile
 
 Erstellt ein `CMonikerFile`-Objekt.
 
@@ -102,9 +102,9 @@ Erstellt ein `CMonikerFile`-Objekt.
 CMonikerFile();
 ```
 
-##  <a name="createbindcontext"></a>  CMonikerFile::CreateBindContext
+##  <a name="createbindcontext"></a>CMonikerFile:: "kreatebindcontext"
 
-Rufen Sie diese Funktion zum Erstellen einer Bindungskontext standardmäßig initialisiert.
+Rufen Sie diese Funktion auf, um einen standardmäßigen initialisierten Bindungs Kontext zu erstellen.
 
 ```
 IBindCtx* CreateBindContext(CFileException* pError);
@@ -113,19 +113,19 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ### <a name="parameters"></a>Parameter
 
 *pError*<br/>
-Ein Zeiger auf eine Ausnahme für die Datei. Im Falle eines Fehlers wird es auf die Ursache festgelegt werden.
+Ein Zeiger auf eine Datei Ausnahme. Wenn ein Fehler auftritt, wird er auf die Ursache festgelegt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf den Bindungskontext [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx) mit gebunden werden soll, wenn erfolgreich; andernfalls NULL. Wenn Sie mit die Instanz geöffnet wurde ein `IBindHost` -Schnittstelle, aus dem Bindungskontext abgerufen wird die `IBindHost`. Es ist keine `IBindHost` Schnittstelle oder ein Fehler auftritt, um einen Bindungskontext zurückzugeben, einen Bindungskontext wird erstellt. Eine Beschreibung der [IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) Schnittstelle, finden Sie im Windows SDK.
+Ein Zeiger auf den Bindungs Kontext [IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx) , mit dem die Bindung erfolgen soll, wenn erfolgreich. andernfalls NULL. Wenn die-Instanz mit einer `IBindHost` -Schnittstelle geöffnet wurde, wird der Bindungs Kontext `IBindHost`aus abgerufen. Wenn keine `IBindHost` Schnittstelle vorhanden ist oder die Schnittstelle einen Bindungs Kontext nicht zurückgibt, wird ein Bindungs Kontext erstellt. Eine Beschreibung der [ibindhost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\)) -Schnittstelle finden Sie in der Windows SDK.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Bindungskontext ist ein Objekt, das Informationen zu einem bestimmten Monikerbindungsvorgang gespeichert werden. Sie können dieser Funktion können Sie einen benutzerdefinierte Bindungskontext bereitzustellen, überschreiben.
+Ein Bindungs Kontext ist ein Objekt, das Informationen zu einem bestimmten Monikerbindungsvorgang speichert. Sie können diese Funktion überschreiben, um einen benutzerdefinierten Bindungs Kontext bereitzustellen.
 
-##  <a name="detach"></a>  CMonikerFile::Detach
+##  <a name="detach"></a>CMonikerFile::D Etach
 
-Rufen Sie diese Funktion, um den Stream zu schließen.
+Diese Funktion wird aufgerufen, um den Stream zu schließen.
 
 ```
 BOOL Detach(CFileException* pError = NULL);
@@ -134,15 +134,15 @@ BOOL Detach(CFileException* pError = NULL);
 ### <a name="parameters"></a>Parameter
 
 *pError*<br/>
-Ein Zeiger auf eine Ausnahme für die Datei. Im Falle eines Fehlers wird es auf die Ursache festgelegt werden.
+Ein Zeiger auf eine Datei Ausnahme. Wenn ein Fehler auftritt, wird er auf die Ursache festgelegt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
-##  <a name="getmoniker"></a>  CMonikerFile::GetMoniker
+##  <a name="getmoniker"></a>CMonikerFile:: getmoniker
 
-Rufen Sie diese Funktion, um einen Zeiger auf den aktuellen Moniker abzurufen.
+Rufen Sie diese Funktion auf, um einen Zeiger auf den aktuellen Moniker abzurufen.
 
 ```
 IMoniker* GetMoniker() const;
@@ -150,15 +150,15 @@ IMoniker* GetMoniker() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf den aktuellen Moniker-Schnittstelle ( [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)).
+Ein Zeiger auf die aktuelle monikerschnittstelle ( [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker)).
 
 ### <a name="remarks"></a>Hinweise
 
-Da `CMonikerFile` ist keine Schnittstelle, der zurückgegebene Zeiger nicht inkrementiert den Verweiszähler (über ["AddRef"](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)), und der Moniker wird freigegeben. wenn die `CMonikerFile` Objekt freigegeben wird. Wenn Sie nicht auf den Moniker oder selbst freigeben möchten, müssen Sie `AddRef` es.
+Da `CMonikerFile` keine Schnittstelle ist, erhöht der zurückgegebene Zeiger nicht den Verweis Zähler (durch [Adressaten](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)), und der Moniker wird freigegeben, wenn `CMonikerFile` das Objekt freigegeben wird. Wenn Sie den Moniker aufbewahren oder selbst freigeben möchten, müssen `AddRef` Sie ihn selbst freigeben.
 
-##  <a name="open"></a>  CMonikerFile::Open
+##  <a name="open"></a>CMonikerFile:: Open
 
-Rufen Sie diese Memberfunktion zum Öffnen einer Datei oder Moniker-Objekts.
+Diese Member-Funktion aufrufen, um ein Datei-oder monikerobjekt zu öffnen.
 
 ```
 virtual BOOL Open(
@@ -173,13 +173,13 @@ virtual BOOL Open(
 ### <a name="parameters"></a>Parameter
 
 *lpszURL*<br/>
-Eine URL oder der Dateiname der Datei geöffnet werden.
+Eine URL oder ein Dateiname der Datei, die geöffnet werden soll.
 
 *pError*<br/>
-Ein Zeiger auf eine Ausnahme für die Datei. Im Falle eines Fehlers wird es auf die Ursache festgelegt werden.
+Ein Zeiger auf eine Datei Ausnahme. Wenn ein Fehler auftritt, wird er auf die Ursache festgelegt.
 
 *pMoniker*<br/>
-Ein Zeiger auf den Moniker-Schnittstelle `IMoniker` verwendet werden soll, kein Stream abgerufen werden.
+Ein Zeiger auf die monikerschnittstelle `IMoniker` , die zum Abrufen eines Streams verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -187,9 +187,9 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Die *LpszURL* Parameter kann nicht auf einem Macintosh-Computer verwendet werden. Nur die *pMoniker* Form `Open` kann auf einem Macintosh-Computer verwendet werden.
+Der *lpszurl* -Parameter kann nicht in einem Macintosh verwendet werden. Nur die *pmoniker* -Form `Open` von kann auf einem Macintosh verwendet werden.
 
-Sie können eine URL oder einen Dateinamen für die *LpszURL* Parameter. Zum Beispiel:
+Sie können eine URL oder einen Dateinamen für den *lpszurl* -Parameter verwenden. Beispiel:
 
 [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]
 
