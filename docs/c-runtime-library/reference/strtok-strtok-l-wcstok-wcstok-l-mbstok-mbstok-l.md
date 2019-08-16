@@ -45,19 +45,19 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 22dd01a0b2558c83ca1e25875a2ace7dd4ee15c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13fbc0e305f7ad183db06ec0060b2059b4964fe7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176186"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500797"
 ---
-# <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
+# <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
 Sucht das nächste Token in einer Zeichenfolge unter Verwendung des angegebenen Gebietsschemas oder eines Gebietsschemas, das übergeben wird. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).
 
 > [!IMPORTANT]
-> **_mbstok** und **_mbstok_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbstok** und **_mbstok_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -104,20 +104,20 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf das nächste Token finden Sie im *StrToken*. Die Funktionen geben **NULL** Wenn keine weiteren Token gefunden wurden. Jeder Aufruf ändert *StrToken* durch Ersetzen von Trennzeichen, das nach dem zurückgegebenen Token auftritt, ein Null-Zeichen.
+Gibt einen Zeiger auf das nächste Token zurück, das in " *strautoken*" gefunden wurde. Die-Funktionen geben **null** zurück, wenn keine weiteren Token gefunden werden. Jeder-Befehl ändert " *ertotoken* ", indem er das erste Trennzeichen, das nach dem zurückgegebenen Token auftritt, durch ein NULL-Zeichen ersetzt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strtok** -Funktion sucht das nächste Token in *StrToken*. Der Satz von Zeichen im *StrDelimit* gibt mögliche Trennzeichen des Tokens in zu suchenden *StrToken* für den aktuellen Aufruf. **Wcstok** und **_mbstok** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strtok**. Die Argumente und der Rückgabewert von **Wcstok** sind Breitzeichen-Zeichenfolgen, die von **_mbstok** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+Die " **strautok** "-Funktion findet das nächste Token in " *strautoken*". Der Zeichensatz in " *Strauch* " gibt mögliche Trennzeichen für das Token an, das in " *strautoken* " für den aktuellen-Befehl zu finden ist. **wcstok** und **_mbstok** sind breit Zeichen-und multibytezeichenversionen von " **Strauch**". Die Argumente und der Rückgabewert von **wcstok** sind Zeichen folgen mit breit Zeichen. bei den **_mbstok** handelt es sich um Multibyte-Zeichen folgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
 > [!IMPORTANT]
-> Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Beim ersten Aufruf von **Strtok**, die Funktion vorangestellte Trennzeichen überspringt und gibt einen Zeiger auf das erste Token in *StrToken*, beendet das Token mit einem Null-Zeichen. Weitere Token können in den restlichen geholt werden *StrToken* durch eine Reihe von Aufrufen an **Strtok**. Jeder Aufruf von **Strtok** ändert *StrToken* durch ein Null-Zeichen nach dem Einfügen der **token** von diesem Aufruf zurückgegeben. Lesen Sie das nächste Token von *StrToken*, rufen Sie **Strtok** mit einer **NULL** Wert für die *StrToken* Argument. Die **NULL** *StrToken* Argument bewirkt, dass **Strtok** , suchen Sie nach dem nächsten Token im geänderten *StrToken*. Die *StrDelimit* -Argument kann einen beliebigen Wert aus einem Aufruf an den nächsten annehmen, so, dass der Satz von Trennzeichen variieren kann.
+Beim ersten aufrutok-Aufrufvorgang überspringt die Funktion führende Trennzeichen und gibt einen Zeiger auf das erste Token in " *strautoken*" zurück, wobei das Token mit einem NULL-Zeichen beendet wird. Weitere Token können aus dem Rest von " *strautoken* " durch eine Reihe von Aufrufen von " **strintok**" aufgeteilt werden. Jeder aufzurufende Befehl von " **Strauch** " ändert " *ertotoken* ", indem er ein NULL-Zeichen nach dem **Token** einfügt Um das nächste Token aus " *strautoken*" zu lesen, nennen Sie " **Strauch** " mit einem **null** -Wert für das ""-Argument "" Das **null** -" *strautoken* "-Argument bewirkt, dass " **strautok** " im geänderten " *strautoken*" nach dem nächsten Token sucht. Das " *chandelimit* "-Argument kann einen beliebigen Wert von einem Befehl zum nächsten annehmen, sodass der Satz von Trennzeichen variieren kann.
 
-Der Ausgabewert wird von der Einstellung beeinflusst die **LC_CTYPE** -kategorieeinstellung des Gebietsschemas. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md).
+Der Ausgabewert ist von der Einstellung der **LC_CTYPE** -Kategorieeinstellung des Gebiets Schemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md).
 
-Die Versionen dieser Funktionen ohne das **_l** Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten. Die Versionen mit dem **_l** -Suffix sind beinahe identisch, außer dass sie den stattdessen den übergebenen Gebietsschemaparameter verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebiets Schema für dieses vom Gebiets Schema abhängige Verhalten. Die Versionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch stattdessen den übergebenen Gebiets Schema Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > Jede Funktion verwendet eine statische Variable eines lokalen Threads, um die Zeichenfolge in Token zu analysieren. Daher können mehrere Threads diese Funktionen gleichzeitig aufrufen, ohne dass unerwünschte Auswirkungen auftreten. Innerhalb eines einzelnen Threads ist es jedoch wahrscheinlich, dass ein überlappendes Aufrufen von einer dieser Funktionen zu Datenbeschädigung und ungenauen Ergebnissen führt. Beim Analysieren verschiedener Zeichenfolgen sollte zuerst eine Zeichenfolge zu Ende analysiert werden, bevor mit dem Analysieren der nächsten Zeichenfolge begonnen wird. Berücksichtigen Sie auch das mögliche Risiko, wenn Sie eine dieser Funktionen aus einer Schleife heraus aufrufen, in der eine andere Funktion aufgerufen wird. Wenn die andere Funktion eine dieser Funktionen verwendet, kommt es zu einer überlappenden Sequenz von Aufrufen und Datenbeschädigung ist die Folge.

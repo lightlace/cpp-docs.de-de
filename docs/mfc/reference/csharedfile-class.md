@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: 0a9bbf3072a665c04501025d421839fa90a37225
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 74a34ec169868d3e28f78f33da38dbda21ef23b3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344422"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502614"
 ---
 # <a name="csharedfile-class"></a>CSharedFile-Klasse
 
-Die [CMemFile](../../mfc/reference/cmemfile-class.md)-abgeleiteten Klasse, die unterstützt die freigegebene arbeitsspeicherdateien.
+Die von [CMemFile](../../mfc/reference/cmemfile-class.md)abgeleitete Klasse, die freigegebene Speicherdateien unterstützt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,22 +41,22 @@ class CSharedFile : public CMemFile
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CSharedFile::Detach](#detach)|Schließt die shared Memory-Datei, und gibt das Handle des Speicherblocks zurück.|
-|[CSharedFile::SetHandle](#sethandle)|Fügt die shared Memory-Datei auf einen Speicherblock.|
+|[CSharedFile::Detach](#detach)|Schließt die Shared Memory-Datei und gibt das Handle des zugehörigen Speicherblocks zurück.|
+|[CSharedFile::SetHandle](#sethandle)|Fügt die Shared Memory-Datei an einen Speicherblock an.|
 
 ## <a name="remarks"></a>Hinweise
 
-Speicherdateien Verhalten sich wie Dateien auf Datenträgern. Der Unterschied besteht darin, eine Datei im Arbeitsspeicher und nicht auf dem Datenträger gespeichert ist. Eine Arbeitsspeicherdatei eignet sich zur schnellen temporären Speicherung oder für die Übertragung von unformatierten Bytes oder von serialisierten Objekten zwischen voneinander unabhängige Prozesse.
+Speicherdateien Verhalten sich wie Datenträger Dateien. Der Unterschied besteht darin, dass eine Speicherdatei im Arbeitsspeicher und nicht auf dem Datenträger gespeichert wird. Eine Speicherdatei eignet sich für eine schnelle temporäre Speicherung oder zum Übertragen von Rohdaten Bytes oder serialisierten Objekten zwischen unabhängigen Prozessen.
 
-Freigegebene arbeitsspeicherdateien unterscheiden sich von anderen arbeitsspeicherdateien Arbeitsspeicher dafür zugeordnet wird, die [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows-Funktion. Die `CSharedFile` Klasse speichert Daten in einer global belegten Speicherblocks (erstellt mit `GlobalAlloc`), und diesem Speicherblock freigegeben werden kann mit DDE, die Zwischenablage oder andere OLE/COM uniform Data Transfer Vorgänge, z. B. mit `IDataObject`.
+Freigegebene Speicherdateien unterscheiden sich von anderen Speicherdateien darin, dass der Arbeitsspeicher für Sie mit der [globalbelegc](/windows/win32/api/winbase/nf-winbase-globalalloc) -Windows-Funktion zugewiesen wird. Die `CSharedFile` -Klasse speichert Daten in einem Global zugeordneten Speicherblock ( `GlobalAlloc`erstellt mit), und dieser Speicherblock kann mithilfe von DDE, der Zwischenablage oder anderen OLE/com-Daten Übertragungs Vorgängen freigegeben werden `IDataObject`, z. b. mithilfe von.
 
-`GlobalAlloc` Gibt HGLOBAL verarbeiten, anstatt ein Zeiger auf Speicher, z. B. der zurückgegebene Zeiger [Malloc](../../c-runtime-library/reference/malloc.md). Das Handle HGLOBAL ist in bestimmten Anwendungen erforderlich. Beispielsweise benötigen Sie zum Einfügen von Daten in die Zwischenablage ein HGLOBAL-Handle.
+`GlobalAlloc`Gibt ein HGLOBAL-Handle anstelle eines Zeigers auf den Arbeitsspeicher zurück, z. b. den von [malloc](../../c-runtime-library/reference/malloc.md)zurückgegebenen Zeiger. Das HGLOBAL-Handle wird in bestimmten Anwendungen benötigt. Wenn Sie z. b. Daten in die Zwischenablage einfügen möchten, benötigen Sie ein HGLOBAL-Handle.
 
-`CSharedFile` nicht verwendeter Speicher abgebildete Dateien, und die Daten direkt zwischen Prozessen gemeinsam genutzt werden kann.
+`CSharedFile`verwendet keine im Speicher abgebildete Dateien, und die Daten können nicht direkt zwischen Prozessen freigegeben werden.
 
-`CSharedFile` Objekte können automatisch mit ihren eigenen Arbeitsspeicher zuordnen. Oder Sie können Ihre eigenen Speicherblock, der Anfügen der `CSharedFile` Objekt durch Aufrufen von [CSharedFile::SetHandle](#sethandle). In beiden Fällen wird im Arbeitsspeicher für die Arbeitsspeicherdatei automatisch wachsende reserviert `nGrowBytes`-Größe erhöht, wenn `nGrowBytes` ist nicht 0 (null).
+`CSharedFile`-Objekte können automatisch Ihren eigenen Arbeitsspeicher zuordnen. Sie können auch einen eigenen Speicherblock an das `CSharedFile` -Objekt anfügen, indem Sie [CSharedFile:: SetHandle](#sethandle)aufrufen. In beiden Fällen wird der Arbeitsspeicher für die Vergrößerung der Speicherdatei automatisch `nGrowBytes`in Schritten, wenn `nGrowBytes` nicht 0 (null) ist.
 
-Weitere Informationen finden Sie im Artikel [Dateien in MFC](../../mfc/files-in-mfc.md) und [Dateibehandlung](../../c-runtime-library/file-handling.md) in die *Run-Time Library Reference*.
+Weitere Informationen finden Sie in den Artikeln [Dateien in MFC](../../mfc/files-in-mfc.md) und [Datei Behandlung](../../c-runtime-library/file-handling.md) in der *Lauf Zeit Bibliotheks Referenz*.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -70,11 +70,11 @@ Weitere Informationen finden Sie im Artikel [Dateien in MFC](../../mfc/files-in-
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxadv.h
+**Header:** afxadv. h
 
-##  <a name="csharedfile"></a>  CSharedFile::CSharedFile
+##  <a name="csharedfile"></a>CSharedFile:: CSharedFile
 
-Erstellt eine `CSharedFile` -Objekt und belegt Speicher für sie.
+Erstellt ein `CSharedFile` -Objekt und ordnet ihm Speicher zu.
 
 ```
 CSharedFile(
@@ -85,14 +85,14 @@ CSharedFile(
 ### <a name="parameters"></a>Parameter
 
 *nAllocFlags*<br/>
-Flags, der angibt, wie Speicher zugeordnet werden. Finden Sie unter [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) eine Liste der gültigen Flagwerte.
+Flags, die angeben, wie der Arbeitsspeicher zugeordnet werden soll. Eine Liste der gültigen Flagwerte finden Sie unter [globalzuordc](/windows/win32/api/winbase/nf-winbase-globalalloc) .
 
 *nGrowBytes*<br/>
-Das Inkrement, Memory Allocation in Byte.
+Das Inkrement der Arbeitsspeicher Belegung in Bytes.
 
-##  <a name="detach"></a>  CSharedFile::Detach
+##  <a name="detach"></a>CSharedFile::D Etach
 
-Rufen Sie diese Funktion, um die Arbeitsspeicherdatei schließen und trennen Sie das Objekt aus den Speicherblock.
+Mit dieser Funktion schließen Sie die Speicherdatei und trennen Sie vom Speicherblock.
 
 ```
 HGLOBAL Detach();
@@ -100,15 +100,15 @@ HGLOBAL Detach();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Das Handle der Speicherblock, der den Inhalt der Datei für den Speicher enthält.
+Das Handle des Speicherblocks, der den Inhalt der Speicherdatei enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Sie können erneut öffnen, es durch Aufrufen von [SetHandle auf](#sethandle), mit dem Handle zurückgegebenes **trennen**.
+Sie können Sie erneut öffnen, indem Sie " [lthandle](#sethandle)" mithilfe des Handles aufrufen, das von **Detach**zurückgegeben wurde.
 
-##  <a name="sethandle"></a>  CSharedFile::SetHandle
+##  <a name="sethandle"></a>CSharedFile:: lthandle
 
-Mit dieser Funktion können Sie einen Block von globalen Arbeitsspeicher zum Anfügen der `CSharedFile` Objekt.
+Mit dieser Funktion können Sie einen Block des globalen Speichers an das `CSharedFile` -Objekt anfügen.
 
 ```
 void SetHandle(
@@ -119,14 +119,14 @@ void SetHandle(
 ### <a name="parameters"></a>Parameter
 
 *hGlobalMemory*<br/>
-Handle für den globalen Speicher zugeordnet werden soll die `CSharedFile`.
+Handle für den globalen Speicher, der an das `CSharedFile`angefügt werden soll.
 
 *bAllowGrow*<br/>
-Gibt an, ob der Speicherblock wachsen darf.
+Gibt an, ob der Speicherblock vergrößert werden darf.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn *bAllowGrow* ist ungleich NULL ist, die Größe des Speicherblocks wird erhöht, nach Bedarf, z. B. Wenn Sie versuchen, mehr Bytes in der Datei als die Größe des Speicherblocks zu schreiben.
+Wenn " *ballowgrow* " ungleich 0 (null) ist, wird die Größe des Speicherblocks bei Bedarf erhöht, z. b. Wenn Sie versuchen, mehr Bytes als die Größe des Speicherblocks in die Datei zu schreiben.
 
 ## <a name="see-also"></a>Siehe auch
 

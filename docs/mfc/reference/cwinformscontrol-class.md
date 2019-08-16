@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: c1c7a394317fefba7911e9500126919e83389f20
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 75a6d7ea2b4f3ab229d7e3f4d411711261bb1b82
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504666"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502197"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl-Klasse
 
@@ -35,7 +35,7 @@ class CWinFormsControl : public CWnd
 #### <a name="parameters"></a>Parameter
 
 *TManagedControl*<br/>
-Ein .NET Framework Windows Forms-Steuerelement in der MFC-Anwendung angezeigt werden.
+Ein .NET Framework Windows Forms Steuerelement, das in der MFC-Anwendung angezeigt werden soll.
 
 ## <a name="members"></a>Member
 
@@ -43,41 +43,41 @@ Ein .NET Framework Windows Forms-Steuerelement in der MFC-Anwendung angezeigt we
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|Erstellt ein Wrapperobjekt für MFC-Windows Forms-Steuerelement.|
+|[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|Erstellt ein MFC-Windows Forms Steuerelement-Wrapper Objekt.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|Erstellt ein Windows Forms-Steuerelement in einem MFC-Container an.|
-|[CWinFormsControl::GetControl](#getcontrol)|Ruft einen Zeiger auf das Windows Forms-Steuerelement ab.|
-|[CWinFormsControl::GetControlHandle](#getcontrolhandle)|Ruft ein Handle für das Windows Forms-Steuerelement ab.|
+|[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|Erstellt ein Windows Forms-Steuerelement in einem MFC-Container.|
+|[CWinFormsControl::GetControl](#getcontrol)|Ruft einen Zeiger auf das Windows Forms Steuerelement ab.|
+|[CWinFormsControl::GetControlHandle](#getcontrolhandle)|Ruft ein Handle für das Windows Forms Steuerelement ab.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CWinFormsControl::operator -&gt;](#operator_-_gt)|Ersetzt [CWinFormsControl::GetControl](#getcontrol) in Ausdrücken.|
-|[CWinFormsControl::operator TManagedControl^](#operator_tmanagedcontrol)|Wandelt einen Typ ein Zeiger auf ein Windows Forms-Steuerelement.|
+|[CWinFormsControl:: Operator-&gt;](#operator_-_gt)|Ersetzt [CWinFormsControl:: GetControl](#getcontrol) in Ausdrücken.|
+|[CWinFormsControl:: Operator tmanagedcontrol ^](#operator_tmanagedcontrol)|Wandelt einen Typ als Zeiger in ein Windows Forms Steuerelement um.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die `CWinFormsControl` Klasse stellt die grundlegende Funktionalität für das Hosten eines Windows Forms-Steuerelements bereit.
+Die `CWinFormsControl` -Klasse stellt die grundlegende Funktionalität für das Hosting eines Windows Forms-Steuer Elements bereit.
 
-Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [Verwenden eines Windows Form-Benutzer Steuer Elements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-MFC-Code sollte nicht zwischenspeichern Fensterhandles (gespeichert in der Regel `m_hWnd`). Einige Windows Forms-Steuerelementeigenschaften benötigen, die die zugrunde liegende Win32 `Window` zerstört und neu erstellt, mit `DestroyWindow` und `CreateWindow`. Die Ziehpunkte der MFC-Windows Forms-Implementierung der `Destroy` und `Create` Ereignisse der Steuerelemente zum Aktualisieren der `m_hWnd` Member.
+Der MFC-Code sollte keine Fenster Handles Zwischenspeichern (in `m_hWnd`der Regel in gespeichert). Einige Windows Forms-Steuerelement Eigenschaften erfordern, dass `Window` das zugrunde liegende Win32-Element `DestroyWindow` zerstört `CreateWindow`und mithilfe von und neu erstellt wird. Die MFC `Destroy` -Windows Forms Implementierung behandelt die `Create` -und-Ereignisse der-Steuer `m_hWnd` Elemente, um den Member zu aktualisieren.
 
 > [!NOTE]
->  MFC-Windows Forms-Integration funktioniert nur in Projekten, die dynamisch mit MFC verknüpfen (in der Bezeichnung definiert ist).
+>  Die MFC-Windows Forms Integration funktioniert nur in Projekten, die dynamisch mit MFC verknüpft sind (in dem AFXDLL definiert ist).
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxwinforms.h
+**Header:** afxwinforms. h
 
-##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl
+##  <a name="createmanagedcontrol"></a>CWinFormsControl:: kreatemanagedcontrol
 
-Erstellt ein Windows Forms-Steuerelement in einem MFC-Container an.
+Erstellt ein Windows Forms-Steuerelement in einem MFC-Container.
 
 ```
 inline BOOL CreateManagedControl(
@@ -108,47 +108,47 @@ inline BOOL CreateManagedControl(
 ### <a name="parameters"></a>Parameter
 
 *pType*<br/>
-Der Datentyp des Steuerelements erstellt werden. Muss eine [Typ](/dotnet/api/system.type) -Datentyp.
+Der Datentyp des zu erstellenden Steuer Elements. Muss ein [Type](/dotnet/api/system.type) -Datentyp sein.
 
 *dwStyle*<br/>
-Der Fensterstil, um auf das Steuerelement angewendet werden soll. Geben Sie eine Kombination von [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles). Derzeit werden nur die folgenden Formate unterstützt: WS_TABSTOP "," WS_VISIBLE "," WS_DISABLED "und" WS_GROUP ".
+Der Fenster Stil, der auf das Steuerelement angewendet werden soll. Geben Sie eine Kombination von [Fenster Stilen](../../mfc/reference/styles-used-by-mfc.md#window-styles)an. Zurzeit werden nur die folgenden Stile unterstützt: WS_TABSTOP, WS_VISIBLE, WS_DISABLED und WS_GROUP.
 
-*rect*<br/>
-Ein [RECT-Struktur](/windows/desktop/api/windef/ns-windef-tagrect) , die die Koordinaten der oberen linken und rechten unteren Ecke des Steuerelements definiert (nur erste Überladung).
+*Rect*<br/>
+Eine [Rect-Struktur](/windows/win32/api/windef/ns-windef-rect) , die die Koordinaten der oberen linken und der unteren rechten Ecke des Steuer Elements definiert (nur die erste Überladung).
 
 *nPlaceHolderID*<br/>
-Das Handle des Steuerelements Inhaber statische Stelle platziert der Ressourcen-Editor. Das neu erstellte Windows Forms-Steuerelement ersetzt das statische-Steuerelement, wenn seine Position, die Z-Reihenfolge und die Stile (nur zweite Überladung).
+Das Handle des Steuer Elements für die statische Platzhalter, das in den Ressourcen-Editor eingefügt wird. Das neu erstellte Windows Forms Steuerelement ersetzt das statische Steuerelement, wobei seine Position, die z-Reihenfolge und Stile (nur zweite Überladung) angenommen werden.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das übergeordnete Fenster.
 
 *nID*<br/>
-Die Ressourcen-ID-Nummer, die neu erstellte Steuerelement zugewiesen werden soll.
+Die Ressourcen-ID-Nummer, die dem neu erstellten Steuerelement zugewiesen werden soll.
 
 *pControl*<br/>
-Eine Instanz eines Windows Forms-Steuerelements zugeordnet werden die [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) -Objekt (nur für die vierte Überladung).
+Eine Instanz eines Windows Forms Steuer Elements, das dem [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) -Objekt zugeordnet werden soll (nur vierte Überladung).
 
 ### <a name="return-value"></a>Rückgabewert
 
-Im Erfolgsfall gibt einen Wert ungleich NULL zurück. Wenn Fehler auftreten, gibt Sie 0 (null) zurück.
+Wenn erfolgreich, wird ein Wert ungleich 0 (null) zurückgegeben. Wenn nicht erfolgreich, wird NULL zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode instanziiert ein .NET Framework Windows Forms-Steuerelement in einem MFC-Container.
+Diese Methode instanziiert eine .NET Framework Windows Forms-Steuerelement in einem MFC-Container.
 
-Die erste Überladung der Methode akzeptiert einen .NET Framework-Datentyp *PGeben* so, dass MFC ein neues Objekt dieses Typs instanziiert werden kann. *PGeben* muss eine [Typ](/dotnet/api/system.type) -Datentyp.
+Die erste Überladung der-Methode akzeptiert einen .NET Framework Datentyp *pType* , damit MFC ein neues Objekt dieses Typs instanziieren kann. *pType* muss ein [Type](/dotnet/api/system.type) -Datentyp sein.
 
-Die zweite Überladung der Methode erstellt ein Windows Forms-Steuerelement, das auf der Grundlage der `TManagedControl` Template-Parameter, der die `CWinFormsControl` Klasse. Die Größe und Position des Steuerelements basiert auf der `RECT` Struktur, die an die Methode übergeben. Nur *DwStyle* ist wichtig für die Formate.
+Die zweite Überladung der-Methode erstellt ein Windows Forms-Steuerelement `TManagedControl` basierend auf dem template `CWinFormsControl` -Parameter der-Klasse. Größe und Position des-Steuer Elements basieren auf der `RECT` -Struktur, die an die-Methode weitergegeben wird. Nur *dwstyle* ist für die Stile wichtig.
 
-Die dritte Überladung der Methode erstellt ein Windows Forms-Steuerelement, das ein statisches Steuerelement zerstören und übernimmt dessen Position, die Z-Reihenfolge und die Stile ersetzt. Statische Steuerelement dient nur als Platzhalter für das Windows Forms-Steuerelement. Wenn Sie das Steuerelement zu erstellen, kombiniert diese Überladung der Stile aus *DwStyle* mit des statischen Steuerelements Ressource Stilen.
+Die dritte Überladung der-Methode erstellt ein Windows Forms Steuerelement, das ein statisches Steuerelement ersetzt, es zerstört und seine Position, z-Reihenfolge und Stile annimmt. Das statische Steuerelement dient nur als Platzhalter für das Windows Forms Steuerelement. Wenn Sie das Steuerelement erstellen, kombiniert diese Überladung die Stile von *dwstyle* mit den Ressourcen Stilen des statischen Steuer Elements.
 
-Die vierte Überladung der Methode können Sie eine bereits instanziierte Windows Forms-Steuerelement übergeben *pControl* , die MFC umbrochen wird. Es muss vom gleichen Typ wie die `TManagedControl` Template-Parameter, der die `CWinFormsControl` Klasse.
+Mit der vierten Überladung der-Methode können Sie eine bereits instanziierte Windows Forms Steuerelement- *pcontrol* übergeben, die von MFC umschlossen wird. Er muss denselben Typ aufweisen wie der `TManagedControl` Vorlagen Parameter `CWinFormsControl` der-Klasse.
 
-Finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) Beispiele zur Verwendung von Windows-Formular steuert.
+Beispiele zur Verwendung von Windows Forms-Steuerelementen finden [Sie unter Verwenden eines Windows Form-Benutzer Steuer Elements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) .
 
-##  <a name="cwinformscontrol"></a>  CWinFormsControl::CWinFormsControl
+##  <a name="cwinformscontrol"></a>CWinFormsControl:: CWinFormsControl
 
-Erstellt ein Wrapperobjekt für MFC-Windows Forms-Steuerelement.
+Erstellt ein MFC-Windows Forms Steuerelement-Wrapper Objekt.
 
 ```
 CWinFormsControl();
@@ -156,11 +156,11 @@ CWinFormsControl();
 
 ### <a name="remarks"></a>Hinweise
 
-Das Windows Forms-Steuerelement instanziiert wird, beim Aufrufen [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).
+Das Windows Forms Steuerelement wird instanziiert, wenn Sie [CWinFormsControl:: foratemanagedcontrol](#createmanagedcontrol)aufrufen.
 
-##  <a name="getcontrol"></a>  CWinFormsControl::GetControl
+##  <a name="getcontrol"></a>CWinFormsControl:: GetControl
 
-Ruft einen Zeiger auf das Windows Forms-Steuerelement ab.
+Ruft einen Zeiger auf das Windows Forms Steuerelement ab.
 
 ```
 inline TManagedControl^ GetControl() const;
@@ -168,15 +168,15 @@ inline TManagedControl^ GetControl() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf das Windows Forms-Steuerelement.
+Gibt einen Zeiger auf das Windows Forms Steuerelement zurück.
 
 ### <a name="example"></a>Beispiel
 
-  Finden Sie unter [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).
+  Weitere Informationen finden Sie unter [CWinFormsControl:: kreatemanagedcontrol](#createmanagedcontrol).
 
-##  <a name="getcontrolhandle"></a>  CWinFormsControl::GetControlHandle
+##  <a name="getcontrolhandle"></a>CWinFormsControl:: getcontrolhandle
 
-Ruft ein Handle für das Windows Forms-Steuerelement ab.
+Ruft ein Handle für das Windows Forms Steuerelement ab.
 
 ```
 inline HWND GetControlHandle() const;
@@ -184,15 +184,15 @@ inline HWND GetControlHandle() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt ein Handle auf das Windows Forms-Steuerelement zurück.
+Gibt ein Handle für das Windows Forms Steuerelement zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-`GetControlHandle` ist eine Hilfsmethode, die das Fensterhandle, das in die .NET Framework-Steuerelementeigenschaften gespeicherten zurückgibt. In den Wert für das Handle kopiert [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) während des Aufrufs von [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).
+`GetControlHandle`ist eine Hilfsmethode, die das Fenster Handle zurückgibt, das in den Eigenschaften des .NET Framework Steuer Elements gespeichert ist. Der Fenster Handle-Wert wird beim [CWnd:: Attach](../../mfc/reference/cwnd-class.md#attach)-Befehl in [CWnd:: m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) kopiert.
 
-##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;
+##  <a name="operator_-_gt"></a>CWinFormsControl:: Operator-&gt;
 
-Ersetzt [CWinFormsControl::GetControl](#getcontrol) in Ausdrücken.
+Ersetzt [CWinFormsControl:: GetControl](#getcontrol) in Ausdrücken.
 
 ```
 inline TManagedControl^  operator->() const;
@@ -200,13 +200,13 @@ inline TManagedControl^  operator->() const;
 
 ### <a name="remarks"></a>Hinweise
 
-Dieser Operator bietet eine praktische Syntax, die ersetzt `GetControl` in Ausdrücken.
+Dieser Operator stellt eine bequeme Syntax bereit, `GetControl` die in Ausdrücken ersetzt.
 
-Weitere Informationen zu Windows Forms, finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Weitere Informationen zu Windows Forms finden Sie unter [Verwenden eines Windows Form-Benutzer Steuer Elements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^
+##  <a name="operator_tmanagedcontrol"></a>CWinFormsControl:: Operator tmanagedcontrol ^
 
-Wandelt einen Typ ein Zeiger auf ein Windows Forms-Steuerelement.
+Wandelt einen Typ als Zeiger in ein Windows Forms Steuerelement um.
 
 ```
 inline operator TManagedControl^() const;
@@ -214,7 +214,7 @@ inline operator TManagedControl^() const;
 
 ### <a name="remarks"></a>Hinweise
 
-Dieser Operator übergibt `CWinFormsControl<TManagedControl>` für Funktionen, die einen Zeiger auf ein Windows Forms-Steuerelement zu akzeptieren.
+Dieser Operator übergibt `CWinFormsControl<TManagedControl>` an Funktionen, die einen Zeiger auf ein Windows Forms Steuerelement akzeptieren.
 
 ## <a name="see-also"></a>Siehe auch
 

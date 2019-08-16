@@ -11,46 +11,46 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-ms.openlocfilehash: 8a0db3299ebb54d226edc1434dedbc6a04eb9b00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 590f0dce6c50ee6d0ca30c4c68e21787563bd686
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241807"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508728"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Anpassen der Darstellung eines Symbolleisten-Steuerelements
 
-Klasse `CToolBarCtrl` bietet viele Formatvorlagen, die die Darstellung (und manchmal das Verhalten) des Symbolleistenobjekts zu beeinflussen. Ändern Sie die Symbolleistenobjekt durch Festlegen der `dwCtrlStyle` Parameter, der die `CToolBarCtrl::Create` (oder `CToolBar::CreateEx`) Member-Funktion, die bei der Erstellung der Symbolleisten-Steuerelement.
+Die `CToolBarCtrl` -Klasse stellt viele Stile bereit, die sich auf die Darstellung (und gelegentlich auch das Verhalten) des Toolbar-Objekts auswirken. Ändern Sie das Symbolleisten Objekt, `dwCtrlStyle` indem Sie den `CToolBarCtrl::Create` -Parameter `CToolBar::CreateEx`der (oder)-Element Funktion festlegen, wenn Sie das ToolBar-Steuerelement erstmalig erstellen.
 
-Die folgenden Stile wirken sich auf den "3D" Aspekt der Symbolleisten-Schaltflächen und die Positionierung der Text der Schaltfläche:
+Die folgenden Stile beeinflussen den 3D-Aspekt der Symbolleisten Schaltflächen und die Platzierung des Schaltflächen Texts:
 
-- **TBSTYLE_FLAT** erstellt eine flache Symbolleiste, in denen sowohl die Symbolleiste und die Schaltflächen transparent sind. Text der Schaltfläche wird unter Bitmaps für Schaltflächen angezeigt. Wenn dieses Format verwendet wird, wird die Schaltfläche unterhalb des Cursors automatisch hervorgehoben.
+- **TBSTYLE_FLAT** Erstellt eine flache Symbolleiste, auf der die Symbolleiste und die Schaltflächen transparent sind. Schaltflächen Text wird unter Bitmaps der Schaltfläche angezeigt. Wenn dieser Stil verwendet wird, wird die Schaltfläche unterhalb des Cursors automatisch hervorgehoben.
 
-- **TBSTYLE_TRANSPARENT** erstellt eine transparente Symbolleiste. Klicken Sie in eine transparente Symbolleiste die Symbolleiste ist transparent, aber die Schaltflächen sind nicht. Text der Schaltfläche wird unter Bitmaps für Schaltflächen angezeigt.
+- **TBSTYLE_TRANSPARENT** Erstellt eine transparente Symbolleiste. In einer transparenten Symbolleiste ist die Symbolleiste transparent, aber die Schaltflächen sind nicht. Schaltflächen Text wird unter Bitmaps der Schaltfläche angezeigt.
 
-- **TBSTYLE_LIST** stellen Schaltfläche Text rechts neben der Schaltfläche Bitmaps.
+- **TBSTYLE_LIST** Platziert den Schaltflächen Text rechts neben Schaltflächen-Bitmaps.
 
 > [!NOTE]
->  Um zu verhindern, dass "Repaint" Probleme auftreten, die **TBSTYLE_FLAT** und **TBSTYLE_TRANSPARENT** Stile festgelegt werden, bevor das Symbolleistenobjekt sichtbar ist.
+>  Um Repaint-Probleme zu vermeiden, sollten die Stile **TBSTYLE_FLAT** und **TBSTYLE_TRANSPARENT** festgelegt werden, bevor das Symbolleisten Objekt sichtbar ist.
 
-Die folgenden Stile bestimmen, ob die Symbolleiste einem Benutzer ermöglicht zu Position der einzelne Schaltflächen in einem Symbolleistenobjekt, das mithilfe von Drag & drop:
+Die folgenden Stile bestimmen, ob die Symbolleiste einem Benutzer ermöglicht, einzelne Schaltflächen in einem Toolbar-Objekt mithilfe von Drag & Drop neu zu positionieren:
 
-- **TBSTYLE_ALTDRAG** können Benutzer eine Symbolleisten-Schaltfläche Position ändern, durch Ziehen bei gedrückter Alt-Taste. Wenn dieses Format nicht angegeben wird, muss der Benutzer die UMSCHALTTASTE beim Ziehen einer Schaltfläche aufweisen.
+- **TBSTYLE_ALTDRAG** Ermöglicht Benutzern das Ändern der Position einer Symbolleisten-Schaltfläche durchziehen, während die Alt-Taste gedrückt wird. Wenn dieser Stil nicht angegeben wird, muss der Benutzer beim Ziehen einer Schaltfläche die UMSCHALTTASTE gedrückt halten.
 
     > [!NOTE]
-    >  Die **CCS_ADJUSTABLE** Stil muss angegeben werden, um die Schaltflächen der Symbolleiste für den das Ziehen zu aktivieren.
+    >  Der **CCS_ADJUSTABLE** -Stil muss angegeben werden, damit die Symbolleisten Schaltflächen gezogen werden können.
 
-- **TBSTYLE_REGISTERDROP** generiert **TBN_GETOBJECT** Benachrichtigung Zielobjekte Nachrichten anfordern gelöscht werden, wenn der Mauszeiger über der Symbolleisten-Schaltflächen bewegt.
+- **TBSTYLE_REGISTERDROP** Generiert **TBN_GETOBJECT** -Benachrichtigungs Meldungen, um Drop Target-Objekte anzufordern, wenn der Mauszeiger über die Symbolleisten Schaltflächen
 
-Die verbleibenden Formatvorlagen wirken sich auf visuelle und nicht visuelle Aspekte des Symbolleistenobjekts:
+Die verbleibenden Stile wirken sich auf visuelle und nicht visuelle Aspekte des Toolbar-Objekts aus:
 
-- **TBSTYLE_WRAPABLE** erstellt eine Symbolleiste, die mehrere Zeilen von Schaltflächen enthalten kann. Schaltflächen der Symbolleiste können in die nächste Zeile "umschließen" werden, wird die Symbolleiste nicht breit genug, um alle Schaltflächen auf der gleichen Zeile einzuschließen. Wrapping tritt auf, auf die Trennung und nongroup Grenzen.
+- **TBSTYLE_WRAPABLE** Erstellt eine Symbolleiste, die mehrere Zeilen mit Schaltflächen aufweisen kann. Symbolleisten Schaltflächen können mit der nächsten Zeile "Wrap" werden, wenn die Symbolleiste zu schmal wird, um alle Schaltflächen in derselben Zeile einzuschließen. Das umwickeln erfolgt bei Trennungs-und nicht Gruppen Grenzen.
 
-- **TBSTYLE_CUSTOMERASE** generiert **NM_CUSTOMDRAW** Benachrichtigung bei der Verarbeitung von Nachrichten **WM_ERASEBKGND** Nachrichten.
+- **TBSTYLE_CUSTOMERASE** Generiert **NM_CUSTOMDRAW** -Benachrichtigungs Meldungen bei der Verarbeitung von **WM_ERASEBKGND** -Nachrichten.
 
-- **TBSTYLE_TOOLTIPS** erstellt ein QuickInfo-Steuerelement, mit denen eine Anwendung beschreibenden Text für die Schaltflächen auf der Symbolleiste angezeigt.
+- **TBSTYLE_TOOLTIPS** Erstellt ein QuickInfo-Steuerelement, das eine Anwendung verwenden kann, um beschreibenden Text für die Schaltflächen auf der Symbolleiste anzuzeigen.
 
-Eine vollständige Liste der Toolbar-Stile und erweiterte Stile, finden Sie unter [Toolbar-Steuerelement und Button-Stile](/windows/desktop/Controls/toolbar-control-and-button-styles) und [Symbolleiste Erweiterte Stile](/windows/desktop/Controls/toolbar-extended-styles) im Windows SDK.
+Eine umfassende Liste der Symbolleisten Stile und erweiterter Stile finden Sie unter Symbolleisten- [Steuerelement und Schalt](/windows/win32/Controls/toolbar-control-and-button-styles) Flächen Formate und [Erweiterte Stile der Symbolleiste](/windows/win32/Controls/toolbar-extended-styles) in der Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 

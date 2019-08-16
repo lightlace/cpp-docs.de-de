@@ -1,17 +1,17 @@
 ---
-title: Requestedit (C++-COM-Attribut)
+title: requestedit (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requestedit
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: 30b0c5ec807865280c8e538ea701c3d1a5c4ef9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e90506619d4f13d4e5627f9c06b997d7034b5f49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407379"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514088"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -25,11 +25,11 @@ Gibt an, dass die Eigenschaft die `OnRequestEdit`-Benachrichtigung unterstützt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Requestedit** C++-Attribut hat die gleiche Funktionalität wie die [Requestedit](/windows/desktop/Midl/requestedit) MIDL-Attribut.
+Das **requestedit** C++ -Attribut verfügt über die gleiche Funktionalität wie das " [requestedit](/windows/win32/Midl/requestedit) "-Attribut "Mittel l".
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [bindbare](bindable.md) für ein Beispiel für die Verwendung von **Requestedit**.
+Eine Beispiel Verwendung von **requestedit**finden Sie im Beispiel für [bindbare](bindable.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,8 +39,8 @@ Siehe das Beispiel für [bindbare](bindable.md) für ein Beispiel für die Verwe
 |-|-|
 |**Betrifft**|Schnittstellenmethode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

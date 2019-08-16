@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 337fe03ab09a6ed3da283f45dd4eb58aaaad5bc5
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957501"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502561"
 ---
 # <a name="exception-processing"></a>Ausnahmeverarbeitung
 
@@ -380,7 +380,7 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Funktion auf, wenn Aufrufe von zugrunde liegenden Systemspeicher Zuweisungen (z. b. **malloc** und die [globalbelegc](/windows/desktop/api/winbase/nf-winbase-globalalloc) -Windows-Funktion) fehlschlagen. Sie müssen Sie nicht für einen **neuen** Befehl abrufen, da **New** automatisch eine Speicher Ausnahme auslöst, wenn die Speicher Belegung fehlschlägt.
+Rufen Sie diese Funktion auf, wenn Aufrufe von zugrunde liegenden Systemspeicher Zuweisungen (z. b. **malloc** und die [globalbelegc](/windows/win32/api/winbase/nf-winbase-globalalloc) -Windows-Funktion) fehlschlagen. Sie müssen Sie nicht für einen **neuen** Befehl abrufen, da **New** automatisch eine Speicher Ausnahme auslöst, wenn die Speicher Belegung fehlschlägt.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -491,7 +491,7 @@ Handle für einen Ergebniscode, der den Grund für die Ausnahme angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Version, die ein HRESULT als Argument annimmt, konvertiert diesen Ergebniscode in den entsprechenden SCODE. Weitere Informationen zu HRESULT und SCODE finden Sie unter [Struktur von com-Fehler Codes](/windows/desktop/com/structure-of-com-error-codes) in der Windows SDK.
+Die Version, die ein HRESULT als Argument annimmt, konvertiert diesen Ergebniscode in den entsprechenden SCODE. Weitere Informationen zu HRESULT und SCODE finden Sie unter [Struktur von com-Fehler Codes](/windows/win32/com/structure-of-com-error-codes) in der Windows SDK.
 
 ### <a name="requirements"></a>Anforderungen
 

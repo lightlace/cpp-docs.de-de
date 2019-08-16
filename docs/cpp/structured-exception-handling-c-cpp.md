@@ -9,42 +9,42 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: e948d941afa1459623619e385aa67b1c60490245
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 4555690476bc149687c680fc2baae53b96658a4e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221947"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498493"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-Strukturierte Ausnahmebehandlung (SEH) ist ein Microsoft-Erweiterung für C, um bestimmte Ausnahmecode-Situationen, z. B. Hardwareausfällen ordnungsgemäß behandelt. Obwohl Windows und Microsoft C++ unterstützen SEH, es wird empfohlen, die Verwendung von ISO-Standard C++ Ausnahmebehandlung, da Ihr Code damit besser portierbar und flexibler ist. Dennoch, um vorhandenen Code beibehalten oder für bestimmte Arten von Programmen, Sie können es erforderlich sein, die SEH verwenden.
+Die strukturierte Ausnahmebehandlung (SEH) ist eine Microsoft-Erweiterung von C, mit der bestimmte außergewöhnliche Code Situationen, z. b. Hardwarefehler, ordnungsgemäß behandelt werden. Obwohl Windows und Microsoft C++ SEH unterstützen, empfehlen wir die Verwendung der ISO- C++ Standard-Ausnahmebehandlung, da der Code besser portierbar und flexibler ist. Dennoch müssen Sie zum Verwalten von vorhandenem Code oder für bestimmte Arten von Programmen möglicherweise SEH verwenden.
 
 **Microsoft-spezifisch:**
 
 ## <a name="grammar"></a>Grammatik
 
-*Try-except-Anweisung* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *Compound-Statement* **__except** **(** *Ausdruck* **)** *Compound-Statement*
+*Try-außer-Anweisung* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *Verbund-Anweisung* **__except** **(** *Ausdruck* **)** *Verbund-Anweisung*
 
-*Try-finally-Anweisung* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *Compound-Statement* **__finally** *Compound-Statement*
+*try-endlich-Anweisung* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *Verbund-Anweisung* **__finally** *Verbund-Anweisung*
 
 ## <a name="remarks"></a>Hinweise
 
-Mit SEH können Sie sicherstellen, dass Ressourcen wie Speicherblöcke und Dateien ordnungsgemäß freigegeben werden, wenn die Ausführung unerwartet beendet wird. Sie können auch bestimmte Probleme behandeln, z. B. unzureichender Arbeitsspeicher – mithilfe von kurzem strukturiertem Code, der nicht abhängig ist **Goto** -Anweisungen oder ausführliche Tests von Rückgabecodes.
+Mit Seh können Sie sicherstellen, dass Ressourcen wie Speicherblöcke und Dateien ordnungsgemäß freigegeben werden, wenn die Ausführung unerwartet beendet wird. Sie können auch bestimmte Probleme – z. b. unzureichenden Arbeitsspeicher – behandeln, indem Sie präzisen strukturierten Code verwenden, der sich nicht auf **goto** -Anweisungen oder das aufwändige Testen von Rückgabecodes stützt.
 
-Die Anweisungen try-except und try-finally, auf die sich dieser Artikel bezieht, sind Microsoft-Erweiterungen der Programmiersprache C. Sie unterstützen SEH, indem es Anwendungen ermöglicht wird, die Steuerung eines Programms nach Ereignissen abzurufen, die andernfalls das Beenden der Ausführung zur Folge haben würden. Obwohl SEH mit C++-Quelldateien funktioniert, ist sie nicht ausdrücklich für C++ vorgesehen. Wenn Sie SEH in einem C++-Programm verwenden, die Sie bei der Kompilierung der [/EHa "oder" / EHsc](../build/reference/eh-exception-handling-model.md) option Destruktoren für lokale Objekte aufgerufen werden, aber weitere Ausführungsverhalten entspricht möglicherweise nicht Ihren Erwartungen. Eine Veranschaulichung finden Sie im Beispiel weiter unten in diesem Artikel. In den meisten Fällen anstelle von SEH empfiehlt es sich, dass Sie die ISO-Standard verwenden [ C++ Ausnahmebehandlung](../cpp/try-throw-and-catch-statements-cpp.md), Microsoft C++ -Compiler unterstützt ebenfalls. Mithilfe der C++-Ausnahmebehandlung können Sie eine bessere Portierbarkeit des Codes sicherstellen, und Sie können Ausnahmen jeglichen Typs behandeln.
+Die Anweisungen try-except und try-finally, auf die sich dieser Artikel bezieht, sind Microsoft-Erweiterungen der Programmiersprache C. Sie unterstützen SEH, indem es Anwendungen ermöglicht wird, die Steuerung eines Programms nach Ereignissen abzurufen, die andernfalls das Beenden der Ausführung zur Folge haben würden. Obwohl SEH mit C++-Quelldateien funktioniert, ist sie nicht ausdrücklich für C++ vorgesehen. Wenn Sie SEH in einem C++ Programm verwenden, das Sie mithilfe der/EHA-Option oder der [/EHsc](../build/reference/eh-exception-handling-model.md) -Option kompilieren, werden debugtoren für lokale Objekte aufgerufen, andere Ausführungs Verhalten werden jedoch möglicherweise nicht erwartet. Eine Abbildung finden Sie im Beispiel weiter unten in diesem Artikel. In den meisten Fällen empfehlen wir anstelle von SEH die Verwendung der ISO-Standard [ C++ -Ausnahmebehandlung](../cpp/try-throw-and-catch-statements-cpp.md), die der C++ Microsoft-Compiler ebenfalls unterstützt. Mithilfe der C++-Ausnahmebehandlung können Sie eine bessere Portierbarkeit des Codes sicherstellen, und Sie können Ausnahmen jeglichen Typs behandeln.
 
-Wenn Sie C-Code verfügen, die SEH verwendet wird, können Sie es mit C++-Code mischen, die C++-Ausnahmebehandlung verwendet wird. Weitere Informationen finden Sie unter [strukturierter Ausnahmebehandlung in C++](../cpp/exception-handling-differences.md).
+Wenn Sie über C-Code verfügen, der Seh verwendet, können Sie C++ ihn mit Code C++ mischen, der die Ausnahmebehandlung verwendet. Weitere Informationen finden Sie unter [behandeln strukturierter Ausnahmen C++in ](../cpp/exception-handling-differences.md).
 
 Es gibt zwei SEH-Mechanismen:
 
-- [Ausnahmehandler](../cpp/writing-an-exception-handler.md), oder **__except** -Blöcken, die reagieren können, oder die Ausnahme zu schließen.
+- [Ausnahmehandler](../cpp/writing-an-exception-handler.md)oder **__except** -Blöcke, die auf die Ausnahme reagieren oder diese verwerfen können.
 
-- [Beendigungshandler](../cpp/writing-a-termination-handler.md), oder **__finally** -Blöcken, die immer aufgerufen werden, ob eine Ausnahme davon Beendigung verursacht,.
+- Beendigungs [Handler](../cpp/writing-a-termination-handler.md)oder **__finally** -Blöcke, die immer aufgerufen werden, unabhängig davon, ob eine Ausnahme beendet wird oder nicht.
 
-Diese beiden Arten von Handlern unterscheiden sich zwar, sind allerdings hinsichtlich eines als "Entladen des Stapels" bekannten Prozesses eng miteinander verknüpft. Wenn eine strukturierte Ausnahme auftritt, sucht Windows die zuletzt installierte Ausnahmehandler, der gerade aktiv ist. Beim Handler kann eine von drei Möglichkeiten auftreten:
+Diese beiden Arten von Handlern unterscheiden sich zwar, sind allerdings hinsichtlich eines als "Entladen des Stapels" bekannten Prozesses eng miteinander verknüpft. Wenn eine strukturierte Ausnahme auftritt, sucht Windows nach dem zuletzt installierten Ausnahmehandler, der derzeit aktiv ist. Beim Handler kann eine von drei Möglichkeiten auftreten:
 
 - Fehler beim Erkennen der Ausnahme und Übergabe des Steuerelements an andere Handler
 
@@ -52,9 +52,9 @@ Diese beiden Arten von Handlern unterscheiden sich zwar, sind allerdings hinsich
 
 - Erkennen und behandeln der Ausnahme
 
-Der Ausnahmehandler, der die Ausnahme erkennt, befindet sich möglicherweise nicht in der Funktion, die bei Auftreten der Ausnahme ausgeführt wurde. In einigen Fällen ist es möglicherweise in einer Funktion wesentlich höher auf dem Stapel. Die gegenwärtig ausgeführte Funktion sowie alle weiteren Funktionen im Stapelrahmen werden beendet. Der Stapel ist während dieses Vorgangs "entlädt sich", also lokale nicht statische Variablen von beendeten Funktionen aus dem Stapel gelöscht werden.
+Der Ausnahmehandler, der die Ausnahme erkennt, befindet sich möglicherweise nicht in der Funktion, die bei Auftreten der Ausnahme ausgeführt wurde. In einigen Fällen ist es möglicherweise in einer Funktion wesentlich höher auf dem Stapel. Die gegenwärtig ausgeführte Funktion sowie alle weiteren Funktionen im Stapelrahmen werden beendet. Während dieses Vorgangs wird der Stapel "unverwundet", d. h., lokale nicht statische Variablen von beendeten Funktionen werden aus dem Stapel gelöscht.
 
-Beim Entladen des Stapels ruft das Betriebssystem alle Beendigungshandler auf, die Sie für jede Funktion geschrieben haben. Mit einem Beendigungshandler können Sie Ressourcen bereinigen, die andernfalls bei einer nicht ordnungsgemäßen Beendigung geöffnet bleiben würden. Wenn Sie einen kritischen Abschnitt eingegeben haben, können Sie es in den Beendigungshandler beenden. Wenn das Programm beendet werden soll, können Sie weitere Ordnungsaufgaben, z. B. das Schließen und Entfernen von temporären Dateien, ausführen.
+Beim Entladen des Stapels ruft das Betriebssystem alle Beendigungshandler auf, die Sie für jede Funktion geschrieben haben. Mit einem Beendigungshandler können Sie Ressourcen bereinigen, die andernfalls bei einer nicht ordnungsgemäßen Beendigung geöffnet bleiben würden. Wenn Sie einen kritischen Abschnitt eingegeben haben, können Sie ihn im Beendigungs Handler beenden. Wenn das Programm beendet werden soll, können Sie weitere Ordnungsaufgaben, z. B. das Schließen und Entfernen von temporären Dateien, ausführen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -66,7 +66,7 @@ Beim Entladen des Stapels ruft das Betriebssystem alle Beendigungshandler auf, d
 
 ## <a name="example"></a>Beispiel
 
-Wie bereits erwähnt werden Destruktoren für lokale Objekte aufgerufen werden, wenn Sie verwenden Sie SEH in einem C++-Programms und kompilieren sie mit der **/EHa** oder **/EHsc** Option. Allerdings entspricht das Verhalten während der Ausführung bei zusätzlicher Verwendung von C++-Ausnahmen möglicherweise nicht Ihren Erwartungen. Dieses Beispiel zeigt diese unterschiedlichen Verhaltensweisen.
+Wie bereits erwähnt, werden debugtoren für lokale Objekte aufgerufen, wenn Sie SEH in C++ einem Programm verwenden und mithilfe der **/EHa** -Option oder der **/EHsc** -Option kompilieren. Allerdings entspricht das Verhalten während der Ausführung bei zusätzlicher Verwendung von C++-Ausnahmen möglicherweise nicht Ihren Erwartungen. In diesem Beispiel werden diese Verhaltensunterschiede veranschaulicht.
 
 ```cpp
 #include <stdio.h>
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-Bei Verwendung von **/EHsc** kompiliert diesen Code aber das Steuerelement-Makro lokalen Test `CPPEX` ist nicht definiert ist, besteht keine Ausführung von der `TestClass` Destruktor und die Ausgabe sieht wie folgt:
+Wenn Sie **/EHsc** verwenden, um diesen Code zu kompilieren, aber das lokale `CPPEX` Test Steuerelement-Makro nicht definiert ist, `TestClass` wird der debugtor nicht ausgeführt, und die Ausgabe sieht wie folgt aus:
 
 ```Output
 Triggering SEH exception
 Executing SEH __except block
 ```
 
-Bei Verwendung von **/EHsc** zum Kompilieren des Codes und `CPPEX` wird mittels definiert `/DCPPEX` (sodass eine C++-Ausnahme ausgelöst wird), wird die `TestClass` Destruktor ausgeführt und die Ausgabe sieht wie folgt aus:
+Wenn Sie **/EHsc** verwenden, um den Code zu `CPPEX` kompilieren und mithilfe `/DCPPEX` von definiert wird (sodass C++ eine-Ausnahme ausgelöst wird) `TestClass` , wird der debugtor ausgeführt, und die Ausgabe sieht wie folgt aus:
 
 ```Output
 Throwing C++ exception
@@ -130,7 +130,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Bei Verwendung von **/EHa** zum Kompilieren des Codes, der `TestClass` Destruktor ausgeführt wird, unabhängig davon, ob die Ausnahme ausgelöst wurde, mithilfe von `std::throw` oder mit SEH zum Auslösen der Ausnahme, d. h., ob `CPPEX` definiert oder nicht. Die Ausgabe sieht wie folgt aus:
+Wenn Sie **/EHa** verwenden, um den Code zu kompilieren `TestClass` , wird der debugtor unabhängig davon ausgeführt, ob die `std::throw` Ausnahme mithilfe von oder mithilfe von SEH ausgelöst wurde, um die Ausnahme `CPPEX` , d. h. ob definiert oder nicht, zu auslösen. Die Ausgabe sieht wie folgt aus:
 
 ```Output
 Throwing C++ exception
@@ -147,5 +147,5 @@ Weitere Informationen finden Sie unter [/EH (Ausnahmebehandlungsmodell)](../buil
 [Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
 [\<exception>](../standard-library/exception.md)<br/>
-[Fehler- und Ausnahmebehandlung](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Strukturierte Ausnahmebehandlung (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)
+[Fehler-und Ausnahmebehandlung](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Strukturierte Ausnahmebehandlung (Windows)](/windows/win32/debug/structured-exception-handling)

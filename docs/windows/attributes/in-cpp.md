@@ -1,21 +1,21 @@
 ---
-title: in (C++-COM-Attribut)
+title: in (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.in
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: 06d78552ef2ebb878ed630eb377e6249ba60cad4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e97008d0399764beeca73dbbc5914e4b891df748
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409342"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514594"
 ---
 # <a name="in-c"></a>in (C++)
 
-Gibt an, dass ein Parameter, die von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben werden.
+Gibt an, dass ein Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Gibt an, dass ein Parameter, die von der aufrufenden Prozedur an die aufgerufene
 
 ## <a name="remarks"></a>Hinweise
 
-Die **in** C++-Attribut hat die gleiche Funktionalität wie die [in](/windows/desktop/Midl/in) MIDL-Attribut.
+Das **in** C++ -Attribut verfügt über die gleiche Funktionalität wie das [in](/windows/win32/Midl/in) -Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter [bindbare](bindable.md) ein Beispiel zur Verwendung für **in**.
+Unter [bindbare](bindable.md) finden Sie ein Beispiel für die Verwendung von **in**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Finden Sie unter [bindbare](bindable.md) ein Beispiel zur Verwendung für **in**
 
 |||
 |-|-|
-|**Betrifft**|Parameter, für die Schnittstellenmethode|
+|**Betrifft**|Schnittstellenparameter, Schnittstellen Methode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
 |**Ungültige Attribute**|**retval**|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).

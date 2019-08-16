@@ -1,6 +1,6 @@
 ---
 title: Visual C++-Projekttypen
-ms.date: 07/02/2019
+ms.date: 08/13/2019
 helpviewer_keywords:
 - programs [C++], projects
 - project templates [Visual Studio], C++
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: 98f8ea11cce61ca91fbdc8f8afb900a7ba5b42c9
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: f234f9a05a871fe474b783a68f644cb4f2b1c2e7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552211"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498439"
 ---
 # <a name="c-project-templates"></a>C++-Projektvorlagen
 
-Visual Studio-Projektvorlagen generiert Quellcodedateien, Compileroptionen, Menüs, Symbolleisten, Symbole, Verweise und `#include` Anweisungen, die für die Art von Projekt geeignet sind, Sie erstellen möchten. Visual Studio umfasst verschiedene Arten von C++ Projektvorlagen und für viele von ihnen stellt Assistenten bereit, sodass Sie Ihre Projekte anpassen können, erstellen. Sie können die Anwendung unmittelbar nach dem Erstellen eines Projekts erstellen und ausführen. Es ist empfehlenswert, den Buildprozess in Abständen durchzuführen, während Sie Ihre Anwendung entwickeln.
+Visual Studio-Projektvorlagen generieren Quell Code Dateien, Compileroptionen, Menüs, Symbolleisten, Symbole, Verweise `#include` und Anweisungen, die für die Art des Projekts geeignet sind, das Sie erstellen möchten. Visual Studio umfasst verschiedene Arten von C++ Projektvorlagen und bietet Assistenten für viele von Ihnen, sodass Sie Ihre Projekte beim Erstellen anpassen können. Sie können die Anwendung unmittelbar nach dem Erstellen eines Projekts erstellen und ausführen. Es ist empfehlenswert, den Buildprozess in Abständen durchzuführen, während Sie Ihre Anwendung entwickeln.
 
 > [!NOTE]
 > Mit C++-Projektvorlagen können Sie ein C-Sprachprojekt erstellen. Suchen Sie im generierten Projekt die Dateien mit der Dateinamenerweiterung .cpp, und ändern Sie sie in .c. Erweitern Sie dann auf der Seite **Projekteigenschaften** für das Projekt (nicht für die Projektmappe) die Option **Konfigurationseigenschaften**, **C/C++** , und wählen Sie dann **Erweitert**. Ändern Sie die Einstellung **Kompilierungsart** in **Als C-Code kompilieren (/TC)** .
 
 ## <a name="project-templates"></a>Projektvorlagen
 
-Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion und den Workloads ab, die Sie installiert haben. Wenn Sie die Desktop-Entwicklung mit installiert haben C++ Visual Studio-Workload hat diese C++ -Projektvorlagen.
+Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion und den Workloads ab, die Sie installiert haben. Wenn Sie die Desktop Entwicklung mit C++ Arbeitsauslastung installiert haben, verfügt Visual Studio C++ über diese Projektvorlagen.
 
 ### <a name="windows-desktop"></a>Windows-Desktop
 
@@ -36,15 +36,15 @@ Die in Visual Studio enthaltenen Projektvorlagen hängen von der Produktversion 
 |[Windows-Desktopanwendung](../../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Ein Projekt zum Erstellen einer Windows-Desktopanwendung (Win32)|
 |[Dynamic Link Library](../walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Ein Projekt zum Erstellen einer Dynamic Link Library (DLL)|
 |[Statische Bibliothek](../../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|Ein Projekt zum Erstellen einer statischen Bibliothek (LIB)|
-|Windows-Desktop-Assistenten|Ein Assistent zum Erstellen von Windows-Desktopanwendungen und -Bibliotheken mit zusätzlichen Optionen|
+|[Windows-Desktopassistent](../../windows/windows-desktop-wizard.md)|Ein Assistent zum Erstellen von Windows-Desktopanwendungen und -Bibliotheken mit zusätzlichen Optionen|
 
 ### <a name="general"></a>Allgemein
 
 |Projektvorlage|Beschreibung|
 |----------------------|-----------------------------|
 |Leeres Projekt|Ein leeres Projekt zum Erstellen einer Anwendung, Bibliothek oder DLL. Sie müssen erforderlichen Code oder Ressourcen hinzufügen.|
-|[Makefile-Projekt](creating-a-makefile-project.md)|Ein Projekt, das eine Windows-Makefile in einem Visual Studio-Projekt umschließt. (Öffnen Sie eine Makefile als-ist in Visual Studio verwenden [Ordner öffnen](../open-folder-projects-cpp.md).|
-|Projekt mit freigegebenen Elementen|Ein Projekt für die Freigabe von Dateien mit Code oder Ressourcendateien zwischen mehreren Projekten verwendet wird. Dieser Projekttyp wird eine ausführbare Datei nicht erstellt werden.|
+|[Makefile-Projekt](creating-a-makefile-project.md)|Ein Projekt, das ein Windows-Makefile-Element in einem Visual Studio-Projekt umschließt. (Um das Makefile-Element unverändert in Visual Studio zu öffnen, verwenden Sie [Ordner öffnen](../open-folder-projects-cpp.md).|
+|Projekt mit freigegebenen Elementen|Ein Projekt, das für die Freigabe von Code Dateien oder Ressourcen Dateien zwischen mehreren Projekten verwendet wird. Dieser Projekttyp erzeugt keine ausführbare Datei.|
 
 ### <a name="atl"></a>ATL
 

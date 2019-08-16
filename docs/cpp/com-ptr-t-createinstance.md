@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - CreateInstance method [C++]
 ms.assetid: ab89b0e1-9da3-4784-a079-58b17340f111
-ms.openlocfilehash: c4f6cd54b90ab5fab69f91df67a8bf60b0b658f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b180b3f40683495ed2cfa284bdae8e1afaef9e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399357"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498661"
 ---
-# <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
+# <a name="_com_ptr_tcreateinstance"></a>_com_ptr_t::CreateInstance
 
 **Microsoft-spezifisch**
 
-Erstellt eine neue Instanz eines angegebenen Objekts an eine `CLSID` oder `ProgID`.
+Erstellt eine neue Instanz eines-Objekts, wenn `CLSID` ein `ProgID`oder ein angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,29 +42,29 @@ HRESULT CreateInstance(
 #### <a name="parameters"></a>Parameter
 
 *rclsid*<br/>
-Die `CLSID` eines Objekts.
+Der `CLSID` eines Objekts.
 
 *clsidString*<br/>
-Eine Unicode-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.
+Eine Unicode-Zeichenfolge, die `CLSID` entweder eine (beginnend mit " **{** `ProgID`") oder enthält.
 
 *clsidStringA*<br/>
-Eine mehrbytezeichenfolge mit der ANSI-Codepage, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.
+Eine Multibytezeichenfolge, die die ANSI-Codepage verwendet `CLSID` , die entweder eine (beginnend mit " **{** ") oder eine `ProgID`enthält.
 
 *dwClsContext*<br/>
 Kontext für die Ausführung von ausführbarem Code.
 
 *pOuter*<br/>
-Die äußere unbekannte für [Aggregation](../atl/aggregation.md).
+Das äußere unbekannte für die [Aggregation](../atl/aggregation.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Memberfunktionen rufen `CoCreateInstance` auf, um ein neues COM-Objekt zu erstellen, und fragen dann den Schnittstellentyp dieses intelligenten Zeigers ab. Das Zeigerergebnis wird dann innerhalb dieses `_com_ptr_t`-Objekts gekapselt. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern. Diese Routine gibt zurück, das HRESULT, um den Erfolg oder Fehler anzuzeigen.
+Diese Memberfunktionen rufen `CoCreateInstance` auf, um ein neues COM-Objekt zu erstellen, und fragen dann den Schnittstellentyp dieses intelligenten Zeigers ab. Das Zeigerergebnis wird dann innerhalb dieses `_com_ptr_t`-Objekts gekapselt. `Release`wird aufgerufen, um den Verweis Zähler für den zuvor gekapselten Zeiger zu verringern. Diese Routine gibt das HRESULT zurück, um einen Erfolg oder Fehler anzugeben.
 
 - **CreateInstance (**  *Rclsid* **,**  *DwClsContext*  **)** erstellt eine neue ausgeführte Instanz eines Objekts, dem ein `CLSID`.
 
-- **CreateInstance (**  *ClsidString* **,**  *DwClsContext* **)** erstellt eine neue ausgeführte Instanz eines angegebenen Objekts an eine Unicode-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.
+- **CreateInstance (**  *ClsidString* **,**  *DwClsContext* **)** erstellt eine neue ausgeführte Instanz eines angegebenen Objekts an eine Unicode-Zeichenfolge, die entweder eine `CLSID` (beginnend mit " **{** ") oder ein `ProgID`.
 
-- **CreateInstance (**  *ClsidStringA* **,**  *DwClsContext*  **)** erstellt eine neue ausgeführte Instanz eines angegebenen Objekts an eine Multibyte-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`. Aufrufe [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), dem wird davon ausgegangen, dass die Zeichenfolge in die ANSI-Codepage anstatt eine OEM-Codepage.
+- **CreateInstance (**  *ClsidStringA* **,**  *DwClsContext*  **)** erstellt eine neue ausgeführte Instanz eines angegebenen Objekts an eine Multibyte-Zeichenfolge, die entweder eine `CLSID` (beginnend mit " **{** ") oder ein `ProgID`. Ruft [multibytedewidechar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)auf, bei dem davon ausgegangen wird, dass die Zeichenfolge in der ANSI-Codepage statt in einer OEM-Codepage ist.
 
 **Ende Microsoft-spezifisch**
 

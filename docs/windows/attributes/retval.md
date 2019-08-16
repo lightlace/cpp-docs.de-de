@@ -1,21 +1,21 @@
 ---
-title: Retval (C++-COM-Attribut)
+title: retval (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.retval
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407405"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514045"
 ---
 # <a name="retval"></a>retval
 
-Legt fest, den Parameter, der den Rückgabewert des Members empfängt.
+Gibt den Parameter an, der den Rückgabewert des Members empfängt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,13 +25,13 @@ Legt fest, den Parameter, der den Rückgabewert des Members empfängt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Retval** C++-Attribut hat die gleiche Funktionalität wie die [Retval](/windows/desktop/Midl/retval) MIDL-Attribut.
+Das **retval** C++ -Attribut verfügt über die gleiche Funktionalität wie das " [retval](/windows/win32/Midl/retval) "-Attribut "Mittel l".
 
-**Retval** muss für das letzte Argument in einer Funktion Deklaration angezeigt werden.
+**retval** muss für das letzte Argument in der Deklaration einer Funktion angezeigt werden.
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [bindbare](bindable.md) für ein Beispiel für die Verwendung von **Retval**.
+Eine Beispiel Verwendung von **retval**finden Sie im Beispiel für [bindbare](bindable.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,7 +39,7 @@ Siehe das Beispiel für [bindbare](bindable.md) für ein Beispiel für die Verwe
 
 |||
 |-|-|
-|**Betrifft**|Parameter, für die Schnittstellenmethode|
+|**Betrifft**|Schnittstellenparameter, Schnittstellen Methode|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|**out**|
 |**Ungültige Attribute**|**in**|

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-ms.openlocfilehash: 394aac779fceb4d9d5918e4a5ad36eee8be896ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97cf05f881949444879b0d48e3b3c2703a614985
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321461"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498232"
 ---
 # <a name="managed-resources-property-page"></a>Verwaltete Ressourcen (Eigenschaftenseite)
 
@@ -33,10 +33,10 @@ Die Eigenschaftenseite **Verwaltete Ressourcen** enthält die folgenden Eigensch
 
    Gibt an, ob die angegebene RESX-Datei zu den Standardressourcen oder einer Satelliten-DLL beiträgt.
 
-Informationen zum Zugreifen auf die **verwaltete Ressourcen** auf der Seite finden Sie unter [Festlegen von C++-Compiler und die Build-Eigenschaften in Visual Studio](../working-with-project-properties.md).
+Informationen dazu, wie Sie auf die Eigenschaften Seite für **verwaltete Ressourcen** zugreifen, finden Sie unter [festlegen C++ von Compiler-und Buildeigenschaften in Visual Studio](../working-with-project-properties.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Verwenden des Ressourcencompilers (RC-Befehlszeile)](/windows/desktop/menurc/using-rc-the-rc-command-line-)<br>
-[Referenz für C++-Projekt Seite](property-pages-visual-cpp.md)<br>
+[Verwenden des Ressourcencompilers (RC-Befehlszeile)](/windows/win32/menurc/using-rc-the-rc-command-line-)<br>
+[C++Referenz zur Projekteigenschaften Seite](property-pages-visual-cpp.md)<br>
 [/ASSEMBLYRESOURCE (Verwaltete Ressource einbetten)](assemblyresource-embed-a-managed-resource.md)
