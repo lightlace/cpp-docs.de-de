@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 08654eed7ad467dc22d2cbbf811c9169e5292f16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67f6303e73da42db5efd006bd6cdf3ded5bb8cf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407145"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513869"
 ---
-# <a name="v1enum"></a>v1_enum
+# <a name="v1_enum"></a>v1_enum
 
-Wird angewiesen, der angegebene enumerierten Typ als eine 32-Bit-Entität statt der 16-Bit-Standard übertragen werden.
+Leitet, dass der angegebene Enumerationstyp als 32-Bit-Entität und nicht als 16-Bit-Standardwert übertragen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Wird angewiesen, der angegebene enumerierten Typ als eine 32-Bit-Entität statt 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **v1_enum** C++ Attribut hat die gleiche Funktionalität wie die [v1_enum](/windows/desktop/Midl/v1-enum) MIDL-Attribut.
+Das **v1_enum** C++ -Attribut verfügt über die gleiche Funktionalität wie das [v1_enum](/windows/win32/Midl/v1-enum) -Mittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code veranschaulicht die Verwendung der **v1_enum**:
+Der folgende Code zeigt die Verwendung von **v1_enum**:
 
 ```cpp
 // cpp_attr_ref_v1_enum.cpp
@@ -48,10 +48,10 @@ enum eList {
 
 |||
 |-|-|
-|**Betrifft**|Enumerationstyp|
+|**Betrifft**|Enumerierter Typ|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

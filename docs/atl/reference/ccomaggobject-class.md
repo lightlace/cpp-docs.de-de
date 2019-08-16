@@ -17,16 +17,16 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 52cdddb1d922ca21e24122422ca14d9c12d13a83
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b05284104f9d2e5e7704bceaee6f8adf9a33aac
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259923"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497658"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject-Klasse
 
-Diese Klasse implementiert die [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) Schnittstelle für ein zusammengesetztes Objekt. Definitionsgemäß ist ein zusammengesetztes Objekt in einem äußeren Objekt enthalten. Die `CComAggObject` Klasse ist vergleichbar mit der [CComObject-Klasse](../../atl/reference/ccomobject-class.md), außer dass er eine Schnittstelle verfügbar macht, die für externe Clients direkt zugegriffen werden kann.
+Diese Klasse implementiert die [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle für ein aggregiertes Objekt. Definitionsgemäß ist ein aggregiertes Objekt in einem äußeren Objekt enthalten. Die `CComAggObject` -Klasse ähnelt der [CComObject-Klasse](../../atl/reference/ccomobject-class.md), mit der Ausnahme, dass Sie eine Schnittstelle verfügbar macht, auf die externe Clients direkt zugreifen können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,8 +38,8 @@ class CComAggObject : public IUnknown,
 
 #### <a name="parameters"></a>Parameter
 
-*contained*<br/>
-Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über andere Schnittstellen für das Objekt unterstützt werden sollen.
+*ständige*<br/>
+Die von [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)abgeleitete Klasse sowie von anderen Schnittstellen, die Sie für das Objekt unterstützen möchten.
 
 ## <a name="members"></a>Member
 
@@ -54,24 +54,24 @@ Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-cl
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CComAggObject::AddRef](#addref)|Inkrementiert den Verweiszähler des aggregierten Objekts.|
-|[CComAggObject::CreateInstance](#createinstance)|Diese statischen Funktion können Sie zum Erstellen eines neuen **CComAggObject <** `contained` **>** Objekt ohne den Aufwand für [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|
-|[CComAggObject::FinalConstruct](#finalconstruct)|Führt die endgültige Initialisierung der `m_contained`.|
-|[CComAggObject::FinalRelease](#finalrelease)|Führt die endgültige Löschung von `m_contained`.|
+|[CComAggObject::AddRef](#addref)|Inkremente den Verweis Zähler für das aggregierte Objekt.|
+|[CComAggObject::CreateInstance](#createinstance)|Diese statische Funktion ermöglicht es Ihnen, ein neues **CComAggObject** `contained` -Objekt < **>** zu erstellen, ohne den Aufwand von [cokreateinstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)zu erhöhen.|
+|[CComAggObject::FinalConstruct](#finalconstruct)|Führt die abschließende Initialisierung `m_contained`von aus.|
+|[CComAggObject::FinalRelease](#finalrelease)|Führt die endgültige Zerstörung `m_contained`von aus.|
 |[CComAggObject::QueryInterface](#queryinterface)|Ruft einen Zeiger auf die angeforderte Schnittstelle ab.|
-|[CComAggObject::Release](#release)|Dekrementiert den Verweiszähler des aggregierten Objekts.|
+|[CComAggObject::Release](#release)|Dekremente den Verweis Zähler für das aggregierte Objekt.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CComAggObject::m_contained](#m_contained)|Delegaten `IUnknown` Aufrufe an die äußere unbekannte.|
+|[CComAggObject::m_contained](#m_contained)|Delegiert `IUnknown` Aufrufe an das äußere unbekannte.|
 
 ## <a name="remarks"></a>Hinweise
 
-`CComAggObject` implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) für ein zusammengesetztes Objekt. `CComAggObject` verfügt über eine eigene `IUnknown` -Schnittstelle, des äußeren Objekts als `IUnknown` -Schnittstelle und verwaltet einen eigenen Verweiszähler.
+`CComAggObject`implementiert [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) für ein aggregiertes Objekt. `CComAggObject`verfügt über eine `IUnknown` eigene Schnittstelle, die von der `IUnknown` Schnittstelle des äußeren Objekts getrennt ist und einen eigenen Verweis Zähler beibehält.
 
-Weitere Informationen über die Aggregation finden Sie im Artikel [Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md).
+Weitere Informationen zur Aggregation finden Sie im Artikel [Grundlagen von ATL-COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -85,11 +85,11 @@ Weitere Informationen über die Aggregation finden Sie im Artikel [Grundlagen vo
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlcom.h
+**Header:** Atlcom. h
 
-##  <a name="addref"></a>  CComAggObject::AddRef
+##  <a name="addref"></a>CComAggObject:: adressf
 
-Inkrementiert den Verweiszähler des aggregierten Objekts.
+Inkremente den Verweis Zähler für das aggregierte Objekt.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -97,9 +97,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Wert, der möglicherweise bei der Diagnose hilfreich oder testen.
+Ein Wert, der für die Diagnose oder das Testen nützlich sein kann.
 
-##  <a name="ccomaggobject"></a>  CComAggObject::CComAggObject
+##  <a name="ccomaggobject"></a>CComAggObject:: CComAggObject
 
 Der Konstruktor.
 
@@ -109,16 +109,16 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>Parameter
 
-*pv*<br/>
-[in] Die äußere unbekannte.
+*teuren*<br/>
+in Das äußere unbekannte.
 
 ### <a name="remarks"></a>Hinweise
 
-Initialisiert die `CComContainedObject` Member [M_contained](#m_contained), und erhöht die Sperrenanzahl des Moduls.
+Initialisiert den `CComContainedObject` Member [m_contained](#m_contained)und Inkremente die Anzahl der Modul sperren.
 
-Der Destruktor verringert die Modul Sperrenanzahl.
+Der Dekonstruktor Dekremente die Modul Sperr Anzahl.
 
-##  <a name="dtor"></a>  CComAggObject:: ~ CComAggObject
+##  <a name="dtor"></a>CComAggObject:: ~ CComAggObject
 
 Der Destruktor.
 
@@ -128,11 +128,11 @@ Der Destruktor.
 
 ### <a name="remarks"></a>Hinweise
 
-Alle zugeordnete Ressourcen freigegeben, Aufrufe [FinalRelease](#finalrelease), und verringert die Modul Sperrenanzahl.
+Gibt alle zugeordneten Ressourcen frei, ruft [FinalRelease](#finalrelease)auf und Dekremente die Anzahl der Modul sperren.
 
-##  <a name="createinstance"></a>  CComAggObject::CreateInstance
+##  <a name="createinstance"></a>CComAggObject:: up-Eingabe
 
-Diese statischen Funktion können Sie zum Erstellen eines neuen **CComAggObject <** `contained` **>** Objekt ohne den Aufwand für [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+Diese statische Funktion ermöglicht es Ihnen, ein neues **CComAggObject** `contained` -Objekt < **>** zu erstellen, ohne den Aufwand von [cokreateinstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)zu erhöhen.
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -143,21 +143,21 @@ static HRESULT WINAPI CreateInstance(
 ### <a name="parameters"></a>Parameter
 
 *pp*<br/>
-[out] Ein Zeiger auf eine **CComAggObject\<**<em>enthaltenen</em> **>** Zeiger. Wenn `CreateInstance` nicht erfolgreich ist, ist *pp* auf NULL festgelegt ist.
+vorgenommen Ein Zeiger auf einen<em>enthaltenen</em> **>** **\<CComAggObject**-Zeiger. Wenn `CreateInstance` nicht erfolgreich ist, wird *PP* auf NULL festgelegt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein standard HRESULT-Wert.
+Ein HRESULT-Standardwert.
 
 ### <a name="remarks"></a>Hinweise
 
-Das zurückgegebene Objekt weist einer Verweisanzahl von 0 (null), weshalb `AddRef` verwenden Sie dann sofort `Release` , den Verweis auf den Objektzeiger freizugeben, wenn Sie fertig sind.
+Das zurückgegebene Objekt hat einen Verweis Zähler von NULL. führen `AddRef` Sie daher sofort einen `Release` Rückruf aus, und verwenden Sie dann, um den Verweis auf den Objekt Zeiger freizugeben, wenn Sie fertig sind.
 
-Wenn Sie die nicht den Zugriff auf das Objekt weisen müssen, aber dennoch, erstellen Sie ein neues Objekt ohne den Aufwand für möchten `CoCreateInstance`, verwenden Sie [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) stattdessen.
+Wenn Sie keinen direkten Zugriff auf das Objekt benötigen, aber trotzdem ein neues Objekt ohne den mehr Aufwand von `CoCreateInstance`erstellen möchten, verwenden Sie stattdessen [CComCoClass:: kreateinstance](../../atl/reference/ccomcoclass-class.md#createinstance) .
 
-##  <a name="finalconstruct"></a>  CComAggObject::FinalConstruct
+##  <a name="finalconstruct"></a>CComAggObject:: FinalConstruct
 
-Wird aufgerufen, während der letzten Stufen der Objektkonstruktion, diese Methode führt endgültige Initialisierung der [M_contained](#m_contained) Member.
+Wird während der letzten Phasen der Objekt Erstellung aufgerufen. diese Methode führt jede abschließende Initialisierung für den [m_contained](#m_contained) -Member aus.
 
 ```
 HRESULT FinalConstruct();
@@ -165,19 +165,19 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein standard HRESULT-Wert.
+Ein HRESULT-Standardwert.
 
-##  <a name="finalrelease"></a>  CComAggObject::FinalRelease
+##  <a name="finalrelease"></a>CComAggObject:: FinalRelease
 
-Diese Methode aufgerufen wird, während die Zerstörung von Objekten, freigegeben werden. die [M_contained](#m_contained) Member.
+Wird während der Objekt Zerstörung aufgerufen, gibt diese Methode den [m_contained](#m_contained) -Member frei.
 
 ```
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>  CComAggObject::m_contained
+##  <a name="m_contained"></a>CComAggObject:: m_contained
 
-Ein [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) von Ihrer Klasse abgeleitetes Objekt.
+Ein [ccomcontainedobject](../../atl/reference/ccomcontainedobject-class.md) -Objekt, das von der-Klasse abgeleitet ist.
 
 ```
 CComContainedObject<contained> m_contained;
@@ -185,14 +185,14 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parameter
 
-*contained*<br/>
-[in] Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über andere Schnittstellen für das Objekt unterstützt werden sollen.
+*ständige*<br/>
+in Die von [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)abgeleitete Klasse sowie von anderen Schnittstellen, die Sie für das Objekt unterstützen möchten.
 
 ### <a name="remarks"></a>Hinweise
 
-Alle `IUnknown` ruft `m_contained` werden an die äußere unbekannte delegiert.
+Alle `IUnknown` Aufrufe durch `m_contained` werden an den äußeren unbekannten delegiert.
 
-##  <a name="queryinterface"></a>  CComAggObject::QueryInterface
+##  <a name="queryinterface"></a>CComAggObject:: QueryInterface
 
 Ruft einen Zeiger auf die angeforderte Schnittstelle ab.
 
@@ -205,25 +205,25 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="parameters"></a>Parameter
 
 *iid*<br/>
-[in] Der Bezeichner der angeforderten Schnittstelle.
+in Der Bezeichner der angeforderten Schnittstelle.
 
 *ppvObject*<br/>
-[out] Ein Zeiger auf den Schnittstellenzeiger vom *Iid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *PpvObject* auf NULL festgelegt ist.
+vorgenommen Ein Zeiger auf den Schnittstellen Zeiger, der durch *IID*identifiziert wird. Wenn das Objekt diese Schnittstelle nicht unterstützt, wird *ppvobject* auf NULL festgelegt.
 
 *pp*<br/>
-[out] Ein Zeiger auf den Schnittstellenzeiger vom Typ `Q`. Wenn das Objekt nicht über diese Schnittstelle unterstützt *pp* auf NULL festgelegt ist.
+vorgenommen Ein Zeiger auf den Schnittstellen Zeiger, der durch `Q`den-Typ identifiziert wird. Wenn das Objekt diese Schnittstelle nicht unterstützt, wird *PP* auf NULL festgelegt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein standard HRESULT-Wert.
+Ein HRESULT-Standardwert.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die angeforderte Schnittstelle wird `IUnknown`, `QueryInterface` gibt einen Zeiger auf die aggregierten Objekts `IUnknown` und inkrementiert den Verweiszähler. Andernfalls Schnittstelle durch diese Methode fragt den `CComContainedObject` Member [M_contained](#m_contained).
+Wenn die angeforderte Schnitt `IUnknown`Stelle `QueryInterface` ist, gibt einen Zeiger auf den eigenen `IUnknown` des aggregierten Objekts zurück und erhöht den Verweis Zähler. Andernfalls fragt diese Methode die Schnittstelle über den `CComContainedObject` Member ab, [m_contained](#m_contained).
 
-##  <a name="release"></a>  CComAggObject::Release
+##  <a name="release"></a>CComAggObject:: Release
 
-Dekrementiert den Verweiszähler des aggregierten Objekts.
+Dekremente den Verweis Zähler für das aggregierte Objekt.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -231,7 +231,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Rückgabewert
 
-In Debugbuilds `Release` gibt einen Wert an, die möglicherweise bei der Diagnose hilfreich oder Tests zurück. In nicht-Debugbuilds `Release` gibt immer 0 zurück.
+In Debugbuilds `Release` gibt einen Wert zurück, der für die Diagnose oder das Testen nützlich sein kann. In nicht Debugbuilds `Release` gibt immer 0 zurück.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -240,4 +240,4 @@ In Debugbuilds `Release` gibt einen Wert an, die möglicherweise bei der Diagnos
 [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
 [DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
 [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)
+[Klassen Übersicht](../../atl/atl-class-overview.md)

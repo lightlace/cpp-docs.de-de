@@ -1587,7 +1587,7 @@
     - name: 'Exemplarische Vorgehensweise: Erstellen von Windows-Desktopanwendungen'
       href: windows/walkthrough-creating-windows-desktop-applications-cpp.md
     - name: Windows-Desktop-Assistent
-      href: windows/win32-application-wizard.md
+      href: windows/windows-desktop-wizard.md
     - name: Active Template Library (ATL)
       href: atl/
     - name: Microsoft Foundation Classes (MFC)
@@ -1607,10 +1607,6 @@
               items:
                 - name: 'Datum und Uhrzeit: Übersicht'
                   href: atl-mfc-shared/date-and-time.md
-                - name: 'Datum und Uhrzeit: Automatisierungsunterstützung'
-                  href: atl-mfc-shared/date-and-time-automation-support.md
-                - name: 'Datum und Uhrzeit: Datenbankunterstützung'
-                  href: atl-mfc-shared/date-and-time-database-support.md
                 - name: DATE-Typ
                   href: atl-mfc-shared/date-type.md
             - name: Zeichenfolgen (ATL/MFC)
@@ -2888,6 +2884,8 @@
 - name: Referenz
   expanded: false
   items:
+    - name: C/C++-Sprache und -Standardbibliotheken
+      href: cpp/c-cpp-language-and-standard-libraries.md
     - name: Sprachreferenz
       expanded: false
       items:

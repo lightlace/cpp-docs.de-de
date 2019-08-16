@@ -1,5 +1,5 @@
 ---
-title: Standard (C++-COM-Attribut)
+title: Standard (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: c6448b00fef50a7654816a2c39af2943db12d314
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148080"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501681"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -33,17 +33,17 @@ Die Standardschnittstelle, die für Skriptumgebungen verfügbar gemacht wird, di
 Wenn keine Standardschnittstelle angegeben wird, wird das erste Vorkommen einer Nicht-Quellschnittstelle als Standard verwendet.
 
 *interface2*<br/>
-(Optional) Die Standard-Quellschnittstelle. Sie müssen diese Schnittstelle auch beim [source](source-cpp.md) -Attribut angeben.
+Optionale Die Standard-Quell Schnittstelle. Sie müssen diese Schnittstelle auch beim [source](source-cpp.md) -Attribut angeben.
 
 Wenn keine Standard-Quellschnittstelle angegeben ist, wird die erste Quellschnittstelle als Standard verwendet.
 
 ## <a name="remarks"></a>Hinweise
 
-Das C++-Attribut **default** hat die gleiche Funktion wie das MIDL-Attribut [default](/windows/desktop/Midl/default) . Das **default** -Attribut wird auch mit dem [case](case-cpp.md) -Attribut verwendet.
+Das C++-Attribut **default** hat die gleiche Funktion wie das MIDL-Attribut [default](/windows/win32/Midl/default) . Das **default** -Attribut wird auch mit dem [case](case-cpp.md) -Attribut verwendet.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende code zeigt, wie **Standard** werden auf der Definition einer Co-Klasse angegeben `ICustomDispatch` als Standard-Programmierschnittstelle:
+Der folgende Code zeigt, wie **default** für die Definition einer Co-Klasse verwendet wird, `ICustomDispatch` um als standardmäßige Programmierbarkeits Schnittstelle anzugeben:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -99,10 +99,10 @@ Das [source](source-cpp.md) -Attribut weist außerdem ein Beispiel zum Verwenden
 
 |||
 |-|-|
-|**Betrifft**|**Klasse**, **Struktur**,-Datenmember|
+|**Betrifft**|**Klasse**, **Struktur**, Datenmember|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|**Co-Klasse** (bei Anwendung auf **Klasse** oder **Struktur**)|
-|**Ungültige Attribute**|Keiner|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

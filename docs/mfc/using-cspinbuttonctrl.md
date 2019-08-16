@@ -9,27 +9,27 @@ helpviewer_keywords:
 - spin button control
 - CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
-ms.openlocfilehash: 6bb663b6ff9b9b039bd774f6e607c7acdb1c4b11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2a12672f0e70248e135bdd177b76589b6197c75
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411720"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513465"
 ---
 # <a name="using-cspinbuttonctrl"></a>Verwenden von CSpinButtonCtrl
 
-Die *Drehfeld* Control (auch bekannt als ein *nach oben und unten* Steuerelement) bietet von einem Paar Pfeilen, die ein Benutzer klicken kann, um einen Wert anzupassen. Dieser Wert wird als bezeichnet die *aktuelle Position*. Die Position bleibt innerhalb des Bereichs von der Schaltfläche "starten". Klickt der Benutzer auf den Pfeil nach oben, verschiebt die Position, für die maximale Anzahl; und klickt der Benutzer auf den Pfeil nach unten, verschiebt die Position in Richtung Minimum.
+Das *Drehfeld* -Steuerelement (auch als *auf-ab-* Steuerelement bezeichnet) stellt ein paar von Pfeilen bereit, auf die ein Benutzer klicken kann, um einen Wert anzupassen. Dieser Wert wird als *aktuelle Position*bezeichnet. Die Position bleibt im Bereich der Drehfeld Schaltfläche. Wenn der Benutzer auf den Pfeil nach oben klickt, wird die Position nach oben verschoben. Wenn der Benutzer auf den Pfeil nach unten klickt, wird die Position auf den Minimalpunkt verschoben.
 
-Das Drehfeld-Steuerelement wird in MFC nach dargestellt die [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) Klasse.
+Das Drehfeld-Steuerelement wird in MFC durch die [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) -Klasse dargestellt.
 
 > [!NOTE]
->  Standardmäßig verfügt über der Bereich für die Schaltfläche "starten", das Maximum auf 0 (null) und das Minimum auf 100 festgelegt. Da der maximale Wert kleiner als der minimale Wert ist, wird auf den Pfeil nach oben die Position verringert, und klicken Sie auf den Pfeil nach unten wird vergrößert. Verwendung [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) zum Anpassen dieser Werte.
+>  Standardmäßig ist für den Bereich für die Dreh Schaltfläche der Höchstwert auf NULL (0) und der Minimalwert auf 100 festgelegt. Da der Höchstwert kleiner als der minimale Wert ist, wird durch Klicken auf den Pfeil nach oben die Position verringert, und durch Klicken auf den Pfeil nach unten wird er vergrößert. Verwenden Sie [CSpinButtonCtrl:: ctrange](../mfc/reference/cspinbuttonctrl-class.md#setrange) , um diese Werte anzupassen.
 
-In der Regel wird die aktuelle Position in einem weiteren Steuerelement angezeigt. Das zugehörige Steuerelement heißt die *Buddy-Fenster*. Eine Abbildung ein Drehfeld-Steuerelement, finden Sie unter [-ab-Steuerelemente](/windows/desktop/Controls/up-down-controls) im Windows SDK.
+In der Regel wird die aktuelle Position in einem Begleit Steuerelement angezeigt. Das Begleit Steuerelement wird als *Buddy-Fenster*bezeichnet. Eine Abbildung eines Drehfeld-Steuer Elements finden [Sie unter Informationen zu auf-ab-Steuerelementen](/windows/win32/Controls/up-down-controls) in der Windows SDK.
 
-Um ein Drehfeld-Steuerelement und eine Bearbeiten-Steuerelement Buddy-Fenster in Visual Studio zu erstellen, ziehen Sie zuerst ein Bearbeitungssteuerelement zum Dialogfeld oder Fenster, und ziehen Sie dann ein Drehfeld-Steuerelement. Wählen Sie das Drehfeld-Steuerelement, und legen Sie dessen **Auto Buddy** und **Buddy Integer festgelegt** Eigenschaften **"true"**. Legen Sie auch die **Ausrichtung** Eigenschaft **Rechts auszurichten** häufigste ist. Mit diesen Einstellungen wird das Steuerelement zum Bearbeiten als das Buddyfenster festgelegt, da sie direkt das Bearbeitungssteuerelement in der Aktivierreihenfolge vorangestellt ist. Das Bearbeitungssteuerelement Zeigt ganze Zahlen ein, und das Drehfeld-Steuerelement in der rechten Seite des Bearbeitungssteuerelements eingebettet ist. Optional können Sie mithilfe des gültigen Bereichs des Drehfeld-Steuerelements festlegen der [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) Methode. Keine Ereignishandler sind erforderlich, zwischen dem Drehfeld-Steuerelement und Buddy-Fenster zu kommunizieren, da sie Daten direkt austauschen. Wenn Sie ein Drehfeld-Steuerelement zu einem anderen Zweck verwenden, z. B. um die Seite werden eine Sequenz von Fenster oder Dialogfelder, fügen Sie dann einen Handler für die Nachricht UDN_DELTAPOS hinzu und führen Sie gibt es für Ihre benutzerdefinierte Aktion aus.
+Um ein Drehfeld-Steuerelement und ein Bearbeitungs Steuerelement-Buddy-Fenster zu erstellen, ziehen Sie in Visual Studio zuerst ein Bearbeitungs Steuerelement in das Dialogfeld oder Fenster, und ziehen Sie dann ein Drehfeld. Wählen Sie das Drehfeld-Steuerelement aus, und legen Sie dessen **autobuddy** fest, und **legen** Sie die Eigenschaften der Legen Sie außerdem die **Alignment** -Eigenschaft fest. **Rechts** bündig ist am häufigsten. Mit diesen Einstellungen wird das Bearbeitungs Steuerelement als Buddy-Fenster festgelegt, da es direkt vor dem Bearbeitungs Steuerelement in der Aktivier Reihenfolge steht. Das Bearbeitungs Steuerelement zeigt ganze Zahlen an, und das Drehfeld-Steuerelement wird auf der rechten Seite des Bearbeitungs Steuer Elements eingebettet. Optional können Sie den gültigen Bereich des Drehfeld-Steuer Elements mithilfe der [CSpinButtonCtrl:: SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) -Methode festlegen. Es sind keine Ereignishandler erforderlich, um zwischen dem Drehfeld-Steuerelement und dem Buddy-Fenster zu kommunizieren, da Sie Daten direkt austauschen. Wenn Sie ein Drehfeld-Steuerelement für einen anderen Zweck verwenden, z. b. um eine Sequenz von Fenstern oder Dialogfeldern zu durchsuchen, fügen Sie einen Handler für die UDN_DELTAPOS-Nachricht hinzu, und führen Sie dort Ihre benutzerdefinierte Aktion aus.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren?
 
 - [Drehfeld-Schaltflächenstile](../mfc/spin-button-styles.md)
 

@@ -1,21 +1,21 @@
 ---
-title: DefaultValue (C++-COM-Attribut)
+title: DefaultValue (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147963"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490919"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
-Ermöglicht die Angabe eines Standardwerts für einen typisierten optionalen Parameter.
+Ermöglicht die Angabe eines Standardwerts für einen eingegebenen optionalen Parameter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,15 +26,15 @@ Ermöglicht die Angabe eines Standardwerts für einen typisierten optionalen Par
 ### <a name="parameters"></a>Parameter
 
 *value*<br/>
-Der Standardwert für den Parameter.
+Der Standardwert für den-Parameter.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Defaultvalue** C++-Attribut hat die gleiche Funktionalität wie die [Defaultvalue](/windows/desktop/Midl/defaultvalue) MIDL-Attribut.
+Das **DefaultValue** C++ -Attribut verfügt über die gleiche Funktionalität wie das-Attribut [DefaultValue](/windows/win32/Midl/defaultvalue) .
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt eine Schnittstelle-Methode mit dem **Defaultvalue** Attribut:
+Der folgende Code zeigt eine Schnittstellen Methode, die das **DefaultValue** -Attribut verwendet:
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp
@@ -62,8 +62,8 @@ __interface IFireTabCtrl : IDispatch {
 |-|-|
 |**Betrifft**|Schnittstellenparameter|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

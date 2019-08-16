@@ -1,21 +1,21 @@
 ---
-title: ODL-(C++-COM-Attribut)
+title: ODL (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.odl
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: 90f9f1df23542138b2fac0dcfe0e122f1993d805
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ae1aa7f27348e37c565b35e3dc0b2b1011c9cb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407639"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514318"
 ---
 # <a name="odl"></a>odl
 
-Gibt eine Schnittstelle als Schnittstelle Objekt Description Language (ODL). Der MIDL-Compiler ist nicht erforderlich. die **Odl** Attributgruppen; es wird nur für die Kompatibilität mit älteren ODL-Dateien erkannt.
+Identifiziert eine Schnittstelle als Object Description Language (ODL)-Schnittstelle. Der mittlerer l-Compiler benötigt das **ODL** -Attribut nicht. Sie wird nur aus Gründen der Kompatibilität mit älteren ODL-Dateien erkannt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,7 +25,7 @@ Gibt eine Schnittstelle als Schnittstelle Objekt Description Language (ODL). Der
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Odl** C++-Attribut hat die gleiche Funktionalität wie die [Odl](/windows/desktop/Midl/odl) MIDL-Attribut.
+Das **ODL** C++ -Attribut verfügt über die gleiche Funktionalität wie das [ODL](/windows/win32/Midl/odl) -Attribut "Mittel l".
 
 ## <a name="example"></a>Beispiel
 
@@ -57,8 +57,8 @@ public:
 |-|-|
 |**Betrifft**|**interface**|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

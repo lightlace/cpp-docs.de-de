@@ -62,19 +62,19 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 04ca1f0b689e68008b3b5a57d01e626ee92a60b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fac7e052c5c1d5525946bdbc599404ac56d47f5a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209747"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499459"
 ---
-# <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
+# <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
 Kopieren von Zeichen aus einer Zeichenfolge in eine andere. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsncpy** und **_mbsncpy_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy** und **_mbsncpy_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -169,20 +169,20 @@ Zu verwendendes Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt *StrDest*. Kein Rückgabewert ist zur Fehleranzeige reserviert.
+Gibt die *schnellste*zurück. Kein Rückgabewert ist zur Fehleranzeige reserviert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strncpy** Funktion übernimmt die anfänglichen *Anzahl* Zeichen *StrSource* zu *StrDest* und gibt *StrDest* . Wenn *Anzahl* ist kleiner oder gleich der Länge der *StrSource*, ein Null-Zeichen wird nicht automatisch an die kopierte Zeichenfolge angefügt. Wenn *Anzahl* ist größer als die Länge des *StrSource*, wird die Zielzeichenfolge mit Nullzeichen bis zur Länge aufgefüllt *Anzahl*. Das Verhalten der **Strncpy** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
+Die Funktion " **strinncpy** " kopiert die anfänglichen *Anzahl* Zeichen von "darsource" in " *strandest* " und gibt " *strandest*" zurück Wenn " *count* " kleiner oder gleich der Länge von " *Strauch*" ist, wird ein NULL-Zeichen nicht automatisch an die kopierte Zeichenfolge angefügt. Wenn *count* größer als die Länge von " *darsource*" ist, wird die Ziel Zeichenfolge mit NULL Zeichen bis zur Längen *Anzahl*aufgefüllt. Das Verhalten von **strncpy** ist nicht definiert, wenn sich die Quell-und Ziel Zeichenfolgen überlappen.
 
 > [!IMPORTANT]
-> **Strncpy** überprüft nicht auf genügend Speicherplatz *StrDest*; dadurch eine mögliche Ursache von Pufferüberläufen. Die *Anzahl* -Argument begrenzt die Anzahl der kopierten Zeichen; es handelt es sich nicht um eine Begrenzung auf die Größe des *StrDest*. Weitere Informationen finden Sie im folgenden Beispiel. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> " **straupie** " prüft nicht, ob ausreichend SpeicherPlatz in der Dadurch wird eine mögliche Ursache von Pufferüberläufen. Das *count* -Argument schränkt die Anzahl der kopierten Zeichen ein. Es handelt sich nicht um eine Begrenzung der Größe von " *strandest*". Weitere Informationen finden Sie im folgenden Beispiel. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Wenn *StrDest* oder *StrSource* ist eine **NULL** -Zeiger ist, oder wenn *Anzahl* ist kleiner als oder gleich 0 (null), wird der Handler für ungültige Parameter aufgerufen, Siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
+Wenn " *strindest* " oder " *strinsource* " ein **null** -Zeiger ist, oder wenn " *count* " kleiner oder gleich NULL ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen-1 zurück und legen **errno** auf **EINVAL**fest.
 
-**Wcsncpy** und **_mbsncpy** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strncpy**. Die Argumente und der Rückgabewert von **Wcsncpy** und **_mbsncpy** unterscheiden sich entsprechend. Diese sechs Funktionen verhalten sich andernfalls identisch.
+**wcsncpy** und **_mbsncpy** sind breit Zeichen-und multibytezeichenversionen von " **strencpy**". Die Argumente und der Rückgabewert von **wcsncpy** und **_mbsncpy** variieren entsprechend. Diese sechs Funktionen verhalten sich andernfalls identisch.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie das Gebietsschema für den übergebenen Gebietsschemaparameter anstelle des aktuellen Gebietsschemas für ihr vom Gebietsschema abhängiges Verhalten verwenden. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch das übergebene Gebiets Schema anstelle des aktuellen Gebiets Schemas für Ihr vom Gebiets Schema abhängiges Verhalten. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -194,7 +194,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l** und **_wcsncpy_l** haben keine gebietsschemaabhängigkeit; sie stehen nur für **_tcsncpy_l** und werden nicht direkt aufgerufen werden soll.
+> **_strncpy_l** und **_wcsncpy_l** haben keine Gebiets Schema Abhängigkeit. Sie werden nur für **_tcsncpy_l** bereitgestellt und sind nicht für den direkten Aufruf vorgesehen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -208,7 +208,7 @@ Weitere Informationen zur Plattformkompatibilität finden Sie unter [Kompatibili
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt die Verwendung von **Strncpy** und wie es missbraucht werden kann, um Programmfehlern und Sicherheitsprobleme entstehen. Der Compiler generiert eine Warnung für jeden Aufruf von **Strncpy** ähnelt **crt_strncpy_x86.c(15):: Warnung C4996: 'Strncpy': Diese Funktion oder Variable ist möglicherweise unsicher. Verwenden Sie stattdessen „strncpy_s“. Zum Deaktivieren der Veraltungswarnung verwenden Sie „_CRT_SECURE_NO_WARNINGS“. Details finden Sie in der Onlinehilfe.**
+Im folgenden Beispiel wird die Verwendung von " **straupie** " veranschaulicht und erläutert, wie Sie missbraucht werden kann, um Programmfehler und Sicherheitsprobleme zu verursachen. Der Compiler generiert eine Warnung für jeden-aufruncpy-aufrub, **ähnlich wie crt_strncpy_x86. c (15): Warning C4996: Diese Funktion oder Variable ist möglicherweise unsicher. Verwenden Sie stattdessen „strncpy_s“. Zum Deaktivieren der Veraltungswarnung verwenden Sie „_CRT_SECURE_NO_WARNINGS“. Details finden Sie in der Onlinehilfe.**
 
 ```C
 // crt_strncpy_x86.c
@@ -262,7 +262,7 @@ int main() {
 }
 ```
 
-Output
+Ausgabe
 
 ```Output
 ZZ

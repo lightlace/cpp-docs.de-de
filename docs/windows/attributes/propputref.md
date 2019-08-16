@@ -1,21 +1,21 @@
 ---
-title: Propputref (C++-COM-Attribut)
+title: propputref (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propputref
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: e471e467c55e0b8a17be96fd1bcb3cd24cfafe06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dc21494886f80890bcfde7f29bb3d6c86b4a51b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407470"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514184"
 ---
 # <a name="propputref"></a>propputref
 
-Gibt eine eigenschaftseinstellungsfunktion an, die einen Verweis anstelle eines Werts verwendet.
+Gibt eine Eigenschafts Einstellungs Funktion an, die einen Verweis anstelle eines Werts verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Gibt eine eigenschaftseinstellungsfunktion an, die einen Verweis anstelle eines 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Propputref** C++-Attribut hat die gleiche Funktionalität wie die [Propputref](/windows/desktop/Midl/propputref) MIDL-Attribut.
+Das **PROPPUTREF** C++ -Attribut verfügt über die gleiche Funktionalität wie das [PROPPUTREF](/windows/win32/Midl/propputref) -Attribut "mittlerl".
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [bindbare](bindable.md) für ein Beispiel für die Verwendung von **Propputref**.
+Eine Beispiel Verwendung von **PROPPUTREF**finden Sie im Beispiel für [bindbare](bindable.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,7 +39,7 @@ Siehe das Beispiel für [bindbare](bindable.md) für ein Beispiel für die Verwe
 |-|-|
 |**Betrifft**|Methode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
 |**Ungültige Attribute**|`propget`, `propput`|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).

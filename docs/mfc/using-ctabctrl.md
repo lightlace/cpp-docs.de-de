@@ -7,20 +7,20 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: 97844fea667edab5a4d1f1a49c3908454a203d1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07452fd52e2da3187e89ceafcd9f74e3f0cb159
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411681"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510786"
 ---
 # <a name="using-ctabctrl"></a>Verwenden von CTabCtrl
 
-Ein "Registerkarten-Steuerelement" entspricht etwa einem Trennblatt in einem Notizbuch oder die bezeichnete Ordner eine CAB-Datei. Verwenden Sie das Registerkarten-Steuerelement, dargestellt durch die Klasse [CTabCtrl](../mfc/reference/ctabctrl-class.md), um mehrere Seiten oder Steuerelemente für einem Benutzer einzeln, in einem Format angezeigt, das ein Peer oder eine logische Beziehung zwischen den einzelnen Seiten vorschlägt.
+Ein Registerkarten-Steuerelement ist analog zu den untergeordneten Elementen in einem Notebook oder den beschrifteten Ordnern in einer Datei CAB-Datei. Verwenden Sie das Registerkarten-Steuerelement, das durch die Klasse [CTabCtrl](../mfc/reference/ctabctrl-class.md)dargestellt wird, um mehreren Seiten von Informationen oder Steuerelementen für einen Benutzer jeweils nacheinander in einem Format anzuzeigen, das eine Peer-oder logische Beziehung zwischen den einzelnen Seiten vorschlägt.
 
-Weitere Informationen zu den Registerkarten-Steuerelementen, finden Sie unter [Registerkarten-Steuerelementen](/windows/desktop/Controls/tab-controls) im Windows SDK.
+Weitere Informationen zu Registerkarten-Steuerelementen finden Sie unter Registerkarten-Steuer [Elemente](/windows/win32/Controls/tab-controls) in der Windows SDK.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren?
 
 - [Registerkarten-Steuerelemente und Eigenschaftenblätter](../mfc/tab-controls-and-property-sheets.md)
 

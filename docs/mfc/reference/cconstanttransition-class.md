@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-ms.openlocfilehash: 9641af2f184d2edaa82922363dff75783e79f87e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccf08b309e64cd82215acb6032bc2a777f4c809a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182183"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507169"
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition-Klasse
 
@@ -35,13 +35,13 @@ class CConstantTransition : public CBaseTransition;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CConstantTransition::CConstantTransition](#cconstanttransition)|Ein Übergangsobjekt erstellt und initialisiert seine Dauer.|
+|[CConstantTransition::CConstantTransition](#cconstanttransition)|Erstellt ein Übergangs Objekt und initialisiert seine Dauer.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CConstantTransition::Create](#create)|Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[Cconstanttransition:: Create](#create)|Ruft die Übergangs Bibliothek auf, um ein gekapseltes Übergangs-com- (Überschreibt [cbasetransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
@@ -51,7 +51,7 @@ class CConstantTransition : public CBaseTransition;
 
 ## <a name="remarks"></a>Hinweise
 
-Bei der einen Konstanten Übergang bleibt der Wert einer Animationsvariablen an den ursprünglichen Wert über die Dauer des Übergangs. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, sie mit dem Operator new. Das gekapselte IUIAnimationTransition COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen des Typs an, nach der Erstellung dieses COM-Objekt hat keine Auswirkungen.
+Während eines konstanten Übergangs verbleibt der Wert einer Animations Variablen während der Übergangs Dauer am ursprünglichen Wert. Da alle Übergänge automatisch gelöscht werden, empfiehlt es sich, diese mithilfe des new-Operators zuzuweisen. Das gekapselte iuianimationtransition com-Objekt wird von canimationcontroller:: animategroup erstellt, bis es NULL ist. Das Ändern von Element Variablen nach der Erstellung dieses COM-Objekts hat keine Auswirkungen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -65,9 +65,9 @@ Bei der einen Konstanten Übergang bleibt der Wert einer Animationsvariablen an 
 
 **Header:** afxanimationcontroller.h
 
-##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition
+##  <a name="cconstanttransition"></a>Cconstanttransition:: cconstanttransition
 
-Ein Übergangsobjekt erstellt und initialisiert seine Dauer.
+Erstellt ein Übergangs Objekt und initialisiert seine Dauer.
 
 ```
 CConstantTransition (UI_ANIMATION_SECONDS duration);
@@ -75,12 +75,12 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Parameter
 
-*duration*<br/>
+*auf*<br/>
 Die Dauer des Übergangs.
 
-##  <a name="create"></a>  CConstantTransition::Create
+##  <a name="create"></a>Cconstanttransition:: Create
 
-Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen.
+Ruft die Übergangs Bibliothek auf, um ein gekapseltes Übergangs-com-
 
 ```
 virtual BOOL Create(
@@ -91,13 +91,13 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parameter
 
 *pLibrary*<br/>
-Ein Zeiger auf ein [IUIAnimationTransitionLibrary Schnittstelle](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), das eine Bibliothek mit standard-Übergänge definiert.
+Ein Zeiger auf eine [iuianimationtransitionlibrary-Schnittstelle](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), die eine Bibliothek von Standard Übergängen definiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn der Übergang erfolgreich erstellt wurde. andernfalls "false".
+TRUE, wenn der Übergang erfolgreich erstellt wurde. andernfalls false.
 
-##  <a name="m_duration"></a>  CConstantTransition::m_duration
+##  <a name="m_duration"></a>Cconstanttransition:: m_duration
 
 Die Dauer des Übergangs.
 

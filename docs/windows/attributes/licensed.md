@@ -1,21 +1,21 @@
 ---
-title: lizenzierte (C++ COM-Attribut)
+title: lizenziert (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.licensed
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 90fba74fb97ce49088145888c3b1925b4ee0829c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c637f9e3f6d99b9f197474f49a1a9843744f38b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409329"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514453"
 ---
 # <a name="licensed"></a>licensed
 
-Gibt an, dass das COM-Objekt, das auf die es angewendet wird lizenziert, und muss mit instanziiert werden `IClassFactory2`.
+Gibt an, dass das COM-Objekt, auf das es angewendet wird, lizenziert ist und mithilfe `IClassFactory2`von instanziiert werden muss.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,7 +25,7 @@ Gibt an, dass das COM-Objekt, das auf die es angewendet wird lizenziert, und mus
 
 ## <a name="remarks"></a>Hinweise
 
-Die **lizenziert** C++-Attribut hat die gleiche Funktionalität wie die [lizenziert](/windows/desktop/Midl/licensed) MIDL-Attribut.
+Das **lizenzierte** C++ Attribut verfügt über die gleiche Funktionalität wie das [lizenzierte](/windows/win32/Midl/licensed) Mittel l-Attribut.
 
 ## <a name="example"></a>Beispiel
 
@@ -54,10 +54,10 @@ public:
 
 |||
 |-|-|
-|**Betrifft**|**class**, **struct**|
+|**Betrifft**|**Klasse**, **Struktur**|
 |**Wiederholbar**|Nein|
 |**Erforderliche Attribute**|`coclass`|
-|**Ungültige Attribute**|Keiner|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

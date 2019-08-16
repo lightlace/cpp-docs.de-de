@@ -1,17 +1,17 @@
 ---
-title: bindbare (C++ COM-Attribut)
+title: bindbare (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 07f446b946d6703c4a8b9ae59ae0edd8172c6879
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148392"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501827"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,19 +25,19 @@ Gibt an, dass die Eigenschaft die Datenbindung unterstützt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **bindbare** C++-Attribut hat die gleiche Funktionalität wie die [bindbare](/windows/desktop/Midl/bindable) MIDL-Attribut. Können Sie sie auf die definierte Eigenschaften mit dem die [Propget](propget.md), [Propput](propput.md), oder [Propputref](propputref.md) Attribute, oder Sie können eine bindbare Methode manuell definieren.
+Das **bindbare** C++ Attribut verfügt über die gleiche Funktionalität wie das [binable](/windows/win32/Midl/bindable) -Attribut "Mittel l". Sie können Sie in Eigenschaften verwenden, die mit den Attributen [propget](propget.md), [PROPPUT](propput.md)oder [PROPPUTREF](propputref.md) definiert wurden, oder Sie können eine bindbare Methode manuell definieren.
 
-Die folgenden MFC-Beispiele veranschaulichen die Verwendung der **bindbare**:
+Die folgenden MFC-Beispiele zeigen die Verwendung von **bindbaren**Elementen:
 
-- [Steuerelementbeispiele: MFC-basierte ActiveX-Steuerelemente](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Beispiele für Steuerelemente: MFC-basierte ActiveX-Steuerelemente](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 - [CIRC-Beispiel: ActiveX-Steuerelement](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [TESTHELP-Beispiel: ActiveX-Steuerelement mit QuickInfos und Hilfe](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [TESTHELP-Beispiel: ActiveX-Steuerelement mit Quick Infos und Hilfe](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt, wie Sie verwenden können **bindbare** für eine Eigenschaft:
+Der folgende Code zeigt, wie Sie **bindbare** für eine Eigenschaft verwenden können:
 
 ```cpp
 // cpp_attr_ref_bindable.cpp
@@ -66,8 +66,8 @@ __interface IPropDemo : IDispatch {
 |-|-|
 |**Betrifft**|Schnittstellenmethode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

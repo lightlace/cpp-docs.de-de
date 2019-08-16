@@ -1,21 +1,21 @@
 ---
-title: Displaybind (C++-COM-Attribut)
+title: Display BIND (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.displaybind
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: b16e809781170d0c5dfe301e6dd73e6a27046835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 168db224e7b15656308259f9507e1079744f1a73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409693"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490890"
 ---
 # <a name="displaybind"></a>displaybind
 
-Gibt eine Eigenschaft, die dem Benutzer als bindungsfähig angezeigt werden soll.
+Gibt eine Eigenschaft an, die dem Benutzer als Bindable angezeigt werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Gibt eine Eigenschaft, die dem Benutzer als bindungsfähig angezeigt werden soll
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Displaybind** C++-Attribut hat die gleiche Funktionalität wie die [Displaybind](/windows/desktop/Midl/displaybind) MIDL-Attribut.
+Das **Display BIND** C++ -Attribut verfügt über die gleiche Funktionalität wie das Attribut " [Display BIND](/windows/win32/Midl/displaybind) " in der Mitte.
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [bindbare](bindable.md) ein Beispiel zur Verwendung für **Displaybind**.
+Ein Beispiel für die Verwendung von **Display BIND**finden Sie im Beispiel für [bindbare](bindable.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,8 +39,8 @@ Siehe das Beispiel für [bindbare](bindable.md) ein Beispiel zur Verwendung für
 |-|-|
 |**Betrifft**|Schnittstellenmethode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

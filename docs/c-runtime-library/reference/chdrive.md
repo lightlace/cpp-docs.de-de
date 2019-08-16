@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 963b7b7b40b632981abfc1529beb9c48a5b991ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e36867bb8237c549fd250be88a99244766920ba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335476"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500262"
 ---
-# <a name="chdrive"></a>_chdrive
+# <a name="_chdrive"></a>_chdrive
 
 Ändert das aktuelle Laufwerk.
 
@@ -48,7 +48,7 @@ int _chdrive(
 
 ### <a name="parameters"></a>Parameter
 
-*drive*<br/>
+*Antrie*<br/>
 Eine ganze Zahl von 1 bis 26, die das aktuelle Laufwerk angibt (1=A, 2=B usw.).
 
 ## <a name="return-value"></a>Rückgabewert
@@ -57,9 +57,9 @@ Null (0), wenn das aktuelle Laufwerk erfolgreich geändert wurde; andernfalls �
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn *Laufwerk* ist nicht im Bereich von 1 bis 26, wird der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die **_chdrive** Funktion – 1 zurück, **Errno** nastaven NA hodnotu **EACCES**, und **_doserrno** nastaven NA hodnotu  **ERROR_INVALID_DRIVE**.
+Wenn das *Laufwerk* nicht im Bereich von 1 bis 26 liegt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die **_chdrive** -Funktion-1 zurück, **errno** ist auf **EACCES**festgelegt, und **_doserrno** wird auf **ERROR_INVALID_DRIVE**festgelegt.
 
-Die Funktion **_chdrive** ist nicht threadsicher, da sie von der Funktion **SetCurrentDirectory** abhängt, die selbst nicht threadsicher ist. Um **_chdrive** sicher in einer Multithreadanwendung zu verwenden, müssen Sie eine eigene Threadsynchronisierung bereitstellen. Weitere Informationen finden Sie unter [SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory).
+Die Funktion **_chdrive** ist nicht threadsicher, da sie von der Funktion **SetCurrentDirectory** abhängt, die selbst nicht threadsicher ist. Um **_chdrive** sicher in einer Multithreadanwendung zu verwenden, müssen Sie eine eigene Threadsynchronisierung bereitstellen. Weitere Informationen finden Sie unter [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory).
 
 Die Funktion **_chdrive** ändert nur das aktuelle Arbeitslaufwerk; **_chdir** ändert das aktuelle Arbeitsverzeichnis.
 

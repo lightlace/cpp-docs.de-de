@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: 525c40f4260d59f370f0580d2cb7d9e8f184ee4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43bf7a9b788c176490ec3fe08e370708eaf000ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396755"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509408"
 ---
-# <a name="interlockeddecrement-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedDecrement“
+# <a name="_interlockeddecrement-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedDecrement“
 
 **Microsoft-spezifisch**
 
-Bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement) Funktion.
+Bietet systeminterne Compilerunterstützung für die Win32-Windows SDK [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) -Funktion.
 
 ## <a name="syntax"></a>Syntax
 
@@ -101,7 +101,7 @@ __int64 _InterlockedDecrement64_nf(
 #### <a name="parameters"></a>Parameter
 
 *lpAddend*<br/>
-[in, out] Zeiger auf die zu verringernde Variable.
+[in, out] Ein Zeiger auf die Variable, die dekrementiert werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -114,7 +114,7 @@ Der Rückgabewert ist der resultierende verringerte Wert.
 |`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, x64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -124,7 +124,7 @@ Während die `_InterlockedDecrement`-Funktion mit 32-Bit-Ganzzahlwerten arbeitet
 
 Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken zum Abrufen bzw. Freigeben benötigen, wie am Anfang und Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit einer `_nf`-Suffix ("no fence") fungieren nicht als Speicherbarriere.
 
-Die Variable, auf die der `lpAddend`-Parameter zeigt, muss an einer 32-Bit-Grenze ausgerichtet sein; andernfalls schlägt diese Funktion auf x86-Multiprozessorsystemen und allen Nicht-x86-Systemen fehl. Weitere Informationen finden Sie unter [ausrichten](../cpp/align-cpp.md).
+Die Variable, auf die der `lpAddend`-Parameter zeigt, muss an einer 32-Bit-Grenze ausgerichtet sein; andernfalls schlägt diese Funktion auf x86-Multiprozessorsystemen und allen Nicht-x86-Systemen fehl. Weitere Informationen finden Sie unter [Ausrichten](../cpp/align-cpp.md).
 
 Diese Routinen sind nur als systeminterne Funktionen verfügbar.
 

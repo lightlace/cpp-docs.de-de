@@ -1,21 +1,21 @@
 ---
-title: LCID (C++-COM-Attribut)
+title: LCID (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.lcid
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: d97ad86e143102c96e87ae0a32245b0c01042501
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c737661bb8429e416b515e4e7fcaf54956385d0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409264"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514532"
 ---
 # <a name="lcid"></a>lcid
 
-Sie können einen Gebietsschemabezeichner an eine Funktion übergeben.
+Ermöglicht es Ihnen, einen Gebiets Schema Bezeichner an eine Funktion zu übergeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,7 +25,7 @@ Sie können einen Gebietsschemabezeichner an eine Funktion übergeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Lcid** C++-Attribut implementiert die Funktionalität der [Lcid](/windows/desktop/Midl/lcid) MIDL-Attribut. Wenn Sie das Gebietsschema für ein bibliotheksblock implementieren möchten, verwenden Sie die **Lcid =** `lcid` Parameter, um die [Modul](module-cpp.md) Attribut.
+Das **LCID** C++ -Attribut implementiert die Funktionalität des [LCID](/windows/win32/Midl/lcid) -Attributs "Mittel l". Wenn Sie das Gebiets Schema für einen Bibliotheks Block implementieren möchten, verwenden Sie den **LCID =** `lcid` -Parameter für das [Module](module-cpp.md) -Attribut.
 
 ## <a name="example"></a>Beispiel
 
@@ -50,8 +50,8 @@ __interface IStatic {
 |-|-|
 |**Betrifft**|Schnittstellenparameter|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

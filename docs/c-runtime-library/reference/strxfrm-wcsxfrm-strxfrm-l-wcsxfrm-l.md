@@ -35,14 +35,14 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-ms.openlocfilehash: 4e4f5bb6639cbeee0f004f94f09177c08394d43e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4dc94d76562daf10544e9b0d09d9608bd83e454
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258714"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500773"
 ---
-# <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
+# <a name="strxfrm-wcsxfrm-_strxfrm_l-_wcsxfrm_l"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
 Transformieren einer Zeichenfolge auf der Grundlage von gebietsschemaspezifischen Informationen
 
@@ -82,24 +82,24 @@ Zielzeichenfolge.
 Quellzeichenfolge.
 
 *count*<br/>
-Maximale Anzahl von Zeichen in platzieren *StrDest*.
+Maximale Anzahl von Zeichen, die in " *strindest*" platziert werden sollen.
 
 *locale*<br/>
 Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Länge der transformierten Zeichenfolge ohne Berücksichtigung des beendenden Null-Zeichens zurück. Der zurückgegebene Wert ist größer als oder gleich *Anzahl*, wird der Inhalt der *StrDest* ist unvorhersehbar. Bei einem Fehler legt jede Funktion **Errno** und gibt **INT_MAX**. Für ein ungültiges Zeichen **Errno** nastaven NA hodnotu **EILSEQ**.
+Gibt die Länge der transformierten Zeichenfolge ohne Berücksichtigung des beendenden Null-Zeichens zurück. Wenn der Rückgabewert größer als oder gleich *count*ist, ist der Inhalt von " *strandest* " unvorhersehbar. Bei einem Fehler legt jede Funktion **errno** fest und gibt **INT_MAX**zurück. Bei einem ungültigen Zeichen wird **errno** auf **EILSEQ**festgelegt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strxfrm** -Funktion transformiert die Zeichenfolge verweist *StrSource* in eine neue sortierte Form, die in gespeicherten *StrDest*. Nicht mehr als *Anzahl* Zeichen, einschließlich des Null-Zeichens, transformiert und in die Ergebniszeichenfolge eingefügt werden. Die Transformation erfolgt mithilfe des Gebietsschemas **LC_COLLATE** -kategorieeinstellung. Weitere Informationen zu **LC_COLLATE**, finden Sie unter [Setlocale](setlocale-wsetlocale.md). **Strxfrm** verwendet das aktuelle Gebietsschema für ihr vom Gebietsschema abhängige Verhalten; **_strxfrm_l** ist identisch mit dem Unterschied, dass Sie verwendet jedoch den Gebietsschemaparameter anstelle des aktuellen Gebietsschemas übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Die **strxfrm** -Funktion transformiert die Zeichenfolge, auf die von *strSource* verwiesen wird, in ein neues sortierte Formular, das in *strDest*gespeichert wird. Nicht mehr als *Zähl* Zeichen, einschließlich des NULL-Zeichens, werden transformiert und in die resultierende Zeichenfolge eingefügt. Die Transformation erfolgt mithilfe der **LC_COLLATE** -Kategorieeinstellung des Gebiets Schemas. Weitere Informationen zu **LC_COLLATE**finden Sie unter [setlocale](setlocale-wsetlocale.md). " **strauxfrm** " verwendet das aktuelle Gebiets Schema für sein vom Gebiets Schema abhängiges Verhalten. **_strxfrm_l** ist beinahe identisch, verwendet jedoch das übergebene Gebiets Schema anstelle des aktuellen Gebiets Schemas. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Nach der Transformation, die einen Aufruf von **Strcmp** mit den beiden transformierten Zeichenfolgen Ergebnisse, die identisch mit denen eines Aufrufs von sehen **Strcoll** auf die ursprünglichen beiden Zeichenfolgen angewendet. Wie bei **Strcoll** und **Stricoll**, **Strxfrm** behandelt automatisch die Multibyte-Zeichenfolgen entsprechend.
+Nach der Transformation ergibt ein Aufrufe von **strcmp** mit den beiden transformierten Zeichen folgen Ergebnisse, die mit denen eines auf die ursprünglichen beiden Zeichen folgen angewendeten **strcoll** -Aufrufs identisch sind. Wie bei **strcoll** und **stricoll**verarbeitet **strxfrm** automatisch Multibyte-Zeichen folgen.
 
-**Wcsxfrm** ist eine Breitzeichen-Version von **Strxfrm**; die Zeichenfolgenargumente von **Wcsxfrm** sind Breitzeichen-Zeiger. Für **Wcsxfrm**nach Transformationen von Zeichenfolgen, die einen Aufruf von **Wcscmp** mit den beiden transformierten Zeichenfolgen Ergebnisse, die identisch mit denen eines Aufrufs von sehen **Wcscoll** angewendet werden, um die ursprünglichen beiden Zeichenfolgen. **Wcsxfrm** und **Strxfrm** Verhalten sich andernfalls identisch. **Wcsxfrm** verwendet das aktuelle Gebietsschema für ihr vom Gebietsschema abhängige Verhalten; **_wcsxfrm_l** verwendet das Gebietsschema anstelle des aktuellen Gebietsschemas übergeben.
+**wcsxfrm** ist eine breit Zeichen Version von " **strauxfrm**;". die Zeichen folgen Argumente von **wcsxfrm** sind breit Zeichen Zeiger. Bei **wcsxfrm**ergibt ein **wcscmp** -Aufrufe mit den beiden transformierten Zeichen folgen Ergebnisse, die mit denen eines **wcscoll** -Aufrufes auf die ursprünglichen beiden Zeichen folgen angewendet werden. **wcsxfrm** und **strauxfrm** Verhalten sich andernfalls identisch. **wcsxfrm** verwendet das aktuelle Gebiets Schema für Ihr vom Gebiets Schema abhängiges Verhalten. **_wcsxfrm_l** verwendet das übergebene Gebiets Schema anstelle des aktuellen Gebiets Schemas.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *StrSource* ist ein null-Zeiger oder *StrDest* ist eine **NULL** Zeiger (es sei denn, die Anzahl Null ist), oder wenn *Anzahl* ist größer als **INT_MAX**, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL** und zurückgeben **INT_MAX**.
+Diese Funktionen überprüfen ihre Parameter. Wenn " *strinsource* " ein NULL-Zeiger ist oder ein **null** -Zeiger ist (es sei denn, count ist gleich null), oder wenn *count* größer als **INT_MAX**ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md) Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen **errno** auf **EINVAL** fest und geben **INT_MAX**zurück.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -110,15 +110,15 @@ Diese Funktionen überprüfen ihre Parameter. Wenn *StrSource* ist ein null-Zeig
 
 Im Gebietsschema „C“ ist die Reihenfolge der Zeichen im Zeichensatz (ASCII-Zeichensatz) die gleiche wie die lexikografische Reihenfolge von Zeichen. In anderen Gebietsschemata kann die Reihenfolge der Zeichen im Zeichensatz jedoch von der lexikografischen Reihenfolge der Zeichen abweichen. In bestimmten europäischen Gebietsschemata beispielsweise steht im Zeichensatz das Zeichen „a“ (Wert 0x61) vor dem Zeichen „&\#x00E4;“ (Wert 0xE4), das Zeichen „ä“ steht lexikografisch gesehen jedoch vor dem Zeichen „a“.
 
-In Gebietsschemas, die für die der Zeichensatz und die lexikografische Zeichenreihenfolge unterschiedlich sind, verwenden Sie **Strxfrm** für die ursprünglichen Zeichenfolgen und dann **Strcmp** für die resultierenden Zeichenfolgen, um eine lexikografische Zeichenfolge zu erzeugen. Vergleich anhand des aktuellen Gebietsschemas **LC_COLLATE** -kategorieeinstellung. Verwenden Sie daher zum Vergleichen von zwei Zeichenfolgen lexikografisch im obigen Gebietsschema **Strxfrm** auf die ursprünglichen Zeichenfolgen und dann **Strcmp** für die resultierenden Zeichenfolgen. Alternativ können Sie **Strcoll** statt **Strcmp** für die ursprünglichen Zeichenfolgen.
+Verwenden Sie in Gebiets Schemas, für die sich der Zeichensatz und die lexikografische Zeichen Reihenfolge unterscheiden, **strxfrm** für die ursprünglichen Zeichen folgen und dann für die resultierenden Zeichen folgen **strcmp** , um einen lexikografischen Zeichen folgen Vergleich gemäß dem aktuellen Gebiets Schema zu erhalten. **LC_COLLATE** -Kategorieeinstellung. Verwenden Sie daher zum Vergleichen von zwei Zeichen folgen lexikografisch im obigen Gebiets Schema **strxfrm** für die ursprünglichen Zeichen folgen und dann für die resultierenden Zeichen folgen **strcmp** . Alternativ können Sie **strcoll** anstelle von **strcmp** für die ursprünglichen Zeichen folgen verwenden.
 
-**Strxfrm** ist im Grunde genommen ein Wrapper um [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa) mit **LCMAP_SORTKEY**.
+bei " **strauxfrm** " handelt es sich im Grunde um einen Wrapper um [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw) mit **LCMAP_SORTKEY**.
 
-Der Wert des folgenden Ausdrucks ist die Größe des Arrays zum Speichern der **Strxfrm** Transformation der Quellzeichenfolge:
+Der Wert des folgenden Ausdrucks ist die Größe des Arrays, das zum Speichern der **strxfrm** -Transformation der Quell Zeichenfolge erforderlich ist:
 
 `1 + strxfrm( NULL, string, 0 )`
 
-Im Gebietsschema "C" nur **Strxfrm** entspricht der folgenden:
+Nur im Gebiets Schema "C" entspricht " **strauxfrm** " folgendem:
 
 ```C
 strncpy( _string1, _string2, _count );

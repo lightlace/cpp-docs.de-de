@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: be4ea7097bd811444fca050525338931867998d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8848562c1470198d3f2a1b6f285510bcbb43d7c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148054"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501655"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
-Für die Optimierung für Visual Basic-Code verwendet.
+Wird zur Optimierung des Visual Basic Codes verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Für die Optimierung für Visual Basic-Code verwendet.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Defaultcollelem** C++-Attribut hat die gleiche Funktionalität wie die [Defaultcollelem](/windows/desktop/Midl/defaultcollelem) MIDL-Attribut.
+Das **Defaultcollelem** C++ -Attribut verfügt über die gleiche Funktionalität wie das Attribut [Defaultcollelem](/windows/win32/Midl/defaultcollelem) mittlerl.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt eine Schnittstelle-Methode mit dem **Defaultcollelem** Attribut:
+Der folgende Code zeigt eine Schnittstellen Methode, die das **Defaultcollelem** -Attribut verwendet:
 
 ```cpp
 // cpp_attr_ref_defaultcollelem.cpp
@@ -52,8 +52,8 @@ __interface IMyForm
 |-|-|
 |**Betrifft**|Schnittstellenmethode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

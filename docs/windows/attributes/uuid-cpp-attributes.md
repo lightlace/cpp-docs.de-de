@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: eae79f9a4d0af6375834c0792c4004f52a16e07e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: d644f59ac92bf4e39f191c291dd4fef626411c3d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448930"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514949"
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++-Attribute)
 
@@ -28,21 +28,21 @@ Gibt die eindeutige ID für eine Klasse oder Schnittstelle an.
 ### <a name="parameters"></a>Parameter
 
 *uuid*<br/>
-Ein 128-Bit, eindeutigen Bezeichner.
+Ein eindeutiger 128-Bit-Bezeichner.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Definition einer Schnittstelle oder Klasse nicht angegeben ist die **Uuid** C++ -Attribut, und klicken Sie dann auf der Microsoft C++ Compiler bietet eine. Bei Angabe einer **Uuid**, Sie müssen die Anführungszeichen einschließen.
+Wenn die Definition einer Schnittstelle oder Klasse das **UUID** C++ -Attribut nicht angibt, wird vom Microsoft C++ -Compiler eine bereitgestellt. Wenn Sie eine **UUID**angeben, müssen Sie die Anführungszeichen einschließen.
 
-Wenn Sie keinen angeben **Uuid**, generiert der Compiler die gleiche GUID für die Schnittstellen oder Klassen mit dem gleichen Namen in anderen Attributs Projekte auf einem Computer.
+Wenn Sie **UUID**nicht angeben, generiert der Compiler dieselbe GUID für Schnittstellen oder Klassen mit demselben Namen in unterschiedlichen Attribut Projekten auf einem Computer.
 
-Sie können Uuidgen.exe oder Guidgen.exe verwenden, um Ihren eigenen eindeutigen IDs zu generieren. (Klicken Sie zum Ausführen eines dieser Tools auf **starten** , und klicken Sie auf **ausführen** im Menü. Geben Sie den Namen des Tools erforderlich.)
+Sie können "uuidgen. exe" oder "Guidgen. exe" verwenden, um eigene eindeutige IDs zu generieren. (Um eines dieser Tools auszuführen, klicken Sie auf **Start** , und klicken Sie im Menü auf **Ausführen** . Geben Sie dann den Namen des erforderlichen Tools ein.)
 
-Wenn in einem Projekt verwendet, die nicht auch ATL verwendet, Angeben der **Uuid** Attribut entspricht der Angabe der [Uuid](../../cpp/uuid-cpp.md) **__declspec** Modifizierer. Zum Abrufen der **Uuid** einer Klasse, können Sie [__uuidof](../../cpp/uuidof-operator.md)
+Wenn Sie in einem Projekt verwendet wird, das nicht auch ATL verwendet, ist das Angeben des **UUID** -Attributs mit dem Angeben des [UUID](../../cpp/uuid-cpp.md) **__declspec** -Modifizierers identisch. Zum Abrufen der **UUID** einer Klasse können Sie [__uuidof](../../cpp/uuidof-operator.md) verwenden.
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter den [bindbare](bindable.md) Beispiel für ein Beispiel für die Verwendung von **Uuid**.
+Ein Beispiel für die Verwendung von **UUID**finden Sie im [bindbare](bindable.md) -Beispiel.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,10 +50,10 @@ Finden Sie unter den [bindbare](bindable.md) Beispiel für ein Beispiel für die
 
 |||
 |-|-|
-|**Betrifft**|**class**, **struct**, **interface**, **union**, **enum**|
+|**Betrifft**|**Klasse**, **Struktur**, **Schnittstelle**, **Union**, Enumeration|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
@@ -63,4 +63,4 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 [Schnittstellenattribut](interface-attributes.md)<br/>
 [Klassenattribute](class-attributes.md)<br/>
 [typedef-, enum-, union- und struct-Attribute](typedef-enum-union-and-struct-attributes.md)<br/>
-[uuid](/windows/desktop/Midl/uuid)
+[uuid](/windows/win32/Midl/uuid)

@@ -31,14 +31,14 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 87ac912ab47483929b3afc2357331f8d97264b31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c5760eb5231d17a8b17fe5d21f1459a865c067
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341703"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500019"
 ---
-# <a name="access-waccess"></a>_access, _waccess
+# <a name="_access-_waccess"></a>_access, _waccess
 
 Legt fest, ob eine Datei schreibgeschützt ist. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [_access_s, waccess_s](access-s-waccess-s.md).
 
@@ -65,7 +65,7 @@ Lese-/Schreibattribut.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede Funktion gibt 0 zurück, wenn sich die Datei im angegebenen Modus befindet. Die Funktion gibt-1 zurück, wenn die angegebene Datei nicht vorhanden ist oder verfügt nicht über den angegebenen Modus; In diesem Fall `errno` festgelegt ist, wie in der folgenden Tabelle gezeigt.
+Jede Funktion gibt 0 zurück, wenn sich die Datei im angegebenen Modus befindet. Die Funktion gibt-1 zurück, wenn die benannte Datei nicht vorhanden ist oder nicht über den angegebenen Modus verfügt. in diesem Fall wird `errno` festgelegt, wie in der folgenden Tabelle gezeigt.
 
 |||
 |-|-|
@@ -77,20 +77,20 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 ## <a name="remarks"></a>Hinweise
 
-Bei Verwendung mit Dateien, die **_access** Funktion bestimmt, ob die angegebene Datei oder das Verzeichnis vorhanden ist und deren Attribute durch den Wert des *Modus*. Bei Verwendung mit Verzeichnissen **_access** bestimmt nur, ob das angegebene Verzeichnis vorhanden ist; in Windows 2000 und späteren Betriebssystemen alle Verzeichnisse Lese- und Schreibzugriff.
+Bei Verwendung mit-Dateien bestimmt die **_access** -Funktion, ob die angegebene Datei bzw. das angegebene Verzeichnis vorhanden ist und über die im Wert des- *Modus*angegebenen Attribute verfügt. Bei Verwendung mit Verzeichnissen bestimmt **_access** nur, ob das angegebene Verzeichnis vorhanden ist. in Windows 2000 und neueren Betriebssystemen haben alle Verzeichnisse Lese-und Schreibzugriff.
 
-|*Modus* Wert|überprüft nur, ob die Datei|
+|Moduswert|überprüft nur, ob die Datei|
 |------------------|---------------------|
 |00|existiert|
 |02|Nur Schreibzugriff|
 |04|Schreibgeschützt|
 |06|Lesen und Schreiben|
 
-Diese Funktion überprüft nur, ob die Datei oder das Verzeichnis schreibgeschützt sind. Es überprüft jedoch nicht die Dateisystem-Sicherheitseinstellungen. Dafür benötigen Sie ein Zugriffstoken. Weitere Informationen zur Dateisystemsicherheit finden Sie unter [Zugriffstoken](/windows/desktop/SecAuthZ/access-tokens). Für diese Funktion gibt es eine ATL-Klasse. Weitere Informationen finden Sie unter [CAccessToken-Klasse](../../atl/reference/caccesstoken-class.md).
+Diese Funktion überprüft nur, ob die Datei oder das Verzeichnis schreibgeschützt sind. Es überprüft jedoch nicht die Dateisystem-Sicherheitseinstellungen. Dafür benötigen Sie ein Zugriffstoken. Weitere Informationen zur Dateisystemsicherheit finden Sie unter [Zugriffstoken](/windows/win32/SecAuthZ/access-tokens). Für diese Funktion gibt es eine ATL-Klasse. Weitere Informationen finden Sie unter [CAccessToken-Klasse](../../atl/reference/caccesstoken-class.md).
 
-**_waccess** ist eine Breitzeichen-Version von **_access**; die *Pfad* Argument **_waccess** ist eine Breitzeichen-Zeichenfolge. **_waccess** und **_access** Verhalten sich andernfalls identisch.
+**_waccess** ist eine breit Zeichen Version von **_access**. Das *path* -Argument für **_waccess** ist eine Zeichenfolge mit breit Zeichen. **_waccess** und **_access** Verhalten sich andernfalls identisch.
 
-Diese Funktion überprüft ihre Parameter. Wenn *Pfad* ist NULL oder *Modus* gibt keinen gültigen Modus, den Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, legt die Funktion `errno` auf `EINVAL` fest und gibt -1 zurück.
+Diese Funktion überprüft ihre Parameter. Wenn der *Pfad* NULL ist oder der *Modus* keinen gültigen Modus angibt, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legt die Funktion `errno` auf `EINVAL` fest und gibt -1 zurück.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -107,7 +107,7 @@ Diese Funktion überprüft ihre Parameter. Wenn *Pfad* ist NULL oder *Modus* gib
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird **_access** , überprüfen Sie die Datei mit dem Namen Crt_ACCESS. C, um festzustellen, ob es vorhanden ist und ob Schreiben zulässig ist.
+Im folgenden Beispiel wird **_access** verwendet, um die Datei mit dem Namen crt_ACCESS zu überprüfen. C, um zu sehen, ob es vorhanden ist und ob Schreibvorgänge zulässig sind.
 
 ```C
 // crt_access.c

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 4c2bca9165d8b23f8cfa4f0f5523c882fd2f52bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70e73a6286a4b6adaba20b5a35dc16d8389b1948
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364973"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501868"
 ---
-# <a name="asyncuuid"></a>async_uuid
+# <a name="async_uuid"></a>async_uuid
 
-Gibt an, die UUID, die den MIDL-Compiler definiert synchrone und asynchrone Versionen einer COM-Schnittstelle weiterleitet.
+Gibt die UUID an, die den mittlerer l-Compiler anweist, sowohl synchrone als auch asynchrone Versionen einer COM-Schnittstelle zu definieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,11 +26,11 @@ Gibt an, die UUID, die den MIDL-Compiler definiert synchrone und asynchrone Vers
 ### <a name="parameters"></a>Parameter
 
 *uuid*<br/>
-Eine UUID, die die Version der Schnittstelle angibt.
+Ein UUID-Wert, der die Version der Schnittstelle identifiziert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Async_uuid** C++ Attribut hat die gleiche Funktionalität wie die [Async_uuid](/windows/desktop/Midl/async-uuid) MIDL-Attribut.
+Das **Async_uuid** C++ -Attribut verfügt über die gleiche Funktionalität wie das [Async_uuid](/windows/win32/Midl/async-uuid) -Mittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
@@ -54,8 +54,8 @@ __interface ICustom {
 |-|-|
 |**Betrifft**|`interface`|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|**Duale**, **Disp-Schnittstelle**|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|**Dual**, **dispinterface**|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

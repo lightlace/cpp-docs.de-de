@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f5da7c6805d10e919255ce301dae5618ef58e76d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447786"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501915"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;iStream&gt;-Operatoren
 
@@ -84,9 +84,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-extrahiert bis zu *N*-1-Elemente und speichert sie in das Array, beginnend mit _*Str*. Wenn `Istr`. [Breite](../standard-library/ios-base-class.md#width) ist größer als 0 (  null) `Istr`, N ist. **Breite**; Andernfalls ist es die Größe des größten Arrays von `Elem` , das deklariert werden kann. Die Funktion speichert den Wert `Elem()` immer nach allen extrahierten Elementen, die er speichert. Die Extraktion hält früh am Ende der Datei, an einem Zeichen mit dem Wert **Elem**(0) (das nicht extrahiert wurde), oder an einem beliebigen Element (das nicht extrahiert wurde), welches von [ws](../standard-library/istream-functions.md#ws) verworfen werden würde. Wenn die Funktion keine Elemente extrahiert, ruft `Istr`Sie auf. [SetState](../standard-library/basic-ios-class.md#setstate) (**Failbit**). In jedem Fall ruft `Istr`Sie auf. **Breite** (0) und gibt *ISTR*zurück.
+extrahiert bis zu *N*-1-Elemente und speichert sie in das Array, beginnend mit _*Str*. Wenn `Istr`. [Breite](../standard-library/ios-base-class.md#width) ist größer als 0 ( null) `Istr`, N ist. **Breite**; Andernfalls ist es die Größe des größten Arrays von `Elem` , das deklariert werden kann. Die Funktion speichert den Wert `Elem()` immer nach allen extrahierten Elementen, die er speichert. Die Extraktion hält früh am Ende der Datei, an einem Zeichen mit dem Wert **Elem**(0) (das nicht extrahiert wurde), oder an einem beliebigen Element (das nicht extrahiert wurde), welches von [ws](../standard-library/istream-functions.md#ws) verworfen werden würde. Wenn die Funktion keine Elemente extrahiert, ruft `Istr`Sie auf. [SetState](../standard-library/basic-ios-class.md#setstate) (**Failbit**). In jedem Fall ruft `Istr`Sie auf. **Breite** (0) und gibt *ISTR*zurück.
 
-**Sicherheitshinweis** Die aus dem Eingabestream extrahierte aus null endenden Zeichenfolge darf die Größe des Ziel Puffers *Str*nicht überschreiten. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Sicherheitshinweis** Die aus dem Eingabestream extrahierte aus null endenden Zeichenfolge darf die Größe des Ziel Puffers *Str*nicht überschreiten. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 Die Vorlagenfunktion:
 

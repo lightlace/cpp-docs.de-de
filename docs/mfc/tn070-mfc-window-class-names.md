@@ -1,44 +1,44 @@
 ---
-title: 'TN070: MFC-Fensterklassennamen'
+title: 'TN070: MFC-Fenster Klassennamen'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: e2818104c59a94b0e1239abc614a83dea8c3de08
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 1d9b5de07bcc2545df6294557d1ac9f9d29e856c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611212"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513358"
 ---
-# <a name="tn070-mfc-window-class-names"></a>TN070: MFC-Fensterklassennamen
+# <a name="tn070-mfc-window-class-names"></a>TN070: MFC-Fenster Klassennamen
 
 > [!NOTE]
 >  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.
 
-MFC-Windows verwenden Sie einen dynamisch erstellte Klasse-Namen, der die Funktionen des Fensters darstellt. MFC generiert Klassennamen dynamisch für Popup-Fenster, die von der Anwendung erzeugten, Ansichten und Rahmenfenster. Haben den Namen Windows bereitgestellte, für die Klasse des betreffenden Fenster, Dialogfelder und Steuerelemente, die von einer MFC-Anwendung erzeugt.
+MFC-Fenster verwenden einen dynamisch erstellten Klassennamen, der die Funktionen des Fensters widerspiegelt. MFC generiert Klassennamen dynamisch für Frame Fenster, Ansichten und Popup Fenster, die von der Anwendung erstellt werden. Dialog Felder und Steuerelemente, die von einer MFC-Anwendung erstellt wurden, verfügen über den von Windows bereitgestellten Namen für die betreffende Fenster Klasse.
 
-Sie können den Namen der dynamisch bereitgestellte Klasse ersetzen, indem Sie eigene Fensterklasse registrieren und verwenden es in einer Außerkraftsetzung der [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow). Die Klassennamen MFC bereitgestellten lassen sich einer der beiden folgenden Formen:
+Sie können den dynamisch bereitgestellten Klassennamen ersetzen, indem Sie eine eigene Fenster Klasse registrieren und Sie in einer Überschreibung von [prekreatewindow](../mfc/reference/cwnd-class.md#precreatewindow)verwenden. Die von MFC bereitgestellten Klassennamen passen zu einem der beiden folgenden Formate:
 
 ```
 Afx:%x:%x
 Afx:%x:%x:%x:%x:%x
 ```
 
-Die hexadezimale Ziffern, die ersetzt die `%x` Zeichen werden von den Daten ausgefüllt der [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Struktur. MFC verwendet dieses Verfahren, damit mehrere C++-Klassen, die erfordern einen identischen **WNDCLASS** Strukturen können die gleichen registrierten Fensterklasse freigeben. MFC-Anwendungen im Gegensatz zu den meisten einfachen Win32-Anwendungen haben nur eine **WNDPROC**, sodass Sie ganz einfach freigeben können **WNDCLASS** Strukturen, um Zeit und Arbeitsspeicher zu sparen. Die ersetzbaren Werte für die `%x` Zeichen, die oben gezeigte sind wie folgt:
+Die hexadezimal Ziffern `%x` , die die Zeichen ersetzen, werden aus Daten aus der [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) -Struktur ausgefüllt. MFC verwendet dieses Verfahren, sodass mehrere C++ Klassen, die identische **WNDCLASS** -Strukturen erfordern, dieselbe registrierte Fenster Klasse gemeinsam verwenden können. Im Gegensatz zu den meisten einfachen Win32-Anwendungen haben MFC-Anwendungen nur einen **WndProc**, sodass Sie einfach **WNDCLASS** -Strukturen freigeben können, um Zeit und Arbeitsspeicher zu sparen. Die ersetzbaren Werte für `%x` die oben gezeigten Zeichen lauten wie folgt:
 
-- **WNDCLASS.hInstance**
+- **WNDCLASS. HINSTANCE**
 
-- **WNDCLASS.style**
+- **WNDCLASS. Style**
 
-- **WNDCLASS.hCursor**
+- **WNDCLASS. hcursor**
 
-- **WNDCLASS.hbrBackground**
+- **WNDCLASS. hbrbackground**
 
 - **WNDCLASS.hIcon**
 
-Die erste Form (`Afx:%x:%x`) wird verwendet, wenn **hCursor**, **HbrBackground**, und **hIcon** sind alle **NULL**.
+Das erste Formular (`Afx:%x:%x`) wird verwendet, wenn **hcursor**, **hbrbackground**und **HICON** alle **null**sind.
 
 ## <a name="see-also"></a>Siehe auch
 

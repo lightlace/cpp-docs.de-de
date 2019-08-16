@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409602"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501556"
 ---
-# <a name="firstis"></a>first_is
+# <a name="first_is"></a>first_is
 
-Gibt den Index des ersten Arrayelements übertragen werden.
+Gibt den Index des ersten Array Elements an, das übertragen werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,15 +26,15 @@ Gibt den Index des ersten Arrayelements übertragen werden.
 ### <a name="parameters"></a>Parameter
 
 *expression*<br/>
-Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argumentliste Slots sind zulässig.
+Mindestens ein C-sprach Ausdruck. Leere Argument Slots sind zulässig.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **First_is** C++ Attribut hat die gleiche Funktionalität wie die [First_is](/windows/desktop/Midl/first-is) MIDL-Attribut.
+Das **First_is** C++ -Attribut verfügt über die gleiche Funktionalität wie das [First_is](/windows/win32/Midl/first-is) -Mittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt verschiedene Möglichkeiten, geben Sie einen Abschnitt in einem Array:
+Der folgende Code zeigt verschiedene Möglichkeiten zum Angeben eines Abschnitts in einem Array:
 
 ```cpp
 // cpp_attr_ref_first_is.cpp
@@ -62,10 +62,10 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|
+|**Betrifft**|Feld in **Struktur** oder **Union**, Schnittstellenparameter, Schnittstellen Methode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

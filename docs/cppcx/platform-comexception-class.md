@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383346"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500547"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException-Klasse
 
@@ -48,7 +48,7 @@ Die COMException-Klasse verfügt auch über die folgenden Eigenschaften.
 
 |Member|Beschreibung|
 |------------|-----------------|
-|[Exception::HResult](#hresult)|Das HRESULT, das der Ausnahme entspricht.|
+|[Exception:: HRESULT](#hresult)|Das HRESULT, das der Ausnahme entspricht.|
 |[Exception::Message](#message)|Meldung, in der die Ausnahme beschrieben wird.|
 
 ## <a name="derived-exceptions"></a>Abgeleitete Ausnahmen
@@ -73,15 +73,15 @@ Die folgenden vordefinierten Ausnahmen werden von COMException abgeleitet. Sie u
 
 ### <a name="requirements"></a>Anforderungen
 
-**Unterstützter Client (Min.):** Windows 8
+**Mindestens unterstützter Client:** Windows 8
 
-**Unterstützter Server (Min.):** Windows Server 2012
+**Mindestens unterstützter Server:** Windows Server 2012
 
-**Namespace:** Plattform
+**Namespace:** Platform
 
 **Metadaten:** platform.winmd
 
-## <a name="ctor"></a> COMException:: COMException-Konstruktor
+## <a name="ctor"></a>COMException:: COMException-Konstruktor
 
 Initialisiert eine neue Instanz der COMException-Klasse.
 
@@ -93,10 +93,10 @@ COMException( int hresult )
 
 ### <a name="parameters"></a>Parameter
 
-*hresult*<br/>
+*HRESULT*<br/>
 Der Fehler HRESULT, der durch die Ausnahme repräsentiert wird.
 
-## <a name="hresult"></a> COMException:: HRESULT-Eigenschaft
+## <a name="hresult"></a>COMException:: HRESULT-Eigenschaft
 
 Das HRESULT, das der Ausnahme entspricht.
 
@@ -113,9 +113,9 @@ Ein HRESULT-Wert, der den Fehler angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen zur Interpretation des HRESULT-Werts finden Sie unter [Struktur von COM-Fehlercodes](/windows/desktop/com/structure-of-com-error-codes).
+Weitere Informationen zur Interpretation des HRESULT-Werts finden Sie unter [Struktur von com-Fehler Codes](/windows/win32/com/structure-of-com-error-codes).
 
-## <a name="message"></a> COMException:: Message-Eigenschaft
+## <a name="message"></a>COMException:: Message-Eigenschaft
 
 Meldung, in der die Ausnahme beschrieben wird.
 

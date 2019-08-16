@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407171"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513914"
 ---
-# <a name="transmitas"></a>transmit_as
+# <a name="transmit_as"></a>transmit_as
 
-Weist den Compiler einen dargestellten Typ, den Client- und serveranwendungen bearbeiten zu können, müssen, mit einem übertragenen Typ zuordnen.
+Weist den Compiler an, einen dargestellten Typ, den Client-und Server Anwendungen manipulieren, mit einem übertragenen Typ zuzuordnen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,15 +26,15 @@ Weist den Compiler einen dargestellten Typ, den Client- und serveranwendungen be
 ### <a name="parameters"></a>Parameter
 
 *Typ*<br/>
-Gibt den Datentyp, der zwischen Client und Server übertragen werden.
+Gibt den Datentyp an, der zwischen Client und Server übertragen wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Transmit_as** C++ Attribut hat die gleiche Funktionalität wie die [Transmit_as](/windows/desktop/Midl/transmit-as) MIDL-Attribut.
+Das **Transmit_as** C++ -Attribut verfügt über die gleiche Funktionalität wie das [Transmit_as](/windows/win32/Midl/transmit-as) -Mittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code veranschaulicht die Verwendung der der **Transmit_as** Attribut:
+Der folgende Code zeigt die Verwendung des **Transmit_as** -Attributs:
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -72,8 +72,8 @@ struct _TREE_NODE_TYPE * right;
 |-|-|
 |**Betrifft**|**typedef**|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

@@ -1,5 +1,5 @@
----
-
+﻿---
+title: /UTF-8 (Festlegen von Quell- und Ausführungszeichensätze auf UTF-8)
 title: /UTF-8 (Festlegen von Quell- und Ausführungszeichensätze auf UTF-8)
 
 ms.date: 11/04/2016
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-ms.openlocfilehash: 5ac15c63041e76b8bb0d292868bb982c21866078
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ff0f23ad0758642c73b1b35d6d4dd1be20899cb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317288"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498181"
 ---
-# <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (Festlegen der Quell- und Ausführungszeichensätze auf UTF-8)
+# <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (Festlegen von Quell- und Ausführungszeichensätze auf UTF-8)
 
 Gibt sowohl den Quell- als auch den Ausführungszeichensatz als UTF-8 an.
 
@@ -37,7 +37,7 @@ Standardmäßig sucht Visual Studio nach einer Bytereihenfolge-Marke, um festzus
 
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Festlegen des Compilers und der Buildeigenschaften](../working-with-project-properties.md).
 
-1. Erweitern Sie die **Konfigurationseigenschaften**, **C/C++-** , **Befehlszeile** Ordner.
+1. Erweitern Sie den Ordner **Konfigurations Eigenschaften**, **CC++/** und **Befehlszeile** .
 
 
 1. Fügen Sie unter **Zusätzliche Optionen** den Eintrag "**/utf-8**" hinzu, um UTF-8 als bevorzugte Codierung anzugeben.
@@ -49,6 +49,6 @@ Standardmäßig sucht Visual Studio nach einer Bytereihenfolge-Marke, um festzus
 
 [MSVC-Compileroptionen](compiler-options.md)<br/>
 [Syntax für die MSVC-Compilerbefehlszeile](compiler-command-line-syntax.md)<br/>
-[/ Execution-CharSet (Ausführungszeichensatz festlegen)](execution-charset-set-execution-character-set.md)<br/>
+["/Execution-charset" (Ausführungs Zeichensatz festlegen)](execution-charset-set-execution-character-set.md)<br/>
 [/source-charset (Quellzeichensatz festlegen)](source-charset-set-source-character-set.md)<br/>
 [/validate-charset (Auf kompatible Zeichen überprüfen)](validate-charset-validate-for-compatible-characters.md)

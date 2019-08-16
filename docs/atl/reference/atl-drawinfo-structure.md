@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 728a7eed418a6600c9247b91ff7b777dd458e621
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503415"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498010"
 ---
-# <a name="atldrawinfo-structure"></a>ATL_DRAWINFO-Struktur
+# <a name="atl_drawinfo-structure"></a>ATL_DRAWINFO-Struktur
 
-Enthält Informationen, die für das Rendering an verschiedene Ziele, z. B. einen Drucker, Metadatei oder ActiveX-Steuerelement verwendet.
+Enthält Informationen, die zum Rendern verschiedener Ziele verwendet werden, z. b. Drucker, Metadateien oder ActiveX-Steuerelemente.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,49 +42,49 @@ struct ATL_DRAWINFO {
 ## <a name="members"></a>Member
 
 `cbSize`<br/>
-Die Größe der Struktur, in Bytes.
+Die Größe der-Struktur in Bytes.
 
 `dwDrawAspect`<br/>
-Gibt an, wie das Ziel dargestellt werden soll. Darstellungen können es sich um Inhalte, ein Symbol, eine Miniaturansicht oder einem gedruckten Dokument enthalten. Eine Liste der möglichen Werte, finden Sie unter [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) und [DVASPECT2](/windows/desktop/api/ocidl/ne-ocidl-tagdvaspect2).
+Gibt an, wie das Ziel dargestellt werden soll. Darstellungen können Inhalt, ein Symbol, eine Miniaturansicht oder ein gedruckte Dokument enthalten. Eine Liste möglicher Werte finden Sie unter [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) und [DVASPECT2](/windows/win32/api/ocidl/ne-ocidl-dvaspect2).
 
 `lindex`<br/>
-Der Teil des Ziels, das für den Ziehvorgang relevant ist. Die Interpretation hängt von den Wert in der `dwDrawAspect` Member.
+Der Teil des Ziels, der für den Zeichnungs Vorgang von Interesse ist. Die Interpretation variiert abhängig vom Wert im `dwDrawAspect` Element.
 
 `ptd`<br/>
-Zeiger auf eine [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) -Struktur, die Zeichnen-Optimierungen, abhängig vom angegebenen Aspekt ermöglicht. Beachten Sie, dass neueren Objekten und Containern, die optimierte zeichnen Schnittstellen unterstützen auch dieser Member unterstützt. Geben Sie NULL für diesen Member, älteren Objekten und Containern, die nicht optimierte zeichnen Schnittstellen immer unterstützt werden.
+Ein Zeiger auf eine [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) -Struktur, die das Zeichnen von Optimierungen abhängig vom angegebenen Aspekt ermöglicht. Beachten Sie, dass neuere Objekte und Container, die optimierte Zeichnungs Schnittstellen unterstützen, diesen Member ebenfalls unterstützen. Ältere Objekte und Container, die keine optimierten Zeichnungs Schnittstellen unterstützen, geben für diesen Member immer NULL an.
 
 `hicTargetDev`<br/>
-Informationen über den Kontext für das Zielgerät verweist `ptd` aus dem das Objekt Gerätemetrik abrufen und Funktionen des Geräts prüfen kann. Wenn `ptd` NULL ist, das Objekt den Wert in ignorieren soll die `hicTargetDev` Member.
+Informations Kontext für das Zielgerät, auf das `ptd` von verwiesen wird, von dem das-Objekt gerätemetriken extrahieren und die Funktionen des Geräts testen kann. Wenn `ptd` NULL ist, sollte das Objekt den Wert `hicTargetDev` im Member ignorieren.
 
 `hdcDraw`<br/>
-Der Gerätekontext, in dem gezeichnet werden soll. Für ein fensterloses Objekt das `hdcDraw` ist Mitglied der `MM_TEXT` Zuordnungsmodus mit der logischen Koordinaten Abgleich der Clientkoordinaten des übergeordneten Fensters. Darüber hinaus der Gerätekontext muss den gleichen Zustand wie der in der Regel durch Übergeben einer `WM_PAINT` Nachricht.
+Der Gerätekontext, auf dem gezeichnet werden soll. Bei einem fensterlosen Objekt befindet sich der `hdcDraw` Member `MM_TEXT` im Zuordnungs Modus, dessen logische Koordinaten mit den Client Koordinaten des enthaltenden Fensters übereinstimmen. Außerdem sollte sich der Gerätekontext in demselben Zustand befinden, der normalerweise von einer `WM_PAINT` Nachricht übermittelt wird.
 
 `prcBounds`<br/>
-Zeiger auf eine [RECTL](/previous-versions//dd162907\(v=vs.85\)) -Struktur gibt das Rechteck auf `hdcDraw` und in dem das Objekt gezeichnet werden soll. Dieses Element steuert die Positionierung und Strecken des Objekts. Dieser Member sollte NULL, um ein fensterloses für ein direktes aktives Objekt gezeichnet werden soll. In jedem anderen Fall NULL ist kein gültiger Wert und sollten dazu führen, eine `E_INVALIDARG` Fehlercode. Wenn der Container einen Wert ungleich NULL für fensterloses Objekt übergibt, sollte das Objekt den angeforderten Aspekt in den angegebenen Gerätekontext und das Rechteck gerendert. Ein Container kann dies von fensterloses Objekt zum Rendern einer zweiten, nicht aktive Ansicht des Objekts oder zum Drucken des Objekts anfordern.
+Ein Zeiger auf eine [RECTL](/previous-versions//dd162907\(v=vs.85\)) `hdcDraw` -Struktur, die das Rechteck in angibt, und in dem das Objekt gezeichnet werden soll. Dieser Member steuert die Positionierung und Streckung des Objekts. Dieser Member sollte NULL sein, um ein fensterloses direktes aktives Objekt zu zeichnen. In jeder anderen Situation ist NULL kein gültiger Wert und sollte zu einem `E_INVALIDARG` Fehlercode führen. Wenn der Container einen nicht-NULL-Wert an ein fensterloses Objekt übergibt, sollte das Objekt den angeforderten Aspekt in den angegebenen Gerätekontext und das angegebene Rechteck Rendering. Ein Container kann dies von einem fensterlosen Objekt anfordern, um eine zweite, nicht aktive Ansicht des Objekts zu erzeugen oder das Objekt zu drucken.
 
 `prcWBounds`<br/>
-Wenn `hdcDraw` ist eine Metadatei-Gerätekontexts (finden Sie unter [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) im Windows SDK), dies ist ein Zeiger auf eine `RECTL` Struktur, die das umschließende Rechteck in der zugrunde liegenden Metadatei angibt. Die Rectangle-Struktur enthält, die Fenster Umfang und die Fensterursprung. Diese Werte sind hilfreich für das Zeichnen von Metadateien. Das Rechteck erkennbar `prcBounds` darin geschachtelt ist dies `prcWBounds` Rechteck; sie befinden sich in den gleichen koordinierten Bereich.
+Wenn `hdcDraw` ein Metadatei-Gerätekontext ist (siehe [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) in der Windows SDK), ist dies ein Zeiger auf `RECTL` eine-Struktur, die das umschließende Rechteck in der zugrunde liegenden Metadatei angibt. Die Rechteck Struktur enthält den Fensterblock und den Fenster Ursprung. Diese Werte sind für das Zeichnen von Metadateien nützlich. Das durch `prcBounds` gekennzeichnete Rechteck ist innerhalb dieses `prcWBounds` Rechtecks geschachtelt; Sie befinden sich im selben Koordinaten Bereich.
 
 `bOptimize`<br/>
-Ungleich NULL ist das Zeichnen des Steuerelements zum werden optimiert, andernfalls 0. Wenn das Zeichnen optimiert ist, wird der Status des Gerätekontexts automatisch wiederhergestellt, sobald Sie fertig sind rendern.
+Ein Wert ungleich 0 (null), wenn das Zeichnen des Steuer Elements optimiert werden soll, andernfalls 0. Wenn die Zeichnung optimiert ist, wird der Zustand des Geräte Kontexts automatisch wieder hergestellt, wenn Sie das Rendering abgeschlossen haben.
 
 `bZoomed`<br/>
-Ungleich NULL, wenn das Ziel einen Zoomfaktor, andernfalls 0 hat. Der Zoomfaktor befindet sich in `ZoomNum`.
+Ein Wert ungleich 0 (null), wenn das Ziel einen Zoomfaktor hat, andernfalls 0. Der Zoomfaktor wird in `ZoomNum`gespeichert.
 
 `bRectInHimetric`<br/>
-Einen Wert ungleich NULL die Abmessungen des `prcBounds` befinden sich im HIMETRIC, andernfalls 0.
+Ungleich 0 (null), `prcBounds` wenn sich die Abmessungen von in HIMETRIC befinden, andernfalls 0.
 
 `ZoomNum`<br/>
-Die Breite und Höhe des Rechtecks in dem das Objekt gerendert wird. Der Zoomfaktor entlang der x-Achse (den Anteil der Größe des Objekts in der aktuellen Umfang) des Ziels ist der Wert des `ZoomNum.cx` geteilt durch den Wert der `ZoomDen.cx`. Der Zoomfaktor entlang der y-Achse wird auf ähnliche Weise erreicht.
+Die Breite und Höhe des Rechtecks, in das das Objekt gerendert wird. Der Zoomfaktor entlang der x-Achse (der Anteil der natürlichen Größe des Objekts auf seinen aktuellen Wert) des Ziels ist der Wert von `ZoomNum.cx` dividiert durch den Wert von. `ZoomDen.cx` Der Zoomfaktor entlang der y-Achse wird auf ähnliche Weise erreicht.
 
 `ZoomDen`<br/>
 Die tatsächliche Breite und Höhe des Ziels.
 
 ## <a name="remarks"></a>Hinweise
 
-Typische Verwendung dieser Struktur wäre das Abrufen von Informationen während der Wiedergabe des Zielobjekts. Angenommen, Sie konnten rufen Werte aus ATL_DRAWINFO innerhalb Ihrer Überladung der [CComControlBase::OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced).
+Die typische Verwendung dieser Struktur wäre das Abrufen von Informationen während des Renderings des Zielobjekts. Beispielsweise können Sie Werte aus ATL_DRAWINFO in der Überladung von [CComControlBase:: OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced)abrufen.
 
-Diese Struktur speichert, relevante Informationen, mit denen die Darstellung eines Objekts für das Zielgerät gerendert wird. Die bereitgestellten Informationen kann in Funktionen zum Zeichnen auf dem Bildschirm, einen Drucker oder sogar einer Metadatei verwendet werden.
+Diese Struktur speichert relevante Informationen, die verwendet werden, um die Darstellung eines Objekts für das Zielgerät darzustellen. Die bereitgestellten Informationen können zum Zeichnen auf den Bildschirm, einen Drucker oder sogar eine Metadatei verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,5 +93,5 @@ Diese Struktur speichert, relevante Informationen, mit denen die Darstellung ein
 ## <a name="see-also"></a>Siehe auch
 
 [Klassen und Strukturen](../../atl/reference/atl-classes.md)<br/>
-[IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
+[IViewObject::D RAW](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
 [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)

@@ -30,16 +30,16 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 350d8c7b1dcf61272a3cfee884dff8a63b455f1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe6ada0d50865897e791fc04b99ec0bb486f5a55
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349474"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499994"
 ---
-# <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
+# <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
-Konvertieren einer **tm** -Zeitstruktur in einer Zeichenfolge. Diese Funktionen sind Versionen von [asctime, _wasctime](asctime-wasctime.md) mit Sicherheitsverbesserungen wie in [Sicherheitsfunktionen](../../c-runtime-library/security-features-in-the-crt.md) in der CRT beschrieben.
+Konvertiert eine **TM** -Zeitstruktur in eine Zeichenfolge. Diese Funktionen sind Versionen von [asctime, _wasctime](asctime-wasctime.md) mit Sicherheitsverbesserungen wie in [Sicherheitsfunktionen](../../c-runtime-library/security-features-in-the-crt.md) in der CRT beschrieben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,13 +69,13 @@ errno_t _wasctime_s(
 ### <a name="parameters"></a>Parameter
 
 *buffer*<br/>
-Ein Zeiger auf einen Puffer, um das Zeichenfolgenergebnis zu speichern. Diese Funktion nimmt einen Zeiger auf einen gültigen Speicherbereich mit einer Größe von angegebenen *NumberOfElements*.
+Ein Zeiger auf einen Puffer, um das Ergebnis der Zeichenfolge zu speichern. Diese Funktion nimmt einen Zeiger auf einen gültigen Speicherort mit einer Größe an, die von " *numofelements*" angegeben wird.
 
 *numberOfElements*<br/>
-Die Größe des Puffers zum Speichern des Ergebnisses verwendet werden soll.
+Die Größe des Puffers, der zum Speichern des Ergebnisses verwendet wird.
 
 *tmSource*<br/>
-Zeit-/Datumsstruktur. Diese Funktion nimmt einen Zeiger auf ein gültiges **Struktur** **tm** Objekt.
+Zeit-/Datumsstruktur. Diese Funktion nimmt einen Zeiger auf ein gültiges **struct** - **TM** -Objekt an.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -83,20 +83,20 @@ Null, wenn erfolgreich. Wenn es einen Fehler gibt, wird der ungültige Parameter
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
-|*buffer*|*numberOfElements*|*tmSource*|Zurück|Wert in *Puffer*|
+|*buffer*|*numberOfElements*|*tmSource*|Zurück|Wert im *Puffer*|
 |--------------|------------------------|----------|------------|-----------------------|
 |**NULL**|Beliebig|Beliebig|**EINVAL**|Nicht geändert|
-|Nicht **NULL** (zeigt auf gültigen Speicher)|0|Beliebig|**EINVAL**|Nicht geändert|
-|Nicht **NULL**|0< Größe < 26|Beliebig|**EINVAL**|Leere Zeichenfolge|
-|Nicht **NULL**|>= 26|**NULL**|**EINVAL**|Leere Zeichenfolge|
-|Nicht **NULL**|>= 26|Ungültige Zeitstruktur oder Zeitkomponentenwerte außerhalb des Bereichs|**EINVAL**|Leere Zeichenfolge|
+|Not **null** (zeigt auf gültigen Speicher)|0|Beliebig|**EINVAL**|Nicht geändert|
+|Nicht **null**|0< Größe < 26|Beliebig|**EINVAL**|Leere Zeichenfolge|
+|Nicht **null**|>= 26|**NULL**|**EINVAL**|Leere Zeichenfolge|
+|Nicht **null**|>= 26|Ungültige Zeitstruktur oder Zeitkomponentenwerte außerhalb des Bereichs|**EINVAL**|Leere Zeichenfolge|
 
 > [!NOTE]
-> Fehlerbedingungen für **Wasctime_s** ähneln **Asctime_s** mit der Ausnahme, dass die maximale Größe in Wörtern angegeben wird.
+> Fehlerbedingungen für **wasctime_s** ähneln **asctime_s** , mit der Ausnahme, dass die Größenbeschränkung in Wörtern gemessen wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Asctime** -Funktion konvertiert eine Zeit, die als eine Struktur in eine Zeichenfolge gespeichert. Die *TmSource* Wert wird in der Regel von einem Aufruf abgerufen **Gmtime** oder **Localtime**. Beide Funktionen können verwendet werden, um das Füllen einer **tm** Struktur, wie in der Zeit definiert. H.
+Die **Asctime** -Funktion konvertiert eine als-Struktur gespeicherte Zeit in eine Zeichenfolge. Der *tmsource* -Wert wird normalerweise durch einen Aufruf von **gmtime** oder **localtime**abgerufen. Beide Funktionen können verwendet werden, um eine **TM** -Struktur zu füllen, wie Sie in Time definiert ist. Micha.
 
 |timeptr.member|Wert|
 |--------------------|-----------|
@@ -104,17 +104,17 @@ Die **Asctime** -Funktion konvertiert eine Zeit, die als eine Struktur in eine Z
 |**tm_isdst**|Positiv bei Sommerzeit; 0 bei Winterzeit; negativ bei unbekannter Zeit. Die C-Laufzeitbibliothek wendet die Regeln der Vereinigten Staaten an, um die Berechnung der Sommerzeit (DST, Daylight Saving Time) zu implementieren.|
 |**tm_mday**|Tag des Monats (1-31)|
 |**tm_min**|Minuten nach Stunde (0-59)|
-|**tm_mon**|Monat (0 – 11; Januar = 0)|
+|**tm_mon**|Monat (0-11; Januar = 0)|
 |**tm_sec**|Sekunden nach Minute (0-59)|
-|**tm_wday**|Tag der Woche (0-6; Sonntag = 0)|
-|**tm_yday**|Tag des Jahres (0 – 365; 1. Januar = 0)|
+|**tm_wday**|Wochentag (0-6; Sonntag = 0)|
+|**tm_yday**|Tag des Jahres (0-365; 1. Januar = 0)|
 |**tm_year**|Jahr (aktuelles Jahr minus 1900)|
 
 Die konvertierte Zeichenfolge wird auch gemäß den lokalen Zeitzoneneinstellungen angepasst. Informationen zur Konfiguration der Zeitzonen finden Sie unter den [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) und [localtime_s, _localtime32_s, _localtime64_2](localtime-s-localtime32-s-localtime64-s.md)-Funktionen. Informationen zur Definition der Zeitzonenumgebung und globalen Variablen finden Sie unter der [_tzset](tzset.md)-Funktion.
 
-Das Zeichenfolgenergebnis erzeugten **Asctime_s** enthält genau 26 Zeichen und weist das Format `Wed Jan 02 02:03:55 1980\n\0`. Eine 24-Stunden-Uhr wird verwendet. Alle Felder haben eine feste Breite. Die Zeilenwechsel- und Nullzeichen nehmen die letzten beiden Stellen der Zeichenfolge ein. Der Wert, der als zweiter Parameter übergeben wird, sollte mindestens so hoch sein. Ist dies weniger, einen Fehlercode und **EINVAL**, zurückgegeben werden.
+Das von **asctime_s** erzeugte Zeichen folgen Ergebnis enthält genau 26 Zeichen und hat das `Wed Jan 02 02:03:55 1980\n\0`Formular. Eine 24-Stunden-Uhr wird verwendet. Alle Felder haben eine feste Breite. Die Zeilenwechsel- und Nullzeichen nehmen die letzten beiden Stellen der Zeichenfolge ein. Der Wert, der als zweiter Parameter übergeben wird, sollte mindestens so hoch sein. Wenn der Wert kleiner ist, wird der Fehlercode " **Eingabe**" zurückgegeben.
 
-**_wasctime_s** ist eine Breitzeichen-Version von **Asctime_s**. **_wasctime_s** und **Asctime_s** Verhalten sich andernfalls identisch.
+**_wasctime_s** ist eine breit Zeichen Version von **asctime_s**. **_wasctime_s** und **asctime_s** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mapping"></a>Routinemäßige Allgemeintext-Zuordnung
 
@@ -133,13 +133,13 @@ Die Verwendung dieser Funktionen in C++ wird durch Überladungen (als Vorlagen v
 
 ## <a name="security"></a>Sicherheit
 
-Zeiger auf den Puffer ist nicht **NULL** und der Zeiger nicht auf einen gültigen Puffer, die Funktion überschreibt alle an der Position befindet. Dies kann auch zu einer Zugriffsverletzung führen.
+Wenn der Puffer Zeiger nicht **null** ist und der Zeiger nicht auf einen gültigen Puffer zeigt, überschreibt die Funktion das, was sich am Speicherort befindet. Dies kann auch zu einer Zugriffsverletzung führen.
 
-Wenn das übergebene Größenargument größer als die tatsächliche Puffergröße ist, kann ein [Pufferüberlauf](/windows/desktop/SecBP/avoiding-buffer-overruns) auftreten.
+Wenn das übergebene Größenargument größer als die tatsächliche Puffergröße ist, kann ein [Pufferüberlauf](/windows/win32/SecBP/avoiding-buffer-overruns) auftreten.
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm platziert die Systemzeit in der lange ganze Zahl **Aclock**, übersetzt sie in der Struktur **Newtime** und dann in Form einer Zeichenfolge für die Ausgabe, indem konvertiert die **Asctime_s**Funktion.
+Dieses Programm versetzt die Systemzeit in die lange ganzzahlige **aclock**, übersetzt Sie in die Struktur **newTime** und konvertiert Sie dann mithilfe der **asctime_s** -Funktion in eine Zeichenfolge Form für die Ausgabe.
 
 ```C
 // crt_asctime_s.c

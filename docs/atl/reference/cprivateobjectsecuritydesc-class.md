@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: c1ac15d4d8254107a66e577321edb3c40578f240
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 97ea2b8411b404caf9f833ad85f226d18aea1e73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915806"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496583"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Cprivateobjectsecuritydesc-Klasse
 
@@ -57,7 +57,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 Diese von [CSecurityDesc](../../atl/reference/csecuritydesc-class.md)abgeleitete Klasse stellt Methoden zum Erstellen und Verwalten der Sicherheits Beschreibung eines privaten Objekts bereit.
 
-Eine Einführung zum Zugriffs Steuerungsmodell in Windows finden Sie unter [Access Control](/windows/desktop/SecAuthZ/access-control) in der Windows SDK.
+Eine Einführung zum Zugriffs Steuerungsmodell in Windows finden Sie unter [Access Control](/windows/win32/SecAuthZ/access-control) in der Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -93,7 +93,7 @@ Ein Zeiger auf `GUID` eine-Struktur, die den Typ des Objekts identifiziert, das 
 Gibt an, ob das neue-Objekt andere Objekte enthalten kann. Der Wert true gibt an, dass das neue Objekt ein Container ist. Der Wert false gibt an, dass das neue Objekt kein Container ist.
 
 *GenericMapping*<br/>
-Zeiger auf eine [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) -Struktur, die die Zuordnung von jedem generischen Recht zu bestimmten Rechten für das-Objekt angibt.
+Zeiger auf eine [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) -Struktur, die die Zuordnung von jedem generischen Recht zu bestimmten Rechten für das-Objekt angibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -101,7 +101,7 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode versucht zu bestimmen, ob die ACEs in der freigegebenen Zugriffs Steuerungs Liste (DACL) und der System Zugriffs Steuerungs Liste (SACL) der aktuellen Sicherheits Beschreibung von der übergeordneten Sicherheits Beschreibung geerbt wurden. Sie ruft die [ConvertTo autovererprivateobjectsecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) -Funktion auf.
+Diese Methode versucht zu bestimmen, ob die ACEs in der freigegebenen Zugriffs Steuerungs Liste (DACL) und der System Zugriffs Steuerungs Liste (SACL) der aktuellen Sicherheits Beschreibung von der übergeordneten Sicherheits Beschreibung geerbt wurden. Sie ruft die [ConvertTo autovererprivateobjectsecurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) -Funktion auf.
 
 ##  <a name="cprivateobjectsecuritydesc"></a>Cprivateobjectsecuritydesc:: cprivateobjectsecuritydesc
 
@@ -164,7 +164,7 @@ Gibt an, ob das neue-Objekt andere Objekte enthalten kann. Der Wert true gibt an
 Verweis auf das [CAccessToken](../../atl/reference/caccesstoken-class.md) -Objekt für den Client Prozess, in dessen Auftrag das Objekt erstellt wird.
 
 *GenericMapping*<br/>
-Zeiger auf eine [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) -Struktur, die die Zuordnung von jedem generischen Recht zu bestimmten Rechten für das-Objekt angibt.
+Zeiger auf eine [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) -Struktur, die die Zuordnung von jedem generischen Recht zu bestimmten Rechten für das-Objekt angibt.
 
 *ObjectType*<br/>
 Ein Zeiger auf `GUID` eine-Struktur, die den Typ des Objekts identifiziert, das dem aktuellen-Objekt zugeordnet ist. Legen Sie *ObjectType* auf NULL fest, wenn das Objekt nicht über eine GUID verfügt.
@@ -173,7 +173,7 @@ Ein Zeiger auf `GUID` eine-Struktur, die den Typ des Objekts identifiziert, das 
 Gibt an, ob das neue-Objekt andere Objekte enthalten kann. Der Wert true gibt an, dass das neue Objekt ein Container ist. Der Wert false gibt an, dass das neue Objekt kein Container ist.
 
 *AutoInheritFlags*<br/>
-Ein Satz von Bitflags, mit denen gesteuert wird, wie Zugriffs Steuerungs Einträge (ACEs) von *pparent*geerbt werden. Weitere Informationen finden Sie unter " [kreateprivateobjectsecurityex](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) ".
+Ein Satz von Bitflags, mit denen gesteuert wird, wie Zugriffs Steuerungs Einträge (ACEs) von *pparent*geerbt werden. Weitere Informationen finden Sie unter " [kreateprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) ".
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -181,7 +181,7 @@ Gibt bei Erfolg true zurück, bei einem Fehler false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft " [kreateprivateobjectser.](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) " oder " [kreateprivateobjectsecurityex](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)" auf.
+Diese Methode ruft " [kreateprivateobjectser.](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) " oder " [kreateprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)" auf.
 
 Die zweite Methode ermöglicht das Angeben der Objekttyp-GUID des neuen Objekts oder das Steuern der Vererbung von ACEs.
 
@@ -201,7 +201,7 @@ bool Get(
 ### <a name="parameters"></a>Parameter
 
 *si*<br/>
-Ein Satz von Bitflags, die die Teile der abzurufenden Sicherheits Beschreibung angeben. Bei diesem Wert kann es sich um eine Kombination der [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) -Bitflags handeln.
+Ein Satz von Bitflags, die die Teile der abzurufenden Sicherheits Beschreibung angeben. Bei diesem Wert kann es sich um eine Kombination der [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) -Bitflags handeln.
 
 *pResult*<br/>
 Ein Zeiger auf ein [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) -Objekt, das eine Kopie der angeforderten Informationen aus der angegebenen Sicherheits Beschreibung empfängt.
@@ -253,19 +253,19 @@ bool Set(
 ### <a name="parameters"></a>Parameter
 
 *si*<br/>
-Ein Satz von Bitflags, die die Teile der Sicherheits Beschreibung angeben, die festgelegt werden sollen. Bei diesem Wert kann es sich um eine Kombination der [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) -Bitflags handeln.
+Ein Satz von Bitflags, die die Teile der Sicherheits Beschreibung angeben, die festgelegt werden sollen. Bei diesem Wert kann es sich um eine Kombination der [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) -Bitflags handeln.
 
 *Änderungs*<br/>
 Zeiger auf ein [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) -Objekt. Die Teile dieser Sicherheits Beschreibung, die durch den *Si* -Parameter angegeben werden, werden auf die Sicherheits Beschreibung des Objekts angewendet.
 
 *GenericMapping*<br/>
-Zeiger auf eine [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) -Struktur, die die Zuordnung von jedem generischen Recht zu bestimmten Rechten für das-Objekt angibt.
+Zeiger auf eine [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) -Struktur, die die Zuordnung von jedem generischen Recht zu bestimmten Rechten für das-Objekt angibt.
 
 *Toben*<br/>
 Verweis auf das [CAccessToken](../../atl/reference/caccesstoken-class.md) -Objekt für den Client Prozess, in dessen Auftrag das Objekt erstellt wird.
 
 *AutoInheritFlags*<br/>
-Ein Satz von Bitflags, mit denen gesteuert wird, wie Zugriffs Steuerungs Einträge (ACEs) von *pparent*geerbt werden. Weitere Informationen finden Sie unter " [kreateprivateobjectsecurityex](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) ".
+Ein Satz von Bitflags, mit denen gesteuert wird, wie Zugriffs Steuerungs Einträge (ACEs) von *pparent*geerbt werden. Weitere Informationen finden Sie unter " [kreateprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) ".
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -277,7 +277,7 @@ Die zweite Methode ermöglicht das Angeben der Objekttyp-GUID des Objekts oder d
 
 ## <a name="see-also"></a>Siehe auch
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Klassen Übersicht](../../atl/atl-class-overview.md)<br/>
 [Globale Sicherheitsfunktionen](../../atl/reference/security-global-functions.md)<br/>
 [CSecurityDesc-Klasse](../../atl/reference/csecuritydesc-class.md)

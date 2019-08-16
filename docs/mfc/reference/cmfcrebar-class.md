@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: ccd500547bdcf65e922f7b5e5ca8d30e0423933d
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: d348cf7aac57ce213e4d3f602501d12cee8e20d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866166"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505440"
 ---
 # <a name="cmfcrebar-class"></a>Cmatkrebar-Klasse
 
@@ -120,7 +120,7 @@ in Gibt den Text an, der auf der Info Leiste angezeigt werden soll. Der Text ist
 [in, out] Gibt die Bitmap an, die auf dem Hintergrund der Info Leiste angezeigt werden soll.
 
 *dwStyle*<br/>
-in Enthält den Stil, der auf das Band angewendet werden soll. Eine komplette Liste der Band Stile finden Sie in der Beschreibung für `fStyle` in der [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) -Struktur in der Windows SDK-Dokumentation.
+in Enthält den Stil, der auf das Band angewendet werden soll. Eine komplette Liste der Band Stile finden Sie in der Beschreibung für `fStyle` in der [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) -Struktur in der Windows SDK-Dokumentation.
 
 *clrFore*<br/>
 in Stellt die Vordergrundfarbe der Info Leiste dar.
@@ -150,7 +150,7 @@ BOOL Create(
 [in, out] Ein Zeiger auf das übergeordnete Fenster dieses Grund leisten-Steuer Elements.
 
 *dwCtrlStyle*<br/>
-in Gibt den Stil für das Grund leisten-Steuerelement an. Der Standardformat Wert ist **RBS_BANDBORDERS**, in dem schmale Linien angezeigt werden, um angrenzende Bänder im Info leisten-Steuerelement voneinander zu trennen. Eine Liste gültiger Stile finden Sie Untergrund leisten- [Steuerelement Stile](/windows/desktop/Controls/rebar-control-styles) in der Windows SDK-Dokumentation.
+in Gibt den Stil für das Grund leisten-Steuerelement an. Der Standardformat Wert ist **RBS_BANDBORDERS**, in dem schmale Linien angezeigt werden, um angrenzende Bänder im Info leisten-Steuerelement voneinander zu trennen. Eine Liste gültiger Stile finden Sie Untergrund leisten- [Steuerelement Stile](/windows/win32/Controls/rebar-control-styles) in der Windows SDK-Dokumentation.
 
 *dwStyle*<br/>
 in Der Fenster Stil des Grund leisten-Steuer Elements. Eine Liste gültiger Stile finden Sie unter [Fenster Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles).

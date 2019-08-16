@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: adc821370201eeb83b6c6b4b875e5e62b0fa523f
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: c8413a28024361db82ca74858453202393987e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606440"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492689"
 ---
 # <a name="manifest-tool-property-pages"></a>Eigenschaftenseiten des Manifesttools
 
-Verwenden Sie diese Seiten, um allgemeine Optionen für " [Mt. exe](https://msdn.microsoft.com/library/aa375649)" anzugeben. Diese Seiten finden Sie unter **Projekt** > **Eigenschaften** > **Konfigurations Eigenschaften** > **Manifest-Tool**.
+Verwenden Sie diese Seiten, um allgemeine Optionen für " [Mt. exe](/windows/win32/sbscs/mt-exe)" anzugeben. Diese Seiten finden Sie unter **Projekt** > **Eigenschaften** > **Konfigurations Eigenschaften** > **Manifest-Tool**.
 
 ## <a name="general-property-page"></a>Eigenschaften Seite "Allgemein"
 
@@ -105,7 +105,7 @@ Gibt an, ob die Anwendung DPI-fähig ist. Für MFC-Projekte ist diese Einstellun
 
 ## <a name="isolated-com-property-page"></a>Isolierte COM-Eigenschaften Seite
 
-Weitere Informationen zu isolierten com finden Sie unter [isolierte Anwendungen](/windows/desktop/SbsCs/isolated-applications) und [Gewusst wie: Erstellen Sie isolierte Anwendungen für die Nutzung](../how-to-build-isolated-applications-to-consume-com-components.md)von COM-Komponenten.
+Weitere Informationen zu isolierten com finden Sie unter [isolierte Anwendungen](/windows/win32/SbsCs/isolated-applications) und [Gewusst wie: Erstellen Sie isolierte Anwendungen für die Nutzung](../how-to-build-isolated-applications-to-consume-com-components.md)von COM-Komponenten.
 
 ###  <a name="type-library-file"></a>Typbibliotheks Datei
 

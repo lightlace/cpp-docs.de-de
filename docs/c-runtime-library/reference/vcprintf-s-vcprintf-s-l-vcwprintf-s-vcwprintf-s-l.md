@@ -43,14 +43,14 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: e27018d02c8fb77b0e2a1c02164d3b6d112448ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd346141db9f4974ee5f9300792260bf2a8ec72
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365348"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499330"
 ---
-# <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
+# <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
 Schreibt eine formatierte Ausgabe in die Konsole, indem ein Zeiger auf eine Liste von Argumenten verwendet wird. Diese Versionen von [_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) enthalten Sicherheitserweiterungen, wie unter [Security Features in the CRT (Sicherheitserweiterungen in der CRT)](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -97,16 +97,16 @@ Weitere Informationen finden Sie unter [Format Specification Syntax: printf and 
 
 Die Anzahl geschriebener Zeichen oder ein negativer Wert im Falle eines Ausgabefehlers.
 
-Wie Sie die weniger sicheren Versionen dieser Funktionen ein, wenn *Format* ist ein null-Zeiger der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Darüber hinaus im Gegensatz zu den weniger sicheren Versionen dieser Funktionen Wenn *Format* gibt nicht an einem gültigen Format vorliegt, wird eine Ausnahme für ungültige Parameter generiert. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, diese einem Fehlercode von Funktionen zurück und legen **Errno** auf diesen Fehlercode. Der standardfehlercode ist **EINVAL** Wenn kein spezifischerer Wert nicht anwendbar ist.
+Wie bei den weniger sicheren Versionen dieser Funktionen, wenn *Format* ein NULL-Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Im Gegensatz zu den weniger sicheren Versionen dieser Funktionen wird eine Ausnahme wegen eines ungültigen Parameters generiert, wenn das *Format* kein gültiges Format angibt. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen einen Fehlercode zurück und legen **errno** auf diesen Fehlercode fest. Der Standardfehler Code ist "Deval", wenn kein spezifischeren Wert angewendet wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt dann die angegebenen Daten in die Konsole. **_vcwprintf_s** ist die Breitzeichen-Version von **_vcprintf_s**. Eine Zeichenfolge mit Breitzeichen wird als Argument akzeptiert.
+Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt dann die angegebenen Daten in die Konsole. **_vcwprintf_s** ist die breit Zeichen Version von **_vcprintf_s**. Eine Zeichenfolge mit Breitzeichen wird als Argument akzeptiert.
 
-Die Versionen dieser Funktionen, die **_l** -Suffix sind beinahe identisch, außer dass sie verwenden den Gebietsschemaparameter, der übergeben wird, anstelle des aktuellen Gebietsschemas.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Gebiets Schemas übergeben wurde.
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

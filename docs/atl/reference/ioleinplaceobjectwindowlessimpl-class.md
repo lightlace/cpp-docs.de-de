@@ -1,5 +1,5 @@
 ---
-title: IOleInPlaceObjectWindowlessImpl-Klasse
+title: Ioleinplaceobjectwindowlessimpl-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - IOleInPlaceObjectWindowlessImpl
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - controls [ATL], windowless
 - deactivating ATL
 ms.assetid: a2e0feb4-bc59-4adf-aab2-105457bbdbb4
-ms.openlocfilehash: df14c22f5cf4828b51bf03f6d0f0c4c20cf5a009
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdd660daae109ac2a656519131dd9869ceaeaf4e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197863"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495750"
 ---
-# <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlaceObjectWindowlessImpl-Klasse
+# <a name="ioleinplaceobjectwindowlessimpl-class"></a>Ioleinplaceobjectwindowlessimpl-Klasse
 
-Diese Klasse implementiert `IUnknown` und bietet Methoden, die ein fensterloses Steuerelement, um fenstermeldungen zu empfangen und zur Teilnahme an Drag & Drop-Vorgänge zu ermöglichen.
+Diese Klasse implementiert `IUnknown` und stellt Methoden bereit, die einem fensterlosen Steuerelement ermöglichen, Fenster Meldungen zu empfangen und an Drag & Drop-Vorgängen teilzunehmen.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+>  Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ class IOleInPlaceObjectWindowlessImpl
 #### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Abgeleitet von die Klasse `IOleInPlaceObjectWindowlessImpl`.
+Die von `IOleInPlaceObjectWindowlessImpl`abgeleitete Klasse.
 
 ## <a name="members"></a>Member
 
@@ -52,20 +52,20 @@ Abgeleitet von die Klasse `IOleInPlaceObjectWindowlessImpl`.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|Können kontextbezogene Hilfe an. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
-|[IOleInPlaceObjectWindowlessImpl::GetDropTarget](#getdroptarget)|Stellt die `IDropTarget` Schnittstelle für ein direktes aktiven, fensterlosen Objekt, das per Drag & drop unterstützt. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
-|[IOleInPlaceObjectWindowlessImpl::GetWindow](#getwindow)|Ruft einen Fensterhandle ab.|
-|[IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|Ein aktives Steuerelement des direktes wird deaktiviert.|
-|[IOleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|Sendet eine Nachricht aus dem Container an einem fensterlosen Steuerelement, das direkt aktiv ist.|
-|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|Reaktiviert eine zuvor deaktivierte Steuerelement an. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
-|[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|Gibt an, welcher Teil des direktes Steuerelements sichtbar ist.|
-|[IOleInPlaceObjectWindowlessImpl::UIDeactivate](#uideactivate)|Deaktiviert und entfernt die Benutzeroberfläche, die direkte Aktivierung unterstützt.|
+|[IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|Aktiviert die kontextbezogene Hilfe. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
+|[IOleInPlaceObjectWindowlessImpl::GetDropTarget](#getdroptarget)|Stellt die `IDropTarget` Schnittstelle für ein direkt aktives, fensterloses Objekt bereit, das Drag & Drop unterstützt. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
+|[IOleInPlaceObjectWindowlessImpl::GetWindow](#getwindow)|Ruft ein Fenster Handle ab.|
+|[IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|Deaktiviert eine aktive direkte Steuerung.|
+|[IOleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|Sendet eine Nachricht aus dem Container an ein fensterloses Steuerelement, das direkt aktiv ist.|
+|[IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|Reaktiviert ein zuvor deaktiviertes Steuerelement. Die ATL-Implementierung gibt E_NOTIMPL zurück.|
+|[IOleInPlaceObjectWindowlessImpl::SetObjectRects](#setobjectrects)|Gibt an, welcher Teil der direkten Steuerung sichtbar ist.|
+|[IOleInPlaceObjectWindowlessImpl::UIDeactivate](#uideactivate)|Deaktiviert und entfernt die Benutzeroberfläche, die die direkte Aktivierung unterstützt.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject) Schnittstelle verwaltet die Aktivierung und Deaktivierung des direktes steuert und bestimmt, wie viel des Steuerelements sichtbar sein soll. Die [IOleInPlaceObjectWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) Schnittstelle ermöglicht es ein fensterloses Steuerelement, um fenstermeldungen zu empfangen und zur Teilnahme an Drag & Drop-Vorgänge. Klasse `IOleInPlaceObjectWindowlessImpl` stellt eine Standardimplementierung von `IOleInPlaceObject` und `IOleInPlaceObjectWindowless` und implementiert `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.
+Die [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) -Schnittstelle verwaltet die erneute Aktivierung und die wieder Aktivierung von direkten Steuerelementen und bestimmt, wie viel von dem Steuerelement sichtbar sein sollte. Die [IOleInPlaceObjectWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) -Schnittstelle ermöglicht einem fensterlosen Steuerelement das Empfangen von Fenster Meldungen und die Teilnahme an Drag & Drop-Vorgängen. Die `IOleInPlaceObjectWindowlessImpl` -Klasse stellt eine Standard `IOleInPlaceObject` Implementierung `IOleInPlaceObjectWindowless` von und `IUnknown` bereit und implementiert durch das Senden von Informationen an das dumpgerät in Debugbuilds.
 
-**Verwandte Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)
+**Verwandte Artikel** [ATL-Tutorial](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -77,7 +77,7 @@ Die [IOleInPlaceObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceobject)
 
 **Header:** atlctl.h
 
-##  <a name="contextsensitivehelp"></a>  IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
+##  <a name="contextsensitivehelp"></a>Ioleinplaceobjectwindowlessimpl:: ContextSensitiveHelp
 
 Gibt E_NOTIMPL zurück.
 
@@ -87,9 +87,9 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) in das Windows SDK.
+Weitere Informationen finden Sie unter [IOleWindow:: ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) im Windows SDK.
 
-##  <a name="getdroptarget"></a>  IOleInPlaceObjectWindowlessImpl::GetDropTarget
+##  <a name="getdroptarget"></a>Ioleinplaceobjectwindowlessimpl:: getdroptarget
 
 Gibt E_NOTIMPL zurück.
 
@@ -99,11 +99,11 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IOleInPlaceObjectWindowless::GetDropTarget](/windows/desktop/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) in das Windows SDK.
+Weitere Informationen finden Sie im Windows SDK unter [IOleInPlaceObjectWindowless:: getdroptarget](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) .
 
-##  <a name="getwindow"></a>  IOleInPlaceObjectWindowlessImpl::GetWindow
+##  <a name="getwindow"></a>Ioleinplaceobjectwindowlessimpl:: GetWindow
 
-Der Container ruft diese Funktion rufen Sie das Fensterhandle des Steuerelements.
+Der Container ruft diese Funktion auf, um das Fenster Handle des Steuer Elements zu erhalten.
 
 ```
 HRESULT GetWindow(HWND* phwnd);
@@ -111,13 +111,13 @@ HRESULT GetWindow(HWND* phwnd);
 
 ### <a name="remarks"></a>Hinweise
 
-Einige Container funktioniert nicht mit einem Steuerelement, die fensterlose, selbst wenn sie derzeit im Fenstermodus ist. In ATLs-Implementierung Wenn die Control-Klasse-Datenmember `m_bWasOnceWindowless` ist "true", die Funktion gibt E_FAIL zurück. Andernfalls gilt: Wenn *Phwnd* ist nicht NULL, `GetWindow` legt diese fest \* *Phwnd* in der Steuerelementklasse-Datenmember `m_hWnd` und gibt S_OK zurück.
+Einige Container funktionieren nicht mit einem Steuerelement, das fensterloser ist, auch wenn es aktuell Fenster ist. Wenn in der ATL-Implementierung der Datenmember `m_bWasOnceWindowless` der Steuerelement Klasse true ist, gibt die Funktion E_FAIL zurück. Wenn *phwnd* andernfalls nicht NULL ist, `GetWindow` wird *phwnd* auf das Datenmember `m_hWnd` der Steuerelement Klasse festgelegt \* und S_OK zurückgegeben.
 
-Finden Sie unter [IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) in das Windows SDK.
+Siehe [IOleWindow:: GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) in der Windows SDK.
 
-##  <a name="inplacedeactivate"></a>  IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate
+##  <a name="inplacedeactivate"></a>Ioleinplaceobjectwindowlessimpl:: inplacedeaktivierungs
 
-Wird aufgerufen, durch den Container ein direktes aktives Steuerelement deaktivieren.
+Wird vom Container aufgerufen, um ein direktes aktives Steuerelement zu deaktivieren.
 
 ```
 HRESULT InPlaceDeactivate(HWND* phwnd);
@@ -125,13 +125,13 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode führt eine vollständige oder partielle Deaktivierung je nach Zustand des Steuerelements. Bei Bedarf Benutzeroberfläche des Steuerelements wird deaktiviert, und das Fenster des Steuerelements, sofern vorhanden, zerstört wird. Der Container mitgeteilt, dass das Steuerelement nicht mehr aktiv, vorhanden ist. Die `IOleInPlaceUIWindow` Schnittstelle, die vom Container verwendet werden, zum Aushandeln von Menüs und border Speicherplatz wird freigegeben.
+Diese Methode führt eine vollständige oder partielle Deaktivierung in Abhängigkeit vom Zustand des Steuer Elements aus. Bei Bedarf wird die Benutzeroberfläche des Steuer Elements deaktiviert, und das Fenster des Steuer Elements wird ggf. zerstört. Der Container wird benachrichtigt, dass das Steuerelement nicht mehr aktiv ist. Die `IOleInPlaceUIWindow` Schnittstelle, die vom Container zum Aushandeln von Menüs und Rahmen Bereich verwendet wird, wird freigegeben.
 
-Finden Sie unter [IOleInPlaceObject::InPlaceDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) in das Windows SDK.
+Weitere Informationen finden Sie unter [IOleInPlaceObject:: inplacedeaktivierungs](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) in der Windows SDK.
 
-##  <a name="onwindowmessage"></a>  IOleInPlaceObjectWindowlessImpl::OnWindowMessage
+##  <a name="onwindowmessage"></a>Ioleinplaceobjectwindowlessimpl:: onwindowmessage
 
-Sendet eine Nachricht aus einem Container an einem fensterlosen Steuerelement, das direkt aktiv ist.
+Sendet eine Nachricht von einem Container an ein fensterloses Steuerelement, das direkt aktiv ist.
 
 ```
 HRESULT OnWindowMessage(
@@ -143,9 +143,9 @@ HRESULT OnWindowMessage(
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IOleInPlaceObjectWindowless::OnWindowMessage](/windows/desktop/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) in das Windows SDK.
+Weitere Informationen finden Sie unter [IOleInPlaceObjectWindowless:: onwindowmessage](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) in der Windows SDK.
 
-##  <a name="reactivateandundo"></a>  IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
+##  <a name="reactivateandundo"></a>Ioleinplaceobjectwindowlessimpl:: reactivateandundo
 
 Gibt E_NOTIMPL zurück.
 
@@ -155,11 +155,11 @@ HRESULT ReactivateAndUndo();
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IOleInPlaceObject::ReactivateAndUndo](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) in das Windows SDK.
+Weitere Informationen finden Sie unter [IOleInPlaceObject:: reactivateandundo](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) in der Windows SDK.
 
-##  <a name="setobjectrects"></a>  IOleInPlaceObjectWindowlessImpl::SetObjectRects
+##  <a name="setobjectrects"></a>Ioleinplaceobjectwindowlessimpl:: Log-jectrects
 
-Wird aufgerufen, durch den Container informiert das Steuerelement, das die Größe und/oder Position geändert hat.
+Wird vom Container aufgerufen, um das Steuerelement darüber zu informieren, dass seine Größe und/oder Position geändert wurde.
 
 ```
 HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
@@ -167,13 +167,13 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
 
 ### <a name="remarks"></a>Hinweise
 
-Updates des Steuerelements `m_rcPos` Datenmember und der Steuerelementanzeige. Nur der Teil des Steuerelements, das die Clip-Bereich überschneidet wird angezeigt. Wenn die Anzeige eines Steuerelements wurde zuvor abgeschnitten, aber das Clipping entfernt wurde, kann diese Funktion aufgerufen werden, um eine vollständige Ansicht des Steuerelements neu zu zeichnen.
+Aktualisiert den `m_rcPos` Datenmember des Steuer Elements und die Steuerelement Anzeige. Es wird nur der Teil des Steuer Elements angezeigt, der den Clip Bereich überschneidet. Wenn die Anzeige eines Steuer Elements zuvor abgeschnitten wurde, das Clipping jedoch entfernt wurde, kann diese Funktion aufgerufen werden, um eine vollständige Ansicht des Steuer Elements neu zu zeichnen.
 
-Finden Sie unter [IOleInPlaceObject::SetObjectRects](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) in das Windows SDK.
+Weitere Informationen finden Sie im Windows SDK unter [IOleInPlaceObject:: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) .
 
-##  <a name="uideactivate"></a>  IOleInPlaceObjectWindowlessImpl::UIDeactivate
+##  <a name="uideactivate"></a>Ioleinplaceobjectwindowlessimpl:: uideaktivierungs
 
-Deaktiviert und entfernt das Steuerelement der Benutzeroberfläche, die direkte Aktivierung unterstützt.
+Deaktiviert und entfernt die Benutzeroberfläche des Steuer Elements, das die direkte Aktivierung unterstützt.
 
 ```
 HRESULT UIDeactivate();
@@ -181,11 +181,11 @@ HRESULT UIDeactivate();
 
 ### <a name="remarks"></a>Hinweise
 
-Legt die Control-Klasse-Datenmember `m_bUIActive` auf "false". Die ATL-Implementierung dieser Funktion stets gibt S_OK zurück.
+Legt den Datenmember `m_bUIActive` der Steuerelement Klasse auf false fest. Die ATL-Implementierung dieser Funktion gibt immer S_OK zurück.
 
-Finden Sie unter [IOleInPlaceObject::UIDeactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) in das Windows SDK.
+Weitere Informationen finden Sie im Windows SDK unter [IOleInPlaceObject:: uideaktivierungs](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) .
 
 ## <a name="see-also"></a>Siehe auch
 
 [CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)<br/>
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)
+[Klassen Übersicht](../../atl/atl-class-overview.md)

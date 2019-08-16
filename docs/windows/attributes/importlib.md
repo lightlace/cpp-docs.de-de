@@ -1,17 +1,17 @@
 ---
-title: Importlib (C++-COM-Attribut)
+title: importlib (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importlib
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 29c7df8fbedbd107a9bb0b05466addc4672fc555
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92cf335e5c4754595f2c7af2e1aef30d309d2f5f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409379"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514607"
 ---
 # <a name="importlib"></a>importlib
 
@@ -30,11 +30,11 @@ Der Name einer TLB-Datei in Anführungszeichen, die in die Typbibliothek des akt
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Importlib** C++-Attribut bewirkt, dass ein `importlib` Anweisung in den bibliotheksblock der generierten IDL-Datei platziert werden. Die **Importlib** Attribut hat die gleiche Funktionalität wie die [Importlib](/windows/desktop/Midl/importlib) MIDL-Attribut.
+Das **importlib** C++ -Attribut bewirkt `importlib` , dass eine-Anweisung in den Bibliotheks Block der generierten IDL-Datei eingefügt wird. Das **importlib** -Attribut verfügt über die gleiche Funktionalität wie das [importlib](/windows/win32/Midl/importlib) -Attribut "Mittel l".
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt ein Beispiel zur Verwendung **Importlib**:
+Der folgende Code zeigt ein Beispiel für die Verwendung von **importlib**:
 
 ```cpp
 // cpp_attr_ref_importlib.cpp
@@ -51,8 +51,8 @@ Der folgende Code zeigt ein Beispiel zur Verwendung **Importlib**:
 |-|-|
 |**Betrifft**|Überall|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

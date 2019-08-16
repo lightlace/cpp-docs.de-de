@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: 5ef4dd6c9db2d19e0c8a4143c5b4ed3f0ac75f6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7733ae6084b64c20dff5a2c35d7a31c614d6e44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398263"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500507"
 ---
-# <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper-Funktion
+# <a name="iid_ppv_args_helper-function"></a>IID_PPV_ARGS_Helper-Funktion
 
-Stellt sicher, dass der Typ des angegebenen Arguments abgeleitet der `IUnknown` Schnittstelle.
+Überprüft, ob der Typ des angegebenen Arguments von der `IUnknown` -Schnittstelle abgeleitet ist.
 
 > [!IMPORTANT]
-> Diese Spezialisierung einer Klassenvorlage unterstützt die WRL-Infrastruktur und nicht direkt aus Ihrem Code verwendet werden soll. Verwendung [IID_PPV_ARGS](/windows/desktop/api/combaseapi/nf-combaseapi-iid_ppv_args) stattdessen.
+> Diese Vorlagen Spezialisierung unterstützt die WRL-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen. Verwenden Sie stattdessen [IID_PPV_ARGS](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args) .
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,18 +33,18 @@ void** IID_PPV_ARGS_Helper(
 ### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Der Typ des Arguments *pp*.
+Der Typ des Arguments *PP*.
 
 *pp*<br/>
 Ein doppelt indirekter Zeiger.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Argument *pp* Umwandeln in einen Zeiger-auf-a-Zeiger auf **"void"**.
+Argument- *PP* -Umwandlung in einen Zeiger auf einen Zeiger auf " **void**".
 
 ## <a name="remarks"></a>Hinweise
 
-Es wird ein Fehler während der Kompilierung generiert, wenn der Vorlagenparameter *T* nicht abgeleitet `IUnknown`.
+Ein Kompilierzeitfehler wird generiert, wenn der Vorlagen Parameter *T* nicht von `IUnknown`abgeleitet ist.
 
 ## <a name="requirements"></a>Anforderungen
 

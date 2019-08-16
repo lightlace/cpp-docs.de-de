@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 3cd194d0b6303c6d337d7157a521c825f77fc312
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 7161a4cf4484b6cc9e76e6955de558ca6e9121ca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916234"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507443"
 ---
 # <a name="cbitmap-class"></a>CBitmap-Klasse
 
@@ -155,7 +155,7 @@ Obwohl eine Bitmap nicht direkt für ein Anzeigegerät ausgewählt werden kann, 
 
 Wenn Sie mit dem `CBitmap` -Objekt fertig sind, das von der `CreateBitmap` -Funktion erstellt wurde, wählen Sie zunächst die Bitmap im Gerätekontext aus, und löschen Sie dann das `CBitmap` -Objekt.
 
-Weitere Informationen finden Sie in der Beschreibung des `bmBits` Felds in der `BITMAP` Struktur. Die [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) -Struktur wird unter der [CBitmap::CreateBitmapIndirect](#createbitmapindirect) -Memberfunktion beschrieben.
+Weitere Informationen finden Sie in der Beschreibung des `bmBits` Felds in der `BITMAP` Struktur. Die [BITMAP](/windows/win32/api/wingdi/ns-wingdi-bitmap) -Struktur wird unter der [CBitmap::CreateBitmapIndirect](#createbitmapindirect) -Memberfunktion beschrieben.
 
 ##  <a name="createbitmapindirect"></a>CBitmap:: kreatebitmapindirekte
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>Parameter
 
 *lpBitmap*<br/>
-Verweist auf eine [Bitmap](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) -Struktur, die Informationen über die Bitmap enthält.
+Verweist auf eine [Bitmap](/windows/win32/api/wingdi/ns-wingdi-bitmap) -Struktur, die Informationen über die Bitmap enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -178,7 +178,7 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 Obwohl eine Bitmap nicht direkt für ein Anzeigegerät ausgewählt werden kann, kann Sie als aktuelle Bitmap für einen Speichergeräte Kontext mithilfe von [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) ausgewählt und in einen beliebigen kompatiblen Gerätekontext kopiert werden, indem CDC:: [BitBLT](../../mfc/reference/cdc-class.md#bitblt) oder [CDC:: StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) -Funktion (Die [CDC::P atblt](../../mfc/reference/cdc-class.md#patblt) -Funktion kann die Bitmap für den aktuellen Pinsel direkt in den Anzeigegeräte Kontext kopieren.)
 
-Wenn die `BITMAP` Struktur, auf die durch den *lpbitmap* -Parameter gezeigt wird, mithilfe der `GetObject` -Funktion ausgefüllt wurde, werden die Bits der Bitmap nicht angegeben, und die Bitmap ist nicht initialisiert. Zum Initialisieren der Bitmap kann eine Anwendung eine Funktion wie [CDC:: BitBLT](../../mfc/reference/cdc-class.md#bitblt) oder [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) verwenden, um die Bits aus der durch den ersten Parameter von `CGdiObject::GetObject` identifizierten Bitmap in die von `CreateBitmapIndirect`erstellte Bitmap zu kopieren.
+Wenn die `BITMAP` Struktur, auf die durch den *lpbitmap* -Parameter gezeigt wird, mithilfe der `GetObject` -Funktion ausgefüllt wurde, werden die Bits der Bitmap nicht angegeben, und die Bitmap ist nicht initialisiert. Zum Initialisieren der Bitmap kann eine Anwendung eine Funktion wie [CDC:: BitBLT](../../mfc/reference/cdc-class.md#bitblt) oder [SetDIBits](/windows/win32/api/wingdi/nf-wingdi-setdibits) verwenden, um die Bits aus der durch den ersten Parameter von `CGdiObject::GetObject` identifizierten Bitmap in die von `CreateBitmapIndirect`erstellte Bitmap zu kopieren.
 
 Wenn Sie mit dem Objekt `CBitmap` fertig sind, `CreateBitmapIndirect` das mit der Funktion erstellt wurde, wählen Sie zunächst die Bitmap aus dem Geräte `CBitmap` Kontext aus, und löschen Sie dann das Objekt.
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>Parameter
 
 *pBitMap*<br/>
-Zeiger auf eine [Bitmap](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) -Struktur, die die Bildeigenschaften empfängt. Dieser Parameter darf nicht NULL sein.
+Zeiger auf eine [Bitmap](/windows/win32/api/wingdi/ns-wingdi-bitmap) -Struktur, die die Bildeigenschaften empfängt. Dieser Parameter darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -408,7 +408,7 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 Standardmäßig ordnet `LoadMappedBitmap` Farben zu, die häufig in Schaltflächen Symbolen verwendet werden.
 
-Weitere Informationen zum Erstellen einer zugeordneten Bitmap finden Sie unter der Windows-Funktion " [kreatemappedbitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) " und der [ColorMap](/windows/desktop/api/commctrl/ns-commctrl-colormap) -Struktur in der Windows SDK.
+Weitere Informationen zum Erstellen einer zugeordneten Bitmap finden Sie unter der Windows-Funktion " [kreatemappedbitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) " und der [ColorMap](/windows/win32/api/commctrl/ns-commctrl-colormap) -Struktur in der Windows SDK.
 
 ##  <a name="loadoembitmap"></a>CBitmap:: loadoembitmap
 
@@ -469,7 +469,7 @@ Bei Erfolg ein Handle für das von dem `CBitmap` -Objekt dargestellte Windows-GD
 
 Dieser Operator ist ein Typumwandlungs Operator, der die direkte Verwendung `HBITMAP` eines Objekts unterstützt.
 
-Weitere Informationen zum Verwenden von Grafikobjekten finden Sie unter [Graphic Objects](/windows/desktop/gdi/graphic-objects) in the Windows SDK.
+Weitere Informationen zum Verwenden von Grafikobjekten finden Sie unter [Graphic Objects](/windows/win32/gdi/graphic-objects) in the Windows SDK.
 
 ##  <a name="setbitmapbits"></a>CBitmap:: setbitmapbits
 

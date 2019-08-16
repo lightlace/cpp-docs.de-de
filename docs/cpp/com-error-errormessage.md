@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorMessage method [C++]
 ms.assetid: e47335b6-01af-4975-a841-121597479eb7
-ms.openlocfilehash: b1c1b5a79cdf5ee2a4a17d969d23ce0d0d85ab54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44fc9755cd69050ea82145636f01614258943794
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155181"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500580"
 ---
-# <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
+# <a name="_com_errorerrormessage"></a>_com_error::ErrorMessage
 
 **Microsoft-spezifisch**
 
@@ -27,11 +27,11 @@ const TCHAR * ErrorMessage( ) const throw( );
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die zeichenfolgenmeldung zurück, für der HRESULT-Wert in aufgezeichnet der `_com_error` Objekt. Wenn HRESULT ein zugeordneter 16-Bit ist [wCode](../cpp/com-error-wcode.md), klicken Sie dann eine generische Meldung "`IDispatch error #<wCode>`" wird zurückgegeben. Wenn keine Nachricht gefunden wird, wird eine generische Meldung "`Unknown error #<hresult>`" zurückgegeben. Die zurückgegebene Zeichenfolge ist entweder eine Unicode- oder eine multibyte-Zeichenfolge, abhängig vom Zustand der _UNICODE-Makro.
+Gibt die Zeichen folgen Meldung für das HRESULT zurück, `_com_error` das innerhalb des-Objekts aufgezeichnet wird. Wenn HRESULT ein zugeordneter 16-Bit- [wCode](../cpp/com-error-wcode.md)ist, wird eine generische`IDispatch error #<wCode>`Meldung "" zurückgegeben. Wenn keine Nachricht gefunden wird, wird eine generische Meldung "`Unknown error #<hresult>`" zurückgegeben. Die zurückgegebene Zeichenfolge ist entweder eine Unicode-oder eine Multibytezeichenfolge, abhängig vom Zustand des _UNICODE-Makros.
 
 ## <a name="remarks"></a>Hinweise
 
-Ruft der entsprechenden systemnachrichtentext für HRESULT in aufgezeichnet ab der `_com_error` Objekt. Der systemnachrichtentext wird abgerufen, indem der Aufruf der Win32 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Funktion. Die zurückgegebene Zeichenfolge wird von der `FormatMessage`-API zugeordnet und wird ausgegeben, wenn das `_com_error`-Objekt zerstört wird.
+Ruft den passenden Systemmeldungs Text für HRESULT ab, der `_com_error` innerhalb des-Objekts aufgezeichnet wird. Der Text der Systemmeldung wird durch Aufrufen der Win32 [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) -Funktion abgerufen. Die zurückgegebene Zeichenfolge wird von der `FormatMessage`-API zugeordnet und wird ausgegeben, wenn das `_com_error`-Objekt zerstört wird.
 
 **Ende Microsoft-spezifisch**
 

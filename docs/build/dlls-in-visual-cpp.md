@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: 9f5b34fda8a429f8e55631e1e0125ed6f79d5bae
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: 33f002143e306c99b4d17b7a01ddd4a9738e38e7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341068"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493275"
 ---
 # <a name="create-cc-dlls-in-visual-studio"></a>Erstellen von CC++ /DLLs in Visual Studio
 
@@ -88,7 +88,7 @@ Erläutert die Verwendung von **GetProcAddress** zum Abrufen der Adresse einer e
 [FreeLibrary und AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
 Erläutert die Verwendung von " **FreeLibrary** " und wenn das DLL- `AfxFreeLibrary` Modul nicht mehr benötigt wird.
 
-[Such Reihenfolge der Dynamic Link Library](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+[Such Reihenfolge der Dynamic Link Library](/windows/win32/Dlls/dynamic-link-library-search-order)<br/>
 Beschreibt den Suchpfad, der von Windows verwendet wird, um eine DLL im System zu finden.
 
 [Module States of a Regular MFC DLL Dynamically Linked to MFC (Modulzustände einer regulären, dynamisch mit MFC verknüpften MFC-DLL)](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>

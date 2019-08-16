@@ -6,18 +6,18 @@ helpviewer_keywords:
 - COM interfaces, base interface
 - IUnknown interface
 ms.assetid: e6b85472-e54b-4b8c-b19f-4454d6c05a8f
-ms.openlocfilehash: 17561092c6cccbad264bb82d68dbef9c0e078f76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c9faa4cffcdc8e6840dfbbe141cb63f51155ded
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250287"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492070"
 ---
 # <a name="iunknown"></a>IUnknown
 
-[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) ist die Basisschnittstelle jeder zweiten COM-Schnittstelle.  Diese Schnittstelle definiert drei Methoden: [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)), ["AddRef"](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), und [Version](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release). [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) ermöglicht einem Schnittstellenbenutzer, um das Objekt ein Zeiger auf einer seiner anderen Schnittstellen anzufordern. ["AddRef"](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) und [Version](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) implementieren die verweiszählung für die Schnittstelle.
+[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) ist die Basisschnittstelle jeder anderen COM-Schnittstelle.  Diese Schnittstelle definiert drei Methoden: [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)), [adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)und [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release). [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) ermöglicht es einem Schnittstellen Benutzer, das Objekt nach einem Zeiger auf eine andere Schnittstelle zu Fragen. [Adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) und [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) implementieren Verweis Zähler für die Schnittstelle.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Einführung in COM](../atl/introduction-to-com.md)<br/>
-[IUnknown und Schnittstellenvererbung](/windows/desktop/com/iunknown-and-interface-inheritance)
+[IUnknown und Schnittstellen Vererbung](/windows/win32/com/iunknown-and-interface-inheritance)

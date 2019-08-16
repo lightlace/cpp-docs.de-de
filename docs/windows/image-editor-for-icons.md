@@ -42,182 +42,182 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: c411c4b95fcd3866c897f04b70da7cbb2b48ba28
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504318"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514219"
 ---
 # <a name="image-editor-for-icons-c"></a>Bildbearbeitung für Symbole (C++)
 
-Bei der Auswahl einer Bilddatei (z. B. ico, BMP, PNG) in **Projektmappen-Explorer**, das Bild wird geöffnet, der **Bildbearbeitung** auf die gleiche Weise, die im Code-Dateien öffnen die **Code-Editor** . Wenn ein **Bildbearbeitung** Registerkarte aktiv ist, werden Sie Symbolleisten mit vielen Tools zum Erstellen und Bearbeiten von Bildern finden Sie unter. Zusammen mit Bitmaps, Symbolen und Cursorn können Sie Bilder im GIF- oder JPEG-Format mit Befehlen im Bearbeiten der **Image** Menü und die Tools auf die **Bildbearbeitung** Symbolleiste.
+Wenn Sie in **Projektmappen-Explorer**eine Bilddatei (z. b. ico, BMP, PNG) auswählen, wird das Bild im Bild- **Editor** auf die gleiche Weise geöffnet, wie Code Dateien im **Code-Editor**geöffnet werden. Wenn eine Registerkarte **Bild** Bearbeitung aktiv ist, werden Symbolleisten mit vielen Tools zum Erstellen und Bearbeiten von Bildern angezeigt. Zusammen mit Bitmaps, Symbolen und Cursorn können Sie Bilder im GIF-oder JPEG-Format bearbeiten. verwenden Sie dazu die Befehle im Menü **Bild** und die Tools auf der Symbolleiste des **Bild-Editors** .
 
-Grafische Ressourcen sind die Images, die Sie für Ihre Anwendung zu definieren. Sie können freehand zeichnen oder Formen zu zeichnen. Sie können auswählen, Bestandteilen eines Bilds für die Bearbeitung, kippen oder Ändern der Größe oder können Sie benutzerdefinierten Pinsel aus einem ausgewählten Teil eines Images erstellen und zeichnen Sie mit dieser Pinsel. Sie können Eigenschaften zu definieren, speichern Sie Bilder in verschiedenen Formaten und Konvertieren von Bildern von einem Format in eine andere.
-
-> [!NOTE]
-> Mithilfe der **Bildbearbeitung**, können Sie die 32-Bit-Images anzeigen, aber nicht bearbeiten.
-
-Können Sie auch die **Bildbearbeitung** und [Binär-Editor](binary-editor.md) , Bearbeitung von Ressourcendateien in verwalteten Projekten möglich. Bei den zu bearbeitenden verwalteten Ressourcen muss es sich um verknüpfte Ressourcen handeln. Die Visual Studio-Ressourcen-Editoren unterstützt nicht das Bearbeiten eingebetteter Ressourcen.
-
-Zusätzlich zum Erstellen neuer grafische Ressourcen, können Sie [Importieren vorhandener Bilder](../windows/how-to-copy-resources.md#import-and-export-resources) zum Bearbeiten und diese dann zu Ihrem Projekt hinzufügen. Sie können auch öffnen, und Bearbeiten von Bildern, die nicht Teil eines Projekts für sind [unabhängig bearbeiten](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
-
-Informationen zu den **Bild-Editor**, finden Sie unter Vorgehensweise [erstellen Sie ein Symbol oder andere Bild](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [Bearbeiten eines Bildes](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [Verwenden eines Zeichentools](../windows/using-a-drawing-tool-image-editor-for-icons.md), [Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md), und [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md).
+Grafische Ressourcen sind die Images, die Sie für Ihre Anwendung definieren. Sie können frei handlinie zeichnen oder mithilfe von Formen zeichnen. Sie können Teile eines Bilds zum Bearbeiten, kippen oder Ändern der Größe auswählen, oder Sie können einen benutzerdefinierten Pinsel aus einem ausgewählten Teil eines Bilds erstellen und mit diesem Pinsel zeichnen. Sie können Bildeigenschaften definieren, Bilder in verschiedenen Formaten speichern und Bilder von einem Format in ein anderes konvertieren.
 
 > [!NOTE]
-> Laden Sie kostenlos die **Visual Studio-Bildbibliothek** , enthält zahlreiche Animationen, Bitmaps und Symbole, die Sie in Ihren Anwendungen verwenden können. Weitere Informationen zur Vorgehensweise beim Herunterladen der Bibliotheks finden Sie unter den [Visual Studio-Bildbibliothek](/visualstudio/designers/the-visual-studio-image-library).
+> Mit dem **Bild-Editor**können Sie 32-Bit-Bilder anzeigen, Sie können Sie jedoch nicht bearbeiten.
+
+Sie können auch die **Bild** Bearbeitung und den [Binär-Editor](binary-editor.md) verwenden, um mit Ressourcen Dateien in verwalteten Projekten zu arbeiten. Bei den zu bearbeitenden verwalteten Ressourcen muss es sich um verknüpfte Ressourcen handeln. Die Ressourcen-Editoren von Visual Studio unterstützen die Bearbeitung von eingebetteten Ressourcen nicht
+
+Zusätzlich zum Erstellen neuer grafischer Ressourcen können Sie [vorhandene Images](../windows/how-to-copy-resources.md#import-and-export-resources) zur Bearbeitung importieren und Sie dann zu Ihrem Projekt hinzufügen. Sie können auch Bilder öffnen und bearbeiten, die nicht Teil eines Projekts für die [eigenständige Bildbearbeitung](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)sind.
+
+Informationen zum Bild- **Editor**finden Sie unter [Erstellen eines Symbols oder eines anderen Bilds](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [Bearbeiten eines Bilds](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [Verwenden eines Zeichnungs Tools](../windows/using-a-drawing-tool-image-editor-for-icons.md), [Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)und [Tasten](../windows/accelerator-keys-image-editor-for-icons.md)Kombinationen.
+
+> [!NOTE]
+> Laden Sie die **Visual Studio-Bildbibliothek** kostenlos herunter. Sie enthält zahlreiche Animationen, Bitmaps und Symbole, die Sie in Ihren Anwendungen verwenden können. Weitere Informationen zum Herunterladen der Bibliothek finden Sie in der [Visual Studio-Bildbibliothek](/visualstudio/designers/the-visual-studio-image-library).
 
 ## <a name="image-menu"></a>Menü "Bild"
 
-Die **Image** Menü wird, nur, wenn angezeigt die **Bild-Editor** aktiv ist, enthält Befehle zum Bearbeiten von Bildern, Verwalten von Farbpaletten und festlegen **Bildbearbeitung** Fenster Optionen. Darüber hinaus sind die Befehle für die Verwendung von Gerätebildern verfügbar, beim Arbeiten mit Symbolen und Cursorn.
+Das Menü **Bild** , das nur angezeigt wird, wenn der **Bild-Editor** aktiv ist, über Befehle zum Bearbeiten von Bildern, zum Verwalten von Farbpaletten und zum Festlegen der Fenster Optionen für den Bild- **Editor** verfügt. Außerdem sind Befehle zum Verwenden von Geräte Images bei der Arbeit mit Symbolen und Cursorn verfügbar.
 
 |Befehl|Beschreibung|
 |---|---|
-|**Farben umkehren**|Kehrt die verwendeten Farben an.|
+|**Farben umkehren**|Kehrt Ihre Farben um.|
 |**Horizontal spiegeln**|Kippt das Bild oder die Markierung horizontal.|
 |**Vertikal spiegeln**|Kippt das Bild oder die Auswahl vertikal.|
-|**90 Grad drehen**|Dreht das Bild oder die Auswahl um 90 Grad.|
-|**Anzeigen des Fensters "Farben"**|Öffnet die **Farben** Fenster, in dem Sie die Farben, die für Ihr Image verwenden können.|
-|**Auswahl als Pinsel verwenden**|Ermöglicht Ihnen die Erstellung von benutzerdefinierten Pinseln aus einem Teil eines Bilds.<br/><br/>Ihre Auswahl wird es sich um einen benutzerdefinierten Pinsel, der die Farben in der Auswahl auf das Bild verteilt. Kopien der Auswahl bleiben entlang des Pfads ziehen. Sie ziehen, desto langsamer, desto mehr Kopien erfolgen.|
-|**Auswahl kopieren und Gliedern**|Erstellt eine Kopie der aktuellen Auswahl und versieht sie mit einer Umrisslinie.<br/><br/>Wenn die Hintergrundfarbe in der aktuellen Auswahl enthalten ist, es wird ausgeschlossen werden, wenn Sie transparenten verfügen ausgewählte.
-|**Anpassen von Farben**|Öffnet die **benutzerdefinierte Farbauswahl**, können Sie die Farben anpassen, Sie für Ihr Image verwenden.|
-|**Palette laden**|Öffnet die **Palettenfarben laden** Dialogfeld, das Ihnen ermöglicht, das Laden von Palettenfarben, die zuvor in einer PAL-Datei gespeichert.|
-|**Palette speichern**|Die Palettenfarben speichert einer PAL-Datei.|
-|**Deckend zeichnen**|Bei Auswahl dieser Option wird die aktuelle Auswahl nicht transparent.<br/><br/>Wenn diese Option deaktiviert ist, wird die aktuelle Auswahl transparent.|
-|**Symbolleisten-Editor**|Öffnet die [neue Symbolleistenressource (Dialogfeld)](../windows/new-toolbar-resource-dialog-box.md).|
-|**Rastereinstellungen**|Öffnet die **Rastereinstellungen** Dialogfeld, in dem Sie Raster für das Image angeben können.|
-|**Neuer Bildtyp**|Öffnet die [neu \<Gerät > Bildtyp (Dialogfeld)](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Eine einzelnes Symbol-Ressource kann mehrere Images mit verschiedenen Größen enthalten, und Windows können der Größe der entsprechenden Symbole je nachdem, wie sich das alles angezeigt werden soll. Ein neuer Gerätetyp nicht ändert die Größe des Symbols, aber stattdessen erstellt ein neues Image innerhalb des Symbols. Gilt nur für Symbole und Cursor.|
-|**Aktuelle Symbol/Cursorbildtyp**|Öffnet ein Untermenü, in der die ersten neun verfügbaren Cursor oder ein Symbol-Images aufgeführt. Klicken Sie im Untermenü mit dem letzten Befehl **weitere**, öffnet der [öffnen \<Gerät > Bild (Dialogfeld)](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
-|**Bildtyp löschen**|Löscht das Image des ausgewählten Geräts an.|
-|**Extras**|Öffnet ein Untermenü, das alle verfügbaren aus Tools enthält die **Bildbearbeitung** Symbolleiste.|
+|**Drehen von 90 Grad**|Dreht das Bild oder die Auswahl um 90 Grad.|
+|**Fenster "Farben" anzeigen**|Öffnet das Fenster **Farben** , in dem Sie die Farben auswählen können, die für das Bild verwendet werden sollen.|
+|**Auswahl als Pinsel verwenden**|Ermöglicht es Ihnen, einen benutzerdefinierten Pinsel aus einem Teil eines Bilds zu erstellen.<br/><br/>Ihre Auswahl wird zu einem benutzerdefinierten Pinsel, der die Farben in der Auswahl über das Bild verteilt. Kopien der Auswahl bleiben entlang des Zieh Pfades. Wenn Sie langsamer ziehen, werden weitere Kopien erstellt.|
+|**Auswahl kopieren und gliedern**|Erstellt eine Kopie der aktuellen Auswahl und versieht sie mit einer Umrisslinie.<br/><br/>Wenn die Hintergrundfarbe in der aktuellen Auswahl enthalten ist, wird Sie ausgeschlossen, wenn Sie die Option transparent ausgewählt haben.
+|**Farben anpassen**|Öffnet die **Benutzerdefinierte Farbauswahl**, mit der Sie die Farben anpassen können, die Sie für Ihr Bild verwenden.|
+|**Palette laden**|Öffnet das Dialogfeld **Farb Palette laden** , in dem Sie Palettenfarben laden können, die zuvor in eine PAL-Datei gespeichert wurden.|
+|**Palette speichern**|Speichert die Palettenfarben in einer PAL-Datei.|
+|**Nicht transparent zeichnen**|Wenn diese Option ausgewählt ist, wird die aktuelle Auswahl nicht transparent.<br/><br/>Wenn diese Option deaktiviert ist, wird die aktuelle Auswahl transparent.|
+|**Symbolleisten-Editor**|Öffnet das [Dialogfeld neue Symbolleisten Ressource](../windows/new-toolbar-resource-dialog-box.md).|
+|**Raster Einstellungen**|Öffnet das Dialogfeld **Raster Einstellungen** , in dem Sie Raster für das Bild angeben können.|
+|**Neuer Bildtyp**|Öffnet das [Dialog \<Feld neuer Geräte > Bildtyp](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Eine einzelne Symbol Ressource kann mehrere Bilder verschiedener Größen enthalten, und Windows kann abhängig davon, wie Sie angezeigt wird, die entsprechende Symbolgröße verwenden. Ein neuer Gerätetyp ändert nicht die Größe des Symbols, sondern erstellt stattdessen ein neues Bild innerhalb des Symbols. Gilt nur für Symbole und Cursor.|
+|**Aktuelles Symbol/Cursor Bildtyp**|Öffnet ein Untermenü, in dem die ersten neun verfügbaren Cursor-oder Symbolbilder aufgelistet sind. Mit dem letzten Befehl im Untermenü ( **mehr**) wird das [Dialog \<Feld Gerät > Abbild Öffnen geöffnet](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
+|**Bildtyp löschen**|Löscht das ausgewählte Geräte Image.|
+|**Tools**|Öffnet ein Untermenü, das alle Tools enthält, die auf der **Bild-Editor** -Symbolleiste verfügbar sind.|
 
-Die **Rastereinstellungen** Dialogfeld können Sie die Einstellungen für das Image angeben und Gitternetzlinien angezeigt, auf das Bild bearbeitet. Die Zeilen sind nützlich für das Abbild zu bearbeiten, aber nicht als Teil des Bilds selbst gespeichert.
+Im Dialogfeld **Raster Einstellungen** können Sie die Raster Einstellungen für das Bild angeben und Rasterlinien über dem bearbeiteten Bild anzeigen. Die Zeilen sind nützlich für die Bearbeitung des Bilds, werden jedoch nicht als Teil des Bilds gespeichert.
 
 |Eigenschaft|Beschreibung|
 |---|---|
-|**Pixelraster**|Wenn diese Option aktiviert ist, zeigt ein Raster an, um jedes Pixel in der **Bildbearbeitung**.<br/><br/>Das Raster, die nur auf 4 × und höherer Auflösung angezeigt wird.|
-|**Linienraster**|Bei Auswahl dieser Option zeigt ein Raster an, um Blöcke von Pixeln in der **Bildbearbeitung**, durch die Werte der Raster-Abstand angegeben.|
-|**Width**|Gibt die Breite jedes Blocks Kachel.<br/><br/>Diese Eigenschaft ist nützlich, beim Zeichnen von Bitmaps, enthält mehrere Images, die in regelmäßigen Abständen angeordnet sind.|
-|**Height**|Gibt die Höhe jedes Blocks Kachel.<br/><br/>Diese Eigenschaft ist nützlich, beim Zeichnen von Bitmaps, enthält mehrere Images, die in regelmäßigen Abständen angeordnet sind.|
+|**Pixel Raster**|Wenn dieses Kontrollkästchen aktiviert ist, wird ein Raster um jedes Pixel im **Bild-Editor**angezeigt.<br/><br/>Das Raster wird nur bei 4 × und höherer Auflösung angezeigt.|
+|**Kachel Raster**|Wenn diese Option ausgewählt ist, wird ein Raster um die Pixelblöcke im **Bild-Editor**angezeigt, die durch die Werte für den Raster Abstand angegeben werden.|
+|**Width**|Gibt die Breite jedes Kachel Blocks an.<br/><br/>Diese Eigenschaft ist nützlich, wenn Bitmaps gezeichnet werden, die mehrere Bilder enthalten, die in regelmäßigen Abständen angeordnet werden.|
+|**Height**|Gibt die Höhe jedes Kachel Blocks an.<br/><br/>Diese Eigenschaft ist nützlich, wenn Bitmaps gezeichnet werden, die mehrere Bilder enthalten, die in regelmäßigen Abständen angeordnet werden.|
 
 ## <a name="toolbar"></a>Symbolleiste
 
-Die **Bildbearbeitung** Symbolleiste enthält Tools für die Zeichnung zeichnen, Text eingeben, löschen und Bearbeiten von Ansichten. Sie enthält außerdem eine Optionsauswahl, mit der Sie Optionen für die Verwendung jedes Tools auswählen können. Sie können z. B. aus verschiedenen Pinsel breiten Vergrößerungsfaktoren und linienformaten.
+Die Symbolleiste des **Bild-Editors** enthält Tools zum Zeichnen, zeichnen, eingeben von Text, löschen und Bearbeiten von Sichten. Sie enthält auch eine Options Auswahl, mit der Sie Optionen für die Verwendung der einzelnen Tools auswählen können. Beispielsweise können Sie aus verschiedenen Pinsel breiten, Vergrößerungsfaktoren und Linienstilen auswählen.
 
-Alle Tools zur Verfügung, auf die **Bildbearbeitung** Symbolleiste sind auch über das Menü **Image** > **Tools**. Verwenden der **Bildbearbeitung** Symbolleiste und **Option** Auswahl, wählen Sie das Tool oder option werden sollen.
+Alle Tools, die auf der Symbolleiste des **Bild-Editors** verfügbar sind, sind auch über die Menü **Bild** > **Tools**verfügbar. Wählen Sie das gewünschte Tool oder die gewünschte Option aus, um die **Bild-Editor** -Symbolleiste und die **options** Auswahl zu verwenden.
 
-![Symbolleiste der Bildbearbeitung](../mfc/media/vcimageeditortoolbar.gif "VcImageEditorToolbar")<br/>
-**Bild-Editor** Symbolleiste
+![Symbolleiste der Bild] Bearbeitung (../mfc/media/vcimageeditortoolbar.gif "vcimageeditor Toolbar")<br/>
+Symbolleiste der **Bild** Bearbeitung
 
 > [!TIP]
-> Wenn Sie den Cursor auf eine Symbolleisten-Schaltfläche zeigen, werden QuickInfos angezeigt. Diese Tipps können Sie die Funktion der einzelnen Schaltflächen zu identifizieren.
+> Quick Infos werden angezeigt, wenn Sie den Cursor über eine Symbolleisten Schaltfläche bewegen. Diese Tipps können Ihnen helfen, die Funktion der einzelnen Schaltflächen zu identifizieren.
 
-Da viele der Zeichenwerkzeuge aus verfügbar sind die [Tastatur](../windows/accelerator-keys-image-editor-for-icons.md), manchmal ist es sinnvoll, zum Ausblenden der **Bildbearbeitung** Symbolleiste.
+Da viele der Zeichnungs Tools über die [Tastatur](../windows/accelerator-keys-image-editor-for-icons.md)verfügbar sind, ist es manchmal sinnvoll, die Bild- **Editor** -Symbolleiste auszublenden.
 
-- Anzeigen oder Ausblenden der **Bild-Editor** Symbolleiste wechseln Sie zum Menü **Ansicht** > **Symbolleisten** , und wählen Sie **Bildbearbeitung**.
+- Zum Anzeigen oder Ausblenden der Symbolleiste des **Bild-Editors** wechseln Sie zu Menü **anzeigen** > Symbol**leisten** , und wählen Sie **Bild-Editor**aus.
 
 > [!NOTE]
-> Elemente dieser Symbolleiste werden nicht verfügbar, wenn eine Image-Datei angezeigt, aus dem aktuellen Projekt oder Projektmappe nicht geöffnet, in der **Bildbearbeitung**.
+> Elemente aus dieser Symbolleiste werden nicht verfügbar angezeigt, wenn eine Bilddatei aus dem aktuellen Projekt oder der aktuellen Projekt Mappe nicht im **Bild-Editor**geöffnet ist.
 
 ### <a name="option-selector"></a>Optionsauswahl
 
-Mit der **Option** Auswahl können Sie die Breite einer Zeile, Pinselstrich usw. angeben. Das Symbol auf der **Option** Selektor Schaltfläche ändert sich je nachdem welches Tool Sie ausgewählt haben.
+Mit der **Option** Selector können Sie die Breite einer Linie, eines Pinselstrichs usw. angeben. Das Symbol auf der **options** Auswahl Schaltfläche ändert sich je nach ausgewähltem Tool.
 
-![Zeichnen von&#45;Shape-Selektor auf der Symbolleiste der Bildbearbeitung](../mfc/media/vcimageeditortoolbaroptionselector.gif "VcImageEditorToolbarOptionSelector")<br/>
-**Option** -Selektor auf die **Bildbearbeitung** Symbolleiste
+![Zeichnungs&#45;Form Auswahl auf der Symbolleiste des Bild-Editors](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcimageeditortoolbaroptionselector")<br/>
+**Options** Auswahl auf der Symbolleiste des **Bild-Editors**
 
-### <a name="text-tool"></a>Text-tool
+### <a name="text-tool"></a>Texttool
 
-Verwenden der **Texttool** Dialogfeld zum Hinzufügen von Text mit einem Cursor, Bitmap oder Symbol.
+Mit dem Dialogfeld **Text Tool** können Sie einer Cursor-, Bitmap-oder Symbol Ressource Text hinzufügen.
 
-Um dieses Dialogfeld zuzugreifen, öffnen die **Bildbearbeitung** und wechseln Sie zum Menü **Image** > **Tools**, und wählen Sie dann die **Text-Tool** -Befehl.
+Um auf dieses Dialogfeld zuzugreifen, öffnen Sie die **Bild** Bearbeitung, navigieren Sie zu Menu **Image** > **Tools**, und wählen Sie dann den Befehl **Text Tool** aus.
 
 > [!TIP]
-> Sie können mit der rechten Maustaste auf die **Texttool** im Dialogfeld ein standardmäßigen Kontextmenü zugreifen, die eine Liste der standard-Windows-Befehle enthält.
+> Sie können mit der rechten Maustaste auf das Dialogfeld **Text Tool** klicken, um auf ein Standardkontext Menü zuzugreifen, das eine Liste der standardmäßigen Windows-Befehle enthält.
 
-Öffnen der **Schriftart für Texttool** Dialogfeld zum Ändern der Schriftart, Schriftschnitt oder Schriftgrad Cursor. Änderungen werden angewendet, um den Text in die **Text** Bereich.
+Öffnen Sie das Dialogfeld **Text Tool Schriftart** , um die Schriftart, den Stil oder die Größe der Cursor Schriftart zu ändern. Änderungen werden auf den Text angewendet, der im **Text** Bereich angezeigt wird.
 
-Um dieses Dialogfeld zuzugreifen, wählen die **Schriftart** Schaltfläche der **Texttool** Dialogfeld. Die Eigenschaften, die verfügbar sind:
+Um auf dieses Dialogfeld zuzugreifen, wählen Sie die Schaltfläche **Schriftart** im Dialogfeld **Text Tool** aus. Es stehen folgende Eigenschaften zur Verfügung:
 
 |Eigenschaft|Beschreibung|
 |---|---|
-|**Schriftart**|Listet die verfügbaren Schriftarten an.|
-|**Schriftschnitt**|Listet die verfügbaren Formate für die angegebene Schriftart an.|
-|**Size**|Listet die verfügbaren Punktgrößen für die angegebene Schriftart an.|
-|**Beispiel**|Zeigt ein Beispiel, wie Text mit den Einstellungen für die angegebene Schriftart angezeigt wird.|
-|**Skript**|Listet die verfügbaren Sprachskripts für die angegebene Schriftart.<br/><br/>Wenn Sie ein Skript für die andere Sprache auswählen, wird der Zeichensatz für, dass die Sprache für die Erstellung von multilingual Dokumente verfügbar.|
+|**Schriftart**|Listet die verfügbaren Schriftarten auf.|
+|**Schriftschnitt**|Listet die verfügbaren Stile für die angegebene Schriftart auf.|
+|**Größe**|Listet die verfügbaren Punktgrößen für die angegebene Schriftart auf.|
+|**Beispiel**|Zeigt ein Beispiel dazu, wie Text mit den angegebenen Schriftart Einstellungen angezeigt wird.|
+|**Skript**|Listet die verfügbaren sprach Skripts für die angegebene Schriftart auf.<br/><br/>Wenn Sie ein anderes sprach Skript auswählen, steht der Zeichensatz für diese Sprache zum Erstellen von mehrsprachigen Dokumenten zur Verfügung.|
 
-#### <a name="to-change-the-font-of-text-on-an-image"></a>Ändern die Schriftart von Text in einem Bild
+#### <a name="to-change-the-font-of-text-on-an-image"></a>So ändern Sie die Schriftart des Texts eines Bilds
 
-Hier ist ein Beispiel zum Hinzufügen von Text auf ein Symbol in einer Windows-Anwendung, und bearbeiten die Schriftart des Textes.
+Im folgenden finden Sie ein Beispiel für das Hinzufügen von Text zu einem Symbol in einer Windows-Anwendung und das Bearbeiten der Schriftart des Texts.
 
-1. Erstellen einer C++-Windows Forms-Anwendung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Windows Forms-Anwendungen](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Ein *app.ico* Datei wird standardmäßig zum Projekt hinzugefügt.
+1. Erstellen Sie C++ eine Windows Forms-Anwendung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie Windows Forms](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90))Anwendungen. Dem Projekt wird standardmäßig eine Datei " *app. ico* " hinzugefügt.
 
-1. In **Projektmappen-Explorer**, doppelklicken Sie auf die Datei *app.ico*. Die **Bildbearbeitung** wird geöffnet.
+1. Doppelklicken Sie in **Projektmappen-Explorer**auf die Datei *app. ico*. Der **Bild-Editor** wird geöffnet.
 
-1. Wechseln Sie zum Menü **Image** > **Tools** , und wählen Sie **Texttool**.
+1. Wechseln Sie zu Menü **Bild** > **Tools** , und wählen Sie **Texttool**aus.
 
-1. In der **Texttool** (Dialogfeld), Typ *C++* in den leeren Textbereich. Dieser Text wird angezeigt, in einem in der Größe veränderbaren befindet sich in der oberen linken Ecke des *app.ico* in die **Bildbearbeitung**.
+1. Geben *C++* Sie im Dialogfeld **Text Tool** den leeren Textbereich ein. Dieser Text wird in einem Feld, das in der Größe geändert werden kann, in der oberen linken Ecke von *app. ico* im **Bild-Editor**angezeigt.
 
-1. In der **Bildbearbeitung**, ziehen Sie das Feld mit anpassbarer Größe in der Mitte des *app.ico* verbessern die Lesbarkeit von Text.
+1. Ziehen Sie im **Bild-Editor**das Feld mit der Größe der Größe in den Mittelpunkt der *app. ico* , um die Lesbarkeit des Texts zu verbessern.
 
-1. In der **Texttool** wählen Sie im Dialogfeld die **Schriftart** Schaltfläche.
+1. Wählen Sie im Dialogfeld **Text Tool** die Schaltfläche **Schriftart** aus.
 
-1. In der **Schriftart für Texttool** Dialogfeld:
+1. Im Dialogfeld **Schriftart des Texttools** :
 
-   - Wählen Sie **Times New Roman** aus der Liste der verfügbaren Schriftarten, die in aufgeführt sind die **Schriftart** Listenfeld.
+   - Wählen Sie in der Liste der verfügbaren Schriftarten, die im Listenfeld **Schriftart** aufgeführt sind, **Times New Roman** aus.
 
-   - Wählen Sie **fett** aus der Liste der verfügbaren Schriftschnitte aufgeführt, die der **Schriftschnitt** Listenfeld.
+   - Wählen Sie **Fett** in der Liste der verfügbaren Schriftart Stile aus, die im Listenfeld **Schriftart Stil** aufgeführt sind.
 
-   - Wählen Sie **10** zeigen Sie auf der Liste der verfügbaren Größen der **Größe** Listenfeld.
+   - Wählen Sie **10** aus der Liste der verfügbaren Punktgrößen aus, die im Listenfeld **Größe** aufgelistet sind.
 
-   - Klicken Sie auf **OK**. Die **Schriftart für Texttool** wird das Dialogfeld zu schließen und die schriftarteinstellungen der neuen in den Text gelten.
+   - Klicken Sie auf **OK**. Das **Texttool** -Dialogfeld Schriftart wird geschlossen, und die neuen Schriftart Einstellungen werden auf Ihren Text angewendet.
 
-1. Wählen Sie **schließen** auf die **Texttool** Dialogfeld. Das Feld mit veränderbarer Größe, um den Text nicht mehr auf die **Bildbearbeitung**.
+1. Wählen Sie im Dialogfeld **Text Tool** die Option **Schließen** aus. Das Textfeld, das in der Größe geändert werden kann, wird im **Bild-Editor**ausgeblendet.
 
-Der Textbereich zeigt den Text, der als Teil der Ressource angezeigt wird. Dieser Bereich ist zunächst leer.
+Im Textbereich wird der Text angezeigt, der als Teil der Ressource angezeigt wird. Anfänglich ist dieser Bereich leer.
 
 > [!NOTE]
-> Wenn **transparenten Hintergrund** festgelegt ist, wird nur der Text in das Image platziert werden. Wenn **nicht transparenter Hintergrund** festgelegt ist, wird ein umschließendes Rechteck, gefüllt, die mit der Farbe des Hintergrunds hinter dem Text platziert werden.
+> Wenn **transparenter Hintergrund** festgelegt ist, wird nur der Text in das Bild eingefügt. Wenn nicht transparenter **Hintergrund** festgelegt ist, wird ein umgebenden Rechteck, das mit der Hintergrundfarbe gefüllt ist, hinter dem Text platziert.
 
 ## <a name="window-panes"></a>Fensterbereiche
 
-Die **Bildbearbeitung** Fenster zeigt zwei Ansichten eines Bilds mit einem Fensterteiler die zwei Bereiche. Zum Ändern der relativen Größe der Fensterbereiche kann der Fensterteiler seitlich gezogen werden. Der aktive Bereich ist von einem Markierungsrahmen umgeben.
+Das Fenster **Bild-Editor** zeigt zwei Ansichten eines Bilds an, wobei die beiden Bereiche durch einen geteilten Balken getrennt werden. Zum Ändern der relativen Größe der Fensterbereiche kann der Fensterteiler seitlich gezogen werden. Der aktive Bereich ist von einem Markierungsrahmen umgeben.
 
-Eine Ansicht ist die tatsächliche Größe, und der andere wird mit dem Standardwert Vergrößerung Faktor 6 vergrößert. Die Ansichten auf diese beiden Bereiche werden automatisch aktualisiert, die in einem Bereich vorgenommenen Änderungen werden sofort angezeigt, in der anderen. Die beiden Bereiche erleichtern Sie auf eine vergrößerte Ansicht des Images, arbeiten in der können Sie einzelne Pixel unterscheiden und beobachten zur gleichen Zeit, die Auswirkungen Ihrer Arbeit auf die tatsächliche Größe anzeigen des Bilds.
+Eine Ansicht ist die tatsächliche Größe, und die andere wird durch einen Standard Erweiterungs Faktor von 6 vergrößert. Die Ansichten in diesen beiden Bereichen werden automatisch aktualisiert. alle Änderungen, die Sie in einem Bereich vornehmen, werden sofort in der anderen angezeigt. Die beiden Bereiche erleichtern Ihnen das Arbeiten mit einer erweiterten Ansicht Ihres Bilds, in dem Sie einzelne Pixel unterscheiden und gleichzeitig die Auswirkung ihrer Arbeit auf die Ansicht der tatsächlichen Größe des Bilds beobachten können.
 
-Im linken Bereich wird so viel Speicherplatz wie erforderlich ist (bis zur Hälfte der der **Image** Fenster) die Standardansicht für die 1:1 Vergrößerung des Bilds angezeigt. Im rechte Bereich zeigt eine vergrößerte 6:1 Vergrößerung Standardbild. Sie können ändern, dass die Vergrößerung in jedem Bereich mit der **Magnify** tool die **Bildbearbeitung** Symbolleiste oder mithilfe der Zugriffstasten.
+Im linken Bereich wird so viel Speicherplatz wie benötigt (bis zur Hälfte des **Bild** Fensters) verwendet, um die standardmäßige 1:1-Vergrößerungs Ansicht des Bilds anzuzeigen. Im rechten Bereich wird ein Standardbild mit der Größe 6:1 vergrößert. Sie können die Vergrößerung in jedem Bereich ändern, indem Sie auf der Symbolleiste des **Bild-Editors** oder mithilfe der Tastenkombinationen die Tastenkombination verwenden.
 
-Sie können die kleineren Bereich vergrößern der **Bildbearbeitung** Fenster und verwenden Sie die beiden Bereiche, um verschiedene Bereiche des ein großes Bild anzuzeigen. Wählen Sie in den Bereich, um es auszuwählen.
+Sie können den kleineren Bereich des Bild- **Editor** -Fensters vergrößern und die beiden Bereiche verwenden, um unterschiedliche Bereiche eines großen Bilds anzuzeigen. Wählen Sie im Bereich aus, um ihn auszuwählen.
 
-Sie können die relativen Größen der Bereiche ändern, indem Sie den Mauszeiger auf dem Fensterteiler angezeigt, und verschieben Leiste für geteilte nach rechts oder links. Leiste für geteilte kann ganz auf beiden Seiten verschieben, wenn Sie nur einen Bereich arbeiten möchten.
+Sie können die relativen Größen der Bereiche ändern, indem Sie den Mauszeiger auf dem Trennbalken positionieren und den Trennbalken nach rechts oder links verschieben. Wenn Sie nur an einem Bereich arbeiten möchten, können Sie die Aufteilung auf eine beliebige Seite verschieben.
 
-Wenn die **Bildbearbeitung** Bereich vergrößert, um den Faktor 4 oder höher ist, können Sie ein Pixelraster, die die einzelnen Pixel in der Abbildung begrenzt anzeigen.
+Wenn der **Bild Bearbeitungs** Bereich um den Faktor 4 oder höher vergrößert wird, können Sie ein Pixelraster anzeigen, das die einzelnen Pixel im Bild begrenzt.
 
-### <a name="to-change-the-magnification-factor"></a>Ändern des Vergrößerungsfaktors
+### <a name="to-change-the-magnification-factor"></a>So ändern Sie den Vergrößerungsfaktor
 
-In der Standardeinstellung die **Bildbearbeitung** zeigt die Ansicht im linken Bereich auf die tatsächliche Größe und die Ansicht im rechten Bereich mit der tatsächlichen Größe 6-Mal. Die Vergrößerungsfaktor (in der Statusleiste am unteren Rand des Arbeitsbereichs) ist das Verhältnis zwischen der tatsächlichen Größe des Bilds und die angezeigte Größe. Der Standardfaktor 6 und der Bereich liegt zwischen 1 und 10.
+Standardmäßig zeigt der **Bild-Editor** die Ansicht im linken Bereich in der tatsächlichen Größe und die Ansicht im rechten Bereich der 6-fachen tatsächlichen Größe an. Der Vergrößerungsfaktor (in der Statusleiste am unteren Rand des Arbeitsbereichs angezeigt) ist das Verhältnis zwischen der tatsächlichen Größe des Bilds und der angezeigten Größe. Der Standardfaktor ist 6, und der Bereich liegt zwischen 1 und 10.
 
-1. Wählen Sie die **Bildbearbeitung** Bereich, dessen Vergrößerungsfaktor ändern möchten.
+1. Wählen Sie den Bereich **Bild-Editor** aus, dessen Vergrößerungsfaktor Sie ändern möchten.
 
-1. Auf der **Bildbearbeitung** Symbolleiste wählen Sie den Pfeil rechts neben der **Magnify** Konfigurationstool, und wählen Sie aus dem Untermenü des Vergrößerungsfaktors: **1 X**, **2 X**, **6 X**, oder **8 X**.
+1. Wählen Sie auf der Symbolleiste **Bild** Bearbeitung den Pfeil rechts neben dem **Vergrößerungs** Tool aus, und wählen Sie im Untermenü den Vergrößerungsfaktor aus: **1X**, **2X**, **6x**oder **8X**.
 
    > [!NOTE]
-   > Auf einen Vergrößerungsfaktor nicht aufgelistet, die der **Magnify** tool können Sie die Zugriffstasten.
+   > Verwenden Sie die Tastenkombinationen, um einen anderen Vergrößerungsfaktor als die im Tool zum **vergrößern** zu wählen.
 
-### <a name="to-display-or-hide-the-pixel-grid"></a>Zum Anzeigen oder Ausblenden des Pixelrasters
+### <a name="to-display-or-hide-the-pixel-grid"></a>So zeigen Sie das Pixelraster an oder blenden es aus
 
-Für alle **Bildbearbeitung** Bereiche mit einem Vergrößerungsfaktor von 4 oder höher können Sie ein Raster, das die einzelnen Pixel in der Abbildung begrenzt anzeigen.
+Für alle **Bild Bearbeitungs** Bereiche mit einem Vergrößerungsfaktor von 4 oder höher können Sie ein Raster anzeigen, in dem die einzelnen Pixel im Bild getrennt sind.
 
-1. Wechseln Sie zum Menü **Image** > **Rastereinstellungen**.
+1. Wechseln Sie zu Menü **Bild** > **Raster Einstellungen**.
 
-1. Wählen Sie die **Pixelraster** Kontrollkästchen, um das Raster anzeigen oder deaktivieren Sie das Kontrollkästchen, um das Raster auszublenden.
+1. Aktivieren Sie das Kontrollkästchen **Pixel Raster** , um das Raster anzuzeigen, oder deaktivieren Sie das Kontrollkästchen, um das Raster auszublenden.
 
 ## <a name="requirements"></a>Anforderungen
 
-Keiner
+None
 
 ## <a name="see-also"></a>Siehe auch
 
 [Ressourcen-Editor](../windows/resource-editors.md)<br/>
-[Symbole](/windows/desktop/menurc/icons)
+[Symbole](/windows/win32/menurc/icons)

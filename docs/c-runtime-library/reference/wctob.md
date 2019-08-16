@@ -23,12 +23,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 1d9dca16ca905afbc94d912a8083017ba9cc84e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c977bc204f4c9428a4aae09300269b1ed82d53e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188531"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498955"
 ---
 # <a name="wctob"></a>wctob
 
@@ -49,13 +49,13 @@ Zu übersetzender Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn **Wctob** erfolgreich konvertiert ein Breitzeichen ist, wird dessen Multibytezeichen-Darstellung nur dann, wenn das Multibytezeichen genau ein Byte lang ist. Wenn **Wctob** entdeckt ein Breitzeichen in Multibytezeichen oder das Multibytezeichen konvertiert werden kann ist nicht genau ein Byte lang ist, wird-1 zurückgegeben.
+Wenn **wcdeb** ein breit Zeichen erfolgreich konvertiert, wird dessen multibytezeichendarstellung nur dann zurückgegeben, wenn das Multibytezeichen genau ein Byte lang ist. Wenn **wcesb** ein breit Zeichen erkennt, das nicht in ein Multibytezeichen konvertiert werden kann, oder wenn das Multibytezeichen nicht genau ein Byte lang ist, wird "-1" zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Wctob** -Funktion konvertiert ein Breitzeichen ist, die in enthaltenen *Wchar* in das entsprechende Multibytezeichen, die durch den Rückgabetyp übergeben **Int** Wert, wenn die Multibyte Zeichen ist genau ein Byte lang.
+Die **wcdeb** -Funktion konvertiert ein in *WCHAR* enthaltenes breit Zeichen in das entsprechende Multibytezeichen, das vom Return **int** -Wert übergeben wird, wenn das Multibytezeichen genau ein Byte lang ist.
 
-Wenn **Wctob** nicht erfolgreich war und kein entsprechendes Multibytezeichen gefunden wurde, wird die Funktion legt **Errno** zu **EILSEQ** und gibt-1 zurück.
+Wenn **wcdeb** nicht erfolgreich war und kein entsprechendes Multibytezeichen gefunden wurde, legt die Funktion **errno** auf **EILSEQ** fest und gibt-1 zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm stellt das Verhalten der **Wcstombs** Funktion.
+Dieses Programm veranschaulicht das Verhalten der **wcstomsb** -Funktion.
 
 ```C
 // crt_wctob.c
@@ -107,4 +107,4 @@ Determined the corresponding multibyte character to be "A".
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

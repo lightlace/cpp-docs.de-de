@@ -1,21 +1,21 @@
 ---
-title: Length_is (C++ com-Attribut)
+title: length_is (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f4bfe233e3228c50aee734de4ad979c38a55fda
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409303"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514531"
 ---
-# <a name="lengthis"></a>length_is
+# <a name="length_is"></a>length_is
 
-Gibt die Anzahl von Elementen übertragen werden.
+Gibt die Anzahl der zu übertragenden Array Elemente an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,15 +26,15 @@ Gibt die Anzahl von Elementen übertragen werden.
 ### <a name="parameters"></a>Parameter
 
 *expression*<br/>
-Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argumentliste Slots sind zulässig.
+Mindestens ein C-sprach Ausdruck. Leere Argument Slots sind zulässig.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Length_is** C++ Attribut hat die gleiche Funktionalität wie die [Length_is](/windows/desktop/Midl/length-is) MIDL-Attribut.
+Das **length_is** C++ -Attribut verfügt über die gleiche Funktionalität wie das [length_is](/windows/win32/Midl/length-is) -Mittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter [First_is](first-is.md) ein Beispiel für einen Abschnitt eines Arrays angeben.
+Ein Beispiel für die Angabe eines Abschnitts eines Arrays finden Sie unter [First_is](first-is.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,10 +42,10 @@ Finden Sie unter [First_is](first-is.md) ein Beispiel für einen Abschnitt eines
 
 |||
 |-|-|
-|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|
+|**Betrifft**|Feld in **Struktur** oder **Union**, Schnittstellenparameter, Schnittstellen Methode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

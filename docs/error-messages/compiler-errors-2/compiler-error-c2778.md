@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2778
 ms.assetid: b24cb732-2914-42cc-8928-e2d87b393428
-ms.openlocfilehash: 56c316ac971d0bdd1a0ca27ef8d4282acbe24779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98b5bf0a1315236f3ce96fd4b8c140ce1ab70a9f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227675"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501038"
 ---
 # <a name="compiler-error-c2778"></a>Compilerfehler C2778
 
-nicht ordnungsgemäß formatierte GUID in __declspec(UUID()) falsch formatiert
+falsch formatierte GUID in __declspec (UUID ())
 
-Eine falsche GUID angegeben wird, um die [Uuid](../../cpp/uuid-cpp.md) erweitertes Attribut.
+Für das erweiterte [UUID](../../cpp/uuid-cpp.md) -Attribut wird eine falsche GUID angegeben.
 
-Die GUID muss es sich um eine Zeichenfolge aus hexadezimalen Zahlen mit dem folgenden Format sein:
+Die GUID muss eine Zeichenfolge von hexadezimalen Zahlen im folgenden Format sein:
 
 ```
 // C2778a.cpp
@@ -28,9 +28,9 @@ struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};
 ```
 
-Die `uuid` erweitertes Attribut akzeptiert von [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)mit oder ohne Klammern eingeschlossen.
+Das `uuid` erweiterte Attribut akzeptiert Zeichen folgen, die von [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring)erkannt werden, mit oder ohne geschweifter Klammer Trennzeichen.
 
-Im folgende Beispiel wird die C2778 generiert:
+Im folgenden Beispiel wird C2778 generiert:
 
 ```
 // C2778b.cpp

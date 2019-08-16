@@ -1,21 +1,21 @@
 ---
-title: Nonbrowsable (C++-COM-Attribut)
+title: nicht browsetierbarC++ (com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonbrowsable
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 0a5e01c0fde49c7debb7749f5a1d148acb9cca6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b1849aa75e61ea5e369a277cab0b1327f48a28a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409121"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514386"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
-Gibt an, dass ein Schnittstellenmember nicht in einem Eigenschaftenbrowser angezeigt werden soll.
+Gibt an, dass ein Schnittstellenmember nicht in einem Eigenschaften Browser angezeigt werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,7 +25,7 @@ Gibt an, dass ein Schnittstellenmember nicht in einem Eigenschaftenbrowser angez
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Nonbrowsable** C++-Attribut hat die gleiche Funktionalität wie die [Nonbrowsable](/windows/desktop/Midl/nonbrowsable) MIDL-Attribut.
+Das **nicht** C++ browsefähige Attribut verfügt über die gleiche Funktionalität wie das [nicht](/windows/win32/Midl/nonbrowsable) browsefähige Mittel l-Attribut.
 
 ## <a name="example"></a>Beispiel
 
@@ -51,8 +51,8 @@ __interface IMyI
 |-|-|
 |**Betrifft**|Schnittstellenmethode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

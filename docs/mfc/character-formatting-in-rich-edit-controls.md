@@ -6,24 +6,24 @@ helpviewer_keywords:
 - rich edit controls [MFC], character formatting in
 - CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
-ms.openlocfilehash: a7467f9cd6a14dc6dfc2c03b6eb35f71802454fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 4ac996c1cb018a29137e37d9603016dc1c151c58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344296"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508980"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Formatieren von Zeichen in RichEdit-Steuerelementen
 
-Können Sie Memberfunktionen des rich-Edit-Steuerelements ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) zum Formatieren von Zeichen und Formatierungsinformationen abzurufen. Für Zeichen Sie können angeben, Schriftart, Größe, Farbe und Effekte wie z. B. fett, kursiv und geschützt.
+Sie können Element Funktionen des Rich Edit-Steuer Elements ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) zum Formatieren von Zeichen und zum Abrufen von Formatierungsinformationen verwenden. Für Zeichen können Sie Schriftart, Größe, Farbe und Effekte angeben, z. b. Fett, kursiv und geschützt.
 
-Sie können die zeichenformatierung mit Anwenden der [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) und [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) Memberfunktionen. Um das aktuelle Zeichen, die Formatierung für den ausgewählten Text zu ermitteln, verwenden die [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) Member-Funktion. Die [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) Struktur mit dieser Memberfunktionen verwendet, um Zeichenattribute anzugeben. Eines der wichtigen Member von **CHARFORMAT** ist **DwMask**. In `SetSelectionCharFormat` und `SetWordCharFormat`, **DwMask** gibt an, welche Zeichenattribute durch Aufrufen der Funktion festgelegt werden sollen. `GetSelectionCharFormat` meldet die Attribute des ersten Zeichens in der Auswahl. **DwMask** gibt die Attribute, die in die Auswahl konsistent sind.
+Sie können die Zeichen Formatierung mithilfe der Member-Funktionen [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) und [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) anwenden. Verwenden Sie zum Bestimmen der aktuellen Zeichen Formatierung für den ausgewählten Text die Member-Funktion von [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) . Die [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) -Struktur wird mit diesen Element Funktionen zum Angeben von Zeichen Attributen verwendet. Eines der wichtigen Member von **Charformat** ist **dwMask**. In `SetSelectionCharFormat` und `SetWordCharFormat`gibt **dwMask** an, welche Zeichen Attribute von diesem Funktions aufrut festgelegt werden. `GetSelectionCharFormat`meldet die Attribute des ersten Zeichens in der Auswahl. **dwMask** gibt die Attribute an, die in der gesamten Auswahl einheitlich sind.
 
-Sie können auch abrufen und Festlegen der "standardzeichenformatierung," Dies ist die Formatierung auf nachfolgend eingefügten Zeichen angewendet. Beispielsweise ist, wenn eine Anwendung, das Standardzeichen festlegt fett formatieren, und der Benutzer dann ein Zeichen gibt, das Zeichen fett formatiert. Verwenden Sie zum Abrufen und Festlegen der standardzeichenformatierung, die [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) und [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) Memberfunktionen.
+Sie können auch die "Standard Zeichen Formatierung" erhalten und festlegen. Hierbei handelt es sich um die Formatierung, die auf alle nachträglich eingefügten Zeichen angewendet wird. Wenn eine Anwendung z. b. die Standard Zeichenformatierung auf "Fett" festlegt und der Benutzer dann ein Zeichen eingibt, ist dieses Zeichen fett formatiert. Um die Standard Zeichen Formatierung abzurufen und festzulegen, verwenden Sie die Member-Funktionen [getdefaultcharformat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) und [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) .
 
-Das Zeichenattribut "protected" ändert sich nicht auf die Darstellung von Text aus. Wenn der Benutzer versucht, geschützten Text ändern, wird ein rich-Edit-Steuerelement sendet das übergeordnete Fenster eine **EN_PROTECTED durch** -benachrichtigungsmeldung und das übergeordnete Fenster, das erlauben oder verhindern die Änderung zu ermöglichen. Um diese Benachrichtigung zu erhalten, müssen Sie es mit aktivieren die [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) Member-Funktion. Weitere Informationen zu der Ereignismaske, finden Sie unter [Benachrichtigungen von einem RichEdit-Steuerelement](../mfc/notifications-from-a-rich-edit-control.md)weiter unten in diesem Thema.
+Mit dem "geschützten" Zeichen Attribut wird die Darstellung von Text nicht geändert. Wenn der Benutzer versucht, geschützten Text zu ändern, sendet ein Rich Edit-Steuerelement das übergeordnete Fenster an eine **EN_PROTECTED** -Benachrichtigungs Meldung, sodass das übergeordnete Fenster die Änderung zulassen oder verhindern kann. Um diese Benachrichtigungs Meldung zu erhalten, müssen Sie Sie mithilfe der Member-Funktion " [setteventmask](../mfc/reference/cricheditctrl-class.md#seteventmask) " aktivieren. Weitere Informationen zur Ereignis Maske finden Sie unter [Benachrichtigungen von einem Rich Edit-Steuer](../mfc/notifications-from-a-rich-edit-control.md)Element weiter unten in diesem Thema.
 
-Vordergrundfarbe ist ein Zeichenattribut, aber die Hintergrundfarbe ist eine Eigenschaft des rich-Edit-Steuerelements. Verwenden Sie zum Festlegen der Hintergrundfarbe der [Memberfunktion SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor) Member-Funktion.
+Die Vordergrundfarbe ist ein Zeichen Attribut, aber die Hintergrundfarbe ist eine Eigenschaft des Rich-Edit-Steuer Elements. Um die Hintergrundfarbe festzulegen, verwenden Sie die [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor) -Member-Funktion.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,17 +1,17 @@
 ---
-title: Helpstring (C++-COM-Attribut)
+title: HelpString (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 623b2c7fb4ce7c3e5de87d21f012d008720fdee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47a07ee94ad774bde46dce00ea46612fae3a4eca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409589"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490874"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -26,15 +26,15 @@ Gibt eine Zeichenfolge an, die zum Beschreiben des Elements verwendet wird, auf 
 ### <a name="parameters"></a>Parameter
 
 *string*<br/>
-Der Text des Hilfe-Zeichenfolge.
+Der Text der Hilfe Zeichenfolge.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Helpstring** C++-Attribut hat die gleiche Funktionalität wie die [Helpstring](/windows/desktop/Midl/helpstring) MIDL-Attribut.
+Das **HelpString** C++ -Attribut verfügt über die gleiche Funktionalität wie das " [HelpString](/windows/win32/Midl/helpstring) "-Attribut "Mittel l".
 
 ## <a name="example"></a>Beispiel
 
-Siehe das Beispiel für [Defaultvalue](defaultvalue.md) ein Beispiel zur Verwendung für **Helpstring**.
+Ein Beispiel für die Verwendung von **HelpString**finden Sie im Beispiel für [DefaultValue](defaultvalue.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,10 +42,10 @@ Siehe das Beispiel für [Defaultvalue](defaultvalue.md) ein Beispiel zur Verwend
 
 |||
 |-|-|
-|**Betrifft**|**Schnittstelle**, **Typedef**, **Klasse**, Methode, Eigenschaft|
+|**Betrifft**|**Schnittstelle**, **typedef**, **Klasse**, Methode, Eigenschaft|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

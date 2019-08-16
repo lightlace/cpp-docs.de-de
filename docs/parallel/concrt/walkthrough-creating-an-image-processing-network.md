@@ -1,26 +1,26 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erstellen eine Bildverarbeitungsnetzwerks'
+title: 'Exemplarische Vorgehensweise: Erstellen eines Abbild Verarbeitungs Netzwerks'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: ff5e0bcae3d23dc914d93a062ec36ea1435ce1b2
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 680037e0e14c3ebd9171cacf477520e025eecebe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856301"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512162"
 ---
-# <a name="walkthrough-creating-an-image-processing-network"></a>Exemplarische Vorgehensweise: Erstellen eine Bildverarbeitungsnetzwerks
+# <a name="walkthrough-creating-an-image-processing-network"></a>Exemplarische Vorgehensweise: Erstellen eines Abbild Verarbeitungs Netzwerks
 
-Dieses Dokument veranschaulicht die Erstellung ein Netzwerks asynchroner Nachrichtenblöcke die bildverarbeitung.
+In diesem Dokument wird veranschaulicht, wie ein Netzwerk von asynchronen Nachrichten Blöcken erstellt wird, die eine Bildverarbeitung durchführen.
 
-Das Netzwerk bestimmt, welche Vorgänge in einem Bild auf der Grundlage seiner Merkmale ausgeführt wird. Dieses Beispiel verwendet die *Datenfluss* Modell Route-Images über das Netzwerk. Im Datenflussmodell kommunizieren unabhängige Komponenten eines Programms durch Senden von Nachrichten miteinander. Wenn eine Komponente eine Nachricht empfängt, können sie eine Aktion ausführt und dann das Ergebnis der Aktion an eine andere Komponente übergeben. Vergleichen Sie dies mit der *ablaufsteuerung* Modell, in denen verwendet eine Anwendung Steuerungsstrukturen, z. B., bedingungsanweisungen, Schleifen und So weiter, um die Reihenfolge der Vorgänge in einem Programm zu steuern.
+Das Netzwerk bestimmt, welche Vorgänge für ein Abbild auf der Grundlage seiner Merkmale durchgeführt werden sollen. In diesem Beispiel wird das *Daten* Fluss Modell verwendet, um Bilder über das Netzwerk weiterzuleiten. Im Datenflussmodell kommunizieren unabhängige Komponenten eines Programms durch Senden von Nachrichten miteinander. Wenn eine Komponente eine Nachricht empfängt, kann Sie einige Aktionen ausführen und das Ergebnis dieser Aktion dann an eine andere Komponente übergeben. Vergleichen Sie dies mit dem *Ablauf Steuerungs* Modell, in dem eine Anwendung Steuerungsstrukturen verwendet, z. b. bedingte Anweisungen, Schleifen usw., um die Reihenfolge von Vorgängen in einem Programm zu steuern.
 
-Erstellt ein Netzwerk, das basierend auf dem Datenfluss eine *Pipeline* von Aufgaben. Jede Phase der Pipeline führt gleichzeitig Teil des gesamten Tasks. Eine Analogie hierzu ist eine Fertigungsstraße eines Fahrzeugherstellers. Da jedes Fahrzeug durchläuft die Fertigungsstraße einer Station Fahrgestell montiert, in einem anderen installiert die Engine und So weiter. Aktivieren Sie mehrere Fahrzeuge gleichzeitig montiert werden, bietet die Fertigungsstraße einen besseren Durchsatz als eine einzelmontage eines vollständigen Fahrzeugs zu einem Zeitpunkt.
+Ein Netzwerk, das auf einem Datenfluss basiert, erstellt eine *Pipeline* von Tasks. Jede Phase der Pipeline führt gleichzeitig einen Teil der gesamten Aufgabe aus. Eine Analogie hierzu ist eine Fertigungsstraße eines Fahrzeugherstellers. Wenn jedes Fahrzeug die assemblyzeile durchläuft, wird der Frame von einer Station zusammen mit einer anderen installiert, usw. Durch die Aktivierung der gleichzeitigen Zusammenstellung mehrerer Fahrzeuge kann die assemblylinie einen besseren Durchsatz bereitstellen als die Zusammenstellung der Fahrzeuge nacheinander.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Lesen Sie die folgenden Dokumente, bevor Sie mit dieser exemplarischen Vorgehensweise beginnen:
 
@@ -30,87 +30,87 @@ Lesen Sie die folgenden Dokumente, bevor Sie mit dieser exemplarischen Vorgehens
 
 - [Exemplarische Vorgehensweise: Erstellen eines Datenfluss-Agents](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
 
-Außerdem wird empfohlen, dass Sie die Grundlagen von GDI + verstehen, bevor Sie in dieser exemplarischen Vorgehensweise beginnen.
+Außerdem wird empfohlen, dass Sie die Grundlagen von GDI+ verstehen, bevor Sie mit dieser exemplarischen Vorgehensweise beginnen.
 
 ##  <a name="top"></a> Abschnitte
 
 Diese exemplarische Vorgehensweise enthält folgende Abschnitte:
 
-- [Definieren von Funktionen für die Bildverarbeitung](#functionality)
+- [Definieren der Bild Verarbeitungs Funktionalität](#functionality)
 
-- [Erstellen das Bildverarbeitungsnetzwerk](#network)
+- [Erstellen des Abbild Verarbeitungs Netzwerks](#network)
 
 - [Vollständiges Beispiel](#complete)
 
-##  <a name="functionality"></a> Definieren von Funktionen für die Bildverarbeitung
+##  <a name="functionality"></a>Definieren der Bild Verarbeitungs Funktionalität
 
-Dieser Abschnitt zeigt die Supportfunktionen, die das Bildverarbeitungsnetzwerk verwendet wird, um mit Images zu arbeiten, die vom Datenträger gelesen werden.
+In diesem Abschnitt werden die Unterstützungsfunktionen veranschaulicht, die vom Bild Verarbeitungs Netzwerk verwendet werden, um mit Bildern zu arbeiten, die vom Datenträger gelesen werden.
 
-Die folgenden Funktionen, `GetRGB` und `MakeColor`, extrahieren und kombinieren Sie jeweils die einzelnen Komponenten der angegebenen Farbe.
+Die folgenden Funktionen, `GetRGB` und `MakeColor`, extrahieren und kombinieren die einzelnen Komponenten der angegebenen Farbe.
 
 [!code-cpp[concrt-image-processing-filter#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_1.cpp)]
 
-Die folgende Funktion `ProcessImage`, ruft die angegebenen [Std:: Function](../../standard-library/function-class.md) Objekt, das den Wert der Farbe jedes Pixels in eine GDI + transformiert [Bitmap](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap) Objekt. Die `ProcessImage` Funktion verwendet die [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) Algorithmus, um jede Zeile der Bitmap in parallelen Verarbeitung.
+Die folgende Funktion `ProcessImage`Ruft das angegebene [Std:: function](../../standard-library/function-class.md) -Objekt auf, um den Farbwert jedes Pixels in einem GDI+- [Bitmap](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) -Objekt zu transformieren. Die `ProcessImage` -Funktion verwendet den " [parallelcurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) "-Algorithmus, um jede Zeile der Bitmap parallel zu verarbeiten.
 
 [!code-cpp[concrt-image-processing-filter#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_2.cpp)]
 
-Die folgenden Funktionen, `Grayscale`, `Sepiatone`, `ColorMask`, und `Darken`, rufen Sie die `ProcessImage` Funktion zum Transformieren des Color-Wertes, der jedes Pixel in einem `Bitmap` Objekt. Jede dieser Funktionen verwendet einen Lambda-Ausdruck, um die Transformation Farbe eines Pixels zu definieren.
+Mit den folgenden Funktionen `Grayscale` `Sepiatone` `Darken` `ProcessImage` ,,, und wird die-Funktion aufgerufen, um den Farbwert jedes Pixels in einem `Bitmap` -Objekt zu transformieren. `ColorMask` Jede dieser Funktionen verwendet einen Lambda-Ausdruck, um die Farb Transformation von einem Pixel zu definieren.
 
 [!code-cpp[concrt-image-processing-filter#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_3.cpp)]
 
-Die folgende Funktion `GetColorDominance`, ruft auch die `ProcessImage` Funktion. Anstatt den Wert jeder Farbe ändern, verwendet diese Funktion jedoch [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) Objekte berechnet, ob die Rot, Grün und Blau-Farbkomponente vorwiegend, das Image ein.
+Die folgende Funktion `GetColorDominance`ruft auch die `ProcessImage` -Funktion auf. Anstatt jedoch den Wert der einzelnen Farben zu ändern, verwendet diese Funktion [parallelcurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) -Objekte, um zu berechnen, ob die rote, grüne oder blaue Farbkomponente das Bild beherrscht.
 
 [!code-cpp[concrt-image-processing-filter#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_4.cpp)]
 
-Die folgende Funktion `GetEncoderClsid`, ruft die Klassen-ID für den angegebenen MIME-Typ eines Encoders ab. Die Anwendung verwendet diese Funktion, um den Encoder für eine Bitmap abzurufen.
+Die folgende Funktion `GetEncoderClsid`Ruft den Klassen Bezeichner für den angegebenen MIME-Typ eines Encoders ab. Die Anwendung verwendet diese Funktion, um den Encoder für eine Bitmap abzurufen.
 
 [!code-cpp[concrt-image-processing-filter#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_5.cpp)]
 
 [[Nach oben](#top)]
 
-##  <a name="network"></a> Erstellen das Bildverarbeitungsnetzwerk
+##  <a name="network"></a>Erstellen des Abbild Verarbeitungs Netzwerks
 
-Dieser Abschnitt beschreibt die Erstellung ein Netzwerks asynchroner Nachrichtenblöcke, die bildverarbeitung für jedes Bild JPEG (JPG) in einem Verzeichnis ausführen. Das Netzwerk führt die folgenden bildverarbeitung Vorgänge aus:
+In diesem Abschnitt wird beschrieben, wie ein Netzwerk von asynchronen Nachrichten Blöcken erstellt wird, die eine Bildverarbeitung für jedes JPEG-Bild (JPG) in einem bestimmten Verzeichnis ausführen. Das Netzwerk führt die folgenden Abbild Verarbeitungsvorgänge aus:
 
-1. Für jedes Bild, das von Peter verfasst wird, eine Umwandlung in Graustufen.
+1. Konvertieren Sie für jedes von Tom erstellte Image in Grayscale.
 
-1. Entfernen Sie für jedes Bild, das die dominanten Farbe Rot ist die Komponenten grünen und blauen und Abdunkeln Sie es dann aus.
+1. Entfernen Sie die grünen und blauen Komponenten für jedes Bild, das rot als vorherrschende Farbe hat, und wählen Sie es aus.
 
-1. Wenden Sie für alle anderen Bild auch Sepia Ton.
+1. Wenden Sie für ein beliebiges anderes Bild den Typ "*" an.
 
-Das Netzwerk gilt nur den ersten bildverarbeitung Vorgang, der eine der folgenden Bedingungen entspricht. Wenn ein Bild von Tom erstellt und die Farbe Rot dominiert, wird das Image beispielsweise nur in Graustufen konvertiert.
+Das Netzwerk wendet nur den ersten Abbild Verarbeitungsvorgang an, der mit einer dieser Bedingungen übereinstimmt. Wenn z. b. ein Bild von Tom erstellt wird und als seine dominierende Farbe Rot ist, wird das Bild nur in Graustufen konvertiert.
 
-Nachdem das Netzwerk jeder bildverarbeitung Vorgang ausführt, speichert das Bild auf den Datenträger als Bitmapdatei (BMP).
+Nachdem das Netzwerk jeden Abbild Verarbeitungsvorgang durchführt, speichert es das Image als Bitmapdatei (BMP-Datei) auf dem Datenträger.
 
-Die folgenden Schritte zeigen, wie Sie eine Funktion erstellen, die implementiert dieses Netzwerk für die bildverarbeitung und jedes JPEG-Bild in einem Verzeichnis mit diesem Netzwerk gilt.
+Die folgenden Schritte zeigen, wie Sie eine Funktion erstellen, die dieses Bild Verarbeitungs Netzwerk implementiert, und dieses Netzwerk auf jedes JPEG-Image in einem bestimmten Verzeichnis anwenden.
 
-#### <a name="to-create-the-image-processing-network"></a>Zum Erstellen des Netzwerks für die bildverarbeitung
+#### <a name="to-create-the-image-processing-network"></a>So erstellen Sie das Abbild Verarbeitungs Netzwerk
 
-1. Erstellen Sie eine Funktion, `ProcessImages`, die den Namen eines Verzeichnisses auf dem Datenträger belegt.
+1. Erstellen Sie eine Funktion `ProcessImages`, die den Namen eines Verzeichnisses auf der Festplatte annimmt.
 
    [!code-cpp[concrt-image-processing-filter#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_6.cpp)]
 
-1. In der `ProcessImages` funktioniert, erstellen Sie eine `countdown_event` Variable. Die `countdown_event` ist weiter unten in dieser exemplarischen Vorgehensweise dargestellt.
+1. Erstellen Sie `ProcessImages` in der-Funktion `countdown_event` eine-Variable. Die `countdown_event` -Klasse wird später in dieser exemplarischen Vorgehensweise angezeigt.
 
    [!code-cpp[concrt-image-processing-filter#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_7.cpp)]
 
-1. Erstellen Sie eine [Std:: Map](../../standard-library/map-class.md) -Objekt, das ordnet eine `Bitmap` Objekt mit dem ursprünglichen Dateinamen.
+1. Erstellen Sie ein [Std:: Map](../../standard-library/map-class.md) -Objekt, `Bitmap` das ein-Objekt mit dem ursprünglichen Dateinamen verknüpft.
 
    [!code-cpp[concrt-image-processing-filter#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_8.cpp)]
 
-1. Fügen Sie den folgenden Code ein, um die Elemente von der Bildverarbeitungsnetzwerks zu definieren.
+1. Fügen Sie den folgenden Code hinzu, um die Elemente des Bild Verarbeitungs Netzwerks zu definieren.
 
    [!code-cpp[concrt-image-processing-filter#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_9.cpp)]
 
-1. Fügen Sie den folgenden Code ein, um das Netzwerk zu verbinden.
+1. Fügen Sie folgenden Code hinzu, um eine Verbindung mit dem Netzwerk herzustellen.
 
    [!code-cpp[concrt-image-processing-filter#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_10.cpp)]
 
-1. Fügen Sie den folgenden Code zum Senden an den Anfang des Netzwerks des vollständigen Pfads jeder JPEG-Datei im Verzeichnis.
+1. Fügen Sie den folgenden Code hinzu, um an den Anfang des Netzwerks den vollständigen Pfad der einzelnen JPEG-Dateien im Verzeichnis zu senden.
 
    [!code-cpp[concrt-image-processing-filter#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_11.cpp)]
 
-1. Warten, bis die `countdown_event` Variable, die 0 (null) erreicht.
+1. Warten Sie, `countdown_event` bis die Variable Null erreicht hat.
 
    [!code-cpp[concrt-image-processing-filter#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_12.cpp)]
 
@@ -118,51 +118,51 @@ In der folgenden Tabelle werden die Member des Netzwerks beschrieben.
 
 |Member|Beschreibung|
 |------------|-----------------|
-|`load_bitmap`|Ein [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) -Objekt, das geladen eine `Bitmap` Objekt von einem Datenträger und fügt einen Eintrag aus, um die `map` Objekt, dessen ursprünglicher Dateiname das Abbild zugeordnet werden soll.|
-|`loaded_bitmaps`|Ein [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) -Objekt, das die geladenen Bilder an der Verarbeitung Bildfilter sendet.|
-|`grayscale`|Ein `transformer` -Objekt, das Bilder konvertiert, die auf der Graustufe von Tom erstellt werden. Er verwendet die Metadaten des Images, um dessen Autor zu bestimmen.|
-|`colormask`|Ein `transformer` -Objekt, das der grünen und blauen Farbkomponenten aus Images entfernt werden, die der dominanten Farbe Rot.|
-|`darken`|Ein `transformer` -Objekt, das Bilder lässt, die die Farbe Rot dominiert verfügen.|
-|`sepiatone`|Ein `transformer` -Objekt, das betrifft Sepia Ton von Images, die nicht von Tom erstellt werden und sind nicht vorwiegend Rot.|
-|`save_bitmap`|Ein `transformer` Objekt, das die verarbeiteten speichert `image` auf den Datenträger als Bitmap. `save_bitmap` Ruft den ursprünglichen Dateinamen aus der `map` -Objekt an und ändert die Dateinamenerweiterung, BMP.|
-|`delete_bitmap`|Ein `transformer` -Objekt, das den Arbeitsspeicher für die Bilder frei.|
-|`decrement`|Ein [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) -Objekt, das als Terminalknoten im Netzwerk fungiert. Es verringert die `countdown_event` Objekt, das der hauptanwendung zu signalisieren, dass ein Bild verarbeitet wurde.|
+|`load_bitmap`|Ein [parallelcurrency:: Transformer](../../parallel/concrt/reference/transformer-class.md) -Objekt, das `Bitmap` ein-Objekt von einem Datenträger lädt und `map` einen Eintrag zum-Objekt hinzufügt, um das Bild dem ursprünglichen Dateinamen zuzuordnen.|
+|`loaded_bitmaps`|Ein [parallelcurrency:: Unbounded_buffer](reference/unbounded-buffer-class.md) -Objekt, das die geladenen Bilder an die Bild Verarbeitungs Filter sendet.|
+|`grayscale`|Ein `transformer` -Objekt, das von Tom erstellte Bilder in Graustufen konvertiert. Der Autor verwendet die Metadaten des Bilds.|
+|`colormask`|Ein `transformer` -Objekt, das die grünen und blauen Farbkomponenten aus Bildern entfernt, die als bestimmende Farbe rot markiert sind.|
+|`darken`|Ein `transformer` -Objekt, das Bilder, die rot sind, als vorherrschende Farbe darktet.|
+|`sepiatone`|Ein `transformer` -Objekt, das die Sepia-Tonung auf Bilder anwendet, die nicht von Tom erstellt wurden und nicht überwiegend rot sind.|
+|`save_bitmap`|Ein `transformer` -Objekt, das den `image` auf dem Datenträger verarbeiteten als Bitmap speichert. `save_bitmap`Ruft den ursprünglichen Dateinamen aus dem `map` -Objekt ab und ändert die Dateinamenerweiterung in BMP.|
+|`delete_bitmap`|Ein `transformer` -Objekt, das den Speicher für die Bilder freigibt.|
+|`decrement`|Ein " [parallelcurrency:: Callcenter](../../parallel/concrt/reference/call-class.md) "-Objekt, das als Terminal Knoten im Netzwerk fungiert. Das `countdown_event` -Objekt wird verringert, um an die Hauptanwendung zu signalisieren, dass ein Image verarbeitet wurde.|
 
-Die `loaded_bitmaps` Nachrichtenpuffer unbedingt daran, als ein `unbounded_buffer` Objekt, er bietet `Bitmap` Objekte an mehrere Empfänger. Wenn ein Zielblock akzeptiert werden, eine `Bitmap` -Objekt, das `unbounded_buffer` Objekt bietet, die jedoch keine `Bitmap` Objekt, das allen anderen Zielen. Aus diesem Grund Objekte die Reihenfolge, in dem Sie verknüpfen, ein `unbounded_buffer` Objekt ist wichtig. Die `grayscale`, `colormask`, und `sepiatone` Nachricht, die Blöcke, die jeder verwenden Sie einen Filter akzeptieren nur bestimmte `Bitmap` Objekte. Die `decrement` Nachrichtenpuffer ist ein wichtiges Ziel von den `loaded_bitmaps` Nachrichtenpuffer, da es alle akzeptiert `Bitmap` Objekte, die von den anderen Nachrichtenpuffer abgelehnt werden. Ein `unbounded_buffer` ist erforderlich, um Nachrichten in der Reihenfolge weitergegeben werden. Aus diesem Grund eine `unbounded_buffer` Objekt blockiert, bis ein neuer Zielblock wird verknüpft und die Nachricht annimmt, wenn keine aktuelle Zielblock die Nachricht akzeptiert.
+Der `loaded_bitmaps` Nachrichten Puffer ist wichtig, da er `unbounded_buffer` als Objekt Objekte für mehrere `Bitmap` Empfänger anbietet. Wenn ein Zielblock ein `Bitmap` -Objekt akzeptiert, bietet das `unbounded_buffer` -Objekt keine `Bitmap` weiteren Ziele für dieses Objekt. Daher ist die Reihenfolge wichtig, in der Objekte mit `unbounded_buffer` einem Objekt verknüpft werden. Die `grayscale`Nachrichten `colormask`Blöcke, `sepiatone` und verwenden einen Filter, um nur bestimmte `Bitmap` Objekte zu akzeptieren. Der `decrement` Nachrichten Puffer ist ein wichtiges Ziel `loaded_bitmaps` des Nachrichten Puffers, da er alle `Bitmap` Objekte akzeptiert, die von den anderen Nachrichten Puffern abgelehnt werden. Ein `unbounded_buffer` Objekt ist erforderlich, um Nachrichten in der richtigen Reihenfolge zu verteilen Daher wird ein `unbounded_buffer` Objekt blockiert, bis ein neuer Zielblock damit verknüpft ist, und die Nachricht akzeptiert, wenn der aktuelle Zielblock diese Nachricht nicht akzeptiert.
 
-Wenn Ihre Anwendung erfordert von mehreren Nachrichtenblöcken Verarbeiten der Nachricht, anstatt nur der Block, der zuerst die Nachricht akzeptiert können eine andere Nachrichtenblocktyp, z. B. `overwrite_buffer`. Die `overwrite_buffer` -Klasse enthält eine Nachricht gleichzeitig, aber es verteilt die Nachricht auf jedes der zugehörigen Ziele.
+Wenn die Anwendung erfordert, dass mehrere Nachrichten Blöcke die Nachricht verarbeiten, können Sie anstelle eines Nachrichten Blocks, der die Nachricht zum ersten Mal akzeptiert, einen anderen Nachrichten Blocktyp verwenden, `overwrite_buffer`z. b. Die `overwrite_buffer` -Klasse enthält jeweils eine Nachricht, Sie gibt diese Nachricht jedoch an jedes ihrer Ziele weiter.
 
 Die folgende Abbildung zeigt das Bildverarbeitungsnetzwerk:
 
-![Bildverarbeitungsnetzwerk](../../parallel/concrt/media/concrt_imageproc.png "Bildverarbeitungsnetzwerk")
+![Bild Verarbeitungs Netzwerk](../../parallel/concrt/media/concrt_imageproc.png "Bild Verarbeitungs Netzwerk")
 
-Die `countdown_event` Objekt in diesem Beispiel ermöglicht das Bildverarbeitungsnetzwerk Hauptdatei der Anwendung zu informieren, wenn alle Bilder verarbeitet wurden. Die `countdown_event` -Klasse verwendet ein [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) -Objekt signalisiert, wenn ein Wert des Leistungsindikators 0 (null) erreicht. Die Hauptassembly der Anwendung erhöht den Zähler jedes Mal, dass die It einen Dateinamen mit dem Netzwerk sendet. Terminalknoten des Netzwerks verringert den Zähler, nachdem jedes Image verarbeitet wurde. Nachdem die hauptanwendung das angegebene Verzeichnis durchsucht, wartet es für die `countdown_event` -Objekt signalisiert, dass sein Zähler 0 (null) erreicht hat.
+Das `countdown_event` -Objekt in diesem Beispiel ermöglicht dem Bild Verarbeitungs Netzwerk, die Hauptanwendung zu informieren, wenn alle Images verarbeitet wurden. Die `countdown_event` -Klasse verwendet ein [parallelcurrency:: Event](../../parallel/concrt/reference/event-class.md) -Objekt, um zu signalisieren, wenn ein Leistungs Zählers Null erreicht. Die Hauptanwendung erhöht den Zählers jedes Mal, wenn ein Dateiname an das Netzwerk gesendet wird. Der Terminal Knoten des Netzwerks Dekremente den Zählers, nachdem jedes Abbild verarbeitet wurde. Nachdem die Hauptanwendung das angegebene Verzeichnis durchlaufen hat, wartet Sie darauf `countdown_event` , dass das-Objekt signalisiert, dass der Wert 0 (null) erreicht hat.
 
-Das folgende Beispiel zeigt die `countdown_event` Klasse:
+Das folgende Beispiel zeigt die `countdown_event` -Klasse:
 
 [!code-cpp[concrt-image-processing-filter#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_13.cpp)]
 
 [[Nach oben](#top)]
 
-##  <a name="complete"></a> Das vollständige Beispiel
+##  <a name="complete"></a>Das komplette Beispiel
 
-Der folgende Code veranschaulicht das vollständige Beispiel. Die `wmain` -Funktion verwaltet die GDI +-Bibliothek und ruft die `ProcessImages` Funktion zum Verarbeiten der JPEG-Dateien die `Sample Pictures` Verzeichnis.
+Der folgende Code veranschaulicht das vollständige Beispiel. Die `wmain` -Funktion verwaltet die GDI+-Bibliothek und `ProcessImages` Ruft die-Funktion auf, um `Sample Pictures` die JPEG-Dateien im Verzeichnis zu verarbeiten.
 
 [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]
 
-Die folgende Abbildung zeigt die Ausgabe des Beispiels. Jedes Quellbild liegt über dem entsprechenden geänderten Bild.
+Die folgende Abbildung zeigt eine Beispielausgabe. Jedes Quell Image liegt über dem entsprechenden geänderten Image.
 
 ![Beispielausgabe für das Beispiel](../../parallel/concrt/media/concrt_imageout.png "Beispielausgabe für das Beispiel")
 
-`Lighthouse` Tom Alphin erstellt wird und daher in Graustufen konvertiert wird. `Chrysanthemum`, `Desert`, `Koala`, und `Tulips` Rot als der dominanten Farbe haben und daher die grün und Blau-Farbkomponenten entfernt und abgedunkelt werden. `Hydrangeas`, `Jellyfish`, und `Penguins` die Standardkriterien erfüllen, und sind daher Sepia Farbtönen an.
+`Lighthouse`wird von Tom Alpha in erstellt und daher in Graustufen konvertiert. `Chrysanthemum`, `Desert`, `Koala` und`Tulips` sind rot als bestimmende Farbe und haben daher die blauen und grünen Farbkomponenten entfernt und sind dann nicht mehr vorhanden. `Hydrangeas`, `Jellyfish`, und `Penguins` entsprechen den Standardkriterien und sind daher auf "*" eingestellt.
 
 [[Nach oben](#top)]
 
 ### <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `image-processing-network.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.
+Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein. Alternativ dazu können Sie `image-processing-network.cpp` ihn auch in eine Datei mit dem Namen einfügen und dann den folgenden Befehl in einem Visual Studio-Eingabe Aufforderungs Fenster ausführen.
 
-**cl.exe /DUNICODE /EHsc image-processing-network.cpp /link gdiplus.lib**
+**cl. exe/DUNICODE/EHsc Image-Processing-Network. cpp/Link gdiplus. lib**
 
 ## <a name="see-also"></a>Siehe auch
 

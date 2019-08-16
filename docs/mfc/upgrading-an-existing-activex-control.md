@@ -12,27 +12,27 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 22cbeaa5ac0f92e2b7bcc9dcbd06df9ab4ccaff5
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 06c39240d3718f6fbaa15b46abeb8ac9132b5945
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503837"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510859"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Upgrading eines vorhandenen ActiveX-Steuerelements
 
-Vorhandene ActiveX-Steuerelemente (früher OLE-Steuerelemente) kann über das Internet ohne Änderung verwendet werden. Allerdings sollten Sie so ändern Sie die Steuerelemente, um die Leistung zu verbessern.
+Vorhandene ActiveX-Steuerelemente (früher OLE-Steuerelemente) können ohne Änderung im Internet verwendet werden. Möglicherweise möchten Sie jedoch Steuerelemente ändern, um die Leistung zu verbessern.
 
 > [!IMPORTANT]
-> ActiveX ist eine veraltete Technologie, die nicht für Neuentwicklungen verwendet werden soll. Weitere Informationen zu moderne Technologien, die ActiveX-ablösen, finden Sie unter [ActiveX-Steuerelemente](activex-controls.md).
+> ActiveX ist eine ältere Technologie, die nicht für die neue Entwicklung verwendet werden sollte. Weitere Informationen zu modernen Technologien, die ActiveX ersetzen, finden Sie unter ActiveX-Steuer [Elemente](activex-controls.md).
 
-Wenn Sie das Steuerelement auf einer Webseite verwenden, gibt es weitere Überlegungen. Die OCX-Datei und alle zugehörigen Dateien müssen auf dem Zielcomputer oder über das Internet heruntergeladen werden. Dadurch wird die Codegröße als auch herunterladen, die Zeit eines wichtigen Aspekt. Downloads können in einer signierten CAB-Datei verpackt werden. Sie können das Steuerelement als sicher für Skripting und als sicher für die Initialisierung kennzeichnen.
+Wenn Sie das Steuerelement auf einer Webseite verwenden, sind weitere Überlegungen zu beachten. Die OCX-Datei und alle unterstützenden Dateien müssen sich auf dem Zielcomputer befinden oder über das Internet heruntergeladen werden. Dadurch wird die Codegröße und Downloadzeit ein wichtiger Aspekt. Downloads können in einer signierten CAB-Datei verpackt werden. Sie können Ihr Steuerelement als sicher für die Skripterstellung markieren und als sicher für die Initialisierung festlegen.
 
 In diesem Artikel werden die folgenden Themen behandelt:
 
-- [Verpacken von Code zum Herunterladen](#_core_packaging_code_for_downloading)
+- [Verpacken von Code zum herunterladen](#_core_packaging_code_for_downloading)
 
-- [Markieren ein Steuerelement sicher für Skripting und Initialisierung](#_core_marking_a_control_safe_for_scripting_and_initializing)
+- [Markieren eines Steuer Elements für die Skripterstellung und Initialisierung](#_core_marking_a_control_safe_for_scripting_and_initializing)
 
 - [Lizenzierungsprobleme](#_core_licensing_issues)
 
@@ -40,19 +40,19 @@ In diesem Artikel werden die folgenden Themen behandelt:
 
 - [Verwalten der Palette](#_core_managing_the_palette)
 
-- [Internet Explorer-Browser-Sicherheitsstufen und Verhalten des Steuerelements](#_core_internet_explorer_browser_safety_levels_and_control_behavior)
+- [Internet Explorer-Browser-Sicherheitsebenen und Steuerelement Verhalten](#_core_internet_explorer_browser_safety_levels_and_control_behavior)
 
-Sie können auch Optimierungen, hinzufügen, wie in beschrieben [ActiveX-Steuerelemente: Optimierung](../mfc/mfc-activex-controls-optimization.md). Moniker können verwendet werden, um die Eigenschaften herunterzuladen und große BLOBs asynchron, siehe [ActiveX-Steuerelemente für das Internet](../mfc/activex-controls-on-the-internet.md).
+Sie können auch Optimierungen hinzufügen, wie unter [ActiveX-Steuerelemente beschrieben: Optimierung](../mfc/mfc-activex-controls-optimization.md). Moniker können verwendet werden, um Eigenschaften und große blobelemente asynchron herunterzuladen, wie in ActiveX-Steuer [Elementen im Internet](../mfc/activex-controls-on-the-internet.md)beschrieben.
 
-##  <a name="_core_packaging_code_for_downloading"></a> Verpacken von Code zum Herunterladen
+##  <a name="_core_packaging_code_for_downloading"></a>Verpacken von Code zum herunterladen
 
-Weitere Informationen zu diesem Thema finden Sie unter [Paketerstellung ActiveX-Steuerelemente](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29).
+Weitere Informationen zu diesem Betreff finden Sie unter [Packen von ActiveX](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29)-Steuerelementen.
 
-### <a name="the-codebase-tag"></a>Die CODEBASE-Tags
+### <a name="the-codebase-tag"></a>Das CodeBase-Tag
 
-ActiveX-Steuerelemente in Webseiten mit eingebettet sind die `<OBJECT>` Tag. Die `CODEBASE` Parameter, der die `<OBJECT>` -Tag gibt den Speicherort, von dem das Steuerelement heruntergeladen. `CODEBASE` können erfolgreich eine Reihe von verschiedenen Dateitypen zeigen.
+ActiveX-Steuerelemente werden mit dem `<OBJECT>` -Tag in Webseiten eingebettet. Der `CODEBASE` -Parameter `<OBJECT>` des-Tags gibt den Speicherort an, von dem das Steuerelement heruntergeladen werden soll. `CODEBASE`kann auf eine Reihe von verschiedenen Dateitypen erfolgreich verweisen.
 
-### <a name="using-the-codebase-tag-with-an-ocx-file"></a>Verwenden das Tag CODEBASIS mit eine OCX-Datei
+### <a name="using-the-codebase-tag-with-an-ocx-file"></a>Verwenden des CodeBase-Tags mit einer OCX-Datei
 
 ```
 CODEBASE="http://example.microsoft.com/mycontrol.ocx#version=4,
@@ -61,17 +61,17 @@ CODEBASE="http://example.microsoft.com/mycontrol.ocx#version=4,
     1086"
 ```
 
-Diese Lösung nur des Steuerelements OCX-Datei heruntergeladen und alle unterstützenden DLLs, die bereits auf dem Clientcomputer installiert sein muss. Dies funktioniert für Internet Explorer und MFC-ActiveX-Steuerelemente, die mit Visual C++ erstellter, da Internet Explorer mit der Hilfs-DLLs für Visual C++-Steuerelemente geliefert wird. Wenn einem anderen Internetbrowser, die ActiveX-Steuerelement-fähig ist zum Anzeigen der Steuerelemente verwendet wird, funktioniert diese Lösung nicht.
+Diese Lösung lädt nur die OCX-Datei des Steuer Elements herunter und erfordert, dass alle unterstützenden DLLs bereits auf dem Client Computer installiert sind. Dies funktioniert für Internet Explorer-und MFC-ActiveX-Steuerelemente C++, die mit Visual erstellt werden, da Internet Explorer mit den C++ unterstützenden DLLs für visuelle Steuerelemente ausgeliefert wird. Wenn ein anderer Internet Browser, der ActiveX-Steuerelement fähig ist, zum Anzeigen dieses Steuer Elements verwendet wird, funktioniert diese Lösung nicht.
 
-### <a name="using-the-codebase-tag-with-an-inf-file"></a>Verwenden die CODEBASE-Tags mit einer INF-Datei
+### <a name="using-the-codebase-tag-with-an-inf-file"></a>Verwenden des CodeBase-Tags mit einer INF-Datei
 
 ```
 CODEBASE="http://example.microsoft.com/trustme.inf"
 ```
 
-Eine INF-Datei wird die Installation von einer OCX-Datei und die unterstützenden Dateien zu steuern. Diese Methode wird nicht empfohlen, da es nicht möglich, sich eine INF-Datei ist (finden Sie unter [Code signieren](#_core_signing_code) für Zeiger auf das Signieren von Code).
+Eine INF-Datei steuert die Installation von OCX-Dateien und deren unterstützenden Dateien. Diese Methode wird nicht empfohlen, da es nicht möglich ist, eine INF-Datei zu signieren (Weitere Informationen finden Sie [unter Signieren](#_core_signing_code) von Code für Zeiger auf Code Signatur).
 
-### <a name="using-the-codebase-tag-with-a-cab-file"></a>Verwenden das Tag CODEBASIS mit einer CAB-Datei
+### <a name="using-the-codebase-tag-with-a-cab-file"></a>Verwenden des CodeBase-Tags mit einer CAB-Datei
 
 ```
 CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
@@ -80,19 +80,19 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
     0"
 ```
 
-CAB-Dateien sind die empfohlene Methode zum Packen von ActiveX-Steuerelementen, die MFC verwenden. Ein MFC-ActiveX-Steuerelement in einer CAB-Datei packen kann eine INF-Datei mit der die Installation von ActiveX-Steuerelement und alle abhängigen DLLs (z. B. die MFC-DLLs) eingeschlossen werden sollen. Verwenden eine CAB-Datei automatisch komprimiert den Code schneller herunterladen. Wenn Sie eine CAB-Datei zum Herunterladen der Komponente verwenden, ist es schneller, zum Signieren der gesamten CAB-Datei anstelle der einzelnen Komponenten.
+CAB-Dateien sind die empfohlene Methode, um ActiveX-Steuerelemente zu verpacken, die MFC verwenden. Beim Verpacken eines MFC-ActiveX-Steuer Elements in einer CAB-Datei kann eine INF-Datei eingeschlossen werden, um die Installation des ActiveX-Steuer Elements und aller abhängigen DLLs (z. b. MFC-DLLs) zu steuern. Wenn Sie eine CAB-Datei verwenden, wird der Code für einen schnelleren Download automatisch komprimiert. Wenn Sie eine CAB-Datei für das Herunterladen von Komponenten verwenden, ist es schneller, die gesamte CAB-Datei zu signieren, als jede einzelne Komponente.
 
 ### <a name="creating-cab-files"></a>Erstellen von CAB-Dateien
 
-Tools zum Erstellen von CAB-Dateien sind nun Bestandteil der [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk).
+Tools zum Erstellen von CAB-Dateien sind jetzt Bestandteil des [Windows 10-SDK](https://dev.windows.com/downloads/windows-10-sdk).
 
-Die CAB-Datei verweist `CODEBASE` OCX-Datei für das ActiveX-Steuerelement und eine INF-Datei zur Steuerung der Installation enthalten. Erstellen Sie die CAB-Datei den Namen der Steuerelementdatei angeben und eine INF-Datei. Fügen Sie keine abhängigen DLLs, die möglicherweise bereits auf dem System in der CAB-Datei vorhanden sind. MFC-DLLs sind z. B. in einer separaten CAB-Datei verpackt und auf die steuernde INF-Datei verweist.
+Die CAB-Datei, auf `CODEBASE` die von verwiesen wird, sollte die OCX-Datei für das ActiveX-Steuerelement und eine INF-Datei enthalten, um die Installation zu steuern. Sie erstellen die CAB-Datei, indem Sie den Namen der Steuerelement Datei und eine INF-Datei angeben. Fügen Sie keine abhängigen DLLs ein, die möglicherweise bereits auf dem System in dieser CAB-Datei vorhanden sind. Die MFC-DLLs werden z. b. in einer separaten CAB-Datei verpackt, auf die von der steuernden INF-Datei verwiesen wird.
 
-Weitere Informationen darüber, wie Sie eine CAB-Datei zu erstellen, finden Sie unter [erstellen eine CAB-Datei](/windows/desktop/devnotes/cabinet-api-functions).
+Ausführliche Informationen zum Erstellen einer CAB-Datei finden Sie unter [Erstellen einer CAB-Datei](/windows/win32/devnotes/cabinet-api-functions).
 
 ### <a name="the-inf-file"></a>Die INF-Datei
 
-Das folgende Beispiel, spindial.inf, Listen benötigt die unterstützenden Dateien und die Versionsinformationen für die MFC-Spindial steuern. Beachten Sie, dass der Speicherort für die MFC-DLLs ist eine Microsoft-Website. Die mfc42.cab ist bereitgestellt und von Microsoft signiert.
+Im folgenden Beispiel, SPINDIAL. inf, werden die unterstützenden Dateien und die Versionsinformationen aufgelistet, die für das MFC-SPINDIAL-Steuerelement benötigt werden. Beachten Sie, dass der Speicherort für die MFC-DLLs eine Microsoft-Website ist. MFC42. cab wird von Microsoft bereitgestellt und signiert.
 
 ```
 Contents of spindial.inf:
@@ -112,9 +112,9 @@ file-win32-x86=http://activex.microsoft.com/controls/vc/mfc42.cab
     0
 ```
 
-### <a name="the-object-tag"></a>Die \<OBJECT >-Tag
+### <a name="the-object-tag"></a>Das \<Objekt >-Tags
 
-Das folgende Beispiel veranschaulicht die Verwendung der `<OBJECT>` Tag, das die MFC-Spindial Beispielsteuerelement.
+Das folgende Beispiel veranschaulicht die Verwendung `<OBJECT>` des-Tags, um das MFC-Beispiel Steuerelement SPINDIAL zu verpacken.
 
 ```
 <OBJECT ID="Spindial1" WIDTH=100 HEIGHT=51
@@ -128,72 +128,72 @@ Das folgende Beispiel veranschaulicht die Verwendung der `<OBJECT>` Tag, das die
 </OBJECT>
 ```
 
-In diesem Fall enthält Beispiel enthält spindial.cab spindial.ocx und spindial.inf zwei Dateien. Der folgende Befehl wird die CAB-Datei erstellen:
+In diesem Fall enthält "SPINDIAL. cab" zwei Dateien: "SPINDIAL. ocx" und "SPINDIAL. inf". Mit dem folgenden Befehl wird die CAB-Datei erstellt:
 
 ```
 C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
 ```
 
-Die `-s 6144` Parameter reserviert Speicherplatz im CAB-Datei zum Signieren von Code.
+Der `-s 6144` -Parameter reserviert Platz in der CAB-Datei für die Code Signatur.
 
 ### <a name="the-version-tag"></a>Das Versionstag
 
-Beachten Sie hier, dass die `#Version` Informationen, die mit einer CAB-Datei angegeben gelten für das Steuerelement, das gemäß der *CLASSID* Parameter, der die `<OBJECT>` Tag.
+Beachten Sie hier, `#Version` dass die mit einer CAB-Datei angegebenen Informationen für das Steuerelement gelten, das durch den `<OBJECT>` *ClassID-* Parameter des-Tags angegeben wird.
 
-Abhängig von der Version angegeben ist können Sie den Download des Steuerelements erzwingen. Für vollständige Spezifikation der der `OBJECT` Tag einschließlich der *CODEBASIS* -Parameter, finden Sie unter der W3C-Verweis.
+Abhängig von der angegebenen Version können Sie das Herunterladen des Steuer Elements erzwingen. Umfassende Spezifikationen des `OBJECT` Tags einschließlich des *CodeBase* -Parameters finden Sie in der W3C-Referenz.
 
-##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Markieren ein Steuerelement sicher für Skripting und Initialisierung
+##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a>Markieren eines Steuer Elements für die Skripterstellung und Initialisierung
 
-ActiveX-Steuerelemente, die in Webseiten verwendet, sollte als sicher für Skripting und zum Initialisieren, wenn sie in der Tat sicher sind sichere markiert werden. Ein sicheres Steuerelement führen Sie die Datenträger-e/a nicht oder auf den Speicher oder Register eines Computers direkt zugreifen.
+ActiveX-Steuerelemente, die auf Webseiten verwendet werden, sollten als sicher für Skripts gekennzeichnet und für die Initialisierung sicher sein, wenn Sie sicher sind. Ein sicheres Steuerelement führt keine Datenträger-e/a-Vorgänge aus oder greift direkt auf den Speicher oder die Register eines Computers zu
 
-Steuerelemente können als sicher für Skripting und sicher über die Registrierung zu initialisieren gekennzeichnet werden. Ändern Sie `DllRegisterServer` zum Hinzufügen von Einträgen, die etwa wie folgt auf das Steuerelement als sicher für Skripting und Persistenz in der Registrierung markieren. Eine alternative Methode ist, implementieren `IObjectSafety`.
+Steuerelemente können für die Skripterstellung als sicher gekennzeichnet werden und sind für die Initialisierung über die Registrierung sicher. Ändern `DllRegisterServer` Sie, um Einträge ähnlich der folgenden hinzuzufügen, um das-Steuerelement für die Skripterstellung und Persistenz in der Registrierung zu kennzeichnen. Eine alternative Methode ist die Implementierung `IObjectSafety`von.
 
-Definieren Sie GUIDs (Globally Unique Identifiers) für das Steuerelement, es sicher für Skripting und für die Persistenz zu kennzeichnen. Steuerelemente, die sicher Skripts erstellt werden können, enthält einen Registrierungseintrag, der etwa wie folgt:
+Sie definieren GUIDs (Global Unique Identifier) für das Steuerelement, um es für die Skripterstellung und Persistenz sicher zu kennzeichnen. Steuerelemente, für die ein sicheres Skript erstellt werden kann, enthalten einen Registrierungs Eintrag ähnlich dem folgenden:
 
 ```
 HKEY_CLASSES_ROOT\Component Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}
 ```
 
-Steuerelemente, die problemlos von persistenten Daten initialisiert werden können, werden für Persistenz mit einen Registrierungseintrag, der ähnlich wie sicher markiert:
+Steuerelemente, die auf sichere Weise von persistenten Daten initialisiert werden können, sind mit einem Registrierungs Eintrag, der etwa wie folgt aussieht, als sicher
 
 ```
 HKEY_CLASSES_ROOT\Component Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}
 ```
 
-Fügen Sie Einträge, die etwa wie folgt (Ersetzen Ihres Steuerelements Klassen-ID anstelle von `{06889605-B8D0-101A-91F1-00608CEAD5B3}`) die folgenden Klassen-ID Ihrer Schlüssel zugeordnet werden soll:
+Fügen Sie Einträge ähnlich der folgenden hinzu (ersetzen Sie die Klassen-ID Ihres Steuer Elements `{06889605-B8D0-101A-91F1-00608CEAD5B3}`anstelle von), um Ihre Schlüssel mit der folgenden Klassen-ID zuzuordnen:
 
 ```
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}
 ```
 
-##  <a name="_core_licensing_issues"></a> Lizenzierungsprobleme
+##  <a name="_core_licensing_issues"></a>Lizenzierungsprobleme
 
-Wenn Sie ein lizenziertes Steuerelement auf einer Webseite verwenden möchten, müssen Sie sicherstellen, dass die Lizenzbedingungen ermöglicht die Verwendung im Internet und eine Lizenz-Paketdatei (LPK) dafür erstellen.
+Wenn Sie ein lizenziertes Steuerelement auf einer Webseite verwenden möchten, müssen Sie überprüfen, ob der Lizenzvertrag seine Verwendung im Internet zulässt, und eine Lizenzpaket Datei (LPK) für die Seite erstellen.
 
-Ein lizenziertes ActiveX-Steuerelement wird in einer HTML-Seite nicht ordnungsgemäß geladen, wenn der Computer mit Internet Explorer zur Verwendung des Steuerelements nicht lizenziert ist. Z. B. wenn ein lizenziertes Steuerelement mit Visual C++ erstellt wurde, wird die HTML-Seite, die mit dem Steuerelement ordnungsgemäß Laden auf dem Computer, in dem das Steuerelement erstellt wurde, aber es wird nicht auf einem anderen Computer geladen, es sei denn, die Informationen zur Lizenzierung enthalten ist.
+Ein lizenziertes ActiveX-Steuerelement wird auf einer HTML-Seite nicht ordnungsgemäß geladen, wenn der Computer mit Internet Explorer nicht für die Verwendung des Steuer Elements lizenziert ist. Wenn z. b. ein lizenziertes Steuerelement mithilfe C++von Visual erstellt wurde, wird die HTML-Seite mit dem Steuerelement auf dem Computer, auf dem das Steuerelement erstellt wurde, ordnungsgemäß geladen, aber nicht auf einem anderen Computer, es sei denn, es sind Lizenzierungsinformationen enthalten
 
-Um ein lizenziertes ActiveX-Steuerelement in Internet Explorer verwenden zu können, müssen Sie überprüfen, des Anbieters-Software-Lizenzbedingungen zu überprüfen, ob die Lizenz für das Steuerelement lässt:
+Wenn Sie ein lizenziertes ActiveX-Steuerelement in Internet Explorer verwenden möchten, müssen Sie den Lizenzvertrag des Anbieters prüfen, um zu überprüfen, ob die Lizenz für das Steuerelement zulässig ist
 
 - Neuverteilung
 
-- Verwenden des Steuerelements auf das Internet
+- Verwendung des-Steuer Elements im Internet
 
-- Verwendung des Parameters Codebasis
+- Verwendung des CodeBase-Parameters
 
-Um ein lizenziertes Steuerelement in einer HTML-Seite auf einem Computer Lizenzpaketdatei verwenden zu können, müssen Sie eine Lizenz-Paketdatei (LPK) generieren. Die LPK-Datei enthält die Laufzeit-Lizenzen für lizenzierte Steuerelemente im HTML-Seite. Diese Datei wird mit Hilfe von LPK_TOOL generiert. EXE-Datei die mit dem ActiveX-SDK enthalten ist.
+Wenn Sie ein lizenziertes Steuerelement in einer HTML-Seite auf einem nicht lizenzierten Computer verwenden möchten, müssen Sie eine Lizenzpaket Datei (LPK) generieren. Die LPK-Datei enthält Laufzeitlizenzen für lizenzierte Steuerelemente auf der HTML-Seite. Diese Datei wird über LPK_TOOL generiert. EXE, das mit dem ActiveX SDK ausgestattet ist.
 
-#### <a name="to-create-an-lpk-file"></a>So erstellen Sie eine Datei LPK
+#### <a name="to-create-an-lpk-file"></a>So erstellen Sie eine LPK-Datei
 
-1. Führen Sie LPK_TOOL. EXE-Datei auf einem Computer, der zur Verwendung des Steuerelements lizenziert ist.
+1. Führen Sie LPK_TOOL aus. EXE auf einem Computer, der für die Verwendung des Steuer Elements lizenziert ist.
 
-1. In der **License Package Authoring Tool** Dialogfeld die **verfügbaren Steuerelemente** Listenfeld, wählen Sie die einzelnen lizenzierten ActiveX-Steuerelement, die auf der HTML-Seite verwendet werden, und klicken Sie auf **hinzufügen**.
+1. Wählen Sie im Dialogfeld **Lizenzpaket** Erstellungs Tool im Listenfeld **Verfügbare Steuerelemente** jedes lizenzierte ActiveX-Steuerelement aus, das auf der HTML-Seite verwendet werden soll, und klicken Sie auf **Hinzufügen**.
 
-1. Klicken Sie auf **speichern und beenden Sie** , und geben Sie einen Namen für die LPK-Datei. Dies erstellt die LPK-Datei und schließen Sie die Anwendung.
+1. Klicken Sie auf **Save & Exit** , und geben Sie einen Namen für die LPK-Datei ein. Dadurch wird die LPK-Datei erstellt und die Anwendung geschlossen.
 
-#### <a name="to-embed-a-licensed-control-on-an-html-page"></a>Um ein lizenziertes Steuerelement auf einer HTML-Seite einzubetten.
+#### <a name="to-embed-a-licensed-control-on-an-html-page"></a>So Betten Sie ein lizenziertes Steuerelement auf einer HTML-Seite ein
 
-1. Bearbeiten Sie Ihre HTML-Seite. Fügen Sie in der HTML-Seite ein \<Objekt >-Tag für das License Manager-Objekt, vor allen anderen \<Objekt > Tags. Die Lizenz-Manager ist ein ActiveX-Steuerelement, das mit Internet Explorer installiert ist. Die Klassen-ID ist unten dargestellt. Legen Sie die LPKPath-Eigenschaft des das License Manager-Objekt, um den Pfad und Namen der LPK-Datei. Sie können nur eine LPK-Datei pro HTML-Seite verwenden.
+1. Bearbeiten Sie die HTML-Seite. Fügen Sie auf der Seite HTML vor \<allen anderen \<Objekten > Tags ein Objekt >-Tag für das Lizenz-Manager-Objekt ein. Der Lizenz-Manager ist ein ActiveX-Steuerelement, das mit Internet Explorer installiert wird. Die Klassen-ID ist unten dargestellt. Legen Sie die LPKPath-Eigenschaft des License Manager-Objekts auf den Pfad und den Namen der LPK-Datei fest. Pro HTML-Seite kann nur eine LPK-Datei vorhanden sein.
 
 ```
 <OBJECT CLASSID = "clsid:5220cb21-c88d-11cf-b347-00aa00a28331">
@@ -201,13 +201,13 @@ Um ein lizenziertes Steuerelement in einer HTML-Seite auf einem Computer Lizenzp
 </OBJECT>
 ```
 
-1. Fügen Sie der \<Objekt >-Tag für das lizenzierte Steuerelement nach dem Tag-Lizenz-Manager.
+1. Fügen Sie \<das Objekt > Tag für Ihr lizenziertes Steuerelement nach dem Lizenz-Manager-Tag ein.
 
-   Beispielsweise ist eine HTML-Seite, die das Microsoft-MaskedEdit-Steuerelement zeigt unten dargestellt. Die erste Klasse, die für das License Manager-Steuerelement-ID ist, die zweite Klasse, die für das MaskedEdit-Steuerelement-ID ist. Ändern Sie die Tags auf den relativen Pfad der Datei .lpk zu verweisen, die Sie zuvor erstellt haben, und fügen Sie ein Objekttag, einschließlich die Klassen-ID für das Steuerelement.
+   Beispielsweise wird eine HTML-Seite angezeigt, auf der das von Microsoft maskierte Bearbeitungs Steuerelement angezeigt wird. Die erste Klassen-ID ist für das License Manager-Steuerelement, die zweite Klassen-ID ist für das maskierte Bearbeitungs Steuerelement. Ändern Sie die Tags so, dass Sie auf den relativen Pfad der LPK-Datei verweisen, die Sie zuvor erstellt haben, und fügen Sie ein Objekttag einschließlich der Klassen-ID für das Steuerelement hinzu.
 
-1. Fügen Sie der \<EINBETTEN >-Attribut für die LPK-Datei, wenn das NCompass ActiveX-Plug-in verwenden.
+1. Fügen Sie \<das Einbettungs > Attribut für die LPK-Datei ein, wenn Sie das NCompass-ActiveX-Plug-in verwenden.
 
-   Wenn das Steuerelement kann, auf anderen angezeigt werden aktiviert aktiv Browser – z. B. das NCompass ActiveX-Plug-in mit Netscape – müssen Sie hinzufügen, die \<EINBETTEN > Syntax wie unten dargestellt.
+   Wenn das Steuerelement möglicherweise in anderen aktiv aktivierten Browsern angezeigt wird – z. b. Netscape, das das NCompass-ActiveX-Plug \<-in verwendet – müssen Sie wie unten gezeigt die Syntax Einbettungs > hinzufügen.
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">
@@ -220,55 +220,55 @@ Um ein lizenziertes Steuerelement in einer HTML-Seite auf einem Computer Lizenzp
 </OBJECT>
 ```
 
-Weitere Informationen zur Lizenzierung finden Sie unter [ActiveX-Steuerelemente: Lizenzieren eines ActiveX-Steuerelements](../mfc/mfc-activex-controls-licensing-an-activex-control.md).
+Weitere Informationen zur Steuerelement Lizenzierung finden [Sie unter ActiveX-Steuerelemente: Lizenzieren eines ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)-Steuer Elements.
 
-##  <a name="_core_signing_code"></a> Signieren von Code
+##  <a name="_core_signing_code"></a>Signieren von Code
 
-Signieren von Code dient zum Identifizieren des Quell-Code, und um sicherzustellen, dass der Code nicht, seit es geändert hat signiert wurde. Abhängig von den Browsereinstellungen für Sicherheit können Benutzer gewarnt, bevor der Code heruntergeladen wird. Benutzer die Möglichkeit, vertrauen bestimmte Inhabern oder Unternehmen, in denen Fall eine Codesignatur von den vertrauenswürdigen ohne Warnung heruntergeladen werden. Code wird digital signiert, um Manipulationen zu vermeiden.
+Die Code Signatur dient zum Identifizieren der Codequelle und zum sicherstellen, dass der Code seit der Signierung nicht geändert wurde. Abhängig von den Sicherheitseinstellungen des Browsers werden Benutzer möglicherweise gewarnt, bevor der Code heruntergeladen wird. Benutzer können bestimmten Zertifikat Besitzern oder-Unternehmen vertrauen. in diesem Fall wird der von diesen vertrauenswürdigen Code signierte Code ohne Warnung heruntergeladen. Code wird digital signiert, um Manipulationen zu vermeiden.
 
-Stellen Sie sicher, dass der resultierende Code signiert ist, damit das Steuerelement automatisch heruntergeladen werden kann, ohne Vertrauensstellung Warnmeldungen an. Weitere Informationen zum Signieren von Code finden Sie in der Dokumentation auf das Authenticode im ActiveX-SDK, und finden Sie unter [eine CAB-Datei signieren](/windows/desktop/devnotes/cabinet-api-functions).
+Stellen Sie sicher, dass der endgültige Code signiert ist, damit das Steuerelement automatisch heruntergeladen werden kann, ohne dass Warnmeldungen angezeigt werden. Ausführliche Informationen zum Signieren von Code finden Sie in der Dokumentation zu Authenticode im ActiveX SDK und [unter Signieren einer CAB-Datei](/windows/win32/devnotes/cabinet-api-functions).
 
-Abhängig von der Vertrauensstellung und Browser auf die Sicherheitseinstellungen kann ein Zertifikat angezeigt werden, um die signierende Person oder Firma zu identifizieren. Wenn die Sicherheitsstufe auf None festgelegt ist oder das Vorzeichen des Steuerelements Zertifikatsbesitzers als vertrauenswürdig eingestuft wird, wird ein Zertifikat nicht angezeigt werden. Finden Sie unter [Sicherheitsstufen für Internet Explorer-Browser und Verhalten des Steuerelements](#_core_internet_explorer_browser_safety_levels_and_control_behavior) Einzelheiten, wie der Browser-sicherheitseinstellung bestimmt, ob das Steuerelement heruntergeladen wird und ein Zertifikat angezeigt.
+Abhängig von den Einstellungen der Vertrauensstellungs-und Browser Sicherheit wird möglicherweise ein Zertifikat angezeigt, um die Signatur Person oder das Unternehmen zu identifizieren. Wenn die Sicherheitsstufe "None" ist oder wenn der Besitzer des Zertifikats des signierten Steuer Elements vertrauenswürdig ist, wird kein Zertifikat angezeigt. Ausführliche Informationen dazu, wie die Browser-Sicherheitseinstellung bestimmt, ob Ihr Steuerelement heruntergeladen und ein Zertifikat angezeigt wird, finden Sie unter [Internet Explorer-Browser Sicherheitsebenen und Steuerungs Verhalten](#_core_internet_explorer_browser_safety_levels_and_control_behavior) .
 
-Digitales Signieren von Garantien Code wurde nicht geändert werden, da es signiert wurde, ist. Ein Hash des Codes wird erstellt und im Zertifikat eingebetteten. Dieser Hash wird später noch Mal mit einem Hash des Codes ausgeführt, nachdem der Code heruntergeladen wird, aber vor der Ausführung verglichen. Unternehmen, wie z. B. Verisign können mit privaten und öffentlichen Schlüssel zum Signieren von Code erforderlich sind angeben. Das ActiveX-SDK im Lieferumfang von "MakeCert", ein Hilfsprogramm für die Testzertifikate zu erstellen.
+Der Code für die digitale Signierung wurde nicht geändert, da er signiert wurde. Ein Hashwert des Codes wird übernommen und in das Zertifikat eingebettet. Dieser Hash wird zu einem späteren Zeitpunkt mit einem Hashwert des Codes verglichen, der nach dem Herunterladen des Codes, aber vor der Ausführung ausgeführt wird. Unternehmen wie VeriSign können private und öffentliche Schlüssel bereitstellen, die zum Signieren von Code erforderlich sind. Das ActiveX SDK wird mit Makecert ausgeliefert, einem Hilfsprogramm zum Erstellen von Test Zertifikaten.
 
-##  <a name="_core_managing_the_palette"></a> Verwalten der Palette
+##  <a name="_core_managing_the_palette"></a>Verwalten der Palette
 
-Container, bestimmen die Palette, und macht sie verfügbar ist als ambient-Eigenschaft, **DISPID_AMBIENT_PALETTE**. Ein Container (z. B. Internet Explorer) Wählt aus eine Palette, die durch alle ActiveX-Steuerelemente auf einer Seite verwendet wird, um ihre eigenen Farbpalette zu bestimmen. Dies verhindert flimmernde und stellt ein konsistentes Erscheinungsbild.
+Container bestimmen die Palette und stellen Sie als Ambient-Eigenschaft ( **DISPID_AMBIENT_PALETTE**) zur Verfügung. Ein Container (z. b. Internet Explorer) wählt eine Palette aus, die von allen ActiveX-Steuerelementen auf einer Seite verwendet wird, um Ihre eigene Palette zu bestimmen. Dies verhindert das Anzeigen von Flimmern und stellt eine konsistente Darstellung dar.
 
-Ein Steuerelement kann überschreiben `OnAmbientPropertyChange` , Benachrichtigung über Änderungen an der Palette zu behandeln.
+Ein Steuerelement kann `OnAmbientPropertyChange` überschreiben, um Benachrichtigungen über Änderungen an der Palette zu verarbeiten.
 
-Ein Steuerelement kann überschreiben `OnGetColorSet` zurückzugebenden Farben die Palette zu zeichnen. Container können, dass den Rückgabewert um zu bestimmen, ob ein Steuerelement Palette-fähig ist.
+Ein Steuerelement kann `OnGetColorSet` überschreiben, um eine Farbmenge zum Zeichnen der Palette zurückzugeben. Container verwenden den Rückgabewert, um zu bestimmen, ob ein Steuerelement palettenfähig ist.
 
-Gemäß den OCX-96-Richtlinien muss ein Steuerelement immer die Palette im Hintergrund zu erkennen.
+Unter ocx 96-Richtlinien muss ein Steuerelement immer seine Palette im Hintergrund erkennen.
 
-Ältere Container, die die Palette der ambient-Eigenschaft nicht verwenden, werden WM_QUERYNEWPALETTE und WM_PALETTECHANGED Nachrichten gesendet. Ein Steuerelement kann überschreiben `OnQueryNewPalette` und `OnPaletteChanged` , diese Nachrichten zu verarbeiten.
+Ältere Container, die die Ambient-Palette-Eigenschaft nicht verwenden, senden WM_QUERYNEWPALETTE-und WM_PALETTECHANGED-Nachrichten. Ein Steuerelement kann `OnQueryNewPalette` diese `OnPaletteChanged` Nachrichten überschreiben und verarbeiten.
 
-##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Internet Explorer-Browser-Sicherheitsstufen und Verhalten des Steuerelements
+##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a>Internet Explorer-Browser-Sicherheitsebenen und Steuerelement Verhalten
 
-Optionen für die Sicherheitsstufe, die vom Benutzer konfigurierbar über einen Browser verfügt. Da Webseiten aktiven Inhalte enthalten kann, der möglicherweise den Computer eines Benutzers beschädigt werden kann, können Browser der Benutzer die Auswahl der Optionen für die Sicherheitsstufe auf. Je nachdem, wie ein Browser Sicherheitsstufen implementiert, ein Steuerelement überhaupt nicht heruntergeladen werden kann, oder zeigt ein Zertifikat oder eine Warnmeldung an, die dem Benutzer ermöglichen, die zur Laufzeit angibt, ob das Steuerelement heruntergeladen werden sollen. Das Verhalten des ActiveX-Steuerelemente unter hoher, mittlerer oder niedriger Sicherheitsstufen in Internet Explorer sind unten aufgeführt.
+Ein Browser verfügt über Optionen für die Sicherheitsstufe, die vom Benutzer konfiguriert werden können. Da Webseiten aktive Inhalte enthalten können, die möglicherweise den Computer eines Benutzers beschädigen, ermöglichen Browser dem Benutzer die Auswahl von Optionen für die Sicherheitsstufe. Abhängig von der Art und Weise, in der ein Browser Sicherheitsebenen implementiert, kann ein Steuerelement überhaupt nicht heruntergeladen werden, oder es wird ein Zertifikat oder eine Warnmeldung angezeigt, mit der der Benutzer zur Laufzeit auswählen kann, ob das Steuerelement heruntergeladen werden soll. Das Verhalten von ActiveX-Steuerelementen unter hoch-, Mittel-und niedriger Sicherheitsstufe in Internet Explorer ist unten aufgeführt.
 
 ### <a name="high-safety-mode"></a>Modus für hohe Sicherheit
 
-- Nicht signierte Steuerelemente werden nicht heruntergeladen werden.
+- Nicht signierte Steuerelemente werden nicht heruntergeladen.
 
-- Signierte Steuerelemente können ein Zertifikat werden angezeigt, wenn nicht vertrauenswürdige (ein Benutzer kann eine Option aus, um Code aus der Besitzer dieses Zertifikats von nun an immer zu vertrauen auswählen).
+- Signierte Steuerelemente zeigen ein Zertifikat an, wenn es nicht vertrauenswürdig ist (ein Benutzer kann eine Option auswählen, um Code von diesem Zertifikat Besitzer immer zu Vertrauen).
 
-- Nur die Steuerelemente, die als sicher gekennzeichnet werden werden skriptfähige und/oder persistente Daten verfügen.
+- Nur Steuerelemente, die als sicher gekennzeichnet sind, haben persistente Daten und/oder sind skriptfähig.
 
-### <a name="medium-safety-mode"></a>Mittlere Sicherheitsstufe
+### <a name="medium-safety-mode"></a>Mittlerer Sicherheitsmodus
 
-- Nicht signierte Steuerelemente zeigt eine Warnung vor dem herunterladen.
+- Bei nicht signierten Steuerelementen wird vor dem herunterladen eine Warnung angezeigt.
 
-- Wenn als nicht vertrauenswürdig eingestuft werden ein Zertifikat von signierte Steuerelemente angezeigt werden.
+- Signierte Steuerelemente zeigen ein Zertifikat an, wenn nicht vertrauenswürdig.
 
-- Steuerelemente, die nicht als sicher gekennzeichnet werden eine Warnung angezeigt.
+- Steuerelemente, die nicht als sicher gekennzeichnet sind, zeigen eine Warnung an.
 
-### <a name="low-safety-mode"></a>Im Modus mit niedriger Sicherheit
+### <a name="low-safety-mode"></a>Modus mit niedriger Sicherheit
 
 - Steuerelemente werden ohne Warnung heruntergeladen.
 
-- Skripterstellung und Persistenz werden ohne Warnung auftreten.
+- Skripterstellung und Persistenz treten ohne Warnung auf.
 
 ## <a name="see-also"></a>Siehe auch
 

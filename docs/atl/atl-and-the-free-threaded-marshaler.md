@@ -8,27 +8,27 @@ helpviewer_keywords:
 - threading [ATL], free threaded marshaler
 - FTM in ATL
 ms.assetid: 2db88a13-2217-4ebc-aa7e-432d5da902eb
-ms.openlocfilehash: ddea5a74dbd40d097398d04c0b2bc274df5ec972
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94e4961c69e9441d160d72d9b72afcee3677e25f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252506"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491911"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL und der freethreaded Marshaller
 
-Der ATL-Assistent für einfache Objekte die Seite "Attribute" bietet eine Option, die Ihre Klasse die freethreaded Marshaller (FTM) aggregieren kann.
+Die Seite Attribute des ATL-Assistenten für einfache Objekte enthält eine Option, mit der Ihre Klasse den Free Threaded Mars Haller (FTM) aggregieren kann.
 
-Der Assistent generiert Code zum Erstellen einer Instanz von FTM in `FinalConstruct` und gibt diese Instanz in `FinalRelease`. Ein COM_INTERFACE_ENTRY_AGGREGATE-Makro wird automatisch hinzugefügt, um sicherzustellen, dass die COM-Zuordnung `QueryInterface` Anforderungen für [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal) werden von der freethreaded Marshaller behandelt.
+Der Assistent generiert Code, um eine Instanz des frei Hand Thread-Mars Haller in `FinalConstruct` zu erstellen und diese Instanz `FinalRelease`in freizugeben. Der com-Zuordnung wird automatisch ein COM_INTERFACE_ENTRY_AGGREGATE-Makro hinzugefügt, `QueryInterface` um sicherzustellen, dass Anforderungen für [IMarshal](/windows/win32/api/objidlbase/nn-objidlbase-imarshal) vom Free Threaded-Mars Haller verarbeitet werden.
 
-FTM bietet direkten Zugriff auf Schnittstellen für das Objekt von jedem Thread im selben Prozess, apartmentübergreifende Aufrufe beschleunigen. Diese Option ist für Klassen vorgesehen, die sowohl das Threadingmodell zu verwenden.
+Der frei Thread-Mars Haller ermöglicht den direkten Zugriff auf Schnittstellen auf Ihrem Objekt von einem beliebigen Thread im gleichen Prozess und beschleunigt die übergreifenden Aufrufe. Diese Option ist für Klassen vorgesehen, die das beide Threading Modell verwenden.
 
-Wenn Sie diese Option verwenden zu können, müssen Klassen Verantwortung für die Threadsicherheit ihrer Daten ausführen. Darüber hinaus müssen Objekte, die die freethreaded Marshaler aggregiert und Schnittstellenzeiger abgerufen, die von anderen Objekten verwenden müssen zusätzliche Schritte, stellen Sie sicher, dass die Schnittstellen ordnungsgemäß gemarshallt werden. In der Regel umfasst das Speichern von den Schnittstellenzeiger in der globalen Schnittstellentabelle (GIT) und die Zeiger aus der GIT jedes Mal, wenn er verwendet wird. ATL stellt die Klasse [CComGITPtr](../atl/reference/ccomgitptr-class.md) zur Verwendung gespeichert, in der GIT-Schnittstellenzeiger auf.
+Wenn diese Option verwendet wird, müssen Klassen die Verantwortung für die Thread Sicherheit Ihrer Daten übernehmen. Außerdem müssen Objekte, die den freien Thread-Mars Haller aggregieren und Schnittstellen Zeiger verwenden müssen, die von anderen Objekten abgerufen werden, zusätzliche Schritte ausführen, um sicherzustellen, dass die Schnittstellen ordnungsgemäß gemarshallt werden. In der Regel umfasst dies das Speichern der Schnittstellen Zeiger in der globalen Schnittstellen Tabelle (Global Interface Table, git) und das erhalten des Zeigers aus dem git bei jeder Verwendung. ATL stellt die [CComGITPtr](../atl/reference/ccomgitptr-class.md) -Klasse bereit, um Sie bei der Verwendung von im git gespeicherten Schnittstellen Zeigern zu unterstützen.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Konzepte](../atl/active-template-library-atl-concepts.md)<br/>
-[CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>
-[IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)<br/>
-[Verwenden Sie die globale Schnittstellentabelle](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
-[In-Process-Server, Threadingprobleme](/windows/desktop/com/in-process-server-threading-issues)
+[CoCreateFreeThreadedMarshaler](/windows/win32/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>
+[Von IMarshal](/windows/win32/api/objidlbase/nn-objidlbase-imarshal)<br/>
+[Verwendungszwecke der globalen Schnittstellen Tabelle](/windows/win32/com/when-to-use-the-global-interface-table)<br/>
+[Threading Probleme im Prozess internen Server](/windows/win32/com/in-process-server-threading-issues)

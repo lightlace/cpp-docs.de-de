@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409420"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514518"
 ---
-# <a name="lastis"></a>last_is
+# <a name="last_is"></a>last_is
 
-Gibt den Index des letzten Elements Array übertragen werden.
+Gibt den Index des letzten Array Elements an, das übertragen werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,15 +26,15 @@ Gibt den Index des letzten Elements Array übertragen werden.
 ### <a name="parameters"></a>Parameter
 
 *expression*<br/>
-Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argumentliste Slots sind zulässig.
+Mindestens ein C-sprach Ausdruck. Leere Argument Slots sind zulässig.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Last_is** C++ Attribut hat die gleiche Funktionalität wie die [Last_is](/windows/desktop/Midl/last-is) MIDL-Attribut.
+Das **Last_is** C++ -Attribut verfügt über die gleiche Funktionalität wie das [Last_is](/windows/win32/Midl/last-is) -Mittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter [First_is](first-is.md) ein Beispiel für einen Abschnitt eines Arrays angeben.
+Ein Beispiel für die Angabe eines Abschnitts eines Arrays finden Sie unter [First_is](first-is.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,10 +42,10 @@ Finden Sie unter [First_is](first-is.md) ein Beispiel für einen Abschnitt eines
 
 |||
 |-|-|
-|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|
+|**Betrifft**|Feld in **Struktur** oder **Union**, Schnittstellenparameter, Schnittstellen Methode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
