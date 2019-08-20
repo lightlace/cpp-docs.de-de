@@ -15,12 +15,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: c45197c9008c2d0b6a0519d947ca75f55a7960fd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: eb8a2829540876936f6c57745fb56e7d19f16394
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747845"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498875"
 ---
 # <a name="vprintf-functions"></a>vprintf-Funktionen
 
@@ -81,7 +81,7 @@ Die Versionen dieser Funktionen mit dem Suffix **_p** bieten die Möglichkeit, d
 Wenn bei **vsprintf**, `vswprintf`, `_vsnprintf` und `_vsnwprintf` der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
 
 > [!IMPORTANT]
->  Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns). Wenn die sicheren Versionen dieser Funktionen (entweder die Suffixe **_s** oder **_p**) verwendet werden, könnte eine benutzerdefinierte Formatzeichenfolge eine Ausnahme aufgrund ungültiger Parameter auslösen, sofern die vom Benutzer bereitgestellte Zeichenfolge ungültige Formatierungszeichen enthält.
+>  Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns). Wenn die sicheren Versionen dieser Funktionen (entweder die Suffixe **_s** oder **_p**) verwendet werden, könnte eine benutzerdefinierte Formatzeichenfolge eine Ausnahme aufgrund ungültiger Parameter auslösen, sofern die vom Benutzer bereitgestellte Zeichenfolge ungültige Formatierungszeichen enthält.
 
 ## <a name="see-also"></a>Siehe auch
 

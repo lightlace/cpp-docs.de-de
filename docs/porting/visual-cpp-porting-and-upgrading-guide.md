@@ -2,12 +2,12 @@
 title: 'Visual C++-Handbuch: Portieren und Aktualisieren'
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: cd74168419006388b8469086560452a8a99e05e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450374"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511496"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++-Handbuch: Portieren und Aktualisieren
 
@@ -67,13 +67,13 @@ Sobald Sie das Projekt aktualisiert und getestet haben, können Sie den Code noc
 
 Was ist mit der Benutzeroberfläche? Wenn Sie MFC verwenden, empfiehlt sich ggf. eine Aktualisierung der Benutzeroberfläche. Verwenden Sie eines der neueren MFC-Features, die in 2008 als Feature Pack eingeführt wurden? Wenn Sie einfach nur das Erscheinungsbild Ihrer App moderner gestalten möchten, ohne die gesamte App neu zu schreiben, verwenden Sie die Menüband-APIs in MFC oder einige der neuen Funktionen von MFC.
 
-Wenn Sie Ihr Programm mit einer XAML-Benutzeroberfläche versehen, jedoch keine UWP-App erstellen möchten, können Sie C# mit WPF einsetzen, um die UI-Ebene zu erstellen und Ihre standardmäßige C++-Logik in DLLs umzugestalten. Erstellen Sie eine Interoperabilitätsebene in C++/CLI, um C# mit Ihrem nativen Code zu verbinden. Eine weitere Option ist die Erstellung einer UWP-App mithilfe von [C++/CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx) oder [C++/WinRT](https://github.com/microsoft/cppwinrt). Unter Windows 10 können Sie den [Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) nutzen, um Ihre vorhandene Desktopanwendung als UWP-App zu packen, ohne Code ändern zu müssen.
+Wenn Sie Ihr Programm mit einer XAML-Benutzeroberfläche versehen, jedoch keine UWP-App erstellen möchten, können Sie C# mit WPF einsetzen, um die UI-Ebene zu erstellen und Ihre standardmäßige C++-Logik in DLLs umzugestalten. Erstellen Sie eine Interoperabilitätsebene in C++/CLI, um C# mit Ihrem nativen Code zu verbinden. Eine weitere Option ist die Erstellung einer UWP-App mithilfe von [C++/CX](../cppcx/visual-c-language-reference-c-cx.md) oder [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/). Unter Windows 10 können Sie den [Desktop App Converter](/windows/msix/desktop/desktop-to-uwp-run-desktop-app-converter) nutzen, um Ihre vorhandene Desktopanwendung als UWP-App zu packen, ohne Code ändern zu müssen.
 
 Vielleicht haben sich auch Ihre Anforderungen geändert, oder Sie können absehen, dass Sie zukünftig auch Code für andere Zielplattformen als Windows-Desktop entwickeln müssen, wie z. B. Windows Phone- oder Android-Geräte. Sie können den Code Ihrer Benutzeroberfläche in eine plattformübergreifende Benutzeroberflächenbibliothek portieren. Mit diesen Benutzeroberflächen-Frameworks können Sie Code für mehrere Zielgeräte schreiben und trotzdem weiterhin Visual Studio und den Visual Studio-Debugger als Entwicklungsumgebung verwenden.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
 |[Aktualisieren von Projekten von früheren Versionen von Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Erläutert, wie in früheren Versionen von Visual Studio erstellte Projekte verwendet werden.|
 |[Neuerungen beim C++-Compiler in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|IDE- und Tooländerungen in der aktuellen Visual Studio-Version|
