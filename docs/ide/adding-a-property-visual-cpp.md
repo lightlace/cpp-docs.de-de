@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 5c472b74fee690c0cf33f78eca9e2e8462930eb8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504472"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509529"
 ---
 # <a name="add-a-property"></a>Hinzufügen einer Eigenschaft
 
@@ -62,7 +62,7 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
 
   Legt den Namen der Eigenschaft fest. Für MFC-Disp-Schnittstellen, die ActiveX-Steuerelementen zugeordnet sind, können Sie einen eigenen Namen angeben oder einen vordefinierten Eigenschaftennamen aus der Liste auswählen. Wenn Sie einen eigenen Eigenschaftennamen bereitstellen, ist der Implementierungstyp **Stock** (Vordefiniert) nicht verfügbar. Eine Beschreibung der Eigenschaften in der Liste finden Sie unter [Basiseigenschaften](#stock-properties).
 
-  |Schnittstellentyp|Beschreibung|
+  |Schnittstellentyp|BESCHREIBUNG|
   |--------------------|-----------------|
   |Duale ATL-Schnittstelle, benutzerdefinierte Schnittstelle, lokale benutzerdefinierte Schnittstelle|Geben Sie einen Eigenschaftennamen an.|
   |MFC-Disp-Schnittstelle, Disp-Schnittstelle des MFC-ActiveX-Steuerelements|Geben Sie einen Eigenschaftennamen an, oder wählen Sie eine Basiseigenschaft aus der Liste aus. Wenn Sie eine Eigenschaft aus der Liste auswählen, wird der entsprechende Wert im Feld **Eigenschaftentyp** angezeigt. Sie können diesen Typ abhängig von Ihrer Auswahl unter **Implementierungstyp** ändern.|
@@ -91,7 +91,7 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
 
   Nur MFC-Schnittstellen Gibt an, wie die hinzugefügten Eigenschaften implementiert werden sollen.
 
-  |Implementierungstyp|Beschreibung|
+  |Implementierungstyp|BESCHREIBUNG|
   |-------------------------|-----------------|
   |**Stock**|Gibt eine vordefinierte Implementierung für die unter **Eigenschaftenname** ausgewählte Eigenschaft an. Der Standardwert. Weitere Informationen finden Sie unter [Basiseigenschaften](#stock-properties).<br /><br /> Wenn Sie **Stock** (Vordefiniert) angeben, werden **Eigenschaftentyp**, **Parametertyp** und **Parametername** abgeblendet.|
   |**Membervariable**|Gibt an, dass die Eigenschaft als Membervariable hinzugefügt wird. Sie können benutzerdefinierte Eigenschaften und die meisten Basiseigenschaften als Membervariablen hinzufügen. Sie können die **Membervariable** für die Eigenschaften `Caption`, `hWnd` und `Text` nicht angeben.<br /><br /> Gibt Standardnamen unter **Variablenname** und **Benachrichtigungsfunktion** an. Sie können diesen Namen bearbeiten.|
@@ -105,7 +105,7 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
 
   Nur ATL-Schnittstellen Legt die Eigenschaft als schreibbar fest. Die `Put`-Methode wird also für das Festlegen bzw. „Einfügen“ dieser Eigenschaft des Objekts erstellt. Wählen Sie **Get** oder **Put** oder beide aus. Wenn Sie diese Option auswählen, können Sie die Methode auf zwei Arten implementieren:
 
-  |Option|Beschreibung|
+  |Option|BESCHREIBUNG|
   |------------|-----------------|
   |**PropPut**|Die [PropPut](../windows/propput.md)-Funktion gibt eine Kopie des Objekts zurück. Dies ist die Standardeinstellung und die gängigste Methode, um die Eigenschaft schreibbar zu machen.|
   |**PropPutRef**|Die [PropPutRef](../windows/propputref.md)-Funktion gibt einen Verweis auf das Objekt statt einer Kopie des Objekts zurück. Diese Option sollten Sie für Objekte (z.B. große Strukturen oder Arrays) verwenden, deren Initialisierung aufwändig sein kann.|
@@ -114,7 +114,7 @@ Verwenden Sie diesen Assistenten, um eine Eigenschaft zu einer Schnittstelle hin
 
   Nur ATL-Schnittstellen Legt fest, ob der Parameter, der durch **Parametername** festgelegt wurde, `in`, `out`, beides oder keines davon ist.
 
-  |Option|Beschreibung|
+  |Option|BESCHREIBUNG|
   |------------|-----------------|
   |`in`|Gibt an, dass der Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben wird.|
   |`out`|Gibt an, dass der Zeigerparameter an von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben wird (vom Server an den Client).|
@@ -149,39 +149,39 @@ Verwenden Sie diese Seite des Assistenten zum Hinzufügen von Eigenschaften, um 
 
 - `id`
 
-  Legt die numerische ID fest, die die Eigenschaft identifiziert. Diese Option ist nicht für Eigenschaften von benutzerdefinierten Schnittstellen verfügbar. Informationen finden Sie in der *MIDL-Referenz* unter [id](/windows/desktop/Midl/id).
+  Legt die numerische ID fest, die die Eigenschaft identifiziert. Diese Option ist nicht für Eigenschaften von benutzerdefinierten Schnittstellen verfügbar. Informationen finden Sie in der *MIDL-Referenz* unter [id](/windows/win32/Midl/id).
 
 - `helpcontext`
 
-  Gibt eine Kontext-ID an, die das Anzeigen von Informationen über diese Eigenschaft in der Hilfedatei ermöglicht. Informationen finden Sie in der *MIDL-Referenz* unter [helpcontext](/windows/desktop/Midl/helpcontext).
+  Gibt eine Kontext-ID an, die das Anzeigen von Informationen über diese Eigenschaft in der Hilfedatei ermöglicht. Informationen finden Sie in der *MIDL-Referenz* unter [helpcontext](/windows/win32/Midl/helpcontext).
 
 - `helpstring`
 
-  Gibt eine Zeichenfolge an, die zum Beschreiben des Elements verwendet wird, auf das sie angewendet wird. Standardmäßig ist sie auf `property`&nbsp;*Eigenschaften&nbsp;name* festgelegt. Informationen finden Sie in der *MIDL-Referenz* unter [helpstring](/windows/desktop/Midl/helpstring).
+  Gibt eine Zeichenfolge an, die zum Beschreiben des Elements verwendet wird, auf das sie angewendet wird. Standardmäßig ist sie auf `property`&nbsp;*Eigenschaften&nbsp;name* festgelegt. Informationen finden Sie in der *MIDL-Referenz* unter [helpstring](/windows/win32/Midl/helpstring).
 
 ### <a name="other-options"></a>Weitere Optionen
 
 Nicht alle Optionen sind für alle Eigenschaftentypen verfügbar.
 
-|Option|Beschreibung|
+|Option|BESCHREIBUNG|
 |------------|-----------------|
-|`bindable`|Gibt an, dass die Eigenschaft die Datenbindung unterstützt. Informationen finden Sie in der *MIDL-Referenz* unter [bindable](/windows/desktop/Midl/bindable). Diese Option ist standardmäßig für die vordefinierte Implementierung der Eigenschaft festgelegt und kann nicht geändert werden.|
-|`defaultbind`|Gibt an, dass diese einzelne bindbare Eigenschaft das Objekt am besten darstellt. Informationen finden Sie in der *MIDL-Referenz* unter [defaultbind](/windows/desktop/Midl/defaultbind).|
-|`displaybind`|Gibt an, dass diese Eigenschaft für den Benutzer als bindbar angezeigt werden soll. Informationen finden Sie in der *MIDL-Referenz* unter [displaybind](/windows/desktop/Midl/displaybind).|
-|`immediatebind`|Gibt an, dass die Datenbank umgehend von allen an dieser Eigenschaft eines datengebundenen Objekts vorgenommenen Änderungen benachrichtigt wird. Informationen finden Sie in der *MIDL-Referenz* unter [immediatebind](/windows/desktop/Midl/immediatebind).|
-|`defaultcollelem`|Gibt an, dass die Eigenschaft eine Accessorfunktion für ein Element der Standardsammlung ist. Informationen finden Sie in der *MIDL-Referenz* unter [defaultcollelem](/windows/desktop/Midl/defaultcollelem).|
-|`nonbrowsable`|Markiert einen Member einer Schnittstelle oder Disp-Schnittstelle, der nicht in einem Eigenschaftenbrowser angezeigt werden soll. Informationen finden Sie in der *MIDL-Referenz* unter [nonbrowsable](/windows/desktop/Midl/nonbrowsable).|
-|`requestedit`|Gibt an, dass die Eigenschaft die `OnRequestEdit`-Benachrichtigung unterstützt. Weitere Informationen finden Sie unter [requestedit](/windows/desktop/Midl/requestedit) in der *MIDL-Referenz*. Diese Option ist standardmäßig für die vordefinierte Implementierung der Eigenschaft festgelegt und kann nicht geändert werden.|
-|`source`|Gibt an, dass ein Member dieser Eigenschaft eine Ereignisquelle ist. Informationen finden Sie in der *MIDL-Referenz* unter [source](/windows/desktop/Midl/source).|
-|`hidden`|Gibt an, dass die Eigenschaft vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden soll. Informationen finden Sie in der *MIDL-Referenz* unter [hidden](/windows/desktop/Midl/hidden).|
-|`restricted`|Gibt an, dass die Eigenschaft nicht beliebig aufgerufen werden kann. Informationen finden Sie in der *MIDL-Referenz* unter [restricted](/windows/desktop/Midl/restricted).|
-|`local`|Gibt für den MIDL-Compiler an, dass die Eigenschaft lokal ist. Informationen finden Sie in der *MIDL-Referenz* unter [local](/windows/desktop/Midl/local).|
+|`bindable`|Gibt an, dass die Eigenschaft die Datenbindung unterstützt. Informationen finden Sie in der *MIDL-Referenz* unter [bindable](/windows/win32/Midl/bindable). Diese Option ist standardmäßig für die vordefinierte Implementierung der Eigenschaft festgelegt und kann nicht geändert werden.|
+|`defaultbind`|Gibt an, dass diese einzelne bindbare Eigenschaft das Objekt am besten darstellt. Informationen finden Sie in der *MIDL-Referenz* unter [defaultbind](/windows/win32/Midl/defaultbind).|
+|`displaybind`|Gibt an, dass diese Eigenschaft für den Benutzer als bindbar angezeigt werden soll. Informationen finden Sie in der *MIDL-Referenz* unter [displaybind](/windows/win32/Midl/displaybind).|
+|`immediatebind`|Gibt an, dass die Datenbank umgehend von allen an dieser Eigenschaft eines datengebundenen Objekts vorgenommenen Änderungen benachrichtigt wird. Informationen finden Sie in der *MIDL-Referenz* unter [immediatebind](/windows/win32/Midl/immediatebind).|
+|`defaultcollelem`|Gibt an, dass die Eigenschaft eine Accessorfunktion für ein Element der Standardsammlung ist. Informationen finden Sie in der *MIDL-Referenz* unter [defaultcollelem](/windows/win32/Midl/defaultcollelem).|
+|`nonbrowsable`|Markiert einen Member einer Schnittstelle oder Disp-Schnittstelle, der nicht in einem Eigenschaftenbrowser angezeigt werden soll. Informationen finden Sie in der *MIDL-Referenz* unter [nonbrowsable](/windows/win32/Midl/nonbrowsable).|
+|`requestedit`|Gibt an, dass die Eigenschaft die `OnRequestEdit`-Benachrichtigung unterstützt. Weitere Informationen finden Sie unter [requestedit](/windows/win32/Midl/requestedit) in der *MIDL-Referenz*. Diese Option ist standardmäßig für die vordefinierte Implementierung der Eigenschaft festgelegt und kann nicht geändert werden.|
+|`source`|Gibt an, dass ein Member dieser Eigenschaft eine Ereignisquelle ist. Informationen finden Sie in der *MIDL-Referenz* unter [source](/windows/win32/Midl/source).|
+|`hidden`|Gibt an, dass die Eigenschaft vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden soll. Informationen finden Sie in der *MIDL-Referenz* unter [hidden](/windows/win32/Midl/hidden).|
+|`restricted`|Gibt an, dass die Eigenschaft nicht beliebig aufgerufen werden kann. Informationen finden Sie in der *MIDL-Referenz* unter [restricted](/windows/win32/Midl/restricted).|
+|`local`|Gibt für den MIDL-Compiler an, dass die Eigenschaft lokal ist. Informationen finden Sie in der *MIDL-Referenz* unter [local](/windows/win32/Midl/local).|
 
 ## <a name="stock-properties"></a>Basiseigenschaften
 
 Wenn Sie einer MFC-Disp-Schnittstelle mithilfe des [Assistenten zum Hinzufügen von Eigenschaften](#idl-attributes-add-property-wizard) eine Eigenschaft hinzufügen, können Sie auf der [Namen](../ide/names-add-property-wizard.md)-Seite des Assistenten eine Basiseigenschaft aus der Liste **Eigenschaftennamen** auswählen. Dort stehen die folgenden Eigenschaften zur Auswahl:
 
-|Name der Eigenschaft|Beschreibung|
+|Name der Eigenschaft|BESCHREIBUNG|
 |-------------------|-----------------|
 |`Appearance`|Ruft einen Wert ab, der die Darstellung des Steuerelements bestimmt, oder legt diesen fest. Die Eigenschaft `Appearance` des Steuerelements kann dreidimensionale Anzeigeeffekte anzeigen oder ausblenden. Dies ist eine Lese-/Schreibumgebungseigenschaft.|
 |`BackColor`|Gibt die Ambient-Eigenschaft `BackColor` des Steuerelements zurück oder legt diese auf eine Palettenfarbe (RGB) oder eine vordefinierte Systemfarbe fest. Der Wert entspricht standardmäßig der Vordergrundfarbe des Containers des Steuerelements. Dies ist eine Lese-/Schreibumgebungseigenschaft.|

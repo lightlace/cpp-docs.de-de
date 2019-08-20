@@ -45,14 +45,14 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 044aaee376be02d0d3734ea8982a8c4db47f7d39
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8ab368378775102b708635b551c046a326adfecb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748046"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498904"
 ---
-# <a name="spawn-wspawn-functions"></a>_spawn- und _wspawn-Funktionen
+# <a name="_spawn-_wspawn-functions"></a>_spawn- und _wspawn-Funktionen
 
 Jede der `_spawn`-Funktionen erstellt einen neuen Prozess und führt ihn aus:
 
@@ -117,13 +117,13 @@ Um Argumente an den neuen Prozess zu übergeben, geben Sie mindestens einen Zeig
 >  Die in den Zeichenfolgen eingebetteten Leerzeichen können zu einem unerwarteten Verhalten führen. Zum Beispiel führt die Zeichenfolge `_spawn` durch die Übergabe von `"hi there"` dazu, dass der neue Prozess zwei Argumente erhält: `"hi"` und `"there"`. Wenn der neue Prozess die benannte Datei "hi there" öffnen sollte, schlägt der Prozess fehl. Sie können dies verhindern, indem Sie die Zeichenfolge in Anführungszeichen setzen: `"\"hi there\""`.
 
 > [!IMPORTANT]
->  Übergeben Sie Benutzereingaben nicht an `_spawn`, ohne den Inhalt explizit zu überprüfen. `_spawn` führt zu einem Aufruf von [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa). Beachten Sie daher, dass nicht qualifizierte Pfadnamen zu potenziellen Sicherheitslücken führen können.
+>  Übergeben Sie Benutzereingaben nicht an `_spawn`, ohne den Inhalt explizit zu überprüfen. `_spawn` führt zu einem Aufruf von [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw). Beachten Sie daher, dass nicht qualifizierte Pfadnamen zu potenziellen Sicherheitslücken führen können.
 
 Sie können Argumentzeiger als separate Parameter übergeben (in `_spawnl`, `_spawnle`, `_spawnlp` und `_spawnlpe`) oder als ein Array von Zeigern (in `_spawnv`, `_spawnve`, `_spawnvp` und `_spawnvpe`). Sie müssen mindestens ein Argument, `arg0` oder `argv`[0], an den erzeugten Prozess übergeben. Gemäß Konvention ist dieses Argument der Name des Programms so, wie Sie ihn auf der Befehlszeile eingeben würden. Ein anderer Wert erzeugt keinen Fehler.
 
 Die `_spawnl`-, `_spawnle`-, `_spawnlp`- und `_spawnlpe`-Aufrufe werden normalerweise verwendet, wenn die Anzahl der Argumente im Voraus bekannt ist. Das `arg0`-Argument ist normalerweise ein Zeiger auf `cmdname`. Die Argumente `arg1` bis `argn` sind Zeiger auf Zeichenfolgen, die die Argumentliste neu bilden. Nach `argn` muss ein **NULL**-Zeiger stehen, mit dem das Ende der Argumentliste markiert wird.
 
-Die `_spawnv`-, `_spawnve`-, `_spawnvp`- und `_spawnvpe`-Aufrufe sind nützlich, wenn die Anzahl der Argumente im neuen Prozess variabel ist. Zeiger auf Argumente werden als Array, `argv`*, übergeben.* Das `argv`[0]-Argument ist gewöhnlich ein Zeiger auf einen Pfad im Echtzeitmodus oder auf den Programmnamen im geschützten Modus und `argv`[1] bis `argv`[`n`] sind Zeiger auf die Zeichenfolgen, die die neue Argumentliste bilden. Das Argument `argv`[`n` +1] muss ein **NULL**-Zeiger sein, um das Ende der Argumentliste zu markieren.
+Die `_spawnv`-, `_spawnve`-, `_spawnvp`- und `_spawnvpe`-Aufrufe sind nützlich, wenn die Anzahl der Argumente im neuen Prozess variabel ist. Zeiger auf Argumente werden als Array, `argv` *, übergeben.* Das `argv`[0]-Argument ist gewöhnlich ein Zeiger auf einen Pfad im Echtzeitmodus oder auf den Programmnamen im geschützten Modus und `argv`[1] bis `argv`[`n`] sind Zeiger auf die Zeichenfolgen, die die neue Argumentliste bilden. Das Argument `argv`[`n` +1] muss ein **NULL**-Zeiger sein, um das Ende der Argumentliste zu markieren.
 
 ## <a name="environment-of-the-spawned-process"></a>Umgebung des erzeugten Prozesses
 
@@ -139,7 +139,7 @@ Neue Prozesse, die durch Aufrufe von `_spawn`-Routinen erstellt werden, behalten
 
 Wenn Sie `_spawn` über eine DLL- oder eine GUI-Anwendung aufrufen und die Ausgabe zu einer Pipe umleiten möchten, haben Sie zwei Möglichkeiten:
 
-- Verwenden Sie die Win32-API zum Erstellen einer Pipe, rufen Sie dann [AllocConsole](/windows/console/allocconsole) auf, legen Sie die Handlewerte in der Startstruktur fest, und rufen Sie [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) auf.
+- Verwenden Sie die Win32-API zum Erstellen einer Pipe, rufen Sie dann [AllocConsole](/windows/console/allocconsole) auf, legen Sie die Handlewerte in der Startstruktur fest, und rufen Sie [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) auf.
 
 - Rufen Sie [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md) auf, das eine Pipe erstellt und die Anwendung mit **cmd.exe/c** (oder **command.exe/c**) aufruft.
 

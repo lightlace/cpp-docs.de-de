@@ -2,12 +2,12 @@
 title: 'Leitfaden zum Portieren: MFC Scribble'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 0424b5e8c87c0103b4ebee65765244b40e8fa553
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448951"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511532"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Leitfaden zum Portieren: MFC Scribble
 
@@ -65,7 +65,7 @@ Erstellen Sie nun die Projektmappe. Im Ausgabefenster gibt der Compiler in etwa 
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ```
 
-Dies ist eine Warnung, kein Fehler, und kommt sehr häufig vor, wenn ein C++-Projekt in Visual Studio aktualisiert wird. Dies ist das Makro, das die niedrigste Version von Windows definiert, auf der Ihre Anwendung ausgeführt werden kann. Wenn wir die Warnung ignorieren, akzeptieren wir den Standardwert _WIN32_WINNT_MAXVER, d. h. die aktuelle Version von Windows. Eine Tabelle der möglichen Werte finden Sie unter [Verwenden der Windows-Header](/windows/desktop/WinProg/using-the-windows-headers). Beispielsweise können wir ihre Ausführung auf eine beliebige Version ab Vista festlegen.
+Dies ist eine Warnung, kein Fehler, und kommt sehr häufig vor, wenn ein C++-Projekt in Visual Studio aktualisiert wird. Dies ist das Makro, das die niedrigste Version von Windows definiert, auf der Ihre Anwendung ausgeführt werden kann. Wenn wir die Warnung ignorieren, akzeptieren wir den Standardwert _WIN32_WINNT_MAXVER, d. h. die aktuelle Version von Windows. Eine Tabelle der möglichen Werte finden Sie unter [Verwenden der Windows-Header](/windows/win32/WinProg/using-the-windows-headers). Beispielsweise können wir ihre Ausführung auf eine beliebige Version ab Vista festlegen.
 
 ```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA

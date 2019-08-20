@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: f05656612e464395117e77c82fb9dc9eb2290e0e
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 9597f04781c9009cf6f8f284348f0831c347201d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451284"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510355"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Änderungsverlauf von Visual C++ von 2003 bis 2015
 
@@ -277,7 +277,7 @@ Darüber hinaus können fortlaufende Verbesserungen der Übereinstimmung des Com
 
 - **clock**
 
-   In früheren Versionen wurde die [clock](../c-runtime-library/reference/clock.md)-Funktion mit der Windows-API [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) implementiert. Durch diese Implementierung war die die clock-Funktion von der Systemzeit abhängig, und war daher nicht monoton. Die clock-Funktion wurde hinsichtlich [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) neu implementiert und ist jetzt monoton.
+   In früheren Versionen wurde die [clock](../c-runtime-library/reference/clock.md)-Funktion mit der Windows-API [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) implementiert. Durch diese Implementierung war die die clock-Funktion von der Systemzeit abhängig, und war daher nicht monoton. Die clock-Funktion wurde hinsichtlich [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) neu implementiert und ist jetzt monoton.
 
 - **fstat und_utime**
 
@@ -313,7 +313,7 @@ Um neue Optimierungen und Debuggingüberprüfungen zu aktivieren, unterbricht di
 
 - **steady_clock**
 
-   Die \<chrono>-Implementierung von [steady_clock](../standard-library/steady-clock-struct.md) wurde gemäß den Zuverlässigkeits- und Stabilitätsanforderungen des C++-Standards geändert. `steady_clock` basiert nun auf [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx), und `high_resolution_clock` ist jetzt ein typedef-Element für `steady_clock`. Aus diesem Grund ist `steady_clock::time_point` in Visual Studio jetzt ein typedef-Element für `chrono::time_point<steady_clock>`. Dies ist jedoch nicht unbedingt bei anderen Implementierungen der Fall.
+   Die \<chrono>-Implementierung von [steady_clock](../standard-library/steady-clock-struct.md) wurde gemäß den Zuverlässigkeits- und Stabilitätsanforderungen des C++-Standards geändert. `steady_clock` basiert nun auf [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter), und `high_resolution_clock` ist jetzt ein typedef-Element für `steady_clock`. Aus diesem Grund ist `steady_clock::time_point` in Visual Studio jetzt ein typedef-Element für `chrono::time_point<steady_clock>`. Dies ist jedoch nicht unbedingt bei anderen Implementierungen der Fall.
 
 - **Zuordnungen und Konstanten**
 
@@ -2541,7 +2541,7 @@ Obwohl diese Unterschiede sich auf Ihren Quellcode oder andere Buildartefakte au
 
 - **Attributierter ATL-Code veraltet** (Level 1 (`/W1`) standardmäßig EIN)
 
-   Frühere Versionen des Compilers haben attributierten ATL-Code unterstützt. In der nächsten Phase der Aufhebung der Unterstützung von attributiertem ATL-Code, die [in Visual Studio 2008 begann](https://msdn.microsoft.com/library/bb384632), gilt attributierter ATL-Code nun als veraltet. Der Compiler gibt jetzt die Warnung C4467 aus, um diese Art von veraltetem Code erkennen zu können.
+   Frühere Versionen des Compilers haben attributierten ATL-Code unterstützt. In der nächsten Phase der Aufhebung der Unterstützung von attributiertem ATL-Code, die [in Visual Studio 2008 begann](../porting/visual-cpp-what-s-new-2003-through-2015.md#whats-new-for-c-in-visual-studio-2008), gilt attributierter ATL-Code nun als veraltet. Der Compiler gibt jetzt die Warnung C4467 aus, um diese Art von veraltetem Code erkennen zu können.
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated
@@ -3238,7 +3238,7 @@ Die `SchedulerType`-Enumeration von `UmsThreadDefault` ist veraltet. Bei Angabe 
 
 - Die Unterstützung der neuen Lambda-Notation schließt die Unterstützung für das Codieren einer GUID ohne Anführungszeichen in einem IDL uuid-Attribut aus.
 
-- .NET Framework 4 führt das Konzept von Ausnahmen zu beschädigtem Zustand ein. Diese Ausnahmen hinterlassen einen Prozess in einem nicht korrigierbaren beschädigten Zustand. Standardmäßig können Sie eine Ausnahme zu einem beschädigten Zustand selbst mit der Compileroption /EHa nicht abfangen, die alle anderen Ausnahmen abfängt.                 Um eine Ausnahme zu beschädigtem Zustand explizit abzufangen zu können, verwenden Sie __try-\__except-Anweisungen. Oder wenden Sie das Attribut [HandledProcessCorruptedStateExceptions] an, um eine Funktion zum Abfangen von Ausnahmen zum beschädigten Zustand zu aktivieren.  Diese Änderung betrifft in erster Linie Programmierer, die Ausnahmen zu beschädigtem Zustand möglicherweise abfangen müssen. Die acht Ausnahmen sind STATUS_ACCESS_VIOLATION, STATUS_STACK_OVERFLOW, EXCEPTION_ILLEGAL_INSTRUCTION, EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION, EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_PRIV_INSTRUCTION, STATUS_UNWIND_CONSOLIDATE.                 Weitere Informationen zu diesen Ausnahmen finden Sie unter [GetExceptionCode](/windows/desktop/Debug/getexceptioncode)-Makro.
+- .NET Framework 4 führt das Konzept von Ausnahmen zu beschädigtem Zustand ein. Diese Ausnahmen hinterlassen einen Prozess in einem nicht korrigierbaren beschädigten Zustand. Standardmäßig können Sie eine Ausnahme zu einem beschädigten Zustand selbst mit der Compileroption /EHa nicht abfangen, die alle anderen Ausnahmen abfängt.                 Um eine Ausnahme zu beschädigtem Zustand explizit abzufangen zu können, verwenden Sie __try-\__except-Anweisungen. Oder wenden Sie das Attribut [HandledProcessCorruptedStateExceptions] an, um eine Funktion zum Abfangen von Ausnahmen zum beschädigten Zustand zu aktivieren.  Diese Änderung betrifft in erster Linie Programmierer, die Ausnahmen zu beschädigtem Zustand möglicherweise abfangen müssen. Die acht Ausnahmen sind STATUS_ACCESS_VIOLATION, STATUS_STACK_OVERFLOW, EXCEPTION_ILLEGAL_INSTRUCTION, EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION, EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_PRIV_INSTRUCTION, STATUS_UNWIND_CONSOLIDATE.                 Weitere Informationen zu diesen Ausnahmen finden Sie unter [GetExceptionCode](/windows/win32/Debug/getexceptioncode)-Makro.
 
 - Die überarbeitete Compileroption `/GS` schützt umfassender als in früheren Versionen vor Pufferüberläufen. Diese Version kann im Stapel zusätzliche Sicherheitsüberprüfungen hinzufügen, die die Leistung verringern können. Verwenden Sie das neue Schlüsselwort `__declspec(safebuffers)`, um den Compiler anzuweisen, keine Sicherheitsüberprüfungen für eine bestimmte Funktion hinzuzufügen.
 

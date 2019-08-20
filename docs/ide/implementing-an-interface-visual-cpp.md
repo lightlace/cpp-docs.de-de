@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces, implementing
 - implement interface wizard [C++]
 ms.assetid: 72f8731b-7e36-45db-8b10-7ef211a773cd
-ms.openlocfilehash: 8e166f806d247cd93ff0f471360d749fa95e430b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: bb1db35e269ef884f3ebdf4564d8f0a3e579db50
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692900"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509514"
 ---
 # <a name="implement-an-interface"></a>Implementieren einer Schnittstelle
 
@@ -50,13 +50,13 @@ Wenn Sie eine neue Schnittstelle hinzufügen, müssen Sie sie der IDL-Datei des 
 
 Dieser Assistent implementiert eine Schnittstelle für ein COM-Projekt. Implementierungen vieler Schnittstellen sind in den COM-Bibliotheken enthalten, die in Visual Studio und Windows verfügbar sind. Eine Schnittstellenimplementierung wird einem Objekt zugeordnet, wenn eine Schnittstelle dieses Objekts erstellt wird. Diese stellt die Dienste bereit, die das Objekt anbietet.
 
-Eine Erläuterung der Schnittstellen und Implementierungen finden Sie im Windows SDK unter [Interfaces and Interface Implementations (Schnittstellen und Schnittstellenimplementierungen)](/windows/desktop/com/interfaces-and-interface-implementations).
+Eine Erläuterung der Schnittstellen und Implementierungen finden Sie im Windows SDK unter [Interfaces and Interface Implementations (Schnittstellen und Schnittstellenimplementierungen)](/windows/win32/com/interfaces-and-interface-implementations).
 
 - **Implement interface from** (Schnittstelle implementieren aus)
 
   Gibt den Speicherort der Typbibliothek an, aus der die Schnittstelle erstellt wird.
 
-  |Option|Beschreibung |
+  |Option|BESCHREIBUNG|
   |------------|-----------------|
   |**Projekt**|Die Typbibliothek ist ein Teil des Projekts.|
   |**Registry**|Die Typbibliothek ist im System registriert. Registrierte Typbibliotheken werden unter **Verfügbare Typbibliotheken** aufgeführt.|
@@ -77,7 +77,7 @@ Eine Erläuterung der Schnittstellen und Implementierungen finden Sie im Windows
   > [!NOTE]
   > Schnittstellen mit dem gleichen Namen wie die, die bereits vom ausgewählten Objekt implementiert wurden, werden nicht im Feld **Schnittstellen** angezeigt.
 
-  |Schaltfläche „Übertragen“|Beschreibung |
+  |Schaltfläche „Übertragen“|BESCHREIBUNG|
   |---------------------|-----------------|
   |**>**|Fügt den Namen der aktuell in der Liste **Schnittstellen** ausgewählten Schnittstelle der Liste **Schnittstellen implementieren** hinzu.|
   |**>>**|Fügt alle Namen der in der Liste **Schnittstellen** verfügbaren Schnittstellen der Liste **Schnittstellen implementieren** hinzu.|

@@ -53,14 +53,14 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 72300f754015e54daf14863ca2ae677bde8f7d1a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d31192a25cce86dad6f8e1e8b0258a457d0a5436
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746200"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500141"
 ---
-# <a name="exec-wexec-functions"></a>_exec- und _wexec-Funktionen
+# <a name="_exec-_wexec-functions"></a>_exec- und _wexec-Funktionen
 
 Jede Funktion in dieser Familie lädt einen neuen Prozess und führt ihn aus:
 
@@ -73,7 +73,7 @@ Jede Funktion in dieser Familie lädt einen neuen Prozess und führt ihn aus:
 
 Der Buchstabe am Ende des Funktionsnamens bestimmt die Variante.
 
-|_exec-Funktionssuffix|Beschreibung|
+|_exec-Funktionssuffix|BESCHREIBUNG|
 |----------------------------|-----------------|
 |`e`|`envp`: Array von Zeigern zu Umgebungseinstellungen, wird an den neuen Prozess übergeben.|
 |`l`|Befehlszeilenargumente werden einzeln an die `_exec`-Funktion übergeben. Wird normalerweise verwendet, wenn die Anzahl der Parameter im neuen Prozess im Voraus bekannt ist.|
@@ -82,7 +82,7 @@ Der Buchstabe am Ende des Funktionsnamens bestimmt die Variante.
 
 ## <a name="remarks"></a>Anmerkungen
 
-Jede `_exec`-Funktion lädt einen neuen Prozess und führt ihn aus. Alle `_exec`-Funktionen verwenden die gleiche Betriebssystemfunktion ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)). Die `_exec`-Funktionen behandeln ggf. automatisch Argumente mit Multibyte-Zeichenfolgen, wobei Multibyte-Zeichensequenzen entsprechend der derzeit verwendeten Multibyte-Codepage erkannt werden. Die `_wexec`-Funktionen sind Breitzeichenversionen der `_exec`-Funktionen. Die `_wexec`-Funktionen verhalten sich genauso wie ihre entsprechenden `_exec`-Familien, allerdings behandeln sie keine Multibyte-Zeichenfolgen.
+Jede `_exec`-Funktion lädt einen neuen Prozess und führt ihn aus. Alle `_exec`-Funktionen verwenden die gleiche Betriebssystemfunktion ([CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)). Die `_exec`-Funktionen behandeln ggf. automatisch Argumente mit Multibyte-Zeichenfolgen, wobei Multibyte-Zeichensequenzen entsprechend der derzeit verwendeten Multibyte-Codepage erkannt werden. Die `_wexec`-Funktionen sind Breitzeichenversionen der `_exec`-Funktionen. Die `_wexec`-Funktionen verhalten sich genauso wie ihre entsprechenden `_exec`-Familien, allerdings behandeln sie keine Multibyte-Zeichenfolgen.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -105,7 +105,7 @@ Parameter werden an den neuen Prozess übergeben, indem ein oder mehrere Zeiger 
 >  Die in den Zeichenfolgen eingebetteten Leerzeichen können zu einem unerwarteten Verhalten führen. Zum Beispiel führt die Zeichenfolge `_exec` durch die Übergabe von `"hi there"` dazu, dass der neue Prozess zwei Argumente erhält: `"hi"` und `"there"`. Wenn der neue Prozess die benannte Datei "hi there" öffnen sollte, schlägt der Prozess fehl. Sie können dies verhindern, indem Sie die Zeichenfolge in Anführungszeichen setzen: `"\"hi there\""`.
 
 > [!IMPORTANT]
->  Übergeben Sie Benutzereingaben nicht an `_exec`, ohne den Inhalt explizit zu überprüfen. `_exec` führt zu einem Aufruf von [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa). Beachten Sie daher, dass nicht qualifizierte Pfadnamen zu potenziellen Sicherheitslücken führen können.
+>  Übergeben Sie Benutzereingaben nicht an `_exec`, ohne den Inhalt explizit zu überprüfen. `_exec` führt zu einem Aufruf von [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw). Beachten Sie daher, dass nicht qualifizierte Pfadnamen zu potenziellen Sicherheitslücken führen können.
 
 Die `_exec`-Funktionen überprüfen ihre Parameter. Wenn erwartete Parameter NULL-Zeiger oder leere Zeichenfolgen sind bzw. ausgelassen werden, ruft die `_exec`-Funktion den Handler für ungültige Parameter auf, wie unter [Parametervalidierung](../c-runtime-library/parameter-validation.md) beschrieben. Wenn die weitere Ausführung zugelassen wird, stellen diese Funktionen `errno` auf `EINVAL` ein und geben -1 zurück. Es wird kein neuer Prozess ausgeführt.
 
@@ -229,7 +229,7 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Header:** process.h
 
