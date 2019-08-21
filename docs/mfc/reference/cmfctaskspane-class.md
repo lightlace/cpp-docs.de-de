@@ -350,7 +350,7 @@ Befolgen Sie folgende Schritte, um das `CMFCTasksPane`-Steuerelement in Ihrer An
 
 Die folgende Abbildung zeigt ein typisches Aufgabenbereich-Steuerelement. Bei der ersten Gruppe handelt es sich um eine *spezielle* Gruppe, deren Beschriftung eine dunklere Farbe ist. Die dritte Gruppe wird reduziert. Die letzte Gruppe orientiert sich am unteren Rand des Aufgabenbereichs und besitzt keine Beschriftung und die letzte Aufgabe in der Gruppe ist eine einfache Beschriftung:
 
-![Beispiel für Aufgaben] Bereich (../../mfc/reference/media/nexttaskpane.png "Beispiel für Aufgaben") Bereich
+![Beispiel für Aufgaben](../../mfc/reference/media/nexttaskpane.png "Beispiel für Aufgaben")
 
 Sie können die Darstellung des Aufgabenbereichs anpassen, indem Sie verschiedene Ränder und Offsets anpassen. Die folgende Abbildung verdeutlicht die Bedeutung dieser Variablen:
 
