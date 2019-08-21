@@ -10,12 +10,12 @@ helpviewer_keywords:
 - methods [C++], adding using wizards
 - IDL attributes, add method wizard
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
-ms.openlocfilehash: 23fb05e633713016b1f6289f73a916502736af10
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: b0c8ddabc4ed08fd217545bad269f0b2e48dd49e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692684"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509534"
 ---
 # <a name="add-a-method"></a>Hinzufügen einer Methode
 
@@ -53,7 +53,7 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
 
   Der von der Methode zurückgegebene Datentyp. `HRESULT` wird für alle Schnittstellentypen empfohlen, da dadurch ein gängiges Verfahren zum Zurückgeben von Fehlern bereitgestellt wird.
 
-  |Schnittstellentyp|Beschreibung |
+  |Schnittstellentyp|BESCHREIBUNG|
   |--------------------|-----------------|
   |Duale Schnittstelle|`HRESULT`. Kann nicht geändert werden.|
   |Benutzerdefinierte Schnittstelle|`HRESULT`. Kann nicht geändert werden.|
@@ -65,11 +65,11 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
 
   Legt den Namen für die Methode fest.
 
-  |Schnittstellentyp|Beschreibung |
+  |Schnittstellentyp|BESCHREIBUNG|
   |--------------------|-----------------|
   |Duale ATL-Schnittstelle, benutzerdefinierte Schnittstelle, lokale benutzerdefinierte Schnittstelle|Geben Sie einen eigenen Methodennamen an.|
   |MFC-Disp-Schnittstelle|Geben Sie einen eigenen Methodennamen an, oder wählen Sie einen vorgeschlagenen Methodennamen aus der Liste aus. Wenn Sie einen Namen aus der Liste auswählen, wird der entsprechende Wert im Feld **Rückgabetyp** angezeigt und kann nicht geändert werden.|
-  |Disp-Schnittstelle des MFC-ActiveX-Steuerelements|Geben Sie eine eigene an, oder wählen Sie die vordefinierte Methode [DoClick](../mfc/reference/colecontrol-class.md#doclick) oder [Refresh](../mfc/reference/colecontrol-class.md#refresh) aus. Weitere Informationen finden Sie unter [MFC ActiveX Controls: Adding Stock Methods (MFC-ActiveX-Steuerelemente: Hinzufügen vordefinierter Methoden)](../mfc/mfc-activex-controls-adding-stock-methods.md).|
+  |Disp-Schnittstelle des MFC-ActiveX-Steuerelements|Geben Sie eine eigene an, oder wählen Sie die vordefinierte Methode [DoClick](../mfc/reference/colecontrol-class.md#doclick) oder [Refresh](../mfc/reference/colecontrol-class.md#refresh) aus. Weitere Informationen finden Sie unter [MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Methoden](../mfc/mfc-activex-controls-adding-stock-methods.md).|
 
 - **Methodentyp**
 
@@ -77,7 +77,7 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
 
   Wenn Sie eine der Methoden aus der Liste **Methodenname** auswählen, wählen Sie die vordefinierte oder eine benutzerdefinierte Implementierung aus.
 
-  |Methodentyp|Beschreibung |
+  |Methodentyp|BESCHREIBUNG|
   |-----------------|-----------------|
   |**Stock**|Der Standardwert. Fügt die vordefinierte Implementierung der Methode ein, die Sie aus der Liste **Methodenname** ausgewählt haben. **Rückgabetyp** kann nicht geändert werden, wenn Sie **Stock** (Vordefiniert) auswählen.|
   |**Benutzerdefiniert**|Fügt eine Stub-Implementierung der Methode ein, die Sie aus der Liste **Methodenname** ausgewählt haben. Für benutzerdefinierte Methodentypen können Sie einen eigenen Rückgabetyp angeben oder einen aus der Liste **Rückgabetyp** auswählen.|
@@ -86,7 +86,7 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
 
   Nur für benutzerdefinierte Methoden verfügbar, die zu einer MFC-Disp-Schnittstelle hinzugefügt wurden. Legt den Namen fest, der in der Dispatchzuordnung, der Headerdatei (.h) und in der Implementierungsdatei (.cpp) verwendet wird. Standardmäßig stimmt dieser Name mit dem **Methodennamen** überein. Sie können den Methodennamen ändern, wenn Sie mit einer MFC-Disp-Schnittstelle arbeiten, oder wenn Sie eine benutzerdefinierte Methode zur Disp-Schnittstelle eines MFC-ActiveX-Steuerelements hinzufügen.
 
-  |Schnittstellentyp|Beschreibung |
+  |Schnittstellentyp|BESCHREIBUNG|
   |--------------------|-----------------|
   |Duale ATL-Schnittstelle, benutzerdefinierte Schnittstelle, lokale benutzerdefinierte Schnittstelle|Nicht verfügbar.|
   |MFC-Disp-Schnittstelle|Wird standardmäßig auf den Methodennamen festgelegt. Sie können den internen Namen bearbeiten.|
@@ -96,7 +96,7 @@ Verwenden Sie diesen Assistenten, um eine Methode zu einer Schnittstelle hinzuzu
 
   Legt zusätzliche Attribute für den Parameter fest, der unter **Parametername** festgelegt wurde.
 
-  |Parameterattribut|Beschreibung |Zulässige Kombinationen|
+  |Parameterattribut|BESCHREIBUNG|Zulässige Kombinationen|
   |-------------------------|-----------------|--------------------------|
   |**In**|Gibt an, dass der Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben wird.|Nur `in`<br /><br /> `in` und `out`|
   |**Out**|Gibt an, dass der Zeigerparameter an von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben wird (vom Server an den Client).|Nur `out`<br /><br /> `in` und `out`<br /><br /> `out` und `retval`|
@@ -133,25 +133,25 @@ Verwenden Sie diese Seite des Assistenten zum Hinzufügen von Methoden, um IDL-E
 
 - `id`
 
-  Legt die numerische ID fest, die die Methode identifiziert. Weitere Informationen finden Sie unter [id](/windows/desktop/Midl/id) in der *MIDL-Referenz*.
+  Legt die numerische ID fest, die die Methode identifiziert. Weitere Informationen finden Sie unter [id](/windows/win32/Midl/id) in der *MIDL-Referenz*.
 
   Dieses Feld ist für benutzerdefinierte Schnittstellen und MFC-Disp-Schnittstellen nicht verfügbar.
 
 - `call_as`
 
-  Gibt den Namen einer Remotemethode an, der die lokale Methode zugeordnet werden kann. Weitere Informationen finden Sie unter [call_as](/windows/desktop/Midl/call-as) in der *MIDL-Referenz*.
+  Gibt den Namen einer Remotemethode an, der die lokale Methode zugeordnet werden kann. Weitere Informationen finden Sie unter [call_as](/windows/win32/Midl/call-as) in der *MIDL-Referenz*.
 
   Nicht für MFC-Disp-Schnittstellen verfügbar.
 
 - `helpcontext`
 
-  Gibt eine Kontext-ID an, die das Anzeigen von Informationen über diese Methode in der Hilfedatei ermöglicht. Weitere Informationen finden Sie unter [helpcontext](/windows/desktop/Midl/helpcontext) in der *MIDL-Referenz*.
+  Gibt eine Kontext-ID an, die das Anzeigen von Informationen über diese Methode in der Hilfedatei ermöglicht. Weitere Informationen finden Sie unter [helpcontext](/windows/win32/Midl/helpcontext) in der *MIDL-Referenz*.
 
   Nicht für MFC-Disp-Schnittstellen verfügbar.
 
 - `helpstring`
 
-  Gibt eine Zeichenfolge an, die zum Beschreiben des Elements verwendet wird, auf das sie angewendet wird. Sie ist standardmäßig auf „method *Methodenname*“ festgelegt. Weitere Informationen finden Sie unter [helpstring](/windows/desktop/Midl/helpstring) in der *MIDL-Referenz*.
+  Gibt eine Zeichenfolge an, die zum Beschreiben des Elements verwendet wird, auf das sie angewendet wird. Sie ist standardmäßig auf „method *Methodenname*“ festgelegt. Weitere Informationen finden Sie unter [helpstring](/windows/win32/Midl/helpstring) in der *MIDL-Referenz*.
 
   Nicht für MFC-Disp-Schnittstellen verfügbar.
 
@@ -159,10 +159,10 @@ Verwenden Sie diese Seite des Assistenten zum Hinzufügen von Methoden, um IDL-E
 
   Nicht für MFC-Disp-Schnittstellen verfügbar.
 
-  |Attribut|Beschreibung |
+  |Attribut|BESCHREIBUNG|
   |---------------|-----------------|
-  |`hidden`|Gibt an, dass die Methode vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden sollte. Weitere Informationen finden Sie unter [hidden](/windows/desktop/Midl/hidden) in der *MIDL-Referenz*.|
-  |`source`|Gibt an, dass ein Member dieser Methode eine Ereignisquelle ist. Weitere Informationen finden Sie unter [source](/windows/desktop/Midl/source) in der *MIDL-Referenz*.|
-  |`local`|Gibt für den MIDL-Compiler an, dass die Methode lokal ist. Weitere Informationen finden Sie unter [local](/windows/desktop/Midl/local) in der *MIDL-Referenz*.|
-  |`restricted`|Gibt an, dass die Methode nicht beliebig aufgerufen werden kann. Weitere Informationen finden Sie unter [restricted](/windows/desktop/Midl/restricted) in der *MIDL-Referenz*.|
-  |`vararg`|Gibt an, dass die Methode eine variable Anzahl von Argumenten akzeptiert. Das letzte Argument muss ein sicheres Array des Typs `VARIANT` sein, das die übrigen Argumente enthält. Weitere Informationen finden Sie unter [vararg](/windows/desktop/Midl/vararg) in der *MIDL-Referenz*.|
+  |`hidden`|Gibt an, dass die Methode vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden sollte. Weitere Informationen finden Sie unter [hidden](/windows/win32/Midl/hidden) in der *MIDL-Referenz*.|
+  |`source`|Gibt an, dass ein Member dieser Methode eine Ereignisquelle ist. Weitere Informationen finden Sie unter [source](/windows/win32/Midl/source) in der *MIDL-Referenz*.|
+  |`local`|Gibt für den MIDL-Compiler an, dass die Methode lokal ist. Weitere Informationen finden Sie unter [local](/windows/win32/Midl/local) in der *MIDL-Referenz*.|
+  |`restricted`|Gibt an, dass die Methode nicht beliebig aufgerufen werden kann. Weitere Informationen finden Sie unter [restricted](/windows/win32/Midl/restricted) in der *MIDL-Referenz*.|
+  |`vararg`|Gibt an, dass die Methode eine variable Anzahl von Argumenten akzeptiert. Das letzte Argument muss ein sicheres Array des Typs `VARIANT` sein, das die übrigen Argumente enthält. Weitere Informationen finden Sie unter [vararg](/windows/win32/Midl/vararg) in der *MIDL-Referenz*.|
