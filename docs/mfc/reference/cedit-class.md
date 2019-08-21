@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: a66597f7a43e0730ae8b32369235ac860f51a0f1
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: MT
+ms.openlocfilehash: ccf7445100977e1205bbcffe230e1919ac33adea
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375859"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916137"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -397,7 +397,7 @@ void Cut();
 
 Der von `Cut` ausgeführte Löschvorgang kann [Rück](#undo) gängig gemacht werden, indem die Funktion rückgängigmember aufgerufen wird.
 
-Um die aktuelle Auswahl zu löschen, ohne den gelöschten Text in der Zwischenablage zu platzieren, müssen [Sie die Funktion](#clear) zum Löschen von Membern
+Um die aktuelle Auswahl zu löschen, ohne den gelöschten Text in der Zwischenablage zu platzieren, müssen Sie die [Clear](#clear)-Memberfunktion aufrufen.
 
 Weitere Informationen finden Sie unter [WM_CUT](/windows/desktop/dataxchg/wm-cut) im Windows SDK.
 
@@ -1400,10 +1400,10 @@ BOOL ShowBalloonTip(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*pEditBalloonTip*|in Zeiger auf eine [editballoontip](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) -Struktur, die die Sprechblasen Info beschreibt.|
+|*pEditBalloonTip*|in Zeiger auf eine [editballoontip](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) -Struktur, die die Sprechblasen Info beschreibt.|
 |*lpszTitle*|in Ein Zeiger auf eine Unicode-Zeichenfolge, die den Titel der Sprechblasen info enthält.|
 |*lpszText*|in Ein Zeiger auf eine Unicode-Zeichenfolge, die den Text der Sprechblasen info enthält.|
-|*ttiIcon*|in Ein **int** -Wert, der den Typ des Symbols angibt, das der Sprechblasen Info zugeordnet werden soll. Der Standardwert ist TTI_NONE. Weitere Informationen finden Sie unter dem `ttiIcon` -Member der [editballoontip](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) -Struktur.|
+|*ttiIcon*|in Ein **int** -Wert, der den Typ des Symbols angibt, das der Sprechblasen Info zugeordnet werden soll. Der Standardwert ist TTI_NONE. Weitere Informationen finden Sie unter dem `ttiIcon` -Member der [editballoontip](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) -Struktur.|
 
 ### <a name="return-value"></a>Rückgabewert
 

@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 8174f6382ea2dab4ef2a49f5d30a6e27e8af3f5b
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: 0113fbd68d7687236b91b098ead2ac6b8338fee9
+ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492161"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787077"
 ---
 # <a name="midl-property-pages"></a>Eigenschaftenseiten "MIDL"
 
@@ -62,7 +62,7 @@ Die Eigenschaften Seiten in der Mitte sind als Element Eigenschaft in verfügbar
 
 ### <a name="preprocessor-definitions"></a>Präprozessordefinitionen
 
-Gibt eine oder mehrere Definitionen an, einschließlich der/D-Makros\](\[[](/windows/win32/midl/-d)).
+Gibt eine oder mehrere Definitionen an, einschließlich der MIDL-Makros ([/D](/windows/win32/midl/-d))\[macros\]).
 
 ### <a name="additional-include-directories"></a>Zusätzliche Includeverzeichnisse
 
@@ -129,15 +129,15 @@ Gibt an, welche Umgebung als Ziel festgelegt werden soll ([/env](/windows/win32/
 
 ### <a name="generate-stubless-proxies"></a>Erstellen von stublosen Proxys
 
-Generieren vollständig interpretierter stubys mit Erweiterungen und stubproxys für Objekt Schnittstellen ([/Oicf](/windows/win32/midl/-Oicf), [/OIF](/windows/win32/midl/-Oif) ).
+Generieren vollständig interpretierter stubys mit Erweiterungen und stubproxys für Objekt Schnittstellen ([/Oicf](/windows/win32/midl/-oi), [/OIF](/windows/win32/midl/-oi) ).
 
 ### <a name="suppress-compiler-warnings"></a>Unterdrücken von Compilerwarnungen
 
-Unterdrücken von compilerwarnungs Meldungen ([/no_warn](/windows/win32/midl/-no_warn)).
+Unterdrücken von compilerwarnungs Meldungen ([/no_warn](/windows/win32/midl/-no-warn)).
 
 ### <a name="application-configuration-mode"></a>Anwendungs Konfigurations Modus
 
-Ermöglicht die Auswahl ausgewählter ACF-Attribute in der IDL-Datei ([/app_config](/windows/win32/midl/-app_config)).
+Ermöglicht die Auswahl ausgewählter ACF-Attribute in der IDL-Datei ([/app_config](/windows/win32/midl/-app-config)).
 
 ### <a name="locale-id"></a>Gebiets Schema-ID
 
@@ -220,7 +220,7 @@ Gibt das Format der Typbibliotheks Datei an ([/oldtlb |/newtlb]).
 
 ### <a name="c-preprocess-options"></a>C-Vorverarbeitungs Optionen
 
-Gibt Switches an, die an den C-compilerpräprozessor ([/Cpp_opt](/windows/win32/midl/-cpp_opt) Switches) übergeben werden.
+Gibt Switches an, die an den C-compilerpräprozessor ([/Cpp_opt](/windows/win32/midl/-cpp-opt) Switches) übergeben werden.
 
 ### <a name="undefine-preprocessor-definitions"></a>Präprozessordefinitionen aufheben
 
@@ -258,15 +258,15 @@ Geben Sie eine zusätzliche Überprüfung für die Gültigkeit der serverseitige
 
 ### <a name="prepend-with-abi-namespace"></a>"Abi"-Namespace voransetzen
 
-Fügen Sie allen Typen den "abi"-Namespace voran.  ([/ns_prefix](/windows/win32/midl/-ns_prefix)).
+Fügen Sie allen Typen den "abi"-Namespace voran.  ([/ns_prefix](/windows/win32/midl/-ns-prefix)).
 
 ### <a name="validate-parameters"></a>Parameter überprüfen
 
-Generieren zusätzlicher Informationen zum Überprüfen von Parametern ([/robust](/windows/win32/midl/-robust) | [/robust](/windows/win32/midl/-no_robust)).
+Generieren zusätzlicher Informationen zum Überprüfen von Parametern ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>Ausrichtung von Strukturmembern
 
-Gibt die Verpackungs Ebene von Strukturen im Zielsystem an ([/ZpN](/windows/win32/midl/-zpn)).
+Gibt die Verpackungs Ebene von Strukturen im Zielsystem an (/ZpN).
 
 **Optionen**
 
