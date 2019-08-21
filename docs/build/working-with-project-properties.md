@@ -23,7 +23,7 @@ In der IDE werden alle Informationen, die für das Erstellen eines Projekts erfo
 
 Wenn Sie ein Projekt erstellen, weist das System verschiedenen Eigenschaften Werte zu. Die Standardwerte variieren in Abhängigkeit von der Art des Projekts und den Optionen, die Sie im App-Assistenten auswählen. Ein ATL-Projekt verfügt beispielsweise über Eigenschaften für MIDL-Dateien. Diese sind jedoch in einer Basiskonsolenanwendung nicht vorhanden. Die Standardeigenschaften werden im Bereich „Allgemein“ auf den Eigenschaftenseiten angezeigt:
 
-![Visual C&#43; &#43; -Projekt]Standardwerte(media/visual-c---project-defaults.png "Visual C++ Project") -Standardwerte
+![Visual C&#43; &#43; -Projekt Standardwerte](media/visual-c---project-defaults.png "Visual C++ Project Standardwerte")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Anwenden von Eigenschaften auf Buildkonfigurationen und Zielplattformen
 

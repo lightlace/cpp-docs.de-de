@@ -27,7 +27,7 @@ Visual Studio enthält C++ Compiler, Linker und andere Tools, die Sie verwenden 
 
  Um unter Windows 10 auf diese Eingabeaufforderungen zuzugreifen, öffnen Sie im **Startmenü** den Ordner für Ihre Visual Studio-Version, z.B. **Visual Studio 2019**, und wählen Sie dann eine der Developer-Eingabeaufforderungen für native oder kreuzkompatible x64-Tools aus. 
 
-![x64 Native Tools-Eingabeaufforderung] systemeigene (media/x64-native-tools-command-prompt.png "x64-Tools im Startmenü")
+![x64 Native Tools-Eingabeaufforderung systemeigene](media/x64-native-tools-command-prompt.png "x64-Tools im Startmenü")
 
 Zum Zugreifen auf diese Eingabeaufforderungen unter Windows 8 klicken Sie auf dem **Start**-Bildschirm auf **Alle Apps**. Öffnen Sie unter der Überschrift für die installierte Version von Visual Studio den Ordner **Visual Studio** (möglicherweise heißt er in älteren Visual Studio-Versionen **Visual Studio-Tools**). Wählen Sie in früheren Windows-Versionen **Start** aus, erweitern Sie **Alle Programme**, den Ordner für Ihre Version von **Visual Studio** (und in älteren Versionen von Visual Studio **Visual Studio-Tools**). Weitere Informationen finden Sie unter [Developer command prompt shortcuts (Tastenkombinationen für die Developer-Eingabeaufforderung)](building-on-the-command-line.md#developer_command_prompt_shortcuts).
 
