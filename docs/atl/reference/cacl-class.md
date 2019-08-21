@@ -1,5 +1,5 @@
 ---
-title: CAcl-Klasse
+title: CaCl-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CAcl
@@ -22,19 +22,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: 05d9d5fe9cc344be3f903f247f34003056404c9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ba791ddc46fd59a470943bb30f415da01966dc61
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247650"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915893"
 ---
-# <a name="cacl-class"></a>CAcl-Klasse
+# <a name="cacl-class"></a>CaCl-Klasse
 
-Diese Klasse ist ein Wrapper für ein `ACL` (Access Control List)-Struktur.
+Diese Klasse ist ein Wrapper für eine `ACL` (Access-Control List)-Struktur.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+>  Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,62 +49,62 @@ class CAcl
 |Name|Beschreibung|
 |----------|-----------------|
 |[CAcl::CAccessMaskArray](#caccessmaskarray)|Ein Array von ACCESS_MASKs.|
-|[CAcl::CAceFlagArray](#caceflagarray)|Ein Array von BYTEs.|
-|[CAcl::CAceTypeArray](#cacetypearray)|Ein Array von BYTEs.|
+|[CAcl::CAceFlagArray](#caceflagarray)|Ein Bytearray.|
+|[CAcl::CAceTypeArray](#cacetypearray)|Ein Bytearray.|
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAcl::CAcl](#cacl)|Der Konstruktor.|
+|[CaCl:: CAcl](#cacl)|Der Konstruktor.|
 |[CAcl::~CAcl](#dtor)|Der Destruktor.|
 
 ### <a name="public-methods"></a>Öffentliche Methoden
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAcl::GetAceCount](#getacecount)|Gibt die Anzahl von Access Control Entry (ACE) Objekte zurück.|
-|[CAcl::GetAclEntries](#getaclentries)|Ruft ab, die Access-Control-Zugriffssteuerungsliste (ACL)-Einträge aus der `CAcl` Objekt.|
-|[CAcl::GetAclEntry](#getaclentry)|Ruft alle Informationen über einen Eintrag in einer `CAcl` Objekt.|
-|[CAcl::GetLength](#getlength)|Die Länge der ACL zurückgegeben.|
-|[CAcl::GetPACL](#getpacl)|Gibt eine PACL (Zeiger auf eine Zugriffssteuerungsliste) zurück.|
-|[CAcl::IsEmpty](#isempty)|Tests der `CAcl` -Objekt für Einträge.|
-|[CAcl::IsNull](#isnull)|Gibt den Status der `CAcl` Objekt.|
-|[CAcl::RemoveAce](#removeace)|Entfernt einen bestimmten ACE (Access Control Entry) aus der `CAcl` Objekt.|
-|[CAcl::RemoveAces](#removeaces)|Entfernt alle Zugriffssteuerungseinträge (Access Control-Einträge) aus der `CAcl` gilt für den angegebenen `CSid`.|
-|[CAcl::SetEmpty](#setempty)|Markiert die `CAcl` als leeres Objekt.|
-|[CAcl::SetNull](#setnull)|Markiert die `CAcl` Objekt als NULL.|
+|[CAcl::GetAceCount](#getacecount)|Gibt die Anzahl der ACE (Access Control Entry)-Objekte zurück.|
+|[CAcl::GetAclEntries](#getaclentries)|Ruft die Einträge in der Zugriffs Steuerungs Liste (Access Control List, ACL) aus dem `CAcl` -Objekt ab.|
+|[CAcl::GetAclEntry](#getaclentry)|Ruft alle Informationen zu einem Eintrag in einem `CAcl` -Objekt ab.|
+|[CAcl::GetLength](#getlength)|Gibt die Länge der ACL zurück.|
+|[CAcl::GetPACL](#getpacl)|Gibt eine Pacl (Zeiger auf eine ACL) zurück.|
+|[CAcl::IsEmpty](#isempty)|Testet das `CAcl` -Objekt auf Einträge.|
+|[CAcl::IsNull](#isnull)|Gibt den Status des `CAcl` -Objekts zurück.|
+|[CAcl::RemoveAce](#removeace)|Entfernt einen bestimmten ACE (Zugriffs Steuerungs Eintrag) aus dem `CAcl` -Objekt.|
+|[CAcl::RemoveAces](#removeaces)|Entfernt alle ACEs (Zugriffs Steuerungs Einträge) aus der `CAcl` , die auf den angegebenen `CSid`angewendet werden.|
+|[CAcl::SetEmpty](#setempty)|Markiert das `CAcl` -Objekt als leer.|
+|[CAcl::SetNull](#setnull)|Markiert das `CAcl` Objekt als NULL.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[Const ACL CAcl::operator *](#operator_const_acl__star)|Wandelt eine `CAcl` -Objekt an eine `ACL` Struktur.|
-|[CAcl::operator =](#operator_eq)|Zuweisungsoperator.|
+|[CaCl:: Operator Konstanten ACL *](#operator_const_acl__star)|Wandelt ein `CAcl` -Objekt in `ACL` eine-Struktur um.|
+|[CaCl:: Operator =](#operator_eq)|Zuweisungsoperator.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die `ACL` Struktur ist der Header des eine Zugriffssteuerungsliste (Access Control List). Eine ACL enthält eine sequenzielle Liste von NULL oder mehr [ACEs](/windows/desktop/SecAuthZ/access-control-entries) (Access Control-Einträge). Einzelne ACEs in einer ACL sind nummeriert von 0 bis *n-1*, wobei *n* ist die Anzahl der ACEs in der ACL. Wenn Sie eine ACL zu bearbeiten, bezieht sich eine Anwendung auf eine Access Control Entry (ACE), in der ACL aus, nach ihrem Index.
+Die `ACL` -Struktur ist der Header einer Zugriffs Steuerungs Liste (Access Control List, ACL). Eine ACL enthält eine sequenzielle Liste von NULL oder mehr [ACEs](/windows/desktop/SecAuthZ/access-control-entries) (Access-Control-Einträge). Die einzelnen ACEs in einer ACL sind von 0 bis *n-1*nummeriert, wobei *n* die Anzahl der ACEs in der ACL ist. Wenn eine ACL bearbeitet wird, bezieht sich eine Anwendung auf einen Zugriffs Steuerungs Eintrag (ACE) innerhalb der ACL durch ihren Index.
 
 Es gibt zwei ACL-Typen:
 
-- Discretionary
+- Räumen
 
 - System
 
-Eine freigegebene ACL wird gesteuert, durch den Besitzer eines Objekts oder jeder Benutzer über WRITE_DAC-Zugriff auf das Objekt gewährt. Es gibt an, dass die Zugriff bestimmter Benutzer und Gruppen auf ein Objekt haben können. Beispielsweise können der Besitzer einer Datei eine discretionary ACL, um zu steuern, welche Benutzer und Gruppen können und Zugriff auf die Datei haben darf nicht.
+Eine freigegebene Zugriffs Steuerungs Liste wird vom Besitzer eines Objekts gesteuert, oder jeder Person, die WRITE_DAC Zugriff auf das Objekt gewährt hat. Er gibt den Zugriff an, den bestimmte Benutzer und Gruppen auf ein Objekt haben können. Der Besitzer einer Datei kann z. b. eine freigegebene ACL verwenden, um zu steuern, welche Benutzer und Gruppen Zugriff auf die Datei haben können.
 
-Ein Objekt kann auch auf Systemebene Sicherheitsinformationen zugeordnet, in der Form eines Systems ACL, die von einem Systemadministrator gesteuert haben. Ein System ACL können den Systemadministrator alle Versuche zum Zugriff auf ein Objekt zu überwachen.
+Einem Objekt können auch Sicherheitsinformationen auf Systemebene in Form einer System-ACL zugeordnet werden, die von einem Systemadministrator gesteuert wird. Eine System-ACL kann es dem Systemadministrator ermöglichen, alle Versuche, Zugriff auf ein Objekt zu erhalten, zu überwachen.
 
-Weitere Informationen finden Sie unter den [ACL](/windows/desktop/SecAuthZ/access-control-lists) Diskussion im Windows SDK.
+Weitere Informationen finden Sie in der [ACL](/windows/desktop/SecAuthZ/access-control-lists) -Diskussion in der Windows SDK.
 
-Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](/windows/desktop/SecAuthZ/access-control) im Windows SDK.
+Eine Einführung zum Zugriffs Steuerungsmodell in Windows finden Sie unter [Access Control](/windows/desktop/SecAuthZ/access-control) in der Windows SDK.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** atlsecurity.h
+**Header:** ATLSecurity. h
 
-##  <a name="caccessmaskarray"></a>  CAcl::CAccessMaskArray
+##  <a name="caccessmaskarray"></a>CaCl:: caccessmaskarray
 
 Ein Array von ACCESS_MASK-Objekten.
 
@@ -114,11 +114,11 @@ typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Typdefinition gibt an, der Arraytyp, der zum Speichern von Zugriffsrechten verwendet in Access Control-Einträge (ACEs) verwendet werden kann.
+Diese Typdefinition gibt den Arraytyp an, der zum Speichern der in Zugriffs Steuerungs Einträgen (ACEs) verwendeten Zugriffsrechte verwendet werden kann.
 
-##  <a name="caceflagarray"></a>  CAcl::CAceFlagArray
+##  <a name="caceflagarray"></a>CaCl:: caceflagarray
 
-Ein Array von BYTEs.
+Ein Bytearray.
 
 ```
 typedef CAtlArray<BYTE> CAceFlagArray;
@@ -126,11 +126,11 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Typdefinition gibt den Arraytyp verwendet, um die Access Control Entry (ACE) typspezifische Steuerungsflags definieren. Finden Sie unter den [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) Definition für die vollständige Liste der möglichen Flags.
+Diese Typdefinition gibt den Arraytyp an, der verwendet wird, um die ACE (Access Control Entry)-typspezifische Steuerungsflags zu definieren. Eine komplette Liste möglicher Flags finden Sie in der [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) -Definition.
 
-##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray
+##  <a name="cacetypearray"></a>CaCl:: cacetypeer Array
 
-Ein Array von BYTEs.
+Ein Bytearray.
 
 ```
 typedef CAtlArray<BYTE> CAceTypeArray;
@@ -138,9 +138,9 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Typdefinition gibt den Arraytyp verwendet, um die Art der Access Control Entry (ACE) Objekte, z. B. ACCESS_ALLOWED_ACE_TYPE oder ACCESS_DENIED_ACE_TYPE definieren. Finden Sie unter den [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) Definition für die vollständige Liste der möglichen Typen.
+Diese Typdefinition gibt den Arraytyp an, der zum Definieren der Art der ACE-Objekte (Access Control Entry) verwendet wird, z. b. ACCESS_ALLOWED_ACE_TYPE oder ACCESS_DENIED_ACE_TYPE. Eine umfassende Liste möglicher Typen finden Sie in der [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) -Definition.
 
-##  <a name="cacl"></a>  CAcl::CAcl
+##  <a name="cacl"></a>CaCl:: CAcl
 
 Der Konstruktor.
 
@@ -156,9 +156,9 @@ Ein vorhandenes `CAcl`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `CAcl` -Objekt kann optional mit einer vorhandenen erstellt werden `CAcl` Objekt.
+Das `CAcl` -Objekt kann optional mit einem vorhandenen `CAcl` -Objekt erstellt werden.
 
-##  <a name="dtor"></a>  CAcl:: ~ CAcl
+##  <a name="dtor"></a>CaCl:: ~ CAcl
 
 Der Destruktor.
 
@@ -168,11 +168,11 @@ virtual ~CAcl() throw();
 
 ### <a name="remarks"></a>Hinweise
 
-Der Destruktor gibt alle Ressourcen, die vom Objekt abgerufene frei.
+Der Dekonstruktor gibt alle Ressourcen frei, die vom-Objekt abgerufen wurden.
 
-##  <a name="getacecount"></a>  CAcl::GetAceCount
+##  <a name="getacecount"></a>CaCl:: getacecount
 
-Gibt die Anzahl von Access Control Entry (ACE) Objekte zurück.
+Gibt die Anzahl der ACE (Access Control Entry)-Objekte zurück.
 
 ```
 virtual UINT GetAceCount() const throw() = 0;
@@ -180,11 +180,11 @@ virtual UINT GetAceCount() const throw() = 0;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl der ACE-Einträge in der `CAcl` Objekt.
+Gibt die Anzahl der ACE-Einträge im `CAcl` -Objekt zurück.
 
-##  <a name="getaclentries"></a>  CAcl::GetAclEntries
+##  <a name="getaclentries"></a>CaCl:: getaclentries
 
-Ruft ab, die Access-Control-Zugriffssteuerungsliste (ACL)-Einträge aus der `CAcl` Objekt.
+Ruft die Einträge in der Zugriffs Steuerungs Liste (Access Control List, ACL) aus dem `CAcl` -Objekt ab.
 
 ```
 void GetAclEntries(
@@ -197,28 +197,28 @@ void GetAclEntries(
 ### <a name="parameters"></a>Parameter
 
 *pSids*<br/>
-Ein Zeiger auf ein Array von [CSid](../../atl/reference/csid-class.md) Objekte.
+Ein Zeiger auf ein Array von [CSID](../../atl/reference/csid-class.md) -Objekten.
 
 *pAccessMasks*<br/>
-Die Zugriffsmasken.
+Die Zugriffs Masken.
 
 *pAceTypes*<br/>
-Die Typen des Access Control Entry (ACE).
+Die ACE-Typen (Access Control Entry, Zugriffs Steuerungs Eintrag).
 
 *pAceFlags*<br/>
 Die ACE-Flags.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode füllt die Arrayparameter mit den Details eines jeden ACE-Objekts, das innerhalb der `CAcl` Objekt. Verwenden Sie NULL, wenn die Details für dieses bestimmte Array nicht erforderlich sind.
+Diese Methode füllt die Array Parameter mit den Details jedes ACE-Objekts, das im `CAcl` -Objekt enthalten ist. Verwenden Sie NULL, wenn die Details für dieses bestimmte Array nicht erforderlich sind.
 
-Den Inhalt jedes Arrays entsprechen, d. h. das erste Element des der `CAccessMaskArray` das erste Element im Array entspricht der `CSidArray` Array und So weiter.
+Der Inhalt jedes Arrays entspricht einander, d. h., das erste Element des `CAccessMaskArray` Arrays entspricht dem ersten Element `CSidArray` im Array usw.
 
-Finden Sie unter [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) für Weitere Informationen zu den ACE-Typen und Flags.
+Weitere Informationen zu ACE-Typen und-Flags finden Sie unter [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
 
-##  <a name="getaclentry"></a>  CAcl::GetAclEntry
+##  <a name="getaclentry"></a>CaCl:: getaclentry
 
-Ruft alle Informationen über einen Eintrag in einer Zugriffssteuerungsliste (ACL) ab.
+Ruft alle Informationen zu einem Eintrag in einer Zugriffs Steuerungs Liste (Access Control List, ACL) ab.
 
 ```
 void GetAclEntry(
@@ -234,13 +234,13 @@ void GetAclEntry(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Index mit dem ACL-Eintrag zum Abrufen.
+Index des abzurufenden ACL-Eintrags.
 
 *pSid*<br/>
-Die [CSid](../../atl/reference/csid-class.md) Objekt, für welche die ACL-Eintrag gilt.
+Das [CSID](../../atl/reference/csid-class.md) -Objekt, für das der ACL-Eintrag gilt.
 
 *pMask*<br/>
-Die Maske, die Angabe von Berechtigungen zu erteilen oder Verweigern des Zugriffs.
+Die Maske, die Berechtigungen angibt, um Zugriff zu gewähren oder zu verweigern.
 
 *pType*<br/>
 Der ACE-Typ.
@@ -249,20 +249,20 @@ Der ACE-Typ.
 Die ACE-Flags.
 
 *pObjectType*<br/>
-Der Objekttyp. Dies wird auf GUID_NULL festgelegt werden, wenn der Objekttyp in der ACE nicht angegeben ist oder wenn der ACE kein ACE-Objekt ist.
+Der Objekttyp. Diese wird auf GUID_NULL festgelegt, wenn der Objekttyp nicht im ACE angegeben ist, oder wenn der ACE kein Objekt-ACE ist.
 
 *pInheritedObjectType*<br/>
-Den geerbten Objekttyp. Dies wird auf GUID_NULL festgelegt werden, wenn in der ACE nicht der geerbten Objekttyp angegeben ist oder der ACE kein ACE-Objekt ist.
+Der geerbte Objekttyp. Diese wird auf GUID_NULL festgelegt, wenn der geerbte Objekttyp nicht im ACE angegeben ist, oder wenn der ACE kein Objekt-ACE ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode ruft alle Informationen über eine einzelne ACE, der Bereitstellung mehr Informationen als [CAcl::GetAclEntries](#getaclentries) allein zur Verfügung.
+Mit dieser Methode werden alle Informationen zu einem einzelnen ACE abgerufen, und es werden mehr Informationen bereitgestellt, als " [CaCl:: getaclentries](#getaclentries) Alone" verfügbar macht.
 
-Finden Sie unter [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) für Weitere Informationen zu den ACE-Typen und Flags.
+Weitere Informationen zu ACE-Typen und-Flags finden Sie unter [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
 
-##  <a name="getlength"></a>  CAcl::GetLength
+##  <a name="getlength"></a>CaCl:: GetLength
 
-Gibt die Länge der Zugriffssteuerungsliste (ACL) zurück.
+Gibt die Länge der Zugriffs Steuerungs Liste (Access Control List, ACL) zurück.
 
 ```
 UINT GetLength() const throw();
@@ -270,11 +270,11 @@ UINT GetLength() const throw();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt die erforderliche Länge in Bytes zurück zum Speichern der `ACL` Struktur.
+Gibt die erforderliche Länge in Bytes zurück, die zum `ACL` Speichern der Struktur erforderlich ist.
 
-##  <a name="getpacl"></a>  CAcl::GetPACL
+##  <a name="getpacl"></a>CaCl:: getpacl
 
-Gibt einen Zeiger auf eine Access Control List (ACL).
+Gibt einen Zeiger auf eine Zugriffs Steuerungs Liste (Access Control List, ACL) zurück.
 
 ```
 const ACL* GetPACL() const throw(...);
@@ -282,11 +282,11 @@ const ACL* GetPACL() const throw(...);
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf die `ACL` Struktur.
+Gibt einen Zeiger auf die `ACL` -Struktur zurück.
 
-##  <a name="isempty"></a>  CAcl::IsEmpty
+##  <a name="isempty"></a>CaCl:: IsEmpty
 
-Tests der `CAcl` -Objekt für Einträge.
+Testet das `CAcl` -Objekt auf Einträge.
 
 ```
 bool IsEmpty() const throw();
@@ -294,11 +294,11 @@ bool IsEmpty() const throw();
 
 ### <a name="remarks"></a>Hinweise
 
-Gibt "true" zurück, wenn die `CAcl` Objekt ist nicht NULL und keine Einträge enthält. Gibt "false" zurück, wenn die `CAcl` Objekt ist entweder NULL oder enthält mindestens einen Eintrag.
+Gibt "true" `CAcl` zurück, wenn das Objekt nicht NULL ist und keine Einträge enthält. Gibt false zurück, `CAcl` wenn das Objekt entweder NULL ist oder mindestens einen Eintrag enthält.
 
-##  <a name="isnull"></a>  CAcl::IsNull
+##  <a name="isnull"></a>CaCl:: IsNull
 
-Gibt den Status der `CAcl` Objekt.
+Gibt den Status des `CAcl` -Objekts zurück.
 
 ```
 bool IsNull() const throw();
@@ -306,11 +306,11 @@ bool IsNull() const throw();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt "true" zurück, wenn die `CAcl` Objekt ist NULL, sonst FALSE.
+Gibt true zurück, `CAcl` wenn das Objekt NULL ist, andernfalls false.
 
-##  <a name="operator_const_acl__star"></a>  Const ACL CAcl::operator *
+##  <a name="operator_const_acl__star"></a>CaCl:: Operator Konstanten ACL *
 
-Wandelt eine `CAcl` -Objekt an eine `ACL` (Access Control List)-Struktur.
+Wandelt ein `CAcl` -Objekt in `ACL` eine-Struktur (Zugriffs Steuerungs Liste) um.
 
 ```
 operator const ACL *() const throw(...);
@@ -318,9 +318,9 @@ operator const ACL *() const throw(...);
 
 ### <a name="remarks"></a>Hinweise
 
-Gibt die Adresse der `ACL` Struktur.
+Gibt die Adresse `ACL` der-Struktur zurück.
 
-##  <a name="operator_eq"></a>  CAcl::operator =
+##  <a name="operator_eq"></a>CaCl:: Operator =
 
 Zuweisungsoperator.
 
@@ -331,15 +331,15 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 ### <a name="parameters"></a>Parameter
 
 *rhs*<br/>
-Die `CAcl` das vorhandene Objekt zuweisen.
+Der `CAcl` , der dem vorhandenen Objekt zugewiesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Verweis auf die aktualisierte `CAcl` Objekt.
+Gibt einen Verweis auf das aktualisierte `CAcl` Objekt zurück.
 
-##  <a name="removeace"></a>  CAcl::RemoveAce
+##  <a name="removeace"></a>CaCl:: RemoveAce
 
-Entfernt einen bestimmten ACE (Access Control Entry) aus der `CAcl` Objekt.
+Entfernt einen bestimmten ACE (Zugriffs Steuerungs Eintrag) aus dem `CAcl` -Objekt.
 
 ```
 void RemoveAce(UINT nIndex) throw();
@@ -348,15 +348,15 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Index mit dem ACE-Eintrag zu entfernen.
+Index für den zu entfern-ACE-Eintrag.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode wird von abgeleitet [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).
+Diese Methode wird von [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat) abgeleitet.
 
-##  <a name="removeaces"></a>  CAcl::RemoveAces
+##  <a name="removeaces"></a>CaCl:: removeaces
 
-Entfernt Alls ACEs (Access Control-Einträge) aus der `CAcl` gilt für den angegebenen `CSid`.
+Entfernt alle-ACEs (Zugriffs Steuerungs Einträge) aus der `CAcl` , die auf den angegebenen `CSid`angewendet werden.
 
 ```
 bool RemoveAces(const CSid& rSid) throw(...)
@@ -367,9 +367,9 @@ bool RemoveAces(const CSid& rSid) throw(...)
 *rSid*<br/>
 Ein Verweis auf ein `CSid`-Objekt.
 
-##  <a name="setempty"></a>  CAcl::SetEmpty
+##  <a name="setempty"></a>CaCl:: * tempty
 
-Markiert die `CAcl` als leeres Objekt.
+Markiert das `CAcl` -Objekt als leer.
 
 ```
 void SetEmpty() throw();
@@ -377,11 +377,11 @@ void SetEmpty() throw();
 
 ### <a name="remarks"></a>Hinweise
 
-Die `CAcl` kann leer oder auf NULL festgelegt werden: die beiden Zustände unterscheiden sich.
+`CAcl` Kann auf leer oder auf NULL festgelegt werden: die beiden Zustände sind unterschiedlich.
 
-##  <a name="setnull"></a>  CAcl::SetNull
+##  <a name="setnull"></a>CaCl:: SetNull
 
-Markiert die `CAcl` Objekt als NULL.
+Markiert das `CAcl` Objekt als NULL.
 
 ```
 void SetNull() throw();
@@ -389,9 +389,9 @@ void SetNull() throw();
 
 ### <a name="remarks"></a>Hinweise
 
-Die `CAcl` kann leer oder auf NULL festgelegt werden: die beiden Zustände unterscheiden sich.
+`CAcl` Kann auf leer oder auf NULL festgelegt werden: die beiden Zustände sind unterschiedlich.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)<br/>
+[Klassen Übersicht](../../atl/atl-class-overview.md)<br/>
 [Globale Sicherheitsfunktionen](../../atl/reference/security-global-functions.md)

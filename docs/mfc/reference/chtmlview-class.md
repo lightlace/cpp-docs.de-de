@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 5ea7b59ccb95078324ae85bbf04c11c537f0f525
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
-ms.translationtype: MT
+ms.openlocfilehash: 5c7204f5207b85e4b9ada4b68e9feedaf83deccd
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503561"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916220"
 ---
 # <a name="chtmlview-class"></a>CHtmlView-Klasse
 
@@ -219,7 +219,7 @@ class CHtmlView : public CFormView
 |----------|-----------------|
 |[CHtmlView::Create](#create)|Erstellt das WebBrowser-Steuerelement.|
 |[CHtmlView::CreateControlSite](#createcontrolsite)|Überschreibbar. Verwendet, um eine Steuerelement-Websiteinstanz zum Hosten eines Steuerelements auf dem Formular zu erstellen.|
-|[CHtmlView::ExecFormsCommand](#execformscommand)|Führt den angegebenen Befehl mithilfe der Methode `IOleCommandTarget::Exec` aus.|
+|[CHtmlView:: execformscommand](#execformscommand)|Führt den angegebenen Befehl mithilfe der Methode `IOleCommandTarget::Exec` aus.|
 |[CHtmlView::ExecWB](#execwb)|Führt einen Befehl aus.|
 |[CHtmlView::GetAddressBar](#getaddressbar)|Bestimmt, ob die Adressleiste des Internet Explorer-Objekts angezeigt wird. (Vom WebBrowser-Steuerelement ignoriert; nur Internet Explorer.)|
 |[CHtmlView::GetApplication](#getapplication)|Ruft ein Anwendungsobjekt ab, das die Anwendung darstellt, die die aktuelle Instanz der Internet Explorer-Anwendung enthält.|
@@ -258,7 +258,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::Navigate2](#navigate2)|Navigiert zu der durch eine URL bezeichnete Ressource oder zu der durch einen vollständigen Pfad angegebenen Datei.|
 |[CHtmlView::OnBeforeNavigate2](#onbeforenavigate2)|Wird aufgerufen, bevor ein Navigationsvorgang im vorhandenen WebBrowser (entweder in einem Fenster- oder in einem Frameset-Element) ausgeführt wird.|
 |[CHtmlView::OnCommandStateChange](#oncommandstatechange)|Wird aufgerufen, um eine Anwendung zu benachrichtigen, dass der aktivierte Zustand eines Webbrowserbefehls geändert wurde.|
-|[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|Wird aufgerufen, um eine Anwendung zu benachrichtigen, dass ein Dokument mit den READYSTATE_COMPLETE-Zustand erreicht hat.|
+|[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|Wird aufgerufen, um eine Anwendung zu benachrichtigen, dass ein Dokument den READYSTATE_COMPLETE-Zustand erreicht hat.|
 |[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|Wird von der Implementierung von [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)von Internet Explorer oder MSHTML aufgerufen, die das aktive direkte Objekt benachrichtigt, wenn das Dokumentfenster des Containers aktiviert oder deaktiviert wird.|
 |[CHtmlView::OnDownloadBegin](#ondownloadbegin)|Wird aufgerufen, um eine Anwendung zu benachrichtigen, dass ein Navigationsvorgang beginnt.|
 |[CHtmlView::OnDownloadComplete](#ondownloadcomplete)|Wird aufgerufen, wenn ein Navigationsvorgang beendet oder angehalten wurde bzw. wenn ein Fehler aufgetreten ist.|
@@ -363,9 +363,9 @@ Die Ableitung der Ansichtsklasse der Anwendung aus `CHtmlView` stellt der Ansich
 
 **Header:** afxhtml.h
 
-##  <a name="create"></a>  CHtmlView::Create
+##  <a name="create"></a>CHtmlView:: Create
 
-Rufen Sie diese Memberfunktion, um ein WebBrowser-Steuerelement oder ein Container für den Internet Explorer ausführbare Datei zu erstellen.
+Mit dieser Element Funktion können Sie ein Webbrowser-Steuerelement oder einen Container für die ausführbare Internet Explorer-Datei erstellen.
 
 ```
 virtual BOOL Create(
@@ -381,27 +381,27 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parameter
 
 *lpszClassName*<br/>
-Verweist auf eine Null-terminierte Zeichenfolge, die Namen die Windows-Klasse. Der Klassenname kann einen beliebigen Namen registriert werden die [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) globale Funktion oder die `RegisterClass` Windows-Funktion. Wenn der Wert NULL ist, verwendet den vordefinierten Standardwert [CFrameWnd](../../mfc/reference/cframewnd-class.md) Attribute.
+Verweist auf eine mit NULL endenden Zeichenfolge, die die Windows-Klasse benennt. Der Klassenname kann ein beliebiger Name sein, der bei der globalen Funktion [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) oder der `RegisterClass` Windows-Funktion registriert ist. Wenn NULL, verwendet die vordefinierten [CFrameWnd](../../mfc/reference/cframewnd-class.md) -Standard Attribute.
 
 *lpszWindowName*<br/>
-Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen darstellt.
+Verweist auf eine mit NULL endenden Zeichenfolge, die den Fensternamen darstellt.
 
 *dwStyle*<br/>
-Gibt an, der die Stilattribute für Fenster. Standardmäßig werden die Stile WS_VISIBLE und WS_CHILD Windows festgelegt.
+Gibt die Fenster Stil Attribute an. Standardmäßig werden die Windows-Stile WS_VISIBLE und WS_CHILD festgelegt.
 
-*rect*<br/>
-Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Größe und Position des Fensters angibt. Die *RectDefault* Wert ermöglicht Windows die Größe und Position des neuen Fensters an.
+*Rect*<br/>
+Ein Verweis auf eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Größe und Position des Fensters angibt. Der *rectdefault* -Wert ermöglicht es Windows, die Größe und Position des neuen Fensters anzugeben.
 
 *pParentWnd*<br/>
-Ein Zeiger auf das übergeordnete Fenster des Steuerelements.
+Ein Zeiger auf das übergeordnete Fenster des Steuer Elements.
 
 *nID*<br/>
-Die ID der Sicht. Legen Sie in der Standardeinstellung auf AFX_IDW_PANE_FIRST.
+Die ID-Nummer der Ansicht. Standardmäßig wird auf AFX_IDW_PANE_FIRST festgelegt.
 
 *pContext*<br/>
-Ein Zeiger auf eine [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Standardmäßig NULL.
+Ein Zeiger auf einen [ckreatecontext](../../mfc/reference/ccreatecontext-structure.md). Standardmäßig NULL.
 
-##  <a name="createcontrolsite"></a>  CHtmlView::CreateControlSite
+##  <a name="createcontrolsite"></a>CHtmlView:: anatecontrolsite
 
 Überschreibbar. Verwendet, um eine Steuerelement-Websiteinstanz zum Hosten eines Steuerelements auf dem Formular zu erstellen.
 
@@ -416,26 +416,26 @@ virtual BOOL CreateControlSite(
 ### <a name="parameters"></a>Parameter
 
 *pContainer*<br/>
-Ein Zeiger auf eine [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) -Objekt, das das Steuerelement enthält.
+Ein Zeiger auf ein [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) -Objekt, das das-Steuerelement enthält.
 
 *ppSite*<br/>
-Ein Zeiger auf einen Zeiger auf eine [COleControlSite](../../mfc/reference/colecontrolsite-class.md) -Objekt, für das Steuerelement den Standort bereitstellen.
+Ein Zeiger auf einen Zeiger auf ein [COleControlSite](../../mfc/reference/colecontrolsite-class.md) -Objekt, das die Site für das Steuerelement bereitstellt.
 
 *nID*<br/>
-Der Bezeichner des Steuerelements gehostet werden.
+Der Bezeichner des zu hostenden Steuer Elements.
 
 *clsid*<br/>
-Die CLSID des Steuerelements gehostet werden
+Die CLSID des zu hostenden Steuer Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt "true" bei Erfolg bei "false".
+Gibt bei Erfolg TRUE zurück, false bei einem Fehler.
 
 ### <a name="remarks"></a>Hinweise
 
-Sie können diese Memberfunktion zum Zurückgeben einer Instanz der Website eine eigene Klasse überschreiben.
+Sie können diese Member-Funktion überschreiben, um eine Instanz Ihrer eigenen Steuerelement-Website Klasse zurückzugeben.
 
-##  <a name="execformscommand"></a>  CHtmlView::ExecFormsCommand
+##  <a name="execformscommand"></a>CHtmlView:: execformscommand
 
 Führt den angegebenen Befehl mithilfe der Methode `IOleCommandTarget::Exec` aus.
 
@@ -449,25 +449,25 @@ HRESULT ExecFormsCommand(
 ### <a name="parameters"></a>Parameter
 
 *dwCommandID*<br/>
-Der Befehl, der ausgeführt werden soll. Dieser Befehl muss die CMDSETID3_Forms3 Gruppe angehören.
+Der Befehl, der ausgeführt werden soll. Dieser Befehl muss zur Gruppe "CMDSETID3_Forms3" gehören.
 
 *pVarIn*<br/>
-Zeiger auf eine `VARIANT` Struktur, die Eingabeargumente enthält. NULL kann sein.
+Zeiger auf eine `VARIANT` -Struktur, die Eingabeargumente enthält. Kann NULL sein.
 
 *pVarOut*<br/>
-Zeiger auf eine `VARIANT` Struktur zum Empfangen der Befehlsausgabe. NULL kann sein.
+Zeiger auf eine `VARIANT` -Struktur zum Empfangen der Befehlsausgabe. Kann NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein standard HRESULT-Wert. Eine vollständige Liste der möglichen Werte, finden Sie unter [IOleCommandTarget::Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) im Windows SDK.
+Ein HRESULT-Standardwert. Eine umfassende Liste möglicher Werte finden Sie unter [IOleCommandTarget:: exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) im Windows SDK.
 
 ### <a name="remarks"></a>Hinweise
 
-`ExecFormsCommand` implementiert das Verhalten der [IOleCommandTarget::Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) Methode.
+`ExecFormsCommand`implementiert das Verhalten der [IOleCommandTarget:: exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) -Methode.
 
-##  <a name="execwb"></a>  CHtmlView::ExecWB
+##  <a name="execwb"></a>CHtmlView:: execwb
 
-Rufen Sie diese Memberfunktion zum Ausführen eines Befehls im WebBrowser oder Internet Explorer.
+Mit dieser Member-Funktion können Sie einen Befehl im Webbrowser oder Internet Explorer ausführen.
 
 ```
 void ExecWB(
@@ -483,21 +483,21 @@ void ExecWB(
 Der auszuführende Befehl.
 
 *cmdexecopt*<br/>
-Die Optionen für die Ausführung des Befehls.
+Die Optionen, die zum Ausführen des Befehls festgelegt werden.
 
 *pvaIn*<br/>
-Eine Variante, die zum Angeben der Eingabeargumente des Befehls verwendet.
+Eine Variante, die zum Angeben von Befehls Eingabe Argumenten verwendet wird.
 
 *pvaOut*<br/>
-Eine Variante, die zum Angeben von Befehlsargumente für die Ausgabe verwendet wird.
+Eine Variante, die zum Angeben von Befehlsausgabe Argumenten verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IWebBrowser2::ExecWB](/previous-versions//aa752117\(v=vs.85\)) in das Windows SDK.
+Weitere Informationen finden Sie unter [IWebBrowser2:: execwb](/previous-versions//aa752117\(v=vs.85\)) in der Windows SDK.
 
-##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar
+##  <a name="getaddressbar"></a>CHtmlView:: getaddressbar
 
-Rufen Sie diese Memberfunktion zum Abrufen von Internet Explorer-Adressleiste ein.
+Rufen Sie diese Member-Funktion auf, um die Adressleiste von Internet Explorer abzurufen.
 
 ```
 BOOL GetAddressBar() const;
@@ -505,15 +505,15 @@ BOOL GetAddressBar() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL ist, wenn die-Adressleiste angezeigt wird; andernfalls 0 (null).
+Ungleich 0 (null), wenn die Adressleiste sichtbar ist. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Gilt für InternetExplorer. Wenn Sie diesen Aufruf mit einem WebBrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, jedoch hat, diesen Aufruf werden ignoriert.
+Gilt für Internet Explorer. Wenn Sie diesen-Befehl mit einem Webbrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, aber der-Befehl wird ignoriert.
 
-##  <a name="getapplication"></a>  CHtmlView::GetApplication
+##  <a name="getapplication"></a>CHtmlView:: getapplikation
 
-Rufen Sie diese Memberfunktion zum Abrufen des Automatisierungsobjekts unterstützt, die von der Anwendung, die das WebBrowser-Steuerelement enthält.
+Rufen Sie diese Member-Funktion auf, um das von der Anwendung unterstützte Automatisierungs Objekt abzurufen, das das WebBrowser-Steuerelement enthält.
 
 ```
 LPDISPATCH GetApplication() const;
@@ -521,15 +521,15 @@ LPDISPATCH GetApplication() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `IDispatch` Schnittstelle das active Document-Objekt. Weitere Informationen finden Sie unter [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Ein Zeiger auf die `IDispatch` -Schnittstelle des aktiven Dokument Objekts. Weitere Informationen finden Sie unter [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getbusy"></a>  CHtmlView::GetBusy
+##  <a name="getbusy"></a>CHtmlView:: getbusy
 
-Rufen Sie diese Memberfunktion, um festzustellen, ob das WebBrowser-Steuerelement in einer Navigation oder downloadingvorgangs beteiligt ist.
+Mit dieser Member-Funktion können Sie feststellen, ob das WebBrowser-Steuerelement an einem Navigations-oder Downloadvorgang beteiligt ist.
 
 ```
 BOOL GetBusy() const;
@@ -537,15 +537,15 @@ BOOL GetBusy() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Webbrowser beschäftigt ist; andernfalls 0 (null).
+Ungleich 0 (null), wenn der Webbrowser ausgelastet ist. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getcontainer"></a>  CHtmlView::GetContainer
+##  <a name="getcontainer"></a>CHtmlView:: getContainer
 
-Rufen Sie diese Memberfunktion, um ein Objekt abzurufen, die in den Container des Webbrowsers ausgewertet wird.
+Rufen Sie diese Member-Funktion auf, um ein Objekt abzurufen, das in den Container des Webbrowsers ausgewertet wird.
 
 ```
 LPDISPATCH GetContainer() const;
@@ -553,15 +553,15 @@ LPDISPATCH GetContainer() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `IDispatch` Schnittstelle das active Document-Objekt.
+Ein Zeiger auf die `IDispatch` -Schnittstelle des aktiven Dokument Objekts.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getfullname"></a>  CHtmlView::GetFullName
+##  <a name="getfullname"></a>CHtmlView:: getfullname
 
-Rufen Sie diese Memberfunktion um den vollständigen Pfad der Datei abzurufen, die aktuell im Internet Explorer angezeigt wird.
+Rufen Sie diese Member-Funktion auf, um den vollständigen Pfad der Datei abzurufen, die derzeit von Internet Explorer angezeigt wird.
 
 ```
 CString GetFullName() const;
@@ -569,15 +569,15 @@ CString GetFullName() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt, das den Pfad und Namen der aktuell angezeigten Datei enthält. Wenn kein Pfad und Dateinamen vorhanden sind, `GetFullName` gibt eine leere `CString`.
+Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, das den Pfad und den Namen der aktuell angezeigten Datei enthält. Wenn kein Pfad und Dateiname `GetFullName` vorhanden ist, `CString`wird eine leere zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Gilt für InternetExplorer. Wenn Sie diesen Aufruf mit einem WebBrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, jedoch hat, diesen Aufruf werden ignoriert.
+Gilt für Internet Explorer. Wenn Sie diesen-Befehl mit einem Webbrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, aber der-Befehl wird ignoriert.
 
-##  <a name="getfullscreen"></a>  CHtmlView::GetFullScreen
+##  <a name="getfullscreen"></a>CHtmlView:: getfullscreen
 
-Rufen Sie diese Memberfunktion, um festzustellen, ob das WebBrowser-Steuerelement im Vollbildmodus oder im normalen Modus ausgeführt wird.
+Mit dieser Member-Funktion können Sie feststellen, ob das WebBrowser-Steuerelement im Vollbildmodus oder im normalen Fenstermodus ausgeführt wird.
 
 ```
 BOOL GetFullScreen() const;
@@ -585,17 +585,17 @@ BOOL GetFullScreen() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der WebBrowser im Vollbildmodus ausgeführt wird; andernfalls 0 (null).
+Ungleich 0 (null), wenn der Webbrowser im Vollbildmodus betrieben wird. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Im Vollbildmodus die Internet Explorer-Hauptfensters maximiert, und der Statusleiste, die Symbolleiste, die Menüleiste und die Titelleiste werden ausgeblendet.
+Im Vollbildmodus wird das Internet Explorer-Hauptfenster maximiert und die Statusleiste, die Symbolleiste, die Menüleiste und die Titelleiste ausgeblendet.
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getheight"></a>  CHtmlView::GetHeight
+##  <a name="getheight"></a>CHtmlView:: GetHeight
 
-Rufen Sie diese Memberfunktion, um die Höhe in Pixel eines Rahmenfensters das WebBrowser-Steuerelement abzurufen.
+Rufen Sie diese Member-Funktion auf, um die Höhe des Rahmen Fensters des Webbrowser-Steuer Elements in Pixel abzurufen.
 
 ```
 long GetHeight() const;
@@ -603,11 +603,11 @@ long GetHeight() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Höhe des Steuerelements Frame-Fenster, in Pixel.
+Die Rahmen Fensterhöhe des Steuer Elements in Pixel.
 
-##  <a name="gethtmldocument"></a>  CHtmlView::GetHtmlDocument
+##  <a name="gethtmldocument"></a>CHtmlView:: gethtmldocument
 
-Rufen Sie diese Memberfunktion, um das HTML-Dokument für das aktive Dokument abzurufen.
+Rufen Sie diese Member-Funktion auf, um das HTML-Dokument für das aktive Dokument abzurufen.
 
 ```
 LPDISPATCH GetHtmlDocument() const;
@@ -615,15 +615,15 @@ LPDISPATCH GetHtmlDocument() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `IDispatch` Schnittstelle das active Document-Objekt.
+Ein Zeiger auf die `IDispatch` -Schnittstelle des aktiven Dokument Objekts.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getleft"></a>  CHtmlView::GetLeft
+##  <a name="getleft"></a>CHtmlView:: GetLeft
 
-Rufen Sie diese Memberfunktion um den Abstand zwischen dem inneren linken Rand des WebBrowser-Steuerelements und dem linken Rand des Containers abzurufen.
+Rufen Sie diese Member-Funktion auf, um den Abstand zwischen dem inneren linken Rand des Webbrowser-Steuer Elements und dem linken Rand des zugehörigen Containers abzurufen.
 
 ```
 long GetLeft() const;
@@ -631,15 +631,15 @@ long GetLeft() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Abstand des linken Fensterrands in Pixel.
+Der Abstand für den linken Rand in Pixel.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getlocationname"></a>  CHtmlView::GetLocationName
+##  <a name="getlocationname"></a>CHtmlView:: getlocationname
 
-Rufen Sie diese Memberfunktion zum Abrufen des Namens der Ressource, die im WebBrowser angezeigt wird.
+Mit dieser Member-Funktion können Sie den Namen der Ressource abrufen, die im Webbrowser angezeigt wird.
 
 ```
 CString GetLocationName() const;
@@ -647,17 +647,17 @@ CString GetLocationName() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, das den Namen der derzeit im WebBrowser angezeigten Ressource enthält.
+Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, das den Namen der Ressource enthält, die momentan im Webbrowser angezeigt wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die Ressource eine HTML-Seite im World Wide Web ist, ist der Name der Titel der Seite. Wenn die Ressource einen Ordner oder eine Datei auf dem lokalen Computer oder im Netzwerk befindet, ist der Name der UNC- oder den vollständigen Pfad des Ordners oder der Datei.
+Wenn es sich bei der Ressource um eine HTML-Seite auf dem World Wide Web handelt, ist der Name der Titel dieser Seite. Wenn es sich bei der Ressource um einen Ordner oder eine Datei auf dem Netzwerk oder auf dem lokalen Computer handelt, ist der Name der UNC-oder vollständige Pfad des Ordners oder der Datei.
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getlocationurl"></a>  CHtmlView::GetLocationURL
+##  <a name="getlocationurl"></a>CHtmlView:: getlocationurl
 
-Rufen Sie diese Memberfunktion, um die URL der Ressource abzurufen, die aktuell im WebBrowser-Steuerelement angezeigt wird.
+Rufen Sie diese Member-Funktion auf, um die URL der Ressource abzurufen, die derzeit vom Webbrowser-Steuerelement angezeigt wird.
 
 ```
 CString GetLocationURL() const;
@@ -665,17 +665,17 @@ CString GetLocationURL() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, enthält die URL der Ressource, die derzeit im WebBrowser angezeigt.
+Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, das die URL der Ressource enthält, die momentan im Webbrowser angezeigt wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die Ressource einen Ordner oder eine Datei auf dem lokalen Computer oder im Netzwerk befindet, ist der Name der UNC- oder den vollständigen Pfad des Ordners oder der Datei.
+Wenn es sich bei der Ressource um einen Ordner oder eine Datei auf dem Netzwerk oder auf dem lokalen Computer handelt, ist der Name der UNC-oder vollständige Pfad des Ordners oder der Datei.
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getmenubar"></a>  CHtmlView::GetMenuBar
+##  <a name="getmenubar"></a>CHtmlView:: getmenubar
 
-Rufen Sie diese Memberfunktion, um festzustellen, ob die Menüleiste angezeigt wird.
+Diese Member-Funktion wird aufgerufen, um zu bestimmen, ob die Menüleiste sichtbar ist.
 
 ```
 BOOL GetMenuBar() const;
@@ -683,15 +683,15 @@ BOOL GetMenuBar() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn die Menüleiste angezeigt wird; andernfalls 0 (null).
+Ungleich 0 (null), wenn die Menüleiste sichtbar ist. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getoffline"></a>  CHtmlView::GetOffline
+##  <a name="getoffline"></a>CHtmlView:: Geto ffline
 
-Rufen Sie diese Memberfunktion, um zu bestimmen, ob der Webbrowser offline ausgeführt wird.
+Mit dieser Member-Funktion können Sie feststellen, ob der Webbrowser offline ist.
 
 ```
 BOOL GetOffline() const;
@@ -699,15 +699,15 @@ BOOL GetOffline() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL ist, wenn der Webbrowser gerade offline ist, andernfalls 0 (null).
+Ungleich 0 (null), wenn der Webbrowser momentan offline ist. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getparentbrowser"></a>  CHtmlView::GetParentBrowser
+##  <a name="getparentbrowser"></a>CHtmlView:: getParser Browser
 
-Rufen Sie diese Memberfunktion, um einen Zeiger auf das übergeordnete Objekt des WebBrowser-Steuerelements abzurufen.
+Rufen Sie diese Member-Funktion auf, um einen Zeiger auf das übergeordnete Objekt des Webbrowser-Steuer Elements abzurufen.
 
 ```
 LPDISPATCH GetParentBrowser() const;
@@ -715,15 +715,15 @@ LPDISPATCH GetParentBrowser() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `IDispatch` Schnittstelle des Objekts, das das übergeordnete Element des WebBrowser-Steuerelements ist.
+Ein Zeiger auf die `IDispatch` -Schnittstelle des-Objekts, das dem Webbrowser-Steuerelement übergeordnet ist.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getproperty"></a>  CHtmlView::GetProperty
+##  <a name="getproperty"></a>CHtmlView:: GetProperty
 
-Rufen Sie diese Memberfunktion rufen Sie den Wert der Eigenschaft, die derzeit mit dem Steuerelement zugeordnet sind.
+Mit dieser Member-Funktion können Sie den Wert der Eigenschaft abrufen, die dem Steuerelement momentan zugeordnet ist.
 
 ```
 BOOL GetProperty(
@@ -739,19 +739,19 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
 Ein Zeiger auf eine Zeichenfolge, die die abzurufende Eigenschaft enthält.
 
 *strValue*<br/>
-Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt, das den aktuellen Wert der Eigenschaft empfängt.
+Ein Verweis auf ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, das den aktuellen Wert der-Eigenschaft empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-In der ersten Version ungleich NULL, wenn erfolgreich; andernfalls 0 (null). In der zweiten Version ein [COleVariant](../../mfc/reference/colevariant-class.md) Objekt.
+In der ersten Version ungleich NULL, wenn der Vorgang erfolgreich abgeschlossen wurde. andernfalls NULL. In der zweiten Version ein [COleVariant](../../mfc/reference/colevariant-class.md) -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getreadystate"></a>  CHtmlView::GetReadyState
+##  <a name="getreadystate"></a>CHtmlView:: getreadystate
 
-Rufen Sie diese Memberfunktion um den Status "bereit" des WebBrowser-Objekts abzurufen.
+Rufen Sie diese Member-Funktion auf, um den Status "bereit" des Webbrowser-Objekts abzurufen.
 
 ```
 READYSTATE GetReadyState() const;
@@ -759,15 +759,15 @@ READYSTATE GetReadyState() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) Wert, wie im Windows SDK beschrieben.
+Ein read- [State](/previous-versions//aa768362\(v=vs.85\)) -Wert, wie im Windows SDK beschrieben.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getregisterasbrowser"></a>  CHtmlView::GetRegisterAsBrowser
+##  <a name="getregisterasbrowser"></a>CHtmlView:: getregisterasbrowser
 
-Rufen Sie diese Memberfunktion, um zu bestimmen, ob das WebBrowser-Objekt als Browser der obersten Ebene für die zielnamenauflösung registriert ist.
+Mit dieser Member-Funktion können Sie ermitteln, ob das Webbrowser-Objekt als Browser der obersten Ebene für die Ziel Namen Auflösung registriert ist.
 
 ```
 BOOL GetRegisterAsBrowser() const;
@@ -775,15 +775,15 @@ BOOL GetRegisterAsBrowser() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Browser als ein Browser der obersten Ebene registriert ist; andernfalls 0 (null).
+Ungleich 0 (null), wenn der Browser als Browser der obersten Ebene registriert ist. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getregisterasdroptarget"></a>  CHtmlView::GetRegisterAsDropTarget
+##  <a name="getregisterasdroptarget"></a>CHtmlView:: getregisterasdroptarget
 
-Rufen Sie diese Memberfunktion, um zu bestimmen, ob das WebBrowser-Steuerelement als Ablageziel für die Navigation registriert ist.
+Mit dieser Member-Funktion können Sie ermitteln, ob das WebBrowser-Steuerelement als Ablage Ziel für die Navigation registriert ist.
 
 ```
 BOOL GetRegisterAsDropTarget() const;
@@ -791,15 +791,15 @@ BOOL GetRegisterAsDropTarget() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL ist, wenn der Browser als Dropziel registriert ist; andernfalls 0 (null).
+Ungleich 0 (null), wenn der Browser als Ablage Ziel registriert ist. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getsilent"></a>  CHtmlView::GetSilent
+##  <a name="getsilent"></a>CHtmlView:: getsilent
 
-Rufen Sie diese Memberfunktion, um festzustellen, ob alle Dialogfelder, die im WebBrowser-Steuerelement angezeigt werden können.
+Diese Member-Funktion wird aufgerufen, um zu bestimmen, ob Dialogfelder im Webbrowser-Steuerelement angezeigt werden können.
 
 ```
 BOOL GetSilent() const;
@@ -807,15 +807,15 @@ BOOL GetSilent() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn Dialogfelder nicht über das WebBrowser-Steuerelement angezeigt werden können; andernfalls 0 (null).
+Ein Wert ungleich NULL, wenn Dialogfelder nicht aus dem Webbrowser-Steuerelement angezeigt werden können. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getsource"></a>  CHtmlView::GetSource
+##  <a name="getsource"></a>CHtmlView:: GetSource
 
-Rufen Sie diese Memberfunktion zum Abrufen der HTML-Quellcode für die Webseite.
+Rufen Sie diese Member-Funktion auf, um den HTML-Quellcode für die Webseite abzurufen.
 
 ```
 BOOL GetSource(CString& strRef);
@@ -828,15 +828,15 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 ### <a name="parameters"></a>Parameter
 
 *refString*<br/>
-Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) enthält, die den Quellcode.
+Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Wert, der den Quellcode enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion ist äquivalent zum Befehl "Quelltext anzeigen" in Internet Explorer, mit dem Unterschied, dass der Quellcode in zurückgegeben wird ein `CString`.
+Diese Funktion entspricht dem Befehl "Quelle anzeigen" in Internet Explorer, mit dem Unterschied, dass der Quellcode in einem `CString`-Wert zurückgegeben wird.
 
-##  <a name="getstatusbar"></a>  CHtmlView::GetStatusBar
+##  <a name="getstatusbar"></a>CHtmlView:: getstatusbar
 
-Rufen Sie diese Memberfunktion, um zu bestimmen, ob das WebBrowser-Steuerelement eine Statusleiste angezeigt.
+Mit dieser Member-Funktion können Sie ermitteln, ob das WebBrowser-Steuerelement eine Statusleiste anzeigt.
 
 ```
 BOOL GetStatusBar() const;
@@ -844,15 +844,15 @@ BOOL GetStatusBar() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn die Statusleiste angezeigt werden kann; andernfalls 0 (null).
+Ungleich 0 (null), wenn die Statusleiste angezeigt werden kann. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Gilt für InternetExplorer. Wenn Sie diesen Aufruf mit einem WebBrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, jedoch hat, diesen Aufruf werden ignoriert.
+Gilt für Internet Explorer. Wenn Sie diesen-Befehl mit einem Webbrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, aber der-Befehl wird ignoriert.
 
-##  <a name="gettheatermode"></a>  CHtmlView::GetTheaterMode
+##  <a name="gettheatermode"></a>CHtmlView:: gettheatermode
 
-Rufen Sie diese Memberfunktion, um festzustellen, ob der Webbrowser im Kinomodus ausgeführt wird.
+Mit dieser Member-Funktion können Sie ermitteln, ob sich der Webbrowser im Theater Modus befindet.
 
 ```
 BOOL GetTheaterMode() const;
@@ -860,17 +860,17 @@ BOOL GetTheaterMode() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der Webbrowser im Kinomodus ausgeführt wird; andernfalls 0 (null).
+Ungleich 0 (null), wenn sich der Webbrowser im Theater Modus befindet. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Webbrowser im Kinomodus ausgeführt wird, das Hauptfenster der Browser nimmt den gesamten Bildschirm wird eine Symbolleiste mit einem Mindestsatz von Navigations-Tools angezeigt und die Statusleiste wird angezeigt, in der oberen rechten Ecke des Bildschirms.
+Wenn sich der Webbrowser im Theater Modus befindet, füllt das Browser Hauptfenster den gesamten Bildschirm aus. eine Symbolleiste mit einem minimalen Satz von Navigationstools wird angezeigt, und die Statusleiste wird in der oberen rechten Ecke des Bildschirms angezeigt.
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="gettoolbar"></a>  CHtmlView::GetToolBar
+##  <a name="gettoolbar"></a>CHtmlView:: gettoolbar
 
-Rufen Sie diese Memberfunktion, um festzustellen, ob die Symbolleiste sichtbar ist.
+Mit dieser Member-Funktion können Sie ermitteln, ob die Symbolleiste sichtbar ist.
 
 ```
 int GetToolBar() const;
@@ -878,11 +878,11 @@ int GetToolBar() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Wert, der angibt, ob die Symbolleiste sichtbar ist. Ungleich NULL ist, wenn die Symbolleiste sichtbar ist; andernfalls 0 (null).
+Ein Wert, der angibt, ob die Symbolleiste sichtbar ist. Nicht NULL, wenn die Symbolleiste sichtbar ist. andernfalls NULL.
 
-##  <a name="gettop"></a>  CHtmlView::GetTop
+##  <a name="gettop"></a>CHtmlView:: GetTop
 
-Rufen Sie diese Memberfunktion, um die Bildschirmkoordinate des oberen Rands des Hauptfensters des WebBrowser-Steuerelements abzurufen.
+Rufen Sie diese Member-Funktion auf, um die Bildschirm Koordinate des oberen Rands des Hauptfensters des Webbrowser-Steuer Elements abzurufen.
 
 ```
 long GetTop() const;
@@ -890,15 +890,15 @@ long GetTop() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Adresse einer Variablen, die die Bildschirmkoordinate der oberen Rand des Hauptfensters empfängt.
+Adresse einer Variablen, die die Bildschirm Koordinate des oberen Rands des Hauptfensters empfängt.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="gettoplevelcontainer"></a>  CHtmlView::GetTopLevelContainer
+##  <a name="gettoplevelcontainer"></a>CHtmlView:: gettoplevelcontainer
 
-Rufen Sie diese Memberfunktion, um festzustellen, ob Internet Explorer auf den Container der obersten Ebene des WebBrowser-Steuerelements ist.
+Mit dieser Member-Funktion können Sie ermitteln, ob Internet Explorer der Container der obersten Ebene des Webbrowser-Steuer Elements ist.
 
 ```
 BOOL GetTopLevelContainer() const;
@@ -906,15 +906,15 @@ BOOL GetTopLevelContainer() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL ist der Container den Container der obersten Ebene; andernfalls 0 (null).
+Ungleich 0 (null) der Container ist der Container der obersten Ebene. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="gettype"></a>  CHtmlView::GetType
+##  <a name="gettype"></a>CHtmlView:: GetType
 
-Rufen Sie diese Memberfunktion um den Namen des aktiven Dokuments enthaltene abrufen.
+Rufen Sie diese Member-Funktion auf, um den Typnamen des enthaltenen aktiven Dokuments abzurufen.
 
 ```
 CString GetType() const;
@@ -922,15 +922,15 @@ CString GetType() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt mit dem Namen des Datentyps des aktiven Dokuments enthalten.
+Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, das den Typnamen des enthaltenen aktiven Dokuments enthält.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getvisible"></a>  CHtmlView::GetVisible
+##  <a name="getvisible"></a>CHtmlView:: getVisible
 
-Rufen Sie diese Memberfunktion, um festzustellen, ob das enthaltene Objekt sichtbar ist.
+Mit dieser Member-Funktion können Sie ermitteln, ob das enthaltene Objekt sichtbar ist.
 
 ```
 BOOL GetVisible() const;
@@ -938,13 +938,13 @@ BOOL GetVisible() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn das Objekt sichtbar ist; andernfalls 0 (null).
+Ungleich 0 (null), wenn das Objekt sichtbar ist. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="getwidth"></a>  CHtmlView::GetWidth
+##  <a name="getwidth"></a>CHtmlView:: getWidth
 
 Ruft die Breite des Internet Explorer-Hauptfensters ab.
 
@@ -956,9 +956,9 @@ long GetWidth() const;
 
 Die aktuelle Breite des Fensters in Pixel.
 
-##  <a name="goback"></a>  CHtmlView::GoBack
+##  <a name="goback"></a>CHtmlView:: GoBack
 
-Navigiert rückwärts ein Element in der Verlaufsliste.
+Navigiert ein Element rückwärts in der Verlaufs Liste.
 
 ```
 void GoBack();
@@ -968,15 +968,15 @@ void GoBack();
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="goforward"></a>  CHtmlView::GoForward
+##  <a name="goforward"></a>CHtmlView:: GoForward
 
-Navigiert vorwärts ein Element in der Verlaufsliste.
+Navigiert ein Element vorwärts in der Verlaufs Liste.
 
 ```
 void GoForward();
 ```
 
-##  <a name="gohome"></a>  CHtmlView::GoHome
+##  <a name="gohome"></a>CHtmlView:: GoHome
 
 Navigiert zur aktuellen Homepage oder Startseite, die im Dialogfeld „Internetoptionen“ von Internet Explorer oder im Dialogfeld „Interneteigenschaften“ beim Zugriff aus der Systemsteuerung festgelegt ist.
 
@@ -988,9 +988,9 @@ void GoHome();
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="gosearch"></a>  CHtmlView::GoSearch
+##  <a name="gosearch"></a>CHtmlView:: GoSearch
 
-Navigiert zur aktuellen Suchseite, wie angegeben in das Dialogfeld Internetoptionen für Internet Explorer oder das Dialogfeld "Interneteigenschaften" in der Systemsteuerung zugegriffen.
+Navigiert zur aktuellen Suchseite, die im Dialogfeld Internetoptionen für Internet Explorer oder im Dialogfeld Internet Eigenschaften angegeben ist, auf das über die Systemsteuerung zugegriffen wird.
 
 ```
 void GoSearch();
@@ -1000,9 +1000,9 @@ void GoSearch();
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="loadfromresource"></a>  CHtmlView::LoadFromResource
+##  <a name="loadfromresource"></a>CHtmlView:: loadfromresource
 
-Rufen Sie diese Memberfunktion, um die angegebene Ressource in das WebBrowser-Steuerelement zu laden.
+Mit dieser Member-Funktion wird die angegebene Ressource in das WebBrowser-Steuerelement geladen.
 
 ```
 BOOL LoadFromResource(LPCTSTR lpszResource);
@@ -1012,10 +1012,10 @@ BOOL LoadFromResource(UINT nRes);
 ### <a name="parameters"></a>Parameter
 
 *lpszResource*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der Ressource, die geladen werden.
+Ein Zeiger auf eine Zeichenfolge, die den Namen der zu ladenden Ressource enthält.
 
-*nRes*<br/>
-Die ID des Puffers, die mit dem Namen der Ressource geladen werden soll.
+*NRES*<br/>
+Die ID des Puffers, der den Namen der zu ladenden Ressource enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1025,9 +1025,9 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="navigate"></a>  CHtmlView::Navigate
+##  <a name="navigate"></a>CHtmlView:: Navigate
 
-Rufen Sie diese Memberfunktion auf, auf die durch eine URL bezeichnete Ressource zu navigieren.
+Rufen Sie diese Member-Funktion auf, um zu der durch eine URL identifizierten Ressource zu navigieren.
 
 ```
 void Navigate(
@@ -1042,30 +1042,30 @@ void Navigate(
 ### <a name="parameters"></a>Parameter
 
 *URL*<br/>
-Eine vom Aufrufer reservierte Zeichenfolge mit der URL zu navigieren oder den vollständigen Pfad der Datei angezeigt.
+Eine vom Aufrufer zugewiesene Zeichenfolge, die die URL enthält, zu der navigiert werden soll, oder der vollständige Pfad der anzuzeigenden Datei.
 
 *dwFlags*<br/>
-Die Flags, einer Variablen, der angibt, ob die Ressource der Verlaufsliste hinzu, an, ob zum Lesen oder Schreiben von aus dem Cache und angibt, ob die Ressource in einem neuen Fenster angezeigt werden soll. Die Variable werden eine Kombination der Werte von definiert die [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) Enumeration.
+Die Flags einer Variablen, die angibt, ob die Ressource der Verlaufs Liste hinzugefügt werden soll, ob Lese-oder Schreibvorgänge aus dem Cache durchführen und ob die Ressource in einem neuen Fenster angezeigt werden soll. Bei der Variablen kann es sich um eine Kombination der Werte handeln, die von der [browsernavconstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) -Enumeration definiert werden.
 
 *lpszTargetFrameName*<br/>
-Ein Zeiger auf eine Zeichenfolge, die enthält der Name des Frames, in dem die Ressource angezeigt werden soll.
+Ein Zeiger auf eine Zeichenfolge, die den Namen des Frames enthält, in dem die Ressource angezeigt werden soll.
 
 *lpszHeaders*<br/>
-Ein Zeiger auf einen Wert, der angibt, die HTTP-Header an den Server gesendet werden soll. Diese Header werden in die Standard-Internet Explorer-Header hinzugefügt. Die Header können z. B. als die des Servers, den Typ der Daten, die mit dem Server oder einen Statuscode übergebenen erforderliche Aktion angeben. Dieser Parameter wird ignoriert, wenn *URL* ist keine HTTP-URL.
+Ein Zeiger auf einen-Wert, der die HTTP-Header angibt, die an den Server gesendet werden sollen. Diese Header werden den Internet Explorer-Standard Headern hinzugefügt. Die Header können z. b. die Aktion, die für den Server erforderlich ist, den Typ der an den Server übergebenen Daten oder einen Statuscode angeben. Dieser Parameter wird ignoriert, wenn *URL* keine http-URL ist.
 
 *lpvPostData*<br/>
-Ein Zeiger auf Daten, die mit der HTTP POST-Transaktion zu senden. Beispielsweise wird die POST-Transaktion verwendet, zum Senden von Daten, die von einem HTML-Formular gesammelt wurden. Wenn dieser Parameter keine Post-Daten angibt `Navigate` gibt eine HTTP GET-Transaktion. Dieser Parameter wird ignoriert, wenn *URL* ist keine HTTP-URL.
+Ein Zeiger auf die Daten, die mit der HTTP-Post-Transaktion gesendet werden sollen. Beispielsweise wird die Post-Transaktion zum Senden von Daten verwendet, die von einem HTML-Formular gesammelt werden. Wenn dieser Parameter keine Post-Daten angibt, `Navigate` gibt eine HTTP Get-Transaktion aus. Dieser Parameter wird ignoriert, wenn *URL* keine http-URL ist.
 
 *dwPostDataLen*<br/>
-Daten, die mit der HTTP POST-Transaktion zu senden. Beispielsweise wird die POST-Transaktion verwendet, zum Senden von Daten, die von einem HTML-Formular gesammelt wurden. Wenn dieser Parameter keine Post-Daten angibt `Navigate` gibt eine HTTP GET-Transaktion. Dieser Parameter wird ignoriert, wenn *URL* ist keine HTTP-URL.
+Daten, die mit der HTTP-Post-Transaktion gesendet werden sollen. Beispielsweise wird die Post-Transaktion zum Senden von Daten verwendet, die von einem HTML-Formular gesammelt werden. Wenn dieser Parameter keine Post-Daten angibt, `Navigate` gibt eine HTTP Get-Transaktion aus. Dieser Parameter wird ignoriert, wenn *URL* keine http-URL ist.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="navigate2"></a>  CHtmlView::Navigate2
+##  <a name="navigate2"></a>CHtmlView:: Navigate2
 
-Rufen Sie diese Memberfunktion auf, die durch eine URL bezeichnete Ressource oder die Datei identifiziert, die durch einen vollständigen Pfad zu navigieren.
+Rufen Sie diese Member-Funktion auf, um zu der durch eine URL identifizierten Ressource zu navigieren, oder zu der durch einen vollständigen Pfad identifizierten Datei.
 
 ```
 void Navigate2(
@@ -1092,32 +1092,32 @@ void Navigate2(
 ### <a name="parameters"></a>Parameter
 
 *pIDL*<br/>
-Ein Zeiger auf ein [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) Struktur.
+Ein Zeiger auf eine [itemittel List](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) -Struktur.
 
 *dwFlags*<br/>
-Die Flags, einer Variablen, der angibt, ob die Ressource der Verlaufsliste hinzu, an, ob zum Lesen oder Schreiben von aus dem Cache und angibt, ob die Ressource in einem neuen Fenster angezeigt werden soll. Die Variable werden eine Kombination der Werte von definiert die [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) Enumeration.
+Die Flags einer Variablen, die angibt, ob die Ressource der Verlaufs Liste hinzugefügt werden soll, ob Lese-oder Schreibvorgänge aus dem Cache durchführen und ob die Ressource in einem neuen Fenster angezeigt werden soll. Bei der Variablen kann es sich um eine Kombination der Werte handeln, die von der [browsernavconstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) -Enumeration definiert werden.
 
 *lpszTargetFrameName*<br/>
-Ein Zeiger auf eine Zeichenfolge, die enthält der Name des Frames, in dem die Ressource angezeigt werden soll.
+Ein Zeiger auf eine Zeichenfolge, die den Namen des Frames enthält, in dem die Ressource angezeigt werden soll.
 
 *lpszURL*<br/>
 Ein Zeiger auf eine Zeichenfolge, die die URL enthält.
 
 *lpvPostData*<br/>
-Daten, die mit der HTTP POST-Transaktion zu senden. Beispielsweise wird die POST-Transaktion verwendet, zum Senden von Daten, die von einem HTML-Formular gesammelt wurden. Wenn dieser Parameter keine Post-Daten angibt `Navigate2` gibt eine HTTP GET-Transaktion. Dieser Parameter wird ignoriert, wenn *URL* ist kein HTTP oder HTTPS-URL.
+Daten, die mit der HTTP-Post-Transaktion gesendet werden sollen. Beispielsweise wird die Post-Transaktion zum Senden von Daten verwendet, die von einem HTML-Formular gesammelt werden. Wenn dieser Parameter keine Post-Daten angibt, `Navigate2` gibt eine HTTP Get-Transaktion aus. Dieser Parameter wird ignoriert, wenn *URL* keine http-oder HTTPS-URL ist.
 
 *dwPostDataLen*<br/>
-Länge in Bytes der Daten auf die von der *LpvPostData* Parameter.
+Länge (in Bytes) der Daten, auf die durch den *lpvpostdata* -Parameter verwiesen wird.
 
 *lpszHeaders*<br/>
-Ein Zeiger auf einen Wert, der angibt, die HTTP- oder HTTPS-Header an den Server gesendet werden soll. Diese Header werden in die Standard-Internet Explorer-Header hinzugefügt. Die Header können z. B. als die des Servers, den Typ der Daten, die mit dem Server oder einen Statuscode übergebenen erforderliche Aktion angeben. Dieser Parameter wird ignoriert, wenn *URL* ist kein HTTP oder HTTPS-URL.
+Ein Zeiger auf einen-Wert, der die http-oder HTTPS-Header angibt, die an den Server gesendet werden sollen. Diese Header werden den Internet Explorer-Standard Headern hinzugefügt. Die Header können z. b. die Aktion, die für den Server erforderlich ist, den Typ der an den Server übergebenen Daten oder einen Statuscode angeben. Dieser Parameter wird ignoriert, wenn *URL* keine http-oder HTTPS-URL ist.
 
 *baPostedData*<br/>
-Ein Verweis auf eine [CByteArray](../../mfc/reference/cbytearray-class.md) Objekt.
+Ein Verweis auf ein [CByteArray](../../mfc/reference/cbytearray-class.md) -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion erweitert die `Navigate` Member-Funktion, durch die Unterstützung der Suchvorgänge auf den Ordner mit Sonderfunktionen, z. B. Desktop- und Arbeitsplatz, die vom Parameter dargestellt werden *pIDL*.
+Diese Member-Funktion erweitert `Navigate` die Member-Funktion, indem Sie das Durchsuchen von speziellen Ordnern (z. b. Desktop und Arbeitsplatz) unterstützt, die durch den Parameter *PIDL*dargestellt werden.
 
 Betrifft Internet Explorer und WebBrowser.
 
@@ -1125,9 +1125,9 @@ Betrifft Internet Explorer und WebBrowser.
 
 [!code-cpp[NVC_MFCHtmlHttp#7](../../mfc/reference/codesnippet/cpp/chtmlview-class_1.cpp)]
 
-##  <a name="onbeforenavigate2"></a>  CHtmlView::OnBeforeNavigate2
+##  <a name="onbeforenavigate2"></a>CHtmlView:: OnBeforeNavigate2
 
-Diese Memberfunktion wird aufgerufen, durch das Framework, die dazu führen, dass ein Ereignis ausgelöst wird, bevor eine Navigation in einem Webbrowser auftritt.
+Diese Member-Funktion wird vom Framework aufgerufen, um zu bewirken, dass ein Ereignis ausgelöst wird, bevor im Webbrowser eine Navigation erfolgt.
 
 ```
 virtual void OnBeforeNavigate2(
@@ -1142,26 +1142,26 @@ virtual void OnBeforeNavigate2(
 ### <a name="parameters"></a>Parameter
 
 *lpszURL*<br/>
-Zeiger auf eine Zeichenfolge, die mit der URL zu navigieren.
+Zeiger auf eine Zeichenfolge mit der URL, zu der navigiert werden soll.
 
 *nFlags*<br/>
-Für zukünftige Verwendung reserviert.
+Zur künftigen Verwendung reserviert.
 
 *lpszTargetFrameName*<br/>
-Eine Zeichenfolge mit dem Namen des Frames, in dem die Ressource anzeigen oder NULL, wenn keine benannten Rahmen für die Ressource erstellt werden soll.
+Eine Zeichenfolge, die den Namen des Frames enthält, in dem die Ressource angezeigt werden soll, oder NULL, wenn kein benannter Frame für die Ressource bestimmt ist.
 
 *baPostedData*<br/>
-Ein Verweis auf eine `CByteArray` Objekt mit Daten, die an den Server gesendet werden soll, wenn die HTTP POST-Transaktion verwendet wird.
+Ein Verweis auf ein `CByteArray` -Objekt, das die Daten enthält, die an den Server gesendet werden sollen, wenn die HTTP Post-Transaktion verwendet wird.
 
 *lpszHeaders*<br/>
-Ein Zeiger auf eine Zeichenfolge mit zusätzlichen HTTP-Header zum Senden an den Server (gilt nur für HTTP-URLs). Die Header können z. B. als die des Servers, den Typ der Daten, die mit dem Server oder einen Statuscode übergebenen erforderliche Aktion angeben.
+Ein Zeiger auf eine Zeichenfolge mit zusätzlichen HTTP-Headern, die an den Server gesendet werden sollen (nur HTTP-URLs). Die Header können z. b. die Aktion, die für den Server erforderlich ist, den Typ der an den Server übergebenen Daten oder einen Statuscode angeben.
 
 *pbCancel*<br/>
-Ein Zeiger auf ein Flag "Abbrechen". Eine Anwendung kann diesen Parameter, der ungleich Null zum Abbrechen des Vorgangs für die Navigation oder 0 (null), um fortfahren zu ermöglichen festlegen.
+Ein Zeiger auf ein Cancel-Flag. Eine Anwendung kann diesen Parameter auf einen Wert ungleich 0 (null) festlegen, um den Navigations Vorgang abzubrechen, oder auf NULL, um die Fortsetzung zuzulassen.
 
-##  <a name="oncommandstatechange"></a>  CHtmlView::OnCommandStateChange
+##  <a name="oncommandstatechange"></a>CHtmlView:: oncommandstatechange
 
-Diese Memberfunktion wird aufgerufen, durch das Framework eine Anwendung zu benachrichtigen, die dass der aktivierte Zustand eines Webbrowserbefehls geändert wurde.
+Diese Member-Funktion wird vom Framework aufgerufen, um eine Anwendung zu benachrichtigen, dass der aktivierte Zustand eines Webbrowser Befehls geändert wurde.
 
 ```
 virtual void OnCommandStateChange(
@@ -1172,14 +1172,14 @@ virtual void OnCommandStateChange(
 ### <a name="parameters"></a>Parameter
 
 *nCommand*<br/>
-Der Bezeichner des Befehls, dessen aktivierte Zustand geändert wurde.
+Der Bezeichner des Befehls, dessen aktivierter Zustand geändert wurde.
 
 *bEnable*<br/>
-Aktivierten Zustand. Dieser Parameter ist ungleich NULL, wenn der Befehl ist aktiviert, oder NULL, wenn er deaktiviert ist.
+Aktivierter Zustand. Dieser Parameter ist nicht NULL, wenn der Befehl aktiviert ist, oder 0 (null), wenn er deaktiviert ist.
 
-##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete
+##  <a name="ondocumentcomplete"></a>CHtmlView:: OnDocumentComplete
 
-Diese Memberfunktion wird aufgerufen, durch das Framework eine Anwendung zu benachrichtigen, dass ein Dokument mit den READYSTATE_COMPLETE-Zustand erreicht hat.
+Diese Member-Funktion wird vom Framework aufgerufen, um eine Anwendung zu benachrichtigen, dass ein Dokument den READYSTATE_COMPLETE-Zustand erreicht hat.
 
 ```
 virtual void OnDocumentComplete(LPCTSTR lpszURL);
@@ -1188,17 +1188,17 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 ### <a name="parameters"></a>Parameter
 
 *lpszURL*<br/>
-Ein Zeiger auf eine Zeichenfolge, die die UNC-URL ergibt die Datei anzugeben, oder eine PIDL (einen Zeiger auf eine Liste der Element-ID), zu dem navigiert wurde.
+Ein Zeiger auf eine Zeichenfolge, die die URL, den UNC-Dateinamen oder eine PIDL (einen Zeiger auf eine Element Bezeichner-Liste) ergibt, zu der navigiert wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Nicht jeder Frame wird dieses Ereignis, aber jeder Frame, der ausgelöst wird ausgelöst, wenn ein [OnDownloadBegin](#ondownloadbegin) Ereignis wird ausgelöst, eine entsprechende `OnDocumentComplete` Ereignis.
+Nicht jeder Frame löst dieses Ereignis aus, aber jeder Frame, der ein [ondownloadbegin](#ondownloadbegin) -Ereignis auslöst, löst `OnDocumentComplete` ein entsprechendes Ereignis aus.
 
-Die URL angegeben werden, indem *LpszURL* kann sich von der URL, die der Browser navigieren, mitgeteilt wurde, da diese URL der vereinheitlichte und qualifizierte URL sein. Wenn eine Anwendung "www.microsoft.com" in einem Aufruf an eine URL gibt z. B. [Navigate](#navigate) oder [Navigate2](#navigate2), der URL übergeben von `OnNavigateComplete2` werden "<http://www.microsoft.com/>". Auch wenn der Server den Browser zu einer anderen URL umgeleitet, wird die umgeleitete URL hier angezeigt.
+Die von *lpszurl* festgeschriebene URL kann sich von der URL unterscheiden, zu der der Browser navigiert hat, da diese URL die kanonisierte und qualifizierte URL ist. Wenn eine Anwendung z. b. die URL "www.Microsoft.com" in einem-Befehl von [Navigate](#navigate) oder [Navigate2](#navigate2)angibt, lautet die von `OnNavigateComplete2` über gegebene URL<http://www.microsoft.com/>"". Wenn der Server den Browser an eine andere URL umgeleitet hat, wird die umgeleitete URL hier widergespiegelt.
 
-##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
+##  <a name="ondocwindowactivate"></a>CHtmlView:: ondocwindowaktivierungs
 
-Wird von der Internet Explorer oder MSHTML-Implementierung von `IOleInPlaceActiveObject::OnDocWindowActivate`, die das aktive direkte Objekt benachrichtigt, wenn das Dokumentfenster des Containers aktiviert oder deaktiviert wird.
+Wird von der Internet Explorer-oder MSHTML- `IOleInPlaceActiveObject::OnDocWindowActivate`Implementierung von aufgerufen, die das aktive direkte Objekt benachrichtigt, wenn das Dokument Fenster des Containers aktiviert oder deaktiviert wird.
 
 ```
 virtual HRESULT OnDocWindowActivate(BOOL fActivate);
@@ -1207,19 +1207,19 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 ### <a name="parameters"></a>Parameter
 
 *fActivate*<br/>
-Gibt den Status des Dokumentfensters. Wenn dieser Wert ungleich NULL ist, wird das Fenster aktiviert wird. Wenn dieser Wert 0 (null) ist, wird das Fenster deaktiviert wird.
+Gibt den Zustand des Dokument Fensters an. Wenn dieser Wert ungleich 0 (null) ist, wird das Fenster aktiviert. Wenn dieser Wert 0 (null) ist, wird das Fenster deaktiviert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK, wenn erfolgreich, oder ein OLE definierter Fehlercode andernfalls.
+S_OK, wenn erfolgreich, oder ein OLE-definierter Fehlercode andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnDocWindowActivate` auf reagieren die `OnDocWindowActivate` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnDocWindowActivate` schreiben Sie, um `OnDocWindowActivate` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: ondocwindowaktivierungs](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) im Windows SDK.
 
-##  <a name="ondownloadbegin"></a>  CHtmlView::OnDownloadBegin
+##  <a name="ondownloadbegin"></a>CHtmlView:: ondownloadbegin
 
-Diese Memberfunktion wird durch das Framework mit dem Herunterladen eines Dokuments beginnen aufgerufen.
+Diese Member-Funktion wird vom Framework aufgerufen, um mit dem Herunterladen eines Dokuments zu beginnen.
 
 ```
 virtual void OnDownloadBegin();
@@ -1227,17 +1227,17 @@ virtual void OnDownloadBegin();
 
 ### <a name="remarks"></a>Hinweise
 
-Dieses Ereignis wird ausgelöst, kurz nach der [OnBeforeNavigate2](#onbeforenavigate2) -Ereignis, es sei denn, die Navigation nicht abgebrochen wird. Für dieses Ereignis sollte Animationen oder "ausgelastet" festgestellt, dass die Anzeige der Container muss verbunden werden.
+Dieses Ereignis wird kurz nach dem [OnBeforeNavigate2](#onbeforenavigate2) -Ereignis ausgelöst, es sei denn, die Navigation wird abgebrochen. Jede Animation oder der "ausgelastete" Hinweis, dass der Container angezeigt werden muss, sollte mit diesem Ereignis verbunden sein.
 
-##  <a name="ondownloadcomplete"></a>  CHtmlView::OnDownloadComplete
+##  <a name="ondownloadcomplete"></a>CHtmlView:: ondownloadcomplete
 
-Diese Memberfunktion wird aufgerufen, durch das Framework, um anzugeben, dass ein Navigationsvorgang beendet, angehalten wurde oder fehlgeschlagen ist.
+Diese Member-Funktion wird vom Framework aufgerufen, um anzugeben, dass ein Navigations Vorgang beendet oder angehalten wurde oder fehlgeschlagen ist.
 
 ```
 virtual void OnDownloadComplete();
 ```
 
-##  <a name="onenablemodeless"></a>  CHtmlView::OnEnableModeless
+##  <a name="onenablemodeless"></a>CHtmlView:: onenablemodeless
 
 Wird aufgerufen, wenn Internet Explorer oder MSHTML modale Benutzeroberfläche anzeigt.
 
@@ -1248,17 +1248,17 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 ### <a name="parameters"></a>Parameter
 
 *fEnable*<br/>
-Gibt an, ob nicht modale Dialogfelder des Hosts aktiviert oder deaktiviert sind. Wenn dieser Wert ungleich NULL ist, sind nicht modale Dialogfelder aktiviert. Wenn dieser Wert 0 (null) ist, sind nicht modale Dialogfelder deaktiviert.
+Gibt an, ob die nicht modalem Dialogfelder des Hosts aktiviert oder deaktiviert sind. Wenn dieser Wert ungleich 0 (null) ist, sind nicht modaldialogfelder aktiviert. Wenn dieser Wert 0 (null) ist, sind die Dialogfelder ohne Modus deaktiviert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK, wenn erfolgreich, oder ein OLE definierter Fehlercode andernfalls.
+S_OK, wenn erfolgreich, oder ein OLE-definierter Fehlercode andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Aktiviert oder deaktiviert nicht modale Dialogfelder, wenn der Container erstellt oder ein modales Dialogfeld zerstört. Außer Kraft setzen `OnEnableModeless` auf reagieren die `EnableModeless` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Aktiviert oder deaktiviert nicht modale Dialogfelder, wenn der Container ein modales Dialogfeld erstellt oder zerstört. Über `OnEnableModeless` schreiben Sie, um `EnableModeless` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: enablemodeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) im Windows SDK.
 
-##  <a name="onfilterdataobject"></a>  CHtmlView::OnFilterDataObject
+##  <a name="onfilterdataobject"></a>CHtmlView:: onfilterdataobject
 
 Wird auf dem Host von Internet Explorer oder MSHTML aufgerufen, um dem Host das Ersetzen des Datenobjekts von Internet Explorer oder MSHTML zu ermöglichen.
 
@@ -1271,20 +1271,20 @@ virtual HRESULT OnFilterDataObject(
 ### <a name="parameters"></a>Parameter
 
 *pDataObject*<br/>
-Adresse von der [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) Schnittstelle, die von Internet Explorer oder MSHTML bereitgestellt.
+Adresse der [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) -Schnittstelle, die von Internet Explorer oder MSHTML bereitgestellt wird.
 
 *ppDataObject*<br/>
-Adresse, die empfängt die `IDataObject` Schnittstellenzeiger vom Host bereitgestellten. Den Inhalt dieses Parameters sollte immer auf NULL initialisiert werden, auch wenn die Methode fehlschlägt.
+Adresse, die den `IDataObject` vom Host bereitgestellten Schnittstellen Zeiger empfängt. Der Inhalt dieses Parameters sollte immer mit NULL initialisiert werden, auch wenn die Methode fehlschlägt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK, wenn das Datenobjekt, das ersetzt wird, S_FALSE, wenn das Datenobjekt, das nicht ersetzt wird, oder ein OLE-definierte Fehlercode, wenn ein Fehler auftritt.
+S_OK, wenn das Datenobjekt ersetzt wird, S_FALSE, wenn das Datenobjekt nicht ersetzt wird, oder ein OLE-definierter Fehlercode, wenn ein Fehler auftritt.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnFilterDataObject` auf reagieren die `FilterDataObject` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnFilterDataObject` schreiben Sie, um `FilterDataObject` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: filterdataobject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) im Windows SDK.
 
-##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate
+##  <a name="onframewindowactivate"></a>CHtmlView:: onframewindowaktivierungs
 
 Wird von [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) aufgerufen, um das Objekt zu benachrichtigen, wenn das Rahmenfenster der obersten Ebene des Containers aktiviert oder deaktiviert wird.
 
@@ -1295,19 +1295,19 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 ### <a name="parameters"></a>Parameter
 
 *fActivate*<br/>
-Gibt den Zustand der obersten Ebene Rahmenfenster des Containers an. Wenn dieser Wert ungleich NULL ist, wird das Fenster aktiviert wird. Wenn dieser Wert 0 (null) ist, wird das Fenster deaktiviert wird.
+Gibt den Zustand des Frame Fensters der obersten Ebene des Containers an. Wenn dieser Wert ungleich 0 (null) ist, wird das Fenster aktiviert. Wenn dieser Wert 0 (null) ist, wird das Fenster deaktiviert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK, wenn erfolgreich, oder ein OLE definierter Fehlercode andernfalls.
+S_OK, wenn erfolgreich, oder ein OLE-definierter Fehlercode andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnFrameWindowActivate` auf reagieren die `OnFrameWindowActivate` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnFrameWindowActivate` schreiben Sie, um `OnFrameWindowActivate` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: onframewindowaktivierungs](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) im Windows SDK.
 
-##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
+##  <a name="onfullscreen"></a>CHtmlView:: onfullscreen
 
-Diese Memberfunktion wird von Framework aufgerufen wenn die [im Vollbildmodus](/previous-versions/aa752119\(v=vs.85\)) -Eigenschaft geändert hat.
+Diese Member-Funktion wird von Framework aufgerufen, wenn die [Fullscreen](/previous-versions/aa752119\(v=vs.85\)) -Eigenschaft geändert wurde.
 
 ```
 virtual void OnFullScreen(BOOL bFullScreen);
@@ -1316,9 +1316,9 @@ virtual void OnFullScreen(BOOL bFullScreen);
 ### <a name="parameters"></a>Parameter
 
 *bFullScreen*<br/>
-Ungleich NULL ist, wenn Internet Explorer im Vollbildmodus ausgeführt wird; 0 (null) andernfalls.
+Ungleich 0 (null), wenn Internet Explorer im Vollbildmodus ist; andernfalls NULL.
 
-##  <a name="ongetdroptarget"></a>  CHtmlView::OnGetDropTarget
+##  <a name="ongetdroptarget"></a>CHtmlView:: ongetdroptarget
 
 Wird von Internet Explorer oder MSHTML bei der Verwendung als Ablageziel aufgerufen, um dem Host die Bereitstellung eines alternativen `IDropTarget`.
 
@@ -1331,20 +1331,20 @@ virtual HRESULT OnGetDropTarget(
 ### <a name="parameters"></a>Parameter
 
 *pDropTarget*<br/>
-[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) Internet Explorer oder MSHTML vorgeschlagen verwenden.
+[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) Internet Explorer oder MSHTML schlägt vor, zu verwenden.
 
 *ppDropTarget*<br/>
-Adresse von der `IDropTarget` , empfängt der `IDropTarget` Schnittstellenzeiger auf der Host bereitstellen möchte.
+Adresse des `IDropTarget` , das den `IDropTarget` Schnittstellen Zeiger empfängt, den der Host bereitstellen möchte.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Finden Sie unter [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) im Windows SDK für eine Liste von Rückgabecodes.
+Eine Liste der Rückgabecodes finden Sie unter [IDocHostUIHandler:: getdroptarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) im Windows SDK.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnGetDropTarget` auf reagieren die `GetDropTarget` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnGetDropTarget` schreiben Sie, um `GetDropTarget` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: getdroptarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) im Windows SDK.
 
-##  <a name="ongetexternal"></a>  CHtmlView::OnGetExternal
+##  <a name="ongetexternal"></a>CHtmlView:: ongetexternal
 
 Wird von Internet Explorer oder MSHTML aufgerufen, um die `IDispatch` -Schnittstelle des Hosts zu erhalten.
 
@@ -1355,17 +1355,17 @@ virtual HRESULT OnGetExternal(LPDISPATCH* lppDispatch);
 ### <a name="parameters"></a>Parameter
 
 *lppDispatch*<br/>
-Ein Zeiger auf die Adresse, die empfängt die `IDispatch` Schnittstellenzeiger der hostanwendung. Wenn der Host eine Automatisierungsschnittstelle verfügbar macht, können sie einen Verweis auf Internet Explorer oder MSHTML AUFGERUFEN, durch diesen Parameter bereitzustellen. Den Inhalt dieses Parameters sollte immer auf NULL initialisiert werden, auch wenn die Methode fehlschlägt.
+Ein Zeiger auf die Adresse, die den `IDispatch` Schnittstellen Zeiger der Host Anwendung empfängt. Wenn der Host eine Automatisierungsschnittstelle verfügbar macht, kann er mithilfe dieses Parameters einen Verweis auf Internet Explorer oder MSHTML bereitstellen. Der Inhalt dieses Parameters sollte immer mit NULL initialisiert werden, auch wenn die Methode fehlschlägt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK, wenn erfolgreich, oder ein OLE definierter Fehlercode andernfalls.
+S_OK, wenn erfolgreich, oder ein OLE-definierter Fehlercode andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnGetExternal` auf reagieren die `GetExternal` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnGetExternal` schreiben Sie, um `GetExternal` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: getexternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) in der Windows SDK.
 
-##  <a name="ongethostinfo"></a>  CHtmlView::OnGetHostInfo
+##  <a name="ongethostinfo"></a>CHtmlView:: ongethostinfo
 
 Ruft die UI-Fähigkeiten des Internet Explorer- oder MSHTML-Hosts ab.
 
@@ -1376,19 +1376,19 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>Parameter
 
 *pInfo*<br/>
-Adresse von einem [DOCHOSTUIINFO](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa770044\(v=vs.85\)) Struktur, die Funktionen des Hosts empfängt.
+Adresse einer [dochostuiinfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa770044\(v=vs.85\)) -Struktur, die die Benutzeroberflächen Funktionen des Hosts empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK, wenn erfolgreich, oder ein OLE definierter Fehlercode andernfalls.
+S_OK, wenn erfolgreich, oder ein OLE-definierter Fehlercode andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnGetHostInfo` auf reagieren die `GetHostInfo` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnGetHostInfo` schreiben Sie, um `GetHostInfo` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: gethostinfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) in der Windows SDK.
 
-##  <a name="ongetoptionkeypath"></a>  CHtmlView::OnGetOptionKeyPath
+##  <a name="ongetoptionkeypath"></a>CHtmlView:: ongetoptionkeypath
 
-Rufen Sie diese Memberfunktion rufen den Registrierungsschlüssel, unter dem Internet Explorer oder MSHTML benutzereinstellungen speichert.
+Mit dieser Member-Funktion können Sie den Registrierungsschlüssel abrufen, unter dem Internet Explorer oder MSHTML Benutzereinstellungen speichert.
 
 ```
 virtual HRESULT OnGetOptionKeyPath(
@@ -1399,22 +1399,22 @@ virtual HRESULT OnGetOptionKeyPath(
 ### <a name="parameters"></a>Parameter
 
 *pchKey*<br/>
-Adresse von einem `LPOLESTR` , empfängt der Unterschlüssel Registrierungszeichenfolge, in dem der Host die Standardoptionen speichert. Dieser Unterschlüssel werden unter dem Schlüssel HKEY_CURRENT_USER. Ordnen Sie diesen Arbeitsspeicher mit [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc). Die aufrufende Anwendung ist verantwortlich für das Freigeben dieses Speichers mit [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree). Dieser Parameter sollte immer auf NULL initialisiert werden, auch wenn die Methode fehlschlägt.
+Adresse eines `LPOLESTR` , der die Registrierungs Unterschlüssel-Zeichenfolge empfängt, in der der Host seine Standardoptionen speichert. Dieser Unterschlüssel wird unter dem HKEY_CURRENT_USER-Schlüssel angezeigt. Weisen Sie diesen Arbeitsspeicher mit [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)zu. Die aufrufenden Anwendung ist dafür verantwortlich, diesen Arbeitsspeicher mit " [CoTaskMemFree" frei](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)zugeben. Dieser Parameter sollte immer mit NULL initialisiert werden, auch wenn die Methode fehlschlägt.
 
 *dwReserved*<br/>
-Für zukünftige Verwendung reserviert. Derzeit nicht verwendet.
+Zur künftigen Verwendung reserviert. Derzeit nicht verwendet.
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK, wenn erfolgreich, oder andernfalls S_FALSE. Wenn S_FALSE, Internet Explorer oder MSHTML auf eigene Benutzeroptionen festgelegt ist.
+S_OK, wenn erfolgreich, andernfalls S_FALSE. Wenn S_FALSE, werden Internet Explorer oder MSHTML standardmäßig die eigenen Benutzeroptionen verwendet.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnGetOptionKeyPath` auf reagieren die `GetOptionKeyPath` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnGetOptionKeyPath` schreiben Sie, um `GetOptionKeyPath` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: getoptionkeypath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) im Windows SDK.
 
-##  <a name="onhideui"></a>  CHtmlView::OnHideUI
+##  <a name="onhideui"></a>CHtmlView:: onhideui
 
-Diese Memberfunktion wird von Framework aufgerufen, wenn Internet Explorer oder MSHTML seine Menüs und Symbolleisten entfernt.
+Diese Member-Funktion wird von Framework aufgerufen, wenn Internet Explorer oder MSHTML die Menüs und Symbolleisten entfernt.
 
 ```
 virtual HRESULT OnHideUI();
@@ -1422,15 +1422,15 @@ virtual HRESULT OnHideUI();
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK, wenn erfolgreich, oder ein OLE definierter Fehlercode andernfalls.
+S_OK, wenn erfolgreich, oder ein OLE-definierter Fehlercode andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnHideUI` auf reagieren die `HideUI` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnHideUI` schreiben Sie, um `HideUI` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)) im Windows SDK.
 
-##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
+##  <a name="onmenubar"></a>CHtmlView:: onmenubar
 
-Diese Memberfunktion wird von Framework aufgerufen wenn die [Menüleiste](/previous-versions/aa752131\(v=vs.85\)) -Eigenschaft geändert hat.
+Diese Member-Funktion wird von Framework aufgerufen, wenn die [MenuBar](/previous-versions/aa752131\(v=vs.85\)) -Eigenschaft geändert wurde.
 
 ```
 virtual void OnMenuBar(BOOL bMenuBar);
@@ -1439,11 +1439,11 @@ virtual void OnMenuBar(BOOL bMenuBar);
 ### <a name="parameters"></a>Parameter
 
 *bMenuBar*<br/>
-Ungleich NULL, wenn die Internet Explorer-Menüleiste angezeigt wird; 0 (null) andernfalls.
+Ungleich 0 (null), wenn die Internet Explorer-Menüleiste sichtbar ist. andernfalls NULL.
 
-##  <a name="onnavigatecomplete2"></a>  CHtmlView::OnNavigateComplete2
+##  <a name="onnavigatecomplete2"></a>CHtmlView:: OnNavigateComplete2
 
-Diese Memberfunktion wird von Framework aufgerufen, nach Abschluss der Navigation zu einem Link (in einem Fenster- oder Frameset-Element).
+Diese Member-Funktion wird vom Framework aufgerufen, nachdem eine Navigation zu einem Link abgeschlossen wurde (entweder in einem Fenster oder einem Frameset-Element).
 
 ```
 virtual void OnNavigateComplete2(LPCTSTR strURL);
@@ -1452,15 +1452,15 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
 ### <a name="parameters"></a>Parameter
 
 *strURL*<br/>
-Ein Zeichenfolgenausdruck, der die URL ergibt UNC-Namen, oder PIDL (einen Zeiger auf eine Liste der Element-ID), zu dem navigiert wurde.
+Ein Zeichen folgen Ausdruck, der die URL, den UNC-Dateinamen oder die PIDL (einen Zeiger auf eine Element Bezeichner-Liste) ergibt, zu der navigiert wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Der URL-Parameter kann ein PIDL im Falle einer Shell Name Space-Entität sein, für die keine URL-Darstellung vorhanden ist.
+Der URL-Parameter kann eine PIDL im Fall einer Shell-Namespace-Entität sein, für die keine URL-Darstellung vorhanden ist.
 
-Beachten Sie, die in die URL enthalten *StrURL* kann sich von der URL, die der Browser navigieren, mitgeteilt wurde, da diese URL der vereinheitlichte und qualifizierte URL sein. Wenn eine Anwendung "www.microsoft.com" in einem Aufruf an eine URL gibt z. B. [Navigate](#navigate) oder [Navigate2](#navigate2), der URL übergeben von `OnNavigateComplete2` werden "<http://www.microsoft.com/>". Auch wenn der Server den Browser zu einer anderen URL umgeleitet, wird die umgeleitete URL hier angezeigt.
+Beachten Sie, dass sich die in " *strauurl* " enthaltene URL von der URL unterscheidet, zu der der Browser navigiert hat, weil diese URL die kanonisierte und qualifizierte URL ist. Wenn eine Anwendung z. b. die URL "www.Microsoft.com" in einem-Befehl von [Navigate](#navigate) oder [Navigate2](#navigate2)angibt, lautet die von `OnNavigateComplete2` über gegebene URL<http://www.microsoft.com/>"". Wenn der Server den Browser an eine andere URL umgeleitet hat, wird die umgeleitete URL hier widergespiegelt.
 
-##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError
+##  <a name="onnavigateerror"></a>CHtmlView:: onnavigateerror
 
 Wird vom Framework aufgerufen, wenn ein Fehler bei der Navigation zu einem Link auftritt.
 
@@ -1475,26 +1475,26 @@ virtual void OnNavigateError(
 ### <a name="parameters"></a>Parameter
 
 *lpszURL*<br/>
-Die URL für die Navigation fehlgeschlagen ist.
+Die URL, für die die Navigation fehlgeschlagen ist.
 
 *lpszFrame*<br/>
-Der Name des Frames, in dem die Ressource ist, werden Sie angezeigt werden, oder NULL, wenn keine benannten Rahmen für die Ressource als Ziel angegeben wurde.
+Der Name des Frames, in dem die Ressource angezeigt werden soll, oder NULL, wenn kein benannter Frame für die Ressource bestimmt wurde.
 
 *dwError*<br/>
-Ein Fehlerstatuscode, falls verfügbar. Eine Liste der möglichen HRESULT und HTTP-Statuscodes, finden Sie unter [NavigateError Status Ereigniscodes.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\)).
+Ein Fehlerstatus Code, falls verfügbar. Eine Liste der möglichen HRESULT-und HTTP-Statuscodes finden Sie unter [NavigateError-Ereignis Statuscodes.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\))
 
 *pbCancel*<br/>
-Gibt an, ob die Navigation zu einer Fehlerseite oder alle weiteren von Autosearch abgebrochen werden soll. Wenn "true" (Standard), fahren Sie mit der Navigation zu einem Fehler (Seite) oder von Autosearch; False gibt an, kündigen Sie die Navigation zu einem Fehler (Seite) oder die automatische Suche.
+Gibt an, ob die Navigation zu einer Fehlerseite oder einer weiteren AutoSearch abgebrochen werden soll. Wenn true (Standardeinstellung), fahren Sie mit der Navigation zu einer Fehlerseite oder der Autosuche fort. Wenn der Wert false ist, wird die Navigation zu einer Fehlerseite oder AutoSearch abgebrochen.
 
 ### <a name="remarks"></a>Hinweise
 
-Überschreiben Sie diese Methode, um die Fehlerbehandlung für die benutzerdefinierte Navigation bereitstellen.
+Überschreiben Sie diese Methode, um benutzerdefinierte Navigationsfehler Behandlung bereitzustellen.
 
-Weitere Informationen finden Sie unter [DWebBrowserEvents2::NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
+Weitere Informationen finden Sie unter [DWebBrowserEvents2:: NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
 
-##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2
+##  <a name="onnewwindow2"></a>CHtmlView:: OnNewWindow2
 
-Diese Memberfunktion wird von Framework aufgerufen, bei ein neues Fenster erstellt werden soll, eine Ressource anzuzeigen.
+Diese Member-Funktion wird von Framework aufgerufen, wenn ein neues Fenster zum Anzeigen einer Ressource erstellt werden soll.
 
 ```
 virtual void OnNewWindow2(
@@ -1505,18 +1505,18 @@ virtual void OnNewWindow2(
 ### <a name="parameters"></a>Parameter
 
 *ppDisp*<br/>
-Ein Zeiger auf einen Schnittstellenzeiger, der optional ist, empfängt der `IDispatch` Schnittstellenzeiger eines neuen WebBrowser oder Internet Explorer-Objekts.
+Ein Zeiger auf einen Schnittstellen Zeiger, der optional den `IDispatch` Schnittstellen Zeiger eines neuen Webbrowser-oder Internet Explorer-Objekts empfängt.
 
-*Kündigung*<br/>
-Ein Zeiger auf ein Flag "Abbrechen". Eine Anwendung kann diesen Parameter, der ungleich Null zum Abbrechen des Vorgangs für die Navigation oder 0 (null), um fortfahren zu ermöglichen festlegen.
+*Abbrechen*<br/>
+Ein Zeiger auf ein Cancel-Flag. Eine Anwendung kann diesen Parameter auf einen Wert ungleich 0 (null) festlegen, um den Navigations Vorgang abzubrechen, oder auf NULL, um die Fortsetzung zuzulassen.
 
 ### <a name="remarks"></a>Hinweise
 
-Dieses Ereignis steht vor der Erstellung eines neuen Fensters aus in den WebBrowser.
+Dieses Ereignis wird vor der Erstellung eines neuen Fensters im Webbrowser vorangestellt.
 
-##  <a name="onprogresschange"></a>  CHtmlView::OnProgressChange
+##  <a name="onprogresschange"></a>CHtmlView:: onprogresschange
 
-Diese Memberfunktion wird von dem Framework, eine Anwendung zu benachrichtigen, dass der Status eines Downloadvorgangs aktualisiert wurde aufgerufen.
+Diese Member-Funktion wird vom Framework aufgerufen, um eine Anwendung zu benachrichtigen, dass der Fortschritt eines Downloadvorgangs aktualisiert wurde.
 
 ```
 virtual void OnProgressChange(
@@ -1527,18 +1527,18 @@ virtual void OnProgressChange(
 ### <a name="parameters"></a>Parameter
 
 *nProgress*<br/>
-Die Menge des gesamten Status, ein- oder -1, wenn die Bearbeitung abgeschlossen ist.
+Der Gesamtfortschritt, der angezeigt werden soll, oder-1, wenn der Fortschritt abgeschlossen ist.
 
 *nProgressMax*<br/>
-Maximale Status-Wert.
+Maximaler Statuswert.
 
 ### <a name="remarks"></a>Hinweise
 
-Container können die Informationen von diesem Ereignis, um die Anzahl der Bytes, die bereits heruntergeladenen anzuzeigen oder um eine Statusanzeige zu aktualisieren.
+Der Container kann die von diesem Ereignis bereitgestellten Informationen verwenden, um die bisher heruntergeladene Anzahl von Bytes anzuzeigen oder um eine Statusanzeige zu aktualisieren.
 
-##  <a name="onpropertychange"></a>  CHtmlView::OnPropertyChange
+##  <a name="onpropertychange"></a>CHtmlView:: onpropertychange
 
-Diese Memberfunktion wird aufgerufen, durch das Framework eine Anwendung zu benachrichtigen, [PutProperty](#putproperty) den Wert einer Eigenschaft geändert hat.
+Diese Member-Funktion wird vom Framework aufgerufen, um eine Anwendung zu benachrichtigen, dass [PutProperty](#putproperty) den Wert einer Eigenschaft geändert hat.
 
 ```
 virtual void OnPropertyChange(LPCTSTR lpszProperty);
@@ -1547,17 +1547,17 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
 ### <a name="parameters"></a>Parameter
 
 *lpszProperty*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der Eigenschaft.
+Ein Zeiger auf eine Zeichenfolge, die den Namen der Eigenschaft enthält.
 
-##  <a name="onquit"></a>  CHtmlView::OnQuit
+##  <a name="onquit"></a>CHtmlView:: onquit
 
-Diese Memberfunktion wird von einer Anwendung benachrichtigen, dass Internet Explorer-Anwendung beenden kann das Framework aufgerufen.
+Diese Member-Funktion wird vom Framework aufgerufen, um eine Anwendung zu benachrichtigen, dass die Internet Explorer-Anwendung beendet werden kann.
 
 ```
 virtual void OnQuit();
 ```
 
-##  <a name="onresizeborder"></a>  CHtmlView::OnResizeBorder
+##  <a name="onresizeborder"></a>CHtmlView:: onresizeborder
 
 Wird von der Implementierung von [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)in Internet Explorer oder MSHTML aufgerufen, die das Objekt benachrichtigt, dass es die Größe seines Rahmenbereichs ändern muss.
 
@@ -1571,23 +1571,23 @@ virtual HRESULT OnResizeBorder(
 ### <a name="parameters"></a>Parameter
 
 *prcBorder*<br/>
-Neue äußere Rechteck für Rahmenbereichs.
+Neues Äußeres Rechteck für den Rahmen Bereich.
 
 *pUIWindow*<br/>
-Ein Zeiger auf die Schnittstelle für das Frame oder das Dokumentfenster Window-Objekt, dessen Rahmen geändert hat.
+Ein Zeiger auf die-Schnittstelle für das Frame-oder Dokument Fenster Objekt, dessen Rahmen sich geändert hat.
 
 *fFrameWindow*<br/>
-TRUE, wenn das Rahmenfenster aufruft [ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), andernfalls "false".
+TRUE, wenn das Rahmen Fenster [IOleInPlaceActiveObject:: resizeborder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)aufruft, andernfalls false.
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK, wenn erfolgreich, oder ein OLE definierter Fehlercode andernfalls.
+S_OK, wenn erfolgreich, oder ein OLE-definierter Fehlercode andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnResizeBorder` auf reagieren die `ResizeBorder` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnResizeBorder` schreiben Sie, um `ResizeBorder` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: resizeborder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) im Windows SDK.
 
-##  <a name="onshowcontextmenu"></a>  CHtmlView::OnShowContextMenu
+##  <a name="onshowcontextmenu"></a>CHtmlView:: onshowcontextmenu
 
 Wird von Internet Explorer oder MSHTML aufgerufen, wenn die Anzeige des Kontextmenüs bevorsteht.
 
@@ -1602,26 +1602,26 @@ virtual HRESULT OnShowContextMenu(
 ### <a name="parameters"></a>Parameter
 
 *dwID*<br/>
-Der Bezeichner des Kontextmenüs angezeigt werden. Finden Sie unter `IDocHostUIHandler::ShowContextMenu` im Windows SDK für eine Liste von Werten.
+Der Bezeichner des Kontextmenüs, das angezeigt werden soll. Eine `IDocHostUIHandler::ShowContextMenu` Liste der Werte finden Sie unter im Windows SDK.
 
 *ppt*<br/>
-Die Bildschirmkoordinaten für das Menü.
+Bildschirm Koordinaten für das Menü.
 
 *pcmdtReserved*<br/>
-[IOleCommandTarget](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget) verwendete Schnittstelle zum Abfragen des Befehlsstatus und Ausführen von Befehlen für dieses Objekt.
+[IOleCommandTarget](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget) -Schnittstelle zum Abfragen des Befehlsstatus und zum Ausführen von Befehlen für dieses Objekt.
 
 *pdispReserved*<br/>
-IDispatch-Schnittstelle des Objekts an den Bildschirmkoordinaten. Dies kann ein Host unterscheiden bestimmter Objekte aus, um spezifischere Kontext bereitzustellen.
+Die IDispatch-Schnittstelle des Objekts an den Bildschirm Koordinaten. Dies ermöglicht es einem Host, bestimmte Objekte zu unterscheiden, um einen spezifischeren Kontext bereitzustellen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Finden Sie unter [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) im Windows SDK für eine Liste von Werten.
+Eine Liste der Werte finden Sie unter [IDocHostUIHandler:: ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) im Windows SDK.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnShowContextMenu` auf reagieren die `ShowContextMenu` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnShowContextMenu` schreiben Sie, um `ShowContextMenu` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) im Windows SDK.
 
-##  <a name="onshowui"></a>  CHtmlView::OnShowUI
+##  <a name="onshowui"></a>CHtmlView:: onshowui
 
 Wird aufgerufen, wenn die Anzeige von Menüs und Symbolleisten in Internet Explorer oder MSHTML bevorsteht.
 
@@ -1637,31 +1637,31 @@ virtual HRESULT OnShowUI(
 ### <a name="parameters"></a>Parameter
 
 *dwID*<br/>
-Für zukünftige Verwendung reserviert.
+Zur künftigen Verwendung reserviert.
 
 *pActiveObject*<br/>
-[IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) -Schnittstelle des aktiven Objekts.
+[IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) -Schnittstelle des derzeit aktiven-Objekts.
 
 *pCommandTarget*<br/>
-[IOleCommandTarget](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget) -Schnittstelle des Objekts.
+[IOleCommandTarget](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget) -Schnittstelle des-Objekts.
 
 *pFrame*<br/>
 [IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe) -Schnittstelle des Objekts. Dies ist für Menüs und Symbolleisten erforderlich.
 
 *pDoc*<br/>
-[IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) Schnittstelle für das Objekt. Dies ist für Symbolleisten erforderlich.
+[IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) -Schnittstelle für das-Objekt. Dies ist für Symbolleisten erforderlich.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Finden Sie unter [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) im Windows SDK für eine Liste von Werten.
+Eine Liste der Werte finden Sie unter [IDocHostUIHandler:: showUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) im Windows SDK.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnShowUI` auf reagieren die `ShowUI` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnShowUI` schreiben Sie, um `ShowUI` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: showUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) in der Windows SDK.
 
-##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
+##  <a name="onstatusbar"></a>CHtmlView:: onstatusbar
 
-Diese Memberfunktion wird von Framework aufgerufen wenn die [StatusBar](/previous-versions//aa768270\(v=vs.85\)) -Eigenschaft geändert hat.
+Diese Member-Funktion wird von Framework aufgerufen, wenn die [StatusBar](/previous-versions//aa768270\(v=vs.85\)) -Eigenschaft geändert wurde.
 
 ```
 virtual void OnStatusBar(BOOL bStatusBar);
@@ -1670,11 +1670,11 @@ virtual void OnStatusBar(BOOL bStatusBar);
 ### <a name="parameters"></a>Parameter
 
 *bStatusBar*<br/>
-Ungleich NULL, wenn die Statusleiste von Internet Explorer angezeigt wird, oder andernfalls NULL.
+Ungleich 0 (null), wenn die Statusleiste von Internet Explorer sichtbar ist, andernfalls NULL.
 
-##  <a name="onstatustextchange"></a>  CHtmlView::OnStatusTextChange
+##  <a name="onstatustextchange"></a>CHtmlView:: onstatustextchange
 
-Diese Memberfunktion wird aufgerufen, durch das Framework eine Anwendung zu benachrichtigen, die der Text der Statusleiste des WebBrowser-Steuerelements geändert wurde.
+Diese Member-Funktion wird vom Framework aufgerufen, um eine Anwendung zu benachrichtigen, dass der Text der Statusleiste, die dem Webbrowser-Steuerelement zugeordnet ist, geändert wurde.
 
 ```
 virtual void OnStatusTextChange(LPCTSTR lpszText);
@@ -1683,11 +1683,11 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parameter
 
 *lpszText*<br/>
-Eine Zeichenfolge, die den neuen Statusleistentext enthält.
+Eine Zeichenfolge, die den neuen Status leisten Text enthält.
 
-##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode
+##  <a name="ontheatermode"></a>CHtmlView:: ontheater Mode
 
-Diese Memberfunktion wird von Framework aufgerufen wenn die [TheaterMode](/previous-versions/aa768273\(v=vs.85\)) -Eigenschaft geändert hat.
+Diese Member-Funktion wird von Framework aufgerufen, wenn die [Theater Mode](/previous-versions/aa768273\(v=vs.85\)) -Eigenschaft geändert wurde.
 
 ```
 virtual void OnTheaterMode(BOOL bTheaterMode);
@@ -1696,11 +1696,11 @@ virtual void OnTheaterMode(BOOL bTheaterMode);
 ### <a name="parameters"></a>Parameter
 
 *bTheaterMode*<br/>
-Ungleich NULL, wenn Internet Explorer im Kinomodus ausgeführt wird; 0 (null) andernfalls.
+Ungleich 0 (null), wenn sich Internet Explorer im Theater Modus befindet. andernfalls NULL.
 
-##  <a name="ontitlechange"></a>  CHtmlView::OnTitleChange
+##  <a name="ontitlechange"></a>CHtmlView:: ontitlechange
 
-Diese Memberfunktion wird vom Framework, um eine Anwendung zu benachrichtigen, wenn der Titel eines Dokuments im WebBrowser-Steuerelement verfügbar ist oder der Änderungen aufgerufen.
+Diese Member-Funktion wird vom Framework aufgerufen, um eine Anwendung zu benachrichtigen, wenn der Titel eines Dokuments im Webbrowser-Steuerelement verfügbar ist oder geändert wird.
 
 ```
 virtual void OnTitleChange(LPCTSTR lpszText);
@@ -1709,15 +1709,15 @@ virtual void OnTitleChange(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parameter
 
 *lpszText*<br/>
-Der Titel des neuen Dokuments.
+Der neue Titel des Dokuments.
 
 ### <a name="remarks"></a>Hinweise
 
-HTML-Code kann der Titel ändern; Während HTML weiterhin heruntergeladen wird, wird die URL des Dokuments als Titel festgelegt. Nach der tatsächliche Titel (sofern vorhanden) von der HTML-Code analysiert wird, wird der Titel entsprechend den eigentlichen Titel geändert.
+Für HTML kann sich der Titel ändern. Obwohl HTML weiterhin heruntergeladen wird, wird die URL des Dokuments als Titel festgelegt. Nachdem der echte Titel (sofern vorhanden) aus dem HTML-Code analysiert wurde, wird der Titel so geändert, dass er den tatsächlichen Titel widerspiegelt.
 
-##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar
+##  <a name="ontoolbar"></a>CHtmlView:: ontoolbar
 
-Diese Memberfunktion wird von Framework aufgerufen wenn die [Symbolleiste](/previous-versions/aa768274\(v=vs.85\)) -Eigenschaft geändert hat.
+Diese Member-Funktion wird von Framework aufgerufen, wenn sich die [Toolbar](/previous-versions/aa768274\(v=vs.85\)) -Eigenschaft geändert hat.
 
 ```
 virtual void OnToolBar(BOOL bToolBar);
@@ -1726,9 +1726,9 @@ virtual void OnToolBar(BOOL bToolBar);
 ### <a name="parameters"></a>Parameter
 
 *bToolBar*<br/>
-Ungleich NULL, wenn Internet Explorer Symbolleiste angezeigt wird, oder andernfalls NULL.
+Ungleich 0 (null), wenn die Symbolleiste von Internet Explorer sichtbar ist oder andernfalls 0.
 
-##  <a name="ontranslateaccelerator"></a>  CHtmlView::OnTranslateAccelerator
+##  <a name="ontranslateaccelerator"></a>CHtmlView:: ontranslateaccelerator
 
 Wird von Internet Explorer oder MSHTML aufgerufen, wenn [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) oder [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) aufgerufen wird, um Tastenkombinations-Menünachrichten aus der Nachrichtenwarteschlange des Containers zu verarbeiten.
 
@@ -1742,23 +1742,23 @@ virtual HRESULT OnTranslateAccelerator(
 ### <a name="parameters"></a>Parameter
 
 *lpMsg*<br/>
-Verweist auf die Nachricht, die möglicherweise übersetzt werden müssen.
+Verweist auf die Meldung, die möglicherweise übersetzt werden muss.
 
 *pguidCmdGroup*<br/>
-Befehls-ID an.
+Bezeichner der Befehlsgruppe.
 
 *nCmdID*<br/>
-Befehls-ID.
+Befehls Bezeichner.
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK, wenn erfolgreich, oder andernfalls S_FALSE.
+S_OK, wenn erfolgreich, andernfalls S_FALSE.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnTranslateAccelerator` auf reagieren die `TranslateAccelerator` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnTranslateAccelerator` schreiben Sie, um `TranslateAccelerator` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) im Windows SDK.
 
-##  <a name="ontranslateurl"></a>  CHtmlView::OnTranslateUrl
+##  <a name="ontranslateurl"></a>CHtmlView:: ontranslateurl
 
 Wird von Internet Explorer oder MSHTML aufgerufen, um dem Host die Möglichkeit zu geben, die zu ladende URL zu ändern.
 
@@ -1772,23 +1772,23 @@ virtual HRESULT OnTranslateUrl(
 ### <a name="parameters"></a>Parameter
 
 *dwTranslate*<br/>
-Für zukünftige Verwendung reserviert.
+Zur künftigen Verwendung reserviert.
 
 *pchURLIn*<br/>
-Die Adresse einer Zeichenfolge, die vom Internet Explorer oder MSHTML AUFGERUFEN, die die URL zu übersetzenden darstellt.
+Die Adresse einer Zeichenfolge, die von Internet Explorer oder MSHTML bereitgestellt wird und die zu übersetzende URL darstellt.
 
 *ppchURLOut*<br/>
-Adresse des einen Zeichenfolgenzeiger, der die Adresse der übersetzten URL empfängt. Der Host weist den Puffer mit der Speicher-Aufgaben reserviert wurde. Der Inhalt dieses Parameters sollte immer auf NULL initialisiert werden, auch wenn die URL nicht übersetzt werden ist, oder die Methode fehlschlägt.
+Adresse eines Zeichen folgen Zeigers, der die Adresse der übersetzten URL empfängt. Der Host weist den Puffer mithilfe der Arbeitsspeicher Zuweisung zu. Der Inhalt dieses Parameters sollte immer mit NULL initialisiert werden, auch wenn die URL nicht übersetzt wird oder die Methode fehlschlägt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`S_OK` Wenn die URL wurde übersetzt, S_FALSE, wenn die URL nicht übersetzt wurde, oder ein OLE-definierte Fehlercode, wenn ein Fehler aufgetreten ist.
+`S_OK`Wenn die URL übersetzt wurde, S_FALSE, wenn die URL nicht übersetzt wurde, oder ein OLE-definierter Fehlercode, wenn ein Fehler aufgetreten ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Außer Kraft setzen `OnTranslateUrl` auf reagieren die `TranslateUrl` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement. Finden Sie unter [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) im Windows SDK für Weitere Informationen.
+Über `OnTranslateUrl` schreiben Sie, um `TranslateUrl` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren. Weitere Informationen finden Sie unter [IDocHostUIHandler:: translateurl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) im Windows SDK.
 
-##  <a name="onupdateui"></a>  CHtmlView::OnUpdateUI
+##  <a name="onupdateui"></a>CHtmlView:: onupdateui
 
 Benachrichtigt den Host, dass sich der Befehlsstatus geändert hat.
 
@@ -1798,15 +1798,15 @@ virtual HRESULT OnUpdateUI();
 
 ### <a name="return-value"></a>Rückgabewert
 
-S_OK, wenn erfolgreich, oder ein OLE definierter Fehlercode andernfalls.
+S_OK, wenn erfolgreich, oder ein OLE-definierter Fehlercode andernfalls.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Host sollte es sich um den Zustand von Symbolleisten-Schaltflächen aktualisieren. Diese Methode wird aufgerufen, unabhängig von den Rückgabewert von `ShowUI`. Außer Kraft setzen `OnUpdateUI` auf reagieren die `UpdateUI` Benachrichtigung aus dem Microsoft-Webbrowser-Steuerelement.
+Der Host sollte den Status von Symbolleisten Schaltflächen aktualisieren. Diese Methode wird unabhängig vom Rückgabewert von `ShowUI`aufgerufen. Über `OnUpdateUI` schreiben Sie, um `UpdateUI` auf die Benachrichtigung vom Microsoft Webbrowser-Steuerelement zu reagieren.
 
-##  <a name="onvisible"></a>  CHtmlView::OnVisible
+##  <a name="onvisible"></a>CHtmlView:: onvisible
 
-Diese Memberfunktion wird von Framework aufgerufen, wenn es sich bei im Fenster für den WebBrowser angezeigt oder ausgeblendet werden soll.
+Diese Member-Funktion wird von Framework aufgerufen, wenn das Fenster für den Webbrowser angezeigt oder ausgeblendet werden soll.
 
 ```
 virtual void OnVisible(BOOL bVisible);
@@ -1815,15 +1815,15 @@ virtual void OnVisible(BOOL bVisible);
 ### <a name="parameters"></a>Parameter
 
 *bVisible*<br/>
-Ungleich NULL, wenn das Objekt sichtbar ist oder andernfalls NULL.
+Ungleich 0 (null), wenn das Objekt sichtbar ist, andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Dadurch wird das Hostfenster für Objekt-Steuerelement die gleiche Weise verhält, die Internet Explorer-Fenster verhält.
+Dies ermöglicht das Verhalten des Objekt Steuerelement-Host Fensters auf dieselbe Weise wie das Fenster "Internet Explorer".
 
-##  <a name="putproperty"></a>  CHtmlView::PutProperty
+##  <a name="putproperty"></a>CHtmlView::P utproperty
 
-Rufen Sie diese Memberfunktion zum Festlegen der Eigenschaft, die einem angegebenen Objekt zugeordnet.
+Mit dieser Member-Funktion können Sie die Eigenschaft festlegen, die einem angegebenen Objekt zugeordnet ist.
 
 ```
 void PutProperty(
@@ -1850,13 +1850,13 @@ void PutProperty(
 ### <a name="parameters"></a>Parameter
 
 *lpszProperty*<br/>
-Eine Zeichenfolge mit die festzulegende Eigenschaft.
+Eine Zeichenfolge, die die festzulegende Eigenschaft enthält.
 
 *vtValue*<br/>
-Der neue Wert der Eigenschaft angegeben wird, durch *LpszProperty*.
+Der neue Wert der Eigenschaft, die von *lpszproperty*angegeben wird.
 
 *lpszPropertyName*<br/>
-Ein Zeiger auf eine Zeichenfolge, die mit dem Namen der festzulegenden Eigenschaft.
+Ein Zeiger auf eine Zeichenfolge, die den Namen der festzulegenden Eigenschaft enthält.
 
 *dValue*<br/>
 Der neue Wert der Eigenschaft.
@@ -1865,16 +1865,16 @@ Der neue Wert der Eigenschaft.
 Der neue Wert der Eigenschaft.
 
 *lpszValue*<br/>
-Ein Zeiger auf eine Zeichenfolge, enthält den neuen Wert der Eigenschaft.
+Ein Zeiger auf eine Zeichenfolge, die den neuen Wert der Eigenschaft enthält.
 
-*nValue*<br/>
+*nWert*<br/>
 Der neue Wert der Eigenschaft.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="queryformscommand"></a>  CHtmlView::QueryFormsCommand
+##  <a name="queryformscommand"></a>CHtmlView:: queryformscommand
 
 Fragt den Status von Befehlen ab, die von Ereignissen auf der Benutzeroberfläche generiert wurden.
 
@@ -1889,28 +1889,28 @@ HRESULT QueryFormsCommand(
 ### <a name="parameters"></a>Parameter
 
 *dwCommandID*<br/>
-Der Bezeichner des Befehls, die abgefragt wird.
+Der Bezeichner des Befehls, der abgefragt wird.
 
 *pbSupported*<br/>
-Ein Zeiger auf einen booleschen Wert, der angibt, ob der Befehl (identifizierte *DwCommandID*) wird unterstützt. Bei "true", wird der Befehl unterstützt. andernfalls "false".
+Ein Zeiger auf einen booleschen Wert, der angibt, ob der von *dwcommandid*identifizierte Befehl unterstützt wird. TRUE gibt an, dass der Befehl unterstützt wird. andernfalls false.
 
-*pbEnabled*<br/>
-Ein Zeiger auf einen booleschen Wert, der angibt, ob der Befehl (identifizierte *DwCommandID*) aktiviert ist. Bei "true", wird der Befehl unterstützt. andernfalls "false".
+*pbenabled*<br/>
+Ein Zeiger auf einen booleschen Wert, der angibt, ob der (von *dwcommandid*identifizierte) Befehl aktiviert ist. TRUE gibt an, dass der Befehl unterstützt wird. andernfalls false.
 
 *pbChecked*<br/>
-Ein Zeiger auf einen booleschen Wert, der angibt, ob der Befehl (identifizierte *DwCommandID*) aktiviert ist. Bei "true", wird der Befehl unterstützt. andernfalls "false".
+Ein Zeiger auf einen booleschen Wert, der angibt, ob der (von *dwcommandid*identifizierte) Befehl aktiviert ist. TRUE gibt an, dass der Befehl unterstützt wird. andernfalls false.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein standard HRESULT-Wert. Eine vollständige Liste der möglichen Werte, finden Sie unter [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) im Windows SDK.
+Ein HRESULT-Standardwert. Eine umfassende Liste möglicher Werte finden Sie unter [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) in der Windows SDK.
 
 ### <a name="remarks"></a>Hinweise
 
-`QueryFormsCommand` implementiert das Verhalten der [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) Methode.
+`QueryFormsCommand`implementiert das Verhalten der [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) -Methode.
 
-##  <a name="querystatuswb"></a>  CHtmlView::QueryStatusWB
+##  <a name="querystatuswb"></a>CHtmlView:: QueryStatus WB
 
-Rufen Sie diese Memberfunktion, um einen Befehlsstatus abzufragen.
+Mit dieser Member-Funktion können Sie einen Befehlsstatus Abfragen.
 
 ```
 OLECMDF QueryStatusWB(OLECMDID cmdID) const;
@@ -1919,21 +1919,21 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 ### <a name="parameters"></a>Parameter
 
 *cmdID*<br/>
-Die [OLECMDID](/windows/desktop/api/docobj/ne-docobj-olecmdid) Wert des Befehls für die der Aufrufer Statusinformationen benötigt.
+Der [olecmdid](/windows/desktop/api/docobj/ne-docobj-olecmdid) -Wert des Befehls, für den der Aufrufer Statusinformationen benötigt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Adresse der [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf) -Wert, der den Status des Befehls zu empfangen.
+Die Adresse des [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf) -Werts, der den Status des Befehls empfängt.
 
 ### <a name="remarks"></a>Hinweise
 
-`QueryStatusWB` implementiert das Verhalten der [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) Methode.
+`QueryStatusWB`implementiert das Verhalten der [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) -Methode.
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="refresh"></a>  CHtmlView::Refresh
+##  <a name="refresh"></a>CHtmlView:: Refresh
 
-Lädt erneut die URL oder die Datei, die aktuell im Webbrowser angezeigt wird.
+Lädt die URL oder die Datei, die derzeit vom Webbrowser angezeigt wird, erneut.
 
 ```
 void Refresh();
@@ -1941,13 +1941,13 @@ void Refresh();
 
 ### <a name="remarks"></a>Hinweise
 
-`Refresh` enthält keine Parameter für die Aktualisierung festlegen.
+`Refresh`enthält keine Parameter zum Festlegen der Aktualisierungs Ebene.
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="refresh2"></a>  CHtmlView::Refresh2
+##  <a name="refresh2"></a>CHtmlView:: Refresh2
 
-Lädt die Datei, die aktuell im Internet Explorer angezeigt wird.
+Lädt die Datei, die derzeit von Internet Explorer angezeigt wird, erneut.
 
 ```
 void Refresh2(int nLevel);
@@ -1956,17 +1956,17 @@ void Refresh2(int nLevel);
 ### <a name="parameters"></a>Parameter
 
 *nLevel*<br/>
-Die Adresse der Variablen, die Angabe der Ebene aktualisieren. Die möglichen Variablen sind definiert [RefreshConstants](/previous-versions/aa768363\(v=vs.85\)), im Windows SDK.
+Die Adresse der Variablen, die die Aktualisierungs Ebene angibt. Die möglichen Variablen werden in den Windows SDK in den [erfrischenden Konstanten](/previous-versions/aa768363\(v=vs.85\))definiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Im Gegensatz zu [aktualisieren](#refresh), `Refresh2` enthält einen Parameter, der die Ebene der Aktualisierung angibt.
+Anders als bei der [Aktualisierung](#refresh) enthält `Refresh2` einen Parameter, der die Aktualisierungsebene angibt.
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="setaddressbar"></a>  CHtmlView::SetAddressBar
+##  <a name="setaddressbar"></a>CHtmlView:: setaddressbar
 
-Rufen Sie diese Memberfunktion zum Anzeigen oder ausblenden Adressleiste des Internet Explorer-Objekts.
+Mit dieser Member-Funktion können Sie die Adressleiste des Internet Explorer-Objekts anzeigen oder ausblenden.
 
 ```
 void SetAddressBar(BOOL bNewValue);
@@ -1975,15 +1975,15 @@ void SetAddressBar(BOOL bNewValue);
 ### <a name="parameters"></a>Parameter
 
 *bNewValue*<br/>
-Nonzero-Adressleiste angezeigt; andernfalls 0 (null).
+Ungleich Null zum Anzeigen der Adressleiste; andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Gilt für InternetExplorer. Wenn Sie diesen Aufruf mit einem WebBrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, jedoch hat, diesen Aufruf werden ignoriert.
+Gilt für Internet Explorer. Wenn Sie diesen-Befehl mit einem Webbrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, aber der-Befehl wird ignoriert.
 
-##  <a name="setfullscreen"></a>  CHtmlView::SetFullScreen
+##  <a name="setfullscreen"></a>CHtmlView:: setfullscreen
 
-Rufen Sie diese Memberfunktion, um Internet Explorer entweder im Vollbildmodus oder das normale Modus festzulegen.
+Mit dieser Member-Funktion legen Sie Internet Explorer auf den Vollbildmodus oder den normalen Fenstermodus fest.
 
 ```
 void SetFullScreen(BOOL bNewValue);
@@ -1992,17 +1992,17 @@ void SetFullScreen(BOOL bNewValue);
 ### <a name="parameters"></a>Parameter
 
 *bNewValue*<br/>
-Ungleich NULL für den Vollbildmodus; andernfalls 0 (null).
+Ungleich NULL für den Vollbildmodus; andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Im Vollbildmodus die Internet Explorer-Hauptfensters maximiert, und der Statusleiste, die Symbolleiste, die Menüleiste und die Titelleiste werden ausgeblendet.
+Im Vollbildmodus wird das Internet Explorer-Hauptfenster maximiert und die Statusleiste, die Symbolleiste, die Menüleiste und die Titelleiste ausgeblendet.
 
-Gilt für InternetExplorer. Wenn Sie diesen Aufruf mit einem WebBrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, jedoch hat, diesen Aufruf werden ignoriert.
+Gilt für Internet Explorer. Wenn Sie diesen-Befehl mit einem Webbrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, aber der-Befehl wird ignoriert.
 
-##  <a name="setheight"></a>  CHtmlView::SetHeight
+##  <a name="setheight"></a>CHtmlView::
 
-Rufen Sie diese Memberfunktion, um die Höhe des Internet Explorer-Hauptfensters festzulegen.
+Mit dieser Member-Funktion wird die Höhe des Internet Explorer-Hauptfensters festgelegt.
 
 ```
 void SetHeight(long nNewValue);
@@ -2011,13 +2011,13 @@ void SetHeight(long nNewValue);
 ### <a name="parameters"></a>Parameter
 
 *nNewValue*<br/>
-Die Höhe in Pixel des Hauptfensters.
+Die Höhe des Hauptfensters in Pixel.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="setleft"></a>  CHtmlView::SetLeft
+##  <a name="setleft"></a>CHtmlView:: SetLeft
 
 Legt die horizontale Position des Internet Explorer-Hauptfensters fest.
 
@@ -2028,11 +2028,11 @@ void SetLeft(long nNewValue);
 ### <a name="parameters"></a>Parameter
 
 *nNewValue*<br/>
-Die Bildschirmkoordinate des linken Rands des Hauptfensters.
+Die Bildschirm Koordinate des linken Rands des Hauptfensters.
 
-##  <a name="setmenubar"></a>  CHtmlView::SetMenuBar
+##  <a name="setmenubar"></a>CHtmlView:: setmenubar
 
-Rufen Sie diese Memberfunktion zum Anzeigen oder Ausblenden der Internet Explorer-Menüleiste.
+Mit dieser Member-Funktion können Sie die Internet Explorer-Menüleiste anzeigen oder ausblenden.
 
 ```
 void SetMenuBar(BOOL bNewValue);
@@ -2041,15 +2041,15 @@ void SetMenuBar(BOOL bNewValue);
 ### <a name="parameters"></a>Parameter
 
 *bNewValue*<br/>
-Ungleich NULL Menüleiste anzeigen; andernfalls 0 (null).
+Nicht NULL zum Anzeigen der Menüleiste. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Gilt für InternetExplorer. Wenn Sie diesen Aufruf mit einem WebBrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, jedoch hat, diesen Aufruf werden ignoriert.
+Gilt für Internet Explorer. Wenn Sie diesen-Befehl mit einem Webbrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, aber der-Befehl wird ignoriert.
 
-##  <a name="setoffline"></a>  CHtmlView::SetOffline
+##  <a name="setoffline"></a>CHtmlView:: "abffline"
 
-Rufen Sie diese Memberfunktion zum legen Sie einen Wert, der angibt, ob das WebBrowser-Steuerelement derzeit im offline-Modus ausgeführt wird.
+Mit dieser Member-Funktion können Sie einen Wert festlegen, der angibt, ob sich das WebBrowser-Steuerelement momentan im Offline Modus befindet.
 
 ```
 void SetOffline(BOOL bNewValue);
@@ -2058,17 +2058,17 @@ void SetOffline(BOOL bNewValue);
 ### <a name="parameters"></a>Parameter
 
 *bNewValue*<br/>
-Ungleich NULL aus dem lokalen Cache gelesen; andernfalls 0 (null).
+Nicht-NULL zum Lesen aus dem lokalen Cache. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Im Offlinemodus befindet liest der Browser HTML-Seiten, aus dem lokalen Cache und nicht aus dem Quelldokument.
+Im Offline Modus liest der Browser HTML-Seiten aus dem lokalen Cache anstatt aus dem Quelldokument.
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="setregisterasbrowser"></a>  CHtmlView::SetRegisterAsBrowser
+##  <a name="setregisterasbrowser"></a>CHtmlView:: seetregisterasbrowser
 
-Rufen Sie diese Memberfunktion zum legen Sie einen Wert, der angibt, ob das WebBrowser-Steuerelement als Browser der obersten Ebene für die zielnamenauflösung registriert ist.
+Mit dieser Member-Funktion können Sie einen Wert festlegen, der angibt, ob das WebBrowser-Steuerelement als Browser der obersten Ebene für die Ziel Namen Auflösung registriert ist.
 
 ```
 void SetRegisterAsBrowser(BOOL bNewValue);
@@ -2077,17 +2077,17 @@ void SetRegisterAsBrowser(BOOL bNewValue);
 ### <a name="parameters"></a>Parameter
 
 *bNewValue*<br/>
-Bestimmt, ob Internet Explorer als Browser der obersten Ebene registriert ist. Wert ungleich NULL ist der Webbrowser als Browser der obersten Ebene registriert werden; Wenn NULL, ist es nicht über einen Browser der obersten Ebene. Der Standardwert ist 0 (null).
+Bestimmt, ob Internet Explorer als Browser der obersten Ebene registriert ist. Wenn ungleich 0 (null), wird der Webbrowser als Browser der obersten Ebene registriert. Wenn 0 (null) ist, handelt es sich nicht um einen Browser der obersten Ebene. Der Standardwert ist 0 (null).
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Browser der obersten Ebene ist der Browser in der Registrierung als Standardbrowser festgelegt.
+Bei einem Browser der obersten Ebene handelt es sich um den Browser, der in der Registrierung als Standardbrowser festgelegt ist.
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="setregisterasdroptarget"></a>  CHtmlView::SetRegisterAsDropTarget
+##  <a name="setregisterasdroptarget"></a>CHtmlView:: seetregisterasdroptarget
 
-Rufen Sie diese Memberfunktion zum legen Sie einen Wert, der angibt, ob das WebBrowser-Steuerelement als Ablageziel für die Navigation registriert ist.
+Mit dieser Member-Funktion können Sie einen Wert festlegen, der angibt, ob das WebBrowser-Steuerelement als Ablage Ziel für die Navigation registriert ist.
 
 ```
 void SetRegisterAsDropTarget(BOOL bNewValue);
@@ -2096,15 +2096,15 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
 ### <a name="parameters"></a>Parameter
 
 *bNewValue*<br/>
-Bestimmt, ob das WebBrowser-Steuerelement als Ablageziel für die Navigation registriert ist. Wert ungleich NULL wird das Objekt als Dropziel registriert; Bei NULL ist, ist es nicht um ein Ablageziel.
+Bestimmt, ob das WebBrowser-Steuerelement als Ablage Ziel für die Navigation registriert ist. Wenn der Wert ungleich 0 (null) ist, wird das Objekt als Ablage Ziel registriert; Wenn der Wert NULL ist, handelt es sich nicht um ein Ablage Ziel.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="setsilent"></a>  CHtmlView::SetSilent
+##  <a name="setsilent"></a>CHtmlView:: setsilent
 
-Rufen Sie diese Memberfunktion zum legen Sie einen Wert, der angibt, ob alle Dialogfelder angezeigt werden können.
+Mit dieser Member-Funktion können Sie einen Wert festlegen, der angibt, ob Dialogfelder angezeigt werden können.
 
 ```
 void SetSilent(BOOL bNewValue);
@@ -2113,15 +2113,15 @@ void SetSilent(BOOL bNewValue);
 ### <a name="parameters"></a>Parameter
 
 *bNewValue*<br/>
-Wenn ungleich NULL ist, werden keine Dialogfelder angezeigt werden; Falls der Wert NULL ist, werden Dialogfelder angezeigt werden. Der Standardwert ist 0 (null).
+Wenn ungleich 0 (null), werden keine Dialogfelder angezeigt. Wenn der Wert NULL ist, werden Dialogfelder angezeigt. Der Standardwert ist 0 (null).
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="setstatusbar"></a>  CHtmlView::SetStatusBar
+##  <a name="setstatusbar"></a>CHtmlView:: setstatusbar
 
-Rufen Sie diese Memberfunktion auf die Statusleiste angezeigt.
+Diese Member-Funktion aufrufen, um die Statusleiste anzuzeigen.
 
 ```
 void SetStatusBar(BOOL bNewValue);
@@ -2130,15 +2130,15 @@ void SetStatusBar(BOOL bNewValue);
 ### <a name="parameters"></a>Parameter
 
 *bNewValue*<br/>
-Ungleich NULL, wenn die Statusleiste sichtbar ist; andernfalls 0 (null).
+Ungleich 0 (null), wenn die Statusleiste sichtbar ist. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Gilt für InternetExplorer. Wenn Sie diesen Aufruf mit einem WebBrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, jedoch hat, diesen Aufruf werden ignoriert.
+Gilt für Internet Explorer. Wenn Sie diesen-Befehl mit einem Webbrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, aber der-Befehl wird ignoriert.
 
-##  <a name="settheatermode"></a>  CHtmlView::SetTheaterMode
+##  <a name="settheatermode"></a>CHtmlView:: settheatermode
 
-Rufen Sie diese Memberfunktion zum legen Sie einen Wert, der angibt, ob das WebBrowser-Steuerelement im Kinomodus ausgeführt wird.
+Mit dieser Element Funktion können Sie einen Wert festlegen, der angibt, ob sich das WebBrowser-Steuerelement im Theater Modus befindet.
 
 ```
 void SetTheaterMode(BOOL bNewValue);
@@ -2147,17 +2147,17 @@ void SetTheaterMode(BOOL bNewValue);
 ### <a name="parameters"></a>Parameter
 
 *bNewValue*<br/>
-Ungleich NULL festzulegende das WebBrowser-Steuerelement zum Kinomodus; andernfalls 0 (null). Der Standardwert ist 0 (null).
+Nicht NULL, um das WebBrowser-Steuerelement auf den Theater Modus festzulegen. andernfalls NULL. Der Standardwert ist 0 (null).
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Webbrowser im Kinomodus ausgeführt wird, das Hauptfenster der Browser nimmt den gesamten Bildschirm wird eine Symbolleiste mit einem Mindestsatz von Navigations-Tools angezeigt und die Statusleiste wird angezeigt, in der oberen rechten Ecke des Bildschirms.
+Wenn sich der Webbrowser im Theater Modus befindet, füllt das Browser Hauptfenster den gesamten Bildschirm aus. eine Symbolleiste mit einem minimalen Satz von Navigationstools wird angezeigt, und die Statusleiste wird in der oberen rechten Ecke des Bildschirms angezeigt.
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="settoolbar"></a>  CHtmlView::SetToolBar
+##  <a name="settoolbar"></a>CHtmlView:: SetToolbar
 
-Rufen Sie diese Memberfunktion zum Anzeigen oder Ausblenden der Symbolleiste von Internet Explorer.
+Mit dieser Member-Funktion können Sie die Internet Explorer-Symbolleiste ein-oder ausblenden.
 
 ```
 void SetToolBar(int nNewValue);
@@ -2166,15 +2166,15 @@ void SetToolBar(int nNewValue);
 ### <a name="parameters"></a>Parameter
 
 *nNewValue*<br/>
-Gibt an, ob die Symbolleiste angezeigt werden soll. Ungleich NULL ist, wenn die Symbolleiste angezeigt werden; andernfalls 0 (null).
+Gibt an, ob die Symbolleiste angezeigt werden soll. Ungleich 0 (null), wenn die Symbolleiste angezeigt werden soll. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Gilt für InternetExplorer. Wenn Sie diesen Aufruf mit einem WebBrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, jedoch hat, diesen Aufruf werden ignoriert.
+Gilt für Internet Explorer. Wenn Sie diesen-Befehl mit einem Webbrowser-Steuerelement verwenden, wird kein Fehler zurückgegeben, aber der-Befehl wird ignoriert.
 
-##  <a name="settop"></a>  CHtmlView::SetTop
+##  <a name="settop"></a>CHtmlView:: Settop
 
-Rufen Sie diese Memberfunktion um den Abstand zwischen dem inneren oberen Rand des WebBrowser-Steuerelements und dem oberen Rand des Containers festgelegt.
+Mit dieser Member-Funktion wird der Abstand zwischen dem internen oberen Rand des Webbrowser-Steuer Elements und dem oberen Rand des zugehörigen Containers festgelegt.
 
 ```
 void SetTop(long nNewValue);
@@ -2183,15 +2183,15 @@ void SetTop(long nNewValue);
 ### <a name="parameters"></a>Parameter
 
 *nNewValue*<br/>
-Die Bildschirmkoordinate des oberen Rands des Hauptfensters.
+Die Bildschirm Koordinate des oberen Rands des Hauptfensters.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="setvisible"></a>  CHtmlView::SetVisible
+##  <a name="setvisible"></a>CHtmlView:: setVisible
 
-Rufen Sie diese Memberfunktion um den Sichtbarkeitsstatus des WebBrowser-Steuerelements festzulegen.
+Mit dieser Member-Funktion wird der Sichtbarkeits Zustand des Webbrowser-Steuer Elements festgelegt.
 
 ```
 void SetVisible(BOOL bNewValue);
@@ -2200,13 +2200,13 @@ void SetVisible(BOOL bNewValue);
 ### <a name="parameters"></a>Parameter
 
 *bNewValue*<br/>
-Ungleich NULL, wenn das Steuerelement sichtbar ist; andernfalls 0 (null).
+Ungleich NULL, wenn das Steuerelement sichtbar ist. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
 Betrifft Internet Explorer und WebBrowser.
 
-##  <a name="setwidth"></a>  CHtmlView::SetWidth
+##  <a name="setwidth"></a>CHtmlView:: seetwidth
 
 Legt die Breite des Internet Explorer-Hauptfensters fest.
 
@@ -2217,11 +2217,11 @@ void SetWidth(long nNewValue);
 ### <a name="parameters"></a>Parameter
 
 *nNewValue*<br/>
-Die Breite in Pixeln, des Internet Explorer-Hauptfensters.
+Die Breite des Internet Explorer-Hauptfensters in Pixel.
 
-##  <a name="stop"></a>  CHtmlView::Stop
+##  <a name="stop"></a>CHtmlView:: Beendigung
 
-Rufen Sie diese Memberfunktion, um eine unvollständige Navigation abbrechen oder Downloadvorgang und beendet dynamische Seitenelemente wie Hintergrundsound und Animationen.
+Mit dieser Member-Funktion können Sie alle ausstehenden Navigations-oder Download Vorgänge abbrechen und dynamische Seitenelemente wie Hintergrund Sounds und Animationen beenden.
 
 ```
 void Stop();

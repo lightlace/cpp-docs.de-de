@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: a6b6c872963dbbdf991d013cceba66ffd20bac5c
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
-ms.translationtype: MT
+ms.openlocfilehash: 4f9f08ae751ba2482967c1eee4268c6d5f6d4a76
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504391"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916245"
 ---
 # <a name="cdc-class"></a>CDC-Klasse
 
@@ -431,244 +431,244 @@ class CDC : public CObject
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDC::AbortDoc](#abortdoc)|Beendet den aktuellen Druckauftrag, löschen Alles, was die Anwendung an das Gerät, seit dem letzten Aufruf von geschrieben hat der `StartDoc` Member-Funktion.|
-|[CDC::AbortPath](#abortpath)|Schließt ein, und verwirft alle Pfade in den Gerätekontext.|
-|[CDC::AddMetaFileComment](#addmetafilecomment)|Kopiert den Kommentar aus einem Puffer in einen angegebenen EMF-Datei an.|
-|[CDC::AlphaBlend](#alphablend)|Zeigt die Bitmaps, die transparent oder halbtransparent Pixel aufweisen.|
-|[CDC::AngleArc](#anglearc)|Zeichnet ein Liniensegment und einen Bogen, und verschiebt die aktuelle Position, an den Endpunkt des Bogens.|
+|[CDC::AbortDoc](#abortdoc)|Beendet den aktuellen Druckauftrag und löscht alles, was die Anwendung seit dem letzten-Rückruf `StartDoc` der Member-Funktion auf das Gerät geschrieben hat.|
+|[CDC::AbortPath](#abortpath)|Schließt und verwirft alle Pfade im Gerätekontext.|
+|[CDC::AddMetaFileComment](#addmetafilecomment)|Kopiert den Kommentar aus einem Puffer in eine angegebene Metadatendatei mit erweitertem Format.|
+|[CDC::AlphaBlend](#alphablend)|Zeigt Bitmaps mit transparenten oder semitransparenten Pixeln an.|
+|[CDC::AngleArc](#anglearc)|Zeichnet ein Liniensegment und einen Bogen und verschiebt die aktuelle Position an den Endpunkt des Bogens.|
 |[CDC::Arc](#arc)|Zeichnet einen elliptischen Bogen.|
-|[CDC::ArcTo](#arcto)|Zeichnet einen elliptischen Bogen. Diese Funktion ist vergleichbar mit `Arc`, außer dass die aktuelle Position aktualisiert wird.|
-|[CDC::Attach](#attach)|Fügt einen Windows-Gerätekontext zu diesem `CDC` Objekt.|
-|[CDC::BeginPath](#beginpath)|Öffnet eine Klammer Pfad in den Gerätekontext.|
+|[CDC::ArcTo](#arcto)|Zeichnet einen elliptischen Bogen. Diese Funktion ähnelt `Arc`, mit der Ausnahme, dass die aktuelle Position aktualisiert wird.|
+|[CDC::Attach](#attach)|Fügt einen Windows-Gerätekontext an `CDC` dieses-Objekt an.|
+|[CDC::BeginPath](#beginpath)|Öffnet eine Pfad Klammer im Gerätekontext.|
 |[CDC::BitBlt](#bitblt)|Kopiert eine Bitmap aus einem angegebenen Gerätekontext.|
-|[CDC::Chord](#chord)|Zeichnet eine Tastenkombination (eine geschlossene Form, durch die Schnittmenge einer Ellipse und ein Liniensegment begrenzt).|
-|[CDC::CloseFigure](#closefigure)|Schließt eine offene Form in einem Pfad.|
-|[CDC::CreateCompatibleDC](#createcompatibledc)|Erstellt einen Speicher-Gerätekontext, der mit einem anderen Gerätekontext kompatibel ist. Sie können es verwenden, zum Vorbereiten des Images im Arbeitsspeicher.|
+|[CDC::Chord](#chord)|Zeichnet einen Akkord (eine geschlossene Abbildung, die durch die Schnittmenge einer Ellipse und eines Linien Segments begrenzt ist).|
+|[CDC::CloseFigure](#closefigure)|Schließt eine geöffnete Figur in einem Pfad.|
+|[CDC::CreateCompatibleDC](#createcompatibledc)|Erstellt einen Speichergeräte Kontext, der mit einem anderen Gerätekontext kompatibel ist. Sie können Sie verwenden, um Images im Speicher vorzubereiten.|
 |[CDC::CreateDC](#createdc)|Erstellt einen Gerätekontext für ein bestimmtes Gerät.|
-|[CDC::CreateIC](#createic)|Erstellt einen Informationen über den Kontext für ein bestimmtes Gerät. Dies bietet eine schnelle Möglichkeit, um Informationen über das Gerät zu erhalten, ohne einen Gerätekontext zu erstellen.|
-|[CDC::DeleteDC](#deletedc)|Löscht die zugeordnete Windows-Gerätekontext `CDC` Objekt.|
-|[CDC::DeleteTempMap](#deletetempmap)|Wird aufgerufen, indem die `CWinApp` -leerlaufzeithandler So löschen Sie temporäre `CDC` von erstelltes Objekt `FromHandle`. Außerdem trennt den Gerätekontext.|
-|[CDC::Detach](#detach)|Trennt den Windows-Gerätekontext aus diesem `CDC` Objekt.|
-|[CDC::DPtoHIMETRIC](#dptohimetric)|Geräteeinheiten konvertiert in HIMETRIC-Einheiten.|
-|[CDC::DPtoLP](#dptolp)|Konvertiert Geräteeinheiten in logischen Einheiten.|
-|[CDC::Draw3dRect](#draw3drect)|Zeichnet einen dreidimensionalen Rechteck.|
-|[CDC::DrawDragRect](#drawdragrect)|Löscht ein, und zeichnet ein Rechteck, wie es gezogen wird.|
-|[CDC::DrawEdge](#drawedge)|Zeichnet die Ränder eines Rechtecks an.|
-|[CDC::DrawEscape](#drawescape)|Greift auf Zeichnen die Funktionen einer Videoanzeige, die nicht direkt über die Graphics Device Interface (GDI) verfügbar sind.|
-|[CDC::DrawFocusRect](#drawfocusrect)|Zeichnet ein Rechteck im Stil verwendet, um den Fokus anzugeben.|
-|[CDC::DrawFrameControl](#drawframecontrol)|Ein Frame-Steuerelement zu zeichnen.|
-|[CDC::DrawIcon](#drawicon)|Zeichnet ein Symbol an.|
-|[CDC::DrawState](#drawstate)|Zeigt ein Bild aus, und wendet einen visuellen Effekt aus, um ein Zustand gekennzeichnet wird.|
+|[CDC::CreateIC](#createic)|Erstellt einen Informations Kontext für ein bestimmtes Gerät. Dies bietet eine schnelle Möglichkeit, Informationen über das Gerät zu erhalten, ohne einen Gerätekontext zu erstellen.|
+|[CDC::DeleteDC](#deletedc)|Löscht den Windows-Gerätekontext, der `CDC` diesem-Objekt zugeordnet ist.|
+|[CDC::DeleteTempMap](#deletetempmap)|Wird vom Leerlauf `CWinApp` Zeit Handler aufgerufen, um ein temporäres `CDC` Objekt zu löschen `FromHandle`, das von erstellt wurde. Trennt auch den Gerätekontext.|
+|[CDC::Detach](#detach)|Trennt den Windows-Gerätekontext von diesem `CDC` -Objekt.|
+|[CDC::DPtoHIMETRIC](#dptohimetric)|Konvertiert Geräte Einheiten in himetrische Einheiten.|
+|[CDC::DPtoLP](#dptolp)|Konvertiert Geräte Einheiten in logische Einheiten.|
+|[CDC::Draw3dRect](#draw3drect)|Zeichnet ein dreidimensionales Rechteck.|
+|[CDC::DrawDragRect](#drawdragrect)|Löscht ein Rechteck und zeichnet es neu, wenn es gezogen wird.|
+|[CDC::DrawEdge](#drawedge)|Zeichnet die Ränder eines Rechtecks.|
+|[CDC::DrawEscape](#drawescape)|Greift auf Zeichnungsfunktionen einer Videoanzeige zu, die nicht direkt über die Graphics Device Interface (GDI) verfügbar sind.|
+|[CDC::DrawFocusRect](#drawfocusrect)|Zeichnet ein Rechteck im Stil, mit dem der Fokus angegeben wird.|
+|[CDC::DrawFrameControl](#drawframecontrol)|Zeichnen Sie ein Frame-Steuerelement.|
+|[CDC::DrawIcon](#drawicon)|Zeichnet ein Symbol.|
+|[CDC::DrawState](#drawstate)|Zeigt ein Bild an und wendet einen visuellen Effekt an, um einen Zustand anzugeben.|
 |[CDC::DrawText](#drawtext)|Zeichnet formatierten Text im angegebenen Rechteck.|
-|[CDC::DrawTextEx](#drawtextex)|Zeichnet formatierten Text in das angegebene Rechteck, das zusätzliche Formate verwenden.|
+|[CDC::DrawTextEx](#drawtextex)|Zeichnet formatierten Text im angegebenen Rechteck mit zusätzlichen Formaten.|
 |[CDC::Ellipse](#ellipse)|Zeichnet eine Ellipse.|
-|[CDC::EndDoc](#enddoc)|Beendet einen Druckauftrag gestartet, indem die `StartDoc` Member-Funktion.|
-|[CDC::EndPage](#endpage)|Informiert den Gerätetreiber, den eine Seite beendet wird.|
-|[CDC::EndPath](#endpath)|Schließt eine Klammer Pfad ein, und wählt den Pfad, der durch die Klammer definiert werden, in den Gerätekontext.|
-|[CDC::EnumObjects](#enumobjects)|Listet die Stifte und Pinsel verfügbaren in einem Gerätekontext.|
-|[CDC::Escape](#escape)|Ermöglicht es Anwendungen auf Einrichtungen, die nicht direkt von einem bestimmten Gerät über GDI verfügbar sind. Außerdem ermöglicht den Zugriff auf Windows-Escape-Funktionen. Escape-Aufrufe, die von einer Anwendung, die werden übersetzt und an den Treiber gesendet.|
-|[CDC::ExcludeClipRect](#excludecliprect)|Erstellt einen neuen Ausschneidebereich, der den vorhandenen Ausschneidebereich abzüglich des angegebenen Rechtecks besteht.|
-|[CDC::ExcludeUpdateRgn](#excludeupdatergn)|Verhindert, dass Zeichnung in ungültigen Bereiche eines Fensters durch einen aktualisierten Bereich im Fenster in einer zuschneideregion zu ausschließen.|
-|[CDC::ExtFloodFill](#extfloodfill)|Füllt einen Bereich mit dem aktuellen Pinsel. Bietet mehr Flexibilität als die [CDC::FloodFill](#floodfill) Member-Funktion.|
-|[CDC::ExtTextOut](#exttextout)|Schreibt eine Zeichenfolge in einen rechteckigen Bereich mit der aktuell ausgewählten Schriftart.|
-|[CDC::FillPath](#fillpath)|Schließt alle geöffneten Figuren in den aktuellen Pfad aus, und füllt den Pfad des innere mithilfe des aktuellen Pinsel und Polygon-füllen-Modus.|
-|[CDC::FillRect](#fillrect)|Füllt ein angegebenes Rechteck mit einem bestimmten Pinsel.|
-|[CDC::FillRgn](#fillrgn)|Füllt eine bestimmte Region mit dem angegebenen Pinsel.|
-|[CDC::FillSolidRect](#fillsolidrect)|Füllt ein Rechteck mit einer Volltonfarbe aus.|
-|[CDC::FlattenPath](#flattenpath)|Transformiert jede Kurven in den der aktuelle Gerätekontext ausgewählten Pfad, und wandelt jede Kurve in einer Sequenz von Zeilen.|
+|[CDC::EndDoc](#enddoc)|Beendet einen Druckauftrag, der von `StartDoc` der Member-Funktion gestartet wurde.|
+|[CDC::EndPage](#endpage)|Informiert den Gerätetreiber darüber, dass eine Seite beendet wird.|
+|[CDC::EndPath](#endpath)|Schließt eine Pfad Klammer und wählt den von der Klammer definierten Pfad in den Gerätekontext aus.|
+|[CDC::EnumObjects](#enumobjects)|Listet die Stifte und Pinsel auf, die in einem Gerätekontext verfügbar sind.|
+|[CDC::Escape](#escape)|Ermöglicht Anwendungen den Zugriff auf Funktionen, die von einem bestimmten Gerät nicht direkt über GDI verfügbar sind. Ermöglicht auch den Zugriff auf Windows-escapefunktionen. Die von einer Anwendung ausgeführten escapeaufrufe werden übersetzt und an den Gerätetreiber gesendet.|
+|[CDC::ExcludeClipRect](#excludecliprect)|Erstellt einen neuen Clippingbereich, der aus dem vorhandenen Clippingbereich abzüglich des angegebenen Rechtecks besteht.|
+|[CDC::ExcludeUpdateRgn](#excludeupdatergn)|Verhindert, dass innerhalb Ungültiger Bereiche eines Fensters gezeichnet wird, indem ein aktualisierter Bereich im Fenster von einem Clippingbereich ausgeschlossen wird.|
+|[CDC::ExtFloodFill](#extfloodfill)|Füllt einen Bereich mit dem aktuellen Pinsel. Bietet mehr Flexibilität als die [CDC:: flufill](#floodfill) -Member-Funktion.|
+|[CDC::ExtTextOut](#exttextout)|Schreibt eine Zeichenfolge in einem rechteckigen Bereich mithilfe der aktuell ausgewählten Schriftart.|
+|[CDC::FillPath](#fillpath)|Schließt alle geöffneten Abbildungen im aktuellen Pfad und füllt das Innere des Pfads mit dem aktuellen Pinsel und dem Polygon Füll Modus aus.|
+|[CDC::FillRect](#fillrect)|Füllt ein angegebenes Rechteck mithilfe eines bestimmten Pinsels.|
+|[CDC::FillRgn](#fillrgn)|Füllt einen bestimmten Bereich mit dem angegebenen Pinsel.|
+|[CDC::FillSolidRect](#fillsolidrect)|Füllt ein Rechteck mit einer voll Tonfarbe aus.|
+|[CDC::FlattenPath](#flattenpath)|Wandelt alle Kurven im ausgewählten Pfad in den aktuellen Gerätekontext um und wandelt jede Kurve in eine Sequenz von Zeilen um.|
 |[CDC::FloodFill](#floodfill)|Füllt einen Bereich mit dem aktuellen Pinsel.|
 |[CDC::FrameRect](#framerect)|Zeichnet einen Rahmen um ein Rechteck.|
-|[CDC::FrameRgn](#framergn)|Zeichnet einen Rahmen um eine bestimmte Region Verwenden eines Pinsels an.|
-|[CDC::FromHandle](#fromhandle)|Gibt einen Zeiger auf eine `CDC` Objekt, wenn ein Handle für einen Gerätekontext zu erhalten. Wenn ein `CDC`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CDC`-Objekt erstellt und angefügt.|
-|[CDC::GetArcDirection](#getarcdirection)|Gibt die aktuelle Richtung der Bogen für den Gerätekontext zurück.|
+|[CDC::FrameRgn](#framergn)|Zeichnet mit einem Pinsel einen Rahmen um einen bestimmten Bereich.|
+|[CDC::FromHandle](#fromhandle)|Gibt einen Zeiger auf ein `CDC` -Objekt zurück, wenn ein Handle für einen Gerätekontext angegeben wird. Wenn ein `CDC`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `CDC`-Objekt erstellt und angefügt.|
+|[CDC::GetArcDirection](#getarcdirection)|Gibt die aktuelle Bogen Richtung für den Gerätekontext zurück.|
 |[CDC::GetAspectRatioFilter](#getaspectratiofilter)|Ruft die Einstellung für den aktuellen Seitenverhältnis Filter ab.|
 |[CDC::GetBkColor](#getbkcolor)|Ruft die aktuelle Hintergrundfarbe ab.|
 |[CDC::GetBkMode](#getbkmode)|Ruft den Hintergrundmodus ab.|
-|[CDC::GetBoundsRect](#getboundsrect)|Gibt das aktuelle akkumulierte umschließende Rechteck für den angegebenen Gerätekontext zurück.|
+|[CDC::GetBoundsRect](#getboundsrect)|Gibt das aktuelle akkumulierte umgebende Rechteck für den angegebenen Gerätekontext zurück.|
 |[CDC::GetBrushOrg](#getbrushorg)|Ruft den Ursprung des aktuellen Pinsels ab.|
-|[CDC::GetCharABCWidths](#getcharabcwidths)|Ruft die Breite, in logischen Einheiten von aufeinander folgenden Zeichen in einem angegebenen Bereich aus der aktuellen Schriftart ab.|
-|[CDC::GetCharABCWidthsI](#getcharabcwidthsi)|Ruft ab, das die Breiten in logischen Einheiten, der aufeinander folgenden Symbolindizes in einem angegebenen Bereich aus der aktuellen TrueType-Schriftart.|
+|[CDC::GetCharABCWidths](#getcharabcwidths)|Ruft die breiten von aufeinander folgenden Zeichen in logischen Einheiten aus der aktuellen Schriftart ab.|
+|[CDC::GetCharABCWidthsI](#getcharabcwidthsi)|Ruft die breiten in logischen Einheiten von aufeinander folgenden Glyphe-Indizes in einem angegebenen Bereich aus der aktuellen TrueType-Schriftart ab.|
 |[CDC::GetCharacterPlacement](#getcharacterplacement)|Ruft verschiedene Typen von Informationen zu einer Zeichenfolge ab.|
-|[CDC::GetCharWidth](#getcharwidth)|Ruft das hohe Auflösung von aufeinander folgenden Zeichen in einem angegebenen Bereich aus der aktuellen Schriftart ab.|
-|[CDC::GetCharWidthI](#getcharwidthi)|Ruft die Breite, in logischen Koordinaten von aufeinander folgenden Symbolindizes in einem angegebenen Bereich aus der aktuellen Schriftart ab.|
-|[CDC::GetClipBox](#getclipbox)|Ruft die Abmessungen des tightest umschließenden Rechtecks um die aktuelle Grenze von Clipping ab.|
-|[CDC::GetColorAdjustment](#getcoloradjustment)|Ruft die Farbwerte für die Anpassung für den Gerätekontext ab.|
-|[CDC::GetCurrentBitmap](#getcurrentbitmap)|Gibt einen Zeiger auf das derzeit ausgewählte `CBitmap` Objekt.|
-|[CDC::GetCurrentBrush](#getcurrentbrush)|Gibt einen Zeiger auf das derzeit ausgewählte `CBrush` Objekt.|
-|[CDC::GetCurrentFont](#getcurrentfont)|Gibt einen Zeiger auf das derzeit ausgewählte `CFont` Objekt.|
-|[CDC::GetCurrentPalette](#getcurrentpalette)|Gibt einen Zeiger auf das derzeit ausgewählte `CPalette` Objekt.|
-|[CDC::GetCurrentPen](#getcurrentpen)|Gibt einen Zeiger auf das derzeit ausgewählte `CPen` Objekt.|
+|[CDC::GetCharWidth](#getcharwidth)|Ruft die Bruch Breite von aufeinander folgenden Zeichen in einem angegebenen Bereich aus der aktuellen Schriftart ab.|
+|[CDC::GetCharWidthI](#getcharwidthi)|Ruft die breiten in logischen Koordinaten von aufeinander folgenden Glyphe-Indizes in einem angegebenen Bereich aus der aktuellen Schriftart ab.|
+|[CDC::GetClipBox](#getclipbox)|Ruft die Dimensionen des Begrenzungs Rechtecks um die aktuelle clippinggrenze ab.|
+|[CDC::GetColorAdjustment](#getcoloradjustment)|Ruft die Farb Anpassungs Werte für den Gerätekontext ab.|
+|[CDC::GetCurrentBitmap](#getcurrentbitmap)|Gibt einen Zeiger auf das aktuell ausgewählte `CBitmap` Objekt zurück.|
+|[CDC::GetCurrentBrush](#getcurrentbrush)|Gibt einen Zeiger auf das aktuell ausgewählte `CBrush` Objekt zurück.|
+|[CDC::GetCurrentFont](#getcurrentfont)|Gibt einen Zeiger auf das aktuell ausgewählte `CFont` Objekt zurück.|
+|[CDC::GetCurrentPalette](#getcurrentpalette)|Gibt einen Zeiger auf das aktuell ausgewählte `CPalette` Objekt zurück.|
+|[CDC::GetCurrentPen](#getcurrentpen)|Gibt einen Zeiger auf das aktuell ausgewählte `CPen` Objekt zurück.|
 |[CDC::GetCurrentPosition](#getcurrentposition)|Ruft die aktuelle Position des Stifts (in logischen Koordinaten) ab.|
 |[CDC::GetDCBrushColor](#getdcbrushcolor)|Ruft die aktuelle Pinselfarbe ab.|
 |[CDC::GetDCPenColor](#getdcpencolor)|Ruft die aktuelle Stiftfarbe ab.|
-|[CDC::GetDeviceCaps](#getdevicecaps)|Ruft eine angegebene Art von Gerät-spezifische Informationen über Funktionen für ein angegebenes Anzeigegerät ab.|
-|[CDC::GetFontData](#getfontdata)|Ruft die Metrik Schriftartinformationen aus einer Datei skalierbare Schriftart ab. Die Informationen abgerufen werden durch Angeben eines Offsets in die Schriftartdatei und die Länge der zurückzugebenden Informationen identifiziert.|
-|[CDC::GetFontLanguageInfo](#getfontlanguageinfo)|Gibt Informationen über die aktuell ausgewählten Schriftart für den angegebenen Anzeigekontext zurück.|
-|[CDC::GetGlyphOutline](#getglyphoutline)|Ruft die Gliederung Kurve oder eine Bitmap für eine Gliederung Zeichen in der aktuellen Schriftart ab.|
+|[CDC::GetDeviceCaps](#getdevicecaps)|Ruft eine bestimmte Art Geräte spezifischer Informationen über die Funktionen eines bestimmten Anzeige Geräts ab.|
+|[CDC::GetFontData](#getfontdata)|Ruft Schriftart metrikinformationen aus einer skalierbaren Schriftart Datei ab. Die abzurufenden Informationen werden durch Angabe eines Offsets in der Schriftart Datei und der Länge der zurück zugebende Informationen identifiziert.|
+|[CDC::GetFontLanguageInfo](#getfontlanguageinfo)|Gibt Informationen zur aktuell ausgewählten Schriftart für den angegebenen Anzeige Kontext zurück.|
+|[CDC::GetGlyphOutline](#getglyphoutline)|Ruft die Gliederungs Kurve oder Bitmap für ein Umriss Zeichen in der aktuellen Schriftart ab.|
 |[CDC::GetGraphicsMode](#getgraphicsmode)|Ruft den aktuellen Grafikmodus für den angegebenen Gerätekontext ab.|
-|[CDC::GetHalftoneBrush](#gethalftonebrush)|Ruft einen Pinsel Halbtonpalette ab.|
-|[CDC::GetKerningPairs](#getkerningpairs)|Ruft das Zeichen, kerning-Paare für die Schriftart, die in den angegebenen Gerätekontext markiert ist.|
-|[CDC::GetLayout](#getlayout)|Ruft das Layout des einen Gerätekontext (DC) ab. Das Layout kann werden entweder von links nach rechts (Standard) oder von rechts nach links (gespiegelt).|
-|[CDC::GetMapMode](#getmapmode)|Ruft den aktuellen Zuordnungsmodus ab.|
-|[CDC::GetMiterLimit](#getmiterlimit)|Gibt die Gehrungsgrenze für den Gerätekontext zurück.|
-|[CDC::GetNearestColor](#getnearestcolor)|Ruft ab, die am nächsten logischen Farbe an einer angegebenen logischen Farbe, die das angegebene Gerät darstellen kann.|
-|[CDC::GetOutlineTextMetrics](#getoutlinetextmetrics)|Ruft die Metrik Schriftartinformationen für TrueType-Schriftarten ab.|
-|[CDC::GetOutputCharWidth](#getoutputcharwidth)|Ruft die Breite der einzelnen Zeichen in eine aufeinander folgende Gruppe von Zeichen aus der aktuellen Schriftart, die mit den Ausgabe-Gerätekontext ab.|
-|[CDC::GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|Berechnet die Breite und Höhe einer Zeichenfolge auf den Ausgabe-Gerätekontext.|
-|[CDC::GetOutputTextExtent](#getoutputtextextent)|Berechnet die Breite und Höhe einer Zeile des Texts in der Ausgabe-Gerätekontext, die anhand der aktuellen Schriftart bestimmt die Dimensionen.|
-|[CDC::GetOutputTextMetrics](#getoutputtextmetrics)|Ruft die Metriken für die aktuelle Schriftart aus der Ausgabe-Gerätekontext ab.|
-|[CDC::GetPath](#getpath)|Ruft die Koordinaten, die definieren, die Endpunkte der Zeilen und die Steuerpunkte der Kurven finden Sie in den Pfad, der in den Gerätekontext ausgewählt ist.|
-|[CDC::GetPixel](#getpixel)|Ruft den RGB-Farbwert des Pixels am angegebenen Punkt ab.|
-|[CDC::GetPolyFillMode](#getpolyfillmode)|Ruft den aktuellen Modus des Polygons füllenden ab.|
-|[CDC::GetROP2](#getrop2)|Ruft den Zeichnungsmodus des aktuellen ab.|
-|[CDC::GetSafeHdc](#getsafehdc)|Gibt [CDC::m_hDC](#m_hdc), den Ausgabe-Gerätekontext.|
-|[CDC::GetStretchBltMode](#getstretchbltmode)|Ruft den aktuellen Strecken einer Bitmap-Modus ab.|
-|[CDC::GetTabbedTextExtent](#gettabbedtextextent)|Berechnet die Breite und Höhe einer Zeichenfolge für den Gerätekontext Attribut.|
-|[CDC::GetTextAlign](#gettextalign)|Ruft die textausrichtung Flags ab.|
-|[CDC::GetTextCharacterExtra](#gettextcharacterextra)|Ruft die aktuelle Einstellung für die Menge an Zeichenabstands ab.|
+|[CDC::GetHalftoneBrush](#gethalftonebrush)|Ruft einen halbftone-Pinsel ab.|
+|[CDC::GetKerningPairs](#getkerningpairs)|Ruft die Zeichen für die Zeichenauswahl für die Schriftart ab, die derzeit im angegebenen Gerätekontext ausgewählt ist.|
+|[CDC::GetLayout](#getlayout)|Ruft das Layout eines Geräte Kontexts (DC) ab. Das Layout kann entweder von links nach rechts (Standard) oder von rechts nach links (gespiegelt) erfolgen.|
+|[CDC::GetMapMode](#getmapmode)|Ruft den aktuellen Mapping-Modus ab.|
+|[CDC::GetMiterLimit](#getmiterlimit)|Gibt das miterLimit für den Gerätekontext zurück.|
+|[CDC::GetNearestColor](#getnearestcolor)|Ruft die nächstgelegene logische Farbe an eine angegebene logische Farbe ab, die das angegebene Gerät darstellen kann.|
+|[CDC::GetOutlineTextMetrics](#getoutlinetextmetrics)|Ruft Schriftart metrikinformationen für TrueType-Schriftarten ab.|
+|[CDC::GetOutputCharWidth](#getoutputcharwidth)|Ruft die Breite einzelner Zeichen in einer aufeinanderfolgenden Gruppe von Zeichen aus der aktuellen Schriftart mithilfe des Ausgabegeräte Kontexts ab.|
+|[CDC::GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|Berechnet die Breite und Höhe einer Zeichenfolge im Ausgabegeräte Kontext.|
+|[CDC::GetOutputTextExtent](#getoutputtextextent)|Berechnet die Breite und Höhe einer Textzeile im Ausgabegeräte Kontext mithilfe der aktuellen Schriftart, um die Dimensionen zu bestimmen.|
+|[CDC::GetOutputTextMetrics](#getoutputtextmetrics)|Ruft die Metriken für die aktuelle Schriftart aus dem Ausgabegeräte Kontext ab.|
+|[CDC::GetPath](#getpath)|Ruft die Koordinaten ab, die die Endpunkte von Linien definieren, sowie die Steuerungs Punkte der Kurven, die sich in dem Pfad befinden, der im Gerätekontext ausgewählt wird.|
+|[CDC::GetPixel](#getpixel)|Ruft den RGB-Farbwert des Pixels an der angegebenen Stelle ab.|
+|[CDC::GetPolyFillMode](#getpolyfillmode)|Ruft den aktuellen Polygon Füll Modus ab.|
+|[CDC::GetROP2](#getrop2)|Ruft den aktuellen Zeichnungsmodus ab.|
+|[CDC::GetSafeHdc](#getsafehdc)|Gibt [CDC:: m_hDC](#m_hdc)zurück, den Ausgabegeräte Kontext.|
+|[CDC::GetStretchBltMode](#getstretchbltmode)|Ruft den aktuellen bitmapstreckungs Modus ab.|
+|[CDC::GetTabbedTextExtent](#gettabbedtextextent)|Berechnet die Breite und Höhe einer Zeichenfolge im Attribut Gerätekontext.|
+|[CDC::GetTextAlign](#gettextalign)|Ruft die Flags für die Textausrichtung ab.|
+|[CDC::GetTextCharacterExtra](#gettextcharacterextra)|Ruft die aktuelle Einstellung für die Menge der intercharacter-Abstände ab.|
 |[CDC::GetTextColor](#gettextcolor)|Ruft die aktuelle Textfarbe ab.|
-|[CDC::GetTextExtent](#gettextextent)|Berechnet die Breite und Höhe einer Textzeile im Gerätekontext Attribut anhand der aktuellen Schriftart bestimmt die Dimensionen an.|
-|[CDC::GetTextExtentExPointI](#gettextextentexpointi)|Ruft die Anzahl der Zeichen in einer angegebenen Zeichenfolge, die in einem angegebenen Raum passt, und füllt ein Array mit der Größe von Text für jedes dieser Zeichen ab.|
-|[CDC::GetTextExtentPointI](#gettextextentpointi)|Ruft die Breite und Höhe des angegebenen Arrays von glyphenindizes.|
-|[CDC::GetTextFace](#gettextface)|Kopiert den Namen der aktuellen Schriftart in einen Puffer als Null-terminierte Zeichenfolge an.|
-|[CDC::GetTextMetrics](#gettextmetrics)|Ruft die Metriken für die aktuelle Schriftart aus dem Gerätekontext Attribut ab.|
-|[CDC::GetViewportExt](#getviewportext)|Ruft die x und y-Blöcke des Viewports ab.|
-|[CDC::GetViewportOrg](#getviewportorg)|Ruft den x- und y-Koordinaten des Ursprungs Viewport ab.|
-|[CDC::GetWindow](#getwindow)|Gibt zurück, das den Anzeigekontext für das Gerät zugeordnete Fenster.|
-|[CDC::GetWindowExt](#getwindowext)|Ruft die x und y-Blöcke von das zugeordnete Fenster ab.|
-|[CDC::GetWindowOrg](#getwindoworg)|Ruft den x- und y-Koordinaten des Ursprungs der das zugeordnete Fenster ab.|
-|[CDC::GetWorldTransform](#getworldtransform)|Ruft den aktuellen Raum auf der Seite-Space-Transformation ab.|
-|[CDC::GradientFill](#gradientfill)|Füllt mit einer Farbe gradating Rechteck und Dreieck Strukturen.|
+|[CDC::GetTextExtent](#gettextextent)|Berechnet die Breite und Höhe einer Textzeile im Attribut Gerätekontext unter Verwendung der aktuellen Schriftart zum Bestimmen der Dimensionen.|
+|[CDC::GetTextExtentExPointI](#gettextextentexpointi)|Ruft die Anzahl der Zeichen in einer angegebenen Zeichenfolge ab, die in einen angegebenen Bereich passen und ein Array mit dem TextBlock für jedes dieser Zeichen füllt.|
+|[CDC::GetTextExtentPointI](#gettextextentpointi)|Ruft die Breite und Höhe des angegebenen Arrays von Symbol Indizes ab.|
+|[CDC::GetTextFace](#gettextface)|Kopiert den Schriftart Namen der aktuellen Schriftart als NULL-terminierte Zeichenfolge in einen Puffer.|
+|[CDC::GetTextMetrics](#gettextmetrics)|Ruft die Metriken für die aktuelle Schriftart aus dem Attribut Gerätekontext ab.|
+|[CDC::GetViewportExt](#getviewportext)|Ruft die x-und y-Blöcke des Viewports ab.|
+|[CDC::GetViewportOrg](#getviewportorg)|Ruft die x-und y-Koordinaten des viewportursprungs ab.|
+|[CDC::GetWindow](#getwindow)|Gibt das Fenster zurück, das dem Anzeigegeräte Kontext zugeordnet ist.|
+|[CDC::GetWindowExt](#getwindowext)|Ruft die x-und y-Blöcke des zugeordneten Fensters ab.|
+|[CDC::GetWindowOrg](#getwindoworg)|Ruft die x-und y-Koordinaten des Ursprungs des zugeordneten Fensters ab.|
+|[CDC::GetWorldTransform](#getworldtransform)|Ruft die aktuelle Transformation für Welt Raum zu Seiten Raum ab.|
+|[CDC::GradientFill](#gradientfill)|Füllt Rechteck-und Dreieck Strukturen mit einer graderfarbe aus.|
 |[CDC::GrayString](#graystring)|Zeichnet abgeblendet (grau) Text an der angegebenen Position.|
-|[CDC::HIMETRICtoDP](#himetrictodp)|HIMETRIC-Einheiten konvertiert in Geräteeinheiten.|
-|[CDC::HIMETRICtoLP](#himetrictolp)|HIMETRIC-Einheiten konvertiert in logischen Einheiten.|
-|[CDC::IntersectClipRect](#intersectcliprect)|Erstellt einen neuen Ausschneidebereich durch Bildung der Schnittmenge der aktuellen Region und ein Rechteck.|
-|[CDC::InvertRect](#invertrect)|Kehrt den Inhalt eines Rechtecks an.|
-|[CDC::InvertRgn](#invertrgn)|Kehrt die Farben in einer Region an.|
-|[CDC::IsPrinting](#isprinting)|Bestimmt, ob es sich bei der Gerätekontext für das Drucken verwendet wird.|
-|[CDC::LineTo](#lineto)|Zeichnet eine Linie von der aktuellen Position bis zum, jedoch nicht einschließlich, einem Punkt.|
-|[CDC::LPtoDP](#lptodp)|Logische Einheiten konvertiert in Geräteeinheiten.|
-|[CDC::LPtoHIMETRIC](#lptohimetric)|Logische Einheiten konvertiert in HIMETRIC-Einheiten.|
-|[CDC::MaskBlt](#maskblt)|Kombiniert die Farbdaten für die Quelle und Ziel-Bitmaps, die mithilfe der angegebenen Maske und rastervorgang an.|
-|[CDC::ModifyWorldTransform](#modifyworldtransform)|Ändert die globale Transformation für einen Gerätekontext, die Verwendung des angegebenen Modus.|
+|[CDC::HIMETRICtoDP](#himetrictodp)|Konvertiert HIMETRIC-Einheiten in Geräte Einheiten.|
+|[CDC::HIMETRICtoLP](#himetrictolp)|Konvertiert HIMETRIC-Einheiten in logische Einheiten.|
+|[CDC::IntersectClipRect](#intersectcliprect)|Erstellt einen neuen Clippingbereich, indem die Schnittmenge des aktuellen Bereichs und eines Rechtecks gebildet wird.|
+|[CDC::InvertRect](#invertrect)|Kehrt den Inhalt eines Rechtecks um.|
+|[CDC::InvertRgn](#invertrgn)|Kehrt die Farben in einem Bereich um.|
+|[CDC::IsPrinting](#isprinting)|Bestimmt, ob der Gerätekontext zum Drucken verwendet wird.|
+|[CDC::LineTo](#lineto)|Zeichnet eine Linie von der aktuellen Position bis zum, jedoch nicht einschließlich eines Punkts.|
+|[CDC::LPtoDP](#lptodp)|Konvertiert logische Einheiten in Geräte Einheiten.|
+|[CDC::LPtoHIMETRIC](#lptohimetric)|Konvertiert logische Einheiten in himetrische Einheiten.|
+|[CDC::MaskBlt](#maskblt)|Kombiniert die Farbdaten für die Quell-und Ziel Bitmaps mithilfe der angegebenen Maske und des Raster Vorgangs.|
+|[CDC::ModifyWorldTransform](#modifyworldtransform)|Ändert die globale Transformation für einen Gerätekontext unter Verwendung des angegebenen Modus.|
 |[CDC::MoveTo](#moveto)|Verschiebt die aktuelle Position.|
-|[CDC::OffsetClipRgn](#offsetcliprgn)|Verschiebt den Ausschneidebereich des angegebenen Geräts an.|
-|[CDC::OffsetViewportOrg](#offsetviewportorg)|Ändert den Ursprung des Ausschnitts, relativ zu den Koordinaten des aktuellen Viewports Ursprungs.|
-|[CDC::OffsetWindowOrg](#offsetwindoworg)|Ändert den Fensterursprung relativ zu den Koordinaten des aktuellen Fensters Ursprungs.|
-|[CDC::PaintRgn](#paintrgn)|Füllt einen Bereich mit den ausgewählten Pinsel.|
+|[CDC::OffsetClipRgn](#offsetcliprgn)|Verschiebt den Ausschneide Bereich des angegebenen Geräts.|
+|[CDC::OffsetViewportOrg](#offsetviewportorg)|Ändert den Viewportursprung in Relation zu den Koordinaten des aktuellen viewportursprungs.|
+|[CDC::OffsetWindowOrg](#offsetwindoworg)|Ändert den Fenster Ursprung in Relation zu den Koordinaten des aktuellen Fenster Ursprungs.|
+|[CDC::PaintRgn](#paintrgn)|Füllt einen Bereich mit dem ausgewählten Pinsel.|
 |[CDC::PatBlt](#patblt)|Erstellt ein Bitmuster.|
-|[CDC::Pie](#pie)|Zeichnet einen kreisförmigen Keil an.|
-|[CDC::PlayMetaFile](#playmetafile)|Gibt den Inhalt der angegebenen Metadatei auf das angegebene Gerät wieder. Die erweiterte Version des `PlayMetaFile` zeigt das Bild in der angegebenen EMF-Datei gespeichert. Die Metadatei kann oft wiedergegeben werden.|
-|[CDC::PlgBlt](#plgblt)|Führt einen Bitblocktransfer der Farbdaten Bits auf das angegebene Rechteck, in dem Quellgerätekontext an der angegebenen Parallelogramm im angegebenen Gerätekontext aus.|
-|[CDC::PolyBezier](#polybezier)|Zeichnet eine oder mehrere Bzier Splines an. Die aktuelle Position ist weder verwendet noch aktualisiert.|
-|[CDC::PolyBezierTo](#polybezierto)|Zeichnet eine oder mehrere Bzier Splines, und verschiebt die aktuelle Position zum Endpunkt für den letzten Bzier Spline.|
-|[CDC::PolyDraw](#polydraw)|Zeichnet eine Reihe von Liniensegmenten und Bzier Splines. Diese Funktion aktualisiert die aktuelle Position.|
-|[CDC::Polygon](#polygon)|Zeichnet ein Vieleck, bestehend aus zwei oder mehr Punkten (Scheitelpunkte) durch Linien verbunden sind.|
-|[CDC::Polyline](#polyline)|Zeichnet eine Reihe von Liniensegmenten, die zwischen den angegebenen Punkten.|
-|[CDC::PolylineTo](#polylineto)|Zeichnet eine oder mehrere gerade Linien an, und verschiebt die aktuelle Position zum Endpunkt der letzten Zeile.|
-|[CDC::PolyPolygon](#polypolygon)|Erstellt zwei oder mehreren Polygonen, die mit den aktuellen Modus des Polygons füllenden gefüllt sind. Die Polygone können nicht zusammenhängenden oder Überlappung zu können.|
-|[CDC::PolyPolyline](#polypolyline)|Zeichnet mehrere Reihe verbundener Liniensegmente. Die aktuelle Position ist weder verwendet noch von dieser Funktion aktualisiert.|
-|[CDC::PtVisible](#ptvisible)|Gibt an, ob der angegebene Punkt innerhalb des Clippingbereichs ist.|
-|[CDC::RealizePalette](#realizepalette)|Der Systempalette Paletteneinträge in der aktuellen logischen Palette zugeordnet.|
-|[CDC::Rectangle](#rectangle)|Zeichnet ein Rechteck mit dem aktuellen Stift und füllt sie mit dem aktuellen Pinsel.|
-|[CDC::RectVisible](#rectvisible)|Bestimmt, ob ein Teil im angegebenen Rechteck innerhalb des Clippingbereichs liegt.|
-|[CDC::ReleaseAttribDC](#releaseattribdc)|Releases `m_hAttribDC`, den Gerätekontext Attribut.|
-|[CDC::ReleaseOutputDC](#releaseoutputdc)|Releases `m_hDC`, den Ausgabe-Gerätekontext.|
-|[CDC::ResetDC](#resetdc)|Updates der `m_hAttribDC` Gerätekontext.|
-|[CDC::RestoreDC](#restoredc)|Stellt den Gerätekontext in einem vorherigen Zustand gespeichert, die mit `SaveDC`.|
-|[CDC::RoundRect](#roundrect)|Zeichnet ein Rechteck mit abgerundeten Ecken den aktuellen Stift verwenden und unter Verwendung des aktuellen Pinsels gefüllt.|
-|[CDC::SaveDC](#savedc)|Speichert den aktuellen Zustand des Gerätekontexts.|
-|[CDC::ScaleViewportExt](#scaleviewportext)|Ändert das Ausmaß der Viewport relativ zu den aktuellen Werten.|
-|[CDC::ScaleWindowExt](#scalewindowext)|Ändert die Fenster-Blöcken Bezug auf die aktuellen Werte.|
-|[CDC::ScrollDC](#scrolldc)|Führt einen Bildlauf um ein Rechteck von Bits, horizontal und vertikal.|
-|[CDC::SelectClipPath](#selectclippath)|Wählt den aktuellen Pfad als einen Ausschneidebereich für den Gerätekontext, kombinieren die neue Region mit der alle vorhandenen Ausschneidebereich unter Verwendung des angegebenen Modus.|
-|[CDC::SelectClipRgn](#selectcliprgn)|Kombiniert den angegebenen Bereich mit den aktuellen Ausschneidebereich unter Verwendung des angegebenen Modus.|
-|[CDC::SelectObject](#selectobject)|Markiert ein zeichnen GDI-Objekt, z. B. einen Stift.|
-|[CDC::SelectPalette](#selectpalette)|Wählt die logische Palette an.|
-|[CDC::SelectStockObject](#selectstockobject)|Wählt eine der vordefinierten vordefinierten Stifte, Pinsel oder Schriftarten, die von Windows bereitgestellt.|
-|[CDC::SetAbortProc](#setabortproc)|Legt fest, eine vom Programmierer bereitgestellte Rückruffunktion, die Windows aufruft, wenn ein Druckauftrag abgebrochen werden muss.|
-|[CDC::SetArcDirection](#setarcdirection)|Richtung für das Zeichnen für Bogen und Rechteck Funktionen verwendet werden.|
-|[CDC::SetAttribDC](#setattribdc)|Legt `m_hAttribDC`, den Gerätekontext Attribut.|
+|[CDC::Pie](#pie)|Zeichnet einen kreisförmigen Keil.|
+|[CDC::PlayMetaFile](#playmetafile)|Gibt den Inhalt der angegebenen Metadatei auf dem angegebenen Gerät wieder. Die erweiterte Version von `PlayMetaFile` zeigt das Bild an, das in der angegebenen Metadatei mit erweitertem Format gespeichert ist. Die Metadatei kann beliebig oft wiedergegeben werden.|
+|[CDC::PlgBlt](#plgblt)|Führt eine Bitblock Übertragung der Bits von Farbdaten aus dem angegebenen Rechteck im Quell Gerätekontext in das angegebene Parallelogramm im angegebenen Gerätekontext aus.|
+|[CDC::PolyBezier](#polybezier)|Zeichnet eine oder mehrere Bzier-Splines. Die aktuelle Position wird weder verwendet noch aktualisiert.|
+|[CDC::PolyBezierTo](#polybezierto)|Zeichnet eine oder mehrere Bzier-Splines und verschiebt die aktuelle Position an den Endpunkt der letzten Bzier-Spline.|
+|[CDC::PolyDraw](#polydraw)|Zeichnet eine Reihe von Liniensegmenten und Bzier-Splines. Diese Funktion aktualisiert die aktuelle Position.|
+|[CDC::Polygon](#polygon)|Zeichnet ein Polygon, das aus zwei oder mehr Punkten (Vertices) besteht, die durch Linien verbunden sind.|
+|[CDC::Polyline](#polyline)|Zeichnet eine Reihe von Liniensegmenten, die die angegebenen Punkte verbinden.|
+|[CDC::PolylineTo](#polylineto)|Zeichnet eine oder mehrere gerade Linien und verschiebt die aktuelle Position an den Endpunkt der letzten Zeile.|
+|[CDC::PolyPolygon](#polypolygon)|Erstellt zwei oder mehr Polygone, die mit dem aktuellen Polygon Füll Modus gefüllt werden. Die Polygone können zusammen hanglos sein, oder Sie können sich überlappen.|
+|[CDC::PolyPolyline](#polypolyline)|Zeichnet mehrere Reihe verbundener Liniensegmente. Die aktuelle Position wird von dieser Funktion weder verwendet noch aktualisiert.|
+|[CDC::PtVisible](#ptvisible)|Gibt an, ob sich der angegebene Punkt innerhalb des Clippingbereichs befindet.|
+|[CDC::RealizePalette](#realizepalette)|Ordnet Paletteneinträge in der aktuellen logischen Palette der Systempalette zu.|
+|[CDC::Rectangle](#rectangle)|Zeichnet ein Rechteck mithilfe des aktuellen Stifts und füllt es mit dem aktuellen Pinsel.|
+|[CDC::RectVisible](#rectvisible)|Bestimmt, ob ein Teil des angegebenen Rechtecks innerhalb des Clippingbereichs liegt.|
+|[CDC::ReleaseAttribDC](#releaseattribdc)|Releases `m_hAttribDC`, das Attribut Gerätekontext.|
+|[CDC::ReleaseOutputDC](#releaseoutputdc)|Releases `m_hDC`, den Ausgabegeräte Kontext.|
+|[CDC::ResetDC](#resetdc)|Aktualisiert den `m_hAttribDC` Gerätekontext.|
+|[CDC::RestoreDC](#restoredc)|Stellt den Gerätekontext in einem vorherigen Zustand wieder her `SaveDC`, der mit gespeichert wird.|
+|[CDC::RoundRect](#roundrect)|Zeichnet ein Rechteck mit abgerundeten Ecken unter Verwendung des aktuellen Stifts und füllt mit dem aktuellen Pinsel.|
+|[CDC::SaveDC](#savedc)|Speichert den aktuellen Zustand des Geräte Kontexts.|
+|[CDC::ScaleViewportExt](#scaleviewportext)|Ändert den viewportwert in Bezug auf die aktuellen Werte.|
+|[CDC::ScaleWindowExt](#scalewindowext)|Ändert die Fensterblöcke in Bezug auf die aktuellen Werte.|
+|[CDC::ScrollDC](#scrolldc)|Führt einen horizontalen und vertikalen Bildlauf für ein Rechteck von Bits aus.|
+|[CDC::SelectClipPath](#selectclippath)|Wählt den aktuellen Pfad als Clippingbereich für den Gerätekontext aus, wobei die neue Region mit einem beliebigen vorhandenen Clippingbereich unter Verwendung des angegebenen Modus kombiniert wird.|
+|[CDC::SelectClipRgn](#selectcliprgn)|Kombiniert den angegebenen Bereich mit dem aktuellen Clippingbereich unter Verwendung des angegebenen Modus.|
+|[CDC::SelectObject](#selectobject)|Wählt ein GDI-Zeichnungsobjekt aus, z. b. einen Stift.|
+|[CDC::SelectPalette](#selectpalette)|Wählt die logische Palette aus.|
+|[CDC::SelectStockObject](#selectstockobject)|Wählt einen der vordefinierten, von Windows bereitgestellten Kurs Stifte, Pinsel oder Schriftarten aus.|
+|[CDC::SetAbortProc](#setabortproc)|Legt eine vom Programmierer bereitgestellte Rückruffunktion fest, die von Windows aufgerufen wird, wenn ein Druckauftrag abgebrochen werden muss.|
+|[CDC::SetArcDirection](#setarcdirection)|Legt die Zeichnungs Richtung fest, die für Bogen-und Rechteck Funktionen verwendet werden soll.|
+|[CDC::SetAttribDC](#setattribdc)|Legt `m_hAttribDC`fest, das Attribut Gerätekontext.|
 |[CDC::SetBkColor](#setbkcolor)|Legt die aktuelle Hintergrundfarbe fest.|
 |[CDC::SetBkMode](#setbkmode)|Legt den Hintergrundmodus fest.|
-|[CDC::SetBoundsRect](#setboundsrect)|Steuert die Ansammlung von umgebenden Rechteck-Informationen für den angegebenen Gerätekontext.|
-|[CDC::SetBrushOrg](#setbrushorg)|Gibt den Ursprung für den nächsten Pinsel ausgewählt wird, einen Gerätekontext.|
-|[CDC::SetColorAdjustment](#setcoloradjustment)|Legt die Farbe Anpassungswerte für den Gerätekontext, die mit den angegebenen Werten.|
-|[CDC::SetDCBrushColor](#setdcbrushcolor)|Legt fest, die aktuelle Pinselfarbe.|
-|[CDC::SetDCPenColor](#setdcpencolor)|Legt fest, die aktuelle Stiftfarbe.|
-|[CDC::SetGraphicsMode](#setgraphicsmode)|Legt den aktuellen Graphics-Modus für den angegebenen Gerätekontext.|
-|[CDC::SetLayout](#setlayout)|Ändert das Layout einem Gerätekontext (DC).|
-|[CDC::SetMapMode](#setmapmode)|Legt den aktuellen Zuordnungsmodus fest.|
-|[CDC::SetMapperFlags](#setmapperflags)|Ändert den Algorithmus, den die Schriftartenmapper verwendet werden soll, wenn es logische Schriftarten physischen Schriftarten zugeordnet.|
-|[CDC::SetMiterLimit](#setmiterlimit)|Legt das Limit für die Dauer der Gehrungslänge Joins für den Gerätekontext.|
-|[CDC::SetOutputDC](#setoutputdc)|Legt `m_hDC`, den Ausgabe-Gerätekontext.|
-|[CDC::SetPixel](#setpixel)|Das Pixel festgelegt auf den angegebenen Punkt in diesem am ehesten der angegebenen Farbe.|
-|[CDC::SetPixelV](#setpixelv)|Das Pixel festgelegt auf den angegebenen Koordinaten auf diesem am ehesten der angegebenen Farbe. `SetPixelV` ist schneller als `SetPixel` , da sie nicht den Farbwert der der Punkt tatsächlich gezeichnet zurückgeben muss.|
-|[CDC::SetPolyFillMode](#setpolyfillmode)|Legt den Modus für die Polygon-füllen.|
+|[CDC::SetBoundsRect](#setboundsrect)|Steuert die Ansammlung von umgebenden Rechteck Informationen für den angegebenen Gerätekontext.|
+|[CDC::SetBrushOrg](#setbrushorg)|Gibt den Ursprung für den nächsten Pinsel an, der in einen Gerätekontext ausgewählt wird.|
+|[CDC::SetColorAdjustment](#setcoloradjustment)|Legt die Farb Anpassungs Werte für den Gerätekontext mithilfe der angegebenen Werte fest.|
+|[CDC::SetDCBrushColor](#setdcbrushcolor)|Legt die aktuelle Pinsel Farbe fest.|
+|[CDC::SetDCPenColor](#setdcpencolor)|Legt die aktuelle Stift Farbe fest.|
+|[CDC::SetGraphicsMode](#setgraphicsmode)|Legt den aktuellen Grafikmodus für den angegebenen Gerätekontext fest.|
+|[CDC::SetLayout](#setlayout)|Ändert das Layout eines Geräte Kontexts (DC).|
+|[CDC::SetMapMode](#setmapmode)|Legt den aktuellen Kartenmodus fest.|
+|[CDC::SetMapperFlags](#setmapperflags)|Ändert den Algorithmus, den die Schriftart Mapper verwendet, wenn logische Schriftarten physischen Schriftarten zugeordnet werden.|
+|[CDC::SetMiterLimit](#setmiterlimit)|Legt den Grenzwert für die Länge von Gehrungs-Joins für den Gerätekontext fest.|
+|[CDC::SetOutputDC](#setoutputdc)|Legt `m_hDC`den Ausgabegeräte Kontext fest.|
+|[CDC::SetPixel](#setpixel)|Legt das Pixel am angegebenen Punkt auf die nächstgelegene Näherung der angegebenen Farbe fest.|
+|[CDC::SetPixelV](#setpixelv)|Legt das Pixel an den angegebenen Koordinaten auf die nächstgelegene Näherung der angegebenen Farbe fest. `SetPixelV`ist schneller als `SetPixel` , weil der Farbwert des tatsächlich gezeichneten Punkts nicht zurückgegeben werden muss.|
+|[CDC::SetPolyFillMode](#setpolyfillmode)|Legt den Polygon Füll Modus fest.|
 |[CDC::SetROP2](#setrop2)|Legt den aktuellen Zeichnungsmodus fest.|
-|[CDC::SetStretchBltMode](#setstretchbltmode)|Legt den Modus zum Strecken einer Bitmap.|
-|[CDC::SetTextAlign](#settextalign)|Legt die textausrichtung Flags.|
-|[CDC::SetTextCharacterExtra](#settextcharacterextra)|Legt die Menge des Zeichenabstands fest.|
+|[CDC::SetStretchBltMode](#setstretchbltmode)|Legt den Modus für die Bitmap-Streckung fest.|
+|[CDC::SetTextAlign](#settextalign)|Legt die Flags für die Textausrichtung fest.|
+|[CDC::SetTextCharacterExtra](#settextcharacterextra)|Legt den Abstand zwischen Leerzeichen fest.|
 |[CDC::SetTextColor](#settextcolor)|Legt die Textfarbe fest.|
-|[CDC::SetTextJustification](#settextjustification)|Das Zeilenumbruchzeichen in einer Zeichenfolge werden Leerzeichen hinzugefügt.|
-|[CDC::SetViewportExt](#setviewportext)|Legt fest, die x und y-Blöcke des Viewports.|
-|[CDC::SetViewportOrg](#setviewportorg)|Legt den Ursprung des Viewports an.|
-|[CDC::SetWindowExt](#setwindowext)|Legt fest, die x und y-Blöcke von das zugeordnete Fenster.|
-|[CDC::SetWindowOrg](#setwindoworg)|Legt den Fensterursprung im des Gerätekontexts fest.|
-|[CDC::SetWorldTransform](#setworldtransform)|Legt den aktuellen Raum auf Seite-Space-Transformation fest.|
-|[CDC::StartDoc](#startdoc)|Informiert den Gerätetreiber, den ein neuer Druckauftrag gestartet wird.|
-|[CDC::StartPage](#startpage)|Informiert den Gerätetreiber, den eine neue Seite gestartet wird.|
-|[CDC::StretchBlt](#stretchblt)|Verschiebt eine Bitmap aus einem Quellrechteck und das Gerät in ein Zielrechteck, gestreckt oder komprimiert die Bitmap wird bei Bedarf die Maße des Zielrechtecks anpassen.|
-|[CDC::StrokeAndFillPath](#strokeandfillpath)|Schließt alle geöffneten Figuren in einen Pfad, den Umriss des Pfads mithilfe des aktuellen Stifts eintritt und füllt mit der aktuellen Pinsel inneren.|
-|[CDC::StrokePath](#strokepath)|Rendert den angegebenen Pfad mit der aktuelle Stift.|
-|[CDC::TabbedTextOut](#tabbedtextout)|Schreibt eine Zeichenfolge an einer angegebenen Position, und Erweitern von Registerkarten auf die Werte in einem Array von Tabstopp Positionen angegeben.|
-|[CDC::TextOut](#textout)|Schreibt eine Zeichenfolge an einer angegebenen Position mit der aktuell ausgewählten Schriftart.|
-|[CDC::TransparentBlt](#transparentblt)|Überträgt einen Bit-Datenblock Farbe aus dem Gerätekontext für die angegebene Quelle in ein Ziel-Gerätekontext, Rendern einer angegebenen Farbe transparent in die Übertragung an.|
-|[CDC::UpdateColors](#updatecolors)|Updates des Clientbereichs der Systempalette auf Pixel-für-Pixel-Basis der Clientbereich des Gerätekontexts durch Vergleich der aktuellen Farben.|
-|[CDC::WidenPath](#widenpath)|Definiert den aktuellen Pfad als der Bereich, der gezeichnet werden sollen, wenn der Pfad mit Strichen gezeichnet wurden mit dem Stift in den Gerätekontext derzeit ausgewählt.|
+|[CDC::SetTextJustification](#settextjustification)|Fügt den Break-Zeichen in einer Zeichenfolge Leerzeichen hinzu.|
+|[CDC::SetViewportExt](#setviewportext)|Legt die x-und y-Blöcke des Viewports fest.|
+|[CDC::SetViewportOrg](#setviewportorg)|Legt den Viewportursprung fest.|
+|[CDC::SetWindowExt](#setwindowext)|Legt die x-und y-Blöcke des zugeordneten Fensters fest.|
+|[CDC::SetWindowOrg](#setwindoworg)|Legt den Fenster Ursprung des Geräte Kontexts fest.|
+|[CDC::SetWorldTransform](#setworldtransform)|Legt die aktuelle Transformation für den Welt Raum auf den Seiten Raum fest.|
+|[CDC::StartDoc](#startdoc)|Informiert den Gerätetreiber darüber, dass ein neuer Druckauftrag gestartet wird.|
+|[CDC::StartPage](#startpage)|Informiert den Gerätetreiber darüber, dass eine neue Seite gestartet wird.|
+|[CDC::StretchBlt](#stretchblt)|Verschiebt eine Bitmap aus einem Quell Rechteck und einem Gerät in ein Ziel Rechteck, wobei die Bitmap bei Bedarf gestreckt oder komprimiert wird, um die Abmessungen des Ziel Rechtecks anzupassen.|
+|[CDC::StrokeAndFillPath](#strokeandfillpath)|Schließt alle geöffneten Abbildungen in einem Pfad, schlägt die Gliederung des Pfades mithilfe des aktuellen Stifts und füllt das Innere mit dem aktuellen Pinsel.|
+|[CDC::StrokePath](#strokepath)|Rendert den angegebenen Pfad mit dem aktuellen Stift.|
+|[CDC::TabbedTextOut](#tabbedtextout)|Schreibt eine Zeichenfolge an einer angegebenen Position und erweitert die Registerkarten auf die Werte, die in einem Array von Tabstopp Positionen angegeben sind.|
+|[CDC::TextOut](#textout)|Schreibt eine Zeichenfolge an einer angegebenen Position mithilfe der aktuell ausgewählten Schriftart.|
+|[CDC::TransparentBlt](#transparentblt)|Überträgt einen Bitblock von Farbdaten aus dem angegebenen Quell Gerätekontext in einen Zielgeräte Kontext und rendert eine angegebene Farbe transparent in der Übertragung.|
+|[CDC::UpdateColors](#updatecolors)|Aktualisiert den Client Bereich des Geräte Kontexts, indem die aktuellen Farben im Client Bereich auf pixelweise mit der Systempalette übereinstimmen.|
+|[CDC::WidenPath](#widenpath)|Definiert den aktuellen Pfad neu als den Bereich, der gezeichnet werden würde, wenn der Pfad mithilfe des derzeit im Gerätekontext ausgewählten Stifts gezeichnet würde.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDC::Operator HDC](#operator_hdc)|Ruft das Handle des Gerätekontexts ab.|
+|[CDC:: Operator-HDC](#operator_hdc)|Ruft das Handle des Geräte Kontexts ab.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CDC::m_hAttribDC](#m_hattribdc)|Das verwendete Attribut-Gerätekontext `CDC` Objekt.|
-|[CDC::m_hDC](#m_hdc)|Die Ausgabe-Gerätekontext verwendete `CDC` Objekt.|
+|[CDC::m_hAttribDC](#m_hattribdc)|Der von diesem `CDC` -Objekt verwendete Attribut-Gerätekontext.|
+|[CDC::m_hDC](#m_hdc)|Der Ausgabe-Gerätekontext, der von `CDC` diesem-Objekt verwendet wird.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die `CDC` Objekt stellt Memberfunktionen zum Arbeiten mit einem Gerätekontext, z. B. eine Anzeige oder Drucker als auch Mitglieder für die Arbeit mit einen Anzeigekontext, das den Clientbereich eines Fensters zugeordnet.
+Das `CDC` -Objekt stellt Element Funktionen zum Arbeiten mit einem Gerätekontext, z. b. eine Anzeige oder einen Drucker, sowie Member zum Arbeiten mit einem Anzeige Kontext bereit, der dem Client Bereich eines Fensters zugeordnet ist.
 
-Führen Sie alle Zeichnungen über den Member-Funktionen eine `CDC` Objekt. Die Klasse stellt Memberfunktionen zum Arbeiten mit Zeichnen typsicheren Graphics Device Interface (GDI)-Objektauswahl-Tools und Arbeiten mit Farben und Paletten Gerätekontext Vorgänge. Es enthält auch Member-Funktionen zum Abrufen und festlegen, die Zeichnungsattribute, Zuordnung, arbeiten mit dem Viewport sind, arbeiten mit Fenster soweit, Konvertieren von Koordinaten, arbeiten mit Regionen, Clipping: Zeichnen von Linien und einfache Formen zeichnen, Ellipsen, und Polygone. Member-Funktionen werden auch für das Zeichnen von Text, arbeiten mit Schriftarten, mit Escapezeichen des Druckers, Durchführen eines Bildlaufs und Wiedergabe von Metadateien bereitgestellt.
+Alle zeichnen die Element Funktionen eines `CDC` -Objekts. Die-Klasse stellt Element Funktionen für Gerätekontext Vorgänge, das Arbeiten mit Zeichnungs Tools, die typsichere GDI-Objektauswahl (Graphics Device Interface) und das Arbeiten mit Farben und Paletten bereit. Außerdem werden Member-Funktionen zum erhalten und Festlegen von Zeichnungs Attributen, zuordnen, arbeiten mit dem Viewport, arbeiten mit dem Fensterblock, das Umrechnen von Koordinaten, das Arbeiten mit Bereichen, das Abschneiden, das Zeichnen von Linien und das Zeichnen einfacher Formen, Ellipsen und Polygone. Element Funktionen werden auch für das Zeichnen von Text, das Arbeiten mit Schriftarten, das Verwenden von Drucker Escapezeichen, den Bildlauf und das Abspielen von Metadateien
 
-Verwenden einer `CDC` Objekt, erstellen Sie sie, und klicken Sie dann seine Memberfunktionen aufrufen, die Windows-Funktionen entsprechen, die Gerätekontexte zu verwenden.
+Um ein `CDC` -Objekt zu verwenden, erstellen Sie es, und nennen Sie dann seine Member-Funktionen, die parallele Windows-Funktionen verwenden, die Geräte Kontexte verwenden.
 
 > [!NOTE]
->  Unter Windows 95/98 sind alle Bildschirmkoordinaten 16 Bits beschränkt. Aus diesem Grund eine **Int** , die an eine `CDC` Memberfunktion muss im Bereich von-32768 bis 32767 liegen.
+>  Unter Windows 95/98 sind alle Bildschirm Koordinaten auf 16 Bits beschränkt. Daher muss ein **int** -Element, `CDC` das an eine Member-Funktion übermittelt wird, im Bereich von-32768 bis 32767 liegen.
 
-Für einen bestimmten Verwendungszweck, bietet die Microsoft Foundation Class-Bibliothek mehrere Klassen, die von `CDC` . `CPaintDC` Aufrufe kapselt `BeginPaint` und `EndPaint`. `CClientDC` verwaltet einen Anzeigekontext Clientbereich eines Fensters zugeordnet. `CWindowDC` verwaltet einen Anzeigekontext eines Fensters, einschließlich der Rahmen und -Steuerelementen zugeordnet. `CMetaFileDC` Ordnet einer Metadatei zu einen Gerätekontext.
+Bei bestimmten Verwendungsmöglichkeiten stellt der Microsoft Foundation Class-Bibliothek mehrere von `CDC` abgeleitete Klassen bereit. `CPaintDC`kapselt Aufrufe von `BeginPaint` und `EndPaint`. `CClientDC`verwaltet einen Anzeige Kontext, der dem Client Bereich eines Fensters zugeordnet ist. `CWindowDC`verwaltet einen einem gesamten Fenster zugeordneten Anzeige Kontext, einschließlich des Frames und der Steuerelemente. `CMetaFileDC`ordnet einen Gerätekontext einer Metadatei zu.
 
-`CDC` stellt zwei Memberfunktionen, [GetLayout](#getlayout) und [SetLayout](#setlayout), für die Umkehrung des Layouts eines Gerätekontexts, die nicht das Layout in einem Fenster erbt. Diese Ausrichtung rechts-nach-links ist für Anwendungen für die Kulturen, z. B. Arabisch oder Hebräisch, wenn das Layout Zeichen nicht der Europäischen Standard ist erforderlich.
+`CDC`stellt die zwei Member-Funktionen [getLayout](#getlayout) und [setLayout](#setlayout)zum Umkehren des Layouts eines Geräte Kontexts bereit, der das Layout nicht von einem Fenster erbt. Eine solche Ausrichtung von rechts nach links ist für Anwendungen erforderlich, die für Kulturen geschrieben wurden, wie z. b. Arabisch oder Hebräisch, wobei das Zeichen Layout nicht der Europäische Standard ist.
 
-`CDC` enthält zwei Gerätekontexte, [M_hDC](#m_hdc) und [M_hAttribDC](#m_hattribdc), das bei der Erstellung einer `CDC` Objekt, das gleiche Gerät finden Sie unter. `CDC` leitet alle Ausgabe GDI-Aufrufe an `m_hDC` und die meisten Attribut GDI-Aufrufe von `m_hAttribDC`. (Ein Beispiel für ein Attributaufruf ist `GetTextColor`, während `SetTextColor` ist ein Aufruf der Ausgabe.)
+`CDC`enthält zwei Geräte Kontexte, [m_hDC](#m_hdc) und [m_hAttribDC](#m_hattribdc), die sich bei der `CDC` Erstellung eines-Objekts auf das gleiche Gerät beziehen. `CDC`leitet alle GDI-Ausgabe Aufrufe `m_hDC` an und die meisten Attribute-GDI-Aufrufe an. `m_hAttribDC` (Ein Beispiel für einen Attribut Aufrufwert `GetTextColor`ist `SetTextColor` , während ein Ausgabe--Befehl ist.)
 
-Das Framework verwendet beispielsweise diese beiden Kontexte zum Implementieren einer `CMetaFileDC` Objekt an, die Ausgabe an eine Metadatei beim Lesen der Attribute von einem physischen Gerät sendet. Seitenansicht wird in das Framework auf ähnliche Weise implementiert. Sie können auch die beiden Kontexte in Ihrem Code anwendungsspezifische auf ähnliche Weise verwenden.
+Das Framework verwendet beispielsweise diese beiden Geräte Kontexte, um ein- `CMetaFileDC` Objekt zu implementieren, das beim Lesen von Attributen von einem physischen Gerät eine Ausgabe an eine Metadatei sendet. Die Seitenansicht wird im Framework auf ähnliche Weise implementiert. Sie können die beiden Geräte Kontexte auch auf ähnliche Weise in Ihrem anwendungsspezifischen Code verwenden.
 
-Es gibt Situationen, wenn benötigen Sie möglicherweise Text-Metrik-Informationen aus, der `m_hDC` und `m_hAttribDC` Gerätekontexte. Die folgenden Paare von Funktionen bieten diese Funktion:
+Es gibt Zeiten, in denen Sie möglicherweise Text metrikinformationen aus `m_hDC` dem `m_hAttribDC` -und dem-Gerätekontext benötigen. Diese Funktion wird von den folgenden Funktions Paaren bereitgestellt:
 
-|M_hAttribDC verwendet|M_hDC verwendet|
+|Verwendet m_hAttribDC|Verwendet m_hDC|
 |-----------------------|-----------------|
 |[GetTextExtent](#gettextextent)|[GetOutputTextExtent](#getoutputtextextent)|
 |[GetTabbedTextExtent](#gettabbedtextextent)|[GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|
 |[GetTextMetrics](#gettextmetrics)|[GetOutputTextMetrics](#getoutputtextmetrics)|
 |[GetCharWidth](#getcharwidth)|[GetOutputCharWidth](#getoutputcharwidth)|
 
-Weitere Informationen zu `CDC`, finden Sie unter [Gerätekontexte](../../mfc/device-contexts.md).
+Weitere Informationen zu `CDC`finden Sie unter [Geräte Kontexte](../../mfc/device-contexts.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -680,9 +680,9 @@ Weitere Informationen zu `CDC`, finden Sie unter [Gerätekontexte](../../mfc/dev
 
 **Header:** afxwin.h
 
-##  <a name="abortdoc"></a>  CDC::AbortDoc
+##  <a name="abortdoc"></a>CDC:: abortdoc
 
-Beendet den aktuellen Druckauftrag neu und löscht Sie alles, was die Anwendung an das Gerät, seit dem letzten Aufruf von geschrieben wurde der [StartDoc](#startdoc) Member-Funktion.
+Beendet den aktuellen Druckauftrag und löscht alle Elemente, die von der Anwendung seit dem letzten Aufrufen der [StartDoc](#startdoc) -Member-Funktion auf das Gerät geschrieben wurden.
 
 ```
 int AbortDoc();
@@ -690,39 +690,39 @@ int AbortDoc();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Wert größer als oder gleich 0, wenn erfolgreich, oder einen negativen Wert, wenn ein Fehler aufgetreten ist. Die folgende Liste zeigt häufig verwendete Fehlerwerte und ihre Bedeutung:
+Ein Wert größer oder gleich 0 (null), wenn erfolgreich, oder ein negativer Wert, wenn ein Fehler aufgetreten ist. In der folgenden Liste werden häufige Fehler Werte und ihre Bedeutung angezeigt:
 
 - SP_ERROR allgemeiner Fehler.
 
-- SP_OUTOFDISK nicht genügend Speicherplatz auf dem Datenträger steht zurzeit zum Spoolen und keinen Speicherplatz mehr zur Verfügung stehen.
+- SP_OUTOFDISK es ist nicht genügend Speicherplatz zum Spoolvorgang verfügbar, und es wird kein Speicherplatz mehr verfügbar.
 
-- SP_OUTOFMEMORY nicht genügend Arbeitsspeicher zum Spoolen verfügbar ist.
+- SP_OUTOFMEMORY nicht genügend Arbeitsspeicher zum Spoolvorgang verfügbar.
 
-- SP_USERABORT Benutzer beendet den Auftrag über die Druck-Manager.
+- SP_USERABORT der Benutzer hat den Auftrag über den Druck-Manager beendet.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion ersetzt die ABORTDOC Druckerescape.
+Diese Member-Funktion ersetzt den abortdoc-druckerescapezeichen.
 
-`AbortDoc` sollte verwendet werden, um Folgendes zu beenden:
+`AbortDoc`sollte verwendet werden, um Folgendes zu beenden:
 
-- Drucken-Vorgänge, die keine Abort-Funktion mit angeben [SetAbortProc](#setabortproc).
+- Druckvorgänge, bei denen keine abort-Funktion mithilfe von [SetAbortProc](#setabortproc) festgelegt wird.
 
-- Drucken-Vorgänge, die ihre erste NEWFRAME oder NEXTBAND noch nicht erreicht haben Aufruf mit Escapezeichen versehen.
+- Druckvorgänge, die ihren ersten newframe-oder nextband-escapebefehl noch nicht erreicht haben.
 
-Wenn eine Anwendung eines Druckfehlers oder einen Druck abgebrochenen Vorgang auftritt, müssen sie nicht versuchen, den Vorgang zu beenden, indem Sie entweder die [EndDoc](#enddoc) oder `AbortDoc` Memberfunktionen der Klasse `CDC`. GDI wird automatisch beendet den Vorgang, bevor der Wert des Fehlercodes zurückgeben.
+Wenn eine Anwendung auf einen Druckfehler oder einen abgebrochenen Druckvorgang stößt, darf Sie nicht versuchen, den Vorgang mit den [EndDoc](#enddoc) -oder `AbortDoc` Element Funktionen der- `CDC`Klasse zu beenden. GDI beendet den Vorgang automatisch, bevor der Fehlerwert zurückgegeben wird.
 
-Wenn ein Dialogfeld, damit der Benutzer den Druckvorgang abbrechen kann von die Anwendung angezeigt wird, muss er Aufrufen `AbortDoc` vor dem Zerstören des Dialogfelds.
+Wenn in der Anwendung ein Dialogfeld angezeigt wird, in dem der Benutzer den Druckvorgang abbrechen kann, `AbortDoc` muss vor dem Zerstören des Dialog Felds aufgerufen werden.
 
-Wenn der Druck-Manager verwendet wurde, um den Auftrag zu starten, wird beim Aufrufen `AbortDoc` löscht den gesamten Spool-Auftrag, erhält der Drucker "nothing". Wenn der Druck-Manager nicht verwendet wurde, um den Auftrag zu starten, die Daten möglicherweise gesendet wurden an den Drucker vor dem `AbortDoc` aufgerufen wurde. In diesem Fall der Druckertreiber den Drucker (wenn möglich) zurückgesetzt haben und den Druckauftrag geschlossen.
+Wenn der Druck-Manager verwendet wurde, um den Druckauftrag `AbortDoc` zu starten, wird durch Aufrufen von der gesamte Spoolauftrag gelöscht – der Drucker empfängt nichts. Wenn der Druck-Manager zum Starten des Druckauftrags nicht verwendet wurde, wurden die Daten möglicherweise vor `AbortDoc` dem Aufruf von an den Drucker gesendet. In diesem Fall würde der Druckertreiber (sofern möglich) den Drucker zurücksetzen und den Druckauftrag schließen.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CDC::StartDoc](#startdoc).
+  Weitere Informationen finden Sie im Beispiel für [CDC:: StartDoc](#startdoc).
 
-##  <a name="abortpath"></a>  CDC::AbortPath
+##  <a name="abortpath"></a>CDC:: abortpath
 
-Schließt ein, und verwirft alle Pfade in den Gerätekontext.
+Schließt und verwirft alle Pfade im Gerätekontext.
 
 ```
 BOOL AbortPath();
@@ -734,11 +734,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn in den Gerätekontext eine Klammer offenen Pfad vorhanden ist, wird die Pfad-Klammer wird geschlossen, und der Pfad wird verworfen. In den Gerätekontext ein geschlossener Pfad vorhanden ist, wird der Pfad verworfen.
+Wenn im Gerätekontext eine öffnende Pfad Klammer vorhanden ist, wird die Pfad Klammer geschlossen, und der Pfad wird verworfen. Wenn im Gerätekontext ein geschlossener Pfad vorhanden ist, wird der Pfad verworfen.
 
-##  <a name="addmetafilecomment"></a>  CDC::AddMetaFileComment
+##  <a name="addmetafilecomment"></a>CDC:: AddMetafileComment
 
-Kopiert den Kommentar aus einem Puffer in einen angegebenen EMF-Datei an.
+Kopiert den Kommentar aus einem Puffer in eine angegebene Metadatendatei mit erweitertem Format.
 
 ```
 BOOL AddMetaFileComment(
@@ -749,7 +749,7 @@ BOOL AddMetaFileComment(
 ### <a name="parameters"></a>Parameter
 
 *nDataSize*<br/>
-Gibt die Länge des Puffers Kommentar, in Bytes an.
+Gibt die Länge des Kommentar Puffers in Bytes an.
 
 *pCommentData*<br/>
 Verweist auf den Puffer, der den Kommentar enthält.
@@ -760,11 +760,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Kommentar kann private Informationen enthalten, z. B. die Quelle des Bilds und das Datum es erstellt wurde. Ein Kommentar sollte eine Anwendung Signatur, gefolgt von den Daten beginnen. Kommentare darf keine Position-spezifische Daten enthalten. Position-spezifische Daten gibt den Speicherort eines Datensatzes, und es sollte nicht angegeben werden, da eine Metadatei in einem anderen Metadatei eingebettet werden kann. Diese Funktion kann nur mit erweiterten Metadateien verwendet werden.
+Ein Kommentar kann beliebige private Informationen enthalten, z. –. die Quelle des Bilds und das Erstellungsdatum. Ein Kommentar sollte mit einer Anwendungs Signatur beginnen, gefolgt von den Daten. Kommentare dürfen keine Positions spezifischen Daten enthalten. Positions spezifische Daten geben den Speicherort eines Datensatzes an und sollten nicht eingeschlossen werden, da eine Metadatei möglicherweise in eine andere Metadatendatei eingebettet ist. Diese Funktion kann nur mit erweiterten Metafiles verwendet werden.
 
-##  <a name="alphablend"></a>  CDC::AlphaBlend
+##  <a name="alphablend"></a>CDC:: AlphaBlend
 
-Rufen Sie diese Memberfunktion zum Anzeigen von Bitmaps, die transparent oder halbtransparent Pixel aufweisen.
+Mit dieser Member-Funktion können Sie Bitmaps mit transparenten oder semitransparenten Pixeln anzeigen.
 
 ```
 BOOL AlphaBlend(
@@ -783,34 +783,34 @@ BOOL AlphaBlend(
 ### <a name="parameters"></a>Parameter
 
 *xDest*<br/>
-Gibt die X-Koordinate, in logischen Einheiten, der die linke obere Ecke des Zielrechtecks an.
+Gibt die x-Koordinate (in logischen Einheiten) der oberen linken Ecke des Ziel Rechtecks an.
 
 *yDest*<br/>
-Gibt die y-Koordinate, in logischen Einheiten, der die linke obere Ecke des Zielrechtecks an.
+Gibt die y-Koordinate (in logischen Einheiten) der oberen linken Ecke des Ziel Rechtecks an.
 
 *nDestWidth*<br/>
-Gibt die Breite in logischen Einheiten des Zielrechtecks an.
+Gibt die Breite (in logischen Einheiten) des Ziel Rechtecks an.
 
 *nDestHeight*<br/>
-Gibt die Höhe in logischen Einheiten des Zielrechtecks an.
+Gibt die Höhe (in logischen Einheiten) des Ziel Rechtecks an.
 
 *pSrcDC*<br/>
-Ein Zeiger auf den Quellgerätekontext.
+Ein Zeiger auf den Quell Gerätekontext.
 
 *xSrc*<br/>
-Gibt die X-Koordinate, in logischen Einheiten, der die linke obere Ecke des Quellrechtecks an.
+Gibt die x-Koordinate (in logischen Einheiten) der oberen linken Ecke des Quell Rechtecks an.
 
 *ySrc*<br/>
-Gibt die y-Koordinate, in logischen Einheiten, der die linke obere Ecke des Quellrechtecks an.
+Gibt die y-Koordinate (in logischen Einheiten) der oberen linken Ecke des Quell Rechtecks an.
 
 *nSrcWidth*<br/>
-Gibt die Breite in logischen Einheiten des Quellrechtecks an.
+Gibt die Breite des Quell Rechtecks in logischen Einheiten an.
 
 *nSrcHeight*<br/>
-Gibt die Höhe in logischen Einheiten des Quellrechtecks an.
+Gibt die Höhe des Quell Rechtecks in logischen Einheiten an.
 
 *blend*<br/>
-Gibt an, eine [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) Struktur.
+Gibt eine [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-blendfunction) -Struktur an.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -818,9 +818,9 @@ TRUE, wenn erfolgreich, andernfalls FALSE.
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) im Windows SDK für Weitere Informationen.
+Weitere Informationen finden Sie unter [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) in der Windows SDK.
 
-##  <a name="anglearc"></a>  CDC::AngleArc
+##  <a name="anglearc"></a>CDC:: anglearc
 
 Zeichnet ein Liniensegment und einen Bogen.
 
@@ -836,19 +836,19 @@ BOOL AngleArc(
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate für den Mittelpunkt des Kreises an.
+Gibt die logische x-Koordinate der Mitte des Kreises an.
 
 *y*<br/>
-Gibt die logische y-Koordinate für den Mittelpunkt des Kreises an.
+Gibt die logische y-Koordinate der Mitte des Kreises an.
 
 *nRadius*<br/>
-Gibt den Radius des Kreises in logischen Einheiten. Dieser Wert muss positiv sein.
+Gibt den Radius des Kreises in logischen Einheiten an. Dieser Wert muss positiv sein.
 
 *fStartAngle*<br/>
-Gibt den Anfangswinkel in Grad relativ zu der x-Achse an.
+Gibt den Anfangs Winkel in Grad relativ zur x-Achse an.
 
 *fSweepAngle*<br/>
-Der mittelpunktswinkel wird in Grad relativ zu den Anfangswinkel angibt.
+Gibt den Mittelpunktswinkel in Grad relativ zum Anfangs Winkel an.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -856,13 +856,13 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Zeilensegments wird von der aktuellen Position am Anfang des Bogens gezeichnet. Der Bogen gezeichnet wird entlang der Umkreis eines Kreises mit der angegebenen Radius und Center. Die Länge des Bogens wird durch den angegebenen Start- und Sweep Winkeln definiert.
+Das Liniensegment wird von der aktuellen Position bis zum Anfang des Bogens gezeichnet. Der Bogen wird entlang des Umkreis Bereichs eines Kreises mit dem angegebenen Radius und Mittelpunkt gezeichnet. Die Länge des Bogens wird durch die angegebenen Start-und Sweep-Winkel definiert.
 
-`AngleArc` Verschiebt die aktuelle Position zum Endpunkt des Bogens. Der Bogen gezeichnet, die von dieser Funktion kann scheinbar elliptischen, abhängig von der aktuellen Transformation und Zuordnung sein. Vor dem Zeichnen des Winkels, zeichnet diese Funktion von der aktuellen Position Zeilensegments auf den Anfang des Bogens an. Der Bogen gezeichnet wird, durch das Erstellen eines imaginären Kreis mit den angegebenen Radius angegebenen Mittelpunkt. Der Anfangspunkt des Bogens wird durch die von der x-Achse des Kreises gegen den Uhrzeigersinn gemessen wird, um die Anzahl von Grad in der Startwinkel bestimmt. Der Endpunkt befindet sich auf ähnliche Weise durch die Messung der gegen den Uhrzeigersinn vom Ausgangspunkt durch die Anzahl von Grad in der mittelpunktswinkel.
+`AngleArc`Verschiebt die aktuelle Position an den Endpunkt des Bogens. Der von dieser Funktion gezeichnete Bogen ist möglicherweise elliptisch, abhängig von der aktuellen Transformation und dem Zuordnungs Modus. Vor dem Zeichnen des Bogens zeichnet diese Funktion das Liniensegment von der aktuellen Position bis zum Anfang des Bogens. Der Bogen wird durch das Erstellen eines imaginären Kreises mit dem angegebenen Radius um den angegebenen Mittelpunkt gezeichnet. Der Anfangspunkt des Bogens wird bestimmt, indem er gegen den Uhrzeigersinn von der x-Achse des Kreises um die Anzahl der Grad im Start Winkel gemessen wird. Der Endpunkt befindet sich auf ähnliche Weise, indem er gegen den Uhrzeigersinn zwischen dem Anfangspunkt und der Anzahl von Grad im Mittelpunktswinkel gemessen wird.
 
-Wenn der mittelpunktswinkel von 360 Grad übersteigt ist der Bogen mehrmals überflüssig. Diese Funktion zeichnet Zeilen mithilfe des aktuellen Stifts. In der Abbildung ist nicht ausgefüllt.
+Wenn der Mittelpunktswinkel größer als 360 Grad ist, wird der Bogen mehrmals gefegt. Diese Funktion zeichnet Zeilen mithilfe des aktuellen Stifts. Die Abbildung ist nicht ausgefüllt.
 
-##  <a name="arc"></a>  CDC::ARC
+##  <a name="arc"></a>CDC:: Arc
 
 Zeichnet einen elliptischen Bogen.
 
@@ -886,37 +886,37 @@ BOOL Arc(
 ### <a name="parameters"></a>Parameter
 
 *x1*<br/>
-Gibt die X-Koordinate von der linken oberen Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
+Gibt die x-Koordinate der oberen linken Ecke des umgebenden Rechtecks an (in logischen Einheiten).
 
 *y1*<br/>
-Gibt die y-Koordinate von der linken oberen Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
+Gibt die y-Koordinate der oberen linken Ecke des umgebenden Rechtecks an (in logischen Einheiten).
 
 *x2*<br/>
-Gibt die X-Koordinate der unteren rechten Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
+Gibt die x-Koordinate der unteren rechten Ecke des umgebenden Rechtecks an (in logischen Einheiten).
 
 *y2*<br/>
-Gibt die y-Koordinate der unteren rechten Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
+Gibt die y-Koordinate der unteren rechten Ecke des umgebenden Rechtecks an (in logischen Einheiten).
 
 *x3*<br/>
-Gibt an, dass die X-Koordinate des Punkts, der den Bogen definiert Point (in logischen Einheiten) beginnt der. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
+Gibt die x-Koordinate des Punkts an, der den Anfangspunkt des Bogens (in logischen Einheiten) definiert. Dieser Punkt muss sich nicht genau auf dem Bogen befinden.
 
 *y3*<br/>
-Gibt an, der die y-Koordinate des Punkts, der den Bogen definiert (in logischen Einheiten) Anfangspunkt des. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
+Gibt die y-Koordinate des Punkts an, der den Anfangspunkt des Bogens (in logischen Einheiten) definiert. Dieser Punkt muss sich nicht genau auf dem Bogen befinden.
 
 *x4*<br/>
-Gibt die X-Koordinate des Punkts, der Endpunkt des Bogens, (in logischen Einheiten) definiert. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
+Gibt die x-Koordinate des Punkts an, der den Endpunkt des Bogens definiert (in logischen Einheiten). Dieser Punkt muss sich nicht genau auf dem Bogen befinden.
 
 *y4*<br/>
-Gibt die y-Koordinate des Punkts, der Endpunkt des Bogens, (in logischen Einheiten) definiert. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
+Gibt die y-Koordinate des Punkts an, der den Endpunkt des Bogens definiert (in logischen Einheiten). Dieser Punkt muss sich nicht genau auf dem Bogen befinden.
 
 *lpRect*<br/>
-Gibt das umschließende Rechteck (in logischen Einheiten) an. Sie können entweder eine LPRECT übergeben oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt für diesen Parameter.
+Gibt das umgebende Rechteck an (in logischen Einheiten). Sie können entweder ein lprect-oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt für diesen Parameter übergeben.
 
 *ptStart*<br/>
-Gibt an, dass die x- und y-Koordinaten des Punkts, der den Bogen definiert Point (in logischen Einheiten) beginnt der. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen. Sie können entweder übergeben eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt für diesen Parameter.
+Gibt die x-und y-Koordinaten des Punkts an, der den Anfangspunkt des Bogens (in logischen Einheiten) definiert. Dieser Punkt muss sich nicht genau auf dem Bogen befinden. Sie können entweder eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt für diesen Parameter übergeben.
 
 *ptEnd*<br/>
-Gibt an, die x- und y-Koordinaten des Punkts, der Endpunkt des Bogens, (in logischen Einheiten) definiert. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
+Gibt die x-und y-Koordinaten des Punkts an, der den Endpunkt des Bogens definiert (in logischen Einheiten). Dieser Punkt muss sich nicht genau auf dem Bogen befinden. Sie können entweder eine `POINT` Struktur oder ein `CPoint` -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -924,15 +924,15 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Der Bogen gezeichnet wird, mithilfe der Funktion ist ein Segment der Ellipse definiert, die durch das angegebene umschließende Rechteck.
+Der mit der-Funktion gezeichnete Bogen ist ein Segment der Ellipse, das durch das angegebene umgebende Rechteck definiert wird.
 
-Die tatsächliche Anfangspunkt des Bogens ist der Punkt, an dem ein Strahl, der von der Mitte des umschließenden Rechtecks über den angegebenen Anfangspunkt die Ellipse überschneidet. Der tatsächlichen Endpunkt des Bogens ist der Punkt, an dem ein Strahl, der von der Mitte des umschließenden Rechtecks über den angegebenen Endpunkt auf die Ellipse schneidet. Der Bogen gezeichnet wird gegen den Uhrzeigersinn. Da ein Bogen nicht um eine geschlossene Form ist, wird er nicht ausgefüllt. Sowohl die Breite und Höhe des Rechtecks müssen größer als 2 Einheiten und weniger als 32.767 Einheiten sein.
+Der eigentliche Ausgangspunkt des Bogens ist der Punkt, an dem ein Strahl, der aus der Mitte des umgebenden Rechtecks durch den angegebenen Startpunkt gezeichnet wurde, die Ellipse überlappt. Der tatsächliche Endpunkt des Bogens ist der Punkt, an dem ein Strahl, der aus der Mitte des umgebenden Rechtecks durch den angegebenen Endpunkt gezogen wurde, die Ellipse überschneidet. Der Bogen wird in der Richtung gegen den Uhrzeigersinn gezeichnet. Da ein Bogen keine geschlossene Abbildung ist, wird er nicht ausgefüllt. Sowohl die Breite als auch die Höhe des Rechtecks müssen größer als 2 Einheiten und kleiner als 32.767 Einheiten sein.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocView#29](../../mfc/codesnippet/cpp/cdc-class_1.cpp)]
 
-##  <a name="arcto"></a>  CDC::ArcTo
+##  <a name="arcto"></a>CDC:: ArcTo
 
 Zeichnet einen elliptischen Bogen.
 
@@ -956,37 +956,37 @@ BOOL ArcTo(
 ### <a name="parameters"></a>Parameter
 
 *x1*<br/>
-Gibt die X-Koordinate von der linken oberen Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
+Gibt die x-Koordinate der oberen linken Ecke des umgebenden Rechtecks an (in logischen Einheiten).
 
 *y1*<br/>
-Gibt die y-Koordinate von der linken oberen Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
+Gibt die y-Koordinate der oberen linken Ecke des umgebenden Rechtecks an (in logischen Einheiten).
 
 *x2*<br/>
-Gibt die X-Koordinate der unteren rechten Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
+Gibt die x-Koordinate der unteren rechten Ecke des umgebenden Rechtecks an (in logischen Einheiten).
 
 *y2*<br/>
-Gibt die y-Koordinate der unteren rechten Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
+Gibt die y-Koordinate der unteren rechten Ecke des umgebenden Rechtecks an (in logischen Einheiten).
 
 *x3*<br/>
-Gibt an, dass die X-Koordinate des Punkts, der den Bogen definiert Point (in logischen Einheiten) beginnt der. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
+Gibt die x-Koordinate des Punkts an, der den Anfangspunkt des Bogens (in logischen Einheiten) definiert. Dieser Punkt muss sich nicht genau auf dem Bogen befinden.
 
 *y3*<br/>
-Gibt an, der die y-Koordinate des Punkts, der den Bogen definiert (in logischen Einheiten) Anfangspunkt des. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
+Gibt die y-Koordinate des Punkts an, der den Anfangspunkt des Bogens (in logischen Einheiten) definiert. Dieser Punkt muss sich nicht genau auf dem Bogen befinden.
 
 *x4*<br/>
-Gibt die X-Koordinate des Punkts, der Endpunkt des Bogens, (in logischen Einheiten) definiert. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
+Gibt die x-Koordinate des Punkts an, der den Endpunkt des Bogens definiert (in logischen Einheiten). Dieser Punkt muss sich nicht genau auf dem Bogen befinden.
 
 *y4*<br/>
-Gibt die y-Koordinate des Punkts, der Endpunkt des Bogens, (in logischen Einheiten) definiert. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
+Gibt die y-Koordinate des Punkts an, der den Endpunkt des Bogens definiert (in logischen Einheiten). Dieser Punkt muss sich nicht genau auf dem Bogen befinden.
 
 *lpRect*<br/>
-Gibt das umschließende Rechteck (in logischen Einheiten) an. Sie können entweder einen Zeiger zu übergeben, eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Datenstruktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt für diesen Parameter.
+Gibt das umgebende Rechteck an (in logischen Einheiten). Sie können entweder einen Zeiger auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Datenstruktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt für diesen Parameter übergeben.
 
 *ptStart*<br/>
-Gibt an, dass die x- und y-Koordinaten des Punkts, der den Bogen definiert Point (in logischen Einheiten) beginnt der. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen. Sie können entweder übergeben eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Datenstruktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt für diesen Parameter.
+Gibt die x-und y-Koordinaten des Punkts an, der den Anfangspunkt des Bogens (in logischen Einheiten) definiert. Dieser Punkt muss sich nicht genau auf dem Bogen befinden. Sie können entweder eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Datenstruktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt für diesen Parameter übergeben.
 
 *ptEnd*<br/>
-Gibt an, die x- und y-Koordinaten des Punkts, der Endpunkt des Bogens, (in logischen Einheiten) definiert. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen. Sie können entweder übergeben eine `POINT` Datenstruktur oder `CPoint` Objekt für diesen Parameter.
+Gibt die x-und y-Koordinaten des Punkts an, der den Endpunkt des Bogens definiert (in logischen Einheiten). Dieser Punkt muss sich nicht genau auf dem Bogen befinden. Sie können entweder eine `POINT` Datenstruktur oder ein `CPoint` -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -994,13 +994,13 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion ist vergleichbar mit `CDC::Arc`, außer dass die aktuelle Position aktualisiert wird. Die Punkte ( *X1*, *y1*) und ( *X2*, *y2*) des umschließenden Rechtecks angeben. Eine Ellipse gebildet, indem das angegebene umschließende Rechteck definiert die Kurve des Bogens. Der Bogen erweitert (die Richtung der Standard-Bogen) gegen den Uhrzeigersinn ab dem Punkt, an dem sie die radiale Linie von der Mitte des umschließenden Rechtecks, schneidet ( *X3*, *y3*). Den Bogen enden, an dem sie die radiale Linie von der Mitte des umschließenden Rechtecks, schneidet ( *X4*, *y4*). Wenn Sie den Startpunkt und Endpunkt identisch sind, wird eine vollständige Ellipse gezeichnet.
+Diese Funktion ähnelt `CDC::Arc`, mit der Ausnahme, dass die aktuelle Position aktualisiert wird. Die Punkte ( *x1*, *Y1*) und ( *x2*, *Y2*) geben das umgebende Rechteck an. Eine Ellipse, die durch das angegebene umgebende Rechteck gebildet wird, definiert die Kurve des Bogens. Der Bogen erweitert den gegen Uhrzeigersinn (die Standard Bogen Richtung) von dem Punkt, an dem er die radiale Linie von der Mitte des umgebenden Rechtecks zu ( *X3*, *Y3*) schneidet. Der Bogen endet an der Stelle, an der er die radiale Linie von der Mitte des umgebenden Rechtecks in ( *X4*, *Y4*) schneidet. Wenn der Anfangspunkt und der Endpunkt identisch sind, wird eine komplette Ellipse gezeichnet.
 
-Den Anfangspunkt des Bogens wird von der aktuellen Position eine Zeile positioniert. Wenn kein Fehler auftritt, wird die aktuelle Position auf den Endpunkt des Bogens festgelegt. Der Bogen gezeichnet wird, mit dem aktuellen Stift; Es wird nicht ausgefüllt.
+Eine Linie wird von der aktuellen Position bis zum Anfangspunkt des Bogens gezeichnet. Wenn kein Fehler auftritt, wird die aktuelle Position auf den Endpunkt des Bogens festgelegt. Der Bogen wird mit dem aktuellen Stift gezeichnet. Er ist nicht ausgefüllt.
 
-##  <a name="attach"></a>  CDC::Attach
+##  <a name="attach"></a>CDC:: Attach
 
-Verwenden Sie diese Memberfunktion zum Anfügen einer *hDC* auf die `CDC` Objekt.
+Verwenden Sie diese Member-Funktion, um einen *hdc* an das `CDC` -Objekt anzufügen.
 
 ```
 BOOL Attach(HDC hDC);
@@ -1009,7 +1009,7 @@ BOOL Attach(HDC hDC);
 ### <a name="parameters"></a>Parameter
 
 *hDC*<br/>
-Einen Windows-Gerätekontext.
+Ein Windows-Gerätekontext.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1017,11 +1017,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die *hDC* befindet sich in beiden `m_hDC`, dem Ausgabe-Gerätekontext, und klicken Sie in `m_hAttribDC`, den Gerätekontext Attribut.
+Der *hdc* wird sowohl `m_hDC`in als auch im Ausgabegeräte Kontext und in `m_hAttribDC`, dem Attribut Gerätekontext, gespeichert.
 
-##  <a name="beginpath"></a>  CDC:: beginpath
+##  <a name="beginpath"></a>CDC:: beginpath
 
-Öffnet eine Klammer Pfad in den Gerätekontext.
+Öffnet eine Pfad Klammer im Gerätekontext.
 
 ```
 BOOL BeginPath();
@@ -1033,17 +1033,17 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Nachdem eine Klammer Pfad geöffnet ist, kann eine Anwendung Aufrufen der GDI-Zeichenbefehle Funktionen zum definieren die Punkte, die sich im Pfad beginnen. Eine Anwendung kann eine offenen Pfad eckige Klammer schließen, durch Aufrufen der `EndPath` Member-Funktion. Wenn eine Anwendung ruft `BeginPath`, alle vorherigen Pfade werden verworfen.
+Nachdem eine Pfad Klammer geöffnet ist, kann eine Anwendung mit dem Aufrufen von GDI-Zeichnungsfunktionen beginnen, um die Punkte zu definieren, die im Pfad liegen. Eine Anwendung kann eine öffnende Pfad Klammer schließen, indem `EndPath` Sie die Member-Funktion aufrufen. Wenn eine Anwendung aufruft `BeginPath`, werden alle vorherigen Pfade verworfen.
 
-Finden Sie unter [BeginPath](/windows/desktop/api/wingdi/nf-wingdi-beginpath) im Windows SDK für eine Liste mit den Funktionen zum Zeichnen, die Punkte in einem Pfad zu definieren.
+Eine Liste der Zeichnungsfunktionen, die Punkte in einem Pfad definieren, finden Sie unter [beginpath](/windows/desktop/api/wingdi/nf-wingdi-beginpath) im Windows SDK.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocView#30](../../mfc/codesnippet/cpp/cdc-class_2.cpp)]
 
-##  <a name="bitblt"></a>  CDC:: BitBlt
+##  <a name="bitblt"></a>CDC:: BitBLT
 
-Kopiert eine Bitmap aus dem Quellgerätekontext für diese aktuelle Gerätekontext.
+Kopiert eine Bitmap aus dem Quell Gerätekontext in diesen aktuellen Gerätekontext.
 
 ```
 BOOL BitBlt(
@@ -1060,30 +1060,30 @@ BOOL BitBlt(
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate der oberen linken Ecke des Zielrechtecks an.
+Gibt die logische x-Koordinate der oberen linken Ecke des Ziel Rechtecks an.
 
 *y*<br/>
-Gibt die logische y-Koordinate der oberen linken Ecke des Zielrechtecks an.
+Gibt die logische y-Koordinate der oberen linken Ecke des Ziel Rechtecks an.
 
 *nWidth*<br/>
-Gibt die Breite (in logischen Einheiten) der Bitmap für die Ziel-Rechteck und Quelle.
+Gibt die Breite (in logischen Einheiten) des Ziel Rechtecks und der Quell Bitmap an.
 
-*nHeight*<br/>
-Gibt die Höhe (in logischen Einheiten) der Bitmap für die Ziel-Rechteck und Quelle.
+*nheight*<br/>
+Gibt die Höhe (in logischen Einheiten) des Ziel Rechtecks und der Quell Bitmap an.
 
 *pSrcDC*<br/>
-Zeiger auf eine `CDC` Objekt, das den Gerätekontext identifiziert, von dem die Bitmap kopiert werden. Es muss NULL sein, wenn *DwRop* gibt an, ein rastervorgang, der nicht in eine Quelle enthalten ist.
+Zeiger auf ein `CDC` -Objekt, das den Gerätekontext identifiziert, von dem die Bitmap kopiert wird. Der Wert muss NULL sein, wenn *dwrop* einen Raster Vorgang angibt, der keine Quelle enthält.
 
 *xSrc*<br/>
-Gibt die logische X-Koordinate der oberen linken Ecke des Quellbitmaps an.
+Gibt die logische x-Koordinate der oberen linken Ecke der Quell Bitmap an.
 
 *ySrc*<br/>
-Gibt die logische y-Koordinate der oberen linken Ecke des Quellbitmaps an.
+Gibt die logische y-Koordinate der oberen linken Ecke der Quell Bitmap an.
 
 *dwRop*<br/>
-Gibt das Raster des auszuführenden Vorgangs an. Raster-Operationscodes definieren, wie GDI Farben in Ausgabevorgängen kombiniert, an denen ein aktueller Pinsel, eine mögliche Quellbitmap und eine Zielbitmap beteiligt sind. Finden Sie unter [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) im Windows SDK für eine Liste der rastervorgang Codes für *DwRop* und deren Beschreibungen
+Gibt das Raster des auszuführenden Vorgangs an. Raster-Vorgangs Codes definieren, wie das GDI Farben in Ausgabe Vorgängen kombiniert, die einen aktuellen Pinsel, eine mögliche Quell Bitmap und eine Ziel Bitmap einschließen. Unter [BitBLT](/windows/desktop/api/wingdi/nf-wingdi-bitblt) im Windows SDK finden Sie eine Liste der Raster Vorgangs Codes für *dwrop* und deren Beschreibungen.
 
-Eine vollständige Liste der Raster-Operationscodes, finden Sie unter [zu Rastervorgangscode](/windows/desktop/gdi/raster-operation-codes) im Windows SDK.
+Eine umfassende Liste der Code für den Raster Betrieb finden Sie unter [Informationen zu Raster Vorgangs Codes](/windows/desktop/gdi/raster-operation-codes) im Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1091,23 +1091,23 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die Anwendung ausrichten kann, Windows- oder Client-Bereichen auf Byte-Begrenzungen, um sicherzustellen, dass die `BitBlt` erfolgen auf Rechtecke Bytes ausgerichtet. (Legen Sie die Flags CS_BYTEALIGNWINDOW oder CS_BYTEALIGNCLIENT beim Registrieren der Klassen.)
+Die Anwendung kann die Windows-oder Client Bereiche an Byte Begrenzungen ausrichten, um sicher `BitBlt` zustellen, dass die Vorgänge in Byte-ausgerichteten Rechtecke ausgeführt werden. (Legen Sie die CS_BYTEALIGNWINDOW-oder CS_BYTEALIGNCLIENT-Flags fest, wenn Sie die Fenster Klassen registrieren.)
 
-`BitBlt` Vorgänge auf Rechtecke Bytes ausgerichtet sind wesentlich schneller als `BitBlt` Vorgänge auf Rechtecke, die nicht-Byte-ausgerichtet sind. Wenn Sie Klassenstile wie z. B. Byte-Ausrichtung für Ihre eigenen Gerätekontext angeben möchten, müssen Sie eine Fensterklasse registrieren statt auf der Microsoft Foundation Classes, damit es für Sie erledigt. Verwenden Sie die globale Funktion [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass).
+`BitBlt`Vorgänge an Byte ausgerichteten Rechtecke sind deutlich schneller als `BitBlt` Vorgänge in Rechtecke, die nicht Byte bündig sind. Wenn Sie Klassen Stile wie z. b. Byte Ausrichtung für Ihren eigenen Gerätekontext angeben möchten, müssen Sie eine Fenster Klasse registrieren, anstatt sich auf die Microsoft Foundation Classes zu verlassen, um dies für Sie zu tun. Verwenden Sie die globale Funktion [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass).
 
-GDI transformiert *nWidth* und *nHeight*, durch das Verwenden des Zielgerätekontexts und einmal mit dem Quellgerätekontext. Wenn die resultierende Blöcke nicht übereinstimmen, GDI verwendet die Windows `StretchBlt` Funktion komprimiert oder nach Bedarf die Quell-Bitmap gestreckt.
+GDI transformiert *nwidth* und *nheight*, einmal mithilfe des Zielgeräte Kontexts und einmal mit dem Quell Gerätekontext. Wenn die resultierenden Blöcke nicht stimmen, verwendet GDI die Windows `StretchBlt` -Funktion, um die Quell Bitmap nach Bedarf zu komprimieren oder zu Strecken.
 
-Wenn das Ziel, die Quelle und die musterbitmaps nicht dasselbe Farbformat, verfügen die `BitBlt` -Funktion konvertiert die Quelle und die musterbitmaps entsprechend das Ziel. Die Vordergrund- und Hintergrundfarben von die Zielbitmap werden bei der Konvertierung verwendet.
+Wenn Ziel-, Quell-und Muster Bitmaps nicht das gleiche Farb Format aufweisen, konvertiert `BitBlt` die-Funktion die Quell-und Muster Bitmaps so, dass Sie mit dem Ziel übereinstimmen. Die Vordergrund-und Hintergrundfarben der Ziel Bitmap werden bei der Konvertierung verwendet.
 
-Wenn die `BitBlt` -Funktion konvertiert eine monochrome Bitmap in Farbe, legt Sie weiße Bits (1), die die Hintergrundfarbe und schwarze Bits (0), die die Vordergrundfarbe darstellt. Die Vordergrund- und Hintergrundfarben des Zielgerätekontexts werden verwendet. Farbe in Monochrom, konvertieren `BitBlt` legt Pixel, die Farbe des Hintergrunds weiß übereinstimmen und alle anderen Pixel auf Schwarz fest. `BitBlt` verwendet die Vordergrund- und Hintergrundfarben des Gerätekontexts Farbe, die um von Farbe in Monochrom zu verwandeln.
+Wenn die `BitBlt` Funktion eine monochrome Bitmap in eine Farbe konvertiert, legt Sie weiße Bits (1) auf die Hintergrundfarbe und schwarze Bits (0) auf die Vordergrundfarbe fest. Die Vordergrund-und Hintergrundfarben des Zielgeräte Kontexts werden verwendet. Wenn Sie Farbe in monochrome `BitBlt` konvertieren möchten, legt Pixel, die der Hintergrundfarbe entsprechen, auf weiß fest und legt alle anderen Pixel auf Schwarz fest. `BitBlt`verwendet die Vordergrund-und Hintergrundfarben des Farb Geräte Kontexts, um von der Farbe in den Monochrom zu konvertieren.
 
-Beachten Sie, die nicht alle Gerätekontexte unterstützen `BitBlt`. Zu überprüfen, ob ein bestimmtes Gerätekontext unterstützt `BitBlt`, verwenden Sie die `GetDeviceCaps` Member Funktion, und geben Sie den indes RASTERCAPS.
+Beachten Sie, dass nicht alle Geräte `BitBlt`Kontexte unterstützen. Um zu überprüfen, ob ein bestimmter Geräte `BitBlt`Kontext unterstützt `GetDeviceCaps` , verwenden Sie die-Element Funktion und geben den RasterCaps-Index an.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CDC::CreateCompatibleDC](#createcompatibledc).
+  Weitere Informationen finden Sie im Beispiel für [CDC:: kreatecompatibledc](#createcompatibledc).
 
-##  <a name="cdc"></a>  CDC::CDC
+##  <a name="cdc"></a>CDC:: CDC
 
 Erstellt ein `CDC`-Objekt.
 
@@ -1115,9 +1115,9 @@ Erstellt ein `CDC`-Objekt.
 CDC();
 ```
 
-##  <a name="chord"></a>  CDC::Chord
+##  <a name="chord"></a>CDC:: Chord
 
-Zeichnet eine Tastenkombination (eine geschlossene Form, durch die Schnittmenge einer Ellipse und ein Liniensegment begrenzt).
+Zeichnet einen Akkord (eine geschlossene Abbildung, die durch die Schnittmenge einer Ellipse und eines Linien Segments begrenzt ist).
 
 ```
 BOOL Chord(
@@ -1139,37 +1139,37 @@ BOOL Chord(
 ### <a name="parameters"></a>Parameter
 
 *x1*<br/>
-Gibt an, dass die X-Koordinate der oberen linken Ecke des Bandes umschließende Rechteck (in logischen Einheiten).
+Gibt die x-Koordinate der oberen linken Ecke des umgebenden Rechtecks (in logischen Einheiten) des Rechtecks an.
 
 *y1*<br/>
-Gibt an, der die y-Koordinate der oberen linken Ecke des Bandes umschließende Rechteck (in logischen Einheiten).
+Gibt die y-Koordinate der oberen linken Ecke des Begrenzungs Rechtecks (in logischen Einheiten) an.
 
 *x2*<br/>
-Gibt an, dass die X-Koordinate der unteren rechten Ecke des Bandes umschließende Rechteck (in logischen Einheiten).
+Gibt die x-Koordinate der unteren rechten Ecke des umgebenden Rechtecks des Akkords (in logischen Einheiten) an.
 
 *y2*<br/>
-Gibt an, der die y-Koordinate der unteren rechten Ecke des Bandes umschließende Rechteck (in logischen Einheiten).
+Gibt die y-Koordinate der unteren rechten Ecke des umgebenden Rechtecks des Akkords (in logischen Einheiten) an.
 
 *x3*<br/>
-Gibt an, dass die X-Koordinate des Punkts, der die Tastenkombination definiert Point (in logischen Einheiten) beginnt der.
+Gibt die x-Koordinate des Punkts an, der den Anfangspunkt des akkorders definiert (in logischen Einheiten).
 
 *y3*<br/>
-Gibt an, der die y-Koordinate des Punkts, der die Tastenkombination definiert (in logischen Einheiten) Anfangspunkt des.
+Gibt die y-Koordinate des Punkts an, der den Anfangspunkt des akkorders definiert (in logischen Einheiten).
 
 *x4*<br/>
-Gibt die X-Koordinate des Punkts, der die Tastenkombination für den Endpunkt (in logischen Einheiten) definiert.
+Gibt die x-Koordinate des Punkts an, der den Endpunkt des akkorders definiert (in logischen Einheiten).
 
 *y4*<br/>
-Gibt die y-Koordinate des Punkts, der die Tastenkombination für den Endpunkt (in logischen Einheiten) definiert.
+Gibt die y-Koordinate des Punkts an, der den Endpunkt des akkorders definiert (in logischen Einheiten).
 
 *lpRect*<br/>
-Gibt das umschließende Rechteck (in logischen Einheiten) an. Sie können entweder eine LPRECT übergeben oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt für diesen Parameter.
+Gibt das umgebende Rechteck an (in logischen Einheiten). Sie können entweder ein lprect-oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt für diesen Parameter übergeben.
 
 *ptStart*<br/>
-Gibt an, dass die x- und y-Koordinaten des Punkts, der die Tastenkombination definiert Point (in logischen Einheiten) beginnt der. Dieser Punkt muss nicht genau an die Tastenkombination liegen. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
+Gibt die x-und y-Koordinaten des Punkts an, der den Anfangspunkt des akkorders definiert (in logischen Einheiten). Dieser Punkt muss nicht genau auf dem Akkord liegen. Sie können entweder eine `POINT` Struktur oder ein `CPoint` -Objekt für diesen Parameter übergeben.
 
 *ptEnd*<br/>
-Gibt an, die x- und y-Koordinaten des Punkts, der die Tastenkombination für den Endpunkt (in logischen Einheiten) definiert. Dieser Punkt muss nicht genau an die Tastenkombination liegen. Sie können entweder übergeben eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt für diesen Parameter.
+Gibt die x-und y-Koordinaten des Punkts an, der den Endpunkt des-Endpunkts (in logischen Einheiten) definiert. Dieser Punkt muss nicht genau auf dem Akkord liegen. Sie können entweder eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1177,17 +1177,17 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die ( *X1*, *y1*) und ( *X2*, *y2*) Parameter angeben, die oberen linken und rechten unteren Ecken eines Rechtecks die Ellipse, die Teil des Bandes des Begrenzungsrahmens. Die ( *X3*, *y3*) und ( *X4*, *y4*) Parameter geben die Endpunkte einer Zeile, die sich die Ellipse überschneidet. Die Tastenkombination ist mit dem ausgewählten Stift gezeichnet und mit den ausgewählten Pinsel gefüllt.
+Die Parameter ( *x1*, *Y1*) und ( *x2*, *Y2*) geben die oberen linken und unteren rechten Ecken eines Rechtecks an, das die Ellipse, die Teil des Rechtecks ist, umgebenden. Mit den Parametern ( *X3*, *Y3*) und ( *X4*, *Y4*) werden die Endpunkte einer Zeile angegeben, die die Ellipse überschneidet. Der Akkord wird mithilfe des ausgewählten Stifts gezeichnet und mithilfe des ausgewählten Pinsels aufgefüllt.
 
-In der Abbildung, die gezeichnet wird, durch die `Chord` Funktion bis zu erweitert, jedoch keine die rechten und unteren Koordinaten. Dies bedeutet, dass die Höhe der Abbildung *y2* - *y1* und die Breite der Abbildung ist *X2* - *X1*.
+Die von der `Chord` -Funktion gezeichnete Abbildung erstreckt sich auf, aber schließt nicht die Rechte und unteren Koordinaten ein. Dies bedeutet, dass die Höhe der Abbildung *Y2* - *Y1* und die Breite der Abbildung *x2* - *x1*ist.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocView#31](../../mfc/codesnippet/cpp/cdc-class_3.cpp)]
 
-##  <a name="closefigure"></a>  CDC::CloseFigure
+##  <a name="closefigure"></a>CDC:: CloseFigure
 
-Schließt eine offene Form in einem Pfad.
+Schließt eine geöffnete Figur in einem Pfad.
 
 ```
 BOOL CloseFigure();
@@ -1199,13 +1199,13 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion schließt in der Abbildung, indem eine Linie von der aktuellen Position bis zum ersten Punkt in der Abbildung (in der Regel auf den Punkt, angegeben durch den letzten Aufruf der `MoveTo` Member-Funktion) und die Zeilen mithilfe der Linienverbindungsstil verbindet. Wenn eine Figur, mithilfe geschlossen wird der `LineTo` Memberfunktion anstelle der `CloseFigure`, Linienenden verwendet, um die Ecke, statt eine Verknüpfung zu erstellen. `CloseFigure` sollte nur aufgerufen werden, wenn eine Klammer offenen Pfad in den Gerätekontext vorhanden ist.
+Die-Funktion schließt die Figur, indem eine Linie von der aktuellen Position bis zum ersten Punkt der Abbildung gezeichnet wird (in der Regel der durch den letzten Rückruf der `MoveTo` Member-Funktion angegebene Punkt) und die Zeilen mithilfe der linienjoinart verbunden werden. Wenn eine Abbildung mithilfe der `LineTo` Member-Funktion anstelle von `CloseFigure`geschlossen wird, werden End-Caps zum Erstellen der Ecke anstelle eines Joins verwendet. `CloseFigure`sollte nur aufgerufen werden, wenn im Gerätekontext eine öffnende Pfad Klammer vorhanden ist.
 
-Eine Abbildung in einem Pfad ist geöffnet, es sei denn, es explizit geschlossen wird, durch die Verwendung dieser Funktion. (Eine Abbildung kann geöffnet sein, selbst wenn dem aktuellen Punkt und den Startpunkt der Figur identisch sind.) Alle Linien- oder Kurvensegmente, die hinzugefügt werden, auf den Pfad nach `CloseFigure` startet eine neue Figur.
+Eine Figur in einem Pfad ist geöffnet, es sei denn, Sie wird mit dieser Funktion explizit geschlossen. (Eine Abbildung kann auch dann geöffnet sein, wenn der aktuelle Punkt und der Anfangspunkt der Abbildung identisch sind.) Alle Zeilen oder Kurven, die dem Pfad hinzu `CloseFigure` gefügt werden, nachdem eine neue Abbildung gestartet hat.
 
-##  <a name="createcompatibledc"></a>  CDC::CreateCompatibleDC
+##  <a name="createcompatibledc"></a>CDC:: kreatecompatibledc
 
-Erstellt einen Gerätekontext für Arbeitsspeicher, die kompatibel mit dem Gerät gemäß *pDC*.
+Erstellt einen Arbeitsspeicher-Gerätekontext, der mit dem durch *PDC*angegebenen Gerät kompatibel ist.
 
 ```
 BOOL CreateCompatibleDC(CDC* pDC);
@@ -1214,7 +1214,7 @@ BOOL CreateCompatibleDC(CDC* pDC);
 ### <a name="parameters"></a>Parameter
 
 *pDC*<br/>
-Ein Zeiger zu einem Gerätekontext. Wenn *pDC* NULL ist, erstellt die Funktion einen Speichergerätekontext, die mit der Systemanzeige kompatibel ist.
+Ein Zeiger zu einem Gerätekontext. Wenn *PDC* NULL ist, erstellt die-Funktion einen Speichergeräte Kontext, der mit der System Anzeige kompatibel ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1222,17 +1222,17 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Arbeitsspeicher-Gerätekontext handelt es sich um einen Speicherblock, der eine Anzeigeoberfläche darstellt. Es kann verwendet werden, zum Vorbereiten von Images im Arbeitsspeicher, bevor sie in der tatsächlichen Geräteoberfläche das kompatible Gerät kopiert.
+Ein Speichergeräte Kontext ist ein Speicherblock, der eine Anzeige Oberfläche darstellt. Sie kann verwendet werden, um Images im Speicher vorzubereiten, bevor Sie auf die tatsächliche Geräteoberfläche des kompatiblen Geräts kopiert werden.
 
-Wenn ein Arbeitsspeicher-Gerätekontext erstellt wird, wählt GDI automatisch eine monochrome vordefinierte 1-von-1-Bitmap für sie. GDI-Ausgabe-Funktionen können mit einem Gerätekontext Arbeitsspeicher verwendet werden, nur dann, wenn eine Bitmap erstellt und in diesem Kontext ausgewählt wurde.
+Wenn ein Speichergeräte Kontext erstellt wird, wählt GDI automatisch eine 1-bis-1-monochrome-Bestands Bitmap für die Datei aus. GDI-Ausgabefunktionen können nur mit einem Speichergeräte Kontext verwendet werden, wenn eine Bitmap erstellt und in diesem Kontext ausgewählt wurde.
 
-Diese Funktion kann nur verwendet werden, kompatible Gerätekontexte für Geräte zu erstellen, die Raster-Vorgänge zu unterstützen. Finden Sie unter den [CDC:: BitBlt](#bitblt) Member-Funktion Informationen zu Bit-Block-Übertragungen zwischen Gerätekontexte. Um zu bestimmen, ob für ein Gerätekontext Rasteroperationen unterstützt, finden Sie unter der RC_BITBLT Raster-Funktion die Memberfunktion `CDC::GetDeviceCaps`.
+Diese Funktion kann nur verwendet werden, um kompatible Geräte Kontexte für Geräte zu erstellen, die Raster Vorgänge unterstützen. Informationen zu Bitblock Übertragungen zwischen Geräte Kontexten finden Sie unter der [CDC:: BitBLT](#bitblt) -Member-Funktion. Informationen dazu, ob ein Gerätekontext Raster Vorgänge unterstützt, finden Sie in der RC_BITBLT-Raster `CDC::GetDeviceCaps`Funktion in der Member-Funktion.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocView#32](../../mfc/codesnippet/cpp/cdc-class_4.cpp)]
 
-##  <a name="createdc"></a>  CDC::CreateDC
+##  <a name="createdc"></a>CDC:: kreatedc
 
 Erstellt einen Gerätekontext für das angegebene Gerät.
 
@@ -1247,16 +1247,16 @@ BOOL CreateDC(
 ### <a name="parameters"></a>Parameter
 
 *lpszDriverName*<br/>
-Verweist auf eine auf Null endende Zeichenfolge, die den Dateinamen (ohne Erweiterung) für den Gerätetreiber (z. B. "EPSON") angibt. Sie können auch übergeben eine `CString` Objekt für diesen Parameter.
+Verweist auf eine mit NULL endenden Zeichenfolge, die den Dateinamen (ohne Erweiterung) des Gerätetreibers (z. b. "Epson") angibt. Sie können auch ein `CString` -Objekt für diesen Parameter übergeben.
 
 *lpszDeviceName*<br/>
-Verweist auf eine auf Null endende Zeichenfolge, die den Namen des speziellen Geräts unterstützt werden müssen (z. B. "EPSON FX-80") angibt. Die *LpszDeviceName* Parameter wird verwendet, wenn das Modul über mehrere Geräte unterstützt. Sie können auch übergeben eine `CString` Objekt für diesen Parameter.
+Verweist auf eine auf NULL endende Zeichenfolge, die den Namen des zu unterstützten Geräts angibt (z. b. "Epson FX-80"). Der *lpszdevicename* -Parameter wird verwendet, wenn das Modul mehr als ein Gerät unterstützt. Sie können auch ein `CString` -Objekt für diesen Parameter übergeben.
 
 *lpszOutput*<br/>
-Verweist auf eine auf Null endende Zeichenfolge, die Datei bzw. das Gerät den Namen für das physische Ausgabemedium (oder im Ausgabefenster-Port) angibt. Sie können auch übergeben eine `CString` Objekt für diesen Parameter.
+Verweist auf eine auf NULL endenden Zeichenfolge, die die Datei oder den Gerätenamen für das physische Ausgabe Medium (Datei-oder Ausgabeport) angibt. Sie können auch ein `CString` -Objekt für diesen Parameter übergeben.
 
 *lpInitData*<br/>
-Verweist auf eine `DEVMODE` Struktur, die von gerätespezifischen Initialisierungsdaten für den Gerätetreiber enthält. Die Windows `DocumentProperties` Funktion ruft diese Struktur, die für ein bestimmtes Gerät ausgefüllt. Die *LpInitData* Parameter darf NULL sein, wenn der Gerätetreiber verwendet die standardinitialisierung (sofern vorhanden), der vom Benutzer über die Systemsteuerung angegeben ist.
+Verweist auf eine `DEVMODE` -Struktur, die gerätespezifische Initialisierungs Daten für den Gerätetreiber enthält. Die Windows `DocumentProperties` -Funktion ruft diese-Struktur ab, die für ein bestimmtes Gerät ausgefüllt ist. Der *lpinitdata* -Parameter muss NULL sein, wenn der Gerätetreiber die Standard Initialisierung (sofern vorhanden) verwenden soll, die vom Benutzer über die Systemsteuerung angegeben wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1264,13 +1264,13 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Das Drucken. H-Headerdatei ist erforderlich, wenn die [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) Struktur verwendet wird.
+Der Druck. Die H-Header Datei ist erforderlich, wenn die [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Struktur verwendet wird.
 
-Gerätenamen diesen Konventionen: eine abschließende Doppelpunkt (:) wird empfohlen, ist aber optional. Windows entfernt den abschließenden Doppelpunkt, damit Sie ein Gerätenamen mit einem Doppelpunkt endet, auf den gleichen Port mit demselben Namen ohne Doppelpunkt zugeordnet ist. Die Treiber und Anschluss Namen darf keine führende oder nachgestellte Leerzeichen enthalten. Funktionen für die Ausgabe von GDI können nicht mit Informationen Kontexten verwendet werden.
+Gerätenamen entsprechen den folgenden Konventionen: ein enddoppel Punkt (:) wird empfohlen, ist aber optional. Windows entfernt den abschließenden Doppelpunkt, sodass ein Gerätename, der mit einem Doppelpunkt endet, demselben Port wie der gleiche Name ohne Doppelpunkt zugeordnet wird. Die Treiber-und Port Namen dürfen keine führenden oder nachfolgenden Leerzeichen enthalten. GDI-Ausgabefunktionen können nicht mit Informations Kontexten verwendet werden.
 
-##  <a name="createic"></a>  CDC::CreateIC
+##  <a name="createic"></a>CDC:: kreateic
 
-Erstellt einen Informationen über den Kontext für das angegebene Gerät.
+Erstellt einen Informations Kontext für das angegebene Gerät.
 
 ```
 BOOL CreateIC(
@@ -1283,16 +1283,16 @@ BOOL CreateIC(
 ### <a name="parameters"></a>Parameter
 
 *lpszDriverName*<br/>
-Verweist auf eine auf Null endende Zeichenfolge, die den Dateinamen (ohne Erweiterung) für den Gerätetreiber (z. B. "EPSON") angibt. Sie können übergeben eine `CString` Objekt für diesen Parameter.
+Verweist auf eine mit NULL endenden Zeichenfolge, die den Dateinamen (ohne Erweiterung) des Gerätetreibers (z. b. "Epson") angibt. Sie können ein `CString` -Objekt für diesen Parameter übergeben.
 
 *lpszDeviceName*<br/>
-Verweist auf eine auf Null endende Zeichenfolge, die den Namen des speziellen Geräts unterstützt werden müssen (z. B. "EPSON FX-80") angibt. Die *LpszDeviceName* Parameter wird verwendet, wenn das Modul über mehrere Geräte unterstützt. Sie können übergeben eine `CString` Objekt für diesen Parameter.
+Verweist auf eine auf NULL endende Zeichenfolge, die den Namen des zu unterstützten Geräts angibt (z. b. "Epson FX-80"). Der *lpszdevicename* -Parameter wird verwendet, wenn das Modul mehr als ein Gerät unterstützt. Sie können ein `CString` -Objekt für diesen Parameter übergeben.
 
 *lpszOutput*<br/>
-Verweist auf eine auf Null endende Zeichenfolge, die Datei bzw. das Gerät den Namen für das physische Ausgabemedium ("Datei" oder "Port") angibt. Sie können übergeben eine `CString` Objekt für diesen Parameter.
+Verweist auf eine mit NULL endenden Zeichenfolge, die den Datei-oder Gerätenamen für das physische Ausgabe Medium (Datei oder Port) angibt. Sie können ein `CString` -Objekt für diesen Parameter übergeben.
 
 *lpInitData*<br/>
-Verweist auf die gerätespezifische Initialisierungsdaten für den Gerätetreiber. Die *LpInitData* Parameter darf NULL sein, wenn der Gerätetreiber verwendet die standardinitialisierung (sofern vorhanden), der vom Benutzer über die Systemsteuerung angegeben ist. Finden Sie unter `CreateDC` für das Datenformat für die gerätespezifischen-Initialisierung.
+Zeigt auf gerätespezifische Initialisierungs Daten für den Gerätetreiber. Der *lpinitdata* -Parameter muss NULL sein, wenn der Gerätetreiber die Standard Initialisierung (sofern vorhanden) verwenden soll, die vom Benutzer über die Systemsteuerung angegeben wird. Das `CreateDC` Datenformat für die gerätespezifische Initialisierung finden Sie unter.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1300,13 +1300,13 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Die Informationen über den Kontext bietet eine schnelle Möglichkeit, um Informationen über das Gerät zu erhalten, ohne einen Gerätekontext zu erstellen.
+Der Informations Kontext bietet eine schnelle Möglichkeit, Informationen über das Gerät zu erhalten, ohne einen Gerätekontext zu erstellen.
 
-Gerätenamen diesen Konventionen: eine abschließende Doppelpunkt (:) wird empfohlen, ist aber optional. Windows entfernt den abschließenden Doppelpunkt, damit Sie ein Gerätenamen mit einem Doppelpunkt endet, auf den gleichen Port mit demselben Namen ohne Doppelpunkt zugeordnet ist. Die Treiber und Anschluss Namen darf keine führende oder nachgestellte Leerzeichen enthalten. Funktionen für die Ausgabe von GDI können nicht mit Informationen Kontexten verwendet werden.
+Gerätenamen entsprechen den folgenden Konventionen: ein enddoppel Punkt (:) wird empfohlen, ist aber optional. Windows entfernt den abschließenden Doppelpunkt, sodass ein Gerätename, der mit einem Doppelpunkt endet, demselben Port wie der gleiche Name ohne Doppelpunkt zugeordnet wird. Die Treiber-und Port Namen dürfen keine führenden oder nachfolgenden Leerzeichen enthalten. GDI-Ausgabefunktionen können nicht mit Informations Kontexten verwendet werden.
 
-##  <a name="deletedc"></a>  CDC::DeleteDC
+##  <a name="deletedc"></a>CDC::D eletedc
 
-Im Allgemeinen werden diese Funktion nicht aufgerufen Sie werden. der Destruktor wird es für Sie übernimmt.
+Im allgemeinen dürfen Sie diese Funktion nicht aufzurufen. der Dekonstruktor führt dies für Sie aus.
 
 ```
 BOOL DeleteDC();
@@ -1314,33 +1314,33 @@ BOOL DeleteDC();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL ist, wenn die Funktion erfolgreich abgeschlossen wurde; andernfalls 0.
+Ungleich NULL, wenn die Funktion erfolgreich abgeschlossen wurde. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `DeleteDC` Memberfunktion löscht die Kontexte der Windows-Gerät, die zugeordnet werden `m_hDC` in der aktuellen `CDC` Objekt. Wenn diese `CDC` Objekt ist, den letzten aktiven Gerätekontext für ein bestimmtes Gerät, das Gerät wird benachrichtigt, und alle vom Gerät verwendete Speicher und Systemressourcen freigegeben werden.
+Mit `DeleteDC` `CDC` der Member-Funktion werden die Windows-Geräte Kontexte gelöscht, die im aktuellen-Objekt zugeordnet sind. `m_hDC` Wenn dieses `CDC` Objekt der letzte aktive Gerätekontext für ein bestimmtes Gerät ist, wird das Gerät benachrichtigt, und alle vom Gerät verwendeten Speicher-und Systemressourcen werden freigegeben.
 
-Eine Anwendung sollte nicht aufrufen `DeleteDC` Wenn Objekte im Gerätekontext ausgewählt wurden. Objekte müssen zuerst im Gerätekontext ausgewählt werden, bevor er gelöscht wird.
+Eine Anwendung sollte nicht aufgerufen `DeleteDC` werden, wenn Objekte im Gerätekontext ausgewählt wurden. Vor dem löschen müssen Objekte zuerst aus dem Gerätekontext ausgewählt werden.
 
-Löschen einer Anwendung muss keinen Gerätekontext, dessen Handle, durch den Aufruf abgerufen wurde [CWnd:: GetDC](../../mfc/reference/cwnd-class.md#getdc). Sie müssen stattdessen Aufrufen [CWnd:: ReleaseDC](../../mfc/reference/cwnd-class.md#releasedc) auf den Gerätekontext frei. Die [CClientDC](../../mfc/reference/cclientdc-class.md) und [CWindowDC](../../mfc/reference/cwindowdc-class.md) Klassen werden bereitgestellt, um diese Funktionalität zu umschließen.
+Eine Anwendung darf keinen Gerätekontext löschen, dessen Handle durch Aufrufen von [CWnd:: GetDC](../../mfc/reference/cwnd-class.md#getdc)abgerufen wurde. Stattdessen muss [CWnd:: ReleaseDC](../../mfc/reference/cwnd-class.md#releasedc) aufgerufen werden, um den Gerätekontext freizugeben. Die Klassen [CClientDC](../../mfc/reference/cclientdc-class.md) und [cwindowdc](../../mfc/reference/cwindowdc-class.md) werden bereitgestellt, um diese Funktionalität zu verpacken.
 
-Die `DeleteDC` Funktion dient in der Regel mit erstellt Gerätekontexte löschen [CreateDC](#createdc), [CreateIC](#createic), oder [CreateCompatibleDC](#createcompatibledc).
+Die `DeleteDC`-Funktion wird im Allgemeinen verwendet, um Gerätekontexte zu löschen, die mit [CreateDC](#createdc), [CreateIC](#createic) und [CreateCompatibleDC](#createcompatibledc) erstellt wurden.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc).
+  Weitere Informationen finden Sie im Beispiel für [CPrintDialog:: getPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc).
 
-##  <a name="deletetempmap"></a>  CDC::DeleteTempMap
+##  <a name="deletetempmap"></a>CDC::D eletetempmap
 
-Wird automatisch aufgerufen, die `CWinApp` -leerlaufzeithandler, `DeleteTempMap` löscht temporäre `CDC` Objekten von erstellt `FromHandle`, jedoch nicht die gerätehandles Kontext zerstört wird ( `hDC`s) vorübergehend die zugeordnet`CDC` Objekte.
+Wird automatisch vom `CWinApp` Leerlaufzeit Handler aufgerufen `hDC`, `DeleteTempMap` löscht alle von `FromHandle`erstellten `CDC` temporären Objekte, zerstört jedoch nicht die Gerätekontext Handles, die vorübergehend mit dem `CDC` -Objekte.
 
 ```
 static void PASCAL DeleteTempMap();
 ```
 
-##  <a name="detach"></a>  CDC::Detach
+##  <a name="detach"></a>CDC::D Etach
 
-Mit dieser Funktion wird beim Trennen `m_hDC` (die Ausgabe-Gerätekontext) aus der `CDC` Objekt aus, und legen Sie die `m_hDC` und `m_hAttribDC` auf NULL.
+Diese Funktion wird aufgerufen, um `m_hDC` (den Ausgabegeräte Kontext) `CDC` vom-Objekt zu trennen und `m_hDC` sowohl `m_hAttribDC` als auch auf NULL festzulegen.
 
 ```
 HDC Detach();
@@ -1348,11 +1348,11 @@ HDC Detach();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Einen Windows-Gerätekontext.
+Ein Windows-Gerätekontext.
 
-##  <a name="dptohimetric"></a>  CDC::DPtoHIMETRIC
+##  <a name="dptohimetric"></a>CDC::D ptohimetric
 
-Verwenden Sie diese Funktion, wenn Sie HIMETRIC-Größen auf OLE, gestatten Pixel in HIMETRIC konvertiert.
+Verwenden Sie diese Funktion, wenn Sie die himetrikgrößen an OLE übergeben und Pixel in HIMETRIC umrechnen.
 
 ```
 void DPtoHIMETRIC(LPSIZE lpSize) const;
@@ -1361,15 +1361,15 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parameter
 
 *lpSize*<br/>
-Verweist auf eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
+Verweist auf eine [Größen](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder ein [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Zuordnungsmodus, der das Gerätekontextobjekt MM_LOENGLISH MM_HIENGLISH, MM_LOMETRIC oder MM_HIMETRIC ist, basiert klicken Sie dann die Konvertierung auf die Anzahl der Pixel in der physischen Zoll. Wenn der Zuordnungsmodus einen der anderen nicht eingeschränkte Modi (z. B. MM_TEXT) ist, basiert klicken Sie dann die Konvertierung auf die Anzahl der Pixel in der logischen Zoll.
+Wenn der Kartenmodus des Gerätekontext Objekts "MM_LOENGLISH", "MM_HIENGLISH", "MM_LOMETRIC" oder "MM_HIMETRIC" ist, basiert die Konvertierung auf der Anzahl der Pixel im physischen Zoll. Wenn der Kartenmodus einem der anderen nicht eingeschränkten Modi entspricht (z. b. MM_TEXT), basiert die Konvertierung auf der Anzahl der Pixel im logischen Zoll.
 
-##  <a name="dptolp"></a>  CDC::DPtoLP
+##  <a name="dptolp"></a>CDC::D ptolp
 
-Konvertiert Geräteeinheiten in logischen Einheiten.
+Konvertiert Geräte Einheiten in logische Einheiten.
 
 ```
 void DPtoLP(
@@ -1383,24 +1383,24 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parameter
 
 *lpPoints*<br/>
-Verweist auf ein Array von [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Strukturen oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekte.
+Verweist auf ein Array von [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Strukturen oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekten.
 
 *nCount*<br/>
 Die Anzahl der Punkte im Array.
 
 *lpRect*<br/>
-Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt. Dieser Parameter wird für einfache Fälle der Konvertierung von einem Rechteck aus geräteverwaltungspunkte in logische Punkte verwendet.
+Verweist auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt. Dieser Parameter wird für die einfache Verwendung eines Rechtecks von gerätepunkten zu logischen Punkten verwendet.
 
 *lpSize*<br/>
-Verweist auf eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
+Verweist auf eine [Größen](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder ein [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion ordnet die Koordinaten jedes Punkts oder Dimension mit einer Größe, aus das Koordinatensystem des Geräts in GDIs-logischen Koordinatensystem. Die Konvertierung hängt von den aktuellen Zuordnungsmodus und die Einstellungen von dem Ursprung und der Blöcke, die für Fenster und der Viewport des Geräts ab.
+Die-Funktion ordnet die Koordinaten jedes Punkts oder der Dimension einer Größe vom Geräte Koordinatensystem in das logische Koordinatensystem von GDI auf. Die Konvertierung hängt vom aktuellen Mapping-Modus und den Einstellungen der Ursprünge und Blöcke für das Fenster und den Viewport des Geräts ab.
 
-##  <a name="draw3drect"></a>  CDC::Draw3dRect
+##  <a name="draw3drect"></a>CDC::D raw3drect
 
-Rufen Sie diese Memberfunktion, um ein dreidimensionales Rechteck zu zeichnen.
+Diese Member-Funktion aufrufen, um ein dreidimensionales Rechteck zu zeichnen.
 
 ```
 void Draw3dRect(
@@ -1420,37 +1420,37 @@ void Draw3dRect(
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Gibt das umschließende Rechteck (in logischen Einheiten) an. Sie können entweder einen Zeiger zu übergeben, eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt für diesen Parameter.
+Gibt das umgebende Rechteck an (in logischen Einheiten). Sie können entweder einen Zeiger auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt für diesen Parameter übergeben.
 
 *clrTopLeft*<br/>
-Gibt die Farbe von der oberen und linken Rand des Rechtecks dreidimensionalen.
+Gibt die Farbe des oberen und linken Rands des dreidimensionalen Rechtecks an.
 
 *clrBottomRight*<br/>
-Gibt an, die Farbe des unteren und rechten Seite des dreidimensionalen Rechtecks.
+Gibt die Farbe der unteren und rechten Seite des dreidimensionalen Rechtecks an.
 
 *w*<br/>
-Gibt die logische X-Koordinate der oberen linken Ecke des dreidimensionalen Rechtecks an.
+Gibt die logische x-Koordinate der oberen linken Ecke des dreidimensionalen Rechtecks an.
 
 *y*<br/>
 Gibt die logische y-Koordinate der oberen linken Ecke des dreidimensionalen Rechtecks an.
 
-*cx*<br/>
-Gibt die Breite des Rechtecks dreidimensionalen.
+*verschoben*<br/>
+Gibt die Breite des dreidimensionalen Rechtecks an.
 
-*cy*<br/>
-Gibt die Höhe des Rechtecks dreidimensionalen.
+*CY*<br/>
+Gibt die Höhe des dreidimensionalen Rechtecks an.
 
 ### <a name="remarks"></a>Hinweise
 
-Mit den oberen und linken Rand in der Farbe anhand des Rechtecks gezeichnet *ClrTopLeft* und die unteren und rechten Seite in der Farbe anhand des *ClrBottomRight*.
+Das Rechteck wird mit der oberen und linken Seite in der durch *clrtopleft* angegebenen Farbe und der unteren und rechten Seite in der durch *clrbottomright*angegebenen Farbe gezeichnet.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocView#33](../../mfc/codesnippet/cpp/cdc-class_5.cpp)]
 
-##  <a name="drawdragrect"></a>  CDC::DrawDragRect
+##  <a name="drawdragrect"></a>CDC::D rawdragrect
 
-Rufen Sie diese Memberfunktion auf, um einem Rechteck neu gezeichnet werden.
+Diese Member-Funktion wird wiederholt aufgerufen, um ein Zieh Rechteck neu zu zeichnen.
 
 ```
 void DrawDragRect(
@@ -1465,32 +1465,32 @@ void DrawDragRect(
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die logischen Koordinaten eines Rechtecks angibt, in diesem Fall die Endposition des Rechtecks gezeichnet.
+Verweist auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die logischen Koordinaten eines Rechtecks angibt – in diesem Fall die Endposition des Rechtecks, das neu gezeichnet wird.
 
 *size*<br/>
-Gibt an, die Verschiebung von der linken oberen Ecke des äußeren Rahmens in die linke obere Ecke von den inneren Rahmen (d. h. die Stärke des Rahmens) ein Rechteck.
+Gibt die Verschiebung von der linken oberen Ecke des äußeren Rahmens zur linken oberen Ecke des inneren Rahmens (d. h. die Stärke des Rahmens) eines Rechtecks an.
 
 *lpRectLast*<br/>
-Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die logischen Koordinaten der Position eines Rechtecks angibt, in diesem Fall ist die ursprüngliche Position des Rechtecks gezeichnet.
+Verweist auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die logischen Koordinaten der Position eines Rechtecks angibt – in diesem Fall die ursprüngliche Position des Rechtecks, das neu gezeichnet wird.
 
 *sizeLast*<br/>
-Gibt an, die Verschiebung von der linken oberen Ecke des äußeren Rahmens in die linke obere Ecke der den inneren Rahmen (d. h. die Stärke des Rahmens) das ursprüngliche Rechteck gezeichnet.
+Gibt die Verschiebung von der linken oberen Ecke des äußeren Rahmens zur linken oberen Ecke des inneren Rahmens (d. h. die Stärke des Rahmens) des ursprünglichen Rechtecks an, das neu gezeichnet wird.
 
-*pBrush*<br/>
-Zeiger auf ein Brush-Objekt. Verwenden Sie den Standardpinsel für Halbton auf NULL festgelegt.
+*pbrush*<br/>
+Zeiger auf ein Pinsel Objekt. Legen Sie auf NULL fest, um den standardmäßigen halbftone-Pinsel zu verwenden.
 
 *pBrushLast*<br/>
-Zeiger auf das letzte Brush-Objekt verwendet. Verwenden Sie den Standardpinsel für Halbton auf NULL festgelegt.
+Zeiger auf das letzte verwendete Pinsel Objekt. Legen Sie auf NULL fest, um den standardmäßigen halbftone-Pinsel zu verwenden.
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie es in einer Schleife, wie Sie die Position des Mauszeigers, Stichproben, um visuelles Feedback anzuzeigen. Beim Aufruf `DrawDragRect`des vorherigen Rechtecks wird gelöscht, und eine neue gezeichnet wird. Wie der Benutzer zieht Sie z. B. ein Rechteck über den Bildschirm `DrawDragRect` wird das ursprüngliche Rechteck zu löschen und neu gezeichnet werden ein neues Abonnement in seiner neuen Position. In der Standardeinstellung `DrawDragRect` zeichnet das Rechteck mithilfe eines Pinsels Halbton Flimmern zu eliminieren und die Darstellung eines Rechtecks reibungslos verschieben zu erstellen.
+Nennen Sie es in einer Schleife, wenn Sie eine Stichprobe der Mausposition durchlaufen, um visuelles Feedback zu geben. Wenn Sie aufzurufen `DrawDragRect`, wird das vorherige Rechteck gelöscht und ein neues Rechteck gezeichnet. Wenn der Benutzer z. b. ein Rechteck auf dem Bildschirm zieht `DrawDragRect` , löscht das ursprüngliche Rechteck und zeichnet es neu an seiner neuen Position. In der Standard `DrawDragRect` Einstellung zeichnet das Rechteck mithilfe eines Halbton-Pinsels, um Flimmern auszuschließen und das Aussehen eines reibungslos verschiebenden Rechtecks zu erstellen.
 
-Das erste Mal aufrufen `DrawDragRect`, *LpRectLast* Parameter muss NULL sein.
+Wenn Sie zum ersten Mal `DrawDragRect`aufrufen, sollte der *lprectlast* -Parameter NULL sein.
 
-##  <a name="drawedge"></a>  CDC::DrawEdge
+##  <a name="drawedge"></a>CDC::D rakeil
 
-Rufen Sie diese Memberfunktion zum Zeichnen der Ränder eines Rechtecks, der dem angegebenen Typ und den Stil an.
+Diese Member-Funktion aufrufen, um die Ränder eines Rechtecks vom angegebenen Typ und Stil zu zeichnen.
 
 ```
 BOOL DrawEdge(
@@ -1502,21 +1502,21 @@ BOOL DrawEdge(
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Ein Zeiger auf eine `RECT` Struktur, die die logischen Koordinaten des Rechtecks enthält.
+Ein Zeiger auf eine `RECT` -Struktur, die die logischen Koordinaten des Rechtecks enthält.
 
 *nEdge*<br/>
-Gibt den Typ des inneren und äußeren Rand zeichnen. Dieser Parameter muss eine Kombination aus einem inneren Rahmen-Flag und einen Außenlinie Flag sein. Finden Sie unter [DrawEdge](/windows/desktop/api/winuser/nf-winuser-drawedge) im Windows SDK für eine Tabelle mit den Parametertypen des.
+Gibt den Typ des inneren und äußeren Kanten an, der gezeichnet werden soll. Dieser Parameter muss eine Kombination aus einem inneren rahmenflag und einem äußeren Rahmen Flag sein. Eine Tabelle mit den Parametertypen finden Sie unter [DrawEdge](/windows/desktop/api/winuser/nf-winuser-drawedge) in der Windows SDK.
 
 *nFlags*<br/>
-Die Flags, die angeben, den Typ des Rahmens, gezeichnet werden soll. Finden Sie unter `DrawEdge` im Windows SDK für eine Tabelle mit die Werte des Parameters. Für die diagonale Linien geben die BF_RECT Flags den Endpunkt des Vektors begrenzt durch die Rechteckparameter.
+Die Flags, die den Typ des Rahmens angeben, der gezeichnet werden soll. Eine `DrawEdge` Tabelle mit den Werten des Parameters finden Sie unter in der Windows SDK. Bei diagonalen Linien geben die BF_RECT-Flags den Endpunkt des Vektors an, der durch den Rechteck Parameter begrenzt ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
-##  <a name="drawescape"></a>  CDC::DrawEscape
+##  <a name="drawescape"></a>CDC::D rawescape
 
-Greift auf Zeichnen die Funktionen einer Videoanzeige, die nicht direkt über die Graphics Device Interface (GDI) verfügbar sind.
+Greift auf Zeichnungsfunktionen einer Videoanzeige zu, die nicht direkt über die Graphics Device Interface (GDI) verfügbar sind.
 
 ```
 int DrawEscape(
@@ -1528,25 +1528,25 @@ int DrawEscape(
 ### <a name="parameters"></a>Parameter
 
 *nEscape*<br/>
-Gibt die Escape-Funktion ausgeführt werden.
+Gibt die auszuführende Escape-Funktion an.
 
 *nInputSize*<br/>
-Gibt die Anzahl der Datenbytes, verweist der *LpszInputData* Parameter.
+Gibt die Anzahl der Daten Bytes an, auf die durch den *lpszinputdata* -Parameter verwiesen wird.
 
 *lpszInputData*<br/>
-Zeigt auf der Eingabestruktur, die für die Escapezeichen erforderlich sind.
+Verweist auf die Eingabe Struktur, die für den angegebenen Escapezeichen erforderlich ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt das Ergebnis der Funktion an. Größer als 0 (null), wenn erfolgreich, mit Ausnahme der QUERYESCSUPPORT Draw-Escapesequenz, die für die Implementierung nur überprüft werden soll; oder 0 (null), wenn das Escapezeichen nicht implementiert wird; oder kleiner als NULL, wenn ein Fehler aufgetreten.
+Gibt das Ergebnis der Funktion an. Größer als 0 (null), wenn erfolgreich, mit Ausnahme des Draw-Escapezeichens queryescsupport, das nur die Implementierung überprüft; oder 0 (null), wenn der Escape nicht implementiert ist. oder kleiner als 0 (null), wenn ein Fehler aufgetreten ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn eine Anwendung ruft `DrawEscape`, die Daten, die identifizierte *nInputSize* und *LpszInputData* wird direkt an den angegebenen Anzeigetreiber übergeben.
+Wenn eine Anwendung aufruft `DrawEscape`, werden die von *ninputsize* und *lpszinputdata* identifizierten Daten direkt an den angegebenen Anzeigetreiber übergeben.
 
-##  <a name="drawfocusrect"></a>  CDC::DrawFocusRect
+##  <a name="drawfocusrect"></a>CDC::D rawfocrarect
 
-Zeichnet ein Rechteck im Stil verwendet, um anzugeben, dass das Rechteck um den Fokus besitzt.
+Zeichnet ein Rechteck im Stil, mit dem angegeben wird, dass das Rechteck den Fokus besitzt.
 
 ```
 void DrawFocusRect(LPCRECT lpRect);
@@ -1555,18 +1555,18 @@ void DrawFocusRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das gibt an, die logischen Koordinaten des Rechtecks gezeichnet werden soll.
+Verweist auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die logischen Koordinaten des Rechtecks angibt, das gezeichnet werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Da dies eine booleschen XOR-Funktion ist, wird das Aufrufen dieser Funktion eines zweiten Mal mit dem gleichen Rechteck das Rechteck aus der Anzeige entfernt. Das Rechteck gezeichnet, die von dieser Funktion kann nicht gescrollt werden. Rufen Sie zuerst einen Bereich, die ein Rechteck gezeichnet, die von dieser Funktion enthält einen Bildlauf durchführen, `DrawFocusRect` um das Rechteck aus der Anzeige zu entfernen, führen Sie den Bereich einen Bildlauf aus, und rufen Sie anschließend `DrawFocusRect` erneut aus, um das Rechteck in die neue Position zu zeichnen.
+Da es sich hierbei um eine boolesche XOR-Funktion handelt, wird das Rechteck aus der Anzeige entfernt, wenn diese Funktion ein zweites Mal mit dem gleichen Rechteck aufgerufen wird. Das von dieser Funktion gezeichnete Rechteck kann nicht gescrollt werden. Um einen Bildlauf in einem Bereich durchführen zu können, der ein `DrawFocusRect` von dieser Funktion gezeichnetes Rechteck enthält, müssen Sie zunächst aufrufen, um das `DrawFocusRect` Rechteck aus der Anzeige zu entfernen
 
 > [!CAUTION]
-> `DrawFocusRect` funktioniert nur im Modus für MM_TEXT. In anderen Modi diese Funktion zeichnet das Fokusrechteck keine ordnungsgemäß, aber es werden keine Fehlerwerte zurückgegeben.
+> `DrawFocusRect`funktioniert nur im MM_TEXT-Modus. In anderen Modi zeichnet diese Funktion das Fokus Rechteck nicht ordnungsgemäß, aber es werden keine Fehler Werte zurückgegeben.
 
-##  <a name="drawframecontrol"></a>  CDC::DrawFrameControl
+##  <a name="drawframecontrol"></a>CDC::D rawframecontrol
 
-Rufen Sie diese Memberfunktion zum Zeichnen eines Steuerelements Frame, der dem angegebenen Typ und den Stil an.
+Diese Member-Funktion aufrufen, um ein Frame-Steuerelement vom angegebenen Typ und Stil zu zeichnen.
 
 ```
 BOOL DrawFrameControl(
@@ -1578,13 +1578,13 @@ BOOL DrawFrameControl(
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Ein Zeiger auf eine `RECT` Struktur, die die logischen Koordinaten des Rechtecks enthält.
+Ein Zeiger auf eine `RECT` -Struktur, die die logischen Koordinaten des Rechtecks enthält.
 
 *nType*<br/>
-Gibt den Typ der Frame-Steuerelement zu zeichnen. Finden Sie unter den *uType* Parameter im [DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol) im Windows SDK für eine Liste der möglichen Werte dieses Parameters.
+Gibt den Typ des zu zeichnenden Frame Steuer Elements an. Eine Liste mit den möglichen Werten dieses Parameters finden Sie unter der *uType* -Parameter in [drawframecontrol](/windows/desktop/api/winuser/nf-winuser-drawframecontrol) in der Windows SDK.
 
 *nState*<br/>
-Gibt den Ausgangszustand der Frame-Steuerelement an. Einer oder mehrere der Werte beschrieben, für das die *uState* Parameter im `DrawFrameControl` im Windows SDK. Verwenden der *nState* Wert DFCS_ADJUSTRECT, um das umschließende Rechteck zum Ausschließen von des umgebenden Randes der Schaltfläche anzupassen.
+Gibt den Ausgangszustand des Frame-Steuer Elements an. Kann mindestens einer der Werte sein, die für den *ustate* -Parameter in `DrawFrameControl` in der Windows SDK beschrieben werden. Verwenden Sie den *nState* -Wert DFCS_ADJUSTRECT zum Anpassen des umgebenden Rechtecks, um den umgebenden Rand der Schaltfläche "Push" auszuschließen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1592,65 +1592,65 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-In vielen Fällen *nState* hängt von der *nType* Parameter. Die folgende Liste zeigt die Beziehung zwischen den vier *nType* Werte und *nState*:
+In mehreren Fällen hängt *nState* vom *nType* -Parameter ab. In der folgenden Liste wird die Beziehung zwischen den vier *nType* -Werten und *nState*angezeigt:
 
 - DFC_BUTTON
 
-    - DFCS_BUTTON3STATE drei-Status-Schaltfläche
+    - DFCS_BUTTON3STATE Schaltfläche mit drei Zuständen
 
-    - Das DFCS_BUTTONCHECK überprüfen
+    - DFCS_BUTTONCHECK Kontrollkästchen
 
-    - Schaltfläche DFCS_BUTTONPUSH mithilfe von Push übertragen
+    - DFCS_BUTTONPUSH Push-Schaltfläche
 
-    - DFCS_BUTTONRADIO Optionsfeld
+    - Optionsfeld "DFCS_BUTTONRADIO"
 
-    - DFCS_BUTTONRADIOIMAGE-Image für das Optionsfeld (nicht quadratische erforderlich Image)
+    - DFCS_BUTTONRADIOIMAGE Bild für Optionsfeld (nicht Square needs-Bild)
 
-    - DFCS_BUTTONRADIOMASK Maske für Optionsfeld (nicht quadratische erforderlich Maske)
+    - DFCS_BUTTONRADIOMASK mask für Optionsfeld (keine quadratische Bedarfs Maske)
 
 - DFC_CAPTION
 
-    - Schaltfläche "DFCS_CAPTIONCLOSE schließen"
+    - DFCS_CAPTIONCLOSE schließen-Schaltfläche
 
-    - Schaltfläche Hilfe DFCS_CAPTIONHELP
+    - DFCS_CAPTIONHELP Hilfe Schaltfläche
 
-    - Schaltfläche "DFCS_CAPTIONMAX zu maximieren."
+    - Schaltfläche DFCS_CAPTIONMAX maximieren
 
-    - Schaltfläche DFCS_CAPTIONMIN zu minimieren.
+    - Schaltfläche DFCS_CAPTIONMIN minimieren
 
-    - Schaltfläche DFCS_CAPTIONRESTORE wiederherstellen
+    - DFCS_CAPTIONRESTORE Restore-Schaltfläche
 
 - DFC_MENU
 
-    - DFCS_MENUARROW Untermenü Pfeil
+    - DFCS_MENUARROW unter Menü Pfeil
 
-    - DFCS_MENUBULLET Aufzählungszeichen
+    - DFCS_MENUBULLET Bullet
 
     - DFCS_MENUCHECK Häkchen
 
 - DFC_SCROLL
 
-    - DFCS_SCROLLCOMBOBOX Combo Box-Bildlaufleiste
+    - DFCS_SCROLLCOMBOBOX-Kombinations Feld-Scrollleiste
 
-    - DFCS_SCROLLDOWN nach-unten-Pfeil der scrollleiste
+    - DFCS_SCROLLDOWN-nach-unten-Pfeil der Scrollleiste
 
-    - Bildlaufleiste nach DFCS_SCROLLLEFT-links
+    - DFCS_SCROLLLEFT-nach-links-Taste der Scrollleiste
 
-    - DFCS_SCROLLRIGHT rechts-Pfeil der Bildlaufleiste.
+    - DFCS_SCROLLRIGHT rechter Pfeil der Scrollleiste
 
-    - DFCS_SCROLLSIZEGRIP Größenziehpunkts in der unteren rechten Ecke des Fensters
+    - DFCS_SCROLLSIZEGRIP Größen Zieh Punkt in der unteren rechten Ecke des Fensters
 
-    - DFCS_SCROLLUP nach-oben Bildlaufleiste.
+    - DFCS_SCROLLUP Pfeil nach oben in der Scrollleiste
 
 ### <a name="example"></a>Beispiel
 
-Dieser Code zeichnet ziehelements Größe in der unteren rechten Ecke des Fensters. Es eignet sich für die `OnPaint` Handler eines Dialogfelds, die keine Formatvorlagen und enthalten andere Steuerelemente (z. B. einer Statusleiste), mit denen sie ein ziehelements Größe können normalerweise nicht.
+Dieser Code zeichnet den Größen Zieh Punkt in der unteren rechten Ecke des Fensters. Er eignet sich für den `OnPaint` Handler eines Dialog Felds, das keine Stile hat und normalerweise keine anderen Steuerelemente (z. b. eine Statusleiste) enthält, die ihm einen Größen Zieh Punkt zur Verfügung stellen können.
 
 [!code-cpp[NVC_MFCDocView#34](../../mfc/codesnippet/cpp/cdc-class_6.cpp)]
 
-##  <a name="drawicon"></a>  CDC::DrawIcon
+##  <a name="drawicon"></a>CDC::D rawicon
 
-Zeichnet ein Symbol auf dem Gerät, das vom aktuellen `CDC` Objekt.
+Zeichnet ein Symbol auf dem Gerät, das durch das `CDC` aktuelle-Objekt dargestellt wird.
 
 ```
 BOOL DrawIcon(
@@ -1666,37 +1666,37 @@ BOOL DrawIcon(
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate der oberen linken Ecke des Symbols an.
+Gibt die logische x-Koordinate der oberen linken Ecke des Symbols an.
 
 *y*<br/>
 Gibt die logische y-Koordinate der oberen linken Ecke des Symbols an.
 
 *hIcon*<br/>
-Gibt das Handle des Symbols, das gezeichnet werden soll.
+Identifiziert das Handle des Symbols, das gezeichnet werden soll.
 
 *point*<br/>
-Gibt die logische X - und y-Koordinaten von der linken oberen Ecke des Symbols an. Können Sie übergeben eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt für diesen Parameter.
+Gibt die logischen x-und y-Koordinaten der oberen linken Ecke des Symbols an. Sie können eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL ist, wenn die Funktion erfolgreich abgeschlossen wurde; andernfalls 0.
+Ungleich NULL, wenn die Funktion erfolgreich abgeschlossen wurde. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion wird das Symbol in der oberen linken Ecke an die vom angegebenen Speicherort *x* und *y*. Der Speicherort ist gemäß der aktuellen Zuordnungsmodus des Gerätekontexts.
+Die-Funktion platziert die linke obere Ecke des Symbols an der von *x* und *y*angegebenen Position. Der Speicherort unterliegt dem aktuellen Kartenmodus des Geräte Kontexts.
 
-Die Symbolressource muss wurden zuvor geladen mithilfe der Funktionen `CWinApp::LoadIcon`, `CWinApp::LoadStandardIcon`, oder `CWinApp::LoadOEMIcon`. Die `MM_TEXT` Zuordnungsmodus muss ausgewählt sein, bevor Sie diese Funktion verwenden.
+Die Symbol Ressource muss zuvor mithilfe der Funktionen `CWinApp::LoadIcon`, `CWinApp::LoadStandardIcon`oder `CWinApp::LoadOEMIcon`geladen worden sein. Der `MM_TEXT` Zuordnungs Modus muss vor der Verwendung dieser Funktion ausgewählt werden.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CWnd::IsIconic](../../mfc/reference/cwnd-class.md#isiconic).
+  Weitere Informationen finden Sie im Beispiel für [CWnd:: ISIC](../../mfc/reference/cwnd-class.md#isiconic).
 
-##  <a name="drawstate"></a>  CDC::DrawState
+##  <a name="drawstate"></a>CDC::D rawstate
 
-Rufen Sie diese Memberfunktion, um ein Bild anzeigen und Anwenden eines visuellen Effekts, um einen Status, beispielsweise einen deaktivierten oder Standardzustand anzugeben.
+Mit dieser Member-Funktion können Sie ein Bild anzeigen und einen visuellen Effekt anwenden, um einen Zustand anzugeben, z. b. einen deaktivierten oder einen Standardzustand.
 
 > [!NOTE]
->  Für alle *nFlag* außer DSS_NORMAL, gibt das Bild wird in Monochrom zu umgewandelt, bevor der visuelle Effekt angewendet wird.
+>  Für alle *nflag* -Zustände mit Ausnahme von DSS_NORMAL wird das Bild vor dem Anwenden des visuellen Effekts in monochrome konvertiert.
 
 ```
 BOOL DrawState(
@@ -1765,16 +1765,16 @@ BOOL DrawState(
 ### <a name="parameters"></a>Parameter
 
 *pt*<br/>
-Gibt den Speicherort des Bilds.
+Gibt den Speicherort des Bilds an.
 
 *size*<br/>
-Gibt die Größe des Bilds.
+Gibt die Größe des Bilds an.
 
 *hBitmap*<br/>
 Ein Handle für eine Bitmap.
 
 *nFlags*<br/>
-Flags, die den Bildtyp und Zustand angeben. Finden Sie unter [DrawState](/windows/desktop/api/winuser/nf-winuser-drawstatea) im Windows SDK für die möglichen *nFlags* Typen und Status.
+Flags, die den Bildtyp und-Zustand angeben. Informationen zu den möglichen *nFlags* -Typen und-Zuständen finden Sie unter [DrawState](/windows/desktop/api/winuser/nf-winuser-drawstatea) in der Windows SDK.
 
 *hBrush*<br/>
 Ein Handle für einen Pinsel.
@@ -1782,7 +1782,7 @@ Ein Handle für einen Pinsel.
 *pBitmap*<br/>
 Ein Zeiger auf ein CBitmap-Objekt.
 
-*pBrush*<br/>
+*pbrush*<br/>
 Ein Zeiger auf ein CBrush-Objekt.
 
 *hIcon*<br/>
@@ -1792,24 +1792,24 @@ Ein Handle für ein Symbol.
 Ein Zeiger auf Text.
 
 *bPrefixText*<br/>
-Text, der möglicherweise eine Zugriffstaste mnemonisches Zeichen enthalten. Die *lData* Parameter gibt die Adresse der Zeichenfolge ist, und die *nTextLen* Parameter gibt die Länge. Wenn *nTextLen* gleich 0 ist, wird angenommen, dass die Zeichenfolge Null-terminiert sein.
+Text, der möglicherweise eine Zugriffstaste enthält. Der *ldata* -Parameter gibt die Adresse der Zeichenfolge an, und der *ntextlen* -Parameter gibt die Länge an. Wenn *ntextlen* 0 ist, wird angenommen, dass die Zeichenfolge mit NULL endet.
 
 *nTextLen*<br/>
-Länge der Textzeichenfolge verweist *LpszText*. Wenn *nTextLen* gleich 0 ist, wird angenommen, dass die Zeichenfolge Null-terminiert sein.
+Länge der Text Zeichenfolge, auf die von *lpszText*verwiesen wird. Wenn *ntextlen* 0 ist, wird angenommen, dass die Zeichenfolge mit NULL endet.
 
 *lpDrawProc*<br/>
-Ein Zeiger auf eine Callback-Funktion verwendet, um ein Bild zu rendern. Dieser Parameter ist erforderlich, wenn das Bild in eingeben *nFlags* DST_COMPLEX ist. Es ist optional und kann NULL sein, wenn der Bildtyp DST_TEXT ist. Für alle anderen Bildtypen wird dieser Parameter ignoriert. Weitere Informationen zu der Callback-Funktion, finden Sie unter den [DrawStateProc](/windows/desktop/api/winuser/nc-winuser-drawstateproc) -Funktion in das Windows SDK.
+Ein Zeiger auf eine Rückruffunktion, die zum Rendering eines Bilds verwendet wird. Dieser Parameter ist erforderlich, wenn der Bildtyp in *nFlags* DST_COMPLEX ist. Er ist optional und kann NULL sein, wenn der Bildtyp "DST_TEXT" ist. Für alle anderen Bildtypen wird dieser Parameter ignoriert. Weitere Informationen zur Rückruffunktion finden Sie unter der [drawstateproc](/windows/desktop/api/winuser/nc-winuser-drawstateproc) -Funktion in der Windows SDK.
 
 *lData*<br/>
-Gibt Informationen zu dem Bild. Die Bedeutung dieses Parameters hängt von den Bildtyp ab.
+Gibt Informationen zum Bild an. Die Bedeutung dieses Parameters hängt vom Bildtyp ab.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
-##  <a name="drawtext"></a>  CDC:: DrawText
+##  <a name="drawtext"></a>CDC::D rawtext
 
-Rufen Sie diese Memberfunktion zum Formatieren von Text in einem angegebenen Rechteck. Verwenden Sie zum Angeben zusätzlicher Formatierungsoptionen [CDC::DrawTextEx](#drawtextex).
+Diese Member-Funktion zum Formatieren von Text im angegebenen Rechteck aufzurufen. Verwenden Sie zum Angeben zusätzlicher Formatierungsoptionen [CDC::D rawtextex](#drawtextex).
 
 ```
 virtual int DrawText(
@@ -1827,44 +1827,44 @@ int DrawText(
 ### <a name="parameters"></a>Parameter
 
 *lpszString*<br/>
-Verweist auf die Zeichenfolge, die gezeichnet werden soll. Wenn *nCount* ist-1. die Zeichenfolge muss Null-terminiert sein.
+Verweist auf die Zeichenfolge, die gezeichnet werden soll. Wenn *nCount* den Wert-1 hat, muss die Zeichenfolge mit Null beendet werden.
 
 *nCount*<br/>
-Gibt die Anzahl der Zeichen in der Zeichenfolge an. Wenn *nCount* -1 ist, klicken Sie dann *LpszString* wird als ein long-Zeiger auf eine Null-terminierte Zeichenfolge und `DrawText` berechnet die Anzahl der Zeichen automatisch.
+Gibt die Anzahl der Zeichen in der Zeichenfolge an. Wenn *nCount* den Wert-1 hat, wird angenommen, dass *lpszstring* ein langer Zeiger auf eine mit NULL endende `DrawText` Zeichenfolge ist, und die Zeichen Anzahl wird automatisch berechnet.
 
 *lpRect*<br/>
-Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das das Rechteck (in logischen Koordinaten) enthält, in dem der Text formatiert werden.
+Verweist auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das das Rechteck (in logischen Koordinaten) enthält, in dem der Text formatiert werden soll.
 
 *str*<br/>
-Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt mit der angegebenen Zeichen, gezeichnet werden soll.
+Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, das die angegebenen Zeichen enthält, die gezeichnet werden sollen.
 
 *nFormat*<br/>
-Gibt die Methode der Formatierung des Texts. Es kann sein, eine beliebige Kombination der Werte beschrieben, für die *uFormat* Parameter im [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext) im Windows SDK. (kombinieren Sie, mit dem bitweisen OR-Operator):
+Gibt die Methode zum Formatieren des Texts an. Dabei kann es sich um eine beliebige Kombination der Werte handeln, die für den *Uformat* -Parameter in [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext) in der Windows SDK beschrieben werden. (kombinieren Sie mit dem bitweisen OR-Operator):
 
 > [!NOTE]
->  Einige *uFormat* Flagkombinationen können dazu führen, dass die übergebene Zeichenfolge, die geändert werden. Mithilfe von DT_MODIFYSTRING DT_END_ELLIPSIS oder DT_PATH_ELLIPSIS kann dazu führen, dass die Zeichenfolge, die geändert werden, verursacht eine Assertion in dem `CString` außer Kraft setzen. Die Werte DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP und DT_NOPREFIX können nicht mit dem Wert DT_TABSTOP verwendet werden.
+>  Einige *uformatflag* -Kombinationen können bewirken, dass die übergebenen Zeichenfolge geändert wird. Wenn `CString` Sie DT_MODIFYSTRING mit DT_END_ELLIPSIS oder DT_PATH_ELLIPSIS verwenden, kann dies dazu führen, dass die Zeichenfolge geändert wird. Dies führt zu einer-Überschreibung. Die Werte DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP und DT_NOPREFIX können nicht mit dem Wert DT_TABSTOP verwendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Höhe des Texts, wenn die Funktion erfolgreich ist.
+Die Höhe des Texts, wenn die Funktion erfolgreich ausgeführt wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Es formatiert Text durch Erweitern von Registerkarten in entsprechende Leerzeichen, Ausrichten von Text auf der linken, rechten, oder der Mitte des angegebenen Rechtecks und Aufteilen von Text in Zeilen, die in einem angegebenen Rechteck zu passen. Die Art der Formatierung wird durch angegeben *nFormat*.
+Sie formatiert Text, indem er Tabstopps in entsprechende Leerzeichen einfügt, Text an der linken, rechten oder mittleren Stelle des angegebenen Rechtecks anpasst und Text in Linien umbricht, die in das angegebene Rechteck passen. Der Formatierungstyp wird durch *nformat*angegeben.
 
-Diese Memberfunktion verwendet des Gerätekontexts ausgewählten Schriftart, Textfarbe und Hintergrundfarbe zum Zeichnen des Texts an. Es sei denn, das DT_NOCLIP-Format verwendet wird, `DrawText` Text schneidet, sodass der Text nicht außerhalb des angegebenen Rechtecks angezeigt wird. Gesamte Formatierung wird angenommen, um mehrere Zeilen zu erhalten, es sei denn, das DT_SINGLELINE-Format angegeben wird.
+Diese Member-Funktion verwendet die ausgewählte Schriftart, Textfarbe und Hintergrundfarbe des Geräte Kontexts, um den Text zu zeichnen. Wenn das DT_NOCLIP-Format nicht verwendet `DrawText` wird, wird der Text von so formatiert, dass der Text nicht außerhalb des angegebenen Rechtecks angezeigt wird. Es wird davon ausgegangen, dass für alle Formatierungen mehrere Zeilen vorhanden sind, es sei denn, das Format DT_SINGLELINE
 
-Wenn die ausgewählte Schriftart zu groß für das angegebene Rechteck, das `DrawText` Memberfunktion wird nicht versucht, eine kleinere Schriftart zu ersetzen.
+Wenn die ausgewählte Schriftart für das angegebene Rechteck zu groß ist, versucht `DrawText` die Member-Funktion nicht, eine kleinere Schriftart zu ersetzen.
 
-Wenn die DT_CALCRECT-Flag angegeben ist, das Rechteck angegeben *LpRect* wird aktualisiert, um die Breite und Höhe, die zum Zeichnen des Texts entsprechen.
+Wenn das DT_CALCRECT-Flag angegeben ist, wird das von *lprect* angegebene Rechteck entsprechend der zum Zeichnen des Texts erforderlichen Breite und Höhe aktualisiert.
 
-Wenn das TA_UPDATECP textausrichtung Flag festgelegt wurde (finden Sie unter [CDC::SetTextAlign](#settextalign)), `DrawText` zeigt Text ab, an der aktuellen Position und nicht auf der linken Seite des angegebenen Rechtecks an. `DrawText` Text wird nicht umbrochen werden, wenn das TA_UPDATECP-Flag festgelegt wurde (d. h. das Flag DT_WORDBREAK hat keine Auswirkungen).
+Wenn das TA_UPDATECP-Flag für die Textausrichtung festgelegt wurde (siehe [CDC:: setTextAlign](#settextalign)), `DrawText` zeigt Text an der aktuellen Position an, nicht auf der linken Seite des angegebenen Rechtecks. `DrawText`der Text wird nicht eingeschlossen, wenn das TA_UPDATECP-Flag festgelegt wurde (d. h., das DT_WORDBREAK-Flag hat keine Auswirkung).
 
-Die Textfarbe kann festgelegt werden, indem [CDC::SetTextColor](#settextcolor).
+Die Textfarbe kann von [CDC:: SetTextColor](#settextcolor)festgelegt werden.
 
-##  <a name="drawtextex"></a>  CDC::DrawTextEx
+##  <a name="drawtextex"></a>CDC::D rawtextex
 
-Formatiert den Text im angegebenen Rechteck.
+Formatiert Text im angegebenen Rechteck.
 
 ```
 virtual int DrawTextEx(
@@ -1884,33 +1884,33 @@ int DrawTextEx(
 ### <a name="parameters"></a>Parameter
 
 *lpszString*<br/>
-Verweist auf die Zeichenfolge, die gezeichnet werden soll. Wenn *nCount* ist-1. die Zeichenfolge muss Null-terminiert sein.
+Verweist auf die Zeichenfolge, die gezeichnet werden soll. Wenn *nCount* den Wert-1 hat, muss die Zeichenfolge NULL sein.
 
 *nCount*<br/>
-Gibt die Anzahl der Zeichen in der Zeichenfolge an. Wenn *nCount* -1 ist, klicken Sie dann *LpszString* wird als ein long-Zeiger auf eine Null-terminierte Zeichenfolge und `DrawText` berechnet die Anzahl der Zeichen automatisch.
+Gibt die Anzahl der Zeichen in der Zeichenfolge an. Wenn *nCount* den Wert-1 hat, wird angenommen, dass *lpszstring* ein langer Zeiger auf eine mit NULL endende `DrawText` Zeichenfolge ist, und die Zeichen Anzahl wird automatisch berechnet.
 
 *lpRect*<br/>
-Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das das Rechteck (in logischen Koordinaten) enthält, in dem der Text formatiert werden.
+Verweist auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das das Rechteck (in logischen Koordinaten) enthält, in dem der Text formatiert werden soll.
 
 *str*<br/>
-Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt mit der angegebenen Zeichen, gezeichnet werden soll.
+Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, das die angegebenen Zeichen enthält, die gezeichnet werden sollen.
 
 *nFormat*<br/>
-Gibt die Methode der Formatierung des Texts. Es kann sein, eine beliebige Kombination der Werte beschrieben, für die *uFormat* Parameter im [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext) im Windows SDK. (Kombinieren, mit dem bitweisen **oder** Operator):
+Gibt die Methode zum Formatieren des Texts an. Dabei kann es sich um eine beliebige Kombination der Werte handeln, die für den *Uformat* -Parameter in [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext) in der Windows SDK beschrieben werden. (Kombinieren Sie mit dem bitweisen **or** -Operator):
 
 > [!NOTE]
->  Einige *uFormat* Flagkombinationen können dazu führen, dass die übergebene Zeichenfolge, die geändert werden. Mithilfe von DT_MODIFYSTRING DT_END_ELLIPSIS oder DT_PATH_ELLIPSIS kann dazu führen, dass die Zeichenfolge, die geändert werden, verursacht eine Assertion in dem `CString` außer Kraft setzen. Die Werte DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP und DT_NOPREFIX können nicht mit dem Wert DT_TABSTOP verwendet werden.
+>  Einige *uformatflag* -Kombinationen können bewirken, dass die übergebenen Zeichenfolge geändert wird. Wenn `CString` Sie DT_MODIFYSTRING mit DT_END_ELLIPSIS oder DT_PATH_ELLIPSIS verwenden, kann dies dazu führen, dass die Zeichenfolge geändert wird. Dies führt zu einer-Überschreibung. Die Werte DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP und DT_NOPREFIX können nicht mit dem Wert DT_TABSTOP verwendet werden.
 
 *lpDTParams*<br/>
-Zeiger auf eine [DRAWTEXTPARAMS](/windows/desktop/api/winuser/ns-winuser-tagdrawtextparams) "Optionen" Struktur, die zusätzliche Formatierungen angibt. Dieser Parameter kann NULL sein.
+Zeiger auf eine [drawtextparameams](/windows/desktop/api/winuser/ns-winuser-tagdrawtextparams) -Struktur, die zusätzliche Formatierungsoptionen angibt. Dieser Parameter kann NULL sein.
 
 ### <a name="remarks"></a>Hinweise
 
-Es formatiert Text durch Erweitern von Registerkarten in entsprechende Leerzeichen, Ausrichten von Text auf der linken, rechten, oder der Mitte des angegebenen Rechtecks und Aufteilen von Text in Zeilen, die in einem angegebenen Rechteck zu passen. Die Art der Formatierung wird durch angegeben *nFormat* und *LpDTParams*. Weitere Informationen finden Sie unter [CDC:: DrawText](#drawtext) und [DrawTextEx](/windows/desktop/api/winuser/nf-winuser-drawtextexa) im Windows SDK.
+Sie formatiert Text, indem er Tabstopps in entsprechende Leerzeichen einfügt, Text an der linken, rechten oder mittleren Stelle des angegebenen Rechtecks anpasst und Text in Linien umbricht, die in das angegebene Rechteck passen. Der Formatierungstyp wird durch *nformat* und *lpdtparameterams*angegeben. Weitere Informationen finden Sie unter [CDC::D rawtext](#drawtext) und [drawtextex](/windows/desktop/api/winuser/nf-winuser-drawtextexa) in der Windows SDK.
 
-Die Textfarbe kann festgelegt werden, indem [CDC::SetTextColor](#settextcolor).
+Die Textfarbe kann von [CDC:: SetTextColor](#settextcolor)festgelegt werden.
 
-##  <a name="ellipse"></a>  CDC::Ellipse
+##  <a name="ellipse"></a>CDC:: Ellipse
 
 Zeichnet eine Ellipse.
 
@@ -1927,19 +1927,19 @@ BOOL Ellipse(LPCRECT lpRect);
 ### <a name="parameters"></a>Parameter
 
 *x1*<br/>
-Gibt die logische X-Koordinate der oberen linken Ecke des umschließenden Rechtecks der Ellipse an.
+Gibt die logische x-Koordinate der oberen linken Ecke des Begrenzungs Rechtecks der Ellipse an.
 
 *y1*<br/>
-Gibt die logische y-Koordinate der oberen linken Ecke des umschließenden Rechtecks der Ellipse an.
+Gibt die logische y-Koordinate der oberen linken Ecke des Begrenzungs Rechtecks der Ellipse an.
 
 *x2*<br/>
-Gibt die logische X-Koordinate der unteren rechten Ecke des umschließenden Rechtecks der Ellipse an.
+Gibt die logische x-Koordinate der unteren rechten Ecke des umgebenden Rechtecks der Ellipse an.
 
 *y2*<br/>
-Gibt die logische y-Koordinate der unteren rechten Ecke des umschließenden Rechtecks der Ellipse an.
+Gibt die logische y-Koordinate der unteren rechten Ecke des umgebenden Rechtecks der Ellipse an.
 
 *lpRect*<br/>
-Gibt an, das die Ellipse umschließenden Rechtecks. Sie können auch übergeben eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt für diesen Parameter.
+Gibt das Begrenzungs Rechteck der Ellipse an. Sie können auch ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1947,15 +1947,15 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Der Mittelpunkt der Ellipse liegt im Zentrum des umschließenden Rechtecks gemäß *X1*, *y1*, *X2*, und *y2*, oder  *LpRect*. Die Ellipse wird gezeichnet, mit dem aktuellen Stift und inneren mit der aktuellen Pinsel gefüllt ist.
+Der Mittelpunkt der Ellipse ist die Mitte des umgebenden Rechtecks, das von *x1*, *Y1*, *x2*, *Y2*oder *lprect*angegeben wird. Die Ellipse wird mit dem aktuellen Stift gezeichnet, und das Innere ist mit dem aktuellen Pinsel gefüllt.
 
-In der Abbildung, die von dieser Funktion gezeichnet bis erweitert, aber keine, die rechten und unteren Koordinaten. Dies bedeutet, dass die Höhe der Abbildung *y2* - *y1* und die Breite der Abbildung ist *X2* - *X1*.
+Die von dieser Funktion gezeichnete Abbildung erweitert die Rechte-und untere Koordinaten, aber schließt Sie nicht ein. Dies bedeutet, dass die Höhe der Abbildung *Y2* - *Y1* und die Breite der Abbildung *x2* - *x1*ist.
 
-Wenn die Breite oder die Höhe des umschließenden Rechtecks 0 ist, wird keine Ellipse gezeichnet.
+Wenn die Breite oder die Höhe des umgebenden Rechtecks 0 ist, wird keine Ellipse gezeichnet.
 
-##  <a name="enddoc"></a>  CDC::EndDoc
+##  <a name="enddoc"></a>CDC:: EndDoc
 
-Beendet einen Druckauftrag gestartet, die durch einen Aufruf der [StartDoc](#startdoc) Member-Funktion.
+Beendet einen Druckauftrag, der durch einen Aufrufen der [StartDoc](#startdoc) -Member-Funktion gestartet wurde.
 
 ```
 int EndDoc();
@@ -1963,23 +1963,23 @@ int EndDoc();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Größer als oder gleich 0, wenn die Funktion erfolgreich ist oder ein negativer Wert, wenn ein Fehler aufgetreten.
+Größer oder gleich 0 (null), wenn die Funktion erfolgreich ist, oder ein negativer Wert, wenn ein Fehler aufgetreten ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion ersetzt die ENDDOC Druckerescape und unmittelbar nach Abschluss eines erfolgreichen Druckauftrags aufgerufen werden soll.
+Diese Member-Funktion ersetzt den EndDoc-druckerescapezeichen und sollte unmittelbar nach Abschluss eines erfolgreichen Druckauftrags aufgerufen werden.
 
-Wenn eine Anwendung eines Druckfehlers oder einen Druck abgebrochenen Vorgang auftritt, müssen sie nicht versuchen, den Vorgang zu beenden, indem Sie entweder `EndDoc` oder [AbortDoc](#abortdoc). GDI wird automatisch beendet den Vorgang, bevor der Wert des Fehlercodes zurückgeben.
+Wenn eine Anwendung auf einen Druckfehler oder einen abgebrochenen Druckvorgang stößt, darf Sie nicht versuchen, den Vorgang mit `EndDoc` oder [abortdoc](#abortdoc)zu beenden. GDI beendet den Vorgang automatisch, bevor der Fehlerwert zurückgegeben wird.
 
-Diese Funktion sollte nicht innerhalb von Metadateien verwendet werden.
+Diese Funktion sollte nicht innerhalb von Metafiles verwendet werden.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CDC::StartDoc](#startdoc).
+  Weitere Informationen finden Sie im Beispiel für [CDC:: StartDoc](#startdoc).
 
-##  <a name="endpage"></a>  CDC::EndPage
+##  <a name="endpage"></a>CDC:: EndPage
 
-Informiert dem Gerät, dass die Anwendung beim Schreiben in eine Seite abgeschlossen ist.
+Informiert das Gerät darüber, dass die Anwendung das Schreiben auf eine Seite abgeschlossen hat.
 
 ```
 int EndPage();
@@ -1987,21 +1987,21 @@ int EndPage();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Größer als oder gleich 0, wenn die Funktion erfolgreich ist oder ein negativer Wert, wenn ein Fehler aufgetreten.
+Größer oder gleich 0 (null), wenn die Funktion erfolgreich ist, oder ein negativer Wert, wenn ein Fehler aufgetreten ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion wird normalerweise verwendet, um den Gerätetreiber aus, um auf eine neue Seite leiten.
+Diese Member-Funktion wird in der Regel verwendet, um den Gerätetreiber anzuweisen, eine neue Seite zu verwenden.
 
-Diese Memberfunktion ersetzt die NEWFRAME Druckerescape. Im Gegensatz zu NEWFRAME wird diese Funktion immer nach dem Drucken einer Seite aufgerufen.
+Diese Member-Funktion ersetzt den newframe-Drucker Escapezeichen. Im Gegensatz zu newframe wird diese Funktion immer nach dem Drucken einer Seite aufgerufen.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CDC::StartDoc](#startdoc).
+  Weitere Informationen finden Sie im Beispiel für [CDC:: StartDoc](#startdoc).
 
-##  <a name="endpath"></a>  CDC::EndPath
+##  <a name="endpath"></a>CDC:: endpath
 
-Schließt eine Klammer Pfad ein, und wählt den Pfad, der durch die Klammer definiert werden, in den Gerätekontext.
+Schließt eine Pfad Klammer und wählt den von der Klammer definierten Pfad in den Gerätekontext aus.
 
 ```
 BOOL EndPath();
@@ -2013,11 +2013,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CDC:: beginpath](#beginpath).
+  Sehen Sie sich das Beispiel für [CDC:: beginpath](#beginpath)an.
 
-##  <a name="enumobjects"></a>  CDC:: EnumObjects
+##  <a name="enumobjects"></a>CDC:: umumujects
 
-Listet die Stifte und Pinsel verfügbaren in einem Gerätekontext.
+Listet die Stifte und Pinsel auf, die in einem Gerätekontext verfügbar sind.
 
 ```
 int EnumObjects(
@@ -2031,41 +2031,41 @@ int EnumObjects(
 ### <a name="parameters"></a>Parameter
 
 *nObjectType*<br/>
-Gibt den Objekttyp an. Sie haben die Werte OBJ_BRUSH oder OBJ_PEN.
+Gibt den Objekttyp an. Sie kann über die Werte OBJ_BRUSH oder OBJ_PEN verfügen.
 
 *lpfn*<br/>
-Ist die Adresse der Prozedur Instanzen der Anwendung bereitgestellten Rückruffunktion. Finden Sie im Abschnitt "Hinweise".
+Die Prozedur-instanzadresse der von der Anwendung bereitgestellten Rückruffunktion. Weitere Informationen finden Sie im Abschnitt "Hinweise" weiter unten.
 
 *lpData*<br/>
-Verweist auf die von der Anwendung bereitgestellten Daten. Die Daten werden an die Callback-Funktion zusammen mit den Objektinformationen übergeben.
+Verweist auf die von der Anwendung bereitgestellten Daten. Die Daten werden zusammen mit den Objektinformationen an die Rückruffunktion weitergegeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt an, den letzten Rückgabewert, der von der [Rückruffunktion](callback-functions-used-by-mfc.md#enum_objects). Die Bedeutung wird vom Benutzer festgelegt.
+Gibt den letzten von der [Rückruffunktion](callback-functions-used-by-mfc.md#enum_objects)zurückgegebenen Wert an. Seine Bedeutung ist Benutzer definiert.
 
 ### <a name="remarks"></a>Hinweise
 
-Für jedes Objekt eines angegebenen Typs ist die Callback-Funktion, die Sie übergeben die Informationen für dieses Objekt aufgerufen. Das System Ruft die Callback-Funktion auf, bis keine weitere Objekte vorhanden sind oder die Callback-Funktion gibt 0 zurück.
+Für jedes Objekt eines bestimmten Typs wird die Rückruffunktion, die Sie übergeben, mit den Informationen für dieses Objekt aufgerufen. Das System ruft die Rückruffunktion auf, bis keine Objekte mehr vorhanden sind oder die Rückruffunktion 0 zurückgibt.
 
-Beachten Sie, dass die neuen Features von Microsoft Visual C++ können Sie eine gewöhnliche Funktion zu verwenden, die Funktion übergebenen `EnumObjects`. Die Adresse übergeben, um `EnumObjects` ist ein Zeiger auf eine Funktion, die mit exportierten **EXPORTIEREN** und mit der Pascal-Aufrufkonvention. In Anwendungen zu schützen-Modus müssen Sie nicht diese Funktion mit der Windows-MakeProcInstance-Funktion erstellen, oder geben Sie die Funktion nach der Verwendung mit der Funktion FreeProcInstance Windows frei.
+Beachten Sie, dass Sie mit den C++ neuen Funktionen von Microsoft Visual eine gewöhnliche Funktion als Funktion verwenden `EnumObjects`können, die an übergeben wird. Die an `EnumObjects` übergebenen Adresse ist ein Zeiger auf eine Funktion, die mit **Export** und mit der Pascal-Aufruf Konvention exportiert wird. In Anwendungen im Schutzmodus müssen Sie diese Funktion nicht mit der Windows MakeProcInstance-Funktion erstellen oder die Funktion nach der Verwendung mit der freeprocinstance-Windows-Funktion freigeben.
 
-Keine Sie auch den Funktionsnamen im Exportieren einer **EXPORTE** -Anweisung in DEF-Datei von Ihrer Anwendung. Sie können stattdessen verwenden die **EXPORTIEREN** Modifizierer funktionieren, wie in
+Sie müssen den Funktionsnamen auch nicht in eine **Exports** -Anweisung in der Modul Definitionsdatei Ihrer Anwendung exportieren. Stattdessen können Sie den **Export** funktionsmodifizierer wie in verwenden.
 
-**Int-RÜCKRUF EXPORTIEREN** AFunction **(LPSTR**, **LPSTR);**
+**int-Rückruf Export** Afunction **(LPSTR**, **LPSTR);**
 
-den Compiler den ordnungsgemäßen Export-Datensatz für den Export nach Namen ohne Aliasing ausgeben zu verursachen. Dies funktioniert für die häufigsten Anforderungen. Für einige Sonderfälle, z. B. eine Funktion nach Ordnungszahl oder Aliasing exportieren exportieren, Sie weiterhin verwenden müssen eine **EXPORTE** -Anweisung in eine DEF-Datei.
+, wenn der Compiler bewirkt, dass der richtige Exportdaten Satz für den Export nach Namen ohne Aliasing ausgegeben wird. Dies funktioniert für die meisten Anforderungen. Für einige Sonderfälle, z. b. das Exportieren einer Funktion durch Ordinalzahl oder Aliasing des Exports, müssen Sie dennoch eine **Exports** -Anweisung in einer Modul Definitionsdatei verwenden.
 
-Zum Kompilieren von Microsoft Foundation-Programme, werden Sie normalerweise die/GA und Compileroptionen /GEs verwenden. Die Compileroption "/ GW" ist nicht mit der Microsoft Foundation Classes verwendet. (Wenn Sie die Windows-Funktion verwenden `MakeProcInstance`, Sie müssen explizit von FARPROC in den Typ in dieser API benötigt den zurückgegebenen Funktionszeiger umgewandelt.) Registrierung von Rückrufschnittstellen sind jetzt als typsicherer (Sie müssen in einen Funktionszeiger, der auf die richtige Art von Funktion, die für den bestimmten Rückruf zeigt übergeben).
+Zum Kompilieren von Microsoft Foundation-Programmen verwenden Sie normalerweise die Compileroptionen/GA und/GEs. Die/GW-Compileroption wird nicht mit den Microsoft Foundation-Klassen verwendet. (Wenn Sie die Windows-Funktion `MakeProcInstance`verwenden, müssen Sie den zurückgegebenen Funktionszeiger explizit von FARPROC in den in dieser API benötigten Typ umwandeln.) Rückruf Registrierungs Schnittstellen sind nun typsicher (Sie müssen einen Funktionszeiger übergeben, der auf die richtige Funktionsart für den jeweiligen Rückruf zeigt).
 
-Beachten Sie außerdem, dass alle Rückruffunktionen vor der Rückgabe auf Windows, da Ausnahmen hinweg Rückruf ausgelöst werden, können nicht Microsoft Foundation Ausnahmen abfangen müssen. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).
+Beachten Sie außerdem, dass alle Rückruf Funktionen Microsoft Foundation-Ausnahmen vor der Rückgabe an Windows abfangen müssen, da Ausnahmen nicht über Rückruf Grenzen hinweg ausgelöst werden können. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocView#35](../../mfc/codesnippet/cpp/cdc-class_7.cpp)]
 
-##  <a name="escape"></a>  CDC::Escape
+##  <a name="escape"></a>CDC:: Escape
 
-Diese Memberfunktion ist praktisch für Win32-Programmierung veraltet.
+Diese Member-Funktion ist für die Win32-Programmierung praktisch veraltet.
 
 ```
 virtual int Escape(
@@ -2085,48 +2085,48 @@ int Escape(
 ### <a name="parameters"></a>Parameter
 
 *nEscape*<br/>
-Gibt die Escape-Funktion ausgeführt werden.
+Gibt die auszuführende Escape-Funktion an.
 
-Eine vollständige Liste der Escape-Funktionen, finden Sie unter [Escape](/windows/desktop/api/wingdi/nf-wingdi-escape) im Windows SDK.
+Eine umfassende Liste der escapefunktionen finden Sie unter [Escape](/windows/desktop/api/wingdi/nf-wingdi-escape) in der Windows SDK.
 
 *nCount*<br/>
-Gibt die Anzahl der Datenbytes, die auf zeigt *LpszInData*.
+Gibt die Anzahl der Daten Bytes an, auf die *lpszindata*verweist.
 
 *lpszInData*<br/>
-Verweist auf die Eingabedaten-Struktur, die für diese Escapezeichen erforderlich sind.
+Zeigt auf die für diesen Escape erforderliche Eingabedaten Struktur.
 
 *lpOutData*<br/>
-Verweist auf die Struktur, die Ausgabe aus diesem Escapezeichen zu empfangen. Die *LpOutData* Parameter NULL ist, wenn keine Daten zurückgegeben werden.
+Verweist auf die-Struktur, die die Ausgabe von diesem Escapezeichen empfangen soll. Der *lpoutdata* -Parameter ist NULL, wenn keine Daten zurückgegeben werden.
 
 *nInputSize*<br/>
-Gibt die Anzahl der Datenbytes, verweist der *LpszInputData* Parameter.
+Gibt die Anzahl der Daten Bytes an, auf die durch den *lpszinputdata* -Parameter verwiesen wird.
 
 *lpszInputData*<br/>
-Zeigt auf der Eingabestruktur, die für die Escapezeichen erforderlich sind.
+Verweist auf die Eingabe Struktur, die für den angegebenen Escapezeichen erforderlich ist.
 
 *nOutputSize*<br/>
-Gibt die Anzahl der Datenbytes, verweist der *LpszOutputData* Parameter.
+Gibt die Anzahl der Daten Bytes an, auf die durch den *lpszoutputdata* -Parameter verwiesen wird.
 
 *lpszOutputData*<br/>
-Verweist auf die Struktur, die von diesem Escape Ausgabe empfängt. Dieser Parameter sollte NULL sein, wenn keine Daten zurückgegeben werden.
+Verweist auf die-Struktur, die die Ausgabe von diesem Escapezeichen empfängt. Dieser Parameter sollte NULL sein, wenn keine Daten zurückgegeben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein positiver Wert wird zurückgegeben, wenn die Funktion erfolgreich ist, mit Ausnahme der QUERYESCSUPPORT-Escapesequenz, die nur für die Implementierung überprüft. 0 (null) wird zurückgegeben, wenn das Escapezeichen nicht implementiert wird. Ein negativer Wert wird zurückgegeben, wenn ein Fehler aufgetreten. Es folgen allgemeine Fehlerwerte:
+Wenn die Funktion erfolgreich ist, wird ein positiver Wert zurückgegeben, mit Ausnahme der queryescsupport-Escapesequenz, die nur die Implementierung überprüft. NULL wird zurückgegeben, wenn der Escape nicht implementiert ist. Wenn ein Fehler aufgetreten ist, wird ein negativer Wert zurückgegeben. Im folgenden sind häufige Fehler Werte aufgeführt:
 
 - SP_ERROR allgemeiner Fehler.
 
-- SP_OUTOFDISK nicht genügend Speicherplatz auf dem Datenträger steht zurzeit zum Spoolen und keinen Speicherplatz mehr zur Verfügung stehen.
+- SP_OUTOFDISK es ist nicht genügend Speicherplatz zum Spoolvorgang verfügbar, und es wird kein Speicherplatz mehr verfügbar.
 
-- SP_OUTOFMEMORY nicht genügend Arbeitsspeicher zum Spoolen verfügbar ist.
+- SP_OUTOFMEMORY nicht genügend Arbeitsspeicher zum Spoolvorgang verfügbar.
 
-- SP_USERABORT Benutzer beendet den Auftrag über die Druck-Manager.
+- SP_USERABORT der Benutzer hat den Auftrag über den Druck-Manager beendet.
 
 ### <a name="remarks"></a>Hinweise
 
-Von der ursprünglichen Printer-Escapesequenzen wird nur QUERYESCSUPPORT für Win32-Anwendungen unterstützt. Alle anderen Drucker Escapesequenzen sind veraltet und werden nur für Kompatibilität mit 16-Bit-Anwendungen unterstützt.
+Von den ursprünglichen Drucker Escapezeichen wird nur queryescsupport für Win32-Anwendungen unterstützt. Alle anderen Drucker Escapezeichen sind veraltet und werden nur aus Gründen der Kompatibilität mit 16-Bit-Anwendungen unterstützt.
 
-Für die Win32-Programmierung `CDC` bietet jetzt sechs Memberfunktionen, die ihre entsprechenden Drucker Escapezeichen abgelöst:
+Für die Win32- `CDC` Programmierung stellt nun sechs Element Funktionen bereit, die ihre entsprechenden Drucker Escapezeichen ersetzen:
 
 - [CDC::AbortDoc](#abortdoc)
 
@@ -2140,15 +2140,15 @@ Für die Win32-Programmierung `CDC` bietet jetzt sechs Memberfunktionen, die ihr
 
 - [CDC::StartPage](#startpage)
 
-Darüber hinaus [GetDeviceCaps](#getdevicecaps) unterstützt Win32-Indizes, die andere Drucker Escapezeichen ablösen. Finden Sie unter [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) im Windows SDK für Weitere Informationen.
+Außerdem unterstützt [CDC:: GetDeviceCaps](#getdevicecaps) Win32-Indizes, die andere Drucker Escapezeichen ablösen. Weitere Informationen finden Sie unter [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) im Windows SDK.
 
-Diese Memberfunktion ermöglicht Anwendungen die Funktionen eines bestimmten Geräts zuzugreifen, die nicht direkt über GDI verfügbar sind.
+Diese mitgliederfunktion ermöglicht Anwendungen den Zugriff auf Funktionen eines bestimmten Geräts, die nicht direkt über GDI verfügbar sind.
 
-Verwenden Sie die erste Version, wenn die Anwendung vordefinierte Escape-Werte verwendet. Verwenden Sie die zweite Version aus, wenn Ihre Anwendung privat Escape-Werte definiert. Finden Sie unter [ExtEscape](/windows/desktop/api/wingdi/nf-wingdi-extescape) im Windows SDK für Weitere Informationen zu der zweiten Version.
+Verwenden Sie die erste Version, wenn die Anwendung vordefinierte Escapewerte verwendet. Verwenden Sie die zweite Version, wenn Ihre Anwendung private Escapewerte definiert. Weitere Informationen zur zweiten Version finden Sie unter [extescape](/windows/desktop/api/wingdi/nf-wingdi-extescape) im Windows SDK.
 
-##  <a name="excludecliprect"></a>  CDC::ExcludeClipRect
+##  <a name="excludecliprect"></a>CDC:: excludebug
 
-Erstellt einen neuen Ausschneidebereich, der den vorhandenen Ausschneidebereich abzüglich des angegebenen Rechtecks besteht.
+Erstellt einen neuen Clippingbereich, der aus dem vorhandenen Clippingbereich abzüglich des angegebenen Rechtecks besteht.
 
 ```
 int ExcludeClipRect(
@@ -2163,39 +2163,39 @@ int ExcludeClipRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parameter
 
 *x1*<br/>
-Gibt die logische X-Koordinate der oberen linken Ecke des Rechtecks an.
+Gibt die logische x-Koordinate der oberen linken Ecke des Rechtecks an.
 
 *y1*<br/>
 Gibt die logische y-Koordinate der oberen linken Ecke des Rechtecks an.
 
 *x2*<br/>
-Gibt die logische X-Koordinate der unteren rechten Ecke des Rechtecks an.
+Gibt die logische x-Koordinate der unteren rechten Ecke des Rechtecks an.
 
 *y2*<br/>
 Gibt die logische y-Koordinate der unteren rechten Ecke des Rechtecks an.
 
 *lpRect*<br/>
-Gibt das Rechteck. Kann auch sein, eine `CRect` Objekt.
+Gibt das Rechteck an. Kann auch ein `CRect` -Objekt sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt den neuen Ausschneidebereich-Typ. Eines der folgenden Werte sind möglich:
+Gibt den Typ des neuen Clippingbereichs an. Dabei kann es sich um einen der folgenden Werte handeln:
 
-- COMPLEXREGION der Region hat überlappende Grenzen.
+- Complexregion der Bereich weist überlappende Rahmen auf.
 
-- Fehler wurde keine Region erstellt.
+- Fehler: Es wurde keine Region erstellt.
 
-- NULLREGION der Region ist leer.
+- NULLREGION der Bereich ist leer.
 
-- SIMPLEREGION der Region verfügt über keine überlappenden Rahmen.
+- Simpleregion der Bereich weist keine überlappenden Rahmen auf.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Breite des Rechtecks, durch den absoluten Wert des angegebenen *X2* - *X1*, 32.767 Einheiten nicht überschreiten. Dieser Grenzwert gilt für die Höhe des Rechtecks ebenfalls.
+Die Breite des Rechtecks, das durch den absoluten Wert von *x2* - *x1*angegeben wird, darf 32.767 Einheiten nicht überschreiten. Dieser Grenzwert gilt auch für die Höhe des Rechtecks.
 
-##  <a name="excludeupdatergn"></a>  CDC::ExcludeUpdateRgn
+##  <a name="excludeupdatergn"></a>CDC:: excluentupdatergn
 
-Verhindert, dass Zeichnung in ungültigen Bereiche eines Fensters durch einen aktualisierten Bereich im Fenster aus den zugeordneten Ausschneidebereich Ausschließen der `CDC` Objekt.
+Verhindert, dass innerhalb von ungültigen Bereichen eines Fensters gezeichnet wird, indem ein aktualisierter Bereich im Fenster von dem dem- `CDC` Objekt zugeordneten Clippingbereich ausgeschlossen wird.
 
 ```
 int ExcludeUpdateRgn(CWnd* pWnd);
@@ -2204,23 +2204,23 @@ int ExcludeUpdateRgn(CWnd* pWnd);
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-Verweist auf das Window-Objekt, dessen Fenster aktualisiert wird.
+Verweist auf das Fenster Objekt, dessen Fenster aktualisiert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Typ, der ausgeschlossen werden soll. Eine der folgenden Werte sind möglich:
+Der Typ des ausgeschlossenen Bereichs. Es kann sich um einen der folgenden Werte handeln:
 
-- COMPLEXREGION der Region hat überlappende Grenzen.
+- Complexregion der Bereich weist überlappende Rahmen auf.
 
-- Fehler wurde keine Region erstellt.
+- Fehler: Es wurde keine Region erstellt.
 
-- NULLREGION der Region ist leer.
+- NULLREGION der Bereich ist leer.
 
-- SIMPLEREGION der Region verfügt über keine überlappenden Rahmen.
+- Simpleregion der Bereich weist keine überlappenden Rahmen auf.
 
-##  <a name="extfloodfill"></a>  CDC::ExtFloodFill
+##  <a name="extfloodfill"></a>CDC:: extflufill
 
-Füllt einen Bereich der Anzeigeoberfläche mit dem aktuellen Pinsel.
+Füllt einen Bereich der Anzeige Oberfläche mit dem aktuellen Pinsel.
 
 ```
 BOOL ExtFloodFill(
@@ -2233,38 +2233,38 @@ BOOL ExtFloodFill(
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate des Punkts, an dem Füllen beginnt.
+Gibt die logische x-Koordinate des Punkts an, an dem mit dem Auffüllen begonnen wird.
 
 *y*<br/>
-Gibt die logische y-Koordinate des Punkts, an dem Füllen beginnt.
+Gibt die logische y-Koordinate des Punkts an, an dem mit dem Ausfüllen begonnen wird.
 
 *crColor*<br/>
-Gibt die Farbe der Grenze oder den Bereich gefüllt werden soll. Die Interpretation der *CrColor* hängt vom Wert der *nFillType*.
+Gibt die Farbe der Grenze oder des Bereichs an, der ausgefüllt werden soll. Die Interpretation von *crcolor* hängt vom Wert von *nfilltype*ab.
 
 *nFillType*<br/>
-Gibt den Typ der Flut Füllung ausgeführt werden. Sie müssen die folgenden Werte sein:
+Gibt den Typ des auszuführenden Überflutungs Füllungs Füllvorgangs an. Es muss sich um einen der folgenden Werte handeln:
 
-- Bereich ausfüllen, wird durch die Farbe gemäß begrenzt FLOODFILLBORDER *CrColor*. Dieser Stil ist identisch mit der Füllen von ausgeführten `FloodFill`.
+- Flufillborder der Füllbereich wird durch die durch *crcolor*angegebene Farbe begrenzt. Dieser Stil ist mit der von `FloodFill`ausgeführten Füllung identisch.
 
-- FLOODFILLSURFACE Füllbereichs, durch die Farbe gemäß definiert wird *CrColor*. Füllen wird nach außen in alle Richtungen fortgesetzt, solange die Farbe gefunden wird. Dieses Format eignet sich für das Füllen von Bereichen mit mehrfarbigen Grenzen.
+- Flufillsurface der Füllbereich wird durch die durch *crcolor*angegebene Farbe definiert. Das Auffüllen wird in allen Richtungen nach außen fortgesetzt, solange die Farbe erreicht ist. Dieser Stil eignet sich zum Auffüllen von Bereichen mit mehrfarbigen Grenzen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn die Funktion erfolgreich ist; Wenn das Ausfüllen nicht abgeschlossen werden konnte, wenn der angegebene Punkt die Grenze ist, andernfalls wird 0 Farbe anhand des *CrColor* (wenn es sich um eine FLOODFILLBORDER angefordert wurde), wenn der angegebene Punkt keinen die Farbe gemäß *CrColor* (wenn es sich um eine FLOODFILLSURFACE angefordert wurde), oder wenn der Punkt außerhalb des Clippingbereichs ist.
+Ungleich 0 (null), wenn die Funktion erfolgreich ist. andernfalls 0, wenn der Füllvorgang nicht abgeschlossen werden konnte,, wenn der angegebene Punkt über die von *crcolor* angegebene Begrenzungs Farbe verfügt (wenn ' flufillborder ' angefordert wurde),, wenn der angegebene Punkt nicht über die von *crcolor* angegebene Farbe verfügt (wenn ' flufillsurface ' war). angefordert) oder, wenn sich der Punkt außerhalb des Clippingbereichs befindet.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion bietet mehr Flexibilität als `FloodFill` , da Sie einen Typ in angeben können *nFillType*.
+Diese Member-Funktion bietet mehr Flexibilität `FloodFill` als da Sie einen Fülltyp in *nfilltype*angeben können.
 
-Wenn *nFillType* festgelegt ist, FLOODFILLBORDER, der Bereich wird angenommen, dass durch die Farbe gemäß vollständig umschlossen werden *CrColor*. Startet die Funktion, die zum Zeitpunkt der gemäß *x* und *y* und in alle Richtungen und der Farbe gefüllt.
+Wenn *nfilltype* auf flufillborder festgelegt ist, wird davon ausgegangen, dass der Bereich vollständig durch die von *crcolor*angegebene Farbe begrenzt ist. Die Funktion beginnt an dem Punkt, der von *x* und *y* angegeben wird, und füllt alle Richtungen an der Farb Begrenzung aus.
 
-Wenn *nFillType* festgelegt ist, FLOODFILLSURFACE, startet die Funktion an dem vom angegebenen *x* und *y* und in alle Richtungen ausgestrahlt, füllen alle verwandten Bereichen wird fortgesetzt mit der Farbe anhand des *CrColor*.
+Wenn *nfilltype* auf flufillsurface festgelegt ist, beginnt die Funktion an dem durch *x* und *y* angegebenen Punkt und wird in allen Richtungen fortgesetzt, wobei alle angrenzenden Bereiche ausgefüllt werden, die die von *crcolor*angegebene Farbe enthalten.
 
-Nur Arbeitsspeicher-Gerätekontexte und Geräte, die Unterstützung der Raster-Anzeige-Technologie unterstützen `ExtFloodFill`. Weitere Informationen finden Sie unter den [GetDeviceCaps](#getdevicecaps) Member-Funktion.
+Nur Speichergeräte Kontexte und Geräte, die die Unterstützung für die Raster `ExtFloodFill`Anzeige Technologie unterstützen. Weitere Informationen finden Sie unter der [GetDeviceCaps](#getdevicecaps) -Member-Funktion.
 
-##  <a name="exttextout"></a>  CDC::ExtTextOut
+##  <a name="exttextout"></a>CDC:: exttextout
 
-Rufen Sie diese Memberfunktion zum Schreiben einer Zeichenfolge in einen rechteckigen Bereich mit der aktuell ausgewählten Schriftart.
+Mit dieser Member-Funktion können Sie eine Zeichenfolge in einem rechteckigen Bereich mithilfe der aktuell ausgewählten Schriftart schreiben.
 
 ```
 virtual BOOL ExtTextOut(
@@ -2288,32 +2288,32 @@ BOOL ExtTextOut(
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate der Zeichenzelle für das erste Zeichen in der angegebenen Zeichenfolge an.
+Gibt die logische x-Koordinate der Zeichen Zelle für das erste Zeichen in der angegebenen Zeichenfolge an.
 
 *y*<br/>
-Gibt die logische y-Koordinate für den oberen Rand der Zeichenzelle für das erste Zeichen in der angegebenen Zeichenfolge an.
+Gibt die logische y-Koordinate des oberen Rands der Zeichen Zelle für das erste Zeichen in der angegebenen Zeichenfolge an.
 
 *nOptions*<br/>
-Gibt den Typ des Rechtecks. Dieser Parameter kann einen, beide oder keines von beiden der folgenden Werte sein:
+Gibt den rechtetyp an. Dieser Parameter kann einen, beide oder keinen der folgenden Werte aufweisen:
 
-- ETO_CLIPPED gibt an, dass Text in das Rechteck abgeschnitten wird.
+- ETO_CLIPPED gibt an, dass Text auf das Rechteck abgeschnitten wird.
 
-- ETO_OPAQUE gibt an füllt, dass die aktuelle Hintergrundfarbe das Rechteck. (Sie können festlegen, und Abfragen mit die aktuellen Hintergrundfarbe der [SetBkColor](#setbkcolor) und [GetBkColor](#getbkcolor) Member-Funktionen.)
+- ETO_OPAQUE gibt an, dass die aktuelle Hintergrundfarbe das Rechteck füllt. (Sie können die aktuelle Hintergrundfarbe mit den Element Funktionen [SetBkColor](#setbkcolor) und [GetBkColor](#getbkcolor) festlegen und Abfragen.)
 
 *lpRect*<br/>
-Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur, die die Abmessungen des Rechtecks bestimmt. Dieser Parameter kann NULL sein. Sie können auch übergeben eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt für diesen Parameter.
+Verweist auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur, die die Abmessungen des Rechtecks bestimmt. Dieser Parameter kann NULL sein. Sie können auch ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt für diesen Parameter übergeben.
 
 *lpszString*<br/>
-Verweist auf die angegebene Zeichenfolge, die gezeichnet werden soll. Sie können auch übergeben eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt für diesen Parameter.
+Verweist auf die angegebene Zeichenfolge, die gezeichnet werden soll. Sie können auch ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt für diesen Parameter übergeben.
 
 *nCount*<br/>
 Gibt die Anzahl von Zeichen in der Zeichenfolge an.
 
 *lpDxWidths*<br/>
-Zeigt auf ein Array von Werten, die den Abstand zwischen dem Ursprung von angrenzenden Zeichenzellen angeben. Z. B. *LpDxWidths*[ *ich*] logische Einheiten trennt die Ursprünge der Zeichenzelle *ich* und Zeichenzelle *ich* + 1. Wenn *LpDxWidths* NULL ist, `ExtTextOut` verwendet den Standardabstand zwischen Zeichen lang sein.
+Verweist auf ein Array von-Werten, die den Abstand zwischen den Ursprüngen von angrenzenden Zeichen Zellen angeben. Beispielsweise trennen *lpdxbreiten*[ *i*] logische Einheiten die Ursprünge der Zeichen Zelle *i* und der Zeichen Zelle *i* + 1. Wenn *lpdxbreiten* den Wert NULL `ExtTextOut` hat, verwendet den Standardabstand zwischen Zeichen.
 
 *str*<br/>
-Ein `CString` Objekt mit der angegebenen Zeichen, gezeichnet werden soll.
+Ein `CString` -Objekt, das die angegebenen Zeichen enthält, die gezeichnet werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2321,13 +2321,13 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Der rechteckige Bereich kann nicht transparente (ausgefüllt mit der aktuellen Hintergrundfarbe), und kann es einer zuschneideregion zu sein.
+Der rechteckige Bereich kann nicht transparent sein (mit der aktuellen Hintergrundfarbe gefüllt), und es kann sich um einen Clippingbereich handeln.
 
-Wenn *nOptions* ist 0 und *LpRect* NULL ist, die Funktion schreibt Text in den Gerätekontext, ohne einen rechteckigen Bereich. Standardmäßig wird die aktuelle Position von der Funktion nicht verwendet oder aktualisiert. Wenn eine Anwendung muss die aktuelle Position Aktualisieren beim Aufruf `ExtTextOut`, kann die Anwendung aufrufen, die `CDC` Memberfunktion [SetTextAlign](#settextalign) mit *nFlags* TA_UPDATECP festgelegt. Wenn dieses Flag festgelegt ist, ignoriert Windows *x* und *y* bei nachfolgenden Aufrufen `ExtTextOut` und verwendet Sie stattdessen die aktuelle Position. Wenn eine Anwendung TA_UPDATECP verwendet, um die aktuelle Position aktualisieren `ExtTextOut` setzt die aktuelle Position am Ende der vorherigen Zeile des Texts oder die Position angegeben wird, durch das letzte Element des Arrays zeigt *LpDxWidths*, welcher Wert größer ist.
+Wenn *noptions* den Wert 0 hat und *lprect* den Wert NULL hat, schreibt die Funktion Text in den Gerätekontext, ohne einen rechteckigen Bereich zu verwenden. Standardmäßig wird die aktuelle Position von der Funktion nicht verwendet oder aktualisiert. Wenn eine Anwendung die aktuelle Position beim `ExtTextOut`aufrufen aktualisieren muss, kann die Anwendung die `CDC` Member-Funktion [setTextAlign](#settextalign) mit *nFlags* aufrufen, die auf TA_UPDATECP festgelegt sind. Wenn dieses Flag festgelegt ist, ignoriert Windows *x* und *y* bei nachfolgenden `ExtTextOut` Aufrufen von und verwendet stattdessen die aktuelle Position. Wenn eine Anwendung TA_UPDATECP zum Aktualisieren der aktuellen Position verwendet, `ExtTextOut` legt die aktuelle Position entweder auf das Ende der vorherigen Textzeile oder auf die durch das letzte Element des Arrays angegebene Position fest, auf die von *lpdxbreiten*verwiesen wird, je nachdem, welcher Wert ist. stärkere.
 
-##  <a name="fillpath"></a>  CDC::FillPath
+##  <a name="fillpath"></a>CDC:: FillPath
 
-Schließt alle geöffneten Figuren in den aktuellen Pfad aus, und füllt den Pfad des innere mithilfe des aktuellen Pinsel und Polygon-füllen-Modus.
+Schließt alle geöffneten Abbildungen im aktuellen Pfad und füllt das Innere des Pfads mit dem aktuellen Pinsel und dem Polygon Füll Modus aus.
 
 ```
 BOOL FillPath();
@@ -2339,11 +2339,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Nach dem inneren gefüllt ist, wird der Pfad aus dem Gerätekontext verworfen.
+Nachdem das innere ausgefüllt wurde, wird der Pfad aus dem Gerätekontext verworfen.
 
-##  <a name="fillrect"></a>  CDC::fillRect
+##  <a name="fillrect"></a>CDC:: fillRect
 
-Rufen Sie diese Memberfunktion, um ein angegebenes Rechteck, das mit dem angegebenen Pinsel zu füllen.
+Ruft diese Member-Funktion auf, um ein angegebenes Rechteck mit dem angegebenen Pinsel auszufüllen.
 
 ```
 void FillRect(
@@ -2354,24 +2354,24 @@ void FillRect(
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur mit den logischen Koordinaten des Rechtecks gefüllt werden soll. Sie können auch übergeben eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt für diesen Parameter.
+Verweist auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur, die die logischen Koordinaten des zu füllenden Rechtecks enthält. Sie können auch ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt für diesen Parameter übergeben.
 
-*pBrush*<br/>
-Identifiziert den Pinsel ab, die zum Ausfüllen des Rechtecks.
+*pbrush*<br/>
+Identifiziert den Pinsel, der zum Ausfüllen des Rechtecks verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion füllt, das vollständige Rechteck, einschließlich der linken und oberen Rahmens, aber nicht den rechten und unteren Rahmen aufgefüllt wird.
+Die Funktion füllt das vollständige Rechteck, einschließlich des linken und oberen Rahmens, aber nicht den rechten und unteren Rand.
 
-Der Pinsel muss entweder erstellt werden, mit der [CBrush](../../mfc/reference/cbrush-class.md) Memberfunktionen [CreateHatchBrush](../../mfc/reference/cbrush-class.md#createhatchbrush), [CreatePatternBrush](../../mfc/reference/cbrush-class.md#createpatternbrush), und [CreateSolidBrush](../../mfc/reference/cbrush-class.md#createsolidbrush), oder abgerufen, indem die `GetStockObject` Windows-Funktion.
+Der Pinsel muss entweder mithilfe der [CBrush](../../mfc/reference/cbrush-class.md) -Member-Funktionen " [kreatehatchbrush](../../mfc/reference/cbrush-class.md#createhatchbrush)", " [kreatepatternbrush](../../mfc/reference/cbrush-class.md#createpatternbrush)" und " [kreatesolidbrush](../../mfc/reference/cbrush-class.md#createsolidbrush)" erstellt `GetStockObject` oder von der Windows-Funktion abgerufen werden.
 
-Wenn das angegebene Rechteck, ausfüllen `FillRect` enthält keine rechten und unteren-Seiten des Rechtecks. GDI ist füllt bis zu ein Rechteck jedoch nicht enthalten, die richtige Spalte und der unteren Zeile unabhängig von der aktuellen Zuordnungsmodus. `FillRect` Vergleicht die Werte der `top`, `bottom`, `left`, und `right` Member des angegebenen Rechtecks. Wenn `bottom` ist kleiner als oder gleich `top`, oder wenn `right` ist kleiner als oder gleich `left`, nicht das Rechteck gezeichnet wird.
+Beim Ausfüllen des angegebenen Rechtecks `FillRect` enthält nicht die Rechte und unteren Seiten des Rechtecks. GDI füllt ein Rechteck unabhängig vom aktuellen Kartenmodus bis zum, aber schließt nicht die Rechte Spalte und die untere Zeile aus. `FillRect``top`vergleicht die Werte der `bottom`Member,, `left`und `right` des angegebenen Rechtecks. Wenn `bottom` kleiner oder `top`gleich ist oder wenn `right` kleiner oder gleich `left`ist, wird das Rechteck nicht gezeichnet.
 
-`FillRect` ist vergleichbar mit [CDC::FillSolidRect](#fillsolidrect)jedoch `FillRect` ein Pinsels verwendet und kann daher verwendet werden, um ein Rechteck mit einer Volltonfarbe, einem Ditheringfarbe, schraffierten Pinsel oder ein Muster zu füllen. `FillSolidRect` verwendet nur Volltonfarben (angezeigt durch ein COLORREF-Parameter). `FillRect` in der Regel ist langsamer als `FillSolidRect`.
+`FillRect`ähnelt [CDC:: fillsolidrect](#fillsolidrect); `FillRect` allerdings verwendet einen Pinsel und kann daher verwendet werden, um ein Rechteck mit einer voll Tonfarbe, einer Dithering-Farbe, einem geschalten Pinsel oder einem Muster auszufüllen. `FillSolidRect`verwendet nur voll Tonfarben (angegeben durch einen COLORREF-Parameter). `FillRect`Normalerweise ist langsamer `FillSolidRect`als.
 
-##  <a name="fillrgn"></a>  CDC::FillRgn
+##  <a name="fillrgn"></a>CDC:: fillrgn
 
-Füllt den Bereich, der anhand des *PRNG* mit dem Pinsel gemäß *pBrush*.
+Füllt den von der *PRGN* angegebenen Bereich mit dem durch *pbrush*angegebenen Pinsel.
 
 ```
 BOOL FillRgn(
@@ -2382,10 +2382,10 @@ BOOL FillRgn(
 ### <a name="parameters"></a>Parameter
 
 *pRgn*<br/>
-Ein Zeiger auf die Region gefüllt werden soll. Die Koordinaten für den angegebenen Bereich sind in logischen Einheiten angegeben.
+Ein Zeiger auf den Bereich, der ausgefüllt werden soll. Die Koordinaten für den angegebenen Bereich werden in logischen Einheiten angegeben.
 
-*pBrush*<br/>
-Identifiziert den Pinsel verwendet werden soll, geben Sie die Region an.
+*pbrush*<br/>
+Identifiziert den Pinsel, der zum Ausfüllen des Bereichs verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2393,15 +2393,15 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Der Pinsel muss entweder mit erstellt werden die `CBrush` Memberfunktionen `CreateHatchBrush`, `CreatePatternBrush`, `CreateSolidBrush`, oder abgerufen werden, indem `GetStockObject`.
+Der Pinsel `CBrush` muss entweder mit den Element Funktionen `CreateHatchBrush`,, `CreateSolidBrush`oder `CreatePatternBrush`erstellt werden, die von `GetStockObject`abgerufen werden.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CRgn::CreateRoundRectRgn](../../mfc/reference/crgn-class.md#createroundrectrgn).
+  Weitere Informationen finden Sie im Beispiel für [crgn:: kreateroundrectrgn](../../mfc/reference/crgn-class.md#createroundrectrgn).
 
-##  <a name="fillsolidrect"></a>  CDC::FillSolidRect
+##  <a name="fillsolidrect"></a>CDC:: fillsolidrect
 
-Rufen Sie diese Memberfunktion, um das angegebene Rechteck mit der angegebenen Volltonfarbe zu füllen.
+Ruft diese Member-Funktion auf, um das angegebene Rechteck mit der angegebenen voll Tonfarbe zu füllen.
 
 ```
 void FillSolidRect(
@@ -2419,32 +2419,32 @@ void FillSolidRect(
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Gibt das umschließende Rechteck (in logischen Einheiten) an. Sie können entweder einen Zeiger zu übergeben, eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Datenstruktur oder ein `CRect` Objekt für diesen Parameter.
+Gibt das umgebende Rechteck an (in logischen Einheiten). Sie können entweder einen Zeiger auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Datenstruktur oder ein `CRect` -Objekt für diesen Parameter übergeben.
 
-*CLR* gibt die Farbe, die zum Ausfüllen des Rechtecks verwendet werden.
+*CLR* Gibt die Farbe an, die zum Ausfüllen des Rechtecks verwendet werden soll.
 
 *w*<br/>
-Gibt die logische X-Koordinate der oberen linken Ecke des Rechtecks an.
+Gibt die logische x-Koordinate der oberen linken Ecke des Rechtecks an.
 
 *y*<br/>
-Gibt die logische y-Koordinate der oberen linken Ecke des Zielrechtecks an.
+Gibt die logische y-Koordinate der oberen linken Ecke des Ziel Rechtecks an.
 
-*cx*<br/>
-Gibt die Breite des Rechtecks.
+*verschoben*<br/>
+Gibt die Breite des Rechtecks an.
 
-*cy*<br/>
-Gibt die Höhe des Rechtecks.
+*CY*<br/>
+Gibt die Höhe des Rechtecks an.
 
 ### <a name="remarks"></a>Hinweise
 
-`FillSolidRect` ist sehr ähnlich [CDC::FillRect](#fillrect)jedoch `FillSolidRect` verwendet nur Volltonfarben (angegeben durch den COLORREF-Parameter), während `FillRect` nimmt einen Pinsel und aus diesem Grund werden kann, geben Sie ein Rechteck mit einer Volltonfarbe, einem mit Dithering Farbe, schraffierten Pinsel oder ein Muster. `FillSolidRect` in der Regel ist schneller als `FillRect`.
+`FillSolidRect`ähnelt [CDC:: fillRect](#fillrect); verwendet jedoch nur voll Tonfarben (die durch den COLORREF-Parameter angegeben werden `FillRect` ), während einen Pinsel verwendet und daher verwendet werden kann, um ein Rechteck mit einer voll Tonfarbe, einer Dithering-Farbe, gebrückten Pinsel oder einem Muster auszufüllen. `FillSolidRect` `FillSolidRect`ist in der Regel `FillRect`schneller als.
 
 > [!NOTE]
->  Beim Aufruf `FillSolidRect`, die Farbe des Hintergrunds, der zuvor festgelegt wurde, mithilfe von [SetBkColor](#setbkcolor), festgelegt ist, die durch Farbe *Clr*.
+>  Wenn Sie aufrufen `FillSolidRect`, wird die Hintergrundfarbe, die zuvor mithilfe von [SetBkColor](#setbkcolor)festgelegt wurde, auf die Farbe festgelegt, die von *CLR*angegeben wird.
 
-##  <a name="flattenpath"></a>  CDC::FlattenPath
+##  <a name="flattenpath"></a>CDC:: vereinfachpfad
 
-Transformiert jede Kurven in den der aktuelle Gerätekontext ausgewählten Pfad, und wandelt jede Kurve in einer Sequenz von Zeilen.
+Wandelt alle Kurven im ausgewählten Pfad in den aktuellen Gerätekontext um und wandelt jede Kurve in eine Sequenz von Zeilen um.
 
 ```
 BOOL FlattenPath();
@@ -2454,9 +2454,9 @@ BOOL FlattenPath();
 
 Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).
 
-##  <a name="floodfill"></a>  CDC::FloodFill
+##  <a name="floodfill"></a>CDC:: flufill
 
-Füllt einen Bereich der Anzeigeoberfläche mit dem aktuellen Pinsel.
+Füllt einen Bereich der Anzeige Oberfläche mit dem aktuellen Pinsel.
 
 ```
 BOOL FloodFill(
@@ -2468,29 +2468,29 @@ BOOL FloodFill(
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate des Punkts, an dem Füllen beginnt.
+Gibt die logische x-Koordinate des Punkts an, an dem mit dem Auffüllen begonnen wird.
 
 *y*<br/>
-Gibt die logische y-Koordinate des Punkts, an dem Füllen beginnt.
+Gibt die logische y-Koordinate des Punkts an, an dem mit dem Ausfüllen begonnen wird.
 
 *crColor*<br/>
-Gibt die Farbe der Grenze.
+Gibt die Farbe der Grenze an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn die Funktion erfolgreich ist; andernfalls 0 wird zurückgegeben, wenn das Ausfüllen nicht abgeschlossen werden konnte, wurde der angegebene Punkt gemäß Mittelpunktfarbe *CrColor*, oder der Punkt befindet sich außerhalb des Clippingbereichs.
+Ungleich 0 (null), wenn die Funktion erfolgreich ist. Andernfalls wird 0 zurückgegeben, wenn der Füllvorgang nicht abgeschlossen werden konnte, der angegebene Punkt die von *crcolor*angegebene Begrenzungs Farbe aufweist oder der Punkt außerhalb des Ausschneide Bereichs liegt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Bereich wird davon ausgegangen, die als umschlossen werden anhand des *CrColor*. Die `FloodFill` Funktion beginnt, an dem vom angegebenen *x* und *y* und in alle Richtungen ausgestrahlt, auf die Begrenzung des Farbe wird fortgesetzt.
+Es wird davon ausgegangen, dass der Bereich gemäß der *crcolor*-Angabe gebunden ist. Die `FloodFill` Funktion beginnt an dem Punkt, der von *x* und *y* angegeben wird, und wird in allen Richtungen an die Farbgrenze weitergeführt.
 
-Nur Arbeitsspeicher-Gerätekontexte und Geräte, die Unterstützung der Raster-Anzeige-Technologie unterstützen die `FloodFill` Member-Funktion. Informationen zu RC_BITBLT-Funktion finden Sie unter den `GetDeviceCaps` Member-Funktion.
+Nur Speichergeräte Kontexte und Geräte, die die-Raster Anzeige Technologie unterstützen `FloodFill` , unterstützen die-Member-Funktion. Weitere Informationen zur RC_BITBLT-Funktion finden Sie `GetDeviceCaps` unter der-Member-Funktion.
 
-Die `ExtFloodFill` Funktion bietet ähnliche Funktionalität jedoch größere Flexibilität.
+Die `ExtFloodFill` Funktion bietet eine ähnliche Funktion, aber größere Flexibilität.
 
-##  <a name="framerect"></a>  CDC:: FrameRect
+##  <a name="framerect"></a>CDC:: frameRect
 
-Zeichnet einen Rahmen um das Rechteck, das vom angegebenen *LpRect*.
+Zeichnet einen Rahmen um das durch *lprect*angegebene Rechteck.
 
 ```
 void FrameRect(
@@ -2501,22 +2501,22 @@ void FrameRect(
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die logischen Koordinaten der oberen linken und rechten unteren Ecke des Rechtecks enthält. Sie können auch übergeben eine `CRect` Objekt für diesen Parameter.
+Verweist auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die logischen Koordinaten der oberen linken und der unteren rechten Ecke des Rechtecks enthält. Sie können auch ein `CRect` -Objekt für diesen Parameter übergeben.
 
-*pBrush*<br/>
-Identifiziert den Pinsel für die Darstellung des Rechtecks verwendet werden soll.
+*pbrush*<br/>
+Identifiziert den Pinsel, der zum umgestalten des Rechtecks verwendet werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion verwendet den angegebenen Pinsel zum Zeichnen des Rahmens an. Die Breite und Höhe des Rahmens ist immer 1 logische Einheit.
+Die-Funktion verwendet den angegebenen Pinsel zum Zeichnen des Rahmens. Breite und Höhe des Rahmens sind immer 1 logische Einheit.
 
-Wenn des Rechtecks des `bottom` Koordinate ist kleiner als oder gleich `top`, oder wenn `right` ist kleiner als oder gleich `left`, das Rechteck wird nicht gezeichnet.
+Wenn die `bottom` Koordinate des Rechtecks kleiner als oder `top`gleich ist oder `right` wenn kleiner oder gleich `left`ist, wird das Rechteck nicht gezeichnet.
 
-Der Rahmen gezeichnet werden, indem `FrameRect` befindet sich in der gleichen Position wie ein Rahmen gezeichnet werden, indem die `Rectangle` Member-Funktion, die mit den Koordinaten (Wenn `Rectangle` verwendet einen Stift, der die logische Einheit Breite 1 ist). Das Innere des Rechtecks wird nicht durch gefüllt `FrameRect`.
+Der von `FrameRect` gezeichnete Rahmen befindet sich an derselben Position wie ein von der `Rectangle` Element Funktion gezeichneter Rahmen mit denselben Koordinaten `Rectangle` (wenn einen Stift verwendet, der 1 logische Einheit breit ist). Das Innere des Rechtecks wird nicht von `FrameRect`ausgefüllt.
 
-##  <a name="framergn"></a>  CDC::FrameRgn
+##  <a name="framergn"></a>CDC:: framergn
 
-Zeichnet einen Rahmen um den Bereich, der anhand des *PRNG* mit dem Pinsel gemäß *pBrush*.
+Zeichnet einen Rahmen um den durch *PRGN* angegebenen Bereich mit dem durch *pbrush*angegebenen Pinsel.
 
 ```
 BOOL FrameRgn(
@@ -2529,16 +2529,16 @@ BOOL FrameRgn(
 ### <a name="parameters"></a>Parameter
 
 *pRgn*<br/>
-Verweist auf die `CRgn` -Objekt, identifiziert die Region, in einem Rahmen eingeschlossen werden. Die Koordinaten für den angegebenen Bereich sind in logischen Einheiten angegeben.
+Verweist auf das `CRgn` -Objekt, das den Bereich identifiziert, der in einen Rahmen eingeschlossen werden soll. Die Koordinaten für den angegebenen Bereich werden in logischen Einheiten angegeben.
 
-*pBrush*<br/>
-Verweist auf die `CBrush` Objekt, das den Pinsel zum Zeichnen des Rahmens zu verwendende identifiziert.
+*pbrush*<br/>
+Verweist auf das `CBrush` -Objekt, das den Pinsel identifiziert, der zum Zeichnen des Rahmens verwendet werden soll.
 
 *nWidth*<br/>
-Gibt die Breite des Rahmens in vertikalen Striche in Geräteeinheiten an.
+Gibt die Breite des Rahmens in den vertikalen Pinselstrichen in den Geräte Einheiten an.
 
-*nHeight*<br/>
-Gibt die Höhe des Rahmens in horizontale Striche in Geräteeinheiten an.
+*nheight*<br/>
+Gibt die Höhe des Rahmens in den horizontalen Pinselstrichen in den Geräte Einheiten an.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2546,11 +2546,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CRgn::CombineRgn](../../mfc/reference/crgn-class.md#combinergn).
+  Weitere Informationen finden Sie im Beispiel für [crgn:: combinergn](../../mfc/reference/crgn-class.md#combinergn).
 
-##  <a name="fromhandle"></a>  CDC::FromHandle
+##  <a name="fromhandle"></a>CDC:: FromHandle
 
-Gibt einen Zeiger auf eine `CDC` Objekt, wenn ein Handle für einen Gerätekontext zu erhalten.
+Gibt einen Zeiger auf ein `CDC` -Objekt zurück, wenn ein Handle für einen Gerätekontext angegeben wird.
 
 ```
 static CDC* PASCAL FromHandle(HDC hDC);
@@ -2563,7 +2563,7 @@ Enthält ein Handle für einen Windows-Gerätekontext.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Zeiger kann temporär sein und sollten nicht über unmittelbare Verwendung gespeichert werden.
+Der Zeiger kann temporär sein und sollte nicht über eine sofortige Verwendung hinaus gespeichert werden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2571,11 +2571,11 @@ Wenn ein `CDC`-Objekt nicht an das Handle angefügt ist, wird ein temporäres `C
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc).
+  Weitere Informationen finden Sie im Beispiel für [CPrintDialog:: getPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc).
 
-##  <a name="getarcdirection"></a>  CDC::GetArcDirection
+##  <a name="getarcdirection"></a>CDC:: getarcdirection
 
-Gibt die aktuelle Richtung der Bogen für den Gerätekontext zurück.
+Gibt die aktuelle Bogen Richtung für den Gerätekontext zurück.
 
 ```
 int GetArcDirection() const;
@@ -2583,19 +2583,19 @@ int GetArcDirection() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt die aktuelle Richtung der Bogen, bei erfolgreicher Ausführung an. Es folgen die gültige Rückgabewerte:
+Gibt die aktuelle Bogen Richtung an, wenn erfolgreich. Im folgenden finden Sie die gültigen Rückgabewerte:
 
-- AD_COUNTERCLOCKWISE Bögen und Rechtecke, die gegen den Uhrzeigersinn gezeichnet.
+- AD_COUNTERCLOCKWISE Arcs und Rechtecke gegen den Uhrzeigersinn gezeichnet.
 
-- AD_CLOCKWISE Bögen und Rechtecke zeichnen im Uhrzeigersinn.
+- AD_CLOCKWISE Arcs und Rechtecke im Uhrzeigersinn gezeichnet.
 
 Wenn ein Fehler auftritt, ist der Rückgabewert 0 (null).
 
 ### <a name="remarks"></a>Hinweise
 
-ARC und Rechteck Funktionen verwenden, die Richtung der Bogen wird.
+Bogen-und Rechteck Funktionen verwenden die Bogen Richtung.
 
-##  <a name="getaspectratiofilter"></a>  CDC::GetAspectRatioFilter
+##  <a name="getaspectratiofilter"></a>CDC:: getaspectratiofilter
 
 Ruft die Einstellung für den aktuellen Seitenverhältnis Filter ab.
 
@@ -2605,13 +2605,13 @@ CSize GetAspectRatioFilter() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `CSize` Objekt, das darstellt, die von den aktuellen Seitenverhältnis Filter verwendet des Seitenverhältnis wird beibehalten.
+Ein `CSize` -Objekt, das das Seitenverhältnis darstellt, das vom aktuellen Seitenverhältnis Filter verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Seitenverhältnis wird das Verhältnis zwischen gebildet, indem die Höhe und Breite in Pixel des Geräts. Informationen über das Seitenverhältnis des Geräts wird in die Erstellung, Auswahl und Anzeige von Schriftarten verwendet. Windows bietet einen speziellen Filter, den Filter Seitenverhältnis Schriftarten für ein bestimmtes Seitenverhältnis aus allen verfügbaren Schriftarten auswählen. Der Filter verwendet das Seitenverhältnis beibehalten, die gemäß der `SetMapperFlags` Member-Funktion.
+Das Seitenverhältnis ist das Verhältnis, das durch die Pixel Breite und-Höhe eines Geräts gebildet wird. Informationen über das Seitenverhältnis eines Geräts werden bei der Erstellung, Auswahl und Anzeige von Schriftarten verwendet. Windows stellt einen speziellen Filter, den Seitenverhältnis Filter, bereit, um Schriftarten auszuwählen, die für ein bestimmtes Seitenverhältnis von allen verfügbaren Schriftarten entwickelt wurden. Der Filter verwendet das Seitenverhältnis, das von `SetMapperFlags` der Member-Funktion angegeben wird.
 
-##  <a name="getbkcolor"></a>  CDC::GetBkColor
+##  <a name="getbkcolor"></a>CDC:: GetBkColor
 
 Gibt die aktuelle Hintergrundfarbe zurück.
 
@@ -2625,9 +2625,9 @@ Ein RGB-Farbwert.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Hintergrundmodus DECKEND ist, verwendet das System die Hintergrundfarbe zum Füllen der Lücken in formatierte Zeilen, die Lücken zwischen schraffierten Linien in Pinsel und den Hintergrund des Zeichenzellen an. Das System verwendet außerdem die Farbe des Hintergrunds beim Konvertieren von Bitmaps zwischen Farbe und monochromen Gerätekontexte.
+Wenn der Hintergrundmodus nicht transparent ist, verwendet das System die Hintergrundfarbe, um die Lücken in formatierten Linien, die Lücken zwischen ausschlendeten Linien in Pinseln und den Hintergrund in Zeichen Zellen auszufüllen. Das System verwendet auch die Hintergrundfarbe beim Umrechnen von Bitmaps zwischen Farb-und Monochrom-Geräte Kontexten.
 
-##  <a name="getbkmode"></a>  CDC::GetBkMode
+##  <a name="getbkmode"></a>CDC:: getbkmode
 
 Gibt den Hintergrundmodus zurück.
 
@@ -2637,15 +2637,15 @@ int GetBkMode() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der aktuelle Hintergrundmodus, der UNDURCHSICHTIG oder TRANSPARENT sein kann.
+Der aktuelle Hintergrundmodus, der transparent oder transparent sein kann.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Hintergrundmodus definiert, ob das System vorhandene Hintergrundfarben auf die Zeichenoberfläche entfernt vor dem Zeichnen von Text, schraffierten Pinsel oder jede Pen-Formatvorlage, die keine durchgehende Linie ist.
+Der Hintergrundmodus definiert, ob das System vorhandene Hintergrundfarben auf der Zeichnungs Oberfläche vor dem Zeichnen von Text, auslendeten Pinseln oder einem beliebigen Stift Stil entfernt, der keine durchgezogenen Linie ist.
 
-##  <a name="getboundsrect"></a>  CDC::GetBoundsRect
+##  <a name="getboundsrect"></a>CDC:: getboundsrect
 
-Gibt das aktuelle akkumulierte umschließende Rechteck für den angegebenen Gerätekontext zurück.
+Gibt das aktuelle akkumulierte umgebende Rechteck für den angegebenen Gerätekontext zurück.
 
 ```
 UINT GetBoundsRect(
@@ -2656,30 +2656,30 @@ UINT GetBoundsRect(
 ### <a name="parameters"></a>Parameter
 
 *lpRectBounds*<br/>
-Verweist auf einen Puffer, der den aktuellen umschließenden Rechtecks erhält. Das Rechteck in logischen Koordinaten zurückgegeben.
+Verweist auf einen Puffer, der das aktuelle umgebende Rechteck empfängt. Das Rechteck wird in logischen Koordinaten zurückgegeben.
 
 *flags*<br/>
-Gibt an, ob das umschließende Rechteck gelöscht werden, nachdem er zurückgegeben wird. Dieser Parameter sollte 0 (null) oder auf die folgenden Werte festgelegt:
+Gibt an, ob das umschließende Rechteck gelöscht werden soll, nachdem es zurückgegeben wurde. Dieser Parameter muss NULL sein oder auf den folgenden Wert festgelegt werden:
 
-- DCB_RESET erzwingt, dass das umschließende Rechteck gelöscht werden sollen, nachdem er zurückgegeben wird.
+- DCB_RESET erzwingt, dass das umschließende Rechteck gelöscht wird, nachdem es zurückgegeben wurde.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt den aktuellen Status des umschließenden Rechtecks an, wenn die Funktion erfolgreich ist. Sie können eine Kombination der folgenden Werte sein:
+Gibt den aktuellen Zustand des umgebenden Rechtecks an, wenn die Funktion erfolgreich ist. Dabei kann es sich um eine Kombination der folgenden Werte handeln:
 
-- DCB_ACCUMULATE umschließenden Rechteck Ansammlung stattfindet.
+- DCB_ACCUMULATE umgebende Rechteck ist Kumulation.
 
-- DCB_RESET umschließenden Rechteck ist leer.
+- DCB_RESET das umgebende Rechteck ist leer.
 
-- DCB_SET umschließenden Rechteck ist nicht leer.
+- DCB_SET das umgebende Rechteck ist nicht leer.
 
-- DCB_ENABLE umgebenden Accumulation / ist.
+- DCB_ENABLE Begrenzungs Akkumulation ist on.
 
-- DCB_DISABLE umgebenden Accumulation / ist deaktiviert.
+- DCB_DISABLE Begrenzungs Akkumulation ist deaktiviert.
 
-##  <a name="getbrushorg"></a>  CDC::GetBrushOrg
+##  <a name="getbrushorg"></a>CDC:: getbrushorg
 
-Ruft den Ursprung (in Geräteeinheiten), der derzeit für den Gerätekontext ausgewählten Pinsels ab.
+Ruft den Ursprung (in den Geräte Einheiten) des aktuell für den Gerätekontext ausgewählten Pinsels ab.
 
 ```
 CPoint GetBrushOrg() const;
@@ -2687,13 +2687,13 @@ CPoint GetBrushOrg() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Den aktuellen Ursprung des Pinsels (in Geräteeinheiten) als eine [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
+Der aktuelle Ursprung des Pinsels (in Geräte Einheiten) als [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Ursprung des ersten Pinsels wird bei (0,0) des Clientbereichs. Der Rückgabewert gibt dieser Punkt in Geräteeinheiten relativ zum Ursprung des Fensters auf dem desktop an.
+Der ursprüngliche Pinsel Ursprung liegt bei (0,0) des Client Bereichs. Der Rückgabewert gibt diesen Punkt in den Geräte Einheiten relativ zum Ursprung des Desktop Fensters an.
 
-##  <a name="getcharacterplacement"></a>  CDC::GetCharacterPlacement
+##  <a name="getcharacterplacement"></a>CDC:: getcharakteriplacement
 
 Ruft verschiedene Typen von Informationen zu einer Zeichenfolge ab.
 
@@ -2718,19 +2718,19 @@ DWORD GetCharacterPlacement(
 Ein Zeiger auf die zu verarbeitende Zeichenfolge.
 
 *nCount*<br/>
-Gibt die Länge der Zeichenfolge an. Bei der ANSI-Version ist es eine Byteanzahl und bei der Unicode-Funktion ist es eine Wortanzahl. Weitere Informationen finden Sie unter [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa).
+Gibt die Länge der Zeichenfolge an. Bei der ANSI-Version ist es eine Byteanzahl und bei der Unicode-Funktion ist es eine Wortanzahl. Weitere Informationen finden Sie unter [getcharakteriplacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa).
 
-*nMaxExtent*<br/>
-Gibt der maximale Wertbereich (in logischen Einheiten) an, zu dem die Zeichenfolge verarbeitet wird. Zeichen, die diesen Wertbereich bei Verarbeitung überschreiten würden, werden ignoriert. Berechnungen für alle erforderlichen Reihenfolge- oder Glyphenarrays gelten nur für die enthaltenen Zeichen. Dieser Parameter wird verwendet, nur, wenn der GCP_MAXEXTENT-Wert, in angegeben ist der *DwFlags* Parameter. Da die Funktion die Eingabezeichenfolge verarbeitet, wird jedes Zeichen und sein Wertebereich nur dann der Ausgabe, dem Wertebereich und anderen Arrays hinzugefügt, wenn der gesamte Wertebereich das Maximum noch nicht überschritten hat. Bei Erreichen des Limits wird die Verarbeitung beendet.
+*nmaxblock*<br/>
+Gibt der maximale Wertbereich (in logischen Einheiten) an, zu dem die Zeichenfolge verarbeitet wird. Zeichen, die diesen Wertbereich bei Verarbeitung überschreiten würden, werden ignoriert. Berechnungen für alle erforderlichen Reihenfolge- oder Glyphenarrays gelten nur für die enthaltenen Zeichen. Dieser Parameter wird nur verwendet, wenn der GCP_MAXEXTENT-Wert im *dwFlags* -Parameter angegeben wird. Da die Funktion die Eingabezeichenfolge verarbeitet, wird jedes Zeichen und sein Wertebereich nur dann der Ausgabe, dem Wertebereich und anderen Arrays hinzugefügt, wenn der gesamte Wertebereich das Maximum noch nicht überschritten hat. Bei Erreichen des Limits wird die Verarbeitung beendet.
 
 *lpResults*<br/>
-Zeiger auf eine [GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa) Struktur, die die Ergebnisse der Funktion empfängt.
+Zeiger auf eine [GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa) -Struktur, die die Ergebnisse der Funktion empfängt.
 
 *dwFlags*<br/>
-Gibt das Verarbeiten der Zeichenfolge in die erforderlichen Arrays an. Dieser Parameter kann eine oder mehrere der Werte in der *DwFlags* Teil der [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa) Thema.
+Gibt das Verarbeiten der Zeichenfolge in die erforderlichen Arrays an. Bei diesem Parameter kann es sich um einen oder mehrere der Werte handeln, die im Abschnitt *dwFlags* des Themas [getcharakteriplacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa) aufgeführt sind.
 
 *str*<br/>
-Ein Zeiger auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt zu verarbeiten.
+Ein Zeiger auf ein zu verarbeitende [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2740,11 +2740,11 @@ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion emuliert die Funktionen der [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa), wie im Windows SDK beschrieben.
+Diese Member-Funktion emuliert die Funktionalität der [getcharakteriplacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)-Funktion, wie im Windows SDK beschrieben.
 
-##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths
+##  <a name="getcharabcwidths"></a>CDC:: getcharabcbreiten
 
-Ruft die Breite der aufeinander folgenden Zeichen in einem angegebenen Bereich aus der aktuellen TrueType-Schriftart ab.
+Ruft die Breite der aufeinander folgenden Zeichen in einem angegebenen Bereich von der aktuellen TrueType-Schriftart ab.
 
 ```
 BOOL GetCharABCWidths(
@@ -2761,16 +2761,16 @@ BOOL GetCharABCWidths(
 ### <a name="parameters"></a>Parameter
 
 *nFirstChar*<br/>
-Gibt das erste Zeichen im Bereich von Zeichen aus der aktuellen Schriftart für die Breite der Zeichen zurückgegeben werden.
+Gibt das erste Zeichen im Bereich von Zeichen aus der aktuellen Schriftart an, für die Zeichen breiten zurückgegeben werden.
 
 *nLastChar*<br/>
-Gibt das letzte Zeichen im Bereich von Zeichen aus der aktuellen Schriftart für die Breite der Zeichen zurückgegeben werden.
+Gibt das letzte Zeichen in dem Bereich von Zeichen aus der aktuellen Schriftart an, für die Zeichen breiten zurückgegeben werden.
 
 *lpabc*<br/>
-Verweist auf ein Array von [ABC](/windows/desktop/api/wingdi/ns-wingdi-_abc) Strukturen, die die Breite Zeichen zu erhalten, wenn die Funktion gibt. Dieses Array muss mindestens so viele `ABC` Strukturen als Zeichen vorhanden, im Bereich gemäß sind der *nFirstChar* und *nLastChar* Parameter.
+Verweist auf ein Array von [ABC](/windows/desktop/api/wingdi/ns-wingdi-abc) -Strukturen, die die Zeichenbreite empfangen, wenn die Funktion zurückgibt. Dieses Array muss mindestens so viele `ABC` Strukturen enthalten, wie Zeichen in dem von den Parametern *nfirstchar* und *nlastchar* angegebenen Bereich vorhanden sind.
 
 *lpABCF*<br/>
-Verweist auf ein von der Anwendung bereitgestellten Puffer mit einem Array von [ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-_abcfloat) Strukturen, um die Breite Zeichen zu erhalten, wenn die Funktion gibt. Die Breite von dieser Funktion zurückgegebenen befinden sich in der IEEE-Gleitkomma-Format.
+Verweist auf einen von der Anwendung bereitgestellten Puffer mit einem Array von [abcfloat](/windows/desktop/api/wingdi/ns-wingdi-abcfloat) -Strukturen, um die Zeichenbreite zu erhalten, wenn die Funktion zurückgegeben wird. Die von dieser Funktion zurückgegebenen breiten liegen im IEEE-Gleit Komma Format vor.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2778,21 +2778,21 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die Breite werden in logischen Einheiten zurückgegeben. Diese Funktion erfolgreich ausgeführt wurde, nur mit TrueType-Schriftarten.
+Die breiten werden in logischen Einheiten zurückgegeben. Diese Funktion ist nur mit TrueType-Schriftarten erfolgreich.
 
-Die TrueType des rasterizers bietet Zeichenabstand "ABC" nach eine bestimmten Größe ausgewählt wurde. "A" Abstand, entspricht dem Abstand, der an der aktuellen Position hinzugefügt wird, vor dem Speichern des Symbols. Abstand für "B" ist die Breite des schwarzen Teils des Symbols. "C" Abstand, wird die aktuelle Position, die für den Leerraum auf der rechten Seite des Symbols für das Konto hinzugefügt. Die Gesamtsumme, die erweiterte Breite erhält von A + B + C.
+Der TrueType-Raster gibt den Zeichenabstand "ABC" an, nachdem eine bestimmte Punktgröße ausgewählt wurde. Der Abstand "A" ist der Abstand, der der aktuellen Position vor dem Platzieren des Symbols hinzugefügt wird. Der Abstand "B" ist die Breite des schwarzen Teils des Symbols. Der Abstand "C" wird der aktuellen Position hinzugefügt, um den Leerraum rechts neben dem Symbol zu berücksichtigen. Die gesamte erweiterte Breite wird von A + B + C angegeben.
 
-Wenn die `GetCharABCWidths` Memberfunktion ruft negativ "A" oder "C" Breite für ein Zeichen, die dieses Zeichen enthält, Underhangs oder Überhängen.
+Wenn die `GetCharABCWidths` Member-Funktion negative "A"-oder "C"-breiten für ein Zeichen abruft, umfasst dieses Zeichen unter hängen oder Überhängen.
 
-Um die Breite ABC in Schriftentwurfseinheiten zu konvertieren, Erstellen einer Anwendung sollte eine Schriftart, deren Höhe (gemäß den Angaben in der `lfHeight` Mitglied der ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) Struktur) ist gleich dem Wert, der in gespeicherten der `ntmSizeEM` Mitglied der [ NEWTEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagnewtextmetrica) Struktur. (Der Wert des der `ntmSizeEM` Member abgerufen werden kann, durch den Aufruf der [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa) Windows-Funktion.)
+Zum Konvertieren der ABC-breiten in Schriftart Entwurfs Einheiten sollte eine Anwendung eine Schriftart erstellen, deren Höhe `lfHeight` (wie im-Member der [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) -Struktur angegeben) gleich dem `ntmSizeEM` Wert ist, der im-Member von [newtextmetric](/windows/desktop/api/wingdi/ns-wingdi-tagnewtextmetrica) gespeichert ist. Werks. (Der Wert des `ntmSizeEM` Members kann durch Aufrufen der Windows-Funktion " [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa) " abgerufen werden.)
 
-Die Breite ABC das Standardzeichen dienen für Zeichen, die außerhalb des Bereichs des derzeit ausgewählten Schriftart.
+Die ABC-Breite des Standard Zeichens wird für Zeichen verwendet, die sich außerhalb des Bereichs der aktuell ausgewählten Schriftart befinden.
 
-Die Breite der Zeichen in nicht-TrueType-Schriftarten Anwendungen sollten verwenden Sie zum Abrufen der [GetCharWidth](/windows/desktop/api/wingdi/nf-wingdi-getcharwidtha) Windows-Funktion.
+Zum Abrufen der breiten von Zeichen in nicht-TrueType-Schriftarten sollten Anwendungen die [getcharwidth](/windows/desktop/api/wingdi/nf-wingdi-getcharwidtha) -Windows-Funktion verwenden.
 
-##  <a name="getcharabcwidthsi"></a>  CDC::GetCharABCWidthsI
+##  <a name="getcharabcwidthsi"></a>CDC:: getcharabcwidthsi
 
-Ruft ab, das die Breiten in logischen Einheiten, der aufeinander folgenden Symbolindizes in einem angegebenen Bereich aus der aktuellen TrueType-Schriftart.
+Ruft die breiten in logischen Einheiten von aufeinander folgenden Glyphe-Indizes in einem angegebenen Bereich aus der aktuellen TrueType-Schriftart ab.
 
 ```
 BOOL GetCharABCWidthsI(
@@ -2805,16 +2805,16 @@ BOOL GetCharABCWidthsI(
 ### <a name="parameters"></a>Parameter
 
 *giFirst*<br/>
-Gibt den ersten Glyphen Index in der Gruppe der aufeinander folgenden Symbolindizes aus der aktuellen Schriftart an. Dieser Parameter wird nur verwendet, wenn die *Pgi* Parameter NULL ist.
+Gibt den ersten Glyphe-Index in der Gruppe von aufeinander folgenden Glyphen-Indizes aus der aktuellen Schriftart an. Dieser Parameter wird nur verwendet, wenn der *PGI* -Parameter NULL ist.
 
 *cgi*<br/>
-Gibt die Anzahl von glyphenindizes.
+Gibt die Anzahl der Glyphe-Indizes an.
 
 *pgi*<br/>
-Ein Zeiger auf ein Array, die Symbolindizes enthält. Wenn der Wert NULL aufweist, ist die *GiFirst* Parameter wird stattdessen verwendet. Die *Cgi* Parameter gibt die Anzahl von glyphenindizes, die in diesem Array.
+Ein Zeiger auf ein Array, das Glyphe-Indizes enthält. Wenn der Wert NULL ist, wird stattdessen der *gifirst* -Parameter verwendet. Der *CGI* -Parameter gibt die Anzahl der Glyphe-Indizes in diesem Array an.
 
 *lpabc*<br/>
-Zeiger auf ein Array von [ABC](/windows/desktop/api/wingdi/ns-wingdi-_abc) Strukturen, die die Breite der Zeichen empfangen. Dieses Array muss mindestens so viele `ABC` Strukturen wie stehen die Symbolindizes gemäß der *Cgi* Parameter.
+Zeiger auf ein Array von [ABC](/windows/desktop/api/wingdi/ns-wingdi-abc) -Strukturen, die die Zeichenbreite empfangen. Dieses Array muss mindestens so viele `ABC` Strukturen enthalten, wie vom *CGI* -Parameter angegebene Glyphe-Indizes enthalten.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2822,11 +2822,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion emuliert die Funktionen der [GetCharABCWidthsI](/windows/desktop/api/wingdi/nf-wingdi-getcharabcwidthsi), wie im Windows SDK beschrieben.
+Diese Member-Funktion emuliert die Funktionalität der [getcharabcwidthsi](/windows/desktop/api/wingdi/nf-wingdi-getcharabcwidthsi)-Funktion, wie im Windows SDK beschrieben.
 
-##  <a name="getcharwidth"></a>  CDC::GetCharWidth
+##  <a name="getcharwidth"></a>CDC:: getcharwidth
 
-Ruft die Breite der einzelnen Zeichen in eine aufeinander folgende Gruppe von Zeichen aus der aktuellen Schriftart mit `m_hAttribDC`, den Kontext Eingabegerät.
+Ruft die Breite einzelner Zeichen in einer aufeinander folgenden Gruppe von Zeichen aus der aktuellen Schriftart ab, wobei `m_hAttribDC`der Eingabegeräte Kontext verwendet wird.
 
 ```
 BOOL GetCharWidth(
@@ -2843,16 +2843,16 @@ BOOL GetCharWidth(
 ### <a name="parameters"></a>Parameter
 
 *nFirstChar*<br/>
-Gibt das erste Zeichen in eine aufeinander folgende Gruppe von Zeichen in der aktuellen Schriftart an.
+Gibt das erste Zeichen in einer aufeinanderfolgenden Gruppe von Zeichen in der aktuellen Schriftart an.
 
 *nLastChar*<br/>
-Gibt das letzte Zeichen in eine aufeinander folgende Gruppe von Zeichen in der aktuellen Schriftart an.
+Gibt das letzte Zeichen in einer aufeinander folgenden Gruppe von Zeichen in der aktuellen Schriftart an.
 
 *lpBuffer*<br/>
-Verweist auf einen Puffer, der die Werte für die Breite für eine aufeinander folgende Gruppe von Zeichen in der aktuellen Schriftart erhält.
+Verweist auf einen Puffer, der die Breitenwerte für eine aufeinander folgende Gruppe von Zeichen in der aktuellen Schriftart empfängt.
 
 *lpFloatBuffer*<br/>
-Verweist auf einen Puffer zur Aufnahme der breiten Zeichen. Die zurückgegebene breiten befinden sich in der 32-Bit-IEEE-Gleitkomma-Format. (Die Breite werden auf der Basis-Linie Zeichen gemessen.)
+Zeigt auf einen Puffer, um die Zeichenbreite zu erhalten. Die zurückgegebenen breiten liegen im 32-Bit-IEEE-Gleit Komma Format vor. (Die breiten werden entlang der Basis Zeile der Zeichen gemessen.)
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2860,15 +2860,15 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Z. B. wenn *nFirstChar* identifiziert den Buchstaben "a" und *nLastChar* identifiziert dem Buchstaben "Z", die die Funktion ruft die Breite der alle Kleinbuchstaben.
+Wenn z. b. *nfirstchar* den Buchstaben "a" und *nlastchar* den Buchstaben "z" identifiziert, ruft die Funktion die Breite aller Kleinbuchstaben ab.
 
-Die Funktion speichert die Werte in den Puffer, der auf *LpBuffer*. Dieser Puffer muss groß genug für alle der breiten sein. D. h. muss vorhanden sein mindestens 26 Einträge im Beispiel angegeben.
+Die-Funktion speichert die Werte im Puffer, auf die von *lpBuffer*verwiesen wird. Dieser Puffer muss groß genug sein, um alle breiten zu halten. Das heißt, es müssen mindestens 26 Einträge im angegebenen Beispiel vorhanden sein.
 
-Wenn ein Zeichen in dem aufeinander folgende Gruppe von Zeichen in einer bestimmten Schriftart nicht vorhanden ist, wird es den Width-Wert, der das Standardzeichen zugewiesen.
+Wenn in einer bestimmten Schriftart kein Zeichen in der aufeinander folgenden Zeichen Gruppe vorhanden ist, wird Ihr der Wert Width (Breite) des Standard Zeichens zugewiesen.
 
-##  <a name="getcharwidthi"></a>  CDC::GetCharWidthI
+##  <a name="getcharwidthi"></a>CDC:: getcharwidthi
 
-Ruft die Breite, in logischen Koordinaten von aufeinander folgenden Symbolindizes in einem angegebenen Bereich aus der aktuellen Schriftart ab.
+Ruft die breiten in logischen Koordinaten von aufeinander folgenden Glyphe-Indizes in einem angegebenen Bereich aus der aktuellen Schriftart ab.
 
 ```
 BOOL GetCharWidthI(
@@ -2881,16 +2881,16 @@ BOOL GetCharWidthI(
 ### <a name="parameters"></a>Parameter
 
 *giFirst*<br/>
-Gibt den ersten Glyphen Index in der Gruppe der aufeinander folgenden Symbolindizes aus der aktuellen Schriftart an. Dieser Parameter wird nur verwendet, wenn die *Pgi* Parameter NULL ist.
+Gibt den ersten Glyphe-Index in der Gruppe von aufeinander folgenden Glyphen-Indizes aus der aktuellen Schriftart an. Dieser Parameter wird nur verwendet, wenn der *PGI* -Parameter NULL ist.
 
 *cgi*<br/>
-Gibt die Anzahl von glyphenindizes.
+Gibt die Anzahl der Glyphe-Indizes an.
 
 *pgi*<br/>
-Ein Zeiger auf ein Array, die Symbolindizes enthält. Wenn der Wert NULL aufweist, ist die *GiFirst* Parameter wird stattdessen verwendet. Die *Cgi* Parameter gibt die Anzahl von glyphenindizes, die in diesem Array.
+Ein Zeiger auf ein Array, das Glyphe-Indizes enthält. Wenn der Wert NULL ist, wird stattdessen der *gifirst* -Parameter verwendet. Der *CGI* -Parameter gibt die Anzahl der Glyphe-Indizes in diesem Array an.
 
 *lpBuffer*<br/>
-Ein Zeiger auf einen Puffer, der die Breiten empfängt.
+Ein Zeiger auf einen Puffer, der die Breite empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2898,11 +2898,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion emuliert die Funktionen der [GetCharWidthI](/windows/desktop/api/wingdi/nf-wingdi-getcharwidthi), wie im Windows SDK beschrieben.
+Diese Member-Funktion emuliert die Funktionalität der [getcharwidthi](/windows/desktop/api/wingdi/nf-wingdi-getcharwidthi)-Funktion, wie im Windows SDK beschrieben.
 
-##  <a name="getclipbox"></a>  CDC::GetClipBox
+##  <a name="getclipbox"></a>CDC:: getclipbox
 
-Ruft die Abmessungen des tightest umschließenden Rechtecks um die aktuelle Grenze von Clipping ab.
+Ruft die Dimensionen des Begrenzungs Rechtecks um die aktuelle clippinggrenze ab.
 
 ```
 virtual int GetClipBox(LPRECT lpRect) const;
@@ -2911,27 +2911,27 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf die [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die Abmessungen des Rechtecks zu empfangen.
+Verweist auf die [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur oder das [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die Rechteck Abmessungen empfangen soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Ausschneidebereich-Typ. Eines der folgenden Werte sind möglich:
+Der Typ des Clippingbereichs. Dabei kann es sich um einen der folgenden Werte handeln:
 
-- Region COMPLEXREGION Clipping hat überlappende Grenzen.
+- Der complexregion-Ausschneide Bereich weist überlappende Rahmen auf.
 
-- Fehler-Gerätekontext ist ungültig.
+- Fehler beim Gerätekontext.
 
-- Clipping NULLREGION Region ist leer.
+- Der NULLREGION-Clippingbereich ist leer.
 
-- Clipping SIMPLEREGION Region verfügt über keine überlappenden Rahmen.
+- Der simpleregion-Clippingbereich hat keine überlappenden Rahmen.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Dimensionen werden in den Puffer, der auf kopiert *LpRect*.
+Die Dimensionen werden in den Puffer kopiert, auf den *lprect*zeigt.
 
-##  <a name="getcoloradjustment"></a>  CDC::GetColorAdjustment
+##  <a name="getcoloradjustment"></a>CDC:: getcoloradjustment
 
-Ruft die Farbwerte für die Anpassung für den Gerätekontext ab.
+Ruft die Farb Anpassungs Werte für den Gerätekontext ab.
 
 ```
 BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
@@ -2940,15 +2940,15 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="parameters"></a>Parameter
 
 *lpColorAdjust*<br/>
-Verweist auf eine [COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) Datenstruktur die Farbwerte für die Anpassung zu erhalten.
+Verweist auf eine [coloradjustment](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) -Datenstruktur, um die Farb Anpassungs Werte zu erhalten.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).
 
-##  <a name="getcurrentbitmap"></a>  CDC::GetCurrentBitmap
+##  <a name="getcurrentbitmap"></a>CDC:: getcurrentbitmap
 
-Gibt einen Zeiger auf das derzeit ausgewählte `CBitmap` Objekt.
+Gibt einen Zeiger auf das aktuell ausgewählte `CBitmap` Objekt zurück.
 
 ```
 CBitmap* GetCurrentBitmap() const;
@@ -2956,15 +2956,15 @@ CBitmap* GetCurrentBitmap() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Zeiger auf eine `CBitmap` Objekt, wenn erfolgreich; andernfalls NULL.
+Zeiger auf ein `CBitmap` -Objekt, wenn erfolgreich; andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion kann temporäre Objekte zurück.
+Diese Member-Funktion gibt möglicherweise temporäre Objekte zurück.
 
-##  <a name="getcurrentbrush"></a>  CDC::GetCurrentBrush
+##  <a name="getcurrentbrush"></a>CDC:: getcurrentbrush
 
-Gibt einen Zeiger auf das derzeit ausgewählte `CBrush` Objekt.
+Gibt einen Zeiger auf das aktuell ausgewählte `CBrush` Objekt zurück.
 
 ```
 CBrush* GetCurrentBrush() const;
@@ -2972,15 +2972,15 @@ CBrush* GetCurrentBrush() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Zeiger auf eine `CBrush` Objekt, wenn erfolgreich; andernfalls NULL.
+Zeiger auf ein `CBrush` -Objekt, wenn erfolgreich; andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion kann temporäre Objekte zurück.
+Diese Member-Funktion gibt möglicherweise temporäre Objekte zurück.
 
-##  <a name="getcurrentfont"></a>  CDC::GetCurrentFont
+##  <a name="getcurrentfont"></a>CDC:: getcurrentfont
 
-Gibt einen Zeiger auf das derzeit ausgewählte `CFont` Objekt.
+Gibt einen Zeiger auf das aktuell ausgewählte `CFont` Objekt zurück.
 
 ```
 CFont* GetCurrentFont() const;
@@ -2988,15 +2988,15 @@ CFont* GetCurrentFont() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Zeiger auf eine `CFont` Objekt, wenn erfolgreich; andernfalls NULL.
+Zeiger auf ein `CFont` -Objekt, wenn erfolgreich; andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion kann temporäre Objekte zurück.
+Diese Member-Funktion gibt möglicherweise temporäre Objekte zurück.
 
-##  <a name="getcurrentpalette"></a>  CDC::GetCurrentPalette
+##  <a name="getcurrentpalette"></a>CDC:: getcurrentpalette
 
-Gibt einen Zeiger auf das derzeit ausgewählte `CPalette` Objekt.
+Gibt einen Zeiger auf das aktuell ausgewählte `CPalette` Objekt zurück.
 
 ```
 CPalette* GetCurrentPalette() const;
@@ -3004,15 +3004,15 @@ CPalette* GetCurrentPalette() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Zeiger auf eine `CPalette` Objekt, wenn erfolgreich; andernfalls NULL.
+Zeiger auf ein `CPalette` -Objekt, wenn erfolgreich; andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion kann temporäre Objekte zurück.
+Diese Member-Funktion gibt möglicherweise temporäre Objekte zurück.
 
-##  <a name="getcurrentpen"></a>  CDC::GetCurrentPen
+##  <a name="getcurrentpen"></a>CDC:: getcurrentpen
 
-Gibt einen Zeiger auf das derzeit ausgewählte `CPen` Objekt.
+Gibt einen Zeiger auf das aktuell ausgewählte `CPen` Objekt zurück.
 
 ```
 CPen* GetCurrentPen() const;
@@ -3020,13 +3020,13 @@ CPen* GetCurrentPen() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Zeiger auf eine `CPen` Objekt, wenn erfolgreich; andernfalls NULL.
+Zeiger auf ein `CPen` -Objekt, wenn erfolgreich; andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion kann temporäre Objekte zurück.
+Diese Member-Funktion gibt möglicherweise temporäre Objekte zurück.
 
-##  <a name="getcurrentposition"></a>  CDC::GetCurrentPosition
+##  <a name="getcurrentposition"></a>CDC:: GetCurrentPosition
 
 Ruft die aktuelle Position (in logischen Koordinaten) ab.
 
@@ -3036,13 +3036,13 @@ CPoint GetCurrentPosition() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der aktuellen Position als einen `CPoint` Objekt.
+Die aktuelle Position als `CPoint` -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die aktuelle Position festgelegt werden kann, mit der `MoveTo` Member-Funktion.
+Die aktuelle Position kann mit der `MoveTo` Member-Funktion festgelegt werden.
 
-##  <a name="getdcbrushcolor"></a>  CDC::GetDCBrushColor
+##  <a name="getdcbrushcolor"></a>CDC:: getdcbrushcolor
 
 Ruft die aktuelle Pinselfarbe ab.
 
@@ -3052,15 +3052,15 @@ COLORREF GetDCBrushColor() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, wird der Rückgabewert ist der [COLORREF](/windows/desktop/gdi/colorref) Wert für die aktuelle Pinselfarbe.
+Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert der [COLORREF](/windows/desktop/gdi/colorref) -Wert für die aktuelle Pinsel Farbe.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert CLR_INVALID an.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert CLR_INVALID.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion emuliert die Funktionen der [GetDCBrushColor](/windows/desktop/api/wingdi/nf-wingdi-getdcbrushcolor), wie im Windows SDK beschrieben.
+Diese Member-Funktion emuliert die Funktionalität der [getdcbrushcolor](/windows/desktop/api/wingdi/nf-wingdi-getdcbrushcolor)-Funktion, wie im Windows SDK beschrieben.
 
-##  <a name="getdcpencolor"></a>  CDC::GetDCPenColor
+##  <a name="getdcpencolor"></a>CDC:: getdcpcolor
 
 Ruft die aktuelle Stiftfarbe ab.
 
@@ -3070,17 +3070,17 @@ COLORREF GetDCPenColor() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, wird der Rückgabewert ist der [COLORREF](/windows/desktop/gdi/colorref) Wert für die aktuelle Stiftfarbe.
+Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert der [COLORREF](/windows/desktop/gdi/colorref) -Wert für die aktuelle Stift Farbe.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert CLR_INVALID an.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert CLR_INVALID.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion verwendet die Win32-Funktion [GetDCPenColor](/windows/desktop/api/wingdi/nf-wingdi-getdcpencolor), wie im Windows SDK beschrieben.
+Diese Member-Funktion verwendet die Win32-Funktion [getdcpcolor](/windows/desktop/api/wingdi/nf-wingdi-getdcpencolor), wie im Windows SDK beschrieben.
 
-##  <a name="getdevicecaps"></a>  CDC::GetDeviceCaps
+##  <a name="getdevicecaps"></a>CDC:: getde vicecaps
 
-Ruft eine Vielzahl von gerätespezifischen Informationen über das Anzeigegerät ab.
+Ruft eine große Bandbreite an gerätespezifischen Informationen zum Anzeigegerät ab.
 
 ```
 int GetDeviceCaps(int nIndex) const;
@@ -3089,19 +3089,19 @@ int GetDeviceCaps(int nIndex) const;
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Gibt den Typ der zurückzugebenden Informationen. Finden Sie unter [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) im Windows SDK für eine Liste von Werten.
+Gibt den Typ der zurück zugebende Informationen an. Eine Liste der Werte finden Sie im Windows SDK unter [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps).
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Wert, der die erforderlichen Funktionen, wenn die Funktion erfolgreich ist.
+Der Wert der angeforderten Funktion, wenn die Funktion erfolgreich ausgeführt wurde.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CPrintDialog::GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults).
+  Weitere Informationen finden Sie im Beispiel für [CPrintDialog:: getdefaults](../../mfc/reference/cprintdialog-class.md#getdefaults).
 
-##  <a name="getfontdata"></a>  CDC::GetFontData
+##  <a name="getfontdata"></a>CDC:: getfontdata
 
-Ruft die Schriftarteigenschaft Informationen aus einer Datei skalierbare Schriftart ab.
+Ruft Schriftart metrikinformationen aus einer skalierbaren Schriftart Datei ab.
 
 ```
 DWORD GetFontData(
@@ -3114,34 +3114,34 @@ DWORD GetFontData(
 ### <a name="parameters"></a>Parameter
 
 *dwTable*<br/>
-Gibt den Namen der Metrik Tabelle zurückgegeben werden. Dieser Parameter kann eine der Metrik Tabellen finden Sie unter der TrueType-Schriftartdateien-Spezifikation, die von der Microsoft Corporation veröffentlicht sein. Wenn dieser Parameter 0 ist, wird die Informationen abgerufen am Anfang der Schriftartdatei ab.
+Gibt den Namen der metriktabelle an, die zurückgegeben werden soll. Dieser Parameter kann eine der metriktabellen sein, die in der von der Microsoft Corporation veröffentlichten TrueType-Schriftart Datei Spezifikation dokumentiert ist. Wenn dieser Parameter 0 ist, werden die Informationen ab dem Anfang der Schriftart Datei abgerufen.
 
 *dwOffset*<br/>
-Gibt den Offset vom Anfang der Tabelle auf dem Informationen abgerufen werden soll. Wenn dieser Parameter 0 ist, die Informationen abgerufen wobei am Anfang der Tabelle, angegeben durch die *DwTable* Parameter. Wenn dieser Wert größer als oder gleich der Größe der Tabelle `GetFontData` gibt 0 zurück.
+Gibt den Offset vom Anfang der Tabelle an, an dem mit dem Abrufen von Informationen begonnen werden soll. Wenn dieser Parameter 0 ist, werden die Informationen ab dem Anfang der Tabelle abgerufen, die durch den *dwtable* -Parameter angegeben wird. Wenn dieser Wert größer oder gleich der Größe der Tabelle ist, `GetFontData` wird 0 zurückgegeben.
 
 *lpData*<br/>
-Verweist auf einen Puffer, der die Schriftartinformationen erhält. Wenn dieser Wert NULL ist, gibt die Funktion zurück, die Größe des Puffers für die Schriftartdaten im angegebenen erforderlich die *DwTable* Parameter.
+Verweist auf einen Puffer, der die Schriftart Informationen empfängt. Wenn dieser Wert NULL ist, gibt die Funktion die Größe des Puffers zurück, der für die im *dwtable* -Parameter angegebenen Schriftart Daten erforderlich ist.
 
 *cbData*<br/>
-Gibt die Länge in Bytes, die Informationen abgerufen werden sollen. Wenn dieser Parameter 0 (null) ist `GetFontData` gibt die Größe der die Daten in die *DwTable* Parameter.
+Gibt die Länge der abzurufenden Informationen in Bytes an. Wenn dieser Parameter 0 ist, `GetFontData` wird die Größe der Daten zurückgegeben, die im *dwtable* -Parameter angegeben sind.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl der Bytes in den Puffer, der auf zurückgegeben *LpData* ist die Funktion erfolgreich ist; andernfalls -1.
+Gibt die Anzahl der Bytes an, die in dem Puffer zurückgegeben werden, auf den *lpdata* verweist, wenn die Funktion erfolgreich ist. andernfalls-1.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Informationen abgerufen werden durch Angeben eines Offsets in die Schriftartdatei und die Länge der zurückzugebenden Informationen identifiziert.
+Die abzurufenden Informationen werden durch Angabe eines Offsets in der Schriftart Datei und der Länge der zurück zugebende Informationen identifiziert.
 
-Eine Anwendung kann in einigen Fällen verwenden die `GetFontData` Memberfunktion, um eine TrueType-Schriftart mit einem Dokument zu speichern. Zu diesem Zweck wird die Anwendung bestimmt, ob die Schriftart eingebettet werden kann, und dann die gesamte Schriftartdatei Ruft, durch den Wert 0 für die *DwTable*, *DwOffset*, und *CbData* Parameter.
+Eine Anwendung kann manchmal die `GetFontData` Member-Funktion verwenden, um eine TrueType-Schriftart mit einem Dokument zu speichern. Zu diesem Zweck bestimmt die Anwendung, ob die Schriftart eingebettet werden kann, und ruft dann die gesamte Schriftart Datei ab, wobei 0 für die Parameter *dwtable*, *dwOffset*und *cbData* angegeben wird.
 
-Anwendungen können bestimmen, ob eine Schriftart kann, indem Sie überprüfen eingebettet werden die `otmfsType` Mitglied der [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-_outlinetextmetrica) Struktur. Wenn bit 1 des `otmfsType` festgelegt ist, Einbetten von ist für die Schriftart nicht zulässig. Wenn ein Bit 1 ist, kann die Schriftart eingebettet werden. Wenn das Bit 2 festgelegt ist, ist das Einbetten schreibgeschützt.
+Anwendungen können bestimmen, ob eine Schriftart eingebettet werden kann, indem `otmfsType` Sie den Member der [outlinetextmetric](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica) -Struktur überprüfen. Wenn Bit 1 von `otmfsType` festgelegt ist, ist die Einbettung für die Schriftart nicht zulässig. Wenn Bit 1 eindeutig ist, kann die Schriftart eingebettet werden. Wenn Bit 2 festgelegt ist, ist die Einbettung schreibgeschützt.
 
-Wenn eine Anwendung versucht, diese Funktion zu verwenden, zum Abrufen von Informationen für eine nicht-TrueType-Schriftart der `GetFontData` Member-Funktion gibt-1 zurück.
+Wenn eine Anwendung versucht, diese Funktion zum Abrufen von Informationen für eine nicht-TrueType-Schriftart zu `GetFontData` verwenden, gibt die Member-Funktion-1 zurück.
 
-##  <a name="getfontlanguageinfo"></a>  CDC::GetFontLanguageInfo
+##  <a name="getfontlanguageinfo"></a>CDC:: getfontlanguageingefo
 
-Gibt Informationen über die aktuell ausgewählten Schriftart für den angegebenen Anzeigekontext zurück.
+Gibt Informationen zur aktuell ausgewählten Schriftart für den angegebenen Anzeige Kontext zurück.
 
 ```
 DWORD GetFontLanguageInfo() const;
@@ -3149,15 +3149,15 @@ DWORD GetFontLanguageInfo() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert gibt die Merkmale der derzeit ausgewählten Schriftart. Eine vollständige Liste der möglichen Werte, finden Sie unter [GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo).
+Der Rückgabewert identifiziert Merkmale der aktuell ausgewählten Schriftart. Eine vollständige Liste möglicher Werte finden Sie unter [getfontlanguageingefo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo).
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion emuliert die Funktionen der [GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo), wie im Windows SDK beschrieben.
+Diese Member-Funktion emuliert die Funktionalität der [getfontlanguageingefo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo)-Funktion, wie im Windows SDK beschrieben.
 
-##  <a name="getglyphoutline"></a>  CDC::GetGlyphOutline
+##  <a name="getglyphoutline"></a>CDC:: GetGlyphOutline
 
-Ruft die Gliederung Kurve oder eine Bitmap für eine Gliederung Zeichen in der aktuellen Schriftart ab.
+Ruft die Gliederungs Kurve oder Bitmap für ein Umriss Zeichen in der aktuellen Schriftart ab.
 
 ```
 DWORD GetGlyphOutline(
@@ -3172,41 +3172,41 @@ DWORD GetGlyphOutline(
 ### <a name="parameters"></a>Parameter
 
 *nChar*<br/>
-Gibt das Zeichen, die für das Informationen zurückgegeben werden.
+Gibt das Zeichen an, für das Informationen zurückgegeben werden sollen.
 
 *nFormat*<br/>
-Gibt das Format, in dem die Funktion, die zum Zurückgeben von Informationen ist. Die folgenden Werte, oder 0 sind möglich:
+Gibt das Format an, in dem die Funktion Informationen zurückgeben soll. Die folgenden Werte sind möglich:
 
 |Wert|Bedeutung|
 |-----------|-------------|
-|GGO_BITMAP|Gibt die Symbolbitmap zurück. Wenn die Funktion zurückgibt, werden die Puffer, der auf *LpBuffer* enthält eine 1-Bit-pro-Pixel-Bitmap, deren Zeilen auf zeigt Doppelwort Grenzen zu starten.|
-|GGO_NATIVE|Gibt die Kurve Datenpunkte in der rasterizers des systemeigenen Format mit Geräteeinheiten zurück. Wenn dieser Wert angegeben wird, wird eine Transformation in angegebenen *lpmat2* wird ignoriert.|
+|GGO_BITMAP|Gibt das Glyphe-Bitmap zurück. Wenn die Funktion zurückgegeben wird, enthält der Puffer, auf den von *lpBuffer* verwiesen wird, eine Bitmap mit 1 Bit pro Pixel, deren Zeilen an doppelten Wortgrenzen beginnen.|
+|GGO_NATIVE|Gibt die Kurven Datenpunkte im nativen Format des Rasterizers mithilfe von Geräte Einheiten zurück. Wenn dieser Wert angegeben wird, wird jede in *lpmat2* angegebene Transformation ignoriert.|
 
-Wenn der Wert des *nFormat* gleich 0 ist, füllt die Funktion eine [GLYPHMETRICS](/windows/desktop/api/wingdi/ns-wingdi-_glyphmetrics) Struktur, jedoch keine Glyphe-Gliedern von Daten zurückgibt.
+Wenn der Wert von *nformat* 0 ist, füllt die Funktion eine [GlyphMetrics](/windows/desktop/api/wingdi/ns-wingdi-glyphmetrics) -Struktur aus, gibt jedoch keine Glyphe-Gliederungs Daten zurück.
 
 *lpgm*<br/>
-Verweist auf eine GLYPHMETRICS-Struktur, die Platzierung des Symbols im Zeichenzelle beschreibt.
+Verweist auf eine GlyphMetrics-Struktur, die die Platzierung des Symbols in der Zeichen Zelle beschreibt.
 
 *cbBuffer*<br/>
-Gibt die Größe des Puffers in die die Funktion Informationen über die Gliederung Zeichen kopiert. Wenn dieser Wert 0 ist und die *nFormat* -Parameter ist entweder der GGO_BITMAP oder GGO_NATIVE-Werte, die Funktion gibt die erforderliche Größe des Puffers zurück.
+Gibt die Größe des Puffers an, in den die Funktion Informationen über das Umriss Zeichen kopiert. Wenn dieser Wert 0 ist und der *nformat* -Parameter entweder die Werte GGO_BITMAP oder GGO_NATIVE ist, gibt die Funktion die erforderliche Größe des Puffers zurück.
 
 *lpBuffer*<br/>
-Verweist auf einen Puffer, in dem die Funktion Informationen über die Gliederung Zeichen kopiert, werden soll. Wenn *nFormat* gibt den Wert GGO_NATIVE kopiert die Informationen in Form von TTPOLYGONHEADER und TTPOLYCURVE Strukturen. Wenn dieser Wert NULL ist und *nFormat* der GGO_BITMAP oder GGO_NATIVE Wert ist, die Funktion gibt die erforderliche Größe des Puffers zurück.
+Verweist auf einen Puffer, in den die-Funktion Informationen über das Umriss Zeichen kopiert. Wenn *nformat* den GGO_NATIVE-Wert angibt, werden die Informationen in Form von ttpolygonheader-und ttpolycurve-Strukturen kopiert. Wenn dieser Wert NULL ist und *nformat* entweder der GGO_BITMAP-oder GGO_NATIVE-Wert ist, gibt die Funktion die erforderliche Größe des Puffers zurück.
 
 *lpmat2*<br/>
-Verweist auf eine [MAT2](/windows/desktop/api/wingdi/ns-wingdi-_mat2) Struktur, die eine Transformationsmatrix für das Zeichen enthält. Dieser Parameter darf nicht NULL sein, selbst wenn der GGO_NATIVE für angegebene Wert ist *nFormat*.
+Verweist auf eine [MAT2](/windows/desktop/api/wingdi/ns-wingdi-mat2) -Struktur, die eine Transformationsmatrix für das Zeichen enthält. Dieser Parameter darf nicht NULL sein, auch wenn der GGO_NATIVE-Wert für *nformat*angegeben wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Größe in Byte des Puffers für die abgerufenen Informationen erforderlich, wenn *CbBuffer* ist 0 oder *LpBuffer* ist NULL. Andernfalls wird ein positiver Wert ist die Funktion erfolgreich ist, oder -1, wenn ein Fehler auftritt.
+Die Größe (in Bytes) des Puffers, der für die abgerufenen Informationen erforderlich ist, wenn *cbbuffer* 0 ist oder *lpBuffer* NULL ist. Andernfalls ist es ein positiver Wert, wenn die Funktion erfolgreich ist, oder-1, wenn ein Fehler vorliegt.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann im Bitmapformat durch Angabe einer Transformationsmatrix 2 x 2-in der Struktur verweist abgerufene Zeichen drehen *lpmat2*.
+Eine Anwendung kann im Bitmapformat abgerufene Zeichen drehen, indem Sie in der Struktur, auf die von *lpmat2*verwiesen wird, eine 2-by-2-Transformationsmatrix angibt.
 
-Ein über das Symbol wird als eine Reihe von Konturen zurückgegeben. Jede Kontur wird definiert, indem eine [TTPOLYGONHEADER](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader) Struktur so viele gefolgt `TTPOLYCURVE` Strukturen wie erforderlich sind, um es zu beschreiben. Alle Punkte werden zurückgegeben, als [POINTFX](/windows/desktop/api/wingdi/ns-wingdi-tagpointfx) -Strukturen und absolute Positionen, keinen relativen verschiebt darstellen. Der Ausgangspunkt angegeben durch die `pfxStart` Mitglied der [TTPOLYGONHEADER](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader) Struktur ist der Punkt, an dem die Gliederung für eine Kontur beginnt. Die [TTPOLYCURVE](/windows/desktop/api/wingdi/ns-wingdi-tagttpolycurve) Strukturen, die folgen können Polylinie Datensätze oder Spline-Datensätze sein. Polyline-Datensätze sind eine Reihe von Punkten. zwischen den Punkten gezeichnete Linien beschreiben die Gliederung des Zeichens. Spline-Datensätze dar, die quadratischen Kurven von TrueType (d. h. quadratischen b-Splines) verwendet wird.
+Eine Symbol Gliederung wird als eine Reihe von Kontur zurückgegeben. Jede Kontur wird durch eine [ttpolygonheader](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader) -Struktur gefolgt von so vielen `TTPOLYCURVE` Strukturen definiert, wie Sie Sie beschreiben müssen. Alle Punkte werden als [pointfx](/windows/desktop/api/wingdi/ns-wingdi-tagpointfx) -Strukturen zurückgegeben und stellen absolute Positionen dar, nicht Relative Verschiebungen. Der Startpunkt, der vom `pfxStart` -Member der [ttpolygonheader](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader) -Struktur angegeben wird, ist der Punkt, an dem der Umriss für eine Kontur beginnt. Die folgenden [ttpolycurve](/windows/desktop/api/wingdi/ns-wingdi-tagttpolycurve) -Strukturen können entweder Polylinie-Datensätze oder Spline-Datensätze sein. Polyliniendatensätze sind eine Reihe von Punkten. die Linien, die zwischen den Punkten gezeichnet werden, beschreiben den Umriss des Zeichens. Spline-Datensätze stellen die von TrueType verwendeten quadratischen Kurven dar (d. h. Quadratische b-Splines).
 
-##  <a name="getgraphicsmode"></a>  CDC::GetGraphicsMode
+##  <a name="getgraphicsmode"></a>CDC:: getgraphicsmode
 
 Ruft den aktuellen Grafikmodus für den angegebenen Gerätekontext ab.
 
@@ -3216,19 +3216,19 @@ int GetGraphicsMode() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt den aktuellen Grafikmodus bei Erfolg zurück. Eine Liste der Werte, die diese Methode zurückgeben können, finden Sie unter [GetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode).
+Gibt den aktuellen Grafikmodus bei Erfolg zurück. Eine Liste der Werte, die von dieser Methode zurückgegeben werden können, finden Sie unter [getgraphicsmode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode).
 
-Gibt 0 bei einem Fehler zurück.
+Gibt bei einem Fehler 0 zurück.
 
-Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Um erweiterte Fehlerinformationen abzurufen, nennen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode dient als Wrapper für die Windows-GDI-Funktion [GetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode).
+Diese Methode umschließt die Windows-GDI-Funktion [getgraphicsmode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode).
 
-##  <a name="gethalftonebrush"></a>  CDC::GetHalftoneBrush
+##  <a name="gethalftonebrush"></a>CDC:: gethalftonebrush
 
-Rufen Sie diese Memberfunktion zum Abrufen eines Pinsels Halbton.
+Rufen Sie diese Member-Funktion auf, um einen halbftone-Pinsel abzurufen.
 
 ```
 static CBrush* PASCAL GetHalftoneBrush();
@@ -3236,17 +3236,17 @@ static CBrush* PASCAL GetHalftoneBrush();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine `CBrush` -Objekt, wenn erfolgreich; andernfalls NULL.
+Ein Zeiger auf ein `CBrush` -Objekt, wenn erfolgreich; andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Rasterbild Pinsel zeigt Pixel, die Vordergrund- und Hintergrundfarben, erstellen Sie ein Muster mit Dithering Alternativ sind. Folgendes ist ein Beispiel für eine Dithering Muster, das von einem Pinsel Halbton.
+Ein halbftone-Pinsel zeigt Pixel an, die abwechselnd Vordergrund-und Hintergrundfarben sind, um ein Dithering-Muster zu erstellen. Im folgenden finden Sie ein Beispiel für ein Dithering-Muster, das von einem Halbton-Pinsel erstellt wurde.
 
-![Detail eines geditherten Stiftstrichs](../../mfc/reference/media/vc318s1.gif "Detail eines geditherten Stiftstrichs")
+![Details eines Dithering-Stift Strichs](../../mfc/reference/media/vc318s1.gif "Details eines Dithering-Stift Strichs")
 
-##  <a name="getkerningpairs"></a>  CDC::GetKerningPairs
+##  <a name="getkerningpairs"></a>CDC:: getkerningpairs
 
-Ruft das Zeichen, kerning-Paare für die Schriftart, die in den angegebenen Gerätekontext markiert ist.
+Ruft die Zeichen für die Zeichenauswahl für die Schriftart ab, die derzeit im angegebenen Gerätekontext ausgewählt ist.
 
 ```
 int GetKerningPairs(
@@ -3256,19 +3256,19 @@ int GetKerningPairs(
 
 ### <a name="parameters"></a>Parameter
 
-*nPairs*<br/>
-Gibt die Anzahl der [KERNINGPAIR](/windows/desktop/api/wingdi/ns-wingdi-tagkerningpair) Strukturen verweist *Lpkrnpair*. Die Funktion kopiert nicht mehr kerning Paare als *nPairs*.
+*npaare*<br/>
+Gibt die Anzahl der [kerningpair](/windows/desktop/api/wingdi/ns-wingdi-tagkerningpair) -Strukturen an, auf die von *lpkrnpair*verwiesen wird. Die Funktion kopiert nicht mehr als durch *npaare*angegebene, nicht mehr.
 
 *lpkrnpair*<br/>
-Verweist auf ein Array von `KERNINGPAIR` Strukturen, die das kerning empfangen-Paaren bei Rückgabe der Funktion. Dieses Array muss mindestens so viele Strukturen laut enthalten *nPairs*. Wenn dieser Parameter NULL ist, gibt die Funktion die Gesamtzahl der kerning-Paare für die Schriftart an.
+Verweist auf ein Array von `KERNINGPAIR` -Strukturen, die bei Rückgabe der Funktion die kernungs Paare empfangen. Dieses Array muss mindestens so viele Strukturen enthalten, wie von *npairs*angegeben. Wenn dieser Parameter NULL ist, gibt die-Funktion die Gesamtzahl der abkerenden Paare für die Schriftart zurück.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl der abgerufenen Paare kerning oder die Gesamtanzahl der kerning-Paare in die Schriftart an, wenn die Funktion erfolgreich ist. 0 (null) wird zurückgegeben, wenn die Funktion fehlerhaft ist oder es keine Tabellenpaare kerning, für die Schriftart sind.
+Gibt die Anzahl der abgerufenen abgerufenen Paare bzw. die Gesamtanzahl der abgerufenen Paare in der Schriftart an, wenn die Funktion erfolgreich ausgeführt wurde. NULL wird zurückgegeben, wenn bei der Funktion ein Fehler auftritt oder keine kernungs Paare für die Schriftart vorhanden sind.
 
-##  <a name="getlayout"></a>  CDC::GetLayout
+##  <a name="getlayout"></a>CDC:: getLayout
 
-Rufen Sie diese Memberfunktion, um das Layout von Text und Grafiken für einen Gerätekontext, z. B. ein Drucker oder einer Metadatei zu bestimmen.
+Mit dieser Member-Funktion können Sie das Layout von Text und Grafiken für einen Gerätekontext ermitteln, z. b. einen Drucker oder eine Metadatei.
 
 ```
 DWORD GetLayout() const;
@@ -3276,15 +3276,15 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, kennzeichnet das Layout, für den aktuellen Gerätekontext. Andernfalls GDI_ERROR. Rufen Sie für erweiterte Fehlerinformationen [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Eine Liste der Flags, Layout, finden Sie unter [CDC::SetLayout](#setlayout).
+Wenn erfolgreich, die LayoutFlags für den aktuellen Gerätekontext. Andernfalls GDI_ERROR. Für erweiterte Fehlerinformationen aufrufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Eine Liste der LayoutFlags finden Sie unter [CDC:: setLayout](#setlayout).
 
 ### <a name="remarks"></a>Hinweise
 
 Das Standardlayout ist von links nach rechts.
 
-##  <a name="getmapmode"></a>  CDC::GetMapMode
+##  <a name="getmapmode"></a>CDC:: getmapmode
 
-Ruft den aktuellen Zuordnungsmodus ab.
+Ruft den aktuellen Mapping-Modus ab.
 
 ```
 int GetMapMode() const;
@@ -3292,18 +3292,18 @@ int GetMapMode() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Mappingmodus.
+Der Mapping-Modus.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Beschreibung der die Zuordnungsmodi, finden Sie unter den `SetMapMode` Member-Funktion.
+Eine Beschreibung der Karten Modi finden Sie unter der `SetMapMode` -Member-Funktion.
 
 > [!NOTE]
->  Wenn Sie aufrufen [SetLayout](#setlayout) so ändern Sie den DC in rechts-nach-links-Layout, `SetLayout` automatisch den Zuordnungsmodus in MM_ISOTROPIC geändert. Folglich jeder nachfolgende Aufruf von `GetMapMode` MM_ISOTROPIC zurück.
+>  Wenn Sie [setLayout](#setlayout) aufrufen, um den DC in das Layout von rechts nach Links zu `SetLayout` ändern, wird der Zuordnungsmodus von automatisch in MM_ISOTROPIC geändert. Folglich wird durch nachfolgende Aufrufe `GetMapMode` von MM_ISOTROPIC zurückgegeben.
 
-##  <a name="getmiterlimit"></a>  CDC::GetMiterLimit
+##  <a name="getmiterlimit"></a>CDC:: getMiterLimit
 
-Gibt die Gehrungsgrenze für den Gerätekontext zurück.
+Gibt das miterLimit für den Gerätekontext zurück.
 
 ```
 float GetMiterLimit() const;
@@ -3315,11 +3315,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Zeichnen von geometrische Linien, die Joins Linienverbindungsstile wird die Gehrungsgrenze verwendet.
+Das Trennzeichen wird verwendet, wenn geometrische Linien gezeichnet werden, die über Gehrungs Joins verfügen.
 
-##  <a name="getnearestcolor"></a>  CDC::GetNearestColor
+##  <a name="getnearestcolor"></a>CDC:: GetNearestColor
 
-Gibt zurück, die der Volltonfarbe entspricht, die eine angegebene logische Farbe am ehesten entspricht.
+Gibt die voll Tonfarbe zurück, die mit einer angegebenen logischen Farbe am besten übereinstimmt.
 
 ```
 COLORREF GetNearestColor(COLORREF crColor) const;
@@ -3328,19 +3328,19 @@ COLORREF GetNearestColor(COLORREF crColor) const;
 ### <a name="parameters"></a>Parameter
 
 *crColor*<br/>
-Gibt die Farbe, die abgeglichen werden.
+Gibt die Farbe an, die abgeglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Farbe, die ein Farbwert für RGB (Rot, Grün, Blau), die dem stabilen definiert, die am nächsten der *CrColor* -Wert, der das Gerät darstellen kann.
+Ein RGB-Farbwert (rot, grün, blau), der die voll Tonfarbe definiert, die dem *crcolor* -Wert am nächsten liegt, den das Gerät darstellen kann.
 
 ### <a name="remarks"></a>Hinweise
 
 Das angegebene Gerät muss diese Farbe darstellen können.
 
-##  <a name="getoutlinetextmetrics"></a>  CDC::GetOutlineTextMetrics
+##  <a name="getoutlinetextmetrics"></a>CDC:: getoutlinetextmetrics
 
-Ruft ab die metrikinformationen für TrueType-Schriftarten.
+Ruft metrikinformationen für TrueType-Schriftarten ab.
 
 ```
 UINT GetOutlineTextMetrics(
@@ -3351,13 +3351,13 @@ UINT GetOutlineTextMetrics(
 ### <a name="parameters"></a>Parameter
 
 *lpotm*<br/>
-Verweist auf ein Array von [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-_outlinetextmetrica) Strukturen. Wenn dieser Parameter NULL ist, gibt die Funktion der Größe des Puffers für die abgerufenen metrischen Daten erforderlich sind.
+Verweist auf ein Array von [outlinetextmetric](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica) -Strukturen. Wenn dieser Parameter NULL ist, gibt die Funktion die Größe des Puffers zurück, der für die abgerufenen Metrikdaten erforderlich ist.
 
 *cbData*<br/>
-Gibt die Größe in Byte des Puffers, der Informationen zurückgegeben werden.
+Gibt die Größe (in Bytes) des Puffers an, in den Informationen zurückgegeben werden.
 
 *lpotm*<br/>
-Verweist auf eine `OUTLINETEXTMETRIC` Struktur. Wenn dieser Parameter NULL ist, gibt die Funktion der Größe des Puffers für die abgerufenen Metriken Informationen erforderlich sind.
+Verweist auf eine `OUTLINETEXTMETRIC` -Struktur. Wenn dieser Parameter NULL ist, gibt die Funktion die Größe des Puffers zurück, der für die abgerufenen metrikinformationen erforderlich ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -3365,11 +3365,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-_outlinetextmetrica) Struktur enthält die meisten bereitgestellt, mit dem Format TrueType-Schriftart Metrik Informationen einschließlich einer [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) Struktur. Die letzten vier Member, der die `OUTLINETEXTMETRIC` Struktur sind Zeiger auf Zeichenfolgen. Anwendungen sollten diese Zeichenfolgen zusätzlich zu den erforderlichen Speicherplatz für die anderen Mitglieder Speicherplatz zuweisen. Da unbegrenzt System auferlegt, auf die Größe der Zeichenfolgen ist, ist die einfachste Methode zum Zuweisen von Arbeitsspeicher auf die erforderliche Größe zu abzurufen, indem Sie NULL für *Lpotm* in der erste Aufruf der `GetOutlineTextMetrics` Funktion.
+Die [outlinetextmetric](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica) -Struktur enthält die meisten Schriftart metrikinformationen, die im TrueType-Format bereitgestellt werden, einschließlich einer [TextMetric](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) -Struktur. Die letzten vier Member der `OUTLINETEXTMETRIC` -Struktur sind Zeiger auf Zeichen folgen. Anwendungen sollten zusätzlich zu dem für die anderen Elemente erforderlichen Speicherplatz für diese Zeichen folgen Speicherplatz zuweisen. Da die Größe der Zeichen folgen nicht vom System festgelegt wird, ist die einfachste Methode zum belegen von Arbeitsspeicher das Abrufen der erforderlichen Größe durch Angeben von NULL für *lpotm* beim ersten Aufrufen der `GetOutlineTextMetrics` Funktion.
 
-##  <a name="getoutputcharwidth"></a>  CDC::GetOutputCharWidth
+##  <a name="getoutputcharwidth"></a>CDC:: getoutputcharwidth
 
-Der Gerätekontext, die Ausgabe verwendet `m_hDC`, und ruft die Breite der einzelnen Zeichen in eine aufeinander folgende Gruppe von Zeichen aus der aktuellen Schriftart ab.
+Verwendet den Ausgabegeräte Kontext, `m_hDC`, und ruft die Breite einzelner Zeichen in einer aufeinander folgenden Gruppe von Zeichen aus der aktuellen Schriftart ab.
 
 ```
 BOOL GetOutputCharWidth(
@@ -3381,13 +3381,13 @@ BOOL GetOutputCharWidth(
 ### <a name="parameters"></a>Parameter
 
 *nFirstChar*<br/>
-Gibt das erste Zeichen in eine aufeinander folgende Gruppe von Zeichen in der aktuellen Schriftart an.
+Gibt das erste Zeichen in einer aufeinanderfolgenden Gruppe von Zeichen in der aktuellen Schriftart an.
 
 *nLastChar*<br/>
-Gibt das letzte Zeichen in eine aufeinander folgende Gruppe von Zeichen in der aktuellen Schriftart an.
+Gibt das letzte Zeichen in einer aufeinander folgenden Gruppe von Zeichen in der aktuellen Schriftart an.
 
 *lpBuffer*<br/>
-Verweist auf einen Puffer, der die Werte für die Breite für eine aufeinander folgende Gruppe von Zeichen in der aktuellen Schriftart erhält.
+Verweist auf einen Puffer, der die Breitenwerte für eine aufeinander folgende Gruppe von Zeichen in der aktuellen Schriftart empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -3395,15 +3395,15 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Z. B. wenn *nFirstChar* identifiziert den Buchstaben "a" und *nLastChar* identifiziert dem Buchstaben "Z", die die Funktion ruft die Breite der alle Kleinbuchstaben.
+Wenn z. b. *nfirstchar* den Buchstaben "a" und *nlastchar* den Buchstaben "z" identifiziert, ruft die Funktion die Breite aller Kleinbuchstaben ab.
 
-Die Funktion speichert die Werte in den Puffer, der auf *LpBuffer*. Dieser Puffer muss groß genug für alle der breiten werden; d. h. muss vorhanden sein mindestens 26 Einträge im Beispiel angegeben.
+Die-Funktion speichert die Werte im Puffer, auf die von *lpBuffer*verwiesen wird. Dieser Puffer muss groß genug sein, um alle breiten zu halten. Das heißt, es müssen mindestens 26 Einträge im angegebenen Beispiel vorhanden sein.
 
-Wenn ein Zeichen in dem aufeinander folgende Gruppe von Zeichen in einer bestimmten Schriftart nicht vorhanden ist, wird es den Width-Wert, der das Standardzeichen zugewiesen.
+Wenn in einer bestimmten Schriftart kein Zeichen in der aufeinander folgenden Zeichen Gruppe vorhanden ist, wird Ihr der Wert Width (Breite) des Standard Zeichens zugewiesen.
 
-##  <a name="getoutputtabbedtextextent"></a>  CDC::GetOutputTabbedTextExtent
+##  <a name="getoutputtabbedtextextent"></a>CDC:: getoutputtabbedtextextent
 
-Rufen Sie diese Memberfunktion zum Berechnen die Breite und Höhe einer Zeichenfolge mit Zeichen [M_hDC](#m_hdc), den Ausgabe-Gerätekontext.
+Mit dieser Member-Funktion können Sie die Breite und Höhe einer Zeichenfolge mithilfe von [m_hDC](#m_hdc), dem Ausgabegeräte Kontext, berechnen.
 
 ```
 CSize GetOutputTabbedTextExtent(
@@ -3421,37 +3421,37 @@ CSize GetOutputTabbedTextExtent(
 ### <a name="parameters"></a>Parameter
 
 *lpszString*<br/>
-Verweist auf eine Zeichenfolge, die gemessen werden. Sie können auch übergeben eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt für diesen Parameter.
+Verweist auf eine zu messende Zeichenfolge. Sie können auch ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt für diesen Parameter übergeben.
 
 *nCount*<br/>
-Gibt an, die [Länge der Zeichenfolge](/windows/desktop/gdi/specifying-length-of-text-output-string) verweist *LpszString*.
+Gibt die [Länge der Zeichenfolge](/windows/desktop/gdi/specifying-length-of-text-output-string) an, auf die von *lpszstring*verwiesen wird.
 
 *nTabPositions*<br/>
-Gibt die Anzahl der Tabstopp Positionen im Array verweist *LpnTabStopPositions*.
+Gibt die Anzahl der Tabstopp Positionen im Array an, auf die von *lpntabstoppositions*verwiesen wird.
 
 *lpnTabStopPositions*<br/>
-Zeigt auf ein Array von Ganzzahlen, die Tabstopp Positionen in logischen Einheiten. Die Tabstopps müssen in aufsteigender Reihenfolge sortiert werden; der kleinste X-Wert sollte das erste Element im Array. Back-Registerkarten sind nicht zulässig.
+Verweist auf ein Array von ganzen Zahlen, das die Position der Tabstopps in logischen Einheiten enthält. Die Tabstopps müssen in steigender Reihenfolge sortiert werden. der kleinste x-Wert sollte das erste Element im Array sein. Zurück-Registerkarten sind nicht zulässig.
 
 *str*<br/>
-Ein `CString` Objekt mit der angegebenen Zeichen gemessen wird.
+Ein `CString` -Objekt, das die angegebenen zu messenden Zeichen enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Abmessungen der Zeichenfolge (in logischen Einheiten) in einem [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
+Die Dimensionen der Zeichenfolge (in logischen Einheiten) in einem [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die Zeichenfolge eine oder mehrere Tabulatorzeichen enthält, die Breite der Zeichenfolge basiert die Tabstopps gemäß *LpnTabStopPositions*. Die Funktion verwendet die ausgewählte Schriftart, um die Abmessungen der Zeichenfolge zu berechnen.
+Wenn die Zeichenfolge ein oder mehrere Tabstopps enthält, basiert die Breite der Zeichenfolge auf den durch *lpntabstoppositions*angegebenen Tabstopps. Die-Funktion verwendet die aktuell ausgewählte Schriftart, um die Dimensionen der Zeichenfolge zu berechnen.
 
-Die Breite und Höhe, die vom des aktuellen Ausschneidebereichs kein versetzen der `GetOutputTabbedTextExtent` Funktion.
+Der aktuelle Clippingbereich versetzt nicht die von der `GetOutputTabbedTextExtent` Funktion zurückgegebene Breite und Höhe.
 
-Da einige Geräte kein Zeichen in der regulären Zelle Arrays setzen (d.h., sie Unterschneiden von Zeichen), die Summe der Blöcke der Zeichen in einer Zeichenfolge in den Umfang der Zeichenfolge entspricht möglicherweise nicht.
+Da einige Geräte keine Zeichen in regulären Zell Arrays platzieren (d. h., Sie setzen die Zeichen ein), ist die Summe der Werte Blöcke in einer Zeichenfolge möglicherweise nicht gleich dem Wertebereich der Zeichenfolge.
 
-Wenn *nTabPositions* ist 0 und *LpnTabStopPositions* NULL ist, Registerkarten auf acht Zeichen der durchschnittlichen breiten erweitert werden. Wenn *nTabPositions* 1 ist, werden die Tabstopps getrennt werden, mit dem durch den ersten Wert im Array, an dem angegebenen Abstand *LpnTabStopPositions* Punkte. Wenn *LpnTabStopPositions* auf mehr als einen einzelnen Wert verweist, ein Tabstopp festgelegt ist für jeden Wert im Array bis zu der Zahl von *nTabPositions*.
+Wenn *ntabpositions* den Wert 0 hat und *lpntabstoppositions* den Wert NULL hat, werden die Registerkarten auf 8 durchschnittliche Zeichenbreite erweitert. Wenn *ntabpositions* den Wert 1 hat, wird die Tabstopps durch die Entfernung getrennt, die durch den ersten Wert im Array festgelegt wird, auf den *lpntabstoppositions* verweist. Wenn *lpntabstoppositions* auf mehr als einen einzelnen Wert zeigt, wird für jeden Wert im Array ein Tabstopp festgelegt, bis zu der von *ntabpositions*angegebenen Zahl.
 
-##  <a name="getoutputtextextent"></a>  CDC::GetOutputTextExtent
+##  <a name="getoutputtextextent"></a>CDC:: getoutputtextextent
 
-Rufen Sie diese Memberfunktion zum Verwenden der Ausgabe-Gerätekontext, [M_hDC](#m_hdc), und berechnen Sie die Breite und Höhe einer Zeile des Texts an, mit der aktuellen Schriftart.
+Mit dieser Member-Funktion können Sie den Ausgabegeräte Kontext, [m_hDC](#m_hdc), verwenden und die Breite und Höhe einer Textzeile mithilfe der aktuellen Schriftart berechnen.
 
 ```
 CSize GetOutputTextExtent(
@@ -3464,27 +3464,27 @@ CSize GetOutputTextExtent(const CString& str) const;
 ### <a name="parameters"></a>Parameter
 
 *lpszString*<br/>
-Zeigt auf eine Zeichenfolge von Zeichen. Sie können auch übergeben eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt für diesen Parameter.
+Verweist auf eine Zeichenfolge. Sie können auch ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt für diesen Parameter übergeben.
 
 *nCount*<br/>
-Gibt an, die [Länge der Zeichenfolge](/windows/desktop/gdi/specifying-length-of-text-output-string) verweist *LpszString*.
+Gibt die [Länge der Zeichenfolge](/windows/desktop/gdi/specifying-length-of-text-output-string) an, auf die von *lpszstring*verwiesen wird.
 
 *str*<br/>
-Ein `CString` Objekt mit der angegebenen Zeichen gemessen wird.
+Ein `CString` -Objekt, das die angegebenen zu messenden Zeichen enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Abmessungen der Zeichenfolge (in logischen Einheiten) zurückgegeben, die einem [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
+Die Dimensionen der Zeichenfolge (in logischen Einheiten), die in einem [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt zurückgegeben werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Der aktuelle Ausschneidebereich hat keine Auswirkungen auf die Breite und Höhe, die vom `GetOutputTextExtent`.
+Der aktuelle Clippingbereich wirkt sich nicht auf die von zurückgegebene `GetOutputTextExtent`Breite und Höhe aus.
 
-Da einige Geräte kein Zeichen in der regulären Zelle Arrays setzen (d.h., sie durchzuführen, kerning), die Summe der Blöcke der Zeichen in einer Zeichenfolge in den Umfang der Zeichenfolge entspricht möglicherweise nicht.
+Da einige Geräte keine Zeichen in regulären Zell Arrays platzieren (d. h., Sie führen die kernung aus), ist die Summe der Werte Blöcke in einer Zeichenfolge möglicherweise nicht gleich dem Wertebereich der Zeichenfolge.
 
-##  <a name="getoutputtextmetrics"></a>  CDC::GetOutputTextMetrics
+##  <a name="getoutputtextmetrics"></a>CDC:: getoutputtextmetrics
 
-Ruft ab, der die Metriken für die aktuelle Schriftart mit `m_hDC`, den Ausgabe-Gerätekontext.
+Ruft die Metriken für die aktuelle Schriftart mithilfe `m_hDC`von, dem Ausgabegeräte Kontext ab.
 
 ```
 BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
@@ -3493,15 +3493,15 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="parameters"></a>Parameter
 
 *lpMetrics*<br/>
-Verweist auf die [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) -Struktur, die Metriken empfängt.
+Verweist auf die [textmetrikstruktur](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) , die die Metriken empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).
 
-##  <a name="getpath"></a>  CDC::GetPath
+##  <a name="getpath"></a>CDC:: getpath
 
-Ruft die Koordinaten, die definieren, die Endpunkte der Zeilen und die Steuerpunkte der Kurven finden Sie in den Pfad, der in den Gerätekontext ausgewählt ist.
+Ruft die Koordinaten ab, die die Endpunkte von Linien definieren, sowie die Steuerungs Punkte der Kurven, die sich in dem Pfad befinden, der im Gerätekontext ausgewählt wird.
 
 ```
 int GetPath(
@@ -3513,41 +3513,41 @@ int GetPath(
 ### <a name="parameters"></a>Parameter
 
 *lpPoints*<br/>
-Verweist auf ein Array von [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Datenstrukturen oder `CPoint` Objekte, die die Endpunkte und die Kurve Kontrollpunkte, platziert werden.
+Verweist auf ein Array von [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Datenstrukturen oder `CPoint` -Objekten, in denen die Zeilen Endpunkte und die Kurven Steuerungs Punkte platziert werden.
 
 *lpTypes*<br/>
-Zeigt auf ein Array von Bytes, die dem Vertex-Typen platziert werden. Werte sind eine der folgenden:
+Verweist auf ein Bytearray, in dem die Scheitelpunkt Typen platziert werden. Zu den Werten gehören die folgenden:
 
-- PT_MOVETO gibt an, die an den entsprechenden *LpPoints* startet eine separaten Abbildung.
+- PT_MOVETO gibt an, dass der entsprechende Punkt in *lppoints* eine nicht zusammenhängende Abbildung startet.
 
-- PT_LINETO gibt an, die im vorherigen Punkt und dem entsprechenden zeigen *LpPoints* sind die Endpunkte einer Zeile.
+- PT_LINETO gibt an, dass der vorherige Punkt und der entsprechende Punkt in den *lppoints* die Endpunkte einer Zeile sind.
 
-- PT_BEZIERTO gibt an, die an den entsprechenden *LpPoints* ist ein Steuerungspunkts für das oder der Endpunkt für eine Bzier-Kurve.
+- PT_BEZIERTO gibt an, dass der entsprechende Punkt in *lppoints* ein Steuerungspunkt oder Endpunkt für eine Bzier-Kurve ist.
 
-PT_BEZIERTO Typen an, die immer in Sätze von drei auftreten. Die Punkte im Pfad unmittelbar vor deren definiert des Anfangspunkt der Kurve Bzier. Die ersten beiden PT_BEZIERTO Punkte sind die Steuerpunkte, und der dritte PT_BEZIERTO Punkt ist der Endpunkt (wenn hartcodiert).
+PT_BEZIERTO-Typen treten immer in drei Sätzen auf. Der Punkt in dem Pfad, der unmittelbar vorangestellt ist, definiert den Startpunkt für die Bzier-Kurve. Die ersten beiden PT_BEZIERTO Punkte sind die Steuerungs Punkte, und der dritte PT_BEZIERTO Punkt ist der Endpunkt (sofern hart codiert).
 
-   Ein PT_LINETO oder PT_BEZIERTO Typ kann mit dem folgenden-Flag kombiniert werden (mit dem bitweisen Operator **OR**), um anzugeben, dass der entsprechende Punkt der letzte Punkt in einer Abbildung und die Abbildung geschlossen werden soll:
+   Ein PT_LINETO-oder PT_BEZIERTO-Typ kann mit dem folgenden Flag kombiniert werden (mithilfe des bitweisen Operators **oder**), um anzugeben, dass der entsprechende Punkt der letzte Punkt in einer Abbildung ist und dass die Abbildung geschlossen werden soll:
 
-- PT_CLOSEFIGURE gibt an, die in der Abbildung wird automatisch geschlossen, nachdem die entsprechende Zeile oder die Kurve gezeichnet wird. In der Abbildung wird durch eine Linie vom Endpunkt Linien- oder Kurvensegmente zu dem Punkt entspricht dem letzten PT_MOVETO geschlossen.
+- PT_CLOSEFIGURE gibt an, dass die Abbildung automatisch geschlossen wird, nachdem die entsprechende Linie oder Kurve gezeichnet wurde. Die Abbildung wird geschlossen, indem eine Linie vom Zeilen-oder Kurven Endpunkt bis zu dem Punkt gezeichnet wird, der der letzten PT_MOVETO entspricht.
 
 *nCount*<br/>
-Gibt die Gesamtanzahl der [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) -Datenstrukturen, die in platziert werden, können die *LpPoints* Array. Dieser Wert muss identisch mit die Anzahl der Bytes, die in platziert werden, kann die *LpTypes* Array.
+Gibt die Gesamtanzahl der [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Datenstrukturen an, die im *lppoints* -Array platziert werden können. Dieser Wert muss mit der Anzahl der Bytes identisch sein, die im *lptypes* -Array platziert werden können.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die *nCount* Parameter ungleich NULL ist, die Anzahl der Punkte aufgelistet. Wenn *nCount* ist 0, der die Gesamtzahl der Punkte im Pfad (und `GetPath` "nothing" in den Puffer geschrieben). Wenn *nCount* ungleich NULL ist und kleiner als die Anzahl der Punkte im Pfad verwenden, ist der Rückgabewert-1.
+Wenn der *nCount* -Parameter ungleich 0 (null) ist, wird die Anzahl der aufgezählten Punkte angezeigt. Wenn *nCount* 0 (null) ist, wird die Gesamtzahl der Punkte im `GetPath` Pfad (und schreibt nichts in die Puffer). Wenn *nCount* ungleich 0 (null) und kleiner als die Anzahl der Punkte im Pfad ist, ist der Rückgabewert-1.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Gerätekontext muss es sich um einen geschlossenen Pfad enthalten. Der Pfad der Punkte werden in logischen Koordinaten zurückgegeben. Punkte werden in den Pfad in Gerätekoordinaten, gespeichert, daher `GetPath` ändert sich der Punkt von Gerätekoordinaten in logische Koordinaten mithilfe der Umkehrung der aktuellen Transformation. Die `FlattenPath` Member-Funktion kann aufgerufen werden, bevor `GetPath`, um alle Kurven in den Pfad in Liniensegmente konvertieren.
+Der Gerätekontext muss einen geschlossenen Pfad enthalten. Die Punkte des Pfads werden in logischen Koordinaten zurückgegeben. Punkte werden in Geräte Koordinaten im Pfad gespeichert, sodass `GetPath` die Punkte von Geräte Koordinaten zu logischen Koordinaten mithilfe der Umkehrung der aktuellen Transformation geändert werden. Die `FlattenPath` Member-Funktion kann vor `GetPath`aufgerufen werden, um alle Kurven im Pfad in Liniensegmente zu konvertieren.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CDC:: beginpath](#beginpath).
+  Sehen Sie sich das Beispiel für [CDC:: beginpath](#beginpath)an.
 
-##  <a name="getpixel"></a>  CDC::getPixel
+##  <a name="getpixel"></a>CDC:: GetPixel
 
-Ruft den RGB-Farbwert des Pixels an dem vom angegebenen *x* und *y*.
+Ruft den RGB-Farbwert des Pixels an dem durch *x* und *y*angegebenen Punkt ab.
 
 ```
 COLORREF GetPixel(
@@ -3560,29 +3560,29 @@ COLORREF GetPixel(POINT point) const;
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate des Punkts, der untersucht werden.
+Gibt die logische x-Koordinate des Punkts an, der überprüft werden soll.
 
 *y*<br/>
-Gibt die logische y-Koordinate des Punkts, der untersucht werden.
+Gibt die logische y-Koordinate des Punkts an, der überprüft werden soll.
 
 *point*<br/>
-Gibt die logische X - und y-Koordinaten des Punkts, der untersucht werden.
+Gibt die logischen x-und y-Koordinaten des Punkts an, der überprüft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Bei jeder Version der Funktion, einen RGB-Farbwert für die Farbe des dem angegebenen Punkt. Es ist-1, wenn die Koordinaten in den Ausschneidebereich keinen Punkt angeben.
+Für beide Versionen der Funktion ein RGB-Farbwert für die Farbe des angegebenen Punkts. Der Wert ist-1, wenn die Koordinaten keinen Punkt im Clippingbereich angeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Punkt muss in den Ausschneidebereich sein. Ist der Punkt nicht in den Ausschneidebereich, wird die Funktion hat keine Auswirkungen, und gibt-1 zurück.
+Der Punkt muss sich im Clippingbereich befinden. Wenn sich der Punkt nicht im Clippingbereich befindet, hat die Funktion keine Auswirkung und gibt-1 zurück.
 
-Nicht alle Geräte unterstützen die `GetPixel`-Funktion. Weitere Informationen finden Sie unter der RC_BITBLT Raster-Funktion unter den [GetDeviceCaps](#getdevicecaps) Member-Funktion.
+Nicht alle Geräte unterstützen die `GetPixel`-Funktion. Weitere Informationen finden Sie unter der RC_BITBLT-Rasterfunktion unter der [GetDeviceCaps](#getdevicecaps) -Member-Funktion.
 
-Die `GetPixel` Member-Funktion weist zwei Formen. Der erste erfordert zwei Koordinatenwerte; die zweite akzeptiert eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
+Die `GetPixel` Member-Funktion verfügt über zwei Formen. Der erste Wert erfordert zwei Koordinaten Werte. die zweite Komponente nimmt entweder eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt an.
 
-##  <a name="getpolyfillmode"></a>  CDC::GetPolyFillMode
+##  <a name="getpolyfillmode"></a>CDC:: getpolyfillmode
 
-Ruft den aktuellen Modus des Polygons füllenden ab.
+Ruft den aktuellen Polygon Füll Modus ab.
 
 ```
 int GetPolyFillMode() const;
@@ -3590,15 +3590,15 @@ int GetPolyFillMode() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der aktuelle Polygon gefüllten Modus, alternative oder WICKELN, wenn die Funktion erfolgreich ist.
+Der aktuelle, durch Polygon gefüllte Modus, alternativer oder auffüllender, wenn die Funktion erfolgreich ausgeführt wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter den `SetPolyFillMode` Member-Funktion, eine Beschreibung der Polygon-füllen-Modi.
+Eine Beschreibung `SetPolyFillMode` der Polygon Füll Modi finden Sie unter der Member-Funktion.
 
-##  <a name="getrop2"></a>  CDC::GetROP2
+##  <a name="getrop2"></a>CDC:: GetROP2
 
-Ruft den Zeichnungsmodus des aktuellen ab.
+Ruft den aktuellen Zeichnungsmodus ab.
 
 ```
 int GetROP2() const;
@@ -3606,15 +3606,15 @@ int GetROP2() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Den Zeichnungsmodus des. Eine Liste der Werte für den zeichnen, finden Sie unter den `SetROP2` Member-Funktion.
+Der Zeichnungsmodus. Eine Liste der zeichenmoduswerte finden Sie unter `SetROP2` der-Member-Funktion.
 
 ### <a name="remarks"></a>Hinweise
 
-Zeichnungsmodus des gibt an, wie die Farben des Stifts und das Innere des ausgefüllten Objekte mit der Farbe bereits auf der Anzeigeoberfläche kombiniert werden.
+Der Zeichnungsmodus gibt an, wie die Farben des Stifts und das Innere von ausgefüllten Objekten mit der Farbe kombiniert werden, die sich bereits auf der Anzeige Oberfläche befindet.
 
-##  <a name="getsafehdc"></a>  CDC::GetSafeHdc
+##  <a name="getsafehdc"></a>CDC:: Geder afehdc
 
-Rufen Sie diese Memberfunktion abzurufenden [M_hDC](#m_hdc), den Ausgabe-Gerätekontext.
+Mit dieser Member-Funktion können Sie [m_hDC](#m_hdc), den Ausgabegeräte Kontext, abrufen.
 
 ```
 HDC GetSafeHdc() const;
@@ -3622,15 +3622,15 @@ HDC GetSafeHdc() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Handle für einen Gerätekontext.
+Ein Gerätekontext handle.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion funktioniert auch mit null-Zeiger.
+Diese Member-Funktion funktioniert auch mit Null-Zeigern.
 
-##  <a name="getstretchbltmode"></a>  CDC::GetStretchBltMode
+##  <a name="getstretchbltmode"></a>CDC:: getstretchbltmode
 
-Ruft den aktuellen Strecken einer Bitmap-Modus ab.
+Ruft den aktuellen bitmapstreckungs Modus ab.
 
 ```
 int GetStretchBltMode() const;
@@ -3638,17 +3638,17 @@ int GetStretchBltMode() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert gibt den aktuellen Strecken einer Bitmap-Modus – STRETCH_ANDSCANS STRETCH_DELETESCANS oder STRETCH_ORSCANS – Wenn die Funktion erfolgreich ist.
+Der Rückgabewert gibt den aktuellen Bitmap-stretchmodus an – STRETCH_ANDSCANS, STRETCH_DELETESCANS oder STRETCH_ORSCANS –, wenn die Funktion erfolgreich ausgeführt wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Modus zum Strecken einer Bitmap definiert, wie Informationen aus Bitmaps entfernt werden, die gestreckt oder komprimiert die `StretchBlt` Member-Funktion.
+Der Modus für die Bitmap-Streckung definiert, wie Informationen aus Bitmaps entfernt werden, die von der `StretchBlt` -Element Funktion gestreckt oder komprimiert werden.
 
-Die Modi STRETCH_ANDSCANS und STRETCH_ORSCANS werden normalerweise verwendet, Vordergrund Pixel monochrome Bitmaps beibehalten. Der Modus STRETCH_DELETESCANS wird normalerweise verwendet, um Farbe in Farbe Bitmaps zu erhalten.
+Der STRETCH_ANDSCANS-und der STRETCH_ORSCANS-Modus werden normalerweise verwendet, um Vordergrund Pixel in monochrome Bitmaps beizubehalten. Der STRETCH_DELETESCANS-Modus wird normalerweise verwendet, um die Farbe in Farb Bitmaps beizubehalten.
 
-##  <a name="gettabbedtextextent"></a>  CDC::GetTabbedTextExtent
+##  <a name="gettabbedtextextent"></a>CDC:: gettabbedtextextent
 
-Rufen Sie diese Memberfunktion zum Berechnen die Breite und Höhe einer Zeichenfolge mit Zeichen [M_hAttribDC](#m_hattribdc), den Gerätekontext Attribut.
+Mit dieser Member-Funktion können Sie die Breite und Höhe einer Zeichenfolge mithilfe von [m_hAttribDC](#m_hattribdc), dem Attribut Gerätekontext, berechnen.
 
 ```
 CSize GetTabbedTextExtent(
@@ -3666,37 +3666,37 @@ CSize GetTabbedTextExtent(
 ### <a name="parameters"></a>Parameter
 
 *lpszString*<br/>
-Verweist auf eine Zeichenfolge. Sie können auch übergeben eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt für diesen Parameter.
+Verweist auf eine Zeichenfolge. Sie können auch ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt für diesen Parameter übergeben.
 
 *nCount*<br/>
-Gibt an, die [Länge der Zeichenfolge](/windows/desktop/gdi/specifying-length-of-text-output-string) verweist *LpszString*.
+Gibt die [Länge der Zeichenfolge](/windows/desktop/gdi/specifying-length-of-text-output-string) an, auf die von *lpszstring*verwiesen wird.
 
 *nTabPositions*<br/>
-Gibt die Anzahl der Tabstopp Positionen im Array verweist *LpnTabStopPositions*.
+Gibt die Anzahl der Tabstopp Positionen im Array an, auf die von *lpntabstoppositions*verwiesen wird.
 
 *lpnTabStopPositions*<br/>
-Zeigt auf ein Array von Ganzzahlen, die Tabstopp Positionen in logischen Einheiten. Die Tabstopps müssen in aufsteigender Reihenfolge sortiert werden; der kleinste X-Wert sollte das erste Element im Array. Back-Registerkarten sind nicht zulässig.
+Verweist auf ein Array von ganzen Zahlen, das die Position der Tabstopps in logischen Einheiten enthält. Die Tabstopps müssen in steigender Reihenfolge sortiert werden. der kleinste x-Wert sollte das erste Element im Array sein. Zurück-Registerkarten sind nicht zulässig.
 
 *str*<br/>
-Ein `CString` Objekt mit der angegebenen Zeichen, gezeichnet werden soll.
+Ein `CString` -Objekt, das die angegebenen Zeichen enthält, die gezeichnet werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Abmessungen der Zeichenfolge (in logischen Einheiten) in einem [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
+Die Dimensionen der Zeichenfolge (in logischen Einheiten) in einem [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die Zeichenfolge eine oder mehrere Tabulatorzeichen enthält, die Breite der Zeichenfolge basiert die Tabstopps gemäß *LpnTabStopPositions*. Die Funktion verwendet die ausgewählte Schriftart, um die Abmessungen der Zeichenfolge zu berechnen.
+Wenn die Zeichenfolge ein oder mehrere Tabstopps enthält, basiert die Breite der Zeichenfolge auf den durch *lpntabstoppositions*angegebenen Tabstopps. Die-Funktion verwendet die aktuell ausgewählte Schriftart, um die Dimensionen der Zeichenfolge zu berechnen.
 
-Die Breite und Höhe, die vom des aktuellen Ausschneidebereichs kein versetzen der `GetTabbedTextExtent` Funktion.
+Der aktuelle Clippingbereich versetzt nicht die von der `GetTabbedTextExtent` Funktion zurückgegebene Breite und Höhe.
 
-Da einige Geräte kein Zeichen in der regulären Zelle Arrays setzen (d.h., sie Unterschneiden von Zeichen), die Summe der Blöcke der Zeichen in einer Zeichenfolge in den Umfang der Zeichenfolge entspricht möglicherweise nicht.
+Da einige Geräte keine Zeichen in regulären Zell Arrays platzieren (d. h., Sie setzen die Zeichen ein), ist die Summe der Werte Blöcke in einer Zeichenfolge möglicherweise nicht gleich dem Wertebereich der Zeichenfolge.
 
-Wenn *nTabPositions* ist 0 und *LpnTabStopPositions* NULL ist, Registerkarten auf acht Mal die durchschnittliche Zeichenbreite erweitert werden. Wenn *nTabPositions* 1 ist, werden die Tabstopps getrennt werden, mit dem durch den ersten Wert im Array, an dem angegebenen Abstand *LpnTabStopPositions* Punkte. Wenn *LpnTabStopPositions* auf mehr als einen einzelnen Wert verweist, ein Tabstopp festgelegt ist für jeden Wert im Array bis zu der Zahl von *nTabPositions*.
+Wenn *ntabpositions* den Wert 0 hat und *lpntabstoppositions* den Wert NULL hat, werden die Registerkarten auf das Achtfache der durchschnittlichen Zeichenbreite erweitert. Wenn *ntabpositions* den Wert 1 hat, wird die Tabstopps durch die Entfernung getrennt, die durch den ersten Wert im Array festgelegt wird, auf den *lpntabstoppositions* verweist. Wenn *lpntabstoppositions* auf mehr als einen einzelnen Wert zeigt, wird für jeden Wert im Array ein Tabstopp festgelegt, bis zu der von *ntabpositions*angegebenen Zahl.
 
-##  <a name="gettextalign"></a>  CDC::GetTextAlign
+##  <a name="gettextalign"></a>CDC:: gettextalign
 
-Ruft den Status der textausrichtung Flags für den Gerätekontext ab.
+Ruft den Status der Flags für die Textausrichtung für den Gerätekontext ab.
 
 ```
 UINT GetTextAlign() const;
@@ -3704,43 +3704,43 @@ UINT GetTextAlign() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Status der textausrichtung Flags. Der Rückgabewert ist eine oder mehrere der folgenden Werte:
+Der Status der Flags für die Textausrichtung. Der Rückgabewert ist einer oder mehrere der folgenden Werte:
 
-- Gibt an, TA_BASELINE Ausrichtung des der x-Achse und der Baseline der ausgewählten Schriftart innerhalb des umschließenden Rechtecks.
+- TA_BASELINE gibt die Ausrichtung der x-Achse und die Baseline der ausgewählten Schriftart innerhalb des umgebenden Rechtecks an.
 
-- Ausrichtung TA_BOTTOM gibt an, von der x-Achse und dem unteren Rand des umschließenden Rechtecks.
+- TA_BOTTOM gibt die Ausrichtung der x-Achse und den unteren Rand des umgebenden Rechtecks an.
 
-- Gibt an, TA_CENTER Ausrichtung des der y-Achse und dem Mittelpunkt des umschließenden Rechtecks.
+- TA_CENTER gibt die Ausrichtung der y-Achse und der Mitte des umgebenden Rechtecks an.
 
-- Gibt an, TA_LEFT Ausrichtung des der y-Achse und dem linken Rand des umschließenden Rechtecks.
+- TA_LEFT gibt die Ausrichtung der y-Achse und der linken Seite des umgebenden Rechtecks an.
 
 - TA_NOUPDATECP gibt an, dass die aktuelle Position nicht aktualisiert wird.
 
-- Gibt an, TA_RIGHT Ausrichtung des der y-Achse und der rechten Seite des umschließenden Rechtecks.
+- TA_RIGHT gibt die Ausrichtung der y-Achse und der rechten Seite des umgebenden Rechtecks an.
 
-- Ausrichtung TA_TOP gibt an, von der x-Achse und dem oberen Rand des umschließenden Rechtecks.
+- TA_TOP gibt die Ausrichtung der x-Achse und des oberen Rands des umgebenden Rechtecks an.
 
 - TA_UPDATECP gibt an, dass die aktuelle Position aktualisiert wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Die textausrichtung Flags legen fest, wie die `TextOut` und `ExtTextOut` Memberfunktionen ausrichten eine Textzeichenfolge in Bezug auf den Ausgangspunkt der Zeichenfolge. Die textausrichtung Flags sind nicht unbedingt ein Einzelbit-Flags und möglicherweise gleich 0. Um zu testen, ob ein Flag festgelegt ist, sollte eine Anwendung die folgenden Schritte ausführen:
+Die Flags für die Textausrichtung legen fest `TextOut` , `ExtTextOut` wie die-und-Member-Funktionen eine Text Zeichenfolge in Relation zum Anfangspunkt der Zeichenfolge ausrichten. Die Flags für die Textausrichtung sind nicht notwendigerweise Einzelbit-Flags und können gleich 0 sein. Um zu testen, ob ein Flag festgelegt ist, sollte eine Anwendung die folgenden Schritte ausführen:
 
-1. Gelten Sie die bitweisen OR-Operator das Flag und ihre zugehörigen Flags, die wie folgt zusammengefasst werden:
+1. Wenden Sie den bitweisen OR-Operator auf das Flag und seine zugehörigen Flags an, die wie folgt gruppiert werden:
 
-    - TA_LEFT TA_CENTER und TA_RIGHT
+    - TA_LEFT, TA_CENTER und TA_RIGHT
 
-    - TA_BASELINE TA_BOTTOM und TA_TOP
+    - TA_BASELINE, TA_BOTTOM und TA_TOP
 
     - TA_NOUPDATECP und TA_UPDATECP
 
-1. Anwenden der bitweise- und Operator, um das Ergebnis und der Rückgabewert von `GetTextAlign`.
+1. Wenden Sie den bitweisen AND-Operator auf das Ergebnis und den Rückgabewert von `GetTextAlign`an.
 
-1. Testen der Gleichheit dieses Ergebnis und das Flag.
+1. Testen Sie die Gleichheit dieses Ergebnisses und des-Flags.
 
-##  <a name="gettextcharacterextra"></a>  CDC::GetTextCharacterExtra
+##  <a name="gettextcharacterextra"></a>CDC:: gettextcharakteriextra
 
-Ruft die aktuelle Einstellung für die Menge an Zeichenabstands ab.
+Ruft die aktuelle Einstellung für die Menge der intercharacter-Abstände ab.
 
 ```
 int GetTextCharacterExtra() const;
@@ -3748,15 +3748,15 @@ int GetTextCharacterExtra() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Menge der der Zeichenabstands.
+Die Menge des intercharacter-Abstands.
 
 ### <a name="remarks"></a>Hinweise
 
-GDI hinzugefügt jedes Zeichen, einschließlich der Zeilenumbruchzeichen, wenn sie eine Zeile mit Text in den Gerätekontext schreibt diese Leerzeichen.
+GDI fügt jedem Zeichen diesen Abstand hinzu, einschließlich der Break-Zeichen, wenn eine Textzeile in den Gerätekontext geschrieben wird.
 
-Der Standardwert für die Menge an Zeichenabstands ist 0.
+Der Standardwert für die Menge der intercharacter-Abstände ist 0.
 
-##  <a name="gettextcolor"></a>  CDC::GetTextColor
+##  <a name="gettextcolor"></a>CDC:: gettextcolor
 
 Ruft die aktuelle Textfarbe ab.
 
@@ -3766,15 +3766,15 @@ COLORREF GetTextColor() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die aktuelle Textfarbe als ein RGB-Farbwert.
+Die aktuelle Textfarbe als RGB-Farbwert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Farbe des Textes ist die Vordergrundfarbe von Zeichen, die die GDI-Ausgabe von Text-Memberfunktionen mit gezeichnet [TextOut](#textout), [ExtTextOut](#exttextout), und [TabbedTextOut](#tabbedtextout).
+Die Textfarbe ist die Vordergrundfarbe von Zeichen, die mithilfe der GDI-Textausgabe Element Funktionen " [TextOut](#textout)", " [exttextout](#exttextout)" und " [tabbedtextout](#tabbedtextout)" gezeichnet werden.
 
-##  <a name="gettextextent"></a>  CDC::getTextExtent
+##  <a name="gettextextent"></a>CDC:: GetTextExtent
 
-Rufen Sie diese Memberfunktion, um die Breite und Höhe einer Textzeile, die anhand der aktuellen Schriftart bestimmt die Dimensionen zu berechnen.
+Mit dieser Member-Funktion können Sie die Breite und Höhe einer Textzeile mithilfe der aktuellen Schriftart berechnen, um die Dimensionen zu bestimmen.
 
 ```
 CSize GetTextExtent(
@@ -3787,31 +3787,31 @@ CSize GetTextExtent(const CString& str) const;
 ### <a name="parameters"></a>Parameter
 
 *lpszString*<br/>
-Zeigt auf eine Zeichenfolge von Zeichen. Sie können auch übergeben eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt für diesen Parameter.
+Verweist auf eine Zeichenfolge. Sie können auch ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt für diesen Parameter übergeben.
 
 *nCount*<br/>
 Gibt die Anzahl von Zeichen in der Zeichenfolge an.
 
 *str*<br/>
-Ein `CString` Objekt, das die angegebenen Zeichen enthält.
+Ein `CString` -Objekt, das die angegebenen Zeichen enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Abmessungen der Zeichenfolge (in logischen Einheiten) in einem [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
+Die Dimensionen der Zeichenfolge (in logischen Einheiten) in einem [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Informationen werden abgerufen, von [M_hAttribDC](#m_hattribdc), den Gerätekontext Attribut.
+Die Informationen werden aus [m_hAttribDC](#m_hattribdc), dem Attribut Gerätekontext, abgerufen.
 
-In der Standardeinstellung `GetTextExtent` geht davon aus, der Text für die die Dimension abgerufen entlang einer horizontalen Linie festgelegt ist (d. h. die "Escapement" ist 0). Wenn Sie eine Schriftart angeben einer nicht-NULL "Escapement" erstellen, müssen Sie den Winkel des Texts explizit, um die Abmessungen der Zeichenfolge zu erhalten konvertieren.
+Standardmäßig geht `GetTextExtent` davon aus, dass der Text, für den die Dimension abgerufen wird, entlang einer horizontalen Linie festgelegt wird (d. h., das escapeselement ist 0). Wenn Sie eine Schriftart erstellen, die ein escapesfeld ungleich 0 (null) angibt, müssen Sie den Winkel des Texts explizit konvertieren, um die Dimensionen der Zeichenfolge zu erhalten.
 
-Der aktuelle Ausschneidebereich hat keine Auswirkungen auf die Breite und Höhe, die vom `GetTextExtent`.
+Der aktuelle Clippingbereich wirkt sich nicht auf die von zurückgegebene `GetTextExtent`Breite und Höhe aus.
 
-Da einige Geräte kein Zeichen in der regulären Zelle Arrays setzen (d.h., sie durchzuführen, kerning), die Summe der Blöcke der Zeichen in einer Zeichenfolge in den Umfang der Zeichenfolge entspricht möglicherweise nicht.
+Da einige Geräte keine Zeichen in regulären Zell Arrays platzieren (d. h., Sie führen die kernung aus), ist die Summe der Werte Blöcke in einer Zeichenfolge möglicherweise nicht gleich dem Wertebereich der Zeichenfolge.
 
-##  <a name="gettextextentexpointi"></a>  CDC::GetTextExtentExPointI
+##  <a name="gettextextentexpointi"></a>CDC:: gettextextentexpointi
 
-Ruft die Anzahl der Zeichen in einer angegebenen Zeichenfolge, die in einem angegebenen Raum passt, und füllt ein Array mit der Größe von Text für jedes dieser Zeichen ab.
+Ruft die Anzahl der Zeichen in einer angegebenen Zeichenfolge ab, die in einen angegebenen Bereich passen und ein Array mit dem TextBlock für jedes dieser Zeichen füllt.
 
 ```
 BOOL GetTextExtentExPointI(
@@ -3826,22 +3826,22 @@ BOOL GetTextExtentExPointI(
 ### <a name="parameters"></a>Parameter
 
 *pgiIn*<br/>
-Ein Zeiger auf ein Array von glyphenindizes, die für die Blöcke sind, abgerufen werden sollen.
+Ein Zeiger auf ein Array von Symbol Indizes, für die Blöcke abgerufen werden sollen.
 
 *cgi*<br/>
-Gibt die Anzahl der Symbole in das Array verweist *PgiIn*.
+Gibt die Anzahl der Symbole im Array an, auf die durch *pgiin*verwiesen wird.
 
-*nMaxExtent*<br/>
-Gibt die maximale zulässige Breite in logischen Einheiten, der die formatierte Zeichenfolge an.
+*nmaxblock*<br/>
+Gibt die maximale zulässige Breite (in logischen Einheiten) der formatierten Zeichenfolge an.
 
 *lpnFit*<br/>
-Ein Zeiger auf eine ganze Zahl, die Anzahl der die maximale Anzahl von Zeichen empfängt, die im Bereich gemäß passen *nMaxExtent*. Wenn *LpnFit* NULL ist, *nMaxExtent* wird ignoriert.
+Ein Zeiger auf eine ganze Zahl, die die Anzahl der Zeichen angibt, die in den durch *nmaxblock*angegebenen Bereich passen. Wenn *lpnfit* NULL ist, wird *nmaxblock* ignoriert.
 
 *alpDx*<br/>
-Ein Zeiger auf ein Array von Ganzzahlen, die teilweise Glyphe Blöcke empfängt. Jedes Element im Array gibt den Abstand in logischen Einheiten zwischen dem Anfang des Arrays Indizes Glyphe und eines der Symbole, die im Bereich gemäß entspricht *nMaxExtent*. Obwohl dieses Array Symbolindizes anhand mindestens so viele Elemente verfügen soll *Cgi*, die Funktion füllt das Array mit den Wertebereichen nur für so viele Symbolindizes wie vom angegebenen *LpnFit*. Wenn *LpnDx* NULL ist, berechnet die Funktion nicht Teil der Zeichenfolge Breite.
+Ein Zeiger auf ein Array von ganzen Zahlen, das partielle Symbol Blöcke empfängt. Jedes Element im Array gibt den Abstand zwischen dem Anfang des Symbols für das Symbol Indizes und einem der Symbole, die in den durch *nmaxblock*angegebenen Raum passen, in logischen Einheiten an. Obwohl dieses Array mindestens so viele Elemente aufweisen muss wie die von *CGI*angegebenen Symbol Indizes, füllt die Funktion das Array nur für so viele Symbol Indizes, wie von *lpnfit*angegeben. Wenn *lpndx* den Wert NULL hat, berechnet die Funktion keine partiellen Zeichen folgen breiten.
 
 *lpSize*<br/>
-Zeiger auf eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur, die die Abmessungen des Symbols Indices-Array, in logischen Einheiten empfängt. Dieser Wert darf nicht NULL sein.
+Ein Zeiger auf eine [Größen](/windows/desktop/api/windef/ns-windef-tagsize) Struktur, die die Dimensionen des Symbols für die Glyphe-Indizes in logischen Einheiten empfängt. Dieser Wert darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -3849,11 +3849,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion emuliert die Funktionen der [GetTextExtentExPointI](/windows/desktop/api/wingdi/nf-wingdi-gettextextentexpointi), wie im Windows SDK beschrieben.
+Diese Member-Funktion emuliert die Funktionalität der [gettextextentexpointi](/windows/desktop/api/wingdi/nf-wingdi-gettextextentexpointi)-Funktion, wie im Windows SDK beschrieben.
 
-##  <a name="gettextextentpointi"></a>  CDC::GetTextExtentPointI
+##  <a name="gettextextentpointi"></a>CDC:: gettextextentpointi
 
-Ruft die Breite und Höhe des angegebenen Arrays von glyphenindizes.
+Ruft die Breite und Höhe des angegebenen Arrays von Symbol Indizes ab.
 
 ```
 BOOL GetTextExtentPointI(
@@ -3865,13 +3865,13 @@ BOOL GetTextExtentPointI(
 ### <a name="parameters"></a>Parameter
 
 *pgiIn*<br/>
-Ein Zeiger auf ein Array von glyphenindizes, die für die Blöcke sind, abgerufen werden sollen.
+Ein Zeiger auf ein Array von Symbol Indizes, für die Blöcke abgerufen werden sollen.
 
 *cgi*<br/>
-Gibt die Anzahl der Symbole in das Array verweist *PgiIn*.
+Gibt die Anzahl der Symbole im Array an, auf die durch *pgiin*verwiesen wird.
 
 *lpSize*<br/>
-Zeiger auf eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur, die die Abmessungen des Symbols Indices-Array, in logischen Einheiten empfängt. Dieser Wert darf nicht NULL sein.
+Ein Zeiger auf eine [Größen](/windows/desktop/api/windef/ns-windef-tagsize) Struktur, die die Dimensionen des Symbols für die Glyphe-Indizes in logischen Einheiten empfängt. Dieser Wert darf nicht NULL sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -3879,11 +3879,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion emuliert die Funktionen der [GetTextExtentPointI](/windows/desktop/api/wingdi/nf-wingdi-gettextextentpointi), wie im Windows SDK beschrieben.
+Diese Member-Funktion emuliert die Funktionalität der [gettextextentpointi](/windows/desktop/api/wingdi/nf-wingdi-gettextextentpointi)-Funktion, wie im Windows SDK beschrieben.
 
-##  <a name="gettextface"></a>  CDC::GetTextFace
+##  <a name="gettextface"></a>CDC:: gettextface
 
-Rufen Sie diese Memberfunktion um den Namen der aktuellen Schriftart in einen Puffer zu kopieren.
+Mit dieser Member-Funktion wird der Schriftart Name der aktuellen Schriftart in einen Puffer kopiert.
 
 ```
 int GetTextFace(
@@ -3896,25 +3896,25 @@ int GetTextFace(CString& rString) const;
 ### <a name="parameters"></a>Parameter
 
 *nCount*<br/>
-Gibt die Größe des Puffers (in Byte). Wenn der Schriftartnamen länger als die Anzahl der Bytes, die durch diesen Parameter angegeben ist, wird der Name verkürzt.
+Gibt die Größe des Puffers an (in Bytes). Wenn der Schriftart Name länger ist als die Anzahl der Bytes, die durch diesen Parameter angegeben werden, wird der Name abgeschnitten.
 
 *lpszFacename*<br/>
-Verweist auf den Puffer für den Schriftartnamen.
+Zeigt auf den Puffer für den Schriftart Namen.
 
 *rString*<br/>
-Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt.
+Ein Verweis auf ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der Bytes, die kopiert werden, in den Puffer, der das abschließende Nullzeichen nicht eingeschlossen. Es ist 0, wenn ein Fehler auftritt.
+Die Anzahl der Bytes, die in den Puffer kopiert werden, ohne das abschließende Null Zeichen. Der Wert ist 0, wenn ein Fehler auftritt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Schriftartname wird als eine Null-terminierte Zeichenfolge kopiert.
+Der Schriftart Name wird als NULL-terminierte Zeichenfolge kopiert.
 
-##  <a name="gettextmetrics"></a>  CDC::GetTextMetrics
+##  <a name="gettextmetrics"></a>CDC:: GetTextMetrics
 
-Ruft die Metriken für die aktuelle Schriftart, die mit den Gerätekontext Attribut ab.
+Ruft die Metriken für die aktuelle Schriftart mithilfe des Attribut Geräte Kontexts ab.
 
 ```
 BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
@@ -3923,15 +3923,15 @@ BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="parameters"></a>Parameter
 
 *lpMetrics*<br/>
-Verweist auf die [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) -Struktur, die Metriken empfängt.
+Verweist auf die [textmetrikstruktur](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) , die die Metriken empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).
 
-##  <a name="getviewportext"></a>  CDC::GetViewportExt
+##  <a name="getviewportext"></a>CDC:: getviewportext
 
-Ruft die x und y-Blöcke des Viewports für den Gerätekontext ab.
+Ruft die x-und y-Blöcke des Viewports des Geräte Kontexts ab.
 
 ```
 CSize GetViewportExt() const;
@@ -3939,11 +3939,11 @@ CSize GetViewportExt() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die X - und y-Blöcke (in Geräteeinheiten) als eine `CSize` Objekt.
+Die x-und y-Blöcke (in Geräte Einheiten) als `CSize` -Objekt.
 
-##  <a name="getviewportorg"></a>  CDC::GetViewportOrg
+##  <a name="getviewportorg"></a>CDC:: getviewportor g
 
-Ruft ab, der x- und y-Koordinaten des Ursprungs des Viewports im Gerätekontext zugeordnet.
+Ruft die x-und y-Koordinaten des Ursprungs des Viewports ab, der dem Gerätekontext zugeordnet ist.
 
 ```
 CPoint GetViewportOrg() const;
@@ -3951,11 +3951,11 @@ CPoint GetViewportOrg() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Ursprung des Viewports (in Gerätekoordinaten) als eine `CPoint` Objekt.
+Der Ursprung des Viewports (in Geräte Koordinaten) als `CPoint` -Objekt.
 
-##  <a name="getwindow"></a>  CDC::GetWindow
+##  <a name="getwindow"></a>CDC:: GetWindow
 
-Gibt zurück, das den Anzeigekontext für das Gerät zugeordnete Fenster.
+Gibt das Fenster zurück, das dem Anzeigegeräte Kontext zugeordnet ist.
 
 ```
 CWnd* GetWindow() const;
@@ -3963,15 +3963,15 @@ CWnd* GetWindow() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Zeiger auf eine `CWnd` -Objekt, wenn erfolgreich; andernfalls NULL.
+Zeiger auf ein `CWnd` -Objekt, wenn erfolgreich; andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Dies ist eine erweiterte Funktion. Beispielsweise kann diese Memberfunktion das Ansichtsfenster nicht beim Drucken oder in der Seitenansicht zurückgeben. Es gibt immer das Fenster Ausgabe zugeordnet. Ausgabefunktionen, die den angegebenen DC verwenden in diesem Fenster zeichnen.
+Dies ist eine erweiterte Funktion. Diese Member-Funktion kann beispielsweise das Ansichts Fenster beim Drucken oder in der Seitenansicht nicht zurückgeben. Er gibt immer das Fenster zurück, das der Ausgabe zugeordnet ist. Ausgabefunktionen, die den angegebenen Domänen Controller verwenden, zeichnen in dieses Fenster.
 
-##  <a name="getwindowext"></a>  CDC::GetWindowExt
+##  <a name="getwindowext"></a>CDC:: getwindowext
 
-Ruft die x und y-Blöcke im Zusammenhang mit den Gerätekontext Fenster ab.
+Ruft die x-und y-Blöcke des Fensters ab, das dem Gerätekontext zugeordnet ist.
 
 ```
 CSize GetWindowExt() const;
@@ -3979,11 +3979,11 @@ CSize GetWindowExt() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die X - und y-Blöcke (in logischen Einheiten) als eine `CSize` Objekt.
+Die x-und y-Blöcke (in logischen Einheiten) als `CSize` -Objekt.
 
-##  <a name="getwindoworg"></a>  CDC::GetWindowOrg
+##  <a name="getwindoworg"></a>CDC:: getwindoworg
 
-Ruft die x- und y-Koordinaten des Ursprungs im Zusammenhang mit den Gerätekontext Fenster ab.
+Ruft die x-und y-Koordinaten des Ursprungs des Fensters ab, das dem Gerätekontext zugeordnet ist.
 
 ```
 CPoint GetWindowOrg() const;
@@ -3991,11 +3991,11 @@ CPoint GetWindowOrg() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Ursprung des Fensters (in logischen Koordinaten) als eine `CPoint` Objekt.
+Der Ursprung des Fensters (in logischen Koordinaten) als `CPoint` -Objekt.
 
-##  <a name="getworldtransform"></a>  CDC::GetWorldTransform
+##  <a name="getworldtransform"></a>CDC:: getworldtransform
 
-Ruft den aktuellen Raum auf der Seite-Space-Transformation ab.
+Ruft die aktuelle Transformation für Welt Raum zu Seiten Raum ab.
 
 ```
 BOOL GetWorldTransform(XFORM& rXform) const;
@@ -4004,23 +4004,23 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 ### <a name="parameters"></a>Parameter
 
 *rXform*<br/>
-Ein Verweis auf ein [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) Struktur, die die aktuelle Raum auf der Seite-Space-Transformation empfängt.
+Verweis auf eine [XForm](/windows/desktop/api/wingdi/ns-wingdi-tagxform) -Struktur, die die aktuelle Transformation für Welt Raum zu Seiten Raum empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich NULL bei Erfolg zurück.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück.
 
-Gibt 0 bei einem Fehler zurück.
+Gibt bei einem Fehler 0 zurück.
 
-Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Um erweiterte Fehlerinformationen abzurufen, nennen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode dient als Wrapper für die Windows-GDI-Funktion [GetWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-getworldtransform).
+Diese Methode umschließt die Windows-GDI-Funktion [getworldtransform](/windows/desktop/api/wingdi/nf-wingdi-getworldtransform).
 
-##  <a name="gradientfill"></a>  CDC::GradientFill
+##  <a name="gradientfill"></a>CDC:: GradientFill
 
-Rufen Sie diese Memberfunktion zum Rechteck und Dreieck Strukturen mit Farbe zu füllen, die in den anderen reibungslos auf einer Seite eingeblendet.
+Mit dieser Member-Funktion können Sie Rechteck-und Dreieck Strukturen mit Farben auffüllen, die nahtlos von einer Seite zur anderen Seite ausgeblendet werden.
 
 ```
 BOOL GradientFill(
@@ -4034,19 +4034,19 @@ BOOL GradientFill(
 ### <a name="parameters"></a>Parameter
 
 *pVertices*<br/>
-Zeiger auf ein Array von [TRIVERTEX](/windows/desktop/api/wingdi/ns-wingdi-_trivertex) Strukturen, die jeweils einen Dreieck Vertex definieren.
+Zeiger auf ein Array von [trivertex](/windows/desktop/api/wingdi/ns-wingdi-trivertex) -Strukturen, die jeweils einen Dreiecks Scheitelpunkt definieren.
 
 *nVertices*<br/>
-Die Anzahl der Scheitelpunkte.
+Die Anzahl der Scheitel Punkte.
 
-*pMesh*<br/>
-Array von [GRADIENT_TRIANGLE](/windows/desktop/api/wingdi/ns-wingdi-_gradient_triangle) Strukturen im Modus für Dreieck oder ein Array von [GRADIENT_RECT](/windows/desktop/api/wingdi/ns-wingdi-_gradient_rect) Strukturen im Rechteck-Modus.
+*pmesh*<br/>
+Array von [GRADIENT_TRIANGLE](/windows/desktop/api/wingdi/ns-wingdi-gradient_triangle) -Strukturen im Dreiecks Modus oder ein Array von [GRADIENT_RECT](/windows/desktop/api/wingdi/ns-wingdi-gradient_rect) -Strukturen im Rechteck Modus.
 
 *nMeshElements*<br/>
-Die Anzahl von Elementen (Dreiecke oder Rechtecke) in *pMesh*.
+Die Anzahl der Elemente (Dreiecke oder Rechtecke) im *pmesh*.
 
 *dwMode*<br/>
-Gibt die Farbverlauf-Modus an. Eine Liste der möglichen Werte, finden Sie unter [GradientFill](/windows/desktop/api/wingdi/nf-wingdi-gradientfill) im Windows SDK.
+Gibt den Füll Modus für den Verlauf an Eine Liste möglicher Werte finden [Sie unter GradientFill](/windows/desktop/api/wingdi/nf-wingdi-gradientfill) in der Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4054,11 +4054,11 @@ TRUE, wenn erfolgreich, andernfalls FALSE.
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter `GradientFill` im Windows SDK.
+Weitere Informationen finden `GradientFill` Sie unter in der Windows SDK.
 
-##  <a name="graystring"></a>  CDC:: graystring
+##  <a name="graystring"></a>CDC:: graystring
 
-Zeichnet abgeblendet (grau) Text an der angegebenen Position durch Schreiben von Text in eine Bitmap Arbeitsspeicher, abblendet Bitmap und dann die Bitmap auf dem Bildschirm kopieren.
+Zeichnet abgeblendet (grauer) Text an der angegebenen Position, indem der Text in eine Speicher Bitmap geschrieben wird, das Bitmap abgeblendet und dann die Bitmap in die Anzeige kopiert wird.
 
 ```
 virtual BOOL GrayString(
@@ -4077,51 +4077,51 @@ virtual BOOL GrayString(
 
 ### <a name="parameters"></a>Parameter
 
-*pBrush*<br/>
-Identifiziert den Pinsel für die (das abblendet abblendet) verwendet werden soll.
+*pbrush*<br/>
+Gibt den Pinsel an, der zum Dimmen (Graying) verwendet werden soll.
 
 *lpfnOutput*<br/>
-Gibt die Adresse der Prozedur Instanzen der Anwendung bereitgestellten Rückruffunktion, die die Zeichenfolge gezeichnet wird. Weitere Informationen finden Sie unter der Beschreibung der Windows `OutputFunc` [Rückruffunktion](callback-functions-used-by-mfc.md#graystring). Wenn dieser Parameter NULL ist, wird das System verwendet die Windows `TextOut` Funktion zum Zeichnen der Zeichenfolge ein, und *LpData* wird davon ausgegangen, dass ein long-Zeiger auf die Zeichenfolge ausgegeben werden.
+Gibt die Prozedur-instanzadresse der von der Anwendung bereitgestellten Rückruffunktion an, mit der die Zeichenfolge gezeichnet wird. Weitere Informationen finden Sie in der Beschreibung der Windows `OutputFunc` - [Rückruffunktion](callback-functions-used-by-mfc.md#graystring). Wenn dieser Parameter NULL ist, verwendet das System die Windows `TextOut` -Funktion, um die Zeichenfolge zu zeichnen, und *lpdata* wird als Long-Zeiger auf die Zeichenfolge angenommen, die ausgegeben werden soll.
 
 *lpData*<br/>
-Gibt an, ein ferner Zeiger auf Daten in der Ausgabe-Funktion übergeben werden. Wenn *LpfnOutput* NULL ist, *LpData* muss ein long-Zeiger auf die Zeichenfolge, die ausgegeben werden.
+Gibt einen entfernten Zeiger auf Daten an, die an die Output-Funktion weitergegeben werden sollen. Wenn *lpfnoutput* NULL ist, muss *lpdata* ein langer Zeiger auf die auszugabeende Zeichenfolge sein.
 
 *nCount*<br/>
-Gibt die Anzahl der Zeichen, die ausgegeben werden. Wenn dieser Parameter 0 (null) ist `GrayString` berechnet die Länge der Zeichenfolge (vorausgesetzt, dass *LpData* ist ein Zeiger auf Zeichenfolge). Wenn *nCount* ist 1 und die Funktion verweist *LpfnOutput* 0 zurückgibt, ist das Bild wird angezeigt, jedoch nicht abgeblendet.
+Gibt die Anzahl von Zeichen an, die ausgegeben werden sollen. Wenn dieser Parameter 0 ist, `GrayString` wird die Länge der Zeichenfolge berechnet (vorausgesetzt, dass *lpdata* ein Zeiger auf die Zeichenfolge ist). Wenn *nCount* 1 ist und die Funktion, auf die von *lpfnoutput* verwiesen wird, 0 zurückgibt, wird das Bild angezeigt, aber nicht abgeblendet.
 
 *w*<br/>
-Gibt die logische X-Koordinate der Startposition des Rechtecks, das Sie die Zeichenfolge enthält.
+Gibt die logische x-Koordinate der Anfangsposition des Rechtecks an, das die Zeichenfolge einschließt.
 
 *y*<br/>
-Gibt die logische y-Koordinate der Startposition des Rechtecks, das Sie die Zeichenfolge enthält.
+Gibt die logische y-Koordinate der Anfangsposition des Rechtecks an, das die Zeichenfolge einschließt.
 
 *nWidth*<br/>
-Gibt die Breite (in logischen Einheiten) des Rechtecks, das Sie die Zeichenfolge enthält. Wenn *nWidth* ist 0 (null) `GrayString` berechnet die Breite des Bereichs, sofern *LpData* ist ein Zeiger auf die Zeichenfolge.
+Gibt die Breite (in logischen Einheiten) des Rechtecks an, das die Zeichenfolge einschließt. Wenn *nwidth* den Wert 0 `GrayString` hat, wird die Breite des Bereichs berechnet, vorausgesetzt, *lpdata* ist ein Zeiger auf die Zeichenfolge.
 
-*nHeight*<br/>
-Gibt die Höhe (in logischen Einheiten) des Rechtecks, das Sie die Zeichenfolge enthält. Wenn *nHeight* ist 0 (null) `GrayString` berechnet die Höhe des Bereichs, sofern *LpData* ist ein Zeiger auf die Zeichenfolge.
+*nheight*<br/>
+Gibt die Höhe (in logischen Einheiten) des Rechtecks an, das die Zeichenfolge einschließt. Wenn *nheight* den Wert 0 `GrayString` hat, wird die Höhe des Bereichs berechnet, vorausgesetzt, *lpdata* ist ein Zeiger auf die Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn die Zeichenfolge gezeichnet wird, oder 0, wenn entweder die `TextOut` Funktion oder die der Anwendung bereitgestellten Ausgabefunktion zurückgegebenen 0 (null) oder wenn nicht genügend Arbeitsspeicher, um eine Bitmap im Arbeitsspeicher für die abblendet zu erstellen.
+Ungleich 0 (null), wenn die Zeichenfolge gezeichnet wird, `TextOut` oder 0 (null), wenn die Funktion oder die von der Anwendung bereitgestellte Ausgabefunktion 0 zurückgegeben hat, oder, wenn nicht genügend Arbeitsspeicher vorhanden ist, um eine Speicher Bitmap zum
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion wird den Text unabhängig von der ausgewählten Pinsels und Hintergrund abgeblendet. Die `GrayString` Member-Funktion verwendet, die aktuell ausgewählte Schriftart. Der Zuordnungsmodus MM_TEXT muss ausgewählt werden, bevor Sie diese Funktion verwenden.
+Die-Funktion gibt den Text unabhängig vom ausgewählten Pinsel und Hintergrund aus. Die `GrayString` Member-Funktion verwendet die aktuell ausgewählte Schriftart. Der MM_TEXT-Zuordnungs Modus muss vor der Verwendung dieser Funktion ausgewählt werden.
 
-Eine Anwendung kann abgeblendete (grau) Zeichenfolgen auf Geräten, graue als Volltonfarbe ohne unterstützen, zeichnen die `GrayString` Member-Funktion. Die Systemfarbe COLOR_GRAYTEXT ist die einfarbig grau Systemfarbe für deaktivierten Text gezeichnet werden soll. Rufen Sie die Anwendung kann die `GetSysColor` Windows-Funktion, um den Farbwert der COLOR_GRAYTEXT abzurufen. Die Anwendung kann aufrufen, ist die Farbe als 0 (Schwarz), die `SetTextColor` Memberfunktion versucht, die Farbe des Textes auf den Color-Wert festgelegt, und zeichnen Sie die Zeichenfolge direkt. Wenn die abgerufene Farbe auf Schwarz festgelegt ist, muss die Anwendung aufrufen `GrayString` , abgeblendet (grau) den Text.
+Eine Anwendung kann Abgebundene (abgefüllte) Zeichen folgen auf Geräten zeichnen, die eine voll tongraue Farbe unter `GrayString` stützen, ohne die Member-Funktion aufzurufende. Die System Farbe COLOR_GRAYTEXT ist die Vollton-System Farbe, die zum Zeichnen von deaktiviertem Text verwendet wird. Die Anwendung kann die `GetSysColor` Windows-Funktion aufrufen, um den Farbwert von COLOR_GRAYTEXT abzurufen. Wenn die Farbe nicht 0 (schwarz) ist, kann die Anwendung die `SetTextColor` Member-Funktion aufrufen, um die Textfarbe auf den Farbwert festzulegen, und die Zeichenfolge dann direkt zeichnen. Wenn die abgerufene Farbe schwarz ist, muss `GrayString` die Anwendung den Text Abblenden (grau).
 
-Wenn *LpfnOutput* NULL ist, GDI verwendet die Windows [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) -Funktion und *LpData* wird davon ausgegangen, dass ein ferner Zeiger auf das Zeichen ausgegeben werden. Wenn die Zeichen, die Ausgabe von behandelt werden können die `TextOut` Member-Funktion (z. B. die Zeichenfolge als Bitmap gespeichert ist), die Anwendung muss eine eigene Ausgabefunktion angeben.
+Wenn *lpfnoutput* den Wert NULL hat, verwendet GDI die Windows- [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) -Funktion, und es wird davon ausgegangen, dass *lpdata* ein weitaus Zeiger auf das auszulegende Zeichen ist. Wenn die auszustellenden Zeichen nicht von der `TextOut` Element Funktion behandelt werden können (z. b. wenn die Zeichenfolge als Bitmap gespeichert ist), muss die Anwendung eine eigene Ausgabefunktion bereitstellen.
 
-Beachten Sie außerdem, dass alle Rückruffunktionen vor der Rückgabe auf Windows, da Ausnahmen hinweg Rückruf ausgelöst werden, können nicht Microsoft Foundation Ausnahmen abfangen müssen. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).
+Beachten Sie außerdem, dass alle Rückruf Funktionen Microsoft Foundation-Ausnahmen vor der Rückgabe an Windows abfangen müssen, da Ausnahmen nicht über Rückruf Grenzen hinweg ausgelöst werden können. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).
 
-Die Rückruffunktion übergeben `GrayString` verwenden, muss die `__stdcall` -Aufrufkonvention verwendet und muss exportiert werden, mit `__declspec`.
+Die an `GrayString` übergebenen Rückruffunktion muss die `__stdcall` -Aufruf Konvention verwenden und muss mit `__declspec`exportiert werden.
 
-Wenn das Framework ist im Vorschaumodus, einen Aufruf der `GrayString` Memberfunktion in übersetzt eine `TextOut` Aufruf und der Callback-Funktion wird nicht aufgerufen.
+Wenn sich das Framework im Vorschaumodus befindet, wird ein Aufruf `GrayString` der Member-Funktion in einen `TextOut` -Aufruf übersetzt, und die Rückruffunktion wird nicht aufgerufen.
 
-##  <a name="himetrictodp"></a>  CDC::HIMETRICtoDP
+##  <a name="himetrictodp"></a>CDC:: himetricdedp
 
-Verwenden Sie diese Funktion, wenn Sie auf Pixel HIMETRIC-Größen aus OLE konvertieren.
+Verwenden Sie diese Funktion, wenn Sie himetrikgrößen von OLE in Pixel konvertieren.
 
 ```
 void HIMETRICtoDP(LPSIZE lpSize) const;
@@ -4130,15 +4130,15 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parameter
 
 *lpSize*<br/>
-Verweist auf eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
+Verweist auf eine [Größen](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder ein [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Zuordnungsmodus, der das Gerätekontextobjekt MM_LOENGLISH MM_HIENGLISH, MM_LOMETRIC oder MM_HIMETRIC ist, basiert klicken Sie dann die Konvertierung auf die Anzahl der Pixel in der physischen Zoll. Wenn der Zuordnungsmodus einen der anderen nicht eingeschränkte Modi (z. B. MM_TEXT) ist, basiert klicken Sie dann die Konvertierung auf die Anzahl der Pixel in der logischen Zoll.
+Wenn der Kartenmodus des Gerätekontext Objekts "MM_LOENGLISH", "MM_HIENGLISH", "MM_LOMETRIC" oder "MM_HIMETRIC" ist, basiert die Konvertierung auf der Anzahl der Pixel im physischen Zoll. Wenn der Kartenmodus einem der anderen nicht eingeschränkten Modi entspricht (z. b. MM_TEXT), basiert die Konvertierung auf der Anzahl der Pixel im logischen Zoll.
 
-##  <a name="himetrictolp"></a>  CDC::HIMETRICtoLP
+##  <a name="himetrictolp"></a>CDC:: himetrictolp
 
-Rufen Sie diese Funktion zum Konvertieren von HIMETRIC-Einheiten in logischen Einheiten.
+Mit dieser Funktion können Sie HIMETRIC-Einheiten in logische Einheiten konvertieren.
 
 ```
 void HIMETRICtoLP(LPSIZE lpSize) const;
@@ -4147,17 +4147,17 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parameter
 
 *lpSize*<br/>
-Verweist auf eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
+Verweist auf eine [Größen](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder ein [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Funktion, wenn Sie HIMETRIC-Größen aus OLE und diese in Ihrer Anwendung natürliche Zuordnungsmodus konvertieren möchten.
+Verwenden Sie diese Funktion, wenn Sie die himetrikgrößen von OLE erhalten und Sie in den natürlichen Zuordnungs Modus Ihrer Anwendung konvertieren möchten.
 
-Die Konvertierung wird erreicht, indem zunächst die HIMETRIC-Einheiten in Pixel konvertiert, und klicken Sie dann diese Einheiten in logischen Einheiten, die den Gerätekontext aktuelle Zuordnung Einheiten konvertiert wird. Beachten Sie, dass die Blöcke des Fensters und der Viewport des Geräts, das Ergebnis ausgewirkt hat.
+Die Konvertierung erfolgt durch das erste Konvertieren der HIMETRIC-Einheiten in Pixel und das anschließende Konvertieren dieser Einheiten in logische Einheiten mithilfe der aktuellen Mapping-Einheiten des Geräte Kontexts. Beachten Sie, dass sich die Blöcke für das Fenster und den Viewport des Geräts auf das Ergebnis auswirken.
 
-##  <a name="intersectcliprect"></a>  CDC::IntersectClipRect
+##  <a name="intersectcliprect"></a>CDC:: IntersectClipRect
 
-Erstellt einen neuen Ausschneidebereich durch Bildung der Schnittmenge der aktuellen Region und anhand des Rechtecks *X1*, *y1*, *X2*, und *y2*.
+Erstellt einen neuen Clippingbereich, indem die Schnittmenge des aktuellen Bereichs und des Rechtecks gebildet wird, das von *x1*, *Y1*, *x2*und *Y2*angegeben wird.
 
 ```
 int IntersectClipRect(
@@ -4172,39 +4172,39 @@ int IntersectClipRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parameter
 
 *x1*<br/>
-Gibt die logische X-Koordinate der oberen linken Ecke des Rechtecks an.
+Gibt die logische x-Koordinate der oberen linken Ecke des Rechtecks an.
 
 *y1*<br/>
 Gibt die logische y-Koordinate der oberen linken Ecke des Rechtecks an.
 
 *x2*<br/>
-Gibt die logische X-Koordinate der unteren rechten Ecke des Rechtecks an.
+Gibt die logische x-Koordinate der unteren rechten Ecke des Rechtecks an.
 
 *y2*<br/>
 Gibt die logische y-Koordinate der unteren rechten Ecke des Rechtecks an.
 
 *lpRect*<br/>
-Gibt das Rechteck. Sie können entweder übergeben eine `CRect` Objekt oder ein Zeiger auf eine `RECT` Struktur für diesen Parameter.
+Gibt das Rechteck an. Sie können entweder ein `CRect` -Objekt oder einen-Zeiger an eine `RECT` -Struktur für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der neue Ausschneidebereich-Typ. Eine der folgenden Werte sind möglich:
+Der Typ des neuen Clippingbereichs. Es kann sich um einen der folgenden Werte handeln:
 
-- Neue COMPLEXREGION Ausschneidebereich hat überlappende Grenzen.
+- Der neue Ausschneide Bereich von complexregion weist überlappende Rahmen auf.
 
-- Fehler-Gerätekontext ist ungültig.
+- Fehler beim Gerätekontext.
 
-- Neue NULLREGION Ausschneidebereich ist leer.
+- Der neue Clippingbereich der NULLREGION ist leer.
 
-- Neue SIMPLEREGION Ausschneidebereich verfügt über keine überlappenden Rahmen.
+- Der neue Ausschneide Bereich der simpleregion weist keine überlappenden Rahmen auf.
 
 ### <a name="remarks"></a>Hinweise
 
-GDI Schneidet alle nachfolgenden Ausgabe an die neue Grenze an. Die Breite und Höhe müssen nicht 32.767 überschreitet.
+GDI schneidet alle nachfolgenden Ausgaben an die neue Grenze an. Breite und Höhe dürfen nicht größer sein als 32.767.
 
-##  <a name="invertrect"></a>  CDC::InvertRect
+##  <a name="invertrect"></a>CDC:: invertrect
 
-Hierdurch wird der Inhalt des angegebenen Rechtecks.
+Kehrt den Inhalt des angegebenen Rechtecks um.
 
 ```
 void InvertRect(LPCRECT lpRect);
@@ -4213,11 +4213,11 @@ void InvertRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf eine `RECT` , enthält die logischen Koordinaten des Rechtecks umgekehrt werden soll. Sie können auch übergeben eine `CRect` Objekt für diesen Parameter.
+Verweist auf eine `RECT` , die die logischen Koordinaten des Rechtecks enthält, das invertiert werden soll. Sie können auch ein `CRect` -Objekt für diesen Parameter übergeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Inversion ist eine logische nicht Vorgang und spiegelt die Bits der einzelnen Pixel. Auf die monochrome Anzeige Funktion, dass weißen Pixel schwarz und schwarzen Pixel weiß. Die Umkehrung hängt auf Farbe angezeigt das, zum Generieren von Farben für die Anzeige. Aufrufen von `InvertRect` zweimal mit dem gleichen Rechteck setzt Sie die Anzeige auf seine vorherige Farben.
+Inversion ist eine logische NOT-Operation und kippt die Bits jedes Pixels. In monochrome zeigt die Funktion weiße Pixel schwarz und schwarz Pixel weiß an. Bei Farbanzeige hängt die Inversion davon ab, wie Farben für die Anzeige generiert werden. Wenn `InvertRect` Sie zweimal mit dem gleichen Rechteck aufrufen, wird die Anzeige in den vorherigen Farben wieder hergestellt.
 
 Wenn das Rechteck leer ist, wird nichts gezeichnet.
 
@@ -4225,9 +4225,9 @@ Wenn das Rechteck leer ist, wird nichts gezeichnet.
 
 [!code-cpp[NVC_MFCDocView#36](../../mfc/codesnippet/cpp/cdc-class_8.cpp)]
 
-##  <a name="invertrgn"></a>  CDC::InvertRgn
+##  <a name="invertrgn"></a>CDC:: invertrgn
 
-Invertiert die Farben in der Region, die anhand des *PRNG*.
+Kehrt die Farben in dem durch *PRGN*angegebenen Bereich um.
 
 ```
 BOOL InvertRgn(CRgn* pRgn);
@@ -4236,7 +4236,7 @@ BOOL InvertRgn(CRgn* pRgn);
 ### <a name="parameters"></a>Parameter
 
 *pRgn*<br/>
-Identifiziert die Region, die umgekehrt werden soll. Die Koordinaten für die Region werden in logischen Einheiten angegeben.
+Identifiziert den Bereich, der invertiert werden soll. Die Koordinaten für den Bereich werden in logischen Einheiten angegeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4244,11 +4244,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Auf die monochrome Anzeige Funktion, dass weißen Pixel schwarz und schwarzen Pixel weiß. Die Umkehrung hängt mit Farben wie die Farben für die Anzeige generiert werden.
+In monochrome zeigt die Funktion weiße Pixel schwarz und schwarz Pixel weiß an. Bei Farben zeigt die Inversion an, wie die Farben für die Anzeige generiert werden.
 
-##  <a name="isprinting"></a>  CDC::IsPrinting
+##  <a name="isprinting"></a>CDC:: IsPrinting
 
-Bestimmt, ob es sich bei der Gerätekontext für das Drucken verwendet wird.
+Bestimmt, ob der Gerätekontext zum Drucken verwendet wird.
 
 ```
 BOOL IsPrinting() const;
@@ -4256,11 +4256,11 @@ BOOL IsPrinting() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Einen Wert ungleich null der `CDC` Objekt ist ein Drucker DC, andernfalls 0.
+Ungleich 0 (NULL `CDC` ), wenn das Objekt ein Drucker-DC ist; andernfalls 0.
 
-##  <a name="lineto"></a>  CDC::LineTo
+##  <a name="lineto"></a>CDC:: LineTo
 
-Zeichnet eine Linie von der aktuellen Position bis zum, jedoch nicht einschließlich, die vom angegebenen Punkt *x* und *y* (oder *zeigen*).
+Zeichnet eine Linie von der aktuellen Position bis zum, jedoch nicht einschließlich, dem durch *x* und *y* (oder *Punkt*) angegebenen Punkt.
 
 ```
 BOOL LineTo(
@@ -4273,29 +4273,29 @@ BOOL LineTo(POINT point);
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate des Endpunkts für die Zeile an.
+Gibt die logische x-Koordinate des Endpunkts für die Zeile an.
 
 *y*<br/>
 Gibt die logische y-Koordinate des Endpunkts für die Zeile an.
 
 *point*<br/>
-Gibt den Endpunkt für die Zeile. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
+Gibt den Endpunkt für die Zeile an. Sie können entweder eine `POINT` Struktur oder ein `CPoint` -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn die Linie gezeichnet wird; andernfalls 0.
+Ungleich 0 (null), wenn die Zeile gezeichnet wird. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Linie wird mit dem ausgewählten Stift gezeichnet. Die aktuelle Position nastaven NA hodnotu *x*, *y* oder *zeigen*.
+Die Zeile wird mit dem ausgewählten Stift gezeichnet. Die aktuelle Position ist auf " *x*", " *y* " oder " *Point*" festgelegt.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).
+  Weitere Informationen finden Sie im Beispiel für [CRect:: Centerpoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).
 
-##  <a name="lptodp"></a>  CDC::LPtoDP
+##  <a name="lptodp"></a>CDC:: lptodp
 
-Logische Einheiten konvertiert in Geräteeinheiten.
+Konvertiert logische Einheiten in Geräte Einheiten.
 
 ```
 void LPtoDP(
@@ -4309,26 +4309,26 @@ void LPtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parameter
 
 *lpPoints*<br/>
-Zeigt auf ein Array von Punkten. Jeder Punkt im Array ist ein [zeigen](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.
+Verweist auf ein Array von Punkten. Jeder Punkt im Array ist eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt.
 
 *nCount*<br/>
 Die Anzahl der Punkte im Array.
 
 *lpRect*<br/>
-Verweist auf eine [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt. Dieser Parameter wird für den Regelfall der Zuordnung ein Rechteck vom logischen in Geräteeinheiten verwendet.
+Verweist auf eine [Rect](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt. Dieser Parameter wird bei der Zuordnung eines Rechtecks zwischen logischen und Geräte Einheiten verwendet.
 
 *lpSize*<br/>
-Verweist auf eine [Größe](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.
+Verweist auf eine [Größen](/windows/desktop/api/windef/ns-windef-tagsize) Struktur oder ein [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion ordnet die Koordinaten jedes Punkts oder Dimensionen mit einer Größe, von GDI logischen Koordinatensystem in einem Gerät-Koordinatensystem. Die Konvertierung hängt davon ab, der aktuelle Zuordnungsmodus und die Einstellungen des Ursprünge und Blöcke von Fenster und der Viewport des Geräts.
+Die-Funktion ordnet die Koordinaten der einzelnen Punkte oder Dimensionen einer Größe vom logischen Koordinatensystem von GDI in ein Geräte Koordinatensystem zu. Die Konvertierung hängt vom aktuellen Mapping-Modus und den Einstellungen der Ursprünge und Blöcke des Geräte Fensters und des Viewports ab.
 
-Die x- und y-Koordinaten der Punkte sind 2-Byte-Ganzzahlen mit Vorzeichen im Bereich von -32.768 bis 32.767. In Fällen, in dem der Zuordnungsmodus Werte größer als diese Grenzwerte führen würde, setzt das System die Werte -32.768 und 32.767.
+Die x-und y-Koordinaten von Punkten sind 2-Byte-Ganzzahlen mit Vorzeichen im Bereich von-32.768 bis 32.767. In Fällen, in denen der Zuordnungsmodus zu Werten führt, die diese Grenzwerte überschreiten, legt das System die Werte auf-32.768 bzw. 32.767 fest.
 
-##  <a name="lptohimetric"></a>  CDC::LPtoHIMETRIC
+##  <a name="lptohimetric"></a>CDC:: lptohimetric
 
-Rufen Sie diese Funktion zum Konvertieren von logischer Einheiten in HIMETRIC-Einheiten.
+Mit dieser Funktion können Sie logische Einheiten in HIMETRIC-Einheiten konvertieren.
 
 ```
 void LPtoHIMETRIC(LPSIZE lpSize) const;
@@ -4337,17 +4337,17 @@ void LPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parameter
 
 *lpSize*<br/>
-Verweist auf eine `SIZE` Struktur oder ein `CSize` Objekt.
+Verweist auf eine `SIZE` -Struktur oder `CSize` ein-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Funktion, wenn Sie HIMETRIC-Größen an OLE, Erteilen von Ihrer Anwendung natürliche Zuordnungsmodus konvertieren. Beachten Sie, dass die Blöcke des Fensters und der Viewport des Geräts, das Ergebnis ausgewirkt hat.
+Verwenden Sie diese Funktion, wenn Sie die himetrikgrößen an OLE übergeben, indem Sie den natürlichen Mapping-Modus Ihrer Anwendung verwenden. Beachten Sie, dass sich die Blöcke für das Fenster und den Viewport des Geräts auf das Ergebnis auswirken.
 
-Die Konvertierung wird erreicht, indem zunächst die logischen Einheiten in Pixel, die den Gerätekontext aktuelle Zuordnung Einheiten, und klicken Sie dann diese Einheiten in HIMETRIC-Einheiten konvertiert wird.
+Die Konvertierung erfolgt durch das erste Konvertieren der logischen Einheiten in Pixel mithilfe der aktuellen Mapping-Einheiten des Geräte Kontexts und das anschließende Konvertieren dieser Einheiten in HIMETRIC-Einheiten.
 
-##  <a name="m_hattribdc"></a>  CDC::m_hAttribDC
+##  <a name="m_hattribdc"></a>CDC:: m_hAttribDC
 
-Die Attribut-Gerätekontext für diesen `CDC` Objekt.
+Der Attribut Gerätekontext für dieses `CDC` -Objekt.
 
 ```
 HDC m_hAttribDC;
@@ -4355,11 +4355,11 @@ HDC m_hAttribDC;
 
 ### <a name="remarks"></a>Hinweise
 
-Standardmäßig ist dieser Gerätekontext gleich `m_hDC`. Im allgemeinen `CDC` GDI-Aufrufe, die Informationen aus dem Gerätekontext anfordern geleitet `m_hAttribDC`. Finden Sie unter den [CDC](../../mfc/reference/cdc-class.md) klassenbeschreibung Weitere Informationen zur Verwendung der folgenden beiden Kontexten.
+Standardmäßig ist dieser Gerätekontext gleich `m_hDC`. Im allgemeinen `CDC` werden GDI-Aufrufe, die Informationen aus dem Gerätekontext anfordern, `m_hAttribDC`an weitergeleitet. Weitere Informationen zur Verwendung dieser beiden Geräte Kontexte finden Sie in der Beschreibung der [CDC](../../mfc/reference/cdc-class.md) -Klasse.
 
-##  <a name="m_hdc"></a>  CDC::m_hDC
+##  <a name="m_hdc"></a>CDC:: m_hDC
 
-Die Ausgabe-Gerätekontext für diesen `CDC` Objekt.
+Der Ausgabegeräte Kontext für dieses `CDC` -Objekt.
 
 ```
 HDC m_hDC;
@@ -4367,11 +4367,11 @@ HDC m_hDC;
 
 ### <a name="remarks"></a>Hinweise
 
-In der Standardeinstellung `m_hDC` gleich `m_hAttribDC`, den andere eingebundenes Gerätekontext `CDC`. Im allgemeinen `CDC` GDI-Aufrufe, die Ausgabe zu erstellen, wechseln Sie zu der `m_hDC` Gerätekontext. Sie können initialisieren `m_hDC` und `m_hAttribDC` auf verschiedenen Geräten zu verweisen. Finden Sie unter den [CDC](../../mfc/reference/cdc-class.md) klassenbeschreibung Weitere Informationen zur Verwendung der folgenden beiden Kontexten.
+Standardmäßig `m_hDC` ist `m_hAttribDC`gleich, der andere Gerätekontext, der von `CDC`umschließt wird. Im allgemeinen `CDC` wechseln GDI-Aufrufe, die die Ausgabe erstellen `m_hDC` , in den Gerätekontext. Sie können auf verschiedene `m_hDC` Geräte `m_hAttribDC` initialisieren und auf diese verweisen. Weitere Informationen zur Verwendung dieser beiden Geräte Kontexte finden Sie in der Beschreibung der [CDC](../../mfc/reference/cdc-class.md) -Klasse.
 
-##  <a name="maskblt"></a>  CDC::MaskBlt
+##  <a name="maskblt"></a>CDC:: MaskBlt
 
-Kombiniert die Farbdaten für die Quelle und Ziel-Bitmaps, die mithilfe der angegebenen Maske und rastervorgang an.
+Kombiniert die Farbdaten für die Quell-und Ziel Bitmaps mithilfe der angegebenen Maske und des Raster Vorgangs.
 
 ```
 BOOL MaskBlt(
@@ -4391,37 +4391,37 @@ BOOL MaskBlt(
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate der oberen linken Ecke des Zielrechtecks an.
+Gibt die logische x-Koordinate der oberen linken Ecke des Ziel Rechtecks an.
 
 *y*<br/>
-Gibt die logische y-Koordinate der oberen linken Ecke des Zielrechtecks an.
+Gibt die logische y-Koordinate der oberen linken Ecke des Ziel Rechtecks an.
 
 *nWidth*<br/>
-Gibt die Breite in logischen Einheiten, der die Zielbitmap Rechteck und die Quelle an.
+Gibt die Breite (in logischen Einheiten) des Ziel Rechtecks und der Quell Bitmap an.
 
-*nHeight*<br/>
-Gibt die Höhe in logischen Einheiten, der die Zielbitmap Rechteck und die Quelle an.
+*nheight*<br/>
+Gibt die Höhe des Ziel Rechtecks und der Quell Bitmap in logischen Einheiten an.
 
 *pSrcDC*<br/>
-Gibt den Gerätekontext aus dem die Bitmap ist, kopiert werden soll. Es muss NULL, wenn die *DwRop* Parameter gibt an, ein rastervorgang, der nicht in eine Quelle enthalten ist.
+Identifiziert den Gerätekontext, von dem aus die Bitmap kopiert werden soll. Der Wert muss 0 (null) lauten, wenn der *dwrop* -Parameter einen Raster Vorgang angibt, der keine Quelle enthält.
 
 *xSrc*<br/>
-Gibt die logische X-Koordinate der oberen linken Ecke des Quellbitmaps an.
+Gibt die logische x-Koordinate der oberen linken Ecke der Quell Bitmap an.
 
 *ySrc*<br/>
-Gibt die logische y-Koordinate der oberen linken Ecke des Quellbitmaps an.
+Gibt die logische y-Koordinate der oberen linken Ecke der Quell Bitmap an.
 
 *maskBitmap*<br/>
-Identifiziert die monochrome Maske-Bitmap, die in Kombination mit der Farbbitmap in den Quellgerätekontext an.
+Gibt die Monochrom-Masken Bitmap in Kombination mit der Farb Bitmap im Quell Gerätekontext an.
 
-*xMask*<br/>
-Gibt die horizontale Pixel des Offsets für die Maskenbitmap, die gemäß der *MaskBitmap* Parameter.
+*xmask*<br/>
+Gibt den horizontalen Pixel Offset für die Maske-Bitmap an, die durch den *maskbitmap* -Parameter angegeben wird.
 
 *yMask*<br/>
-Gibt den Offset der vertikalen Pixel für die Maskenbitmap, die gemäß der *MaskBitmap* Parameter.
+Gibt den vertikalen Pixel Offset für die Maske-Bitmap an, die durch den *maskbitmap* -Parameter angegeben wird.
 
 *dwRop*<br/>
-Gibt an, Vordergrund und Hintergrund ternäre rastervorgangscode, die die Funktion verwendet, um die Kombination aus Quell-und Zieldaten zu steuern. Der Hintergrund Raster Vorgangscode wird in das hohe Word der dieser Wert das höherwertige Byte gespeichert. der Vordergrund Raster Vorgangscode wird in das hohe Word der dieser Wert das niedrige Byte gespeichert. das niedrige Word der dieser Wert wird ignoriert, und sollte Null sein. Das Makro MAKEROP4 erstellt diese Kombination aus Vordergrund- und Hintergrundfarbe rastervorgangscode. Finden Sie im Abschnitt "Hinweise" eine Beschreibung der Vordergrund- und Hintergrundfarbe im Kontext dieser Funktion. Finden Sie unter den `BitBlt` Member-Funktion eine Liste der allgemeinen rastervorgangscode.
+Gibt sowohl Vordergrund-als auch im Hintergrund ternäre Raster Vorgangs Codes an, die die Funktion verwendet, um die Kombination von Quell-und Zieldaten zu steuern. Der Code für den Hintergrund Raster Vorgang wird im hohen Byte des hohen Worts dieses Werts gespeichert. der Code des Vordergrund-Raster Vorgangs wird im unteren Byte des hohen Worts dieses Werts gespeichert. das niedrige Wort dieses Werts wird ignoriert und sollte NULL sein. Mit dem Makro MAKEROP4 werden solche Kombinationen aus Vordergrund-und Hintergrund Raster-Vorgangs Codes erstellt. Im Abschnitt "Hinweise" finden Sie eine Erörterung von Vordergrund und Hintergrund im Kontext dieser Funktion. Eine Liste `BitBlt` der allgemeinen Raster Vorgangs Codes finden Sie unter der Member-Funktion.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4429,15 +4429,15 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Der Wert 1 in der Maske gemäß *MaskBitmap* gibt an, dass von der Vordergrund Raster Vorgangscode angegeben *DwRop* an diesem Speicherort angewendet werden soll. Der Wert 0 in der Maske gibt an, dass der Hintergrund Raster Vorgangscode durch angegeben *DwRop* an diesem Speicherort angewendet werden soll. Wenn die Raster-Vorgänge mit eine Datenquelle erforderlich ist, muss der Mask-Rechteck das Quellrechteck behandelt. Wenn dies nicht der Fall ist, schlägt die Funktion fehl. Wenn die Rasteroperationen nicht mit eine Datenquelle benötigen, muss das Rechteck Maske das Zielrechteck abdecken. Wenn dies nicht der Fall ist, schlägt die Funktion fehl.
+Der Wert 1 in der durch *maskbitmap* angegebenen Maske gibt an, dass der von *dwrop* angegebene Vordergrund-Raster Vorgangs Code an dieser Stelle angewendet werden soll. Der Wert 0 in der Maske gibt an, dass der von *dwrop* angegebene Hintergrund Raster-Vorgangs Code an dieser Stelle angewendet werden soll. Wenn für die Raster Vorgänge eine Quelle erforderlich ist, muss das Masken Rechteck das Quell Rechteck abdecken. Wenn dies nicht der Fall ist, tritt bei der Funktion ein Fehler auf. Wenn für die Raster Vorgänge keine Quelle erforderlich ist, muss das Masken Rechteck das Ziel Rechteck abdecken. Wenn dies nicht der Fall ist, tritt bei der Funktion ein Fehler auf.
 
-Wenn eine Transformation Drehung oder reduzierungen für den Quellgerätekontext gilt, wenn diese Funktion aufgerufen wird, tritt ein Fehler auf. Andere Arten von Transformationen sind jedoch zulässig.
+Wenn beim Aufrufen dieser Funktion eine Drehung oder eine scherungs Transformation für den Quell Gerätekontext wirksam ist, tritt ein Fehler auf. Andere Arten von Transformationen sind jedoch zulässig.
 
-Wenn sich die Farbenformate, der die Quelle, Muster und Zielbitmaps unterscheiden, konvertiert diese Funktion des Musters oder Quellformat oder beidem unterzogen, um mit dem Zielformat überein. Wenn die Maskenbitmap nicht um eine monochrome Bitmap ist, tritt ein Fehler auf. Wenn eine erweiterte Metadatei aufgezeichnet werden wird, ein Fehler auftritt (und die Funktion gibt 0 zurück) Wenn der Quellgerätekontext eine EMF-Gerätekontext identifiziert. Nicht alle Geräte unterstützen `MaskBlt`. Es sollte eine Anwendung aufrufen `GetDeviceCaps` zu bestimmen, ob ein Gerät mit dieser Funktion unterstützt. Wenn keine Maskenbitmap angegeben wird, diese Funktion verhält sich genau so wie `BitBlt`, mit dem Vordergrund Raster Vorgangscode. Das Pixel, die in den Quellgerätekontext Bitmap in der Maske Bitmap-Zuordnung zu dem Punkt (0,0) versetzt werden. Dies ist nützlich für Fälle, in denen eine Maskenbitmap für eine Reihe von Masken enthält. eine Anwendung kann ganz einfach Anwenden eines von ihnen mit einer Maske-Blitting Aufgabe durch die Pixel-Offsets anpassen und Rechteck Größen gesendet wird, um `MaskBlt`.
+Wenn sich die Farb Formate der Quell-, Muster-und Ziel Bitmaps unterscheiden, konvertiert diese Funktion das Muster oder das Quellformat (oder beides), damit Sie dem Zielformat entspricht. Wenn es sich bei der Mask-Bitmap nicht um eine monochrome Bitmap handelt, tritt ein Fehler auf. Wenn eine erweiterte Metadatei aufgezeichnet wird, tritt ein Fehler auf (und die Funktion gibt 0 zurück), wenn der Quell Gerätekontext einen erweiterten Metadatei-Gerätekontext identifiziert. Nicht alle Geräte werden `MaskBlt`unterstützt. Eine Anwendung sollte anrufen `GetDeviceCaps` , um zu bestimmen, ob ein Gerät diese Funktion unterstützt. Wenn keine Maske-Bitmap angegeben wird, verhält sich diese Funktion `BitBlt`wie bei Verwendung des Vordergrund-Raster Vorgangs Codes. Die Pixel Offsets in der Mask-Bitmap werden dem Punkt (0,0) in der Bitmap des Quell Geräte Kontexts zugeordnet. Dies ist nützlich für Fälle, in denen eine Masken Bitmap eine Reihe von Masken enthält. eine Anwendung kann Sie problemlos auf eine Maskierungs Aufgabe anwenden, indem die Pixel Offsets und Rechteck Größen angepasst werden, die an `MaskBlt`gesendet werden.
 
-##  <a name="modifyworldtransform"></a>  CDC::ModifyWorldTransform
+##  <a name="modifyworldtransform"></a>CDC:: modifyworldtransform
 
-Ändert die globale Transformation für einen Gerätekontext, die Verwendung des angegebenen Modus.
+Ändert die globale Transformation für einen Gerätekontext unter Verwendung des angegebenen Modus.
 
 ```
 BOOL ModifyWorldTransform(
@@ -4448,26 +4448,26 @@ BOOL ModifyWorldTransform(
 ### <a name="parameters"></a>Parameter
 
 *rXform*<br/>
-Ein Verweis auf ein [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) Struktur verwendet, um die globale Transformation für den angegebenen Gerätekontext zu ändern.
+Verweis auf eine [XForm](/windows/desktop/api/wingdi/ns-wingdi-tagxform) -Struktur, die verwendet wird, um die Welt Transformation für den angegebenen Gerätekontext zu ändern.
 
 *iMode*<br/>
-Gibt an, wie die Transformationsdaten die aktuellen globalen Transformation ändert. Eine Liste der Werte, die für diesen Parameter, finden Sie unter [ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform).
+Gibt an, wie die Transformations Daten die aktuelle globale Transformation ändern. Eine Liste der Werte, die dieser Parameter annehmen kann, finden Sie unter [modifyworldtransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform).
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich NULL bei Erfolg zurück.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück.
 
-Gibt 0 bei einem Fehler zurück.
+Gibt bei einem Fehler 0 zurück.
 
-Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Um erweiterte Fehlerinformationen abzurufen, nennen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode dient als Wrapper für die Windows-GDI-Funktion [ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform).
+Diese Methode umschließt die Windows-GDI-Funktion [modifyworldtransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform).
 
-##  <a name="moveto"></a>  CDC::MoveTo
+##  <a name="moveto"></a>CDC:: muveto
 
-Verschiebt die aktuelle Position, an der vom angegebenen *x* und *y* (oder durch *zeigen*).
+Verschiebt die aktuelle Position an den durch *x* und *y* angegebenen Punkt (oder nach *Punkt*).
 
 ```
 CPoint MoveTo(
@@ -4480,25 +4480,25 @@ CPoint MoveTo(POINT point);
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate der neuen Position an.
+Gibt die logische x-Koordinate der neuen Position an.
 
 *y*<br/>
 Gibt die logische y-Koordinate der neuen Position an.
 
 *point*<br/>
-Gibt die neue Position. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
+Gibt die neue Position an. Sie können entweder eine `POINT` Struktur oder ein `CPoint` -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die x- und y-Koordinaten der vorherigen Position als einen `CPoint` Objekt.
+Die x-und y-Koordinaten der vorherigen Position als `CPoint` -Objekt.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).
+  Weitere Informationen finden Sie im Beispiel für [CRect:: Centerpoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).
 
-##  <a name="offsetcliprgn"></a>  CDC::OffsetClipRgn
+##  <a name="offsetcliprgn"></a>CDC:: offsetcliprgn
 
-Verschiebt den Ausschneidebereich des Gerätekontexts durch die angegebenen Offsets an.
+Verschiebt den Ausschneide Bereich des Geräte Kontexts um die angegebenen Offsets.
 
 ```
 int OffsetClipRgn(
@@ -4511,33 +4511,33 @@ int OffsetClipRgn(SIZE size);
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die Anzahl der logischen Einheiten zum Verschieben von links oder rechts.
+Gibt die Anzahl der logischen Einheiten an, nach links oder rechts verschoben werden soll.
 
 *y*<br/>
-Gibt die Anzahl der logischen Einheiten nach oben oder unten zu verschieben.
+Gibt die Anzahl der logischen Einheiten an, die nach oben oder unten verschoben werden.
 
 *size*<br/>
-Gibt den Betrag für den offset an.
+Gibt die zu Offset Bare Menge an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die neue Region-Typ. Eine der folgenden Werte sind möglich:
+Der Typ der neuen Region. Es kann sich um einen der folgenden Werte handeln:
 
-- Region COMPLEXREGION Clipping hat überlappende Grenzen.
+- Der complexregion-Ausschneide Bereich weist überlappende Rahmen auf.
 
-- Fehler-Gerätekontext ist ungültig.
+- Fehler beim Gerätekontext.
 
-- Clipping NULLREGION Region ist leer.
+- Der NULLREGION-Clippingbereich ist leer.
 
-- Clipping SIMPLEREGION Region verfügt über keine überlappenden Rahmen.
+- Der simpleregion-Clippingbereich hat keine überlappenden Rahmen.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion wird die Region verschoben *x* Einheiten entlang der x-Achse und *y* Einheiten entlang der y-Achse.
+Die-Funktion verschiebt die Einheiten *x* -Einheiten entlang der x-Achse und *y* -Einheiten entlang der y-Achse.
 
-##  <a name="offsetviewportorg"></a>  CDC::OffsetViewportOrg
+##  <a name="offsetviewportorg"></a>CDC:: offsetviewportor
 
-Ändert die Koordinaten des Ursprungs Viewport relativ zu den Koordinaten des aktuellen Viewports Ursprungs.
+Ändert die Koordinaten des viewportursprungs in Relation zu den Koordinaten des aktuellen viewportursprungs.
 
 ```
 virtual CPoint OffsetViewportOrg(
@@ -4548,18 +4548,18 @@ virtual CPoint OffsetViewportOrg(
 ### <a name="parameters"></a>Parameter
 
 *nWidth*<br/>
-Gibt die Anzahl der Geräteeinheiten X-Koordinate für den aktuellen Ursprung hinzu.
+Gibt die Anzahl der Geräte Einheiten an, die der x-Koordinate des aktuellen Ursprungs hinzugefügt werden sollen.
 
-*nHeight*<br/>
-Gibt die Anzahl der Geräteeinheiten y-Koordinate für den aktuellen Ursprung hinzu.
+*nheight*<br/>
+Gibt die Anzahl der Geräte Einheiten an, die der y-Koordinate des aktuellen Ursprungs hinzugefügt werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der vorherige Viewport Ursprung (in Gerätekoordinaten) als eine `CPoint` Objekt.
+Der vorherige Viewportursprung (in Geräte Koordinaten) als `CPoint` -Objekt.
 
-##  <a name="offsetwindoworg"></a>  CDC::OffsetWindowOrg
+##  <a name="offsetwindoworg"></a>CDC:: offsetwindoworg
 
-Ändert die Koordinaten des Ursprungs Fenster relativ zu den Koordinaten des aktuellen Fensters Ursprungs.
+Ändert die Koordinaten des Fenster Ursprungs in Relation zu den Koordinaten des aktuellen Fenster Ursprungs.
 
 ```
 CPoint OffsetWindowOrg(
@@ -4570,18 +4570,18 @@ CPoint OffsetWindowOrg(
 ### <a name="parameters"></a>Parameter
 
 *nWidth*<br/>
-Gibt die Anzahl der logischen Einheiten X-Koordinate für den aktuellen Ursprung hinzu.
+Gibt die Anzahl der logischen Einheiten an, die der x-Koordinate des aktuellen Ursprungs hinzugefügt werden sollen.
 
-*nHeight*<br/>
-Gibt die Anzahl der logischen Einheiten y-Koordinate für den aktuellen Ursprung hinzu.
+*nheight*<br/>
+Gibt die Anzahl der logischen Einheiten an, die der y-Koordinate des aktuellen Ursprungs hinzugefügt werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Den vorherigen Fensterursprung (in logischen Koordinaten) als eine `CPoint` Objekt.
+Der vorherige Fenster Ursprung (in logischen Koordinaten) als `CPoint` -Objekt.
 
-##  <a name="operator_hdc"></a>  CDC::Operator HDC
+##  <a name="operator_hdc"></a>CDC:: Operator-HDC
 
-Verwenden Sie diesen Operator zum Abrufen von des Gerätehandle Kontext, der die `CDC` Objekt.
+Verwenden Sie diesen Operator, um das Gerätekontext Handle des `CDC` -Objekts abzurufen.
 
 ```
 operator HDC() const;
@@ -4589,15 +4589,15 @@ operator HDC() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, das Handle des Device Context-Objekts; andernfalls NULL.
+Wenn erfolgreich, das Handle des Gerätekontext Objekts. andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Sie können das Handle verwenden, um Windows-APIs direkt aufrufen.
+Sie können das Handle verwenden, um Windows-APIs direkt aufzurufen.
 
-##  <a name="paintrgn"></a>  CDC::PaintRgn
+##  <a name="paintrgn"></a>CDC::P aintrgn
 
-Füllt den Bereich, der anhand des *PRNG* mit dem aktuellen Pinsel.
+Füllt den durch *PRGN* angegebenen Bereich mithilfe des aktuellen Pinsels.
 
 ```
 BOOL PaintRgn(CRgn* pRgn);
@@ -4606,13 +4606,13 @@ BOOL PaintRgn(CRgn* pRgn);
 ### <a name="parameters"></a>Parameter
 
 *pRgn*<br/>
-Identifiziert die Region gefüllt werden soll. Die Koordinaten für den angegebenen Bereich sind in logischen Einheiten angegeben.
+Identifiziert den Bereich, der ausgefüllt werden soll. Die Koordinaten für den angegebenen Bereich werden in logischen Einheiten angegeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).
 
-##  <a name="patblt"></a>  CDC::PatBlt
+##  <a name="patblt"></a>CDC::P atblt
 
 Erstellt ein Bitmuster auf dem Gerät.
 
@@ -4628,29 +4628,29 @@ BOOL PatBlt(
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate der oberen linken Ecke des Rechtecks, das das Muster zu erhalten.
+Gibt die logische x-Koordinate der oberen linken Ecke des Rechtecks an, das das Muster empfangen soll.
 
 *y*<br/>
-Gibt die logische y-Koordinate der oberen linken Ecke des Rechtecks, das das Muster zu erhalten.
+Gibt die logische y-Koordinate der oberen linken Ecke des Rechtecks an, das das Muster empfangen soll.
 
 *nWidth*<br/>
-Gibt die Breite (in logischen Einheiten) des Rechtecks, das das Muster zu erhalten.
+Gibt die Breite (in logischen Einheiten) des Rechtecks an, das das Muster empfangen soll.
 
-*nHeight*<br/>
-Gibt die Höhe (in logischen Einheiten) des Rechtecks, das das Muster zu erhalten.
+*nheight*<br/>
+Gibt die Höhe (in logischen Einheiten) des Rechtecks an, das das Muster empfangen soll.
 
 *dwRop*<br/>
-Gibt den rastervorgang Code. Rastervorgang Codes (-RPC-Vorgänge) definieren, wie GDI Farben in Ausgabevorgängen kombiniert, an denen ein aktueller Pinsel, eine mögliche Quellbitmap und eine Zielbitmap beteiligt sind. Dieser Parameter kann einen der folgenden Werte sein:
+Gibt den Code für den Raster Vorgang an. Raster-Operation Codes (ROPS) definieren, wie in GDI Farben in Ausgabe Vorgängen kombiniert werden, die einen aktuellen Pinsel, eine mögliche Quell Bitmap und eine Ziel Bitmap einschließen. Dieser Parameter kann einen der folgenden Werte aufweisen:
 
-- PATCOPY Kopien-Muster, das Zielbitmap.
+- Patcopy kopiert das Muster in die Ziel Bitmap.
 
-- PATINVERT kombiniert Zielbitmap mithilfe des booleschen XOR-Operators mit Muster.
+- Patinvert kombiniert die Ziel Bitmap mit einem Muster mithilfe des booleschen XOR-Operators.
 
-- DSTINVERT kehrt die Zielbitmap.
+- Dstinvert kehrt die Ziel Bitmap um.
 
-- BLACKNESS aktiviert, die Ausgabe Schwarz.
+- Blackness schaltet alle Ausgaben schwarz.
 
-- WHITENESS aktiviert, die Ausgabe weiß.
+- Mit der whitheit wird die Ausgabe weiß.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4658,13 +4658,13 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Das Muster ist eine Kombination aus den ausgewählten Pinsel und das Muster bereits auf dem Gerät. Der rastervorgang Code anhand des *DwRop* definieren, wie die Muster kombiniert werden. Die Raster-Vorgänge aufgeführt, die für diese Funktion sind eine begrenzte Teilmenge der vollständigen 256 ternäre rastervorgang-Codes. Insbesondere kann kein rastervorgang Code, der mit einer Datenquelle verweist, verwendet werden.
+Das Muster ist eine Kombination aus dem ausgewählten Pinsel und dem Muster, das sich bereits auf dem Gerät befindet. Der von *dwrop* angegebene Raster Vorgangs Code definiert, wie die Muster kombiniert werden. Die für diese Funktion aufgelisteten Raster Vorgänge sind eine begrenzte Teilmenge der vollständigen 256 ternären Raster-Operation-Codes. ein Raster Vorgangs Code, der auf eine Quelle verweist, kann insbesondere nicht verwendet werden.
 
-Nicht alle Gerätekontexte unterstützen die `PatBlt` Funktion. Bestimmt, ob für ein Gerätekontext unterstützt `PatBlt`, rufen Sie die `GetDeviceCaps` Member mit dem Index RASTERCAPS Funktion und den Rückgabewert für das Flag RC_BITBLT überprüfen.
+Die `PatBlt` -Funktion wird nicht von allen Geräte Kontexten unterstützt. Um zu ermitteln, ob ein Geräte `PatBlt`Kontext unterstützt `GetDeviceCaps` , müssen Sie die Member-Funktion mit dem RasterCaps-Index aufrufen und den Rückgabewert für das RC_BITBLT-Flag überprüfen.
 
-##  <a name="pie"></a>  CDC::PIE
+##  <a name="pie"></a>CDC::P IE
 
-Zeichnet einen kreisförmigen Keil durch Zeichnen eines elliptischen Bogens, dessen Mittelpunkt und zwei Endpunkte durch Linien miteinander verknüpft sind.
+Zeichnet einen kreisförmigen Keil durch Zeichnen eines elliptischen Bogens, dessen Mittelpunkt und zwei Endpunkte durch Linien verknüpft sind.
 
 ```
 BOOL Pie(
@@ -4686,37 +4686,37 @@ BOOL Pie(
 ### <a name="parameters"></a>Parameter
 
 *x1*<br/>
-Gibt die X-Koordinate von der linken oberen Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
+Gibt die x-Koordinate der oberen linken Ecke des umgebenden Rechtecks an (in logischen Einheiten).
 
 *y1*<br/>
-Gibt die y-Koordinate von der linken oberen Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
+Gibt die y-Koordinate der oberen linken Ecke des umgebenden Rechtecks an (in logischen Einheiten).
 
 *x2*<br/>
-Gibt die X-Koordinate der unteren rechten Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
+Gibt die x-Koordinate der unteren rechten Ecke des umgebenden Rechtecks an (in logischen Einheiten).
 
 *y2*<br/>
-Gibt die y-Koordinate der unteren rechten Ecke des umschließenden Rechtecks (in logischen Einheiten) an.
+Gibt die y-Koordinate der unteren rechten Ecke des umgebenden Rechtecks an (in logischen Einheiten).
 
 *x3*<br/>
-Gibt die X-Koordinate des Startpunkts des Bogens, (in logischen Einheiten) an. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
+Gibt die x-Koordinate des Anfangs Punkts des Bogens (in logischen Einheiten) an. Dieser Punkt muss sich nicht genau auf dem Bogen befinden.
 
 *y3*<br/>
-Gibt die y-Koordinate des Startpunkts des Bogens, (in logischen Einheiten) an. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
+Gibt die y-Koordinate des Anfangs Punkts des Bogens (in logischen Einheiten) an. Dieser Punkt muss sich nicht genau auf dem Bogen befinden.
 
 *x4*<br/>
-Gibt die X-Koordinate des Endpunkts des Bogens (in logischen Einheiten) an. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
+Gibt die x-Koordinate des Endpunkts des Bogens an (in logischen Einheiten). Dieser Punkt muss sich nicht genau auf dem Bogen befinden.
 
 *y4*<br/>
-Gibt die y-Koordinate des Endpunkts des Bogens (in logischen Einheiten) an. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen.
+Gibt die y-Koordinate des Endpunkts des Bogens an (in logischen Einheiten). Dieser Punkt muss sich nicht genau auf dem Bogen befinden.
 
 *lpRect*<br/>
-Gibt das umschließende Rechteck. Sie können entweder übergeben eine `CRect` Objekt oder ein Zeiger auf eine `RECT` Struktur für diesen Parameter.
+Gibt das umgebende Rechteck an. Sie können entweder ein `CRect` -Objekt oder einen-Zeiger an eine `RECT` -Struktur für diesen Parameter übergeben.
 
 *ptStart*<br/>
-Gibt den Anfangspunkt des Bogens. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen. Sie können entweder übergeben eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt für diesen Parameter.
+Gibt den Anfangspunkt des Bogens an. Dieser Punkt muss sich nicht genau auf dem Bogen befinden. Sie können entweder eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Struktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt für diesen Parameter übergeben.
 
 *ptEnd*<br/>
-Gibt den Endpunkt des Bogens. Dieser Punkt muss nicht genau an den Bogen mit Strichen liegen. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
+Gibt den Endpunkt des Bogens an. Dieser Punkt muss sich nicht genau auf dem Bogen befinden. Sie können entweder eine `POINT` Struktur oder ein `CPoint` -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4724,19 +4724,19 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die Mitte des Bogens steht im Mittelpunkt des umschließenden Rechtecks gemäß *X1*, *y1*, *X2*, und *y2* (oder durch *LpRect* ). Die Anfangs- und Endpunkt des Bogens angegebenen *X3*, *y3*, *X4*, und *y4* (oder durch *PtStart*und *PtEnd*).
+Der Mittelpunkt des Bogens ist die Mitte des umgebenden Rechtecks, das von *x1*, *Y1*, *x2*und *Y2* (oder *lprect*) angegeben wird. Die Anfangs-und Endpunkte des Bogens werden von *X3*, *Y3*, *X4*und *Y4* (oder durch *ptstart* und *ptend*) angegeben.
 
-Der Bogen gezeichnet wird mit dem ausgewählten Stift, gegen den Uhrzeigersinn verschieben. Zwei zusätzliche Codezeilen stammen aus jedem Endpunkt des Bogens Center. Der Bereich kreisförmigen ist mit dem aktuellen Pinsel gefüllt. Wenn *X3* gleich *X4* und *y3* gleich *y4*, das Ergebnis ist eine Ellipse mit einer einzelnen Zeile der Mittelpunkt der Ellipse auf den Zeitpunkt ( *X3*, *y3*) oder ( *X4*, *y4*).
+Der Bogen wird mit dem ausgewählten Stift gezeichnet und wechselt in die Richtung gegen den Uhrzeigersinn. Zwei weitere Zeilen werden von jedem Endpunkt zum Mittelpunkt des Bogens gezeichnet. Der kreisförmige Bereich ist mit dem aktuellen Pinsel gefüllt. Wenn *X3* gleich *X4* und *Y3* gleich *Y4*ist, ist das Ergebnis eine Ellipse mit einer einzelnen Zeile von der Mitte der Ellipse bis zum Punkt ( *X3*, *Y3*) oder ( *X4*, *Y4*).
 
-In der Abbildung gezeichnet, die von dieser Funktion bis zu erweitert, aber es umfasst nicht die rechten und unteren Koordinaten. Dies bedeutet, dass die Höhe der Abbildung *y2* - *y1* und die Breite der Abbildung ist *X2* - *X1*. Sowohl die Breite und die Höhe des umschließenden Rechtecks müssen größer als 2 Einheiten und weniger als 32.767 Einheiten sein.
+Die von dieser Funktion gezeichnete Abbildung erstreckt sich auf, aber schließt nicht die Rechte und unteren Koordinaten ein. Dies bedeutet, dass die Höhe der Abbildung *Y2* - *Y1* und die Breite der Abbildung *x2* - *x1*ist. Sowohl die Breite als auch die Höhe des umgebenden Rechtecks müssen größer als 2 Einheiten und kleiner als 32.767 Einheiten sein.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocView#37](../../mfc/codesnippet/cpp/cdc-class_9.cpp)]
 
-##  <a name="playmetafile"></a>  CDC::PlayMetaFile
+##  <a name="playmetafile"></a>CDC::P laymetafile
 
-Gibt den Inhalt der angegebenen Metadatei auf den Gerätekontext wieder.
+Gibt den Inhalt der angegebenen Metadatendatei im Gerätekontext wieder.
 
 ```
 BOOL PlayMetaFile(HMETAFILE hMF);
@@ -4749,13 +4749,13 @@ BOOL PlayMetaFile(
 ### <a name="parameters"></a>Parameter
 
 *hMF*<br/>
-Identifiziert die Metadatei wiedergegeben werden soll.
+Identifiziert die zu Wiedergabe Ende Metadatei.
 
 *hEnhMetaFile*<br/>
-Identifiziert die erweiterte Metadatei an.
+Identifiziert die erweiterte Metadatei.
 
 *lpBounds*<br/>
-Verweist auf eine `RECT` Struktur oder ein `CRect` -Objekt, die Koordinaten des umgebenden Rechtecks verwendet enthält, um das Bild anzuzeigen. Die Koordinaten werden in logischen Einheiten angegeben.
+Verweist auf eine `RECT` -Struktur oder `CRect` ein-Objekt, das die Koordinaten des umgebenden Rechtecks enthält, das zum Anzeigen des Bilds verwendet wird. Die Koordinaten werden in logischen Einheiten angegeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4763,17 +4763,17 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die Metadatei kann oft wiedergegeben werden.
+Die Metadatei kann beliebig oft wiedergegeben werden.
 
-Die zweite Version der `PlayMetaFile` zeigt das Bild in der angegebenen EMF-Datei gespeichert. Wenn eine Anwendung ruft die zweite Version der `PlayMetaFile`, Windows verwendet den Bild-Frame im EMF-Header an, um das Bild auf die verweist Rectangle Zuordnen der *LpBounds* Parameter. (Dieses Bild ist möglicherweise verbogen oder gedreht werden, indem Sie die globale Transformation in das Ausgabegerät vor dem Aufruf festlegen `PlayMetaFile`.) In der Abbildung sind die Punkte, an den Rändern des Rechtecks enthalten. Ein Bild EMF-kann abgeschnitten werden, durch die Definition des Clippingbereichs in das Ausgabegerät vor der Wiedergabe von der erweiterten Metadatei.
+Die zweite Version von `PlayMetaFile` zeigt das Bild an, das in der angegebenen Metadatei mit erweitertem Format gespeichert ist. Wenn eine Anwendung die zweite Version von `PlayMetaFile`aufruft, verwendet Windows den Bild Rahmen im Enhanced-Metafile-Header, um das Bild auf dem Rechteck zuzuordnen, auf das durch den *lpbounds* -Parameter verwiesen wird. (Dieses Bild kann durch Festlegen der Welt Transformation im Ausgabegerät vor dem Aufrufen `PlayMetaFile`von gereniert oder gedreht werden.) Punkte entlang der Kanten des Rechtecks sind im Bild enthalten. Ein erweitertes Metadateibild kann abgeschnitten werden, indem der Clippingbereich im Ausgabegerät definiert wird, bevor die erweiterte Metadatei wiedergegeben wird.
 
-Wenn eine erweiterte Metadatei eine optionale Palette enthält, erzielen eine Anwendung konsistente Farben durch Einrichten einer Farbpalette auf dem Ausgabegerät vor dem Aufrufen der zweiten Version der `PlayMetaFile`. Verwenden Sie zum Abrufen der optionalen Palette der `GetEnhMetaFilePaletteEntries` Windows-Funktion. Eine erweiterte Metadatei kann in eine neu erstellte erweiterte Metadatei eingebettet werden, durch den Aufruf der zweiten Version `PlayMetaFile` und Wiedergabe von der Quelle, die erweiterte Metadatei in den Gerätekontext für das neue erweiterte Metadatei.
+Wenn eine erweiterte Metadatei eine optionale Palette enthält, kann eine Anwendung konsistente Farben erreichen, indem eine Farbpalette auf dem Ausgabegerät eingerichtet wird, bevor die zweite `PlayMetaFile`Version von aufgerufen wird. Verwenden Sie die `GetEnhMetaFilePaletteEntries` Windows-Funktion, um die optionale Palette abzurufen. Eine erweiterte Metadatei kann in eine neu erstellte erweiterte Metadatendatei eingebettet werden, indem Sie die zweite `PlayMetaFile` Version von aufrufen und die erweiterte Metadatentabelle für die erweiterte Metadatei in den Gerätekontext herunterspielt.
 
-Der Status des Gerätekontexts Ausgabe werden von dieser Funktion beibehalten. Ein Objekt erstellt, aber nicht in der erweiterten Metadatei gelöscht wird von dieser Funktion gelöscht. Um diese Funktion zu beenden, kann eine Anwendung Aufrufen der `CancelDC` Windows-Funktion von einem anderen Thread aus, um den Vorgang zu beenden. In diesem Fall gibt die Funktion 0 (null) zurück.
+Die Zustände des Ausgabegeräte Kontexts werden von dieser Funktion beibehalten. Alle Objekte, die in der erweiterten Metadatei erstellt, aber nicht gelöscht werden, werden von dieser Funktion gelöscht. Um diese Funktion zu beenden, kann eine Anwendung die `CancelDC` Windows-Funktion von einem anderen Thread aus anrufen, um den Vorgang zu beenden. In diesem Fall gibt die Funktion 0 (null) zurück.
 
-##  <a name="plgblt"></a>  CDC::PlgBlt
+##  <a name="plgblt"></a>CDC::P lgblt
 
-Führt einen Bitblocktransfer der Farbdaten Bits auf das angegebene Rechteck, in dem Quellgerätekontext an der angegebenen Parallelogramm im angegebenen Gerätekontext aus.
+Führt eine Bitblock Übertragung der Bits von Farbdaten aus dem angegebenen Rechteck im Quell Gerätekontext in das angegebene Parallelogramm im angegebenen Gerätekontext aus.
 
 ```
 BOOL PlgBlt(
@@ -4791,28 +4791,28 @@ BOOL PlgBlt(
 ### <a name="parameters"></a>Parameter
 
 *lpPoint*<br/>
-Zeigt auf ein Array von drei Punkten in logischer Speicherplatz, der drei Ecken des Zielparallelogramms identifiziert. Der erste Punkt in dieses Array ab, der oberen rechten Ecke zum zweiten Punkt in diesem Array und dem dritten Punkt der unteren linken Ecke wird der linke obere Ecke des Quellrechtecks zugeordnet. Der unteren rechten Ecke des Quellrechtecks wird bis zum vierten implizite Punkt in der Parallelogramm zugeordnet.
+Verweist auf ein Array von drei Punkten im logischen Raum, das drei Ecken des Ziel-parallelograms identifiziert. Die linke obere Ecke des Quell Rechtecks wird dem ersten Punkt in diesem Array zugeordnet, der oberen rechten Ecke des zweiten Punkts in diesem Array und der unteren linken Ecke des dritten Punkts. Die untere rechte Ecke des Quell Rechtecks wird dem impliziten vierten Punkt im Parallelogram zugeordnet.
 
 *pSrcDC*<br/>
-Gibt den Quellgerätekontext an.
+Identifiziert den Quell Gerätekontext.
 
 *xSrc*<br/>
-Gibt die X-Koordinate, in logischen Einheiten, der die linke obere Ecke des Quellrechtecks an.
+Gibt die x-Koordinate (in logischen Einheiten) der oberen linken Ecke des Quell Rechtecks an.
 
 *ySrc*<br/>
-Gibt die y-Koordinate, in logischen Einheiten, der die linke obere Ecke des Quellrechtecks an.
+Gibt die y-Koordinate (in logischen Einheiten) der oberen linken Ecke des Quell Rechtecks an.
 
 *nWidth*<br/>
-Gibt die Breite in logischen Einheiten des Quellrechtecks an.
+Gibt die Breite des Quell Rechtecks in logischen Einheiten an.
 
-*nHeight*<br/>
-Gibt die Höhe in logischen Einheiten des Quellrechtecks an.
+*nheight*<br/>
+Gibt die Höhe des Quell Rechtecks in logischen Einheiten an.
 
 *maskBitmap*<br/>
-Gibt eine optionale monochrome Bitmap, die verwendet wird, um die Farben des Quellrechtecks zu maskieren.
+Gibt eine optionale monochrome Bitmap an, mit der die Farben des Quell Rechtecks maskiert werden.
 
-*xMask*<br/>
-Gibt die X-Koordinate der oberen linken Ecke der monochrome Bitmap an.
+*xmask*<br/>
+Gibt die x-Koordinate der oberen linken Ecke der monochrome Bitmap an.
 
 *yMask*<br/>
 Gibt die y-Koordinate der oberen linken Ecke der monochrome Bitmap an.
@@ -4823,23 +4823,23 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn das Handle der angegebenen Bitmaske gültige monochrome Bitmap bezeichnet, verwendet die Funktion diese Bitmap zum Maskieren die Bits der Farbdaten vom Quellrechtecks an.
+Wenn das angegebene Bitmasken-handle eine gültige monochrome Bitmap identifiziert, verwendet die-Funktion diese Bitmap, um die Bits der Farbdaten aus dem Quell Rechteck zu maskieren.
 
-Des vierte Vertex eines Parallelogramms (D) wird definiert, indem Sie behandeln die ersten drei Punkte (A, B und C) als Vektoren und computing D = B + C – A.
+Der vierte Scheitelpunkt des parallelograms (D) wird definiert, indem die ersten drei Punkte (A, B und c) als Vektoren und Computing D = B + C-A behandelt werden.
 
-Wenn die Bitmaske vorhanden ist, gibt einen Wert 1 in der Maske an, dass die Pixelfarbe Quelle zum Ziel kopiert werden sollen. Der Wert 0 in der Maske gibt an, dass die Pixelfarbe Ziel nicht geändert werden.
+Wenn die Bitmaske vorhanden ist, gibt der Wert 1 in der Maske an, dass die Quell Pixelfarbe in das Ziel kopiert werden soll. Der Wert 0 in der Maske gibt an, dass die Ziel Pixelfarbe nicht geändert werden soll.
 
-Ist das Rechteck Maske kleiner als die Quelle und Ziel Rechtecke, repliziert die Funktion der Maskenmuster.
+Wenn das Masken Rechteck kleiner ist als die Quell-und Ziel Rechtecke, repliziert die Funktion das Masken Muster.
 
-Skalierung, Verschiebung und Reflektion Transformationen in den Quellgerätekontext zulässig. Allerdings sind Drehungs- und reduzierungen Transformationen nicht. Wenn die Maskenbitmap nicht um eine monochrome Bitmap ist, tritt ein Fehler auf. Der streckmodus für Zielgerätekontext wird verwendet, um zu bestimmen, wie gestreckt oder komprimiert der Pixel, wenn dies erforderlich ist. Wenn eine erweiterte Metadatei aufgezeichnet wird, tritt ein Fehler auf, wenn der Quellgerätekontext eine EMF-Gerätekontext identifiziert.
+Skalierungs-, Übersetzungs-und reflektionstransformationen sind im Quell Gerätekontext zulässig. Allerdings sind Drehung und schscheren Transformationen nicht. Wenn es sich bei der Mask-Bitmap nicht um eine monochrome Bitmap handelt, tritt ein Fehler auf. Der streckungs Modus für den Zielgeräte Kontext wird verwendet, um zu bestimmen, wie die Pixel gestreckt oder komprimiert werden, falls dies erforderlich ist. Wenn eine erweiterte Metadatei aufgezeichnet wird, tritt ein Fehler auf, wenn der Quell Gerätekontext einen erweiterten Metadatei-Gerätekontext identifiziert.
 
-Die Zielkoordinaten werden gemäß dem Zielgerätekontext transformiert. Die Quellkoordinaten werden gemäß dem Quellgerätekontext transformiert. Verfügt die Quelle Transformation eine Drehung oder Schub, wird ein Fehler zurückgegeben. Wenn die Rechtecke Ziel- und Quellserver nicht dasselbe Farbformat verfügen `PlgBlt` Quellrechtecks Zielrechtecks entsprechend konvertiert. Nicht alle Geräte unterstützen `PlgBlt`. Weitere Informationen finden Sie unter der Beschreibung der Funktion Raster RC_BITBLT in die `CDC::GetDeviceCaps` Member-Funktion.
+Die Zielkoordinaten werden gemäß dem Zielgerätekontext transformiert. Die Quellkoordinaten werden gemäß dem Quellgerätekontext transformiert. Wenn die Quell Transformation über eine Drehung oder eine Schere verfügt, wird ein Fehler zurückgegeben. Wenn die Ziel-und Quell Rechtecke nicht das gleiche Farb Format aufweisen `PlgBlt` , konvertiert das Quell Rechteck so, dass es mit dem Ziel Rechteck übereinstimmt. Nicht alle Geräte werden `PlgBlt`unterstützt. Weitere Informationen finden Sie in der Beschreibung der RC_BITBLT-Rasterfunktion in der `CDC::GetDeviceCaps` Member-Funktion.
 
-Wenn die Quelle und Ziel-Gerätekontexte nicht kompatible Geräte darstellen `PlgBlt` gibt einen Fehler zurück.
+Wenn die Quell-und Zielgeräte Kontexte nicht kompatible Geräte `PlgBlt` darstellen, gibt einen Fehler zurück.
 
-##  <a name="polybezier"></a>  CDC::PolyBezier
+##  <a name="polybezier"></a>CDC::P olybezier
 
-Zeichnet eine oder mehrere Bzier Splines an.
+Zeichnet eine oder mehrere Bzier-Splines.
 
 ```
 BOOL PolyBezier(
@@ -4850,10 +4850,10 @@ BOOL PolyBezier(
 ### <a name="parameters"></a>Parameter
 
 *lpPoints*<br/>
-Verweist auf ein Array von [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) -Datenstrukturen, enthalten die Endpunkte und die Punkte der Spline(s) steuern.
+Verweist auf ein Array von [Point](/windows/desktop/api/windef/ns-windef-tagpoint) -Datenstrukturen, die die Endpunkte und Kontrollpunkte der Spline (n) enthalten.
 
 *nCount*<br/>
-Gibt die Anzahl der Punkte in der *LpPoints* Array. Dieser Wert muss eine mehr als drei Mal die Anzahl der Splines gezeichnet werden, da für jeden Bzier Spline erforderlich ist, zwei Kontrollpunkten und ein Endpunkt und den anfänglichen Spline erfordert einen zusätzlichen Ausgangspunkt.
+Gibt die Anzahl der Punkte im *lppoints* -Array an. Dieser Wert muss ein Vielfaches der Anzahl der zu zeichnende Splines sein, da jede Bzier-Spline zwei Kontrollpunkte und einen Endpunkt erfordert, und für die anfängliche Spline ist ein zusätzlicher Ausgangspunkt erforderlich.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4861,13 +4861,13 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion zeichnet kubische Bzier Splines mithilfe der Endpunkte und die Control-Punkte, die gemäß der *LpPoints* Parameter. Der erste Spline wird vom ersten Punkt bis zum vierten Punkt mithilfe der zweite und dritte Punkt als Kontrollpunkte gezeichnet. Jede nachfolgende Spline in der Sequenz benötigt genau drei weitere Punkte: den Endpunkt des vorherigen Splines dient als Ausgangspunkt für die nächsten beiden Punkte in der Sequenz sind Kontrollpunkte und die dritte ist der Endpunkt.
+Diese Funktion zeichnet kubische Bzier-Splines mithilfe der Endpunkte und Steuerungs Punkte, die durch den *lppoints* -Parameter angegeben werden. Der erste Spline wird vom ersten Punkt zum vierten Punkt gezeichnet, indem der zweite und dritte Punkt als Kontrollpunkte verwendet werden. Jeder nachfolgende Spline in der Sequenz benötigt genau drei weitere Punkte: der Endpunkt der vorherigen Spline wird als Ausgangspunkt verwendet, die nächsten zwei Punkte in der Sequenz sind Steuerungs Punkte, und der dritte ist der Endpunkt.
 
-Die aktuelle Position ist weder verwendet noch aktualisiert, indem die `PolyBezier` Funktion. In der Abbildung ist nicht ausgefüllt. Diese Funktion zeichnet Zeilen mithilfe des aktuellen Stifts.
+Die aktuelle Position wird nicht von der `PolyBezier` -Funktion verwendet oder aktualisiert. Die Abbildung ist nicht ausgefüllt. Diese Funktion zeichnet Zeilen mithilfe des aktuellen Stifts.
 
-##  <a name="polybezierto"></a>  CDC::PolyBezierTo
+##  <a name="polybezierto"></a>CDC::P olybezierto
 
-Zeichnet eine oder mehrere Bzier Splines an.
+Zeichnet eine oder mehrere Bzier-Splines.
 
 ```
 BOOL PolyBezierTo(
@@ -4878,10 +4878,10 @@ BOOL PolyBezierTo(
 ### <a name="parameters"></a>Parameter
 
 *lpPoints*<br/>
-Verweist auf ein Array von [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) verweist-Datenstrukturen, die die Endpunkte und das Steuerelement enthält.
+Verweist auf ein Array von [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Datenstrukturen, das die Endpunkte und die Steuerungs Punkte enthält.
 
 *nCount*<br/>
-Gibt die Anzahl der Punkte in der *LpPoints* Array. Dieser Wert muss drei Mal die Anzahl der Splines gezeichnet werden soll, sein, da für jeden Bzier Spline zwei Kontrollpunkten und ein Endpunkt erforderlich ist.
+Gibt die Anzahl der Punkte im *lppoints* -Array an. Dieser Wert muss dreimal so oft wie die Anzahl der zu Zeichenden Splines sein, da jede Bzier-Spline zwei Steuerungs Punkte und einen Endpunkt erfordert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4889,15 +4889,15 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion zeichnet kubische Bzier Splines unter Verwendung von der Control-Punkte, die gemäß der *LpPoints* Parameter. Der erste Spline wird von der aktuellen Position dem dritten Punkt mit die ersten beiden Punkte als Kontrollpunkte gezeichnet. Für jeden nachfolgenden Spline die Funktion benötigt genau drei weitere Punkte, und verwendet den Endpunkt des vorherigen Splines als Ausgangspunkt für die nächsten. `PolyBezierTo` Verschiebt die aktuelle Position zum Endpunkt für den letzten Bzier Spline. In der Abbildung ist nicht ausgefüllt. Diese Funktion zeichnet Zeilen mithilfe des aktuellen Stifts.
+Diese Funktion zeichnet kubische Bzier-Splines mithilfe der durch den *lppoints* -Parameter angegebenen Steuerpunkte. Der erste Spline wird von der aktuellen Position bis zum dritten Punkt gezeichnet, indem die ersten beiden Punkte als Kontrollpunkte verwendet werden. Für jede nachfolgende Spline benötigt die Funktion genau drei weitere Punkte, und der Endpunkt der vorherigen Spline wird als Ausgangspunkt für die nächste verwendet. `PolyBezierTo`Verschiebt die aktuelle Position an den Endpunkt der letzten Bzier-Spline. Die Abbildung ist nicht ausgefüllt. Diese Funktion zeichnet Zeilen mithilfe des aktuellen Stifts.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CDC:: beginpath](#beginpath).
+  Sehen Sie sich das Beispiel für [CDC:: beginpath](#beginpath)an.
 
-##  <a name="polydraw"></a>  CDC::PolyDraw
+##  <a name="polydraw"></a>CDC::P olydraw
 
-Zeichnet eine Reihe von Liniensegmenten und Bzier Splines.
+Zeichnet eine Reihe von Liniensegmenten und Bzier-Splines.
 
 ```
 BOOL PolyDraw(
@@ -4909,27 +4909,27 @@ BOOL PolyDraw(
 ### <a name="parameters"></a>Parameter
 
 *lpPoints*<br/>
-Verweist auf ein Array von [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) -Datenstrukturen, die für die einzelnen Endpunkte enthält, die Zeile Segment und die Endpunkte und die Kontrollpunkte für jeden Bzier Spline.
+Verweist auf ein Array von [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Datenstrukturen, das die Endpunkte für jedes Liniensegment und die Endpunkte und Steuerungs Punkte für jede Bzier-Spline enthält.
 
 *lpTypes*<br/>
-Zeigt auf ein Array, der angibt, wie jeder Punkt in der *LpPoints* Array verwendet wird. Folgende Werte sind möglich:
+Verweist auf ein Array, das angibt, wie die einzelnen Punkte im *lppoints* -Array verwendet werden. Folgende Werte sind möglich:
 
-- PT_MOVETO gibt an, dass es sich bei diesem Zeitpunkt nicht zusammenhängende Abbildung beginnt. Dieser Punkt wird die neue Position.
+- PT_MOVETO gibt an, dass dieser Punkt eine Zusammenhang lose Abbildung startet. Dieser Punkt wird zur neuen aktuellen Position.
 
-- PT_LINETO gibt an, die eine Zeile ist, von der aktuellen Position an diesem Punkt ist gezeichnet werden soll, klicken Sie dann die neue Position wird.
+- PT_LINETO gibt an, dass eine Linie von der aktuellen Position bis zu diesem Punkt gezeichnet werden soll, die dann zur neuen aktuellen Position wird.
 
-- PT_BEZIERTO gibt an, dass es sich bei dieser Punkt einer Steuerungspunkts für das oder der Endpunkt für ein Spline Bzier ist.
+- PT_BEZIERTO gibt an, dass dieser Punkt ein Steuerungspunkt oder Endpunkt für eine Bzier-Spline ist.
 
-PT_BEZIERTO Typen an, die immer in Sätze von drei auftreten. Die aktuelle Position definiert den Ausgangspunkt für die Bzier Spline. Die ersten beiden PT_BEZIERTO Punkte sind die Steuerpunkte, und der dritte PT_BEZIERTO-Punkt ist den Endpunkt. Der Endpunkt wird die neue Position. Wenn keine drei aufeinander folgende PT_BEZIERTO Punkte sind, tritt ein Fehler auf.
+PT_BEZIERTO-Typen treten immer in drei Sätzen auf. Die aktuelle Position definiert den Anfangspunkt für den Bzier-Spline. Die ersten beiden PT_BEZIERTO Punkte sind die Steuerungs Punkte, und der dritte PT_BEZIERTO Punkt ist der Endpunkt. Der Endpunkt wird zur neuen aktuellen Position. Wenn es nicht drei aufeinander folgende PT_BEZIERTO Punkte gibt, tritt ein Fehler auf.
 
-   Ein PT_LINETO oder PT_BEZIERTO Typ mit der folgenden Konstanten mit dem bitweisen Operator kombiniert werden kann, oder um anzugeben, dass es sich bei der entsprechende Punkt der letzte Punkt in der Abbildung und in der Abbildung ist geschlossen werden:
+   Ein PT_LINETO-oder PT_BEZIERTO-Typ kann mit der folgenden Konstante kombiniert werden, indem der bitweise Operator oder verwendet wird, um anzugeben, dass der entsprechende Punkt der letzte Punkt in einer Abbildung ist und die Abbildung geschlossen ist:
 
-- PT_CLOSEFIGURE gibt an, die in der Abbildung wird automatisch geschlossen, nachdem die PT_LINETO oder PT_BEZIERTO-Typ für diesen Punkt erfolgt. An diesem Punkt ist eine Linie gezeichnet, um die neuesten PT_MOVETO oder `MoveTo` zeigen.
+- PT_CLOSEFIGURE gibt an, dass die Abbildung automatisch geschlossen wird, nachdem der PT_LINETO-oder PT_BEZIERTO-Typ für diesen Punkt erreicht wurde. Eine Linie wird von diesem Punkt zum letzten PT_MOVETO oder `MoveTo` Punkt gezeichnet.
 
-   Dieses Flag ist kombiniert mit dem PT_LINETO-Typ für eine Zeile oder mit dem PT_BEZIERTO Endpunkt für eine Splinekurve Bzier unter Verwendung des bitweisen **OR** Operator. Die aktuelle Position ist auf den Endpunkt, der die abschließende Zeile festgelegt.
+   Dieses Flag wird mit dem PT_LINETO-Typ für eine Zeile oder mit dem PT_BEZIERTO-Typ des Endpunkts für eine Bzier-Spline kombiniert, indem der bitweise **or** -Operator verwendet wird. Die aktuelle Position wird auf den Endpunkt der schließenden Zeile festgelegt.
 
 *nCount*<br/>
-Gibt die Gesamtanzahl der Punkte in der *LpPoints* identisch mit der Anzahl der Bytes im array der *LpTypes* Array.
+Gibt die Gesamtzahl der Punkte im *lppoints* -Array an, die mit der Anzahl der Bytes im *lptypes* -Array identisch sind.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4937,15 +4937,15 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion kann verwendet werden, zum Zeichnen von nicht zusammenhängenden Zahlen anstelle von aufeinander folgende Aufrufe von `CDC::MoveTo`, `CDC::LineTo`, und `CDC::PolyBezierTo` Memberfunktionen. Der Linien und Splines unter Verwendung des aktuellen Stifts gezeichnet werden, und Zahlen werden nicht aufgefüllt. Es ist der aktive Pfad durch den Aufruf gestartet der `CDC::BeginPath` Memberfunktion `PolyDraw` fügt dem Pfad hinzu. Die Punkte, die in enthaltenen der *LpPoints* Array und im *LpTypes* gibt an, ob jeder Punkt gehört eine `CDC::MoveTo`, `CDC::LineTo`, oder ein `CDC::BezierTo` Vorgang. Es ist auch möglich, Formen zu schließen. Diese Funktion aktualisiert die aktuelle Position.
+Diese Funktion kann verwendet werden, um nicht zusammenhängende Abbildungen anstelle von aufeinander folgenden Aufrufen `CDC::MoveTo`von `CDC::LineTo`-, `CDC::PolyBezierTo` -und-Member-Funktionen zu zeichnen. Die Linien und Splines werden mithilfe des aktuellen Stifts gezeichnet, und die Abbildungen werden nicht aufgefüllt. Wenn ein aktiver Pfad durch Aufrufen der `CDC::BeginPath` Member-Funktion gestartet wird, `PolyDraw` wird dem Pfad hinzugefügt. Die Punkte, die im *lppoints* -Array und in *lptypes* enthalten sind `CDC::MoveTo`, geben an, ob jeder Punkt Teil eines-, `CDC::LineTo`-oder `CDC::BezierTo` -Vorgangs ist. Es ist auch möglich, die Abbildungen zu schließen. Diese Funktion aktualisiert die aktuelle Position.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CDC:: beginpath](#beginpath).
+  Sehen Sie sich das Beispiel für [CDC:: beginpath](#beginpath)an.
 
-##  <a name="polygon"></a>  CDC::Polygon
+##  <a name="polygon"></a>CDC::P olygon
 
-Zeichnet ein Vieleck, bestehend aus zwei oder mehr Punkten (Scheitelpunkte) von Zeilen, die mit dem aktuellen Stift verbunden.
+Zeichnet mithilfe des aktuellen Stifts ein Polygon, das aus zwei oder mehr Punkten (Vertices) besteht, die durch Linien verbunden sind.
 
 ```
 BOOL Polygon(
@@ -4956,10 +4956,10 @@ BOOL Polygon(
 ### <a name="parameters"></a>Parameter
 
 *lpPoints*<br/>
-Zeigt auf ein Array von Punkten, die die Eckpunkte des Vielecks angibt. Jeder Punkt im Array ist ein `POINT` Struktur oder ein `CPoint` Objekt.
+Verweist auf ein Array von Punkten, das die Scheitel Punkte des Polygons angibt. Jeder Punkt im Array ist eine `POINT` Struktur oder ein `CPoint` -Objekt.
 
 *nCount*<br/>
-Gibt die Anzahl der Scheitelpunkte im Array an.
+Gibt die Anzahl der Scheitel Punkte im Array an.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -4967,17 +4967,17 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Das System des Polygons wird automatisch geschlossen, falls erforderlich, durch eine Linie zwischen dem letzten Scheitelpunkt mit dem ersten.
+Das System schließt das Polygon ggf. automatisch, indem eine Linie vom letzten Scheitelpunkt zum ersten gezeichnet wird.
 
-Der aktuelle Polygon-füllen-Modus kann abgerufen oder festgelegt werden, mithilfe der `GetPolyFillMode` und `SetPolyFillMode` Memberfunktionen.
+Der aktuelle Polygon-Füllungs Modus kann mithilfe der `GetPolyFillMode` -und- `SetPolyFillMode` Member-Funktionen abgerufen oder festgelegt werden.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocView#38](../../mfc/codesnippet/cpp/cdc-class_10.cpp)]
 
-##  <a name="polyline"></a>  CDC::Polyline
+##  <a name="polyline"></a>CDC::P olyline
 
-Zeichnet eine Reihe von Liniensegmenten, die zwischen den Punkten, die anhand des *LpPoints*.
+Zeichnet eine Reihe von Liniensegmenten, die die von *lppoints*angegebenen Punkte verbinden.
 
 ```
 BOOL Polyline(
@@ -4988,7 +4988,7 @@ BOOL Polyline(
 ### <a name="parameters"></a>Parameter
 
 *lpPoints*<br/>
-Verweist auf ein Array von `POINT` Strukturen oder `CPoint` Objekten verbunden werden.
+Verweist auf ein Array von `POINT` Strukturen oder `CPoint` Objekten, die verbunden werden sollen.
 
 *nCount*<br/>
 Gibt die Anzahl der Punkte im Array an. Dieser Wert muss mindestens 2 sein.
@@ -4999,13 +4999,13 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die Zeilen stammen aus den ersten Punkt über die nachfolgenden Punkte, die mit dem aktuellen Stift. Im Gegensatz zu den `LineTo` Member-Funktion, die `Polyline` Funktion weder verwendet noch aktualisiert die aktuelle Position.
+Die Zeilen werden vom ersten Punkt durch nachfolgende Punkte mithilfe des aktuellen Stifts gezeichnet. Anders als `LineTo` bei der Member- `Polyline` Funktion verwendet die-Funktion weder die aktuelle noch die aktuelle Position.
 
-Weitere Informationen finden Sie unter [Polylinie](/windows/desktop/api/wingdi/nf-wingdi-polyline) im Windows SDK.
+Weitere Informationen finden Sie unter [Polyline](/windows/desktop/api/wingdi/nf-wingdi-polyline) in der Windows SDK.
 
-##  <a name="polylineto"></a>  CDC::PolylineTo
+##  <a name="polylineto"></a>CDC::P olylineto
 
-Zeichnet eine oder mehrere gerade Linien an.
+Zeichnet eine oder mehrere gerade Linien.
 
 ```
 BOOL PolylineTo(
@@ -5016,7 +5016,7 @@ BOOL PolylineTo(
 ### <a name="parameters"></a>Parameter
 
 *lpPoints*<br/>
-Verweist auf ein Array von [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) -Datenstrukturen, die den Vertices für die Zeile enthält.
+Verweist auf ein Array von [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Datenstrukturen, das die Scheitel Punkte der Zeile enthält.
 
 *nCount*<br/>
 Gibt die Anzahl der Punkte im Array an.
@@ -5027,11 +5027,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Wird eine Linie von der aktuellen Position und dem ersten Punkt, der gemäß der *LpPoints* Parameter, indem der aktuelle Stift. Für jede zusätzliche Zeile zeichnet die Funktion aus den Endpunkt der vorherigen Zeile zum nächsten Punkt gemäß *LpPoints*. `PolylineTo` Verschiebt die aktuelle Position zum Endpunkt der letzten Zeile an. Wenn die Liniensegmente gezeichnet, die von dieser Funktion eine geschlossene Form bilden, wird in der Abbildung nicht ausgefüllt.
+Eine Linie wird von der aktuellen Position bis zum ersten Punkt gezeichnet, der durch den *lppoints* -Parameter mithilfe des aktuellen Stifts angegeben wird. Für jede weitere Zeile zeichnet die Funktion vom Endpunkt der vorherigen Zeile bis zum nächsten Punkt, der von *lppoints*angegeben wird. `PolylineTo`Verschiebt die aktuelle Position an den Endpunkt der letzten Zeile. Wenn die von dieser Funktion gezeichneten Liniensegmente eine geschlossene Abbildung bilden, wird die Abbildung nicht ausgefüllt.
 
-##  <a name="polypolygon"></a>  CDC::PolyPolygon
+##  <a name="polypolygon"></a>CDC::P olypolygon
 
-Erstellt zwei oder mehreren Polygonen, die mit den aktuellen Modus des Polygons füllenden gefüllt sind.
+Erstellt zwei oder mehr Polygone, die mit dem aktuellen Polygon Füll Modus gefüllt werden.
 
 ```
 BOOL PolyPolygon(
@@ -5043,13 +5043,13 @@ BOOL PolyPolygon(
 ### <a name="parameters"></a>Parameter
 
 *lpPoints*<br/>
-Verweist auf ein Array von `POINT` Strukturen oder `CPoint` Objekte, die den Vertices für die Polygone definieren.
+Verweist auf ein Array von `POINT` -Strukturen `CPoint` oder-Objekten, die die Scheitel Punkte der Polygone definieren.
 
 *lpPolyCounts*<br/>
-Zeigt auf ein Array von ganzen Zahlen, von denen jeder gibt an, die Anzahl der Punkte in einem der Polygone in der *LpPoints* Array.
+Verweist auf ein Array von ganzen Zahlen, von denen jedes die Anzahl der Punkte in einem der Polygone im *lppoints* -Array angibt.
 
 *nCount*<br/>
-Die Anzahl der Einträge in der *LpPolyCounts* Array. Diese Zahl gibt die Anzahl von Polygonen, gezeichnet werden soll. Dieser Wert muss mindestens 2 sein.
+Die Anzahl der Einträge im *lppolycounts* -Array. Diese Zahl gibt die Anzahl von Polygonen an, die gezeichnet werden sollen. Dieser Wert muss mindestens 2 sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -5057,15 +5057,15 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die Polygone können zusammenhanglos oder überlappende sein.
+Die Polygone können zusammen hanglos oder überlappend sein.
 
-Jedes Polygon angegeben, die in einem Aufruf der `PolyPolygon` Funktion muss geschlossen werden. Im Gegensatz zu Polygonen erstellt die `Polygon` Member-Funktion, die Polygone, die von erstellten `PolyPolygon` werden nicht automatisch geschlossen.
+Jedes in einem Aufrufe der `PolyPolygon` Funktion angegebene Polygon muss geschlossen werden. Im Gegensatz zu Polygonen `Polygon` , die von der-Member-Funktion `PolyPolygon` erstellt wurden, werden die von erstellten Polygone nicht automatisch geschlossen.
 
-Die Funktion erstellt zwei oder mehreren Polygonen. Um ein einzelnes Polygon zu erstellen, eine Anwendung verwenden, sollten die `Polygon` Member-Funktion.
+Die-Funktion erstellt zwei oder mehr Polygone. Zum Erstellen eines einzelnen Polygons sollte eine Anwendung die `Polygon` Member-Funktion verwenden.
 
-Der aktuelle Polygon-füllen-Modus kann abgerufen oder festgelegt werden, mithilfe der `GetPolyFillMode` und `SetPolyFillMode` Memberfunktionen.
+Der aktuelle Polygon-Füllungs Modus kann mithilfe der `GetPolyFillMode` -und- `SetPolyFillMode` Member-Funktionen abgerufen oder festgelegt werden.
 
-##  <a name="polypolyline"></a>  CDC::PolyPolyline
+##  <a name="polypolyline"></a>CDC::P olypolyline
 
 Zeichnet mehrere Reihe verbundener Liniensegmente.
 
@@ -5079,13 +5079,13 @@ BOOL PolyPolyline(
 ### <a name="parameters"></a>Parameter
 
 *lpPoints*<br/>
-Zeigt auf ein Array von Strukturen, die den Vertices für die Polylinien enthält. Die Polylinien werden nacheinander angegeben.
+Verweist auf ein Array von-Strukturen, das die Scheitel Punkte der Polylinien enthält. Die Polylinien werden nacheinander angegeben.
 
 *lpPolyPoints*<br/>
-Verweist auf ein Array von Variablen gibt die Anzahl der Punkte in der *LpPoints* Array für das entsprechende Polygon. Jeder Eintrag muss größer als oder gleich 2 sein.
+Verweist auf ein Array von Variablen, die die Anzahl der Punkte im *lppoints* -Array für das entsprechende Polygon angeben. Jeder Eintrag muss größer oder gleich 2 sein.
 
 *nCount*<br/>
-Gibt die Gesamtanzahl der Zahlen in der *LpPolyPoints* Array.
+Gibt die Gesamtanzahl der Anzahlen im *lppolypoints* -Array an.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -5093,11 +5093,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die Liniensegmente werden mit dem aktuellen Stift gezeichnet. Die Abbildungen, die durch die Segmente gebildet werden nicht aufgefüllt. Die aktuelle Position ist weder verwendet noch von dieser Funktion aktualisiert.
+Die Liniensegmente werden mithilfe des aktuellen Stifts gezeichnet. Die von den Segmenten geformten Abbildungen werden nicht aufgefüllt. Die aktuelle Position wird von dieser Funktion weder verwendet noch aktualisiert.
 
-##  <a name="ptvisible"></a>  CDC::PtVisible
+##  <a name="ptvisible"></a>CDC::P tvisible
 
-Bestimmt, ob der angegebene Punkt innerhalb der Ausschneidebereich des Gerätekontexts befindet.
+Bestimmt, ob sich der angegebene Punkt innerhalb des Clippingbereichs des Geräte Kontexts befindet.
 
 ```
 virtual BOOL PtVisible(
@@ -5110,21 +5110,21 @@ BOOL PtVisible(POINT point) const;
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate des Punkts an.
+Gibt die logische x-Koordinate des Punkts an.
 
 *y*<br/>
 Gibt die logische y-Koordinate des Punkts an.
 
 *point*<br/>
-Legt den Punkt in logischen Koordinaten zu überprüfen. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
+Gibt den Punkt an, an dem logische Koordinaten eingecheckt werden sollen. Sie können entweder eine `POINT` Struktur oder ein `CPoint` -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der angegebene Punkt befindet sich innerhalb des Clippingbereichs; andernfalls 0.
+Ungleich 0 (null), wenn sich der angegebene Punkt innerhalb des Ausschneide Bereichs befindet. andernfalls 0.
 
-##  <a name="queryabort"></a>  CDC::QueryAbort
+##  <a name="queryabort"></a>CDC:: QueryAbort
 
-Ruft die Abort-Funktion installiert, indem Sie die [SetAbortProc](#setabortproc) Memberfunktion für eine Anwendung zum Drucken und Abfragen, ob das Drucken beendet werden soll.
+Ruft die Abbruch Funktion auf, die von der [SETABORTPROC](#setabortproc) -Member-Funktion für eine Druckanwendung installiert wird, und fragt ab, ob der Druckvorgang beendet werden soll.
 
 ```
 BOOL QueryAbort() const;
@@ -5132,11 +5132,11 @@ BOOL QueryAbort() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der zurückgegebene Wert ist ungleich NULL, wenn Drucken fortgesetzt werden soll oder wenn kein Abbruch Prozedur vorhanden ist. Es ist 0, wenn der Druckauftrag beendet werden sollen. Der zurückgegebene Wert wird durch die Abort-Funktion bereitgestellt.
+Der Rückgabewert ist ungleich 0 (null), wenn der Druckvorgang fortgesetzt werden soll, oder, wenn keine Abbruch Prozedur vorliegt. Der Wert ist 0, wenn der Druckauftrag beendet werden soll. Der Rückgabewert wird von der Abbruch-Funktion bereitgestellt.
 
-##  <a name="realizepalette"></a>  CDC::RealizePalette
+##  <a name="realizepalette"></a>CDC:: RealizePalette
 
-Ordnet Einträge aus der aktuellen logischen Palette der Systempalette an.
+Ordnet Einträge aus der aktuellen logischen Palette der Systempalette zu.
 
 ```
 UINT RealizePalette();
@@ -5144,17 +5144,17 @@ UINT RealizePalette();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt an, wie viele Einträge in der logischen Palette auf andere Einträge in der Systempalette zugeordnet wurden. Dies stellt die Anzahl von Einträgen, die diese Funktion neu zugeordnet, um Änderungen in der Systempalette aufzunehmen, seit Sie zuletzt die logische Palette realisiert wurde.
+Gibt an, wie viele Einträge in der logischen Palette anderen Einträgen in der Systempalette zugeordnet wurden. Dies entspricht der Anzahl der Einträge, die von dieser Funktion neu zugeordnet wurden, um Änderungen an der Systempalette seit der letzten Realisierung der logischen Palette zu unterstützen.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine logische Farbpalette fungiert als Puffer zwischen Farbe-Intensive Anwendungen und das System, dem eine Anwendung verwenden, wie viele Farben je nach Bedarf, ohne Beeinträchtigung durch einen eigenen Farben angezeigt oder mit Farben, die von anderen Fenstern angezeigt.
+Eine logische Farbpalette fungiert als Puffer zwischen farbintensiven Anwendungen und dem System, sodass eine Anwendung beliebig viele Farben verwenden kann, ohne die eigenen angezeigten Farben oder Farben zu beeinträchtigen, die von anderen Fenstern angezeigt werden.
 
-Wenn ein Fenster hat, den Eingabefokus und ruft `RealizePalette`, Windows wird sichergestellt, dass das Fenster alle angeforderten Farben, bis die maximale Anzahl gleichzeitig zur Verfügung gestellt, auf dem Bildschirm angezeigt werden. Windows zeigt auch die Farben des Fensters Palette vom Abgleich mit der verfügbaren Farben nicht gefunden.
+Wenn ein Fenster den Eingabefokus besitzt und aufruft `RealizePalette`, stellt Windows sicher, dass im Fenster alle angeforderten Farben angezeigt werden, bis die maximale Anzahl gleichzeitig auf dem Bildschirm verfügbar ist. Windows zeigt außerdem Farben an, die nicht in der Palette des Fensters gefunden wurden, indem Sie Sie mit verfügbaren Farben vergleichen.
 
-Darüber hinaus entspricht Windows die Farben von inaktiven Fenstern, die die Funktion so weit wie möglich auf die verfügbaren Farben aufrufen angefordert. Dies reduziert wesentlich unerwünschte Änderungen an der Farben in inaktiven Fenstern angezeigt.
+Außerdem stimmt Windows mit den von inaktiven Fenstern angeforderten Farben überein, die die Funktion so nah wie möglich an die verfügbaren Farben angleichen. Dadurch werden unerwünschte Änderungen in den in inaktiven Fenstern angezeigten Farben erheblich reduziert.
 
-##  <a name="rectangle"></a>  CDC::Rectangle
+##  <a name="rectangle"></a>CDC:: Rechteck
 
 Zeichnet ein Rechteck mit dem aktuellen Stift.
 
@@ -5171,19 +5171,19 @@ BOOL Rectangle(LPCRECT lpRect);
 ### <a name="parameters"></a>Parameter
 
 *x1*<br/>
-Gibt die X-Koordinate von der linken oberen Ecke des Rechtecks (in logischen Einheiten) an.
+Gibt die x-Koordinate der oberen linken Ecke des Rechtecks an (in logischen Einheiten).
 
 *y1*<br/>
-Gibt die y-Koordinate von der linken oberen Ecke des Rechtecks (in logischen Einheiten) an.
+Gibt die y-Koordinate der oberen linken Ecke des Rechtecks an (in logischen Einheiten).
 
 *x2*<br/>
-Gibt die X-Koordinate von der unteren rechten Ecke des Rechtecks (in logischen Einheiten) an.
+Gibt die x-Koordinate der unteren rechten Ecke des Rechtecks (in logischen Einheiten) an.
 
 *y2*<br/>
-Gibt die y-Koordinate von der unteren rechten Ecke des Rechtecks (in logischen Einheiten) an.
+Gibt die y-Koordinate der unteren rechten Ecke des Rechtecks (in logischen Einheiten) an.
 
 *lpRect*<br/>
-Gibt das Rechteck in logischen Einheiten. Sie können entweder übergeben eine `CRect` Objekt oder ein Zeiger auf eine `RECT` Struktur für diesen Parameter.
+Gibt das Rechteck in logischen Einheiten an. Sie können entweder ein `CRect` -Objekt oder einen-Zeiger an eine `RECT` -Struktur für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -5193,15 +5193,15 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 Das Innere des Rechtecks wird mit dem aktuellen Pinsel gefüllt.
 
-Das Rechteck ist erweitert, bis zu jedoch nicht enthalten, die rechten und unteren Koordinaten. Dies bedeutet, dass die Höhe des Rechtecks *y2* - *y1* und die Breite des Rechtecks ist *X2* - *X1*. Sowohl die Breite und die Höhe eines Rechtecks müssen größer als 2 Einheiten und weniger als 32.767 Einheiten sein.
+Das Rechteck erstreckt sich über die Rechte und die untere Koordinate, schließt diese jedoch nicht ein. Dies bedeutet, dass die Höhe des Rechtecks *Y2* - ist*Y1* und die Breite des Rechtecks ist *x2* - *x1*. Sowohl die Breite als auch die Höhe eines Rechtecks müssen größer als 2 Einheiten und kleiner als 32.767 Einheiten sein.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocView#39](../../mfc/codesnippet/cpp/cdc-class_11.cpp)]
 
-##  <a name="rectvisible"></a>  CDC::RectVisible
+##  <a name="rectvisible"></a>CDC:: rectvisible
 
-Bestimmt, ob ein Teil im angegebenen Rechteck innerhalb der Ausschneidebereich den Anzeigekontext liegt.
+Bestimmt, ob ein Teil des angegebenen Rechtecks innerhalb des Clippingbereichs des Anzeige Kontexts liegt.
 
 ```
 virtual BOOL RectVisible(LPCRECT lpRect) const;
@@ -5210,15 +5210,15 @@ virtual BOOL RectVisible(LPCRECT lpRect) const;
 ### <a name="parameters"></a>Parameter
 
 *lpRect*<br/>
-Verweist auf eine `RECT` Struktur oder ein `CRect` Objekt, das die logischen Koordinaten des angegebenen Rechtecks enthält.
+Verweist auf eine `RECT` -Struktur oder `CRect` ein-Objekt, das die logischen Koordinaten des angegebenen Rechtecks enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn alle Teil des angegebenen Rechtecks liegt innerhalb des Clippingbereichs; andernfalls 0.
+Ungleich 0 (null), wenn ein Teil des angegebenen Rechtecks innerhalb des Ausschneide Bereichs liegt. andernfalls 0.
 
-##  <a name="releaseattribdc"></a>  CDC::ReleaseAttribDC
+##  <a name="releaseattribdc"></a>CDC:: releaseattribdc
 
-Rufen Sie diese Memberfunktion festzulegende `m_hAttribDC` auf NULL.
+Mit dieser Member-Funktion können `m_hAttribDC` Sie auf NULL festlegen.
 
 ```
 virtual void ReleaseAttribDC();
@@ -5226,11 +5226,11 @@ virtual void ReleaseAttribDC();
 
 ### <a name="remarks"></a>Hinweise
 
-Dies führt nicht dazu, dass eine `Detach` auftreten. Nur die Ausgabe-Gerätekontext angefügt ist die `CDC` und nur getrennt werden können.
+Dies bewirkt nicht, dass `Detach` ein auftritt. Nur der Ausgabegeräte Kontext ist an das `CDC` -Objekt angefügt, und nur kann er getrennt werden.
 
-##  <a name="releaseoutputdc"></a>  CDC::ReleaseOutputDC
+##  <a name="releaseoutputdc"></a>CDC:: releaseoutputdc
 
-Rufen Sie diese Memberfunktion Festlegen der `m_hDC` Datenmember auf NULL.
+Diese Member-Funktion wird aufgerufen, `m_hDC` um den Member auf NULL festzulegen.
 
 ```
 virtual void ReleaseOutputDC();
@@ -5238,11 +5238,11 @@ virtual void ReleaseOutputDC();
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion kann nicht aufgerufen werden, wenn die Ausgabe-Gerätekontext an angefügt ist die `CDC` Objekt. Verwenden der `Detach` Memberfunktion versucht, den Ausgabe-Gerätekontext zu trennen.
+Diese Member-Funktion kann nicht aufgerufen werden, wenn der Ausgabegeräte Kontext an `CDC` das-Objekt angefügt wird. Verwenden Sie `Detach` die Member-Funktion, um den Ausgabegeräte Kontext zu trennen.
 
-##  <a name="resetdc"></a>  CDC::ResetDC
+##  <a name="resetdc"></a>CDC:: ResetDC
 
-Rufen Sie diese Memberfunktion um den Gerätekontext, die vom Aktualisieren der `CDC` Objekt.
+Mit dieser Member-Funktion können Sie den Gerätekontext aktualisieren, `CDC` der vom-Objekt umschließt wird.
 
 ```
 BOOL ResetDC(const DEVMODE* lpDevMode);
@@ -5251,7 +5251,7 @@ BOOL ResetDC(const DEVMODE* lpDevMode);
 ### <a name="parameters"></a>Parameter
 
 *lpDevMode*<br/>
-Ein Zeiger auf ein Windows `DEVMODE` Struktur.
+Ein Zeiger auf eine Windows `DEVMODE` -Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -5259,17 +5259,17 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Der Gerätekontext wird aktualisiert, aus den Informationen in der Windows `DEVMODE` Struktur. Diese Memberfunktion setzt nur die Attribut-Gerätekontext zurück.
+Der Gerätekontext wird anhand der Informationen aktualisiert, die in der `DEVMODE` Windows-Struktur angegeben sind. Diese Member-Funktion setzt nur den Attribut Gerätekontext zurück.
 
-Eine Anwendung wird in der Regel verwenden Sie die `ResetDC` Member-Funktion, die bei der Verarbeitung eines Fensters ein `WM_DEVMODECHANGE` Nachricht. Sie können diese Memberfunktion auch verwenden, um, papierausrichtung oder Papier Klassen beim Drucken eines Dokuments zu ändern.
+Eine Anwendung verwendet in der Regel `ResetDC` die Member-Funktion, wenn ein `WM_DEVMODECHANGE` Fenster eine Nachricht verarbeitet. Sie können diese Member-Funktion auch verwenden, um die Papier Ausrichtung oder Papierbehälter beim Drucken eines Dokuments zu ändern.
 
-Sie können nicht diese Memberfunktion verwenden, ändern den Namen, der Gerätename oder Ausgabeport. Wenn der Benutzer die anschlussverbindung oder den Gerätenamen ändert, müssen Sie den ursprünglichen Gerätekontext zu löschen und erstellen einen neuen Gerätekontext mit den neuen Informationen.
+Sie können diese Member-Funktion nicht verwenden, um den Treiber Namen, den Gerätenamen oder den Ausgabeport zu ändern. Wenn der Benutzer die Port Verbindung oder den Gerätenamen ändert, müssen Sie den ursprünglichen Gerätekontext löschen und einen neuen Gerätekontext mit den neuen Informationen erstellen.
 
-Bevor Sie diese Memberfunktion aufrufen, müssen Sie sicherstellen, dass alle Objekte (mit Ausnahme von vordefinierten Objekten), die in den Gerätekontext ausgewählt wurde, ausgewählt wurden.
+Bevor Sie diese Member-Funktion aufgerufen haben, müssen Sie sicherstellen, dass alle Objekte (mit Ausnahme von Aktien Objekten), die im Gerätekontext ausgewählt wurden, ausgewählt wurden.
 
-##  <a name="restoredc"></a>  CDC::RestoreDC
+##  <a name="restoredc"></a>CDC:: restoredc
 
-Stellt den Gerätekontext in den vorherigen Zustand identifizierte *nSavedDC*.
+Stellt den Gerätekontext in dem vorherigen durch *nsaveddc*identifizierten Zustand wieder her.
 
 ```
 virtual BOOL RestoreDC(int nSavedDC);
@@ -5278,21 +5278,21 @@ virtual BOOL RestoreDC(int nSavedDC);
 ### <a name="parameters"></a>Parameter
 
 *nSavedDC*<br/>
-Gibt den Gerätekontext, die wiederhergestellt werden. Es kann ein Wert, der von einem vorherigen zurückgegebene sein `SaveDC` Funktionsaufruf. Wenn *nSavedDC* ist-1, die zuletzt gespeicherte Gerätekontext wird wiederhergestellt.
+Gibt den Gerätekontext an, der wieder hergestellt werden soll. Dies kann ein Wert sein, der von einem `SaveDC` vorherigen Funktions Aufrufwert zurückgegeben wurde. Wenn *nsaveddc* den Wert-1 hat, wird der zuletzt gespeicherte Gerätekontext wieder hergestellt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn der angegebene Kontext wiederhergestellt wurde; andernfalls 0.
+Ungleich 0 (null), wenn der angegebene Kontext wieder hergestellt wurde. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-`RestoreDC` Stellt den Gerätekontext durch Anzeige von Statusinformationen aus einem Stapel erstellt, die von früheren aufrufen, um die `SaveDC` Member-Funktion.
+`RestoreDC`stellt den Gerätekontext wieder her, indem Zustandsinformationen von einem Stapel abgelegt werden, der von `SaveDC` früheren Aufrufen der Member-Funktion erstellt wurde.
 
-Der Stapel kann die Statusinformationen für mehrere Gerätekontexte enthalten. Wenn der Kontext angegeben *nSavedDC* ist nicht am Anfang des Stapels `RestoreDC` löscht alle Zustandsinformationen zwischen den Gerätekontext, die anhand des *nSavedDC* und dem oberen Rand des Stapels. Die gelöschte Informationen geht verloren.
+Der Stapel kann die Zustandsinformationen für mehrere Geräte Kontexte enthalten. Wenn sich der von *nsaveddc* angegebene Kontext nicht am Anfang des Stapels befindet, `RestoreDC` löscht alle Zustandsinformationen zwischen dem durch *nsaveddc* angegebenen Gerätekontext und dem oberen Rand des Stapels. Die gelöschten Informationen gehen verloren.
 
-##  <a name="roundrect"></a>  CDC::RoundRect
+##  <a name="roundrect"></a>CDC:: roundRect
 
-Zeichnet ein Rechteck mit abgerundeten Ecken, die mit dem aktuellen Stift.
+Zeichnet mithilfe des aktuellen Stifts ein Rechteck mit abgerundeten Ecken.
 
 ```
 BOOL RoundRect(
@@ -5311,28 +5311,28 @@ BOOL RoundRect(
 ### <a name="parameters"></a>Parameter
 
 *x1*<br/>
-Gibt die X-Koordinate von der linken oberen Ecke des Rechtecks (in logischen Einheiten) an.
+Gibt die x-Koordinate der oberen linken Ecke des Rechtecks an (in logischen Einheiten).
 
 *y1*<br/>
-Gibt die y-Koordinate von der linken oberen Ecke des Rechtecks (in logischen Einheiten) an.
+Gibt die y-Koordinate der oberen linken Ecke des Rechtecks an (in logischen Einheiten).
 
 *x2*<br/>
-Gibt die X-Koordinate von der unteren rechten Ecke des Rechtecks (in logischen Einheiten) an.
+Gibt die x-Koordinate der unteren rechten Ecke des Rechtecks (in logischen Einheiten) an.
 
 *y2*<br/>
-Gibt die y-Koordinate von der unteren rechten Ecke des Rechtecks (in logischen Einheiten) an.
+Gibt die y-Koordinate der unteren rechten Ecke des Rechtecks (in logischen Einheiten) an.
 
 *x3*<br/>
-Gibt die Breite der Ellipse, die zum Zeichnen der abgerundeten Ecken (in logischen Einheiten) verwendet.
+Gibt die Breite der Ellipse an, die zum Zeichnen der abgerundeten Ecken (in logischen Einheiten) verwendet wird.
 
 *y3*<br/>
-Gibt die Höhe der Ellipse, die zum Zeichnen der abgerundeten Ecken (in logischen Einheiten) verwendet.
+Gibt die Höhe der Ellipse an, die zum Zeichnen der abgerundeten Ecken (in logischen Einheiten) verwendet wird.
 
 *lpRect*<br/>
-Gibt das umschließende Rechteck in logischen Einheiten. Sie können entweder übergeben eine `CRect` Objekt oder ein Zeiger auf eine `RECT` Struktur für diesen Parameter.
+Gibt das Begrenzungs Rechteck in logischen Einheiten an. Sie können entweder ein `CRect` -Objekt oder einen-Zeiger an eine `RECT` -Struktur für diesen Parameter übergeben.
 
 *point*<br/>
-Die X-Koordinate der *zeigen* gibt die Breite der Ellipse zum Zeichnen der abgerundeten Ecken (in logischen Einheiten). Die y-Koordinate der *zeigen* gibt die Höhe der Ellipse zum Zeichnen der abgerundeten Ecken (in logischen Einheiten) an. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
+Die x-Koordinate des *Punkts* gibt die Breite der Ellipse zum Zeichnen der abgerundeten Ecken an (in logischen Einheiten). Die y-Koordinate des *Punkts* gibt die Höhe der Ellipse zum Zeichnen der abgerundeten Ecken an (in logischen Einheiten). Sie können entweder eine `POINT` Struktur oder ein `CPoint` -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -5342,15 +5342,15 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 Das Innere des Rechtecks wird mit dem aktuellen Pinsel gefüllt.
 
-In der Abbildung, die diese Funktion zeichnet bis erweitert, aber es umfasst nicht die rechten und unteren Koordinaten. Dies bedeutet, dass die Höhe der Abbildung *y2* - *y1* und die Breite der Abbildung ist *X2* - *X1*. Sowohl die Höhe und die Breite des umschließenden Rechtecks müssen größer als 2 Einheiten und weniger als 32.767 Einheiten sein.
+Die von dieser Funktion aufzurufende Abbildung erweitert sich, aber schließt nicht die Rechte und unteren Koordinaten ein. Dies bedeutet, dass die Höhe der Abbildung *Y2* - *Y1* und die Breite der Abbildung *x2* - *x1*ist. Die Höhe und Breite des umgebenden Rechtecks müssen größer als 2 Einheiten und kleiner als 32.767 Einheiten sein.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocView#40](../../mfc/codesnippet/cpp/cdc-class_12.cpp)]
 
-##  <a name="savedc"></a>  CDC::SaveDC
+##  <a name="savedc"></a>CDC:: savedc
 
-Speichert den aktuellen Status des Gerätekontexts durch Kopieren von Informationen (z. B. Ausschneidebereich, ausgewählte Objekte und Zuordnungsmodus) ein Kontextstapel von Windows verwaltet wird.
+Speichert den aktuellen Zustand des Geräte Kontexts, indem Zustandsinformationen (z. b. Clippingbereich, ausgewählte Objekte und Zustellungs Modus) in einen Kontext Stapel kopiert werden, der von Windows verwaltet wird.
 
 ```
 virtual int SaveDC();
@@ -5358,17 +5358,17 @@ virtual int SaveDC();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Eine ganze Zahl, die gespeicherten Gerätekontext angibt. Es ist 0, wenn ein Fehler auftritt. Dadurch zurückgegeben Wert kann verwendet werden, um den Gerätekontext durch Aufrufen von wiederherstellen `RestoreDC`.
+Eine ganze Zahl, die den gespeicherten Gerätekontext identifiziert. Der Wert ist 0, wenn ein Fehler auftritt. Dieser Rückgabewert kann verwendet werden, um den Gerätekontext durch Aufrufen `RestoreDC`von wiederherzustellen.
 
 ### <a name="remarks"></a>Hinweise
 
-Der gespeicherten Gerätekontext kann später wiederhergestellt werden, indem Sie mithilfe von `RestoreDC`.
+Der gespeicherte Gerätekontext kann später mithilfe `RestoreDC`von wieder hergestellt werden.
 
-`SaveDC` kann eine beliebige Anzahl an, wie oft verwendet, um eine beliebige Anzahl von Gerätekontext Status speichern.
+`SaveDC`kann beliebig oft verwendet werden, um eine beliebige Anzahl von Gerätekontext Zuständen zu speichern.
 
-##  <a name="scaleviewportext"></a>  CDC::ScaleViewportExt
+##  <a name="scaleviewportext"></a>CDC:: scaleviewportext
 
-Ändert die Viewport-Blöcken Bezug auf die aktuellen Werte.
+Ändert die Werte des Viewports in Bezug auf die aktuellen Werte.
 
 ```
 virtual CSize ScaleViewportExt(
@@ -5381,20 +5381,20 @@ virtual CSize ScaleViewportExt(
 ### <a name="parameters"></a>Parameter
 
 *xNum*<br/>
-Gibt die Menge mit dem das aktuelle X-Ausmaß multipliziert.
+Gibt den Betrag an, um den der aktuelle x-Block multipliziert werden soll.
 
 *xDenom*<br/>
-Gibt an, wie durch die dividiert des Ergebnis der Multiplikation der aktuelle X-Block den Wert des der *xNum* Parameter.
+Gibt den Betrag an, um den das Ergebnis der Multiplikation des aktuellen x-Blocks mit dem Wert des *xNum* -Parameters dividiert werden soll.
 
 *yNum*<br/>
-Gibt die Menge, mit der aktuellen y-Block multipliziert.
+Gibt den Betrag an, um den der aktuelle y-Block multipliziert werden soll.
 
 *yDenom*<br/>
-Gibt an, wie durch die dividiert des Ergebnis der Multiplikation der aktuellen y-Block den Wert des der *yNum* Parameter.
+Gibt den Betrag an, um den das Ergebnis der Multiplikation des aktuellen y-Blocks mit dem Wert des *ynum* -Parameters dividiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die vorherigen Viewport-Blöcke (in Geräteeinheiten) als eine `CSize` Objekt.
+Die vorherigen viewportblöcke (in Geräte Einheiten) als `CSize` -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -5404,11 +5404,11 @@ Die Formeln werden wie folgt geschrieben:
 
 `yNewVE = ( yOldVE * yNum ) / yDenom`
 
-Die neue Viewport-Blöcke werden berechnet, indem die aktuellen Blöcke mit den angegebenen Zähler multipliziert, und klicken Sie dann durch den angegebenen Nenner dividiert.
+Die neuen viewportblöcke werden berechnet, indem die aktuellen Blöcke mit dem angegebenen Zähler multipliziert und dann durch den angegebenen Nenner dividiert werden.
 
-##  <a name="scalewindowext"></a>  CDC::ScaleWindowExt
+##  <a name="scalewindowext"></a>CDC:: scalewindowext
 
-Ändert die Fenster-Blöcken Bezug auf die aktuellen Werte.
+Ändert die Fensterblöcke in Bezug auf die aktuellen Werte.
 
 ```
 virtual CSize ScaleWindowExt(
@@ -5421,20 +5421,20 @@ virtual CSize ScaleWindowExt(
 ### <a name="parameters"></a>Parameter
 
 *xNum*<br/>
-Gibt die Menge mit dem das aktuelle X-Ausmaß multipliziert.
+Gibt den Betrag an, um den der aktuelle x-Block multipliziert werden soll.
 
 *xDenom*<br/>
-Gibt an, wie durch die dividiert des Ergebnis der Multiplikation der aktuelle X-Block den Wert des der *xNum* Parameter.
+Gibt den Betrag an, um den das Ergebnis der Multiplikation des aktuellen x-Blocks mit dem Wert des *xNum* -Parameters dividiert werden soll.
 
 *yNum*<br/>
-Gibt die Menge, mit der aktuellen y-Block multipliziert.
+Gibt den Betrag an, um den der aktuelle y-Block multipliziert werden soll.
 
 *yDenom*<br/>
-Gibt an, wie durch die dividiert des Ergebnis der Multiplikation der aktuellen y-Block den Wert des der *yNum* Parameter.
+Gibt den Betrag an, um den das Ergebnis der Multiplikation des aktuellen y-Blocks mit dem Wert des *ynum* -Parameters dividiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die vorherigen Fenster Blöcke (in logischen Einheiten) als eine `CSize` Objekt.
+Das vorherige Fenster erweitert (in logischen Einheiten) als `CSize` -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -5444,11 +5444,11 @@ Die Formeln werden wie folgt geschrieben:
 
 `yNewWE = ( yOldWE * yNum ) / yDenom`
 
-Das neue Fenster Wertebereiche werden berechnet, indem die aktuellen Blöcke mit den angegebenen Zähler multipliziert, und klicken Sie dann durch den angegebenen Nenner dividiert.
+Die neuen Fensterblöcke werden berechnet, indem die aktuellen Blöcke mit dem angegebenen Zähler multipliziert und dann durch den angegebenen Nenner dividiert werden.
 
-##  <a name="scrolldc"></a>  CDC::ScrollDC
+##  <a name="scrolldc"></a>CDC:: scrolldc
 
-Führt einen Bildlauf um ein Rechteck von Bits, horizontal und vertikal.
+Führt einen horizontalen und vertikalen Bildlauf für ein Rechteck von Bits aus.
 
 ```
 BOOL ScrollDC(
@@ -5462,37 +5462,37 @@ BOOL ScrollDC(
 
 ### <a name="parameters"></a>Parameter
 
-*dx*<br/>
-Gibt die Anzahl der Einheiten der horizontalen Bildlaufleiste an.
+*Market*<br/>
+Gibt die Anzahl der horizontalen scrolleinheiten an.
 
 *dy*<br/>
-Gibt die Anzahl der Einheiten für vertikale Bildlaufleiste an.
+Gibt die Anzahl der vertikalen scrolleinheiten an.
 
 *lpRectScroll*<br/>
-Verweist auf die `RECT` Struktur oder `CRect` -Objekt, das die Koordinaten des Rechtecks Bildlauf enthält.
+Verweist auf die `RECT` Struktur oder `CRect` das Objekt, das die Koordinaten des scrollrechtecks enthält.
 
 *lpRectClip*<br/>
-Verweist auf die `RECT` Struktur oder `CRect` -Objekt, das die Koordinaten des Rechtecks Clipping enthält. Wenn dieses Rechteck ist kleiner als das Original einer verweist *LpRectScroll*, Durchführen eines Bildlaufs tritt nur in kleinere Rechtecks.
+Verweist auf die `RECT` Struktur oder `CRect` das Objekt, das die Koordinaten des clippingrechtecks enthält. Wenn dieses Rechteck kleiner ist als das ursprüngliche Rechteck, auf das von *lprectscroll*verwiesen wird, erfolgt der Bildlauf nur im kleineren Rechteck.
 
 *pRgnUpdate*<br/>
-Die Region, die durch den fortlaufenden Prozess im Detail angibt. Die `ScrollDC` Funktion dieser Bereich definiert; er bezeichnet nicht unbedingt ein Rechteck.
+Identifiziert den Bereich, der durch den scrollprozess aufgedeckt wird. Die `ScrollDC` Funktion definiert diesen Bereich, nicht notwendigerweise ein Rechteck.
 
 *lpRectUpdate*<br/>
-Verweist auf die `RECT` Struktur oder `CRect` Objekt, das die Koordinaten des Rechtecks empfängt, das Update Bildlaufbereich umschließt. Dies ist die größte rechteckigen Bereichs, der neu gezeichnet ist erforderlich. Die Werte in der Struktur oder das Objekt bei Rückgabe der Funktion sind in Clientkoordinaten, unabhängig von der Zuordnungsmodus für den angegebenen Gerätekontext.
+Verweist auf die `RECT` Struktur oder `CRect` das Objekt, das die Koordinaten des Rechtecks empfängt, das den scrollaktualisierungs Bereich umschließt. Dies ist der größte rechteckige Bereich, der das Neuzeichnen erfordert. Die Werte in der Struktur oder im Objekt, wenn die Funktion zurückgibt, werden in Client Koordinaten angezeigt, unabhängig vom Kartenmodus für den angegebenen Gerätekontext.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL ist, wenn ein Bildlauf ausgeführt wird; andernfalls 0.
+Ungleich NULL, wenn der Bildlauf ausgeführt wird. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn *LpRectUpdate* NULL ist, berechnet Windows nicht das Update-Rechteck. Wenn beide *pRgnUpdate* und *LpRectUpdate* NULL sind, berechnet Windows nicht dem Aktualisierungsbereich. Wenn *pRgnUpdate* ist nicht NULL, Windows wird davon ausgegangen, dass es sich um einen gültigen Zeiger auf die Region, die durch den fortlaufenden Prozess im Detail enthält (definiert durch die `ScrollDC` Member-Funktion). Im zurückgegebenen Aktualisierungsbereich *LpRectUpdate* übergeben werden kann, um `CWnd::InvalidateRgn` bei Bedarf.
+Wenn *lprectupdate* NULL ist, berechnet Windows das Aktualisierungs Rechteck nicht. Wenn sowohl *prgnupdate* als auch *lprectupdate* NULL sind, berechnet Windows den Update Bereich nicht. Wenn *prgnupdate* nicht NULL ist, geht Windows davon aus, dass es einen gültigen Zeiger auf den Bereich enthält, der durch den scrollprozess `ScrollDC` (definiert durch die Member-Funktion) aufgedeckt wird. Der in *lprectupdate* zurückgegebene Aktualisierungs Bereich kann bei `CWnd::InvalidateRgn` Bedarf an übergeben werden.
 
-Eine Anwendung verwenden, sollten die `ScrollWindow` Memberfunktion der Klasse `CWnd` wann ist den gesamte Clientbereich eines Fensters einen Bildlauf durchführen. Andernfalls muss bei Verwendung `ScrollDC`.
+Eine Anwendung sollte die `ScrollWindow` Member-Funktion der-Klasse `CWnd` verwenden, wenn es erforderlich ist, einen Bildlauf für den gesamten Client Bereich eines Fensters durchführen zu müssen. Andernfalls sollte verwendet `ScrollDC`werden.
 
-##  <a name="selectclippath"></a>  CDC::SelectClipPath
+##  <a name="selectclippath"></a>CDC:: selectclippath
 
-Wählt den aktuellen Pfad als einen Ausschneidebereich für den Gerätekontext, kombinieren die neue Region mit der alle vorhandenen Ausschneidebereich unter Verwendung des angegebenen Modus.
+Wählt den aktuellen Pfad als Clippingbereich für den Gerätekontext aus, wobei die neue Region mit einem beliebigen vorhandenen Clippingbereich unter Verwendung des angegebenen Modus kombiniert wird.
 
 ```
 BOOL SelectClipPath(int nMode);
@@ -5501,17 +5501,17 @@ BOOL SelectClipPath(int nMode);
 ### <a name="parameters"></a>Parameter
 
 *nMode*<br/>
-Gibt an, wie den Pfad zu verwenden. Die folgenden Werte sind zulässig:
+Gibt an, wie der Pfad verwendet werden soll. Die folgenden Werte sind zulässig:
 
-- RGN_AND den neuen Ausschneidebereich umfasst die Schnittmenge (überlappenden Bereichen) des aktuellen Ausschneidebereichs und der aktuelle Pfad.
+- RGN_AND der neue Clippingbereich schließt die Schnittmenge (überlappende Bereiche) des aktuellen Ausschneide Bereichs und des aktuellen Pfads ein.
 
-- RGN_COPY den neuen Ausschneidebereich ist der aktuelle Pfad.
+- RGN_COPY der neue Clippingbereich ist der aktuelle Pfad.
 
-- RGN_DIFF den neuen Ausschneidebereich enthält die Bereiche des aktuellen Ausschneidebereichs und denen des aktuellen Pfads werden ausgeschlossen.
+- RGN_DIFF der neue Clippingbereich schließt die Bereiche des aktuellen Clippingbereichs ein, und die Bereiche des aktuellen Pfads werden ausgeschlossen.
 
-- RGN_OR den neuen Ausschneidebereich umfasst die Kombination (kombinierten Flächen) des aktuellen Ausschneidebereichs und der aktuelle Pfad.
+- RGN_OR der neue Clippingbereich schließt die Union (kombinierte Bereiche) des aktuellen Ausschneide Bereichs und des aktuellen Pfads ein.
 
-- RGN_XOR den neuen Ausschneidebereich umfasst die Gesamtmenge des aktuellen Ausschneidebereichs und der aktuelle Pfad, jedoch ohne die überlappenden Bereiche.
+- RGN_XOR der neue Clippingbereich umfasst die Vereinigung des aktuellen Clippingbereichs und des aktuellen Pfads, aber ohne die überlappenden Bereiche.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -5519,11 +5519,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Identifiziert den Gerätekontext muss es sich um einen geschlossenen Pfad enthalten.
+Der identifizierte Gerätekontext muss einen geschlossenen Pfad enthalten.
 
-##  <a name="selectcliprgn"></a>  CDC::SelectClipRgn
+##  <a name="selectcliprgn"></a>CDC:: selectcliprgn
 
-Wählt aus den angegebenen Region als aktuelle Ausschneidebereich für den Gerätekontext.
+Wählt die angegebene Region als aktuellen Clippingbereich für den Gerätekontext aus.
 
 ```
 int SelectClipRgn(CRgn* pRgn);
@@ -5536,48 +5536,48 @@ int SelectClipRgn(
 ### <a name="parameters"></a>Parameter
 
 *pRgn*<br/>
-Identifiziert die Region ausgewählt werden.
+Identifiziert den Bereich, der ausgewählt werden soll.
 
-- Für die erste Version dieser Funktion Wenn dieser Wert NULL ist, der gesamten Clientbereich aktiviert ist und Ausgabe wird an das Fenster immer noch abgeschnitten.
+- Wenn dieser Wert für die erste Version dieser Funktion NULL ist, wird der gesamte Client Bereich ausgewählt, und die Ausgabe wird weiterhin auf das Fenster zugeschnitten.
 
-- Die zweite Version dieser Funktion kann dieses Handle kann NULL sein, nur dann, wenn der Modus RGN_COPY angegeben wird.
+- Bei der zweiten Version dieser Funktion kann dieses Handle nur NULL sein, wenn der RGN_COPY-Modus angegeben wird.
 
 *nMode*<br/>
-Gibt den Vorgang ausgeführt werden. Es muss eine der folgenden Werte sein:
+Gibt den Vorgang an, der ausgeführt werden soll. Es muss sich um einen der folgenden Werte handeln:
 
-- RGN_AND der neuen Ausschneidebereich kombiniert die überlappenden Bereiche des aktuellen Ausschneidebereichs und der Region identifizierte *PRNG*.
+- RGN_AND im neuen Clippingbereich werden die überlappenden Bereiche des aktuellen Clippingbereichs und die durch *PRGN*identifizierte Region kombiniert.
 
-- RGN_COPY der neue Ausschneidebereich ist eine Kopie des identifizierten von *PRNG*. Dies ist eine Funktion ist identisch mit der ersten Version von `SelectClipRgn`. Wenn die Region von identifiziert *PRNG* NULL ist, der neuen Ausschneidebereich wird das Clipping die Standardregion (ein null-Region).
+- RGN_COPY der neue Clippingbereich ist eine Kopie der durch *PRGN*identifizierten Region. Diese Funktionalität ist mit der ersten Version von `SelectClipRgn`identisch. Wenn der durch *PRGN* identifizierte Bereich NULL ist, wird der neue Clippingbereich zum Standard Clippingbereich (ein NULL-Bereich).
 
-- RGN_DIFF der neuen Ausschneidebereich kombiniert die Bereiche des aktuellen Ausschneidebereichs mit diesen Bereichen, die von der Region identifizierte ausgeschlossen *PRNG*.
+- RGN_DIFF der neue Clippingbereich kombiniert die Bereiche des aktuellen Clippingbereichs mit den Bereichen, die von der durch *PRGN*identifizierten Region ausgeschlossen sind.
 
-- RGN_OR der neuen Ausschneidebereich kombiniert, des aktuellen Ausschneidebereichs und der Region identifizierte *PRNG*.
+- RGN_OR der neue Clippingbereich kombiniert den aktuellen Ausschneide Bereich und den durch *PRGN*identifizierten Bereich.
 
-- RGN_XOR der neuen Ausschneidebereich kombiniert, des aktuellen Ausschneidebereichs und der Region identifizierte *PRNG* jedoch keine sich überschneidenden Bereiche ausschließt.
+- RGN_XOR der neue Clippingbereich kombiniert den aktuellen Ausschneide Bereich und die durch *PRGN* identifizierte Region, schließt jedoch alle überlappenden Bereiche aus.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Bereichstyp. Eines der folgenden Werte sind möglich:
+Der Typ der Region. Dabei kann es sich um einen der folgenden Werte handeln:
 
-- Neue COMPLEXREGION Ausschneidebereich hat überlappende Grenzen.
+- Der neue Ausschneide Bereich von complexregion weist überlappende Rahmen auf.
 
-- Fehlerkontext-Gerät oder eine Region ist ungültig.
+- Der Fehler des Geräte Kontexts oder der Region ist ungültig.
 
-- Neue NULLREGION Ausschneidebereich ist leer.
+- Der neue Clippingbereich der NULLREGION ist leer.
 
-- Neue SIMPLEREGION Ausschneidebereich verfügt über keine überlappenden Rahmen.
+- Der neue Ausschneide Bereich der simpleregion weist keine überlappenden Rahmen auf.
 
 ### <a name="remarks"></a>Hinweise
 
-Es wird nur eine Kopie des ausgewählten Bereichs verwendet. Die Region selbst für eine beliebige Anzahl von anderen Gerätekontexte ausgewählt werden kann, oder er gelöscht werden kann.
+Es wird nur eine Kopie des ausgewählten Bereichs verwendet. Die Region selbst kann für eine beliebige Anzahl von anderen Geräte Kontexten ausgewählt werden, oder Sie kann gelöscht werden.
 
-Die Funktion wird davon ausgegangen, dass die Koordinaten für den angegebenen Bereich in Geräteeinheiten angegeben werden. Einige Druckergeräte unterstützen, die Ausgabe von Text mit einer höheren Auflösung als Grafikausgabe, um die Genauigkeit erforderlich, um die Textmetrik express beibehalten wird. Diese Geräte melden Geräteeinheiten mit höherer Auflösung, d. h. in Texteinheiten. Diese Geräte skalieren Koordinaten für Grafiken, damit mehrere Einheiten gerätezuordnungen auf nur 1 grafische Einheit gemeldet. Rufen Sie immer die `SelectClipRgn` -Funktion mithilfe von Texteinheiten.
+Die-Funktion geht davon aus, dass die Koordinaten für den angegebenen Bereich in Geräte Einheiten angegeben werden. Einige Drucker Geräte unterstützen die Textausgabe bei einer höheren Auflösung als bei der Grafikausgabe, um die für das Ausdrücken von textmetriken erforderliche Genauigkeit beizubehalten. Diese Geräte melden Geräte Einheiten mit höherer Auflösung, d. h. in Text Einheiten. Diese Geräte skalieren dann Koordinaten für Grafiken, sodass mehrere gemeldete Geräte Einheiten nur einer Grafikeinheit zugeordnet werden. Die `SelectClipRgn` Funktion sollte immer mit Text Einheiten aufgerufen werden.
 
-Anwendungen, die ausführen müssen, die Skalierung von Grafikobjekten in GDI können die GETSCALINGFACTOR Druckerescape bestimmt den Skalierungsfaktor. Dieser Faktor für die Skalierung wirkt sich auf Clipping. Wenn eine Region für das Abschneiden von Grafiken verwendet wird, teilt GDI die Koordinaten entsprechend dem Skalierungsfaktor. Wenn die Region für das Abschneiden von Text verwendet wird, wird die GDI keine Skalierung Anpassung. Ein Skalierungsfaktor von 1 bewirkt, dass die Koordinaten durch 2 dividiert wird. ein Skalierungsfaktor von 2 führt dazu, dass die Koordinaten durch 4 geteilt werden soll; Und so weiter.
+Anwendungen, die die Skalierung von Grafikobjekten im GDI durchführen müssen, können den getscalingfactor Printer-Escapezeichen verwenden, um den Skalierungsfaktor zu ermitteln. Dieser Skalierungsfaktor wirkt sich auf das Clipping aus. Wenn ein Bereich zum Ausschneiden von Grafiken verwendet wird, dividiert GDI die Koordinaten durch den Skalierungsfaktor. Wenn der Bereich zum Ausschneiden von Text verwendet wird, nimmt GDI keine Skalierungs Anpassung vor. Der Skalierungsfaktor 1 bewirkt, dass die Koordinaten durch 2 dividiert werden. der Skalierungsfaktor 2 bewirkt, dass die Koordinaten durch 4 dividiert werden. Und so weiter.
 
-##  <a name="selectobject"></a>  CDC:: SelectObject
+##  <a name="selectobject"></a>CDC:: SelectObject
 
-Wählt ein Objekt in den Gerätekontext.
+Wählt ein Objekt in den Gerätekontext aus.
 
 ```
 CPen* SelectObject(CPen* pPen);
@@ -5591,48 +5591,48 @@ CGdiObject* SelectObject(CGdiObject* pObject);
 ### <a name="parameters"></a>Parameter
 
 *pPen*<br/>
-Ein Zeiger auf eine [CPen](../../mfc/reference/cpen-class.md) Objekt ausgewählt werden.
+Ein Zeiger auf ein zu ausgewähltes [CPen](../../mfc/reference/cpen-class.md) -Objekt.
 
-*pBrush*<br/>
-Ein Zeiger auf eine [CBrush](../../mfc/reference/cbrush-class.md) Objekt ausgewählt werden.
+*pbrush*<br/>
+Ein Zeiger auf ein [CBrush](../../mfc/reference/cbrush-class.md) -Objekt, das ausgewählt werden soll.
 
 *pFont*<br/>
-Ein Zeiger auf eine [CFont](../../mfc/reference/cfont-class.md) Objekt ausgewählt werden.
+Ein Zeiger auf ein zu ausgewähltes [CFont](../../mfc/reference/cfont-class.md) -Objekt.
 
 *pBitmap*<br/>
-Ein Zeiger auf eine [CBitmap](../../mfc/reference/cbitmap-class.md) Objekt ausgewählt werden.
+Ein Zeiger auf ein zu ausgewähltes [CBitmap](../../mfc/reference/cbitmap-class.md) -Objekt.
 
 *pRgn*<br/>
-Ein Zeiger auf eine [CRgn](../../mfc/reference/crgn-class.md) Objekt ausgewählt werden.
+Ein Zeiger auf ein zu ausgewähltes [crgn](../../mfc/reference/crgn-class.md) -Objekt.
 
 *pObject*<br/>
-Ein Zeiger auf eine [CGdiObject](../../mfc/reference/cgdiobject-class.md) Objekt ausgewählt werden.
+Ein Zeiger auf ein [CGdiObject](../../mfc/reference/cgdiobject-class.md) -Objekt, das ausgewählt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf das Objekt, das ersetzt wird. Dies ist ein Zeiger auf ein Objekt eines abgeleitete `CGdiObject`, z. B. `CPen`, je nachdem welche Version der Funktion verwendet wird. Der Rückgabewert ist NULL, wenn ein Fehler auftritt. Diese Funktion möglicherweise einen Zeiger auf ein temporäres Objekt zurückzugeben. Dieses temporäre Objekt ist nur gültig, während der Verarbeitung einer Windows-Nachricht. Weitere Informationen finden Sie unter `CGdiObject::FromHandle`.
+Ein Zeiger auf das Objekt, das ersetzt wird. Dies ist ein Zeiger auf ein Objekt einer der von abgeleiteten `CGdiObject`Klassen, `CPen`z. b., je nachdem, welche Version der Funktion verwendet wird. Der Rückgabewert ist NULL, wenn ein Fehler vorliegt. Diese Funktion gibt möglicherweise einen Zeiger auf ein temporäres Objekt zurück. Dieses temporäre Objekt ist nur während der Verarbeitung einer Windows-Nachricht gültig. Weitere Informationen finden Sie unter `CGdiObject::FromHandle`.
 
-Die Version von der Memberfunktion, die einen Bereichsparameter annimmt, führt die gleiche Aufgabe wie die `SelectClipRgn` Member-Funktion. Der Rückgabewert kann einer der folgenden sein:
+Die Version der Member-Funktion, die einen regions Parameter annimmt, führt dieselbe Aufgabe aus `SelectClipRgn` wie die Member-Funktion. Der Rückgabewert kann eines der folgenden sein:
 
-- Neue COMPLEXREGION Ausschneidebereich hat überlappende Grenzen.
+- Der neue Ausschneide Bereich von complexregion weist überlappende Rahmen auf.
 
-- Fehlerkontext-Gerät oder eine Region ist ungültig.
+- Der Fehler des Geräte Kontexts oder der Region ist ungültig.
 
-- Neue NULLREGION Ausschneidebereich ist leer.
+- Der neue Clippingbereich der NULLREGION ist leer.
 
-- Neue SIMPLEREGION Ausschneidebereich verfügt über keine überlappenden Rahmen.
+- Der neue Ausschneide Bereich der simpleregion weist keine überlappenden Rahmen auf.
 
 ### <a name="remarks"></a>Hinweise
 
-Klasse `CDC` enthält fünf Versionen speziell für bestimmte Arten von GDI-Objekte, einschließlich der Pinsel, Stifte, Schriftarten, Bitmaps und Regionen. Das neu ausgewählte Objekt ersetzt das vorherige Objekt desselben Typs. Z. B. wenn *pObject* der die allgemeine Version der `SelectObject` verweist auf eine [CPen](../../mfc/reference/cpen-class.md) Objekt ersetzt die Funktion den aktuellen Stift, mit dem Stift gemäß *pObject* .
+Die `CDC` -Klasse bietet fünf Versionen, die für bestimmte Arten von GDI-Objekten spezialisiert sind, einschließlich Stifte, Pinsel, Schriftarten, Bitmaps und Regionen. Das neu ausgewählte Objekt ersetzt das vorherige Objekt desselben Typs. Wenn beispielsweise *pObject* der allgemeinen Version von `SelectObject` auf ein [CPen](../../mfc/reference/cpen-class.md) -Objekt verweist, ersetzt die Funktion den aktuellen Stift durch den durch *pObject*angegebenen Stift.
 
-Eine Anwendung kann eine Bitmap in Gerätekontexte Arbeitsspeicher nur und nur eine Arbeitsspeicher-Gerätekontext zu einem Zeitpunkt auswählen. Das Format der Bitmap muss Monochrom oder mit den Gerätekontext kompatibel sein; ist dies nicht der Fall, `SelectObject` gibt einen Fehler zurück.
+Eine Anwendung kann eine Bitmap nur in den Kontext des Speichergeräts und nur jeweils in jeweils einem Speichergeräte Kontext auswählen. Das Format der Bitmap muss entweder monochrom sein oder mit dem Gerätekontext kompatibel sein. Wenn dies nicht der Fall `SelectObject` ist, wird von ein Fehler zurückgegeben.
 
-Windows 3.1 und höher die `SelectObject` Funktion derselbe Wert zurückgegeben, ob es in einer Metadatei oder nicht verwendet wird. Unter früheren Versionen von Windows `SelectObject` einen Wert ungleich NULL für den Erfolg und 0 für Fehler zurückgegeben, wenn es in einer Metadatei verwendet wurde.
+Bei Windows 3,1 und höher gibt die `SelectObject` Funktion denselben Wert zurück, unabhängig davon, ob Sie in einer Metadatei verwendet wird. In früheren Versionen von Windows wurde `SelectObject` ein Wert ungleich 0 (null) für Erfolg und 0 für Fehler bei der Verwendung in einer Metadatei zurückgegeben.
 
-##  <a name="selectpalette"></a>  CDC::SelectPalette
+##  <a name="selectpalette"></a>CDC:: SelectPalette
 
-Wählt die logische Palette, die angegeben wird *pPalette* wie das Palettenobjekt der ausgewählten des Gerätekontexts.
+Wählt die logische Palette aus, die von *pPalette* als ausgewähltes Palettenobjekt des Geräte Kontexts angegeben wird.
 
 ```
 CPalette* SelectPalette(
@@ -5643,24 +5643,24 @@ CPalette* SelectPalette(
 ### <a name="parameters"></a>Parameter
 
 *pPalette*<br/>
-Gibt die logische Palette ausgewählt werden. Diese Palette muss haben bereits mit der `CPalette` Memberfunktion [CreatePalette](../../mfc/reference/cpalette-class.md#createpalette).
+Identifiziert die auszuwählende logische Palette. Diese Palette muss bereits mit der `CPalette` Member-Funktion [CreatePalette](../../mfc/reference/cpalette-class.md#createpalette)erstellt worden sein.
 
 *bForceBackground*<br/>
-Gibt an, ob die logische Palette erzwungen wird, eine Hintergrundpalette sein. Wenn *bForceBackground* ist ungleich NULL ist, die ausgewählten Palette ist immer einer Hintergrundpalette, unabhängig davon, ob das Fenster den Eingabefokus besitzt. Wenn *bForceBackground* gleich 0 ist und der Gerätekontext ein Fenster angefügt ist, die logische Palette ist eine Palette Vordergrund aus, wenn das Fenster den Eingabefokus besitzt.
+Gibt an, ob die logische Palette als Hintergrund Palette erzwungen werden soll. Wenn *bForceBackground* nicht NULL ist, ist die ausgewählte Palette immer eine Hintergrund Palette, unabhängig davon, ob das Fenster den Eingabefokus besitzt. Wenn *bForceBackground* den Wert 0 hat und der Gerätekontext an ein Fenster angefügt ist, ist die logische Palette eine Vordergrund Palette, wenn das Fenster den Eingabefokus besitzt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine `CPalette` Objekt, das die logische Palette, die durch die Palette anhand des ersetzt identifiziert *pPalette*. Ist NULL, wenn ein Fehler auftritt.
+Ein Zeiger auf ein `CPalette` -Objekt, das die logische Palette identifiziert, die durch die durch *pPalette*angegebene Palette ersetzt wird. Der Wert ist NULL, wenn ein Fehler vorliegt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die neue Palette der Palette-Objekt, das von GDI verwendet, um steuerelementfarben, die in den Gerätekontext angezeigt wird, und ersetzt die vorherige Palette.
+Die neue Palette wird zum Palettenobjekt, das von GDI zum Steuern von Farben verwendet wird, die im Gerätekontext angezeigt werden, und ersetzt die vorherige Palette.
 
-Eine Anwendung kann eine logische Palette in mehr als eine Gerätekontext auswählen. Änderungen an einer logischen Palette wirkt alle Gerätekontexte sich jedoch bei denen es aktiviert ist. Wenn eine Anwendung eine Palette in mehr als eine Gerätekontext auswählt, müssen die Gerätekontexte alle auf demselben physischen Gerät gehören.
+Eine Anwendung kann eine logische Palette in mehr als einem Gerätekontext auswählen. Änderungen an einer logischen Palette wirken sich jedoch auf alle Geräte Kontexte aus, für die Sie ausgewählt ist. Wenn eine Anwendung eine Palette in mehr als einen Gerätekontext auswählt, müssen die Geräte Kontexte alle zum selben physischen Gerät gehören.
 
-##  <a name="selectstockobject"></a>  CDC::SelectStockObject
+##  <a name="selectstockobject"></a>CDC:: selectstockobject
 
-Wählt eine [CGdiObject](../../mfc/reference/cgdiobject-class.md) Objekt, das eine der vordefinierten vordefinierten Stifte, Pinsel oder Schriftarten entspricht.
+Wählt ein [CGdiObject](../../mfc/reference/cgdiobject-class.md) -Objekt aus, das einem der vordefinierten Aktien Stifte, Pinsel oder Schriftarten entspricht.
 
 ```
 virtual CGdiObject* SelectStockObject(int nIndex);
@@ -5669,49 +5669,49 @@ virtual CGdiObject* SelectStockObject(int nIndex);
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Gibt die Art des gewünschten vordefinierten-Objekts. Es kann eine der folgenden Werte sein:
+Gibt die Art des gewünschten Aktien Objekts an. Dies kann einer der folgenden Werte sein:
 
 - BLACK_BRUSH schwarzer Pinsel.
 
-- DKGRAY_BRUSH dunkel grauen Pinsel.
+- DKGRAY_BRUSH dunkelgrauer Pinsel.
 
-- GRAY_BRUSH grauen Pinsel.
+- GRAY_BRUSH grauer Pinsel.
 
-- Leerer HOLLOW_BRUSH Pinsel.
+- HOLLOW_BRUSH Hollow-Pinsel.
 
-- LTGRAY_BRUSH Licht grauen Pinsel.
+- LTGRAY_BRUSH hellgrauer Pinsel.
 
-- NULL_BRUSH Nullpinsel.
+- NULL_BRUSH NULL-Pinsel.
 
 - WHITE_BRUSH weiß Pinsel.
 
-- BLACK_PEN Schwarz Stift.
+- BLACK_PEN schwarzer Stift.
 
-- NULL_PEN Null Stift.
+- NULL_PEN NULL-Stift.
 
-- WHITE_PEN weiß Stift.
+- WHITE_PEN weißer Stift.
 
-- ANSI_FIXED_FONT-ANSI-Systemschriftart behoben.
+- ANSI_FIXED_FONT ANSI korrigiert System Schriftart.
 
-- Variable ANSI_VAR_FONT ANSI-Systemschriftart.
+- ANSI_VAR_FONT ANSI Variable System Schriftart.
 
-- DEVICE_DEFAULT_FONT geräteabhängigen Schriftart.
+- DEVICE_DEFAULT_FONT Geräte abhängige Schriftart.
 
-- OEM_FIXED_FONT OEM-abhängige Schriftart behoben.
+- OEM_FIXED_FONT OEM-abhängige Fixed-Schriftart.
 
-- SYSTEM_FONT Systemschriftart. In der Standardeinstellung verwendet Windows die Systemschriftart, um Menüs, Dialogfeld-Steuerelemente und anderer Text zu zeichnen. Es wird jedoch empfohlen, nicht, sich auf SYSTEM_FONT zum Abrufen der Schriftart, die für Dialogfelder und Fenster verlassen. Verwenden Sie stattdessen die `SystemParametersInfo` Funktion mit dem Parameter SPI_GETNONCLIENTMETRICS ab, um die aktuelle Schriftart abzurufen. `SystemParametersInfo` berücksichtigt das aktuelle Design sowie Informationen zur Schriftart für Beschriftungen, Menüs und Dialogfelder der Nachricht.
+- SYSTEM_FONT die System Schriftart. Standardmäßig verwendet Windows die System Schriftart, um Menüs, Dialogfeld-Steuerelemente und anderen Text zu zeichnen. Es ist jedoch am besten, sich auf SYSTEM_FONT zu verlassen, um die von Dialogfeldern und Fenstern verwendete Schriftart zu erhalten. Verwenden Sie stattdessen die `SystemParametersInfo` -Funktion mit dem SPI_GETNONCLIENTMETRICS-Parameter, um die aktuelle Schriftart abzurufen. `SystemParametersInfo`berücksichtigt das aktuelle Design und stellt Schriftart Informationen für Beschriftungen, Menüs und Nachrichten Dialogfelder bereit.
 
-- SYSTEM_FIXED_FONT fester Breite Systemschriftart in Windows verwendet werden, vor der Version 3.0. Dieses Objekt ist für die Kompatibilität mit früheren Versionen von Windows verfügbar.
+- SYSTEM_FIXED_FONT die System Schriftart mit fester Breite, die in Windows vor Version 3,0 verwendet wird. Dieses Objekt ist für die Kompatibilität mit früheren Versionen von Windows verfügbar.
 
-- Farbpalette DEFAULT_PALETTE Standard. Diese Palette besteht aus den 20 statische Farben der Systempalette.
+- DEFAULT_PALETTE Standard Farb Palette. Diese Palette besteht aus den 20 statischen Farben in der Systempalette.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf die `CGdiObject` -Objekt, das ersetzt wurde, wenn die Funktion erfolgreich ist. Das tatsächliche Objekt verwies auf eine [CPen](../../mfc/reference/cpen-class.md), [CBrush](../../mfc/reference/cbrush-class.md), oder [CFont](../../mfc/reference/cfont-class.md) Objekt. Wenn der Aufruf nicht erfolgreich ist, ist der Rückgabewert NULL.
+Ein Zeiger auf das `CGdiObject` Objekt, das ersetzt wurde, wenn die Funktion erfolgreich ausgeführt wurde. Das tatsächliche Objekt, auf das verwiesen wird, ist ein [CPen](../../mfc/reference/cpen-class.md)-, [CBrush](../../mfc/reference/cbrush-class.md)-oder [CFont](../../mfc/reference/cfont-class.md) -Objekt. Wenn der-Befehl nicht erfolgreich ist, ist der Rückgabewert NULL.
 
-##  <a name="setabortproc"></a>  CDC:: setabortproc
+##  <a name="setabortproc"></a>CDC:: abtabortproc
 
-Installiert die Abort-Prozedur für den Druckauftrag an.
+Installiert die Abbruch Prozedur für den Druckauftrag.
 
 ```
 int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
@@ -5720,39 +5720,39 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 ### <a name="parameters"></a>Parameter
 
 *lpfn*<br/>
-Ein Zeiger auf die Abort-Funktion, die als Abbruchvorgangs zu installieren. Weitere Informationen über die Callback-Funktion finden Sie unter [Rückruffunktion für CDC:: setabortproc](callback-functions-used-by-mfc.md#setabortproc).
+Ein Zeiger auf die Abbruch-Funktion, die als Abbruch Prozedur installiert werden soll. Weitere Informationen zur Rückruffunktion finden Sie unter [Rückruffunktion für CDC:: abtabortproc](callback-functions-used-by-mfc.md#setabortproc).
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt das Ergebnis des der `SetAbortProc` Funktion. Einige der folgenden Werte sind wahrscheinlicher als andere, aber alle möglich sind.
+Gibt das Ergebnis der `SetAbortProc` Funktion an. Einige der folgenden Werte sind wahrscheinlicher als andere, aber alle sind möglich.
 
 - SP_ERROR allgemeiner Fehler.
 
-- SP_OUTOFDISK nicht genügend Speicherplatz auf dem Datenträger steht zurzeit zum Spoolen und keinen Speicherplatz mehr zur Verfügung stehen.
+- SP_OUTOFDISK es ist nicht genügend Speicherplatz zum Spoolvorgang verfügbar, und es wird kein Speicherplatz mehr verfügbar.
 
-- SP_OUTOFMEMORY nicht genügend Arbeitsspeicher zum Spoolen verfügbar ist.
+- SP_OUTOFMEMORY nicht genügend Arbeitsspeicher zum Spoolvorgang verfügbar.
 
-- SP_USERABORT Benutzer beendet den Auftrag über die Druck-Manager.
+- SP_USERABORT der Benutzer hat den Auftrag über den Druck-Manager beendet.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn eine Anwendung ist, können den Druckauftrag, während Aufträge abgebrochen werden soll, muss er die Abort-Funktion festgelegt, bevor der Druckauftrag mit gestartet wird die [StartDoc](#startdoc) Member-Funktion. Der Druck-Manager ruft die Abort-Funktion während der Aufträge, damit die Anwendung, die den Druckauftrag abbrechen oder Out-von-Speicherplatz verarbeiten kann. Wenn keine Abort-Funktion festgelegt ist, schlägt der Druckauftrag, wenn es nicht genügend Speicherplatz zum Spoolen ist.
+Wenn eine Anwendung zulässt, dass der Druckauftrag während des Spoolvorgangs abgebrochen werden kann, muss die Abbruch-Funktion festgelegt werden, bevor der Druckauftrag mit der [StartDoc](#startdoc) -Member-Funktion gestartet wird. Der Druck-Manager ruft während des Spoolvorgangs die Abbruch Funktion auf, damit die Anwendung den Druckauftrag abbrechen oder nicht genügend Speicherplatz verarbeiten kann. Wenn keine Abbruch Funktion festgelegt ist, schlägt der Druckauftrag fehl, wenn nicht genügend Speicherplatz für das Spoolvorgang verfügbar ist.
 
-Beachten Sie, dass die Funktionen von Microsoft Visual C++ das Erstellen, die an die Callback-Funktion vereinfachen `SetAbortProc`. Die Adresse übergeben, um die `EnumObjects` Member-Funktion ist ein Zeiger auf eine Funktion, die mit exportierten `__declspec(dllexport)` und mit der `__stdcall` Aufrufkonvention.
+Beachten Sie, dass die Funktionen von C++ Microsoft Visual das Erstellen der Rückruffunktion vereinfachen, `SetAbortProc`die an übermittelt wird. Die an die `EnumObjects` Member-Funktion übergebenen Adresse ist ein Zeiger auf eine Funktion `__declspec(dllexport)` , die mit `__stdcall` und mit der-Aufruf Konvention exportiert wird.
 
-Keine Sie auch den Funktionsnamen im Exportieren einer **EXPORTE** -Anweisung in DEF-Datei von Ihrer Anwendung. Sie können stattdessen verwenden die **EXPORTIEREN** Modifizierer funktionieren, wie in
+Sie müssen den Funktionsnamen auch nicht in eine **Exports** -Anweisung in der Modul Definitionsdatei Ihrer Anwendung exportieren. Stattdessen können Sie den **Export** funktionsmodifizierer wie in verwenden.
 
-**"Bool" RÜCKRUF EXPORT** AFunction ( **HDC**, `int` **);**
+**bool-Rückruf Export** Afunction ( **hdc**, `int` **);**
 
-den Compiler den ordnungsgemäßen Export-Datensatz für den Export nach Namen ohne Aliasing ausgeben zu verursachen. Dies funktioniert für die häufigsten Anforderungen. Für einige Sonderfälle, z. B. eine Funktion nach Ordnungszahl oder Aliasing exportieren exportieren, Sie weiterhin verwenden müssen eine **EXPORTE** -Anweisung in eine DEF-Datei.
+, wenn der Compiler bewirkt, dass der richtige Exportdaten Satz für den Export nach Namen ohne Aliasing ausgegeben wird. Dies funktioniert für die meisten Anforderungen. Für einige Sonderfälle, z. b. das Exportieren einer Funktion durch Ordinalzahl oder Aliasing des Exports, müssen Sie dennoch eine **Exports** -Anweisung in einer Modul Definitionsdatei verwenden.
 
-Registrierung von Rückrufschnittstellen sind jetzt als typsicherer (Sie müssen in einen Funktionszeiger, der auf die richtige Art von Funktion, die für den bestimmten Rückruf zeigt übergeben).
+Rückruf Registrierungs Schnittstellen sind nun typsicher (Sie müssen einen Funktionszeiger übergeben, der auf die richtige Funktionsart für den jeweiligen Rückruf zeigt).
 
-Beachten Sie außerdem, dass alle Rückruffunktionen vor der Rückgabe auf Windows, da Ausnahmen hinweg Rückruf ausgelöst werden, können nicht Microsoft Foundation Ausnahmen abfangen müssen. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).
+Beachten Sie außerdem, dass alle Rückruf Funktionen Microsoft Foundation-Ausnahmen vor der Rückgabe an Windows abfangen müssen, da Ausnahmen nicht über Rückruf Grenzen hinweg ausgelöst werden können. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).
 
-##  <a name="setarcdirection"></a>  CDC::SetArcDirection
+##  <a name="setarcdirection"></a>CDC:: tartarcdirection
 
-Richtung für das Zeichnen für Bogen und Rechteck Funktionen verwendet werden.
+Legt die Zeichnungs Richtung fest, die für Bogen-und Rechteck Funktionen verwendet werden soll.
 
 ```
 int SetArcDirection(int nArcDirection);
@@ -5761,29 +5761,29 @@ int SetArcDirection(int nArcDirection);
 ### <a name="parameters"></a>Parameter
 
 *nArcDirection*<br/>
-Gibt die neue Richtung der Bogen an. Dieser Parameter kann einen der folgenden Werte sein:
+Gibt die neue Bogen Richtung an. Dieser Parameter kann einen der folgenden Werte aufweisen:
 
-- AD_COUNTERCLOCKWISE Abbildungen, die gegen den Uhrzeigersinn gezeichnet.
+- AD_COUNTERCLOCKWISE-Abbildungen gegen den Uhrzeigersinn gezeichnet.
 
-- AD_CLOCKWISE Abbildungen, die im Uhrzeigersinn gezeichnet.
+- AD_CLOCKWISE im Uhrzeigersinn gezeichnete Abbildungen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt die alte Bogen Richtung an, bei erfolgreicher Ausführung; andernfalls 0.
+Gibt die alte Bogen Richtung an, wenn erfolgreich. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Die standardrichtung ist gegen den Uhrzeigersinn. Die `SetArcDirection` -Funktion gibt die Richtung, in dem Sie die folgenden Zeichnen-Befehl Funktionen, an:
+Die Standardrichtung ist gegen den Uhrzeigersinn. Die `SetArcDirection` -Funktion gibt die Richtung an, in der die folgenden Funktionen zeichnen:
 
-|Einen Bogen konvertiert.|Kreis|
+|Bogen|Kreis|
 |---------|---------|
 |`ArcTo`|`Rectangle`|
 |`Chord`|`RoundRect`|
 |`Ellipse`||
 
-##  <a name="setattribdc"></a>  CDC::SetAttribDC
+##  <a name="setattribdc"></a>CDC:: ""
 
-Mit dieser Funktion wird zum Festlegen der Attribut-Gerätekontext, `m_hAttribDC`.
+Mit dieser Funktion können `m_hAttribDC`Sie den Attribut Gerätekontext festlegen.
 
 ```
 virtual void SetAttribDC(HDC hDC);
@@ -5792,13 +5792,13 @@ virtual void SetAttribDC(HDC hDC);
 ### <a name="parameters"></a>Parameter
 
 *hDC*<br/>
-Einen Windows-Gerätekontext.
+Ein Windows-Gerätekontext.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion wird nicht den Gerätekontext zu angefügt der `CDC` Objekt. Nur die Ausgabe-Gerätekontext angefügt ist eine `CDC` Objekt.
+Diese Member-Funktion fügt den Gerätekontext nicht an das `CDC` -Objekt an. Nur der Ausgabegeräte Kontext ist an ein `CDC` -Objekt angefügt.
 
-##  <a name="setbkcolor"></a>  CDC::SetBkColor
+##  <a name="setbkcolor"></a>CDC:: SetBkColor
 
 Legt die aktuelle Hintergrundfarbe auf die angegebene Farbe fest.
 
@@ -5809,19 +5809,19 @@ virtual COLORREF SetBkColor(COLORREF crColor);
 ### <a name="parameters"></a>Parameter
 
 *crColor*<br/>
-Die neue Hintergrundfarbe angibt.
+Gibt die neue Hintergrundfarbe an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die vorherigen Hintergrundfarbe als ein RGB-Farbwert. Wenn ein Fehler auftritt, ist der Rückgabewert 0 x 80000000.
+Die vorherige Hintergrundfarbe als RGB-Farbwert. Wenn ein Fehler auftritt, ist der Rückgabewert 0x80000000.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Hintergrundmodus DECKEND ist, verwendet das System die Hintergrundfarbe zum Füllen der Lücken in formatierte Zeilen, die Lücken zwischen schraffierten Linien in Pinsel und den Hintergrund des Zeichenzellen an. Das System verwendet außerdem die Farbe des Hintergrunds beim Konvertieren von Bitmaps zwischen Farbe und monochromen Gerätekontexte.
+Wenn der Hintergrundmodus nicht transparent ist, verwendet das System die Hintergrundfarbe, um die Lücken in formatierten Linien, die Lücken zwischen ausschlendeten Linien in Pinseln und den Hintergrund in Zeichen Zellen auszufüllen. Das System verwendet auch die Hintergrundfarbe beim Umrechnen von Bitmaps zwischen Farb-und Monochrom-Geräte Kontexten.
 
-Wenn das Gerät kann nicht die angegebene Farbe angezeigt wird, setzt das System die Hintergrundfarbe auf die nächste physische Farbe.
+Wenn das Gerät die angegebene Farbe nicht anzeigen kann, legt das System die Hintergrundfarbe auf die nächste physische Farbe fest.
 
-##  <a name="setbkmode"></a>  CDC::SetBkMode
+##  <a name="setbkmode"></a>CDC:: setbkmode
 
 Legt den Hintergrundmodus fest.
 
@@ -5832,11 +5832,11 @@ int SetBkMode(int nBkMode);
 ### <a name="parameters"></a>Parameter
 
 *nBkMode*<br/>
-Gibt den Modus festgelegt werden. Dieser Parameter kann einen der folgenden Werte sein:
+Gibt den Modus an, der festgelegt werden soll. Dieser Parameter kann einen der folgenden Werte aufweisen:
 
-- Nicht TRANSPARENTER Hintergrund ist mit der aktuellen Hintergrundfarbe vor dem Text, schraffierten Pinsels, gefüllt oder Stifts gezeichnet wird. Dies ist der Standardmodus für den Hintergrund.
+- Nicht transparenter Hintergrund wird mit der aktuellen Hintergrundfarbe ausgefüllt, bevor der Text, der ausgelöste Pinsel oder der Stift gezeichnet wird. Dies ist der Standard Hintergrundmodus.
 
-- TRANSPARENTER Hintergrund ist vor dem Zeichnen nicht geändert werden.
+- Transparenter Hintergrund wird vor dem Zeichnen nicht geändert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -5844,15 +5844,15 @@ Der vorherige Hintergrundmodus.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Hintergrundmodus definiert, ob das System vorhandene Hintergrundfarben auf die Zeichenoberfläche entfernt vor dem Zeichnen von Text, schraffierten Pinsel oder jede Pen-Formatvorlage, die keine durchgehende Linie ist.
+Der Hintergrundmodus definiert, ob das System vorhandene Hintergrundfarben auf der Zeichnungs Oberfläche vor dem Zeichnen von Text, auslendeten Pinseln oder einem beliebigen Stift Stil entfernt, der keine durchgezogenen Linie ist.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor).
+  Weitere Informationen finden Sie im Beispiel für [CWnd:: onctlcolor](../../mfc/reference/cwnd-class.md#onctlcolor).
 
-##  <a name="setboundsrect"></a>  CDC::SetBoundsRect
+##  <a name="setboundsrect"></a>CDC:: setboundsrect
 
-Steuert die Ansammlung von umgebenden Rechteck-Informationen für den angegebenen Gerätekontext.
+Steuert die Ansammlung von umgebenden Rechteck Informationen für den angegebenen Gerätekontext.
 
 ```
 UINT SetBoundsRect(
@@ -5863,34 +5863,34 @@ UINT SetBoundsRect(
 ### <a name="parameters"></a>Parameter
 
 *lpRectBounds*<br/>
-Verweist auf eine `RECT` Struktur oder `CRect` -Objekt, das zum Festlegen des umschließenden Rechtecks verwendet wird. Rechteck Dimensionen werden in logischen Koordinaten angegeben. Dieser Parameter kann NULL sein.
+Verweist auf eine `RECT` Struktur oder `CRect` ein Objekt, das zum Festlegen des umgebenden Rechtecks verwendet wird. Rechteck Dimensionen sind in logischen Koordinaten angegeben. Dieser Parameter kann NULL sein.
 
 *flags*<br/>
-Gibt an, wie das neue Rechteck mit dem kumulierten Rechteck kombiniert werden. Dieser Parameter kann eine Kombination der folgenden Werte sein:
+Gibt an, wie das neue Rechteck mit dem akkumulierten Rechteck kombiniert wird. Dieser Parameter kann eine Kombination der folgenden Werte sein:
 
-- DCB_ACCUMULATE hinzufügen anhand des Rechtecks *LpRectBounds* auf das umschließende Rechteck (mit einem Rechteck-Union-Vorgang).
+- DCB_ACCUMULATE fügen Sie das durch *lprectbounds* angegebene Rechteck dem umschließenden Rechteck hinzu (mit einem Rechteck-Union-Vorgang).
 
-- DCB_DISABLE deaktivieren Ansammlung von Grenzen aus.
+- DCB_DISABLE deaktivieren Sie die Begrenzungen-Akkumulation.
 
-- DCB_ENABLE Grenzen Accumulation / aktivieren. (Die Standardeinstellung für Grenzen Accumulation / ist deaktiviert.)
+- DCB_ENABLE aktivieren Sie die Begrenzungen-Akkumulation. (Die Standardeinstellung für die Begrenzungen-Akkumulation ist deaktiviert.)
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der aktuelle Status des umschließenden Rechtecks, wenn die Funktion erfolgreich ist. Wie *Flags*, der Rückgabewert kann eine Kombination sein **DCB_** Werte:
+Der aktuelle Zustand des umgebenden Rechtecks, wenn die Funktion erfolgreich ausgeführt wurde. Ebenso wie *Flags*kann der Rückgabewert eine Kombination aus **DCB_** -Werten sein:
 
-- DCB_ACCUMULATE das umschließende Rechteck ist nicht leer. Dieser Wert wird immer festgelegt werden.
+- DCB_ACCUMULATE das umgebende Rechteck ist nicht leer. Dieser Wert wird immer festgelegt.
 
-- DCB_DISABLE Grenzen Accumulation / ist deaktiviert.
+- Die DCB_DISABLE Bounds-Akkumulation ist deaktiviert.
 
-- DCB_ENABLE Grenzen Accumulation / ist.
+- Die DCB_ENABLE Bounds-Akkumulation ist on.
 
 ### <a name="remarks"></a>Hinweise
 
-Windows kann ein umschließendes Rechteck für alle Zeichenoperationen verwalten. Dieses Rechteck kann zurücksetzen, indem Sie die Anwendung und abgefragt werden. Die Begrenzungen für das Zeichnen sind nützlich für das Bitmap-Caches für ungültig zu erklären.
+Windows kann ein Begrenzungs Rechteck für alle Zeichnungsvorgänge beibehalten. Dieses Rechteck kann abgefragt und von der Anwendung zurückgesetzt werden. Die Zeichnungs Grenzen sind nützlich, um bitmapcaches ungültig zu machen.
 
-##  <a name="setbrushorg"></a>  CDC::SetBrushOrg
+##  <a name="setbrushorg"></a>CDC:: setbrushorg
 
-Gibt die Ursprungsdomäne, die GDI auf den nächsten Pinsel zuweist, die die Anwendung in den Gerätekontext auswählt.
+Gibt den Ursprung an, den GDI dem nächsten Pinsel zuweist, der von der Anwendung in den Gerätekontext ausgewählt wird.
 
 ```
 CPoint SetBrushOrg(
@@ -5903,27 +5903,27 @@ CPoint SetBrushOrg(POINT point);
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die X-Koordinate (in Geräteeinheiten) der neuen Ursprung an. Dieser Wert muss im Bereich von 0 bis 7 sein.
+Gibt die x-Koordinate (in Geräte Einheiten) des neuen Ursprungs an. Dieser Wert muss im Bereich 0-7 liegen.
 
 *y*<br/>
-Gibt die y-Koordinate (in Geräteeinheiten) der neuen Ursprung an. Dieser Wert muss im Bereich von 0 bis 7 sein.
+Gibt die y-Koordinate (in Geräte Einheiten) des neuen Ursprungs an. Dieser Wert muss im Bereich 0-7 liegen.
 
 *point*<br/>
-Gibt an, die x- und y-Koordinaten des neuen Ursprungs. Jeder Wert muss im Bereich von 0 bis 7 sein. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
+Gibt die x-und y-Koordinaten des neuen Ursprungs an. Jeder Wert muss im Bereich 0-7 liegen. Sie können entweder eine `POINT` Struktur oder ein `CPoint` -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der vorherige Ursprung des Pinsels in Geräteeinheiten.
+Der vorherige Ursprung des Pinsels in den Geräte Einheiten.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Standardwert für den Ursprung des Pinsels koordiniert werden (0, 0). Aufrufen, um den Ursprung eines Pinsels ändern zu können, die `UnrealizeObject` für funktionsfähig sein, die `CBrush` Objekt, rufen Sie `SetBrushOrg`, und rufen Sie dann die `SelectObject` Memberfunktion, um den Pinsel für den Gerätekontext wählen.
+Die Standard Koordinaten für den Pinsel Ursprung sind (0,0). Um den Ursprung eines Pinsels zu ändern, wird `UnrealizeObject` die-Funktion `CBrush` für das- `SetBrushOrg`Objekt aufgerufen, und der `SelectObject` -Member wird aufgerufen, um den Pinsel in den Gerätekontext auszuwählen.
 
-Verwenden Sie keine `SetBrushOrg` mit Stock `CBrush` Objekte.
+Verwenden `SetBrushOrg` Sie nicht mit Aktien `CBrush` Objekten.
 
-##  <a name="setcoloradjustment"></a>  CDC::SetColorAdjustment
+##  <a name="setcoloradjustment"></a>CDC:: setcoloradjustment
 
-Legt die Farbe Anpassungswerte für den Gerätekontext, die mit den angegebenen Werten.
+Legt die Farb Anpassungs Werte für den Gerätekontext mithilfe der angegebenen Werte fest.
 
 ```
 BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
@@ -5932,7 +5932,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="parameters"></a>Parameter
 
 *lpColorAdjust*<br/>
-Verweist auf eine [COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) Datenstruktur, die die Anpassung Farbwerte enthält.
+Verweist auf eine [coloradjustment](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) -Datenstruktur, die die Farb Anpassungs Werte enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -5940,11 +5940,11 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Die Anpassung Farbwerte werden verwendet, um passen Sie die Eingabefarbe des Quellbitmaps für Aufrufe an die `CDC::StretchBlt` Memberfunktion Halbtonmodus festgelegt ist.
+Die Farb Anpassungs Werte werden verwendet, um die Eingabe Farbe der Quell Bitmap für Aufrufe der `CDC::StretchBlt` Member-Funktion anzupassen, wenn der Modus "halbftone" festgelegt ist.
 
-##  <a name="setdcbrushcolor"></a>  CDC::SetDCBrushColor
+##  <a name="setdcbrushcolor"></a>CDC:: setdcbrushcolor
 
-Legt die aktuelle Pinselfarbe Geräts Gerätekontext (DC) auf den Wert der angegebenen Farbe fest.
+Legt die aktuelle Pinsel Farbe des Geräte Kontexts (DC) auf den angegebenen Farbwert fest.
 
 ```
 COLORREF SetDCBrushColor(COLORREF crColor);
@@ -5953,21 +5953,21 @@ COLORREF SetDCBrushColor(COLORREF crColor);
 ### <a name="parameters"></a>Parameter
 
 *crColor*<br/>
-Gibt an, die neue Farbe des Pinsels.
+Gibt die neue Pinsel Farbe an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt der Rückgabewert der vorherige Farbe des Hintergrundpinsels DC als COLORREF Wert.
+Wenn die Funktion erfolgreich ausgeführt wird, gibt der Rückgabewert die vorherige DC-Pinsel Farbe als COLORREF-Wert an.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert CLR_INVALID an.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert CLR_INVALID.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode emuliert die Funktionen der Funktion [SetDCBrushColor](/windows/desktop/api/wingdi/nf-wingdi-setdcbrushcolor), wie im Windows SDK beschrieben.
+Diese Methode emuliert die Funktionalität der Funktion " [setdcbrushcolor](/windows/desktop/api/wingdi/nf-wingdi-setdcbrushcolor)", wie im Windows SDK beschrieben.
 
-##  <a name="setdcpencolor"></a>  CDC::SetDCPenColor
+##  <a name="setdcpencolor"></a>CDC:: setdcpcolor
 
-Legt die aktuelle Stiftfarbe für Geräts Gerätekontext (DC) auf den Wert der angegebenen Farbe fest.
+Legt die Stift Farbe des aktuellen Geräte Kontexts (DC) auf den angegebenen Farbwert fest.
 
 ```
 COLORREF SetDCPenColor(COLORREF crColor);
@@ -5976,7 +5976,7 @@ COLORREF SetDCPenColor(COLORREF crColor);
 ### <a name="parameters"></a>Parameter
 
 *crColor*<br/>
-Gibt an, die neue Stiftfarbe.
+Gibt die neue Stift Farbe an.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -5984,11 +5984,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion verwendet die Win32-Funktion [SetDCPenColor](/windows/desktop/api/wingdi/nf-wingdi-setdcpencolor), wie im Windows SDK beschrieben.
+Diese Member-Funktion verwendet die Win32-Funktion [setdcpcolor](/windows/desktop/api/wingdi/nf-wingdi-setdcpencolor), wie im Windows SDK beschrieben.
 
-##  <a name="setgraphicsmode"></a>  CDC::SetGraphicsMode
+##  <a name="setgraphicsmode"></a>CDC:: setgraphicsmode
 
-Legt den Modus "Graphics" für den angegebenen Gerätekontext.
+Legt den Grafikmodus für den angegebenen Gerätekontext fest.
 
 ```
 int SetGraphicsMode(int iMode);
@@ -5997,21 +5997,21 @@ int SetGraphicsMode(int iMode);
 ### <a name="parameters"></a>Parameter
 
 *iMode*<br/>
-Gibt den Grafikmodus. Eine Liste der Werte, die für diesen Parameter, finden Sie unter [SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode).
+Gibt den Grafikmodus an. Eine Liste der Werte, die dieser Parameter annehmen kann, finden Sie unter [setgraphicsmode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode).
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt den alten Grafikmodus bei Erfolg zurück.
+Gibt bei Erfolg den alten Grafikmodus zurück.
 
-Gibt 0 bei einem Fehler zurück. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Gibt bei einem Fehler 0 zurück. Um erweiterte Fehlerinformationen abzurufen, nennen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode dient als Wrapper für die Windows-GDI-Funktion [SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode).
+Diese Methode umschließt die Windows-GDI-Funktion [setgraphicsmode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode).
 
-##  <a name="setlayout"></a>  CDC::SetLayout
+##  <a name="setlayout"></a>CDC:: setLayout
 
-Rufen Sie diese Memberfunktion, um das Layout von Text und Grafiken für einen Gerätekontext nach rechts nach links ist; das Standardlayout für Kulturen wie Arabisch und Hebräisch zu ändern.
+Mit dieser Member-Funktion können Sie das Layout von Text und Grafiken für einen Gerätekontext von rechts nach Links ändern, das Standardlayout für Kulturen wie Arabisch und Hebräisch.
 
 ```
 DWORD SetLayout(DWORD dwLayout);
@@ -6020,33 +6020,33 @@ DWORD SetLayout(DWORD dwLayout);
 ### <a name="parameters"></a>Parameter
 
 *dwLayout*<br/>
-Gerät Kontextlayout und die Bitmap Steuerungsflags. Sie können eine Kombination der folgenden Werte sein.
+Gerätekontext Layout und Bitmap-Steuerungsflags. Dies kann eine Kombination der folgenden Werte sein.
 
 |Wert|Bedeutung|
 |-----------|-------------|
-|LAYOUT_BITMAPORIENTATIONPRESERVED|Deaktiviert alle Reflektion für Aufrufe von [CDC:: BitBlt](#bitblt) und [CDC::StretchBlt](#stretchblt).|
-|LAYOUT_RTL|Legt fest, das horizontale Standardlayout werden von rechts nach links orientiert.|
-|LAYOUT_LTR|Legt fest, das Standardlayout, links nach rechts ausgewertet werden.|
+|LAYOUT_BITMAPORIENTATIONPRESERVED|Deaktiviert jede Reflektion für Aufrufe von [CDC:: BitBLT](#bitblt) und [CDC:: StretchBlt](#stretchblt).|
+|LAYOUT_RTL|Legt das horizontale Standardlayout von rechts nach links fest.|
+|LAYOUT_LTR|Legt das Standardlayout von links nach rechts fest.|
 
 ### <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreicher Ausführung dem vorherigen Layout des Gerätekontexts.
+Wenn erfolgreich, das vorherige Layout des Geräte Kontexts.
 
-Wenn Fehler auftreten, GDI_ERROR. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Wenn nicht erfolgreich, GDI_ERROR. Um erweiterte Fehlerinformationen abzurufen, nennen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 
-Normalerweise würden Sie nicht aufrufen `SetLayout` für ein Fenster. Stattdessen durch Festlegen der rechts-nach-links-Layout in einem Fenster steuern die [erweiterte Fensterstile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) wie z. B. WS_EX_RTLREADING. Dieses Layout ein Gerätekontext, z. B. ein Drucker oder eine Metadatei nicht geerbt. Die einzige Möglichkeit, den Gerätekontext legen Sie für eine rechts-nach-links-Layout durch den Aufruf ist `SetLayout`.
+Normalerweise würden Sie für ein `SetLayout` Fenster nicht aufzurufen. Stattdessen steuern Sie das Layout von rechts nach links in einem Fenster, indem Sie die [erweiterten Fenster Stile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) wie z. b. WS_EX_RTLREADING festlegen. Ein Gerätekontext (z. b. ein Drucker oder eine Metadatei) erbt dieses Layout nicht. Die einzige Möglichkeit zum Festlegen des Geräte Kontexts für ein Layout von rechts nach links ist das Aufrufen `SetLayout`von.
 
-Wenn Sie aufrufen **SetLayout (LAYOUT_RTL** ), `SetLayout` automatisch den Zuordnungsmodus in MM_ISOTROPIC geändert. Als Ergebnis ein nachfolgender Aufruf von [GetMapMode](#getmapmode) MM_ISOTROPIC statt MM_TEXT zurück.
+Wenn Sie **setLayout (LAYOUT_RTL** ) aufrufen, `SetLayout` wird der Zuordnungsmodus von automatisch in MM_ISOTROPIC geändert. Folglich gibt ein nachfolgende [getmapmode](#getmapmode) -aufrufen MM_ISOTROPIC anstelle von MM_TEXT zurück.
 
-In einigen Fällen sollten wie z. B. mit vielen Bitmaps, Sie das links-nach-rechts-Layout beibehalten. In diesen Fällen das Bild zu rendern durch Aufrufen von `BitBlt` oder `StretchBlt`, legen Sie dann auf die Bitmap für protokollierungssteuerungs-Flag für *DwLayout* zu LAYOUT_BITMAPORIENTATIONPRESERVED.
+In einigen Fällen, z. b. bei vielen Bitmaps, empfiehlt es sich, das Layout von links nach rechts beizubehalten. In diesen Fällen müssen Sie das Image durch Aufrufen `BitBlt` von `StretchBlt`oder Rendering und dann das Bitmap-Steuerelement Flag für *dwlayout* auf LAYOUT_BITMAPORIENTATIONPRESERVED festlegen.
 
-Sobald Sie das Layout mit dem Flag LAYOUT_RTL geändert wurde, werden die Flags, die normalerweise angeben rechten oder linken rückgängig gemacht. Um Verwirrung zu vermeiden, empfiehlt es sich um alternativen Namen für die standard-Flags zu definieren. Eine Liste der Namen vorgeschlagenen alternativen markieren, finden Sie unter [SetLayout](/windows/desktop/api/wingdi/nf-wingdi-setlayout) im Windows SDK.
+Nachdem Sie das Layout mit dem LAYOUT_RTL-Flag geändert haben, werden die Flags, die normalerweise nach rechts oder Links angeben, umgekehrt. Um Verwirrung zu vermeiden, können Sie alternative Namen für die Standardflags definieren. Eine Liste der vorgeschlagenen Alternativen flagnamen finden Sie unter [setLayout](/windows/desktop/api/wingdi/nf-wingdi-setlayout) in der Windows SDK.
 
-##  <a name="setmapmode"></a>  CDC::SetMapMode
+##  <a name="setmapmode"></a>CDC:: setmapmode
 
-Legt den Zuordnungsmodus.
+Legt den Modus für die Zuordnung fest.
 
 ```
 virtual int SetMapMode(int nMapMode);
@@ -6055,44 +6055,44 @@ virtual int SetMapMode(int nMapMode);
 ### <a name="parameters"></a>Parameter
 
 *nMapMode*<br/>
-Gibt den neuen Zuordnungsmodus an. Eine der folgenden Werte sind möglich:
+Gibt den neuen Mapping-Modus an. Es kann sich um einen der folgenden Werte handeln:
 
-- MM_ANISOTROPIC logische Einheiten werden in beliebigen Einheiten mit beliebig skaliert Achsen konvertiert. Festlegen der Zuordnungsmodus, MM_ANISOTROPIC ändert sich nicht auf die aktuellen Einstellungen für Fenster oder der Viewport aus. Ausrichtung und die Skalierung aufrufen, um die Einheiten zu ändern, die [SetWindowExt](#setwindowext) und [SetViewportExt](#setviewportext) Memberfunktionen.
+- MM_ANISOTROPIC logische Einheiten werden in beliebige Einheiten mit beliebig skalierten Achsen konvertiert. Wenn Sie den Mapping-Modus auf MM_ANISOTROPIC festlegen, werden die aktuellen Fenster-oder viewporteinstellungen nicht geändert. Um die Einheiten, die Ausrichtung und die Skalierung zu ändern, müssen Sie die Element Funktionen [setwindowext](#setwindowext) und [setviewportext](#setviewportext) aufrufen.
 
-- MM_HIENGLISH jeder logischen Einheit wird in 0,001 Zoll konvertiert. Positive x ist auf der rechten Seite. positive y ist aktiv.
+- MM_HIENGLISH jede logische Einheit wird in 0,001 Zoll konvertiert. Positives x steht auf der rechten Seite. positives y ist aktiv.
 
-- MM_HIMETRIC jeder logischen Einheit wird in 0,01 Millimeter konvertiert. Positive x ist auf der rechten Seite. positive y ist aktiv.
+- MM_HIMETRIC jede logische Einheit wird in 0,01 Millimeter konvertiert. Positives x steht auf der rechten Seite. positives y ist aktiv.
 
-- MM_ISOTROPIC logische Einheiten werden mit den gleichmäßig skalierten Achsen auf beliebige Einheiten konvertiert. 1 Einheit entlang der x-Achse entspricht, also 1 Einheit entlang der y-Achse. Verwenden der `SetWindowExt` und `SetViewportExt` Memberfunktionen Geben Sie die gewünschte Einheiten und die Ausrichtung der Achsen. GDI werden Anpassungen in Schritten nach Bedarf um sicherzustellen, dass die x- und y-Einheiten bleiben die gleiche Größe.
+- MM_ISOTROPIC logische Einheiten werden in beliebige Einheiten mit gleichmäßig skalierten Achsen konvertiert. Das heißt, 1 Einheit entlang der x-Achse ist gleich 1 Einheit entlang der y-Achse. Verwenden Sie `SetWindowExt` die `SetViewportExt` -und-Member-Funktionen, um die gewünschten Einheiten und die Ausrichtung der Achsen anzugeben. GDI nimmt bei Bedarf Anpassungen vor, um sicherzustellen, dass die x-und y-Einheiten die gleiche Größe haben.
 
-- MM_LOENGLISH jeder logischen Einheit wird in 0,01 Zoll konvertiert. Positive x ist auf der rechten Seite. positive y ist aktiv.
+- MM_LOENGLISH jede logische Einheit wird in 0,01 Zoll konvertiert. Positives x steht auf der rechten Seite. positives y ist aktiv.
 
-- MM_LOMETRIC jeder logischen Einheit wird in 0,1 Millimeter konvertiert. Positive x ist auf der rechten Seite. positive y ist aktiv.
+- MM_LOMETRIC jede logische Einheit wird in 0,1 Millimeter konvertiert. Positives x steht auf der rechten Seite. positives y ist aktiv.
 
-- MM_TEXT jeder logischen Einheit wird in 1 Gerätepixel konvertiert. Positive x ist auf der rechten Seite. positive y ist nicht verfügbar.
+- MM_TEXT jede logische Einheit wird in 1 Geräte Pixel konvertiert. Positives x steht auf der rechten Seite. positives y ist nicht mehr.
 
-- MM_TWIPS jeder logischen Einheit wird in 1/20, eines Punkts konvertiert. (Da ein Punkt 1/72 Zoll ist, ist eine Twips 1/1440 Zoll). Positive x ist auf der rechten Seite. positive y ist aktiv.
+- MM_TWIPS jede logische Einheit wird in 1/20 eines Punkts konvertiert. (Da es sich bei einem Punkt um 1/72 Zoll handelt, ist ein Twip 1/1440 Zoll.) Positives x steht auf der rechten Seite. positives y ist aktiv.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der vorherige Zuordnungsmodus.
+Der vorherige Mapping-Modus.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Zuordnungsmodus definiert, die Maßeinheit, die zum Konvertieren von logischer Einheiten in Geräteeinheiten verwendet wird. Außerdem wird die Ausrichtung des Geräts in dessen x- und y-Achse definiert. GDI verwendet den Zuordnungsmodus zum Konvertieren von logischer Koordinaten in der entsprechenden Gerätekoordinaten. Der MM_TEXT-Modus ermöglicht es Anwendungen in Pixeln, wobei 1 Einheit gleich 1-Pixel. Die physische Größe eines Pixels variiert je nach Gerät.
+Der Zuordnungsmodus definiert die Maßeinheit, die verwendet wird, um logische Einheiten in Geräte Einheiten zu konvertieren. Außerdem wird die Ausrichtung der x-und y-Achsen des Geräts definiert. GDI verwendet den Zuordnungsmodus, um logische Koordinaten in die entsprechenden Geräte Koordinaten zu konvertieren. Mit dem MM_TEXT-Modus können Anwendungen in Geräte Pixeln arbeiten, wobei 1 Einheit gleich 1 Pixel ist. Die physische Größe eines Pixels variiert von Gerät zu Gerät.
 
-Die Modi MM_HIENGLISH, MM_HIMETRIC, MM_LOENGLISH, MM_LOMETRIC und MM_TWIPS eignen sich für Anwendungen, die physisch von Bedeutung Einheiten (z. B. Zoll oder Millimeter) abrufen müssen. Der Modus MM_ISOTROPIC stellt sicher ein Seitenverhältnis 1:1, was nützlich ist, es wichtig ist, die genaue Form eines Bildes beibehalten. Der MM_ANISOTROPIC-Modus ermöglicht die x- und y-Koordinaten unabhängig voneinander angepasst werden.
+Die Modi MM_HIENGLISH, MM_HIMETRIC, MM_LOENGLISH, MM_LOMETRIC und MM_TWIPS sind bei Anwendungen nützlich, die in physisch sinnvollen Einheiten (z. b. Zoll oder Millimeter) gezeichnet werden müssen. Der MM_ISOTROPIC-Modus stellt ein 1:1-Seitenverhältnis sicher, was nützlich ist, wenn es wichtig ist, die exakte Form eines Bilds beizubehalten. Der MM_ANISOTROPIC-Modus ermöglicht, dass die x-und y-Koordinaten unabhängig voneinander angepasst werden.
 
 > [!NOTE]
->  Wenn Sie aufrufen [SetLayout](#setlayout) so ändern Sie den DC (Gerätekontext) in rechts-nach-links-Layout, `SetLayout` automatisch den Zuordnungsmodus in MM_ISOTROPIC geändert.
+>  Wenn Sie [setLayout](#setlayout) aufrufen, um den DC (Gerätekontext) in das Layout von rechts nach Links zu `SetLayout` ändern, wird der Zuordnungsmodus von automatisch in MM_ISOTROPIC geändert.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
+  Weitere Informationen finden Sie im Beispiel für [CView:: OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
 
-##  <a name="setmapperflags"></a>  CDC::SetMapperFlags
+##  <a name="setmapperflags"></a>CDC:: setmapperflags
 
-Ändert die Methode, die von der Schriftartenmapper verwendet werden, wenn eine logische Schriftart in einer physikalischen Schriftart konvertiert.
+Ändert die Methode, die vom Schriftart Mapper verwendet wird, wenn eine logische Schriftart in eine physische Schriftart konvertiert wird.
 
 ```
 DWORD SetMapperFlags(DWORD dwFlag);
@@ -6101,23 +6101,23 @@ DWORD SetMapperFlags(DWORD dwFlag);
 ### <a name="parameters"></a>Parameter
 
 *dwFlag*<br/>
-Gibt an, ob die Schriftartenmapper versucht, einer Schriftart Aspekt Höhe und Breite auf dem Gerät übereinstimmen. Wenn dieser Wert ASPECT_FILTERING ist, wählt der Mapper nur Schriftarten, deren Aspect-X und y-Aspekt genau das angegebene Gerät übereinstimmen.
+Gibt an, ob der Schriftart Mapper versucht, die Seitenhöhe und-Breite einer Schriftart dem Gerät zuzuordnen. Wenn dieser Wert auf ASPECT_FILTERING festgelegt ist, wählt der Mapper nur die Schriftarten aus, deren x-Aspekt und y-Aspekt exakt mit denen des angegebenen Geräts übereinstimmen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der vorherige Wert des Flags Schriftarten-Mapper.
+Der vorherige Wert des Font-Mapper-Flags.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann mithilfe `SetMapperFlags` , dazu führen, dass den Schriftartenmapper versucht, die nur eine physikalische Schriftart auswählen, die genau mit das Seitenverhältnis der das angegebene Gerät übereinstimmt.
+Eine Anwendung kann verwenden `SetMapperFlags` , damit der Schriftart-Mapper versucht, nur eine physische Schriftart auszuwählen, die exakt mit dem Seitenverhältnis des angegebenen Geräts übereinstimmt.
 
-Eine Anwendung, die nur Rasterschriftarten verwendet können die `SetMapperFlags` Funktion, um sicherzustellen, dass die vom Schriftartenmapper ausgewählte Schriftart ansprechend und lesbar ist, auf dem Gerät ist. Anwendungen, die skalierbare (TrueType) Schriftarten, in der Regel verwenden verwenden Sie keine `SetMapperFlags`.
+Eine Anwendung, die nur Raster Schriftarten verwendet, `SetMapperFlags` kann die-Funktion verwenden, um sicherzustellen, dass die von der Schriftart Zuordnung ausgewählte Schriftart auf dem angegebenen Gerät attraktiv und lesbar ist. Anwendungen, die skalierbare (TrueType) Schriftarten verwenden, `SetMapperFlags`verwenden in der Regel nicht.
 
-Wenn keine physischen Schriftart ein Seitenverhältnis, die die Spezifikation in die logische Schriftart entspricht besitzt, ist GDI wählt ein neues Seitenverhältnis und wählt eine Schriftart, die diese neue Seitenverhältnis entspricht.
+Wenn keine physische Schriftart über ein Seitenverhältnis verfügt, das mit der Spezifikation in der logischen Schriftart übereinstimmt, wählt GDI ein neues Seitenverhältnis aus und wählt eine Schriftart aus, die mit diesem neuen Seitenverhältnis übereinstimmt.
 
-##  <a name="setmiterlimit"></a>  CDC::SetMiterLimit
+##  <a name="setmiterlimit"></a>CDC:: setmiterlimit
 
-Legt das Limit für die Dauer der Gehrungslänge Joins für den Gerätekontext.
+Legt den Grenzwert für die Länge von Gehrungs-Joins für den Gerätekontext fest.
 
 ```
 BOOL SetMiterLimit(float fMiterLimit);
@@ -6126,7 +6126,7 @@ BOOL SetMiterLimit(float fMiterLimit);
 ### <a name="parameters"></a>Parameter
 
 *fMiterLimit*<br/>
-Gibt an, die neue Gehrungsgrenze für den Gerätekontext.
+Gibt das neue Gehrungs-Limit für den Gerätekontext an.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -6134,11 +6134,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Gehrungslänge ist als die Entfernung aus der Schnittmenge der Zeile Wände innerhalb des Joins auf die Schnittmenge der Zeile an der Außenseite des Joins Wände definiert. Die Gehrungsgrenze ist die maximale zulässige Verhältnis der Gehrungslänge auf die Linienstärke. Die Gehrungsgrenze der Standardwert ist 10,0.
+Die Gehrungs-Länge wird als Abstand zwischen der Schnittmenge der Linien Wände im Inneren des Joins und der Schnittmenge der Linien Wände auf der Außenseite des Joins definiert. Das miterLimit ist das maximal zulässige Verhältnis der Gehrungs-Länge zur Linienbreite. Der Standard Grenzwert für das Trennzeichen ist 10,0.
 
-##  <a name="setoutputdc"></a>  CDC::SetOutputDC
+##  <a name="setoutputdc"></a>CDC:: setoutputdc
 
-Rufen Sie diese Memberfunktion zum Festlegen der Gerätekontext, die Ausgabe `m_hDC`.
+Mit dieser Member-Funktion können `m_hDC`Sie den Ausgabegeräte Kontext festlegen.
 
 ```
 virtual void SetOutputDC(HDC hDC);
@@ -6147,15 +6147,15 @@ virtual void SetOutputDC(HDC hDC);
 ### <a name="parameters"></a>Parameter
 
 *hDC*<br/>
-Einen Windows-Gerätekontext.
+Ein Windows-Gerätekontext.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion kann nur aufgerufen werden, wenn Sie ein Gerätekontext nicht zugeordnet wurde die `CDC` Objekt. Diese Memberfunktion legt `m_hDC` jedoch nicht den Gerätekontext zu angefügt ist die `CDC` Objekt.
+Diese Member-Funktion kann nur aufgerufen werden, wenn ein Gerätekontext nicht an das `CDC` -Objekt angefügt wurde. Diese Member-Funktion `m_hDC` legt den Gerätekontext fest, fügt ihn aber `CDC` nicht an das-Objekt an.
 
-##  <a name="setpixel"></a>  CDC::SetPixel
+##  <a name="setpixel"></a>CDC:: SetPixel
 
-Legt die Pixel der Zeitpunkt angegeben, um die größte Annäherung der Farbe anhand des *CrColor*.
+Legt das Pixel an der angegebenen Stelle auf die nächstgelegene Näherung der durch *crcolor*angegebenen Farbe fest.
 
 ```
 COLORREF SetPixel(
@@ -6171,30 +6171,30 @@ COLORREF SetPixel(
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate des Punkts, der festgelegt werden.
+Gibt die logische x-Koordinate des festzulegenden Punkts an.
 
 *y*<br/>
-Gibt die logische y-Koordinate des Punkts, der festgelegt werden.
+Gibt die logische y-Koordinate des festzulegenden Punkts an.
 
 *crColor*<br/>
-Ein COLORREF RGB-Wert, der angibt, die Farbe verwendet, um den Punkt zu zeichnen. Finden Sie unter [COLORREF](/windows/desktop/gdi/colorref) im Windows SDK für eine Beschreibung dieses Werts.
+Ein COLORREF RGB-Wert, der die Farbe angibt, mit der der Punkt gezeichnet wird. Eine Beschreibung dieses Werts finden Sie unter [COLORREF](/windows/desktop/gdi/colorref) im Windows SDK.
 
 *point*<br/>
-Gibt die logische X - und y-Koordinaten des Punkts, der festgelegt werden. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
+Gibt die logischen x-und y-Koordinaten des festzulegenden Punkts an. Sie können entweder eine `POINT` Struktur oder ein `CPoint` -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein RGB-Wert für die Farbe an, dass der Punkt tatsächlich gezeichnet wird. Dieser Wert kann sich von dem vom angegebenen sein *CrColor* Wenn ein Näherungswert für die entsprechende Farbe verwendet wird. Wenn die Funktion ein Fehler auftritt (wenn der Punkt außerhalb des Clippingbereichs ist), wird der Wert-1 zurückgegeben.
+Ein RGB-Wert für die Farbe, in der der Punkt tatsächlich gezeichnet wird. Dieser Wert kann sich von dem Wert unterscheiden, der von *crcolor* festgelegt wird, wenn eine Näherung dieser Farbe verwendet wird. Wenn die Funktion fehlschlägt (wenn sich der Punkt außerhalb des Clippingbereichs befindet), ist der Rückgabewert-1.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Punkt muss in den Ausschneidebereich sein. Wenn der Punkt nicht in den Ausschneidebereich ist, bleibt die Funktion untätig.
+Der Punkt muss sich im Clippingbereich befinden. Wenn sich der Punkt nicht im Clippingbereich befindet, führt die Funktion keine Aktion aus.
 
-Nicht alle Geräte unterstützen die `SetPixel`-Funktion. Um festzustellen, ob ein Gerät unterstützt `SetPixel`, rufen Sie die `GetDeviceCaps` Member mit dem Index RASTERCAPS Funktion und den Rückgabewert für das Flag RC_BITBLT überprüfen.
+Nicht alle Geräte unterstützen die `SetPixel`-Funktion. Um zu ermitteln, ob ein `SetPixel`Gerät unterstützt `GetDeviceCaps` , müssen Sie die Member-Funktion mit dem RasterCaps-Index aufrufen und den Rückgabewert des RC_BITBLT-Flags überprüfen.
 
-##  <a name="setpixelv"></a>  CDC::SetPixelV
+##  <a name="setpixelv"></a>CDC:: setpixelv
 
-Das Pixel festgelegt auf den angegebenen Koordinaten auf diesem am ehesten der angegebenen Farbe.
+Legt das Pixel an den angegebenen Koordinaten auf die nächstgelegene Näherung der angegebenen Farbe fest.
 
 ```
 BOOL SetPixelV(
@@ -6210,16 +6210,16 @@ BOOL SetPixelV(
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die X-Koordinate, in logischen Einheiten des Punkts, der festgelegt werden.
+Gibt die x-Koordinate (in logischen Einheiten) des festzulegenden Punkts an.
 
 *y*<br/>
-Gibt die y-Koordinate, in logischen Einheiten des Punkts, der festgelegt werden.
+Gibt die y-Koordinate (in logischen Einheiten) des festzulegenden Punkts an.
 
 *crColor*<br/>
-Gibt die Farbe verwendet werden, um den Punkt zu zeichnen.
+Gibt die Farbe an, die zum Zeichnen des Punkts verwendet werden soll.
 
 *point*<br/>
-Gibt die logische X - und y-Koordinaten des Punkts, der festgelegt werden. Sie können entweder übergeben eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Datenstruktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt für diesen Parameter.
+Gibt die logischen x-und y-Koordinaten des festzulegenden Punkts an. Sie können entweder eine [Punkt](/windows/desktop/api/windef/ns-windef-tagpoint) Datenstruktur oder ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -6227,11 +6227,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Der Punkt muss sich in den Ausschneidebereich und der sichtbare Teil der Geräteoberfläche. Nicht alle Geräte unterstützen die Member-Funktion. Weitere Informationen finden Sie unter der RC_BITBLT-Funktion der `CDC::GetDeviceCaps` Member-Funktion. `SetPixelV` ist schneller als `SetPixel` , da sie nicht den Farbwert der der Punkt tatsächlich gezeichnet zurückgeben muss.
+Der Punkt muss sowohl im Clippingbereich als auch im sichtbaren Teil der Geräteoberfläche liegen. Die Member-Funktion wird nicht von allen Geräten unterstützt. Weitere Informationen finden Sie unter der RC_BITBLT-Funktion in `CDC::GetDeviceCaps` der Member-Funktion. `SetPixelV`ist schneller als `SetPixel` , weil der Farbwert des tatsächlich gezeichneten Punkts nicht zurückgegeben werden muss.
 
-##  <a name="setpolyfillmode"></a>  CDC::SetPolyFillMode
+##  <a name="setpolyfillmode"></a>CDC:: setpolyfillmode
 
-Legt den Modus für die Polygon-füllen.
+Legt den Polygon Füll Modus fest.
 
 ```
 int SetPolyFillMode(int nPolyFillMode);
@@ -6240,19 +6240,19 @@ int SetPolyFillMode(int nPolyFillMode);
 ### <a name="parameters"></a>Parameter
 
 *nPolyFillMode*<br/>
-Gibt den Füllmodus für neue zu. Dieser Wert kann entweder alternative oder WICKELN sein. Der Standardmodus in Windows festgelegt ist, alternative.
+Gibt den neuen Füll Modus an. Bei diesem Wert kann es sich entweder um eine Alternative oder um eine " Der in Windows festgelegte Standardmodus ist "Alternative".
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der vorherige ausfüllen-Modus, wenn erfolgreich; andernfalls 0.
+Der vorherige Füllmodus, wenn erfolgreich. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Modus für die Polygon-füllen-Alternative ist, füllt das System den Bereich zwischen ungerade und geradzahlige Polygonseiten für jede Scanzeile an. Das System füllt, also den Bereich zwischen der ersten und zweiten Seite, zwischen der dritte und vierte Seite, und So weiter. Dieser Modus ist die Standardeinstellung.
+Wenn der Polygon Füllmodus eine Alternative ist, füllt das System den Bereich zwischen ungeraden und sogar nummerierten Polygon Seiten für jede Scan Zeile aus. Das heißt, das System füllt den Bereich zwischen der ersten und der zweiten Seite, zwischen der dritten und vierten Seite und so weiter. Dieser Modus ist die Standardeinstellung.
 
-Wenn der Modus für die Polygon-füllen WICKLUNG ist, verwendet das System die Richtung, in der eine Abbildung gezeichnet wurde, um festzustellen, ob das Ausfüllen eines Bereichs, an. Jedes Liniensegment in einem Polygon, die in einen im Uhrzeigersinn oder gegen den Uhrzeigersinn gezeichnet wird. Wenn Sie eine gedachte Linie, die von eine eingeschlossene Bereich gezeichnet wird, an die Außenwelt einer Abbildung im Uhrzeigersinn Liniensegment durchläuft, wird eine Anzahl erhöht. Wenn die Zeile ein gegen den Uhrzeigersinn Liniensegment durchläuft, wird die Anzahl die verringert. Der Bereich wird ausgefüllt, wenn die Anzahl die ungleich NULL ist, wenn die Zeile außerhalb der in der Abbildung erreicht.
+Wenn sich der Polygon Füllmodus in der Größe befindet, verwendet das System die Richtung, in der eine Figur gezeichnet wurde, um zu bestimmen, ob ein Bereich ausgefüllt werden soll. Jedes Liniensegment in einem Polygon wird entweder im Uhrzeigersinn oder gegen den Uhrzeigersinn gezeichnet. Wenn eine imaginäre Linie, die von einem eingeschlossenen Bereich zum äußeren Rand einer Figur gezeichnet wird, ein Liniensegment im Uhrzeigersinn übergibt, wird eine Anzahl erhöht. Wenn die Linie ein Liniensegment gegen den Uhrzeigersinn übergibt, wird die Anzahl dekrementiert. Der Bereich wird aufgefüllt, wenn die Anzahl nicht 0 (null) ist, wenn die Zeile den äußeren Rand der Abbildung erreicht.
 
-##  <a name="setrop2"></a>  CDC::SetROP2
+##  <a name="setrop2"></a>CDC:: SetROP2
 
 Legt den aktuellen Zeichnungsmodus fest.
 
@@ -6263,55 +6263,55 @@ int SetROP2(int nDrawMode);
 ### <a name="parameters"></a>Parameter
 
 *nDrawMode*<br/>
-Gibt den neuen Zeichnungsmodus an. Eines der folgenden Werte sind möglich:
+Gibt den neuen Zeichnungsmodus an. Dabei kann es sich um einen der folgenden Werte handeln:
 
-- R2_BLACK Pixel ist immer Schwarz.
+- R2_BLACK Pixel ist immer schwarz.
 
-- Es ist immer R2_WHITE Pixel weiß.
+- R2_WHITE Pixel ist immer weiß.
 
 - R2_NOP Pixel bleibt unverändert.
 
-- R2_NOT Pixel ist die Umkehrung der Bildschirmfarbe.
+- R2_NOT Pixel ist die Umkehrung der Bildschirm Farbe.
 
-- R2_COPYPEN Pixel ist die Stiftfarbe.
+- R2_COPYPEN Pixel ist die Stift Farbe.
 
-- R2_NOTCOPYPEN Pixel ist die Umkehrung der Stiftfarbe.
+- R2_NOTCOPYPEN Pixel ist die Umkehrung der Stift Farbe.
 
-- R2_MERGEPENNOT Pixel ist, eine Kombination aus die Stiftfarbe und die Umkehrung der Bildschirmfarbe (letzte Pixel = (keine in Bildschirmpixel) oder Stifteingabe).
+- R2_MERGEPENNOT Pixel ist eine Kombination aus Stift Farbe und umgekehrter Bildschirm Farbe (letztes Pixel = (nicht Bildschirm Pixel) oder Stift).
 
-- R2_MASKPENNOT Pixel ist, eine Kombination der Farben auf den Stift und der Umkehrung des Bildschirms (letzte Pixel = (keine in Bildschirmpixel) und Stifteingabe).
+- R2_MASKPENNOT Pixel ist eine Kombination der Farben, die sowohl für den Stift als auch für den umgekehrten Bildschirm (letztes Pixel = (nicht Bildschirm Pixel) und Stift) gemeinsam sind.
 
-- R2_MERGENOTPEN Pixel ist, eine Kombination aus der Bildschirmfarbe und die Umkehrung der Stiftfarbe (letzte Pixel (nicht Stift) = ' oder ' Bildschirm Pixel).
+- R2_MERGENOTPEN Pixel ist eine Kombination aus Bildschirm Farbe und umgekehrter Stift Farbe (letztes Pixel = (nicht Stift) oder Bildschirm Pixel).
 
-- R2_MASKNOTPEN Pixel ist, eine Kombination der Farben auf dem Bildschirm und die Umkehrung des Stifts (letzte Pixel = (nicht "Stift") als auch Pixel).
+- R2_MASKNOTPEN Pixel ist eine Kombination der Farben, die sowohl auf dem Bildschirm als auch auf der Umkehrung des Stifts (letztes Pixel = (nicht Stift) und Bildschirm Pixel) gemeinsam sind.
 
-- R2_MERGEPEN Pixel ist eine Kombination von Farbe des Stifts und der Bildschirmfarbe (letzte Pixel = Stift oder Bildschirmpixel).
+- R2_MERGEPEN Pixel ist eine Kombination aus Stift Farbe und Bildschirm Farbe (letztes Pixel = Stift oder Bildschirm Pixel).
 
-- R2_NOTMERGEPEN Pixel ist die Umkehrung der R2_MERGEPEN Farbe (letzte Pixel = nicht (Stift oder Bildschirmpixel)).
+- R2_NOTMERGEPEN Pixel ist die Umkehrung der R2_MERGEPEN-Farbe (letztes Pixel = Not (Stift oder Bildschirm Pixel)).
 
-- R2_MASKPEN Pixel ist eine Kombination der Farben der Stift und der Bildschirm gemeinsam (letzte Pixel = Stift und Bildschirmpixel).
+- R2_MASKPEN Pixel ist eine Kombination der Farben, die sowohl für den Stift als auch für den Bildschirm (letztes Pixel = Stift und Bildschirm Pixel) gemeinsam sind.
 
-- R2_NOTMASKPEN Pixel ist die Umkehrung der R2_MASKPEN Farbe (letzte Pixel = nicht (pen und Bildschirmpixel)).
+- R2_NOTMASKPEN Pixel ist die Umkehrung der R2_MASKPEN-Farbe (letztes Pixel = Not (Stift und Bildschirm Pixel)).
 
-- R2_XORPEN Pixel ist eine Kombination der Farben, die in den Stift oder auf dem Bildschirm, aber nicht in beiden sind (letzte Pixel = Stift XOR Bildschirmpixel).
+- R2_XORPEN Pixel ist eine Kombination der Farben im Stift oder im Bildschirm, jedoch nicht in beiden (letztes Pixel = Stift-Xor-Bildschirm Pixel).
 
-- R2_NOTXORPEN Pixel ist die Umkehrung der R2_XORPEN Farbe (letzte Pixel = nicht (Stift XOR Bildschirmpixel)).
+- R2_NOTXORPEN Pixel ist die Umkehrung der R2_XORPEN-Farbe (letztes Pixel = Not (Pen XOR Screen Pixel)).
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der vorherige zeichnen-Modus.
+Der vorherige Zeichnungsmodus.
 
-Es kann einer der Werte im Windows SDK sein.
+Dabei kann es sich um einen beliebigen Wert handeln, der in der Windows SDK angegeben ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Zeichnungsmodus des gibt an, wie die Farben des Stifts und das Innere des ausgefüllten Objekte mit der Farbe bereits auf der Anzeigeoberfläche kombiniert werden.
+Der Zeichnungsmodus gibt an, wie die Farben des Stifts und das Innere von ausgefüllten Objekten mit der Farbe kombiniert werden, die sich bereits auf der Anzeige Oberfläche befindet.
 
-Zeichnungsmodus des ist nur für Rastergeräte. Sie gelten nicht für Geräte der Vektor. Zeichnung Modi handelt es sich um binäre rastervorgang-Codes, die alle mögliche booleschen Kombinationen von zwei Variablen, die nicht unter Verwendung der binären Operatoren AND, OR und XOR (exklusives OR) und der unären Operation darstellt.
+Der Zeichnungsmodus ist nur für Raster Geräte vorgesehen. Dies gilt nicht für Vektor Geräte. Zeichnungs Modi sind binäre Raster-Vorgangs Codes, die alle möglichen booleschen Kombinationen von zwei Variablen darstellen. dabei werden die binären Operatoren und, oder, und XOR (exklusiv oder) und die unäre Operation nicht verwendet.
 
-##  <a name="setstretchbltmode"></a>  CDC::SetStretchBltMode
+##  <a name="setstretchbltmode"></a>CDC:: setstretchbltmode
 
-Legt den Modus Strecken einer Bitmap für die `StretchBlt` Member-Funktion.
+Legt den Modus für die Bitmap-Streckung `StretchBlt` für die Member-Funktion fest.
 
 ```
 int SetStretchBltMode(int nStretchMode);
@@ -6320,37 +6320,37 @@ int SetStretchBltMode(int nStretchMode);
 ### <a name="parameters"></a>Parameter
 
 *nStretchMode*<br/>
-Gibt den streckmodus an. Eines der folgenden Werte sind möglich:
+Gibt den streckungs Modus an. Dabei kann es sich um einen der folgenden Werte handeln:
 
 |Wert|Beschreibung|
 |-----------|-----------------|
-|BLACKONWHITE|Führt eine boolesche AND-Operation mit den Werten für die Farbe für die Pixel entfernt und vorhandene. Wenn die Bitmap eine monochrome Bitmap ist, behält diesen Modus schwarze Pixel auf Kosten der weißen Pixel.|
-|COLORONCOLOR|Löscht die Pixel. In diesem Modus werden alle Zeilen von Pixeln gelöscht, ohne zu versuchen, ihre Informationen zu erhalten.|
-|HALFTONE|Ordnet Blöcke der Pixel in das Zielrechteck Pixel vom Quellrechtecks. Die durchschnittliche Farbe der Pixel, den Ziel-Block erfolgt eine Annäherung an die Farbe der Pixel der Quelle.|
-||Nach dem Festlegen von HALBTON Strecken Modus, muss eine Anwendung die Win32-Funktion aufrufen [SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex) Festlegen des Ursprungs Pinsel. Wenn sie nicht dazu, tritt ein, Pinsel fehlausrichtung.|
-|STRETCH_ANDSCANS|**Windows 95/98**: Identisch mit BLACKONWHITE|
-|STRETCH_DELETESCANS|**Windows 95/98**: Identisch mit COLORONCOLOR|
-|STRETCH_HALFTONE|**Windows 95/98**: Identisch mit HALBTON.|
-|STRETCH_ORSCANS|**Windows 95/98**: Identisch mit WHITEONBLACK|
-|WHITEONBLACK|Führt eine boolesche OR-Operation mit den Werten für die Farbe für die entfernt und vorhandene Pixel. Wenn die Bitmap eine monochrome Bitmap ist, behält diesen Modus weißen Pixel auf Kosten der schwarze Pixel.|
+|BLACKONWHITE|Führt einen booleschen and-Vorgang mit den Farbwerten für die ausgelösten und vorhandenen Pixel aus. Wenn es sich bei der Bitmap um eine monochrome Bitmap handelt, behält dieser Modus schwarze Pixel auf Kosten von weißen Pixeln bei.|
+|COLORONCOLOR|Löscht die Pixel. In diesem Modus werden alle Lösch Zeilen gelöscht, ohne zu versuchen, Ihre Informationen beizubehalten.|
+|HALBTON|Ordnet Pixel aus dem Quell Rechteck in Blöcke von Pixeln im Ziel Rechteck. Die durchschnittliche Farbe für den Zielblock von Pixel entspricht der Farbe der Quell Pixel.|
+||Nach dem Festlegen des Halftone-streckungs Modus muss eine Anwendung die Win32-Funktion [setbrushorgex](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex) aufrufen, um den Pinsel Ursprung festzulegen. Wenn dies nicht der Fall ist, erfolgt eine Fehlausrichtung des Pinsels.|
+|STRETCH_ANDSCANS|**Windows 95/98**: Identisch mit "blackonwhite"|
+|STRETCH_DELETESCANS|**Windows 95/98**: Identisch mit coloroncolor|
+|STRETCH_HALFTONE|**Windows 95/98**: Identisch mit "Halftone".|
+|STRETCH_ORSCANS|**Windows 95/98**: Identisch mit whiteonblack|
+|WHITEONBLACK|Führt eine boolesche OR-Operation mit den Farbwerten für die eliminieren und vorhandene Pixel aus. Wenn es sich bei der Bitmap um eine monochrome Bitmap handelt, werden in diesem Modus weiße Pixel auf der Kosten der schwarzen Pixel beibehalten.|
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der vorherige stretching Modus. Sie können STRETCH_ANDSCANS, STRETCH_DELETESCANS oder STRETCH_ORSCANS sein.
+Der vorherige streckungs Modus. Dies kann STRETCH_ANDSCANS, STRETCH_DELETESCANS oder STRETCH_ORSCANS sein.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Modus zum Strecken einer Bitmap definiert, wie Informationen von Bitmaps, die komprimiert werden, mithilfe der Funktion entfernt werden.
+Der Modus für die Bitmap-Streckung definiert, wie Informationen aus Bitmaps entfernt werden, die mit der-Funktion komprimiert werden.
 
-Die Modi BLACKONWHITE (STRETCH_ANDSCANS) und WHITEONBLACK (STRETCH_ORSCANS) werden in der Regel verwendet, Vordergrund Pixel monochrome Bitmaps beibehalten. Der Modus COLORONCOLOR (STRETCH_DELETESCANS) wird normalerweise verwendet, um Farbe in Farbe Bitmaps zu erhalten.
+Der Modus "blackonwhite" (STRETCH_ANDSCANS) und "whiteonblack" (STRETCH_ORSCANS) wird normalerweise verwendet, um Vordergrund Pixel in Monochrom-Bitmaps beizubehalten. Der coloroncolor (STRETCH_DELETESCANS)-Modus wird normalerweise verwendet, um die Farbe in Farb Bitmaps beizubehalten.
 
-Den HALBTON ist erforderlich, weitere Verarbeitung des Quellbilds als die anderen drei Modi werden; Es ist langsamer als die anderen, aber Sie Bilder mit höherer Qualität erzeugt. Beachten Sie, dass `SetBrushOrgEx` muss aufgerufen werden, nach dem Festlegen des Modus HALBTON Pinsel fehlausrichtung zu vermeiden.
+Der Modus "Halftone" erfordert mehr Verarbeitung des Quell Abbilds als die anderen drei Modi. Sie ist langsamer als die anderen, erzeugt jedoch qualitativ hochwertige Images. Beachten Sie auch `SetBrushOrgEx` , dass nach dem Festlegen des Halftone-Modus aufgerufen werden muss, um eine fehlerhafte Pinsel Ausrichtung zu vermeiden.
 
-Weitere Modi für das stretching möglicherweise ebenfalls zur Verfügung, abhängig von den Funktionen des Gerätetreibers.
+Abhängig von den Funktionen des Gerätetreibers können auch zusätzliche streckungs Modi verfügbar sein.
 
-##  <a name="settextalign"></a>  CDC::SetTextAlign
+##  <a name="settextalign"></a>CDC:: setTextAlign
 
-Legt die textausrichtung Flags.
+Legt die Flags für die Textausrichtung fest.
 
 ```
 UINT SetTextAlign(UINT nFlags);
@@ -6359,39 +6359,39 @@ UINT SetTextAlign(UINT nFlags);
 ### <a name="parameters"></a>Parameter
 
 *nFlags*<br/>
-Gibt die textausrichtung Flags. Die Flags Geben Sie die Beziehung zwischen einem Punkt und ein Rechteck, das den Text umschließende. Der Punkt kann der aktuellen Position oder eine Textausgabe Funktion angegebenen Koordinaten sein. Das Rechteck, das den Text umschließende wird durch die angrenzenden Zeichenzellen in der Textzeichenfolge definiert. Die *nFlags* Parameter kann ein oder mehrere Flags aus den folgenden drei Kategorien sein. Wählen Sie nur einen Flag aus jeder Kategorie an. Die erste Kategorie wirkt sich auf die Ausrichtung des Texts in der X-Richtung:
+Gibt Flags für die Textausrichtung an. Die-Flags geben die Beziehung zwischen einem Punkt und einem Rechteck an, das den Text umschließt. Der Punkt kann entweder die aktuelle Position oder die von einer Textausgabe Funktion angegebenen Koordinaten sein. Das Rechteck, das den Text umschließt, wird durch die angrenzenden Zeichen Zellen in der Text Zeichenfolge definiert. Der *nFlags* -Parameter kann ein oder mehrere Flags aus den folgenden drei Kategorien sein. Wählen Sie nur ein Flag aus jeder Kategorie aus. Die erste Kategorie wirkt sich auf die Ausrichtung von Text in der x-Richtung aus:
 
-- TA_CENTER richtet den Punkt mit der horizontalen Mitte des umschließenden Rechtecks aus.
+- TA_CENTER richtet den Punkt mit der horizontalen Mitte des umgebenden Rechtecks aus.
 
-- TA_LEFT richtet den Punkt mit der linken Seite des umschließenden Rechtecks aus. Dies ist die Standardeinstellung.
+- TA_LEFT richtet den Punkt mit der linken Seite des umgebenden Rechtecks aus. Dies ist die Standardeinstellung.
 
-- TA_RIGHT richtet den Punkt mit der rechten Seite des umschließenden Rechtecks aus.
+- TA_RIGHT richtet den Punkt am rechten Rand des umgebenden Rechtecks aus.
 
-Die zweite Kategorie wirkt sich auf die Ausrichtung des Texts in der y-Richtung:
+Die zweite Kategorie wirkt sich auf die Ausrichtung von Text in y-Richtung aus:
 
-- TA_BASELINE richtet den Punkt mit der Baseline der ausgewählten Schriftart aus.
+- TA_BASELINE richtet den Punkt mit der Basislinie der ausgewählten Schriftart aus.
 
-- TA_BOTTOM richtet den Punkt am unteren Rand des umschließenden Rechtecks aus.
+- TA_BOTTOM richtet den Punkt am unteren Rand des umgebenden Rechtecks aus.
 
-- TA_TOP richtet den Punkt am oberen Rand des umschließenden Rechtecks aus. Dies ist die Standardeinstellung.
+- TA_TOP richtet den Punkt am oberen Rand des umgebenden Rechtecks aus. Dies ist die Standardeinstellung.
 
-Die dritte Kategorie bestimmt, ob die aktuelle Position aktualisiert wird, wenn der Text geschrieben wird:
+Die dritte Kategorie bestimmt, ob die aktuelle Position beim Schreiben von Text aktualisiert wird:
 
-- TA_NOUPDATECP wird aktualisiert wird, wird damit nicht die aktuelle Position nach jedem Aufruf an eine Ausgabe von Text-Funktion. Dies ist die Standardeinstellung.
+- TA_NOUPDATECP aktualisiert die aktuelle Position nicht nach jedem aufzurufenden Textausgabe Funktion. Dies ist die Standardeinstellung.
 
-- TA_UPDATECP aktualisiert die aktuelle X-Position nach jedem Aufruf an eine Ausgabe von Text-Funktion. Die neue Position ist auf der rechten Seite des umschließenden Rechtecks für den Text. Wenn dieses Flag festgelegt ist, die in Aufrufen an angegebenen Koordinaten den `TextOut` Memberfunktion werden ignoriert.
+- TA_UPDATECP aktualisiert die aktuelle x-Position nach jedem aufzurufenden Textausgabe Funktion. Die neue Position befindet sich auf der rechten Seite des umgebenden Rechtecks für den Text. Wenn dieses Flag festgelegt ist, werden die in Aufrufen der `TextOut` Member-Funktion angegebenen Koordinaten ignoriert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die vorherige textausrichtung-Einstellung, wenn erfolgreich. Das niedrige Byte enthält das horizontale und das höherwertige Byte enthält das vertikale; andernfalls 0.
+Die vorherige Text Ausrichtungs Einstellung, wenn erfolgreich. Das nieder wertige Byte enthält die horizontale Einstellung, und das hochwertige Byte enthält die vertikale Einstellung. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Die `TextOut` und `ExtTextOut` Memberfunktionen diese Flags verwenden, wenn es sich bei eine Textzeichenfolge auf ein Gerät oder die Anzeige zu positionieren. Die Flags Geben Sie die Beziehung zwischen einem bestimmten Zeitpunkt und ein Rechteck, das den Text umschließende. Die Koordinaten von diesem Punkt werden als Parameter zum Übergeben der `TextOut` Member-Funktion. Das Rechteck, das den Text umschließende wird durch die angrenzenden Zeichenzellen in der Textzeichenfolge gebildet.
+Die `TextOut` - `ExtTextOut` und-Member-Funktionen verwenden diese Flags, wenn Sie eine Text Zeichenfolge auf einer Anzeige oder einem Gerät positionieren. Die-Flags geben die Beziehung zwischen einem bestimmten Punkt und einem Rechteck an, das den Text umschließt. Die Koordinaten dieses Punkts werden als Parameter an die `TextOut` Member-Funktion übermittelt. Das Rechteck, das den Text umschließt, wird durch die angrenzenden Zeichen Zellen in der Text Zeichenfolge gebildet.
 
-##  <a name="settextcharacterextra"></a>  CDC::SetTextCharacterExtra
+##  <a name="settextcharacterextra"></a>CDC:: settextcharakteriextra
 
-Legt die Menge des Zeichenabstands fest.
+Legt den Abstand zwischen Leerzeichen fest.
 
 ```
 int SetTextCharacterExtra(int nCharExtra);
@@ -6400,19 +6400,19 @@ int SetTextCharacterExtra(int nCharExtra);
 ### <a name="parameters"></a>Parameter
 
 *nCharExtra*<br/>
-Gibt die Menge des zusätzlichen Speicherplatzes (in logischen Einheiten) auf jedes Zeichen hinzugefügt werden. Ist der aktuelle Zuordnungsmodus nicht `MM_TEXT`, *nCharExtra* transformiert und gerundet auf den nächsten Pixel.
+Gibt die Menge des zusätzlichen Speicherplatzes (in logischen Einheiten) an, der jedem Zeichen hinzugefügt werden soll. Wenn der aktuelle Kartenmodus nicht `MM_TEXT`ist, wird *ncharextra* transformiert und auf das nächste Pixel gerundet.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Menge an die vorherigen Zeichenabstands.
+Die Menge der vorherigen intercharacter-Abstände.
 
 ### <a name="remarks"></a>Hinweise
 
-GDI hinzugefügt jedes Zeichen, einschließlich der Zeilenumbruchzeichen, wenn sie eine Zeile mit Text in den Gerätekontext schreibt diese Leerzeichen. Der Standardwert für die Menge an Zeichenabstands ist 0.
+GDI fügt jedem Zeichen diesen Abstand hinzu, einschließlich der Break-Zeichen, wenn eine Textzeile in den Gerätekontext geschrieben wird. Der Standardwert für die Menge der intercharacter-Abstände ist 0.
 
-##  <a name="settextcolor"></a>  CDC::SetTextColor
+##  <a name="settextcolor"></a>CDC:: SetTextColor
 
-Legt die Farbe des Textes auf der angegebenen Farbe fest.
+Legt die Textfarbe auf die angegebene Farbe fest.
 
 ```
 virtual COLORREF SetTextColor(COLORREF crColor);
@@ -6421,25 +6421,25 @@ virtual COLORREF SetTextColor(COLORREF crColor);
 ### <a name="parameters"></a>Parameter
 
 *crColor*<br/>
-Gibt die Farbe des Texts als ein RGB-Farbwert an.
+Gibt die Textfarbe als RGB-Farbwert an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein RGB-Wert für die vorherigen Textfarbe.
+Ein RGB-Wert für die vorherige Textfarbe.
 
 ### <a name="remarks"></a>Hinweise
 
-Das System wird diese Textfarbe verwenden, beim Schreiben von Text in dieser Gerätekontext sowie beim Konvertieren von Bitmaps zwischen Farbe und monochrome Gerätekontexte.
+Das System verwendet diese Textfarbe beim Schreiben von Text in diesen Gerätekontext und auch beim Umrechnen von Bitmaps zwischen Farb-und Monochrome-Geräte Kontexten.
 
-Wenn das Gerät die angegebene Farbe nicht darstellen kann, setzt das System die Farbe des Textes auf die nächste physische Farbe. Die Farbe des Hintergrunds nach einem Zeichen wird angegeben, indem die `SetBkColor` und `SetBkMode` Memberfunktionen.
+Wenn das Gerät die angegebene Farbe nicht darstellen kann, legt das System die Textfarbe auf die nächste physische Farbe fest. Die Hintergrundfarbe für ein Zeichen wird durch die `SetBkColor` -und-Member- `SetBkMode` Funktionen angegeben.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor).
+  Weitere Informationen finden Sie im Beispiel für [CWnd:: onctlcolor](../../mfc/reference/cwnd-class.md#onctlcolor).
 
-##  <a name="settextjustification"></a>  CDC::SetTextJustification
+##  <a name="settextjustification"></a>CDC:: settextbegrün dung
 
-Das Zeilenumbruchzeichen in einer Zeichenfolge werden Leerzeichen hinzugefügt.
+Fügt den Break-Zeichen in einer Zeichenfolge Leerzeichen hinzu.
 
 ```
 int SetTextJustification(
@@ -6450,32 +6450,32 @@ int SetTextJustification(
 ### <a name="parameters"></a>Parameter
 
 *nBreakExtra*<br/>
-Gibt den gesamten zusätzlichen Speicherplatz, die Zeile des Texts (in logischen Einheiten) hinzugefügt werden. Ist der aktuelle Zuordnungsmodus nicht `MM_TEXT`, der durch diesen Parameter angegebene Wert in der aktuellen Zuordnungsmodus konvertiert und auf die nächste Geräteeinheit gerundet.
+Gibt den insgesamt zusätzlichen Speicherplatz an, der der Textzeile (in logischen Einheiten) hinzugefügt werden soll. Wenn der aktuelle Zuordnungsmodus `MM_TEXT`nicht ist, wird der von diesem Parameter angegebene Wert in den aktuellen Zuordnungsmodus konvertiert und auf die nächste Geräteeinheit gerundet.
 
 *nBreakCount*<br/>
-Gibt die Anzahl der Zeilenumbruchzeichen in der Zeile an.
+Gibt die Anzahl der Break-Zeichen in der Zeile an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Eine Falls die Funktion erfolgreich ist; andernfalls 0.
+Eine, wenn die Funktion erfolgreich ist. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann mithilfe der `GetTextMetrics` Memberfunktionen zum Abrufen einer Schriftart unterbrechen Zeichen.
+Eine Anwendung kann die `GetTextMetrics` Member-Funktionen verwenden, um das Break-Zeichen einer Schriftart abzurufen.
 
-Nach der `SetTextJustification` Memberfunktion aufgerufen wird, wird einen Aufruf an eine Ausgabe von Text-Funktion (z. B. `TextOut`) verteilt den angegebenen zusätzlichen Platz gleichmäßig auf die angegebene Anzahl der Zeilenumbruchzeichen. Die Umbruchzeichen ist in der Regel das Leerzeichen (ASCII 32), aber eine Schriftart als ein anderes Zeichen kann definiert werden.
+Nachdem die `SetTextJustification` Member-Funktion aufgerufen wurde, verteilt ein Aufruf einer Textausgabe Funktion ( `TextOut`z. b.) den angegebenen zusätzlichen Leerraum gleichmäßig auf die angegebene Anzahl von Break-Zeichen. Das Break-Zeichen ist in der Regel das Leerzeichen (ASCII 32), kann jedoch durch eine Schriftart als ein anderes Zeichen definiert werden.
 
-Die Memberfunktion `GetTextExtent` wird normalerweise verwendet, mit `SetTextJustification`. `GetTextExtent` berechnet die Breite einer bestimmten Zeile vor der Ausrichtung an. Eine Anwendung kann bestimmen, wie viel Speicherplatz für die Angabe in der *nBreakExtra* Parameter durch Subtrahieren den Rückgabewert von `GetTextExtent` von der Breite der Zeichenfolge nach der Ausrichtung.
+Die Member- `GetTextExtent` Funktion wird in der `SetTextJustification`Regel mit verwendet. `GetTextExtent`berechnet die Breite einer angegebenen Zeile vor der Ausrichtung. Eine Anwendung kann ermitteln, wie viel Speicherplatz im *nbreakextra* -Parameter angegeben werden soll, indem der von `GetTextExtent` zurückgegebene Wert von der Breite der Zeichenfolge nach der Ausrichtung subtrahieren wird.
 
-Die `SetTextJustification` Funktion kann verwendet werden, eine Zeile an, die mehrere Ausführungen in verschiedenen Schriftarten enthält. In diesem Fall muss die Zeile schrittweise durch das Ausrichten und Schreiben von jeder Ausführung separat erstellt werden.
+Die `SetTextJustification` -Funktion kann verwendet werden, um eine Zeile auszurichten, die mehrere Ausführungen in unterschiedlichen Schriftarten enthält. In diesem Fall muss die Zeile schrittweise erstellt werden, indem die einzelnen Testlauf einzeln ausgerichtet und geschrieben werden.
 
-Da Rundungsfehler während der Ausrichtung auftreten kann, speichert das System eine ausgeführte Fehlerterm, der den aktuellen Fehler definiert. Wenn eine Zeile ausrichten, die mehrere ausgeführt wird, enthält `GetTextExtent` automatisch diese Fehlerterm, wenn das Ausmaß der nächsten Ausführung berechnet, verwendet. Dadurch wird die Ausgabe von Text-Funktion, die den Fehler an die neue Ausführung blend.
+Da während der Ausrichtung Rundungsfehler auftreten können, behält das System einen laufenden Fehler Begriff bei, der den aktuellen Fehler definiert. Beim Ausrichten einer Zeile, die mehrere Ausführungen enthält `GetTextExtent` , wird dieser Fehler Begriff von automatisch verwendet, wenn der Umfang der nächsten Ausführung berechnet wird. Dadurch kann die Textausgabe Funktion den Fehler in den neuen Testlauf einblenden.
 
-Nachdem jede Zeile aneinander ausgerichtet ist, muss diese Fehlerterm gelöscht werden, um zu verhindern, dass es in die nächste Zeile integriert wird. Der Begriff kann gelöscht werden, durch den Aufruf `SetTextJustification` mit *nBreakExtra* auf 0 festgelegt.
+Nachdem jede Zeile ausgerichtet wurde, muss diese Fehlerbedingung gelöscht werden, um zu verhindern, dass Sie in die nächste Zeile eingebunden wird. Der Begriff kann gelöscht werden, indem `SetTextJustification` aufgerufen wird, wobei *nbreakextra* auf 0 festgelegt ist.
 
-##  <a name="setviewportext"></a>  CDC::SetViewportExt
+##  <a name="setviewportext"></a>CDC:: setviewportext
 
-Legt fest, die x und y-Blöcke des Viewports des Gerätekontexts.
+Legt die x-und y-Blöcke des Viewports des Geräte Kontexts fest.
 
 ```
 virtual CSize SetViewportExt(
@@ -6487,39 +6487,39 @@ CSize SetViewportExt(SIZE size);
 
 ### <a name="parameters"></a>Parameter
 
-*cx*<br/>
-Gibt den X-Umfang des Viewports (in Geräteeinheiten).
+*verschoben*<br/>
+Gibt den x-Umfang des Viewports an (in Geräte Einheiten).
 
-*cy*<br/>
-Gibt den y-Umfang des Viewports (in Geräteeinheiten).
+*CY*<br/>
+Gibt den y-Umfang des Viewports an (in Geräte Einheiten).
 
 *size*<br/>
-Gibt an, die x und y-Blöcke des Viewports (in Geräteeinheiten).
+Gibt die x-und y-Blöcke des Viewports an (in Geräte Einheiten).
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die vorherigen Blöcke des Viewports als eine [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt. Wenn ein Fehler auftritt, werden die x- und y-Koordinaten des zurückgegebenen `CSize` Objekt sind beide auf 0 festgelegt.
+Die vorherigen Blöcke des Viewports als [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt. Wenn ein Fehler auftritt, werden die x-und y-Koordinaten des zurück `CSize` gegebenen-Objekts auf 0 festgelegt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Viewport sind, sowie das Gerätekontext Fenster wird definiert, wie GDI Punkt im Koordinatensystem des tatsächlichen Geräts Punkte im logischen Koordinatensystem zugeordnet. Das heißt, definieren sie, wie GDI logische Koordinaten in Gerätekoordinaten konvertiert.
+Der Viewport definiert zusammen mit dem Fenster "Gerätekontext", wie GDI Punkte im logischen Koordinatensystem den Punkten im Koordinatensystem des eigentlichen Geräts zuordnet. Anders ausgedrückt: Sie definieren, wie GDI logische Koordinaten in Geräte Koordinaten konvertiert.
 
-Wenn die folgenden Zuordnungsmodi festgelegt sind, Aufrufe von `SetWindowExt` und `SetViewportExt` werden ignoriert:
+Wenn die folgenden zuordnungsmodi festgelegt sind `SetWindowExt` , `SetViewportExt` werden Aufrufe von und ignoriert:
 
 |MM_HIENGLISH|MM_LOMETRIC|
 |-------------------|------------------|
 |MM_HIMETRIC|MM_TEXT|
 |MM_LOENGLISH|MM_TWIPS|
 
-Wenn MM_ISOTROPIC-Modus festgelegt ist, muss eine Anwendung Aufrufen der `SetWindowExt` Memberfunktion vor `SetViewportExt`.
+Wenn der MM_ISOTROPIC-Modus festgelegt ist, muss eine `SetWindowExt` Anwendung die Member-Funktion `SetViewportExt`aufrufen, bevor aufgerufen wird.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
+  Weitere Informationen finden Sie im Beispiel für [CView:: OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
 
-##  <a name="setviewportorg"></a>  CDC::SetViewportOrg
+##  <a name="setviewportorg"></a>CDC:: setviewportor
 
-Legt den Ursprung der Viewport des Gerätekontexts fest.
+Legt den Viewportursprung des Geräte Kontexts fest.
 
 ```
 virtual CPoint SetViewportOrg(
@@ -6532,31 +6532,31 @@ CPoint SetViewportOrg(POINT point);
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die X-Koordinate (in Geräteeinheiten) des Ursprungs des Viewports an. Der Wert muss innerhalb des Bereichs von Koordinatensystem des Geräts.
+Gibt die x-Koordinate (in Geräte Einheiten) des Ursprungs des Viewports an. Der Wert muss innerhalb des Bereichs des Geräte Koordinatensystems liegen.
 
 *y*<br/>
-Gibt die y-Koordinate (in Geräteeinheiten) des Ursprungs des Viewports an. Der Wert muss innerhalb des Bereichs von Koordinatensystem des Geräts.
+Gibt die y-Koordinate (in Geräte Einheiten) des Ursprungs des Viewports an. Der Wert muss innerhalb des Bereichs des Geräte Koordinatensystems liegen.
 
 *point*<br/>
-Gibt den Ursprung des Viewports. Die Werte müssen innerhalb des Bereichs von Koordinatensystem des Geräts sein. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
+Gibt den Ursprung des Viewports an. Die Werte müssen innerhalb des Bereichs des Geräte Koordinatensystems liegen. Sie können entweder eine `POINT` Struktur oder ein `CPoint` -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die vorherigen Herkunft des Viewports (in Gerätekoordinaten) als eine `CPoint` Objekt.
+Der vorherige Ursprung des Viewports (in Geräte Koordinaten) als `CPoint` -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Viewport sind, sowie das Gerätekontext Fenster wird definiert, wie GDI Punkt im Koordinatensystem des tatsächlichen Geräts Punkte im logischen Koordinatensystem zugeordnet. Das heißt, definieren sie, wie GDI logische Koordinaten in Gerätekoordinaten konvertiert.
+Der Viewport definiert zusammen mit dem Fenster "Gerätekontext", wie GDI Punkte im logischen Koordinatensystem den Punkten im Koordinatensystem des eigentlichen Geräts zuordnet. Anders ausgedrückt: Sie definieren, wie GDI logische Koordinaten in Geräte Koordinaten konvertiert.
 
-Der Ursprung des Ausschnitts kennzeichnet den Punkt im Koordinatensystem Geräts, der zugeordnet GDI Fensterursprung, einem Punkt im logischen Koordinatensystem gemäß, der `SetWindowOrg` Member-Funktion. GDI ordnet alle sonstigen Punkte durch Befolgung desselben Prozesses erforderlich, um den Fensterursprung an den Ursprung des Viewports zuzuordnen. Beispielsweise werden alle Punkte in einem Kreis, um den Punkt am ursprünglichen Speicherort Fenster in einem Kreis, um den Punkt, an den Ursprung des Viewports. Auf ähnliche Weise werden alle Punkte in einer Zeile, die den Fensterursprung durchlaufen in einer Zeile, die der Ursprung des Ausschnitts durchlaufen.
+Der Viewportursprung markiert den Punkt im Geräte Koordinatensystem, dem GDI den Fenster Ursprung zuordnet, einen Punkt im logischen Koordinatensystem, der durch die `SetWindowOrg` Member-Funktion angegeben wird. GDI ordnet alle anderen Punkte zu, indem der gleiche Prozess zum Zuordnen des Fenster Ursprungs zum Viewportursprung folgt. Beispielsweise befinden sich alle Punkte in einem Kreis um den Punkt am Fenster Ursprung in einem Kreis um den Punkt am Viewportursprung. Ebenso werden alle Punkte in einer Zeile, die den Fenster Ursprung durchläuft, in einer Zeile angezeigt, die den Viewportursprung übergibt.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
+  Weitere Informationen finden Sie im Beispiel für [CView:: OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
 
-##  <a name="setwindowext"></a>  CDC::SetWindowExt
+##  <a name="setwindowext"></a>CDC:: setwindowext
 
-Legt fest, die x und y-Blöcke des Fensters mit den Gerätekontext verknüpft ist.
+Legt die x-und y-Blöcke des Fensters fest, das dem Gerätekontext zugeordnet ist.
 
 ```
 virtual CSize SetWindowExt(
@@ -6568,24 +6568,24 @@ CSize SetWindowExt(SIZE size);
 
 ### <a name="parameters"></a>Parameter
 
-*cx*<br/>
-Gibt den X-Umfang (in logischen Einheiten) des Fensters.
+*verschoben*<br/>
+Gibt den x-Block (in logischen Einheiten) des Fensters an.
 
-*cy*<br/>
-Gibt den y-Umfang (in logischen Einheiten) des Fensters.
+*CY*<br/>
+Gibt den y-Block (in logischen Einheiten) des Fensters an.
 
 *size*<br/>
-Gibt an, die X - und y-Blöcke (in logischen Einheiten) des Fensters.
+Gibt die x-und y-Blöcke (in logischen Einheiten) des Fensters an.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die vorherigen Blöcke des Fensters (in logischen Einheiten) als eine `CSize` Objekt. Wenn ein Fehler auftritt, die x- und y-Koordinaten des zurückgegebenen `CSize` Objekt sind beide auf 0 festgelegt.
+Die vorherigen Blöcke des Fensters (in logischen Einheiten) als `CSize` -Objekt. Wenn ein Fehler auftritt, werden die x-und y-Koordinaten des zurück `CSize` gegebenen-Objekts auf 0 festgelegt.
 
 ### <a name="remarks"></a>Hinweise
 
-Im Fenster zusammen mit dem Viewport Gerätekontext, definiert, wie GDI Punkte im logischen Koordinatensystem Punkt im Koordinatensystem Geräts zugeordnet.
+Das Fenster wird zusammen mit dem Device-Context-Viewport definiert, wie das GDI Punkte im logischen Koordinatensystem den Punkten im Geräte Koordinatensystem zuordnet.
 
-Wenn die folgenden Zuordnungsmodi festgelegt sind, Aufrufe von `SetWindowExt` und `SetViewportExt` Funktionen werden ignoriert:
+Wenn die folgenden zuordnungsmodi festgelegt sind `SetWindowExt` , `SetViewportExt` werden Aufrufe der-Funktion und der-Funktion ignoriert:
 
 - MM_HIENGLISH
 
@@ -6599,15 +6599,15 @@ Wenn die folgenden Zuordnungsmodi festgelegt sind, Aufrufe von `SetWindowExt` un
 
 - MM_TWIPS
 
-Wenn MM_ISOTROPIC-Modus festgelegt ist, muss eine Anwendung Aufrufen der `SetWindowExt` Memberfunktion vor dem Aufruf `SetViewportExt`.
+Wenn der MM_ISOTROPIC-Modus festgelegt ist, muss eine `SetWindowExt` Anwendung die Member- `SetViewportExt`Funktion aufrufen, bevor aufgerufen wird.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
+  Weitere Informationen finden Sie im Beispiel für [CView:: OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
 
-##  <a name="setwindoworg"></a>  CDC::SetWindowOrg
+##  <a name="setwindoworg"></a>CDC:: setwindoworg
 
-Legt den Fensterursprung im des Gerätekontexts fest.
+Legt den Fenster Ursprung des Geräte Kontexts fest.
 
 ```
 CPoint SetWindowOrg(
@@ -6620,27 +6620,27 @@ CPoint SetWindowOrg(POINT point);
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate der neuen Ursprung des Fensters an.
+Gibt die logische x-Koordinate des neuen Ursprungs des Fensters an.
 
 *y*<br/>
-Gibt die logische y-Koordinate der neuen Ursprung des Fensters an.
+Gibt die logische y-Koordinate des neuen Ursprungs des Fensters an.
 
 *point*<br/>
-Gibt den logischen Koordinaten des Ursprungs neue Fenster an. Sie können entweder übergeben eine `POINT` Struktur oder ein `CPoint` Objekt für diesen Parameter.
+Gibt die logischen Koordinaten des neuen Ursprungs des Fensters an. Sie können entweder eine `POINT` Struktur oder ein `CPoint` -Objekt für diesen Parameter übergeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der vorherige Ursprung des Fensters als eine `CPoint` Objekt.
+Der vorherige Ursprung des Fensters als `CPoint` -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Im Fenster zusammen mit dem Viewport Gerätekontext, definiert, wie GDI Punkte im logischen Koordinatensystem Punkt im Koordinatensystem Geräts zugeordnet.
+Das Fenster wird zusammen mit dem Device-Context-Viewport definiert, wie das GDI Punkte im logischen Koordinatensystem den Punkten im Geräte Koordinatensystem zuordnet.
 
-Der Fensterursprung kennzeichnet den Punkt im logischen Koordinatensystem aus dem GDI ordnet den Ursprung des Ausschnitts, einem Punkt im Koordinatensystem Geräts gemäß der `SetWindowOrg` Funktion. GDI ordnet alle sonstigen Punkte durch Befolgung desselben Prozesses erforderlich, um den Fensterursprung an den Ursprung des Viewports zuzuordnen. Beispielsweise werden alle Punkte in einem Kreis, um den Punkt am ursprünglichen Speicherort Fenster in einem Kreis, um den Punkt, an den Ursprung des Viewports. Auf ähnliche Weise werden alle Punkte in einer Zeile, die den Fensterursprung durchlaufen in einer Zeile, die der Ursprung des Ausschnitts durchlaufen.
+Der Fenster Ursprung markiert den Punkt im logischen Koordinatensystem, von dem GDI den Viewportursprung zuordnet, einen Punkt im Geräte Koordinatensystem, der durch `SetWindowOrg` die-Funktion angegeben wird. GDI ordnet alle anderen Punkte zu, indem der gleiche Prozess zum Zuordnen des Fenster Ursprungs zum Viewportursprung folgt. Beispielsweise befinden sich alle Punkte in einem Kreis um den Punkt am Fenster Ursprung in einem Kreis um den Punkt am Viewportursprung. Ebenso werden alle Punkte in einer Zeile, die den Fenster Ursprung durchläuft, in einer Zeile angezeigt, die den Viewportursprung übergibt.
 
-##  <a name="setworldtransform"></a>  CDC::SetWorldTransform
+##  <a name="setworldtransform"></a>CDC:: setworldtransform
 
-Legt eine zweidimensionale lineare Umformung zwischen Raum und Seite-Speicherplatz für den angegebenen Gerätekontext. Diese Transformation kann verwendet werden, zu skalieren, drehen, Scheren oder Grafikausgabe zu übersetzen.
+Legt eine zweidimensionale lineare Transformation zwischen dem Welt Raum und dem Seiten Raum für den angegebenen Gerätekontext fest. Diese Transformation kann verwendet werden, um die Grafikausgabe zu skalieren, zu drehen, zu Scheren oder zu übersetzen.
 
 ```
 BOOL SetWorldTransform(const XFORM& rXform);
@@ -6649,23 +6649,23 @@ BOOL SetWorldTransform(const XFORM& rXform);
 ### <a name="parameters"></a>Parameter
 
 *rXform*<br/>
-Ein Verweis auf ein [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) Struktur, die die Transformationsdaten enthält.
+Verweis auf eine [XForm](/windows/desktop/api/wingdi/ns-wingdi-tagxform) -Struktur, die die Transformations Daten enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich NULL bei Erfolg zurück.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück.
 
-Gibt 0 bei einem Fehler zurück.
+Gibt bei einem Fehler 0 zurück.
 
-Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Um erweiterte Fehlerinformationen abzurufen, nennen Sie [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode dient als Wrapper für die Windows-GDI-Funktion [SetWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-setworldtransform).
+Diese Methode umschließt die Windows-GDI-Funktion [setworldtransform](/windows/desktop/api/wingdi/nf-wingdi-setworldtransform).
 
-##  <a name="startdoc"></a>  CDC::StartDoc
+##  <a name="startdoc"></a>CDC:: StartDoc
 
-Informiert den Gerätetreiber, die ein neuer Druckauftrag gestartet wird und dass alle nachfolgenden `StartPage` und `EndPage` Aufrufe gespoolt werden sollte, unter dem gleichen Auftrag erst eine `EndDoc` des Anrufs gewählt.
+Informiert den Gerätetreiber, dass ein neuer Druckauftrag gestartet wird und dass alle `StartPage` nachfolg `EndPage` enden-und-Aufrufe unter demselben Auftrag gespoolte werden sollen, bis ein `EndDoc` Aufruf erfolgt.
 
 ```
 int StartDoc(LPDOCINFO lpDocInfo);
@@ -6675,34 +6675,34 @@ int StartDoc(LPCTSTR lpszDocName);
 ### <a name="parameters"></a>Parameter
 
 *lpDocInfo*<br/>
-Verweist auf eine [DOCINFO](/windows/desktop/api/wingdi/ns-wingdi-_docinfoa) Struktur, die den Namen der Dokumentdatei und den Namen der Ausgabedatei enthält.
+Verweist auf eine [DocInfo](/windows/desktop/api/wingdi/ns-wingdi-docinfoa) -Struktur, die den Namen der Dokument Datei und den Namen der Ausgabedatei enthält.
 
 *lpszDocName*<br/>
-Zeiger auf eine Zeichenfolge, die mit dem Namen der Dokumentdatei.
+Zeiger auf eine Zeichenfolge, die den Namen der Dokument Datei enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert größer als 0 (null). Dieser Wert ist der Druckauftrag-Bezeichner für das Dokument.
+Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert größer als 0 (null). Dieser Wert ist der Druckauftrags Bezeichner für das Dokument.
 
 Wenn die Funktion fehlschlägt, ist der Rückgabewert kleiner oder gleich 0 (null).
 
 ### <a name="remarks"></a>Hinweise
 
-Dadurch wird sichergestellt, dass Dokumente mehr als eine Seite nicht mit anderen Aufträgen vermischt werden werden.
+Dadurch wird sichergestellt, dass Dokumente, die länger als eine Seite sind, nicht mit anderen Aufträgen vermischt werden.
 
-Für Windows-Versionen 3.1 und höher ersetzt diese Funktion die STARTDOC Druckerescape. Mit dieser Funktion wird sichergestellt, dass Dokumente mit mehr als eine Seite nicht mit anderen Druckaufträgen vermischt werden.
+Bei Windows-Versionen 3,1 und höher ersetzt diese Funktion den StartDoc-druckerescapezeichen. Durch die Verwendung dieser Funktion wird sichergestellt, dass Dokumente, die mehr als eine Seite enthalten, nicht mit anderen Druckaufträgen vermischt werden.
 
-`StartDoc` sollte nicht innerhalb von Metadateien verwendet werden.
+`StartDoc`sollte nicht innerhalb von Metafiles verwendet werden.
 
 ### <a name="example"></a>Beispiel
 
-Dieses Codefragment ruft den Standarddrucker, öffnet einen Druckauftrag und spoolt eine Seite mit "Hello, World!" darauf. Da der Text, der durch den folgenden Code ausgegeben, logische Einheiten des Druckers skaliert ist nicht, möglicherweise der Ausgabetext in diese kleinen Buchstaben, dass das Ergebnis nicht gelesen werden. Der CDC-Funktionen, z. B. Skalierung `SetMapMode`, `SetViewportOrg`, und `SetWindowExt`, kann verwendet werden, um die Skalierung zu beheben.
+Dieses Code Fragment Ruft den Standarddrucker ab, öffnet einen Druckauftrag und Spool eine Seite mit "Hello, World!" darauf. Da der Text, der von diesem Code gedruckt wird, nicht auf die logischen Einheiten des Druckers skaliert wird, kann der Ausgabetext in so kleinen Buchstaben enthalten sein, dass das Ergebnis nicht lesbar ist. Die CDC-Skalierungs Funktionen ( `SetMapMode`z `SetViewportOrg`. b `SetWindowExt`., und) können verwendet werden, um die Skalierung zu beheben.
 
 [!code-cpp[NVC_MFCDocView#41](../../mfc/codesnippet/cpp/cdc-class_13.cpp)]
 
-##  <a name="startpage"></a>  CDC::StartPage
+##  <a name="startpage"></a>CDC:: Startpage
 
-Rufen Sie diese Memberfunktion zum Vorbereiten des Druckertreibers, um Daten zu empfangen.
+Diese Member-Funktion wird aufgerufen, um den Druckertreiber für den Empfang von Daten vorzubereiten.
 
 ```
 int StartPage();
@@ -6710,21 +6710,21 @@ int StartPage();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Größer als oder gleich 0, wenn die Funktion erfolgreich ist oder ein negativer Wert, wenn ein Fehler aufgetreten.
+Größer oder gleich 0 (null), wenn die Funktion erfolgreich ist, oder ein negativer Wert, wenn ein Fehler aufgetreten ist.
 
 ### <a name="remarks"></a>Hinweise
 
-`StartPage` hat Vorrang vor den NEWFRAME und BANDINFO Escapezeichen.
+`StartPage`ersetzt die Escapesequenzen und Bandinfo-Escapezeichen.
 
-Eine Übersicht über die Aufrufsequenz drucken, finden Sie unter den [StartDoc](#startdoc) Member-Funktion.
+Eine Übersicht über die Abfolge von Druck aufrufen finden Sie unter der [StartDoc](#startdoc) -Member-Funktion.
 
-Deaktiviert das System die `ResetDC` Memberfunktion zwischen den Aufrufen `StartPage` und `EndPage`.
+Das System deaktiviert die `ResetDC` Member `StartPage` -Funktion zwischen Aufrufen von und `EndPage`.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CDC::StartDoc](#startdoc).
+  Weitere Informationen finden Sie im Beispiel für [CDC:: StartDoc](#startdoc).
 
-##  <a name="stretchblt"></a>  CDC::StretchBlt
+##  <a name="stretchblt"></a>CDC:: StretchBlt
 
 Kopiert eine Bitmap aus einem Quellrechteck in ein Zielrechteck, wobei das Bitmap gestreckt oder komprimiert wird, falls dies notwendig ist, um zu den Maßen des Zielrechtecks zu passen.
 
@@ -6753,7 +6753,7 @@ Gibt die y-Koordinate (in logischen Einheiten) der oberen linken Ecke des Zielre
 *nWidth*<br/>
 Gibt die Breite (in logischen Einheiten) des Zielrechtecks an.
 
-*nHeight*<br/>
+*nheight*<br/>
 Gibt die Höhe (in logischen Einheiten) des Zielrechtecks an.
 
 *pSrcDC*<br/>
@@ -6774,35 +6774,35 @@ Gibt die Höhe (in logischen Einheiten) des Quellrechtecks an.
 *dwRop*<br/>
 Gibt das Raster des auszuführenden Vorgangs an. Rastervorgangscode definiert, wie GDI Farben in Ausgabevorgängen kombiniert, an denen ein aktueller Pinsel, eine mögliche Quellbitmap und eine Zielbitmap beteiligt sind. Dieser Parameter kann möglicherweise einen der folgenden Werte aufweisen:
 
-- BLACKNESS aktiviert, die Ausgabe Schwarz.
+- Blackness schaltet alle Ausgaben schwarz.
 
-- DSTINVERT kehrt die Zielbitmap.
+- Dstinvert kehrt die Ziel Bitmap um.
 
-- MERGECOPY werden das Muster und die Quellbitmap mithilfe des booleschen AND-Operators kombiniert.
+- Mergecopy kombiniert das Muster und die Quell Bitmap mithilfe des booleschen and-Operators.
 
-- MERGEPAINT werden die umgekehrte Quellbitmap mit der Zielbitmap mithilfe des booleschen OR-Operators kombiniert.
+- MergePaint kombiniert die invertierte Quell Bitmap mit der Ziel Bitmap mithilfe des booleschen OR-Operators.
 
-- NOTSRCCOPY kopiert die umgekehrte Quellbitmap in das Ziel.
+- Nozrccopy kopiert die invertierte Quell Bitmap in das Ziel.
 
-- NOTSRCERASE kehrt das Ergebnis der Kombination der Ziel- und Quellbitmaps mithilfe des booleschen OR-Operators an.
+- Nozrcerase kehrt das Ergebnis der Kombination der Ziel-und Quell Bitmaps mithilfe des booleschen OR-Operators um.
 
-- PATCOPY kopiert das Muster in die Zielbitmap.
+- Patcopy kopiert das Muster in die Ziel Bitmap.
 
-- PATINVERT werden die Zielbitmap mithilfe des booleschen XOR-Operators mit dem Muster kombiniert.
+- Patinvert kombiniert die Ziel Bitmap mit dem Muster mithilfe des booleschen XOR-Operators.
 
-- PATPAINT werden die umgekehrte Quellbitmap mithilfe des booleschen OR-Operators mit dem Muster kombiniert. Hierdurch wird das Ziel dieses Vorgangs mithilfe des booleschen OR-Operators mit dem Zielbitmap kombiniert.
+- Patpaint kombiniert die invertierte Quell Bitmap mit dem Muster mithilfe des booleschen OR-Operators. Hierdurch wird das Ziel dieses Vorgangs mithilfe des booleschen OR-Operators mit dem Zielbitmap kombiniert.
 
-- SRCAND kombiniert Pixel der Ziel- und Quellbitmaps mithilfe des booleschen AND-Operators.
+- Srcand kombiniert Pixel der Ziel-und Quell Bitmaps mithilfe des booleschen and-Operators.
 
-- SRCCOPY kopiert die Quellbitmap in die Zielbitmap.
+- Srccopy kopiert die Quell Bitmap in die Ziel Bitmap.
 
-- SRCERASE Hierdurch wird die Zielbitmap und das Ergebnis mit dem Quellbitmap mithilfe des booleschen AND-Operators kombiniert.
+- Srcerase kehrt die Ziel Bitmap um und kombiniert das Ergebnis mit der Quell Bitmap mithilfe des booleschen and-Operators.
 
-- SRCINVERT kombiniert Pixel der Ziel- und Quellbitmaps mithilfe des booleschen XOR-Operators.
+- Srcinvert kombiniert Pixel der Ziel-und Quell Bitmaps mithilfe des booleschen XOR-Operators.
 
-- SRCPAINT kombiniert Pixel der Ziel- und Quellbitmaps mithilfe des booleschen OR-Operators.
+- Srcpaint kombiniert Pixel der Ziel-und Quell Bitmaps mithilfe des booleschen OR-Operators.
 
-- WHITENESS aktiviert, die Ausgabe weiß.
+- Mit der whitheit wird die Ausgabe weiß.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -6812,9 +6812,9 @@ Ist ungleich null (0), wenn die Bitmap gezeichnet wird, andernfalls null (0).
 
 Die Funktion verwendet den Streckmodus des Zielgerätkontexts (durch `SetStretchBltMode` festgelegt), um zu bestimmen, wie die Bitmap gestreckt oder komprimiert werden soll.
 
-Die `StretchBlt` -Funktion verschiebt die Bitmap vom Quellgerät vom *pSrcDC* an das Zielgerät, dargestellt durch das Gerätekontext Objekt, dessen Memberfunktion aufgerufen wird. Die *xSrc*, *ySrc*, *nSrcWidth*, und *nSrcHeight* Parameter definieren, die linke obere Ecke und die Dimensionen des Quellrechtecks . Die *x*, *y*, *nWidth*, und *nHeight* Parameter geben die linke obere Ecke und die Dimensionen des Zielrechtecks. Durch angegebene rastervorgang *DwRop* definiert, wie die Quellbitmap und die Bits bereits auf dem Zielgerät kombiniert werden.
+Die `StretchBlt` -Funktion verschiebt die Bitmap von dem von *psrcdc* angegebenen Quellgerät auf das Zielgerät, das durch das Gerätekontext Objekt dargestellt wird, dessen Member-Funktion aufgerufen wird. Mit den Parametern *xsrc*, *ysrc*, *nsrcwidth*und *nsrcheight* werden die linke obere Ecke und die Abmessungen des Quell Rechtecks definiert. Der Parameter " *x*", " *y*", " *nwidth*" und " *nheight* " gibt die obere linke Ecke und die Abmessungen des Ziel Rechtecks an. Der von *dwrop* angegebene Raster Vorgang definiert, wie die Quell Bitmap und die Bits, die sich bereits auf dem Zielgerät befinden, kombiniert werden.
 
-Die `StretchBlt` Funktion ein Spiegelbild der Bitmap erstellt, wenn die Zeichen der *nSrcWidth* und *nWidth* oder *nSrcHeight* und *nHeight* Parameter unterscheiden. Wenn *nSrcWidth* und *nWidth* unterschiedliche Vorzeichen haben, die Funktion erstellt ein Spiegelbild der Bitmap entlang der x-Achse. Wenn *nSrcHeight* und *nHeight* unterschiedliche Vorzeichen haben, die Funktion erstellt ein Spiegelbild der Bitmap entlang der y-Achse.
+Die `StretchBlt` -Funktion erstellt ein Spiegelbild einer Bitmap, wenn die Vorzeichen der Parameter " *nsrcwidth* " und " *nwidth* " oder " *nsrcheight* " und " *nheight* " unterschiedlich sind. Wenn " *nsrcwidth* " und " *nwidth* " andere Vorzeichen aufweisen, erstellt die Funktion ein Spiegelbild der Bitmap entlang der x-Achse. Wenn " *nsrcheight* " und " *nheight* " andere Vorzeichen aufweisen, erstellt die Funktion ein Spiegelbild der Bitmap entlang der y-Achse.
 
 Die Funktion `StretchBlt` streckt oder komprimiert die Quellbitmap im Speicher und kopiert dann das Ergebnis in das Ziel. Wenn ein Muster mit dem Ergebnis zusammengeführt werden soll, wird es erst zusammengeführt, wenn die gestreckte Quellbitmap in das Ziel kopiert wurde. Wenn ein Pinsel verwendet wird, ist es der ausgewählte Pinsel im Zielgerätekontext. Die Zielkoordinaten werden gemäß dem Zielgerätekontext transformiert. Die Quellkoordinaten werden gemäß dem Quellgerätekontext transformiert.
 
@@ -6822,11 +6822,11 @@ Wenn das Ziel, die Quelle und die Musterbitmaps nicht dasselbe Farbformat haben,
 
 Wenn `StretchBlt` eine monochrome Bitmap in eine farbige konvertiere muss, legt sie weiße Bits (1) für die Hintergrundfarbe und schwarze Bits (0) für die Vordergrundfarbe fest. Um Farbe in monochrom zu verwandeln, legt sie Pixel, die mit der Hintergrundfarbe übereinstimmen, auf weiß (1) fest und legt alle anderen Pixel auf schwarz (0) fest. Die Vordergrund- und Hintergrundfarben des Gerätekontexts mit Farbe werden verwendet.
 
-Nicht alle Geräte unterstützen die `StretchBlt`-Funktion. Um festzustellen, ob ein Gerät unterstützt `StretchBlt`, rufen Sie die `GetDeviceCaps` Member mit dem Index RASTERCAPS Funktion und den Rückgabewert für das Flag RC_STRETCHBLT überprüfen.
+Nicht alle Geräte unterstützen die `StretchBlt`-Funktion. Um zu ermitteln, ob ein `StretchBlt`Gerät unterstützt `GetDeviceCaps` , müssen Sie die Member-Funktion mit dem RasterCaps-Index aufrufen und den Rückgabewert des RC_STRETCHBLT-Flags überprüfen.
 
-##  <a name="strokeandfillpath"></a>  CDC::StrokeAndFillPath
+##  <a name="strokeandfillpath"></a>CDC:: strokeandfillpath
 
-Schließt alle geöffneten Figuren in einen Pfad, den Umriss des Pfads, die mit der aktuelle Stift Striche und füllt mit der aktuellen Pinsel inneren.
+Schließt alle geöffneten Abbildungen in einem Pfad, streift die Gliederung des Pfads mithilfe des aktuellen Stifts und füllt das Innere mit dem aktuellen Pinsel.
 
 ```
 BOOL StrokeAndFillPath();
@@ -6838,11 +6838,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Der Gerätekontext muss es sich um einen geschlossenen Pfad enthalten. Die `StrokeAndFillPath` Memberfunktion hat dieselbe Wirkung wie das Schließen aller geöffneten Abbildungen in den Pfad und Kontur zuweisen, und füllen den Pfad, mit dem Unterschied, dass der ausgefüllte Bereich nicht selbst wenn die gestrichelt Region überschneiden, wird des Stifts breit.
+Der Gerätekontext muss einen geschlossenen Pfad enthalten. Die `StrokeAndFillPath` Member-Funktion hat denselben Effekt wie das Schließen aller geöffneten Abbildungen im Pfad, wobei der Pfad separat gezeichnet und ausgefüllt wird, mit dem Unterschied, dass der ausgefüllte Bereich sich nicht überschneidet, auch wenn der Stift breit ist.
 
-##  <a name="strokepath"></a>  CDC::StrokePath
+##  <a name="strokepath"></a>CDC:: strokePath
 
-Rendert den angegebenen Pfad mit der aktuelle Stift.
+Rendert den angegebenen Pfad mit dem aktuellen Stift.
 
 ```
 BOOL StrokePath();
@@ -6854,11 +6854,11 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Der Gerätekontext muss es sich um einen geschlossenen Pfad enthalten.
+Der Gerätekontext muss einen geschlossenen Pfad enthalten.
 
-##  <a name="tabbedtextout"></a>  CDC::TabbedTextOut
+##  <a name="tabbedtextout"></a>CDC:: tabbedtextout
 
-Rufen Sie diese Memberfunktion zum Schreiben einer Zeichenfolge an der angegebenen Position, und Erweitern von Registerkarten auf die Werte im Array der Tabstopp Positionen angegeben.
+Mit dieser Member-Funktion können Sie eine Zeichenfolge an der angegebenen Position schreiben und die Registerkarten auf die Werte erweitern, die im Array der Tabstopp Positionen angegeben sind.
 
 ```
 virtual CSize TabbedTextOut(
@@ -6882,42 +6882,42 @@ CSize TabbedTextOut(
 ### <a name="parameters"></a>Parameter
 
 *w*<br/>
-Gibt die logische X-Koordinate des Anfangspunkts der Zeichenfolge an.
+Gibt die logische x-Koordinate des Anfangs Punkts der Zeichenfolge an.
 
 *y*<br/>
-Gibt die logische y-Koordinate des Anfangspunkts der Zeichenfolge an.
+Gibt die logische y-Koordinate des Anfangs Punkts der Zeichenfolge an.
 
 *lpszString*<br/>
-Verweist auf die Zeichenfolge, die gezeichnet werden soll. Sie können entweder einen Zeiger übergeben, um ein Array von Zeichen oder ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt für diesen Parameter.
+Verweist auf die Zeichenfolge, die gezeichnet werden soll. Sie können entweder einen Zeiger an ein Zeichen Array oder ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt für diesen Parameter übergeben.
 
 *nCount*<br/>
-Gibt an, die [Länge der Zeichenfolge](/windows/desktop/gdi/specifying-length-of-text-output-string) verweist *LpszString*.
+Gibt die [Länge der Zeichenfolge](/windows/desktop/gdi/specifying-length-of-text-output-string) an, auf die von *lpszstring*verwiesen wird.
 
 *nTabPositions*<br/>
-Gibt die Anzahl der Werte im Array der Tabstopp Positionen an.
+Gibt die Anzahl der Werte im Array der Tabstopp-Positions Positionen an.
 
 *lpnTabStopPositions*<br/>
-Verweist auf ein Array mit den Tabstopp Positionen (in logischen Einheiten). Die Tabstopps müssen in aufsteigender Reihenfolge sortiert werden; der kleinste X-Wert sollte das erste Element im Array.
+Verweist auf ein Array, das die Position der Tabstopps (in logischen Einheiten) enthält. Die Tabstopps müssen in steigender Reihenfolge sortiert werden. der kleinste x-Wert sollte das erste Element im Array sein.
 
 *nTabOrigin*<br/>
-Gibt die X-Koordinate der Startposition aus der Registerkarten (in logischen Einheiten) erweitert werden.
+Gibt die x-Koordinate der Anfangsposition an, von der Tabstopps (in logischen Einheiten) erweitert werden.
 
 *str*<br/>
-Ein `CString` Objekt, das die angegebenen Zeichen enthält.
+Ein `CString` -Objekt, das die angegebenen Zeichen enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Abmessungen der Zeichenfolge (in logischen Einheiten) als eine `CSize` Objekt.
+Die Dimensionen der Zeichenfolge (in logischen Einheiten) als `CSize` -Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Text wird in der aktuell ausgewählten Schriftart geschrieben. Wenn *nTabPositions* ist 0 und *LpnTabStopPositions* NULL ist, Registerkarten auf acht Mal die durchschnittliche Zeichenbreite erweitert werden.
+Der Text wird in der aktuell ausgewählten Schriftart geschrieben. Wenn *ntabpositions* den Wert 0 hat und *lpntabstoppositions* den Wert NULL hat, werden die Registerkarten auf das Achtfache der durchschnittlichen Zeichenbreite erweitert.
 
-Wenn *nTabPositions* ist 1, die Registerkarte, die beendet von den durch den ersten Wert im angegebenen Abstand getrennt werden der *LpnTabStopPositions* Array. Wenn die *LpnTabStopPositions* Array enthält mehr als einen Wert, der ein Tabstopp festgelegt ist, für jeden Wert im Array fest, bis die angegebene Anzahl *nTabPositions*. Die *nTabOrigin* Parameter kann eine Anwendung zum Aufrufen der `TabbedTextOut` Funktion mehrmals für eine einzelne Zeile. Wenn die Anwendung ruft die Funktion mehrmals mit dem *nTabOrigin* jedes Mal auf den gleichen Wert festgelegt, die Funktion erweitert alle Registerkarten relativ zur Position gemäß *nTabOrigin*.
+Wenn *ntabpositions* den Wert 1 hat, werden die Tabstopps durch die Entfernung getrennt, die durch den ersten Wert im *lpntabstoppositions* -Array angegeben wird. Wenn das *lpntabstoppositions* -Array mehr als einen Wert enthält, wird für jeden Wert im Array ein Tabstopp festgelegt, bis zu der von *ntabpositions*angegebenen Zahl. Der *ntaborigin* -Parameter ermöglicht es einer Anwendung, `TabbedTextOut` die Funktion mehrmals für eine einzelne Zeile aufzurufen. Wenn die Anwendung die Funktion mehrmals aufruft, wobei *ntaborigin* immer auf denselben Wert festgelegt ist, erweitert die Funktion alle Registerkarten relativ zu der durch *ntaborigin*angegebenen Position.
 
-Standardmäßig wird die aktuelle Position von der Funktion nicht verwendet oder aktualisiert. Die Anwendung kann aufrufen, wenn eine Anwendung muss die aktuelle Position aktualisieren, wenn es sich um die Funktion aufruft, die [SetTextAlign](#settextalign) Member-Funktion mit *nFlags* TA_UPDATECP festgelegt. Wenn dieses Flag festgelegt ist, ignoriert Windows die *x* und *y* Parameter bei nachfolgenden Aufrufen `TabbedTextOut`, verwenden Sie stattdessen die aktuelle Position.
+Standardmäßig wird die aktuelle Position von der Funktion nicht verwendet oder aktualisiert. Wenn eine Anwendung die aktuelle Position aktualisieren muss, wenn Sie die Funktion aufruft, kann die Anwendung die Member-Funktion [setTextAlign](#settextalign) mit *nFlags* aufrufen, die auf TA_UPDATECP festgelegt sind. Wenn dieses Flag festgelegt ist, ignoriert Windows die *x* -und *y* -Parameter bei `TabbedTextOut`nachfolgenden Aufrufen von und verwendet dabei die aktuelle Position.
 
-##  <a name="textout"></a>  TextOut
+##  <a name="textout"></a>CDC:: TextOut
 
 Schreibt mithilfe der aktuell ausgewählten Schriftart eine Zeichenfolge an dem angegebenen Speicherort.
 
@@ -6959,15 +6959,15 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 Zeichenursprünge befindet sich in der oberen linken Ecke der Zeichenzelle. Standardmäßig wird die aktuelle Position von der Funktion nicht verwendet oder aktualisiert.
 
-Wenn eine Anwendung muss die aktuelle Position aktualisieren, wenn aufgerufen `TextOut`, rufen Sie die Anwendung kann die `SetTextAlign` Member-Funktion mit *nFlags* TA_UPDATECP festgelegt. Wenn dieses Flag festgelegt ist, ignoriert Windows die *x* und *y* Parameter bei nachfolgenden Aufrufen `TextOut`, verwenden Sie stattdessen die aktuelle Position.
+Wenn eine Anwendung die aktuelle Position aktualisieren muss, wenn Sie aufruft `TextOut`, kann die Anwendung die `SetTextAlign` Member-Funktion mit *nFlags* aufrufen, die auf TA_UPDATECP festgelegt sind. Wenn dieses Flag festgelegt ist, ignoriert Windows die *x* -und *y* -Parameter bei `TextOut`nachfolgenden Aufrufen von und verwendet dabei die aktuelle Position.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CDC:: beginpath](#beginpath).
+  Sehen Sie sich das Beispiel für [CDC:: beginpath](#beginpath)an.
 
-##  <a name="transparentblt"></a>  CDC::TransparentBlt
+##  <a name="transparentblt"></a>CDC:: TransparentBlt
 
-Rufen Sie diese Memberfunktion zum Übertragen von eines Bit-Datenblocks die Farbe, die einem Rechteck aus Pixeln aus der angegebenen Quelle-Gerätekontext, eine Ziel-Gerätekontext entspricht.
+Mit dieser Member-Funktion wird ein Bitblock der Farbdaten, der einem Rechteck aus Pixeln aus dem angegebenen Quell Gerätekontext entspricht, in einen Zielgeräte Kontext übertragen.
 
 ```
 BOOL TransparentBlt(
@@ -6986,34 +6986,34 @@ BOOL TransparentBlt(
 ### <a name="parameters"></a>Parameter
 
 *xDest*<br/>
-Gibt die X-Koordinate, in logischen Einheiten, der die linke obere Ecke des Zielrechtecks an.
+Gibt die x-Koordinate (in logischen Einheiten) der oberen linken Ecke des Ziel Rechtecks an.
 
 *yDest*<br/>
-Gibt die y-Koordinate, in logischen Einheiten, der die linke obere Ecke des Zielrechtecks an.
+Gibt die y-Koordinate (in logischen Einheiten) der oberen linken Ecke des Ziel Rechtecks an.
 
 *nDestWidth*<br/>
-Gibt die Breite in logischen Einheiten des Zielrechtecks an.
+Gibt die Breite (in logischen Einheiten) des Ziel Rechtecks an.
 
 *nDestHeight*<br/>
-Gibt die Höhe in logischen Einheiten des Zielrechtecks an.
+Gibt die Höhe (in logischen Einheiten) des Ziel Rechtecks an.
 
 *pSrcDC*<br/>
-Zeiger auf den Quellgerätekontext.
+Zeiger auf den Quell Gerätekontext.
 
 *xSrc*<br/>
-Gibt die X-Koordinate, in logischen Einheiten des Quellrechtecks an.
+Gibt die x-Koordinate (in logischen Einheiten) des Quell Rechtecks an.
 
 *ySrc*<br/>
-Gibt die y-Koordinate, in logischen Einheiten des Quellrechtecks an.
+Gibt die y-Koordinate (in logischen Einheiten) des Quell Rechtecks an.
 
 *nSrcWidth*<br/>
-Gibt die Breite in logischen Einheiten des Quellrechtecks an.
+Gibt die Breite des Quell Rechtecks in logischen Einheiten an.
 
 *nSrcHeight*<br/>
-Gibt die Höhe in logischen Einheiten des Quellrechtecks an.
+Gibt die Höhe des Quell Rechtecks in logischen Einheiten an.
 
 *clrTransparent*<br/>
-Die RGB-Farbe in der Quell-Bitmap als transparent behandelt werden soll.
+Die RGB-Farbe in der Quell Bitmap, die als transparent behandelt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -7021,13 +7021,13 @@ TRUE, wenn erfolgreich, andernfalls FALSE.
 
 ### <a name="remarks"></a>Hinweise
 
-`TransparentBlt` Transparenz ermöglicht. d. h. die RGB-Farbe erkennbar *ClrTransparent* für die Übertragung transparent gerendert wird.
+`TransparentBlt`ermöglicht Transparenz; Das heißt, die RGB-Farbe, die *clrtransparent* angibt, wird für die Übertragung transparent gerendert.
 
-Weitere Informationen finden Sie unter [TransparentBlt](/windows/desktop/api/wingdi/nf-wingdi-transparentblt) im Windows SDK.
+Weitere Informationen finden Sie unter [TransparentBlt](/windows/desktop/api/wingdi/nf-wingdi-transparentblt) in der Windows SDK.
 
-##  <a name="updatecolors"></a>  CDC::UpdateColors
+##  <a name="updatecolors"></a>CDC:: updatecolors
 
-Updates des Clientbereichs der Systempalette auf Pixel-für-Pixel-Basis der Clientbereich des Gerätekontexts durch Vergleich der aktuellen Farben.
+Aktualisiert den Client Bereich des Geräte Kontexts, indem die aktuellen Farben im Client Bereich auf pixelweise mit der Systempalette übereinstimmen.
 
 ```
 void UpdateColors();
@@ -7035,15 +7035,15 @@ void UpdateColors();
 
 ### <a name="remarks"></a>Hinweise
 
-Kann mit einer realisierten logischen Palette ein inaktives Fensters Aufrufen `UpdateColors` als Alternative zum Neuzeichnen seinen Clientbereich, wenn sich die Systempalette ändert.
+Ein inaktives Fenster mit einer erkannten logischen Palette kann `UpdateColors` als Alternative zum Neuzeichnen des Client Bereichs aufgerufen werden, wenn sich die Systempalette ändert.
 
-Weitere Informationen zur Verwendung von Farbpaletten finden Sie unter [UpdateColors](/windows/desktop/api/wingdi/nf-wingdi-updatecolors) im Windows SDK.
+Weitere Informationen zur Verwendung von Farbpaletten finden Sie unter [updatecolors](/windows/desktop/api/wingdi/nf-wingdi-updatecolors) in der Windows SDK.
 
-Die `UpdateColors` Memberfunktion updates in der Regel einen Client-Bereich schneller als das Neuzeichnen des Bereichs. Da die Funktion ausführt, die Farbe Übersetzung basierend auf der Farbe jedes Pixels, bevor die Systempalette geändert wird, führt jedoch zu jeder Aufruf dieser Funktion zum Verlust der Genauigkeit der einige Farben.
+Die `UpdateColors` Member-Funktion aktualisiert in der Regel einen Client Bereich schneller, als den Bereich neu zu zeichnen. Da die Funktion jedoch die Farb Übersetzung basierend auf der Farbe jedes Pixels vor der Änderung der Systempalette ausführt, führt jeder Rückruf dieser Funktion zu einem Verlust der Farbgenauigkeit.
 
-##  <a name="widenpath"></a>  CDC::WidenPath
+##  <a name="widenpath"></a>CDC:: widenpath
 
-Definiert den aktuellen Pfad als der Bereich, der gezeichnet werden sollen, wenn der Pfad mit Strichen gezeichnet wurden mit dem Stift in den Gerätekontext derzeit ausgewählt.
+Definiert den aktuellen Pfad neu als den Bereich, der gezeichnet werden würde, wenn der Pfad mithilfe des derzeit im Gerätekontext ausgewählten Stifts gezeichnet würde.
 
 ```
 BOOL WidenPath();
@@ -7055,7 +7055,7 @@ Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion ist nur erfolgreich, wenn der aktuelle Stift einen geometrischen Stift erstellt, indem Sie die zweite Version der ist `CreatePen` Member-Funktion, oder wenn der Stift, mit der ersten Version von erstellt wird `CreatePen` und verfügt über eine Breite in Geräteeinheiten, der größer als 1. Der Gerätekontext muss es sich um einen geschlossenen Pfad enthalten. Alle Bzier Kurven im Pfad werden in Sequenzen von geraden annähern der erweiterten Kurven konvertiert. Daher keine Kurven Bzier verbleiben in den Pfad nach `WidenPath` aufgerufen wird.
+Diese Funktion ist nur erfolgreich, wenn der aktuelle Stift ein geometrischer Stift ist, der von der `CreatePen` zweiten Version der Element Funktion erstellt wurde, oder wenn der Stift mit der `CreatePen` ersten Version von erstellt wird und in Geräte Einheiten eine Breite von mehr als 1 aufweist. Der Gerätekontext muss einen geschlossenen Pfad enthalten. Alle Bzier-Kurven im Pfad werden in Sequenzen von geraden Zeilen konvertiert, die den erweiterten Kurven ähneln. Daher verbleiben keine Bzier-Kurven im Pfad, nachdem `WidenPath` aufgerufen wurde.
 
 ## <a name="see-also"></a>Siehe auch
 
