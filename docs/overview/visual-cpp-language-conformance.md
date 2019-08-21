@@ -1,16 +1,16 @@
 ---
 title: 'Microsoft C++-Sprachkonformität: Tabelle'
-ms.date: 07/02/2019
+ms.date: 08/12/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 2b5d7774734eae992935af9bd4abd408dd387d7d
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 15226d41991d5a09d104d2edbfb3dbf2f7432b65
+ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552360"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980531"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++-Sprachkonformität: Tabelle
 
@@ -21,16 +21,16 @@ Ausführliche Informationen zu Verbesserungen bei der Konformität und zu andere
 > [!NOTE]
 > Es gibt keine binären Änderungen zwischen Visual Studio 2015, Visual Studio 2017 und Visual Studio 2019.
 
-## <a name="compiler-features"></a>Compilerfunktionen
+## <a name="compiler-features"></a>Compilerfeatures
 
-|Bereich „Funktionen“| |
+| | |
 |----|---|
-|__Funktionen der C++03/11-Kernsprache__|__Unterstützt__|
+|__Hauptsprachfeatures von C++03/11__|__Unterstützt__|
 |&nbsp;&nbsp;Alles andere|VS 2015 <sup>[A](#note_A)</sup>|
 |&nbsp;&nbsp;Zwei-Phasen Namenssuche|VS 2017 15.7 <sup>[B](#note_B)</sup>|
 |&nbsp;&nbsp;[N2634 SFINAE für Ausdrücke](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 C99-Präprozessor](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|Teilweise <sup>[C](#note_C)</sup>|
-|__Funktionen der C++14-Kernsprache__|__Unterstützt__|
+|__Hauptsprachfeatures von C++14__|__Unterstützt__|
 |&nbsp;&nbsp;[N3323 Optimierte Formulierungen für kontextbezogene Konvertierungen](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3472 Binäre Literale](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
 |&nbsp;&nbsp;[N3638 Rückagebetypen „auto“ und „decltype(auto)“](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)|VS 2015|
@@ -42,7 +42,7 @@ Ausführliche Informationen zu Verbesserungen bei der Konformität und zu andere
 |&nbsp;&nbsp;[N3651 Variablenvorlagen](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3651.pdf)|VS 2015.2|
 |&nbsp;&nbsp;[N3652 Erweiterte constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)|VS 2017 15.0|
 |&nbsp;&nbsp;[N3653: Standardmemberinitialisierer für Aggregate](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3653.html)|VS 2017 15.0|
-|__Funktionen der C++17-Kernsprache__|__Unterstützt__|
+|__Hauptsprachfeatures von C++17__|__Unterstützt__|
 |&nbsp;&nbsp;[N4086 Entfernen von Trigraphen](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)|VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N3922 Neue Regeln für „auto“ mit „braced-init-lists“](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4051 „typename“ in Vorlagen-Vorlagenparametern](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -83,11 +83,7 @@ Ausführliche Informationen zu Verbesserungen bei der Konformität und zu andere
 |&nbsp;&nbsp;[P0145R3 Reihenfolge der Ausdrucksauswertung optimieren](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br/>&nbsp;&nbsp;[P0400R0 Auswertungsreihenfolge von Funktionsargumenten](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0195R2 Pack-Erweiterungen in der using-Deklarationen](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0283R2 Ignoriert nicht erkannte Attribute](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
-
-
-|Bereich „Funktionen“| |
-|----|---|
-|__Hauptfeatures von C++ 17 (Fehlerberichte)__|__Unterstützt__|
+|__Hauptsprachfeatures von C++17 (Fehlerberichte)__|__Unterstützt__|
 |&nbsp;&nbsp;[P0702R1 Beheben von Problemen mit der Argumentableitung für Klassenvorlagen für „initializer-list ctors“](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0961R1: Lockern der Regeln für das Suchen von Anpassungspunkten von strukturierten Bindungen](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0969R0: Zulassen strukturierter Bindungen an zugängliche Members](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
@@ -96,15 +92,11 @@ Ausführliche Informationen zu Verbesserungen bei der Konformität und zu andere
 |&nbsp;&nbsp;[P0929R2: Überprüfen auf abstrakte Klassentypen](https://wg21.link/P0929R2)|Nein|
 |&nbsp;&nbsp;[P1009R2: Arraygrößenableitung in neuen Ausdrücken](https://wg21.link/P1009R2)|Nein|
 |&nbsp;&nbsp;[P1286R2: Contra CWG DR1778](https://wg21.link/P1286R2)|Nein|
-|Bereich „Funktionen“| |
-|----|---|
-|__C++20-Kernsprachfunktionen__|__Unterstützt__|
+|__Hauptsprachfeatures von C++20__|__Unterstützt__|
 |&nbsp;&nbsp;[P0704R1 Beheben von „const lvalue ref“-qualifizierten Zeigern auf Member](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1041R4: Konvertieren von char16_t/char32_t-Zeichenfolgenliteralen in UTF-16/32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1330R0: Ändern des aktiven Members einer Union in constexpr](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0972R0: noexcept for \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0515R3 Operator für Dreiwegevergleich <=> (Raumschiffoperator)](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1008R1: Unterbindung von Aggregaten mit benutzerdeklarierten Konstruktoren](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0329R4 Designierte Initialisierung](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0409R2: Zulassen von „lambda-capture \[=, this\]“](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0515R3 Operator für Dreiwegevergleich <=> (Raumschiffoperator)](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
@@ -114,7 +106,6 @@ Ausführliche Informationen zu Verbesserungen bei der Konformität und zu andere
 |&nbsp;&nbsp;[P0641R2: const-Konflikt mit Standardkopierkonstruktor](https://wg21.link/P0641R2)|Partial|
 |&nbsp;&nbsp;[P0306R4 Hinzufügen von \_\_VA_OPT\_\_ für das Auslassen und Löschen von Kommas](https://wg21.link/P0306R4)|Nein|
 |&nbsp;&nbsp;[P0315R4: Zulassen von Lambdas in nicht ausgewerteten Kontexten](https://wg21.link/P0315R4)|Nein|
-|&nbsp;&nbsp;[P0409R2: Zulassen von „lambda-capture \[=, this\]“](https://wg21.link/P0409R2)|Nein|
 |&nbsp;&nbsp;[P0428R2 Bekannte Vorlagensyntax für generische Lambdas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|Nein|
 |&nbsp;&nbsp;[P0479R5: \[\[likely\]\]- und \[\[unlikely\]\]-Attribut](https://wg21.link/P0479R5)|Nein|
 |&nbsp;&nbsp;[P0542R5: Verträge](https://wg21.link/P0542R5)|Nein|
@@ -153,9 +144,9 @@ Ausführliche Informationen zu Verbesserungen bei der Konformität und zu andere
 
 ## <a name="standard-library-features"></a>Standardbibliotheksfeatures
 
-|Bereich „Funktionen“| |
+| | |
 |---|---|
-|__C++20-Standardbibliotheksfunktionen__|__Unterstützt__|
+|__Standardbibliotheksfeatures von C++20__|__Unterstützt__|
 |&nbsp;&nbsp;[P0809R0: Vergleichen unsortierter Container](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0858R0: Anforderungen des Constexpr-Iterators](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0777R1: Vermeiden unnötigen Verfalls](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
@@ -220,7 +211,7 @@ Ausführliche Informationen zu Verbesserungen bei der Konformität und zu andere
 |&nbsp;&nbsp;[P1227R2: std::ssize() mit Vorzeichen, span::size() ohne Vorzeichen](https://wg21.link/P1227R2)|Nein|
 |&nbsp;&nbsp;[P1285R0: Verbessern der Vollständigkeitsanforderungen für Typmerkmale](https://wg21.link/P1285R0)|Nein|
 |&nbsp;&nbsp;[P1357R1: is_bounded_array, is_unbounded_array](https://wg21.link/P1357R1)|Nein|
-|__C++17 Standardbibliotheksfunktionen__|__Unterstützt__|
+|__Standardbibliotheksfeatures von C++17__|__Unterstützt__|
 |&nbsp;&nbsp;[LWG 2221: Formatierter Ausgabeoperator für nullptr](https://cplusplus.github.io/LWG/issue2221)|VS 2019 16.1|
 |&nbsp;&nbsp;[N3911 void_t](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3911.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4089 Sichere Konvertierungen in unique_ptr\<T[]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4089.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -303,7 +294,7 @@ Ausführliche Informationen zu Verbesserungen bei der Konformität und zu andere
 |&nbsp;&nbsp;[P0607R0 Inlinevariablen für die Standardbibliothek](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0618R0 Kennzeichnen von „\<codecvt>“ als veraltet](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0682R1: Reparieren von elementaren Zeichenfolgenkonvertierungen](https://wg21.link/P0682R1)|VS 2015 15.7 <sup>[17](#note_17)</sup>|
-|__C++14 Standardbibliotheksfunktionen__|__Unterstützt__|
+|__Standardbibliotheksfeatures von C++14__|__Unterstützt__|
 |&nbsp;&nbsp;[N3462 SFINAE-freundliche result_of](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3462.html)|VS 2015.2|
 |&nbsp;&nbsp;[N3302 constexpr für \<complex>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3302.html)|VS 2015|
 |&nbsp;&nbsp;[N3469 constexpr für \<chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3469.html)|VS 2015|
