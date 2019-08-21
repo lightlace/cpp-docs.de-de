@@ -1,37 +1,37 @@
 ---
 title: Verwenden von IDispEventSimpleImpl (ATL)
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 helpviewer_keywords:
 - IDispEventSimpleImpl class, using
 ms.assetid: 8640ad1a-4bd0-40a5-b5e4-7322685d7aab
-ms.openlocfilehash: 40edca3a99fb6e9d57d617e79d0bd37ebbfcd4ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a5e64093d2687efc6c6c5e9b0ce89402d2b99a4
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196715"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630585"
 ---
 # <a name="using-idispeventsimpleimpl"></a>Verwenden von IDispEventSimpleImpl
 
-Bei Verwendung `IDispEventSimpleImpl` zum Verarbeiten von Ereignissen, müssen Sie:
+Wenn Sie `IDispEventSimpleImpl` verwenden, um Ereignisse zu behandeln, müssen Sie folgende Schritte ausführen:
 
-- Leiten Sie eine Klasse von [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md).
+- Leiten Sie die Klasse von [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)ab.
 
-- Fügen Sie eine Senke-Event-Zuordnung zu einer Klasse hinzu.
+- Fügen Sie der Klasse eine Ereignis Senke-Zuordnung hinzu.
 
-- Definieren Sie [_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md) Strukturen, die die Ereignisse beschreibt.
+- Definieren von [_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md) -Strukturen, die die Ereignisse beschreiben.
 
-- Fügen Sie Einträge hinzu, um die Ereignissenke Zuordnung mithilfe der [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info) Makro.
+- Fügen Sie der Ereignis Senke mithilfe des [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info) -Makros Einträge hinzu.
 
-- Implementieren Sie die Methoden, die Sie bei der Verwendung von Interesse sind.
+- Implementieren Sie die Methoden, die Sie behandeln möchten.
 
-- Melden Sie an und die Ereignisquelle.
+- Informieren Sie sich, und deaktivieren Sie die Ereignis Quelle.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht das Behandeln der `DocumentChange` Ereignis ausgelöst wird, von Word **Anwendung** Objekt. Dieses Ereignis wird als eine Methode definiert, auf die `ApplicationEvents` Disp-Schnittstelle.
+Im folgenden Beispiel wird gezeigt, wie das Ereignis `DocumentChange` behandelt wird, das von Word- **Anwendungs** Objekt ausgelöst wird. Dieses Ereignis ist als Methode für die `ApplicationEvents` dispinterface-Methode definiert.
 
-Das Beispiel stammt aus dem [ATLEventHandling-Beispiel](../overview/visual-cpp-samples.md).
+Das Beispiel ist aus dem Beispiel " [atleventhandelt](../overview/visual-cpp-samples.md)".
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
@@ -49,21 +49,21 @@ methods:
 };
 ```
 
-Im Beispiel wird `#import` auf die erforderlichen Header-Dateien von Word Typbibliothek zu generieren. Wenn Sie dieses Beispiel mit anderen Versionen von Word verwenden möchten, müssen Sie die richtige Mso-Dll-Datei angeben. Beispielsweise Office 2000 stellt mso9.dll und OfficeXP mso.dll bereit. Dieser Code wird von "stdafx.h" vereinfacht:
+Im Beispiel wird `#import` verwendet, um die erforderlichen Header Dateien aus der Typbibliothek von Word zu generieren. Wenn Sie dieses Beispiel mit anderen Versionen von Word verwenden möchten, müssen Sie die richtige MSO-DLL-Datei angeben. Beispielsweise stellt Office 2000 die Datei mso9. dll bereit, und OFFICEXP stellt mso. dll bereit. Dieser Code wird von " *PCH. h* " (*stdafx. h* in Visual Studio 2017 und früher) vereinfacht:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventsimpleimpl_1.h)]
 
-Die einzige Informationen aus der Typbibliothek, die tatsächlich verwendeten in diesem Beispiel ist die CLSID des Worts `Application` -Objekt und die IID der `ApplicationEvents` Schnittstelle. Diese Informationen werden nur zum Zeitpunkt der Kompilierung verwendet.
+Die einzigen Informationen aus der Typbibliothek, die in diesem Beispiel tatsächlich verwendet wird, sind die CLSID des Word `Application` -Objekts und die IID `ApplicationEvents` der Schnittstelle. Diese Informationen werden nur zum Zeitpunkt der Kompilierung verwendet.
 
-Der folgende Code wird im Simple.h angezeigt. Der entsprechende Code wird durch Kommentare aufgeführt:
+Der folgende Code wird in "Simple. h" angezeigt. Der relevante Code wird in Kommentaren angegeben:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#3](../atl/codesnippet/cpp/using-idispeventsimpleimpl_2.h)]
 
-Der folgende Code stammt aus Simple.cpp:
+Der folgende Code ist von Simple. cpp:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#4](../atl/codesnippet/cpp/using-idispeventsimpleimpl_3.cpp)]
 
 ## <a name="see-also"></a>Siehe auch
 
 [Ereignisbehandlung](../atl/event-handling-and-atl.md)<br/>
-[ATLEventHandling-Beispiel](../overview/visual-cpp-samples.md)
+[Beispiel für "atleventhandelt"](../overview/visual-cpp-samples.md)

@@ -1,25 +1,25 @@
 ---
 title: Erstellen des Projekts (ATL-Lernprogramm, Teil 1)
 ms.custom: get-started-article
-ms.date: 05/06/2019
+ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 9f7f62ec94d5ac6d6076763853aa19297cf310e6
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861018"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630690"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Erstellen des Projekts (ATL-Lernprogramm, Teil 1)
 
-Dieses Tutorial führt Sie schrittweise durch ein nicht attributierte ATL-Projekt, das ein ActiveX-Objekt erstellt, die ein Polygon anzeigt. Das Objekt enthält die Optionen für die es den Benutzer ermöglicht, so ändern Sie die Anzahl der Seiten, aus denen die Polygon- und Code auf die Anzeige zu aktualisieren.
+In diesem Tutorial werden Sie Schritt für Schritt durch ein nicht attributiertes ATL-Projekt geführt, das ein ActiveX-Objekt erstellt, das ein Polygon anzeigt. Das-Objekt enthält Optionen, mit denen der Benutzer die Anzahl der Seiten, die das Polygon bilden, ändern kann, und den Code, um die Anzeige zu aktualisieren.
 
 > [!NOTE]
-> ATL und MFC sind in den Express-Editionen von Visual Studio in der Regel nicht unterstützt.
+> ATL und MFC werden in den Express-Editionen von Visual Studio nicht unterstützt.
 
 > [!NOTE]
-> In diesem Tutorial wird den gleiche Quellcode als Beispiel für Polygon erstellt. Wenn Sie vermeiden, den Quellcode manuell eingeben möchten, können Sie herunterladen, aus der [Polygon-Beispiel](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Sie können dann auf den Quellcode des Polygons verweisen, wie Sie das Lernprogramm zu absolvieren, oder verwenden, um Fehler in Ihrem eigenen Projekt zu prüfen.
-> Klicken Sie zum Kompilieren "stdafx.h" zu öffnen, und ersetzen:
+> Dieses Tutorial erstellt denselben Quellcode wie das Polygon-Beispiel. Wenn Sie die manuelle Eingabe des Quellcodes vermeiden möchten, können Sie ihn aus dem [Polygon-Beispiel Abstract](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon)herunterladen. Sie können dann auf den Polygon-Quellcode verweisen, während Sie das Tutorial durcharbeiten, oder Sie verwenden, um in Ihrem eigenen Projekt nach Fehlern zu suchen.
+> Öffnen Sie zum Kompilieren " *PCH. h* " (*stdafx. h* in Visual Studio 2017 und früher), und ersetzen Sie Folgendes:
 > ```
 > #ifndef WINVER
 > #define WINVER 0x0400
@@ -32,46 +32,66 @@ Dieses Tutorial führt Sie schrittweise durch ein nicht attributierte ATL-Projek
 > #define _WIN32_WINNT 0x0500
 > #endif
 > ```
-> Der Compiler wird immer noch über einen Fehler `regsvr32` nicht ordnungsgemäß beendet, aber Sie sollten immer noch die DLL des Steuerelements erstellt und für die Verwendung verfügbar.
+> Der Compiler beschwert sich immer noch `regsvr32` darüber, dass er nicht ordnungsgemäß beendet wird, aber Sie sollten trotzdem die DLL des Steuer Elements erstellt haben und zur Verwendung verfügbar sein.
 
-### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>Zum Erstellen des anfänglichen ATL-Projekts mit ATL-Projektassistenten
+### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>So erstellen Sie das anfängliche ATL-Projekt mithilfe des ATL-Projekt-Assistenten
 
-1. In Visual Studio 2017 und früheren Versionen: **Datei** > **neue** > **Projekt**. Das Öffnen der **Visual C++**  Registerkarte, und wählen Sie **MFC/ATL**. Wählen Sie **ATL-Projekt**.
+1. In Visual Studio 2017 und früher: **Datei** > neuesProjekt > . Öffnen Sie die Registerkarte " **Visual C++**  ", und wählen Sie **MFC/ATL**aus. Wählen Sie **ATL-Projekt**aus.
 
-   In Visual Studio-2019: Wählen Sie **Datei** > **neu** > **Projekt**, geben Sie "Atl", in das Suchfeld ein, und wählen Sie **ATL-Projekt**.
+   In Visual Studio 2019: Wählen Sie **Datei** > **neu** > **Projekt**aus, geben Sie "ATL" in das Suchfeld ein, und wählen Sie **ATL-Projekt**aus.
 
-1. Typ *Polygon* als Projektnamen ein.
+1. Geben Sie *Polygon* als Projektnamen ein.
 
-    Der Speicherort für den Quellcode in der Regel standardmäßig \Users\\\<Benutzername > \source\repos und einen neuen Ordner wird automatisch erstellt.
+    Der Speicherort für den Quellcode wird normalerweise standardmäßig auf\\\Users\<username > \source\repos festgesetzt, und es wird automatisch ein neuer Ordner erstellt.
 
-1. Klicken Sie in Visual Studio-2019, übernehmen die Standardwerte, und klicken Sie auf **OK**. 
-   Klicken Sie in Visual Studio 2017 auf **OK** zum Öffnen der **ATL-Projekt** Assistenten. Klicken Sie auf **Anwendungseinstellungen** um die verfügbaren Optionen anzuzeigen. Da dieses Projekt ein Steuerelement erstellt und ein Steuerelement muss in-Process-Server sein, lassen Sie die **Anwendungstyp** als DLL. Klicken Sie auf **OK**.
+1. Übernehmen Sie in Visual Studio 2019 die Standardwerte, und klicken Sie auf **OK**. 
+   Klicken Sie in Visual Studio 2017 auf **OK** , um den **ATL-Projekt** -Assistenten zu öffnen. Klicken Sie auf **Anwendungseinstellungen** , um die verfügbaren Optionen anzuzeigen. Da dieses Projekt ein-Steuerelement erstellt und ein-Steuerelement ein Prozess interner Server sein muss, belassen Sie den **Anwendungstyp** als dll. Klicken Sie auf **OK**.
 
-Visual Studio erstellt das Projekt mehrere Dateien zu generieren. Sie können diese Dateien in anzeigen **Projektmappen-Explorer** durch Erweitern der `Polygon` Objekt. Die Dateien sind unten aufgeführt.
+Visual Studio erstellt das Projekt durch die Erstellung mehrerer Dateien. Sie können diese Dateien in **Projektmappen-Explorer** anzeigen, indem Sie `Polygon` das-Objekt erweitern. Die Dateien sind unten aufgeführt.
+
+::: moniker range="<=vs-2017"
 
 |Datei|Beschreibung|
 |----------|-----------------|
-|Polygon.cpp|Enthält die Implementierung der `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`, und `DllUnregisterServer`. Außerdem enthält der objektzuordnung, das eine Liste der ATL-Objekte in Ihrem Projekt ist. Dies ist zunächst leer.|
-|Polygon.def|Diese DEF-Datei enthält den Linker mit Informationen über die Exporte, die die DLL erforderlich sind.|
-|Polygon.idl|Die IDL-Datei, die die Schnittstellen, die spezifisch für Ihre Objekte beschreibt.|
-|Polygon.rgs|Dieses Registrierungsskript enthält Informationen zum Registrieren Ihres Programms-DLL.|
-|Polygon.rc|Die Ressourcendatei, die zunächst die Informationen zur Version und eine Zeichenfolge, enthält den Namen des Projekts enthält.|
+|Polygon.cpp|Enthält die Implementierung von `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`und. `DllUnregisterServer` Enthält auch die Objekt Zuordnung, bei der es sich um eine Liste der ATL-Objekte in Ihrem Projekt handelt. Diese ist anfänglich leer.|
+|Polygon.def|Diese Modul Definitionsdatei stellt dem Linker Informationen zu den von der dll benötigten Exporten bereit.|
+|Polygon.idl|Die Sprachdatei der Schnittstellen Definition, in der die für die Objekte spezifischen Schnittstellen beschrieben werden.|
+|Polygon.rgs|Dieses Registrierungs Skript enthält Informationen zum Registrieren der Programm-dll.|
+|Polygon.rc|Die Ressourcen Datei, die anfänglich die Versionsinformationen und eine Zeichenfolge enthält, die den Projektnamen enthält.|
 |Resource.h|Die Headerdatei für die Ressourcendatei|
-|Polygonps.def|Moduldefinitionsdatei enthält den Linker mit Informationen über die Exporte benötigt, durch den Proxy und Stub-Code, die Aufrufe über Apartments hinweg zu unterstützen.|
-|stdafx.cpp|Die Datei, die `#include` die ATL-Implementierungsdateien.|
-|stdafx.h|Die Datei, die `#include` ATL-Headerdateien.|
+|Polygonps.def|Diese Modul Definitionsdatei bietet dem Linker Informationen zu den Exporten, die für den Proxy und Stubcode erforderlich sind, die Aufrufe über mehrere Apartments hinweg unterstützen.|
+|stdafx.cpp|Die Datei, `#include` die *stdafx. h*.|
+|stdafx.h|Die Datei, mit `#include` der die ATL-Header Dateien vorkompiliert werden.|
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+|Datei|Beschreibung|
+|----------|-----------------|
+|Polygon.cpp|Enthält die Implementierung von `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`und. `DllUnregisterServer` Enthält auch die Objekt Zuordnung, bei der es sich um eine Liste der ATL-Objekte in Ihrem Projekt handelt. Diese ist anfänglich leer.|
+|Polygon.def|Diese Modul Definitionsdatei stellt dem Linker Informationen zu den von der dll benötigten Exporten bereit.|
+|Polygon.idl|Die Sprachdatei der Schnittstellen Definition, in der die für die Objekte spezifischen Schnittstellen beschrieben werden.|
+|Polygon.rgs|Dieses Registrierungs Skript enthält Informationen zum Registrieren der Programm-dll.|
+|Polygon.rc|Die Ressourcen Datei, die anfänglich die Versionsinformationen und eine Zeichenfolge enthält, die den Projektnamen enthält.|
+|Resource.h|Die Headerdatei für die Ressourcendatei|
+|Polygonps.def|Diese Modul Definitionsdatei bietet dem Linker Informationen zu den Exporten, die für den Proxy und Stubcode erforderlich sind, die Aufrufe über mehrere Apartments hinweg unterstützen.|
+|PCH. cpp|Die Datei, für `#include` die " *PCH. h" verwendet*wird.|
+|PCH. h|Die Datei, mit `#include` der die ATL-Header Dateien vorkompiliert werden.|
+
+::: moniker-end
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt `Polygon`.
 
 1. Klicken Sie im Kontextmenü auf **Eigenschaften**.
 
-1. Klicken Sie auf **Linker**. Ändern der **pro UserRedirection** option **Ja**.
+1. Klicken Sie auf **Linker**. Ändern Sie die Option **pro Benutzer Umleitung** in **Ja**.
 
 1. Klicken Sie auf **OK**.
 
-Im nächsten Schritt fügen Sie ein Steuerelement zu Ihrem Projekt hinzu.
+Im nächsten Schritt fügen Sie dem Projekt ein-Steuerelement hinzu.
 
-[Schritt 2](../atl/adding-a-control-atl-tutorial-part-2.md)
+[In Schritt 2](../atl/adding-a-control-atl-tutorial-part-2.md)
 
 ## <a name="see-also"></a>Siehe auch
 

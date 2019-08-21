@@ -2,17 +2,17 @@
 title: 'Exemplarische Vorgehensweise: Erstellen und Verwenden Ihrer eigenen Dynamic Link Library (C++)'
 description: Verwenden Sie C++, um in Visual Studio eine Dynamic Link Library (DLL) für Windows zu erstellen.
 ms.custom: conceptual
-ms.date: 07/17/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 8ca89471177ba2d1fa98bfaf51b86ed15dcd6d2f
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 9dffec9d7d974ceb3bf1ca4546a303fab47ee0be
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299826"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630685"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Exemplarische Vorgehensweise: Erstellen und Verwenden Ihrer eigenen Dynamic Link Library (C++)
 
@@ -36,7 +36,7 @@ In dieser exemplarischen Vorgehensweise werden zwei Visual Studio-Projektmappen 
 
 In dieser exemplarischen Vorgehensweise werden einige gängige Situationen nicht behandelt. Die Verwendung von C++-DLLs durch andere Programmiersprachen wird nicht gezeigt. Die Erstellung einer DLL nur für Ressourcen wird nicht erläutert. Auch die Verwendung von expliziten Verknüpfungen zum Laden von DLLs zur Laufzeit statt zur Ladezeit wird nicht behandelt. Wir sind sicher, dass Sie Visual Studio verwenden können, um all diese Aufgaben auszuführen. Links mit weiteren Informationen zu DLLs finden Sie im Artikel [Erstellen von C/C++-DLLs in Visual Studio](dlls-in-visual-cpp.md). Weitere Informationen zu impliziten und expliziten Verknüpfungen finden Sie unter [Bestimmen der geeigneten Verknüpfungsmethode](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Informationen zum Erstellen von C++-DLLs zur Verwendung mit Programmiersprachen, die Verknüpfungskonventionen der Sprache C verwenden, finden Sie unter [Exportieren von C++-Funktionen zur Verwendung in ausführbaren C-Dateien](exporting-cpp-functions-for-use-in-c-language-executables.md). Informationen zum Erstellen von DLLs zur Verwendung mit .NET-Sprachen finden Sie unter [Aufrufen von DLL-Funktionen aus Visual Basic-Anwendungen heraus](calling-dll-functions-from-visual-basic-applications.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Ein Computer, auf dem Microsoft Windows 7 oder eine höhere Version ausgeführt wird. Für ein optimales Entwicklungserlebnis empfehlen wir Windows 10.
 
@@ -210,7 +210,7 @@ Wenn das **MATHLIBRARY&#95;EXPORTS**-Makro definiert ist, legt das **MATHLIBRARY
 
    ```cpp
    // MathLibrary.cpp : Defines the exported functions for the DLL.
-   #include "stdafx.h" // use pch.h in Visual Studio 2019
+   #include "pch.h" // use stdafx.h in Visual Studio 2017 and earlier
    #include <utility>
    #include <limits.h>
    #include "MathLibrary.h"

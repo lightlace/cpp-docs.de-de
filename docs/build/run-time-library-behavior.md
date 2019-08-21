@@ -1,6 +1,6 @@
 ---
 title: DLLs und Verhalten C++ der visuellen Lauf Zeit Bibliothek
-ms.date: 05/06/2019
+ms.date: 08/19/2019
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: d44f3bf7a8b06f567b1af221e17085d589e56aca
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 572a0ba70c1ba2d46d2d9fd6d8ac543a77bbbc01
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492618"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630370"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>DLLs und Verhalten C++ der visuellen Lauf Zeit Bibliothek
 
@@ -125,7 +125,7 @@ Da MFC `CWinApp`-Erweiterungs-DLLs über kein von abgeleitetes Objekt verfügen 
 Der Assistent stellt den folgenden Code für MFC-Erweiterungs-DLLs bereit. Im Code `PROJNAME` ist ein Platzhalter für den Namen des Projekts.
 
 ```cpp
-#include "stdafx.h"
+#include "pch.h" // For Visual Studio 2017 and earlier, use "stdafx.h"
 #include <afxdllx.h>
 
 #ifdef _DEBUG
@@ -174,7 +174,7 @@ Erweiterungs-DLLs können das Multithreading behandeln, indem Sie `DLL_THREAD_AT
 Beachten Sie, dass die Header Datei Afxdllx. h spezielle Definitionen für Strukturen enthält, die in MFC-Erweiterungs-DLLs verwendet `AFX_EXTENSION_MODULE` werden `CDynLinkLibrary`, z. b. die Definition für und. Sie sollten diese Header Datei in der MFC-Erweiterungs-DLL einschließen.
 
 > [!NOTE]
->  Es ist wichtig, dass Sie keines der `_AFX_NO_XXX` Makros in stdafx. h definieren und nicht definieren. Diese Makros sind nur zum Zweck der Überprüfung vorhanden, ob eine bestimmte Zielplattform diese Funktion unterstützt. Sie können Ihr Programm schreiben, um diese Makros zu überprüfen ( `#ifndef _AFX_NO_OLE_SUPPORT`z. b.), aber Ihr Programm sollte diese Makros nie definieren bzw. nicht definieren.
+>  Es ist wichtig, dass Sie keines der `_AFX_NO_XXX` Makros in " *PCH. h* " ("*stdafx. h* " in Visual Studio 2017 und früher) definieren und nicht definieren. Diese Makros sind nur zum Zweck der Überprüfung vorhanden, ob eine bestimmte Zielplattform diese Funktion unterstützt. Sie können Ihr Programm schreiben, um diese Makros zu überprüfen ( `#ifndef _AFX_NO_OLE_SUPPORT`z. b.), aber Ihr Programm sollte diese Makros nie definieren bzw. nicht definieren.
 
 Eine Beispiel Initialisierungsfunktion, die Multithreading behandelt, ist in die [Verwendung von lokalem Thread Speicher in einer Dynamic Link Library](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library) im Windows SDK eingeschlossen. Beachten Sie, dass das Beispiel eine Einstiegspunkt Funktion `LibMain`mit dem Namen enthält. Sie sollten diese Funktion `DllMain` jedoch benennen, damit Sie mit den MFC-und C-Laufzeitbibliotheken funktioniert.
 

@@ -1,39 +1,39 @@
 ---
 title: Compilerfehler C2065
-ms.date: 09/01/2017
+ms.date: 08/19/2019
 f1_keywords:
 - C2065
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: ff418fa332adffa1885ec9ca6d7626000e753609
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 40d1d0744588c4b7911e84f5e57a6b40372b48cf
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447359"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630131"
 ---
 # <a name="compiler-error-c2065"></a>Compilerfehler C2065
 
-> "*Bezeichner*": nichtdeklarierter Bezeichner
+> "*Bezeichner*": nicht deklarierter Bezeichner
 
-Der Compiler die Deklaration für einen Bezeichner nicht gefunden werden. Es gibt viele mögliche Ursachen für diesen Fehler. Die häufigsten Ursachen für C2065 generiert werden, dass der Bezeichner wurde nicht deklariert wurde, der Bezeichner ist falsch geschrieben, der Header, in dem der Bezeichner deklariert wird, nicht in der Datei enthalten ist oder der Bezeichner einen Scope-Qualifizierer, z. B. fehlt `cout` anstelle von `std::cout`. Weitere Informationen zu den Deklarationen in C++, finden Sie unter [Deklarationen und Definitionen (C++)](../../cpp/declarations-and-definitions-cpp.md).
+Der Compiler kann die Deklaration für einen Bezeichner nicht finden. Es gibt viele mögliche Ursachen für diesen Fehler. Die häufigsten Gründe für C2065 sind, dass der Bezeichner nicht deklariert wurde, der Bezeichner falsch geschrieben wurde, der Header, in dem der Bezeichner deklariert ist, nicht in der Datei enthalten ist, oder der Bezeichner fehlt ein `cout` Bereichs Qualifizierer, z. b. anstelle von. `std::cout`. Weitere Informationen zu Deklarationen in C++finden Sie unter [Deklarationen undC++Definitionen ()](../../cpp/declarations-and-definitions-cpp.md).
 
-Hier sind einige häufig auftretende Probleme und Lösungen genauer an.
+Im folgenden finden Sie einige häufige Probleme und Lösungen ausführlicher.
 
-## <a name="the-identifier-is-undeclared"></a>Der Bezeichner wurde nicht deklariert
+## <a name="the-identifier-is-undeclared"></a>Der Bezeichner ist nicht deklariert.
 
-Ist der Bezeichner einer Variablen oder einem Funktionsnamen, müssen Sie sie deklarieren, bevor sie verwendet werden kann. Eine Funktionsdeklaration muss auch die Typen ihrer Parameter enthalten, bevor die Funktion verwendet werden kann. Wenn die Variable deklariert wird mit `auto`, der Compiler muss in der Lage, den Typ aus ihrem Initialisierer abzuleiten.
+Wenn der Bezeichner eine Variable oder ein Funktionsname ist, müssen Sie ihn vor der Verwendung deklarieren. Eine Funktionsdeklaration muss auch die Typen ihrer Parameter enthalten, bevor die Funktion verwendet werden kann. Wenn die Variable mit `auto`deklariert wird, muss der Compiler in der Lage sein, den Typ aus dem Initialisierer abzuleiten.
 
-Wenn der Bezeichner ein Mitglied aus einer Klasse oder Struktur ist oder in einem Namespace deklariert, müssen sie anhand des Namens der Klasse oder Struktur oder dem Namespacenamen, gekennzeichnet werden, wenn außerhalb des Bereichs-Struktur, Klasse oder Namespace verwendet. Auch der Namespace muss eingebunden werden durch eine `using` wie z. B. die Richtlinie `using namespace std;`, oder der Namen des Members muss eingebunden werden durch eine `using` Deklaration, wie z. B. `using std::string;`. Andernfalls gilt der nicht qualifizierte Name einen nicht deklarierten Bezeichner im aktuellen Bereich sein.
+Wenn der Bezeichner ein Member einer Klasse oder Struktur ist oder in einem Namespace deklariert ist, muss er durch den Klassen-oder Struktur Namen oder den Namespace Namen qualifiziert werden, wenn er außerhalb der Struktur-, Klassen-oder Namespace-Gültigkeitsbereich verwendet wird. Alternativ `using` muss der Namespace durch eine-Direktive `using namespace std;`, z `using std::string;`. b., eingefügt werden, oder der Elementname muss durch eine `using` -Deklaration, z. b., in den Gültigkeitsbereich eingefügt werden. Andernfalls wird der nicht qualifizierte Name als nicht deklarierter Bezeichner im aktuellen Bereich betrachtet.
 
-Wenn der Bezeichner das Tag für einen benutzerdefinierten Typ, z. B. eine `class` oder `struct`, der Typ des Tags muss deklariert werden, bevor sie verwendet werden kann. Z. B. die Deklaration `struct SomeStruct { /*...*/ };` muss vorhanden sein, bevor Sie eine Variable deklarieren können `SomeStruct myStruct;` in Ihrem Code.
+Wenn der Bezeichner das Tag für einen benutzerdefinierten Typ ist (z `class` . b. oder `struct`), muss der Typ des Tags deklariert werden, bevor er verwendet werden kann. Beispielsweise muss die Deklaration `struct SomeStruct { /*...*/ };` vorhanden sein, bevor Sie eine Variable `SomeStruct myStruct;` im Code deklarieren können.
 
-Wenn der Bezeichner ein Typalias ist, muss der Typ deklariert werden, mithilfe einer `using` Deklaration oder `typedef` , bevor sie verwendet werden kann. Beispielsweise müssen Sie deklarieren `using my_flags = std::ios_base::fmtflags;` vor der Verwendung `my_flags` als ein Typalias für `std::ios_base::fmtflags`.
+Wenn der Bezeichner ein Typalias ist, muss der Typ mit einer `using` -Deklaration oder `typedef` vor der Verwendung deklariert werden. Beispielsweise müssen Sie deklarieren `using my_flags = std::ios_base::fmtflags;` , bevor Sie als `my_flags` Typalias für `std::ios_base::fmtflags`verwenden können.
 
-## <a name="example-misspelled-identifier"></a>Beispiel: falsch geschriebenes Bezeichner
+## <a name="example-misspelled-identifier"></a>Beispiel: falsch geschriebener Bezeichner
 
-Dieser Fehler tritt häufig auf, wenn der Bezeichnername falsch geschrieben ist oder der Bezeichner wird, die falschen Groß- und Kleinschreibung der Buchstaben verwendet. Der Name in der Deklaration muss genau mit dem Namen entsprechen, die, den Sie verwenden.
+Dieser Fehler tritt häufig auf, wenn der Bezeichnername falsch geschrieben wurde, oder der Bezeichner falsche Groß-und Kleinbuchstaben verwendet. Der Name in der Deklaration muss exakt mit dem von Ihnen verwendeten Namen übereinstimmen.
 
 ```cpp
 // C2065_spell.cpp
@@ -49,11 +49,11 @@ int main() {
 }
 ```
 
-## <a name="example-use-an-unscoped-identifier"></a>Beispiel: Verwenden Sie einen ohne bereichseinschränkung Bezeichner
+## <a name="example-use-an-unscoped-identifier"></a>Beispiel: Verwenden eines nicht Bereichs bezogenen Bezeichners
 
-Dieser Fehler kann auftreten, wenn Ihre ID nicht ordnungsgemäß festgelegt ist. Wenn C2065 generiert, dort bei der Verwendung `cout`, dies ist die Ursache. Beim C++-Standardbibliothek-Funktionen und Operatoren werden nicht vollqualifiziert durch den Namespace, oder Sie haben nicht geschaltet der `std` Namespace in den aktuellen Bereich mithilfe einer `using` -Anweisung vom Compiler nicht gefunden werden. Um dieses Problem zu beheben, müssen Sie vollständig qualifizierte Bezeichnernamen, oder geben Sie den Namespace mit dem `using` Richtlinie.
+Dieser Fehler kann auftreten, wenn der Bezeichner nicht ordnungsgemäß Bereichs bezogen ist. Wenn C2065 bei Verwendung `cout`von angezeigt wird, ist dies die Ursache. Wenn C++ die Funktionen und Operatoren der Standard Bibliothek nicht vollständig durch den Namespace qualifiziert sind oder Sie `std` den Namespace nicht mit einer `using` -Direktive in den aktuellen Gültigkeitsbereich gebracht haben, kann der Compiler diese nicht finden. Um dieses Problem zu beheben, müssen Sie entweder die Bezeichnernamen vollständig qualifizieren oder den Namespace mit `using` der-Direktive angeben.
 
-In diesem Beispiel wird nicht kompiliert, da `cout` und `endl` werden definiert, der `std` Namespace:
+Dieses Beispiel kann nicht kompiliert werden `cout` , `endl` da und im `std` -Namespace definiert sind:
 
 ```cpp
 // C2065_scope.cpp
@@ -69,23 +69,23 @@ int main() {
 }
 ```
 
-Bezeichner, die innerhalb des deklariert werden `class`, `struct`, oder `enum class` Typen müssen auch durch den Namen des von ihrem umschließenden Bereich qualifiziert werden, bei der Verwendung außerhalb dieses Bereichs.
+Bezeichner, die in `class`-, `struct`-oder `enum class` -Typen deklariert sind, müssen auch durch den Namen Ihres einschließenden Bereichs qualifiziert werden, wenn Sie Sie außerhalb dieses Bereichs verwenden.
 
-## <a name="example-precompiled-header-isnt-first"></a>Beispiel: vorkompilierter Header nicht erste
+## <a name="example-precompiled-header-isnt-first"></a>Beispiel: der vorkompilierte Header ist nicht der erste.
 
-Dieser Fehler kann auftreten, wenn Sie Präprozessordirektiven, z. B. put #include, #define oder #pragma, bevor die #include-Anweisung der vorkompilierten Headerdatei. Wenn Ihre Quelldatei eine vorkompilierte Headerdatei verwendet (d. h., wenn sie mithilfe von kompiliert wird die **"/ Yu"** -Compileroption), werden alle Präprozessordirektiven, bevor Sie die vorkompilierte Headerdatei ignoriert werden.
+Dieser Fehler kann auftreten, wenn Sie vor dem #Include einer vorkompilierten Header Datei eine Präprozessordirektive, z. b. #include, #define oder #pragma, einfügen. Wenn die Quelldatei eine vorkompilierte Header Datei verwendet (d. h., wenn Sie mit der **/Yu** -Compileroption kompiliert wird), werden alle Präprozessordirektiven vor der vorkompilierten Header Datei ignoriert.
 
-In diesem Beispiel wird nicht kompiliert, da `cout` und `endl` werden definiert, der \<Iostream >-Header, der ignoriert wird, da es, bevor Sie die vorkompilierte Headerdatei enthalten ist. In diesem Beispiel erstellen, erstellen Sie alle drei Dateien, und klicken Sie dann "stdafx.cpp" zu kompilieren und dann C2065_pch.cpp zu kompilieren.
+Dieses Beispiel kann nicht kompiliert werden `cout` , `endl` da und im \<iostream->-Header definiert sind, der ignoriert wird, da es vor der vorkompilierten Header Datei enthalten ist. Um dieses Beispiel zu erstellen, erstellen Sie alle drei Dateien, kompilieren Sie "stdafx. cpp", und kompilieren Sie dann C2065_pch. cpp.
 
 ```cpp
-// stdafx.h
+// pch.h (stdafx.h in Visual Studio 2017 and earlier)
 #include <stdio.h>
 ```
 
 ```cpp
-// stdafx.cpp
+// pch.cpp (stdafx.cpp in Visual Studio 2017 and earlier)
 // Compile by using: cl /EHsc /W4 /c /Ycstdafx.h stdafx.cpp
-#include <stdafx.h>
+#include "pch.h"
 ```
 
 ```cpp
@@ -101,11 +101,11 @@ int main() {
 }
 ```
 
-Um dieses Problem zu beheben, fügen die #include-Anweisung der \<Iostream > in der vorkompilierten Headerdatei, oder verschieben Sie ihn nach dem vorkompilierten Headerdatei in der Quelldatei enthalten ist.
+Um dieses Problem zu beheben, fügen Sie die \<#include von iostream-> der vorkompilierten Header Datei hinzu, oder verschieben Sie Sie, nachdem die vorkompilierte Header Datei in die Quelldatei eingefügt wurde.
 
-## <a name="example-missing-header-file"></a>Beispiel: fehlende Headerdatei.
+## <a name="example-missing-header-file"></a>Beispiel: fehlende Header Datei
 
-Sie haben nicht die Header-Datei enthalten, die den Bezeichner deklariert. Stellen Sie sicher, dass die Datei, die die Deklaration für den Bezeichner enthält in jeder Quelldatei enthalten ist, der verwendet wird.
+Sie haben die Header Datei, die den Bezeichner deklariert, nicht eingeschlossen. Stellen Sie sicher, dass die Datei, die die Deklaration für den Bezeichner enthält, in jeder Quelldatei enthalten ist, die Sie verwendet.
 
 ```cpp
 // C2065_header.cpp
@@ -119,7 +119,7 @@ int main() {
 }
 ```
 
-Eine weitere mögliche Ursache ist, wenn Sie eine Initialisiererliste ohne Verwenden der \<Initializer_list > Header.
+Eine weitere mögliche Ursache ist, wenn Sie eine Initialisiererliste verwenden \<, ohne den initializer_list-> Header einzuschließen.
 
 ```cpp
 // C2065_initializer.cpp
@@ -134,11 +134,11 @@ int main() {
 }
 ```
 
-Dieser Fehler in den Quelldateien für Windows Desktop-app möglicherweise angezeigt werden, wenn Sie definieren `VC_EXTRALEAN`, `WIN32_LEAN_AND_MEAN`, oder `WIN32_EXTRA_LEAN`. Diesen Präprozessormakros ausschließen einige Headerdateien aus windows.h und Afxv\_kompiliert w32.h, zu beschleunigen. Suchen Sie in windows.h und afxv_w32.h auf eine aktuelle Beschreibung der ausgeschlossenen.
+Dieser Fehler kann in Windows-Desktop-App-Quelldateien angezeigt werden `VC_EXTRALEAN`, `WIN32_LEAN_AND_MEAN`Wenn Sie `WIN32_EXTRA_LEAN`, oder definieren. Diese Präprozessormakros schließen einige Header Dateien aus Windows. h und afxv\_W32. h aus, um die Kompilierungen zu beschleunigen. Suchen Sie in Windows. h und afxv_w32. h nach einer aktuellen Beschreibung der ausgeschlossenen Elemente.
 
-## <a name="example-missing-closing-quote"></a>Beispiel: Fehlendes schließendes Anführungszeichen
+## <a name="example-missing-closing-quote"></a>Beispiel: Fehlendes Schließ Endes Anführungszeichen
 
-Dieser Fehler kann auftreten, wenn Sie ein schließendes Anführungszeichen hinter einer Zeichenfolgenkonstante fehlen. Dies ist eine einfache Möglichkeit, die den Compiler verwechselt werden. Beachten Sie, dass schließendes Anführungszeichen fehlen einige Zeilen vor den gemeldeten Fehler Speicherort sein kann.
+Dieser Fehler kann auftreten, wenn ein Schließ Endes Anführungszeichen nach einer Zeichen folgen Konstante fehlt. Dies ist eine einfache Möglichkeit, um den Compiler zu verwechseln. Beachten Sie, dass das fehlende schließende Anführungszeichen möglicherweise mehrere Zeilen vor dem gemeldeten Fehler Speicherort ist.
 
 ```cpp
 // C2065_quote.cpp
@@ -153,9 +153,9 @@ int main() {
 }
 ```
 
-## <a name="example-use-iterator-outside-for-loop-scope"></a>Beispiel: Verwenden der Iterator außerhalb for-Schleifenbereich
+## <a name="example-use-iterator-outside-for-loop-scope"></a>Beispiel: Iterator außerhalb eines Schleifen Bereichs verwenden
 
-Dieser Fehler kann auftreten, wenn Sie eine Iteratorvariable in deklarieren eine `for` Schleife, und anschließend versuchen, diese Iteratorvariable außerhalb des Bereichs der Verwendung der `for` Schleife. Der Compiler kann die [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) -Compileroption in der Standardeinstellung. Finden Sie unter [Unterstützung für Iteratordebugging](../../standard-library/debug-iterator-support.md) für Weitere Informationen.
+Dieser Fehler kann auftreten, wenn Sie eine Iteratorvariable in einer `for` Schleife deklarieren und dann versuchen, diese Iteratorvariable außerhalb des Gültigkeits Bereichs `for` der Schleife zu verwenden. Der Compiler aktiviert standardmäßig die [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) -Compileroption. Weitere Informationen finden Sie [unter Debug Iterator Support](../../standard-library/debug-iterator-support.md) .
 
 ```cpp
 // C2065_iter.cpp
@@ -179,11 +179,11 @@ int main() {
 }
 ```
 
-## <a name="example-preprocessor-removed-declaration"></a>Beispiel: Präprozessor entfernt-Deklaration
+## <a name="example-preprocessor-removed-declaration"></a>Beispiel: Deklaration mit präprozessorentfernung
 
-Dieser Fehler kann auftreten, wenn Sie verweisen auf eine Funktion oder Variable, die bedingt kompiliertem Code wird, die nicht für die aktuelle Konfiguration kompiliert wird. Dies kann auch auftreten, wenn Sie eine Funktion in einer Headerdatei aufrufen, die derzeit in der aktuellen Buildumgebung nicht unterstützt wird. Wenn bestimmte Variablen oder Funktionen nur verfügbar sind, wenn ein bestimmtes Präprozessormakro definiert ist, stellen Sie sicher, dass der Code, der diese Funktionen aufgerufen nur kompiliert werden kann, wenn das gleiche Präprozessor-Makro definiert ist. Dieses Problem ist einfach zu erkennen, in der IDE, da die Deklaration für die Funktion ausgegraut ist, wenn die erforderlichen Präprozessormakros für die aktuelle Buildkonfiguration nicht definiert sind.
+Dieser Fehler kann auftreten, wenn Sie auf eine Funktion oder Variable verweisen, die sich in bedingt kompiliertem Code befindet und nicht für die aktuelle Konfiguration kompiliert ist. Dies kann auch vorkommen, wenn Sie eine Funktion in einer Header Datei aufzurufen, die in der Buildumgebung derzeit nicht unterstützt wird. Wenn bestimmte Variablen oder Funktionen nur verfügbar sind, wenn ein bestimmtes Präprozessormakro definiert ist, stellen Sie sicher, dass der Code, der diese Funktionen aufruft, nur kompiliert werden kann, wenn das gleiche Präprozessormakro definiert ist. Dieses Problem lässt sich in der IDE leicht erkennen, da die Deklaration der-Funktion abgeblendet ist, wenn die erforderlichen Präprozessormakros nicht für die aktuelle Buildkonfiguration definiert sind.
 
-Dies ist ein Beispiel für Code, der funktioniert, wenn Sie im Debugmodus zu erstellen, aber nicht zur Einzelhandelsanalyse:
+Dies ist ein Beispiel für Code, der funktioniert, wenn Sie in Debug, aber nicht im Einzelhandel erstellen:
 
 ```cpp
 // C2065_defined.cpp
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Beispiel: C++ / CLI-Typ Abzug Fehler
+## <a name="example-ccli-type-deduction-failure"></a>Beispiel: C++Fehler bei der/CLI-Typableitung
 
-Dieser Fehler kann auftreten, wenn eine generische Funktion aufrufen, wenn das geplante Typargument nicht von den verwendeten Parametern abgeleitet werden kann. Weitere Informationen finden Sie unter [generische Funktionen (C++ / CLI)](../../extensions/generic-functions-cpp-cli.md).
+Dieser Fehler kann auftreten, wenn eine generische Funktion aufgerufen wird, wenn das beabsichtigte Typargument nicht aus den verwendeten Parametern abgeleitet werden kann. Weitere Informationen finden Sie unter [generische Funktionen (C++/CLI)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
@@ -220,9 +220,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>Beispiel: C++ / CLI Zuordnen von Parametern
+## <a name="example-ccli-attribute-parameters"></a>Beispiel: C++/CLI-Attribut Parameter
 
-Dieser Fehler kann außerdem infolge einer konformitätsverbesserung für Compiler, die für Visual Studio 2005 durchgeführt wurde, generiert werden: Überprüfen der Parameter für Visual C++ Attribute.
+Dieser Fehler kann auch infolge einer compilerübereinstimmungs-Arbeit generiert werden, die für Visual Studio 2005 ausgeführt wurde: Parameter Überprüfung C++ für visuelle Attribute.
 
 ```cpp
 // C2065_attributes.cpp

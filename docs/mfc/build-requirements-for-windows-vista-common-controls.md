@@ -1,44 +1,40 @@
 ---
-title: Anforderungen für die Erstellung von Windows Vista-Standardsteuerelementen
-ms.date: 11/04/2016
+title: Buildanforderungen für allgemeine Windows-Steuerelemente
+ms.date: 08/19/2019
 helpviewer_keywords:
-- common controls (MFC), build requirements
-- common controls (MFC)
+- Common Controls (MFC), build requirements
+- Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: 1a2e79d91a41ea178eeb6f74ec7fa7b22588b277
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ea90f95ba8e704cba5b22c5e7338659f0c5f033
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386251"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630847"
 ---
-# <a name="build-requirements-for-windows-vista-common-controls"></a>Anforderungen für die Erstellung von Windows Vista-Standardsteuerelementen
+# <a name="build-requirements-for-windows-common-controls"></a>Buildanforderungen für allgemeine Windows-Steuerelemente
 
-Die Microsoft Foundation Class (MFC)-Bibliothek unterstützt die Windows-Standardsteuerelemente, Version 6.1. Die allgemeinen Steuerelemente sind in Windows Vista enthalten, und die Bibliothek ist in Visual Studio SDK enthalten. Die Bibliothek bietet neue Methoden, die Verbesserung vorhandener Klassen, und neue Klassen und Methoden, die Windows Vista-Standardsteuerelementen zu unterstützen. Wenn Sie Ihre Anwendung erstellen, sollten Sie die Kompilierung und die Migration Anforderungen befolgen, die in den folgenden Abschnitten beschrieben werden.
+Die MFC-Bibliothek (Microsoft Foundation Class) unterstützt [Allgemeine Windows](/windows/win32/controls/common-controls-intro)-Steuerelemente. Die allgemeinen Steuerelemente sind in Windows enthalten, und die Bibliothek ist in Visual Studio enthalten. Die MFC-Bibliothek stellt neue Methoden bereit, mit denen vorhandene Klassen erweitert werden, sowie weitere Klassen und Methoden, die allgemeine Windows-Steuerelemente unterstützen. Wenn Sie die Anwendung erstellen, sollten Sie die in den folgenden Abschnitten beschriebenen Kompilierungs-und Migrations Anforderungen befolgen.
 
-## <a name="compilation-requirements"></a>Kompilierungsanforderungen
+## <a name="compilation-requirements"></a>Kompilierungs Anforderungen
 
 ### <a name="supported-versions"></a>Unterstützte Versionen
 
-Einige neue Klassen und Methoden unterstützen nur Windows Vista und später zwar andere Methoden unterstützen auch ältere Betriebssysteme. Hinweis in der `Requirements` Abschnitt jedes Themas Methode gibt an, wenn die mindestens erforderliche Betriebssystem ist Windows Vista.
-
-Auch wenn Ihr Computer nicht mit Windows Vista ausgeführt wird, können Sie eine MFC-Anwendung erstellen, die unter Windows Vista ausgeführt werden, wenn Sie die Version 6.1 MFC-Headerdateien auf Ihrem Computer verfügen. Allerdings allgemeine Steuerelemente, die speziell für Windows Vista dienen nur auf dem System ausgeführt werden und werden von älteren Betriebssystemen ignoriert.
+MFC unterstützt alle Versionen der allgemeinen Steuerelemente. Informationen zu allgemeinen Windows-Steuerelement Versionen finden Sie unter [allgemeine Steuerelement Versionen](/windows/win32/controls/common-control-versions).
 
 ### <a name="supported-character-sets"></a>Unterstützte Zeichensätze
 
-Die neuen Windows-Standardsteuerelemente unterstützen nur die Unicode-Zeichensatz und nicht ANSI-Zeichensatz. Wenn Sie Ihre Anwendung in der Befehlszeile erstellen, verwenden Sie beide der folgenden Definition (/ D) Compileroptionen an Unicode als den zugrunde liegenden Zeichensatz:
+Die allgemeinen Windows-Steuerelemente unterstützen nur den Unicode-Zeichensatz und nicht den ANSI-Zeichensatz. Wenn Sie die Anwendung in der Befehlszeile erstellen, verwenden Sie die beiden folgenden define-Compileroptionen (/D), um Unicode als zugrunde liegenden Zeichensatz anzugeben:
 
 ```
 /D_UNICODE /DUNICODE
 ```
 
-Wenn Sie Ihre Anwendung in der integrierten Entwicklungsumgebung (IDE) von Visual Studio erstellen, geben Sie die **Unicode-Zeichensatz** Möglichkeit, die **Character Set,** -Eigenschaft in der **Allgemein**  Knoten der Projekteigenschaften.
+Wenn Sie die Anwendung in der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio erstellen, geben Sie die Option **Unicode-Zeichensatz** der Eigenschaft **Zeichensatz** im Knoten **Allgemein** der Projekteigenschaften an.
 
-Die ANSI-Version von mehreren MFC-Methoden sind veraltet, beginnend mit Windows-Standardsteuerelemente, Version 6.1. Weitere Informationen finden Sie unter [ANSI-APIs als veraltet markiert](../mfc/deprecated-ansi-apis.md).
+## <a name="migration-requirements"></a>Migrations Anforderungen
 
-## <a name="migration-requirements"></a>Migrationsanforderungen
-
-Wenn Sie Visual Studio-IDE verwenden, um eine MFC-Anwendung zu erstellen, die allgemeine Windows-Steuerelemente, Version 6.1 verwendet, wird die IDE automatisch eine entsprechende Manifest deklariert. Jedoch wenn Sie eine vorhandene MFC-Anwendung von einer früheren Version von Visual Studio migrieren und die neuen Standardsteuerelemente verwenden möchten, bietet die IDE automatisch Informationen zum Aktualisieren Ihrer Anwendung aus dem Assemblymanifest keine. Stattdessen müssen Sie manuell in den folgenden Quellcode einfügen Ihrer **"stdafx.h"** Datei:
+Wenn Sie die Visual Studio-IDE verwenden, um eine neue MFC-Anwendung zu erstellen, die allgemeine Windows-Steuerelemente verwendet, deklariert die IDE automatisch ein entsprechendes Manifest. Wenn Sie jedoch eine vorhandene MFC-Anwendung von Visual Studio 2005 oder früher migrieren und die allgemeinen Steuerelemente verwenden möchten, stellt die IDE nicht automatisch manifestressformationen bereit, um die Anwendung zu aktualisieren. Stattdessen müssen Sie den folgenden Quellcode manuell in die vorkompilierte Header Datei einfügen:
 
 ```
 #ifdef UNICODE

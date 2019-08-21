@@ -153,12 +153,12 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 518efdd74a90198818538c1548adb2b7ff37290c
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821120"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631539"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Compilerwarnungen C4800 bis C5999
 
@@ -266,7 +266,8 @@ In den Artikeln in diesem Abschnitt der Dokumentation wird eine Teilmenge der Wa
 |Compilerwarnung (Stufe 1) C4973|'*Symbol*': als veraltet markiert|
 |Compilerwarnung (Stufe 1) C4974|'*Symbol*': als veraltet markiert|
 |Compilerwarnung (Stufe 3) C4981|Warbird: die Funktion "*Funktion*" ist als "__forceinline" gekennzeichnet, da Sie eine Ausnahme Semantik enthält.|
-|Compilerwarnung (Stufe 3) C4985|Symbol Name ": Attribute sind in vorheriger Deklaration nicht vorhanden.|
+|[Compilerwarnung C4984](compiler-warning-c4984.md)|"if constexpr" ist eine c++ 17-Spracherweiterung|
+|Compilerwarnung (Stufe 3) C4985|"*symbol_name*": Attribute sind in vorheriger Deklaration nicht vorhanden.|
 |[Compilerwarnung C4986](compiler-warning-c4986.md)|'*Deklaration*': die Ausnahme Spezifikation stimmt nicht mit der vorherigen Deklaration.|
 |Compilerwarnung (Stufe 4) C4987|Es wurde eine nicht standardmäßige Erweiterung verwendet: 'throw (...)'|
 |Compilerwarnung (Stufe 4) C4988|'*Variable*': Variable wurde außerhalb des Klassen-/Funktionsbereichs deklariert.|

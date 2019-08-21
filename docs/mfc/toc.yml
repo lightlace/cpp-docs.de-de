@@ -11,22 +11,7 @@
         - name: Allgemeine MFC-Themen
           href: general-mfc-topics.md
         - name: Verwenden der MFC-Quelldateien
-          expanded: false
-          items:
-            - name: Verwenden der MFC-Quelldateien
-              href: using-the-mfc-source-files.md
-            - name: Ein Beispiel für die Kommentare
-              href: an-example-of-the-comments.md
-            - name: – Implementierungskommentar
-              href: decrement-implementation-comment.md
-            - name: – Konstruktorenkommentar
-              href: decrement-constructors-comment.md
-            - name: – Attributekommentar
-              href: decrement-attributes-comment.md
-            - name: – Vorgangskommentar
-              href: decrement-operations-comment.md
-            - name: – Kommentar zu überschreibbaren Elementen
-              href: decrement-overridables-comment.md
+          href: using-the-mfc-source-files.md
         - name: MFC-Bibliotheksversionen
           expanded: false
           items:

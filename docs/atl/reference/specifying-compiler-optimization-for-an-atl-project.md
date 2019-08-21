@@ -1,6 +1,6 @@
 ---
-title: Festlegen der Compileroptimierung für ein ATL-Projekt
-ms.date: 11/04/2016
+title: Angeben der Compileroptimierung für ein ATL-Projekt
+ms.date: 08/19/2019
 f1_keywords:
 - vc.appwiz.ATL.optimization
 - vc.appwiz.ATL.vtable
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-ms.openlocfilehash: 812245133b4b3b870c0c763eabcda0ec8d26e028
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: c3b00823cb33be952451c3cc9e370c99140acc3c
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221047"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630612"
 ---
-# <a name="specifying-compiler-optimization-for-an-atl-project"></a>Festlegen der Compileroptimierung für ein ATL-Projekt
+# <a name="specifying-compiler-optimization-for-an-atl-project"></a>Angeben der Compileroptimierung für ein ATL-Projekt
 
-In der Standardeinstellung die [ATL-Steuerelement-Assistent](../../atl/reference/atl-control-wizard.md) neue Klassen mit dem Makro ATL_NO_VTABLE wie folgt generiert:
+Standardmäßig generiert der [ATL-Steuer](../../atl/reference/atl-control-wizard.md) Element-Assistent neue Klassen mit dem ATL_NO_VTABLE-Makro wie folgt:
 
 ```
 class ATL_NO_VTABLE CProjName
@@ -27,7 +27,7 @@ class ATL_NO_VTABLE CProjName
 };
 ```
 
-ATL definiert _ATL_NO_VTABLE wie folgt:
+ATL definiert dann _ATL_NO_VTABLE wie folgt:
 
 ```
 #ifdef _ATL_DISABLE_NO_VTABLE
@@ -37,24 +37,24 @@ ATL definiert _ATL_NO_VTABLE wie folgt:
 #endif
 ```
 
-Wenn Sie keine _ATL_DISABLE_NO_VTABLE definieren, das ATL_NO_VTABLE-Makro erweitert wird, um `declspec(novtable)`. Mithilfe von `declspec(novtable)`in einer Klasse Deklaration wird verhindert, dass den Vtable-Zeiger im Klassenkonstruktor und Destruktor initialisiert wird. Wenn Sie Ihr Projekt erstellen, entfällt der Linker die Vtable und alle Funktionen, die auf denen die Vtable verweist.
+Wenn Sie _ATL_DISABLE_NO_VTABLE nicht definieren, wird das ATL_NO_VTABLE-Makro zu `declspec(novtable)`erweitert. Durch `declspec(novtable)`die Verwendung von in einer Klassen Deklaration wird verhindert, dass der vtable-Zeiger im Klassenkonstruktor und-Dekonstruktor initialisiert wird. Wenn Sie das Projekt erstellen, entfernt der Linker die Vtable und alle Funktionen, auf die die Vtable zeigt.
 
-Verwenden Sie ATL_NO_VTABLE, und folglich `declspec(novtable)`, nur mit Basisklassen, die nicht direkt erstellbar sind. Verwenden Sie nicht `declspec(novtable)` mit der am stärksten abgeleiteten Klasse in Ihrem Projekt, da diese Klasse (in der Regel [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md), oder [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) Initialisiert den Vtable-Zeiger für das Projekt an.
+Sie müssen ATL_NO_VTABLE und folglich `declspec(novtable)`nur mit Basisklassen verwenden, die nicht direkt erstellbar sind. Sie dürfen nicht mit `declspec(novtable)` der am stärksten abgeleiteten Klasse in Ihrem Projekt verwenden, da diese Klasse (in der Regel [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md)oder [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) den vtable-Zeiger für das Projekt initialisiert.
 
-Sie müssen nicht virtuelle Funktionen aufrufen, aus dem Konstruktor eines Objekts, das verwendet `declspec(novtable)`. Sie sollten diese Aufrufe zum Verschieben der [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) Methode.
+Sie dürfen keine virtuellen Funktionen aus dem Konstruktor eines Objekts, das verwendet `declspec(novtable)`, abrufen. Sie sollten diese Aufrufe in die [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) -Methode verschieben.
 
-Wenn Sie nicht sicher sind, ob Sie verwenden, sollten die `declspec(novtable)` Modifizierer verwenden, können Sie das Makro ATL_NO_VTABLE aus einer beliebigen Klassendefinition entfernen oder Sie können es global deaktivieren, indem Sie angeben
+Wenn Sie nicht sicher sind, ob Sie den `declspec(novtable)` -Modifizierer verwenden sollten, können Sie das ATL_NO_VTABLE-Makro aus einer beliebigen Klassendefinition entfernen, oder Sie können es durch Angeben von global deaktivieren.
 
 ```
 #define _ATL_DISABLE_NO_VTABLE
 ```
 
-in der Datei stdafx.h sind, bevor alle anderen ATL-Headerdateien enthalten.
+in " *PCH. h* " (*stdafx. h* in Visual Studio 2017 und früher), bevor alle anderen ATL-Header Dateien eingeschlossen werden.
 
 ## <a name="see-also"></a>Siehe auch
 
 [ATL-Projekt-Assistent](../../atl/reference/atl-project-wizard.md)<br/>
-[C++Projekttypen in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
+[C++-Projektvorlagen](../../build/reference/visual-cpp-project-types.md)<br/>
 [Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [novtable](../../cpp/novtable.md)<br/>
