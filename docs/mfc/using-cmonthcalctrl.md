@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - CMonthCalCtrl class [MFC], about CMonthCalCtrl class
 ms.assetid: 2be0e8c2-ed03-4853-aea1-4461eba18611
-ms.openlocfilehash: f97941bfd8d0a27f640757343cd360a1bec3050c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e21cba7062a21913c5be230d3488d963fb8b769b
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411824"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631685"
 ---
 # <a name="using-cmonthcalctrl"></a>Verwenden von CMonthCalCtrl
 
-Im Monatskalender-Steuerelement ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) eine Kalender-ähnlichen Benutzeroberfläche implementiert. Dadurch erhalten Benutzer mit einer sehr intuitiv und erkennbaren-Methode eingeben oder Auswählen eines Datums. Das Steuerelement bietet auch die Anwendung die Möglichkeit zum Abrufen, und legen Sie die Datumsinformationen in das Steuerelement mit vorhandenen Datentypen. Standardmäßig zeigt im Monatskalender-Steuerelement an den aktuellen Tag und Monat. Allerdings kann der Benutzer einen Bildlauf zu den vorherigen und nächsten Monaten, und wählen Sie einen bestimmten Monat bzw. Jahr.
+Das Month Calendar-Steuerelement ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implementiert eine Kalender ähnliche Benutzeroberfläche. Dadurch erhält der Benutzer eine sehr intuitive und erkennbare Methode zum eingeben oder Auswählen eines Datums. Das-Steuerelement stellt der Anwendung außerdem die Möglichkeit zum Abrufen und Festlegen der Datumsinformationen im-Steuerelement mithilfe vorhandener Datentypen zur Verfügung. Standardmäßig werden im Monatskalender-Steuerelement der aktuelle Tag und der aktuelle Monat angezeigt. Der Benutzer kann jedoch einen Bildlauf zum vorherigen und nächsten Monat durchführen und einen bestimmten Monat und/oder ein bestimmtes Jahr auswählen.
 
 > [!NOTE]
->  Verwenden der `CMonthCalCtrl` Klasse in Ihrem Projekt muss AFXDTCTL. In der Regel in STDAFX H. H.
+>  Wenn Sie die `CMonthCalCtrl` -Klasse in Ihrem Projekt verwenden möchten, müssen Sie afxdtctl einschließen. H, normalerweise in *stdafx. h*.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren?
 
 - [Erstellen des Monatskalender-Steuerelements](../mfc/creating-the-month-calendar-control.md)
 

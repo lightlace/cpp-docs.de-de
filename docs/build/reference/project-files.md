@@ -1,24 +1,38 @@
 ---
 title: Beispielprojektdatei
-ms.date: 10/09/2018
+ms.date: 08/19/2019
 helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0eb87c3f3ba8bd60f0944ad673d22f9b84e070a5
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217730"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630766"
 ---
 # <a name="project-files"></a>Projektdateien
 
-Ein C++ Projektdatei in Visual Studio ist eine XML-Datei, die die Erweiterung "vcxproj" und enthält Informationen, die erforderlich sind, zum Erstellen einer C++ Projekt. Beachten Sie, dass die Projektdatei verschiedene Projektdateien importiert, die die Erweiterung *.props* oder *.targets* haben. Diese Dateien enthalten zusätzliche Buildinformationen und können selbst auf andere *.props*- oder *.targets*-Dateien verweisen. Die Makros im Dateipfad (z. B. `$(VCTargetsPath)`) hängen von Ihrer Visual Studio-Installation ab. Weitere Informationen zu diesen Makros und *props* und *targets* finden Sie unter [VC++ Directories Property Page](vcpp-directories-property-page.md), [Festlegen von C++-Compiler und Build Eigenschaften in Visual Studio](../working-with-project-properties.md) und [gängige Makros für Buildbefehle und-Eigenschaften](common-macros-for-build-commands-and-properties.md).
+Eine C++ Projektdatei in Visual Studio ist eine XML-basierte Datei mit der Dateinamenerweiterung. vcxproj und enthält Informationen, die zum Erstellen eines C++ Projekts erforderlich sind. Beachten Sie, dass die Projektdatei verschiedene Projektdateien importiert, die über die Erweiterung ".-Eigenschaften" oder ". targets" verfügen. Diese Dateien enthalten zusätzliche Buildinformationen und können selbst auf andere ".-Eigenschaften" oder ". targets"-Dateien verweisen. Die Makros im Dateipfad (z. B. `$(VCTargetsPath)`) hängen von Ihrer Visual Studio-Installation ab. Weitere Informationen zu diesen Makros und ". Properties"-und Targets-Dateien finden Sie auf der [Eigenschaften Seite "VC + +-Verzeichnisse](vcpp-directories-property-page.md)", [ C++ Festlegen der Compiler-und Buildeigenschaften in Visual Studio](../working-with-project-properties.md) und allgemeiner [Makros für Buildbefehle und-Eigenschaften](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Beispiel
 
+::: moniker range=">=vs-2019"
+
+Die folgende vcxproj-Beispieldatei wurde erstellt, indem Sie im Dialogfeld **Neues Projekt** die Option **Windows-Desktop-Assistent** ausgewählt haben. Verwenden Sie entweder das Tool „msbuild.exe“ in der Befehlszeile oder den Befehl **Build** in der IDE. (Dieses Beispiel kann nicht verarbeitet werden, da die erforderlichen Quell- und Headerdateien nicht bereitgestellt werden.) Weitere Informationen über die XML-Elemente in einer Projektdatei finden Sie unter [Referenz zum Projektdateischema](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
 Die folgende VCXPROJ-Beispieldatei wurde erstellt, indem eine **Win32-Konsolenanwendung** im Dialogfeld **Neues Projekt** angegeben wurde. Verwenden Sie entweder das Tool „msbuild.exe“ in der Befehlszeile oder den Befehl **Build** in der IDE. (Dieses Beispiel kann nicht verarbeitet werden, da die erforderlichen Quell- und Headerdateien nicht bereitgestellt werden.) Weitere Informationen über die XML-Elemente in einer Projektdatei finden Sie unter [Referenz zum Projektdateischema](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+
+::: moniker-end
+
+
+>[!NOTE]
+> Ändern `pch.h` Sie für Projekte in Visual Studio 2017 und früher in `stdafx.h` und `pch.cpp` in `stdafx.cpp`.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,12 +116,12 @@ Die folgende VCXPROJ-Beispieldatei wurde erstellt, indem eine **Win32-Konsolenan
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SomeProjName.cpp" />
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>

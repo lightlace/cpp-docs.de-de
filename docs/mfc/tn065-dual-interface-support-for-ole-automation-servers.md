@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: afcbfd643d8b931e61b0f011b66482be5b2bcc82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1508b5219f7bb7fd2e9c9a56c42c30bb99686804
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510998"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630389"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Unterstützung für die duale Schnittstelle für OLE-Automatisierungsserver
 
@@ -267,7 +267,7 @@ Um die Buildeinstellungen eines Projekts so zu ändern, dass eine Header Datei m
 
 So fügen Sie dem Projekt die **UUID** -Definitionen aus der von MkTypLib generierten Header Datei hinzu:
 
-1. Fügen Sie die von MkTypLib generierte Header Datei in die Standard Header Datei stdafx ein. Micha.
+1. Fügen Sie die von MkTypLib generierte Header Datei in die Standard Header Datei " *stdafx. h*" ein.
 
 2. Erstellen Sie eine neue Datei, initiids. Cpp, und fügen Sie es dem Projekt hinzu. Fügen Sie in dieser Datei die MkTypLib-generierte Header Datei nach dem einschließen von OLE2 ein. H und Initguid. Micha
 

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: c249bc8138a3617cce3eae836751575b2626f4aa
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 4a2fabd9ab4f358d40b17e662fb64ab70d01c58e
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857309"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631662"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Exemplarische Vorgehensweise: Erstellen einer agentbasierten Anwendung
 
 In diesem Thema wird die Erstellung einer einfachen agentbasierten Anwendung beschrieben. In dieser exemplarischen Vorgehensweise können Sie einen Agent erstellen, der Daten asynchron aus einer Textdatei ausliest. Die Anwendung berechnet die Prüfsumme des Inhalts dieser Datei mithilfe des Adler-32-Prüfsummenalgorithmus.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Zum Durchführen dieser exemplarischen Vorgehensweise sollten Sie die folgenden Themen lesen:
 
@@ -34,59 +34,59 @@ Mit dieser exemplarischen Vorgehensweise wird die Durchführung der folgenden Au
 
 - [Erstellen der Konsolenanwendung](#createapplication)
 
-- [Erstellen der File_reader-Klasse](#createagentclass)
+- [Erstellen der file_reader-Klasse](#createagentclass)
 
-- [Verwenden der File_reader-Klasse in der Anwendung](#useagentclass)
+- [Verwenden der file_reader-Klasse in der Anwendung](#useagentclass)
 
-##  <a name="createapplication"></a> Erstellen der Konsolenanwendung
+##  <a name="createapplication"></a>Erstellen der Konsolenanwendung
 
-In diesem Abschnitt wird gezeigt, wie zum Erstellen einer C++ Konsolenanwendung, die die Header-Dateien verweist, die das Programm verwendet werden. Die ersten Schritte hängen davon ab, welche Version von Visual Studio Sie verwenden. Stellen Sie sicher, dass die Auswahl für die Version in der oberen linken Ecke dieser Seite richtig festgelegt ist.
+In diesem Abschnitt wird gezeigt, wie C++ eine Konsolenanwendung erstellt wird, die auf die vom Programm verwendeten Header Dateien verweist. Die ersten Schritte sind abhängig von der verwendeten Version von Visual Studio. Stellen Sie sicher, dass die Versions Auswahl in der linken oberen Ecke dieser Seite richtig festgelegt ist.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>Zum Erstellen einer C++ Konsolenanwendung in Visual Studio-2019
+### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>So erstellen Sie C++ eine Konsolenanwendung in Visual Studio 2019
 
-1. Wählen Sie im Hauptmenü **Datei** > **neu** > **Projekt** zum Öffnen der **Erstellen eines neuen Projekts** Dialogfeld Box.
+1. Klicken Sie im Hauptmenü auf **Datei** > **Neu** > **Projekt**, um das Dialogfeld **Neues Projekt erstellen** zu öffnen.
 
-1. Legen Sie am oberen Rand des Dialogfelds, **Sprache** zu **C++** legen **Plattform** zu **Windows**, und legen Sie **Projekttyp** zu **Konsole**. 
+1. Legen Sie oben im Dialogfeld die **Sprache** auf **C++** , die **Plattform** auf **Windows** und den **Projekttyp** auf **Konsole** fest. 
 
-1. Wählen Sie die gefilterte Liste der Projekttypen, **Konsolen-App** wählen Sie dann **Weiter**. Geben Sie in der nächsten Seite `BasicAgent` als Namen für das Projekt, und geben Sie bei Bedarf den Speicherort des Projekts.
+1. Wählen Sie aus der gefilterten Projekttypliste **Konsolen-App** aus, und klicken Sie auf **Weiter**. Geben Sie auf der nächsten Seite `BasicAgent` als Namen für das Projekt ein, und geben Sie den Speicherort des Projekts an, wenn gewünscht.
 
-1. Wählen Sie die **erstellen** klicken, um das Projekt zu erstellen.
+1. Klicken Sie auf die Schaltfläche **Erstellen**, um das Projekt zu erstellen.
 
-1. Mit der rechten Maustaste des Projektknoten im **Projektmappen-Explorer**, und wählen Sie **Eigenschaften**. Klicken Sie unter **Konfigurationseigenschaften** > **C /C++** > **vorkompilierte Header** > **vorkompiliert Header** wählen **erstellen**.
+1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Projekt Knoten, und wählen Sie **Eigenschaften**aus. Wählen Sie unter **Konfigurations Eigenschaften** >  > **C/C++** **vorkompilierte**Header vorkompilierte Header die Option erstellen aus. > 
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-create-a-c-console-application-in-visual-studio-2017-and-earlier"></a>Zum Erstellen einer C++ Konsolenanwendung in Visual Studio 2017 und früheren Versionen
+### <a name="to-create-a-c-console-application-in-visual-studio-2017-and-earlier"></a>So erstellen Sie C++ eine Konsolenanwendung in Visual Studio 2017 und früher
 
-1. Auf der **Datei** Menü klicken Sie auf **neu**, und klicken Sie dann auf **Projekt** zum Anzeigen der **neues Projekt** im Dialogfeld.
+1. Klicken Sie im Menü **Datei** auf **neu**, und klicken Sie dann auf **Projekt** , um das Dialogfeld **Neues Projekt** anzuzeigen.
 
-1. In der **neues Projekt** wählen Sie im Dialogfeld die **Visual C++** Knoten in der **Projekttypen** Bereich, und wählen Sie dann **Win32-Konsolenanwendung** in der **Vorlagen** Bereich. Geben Sie einen Namen für das Projekt, z. B. `BasicAgent`, und klicken Sie dann auf **OK** zum Anzeigen der **Win32-Anwendungs-Assistenten**.
+1. Wählen Sie im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** den Knoten  **C++ visuell** aus, und wählen Sie dann im Bereich **Vorlagen** die Option **Win32-Konsolenanwendung** aus. Geben Sie einen Namen für das Projekt ein, z `BasicAgent`. b., und klicken Sie dann auf **OK** , um den Assistenten für die **Win32-Konsolenanwendung**anzuzeigen.
 
-1. In der **Win32-Anwendungs-Assistenten** Dialogfeld klicken Sie auf **Fertig stellen**.
+1. Klicken Sie im Dialogfeld **Assistent für Win32-Konsolen Anwendungen** auf **Fertig**stellen.
 
 ::: moniker-end
 
-1. Fügen Sie den folgenden Code in "stdafx.h" (oder in "PCH.h", abhängig von Ihrer Version von Visual Studio).
+1. Fügen Sie in " *PCH. h* " (*stdafx. h* in Visual Studio 2017 und früher) den folgenden Code hinzu:
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
-   Die Headerdatei agents.h enthält die Funktionalität der [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md) Klasse.
+   Die Header Datei "Agents. h" enthält die Funktionalität der " [parallelcurrency:: Agent](../../parallel/concrt/reference/agent-class.md) "-Klasse.
 
-1. Überprüfen Sie, ob die Anwendung erfolgreich erstellt wurde, indem Sie sie erstellen und ausführen. Erstellen Sie die Anwendung, auf die **erstellen** im Menü klicken Sie auf **Projektmappe**. Wenn die Anwendung erfolgreich erstellt wurde, führen Sie die Anwendung, indem Sie auf **Debuggen starten** auf die **Debuggen** Menü.
+1. Überprüfen Sie, ob die Anwendung erfolgreich erstellt wurde, indem Sie sie erstellen und ausführen. Klicken Sie im Menü **Erstellen** auf Projekt Mappe **Erstellen**, um die Anwendung zu erstellen. Wenn die Anwendung erfolgreich erstellt wird, führen Sie die Anwendung aus, indem Sie im Menü **Debuggen** auf **Debugging starten** klicken.
 
 [[Nach oben](#top)]
 
-##  <a name="createagentclass"></a> Erstellen der File_reader-Klasse
+##  <a name="createagentclass"></a>Erstellen der file_reader-Klasse
 
 In diesem Abschnitt wird die Erstellung der `file_reader`-Klasse beschrieben. Die Runtime plant jeden Agent so, dass er Arbeiten im eigenen Kontext ausführt. Daher können Sie einen Agent erstellen, der Arbeiten synchron ausführt, aber asynchron mit anderen Komponenten interagiert. Die `file_reader`-Klasse liest Daten aus einer angegebenen Eingabedatei aus und sendet Daten aus dieser Datei an eine angegebene Zielkomponente.
 
-#### <a name="to-create-the-filereader-class"></a>So erstellen Sie die file_reader-Klasse
+#### <a name="to-create-the-file_reader-class"></a>So erstellen Sie die file_reader-Klasse
 
-1. Fügen Sie dem Projekt eine neue C++-Headerdatei hinzu. Dazu, mit der Maustaste der **Headerdateien** Knoten **Projektmappen-Explorer**, klicken Sie auf **hinzufügen**, und klicken Sie dann auf **neues Element**. In der **Vorlagen** wählen Sie im Bereich **Headerdatei (. h)**. In der **neues Element hinzufügen** (Dialogfeld), Typ `file_reader.h` in die **Namen** ein, und klicken Sie dann auf **hinzufügen**.
+1. Fügen Sie dem Projekt eine neue C++-Headerdatei hinzu. Klicken Sie hierzu in **Projektmappen-Explorer**mit der rechten Maustaste auf den Knoten **Header Dateien** , klicken Sie auf **Hinzufügen**, und klicken Sie dann auf **Neues Element**. Wählen Sie im Bereich **Vorlagen** die Option **Header Datei (. h)** aus. Geben`file_reader.h` Sie im Dialogfeld **Neues Element hinzufügen** im Feld **Name den Namen** ein, und klicken Sie dann auf **Hinzufügen**.
 
 1. Fügen Sie in der Datei file_reader.h den folgenden Code hinzu.
 
@@ -100,7 +100,7 @@ In diesem Abschnitt wird die Erstellung der `file_reader`-Klasse beschrieben. Di
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-   Der `_file_name`-Member ist der Name der Datei, die vom Agent ausgelesen wird. Die `_target` Member ist ein [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) Objekt, das der Agent den Inhalt der Datei, schreibt. Der `_error`-Member speichert alle Fehler, die während der Lebensdauer des Agents auftreten.
+   Der `_file_name`-Member ist der Name der Datei, die vom Agent ausgelesen wird. Der `_target` Member ist ein [parallelcurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) -Objekt, in das der Agent den Inhalt der Datei schreibt. Der `_error`-Member speichert alle Fehler, die während der Lebensdauer des Agents auftreten.
 
 1. Fügen Sie dem `file_reader`-Abschnitt der  `public`-Klasse den folgenden Code für die `file_reader`-Konstruktoren hinzu.
 
@@ -114,13 +114,13 @@ In diesem Abschnitt wird die Erstellung der `file_reader`-Klasse beschrieben. Di
 
    Die `get_error`-Methode ruft alle Fehler ab, die während der Lebensdauer des Agents auftreten.
 
-1. Implementieren der [Concurrency::agent::run](reference/agent-class.md#run) -Methode in der die `protected` -Abschnitt der Klasse.
+1. Implementieren Sie die Methode "parallelcurrency [:: Agent:: Run](reference/agent-class.md#run) " im `protected` -Abschnitt der-Klasse.
 
 [!code-cpp[concrt-basic-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_7.h)]
 
 Die `run`-Methode öffnet die Datei und liest Daten aus. Die `run`-Methode erfasst mithilfe der Ausnahmebehandlung alle Fehler, die während der Dateiverarbeitung auftreten.
 
-   Jedes Mal, diese Methode Daten aus der Datei liest, die es Ruft die [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) Funktion, um diese Daten an den Zielpuffer zu senden. Sie sendet die leere Zeichenfolge an den Zielpuffer, um so das Ende der Verarbeitung anzugeben.
+   Jedes Mal, wenn diese Methode Daten aus der Datei liest, ruft Sie die [parallelcurrency:: Asend](reference/concurrency-namespace-functions.md#asend) -Funktion auf, um diese Daten an den Ziel Puffer zu senden. Sie sendet die leere Zeichenfolge an den Zielpuffer, um so das Ende der Verarbeitung anzugeben.
 
 Im folgenden Beispiel wird der vollständige Inhalt der Datei file_reader.h dargestellt.
 
@@ -128,11 +128,11 @@ Im folgenden Beispiel wird der vollständige Inhalt der Datei file_reader.h darg
 
 [[Nach oben](#top)]
 
-##  <a name="useagentclass"></a> Verwenden der File_reader-Klasse in der Anwendung
+##  <a name="useagentclass"></a>Verwenden der file_reader-Klasse in der Anwendung
 
-In diesem Abschnitt wird beschrieben, wie mithilfe der `file_reader`-Klasse der Inhalt einer Textdatei gelesen wird. Darüber hinaus wird zum Erstellen einer [Concurrency:: Call](../../parallel/concrt/reference/call-class.md) Objekt, das diese Dateidaten empfängt und die Adler-32-Prüfsumme berechnet.
+In diesem Abschnitt wird beschrieben, wie mithilfe der `file_reader`-Klasse der Inhalt einer Textdatei gelesen wird. Außerdem wird gezeigt, wie ein [parallelcurrency:: Callcenter](../../parallel/concrt/reference/call-class.md) -Objekt erstellt wird, das diese Datei Daten empfängt und seine Adler-32-Prüfsumme berechnet.
 
-#### <a name="to-use-the-filereader-class-in-your-application"></a>So verwenden Sie die file_reader-Klasse in der Anwendung
+#### <a name="to-use-the-file_reader-class-in-your-application"></a>So verwenden Sie die file_reader-Klasse in der Anwendung
 
 1. Fügen Sie in der Datei BasicAgent.cpp die folgende `#include`-Anweisung hinzu.
 
@@ -142,7 +142,7 @@ In diesem Abschnitt wird beschrieben, wie mithilfe der `file_reader`-Klasse der 
 
 [!code-cpp[concrt-basic-agent#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_10.cpp)]
 
-1. In der `_tmain` funktioniert, erstellen Sie eine [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) -Objekt, das Ende der Verarbeitung signalisiert.
+1. Erstellen Sie `_tmain` in der-Funktion ein parallelcurrency [:: Event](../../parallel/concrt/reference/event-class.md) -Objekt, das das Ende der Verarbeitung signalisiert.
 
 [!code-cpp[concrt-basic-agent#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_11.cpp)]
 
@@ -196,11 +196,11 @@ Adler-32 sum is fefb0d75
 
 Um gleichzeitigen Zugriff auf Datenmember zu verhindern, wird empfohlen, Methoden hinzufügen, die Arbeiten am `protected`-Abschnitt oder am `private`-Abschnitt der Klasse durchführen. Fügen Sie dem `public`-Abschnitt der Klasse nur Methoden hinzu, die Nachrichten an den Agent senden oder vom Agent empfangen.
 
-Rufen Sie immer die [Concurrency:: Agent:: Fertig](reference/agent-class.md#done) Methode, um den Agent in den abgeschlossenen Zustand zu verschieben. Diese Methode wird in der Regel vor der Rückkehr von der `run`-Methode aufgerufen.
+Die Methode " [parallelcurrency:: Agent::d One](reference/agent-class.md#done) " wird immer aufgerufen, um den Agent in den Zustand "abgeschlossen" zu verschieben. Diese Methode wird in der Regel vor der Rückkehr von der `run`-Methode aufgerufen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Ein weiteres Beispiel einer Agent-basierten Anwendung finden Sie unter [Exemplarische Vorgehensweise: Verhindern von Deadlocks mit Join](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Ein weiteres Beispiel für eine agentbasierte Anwendung finden [Sie unter Exemplarische Vorgehensweise: Verwenden von Join zum verhindern](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)von Deadlocks.
 
 ## <a name="see-also"></a>Siehe auch
 

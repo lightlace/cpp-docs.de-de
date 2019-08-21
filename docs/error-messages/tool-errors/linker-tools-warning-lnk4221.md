@@ -1,23 +1,23 @@
 ---
 title: Linkertoolwarnung LNK4221
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - LNK4221
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: baea8643001c550aeb3cb35dc6fe414e4330c0c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 299c3ef76006b347d6770d45ca317ff0eb941ffa
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160379"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630804"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Linkertoolwarnung LNK4221
 
-Die Objektdatei definiert kein zuvor undefinierten öffentlichen Symbole, damit er von keinem Verknüpfungsvorgang nicht verwendet werden, die diese Bibliothek benutzt.
+Diese Objektdatei definiert keine zuvor nicht definierten öffentlichen Symbole und wird daher von keinem Link Vorgang verwendet, der diese Bibliothek verwendet.
 
-Erwägen Sie die folgenden zwei Codeausschnitten.
+Beachten Sie die folgenden zwei Code Ausschnitte.
 
 ```
 // a.cpp
@@ -33,10 +33,20 @@ int function()
 }
 ```
 
-Führen Sie zum Kompilieren Sie die Dateien, und erstellen zwei Objektdateien, **cl/c a.cpp b.cpp** an einer Eingabeaufforderung. Wenn Sie die Objektdateien mit verknüpfen **verknüpfen/lib-out: Test.lib a.obj b.obj**, erhalten Sie die LNK4221-Warnung. Wenn Sie die Objekte mit verknüpfen **verknüpfen/lib-out: Test.lib b.obj "a.obj"**, erhalten Sie eine Warnung nicht.
+Um die Dateien zu kompilieren und zwei Objektdateien zu erstellen, führen Sie **cl/c a. cpp b. cpp** an einer Eingabeaufforderung aus. Wenn Sie die Objektdateien durch Ausführen von **Link/lib/out: Test. lib a. obj b. obj**verknüpfen, wird die Linkertoolwarnung LNK4221-Warnung angezeigt. Wenn Sie die Objekte durch Ausführen von **Link/lib/out: Test. lib b. obj a. obj**verknüpfen, wird keine Warnung angezeigt.
 
-Im zweiten Szenario wird keine Warnung ausgegeben, da der Linker Weise eine hohe Last in First Out (LIFO) arbeitet. Im ersten Szenario b.obj wird verarbeitet, bevor "a.obj" und "a.obj" enthält keine neuen Symbole hinzufügen. Weist den Linker an, "a.obj" zuerst zu verarbeiten, können Sie die Warnung vermeiden.
+Im zweiten Szenario wird keine Warnung ausgegeben, da der Linker in der LIFO-Weise (Last-in-First-Out) arbeitet. Im ersten Szenario wird b. obj vor einer. obj verarbeitet, und a. obj hat keine neuen Symbole, die hinzugefügt werden können. Indem Sie den Linker dazu auffordern, a. obj zuerst zu verarbeiten, können Sie die Warnung vermeiden.
 
-Eine häufige Ursache für diesen Fehler ist beim Angeben von zwei Quelldateien enthalten der Option ["/ Yc" (Erstellen vorkompilierter Headerdatei)](../../build/reference/yc-create-precompiled-header-file.md) mit dem gleichen Headerdateinamen angegeben, der **vorkompilierter Header** Feld. Eine häufige Ursache für dieses Problem befasst sich mit "stdafx.h", da standardmäßig "stdafx.cpp", "stdafx.h" enthält, und neue Symbole werden nicht hinzugefügt. Wenn einer anderen Quelldatei "stdafx.h" mit enthält **"/ Yc"** und die zugehörigen OBJ-Datei wird verarbeitet, bevor "stdafx.obj" verwendet, löst der Linker LNK4221.
+::: moniker range=">=vs-2019"
 
-Eine Möglichkeit zum Beheben dieses Problems besteht darin sicherzustellen, dass für jeden vorkompilierten Header, besteht nur eine Quelldatei, die sie mit enthält **"/ Yc"**. Alle anderen Quelldateien müssen vorkompilierte Header verwenden. Weitere Informationen dazu, wie Sie diese Einstellung zu ändern, finden Sie unter [/Yu (vorkompilierte Headerdatei verwenden)](../../build/reference/yu-use-precompiled-header-file.md).
+Eine häufige Ursache für diesen Fehler ist, dass zwei Quelldateien die Option [/Yc (Vorkompilierte Header Datei erstellen)](../../build/reference/yc-create-precompiled-header-file.md) mit dem gleichen Header Dateinamen angeben, der im **vorkompilierten Header** Feld angegeben ist. Eine häufige Ursache für dieses Problem ist " *PCH. h* ", da " *PCH. cpp* " standardmäßig " *PCH. h* " enthält und keine neuen Symbole hinzufügt. Wenn eine andere Quelldatei " *PCH. h* " mit **/Yc** enthält und die zugehörige obj-Datei vor "PCH. obj" verarbeitet wird, löst der Linker Linkertoolwarnung LNK4221 aus.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Eine häufige Ursache für diesen Fehler ist, dass zwei Quelldateien die Option [/Yc (Vorkompilierte Header Datei erstellen)](../../build/reference/yc-create-precompiled-header-file.md) mit dem gleichen Header Dateinamen angeben, der im **vorkompilierten Header** Feld angegeben ist. Eine häufige Ursache für dieses Problem ist " *stdafx. h* ", da " *stdafx. cpp* " standardmäßig " *stdafx. h* " enthält und keine neuen Symbole hinzufügt. Wenn eine andere Quelldatei *stdafx. h* mit **/Yc** enthält und die zugehörige obj-Datei vor stdafx. obj verarbeitet wird, löst der Linker Linkertoolwarnung LNK4221 aus.
+
+::: moniker-end
+
+Eine Möglichkeit, dieses Problem zu beheben, besteht darin sicherzustellen, dass für jeden vorkompilierten Header nur eine Quelldatei mit **/Yc**enthalten ist. Für alle anderen Quelldateien müssen vorkompilierte Header verwendet werden. Weitere Informationen zum Ändern dieser Einstellung finden Sie unter [/Yu (Vorkompilierte Header Datei verwenden)](../../build/reference/yu-use-precompiled-header-file.md).

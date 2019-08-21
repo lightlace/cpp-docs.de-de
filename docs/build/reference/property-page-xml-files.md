@@ -4,12 +4,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: f23c252604c5b69423b808b3b9f072889e38c816
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 76378dc5ef9d7443045c329579cfa3c410dc262f
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837445"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630746"
 ---
 # <a name="property-page-xml-rule-files"></a>XML-Regeldateien für Eigenschaftenseiten
 
@@ -119,7 +119,7 @@ Im folgenden Abschnitt werden die Hauptelemente und einige der Metadaten beschri
       </ItemDefinitionGroup>
       ```
 
-      Wenn dieser Wert auf der Eigenschaftenseite einer bestimmten Datei (z.B. „stdafx.cpp“) festlegt wird, wird der Eigenschaftswert wie im Folgenden dargestellt unter dem Element „stdafx.cpp“ in der Projektdatei geschrieben. Sie werden feststellen, dass die Konfigurationsbedingung direkt an die Metadaten angefügt wurde.
+      Wenn dieser Wert auf der Eigenschaften Seite für eine bestimmte Datei, wie z. b. stdafx. cpp, festgelegt wurde, wird der Eigenschafts Wert unter dem Element *stdafx. cpp* in der Projektdatei geschrieben, wie unten gezeigt. Sie werden feststellen, dass die Konfigurationsbedingung direkt an die Metadaten angefügt wurde.
 
       ```xml
       <ItemGroup>

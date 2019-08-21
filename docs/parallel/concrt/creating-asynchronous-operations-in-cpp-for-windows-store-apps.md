@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: d6a36da79f24d98d162c4ffffff17b4471b2b063
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e3a5b634eb22a6860fe8af5b3b737a8e649e03c2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512252"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631741"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Erstellen von asynchronen Vorgängen in C++ für UWP-apps
 
@@ -70,10 +70,10 @@ Der Begriff *Aktion* bedeutet, dass die asynchrone Aufgabe keinen Wert generiert
 
 Der Rückgabetyp von `create_async` wird durch den Typ der Argumente bestimmt. Wenn z. B. die Arbeitsfunktion weder einen Wert zurückgibt und noch den Status meldet, wird von `create_async` eine `IAsyncAction`zurückgegeben. Wenn die Arbeitsfunktion keinen Wert zurückgibt, jedoch den Status meldet, wird von `create_async` eine `IAsyncActionWithProgress`zurückgegeben. Stellen Sie für Statusmeldungen ein [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) -Objekt als Parameter der Arbeitsfunktion bereit. Durch Statusbenachrichtigungen kann gemeldet werden, wie viel Arbeit bereits erledigt wurde und wie viel noch verbleibt (beispielsweise als Prozentsatz). Zudem können Ergebnisse gemeldet werden, sobald sie verfügbar sind.
 
-Die `IAsyncAction`-, `IAsyncActionWithProgress<TProgress>`-, `IAsyncOperation<TResult>`- und `IAsyncActionOperationWithProgress<TProgress, TProgress>` -Schnittstellen bieten jeweils eine `Cancel` -Methode, die das Abbrechen des asynchronen Vorgangs ermöglicht. Die `task` -Klasse verwendet Abbruchtoken. Wenn Sie Arbeit mithilfe eines Abbruchtokens abbrechen, wird von der Runtime keine neue Verarbeitung gestartet, die dieses Token abonniert. Für eine bereits aktive Verarbeitung kann das entsprechende Abbruchtoken überwacht und die Verarbeitung zum angegebenen Zeitpunkt beendet werden. Im Dokument [Cancellation in the PPL](cancellation-in-the-ppl.md)wird dieser Mechanismus ausführlich beschrieben. Es gibt zwei Möglichkeiten, um den Task`Cancel` Abbruch mit den Windows-Runtime-Methoden zu verbinden. Die erste Möglichkeit besteht darin, die an `create_async` zu übergebende Arbeitsfunktion so zu definieren, dass diese ein [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) -Objekt akzeptiert. Beim Aufrufen der `Cancel` -Methode wird dieses Abbruchtoken abgebrochen, und für das zugrunde liegende `task` -Objekt, das den `create_async` -Aufruf unterstützt, gelten die normale Abbruchregeln. Wenn Sie kein `cancellation_token` -Objekt bereitstellen, wird dieses vom zugrunde liegenden `task` -Objekt implizit definiert. Definieren Sie ein `cancellation_token` -Objekt, wenn auf Abbrüche in der Arbeitsfunktion kooperativ reagiert werden muss. Im Abschnitt [Beispiel: Das Steuern der Ausführung in einer Windows-Runtime C++ -App mit und](#example-app) XAML zeigt ein Beispiel für das Ausführen von Abbrüchen in einer universelle Windows-Plattform-APP C# (UWP) mit und XAML C++ , die eine benutzerdefinierte Windows-Runtime Komponente verwendet.
+Die `IAsyncAction`-, `IAsyncActionWithProgress<TProgress>`-, `IAsyncOperation<TResult>`- und `IAsyncActionOperationWithProgress<TProgress, TProgress>` -Schnittstellen bieten jeweils eine `Cancel` -Methode, die das Abbrechen des asynchronen Vorgangs ermöglicht. Die `task` -Klasse verwendet Abbruchtoken. Wenn Sie Arbeit mithilfe eines Abbruchtokens abbrechen, wird von der Runtime keine neue Verarbeitung gestartet, die dieses Token abonniert. Für eine bereits aktive Verarbeitung kann das entsprechende Abbruchtoken überwacht und die Verarbeitung zum angegebenen Zeitpunkt beendet werden. Im Dokument [Cancellation in the PPL](cancellation-in-the-ppl.md)wird dieser Mechanismus ausführlich beschrieben. Es gibt zwei Möglichkeiten, um den Task`Cancel` Abbruch mit den Windows-Runtime-Methoden zu verbinden. Die erste Möglichkeit besteht darin, die an `create_async` zu übergebende Arbeitsfunktion so zu definieren, dass diese ein [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) -Objekt akzeptiert. Wenn die `Cancel` -Methode aufgerufen wird, wird dieses Abbruch Token abgebrochen, und die normalen Abbruch Regeln gelten `task` für das zugrunde liegende `create_async` -Objekt, das den-Aufruf unterstützt. Wenn Sie kein `cancellation_token` -Objekt bereitstellen, wird dieses vom zugrunde liegenden `task` -Objekt implizit definiert. Definieren Sie ein `cancellation_token` -Objekt, wenn auf Abbrüche in der Arbeitsfunktion kooperativ reagiert werden muss. Im Abschnitt [Beispiel: Das Steuern der Ausführung in einer Windows-Runtime C++ -App mit und](#example-app) XAML zeigt ein Beispiel für das Ausführen von Abbrüchen in einer universelle Windows-Plattform-APP C# (UWP) mit und XAML C++ , die eine benutzerdefinierte Windows-Runtime Komponente verwendet.
 
 > [!WARNING]
->  In einer Kette von Aufgabenfortsetzungen sollte stets der Zustand bereinigt und anschließend [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) aufgerufen werden, wenn das Abbruchtoken abgebrochen wird. Wenn Sie frühzeitig zurückkehren, anstatt `cancel_current_task`aufzurufen, geht der Vorgang in den Zustand "Abgeschlossen" anstelle von "Abgebrochen" über.
+>  In einer Kette von Aufgaben Fortsetzungen sollten Sie den Status immer bereinigen und dann " [parallelcurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) " aufzurufen, wenn das Abbruch Token abgebrochen wird. Wenn Sie frühzeitig zurückkehren, anstatt `cancel_current_task`aufzurufen, geht der Vorgang in den Zustand "Abgeschlossen" anstelle von "Abgebrochen" über.
 
 In der folgenden Tabelle werden die Kombinationen zusammengefasst, die Sie zum Definieren asynchroner Vorgänge in Ihrer App verwenden können.
 
@@ -161,7 +161,7 @@ Aktualisieren Sie in "MainPage.xaml" das `Grid` -Element mit einem `ProgressRing
 
 [!code-xml[concrt-windowsstore-commonwords#1](../../parallel/concrt/codesnippet/xaml/creating-asynchronous-operations-in-cpp-for-windows-store-apps_6.xaml)]
 
-Fügen Sie "pch.h" die folgenden `#include` -Anweisungen hinzu.
+Fügen Sie " `#include` *PCH. h*" die folgenden-Anweisungen hinzu.
 
 [!code-cpp[concrt-windowsstore-commonwords#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_7.h)]
 
