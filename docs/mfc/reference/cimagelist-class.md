@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 6c419081a649fddd65120270decb0cb57ee743fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 1555209ce0f1c2caacbfb4b01107775db948d230
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916190"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505952"
 ---
 # <a name="cimagelist-class"></a>CImageList-Klasse
 
@@ -269,7 +269,7 @@ CImageList();
 
 ##  <a name="copy"></a>CImageList:: Copy
 
-Diese Member-Funktion implementiert das Verhalten der Win32-Funktion [ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Funktion [ImageList_Copy](/windows/win32/api/commctrl/nf-commctrl-imagelist_copy), wie im Windows SDK beschrieben.
 
 ```
 BOOL Copy(
@@ -634,16 +634,16 @@ Der null basierte Index des zu zeichnenden Bilds.
 Der Speicherort, an dem im angegebenen Gerätekontext gezeichnet werden soll.
 
 *sz*<br/>
-Die Größe des Bilds, das in Relation zur oberen linken Ecke des Bilds gezeichnet werden soll. Weitere Informationen finden Sie unter *DX* und *dy* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) im Windows SDK.
+Die Größe des Bilds, das in Relation zur oberen linken Ecke des Bilds gezeichnet werden soll. Weitere Informationen finden Sie unter *DX* und *dy* in [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) im Windows SDK.
 
 *clrBk*<br/>
-Hintergrundfarbe des Bilds. Weitere Informationen finden Sie unter *rgbbk* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) im Windows SDK.
+Hintergrundfarbe des Bilds. Weitere Informationen finden Sie unter *rgbbk* in [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) im Windows SDK.
 
 *clrFg*<br/>
-Vordergrundfarbe des Bilds. Weitere Informationen finden Sie unter *rgbfg* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) im Windows SDK.
+Vordergrundfarbe des Bilds. Weitere Informationen finden Sie unter *rgbfg* in [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) im Windows SDK.
 
 *nStyle*<br/>
-Flag zum Angeben der Zeichnungs Art. Weitere Informationen finden Sie unter " [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) " in der Windows SDK.
+Flag zum Angeben der Zeichnungs Art. Weitere Informationen finden Sie unter " [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) " in der Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -682,7 +682,7 @@ BOOL DrawIndirect(
 ### <a name="parameters"></a>Parameter
 
 *pimldp*<br/>
-Ein Zeiger auf eine [imagelistdrawparameams](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) -Struktur, die Informationen über den Zeichnungs Vorgang enthält.
+Ein Zeiger auf eine [imagelistdrawparameams](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) -Struktur, die Informationen über den Zeichnungs Vorgang enthält.
 
 *pDC*<br/>
 Ein Zeiger auf den Zielgeräte Kontext. Sie müssen dieses [CDC](../../mfc/reference/cdc-class.md) -Objekt löschen, wenn Sie damit abgeschlossen sind.
@@ -694,7 +694,7 @@ Der null basierte Index des Bilds, das gezeichnet werden soll.
 Eine [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die die x-und y-Koordinaten enthält, in denen das Bild gezeichnet wird.
 
 *sz*<br/>
-Eine [Größen](/windows/desktop/api/windef/ns-windef-tagsize) Struktur, die die Größe des Bilds angibt, das gezeichnet werden soll.
+Eine [Größen](/windows/win32/api/windef/ns-windef-size) Struktur, die die Größe des Bilds angibt, das gezeichnet werden soll.
 
 *ptOrigin*<br/>
 Eine [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die die x-und y-Koordinaten enthält, die die linke obere Ecke des Zeichnungs Vorgangs in Bezug auf das Bild selbst angeben. Pixel des Bilds, die sich Links von der x-Koordinate und oberhalb der y-Koordinate befinden, werden nicht gezeichnet.
@@ -702,12 +702,12 @@ Eine [Punkt](/previous-versions/dd162805\(v=vs.85\)) Struktur, die die x-und y-K
 *fStyle*<br/>
 Flag, das die Zeichnungsart und optional das Überlagerungs Bild angibt. Weitere Informationen zum Überlagerungs Bild finden Sie im Abschnitt "Hinweise". Die MFC-Standard Implementierung, ILD_NORMAL, zeichnet das Bild mithilfe der Hintergrundfarbe für die Bildliste. Wenn die Hintergrundfarbe der CLR_NONE-Wert ist, wird das Bild transparent mithilfe einer Maske gezeichnet.
 
-Andere mögliche Stile werden unter dem *fstyle* -Member der [imagelistdrawparameams](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) -Struktur beschrieben.
+Andere mögliche Stile werden unter dem *fstyle* -Member der [imagelistdrawparameams](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) -Struktur beschrieben.
 
 *dwRop*<br/>
 Ein-Wert, der einen Raster Vorgangs Code angibt. Diese Codes definieren, wie die Farbdaten für das Quell Rechteck mit den Farbdaten für das Ziel Rechteck kombiniert werden, um die endgültige Farbe zu erzielen. Die MFC-Standard Implementierung (srccopy) kopiert das Quell Rechteck direkt in das Ziel Rechteck. Dieser Parameter wird ignoriert, wenn der Parameter "sstyle" das Flag "ILD_ROP" nicht enthält.
 
-Andere mögliche Werte werden unter dem *dwrop* -Member der [imagelistdrawparameams](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) -Struktur beschrieben.
+Andere mögliche Werte werden unter dem *dwrop* -Member der [imagelistdrawparameams](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) -Struktur beschrieben.
 
 *rgbBack*<br/>
 Die Hintergrundfarbe des Bilds (standardmäßig CLR_DEFAULT). Dieser Parameter kann ein von der Anwendung definierter RGB-Wert oder einer der folgenden Werte sein:
@@ -738,7 +738,7 @@ Bei Verwendung mit ILS_SATURATE enthält dieser Member den Wert, der jeder Farbk
 Bei Verwendung mit ILS_APLHA enthält dieser Member den Wert für den Alphakanal. Dieser Wert kann zwischen 0 und 255 liegen, wobei 0 vollständig transparent ist und 255 vollständig deckend ist.
 
 *crEffect*<br/>
-Ein [COLORREF](/windows/desktop/gdi/colorref) -Wert, der für Glanz-und Schatteneffekte verwendet wird.
+Ein [COLORREF](/windows/win32/gdi/colorref) -Wert, der für Glanz-und Schatteneffekte verwendet wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -748,7 +748,7 @@ TRUE, wenn das Bild erfolgreich gezeichnet wird. andernfalls false.
 
 Verwenden Sie die erste Version, wenn Sie die Win32-Struktur selbst auffüllen möchten. Verwenden Sie die zweite Version, wenn Sie mindestens ein MFC-Standardargument nutzen oder die Struktur nicht verwalten möchten.
 
-Ein Überlagerungs Bild ist ein Bild, das über dem primär Bild gezeichnet wird, das in dieser Member-Funktion durch den *nImage* -Parameter angegeben wird. Zeichnen Sie eine Überlagerungs Maske mithilfe der [Draw](#draw) -Member-Funktion mit dem 1-basierten Index der Überlagerungs Maske, die mithilfe des [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) -Makros angegeben wurde.
+Ein Überlagerungs Bild ist ein Bild, das über dem primär Bild gezeichnet wird, das in dieser Member-Funktion durch den *nImage* -Parameter angegeben wird. Zeichnen Sie eine Überlagerungs Maske mithilfe der [Draw](#draw) -Member-Funktion mit dem 1-basierten Index der Überlagerungs Maske, die mithilfe des [INDEXTOOVERLAYMASK](/windows/win32/api/commctrl/nf-commctrl-indextooverlaymask) -Makros angegeben wurde.
 
 ### <a name="example"></a>Beispiel
 
@@ -789,7 +789,7 @@ Handle des Symbols, wenn erfolgreich; andernfalls NULL.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode basiert auf dem Verhalten des [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) -Makros, um das Symbol zu erstellen. Weitere Informationen zum Erstellen und Bereinigen von Symbolen finden Sie im [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) -Makro.
+Diese Methode basiert auf dem Verhalten des [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon) -Makros, um das Symbol zu erstellen. Weitere Informationen zum Erstellen und Bereinigen von Symbolen finden Sie im [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon) -Makro.
 
 ### <a name="example"></a>Beispiel
 
@@ -915,7 +915,7 @@ BOOL GetImageInfo(
 NULL basierter Index des Bilds.
 
 *pImageInfo*<br/>
-Ein Zeiger auf eine [imageinfo](/windows/desktop/api/commctrl/ns-commctrl-imageinfo) -Struktur, die Informationen über das Bild empfängt. Die Informationen in dieser Struktur können verwendet werden, um die Bitmaps für das Bild direkt zu bearbeiten.
+Ein Zeiger auf eine [imageinfo](/windows/win32/api/commctrl/ns-commctrl-imageinfo) -Struktur, die Informationen über das Bild empfängt. Die Informationen in dieser Struktur können verwendet werden, um die Bitmaps für das Bild direkt zu bearbeiten.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1109,7 +1109,7 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Da die Zieh Funktionen das neue Bild während eines Zieh Vorgangs verwenden, sollten Sie die Windows [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) -Funktion verwenden, um den eigentlichen Mauszeiger nach `CImageList::SetDragCursorImage`dem Aufruf von auszublenden. Andernfalls weist das System möglicherweise zwei Mauszeiger auf die Dauer des Zieh Vorgangs auf.
+Da die Zieh Funktionen das neue Bild während eines Zieh Vorgangs verwenden, sollten Sie die Windows [ShowCursor](/windows/win32/api/winuser/nf-winuser-showcursor) -Funktion verwenden, um den eigentlichen Mauszeiger nach `CImageList::SetDragCursorImage`dem Aufruf von auszublenden. Andernfalls weist das System möglicherweise zwei Mauszeiger auf die Dauer des Zieh Vorgangs auf.
 
 ##  <a name="setimagecount"></a>CImageList:: Abbild magecount
 

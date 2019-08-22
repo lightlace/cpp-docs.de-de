@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: fa50282f3aa1f4db3ebf6306fa9dc3dab1311d1b
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 33fbaae5dafaccdf7f7e6880eaa42dd68352e840
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915902"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497917"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken-Klasse
 
@@ -132,9 +132,9 @@ class CAccessToken
 
 ## <a name="remarks"></a>Hinweise
 
-Ein [Zugriffs Token](/windows/desktop/SecAuthZ/access-tokens) ist ein Objekt, das den Sicherheitskontext eines Prozesses oder Threads beschreibt und jedem Benutzer zugeordnet ist, der bei einem Windows-System angemeldet ist.
+Ein [Zugriffs Token](/windows/win32/SecAuthZ/access-tokens) ist ein Objekt, das den Sicherheitskontext eines Prozesses oder Threads beschreibt und jedem Benutzer zugeordnet ist, der bei einem Windows-System angemeldet ist.
 
-Eine Einführung zum Zugriffs Steuerungsmodell in Windows finden Sie unter [Access Control](/windows/desktop/SecAuthZ/access-control) in der Windows SDK.
+Eine Einführung zum Zugriffs Steuerungsmodell in Windows finden Sie unter [Access Control](/windows/win32/SecAuthZ/access-control) in der Windows SDK.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -216,7 +216,7 @@ bool CreateImpersonationToken(
 Zeiger auf das neue `CAccessToken` -Objekt.
 
 *sil*<br/>
-Gibt einen [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level) -enumerierten Typ an, der die Identitätswechsel Ebene des neuen Tokens bereitstellt.
+Gibt einen [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) -enumerierten Typ an, der die Identitätswechsel Ebene des neuen Tokens bereitstellt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -224,7 +224,7 @@ Gibt bei Erfolg TRUE zurück, false bei einem Fehler.
 
 ### <a name="remarks"></a>Hinweise
 
-`CreateImpersonationToken`Ruft [duplicatetoken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) auf, um ein neues Identitätswechsel Token zu erstellen.
+`CreateImpersonationToken`Ruft [duplicatetoken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) auf, um ein neues Identitätswechsel Token zu erstellen.
 
 ##  <a name="createprimarytoken"></a>CAccessToken:: kreateprimarytoken
 
@@ -243,7 +243,7 @@ bool CreatePrimaryToken(
 Zeiger auf das neue `CAccessToken` -Objekt.
 
 *dwDesiredAccess*<br/>
-Gibt die angeforderten Zugriffsrechte für das neue Token an. Der Standardwert, MAXIMUM_ALLOWED, fordert alle Zugriffsrechte an, die für den Aufrufer gültig sind. Weitere Informationen zu Zugriffsrechten finden Sie unter [Zugriffsrechte und Zugriffs Masken](/windows/desktop/SecAuthZ/access-rights-and-access-masks) .
+Gibt die angeforderten Zugriffsrechte für das neue Token an. Der Standardwert, MAXIMUM_ALLOWED, fordert alle Zugriffsrechte an, die für den Aufrufer gültig sind. Weitere Informationen zu Zugriffsrechten finden Sie unter [Zugriffsrechte und Zugriffs Masken](/windows/win32/SecAuthZ/access-rights-and-access-masks) .
 
 *pTokenAttributes*<br/>
 Ein Zeiger auf eine [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) -Struktur, die eine Sicherheits Beschreibung für das neue Token angibt und bestimmt, ob untergeordnete Prozesse das Token erben können. Wenn " *ptokenattribute* " den Wert NULL hat, erhält das Token eine Standard Sicherheits Beschreibung, und das Handle kann nicht geerbt werden.
@@ -254,7 +254,7 @@ Gibt bei Erfolg TRUE zurück, false bei einem Fehler.
 
 ### <a name="remarks"></a>Hinweise
 
-`CreatePrimaryToken`Ruft [duplicatcher etokenex](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) auf, um ein neues primäres Token zu erstellen.
+`CreatePrimaryToken`Ruft [duplicatcher etokenex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) auf, um ein neues primäres Token zu erstellen.
 
 ##  <a name="createprocessasuser"></a>CAccessToken:: Benutzer
 
@@ -286,13 +286,13 @@ Zeiger auf eine mit NULL endenden Zeichenfolge, die die auszuführende Befehlsze
 Zeiger auf eine [PROCESS_INFORMATION-Struktur](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information) , die Identifikationsinformationen über den neuen Prozess empfängt.
 
 *pStartupInfo*<br/>
-Ein Zeiger auf eine [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfoa) -Struktur, die angibt, wie das Hauptfenster für den neuen Prozess angezeigt werden soll.
+Ein Zeiger auf eine [STARTUPINFO](/windows/win32/api/processthreadsapi/ns-processthreadsapi-startupinfow) -Struktur, die angibt, wie das Hauptfenster für den neuen Prozess angezeigt werden soll.
 
 *dwCreationFlags*<br/>
-Gibt zusätzliche Flags an, mit denen die Prioritäts Klasse und die Prozesserstellung gesteuert werden. Eine Liste der Flags finden Sie unter der Win32-Funktion " [kreateprocessasuser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) ".
+Gibt zusätzliche Flags an, mit denen die Prioritäts Klasse und die Prozesserstellung gesteuert werden. Eine Liste der Flags finden Sie unter der Win32-Funktion " [kreateprocessasuser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw) ".
 
 *bLoadProfile*<br/>
-TRUE gibt an, dass das Profil des Benutzers mit [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)geladen wird.
+TRUE gibt an, dass das Profil des Benutzers mit [LoadUserProfile](/windows/win32/api/userenv/nf-userenv-loaduserprofilew)geladen wird.
 
 *pProcessAttributes*<br/>
 Ein Zeiger auf eine [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) -Struktur, die eine Sicherheits Beschreibung für den neuen Prozess angibt und bestimmt, ob untergeordnete Prozesse das zurückgegebene Handle erben können. Wenn *pprocessattribute* den Wert NULL hat, erhält der Prozess eine Standard Sicherheits Beschreibung, und das Handle kann nicht geerbt werden.
@@ -312,7 +312,7 @@ Gibt bei Erfolg TRUE zurück, false bei einem Fehler.
 
 ### <a name="remarks"></a>Hinweise
 
-`CreateProcessAsUser`verwendet die `CreateProcessAsUser` Win32-Funktion, um einen neuen Prozess zu erstellen, der im Sicherheitskontext des Benutzers ausgeführt wird `CAccessToken` , der durch das-Objekt dargestellt wird. Eine vollständige Erläuterung der erforderlichen Parameter finden Sie in der Beschreibung der Funktion [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera).
+`CreateProcessAsUser`verwendet die `CreateProcessAsUser` Win32-Funktion, um einen neuen Prozess zu erstellen, der im Sicherheitskontext des Benutzers ausgeführt wird `CAccessToken` , der durch das-Objekt dargestellt wird. Eine vollständige Erläuterung der erforderlichen Parameter finden Sie in der Beschreibung der Funktion [CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw).
 
 Damit diese Methode erfolgreich ausgeführt werden kann `CAccessToken` , muss das Objekt zugriffprimarytoken (sofern es sich nicht um ein eingeschränktes Token handelt) und erstellungszugriffsberechtigungen enthalten.
 
@@ -348,7 +348,7 @@ Gibt bei Erfolg TRUE zurück, false bei einem Fehler.
 
 ### <a name="remarks"></a>Hinweise
 
-`CreateRestrictedToken`verwendet die Win32-Funktion von "| [aterestrictedtoken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) " `CAccessToken` , um ein neues-Objekt mit Einschränkungen zu erstellen.
+`CreateRestrictedToken`verwendet die Win32-Funktion von "| [aterestrictedtoken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) " `CAccessToken` , um ein neues-Objekt mit Einschränkungen zu erstellen.
 
 > [!IMPORTANT]
 >  Wenn Sie `CreateRestrictedToken`verwenden, stellen Sie Folgendes sicher: das vorhandene Token ist gültig (und nicht vom Benutzer eingegeben), und " *sidstodeaktivieren* " und " *privilegestodelete* " sind sowohl gültig (nicht vom Benutzer eingegeben). Wenn die Methode false zurückgibt, verweigern Sie die Funktionalität.
@@ -532,7 +532,7 @@ bool GetImpersonationLevel(
 ### <a name="parameters"></a>Parameter
 
 *pImpersonationLevel*<br/>
-Zeiger auf einen [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level) -Enumerationstyp, der die Informationen zur Identitätswechsel Ebene empfängt.
+Zeiger auf einen [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) -Enumerationstyp, der die Informationen zur Identitätswechsel Ebene empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -549,7 +549,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 ### <a name="parameters"></a>Parameter
 
 *pluid*<br/>
-Zeiger auf eine [LUID](/windows/desktop/api/winnt/ns-winnt-luid) , die die Anmelde Sitzungs-ID empfängt.
+Zeiger auf eine [LUID](/windows/win32/api/winnt/ns-winnt-luid) , die die Anmelde Sitzungs-ID empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -661,7 +661,7 @@ Gibt bei Erfolg TRUE zurück, false bei einem Fehler.
 
 ### <a name="remarks"></a>Hinweise
 
-Ruft die [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) -Win32-Funktion auf.
+Ruft die [OpenProcessToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) -Win32-Funktion auf.
 
 ##  <a name="getprofile"></a>CAccessToken:: GetProfile
 
@@ -686,7 +686,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 ### <a name="parameters"></a>Parameter
 
 *pSource*<br/>
-Zeiger auf eine [TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-token_source) -Struktur.
+Zeiger auf eine [TOKEN_SOURCE](/windows/win32/api/winnt/ns-winnt-token_source) -Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -703,7 +703,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 ### <a name="parameters"></a>Parameter
 
 *pStatistics*<br/>
-Zeiger auf eine [TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-token_statistics) -Struktur.
+Zeiger auf eine [TOKEN_STATISTICS](/windows/win32/api/winnt/ns-winnt-token_statistics) -Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -765,7 +765,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 ### <a name="parameters"></a>Parameter
 
 *pluid*<br/>
-Zeiger auf eine [LUID](/windows/desktop/api/winnt/ns-winnt-luid) , von der die Token-ID empfangen wird.
+Zeiger auf eine [LUID](/windows/win32/api/winnt/ns-winnt-luid) , von der die Token-ID empfangen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -782,7 +782,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 ### <a name="parameters"></a>Parameter
 
 *pType*<br/>
-Adresse der [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-token_type) -Variablen, die bei Erfolg den Typ des Tokens empfängt.
+Adresse der [TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type) -Variablen, die bei Erfolg den Typ des Tokens empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -914,10 +914,10 @@ Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen der Domäne oder d
 Zeiger auf eine mit NULL endenden Zeichenfolge, die das klar Text Kennwort für das durch *pszusername*angegebene Benutzerkonto angibt.
 
 *dwLogonType*<br/>
-Gibt den Typ des auszuführenden Anmeldevorgangs an. Weitere Informationen finden Sie unter [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) .
+Gibt den Typ des auszuführenden Anmeldevorgangs an. Weitere Informationen finden Sie unter [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
 
 *dwLogonProvider*<br/>
-Gibt den Anmelde Anbieter an. Weitere Informationen finden Sie unter [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) .
+Gibt den Anmelde Anbieter an. Weitere Informationen finden Sie unter [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -925,7 +925,7 @@ Gibt bei Erfolg TRUE zurück, false bei einem Fehler.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Zugriffs Token, das sich aus der Anmeldung ergibt, wird `CAccessToken`dem zugeordnet. Damit diese Methode erfolgreich ausgeführt werden kann `CAccessToken` , muss das Objekt über SE_TCB_NAME-Berechtigungen verfügen, und der Inhaber wird als Teil der vertrauenswürdigen Computer Basis identifiziert. Weitere Informationen zu den erforderlichen Berechtigungen finden Sie unter [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) .
+Das Zugriffs Token, das sich aus der Anmeldung ergibt, wird `CAccessToken`dem zugeordnet. Damit diese Methode erfolgreich ausgeführt werden kann `CAccessToken` , muss das Objekt über SE_TCB_NAME-Berechtigungen verfügen, und der Inhaber wird als Teil der vertrauenswürdigen Computer Basis identifiziert. Weitere Informationen zu den erforderlichen Berechtigungen finden Sie unter [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
 
 ##  <a name="opencomclienttoken"></a>CAccessToken:: opencomclienttoken
 
@@ -947,7 +947,7 @@ Gibt eine Zugriffsmaske an, die die angeforderten Zugriffstypen für den Zugriff
 TRUE gibt an, dass der aktuelle Thread die Identität des aufrufenden com-Clients annimmt, wenn dieser Aufruf erfolgreich abgeschlossen wird. Wenn der Wert false ist, wird das Zugriffs Token geöffnet, aber der Thread besitzt kein Identitätswechsel Token, wenn dieser Vorgang abgeschlossen wird.
 
 *bOpenAsSelf*<br/>
-Gibt an, ob die Zugriffs Überprüfung für den Sicherheitskontext des Threads durchgeführt werden soll, der die [getthreadtoken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) -Methode aufrufen, oder für den Sicherheitskontext des Prozesses für den aufrufenden Thread.
+Gibt an, ob die Zugriffs Überprüfung für den Sicherheitskontext des Threads durchgeführt werden soll, der die [getthreadtoken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) -Methode aufrufen, oder für den Sicherheitskontext des Prozesses für den aufrufenden Thread.
 
 Wenn dieser Parameter false ist, wird die Zugriffs Überprüfung mithilfe des Sicherheits Kontexts für den aufrufenden Thread ausgeführt. Wenn der Thread die Identität eines Clients annimmt, kann dieser Sicherheitskontext der eines Client Prozesses sein. Wenn dieser Parameter true ist, wird die Zugriffs Überprüfung mithilfe des Sicherheits Kontexts des Prozesses für den aufrufenden Thread durchgeführt.
 
@@ -983,7 +983,7 @@ Gibt eine Zugriffsmaske an, die die angeforderten Zugriffstypen für den Zugriff
 TRUE gibt an, dass der aktuelle Thread die Identität des aufrufenden Pipe-Clients annimmt, wenn dieser Aufruf erfolgreich abgeschlossen wird. Wenn der Wert false ist, wird das Zugriffs Token geöffnet, aber der Thread besitzt kein Identitätswechsel Token, wenn dieser Vorgang abgeschlossen wird.
 
 *bOpenAsSelf*<br/>
-Gibt an, ob die Zugriffs Überprüfung für den Sicherheitskontext des Threads durchgeführt werden soll, der die [getthreadtoken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) -Methode aufrufen, oder für den Sicherheitskontext des Prozesses für den aufrufenden Thread.
+Gibt an, ob die Zugriffs Überprüfung für den Sicherheitskontext des Threads durchgeführt werden soll, der die [getthreadtoken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) -Methode aufrufen, oder für den Sicherheitskontext des Prozesses für den aufrufenden Thread.
 
 Wenn dieser Parameter false ist, wird die Zugriffs Überprüfung mithilfe des Sicherheits Kontexts für den aufrufenden Thread ausgeführt. Wenn der Thread die Identität eines Clients annimmt, kann dieser Sicherheitskontext der eines Client Prozesses sein. Wenn dieser Parameter true ist, wird die Zugriffs Überprüfung mithilfe des Sicherheits Kontexts des Prozesses für den aufrufenden Thread durchgeführt.
 
@@ -1019,7 +1019,7 @@ Gibt eine Zugriffsmaske an, die die angeforderten Zugriffstypen für den Zugriff
 TRUE gibt an, dass der aktuelle Thread die Identität des aufrufenden RPC-Clients annimmt, wenn dieser Aufruf erfolgreich abgeschlossen wird. Wenn der Wert false ist, wird das Zugriffs Token geöffnet, aber der Thread besitzt kein Identitätswechsel Token, wenn dieser Vorgang abgeschlossen wird.
 
 *bOpenAsSelf*<br/>
-Gibt an, ob die Zugriffs Überprüfung für den Sicherheitskontext des Threads durchgeführt werden soll, der die [getthreadtoken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) -Methode aufrufen, oder für den Sicherheitskontext des Prozesses für den aufrufenden Thread.
+Gibt an, ob die Zugriffs Überprüfung für den Sicherheitskontext des Threads durchgeführt werden soll, der die [getthreadtoken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) -Methode aufrufen, oder für den Sicherheitskontext des Prozesses für den aufrufenden Thread.
 
 Wenn dieser Parameter false ist, wird die Zugriffs Überprüfung mithilfe des Sicherheits Kontexts für den aufrufenden Thread ausgeführt. Wenn der Thread die Identität eines Clients annimmt, kann dieser Sicherheitskontext der eines Client Prozesses sein. Wenn dieser Parameter true ist, wird die Zugriffs Überprüfung mithilfe des Sicherheits Kontexts des Prozesses für den aufrufenden Thread durchgeführt.
 
@@ -1052,12 +1052,12 @@ Gibt eine Zugriffsmaske an, die die angeforderten Zugriffstypen für den Zugriff
 TRUE gibt an, dass der Thread auf der angeforderten Ebene des Identitäts Wechsels bleibt, nachdem diese Methode abgeschlossen wurde. Wenn der Wert false ist, wird der Thread auf seine ursprüngliche Identitätswechsel Ebene zurückgesetzt.
 
 *bOpenAsSelf*<br/>
-Gibt an, ob die Zugriffs Überprüfung für den Sicherheitskontext des Threads durchgeführt werden soll, der die [getthreadtoken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) -Methode aufrufen, oder für den Sicherheitskontext des Prozesses für den aufrufenden Thread.
+Gibt an, ob die Zugriffs Überprüfung für den Sicherheitskontext des Threads durchgeführt werden soll, der die [getthreadtoken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) -Methode aufrufen, oder für den Sicherheitskontext des Prozesses für den aufrufenden Thread.
 
 Wenn dieser Parameter false ist, wird die Zugriffs Überprüfung mithilfe des Sicherheits Kontexts für den aufrufenden Thread ausgeführt. Wenn der Thread die Identität eines Clients annimmt, kann dieser Sicherheitskontext der eines Client Prozesses sein. Wenn dieser Parameter true ist, wird die Zugriffs Überprüfung mithilfe des Sicherheits Kontexts des Prozesses für den aufrufenden Thread durchgeführt.
 
 *sil*<br/>
-Gibt einen [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level) -enumerierten Typ an, der die Identitätswechsel Ebene des Tokens bereitstellt.
+Gibt einen [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) -enumerierten Typ an, der die Identitätswechsel Ebene des Tokens bereitstellt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1082,7 +1082,7 @@ bool PrivilegeCheck(
 ### <a name="parameters"></a>Parameter
 
 *RequiredPrivileges*<br/>
-Zeiger auf eine [PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-privilege_set) -Struktur.
+Zeiger auf eine [PRIVILEGE_SET](/windows/win32/api/winnt/ns-winnt-privilege_set) -Struktur.
 
 *pbResult*<br/>
 Ein Zeiger auf einen Wert, der von der-Methode festgelegt wird, um anzugeben, ob eine oder `CAccessToken` alle der angegebenen Berechtigungen im-Objekt aktiviert sind.
@@ -1093,7 +1093,7 @@ Gibt bei Erfolg TRUE zurück, false bei einem Fehler.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `PrivilegeCheck` zurückgibt, `Attributes` wird der Member jeder [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-luid_and_attributes) -Struktur auf SE_PRIVILEGE_USED_FOR_ACCESS festgelegt, wenn die entsprechende Berechtigung aktiviert ist. Diese Methode ruft die " [privilegecheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) "-Win32-Funktion auf.
+Wenn `PrivilegeCheck` zurückgibt, `Attributes` wird der Member jeder [LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes) -Struktur auf SE_PRIVILEGE_USED_FOR_ACCESS festgelegt, wenn die entsprechende Berechtigung aktiviert ist. Diese Methode ruft die " [privilegecheck](/windows/win32/api/securitybaseapi/nf-securitybaseapi-privilegecheck) "-Win32-Funktion auf.
 
 ##  <a name="revert"></a>CAccessToken:: Revert
 
@@ -1182,5 +1182,5 @@ Die primäre Gruppe ist die Standardgruppe für neue Objekte, die erstellt werde
 ## <a name="see-also"></a>Siehe auch
 
 [Beispiel für ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
-[Zugriffs Token](/windows/desktop/SecAuthZ/access-tokens)<br/>
+[Zugriffs Token](/windows/win32/SecAuthZ/access-tokens)<br/>
 [Klassen Übersicht](../../atl/atl-class-overview.md)

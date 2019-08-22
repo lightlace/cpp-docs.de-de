@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 102c06879ffaedb91f20a4b5085a10015d7a4c8b
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 9a8c989988801bc7af993fbc69717ac7cff07dcf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916873"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502742"
 ---
 # <a name="crebarctrl-class"></a>Krebarctrl-Klasse
 
@@ -140,7 +140,7 @@ class CReBarCtrl : public CWnd
 |[CReBarCtrl::GetBarHeight](#getbarheight)|Ruft die Höhe des Grund leisten-Steuer Elements ab.|
 |[CReBarCtrl::GetBarInfo](#getbarinfo)|Ruft Informationen zum Grund leisten-Steuerelement und der von ihm verwendeten Bildliste ab.|
 |[CReBarCtrl::GetBkColor](#getbkcolor)|Ruft die Standard Hintergrundfarbe eines Grund leisten-Steuer Elements ab.|
-|[CReBarCtrl::GetColorScheme](#getcolorscheme)|Ruft die [ColorScheme](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) -Struktur ab, die dem Grund leisten-Steuerelement zugeordnet ist.|
+|[CReBarCtrl::GetColorScheme](#getcolorscheme)|Ruft die [ColorScheme](/windows/win32/api/commctrl/ns-commctrl-colorscheme) -Struktur ab, die dem Grund leisten-Steuerelement zugeordnet ist.|
 |[CReBarCtrl::GetDropTarget](#getdroptarget)|Ruft den Schnittstellen Zeiger eines Grund leisten `IDropTarget` -Steuer Elements ab.|
 |[CReBarCtrl::GetExtendedStyle](#getextendedstyle)|Ruft den erweiterten Stil des aktuellen Grund leisten-Steuer Elements ab.|
 |[CReBarCtrl::GetImageList](#getimagelist)|Ruft die Bildliste ab, die einem Grund leisten-Steuerelement zugeordnet ist.|
@@ -201,7 +201,7 @@ Unterstützung für Grund leisten Steuerelemente:
 
 - Benutzerdefinierte Zeichnungsfunktionen.
 
-- Eine Reihe von Steuerelement Stilen zusätzlich zu Standardfenster Stilen. Eine Liste dieser Stile finden Sie Untergrund leisten- [Steuerelement Stile](/windows/desktop/Controls/rebar-control-styles) in der Windows SDK.
+- Eine Reihe von Steuerelement Stilen zusätzlich zu Standardfenster Stilen. Eine Liste dieser Stile finden Sie Untergrund leisten- [Steuerelement Stile](/windows/win32/Controls/rebar-control-styles) in der Windows SDK.
 
 Weitere Informationen finden Sie unter [verwenden](../../mfc/using-crebarctrl.md)von "debugstrg".
 
@@ -221,7 +221,7 @@ Weitere Informationen finden Sie unter [verwenden](../../mfc/using-crebarctrl.md
 
 ##  <a name="begindrag"></a>"Krebarctrl:: BeginDrag"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_BEGINDRAG](/windows/desktop/Controls/rb-begindrag), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_BEGINDRAG](/windows/win32/Controls/rb-begindrag), wie im Windows SDK beschrieben.
 
 ```
 void BeginDrag(
@@ -252,7 +252,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parameter
 
 *dwStyle*<br/>
-Gibt die Kombination der auf das Steuerelement angewendeten Grundsteuer Element Stile an. Eine Liste unterstützter Stile finden Sie Untergrund leisten- [Steuerelement Stile](/windows/desktop/Controls/rebar-control-styles) in der Windows SDK.
+Gibt die Kombination der auf das Steuerelement angewendeten Grundsteuer Element Stile an. Eine Liste unterstützter Stile finden Sie Untergrund leisten- [Steuerelement Stile](/windows/win32/Controls/rebar-control-styles) in der Windows SDK.
 
 *Rect*<br/>
 Ein Verweis auf ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt oder eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Position und Größe des Grund leisten-Steuer Elements ist.
@@ -297,10 +297,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parameter
 
 *dwExStyle*<br/>
-Gibt die erweiterte Art des zu erstellenden Steuer Elements an. Eine Liste erweiterter Windows-Stile finden Sie unter dem *dwExStyle* -Parameter für " [kreatewindowex](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " in der Windows SDK.
+Gibt die erweiterte Art des zu erstellenden Steuer Elements an. Eine Liste erweiterter Windows-Stile finden Sie unter dem *dwExStyle* -Parameter für " [kreatewindowex](/windows/win32/api/winuser/nf-winuser-createwindowexw) " in der Windows SDK.
 
 *dwStyle*<br/>
-Gibt die Kombination der auf das Steuerelement angewendeten Grundsteuer Element Stile an. Eine Liste unterstützter Stile finden Sie Untergrund leisten- [Steuerelement Stile](/windows/desktop/Controls/rebar-control-styles) in der Windows SDK.
+Gibt die Kombination der auf das Steuerelement angewendeten Grundsteuer Element Stile an. Eine Liste unterstützter Stile finden Sie Untergrund leisten- [Steuerelement Stile](/windows/win32/Controls/rebar-control-styles) in der Windows SDK.
 
 *Rect*<br/>
 Ein Verweis auf eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Größe und Position des zu erstellenden Fensters in Client Koordinaten von *pparser*beschreibt.
@@ -333,7 +333,7 @@ CReBarCtrl();
 
 ##  <a name="deleteband"></a>:D eleteout:
 
-Implementiert das Verhalten der Win32-Nachricht [RB_DELETEBAND](/windows/desktop/Controls/rb-deleteband), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_DELETEBAND](/windows/win32/Controls/rb-deleteband), wie im Windows SDK beschrieben.
 
 ```
 BOOL DeleteBand(UINT uBand);
@@ -354,7 +354,7 @@ Ungleich NULL, wenn das Band erfolgreich gelöscht wurde. andernfalls NULL.
 
 ##  <a name="dragmove"></a>"Krebarctrl::D ragmove"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_DRAGMOVE](/windows/desktop/Controls/rb-dragmove), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_DRAGMOVE](/windows/win32/Controls/rb-dragmove), wie im Windows SDK beschrieben.
 
 ```
 void DragMove(DWORD dwPos = (DWORD)-1);
@@ -367,7 +367,7 @@ Ein DWORD-Wert, der die neuen Maus Koordinaten enthält. Die horizontale Koordin
 
 ##  <a name="enddrag"></a>"Krebarctrl:: EndDrag"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_ENDDRAG](/windows/desktop/Controls/rb-enddrag), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_ENDDRAG](/windows/win32/Controls/rb-enddrag), wie im Windows SDK beschrieben.
 
 ```
 void EndDrag();
@@ -375,7 +375,7 @@ void EndDrag();
 
 ##  <a name="getbandborders"></a>"Krebarctrl:: getbandrahmens"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_GETBANDBORDERS](/windows/desktop/Controls/rb-getbandborders), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_GETBANDBORDERS](/windows/win32/Controls/rb-getbandborders), wie im Windows SDK beschrieben.
 
 ```
 void GetBandBorders(
@@ -389,11 +389,11 @@ void GetBandBorders(
 Der null basierte Index des Bands, für das die Rahmen abgerufen werden.
 
 *prc*<br/>
-Ein Zeiger auf eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Band Rahmen empfängt. Wenn das Grund leisten-Steuerelement den RBS_BANDBORDERS-Stil hat, erhält jeder Member dieser Struktur die Anzahl der Pixel auf der entsprechenden Seite des Bands, die den Rahmen bilden. Wenn das Grund leisten-Steuerelement nicht den RBS_BANDBORDERS-Stil hat, erhält nur das linke Element dieser Struktur gültige Informationen. Eine Beschreibung der Grund leisten-Steuerelement Stile finden Sie Untergrund leisten- [Steuerelement Stile](/windows/desktop/Controls/rebar-control-styles) in der Windows SDK.
+Ein Zeiger auf eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Band Rahmen empfängt. Wenn das Grund leisten-Steuerelement den RBS_BANDBORDERS-Stil hat, erhält jeder Member dieser Struktur die Anzahl der Pixel auf der entsprechenden Seite des Bands, die den Rahmen bilden. Wenn das Grund leisten-Steuerelement nicht den RBS_BANDBORDERS-Stil hat, erhält nur das linke Element dieser Struktur gültige Informationen. Eine Beschreibung der Grund leisten-Steuerelement Stile finden Sie Untergrund leisten- [Steuerelement Stile](/windows/win32/Controls/rebar-control-styles) in der Windows SDK.
 
 ##  <a name="getbandcount"></a>"Krebarctrl:: GetBandCount"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_GETBANDCOUNT](/windows/desktop/Controls/rb-getbandcount), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_GETBANDCOUNT](/windows/win32/Controls/rb-getbandcount), wie im Windows SDK beschrieben.
 
 ```
 UINT GetBandCount() const;
@@ -405,7 +405,7 @@ Die Anzahl der Bänder, die dem Steuerelement zugewiesen sind.
 
 ##  <a name="getbandinfo"></a>"Krebarctrl:: GetBandInfo"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_GETBANDINFO](/windows/desktop/Controls/rb-getbandinfo) wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_GETBANDINFO](/windows/win32/Controls/rb-getbandinfo) wie im Windows SDK beschrieben.
 
 ```
 BOOL GetBandInfo(
@@ -419,7 +419,7 @@ BOOL GetBandInfo(
 Der null basierte Index des Bands, für das die Informationen abgerufen werden.
 
 *prbbi*<br/>
-Ein Zeiger auf eine [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) -Struktur zum Empfangen der Bandinformationen. Sie müssen den `cbSize` Member dieser Struktur auf `sizeof(REBARBANDINFO)` festlegen und den `fMask` Member auf die Elemente festlegen, die Sie vor dem Senden dieser Nachricht abrufen möchten.
+Ein Zeiger auf eine [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) -Struktur zum Empfangen der Bandinformationen. Sie müssen den `cbSize` Member dieser Struktur auf `sizeof(REBARBANDINFO)` festlegen und den `fMask` Member auf die Elemente festlegen, die Sie vor dem Senden dieser Nachricht abrufen möchten.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -436,11 +436,11 @@ void GetBandMargins(PMARGINS pMargins);
 ### <a name="parameters"></a>Parameter
 
 *pmargin*<br/>
-Ein Zeiger auf eine [Ränder](/windows/desktop/api/uxtheme/ns-uxtheme-margins)-Struktur, die die Informationen empfängt.
+Ein Zeiger auf eine [Ränder](/windows/win32/api/uxtheme/ns-uxtheme-margins)-Struktur, die die Informationen empfängt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion emuliert die Funktionalität der [RB_GETBANDMARGINS](/windows/desktop/Controls/rb-getbandmargins) -Nachricht, wie im Windows SDK beschrieben.
+Diese Member-Funktion emuliert die Funktionalität der [RB_GETBANDMARGINS](/windows/win32/Controls/rb-getbandmargins) -Nachricht, wie im Windows SDK beschrieben.
 
 ##  <a name="getbarheight"></a>"Krebarctrl:: getbarheight"
 
@@ -456,7 +456,7 @@ Ein Wert, der die Höhe des Steuer Elements in Pixel darstellt.
 
 ##  <a name="getbarinfo"></a>"Krebarctrl:: getbarinfo"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_GETBARINFO](/windows/desktop/Controls/rb-getbarinfo), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_GETBARINFO](/windows/win32/Controls/rb-getbarinfo), wie im Windows SDK beschrieben.
 
 ```
 BOOL GetBarInfo(REBARINFO* prbi) const;
@@ -465,7 +465,7 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ### <a name="parameters"></a>Parameter
 
 *prbi*<br/>
-Ein Zeiger auf eine [rebarinfo](/windows/desktop/api/commctrl/ns-commctrl-tagrebarinfo) -Struktur, die die Informationen zum Info leisten-Steuerelement empfängt. Sie müssen den *CBSIZE* -Member dieser-Struktur auf `sizeof(REBARINFO)` festlegen, bevor Sie diese Nachricht senden.
+Ein Zeiger auf eine [rebarinfo](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) -Struktur, die die Informationen zum Info leisten-Steuerelement empfängt. Sie müssen den *CBSIZE* -Member dieser-Struktur auf `sizeof(REBARINFO)` festlegen, bevor Sie diese Nachricht senden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -473,7 +473,7 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ##  <a name="getbkcolor"></a>"Krebarctrl:: GetBkColor"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_GETBKCOLOR](/windows/desktop/Controls/rb-getbkcolor), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_GETBKCOLOR](/windows/win32/Controls/rb-getbkcolor), wie im Windows SDK beschrieben.
 
 ```
 COLORREF GetBkColor() const;
@@ -485,7 +485,7 @@ Ein COLORREF-Wert, der die aktuelle Standard Hintergrundfarbe darstellt.
 
 ##  <a name="getcolorscheme"></a>"Krebarctrl:: getcolorscheme"
 
-Ruft die [ColorScheme](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) -Struktur für das Grund leisten-Steuerelement ab.
+Ruft die [ColorScheme](/windows/win32/api/commctrl/ns-commctrl-colorscheme) -Struktur für das Grund leisten-Steuerelement ab.
 
 ```
 BOOL GetColorScheme(COLORSCHEME* lpcs);
@@ -494,7 +494,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 ### <a name="parameters"></a>Parameter
 
 *lpcs*<br/>
-Ein Zeiger auf eine [ColorScheme](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) -Struktur, wie im Windows SDK beschrieben.
+Ein Zeiger auf eine [ColorScheme](/windows/win32/api/commctrl/ns-commctrl-colorscheme) -Struktur, wie im Windows SDK beschrieben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -506,7 +506,7 @@ Die `COLORSCHEME` -Struktur enthält die Schaltflächen Hervorhebungs Farbe und 
 
 ##  <a name="getdroptarget"></a>"Krebarctrl:: getdroptarget"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_GETDROPTARGET](/windows/desktop/Controls/rb-getdroptarget), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_GETDROPTARGET](/windows/win32/Controls/rb-getdroptarget), wie im Windows SDK beschrieben.
 
 ```
 IDropTarget* GetDropTarget() const;
@@ -514,7 +514,7 @@ IDropTarget* GetDropTarget() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget) -Schnittstelle.
+Ein Zeiger auf eine [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) -Schnittstelle.
 
 ##  <a name="getextendedstyle"></a>  CReBarCtrl::GetExtendedStyle
 
@@ -530,7 +530,7 @@ Eine bitweise Kombination (or) von Flags, die die erweiterten Stile angeben. Mö
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [RB_GETEXTENDEDSTYLE](/windows/desktop/Controls/rb-dragmove) -Nachricht, die im Windows SDK beschrieben wird.
+Diese Methode sendet die [RB_GETEXTENDEDSTYLE](/windows/win32/Controls/rb-dragmove) -Nachricht, die im Windows SDK beschrieben wird.
 
 ##  <a name="getimagelist"></a>"Krebarctrl:: GetImageList"
 
@@ -546,7 +546,7 @@ Ein Zeiger auf ein [CImageList](../../mfc/reference/cimagelist-class.md) -Objekt
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion verwendet in der [rebarinfo](/windows/desktop/api/commctrl/ns-commctrl-tagrebarinfo) -Struktur gespeicherte Größen-und Masken Informationen, wie im Windows SDK beschrieben.
+Diese Member-Funktion verwendet in der [rebarinfo](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) -Struktur gespeicherte Größen-und Masken Informationen, wie im Windows SDK beschrieben.
 
 ##  <a name="getpalette"></a>"Krebarctrl:: getpalette"
 
@@ -570,7 +570,7 @@ Beachten Sie, dass diese Member- `CPalette` Funktion ein-Objekt als Rückgabewer
 
 ##  <a name="getrect"></a>"Krebarctrl:: GetRect"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_GETRECT](/windows/desktop/Controls/rb-getrect), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_GETRECT](/windows/win32/Controls/rb-getrect), wie im Windows SDK beschrieben.
 
 ```
 BOOL GetRect(
@@ -596,7 +596,7 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ##  <a name="getrowcount"></a>"Krebarctrl:: GetRowCount"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_GETROWCOUNT](/windows/desktop/Controls/rb-getrowcount), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_GETROWCOUNT](/windows/win32/Controls/rb-getrowcount), wie im Windows SDK beschrieben.
 
 ```
 UINT GetRowCount() const;
@@ -612,7 +612,7 @@ Ein uint-Wert, der die Anzahl der Band Zeilen im-Steuerelement darstellt.
 
 ##  <a name="getrowheight"></a>"Krebarctrl:: getRowHeight"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_GETROWHEIGHT](/windows/desktop/Controls/rb-getrowheight), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_GETROWHEIGHT](/windows/win32/Controls/rb-getrowheight), wie im Windows SDK beschrieben.
 
 ```
 UINT GetRowHeight(UINT uRow) const;
@@ -633,7 +633,7 @@ Ein uint-Wert, der die Zeilenhöhe in Pixel darstellt.
 
 ##  <a name="gettextcolor"></a>"Krebarctrl:: gettextcolor"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_GETTEXTCOLOR](/windows/desktop/Controls/rb-gettextcolor), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_GETTEXTCOLOR](/windows/win32/Controls/rb-gettextcolor), wie im Windows SDK beschrieben.
 
 ```
 COLORREF GetTextColor() const;
@@ -645,7 +645,7 @@ Ein COLORREF-Wert, der die aktuelle Standard Textfarbe darstellt.
 
 ##  <a name="gettooltips"></a>"Krebarctrl:: gettooltips"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_GETTOOLTIPS](/windows/desktop/Controls/rb-gettooltips), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_GETTOOLTIPS](/windows/win32/Controls/rb-gettooltips), wie im Windows SDK beschrieben.
 
 ```
 CToolTipCtrl* GetToolTips() const;
@@ -661,7 +661,7 @@ Beachten Sie, dass die MFC `GetToolTips` -Implementierung von einen Zeiger `CToo
 
 ##  <a name="hittest"></a>"Krebarctrl:: HitTest"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_HITTEST](/windows/desktop/Controls/rb-hittest), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_HITTEST](/windows/win32/Controls/rb-hittest), wie im Windows SDK beschrieben.
 
 ```
 int HitTest(RBHITTESTINFO* prbht);
@@ -670,7 +670,7 @@ int HitTest(RBHITTESTINFO* prbht);
 ### <a name="parameters"></a>Parameter
 
 *prbht*<br/>
-Ein Zeiger auf eine [rbhittestinfo](/windows/desktop/api/commctrl/ns-commctrl-_rb_hittestinfo) -Struktur. Bevor die Nachricht gesendet wird, `pt` muss der Member dieser Struktur in Client Koordinaten mit dem zu testenden Punkt initialisiert werden.
+Ein Zeiger auf eine [rbhittestinfo](/windows/win32/api/commctrl/ns-commctrl-_rb_hittestinfo) -Struktur. Bevor die Nachricht gesendet wird, `pt` muss der Member dieser Struktur in Client Koordinaten mit dem zu testenden Punkt initialisiert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -678,7 +678,7 @@ Der null basierte Index des Bands am angegebenen Punkt, oder-1, wenn sich kein u
 
 ##  <a name="idtoindex"></a>"Krebarctrl:: idto Index"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_IDTOINDEX](/windows/desktop/controls/rb-idtoindex), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_IDTOINDEX](/windows/win32/controls/rb-idtoindex), wie im Windows SDK beschrieben.
 
 ```
 int IDToIndex(UINT uBandID) const;
@@ -687,7 +687,7 @@ int IDToIndex(UINT uBandID) const;
 ### <a name="parameters"></a>Parameter
 
 *uBandID*<br/>
-Der von der Anwendung definierte Bezeichner des angegebenen Bands, der beim `wID` Einfügen des Bands an den Member der [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) -Struktur weitergegeben wird.
+Der von der Anwendung definierte Bezeichner des angegebenen Bands, der beim `wID` Einfügen des Bands an den Member der [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) -Struktur weitergegeben wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -695,7 +695,7 @@ Der null basierte Band Index, wenn erfolgreich, andernfalls-1. Wenn doppelte Ban
 
 ##  <a name="insertband"></a>"Krebarctrl:: InsertBand"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_INSERTBAND](/windows/desktop/Controls/rb-insertband), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_INSERTBAND](/windows/win32/Controls/rb-insertband), wie im Windows SDK beschrieben.
 
 ```
 BOOL InsertBand(
@@ -709,7 +709,7 @@ BOOL InsertBand(
 Der null basierte Index der Position, an der das Band eingefügt wird. Wenn Sie diesen Parameter auf "-1" festlegen, fügt das Steuerelement das neue Band am letzten Speicherort hinzu.
 
 *prbbi*<br/>
-Ein Zeiger auf eine [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) -Struktur, die das einzufügende Band definiert. Sie müssen den *CBSIZE* -Member dieser Struktur auf festlegen `sizeof(REBARBANDINFO)` , bevor Sie diese Funktion aufrufen.
+Ein Zeiger auf eine [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) -Struktur, die das einzufügende Band definiert. Sie müssen den *CBSIZE* -Member dieser Struktur auf festlegen `sizeof(REBARBANDINFO)` , bevor Sie diese Funktion aufrufen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -734,7 +734,7 @@ Der null basierte Index des zu maximier enden Bands.
 
 ### <a name="remarks"></a>Hinweise
 
-Implementiert das Verhalten der Win32-Nachricht [RB_MAXIMIZEBAND](/windows/desktop/Controls/rb-maximizeband) , `fIdeal` wobei auf 0 (null) festgelegt ist, wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband) , `fIdeal` wobei auf 0 (null) festgelegt ist, wie im Windows SDK beschrieben.
 
 ### <a name="example"></a>Beispiel
 
@@ -755,7 +755,7 @@ Der null basierte Index des zu minimier enden Bands.
 
 ### <a name="remarks"></a>Hinweise
 
-Implementiert das Verhalten der Win32-Nachricht [RB_MINIMIZEBAND](/windows/desktop/Controls/rb-minimizeband), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_MINIMIZEBAND](/windows/win32/Controls/rb-minimizeband), wie im Windows SDK beschrieben.
 
 ### <a name="example"></a>Beispiel
 
@@ -763,7 +763,7 @@ Implementiert das Verhalten der Win32-Nachricht [RB_MINIMIZEBAND](/windows/deskt
 
 ##  <a name="moveband"></a>"Krebarctrl:: muveband"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_MOVEBAND](/windows/desktop/Controls/rb-moveband), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_MOVEBAND](/windows/win32/Controls/rb-moveband), wie im Windows SDK beschrieben.
 
 ```
 BOOL MoveBand(
@@ -785,7 +785,7 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ##  <a name="pushchevron"></a>"Krebarctrl::P ushchevron"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_PUSHCHEVRON](/windows/desktop/Controls/rb-pushchevron), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron), wie im Windows SDK beschrieben.
 
 ```
 void PushChevron(
@@ -799,7 +799,7 @@ void PushChevron(
 NULL basierter Index des Bands, dessen Chevron per pushübertragung durchgesetzt werden soll.
 
 *lAppValue*<br/>
-Ein von der Anwendung definierter 32-Bit-Wert. Siehe *lappvalue* in [RB_PUSHCHEVRON](/windows/desktop/Controls/rb-pushchevron) im Windows SDK.
+Ein von der Anwendung definierter 32-Bit-Wert. Siehe *lappvalue* in [RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron) im Windows SDK.
 
 ##  <a name="restoreband"></a>"Krebarctrl:: restoreband"
 
@@ -816,7 +816,7 @@ Der null basierte Index des zu maximier enden Bands.
 
 ### <a name="remarks"></a>Hinweise
 
-Implementiert das Verhalten der Win32-Nachricht [RB_MAXIMIZEBAND](/windows/desktop/Controls/rb-maximizeband) , `fIdeal` wobei auf 1 festgelegt ist, wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband) , `fIdeal` wobei auf 1 festgelegt ist, wie im Windows SDK beschrieben.
 
 ### <a name="example"></a>Beispiel
 
@@ -824,7 +824,7 @@ Implementiert das Verhalten der Win32-Nachricht [RB_MAXIMIZEBAND](/windows/deskt
 
 ##  <a name="setbandinfo"></a>"Krebarctrl:: SetBandInfo"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_SETBANDINFO](/windows/desktop/Controls/rb-setbandinfo), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_SETBANDINFO](/windows/win32/Controls/rb-setbandinfo), wie im Windows SDK beschrieben.
 
 ```
 BOOL SetBandInfo(
@@ -838,7 +838,7 @@ BOOL SetBandInfo(
 NULL basierter Index des Bands, um die neuen Einstellungen zu erhalten.
 
 *prbbi*<br/>
-Ein Zeiger auf eine [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) -Struktur, die das einzufügende Band definiert. Sie müssen den `cbSize` -Member dieser-Struktur auf `sizeof(REBARBANDINFO)` festlegen, bevor Sie diese Nachricht senden.
+Ein Zeiger auf eine [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) -Struktur, die das einzufügende Band definiert. Sie müssen den `cbSize` -Member dieser-Struktur auf `sizeof(REBARBANDINFO)` festlegen, bevor Sie diese Nachricht senden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -871,7 +871,7 @@ TRUE, wenn die Methode erfolgreich ist. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [RB_SETBANDWIDTH](/windows/desktop/Controls/rb-setbandwidth) -Nachricht, die im Windows SDK beschrieben wird.
+Diese Methode sendet die [RB_SETBANDWIDTH](/windows/win32/Controls/rb-setbandwidth) -Nachricht, die im Windows SDK beschrieben wird.
 
 ### <a name="example"></a>Beispiel
 
@@ -887,7 +887,7 @@ Im folgenden Codebeispiel wird jedes Grund leisten-Band auf die gleiche Breite f
 
 ##  <a name="setbarinfo"></a>"Krebarctrl:: setbarinfo"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_SETBARINFO](/windows/desktop/Controls/rb-setbarinfo), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_SETBARINFO](/windows/win32/Controls/rb-setbarinfo), wie im Windows SDK beschrieben.
 
 ```
 BOOL SetBarInfo(REBARINFO* prbi);
@@ -896,7 +896,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ### <a name="parameters"></a>Parameter
 
 *prbi*<br/>
-Ein Zeiger auf eine [rebarinfo](/windows/desktop/api/commctrl/ns-commctrl-tagrebarinfo) -Struktur, die die festzulegenden Informationen enthält. Sie müssen den `cbSize` Member dieser Struktur auf festlegen, `sizeof(REBARINFO)` bevor Sie diese Nachricht senden.
+Ein Zeiger auf eine [rebarinfo](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) -Struktur, die die festzulegenden Informationen enthält. Sie müssen den `cbSize` Member dieser Struktur auf festlegen, `sizeof(REBARINFO)` bevor Sie diese Nachricht senden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -908,7 +908,7 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ##  <a name="setbkcolor"></a>"Krebarctrl:: SetBkColor"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_SETBKCOLOR](/windows/desktop/Controls/rb-setbkcolor), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_SETBKCOLOR](/windows/win32/Controls/rb-setbkcolor), wie im Windows SDK beschrieben.
 
 ```
 COLORREF SetBkColor(COLORREF clr);
@@ -921,7 +921,7 @@ Der COLORREF-Wert, der die neue Standard Hintergrundfarbe darstellt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [COLORREF](/windows/desktop/gdi/colorref) -Wert, der die vorherige Standard Hintergrundfarbe darstellt.
+Ein [COLORREF](/windows/win32/gdi/colorref) -Wert, der die vorherige Standard Hintergrundfarbe darstellt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -938,7 +938,7 @@ void SetColorScheme(const COLORSCHEME* lpcs);
 ### <a name="parameters"></a>Parameter
 
 *lpcs*<br/>
-Ein Zeiger auf eine [ColorScheme](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) -Struktur, wie im Windows SDK beschrieben.
+Ein Zeiger auf eine [ColorScheme](/windows/win32/api/commctrl/ns-commctrl-colorscheme) -Struktur, wie im Windows SDK beschrieben.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -958,7 +958,7 @@ DWORD SetExtendedStyle(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*dwMask*|in Eine bitweise Kombination (or) von Flags, die angeben, welche Flags im Parameter " *dwstyleex* " angewendet werden. Verwenden Sie einen oder mehrere der folgenden Werte:<br /><br /> RBS_EX_SPLITTER: Standardmäßig wird der Splitter im horizontalen Modus im horizontalen und rechts im vertikalen Modus angezeigt.<br /><br /> RBS_EX_TRANSPARENT: Leiten Sie die [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) -Nachricht an das übergeordnete Fenster weiter.|
+|*dwMask*|in Eine bitweise Kombination (or) von Flags, die angeben, welche Flags im Parameter " *dwstyleex* " angewendet werden. Verwenden Sie einen oder mehrere der folgenden Werte:<br /><br /> RBS_EX_SPLITTER: Standardmäßig wird der Splitter im horizontalen Modus im horizontalen und rechts im vertikalen Modus angezeigt.<br /><br /> RBS_EX_TRANSPARENT: Leiten Sie die [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) -Nachricht an das übergeordnete Fenster weiter.|
 |*dwStyleEx*|in Eine bitweise Kombination (or) von Flags, die die anzuwendenden Stile angeben. Um einen Stil festzulegen, geben Sie das gleiche Flag an, das im *dwMask* -Parameter verwendet wird. Geben Sie zum Zurücksetzen eines Stils Binary NULL an.|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -967,7 +967,7 @@ Der vorherige erweiterte Stil.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [RB_SETEXTENDEDSTYLE](/windows/desktop/Controls/rb-setextendedstyle) -Nachricht, die im Windows SDK beschrieben wird.
+Diese Methode sendet die [RB_SETEXTENDEDSTYLE](/windows/win32/Controls/rb-setextendedstyle) -Nachricht, die im Windows SDK beschrieben wird.
 
 ##  <a name="setimagelist"></a>"Krebarctrl:: SetImageList"
 
@@ -988,7 +988,7 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ##  <a name="setowner"></a>"Krebarctrl:: seetowner"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_SETPARENT](/windows/desktop/Controls/rb-setparent), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_SETPARENT](/windows/win32/Controls/rb-setparent), wie im Windows SDK beschrieben.
 
 ```
 CWnd* SetOwner(CWnd* pWnd);
@@ -1012,7 +1012,7 @@ Beachten Sie, dass diese Member-Funktion `CWnd` Zeiger auf-Objekte sowohl für d
 
 ##  <a name="setpalette"></a>"Krebarctrl:: SetPalette"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_SETPALETTE](/windows/desktop/Controls/rb-setpalette), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_SETPALETTE](/windows/win32/Controls/rb-setpalette), wie im Windows SDK beschrieben.
 
 ```
 CPalette* SetPalette(HPALETTE hPal);
@@ -1033,7 +1033,7 @@ Beachten Sie, dass diese Member- `CPalette` Funktion ein-Objekt als Rückgabewer
 
 ##  <a name="settextcolor"></a>"Krebarctrl:: SetTextColor"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_SETTEXTCOLOR](/windows/desktop/Controls/rb-settextcolor), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_SETTEXTCOLOR](/windows/win32/Controls/rb-settextcolor), wie im Windows SDK beschrieben.
 
 ```
 COLORREF SetTextColor(COLORREF clr);
@@ -1046,7 +1046,7 @@ Ein COLORREF-Wert, der die neue Textfarbe im `CReBarCtrl` -Objekt darstellt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der [COLORREF](/windows/desktop/gdi/colorref) -Wert, der die vorherige Textfarbe darstellt `CReBarCtrl` , die dem-Objekt zugeordnet ist.
+Der [COLORREF](/windows/win32/gdi/colorref) -Wert, der die vorherige Textfarbe darstellt `CReBarCtrl` , die dem-Objekt zugeordnet ist.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1088,11 +1088,11 @@ Der Rückgabewert wird nicht verwendet.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion emuliert die Funktionalität der [RB_SETWINDOWTHEME](/windows/desktop/Controls/rb-setwindowtheme) -Nachricht, wie im Windows SDK beschrieben.
+Diese Member-Funktion emuliert die Funktionalität der [RB_SETWINDOWTHEME](/windows/win32/Controls/rb-setwindowtheme) -Nachricht, wie im Windows SDK beschrieben.
 
 ##  <a name="showband"></a>"Krebarctrl:: Showband"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_SHOWBAND](/windows/desktop/Controls/rb-showband), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_SHOWBAND](/windows/win32/Controls/rb-showband), wie im Windows SDK beschrieben.
 
 ```
 BOOL ShowBand(
@@ -1114,7 +1114,7 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ##  <a name="sizetorect"></a>"Krebarctrl:: sizetorect"
 
-Implementiert das Verhalten der Win32-Nachricht [RB_SIZETORECT](/windows/desktop/Controls/rb-sizetorect), wie im Windows SDK beschrieben.
+Implementiert das Verhalten der Win32-Nachricht [RB_SIZETORECT](/windows/win32/Controls/rb-sizetorect), wie im Windows SDK beschrieben.
 
 ```
 BOOL SizeToRect(CRect& rect);

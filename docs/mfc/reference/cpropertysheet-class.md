@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: edae0e3d4751461bc8a5eb6644f5fdc62b0a5e8a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916860"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502825"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet-Klasse
 
@@ -107,13 +107,13 @@ class CPropertySheet : public CWnd
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CPropertySheet::m_psh](#m_psh)|Die Windows- [propsheethader](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2) -Struktur. Ermöglicht den Zugriff auf grundlegende Eigenschaften Blatt Parameter.|
+|[CPropertySheet::m_psh](#m_psh)|Die Windows- [propsheethader](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) -Struktur. Ermöglicht den Zugriff auf grundlegende Eigenschaften Blatt Parameter.|
 
 ## <a name="remarks"></a>Hinweise
 
 Ein Eigenschaften Blatt besteht aus einem `CPropertySheet` -Objekt und einem oder mehreren [CPropertyPage](../../mfc/reference/cpropertypage-class.md) -Objekten. Das Framework zeigt ein Eigenschaften Blatt als Fenster mit einem Satz von Registerkarten Indizes und einem Bereich an, der die aktuell ausgewählte Seite enthält. Der Benutzer navigiert zu einer bestimmten Seite, indem er die entsprechende Registerkarte verwendet.
 
-`CPropertySheet`bietet Unterstützung für die erweiterte [propsheethader](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2) -Struktur, die in Windows 98 und Windows NT 2000 eingeführt wurde. Die Struktur enthält zusätzliche Flags und Member, die die Verwendung einer "Wasserzeichen"-Hintergrund Bitmap unterstützen.
+`CPropertySheet`bietet Unterstützung für die erweiterte [propsheethader](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) -Struktur, die in Windows 98 und Windows NT 2000 eingeführt wurde. Die Struktur enthält zusätzliche Flags und Member, die die Verwendung einer "Wasserzeichen"-Hintergrund Bitmap unterstützen.
 
 Wenn Sie diese neuen Bilder automatisch in Ihrem Eigenschaften Blatt Objekt anzeigen möchten, übergeben Sie gültige Werte für das Bitmap-und Palettenbild im [CPropertySheet:: Construct](#construct) -oder [CPropertySheet:: CPropertySheet](#cpropertysheet)-Befehl.
 
@@ -584,7 +584,7 @@ Beispiel: diese Member-Funktion wird aufgerufen, wenn Sie jeder Registerkarte w�
 
 ##  <a name="m_psh"></a>CPropertySheet:: m_psh
 
-Eine-Struktur, deren Member die Merkmale von [propsheeder Ader](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2)speichern.
+Eine-Struktur, deren Member die Merkmale von [propsheeder Ader](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)speichern.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -613,7 +613,7 @@ Verweist auf eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur oder 
 
 Dialog Feld Einheiten werden in Bezug auf die aktuelle Dialogfeld-Basiseinheit angegeben, die von der durchschnittlichen Breite und Höhe der Zeichen in der Schriftart abgeleitet ist, die für Text im Dialogfeld verwendet wird. Eine horizontale Einheit ist ein vierte der Dialogfeld-Basis breiten Einheit, und eine vertikale Einheit ist ein Achtel der Dialogfeld-Basis Höheneinheit.
 
-Die Windows-Funktion [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) gibt Größen Informationen für die System Schriftart zurück, Sie können jedoch für jedes Eigenschaften Blatt eine andere Schriftart angeben, wenn Sie den DS_SETFONT-Stil in der Ressourcen Definitionsdatei verwenden. Die in der Windows SDK beschriebene Windows-Funktion [mapdialogrect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) verwendet die entsprechende Schriftart für dieses Dialogfeld.
+Die Windows-Funktion [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) gibt Größen Informationen für die System Schriftart zurück, Sie können jedoch für jedes Eigenschaften Blatt eine andere Schriftart angeben, wenn Sie den DS_SETFONT-Stil in der Ressourcen Definitionsdatei verwenden. Die in der Windows SDK beschriebene Windows-Funktion [mapdialogrect](/windows/win32/api/winuser/nf-winuser-mapdialogrect) verwendet die entsprechende Schriftart für dieses Dialogfeld.
 
 Die `MapDialogRect` Member-Funktion ersetzt die Dialogfeld Einheiten in *lprect* durch Bildschirm Einheiten (Pixel), sodass das Rechteck verwendet werden kann, um ein Dialogfeld zu erstellen oder ein Steuerelement in einem Feld zu positionieren.
 
@@ -666,9 +666,9 @@ nschaltfläche Gibt die zu drückende Schaltfläche an. Dieser Parameter kann ei
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen zur Windows SDK pressbutton-Nachricht finden Sie unter [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) .
+Weitere Informationen zur Windows SDK pressbutton-Nachricht finden Sie unter [PSM_PRESSBUTTON](/windows/win32/Controls/psm-pressbutton) .
 
-Bei einem- `PressButton` Aufrufvorgang wird die [PSN_APPLY](/windows/desktop/Controls/psn-apply) -Benachrichtigung nicht von einer Eigenschaften Seite an das Framework gesendet. Um diese Benachrichtigung zu senden, wenden Sie [CPropertyPage:: OnOK](../../mfc/reference/cpropertypage-class.md#onok)an.
+Bei einem- `PressButton` Aufrufvorgang wird die [PSN_APPLY](/windows/win32/Controls/psn-apply) -Benachrichtigung nicht von einer Eigenschaften Seite an das Framework gesendet. Um diese Benachrichtigung zu senden, wenden Sie [CPropertyPage:: OnOK](../../mfc/reference/cpropertypage-class.md#onok)an.
 
 ### <a name="example"></a>Beispiel
 

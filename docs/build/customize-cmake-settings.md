@@ -1,20 +1,20 @@
 ---
 title: Anpassen von CMake-Buildeinstellungen in Visual Studio
-ms.date: 05/16/2019
+ms.date: 08/20/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: a00b18f163758be0238a05c4d2af3195014d79b0
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: ecd2964e035cbf3d48a737164b0067720e9b6b9a
+ms.sourcegitcommit: 0df462d79ad617296095c3012badc2fe669bab2f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042538"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887051"
 ---
 # <a name="customize-cmake-build-settings"></a>Anpassen von CMake-Buildeinstellungen
 
 ::: moniker range="vs-2019"
 
-In Visual Studio 2019 und höher können Sie mithilfe des **CMake-Einstellungs-Editors** Konfigurationen hinzufügen und ihre Einstellungen anpassen. Der Editor soll eine einfachere Alternative zur manuellen Bearbeitung der CMakeSettings.json-Datei bieten, aber wenn Sie es vorziehen, die Datei direkt zu bearbeiten, können Sie auf den Link **JSON bearbeiten** oben rechts im Editor klicken. 
+In Visual Studio 2019 und höher können Sie mithilfe des **CMake-Einstellungs-Editors** Konfigurationen hinzufügen und ihre Einstellungen anpassen. Der Editor ist eine einfachere Alternative zum manuellen Bearbeiten der Datei " *cmakesettings. JSON* ". Wenn Sie die Datei jedoch lieber direkt bearbeiten möchten, können Sie auf den Link " **JSON bearbeiten** " in der oberen rechten Ecke des Editors klicken. 
 
 Um den Editor zu öffnen, klicken Sie auf die Dropdownliste **Konfiguration** in der Hauptsymbolleiste, und wählen Sie **Konfigurationen verwalten** aus.
 
@@ -24,9 +24,9 @@ Jetzt wird der **Einstellungs-Editor** mit den installierten Konfigurationen auf
 
 ![CMake-Einstellungs-Editor](media/cmake-settings-editor.png)
 
-Visual Studio bietet standardmäßig zwei Konfigurationen: `x64-Debug` und `x86-Debug`. Sie können zusätzliche Konfigurationen hinzufügen, indem Sie auf das grüne Pluszeichen klicken. Die Einstellungen, die Sie im Editor sehen, können sich je nach ausgewählter Konfiguration unterscheiden.
+Visual Studio bietet Standard `x64-Debug` mäßig eine Konfiguration. Sie können zusätzliche Konfigurationen hinzufügen, indem Sie auf das grüne Pluszeichen klicken. Welche Einstellungen im Editor angezeigt werden, hängt davon ab, welche Konfiguration ausgewählt ist.
 
-Die Optionen, die Sie im Editor auswählen, werden in eine Datei mit dem Namen „CMakeSettings.json“ geschrieben. Diese Datei stellt Befehlszeilenargumente und Umgebungsvariablen zur Verfügung, die beim Erstellen der Projekte an CMake übergeben werden. Visual Studio ändert „CMakeLists.txt“ nie automatisch; mithilfe von „CMakeSettings.json“ können Sie den Build durch Visual Studio anpassen, ohne die CMake-Projektdateien zu bearbeiten, so dass andere in Ihrem Team sie mit Tools ihrer Wahl nutzen können.
+Die Optionen, die Sie im Editor auswählen, werden in eine Datei mit dem Namen *cmakesettings. JSON*geschrieben. Diese Datei stellt Befehlszeilenargumente und Umgebungsvariablen zur Verfügung, die beim Erstellen der Projekte an CMake übergeben werden. Visual Studio ändert " *CMakeLists. txt* " nie automatisch. mithilfe von *cmakesettings. JSON* können Sie den Build über Visual Studio anpassen, während die cmake-Projektdateien unverändert bleiben, sodass andere Benutzer in Ihrem Team Sie mit den Tools nutzen können, die Sie verwenden.
 
 ## <a name="cmake-general-settings"></a>CMake – allgemeine Einstellungen
 
@@ -34,24 +34,24 @@ Die folgenden Einstellungen sind unter der Überschrift **Allgemein** verfügbar
 
 ### <a name="configuration-name"></a>Konfigurationsname
 
-Entspricht der Einstellung **name**. Die ist der Name, der in der Dropdownliste für die C++-Konfiguration angezeigt wird. Sie können das `${name}`-Makro verwenden, um weitere Eigenschaftswerte wie etwa Pfade zu verfassen.
+Entspricht der Einstellung **name**. Dieser Name wird in der C++ Dropdown Liste Konfiguration angezeigt. Sie können das `${name}`-Makro verwenden, um weitere Eigenschaftswerte wie etwa Pfade zu verfassen.
 
 
 ### <a name="configuration-type"></a>Konfigurationstyp
 
-Entspricht der Einstellung **configurationType**. Definiert den Typ der Buildkonfiguration für den ausgewählten Generator. Derzeit werden die Werte "Debug", "MinSizeRel", "Release" und "RelWithDebInfo" unterstützt.
+Entspricht der Einstellung **configurationType**. Definiert den Typ der Buildkonfiguration für den ausgewählten Generator. Derzeit werden die Werte "Debug", "MinSizeRel", "Release" und "RelWithDebInfo" unterstützt. Sie wird [CMAKE_BUILD_TYPE](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html)zugeordnet.
 
 ### <a name="toolset"></a>Toolset
 
-Entspricht der Einstellung **inheritedEnvironments**. Definiert die Compilerumgebung, die zum Erstellen der ausgewählten Konfiguration verwendet wird. Die unterstützten Werte hängen von der Art der Konfiguration ab. Um eine benutzerdefinierte Umgebung zu erstellen, klicken Sie auf den Link **JSON bearbeiten** in der oberen rechten Ecke des Einstellungs-Editors, und bearbeiten Sie die CMakeSettings.json-Datei direkt.
+Entspricht der Einstellung **inheritedEnvironments**. Definiert die Compilerumgebung, die zum Erstellen der ausgewählten Konfiguration verwendet wird. Die unterstützten Werte hängen von der Art der Konfiguration ab. Um eine benutzerdefinierte Umgebung zu erstellen, wählen Sie den Link **JSON bearbeiten** in der oberen rechten Ecke des Einstellungs-Editors aus, und bearbeiten Sie die Datei " *cmakesettings. JSON* " direkt.
 
 ### <a name="cmake-toolchain-file"></a>CMake-Toolkettendatei
 
-Pfad zur CMake-Toolkettendatei. Wird an CMake als „-DCMAKE_TOOLCHAIN_FILE = \<dateipfad>“ übergeben.
+Der Pfad zur [cmake-Toolkette-Datei](https://cmake.org/cmake/help/latest/variable/CMAKE_TOOLCHAIN_FILE.html). Dieser Pfad wird als "-DCMAKE_TOOLCHAIN_FILE = \<filePath >" an cmake übergeben. Toolkette-Dateien geben Speicherorte von Compilern und Toolkette-Hilfsprogrammen sowie andere Informationen zu Zielplattform und Compilerinformationen an. Standardmäßig verwendet Visual Studio die [vcpkg-Toolkette-Datei](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake) , wenn diese Einstellung nicht angegeben ist. 
 
 ### <a name="build-root"></a>Buildstamm
 
-Entspricht **buildRoot**. Ist dem Schalter **-DCMAKE_BINARY_DIR** zugeordnet und gibt an, wo der CMake-Cache erstellt wird. Wenn der Ordner noch nicht vorhanden ist, wird dieser erstellt.
+Entspricht **buildRoot**. Wird [CMAKE_BINARY_DIR](https://cmake.org/cmake/help/v3.15/variable/CMAKE_BINARY_DIR.html)zugeordnet und gibt an, wo der cmake-Cache erstellt wird. Der angegebene Ordner wird erstellt, wenn er nicht vorhanden ist.
 
 ## <a name="command-arguments"></a>Befehlsargumente
 
@@ -59,16 +59,16 @@ Die folgenden Einstellungen sind unter der Überschrift **Befehlsargumente** ver
 
 ### <a name="cmake-command-arguments"></a>CMake-Befehlsargumente
 
-Entspricht **cmakeCommandArgs**. Gibt alle zusätzlichen Schalter an, die Sie an „CMake.exe“ übergeben möchten.
+Entspricht **cmakeCommandArgs**. Gibt alle zusätzlichen [Befehlszeilenoptionen](https://cmake.org/cmake/help/latest/manual/cmake.1.html) an, die an cmake. exe übergeben werden.
 
 ### <a name="build-command-arguments"></a>Build-Befehlsargumente
 
-Entspricht **buildCommandArgs**: Gibt zusätzliche Schalter an, die dem zugrundeliegenden Buildsystem übergeben werden sollen. Beispielsweise wird beim Übergeben von „-v“ mithilfe des Ninja-Generators erzwungen, dass Ninja Befehlszeilen ausgibt.
+Entspricht **buildcommandargs**. Gibt zusätzliche Switches an, die an das zugrunde liegende Buildsystem übergeben werden. Wenn Sie z. `-v` b. bei Verwendung des Ninja-Generators übergeben, werden die Befehlszeilen von Ninja ausgegeben.
 
 
 ### <a name="ctest-command-arguments"></a>CTest-Befehlsargumente
 
-Entspricht **ctestCommandArgs**: Gibt zusätzliche Schalter an, die beim Ausführen von Tests an CTest übergeben werden.
+Entspricht **ctestcommandargs**. Gibt zusätzliche [Befehlszeilenoptionen](https://cmake.org/cmake/help/v3.15/manual/ctest.1.html) an, die beim Ausführen von Tests an CTest übergeben werden.
 
 ## <a name="general-settings-for-remote-builds"></a>Allgemeine Einstellungen für Remotebuilds
 
@@ -76,19 +76,19 @@ Für Konfigurationen wie Linux, die Remotebuilds verwenden, sind ferner die folg
 
 ### <a name="rsync-command-arguments"></a>rsync-Befehlsargumente
 
-Geben Sie alle Befehlsargumente an, die an rsync übergeben werden sollen. 
+Zusätzliche Befehlszeilenoptionen, die an [rsync](https://download.samba.org/pub/rsync/rsync.html)übermittelt werden, ein schnelles und vielseitiges Tool zum Kopieren von Dateien. 
 
 ## <a name="cmake-variables-and-cache"></a>CMake-Variablen und -Cache
 
-Mithilfe dieser Einstellungen können Sie CMake-Variablen festlegen und sie in „CMakeSettings.json“ speichern. Sie werden zur Erstellungszeit an CMake übergeben und setzen die in der Datei „CMakeLists.txt“ vorhandenen Werte außer Kraft. Sie können diesen Abschnitt in der gleichen Weise verwenden, in der Sie das CMakeGUI verwenden, um eine Liste aller für die Bearbeitung verfügbaren CMake-Variablen anzuzeigen. Klicken Sie auf die Schaltfläche **Speichern und Cache generieren**, um eine Liste aller für die Bearbeitung verfügbaren CMake-Variablen anzuzeigen, einschließlich erweiterter Variablen (mithilfe des CMakeGUI). Sie können die Liste nach dem Variablennamen filtern. 
+Diese Einstellungen ermöglichen es Ihnen, cmake-Variablen festzulegen und in " *cmakesettings. JSON*" zu speichern. Sie werden zur Buildzeit an cmake übergeben und überschreiben alle Werte in der Datei " *CMakeLists. txt* ". Sie können diesen Abschnitt in der gleichen Weise verwenden, in der Sie das CMakeGUI verwenden, um eine Liste aller für die Bearbeitung verfügbaren CMake-Variablen anzuzeigen. Klicken Sie auf die Schaltfläche **Speichern und Cache generieren**, um eine Liste aller für die Bearbeitung verfügbaren CMake-Variablen anzuzeigen, einschließlich erweiterter Variablen (mithilfe des CMakeGUI). Sie können die Liste nach Variablennamen filtern. 
 
-Entspricht **variables:** enthält ein Name/Wert-Paar von CMake-Variablen, die als **-D** *_name_=_value_* an CMake übergeben werden. Wenn die Buildanweisungen Ihres CMake-Projekts das direkte Hinzufügen aller Variablen zur CMake-Cachedatei festlegen, wird empfohlen, diese stattdessen hier hinzuzufügen.
+Entspricht **Variablen**. Enthält ein Name-Wert-Paar aus cmake-Variablen, die als **-D-** *_namens_=_Wert_* an cmake übergeben werden. Wenn Ihre cmake-projektbuildanweisungen das Hinzufügen von Variablen direkt zur cmake-Cachedatei angeben, empfiehlt es sich, Sie hier hinzuzufügen.
 
 ## <a name="advanced-settings"></a>Erweiterte Einstellungen
 
 ### <a name="cmake-generator"></a>CMake-Generator
 
-Entspricht **generator**: ist dem CMake-Schalter **-G** zugeordnet und gibt den Generator an, der verwendet werden soll. Diese Eigenschaft kann ebenfalls als Makro (`${generator}`) beim Erstellen anderer Eigenschaftswerte verwendet werden. Visual Studio unterstützt derzeit folgende CMake-Generatoren:
+Entspricht **Generator**. Wird dem Schalter cmake **-G** zugeordnet und gibt den zu verwendenden [cmake-Generator](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) an. Diese Eigenschaft kann ebenfalls als Makro (`${generator}`) beim Erstellen anderer Eigenschaftswerte verwendet werden. Visual Studio unterstützt derzeit folgende CMake-Generatoren:
 
   - "Ninja"
   - "Unix Makefiles"
@@ -102,37 +102,37 @@ Entspricht **generator**: ist dem CMake-Schalter **-G** zugeordnet und gibt den 
   - "Visual Studio 14 2015 Win64"
   - "Visual Studio 14 2015 ARM"
   
-  Da Ninja für schnelle Buildgeschwindigkeiten statt für Flexibilität und Funktionalität entwickelt wurde, ist dieser als Standardwert festgelegt. Einige CMake-Projekte können jedoch mit Ninja keinen ordnungsgemäßen Build durchführen. In diesem Fall können Sie CMake anweisen, stattdessen ein Visual Studio-Projekt zu erstellen.
+Da Ninja für schnelles Erstellen von Builds anstelle von Flexibilität und Funktion konzipiert ist, wird es als Standard festgelegt. Einige CMake-Projekte können jedoch mit Ninja keinen ordnungsgemäßen Build durchführen. Wenn dies der Fall ist, können Sie cmake anweisen, stattdessen ein Visual Studio-Projekt zu generieren.
 
 ### <a name="intellisense-mode"></a>IntelliSense-Modus
 
-Um eine präzise Funktion von IntelliSense zu erreichen, legen Sie dies auf den passenden Wert für Ihr Projekt fest.
+Der IntelliSense-Modus, der von der IntelliSense-Engine verwendet wird. Wenn kein Modus ausgewählt ist, erbt Visual Studio vom angegebenen Toolset.  
 
 ### <a name="install-directory"></a>Installationsverzeichnis
 
-Das Verzeichnis, in dem CMake die von ihm erstellten Ziele installiert.
+Das Verzeichnis, in dem cmake Ziele installiert. Wird [CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html)zugeordnet. 
 
 ### <a name="cmake-executable"></a>Ausführbare CMake-Datei
 
-Der vollständige Pfad zur ausführbaren CMake-Datei, einschließlich des Dateinamens und der Erweiterung. Geben Sie für Remotebuilds den CMake-Speicherort auf dem Remotecomputer an.
+Der vollständige Pfad zur ausführbaren cmake-Programmdatei, einschließlich des Datei namens und der Erweiterung. Sie können eine benutzerdefinierte Version von cmake mit Visual Studio verwenden. Geben Sie für Remotebuilds den CMake-Speicherort auf dem Remotecomputer an.
 
 Für Konfigurationen wie Linux, die Remotebuilds verwenden, sind ferner die folgenden Einstellungen verfügbar:
 
 ### <a name="remote-cmakeliststxt-root"></a>Remoteverzeichnis der Stammdatei „CMakeLists.txt“
 
-Das Verzeichnis auf dem Remotecomputer, das die Stammdatei „CMakeLists.txt“ enthält.
+Das Verzeichnis auf dem Remote Computer, das die Stammdatei " *CMakeLists. txt* " enthält.
 
 ### <a name="remote-install-root"></a>Installationsstammverzeichnis auf dem Remotesystem
 
-Das Verzeichnis auf dem Remotecomputer, in dem CMake Zieldateien installiert.
+Das Verzeichnis auf dem Remotecomputer, in dem CMake Zieldateien installiert. Wird [CMAKE_INSTALL_PREFIX](https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html)zugeordnet. 
 
 ### <a name="remote-copy-sources"></a>Quellen auf Remotesystem kopieren
 
-Gibt an, ob Quelldateien auf den Remotecomputer kopiert werden sollen, und ermöglicht Ihnen, anzugeben, ob rsync oder sftp verwendet werden soll. 
+Gibt an, ob Quelldateien auf den Remote Computer kopiert werden sollen, und ermöglicht Ihnen, anzugeben, ob Sie rsync oder SFTP verwenden möchten. 
 
 ## <a name="directly-edit-cmakesettingsjson"></a>„CMakeSettings.json“ direkt bearbeiten
 
-Sie können `CMakeSettings.json` auch direkt bearbeiten, um benutzerdefinierte Konfigurationen zu erstellen. Der **Einstellungs-Editor** weist eine Schaltfläche **JSON bearbeiten** oben rechts auf, mit der die Datei zur Bearbeitung geöffnet wird. 
+Sie können *cmakesettings. JSON* auch direkt bearbeiten, um benutzerdefinierte Konfigurationen zu erstellen. Der **Einstellungs-Editor** weist eine Schaltfläche **JSON bearbeiten** oben rechts auf, mit der die Datei zur Bearbeitung geöffnet wird. 
 
 Das folgende Beispiel zeigt eine Beispielkonfiguration, die Sie als Ausgangspunkt verwenden können:
 
@@ -148,14 +148,13 @@ Das folgende Beispiel zeigt eine Beispielkonfiguration, die Sie als Ausgangspunk
       "buildCommandArgs": "-v",
       "ctestCommandArgs": ""
     },
-
 ```
 
-JSON-IntelliSense unterstützt Sie beim Bearbeiten der Datei `CMakeSettings.json`:
+Mit JSON IntelliSense können Sie die Datei " *cmakesettings. JSON* " bearbeiten:
 
    ![JSON-IntelliSense für CMake](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
 
-Der JSON-Editor informiert Sie auch, wenn Sie inkompatible Einstellungen auswählen.
+Der JSON-Editor informiert Sie auch, wenn Sie nicht kompatible Einstellungen auswählen.
 
 Weitere Informationen zu den einzelnen Eigenschaften in der Datei finden Sie in der [CMakeSettings.json-Schemareferenz](cmakesettings-reference.md).
 
@@ -171,15 +170,15 @@ Sie können aus der Liste vordefinierter Konfigurationen wählen:
 
    ![Vordefinierte CMake-Konfigurationen](media/cmake-configurations.png)
 
-Wenn Sie zum ersten Mal eine Konfiguration auswählen, erstellt Visual Studio im Stammordner des Projekts eine `CMakeSettings.json`-Datei. Diese Datei wird verwendet, um die CMake-Cachedatei erneut zu erstellen, z.B. nach einem **Bereinigungsvorgang**. 
+Wenn Sie zum ersten Mal eine Konfiguration auswählen, erstellt Visual Studio eine *cmakesettings. JSON* -Datei im Stamm Ordner Ihres Projekts. Diese Datei wird verwendet, um die CMake-Cachedatei erneut zu erstellen, z.B. nach einem **Bereinigungsvorgang**. 
 
-Klicken Sie zum Hinzufügen einer zusätzlichen Konfiguration mit der rechten Maustaste auf `CMakeSettings.json`, und wählen Sie **Konfiguration hinzufügen** aus. 
+Klicken Sie zum Hinzufügen einer zusätzlichen Konfiguration mit der rechten Maustaste auf *cmakesettings. JSON* , und wählen Sie **Konfiguration hinzufügen**. 
 
    ![CMake: „Konfiguration hinzufügen“](media/cmake-add-configuration.png "CMake: „Konfiguration hinzufügen“")
 
-Sie können die Datei auch mithilfe des **Editors für CMake-Einstellungen** bearbeiten. Klicken Sie mit der rechten Maustaste im **Projektmappen-Explorer** auf `CMakeSettings.json`, und wählen Sie **CMake-Einstellungen bearbeiten** aus. Alternativ können Sie oben im Editor-Fenster aus der Konfigurations-Dropdownliste **Konfigurationen verwalten...** auswählen. 
+Sie können die Datei auch mithilfe des **Editors für CMake-Einstellungen** bearbeiten. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf *cmakesettings. JSON* , und wählen Sie **cmake-Einstellungen bearbeiten**aus. Alternativ können Sie oben im Editor-Fenster aus der Konfigurations-Dropdownliste **Konfigurationen verwalten...** auswählen. 
 
-Sie können `CMakeSettings.json` auch direkt bearbeiten, um benutzerdefinierte Konfigurationen zu erstellen. Im Folgenden wird eine Beispielkonfiguration gezeigt, die Sie als Ausgangspunkt verwenden können:
+Sie können *cmakesettings. JSON* auch direkt bearbeiten, um benutzerdefinierte Konfigurationen zu erstellen. Das folgende Beispiel zeigt eine Beispielkonfiguration, die Sie als Ausgangspunkt verwenden können:
 
 ```json
     {
@@ -193,10 +192,9 @@ Sie können `CMakeSettings.json` auch direkt bearbeiten, um benutzerdefinierte K
       "buildCommandArgs": "-v",
       "ctestCommandArgs": ""
     },
-
 ```
 
-JSON-IntelliSense unterstützt Sie beim Bearbeiten der Datei `CMakeSettings.json`:
+Mit JSON IntelliSense können Sie die Datei " *cmakesettings. JSON* " bearbeiten:
 
    ![JSON-IntelliSense für CMake](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
 
@@ -211,4 +209,4 @@ Weitere Informationen zu den einzelnen Eigenschaften in der Datei finden Sie in 
 [Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Konfigurieren von CMake-Debugsitzungen](configure-cmake-debugging-sessions.md)<br/>
 [Bereitstellen, Ausführen und Debuggen Ihres Linux-Projekts](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[CMake predefined configuration reference (Referenz für vordefinierte CMake-Konfigurationen)](cmake-predefined-configuration-reference.md)<br/>
+[CMake predefined configuration reference (Referenz für vordefinierte CMake-Konfigurationen)](cmake-predefined-configuration-reference.md)
