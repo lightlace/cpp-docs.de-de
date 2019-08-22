@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 095d909fefe0053b742368f260cf61937c2f5426
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915867"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497737"
 ---
 # <a name="catlservicemodulet-class"></a>Klasse von "-Klasse"
 
@@ -244,7 +244,7 @@ Optionale zusätzliche Zeichen folgen, die in das Ereignisprotokoll geschrieben 
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode schreibt Details mithilfe der Report [Event](/windows/desktop/api/winbase/nf-winbase-reporteventa)-Funktion in ein Ereignisprotokoll. Wenn kein Dienst ausgeführt wird, wird die Zeichenfolge an die Konsole gesendet.
+Diese Methode schreibt Details mithilfe der Report [Event](/windows/win32/api/winbase/nf-winbase-reporteventw)-Funktion in ein Ereignisprotokoll. Wenn kein Dienst ausgeführt wird, wird die Zeichenfolge an die Konsole gesendet.
 
 ##  <a name="m_bservice"></a>"": M_bService
 
@@ -280,7 +280,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 ### <a name="remarks"></a>Hinweise
 
-Die [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) -Struktur enthält Informationen zu einem Dienst.
+Die [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) -Struktur enthält Informationen zu einem Dienst.
 
 ##  <a name="m_status"></a>"": M_status
 
@@ -292,7 +292,7 @@ SERVICE_STATUS m_status;
 
 ### <a name="remarks"></a>Hinweise
 
-Die [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) -Struktur enthält Informationen zu einem Dienst.
+Die [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) -Struktur enthält Informationen zu einem Dienst.
 
 ##  <a name="m_szservicename"></a>"": M_szServiceName
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parameter
 
 *nShowCmd*<br/>
-Gibt an, wie das Fenster angezeigt werden soll. Dieser Parameter kann einer der Werte sein, die im Abschnitt [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) erläutert werden. Der Standardwert ist SW_HIDE.
+Gibt an, wie das Fenster angezeigt werden soll. Dieser Parameter kann einer der Werte sein, die im Abschnitt [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) erläutert werden. Der Standardwert ist SW_HIDE.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -475,7 +475,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="parameters"></a>Parameter
 
 *dwState*<br/>
-Der neue Status. Mögliche Werte finden Sie unter [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) .
+Der neue Status. Mögliche Werte finden Sie unter [SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus) .
 
 ### <a name="remarks"></a>Hinweise
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Parameter
 
 *nShowCmd*<br/>
-Gibt an, wie das Fenster angezeigt werden soll. Dieser Parameter kann einer der Werte sein, die im Abschnitt [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) erläutert werden.
+Gibt an, wie das Fenster angezeigt werden soll. Dieser Parameter kann einer der Werte sein, die im Abschnitt [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) erläutert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parameter
 
 *nShowCmd*<br/>
-Gibt an, wie das Fenster angezeigt werden soll. Dieser Parameter kann einer der Werte sein, die im Abschnitt [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) erläutert werden.
+Gibt an, wie das Fenster angezeigt werden soll. Dieser Parameter kann einer der Werte sein, die im Abschnitt [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) erläutert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
