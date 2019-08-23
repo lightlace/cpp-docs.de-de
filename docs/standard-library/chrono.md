@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: f01b00a1469cdf82590a1bdfc742312ec96912c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b3352110c2074b325ac345c05dbf899c0bdbd0ab
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459451"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975905"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -76,7 +76,14 @@ Ab Visual Studio 2015 hat sich die Implementierung von `steady_clock` so geände
 
 Weitere Informationen zu Verhältnistypen, die in den folgenden typedefs-Elementen verwendet werden, finden Sie unter [\<ratio>](../standard-library/ratio.md).
 
-||| ||| | `typedef duration<long long, nano> nanoseconds;`| Synonym für einen `duration` Typ, der über einen Teil Strichpunkt von 1 Nanosekunde`typedef duration<long long, micro> microseconds;`verfügt. | | | Synonym für einen `duration` Typ, der über einen Teil Strichpunkt von einer Mikrosekunde`typedef duration<long long, milli> milliseconds;`verfügt. | | | Synonym für einen `duration` Typ, der über einen Teil Strichpunkt von einer Millisekunde`typedef duration<long long> seconds;`verfügt. | | | Synonym für einen `duration` Typ, der über einen Teil Strichpunkt von einer Sekunde`typedef duration<int, ratio<60> > minutes;`verfügt. | | | Synonym für einen `duration` Typ, der über einen Tick-Zeitraum von 1 Minute verfügt`typedef duration<int, ratio<3600> > hours;`. | | | Synonym für einen `duration` Typ, der über einen Teil Strichpunkt von einer Stunde verfügt. |
+|||
+|-|-|
+|`typedef duration<long long, nano> nanoseconds;`|Synonym für einen `duration` Typ, der über einen Teil Strichpunkt von einer Nanosekunde verfügt.|
+|`typedef duration<long long, micro> microseconds;`|Synonym für einen `duration` Typ, der über einen Teil Strichpunkt von einer Mikrosekunde verfügt.|
+|`typedef duration<long long, milli> milliseconds;`|Synonym für einen `duration` Typ, der über einen Teil Strichpunkt von einer Millisekunde verfügt.|
+|`typedef duration<long long> seconds;`|Synonym für einen `duration` Typ, der über einen Teil Strichpunkt von einer Sekunde verfügt.|
+|`typedef duration<int, ratio<60> > minutes;`|Synonym für einen `duration` Typ, der über einen Teil Strichpunkt von einer Minute verfügt.|
+|`typedef duration<int, ratio<3600> > hours;`|Synonym für einen `duration` Typ, der über einen Teil Strichpunkt von einer Stunde verfügt.|
 
 ### <a name="literals"></a>Literale
 
