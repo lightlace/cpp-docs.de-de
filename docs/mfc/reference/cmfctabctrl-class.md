@@ -486,7 +486,7 @@ ResizeMode GetResizeMode() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Einer der `CMFCTabCtrl::ResizeMode` Enumerationswerte, der angibt, wie die Größe des Registerkarten-Steuer Elements geändert werden kann. Eine Liste möglicher Werte finden Sie im Abschnitt "Hinweise" der [cmfctabctrl::](#setresizemode) *-Methode.
+Einer der `CMFCTabCtrl::ResizeMode` Enumerationswerte, der angibt, wie die Größe des Registerkarten-Steuer Elements geändert werden kann. Eine Liste möglicher Werte finden Sie im Abschnitt "Hinweise" der [cmfctabctrl::](#setresizemode) -Methode.
 
 ##  <a name="getscrollbar"></a>Cmfctabctrl:: getscrollbar
 
