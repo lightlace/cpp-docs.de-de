@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 17f8082ac0442f65b9195b37da18b04f795d3d66
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7f73e51e02eafe46c279a8f828803912d8cd190a
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448962"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631695"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Einführung in Visual C++ für UNIX-Benutzer
 
@@ -57,7 +57,7 @@ Sie können alle Microsoft-spezifischen Erweiterungen von C++ deaktivieren, inde
 
 Die Microsoft C- und C++-Compiler stellen Optionen für das Vorkompilieren von beliebigem C- oder C++-Code bereit, einschließlich Inlinecode. Mithilfe dieser leistungsstarken Funktion können Sie einen stabilen Codeabschnitt kompilieren, den Code im kompilierten Zustand in einer Datei speichern und bei nachfolgenden Kompilierungen den vorkompilierten Code mit dem noch in Entwicklung befindlichen Code kombinieren. So können nachfolgende Kompilierungen beschleunigt werden, da der bereits stabile Code nicht neu kompiliert werden muss.
 
-Sämtlicher vorkompilierter Code wird standardmäßig in den Dateien „stdafx.h“ und „stdafx.cpp“ angegeben. Der **Assistent für neue Projekte** erstellt diese Dateien automatisch, sofern Sie die Option **Vorkompilierte Headerdatei** nicht deaktivieren. Weitere Informationen zu vorkompilierten Headern finden Sie unter [Erstellen vorkompilierter Headerdateien](../build/creating-precompiled-header-files.md).
+Sämtlicher vorkompilierter Code wird standardmäßig in den Dateien *pch.h* und *pch.cpp* (*stdafx.h* und *stdafx.cpp* in Visual Studio 2017 und früher) angegeben. Der **Assistent für neue Projekte** erstellt diese Dateien automatisch, sofern Sie die Option **Vorkompilierte Headerdatei** nicht deaktivieren. Weitere Informationen zu vorkompilierten Headern finden Sie unter [Erstellen vorkompilierter Headerdateien](../build/creating-precompiled-header-files.md).
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 

@@ -2,16 +2,16 @@
 title: Erstellen eines C++-Konsolen-App-Projekts
 description: Erstellen einer „Hallo Welt“-Konsolen-App und einer Taschenrechner-App in Visual C++
 ms.custom: mvc
-ms.date: 05/28/2019
+ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 9fc5508b68c8e206e76ead08ddb8015dd5133256
-ms.sourcegitcommit: 18f535a6c4cfe58362ed56599b1a875ee71ff6aa
+ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66410759"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631309"
 ---
 # <a name="create-a-c-console-app-project"></a>Erstellen eines C++-Konsolen-App-Projekts
 
@@ -486,7 +486,7 @@ Wandeln Sie den Code in dieser Vorlage nun in eine Rechner-App um.
    > Grundlegendes zum Code:
    >
    > - Die `#include`-Anweisungen ermöglichen es Ihnen, auf Code zu verweisen, der sich in anderen Dateien befindet. Manchmal kommt es vor, dass Sie einen Dateinamen sehen, der von spitzen Klammern ( **\<\>** ) eingeschlossen wird, manchmal wird er von Anführungszeichen ( **" "** ) eingeschlossen. Generell werden spitze Klammern verwendet, wenn auf die C++-Standardbibliothek verwiesen wird, während Anführungszeichen für andere Dateien verwendet werden.
-   > - Die `#include "pch.h"`-Zeile (bzw. die `#include "stdafx.h"`-Zeile in älteren Visual Studio-Versionen) verweist auf etwas, das als vorkompilierter Header bezeichnet wird. Diese werden oft von professionellen Programmierern verwendet, um Kompilierungszeiten zu verbessern. Für dieses Tutorial wären das aber schon zu weit gegriffen.
+   > - Die `#include "pch.h"`-Zeile (bzw. die `#include "stdafx.h"`-Zeile in Visual Studio 2017 und früher) verweist auf etwas, das als vorkompilierter Header bezeichnet wird. Diese werden oft von professionellen Programmierern verwendet, um Kompilierungszeiten zu verbessern. Für dieses Tutorial wären das aber schon zu weit gegriffen.
    > - Die `using namespace std;`-Zeile sagt dem Compiler, dass dieser Inhalt aus der C++-Standardbibliothek zu erwarten hat, der in dieser Datei verwendet werden soll. Ohne diese Zeile müsste vor jedem Stichwort aus der Bibliothek `std::` stehen, um dessen Bereich anzuzeigen. Ohne diese Zeile müsste beispielsweise jeder Verweis auf `cout` als `std::cout` geschrieben werden. Die `using`-Anweisung wird hinzugefügt, um den Code übersichtlicher zu gestalten.
    > - Das Schlüsselwort `cout` wird verwendet, damit die Standardausgabe in C++ erfolgt. Der Operator **\<\<** sagt dem Compiler, dass dieser alles, was rechts von ihm steht, an die Standardausgabe senden soll.
    > - Das Schlüsselwort **endl** ist ähnlich wie die Eingabetaste. Es beendet die Zeile und lässt den Cursor in die nächste Zeile springen. Es hat sich aber noch mehr bewährt, innerhalb der Zeichenfolge mit demselben Effekt ein `\n`-Zeichen zu setzen (eingeschlossen von ""), da `endl` den Puffer immer leert und der Leistung des Programms schaden kann. Da es sich hier aber um eine kleine App handelt, wird stattdessen aus Gründen der besseren Lesbarkeit `endl` verwendet.
