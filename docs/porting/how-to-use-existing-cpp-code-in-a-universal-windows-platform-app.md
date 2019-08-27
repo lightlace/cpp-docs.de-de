@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verwenden von vorhandenem C++-Code in einer UWP-App (Universelle Windows-Plattform)'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510383"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630427"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Vorgehensweise: Verwenden von vorhandenem C++-Code in einer UWP-App (Universelle Windows-Plattform)
 
@@ -151,7 +151,7 @@ Das folgende Verfahren gilt, wenn Sie über eine native DLL verfügen, die Funkt
 
    Der **Projektmappen-Explorer** erkennt das Projekt nun als universelles Windows-Projekt.
 
-5. Stellen Sie sicher, dass der Name der vorkompilierten Headerdatei richtig ist. Ändern Sie im Abschnitt **Vorkompilierte Header** den Namen unter **Vorkompilierte Headerdatei** von „pch.h“ in „stdafx.h“. Wenn Sie dies nicht tun, wird die folgende Fehlermeldung angezeigt.
+5. Stellen Sie sicher, dass der Name der vorkompilierten Headerdatei richtig ist. Ändern Sie im Abschnitt **Vorkompilierte Header** den Namen unter **Vorkompilierte Headerdatei** von *pch.h* in *stdafx.h*. Wenn Sie dies nicht tun, wird die folgende Fehlermeldung angezeigt.
 
    > Fehler C2857: Die mit der Befehlszeilenoption /Ycpch.h angegebene „#include“-Anweisung konnte in der Quelldatei nicht gefunden werden
 
@@ -165,7 +165,7 @@ Das folgende Verfahren gilt, wenn Sie über eine native DLL verfügen, die Funkt
 
    Aktivieren Sie unter **Projekte** > **Projektmappe** das Kontrollkästchen neben dem DLL-Projekt, und klicken Sie dann auf die Schaltfläche **OK**.
 
-8. Schließen Sie die Headerdatei(en) für die Bibliothek in die „pch.h“-Datei Ihrer UWP-App ein.
+8. Schließen Sie die Headerdatei(en) für die Bibliothek in die Datei *pch.h* Ihrer UWP-App ein.
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -195,7 +195,7 @@ Sie können eine statische Bibliothek jedoch in einer UWP-App ohne Neukompiliere
 
 1. Wählen Sie in den Eigenschaften des UWP-Projekts im linken Bereich **Konfigurationseigenschaften** > **Linker** > **Eingabe** aus. Fügen Sie im rechten Bereich der Eigenschaft **Zusätzliche Abhängigkeiten** den Pfad zur Bibliothek hinzu. Beispiel: Für eine Bibliothek in dem Projekt, das seine Ausgabe in *SolutionFolder\Debug\MyNativeLibrary\MyNativeLibrary.lib* platziert, fügen Sie den relativen Pfad `Debug\MyNativeLibrary\MyNativeLibrary.lib` hinzu.
 
-2. Fügen Sie eine include-Anweisung hinzu, um die Headerdatei auf Ihre Datei „pch.h“ (sofern vorhanden) oder eine CPP-Datei zu verweisen, und fügen Sie Code hinzu, der die Bibliothek verwendet.
+2. Fügen Sie eine include-Anweisung hinzu, um die Headerdatei auf Ihre Datei *pch.h* (sofern vorhanden) oder eine CPP-Datei zu verweisen, und fügen Sie Code hinzu, der die Bibliothek verwendet.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -219,7 +219,7 @@ Wenn Sie systemeigene APIs in einer statischen Bibliothek aus einer UWP-App nutz
 
 5. Wählen Sie alle Dateien aus, die Sie aus dem ursprünglichen Projekt hinzufügen möchten, und klicken Sie auf **OK**. Wiederholen Sie dies ggf. für Unterordner.
 
-6. Möglicherweise ist der Code jetzt teilweise doppelt. Wenn mehrere vorkompilierte Header (z. B. „stdafx.h“ und „pch.h“) vorhanden sind, wählen Sie einen aus. Kopieren Sie allen erforderlichen Code, wie z. B. include-Anweisungen, in den beibehaltenen Header. Löschen Sie anschließend die anderen, und überprüfen Sie in den Projekteigenschaften unter **Vorkompilierte Header**, ob der Name der Headerdatei korrekt ist.
+6. Möglicherweise ist der Code jetzt teilweise doppelt. Wenn mehrere vorkompilierte Header (z. B. *stdafx.h* und *pch.h*) vorhanden sind, wählen Sie einen aus. Kopieren Sie allen erforderlichen Code, wie z. B. include-Anweisungen, in den beibehaltenen Header. Löschen Sie anschließend die anderen, und überprüfen Sie in den Projekteigenschaften unter **Vorkompilierte Header**, ob der Name der Headerdatei korrekt ist.
 
    Wenn Sie die als vorkompilierten Header zu verwendende Datei geändert haben, überprüfen Sie, ob die Optionen für vorkompilierte Header für jede Datei korrekt sind. Wählen Sie nacheinander die einzelnen CPP-Dateien aus, öffnen Sie jeweils das Eigenschaftenfenster, und vergewissern Sie sich, dass alle auf **Verwenden (/Yu)** festgelegt sind, mit Ausnahme des gewünschten vorkompilierten Headers, der auf **Erstellen (/Yc)** festgelegt werden sollte.
 

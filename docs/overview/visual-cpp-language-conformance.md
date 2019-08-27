@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 15226d41991d5a09d104d2edbfb3dbf2f7432b65
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980531"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631643"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++-Sprachkonformität: Tabelle
 
@@ -348,7 +348,7 @@ Die Compileroption [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md) f
 
 <a name="note_C"></a>__C__ Der Support des Compilers für die C99-Präprozessorregeln ist in Visual Studio 2017 unvollständig. Variadic-Makros werden unterstützt, aber es treten viele Fehler im Verhalten des Präprozessors auf. Der Präprozessor wird überarbeitet. Diese Änderungen werden bald experimentell im Modus [/permissive-](../build/reference/permissive-standards-conformance.md) ausgeliefert.
 
-<a name="note_D"></a>__D__ Unterstützt unter [/std:c++14](../build/reference/std-specify-language-standard-version.md), mit einer unterdrückbaren Warnung (C4984).
+<a name="note_D"></a>__D__ Unterstützt unter [/std:c++14](../build/reference/std-specify-language-standard-version.md) mit einer unterdrückbaren Warnung ([C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)).
 
 <a name="note_E"></a>__E__ Dies ist eine neue Implementierung, die nicht mit der vorherigen `std::experimental`-Version kompatibel ist. Sie ist aufgrund von Symlink-Unterstützung, Fehlerbehebungen und Änderungen des erforderlichen Standardverhaltens erforderlich. Wenn \<filesystem> verwendet wird, schließt dies aktuell das neue `std::filesystem`- und das vorherige `std::experimental::filesystem`-Element ein, und wenn \<experimental/filesystem> verwendet wird, schließt dies nur die alte experimentelle Implementierung ein. Die experimentelle Implementierung wird mit dem nächsten ABI unterbrechenden Release der Bibliotheken entfernt.
 

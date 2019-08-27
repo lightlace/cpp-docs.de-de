@@ -2,12 +2,12 @@
 title: 'Leitfaden zum Portieren: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511664"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630445"
 ---
 # <a name="porting-guide-spy"></a>Leitfaden zum Portieren: Spy++
 
@@ -67,7 +67,7 @@ Windows XP wird nicht mehr von Microsoft unterstützt. Aus diesem Grund sollten 
 
 Definieren Sie zur Behebung dieses Fehlers WINVER, indem Sie die Einstellung **Projekteigenschaften** auf die niedrigste Version von Windows festlegen, die Sie als Zielversion verwenden möchten. [Hier](/windows/win32/WinProg/using-the-windows-headers) finden Sie eine Tabelle mit den Werten für verschiedene Windows-Versionen.
 
-Die Datei „stdafx.h“ enthält einige dieser Makrodefinitionen.
+Die Datei *stdafx.h* enthielt einige dieser Makrodefinitionen.
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -373,7 +373,7 @@ Durch eine starke Nutzung von Makros wie in diesem Code ist der Code schwieriger
 #define PARM(var, type, src)type var = (type)src
 ```
 
-Daher wird die Variable `lpszBuffer` zweimal in der gleichen Funktion deklariert. Es ist nicht leicht, diesen Fehler zu beheben, da der Code dazu keine Makros verwenden dürfte (Entfernen der zweiten Typdeklaration). Da jedoch Makros verwendet werden, können Sie lediglich entscheiden, ob Sie den Makrocode als gewöhnlichen Code neu schreiben (eine mühsame und möglicherweise fehleranfällige Aufgabe) oder die Warnung deaktivieren möchten.
+Daher wird die Variable `lpszBuffer` zweimal in der gleichen Funktion deklariert. Es wäre einfacher, diesen Fehler zu beheben, wenn im Code keine Makros verwendet würden (einfach durch Entfernen der zweiten Typdeklaration). Da jedoch Makros verwendet werden, können Sie lediglich entscheiden, ob Sie den Makrocode als gewöhnlichen Code neu schreiben (eine mühsame und möglicherweise fehleranfällige Aufgabe) oder die Warnung deaktivieren möchten.
 
 In diesem Fall wurde die Warnung deaktiviert. Fügen Sie dazu das folgende pragma-Objekt hinzu:
 
@@ -502,7 +502,7 @@ Das Problem tritt auf, wenn eine Variable zunächst als **extern** deklariert un
 
 ##  <a name="porting_to_unicode"></a> Schritt 11. Portieren von MBCS zu Unicode
 
-Beachten Sie, dass mit Unicode in der Windows-Welt in der Regel UTF-16 gemeint ist. Andere Betriebssysteme wie Linux verwenden UTF-8, bei Windows ist dies in der Regel nicht der Fall. Die MBCS-Version von Microsoft Foundation Classes (MFC) ist in Visual Studio 2013 und 2015 veraltet, wurde in Visual Studio 2017 jedoch aktualisiert. Wenn Sie Visual Studio 2013 oder 2015 verwenden, müssen Sie gegebenenfalls die Warnung, dass MBCS veraltet ist, vorübergehend entfernen, bevor Sie MBCS-Code zu UTF-16-Unicode portieren, um mit anderen Aufgaben fortzufahren oder das Portieren auf später zu verschieben. Da der aktuelle Code MBCS verwendet, müssen Sie die ANSI/MBCS-Version von MFC installieren, um fortfahren zu können. Die umfangreiche MFC-Bibliothek gehört nicht zur Standardinstallation der **Desktopentwicklung mit C++** in Visual Studio, deshalb müssen Sie diese unter den optionalen Komponenten im Installer auswählen. Weitere Informationen finden Sie unter [MFC MBCS DLL-Add-On](../mfc/mfc-mbcs-dll-add-on.md). Wenn Sie diese Software heruntergeladen und Visual Studio neu gestartet haben, können Sie die Kompilierung und Verknüpfung mit der MBCS-Version von MFC durchführen. Wenn Sie jedoch Visual Studio 2013 oder 2015 verwenden, müssen Sie **NO_WARN_MBCS_MFC_DEPRECATION** zur Liste der vordefinierten Makros im Abschnitt „Präprozessor“ in den Projekteigenschaften oder am Anfang der stdafx.h-Headerdatei bzw. einer anderen gemeinsamen Headerdatei hinzufügen, um alle Warnungen für MBCS zu entfernen.
+Beachten Sie, dass mit Unicode in der Windows-Welt in der Regel UTF-16 gemeint ist. Andere Betriebssysteme wie Linux verwenden UTF-8, bei Windows ist dies in der Regel nicht der Fall. Die MBCS-Version von Microsoft Foundation Classes (MFC) ist in Visual Studio 2013 und 2015 veraltet, wurde in Visual Studio 2017 jedoch aktualisiert. Wenn Sie Visual Studio 2013 oder 2015 verwenden, müssen Sie gegebenenfalls die Warnung, dass MBCS veraltet ist, vorübergehend entfernen, bevor Sie MBCS-Code zu UTF-16-Unicode portieren, um mit anderen Aufgaben fortzufahren oder das Portieren auf später zu verschieben. Da der aktuelle Code MBCS verwendet, müssen Sie die ANSI/MBCS-Version von MFC installieren, um fortfahren zu können. Die umfangreiche MFC-Bibliothek gehört nicht zur Standardinstallation der **Desktopentwicklung mit C++** in Visual Studio, deshalb müssen Sie diese unter den optionalen Komponenten im Installer auswählen. Weitere Informationen finden Sie unter [MFC MBCS DLL-Add-On](../mfc/mfc-mbcs-dll-add-on.md). Wenn Sie diese Software heruntergeladen und Visual Studio neu gestartet haben, können Sie die Kompilierung und Verknüpfung mit der MBCS-Version von MFC durchführen. Wenn Sie jedoch Visual Studio 2013 oder 2015 verwenden, müssen Sie **NO_WARN_MBCS_MFC_DEPRECATION** der Liste der vordefinierten Makros im Abschnitt „Präprozessor“ in den Projekteigenschaften oder am Anfang der Headerdatei *stdafx.h* bzw. einer anderen gemeinsamen Headerdatei hinzufügen, um alle Warnungen für MBCS zu entfernen.
 
 Im Folgenden werden einige Linkerfehler behandelt.
 
