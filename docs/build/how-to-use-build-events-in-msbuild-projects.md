@@ -4,53 +4,53 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 8f4ccea66f7346512df88fc4c6078752c624aaa9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 3fe205223b6cf381bbf3e2872b1a84f9d81a3cb7
+ms.sourcegitcommit: 2da5c42928739ca8cd683a9002598f28d8ec5f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221473"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060069"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Vorgehensweise: Verwenden von Buildereignissen in MSBuild-Projekten
 
-Ein Buildereignis ist ein Befehl, den MSBuild zu einem bestimmten Zeitpunkt im Buildprozess ausführt. Die *vor dem Erstellen* Ereignis tritt auf, bevor der Build gestartet wird; die *Prälinkereignis* Ereignis tritt auf, bevor Sie die Link-Schritt-beginnt; und die *Postbuild* Ereignis tritt auf, nach der Erstellung erfolgreich beendet wurde. Ein Buildereignis tritt nur auf, wenn der zugeordnete Buildschritt tritt ein, an. Z. B. das Prälinkereignis nicht ausgeführt, wenn der Linkschritt nicht ausgeführt werden kann.
+Ein Buildereignis ist ein Befehl, den MSBuild in einer bestimmten Phase im Buildprozess ausführt. Das Präbuildereignis tritt vor dem Start des Builds auf. Das *Pre-Link-* Ereignis tritt auf, bevor der Link Schritt gestartet wird. und das Postbuildereignis tritt auf, nachdem der Build erfolgreich beendet wurde. Ein Buildereignis tritt nur auf, wenn der zugeordnete Buildschritt auftritt. Beispielsweise tritt das prälingereignis nicht auf, wenn der Link Schritt nicht ausgeführt wird.
 
-Jede der drei Build-Ereignissen wird in eine Elementdefinitionsgruppe durch ein Befehlselement dargestellt (`<Command>`), die ausgeführt wird und ein Nachrichtenelement (`<Message>`), angezeigt wird, wenn **MSBuild** führt das Ereignis erstellt. Jedes Element ist optional, und wenn Sie das gleiche Element mehrmals angeben, wird das letzte Vorkommen hat Vorrang vor.
+Jedes der drei Buildereignisse wird in einer Element Definitions Gruppe durch ein ausgeführtes`<Command>`Befehls Element () und ein Message-Element`<Message>`() dargestellt, das angezeigt wird, wenn **MSBuild** das Buildereignis ausführt. Jedes Element ist optional, und wenn Sie dasselbe Element mehrmals angeben, hat das letzte Vorkommen Vorrang.
 
-Eine optionale *in Buildvorgang verwenden* Element (`<`*Buildereignis*`UseInBuild>`) kann angegeben werden, in eine Eigenschaftengruppe, um anzugeben, ob das Ereignis erstellt, ausgeführt wird. Der Wert des Inhalts einer *in Buildvorgang verwenden* Element ist entweder **"true"** oder **"false"**. Standardmäßig wird ein Buildereignis ausgeführt, es sei denn, der entsprechenden *in Buildvorgang verwenden* Element nastaven NA hodnotu `false`.
+Ein optionales *use-in-Build-* Element (`<`*Build-Event*`UseInBuild>`) kann in einer Eigenschaften Gruppe angegeben werden, um anzugeben, ob das Buildereignis ausgeführt wird. Der Wert des Inhalts eines *use-in-Build-* Elements ist entweder **true** oder **false**. Standardmäßig wird ein Buildereignis ausgeführt, es sei denn, das entsprechende *use-in-Build-* Element ist auf `false`festgelegt.
 
-Die folgende Tabelle enthält die XML-Element für jeden Build:
-
-|XML-Element|Beschreibung|
-|-----------------|-----------------|
-|`PreBuildEvent`|Dieses Ereignis wird vor Beginn des Buildvorgangs ausgeführt.|
-|`PreLinkEvent`|Dieses Ereignis ausgeführt wird, bevor der Linkschritt beginnt.|
-|`PostBuildEvent`|Dieses Ereignis wird ausgeführt, nachdem der Build abgeschlossen ist.|
-
-Die folgende Tabelle führt jede *in Buildvorgang verwenden* Element:
+In der folgenden Tabelle sind die einzelnen Build-Ereignis-XML-Elemente aufgelistet
 
 |XML-Element|Beschreibung|
 |-----------------|-----------------|
-|`PreBuildEventUseInBuild`|Gibt an, ob zum Ausführen der *Präbuildereignis* Ereignis.|
-|`PreLinkEventUseInBuild`|Gibt an, ob zum Ausführen der *Prälinkereignis* Ereignis.|
-|`PostBuildEventUseInBuild`|Gibt an, ob zum Ausführen der *Postbuild* Ereignis.|
+|`PreBuildEvent`|Dieses Ereignis wird vor Beginn des Builds ausgeführt.|
+|`PreLinkEvent`|Dieses Ereignis wird vor Beginn des Link Schritts ausgeführt.|
+|`PostBuildEvent`|Dieses Ereignis wird ausgeführt, nachdem der Build abgeschlossen wurde.|
+
+In der folgenden Tabelle sind die einzelnen *use-in-Build-* Elemente aufgelistet:
+
+|XML-Element|Beschreibung|
+|-----------------|-----------------|
+|`PreBuildEventUseInBuild`|Gibt an, ob das Präbuildereignis ausgeführt werden soll.|
+|`PreLinkEventUseInBuild`|Gibt an, ob das prälingereignis ausgeführt werden soll.|
+|`PostBuildEventUseInBuild`|Gibt an, ob das Postbuildereignis ausgeführt werden soll.|
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel hinzugefügt werden kann, innerhalb des Project-Elements der Datei "MyProject.vcxproj" im erstellten [Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen einer C++ Projekt](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Ein *vor dem Erstellen* Ereignis ist eine Kopie von "Main.cpp"; eine *Prälinkereignis* Ereignis ist eine Kopie des main.obj; und ein *nach der Erstellung* Ereignis erstellt eine Kopie des myproject.exe. Wenn das Projekt mit einer Releasekonfiguration erstellt wird, werden die Buildereignisse ausgeführt. Wenn das Projekt erstellt wird, eine Debugkonfiguration verwenden, werden die Buildereignisse nicht ausgeführt.
+Das folgende Beispiel kann innerhalb des Project-Elements der MyProject. vcxproj-Datei hinzugefügt werden, [die in Walkthrough erstellt wurde: Verwenden von MSBuild zum Erstellen C++ eines](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)Projekts. Ein Präbuildereignis erstellt eine Kopie von "Main. cpp;". ein *Prälinkereignis* erstellt eine Kopie von "Main. obj;". ein Postbuildereignis erstellt eine Kopie von "MyProject. exe". Wenn das Projekt mit einer Releasekonfiguration erstellt wird, werden die Buildereignisse ausgeführt. Wenn das Projekt mit einer Debugkonfiguration erstellt wird, werden die Buildereignisse nicht ausgeführt.
 
-```
+``` xml
 <ItemDefinitionGroup>
   <PreBuildEvent>
     <Command>copy $(ProjectDir)main.cpp $(ProjectDir)copyOfMain.cpp</Command>
     <Message>Making a copy of main.cpp </Message>
   </PreBuildEvent>
   <PreLinkEvent>
-<Command>copy $(ProjectDir)$(Configuration)\main.obj $(ProjectDir)$(Configuration)\copyOfMain.obj</Command>
+    <Command>copy $(ProjectDir)$(Configuration)\main.obj $(ProjectDir)$(Configuration)\copyOfMain.obj</Command>
     <Message>Making a copy of main.obj</Message>
   </PreLinkEvent>
   <PostBuildEvent>
-<Command>copy $(ProjectDir)$(Configuration)\$(TargetFileName) $(ProjectDir)$(Configuration)\copyOfMyproject.exe</Command>
+    <Command>copy $(ProjectDir)$(Configuration)\$(TargetFileName) $(ProjectDir)$(Configuration)\copyOfMyproject.exe</Command>
     <Message>Making a copy of myproject.exe</Message>
   </PostBuildEvent>
 </ItemDefinitionGroup>
@@ -70,5 +70,5 @@ Im folgende Beispiel hinzugefügt werden kann, innerhalb des Project-Elements de
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSBuild in der Befehlszeile – C++](msbuild-visual-cpp.md)<br/>
+[MSBuild on the Command Line – C++ (C++: MSBuild in der Befehlszeile)](msbuild-visual-cpp.md)<br/>
 [Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines C++-Projekts](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
