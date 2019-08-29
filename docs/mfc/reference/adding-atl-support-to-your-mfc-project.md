@@ -7,37 +7,43 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 0f75ffd09da1502e5f1488dbce0d8d2b9623d396
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: fba79db013cd9f4cc62ba5826b53e5fa9b15c83a
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741729"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108417"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Hinzufügen von ATL-Unterstützung zu einem MFC-Projekt
 
-Wenn Sie bereits eine MFC-basierte Anwendung erstellt haben, können dann Sie Unterstützung für die Active Template Library (ATL) einfach durch Hinzufügen ausgeführt wird, MFC-Projekt-Assistent die hinzufügen ATL-Unterstützung.
+Wenn Sie bereits eine MFC-basierte Anwendung erstellt haben, können Sie die Unterstützung für die Active Template Library (ATL) problemlos mithilfe der IDE hinzufügen.
 
 > [!NOTE]
->  ATL und MFC sind in den Express-Editionen von Visual Studio in der Regel nicht unterstützt.
+>  Diese Unterstützung gilt nur für einfache COM-Objekte, die einer MFC-Anwendung oder einem DLL-Projekt hinzugefügt werden. Sie können MFC-Projekten weitere COM-Objekte (einschließlich ActiveX-Steuerelementen) hinzufügen, die Objekte funktionieren jedoch möglicherweise nicht erwartungsgemäß.
 
-> [!NOTE]
->  Diese Unterstützung gilt nur für einfache COM-Objekte, die einer MFC-Anwendung oder einem DLL-Projekt hinzugefügt werden. Sie können MFC-Projekte andere COM-Objekte (einschließlich ActiveX-Steuerelemente) hinzufügen, aber die Objekte funktioniert möglicherweise nicht wie erwartet.
+::: moniker range=">=vs-2019"
 
-### <a name="to-add-atl-support-to-your-mfc-project"></a>ATL-Unterstützung zu einem MFC-Projekt hinzufügen
+1. Klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf den Projekt Knoten.
 
-1. Klicken Sie im Projektmappen-Explorer das Projekt, zu dem Sie die ATL-Unterstützung hinzufügen möchten.
+1. Klicken Sie im Kontextmenü auf **Hinzufügen**, und klicken Sie danach auf **Neues Element**.
+
+1. Wählen Sie im linken Bereich **ATL** aus, und wählen Sie dann im mittleren Bereich **ATL-Unterstützung** aus.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-add-atl-support-to-your-mfc-project"></a>So fügen Sie Ihrem MFC-Projekt ATL-Unterstützung hinzu
+
+1. Klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf den Projekt Knoten.
 
 1. Klicken Sie im Kontextmenü auf **Hinzufügen**, und klicken Sie danach auf **Klasse hinzufügen**.
 
-1. Wählen Sie die **ATL-Unterstützung zu MFC-Projekt hinzufügen** Symbol.
+1. Wählen Sie im linken Bereich **ATL** aus, und wählen Sie dann im mittleren Bereich **ATL-Unterstützung zu MFC-Projekt hinzufügen** aus.
 
-    > [!NOTE]
-    >  Dieses Symbol befindet sich im Ordner "ATL" in der **Kategorien** Bereich.
+::: moniker-end
 
-1. Wenn Sie dazu aufgefordert werden, klicken Sie auf **Ja** ATL-Unterstützung hinzufügen.
-
-Weitere Informationen dazu, wie durch Hinzufügen von ATL-Unterstützung Codes für das MFC-Projekt geändert wird, finden Sie unter [Details zur ATL-Unterstützung hinzugefügt wird der ATL-Assistent](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
+Weitere Informationen zum Ändern des MFC-Projekt Codes durch das Hinzufügen der ATL-Unterstützung finden Sie unter [Details der vom ATL-Assistenten hinzugefügten ATL-Unterstützung](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md) .
 
 ## <a name="see-also"></a>Siehe auch
 
