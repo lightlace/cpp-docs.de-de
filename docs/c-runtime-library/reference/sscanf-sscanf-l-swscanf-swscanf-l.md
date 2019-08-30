@@ -1,6 +1,6 @@
 ---
 title: sscanf, _sscanf_l, swscanf, _swscanf_l
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 apiname:
 - swscanf
 - sscanf
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-ms.openlocfilehash: 60dbb8e89e531c3020c243d998a69370095424e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac8bc14fed554c2ea5cede7f37c1dc49f4740bf3
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354697"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177421"
 ---
-# <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
+# <a name="sscanf-_sscanf_l-swscanf-_swscanf_l"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
 Lesen von formatierten Daten aus einer Zeichenfolge Sicherere Versionen dieser Funktionen sind verfügbar. Sie finden sie unter [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
@@ -94,22 +94,24 @@ Das zu verwendende Gebietsschema
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden. Der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder am Ende der Zeichenfolge vor der ersten Konvertierung erreicht wird.
+Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden. Der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Der Rückgabewert ist **EOF** für einen Fehler oder, wenn das Ende der Zeichenfolge vor der ersten Konvertierung erreicht wird.
 
-Wenn *Puffer* oder *Format* ist eine **NULL** -Zeiger ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
+Wenn *buffer* oder *Format* ein **null** -Zeiger ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen-1 zurück und legen **errno** auf **EINVAL**fest.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Sscanf** -Funktion liest Daten aus *Puffer* an der Position, die durch das jeweilige *Argument*. Jede *Argument* muss ein Zeiger auf eine Variable mit einem Typ, der einem Typspezifizierer in entspricht *Format*. Die *Format* -Argument steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie der *Format* Argument für die **Scanf** Funktion. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+Die **sscanf** -Funktion liest Daten aus dem *Puffer* in den Speicherort, der von jedem *Argument*angegeben wird. Jedes *Argument* muss ein Zeiger auf eine Variable mit einem Typ sein, der einem Typspezifizierer im *Format*entspricht. Das *Format* -Argument steuert die Interpretation der Eingabefelder und hat die gleiche Form und Funktion wie das *Format* -Argument für die **scanf** -Funktion. Wenn der Kopiervorgang zwischen Zeichenfolgen ausgeführt wird, die sich überschneiden, ist das Verhalten nicht definiert.
+
+Weitere Informationen zu scanf-Typen Feldzeichen finden Sie unter [scanf-Typen Feldzeichen](../scanf-type-field-characters.md). Weitere Informationen zu scanf-formatspezifikations Feldern finden Sie unter [formatspezifikations Felder](../format-specification-fields-scanf-and-wscanf-functions.md).
 
 > [!IMPORTANT]
-> Beim Lesen einer Zeichenfolge mit **Sscanf**, geben Sie immer eine Breite für die **%s** Format (z. B. **"% 32 Sekunden"** anstelle von **"%s"**); andernfalls , nicht richtig formatierte Eingabe kann leicht einen Pufferüberlauf verursachen.
+> Geben Sie beim Lesen einer Zeichenfolge mit **sscanf**immer eine Breite für das **% s** -Format an (z. b. **"% 32s"** anstelle von **"% s"** ); Andernfalls kann eine nicht ordnungsgemäß formatierte Eingabe leicht einen Pufferüberlauf verursachen.
 
-**Swscanf** ist eine Breitzeichen-Version von **Sscanf**; die Argumente für **Swscanf** sind Breitzeichen Zeichenfolgen. **Sscanf** verarbeitet keine multibyte-Hexadezimalzeichen. **Swscanf** verarbeitet keine Unicode-voller Breite Hexadezimal- oder im "Kompatibilität der Zone" Zeichen. Andernfalls **Swscanf** und **Sscanf** Verhalten sich identisch.
+" **tauscanf** " ist eine breit Zeichen Version von **sscanf**. die Argumente für " **tauscanf** " sind Zeichen folgen mit breit Zeichen. **sscanf** verarbeitet keine Multibytezeichen-hexadezimal Zeichen. in " **tauscanf** " werden keine Unicode-Zeichen mit voller Breite oder "Kompatibilitäts Zone" verwendet. Andernfalls Verhalten sich das Verhalten von " **tauscanf** " und " **sscanf** " identisch.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
