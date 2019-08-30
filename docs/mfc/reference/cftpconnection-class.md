@@ -1,6 +1,6 @@
 ---
 title: CFtpConnection-Klasse
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CFtpConnection
 - AFXINET/CFtpConnection
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 977a8c9fc6dd653a59434d29bb72b0fe28900001
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 94ee4cb938ee061470282eb2f08a94d83c908805
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506374"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177282"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection-Klasse
 
@@ -171,11 +171,13 @@ CInternetFile* Command(
 Ein Zeiger auf eine Zeichenfolge, die den zu sendenden Befehl enthält.
 
 *eresponse*<br/>
-Bestimmt, ob eine Antwort vom FTP-Server erwartet wird. Kann einer der folgenden Werte sein:
+Gibt an, ob eine Antwort vom FTP-Server erwartet wird. Kann einer der folgenden Werte sein:
 
 - `CmdRespNone`Es wird keine Antwort erwartet.
-
 - `CmdRespRead`Es wird eine Antwort erwartet.
+- `CmdRespWrite`Nicht verwendet.
+
+Der cmdresponctype ist ein Member von "CFtpConnection", der in " *AFXINET. h*" definiert ist.
 
 *dwFlags*<br/>
 Ein Wert mit den Flags, die diese Funktion steuern. Eine komplette Liste finden Sie unter [ftpcommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw).

@@ -1,6 +1,6 @@
 ---
-title: 'C++Referenz zur Projekteigenschaften Seite: Visual Studio'
-ms.date: 07/24/2019
+title: 'Referenz C++ zur Windows-Projekteigenschaften Seite: Visual Studio'
+ms.date: 08/28/2019
 helpviewer_keywords:
 - project-file macro
 - project properties [C++], default values
@@ -12,16 +12,20 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: d425cc6c5c6a2a8934c026174f396cb01bc3a9b7
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: c9fd4fc00e86e0660972fc0bd37b66b2fea02ee0
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606389"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177472"
 ---
-# <a name="c-project-property-page-reference"></a>C++Referenz zur Projekteigenschaften Seite
+# <a name="windows-c-project-property-page-reference"></a>Referenz C++ zur Windows-Projekteigenschaften Seite
 
-In Visual Studio geben Sie die Optionen für Compiler und Linker, Dateipfade und andere Buildeinstellungen über die Eigenschaften Seiten für das Projekt an. Um die Eigenschaften **Seiten**zu öffnen, wählen Sie im Hauptmenü **Projekt** > **Eigenschaften** aus, oder klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf den Projekt Knoten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu Projekteigenschaften finden Sie unter [festlegen C++ von Compiler-und Buildeigenschaften in Visual Studio](../working-with-project-properties.md).
+In Visual Studio geben Sie die Optionen für Compiler und Linker, Dateipfade und andere Buildeinstellungen über die Eigenschaften Seiten für das Projekt an. Welche Eigenschaften und Eigenschaften Seiten verfügbar sind, hängt vom Projekttyp ab. Ein Makefile-Projekt verfügt beispielsweise über eine NMAKE-Eigenschaften Seite, die nicht in einem MFC-oder Win32-Konsolen Projekt vorhanden ist. Um die Eigenschaften **Seiten**zu öffnen, wählen Sie im Hauptmenü **Projekt** > **Eigenschaften** aus, oder klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf den Projekt Knoten, und wählen Sie **Eigenschaften**aus. Einzelne Dateien verfügen auch über Eigenschaften Seiten, die es Ihnen ermöglichen, Kompilierungs-und Buildoptionen für diese Datei festzulegen. Die folgende Abbildung zeigt die Eigenschaften Seiten für ein MFC-Projekt.
+
+![Eigenschaften Seiten für C++ Project](media/example-prop-page.png)
+
+Dieser Abschnitt enthält eine Kurzübersicht über die Eigenschaften Seiten. Die Optionen und Einstellungen, die auf den Eigenschaften Seiten verfügbar gemacht werden, sind in ihren eigenen Themen vollständig dokumentiert und mit den Themen der Eigenschaften Seite verknüpft. Weitere Informationen zu Projekteigenschaften finden Sie unter [festlegen C++ von Compiler-und Buildeigenschaften in Visual Studio](../working-with-project-properties.md).
 
 Informationen zu Eigenschaften Seiten in Linux-Projekten finden Sie unter [Referenz zu Linux C++ -Eigenschaften](../../linux/prop-pages-linux.md)Seiten.
 
@@ -48,4 +52,5 @@ Informationen zu Eigenschaften Seiten in Linux-Projekten finden Sie unter [Refer
 ## <a name="see-also"></a>Siehe auch
 
 [Vorgehensweise: Erstellen und Entfernen von Projektabhängigkeiten](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br/>
-[Vorgehensweise: Erstellen und Bearbeiten von Konfigurationen](/visualstudio/ide/how-to-create-and-edit-configurations)
+[Vorgehensweise: Erstellen und Bearbeiten von Konfigurationen](/visualstudio/ide/how-to-create-and-edit-configurations)<br/>
+[Linux C++ -Eigenschaften Seiten Referenz](../../linux/prop-pages-linux.md)

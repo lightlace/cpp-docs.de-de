@@ -1,6 +1,6 @@
 ---
 title: CD2DEllipse-Klasse
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CD2DEllipse
 - AFXRENDERTARGET/CD2DEllipse
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 3abf0736884840be7bdcfcd55cb18a0bc8e69195
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21087682d40dac521cc949a39ef4b1aab23e7d71
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391269"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177211"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse-Klasse
 
@@ -31,7 +31,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Überladen. Erstellt eine `CD2DEllipse` -Sitzungsobjekts `D2D1_ELLIPSE` Objekt.|
+|[CD2DEllipse:: CD2DEllipse](#cd2dellipse)|Überladen. Erstellt ein `CD2DEllipse` -Objekt `D2D1_ELLIPSE` aus dem-Objekt.|
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -41,16 +41,16 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxrendertarget.h
+**Header:** afxrendertarget. h
 
-##  <a name="cd2dellipse"></a>  CD2DEllipse::CD2DEllipse
+##  <a name="cd2dellipse"></a>CD2DEllipse:: CD2DEllipse
 
-Erstellt ein Objekt CD2DEllipse CD2DRectF-Objekts.
+Erstellt ein CD2DEllipse-Objekt aus dem CD2DRectF-Objekt.
 
 ```
 CD2DEllipse(const CD2DRectF& rect);
 CD2DEllipse(const D2D1_ELLIPSE& ellipse);
-  CD2DEllipse(const D2D1_ELLIPSE* ellipse);
+CD2DEllipse(const D2D1_ELLIPSE* ellipse);
 
 CD2DEllipse(
     const CD2DPointF& ptCenter,
@@ -59,17 +59,17 @@ CD2DEllipse(
 
 ### <a name="parameters"></a>Parameter
 
-*rect*<br/>
-Quellrechteck
+*Rect*<br/>
+Quell Rechteck
 
 *ellipse*<br/>
-Quelle ellipse
+quellellipse
 
 *ptCenter*<br/>
 Der Mittelpunkt der Ellipse.
 
 *sizeRadius*<br/>
-Die X-Radius und die Y-Radius der Ellipse.
+Der X-RADIUS-und Y-Radius der Ellipse.
 
 ## <a name="see-also"></a>Siehe auch
 
