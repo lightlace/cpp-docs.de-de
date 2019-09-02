@@ -4,12 +4,13 @@ title: Visual C++–Dokumentation
 description: Erfahren Sie, wie Sie mit C++ Anwendungen, Dienste und Tools für Ihre Plattformen und Geräte entwickeln können.
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5db891bd1ed7a51a623dadfd5cc4e40a081cf0e7
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.topic: hub-page
+ms.openlocfilehash: 204571952b7da922ddaac29949568cac3e69d616
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65789016"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177503"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -90,7 +91,7 @@ ms.locfileid: "65789016"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Entwicklung auf der universellen Windows-Plattform</h3>
+                                                    <h3>Entwicklung für die universelle Windows-Plattform</h3>
                                                     <p>Entwickeln Sie Apps für die universelle Windows-Plattform (UWP) mit C++.</p>
                                                 </div>
                                             </div>
@@ -198,10 +199,10 @@ ms.locfileid: "65789016"
                 </ul>
             </li>
             <li>
-                <a href="#features">Funktionen</a>
+                <a href="#features">Features</a>
                 <ul id="features">
                     <li>
-                        <a href="#features1">Funktionen</a>
+                        <a href="#features1">Features</a>
                         <ul id="features1" class="cardsC">
                             <li>
                                 <a href="/cpp/ide/writing-and-refactoring-code-cpp">
