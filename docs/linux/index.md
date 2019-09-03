@@ -2,12 +2,13 @@
 layout: LandingPage
 title: Linux-Entwicklung mit der C++-Dokumentation
 description: Erstellen und Debuggen Sie Anwendungen die unter Linux ausgeführt werden.
-ms.openlocfilehash: ac80c6ad3b0650d7da20f18b049af0242ffa5704
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.topic: landing-page
+ms.openlocfilehash: ee956f25914e1996acb6776d9ecbb8c9e79c689b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042736"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216104"
 ---
 # <a name="linux-development-with-c-documentation"></a>Linux-Entwicklung mit der C++-Dokumentation
 
