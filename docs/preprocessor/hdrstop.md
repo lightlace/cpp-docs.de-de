@@ -1,6 +1,6 @@
 ---
-title: hdrstop
-ms.date: 11/04/2016
+title: hdrstop-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - hdrstop_CPP
 - vc-pragma.hdrstop
@@ -8,47 +8,46 @@ helpviewer_keywords:
 - hdrstop pragma
 - pragmas, hdrstop
 ms.assetid: 5ea8370a-10d1-4538-ade6-4c841185da0e
-ms.openlocfilehash: 1590b5916a8d9c00b6e988bacc7cd857c29d6775
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f540f0f01fe654213af15afa8fbf5cbd94e4b7e2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384087"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221015"
 ---
-# <a name="hdrstop"></a>hdrstop
-Gibt Ihnen zusätzliche Kontrolle über Vorkompilierungs-Dateinamen und über den Speicherort, an dem der Zustand der Kompilierung gespeichert wird.
+# <a name="hdrstop-pragma"></a>hdrstop-Pragma
+
+Bietet Ihnen zusätzliche Kontrolle über die Dateinamen der Vorkompilierung und über den Speicherort, an dem der Kompilierungs Status gespeichert wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma hdrstop [( "filename" )]
-```
+> **#pragma hdrstopps** [("*Dateiname*")]
 
 ## <a name="remarks"></a>Hinweise
 
-Die *Filename* ist der Name der vorkompilierten Headerdatei oder erstellen Sie (je nachdem, ob ["/ Yu"](../build/reference/yu-use-precompiled-header-file.md) oder ["/ Yc"](../build/reference/yc-create-precompiled-header-file.md) angegeben ist). Wenn *Filename* enthält keine Pfadangabe wird angenommen, dass die vorkompilierte Headerdatei um im selben Verzeichnis wie die Quelldatei zu werden.
+Der *Dateiname* ist der Name der vorkompilierten Header Datei, die verwendet oder erstellt werden soll (abhängig davon, ob [/Yu](../build/reference/yu-use-precompiled-header-file.md) oder [/Yc](../build/reference/yc-create-precompiled-header-file.md) angegeben ist). Wenn *filename* keine Pfadangabe enthält, wird davon ausgegangen, dass sich die vorkompilierte Header Datei im selben Verzeichnis wie die Quelldatei befindet.
 
-Wenn eine C- oder C++-Datei enthält eine **Hdrstop** Pragma, bei der Kompilierung mit `/Yc`, speichert der Compiler den Zustand der Kompilierung bis zur Position des Pragmas. Der kompilierte Zustand von Code, der dem Pragma folgt, wird nicht gespeichert.
+Wenn eine C- C++ Datei oder eine Datei ein **hdrstopp-** Pragma `/Yc`enthält, wenn Sie mit kompiliert wird, speichert der Compiler den Zustand der Kompilierung bis zum Speicherort des Pragmas. Der kompilierte Zustand eines beliebigen Codes, der auf das Pragma folgt, wird nicht gespeichert.
 
-Verwendung *Filename* die vorkompilierten Headerdatei zu benennen, in der der kompilierte Zustand gespeichert ist. Ein Leerzeichen zwischen **Hdrstop** und *Filename* ist optional. Die Datei im angegebenen Namen der **Hdrstop** Pragma ist eine Zeichenfolge und aus diesem Grund unterliegt den Einschränkungen jeder C- oder C++-Zeichenfolge. Insbesondere ist die Einschließung in Anführungszeichen und die Verwendung von Escapezeichen (umgekehrter Schrägstrich) erforderlich, um Verzeichnisnamen anzugeben. Zum Beispiel:
+Verwenden Sie *filename* , um die vorkompilierte Header Datei zu benennen, in der der kompilierte Zustand gespeichert ist. Ein Leerzeichen zwischen **hdrstopps** und *filename* ist optional. Der im **hdrstopps** -Pragma angegebene Dateiname ist eine Zeichenfolge und unterliegt daher den Einschränkungen aller C- C++ oder Zeichen folgen. Insbesondere ist die Einschließung in Anführungszeichen und die Verwendung von Escapezeichen (umgekehrter Schrägstrich) erforderlich, um Verzeichnisnamen anzugeben. Beispiel:
 
-```
+```C
 #pragma hdrstop( "c:\\projects\\include\\myinc.pch" )
 ```
 
 Der Name der vorkompilierten Headerdatei wird gemäß den folgenden Regeln, in Rangfolge aufgelistet, bestimmt:
 
-1. Das Argument für die `/Fp` -Compileroption
+1. Das Argument `/Fp` der Compileroption.
 
-2. Die *Filename* Argument `#pragma hdrstop`
+2. Das *filename* -Argument für.`#pragma hdrstop`
 
 3. Der Basisname der Quelldatei mit einer .PCH-Erweiterung
 
-Für die `/Yc` und `/Yu` "Optionen", wenn keine der beiden Kompilierungsoptionen noch das **Hdrstop** Pragma gibt einen Dateinamen an, der Basisname der Quelldatei als Basisname der vorkompilierten Headerdatei verwendet wird.
+Wenn für `/Yc` die `/Yu` Optionen und keine der beiden Kompilierungsoptionen und das **hdrstopp-** Pragma einen Dateinamen angeben, wird der Basisname der Quelldatei als Basis Name der vorkompilierten Header Datei verwendet.
 
 Sie können auch Präprozessorbefehle wie folgt verwenden, um Makroersetzung auszuführen:
 
-```
+```C
 #define INCLUDE_PATH "c:\\progra~`1\\devstsu~1\\vc\\include\\"
 #define PCH_FNAME "PROG.PCH"
 .
@@ -57,7 +56,7 @@ Sie können auch Präprozessorbefehle wie folgt verwenden, um Makroersetzung aus
 #pragma hdrstop( INCLUDE_PATH PCH_FNAME )
 ```
 
-Die folgenden Regeln wird bestimmt, wo die **Hdrstop** Pragma platziert werden kann:
+Die folgenden Regeln steuern, wo das **hdrstopp-** Pragma platziert werden kann:
 
 - Es muss außerhalb einer Daten- oder Funktionsdeklaration oder -definition angezeigt werden.
 
@@ -65,18 +64,18 @@ Die folgenden Regeln wird bestimmt, wo die **Hdrstop** Pragma platziert werden k
 
 ## <a name="example"></a>Beispiel
 
-```
+```C
 #include <windows.h>                 // Include several files
 #include "myhdr.h"
 
 __inline Disp( char *szToDisplay )   // Define an inline function
 {
-    ...                              // Some code to display string
+    // ...                           // Some code to display string
 }
 #pragma hdrstop
 ```
 
-In diesem Beispiel die **Hdrstop** Pragma angezeigt wird, nachdem zwei Dateien einbezogen wurden, und eine Inlinefunktion definiert wurde. Dies erscheint auf den ersten Blick eher als eine ungewöhnliche Platzierung für das Pragma. Betrachten Sie jedoch, mit der manuellen Vorkompilierungsoptionen `/Yc` und `/Yu`, mit der **Hdrstop** Pragma ermöglicht es Ihnen zum Vorkompilieren der ganze Quelldateien, sogar Inlinecode. Mit dem Microsoft-Compiler können nicht nur Datendeklarationen vorkompiliert werden.
+In diesem Beispiel wird das **hdrstopp-** Pragma angezeigt, nachdem zwei Dateien eingeschlossen und eine Inline Funktion definiert wurde. Dieser Speicherort scheint zunächst eine ungerade Platzierung für das Pragma zu sein. Bedenken Sie jedoch, dass bei Verwendung der manuellen vorkompilierungs `/Yc` Optionen `/Yu`und mit dem **hdrstopp-** Pragma die Vorkompilierung ganzer Quelldateien möglich ist – auch Inline Code. Mit dem Microsoft-Compiler können nicht nur Datendeklarationen vorkompiliert werden.
 
 ## <a name="see-also"></a>Siehe auch
 

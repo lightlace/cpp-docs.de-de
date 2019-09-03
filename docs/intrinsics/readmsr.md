@@ -1,6 +1,6 @@
 ---
 title: __readmsr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readmsr
 helpviewer_keywords:
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - rdmsr instruction
 - __readmsr intrinsic
 ms.assetid: 7ab1f8e8-72cb-4ce4-817d-3e728a3c9716
-ms.openlocfilehash: 2c866213c452f3b8791bf0fe031a43bb024e91fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4398b9d42369e3a914dbec1ed2d14cafecf58483
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262774"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222338"
 ---
-# <a name="readmsr"></a>__readmsr
+# <a name="__readmsr"></a>__readmsr
 
 **Microsoft-spezifisch**
 
-Generiert die `rdmsr` -Anweisung, die das modellspezifische Register gemäß liest `register` und den Wert zurückgibt.
+Generiert die `rdmsr` -Anweisung, die das modellspezifische Register liest, das `register` von angegeben wird, und gibt den Wert zurück.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 __int64 __readmsr(
    int register
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*register*<br/>
-[in] Das Modell bestimmte Register lesen.
+*sich*\
+in Das modellspezifische Register, das gelesen werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -44,11 +44,11 @@ Der Wert im angegebenen Register.
 |---------------|------------------|
 |`__readmsr`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist nur im Kernelmodus verfügbar, und die Routine ist nur als systeminterne Funktion verfügbar.
+Diese Funktion ist nur im Kernel Modus verfügbar, und die Routine ist nur als systeminterne Funktion verfügbar.
 
 Weitere Informationen finden Sie in der AMD-Dokumentation.
 
@@ -56,4 +56,4 @@ Weitere Informationen finden Sie in der AMD-Dokumentation.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

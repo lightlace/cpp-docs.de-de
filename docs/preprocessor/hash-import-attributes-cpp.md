@@ -1,22 +1,23 @@
 ---
-title: '#Importieren Sie die Attribute (C++)'
-ms.date: 11/04/2016
+title: '#Attribute importieren (C++)'
+ms.date: 08/29/2019
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-ms.openlocfilehash: 954dfec50db75c0e3d11f0924b0ee398cd211fe1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e0de241bd27269d7d758c49bc54c4bf435cf383
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407704"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220093"
 ---
-# <a name="import-attributes-c"></a>#import-Attribute (C++)
-Enthält Links zu Attributen, die verwendet werden, mit der `#import` Richtlinie.
+# <a name="import-attributes-c"></a>#Import Attribute (C++)
+
+Enthält Links zu Attributen, die mit `#import` der-Direktive verwendet werden.
 
 **Microsoft-spezifisch**
 
-Die folgenden Attribute stehen zur Verfügung, um die `#import` Richtlinie.
+Die folgenden Attribute sind für die `#import` -Direktive verfügbar.
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
@@ -29,26 +30,26 @@ Die folgenden Attribute stehen zur Verfügung, um die `#import` Richtlinie.
 |[implementation_only](../preprocessor/implementation-only.md)|Unterdrückt die Generierung der TLH-Headerdatei (die primäre Headerdatei).|
 |[include()](../preprocessor/include-parens.md)|Deaktiviert den automatische Ausschluss.|
 |[inject_statement](../preprocessor/inject-statement.md)|Fügt das Argument als Quelltext in den Header der Typbibliothek ein.|
-|[named_guids](../preprocessor/named-guids.md)|Weist den Compiler zu definieren und Initialisieren von GUID-Variablen im alten Stil des Formulars `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, und `DIID_MyDispInterface`.|
+|[named_guids](../preprocessor/named-guids.md)|Weist den Compiler an, GUID-Variablen im `LIBID_MyLib`alten Stil der Form `IID_MyInterface`, `CLSID_MyCoClass`, und `DIID_MyDispInterface`zu definieren und zu initialisieren.|
 |[no_auto_exclude](../preprocessor/no-auto-exclude.md)|Deaktiviert den automatische Ausschluss.|
 |[no_dual_interfaces](../preprocessor/no-dual-interfaces.md)|Ändert die Art, mit der der Compiler Wrapperfunktionen für Methoden der dualen Schnittstelle generiert.|
 |[no_implementation](../preprocessor/no-implementation.md)|Unterdrückt die Generierung des TLI-Headers, der die Implementierungen der Wrappermemberfunktionen enthält.|
 |[no_namespace](../preprocessor/no-namespace.md)|Gibt an, dass der Name des Namespaces nicht vom Compiler generiert wird.|
 |[no_registry](../preprocessor/no-registry.md)|Weist den Compiler an, in der Registrierung nicht nach Typbibliotheken zu suchen.|
-|[no_search_namespace](../preprocessor/no-search-namespace.md)|Hat die gleiche Funktionalität wie die [No_namespace](../preprocessor/no-namespace.md) Attribut wird aber verwendet in Typbibliotheken, die Sie mit die #import-Direktive verwenden die [Auto_search](../preprocessor/auto-search.md) Attribut.|
+|[no_search_namespace](../preprocessor/no-search-namespace.md)|Verfügt über die gleiche Funktionalität wie das [no_namespace](../preprocessor/no-namespace.md) -Attribut, wird jedoch für Typbibliotheken verwendet, die die #Import-Direktive mit dem [auto_search](../preprocessor/auto-search.md) -Attribut verwenden.|
 |[no_smart_pointers](../preprocessor/no-smart-pointers.md)|Unterdrückt die Erstellung von intelligenten Zeigern für alle Schnittstellen in der Typbibliothek.|
-|[raw_dispinterfaces](../preprocessor/raw-dispinterfaces.md)|Weist den Compiler an, Wrapperfunktionen auf niedriger Ebene für Disp-Schnittstellenmethoden und Eigenschaften, die aufgerufen werden generieren `IDispatch::Invoke` und den HRESULT-Fehlercode zurückgegeben.|
-|[raw_interfaces_only](../preprocessor/raw-interfaces-only.md)|Unterdrückt die Generierung von Fehlerbehandlungs Wrapperfunktionen und [Eigenschaft](../cpp/property-cpp.md) Deklarationen, die diese Wrapperfunktionen verwenden.|
+|[raw_dispinterfaces](../preprocessor/raw-dispinterfaces.md)|Weist den Compiler an, Wrapper Funktionen auf niedriger Ebene für Dispinterface-Methoden und-Eigenschaften `IDispatch::Invoke` zu generieren, die aufzurufen und den HRESULT-Fehlercode zurückgeben.|
+|[raw_interfaces_only](../preprocessor/raw-interfaces-only.md)|Unterdrückt die Generierung von Wrapper Funktionen für die Fehlerbehandlung und [Eigenschafts](../cpp/property-cpp.md) Deklarationen, die diese Wrapper Funktionen verwenden.|
 |[raw_method_prefix](../preprocessor/raw-method-prefix.md)|Gibt ein anderes Präfix an, um Namenskonflikte zu vermeiden.|
 |[raw_native_types](../preprocessor/raw-native-types.md)|Deaktiviert die Verwendung COM-Unterstützungsklassen in den Wrapperfunktionen auf hoher Ebene und erzwingt stattdessen die Verwendung von Datentypen auf niedriger Ebene.|
 |[raw_property_prefixes](../preprocessor/raw-property-prefixes.md)|Gibt alternative Präfixe für drei Eigenschaftenmethoden an.|
 |[rename](../preprocessor/rename-hash-import.md)|Umgeht Probleme mit Namenskonflikten.|
 |[rename_namespace](../preprocessor/rename-namespace.md)|Benennt den Namespace, der die Inhalte der Typbibliothek enthält, um.|
-|[rename_search_namespace](../preprocessor/rename-search-namespace.md)|Hat die gleiche Funktionalität wie die [Rename_namespace](../preprocessor/rename-namespace.md) Attribut wird aber verwendet in Typbibliotheken, die Sie mit die #import-Direktive verwenden die [Auto_search](../preprocessor/auto-search.md) Attribut.|
+|[rename_search_namespace](../preprocessor/rename-search-namespace.md)|Verfügt über die gleiche Funktionalität wie das [rename_namespace](../preprocessor/rename-namespace.md) -Attribut, wird jedoch für Typbibliotheken verwendet, die die #Import-Direktive mit dem [auto_search](../preprocessor/auto-search.md) -Attribut verwenden.|
 |[tlbid](../preprocessor/tlbid.md)|Ermöglicht das Laden anderer Bibliotheken als der primären Typbibliothek.|
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)
+[#Import-Direktive](../preprocessor/hash-import-directive-cpp.md)

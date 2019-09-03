@@ -1,6 +1,6 @@
 ---
 title: __stosq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390346"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219955"
 ---
-# <a name="stosq"></a>__stosq
+# <a name="__stosq"></a>__stosq
 
 **Microsoft-spezifisch**
 
-Generiert eine Store-Zeichenfolge-Anweisung (`rep stosq`).
+Generiert eine Speicher Zeichen folgen Anweisung`rep stosq`().
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __stosb(
-   unsigned __int64* Dest,
+   unsigned __int64* Destination,
    unsigned __int64 Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*dest*<br/>
-[out] Das Ziel des Vorgangs.
+*Entwickelt*\
+vorgenommen Das Ziel des Vorgangs.
 
-*Data*<br/>
-[in] Die zu speichernden Daten.
+*Vorrats*\
+in Die Daten, die gespeichert werden sollen.
 
-*Anzahl*<br/>
-[in] Die Länge des Blocks des Vierfachwörtern schreiben.
+*Countdown*\
+in Die Länge des Blocks der zu schreibenden Quadwords.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,17 +48,17 @@ void __stosb(
 |---------------|------------------|
 |`__stosq`|AMD64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Das Ergebnis ist, die die Vierfachwort `Data` wird geschrieben, in einen Block von `Count` Vierfachwörtern in die `Dest` Zeichenfolge.
+Das Ergebnis ist, dass die Quadword- *Daten* in einen Block von " *count* Quadwords" in der *Ziel* Zeichenfolge geschrieben werden.
 
 Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-```
+```C
 // stosq.c
 // processor: x64
 #include <stdio.h>
@@ -76,9 +76,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
-
-```
+```Output
 0 ffffffffffff ffffffffffff 0
 ```
 
@@ -86,4 +84,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

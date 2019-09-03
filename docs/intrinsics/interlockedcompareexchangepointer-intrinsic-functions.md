@@ -1,6 +1,6 @@
 ---
-title: Systeminterne Funktionen „_InterlockedCompareExchangePointer“
-ms.date: 11/04/2016
+title: Intrinsische _InterlockedCompareExchangePointer-Funktionen
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
 - _InterlockedCompareExchangePointer_rel
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0a0083c19df51d2d2eccb7a7bbf6521303c1f85
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509436"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222039"
 ---
-# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>Systeminterne Funktionen „_InterlockedCompareExchangePointer“
+# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>Intrinsische _InterlockedCompareExchangePointer-Funktionen
 
 **Microsoft-spezifisch**
 
@@ -39,7 +39,7 @@ Führt einen atomarischen Vorgang durch, bei dem die `Exchange`-Adresse in der `
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void * _InterlockedCompareExchangePointer (
    void * volatile * Destination,
    void * Exchange,
@@ -77,15 +77,15 @@ long _InterlockedCompareExchangePointer_rel (
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Ziel*<br/>
+*Entwickelt*\
 [in, out] Zeiger auf einen Zeiger auf den Zielwert. Das Zeichen wird ignoriert.
 
-*Exchange*<br/>
+*Schlag*\
 in Exchange-Zeiger. Das Zeichen wird ignoriert.
 
-*Comparand*<br/>
+*Comparand*\
 in Zeiger, der mit dem Ziel verglichen werden soll. Das Zeichen wird ignoriert.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -96,8 +96,8 @@ Der Rückgabewert ist der Anfangswert des Ziels.
 
 |Systemintern|Architektur|Header|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM, ARM64|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Hinweise
@@ -108,11 +108,11 @@ Der Rückgabewert ist der Anfangswert des Ziels.
 
 Ein Beispiel für die Verwendung `_InterlockedCompareExchangePointer`von finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken zum Abrufen bzw. Freigeben benötigen, wie am Anfang und Ende eines kritischen Abschnitts. Die systeminternen ARM-Funktionen mit dem Suffix `_nf` („keine Umgrenzung“) fungieren nicht als Arbeitsspeicherbarriere.
+Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken zum Abrufen bzw. Freigeben benötigen, wie am Anfang und Ende eines kritischen Abschnitts. Systeminterne Arm-Funktionen `_nf` mit einem-Suffix ("No fence") fungieren nicht als Arbeitsspeicher Barriere.
 
 Die systeminternen Funktionen mit dem Suffix `_np` („no prefetch“) verhindern, dass ein möglicher Vorabrufvorgang vom Compiler eingefügt wird.
 
-Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen aufgerufen werden, die HLE nicht unterstützen, wird der Hinweis ignoriert.
+Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen, enthalten die systeminternen Funktionen mit den Suffixen `_HLEAcquire` und `_HLERelease` einen Hinweis für den Prozessor, wie die Leistung durch den Wegfall der Schreibsperre in der Hardware beschleunigt werden kann. Wenn diese systeminternen Funktionen auf Plattformen aufgerufen werden, die hle nicht unterstützen, wird der Hinweis ignoriert.
 
 Diese Routinen sind nur als systeminterne Funktionen verfügbar.
 
@@ -120,5 +120,5 @@ Diese Routinen sind nur als systeminterne Funktionen verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
 [Schlüsselwörter](../cpp/keywords-cpp.md)

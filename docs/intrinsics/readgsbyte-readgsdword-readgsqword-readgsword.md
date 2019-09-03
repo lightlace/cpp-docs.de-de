@@ -1,6 +1,6 @@
 ---
 title: __readgsbyte, __readgsdword, __readgsqword, __readgsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readgsbyte
 - __readgsdword
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: a677b96975e0d2adcc7e548992a12bd597bea6a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278f1de33a7e01c5893217ddd8aaa22e68cf0c94
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396469"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222349"
 ---
-# <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
+# <a name="__readgsbyte-__readgsdword-__readgsqword-__readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 
 **Microsoft-spezifisch**
 
-Lesen Sie Arbeitsspeicher von einem Speicherort, ein Offset relativ zum Beginn der GS-Segment angegeben wird.
+Lese Speicher von einem Speicherort, der von einem Offset relativ zum Anfang des GS-Segments angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned char __readgsbyte(
    unsigned long Offset
 );
@@ -42,14 +42,14 @@ unsigned __int64 __readgsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Offset*<br/>
-[in] Der Offset vom Anfang des `GS` zum Lesen aus.
+*Kompensieren*\
+in Der Offset vom Anfang des `GS` , aus dem gelesen werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Speicherinhalt, der das Byte, Wort, Double oder Vierfachwort (wie durch den Namen der aufgerufenen Funktion angegeben wird) an der Position `GS:[Offset]`.
+Der Speicherinhalt des bytes, Worts, des doppelten Worts oder quadworts (wie durch den Namen der Funktion namens angegeben) am Speicherort `GS:[Offset]`.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Der Speicherinhalt, der das Byte, Wort, Double oder Vierfachwort (wie durch den 
 |`__readgsqword`|x64|
 |`__readgsword`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -70,5 +70,5 @@ Diese Routinen sind nur als systeminterne Funktion verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

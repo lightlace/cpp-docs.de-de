@@ -1,41 +1,41 @@
 ---
 title: __segmentlimit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __segmentlimit
 helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 650a847be3270782dc441d0e68c2c80d910e9d1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390385"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217995"
 ---
-# <a name="segmentlimit"></a>__segmentlimit
+# <a name="__segmentlimit"></a>__segmentlimit
 
 **Microsoft-spezifisch**
 
-Generiert die `lsl` (Auslastungsgrenze Segment)-Anweisung.
+Generiert die `lsl` Anweisung (Last Segment Limit).
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned long __segmentlimit(
    unsigned long a
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*a*<br/>
-[in] Eine Konstante, die Segment-Auswahl angibt.
+*ein*\
+in Eine-Konstante, die den Segment Auswahl Wert angibt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das Segment Limit des Selektors Segment gemäß `a`, vorausgesetzt, dass die Auswahl auf der aktuellen Berechtigungsebene gültig und sichtbar ist.
+Die Segment Beschränkung der von *einem*angegebenen Segment Auswahl, wenn der Selektor gültig und auf der aktuellen Berechtigungsebene sichtbar ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,17 +43,17 @@ Das Segment Limit des Selektors Segment gemäß `a`, vorausgesetzt, dass die Aus
 |---------------|------------------|
 |`__segmentlimit`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn das Limit des Segments kann nicht abgerufen werden, schlägt diese Anweisung fehl. Diese Anweisung löscht das ZF-Flag und der Rückgabewert nicht definiert ist, bei einem Fehler.
+Wenn das Segment Limit nicht abgerufen werden kann, schlägt diese Anweisung fehl. Bei einem Fehler löscht diese Anweisung das Flag "ZF", und der Rückgabewert ist nicht definiert.
 
 Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 #include <stdio.h>
 
 #ifdef _M_IX86
@@ -109,4 +109,4 @@ sl was changed
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

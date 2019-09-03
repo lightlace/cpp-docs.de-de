@@ -1,42 +1,40 @@
 ---
-title: inject_statement
-ms.date: 10/18/2018
+title: inject_statement-Attribut importieren
+ms.date: 08/29/2019
 f1_keywords:
 - inject_statement
 helpviewer_keywords:
 - inject_statement attribute
 ms.assetid: 07d6f0f4-d9fb-4e18-aa62-f235f142ff5e
-ms.openlocfilehash: 237ca796028aad7aff55442eb2806fe400330a29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25dee621ff8af2c9a39e605b9da2c29d80f9570a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383723"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220996"
 ---
-# <a name="injectstatement"></a>inject_statement
+# <a name="inject_statement-import-attribute"></a>inject_statement-Attribut importieren
 
-**C++-spezifisch**
+**C++Zugeschnitten**
 
 Fügt das Argument als Quelltext in den Header der Typbibliothek ein.
 
 ## <a name="syntax"></a>Syntax
 
-```
-inject_statement("source_text")
-```
+> **#Import** *Typbibliothek* **inject_statement (** "*Source-Text*" **)**
 
 ### <a name="parameters"></a>Parameter
 
-*source_text*<br/>
+*Quelltext*\
 In die Headerdatei der Typbibliothek einzufügender Quelltext.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Text wird am Anfang der Namespacedeklaration platziert, die den Typbibliotheksinhalt in der Headerdatei umschließt.
+Der Text wird an den Anfang der Namespace Deklaration eingefügt, der den Inhalt der *Typbibliothek* in der Header Datei umschließt.
 
-**Ende C++-spezifisch**
+**End C++ -Specific**
 
 ## <a name="see-also"></a>Siehe auch
 
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)
+[#Import Attribute](../preprocessor/hash-import-attributes-cpp.md)\
+[#Import-Direktive](../preprocessor/hash-import-directive-cpp.md)

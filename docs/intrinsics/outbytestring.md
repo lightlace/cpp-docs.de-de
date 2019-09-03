@@ -1,6 +1,6 @@
 ---
 title: __outbytestring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbytestring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outbytestring intrinsic
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-ms.openlocfilehash: 41064dda6a1a0b9ad4c15f98c3f3081f08ef8db6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31caf17db5d56efccd6b30200994b1080356b4c1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396612"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217174"
 ---
-# <a name="outbytestring"></a>__outbytestring
+# <a name="__outbytestring"></a>__outbytestring
 
 **Microsoft-spezifisch**
 
-Generiert die `rep outsb` -Anweisung, die die erste sendet `Count` Datenbytes verweist `Buffer` an den Port, der anhand des `Port`.
+Generiert die `rep outsb` -Anweisung, die die ersten `Count` Bytes von Daten, auf die `Buffer` von verwiesen wird, an `Port`den von angegebenen Port sendet.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __outbytestring(
    unsigned short Port,
    unsigned char* Buffer,
@@ -31,16 +31,16 @@ void __outbytestring(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Port*<br/>
-[in] Der Port, der die Daten zu senden.
+*Port*\
+in Der Port, an den die Daten gesendet werden sollen.
 
-*Buffer*<br/>
-[in] Die Daten, die über den angegebenen Port gesendet werden.
+*Ert*\
+in Die Daten, die über den angegebenen Port gesendet werden sollen.
 
-*Anzahl*<br/>
-[in] Die Anzahl der Bytes an Daten gesendet werden.
+*Countdown*\
+in Die Anzahl der Daten bytes, die gesendet werden sollen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,7 +48,7 @@ void __outbytestring(
 |---------------|------------------|
 |`__outbytestring`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -58,4 +58,4 @@ Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

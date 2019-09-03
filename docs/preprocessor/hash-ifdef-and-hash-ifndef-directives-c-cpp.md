@@ -1,6 +1,6 @@
 ---
-title: '#Ifdef- und #ifndef-Direktiven (C/C++)'
-ms.date: 11/04/2016
+title: '##ifdef- und #ifndef-Anweisungen (C/C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#ifndef'
 - '#ifdef'
@@ -11,40 +11,40 @@ helpviewer_keywords:
 - ifndef directive (#ifndef)
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
-ms.openlocfilehash: d7a6a1604df03f0607f33e42880270cbdcd62e8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 433076388f3646b19d75a907c6b2254098096688
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409875"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220114"
 ---
-# <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef- und #ifndef-Anweisungen (C/C++)
-Die **#ifdef** und **#ifndef** Anweisungen führen Sie die gleiche Aufgabe wie die `#if` Richtlinie, die bei einer Verwendung mit **definiert**( *Bezeichner* ).
+# <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef-und #ifndef Direktiven (C++C/)
+
+Die Anweisungen **#ifdef** und **#ifndef** haben dieselbe Auswirkung wie die [#if](hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md) -Direktive, wenn Sie mit dem **definierten** Operator verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#ifdef identifier
-#ifndef identifier
+> **#ifdef** *Bezeichner*\
+> **#ifndef** *Bezeichner*
 
-// equivalent to
-#if defined identifier
-#if !defined identifier
-```
+Diese Direktiven sind äquivalent zu:
+
+> **#if definiert** *Bezeichner*\
+> **#if! definiert** *Bezeichner*
 
 ## <a name="remarks"></a>Hinweise
 
-Können Sie die **#ifdef** und **#ifndef** Direktiven an einer beliebigen Stelle `#if` kann verwendet werden. Die **#ifdef** *Bezeichner* Anweisung entspricht `#if 1` beim *Bezeichner* definiert wurde, und dies ist äquivalent zum `#if 0` beim *Bezeichner* wurde nicht definiert oder wurde nicht definiert wurde, mit der `#undef` Richtlinie. Diese Anweisungen überprüfen lediglich, ob die mit `#define` definierten Bezeichner vorhanden sind, und nicht, ob Bezeichner vorhanden sind, die im C- oder C++-Quellcode deklariert werden.
+Sie können die **#ifdef** -und **#ifndef** Direktiven `#if` verwenden, die überall verwendet werden können. Die **#ifdef** *Identifier* -Anweisung entspricht, `#if 1` wenn der Bezeichner definiert wurde. Dies entspricht dem Zeitpunkt `#if 0` , an dem der Bezeichner nicht definiert wurde oder durch die `#undef` -Direktive nicht definiert wurde. Diese Anweisungen überprüfen lediglich, ob die mit `#define` definierten Bezeichner vorhanden sind, und nicht, ob Bezeichner vorhanden sind, die im C- oder C++-Quellcode deklariert werden.
 
-Diese Anweisungen werden nur bereitgestellt, um die Kompatibilität mit früheren Versionen der Sprache zu gewährleisten. Die **definiert (** *Bezeichner* **)** konstanter Ausdruck, der Verwendung der `#if` Richtlinie wird bevorzugt.
+Diese Anweisungen werden nur bereitgestellt, um die Kompatibilität mit früheren Versionen der Sprache zu gewährleisten. Der **definierte (** *Bezeichner* **)** Konstante Ausdruck, der `#if` mit der Direktive verwendet wird, wird bevorzugt.
 
-Die **#ifndef** Richtlinie überprüft das Gegenteil der Bedingung, die von überprüften **#ifdef**. Wenn der Bezeichner nicht definiert wurde (oder ihre Definition mit `#undef` entfernt wurde), ist die Bedingung "true" (ungleich 0). Andernfalls ist die Bedingung "false" (0).
+Die **#ifndef** -Direktive prüft das Gegenteil der durch **#ifdef**geprüften Bedingung. Wenn der Bezeichner nicht definiert wurde oder seine Definition mit `#undef`entfernt wurde, ist die Bedingung "true" (ungleich null). Andernfalls ist die Bedingung "false" (0).
 
 **Microsoft-spezifisch**
 
-Die *Bezeichner* übergeben werden kann, über die Befehlszeile mit der `/D` Option. Bis zu 30 Makros kann angegeben werden, mit `/D`.
+Der *Bezeichner* kann mithilfe der [/D](../build/reference/d-preprocessor-definitions.md) -Option von der Befehlszeile aus übermittelt werden. Bis zu 30 Makros können mit `/D`angegeben werden.
 
-Dies ist hilfreich, wenn überprüft werden soll, ob eine Definition vorhanden ist, da diese von der Befehlszeile übergeben werden kann. Zum Beispiel:
+Die **#ifdef** -Direktive ist nützlich, um zu überprüfen, ob eine Definition vorhanden ist, da eine Definition von der Befehlszeile aus übermittelt werden kann. Beispiel:
 
 ```cpp
 // ifdef_ifndef.CPP

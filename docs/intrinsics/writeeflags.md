@@ -1,34 +1,33 @@
 ---
 title: __writeeflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writeeflags
 helpviewer_keywords:
 - __writeeflags intrinsics
 ms.assetid: a62a522c-d7fa-4f10-a620-a3b32bdf3f17
-ms.openlocfilehash: 6679a3b16def3ed413c5cec2a4bb7d5fe5d732c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e43789d2fbed1bdc52665531c61c6c932a27f5ab
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389917"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219148"
 ---
-# <a name="writeeflags"></a>__writeeflags
+# <a name="__writeeflags"></a>__writeeflags
 
-Schreibt den angegebenen Wert in das Programm Status und -Steuerelement (EFLAGS) zu registrieren.
+Schreibt den angegebenen Wert in das Register Programmstatus und-Steuerung (EFLAGS).
 
 ## <a name="syntax"></a>Syntax
 
-```
-void __writeeflags(unsigned Value);
-void __writeeflags(unsigned __int64 Value);
+```C
+void __writeeflags(unsigned Value); /* x86 */
+void __writeeflags(unsigned __int64 Value); /* x64 */
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*Wert*|[in] Der Wert, der registriert wird, EFLAGS geschrieben werden soll. Die `Value` Parameter ist 32 Bits lang für eine 32-Bit-Plattform und 64 Bit lang für eine 64-Bit-Plattform.|
+*Wert*\
+in Der Wert, der in das EFLAGS-Register geschrieben werden soll. Der `Value` -Parameter ist 32 Bit lang für eine 32-Bit-Plattform und 64 Bits lang für eine 64-Bit-Plattform.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -40,11 +39,11 @@ Diese Routinen sind nur als systeminterne Funktionen verfügbar.
 |---------------|------------------|
 |`__writeeflags`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
 [__readeflags](../intrinsics/readeflags.md)

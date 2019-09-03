@@ -1,6 +1,6 @@
 ---
 title: __indwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indwordstring
 - __indwordstring_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __indwordstring intrinsic
 - rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
-ms.openlocfilehash: 6f50aed8e6efe3b0b0a6e7eaebef5719475463ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0b160ba00b1c0b7aa6bffc913e4cb56d503c2ff
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263788"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217835"
 ---
-# <a name="indwordstring"></a>__indwordstring
+# <a name="__indwordstring"></a>__indwordstring
 
 **Microsoft-spezifisch**
 
-Liest Daten aus den angegebenen Port mit der `rep insd` Anweisung.
+Liest Daten mithilfe der `rep insd` -Anweisung aus dem angegebenen Port.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __indwordstring(
    unsigned short Port,
    unsigned long* Buffer,
@@ -31,16 +31,16 @@ void __indwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Port*<br/>
-[in] Der Port, der gelesen werden.
+*Port*\
+in Der Port, von dem gelesen werden soll.
 
-*Buffer*<br/>
-[out] Die vom Port gelesenen Daten werden hier geschrieben.
+*Ert*\
+vorgenommen Die vom Port gelesenen Daten werden hier geschrieben.
 
-*Anzahl*<br/>
-[in] Die Anzahl der Bytes, der zu lesenden Daten.
+*Countdown*\
+in Die Anzahl der Daten bytes, die gelesen werden sollen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,7 +48,7 @@ void __indwordstring(
 |---------------|------------------|
 |`__indwordstring`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -58,4 +58,4 @@ Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

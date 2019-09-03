@@ -1,48 +1,46 @@
 ---
-title: high_property_prefixes
-ms.date: 10/18/2018
+title: high_property_prefixes-Attribut importieren
+ms.date: 08/29/2019
 f1_keywords:
 - high_property_prefixes
 helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-ms.openlocfilehash: 3f8975ec9737e02bb1216166cc6c241549e95a07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e44f6f1afae479f803f4c6d866ef3ee38744561
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409836"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219001"
 ---
-# <a name="highpropertyprefixes"></a>high_property_prefixes
+# <a name="high_property_prefixes-import-attribute"></a>high_property_prefixes-Attribut importieren
 
-**C++-spezifisch**
+**C++Zugeschnitten**
 
 Gibt alternative Präfixe für drei Eigenschaftenmethoden an.
 
 ## <a name="syntax"></a>Syntax
 
-```
-high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
-```
+> **#Import** *Typbibliothek* **high_property_prefixes (** "*getprefix*" **,** "*putprefix*" **,** "*PutRef Prefix*" **)**
 
 ### <a name="parameters"></a>Parameter
 
-*GetPrefix*<br/>
-Präfix für zu verwendende der `propget` Methoden.
+*Getprefix*\
+Präfix, das für die `propget` Methoden verwendet werden soll.
 
-*PutPrefix*<br/>
-Präfix für zu verwendende der `propput` Methoden.
+*Putprefix*\
+Präfix, das für die `propput` Methoden verwendet werden soll.
 
-*PutRefPrefix*<br/>
-Präfix für zu verwendende der `propputref` Methoden.
+*PutRef-Präfix*\
+Präfix, das für die `propputref` Methoden verwendet werden soll.
 
 ## <a name="remarks"></a>Hinweise
 
-In der Standardeinstellung auf hoher Ebene für die Fehlerbehandlung `propget`, `propput`, und `propputref` Methoden verfügbar gemacht werden, durch die Memberfunktionen, die mit dem Namen mit Präfixen `Get`, `Put`, und `PutRef`bzw.
+Standard `propget`mäßig werden `propputref` Methoden zur Fehlerbehandlung `propput`auf hoher Ebene durch Element `PutRef`Funktionen mit den Präfixen `Get`, `Put`bzw. verfügbar gemacht.
 
-**Ende C++-spezifisch**
+**End C++ -Specific**
 
 ## <a name="see-also"></a>Siehe auch
 
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)
+[#Import Attribute](../preprocessor/hash-import-attributes-cpp.md)\
+[#Import-Direktive](../preprocessor/hash-import-directive-cpp.md)

@@ -1,36 +1,36 @@
 ---
 title: __ud2
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ud2
 helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: a36ab5c25ac9138b2a4d6810cc2a339e534f1695
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5aa20804099af4d75dcc62a5e62ccc0d4a09566
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390177"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219756"
 ---
-# <a name="ud2"></a>__ud2
+# <a name="__ud2"></a>__ud2
 
 **Microsoft-spezifisch**
 
-Generiert eine nicht definierte Anweisung an.
+Generiert eine nicht definierte Anweisung.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __ud2();
 ```
 
 ## <a name="remarks"></a>Hinweise
 
-Der Prozessor, wird eine Ungültiger Opcode-Ausnahme auslöst, wenn Sie eine nicht definierte Anweisung ausführen.
+Der Prozessor löst eine ungültige Opcode-Ausnahme aus, wenn Sie eine nicht definierte Anweisung ausführen.
 
-Die `__ud2` -Funktion ist gleichbedeutend mit der `UD2` computeranweisung und steht nur im Kernelmodus ausgeführt. Weitere Informationen zu suchen, nach dem Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set Reference,"auf die [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standort.
+Die `__ud2` -Funktion entspricht der `UD2` -Computer Anweisung und ist nur im Kernel Modus verfügbar. Weitere Informationen finden Sie im Dokument "Intel Architecture Software Developer es Manual, Volume 2: Anweisungs Satz Verweis "auf der Website der [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,15 +38,15 @@ Die `__ud2` -Funktion ist gleichbedeutend mit der `UD2` computeranweisung und st
 |---------------|------------------|
 |`__ud2`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird eine nicht definierte-Anweisung, die eine Ausnahme auslöst. Der Ausnahmehandler ändert dann den Rückgabecode von null bis eins.
+Im folgenden Beispiel wird eine nicht definierte-Anweisung ausgeführt, die eine Ausnahme auslöst. Der Ausnahmehandler ändert dann den Rückgabecode von 0 (null) in einen Wert.
 
-```
+```cpp
 // __ud2_intrinsic.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -84,4 +84,4 @@ After __ud2().  Return code = 1.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

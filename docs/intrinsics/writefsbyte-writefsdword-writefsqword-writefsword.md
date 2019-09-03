@@ -1,6 +1,6 @@
 ---
 title: __writefsbyte, __writefsdword, __writefsqword, __writefsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writefsword
 - __writefsbyte
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __writefsbyte intrinsic
 - writefsword intrinsic
 ms.assetid: 23ac6e8e-bc91-4e90-a4c6-da02993637ad
-ms.openlocfilehash: 6461ef730760298e3159e4ac70dbbdf7bd827092
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0cb70986fc75d14f23fb70efe89f48e10fb047e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389787"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219126"
 ---
-# <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
+# <a name="__writefsbyte-__writefsdword-__writefsqword-__writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
 
 **Microsoft-spezifisch**
 
-Schreibvorgänge im Speicher an einem Speicherort, ein Offset relativ zum Anfang des Segments FS angegeben wird.
+Schreiben Sie Speicher an einen Speicherort, der relativ zum Anfang des FS-Segments durch einen Offset angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __writefsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -50,13 +50,13 @@ void __writefsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Offset*<br/>
-[in] Der Offset vom Anfang des FS so zu schreiben.
+*Kompensieren*\
+in Der Offset vom Anfang des FS, in den geschrieben werden soll.
 
-*Data*<br/>
-[in] Der zu schreibende Wert.
+*Vorrats*\
+in Der zu schreibende Wert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ void __writefsqword(
 |`__writefsdword`|x86|
 |`__writefsqword`|x86|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -77,5 +77,5 @@ Diese Routinen sind nur als systeminterne Funktionen verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

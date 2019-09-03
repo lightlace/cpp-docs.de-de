@@ -1,40 +1,38 @@
 ---
-title: rename_search_namespace
-ms.date: 10/18/2018
+title: rename_search_namespace-Attribut importieren
+ms.date: 08/29/2019
 f1_keywords:
 - rename_search_namespace
 helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-ms.openlocfilehash: ca5d24ca9cc12e9defaa395cf150bc3c04ee4439
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42c6edb6aa34b441db8041dd2974728c138b2c82
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179775"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216624"
 ---
-# <a name="renamesearchnamespace"></a>rename_search_namespace
+# <a name="rename_search_namespace-import-attribute"></a>rename_search_namespace-Attribut importieren
 
-**C++-spezifisch**
+**C++Zugeschnitten**
 
-Hat die gleiche Funktionalität wie die [Rename_namespace](../preprocessor/rename-namespace.md) Attribut wird aber verwendet in Typbibliotheken, die Sie verwenden die `#import` -Direktive zusammen mit der [Auto_search](../preprocessor/auto-search.md) Attribut.
+Verfügt über die gleiche Funktionalität wie das [rename_namespace](../preprocessor/rename-namespace.md) -Attribut, wird jedoch für Typbibliotheken verwendet, bei `#import` denen die-Direktive zusammen mit dem [auto_search](../preprocessor/auto-search.md) -Attribut verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
-rename_search_namespace("NewName")
-```
+> **#Import** *Typbibliothek* **rename_search_namespace (** "*NewName*" **)**
 
 ### <a name="parameters"></a>Parameter
 
-*NewName*<br/>
+*NewName*\
 Der neue Name des neuen Namespace.
 
 ## <a name="remarks"></a>Hinweise
 
-**Ende C++-spezifisch**
+**End C++ -Specific**
 
 ## <a name="see-also"></a>Siehe auch
 
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)
+[#Import Attribute](../preprocessor/hash-import-attributes-cpp.md)\
+[#Import-Direktive](../preprocessor/hash-import-directive-cpp.md)

@@ -1,36 +1,36 @@
 ---
 title: __writecr0
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr0
 helpviewer_keywords:
 - _writecr0 intrinsic
 ms.assetid: a143d08d-0333-4e1b-91b4-4acb2ae91b5a
-ms.openlocfilehash: 24d9ffe0e07269fedf19f90a7c66a07e3c5e7d3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f00796242ae352d32935c2551d50f2d93d734ec
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389943"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219304"
 ---
-# <a name="writecr0"></a>__writecr0
+# <a name="__writecr0"></a>__writecr0
 
 **Microsoft-spezifisch**
 
-Schreibt den Wert `Data` dem CR0-Register.
+Schreibt den Wert `Data` in das CR0-Register.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void writecr0(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Data*<br/>
-[in] Der Wert zum Schreiben in das CR0-Register.
+*Vorrats*\
+in Der Wert, der in das CR0-Register geschrieben werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,7 +38,7 @@ void writecr0(
 |---------------|------------------|
 |`__writecr0`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -48,4 +48,4 @@ Diese systeminterne Funktion ist nur im Kernelmodus verfügbar, und die Routine 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

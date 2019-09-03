@@ -1,31 +1,31 @@
 ---
 title: _ReadWriteBarrier
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _ReadWriteBarrier
 helpviewer_keywords:
 - ReadWriteBarrier intrinsic
 - _ReadWriteBarrier intrinsic
 ms.assetid: dd9f58b5-8bb6-494e-bb0f-9fe184f3908d
-ms.openlocfilehash: 9da26b685be90bd349d6bfe56c4ad980541d09c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d755d045970da01d2eee33377c1452191eac4fe2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263255"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217982"
 ---
-# <a name="readwritebarrier"></a>_ReadWriteBarrier
+# <a name="_readwritebarrier"></a>_ReadWriteBarrier
 
 **Microsoft-spezifisch**
 
 Begrenzt die Compileroptimierungen, die Speicherzugriffe über den Punkt des Aufrufs hinaus neu anordnen können.
 
 > [!CAUTION]
->  Die systeminternen `_ReadBarrier`-, `_WriteBarrier`- und `_ReadWriteBarrier`-Compilerfunktionen und das `MemoryBarrier`-Makro sind veraltet und sollten nicht verwendet werden. Verwenden Sie für die Kommunikation zwischen Threads Mechanismen wie [Atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) und [Std:: Atomic\<T >](../standard-library/atomic.md), die definiert werden, der [ C++ Standardbibliothek](../standard-library/cpp-standard-library-reference.md). Verwenden Sie für den Hardwarezugriff die [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) -Compileroption zusammen mit den [flüchtige](../cpp/volatile-cpp.md) Schlüsselwort.
+> Die systeminternen `_ReadBarrier`-, `_WriteBarrier`- und `_ReadWriteBarrier`-Compilerfunktionen und das `MemoryBarrier`-Makro sind veraltet und sollten nicht verwendet werden. Verwenden Sie für die Kommunikation zwischen Threads Mechanismen wie [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) und [Std:\<: Atomic T >](../standard-library/atomic.md), die in der [ C++ Standard Bibliothek](../standard-library/cpp-standard-library-reference.md)definiert sind. Verwenden Sie für den Hardware Zugriff die [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) -Compileroption in Verbindung mit dem [volatile](../cpp/volatile-cpp.md) -Schlüsselwort.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void _ReadWriteBarrier(void);
 ```
 
@@ -35,7 +35,7 @@ void _ReadWriteBarrier(void);
 |---------------|------------------|
 |`_ReadWriteBarrier`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -45,7 +45,7 @@ Die systeminterne `_ReadWriteBarrier`-Funktion begrenzt die Compileroptimierunge
 
 ## <a name="see-also"></a>Siehe auch
 
-[_ReadBarrier](../intrinsics/readbarrier.md)<br/>
-[_WriteBarrier](../intrinsics/writebarrier.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[_ReadBarrier](../intrinsics/readbarrier.md)\
+[_WriteBarrier](../intrinsics/writebarrier.md)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
 [Schlüsselwörter](../cpp/keywords-cpp.md)

@@ -1,6 +1,6 @@
 ---
 title: __writemsr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writemsr
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - wrmsr instruction
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-ms.openlocfilehash: ac57bac1d132c581ee12048b89d13ed1d1fdb7da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7819477edb8d4e6b18a1213a73ba67065ea7ff57
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389709"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219137"
 ---
-# <a name="writemsr"></a>__writemsr
+# <a name="__writemsr"></a>__writemsr
 
 **Microsoft-spezifisch**
 
-Generiert das Schreiben in Model Specific Register (`wrmsr`) Anweisung.
+Generiert die Anweisung zum Schreiben in das Modell`wrmsr`spezifische Register ().
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __writemsr(
    unsigned long Register,
    unsigned __int64 Value
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Registrieren*<br/>
-[in] Das Modell bestimmte registrieren.
+*Sich*\
+in Das modellspezifische Register.
 
-*Wert*<br/>
-[in] Der zu schreibende Wert.
+*Wert*\
+in Der zu schreibende Wert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,14 +44,14 @@ void __writemsr(
 |---------------|------------------|
 |`__writemsr`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion kann nur im Kernel-Modus verwendet werden, und diese Routine ist nur als systeminterne Funktion verfügbar.
+Diese Funktion kann nur im Kernel Modus verwendet werden, und diese Routine ist nur als systeminterne Funktion verfügbar.
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

@@ -1,40 +1,38 @@
 ---
-title: tlbid
-ms.date: 10/18/2018
+title: TLBID-Import Attribut
+ms.date: 08/29/2019
 f1_keywords:
 - tlbid
 helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
-ms.openlocfilehash: ae79ce9245bb1c0425c3e9b92dd27b52fa443dba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 364fb224b0f2769cb0933e71d18ff70768189328
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179606"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216536"
 ---
-# <a name="tlbid"></a>tlbid
+# <a name="tlbid-import-attribute"></a>TLBID-Import Attribut
 
-**C++-spezifisch**
+**C++Zugeschnitten**
 
 Ermöglicht das Laden anderer Bibliotheken als der primären Typbibliothek.
 
 ## <a name="syntax"></a>Syntax
 
-```
-tlbid(number)
-```
+> **#Import** *Type-Library-DLL* **TLBID (** *Zahl* **)**
 
 ### <a name="parameters"></a>Parameter
 
-*Anzahl*<br/>
-Die Nummer der Typbibliothek in `filename`.
+*einigen*\
+Die Nummer der Typbibliothek in *Type-Library-DLL*.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn mehrere Typbibliotheken in einer DLL, es ist möglich, beim Laden von Bibliotheken als die primäre Typbibliothek mit basieren **Tlbid**.
+Wenn mehrere Typbibliotheken in eine einzelne DLL integriert sind, ist es möglich, andere Bibliotheken als die primäre Typbibliothek mithilfe von **TLBID**zu laden.
 
-Zum Beispiel:
+Beispiel:
 
 ```cpp
 #import <MyResource.dll> tlbid(2)
@@ -46,9 +44,9 @@ identisch mit folgendem Ausdruck:
 LoadTypeLib("MyResource.dll\\2");
 ```
 
-**Ende C++-spezifisch**
+**End C++ -Specific**
 
 ## <a name="see-also"></a>Siehe auch
 
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)
+[#Import Attribute](../preprocessor/hash-import-attributes-cpp.md)\
+[#Import-Direktive](../preprocessor/hash-import-directive-cpp.md)

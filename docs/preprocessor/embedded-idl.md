@@ -1,38 +1,35 @@
 ---
-title: embedded_idl
-ms.date: 10/18/2018
+title: embedded_idl-Attribut importieren
+ms.date: 08/29/2019
 f1_keywords:
 - embedded_idl
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01948b171b20ad0a3bf3e7a41047f1fe3df185b0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389345"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216328"
 ---
-# <a name="embeddedidl"></a>embedded_idl
+# <a name="embedded_idl-import-attribute"></a>embedded_idl-Attribut importieren
 
-**C++-spezifisch**
+**C++Zugeschnitten**
 
-Gibt an, dass die Typbibliothek in die TLH-Datei geschrieben wird und der vom Attribut generierte Code beibehalten wird.
+Gibt an, ob die Typbibliothek in die `.tlh` Datei geschrieben wird, wobei der Attribut generierte Code beibehalten wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
-embedded_idl[("param")]
-```
+> **#Import** *Typbibliothek* **embedded_idl** [ **(** { **"Emitidl"**  | "**no_emitidl"** } **)** ]
 
 ### <a name="parameters"></a>Parameter
 
-*param*<br/>
-Kann einer von zwei Werten sein:
+**Emitidl**\
+Typinformationen, die aus der *Typbibliothek* importiert werden, sind in der IDL vorhanden, die für das attributierte Projekt generiert wurde. Dieses Verhalten ist die Standardeinstellung und ist wirksam, wenn Sie keinen Parameter für `embedded_idl`angeben.
 
-- **emitidl**: Typinformationen, die von Typelib importiert werden in der IDL-Datei für das attributierte Projekt generiert vorhanden sein.  Dies ist die Standardeinstellung, die aktiv ist, wenn Sie keinen Parameter für `embedded_idl` angeben.
-
-- **no_emitidl**: Typinformationen, die von Typelib importiert werden nicht in der IDL-Datei für das attributierte Projekt generiert vorhanden sein.
+**"no_emitidl"** \
+Typinformationen, die aus der *Typbibliothek* importiert werden, sind nicht in der für das attributierte Projekt generierten IDL vorhanden.
 
 ## <a name="example"></a>Beispiel
 
@@ -44,11 +41,9 @@ Kann einer von zwei Werten sein:
 #import "\school\bin\importlib.tlb" embedded_idl("no_emitidl")
 ```
 
-## <a name="remarks"></a>Hinweise
-
-**Ende C++-spezifisch**
+**End C++ -Specific**
 
 ## <a name="see-also"></a>Siehe auch
 
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)
+[#Import Attribute](../preprocessor/hash-import-attributes-cpp.md)\
+[#Import-Direktive](../preprocessor/hash-import-directive-cpp.md)

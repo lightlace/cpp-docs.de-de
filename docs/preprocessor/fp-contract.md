@@ -1,6 +1,6 @@
 ---
-title: fp_contract
-ms.date: 03/12/2018
+title: fp_contract-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.fp_contract
 - fp_contract_CPP
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - pragmas, fp_contract
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: 14c3ac60d4fc0f45fcf0ece6c3f73153e5de4271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 833d8e7f4b8c9da18901610e52afed619468c5c3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409914"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218564"
 ---
-# <a name="fpcontract"></a>fp_contract
+# <a name="fp_contract-pragma"></a>fp_contract-Pragma
 
-Bestimmt, ob ein Gleitkommawert-Kontraktion stattfindet. Eine Gleitkommawert-Kontraktion ist eine Anweisung wie z. B. FMA (Fused-Multiply-Add), die zwei separate Vorgänge mit Gleitkommas in eine einzelne Anweisung kombiniert werden. Mithilfe dieser Anweisungen kann Genauigkeit von Gleitkommawerten, beeinträchtigen, da anstelle von Rundung nach jedem Vorgang, der Prozessor nur einmal nach beide Vorgänge möglicherweise rundet.
+Bestimmt, ob eine Gleit Komma Zahl stattfindet. Ein Gleit Komma Wert ist eine Anweisung wie FMA (Fused-multipli-Add), die zwei separate Gleit Komma Operationen zu einer einzigen Anweisung kombiniert. Die Verwendung dieser Anweisungen kann sich auf die Genauigkeit von Gleit Komma Werten auswirken, da der Prozessor nicht nach jedem Vorgang gerundet, sondern nur einmal nach beiden Vorgängen gerundet werden kann.
 
 ## <a name="syntax"></a>Syntax
 
-> **#pragma fp_contract (** { **on** | **off** } **)**
+> **#pragma fp_contract (** { **on** | **Off** } **)**
 
 ## <a name="remarks"></a>Hinweise
 
-In der Standardeinstellung **Fp_contract** ist **auf**. Dies weist den Compiler an Gleitkommawert-Kontraktion Anweisungen möglichst verwenden. Legen Sie **Fp_contract** zu **aus** um einzelne Gleitkommahardware-Anweisungen zu erhalten.
+Standardmäßig ist **fp_contract** **auf on**eingestellt. Dies weist den Compiler an, nach Möglichkeit Gleit Komma-Schrumpfungs Anweisungen zu verwenden. Legen Sie **fp_contract** auf **Off** fest, um einzelne Gleit Komma Anweisungen beizubehalten.
 
-Weitere Informationen zum Gleitkommaverhalten finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../build/reference/fp-specify-floating-point-behavior.md).
+Weitere Informationen zum Gleit Komma Verhalten finden Sie unter [/fp (Gleit Komma Verhalten angeben)](../build/reference/fp-specify-floating-point-behavior.md).
 
 Andere Gleitkommapragmas umfassen:
 
@@ -37,7 +37,7 @@ Andere Gleitkommapragmas umfassen:
 
 ## <a name="example"></a>Beispiel
 
-Aus diesem Beispiel generierte Code wird eine fused-multiply-add-Anweisung nicht verwendet, auch wenn es auf dem Zielprozessor verfügbar ist. Wenn Sie auskommentieren `#pragma fp_contract (off)`, der generierte Code kann eine fused-multiply-add-Anweisung verwenden, sofern diese verfügbar ist.
+Der Code, der aus diesem Beispiel generiert wird, verwendet keine Anweisung mit dem Wert Fused-multiplizieren, auch wenn er auf dem Zielprozessor verfügbar ist. Wenn Sie auskommentieren `#pragma fp_contract (off)`, verwendet der generierte Code ggf. eine Anweisung mit dem Wert Fused-multiplizieren.
 
 ```cpp
 // pragma_directive_fp_contract.cpp

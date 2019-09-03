@@ -1,22 +1,22 @@
 ---
 title: Präprozessordirektiven
-ms.date: 06/28/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - directives, preprocessor
 - preprocessor, directives
 ms.assetid: e0fc4564-b6cf-4a36-bf51-6ccd7abd0a94
-ms.openlocfilehash: 9481e977f2afb3de27a74278893a217fde48044b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86432ebf210523dd958f3258075d9e9c6d3bb4e6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179970"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222280"
 ---
 # <a name="preprocessor-directives"></a>Präprozessordirektiven
 
-Präprozessoranweisungen wie z. B. `#define` und `#ifdef`, werden in der Regel verwendet, einfach und leicht zu kompilieren in verschiedenen ausführungsumgebungen zu vereinfachen. Anweisungen in der Quelldatei weisen den Präprozessor an, bestimmte Aktionen auszuführen. Beispielsweise kann der Präprozessor Token im Text ersetzen, den Inhalt von anderen Dateien in die Quelldatei einfügen oder die Kompilierung eines Teils der Datei unterdrücken, indem er Textabschnitte entfernt. Präprozessorzeilen werden vor der Makroerweiterung erkannt und ausgeführt. Wenn also die Erweiterung eines Makros aussieht wie ein Präprozessorbefehl, wird dieser Befehl nicht vom Präprozessor erkannt.
+Präprozessordirektiven, `#define` wie `#ifdef`z. b. und, werden in der Regel verwendet, um das ändern und Kompilieren von Quell Programmen in verschiedenen Ausführungs Umgebungen zu vereinfachen. Anweisungen in der Quelldatei weisen den Präprozessor an, bestimmte Aktionen auszuführen. Beispielsweise kann der Präprozessor Token im Text ersetzen, den Inhalt von anderen Dateien in die Quelldatei einfügen oder die Kompilierung eines Teils der Datei unterdrücken, indem er Textabschnitte entfernt. Präprozessorzeilen werden vor der Makroerweiterung erkannt und ausgeführt. Wenn ein Makro in etwas, das wie ein Präprozessorbefehl aussieht, erweitert wird, wird es daher vom Präprozessor nicht erkannt.
 
-Präprozessoranweisungen verwenden den gleichen Zeichensatz wie Quelldateianweisungen, mit der Ausnahme, dass Escapesequenzen nicht unterstützt werden. Der Zeichensatz, der in Präprozessoranweisungen verwendet wird, ist mit dem Ausführungszeichensatz identisch. Der Präprozessor erkennt auch negative Zeichenwerte.
+Präprozessoranweisungen verwenden den gleichen Zeichensatz wie Quelldatei Anweisungen, mit der Ausnahme, dass Escapesequenzen nicht unterstützt werden. Der Zeichensatz, der in Präprozessoranweisungen verwendet wird, ist mit dem Ausführungszeichensatz identisch. Der Präprozessor erkennt auch negative Zeichenwerte.
 
 Der Präprozessor erkennt die folgenden Direktiven:
 
@@ -27,12 +27,12 @@ Der Präprozessor erkennt die folgenden Direktiven:
 |[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|
 |[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||
 
-Das Nummernzeichen (**#**) müssen werden die ersten Leerstelle in der Zeile mit der Richtlinie; können Leerzeichen zwischen dem Nummernzeichen und dem ersten Buchstaben der Anweisung angezeigt werden. Manche Anweisungen enthalten Argumente oder Werte. Jeder Text, der eine Direktive (außer einem Argument oder Wert, der Teil der Direktive ist) folgt muss das einzeilige Kommentartrennzeichen vorangestellt werden (**//**) oder in Kommentartrennzeichen eingeschlossen ( __/ \*\*/__). Zeilen, die präprozessoranweisungen enthalten fortgesetzt werden können, indem unmittelbar vor der End-of-Line-Marker, mit einem umgekehrten Schrägstrich (**\\**).
+Das Nummern Zeichen (`#`) muss das erste nicht-Leerzeichen in der Zeile sein, die die Direktive enthält. Leerzeichen können zwischen dem Nummern Zeichen und dem ersten Buchstaben der Direktive angezeigt werden. Manche Anweisungen enthalten Argumente oder Werte. Jedem Text, der auf eine Direktive folgt (außer einem Argument oder einem Wert, der Teil der Anweisung ist), muss das einzeilige Kommentar Trennzeichen`//`() vorangestellt oder in Kommentar Trennzeichen`/* */`() eingeschlossen werden. Zeilen, die Präprozessordirektiven enthalten, können fortgesetzt werden, indem der zeitzeiendemarker mit`\`einem umgekehrten Schrägstrich () unmittelbar vorangestellt wird.
 
-Präprozessoranweisungen können an beliebiger Stelle in einer Quelldatei auftreten, aber sie gelten nur für den Rest der Quelldatei.
+Präprozessordirektiven können an beliebiger Stelle in einer Quelldatei vorkommen, Sie gelten jedoch nur für den Rest der Quelldatei, nachdem Sie angezeigt wurden.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)<br/>
-[Vordefinierte Makros](../preprocessor/predefined-macros.md)<br/>
-[C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)
+[Präprozessoroperatoren](../preprocessor/preprocessor-operators.md)\
+[Vordefinierte Makros](../preprocessor/predefined-macros.md)\
+[c/c++-präprozessorverweis](../preprocessor/c-cpp-preprocessor-reference.md)

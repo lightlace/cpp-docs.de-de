@@ -1,16 +1,16 @@
 ---
 title: Variadic-Makros
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: da159ef979ccc38845064debebae55356bc9e9bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 171ea797adc1e407a8b7ef0592508653f758df64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179568"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216517"
 ---
 # <a name="variadic-macros"></a>Variadic-Makros
 
@@ -18,9 +18,9 @@ Variadic-Makros sind funktionsähnliche Makros, die eine variable Anzahl von Arg
 
 ## <a name="remarks"></a>Hinweise
 
-Um Variadic-Makros zu verwenden, kann das Auslassungszeichen als endgültiges formales Argument in einer Makrodefinition stehen und die Austausch-ID angegeben werden `__VA_ARGS__` kann in der Definition verwendet werden, um die zusätzlichen Argumente einfügen.  `__VA_ARGS__` wird von allen Argumenten ersetzt, die mit den Auslassungspunkten, einschließlich Kommas zwischen ihnen zu entsprechen.
+Um Variadic-Makros verwenden zu können, können die Auslassungs Zeichen als endgültiges formales Argument in einer Makro Definition angegeben werden, `__VA_ARGS__` und der Ersetzungs Bezeichner kann in der Definition verwendet werden, um die zusätzlichen Argumente einzufügen.  `__VA_ARGS__`wird durch alle Argumente ersetzt, die mit den Auslassungs Zeichen (einschließlich Kommas) identisch sind.
 
-Der C-Standard gibt an, dass mindestens ein Argument an die Auslassungszeichen übergeben werden muss, um sicherzustellen, dass das Makro sich nicht in einen Ausdruck mit einem nachfolgenden Komma auflöst.  Die Implementierung von Visual C++ unterdrückt ein nachfolgendes Komma, wenn keine Argumente an die Auslassungszeichen übergeben werden.
+Der C-Standard gibt an, dass mindestens ein Argument an die Auslassungs Zeichen übermittelt werden muss, um sicherzustellen, dass das Makro nicht in einen Ausdruck mit einem nachfolgenden Komma aufgelöst wird. Die herkömmliche Microsoft C++ -Implementierung unterdrückt ein nach gestelltes Komma, wenn keine Argumente an die Auslassungs Zeichen übermittelt werden.
 
 ## <a name="example"></a>Beispiel
 

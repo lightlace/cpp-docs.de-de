@@ -1,6 +1,6 @@
 ---
 title: __lidt
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __lidt
 - __lidt_cpp
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - LIDT instruction
 - __lidt intrinsic
 ms.assetid: 8298d25d-a19e-4900-828d-6b3b09841882
-ms.openlocfilehash: 757309603af48820a17668cfe272bbeaad9239b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24778b761ada56830b155a2fc65e90f54ba729ed
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263684"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217511"
 ---
-# <a name="lidt"></a>__lidt
+# <a name="__lidt"></a>__lidt
 
 **Microsoft-spezifisch**
 
-Lädt das Interrupt-Deskriptor Tabelle Register (IDTR) mit dem Wert in der angegebenen Speicheradresse.
+Lädt das interruptdeskriptortabellenregister (IDTR) mit dem Wert an der angegebenen Speicheradresse.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __lidt(void * Source);
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*Quelle*|[in] Zeiger auf den Wert in der IDTR kopiert werden sollen.|
+|*Quelle*|in Zeiger auf den Wert, der in den IDTR kopiert werden soll.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,15 +39,15 @@ void __lidt(void * Source);
 |---------------|------------------|
 |`__lidt`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Die `__lidt` -Funktion ist gleichbedeutend mit der `LIDT` computeranweisung und steht nur im Kernelmodus ausgeführt. Weitere Informationen zu suchen, nach dem Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set Reference,"auf die [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standort.
+Die `__lidt` -Funktion entspricht der `LIDT` -Computer Anweisung und ist nur im Kernel Modus verfügbar. Weitere Informationen finden Sie im Dokument "Intel Architecture Software Developer es Manual, Volume 2: Anweisungs Satz Verweis "auf der Website der [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
 [__sidt](../intrinsics/sidt.md)

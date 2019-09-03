@@ -1,91 +1,91 @@
 ---
-title: Präprozessor-Grammatik
-ms.date: 09/04/2018
+title: Präprozessorgrammatik
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0916e3cc9bbdb398db693286dacc4517df03557
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179879"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222261"
 ---
-# <a name="preprocessor-grammar"></a>Präprozessor-Grammatik
+# <a name="preprocessor-grammar"></a>Präprozessorgrammatik
 
-*control-line*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identifier* *token-string*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identifier</em>**(** *identifier*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **)** *token-string*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence*  **"** *filename* **"**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *Bezeichner*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#error** *token-string*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *token-string*
+*Steuerungs Zeile*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *Bezeichner* *Tokenzeichenfolge* <sub>opt</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *Bezeichner* **(** &#x2800;&#x200B;<sub>bezeichneropt</sub> **,** ... **,** *Bezeichner* &#x200B; <sub></sub>opt&#x2800; **)** *Token-Zeichen*folgen<sub>opt</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _Pfadspezifikation_ **"** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **\<** _Pfadspezifikation_ **>** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#Line** *Ziffern Sequenz* **"** _Dateiname_ **"** &#x200B; <sub>opt</sub>  \
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *Bezeichner*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#Error** *Tokenzeichenfolge*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token-string*
 
-*constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**definiert (** *Bezeichner* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**definiert** *Bezeichner*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;ein anderer konstanter Ausdruck
+*Constant-Expression*: \
+&nbsp;&nbsp;&nbsp;&nbsp;**definiert (** &#x2800;*Bezeichner*&#x2800; **)** \
+&nbsp;&nbsp;&nbsp;&nbsp;**definiert** *Bezeichner*\
+&nbsp;&nbsp;&nbsp;&nbsp;beliebiger anderer konstanter Ausdruck
 
-*bedingte* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
+*bedingt*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*if-Part* *elif-Parts* <sub>opt</sub> *else-Part* <sub>opt</sub> *EndIf-Zeile*
 
-*If-Part* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
+*if-Part*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*if-Line* *Text*
 
-*If-Line-* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *constant-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifier*
+*if-Line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *Constant-Expression*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *Bezeichner*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *Bezeichner*
 
-*Elif-Teile* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-line* *text*
+*elif-Parts*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-Line* *Text*\
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-Parts* *elif-Line* *Text*
 
-*elif-line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *constant-expression*
+*elif-Line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *Constant-Expression*
 
-*else-Teil* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
+*else-Part*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*else-Zeile* *Text*
 
-*Else-Line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+*else-Zeile*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
-*Endif-Line-* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+*EndIf-Zeile*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
-*digit-sequence* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+*Ziffern Sequenz*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*mittleren*\
 &nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
-*Ziffer* : eines der<br/>
+*Ziffer*: eine von \
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-*Token-Zeichenfolge* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Zeichenfolge von tokens
+*Tokenzeichenfolge*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Zeichenfolge von Token
 
-*Token* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*operator*<br/>
+*Token*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*Schlüsselwort*\
+&nbsp;&nbsp;&nbsp;&nbsp;*Figur*\
+&nbsp;&nbsp;&nbsp;&nbsp;*Bend*\
+&nbsp;&nbsp;&nbsp;&nbsp;*KOM*\
 &nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
-*FileName* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Rechtliche Betriebssystem-Dateiname
+*Dateiname*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Gültiger Dateiname des Betriebssystems
 
-*Path-Spec* :<br/>
+*Pfadspezifikation*: \
 &nbsp;&nbsp;&nbsp;&nbsp;Gültiger Dateipfad
 
-*Text* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Eine beliebige Sequenz von text
+*Text*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Beliebige Text Sequenz
 
 > [!NOTE]
-> Die folgenden Nichtterminale werden in der [lexikalische Konventionen](../cpp/lexical-conventions.md) Teil der *C++-Sprachreferenz*: *Konstanten*, *konstanter Ausdruck* , *Bezeichner*, *Schlüsselwort*, *Operator*, und *Punctuator*.
+> Die folgenden nicht terminale werden im Abschnitt ["lexikalische Konventionen](../cpp/lexical-conventions.md) " der  *C++ Sprachreferenz*erweitert: *Konstante*, *konstanter Ausdruck*, Bezeichner, *Schlüsselwort*, *Operator*und  *interpunktionator*.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Grammatikzusammenfassung (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+[Grammatik Zusammenfassung (CC++/)](../preprocessor/grammar-summary-c-cpp.md)

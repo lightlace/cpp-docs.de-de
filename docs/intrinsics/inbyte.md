@@ -1,6 +1,6 @@
 ---
 title: __inbyte
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __inbyte
 - __inbyte_cpp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - in instruction
 - __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-ms.openlocfilehash: 20c583b874c2bdb56affc6a90c8464b82c4824f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0036763ed7315a54fbfe6dcc873b46b52f0730c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348977"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222140"
 ---
-# <a name="inbyte"></a>__inbyte
+# <a name="__inbyte"></a>__inbyte
 
 **Microsoft-spezifisch**
 
-Generiert die `in` -Anweisung, ein Byte Zurückgeben der Port anhand des auslesen `Port`.
+Generiert die `in` -Anweisung und gibt ein einzelnes Byte zurück, das von dem `Port`durch angegebenen Port gelesen wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned char __inbyte(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Port*<br/>
-[in] Der Port, der gelesen werden.
+*Port*\
+in Der Port, von dem gelesen werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das gelesene Byte aus dem angegebenen Port.
+Das aus dem angegebenen Port gelesene Byte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,7 +44,7 @@ Das gelesene Byte aus dem angegebenen Port.
 |---------------|------------------|
 |`__inbyte`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 **Ende Microsoft-spezifisch**
 
@@ -54,4 +54,4 @@ Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

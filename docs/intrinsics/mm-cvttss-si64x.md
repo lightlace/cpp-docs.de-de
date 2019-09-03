@@ -1,41 +1,41 @@
 ---
 title: _mm_cvttss_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvttss_si64x
 helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: cfdea6ded622cbcbe42bd555edb3029fabad7823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69016a4e23b020b2c4c79c6b97a5a76f2b2dc028
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396651"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217416"
 ---
-# <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
+# <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
 **Microsoft-spezifisch**
 
-Gibt die X64 erweiterte Version von Convert mit Abschneiden Floating-Point-Wert in 64-Bit-Ganzzahl mit einfacher Genauigkeit (`cvttss2si`) Anweisung.
+Gibt die erweiterte x64-Version der Konvertierung mit einer Gleit Komma Zahl mit einfacher Genauigkeit und einer Gleit Komma Zahl mit einfacher Genauigkeit`cvttss2si`in 64-Bit-Anweisung () aus.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 __int64 _mm_cvttss_si64x(
    __m128 value
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*value*<br/>
-[in] Ein `__m128` Struktur, die Gleitkommawerte mit einfacher Genauigkeit enthält.
+*value*\
+in Eine `__m128` -Struktur mit Gleit Komma Werten mit einfacher Genauigkeit.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das Ergebnis der Konvertierung von der ersten Gleitkommawert in eine 64-Bit-Ganzzahl.
+Das Ergebnis der Konvertierung des ersten Gleit Komma Werts in eine 64-Bit-Ganzzahl.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,17 +43,17 @@ Das Ergebnis der Konvertierung von der ersten Gleitkommawert in eine 64-Bit-Ganz
 |---------------|------------------|
 |`_mm_cvttss_si64x`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Die systeminterne Funktion unterscheidet sich von `_mm_cvtss_si64x` nur darin, dass ungenaue Konvertierungen in Richtung Null abgeschnitten werden. Da die `__m128` -Struktur stellt ein XMM-Register dar, die generierte Anweisung verschiebt Daten aus einem XMM-Register im Systemspeicher.
+Die intrinsische unter `_mm_cvtss_si64x` scheidet sich von nur darin, dass ungenaue Konvertierungen in Richtung NULL abgeschnitten werden. Da die `__m128` -Struktur ein XMM-Register darstellt, verschiebt die generierte Anweisung Daten aus einem XMM-Register in den Systemspeicher.
 
 Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // _mm_cvttss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -89,5 +89,5 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[__m128](../cpp/m128.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[__m128](../cpp/m128.md)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

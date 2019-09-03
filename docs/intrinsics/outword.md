@@ -1,41 +1,41 @@
 ---
 title: __outword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outword
 helpviewer_keywords:
 - __outword intrinsic
 - out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-ms.openlocfilehash: 067f438d2135f4d61245606ab25af5a6f1ec9568
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 766f6adff5ea0212f48ff8727024ac7a5729c944
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262956"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221401"
 ---
-# <a name="outword"></a>__outword
+# <a name="__outword"></a>__outword
 
 **Microsoft-spezifisch**
 
-Generiert die `out` -Anweisung, die das Wort sendet `Data` der e/a-Port anhand des `Port`.
+Generiert die `out` -Anweisung, die das Wort " *Data* " an den durch den *Port*angegebenen e/a-Port sendet.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __outword(
    unsigned short Port,
    unsigned short Data
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Port*<br/>
-[in] Der Port, der die Daten zu senden.
+*Port*\
+in Der Port, an den die Daten gesendet werden sollen.
 
-*Data*<br/>
-[in] Die Daten gesendet werden.
+*Vorrats*\
+in Die zu sendenden Daten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ void __outword(
 |---------------|------------------|
 |`__outword`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -53,4 +53,4 @@ Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

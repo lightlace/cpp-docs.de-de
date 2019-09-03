@@ -1,37 +1,37 @@
 ---
 title: __vmx_on
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_on
 helpviewer_keywords:
 - VMXON instruction
 - __vmx_on intrinsic
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
-ms.openlocfilehash: de903eeeb29e3c194a36ccb4cb038ba89b8ea82f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6041711d9b6806362b856475151f2c4f63750cb
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390138"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219577"
 ---
-# <a name="vmxon"></a>__vmx_on
+# <a name="__vmx_on"></a>__vmx_on
 
 **Microsoft-spezifisch**
 
-VM-Erweiterungen (VMX) Vorgang im Prozessor wird aktiviert.
+Aktiviert den VMX-Vorgang (Virtual Machine Extensions) im Prozessor.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned char __vmx_on(
    unsigned __int64 *VmsSupportPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*VmsSupportPhysicalAddress*<br/>
-[in] Ein Zeiger auf eine physische 64-Bit-Adresse, die auf einer VM-Steuerelement-Struktur (VMCS) verweist.
+*Vmssupportphysicaladdress*\
+in Ein Zeiger auf eine physische 64-Bit-Adresse, die auf eine Virtual Machine Control-Struktur (VMCS) zeigt.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -43,7 +43,7 @@ unsigned char __vmx_on(
 
 ## <a name="remarks"></a>Hinweise
 
-Die `__vmx_on` Funktion entspricht der `VMXON` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standort.
+Die `__vmx_on` -Funktion entspricht der `VMXON` -Computer Anweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen finden Sie im Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture" Dokument Nummer C97063-002 auf der Website der [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,10 +51,10 @@ Die `__vmx_on` Funktion entspricht der `VMXON` computeranweisung. Diese Funktion
 |---------------|------------------|
 |`__vmx_on`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

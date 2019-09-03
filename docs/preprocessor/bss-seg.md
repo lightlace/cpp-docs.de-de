@@ -1,6 +1,6 @@
 ---
-title: bss_seg
-ms.date: 10/22/2018
+title: bss_seg-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.bss_seg
 - bss_seg_CPP
@@ -8,51 +8,52 @@ helpviewer_keywords:
 - pragmas, bss_seg
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
-ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a343fb45b4bbe4789f38b7a1102572cf4241ec53
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212412"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218547"
 ---
-# <a name="bssseg"></a>bss_seg
+# <a name="bss_seg-pragma"></a>bss_seg-Pragma
 
-Gibt das Segment an, in dem nicht initialisierte Variablen in der OBJ-Datei gespeichert werden.
+Gibt den Abschnitt (Segment) an, in dem nicht initialisierte Variablen in der Objektdatei (obj-Datei) gespeichert werden.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma Bss_seg (** ["*section-Name*" [ **,** "*section-Class*"]] **)** \
+> **#pragma Bss_seg (** { **Push** | **Pop** } [ **,** *Identifier* ] [ **,** "*section-Name*" [ **,** "*section-Class*"]] **)**
 
 ### <a name="parameters"></a>Parameter
 
-**push**<br/>
-(Optional) Legt einen Datensatz auf dem internen compilerstapel ab. Ein *Pu*sh * kann ein *Bezeichner* und *Segment-Name*.
+**Push**\
+Optionale Legt einen Datensatz auf dem internen compilerstapel ab. Ein **Push** kann einen *Bezeichner* und einen *Abschnittsnamen*aufweisen.
 
-**pop**<br/>
-(Optional) Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.
+**Chor**\
+Optionale Entfernt einen Datensatz von der obersten Position des internen Compilerstapels. Ein **Pop** kann einen *Bezeichner* und einen *Abschnittsnamen*aufweisen. Mithilfe des Bezeichners können Sie mehrere Datensätze mithilfe von nur einem **Pop** -Befehl Popups. Der *Abschnitts Name* wird nach dem Pop zum aktiven BSS-Abschnittsnamen.
 
-*identifier*<br/>
-(Optional) Bei Verwendung mit **Push**, den Datensatz im internen compilerstapel ein Name zugewiesen. *Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen **pop** Befehl. Bei Verwendung mit **pop**, die Richtlinie wird Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, ist "nothing" per POP entfernt.
+*Figur*\
+Optionale Bei Verwendung mit **Push**weist dem Datensatz im internen compilerstapel einen Namen zu. Bei Verwendung mit **Pop**werden Datensätze vom internen Stapel, bis der *Bezeichner* entfernt wird, vom internen Stapel angeblendet. Wenn der Bezeichner im internen Stapel nicht gefunden wird, wird nichts weitergeleitet.
 
-*"Segment-Name"*<br/>
-(Optional) Der Name eines Segments. Bei Verwendung mit **pop**, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.
+*"section-Name"* \
+Optionale Der Name eines Abschnitts. Bei Verwendung mit **Pop**wird der Stapel per Pop und *Abschnitts Name* zum aktiven BSS-Abschnittsnamen.
 
-*"segment-class"*<br/>
-(Optional) Für die Kompatibilität mit C++ vor Version 2.0 enthalten. Wird ignoriert.
+*"section-Class"* \
+Optionale Wird ignoriert, aber ist aus Kompatibilitätsgründen mit C++ früheren Versionen von Microsoft als Version 2,0 enthalten.
 
 ## <a name="remarks"></a>Hinweise
 
-. OBJ-Dateien können angezeigt werden, mit der [Dumpbin](../build/reference/dumpbin-command-line.md) Anwendung. Das Standardsegment für nicht initialisierte Variablen in der OBJ-Datei ist ".bss". In einigen Fällen zu verwenden, der **Bss_seg** können Ladezeiten, indem nicht initialisierte Daten in einen Abschnitt gruppiert.
+Ein *Abschnitt* in einer Objektdatei ist ein benannter Datenblock, der als Einheit in den Arbeitsspeicher geladen wird. Ein *BSS-Abschnitt* ist ein Abschnitt, der nicht initialisierte Daten enthält. In diesem Artikel haben die Begriffe *Segment* und *Abschnitt* dieselbe Bedeutung.
 
-**Bss_seg** ohne Parameter setzt das Segment auf ".BSS".
+Die **Bss_seg** -pragma-Direktive weist den Compiler an, alle nicht initialisierten Datenelemente aus der Übersetzungseinheit in einen BSS-Abschnitt mit dem Namen " *section-Name*" einzufügen. In einigen Fällen kann die Verwendung von **Bss_seg** Ladezeiten beschleunigen, indem nicht initialisierte Daten zu einem Abschnitt gruppiert werden. Standardmäßig hat der BSS-Abschnitt, der für nicht initialisierte Daten in einer Objektdatei `.bss`verwendet wird, den Namen. Eine **Bss_seg** -pragma-Direktive ohne *section-Name-* Parameter setzt den BSS-Abschnittsnamen für die nachfolgenden nicht initialisierten Datenelemente auf `.bss`zurück.
 
-Daten, die mit der **Bss_seg** Pragma behält keine Informationen über den Speicherort.
+Mit dem **Bss_seg** -Pragma zugeordnete Daten behalten keine Informationen über ihren Speicherort bei.
 
-Sie können auch Abschnitte für initialisierte Daten angeben ([Data_seg](../preprocessor/data-seg.md)), Funktionen ([Code_seg](../preprocessor/code-seg.md)), und const-Variablen ([Const_seg](../preprocessor/const-seg.md)).
+Eine Liste der Namen, die nicht zum Erstellen eines Abschnitts verwendet werden sollten, finden Sie unter [/section](../build/reference/section-specify-section-attributes.md).
 
-Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.
+Sie können auch Abschnitte für initialisierte Daten ([data_seg](../preprocessor/data-seg.md)), Functions ([code_seg](../preprocessor/code-seg.md)) und Konstanten Variablen ([Const_seg](../preprocessor/const-seg.md)) angeben.
+
+Sie können den [DUMPBIN verwenden. EXE](../build/reference/dumpbin-command-line.md) -Anwendung zum Anzeigen von Objektdateien. Die Versionen von DUMPBIN für jede unterstützte Zielarchitektur sind in Visual Studio enthalten.
 
 ## <a name="example"></a>Beispiel
 

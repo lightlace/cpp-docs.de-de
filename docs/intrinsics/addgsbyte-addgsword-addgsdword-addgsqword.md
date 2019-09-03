@@ -1,6 +1,6 @@
 ---
 title: __addgsbyte, __addgsword, __addgsdword, __addgsqword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __addgsdword
 - __addgsqword
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __addgsdword intrinsic
 - __addgsbyte intrinsic
 ms.assetid: 4fa03e69-d849-49ed-ba37-1d3aa23c2a21
-ms.openlocfilehash: 61fff704e600296443964ab62a0b58799c87b51b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dddd8b4a887dc0e01107f8c1036a399b4e52d2e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264425"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221084"
 ---
-# <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
+# <a name="__addgsbyte-__addgsword-__addgsdword-__addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 
 **Microsoft-spezifisch**
 
-Fügen Sie einen Wert an einem Speicherort, der als Offset relativ zum Beginn der `GS` Segment.
+Fügen Sie einem Speicher Speicherort, der relativ zum Anfang des `GS` Segments durch einen Offset angegeben wird, einen Wert hinzu.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __addgsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -50,13 +50,13 @@ void __addgsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Offset*<br/>
-[in] Der Offset vom Anfang des `GS`.
+*Kompensieren*\
+in Der Offset vom Anfang von `GS`.
 
-*Data*<br/>
-[in] Der Wert der Speicheradresse hinzu.
+*Vorrats*\
+in Der Wert, der dem Speicherort hinzugefügt werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,6 +67,8 @@ void __addgsqword(
 |`__addgsdword`|x64|
 |`__addgsqword`|x64|
 
+**Header Datei** \<intrin. h->
+
 ## <a name="remarks"></a>Hinweise
 
 Diese Routinen sind nur als systeminterne Funktion verfügbar.
@@ -75,7 +77,7 @@ Diese Routinen sind nur als systeminterne Funktion verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)<br/>
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)\
+[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

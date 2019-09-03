@@ -1,37 +1,35 @@
 ---
-title: auto_rename
-ms.date: 11/04/2016
+title: auto_rename-Attribut importieren
+ms.date: 08/29/2019
 f1_keywords:
 - auto_rename
 helpviewer_keywords:
 - auto_rename attribute
 ms.assetid: 1075f3ab-f6fc-4e04-8e22-ebe02695a567
-ms.openlocfilehash: ba07b8532ba64c99f835e59d7c71aac8e3f2b03d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43773741701997b48c321cb01ebeba3fed1fb7b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336685"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215948"
 ---
-# <a name="autorename"></a>auto_rename
+# <a name="auto_rename-import-attribute"></a>auto_rename-Attribut importieren
 
-**C++-spezifisch**
+**C++Zugeschnitten**
 
 Benennt für C++ reservierte Wörter um, indem dem Variablennamen zwei Unterstriche (__) angefügt werden, um potenzielle Namenskonflikte zu vermeiden.
 
 ## <a name="syntax"></a>Syntax
 
-```
-auto_rename
-```
+> **#Import** *Typbibliothek* **auto_rename**
 
 ## <a name="remarks"></a>Hinweise
 
 Dieses Attribut wird verwendet, wenn Sie eine Typbibliothek importierten, die eine oder mehrere für C++ reservierte Wörter (Schlüsselwörter oder Makros) als Variablennamen verwendet.
 
-**Ende C++-spezifisch**
+**End C++ -Specific**
 
 ## <a name="see-also"></a>Siehe auch
 
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)
+[#Import Attribute](../preprocessor/hash-import-attributes-cpp.md)\
+[#Import-Direktive](../preprocessor/hash-import-directive-cpp.md)

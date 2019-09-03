@@ -1,6 +1,6 @@
 ---
-title: pop_macro
-ms.date: 11/04/2016
+title: pop_macro-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.pop_macro
 - pop_macro_CPP
@@ -8,27 +8,24 @@ helpviewer_keywords:
 - pop_macro pragma
 - pragmas, pop_macro
 ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: 0ea7d37332ce50fd1d21acba058da721a23f2097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9e097d139e1df5c9ba09ad9ca99f0cfe6bbbfb3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180133"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218295"
 ---
-# <a name="popmacro"></a>pop_macro
-Legt den Wert für die *Macro_name* -Makros auf den Wert oben im Stapel für dieses Makro.
+# <a name="pop_macro-pragma"></a>pop_macro-Pragma
+
+Legt den Wert des *Makronamen* Makros auf den Wert oben im Stapel für dieses Makro fest.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma pop_macro("
-macro_name
-")
-```
+> **#pragma pop_macro (** "*Makroname*" **)**
 
 ## <a name="remarks"></a>Hinweise
 
-Sie müssen zuerst Ausgeben einer [Push_macro](../preprocessor/push-macro.md) für *Macro_name* Sie vor eine **Pop_macro**.
+Vor dem Ausführen eines **pop_macro**muss ein [push_macro](../preprocessor/push-macro.md) für den *Makronamen* ausgegeben werden.
 
 ## <a name="example"></a>Beispiel
 

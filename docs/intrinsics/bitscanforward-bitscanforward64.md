@@ -1,6 +1,6 @@
 ---
 title: _BitScanForward, _BitScanForward64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanForward
 - _BitScanForward_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-ms.openlocfilehash: 8b09aeee485611ddd20d51b4c1e36ec98c03c26e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91f43d19259419b78d1910a00a154d2d4f0adfc7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264217"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222214"
 ---
-# <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
+# <a name="_bitscanforward-_bitscanforward64"></a>_BitScanForward, _BitScanForward64
 
 **Microsoft-spezifisch**
 
@@ -26,7 +26,7 @@ Suchen Sie die Maskendaten vom niedrigstwertigen Bit (LSB) bis zum höchstwertig
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned char _BitScanForward(
    unsigned long * Index,
    unsigned long Mask
@@ -37,13 +37,13 @@ unsigned char _BitScanForward64(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Index*<br/>
-[out] Geladen mit der Bitposition des ersten festgelegten Bits (1) wurde gefunden.
+*Sin*\
+vorgenommen Geladen mit der Bitposition des ersten festgelegten Bits (1).
 
-*Maske*<br/>
-[in] Der 32-Bit oder 64-Bit-Wert zu suchen.
+*Chel*\
+in Der zu durchsuchende 32-Bit-oder 64-Bit-Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -57,14 +57,14 @@ Wenn ein festgelegtes Bit gefunden wird, wird die Bitposition des ersten festgel
 
 |Systemintern|Architektur|
 |---------------|------------------|
-|`_BitScanForward`|x86, ARM, x64|
-|`_BitScanForward64`|ARM, x64|
+|`_BitScanForward`|x86, ARM, x64, ARM64|
+|`_BitScanForward64`|ARM64, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // BitScanForward.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -93,15 +93,11 @@ int main()
 }
 ```
 
-## <a name="input"></a>Eingabe
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>Beispielausgabe
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 2
 ```
@@ -110,4 +106,4 @@ Mask: 12 Index: 2
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

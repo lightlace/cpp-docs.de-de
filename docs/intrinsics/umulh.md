@@ -1,19 +1,19 @@
 ---
 title: __umulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __umulh
 helpviewer_keywords:
 - __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-ms.openlocfilehash: 3a42de276b483f98e2eaf9d0c8505d7f1d5b5bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf098657d1bd5b7ef8a4ffc21f487d2ce619a04e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390112"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219668"
 ---
-# <a name="umulh"></a>__umulh
+# <a name="__umulh"></a>__umulh
 
 **Microsoft-spezifisch**
 
@@ -21,19 +21,19 @@ Gibt die oberen 64 Bits des Produkts von zwei 64-Bit-Ganzzahlen ohne Vorzeichen 
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned __int64 __umulh(
    unsigned __int64 a,
    unsigned __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*a*<br/>
+*ein*\
 [in] Die erste zu multiplizierende Zahl.
 
-*b*<br/>
+*b*\
 [in] Die zweite zu multiplizierende Zahl.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -46,7 +46,7 @@ Die oberen 64 Bits de 128-Bit-Ergebnisses der Multiplikation.
 |---------------|------------------|
 |`__umulh`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -54,7 +54,7 @@ Diese Routinen sind nur als systeminterne Funktionen verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // umulh.cpp
 // processor: X64
 #include <cstdio>
@@ -82,4 +82,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

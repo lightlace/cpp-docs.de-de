@@ -1,41 +1,41 @@
 ---
 title: _mm_stream_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_stream_si64x
 helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: d7f7a75be1602fbb70a230b0dd3a791be99d092a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6ed0f2482ecbcdaa4d50034e0d08381768847a2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396638"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221748"
 ---
-# <a name="mmstreamsi64x"></a>_mm_stream_si64x
+# <a name="_mm_stream_si64x"></a>_mm_stream_si64x
 
 **Microsoft-spezifisch**
 
-Generiert die MOVNTI-Anweisung. Schreibt die Daten in `Source` auf einen Speicherbereich durch angegebene `Dest`, ohne die Caches zu entwickeln.
+Generiert die MOVNTI-Anweisung. Schreibt die Daten in der *Quelle* an einen vom *Ziel*angegebenen Speicherort, ohne die Caches zu verschmutzen.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void _mm_stream_si64x(
-   __int64 * Dest,
+   __int64 * Destination,
    __int64 Source
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*dest*<br/>
-[out] Ein Zeiger auf den Speicherort die Quelldaten zu schreiben.
+*Entwickelt*\
+vorgenommen Ein Zeiger auf den Speicherort, an den die Quelldaten geschrieben werden sollen.
 
-*Quelle*<br/>
-[in] Die Daten geschrieben werden soll.
+*Source*\
+in Die zu schreibende Daten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ void _mm_stream_si64x(
 |---------------|------------------|
 |`_mm_stream_si64x`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -79,4 +79,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

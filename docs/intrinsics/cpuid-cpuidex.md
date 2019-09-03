@@ -1,6 +1,6 @@
 ---
 title: __cpuid, __cpuidex
-ms.date: 03/22/2018
+ms.date: 09/02/2019
 f1_keywords:
 - __cpuid_cpp
 - __cpuid
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-ms.openlocfilehash: c66a3fe7b923b214c4cf2bd84fc03f535d5f4973
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ab814527c8019dd7d6b1e1eb620af0273f270e06
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449986"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216829"
 ---
-# <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
+# <a name="__cpuid-__cpuidex"></a>__cpuid, __cpuidex
 
 **Microsoft-spezifisch**
 
-Generiert die `cpuid` Anweisung, die auf X86- und X64 verfügbar ist. Diese Anweisung fragt den Prozessor nach Informationen zu unterstützten Funktionen und dem CPU-Typ ab.
+Generiert die `cpuid` -Anweisung, die auf x86 und x64 verfügbar ist. Diese Anweisung fragt den Prozessor nach Informationen zu unterstützten Funktionen und dem CPU-Typ ab.
 
 ## <a name="syntax"></a>Syntax
 
-```cpp
+```C
 void __cpuid(
    int cpuInfo[4],
    int function_id
@@ -39,14 +39,14 @@ void __cpuidex(
 
 ### <a name="parameters"></a>Parameter
 
-[out] *cpuInfo*<br/>
-Ein Array aus vier Ganzzahlen, das die Informationen enthält, die in EAX, EBX, ECX and EDX zu unterstützten Funktionen der CPU zurückgegeben werden.
+*cpuInfo*\
+vorgenommen Ein Array von vier ganzen Zahlen, das die in EAX, EBX, ECX und EDX zurückgegebenen Informationen zu den unterstützten Features der CPU enthält.
 
-[in] *Function_id*<br/>
-Ein Code, der die abzurufenden Informationen angibt und in EAX übergeben wird.
+*function_id*\
+in Ein Code, der die abzurufenden Informationen angibt, die in EAX übermittelt werden.
 
-[in] *subfunction_id*<br/>
-Ein zusätzlicher Code, der abzurufende Informationen angibt und in ECX übergeben wird.
+*subfunction_id*\
+in Ein zusätzlicher Code, der Informationen angibt, die abgerufen und in ECX übermittelt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,23 +55,23 @@ Ein zusätzlicher Code, der abzurufende Informationen angibt und in ECX übergeb
 |`__cpuid`|x86, x64|
 |`__cpuidex`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Diese systeminterne Funktion speichert die unterstützten Funktionen und CPU-Informationen, die zurückgegeben werden, indem die `cpuid` Anweisung im *CpuInfo*, ein Array von vier 32-Bit-Ganzzahlen, das gefüllt wird mit den Werten der der EAX, EBX, ECX und EDX (in, das registriert die Reihenfolge). Die zurückgegebenen Informationen haben je nach Wert übergeben wird, als eine andere Bedeutung der *Function_id* Parameter. Die Informationen zurückgegeben, mit verschiedenen Werten von *Function_id* sind prozessorabhängig.
+Diese systeminterne Funktion speichert die unterstützten Funktionen und CPU- `cpuid` Informationen, die von der Anweisung in *cpuinfo*zurückgegeben werden, ein Array von ganzen Zahlen mit einer Länge von 4 32 Bit, das mit den Werten der Registerwerte eax, EBX, ECX und EDX (in dieser Reihenfolge) gefüllt ist. Die zurückgegebenen Informationen haben eine andere Bedeutung, je nachdem, welcher Wert als *function_id* -Parameter übergeben wird. Die Informationen, die mit verschiedenen Werten von *function_id* zurückgegeben werden, sind Prozessor abhängig.
 
-Die systeminterne `__cpuid`-Funktion löscht das ECX-Register, bevor die `cpuid`-Anweisung aufgerufen wird. Die `__cpuidex` systeminterne legt den Wert des ECX-Registers auf *Subfunction_id* , bevor er generiert die `cpuid` Anweisung. Damit können Sie zusätzliche Informationen zum Prozessor sammeln.
+Die systeminterne `__cpuid`-Funktion löscht das ECX-Register, bevor die `cpuid`-Anweisung aufgerufen wird. Der `__cpuidex` systeminterne Wert legt den Wert des ECX-Registers auf *subfunction_id* fest, `cpuid` bevor die Anweisung generiert wird. Sie können zusätzliche Informationen über den Prozessor sammeln.
 
-Weitere Informationen zu den spezifischen zu verwendenden Parametern und den von diesen systeminternen Funktionen auf Intel-Prozessoren zurückgegebenen Werte, finden Sie in der Dokumentation für die `cpuid` Anweisung [Intel 64 und IA-32 Architekturen Software-Entwickler-Handbuch Volume 2: Instruction Set Reference](https://go.microsoft.com/fwlink/p/?LinkID=510021) und [Intel Architektur Instruction Set Extensions Programming Reference](https://go.microsoft.com/fwlink/p/?LinkID=506627). Intel-Dokumentation verwendet die Begriffe "Leaf" und "Subleaf" für die *Function_id* und *Subfunction_id* in EAX und ECX übergebenen Parameter.
+Weitere Informationen zu den spezifischen zu verwendenden Parametern und den von diesen systeminternen Funktionen auf Intel-Prozessoren zurückgegebenen Werten finden Sie `cpuid` in der [Dokumentation zur Anweisung in Intel 64 und IA-32-Architekturen Software Entwickler Manual. Volume 2: Referenz](https://go.microsoft.com/fwlink/p/?LinkID=510021) zum Anweisungs Satz und zum [Programmieren der Intel Architecture-Anweisungs Satz Erweiterungen](https://go.microsoft.com/fwlink/p/?LinkID=506627). In der Intel-Dokumentation werden die Begriffe "Blatt" und "unter Blatt" für die in EAX und ECX übergebenen Parameter " *function_id* " und " *subfunction_id* " verwendet.
 
-Weitere Informationen zu den spezifischen zu verwendenden Parametern und den von diesen systeminternen Funktionen auf AMD-Prozessoren zurückgegebenen Werte, finden Sie in der Dokumentation für die `cpuid` Anweisung AMD64 Architecture Programmer's Manual Volume 3: Allgemeine und System-Anweisungen, und klicken Sie in den Handbüchern Revision für Familien mit bestimmten Prozessor. Links auf diese Dokumente und andere Informationen finden Sie in der AMD [Leitfäden für Entwickler, Handbücher und ISA-Dokumente](https://go.microsoft.com/fwlink/p/?LinkId=510023) Seite. AMD-Dokumentation verwendet die Begriffe "Function Number" und "Subfunction Number" für die *Function_id* und *Subfunction_id* in EAX und ECX übergebenen Parameter.
+Weitere Informationen zu den spezifischen zu verwendenden Parametern und den von diesen systeminternen Funktionen auf AMD-Prozessoren zurückgegebenen Werten finden Sie `cpuid` in der Dokumentation für die-Anweisung im amd64 Architecture Programmer es Manual Volume 3: Allgemeine und System Anweisungen sowie in den Revisions Handbüchern für bestimmte Prozessorfamilien. Links zu diesen Dokumenten und anderen Informationen finden Sie auf der Seite "AMD [Developer Guides, Manuals & ISA Documents](https://go.microsoft.com/fwlink/p/?LinkId=510023) ". In der AMD-Dokumentation werden die Begriffe "Funktions Nummer" und "unter Funktions Nummer" für die in EAX und ECX übergebenen Parameter " *function_id* " und " *subfunction_id* " verwendet.
 
-Wenn die *Function_id* -Argument 0 ist, *CpuInfo*[0] Gibt die höchste verfügbar nicht erweiterte *Function_id* Wert, der vom Prozessor unterstützt. Der Hersteller des Prozessors ist in codiert *CpuInfo*[1], *CpuInfo*[2], und *CpuInfo*[3].
+Wenn das *function_id* -Argument 0 ist, gibt *cpuinfo*[0] den höchsten verfügbaren, nicht erweiterten *function_id* -Wert zurück, der vom Prozessor unterstützt wird. Der Prozessor Hersteller ist in *cpuinfo*[1], *cpuinfo*[2] und *cpuinfo*[3] codiert.
 
-Unterstützung für bestimmte Erweiterungen und Features der CPU-Befehlssatz in codiert ist die *CpuInfo* höher für die zurückgegebenen Ergebnisse *Function_id* Werte. Weitere Informationen finden Sie in den weiter oben verknüpften Handbüchern und im folgenden Beispielcode.
+Die Unterstützung spezifischer Anweisungs Satz Erweiterungen und CPU-Features wird in den *cpuinfo* -Ergebnissen codiert, die für höhere *function_id* -Werte zurückgegeben werden Weitere Informationen finden Sie in den weiter oben verknüpften Handbüchern und im folgenden Beispielcode.
 
-Einige Prozessoren unterstützen Informationen zur erweiterten Funktions-CPUID. Wenn dies unterstützt wird, *Function_id* können Werte von 0 x 80000000 verwendet werden, um die Informationen zurückgegeben werden sollen. Um den maximal zulässigen aussagekräftigen Werts zu bestimmen, legen *Function_id* , 0 x 80000000. Der maximale Wert des *Function_id* für erweiterte Funktionen geschrieben werden unterstützt *CpuInfo*[0].
+Einige Prozessoren unterstützen Informationen zur erweiterten Funktions-CPUID. Wenn es unterstützt wird, können *function_id* -Werte aus 0x80000000 verwendet werden, um Informationen zurückzugeben. Um den maximal zulässigen Wert zu ermitteln, legen Sie *function_id* auf 0x80000000 fest. Der maximale Wert von *function_id* , der für erweiterte Funktionen unterstützt wird, wird in *cpuinfo*[0] geschrieben.
 
 ## <a name="example"></a>Beispiel
 
@@ -400,4 +400,4 @@ XSAVE supported
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

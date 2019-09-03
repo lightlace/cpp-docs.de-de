@@ -1,19 +1,19 @@
 ---
 title: _umul128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __umul128
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: afca1e62127ac2dbcfc407982dbe191d379b4acb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 205f0f7f9046ede624bb09e18d8ede32fadbc3de
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390099"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219691"
 ---
-# <a name="umul128"></a>_umul128
+# <a name="_umul128"></a>_umul128
 
 **Microsoft-spezifisch**
 
@@ -21,7 +21,7 @@ Multipliziert zwei 64-Bit-Ganzzahlen ohne Vorzeichen, die als die ersten beiden 
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned __int64 _umul128(
    unsigned __int64 Multiplier,
    unsigned __int64 Multiplicand,
@@ -29,16 +29,16 @@ unsigned __int64 _umul128(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Multiplikator*<br/>
-[in] Die erste zu multiplizierende 64-Bit-Ganzzahl.
+*Oren*\
+in Die erste zu multiplizierende 64-Bit-Ganzzahl.
 
-*Multiplicand*<br/>
-[in] Die zweite zu multiplizierende 64-Bit-Ganzzahl.
+*Multiplikand*\
+in Die zweite zu multiplizierende 64-Bit-Ganzzahl.
 
-*HighProduct*<br/>
-[out] Die oberen 64 Bits des Produkts.
+*HighProduct*\
+vorgenommen Die hohen 64 Bits des Produkts.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -52,7 +52,7 @@ Die unteren 64 Bits des Produkts.
 
 ## <a name="example"></a>Beispiel
 
-```
+```C
 // umul128.c
 // processor: x64
 
@@ -81,4 +81,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

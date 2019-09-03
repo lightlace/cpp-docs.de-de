@@ -1,46 +1,45 @@
 ---
 title: __svm_skinit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_skinit
 helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-ms.openlocfilehash: 199cba2623f9d8e47c08be642ec485599b87976e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6657921d647a23bf027a5800702527951f7f6831
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390242"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219867"
 ---
-# <a name="svmskinit"></a>__svm_skinit
+# <a name="__svm_skinit"></a>__svm_skinit
 
 **Microsoft-spezifisch**
 
-Initiiert das Laden der überprüfbar sichere Software, z. B. einen Monitor für die virtuellen Computer an.
+Initiiert das Laden von überprüfbar sicheren Software, z. b. einem Monitor für virtuelle Maschinen.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __svm_skinit(
-   int SLB
+   int block_address
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|`SLB`|Die 32-Bit-physische Adresse eines 64K Bytes sichere Ladeprogramm Block (SLB).|
+*block_address*\
+Die physische 32-Bit-Adresse eines Secure Loader Block-Blocks (SLB) mit 64K Byte.
 
 ## <a name="remarks"></a>Hinweise
 
-Die `__svm_skinit` -Funktion entspricht der `SKINIT` -Computeranweisung. Diese Funktion ist Teil eines Security Systems, das der Prozessor und ein Trusted Platform Module (TPM) verwendet, um zu überprüfen, und Laden vertrauenswürdige Software, die einen Security-Kernel (SK) aufgerufen. Ein VM-Monitor ist ein Beispiel für einen Security-Kernel. Das Sicherheitssystem überprüft Programmkomponenten während der Initialisierung geladen, und schützt Komponenten vor Manipulationen durch Interrupts, den Zugriff von Geräten oder ein anderes Programm, wenn der Computer über mehrere Prozessoren verfügt.
+Die `__svm_skinit` -Funktion entspricht der `SKINIT` -Computeranweisung. Diese Funktion ist Teil eines Sicherheitssystems, in dem der Prozessor und ein Trusted Platform Module (TPM) verwendet werden, um vertrauenswürdige Software zu überprüfen und zu laden, die als *Sicherheits Kernel* (SK) bezeichnet wird. Ein virtueller Computermonitor ist ein Beispiel für einen sicherheitskerneltyp. Das Sicherheitssystem überprüft Programmkomponenten, die während des Initialisierungs Vorgangs geladen wurden. Sie schützt Komponenten vor Manipulationen durch Interrupts, Gerätezugriff oder ein anderes Programm, wenn der Computer ein Multiprozessor ist.
 
-Die `SLB` Parameter gibt an, die physische Adresse eines Blocks 64 KB Arbeitsspeicher wird aufgerufen, die *sichere Ladeprogramm Block* (SLB). Der SLB enthält, ein Programm, das sichere Ladeprogramm, das die betriebsumgebung für den Computer her und lädt anschließend den Security-Kernel aufgerufen wird.
+Der *block_address* -Parameter gibt die physische Adresse eines Speicherblocks von 64 KB an, der als *Secure Loader Block* (SLB) bezeichnet wird. Der SLB enthält ein Programm, das als *sicheres Lade*Programm bezeichnet wird. Dadurch wird die Betriebsumgebung für den Computer festgelegt, und anschließend wird der Sicherheitstokendienst geladen.
 
-Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: "System Programming," Dokumentnummer 24593, Version 3.11, auf die [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) Standort.
+Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen finden Sie, wenn Sie nach "amd64 Architecture Programmer es Manual Volume 2: System Programmierung: auf der [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) -Website.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,10 +47,10 @@ Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen 
 |---------------|------------------|
 |`__svm_skinit`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

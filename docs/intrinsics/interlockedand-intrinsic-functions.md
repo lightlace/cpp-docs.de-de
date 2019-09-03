@@ -1,6 +1,6 @@
 ---
-title: Intrinsische Funktionen „_InterlockedAnd“
-ms.date: 11/04/2016
+title: Intrinsische _InterlockedAnd-Funktionen
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAnd_rel
 - _InterlockedAnd_cpp
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-ms.openlocfilehash: b38a181102247ab203c86ccb6310a72135dccc8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e22b463a5229de4745f71aaa0240374a5c057508
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349461"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217774"
 ---
-# <a name="interlockedand-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedAnd“
+# <a name="_interlockedand-intrinsic-functions"></a>Intrinsische _InterlockedAnd-Funktionen
 
 **Microsoft-spezifisch**
 
@@ -71,7 +71,7 @@ Zum Ausführen einer atomarischen bitweisen AND-Operation für eine Variable, di
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 long _InterlockedAnd(
    long volatile * value,
    long mask
@@ -170,13 +170,13 @@ __int64 _InterlockedAnd64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*value*<br/>
-[in, out] Ein Zeiger auf den ersten Operanden, durch das Ergebnis ersetzt wird.
+*value*\
+[in, out] Ein Zeiger auf den ersten Operanden, der durch das Ergebnis ersetzt werden soll.
 
-*mask*<br/>
-[in] Der zweite Operand.
+*chel*\
+in Der zweite Operand.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -186,8 +186,9 @@ Der ursprüngliche Wert des ersten Operanden.
 
 |Systemintern|Architektur|Header|
 |---------------|------------------|------------|
-|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedAnd64`|Arm, x64, ARM64|\<intrin.h>|
+|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM, ARM64|\<intrin.h>|
 |`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|x64|\<intrin.h>|
 |`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h>|
 
@@ -195,7 +196,7 @@ Der ursprüngliche Wert des ersten Operanden.
 
 Die Nummer im Namen jeder einzelnen Funktion gibt die Bitgröße der Argumente an.
 
-Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel` für Semantiken zum Abrufen bzw. Freigeben, z. B. am Beginn und am Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit einer `_nf`-Suffix ("no fence") fungieren nicht als Speicherbarriere.
+Verwenden Sie auf Arm-und ARM64-Plattformen die `_acq` System `_rel` internen Funktionen mit den Suffixen und zum Abrufen und Freigeben der Semantik, z. b. am Anfang und Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit einer `_nf`-Suffix ("no fence") fungieren nicht als Speicherbarriere.
 
 Die systeminternen Funktionen mit dem Suffix `_np` („no prefetch“) verhindern, dass ein möglicher Vorabrufvorgang vom Compiler eingefügt wird.
 
@@ -203,7 +204,7 @@ Auf Intel-Plattformen, die Hardware Lock Elision (HLE)-Anweisungen unterstützen
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // InterlockedAnd.cpp
 // Compile with: /Oi
 #include <stdio.h>
@@ -229,5 +230,5 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
 [Konflikt mit dem x86-Compiler](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

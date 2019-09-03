@@ -1,52 +1,56 @@
 ---
 title: __vmx_vmwrite
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmwrite
 helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-ms.openlocfilehash: e52b1f181f00ce013a111d1a5a62abeff544e20a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cdc5590858f160db24bf75ef11c8f20b204a3152
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389982"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219393"
 ---
-# <a name="vmxvmwrite"></a>__vmx_vmwrite
+# <a name="__vmx_vmwrite"></a>__vmx_vmwrite
 
 **Microsoft-spezifisch**
 
-Schreibt den angegebenen Wert in das angegebene Feld in der aktuellen VM-Steuerelement-Struktur (VMCS).
+Schreibt den angegebenen Wert in das angegebene Feld in der aktuellen VM-Steuerungsstruktur (Virtual Machine Control Structure, VMCS).
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned char __vmx_vmwrite(
    size_t Field,
    size_t FieldValue
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*Feld*|[in] Das VMCS-Feld geschrieben werden soll.|
-|*FieldValue*|[in] Der Wert in das Feld "VMCS" geschrieben.|
+*Flächen*\
+in Das zu schreibende VMCS-Feld.
+
+*Feldwert*\
+in Der Wert, der in das Feld VMCS geschrieben werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-0, die der Vorgang erfolgreich war.
+1,0
+Der Vorgang wurde erfolgreich ausgeführt.
 
-1 Vorgangsfehler mit erweitertem Status zur Verfügung, in der `VM-instruction error field` von der aktuellen VMCS.
+1
+Bei dem Vorgang ist ein Fehler mit erweitertem Status aufgetreten, der im `VM-instruction error field` der aktuellen VMCS verfügbar ist.
 
-2 Fehler ohne verfügbaren Status.
+2,2
+Bei dem Vorgang ist ein Fehler ohne verfügbaren Status aufgetreten.
 
 ## <a name="remarks"></a>Hinweise
 
-Die `__vmx_vmwrite` -Funktion entspricht der `VMWRITE` -Computeranweisung. Der Wert des der `Field` -Parameter ist eine codierte Feldindex, die in der Intel-Dokumentation beschrieben ist. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standorts aus, und klicken Sie dann finden Sie in Anhang C, Dokument.
+Die `__vmx_vmwrite` -Funktion entspricht der `VMWRITE` -Computeranweisung. Der Wert des `Field` -Parameters ist ein codierter Feldindex, der in der Intel-Dokumentation beschrieben wird. Weitere Informationen finden Sie in Anhang C der "Intel Virtualization Technical Specification for the IA-32 Intel Architecture" auf der Website der [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,11 +58,11 @@ Die `__vmx_vmwrite` -Funktion entspricht der `VMWRITE` -Computeranweisung. Der W
 |---------------|------------------|
 |`__vmx_vmwrite`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmread](../intrinsics/vmx-vmread.md)

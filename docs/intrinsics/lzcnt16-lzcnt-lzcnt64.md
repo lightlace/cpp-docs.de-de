@@ -1,6 +1,6 @@
 ---
 title: __lzcnt16, __lzcnt, __lzcnt64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __lzcnt64
 - __lzcnt16
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: 333d9f2b23fb90388af8395945256956c9222ab9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd801717974a230fbd19cc7802d8f6a011774f7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263372"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221802"
 ---
-# <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
+# <a name="__lzcnt16-__lzcnt-__lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
 
 **Microsoft-spezifisch**
 
-Anzahl Nullen die Anzahl der führenden in eine 16, 32 oder 64-Bit-Ganzzahl.
+Zählt die Anzahl führender Nullen in einer 16-, 32-oder 64-Bit-Ganzzahl.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned short __lzcnt16(
    unsigned short value
 );
@@ -41,36 +41,36 @@ unsigned __int64 __lzcnt64(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*value*<br/>
-[in] Die 16, 32 oder 64-Bit-Ganzzahl ohne Vorzeichen so, dass führende Nullen.
+*value*\
+in Die 16-, 32-oder 64-Bit-Ganzzahl ohne Vorzeichen, die auf führende Nullen überprüft werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl führender Nullbits in der `value` Parameter. Wenn `value` 0 (null), ist der Rückgabewert ist die Größe der eingabeoperand (16, 32 oder 64). Wenn das wichtigste Bit der `value` , ist der Rückgabewert ist 0 (null).
+Die Anzahl der führenden Null Bits im `value` -Parameter. Wenn `value` 0 (null) ist, ist der Rückgabewert die Größe des Eingabe Operanden (16, 32 oder 64). Wenn das signifikanteste Bit `value` von 1 ist, ist der Rückgabewert 0 (null).
 
 ## <a name="requirements"></a>Anforderungen
 
 |Systemintern|Architektur|
 |---------------|------------------|
-|`__lzcnt16`|AMD: Advanced Bitmanipulation (abm wird)<br /><br /> Intel: Haswell|
-|`__lzcnt`|AMD: Advanced Bitmanipulation (abm wird)<br /><br /> Intel: Haswell|
-|`__lzcnt64`|AMD: Advanced Bit Manipulation (abm wird) im 64-Bit-Modus.<br /><br /> Intel: Haswell|
+|`__lzcnt16`|AMD Erweiterte Bitmanipulation (ABM)<br /><br /> Intel Haswell|
+|`__lzcnt`|AMD Erweiterte Bitmanipulation (ABM)<br /><br /> Intel Haswell|
+|`__lzcnt64`|AMD Erweiterte Bitmanipulation (ABM) im 64-Bit-Modus.<br /><br /> Intel Haswell|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Jede von diesen systeminternen Funktionen generiert der `lzcnt` Anweisung.  Die Größe des Werts, der die `lzcnt` Anweisung zurückgibt, ist die Größe des Arguments identisch.  In 32-Bit-Modus sind keine 64-Bit-Allzweckregister, daher keine 64-Bit- `lzcnt`.
+Jede der intrinsie generiert die `lzcnt` -Anweisung.  Die Größe des von der `lzcnt` Anweisung zurückgegebenen Werts entspricht der Größe seines Arguments.  Im 32-Bit-Modus gibt es keine allgemeinen 64-Bit-Register, sodass das 64-Bit `lzcnt` nicht unterstützt wird.
 
-Um zu bestimmen, Hardware-Unterstützung für die `lzcnt` Anweisungsaufruf der `__cpuid` systeminternen Funktionen mit `InfoType=0x80000001` und überprüfen Sie wenig 5 `CPUInfo[2] (ECX)`. Dieses Bit wird 1, wenn die Anweisung unterstützt wird und 0 andernfalls. Wenn Sie Code, verwendet dieser systeminternen Funktion auf Hardware ausgeführt, die nicht unterstützt. die `lzcnt` -Anweisung, die die Ergebnisse sind unvorhersehbar.
+Um die Hardwareunterstützung für die `lzcnt` -Anweisung zu ermitteln, müssen `InfoType=0x80000001` Sie die systeminterne Funktion `CPUInfo[2] (ECX)`mit und das `__cpuid` -Bit 5 von. Dieses Bit ist 1, wenn die Anweisung unterstützt wird, und andernfalls 0. Wenn Sie Code ausführen, der die systeminterne Funktion auf Hardware verwendet, `lzcnt` die die-Anweisung nicht unterstützt, sind die Ergebnisse unvorhersehbar.
 
-Auf Intel-Prozessoren, die nicht unterstützen die `lzcnt` -Anweisung, die bytecodierung Anweisung ausgeführt wird, als `bsr` (-bit-Überprüfung umgekehrt). Wenn Codeportabilität relevant ist, stellen die `_BitScanReverse` systeminterne stattdessen. Weitere Informationen finden Sie unter [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).
+Auf Intel-Prozessoren, die die `lzcnt` -Anweisung nicht unterstützen, wird die Anweisungs Byte Codierung als `bsr` (bitscan Reverse) ausgeführt. Wenn die Code Portabilität von Bedeutung ist, sollten Sie `_BitScanReverse` stattdessen die systeminterne Funktion verwenden. Weitere Informationen finden Sie unter [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md).
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // Compile this test with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -107,8 +107,8 @@ __lzcnt(0xffffffff) = 0
 
 **Ende Microsoft-spezifisch**
 
-Teile dieses Inhalts sind erweiterte Micro-Geräte, Inc. Copyright 2007 Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.
+Teile dieses Inhalts sind Copyright 2007 von Advanced Micro Devices, Inc. Alle Rechte vorbehalten. Mit Berechtigung von Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

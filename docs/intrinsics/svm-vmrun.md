@@ -1,44 +1,43 @@
 ---
 title: __svm_vmrun
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_vmrun
 helpviewer_keywords:
 - __svm_vmrun intrinsic
 - VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-ms.openlocfilehash: 40e53b2ebd54fc109b47f3067e5f89ce50b327de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f23df894cc8ad1c270c4c0acbc97cab727e47d93
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390203"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219825"
 ---
-# <a name="svmvmrun"></a>__svm_vmrun
+# <a name="__svm_vmrun"></a>__svm_vmrun
 
 **Microsoft-spezifisch**
 
-Startet die Ausführung der VM-Gast-Code, der die den angegebenen virtuellen Computer-Kontrollblock (VMCB) entspricht.
+Startet die Ausführung des Gast Codes der virtuellen Maschine, der dem angegebenen Virtual Machine Control Block (VMCB) entspricht.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __svm_vmrun(
    size_t VmcbPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*VmcbPhysicalAddress*|[in] Die physische Adresse der VMCB.|
+*Vmcbphysicaladdress*\
+in Die physische Adresse des VMCB.
 
 ## <a name="remarks"></a>Hinweise
 
-Die `__svm_vmrun` Funktion verwendet eine minimale Menge an Informationen in den VMCB, um zu beginnen, den VM-Gast-Code ausführen. Verwenden der [__svm_vmsave](../intrinsics/svm-vmsave.md) oder [__svm_vmload](../intrinsics/svm-vmload.md) ausgeführt werden, wenn Sie weitere Informationen zu einem komplexen Unterbrechung zu verarbeiten oder wechseln Sie zu einem anderen Gast benötigen.
+Die `__svm_vmrun` Funktion verwendet eine minimale Menge an Informationen in VMCB, um mit der Ausführung des Gast Codes der virtuellen Maschine zu beginnen. Verwenden Sie die [__svm_vmsave](../intrinsics/svm-vmsave.md) -oder [__svm_vmload](../intrinsics/svm-vmload.md) -Funktion, wenn Sie weitere Informationen benötigen, um einen komplexen Interrupt zu verarbeiten oder zu einem anderen Gast zu wechseln.
 
-Die `__svm_vmrun` -Funktion entspricht der `VMRUN` -Computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: "System Programming," Dokumentnummer 24593, Version 3.11 oder höher, auf die [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) Standort.
+Die `__svm_vmrun` -Funktion entspricht der `VMRUN` -Computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen finden Sie im Dokument "amd64 Architecture Programmer es Manual Volume 2: System Programmierung, "Dokument Nummer 24593, Revision 3,11 oder höher, am Standort der [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,12 +45,12 @@ Die `__svm_vmrun` -Funktion entspricht der `VMRUN` -Computeranweisung. Diese Fun
 |---------------|------------------|
 |`__svm_vmrun`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
-[__svm_vmsave](../intrinsics/svm-vmsave.md)<br/>
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
+[__svm_vmsave](../intrinsics/svm-vmsave.md)\
 [__svm_vmload](../intrinsics/svm-vmload.md)

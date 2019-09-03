@@ -1,6 +1,6 @@
 ---
-title: conform
-ms.date: 11/04/2016
+title: conform-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - conform_CPP
 - vc-pragma.conform
@@ -9,41 +9,42 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 816ff85bb19f549c6ea072073bd89fcd503545f2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366758"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220498"
 ---
-# <a name="conform"></a>conform
-**C++-spezifisch**
+# <a name="conform-pragma"></a>conform-Pragma
 
-Gibt das Verhalten zur Laufzeit die [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) -Compileroption.
+**C++Zugeschnitten**
+
+Gibt das Laufzeitverhalten der [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) -Compileroption an.
 
 ## <a name="syntax"></a>Syntax
 
-> **#pragma entsprechen (** *Namen* [**, zeigen** ] [**,** { **auf** | **aus** }] [[**,** { **Push** | **pop** }] [**,** *Bezeichner* ]] **)**
+> **#pragma konform (** *Name* [ **, Show** ] [ **,** { **on** | **Off** }] [[ **,** { **Push** | **Pop** }] [ **,** *Identifier* [ **,** { **on** **aus}** ]  |  ] ] **)**
 
 ### <a name="parameters"></a>Parameter
 
-*name*<br/>
-Gibt den Namen der zu ändernden Compileroption an. Der einzige gültige *Namen* ist `forScope`.
+*Benennen*\
+Gibt den Namen der zu ändernden Compileroption an. Der einzige gültige *Name* ist `forScope`.
 
-**show**<br/>
-(Optional) Bewirkt, dass die aktuelle Einstellung der *Namen* ("true" oder "false"), die während der Kompilierung mittels einer Warnmeldung angezeigt werden. Beispielsweise `#pragma conform(forScope, show)`.
+**auftritt**\
+Optionale Bewirkt, dass die aktuelle Einstellung des *namens* (true oder false) während der Kompilierung mithilfe einer Warnmeldung angezeigt wird. Beispielsweise `#pragma conform(forScope, show)`.
 
-**on**, **off**<br/>
-(Optional) Festlegen von *Namen* zu **auf** ermöglicht die [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) -Compileroption. Der Standardwert ist **aus**.
+ein, **aus**\
+Optionale Wenn Sie *Name* auf **on** festlegen, wird die [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) -Compileroption aktiviert. Der Standardwert ist **Off**.
 
-**push**<br/>
-(Optional) Legt den aktuellen Wert der *Namen* auf dem internen compilerstapel ab. Bei Angabe von *Bezeichner*, können Sie angeben, die **auf** oder **aus** Wert für *Namen* auf den Stapel verschoben werden. Beispielsweise `#pragma conform(forScope, push, myname, on)`.
+**Push**\
+Optionale Überträgt den aktuellen Wert des *namens* auf den internen compilerstapel. Wenn Sie den *Bezeichner*angeben, können Sie den Wert **on** oder off für *Name* angeben, der auf dem Stapel **abgelegt** werden soll. Beispielsweise `#pragma conform(forScope, push, myname, on)`.
 
-**pop**<br/>
-(Optional) Legt den Wert der *Namen* auf den Wert am Anfang der internen Compilerstapels fest und ruft dann den Stapel. Wenn Bezeichner angegeben wird **pop**, die Stapel zurück, bis er feststellt, dass den Datensatz mit *Bezeichner*, die ebenfalls entfernt wird; der aktuelle Wert für *Namen* in der nächste Datensatz im Stapel wird der neue Wert für *Namen*. Bei Angabe von **pop** mit einer *Bezeichner* das ist nicht in einem Datensatz auf dem Stapel, der **pop** wird ignoriert.
+**Chor**\
+Optionale Legt den Wert von *Name* auf den Wert oben im internen compilerstapel und dann auf den Stapel. Wenn der Bezeichner mit **Pop**angegeben wird, wird der Stapel zurückgesetzt, bis der Datensatz mit dem *Bezeichner*gefunden wird, der ebenfalls per Pop ausgeblendet wird. der aktuelle Wert für *Name* im nächsten Datensatz auf dem Stapel wird zum neuen Wert für *Name*. Wenn Sie **Pop** mit einem Bezeichner angeben, der sich nicht in einem Datensatz auf dem Stapel befindet, wird der **Pop** ignoriert.
 
-*identifier*<br/>
-(Optional) Können mit einbezogen werden eine **Push** oder **pop** Befehl. Wenn *Bezeichner* verwendet wird, wird eine **auf** oder **aus** Bezeichner kann auch verwendet werden.
+*Figur*\
+Optionale Kann in einem **Push** -oder **Pop** -Befehl enthalten sein. Wenn der Bezeichner verwendet wird, kann auch ein **on** -oder **Off** -Spezifizierer verwendet werden.
 
 ## <a name="example"></a>Beispiel
 

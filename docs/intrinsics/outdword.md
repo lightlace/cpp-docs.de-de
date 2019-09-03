@@ -1,6 +1,6 @@
 ---
 title: __outdword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outdword
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - outdword instruction
 - __outdword intrinsic
 ms.assetid: ed1e4994-a84b-4759-8bf9-cd48fb073f4d
-ms.openlocfilehash: 236c4812f62cb092876b400051248425ee1b13e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce1358e7cef0136ccf7d314038d06d271916e0bc
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263008"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221652"
 ---
-# <a name="outdword"></a>__outdword
+# <a name="__outdword"></a>__outdword
 
 **Microsoft-spezifisch**
 
-Generiert die `out` Anweisung zum Senden einer zeigt Doppelwort `Data` der Port `Port`.
+Generiert die `out` Anweisung zum Senden von Double Word- *Daten* aus dem *portport*.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __outdword(
    unsigned short Port,
    unsigned long Data
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Port*<br/>
-[in] Der Port, der die Daten zu senden.
+*Port*\
+in Der Port, an den die Daten gesendet werden sollen.
 
-*Data*<br/>
-[in] Die Doppelwort gesendet werden.
+*Vorrats*\
+in Das zu sendende Double-Wort.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,7 +44,7 @@ void __outdword(
 |---------------|------------------|
 |`__outdword`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -54,4 +54,4 @@ Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
