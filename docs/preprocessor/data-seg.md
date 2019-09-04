@@ -1,6 +1,6 @@
 ---
-title: data_seg
-ms.date: 10/22/2018
+title: data_seg-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - data_seg_CPP
 - vc-pragma.data_seg
@@ -8,49 +8,56 @@ helpviewer_keywords:
 - data_seg pragma
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
-ms.openlocfilehash: 414fc542aa3f84f985e326960d8cf73b67fd1580
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f67a9f39695adf5067c61288cf09ea7eb481c7dd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389306"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220381"
 ---
-# <a name="dataseg"></a>data_seg
+# <a name="data_seg-pragma"></a>data_seg-Pragma
 
-Gibt das Datensegment an, in dem initialisierte Variablen in der OBJ-Datei gespeichert werden.
+Gibt den Daten Abschnitt (Segment) an, in dem initialisierte Variablen in der Objektdatei (obj-Datei) gespeichert werden.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma data_seg (** ["*section-Name*" [ **,** "*section-Class*"]] **)** \
+> **#pragma data_seg (** { **Push** | **Pop** } [ **,** *Identifier* ] [ **,** "*section-Name*" [ **,** "*section-Class*"]] **)**
 
 ### <a name="parameters"></a>Parameter
 
-**push**<br/>
-(Optional) Legt einen Datensatz auf dem internen compilerstapel ab. Ein **Push** kann ein *Bezeichner* und *Segment-Name*.
+**Push**\
+Optionale Legt einen Datensatz auf dem internen compilerstapel ab. Ein **Push** kann einen *Bezeichner* und einen *Abschnittsnamen*aufweisen.
 
-**pop**<br/>
-(Optional) Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.
+**Chor**\
+Optionale Entfernt einen Datensatz von der obersten Position des internen Compilerstapels. Ein **Pop** kann einen *Bezeichner* und einen *Abschnittsnamen*aufweisen. Mithilfe des Bezeichners können Sie mehrere Datensätze mithilfe von nur einem **Pop** -Befehl Popups. Der *Abschnitts Name* wird zum Namen des aktiven Daten Abschnitts nach dem Pop.
 
-*identifier*<br/>
-(Optional) Bei Verwendung mit **Push**, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit **pop**, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.
+*Figur*\
+Optionale Bei Verwendung mit **Push**weist dem Datensatz im internen compilerstapel einen Namen zu. Bei Verwendung mit **Pop**werden Datensätze vom internen Stapel bis zum Entfernen des Bezeichners angezeigt. Wenn der Bezeichner im internen Stapel nicht gefunden wird, wird nichts weitergeleitet.
 
-*Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen **pop** Befehl.
+der Bezeichner ermöglicht das popten mehrerer Datensätze mit einem einzelnen **Pop** -Befehl.
 
-*"Segment-Name"*<br/>
-(Optional) Der Name eines Segments. Bei Verwendung mit **pop**, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.
+*"section-Name"* \
+Optionale Der Name eines Abschnitts. Bei Verwendung mit **Pop**wird der Stapel per Pop und *Abschnitts Name* zum aktiven Daten Abschnittsnamen.
 
-*"segment-class"*<br/>
-(Optional) Für die Kompatibilität mit C++ vor Version 2.0 enthalten. Wird ignoriert.
+*"section-Class"* \
+Optionale Wird ignoriert, aber ist aus Kompatibilitätsgründen mit C++ früheren Versionen von Microsoft als Version 2,0 enthalten.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind austauschbar, in diesem Thema.
+Ein *Abschnitt* in einer Objektdatei ist ein benannter Datenblock, der als Einheit in den Arbeitsspeicher geladen wird. Ein *Daten Abschnitt* ist ein Abschnitt, der initialisierte Daten enthält. In diesem Artikel haben die Begriffe *Segment* und *Abschnitt* dieselbe Bedeutung.
 
-OBJ-Dateien können angezeigt werden, mit der [Dumpbin](../build/reference/dumpbin-command-line.md) Anwendung. Das Standardsegment für initialisierte Variablen in der OBJ-Datei ist ".data". Nicht initialisierte Variablen werden als mit Null initialisiert behandelt und in ".bss" gespeichert.
+Der Standardabschnitt in der obj-Datei für initialisierte Variablen ist `.data`. Nicht initialisierte Variablen werden als initialisiert mit 0 (null) betrachtet und in `.bss`gespeichert.
 
-**Data_seg** ohne Parameter setzt das Segment auf ".Data".
+Die **data_seg** -pragma-Direktive weist den Compiler an, alle initialisierten Datenelemente aus der Übersetzungseinheit in einen Daten Abschnitt namens *section-Name*einzufügen. Standardmäßig wird der Daten Abschnitt, der für initialisierte Daten in einer Objektdatei verwendet `.data`wird, benannt. Nicht initialisierte Variablen werden als mit NULL initialisiert betrachtet und in `.bss`gespeichert. Eine **data_seg** -pragma-Direktive ohne *section-Name-* Parameter setzt den Namen des Daten Abschnitts für die nachfolgenden initialisierten Datenelemente auf `.data`zurück.
+
+Mit **data_seg** zugeordnete Daten behalten keine Informationen über ihren Speicherort bei.
+
+Eine Liste der Namen, die nicht zum Erstellen eines Abschnitts verwendet werden sollten, finden Sie unter [/section](../build/reference/section-specify-section-attributes.md).
+
+Sie können auch Abschnitte für Konstanten Variablen ([Const_seg](../preprocessor/const-seg.md)), nicht initialisierte Daten ([Bss_seg](../preprocessor/bss-seg.md)) und Funktionen ([code_seg](../preprocessor/code-seg.md)) angeben.
+
+Sie können den [DUMPBIN verwenden. EXE](../build/reference/dumpbin-command-line.md) -Anwendung zum Anzeigen von Objektdateien. Die Versionen von DUMPBIN für jede unterstützte Zielarchitektur sind in Visual Studio enthalten.
 
 ## <a name="example"></a>Beispiel
 
@@ -70,12 +77,6 @@ int m = 3;                     // stored in .my_data1
 int main() {
 }
 ```
-
-Daten, die mit **Data_seg** behält keine Informationen über den Speicherort.
-
-Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.
-
-Sie können auch Abschnitte für const-Variablen angeben ([Const_seg](../preprocessor/const-seg.md)), nicht initialisierte Daten ([Bss_seg](../preprocessor/bss-seg.md)), und Funktionen ([Code_seg](../preprocessor/code-seg.md)).
 
 ## <a name="see-also"></a>Siehe auch
 

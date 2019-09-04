@@ -1,6 +1,6 @@
 ---
 title: __indword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indword_cpp
 - __indword
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - in instruction
 - __indword intrinsic
 ms.assetid: 1068d686-586e-4e36-b962-d1d7c3315260
-ms.openlocfilehash: 063ebd92682f8011bc6b60eee14c3443bc04c333
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 790b65c8a565124df92b82b7ea17174788086a96
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348925"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222117"
 ---
-# <a name="indword"></a>__indword
+# <a name="__indword"></a>__indword
 
 **Microsoft-spezifisch**
 
-Liest ein Doppelwort der Daten aus dem angegebenen Port mithilfe der `in` Anweisung.
+Liest mit der `in` -Anweisung ein doppeltes Wort von Daten aus dem angegebenen Port.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned long __indword(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Port*<br/>
-[in] Der Port, der gelesen werden.
+*Port*\
+in Der Port, von dem gelesen werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Lesen Sie das Wort aus den Port.
+Das gelesene Wort aus dem Port.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,7 +44,7 @@ Lesen Sie das Wort aus den Port.
 |---------------|------------------|
 |`__indword`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -54,4 +54,4 @@ Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

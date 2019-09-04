@@ -1,40 +1,41 @@
 ---
 title: __vmx_vmread
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmread
 helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-ms.openlocfilehash: 5c7b72ba3bf1bd60324704b774bcedaf5612240f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 409835ac29d6f2e839de62291cc5b142166a465c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390047"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219431"
 ---
-# <a name="vmxvmread"></a>__vmx_vmread
+# <a name="__vmx_vmread"></a>__vmx_vmread
 
 **Microsoft-spezifisch**
 
-Liest ein bestimmtes Feld aus der aktuellen VM-Steuerelement-Struktur (VMCS), und platziert sie in der angegebenen Position.
+Liest ein angegebenes Feld aus der aktuellen VM-Steuerungsstruktur (Virtual Machine Control Structure, VMCS) und platziert es am angegebenen Speicherort.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned char __vmx_vmread(
    size_t Field,
    size_t *FieldValue
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-|Parameter|Beschreibung|
-|---------------|-----------------|
-|*Feld*|[in] Das zu lesende VMCS-Feld.|
-|*FieldValue*|[in] Ein Zeiger auf den Speicherort zum Speichern des Werts zu lesen, aus dem vom angegebenen VMCS-Feld der `Field` Parameter.|
+*Flächen*\
+in Das zu lesende VMCS-Feld.
+
+*Feldwert*\
+in Ein Zeiger auf den Speicherort, an dem der aus dem vom- `Field` Parameter angegebenen VMCS-Feld gelesene Wert gespeichert wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -46,7 +47,7 @@ unsigned char __vmx_vmread(
 
 ## <a name="remarks"></a>Hinweise
 
-Die `__vmx_vmread` -Funktion entspricht der `VMREAD` -Computeranweisung. Der Wert des der `Field` -Parameter ist eine codierte Feldindex, die in der Intel-Dokumentation beschrieben ist. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standort aus, und klicken Sie dann finden Sie in Anhang C des Dokuments .
+Die `__vmx_vmread` -Funktion entspricht der `VMREAD` -Computeranweisung. Der Wert des `Field` -Parameters ist ein codierter Feldindex, der in der Intel-Dokumentation beschrieben wird. Weitere Informationen finden Sie in Anhang C der "Intel Virtualization Technical Specification for the IA-32 Intel Architecture" auf der Website der [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,11 +55,11 @@ Die `__vmx_vmread` -Funktion entspricht der `VMREAD` -Computeranweisung. Der Wer
 |---------------|------------------|
 |`__vmx_vmread`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

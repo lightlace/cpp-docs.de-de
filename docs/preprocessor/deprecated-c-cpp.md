@@ -1,6 +1,6 @@
 ---
-title: deprecated (C/C++)
-ms.date: 11/04/2016
+title: deprecated-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.deprecated
 - deprecated_CPP
@@ -8,35 +8,33 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 262b23e6e4813a5e22bc3f4e7c9a18efb9988a7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e76d1c53cb900c108e2839a9aad17b330143a5d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389293"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222405"
 ---
-# <a name="deprecated-cc"></a>deprecated (C/C++)
+# <a name="deprecated-pragma"></a>deprecated-Pragma
 
-Die **veraltet** Pragma ermöglicht es Ihnen anzugeben, dass eine Funktion, Typ oder einen anderen Bezeichner in einer zukünftigen nicht mehr unterstützt werden möglicherweise freigegeben oder nicht mehr verwendet werden soll.
+Mit dem **veraltet** -Pragma können Sie angeben, dass eine Funktion, ein Typ oder ein anderer Bezeichner in einem zukünftigen Release möglicherweise nicht mehr unterstützt wird oder nicht mehr verwendet werden soll.
 
 > [!NOTE]
-> Informationen zu den C ++ 14 `[[deprecated]]` -Attribut, und eine Anleitung für verwendet werden soll, wenn Vs Attribut, das "Microsoft" declspec "oder" Pragma, finden Sie unter [Standard C++-Attribute](../cpp/attributes.md) Attribut.
+> Weitere `[[deprecated]]` Informationen zum c++ 14-Attribut und Anleitungen dazu, wann dieses Attribut anstelle des Microsoft `__declspec(deprecated)` -Modifizierers oder des **veralteten** Pragmas verwendet werden sollte, finden Sie unter [Attribute in C++ ](../cpp/attributes.md).
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma deprecated( identifier1 [,identifier2, ...] )
-```
+> **#pragma veraltet (** *Bezeichner1* [ **,** *Bezeichner2* ...] **)**
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn der Compiler findet einen Bezeichner, die gemäß einer **veraltet** Pragma ausgestellten compilerwarnung [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md).
+Wenn der Compiler auf einen Bezeichner stößt, der durch ein veralteter Pragma festgelegt ist, wird die Compilerwarnung [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)ausgegeben.
 
 Sie können Makronamen als veraltet deklarieren. Platzieren Sie den Makronamen in Anführungszeichen; andernfalls tritt eine Makroerweiterung auf.
 
-Da die **veraltet** Pragma auf alle übereinstimmenden IDs funktioniert und werden nicht berücksichtigt Signaturen, nicht die beste Option für bestimmte Versionen von überladenen Funktionen als veraltet markiert. Jeder entsprechenden Funktionsnamen, der in den Gültigkeitsbereich eingebunden ist, wird die Warnung ausgelöst.
+Da das **veraltet** -Pragma für alle übereinstimmenden Bezeichner funktioniert und keine Signaturen berücksichtigt, ist es nicht die beste Option, um bestimmte Versionen von überladenen Funktionen als veraltet zu kennzeichnen. Alle übereinstimmenden Funktionsnamen, die in den Bereich eingefügt werden, lösen die Warnung aus.
 
-Es wird empfohlen, die C ++ 14 `[[deprecated]]` Attribut, wenn möglich, anstatt die **veraltet** Pragma. Der Microsoft-spezifische [__declspec(deprecated)](../cpp/deprecated-cpp.md) deklarationsmodifizierer ist die bessere Wahl in vielen Fällen als auch die **veraltet** Pragma. Die `[[deprecated]]` Attribut und `__declspec(deprecated)` Modifizierer ermöglichen es Ihnen, den veralteten Zustand von bestimmten Formen überladener Funktionen angeben. Die Diagnose Warnung nur für Verweise auf die bestimmten überladenen Funktion wird das Attribut angezeigt oder Modifizierer gilt.
+Es wird empfohlen, anstelle des `[[deprecated]]` **veralteten** Pragmas das c++ 14-Attribut zu verwenden, sofern möglich. Der Microsoft-spezifische __declspec-deklarationsmodifizierer [(veraltet)](../cpp/deprecated-cpp.md) ist in vielen Fällen besser als das **Veraltete** Pragma. Mit `[[deprecated]]` dem- `__declspec(deprecated)` Attribut und dem-Modifizierer können Sie den veralteten Status für bestimmte Formen überladener Funktionen angeben. Die Diagnose Warnung wird nur bei verweisen auf die spezifische überladene Funktion angezeigt, auf die das Attribut oder der Modifizierer angewendet wird.
 
 ## <a name="example"></a>Beispiel
 

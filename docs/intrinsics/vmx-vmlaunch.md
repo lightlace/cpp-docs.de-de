@@ -1,30 +1,29 @@
 ---
 title: __vmx_vmlaunch
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmlaunch
 helpviewer_keywords:
 - VMLAUNCH instruction
 - __vmx_vmlaunch intrinsic
 ms.assetid: 708f7c38-b7c1-4ee7-bfc4-0daeb9cc9360
-ms.openlocfilehash: 37f3a39ee7b0d4d24f26fab2347ac9fca020ec47
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d78e5181fdd43e10431e12d0cf540c8c9c2e719
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390086"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219546"
 ---
-# <a name="vmxvmlaunch"></a>__vmx_vmlaunch
+# <a name="__vmx_vmlaunch"></a>__vmx_vmlaunch
 
 **Microsoft-spezifisch**
 
-Platziert die aufrufende Anwendung in der VMX-Vorgang ohne Stamm-Zustand (Geben Sie virtuelle Computer) mithilfe der aktuellen VM-Steuerelement-Struktur (VMCS).
+Platziert die aufrufenden Anwendung mithilfe der aktuellen Virtual-Machine-Steuerungsstruktur (Virtual Machine Control Structure, VMCS) im VMX-Betriebsstatus nicht Stamm (VM Enter).
 
 ## <a name="syntax"></a>Syntax
 
-```
-unsigned char __vmx_vmlaunch(
-   void);
+```C
+unsigned char __vmx_vmlaunch(void);
 ```
 
 ## <a name="return-value"></a>Rückgabewert
@@ -37,9 +36,9 @@ unsigned char __vmx_vmlaunch(
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann einen VM-enter-Vorgang ausführen, indem Sie entweder die [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) oder [__vmx_vmresume](../intrinsics/vmx-vmresume.md) Funktion. Die [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) Funktion kann verwendet werden, nur mit einer VMCS, deren Startstatus `Clear`, und die [__vmx_vmresume](../intrinsics/vmx-vmresume.md) Funktion kann verwendet werden, nur mit einer VMCS, deren Startstatus `Launched`. Verwenden Sie daher die [__vmx_vmclear](../intrinsics/vmx-vmclear.md) -Funktion zum Festlegen des einer VMCS auf Startstatus `Clear`, und verwenden Sie dann die [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) -Funktion für den ersten VM-enter-Vorgang und der [__vmx_vmresume](../intrinsics/vmx-vmresume.md) -Funktion für nachfolgende Vorgänge auf VM-enter.
+Eine Anwendung kann einen "VM-Enter"-Vorgang mithilfe der [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) -Funktion oder der [__vmx_vmresume](../intrinsics/vmx-vmresume.md) -Funktion ausführen. Die [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) -Funktion kann nur mit einer VMCS verwendet werden, deren Start `Clear`Status ist, und die [__vmx_vmresume](../intrinsics/vmx-vmresume.md) -Funktion kann nur mit einer VMCS verwendet werden, `Launched`deren Startstatus lautet. Verwenden Sie daher die [__vmx_vmclear](../intrinsics/vmx-vmclear.md) -Funktion, um den Startstatus einer VMCS auf `Clear`festzulegen, und verwenden Sie dann die [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) -Funktion für Ihren ersten VM-Enter-Vorgang und die [__vmx_vmresume](../intrinsics/vmx-vmresume.md) -Funktion für nachfolgende VM-Enter. Operations.
 
-Die `__vmx_vmlaunch` -Funktion entspricht der `VMLAUNCH` -Computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standort.
+Die `__vmx_vmlaunch` -Funktion entspricht der `VMLAUNCH` -Computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen finden Sie im Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture" Dokument Nummer C97063-002 auf der Website der [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,12 +46,12 @@ Die `__vmx_vmlaunch` -Funktion entspricht der `VMLAUNCH` -Computeranweisung. Die
 |---------------|------------------|
 |`__vmx_vmlaunch`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
-[__vmx_vmresume](../intrinsics/vmx-vmresume.md)<br/>
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
+[__vmx_vmresume](../intrinsics/vmx-vmresume.md)\
 [__vmx_vmclear](../intrinsics/vmx-vmclear.md)

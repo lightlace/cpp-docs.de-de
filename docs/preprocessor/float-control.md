@@ -1,6 +1,6 @@
 ---
-title: float_control
-ms.date: 11/04/2016
+title: float_control-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.float_control
 - float_control_CPP
@@ -8,39 +8,41 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 8a7829252cebb726363c67c990a94d08b0d6467a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa8cdc07953405175c1753791ab53214d73ba516
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389215"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218581"
 ---
-# <a name="floatcontrol"></a>float_control
+# <a name="float_control-pragma"></a>float_control-Pragma
 
 Gibt Gleitkommaverhalten für eine Funktion an.
 
 ## <a name="syntax"></a>Syntax
 
-> **#pragma Float_control** [ **(** [ *Wert* **,** *Einstellung* [ **, Push** ]] | [ **Push** | **pop** ] **)** ]
+> **#pragma float_control**\
+> **#pragma float_control (** { **präzise** | **Strict** | **außer** } **,** { **on** | **Off** } [ **, Push** ] **)** \
+> **#pragma float_control (** { **Push** | **Pop** } **)**
 
 ## <a name="options"></a>Optionen
 
-*Wert*, *Einstellung* [, **Push**]<br/>
-Gibt das Gleitkommaverhalten an. *Wert* kann **präzise**, **strict**, oder **außer**. Weitere Informationen finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../build/reference/fp-specify-floating-point-behavior.md). Die *Einstellung* Optionen sind möglich **auf** oder **aus**.
+**präzise** Strict außer,ein | Push |  | \
+Gibt das Gleit Komma Verhalten an, das **präzise**, **streng**oder **außer**sein kann. Weitere Informationen finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../build/reference/fp-specify-floating-point-behavior.md). Die Einstellung kann entweder ein -oder **ausgeschaltet**werden.
 
-Wenn *Wert* ist **strict**, die Einstellungen für **strict** und **außer** angegebenen *Einstellung* . **mit Ausnahme von** kann nur festgelegt werden, um **auf** beim **präzise** oder **strict** nastaven NA hodnotu auch **auf**.
+Wenn **Strict**, werden die Einstellungen für " **Strict** " und " **außer** " durch die Einstellung "ein" oder " **aus** " angegeben. **mit Ausnahme** von kann nur auf **on** festgelegt werden, wenn **präzise** oder **Strict** ebenfalls auf **on**festgelegt ist.
 
-Wenn der optionale **Push** -Token hinzugefügt wird, wird die aktuelle Einstellung für *Wert* wird verschoben, auf dem internen compilerstapel ab.
+Wenn das optionale **pushtoken** hinzugefügt wird, wird die aktuelle Einstellung für **float_control** auf den internen compilerstapel verschoben.
 
-**push**<br/>
-Schieben Sie die aktuelle **Float_control** -Einstellung auf dem internen compilerstapel ab
+**Push**\
+Pushen der aktuellen **float_control** -Einstellung auf den internen compilerstapel
 
-**pop**<br/>
-Entfernt die **Float_control** festlegen, die von der obersten Position des internen Compilerstapels und erstellt die neue **Float_control** festlegen.
+**Chor**\
+Entfernt die **float_control** -Einstellung von der obersten Position des internen Compilerstapels und macht diese die neue **float_control** -Einstellung.
 
 ## <a name="remarks"></a>Hinweise
 
-Können keine **Float_control** aktivieren **präzise** deaktivieren, wenn **außer** ist. Auf ähnliche Weise **präzise** kann nicht deaktiviert werden Wenn [Fenv_access](../preprocessor/fenv-access.md) ist. Wechseln vom strict-Modell zum fast-Modell mithilfe der **Float_control** Pragma, verwenden Sie den folgenden Code:
+Sie können **float_control** nicht verwenden, um **genau** zu deaktivieren, wenn auf on ist. Analog kann nicht deaktiviert werden, wenn [fenv_access](../preprocessor/fenv-access.md) auf ON eingestellt ist. Verwenden Sie den folgenden Code, um vom Strict-Modell zu einem schnellen Modell mit dem **float_control** -Pragma zu wechseln:
 
 ```cpp
 #pragma float_control(except, off)
@@ -48,7 +50,7 @@ Können keine **Float_control** aktivieren **präzise** deaktivieren, wenn **au�
 #pragma float_control(precise, off)
 ```
 
-Wechseln Sie vom fast-Modell zum strict-Modell mit den **Float_control** Pragma, verwenden Sie den folgenden Code:
+Verwenden Sie den folgenden Code, um vom fast-Modell zu einem Strict-Modell mit dem **float_control** -Pragma zu wechseln:
 
 ```cpp
 #pragma float_control(precise, on)
@@ -56,7 +58,7 @@ Wechseln Sie vom fast-Modell zum strict-Modell mit den **Float_control** Pragma,
 #pragma float_control(except, on)
 ```
 
-Wenn keine Optionen angegeben sind, **Float_control** hat keine Auswirkungen.
+Wenn keine Optionen angegeben werden, hat **float_control** keine Auswirkung.
 
 Andere Gleitkommapragmas umfassen:
 
@@ -66,7 +68,7 @@ Andere Gleitkommapragmas umfassen:
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie eine Gleitkomma-Stapelüberlauf-Ausnahme abgefangen wird, mithilfe von Pragma **Float_control**.
+Im folgenden Beispiel wird gezeigt, wie eine Überlauf Gleit Komma Ausnahme mithilfe von Pragma **float_control**abgefangen wird.
 
 ```cpp
 // pragma_directive_float_control.cpp

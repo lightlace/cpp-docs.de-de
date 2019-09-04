@@ -1,26 +1,26 @@
 ---
-title: Tokeneinfügender Operator (##)
-ms.date: 11/04/2016
+title: Operator zum Einfügen eines Tokens (##)
+ms.date: 08/29/2019
 f1_keywords:
 - '##'
 helpviewer_keywords:
 - preprocessor, operators
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
-ms.openlocfilehash: dab4da5fd65fc280d2061256a580a015917d24b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bf1b8c8f56ab9375503c9e8fb6a906706fc70bb
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179593"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218105"
 ---
-# <a name="token-pasting-operator-"></a>Tokeneinfügender Operator (##)
+# <a name="token-pasting-operator-"></a>Operator zum Einfügen eines Tokens (##)
 
-Der Double-Number-Sign- oder "Token-Pasting"-Operator (**##**), die die "Zusammenführen" Operator bezeichnet wird, wird in sowohl objektähnlichen und funktionsähnlichen Makros verwendet. Er ermöglicht die Verknüpfung separater Token zu einem Token und kann daher nicht der erste oder letzte Token in der Makrodefinition sein.
+Der Doppel Nummern Zeichen-oder tokeneinfügenden Operator ( **##** ), der manchmal als Merge- oder *kombinierungs* Operator bezeichnet wird, wird sowohl in objektähnlichen als auch in Funktions ähnlichen Makros verwendet. Sie ermöglicht es, dass getrennte Token in einem einzelnen Token verknüpft werden und daher nicht als erstes oder letztes Token in der Makro Definition zulässig sind.
 
 Wenn ein formaler Parameter in einer Makrodefinition dem Operator „token-pasting“ voran- oder nachgestellt ist, wird der formale Parameter sofort durch das nicht erweiterte tatsächliche Argument ersetzt. Die Makroerweiterung wird nicht vor der Ersetzung für das Argument ausgeführt.
 
-Anschließend wird jedes Vorkommen des Token-Pasting-Operators in *-Token-Zeichenfolge* wird entfernt, und die Token vorausgehende und folgende er verkettet werden. Das daraus resultierende Token muss ein gültiges Token sein. Ist dies der Fall, wird das Token auf eine mögliche Ersetzung überprüft, falls es einen Makronamen darstellt. Der Bezeichner steht für den Namen, unter dem die verketteten Token vor der Ersetzung im Programm bekannt sind. Jedes Token stellt ein an anderer Stelle definiertes Token dar, entweder im Programm oder in der Compilerbefehlszeile. Leerzeichen, die dem Operator vor- oder nachgestellt sind, sind optional.
+Anschließend wird jedes Vorkommen des tokeneinfügenden Operators in der *Tokenzeichenfolge* entfernt, und die vor und nachfolgend aufgeführten Token werden verkettet. Das daraus resultierende Token muss ein gültiges Token sein. Ist dies der Fall, wird das Token auf eine mögliche Ersetzung überprüft, falls es einen Makronamen darstellt. Der Bezeichner steht für den Namen, unter dem die verketteten Token vor der Ersetzung im Programm bekannt sind. Jedes Token stellt ein an anderer Stelle definiertes Token dar, entweder im Programm oder in der Compilerbefehlszeile. Leerzeichen, die dem Operator vor- oder nachgestellt sind, sind optional.
 
 In diesem Beispiel wird die Verwendung der Zeichenfolgenoperatoren und Operatoren zum Einfügen eines Tokens beim Festlegen der Programmausgabe veranschaulicht:
 

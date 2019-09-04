@@ -1,6 +1,6 @@
 ---
 title: __stosd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosd
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: 43a0efcfb94b7e53dacec16caccdacf86a96f5bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46bb124390ff23d79361c66530493c48faf3f0a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390255"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219980"
 ---
-# <a name="stosd"></a>__stosd
+# <a name="__stosd"></a>__stosd
 
 **Microsoft-spezifisch**
 
-Generiert eine Store-Zeichenfolge-Anweisung (`rep stosd`).
+Generiert eine Speicher Zeichen folgen Anweisung`rep stosd`().
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __stosd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*dest*<br/>
-[out] Das Ziel des Vorgangs.
+*Entwickelt*\
+vorgenommen Das Ziel des Vorgangs.
 
-*Data*<br/>
-[in] Die zu speichernden Daten.
+*Vorrats*\
+in Die Daten, die gespeichert werden sollen.
 
-*Anzahl*<br/>
-[in] Die Länge des Blocks des Doppelwort schreiben.
+*Countdown*\
+in Die Länge des zu schreibenden Double Words-Blocks.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,17 +48,17 @@ void __stosd(
 |---------------|------------------|
 |`__stosd`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Das Ergebnis ist, das zeigt Doppelwort `Data` wird geschrieben, in einen Block von `Count` die zeigt Doppelwort an der Speicheradresse `Dest`.
+Das Ergebnis ist, dass die Double Word- *Daten* in einen Block von *count* Double Words an dem Speicherort geschrieben werden, auf den vom *Ziel*verwiesen wird.
 
 Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-```
+```C
 // stosd.c
 // processor: x86, x64
 
@@ -89,4 +89,4 @@ printf_s( "%u %u %u %u",
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

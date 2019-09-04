@@ -1,6 +1,6 @@
 ---
 title: __ll_lshift
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ll_lshift_cpp
 - __ll_lshift
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-ms.openlocfilehash: 5a91ce5db46b19be570f8d48a584a2caeabcc163
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 158ecbf39320d70b51f1f498a0b689ba58fec363
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263385"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221821"
 ---
-# <a name="lllshift"></a>__ll_lshift
+# <a name="__ll_lshift"></a>__ll_lshift
 
 **Microsoft-spezifisch**
 
-Verschiebt die angegebenen 64-Bit-Wert durch die angegebene Anzahl von Bits nach links.
+Verschiebt den angegebenen 64-Bit-Wert um die angegebene Anzahl von Bits nach links.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned __int64 __ll_lshift(
    unsigned __int64 Mask,
    int nBit
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Maske*<br/>
-[in] Der 64-Bit-Ganzzahl-Wert, um nach links verschoben werden soll.
+*Chel*\
+in Der ganzzahlige ganzzahlige 64-Bit-Wert.
 
-*nBit*<br/>
-[in] Die Anzahl der zu verschiebenden Bits.
+*nBit*\
+in Die Anzahl der zu Verschiebungs enden Bits.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Maske verschoben nach links durch `nBit` Bits.
+Die Maske wurde von Bits `nBit` nach links verschoben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,17 +48,17 @@ Die Maske verschoben nach links durch `nBit` Bits.
 |---------------|------------------|
 |`__ll_lshift`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie das Programm mithilfe der 64-Bit-Architektur kompilieren und `nBit` ist größer als 63, ist die Anzahl der zu verschiebenden Bits `nBit` modulo-64. Wenn Sie das Programm, das die 32-Bit-Architektur kompilieren und `nBit` ist größer als 31, die Anzahl der zu verschiebenden Bits wird `nBit` modulo 32.
+Wenn Sie das Programm für die 64-Bit-Architektur kompilieren und `nBit` größer als 63 ist, ist `nBit` die Anzahl der zu Verschiebe Bits modulo 64. Wenn Sie das Programm für die 32-Bit-Architektur kompilieren und `nBit` größer als 31 ist, ist `nBit` die Anzahl der zu Verschiebe Bits modulo 32.
 
-Die `ll` im Namen gibt an, dass dieser eine Operation auf `long long` (`__int64`).
+Der `ll` im Namen gibt an, dass es sich um einen `long long` Vorgang`__int64`auf () handelt.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // ll_lshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -77,18 +77,19 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>Ausgabe
 
-```
+```Output
 10000
 ```
 
-**Beachten Sie** keine nicht signierten Version des Vorgangs nach links verschieben vorhanden ist. Grund hierfür ist, `__ll_lshift` bereits ohne Vorzeichen Eingabeparameter verwendet. Im Gegensatz zu den nach rechts verschieben besteht es keine Abhängigkeit Anmeldung für die Verschiebung nach links, da das niederwertigste Bit im Ergebnis immer auf NULL, unabhängig vom Vorzeichen des Werts verschoben festgelegt ist.
+> [!NOTE]
+> Es ist keine unsignierte Version des Left Shift-Vorgangs vorhanden. Der Grund hierfür `__ll_lshift` ist, dass bereits einen nicht signierten Eingabeparameter verwendet. Anders als bei der rechten Schicht gibt es keine Vorzeichen Abhängigkeit für die linke Schicht, da das unwichtigste Bit im Ergebnis immer auf 0 (null) festgelegt ist, unabhängig vom Vorzeichen des verschobenen Werts.
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[__ll_rshift](../intrinsics/ll-rshift.md)<br/>
-[__ull_rshift](../intrinsics/ull-rshift.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[__ll_rshift](../intrinsics/ll-rshift.md)\
+[__ull_rshift](../intrinsics/ull-rshift.md)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

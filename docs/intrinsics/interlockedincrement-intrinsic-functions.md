@@ -1,6 +1,6 @@
 ---
-title: Intrinsische Funktionen „_InterlockedIncrement“
-ms.date: 12/17/2018
+title: Intrinsische _InterlockedIncrement-Funktionen
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 58c71c577e3d87ca72836134a4f895f32170fe7f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4dd9ae9ba5454b0afefa332689d94fa3619a07a6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509360"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221983"
 ---
-# <a name="_interlockedincrement-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedIncrement“
+# <a name="_interlockedincrement-intrinsic-functions"></a>Intrinsische _InterlockedIncrement-Funktionen
 
 **Microsoft-spezifisch**
 
@@ -59,7 +59,7 @@ Bereitstellen von System interner Compilerunterstützung für die Win32-Windows 
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 long _InterlockedIncrement(
    long * lpAddend
 );
@@ -98,9 +98,9 @@ __int64 _InterlockedIncrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*lpAddend*<br/>
+*lpaddend*\
 [in, out] Ein Zeiger auf die Variable, die inkrementiert werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -111,8 +111,9 @@ Der Rückgabewert ist der resultierende erhöhte Wert.
 
 |Systemintern|Architektur|Header|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
+|`_InterlockedIncrement`, `_InterlockedIncrement16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedIncrement64`|Arm, x64, ARM64|\<intrin.h>|
+|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM, ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -120,7 +121,7 @@ Es gibt mehrere Varianten von `_InterlockedIncrement`, die sich basierend auf de
 
 Während die `_InterlockedIncrement`-Funktion mit 32-Bit-Ganzzahlwerten arbeitet, verwendet `_InterlockedIncrement16`16-Bit-Ganzzahlwerte und `_InterlockedIncrement64` 64-Bit-Ganzzahlwerte.
 
-Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken zum Abrufen bzw. Freigeben benötigen, wie am Anfang und Ende eines kritischen Abschnitts. Die systeminternen Funktionen mit dem Suffix `_nf` („keine Umgrenzung“) fungieren nicht als Arbeitsspeicherbarriere.
+Verwenden Sie auf ARM-Plattformen die systeminternen Funktionen mit den Suffixen `_acq` und `_rel`, wenn Sie Semantiken zum Abrufen bzw. Freigeben benötigen, wie am Anfang und Ende eines kritischen Abschnitts. Das systeminterne- `_nf` Suffix mit dem Suffix ("No fence") fungiert nicht als Arbeitsspeicher Barriere.
 
 Die Variable, auf die der `lpAddend`-Parameter zeigt, muss an einer 32-Bit-Grenze ausgerichtet sein; andernfalls schlägt diese Funktion auf x86-Multiprozessorsystemen und allen Nicht-x86-Systemen fehl. Weitere Informationen finden Sie unter [Ausrichten](../cpp/align-cpp.md).
 
@@ -136,6 +137,6 @@ Ein Beispiel für die Verwendung `_InterlockedIncrement`von finden Sie unter [_I
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
-[Schlüsselwörter](../cpp/keywords-cpp.md)<br/>
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
+[Stichwörter](../cpp/keywords-cpp.md)\
 [Konflikt mit dem x86-Compiler](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

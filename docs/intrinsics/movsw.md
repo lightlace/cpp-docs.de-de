@@ -1,6 +1,6 @@
 ---
 title: __movsw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 3d584300b514ec3e79c44a2943b3fb8a79495df4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eef7fe0a5b9803650f345740a8c40262cd2014
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263203"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221719"
 ---
-# <a name="movsw"></a>__movsw
+# <a name="__movsw"></a>__movsw
 
 **Microsoft-spezifisch**
 
-Generiert eine Zeichenfolge zu verschieben (`rep movsw`) Anweisung.
+Generiert eine Move String (`rep movsw`)-Anweisung.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __movsw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*dest*<br/>
-[out] Das Ziel des Vorgangs.
+*Entwickelt*\
+vorgenommen Das Ziel des Vorgangs.
 
-*Quelle*<br/>
-[in] Die Quelle des Vorgangs.
+*Source*\
+in Die Quelle des Vorgangs.
 
-*Anzahl*<br/>
-[in] Die Anzahl von Wörtern zu kopieren.
+*Countdown*\
+in Die Anzahl der zu kopierenden Wörter.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,17 +48,17 @@ void __movsw(
 |---------------|------------------|
 |`__movsw`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Das Ergebnis ist, die erste `Count` Wörter verweist `Source` kopiert werden, um die `Dest` Zeichenfolge.
+Das Ergebnis ist, dass die ersten *count* -Wörter, auf die von *Source* verwiesen wird, in die *Ziel* Zeichenfolge kopiert werden.
 
 Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // movsw.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -86,4 +86,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

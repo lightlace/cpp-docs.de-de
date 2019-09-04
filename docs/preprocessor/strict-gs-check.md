@@ -1,44 +1,41 @@
 ---
-title: strict_gs_check
-ms.date: 11/04/2016
+title: strict_gs_check-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - strict_gs_check
 - strict_gs_check_CPP
 helpviewer_keywords:
 - strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
-ms.openlocfilehash: b62e1be466e65c0de6fb4eaa33ac6e99915529e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b66e87f2280c923d05103fccfcbbc8d32daf3fd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179944"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216582"
 ---
-# <a name="strictgscheck"></a>strict_gs_check
+# <a name="strict_gs_check-pragma"></a>strict_gs_check-Pragma
 
 Dieses Pragma bietet eine verbesserte Sicherheitsüberprüfung.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma strict_gs_check([push,] on )
-#pragma strict_gs_check([push,] off )
-#pragma strict_gs_check(pop)
-```
+> **#pragma strict_gs_check (** [ **Push,** ] { **on** | **Off** } **)** \
+> **#pragma strict_gs_check (Pop)**
 
 ## <a name="remarks"></a>Hinweise
 
-Weist den Compiler an, einen zufällig ausgewählten Cookie im Funktionsstapel einzufügen, um verschiedene Kategorien eines stapelbasierten Pufferüberlaufs zu erkennen. In der Standardeinstellung die `/GS` -Compileroption (Puffer-Sicherheitsüberprüfung) ist ein Cookie für alle Funktionen nicht eingefügt werden. Weitere Informationen finden Sie unter [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md).
+Weist den Compiler an, einen zufällig ausgewählten Cookie im Funktionsstapel einzufügen, um verschiedene Kategorien eines stapelbasierten Pufferüberlaufs zu erkennen. Standardmäßig fügt die `/GS` Compileroption (Puffer Sicherheitsüberprüfung) kein Cookie für alle Funktionen ein. Weitere Informationen finden Sie unter [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md).
 
-Muss der Kompilierung mit `/GS` (Puffer-Sicherheitsüberprüfung) aktivieren **Strict_gs_check**.
+Kompilieren Sie mithilfe `/GS` von, um **strict_gs_check**zu aktivieren.
 
-Verwenden Sie dieses Pragma in Codemodulen, die potenziell schädlichen Daten ausgesetzt sind. Dieses Pragma ist sehr aggressiv und wird auf Funktionen angewendet, die einen solchen Schutz möglicherweise nicht benötigen. Es wird jedoch optimiert, um die Auswirkung auf die Leistung der resultierenden Anwendung zu minimieren.
+Verwenden Sie dieses Pragma in Codemodulen, die potenziell schädlichen Daten ausgesetzt sind. **strict_gs_check** ist ein aggressives Pragma, das auf Funktionen angewendet wird, die diese Verteidigung möglicherweise nicht benötigen, aber optimiert ist, um seine Auswirkung auf die Leistung der resultierenden Anwendung zu minimieren.
 
-Auch wenn Sie das Pragma verwenden, sollten Sie sich bemühen, sicheren Code zu schreiben. Das heißt, stellen Sie sicher, dass Ihr Code keine Pufferüberläufe hat. **Strict_gs_check** schützen Sie Ihre Anwendung vor Pufferüberläufen, die in Ihrem Code bleiben kann.
+Auch wenn Sie das Pragma verwenden, sollten Sie sich bemühen, sicheren Code zu schreiben. Stellen Sie also sicher, dass im Code keine Pufferüberläufe ausgeführt werden. **strict_gs_check** schützt Ihre Anwendung möglicherweise vor Pufferüberläufen, die im Code verbleiben.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Code tritt ein Pufferüberlauf auf, wenn wir ein Array in ein lokales Array kopieren. Beim Kompilieren dieses Codes mit `/GS`, kein Cookie wird im Stapel eingefügt, da der Arraydatentyp ein Zeiger ist. Hinzufügen der **Strict_gs_check** Pragma wird das stapelcookie in den funktionsstapel erzwungen.
+In diesem Beispiel tritt ein Pufferüberlauf auf, wenn ein Array in ein lokales Array kopiert wird. Wenn Sie diesen Code mit `/GS`kompilieren, wird kein Cookie in den Stapel eingefügt, da der Array Datentyp ein Zeiger ist. Durch das Hinzufügen des **strict_gs_check** -Pragmas wird das Stapel Cookie in den Funktions Stapel erzwingt.
 
 ```cpp
 // pragma_strict_gs_check.cpp
@@ -67,5 +64,5 @@ void ** ReverseArray(void **pData,
 
 ## <a name="see-also"></a>Siehe auch
 
-[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[/GS (Puffersicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md)
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md)

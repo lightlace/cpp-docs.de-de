@@ -1,6 +1,6 @@
 ---
 title: Zeichenfolgenoperator (#)
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - '#'
 helpviewer_keywords:
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: d90d07c8f3cce6c443be0eb994db494746c00fcc
-ms.sourcegitcommit: 40ffe764244784c715b086c79626ac390b855d47
+ms.openlocfilehash: 5a1b43198e59bc1e69cdf1b56db56be75719fe46
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68711142"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216549"
 ---
 # <a name="stringizing-operator-"></a>Zeichenfolgenoperator (#)
 
-Der Zahlen-und Zeichen folgen Operator ( **#** ) konvertiert Makro Parameter in Zeichenfolgenliterale, ohne die Parameterdefinition zu erweitern. Er wird nur mit Makros verwendet, die Argumente akzeptieren. Wenn er einem formalen Parameter in der Makrodefinition voransteht, ist das tatsächliche Argument, das vom Makroaufruf übergeben wird, in Anführungszeichen eingeschlossen und wird als Zeichenfolgenliteral behandelt. Das Zeichenfolgenliteral ersetzt dann jedes Vorkommen einer Kombination des Zeichenfolgenoperators und des formalen Parameters innerhalb der Makrodefinition.
+Der Zahlen-und Zeichen folgen Operator ( **#** ) konvertiert Makro Parameter in Zeichenfolgenliterale, ohne die Parameterdefinition zu erweitern. Sie wird nur mit Makros verwendet, die Argumente annehmen. Wenn er einem formalen Parameter in der Makrodefinition voransteht, ist das tatsächliche Argument, das vom Makroaufruf übergeben wird, in Anführungszeichen eingeschlossen und wird als Zeichenfolgenliteral behandelt. Das Zeichenfolgenliteral ersetzt dann jedes Vorkommen einer Kombination des Zeichenfolgenoperators und des formalen Parameters innerhalb der Makrodefinition.
 
 > [!NOTE]
 > Die Erweiterung von Microsoft C (Version 6.0 und früher) für den ANSI C-Standard, die bisher formale Makroargumente in Zeichenfolgenliteralen und Zeichenkonstanten erweiterte, wird nicht mehr unterstützt. Code, der auf diese Erweiterung angewiesen war, sollte mit dem Zeichen folgen Operator **#** () neu geschrieben werden.
 
-Das Leerzeichen vor dem ersten Token des tatsächlichen Arguments und nach dem letzten Token des tatsächlichen Arguments wird ignoriert. Jedes Leerzeichen zwischen den Token im tatsächlichen Argumente wird im resultierenden Zeichenfolgenliteral auf ein einzelnes Leerzeichen reduziert. Wenn also ein Kommentar zwischen zwei Token im tatsächlichen Argument auftritt, wird das Leerzeichen auf einen einzelnes Leerzeichen reduziert. Das sich ergebende Zeichenfolgenliteral wird automatisch mit allen angrenzenden Zeichenfolgenliteralen verkettet, von denen es nur durch ein Leerzeichen getrennt ist.
+Leerraum, der dem ersten Token vorangestellt ist und dem letzten Token des tatsächlichen Arguments folgt, wird ignoriert. Jedes Leerzeichen zwischen den Token im tatsächlichen Argumente wird im resultierenden Zeichenfolgenliteral auf ein einzelnes Leerzeichen reduziert. Wenn also ein Kommentar zwischen zwei Token im eigentlichen Argument auftritt, wird er auf einen einzelnen Leerraum reduziert. Das resultierende Zeichenfolgenliteralzeichen wird automatisch mit allen angrenzenden Zeichenfolgenliteralen verkettet, die nur durch Leerraum getrennt sind.
 
-Wenn ein im-Argument enthaltenes Zeichen in der Regel eine Escapesequenz erfordert, wenn es in einem Zeichenfolgenliteralzeichen (z. b **\\** . das Anführungszeichen ( **"** ) oder umgekehrter Schrägstrich ()) verwendet wird, wird automatisch der erforderliche Escapezeichen vor dem Zeichen.
+Wenn ein im Argument enthaltenes Zeichen in der Regel eine Escapesequenz erfordert, wenn es in einem Zeichenfolgenliteralzeichen verwendet wird, z`\`. b. das Anführungszeichen (`"`) oder umgekehrter Schrägstrich (), wird automatisch der erforderliche Escapezeichen vor dem-Zeichen eingefügt.
 
-Der visuelle C++ Zeichen folgen Operator verhält sich nicht ordnungsgemäß, wenn er mit Zeichen folgen verwendet wird, die Escapesequenzen einschließen. In dieser Situation generiert der Compiler den [Compilerfehler C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
+Der Microsoft C++ -Zeichen folgen Operator verhält sich nicht korrekt, wenn er mit Zeichen folgen verwendet wird, die Escapesequenzen enthalten. In dieser Situation generiert der Compiler den [Compilerfehler C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt eine Makrodefinition, welche den Zeichenfolgenoperator und eine Hauptfunktion umfasst, die das Makro aufruft:
+Das folgende Beispiel zeigt eine Makro Definition, die den Zeichen folgen Operator und eine Main-Funktion enthält, die das-Makro aufruft:
 
 ```cpp
 // stringizer.cpp

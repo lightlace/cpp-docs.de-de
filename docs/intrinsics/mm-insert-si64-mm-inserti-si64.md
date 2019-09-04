@@ -1,6 +1,6 @@
 ---
 title: _mm_insert_si64, _mm_inserti_si64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_inserti_si64
 - _mm_insert_si64
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-ms.openlocfilehash: f8c8f2f9b33588513e25b2290772aac464f46808
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08469ad8049df2a07f0e66d650c1ca3118f8b980
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396677"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221776"
 ---
-# <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
+# <a name="_mm_insert_si64-_mm_inserti_si64"></a>_mm_insert_si64, _mm_inserti_si64
 
 **Microsoft-spezifisch**
 
-Generiert die `insertq` Anweisung zum Einfügen von Bits aus den zweiten Operanden in den ersten Operanden.
+Generiert die `insertq` Anweisung zum Einfügen von Bits aus dem zweiten Operanden in den ersten Operanden.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 __m128i _mm_insert_si64(
    __m128i Source1,
    __m128i Source2
@@ -37,23 +37,23 @@ __m128i _mm_inserti_si64(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Quelle1*<br/>
-[in] Ein 128-Bit-Feld mit den Daten in die unteren 64 Bits in denen ein Feld eingefügt wird.
+*Quelle1*\
+in Ein 128-Bit-Feld, das über Eingabedaten in den unteren 64 Bits verfügt, in die ein Feld eingefügt wird.
 
-*Source2*<br/>
-[in] Ein 128-Bit-Feld mit den Daten zum Einfügen in die low-Bits.  Für `_mm_insert_si64`, enthält auch einen Feld-Deskriptor in der oberen Bits.
+*Source2*\
+in Ein 128-Bit-Feld, das die Daten enthält, die in seine unteren Bits eingefügt werden sollen.  Für `_mm_insert_si64`enthält auch einen Feld Deskriptor in seinen großen Bits.
 
-*Länge*<br/>
-[in] Eine ganzzahlige Konstante, die die Länge des Felds einzufügende angibt.
+*Füll*\
+in Eine ganzzahlige Konstante, die die Länge des einzufügenden Felds angibt.
 
-*Index*<br/>
-[in] Eine ganzzahlige Konstante, die den Index des Felds das niederwertigste Bit gibt an, in dem Daten eingefügt werden.
+*Sin*\
+in Eine ganzzahlige Konstante, die den Index des am wenigsten wichtigen Bits des Felds angibt, in das Daten eingefügt werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein 128-Bit-Feld, dessen unteren 64 Bits die ursprünglichen unteren 64 Bits des enthalten `Source1` durch das angegebene Bitfeld ersetzt werden soll, durch die niedrigen Bits des `Source2`. Die oberen 64 Bits des Rückgabewerts sind nicht definiert.
+Ein 128-Bit-Feld, dessen untere 64 Bits die ursprünglichen niedrigen 64 Bits von *Quelle1*enthalten, wobei das angegebene Bitfeld durch die unteren Bits von *source2*ersetzt wurde. Die oberen 64 Bits des Rückgabewerts sind nicht definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,21 +62,21 @@ Ein 128-Bit-Feld, dessen unteren 64 Bits die ursprünglichen unteren 64 Bits des
 |`_mm_insert_si64`|SSE4a|
 |`_mm_inserti_si64`|SSE4a|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser systeminternen Funktion generiert die `insertq` Anweisung zum Einfügen von Bits aus `Source2` in `Source1`. Es gibt zwei Versionen dieser Funktion: `_mm_inserti_si64`, ist die sofortige-Version und `_mm_insert_si64` wird nicht sofort.  Jede Version einen Bit-Feld mit einer angegebenen Länge aus Source2 extrahiert und fügt es in Quelle1.  Die extrahierten Bits werden die unwichtigsten Bits des Quelle2.  Das Feld Quelle1, in dem diese Bits eingefügt werden, wird durch die Länge und den Index der unwichtigsten Bit definiert.  Die Werte der Länge und Index stammen mod 64, daher sowohl -1 und 127 als 63 interpretiert werden. Wenn die Summe aus der (geringere)-Bit-Index und die Feldlänge (geringere) größer als 64 ist, sind die Ergebnisse nicht definiert. Der Wert 0 (null), für die Feldlänge ist als 64 interpretiert.  Wenn der Feldindex für Länge und Bit beide NULL Bits 63:0 von sind `Source2` einfügen in `Source1`.  Wenn die Länge 0 (null ist), aber der Bit-Index nicht 0 (null ist), sind die Ergebnisse nicht definiert.
+Diese intrinsie generieren die `insertq` Anweisung zum Einfügen von Bits aus *source2* in *Quelle1*. Es gibt zwei Versionen: `_mm_inserti_si64`, ist die unmittelbare Version und `_mm_insert_si64` ist die nicht unmittelbare Version. Jede Version extrahiert ein Bitfeld mit einer bestimmten Länge aus Source2 und fügt es in Quelle1 ein.  Die extrahierten Bits sind die am wenigsten signifikanten Bits von Source2.  Das Feld Quelle1, in das diese Bits eingefügt werden, wird durch die Länge und den Index des am wenigsten signifikanten Bits definiert.  Die Werte für Länge und Index werden als mod 64 angenommen, sodass sowohl-1 als auch 127 als 63 interpretiert werden. Wenn die Summe des (reduzierten) bitindexes und der (reduzierten) Feldlänge größer als 64 ist, sind die Ergebnisse nicht definiert. Der Wert 0 (null) für die Feldlänge wird als 64 interpretiert. Wenn die Feldlänge und der bitindex NULL sind, werden Bits 63:0 von *source2* in *Quelle1*eingefügt. Wenn die Feldlänge 0 (null) ist, aber der bitindex ungleich 0 (null) ist, sind die Ergebnisse nicht definiert.
 
-In einem Aufruf _mm_insert_si64 ist die Länge des Felds in Bits 77:72 Source2 und der Index in Bits 69:64 enthalten.
+Bei einem _mm_insert_si64-Aufrufwert ist die Feldlänge in Bits 77:72 von Source2 und dem Index in Bits 69:64 enthalten.
 
-Wenn Sie aufrufen `_mm_inserti_si64` Argumente an, dass der Compiler nicht ermitteln kann, werden ganzzahlige Konstanten, generiert der Compiler Code, um diese Werte in einer XMM-Register zu packen und zum Aufrufen `_mm_insert_si64`.
+Wenn Sie mit `_mm_inserti_si64` Argumenten aufzurufen, die der Compiler nicht als ganzzahlige Konstanten ermitteln kann, generiert der Compiler Code, um diese Werte in ein XMM `_mm_insert_si64`-Register zu packen und aufzurufen.
 
-Um zu bestimmen, Hardware-Unterstützung für die `insertq` Anweisungsaufruf der `__cpuid` systeminternen Funktionen mit `InfoType=0x80000001` und überprüfen Sie wenig 6 `CPUInfo[2] (ECX)`. Dieses Bit wird 1, wenn die Anweisung unterstützt wird und 0 andernfalls. Wenn Sie Code, verwendet dieser systeminternen Funktion auf Hardware ausgeführt, die nicht unterstützt. die `insertq` -Anweisung, die die Ergebnisse sind unvorhersehbar.
+Um die Hardwareunterstützung für die `insertq` -Anweisung zu ermitteln `__cpuid` , müssen `InfoType=0x80000001` Sie die systeminterne Funktion `CPUInfo[2] (ECX)`mit abrufen und Bit 6 von aktivieren. Dieses Bit ist 1, wenn die Anweisung unterstützt wird, und andernfalls 0. Wenn Sie Code ausführen, der die systeminterne Funktion auf Hardware verwendet, `insertq` die die-Anweisung nicht unterstützt, sind die Ergebnisse unvorhersehbar.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // Compile this sample with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -120,9 +120,9 @@ result3 = 0xfffffffff3210fff
 
 **Ende Microsoft-spezifisch**
 
-Copyright 2007 by Advanced Micro Devices, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.
+Teile Copyright 2007 von Advanced Micro Devices, Inc. Alle Rechte vorbehalten. Mit Berechtigung von Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Siehe auch
 
-[_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

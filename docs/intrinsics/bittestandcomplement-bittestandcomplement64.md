@@ -1,6 +1,6 @@
 ---
 title: _bittestandcomplement, _bittestandcomplement64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandcomplement64
 - _bittestandcomplement64_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - _bittestandcomplement intrinsic
 - _bittestandcomplement64 intrinsic
 ms.assetid: 53fa12dd-835e-4e5d-baec-a431c8678806
-ms.openlocfilehash: 4c0fc11ca890c64da3ff41c8679a17a733c81d4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1dcfe86aad18c8261029c9111681e1882bc96f5
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264237"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222204"
 ---
-# <a name="bittestandcomplement-bittestandcomplement64"></a>_bittestandcomplement, _bittestandcomplement64
+# <a name="_bittestandcomplement-_bittestandcomplement64"></a>_bittestandcomplement, _bittestandcomplement64
 
 **Microsoft-spezifisch**
 
@@ -26,7 +26,7 @@ Erzeugen Sie eine Anweisung, die Bit `b` der Adresse `a` untersucht, den aktuell
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned char _bittestandcomplement(
    long *a,
    long b
@@ -37,13 +37,13 @@ unsigned char _bittestandcomplement64(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*a*<br/>
-[in, out] Ein Zeiger auf den zu untersuchenden Speicher.
+*ein*\
+[in, out] Ein Zeiger auf den zu überprüfenden Arbeitsspeicher.
 
-*b*<br/>
-[in] Die zu testende Bitposition.
+*b*\
+in Die Bitposition, die getestet werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -53,10 +53,10 @@ Das Bit an der angegebenen Position.
 
 |Systemintern|Architektur|
 |---------------|------------------|
-|`_bittestandcomplement`|x86, ARM, x64|
-|`_bittestandcomplement64`|x64|
+|`_bittestandcomplement`|x86, ARM, x64, ARM64|
+|`_bittestandcomplement64`|x64, ARM64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -64,7 +64,7 @@ Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // bittestandcomplement.cpp
 // processor: x86, IPF, x64
 #include <stdio.h>
@@ -92,9 +92,7 @@ int main()
 }
 ```
 
-## <a name="sample-output"></a>Beispielausgabe
-
-```
+```Output
 Initial value: 1
 Testing bit 1
 Value changed to 3, Result: 0
@@ -106,4 +104,4 @@ Value changed to 0, Result: 1
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

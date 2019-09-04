@@ -1,6 +1,6 @@
 ---
-title: function (C/C++)
-ms.date: 11/04/2016
+title: function-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - function_CPP
 - vc-pragma.function
@@ -8,27 +8,26 @@ helpviewer_keywords:
 - function pragma
 - pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-ms.openlocfilehash: c57ff2053b3c1fd52474c7eb0dd598641632f789
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f99f3c878789a6c47fdb0d48e0a8690d65fa8062
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409927"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220141"
 ---
-# <a name="function-cc"></a>function (C/C++)
-Gibt an, dass Funktionsaufrufe generiert werden, die in der Argumentliste des Pragmas angegeben sind.
+# <a name="function-pragma"></a>function-Pragma
+
+Weist den Compiler an, Aufrufe an Funktionen zu generieren, die in der Argumentliste des Pragmas angegeben sind, anstatt Sie zu Inlining.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma function( function1 [, function2, ...] )
-```
+> **#pragma-Funktion (** *Funktion1* [ **,** *Funktion2* ...] **)**
 
 ## <a name="remarks"></a>Hinweise
 
-Bei Verwendung der `intrinsic` Pragma (oder/Oi) um den Compiler anweisen, intrinsische Funktionen generieren (intrinsische Funktionen werden als Inlinecode und nicht als Funktionsaufrufe generiert), können Sie die **Funktion** Pragma, um explizit zu erzwingen einer Funktionsaufruf. Sobald ein function-Pragma angezeigt wird, tritt es mit der ersten Funktionsdefinition in Kraft, die eine bestimmte intrinsische Funktion enthält. Die Wirkung dauert bis an das Ende der Quelldatei oder bis zum Auftreten einer `intrinsic` Pragmas, die gleiche intrinsische Funktion angibt. Die **Funktion** Pragma kann nur außerhalb einer Funktion verwendet werden – auf globaler Ebene.
+Intrinsische Funktionen werden normalerweise als Inline Code und nicht als Funktionsaufrufe generiert. Wenn Sie das [intrinsische Pragma](intrinsic.md) oder die [/Oi](../build/reference/oi-generate-intrinsic-functions.md) -Compileroption verwenden, um dem Compiler mitzuteilen, dass intrinsische Funktionen generiert werden, können Sie das funktionspragma verwenden, um einen Funktions aufrufexplizit zu erzwingen. Sobald ein funktionspragma angezeigt wird, tritt es in der ersten Funktionsdefinition in Kraft, die eine angegebene intrinsische Funktion enthält. Der Effekt wird bis zum Ende der Quelldatei oder bis zum Aussehen eines `intrinsic` Pragmas fortgesetzt, das die gleiche intrinsische Funktion angibt. Sie können das **Function** -Pragma nur auf globaler Ebene außerhalb einer Funktion verwenden.
 
-Die Funktionen mit systeminternen Formen finden Sie unter [#pragma intrinsic](../preprocessor/intrinsic.md).
+Listen der Funktionen, die über intrinsische Formulare verfügen, finden Sie unter System internes [pragma](intrinsic.md).
 
 ## <a name="example"></a>Beispiel
 

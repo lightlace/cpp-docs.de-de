@@ -1,6 +1,6 @@
 ---
 title: __assume
-ms.date: 10/09/2018
+ms.date: 09/02/2019
 f1_keywords:
 - __assume
 - _assume
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: 1d84e9306dcd468153f38cc0c3085b43388e1dbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3f847b5268605bdc5df90a8bbc6a88c78431864
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264314"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216963"
 ---
-# <a name="assume"></a>__assume
+# <a name="__assume"></a>__assume
 
 **Microsoft-spezifisch**
 
@@ -23,15 +23,15 @@ ms.locfileid: "62264314"
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 __assume(
    expression
 )
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*expression*<br/>
+*Begriff*\
 Ein beliebiger Ausdruck, von dem angenommen wird, dass er "true" ergibt.
 
 ## <a name="remarks"></a>Hinweise
@@ -45,21 +45,21 @@ Wenn die `__assume`-Anweisung als Widerspruch geschrieben wurde (ein Ausdruck, d
 
 `__assume` ist keine echte systeminterne Funktion. Sie muss nicht als Funktion deklariert werden und kann nicht in einer `#pragma intrinsic`-Anweisung verwendet werden. Es wird zwar kein Code generiert, der vom Optimierer generierte Code ist jedoch davon betroffen.
 
-Verwendung `__assume` in einer [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) nur, wenn die Assertion nicht wiederherstellbar ist. Verwenden Sie `__assume` nicht in einer Assert-Anweisung, für die Sie über den folgenden Fehlerwiederherstellungscode verfügen, da der Compiler den Fehlerbehebungscode aus Optimierungsgründen möglicherweise löscht.
+Nur `__assume` in [Assert](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) verwenden, wenn Assert nicht wiederherstellbar ist. Verwenden Sie `__assume` nicht in einer Assert-Anweisung, für die Sie über den folgenden Fehlerwiederherstellungscode verfügen, da der Compiler den Fehlerbehebungscode aus Optimierungsgründen möglicherweise löscht.
 
 Die `__assume(0)`-Anweisung ist ein Sonderfall. Verwenden Sie `__assume(0)`, um einen Codepfad anzugeben, der nicht erreicht werden kann. Im folgenden Beispiel wird veranschaulicht, wie `__assume(0)` verwendet wird, um anzugeben, dass der Standardfall einer Switch-Anweisung nicht erreicht werden kann. Dies zeigt die typische Verwendung von `__assume(0)`.
 
-Für die Kompatibilität mit früheren Versionen **_assume** ist ein Synonym für **__assume** , wenn Compileroption [/Za \(spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) ist angegeben.
+Aus Kompatibilitätsgründen mit früheren Versionen ist **_assume** ein Synonym für **__assume** , es sei denn, die Compileroption [/Za \(Spracherweiterungen deaktivieren)](../build/reference/za-ze-disable-language-extensions.md) ist angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 |Systemintern|Architektur|
 |---------------|------------------|
-|`__assume`|x86, ARM, x64|
+|`__assume`|x86, ARM, x64, ARM64|
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // compiler_intrinsics__assume.cpp
 #ifdef DEBUG
 # define ASSERT(e)    ( ((e) || assert(__FILE__, __LINE__) )
@@ -97,13 +97,13 @@ Als Ergebnis der `__assume(0)`-Anweisung, generiert der Compiler keinen Code, um
 
 Da der Compiler Code auf der Grundlage von `__assume` generiert, wird dieser Code möglicherweise nicht ordnungsgemäß ausgeführt, wenn der Ausdruck innerhalb der `__assume`-Anweisung zur Laufzeit "false" ist. Wenn Sie nicht sicher sind, dass der Ausdruck zur Laufzeit immer "true" ist, können Sie die `assert`-Funktion verwenden, um den Code zu schützen.
 
-```
+```C
 #define ASSERT(e)    ( ((e) || assert(__FILE__, __LINE__)), __assume(e) )
 ```
 
 Leider wird durch diese Verwendung von `assert` verhindert, dass der Compiler die Standardfalloptimierung durchführt, die zuvor in diesem Dokument beschrieben wurde. Als Alternative können Sie wie folgt ein separates Makro verwenden.
 
-```
+```C
 #ifdef DEBUG
 # define NODEFAULT   ASSERT(0)
 #else
@@ -118,5 +118,5 @@ Leider wird durch diese Verwendung von `assert` verhindert, dass der Compiler di
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
 [Schlüsselwörter](../cpp/keywords-cpp.md)

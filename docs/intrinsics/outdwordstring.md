@@ -1,6 +1,6 @@
 ---
 title: __outdwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outdwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outdwordstring intrinsic
 - rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
-ms.openlocfilehash: 51cb4a97d271d6d41d39d1025e3a5d34b273cdc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50908a65795af617f18a497c073cfefe009dfd80
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396586"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217160"
 ---
-# <a name="outdwordstring"></a>__outdwordstring
+# <a name="__outdwordstring"></a>__outdwordstring
 
 **Microsoft-spezifisch**
 
-Generiert die `rep outsd` -Anweisung, die sendet `Count` Doppelwort beginnend `Buffer` der e/a-Port anhand des `Port`.
+Generiert die `rep outsd` -Anweisung, die `Count` Double Words beginnend mit `Buffer` dem durch `Port`angegebenen e/a-Anschluss sendet.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __outdwordstring(
    unsigned short Port,
    unsigned long* Buffer,
@@ -31,16 +31,16 @@ void __outdwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Port*<br/>
-[in] Der Port, der die Daten zu senden.
+*Port*\
+in Der Port, an den die Daten gesendet werden sollen.
 
-*Buffer*<br/>
-[in] Ein Zeiger auf Daten, die über den angegebenen Port gesendet werden.
+*Ert*\
+in Ein Zeiger auf die Daten, die über den angegebenen Port gesendet werden sollen.
 
-*Anzahl*<br/>
-[in] Die Anzahl der Doppelwort senden.
+*Countdown*\
+in Die Anzahl der zu sendenden Double-Wörter.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,7 +48,7 @@ void __outdwordstring(
 |---------------|------------------|
 |`__outdwordstring`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -58,4 +58,4 @@ Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

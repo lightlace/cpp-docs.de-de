@@ -1,34 +1,31 @@
 ---
-title: named_guids
-ms.date: 11/04/2016
+title: named_guids-Attribut importieren
+ms.date: 08/29/2019
 f1_keywords:
 - named_guids
 helpviewer_keywords:
 - named_guids attribute
 ms.assetid: b905e5e5-07fe-4874-8993-e05b9d639045
-ms.openlocfilehash: 4304e9533467bd33cf61a88ac918fe6d16285d6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d95ae33ff5115223b6f89ae714759506c03cc3d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371749"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220783"
 ---
-# <a name="namedguids"></a>named_guids
-**C++-spezifisch**
+# <a name="named_guids-import-attribute"></a>named_guids-Attribut importieren
 
-Weist den Compiler zu definieren und Initialisieren von GUID-Variablen im alten Stil des Formulars `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`, und `DIID_MyDispInterface`.
+**C++Zugeschnitten**
+
+Weist den Compiler an, GUID-Variablen im `LIBID_MyLib`alten Stil der Form `IID_MyInterface`, `CLSID_MyCoClass`, und `DIID_MyDispInterface`zu definieren und zu initialisieren.
 
 ## <a name="syntax"></a>Syntax
 
-```
-named_guids
-```
+> **#Import** *Typbibliothek* **named_guids**
 
-## <a name="remarks"></a>Hinweise
-
-**Ende C++-spezifisch**
+**End C++ -Specific**
 
 ## <a name="see-also"></a>Siehe auch
 
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)
+[#Import Attribute](../preprocessor/hash-import-attributes-cpp.md)\
+[#Import-Direktive](../preprocessor/hash-import-directive-cpp.md)

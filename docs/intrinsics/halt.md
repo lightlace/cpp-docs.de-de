@@ -1,6 +1,6 @@
 ---
 title: __halt
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __halt
 - __halt_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __halt intrinsic
 - HLT instruction
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
-ms.openlocfilehash: dd68c88a13035ca25f89304bcd84267a73978420
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 66f5e05e7673523966ef35ac743fc585930b511c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344438"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222150"
 ---
-# <a name="halt"></a>__halt
+# <a name="__halt"></a>__halt
 
 **Microsoft-spezifisch**
 
-Hält den Mikroprozessor, bis eine aktivierte Unterbrechung, einen nicht maskierbaren Interrupt (NMI) oder eine Zurücksetzung erfolgt.
+Stoppt den Mikroprozessor, bis ein aktivierter Interrupt, ein nicht Maskier barer Interrupt (NMI) oder eine zurück Setzung auftritt.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __halt( void );
 ```
 
@@ -33,14 +33,14 @@ void __halt( void );
 |---------------|------------------|
 |`__halt`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Die `__halt` -Funktion ist gleichbedeutend mit der `HLT` computeranweisung und steht nur im Kernelmodus ausgeführt. Weitere Informationen zu suchen, nach dem Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set Reference,"auf die [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standort.
+Die `__halt` -Funktion entspricht der `HLT` -Computer Anweisung und ist nur im Kernel Modus verfügbar. Weitere Informationen finden Sie im Dokument "Intel Architecture Software Developer es Manual, Volume 2: Anweisungs Satz Verweis "auf der Website der [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

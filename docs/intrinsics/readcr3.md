@@ -1,33 +1,33 @@
 ---
 title: __readcr3
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readcr3
 helpviewer_keywords:
 - __readcr3 intrinsic
 ms.assetid: e24392c3-cad7-4788-8f31-94bf2e9e0053
-ms.openlocfilehash: 8b5839d233154b6ddb69d2bbe0b13497c3b66305
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b03ff46fabc99839d9c0bbd5c72e1b76d25814c0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396534"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221264"
 ---
-# <a name="readcr3"></a>__readcr3
+# <a name="__readcr3"></a>__readcr3
 
 **Microsoft-spezifisch**
 
-Liest das CR3-Register und den Wert zurückgibt.
+Liest das CR3-Register und gibt dessen Wert zurück.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned __int64 __readcr3(void);
 ```
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert im Register CR3.
+Der Wert im CR3-Register.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,14 +35,14 @@ Der Wert im Register CR3.
 |---------------|------------------|
 |`__readcr3`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Diese systeminterne Funktion ist nur im Kernelmodus verfügbar, und die Routine ist nur als systeminterne Funktion verfügbar.
+Die systeminterne Funktion ist nur im Kernel Modus verfügbar, und die Routine ist nur als systeminterne Funktion verfügbar.
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

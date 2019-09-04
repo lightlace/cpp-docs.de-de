@@ -1,6 +1,6 @@
 ---
 title: __stosb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosb
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosb intrinsic
 - stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
-ms.openlocfilehash: 679f1a892a6ee5b458a05d1577ecf766bed385dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edf74da4c8b5aa97e542d89f55b3ed8411db9bac
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390281"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221209"
 ---
-# <a name="stosb"></a>__stosb
+# <a name="__stosb"></a>__stosb
 
 **Microsoft-spezifisch**
 
-Generiert eine Store-Zeichenfolge-Anweisung (`rep stosb`).
+Generiert eine Speicher Zeichen folgen Anweisung`rep stosb`().
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __stosb(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*dest*<br/>
-[out] Das Ziel des Vorgangs.
+*Entwickelt*\
+vorgenommen Das Ziel des Vorgangs.
 
-*Data*<br/>
-[in] Die zu speichernden Daten.
+*Vorrats*\
+in Die Daten, die gespeichert werden sollen.
 
-*Anzahl*<br/>
-[in] Die Länge des Blocks des zu schreibenden Bytes kennzeichnet.
+*Countdown*\
+in Die Länge des zu schreibenden Bytes-Blocks.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,11 +48,11 @@ void __stosb(
 |---------------|------------------|
 |`__stosb`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Das Ergebnis ist, die das Zeichen `Data` wird geschrieben, in einen Block von `Count` Bytes in den `Dest` Zeichenfolge.
+Das Ergebnis ist, dass die Zeichen *Daten* in einen Block von *count* Bytes in der *Ziel* Zeichenfolge geschrieben werden.
 
 Diese Routine ist nur als systeminterne Funktion verfügbar.
 
@@ -87,4 +87,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

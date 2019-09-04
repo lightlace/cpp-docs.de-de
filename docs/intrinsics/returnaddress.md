@@ -1,38 +1,38 @@
 ---
 title: _ReturnAddress
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _ReturnAddress
 helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a830ff1e8a2c9551dec52cf10a3d5cf126bde3b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390450"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218060"
 ---
-# <a name="returnaddress"></a>_ReturnAddress
+# <a name="_returnaddress"></a>_ReturnAddress
 
-## <a name="microsoft-specific"></a>Microsoft-spezifisch
+**Microsoft-spezifisch**
 
-Die `_ReturnAddress` systeminterne enthält die Adresse der Anweisung in der aufrufenden Funktion, die ausgeführt wird, nachdem die Steuerung an den Aufrufer zurückgibt.
+Die `_ReturnAddress` systeminterne Funktion stellt die Adresse der Anweisung in der aufrufenden Funktion bereit, die ausgeführt wird, nachdem die Steuerung an den Aufrufer zurückgegeben wurde.
 
-Erstellen Sie das folgende Programm und die schrittweise durchlaufen im Debugger. Beachten Sie die Adresse, die von zurückgegeben wird, wie Sie das Programm durchgehen schrittweise, `_ReturnAddress`. Klicken Sie dann sofort nach der Rückgabe der Funktion, in denen `_ReturnAddress` wurde verwendet wird, öffnen die [Vorgehensweise: Verwenden des Disassembierungsfensters](/visualstudio/debugger/how-to-use-the-disassembly-window) und notieren Sie sich, dass die Adresse, der die nächste Anweisung ausgeführt werden, die Adresse, die von zurückgegeben entspricht `_ReturnAddress`.
+Erstellen Sie das folgende Programm, und durchlaufen Sie es im Debugger. Wenn Sie das Programm schrittweise durchlaufen, notieren Sie sich die Adresse `_ReturnAddress`, die von zurückgegeben wird. Öffnen Sie dann unmittelbar nach der Rückgabe der Funktion `_ReturnAddress` , in der verwendet wurde [, die Vorgehensweise: Verwenden Sie das Fenster](/visualstudio/debugger/how-to-use-the-disassembly-window) Disassembly, und beachten Sie, dass die Adresse der nächsten Anweisung, die ausgeführt werden soll, mit der von `_ReturnAddress`zurückgegebenen Adresse übereinstimmt.
 
-Optimierungen wie z. B. inlining Mai Auswirkungen auf die Rückgabeadresse. Angenommen, das unten angegebene Beispielprogramm kompiliert wird, mit [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` werden in der aufrufenden Funktion inline `main`. Aus diesem Grund die Aufrufe an `_ReturnAddress` aus `inline_func` und `main` wird jeweils den gleichen Wert zu erzeugen.
+Optimierungen wie Inlining können sich auf die Rückgabeadresse auswirken. Wenn beispielsweise das unten aufgeführte Beispielprogramm mit [/ob1](../build/reference/ob-inline-function-expansion.md)kompiliert wird `inline_func` , wird in `main`die aufrufende Funktion () eingebunden. Daher wird bei den Aufrufen `_ReturnAddress` von `inline_func` von `main` und jeweils der gleiche Wert erzeugt.
 
-Wenn `_ReturnAddress` wird verwendet, in einem Programm mit kompiliert ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md), die Funktion mit der `_ReturnAddress` Aufruf wird als eine native Funktion kompiliert werden. Wenn eine Funktion als kompiliert verwaltete Aufrufe an die Funktion mit `_ReturnAddress`, `_ReturnAddress` Verhalten sich womöglich nicht wie erwartet.
+Wenn `_ReturnAddress` in einem Programm verwendet wird, das mit [/CLR](../build/reference/clr-common-language-runtime-compilation.md)kompiliert wurde, wird `_ReturnAddress` die Funktion, die den-aufrufsvorgang enthält, als native Funktion kompiliert. Wenn eine Funktion, die als verwaltete Aufrufe der Funktion, `_ReturnAddress`die `_ReturnAddress` enthält, kompiliert wird, verhält sich möglicherweise nicht wie erwartet.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // compiler_intrinsics__ReturnAddress.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -65,6 +65,6 @@ int main(void)
 
 ## <a name="see-also"></a>Siehe auch
 
-[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
 [Schlüsselwörter](../cpp/keywords-cpp.md)

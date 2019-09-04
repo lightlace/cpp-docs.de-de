@@ -1,6 +1,6 @@
 ---
-title: region, endregion
-ms.date: 10/18/2018
+title: region- und endregion-Pragmas
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.endregion
 - endregion_CPP
@@ -12,37 +12,35 @@ helpviewer_keywords:
 - endregion pragma
 - region pragma
 ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
-ms.openlocfilehash: c73a90aa2be83d643b74dde4645081e89da3ff73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a01e04582ac81d678aa0702945c62ee974a4428
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179749"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222376"
 ---
-# <a name="region-endregion"></a>region, endregion
+# <a name="region-endregion-pragmas"></a>region- und endregion-Pragmas
 
-`#pragma region` können Sie angeben, dass einen Codeblock, der Sie können erweitert oder reduziert werden, wenn Sie verwenden die [Gliederungsfunktion](/visualstudio/ide/outlining) von Visual Studio Code-Editor.
+`#pragma region`ermöglicht es Ihnen, einen Codeblock anzugeben, den Sie erweitern oder reduzieren können, wenn Sie die Gliederungs [Funktion](/visualstudio/ide/outlining) des Visual Studio Code-Editors verwenden.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma region name
-#pragma endregion comment
-```
+> **#pragma Region** *Name*\
+> **#pragma endregion** *Kommentar*
 
 ### <a name="parameters"></a>Parameter
 
-*comment*<br/>
-(Optional) Ein Kommentar, der im Code-Editor angezeigt wird.
+*geäußert*\
+Optionale Ein Kommentar, der im Code-Editor angezeigt werden soll.
 
-*name*<br/>
-(Optional) Der Name des Bereichs.  Dieser Name wird im Code-Editor angezeigt.
+*Benennen*\
+Optionale Der Name der Region. Dieser Name wird im Code-Editor angezeigt.
 
 ## <a name="remarks"></a>Hinweise
 
-`#pragma endregion` markiert das Ende einer `#pragma region` Block.
+`#pragma endregion`markiert das Ende eines `#pragma region` -Blocks.
 
-Ein `#region` Block muss mit abgeschlossen werden `#pragma endregion`.
+Ein `#region` -Block muss mit einer `#pragma endregion` -Direktive beendet werden.
 
 ## <a name="example"></a>Beispiel
 

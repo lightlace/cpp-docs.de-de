@@ -1,6 +1,6 @@
 ---
-title: include_alias
-ms.date: 12/16/2018
+title: include_alias-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
@@ -8,25 +8,26 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 187fa94f7c2a5457df655081b87a7f49d38adfa2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa3714186e8f95d4044ba5a3b2bc2d5fcfb1fc9c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384026"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218904"
 ---
-# <a name="includealias"></a>include_alias
+# <a name="include_alias-pragma"></a>include_alias-Pragma
 
-Gibt an, dass *Alias_filename* befindet sich einem `#include` -Anweisung der Compiler ersetzt *Actual_filename* an seiner Stelle.
+Gibt an, dass der Compiler *actual_filename* an `#include` seiner Stelle ersetzt, wenn *alias_filename* in einer-Direktive gefunden wird.
 
 ## <a name="syntax"></a>Syntax
 
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias("*alias_filename*", "*actual_filename*")
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias(\<*alias_filename*>, \<*actual_filename*>)
+<!-- localization note - it's important to have the italic and bold characters immediately adjacent here. -->
+> **#pragma Include_alias (** "*alias_filename*" **,** "*actual_filename*" **)** \
+> **#pragma Include_alias (** \< *alias_filename*>  **,** *actual_filename*) \<> 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Include_alias** Pragma-Direktive können Sie Dateien zu ersetzen, die verschiedene Namen oder die Pfade für die Dateinamen von Quelldateien enthalten. Einige Dateisysteme können z. B. längere Headerdateinamen als das 8.3 Systemlimit von FAT-Datei. Der Compiler kann die längeren Namen nicht einfach bis 8.3 abschneiden, da die ersten acht Zeichen der längeren Headerdateinamen möglicherweise nicht eindeutig sind. Jedes Mal, wenn der Compiler erkennt die *Alias_filename* Zeichenfolge ist, ersetzt er *Actual_filename*, und sucht nach der Headerdatei *Actual_filename* stattdessen. Dieses Pragma muss vor den entsprechenden `#include`-Anweisungen eingefügt werden. Zum Beispiel:
+Mit der **Include_alias** -pragma-Direktive können Sie Dateien ersetzen, die unterschiedliche Namen oder Pfade für die in den Quelldateien enthaltenen Dateinamen haben. Einige Dateisysteme erlauben z. b. längere Header Dateinamen als das Limit von 8,3 FAT-Dateisystemen. Der Compiler kann die längeren Namen nicht einfach auf 8,3 kürzen, da die ersten acht Zeichen der längeren Header Dateinamen möglicherweise nicht eindeutig sind. Wenn der Compiler die *alias_filename* -Zeichenfolge in `#include` einer-Direktive sieht, ersetzt er stattdessen den Namen *actual_filename* . Anschließend wird die Header Datei *actual_filename* geladen. Dieses Pragma muss vor den entsprechenden `#include`-Anweisungen eingefügt werden. Beispiel:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -40,7 +41,7 @@ Die **Include_alias** Pragma-Direktive können Sie Dateien zu ersetzen, die vers
 #include "GraphicsMenu.h"
 ```
 
-Der Alias, nach dem gesucht wird, muss genau der Spezifikation entsprechen. Dies gilt für den Gebrauch von Groß-/Kleinschreibung, Rechtschreibung, doppelten Anführungszeichen und spitzen Klammern. Die **Include_alias** Pragma führt einfache zeichenfolgenabgleiche die Dateinamen durch; keine weitere dateinamenvalidierung wird durchgeführt. Zum Beispiel wird bei folgenden Anweisungen
+Der zu suchende Alias muss genau mit der Spezifikation übereinstimmen. Die Groß-/Kleinschreibung, Rechtschreibung und Verwendung von doppelten Anführungszeichen oder spitzen Klammern müssen identisch sein. Das **Include_alias** -Pragma führt einfache Zeichen folgen Übereinstimmungen in den Dateinamen aus. Es wird keine andere Dateinamen Überprüfung durchgeführt. Zum Beispiel wird bei folgenden Anweisungen
 
 ```cpp
 #pragma include_alias("mymath.h", "math.h")
@@ -48,7 +49,7 @@ Der Alias, nach dem gesucht wird, muss genau der Spezifikation entsprechen. Dies
 #include "sys/mymath.h"
 ```
 
-kein Aliasing (Ersetzung) ausgeführt, da die Headerdateizeichenfolgen nicht genau übereinstimmen. Darüber hinaus die Headerdateinamen, die als Argumente für die `/Yu` und `/Yc` Compileroptionen, oder die `hdrstop` Pragma werden nicht ersetzt. Wenn beispielsweise die Quelldatei die folgenden Anweisungen enthält,
+Es wird keine Alias Ersetzung durchgeführt, da die Header Datei Zeichenfolgen nicht exakt übereinstimmen. Außerdem werden Header Dateinamen, die als Argumente `/Yu` für `/Yc` die-und-Compileroptionen oder das `hdrstop` -Pragma verwendet werden, nicht ersetzt. Wenn beispielsweise die Quelldatei die folgenden Anweisungen enthält,
 
 ```cpp
 #include <AppleSystemHeaderStop.h>
@@ -56,9 +57,9 @@ kein Aliasing (Ersetzung) ausgeführt, da die Headerdateizeichenfolgen nicht gen
 
 sollte die entsprechende Compileroption Folgendes sein:
 
-> /YcAppleSystemHeaderStop.h
+> **/YcAppleSystemHeaderStop.h**
 
-Sie können die **Include_alias** Pragma, um einen anderen Headerdateinamen einem beliebigen zuzuordnen. Zum Beispiel:
+Sie können das **Include_alias** -Pragma verwenden, um einen beliebigen Header Dateinamen einem anderen zuzuordnen. Beispiel:
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -67,7 +68,7 @@ Sie können die **Include_alias** Pragma, um einen anderen Headerdateinamen eine
 #include <stdio.h>
 ```
 
-Mischen Sie die Dateinamen, die in Anführungszeichen eingeschlossen sind, nicht mit den Dateinamen in spitzen Klammern. Angenommen, die beiden oben erwähnten `#pragma include_alias` der Compiler führt keinen Ersatz für die folgenden `#include` Anweisungen:
+Kombinieren Sie die in doppelten Anführungszeichen eingeschlossenen Dateinamen nicht mit Dateinamen, die in spitzen Klammern eingeschlossen sind. Beispielsweise führt der Compiler bei Angabe `#pragma include_alias` der obigen beiden Direktiven keine Ersetzung der folgenden `#include` Direktiven aus:
 
 ```cpp
 #include <api.h>
@@ -80,14 +81,14 @@ Außerdem generiert die folgende Direktive einen Fehler:
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-Beachten Sie, dass der Dateiname in Fehlermeldungen oder als Wert für die vordefinierten gemeldet `__FILE__` Makro verwenden, ist der Name der Datei aus, nachdem die Ersetzung ausgeführt wurde. Beispielsweise sehen Sie die Ausgabe nach den folgenden Anweisungen ein:
+Der in Fehlermeldungen oder als Wert des vordefinierten `__FILE__` Makros gemeldete Dateiname ist der Name der Datei, nachdem die Ersetzung durchgeführt wurde. Betrachten Sie z. b. die Ausgabe nach den folgenden Anweisungen:
 
 ```cpp
 #pragma include_alias( "VERYLONGFILENAME.H", "myfile.h" )
 #include "VERYLONGFILENAME.H"
 ```
 
-Fehler im VERYLONGFILENAME. H erzeugt die folgende Fehlermeldung angezeigt:
+Ein Fehler in " *VERYLONGFILENAME". H* erzeugt die folgende Fehlermeldung:
 
 ```Output
 myfile.h(15) : error C2059 : syntax error
@@ -101,7 +102,7 @@ Beachten Sie außerdem, dass Transitivität nicht unterstützt wird. Im Falle de
 #include "one.h"
 ```
 
-der Compiler sucht nach der Datei Two.h statt Three.h.
+der Compiler sucht nach der Datei " *Two. h* " und nicht nach " *3. h*".
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,6 +1,6 @@
 ---
-title: managed, unmanaged
-ms.date: 11/04/2016
+title: managed- bzw. unmanaged-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.unmanaged
 - managed_CPP
@@ -12,44 +12,43 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 7fa1e3274b85faa9f3f72f4db5bf586ee5d8e274
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c13155d1c84966a593df11baf525a0c3539f02c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409862"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218807"
 ---
-# <a name="managed-unmanaged"></a>managed, unmanaged
-Aktivieren Sie die Steuerung auf Funktionsebene für Kompilierfunktionen als verwaltet oder nicht verwaltet.
+# <a name="managed-unmanaged-pragmas"></a>managed- bzw. unmanaged-Pragma
+
+Aktivieren Sie das Steuerelement auf Funktionsebene, um Funktionen als verwaltet oder nicht verwaltet zu kompilieren.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma managed
-#pragma unmanaged
-#pragma managed([push,] on | off)
-#pragma managed(pop)
-```
+> **#pragma verwaltet**\
+> **nicht verwaltet #Pragma**\
+> **#pragma verwaltet (** [ **Push,** ] { **on** | **Off** } **)** \
+> **#pragma verwaltet (Pop)**
 
 ## <a name="remarks"></a>Hinweise
 
-Die ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md) Compileroption stellt Steuerung auf Modulebene für kompilierfunktionen als verwaltet oder nicht verwaltet.
+Mit der [/CLR](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption wird das Steuerelement auf Modulebene für das Kompilieren von Funktionen als verwaltet oder nicht verwaltet bereitstellt.
 
-Eine nicht verwaltete Funktion wird für die systemeigene Plattform kompiliert, und die Ausführung dieses Teils des Programms wird von der Common Language Runtime an die systemeigene Plattform übergeben.
+Eine nicht verwaltete Funktion wird für die Native Plattform kompiliert. Die Ausführung dieses Teils des Programms wird vom Common Language Runtime an die Native Plattform übermittelt.
 
 Funktionen werden standardmäßig als verwaltet kompiliert, wenn `/clr` verwendet wird.
 
 Beim Anwenden dieser Pragmas:
 
-- Fügen Sie das Pragma hinzu, das einer Funktion vorangeht, sich jedoch nicht innerhalb eines Funktionsrumpfs befindet.
+- Fügen Sie das Pragma vor einer Funktion hinzu, jedoch nicht innerhalb eines Funktions Texts.
 
-- Fügen Sie das Pragma nach `#include`-Anweisungen hinzu. Verwenden Sie diese Pragmas nicht vor `#include`-Anweisungen.
+- Fügen Sie das Pragma nach `#include`-Anweisungen hinzu. Verwenden Sie diese Pragmas nicht `#include` vor-Anweisungen.
 
-Der Compiler ignoriert die **verwaltet** und **nicht verwalteten** Pragmas Wenn `/clr` nicht in der Kompilierung verwendet wird.
+Der Compiler ignoriert die **verwalteten** und **nicht verwalteten** Pragmas, `/clr` wenn nicht in der Kompilierung verwendet wird.
 
-Wenn eine Vorlagenfunktion instanziiert wird, bestimmt der Pragmazustand zum Zeitpunkt der Definition, ob die Vorlage verwaltet oder nicht verwaltet ist.
+Wenn eine Vorlagen Funktion instanziiert wird, bestimmt der pragma-Zustand, wenn die Vorlage definiert ist, ob Sie verwaltet oder nicht verwaltet wird.
 
-Weitere Informationen finden Sie unter [Initialization of Mixed Assemblies](../dotnet/initialization-of-mixed-assemblies.md).
+Weitere Informationen finden Sie unter [Initialisierung gemischter](../dotnet/initialization-of-mixed-assemblies.md)Assemblys.
 
 ## <a name="example"></a>Beispiel
 

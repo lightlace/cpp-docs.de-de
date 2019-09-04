@@ -1,28 +1,28 @@
 ---
 title: __nop
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __nop
 helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-ms.openlocfilehash: 1e76110c1ef0c4b98c295578189eedc99d76eeb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4561bcb84063f3707825c8ca164867d41500e2db
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396625"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221674"
 ---
-# <a name="nop"></a>__nop
+# <a name="__nop"></a>__nop
 
 **Microsoft-spezifisch**
 
-Generiert die plattformspezifische Computercode, der keinen Vorgang ausführt.
+Generiert plattformspezifischen Computercode, der keinen Vorgang ausführt.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __nop();
 ```
 
@@ -32,15 +32,15 @@ void __nop();
 |---------------|------------------|
 |`__nop`|x86, ARM, x64, ARM64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="remarks"></a>Hinweise
 
-Die `__nop` -Funktion entspricht der `NOP` -Computeranweisung. Für Weitere Informationen zu X86- und X64, suchen Sie nach dem Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set Reference,"auf die [Intel Corporation](https://software.intel.com/articles/intel-sdm) Standort.
+Die `__nop` -Funktion entspricht der `NOP` -Computeranweisung. Weitere Informationen zu x86 und x64 finden Sie im Dokument "Intel Architecture Software Developer es Manual, Volume 2: Anweisungs Satz Verweis "auf der Website der [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
 [__noop](../intrinsics/noop.md)

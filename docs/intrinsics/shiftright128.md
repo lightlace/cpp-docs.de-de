@@ -1,19 +1,19 @@
 ---
 title: __shiftright128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftright128
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-ms.openlocfilehash: b721abc9be22709fdc221951e2012300d6b96762
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a18a9958a51f291e4997c23e87ee48f739562416
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390333"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220016"
 ---
-# <a name="shiftright128"></a>__shiftright128
+# <a name="__shiftright128"></a>__shiftright128
 
 **Microsoft-spezifisch**
 
@@ -21,7 +21,7 @@ Verschiebt eine 128-Bit-Menge, dargestellt als zwei 64-Bit-Mengen `LowPart` und 
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned __int64 __shiftright128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,16 +29,16 @@ unsigned __int64 __shiftright128(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*LowPart*<br/>
-[in] Die unteren 64 Bits der zu verschiebenden 128-Bit-Menge.
+*LowPart*\
+in Die unteren 64 Bits der zu Verschiebungs enden 128-Bit-Menge.
 
-*HighPart*<br/>
-[in] Die oberen 64 Bits der zu verschiebenden 128-Bit-Menge.
+*HighPart*\
+in Die hohen 64 Bits der 128-Bit-Menge, die verschoben werden soll.
 
-*UMSCHALTTASTE*<br/>
-[in] Die Anzahl der zu verschiebenden Bits.
+*Schuss*\
+in Die Anzahl der zu Verschiebungs enden Bits.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -50,7 +50,7 @@ Die unteren 64 Bits des Ergebnisses.
 |---------------|------------------|
 |`__shiftright128`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -64,5 +64,5 @@ Ein Beispiel finden Sie unter [__shiftleft128](../intrinsics/shiftleft128.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[__shiftleft128](../intrinsics/shiftleft128.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[__shiftleft128](../intrinsics/shiftleft128.md)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

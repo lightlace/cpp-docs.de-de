@@ -1,6 +1,6 @@
 ---
 title: __movsq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-ms.openlocfilehash: 4e4908cd5ffc28840b5a48b735048cccb557e97c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66de1971c48f6697fd06579fac635cce31545e92
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263164"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217262"
 ---
-# <a name="movsq"></a>__movsq
+# <a name="__movsq"></a>__movsq
 
 **Microsoft-spezifisch**
 
-Generiert eine Zeichenfolge mit einem wiederholten verschieben (`rep movsq`) Anweisung.
+Generiert eine wiederholte Anweisung zum`rep movsq`Verschieben einer Zeichenfolge ().
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __movsq(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*dest*<br/>
-[out] Das Ziel des Vorgangs.
+*Entwickelt*\
+vorgenommen Das Ziel des Vorgangs.
 
-*Quelle*<br/>
-[in] Die Quelle des Vorgangs.
+*Source*\
+in Die Quelle des Vorgangs.
 
-*Anzahl*<br/>
-[in] Die Anzahl der Vierfachwörtern kopieren.
+*Countdown*\
+in Die Anzahl der zu kopierenden Quadwords.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,17 +48,17 @@ void __movsq(
 |---------------|------------------|
 |`__movsq`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Das Ergebnis ist, die erste `Count` Vierfachwörtern verweist `Source` kopiert werden, um die `Dest` Zeichenfolge.
+Das Ergebnis ist, dass die erste *Anzahl* der Quadwords, auf die durch *Quelle* verwiesen wird, in die *Ziel* Zeichenfolge kopiert wird.
 
 Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // movsq.cpp
 // processor: x64
 #include <stdio.h>
@@ -87,4 +87,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
 title: __outwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outwordstring intrinsic
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-ms.openlocfilehash: d7141dd7f9f1f81e905952959e392a23d141f4e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3cc5b0ae2101c86e3dc899b7924ec2524f0ea6e7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396599"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217118"
 ---
-# <a name="outwordstring"></a>__outwordstring
+# <a name="__outwordstring"></a>__outwordstring
 
 **Microsoft-spezifisch**
 
-Generiert die `rep outsw` -Anweisung, die sendet `Count` Wörter, die beginnend bei `Buffer` der e/a-Port anhand des `Port`.
+Generiert die `rep outsw` -Anweisung, die *Anzahl* Wörter startet, beginnend beim *Puffer* , den durch den *Port*angegebenen e/a-Port.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __outwordstring(
    unsigned short Port,
    unsigned short* Buffer,
@@ -31,16 +31,16 @@ void __outwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Port*<br/>
-[in] Der Port, der die Daten zu senden.
+*Port*\
+in Der Port, an den die Daten gesendet werden sollen.
 
-*Buffer*<br/>
-[in] Ein Zeiger auf Daten, die über den angegebenen Port gesendet werden.
+*Ert*\
+in Ein Zeiger auf die Daten, die über den angegebenen Port gesendet werden sollen.
 
-*Anzahl*<br/>
-[in] Die Anzahl von Wörtern zu senden.
+*Countdown*\
+in Die Anzahl der zu sendenden Wörter.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,7 +48,7 @@ void __outwordstring(
 |---------------|------------------|
 |`__outwordstring`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -58,4 +58,4 @@ Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

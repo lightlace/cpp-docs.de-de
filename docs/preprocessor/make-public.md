@@ -1,6 +1,6 @@
 ---
-title: make_public
-ms.date: 11/04/2016
+title: make_public-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.make_public
 - make_public_CPP
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - pragmas, make_public
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-ms.openlocfilehash: d569758f90b9e55f65ad13517f86dea41d151ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d12fab685e0088993cb43073c3603bda12edd2f3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371762"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218822"
 ---
-# <a name="makepublic"></a>make_public
+# <a name="make_public-pragma"></a>make_public-Pragma
+
 Gibt an, dass für einen systemeigenen Typ der öffentliche Assemblyzugriff gewährt wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma make_public(type)
-```
+> **#pragma make_public (** *Typ* **)**
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* ist der Name des Typs öffentliche Assemblyzugriff gewährt werden soll.
+*type*\
+Der Name des Typs, für den die öffentliche Assembly zugänglich sein soll.
 
 ## <a name="remarks"></a>Hinweise
 
-**Make_public** ist nützlich, wenn der systemeigene Typ, die Sie verweisen möchten aus einer h-Datei ist, die Sie nicht ändern können. Soll der systemeigene Typ in der Signatur einer öffentlichen Funktion in einem Typ mit öffentlicher Assemblysichtbarkeit verwendet werden, muss der systemeigene Typ auch über den öffentlichen Assemblyzugriff verfügen, sonst gibt der Compiler eine Warnung aus.
+**make_public** ist nützlich für den Fall, dass der Native Typ, auf den Sie verweisen möchten, aus einer Header Datei stammt, die Sie nicht ändern können. Wenn Sie den systemeigenen Typ in der Signatur einer öffentlichen Funktion in einem Typ mit Sichtbarkeit öffentlicher Assemblys verwenden möchten, muss der systemeigene Typ auch den Zugriff auf die öffentliche Assembly aufweisen, oder der Compiler gibt eine Warnung aus.
 
-**Make_public** muss im globalen Gültigkeitsbereich angegeben werden, und ist nur an dem Punkt am Ende der Quellcodedatei an die It über deklariert ist.
+**make_public** muss im globalen Gültigkeitsbereich angegeben werden. Sie ist nur von dem Zeitpunkt aus, an dem Sie deklariert wurde, bis zum Ende der Quell Code Datei wirksam.
 
-Der systemeigene Typ kann implizit oder explizit privat sein; finden Sie unter [Typsichtbarkeit](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) für Weitere Informationen.
+Der Native Typ kann implizit oder explizit privat sein. Weitere Informationen finden Sie unter [Typsichtbarkeit](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility).
 
 ## <a name="examples"></a>Beispiele
 
-Beim folgenden Beispiel handelt es sich um die Inhalte einer H-Datei, welche die Definitionen für zwei systemeigene Strukturen enthält.
+Das folgende Beispiel ist der Inhalt einer Header Datei, die die Definitionen für zwei Native Strukturen enthält.
 
 ```cpp
 // make_public_pragma.h
@@ -46,7 +46,7 @@ struct Native_Struct_1 { int i; };
 struct Native_Struct_2 { int i; };
 ```
 
-Das folgende Codebeispiel verwendet die Headerdatei und zeigt, es sei denn, Sie explizit die systemeigenen Strukturen als öffentlich kennzeichnen mit **Make_public**, generiert der Compiler eine Warnung, wenn Sie versuchen, verwenden die systemeigenen Strukturen in der die Signatur einer öffentlicher Funktion in einem öffentlich verwalteten Typ.
+Im folgenden Codebeispiel wird die Header Datei verwendet. Es wird gezeigt, dass der Compiler eine Warnung generiert, wenn Sie versuchen, die nativen Strukturen in der Signatur der öffentlichen Funktion in einem öffentlichen verwalteten Typ zu verwenden, es sei denn, Sie markieren die systemeigenen Strukturen explizit mithilfe von **make_public**als öffentlich.
 
 ```cpp
 // make_public_pragma.cpp

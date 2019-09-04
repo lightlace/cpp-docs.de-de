@@ -1,40 +1,40 @@
 ---
 title: __writedr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writedr
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: c495e8c80029680512358198ca8fb0ce6e65414d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 715ef7432d506c2758c9c3da913e9c0ebb24e13f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389865"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219226"
 ---
-# <a name="writedr"></a>__writedr
+# <a name="__writedr"></a>__writedr
 
-Schreibt den angegebenen Wert dem angegebenen Debug-Register.
+Schreibt den angegebenen Wert in das angegebene debugregister.
 
 ## <a name="syntax"></a>Syntax
 
+```C
+void __writedr(unsigned DebugRegister, unsigned DebugValue); /* x86 */
+void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 ```
-void __writedr(unsigned DebugRegister, unsigned DebugValue);
-void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
-```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*DebugRegister*<br/>
-[in] Registrieren Sie eine Zahl von 0 bis 7, die das Debuggen identifiziert.
+*Debugregistrierung*\
+in Eine Zahl von 0 bis 7, die das debugregister identifiziert.
 
-*DebugValue*<br/>
-[in] Ein Wert zum Schreiben in das Debuggen registrieren.
+*Debug-Wert*\
+in Ein Wert, der in das debugregister geschrieben werden soll.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese systeminternen Funktionen sind nur im Kernelmodus verfügbar, und die Routinen sind nur als systeminterne Funktionen verfügbar.
+Diese systeminternen Funktionen sind nur im Kernel Modus verfügbar, und die Routinen sind nur als intrinsie verfügbar.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,11 +42,11 @@ Diese systeminternen Funktionen sind nur im Kernelmodus verfügbar, und die Rout
 |---------------|------------------|
 |`__writedr`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)<br/>
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)\
 [__readdr](../intrinsics/readdr.md)

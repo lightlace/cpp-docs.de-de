@@ -1,6 +1,6 @@
 ---
-title: alloc_text
-ms.date: 11/04/2016
+title: alloc_text-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.alloc_text
 - alloc_text_CPP
@@ -8,37 +8,34 @@ helpviewer_keywords:
 - alloc_text pragma
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
-ms.openlocfilehash: 399e8956a511f289b480e66db7f03cac0a6c7c20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ddb12b39e068dea42f7a47f7fd937424be43725
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389358"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216339"
 ---
-# <a name="alloctext"></a>alloc_text
+# <a name="alloc_text-pragma"></a>alloc_text-Pragma
+
 Namen des Codeabschnitts, in dem sich die angegebenen Funktionsdefinitionen befinden müssen. Das Pragma muss zwischen einem Funktionsdeklarator und der Funktionsdefinition für die benannten Funktionen auftreten.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma alloc_text( "
-textsection
-", function1, ... )
-```
+> **#pragma alloc_text (** "*Textsection*" **,** *Funktion1* [ **,** *Funktion2* ...] **)**
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Alloc_text** Pragma verarbeitet keine C++ Memberfunktionen oder überladene Funktionen. Dies gilt nur für Funktionen mit C-Verknüpfung deklariert – d. h. Funktionen deklariert, mit der **Extern "C"** Verknüpfungsspezifikation. Wenn Sie versuchen, diese Pragma für eine Funktion mit C++-Bindung zu verwenden, wird ein Compilerfehler generiert.
+Das **alloc_text** -Pragma verarbeitet C++ keine Element Funktionen oder überladenen Funktionen. Dies gilt nur für Funktionen, die mit C-Verknüpfung deklariert sind, d. –. Funktionen, die mit der **externen "c"** -Verknüpfungs Spezifikation deklariert werden. Wenn Sie versuchen, diese Pragma für eine Funktion mit C++-Bindung zu verwenden, wird ein Compilerfehler generiert.
 
-Seitdem Funktion Adressierung `__based` wird nicht unterstützt, Angabe von abschnittsspeicherorten erfordert die Verwendung der **Alloc_text** Pragma. Den Namen trägt *Textsection* muss in doppelte Anführungszeichen eingeschlossen werden.
+Da die Verwendung von `__based` mit der Verwendung von nicht unterstützt wird, muss das **alloc_text** -Pragma verwendet werden, um Abschnitts Speicherorte anzugeben. Der von *Text section* angegebene Name muss in doppelte Anführungszeichen eingeschlossen werden.
 
-Die **Alloc_text** Pragma muss nach den Deklarationen aller angegebenen Funktionen und vor den Definitionen dieser Funktionen angezeigt werden.
+Das **alloc_text** -Pragma muss nach den Deklarationen der angegebenen Funktionen und vor den Definitionen dieser Funktionen angezeigt werden.
 
-Funktionen, die auf die verwiesen wird einem **Alloc_text** Pragma sollte im selben Modul wie das Pragma definiert werden. Wenn dies nicht erfolgt ist und es wird eine nicht definierte Funktion später in einen anderen Textbereich kompiliert, ist ungewiss, ob der Fehler abgefangen wird. Obwohl das Programm in der Regel ordnungsgemäß ausgeführt wird, ist die Funktion nicht in den vorgesehenen Abschnitten zugeordnet.
+Funktionen, auf die in einem **alloc_text** -Pragma verwiesen wird, müssen im selben Modul wie das Pragma definiert werden. Andernfalls kann der Fehler abgefangen werden, wenn eine nicht definierte Funktion später in einen anderen Textabschnitt kompiliert wird. Obwohl das Programm in der Regel ordnungsgemäß ausgeführt wird, ist die Funktion nicht in den vorgesehenen Abschnitten zugeordnet.
 
-Andere Einschränkungen für **Alloc_text** lauten wie folgt:
+Weitere Einschränkungen für **alloc_text** lauten wie folgt:
 
-- Es kann nicht innerhalb einer Funktion verwendet werden.
+- Sie kann nicht innerhalb einer Funktion verwendet werden.
 
 - Es muss verwendet werden, nachdem die Funktion deklariert wurde, aber bevor die Funktion definiert wurde.
 

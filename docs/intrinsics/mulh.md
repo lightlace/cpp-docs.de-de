@@ -1,39 +1,39 @@
 ---
 title: __mulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __mulh
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-ms.openlocfilehash: 122d7ff28a01c0b95c16c6a0f4cd20e883744d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a421cdda1c62620d4c933436fd0b5bab589c0e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263073"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221678"
 ---
-# <a name="mulh"></a>__mulh
+# <a name="__mulh"></a>__mulh
 
 **Microsoft-spezifisch**
 
-Gibt die oberen 64 Bits des Produkts von zwei 64-Bit-Ganzzahlen mit Vorzeichen zurück.
+Gibt die hohen 64 Bits des Produkts von 2 64-Bit-Ganzzahlen mit Vorzeichen zurück.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 __int64 __mulh(
    __int64 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*a*<br/>
+*ein*\
 [in] Die erste zu multiplizierende Zahl.
 
-*b*<br/>
+*b*\
 [in] Die zweite zu multiplizierende Zahl.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -46,7 +46,7 @@ Die oberen 64 Bits de 128-Bit-Ergebnisses der Multiplikation.
 |---------------|------------------|
 |`__mulh`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -54,7 +54,7 @@ Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // mulh.cpp
 // processor: x64
 #include <stdio.h>
@@ -83,4 +83,4 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

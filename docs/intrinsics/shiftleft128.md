@@ -1,19 +1,19 @@
 ---
 title: __shiftleft128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftleft128
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 5fcb797694c7a45dc4f2113f3d2ed4a2f578c894
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390411"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218006"
 ---
-# <a name="shiftleft128"></a>__shiftleft128
+# <a name="__shiftleft128"></a>__shiftleft128
 
 **Microsoft-spezifisch**
 
@@ -21,7 +21,7 @@ Verschiebt eine 128-Bit-Menge, dargestellt als zwei 64-Bit-Mengen `LowPart` und 
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned __int64 __shiftleft128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,16 +29,16 @@ unsigned __int64 __shiftleft128(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*LowPart*<br/>
-[in] Die unteren 64 Bits der zu verschiebenden 128-Bit-Menge.
+*LowPart*\
+in Die unteren 64 Bits der zu Verschiebungs enden 128-Bit-Menge.
 
-*HighPart*<br/>
-[in] Die oberen 64 Bits der zu verschiebenden 128-Bit-Menge.
+*HighPart*\
+in Die hohen 64 Bits der 128-Bit-Menge, die verschoben werden soll.
 
-*UMSCHALTTASTE*<br/>
-[in] Die Anzahl der zu verschiebenden Bits.
+*Schuss*\
+in Die Anzahl der zu Verschiebungs enden Bits.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -50,15 +50,15 @@ Die oberen 64 Bits des Ergebnisses.
 |---------------|------------------|
 |`__shiftleft128`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Der `Shift`-Wert ist immer modulo 64. So verschiebt z. B. beim Aufrufen von `__shiftleft128(1, 0, 64)` die Funktion die `0`-Bits des unteren Teils nach links und gibt einen oberen Teil von `0` und nicht von `1` zurück, wie man annehmen könnte.
+Der *Verschiebungs* Wert ist immer modulo 64. Wenn Sie z. `__shiftleft128(1, 0, 64)`b. aufzurufen, `0` verschiebt die Funktion die unteren Teile der Bits nach links und gibt einen großen `0` Teil von `1` und nicht wie erwartet aus.
 
 ## <a name="example"></a>Beispiel
 
-```
+```C
 // shiftleft128.c
 // processor: IPF, x64
 #include <stdio.h>
@@ -98,5 +98,5 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[__shiftright128](../intrinsics/shiftright128.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[__shiftright128](../intrinsics/shiftright128.md)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

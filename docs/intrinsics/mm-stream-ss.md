@@ -1,41 +1,41 @@
 ---
 title: _mm_stream_ss
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_stream_ss
 helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 76c6c848351df773b9857b2f83726b64db982d9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005f4f697d64f6ea68b35dc32daf1217be463a2a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263229"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217353"
 ---
-# <a name="mmstreamss"></a>_mm_stream_ss
+# <a name="_mm_stream_ss"></a>_mm_stream_ss
 
 **Microsoft-spezifisch**
 
-Schreibt 32-Bit-Daten an einem Speicherort, ohne die Caches zu entwickeln.
+Schreibt 32-Bit-Daten an einen Speicherort, ohne die Caches zu verschmutzen.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void _mm_stream_ss(
-   float * Dest,
+   float * Destination,
    __m128 Source
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*dest*<br/>
-[out] Ein Zeiger auf den Speicherort, in denen die Quelldaten geschrieben werden.
+*Entwickelt*\
+vorgenommen Ein Zeiger auf den Speicherort, an den die Quelldaten geschrieben werden.
 
-*Quelle*<br/>
-[in] Eine 128-Bit-Zahl, die enthält die `float` Wert, der in der unteren 32 Bits geschrieben werden...
+*Source*\
+in Eine 128-Bit-Zahl, die `float` den Wert enthält, der in den untersten 32 Bits geschrieben werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -47,13 +47,13 @@ Keine
 |---------------|------------------|
 |`_mm_stream_ss`|SSE4a|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser systeminternen Funktion generiert die `movntss` Anweisung. Um hardwareunterstützung für diese Anweisung zu bestimmen, rufen die `__cpuid` systeminternen Funktionen mit `InfoType=0x80000001` und überprüfen Sie wenig 6 `CPUInfo[2] (ECX)`. Dieses Bit ist 1, wenn die Anweisung unterstützt wird, und andernfalls 0.
+Die systeminterne Generierung `movntss` generiert die-Anweisung. Um die Hardwareunterstützung für diese Anweisung zu ermitteln, `__cpuid` müssen Sie `InfoType=0x80000001` die systeminterne Funktion mit `CPUInfo[2] (ECX)`und das-Bit 6 von abrufen. Dieses Bit ist 1, wenn die Anweisung unterstützt wird, und andernfalls 0.
 
-Wenn Sie Code ausführen, verwendet der `_mm_stream_ss` syteminternen Funktion bei Hardware, die nicht unterstützt. die `movntss` -Anweisung, die die Ergebnisse sind unvorhersehbar.
+Wenn Sie Code ausführen, der die `_mm_stream_ss` systeminterne Funktion auf Hardware verwendet, `movntss` die die-Anweisung nicht unterstützt, sind die Ergebnisse unvorhersehbar.
 
 ## <a name="example"></a>Beispiel
 
@@ -89,12 +89,12 @@ f[2] = -3, f[3] = 3
 
 **Ende Microsoft-spezifisch**
 
-Copyright 2007 by Advanced Micro Devices, Inc. Alle Rechte vorbehalten. Reproduziert werden, mit der Berechtigung, die von erweiterten Micro-Geräte, Inc.
+Teile Copyright 2007 von Advanced Micro Devices, Inc. Alle Rechte vorbehalten. Mit Berechtigung von Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Siehe auch
 
-[_mm_stream_sd](../intrinsics/mm-stream-sd.md)<br/>
-[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)<br/>
-[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)<br/>
-[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[_mm_stream_sd](../intrinsics/mm-stream-sd.md)\
+[_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)\
+[_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)\
+[_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

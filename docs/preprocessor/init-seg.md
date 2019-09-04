@@ -1,6 +1,6 @@
 ---
-title: init_seg
-ms.date: 11/04/2016
+title: init_seg-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
@@ -9,69 +9,69 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e57ea0eedfc1df6e196391c5edd3acfbad0a7c7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383710"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221006"
 ---
-# <a name="initseg"></a>init_seg
+# <a name="init_seg-pragma"></a>init_seg-Pragma
 
-**C++-spezifisch**
+**C++Zugeschnitten**
 
 Gibt ein Schlüsselwort oder einen Codeabschnitt an, der sich auf die Reihenfolge auswirkt, in der Startcode ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma init_seg({ compiler | lib | user | "section-name" [, func-name]} )
-```
+> **#pragma init_seg (** { **Compiler** | **lib** | **User** | "*section-Name*" [ **,** *Func-Name* ]} **)**
 
 ## <a name="remarks"></a>Hinweise
 
-Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind austauschbar, in diesem Thema.
+Die Begriffe *Segment* und *Abschnitt* haben dieselbe Bedeutung in diesem Artikel.
 
-Da die Initialisierung eines globalen statischen Objekts ausführenden Code umfassen kann, müssen Sie ein Schlüsselwort angeben, das definiert, wann die Objekte erstellt werden sollen. Es ist besonders wichtig ist, verwendet der **Init_seg** Pragma in Dynamic Link Libraries (DLLs) oder Bibliotheken, die eine Initialisierung erforderlich ist.
+Da Code manchmal zum Initialisieren globaler statischer Objekte erforderlich ist, müssen Sie angeben, wann die Objekte zu erstellen sind. Insbesondere ist es wichtig, das **init_seg** -Pragma in Dynamic Link Libraries (DLLs) oder in Bibliotheken zu verwenden, die eine Initialisierung erfordern.
 
-Die Optionen, um die **Init_seg** Pragma sind:
+Die Optionen für das **init_seg** -Pragma lauten wie folgt:
 
-*compiler*<br/>
+**Versionen**\
 Reserviert für die Initialisierung der Microsoft C-Laufzeitbibliothek. Objekte in dieser Gruppe werden zuerst erstellt.
 
-*lib*<br/>
-Verfügbar für die Initialisierungen der Klassenbibliotheken von Drittanbietern. Objekte in dieser Gruppe werden erstellt, nach denen als *Compiler* aber vor allen anderen.
+**lib**\
+Verfügbar für die Initialisierungen der Klassenbibliotheken von Drittanbietern. Objekte in dieser Gruppe werden erstellt, nachdem Sie als **Compiler**gekennzeichnet sind, aber vor allen anderen.
 
-*user*<br/>
+**Bedienungs**\
 Verfügbar für alle beliebigen Benutzer. Objekte in dieser Gruppe werden zuletzt erstellt.
 
-*Name des Abschnitts* ermöglicht die explizite Angabe des Abschnitts für Initialisierung. Objekte in einem vom Benutzer angegebenen *Abschnittsname* sind nicht implizit erstellt werden; allerdings werden ihre Adressen im Abschnitt mit dem Namen von platziert *Abschnittsname*.
+*Abschnitts Name*\
+Ermöglicht die explizite Angabe des Abschnitts für Initialisierung. Objekte in einem vom Benutzer angegebenen *Abschnittsnamen* werden nicht implizit erstellt. Die Adressen werden jedoch in dem Abschnitt platziert, der durch *Abschnitts Name*benannt wird.
 
-Der angegebene Abschnittsname enthält Zeiger auf Hilfsfunktionen, die die globalen Objekte erstellen, die in diesem Modul nach dem Pragma deklariert wurden.
+Der von Ihnen fest Zugende *Abschnitts Name* enthält Verweise auf Hilfsfunktionen, die die globalen Objekte erstellen, die nach dem Pragma in diesem Modul deklariert werden.
 
-Eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden, finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md).
+Eine Liste der Namen, die Sie beim Erstellen eines Abschnitts nicht verwenden sollten, finden Sie unter [/section](../build/reference/section-specify-section-attributes.md).
 
-*Func-Name* gibt an, eine Funktion, die aufgerufen werden, anstelle von `atexit` Wenn das Programm beendet wird. Diese Hilfsfunktion ruft zudem [von "atexit"](../c-runtime-library/reference/atexit.md) mit einem Zeiger auf den Destruktor für das globale Objekt. Wenn Sie einen Funktionsbezeichner im Pragma des Formulars angeben,
+*Func-Name*\
+Gibt eine Funktion an, die statt `atexit` aufgerufen werden soll, wenn das Programm beendet wird. Diese Hilfsfunktion ruft auch [atexit](../c-runtime-library/reference/atexit.md) mit einem Zeiger auf den Dekonstruktor für das globale Objekt auf. Wenn Sie einen Funktionsbezeichner im Pragma des Formulars angeben,
 
 ```cpp
 int __cdecl myexit (void (__cdecl *pf)(void))
 ```
 
-wird die Funktion anstelle von `atexit` für die Laufzeitbibliothek von C aufgerufen. Dadurch können Sie eine Liste mit Destruktoren erstellen, die aufgerufen werden müssen, wenn Sie bereit sind, die Objekte zu zerstören.
+wird die Funktion anstelle von `atexit` für die Laufzeitbibliothek von C aufgerufen. Sie können eine Liste der Dekonstruktoren erstellen, die aufgerufen werden sollen, wenn Sie bereit sind, die Objekte zu zerstören.
 
-Wenn Sie die Initialisierung verzögern müssen (z. B. in einer DLL), können Sie den Abschnittsnamen auch explizit angeben. Anschließend müssen Sie die Konstruktoren für jedes statische Objekt aufrufen.
+Wenn Sie die Initialisierung verzögern müssen (z. B. in einer DLL), können Sie den Abschnittsnamen auch explizit angeben. Der Code muss dann die Konstruktoren für jedes statische Objekt aufzurufen.
 
 Der Bezeichner für die Ersetzung von `atexit` weist keine Anführungszeichen auf.
 
-Die Objekte werden in den Abschnitten platziert, die von den anderen XXX_seg-Pragmas definiert sind.
+Ihre Objekte werden weiterhin in den Abschnitten abgelegt, die von den anderen `XXX_seg` Pragmas definiert werden.
 
-Die Objekte, die im Modul deklariert wurden, werden nicht automatisch von der C-Laufzeit initialisiert. Sie müssen das selbst tun.
+Die im Modul deklarierten Objekte werden nicht automatisch von der C-Laufzeit initialisiert. Der Code muss die Initialisierung durchführen.
 
-Standardmäßig sind `init_seg`-Abschnitte schreibgeschützt. Wenn der Abschnittsname .CRT ist, legt der Compiler automatisch das Attribut auf schreibgeschützt fest, auch wenn es den Schreibzugriff gestattet hat.
+Standardmäßig sind `init_seg`-Abschnitte schreibgeschützt. Wenn der Abschnitts Name ist `.CRT`, ändert der Compiler das Attribut im Hintergrund in den schreibgeschützten Modus, selbst wenn er als Lese-/Schreibzugriff markiert ist.
 
-Sie können keine angeben **Init_seg** mehr als einmal in einer Übersetzungseinheit.
+**Init_seg** können in einer Übersetzungseinheit nicht mehrmals angegeben werden.
 
-Auch wenn das Objekt über keinen benutzerdefinierten Konstruktor verfügt, einen Konstruktor, der im Code nicht explizit definiert wurde, generiert der Compiler möglicherweise einen, um die v-table-Zeiger zu binden. Deshalb muss der Code den vom Compiler generierten Konstruktor aufrufen.
+Auch wenn das Objekt über keinen benutzerdefinierten Konstruktor verfügt, der explizit im Code definiert ist, generiert der Compiler möglicherweise einen für Sie. Beispielsweise kann er eine erstellen, um v-Table-Zeiger zu binden. Wenn dies erforderlich ist, ruft der Code den vom Compiler generierten Konstruktor auf.
 
 ## <a name="example"></a>Beispiel
 

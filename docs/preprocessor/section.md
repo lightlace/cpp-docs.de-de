@@ -1,6 +1,6 @@
 ---
-title: section
-ms.date: 11/04/2016
+title: section-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - section_CPP
 - vc-pragma.section
@@ -8,49 +8,47 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47ae2ff2503317e937e2b3a497357afbd5522a64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179632"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216603"
 ---
-# <a name="section"></a>section
+# <a name="section-pragma"></a>section-Pragma
 
 Erstellt einen Abschnitt in einer OBJ-Datei.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma section( "section-name" [, attributes] )
-```
+> **#pragma Abschnitt (** "*Abschnitts Name*" [ **,** *Attribute* ] **)**
 
 ## <a name="remarks"></a>Hinweise
 
-Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind austauschbar, in diesem Thema.
+Die Begriffe *Segment* und *Abschnitt* haben dieselbe Bedeutung in diesem Artikel.
 
-Sobald ein Abschnitt definiert wurde, bleibt er für den Rest der Kompilierung gültig. Sie müssen allerdings verwenden [__declspec(allocate)](../cpp/allocate.md) oder "nothing" im Abschnitt platziert.
+Sobald ein Abschnitt definiert wurde, bleibt er für den Rest der Kompilierung gültig. Sie müssen jedoch [__declspec (zuordnen)](../cpp/allocate.md)verwenden, oder es wird nichts in den-Abschnitt eingefügt.
 
-*Name des Abschnitts* ist ein erforderlicher Parameter, die den Namen des Abschnitts. Der Name darf keinem Standard-Abschnittsnamen ähneln. Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.
+*section-Name* ist ein erforderlicher Parameter, der zum Namen des Abschnitts wird. Der Name darf keinem Standard-Abschnittsnamen ähneln. Eine Liste der Namen, die Sie beim Erstellen eines Abschnitts nicht verwenden sollten, finden Sie unter [/section](../build/reference/section-specify-section-attributes.md) .
 
-*Attribute* ist ein optionaler Parameter, bestehend aus ein oder mehrere durch Kommas getrennten Attributen, die Sie dem Abschnitt zuweisen möchten. Mögliche *Attribute* sind:
+*Attribute* ist ein optionaler Parameter, der aus einem oder mehreren durch Trennzeichen getrennten Attributen besteht, die dem Abschnitt zugewiesen werden sollen. Mögliche *Attribute* :
 
 |Attribut|Beschreibung|
 |-|-|
 |**read**|Ermöglicht Lesevorgänge für Daten.|
 |**write**|Ermöglicht Schreibvorgänge für Daten.|
 |**execute**|Ermöglicht die Ausführung von Code.|
-|**shared**|Gibt den Abschnitt für alle Prozesse frei, die das Image laden.|
-|**nopage**|Markiert den Abschnitt als nicht auslagerbar; nützlich für Win32-Gerätetreiber.|
-|**nocache**|Markiert den Abschnitt als nicht zwischenspeicherbar; nützlich für Win32-Gerätetreiber.|
-|**discard**|Markiert den Abschnitt als entfernbar; nützlich für Win32-Gerätetreiber.|
-|**remove**|Markiert den Abschnitt als nicht speicherresident; Virtuelle Gerätetreiber (V*x*D) nur.|
+|**Genu**|Gibt den Abschnitt für alle Prozesse frei, die das Image laden.|
+|**nopage**|Markiert den Abschnitt als nicht zuladbar. Nützlich für Win32-Gerätetreiber.|
+|**NoCache**|Markiert den Abschnitt als nicht zwischen speicherbar. Nützlich für Win32-Gerätetreiber.|
+|**discard**|Markiert den Abschnitt als verworfen. Nützlich für Win32-Gerätetreiber.|
+|**remove**|Markiert den Abschnitt als nicht Speicher residente. Nur für virtuelle Gerätetreiber (V*x*D).|
 
-Wenn Sie keine Attribute angeben, enthält der Abschnitt Lese- und Schreibattribute.
+Wenn Sie keine Attribute angeben, enthält der Abschnitt **Lese** -und **Schreib** Attribute.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel identifiziert die erste Anweisung den Abschnitt und seine Attribute. Die Ganzzahl `j` wird nicht in `mysec` eingefügt, da sie nicht mit `__declspec(allocate)` deklariert wurde. `j` wird in den Datenbereich eingefügt. Die Ganzzahl `i` wird aufgrund ihres `mysec`-Speicherklassenattributs in `__declspec(allocate)` eingefügt.
+In diesem Beispiel identifiziert das erste Abschnitts-Pragma den Abschnitt und seine Attribute. Die Ganzzahl `j` wird nicht in `mysec` eingefügt, da Sie nicht mit `__declspec(allocate)`deklariert wurde. `j` Stattdessen wechselt in den Abschnitt "Data" (Daten). Die Ganzzahl `i` wird aufgrund ihres `mysec`-Speicherklassenattributs in `__declspec(allocate)` eingefügt.
 
 ```cpp
 // pragma_section.cpp

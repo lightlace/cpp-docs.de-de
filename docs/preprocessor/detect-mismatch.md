@@ -1,6 +1,6 @@
 ---
-title: detect_mismatch
-ms.date: 11/04/2016
+title: detect_mismatch-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.detect_mismatch
 - detect_mismatch_CPP
@@ -8,27 +8,26 @@ helpviewer_keywords:
 - pragmas, detect_mismatch
 - detect_mismatch pragma
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
-ms.openlocfilehash: 42a3ba61cefe3b2db01aef24b802e3a51fed55d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e247b3f251bce47710a3380fb295597314a3bd8
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389332"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222397"
 ---
-# <a name="detectmismatch"></a>detect_mismatch
+# <a name="detect_mismatch-pragma"></a>detect_mismatch-Pragma
+
 Platziert einen Datensatz in einem Objekt. Der Linker überprüft diese Datensätze auf potenzielle Konflikte.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma detect_mismatch("name", "value")
-```
+> **#pragma detect_mismatch (** "*Name*" **,** "*value*" **)**
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie das Projekt verknüpfen, löst der Linker einen `LNK2038`-Fehler aus, wenn das Projekt zwei Objekte enthält, die den gleichen `name`, jedoch einen unterschiedlichen `value` aufweisen. Verwenden Sie dieses Pragma, um zu verhindern, dass inkonsistente Objektdateien verknüpft werden.
+Wenn Sie das Projekt verknüpfen, löst der Linker einen [Linkertoolfehler lnk2038](../error-messages/tool-errors/linker-tools-error-lnk2038.md) -Fehler aus, wenn das Projekt zwei Objekte mit demselben *Namen* enthält, für die jedoch jeweils ein anderer *Wert*vorhanden ist. Verwenden Sie dieses Pragma, um zu verhindern, dass inkonsistente Objektdateien verknüpft werden.
 
-Name und Wert sind Zeichenfolgenliterale und befolgen im Zusammenhang mit Escapezeichen und Verkettungen die Regeln für Zeichenfolgenliterale. Beachtet, und darf keine Kommas, Gleichheitszeichen, Anführungszeichen enthalten oder die **null** Zeichen.
+Sowohl *Name* als auch *Wert* sind Zeichen folgen Literale und unterliegen den Regeln für Zeichen folgen Literale in Bezug auf Escapezeichen und Verkettung. Bei der Groß-/Kleinschreibung wird zwischen Groß-und Kleinschreibung unterschieden.
 
 ## <a name="example"></a>Beispiel
 

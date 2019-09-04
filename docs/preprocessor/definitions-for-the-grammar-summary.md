@@ -1,24 +1,24 @@
 ---
 title: Definitionen für die Grammatikzusammenfassung
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor, definitions
 - preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
-ms.openlocfilehash: 6e8671ba0d68b13f68db0f2b08dab4fe98f917e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93cf6ffc5daf53a106c9f15a2289e2b52739d72f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389280"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222415"
 ---
 # <a name="definitions-for-the-grammar-summary"></a>Definitionen für die Grammatikzusammenfassung
 
 Bei Terminalen handelt es sich um Endpunkte in einer Syntaxdefinition. Es ist keine andere Auflösung möglich. Terminale enthalten den Satz reservierter Wörter und benutzerdefinierter Bezeichner.
 
-Bei Nichtterminalen handelt es sich um Platzhalter in der Syntax. Die meisten sind an anderer Stelle in dieser Syntaxzusammenfassung definiert. Definitionen können rekursiv sein. Die folgenden Nichtterminale werden in definiert die [lexikalische Konventionen](../cpp/lexical-conventions.md) Teil der *C++-Sprachreferenz*:
+Bei Nichtterminalen handelt es sich um Platzhalter in der Syntax. Die meisten sind an anderer Stelle in dieser Syntaxzusammenfassung definiert. Definitionen können rekursiv sein. Die folgenden nicht Terminals sind im Abschnitt " [lexikalische Konventionen](../cpp/lexical-conventions.md) " der  *C++ Sprachreferenz*definiert:
 
-`constant`, *constant-expression*, *identifier*, *keyword*, `operator`, `punctuator`
+*Constant*, *Constant-Expression*, *Identifier*, *Schlüsselwort*, *Operator*, *Satzzeichen*
 
 Eine optionale Komponente wird durch das tiefgestellte <sub>opt</sub> angegeben. Beispielsweise gibt folgende Komponente einen optionalen Ausdruck an, der in geschweiften Klammern eingeschlossen ist:
 
@@ -26,4 +26,4 @@ Eine optionale Komponente wird durch das tiefgestellte <sub>opt</sub> angegeben.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Grammatikzusammenfassung (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+[Grammatik Zusammenfassung (CC++/)](../preprocessor/grammar-summary-c-cpp.md)

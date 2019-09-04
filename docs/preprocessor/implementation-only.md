@@ -1,43 +1,42 @@
 ---
-title: implementation_only
-ms.date: 11/04/2016
+title: implementation_only-Attribut importieren
+ms.date: 08/29/2019
 f1_keywords:
 - implementation_only
 helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
-ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08144b3c815350acfe6a856b36d2d88085d1c04d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383950"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218977"
 ---
-# <a name="implementationonly"></a>implementation_only
-**C++-spezifisch**
+# <a name="implementation_only-import-attribute"></a>implementation_only-Attribut importieren
 
-Unterdrückt die Generierung der TLH-Headerdatei (die primäre Headerdatei).
+**C++Zugeschnitten**
+
+Unterdrückt die Generierung `.tlh` der primären Typbibliotheks-Header Datei.
 
 ## <a name="syntax"></a>Syntax
 
-```
-implementation_only
-```
+> **#Import** *Typbibliothek* **implementation_only**
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Datei enthält alle Deklarationen, die verwendet werden, um den Inhalt der Typbibliothek verfügbar zu machen. Die TLI-Headerdatei wird mit den implementierten Wrappermemberfunktionen generiert und in die Kompilierung aufgenommen.
+Diese Datei enthält alle Deklarationen, die verwendet werden, um den Inhalt der Typbibliothek verfügbar zu machen. Die `.tli` Header Datei wird mit den Implementierungen der Wrapper Element Funktionen generiert und in die Kompilierung eingeschlossen.
 
-Wenn dieses Attribut festgelegt ist, befindet sich der Inhalt des TLI-Headers im selben Namespace wie der, der normalerweise im TLH-Header verwendet wird. Außerdem werden die Memberfunktionen nicht als Inline deklariert.
+Wenn dieses Attribut angegeben wird, befindet sich der Inhalt `.tli` des Headers im gleichen Namespace wie der, der normalerweise `.tlh` im Header verwendet wird. Außerdem werden die Memberfunktionen nicht als Inline deklariert.
 
-Die **Implementation_only** Attribut ist dazu vorgesehen, für die Verwendung in Verbindung mit der [No_implementation](../preprocessor/no-implementation.md) -Attribut als eine Möglichkeit, damit die Implementierungen nicht die vorkompilierte Headerdatei (PCH). Eine `#import`-Anweisung mit dem Attribut `no_implementation` wird in den Quellbereich eingefügt, der verwendet wird, um die PCH-Datei zu erstellen. Die resultierende PCH wird von mehreren Quelldateien verwendet. Ein `#import` -Anweisung mit der **Implementation_only** Attribut wird dann außerhalb des PCH-Bereichs verwendet. Sie müssen diese Anweisung nur einmal in einer der Quelldateien verwenden. Dadurch werden alle erforderlichen Wrappermemberfunktionen generiert, ohne dass eine zusätzliche Neukompilierung für jede Quelldatei erforderlich ist.
+Das **implementation_only** -Attribut ist für die Verwendung in Verbindung mit dem [no_implementation](../preprocessor/no-implementation.md) -Attribut vorgesehen, um die Implementierungen aus der vorkompilierten Header Datei (PCH) zu halten. Eine `#import`-Anweisung mit dem Attribut `no_implementation` wird in den Quellbereich eingefügt, der verwendet wird, um die PCH-Datei zu erstellen. Die resultierende PCH wird von mehreren Quelldateien verwendet. Eine `#import` -Anweisung mit dem **implementation_only** -Attribut wird dann außerhalb der PCH-Region verwendet. Diese Anweisung muss nur einmal in einer der Quelldateien verwendet werden. Sie generiert alle erforderlichen Wrapper Element Funktionen ohne zusätzliche Neukompilierung für jede Quelldatei.
 
 > [!NOTE]
-> Die **Implementation_only** Attribut in einem `#import` Anweisung muss es sich um die Verwendung in Verbindung mit einem anderen `#import` -Anweisung einer Typbibliothek, mit der `no_implementation` Attribut. Andernfalls werden Compilerfehler generiert. Dies ist, da die wrapperklassendefinitionen generiert die `#import` -Anweisung mit der `no_implementation` Attribut sind erforderlich, um die Implementierungen von generierten Kompilieren der **Implementation_only** Attribut.
+> Das **implementation_only** -Attribut in `#import` einer Anweisung muss zusammen mit einer anderen `#import` -Anweisung der gleichen Typbibliothek mit dem `no_implementation` -Attribut verwendet werden. Andernfalls werden Compilerfehler generiert. Dies liegt daran, dass die von der `#import` -Anweisung mit dem `no_implementation` -Attribut generierten Wrapper Klassendefinitionen erforderlich sind, um die vom **implementation_only** -Attribut generierten Implementierungen zu kompilieren.
 
-**Ende C++-spezifisch**
+**End C++ -Specific**
 
 ## <a name="see-also"></a>Siehe auch
 
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)
+[#Import Attribute](../preprocessor/hash-import-attributes-cpp.md)\
+[#Import-Direktive](../preprocessor/hash-import-directive-cpp.md)

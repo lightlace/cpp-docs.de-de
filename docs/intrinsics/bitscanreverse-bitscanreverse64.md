@@ -1,6 +1,6 @@
 ---
 title: _BitScanReverse, _BitScanReverse64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanReverse64
 - _BitScanReverse_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: 3639aac38f4c7df82cbbdb23ed9038ac86ba2cc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 848c153967e5581f08f1d499a28ab282ee2602df
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264282"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216954"
 ---
-# <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
+# <a name="_bitscanreverse-_bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 
 **Microsoft-spezifisch**
 
@@ -26,7 +26,7 @@ Suchen Sie die Maskendaten vom höchstwertigen Bit (MSB) bis zum niedrigstwertig
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned char _BitScanReverse(
    unsigned long * Index,
    unsigned long Mask
@@ -37,13 +37,13 @@ unsigned char _BitScanReverse64(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Index*<br/>
-[out] Geladen mit der Bitposition des ersten festgelegten Bits (1) wurde gefunden.
+*Sin*\
+vorgenommen Geladen mit der Bitposition des ersten festgelegten Bits (1).
 
-*Maske*<br/>
-[in] Der 32-Bit oder 64-Bit-Wert zu suchen.
+*Chel*\
+in Der zu durchsuchende 32-Bit-oder 64-Bit-Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -53,12 +53,12 @@ Ungleich null, wenn `Index` festgelegt wurde, oder null (0), wenn keine festgele
 
 |Systemintern|Architektur|Header|
 |---------------|------------------|------------|
-|`_BitScanReverse`|x86, ARM, x64|\<intrin.h>|
-|`_BitScanReverse64`|ARM, x64||
+|`_BitScanReverse`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_BitScanReverse64`|ARM64, x64|\<intrin.h>|
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // BitScanReverse.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -87,15 +87,11 @@ int main()
 }
 ```
 
-## <a name="input"></a>Eingabe
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>Beispielausgabe
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 3
 ```
@@ -104,4 +100,4 @@ Mask: 12 Index: 3
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

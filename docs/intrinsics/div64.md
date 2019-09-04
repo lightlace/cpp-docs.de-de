@@ -1,20 +1,20 @@
 ---
 title: _div64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: a221cc7cf0655a41873c6777aecd8a9b27131b74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264113"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216774"
 ---
-# <a name="div64"></a>_div64
+# <a name="_div64"></a>_div64
 
-Die `_div64` systeminterne teilt eine 64-Bit-Ganzzahl durch eine 32-Bit-Ganzzahl. Der Rückgabewert enthält den Quotienten und die systeminterne Funktion gibt den Rest über einen Zeigerparameter. `_div64` ist **Microsoft-spezifisch**.
+Die `_div64` systeminterne dividiert eine 64-Bit-Ganzzahl durch eine 32-Bit-Ganzzahl. Der Rückgabewert enthält den Quotienten, und der intrinsische Wert gibt den Rest durch einen Zeiger Parameter zurück. `_div64`ist **Microsoft-spezifisch**.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,14 +28,14 @@ int _div64(
 
 ### <a name="parameters"></a>Parameter
 
-*dividend* \
-[in] Die 64-Bit-Ganzzahl, zu teilen.
+*Dividend* \
+in Die zu dividierende 64-Bit-Ganzzahl.
 
 *divisor* \
-[in] Die 32-Bit ganze Zahl, durch die dividiert werden soll.
+in Die 32-Bit-Ganzzahl, durch die dividiert wird.
 
-*remainder* \
-[out] Die 32-Bit-Ganzzahl-Bits, der im weiteren Verlauf werden soll.
+*ergibt* \
+vorgenommen Die ganzzahligen 32-Bit-Bits des Restwerts.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -43,9 +43,9 @@ Die 32 Bits des Quotienten.
 
 ## <a name="remarks"></a>Hinweise
 
-Die `_div64` systeminterne dividiert *Dividend* von *Divisor*. Speichert den Rest in der 32-Bit-Ganzzahl, die verweist *Rest*, und gibt die 32 Bits des Quotienten zurück.
+Die `_div64` systeminterne dividiert die *Dividende* durch *Divisor*. Sie speichert den Rest in der 32-Bit-Ganzzahl,auf die von Restwerten verwiesen wird, und gibt die 32 Bits des Quotienten zurück.
 
-Die `_div64` systeminterne Funktion ist in Visual Studio 2019 RTM verfügbar ab.
+Die `_div64` systeminterne Funktion ist ab Visual Studio 2019 RTM verfügbar.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,4 +56,4 @@ Die `_div64` systeminterne Funktion ist in Visual Studio 2019 RTM verfügbar ab.
 ## <a name="see-also"></a>Siehe auch
 
 [_udiv64](udiv64.md) \
-[Intrinsische Compilerfunktionen](compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](compiler-intrinsics.md)

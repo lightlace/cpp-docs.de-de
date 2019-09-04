@@ -6,16 +6,16 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff6957436ecfb86ae44388e55488981f528f2c73
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264310"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220082"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Alphabetische Liste der intrinsischen Funktionen
 
-Die folgenden Abschnitte beschreiben die Microsoft-spezifischen intrinsischen Funktionen, die in einigen oder allen Architekturen verfügbar sind. Andere unterstützten systeminternen Funktionen sind von Prozessorherstellern die in den Headerdateien oder auf ihren Websites dokumentiert. Finden Sie unter den [systeminterne ARM-Funktionen](../intrinsics/arm-intrinsics.md), [X86 systeminternen Funktionen](../intrinsics/x86-intrinsics-list.md), und [X64 systeminternen Funktionen](../intrinsics/x64-amd64-intrinsics-list.md) Abschnitte für die Links zur Dokumentation des Herstellers. Funktionen der C-Laufzeit-Laufzeitbibliothek (CRT), die systeminterne Funktionen implementiert werden, sind hier nicht dokumentiert; Diese Funktionen werden in dokumentiert die [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md).
+Die folgenden Abschnitte beschreiben die Microsoft-spezifischen intrinsischen Funktionen, die in einigen oder allen Architekturen verfügbar sind. Andere unterstützten systeminternen Funktionen sind von Prozessorherstellern die in den Headerdateien oder auf ihren Websites dokumentiert. Links zur Herstellerdokumentation finden Sie in den Abschnitten systeminterne [Arm](../intrinsics/arm-intrinsics.md)-Funktionen, [x86](../intrinsics/x86-intrinsics-list.md)-Funktionen und systeminterne [x64](../intrinsics/x64-amd64-intrinsics-list.md) -Funktionen. Funktionen der C-Lauf Zeit Bibliothek (CRT), für die systeminterne Funktionen implementiert sind, werden hier nicht dokumentiert. Diese Funktionen sind in der [C-Lauf Zeit Bibliotheks Referenz](../c-runtime-library/c-run-time-library-reference.md)dokumentiert.
 
 [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
@@ -69,35 +69,35 @@ Die folgenden Abschnitte beschreiben die Microsoft-spezifischen intrinsischen Fu
 
 [__int2c](../intrinsics/int2c.md)
 
-[Intrinsische Funktionen „_InterlockedAdd“](../intrinsics/interlockedadd-intrinsic-functions.md)
+[Intrinsische _InterlockedAdd-Funktionen](../intrinsics/interlockedadd-intrinsic-functions.md)
 
 [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)
 
-[Intrinsische Funktionen „_InterlockedAnd“](../intrinsics/interlockedand-intrinsic-functions.md)
+[Intrinsische _InterlockedAnd-Funktionen](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_interlockedbittestandreset“](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[intrinsische _interlockedbittestandreset-Funktionen](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_interlockedbittestandset“](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[intrinsische _interlockedbittestandset-Funktionen](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_InterlockedCompareExchange“](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
+[Intrinsische _InterlockedCompareExchange-Funktionen](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)
 
-[Intrinsische Funktionen „_InterlockedCompareExchangePointer“](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
+[Intrinsische _InterlockedCompareExchangePointer-Funktionen](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_InterlockedDecrement“](../intrinsics/interlockeddecrement-intrinsic-functions.md)
+[Intrinsische _InterlockedDecrement-Funktionen](../intrinsics/interlockeddecrement-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_InterlockedExchange“](../intrinsics/interlockedexchange-intrinsic-functions.md)
+[Intrinsische _InterlockedExchange-Funktionen](../intrinsics/interlockedexchange-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_InterlockedExchangeAdd“](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
+[Intrinsische _InterlockedExchangeAdd-Funktionen](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_InterlockedExchangePointer“](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
+[Intrinsische _InterlockedExchangePointer-Funktionen](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_InterlockedIncrement“](../intrinsics/interlockedincrement-intrinsic-functions.md)
+[Intrinsische _InterlockedIncrement-Funktionen](../intrinsics/interlockedincrement-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_InterlockedOr“](../intrinsics/interlockedor-intrinsic-functions.md)
+[Intrinsische _InterlockedOr-Funktionen](../intrinsics/interlockedor-intrinsic-functions.md)
 
-[Intrinsische Funktionen „_InterlockedXor“](../intrinsics/interlockedxor-intrinsic-functions.md)
+[Intrinsische _InterlockedXor-Funktionen](../intrinsics/interlockedxor-intrinsic-functions.md)
 
 [__invlpg](../intrinsics/invlpg.md)
 
@@ -275,4 +275,4 @@ Die folgenden Abschnitte beschreiben die Microsoft-spezifischen intrinsischen Fu
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
-title: message
-ms.date: 11/04/2016
+title: message-Pragma
+ms.date: 08/29/2019
 f1_keywords:
 - message_CPP
 - vc-pragma.message
@@ -8,31 +8,30 @@ helpviewer_keywords:
 - message pragma
 - pragmas, message
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
-ms.openlocfilehash: e9383238fd308ec59a9767f56af1c07fc3cfcf07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48605fbef3b6d81c140e663e950429cd3dcf9b19
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371737"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218791"
 ---
-# <a name="message"></a>message
+# <a name="message-pragma"></a>message-Pragma
+
 Sendet ein Zeichenfolgenliteral an die Standardausgabe, ohne die Kompilierung zu beenden.
 
 ## <a name="syntax"></a>Syntax
 
-```
-#pragma message( messagestring )
-```
+> **#pragma Meldung (** Meldungs *Zeichenfolge* **)**
 
 ## <a name="remarks"></a>Hinweise
 
-Ein typisches Einsatzgebiet von der **Nachricht** Pragma ist zur Kompilierungszeit informationsmeldungen anzuzeigen.
+Eine typische Verwendung des **Message** -Pragmas besteht in der Anzeige von Informationsmeldungen zur Kompilierzeit.
 
-Die *Messagestring* Parameter kann ein Makro, das ein Zeichenfolgenliteral erweitert, und Sie können diese Makros mit Zeichenfolgenliteralen in beliebiger Kombination verketten.
+Der *Message-String-* Parameter kann ein Makro sein, das zu einem zeichenfolgenliteralerweitert wird, und Sie können solche Makros mit Zeichenfolgenliteralen in beliebiger Kombination verketten.
 
-Wenn Sie ein vordefiniertes Makro im Verwenden der **Nachricht** Pragma sollte das Makro eine Zeichenfolge zurückgeben, andernfalls müssen Sie die Ausgabe des Makros in eine Zeichenfolge zu konvertieren.
+Wenn Sie ein vordefiniertes Makro im **Message** -Pragma verwenden, sollte das Makro eine Zeichenfolge zurückgeben. Andernfalls müssen Sie die Ausgabe des Makros in eine Zeichenfolge konvertieren.
 
-Das folgende Codefragment verwendet den **Nachricht** Pragma, um Meldungen während der Kompilierung anzuzeigen:
+Das folgende Code Fragment verwendet das **Message** -Pragma, um Meldungen während der Kompilierung anzuzeigen:
 
 ```cpp
 // pragma_directives_message1.cpp

@@ -1,41 +1,41 @@
 ---
 title: _mm_cvtss_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvtss_si64x
 helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-ms.openlocfilehash: a3b7ece325d975045046e865e6b090f3f6729558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6079ed7846a35ff16355f0341d63430f9846057f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263333"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217433"
 ---
-# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
+# <a name="_mm_cvtss_si64x"></a>_mm_cvtss_si64x
 
 **Microsoft-spezifisch**
 
-Generiert die X64 erweiterte Version der konvertieren Skalar einzelne Genauigkeit Gleitkommazahl in 64-Bit-Ganzzahl (`cvtss2si`) Anweisung.
+Generiert die erweiterte x64-Version der Gleit Komma Zahl mit einer Gleit Komma Zahl mit einfacher Genauigkeit in eine 64`cvtss2si`-Bit-Anweisung ().
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 __int64 _mm_cvtss_si64x(
    __m128 value
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*value*<br/>
-[in] Ein `__m128` Struktur, die-Gleitkommawerte enthält.
+*value*\
+in Eine `__m128` -Struktur, die Gleit Komma Werte enthält.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine ganze 64-Bit-Zahl ist, das Ergebnis der Konvertierung der ersten Gleitkommawert in eine ganze Zahl.
+Eine 64-Bit-Ganzzahl, das Ergebnis der Konvertierung des ersten Gleit Komma Werts in eine ganze Zahl.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,17 +43,17 @@ Eine ganze 64-Bit-Zahl ist, das Ergebnis der Konvertierung der ersten Gleitkomma
 |---------------|------------------|
 |`_mm_cvtss_si64x`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Das erste Element der Struktur-Wert wird in eine ganze Zahl konvertiert und ausgegeben. Die Rundung Steuerungsbits im MXCSR werden verwendet, um das Rundungsverhalten zu bestimmen. Der Standardwert, der Rundungsmodus ist round auf die nächste, auf die gerade Zahl gerundet wird, wenn der Dezimalwert 0,5 ist. Da die `__m128` Struktur stellt eine XMM-Register, diese Funktion akzeptiert einen Wert aus dem XMM-Register und schreibt sie in den Systemspeicher.
+Das erste Element des-Struktur Werts wird in eine ganze Zahl konvertiert und zurückgegeben. Die Rundungs Steuerungs Bits in MXCSR werden verwendet, um das Rundungs Verhalten zu bestimmen. Der Standard Rundungs Modus ist auf den nächsten Wert gerundet und wird auf die gerade Zahl gerundet, wenn der Dezimalteil 0,5 ist. Da die `__m128` -Struktur ein XMM-Register darstellt, nimmt die systeminterne Funktion einen Wert aus dem XMM-Register und schreibt Sie in den Systemspeicher.
 
 Diese Routine ist nur als systeminterne Funktion verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-```
+```cpp
 // _mm_cvtss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -89,5 +89,5 @@ int main()
 
 ## <a name="see-also"></a>Siehe auch
 
-[__m128d](../cpp/m128d.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[__m128d](../cpp/m128d.md)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

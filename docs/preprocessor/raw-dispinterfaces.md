@@ -1,36 +1,35 @@
 ---
-title: raw_dispinterfaces
-ms.date: 11/04/2016
+title: raw_dispinterfaces-Attribut importieren
+ms.date: 08/29/2019
 f1_keywords:
 - raw_dispinterfaces
 helpviewer_keywords:
 - raw_dispinterfaces attribute
 ms.assetid: f762864d-29bf-445b-825a-ba7b29a95409
-ms.openlocfilehash: ef8ed3992c77df0f1d551e923ddc90c2d1bb9b0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73c58b72b27de8dcf96e8ab9464d0fb6bce12b66
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179840"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216227"
 ---
-# <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**C++-spezifisch**
+# <a name="raw_dispinterfaces-import-attribute"></a>raw_dispinterfaces-Attribut importieren
 
-Weist den Compiler an, Wrapperfunktionen auf niedriger Ebene für Disp-Schnittstellenmethoden und Eigenschaften, die aufgerufen werden generieren `IDispatch::Invoke` und den HRESULT-Fehlercode zurückgegeben.
+**C++Zugeschnitten**
+
+Weist den Compiler an, Wrapper Funktionen auf niedriger Ebene für Dispinterface-Methoden zu generieren, und für `IDispatch::Invoke` Eigenschaften, die den HRESULT-Fehlercode aufzurufen und zurückgeben.
 
 ## <a name="syntax"></a>Syntax
 
-```
-raw_dispinterfaces
-```
+> **#Import** *Typbibliothek* **raw_dispinterfaces**
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn dieses Attribut nicht angegeben wird, werden nur Wrapper auf hoher Ebene generiert, die im Falle eines Fehlers C++-Ausnahmen auslösen.
+Wenn dieses Attribut nicht angegeben wird, werden nur Wrapper auf hoher Ebene generiert, die bei C++ einem Fehler Ausnahmen auslösen.
 
-**Ende C++-spezifisch**
+**End C++ -Specific**
 
 ## <a name="see-also"></a>Siehe auch
 
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)
+[#Import Attribute](../preprocessor/hash-import-attributes-cpp.md)\
+[#Import-Direktive](../preprocessor/hash-import-directive-cpp.md)

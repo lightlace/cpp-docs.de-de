@@ -1,6 +1,6 @@
 ---
 title: __readpmc
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readpmc
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-ms.openlocfilehash: 848c880e76d6d431ee56a0bb30a33b276837ce76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af0f1874d991771423ddebfedd4624cd0b71760f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396443"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221039"
 ---
-# <a name="readpmc"></a>__readpmc
+# <a name="__readpmc"></a>__readpmc
 
 **Microsoft-spezifisch**
 
-Generiert die `rdpmc` -Anweisung, die mit der Leistungsüberwachung anhand des Leistungsindikators liest `counter`.
+Generiert die `rdpmc` -Anweisung, die den von *Counter*angegebenen Leistungs Überwachungstyp liest.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 unsigned __int64 __readpmc(
    unsigned long counter
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*counter*<br/>
-[in] Der Leistungsindikator zu lesen.
+*Indikator*\
+in Der zu lesende Leistungswert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert des angegebenen Leistungsindikators.
+Der Wert des angegebenen Leistungs Zählers.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,14 +44,14 @@ Der Wert des angegebenen Leistungsindikators.
 |---------------|------------------|
 |`__readpmc`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
-Diese systeminterne Funktion ist im Kernel-Modus ist nur verfügbar, und die Routine ist nur als systeminterne Funktion verfügbar.
+Die systeminterne Funktion ist nur im Kernel Modus verfügbar, und die Routine ist nur als systeminterne Funktion verfügbar.
 
 **Ende Microsoft-spezifisch**
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

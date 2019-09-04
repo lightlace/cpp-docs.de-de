@@ -1,36 +1,36 @@
 ---
 title: __writecr3
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr3
 helpviewer_keywords:
 - _writecr3 intrinsic
 ms.assetid: 959d49fa-69d5-47cf-88d2-7688367fe38f
-ms.openlocfilehash: 88467e4fb39abc9526e47a73f998d630470111a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2472a21fe42f10dbf0918480ef02f7e48109747
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389930"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219276"
 ---
-# <a name="writecr3"></a>__writecr3
+# <a name="__writecr3"></a>__writecr3
 
 **Microsoft-spezifisch**
 
-Schreibt den Wert `Data` dem CR3-Register.
+Schreibt den Wert `Data` in das CR3-Register.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void writecr3(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Data*<br/>
-[in] Der Wert, der registriert wird, CR3 geschrieben werden soll.
+*Vorrats*\
+in Der Wert, der in das CR3-Register geschrieben werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,7 +38,7 @@ void writecr3(
 |---------------|------------------|
 |`__writecr3`|x86, x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -48,4 +48,4 @@ Diese systeminterne Funktion ist nur im Kernelmodus verfügbar, und die Routine 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
 title: __writegsbyte, __writegsdword, __writegsqword, __writegsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writegsbyte
 - __writegsqword
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-ms.openlocfilehash: dbd3fff75107ae61f7680dee84b72ff3153bfa8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b9e812776e9b2bb0820905d088111669096db64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389774"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221200"
 ---
-# <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
+# <a name="__writegsbyte-__writegsdword-__writegsqword-__writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 
 **Microsoft-spezifisch**
 
-Schreibvorgänge im Speicher an einem Speicherort, ein Offset relativ zum Beginn der GS-Segment angegeben wird.
+Schreiben Sie Speicher an einen Speicherort, der in Relation zum Anfang des GS-Segments durch einen Offset angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```C
 void __writegsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -46,13 +46,13 @@ void __writegsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parameter
+### <a name="parameters"></a>Parameter
 
-*Offset*<br/>
-[in] Der Offset vom Anfang des GS zu schreiben.
+*Kompensieren*\
+in Der Offset vom Anfang des GS, in den geschrieben werden soll.
 
-*Data*<br/>
-[in] Der zu schreibende Wert.
+*Vorrats*\
+in Der zu schreibende Wert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ void __writegsqword(
 |`__writegsqword`|x64|
 |`__writegsword`|x64|
 
-**Headerdatei** \<intrin.h >
+**Header Datei** \<intrin. h->
 
 ## <a name="remarks"></a>Hinweise
 
@@ -73,5 +73,5 @@ Diese Routinen sind nur als systeminterne Funktion verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[Intrinsische Compilerfunktionen](../intrinsics/compiler-intrinsics.md)
+[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[Systeminterne Compilerfunktionen](../intrinsics/compiler-intrinsics.md)

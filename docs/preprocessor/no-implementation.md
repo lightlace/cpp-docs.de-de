@@ -1,38 +1,37 @@
 ---
-title: no_implementation
-ms.date: 11/04/2016
+title: no_implementation-Attribut importieren
+ms.date: 08/29/2019
 f1_keywords:
 - no_implementation
 helpviewer_keywords:
 - no_implementation attribute
 ms.assetid: bdc67785-e131-409c-87bc-f4d2f4abb07b
-ms.openlocfilehash: 26527ca69c66c73f5d41084dc42df5faa34481d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f0a7454fdbedc1959b665ccb2a23748d21c342d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409810"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220772"
 ---
-# <a name="noimplementation"></a>no_implementation
-**C++-spezifisch**
+# <a name="no_implementation-import-attribute"></a>no_implementation-Attribut importieren
 
-Unterdrückt die Generierung des TLI-Headers, der die Implementierungen der Wrappermemberfunktionen enthält.
+**C++Zugeschnitten**
+
+Unterdrückt die Generierung des `.tli` Headers, der die Implementierungen der Wrapper Element Funktionen enthält.
 
 ## <a name="syntax"></a>Syntax
 
-```
-no_implementation
-```
+> **#Import** *Typbibliothek* **no_implementation**
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn dieses Attribut festgelegt ist, wird der TLH-Header mit den Deklarationen zur Bereitstellung von Typbibliothekselementen ohne eine `#include`-Anweisung zur Einbindung der TLI-Headerdatei generiert.
+Wenn dieses Attribut angegeben wird, wird `.tlh` der-Header mit den-Deklarationen, die Typbibliotheks Elemente verfügbar machen, ohne `#include` eine-Anweisung zum `.tli` einschließen der Header Datei generiert.
 
-Dieses Attribut wird verwendet, in Verbindung mit [Implementation_only](../preprocessor/implementation-only.md).
+Dieses Attribut wird zusammen mit [implementation_only](../preprocessor/implementation-only.md)verwendet.
 
-**Ende C++-spezifisch**
+**End C++ -Specific**
 
 ## <a name="see-also"></a>Siehe auch
 
-[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)
+[#Import Attribute](../preprocessor/hash-import-attributes-cpp.md)\
+[#Import-Direktive](../preprocessor/hash-import-directive-cpp.md)
