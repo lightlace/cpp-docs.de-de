@@ -1,26 +1,23 @@
 ---
 title: '&lt;random&gt;-Funktionen'
-ms.date: 11/04/2016
+ms.date: 09/04/2019
 f1_keywords:
 - random/std::generate_canonical
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 87b640d4f3aa3fbfa23ad5603d84102301e71ea4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3d94f607fc6b7bdf22d7f573f590b451dbaa718d
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240386"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273828"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;random&gt;-Funktionen
 
-## <a name="generate_canonical"></a> generate_canonical
+## <a name="generate_canonical"></a>generate_canonical
 
 Gibt einen Gleitkommawert aus einer zufälligen Sequenz zurück.
-
-> [!NOTE]
-> Der ISO C++-Standard verlangt, dass diese Funktion Werte im Bereich [`0`, `1`) zurückgibt. Visual Studio ist mit dieser Vorgabe noch nicht kompatibel. Verwenden Sie, um das Problem zu umgehen, zum Generieren von Werten in diesem Bereich [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).
 
 ```cpp
 template <class RealType, size_t Bits, class Generator>
@@ -32,12 +29,15 @@ RealType generate_canonical(Generator& Gen);
 *RealType*\
 Der ganzzahlige Gleitkommatyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-*Bits*\
-Der Zufallszahlengenerator.
+*Bohrer*\
+Die Anzahl der zu verwendenden Bits der Zufälligkeit.
 
-*Gen*\
-Der Zufallszahlengenerator.
+*Ator*\
+Eine Zufallszahlen-Generator-Klasse.
+
+*Genen*\
+Ein Verweis auf eine Instanz eines Zufallszahlengenerators vom Typ *Generator*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion ruft `operator()` von *Gen* wiederholt und verpackt die zurückgegebenen Werte in einen Gleitkommawert `x` des Typs *RealType* bis er die angegebene Anzahl erfasst hat von Mantissen-Bits in `x`. Die angegebene Zahl ist die kleinere von *Bits* (die muss ungleich NULL sein) und die volle Anzahl von Mantissen-Bits in *RealType*. Beim ersten Aufruf werden die Bits mit dem geringsten Wert ausgegeben. Die Funktion gibt `x` zurück.
+Die Vorlagen Funktion ruft `operator()` von *gen* wiederholt auf und verpackt die zurückgegebenen Werte in einen Gleit `x` Komma Wert des Typs *RealType* , bis die angegebene Anzahl von Mantisse-Bits `x`in erfasst wurde. Die angegebene Anzahl ist die kleinere von *Bits* (die nicht NULL sein darf) und die vollständige Anzahl von Mantisse-Bits in *RealType*. Beim ersten Aufruf werden die Bits mit dem geringsten Wert ausgegeben. Die Funktion gibt `x` zurück.

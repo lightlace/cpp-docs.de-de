@@ -6,22 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2760
 ms.assetid: 585757fd-d519-43f3-94e5-50316ac8b90b
-ms.openlocfilehash: 24c33d90c0f91aa3c4b01142902afc4333c1c732
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5680de2fe0364d7cdc5e7ef017bd298423ea4c21
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257789"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273666"
 ---
 # <a name="compiler-error-c2760"></a>Compilerfehler C2760
 
-Syntaxfehler: erwartet 'name1' nicht 'name2'
+> Syntax Fehler: '*Name1*' ist nicht '*name2*' erwartet.
 
-Ein Umwandlungsoperator wird mit einem ungültigen Operator verwendet.
+## <a name="remarks"></a>Hinweise
 
-Im folgende Beispiel wird die C2760 generiert:
+Es gibt mehrere Möglichkeiten, diesen Fehler zu verursachen. Normalerweise wird dies durch eine tokensequenz verursacht, von der der Compiler nicht Sinn macht.
 
-```
+## <a name="example"></a>Beispiel
+
+In diesem Beispiel wird ein Umwandlungs Operator mit einem ungültigen Operator verwendet.
+
+```cpp
 // C2760.cpp
 class B {};
 class D : public B {};

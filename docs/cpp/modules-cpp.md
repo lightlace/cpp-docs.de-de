@@ -1,18 +1,18 @@
 ---
-title: Übersicht über Module inC++
+title: Übersicht über Module in C++
 ms.date: 07/23/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: Module in c++ 20 stellen eine moderne Alternative zu Header Dateien dar.
-ms.openlocfilehash: 84683d9c4b0e1a514b17883b89c58488b9879edb
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537806"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273675"
 ---
-# <a name="overview-of-modules-in-c"></a>Übersicht über Module inC++
+# <a name="overview-of-modules-in-c"></a>Übersicht über Module in C++
 
 C++ 20 führt *Module*ein, eine moderne Lösung für die Komponentisierung C++ von Bibliotheken und Programmen. Ein Modul ist ein Satz von Quell Code Dateien, die unabhängig von den [Übersetzungseinheiten](https://wikipedia.org/wiki/Translation_unit_(programming)) kompiliert werden, die Sie importieren. Module eliminieren viele der Probleme, die mit der Verwendung von Header Dateien verbunden sind, oder reduzieren Sie erheblich und können auch die Kompilierungszeiten reduzieren. Makros, Präprozessordirektiven und nicht exportierte Namen, die in einem Modul deklariert sind, sind nicht sichtbar und haben daher keine Auswirkungen auf die Kompilierung der Übersetzungseinheit, die das Modul importiert. Sie können Module in beliebiger Reihenfolge importieren, ohne dass Makro Neudefinitionen berücksichtigt werden. Deklarationen in der importierten Übersetzungseinheit nehmen nicht an der Überladungs Auflösung oder Namenssuche im importierten Modul Teil. Nachdem ein Modul einmal kompiliert wurde, werden die Ergebnisse in einer Binärdatei gespeichert, in der alle exportierten Typen, Funktionen und Vorlagen beschrieben werden. Diese Datei kann viel schneller verarbeitet werden als eine Header Datei und kann vom Compiler an jedem Ort wieder verwendet werden, an dem das Modul in ein Projekt importiert wird.
 
@@ -20,7 +20,7 @@ Module können nebeneinander mit Header Dateien verwendet werden. Eine C++ Quell
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Aktivieren von Modulen im Microsoft C++ -Compiler
 
-Ab Visual Studio 2019 Version 16,2 sind Module im Microsoft C++ -Compiler nicht vollständig implementiert. Sie können die Module-Funktion verwenden, um einzelne Partitions Module zu erstellen und die von Microsoft bereitgestellten Standard Bibliotheks Module zu importieren. Kompilieren Sie mit `/experimental:modules` und `/std:c++latest`, um die Unterstützung für Module zu aktivieren. Klicken Sie in einem Visual Studio-Projekt in **Projektmappen-Explorer** mit der rechten Maustaste auf den Projekt Knoten, und wählen Sie **Eigenschaften**aus. Legen Sie die Dropdown- **Konfiguration** auf **alle Konfigurationen**fest, und wählen Sie dann **Konfigurations Eigenschaften** >  > **C/C++** **Sprache** >  **C++ Module aktivieren ( experimentell)** .
+Ab Visual Studio 2019 Version 16,2 sind Module im Microsoft C++ -Compiler nicht vollständig implementiert. Sie können die Module-Funktion verwenden, um einzelne Partitions Module zu erstellen und die von Microsoft bereitgestellten Standard Bibliotheks Module zu importieren. Kompilieren Sie mit [/experimental: Module](../build/reference/experimental-module.md) und [/Std: c + + Latest](../build/reference/std-specify-language-standard-version.md), um die Unterstützung für Module zu aktivieren. Klicken Sie in einem Visual Studio-Projekt in **Projektmappen-Explorer** mit der rechten Maustaste auf den Projekt Knoten, und wählen Sie **Eigenschaften**aus. Legen Sie die Dropdown- **Konfiguration** auf **alle Konfigurationen**fest, und wählen Sie dann **Konfigurations Eigenschaften** >  > **C/C++** **Sprache** >  **C++ Module aktivieren ( experimentell)** .
 
 Ein Modul und der Code, in dem es verwendet wird, müssen mit denselben Compileroptionen kompiliert werden.
 
