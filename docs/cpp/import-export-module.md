@@ -1,5 +1,5 @@
 ---
-title: Module, Import, Export
+title: module, import, export
 ms.date: 07/15/2019
 f1_keywords:
 - module_cpp
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - modules [C++], import
 - modules [C++], export
 description: Verwenden Sie die Import-Anweisung für den Zugriff auf Typen und Funktionen, die im angegebenen Modul definiert sind.
-ms.openlocfilehash: fbb9c45ec816c859edb4df38ad67dc7778247e87
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537786"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273625"
 ---
-# <a name="module-import-export"></a>Module, Import, Export
+# <a name="module-import-export"></a>module, import, export
 
-Die Schlüsselwörter " **Module**", " **Import**" und " **Export** " sind in `/experimental:modules` c++ 20 verfügbar und `/std:c++latest`erfordern den Compilerschalter zusammen mit. Weitere Informationen finden Sie unter [Übersicht über Module in C++ ](modules-cpp.md).
+Die Schlüsselwörter " **Module**", " **Import**" und " **Export** " sind in c++ 20 verfügbar und erfordern den [/experimental: Module](../build/reference/experimental-module.md) -Compilerschalter zusammen mit [/Std: C + + Latest](../build/reference/std-specify-language-standard-version.md). Weitere Informationen finden Sie unter [Übersicht über Module in C++ ](modules-cpp.md).
 
 ## <a name="module"></a>module
 
@@ -37,7 +37,7 @@ Verwenden Sie die **Export Module** -Anweisung für die primäre Schnittstellen 
 export module ModuleA;
 ```
 
-Verwenden Sie in einer Schnittstellen Datei den  exportmodifizierer für Namen, die Teil der öffentlichen Schnittstelle sein sollen:
+Verwenden Sie in einer Schnittstellen Datei den **exportmodifizierer** für Namen, die Teil der öffentlichen Schnittstelle sein sollen:
 
 ```cpp
 // ModuleA.ixx
@@ -87,4 +87,5 @@ class Baz
 ```
 
 ## <a name="see-also"></a>Siehe auch
+
 [Übersicht über Module inC++](modules-cpp.md)

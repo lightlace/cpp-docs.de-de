@@ -1,6 +1,6 @@
 ---
 title: CAsyncSocket-Klasse
-ms.date: 11/04/2016
+ms.date: 09/03/2019
 f1_keywords:
 - CAsyncSocket
 - AFXSOCK/CAsyncSocket
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: ef938796faf8e9b9272a519ed1e51037edc90425
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4e14052d400268a8852298113ba9b51fda713dc8
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507525"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273792"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket-Klasse
 
@@ -337,7 +337,7 @@ Die Länge der Adresse in " *lpsockaddr* " in Bytes.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich 0 (null), wenn die Funktion erfolgreich ist. Andernfalls kann der Wert 0 und ein bestimmter Fehlercode durch Aufrufen von [GetLastError](#getlasterror)abgerufen werden. Die folgenden Fehler sind für diese Member-Funktion anwendbar:
+Ungleich 0 (null), wenn die Funktion erfolgreich ist. Andernfalls kann der Wert 0 und ein bestimmter Fehlercode durch Aufrufen von [GetLastError](#getlasterror)abgerufen werden. In der folgenden Liste werden einige der Fehler aufgeführt, die zurückgegeben werden können. Eine umfassende Liste finden Sie unter [Windows Sockets-Fehler Codes](/windows/win32/winsock/windows-sockets-error-codes-2).
 
 - Wsanotinitialisierte ein erfolgreiches [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) muss vor der Verwendung dieser API erfolgen.
 

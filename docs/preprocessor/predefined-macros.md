@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: ab478cd8ac51b5cb88cec38f80541df8a7be2789
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 15b70b0292f671d99b320c8d23598e68b47adb0d
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222284"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273819"
 ---
 # <a name="predefined-macros"></a>Vordefinierte Makros
 
@@ -274,7 +274,7 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
 
 - **&#95;&#95;CPlusPlus&#95;WinRT** wurde bei der Kompilierung als C++ der ganzzahlige Literalwert 201009 definiert, und die Compileroption [/ZW (Windows-Runtime Kompilierung)](../build/reference/zw-windows-runtime-compilation.md) ist festgelegt. Andernfalls nicht definiert.
 
-- **&#95;Cpprtti** Definiert als 1, wenn die Compileroption [/gr (Lauf Zeittyp Informationen aktivieren)](../build/reference/gr-enable-run-time-type-information.md) festgelegt ist. Andernfalls nicht definiert.
+- **&#95;Cpprtti** Definiert als 1, wenn die [Compileroption/gr (Lauf Zeittyp Informationen aktivieren)](../build/reference/gr-enable-run-time-type-information.md) festgelegt ist. Andernfalls nicht definiert.
 
 - **&#95;Cppentladen** Definiert als 1, wenn eine oder mehrere der [/GX (Ausnahmebehandlung aktivieren)](../build/reference/gx-enable-exception-handling.md), [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md)oder [/eh (Ausnahme Behandlungsmodell)](../build/reference/eh-exception-handling-model.md) -Compileroptionen festgelegt sind. Andernfalls nicht definiert.
 
@@ -402,6 +402,16 @@ MSVC unterstützt diese zusätzlichen vordefinierten Makros.
 - **&#95;MSVC&#95;lang** ist als Ganzzahlliteral definiert C++ , das den Sprachstandard angibt, den der Compiler als Ziel hat. Sie wird nur in Code festgelegt, C++der als kompiliert wird. Das-Makro ist der ganzzahlige Literalwert 201402l standardmäßig oder, wenn die [/Std: c++ 14](../build/reference/std-specify-language-standard-version.md) -Compileroption angegeben wird. Das-Makro wird auf 201703l festgelegt, wenn die Compileroption [/Std: c++ 17](../build/reference/std-specify-language-standard-version.md) angegeben wird. Der Wert wird auf einen höheren, nicht angegebenen Wert festgelegt, wenn die Option [/Std: c + + Latest](../build/reference/std-specify-language-standard-version.md) angegeben wird. Andernfalls ist das Makro nicht definiert. Die  **&#95;Compileroptionen&#95;MSVC lang** und [/Std (Standard Version angeben)](../build/reference/std-specify-language-standard-version.md) sind ab Visual Studio 2015 Update 3 verfügbar.
 
 - **&#95;&#95;MSVC&#95;-&#95;Lauf Zeit Prüfungen** werden als 1 definiert, wenn eine der [/RTC](../build/reference/rtc-run-time-error-checks.md) -Compileroptionen festgelegt ist. Andernfalls nicht definiert.
+
+- **&#95;MSVC&#95;-traditionell** als "0" definiert, wenn die Compileroption "präprozessorübereinstimmungs Modus [/experimental: Präprozessor](../build/reference/rtc-run-time-error-checks.md) " festgelegt ist Wird standardmäßig als 1 definiert, oder wenn die [/experimental: Präprozessor-Compiler-](../build/reference/rtc-run-time-error-checks.md) Option festgelegt ist, um anzugeben, dass der herkömmliche Präprozessor bereits verwendet wird. Die Compileroption "  **&#95;herkömmliches MSVC&#95;** -Makro" und " [/experimental: präprocessor" (präprozessorkonformitätsmodus aktivieren)](../build/reference/experimental-preprocessor.md) ist ab Visual Studio 2017 Version 15,8 verfügbar.
+
+   ```cpp
+   #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
+   // Logic using the traditional preprocessor
+   #else
+   // Logic using cross-platform compatible preprocessor
+   #endif
+   ```
 
 - **&#95;MT** Definiert als 1, wenn [/MD oder/MDD](../build/reference/md-mt-ld-use-run-time-library.md) (Multithread-DLL) oder [/MT oder/MTD](../build/reference/md-mt-ld-use-run-time-library.md) (Multithread) angegeben wird. Andernfalls nicht definiert.
 
