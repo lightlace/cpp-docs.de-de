@@ -58,6 +58,8 @@
               href: build/project-property-inheritance.md
             - name: Ändern von Eigenschaften und Zielen ohne Änderungen an der Projektdatei
               href: build/modify-project-properties-without-changing-project-file.md
+        - name: Clang/LLVM in Visual Studio-Projekten (MSBuild)
+          href: build/clang-support-msbuild.md
         - name: Verweisen auf Bibliotheken und Komponenten zur Buildzeit
           href: build/adding-references-in-visual-cpp-projects.md
         - name: Organisieren von Projektausgabedateien
@@ -4100,9 +4102,9 @@
                   href: cpp/binary-operators.md
                 - name: Zuweisung
                   href: cpp/assignment.md
-                - name: Funktionsaufruf
+                - name: 'Funktionsaufruf '
                   href: cpp/function-call-cpp.md
-                - name: Indizierung
+                - name: 'Indizierung '
                   href: cpp/subscripting.md
                 - name: Memberzugriff
                   href: cpp/member-access.md
@@ -4729,10 +4731,10 @@
                       href: preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md
                     - name: '##import-Anweisung (C++)'
                       href: preprocessor/hash-import-directive-cpp.md
-                    - name: '##import-Attribute (C++)'
+                    - name: '#import-Attribute (C++)'
                       expanded: false
                       items:
-                        - name: '##import-Attribute (C++)'
+                        - name: '#import-Attribute (C++)'
                           href: preprocessor/hash-import-attributes-cpp.md
                         - name: auto_rename
                           href: preprocessor/auto-rename.md
@@ -4794,7 +4796,7 @@
                       href: preprocessor/null-directive.md
                     - name: '##undef-Anweisung (C/C++)'
                       href: preprocessor/hash-undef-directive-c-cpp.md
-                    - name: '#using-Anweisung (C++)'
+                    - name: '#using-Anweisung (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
                 - name: Präprozessoroperatoren
                   expanded: false
@@ -4829,10 +4831,10 @@
                   href: preprocessor/conventions.md
                 - name: Präprozessorgrammatik
                   href: preprocessor/preprocessor-grammar.md
-            - name: Pragma-Anweisungen und das __Pragma-Schlüsselwort
+            - name: Pragma-Anweisungen und das __pragma-Schlüsselwort
               expanded: false
               items:
-                - name: Pragma-Anweisungen und das __Pragma-Schlüsselwort
+                - name: Pragma-Anweisungen und das __pragma-Schlüsselwort
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
                 - name: alloc_text-Pragma
                   href: preprocessor/alloc-text.md
