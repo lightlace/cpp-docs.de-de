@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 18b17d0f40aaab6ba2a018a568950549eda23016
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b81e2a65d09bf5dadbc0860d692caee7a4bd386f
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503014"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739760"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog-Klasse
 
@@ -305,7 +305,7 @@ Nachdem Sie ein `CPageSetupDialog` -Objekt erstellt haben, `m_psd` können Sie v
 
 Wenn Sie den `m_psd` Datenmember direkt ändern, überschreiben Sie jedes Standardverhalten.
 
-Weitere Informationen zur [pagesetupdlg](/windows/win32/api/commdlg/ns-commdlg-psdw) -Struktur finden Sie in der Windows SDK.
+Weitere Informationen zur [pagesetupdlg](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw) -Struktur finden Sie in der Windows SDK.
 
 Weitere Informationen finden Sie im Beispiel für [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog).
 
@@ -393,7 +393,7 @@ Gibt die Ausrichtung des Papiers oder des Umschlags an und gibt an, ob der Druck
 - Umschlag 0x01f im Hochformat (Punktmatrix)
 
 *pPSD*<br/>
-Zeiger auf eine `PAGESETUPDLG`-Struktur. Weitere Informationen zu [pagesetupdlg](/windows/win32/api/commdlg/ns-commdlg-psdw)finden Sie in der Windows SDK.
+Zeiger auf eine `PAGESETUPDLG`-Struktur. Weitere Informationen zu [pagesetupdlg](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw)finden Sie in der Windows SDK.
 
 ### <a name="return-value"></a>Rückgabewert
 

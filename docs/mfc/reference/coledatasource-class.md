@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 5e6b49edfedc8e7311e9ecc21ca065ad99c15c62
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 062234b9bc3c538e8cd5fcade002a2892eea259f
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504127"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741621"
 ---
 # <a name="coledatasource-class"></a>COleDataSource-Klasse
 
@@ -117,7 +117,7 @@ void CacheData(
 Das Zwischenablage Format, in dem die Daten angeboten werden sollen. Dieser Parameter kann eines der vordefinierten Zwischenablage Formate oder der Wert sein, der von der systemeigenen Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) -Funktion zurückgegeben wird.
 
 *lpStgMedium*<br/>
-Verweist auf eine [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) -Struktur, die die Daten im angegebenen Format enthält.
+Verweist auf eine [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) -Struktur, die die Daten im angegebenen Format enthält.
 
 *lpFormatEtc*<br/>
 Verweist auf eine [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) -Struktur, die das Format beschreibt, in dem die Daten angeboten werden sollen. Geben Sie einen Wert für diesen Parameter an, wenn Sie zusätzliche Formatierungsinformationen angeben möchten, die über das in *cfFormat*angegebene Zwischenablage Format hinausgehen. Wenn er NULL ist, werden für die anderen Felder in der `FORMATETC` Struktur Standardwerte verwendet.
@@ -126,13 +126,13 @@ Verweist auf eine [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) -St
 
 Sie müssen die Daten bereitstellen, da diese Funktion Sie mithilfe von sofortigem Rendering bereitstellt. Die Daten werden bis zum benötigten Cache zwischengespeichert.
 
-Stellen Sie die Daten mithilfe einer [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) -Struktur bereit. Sie können auch die `CacheGlobalData` Member-Funktion verwenden, wenn die Menge der von Ihnen bereitgestellten Daten klein genug ist, um mithilfe eines HGLOBAL effizient übertragen zu werden.
+Stellen Sie die Daten mithilfe einer [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) -Struktur bereit. Sie können auch die `CacheGlobalData` Member-Funktion verwenden, wenn die Menge der von Ihnen bereitgestellten Daten klein genug ist, um mithilfe eines HGLOBAL effizient übertragen zu werden.
 
 Nachdem der Aufruf an `CacheData` den `ptd` -Member `lpFormatEtc` von und den Inhalt von *lpstgmedium* im Besitz des Datenobjekts, nicht des Aufrufers, ist.
 
 Um das verzögerte Rendering zu verwenden, müssen Sie die Member-Funktion von " [Delta Data](#delayrenderdata) " oder " [Delta Data](#delayrenderfiledata) " verwenden. Weitere Informationen zum verzögerten Rendering, das von MFC verarbeitet wird, finden [Sie im Artikeldaten Objekte und Datenquellen: Bearbeitung](../../mfc/data-objects-and-data-sources-manipulation.md).
 
-Weitere Informationen finden Sie in den Strukturen " [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) " und " [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) " in der Windows SDK.
+Weitere Informationen finden Sie in den Strukturen " [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) " und " [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) " in der Windows SDK.
 
 Weitere Informationen finden Sie unter [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) im Windows SDK.
 
@@ -366,7 +366,7 @@ virtual BOOL OnRenderData(
 Verweist auf die [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) -Struktur, die das Format angibt, in dem Informationen angefordert werden.
 
 *lpStgMedium*<br/>
-Verweist auf eine [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) -Struktur, in der die Daten zurückgegeben werden sollen.
+Verweist auf eine [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) -Struktur, in der die Daten zurückgegeben werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -380,7 +380,7 @@ Wenn *lpstgmedium*-> *TYMED* auf TYMED_NULL festgelegt `STGMEDIUM` ist, sollte d
 
 Hierbei handelt es sich um eine erweiterte über schreibbare. Überschreiben Sie diese Funktion, um die Daten im angeforderten Format und Medium bereitzustellen. Abhängig von den Daten können Sie stattdessen eine der anderen Versionen dieser Funktion überschreiben. Wenn Ihre Daten klein sind und in der Größe fester Größe `OnRenderGlobalData`liegen, überschreiben Sie. Wenn sich Ihre Daten in einer Datei befinden oder eine Variable Größe haben, über `OnRenderFileData`schreiben Sie.
 
-Weitere Informationen finden Sie in den Strukturen " [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) " und " [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) ", dem [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) -Enumerationstyp und " [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) " in der Windows SDK.
+Weitere Informationen finden Sie in den Strukturen " [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) " und " [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) ", dem [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) -Enumerationstyp und " [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) " in der Windows SDK.
 
 ##  <a name="onrenderfiledata"></a>COleDataSource:: onrenderfiledata
 
@@ -461,7 +461,7 @@ virtual BOOL OnSetData(
 Verweist auf die [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) -Struktur, die das Format angibt, in dem Daten ersetzt werden.
 
 *lpStgMedium*<br/>
-Verweist auf die [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) -Struktur, die die Daten enthält, die den aktuellen Inhalt `COleDataSource` des-Objekts ersetzen.
+Verweist auf die [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) -Struktur, die die Daten enthält, die den aktuellen Inhalt `COleDataSource` des-Objekts ersetzen.
 
 *bRelease*<br/>
 Gibt an, wer den Besitz des Speichermediums nach Abschluss des Funktions Aufrufes besitzt. Der Aufrufer entscheidet, wer für das Freigeben der im Auftrag des Speichermediums zugewiesenen Ressourcen zuständig ist. Der Aufrufer legt dies durch Festlegen von *brelease*fest. Wenn die *brelease* ungleich NULL ist, übernimmt die Datenquelle den Besitz und gibt das Medium frei, wenn es nicht mehr verwendet wird. Wenn *brelease* den Wert 0 hat, behält der Aufrufer den Besitz, und die Datenquelle kann das Speichermedium nur für die Dauer des Aufrufes verwenden.
@@ -476,7 +476,7 @@ Die Datenquelle übernimmt den Besitz der Daten erst, nachdem Sie erfolgreich ab
 
 Bei der Standardimplementierung wird keine Aktion ausgeführt. Überschreiben Sie diese Funktion, um die Daten im angegebenen Format zu ersetzen. Hierbei handelt es sich um eine erweiterte über schreibbare.
 
-Weitere Informationen finden Sie in den Funktionen " [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) " und " [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) " und " [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) " und " [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) " in der Windows SDK.
+Weitere Informationen finden Sie in den Funktionen " [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) " und " [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) " und " [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) " und " [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) " in der Windows SDK.
 
 ##  <a name="setclipboard"></a>COleDataSource:: setClipboard
 

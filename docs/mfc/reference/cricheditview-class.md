@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: c8eba16779b837b33912006a2ff3b7cdfa73f1e6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b32578cc3c9ad4f7a89b8ee76449259c0fa0b43b
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502628"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741512"
 ---
 # <a name="cricheditview-class"></a>CRichEditView-Klasse
 
@@ -763,7 +763,7 @@ Die gewünschte Liste der Zeichen Formatierungs Effekte, die gewechselt werden s
 
 Jeder Aufrufe dieser Funktion schaltet die angegebenen Formatierungs Effekte für die aktuelle Auswahl um.
 
-Weitere Informationen zu den Parametern *dwMask* und *dweffect* und ihren möglichen Werten finden Sie in den entsprechenden Datenmembern von [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) in der Windows SDK.
+Weitere Informationen zu den Parametern *dwMask* und *dweffect* und ihren möglichen Werten finden Sie in den entsprechenden Datenmembern von [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) in der Windows SDK.
 
 ### <a name="example"></a>Beispiel
 
@@ -997,7 +997,7 @@ Gibt den Zeichen Formatierungs Effekt an.
 
 Die Maske *dwMask* gibt an, welche Zeichen Formatierungs Attribute überprüft werden sollen. Die Flags *dweffect* listet die Zeichen Formatierungs Attribute auf, die festgelegt/gelöscht werden sollen.
 
-Weitere Informationen zu den Parametern *dwMask* und *dweffect* und ihren möglichen Werten finden Sie in den entsprechenden Datenmembern von [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) in der Windows SDK.
+Weitere Informationen zu den Parametern *dwMask* und *dweffect* und ihren möglichen Werten finden Sie in den entsprechenden Datenmembern von [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) in der Windows SDK.
 
 ### <a name="example"></a>Beispiel
 

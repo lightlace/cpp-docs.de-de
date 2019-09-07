@@ -2,16 +2,16 @@
 title: Eigenschaften (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-ms.openlocfilehash: 8303952beefbbac13db14e148c6441c29a46b3d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdff2bf5abd3177eda962b7cc55ace1078522f32
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375222"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741097"
 ---
 # <a name="properties-ccx"></a>Eigenschaften (C++/CX)
 
-Windows-Runtime-Typen, die öffentliche Daten als Eigenschaften verfügbar machen. Clientcode greift auf die Eigenschaft wie auf einen öffentlichen Datenmember zu. Intern wird die Eigenschaft als Block implementiert, der eine "get"-Accessor-Methode, eine "set"-Accessor-Methode oder beide enthält. Durch Verwendung der Accessormethoden können Sie zusätzliche Aktionen ausführen, bevor oder nachdem Sie den Wert abrufen. Beispielsweise können Sie ein Ereignis auslösen oder Validierungsüberprüfungen durchführen.
+Windows-Runtime Typen machen öffentliche Daten als Eigenschaften verfügbar. Clientcode greift auf die Eigenschaft wie auf einen öffentlichen Datenmember zu. Intern wird die Eigenschaft als Block implementiert, der eine "get"-Accessor-Methode, eine "set"-Accessor-Methode oder beide enthält. Durch Verwendung der Accessormethoden können Sie zusätzliche Aktionen ausführen, bevor oder nachdem Sie den Wert abrufen. Beispielsweise können Sie ein Ereignis auslösen oder Validierungsüberprüfungen durchführen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -38,5 +38,5 @@ Beachten Sie, dass eine Eigenschaft nicht in einer Memberliste initialisiert wer
 ## <a name="see-also"></a>Siehe auch
 
 [Typsystem](../cppcx/type-system-c-cx.md)<br/>
-[Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++-/CX-Programmiersprachenreferenz](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)

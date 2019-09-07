@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 56cff04d64f2f0a64fc216fbd418954b4c11b0f2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514739"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740650"
 ---
 # <a name="how-to-manage-resources-c"></a>Vorgehensweise: Verwalten von RessourcenC++()
 
@@ -76,7 +76,7 @@ Sie können die Ressourcen Dateien im Projekt (**Ressourcenansicht**) und in den
 
 Beim Kopieren in eine Ressource können Sie ihre Sprachen- und/oder Bedingungseigenschaft ändern.
 
-- Die Sprache einer Ressource gibt die Sprache an, die von [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew) verwendet wird, um die Ressource zu identifizieren, für die Sie sich interessieren. Ressourcen können Unterschiede für jede Sprache aufweisen, die sich nicht auf Text bezieht, z. b. Beschleuniger, die möglicherweise nur auf einer japanischen Tastatur oder einer Bitmap funktionieren, die nur für lokalisierte chinesische Builds geeignet wäre.
+- Die Sprache einer Ressource gibt die Sprache an, die von [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea) verwendet wird, um die Ressource zu identifizieren, für die Sie sich interessieren. Ressourcen können Unterschiede für jede Sprache aufweisen, die sich nicht auf Text bezieht, z. b. Beschleuniger, die möglicherweise nur auf einer japanischen Tastatur oder einer Bitmap funktionieren, die nur für lokalisierte chinesische Builds geeignet wäre.
 
 - Die Bedingung einer Ressource stellt ein definiertes Symbol dar, das eine Bedingung angibt, unter der diese bestimmte Ressourcenkopie zu verwenden ist.
 

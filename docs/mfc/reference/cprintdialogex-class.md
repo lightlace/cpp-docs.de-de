@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 2334fb0a420e14aa4fa8b8b570671fb9a611de32
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 76c3968b20a66e9653fd769339e23ede2a756bbd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502885"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741328"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx-Klasse
 
@@ -94,7 +94,7 @@ Sie können sich auf das Framework verlassen, um viele Aspekte des Druckprozesse
 
 Wenn Sie möchten, dass Ihre Anwendung den Druck ohne die Einbindung des Frameworks behandelt, können `CPrintDialogEx` Sie die-Klasse mit dem bereitgestellten Konstruktor "unverändert" verwenden, oder Sie können eine eigene `CPrintDialogEx` Dialogfeld Klasse von ableiten und einen Konstruktor für Ihre Bedürfnisse schreiben. In beiden Fällen verhalten sich diese Dialogfelder wie Standard-MFC-Dialogfelder, da Sie von der `CCommonDialog`-Klasse abgeleitet sind.
 
-Um ein `CPrintDialogEx` -Objekt zu verwenden, erstellen Sie zunächst das `CPrintDialogEx` -Objekt mit dem-Konstruktor. Nachdem das Dialogfeld erstellt wurde, können Sie alle Werte in der [m_pdex](#m_pdex) -Struktur festlegen oder ändern, um die Werte der Steuerelemente des Dialog Felds zu initialisieren. Die `m_pdex` Struktur ist vom Typ " [printdlgex](/windows/win32/api/commdlg/ns-commdlg-pdexw)". Weitere Informationen zu dieser Struktur finden Sie in der Windows SDK.
+Um ein `CPrintDialogEx` -Objekt zu verwenden, erstellen Sie zunächst das `CPrintDialogEx` -Objekt mit dem-Konstruktor. Nachdem das Dialogfeld erstellt wurde, können Sie alle Werte in der [m_pdex](#m_pdex) -Struktur festlegen oder ändern, um die Werte der Steuerelemente des Dialog Felds zu initialisieren. Die `m_pdex` Struktur ist vom Typ " [printdlgex](/windows/win32/api/commdlg/ns-commdlg-printdlgexw)". Weitere Informationen zu dieser Struktur finden Sie in der Windows SDK.
 
 `m_pdex` Wenn Sie für die `hDevMode` Member und keine eigenen Handles in bereitstellen `hDevNames` , müssen Sie die Windows-Funktion `GlobalFree` für diese Handles aufzurufen, wenn Sie das Dialogfeld verwenden.
 
@@ -143,7 +143,7 @@ CPrintDialogEx(
 ### <a name="parameters"></a>Parameter
 
 *dwFlags*<br/>
-Ein oder mehrere Flags, die Sie verwenden können, um die Einstellungen des Dialog Felds mithilfe des bitweisen OR-Operators zu ändern. Beispielsweise legt das Flag PD_ALLPAGES den Standarddruck Bereich auf alle Seiten des Dokuments fest. Weitere Informationen zu diesen Flags finden Sie in der [printdlgex](/windows/win32/api/commdlg/ns-commdlg-pdexw) -Struktur im Windows SDK.
+Ein oder mehrere Flags, die Sie verwenden können, um die Einstellungen des Dialog Felds mithilfe des bitweisen OR-Operators zu ändern. Beispielsweise legt das Flag PD_ALLPAGES den Standarddruck Bereich auf alle Seiten des Dokuments fest. Weitere Informationen zu diesen Flags finden Sie in der [printdlgex](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) -Struktur im Windows SDK.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das übergeordnete oder Besitzer Fenster des Dialog Felds.
@@ -304,7 +304,7 @@ PRINTDLGEX m_pdex;
 
 ### <a name="remarks"></a>Hinweise
 
-Nachdem Sie ein `CPrintDialogEx` -Objekt erstellt haben, `m_pdex` können Sie verwenden, um verschiedene Aspekte des Dialog Felds festzulegen, bevor Sie die [DoModal](#domodal) -Member-Funktion aufrufen. Weitere Informationen zur `m_pdex` -Struktur finden Sie unter [printdlgex](/windows/win32/api/commdlg/ns-commdlg-pdexw) in der Windows SDK.
+Nachdem Sie ein `CPrintDialogEx` -Objekt erstellt haben, `m_pdex` können Sie verwenden, um verschiedene Aspekte des Dialog Felds festzulegen, bevor Sie die [DoModal](#domodal) -Member-Funktion aufrufen. Weitere Informationen zur `m_pdex` -Struktur finden Sie unter [printdlgex](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) in der Windows SDK.
 
 Wenn Sie den `m_pdex` Datenmember direkt ändern, überschreiben Sie jedes Standardverhalten.
 
@@ -358,7 +358,7 @@ TRUE, wenn nur ein Seitenbereich im Dokument gedruckt werden soll. andernfalls f
 
 ### <a name="remarks"></a>Hinweise
 
-Die angegebenen Seitenbereiche können von [m_pdex](#m_pdex) bestimmt werden (siehe `nPageRanges`, `nMaxPageRanges`und in `lpPageRanges` der [printdlgex](/windows/win32/api/commdlg/ns-commdlg-pdexw) -Struktur in der Windows SDK).
+Die angegebenen Seitenbereiche können von [m_pdex](#m_pdex) bestimmt werden (siehe `nPageRanges`, `nMaxPageRanges`und in `lpPageRanges` der [printdlgex](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) -Struktur in der Windows SDK).
 
 ##  <a name="printselection"></a>CPrintDialogEx::P rintselection
 

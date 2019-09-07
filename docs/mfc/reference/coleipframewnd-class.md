@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 483998529b83d9b28c6ab1b219c4f5288dbd8ec7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8eab2ddfc778900b53d77105f1d8215a2c095e9f
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503835"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741561"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd-Klasse
 
@@ -76,7 +76,7 @@ COleIPFrameWnd();
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie unter [oleinplaceframeinfo](/windows/win32/api/oleidl/ns-oleidl-oifi) in der Windows SDK.
+Weitere Informationen finden Sie unter [oleinplaceframeinfo](/windows/win32/api/oleidl/ns-oleidl-oleinplaceframeinfo) in der Windows SDK.
 
 ##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd:: onkreatecontrolbars
 
@@ -128,7 +128,7 @@ Ein Zeiger auf `RECT` eine-Struktur `CRect` oder ein-Objekt, das die aktuellen C
 
 ### <a name="remarks"></a>Hinweise
 
-Das Layout der Steuer leisten im Containerfenster unterscheidet sich von dem, das von einem nicht-OLE-Rahmen Fenster ausgeführt wird. Das nicht-OLE-Rahmen Fenster berechnet die Positionen von Steuer leisten und anderen Objekten aus einer angegebenen Rahmen Fenstergröße, wie in einem [CFrameWnd::](../../mfc/reference/cframewnd-class.md#recalclayout)neues. Der Client Bereich bleibt, nachdem der Speicherplatz für Steuer leisten und andere Objekte subtrahiert wurden. Ein `COleIPFrameWnd` Fenster positioniert auf der anderen Seite Symbolleisten in Übereinstimmung mit einem bestimmten Client Bereich. Anders ausgedrückt: `CFrameWnd::RecalcLayout` funktioniert "von außen nach außen", während `COleIPFrameWnd::RepositionFrame` "von innen nach außen" funktioniert.
+Das Layout der Steuer leisten im Containerfenster unterscheidet sich von dem, das von einem nicht-OLE-Rahmen Fenster ausgeführt wird. Das nicht-OLE-Rahmen Fenster berechnet die Positionen von Steuer leisten und anderen Objekten aus einer angegebenen Rahmen Fenstergröße, wie in einem [CFrameWnd:: Neues.](../../mfc/reference/cframewnd-class.md#recalclayout) Der Client Bereich bleibt, nachdem der Speicherplatz für Steuer leisten und andere Objekte subtrahiert wurden. Ein `COleIPFrameWnd` Fenster positioniert auf der anderen Seite Symbolleisten in Übereinstimmung mit einem bestimmten Client Bereich. Anders ausgedrückt: `CFrameWnd::RecalcLayout` funktioniert "von außen nach außen", während `COleIPFrameWnd::RepositionFrame` "von innen nach außen" funktioniert.
 
 ## <a name="see-also"></a>Siehe auch
 

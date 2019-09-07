@@ -2,16 +2,16 @@
 title: Standardnamespace
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: 60a47c9549ee40b419eb5f4aa84720f8dcd1c366
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b67aedc791ed41e93268d9e9f44492781940d55e
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389462"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740516"
 ---
 # <a name="default-namespace"></a>Standardnamespace
 
-Die `default` Namespace umfasst die integrierten Typen, die durch C++ unterstützt c++ / CX.
+Der `default` Namespace erstellt die integrierten Typen, die von C++/CX. unterstützt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,8 +38,8 @@ Alle integrierte Typen erben die folgenden Member.
 |`float32`|Eine 32-Bit-IEEE 754-Gleitkommazahl.|
 |`float64`|Eine 64-Bit-IEEE 754-Gleitkommazahl.|
 |`int16`|Eine 16-Bit-Ganzzahl mit Vorzeichen.|
-|`int32`|Eine 32-Bit-Ganzzahl mit Vorzeichen.|
-|`int64`|Eine 64-Bit-Ganzzahl mit Vorzeichen.|
+|`int32`|Ein 32-Bit-Integer mit Vorzeichen|
+|`int64`|Ein 64-Bit-Integer mit Vorzeichen|
 |`int8`|Eine numerischer 8-Bit-Wert mit Vorzeichen.|
 |`uint16`|Eine 16-Bit-Ganzzahl ohne Vorzeichen.|
 |`uint32`|Eine 32-Bit-Ganzzahl ohne Vorzeichen.|
@@ -52,4 +52,4 @@ Alle integrierte Typen erben die folgenden Member.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+[C++-/CX-Programmiersprachenreferenz](../cppcx/visual-c-language-reference-c-cx.md)

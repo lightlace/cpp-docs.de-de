@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 34dcc618f603302c5598e42588ffad78d61ee222
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 97266ac9e4f1885149ce521f554ad2f22daee6e0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502712"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741500"
 ---
 # <a name="crgn-class"></a>Crgn-Klasse
 
@@ -78,7 +78,7 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Legt ein `CRgn` -Objekt fest `CRgn` , damit es gleich der Vereinigung zweier angegebener-Objekte ist.|
 |[CRgn::CopyRgn](#copyrgn)|Legt ein `CRgn` -Objekt fest, sodass es eine Kopie eines angegebenen `CRgn` -Objekts ist.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Initialisiert ein `CRgn` -Objekt mit einem elliptischen Bereich.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialisiert ein `CRgn` -Objekt mit einem Ellipsen Bereich, der durch eine [Rect](/windows/win32/api/windef/ns-windef-tagrect) -Struktur definiert ist.|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initialisiert ein `CRgn` -Objekt mit einem Ellipsen Bereich, der durch eine [Rect](/windows/win32/api/windef/ns-windef-rect) -Struktur definiert ist.|
 |[CRgn::CreateFromData](#createfromdata)|Erstellt einen Bereich aus dem angegebenen Bereich und den Transformations Daten.|
 |[CRgn::CreateFromPath](#createfrompath)|Erstellt einen Bereich aus dem Pfad, der im angegebenen Gerätekontext ausgewählt wird.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Initialisiert ein `CRgn` -Objekt mit einem polygonalen Bereich. Das System schließt das Polygon ggf. automatisch, indem eine Linie vom letzten Scheitelpunkt zum ersten gezeichnet wird.|

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
 ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623961"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739880"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -68,17 +68,17 @@ Eine komplexe Zahl.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Absolute Wert des *z*.
+Der absolute Wert von *z*.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cabs** , Take **_Fcomplex** oder **_Lcomplex** Werte und Rückgabe **"float"** oder **lange** **doppelte** Werte. In einem C-Programm **Cabs** immer eine **_Dcomplex** Wert und gibt eine **doppelte** Wert.
+Da C++ das überladen zulässt, können Sie über Ladungen von **Cabs** aufzurufen, die **_Fcomplex** -oder **_Lcomplex** -Werte annehmen und **float** -oder **Long** **Double** -Werte zurückgeben. In einem C-Programm nimmt **Cabs** immer einen **_Dcomplex** -Wert und gibt einen **Double** -Wert zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**CAB-Dateien**, **Cabsf**, **Cabsl**|\<complex.h>|\<ccomplex>|
+|**Cabs**, **cabsf**, **cabsl**|\<complex.h>|\<ccomplex>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

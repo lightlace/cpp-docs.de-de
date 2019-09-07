@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
 ms.openlocfilehash: f1054172a7b5afde134ce9fa735a7eeda3bddafb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445668"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739849"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 
@@ -68,17 +68,17 @@ Eine komplexe Zahl.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Projektion *z* auf die Riemannsche zahlenkugel.
+Die Projektion von *z* in der Reimann-Kugel.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Cproj** verwenden und zurückgeben **_Fcomplex** und **_Lcomplex** Werte. In einem C-Programm **Cproj** immer Double und gibt eine **_Dcomplex** Wert.
+Da C++ das überladen zulässt, können Sie über Ladungen von **cproj** aufzurufen, die **_Fcomplex** -und **_Lcomplex** -Werte verwenden und zurückgeben. In einem C-Programm nimmt **cproj** immer einen **_Dcomplex** -Wert an und gibt diesen zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 |-Routine zurückgegebener Wert|C-Header|C++-Header|
 |-------------|--------------|------------------|
-|**Cproj**, **Cprojf**, **Cprojl**|\<complex.h>|\<ccomplex>|
+|**cproj**, **cprojf**, **cprojl**|\<complex.h>|\<ccomplex>|
 
 Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 

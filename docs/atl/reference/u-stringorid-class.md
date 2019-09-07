@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-ms.openlocfilehash: 57363dbe2a1e7166b8da401900c3a7f913e63a9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c57d983e9680ce6d2cab375e427b80f4d3b6c2d6
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495114"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739582"
 ---
 # <a name="_u_stringorid-class"></a>_U_STRINGorID-Klasse
 
@@ -45,7 +45,7 @@ class _U_STRINGorID
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Klasse ist für die Implementierung von Wrappern für die Windows-Ressourcenverwaltungs-API konzipiert, wie z. b. die Funktionen [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew), [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)und [loadmenu](/windows/win32/api/winuser/nf-winuser-loadmenuw) , die ein LPCTSTR-Argument akzeptieren, das entweder den Namen einer Ressource oder die zugehörige ID aufweisen kann.
+Diese Klasse ist für die Implementierung von Wrappern für die Windows-Ressourcenverwaltungs-API konzipiert, wie z. b. die Funktionen [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea), [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)und [loadmenu](/windows/win32/api/winuser/nf-winuser-loadmenuw) , die ein LPCTSTR-Argument akzeptieren, das entweder den Namen einer Ressource oder die zugehörige ID aufweisen kann.
 
 Die-Klasse definiert zwei Konstruktorüberladungen: eine akzeptiert ein LPCTSTR-Argument, und die andere akzeptiert ein uint-Argument. Das uint-Argument wird in einen Ressourcentyp konvertiert, der mit den Windows-Ressourcen Verwaltungsfunktionen kompatibel ist. dabei wird das makeintresource-Makro verwendet, und das Ergebnis wird im einzelnen Datenmember der Klasse [m_lpstr](#_u_stringorid__m_lpstr)gespeichert. Das Argument für den LPCTSTR-Konstruktor wird ohne Konvertierung direkt gespeichert.
 

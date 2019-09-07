@@ -7,19 +7,19 @@ helpviewer_keywords:
 - C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
 ms.openlocfilehash: ceaa5cd647dfb527713613b9ce3b5cd81a780fd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657729"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741392"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>Compilerwarnung (Stufe 4) C4673
 
-Auslösen von "Bezeichner" die folgenden Typen werden nicht an die Catch-Standort betrachtet werden
+das Auslösen von "Identifier" der folgenden Typen wird auf der catch-Site nicht berücksichtigt.
 
-Ein Throw-Objekt kann nicht verarbeitet werden, der **catch** Block. Jeder Typ, der nicht behandelt werden kann, wird in der Fehlerausgabe, die unmittelbar nach der Zeile, die mit dieser Warnung aufgeführt. Jede nicht behandelte Typ verfügt über eine eigene Warnung. Lesen Sie die Warnung für den jeweiligen Informationen.
+Ein Throw-Objekt kann nicht im **catch** -Block behandelt werden. Jeder Typ, der nicht behandelt werden kann, wird in der Fehlerausgabe direkt nach der Zeile aufgeführt, die diese Warnung enthält. Jeder unbehandelte Typ weist eine eigene Warnung auf. Weitere Informationen finden Sie in der Warnung für jeden bestimmten Typ.
 
-Im folgende Beispiel wird die C4673 generiert:
+Im folgenden Beispiel wird C4673 generiert:
 
 ```
 // C4673.cpp

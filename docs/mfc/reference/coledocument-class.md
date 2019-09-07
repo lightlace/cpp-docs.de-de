@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 666ca54f55c5bb0dd4070a4984500dc19dc9d372
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b92c796fdaa972966dcbfa85b1e34f267b6c629c
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504039"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741607"
 ---
 # <a name="coledocument-class"></a>COleDocument-Klasse
 
@@ -177,9 +177,9 @@ Ungleich 0 (null), wenn die Funktion erfolgreich war. andernfalls 0.
 
 Diese Funktion aktualisiert das druckzielgerät für alle Elemente, aktualisiert jedoch nicht den Präsentations Cache für diese Elemente. Um den Präsentations Cache für ein Element zu aktualisieren, müssen Sie [COleClientItem:: UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink)aufrufen.
 
-Die Argumente für diese Funktion enthalten Informationen, die von OLE verwendet werden, um das Zielgerät zu identifizieren. Die [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) -Struktur enthält Informationen, die Windows verwendet, um das Dialogfeld für den allgemeinen Druck zu initialisieren. Nachdem der Benutzer das Dialogfeld geschlossen hat, gibt Windows Informationen zur Auswahl des Benutzers in dieser Struktur zurück. Der `m_pd` Member eines [CPrintDialog](../../mfc/reference/cprintdialog-class.md) -Objekts ist eine `PRINTDLG` -Struktur.
+Die Argumente für diese Funktion enthalten Informationen, die von OLE verwendet werden, um das Zielgerät zu identifizieren. Die [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) -Struktur enthält Informationen, die Windows verwendet, um das Dialogfeld für den allgemeinen Druck zu initialisieren. Nachdem der Benutzer das Dialogfeld geschlossen hat, gibt Windows Informationen zur Auswahl des Benutzers in dieser Struktur zurück. Der `m_pd` Member eines [CPrintDialog](../../mfc/reference/cprintdialog-class.md) -Objekts ist eine `PRINTDLG` -Struktur.
 
-Weitere Informationen finden Sie in der [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) -Struktur in der Windows SDK.
+Weitere Informationen finden Sie in der [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) -Struktur in der Windows SDK.
 
 Weitere Informationen finden Sie in der " [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) "-Struktur in der Windows SDK.
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: b538acd564402459a05cc96303b63a35a99ba243
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0d0c37d055d9b337f7b709b4ee3d299daae7658
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506468"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741557"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog-Klasse
 
@@ -146,7 +146,7 @@ CFontDialog(
 Ein Zeiger auf eine [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) -Datenstruktur, mit der Sie einige der Schriftart Eigenschaften festlegen können.
 
 *charFormat*<br/>
-Ein Zeiger auf eine [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) -Datenstruktur, mit der Sie einige der Schriftart Merkmale in einem Rich-Edit-Steuerelement festlegen können.
+Ein Zeiger auf eine [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) -Datenstruktur, mit der Sie einige der Schriftart Merkmale in einem Rich-Edit-Steuerelement festlegen können.
 
 *dwFlags*<br/>
 Bestimmt eine oder mehrere Schriftart-wählen-Flags. Ein oder mehrere Vorgabewerte können mit dem bitweisen OR-Operator kombiniert werden. Wenn Sie den `m_cf.Flag`s-Strukturmember ändern, stellen Sie sicher, dass Sie einen bitweisen OR-Operator bei Ihren Änderungen verwenden, um das Standardverhalten unverändert zu lassen. Ausführliche Informationen zu den einzelnen Flags finden Sie in der Beschreibung der [Auswahl Schriftart](/windows/win32/api/commdlg/ns-commdlg-choosefontw) in der Windows SDK.
@@ -203,7 +203,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ### <a name="parameters"></a>Parameter
 
 *cf*<br/>
-Eine [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) -Struktur, die Informationen über die Zeichen Formatierung der ausgewählten Schriftart enthält.
+Eine [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) -Struktur, die Informationen über die Zeichen Formatierung der ausgewählten Schriftart enthält.
 
 ##  <a name="getcolor"></a>CFontDialog:: GetColor
 

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e369cfcbf94a1e5abc59d6f66aa71599efb11765
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: dcae304e8571ecb5743002638ea23f13c3e21517
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503751"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741343"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem-Klasse
 
@@ -346,7 +346,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ### <a name="parameters"></a>Parameter
 
 *lpStgMedium*<br/>
-Ein Zeiger auf die [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) -Struktur, die die CF_EMBEDSOURCE-Daten für das OLE-Element empfängt.
+Ein Zeiger auf die [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) -Struktur, die die CF_EMBEDSOURCE-Daten für das OLE-Element empfängt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -354,7 +354,7 @@ Dieses Format schließt die systemeigenen Daten des Elements ein. Sie müssen di
 
 Das Ergebnis kann dann mithilfe von [COleDataSource:: CacheData](../../mfc/reference/coledatasource-class.md#cachedata)zu einer Datenquelle hinzugefügt werden. Diese Funktion wird automatisch von [COleServerItem:: OnGetClipboardData](#ongetclipboarddata)aufgerufen.
 
-Weitere Informationen finden Sie unter [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) in der Windows SDK.
+Weitere Informationen finden Sie unter [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) in der Windows SDK.
 
 ##  <a name="getitemname"></a>COleServerItem:: GetItemName
 
@@ -383,7 +383,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ### <a name="parameters"></a>Parameter
 
 *lpStgMedium*<br/>
-Ein Zeiger auf die [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) -Struktur, die die CF_LINKSOURCE-Daten für das OLE-Element empfängt.
+Ein Zeiger auf die [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) -Struktur, die die CF_LINKSOURCE-Daten für das OLE-Element empfängt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -395,7 +395,7 @@ Dieses Format enthält die CLSID, die den Typ des OLE-Elements beschreibt, sowie
 
 Das Ergebnis kann dann mit [COleDataSource:: CacheData](../../mfc/reference/coledatasource-class.md#cachedata)zu einer Datenquelle hinzugefügt werden. Diese Funktion wird automatisch von [OnGetClipboardData](#ongetclipboarddata)aufgerufen.
 
-Weitere Informationen finden Sie unter [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) in der Windows SDK.
+Weitere Informationen finden Sie unter [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) in der Windows SDK.
 
 ##  <a name="getobjectdescriptordata"></a>COleServerItem:: getobjectdescriptor Data
 
@@ -417,13 +417,13 @@ Offset des Mausklicks von der linken oberen Ecke des OLE-Elements. Kann NULL sei
 Größe des OLE-Elements. Kann NULL sein.
 
 *lpStgMedium*<br/>
-Ein Zeiger auf die [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) -Struktur, die die CF_OBJECTDESCRIPTOR-Daten für das OLE-Element empfängt.
+Ein Zeiger auf die [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) -Struktur, die die CF_OBJECTDESCRIPTOR-Daten für das OLE-Element empfängt.
 
 ### <a name="remarks"></a>Hinweise
 
 Die Informationen werden in die `STGMEDIUM` Struktur kopiert, auf die von *lpstgmedium*verwiesen wird. Dieses Format enthält die Informationen, die für das Dialogfeld "spezielles einfügen" benötigt werden.
 
-Weitere Informationen finden Sie unter [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) in der Windows SDK.
+Weitere Informationen finden Sie unter [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) in der Windows SDK.
 
 ##  <a name="isconnected"></a>COleServerItem:: IsConnected
 
@@ -745,7 +745,7 @@ virtual BOOL OnRenderData(
 Verweist auf die [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) -Struktur, die das Format angibt, in dem Informationen angefordert werden.
 
 *lpStgMedium*<br/>
-Verweist auf eine [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) -Struktur, in der die Daten zurückgegeben werden sollen.
+Verweist auf eine [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) -Struktur, in der die Daten zurückgegeben werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -759,7 +759,7 @@ Wenn *lpstgmedium*-> *TYMED* auf TYMED_NULL festgelegt ist, sollte STGMEDIUM ent
 
 Hierbei handelt es sich um eine erweiterte über schreibbare. Überschreiben Sie diese Funktion, um die Daten im angeforderten Format und Medium bereitzustellen. Abhängig von den Daten können Sie stattdessen eine der anderen Versionen dieser Funktion überschreiben. Wenn Ihre Daten klein sind und in der Größe fester Größe `OnRenderGlobalData`liegen, überschreiben Sie. Wenn sich Ihre Daten in einer Datei befinden oder eine Variable Größe haben, über `OnRenderFileData`schreiben Sie.
 
-Weitere Informationen finden Sie unter " [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)", " [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium)", " [formatusw](/windows/win32/api/objidl/ns-objidl-formatetc)" und " [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) " in der Windows SDK.
+Weitere Informationen finden Sie unter " [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)", " [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)", " [formatusw](/windows/win32/api/objidl/ns-objidl-formatetc)" und " [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) " in der Windows SDK.
 
 ##  <a name="onrenderfiledata"></a>COleServerItem:: onrenderfiledata
 
@@ -863,7 +863,7 @@ virtual BOOL OnSetData(
 Ein Zeiger auf eine [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) -Struktur, die das Format der Daten angibt.
 
 *lpStgMedium*<br/>
-Zeiger auf eine [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) -Struktur, in der sich die Daten befinden.
+Zeiger auf eine [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) -Struktur, in der sich die Daten befinden.
 
 *bRelease*<br/>
 Gibt an, wer den Besitz des Speichermediums nach Abschluss des Funktions Aufrufes besitzt. Der Aufrufer entscheidet, wer für das Freigeben der im Auftrag des Speichermediums zugewiesenen Ressourcen zuständig ist. Der Aufrufer legt dies durch Festlegen von *brelease*fest. Wenn die *brelease* ungleich NULL ist, übernimmt das Server Element den Besitz und gibt das Medium frei, wenn es nicht mehr verwendet wird. Wenn *brelease* den Wert 0 hat, behält der Aufrufer den Besitz, und das Server Element kann das Speichermedium nur für die Dauer des Aufrufes verwenden.
@@ -878,7 +878,7 @@ Das Server Element übernimmt den Besitz der Daten erst, wenn es erfolgreich abg
 
 Bei der Standardimplementierung wird keine Aktion ausgeführt. Überschreiben Sie diese Funktion, um die Daten des OLE-Elements durch die angegebenen Daten zu ersetzen. Hierbei handelt es sich um eine erweiterte über schreibbare.
 
-Weitere Informationen finden Sie im Windows SDK unter [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)und [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) .
+Weitere Informationen finden Sie im Windows SDK unter [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)und [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) .
 
 ##  <a name="onsetextent"></a>COleServerItem:: onabtextent
 
