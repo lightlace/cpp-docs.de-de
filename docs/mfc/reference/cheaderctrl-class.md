@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 407ba2747ed4d6e56e56fe4ccb2ccb828240a732
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62915da703e1c938e65643ab389999b83c72d459
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506705"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741528"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl-Klasse
 
@@ -502,7 +502,7 @@ BOOL GetItem(
 Gibt den NULL basierten Index des abzurufenden Elements an.
 
 *pHeaderItem*<br/>
-Zeiger auf eine [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) -Struktur, die das neue Element empfängt. Diese Struktur wird mit den `InsertItem` -und-Member- `SetItem` Funktionen verwendet. Alle Flags, die `mask` im-Element festgelegt sind, stellen sicher, dass Werte in den entsprechenden Elementen bei der Rückgabe ordnungsgemäß ausgefüllt werden. Wenn das `mask` -Element auf 0 (null) festgelegt ist, sind die Werte in den anderen Strukturelementen bedeutungslos.
+Zeiger auf eine [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) -Struktur, die das neue Element empfängt. Diese Struktur wird mit den `InsertItem` -und-Member- `SetItem` Funktionen verwendet. Alle Flags, die `mask` im-Element festgelegt sind, stellen sicher, dass Werte in den entsprechenden Elementen bei der Rückgabe ordnungsgemäß ausgefüllt werden. Wenn das `mask` -Element auf 0 (null) festgelegt ist, sind die Werte in den anderen Strukturelementen bedeutungslos.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -542,7 +542,7 @@ BOOL GetItemDropDownRect(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*iItem*|in NULL basierter Index eines Header Elements, dessen Stil HDF_SPLITBUTTON ist. Weitere Informationen finden Sie unter dem `fmt` -Member der [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) -Struktur.|
+|*iItem*|in NULL basierter Index eines Header Elements, dessen Stil HDF_SPLITBUTTON ist. Weitere Informationen finden Sie unter dem `fmt` -Member der [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) -Struktur.|
 |*lpRect*|vorgenommen Ein Zeiger auf eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur, um die umschließenden Rechteck Informationen zu erhalten.|
 
 ### <a name="return-value"></a>Rückgabewert
@@ -669,7 +669,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*phdhti*|[in, out] Ein Zeiger auf eine [hdhittestinfo](/windows/win32/api/commctrl/ns-commctrl-_hd_hittestinfo) -Struktur, die den zu testenden Punkt angibt und die Ergebnisse des Tests empfängt.|
+|*phdhti*|[in, out] Ein Zeiger auf eine [hdhittestinfo](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) -Struktur, die den zu testenden Punkt angibt und die Ergebnisse des Tests empfängt.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -707,7 +707,7 @@ int InsertItem(
 Der nullbasierte Index des einzufügenden Elements. Wenn der Wert 0 (null) ist, wird das Element am Anfang des Header Steuer Elements eingefügt. Wenn der Wert größer als der maximale Wert ist, wird das Element am Ende des Header Steuer Elements eingefügt.
 
 *phdi*<br/>
-Zeiger auf eine [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) -Struktur, die Informationen über das einzufügende Element enthält.
+Zeiger auf eine [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) -Struktur, die Informationen über das einzufügende Element enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -728,7 +728,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="parameters"></a>Parameter
 
 *pHeaderLayout*<br/>
-Ein Zeiger auf eine [hdlayout](/windows/win32/api/commctrl/ns-commctrl-_hd_layout) -Struktur, die Informationen enthält, die zum Festlegen der Größe und Position eines Header Steuer Elements verwendet werden.
+Ein Zeiger auf eine [hdlayout](/windows/win32/api/commctrl/ns-commctrl-hdlayout) -Struktur, die Informationen enthält, die zum Festlegen der Größe und Position eines Header Steuer Elements verwendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -917,7 +917,7 @@ BOOL SetItem(
 Der null basierte Index des Elements, das bearbeitet werden soll.
 
 *pHeaderItem*<br/>
-Zeiger auf eine [HDITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) -Struktur, die Informationen über das neue Element enthält.
+Zeiger auf eine [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) -Struktur, die Informationen über das neue Element enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 

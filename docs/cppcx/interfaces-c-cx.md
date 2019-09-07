@@ -2,12 +2,12 @@
 title: Schnittstellen (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: 04aaf25817cade47e89f0a06c423b68538d947b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 263feb7b9c8a472a6077236596107bdeff26a5a4
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375781"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740190"
 ---
 # <a name="interfaces-ccx"></a>Schnittstellen (C++/CX)
 
@@ -25,7 +25,7 @@ Eine Schnittstelle verfügt über die folgenden Merkmale:
 
 - Felder und statische Member sind nicht zulässig.
 
-- Typen, die werden verwendet, als Eigenschaften, Methodenparameter oder Rückgabewerte können nur Windows-Runtime-Typen sein. Dies schließt die grundlegenden Typen und Enumerationstypen-Klasse.
+- Typen, die als Eigenschaften, Methoden Parameter oder Rückgabewerte verwendet werden, können nur Windows-Runtime Typen sein. Dies schließt die grundlegenden Typen und Enumerationstypen ein.
 
 ## <a name="declaration-and-usage"></a>Deklaration und Verwendung
 
@@ -63,9 +63,9 @@ Wenn eine Verweisklasse mehrere Schnittstellen implementiert und diese Schnittst
 
 ## <a name="generic-interfaces"></a>Generische Schnittstellen
 
-In C++ / CX werden die `generic` Schlüsselwort wird verwendet, um einen parametrisierten Windows-Runtime-Typ darstellen. Ein parametrisierter Typ wird in Metadaten ausgegeben und kann durch jeden Code genutzt werden, der in einer Programmiersprache geschrieben ist, die Typparameter unterstützt. Die Windows-Runtime definiert einige generischen Schnittstellen, z. B. [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector), unterstützt jedoch nicht die Erstellung von öffentlichen benutzerdefinierten generischen Schnittstellen in C++ / CX. Sie können jedoch private generische Schnittstellen erstellen.
+In C++/CX wird das `generic` -Schlüsselwort verwendet, um einen Windows-Runtime parametrisierten Typs darzustellen. Ein parametrisierter Typ wird in Metadaten ausgegeben und kann durch jeden Code genutzt werden, der in einer Programmiersprache geschrieben ist, die Typparameter unterstützt. Die Windows-Runtime definiert einige generische Schnittstellen – z. b. [Windows:: Foundation:: Collections::\<IVector T >](Windows::Foundation::Collections::IVector)– unterstützt jedoch nicht die Erstellung von öffentlichen benutzerdefinierten generischen C++Schnittstellen in/CX. Sie können jedoch private generische Schnittstellen erstellen.
 
-Hier ist, wie Windows-Runtime-Typen verwendet werden können, um eine generische Schnittstelle zu erstellen:
+So können Windows-Runtime Typen verwendet werden, um eine generische Schnittstelle zu erstellen:
 
 - Eine generische benutzerdefinierte `interface class` in einer Komponente kann nicht in ihre Windows-Metadatendatei ausgegeben werden. Sie kann daher keine öffentliche Zugreifbarkeit besitzen und nicht von Clientcode in anderen WINMD-Dateien implementiert werden. Sie kann durch nicht öffentliche Verweisklassen in der gleichen Komponente implementiert werden. Eine öffentliche Verweisklasse kann einen generischen Schnittstellentyp als privaten Member besitzen.
 
@@ -77,7 +77,7 @@ Hier ist, wie Windows-Runtime-Typen verwendet werden können, um eine generische
 
 - Eine generische Schnittstelle kann eine oder mehrere generischen Typparameter verwenden, denen `typename` oder `class`vorangestellt werden. Nichttypenparameter werden nicht unterstützt.
 
-- Ein Typparameter kann eine beliebige Windows-Runtime-Typ sein. Das bedeutet, dass der Typparameter ein Verweistyp, ein Werttyp, eine Schnittstellenklasse, ein Delegat, ein fundamentaler Typ oder eine öffentliche Enumeratorklasse sein kann.
+- Ein Typparameter kann ein beliebiger Windows-Runtime Typ sein. Das bedeutet, dass der Typparameter ein Verweistyp, ein Werttyp, eine Schnittstellenklasse, ein Delegat, ein fundamentaler Typ oder eine öffentliche Enumeratorklasse sein kann.
 
 - Eine *geschlossene generische Schnittstelle* ist eine Schnittstelle, die von einer generischen Schnittstelle erbt und konkrete Typargumente für alle Typparameter spezifiziert. Sie kann überall verwendet werden, wo eine nicht generische private Schnittstelle verwendet werden kann.
 
@@ -89,14 +89,14 @@ Hier ist, wie Windows-Runtime-Typen verwendet werden können, um eine generische
 
 - Eine geschlossene generische Schnittstelle verfügt über einen implizit generierten UUID. Benutzer können den UUID nicht angeben.
 
-- In der Schnittstelle wird angenommen, dass jeder Verweis auf die aktuelle Schnittstelle – in einem Methodenparameter, einem Rückgabewert oder einer Eigenschaft – auf die aktuelle Instanziierung verweist. Z. B. *IMyIntf* bedeutet, dass *IMyIntf\<T >*.
+- In der Schnittstelle wird angenommen, dass jeder Verweis auf die aktuelle Schnittstelle – in einem Methodenparameter, einem Rückgabewert oder einer Eigenschaft – auf die aktuelle Instanziierung verweist. *Imyintf* bedeutet z. b. *imyintf\<T >* .
 
 - Wenn der Typ eines Methodenparameters ein Typparameter ist, verwendet die Deklaration dieses Parameters oder dieser Variablen den Namen des Typparameters ohne Zeiger, systemeigenen Verweis oder Handledeklaratoren. Das heißt, schreiben Sie nie "T^".
 
-- Auf Vorlagen basierende Verweisklassen müssen privat sein. Sie können generische Schnittstellen implementieren, und Sie können Vorlagenparameter übergeben *T* an das generische Argument *T*. Jede Instanziierung einer vorlagenbasierten Verweisklasse ist selbst eine Verweisklasse.
+- Auf Vorlagen basierende Verweisklassen müssen privat sein. Sie können generische Schnittstellen implementieren und den Vorlagen Parameter *t* an das generische Argument *t*übergeben. Jede Instanziierung einer vorlagenbasierten Verweisklasse ist selbst eine Verweisklasse.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Typsystem](../cppcx/type-system-c-cx.md)<br/>
-[Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++-/CX-Programmiersprachenreferenz](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)

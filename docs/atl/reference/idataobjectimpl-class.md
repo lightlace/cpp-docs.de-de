@@ -20,12 +20,12 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-ms.openlocfilehash: 8e3369edd0731ede0892a405ef3de4e7b4cfdef1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 80b5dfacd5f0c8b0deb8455a59d3f71b73a35ba0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495945"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739558"
 ---
 # <a name="idataobjectimpl-class"></a>Idataobjectimpl-Klasse
 
@@ -65,7 +65,7 @@ Die von `IDataObjectImpl`abgeleitete Klasse.
 
 ## <a name="remarks"></a>Hinweise
 
-Die [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) -Schnittstelle stellt Methoden zur Unterstützung von Uniform Data Transfer bereit. `IDataObject`verwendet die Standardformat Strukturen [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) und [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) , um Daten abzurufen und zu speichern.
+Die [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) -Schnittstelle stellt Methoden zur Unterstützung von Uniform Data Transfer bereit. `IDataObject`verwendet die Standardformat Strukturen [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) und [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , um Daten abzurufen und zu speichern.
 
 `IDataObject`verwaltet auch Verbindungen, um senken zum Verarbeiten von Daten Änderungs Benachrichtigungen zu empfehlen. Damit der Client Daten Änderungs Benachrichtigungen vom Datenobjekt empfangen kann, muss der Client die [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) -Schnittstelle für ein Objekt implementieren, das als "Empfehlung-Senke" bezeichnet wird. Wenn der Client dann aufruft `IDataObject::DAdvise`, wird eine Verbindung zwischen dem Datenobjekt und der beratungssenke hergestellt.
 

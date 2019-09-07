@@ -7,19 +7,19 @@ helpviewer_keywords:
 - C2234
 ms.assetid: cfa42458-c803-4717-a017-9eca1c0cbfb0
 ms.openlocfilehash: 16cc09f43f8705452c207e5218f4cc274557e825
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611470"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741135"
 ---
 # <a name="compiler-error-c2234"></a>Compilerfehler C2234
 
-"Name": Arrays aus verweisen sind unzulässig
+' Name ': Arrays von verweisen sind unzulässig.
 
-Da Zeiger, Verweise nicht zulässig sind, sind Arrays aus verweisen nicht möglich.
+Da Zeiger auf Verweise nicht zulässig sind, sind Arrays von verweisen nicht möglich.
 
-Im folgende Beispiel wird die C2234 generiert:
+Im folgenden Beispiel wird C2234 generiert:
 
 ```
 // C2234.cpp

@@ -3,12 +3,12 @@ title: Universelle Windows-Apps (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: landing-page
-ms.openlocfilehash: 6c2bf7e44e3f1cb2c73ccaaed4363e34cbd7f0c9
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 68952e93e4f91ac3653a9991802ad42854d9d25a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218363"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741030"
 ---
 # <a name="universal-windows-apps-c"></a>Universelle Windows-Apps (C++)
 
@@ -24,7 +24,7 @@ Mit dem Desktop Bridge-App Converter können Sie Ihre vorhandene Desktop Anwendu
 
 |||
 |-|-|
-|[Sprachreferenz zu Visual C++ (C++/CX)](visual-c-language-reference-c-cx.md)|Beschreibt den Satz von Erweiterungen, die C++ den Verbrauch Windows-Runtime APIs vereinfachen und die Fehlerbehandlung auf der Grundlage von Ausnahmen ermöglichen.|
+|[C++/CX-Sprachreferenz](visual-c-language-reference-c-cx.md)|Beschreibt den Satz von Erweiterungen, die C++ den Verbrauch Windows-Runtime APIs vereinfachen und die Fehlerbehandlung auf der Grundlage von Ausnahmen ermöglichen.|
 |[Erstellen von Apps und Bibliotheken (C++/CX)](building-apps-and-libraries-c-cx.md)|Beschreibt das Erstellen von DLLs und statischen Bibliotheken, auf die von einer C++/CX-App oder Komponente zugegriffen werden kann.|
 |[Tutorial: Erstellen einer UWP-app "Hello, World" C++in/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|In dieser exemplarischen Vorgehensweise werden die grundlegenden Konzepte der UWP C++-App-Entwicklung in/CX. vorgestellt. |
 |[Erstellen von Windows-Runtime Komponenten C++in/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Beschreibt, wie DLLs erstellt werden, die von anderen UWP-apps und-Komponenten verwendet werden können.|

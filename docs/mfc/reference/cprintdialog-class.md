@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: 1f4a4dbec9a1c79ac1e0cec925156ae7db4c293e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ccc673d665d6d5beb92f398b21e6ffd313a58fc9
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502901"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741358"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog-Klasse
 
@@ -104,7 +104,7 @@ Sie können sich auf das Framework verlassen, um viele Aspekte des Druckprozesse
 
 Wenn Sie möchten, dass Ihre Anwendung den Druck ohne die Einbindung des Frameworks behandelt, können `CPrintDialog` Sie die-Klasse mit dem bereitgestellten Konstruktor "unverändert" verwenden, oder Sie können eine eigene `CPrintDialog` Dialogfeld Klasse von ableiten und einen Konstruktor für Ihre Bedürfnisse schreiben. In beiden Fällen verhalten sich diese Dialogfelder wie Standard-MFC-Dialogfelder, da Sie von der `CCommonDialog`-Klasse abgeleitet sind.
 
-Um ein `CPrintDialog` -Objekt zu verwenden, erstellen Sie zunächst das `CPrintDialog` -Objekt mit dem-Konstruktor. Nachdem das Dialogfeld erstellt wurde, können Sie alle Werte in der [m_pd](#m_pd) -Struktur festlegen oder ändern, um die Werte der Steuerelemente des Dialog Felds zu initialisieren. Die `m_pd` Struktur ist vom Typ [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw). Weitere Informationen zu dieser Struktur finden Sie in der Windows SDK.
+Um ein `CPrintDialog` -Objekt zu verwenden, erstellen Sie zunächst das `CPrintDialog` -Objekt mit dem-Konstruktor. Nachdem das Dialogfeld erstellt wurde, können Sie alle Werte in der [m_pd](#m_pd) -Struktur festlegen oder ändern, um die Werte der Steuerelemente des Dialog Felds zu initialisieren. Die `m_pd` Struktur ist vom Typ [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga). Weitere Informationen zu dieser Struktur finden Sie in der Windows SDK.
 
 `m_pd` Wenn Sie für die `hDevMode` Member und keine eigenen Handles in bereitstellen `hDevNames` , müssen Sie die Windows-Funktion `GlobalFree` für diese Handles aufzurufen, wenn Sie das Dialogfeld verwenden. Wenn Sie die Druck Setup Implementierung von Frameworks verwenden `CWinApp::OnFilePrintSetup`, die von bereitgestellt wird, müssen Sie diese Handles nicht freigeben. Die Handles werden von verwaltet `CWinApp` und im `CWinApp`Dekonstruktor von freigegeben. Es ist nur erforderlich, diese Handles freizugeben, `CPrintDialog` Wenn Sie eigenständig verwenden.
 
@@ -159,7 +159,7 @@ CPrintDialog(
 Gibt an, ob das Dialogfeld Windows-Standarddruck oder Druck Setup angezeigt wird. Legen Sie diesen Parameter auf "true" fest, um das Standard Dialogfeld Windows-Druck Setup anzuzeigen. Legen Sie diese Einstellung auf false fest, um das Dialogfeld Windows-Druck anzuzeigen. Wenn *bprintsetuponly* auf false festgelegt ist, wird im Dialogfeld Drucken weiterhin das Optionsfeld Druck Setup angezeigt.
 
 *dwFlags*<br/>
-Ein oder mehrere Flags, die Sie verwenden können, um die Einstellungen des Dialog Felds mithilfe des bitweisen OR-Operators zu ändern. Beispielsweise legt das Flag PD_ALLPAGES den Standarddruck Bereich auf alle Seiten des Dokuments fest. Weitere Informationen zu diesen Flags finden Sie in der [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) -Struktur im Windows SDK.
+Ein oder mehrere Flags, die Sie verwenden können, um die Einstellungen des Dialog Felds mithilfe des bitweisen OR-Operators zu ändern. Beispielsweise legt das Flag PD_ALLPAGES den Standarddruck Bereich auf alle Seiten des Dokuments fest. Weitere Informationen zu diesen Flags finden Sie in der [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) -Struktur im Windows SDK.
 
 *pParentWnd*<br/>
 Ein Zeiger auf das übergeordnete oder Besitzer Fenster des Dialog Felds.
@@ -418,7 +418,7 @@ PRINTDLG& m_pd;
 
 ### <a name="remarks"></a>Hinweise
 
-Nachdem Sie ein `CPrintDialog` -Objekt erstellt haben, `m_pd` können Sie verwenden, um verschiedene Aspekte des Dialog Felds festzulegen, bevor Sie die [DoModal](#domodal) -Member-Funktion aufrufen. Weitere Informationen zur `m_pd` -Struktur finden Sie unter [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) in der Windows SDK.
+Nachdem Sie ein `CPrintDialog` -Objekt erstellt haben, `m_pd` können Sie verwenden, um verschiedene Aspekte des Dialog Felds festzulegen, bevor Sie die [DoModal](#domodal) -Member-Funktion aufrufen. Weitere Informationen zur `m_pd` -Struktur finden Sie unter [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) in der Windows SDK.
 
 Wenn Sie den `m_pd` Datenmember direkt ändern, überschreiben Sie jedes Standardverhalten.
 

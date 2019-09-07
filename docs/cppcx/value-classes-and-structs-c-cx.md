@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 5b9b50ba7200439e9ce648c53d52ce37226f61d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3340c5e387dc58ddcb5348cdc041a58840463995
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384984"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740932"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Wertklassen und Strukturen (C++/CX)
 
-Ein *wertstruktur* oder *Wertklasse* ist eine Windows-Runtime-kompatiblen POD ("plain old Data Structure). Sie verfügt über eine feste Größe und besteht nur aus Feldern. Anders als eine Verweisklasse hat sie keine Eigenschaften.
+Eine *Wert Struktur* oder *Wert Klasse* ist ein Windows-Runtime kompatibler Pod ("Plain Old Data Structure"). Sie verfügt über eine feste Größe und besteht nur aus Feldern. Anders als eine Verweisklasse hat sie keine Eigenschaften.
 
 Die folgenden Beispiele zeigen, wie Wertstrukturen deklariert und initialisiert werden.
 
@@ -52,7 +52,7 @@ Wenn eine Variable eines Werttyps einer anderen Variablen zugewiesen wird, wird 
 
 Eine *Wertklasse* entspricht `value struct` , außer dass den zugehörigen Felder explizit öffentliche Zugreifbarkeit zugeordnet werden muss. Sie wird durch das Schlüsselwort `value class` deklariert.
 
-Eine wertstruktur oder Wertklasse kann als Felder nur grundlegende numerische Typen, Enumerationsklassen, enthalten `Platform::String^`, oder [Platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md) wobei T ist eine Klasse der numerischen Typ oder eine Enumerationsklasse oder eine Wertklasse oder eine Struktur. Ein `IBox<T>^` -Feld kann den Wert `nullptr`haben. Auf diese Weise implementiert C++ das Konzept der auf *NULL festlegbaren Werttypen*.
+Eine Wert Struktur oder Wert Klasse kann als Felder nur grundlegende numerische Typen, `Platform::String^`Enumerationsklassen, oder [Platform:: iBox \<T > ^](../cppcx/platform-ibox-interface.md) enthalten, wobei T ein numerischer Typ oder eine Enumerationsklasse oder eine Wert Klasse oder eine Struktur ist. Ein `IBox<T>^` -Feld kann den Wert `nullptr`haben. Auf diese Weise implementiert C++ das Konzept der auf *NULL festlegbaren Werttypen*.
 
 Eine Wertklasse oder Wertstruktur, die einen `Platform::String^` - oder `IBox<T>^` -Typ als Member enthält, das nicht `memcpy`-fähig ist.
 
@@ -90,7 +90,7 @@ Sie können auch ein Zeigersymbol (*) verwenden, um einen Werttyp als Verweis zu
 
 ## <a name="nullable-value-types"></a>Auf NULL festlegbare Werttypen
 
-Wie bereits erwähnt, eine Wertklasse oder wertstruktur haben ein Feld vom Typ [Platform:: ibox\<T > ^](../cppcx/platform-ibox-interface.md)– z. B. `IBox<int>^`. Ein solches Feld kann jeden beliebigen numerischen Wert haben, der für den Typ `int` gültig ist, oder er kann den Wert `nullptr`haben. Sie können ein auf NULL festlegbares Feld als Argument an eine Methode, deren Parameter als optional deklariert ist, oder an eine beliebige andere Stelle übergeben, für die ein Werttyp keinen Wert haben muss.
+Wie bereits erwähnt, kann eine Wert Klasse oder eine Wert Struktur ein Feld vom Typ [Platform:: iBox\<T > ^](../cppcx/platform-ibox-interface.md)haben `IBox<int>^`– z. b. Ein solches Feld kann jeden beliebigen numerischen Wert haben, der für den Typ `int` gültig ist, oder er kann den Wert `nullptr`haben. Sie können ein auf NULL festlegbares Feld als Argument an eine Methode, deren Parameter als optional deklariert ist, oder an eine beliebige andere Stelle übergeben, für die ein Werttyp keinen Wert haben muss.
 
 Im folgenden Beispiel wird veranschaulicht, wie eine Struktur mit einem auf NULL festlegbaren Feld initialisiert wird.
 
@@ -150,6 +150,6 @@ public:
 ## <a name="see-also"></a>Siehe auch
 
 [Typsystem (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++-/CX-Programmiersprachenreferenz](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Verweisklassen und Strukturen (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7973cf89eaa2090a8f1548f38a728f1100d5cbec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505538"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741596"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx-Klasse
 
@@ -678,9 +678,9 @@ Verwenden Sie diese Methode zum Aktivieren oder Deaktivieren der MDI-Funktion f�
 
 - Die Anwendung kann das aktuelle Layout von Fenstern im Registerkarten Format und die Liste der aktuell geöffneten Dokumente speichern.
 
-Wenn Sie diese Methode mit dem *Wert* false auf false festlegen, wird der Parameter ignoriert.
+Wenn Sie diese Methode mit dem *Wert* false auf false festlegen, *wird der* Parameter ignoriert.
 
-Auch wenn die MDI-Gruppen im Registerkarten Format bereits aktiviert sind, können Sie diese Methode erneut aufzurufen, um die Einstellungen für untergeordnete Fenster zu ändern. Aufrufen der-Methode, bei der *benable* auf true festgelegt ist, `CMDITabInfo` und Ändern der Member des Objekts , die durch den Parameter Parameters angegeben werden.
+Auch wenn die MDI-Gruppen im Registerkarten Format bereits aktiviert sind, können Sie diese Methode erneut aufzurufen, um die Einstellungen für untergeordnete Fenster zu ändern. Aufrufen der-Methode, bei der *benable* auf true festgelegt ist, `CMDITabInfo` und Ändern der Member des Objekts, die *durch den Parameter Parameters* angegeben werden.
 
 Weitere Informationen zur Verwendung von MDI-Gruppen im Registerkarten Format finden Sie unter [MDI-Gruppen im Register](../../mfc/mdi-tabbed-groups.md)Kartenformat.
 
@@ -1502,7 +1502,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 in Die Symbolleisten Schaltfläche.
 
 *pTI*<br/>
-vorgenommen Zeiger auf eine [toolinfo](/windows/win32/api/commctrl/ns-commctrl-toolinfow) -Struktur.
+vorgenommen Zeiger auf eine [toolinfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) -Struktur.
 
 ### <a name="return-value"></a>Rückgabewert
 

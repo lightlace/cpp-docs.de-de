@@ -2,16 +2,16 @@
 title: Array und WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ade7981d391288edd78f622b4753d546c5eaa04
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209415"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740694"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array und WriteOnlyArray (C++/CX)
 
-Kostenlos können reguläre Arrays im C-Stil oder [Std:: Array](../standard-library/array-class-stl.md) in einem C++ / CX-Programms (obwohl [Std:: vector](../standard-library/vector-class.md) ist häufig die bessere Wahl), aber in einer beliebigen API, die in Metadaten veröffentlicht wird, müssen Sie ein Array im C-Format konvertieren oder Vektor zu einem [Platform:: Array](../cppcx/platform-array-class.md) oder [Platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) Typ je nachdem, wie sie verwendet wird. Der [Platform::Array](../cppcx/platform-array-class.md) -Typ ist weder so effizient noch so leistungsfähig wie [std::vector](../standard-library/vector-class.md). Als allgemeine Richtlinie sollten Sie daher dessen Verwendung im internen Code vermeiden, da dieser viele Vorgänge mit den Arrayelementen ausführt.
+Sie können reguläre Arrays im c-Format oder [Std:: Array](../standard-library/array-class-stl.md) in einem C++/CX-Programm frei verwenden (Obwohl [Std:: Vector](../standard-library/vector-class.md) häufig die bessere Wahl ist). in jeder API, die in Metadaten veröffentlicht wird, müssen Sie jedoch ein Array oder einen Vektor im c-Stil in ein [Platform:: Array konvertieren. ](../cppcx/platform-array-class.md)oder [Platform:: Write Array](../cppcx/platform-writeonlyarray-class.md) Type, abhängig von der Art der Verwendung. Der [Platform::Array](../cppcx/platform-array-class.md) -Typ ist weder so effizient noch so leistungsfähig wie [std::vector](../standard-library/vector-class.md). Als allgemeine Richtlinie sollten Sie daher dessen Verwendung im internen Code vermeiden, da dieser viele Vorgänge mit den Arrayelementen ausführt.
 
 Die folgenden Arraytypen können über die ABI übergeben werden:
 
@@ -23,17 +23,17 @@ Die folgenden Arraytypen können über die ABI übergeben werden:
 
 1. Rückgabewert von Platform::Array^
 
-Diese Arraytypen werden verwendet, um die drei Typen von arraymustern zu implementieren, die von der Windows-Runtime definiert sind.
+Diese Array Typen werden verwendet, um die drei Typen von Array Mustern zu implementieren, die vom Windows-Runtime definiert werden.
 
-PassArray wird verwendet, wenn der Aufrufer ein Array an eine Methode übergeben. Die C++-eingabeparametertyp ist `const` [Platform:: Array](../cppcx/platform-array-class.md)\<T >.
+Passarray, das verwendet wird, wenn der Aufrufer ein Array an eine Methode übergibt. Der C++ Eingabe Parametertyp `const`ist [Platform:: Array](../cppcx/platform-array-class.md)\<T >.
 
-FillArray verwendet, wenn der Aufrufer ein Array für die zu füllende Methode übergibt. Die C++-eingabeparametertyp ist [Platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)\<T >.
+FillArray wird verwendet, wenn der Aufrufer ein Array für die zu füllende Methode übergibt. Der C++ Eingabe Parametertyp ist [Platform:: Write Array](../cppcx/platform-writeonlyarray-class.md)\<T >.
 
-ReceiveArray wird verwendet, wenn der Aufrufer ein Array empfängt, die die Methode belegt. In C++/CX können Sie das Array im Rückgabewert als Array^ oder in Form eines out-Parameters als Array^*-Typ zurückgeben.
+Receivearray wird verwendet, wenn der Aufrufer ein Array empfängt, das von der Methode zugeordnet wird. In C++/CX können Sie das Array im Rückgabewert als Array^ oder in Form eines out-Parameters als Array^*-Typ zurückgeben.
 
 ## <a name="passarray-pattern"></a>PassArray-Muster
 
-Wenn vom Clientcode ein Array an eine C++-Methode übergeben und das Array von der Methode nicht geändert wird, dann wird das Array von der Methode als const Array^ akzeptiert. Auf der Ebene der Windows-Runtime-Anwendung-anwendungsbinärschnittstelle (ABI) wird dies als PassArray bezeichnet. Im nächsten Beispiel wird gezeigt, wie ein Array übergeben wird, das in JavaScript zu einer C++-Funktion zugeordnet ist, die aus dem Array liest.
+Wenn vom Clientcode ein Array an eine C++-Methode übergeben und das Array von der Methode nicht geändert wird, dann wird das Array von der Methode als const Array^ akzeptiert. Auf der Ebene der Windows-Runtime Application Binary Interface (ABI) wird dies als passarray bezeichnet. Im nächsten Beispiel wird gezeigt, wie ein Array übergeben wird, das in JavaScript zu einer C++-Funktion zugeordnet ist, die aus dem Array liest.
 
 [!code-javascript[cx_arrays#101](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_1.js)]
 
@@ -43,7 +43,7 @@ Im folgenden Codeausschnitt wird die C++-Methode veranschaulicht:
 
 ## <a name="receivearray-pattern"></a>ReceiveArray-Muster
 
-Im ReceiveArray-Muster wird ein Array vom Clientcode deklariert und an eine Methode übergeben, mit der Speicher für das Array zugeordnet und es initialisiert wird. Der C++-eingabeparametertyp ist ein Zeiger auf das Caretzeichen: `Array<T>^*`. Im folgenden Beispiel wird gezeigt, wie ein Arrayobjekt in JavaScript deklariert und an eine C++-Funktion übergeben wird, die Speicher zuordnet, Elemente initialisiert und das Arrayobjekt an JavaScript zurückgibt. Von JavaScript wird das zugeordnete Array als Rückgabewert interpretiert, von der C++-Funktion jedoch als out-Parameter.
+Im ReceiveArray-Muster wird ein Array vom Clientcode deklariert und an eine Methode übergeben, mit der Speicher für das Array zugeordnet und es initialisiert wird. Der C++ Eingabe Parametertyp ist ein Zeiger auf hat: `Array<T>^*`. Im folgenden Beispiel wird gezeigt, wie ein Arrayobjekt in JavaScript deklariert und an eine C++-Funktion übergeben wird, die Speicher zuordnet, Elemente initialisiert und das Arrayobjekt an JavaScript zurückgibt. Von JavaScript wird das zugeordnete Array als Rückgabewert interpretiert, von der C++-Funktion jedoch als out-Parameter.
 
 [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]
 
@@ -90,5 +90,5 @@ Im Allgemeinen sollten Sie einen `Platform::Array` -Typ möglichst nicht als Eig
 ## <a name="see-also"></a>Siehe auch
 
 [Typsystem](../cppcx/type-system-c-cx.md)<br/>
-[Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++-/CX-Programmiersprachenreferenz](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)

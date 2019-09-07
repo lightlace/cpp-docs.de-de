@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 36750990dc62d5b24cf1107ac8a2724df787a47d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 79b1dc844f53f739dc48eb6177e57810ff0c8412
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496996"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739594"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray-Klasse
 
@@ -100,7 +100,7 @@ Der Typ der im Array gespeicherten Daten.
 
 ## <a name="remarks"></a>Hinweise
 
-`CComSafeArray` stellt einen Wrapper für die [SAFEARRAY Data Type](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) -Klasse bereit, wodurch sich ein- und mehrdimensionale Arrays von nahezu jedem der VARIANT-unterstützten Typen problemlos erstellen und verwalten lassen.
+`CComSafeArray` stellt einen Wrapper für die [SAFEARRAY Data Type](/windows/win32/api/oaidl/ns-oaidl-safearray) -Klasse bereit, wodurch sich ein- und mehrdimensionale Arrays von nahezu jedem der VARIANT-unterstützten Typen problemlos erstellen und verwalten lassen.
 
 `CComSafeArray` vereinfacht die Übergabe von Arrays zwischen Prozessen und bietet darüber hinaus zusätzliche Sicherheit durch Überprüfen der Arrayindexwerte anhand der oberen und unteren Grenzen.
 
@@ -662,7 +662,7 @@ Das *bcopy* -Flag wird berücksichtigt, wenn einem Array Elemente vom Typ BSTR o
 
 ## <a name="see-also"></a>Siehe auch
 
-[SAFEARRAY-Datentyp](/windows/win32/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[SAFEARRAY-Datentyp](/windows/win32/api/oaidl/ns-oaidl-safearray)<br/>
 [CComSafeArray::Create](#create)<br/>
 [CComSafeArray::Destroy](#destroy)<br/>
 [Klassen Übersicht](../../atl/atl-class-overview.md)

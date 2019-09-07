@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502252"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741419"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>Parameter
 
 *lpToolInfo*<br/>
-Ein Zeiger auf die [toolinfo](/windows/win32/api/commctrl/ns-commctrl-toolinfow) -Struktur der QuickInfo.
+Ein Zeiger auf die toolinfo-Struktur der [QuickInfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) .
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|*lpToolInfo*|vorgenommen Ein Zeiger auf eine [toolinfo](/windows/win32/api/commctrl/ns-commctrl-toolinfow) -Struktur, die Informationen über das aktuelle QuickInfo-Fenster empfängt.|
+|*lpToolInfo*|vorgenommen Ein Zeiger auf eine toolinfo-Struktur, die Informationen über das aktuelle [QuickInfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) -Fenster empfängt.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -598,7 +598,7 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Das-Element und das- `uId` Element der [toolinfo](/windows/win32/api/commctrl/ns-commctrl-toolinfow) -Struktur, auf die *ctoolinfo* verweist, identifizieren das Tool. `hwnd` Wenn dieses Tool über einen vorherigen `AddTool`-Befehl mit dem QuickInfo-Steuerelement registriert wurde, wird die `TOOLINFO` -Struktur mit Informationen über das Tool gefüllt.
+Das-Element und das- `uId` Element der [toolinfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) -Struktur, auf die *ctoolinfo* verweist, identifizieren das Tool. `hwnd` Wenn dieses Tool über einen vorherigen `AddTool`-Befehl mit dem QuickInfo-Steuerelement registriert wurde, wird die `TOOLINFO` -Struktur mit Informationen über das Tool gefüllt.
 
 ##  <a name="hittest"></a>CToolTipCtrl:: HitTest
 
@@ -620,7 +620,7 @@ Zeiger auf das Fenster, das das Tool enthält.
 Zeiger auf ein `CPoint` -Objekt, das die Koordinaten des zu testenden Punkts enthält.
 
 *lpToolInfo*<br/>
-Ein Zeiger auf die [toolinfo](/windows/win32/api/commctrl/ns-commctrl-toolinfow) -Struktur, die Informationen über das Tool enthält.
+Ein Zeiger auf die [toolinfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) -Struktur, die Informationen über das Tool enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>Parameter
 
 *lpToolInfo*<br/>
-Ein Zeiger auf eine [toolinfo](/windows/win32/api/commctrl/ns-commctrl-toolinfow) -Struktur, die die festzulegenden Informationen angibt.
+Ein Zeiger auf eine [toolinfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) -Struktur, die die festzulegenden Informationen angibt.
 
 ##  <a name="settoolrect"></a>CToolTipCtrl:: SetToolRect
 

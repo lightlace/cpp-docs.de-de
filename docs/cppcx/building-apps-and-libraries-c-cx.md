@@ -2,16 +2,16 @@
 title: Erstellen von Apps und Bibliotheken (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ec2821a5-3479-4e64-9c2d-c777049f2cdc
-ms.openlocfilehash: d31b917a4f082d9c9eee41c23a79ce5ed1aa9f4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b12b294d4d881df5ce4c4cbea2f3f76476e80090
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257926"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740371"
 ---
 # <a name="building-apps-and-libraries-ccx"></a>Erstellen von Apps und Bibliotheken (C++/CX)
 
-Die Themen in diesem Abschnitt bieten einige Informationen zur Verwendung des Buildsystems zum Erstellen einer universellen Windows-Plattform-app oder Komponente für Windows-Runtime.
+Die Themen in diesem Abschnitt enthalten einige Details zur Verwendung des Buildsystems zum Erstellen einer universelle Windows-Plattform-APP oder einer Windows-Runtime Komponente.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,4 +21,5 @@ Die Themen in diesem Abschnitt bieten einige Informationen zur Verwendung des Bu
 
 - [DLLs](../cppcx/dlls-c-cx.md)
 
-Hinweis: Visual C++ Profilgesteuerte Optimierungen für die universelle Windows-Plattform nicht unterstützt. Der Versuch, ein Projekt zu erstellen, bei dem diese Optionen in der IDE festgelegt sind, verursacht einen Buildfehler. Konsolenanwendungen werden ebenfalls nicht unterstützt.
+>[!NOTE]
+>Visual Studio unterstützt keine Profil gesteuerten Optimierungen für universelle Windows-Plattform. Der Versuch, ein Projekt zu erstellen, bei dem diese Optionen in der IDE festgelegt sind, verursacht einen Buildfehler. Konsolenanwendungen werden ebenfalls nicht unterstützt.

@@ -2,20 +2,20 @@
 title: Ereignisse (C++/CX)
 ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: aab37353b1ea8d9f81a8e9a9ae489a4dd3542cc0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894453"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740525"
 ---
 # <a name="events-ccx"></a>Ereignisse (C++/CX)
 
-Eine Windows-Runtime Typ deklarieren, kann (das ist, zu veröffentlichen) Ereignisse und Clientcode in der gleichen Komponente oder in anderen Komponenten können auf diese Ereignisse abonnieren, indem Sie die Zuordnung von Methoden, die aufgerufen *Ereignishandler* mit dem Ereignis. Mehrere Ereignishandler können einem einzelnen Ereignis zugeordnet werden. Wenn das Veröffentlichungsobjekt das Ereignis auslöst, werden alle Ereignishandler aufgerufen. Auf diese Weise kann eine abonnierende Klasse eine beliebige geeignete benutzerdefinierte Aktion durchführen, wenn der Herausgeber das Ereignis auslöst. Ein Ereignis hat einen Delegattyp, der die Signatur angibt, die alle Ereignishandler verwenden, um das Ereignis zu abonnieren.
+Ein Windows-Runtime Typ kann Ereignisse deklarieren (d. h. veröffentlichen), und Client Code in der gleichen Komponente oder in anderen Komponenten kann diese Ereignisse abonnieren, indem er die Methoden namens *Ereignishandler* dem Ereignis zuordnet. Mehrere Ereignishandler können einem einzelnen Ereignis zugeordnet werden. Wenn das Veröffentlichungsobjekt das Ereignis auslöst, werden alle Ereignishandler aufgerufen. Auf diese Weise kann eine abonnierende Klasse eine beliebige geeignete benutzerdefinierte Aktion durchführen, wenn der Herausgeber das Ereignis auslöst. Ein Ereignis hat einen Delegattyp, der die Signatur angibt, die alle Ereignishandler verwenden, um das Ereignis zu abonnieren.
 
 ## <a name="consuming-events-in-windows-components"></a>Verwenden von Ereignissen in den Windows-Komponenten
 
-Viele Komponenten in der Windows-Runtime machen Ereignisse verfügbar. Beispielsweise löst ein LightSensor-Objekt ein ReadingChanged-Ereignis aus, wenn der Sensor einen neuen Lumineszenzwert meldet. Wenn Sie ein LightSensor-Objekt im Programm verwenden, können Sie eine Methode definieren, die aufgerufen wird, wenn das ReadingChanged-Ereignis ausgelöst wird. Die Methode möglich, was er tun soll; die einzige Voraussetzung ist, dass die Signatur die Signatur des Delegaten übereinstimmen muss, die aufgerufen wird. Weitere Informationen zum Erstellen eines delegatereignishandlers und Abonnieren eines Ereignisses finden Sie unter [Delegaten](../cppcx/delegates-c-cx.md).
+Viele Komponenten in der Windows-Runtime machen Ereignisse verfügbar. Beispielsweise löst ein LightSensor-Objekt ein ReadingChanged-Ereignis aus, wenn der Sensor einen neuen Lumineszenzwert meldet. Wenn Sie ein LightSensor-Objekt im Programm verwenden, können Sie eine Methode definieren, die aufgerufen wird, wenn das ReadingChanged-Ereignis ausgelöst wird. Die Methode kann beliebige Aufgaben ausführen, die Sie ausführen möchten. die einzige Voraussetzung ist, dass die Signatur mit der Signatur des aufgerufenen Delegaten übereinstimmen muss. Weitere Informationen zum Erstellen eines delegatereignishandlers und zum Abonnieren eines [Ereignisses finden Sie](../cppcx/delegates-c-cx.md)unter Delegaten.
 
 ## <a name="creating-custom-events"></a>Erstellen von benutzerdefinierten Ereignissen
 
@@ -62,5 +62,5 @@ Die Reihenfolge, in der die Ereignisquelle Ereignishandler auf Ereignisempfänge
 
 [Typsystem](../cppcx/type-system-c-cx.md)<br/>
 [Delegaten](../cppcx/delegates-c-cx.md)<br/>
-[Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++-/CX-Programmiersprachenreferenz](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)

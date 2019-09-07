@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: fc2b4c08b5a999f0369199e0dd65a09a7cdf8dff
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b3c02c8c2754ce7edb40cff5e44efb74a16353fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503154"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741541"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl-Klasse
 
@@ -1051,7 +1051,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="parameters"></a>Parameter
 
 *cf*<br/>
-In der ersten Version ein Zeiger auf eine [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) -Struktur, um die Zeichen Formatierungs Attribute der aktuellen Auswahl zu empfangen.
+In der ersten Version ein Zeiger auf eine [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) -Struktur, um die Zeichen Formatierungs Attribute der aktuellen Auswahl zu empfangen.
 
 In der zweiten Version ein Zeiger auf eine [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) -Struktur, bei der es sich um eine Rich Edit 2,0 `CHARFORMAT` -Erweiterung der-Struktur handelt, um die Zeichen Formatierungs Attribute der aktuellen Auswahl zu empfangen.
 
@@ -1618,7 +1618,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parameter
 
 *cf*<br/>
-In der ersten Version ein Zeiger auf eine [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) -Struktur, die die neuen Standard Zeichen Formatierungs Attribute enthält.
+In der ersten Version ein Zeiger auf eine [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) -Struktur, die die neuen Standard Zeichen Formatierungs Attribute enthält.
 
 In der zweiten Version ein Zeiger auf eine [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) -Struktur, bei der es sich um eine Rich Edit 2,0 `CHARFORMAT` -Erweiterung der-Struktur handelt, die die standardmäßigen Zeichen Formatierungs Attribute enthält.
 
@@ -1920,7 +1920,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parameter
 
 *cf*<br/>
-In der ersten Version ein Zeiger auf eine [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) -Struktur, die die neuen Zeichen Formatierungs Attribute für die aktuelle Auswahl enthält.
+In der ersten Version ein Zeiger auf eine [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) -Struktur, die die neuen Zeichen Formatierungs Attribute für die aktuelle Auswahl enthält.
 
 In der zweiten Version ein Zeiger auf eine [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) -Struktur, bei der es sich um eine Rich Edit 2,0 `CHARFORMAT` -Erweiterung der-Struktur handelt, die die neuen Zeichen Formatierungs Attribute für die aktuelle Auswahl enthält.
 
@@ -2033,7 +2033,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parameter
 
 *cf*<br/>
-In der ersten Version ein Zeiger auf eine [Charformat](/windows/win32/api/richedit/ns-richedit-_charformat) -Struktur, die die neuen Zeichen Formatierungs Attribute für das aktuell ausgewählte Wort enthält.
+In der ersten Version ein Zeiger auf eine [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) -Struktur, die die neuen Zeichen Formatierungs Attribute für das aktuell ausgewählte Wort enthält.
 
 In der zweiten Version ein Zeiger auf eine [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) -Struktur, bei der es sich um eine Rich Edit 2,0 `CHARFORMAT` -Erweiterung der-Struktur handelt, die die neuen Zeichen Formatierungs Attribute für das aktuell ausgewählte Wort enthält.
 
@@ -2118,7 +2118,7 @@ Der Wert von *nformat* muss einer der folgenden sein:
 
 Beide Werte können mit SFF_SELECTION kombiniert werden. Wenn SFF_SELECTION angegeben wird, `StreamIn` ersetzt die aktuelle Auswahl durch den Inhalt des Eingabestreams. Wenn Sie nicht angegeben ist, `StreamIn` ersetzt den gesamten Inhalt dieses `CRichEditCtrl` Objekts.
 
-In den `EDITSTREAM` paraMetern des Parameters geben Sie eine Rückruffunktion an, die einen Puffer mit Text füllt. Diese Rückruffunktion wird wiederholt aufgerufen, bis der Eingabestream erschöpft ist.
+In den `EDITSTREAM` para *Metern des Parameters*geben Sie eine Rückruffunktion an, die einen Puffer mit Text füllt. Diese Rückruffunktion wird wiederholt aufgerufen, bis der Eingabestream erschöpft ist.
 
 Weitere Informationen finden Sie unter [EM_STREAMIN](/windows/win32/Controls/em-streamin) Message and [editstream](/windows/win32/api/richedit/ns-richedit-editstream) Structure in the Windows SDK.
 
@@ -2164,7 +2164,7 @@ Der Wert von *nformat* muss einer der folgenden sein:
 
 Jeder dieser Werte kann mit SFF_SELECTION kombiniert werden. Wenn SFF_SELECTION angegeben wird, `StreamOut` wird die aktuelle Auswahl in den Ausgabestream geschrieben. Wenn Sie nicht angegeben ist, `StreamOut` schreibt den gesamten Inhalt dieses `CRichEditCtrl` Objekts.
 
-In den `EDITSTREAM` paraMetern des Parameters geben Sie eine Rückruffunktion an, die einen Puffer mit Text füllt. Diese Rückruffunktion wird wiederholt aufgerufen, bis der Ausgabestream erschöpft ist.
+In den `EDITSTREAM` para *Metern des*Parameters geben Sie eine Rückruffunktion an, die einen Puffer mit Text füllt. Diese Rückruffunktion wird wiederholt aufgerufen, bis der Ausgabestream erschöpft ist.
 
 Weitere Informationen finden Sie unter [EM_STREAMOUT](/windows/win32/Controls/em-streamout) Message and [editstream](/windows/win32/api/richedit/ns-richedit-editstream) Structure in the Windows SDK.
 

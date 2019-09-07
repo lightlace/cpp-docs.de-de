@@ -2,24 +2,24 @@
 title: CLR-Integration (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-ms.openlocfilehash: df0c5e9cfaf9a4148c8d16b68ee04b4e9ce82e6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44ef35d1a62706cae37285c06547a8b9b7deb35c
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257776"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740295"
 ---
 # <a name="clr-integration-ccx"></a>CLR-Integration (C++/CX)
 
-Einige Windows-Runtime-Typen erhalten Sie spezielle Behandlung in C++ / CX und die Sprachen an, die auf die common Language Runtime (CLR) basieren. Dieser Artikel behandelt, wie verschiedene Typen in einer Sprache einer anderen Sprache zugeordnet werden. Beispielsweise ordnet die CLR „Windows.Foundation.IVector“ zu „System.Collections.IList“, „Windows.Foundation.IMap“ zu „System.Collections.IDictionary“ zu usw. Auf ähnliche Weise C + c++ / CX ordnet Typen wie z. B. Delegate "und" Platform:: String.
+Einige Windows-Runtime Typen erhalten eine spezielle Behandlung C++in/CX und die Sprachen, die auf dem Common Language Runtime (CLR) basieren. Dieser Artikel behandelt, wie verschiedene Typen in einer Sprache einer anderen Sprache zugeordnet werden. Beispielsweise ordnet die CLR „Windows.Foundation.IVector“ zu „System.Collections.IList“, „Windows.Foundation.IMap“ zu „System.Collections.IDictionary“ zu usw. Ebenso ordnet C++/CX speziell Typen wie Platform::D Elegate und Platform:: String zu.
 
-## <a name="mapping-the-windows-runtime-to-ccx"></a>Zuordnen von der Windows-Runtime für C++ / CX
+## <a name="mapping-the-windows-runtime-to-ccx"></a>Zuordnung des Windows-Runtime zu C++/CX
 
-Wenn C++ / CX liest eine Windows-Metadatendatei (.winmd), ordnet der Compiler automatisch gemeinsame Windows-Runtime-Namespaces und Typen für C++ / CX-Namespaces und Typen. Z. B. den numerischen Typ Windows-Runtime `UInt32` automatisch zugeordnet ist `default::uint32`.
+Wenn C++/CX eine Windows-Metadatendatei (. winmd) liest, ordnet der Compiler allgemeine Windows-Runtime Namespaces und Typen C++automatisch/CX-Namespaces und-Typen zu. Der numerische Windows-Runtime Typ `UInt32` wird z. b. automatisch zugeordnet. `default::uint32`
 
-C++ / CX ordnet mehrere andere Windows-Runtime-Typen an die **Plattform** Namespace. Z. B. die **Windows:: Foundation** HSTRING-Handle, das eine schreibgeschützte Unicode-Textzeichenfolge darstellt, zugeordnet ist C++ / CX `Platform::String` Klasse. Ein Windows-Runtime-Vorgang einen Fehler HRESULT zurückgibt, zugeordnet, um C++ / CX `Platform::Exception`.
+C++/CX ordnet mehrere andere Windows-Runtime Typen dem **Platform** -Namespace zu. Beispielsweise wird das hstring-Handle von **Windows:: Foundation** , das eine schreibgeschützte Unicode-Text Zeichenfolge darstellt, C++der `Platform::String` /CX-Klasse zugeordnet. Wenn ein Windows-Runtime Vorgang einen Fehler HRESULT zurückgibt, wird er einem C++/CX `Platform::Exception`zugeordnet.
 
-C++ / CX ordnet darüber hinaus bestimmte Typen in Windows-Runtime-Namespaces, um die Funktionalität des Typs zu verbessern. Für diese Typen stellt C++ / CX stellt hilfskonstruktoren und Methoden, die für C++ spezifisch sind, und sind in den Typ der standardmäßigen winmd-Datei nicht verfügbar.
+Der C++/CX ordnet auch bestimmte Typen in Windows-Runtime Namespaces zu, um die Funktionalität des Typs zu verbessern. Für diese Typen stellt C++/CX Hilfskonstruktoren und Methoden bereit, die für C++ spezifisch sind und in der Datei "Standard. winmd" des Typs nicht verfügbar sind.
 
 Die folgende Liste enthält Wertstrukturen, die neue Konstruktoren und Hilfsmethoden unterstützen. Wenn Sie bisher Code erstellt haben, der mit Strukturinitialisierungslisten arbeitet, stellen Sie ihn auf die neu hinzugefügten Konstruktoren um.
 
@@ -63,11 +63,11 @@ Die folgende Liste enthält Wertstrukturen, die neue Konstruktoren und Hilfsmeth
 
 - Matrix3D
 
-## <a name="mapping-the-clr-to-ccx"></a>Zuordnen der CLR für C++ / CX
+## <a name="mapping-the-clr-to-ccx"></a>Mapping der CLR zu C++/CX
 
-Wenn die Visual C++ oder c#-Compiler eine winmd-Datei lesen, ordnen sie automatisch bestimmte Typen in der Metadatendatei für entsprechende C++ / CX- oder CLR-Datentypen. Z. B. in der CLR, die IVector\<T >-Schnittstelle IList zugeordnet ist\<T >. Aber in C++ / CX, die IVector\<T >-Schnittstelle ist nicht in einen anderen Typ zugeordnet.
+Wenn Microsoft C++ oder C# Compiler eine winmd-Datei lesen, ordnen Sie bestimmte Typen in der Metadatendatei automatisch den entsprechenden C++/CX-oder CLR-Typen zu. In der CLR wird z. b. die IVector\<t->-Schnittstelle IList\<t > zugeordnet. In C++/CX ist die IVector\<T >-Schnittstelle jedoch keinem anderen Typ zugeordnet.
 
-"IReference"\<T > in der Windows-Runtime ordnet Nullable\<T > in .NET.
+Die IReference\<t-> im Windows-Runtime wird in .net\<zu Nullable t > zugeordnet.
 
 ## <a name="see-also"></a>Siehe auch
 

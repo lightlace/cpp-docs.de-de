@@ -2,22 +2,22 @@
 title: Attribute (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-ms.openlocfilehash: 5f74914ab65fdf2c1803b47665e16378991efa3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77962dc2d4b7f6bda90a5376e5154782365a4106
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209454"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740383"
 ---
 # <a name="attributes-ccx"></a>Attribute (C++/CX)
 
-Ein Attribut ist eine besondere Art von Ref-Klasse, die in eckigen Klammern auf Windows-Runtime-Typen und Methoden, um bestimmte Verhalten bei der Metadatenerstellung anzugeben vorangestellt werden kann. Mehrere vordefinierte Attribute, z. B. [Windows::Foundation::Metadata::WebHostHidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute)– werden häufig verwendet, in C++ / CX-Code. Dieses Beispiel zeigt, wie das Attribut auf eine Klasse angewendet wird:
+Ein Attribut ist eine spezielle Verweis Klasse, die Windows-Runtime Typen und Methoden in eckigen Klammern vorangestellt werden kann, um bestimmte Verhalten bei der Metadatenerstellung anzugeben. Mehrere vordefinierte Attribute – z. b. [Windows:: Foundation:: Metadata:: webhosthidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute)– werden häufig C++in/CX-Code verwendet. Dieses Beispiel zeigt, wie das Attribut auf eine Klasse angewendet wird:
 
 [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]
 
 ## <a name="custom-attributes"></a>Benutzerdefinierte Attribute
 
-Sie können auch benutzerdefinierte Attribute definieren. Benutzerdefinierte Attribute müssen diese Windows-Runtime-Regeln entsprechen:
+Sie können auch benutzerdefinierte Attribute definieren. Benutzerdefinierte Attribute müssen diesen Windows-Runtime Regeln entsprechen:
 
 - Benutzerdefinierte Attribute können nur öffentliche Felder enthalten.
 
@@ -46,5 +46,5 @@ Das nächste Beispiel zeigt, wie ein benutzerdefiniertes Attribut definiert und 
 ## <a name="see-also"></a>Siehe auch
 
 [Typsystem (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++-/CX-Programmiersprachenreferenz](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)

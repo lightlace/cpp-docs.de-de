@@ -2,12 +2,12 @@
 title: Boxing (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90c5af31efc6523683227dbf54c85390bc98510a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257960"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740666"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
 
@@ -19,9 +19,9 @@ Obwohl Sie für eine Variable nicht explizit Boxing anwenden müssen, um sie an 
 
 [!code-cpp[cx_boxing#01](../cppcx/codesnippet/CPP/cx_boxing/class1.cpp#01)]
 
-### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Verwenden von Platform:: ibox\<T > zur Unterstützung von auf NULL festlegbare Werttypen
+### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Verwenden von Platform:: iBox\<T > zur Unterstützung von Typen, die NULL-Werte zulassen
 
-C# und Visual Basic unterstützen das Konzept von Typen, die NULL-Werte zulassen. In C++ / CX können Sie die `Platform::IBox<T>` Typ um öffentliche Methoden verfügbar zu machen, die Werttypparameter unterstützen. Das folgende Beispiel zeigt C++ / CX-öffentliche Methode, die null zurückgibt, wenn ein C#-Aufrufer für eines der Argumente null übergibt.
+C# und Visual Basic unterstützen das Konzept von Typen, die NULL-Werte zulassen. In C++/CX können Sie den `Platform::IBox<T>` -Typ verwenden, um öffentliche Methoden verfügbar zu machen, die Werte zulässt-Werttyp Parameter unterstützen. Das folgende Beispiel zeigt eine C++öffentliche/CX-Methode, die NULL zurück C# gibt, wenn ein Aufrufer für eines der Argumente NULL übergibt.
 
 [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]
 
@@ -40,5 +40,5 @@ In einem C#-XAML-Client können Sie diese Methode wie folgt verwenden:
 
 [Typsystem (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Typumwandlung (C++-CX)](../cppcx/casting-c-cx.md)<br/>
-[Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++-/CX-Programmiersprachenreferenz](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referenz zu Namespaces](../cppcx/namespaces-reference-c-cx.md)
