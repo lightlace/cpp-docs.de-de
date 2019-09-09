@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 14a195b22c2b26ee0180c68741fab623623fc36e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 97c605426ed0ac869714f0f83d4957f7f6ce7d87
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504752"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741400"
 ---
 # <a name="colecontrol-class"></a>COleControl-Klasse
 
@@ -2622,7 +2622,7 @@ Ein Verweis auf ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich 0 (null), wenn eine Zeichenfolge in ' strevalue ' zurückgegeben wurde *,* andernfalls 0.
+Ungleich 0 (null), wenn eine Zeichenfolge in ' *strevalue* ' zurückgegeben wurde, andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -3178,7 +3178,7 @@ virtual BOOL OnRenderData(
 Verweist auf die [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) -Struktur, die das Format angibt, in dem Informationen angefordert werden.
 
 *lpStgMedium*<br/>
-Verweist auf eine [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) -Struktur, in der die Daten zurückgegeben werden sollen.
+Verweist auf eine [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) -Struktur, in der die Daten zurückgegeben werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -3301,7 +3301,7 @@ virtual BOOL OnSetData(
 Ein Zeiger auf eine [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) -Struktur, die das Format der Daten angibt.
 
 *lpStgMedium*<br/>
-Zeiger auf eine [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) -Struktur, in der sich die Daten befinden.
+Zeiger auf eine [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) -Struktur, in der sich die Daten befinden.
 
 *bRelease*<br/>
 TRUE, wenn das Speichermedium vom Steuerelement freigegeben werden soll. FALSE, wenn das Speichermedium vom Steuerelement nicht freigegeben werden soll.
