@@ -1,21 +1,21 @@
 ---
-title: Ref (C++-COM-Attribut)
+title: Ref (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: f051fe577087d81515ddf0b44dfb15ad0fb2c616
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407418"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514116"
 ---
 # <a name="ref-c"></a>ref (C++)
 
-Identifiziert einen Verweiszeiger an.
+Bezeichnet einen Verweis Zeiger.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Identifiziert einen Verweiszeiger an.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Ref** C++-Attribut hat die gleiche Funktionalität wie die [Ref](/windows/desktop/Midl/ref) MIDL-Attribut.
+Das **ref** C++ -Attribut verfügt über die gleiche Funktionalität [wie das-](/windows/win32/Midl/ref) Attribut des Verweis-Attributs.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code zeigt, wie Sie mit der **Ref** Attribut:
+Der folgende Code zeigt, wie das **ref** -Attribut verwendet wird:
 
 ```cpp
 // cpp_attr_ref_ref.cpp
@@ -49,10 +49,10 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Betrifft**|**TypeDef**, Schnittstellenparameter,-Schnittstellenmethode|
+|**Betrifft**|**typedef**, Schnittstellenparameter, Schnittstellen Methode|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

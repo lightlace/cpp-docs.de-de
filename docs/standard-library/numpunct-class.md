@@ -360,7 +360,7 @@ Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
 Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [](../standard-library/locale-class.md#facet_class)Face(`_Refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::**[Face(](../standard-library/locale-class.md#facet_class)`_Refs`).
 
 ## <a name="string_type"></a> numpunct::string_type
 

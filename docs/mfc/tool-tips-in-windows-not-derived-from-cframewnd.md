@@ -9,30 +9,30 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-ms.openlocfilehash: 3d44f2c503b689360f040e6804d319c331d5c0ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f68fb62335219ea498163e6124c8e91e49f2938
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168023"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511025"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>QuickInfos in Fenstern, die nicht von CFrameWnd abgeleitet sind
 
-Diese Artikelreihe behandelt aktiviert QuickInfos für Steuerelemente in einem Fenster, die nicht von abgeleitet ist [CFrameWnd](../mfc/reference/cframewnd-class.md). Der Artikel [Symbolleisten-QuickInfo](../mfc/toolbar-tool-tips.md) enthält Informationen über QuickInfos für Steuerelemente in einem `CFrameWnd`.
+In dieser Artikel Familie wird das Aktivieren von Quick Infos für Steuerelemente beschrieben, die in einem Fenster enthalten sind, das nicht von [CFrameWnd](../mfc/reference/cframewnd-class.md)abgeleitet ist. Im Artikel [Quick](../mfc/toolbar-tool-tips.md) Infos Quick Infos finden Sie Informationen zu Quick Infos für Steuerelemente `CFrameWnd`in einer.
 
-In dieser Gruppe von Artikeln behandelten Themen gehören:
+Zu den in dieser Artikel Familie behandelten Themen gehören:
 
 - [Erstellen von QuickInfos](../mfc/enabling-tool-tips.md)
 
 - [Behandeln der TTN_NEEDTEXT-Benachrichtigung für QuickInfos](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)
 
-- [TOOLTIPTEXT-Struktur](../mfc/tooltiptext-structure.md)
+- [Die ToolTipText-Struktur](../mfc/tooltiptext-structure.md)
 
-Tool-Tipps werden automatisch angezeigt, für Schaltflächen und anderen Steuerelementen in einem übergeordneten Fenster abgeleitet `CFrameWnd`. Grund hierfür ist, `CFrameWnd` verfügt über eine Standard-Handler für die [TTN_GETDISPINFO](/windows/desktop/Controls/ttn-getdispinfo) Benachrichtigung, die behandelt **TTN_NEEDTEXT** Benachrichtigungen vom Tool Tipp Steuerelemente-Steuerelementen zugeordnet.
+Quick Infos werden automatisch für Schaltflächen und andere Steuerelemente angezeigt, die in einem von `CFrameWnd`abgeleiteten übergeordneten Fenster enthalten sind. Dies liegt daran `CFrameWnd` , dass über einen Standard Handler für die [TTN_GETDISPINFO](/windows/win32/Controls/ttn-getdispinfo) -Benachrichtigung verfügt, der **TTN_NEEDTEXT** -Benachrichtigungen von QuickInfo-Steuerelementen verarbeitet, die Steuerelementen zugeordnet sind
 
-Jedoch diese Standard-Handler wird nicht aufgerufen, wenn die **TTN_NEEDTEXT** Benachrichtigung über ein einem Steuerelement in einem Fenster, die nicht zugeordnete QuickInfo-Steuerelement eine `CFrameWnd`, z. B. ein Steuerelement auf ein Dialogfeld oder eine Formularansicht. Daher ist es erforderlich, Sie bieten eine Handlerfunktion für die **TTN_NEEDTEXT** Benachrichtigung zum Anzeigen von QuickInfos für die untergeordneten Steuerelemente.
+Dieser Standard Handler wird jedoch nicht aufgerufen, wenn die **TTN_NEEDTEXT** -Benachrichtigung von einem QuickInfo-Steuerelement gesendet wird, das einem Steuerelement in einem Fenster `CFrameWnd`zugeordnet ist, das kein ist, z. b. ein Steuerelement in einem Dialogfeld oder in einer Formularansicht. Daher ist es erforderlich, dass Sie eine Handlerfunktion für die **TTN_NEEDTEXT** -Benachrichtigungs Meldung bereitstellen, um Quick Infos für untergeordnete Steuerelemente anzuzeigen.
 
-Die standardmäßigen QuickInfos für Fenster, indem [CWnd:: EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) keinen Text zugeordnet. Zum Abrufen der Text der QuickInfo angezeigt werden, die **TTN_NEEDTEXT** Benachrichtigung wird an das QuickInfo-Steuerelement des übergeordneten Fenster gesendet, kurz bevor das QuickInfo-Fenster angezeigt wird. Wenn es ist kein Handler für diese Nachricht einige Wert zuzuweisen der *PszText* Mitglied der **TOOLTIPTEXT** Struktur, die kein Text für die QuickInfo angezeigt werden.
+Die standardmäßigen Quick Infos, die für Windows von [CWnd:: EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) bereitgestellt werden, sind mit keinem Text verknüpft. Zum Abrufen von Text für die QuickInfo, die angezeigt werden soll, wird die **TTN_NEEDTEXT** -Benachrichtigung an das übergeordnete Fenster des QuickInfo-Steuer Elements gesendet, kurz bevor das QuickInfo-Fenster angezeigt wird. Wenn kein Handler für diese Nachricht vorhanden ist, um dem *pszText* -Member der **ToolTipText** -Struktur einen Wert zuzuweisen, wird für die QuickInfo kein Text angezeigt.
 
 ## <a name="see-also"></a>Siehe auch
 

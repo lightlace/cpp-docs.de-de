@@ -1,5 +1,5 @@
 ---
-title: IRunnableObjectImpl-Klasse
+title: Ununnableobjectimpl-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - IRunnableObjectImpl
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - controls [ATL], running
 - controls [C++], container running in ATL
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
-ms.openlocfilehash: 44b1e0ae1b72a40b45abe0650eb69a279b5a84d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b1af7c21c6f5028ad6d3a228cb22650fa3cef42
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200335"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495668"
 ---
-# <a name="irunnableobjectimpl-class"></a>IRunnableObjectImpl-Klasse
+# <a name="irunnableobjectimpl-class"></a>Ununnableobjectimpl-Klasse
 
-Diese Klasse implementiert `IUnknown` und stellt eine Standardimplementierung von der [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) Schnittstelle.
+Diese Klasse implementiert `IUnknown` und stellt eine Standard Implementierung der [ununnableobject](/windows/win32/api/objidl/nn-objidl-irunnableobject) -Schnittstelle bereit.
 
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.
+>  Diese Klasse und ihre Member können in Anwendungen, die im Windows-Runtime ausgeführt werden, nicht verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ class IRunnableObjectImpl
 #### <a name="parameters"></a>Parameter
 
 *T*<br/>
-Abgeleitet von die Klasse `IRunnableObjectImpl`.
+Die von `IRunnableObjectImpl`abgeleitete Klasse.
 
 ## <a name="members"></a>Member
 
@@ -48,17 +48,17 @@ Abgeleitet von die Klasse `IRunnableObjectImpl`.
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Gibt die CLSID des Steuerelements ausgeführt. Die ATL-Implementierung wird von der CLSID auf GUID_NULL und gibt E_UNEXPECTED zurück.|
-|[IRunnableObjectImpl::IsRunning](#isrunning)|Bestimmt, ob das Steuerelement ausgeführt wird. Die ATL-Implementierung gibt "true" zurück.|
-|[IRunnableObjectImpl::LockRunning](#lockrunning)|Sperrt das Steuerelement in den ausgeführten Status an. Es gibt S_OK zurück, die ATL-Implementierung.|
-|[IRunnableObjectImpl::Run](#run)|Erzwingt, dass das Steuerelement ausgeführt. Es gibt S_OK zurück, die ATL-Implementierung.|
-|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Gibt an, dass das Steuerelement eingebettet ist. Es gibt S_OK zurück, die ATL-Implementierung.|
+|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Gibt die CLSID des laufenden Steuer Elements zurück. Die ATL-Implementierung legt die CLSID auf GUID_NULL fest und gibt E_UNEXPECTED zurück.|
+|[IRunnableObjectImpl::IsRunning](#isrunning)|Bestimmt, ob das Steuerelement ausgeführt wird. Die ATL-Implementierung gibt true zurück.|
+|[IRunnableObjectImpl::LockRunning](#lockrunning)|Sperrt das Steuerelement in den Zustand "wird ausgeführt". Die ATL-Implementierung gibt S_OK zurück.|
+|[IRunnableObjectImpl::Run](#run)|Erzwingt, dass das Steuerelement ausgeführt wird. Die ATL-Implementierung gibt S_OK zurück.|
+|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Gibt an, dass das Steuerelement eingebettet ist. Die ATL-Implementierung gibt S_OK zurück.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) Schnittstelle ermöglicht einem Container, zu bestimmen, ob ein Steuerelement ausgeführt wird, ausführen oder Sperren es in den ausgeführten Zustand erzwingen. Klasse `IRunnableObjectImpl` stellt eine Standardimplementierung dieser Schnittstelle bereit und implementiert `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.
+Mit der [ununnableobject](/windows/win32/api/objidl/nn-objidl-irunnableobject) -Schnittstelle kann ein Container ermitteln, ob ein Steuerelement ausgeführt wird, die Ausführung erzwingen oder es in den Zustand "wird ausgeführt" sperren. Die `IRunnableObjectImpl` -Klasse stellt eine Standard Implementierung dieser Schnittstelle `IUnknown` bereit und implementiert durch das Senden von Informationen an das dumpgerät in Debugbuilds.
 
-**Verwandte Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)
+**Verwandte Artikel** [ATL-Tutorial](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -70,9 +70,9 @@ Die [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) Sch
 
 **Header:** atlctl.h
 
-##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass
+##  <a name="getrunningclass"></a>Ununnableobjectimpl:: getrunningclass
 
-Gibt die CLSID des Steuerelements ausgeführt.
+Gibt die CLSID des laufenden Steuer Elements zurück.
 
 ```
 HRESULT GetRunningClass(LPCLSID lpClsid);
@@ -80,13 +80,13 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der ATL-Implementierung legt \* *LpClsid* GUID_NULL und gibt E_UNEXPECTED zurück.
+Die ATL-Implementierung \* legt *lpclsid* auf GUID_NULL fest und gibt E_UNEXPECTED zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IRunnableObject::GetRunningClass](/windows/desktop/api/objidl/nf-objidl-irunnableobject-getrunningclass) in das Windows SDK.
+Weitere Informationen finden Sie im Windows SDK unter " [unnableobject:: getrunningclass](/windows/win32/api/objidl/nf-objidl-irunnableobject-getrunningclass) ".
 
-##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning
+##  <a name="isrunning"></a>Ununnableobjectimpl:: IsRunning
 
 Bestimmt, ob das Steuerelement ausgeführt wird.
 
@@ -96,15 +96,15 @@ virtual BOOL IsRunning();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die ATL-Implementierung gibt "true" zurück.
+Die ATL-Implementierung gibt true zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IRunnableObject::IsRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-isrunning) in das Windows SDK.
+Weitere Informationen finden Sie unter [ununnableobject:: IsRunning](/windows/win32/api/objidl/nf-objidl-irunnableobject-isrunning) in der Windows SDK.
 
-##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning
+##  <a name="lockrunning"></a>Ununnableobjectimpl:: lockrunning
 
-Sperrt das Steuerelement in den ausgeführten Status an.
+Sperrt das Steuerelement in den Zustand "wird ausgeführt".
 
 ```
 HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
@@ -112,15 +112,15 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
 
 ### <a name="return-value"></a>Rückgabewert
 
-Es gibt S_OK zurück, die ATL-Implementierung.
+Die ATL-Implementierung gibt S_OK zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IRunnableObject::LockRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-lockrunning) in das Windows SDK.
+Weitere [Informationen](/windows/win32/api/objidl/nf-objidl-irunnableobject-lockrunning) finden Sie in der Windows SDK.
 
-##  <a name="run"></a>  IRunnableObjectImpl::Run
+##  <a name="run"></a>"Ununnableobjectimpl:: Run"
 
-Erzwingt, dass das Steuerelement ausgeführt.
+Erzwingt, dass das Steuerelement ausgeführt wird.
 
 ```
 HRESULT Run(LPBINDCTX lpbc);
@@ -128,13 +128,13 @@ HRESULT Run(LPBINDCTX lpbc);
 
 ### <a name="return-value"></a>Rückgabewert
 
-Es gibt S_OK zurück, die ATL-Implementierung.
+Die ATL-Implementierung gibt S_OK zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IRunnableObject::Run](/windows/desktop/api/objidl/nf-objidl-irunnableobject-run) in das Windows SDK.
+Weitere Informationen finden Sie unter [ununnableobject:: Run](/windows/win32/api/objidl/nf-objidl-irunnableobject-run) im Windows SDK.
 
-##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject
+##  <a name="setcontainedobject"></a>Ununnableobjectimpl:: setcontainedobject
 
 Gibt an, dass das Steuerelement eingebettet ist.
 
@@ -144,13 +144,13 @@ HRESULT SetContainedObject(BOOL fContained);
 
 ### <a name="return-value"></a>Rückgabewert
 
-Es gibt S_OK zurück, die ATL-Implementierung.
+Die ATL-Implementierung gibt S_OK zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [IRunnableObject::SetContainedObject](/windows/desktop/api/objidl/nf-objidl-irunnableobject-setcontainedobject) in das Windows SDK.
+Weitere Informationen finden Sie unter [ununnableobject:: setcontainedobject](/windows/win32/api/objidl/nf-objidl-irunnableobject-setcontainedobject) im Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 
 [CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)<br/>
-[Übersicht über die Klasse](../../atl/atl-class-overview.md)
+[Klassen Übersicht](../../atl/atl-class-overview.md)

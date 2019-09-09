@@ -1,21 +1,21 @@
 ---
-title: Bereich (C++-COM-Attribut)
+title: Range (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407483"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514143"
 ---
 # <a name="range-c"></a>range (C++)
 
-Gibt einen Bereich der zulässigen Werte für die Argumente oder Felder, deren Werte zur Laufzeit festgelegt werden.
+Gibt einen Bereich zulässiger Werte für Argumente oder Felder an, deren Werte zur Laufzeit festgelegt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,14 +26,14 @@ Gibt einen Bereich der zulässigen Werte für die Argumente oder Felder, deren W
 ### <a name="parameters"></a>Parameter
 
 *low*<br/>
-Der untere Bereichswert.
+Der niedrige Bereichs Wert.
 
 *high*<br/>
-Der Wert des hohen Bereichs.
+Der Wert für den hohen Bereich.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Bereich** C++-Attribut hat die gleiche Funktionalität wie die [Bereich](/windows/desktop/Midl/range) MIDL-Attribut.
+Das **Range** C++ -Attribut verfügt über die gleiche Funktionalität [wie das-](/windows/win32/Midl/range) bereichsmittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
@@ -57,10 +57,10 @@ __interface ICustom {
 
 |||
 |-|-|
-|**Betrifft**|Parameter für die Schnittstellenmethode|
+|**Betrifft**|Schnittstellen Methode, Schnittstellenparameter|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

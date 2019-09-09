@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b461769d3d988efae0be7380e1e0112e3f3cf801
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a4187c629238fa464a607c0b653f857fa44b6a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407119"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513951"
 ---
-# <a name="switchtype"></a>switch_type
+# <a name="switch_type"></a>switch_type
 
-Gibt den Typ der Variablen als die union Discriminant verwendet.
+Identifiziert den Typ der Variablen, die als uniondiskriminant verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,13 +28,13 @@ type
 ### <a name="parameters"></a>Parameter
 
 *Typ*<br/>
-Der Switchtyp kann es sich um eine ganze Zahl "," Zeichen "," Boolesch "oder" Enumeration-Typ sein.
+Der Switchtyp kann ein Integer-, Zeichen-, boolescher oder Enumerationstyp sein.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Switch_type** C++ Attribut hat die gleiche Funktionalität wie die [Switch_type](/windows/desktop/Midl/switch-type) MIDL-Attribut.
+Das **Switch_type** C++ -Attribut verfügt über die gleiche Funktionalität wie das [Switch_type](/windows/win32/Midl/switch-type) -Mittell-Attribut.
 
-C++-Attribute unterstützen keine [gekapselt Unions](/windows/desktop/Midl/encapsulated-unions). [Nonencapsulated Unions](/windows/desktop/Midl/nonencapsulated-unions) werden nur in der folgenden Form unterstützt:
+C++Attribute unterstützen keine [gekapselten Unions](/windows/win32/Midl/encapsulated-unions). [Nicht gekapselte Unions](/windows/win32/Midl/nonencapsulated-unions) werden nur in der folgenden Form unterstützt:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -55,7 +55,7 @@ struct SizedValue2 {
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter den [Fall](case-cpp.md) Beispiel für ein Beispiel für die Verwendung von **Switch_type**.
+Eine Beispiel Verwendung von **Switch_type**finden [Sie im Beispiel](case-cpp.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Finden Sie unter den [Fall](case-cpp.md) Beispiel für ein Beispiel für die Ver
 |-|-|
 |**Betrifft**|**typedef**|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

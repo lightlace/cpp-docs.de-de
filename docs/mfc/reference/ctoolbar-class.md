@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: aa49ebed2d48d9818c2d39ae4894d8caf1fbbf81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4977cbe0b749724f999d6d7089d46f12d1e2963e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323647"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502390"
 ---
 # <a name="ctoolbar-class"></a>CToolBar-Klasse
 
@@ -73,75 +73,75 @@ class CToolBar : public CControlBar
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CToolBar::CommandToIndex](#commandtoindex)|Gibt den Index einer Schaltfläche mit der angegebenen Befehls-ID.|
-|[CToolBar::Create](#create)|Erstellt die Windows-Symbolleiste, und fügt es der `CToolBar` Objekt.|
-|[CToolBar::CreateEx](#createex)|Erstellt eine `CToolBar` Objekt mit zusätzlichen Stilen für den eingebetteten `CToolBarCtrl` Objekt.|
-|[CToolBar::GetButtonInfo](#getbuttoninfo)|Ruft ab, die ID, Stil und Image-Anzahl, der eine Schaltfläche.|
+|[CToolBar::CommandToIndex](#commandtoindex)|Gibt den Index einer Schaltfläche mit der angegebenen Befehls-ID zurück.|
+|[CToolBar::Create](#create)|Erstellt die Windows-Symbolleiste und fügt Sie `CToolBar` an das-Objekt an.|
+|[CToolBar::CreateEx](#createex)|Erstellt ein `CToolBar` -Objekt mit zusätzlichen Stilen für das `CToolBarCtrl` eingebettete Objekt.|
+|[CToolBar::GetButtonInfo](#getbuttoninfo)|Ruft die ID, den Stil und die Bildnummer einer Schaltfläche ab.|
 |[CToolBar::GetButtonStyle](#getbuttonstyle)|Ruft den Stil für eine Schaltfläche ab.|
-|[CToolBar::GetButtonText](#getbuttontext)|Ruft den Text ab, der auf eine Schaltfläche angezeigt wird.|
-|[CToolBar::GetItemID](#getitemid)|Gibt die Befehls-ID einer Schaltfläche oder ein Trennzeichen am angegebenen Index zurück.|
-|[CToolBar::GetItemRect](#getitemrect)|Ruft das Anzeigerechteck für das Element am angegebenen Index ab.|
-|[CToolBar::GetToolBarCtrl](#gettoolbarctrl)|Ermöglicht den direkten Zugriff auf die zugrunde liegende allgemeine-Steuerelement.|
-|[CToolBar::LoadBitmap](#loadbitmap)|Lädt die Bitmap, die Bitmap-Schaltfläche Bilder enthält.|
-|[CToolBar::LoadToolBar](#loadtoolbar)|Lädt eine Symbolleistenressource, die mit dem Ressourcen-Editor erstellt wurden.|
-|[CToolBar::SetBitmap](#setbitmap)|Legt ein Bitmapbild fest.|
-|[CToolBar::SetButtonInfo](#setbuttoninfo)|Legt fest, die ID, Stil und Image-Anzahl, der eine Schaltfläche.|
-|[CToolBar::SetButtons](#setbuttons)|Legt die Schaltfläche-Stile und einen Index der Schaltflächenbilder innerhalb der Bitmap.|
-|[CToolBar::SetButtonStyle](#setbuttonstyle)|Legt den Stil für eine Schaltfläche.|
-|[CToolBar::SetButtonText](#setbuttontext)|Legt den Text, der angezeigt wird auf eine Schaltfläche fest.|
-|[CToolBar::SetHeight](#setheight)|Legt die Höhe der Symbolleiste.|
-|[CToolBar::SetSizes](#setsizes)|Legt die Größe der Schaltflächen und ihre Bitmaps fest.|
+|[CToolBar::GetButtonText](#getbuttontext)|Ruft den Text ab, der auf einer Schaltfläche angezeigt wird.|
+|[CToolBar::GetItemID](#getitemid)|Gibt die Befehls-ID einer Schaltfläche oder eines Trenn Zeichens am angegebenen Index zurück.|
+|[CToolBar::GetItemRect](#getitemrect)|Ruft das Anzeige Rechteck für das Element am angegebenen Index ab.|
+|[CToolBar::GetToolBarCtrl](#gettoolbarctrl)|Ermöglicht den direkten Zugriff auf das zugrunde liegende allgemeine Steuerelement.|
+|[CToolBar::LoadBitmap](#loadbitmap)|Lädt die Bitmap, die Bitmap-Button-Bilder enthält.|
+|[CToolBar::LoadToolBar](#loadtoolbar)|Lädt eine Symbolleisten Ressource, die mit dem Ressourcen-Editor erstellt wurde.|
+|[CToolBar::SetBitmap](#setbitmap)|Legt ein Bitmap-Bild fest.|
+|[CToolBar::SetButtonInfo](#setbuttoninfo)|Legt die ID, den Stil und die Bildnummer einer Schaltfläche fest.|
+|[CToolBar::SetButtons](#setbuttons)|Legt Schaltflächen Stile und einen Index von Schaltflächen Bildern innerhalb der Bitmap fest.|
+|[CToolBar::SetButtonStyle](#setbuttonstyle)|Legt den Stil für eine Schaltfläche fest.|
+|[CToolBar::SetButtonText](#setbuttontext)|Legt den Text fest, der auf einer Schaltfläche angezeigt wird.|
+|[CToolBar::SetHeight](#setheight)|Legt die Höhe der Symbolleiste fest.|
+|[CToolBar::SetSizes](#setsizes)|Legt die Größe von Schaltflächen und deren Bitmaps fest.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die Schaltflächen können sich wie Druckknöpfe, Kontrollkästchen Schaltflächen oder Optionsfelder fungieren. `CToolBar` Objekte sind in der Regel eingebettete Elemente der Rahmenfenster Objekte, die von der Klasse abgeleitet [CFrameWnd](../../mfc/reference/cframewnd-class.md) oder [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md).
+Die Schaltflächen können wie Pushbuttons, Kontrollkästchen oder Options Felder fungieren. `CToolBar`-Objekte sind in der Regel eingebettete Member von Frame-Window-Objekten, die von der-Klasse [CFrameWnd](../../mfc/reference/cframewnd-class.md) oder [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)abgeleitet werden.
 
-[GetToolBarCtrl](#gettoolbarctrl), eine Memberfunktion neue MFC 4.0, können Sie das allgemeine Windows-Steuerelement-Unterstützung für symbolleistenanpassung sowie zusätzliche Funktionen nutzen. `CToolBar` Member-Funktionen bieten Ihnen die meisten Funktionen der allgemeinen Windows-Steuerelemente; Wenn Sie jedoch aufrufen, `GetToolBarCtrl`, Sie können den Symbolleisten erteilen, sogar noch mehr Merkmale der Windows 95/98 Symbolleisten. Beim Aufruf `GetToolBarCtrl`, es gibt einen Verweis auf eine `CToolBarCtrl` Objekt. Finden Sie unter [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) für Weitere Informationen zum Verwenden von Windows-Standardsteuerelementen Symbolleisten entwerfen. Weitere allgemeine Informationen über allgemeine Steuerelemente, finden Sie unter [Standardsteuerelementen](/windows/desktop/Controls/common-controls-intro) im Windows SDK.
+[CToolBar:: GetToolBarCtrl](#gettoolbarctrl), eine Member-Funktion, die neu in MFC 4,0 ist, ermöglicht es Ihnen, die Unterstützung von Symbolleisten Anpassung und zusätzlichen Funktionen von der allgemeinen Windows-Steuerelement Funktion zu nutzen. `CToolBar`Member-Funktionen verfügen über die meisten Funktionen der allgemeinen Windows-Steuerelemente. Wenn Sie jedoch aufzurufen `GetToolBarCtrl`, können Sie die Symbolleisten noch mehr über die Merkmale von Windows 95/98-Symbolleisten verfügen. Wenn Sie aufzurufen `GetToolBarCtrl`, wird ein Verweis auf ein `CToolBarCtrl` -Objekt zurückgegeben. Weitere Informationen zum Entwerfen von Symbolleisten mit allgemeinen Windows-Steuerelementen finden Sie unter [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) . Allgemeinere Informationen zu allgemeinen Steuerelementen finden Sie unter Allgemeine Steuer [Elemente](/windows/win32/Controls/common-controls-intro) in der Windows SDK.
 
-Visual C++ bietet zwei Methoden zum Erstellen einer Symbolleiste. Gehen Sie folgendermaßen vor, um eine Symbolleistenressource, die mit dem Ressourcen-Editor zu erstellen:
+Visual C++ bietet zwei Methoden zum Erstellen einer Symbolleiste. Führen Sie die folgenden Schritte aus, um mit dem Ressourcen-Editor eine Symbolleisten Ressource zu erstellen:
 
-1. Erstellen einer Symbolleistenressource.
+1. Erstellen Sie eine Symbolleisten Ressource.
 
-1. Erstellen der `CToolBar` Objekt.
+1. Erstellen Sie `CToolBar` das-Objekt.
 
-1. Rufen Sie die [erstellen](#create) (oder [CreateEx](#createex))-Funktion zum Erstellen Sie die Windows-Symbolleiste, und fügen Sie ihn auf die `CToolBar` Objekt.
+1. Rufen Sie die [Create](#create) ( [oder die](#createex)Funktion "up)" auf, um die Windows-Symbolleiste `CToolBar` zu erstellen und an das-Objekt anzufügen.
 
-1. Rufen Sie [LoadToolBar](#loadtoolbar) zum Laden der Symbolleistenressource.
+1. Laden Sie [LoadToolBar](#loadtoolbar) zum Laden der Symbolleisten Ressource.
 
-Andernfalls gehen Sie folgendermaßen vor:
+Führen Sie andernfalls die folgenden Schritte aus:
 
-1. Erstellen der `CToolBar` Objekt.
+1. Erstellen Sie `CToolBar` das-Objekt.
 
-1. Rufen Sie die [erstellen](#create) (oder [CreateEx](#createex))-Funktion zum Erstellen Sie die Windows-Symbolleiste, und fügen Sie ihn auf die `CToolBar` Objekt.
+1. Rufen Sie die [Create](#create) ( [oder die](#createex)Funktion "up)" auf, um die Windows-Symbolleiste `CToolBar` zu erstellen und an das-Objekt anzufügen.
 
-1. Rufen Sie [LoadBitmap](#loadbitmap) die Bitmap geladen, die die Symbolleisten-Schaltflächen enthält.
+1. Ruft [LoadBitmap](#loadbitmap) auf, um die Bitmap zu laden, die die Symbolleisten-Schaltflächen Bilder enthält.
 
-1. Rufen Sie [SetButtons](#setbuttons) auf die Schaltflächen-Formatvorlage festgelegt, und ordnen Sie jede Schaltfläche ein Bild in der Bitmap.
+1. Aufrufen von [setButtons](#setbuttons) zum Festlegen des Schaltflächen Stils und Zuordnen der einzelnen Schaltflächen zu einem Bild in der Bitmap.
 
-Die Schaltflächenbilder auf der Symbolleiste stammen aus einer einzigen Bitmap, ein Abbild für jede Schaltfläche enthalten muss. Alle Images müssen die gleiche Größe sein. Der Standardwert ist 16 Pixel breit und 15 Pixeln. Images müssen nebeneinander in der Bitmap sein.
+Alle Schaltflächen Bilder auf der Symbolleiste werden aus einer Bitmap entnommen, die für jede Schaltfläche ein Bild enthalten muss. Alle Bilder müssen dieselbe Größe aufweisen. der Standardwert ist 16 Pixel breit und 15 Pixel hoch. Bilder müssen nebeneinander in der Bitmap angezeigt werden.
 
-Die `SetButtons` Funktion nimmt einen Zeiger auf ein Array von Steuerelement-IDs und eine ganze Zahl, die die Anzahl der Elemente im Array angibt. Die Funktion jeder Schaltfläche-ID auf den Wert des entsprechenden Elements des Arrays festgelegt und weist jede Schaltfläche einen Image-Index, der die Position der das Bild der Schaltfläche in der Bitmap angibt. Wenn ein Arrayelement ID_SEPARATOR Wert verfügt, wird kein Image Index zugewiesen.
+Die `SetButtons` -Funktion nimmt einen Zeiger auf ein Array von Steuerelement-IDs und eine ganze Zahl an, die die Anzahl der Elemente im Array angibt. Die-Funktion legt die ID der einzelnen Schaltflächen auf den Wert des entsprechenden Elements des Arrays fest und weist jeder Schaltfläche einen Bildindex zu, der die Position des Bild der Schaltfläche in der Bitmap angibt. Wenn ein Array Element den Wert ID_SEPARATOR aufweist, wird kein Bildindex zugewiesen.
 
-Die Reihenfolge der Bilder in der Bitmap ist in der Regel die Reihenfolge, in dem sie auf dem Bildschirm gezeichnet werden, jedoch können Sie, die [SetButtonInfo](#setbuttoninfo) Funktion so ändern Sie die Beziehung zwischen den Image-Reihenfolge und die Zeichnungsreihenfolge.
+Die Reihenfolge der Bilder in der Bitmap ist in der Regel die Reihenfolge, in der Sie auf dem Bildschirm gezeichnet werden, aber Sie können die [SetButtonInfo](#setbuttoninfo) -Funktion verwenden, um die Beziehung zwischen Bild Reihenfolge und Zeichnungsreihenfolge zu ändern.
 
-Alle Schaltflächen einer Symbolleiste haben die gleiche Größe. Der Standardwert ist 24 x 22 Pixel, in Übereinstimmung mit *Richtlinien der Windows-Benutzeroberfläche für den Softwareentwurf*. Alle zusätzlichen Leerraum zwischen den Dimensionen-Image und die Schaltfläche wird verwendet, um einen Rahmen um das Image zu erstellen.
+Alle Schaltflächen in einer Symbolleiste haben dieselbe Größe. Der Standardwert beträgt 24 x 22 Pixel, gemäß den *Richtlinien für die Windows-Benutzeroberfläche für den Software Entwurf*. Alle zusätzlichen Leerzeichen zwischen der Bild-und der Schaltflächen Dimension werden verwendet, um einen Rahmen um das Bild zu bilden.
 
-Jede Schaltfläche verfügt über ein Image. Die verschiedenen Zustände Schaltfläche und Stile (gedrückt, oben, unten, deaktiviert ist, deaktiviert unten, und unbestimmt) werden von diesem Image einen generiert. Obwohl Bitmaps auf eine beliebige Farbe sein kann, können Sie die besten Ergebnisse mit Bildern in Schwarz und grauschattierungen erreichen.
+Jede Schaltfläche verfügt über ein Bild. Die verschiedenen Schaltflächen Zustände und-Stile (gedrückt, hoch, nach unten, deaktiviert, deaktiviert und unbestimmt) werden aus diesem ein Bild generiert. Obwohl Bitmaps eine beliebige Farbe sein können, können Sie die besten Ergebnisse mit Bildern in schwarz und Graustufen erzielen.
 
 > [!WARNING]
-> `CToolBar` unterstützt die Bitmaps mit maximal 16 Farben. Wenn Sie ein Bild in einem Symbolleisten-Editor laden, Visual Studio automatisch konvertiert das Bild in eine Bitmap 16 Farben, bei Bedarf, und eine Warnung angezeigt, wenn das Image konvertiert wurde. Wenn Sie ein Image mit mehr als 16 Farben (mit einem externen Editor so bearbeiten Sie das Bild) verwenden, kann die Anwendung unerwartet verhält.
+> `CToolBar`unterstützt Bitmaps mit maximal 16 Farben. Wenn Sie ein Bild in einen Symbolleisten-Editor laden, konvertiert Visual Studio das Bild bei Bedarf automatisch in eine 16-farbige Bitmap und zeigt eine Warnmeldung an, wenn das Image konvertiert wurde. Wenn Sie ein Bild mit mehr als 16 Farben (mit einem externen Editor zum Bearbeiten des Bilds) verwenden, verhält sich die Anwendung möglicherweise unerwartet.
 
-Symbolleisten-Schaltflächen imitieren Druckknöpfe, in der Standardeinstellung. Schaltflächen der Symbolleiste können jedoch auch Schaltflächen mit Kontrollkästchen oder Optionsfelder imitieren. Kontrollkästchen-Einstellungen drei Status aufweisen: aktiviert, deaktiviert und unbestimmt. Optionsfelder nur zwei Zustände aufweisen: aktiviert und deaktiviert.
+Symbolleisten Schaltflächen imitieren standardmäßig Pushbuttons. Mit Symbolleisten Schaltflächen können jedoch auch Kontrollkästchen oder Options Felder imitiert werden. Kontrollkästchen-Schaltflächen haben drei Zustände: aktiviert, deaktiviert und unbestimmt. Options Felder haben nur zwei Zustände: aktiviert und deaktiviert.
 
-Rufen Sie zum Festlegen einer einzelnen Schaltfläche oder den Trennzeichenstil ohne verweist auf ein Array [GetButtonStyle](#getbuttonstyle) zum Abrufen des Stils, und rufen dann [SetButtonStyle](#setbuttonstyle) anstelle von `SetButtons`. `SetButtonStyle` ist besonders hilfreich, wenn Sie eine der Stil der Schaltfläche zur Laufzeit ändern möchten.
+Wenn Sie eine einzelne Schaltfläche oder einen Trennzeichen Stil ohne Verweis auf ein Array festlegen möchten, rufen Sie [GetButtonStyle](#getbuttonstyle) auf, um den Stil abzurufen, und `SetButtons`rufen Sie dann [setbuttonstyle](#setbuttonstyle) anstelle von auf. `SetButtonStyle`ist besonders nützlich, wenn Sie den Stil einer Schaltfläche zur Laufzeit ändern möchten.
 
-Aufrufen, um die Zuweisung von Text, der auf eine Schaltfläche angezeigt werden [GetButtonText](#getbuttontext) zum Abrufen des Texts auf der Schaltfläche angezeigt, und rufen Sie anschließend ["SetButtonText"](#setbuttontext) um den Text festzulegen.
+Um Text zuzuweisen, der auf einer Schaltfläche angezeigt wird, rufen Sie [getbuttontext](#getbuttontext) auf, um den Text abzurufen, der auf der Schaltfläche angezeigt werden soll, und rufen Sie dann [SetButtonText](#setbuttontext) auf, um den Text
 
-Eine Kontrollkästchen-Schaltfläche "erstellen", weisen sie den Stil TBBS_CHECKBOX oder verwenden Sie eine `CCmdUI` des Objekts `SetCheck` Member-Funktion in einem ON_UPDATE_COMMAND_UI-Handler. Aufrufen von `SetCheck` Pushbutton in einem Kontrollkästchen-Schaltfläche aktiviert. Übergeben Sie `SetCheck` einem Argument von 0 für deaktiviert, 1 für die aktivierten oder 2 für unbestimmt.
+Um eine Kontrollkästchen-Schaltfläche zu erstellen, weisen Sie Ihr den Stil TBBS_CHECKBOX `CCmdUI` zu, `SetCheck` oder verwenden Sie die Member-Funktion eines Objekts in einem ON_UPDATE_COMMAND_UI-Handler. Durch `SetCheck` Aufrufen von wird ein PUSHBUTTON in eine Kontrollkästchen-Schaltfläche umgewandelt. Übergeben `SetCheck` Sie ein Argument von 0 für deaktiviert, 1 für aktiviert oder 2 für unbestimmt.
 
-Erstellen ein Optionsfeld, rufen eine [CCmdUI](../../mfc/reference/ccmdui-class.md) des Objekts [SetRadio](../../mfc/reference/ccmdui-class.md#setradio) Member-Funktion von einem ON_UPDATE_COMMAND_UI-Ereignishandler. Übergeben Sie `SetRadio` einem Argument von 0 deaktiviert oder ungleich NULL für überprüft. Um sich gegenseitig ausschließende Verhalten einer Optionsfeldgruppe zu gewährleisten, müssen Sie in der Gruppe ON_UPDATE_COMMAND_UI-Handler für alle Schaltflächen verfügen.
+Um ein Optionsfeld zu erstellen, rufen Sie die [setradio](../../mfc/reference/ccmdui-class.md#setradio) -Member-Funktion eines [CCmdUI](../../mfc/reference/ccmdui-class.md) -Objekts aus einem ON_UPDATE_COMMAND_UI-Handler auf. Übergeben `SetRadio` Sie ein Argument von 0 für deaktiviert oder nicht NULL für aktiviert. Um das gegenseitig ausschließende Verhalten einer Radiogruppe bereitzustellen, müssen Sie über ON_UPDATE_COMMAND_UI Handler für alle Schaltflächen in der Gruppe verfügen.
 
-Weitere Informationen zur Verwendung von `CToolBar`, finden Sie im Artikel [Implementieren der MFC-Symbolleiste](../../mfc/mfc-toolbar-implementation.md) und [technischer Hinweis 31: Steuerleisten](../../mfc/tn031-control-bars.md).
+Weitere Informationen zur Verwendung von `CToolBar`finden Sie im Artikel [MFC-Symbol](../../mfc/mfc-toolbar-implementation.md) leisten [Implementierung und Technical Note 31: Steuer leisten](../../mfc/tn031-control-bars.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -157,11 +157,11 @@ Weitere Informationen zur Verwendung von `CToolBar`, finden Sie im Artikel [Impl
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxext.h
+**Header:** Afxext. h
 
-##  <a name="commandtoindex"></a>  CToolBar::CommandToIndex
+##  <a name="commandtoindex"></a>CToolBar:: commanddeindex
 
-Diese Memberfunktion gibt den Index der ersten Symbolleisten-Schaltfläche, beginnend an Position 0 (null), dessen Befehls-ID entspricht zurück `nIDFind`.
+Diese Member-Funktion gibt den Index der ersten Symbolleisten Schaltfläche zurück, beginnend an Position 0, `nIDFind`deren Befehls-ID übereinstimmt.
 
 ```
 int CommandToIndex(UINT nIDFind) const;
@@ -170,15 +170,15 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="parameters"></a>Parameter
 
 *nIDFind*<br/>
-Befehls-ID, der eine Symbolleisten-Schaltfläche.
+Befehls-ID einer Symbolleisten-Schaltfläche.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Index der Schaltfläche oder -1, wenn keine Schaltfläche über die angegebenen Befehls-ID verfügt
+Der Index der Schaltfläche oder-1, wenn keine Schaltfläche über die angegebene Befehls-ID verfügt.
 
-##  <a name="create"></a>  Symbolleistenformate
+##  <a name="create"></a>CToolBar:: Create
 
-Diese Memberfunktion erstellt eine Windows-Symbolleiste (ein untergeordnetes Fenster) und ordnet ihn dem `CToolBar` Objekt.
+Diese Member-Funktion erstellt eine Windows-Symbolleiste (ein untergeordnetes Fenster) und `CToolBar` ordnet Sie dem-Objekt zu.
 
 ```
 virtual BOOL Create(
@@ -190,31 +190,31 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parameter
 
 *pParentWnd*<br/>
-Zeiger auf das Fenster, das Sie auf der Symbolleiste übergeordnet ist.
+Zeiger auf das Fenster, das das übergeordnete Symbol der Symbolleiste ist.
 
 *dwStyle*<br/>
-Der Stil für die Symbolleiste. Zusätzliche Toolbar-Stile, die unterstützt werden:
+Der Symbolleisten Stil. Zusätzliche Symbolleisten Stile werden unterstützt:
 
-- CBRS_TOP Steuerleiste ist am oberen Rand des Fensters Frame.
+- Die CBRS_TOP-Steuerleiste befindet sich am oberen Rand des Rahmen Fensters.
 
-- CBRS_BOTTOM Steuerleiste ist am unteren Rand der Frame-Fensters.
+- Die CBRS_BOTTOM-Steuerleiste befindet sich am unteren Rand des Rahmen Fensters.
 
-- CBRS_NOALIGN Steuerleiste ist nicht neu angeordnet, wenn das übergeordnete Element geändert wird.
+- Die CBRS_NOALIGN-Steuerleiste wird nicht neu positioniert, wenn die Größe des übergeordneten Elements geändert wird.
 
-- CBRS_TOOLTIPS-Steuerleiste werden QuickInfos angezeigt.
+- In der CBRS_TOOLTIPS-Steuerleiste werden Quick Infos angezeigt.
 
-- CBRS_SIZE_DYNAMIC Steuerleiste ist dynamisch.
+- Die CBRS_SIZE_DYNAMIC-Steuerleiste ist dynamisch.
 
-- CBRS_SIZE_FIXED Steuerleiste wurde behoben.
+- Die CBRS_SIZE_FIXED-Steuerleiste ist korrigiert.
 
-- CBRS_FLOATING Steuerleiste unverankert ist.
+- Die CBRS_FLOATING-Steuerleiste ist unverankert.
 
-- CBRS_FLYBY-Statusleiste zeigt Informationen über die Schaltfläche.
+- CBRS_FLYBY Status Leiste zeigt Informationen über die Schaltfläche an.
 
-- Steuerleiste CBRS_HIDE_INPLACE wird dem Benutzer nicht angezeigt.
+- Die CBRS_HIDE_INPLACE-Steuerleiste wird dem Benutzer nicht angezeigt.
 
 *nID*<br/>
-Der Symbolleiste auf die untergeordneten Fensters-ID.
+Die ID des untergeordneten Fensters der Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -222,15 +222,15 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Auch festgelegt die Höhe der Symbolleiste auf den Standardwert.
+Außerdem wird die Höhe der Symbolleiste auf einen Standardwert festgelegt.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocView#179](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]
 
-##  <a name="createex"></a>  CToolBar::CreateEx
+##  <a name="createex"></a>CToolBar:: kreateex
 
-Mit dieser Funktion können Sie zum Erstellen einer Windows-Symbolleiste (ein untergeordnetes Fenster), und ordnen Sie sie der `CToolBar` Objekt.
+Rufen Sie diese Funktion auf, um eine Windows-Symbolleiste (ein untergeordnetes Fenster) `CToolBar` zu erstellen und Sie dem-Objekt zuzuordnen.
 
 ```
 virtual BOOL CreateEx(
@@ -248,19 +248,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parameter
 
 *pParentWnd*<br/>
-Zeiger auf das Fenster, das Sie auf der Symbolleiste übergeordnet ist.
+Zeiger auf das Fenster, das das übergeordnete Symbol der Symbolleiste ist.
 
 *dwCtrlStyle*<br/>
-Weitere Formate für die Erstellung der eingebetteten [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) Objekt. Standardmäßig ist dieser Wert auf TBSTYLE_FLAT festgelegt. Eine vollständige Liste der Toolbar-Stile, finden Sie unter *DwStyle*.
+Zusätzliche Stile für die Erstellung des eingebetteten [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) -Objekts. Standardmäßig ist dieser Wert auf TBSTYLE_FLAT festgelegt. Eine umfassende Liste der Symbolleisten Stile finden Sie unter *dwstyle*.
 
 *dwStyle*<br/>
-Der Stil für die Symbolleiste. Finden Sie unter [Toolbar-Steuerelement und Button-Stile](/windows/desktop/Controls/toolbar-control-and-button-styles) im Windows SDK für eine Liste der entsprechenden Formate.
+Der Symbolleisten Stil. Eine Liste geeigneter Stile finden Sie unter [Symbolleisten-Steuerelement-und Schaltflächen Stile](/windows/win32/Controls/toolbar-control-and-button-styles) im Windows SDK.
 
-*rcBorders*<br/>
-Ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die Breite der Symbolleiste im Fensterrahmen definiert. Dieser Rahmen werden um 0,0,0,0 standardmäßig in einem Symbolleistenfenster mit keine Rahmen Ergebnis festgelegt.
+*rcborders*<br/>
+Ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die Breite des Symbolleisten Fensterrahmens definiert. Diese Rahmen werden standardmäßig auf 0, 0, 0 und 0 festgelegt. dadurch entsteht ein Symbolleisten Fenster ohne Rahmen.
 
 *nID*<br/>
-Der Symbolleiste auf die untergeordneten Fensters-ID.
+Die ID des untergeordneten Fensters der Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -268,17 +268,17 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Auch festgelegt die Höhe der Symbolleiste auf den Standardwert.
+Außerdem wird die Höhe der Symbolleiste auf einen Standardwert festgelegt.
 
-Verwendung `CreateEx`, anstelle von [erstellen](#create), wenn bestimmte Formate während der Erstellung der eingebetteten ToolBar-Steuerelement vorhanden sein müssen. Legen Sie z. B. *DwCtrlStyle* zu TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT zum Erstellen einer Symbolleiste, die die Internet Explorer 4 Symbolleisten ähnelt.
+Verwenden `CreateEx`Sie anstelle von [Create](#create), wenn bestimmte Stile während der Erstellung des eingebetteten Toolbar-Steuer Elements vorhanden sein müssen. Legen Sie beispielsweise *dwctrlstyle* auf TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT fest, um eine Symbolleiste zu erstellen, die den Internet Explorer 4-Symbolleisten ähnelt.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocView#180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]
 
-##  <a name="ctoolbar"></a>  CToolBar::CToolBar
+##  <a name="ctoolbar"></a>CToolBar:: CToolBar
 
-Diese Memberfunktion erstellt eine `CToolBar` -Objekt und legt die Standard-Größen.
+Diese Member-Funktion erstellt `CToolBar` ein-Objekt und legt die Standardgrößen fest.
 
 ```
 CToolBar();
@@ -286,11 +286,11 @@ CToolBar();
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie die [erstellen](#create) Memberfunktion, um das Symbolleistenfenster zu erstellen.
+Rufen Sie die Funktion [Create](#create) Member auf, um das Symbolleisten Fenster zu erstellen.
 
-##  <a name="getbuttoninfo"></a>  CToolBar::GetButtonInfo
+##  <a name="getbuttoninfo"></a>CToolBar:: getbuttoninfo
 
-Diese Memberfunktion Ruft die Steuerelement-ID, Stil und Bildindex des der Symbolleisten-Schaltfläche oder ein Trennzeichen, an dem vom angegebenen Speicherort *nIndex.*
+Diese Member-Funktion Ruft die Steuerelement-ID, den Stil und den Bild Index der Symbolleisten-Schaltfläche oder des Trenn Zeichens an der durch *nIndex* angegebenen Position ab.
 
 ```
 void GetButtonInfo(
@@ -303,26 +303,26 @@ void GetButtonInfo(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Der Index des der Symbolleisten-Schaltfläche oder ein Trennzeichen ist, zu der Informationen abgerufen werden.
+Index der Symbolleisten-Schaltfläche oder des Trenn Zeichens, dessen Informationen abgerufen werden sollen.
 
 *nID*<br/>
-Verweis auf eine "uint", die auf die Befehls-ID der Schaltfläche festgelegt wird.
+Verweis auf eine uint, die auf die Befehls-ID der Schaltfläche festgelegt ist.
 
 *nStyle*<br/>
-Verweis auf eine "uint", die den Stil der Schaltfläche festgelegt wird.
+Verweis auf einen uint-Wert, der auf den Stil der Schaltfläche festgelegt ist.
 
 *iImage*<br/>
-Verweis auf eine ganze Zahl, die auf den Index der das Bild der Schaltfläche innerhalb der Bitmap festgelegt ist.
+Verweis auf eine Ganzzahl, die auf den Index des Bilds der Schaltfläche innerhalb der Bitmap festgelegt ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Werte werden zugewiesen, auf die verwiesen wird, indem Sie Variablen *nID*, *nStyle*, und *iImage*. Der Bildindex ist die Position des Bilds innerhalb der Bitmap, die Images für die Symbolleisten-Schaltflächen enthält. Das erste Bild wird an Position 0.
+Diese Werte werden den Variablen zugewiesen, auf die von *NID*, *nstyle*und *iImage*verwiesen wird. Der Bildindex ist die Position des Bilds innerhalb der Bitmap, das Bilder für alle Symbolleisten Schaltflächen enthält. Das erste Bild befindet sich an Position 0.
 
-Wenn *nIndex* gibt ein Trennzeichen, *iImage* auf die trennzeichenbreite in Pixel festgelegt ist.
+Wenn *nIndex* ein Trennzeichen angibt, wird *iImage* auf die Trennlinie in Pixel festgelegt.
 
-##  <a name="getbuttonstyle"></a>  CToolBar::GetButtonStyle
+##  <a name="getbuttonstyle"></a>CToolBar:: GetButtonStyle
 
-Rufen Sie diese Memberfunktion um den Stil einer Schaltfläche oder ein Trennzeichen auf der Symbolleiste abzurufen.
+Rufen Sie diese Member-Funktion auf, um den Stil einer Schaltfläche oder eines Trenn Zeichens auf der Symbolleiste abzurufen.
 
 ```
 UINT GetButtonStyle(int nIndex) const;
@@ -331,19 +331,19 @@ UINT GetButtonStyle(int nIndex) const;
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Der Index für den Symbolleisten-Schaltfläche oder ein Trennzeichen Stil abgerufen werden sollen.
+Der Index der Symbolleisten Schaltfläche oder des Trenn Zeichens, das abgerufen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Darstellung der Schaltfläche oder ein Trennzeichen, die anhand des *nIndex*.
+Der Stil der Schaltfläche oder des Trenn Zeichens, das von *nIndex*angegeben wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Einer der Stil der Schaltfläche bestimmt, wie die Schaltfläche angezeigt wird und wie er auf Benutzereingaben reagiert. Finden Sie unter [SetButtonStyle](#setbuttonstyle) Beispiele für Button-Stile.
+Der Stil einer Schaltfläche bestimmt, wie die Schaltfläche angezeigt wird und wie Sie auf Benutzereingaben reagiert. Beispiele für Schaltflächen Stile finden Sie unter [setbuttonstyle](#setbuttonstyle) .
 
-##  <a name="getbuttontext"></a>  CToolBar::GetButtonText
+##  <a name="getbuttontext"></a>CToolBar:: getbuttontext
 
-Rufen Sie diese Memberfunktion zum Abrufen des Texts, der auf eine Schaltfläche angezeigt wird.
+Rufen Sie diese Element Funktion auf, um den Text abzurufen, der auf einer Schaltfläche angezeigt wird.
 
 ```
 CString GetButtonText(int nIndex) const;
@@ -356,22 +356,22 @@ void GetButtonText(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Der Index des Texts abgerufen werden sollen.
+Der Index des abzurufenden Texts.
 
 *rString*<br/>
-Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt, enthält den Text abgerufen werden sollen.
+Ein Verweis auf ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, das den Text enthält, der abgerufen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `CString` -Objekt, das den Text der Schaltfläche enthält.
+Ein `CString` -Objekt, das den Schaltflächen Text enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Die zweite Form dieses Members-Funktion füllt eine `CString` Objekt mit der Text der Zeichenfolge.
+Die zweite Form dieser Member-Funktion füllt ein `CString` -Objekt mit dem Zeichen folgen Text.
 
-##  <a name="getitemid"></a>  CToolBar::GetItemID
+##  <a name="getitemid"></a>CToolBar:: getItemID
 
-Diese Memberfunktion gibt die Befehls-ID der Schaltfläche oder ein Trennzeichen, die anhand des *nIndex*.
+Diese Member-Funktion gibt die Befehls-ID der durch *nIndex*angegebenen Schaltfläche oder des Trenn Zeichens zurück.
 
 ```
 UINT GetItemID(int nIndex) const;
@@ -380,19 +380,19 @@ UINT GetItemID(int nIndex) const;
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Der Index des Elements, dessen ID abgerufen werden sollen.
+Index des Elements, dessen ID abgerufen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Befehls-ID der Schaltfläche oder ein Trennzeichen, die anhand des *nIndex*.
+Die Befehls-ID der durch *nIndex*angegebenen Schaltfläche oder des Trenn Zeichens.
 
 ### <a name="remarks"></a>Hinweise
 
-Trennzeichen zurück ID_SEPARATOR
+Trennzeichen geben ID_SEPARATOR zurück.
 
-##  <a name="getitemrect"></a>  CToolBar::GetItemRect
+##  <a name="getitemrect"></a>CToolBar:: GetItemRect
 
-Diese Member-Funktion füllt die `RECT` Struktur, deren Adresse sich im befindet *LpRect* mit den Koordinaten der der Schaltfläche oder ein Trennzeichen, die anhand des *nIndex*.
+Diese Member-Funktion füllt `RECT` die-Struktur, deren Adresse in *lprect* enthalten ist, mit den Koordinaten der Schaltfläche oder des Trenn Zeichens, das von *nIndex*angegeben wird.
 
 ```
 virtual void GetItemRect(
@@ -403,24 +403,24 @@ virtual void GetItemRect(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Der Index des Elements (Schaltfläche oder ein Trennzeichen), dessen Rechteckkoordinaten sind, abgerufen werden sollen.
+Index des Elements (Schaltfläche oder Trennzeichen), dessen Rechteck Koordinaten abgerufen werden sollen.
 
 *lpRect*<br/>
-Adresse von der [RECT](/windows/desktop/api/windef/ns-windef-tagrect) -Struktur, die Koordinaten für das Element enthält.
+Adresse der [Rect](/windows/win32/api/windef/ns-windef-rect) -Struktur, die die Koordinaten des Elements enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Koordinaten werden in Pixel relativ zur oberen linken Ecke der Symbolleiste.
+Die Koordinaten befinden sich in Pixel relativ zur linken oberen Ecke der Symbolleiste.
 
-Verwendung `GetItemRect` um die Koordinaten eines Trennzeichens erhalten Sie mit einem Kombinationsfeld oder ein anderes Steuerelement ersetzen möchten.
+Verwenden `GetItemRect` Sie, um die Koordinaten eines Trenn Zeichens zu erhalten, das Sie durch ein Kombinations Feld oder ein anderes Steuerelement ersetzen möchten.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CToolBar::SetSizes](#setsizes).
+  Weitere Informationen finden Sie im Beispiel für [CToolBar:: setSizes](#setsizes).
 
-##  <a name="gettoolbarctrl"></a>  GetToolBarCtrl
+##  <a name="gettoolbarctrl"></a>CToolBar:: GetToolBarCtrl
 
-Diese Memberfunktion ermöglicht den direkten Zugriff auf die zugrunde liegende allgemeine-Steuerelement.
+Diese Member-Funktion ermöglicht den direkten Zugriff auf das zugrunde liegende allgemeine Steuerelement.
 
 ```
 CToolBarCtrl& GetToolBarCtrl() const;
@@ -432,17 +432,17 @@ Ein Verweis auf ein `CToolBarCtrl`-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung `GetToolBarCtrl` nutzen die Funktionalität des allgemeinen Windows Symbolleisten-Steuerelements, und die Unterstützung nutzen [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) stellt zum Anpassen von Symbolleisten bereit.
+Verwenden `GetToolBarCtrl` Sie, um die Funktionalität des allgemeinen Windows-Symbolleisten-Steuer Elements zu nutzen und die Unterstützung von [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) für die Anpassung der Symbolleiste zu nutzen.
 
-Weitere Informationen zum Verwenden von allgemeinen Steuerelementen finden Sie im Artikel [Steuerelemente](../../mfc/controls-mfc.md) und [Standardsteuerelementen](/windows/desktop/Controls/common-controls-intro) im Windows SDK.
+Weitere Informationen zum Verwenden von allgemeinen Steuerelementen finden Sie im Artikel Steuer [Elemente](../../mfc/controls-mfc.md) und [Allgemeine Steuerelemente](/windows/win32/Controls/common-controls-intro) in der Windows SDK.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCDocViewSDI#15](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]
 
-##  <a name="loadbitmap"></a>  CToolBar::LoadBitmap
+##  <a name="loadbitmap"></a>CToolBar:: LoadBitmap
 
-Rufen Sie diese Memberfunktion zum Laden der Bitmap, die anhand des `lpszResourceName` oder `nIDResource`.
+Mit dieser Member-Funktion können Sie die durch `lpszResourceName` or `nIDResource`angegebene Bitmap laden.
 
 ```
 BOOL LoadBitmap(LPCTSTR lpszResourceName);
@@ -452,10 +452,10 @@ BOOL LoadBitmap(UINT nIDResource);
 ### <a name="parameters"></a>Parameter
 
 *lpszResourceName*<br/>
-Zeiger auf den Ressourcennamen der Bitmap geladen werden.
+Zeiger auf den Ressourcennamen der zu ladenden Bitmap.
 
 *nIDResource*<br/>
-Ressourcen-ID der Bitmap geladen werden.
+Die Ressourcen-ID der Bitmap, die geladen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -463,14 +463,14 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Die Bitmap muss es sich um ein Abbild für jede Symbolleisten-Schaltfläche enthalten. Wenn die Images nicht vom die Standardgröße (16 Pixel breit und 15 Pixeln) Aufruf [SetSizes](#setsizes) auf die Schaltfläche Größen und Images festlegen.
+Die Bitmap sollte für jede Symbolleisten Schaltfläche ein Bild enthalten. Wenn die Bilder nicht die Standardgröße haben (16 Pixel breit und 15 Pixel hoch), können Sie [setSizes](#setsizes) aufrufen, um die Schaltflächen Größen und Ihre Bilder festzulegen.
 
 > [!WARNING]
-> `CToolBar` unterstützt die Bitmaps mit maximal 16 Farben. Wenn Sie ein Bild in einem Symbolleisten-Editor laden, Visual Studio automatisch konvertiert das Bild in eine Bitmap 16 Farben, bei Bedarf, und eine Warnung angezeigt, wenn das Image konvertiert wurde. Wenn Sie ein Image mit mehr als 16 Farben (mit einem externen Editor so bearbeiten Sie das Bild) verwenden, kann die Anwendung unerwartet verhält.
+> `CToolBar`unterstützt Bitmaps mit maximal 16 Farben. Wenn Sie ein Bild in einen Symbolleisten-Editor laden, konvertiert Visual Studio das Bild bei Bedarf automatisch in eine 16-farbige Bitmap und zeigt eine Warnmeldung an, wenn das Image konvertiert wurde. Wenn Sie ein Bild mit mehr als 16 Farben (mit einem externen Editor zum Bearbeiten des Bilds) verwenden, verhält sich die Anwendung möglicherweise unerwartet.
 
-##  <a name="loadtoolbar"></a>  CToolBar::LoadToolBar
+##  <a name="loadtoolbar"></a>CToolBar:: LoadToolBar
 
-Rufen Sie diese Memberfunktion zum Laden der Symbolleiste, die anhand des *LpszResourceName* oder *nIDResource*.
+Mit dieser Member-Funktion können Sie die von *lpszresourcename* oder *nidresource*angegebene Symbolleiste laden.
 
 ```
 BOOL LoadToolBar(LPCTSTR lpszResourceName);
@@ -480,10 +480,10 @@ BOOL LoadToolBar(UINT nIDResource);
 ### <a name="parameters"></a>Parameter
 
 *lpszResourceName*<br/>
-Zeiger auf den Ressourcennamen der Symbolleiste geladen werden.
+Zeiger auf den Ressourcennamen der Symbolleiste, die geladen werden soll.
 
 *nIDResource*<br/>
-Ressourcen-ID der Symbolleiste geladen werden.
+Die Ressourcen-ID der zu ladenden Symbolleiste.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -491,15 +491,15 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Finden Sie unter [Symbolleisten-Editor](../../windows/toolbar-editor.md) in Weitere Informationen zum Erstellen einer Symbolleistenressource.
+Weitere Informationen zum Erstellen einer Symbolleisten Ressource finden Sie unter Symbolleisten- [Editor](../../windows/toolbar-editor.md) in.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CToolBar::CreateEx](#createex).
+  Weitere Informationen finden Sie im Beispiel für [CToolBar::](#createex)up-Ex.
 
-##  <a name="setbitmap"></a>  CToolBar::SetBitmap
+##  <a name="setbitmap"></a>CToolBar:: SetBitmap
 
-Rufen Sie diese Memberfunktion, um das Bitmap-Bild für die Symbolleiste festzulegen.
+Mit dieser Member-Funktion wird das Bitmap-Bild für die Symbolleiste festgelegt.
 
 ```
 BOOL SetBitmap(HBITMAP hbmImageWell);
@@ -508,7 +508,7 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 ### <a name="parameters"></a>Parameter
 
 *hbmImageWell*<br/>
-Handle einer Bitmap, die eine Symbolleiste zugeordnet ist.
+Handle eines Bitmap-Bilds, das einer Symbolleiste zugeordnet ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -516,11 +516,11 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie z. B. `SetBitmap` als Bitmap verfügbares Bild zu ändern, nachdem der Benutzer eine Aktion in einem Dokument ausführt, die die Aktion einer Schaltfläche ändert.
+Beispielsweise wird aufgerufen `SetBitmap` , um das Bitmap-Bild zu ändern, nachdem der Benutzer eine Aktion für ein Dokument durchführt, das die Aktion einer Schaltfläche ändert.
 
-##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo
+##  <a name="setbuttoninfo"></a>CToolBar:: SetButtonInfo
 
-Rufen Sie diese Memberfunktion zum Festlegen der Befehls-ID, Stil und Image-Anzahl der Schaltfläche.
+Mit dieser Member-Funktion können Sie die Befehls-ID, den Stil und die Bildnummer der Schaltfläche festlegen.
 
 ```
 void SetButtonInfo(
@@ -533,45 +533,45 @@ void SetButtonInfo(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Nullbasierte Index der Schaltfläche oder ein Trennzeichen, die für den Informationen sind, festgelegt werden.
+NULL basierter Index der Schaltfläche oder des Trenn Zeichens, für das Informationen festgelegt werden sollen.
 
 *nID*<br/>
-Der Wert, der auf den Befehls-ID der Schaltfläche festgelegt ist.
+Der Wert, auf den die Befehls-ID der Schaltfläche festgelegt wird.
 
 *nStyle*<br/>
-Die neue Schaltflächen-Formatvorlage. Die folgenden Button-Stile werden unterstützt:
+Der neue Schaltflächen Stil. Die folgenden Schaltflächen Stile werden unterstützt:
 
-- TBBS_BUTTON standardmäßige Pushbutton (Standard)
+- TBBS_BUTTON Standard-PUSHBUTTON (Standard)
 
-- TBBS_SEPARATOR Trennzeichen
+- TBBS_SEPARATOR-Trennzeichen
 
-- TBBS_CHECKBOX automatisch Kontrollkästchen Schaltfläche
+- TBBS_CHECKBOX Schaltfläche "automatisch aktivieren"
 
-- TBBS_GROUP kennzeichnet den Anfang einer Gruppe von Schaltflächen
+- TBBS_GROUP markiert den Anfang einer Gruppe von Schaltflächen.
 
-- TBBS_CHECKGROUP kennzeichnet den Anfang einer Gruppe von Kontrollkästchen-Schaltflächen
+- TBBS_CHECKGROUP markiert den Anfang einer Gruppe von Kontrollkästchen-Schaltflächen.
 
-- TBBS_DROPDOWN erstellt eine Dropdown-Listenfeld-Schaltfläche.
+- TBBS_DROPDOWN erstellt eine Dropdown Listen Schaltfläche.
 
-- TBBS_AUTOSIZE, die die Breite der Schaltfläche berechnet werden sollen, basierend auf den Text der Schaltfläche nicht auf die Größe des Bilds.
+- TBBS_AUTOSIZE die Breite der Schaltfläche wird basierend auf dem Text der Schaltfläche berechnet, nicht mit der Größe des Bilds.
 
-- TBBS_NOPREFIX müssen den Text der Schaltfläche kein Accelerator-Präfix zugeordnet.
+- TBBS_NOPREFIX dem Schaltflächen Text wird kein Zugriffstasten Präfix zugeordnet.
 
 *iImage*<br/>
-Neue Index für das Bild der Schaltfläche innerhalb der Bitmap.
+Neuer Index für das Bild der Schaltfläche innerhalb der Bitmap.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion legt für Trennzeichen, die den Stil TBBS_SEPARATOR verfügen, das Trennzeichen für die Breite in Pixel um den Wert, der in gespeicherten *iImage*.
+Für Trennzeichen, die den Stil TBBS_SEPARATOR haben, legt diese Funktion die Breite des Trenn Zeichens in Pixel auf den in *iImage*gespeicherten Wert fest.
 
 > [!NOTE]
->  Sie können auch festlegen, Schaltflächenstatus mithilfe der *nStyle* Parameter, aber da Schaltflächenstatus von gesteuert werden die [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) Handler auf, einen Status Sie festlegen, über `SetButtonInfo` verloren während der Verarbeitung der nächsten im Leerlauf befindet. Finden Sie unter [Aktualisieren von Benutzeroberflächenobjekten](../../mfc/how-to-update-user-interface-objects.md) und [TN031: Steuerleisten](../../mfc/tn031-control-bars.md) für Weitere Informationen.
+>  Sie können auch die Schaltflächen Zustände mithilfe des *nstyle* -Parameters festlegen. Da Schaltflächen Status jedoch vom [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) -Handler gesteuert werden, gehen alle Zustände, die `SetButtonInfo` Sie mithilfe von festlegen, während der nächsten Leerlauf Verarbeitung verloren. Weitere Informationen finden [Sie unter Aktualisieren von Benutzeroberflächen Objekten](../../mfc/how-to-update-user-interface-objects.md) und [TN031: Steuer leisten](../../mfc/tn031-control-bars.md) , um weitere Informationen zu finden.
 
-Informationen zu Schaltflächen und Bitmapbilder, finden Sie unter den [CToolBar](../../mfc/reference/ctoolbar-class.md) Übersicht und [CToolBar::LoadBitmap](#loadbitmap).
+Informationen zu Bitmap-Bildern und-Schaltflächen finden Sie unter Übersicht über [CToolBar](../../mfc/reference/ctoolbar-class.md) und [CToolBar:: LoadBitmap](#loadbitmap).
 
-##  <a name="setbuttons"></a>  CToolBar::SetButtons
+##  <a name="setbuttons"></a>CToolBar:: SetButtons
 
-Diese Memberfunktion wird die Befehls-ID für jede der Symbolleisten-Schaltfläche auf den Wert, der durch das entsprechende Element des Arrays angegeben *LpIDArray*.
+Diese Member-Funktion legt die Befehls-ID jeder Symbolleisten-Schaltfläche auf den Wert fest, der durch das entsprechende Element des Arrays *lpidarray*angegeben wird.
 
 ```
 BOOL SetButtons(
@@ -582,10 +582,10 @@ BOOL SetButtons(
 ### <a name="parameters"></a>Parameter
 
 *lpIDArray*<br/>
-Zeiger auf ein Array mit Befehls-Ids. Es kann NULL, um leere Schaltflächen zugeordnet sein.
+Zeiger auf ein Array von Befehls-IDs. Der Wert kann NULL sein, um leere Schaltflächen zuzuordnen.
 
 *nIDCount*<br/>
-Anzahl der Elemente im Array zeigt *LpIDArray*.
+Anzahl der Elemente im Array, auf die von *lpidarray*verwiesen wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -593,15 +593,15 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn ein Element des Arrays der Wert ID_SEPARATOR verfügt, wird eine Trennzeichen in der entsprechenden Position der Symbolleiste erstellt. Diese Funktion auch jede Schaltfläche-Formatvorlage TBBS_BUTTON und jede Trennzeichenstil zu TBBS_SEPARATOR, und jede Schaltfläche einen Bildindex zugewiesen. Der Bildindex gibt die Position der das Bild der Schaltfläche innerhalb der Bitmap an.
+Wenn ein Element des Arrays den Wert ID_SEPARATOR aufweist, wird ein Trennzeichen an der entsprechenden Position der Symbolleiste erstellt. Mit dieser Funktion wird auch der Stil der einzelnen Schaltflächen auf TBBS_BUTTON und der Stil jedes Trenn Zeichens auf TBBS_SEPARATOR festgelegt, und jeder Schaltfläche wird ein Bild Index zugewiesen. Der Bildindex gibt die Position des Bild der Schaltfläche innerhalb der Bitmap an.
 
-Sie müssen nicht für Trennzeichen in der Bitmap zu berücksichtigen, da diese Funktion nicht Bildindizes für Trennzeichen zuweist. Wenn eine Symbolleiste Schaltflächen an den Positionen 0 verfügt, werden 1 und 3 und ein Trennzeichen an Position 2, die Bilder an den Positionen, die in der Bitmap 0, 1 und 2 auf die Schaltflächen an den Positionen, 0, 1 und 3, zugewiesen.
+Es ist nicht erforderlich, Trennzeichen in der Bitmap zu berücksichtigen, da diese Funktion keine Bild Indizes für Trennzeichen zuweist. Wenn die Symbolleiste über Schaltflächen an den Positionen 0, 1 und 3 und ein Trennzeichen an Position 2 verfügt, werden die Bilder an den Positionen 0, 1 und 2 in der Bitmap den Schaltflächen an den Positionen 0, 1 bzw. 3 zugewiesen.
 
-Wenn *LpIDArray* NULL ist, weist diese Funktion Speicherplatz für die Anzahl der Elemente, die anhand des *nIDCount*. Verwendung [SetButtonInfo](#setbuttoninfo) jedes Elements Attribute festlegen.
+Wenn *lpidarray* den Wert NULL hat, ordnet diese Funktion Platz für die Anzahl von Elementen zu, die von *nidcount*angegeben werden. Verwenden Sie [SetButtonInfo](#setbuttoninfo) , um die Attribute jedes Elements festzulegen.
 
-##  <a name="setbuttonstyle"></a>  CToolBar::SetButtonStyle
+##  <a name="setbuttonstyle"></a>CToolBar:: setbuttonstyle
 
-Rufen Sie diese Memberfunktion um den Stil einer Schaltfläche oder ein Trennzeichen oder gruppieren festzulegen.
+Mit dieser Member-Funktion können Sie den Stil einer Schaltfläche oder eines Trenn Zeichens festlegen oder Schaltflächen gruppieren.
 
 ```
 void SetButtonStyle(
@@ -612,39 +612,39 @@ void SetButtonStyle(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Der Index der Schaltfläche oder ein Trennzeichen ist, dessen Informationen festgelegt werden.
+Index der Schaltfläche oder des Trenn Zeichens, dessen Informationen festgelegt werden sollen.
 
 *nStyle*<br/>
-Das Schaltflächen-Formatvorlage. Die folgenden Button-Stile werden unterstützt:
+Der Stil der Schaltfläche. Die folgenden Schaltflächen Stile werden unterstützt:
 
-- TBBS_BUTTON standardmäßige Pushbutton (Standard)
+- TBBS_BUTTON Standard-PUSHBUTTON (Standard)
 
-- TBBS_SEPARATOR Trennzeichen
+- TBBS_SEPARATOR-Trennzeichen
 
-- TBBS_CHECKBOX automatisch Kontrollkästchen Schaltfläche
+- TBBS_CHECKBOX Schaltfläche "automatisch aktivieren"
 
-- TBBS_GROUP kennzeichnet den Anfang einer Gruppe von Schaltflächen
+- TBBS_GROUP markiert den Anfang einer Gruppe von Schaltflächen.
 
-- TBBS_CHECKGROUP kennzeichnet den Anfang einer Gruppe von Kontrollkästchen-Schaltflächen
+- TBBS_CHECKGROUP markiert den Anfang einer Gruppe von Kontrollkästchen-Schaltflächen.
 
-- TBBS_DROPDOWN erstellt eine Dropdown-Listenfeld-Schaltfläche
+- TBBS_DROPDOWN erstellt eine Dropdown Listen Schaltfläche.
 
-- TBBS_AUTOSIZE, die die Breite der Schaltfläche berechnet werden basierend auf den Text der Schaltfläche nicht auf die Größe des Bilds
+- TBBS_AUTOSIZE die Breite der Schaltfläche wird basierend auf dem Text der Schaltfläche berechnet, nicht auf der Größe des Bilds.
 
-- TBBS_NOPREFIX den Text der Schaltfläche ein Accelerator-Präfix zugeordnet haben keinen
+- TBBS_NOPREFIX dem Schaltflächen Text wird kein Zugriffstasten Präfix zugeordnet.
 
 ### <a name="remarks"></a>Hinweise
 
-Einer der Stil der Schaltfläche bestimmt, wie die Schaltfläche angezeigt wird und wie er auf Benutzereingaben reagiert.
+Der Stil einer Schaltfläche bestimmt, wie die Schaltfläche angezeigt wird und wie Sie auf Benutzereingaben reagiert.
 
-Vor dem Aufruf `SetButtonStyle`, rufen Sie die [GetButtonStyle](#getbuttonstyle) Memberfunktion versucht, den Stil Schaltfläche oder ein Trennzeichen abzurufen.
+Rufen Sie `SetButtonStyle`vor dem Aufrufen der [GetButtonStyle](#getbuttonstyle) -Element Funktion auf, um die Schaltfläche oder den Trenn Zeichenstil abzurufen.
 
 > [!NOTE]
->  Sie können auch festlegen, Schaltflächenstatus mithilfe der *nStyle* Parameter, aber da Schaltflächenstatus von gesteuert werden die [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) Handler auf, einen Status Sie festlegen, über `SetButtonStyle` verloren während der Verarbeitung der nächsten im Leerlauf befindet. Finden Sie unter [Aktualisieren von Benutzeroberflächenobjekten](../../mfc/how-to-update-user-interface-objects.md) und [TN031: Steuerleisten](../../mfc/tn031-control-bars.md) für Weitere Informationen.
+>  Sie können auch die Schaltflächen Zustände mithilfe des *nstyle* -Parameters festlegen. Da Schaltflächen Status jedoch vom [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) -Handler gesteuert werden, gehen alle Zustände, die `SetButtonStyle` Sie mithilfe von festlegen, während der nächsten Leerlauf Verarbeitung verloren. Weitere Informationen finden [Sie unter Aktualisieren von Benutzeroberflächen Objekten](../../mfc/how-to-update-user-interface-objects.md) und [TN031: Steuer leisten](../../mfc/tn031-control-bars.md) , um weitere Informationen zu finden.
 
-##  <a name="setbuttontext"></a>  CToolBar::SetButtonText
+##  <a name="setbuttontext"></a>CToolBar:: SetButtonText
 
-Rufen Sie diese Funktion, um den Text auf einer Schaltfläche festzulegen.
+Mit dieser Funktion können Sie den Text auf einer Schaltfläche festlegen.
 
 ```
 BOOL SetButtonText(
@@ -655,10 +655,10 @@ BOOL SetButtonText(
 ### <a name="parameters"></a>Parameter
 
 *nIndex*<br/>
-Der Index der Schaltfläche, dessen Text befindet, festgelegt werden.
+Index der Schaltfläche, deren Text festgelegt werden soll.
 
 *lpszText*<br/>
-Zeigt auf den Text auf einer Schaltfläche festgelegt werden.
+Zeigt auf den Text, der auf einer Schaltfläche festgelegt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -666,11 +666,11 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [GetToolBarCtrl](#gettoolbarctrl).
+  Weitere Informationen finden Sie im Beispiel für [CToolBar:: GetToolBarCtrl](#gettoolbarctrl).
 
-##  <a name="setheight"></a>  CToolBar::SetHeight
+##  <a name="setheight"></a>CToolBar:: Ort
 
-Diese Memberfunktion legt der Symbolleiste auf die Höhe auf den Wert in Pixel im angegebenen *CyHeight*.
+Diese Member-Funktion legt die Höhe der Symbolleiste auf den in *cyheight*angegebenen Wert in Pixel fest.
 
 ```
 void SetHeight(int cyHeight);
@@ -678,18 +678,18 @@ void SetHeight(int cyHeight);
 
 ### <a name="parameters"></a>Parameter
 
-*cyHeight*<br/>
-Die Höhe in Pixel der Symbolleiste.
+*cyheight*<br/>
+Die Höhe der Symbolleiste in Pixel.
 
 ### <a name="remarks"></a>Hinweise
 
-Nach dem Aufruf [SetSizes](#setsizes), verwenden Sie diese Memberfunktion auf, um die Höhe der Standardsymbolleiste überschreiben. Wenn die Höhe zu klein ist, werden die Schaltflächen am unteren Rand abgeschnitten.
+Verwenden Sie nach dem Aufrufen von [setSizes](#setsizes)diese Member-Funktion, um die Standard Symbolleisten Höhe zu überschreiben. Wenn die Höhe zu klein ist, werden die Schaltflächen unten abgeschnitten.
 
-Wenn diese Funktion nicht aufgerufen wird, verwendet das Framework die Größe der Schaltfläche, um zu bestimmen, der die Höhe der Symbolleiste.
+Wenn diese Funktion nicht aufgerufen wird, verwendet das Framework die Größe der Schaltfläche, um die Höhe der Symbolleiste zu bestimmen.
 
-##  <a name="setsizes"></a>  CToolBar::SetSizes
+##  <a name="setsizes"></a>CToolBar:: setSizes
 
-Rufen Sie diese Memberfunktion, um die Schaltflächen der Symbolleiste auf die Größe in Pixel im angegebenen festzulegen *SizeButton*.
+Diese Member-Funktion wird aufgerufen, um die Schaltflächen der Symbolleiste auf die in *sizeButton*angegebene Größe in Pixel festzulegen.
 
 ```
 void SetSizes(
@@ -700,16 +700,16 @@ void SetSizes(
 ### <a name="parameters"></a>Parameter
 
 *sizeButton*<br/>
-Die Größe in Pixel der einzelnen Schaltflächen.
+Die Größe der einzelnen Schaltflächen in Pixel.
 
 *sizeImage*<br/>
-Die Größe des jedes Bilds in Pixel an.
+Die Größe jedes Bilds in Pixel.
 
 ### <a name="remarks"></a>Hinweise
 
-Die *SizeImage* Parameter darf die Größe der Bilder in der Symbolleiste auf die Bitmap in Pixel. Die Dimensionen in *SizeButton* muss ausreichend, um das Bild plus 7 Pixel, die zusätzliche Breite und zusätzliche in Höhe von 6 Pixel enthalten sein. Diese Funktion legt auch die Höhe der Symbolleiste die Schaltflächen anpassen.
+Der *sizeimage* -Parameter muss die Größe der Bilder in der Bitmap der Symbolleiste in Pixel enthalten. Die Dimensionen in *sizeButton* müssen ausreichend sein, um das Bild plus 7 Pixel zusätzlich in der Breite und 6 Pixel zusätzliche Höhe zu halten. Diese Funktion legt auch die Höhe der Symbolleiste auf die Schaltflächen fest.
 
-Rufen Sie diese Memberfunktion nur für Symbolleisten, die nicht folgen *Richtlinien der Windows-Benutzeroberfläche für den Softwareentwurf* Empfehlungen für die Schaltfläche und Image-Größen.
+Diese Member-Funktion wird nur für Symbolleisten aufgerufen, die nicht den *Richtlinien der Windows-Benutzeroberfläche für Software Entwurfs* Empfehlungen für Schaltflächen-und Bildgrößen folgen.
 
 ### <a name="example"></a>Beispiel
 
@@ -717,7 +717,7 @@ Rufen Sie diese Memberfunktion nur für Symbolleisten, die nicht folgen *Richtli
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Muster CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel-CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [MFC-Beispiel DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
 [MFC-Beispiel DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar-Klasse](../../mfc/reference/ccontrolbar-class.md)<br/>

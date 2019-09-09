@@ -1,21 +1,21 @@
 ---
-title: Usesgetlasterror (C++-COM-Attribut)
+title: "\"US-GetLastErrorC++ \" (com-Attribut)"
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.usesgetlasterror
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407067"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513890"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-Wird dem Aufrufer mitgeteilt, dass bei wird ein Fehler beim Aufrufen dieser Funktion klicken Sie dann der Aufrufer aufrufen kann `GetLastError` auf den Fehlercode abzurufen.
+Teilt dem Aufrufer mit, dass der Aufrufer dann aufrufen `GetLastError` kann, um den Fehlercode abzurufen, wenn beim Aufrufen der Funktion ein Fehler auftritt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Wird dem Aufrufer mitgeteilt, dass bei wird ein Fehler beim Aufrufen dieser Funk
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Usesgetlasterror** C++-Attribut hat die gleiche Funktionalität wie die [Usesgetlasterror](/windows/desktop/Midl/usesgetlasterror) MIDL-Attribut.
+Das C++ Attribut " [" des](/windows/win32/Midl/usesgetlasterror) Attributs "" ist die gleiche Funktionalität wie das Attribut "" von "" in "".
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter den [Idl_module](idl-module.md) Beispiel zur Verwendung **Usesgetlasterror**.
+Im Beispiel [idl_module](idl-module.md) finden Sie ein Beispiel für die Verwendung von " **" mit "".**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,10 +37,10 @@ Finden Sie unter den [Idl_module](idl-module.md) Beispiel zur Verwendung **Usesg
 
 |||
 |-|-|
-|**Betrifft**|**Modul** Attribut|
+|**Betrifft**|**Module** -Attribut|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 
