@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: a23bc489fce00d9ba0be6a3aa71468b469bf54c8
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: fc7c64ada1100b0fc0a51670de3e8ec04b141b04
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177408"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741645"
 ---
 # <a name="colecurrency-class"></a>COleCurrency-Klasse
 
@@ -128,7 +128,7 @@ Alle diese Konstruktoren erstellen neue `COleCurrency` Objekte, die mit dem ange
 
 - COleCurrency () erstellt ein `COleCurrency` -Objekt, das mit 0 (null) initialisiert wird.
 
-- COleCurrency (`cySrc`) erstellt ein `COleCurrency` -Objekt aus einem [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy) Wert.
+- COleCurrency (`cySrc`) erstellt ein `COleCurrency` -Objekt aus einem [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy~r1) Wert.
 
 - COleCurrency (`curSrc`) erstellt ein `COleCurrency` -Objekt aus einem `COleCurrency` vorhandenen-Objekt. Das neue-Objekt hat denselben Status wie das Quell Objekt.
 
@@ -136,7 +136,7 @@ Alle diese Konstruktoren erstellen neue `COleCurrency` Objekte, die mit dem ange
 
 - `COleCurrency(`nunits`, `nfractionalunits`) Constructs a `COleCurrency-Objekt aus den angegebenen numerischen Komponenten. Wenn der absolute Wert des Bruchteils größer als 10.000 ist, wird die entsprechende Anpassung an den Einheiten vorgenommen. Beachten Sie, dass die Einheiten und die Bruchteile durch signierte Long-Werte angegeben werden.
 
-Weitere Informationen finden Sie in den [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy) -und [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) -Einträgen in der Windows SDK.
+Weitere Informationen finden Sie in den [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy~r1) -und [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) -Einträgen in der Windows SDK.
 
 ### <a name="example"></a>Beispiel
 
@@ -236,14 +236,14 @@ Weitere Informationen zu Vorgängen, die den Status als ungültig festlegen kön
 
 ##  <a name="m_cur"></a>COleCurrency:: m_cur
 
-Die zugrunde liegende [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy) Struktur für `COleCurrency` dieses-Objekt.
+Die zugrunde liegende [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy~r1) Struktur für `COleCurrency` dieses-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
 > [!CAUTION]
 >  Wenn Sie den Wert in `CURRENCY` der Struktur ändern, auf die der von dieser Funktion zurückgegebene Zeiger zugreift `COleCurrency` , wird der Wert dieses Objekts geändert. Der Status dieses `COleCurrency` Objekts wird nicht geändert.
 
-Weitere Informationen finden Sie im [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy) Eintrag in der Windows SDK.
+Weitere Informationen finden Sie im [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy~r1) Eintrag in der Windows SDK.
 
 ##  <a name="m_status"></a>COleCurrency:: m_status
 
@@ -314,7 +314,7 @@ Eine kurze Beschreibung der einzelnen Operatoren folgt:
 
 - **Operator = (** *varSrc* **)** Wenn die Konvertierung `VARIANT` des Werts (oder des [COleVariant](../../mfc/reference/colevariant-class.md) -Objekts) in eine Währung `VT_CY`() erfolgreich ist, wird der konvertierte Wert in `COleCurrency` dieses Objekt kopiert und sein Status auf "gültig" festgelegt. Wenn die Konvertierung nicht erfolgreich ist, wird der Wert des `COleCurrency` -Objekts auf 0 und dessen Status auf ungültig festgelegt.
 
-Weitere Informationen finden Sie in den [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy) -und [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) -Einträgen in der Windows SDK.
+Weitere Informationen finden Sie in den [Währungs](/windows/win32/api/wtypes/ns-wtypes-cy~r1) -und [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) -Einträgen in der Windows SDK.
 
 ### <a name="example"></a>Beispiel
 

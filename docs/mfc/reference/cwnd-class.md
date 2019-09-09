@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 5e7a0b0d7f5c41c60fc10784518c4c075c13f778
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bbd1f60c3628d5fcd103e220362004ec34ab2c41
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502141"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740993"
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 
@@ -2075,7 +2075,7 @@ Gibt die ID des Steuer Elements an.
 Ein Zeiger auf eine [CFile-Datei](../../mfc/reference/cfile-class.md) , die den persistenten Zustand für das Steuerelement enthält. Der Standardwert ist NULL, was bedeutet, dass das Steuerelement selbst initialisiert wird, ohne seinen Zustand aus einem persistenten Speicher wiederherzustellen. Wenn nicht NULL, sollte es sich um einen Zeiger auf `CFile`ein von abgeleitetes Objekt handeln, das die persistenten Daten des Steuer Elements in Form eines Datenstroms oder eines Speichers enthält. Diese Daten wurden möglicherweise bei einer früheren Aktivierung des Clients gespeichert. Der `CFile` kann andere Daten enthalten, muss jedoch zum Zeitpunkt des `CreateControl`Aufrufes auf das erste Byte der persistenten Daten festgelegt sein.
 
 *bStorage*<br/>
-Gibt an, ob die Daten in ppersistent als IStorage-oder IStream-Daten interpretiert werden sollen. Wenn es sich bei den ppersistent-Daten um einen Speicher handelt, sollte *bstorage* den Wert true haben. Wenn es sich bei den ppersistent-Daten um einen Stream handelt, sollte *bstorage* den Wert false aufweisen. Der Standardwert ist false.
+Gibt an, ob die Daten in *ppersistent* als IStorage-oder IStream-Daten interpretiert werden sollen. Wenn es sich bei den *ppersistent* -Daten um einen Speicher handelt, sollte *bstorage* den Wert true haben. Wenn es sich bei den *ppersistent* -Daten um einen Stream handelt, sollte *bstorage* den Wert false aufweisen. Der Standardwert ist false.
 
 *bstrLicKey*<br/>
 Optionale Lizenzschlüssel Daten. Diese Daten werden nur zum Erstellen von Steuerelementen benötigt, für die ein Laufzeitlizenz Schlüssel erforderlich ist. Wenn das Steuerelement die Lizenzierung unterstützt, müssen Sie einen Lizenzschlüssel bereitstellen, damit die Erstellung des Steuer Elements erfolgreich ist. Der Standardwert ist NULL.
@@ -2864,12 +2864,12 @@ TRUE, wenn Quick Infos aktiviert sind. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Überschreiben Sie [ontoolhittest](#ontoolhittest) , um die [toolinfo](/windows/win32/api/commctrl/ns-commctrl-toolinfow) -Struktur oder Strukturen für das Fenster bereitzustellen.
+Überschreiben Sie [ontoolhittest](#ontoolhittest) , um die [toolinfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) -Struktur oder Strukturen für das Fenster bereitzustellen.
 
 > [!NOTE]
 > Einige Fenster, z. b. [CToolBar](../../mfc/reference/ctoolbar-class.md), stellen eine integrierte Implementierung von [ontoolhittest](#ontoolhittest)bereit.
 
-Weitere Informationen zu dieser Struktur finden Sie unter [toolinfo](/windows/win32/api/commctrl/ns-commctrl-toolinfow) in der Windows SDK.
+Weitere Informationen zu dieser Struktur finden Sie unter [toolinfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) in der Windows SDK.
 
 Das einfache `EnableToolTips` Aufrufen von reicht nicht aus, um Quick Infos für die untergeordneten Steuerelemente anzuzeigen, wenn `CFrameWnd`das übergeordnete Fenster nicht von abgeleitet ist. Der Grund hierfür `CFrameWnd` ist, dass einen Standard Handler für die TTN_NEEDTEXT-Benachrichtigung bereitstellt. Wenn das übergeordnete Fenster nicht von `CFrameWnd`abgeleitet ist, d. h., wenn es sich um ein Dialogfeld oder eine Formularansicht handelt, werden Quick Infos für die untergeordneten Steuerelemente nicht ordnungsgemäß angezeigt, es sei denn, Sie stellen einen Handler für die QuickInfo-Benachrichtigung TTN_NEEDTEXT. Weitere Informationen finden Sie in den [QuickInfos](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
@@ -6440,7 +6440,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parameter
 
 *lpCreateStruct*<br/>
-Verweist auf eine " `CWnd` [foratestruct](/windows/win32/api/winuser/ns-winuser-createstructw) "-Struktur, die Informationen über das Objekt enthält, das erstellt wird.
+Verweist auf eine " [foratestruct](/windows/win32/api/winuser/ns-winuser-createstructw) "-Struktur, die `CWnd` Informationen über das Objekt enthält, das erstellt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -8216,7 +8216,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parameter
 
 *lpCreateStruct*<br/>
-Verweist auf die Datenstruktur " `CWnd` [foratestruct](/windows/win32/api/winuser/ns-winuser-createstructw) " für.
+Verweist auf die Datenstruktur " [foratestruct](/windows/win32/api/winuser/ns-winuser-createstructw) " für `CWnd`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -9858,7 +9858,7 @@ virtual INT_PTR OnToolHitTest(
 Gibt die x-und y-Koordinate des Cursors an. Diese Koordinaten sind immer relativ zur oberen linken Ecke des Fensters.
 
 *pTI*<br/>
-Ein Zeiger auf eine [toolinfo](/windows/win32/api/commctrl/ns-commctrl-toolinfow) -Struktur. Die folgenden Struktur Werte werden standardmäßig festgelegt:
+Ein Zeiger auf eine [toolinfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) -Struktur. Die folgenden Struktur Werte werden standardmäßig festgelegt:
 
 -  =  HWND`m_hWnd` -Handle für ein Fenster
 
@@ -9880,7 +9880,7 @@ Wenn der Bereich, dem die QuickInfo zugeordnet ist, keine Schaltfläche `OnToolH
 
 Über `OnToolHitTest` schreiben Sie, um andere Informationen als die Standardeinstellungen bereitzustellen.
 
-Weitere Informationen zur Struktur finden Sie unter [toolinfo](/windows/win32/api/commctrl/ns-commctrl-toolinfow)im Windows SDK.
+Weitere Informationen zur Struktur finden Sie unter [toolinfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)im Windows SDK.
 
 ##  <a name="ontouchinput"></a>CWnd:: ontouchinput
 
@@ -11040,7 +11040,7 @@ Wenn das Fenster den [WS_CLIPCHILDREN](/windows/win32/api/winuser/nf-winuser-cre
 
 Wenn das [SW_SCROLLCHILDREN](/windows/win32/api/winuser/nf-winuser-scrollwindowex) -Flag angegeben ist, wird der Bildschirm von Windows nicht ordnungsgemäß aktualisiert, wenn ein Teil eines untergeordneten Fensters gescrollt wird. Der Teil des untergeordneten Fensters, der sich außerhalb des Quell Rechtecks befindet, wird nicht gelöscht und nicht ordnungsgemäß im neuen Ziel gezeichnet. Verwenden Sie die Windows-Funktion [deferwindowpos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) , um untergeordnete Fenster zu verschieben, die nicht vollständig innerhalb des *lprectscroll* -Rechtecks liegen. Der Cursor wird neu positioniert, wenn das SW_SCROLLCHILDREN-Flag festgelegt ist und das Caretzeichen das Schiebe Rechteck schneidet.
 
-Es wird davon ausgegangen, dass alleEingabe-und Ausgabe Koordinaten (für lprectscroll, *lprectclip*, *lprectupdate*und *prgnupdate*) in Client Koordinaten vorliegen, unabhängig davon, ob das Fenster den CS_OWNDC-oder CS_CLASSDC-Klassen Stil aufweist. Verwenden Sie die Windows-Funktionen [lptodp](/windows/win32/api/wingdi/nf-wingdi-lptodp) und [dptolp](/windows/win32/api/wingdi/nf-wingdi-dptolp) , um ggf. zu und von logischen Koordinaten zu konvertieren.
+Es wird davon ausgegangen, dass alle Eingabe-und Ausgabe Koordinaten (für *lprectscroll*, *lprectclip*, *lprectupdate*und *prgnupdate*) in Client Koordinaten vorliegen, unabhängig davon, ob das Fenster den CS_OWNDC-oder CS_CLASSDC-Klassen Stil aufweist. Verwenden Sie die Windows-Funktionen [lptodp](/windows/win32/api/wingdi/nf-wingdi-lptodp) und [dptolp](/windows/win32/api/wingdi/nf-wingdi-dptolp) , um ggf. zu und von logischen Koordinaten zu konvertieren.
 
 ##  <a name="sendchildnotifylastmsg"></a>CWnd:: sendchildnotifylastmsg
 
@@ -11943,7 +11943,7 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ungleich 0
 
 Die Koordinaten des Fenster Bereichs eines Fensters sind relativ zur linken oberen Ecke des Fensters, nicht zum Client Bereich des Fensters.
 
-Nach einem erfolgreichen `SetWindowRgn`-Vorgang ist das Betriebssystem im Besitz der vom Regions handle festgelegtenRegion. Das Betriebssystem stellt keine Kopie der Region her, nehmen Sie also keine weiteren Funktionsaufrufe mit diesem Regions handle vor, und schließen Sie dieses Regions Handle nicht.
+Nach einem erfolgreichen `SetWindowRgn`-Vorgang ist das Betriebssystem im Besitz der vom *Regions Handle fest*gelegten Region. Das Betriebssystem stellt keine Kopie der Region her, nehmen Sie also keine weiteren Funktionsaufrufe mit diesem Regions handle vor, und schließen Sie dieses Regions Handle nicht.
 
 ##  <a name="setwindowtext"></a>CWnd:: SetWindowText
 
