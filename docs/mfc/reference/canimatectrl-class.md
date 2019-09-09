@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 867bec619dc633b7b1fbf9785e14132ba8c493ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18adead999f26768ae669d3a829b557bf9632a29
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151290"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177450"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl-Klasse
 
@@ -53,40 +53,40 @@ class CAnimateCtrl : public CWnd
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CAnimateCtrl::Close](#close)|Schließt die AVI-Clips.|
-|[CAnimateCtrl::Create](#create)|Erstellt ein Animationssteuerelement und fügt sie an einer `CAnimateCtrl` Objekt.|
-|[CAnimateCtrl::CreateEx](#createex)|Erstellt eine Animationssteuerelement mit dem angegebenen erweiterten Stile für Windows und fügt sie an einer `CAnimateCtrl` Objekt.|
-|[CAnimateCtrl::IsPlaying](#isplaying)|Gibt an, ob ein Audio-Video überlappen (AVI) Videoclip wiedergegeben wird.|
-|[CAnimateCtrl::Open](#open)|Ein AVI-Videoclips aus einer Datei oder Ressource geöffnet und zeigt den ersten Frame.|
-|[CAnimateCtrl::Play](#play)|Wird die AVI-Clips ohne Sound wiedergegeben.|
-|[CAnimateCtrl::Seek](#seek)|Zeigt einen einzelnen ausgewählten Frame des AVI-Clips.|
+|[CAnimateCtrl:: Close](#close)|Schließt den AVI-Clip.|
+|[CAnimateCtrl::Create](#create)|Erstellt ein Animations Steuerelement und fügt es an `CAnimateCtrl` ein-Objekt an.|
+|[CAnimateCtrl::CreateEx](#createex)|Erstellt ein Animations Steuerelement mit den angegebenen erweiterten Windows-Stilen und fügt es `CAnimateCtrl` an ein-Objekt an.|
+|[CAnimateCtrl::IsPlaying](#isplaying)|Gibt an, ob ein Audiovideo Interleaved (AVI)-Clip abgespielt wird.|
+|[CAnimateCtrl::Open](#open)|Öffnet einen AVI-Clip aus einer Datei oder einer Ressource und zeigt den ersten Rahmen an.|
+|[CAnimateCtrl::Play](#play)|Gibt den AVI-Clip ohne Sound wieder.|
+|[CAnimateCtrl::Seek](#seek)|Zeigt einen ausgewählten einzelnen Frame des AVI-Clips an.|
 |[CAnimateCtrl::Stop](#stop)|Beendet die Wiedergabe des AVI-Clips.|
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Steuerelement (und somit die `CAnimateCtrl` Klasse) ist nur für Programme, die unter Windows 95, Windows 98 und Windows NT, Version 3.51 und höher.
+Dieses Steuerelement (und damit `CAnimateCtrl` auch die-Klasse) ist nur für Programme verfügbar, die unter Windows 95, Windows 98 und Windows NT, Version 3,51 und höher, ausgeführt werden.
 
-Ein Animationssteuerelement ist ein rechteckiges Fenster, das einen Clip in AVI (Audio Video überlappend)-Format angezeigt, das standardmäßige Windows-Video-oder Audio-Format. Ein AVI-Clips ist eine Reihe von Bitmapbildern wie einen Film.
+Ein Animations Steuerelement ist ein rechteckiges Fenster, das einen Clip im AVI-Format (Audio Video Interleaved) anzeigt – das standardmäßige Windows-Video-/Audio-Format. Ein AVI-Clip ist eine Reihe von bitmapframes, wie z. b. ein Film.
 
-Animationssteuerungselemente können nur einfache AVI-Clips wiedergeben. Insbesondere müssen die Clips, die von einem Animationssteuerelement wiedergegeben werden die folgenden Anforderungen erfüllen:
+Animations Steuerelemente können nur einfache AVI-Clips abspielen. Insbesondere müssen die von einem Animations Steuerelement zu verwendenden Clips die folgenden Anforderungen erfüllen:
 
-- Es muss genau einen Videostream vorhanden sein und muss mindestens einen Frame.
+- Es muss genau ein Videostream vorhanden sein, und es muss mindestens ein Frame vorhanden sein.
 
-- Es darf nur maximal zwei Datenströmen in der Datei (in der Regel der anderen Stream, falls vorhanden, ist Audiostream, obwohl das Animationssteuerelement Audioinformationen ignoriert).
+- Es können höchstens zwei Streams in der Datei vorhanden sein (in der Regel ist der andere Stream, falls vorhanden, ein Audiostream, obwohl das Animations Steuerelement Audioinformationen ignoriert).
 
-- Der Clip muss nicht komprimiert oder mit RLE8-Komprimierung komprimiert werden.
+- Der Clip muss entweder unkomprimiert oder mit der RLE8-Komprimierung komprimiert werden.
 
-- Keine palettenänderungen sind in den video Stream zulässig.
+- Im Videostream sind keine Palettenänderungen zulässig.
 
-Sie können Ihre Anwendung als AVI-Ressource des AVI-Clips hinzufügen, oder können sie Ihre Anwendung als separate Datei AVI-begleitet.
+Sie können den AVI-Clip als AVI-Ressource zu Ihrer Anwendung hinzufügen, oder Sie können Ihre Anwendung als separate AVI-Datei begleiten.
 
-Da sich der Thread ausgeführt weiterhin, während des AVI-Clips angezeigt wird, werden ein gängiges Szenario für ein Animationssteuerelement Systemaktivität während eines längeren Vorgangs anzugeben. Beispielsweise zeigt das Dialogfeld "Suchen" von Datei-Explorer verschieben Vergrößerungsglas als das System sucht nach einer Datei.
+Da der Thread weiterhin ausgeführt wird, während der AVI-Clip angezeigt wird, besteht eine häufige Verwendung eines Animations Steuer Elements darin, die Systemaktivität während eines langen Vorgangs anzuzeigen. Beispielsweise wird im Dialogfeld Suchen des Datei-Explorers ein beweglicher Vergrößerungsglas angezeigt, während das System nach einer Datei sucht.
 
-Bei der Erstellung einer `CAnimateCtrl` -Objekt in einem Dialogfeld Feld oder aus einer Ressource mit dem Dialogfeld-Editor, es wird automatisch zerstört, wenn der Benutzer das Dialogfeld geschlossen wird.
+Wenn Sie ein `CAnimateCtrl` -Objekt in einem Dialogfeld oder über eine Dialogfeld Ressource mithilfe des Dialog-Editors erstellen, wird es automatisch zerstört, wenn der Benutzer das Dialogfeld schließt.
 
-Bei der Erstellung einer `CAnimateCtrl` Objekt innerhalb eines Zeitfensters, müssen Sie möglicherweise zerstören. Bei der Erstellung der `CAnimateCtrl` Objekt im Stapel automatisch zerstört wird. Bei der Erstellung der `CAnimateCtrl` Objekt auf dem Heap mit dem **neue** -Funktion, die Sie aufrufen müssen **löschen** für das Objekt zu zerstören. Wenn Sie eine neue Klasse von ableiten `CAnimateCtrl` und Speicher in dieser Klasse außer Kraft, die `CAnimateCtrl` Destruktor, der Zuordnungen zu verwerfen.
+Wenn Sie ein `CAnimateCtrl` -Objekt in einem-Fenster erstellen, müssen Sie es möglicherweise zerstören. Wenn Sie das `CAnimateCtrl` Objekt auf dem Stapel erstellen, wird es automatisch zerstört. Wenn Sie das `CAnimateCtrl` -Objekt auf dem Heap mithilfe der **New** -Funktion erstellen, müssen Sie **Delete** für das-Objekt verwenden, um es zu zerstören. Wenn Sie eine neue Klasse von `CAnimateCtrl` ableiten und in dieser Klasse Arbeitsspeicher zuordnen, überschreiben Sie den `CAnimateCtrl` Dekonstruktor, um die Zuweisungen zu verwerfen.
 
-Weitere Informationen zur Verwendung von `CAnimateCtrl`, finden Sie unter [Steuerelemente](../../mfc/controls-mfc.md) und [Verwenden von CAnimateCtrl](../../mfc/using-canimatectrl.md).
+Weitere Informationen zum Verwenden von `CAnimateCtrl`finden Sie unter Steuer [Elemente](../../mfc/controls-mfc.md) und [Verwenden von CAnimateCtrl](../../mfc/using-canimatectrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -102,7 +102,7 @@ Weitere Informationen zur Verwendung von `CAnimateCtrl`, finden Sie unter [Steue
 
 **Header:** afxcmn.h
 
-##  <a name="canimatectrl"></a>  CAnimateCtrl::CAnimateCtrl
+##  <a name="canimatectrl"></a>CAnimateCtrl:: CAnimateCtrl
 
 Erstellt ein `CAnimateCtrl`-Objekt.
 
@@ -112,15 +112,15 @@ CAnimateCtrl();
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie die [erstellen](#create) Member-Funktion, bevor Sie alle anderen Vorgänge für das Objekt ausführen können, die Sie erstellen.
+Sie müssen die [Create](#create) Member-Funktion aufzurufen, bevor Sie andere Vorgänge für das von Ihnen erstellte Objekt ausführen können.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCControlLadenDialog#56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]
 
-##  <a name="close"></a>  CAnimateCtrl::Close
+##  <a name="close"></a>CAnimateCtrl:: Close
 
-Schließt die AVI-Clips, die zuvor in der Animation-Steuerelement (falls vorhanden) geöffnet wurde, und entfernt sie aus dem Arbeitsspeicher.
+Schließt den AVI-Clip, der zuvor im Animations Steuerelement geöffnet war (sofern vorhanden), und entfernt ihn aus dem Arbeitsspeicher.
 
 ```
 BOOL Close();
@@ -132,11 +132,11 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
+  Weitere Informationen finden Sie im Beispiel für [CAnimateCtrl:: CAnimateCtrl](#canimatectrl).
 
-##  <a name="create"></a>  CAnimateCtrl::Create
+##  <a name="create"></a>CAnimateCtrl:: Create
 
-Erstellt ein Animationssteuerelement und fügt sie an einer `CAnimateCtrl` Objekt.
+Erstellt ein Animations Steuerelement und fügt es an `CAnimateCtrl` ein-Objekt an.
 
 ```
 virtual BOOL Create(
@@ -149,16 +149,16 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parameter
 
 *dwStyle*<br/>
-Gibt das Animationssteuerelement-Stil. Wenden Sie eine beliebige Kombination der Formate, die im Abschnitt "Hinweise" und der Stile von Listensteuerelementen Animation beschrieben, die in beschriebenen Windows [Stile von Listensteuerelementen Animation](/windows/desktop/Controls/animation-control-styles) im Windows SDK.
+Gibt den Stil des Animations Steuer Elements an. Wenden Sie eine beliebige Kombination der Windows Windows SDK-Stile an [, die im](/windows/win32/Controls/animation-control-styles) Abschnitt "Hinweise" unten beschrieben werden
 
-*rect*<br/>
-Gibt an, Position und Größe des Animationssteuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/windows/desktop/api/windef/ns-windef-tagrect) Struktur.
+*Rect*<br/>
+Gibt die Position und die Größe des Animations Steuer Elements an. Dabei kann es sich entweder um ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt oder um eine [Rect](/windows/win32/api/windef/ns-windef-rect) -Struktur handeln.
 
 *pParentWnd*<br/>
-Gibt an, das Animationssteuerelement übergeordnete Fenster, in der Regel eine `CDialog`. Es darf nicht NULL sein.
+Gibt das übergeordnete Fenster des Animations Steuer Elements an `CDialog`, in der Regel ein. Er darf nicht NULL sein.
 
 *nID*<br/>
-Gibt an, die Animationssteuerelements.
+Gibt die ID des Animations Steuer Elements an.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -166,27 +166,27 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Sie erstellen eine `CAnimateCtrl` in zwei Schritten. Zunächst rufen Sie den Konstruktor, und rufen Sie dann `Create`, die das Animationssteuerelement erstellt, und fügt es der `CAnimateCtrl` Objekt.
+Sie erstellen einen `CAnimateCtrl` in zwei Schritten. Zuerst wird der-Konstruktor aufgerufen, und dann `Create`wird aufgerufen, wodurch das Animations Steuerelement erstellt und an `CAnimateCtrl` das-Objekt angefügt wird.
 
-Übernehmen Sie das folgende [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles) an ein Animationssteuerelement.
+Wenden Sie die folgenden [Fenster Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles) auf ein Animations Steuerelement an.
 
 - WS_CHILD immer
 
-- WS_VISIBLE in der Regel
+- WS_VISIBLE normalerweise
 
 - WS_DISABLED selten
 
-Wenn Sie erweiterte Fensterstile mit dem Animationssteuerelement verwenden möchten, rufen Sie [CreateEx](#createex) anstelle von `Create`.
+Wenn Sie erweiterte Windows-Stile mit dem Animations Steuerelement verwenden möchten, müssen Sie anstelle von `Create`den Befehl " [kreateex](#createex) " aufrufen.
 
-Zusätzlich zu den oben aufgeführten Window-Stile können Sie eine oder mehrere der Animation Steuerelementstilen an ein Animationssteuerelement anwenden möchten. Das Windows SDK Weitere Informationen finden Sie [Stile von Listensteuerelementen Animation](/windows/desktop/Controls/animation-control-styles).
+Zusätzlich zu den oben aufgeführten Fenster Stilen empfiehlt es sich, einen oder mehrere der Animations Steuerelement Stile auf ein Animations Steuerelement anzuwenden. Weitere Informationen zu [Animations Steuerelement Stilen](/windows/win32/Controls/animation-control-styles)finden Sie in der Windows SDK.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
+  Weitere Informationen finden Sie im Beispiel für [CAnimateCtrl:: CAnimateCtrl](#canimatectrl).
 
-##  <a name="createex"></a>  CAnimateCtrl::CreateEx
+##  <a name="createex"></a>CAnimateCtrl:: anforateex
 
-Erstellt ein Steuerelement (ein untergeordnetes Fenster) und ordnet ihn dem `CAnimateCtrl` Objekt.
+Erstellt ein-Steuerelement (ein untergeordnetes Fenster) und ordnet `CAnimateCtrl` es dem-Objekt zu.
 
 ```
 virtual BOOL CreateEx(
@@ -200,19 +200,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parameter
 
 *dwExStyle*<br/>
-Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.
+Gibt die erweiterte Art des zu erstellenden Steuer Elements an. Eine Liste erweiterter Windows-Stile finden Sie unter dem *dwExStyle* -Parameter für " [kreatewindowex](/windows/win32/api/winuser/nf-winuser-createwindowexw) " in der Windows SDK.
 
 *dwStyle*<br/>
-Gibt das Animationssteuerelement-Stil. Wenden Sie eine beliebige Kombination aus dem Fenster und Steuerelement animationsstile beschrieben [Stile von Listensteuerelementen Animation](/windows/desktop/Controls/animation-control-styles) im Windows SDK.
+Gibt den Stil des Animations Steuer Elements an. Wenden Sie eine beliebige Kombination der Fenster-und Animations Steuerelement Stile an, die in den [Animations Steuerelement Stilen](/windows/win32/Controls/animation-control-styles) der Windows SDK beschrieben werden
 
-*rect*<br/>
-Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+*Rect*<br/>
+Ein Verweis auf eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Größe und Position des zu erstellenden Fensters in Client Koordinaten von *pparser*beschreibt.
 
 *pParentWnd*<br/>
-Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.
+Ein Zeiger auf das Fenster, das das übergeordnete Element des Steuer Elements ist.
 
 *nID*<br/>
-Der ID des Steuerelements untergeordneten Fensters mit.
+Die ID des untergeordneten Fensters des Steuer Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -220,11 +220,11 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_**.
+Verwenden `CreateEx` Sie anstelle von [Create](#create) , um erweiterte Windows-Stile anzuwenden, die durch den erweiterten Windows-Stil **WS_EX_** angegeben werden.
 
-##  <a name="isplaying"></a>  CAnimateCtrl::IsPlaying
+##  <a name="isplaying"></a>CAnimateCtrl:: isplay
 
-Gibt an, ob ein Audio-Video überlappen (AVI) Videoclip wiedergegeben wird.
+Gibt an, ob ein Audiovideo Interleaved (AVI)-Clip abgespielt wird.
 
 ```
 BOOL IsPlaying() const;
@@ -232,15 +232,15 @@ BOOL IsPlaying() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-True, wenn ein AVI-Clips wiedergegeben wird. andernfalls "false".
+TRUE, wenn ein AVI-Clip wiedergegeben wird. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Methode sendet die [ACM_ISPLAYING](/windows/desktop/Controls/acm-isplaying) -Nachricht, die im Windows SDK beschrieben wird.
+Diese Methode sendet die [ACM_ISPLAYING](/windows/win32/Controls/acm-isplaying) -Nachricht, die im Windows SDK beschrieben wird.
 
-##  <a name="open"></a>  CAnimateCtrl::Open
+##  <a name="open"></a>CAnimateCtrl:: Open
 
-Rufen Sie diese Funktion zum Öffnen des AVI-Clips und zum Anzeigen der erste Frame.
+Mit dieser Funktion können Sie einen AVI-Clip öffnen und seinen ersten Frame anzeigen.
 
 ```
 BOOL Open(LPCTSTR lpszFileName);
@@ -250,10 +250,10 @@ BOOL Open(UINT nID);
 ### <a name="parameters"></a>Parameter
 
 *lpszFileName*<br/>
-Ein `CString` Objekt oder ein Zeiger auf eine auf Null endende Zeichenfolge, die entweder den Namen der AVI-Datei oder der Name einer AVI-Ressource enthält. Wenn dieser Parameter NULL ist, schließt das System des AVI-Clips, die zuvor für das Animationssteuerelement geöffnet wurde, falls vorhanden.
+Ein `CString` -Objekt oder ein Zeiger auf eine NULL-terminierte Zeichenfolge, die entweder den Namen der AVI-Datei oder den Namen einer AVI-Ressource enthält. Wenn dieser Parameter NULL ist, schließt das System den AVI-Clip, der zuvor für das Animations Steuerelement geöffnet war, sofern vorhanden.
 
 *nID*<br/>
-Der Ressourcenbezeichner des AVI. Wenn dieser Parameter NULL ist, schließt das System des AVI-Clips, die zuvor für das Animationssteuerelement geöffnet wurde, falls vorhanden.
+Der AVI-Ressourcen Bezeichner. Wenn dieser Parameter NULL ist, schließt das System den AVI-Clip, der zuvor für das Animations Steuerelement geöffnet war, sofern vorhanden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -261,23 +261,23 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Die AVI-Ressource wird aus dem Modul geladen, die das Animationssteuerelement erstellt.
+Die AVI-Ressource wird aus dem Modul geladen, das das Animations Steuerelement erstellt hat.
 
-`Open` Sound wird in einem AVI-Clips nicht unterstützt werden. Sie können nur die automatische AVI-Clips öffnen.
+`Open`Sound in einem AVI-Clip wird von nicht unterstützt. Sie können nur unbeaufsichtigte AVI-Clips öffnen.
 
-Wenn das Animationssteuerelement verfügt die `ACS_AUTOPLAY` Format, das Animationssteuerelement wird automatisch gestartet Wiedergabe des Clips, sofort, nachdem es geöffnet wird. Diese Funktion bleibt weiterhin zur Wiedergabe des Clips im Hintergrund, während der Thread ausgeführt weiterhin. Abschluss des Clips wiedergeben, es wird automatisch wiederholt.
+Wenn das Animations Steuerelement den `ACS_AUTOPLAY` Stil hat, beginnt das Animations Steuerelement automatisch mit der Wiedergabe des Clips, sobald es geöffnet wird. Der Clip wird weiterhin im Hintergrund abgespielt, während der Thread weiterhin ausgeführt wird. Wenn die Wiedergabe des Clips abgeschlossen ist, wird es automatisch wiederholt.
 
-Wenn das Animationssteuerelement verfügt die `ACS_CENTER` Stil des AVI-Clips wird im Steuerelement zentriert und die Größe des Steuerelements wird nicht geändert. Wenn das Animationssteuerelement keinen der `ACS_CENTER` Format, das Steuerelement wird beim Öffnen des AVI-Clips auf die Größe der Bilder in AVI-Clips geändert werden. Die Position der oberen linken Ecke des Steuerelements ändert sich nicht, nur die Größe des Steuerelements.
+Wenn das Animations Steuerelement über `ACS_CENTER` den Stil verfügt, wird der AVI-Clip im Steuerelement zentriert, und die Größe des Steuer Elements wird nicht geändert. Wenn das Animations Steuerelement nicht über den `ACS_CENTER` Stil verfügt, wird die Größe des Steuer Elements geändert, wenn der AVI-Clip mit der Größe der Bilder im AVI-Clip geöffnet wird. Die Position der linken oberen Ecke des Steuer Elements ändert sich nicht, sondern nur die Größe des Steuer Elements.
 
-Wenn das Animationssteuerelement verfügt die `ACS_TRANSPARENT` Stil, der erste Frame wird mit einem transparenten Hintergrund gezeichnet werden und nicht als Farbe des Hintergrunds angegeben wird, der Animation-Clips.
+Wenn das Animations Steuerelement über `ACS_TRANSPARENT` den Stil verfügt, wird der erste Frame mit einem transparenten Hintergrund und nicht mit der im Animations Clip angegebenen Hintergrundfarbe gezeichnet.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
+  Weitere Informationen finden Sie im Beispiel für [CAnimateCtrl:: CAnimateCtrl](#canimatectrl).
 
-##  <a name="play"></a>  CAnimateCtrl::Play
+##  <a name="play"></a>CAnimateCtrl::P Lay
 
-Rufen Sie diese Funktion zum Wiedergeben eines AVI-Videoclips in einem Animationssteuerelement.
+Diese Funktion wird aufgerufen, um einen AVI-Clip in einem Animations Steuerelement wiederzugeben.
 
 ```
 BOOL Play(
@@ -289,13 +289,13 @@ BOOL Play(
 ### <a name="parameters"></a>Parameter
 
 *nFrom*<br/>
-Nullbasierte Index des Frames, in dem Wiedergabe beginnt. Wert muss kleiner als 65.536 sein. Der Wert 0 bedeutet, dass mit den ersten Frame des AVI-Clips zu beginnen.
+NULL basierter Index des Frames, bei dem die Wiedergabe beginnt. Der Wert muss kleiner als 65.536 sein. Der Wert 0 bedeutet, dass mit dem ersten Frame im AVI-Clip begonnen werden soll.
 
 *nTo*<br/>
-Nullbasierte Index des Frames, in denen Wiedergabe beendet. Wert muss kleiner als 65.536 sein. Der Wert von - bedeutet 1 mit dem letzten Frame des AVI-Clips enden.
+NULL basierter Index des Frames, in dem die Wiedergabe endet. Der Wert muss kleiner als 65.536 sein. Der Wert-1 bedeutet, dass er mit dem letzten Frame im AVI-Clip endet.
 
-*nRep*<br/>
-Anzahl von Wiederholungen des AVI-Clips wiedergegeben. Der Wert von - bedeutet 1 der Datei unbegrenzt wiederzugeben.
+*Nrep*<br/>
+Gibt an, wie oft der AVI-Clip wiedergegeben werden soll. Der Wert-1 bedeutet, dass die Datei unbegrenzt wiedergegeben wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -303,15 +303,15 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Animationssteuerelement Wiedergeben des Clips im Hintergrund, während der Thread ausgeführt weiterhin. Wenn das Animationssteuerelement verfügt `ACS_TRANSPARENT` Stil des AVI-Clips wird wiedergegeben werden über einen transparenten Hintergrund statt über die Farbe des Hintergrunds der Animation-Clips angegeben.
+Das Animations Steuerelement spielt den Clip im Hintergrund, während der Thread weiterhin ausgeführt wird. Wenn das Animations Steuerelement `ACS_TRANSPARENT` Style hat, wird der AVI-Clip mit einem transparenten Hintergrund und nicht mit der im Animations Clip angegebenen Hintergrundfarbe wiedergegeben.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
+  Weitere Informationen finden Sie im Beispiel für [CAnimateCtrl:: CAnimateCtrl](#canimatectrl).
 
-##  <a name="seek"></a>  CAnimateCtrl::Seek
+##  <a name="seek"></a>CAnimateCtrl:: Seek
 
-Rufen Sie diese Funktion, um ein einzelnes Frame Ihres AVI-Clips statisch angezeigt werden sollen.
+Aufrufen Sie diese Funktion, um einen einzelnen Frame des AVI-Clips statisch anzuzeigen.
 
 ```
 BOOL Seek(UINT nTo);
@@ -320,7 +320,7 @@ BOOL Seek(UINT nTo);
 ### <a name="parameters"></a>Parameter
 
 *nTo*<br/>
-Nullbasierte Index des anzuzeigenden Rahmens. Wert muss kleiner als 65.536 sein. Der Wert 0 bedeutet, dass den ersten Frame in der AVI-Clips angezeigt. Der Wert-1 bedeutet, dass den letzten Frame in der AVI-Clips angezeigt.
+Der null basierte Index des Frames, der angezeigt werden soll. Der Wert muss kleiner als 65.536 sein. Der Wert 0 bedeutet, dass der erste Frame im AVI-Clip angezeigt wird. Der Wert-1 bedeutet, dass der letzte Frame im AVI-Clip angezeigt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -328,15 +328,15 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn das Animationssteuerelement verfügt `ACS_TRANSPARENT` Stil des AVI-Clips wird mit einem transparenten Hintergrund gezeichnet werden und nicht als Farbe des Hintergrunds angegeben wird, der Animation-Clips.
+Wenn das Animations Steuerelement `ACS_TRANSPARENT` Style hat, wird der AVI-Clip mit einem transparenten Hintergrund und nicht mit der im Animations Clip angegebenen Hintergrundfarbe gezeichnet.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
+Weitere Informationen finden Sie im Beispiel für [CAnimateCtrl:: CAnimateCtrl](#canimatectrl).
 
-##  <a name="stop"></a>  CAnimateCtrl::Stop
+##  <a name="stop"></a>CAnimateCtrl:: Beendigung
 
-Mit dieser Funktion können Sie beenden das Abspielen eines AVI-Videoclips in einem Animationssteuerelement.
+Diese Funktion wird aufgerufen, um das Abspielen eines AVI-Clips in einem Animations Steuerelement zu beenden.
 
 ```
 BOOL Stop();
@@ -348,7 +348,7 @@ Ungleich 0, wenn erfolgreich, andernfalls 0.
 
 ### <a name="example"></a>Beispiel
 
-  Siehe das Beispiel für [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
+  Weitere Informationen finden Sie im Beispiel für [CAnimateCtrl:: CAnimateCtrl](#canimatectrl).
 
 ## <a name="see-also"></a>Siehe auch
 

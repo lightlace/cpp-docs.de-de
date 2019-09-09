@@ -1,5 +1,5 @@
 ---
-title: CIPAddressCtrl-Klasse
+title: Cipaddressctrl-Klasse
 ms.date: 11/04/2016
 f1_keywords:
 - CIPAddressCtrl
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: 5abcf838308d8965f3c55dc7d85dbac974825394
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe8e3109b110c27ab32dc1a4f9a132f1e1c18638
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392595"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505818"
 ---
-# <a name="cipaddressctrl-class"></a>CIPAddressCtrl-Klasse
+# <a name="cipaddressctrl-class"></a>Cipaddressctrl-Klasse
 
 Stellt die Funktionalität des allgemeinen Windows-Steuerelements für IP-Adressen bereit.
 
@@ -53,22 +53,22 @@ class CIPAddressCtrl : public CWnd
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CIPAddressCtrl::ClearAddress](#clearaddress)|Löscht den Inhalt des Steuerelements IP-Adresse.|
-|[CIPAddressCtrl::Create](#create)|Erstellt ein Steuerelement der IP-Adresse und fügt sie an einer `CIPAddressCtrl` Objekt.|
-|[CIPAddressCtrl::CreateEx](#createex)|Erstellt ein Steuerelement für die IP-Adresse mit der angegebenen erweiterten Windows-Stile und fügt sie an einer `CIPAddressCtrl` Objekt.|
-|[CIPAddressCtrl::GetAddress](#getaddress)|Ruft die Adresswerte für alle vier Felder im IP-Adresse-Steuerelement.|
-|[CIPAddressCtrl::IsBlank](#isblank)|Bestimmt, ob alle Felder in die IP-Adressensteuerelement leer sind.|
-|[CIPAddressCtrl::SetAddress](#setaddress)|Legt die Adresswerte für alle vier Felder in die IP-Adressensteuerelement fest.|
-|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|Legt den Tastaturfokus auf das angegebene Feld in die IP-Adressensteuerelement fest.|
-|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|Legt den Bereich in das angegebene Feld in die IP-Adressensteuerelement fest.|
+|[CIPAddressCtrl::ClearAddress](#clearaddress)|Löscht den Inhalt des Steuer Elements für die IP-Adresse.|
+|[CIPAddressCtrl::Create](#create)|Erstellt ein IP-Adress Steuerelement und fügt es `CIPAddressCtrl` an ein-Objekt an.|
+|[CIPAddressCtrl::CreateEx](#createex)|Erstellt ein IP-Adress Steuerelement mit den angegebenen erweiterten Windows-Stilen und fügt `CIPAddressCtrl` es an ein-Objekt an.|
+|[CIPAddressCtrl::GetAddress](#getaddress)|Ruft die Adress Werte für alle vier Felder im IP-Adress Steuerelement ab.|
+|[CIPAddressCtrl::IsBlank](#isblank)|Bestimmt, ob alle Felder im IP-Adress Steuerelement leer sind.|
+|[CIPAddressCtrl::SetAddress](#setaddress)|Legt die Adress Werte für alle vier Felder im IP-Adress Steuerelement fest.|
+|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|Legt den Tastaturfokus auf das angegebene Feld im IP-Adress Steuerelement fest.|
+|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|Legt den Bereich im angegebenen Feld im IP-Adress Steuerelement fest.|
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Steuerelement ein Steuerelement, das ein Bearbeitungssteuerelement, ähnlich wie IP-Adresse können Sie eine numerische Adresse im Format der IP (Internet Protocol) zu geben.
+Ein IP-Adress Steuerelement, ein ähnliches Steuerelement wie ein Bearbeitungs Steuerelement, ermöglicht es Ihnen, eine numerische Adresse im IP-Format (Internet Protocol) einzugeben und zu bearbeiten.
 
-Dieses Steuerelement (und somit die `CIPAddressCtrl` Klasse) ist nur für Programme, die ausgeführt wird, in Microsoft Internet Explorer 4.0 und höher verfügbar. Sie werden auch unter zukünftigen Versionen von Windows und Windows NT verfügbar sein.
+Dieses Steuerelement (und damit `CIPAddressCtrl` auch die-Klasse) ist nur für Programme verfügbar, die unter Microsoft Internet Explorer 4,0 oder höher ausgeführt werden. Sie sind auch in zukünftigen Versionen von Windows und Windows NT verfügbar.
 
-Weitere allgemeine Informationen zu den IP-Adressensteuerelement, finden Sie unter [IP-Adresse Steuerelemente](/windows/desktop/Controls/ip-address-controls) im Windows SDK.
+Weitere allgemeine Informationen zum IP-Adress Steuerelement finden Sie unter [IP-Adress Steuerelemente](/windows/win32/Controls/ip-address-controls) im Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -84,7 +84,7 @@ Weitere allgemeine Informationen zu den IP-Adressensteuerelement, finden Sie unt
 
 **Header:** afxcmn.h
 
-##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl
+##  <a name="cipaddressctrl"></a>Cipaddressctrl:: cipaddressctrl
 
 Erstellt ein `CIPAddressCtrl`-Objekt.
 
@@ -92,9 +92,9 @@ Erstellt ein `CIPAddressCtrl`-Objekt.
 CIPAddressCtrl();
 ```
 
-##  <a name="clearaddress"></a>  CIPAddressCtrl::ClearAddress
+##  <a name="clearaddress"></a>Cipaddressctrl:: clearaddress
 
-Löscht den Inhalt des Steuerelements IP-Adresse.
+Löscht den Inhalt des Steuer Elements für die IP-Adresse.
 
 ```
 void ClearAddress();
@@ -102,11 +102,11 @@ void ClearAddress();
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [IPM_CLEARADDRESS](/windows/desktop/Controls/ipm-clearaddress), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [IPM_CLEARADDRESS](/windows/win32/Controls/ipm-clearaddress), wie im Windows SDK beschrieben.
 
-##  <a name="create"></a>  CIPAddressCtrl::Create
+##  <a name="create"></a>Cipaddressctrl:: Create
 
-Erstellt ein Steuerelement der IP-Adresse und fügt sie an einer `CIPAddressCtrl` Objekt.
+Erstellt ein IP-Adress Steuerelement und fügt es `CIPAddressCtrl` an ein-Objekt an.
 
 ```
 virtual BOOL Create(
@@ -119,34 +119,34 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parameter
 
 *dwStyle*<br/>
-Format des IP-Adresse-Steuerelements. Wenden Sie eine Kombination von Window-Stile. Sie müssen das Format WS_CHILD einschließen, da das Steuerelement ein untergeordnetes Fenster sein muss. Finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK für eine Liste der Windows-Formate.
+Der Stil des IP-Adress Steuer Elements. Eine Kombination von Fenster Stilen anwenden. Sie müssen den WS_CHILD-Stil einschließen, da das Steuerelement ein untergeordnetes Fenster sein muss. Eine Liste der Windows- [Stile finden Sie unter in](/windows/win32/api/winuser/nf-winuser-createwindoww) der Windows SDK.
 
-*rect*<br/>
-Ein Verweis auf die IP-Adresse des Steuerelements Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur.
+*Rect*<br/>
+Ein Verweis auf die Größe und Position des IP-Adress Steuer Elements. Dabei kann es sich entweder um ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt oder um eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur handeln.
 
 *pParentWnd*<br/>
-Ein Zeiger auf die IP-Adresse des Steuerelements übergeordnete Fenster. Es darf nicht NULL sein.
+Ein Zeiger auf das übergeordnete Fenster des IP-Adress Steuer Elements. Er darf nicht NULL sein.
 
 *nID*<br/>
-Die IP-Adresse-Steuerelements.
+Die ID des IP-Adress Steuer Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn die Initialisierung erfolgreich war; andernfalls 0.
+Ungleich NULL, wenn die Initialisierung erfolgreich war. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Sie erstellen eine `CIPAddressCtrl` Objekt in zwei Schritten.
+Sie erstellen ein `CIPAddressCtrl` -Objekt in zwei Schritten.
 
-1. Rufen Sie den Konstruktor, der erstellt das `CIPAddressCtrl` Objekt.
+1. Nennen Sie den-Konstruktor, der `CIPAddressCtrl` das-Objekt erstellt.
 
-1. Rufen Sie `Create`, die IP-Adressensteuerelement erstellt.
+1. Ruft `Create`auf, wodurch das IP-Adress Steuerelement erstellt wird.
 
-Wenn Sie erweiterte Fensterstile mit dem Steuerelement verwenden möchten, rufen Sie [CreateEx](#createex) anstelle von `Create`.
+Wenn Sie erweiterte Windows-Stile mit dem Steuerelement verwenden möchten, müssen Sie anstelle von `Create`den Befehl " [kreateex](#createex) " aufrufen.
 
-##  <a name="createex"></a>  CIPAddressCtrl::CreateEx
+##  <a name="createex"></a>Cipaddressctrl:: kreateex
 
-Mit dieser Funktion wird zum Erstellen eines Steuerelements (ein untergeordnetes Fenster), und ordnen sie die `CIPAddressCtrl` Objekt.
+Rufen Sie diese Funktion auf, um ein-Steuerelement (ein untergeordnetes Fenster) `CIPAddressCtrl` zu erstellen und es dem-Objekt zuzuordnen.
 
 ```
 virtual BOOL CreateEx(
@@ -160,19 +160,19 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parameter
 
 *dwExStyle*<br/>
-Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) im Windows SDK.
+Gibt die erweiterte Art des zu erstellenden Steuer Elements an. Eine Liste erweiterter Windows-Stile finden Sie unter dem *dwExStyle* -Parameter für " [kreatewindowex](/windows/win32/api/winuser/nf-winuser-createwindowexw) " in der Windows SDK.
 
 *dwStyle*<br/>
-Format des IP-Adresse-Steuerelements. Wenden Sie eine Kombination von Window-Stile. Sie müssen das Format WS_CHILD einschließen, da das Steuerelement ein untergeordnetes Fenster sein muss. Finden Sie unter [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) im Windows SDK für eine Liste der Windows-Formate.
+Der Stil des IP-Adress Steuer Elements. Eine Kombination von Fenster Stilen anwenden. Sie müssen den WS_CHILD-Stil einschließen, da das Steuerelement ein untergeordnetes Fenster sein muss. Eine Liste der Windows- [Stile finden Sie unter in](/windows/win32/api/winuser/nf-winuser-createwindoww) der Windows SDK.
 
-*rect*<br/>
-Ein Verweis auf eine [RECT](/previous-versions/dd162897\(v=vs.85\)) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.
+*Rect*<br/>
+Ein Verweis auf eine [Rect](/previous-versions/dd162897\(v=vs.85\)) -Struktur, die die Größe und Position des zu erstellenden Fensters in Client Koordinaten von *pparser*beschreibt.
 
 *pParentWnd*<br/>
-Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.
+Ein Zeiger auf das Fenster, das das übergeordnete Element des Steuer Elements ist.
 
 *nID*<br/>
-Der ID des Steuerelements untergeordneten Fensters mit.
+Die ID des untergeordneten Fensters des Steuer Elements.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -180,11 +180,11 @@ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).
 
 ### <a name="remarks"></a>Hinweise
 
-Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_**.
+Verwenden `CreateEx` Sie anstelle von [Create](#create) , um erweiterte Windows-Stile anzuwenden, die durch den erweiterten Windows-Stil **WS_EX_** angegeben werden.
 
-##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress
+##  <a name="getaddress"></a>Cipaddressctrl:: GetAddress
 
-Ruft die Adresswerte für alle vier Felder im IP-Adresse-Steuerelement.
+Ruft die Adress Werte für alle vier Felder im IP-Adress Steuerelement ab.
 
 ```
 int GetAddress(
@@ -199,38 +199,38 @@ int GetAddress(DWORD& dwAddress);
 ### <a name="parameters"></a>Parameter
 
 *nField0*<br/>
-Ein Verweis auf den Feldwert 0 durch eine gepackte IP-Adresse.
+Ein Verweis auf den Wert des Felds 0 aus einer gepackten IP-Adresse.
 
 *nField1*<br/>
-Ein Verweis auf den Feldwert 1 durch eine gepackte IP-Adresse.
+Ein Verweis auf den Wert Feld 1 von einer gepackten IP-Adresse.
 
 *nField2*<br/>
-Ein Verweis auf den Feldwert 2 durch eine gepackte IP-Adresse.
+Ein Verweis auf den Wert des Felds 2 aus einer gepackten IP-Adresse.
 
 *nField3*<br/>
-Ein Verweis auf den Feldwert 3 durch eine gepackte IP-Adresse.
+Ein Verweis auf den Wert des Felds 3 aus einer gepackten IP-Adresse.
 
 *dwAddress*<br/>
-Ein Verweis auf die Adresse des DWORD-Wert, der die IP-Adresse empfängt. Finden Sie unter **"Hinweise"** für eine Tabelle, die zeigt, wie *DwAddress* gefüllt wird.
+Ein Verweis auf die Adresse eines DWORD-Werts, der die IP-Adresse empfängt. Siehe **Hinweise** für eine Tabelle, die zeigt, wie *dwaddress* ausgefüllt ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Anzahl der nicht leeren Feldern im IP-Adresse-Steuerelement.
+Die Anzahl der nicht leeren Felder im IP-Adress Steuerelement.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress), wie im Windows SDK beschrieben. Klicken Sie im oben genannten ersten Prototyp die Zahlen in Feldern von 0 bis 3 des Steuerelements, Lesen von links nach rechts bzw., füllen Sie die vier Parameter. Im zweiten oben genannten Prototyp *DwAddress* wird folgendermaßen aufgefüllt.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [IPM_GETADDRESS](/windows/win32/Controls/ipm-getaddress), wie im Windows SDK beschrieben. Im ersten Prototyp oben füllen die Zahlen in den Feldern 0 bis 3 des Steuer Elements, von links nach rechts, die vier Parameter auf. Im zweiten Prototyp oben wird *dwaddress* wie folgt aufgefüllt.
 
-|Feld|Bits, die den Wert des Felds enthält.|
+|Feld|Bits, die den Feldwert enthalten|
 |-----------|-------------------------------------|
 |0|24 bis 31|
 |1|16 bis 23|
 |2|8 bis 15|
 |3|0 bis 7|
 
-##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank
+##  <a name="isblank"></a>Cipaddressctrl:: isblank
 
-Bestimmt, ob alle Felder in die IP-Adressensteuerelement leer sind.
+Bestimmt, ob alle Felder im IP-Adress Steuerelement leer sind.
 
 ```
 BOOL IsBlank() const;
@@ -238,15 +238,15 @@ BOOL IsBlank() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL, wenn alle IP-Adressensteuerelement Felder leer sind; andernfalls 0.
+Ungleich 0 (null), wenn alle IP-Adress Kontroll Felder leer sind. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [IPM_ISBLANK](/windows/desktop/Controls/ipm-isblank), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [IPM_ISBLANK](/windows/win32/Controls/ipm-isblank), wie im Windows SDK beschrieben.
 
-##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress
+##  <a name="setaddress"></a>Cipaddressctrl:: setAddress
 
-Legt die Adresswerte für alle vier Felder in die IP-Adressensteuerelement fest.
+Legt die Adress Werte für alle vier Felder im IP-Adress Steuerelement fest.
 
 ```
 void SetAddress(
@@ -261,34 +261,34 @@ void SetAddress(DWORD dwAddress);
 ### <a name="parameters"></a>Parameter
 
 *nField0*<br/>
-Der 0 Feldwert aus eine gepackte IP-Adresse.
+Der Wert von Feld 0 aus einer gepackten IP-Adresse.
 
 *nField1*<br/>
-Der Feld 1-Wert aus einer gepackte IP-Adresse.
+Der Wert für Feld 1 aus einer gepackten IP-Adresse.
 
 *nField2*<br/>
-Der 2 Feldwert aus eine gepackte IP-Adresse.
+Der Wert von Feld 2 aus einer gepackten IP-Adresse.
 
 *nField3*<br/>
-Der 3 Feldwert aus eine gepackte IP-Adresse.
+Der Wert von Feld 3 aus einer gepackten IP-Adresse.
 
 *dwAddress*<br/>
-Eine DWORD-Wert, der die neue IP-Adresse enthält. Finden Sie unter **"Hinweise"** für eine Tabelle, die zeigt, wie der DWORD-Wert ausgefüllt wird.
+Ein DWORD-Wert, der die neue IP-Adresse enthält. Siehe **Hinweise** für eine Tabelle, die zeigt, wie der DWORD-Wert aufgefüllt wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress), wie im Windows SDK beschrieben. Klicken Sie im oben genannten ersten Prototyp die Zahlen in Feldern von 0 bis 3 des Steuerelements, Lesen von links nach rechts bzw., füllen Sie die vier Parameter. Im zweiten oben genannten Prototyp *DwAddress* wird folgendermaßen aufgefüllt.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [IPM_SETADDRESS](/windows/win32/Controls/ipm-setaddress), wie im Windows SDK beschrieben. Im ersten Prototyp oben füllen die Zahlen in den Feldern 0 bis 3 des Steuer Elements, von links nach rechts, die vier Parameter auf. Im zweiten Prototyp oben wird *dwaddress* wie folgt aufgefüllt.
 
-|Feld|Bits, die den Wert des Felds enthält.|
+|Feld|Bits, die den Feldwert enthalten|
 |-----------|-------------------------------------|
 |0|24 bis 31|
 |1|16 bis 23|
 |2|8 bis 15|
 |3|0 bis 7|
 
-##  <a name="setfieldfocus"></a>  CIPAddressCtrl::SetFieldFocus
+##  <a name="setfieldfocus"></a>Cipaddressctrl:: setfieldfocus
 
-Legt den Tastaturfokus auf das angegebene Feld in die IP-Adressensteuerelement fest.
+Legt den Tastaturfokus auf das angegebene Feld im IP-Adress Steuerelement fest.
 
 ```
 void SetFieldFocus(WORD nField);
@@ -297,15 +297,15 @@ void SetFieldFocus(WORD nField);
 ### <a name="parameters"></a>Parameter
 
 *nField*<br/>
-Null basierenden feldindexes, auf denen der Fokus festgelegt werden soll. Wenn dieser Wert größer als die Anzahl von Feldern ist, wird der Fokus auf das erste leere Feld gesetzt. Wenn alle Felder nicht leer sind, wird der Fokus auf das erste Feld festgelegt.
+NULL basierter Feld Index, auf den der Fokus festgelegt werden soll. Wenn dieser Wert größer als die Anzahl der Felder ist, wird der Fokus auf das erste leere Feld festgelegt. Wenn alle Felder nicht leer sind, wird der Fokus auf das erste Feld festgelegt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [IPM_SETFOCUS](/windows/desktop/Controls/ipm-setfocus), wie im Windows SDK beschrieben.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [IPM_SETFOCUS](/windows/win32/Controls/ipm-setfocus), wie im Windows SDK beschrieben.
 
-##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange
+##  <a name="setfieldrange"></a>Cipaddressctrl:: setfieldrange
 
-Legt den Bereich in das angegebene Feld in die IP-Adressensteuerelement fest.
+Legt den Bereich im angegebenen Feld im IP-Adress Steuerelement fest.
 
 ```
 void SetFieldRange(
@@ -317,17 +317,17 @@ void SetFieldRange(
 ### <a name="parameters"></a>Parameter
 
 *nField*<br/>
-Null basierenden feldindexes auf die der Bereich angewendet werden soll.
+NULL basierter Feld Index, auf den der Bereich angewendet wird.
 
 *nLower*<br/>
-Ein Verweis auf eine ganze Zahl, die die untere Grenze des angegebenen Felds in diesem Steuerelement der IP-Adresse empfangen.
+Ein Verweis auf eine Ganzzahl, die die untere Grenze des angegebenen Felds in diesem IP-Adress Steuerelement empfängt.
 
 *nUpper*<br/>
-Ein Verweis auf eine ganze Zahl, die die obere Grenze des angegebenen Felds in diesem Steuerelement der IP-Adresse empfangen.
+Ein Verweis auf eine Ganzzahl, die die Obergrenze des angegebenen Felds in diesem IP-Adress Steuerelement empfängt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [IPM_SETRANGE](/windows/desktop/Controls/ipm-setrange), wie im Windows SDK beschrieben. Verwenden Sie die zwei Parameter, *nLower* und *nUpper*, an den oberen und unteren Grenzwerten des Felds, statt die *wRange* die Win32-Nachricht als Parameter.
+Diese Member-Funktion implementiert das Verhalten der Win32-Nachricht [IPM_SETRANGE](/windows/win32/Controls/ipm-setrange), wie im Windows SDK beschrieben. Verwenden Sie die beiden Parameter *nlower* und *nupper,* um die unteren und oberen Begrenzungen des Felds anzugeben, anstelle des *Wrange* -Parameters, der mit der Win32-Nachricht verwendet wird.
 
 ## <a name="see-also"></a>Siehe auch
 

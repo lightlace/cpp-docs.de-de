@@ -23,7 +23,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455554"
 ---
-# <a name="moneyget-class"></a>money_get-Klasse
+# <a name="money_get-class"></a>money_get-Klasse
 
 Die Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann, um Konvertierungen von Sequenzen des Typs `CharType` in monetäre Werte zu steuern.
 
@@ -299,7 +299,7 @@ Die möglichen Werte für den Parameter *_Refs* und ihre Bedeutung lauten:
 
 Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [](../standard-library/locale-class.md#facet_class)Face( *_Refs*).
+Der Konstruktor initialisiert sein Basisobjekt mit **locale::** [Face(](../standard-library/locale-class.md#facet_class) *_Refs*).
 
 ## <a name="string_type"></a> money_get::string_type
 

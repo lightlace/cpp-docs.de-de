@@ -6,20 +6,20 @@ helpviewer_keywords:
 - image lists [MFC], image overlays in
 - CImageList class [MFC], image overlays in
 ms.assetid: aaf4e1c4-cd12-42c8-9af4-1bb458889b4e
-ms.openlocfilehash: 8dd0b30ef29a48ebc763564e6fe23632cd300831
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec795193a28a68d8aee61e9932481a89c4b3e8e0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407964"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508387"
 ---
 # <a name="image-overlays-in-image-lists"></a>Overlaymasken in Bildlisten
 
-Jede Bildliste ([CImageList](../mfc/reference/cimagelist-class.md)) enthält eine Liste der Images, die als Overlaymasken verwendet. Eine "Overlaymaske" ist ein Bild transparent über ein anderes Bild gezeichnet wird. Jedes Image kann als eine Overlaymaske verwendet werden. Sie können bis zu vier Overlaymasken pro Bildliste angeben.
+Jede Bildliste ([CImageList](../mfc/reference/cimagelist-class.md)) enthält eine Liste von Bildern, die als Überlagerungs Masken verwendet werden sollen. Eine "Überlagerungs Maske" ist ein Bild, das transparent über ein anderes Bild gezeichnet wird. Alle Bilder können als Überlagerungs Maske verwendet werden. Sie können bis zu vier Überlagerungs Masken pro Bildliste angeben.
 
-Sie den Index eines Bildes zur Liste der Overlaymasken hinzufügen, mit der [SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage) Member-Funktion, den Index eines Bildes und der Index des eine Overlaymaske. Beachten Sie, dass die Indizes für die Overlaymasken einsbasierte nullbasiert, sondern sind.
+Sie fügen den Index eines Bilds der Liste der Überlagerungs Masken hinzu, indem Sie die Member-Funktion " [SetImage](../mfc/reference/cimagelist-class.md#setoverlayimage) ", den Index eines Bilds und den Index einer Überlagerungs Maske verwenden. Beachten Sie, dass die Indizes für die Überlagerungs Masken jeweils einbasiert und nicht NULL basiert sind.
 
-Sie zeichnen eine Overlaymaske, über ein Abbild mit einem einzigen Aufruf `Draw`. Die Parameter enthalten den Index des zu zeichnenden Bildes und der Index ein Overlay-Maske. Verwenden Sie die [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) Makro, um den Index der Überlagerung Maske angeben. Sie können auch ein Overlay-Image angeben, beim Aufrufen der [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) Member-Funktion.
+Sie zeichnen eine Überlagerungs Maske über ein Bild mithilfe eines einzelnen `Draw`Aufrufens von. Zu den Parametern gehören der Index des zu zeichnenden Bilds und der Index einer Überlagerungs Maske. Sie müssen das [indexyoverlaymask](/windows/win32/api/commctrl/nf-commctrl-indextooverlaymask) -Makro verwenden, um den Index der Überlagerungs Maske anzugeben. Sie können auch ein Überlagerungs Bild angeben, wenn Sie die [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect) -Member-Funktion aufrufen.
 
 ## <a name="see-also"></a>Siehe auch
 

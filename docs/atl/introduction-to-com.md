@@ -5,32 +5,32 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - COM
 ms.assetid: 120735d9-db71-4ad3-a730-ce576ea2354e
-ms.openlocfilehash: 7631ba98b0e2cb00310400206b0b442ab7a23dd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29f761e0380357bc999af82cc4bde8bfbaf4d6e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262371"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492360"
 ---
 # <a name="introduction-to-com"></a>Einführung in COM
 
-COM ist die grundlegenden "Objektmodell", welche ActiveX-Steuerelemente und OLE erstellt werden. COM ermöglicht ein Objekt, dessen Funktionalität mit anderen Komponenten und hostanwendungen verfügbar zu machen. Sie definiert sowohl wie das Objekt selbst verfügbar macht und wie dieses Offenlegen über Prozesse und über Netzwerke hinweg funktioniert. COM definiert auch die Lebensdauer des Objekts.
+COM ist das grundlegende "Objektmodell", für das ActiveX-Steuerelemente und OLE erstellt werden. COM ermöglicht einem Objekt, seine Funktionalität für andere Komponenten und für das Hosten von Anwendungen verfügbar zu machen. Es definiert sowohl, wie das Objekt sich selbst verfügbar macht, als auch, wie diese Offenlegung zwischen Prozessen und Netzwerk übergreifend funktioniert. COM definiert auch den Lebenszyklus des Objekts.
 
-Für COM grundlegende diese Konzepte sind:
+Grundlegend für com sind folgende Konzepte:
 
-- [Schnittstellen](../atl/interfaces-atl.md) – der Mechanismus, durch die ein Objekt seine Funktionalität verfügbar macht.
+- [Schnittstellen](../atl/interfaces-atl.md) – der Mechanismus, über den ein Objekt seine Funktionalität verfügbar macht.
 
-- [IUnknown](../atl/iunknown.md) – die grundlegende Schnittstelle, die auf dem alle anderen basieren. Außerdem implementiert die verweiszählung und Abfragen von Mechanismen, die ausgeführt wird, über COM-Schnittstelle
+- [IUnknown](../atl/iunknown.md) – die grundlegende Schnittstelle, auf der alle anderen basieren. Es implementiert die Verweis Zählung und die Schnittstellen Abfrage Mechanismen, die über com ausgeführt werden.
 
-- [Verweiszählung](../atl/reference-counting.md) – die Technik, mit dem ein Objekt (oder streng genommen eine Schnittstelle) entscheidet, wenn es nicht mehr verwendet wird und aus diesem Grund können sich selbst zu entfernen.
+- [Verweis Zählung](../atl/reference-counting.md) – die Methode, mit der ein Objekt (oder, streng, eine Schnittstelle) entscheidet, wenn es nicht mehr verwendet wird und daher frei entfernt werden kann.
 
-- [QueryInterface](../atl/queryinterface.md) – die Methode verwendet, um ein Objekt für die jeweilige Schnittstelle abzufragen.
+- [QueryInterface](../atl/queryinterface.md) – die Methode, mit der ein Objekt für eine bestimmte Schnittstelle abgefragt wird.
 
-- [Marshalling](../atl/marshaling.md) – der Mechanismus, der Objekte in der gesamten Threads, Prozesse und Netzwerkgrenzen, sodass Standortunabhängigkeit verwendet werden kann.
+- [Marshalling – der](../atl/marshaling.md) Mechanismus, mit dem Objekte über Thread-, Prozess-und Netzwerk Grenzen hinweg verwendet werden können, sodass Standortunabhängigkeit möglich ist.
 
-- [Aggregation](../atl/aggregation.md) – eine Möglichkeit für die ein Objekt, kann von einer anderen verwenden.
+- [Aggregation](../atl/aggregation.md) – eine Methode, mit der ein Objekt ein anderes verwenden kann.
 
 ## <a name="see-also"></a>Siehe auch
 
 [Einführung in COM und ATL](../atl/introduction-to-com-and-atl.md)<br/>
-[Das Component Object Model](/windows/desktop/com/the-component-object-model)
+[Das Component Object Model](/windows/win32/com/the-component-object-model)

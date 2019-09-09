@@ -1,21 +1,21 @@
 ---
-title: Steuerelement (C++-COM-Attribut)
+title: Control (C++ com-Attribut)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12cf98b49b43b7a67834ea5401994ecdc749aa3b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148275"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501781"
 ---
 # <a name="control"></a>Steuerelement
 
-Gibt an, dass der benutzerdefinierte Typ eines Steuerelements.
+Gibt an, dass der benutzerdefinierte Typ ein Steuerelement ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,7 +25,7 @@ Gibt an, dass der benutzerdefinierte Typ eines Steuerelements.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Steuerelement** -Attributs impliziert die [Co-Klasse](coclass.md) Attribut. Die **Steuerelement** C++-Attribut hat die gleiche Funktionalität wie die [Steuerelement](/windows/desktop/Midl/control) MIDL-Attribut.
+Das Attribut " **Control** " impliziert das [Co-Klasse](coclass.md) -Attribut. Das- **Steuer** C++ Element Attribut verfügt [über die gleiche Funktionalität wie das-](/windows/win32/Midl/control) Attribut "Mittel l".
 
 ## <a name="example"></a>Beispiel
 
@@ -50,10 +50,10 @@ class CTest : public ICustom {};
 
 |||
 |-|-|
-|**Betrifft**|**class**, **struct**|
+|**Betrifft**|**Klasse**, **Struktur**|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

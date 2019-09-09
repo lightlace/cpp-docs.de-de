@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: ccac405480e415df17b42f02dce74759f578d025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b72052f4cbd7f94b170ea58b8f7b284b85d7ab00
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407249"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513979"
 ---
-# <a name="switchis"></a>switch_is
+# <a name="switch_is"></a>switch_is
 
-Gibt den Ausdruck oder einen Bezeichner fungiert als die union kombiniert werden sollen, die die union-Member auswählt.
+Gibt den Ausdruck oder den Bezeichner an, der als uniondiskriminant fungiert, der das Unionmember auswählt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,11 +25,11 @@ Gibt den Ausdruck oder einen Bezeichner fungiert als die union kombiniert werden
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Switch_is** C++ Attribut hat die gleiche Funktionalität wie die [Switch_is](/windows/desktop/Midl/switch-is) MIDL-Attribut.
+Das **Switch_is** C++ -Attribut verfügt über die gleiche Funktionalität wie das [Switch_is](/windows/win32/Midl/switch-is) -Mittell-Attribut.
 
 ## <a name="example"></a>Beispiel
 
-Finden Sie unter den [Fall](case-cpp.md) Beispiel für ein Beispiel für die Verwendung von **Switch_is**.
+Eine Beispiel Verwendung von **Switch_is**finden [Sie im Beispiel](case-cpp.md) .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,8 +39,8 @@ Finden Sie unter den [Fall](case-cpp.md) Beispiel für ein Beispiel für die Ver
 |-|-|
 |**Betrifft**|**typedef**|
 |**Wiederholbar**|Nein|
-|**Erforderliche Attribute**|Keiner|
-|**Ungültige Attribute**|Keiner|
+|**Erforderliche Attribute**|None|
+|**Ungültige Attribute**|None|
 
 Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](cpp-attributes-com-net.md#contexts).
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: 9a1633ed48c763b986f3421c33589a05f8bba126
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 891b19112c8baf2efb088f064892e1ea19a7deab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224793"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503979"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget-Klasse
 
@@ -55,20 +55,20 @@ class COleDropTarget : public CCmdTarget
 |----------|-----------------|
 |[COleDropTarget::OnDragEnter](#ondragenter)|Wird aufgerufen, wenn der Cursor zuerst das Fenster betritt.|
 |[COleDropTarget::OnDragLeave](#ondragleave)|Wird aufgerufen, wenn der Cursor aus dem Fenster gezogen wird.|
-|[COleDropTarget::OnDragOver](#ondragover)|Wiederholt aufgerufen, wenn der Cursor über dem Fenster gezogen wird.|
-|[COleDropTarget::OnDragScroll](#ondragscroll)|Wird aufgerufen, um festzustellen, ob der Cursor in der Region Scrollen Sie im Fenster gezogen wird.|
-|[COleDropTarget::OnDrop](#ondrop)|Wird aufgerufen, wenn Daten in das Fenster an und Standard-Handler gelöscht werden.|
-|[COleDropTarget::OnDropEx](#ondropex)|Wird aufgerufen, wenn Daten in das Fenster und der erste Handler gelöscht werden.|
-|[COleDropTarget::Register](#register)|Wird das Fenster als ein gültiges Ablageziel registriert.|
-|[COleDropTarget::Revoke](#revoke)|Bewirkt, dass das Fenster nicht mehr, wird ein gültiges Ablageziel.|
+|[COleDropTarget::OnDragOver](#ondragover)|Wird wiederholt aufgerufen, wenn der Cursor über das Fenster gezogen wird.|
+|[COleDropTarget::OnDragScroll](#ondragscroll)|Wird aufgerufen, um zu bestimmen, ob der Cursor in den scrollbereich des Fensters gezogen wird.|
+|[COleDropTarget::OnDrop](#ondrop)|Wird aufgerufen, wenn Daten im Fenster abgelegt werden, Standard Handler.|
+|[COleDropTarget::OnDropEx](#ondropex)|Wird aufgerufen, wenn Daten im Fenster, anfänglicher Handler, abgelegt werden.|
+|[COleDropTarget::Register](#register)|Registriert das Fenster als gültiges Ablage Ziel.|
+|[COleDropTarget::Revoke](#revoke)|Bewirkt, dass das Fenster kein gültiges Ablage Ziel mehr ist.|
 
 ## <a name="remarks"></a>Hinweise
 
-Erstellen ein Objekt dieser Klasse können ein Fenster, um Daten über den OLE-Drag & Drop-Mechanismus zu bestätigen.
+Wenn Sie ein Objekt dieser Klasse erstellen, kann ein Fenster Daten über den OLE-und Drop-Mechanismus von OLE akzeptieren.
 
-Um ein Fenster zum Akzeptieren von Drop-Befehle zu erhalten, sollten Sie zuerst ein Objekt vom Erstellen der `COleDropTarget` Klasse, und rufen Sie dann die [registrieren](#register) Funktion mit einem Zeiger auf die gewünschte `CWnd` Objekt als einzigen Parameter.
+Wenn Sie ein Fenster zum Akzeptieren von Drop-Befehlen abrufen möchten, sollten Sie zuerst ein `COleDropTarget` Objekt der-Klasse erstellen und dann die [Register](#register) -Funktion mit einem Zeiger `CWnd` auf das gewünschte Objekt als einzigen Parameter aufrufen.
 
-Weitere Informationen zu Drag & Drop-Vorgängen mithilfe von OLE, finden Sie im Artikel [Drag & Drop (OLE)](../../mfc/drag-and-drop-ole.md).
+Weitere Informationen zu Drag & Drop-Vorgängen mit OLE finden Sie im Artikel [Drag & Drop (OLE)](../../mfc/drag-and-drop-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -80,11 +80,11 @@ Weitere Informationen zu Drag & Drop-Vorgängen mithilfe von OLE, finden Sie im 
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** afxole.h
+**Header:** Afxole. h
 
-##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget
+##  <a name="coledroptarget"></a>COleDropTarget:: COleDropTarget
 
-Erstellt ein Objekt der Klasse `COleDropTarget`.
+Erstellt ein Objekt der- `COleDropTarget`Klasse.
 
 ```
 COleDropTarget();
@@ -92,11 +92,11 @@ COleDropTarget();
 
 ### <a name="remarks"></a>Hinweise
 
-Rufen Sie [registrieren](#register) , ein Fenster dieses Objekt zugeordnet werden soll.
+Ruft [Register](#register) auf, um dieses-Objekt einem Fenster zuzuordnen.
 
-##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter
+##  <a name="ondragenter"></a>COleDropTarget:: OnDragEnter
 
-Wird vom Framework aufgerufen, wenn der Cursor zuerst in das Fenster gezogen wird.
+Wird von Framework aufgerufen, wenn der Cursor zum ersten Mal in das Fenster gezogen wird.
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -109,40 +109,40 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-Verweist auf das Fenster den Cursor wird eingeben.
+Zeigt auf das Fenster, in das der Cursor wechselt.
 
 *pDataObject*<br/>
-Verweist auf das Datenobjekt, das mit den Daten, die gelöscht werden können.
+Verweist auf das Datenobjekt, das die Daten enthält, die gelöscht werden können.
 
 *dwKeyState*<br/>
-Enthält den Status der Modifizierertasten. Dies ist eine Kombination von eine beliebige Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON.
+Enthält den Zustand der Modifizierertasten. Dies ist eine Kombination aus einer beliebigen Anzahl von folgenden: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.
 
 *point*<br/>
-Enthält die aktuelle Position des Cursors in Clientkoordinaten.
+Enthält die aktuelle Position des Cursors in Client Koordinaten.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Auswirkungen, die sich ergeben würde, wenn eine Drop an die vom angegebenen Speicherort durchgeführt wurden *zeigen*. Sie können eine oder mehrere der folgenden sein:
+Der Effekt, der verursacht würde, wenn eine Ablage an der durch *Punkt*angegebenen Position versucht würde. Dabei kann es sich um eine oder mehrere der folgenden handeln:
 
-- DROPEFFECT_NONE ein Drop würde nicht zulässig.
+- DROPEFFECT_NONE ein Drop wäre nicht zulässig.
 
-- DROPEFFECT_COPY ein Kopiervorgang würde ausgeführt werden.
+- DROPEFFECT_COPY ein Kopiervorgang wird ausgeführt.
 
-- DROPEFFECT_MOVE ein Verschiebevorgang würde ausgeführt werden.
+- DROPEFFECT_MOVE ein Verschiebungs Vorgang wird ausgeführt.
 
-- DROPEFFECT_LINK ein Link von der abgelegten Daten auf die ursprünglichen Daten würden hergestellt werden.
+- DROPEFFECT_LINK es wird ein Link zwischen den gelöschten Daten und den ursprünglichen Daten erstellt.
 
-- DROPEFFECT_SCROLL ein Bildlauf Ziehvorgang durchgeführt wird oder im Ziel stattfindet.
+- DROPEFFECT_SCROLL ein Drag-Scroll-Vorgang ist im Begriff, oder er tritt im Ziel auf.
 
 ### <a name="remarks"></a>Hinweise
 
-Überschreiben Sie diese Funktion, um die Drop-Vorgänge in der das Fenster auftreten können. Die Standardimplementierung ruft [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), einfach DROPEFFECT_NONE standardmäßig zurückgegeben.
+Überschreiben Sie diese Funktion, um das Auftreten von Drop-Vorgängen im Fenster zuzulassen. Die Standard Implementierung ruft [CView:: OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)auf, der standardmäßig nur DROPEFFECT_NONE zurückgibt.
 
-Weitere Informationen finden Sie unter [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) im Windows SDK.
+Weitere Informationen finden Sie unter [IDropTarget::D ragenter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) im Windows SDK.
 
-##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave
+##  <a name="ondragleave"></a>COleDropTarget:: OnDragLeave
 
-Wird vom Framework aufgerufen, wenn der Cursor im Fenster verlässt, während ein Ziehvorgang ausgeführt wird.
+Wird von Framework aufgerufen, wenn der Cursor das Fenster verlässt, während ein Zieh Vorgang wirksam ist.
 
 ```
 virtual void OnDragLeave(CWnd* pWnd);
@@ -151,17 +151,17 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-Verweist auf das Fenster den Cursor verlässt.
+Zeigt auf das Fenster, das der Cursor verlässt.
 
 ### <a name="remarks"></a>Hinweise
 
-Überschreiben Sie diese Funktion, wenn bei der der Ziehvorgang des angegebenen Fensters verlässt besonderes Verhalten soll. Ruft die standardmäßige Implementierung dieser Funktion [CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave).
+Überschreiben Sie diese Funktion, wenn Sie ein spezielles Verhalten wünschen, wenn der Zieh Vorgang das angegebene Fenster verlässt. Die Standard Implementierung dieser Funktion ruft [CView:: OnDragLeave](../../mfc/reference/cview-class.md#ondragleave)auf.
 
-Weitere Informationen finden Sie unter [IDropTarget::DragLeave](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragleave) im Windows SDK.
+Weitere Informationen finden Sie unter [IDropTarget::D ragleave](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragleave) in der Windows SDK.
 
-##  <a name="ondragover"></a>  COleDropTarget::OnDragOver
+##  <a name="ondragover"></a>COleDropTarget:: OnDragOver
 
-Wird vom Framework aufgerufen, wenn der Cursor über das Fenster gezogen wird.
+Wird von Framework aufgerufen, wenn der Cursor über das Fenster gezogen wird.
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -174,44 +174,44 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-Verweist auf das Fenster, dem der Cursor über befindet.
+Zeigt auf das Fenster, über dem sich der Cursor befindet.
 
 *pDataObject*<br/>
-Verweist auf das Datenobjekt, das den Daten, die gelöscht werden sollen.
+Verweist auf das Datenobjekt, das die Daten enthält, die gelöscht werden sollen.
 
 *dwKeyState*<br/>
-Enthält den Status der Modifizierertasten. Dies ist eine Kombination von eine beliebige Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON.
+Enthält den Zustand der Modifizierertasten. Dies ist eine Kombination aus einer beliebigen Anzahl von folgenden: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.
 
 *point*<br/>
-Enthält die aktuelle Position des Cursors in Clientkoordinaten.
+Enthält die aktuelle Position des Cursors in Client Koordinaten.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Auswirkungen, die sich ergeben würde, wenn eine Drop an die vom angegebenen Speicherort durchgeführt wurden *zeigen*. Sie können eine oder mehrere der folgenden sein:
+Der Effekt, der verursacht würde, wenn eine Ablage an der durch *Punkt*angegebenen Position versucht würde. Dabei kann es sich um eine oder mehrere der folgenden handeln:
 
-- DROPEFFECT_NONE ein Drop würde nicht zulässig.
+- DROPEFFECT_NONE ein Drop wäre nicht zulässig.
 
-- DROPEFFECT_COPY ein Kopiervorgang würde ausgeführt werden.
+- DROPEFFECT_COPY ein Kopiervorgang wird ausgeführt.
 
-- DROPEFFECT_MOVE ein Verschiebevorgang würde ausgeführt werden.
+- DROPEFFECT_MOVE ein Verschiebungs Vorgang wird ausgeführt.
 
-- DROPEFFECT_LINK ein Link von der abgelegten Daten auf die ursprünglichen Daten würden hergestellt werden.
+- DROPEFFECT_LINK es wird ein Link zwischen den gelöschten Daten und den ursprünglichen Daten erstellt.
 
-- DROPEFFECT_SCROLL gibt an, die ein Ziehvorgang für den Bildlauf durchgeführt wird oder im Ziel stattfindet.
+- DROPEFFECT_SCROLL gibt an, dass ein Drag & Drop-Vorgang im Ziel auftritt oder im Ziel auftritt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion sollte überschrieben werden, um Drop-Vorgänge in der das Fenster auftreten zu ermöglichen. Ruft die standardmäßige Implementierung dieser Funktion [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), DROPEFFECT_NONE standardmäßig zurückgegeben. Da diese Funktion häufig während eines Drag & Drop-Vorgangs aufgerufen wird, sollten sie so weit wie möglich optimiert werden.
+Diese Funktion sollte überschrieben werden, damit Drop-Vorgänge im Fenster auftreten können. Die Standard Implementierung dieser Funktion ruft [CView:: OnDragOver](../../mfc/reference/cview-class.md#ondragover)auf, das standardmäßig DROPEFFECT_NONE zurückgibt. Da diese Funktion während eines Drag & Drop-Vorgangs häufig aufgerufen wird, sollte Sie so weit wie möglich optimiert werden.
 
-Weitere Informationen finden Sie unter [IDropTarget:: DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover) im Windows SDK.
+Weitere Informationen finden Sie unter [IDropTarget::D ragover](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover) in der Windows SDK.
 
 ### <a name="example"></a>Beispiel
 
 [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]
 
-##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll
+##  <a name="ondragscroll"></a>COleDropTarget:: ondragscroll
 
-Wird aufgerufen, durch das Framework vor dem Aufruf [OnDragEnter](#ondragenter) oder [OnDragOver](#ondragover) um zu bestimmen, ob *zeigen* im Bildlaufbereich ist.
+Wird vom Framework aufgerufen, bevor [OnDragEnter](#ondragenter) oder [OnDragOver](#ondragover) aufgerufen wird, um zu bestimmen, ob der *Punkt* im scrollbereich ist.
 
 ```
 virtual DROPEFFECT OnDragScroll(
@@ -223,35 +223,35 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-Verweist auf das Fenster der Cursor befindet sich derzeit über.
+Zeigt auf das Fenster, über dem sich der Cursor zurzeit befindet.
 
 *dwKeyState*<br/>
-Enthält den Status der Modifizierertasten. Dies ist eine Kombination von eine beliebige Anzahl von Folgendes: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, and MK_RBUTTON.
+Enthält den Zustand der Modifizierertasten. Dies ist eine Kombination aus einer beliebigen Anzahl von folgenden: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.
 
 *point*<br/>
-Enthält den Speicherort des Cursors in Pixel relativ zum Bildschirm.
+Enthält die Position des Cursors relativ zum Bildschirm in Pixel.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Auswirkungen, die sich ergeben würde, wenn eine Drop an die vom angegebenen Speicherort durchgeführt wurden *zeigen*. Sie können eine oder mehrere der folgenden sein:
+Der Effekt, der verursacht würde, wenn eine Ablage an der durch *Punkt*angegebenen Position versucht würde. Dabei kann es sich um eine oder mehrere der folgenden handeln:
 
-- DROPEFFECT_NONE ein Drop würde nicht zulässig.
+- DROPEFFECT_NONE ein Drop wäre nicht zulässig.
 
-- DROPEFFECT_COPY ein Kopiervorgang würde ausgeführt werden.
+- DROPEFFECT_COPY ein Kopiervorgang wird ausgeführt.
 
-- DROPEFFECT_MOVE ein Verschiebevorgang würde ausgeführt werden.
+- DROPEFFECT_MOVE ein Verschiebungs Vorgang wird ausgeführt.
 
-- DROPEFFECT_LINK ein Link von der abgelegten Daten auf die ursprünglichen Daten würden hergestellt werden.
+- DROPEFFECT_LINK es wird ein Link zwischen den gelöschten Daten und den ursprünglichen Daten erstellt.
 
-- DROPEFFECT_SCROLL gibt an, die ein Ziehvorgang für den Bildlauf durchgeführt wird oder im Ziel stattfindet.
+- DROPEFFECT_SCROLL gibt an, dass ein Drag & Drop-Vorgang im Ziel auftritt oder im Ziel auftritt.
 
 ### <a name="remarks"></a>Hinweise
 
-Überschreiben Sie diese Funktion, wenn Sie für dieses Ereignis besonderes Verhalten bereitstellen möchten. Ruft die standardmäßige Implementierung dieser Funktion [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), die DROPEFFECT_NONE zurückgibt und das Fenster einen Bildlauf durchführt, wenn der Cursor in die Standard-Bildlaufbereich in den Rand des Fensters gezogen wird.
+Überschreiben Sie diese Funktion, wenn Sie ein spezielles Verhalten für dieses Ereignis bereitstellen möchten. Die Standard Implementierung dieser Funktion ruft [CView:: ondragscroll](../../mfc/reference/cview-class.md#ondragscroll)auf, das DROPEFFECT_NONE zurückgibt und im Fenster einen Bildlauf durchführt, wenn der Cursor in den Standard scrollbereich innerhalb des Fensterrahmens gezogen wird.
 
-##  <a name="ondrop"></a>  COleDropTarget::OnDrop
+##  <a name="ondrop"></a>COleDropTarget:: OnDrop
 
-Vom Framework aufgerufen, wenn ein Drop-Vorgang ausgeführt wird.
+Wird von Framework aufgerufen, wenn ein Ablage Vorgang erfolgen soll.
 
 ```
 virtual BOOL OnDrop(
@@ -264,38 +264,38 @@ virtual BOOL OnDrop(
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-Verweist auf das Fenster der Cursor befindet sich derzeit über.
+Zeigt auf das Fenster, über dem sich der Cursor zurzeit befindet.
 
 *pDataObject*<br/>
-Verweist auf das Datenobjekt, das den Daten, die gelöscht werden sollen.
+Verweist auf das Datenobjekt, das die Daten enthält, die gelöscht werden sollen.
 
 *dropEffect*<br/>
-Der Effekt, den der Benutzer für den Löschvorgang ausgewählt haben. Sie können eine oder mehrere der folgenden sein:
+Der Effekt, den der Benutzer für den Drop-Vorgang gewählt hat. Dabei kann es sich um eine oder mehrere der folgenden handeln:
 
-- DROPEFFECT_COPY ein Kopiervorgang würde ausgeführt werden.
+- DROPEFFECT_COPY ein Kopiervorgang wird ausgeführt.
 
-- DROPEFFECT_MOVE ein Verschiebevorgang würde ausgeführt werden.
+- DROPEFFECT_MOVE ein Verschiebungs Vorgang wird ausgeführt.
 
-- DROPEFFECT_LINK ein Link von der abgelegten Daten auf die ursprünglichen Daten würden hergestellt werden.
+- DROPEFFECT_LINK es wird ein Link zwischen den gelöschten Daten und den ursprünglichen Daten erstellt.
 
 *point*<br/>
-Enthält den Speicherort des Cursors in Pixel relativ zum Bildschirm.
+Enthält die Position des Cursors relativ zum Bildschirm in Pixel.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL ist, wenn die Dropdownliste erfolgreich ist; andernfalls 0.
+Ungleich NULL, wenn der Löschvorgang erfolgreich ist. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft zunächst [OnDropEx](#ondropex). Wenn die `OnDropEx` Funktion der Ablegevorgang nicht behandelt, die das Framework ruft dann diese Memberfunktion `OnDrop`. Die Anwendung in der Regel überschreibt [OnDropEx](../../mfc/reference/cview-class.md#ondropex) in der Ansichtsklasse, Behandeln der rechten Maustaste Drag & drop. In der Regel der Ansichtsklasse [OnDrop](../../mfc/reference/cview-class.md#ondrop) wird verwendet, um einfache Drag & Drop zu behandeln.
+Das Framework ruft zuerst [ondropex](#ondropex)auf. Wenn die `OnDrop`Funktion den Löschvorgang nicht behandelt, ruft das Framework diese Member-Funktion auf. `OnDropEx` In der Regel überschreibt die Anwendung [ondropex](../../mfc/reference/cview-class.md#ondropex) in der Ansichts Klasse, um die Rechte Drag & amp; Drop der Mauszeiger zu verarbeiten. In der Regel wird die Ansichts Klasse [OnDrop](../../mfc/reference/cview-class.md#ondrop) verwendet, um einfaches Drag & Drop zu verarbeiten.
 
-Die standardmäßige Implementierung des `COleDropTarget::OnDrop` Aufrufe [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop), die einfach "false" zurückgibt, wird standardmäßig.
+Die Standard Implementierung von `COleDropTarget::OnDrop` ruft [CView:: OnDrop](../../mfc/reference/cview-class.md#ondrop)auf, das standardmäßig einfach false zurückgibt.
 
-Weitere Informationen finden Sie unter [IDropTarget:: Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) im Windows SDK.
+Weitere Informationen finden Sie unter [IDropTarget::D ROP](/windows/win32/api/oleidl/nf-oleidl-idroptarget-drop) in der Windows SDK.
 
-##  <a name="ondropex"></a>  COleDropTarget::OnDropEx
+##  <a name="ondropex"></a>COleDropTarget:: ondropex
 
-Vom Framework aufgerufen, wenn ein Drop-Vorgang ausgeführt wird.
+Wird von Framework aufgerufen, wenn ein Ablage Vorgang erfolgen soll.
 
 ```
 virtual DROPEFFECT OnDropEx(
@@ -309,47 +309,47 @@ virtual DROPEFFECT OnDropEx(
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-Verweist auf das Fenster der Cursor befindet sich derzeit über.
+Zeigt auf das Fenster, über dem sich der Cursor zurzeit befindet.
 
 *pDataObject*<br/>
-Verweist auf das Datenobjekt, das den Daten, die gelöscht werden sollen.
+Verweist auf das Datenobjekt, das die Daten enthält, die gelöscht werden sollen.
 
 *dropDefault*<br/>
-Die Auswirkungen, die der Benutzer für den Standard-Drop-Vorgang basierend auf dem aktuellen Schlüssel Status auswählen. Es kann DROPEFFECT_NONE sein. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.
+Der Effekt, den der Benutzer für den Standard Ablage Vorgang basierend auf dem aktuellen Schlüssel Zustand ausgewählt hat. Sie kann DROPEFFECT_NONE sein. Drop Effects werden im Abschnitt "Hinweise" erläutert.
 
 *dropList*<br/>
-Eine Liste mit der Drop-Effekten, die die Quelle unterstützt. Drop-Effekt-Werte können kombiniert werden, mit dem bitweisen OR (**&#124;**) Vorgang. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.
+Eine Liste der Ablage Effekte, die von der Drop-Quelle unterstützt werden. Drop Effect-Werte können mithilfe des bitweisen or (**&#124;**)-Vorgangs kombiniert werden. Drop Effects werden im Abschnitt "Hinweise" erläutert.
 
 *point*<br/>
-Enthält den Speicherort des Cursors in Pixel relativ zum Bildschirm.
+Enthält die Position des Cursors relativ zum Bildschirm in Pixel.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Drop-Effekt, die bei der Löschversuch an die vom angegebenen Speicherort *zeigen*. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.
+Der Ablage Effekt, der aus dem Drop-Versuch an der durch *Punkt*angegebenen Position resultiert. Drop Effects werden im Abschnitt "Hinweise" erläutert.
 
 ### <a name="remarks"></a>Hinweise
 
-Das Framework ruft zuerst diese Funktion. Wenn der Ablegevorgang nicht handhaben kann, ruft das Framework dann [OnDrop](#ondrop). Überschreiben Sie in der Regel [OnDropEx](../../mfc/reference/cview-class.md#ondropex) in der Ansichtsklasse zur Unterstützung der rechten Maustaste Drag & drop. In der Regel der Ansichtsklasse [OnDrop](../../mfc/reference/cview-class.md#ondrop) wird verwendet, um den Fall der Unterstützung für einfache Drag & Drop zu behandeln.
+Das Framework ruft diese Funktion zuerst auf. Wenn das Drop nicht behandelt wird, ruft das Framework dann [OnDrop](#ondrop)auf. In der Regel überschreiben Sie [ondropex](../../mfc/reference/cview-class.md#ondropex) in der Ansichts Klasse, um die Rechte Drag & Drop-Taste zu unterstützen. In der Regel wird die Ansichts Klasse [OnDrop](../../mfc/reference/cview-class.md#ondrop) verwendet, um die Groß-/Kleinschreibung für das einfache Drag & Drop zu verarbeiten.
 
-Die standardmäßige Implementierung des `COleDropTarget::OnDropEx` Aufrufe [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex). In der Standardeinstellung [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex) einfach gibt den Dummywert an, dass die [OnDrop](#ondrop) Memberfunktion aufgerufen werden soll.
+Die Standard Implementierung von `COleDropTarget::OnDropEx` ruft [CView:: ondropex](../../mfc/reference/cview-class.md#ondropex)auf. Standardmäßig gibt [CView:: ondropex](../../mfc/reference/cview-class.md#ondropex) einfach einen Dummy-Wert zurück, um anzugeben, dass die [OnDrop](#ondrop) -Member-Funktion aufgerufen werden soll.
 
-& Drop-Effekte wird beschrieben, die ein Drop-Vorgang zugeordnete Aktion. Finden Sie in der folgenden Liste der Drop-Effekten:
+Drop Effects beschreibt die Aktion, die einem Drop-Vorgang zugeordnet ist. Weitere Informationen finden Sie in der folgenden Dropdown Liste:
 
-- DROPEFFECT_NONE ein Drop würde nicht zulässig.
+- DROPEFFECT_NONE ein Drop wäre nicht zulässig.
 
-- DROPEFFECT_COPY ein Kopiervorgang würde ausgeführt werden.
+- DROPEFFECT_COPY ein Kopiervorgang wird ausgeführt.
 
-- DROPEFFECT_MOVE ein Verschiebevorgang würde ausgeführt werden.
+- DROPEFFECT_MOVE ein Verschiebungs Vorgang wird ausgeführt.
 
-- DROPEFFECT_LINK ein Link von der abgelegten Daten auf die ursprünglichen Daten würden hergestellt werden.
+- DROPEFFECT_LINK es wird ein Link zwischen den gelöschten Daten und den ursprünglichen Daten erstellt.
 
-- DROPEFFECT_SCROLL gibt an, die ein Ziehvorgang für den Bildlauf durchgeführt wird oder im Ziel stattfindet.
+- DROPEFFECT_SCROLL gibt an, dass ein Drag & Drop-Vorgang im Ziel auftritt oder im Ziel auftritt.
 
-Weitere Informationen finden Sie unter [IDropTarget:: Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) im Windows SDK.
+Weitere Informationen finden Sie unter [IDropTarget::D ROP](/windows/win32/api/oleidl/nf-oleidl-idroptarget-drop) in der Windows SDK.
 
-##  <a name="register"></a>  COleDropTarget::Register
+##  <a name="register"></a>COleDropTarget:: Register
 
-Rufen Sie diese Funktion aus, um das Fenster für OLE-DLL als ein gültiges Ablageziel zu registrieren.
+Diese Funktion wird aufgerufen, um das Fenster mit den OLE-DLLs als gültiges Ablage Ziel zu registrieren.
 
 ```
 BOOL Register(CWnd* pWnd);
@@ -358,21 +358,21 @@ BOOL Register(CWnd* pWnd);
 ### <a name="parameters"></a>Parameter
 
 *pWnd*<br/>
-Verweist auf das Fenster, das als Dropziel registriert werden soll.
+Verweist auf das Fenster, das als Ablage Ziel registriert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ungleich NULL ist, wenn die Registrierung erfolgreich ist; andernfalls 0.
+Ungleich 0 (null), wenn die Registrierung erfolgreich ist. andernfalls 0.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion muss aufgerufen werden, für die Drop-Vorgänge, um akzeptiert zu werden.
+Diese Funktion muss für Drop-Vorgänge aufgerufen werden, um akzeptiert zu werden.
 
-Weitere Informationen finden Sie unter [RegisterDragDrop](/windows/desktop/api/ole2/nf-ole2-registerdragdrop) im Windows SDK.
+Weitere Informationen finden Sie unter [RegisterDragDrop](/windows/win32/api/ole2/nf-ole2-registerdragdrop) im Windows SDK.
 
-##  <a name="revoke"></a>  COleDropTarget::Revoke
+##  <a name="revoke"></a>COleDropTarget:: Widerruf
 
-Mit dieser Funktion wird vor dem Zerstören von einem beliebigen Fenster, das als Drop-Ziel durch einen Aufruf von registriert wurde [registrieren](#register) es aus der Liste der Ziele zu entfernen.
+Diese Funktion wird aufgerufen, bevor ein Fenster zerstört wird, das als Ablage Ziel mithilfe eines Aufrufens registriert wurde [, um es](#register) aus der Liste der Ablage Ziele zu entfernen.
 
 ```
 virtual void Revoke();
@@ -380,13 +380,13 @@ virtual void Revoke();
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion wird automatisch aufgerufen, von der [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy) Handler für das Fenster, das registriert wurde, daher ist es in der Regel nicht notwendig, diese Funktion explizit aufrufen,.
+Diese Funktion wird automatisch vom [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy) -Handler für das registrierte Fenster aufgerufen. Daher ist es in der Regel nicht notwendig, diese Funktion explizit aufzurufen.
 
-Weitere Informationen finden Sie unter [RevokeDragDrop](/windows/desktop/api/ole2/nf-ole2-revokedragdrop) im Windows SDK.
+Weitere Informationen finden Sie unter [revokedragdrop](/windows/win32/api/ole2/nf-ole2-revokedragdrop) in der Windows SDK.
 
 ## <a name="see-also"></a>Siehe auch
 
-[MFC-Beispiel HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel Hierarchien](../../overview/visual-cpp-samples.md)<br/>
 [MFC-Beispiel OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget-Klasse](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
