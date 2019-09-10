@@ -1,16 +1,16 @@
 ---
 title: /Qspectre
-ms.date: 10/12/2018
+ms.date: 09/06/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SpectreMitigation
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: 2b784e464f98ae6a1f9285f799d903ae689bf6d5
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: e8d03075a980a9b9c345ce351413e39a3c3444cb
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340990"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808827"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -31,6 +31,9 @@ In ihrer ursprünglichen Version funktionierte die **/Qspectre**-Option nur mit 
 Microsoft Visual C++-Bibliotheken stehen ebenfalls in Versionen mit Spectre-Entschärfung zur Verfügung. Die Spectre-entschärften Bibliotheken für Visual Studio 2017 und höher können im Visual Studio-Installer heruntergeladen werden. Sie befinden sich auf der Registerkarte " **einzelne Komponenten** " unter **Compiler, Buildtools und Laufzeiten**und verfügen im Namen über "lisb for Spectre". Sowohl DLLs als auch statische Runtimebibliotheken mit aktivierter Entschärfung sind für eine Teilmenge der Visual C++-Runtimes verfügbar: VC++-Startcode, vcruntime140, msvcp140, concrt140 und vcamp140. Die DLLs werden nur für die Anwendungs lokale Bereitstellung unterstützt. Der Inhalt der weitervertreibbaren Visual C++ 2017-und späteren Laufzeitbibliotheken wurde nicht geändert.
 
 Sie können auch Spectre-entschärfelte Bibliotheken für MFC und ATL installieren. Sie befinden sich auf der Registerkarte " **einzelne Komponenten** " unter **SDK, Bibliotheken und Frameworks**.
+
+> [!NOTE]
+> Für universelle Windows-Apps oder-Komponenten gibt es keine Versionen von Spectre-entschärten Bibliotheken. App-lokale Bereitstellung solcher Bibliotheken ist nicht möglich.
 
 ### <a name="applicability"></a>Anwendbarkeit
 
@@ -68,11 +71,25 @@ Weitere Informationen finden Sie in der offiziellen [Microsoft Security Advisory
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest
 
+::: moniker range="vs-2019"
+
 1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
 
-1. Klicken Sie auf der Eigenschaftenseite auf **Konfigurationseigenschaften** > **C/C++**  > **Befehlszeile**.
+1. Wählen Sie die **Eigenschaften Seite Konfigurations Eigenschaften** > **CC++ /** > Code Generierung aus.
+
+1. Wählen Sie einen neuen Wert für die Eigenschaft **Spectre-Entschärfung** aus. Wählen Sie **OK** aus, um die Änderung zu übernehmen.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen erhalten Sie unter [Set C++ compiler and build properties in Visual Studio (Festlegen der Compiler- und Buildeigenschaften (C++) in Visual Studio)](../working-with-project-properties.md).
+
+1. Wählen Sie die **Eigenschaften Seite Konfigurations Eigenschaften** > **CC++ /** > Befehlszeile aus.
 
 1. Geben Sie die Compileroption **/Qspectre** im Feld **Zusätzliche Optionen** ein. Wählen Sie **OK** aus, um die Änderung zu übernehmen.
+
+::: moniker-end
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest
 
