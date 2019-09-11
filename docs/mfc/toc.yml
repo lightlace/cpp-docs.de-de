@@ -2841,8 +2841,6 @@
               href: reference/application-type-mfc-application-wizard.md
             - name: 'Verbunddokumentunterstützung, MFC-Anwendungs-Assistent'
               href: reference/compound-document-support-mfc-application-wizard.md
-            - name: 'Zeichenfolgen für Dokumentvorlagen, MFC-Anwendungs-Assistent'
-              href: reference/document-template-strings-mfc-application-wizard.md
             - name: 'Datenbankunterstützung, MFC-Anwendungs-Assistent'
               href: reference/database-support-mfc-application-wizard.md
             - name: 'Benutzeroberflächen-Features, MFC-Anwendungs-Assistent'
@@ -2885,8 +2883,6 @@
           items:
             - name: MFC-Assistent zum Hinzufügen von Klassen
               href: reference/mfc-add-class-wizard.md
-            - name: 'Zeichenfolgen für Dokumentvorlagen, MFC-Assistent zum Hinzufügen von Klassen'
-              href: reference/document-template-strings-mfc-add-class-wizard.md
     - name: Hinzufügen einer MFC-Klasse aus einer Typbibliothek
       expanded: false
       items:
