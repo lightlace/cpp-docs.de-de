@@ -1,24 +1,24 @@
 ---
 title: Verbesserungen an C++ bei der Übereinstimmung mit Standards
-ms.date: 06/14/2019
+ms.date: 08/30/2019
 description: Microsoft C++ in Visual Studio  bewegt sich auf die vollständige Konformität mit dem Sprachstandard C++20 zu.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 1652c7ab9a48de65b32123b34c3231a0b06a410a
-ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
+ms.openlocfilehash: aeaaab704706bee575e3ae44726522cd04c17433
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194770"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222319"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Verbesserungen der C++-Konformität in Visual Studio
 
 Microsoft C++ nimmt bei jedem Release Verbesserungen bei der Übereinstimmung mit Standards und Fehlerbehebungen vor. Dieser Artikel listet die Verbesserungen nach Hauptrelease und dann nach Versionen auf. Außerdem werden wichtige Fehlerbehebungen geordnet nach Version aufgeführt. Um direkt zu den Änderungen für eine bestimmte Version zu gelangen, verwenden Sie die Liste **In diesem Artikel**.
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
-## <a name="improvements_160"></a> Verbesserungen in Visual Studio 2019 RTW (Version 16.0)
+## <a name="improvements_160"></a> Verbesserungen der Konformität in Visual Studio 2019 RTW (Version 16.0)
 
 Visual Studio 2019 (RTW) enthält die folgenden Verbesserungen der Konformität, Fehlerbehebungen und Verhaltensänderungen des Microsoft C++-Compilers (MSVC).
 
@@ -93,7 +93,7 @@ int main()
 }
 ```
 
-### <a name="reinterpretcast-from-an-overloaded-function"></a>Der Operator `reinterpret_cast` einer überladenen Funktion
+### <a name="reinterpret_cast-from-an-overloaded-function"></a>Der Operator `reinterpret_cast` einer überladenen Funktion
 
 Das Argument für `reinterpret_cast` entspricht keinem der Kontexte, in denen die Adresse einer überladenen Funktion zulässig ist. Der folgende Code wird in Visual Studio 2017 fehlerfrei kompiliert. In Visual Studio 2019 wird jedoch die folgende Warnung ausgelöst: *C2440: 'overloaded-function' kann nicht in 'fp' konvertiert werden*:
 
@@ -134,7 +134,7 @@ int main()
 
 Entfernen Sie entweder den `constexpr`-Qualifizierer, oder ändern Sie den Konformitätsmodus in `/std:c++17`, um diesen Fehler zu vermeiden.
 
-### <a name="stdcreatedirectory-failure-codes"></a>`std::create_directory`-Fehlercodes
+### <a name="stdcreate_directory-failure-codes"></a>`std::create_directory`-Fehlercodes
 
 [P1164](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1164r1.pdf) des C++20-Standards wurde bedingungslos implementiert. Dadurch wurde `std::create_directory` so geändert, dass überprüft wird, ob das Ziel beim Auftreten des Fehlers bereits ein Verzeichnis war. Zuvor wurden alle Fehler vom Typ ERROR_ALREADY_EXISTS in erfolgreiche Codes umgewandelt, die jedoch kein Verzeichnis erstellt haben.
 
@@ -150,7 +150,7 @@ Neue parallele Versionen von `is_sorted`, `is_sorted_until`, `is_partitioned`, `
 
 [P0883 "Fixing atomic initialization"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf) (Beheben der atomischen Initialisierung) ändert `std::atomic` in die Initialisierung des enthaltenen Werts von T, anstatt eine Standardinitialisierung durchzuführen. Die Behebung wird aktiviert, wenn Clang/LLVM mit der Microsoft-Standardbibliothek verwendet wird. Sie ist derzeit für den C++-Compiler von Microsoft als Workaround für einen Fehler in der Verarbeitung von `constexpr` deaktiviert.
 
-### <a name="removecvref-and-removecvreft"></a>`remove_cvref` und `remove_cvref_t`
+### <a name="remove_cvref-and-remove_cvref_t"></a>`remove_cvref` und `remove_cvref_t`
 
 Die Typmerkmale `remove_cvref` und `remove_cvref_t` aus [P0550](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf) wurden implementiert. Diese entfernen die reference- und CV-Qualifizierer eines Typs ohne verfallende Funktionen und Arrays in Zeigern (im Gegensatz zu `std::decay` und `std::decay_t`).
 
@@ -162,9 +162,9 @@ Die Entwicklung der [Featuretestmakros (P0941R2)](http://www.open-std.org/jtc1/s
 
 [C++20 P1008R1 - prohibiting aggregates with user-declared constructors (Unterbinden von Aggregaten mit benutzerdeklarierten Konstruktoren)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1008r1.pdf) ist abgeschlossen.
 
-## <a name="improvements_161"></a> Verbesserungen in Visual Studio 2019 Version 16.1
+## <a name="improvements_161"></a> Verbesserungen der Konformität in 16.1
 
-### <a name="char8t"></a>char8_t
+### <a name="char8_t"></a>char8_t
 
 [P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html). C++20 führt einen neuen Zeichentyp ein, der für die Darstellung von UTF-8-Codeeinheiten verwendet wird. `u8`-Zeichenfolgenliterale in C++20 verfügen über den Typ `const char8_t[N]` anstelle von `const char[N]` (der vorherige Typ). Ähnliche Änderungen wurden in [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm) für den C-Standard vorgeschlagen. Vorschläge für die Wiederherstellung der Abwärtskompatibilität von `char8_t` wurden in [P1423r0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html) angegeben. In Visual Studio 2019 Version 16.1 wurde dem C++-Compiler von Microsoft Unterstützung für `char8_t` hinzugefügt, wenn die Compileroption **/Zc:char8_t** angegeben wird. Zukünftig erfolgt die Unterstützung mit [/std:c++latest](../build/reference/std-specify-language-standard-version.md), was mithilfe von **/Zc:char8_t-** in das C++17-Verhalten zurückversetzt werden kann. Der EDG-Compiler, der IntelliSense betreibt, unterstützt dies noch nicht, weshalb vermeidbare Intune-spezifische Fehler auftreten, die sich nicht auf die tatsächliche Kompilierung auswirken.
 
@@ -175,7 +175,7 @@ const char* s = u8"Hello"; // C++17
 const char8_t* s = u8"Hello"; // C++20
 ```
 
-### <a name="stdtypeidentity-metafunction-and-stdidentity-function-object"></a>Die std::type_identity-Metafunktion und das std::identity-Funktionsobjekt
+### <a name="stdtype_identity-metafunction-and-stdidentity-function-object"></a>Die std::type_identity-Metafunktion und das std::identity-Funktionsobjekt
 
 [P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf). Die veraltete `std::identity`-Klassenvorlagenerweiterung wurde entfernt und durch die `std::type_identity`-Metafunktion und das `std::identity`-Funktionsobjekt von C++20 ersetzt. Beides ist nur in [/std:c++latest](../build/reference/std-specify-language-standard-version.md) verfügbar.
 
@@ -241,9 +241,156 @@ void f() {
 - `remove()`, `remove_if()` und `unique()` für `list` und `forward_list` geben nun `size_type` zurück.
 - `shift_left()` und `shift_right()` wurden zu \<algorithm> hinzugefügt.
 
-## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019"></a>Fehlerbehebungen und Verhaltensänderungen in Visual Studio 2019
 
-### <a name="correct-diagnostics-for-basicstring-range-constructor"></a>Richtige Diagnose für den Bereichskonstruktor „basic_string“
+## <a name="improvements_162"></a> Verbesserungen der Konformität in 16.2
+
+### <a name="noexcept-constexpr-functions"></a>noexcept constexpr-Funktionen
+
+Constexpr-Funktionen werden standardmäßig nicht mehr als `noexcept` angesehen, wenn sie in einem konstanten Ausdruck verwendet werden. Dieser Behavior Change stammt aus der Auflösung von [CWG 1351](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#1351) und ist in [/permissive-](../build/reference/permissive-standards-conformance.md) aktiviert. Das folgende Beispiel wird in Visual Studio 2019 Version 16.1 und früher kompiliert, erzeugt jedoch C2338 in Visual Studio 2019 Version 16.2:
+
+```cpp
+constexpr int f() { return 0; }
+
+int main() {
+    static_assert(noexcept(f()), "f should be noexcept"); // C2338 in 16.2
+}
+```
+
+Fügen Sie den Ausdruck `noexcept` zur Funktionsdeklaration hinzu, um den Fehler zu beheben:
+
+```cpp
+constexpr int f() noexcept { return 0; }
+
+int main() {
+    static_assert(noexcept(f()), "f should be noexcept");
+}
+```
+
+### <a name="binary-expressions-with-different-enum-types"></a>Binäre Ausdrücke mit unterschiedlichen Enumerationstypen
+
+Arithmetischen Konvertierungen für Operanden, bei denen einer ein Enumerationstyp und der andere ein anderer Enumerationstyp oder ein Gleitkommatyp ist, werden in C++20 ([P1120R0](http://wg21.link/p1120r0)) als veraltet eingestuft. In Visual Studio 2019 Version 16.2 und höher erzeugt der folgende Code eine Warnung der Stufe 4, wenn die Compileroption [/std:c++latest](../build/reference/std-specify-language-standard-version.md) aktiviert ist:
+
+```cpp
+enum E1 { a };
+enum E2 { b };
+int main() {
+    int i = a | b; // warning C5054: operator '|': deprecated between enumerations of different types
+}
+```
+
+Konvertieren Sie den zweiten Operanden mit [static_cast](../cpp/static-cast-operator.md), um zu vermeiden, dass eine Warnung ausgelöst wird:
+
+```cpp
+enum E1 { a };
+enum E2 { b };
+int main() {
+  int i = a | static_cast<int>(b);
+}
+```
+
+### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>Binäre Ausdrücke mit Enumerations- und Gleitkommatypen
+
+Arithmetischen Konvertierungen für Operanden, bei denen einer ein Enumerationstyp und der andere ein anderer Enumerationstyp oder ein Gleitkommatyp ist, werden in C++20 ([P1120R0](http://wg21.link/p1120r0)) als veraltet eingestuft. Das heißt, die Verwendung einer binären Operation zwischen einem Enumerations- und einem Gleitkommatyp löst jetzt eine Warnung aus, wenn die Compileroption [/std:c++latest](../build/reference/std-specify-language-standard-version.md) aktiviert ist:
+
+```cpp
+enum E1 { a };
+int main() {
+  double i = a * 1.1;
+}
+```
+
+Konvertieren Sie den zweiten Operanden mit [static_cast](../cpp/static-cast-operator.md), um zu vermeiden, dass eine Warnung ausgelöst wird:
+
+```cpp
+enum E1 { a };
+int main() {
+   double i = static_cast<int>(a) * 1.1;
+}
+```
+
+### <a name="equality-and-relational-comparisons-of-arrays"></a>Gleichheitsvergleiche und relationale Vergleiche von Arrays
+
+Gleichheitsvergleiche und relationale Vergleiche zwischen zwei Operanden des Arraytyps werden in C++20 ([P1120R0](http://wg21.link/p1120r0)) als veraltet eingestuft. Das heißt, dass ein Vergleichsvorgang zwischen zwei Arrays (unabhängig vom Rang und Ähnlichkeiten der Erweiterung) jetzt eine Warnung auslöst. Ab Visual Studio 2019 Version 16.2 erzeugt der folgende Code die Meldung *C5056: Operator „==“: für Arraytypen veraltet*, wenn die Compileroption [/std:c++latest](../build/reference/std-specify-language-standard-version.md) aktiviert ist:
+
+```cpp
+int main() {
+    int a[] = { 1, 2, 3 };
+    int b[] = { 1, 2, 3 };
+    if (a == b) { return 1; }
+}
+```
+
+Sie können die Adressen der ersten Elemente vergleichen, um zu vermeiden, dass eine Warnung ausgelöst wird:
+
+```cpp
+int main() {
+    int a[] = { 1, 2, 3 };
+    int b[] = { 1, 2, 3 };
+    if (&a[0] == &b[0]) { return 1; }
+}
+```
+
+Sie können ermitteln, ob der Inhalt von zwei Arrays gleich ist, indem Sie die [std::equal](../standard-library/algorithm-functions.md#equal)-Funktion verwenden:
+
+```cpp
+std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
+```
+
+### <a name="effect-of-defining-spaceship-operator-on--and-"></a>Auswirkung der Definition des Spaceship-Operators auf == und !=
+
+Eine Definition des Spaceship-Operators ( **<=>** ) allein schreibt keine Ausdrücke mit **==** oder **!=** mehr neu, es sei denn, der Spaceship-Operator ist als `= default` ([P1185R2](https://wg21.link/p1185r2)) markiert. Das folgende Beispiel wird in Visual Studio 2019 RTW und Version 16.1 kompiliert, erzeugt jedoch C2678 in Visual Studio 2019 Version 16.2:
+
+```cpp
+#include <compare>
+
+struct S {
+  int a;
+  auto operator<=>(const S& rhs) const {
+    return a <=> rhs.a;
+  }
+};
+bool eq(const S& lhs, const S& rhs) {
+  return lhs == rhs;
+}
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+Sie können diesen Fehler vermeiden, indem Sie den Operator == definieren oder als Standard deklarieren:
+
+```cpp
+#include <compare>
+
+struct S {
+  int a;
+  auto operator<=>(const S& rhs) const {
+    return a <=> rhs.a;
+  }
+  bool operator==(const S&) const = default;
+};
+bool eq(const S& lhs, const S& rhs) {
+  return lhs == rhs;
+}
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+### <a name="standard-library-improvements"></a>Verbesserungen der Standardbibliothek
+
+- \<charcharv > `to_chars()` mit fester/wissenschaftlicher Genauigkeit (Die allgemeine Genauigkeit ist derzeit für Version 16.4 geplant.)
+- [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html): atomic\<float>, atomic\<double>, atomic\<long double>
+- [P0463R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html): endian
+- [P0482R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html): Bibliotheksunterstützung für char8_t
+- [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf): [\[nodiscard]]Für STL, Teil 1
+- [P0653R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html): to_address()
+- [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf): \<version>
+- [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf): noexcept für Bewegungskonstruktor von std::function
+
+## <a name="update_160"></a> Fehlerbehebungen und Verhaltensänderungen in Visual Studio 2019
+
+### <a name="correct-diagnostics-for-basic_string-range-constructor"></a>Richtige Diagnose für den Bereichskonstruktor „basic_string“
 
 In Visual Studio 2019 unterdrückt der Bereichskonstruktor `basic_string` nicht mehr die Compilerdiagnose mit `static_cast`. Der folgende Code wird in Visual Studio 2017 fehlerfrei kompiliert, obwohl bei der Konvertierung von `wchar_t` in `char` ein Datenverlust auftreten kann, wenn `out` initialisiert wird:
 
@@ -443,7 +590,7 @@ int main()
 }
 ```
 
-### <a name="iterator-debugging-and-stdmoveiterator"></a>Iteratordebuggen und `std::move_iterator`
+### <a name="iterator-debugging-and-stdmove_iterator"></a>Iteratordebuggen und `std::move_iterator`
 
 Das Feature für das Iteratordebuggen kann `std::move_iterator` nun ordnungsgemäß entpacken. Beispielsweise kann `std::copy(std::move_iterator<std::vector<int>::iterator>, std::move_iterator<std::vector<int>::iterator>, int*)` nun den schnellen Pfad `memcpy` binden.
 
@@ -475,11 +622,11 @@ Ein `static_cast`-Operator, der fälschlicherweise nicht vom Standard aufgerufen
 
 Die Bibliothek mit parallelen Algorithmen verwendet unter Windows 8 und höher nun ordnungsgemäß die echte `WaitOnAddress`-Familie, anstatt immer die gefälschten Versionen von Windows 7 und früher zu verwenden.
 
-### <a name="stdsystemcategorymessage-whitespace"></a>`std::system_category::message()` Leerzeichen
+### <a name="stdsystem_categorymessage-whitespace"></a>`std::system_category::message()` Leerzeichen
 
 `std::system_category::message()` schneidet nachstehenden Leerraum von der zurückgegebenen Meldung nun ab.
 
-### <a name="stdlinearcongruentialengine-divide-by-zero"></a>`std::linear_congruential_engine` Division durch 0
+### <a name="stdlinear_congruential_engine-divide-by-zero"></a>`std::linear_congruential_engine` Division durch 0
 
 Einige Bedingungen wurden behoben, die dazu führten, dass `std::linear_congruential_engine` eine Division durch 0 (null) durchführte.
 
@@ -505,7 +652,7 @@ Die `reserve`-Funktion für ungeordnete Container reserviert N-Elemente nun tats
 
 - Überladungen für Funktionen zum Zusammenführen von Containern und Extrahieren von Membern wurden hinzugefügt, die rvalue-Container gemäß [P0083 "Splicing Maps And Sets"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf) (Zusammenführen von Zuordnen und Festlegungen).
 
-### <a name="stdbasicistreamread-processing-of-rn--n"></a>`std::basic_istream::read`-Verarbeitung von \\r\\n => \\n
+### <a name="stdbasic_istreamread-processing-of-rn--n"></a>`std::basic_istream::read`-Verarbeitung von \\r\\n => \\n
 
 `std::basic_istream::read` wurde behoben, sodass bei der Verarbeitung von \\r\\n => \\n nicht temporär in den angegebenen Puffer geschrieben wird. Durch diese Änderung entfällt ein Teil des Leistungsvorteils, der in Visual Studio 2017 15.8 für Lesezugriffe größer als 4K erzielt wurde. Es gibt jedoch weiterhin Effizienzsteigerungen durch die Vermeidung von drei virtuellen Aufrufen pro Zeichen.
 
@@ -517,15 +664,65 @@ Der Konstruktor von `std::bitset` liest die Einsen und Nullen von großen Bitset
 
 Eine Regression im Zuweisungsoperator von `std::pair` wurde behoben, die bei der Implementierung von [LWG 2729 "Missing SFINAE on std::pair::operator="; (SFINAE für std::pair::operator= fehlt)](https://cplusplus.github.io/LWG/issue2729) eingeführt wurde. Typen, die in `std::pair` konvertiert werden können, werden nun wieder ordnungsgemäß akzeptiert.
 
-### <a name="non-deduced-contexts-for-addconstt"></a>Nicht abgeleitete Kontexte für `add_const_t`
+### <a name="non-deduced-contexts-for-add_const_t"></a>Nicht abgeleitete Kontexte für `add_const_t`
 
 Ein kleiner Fehler bei Typmerkmalen wurde behoben, bei dem `add_const_t` und zugehörige Funktionen einem nicht abgeleiteten Kontext entsprechen sollten. Das heißt, `add_const_t` sollte ein Alias für `typename add_const<T>::type` sein, nicht für `const T`.
 
+## <a name="update_162"></a> Fehlerbehebungen und Verhaltensänderungen in 16.2
+
+### <a name="const-comparators-for-associative-containers"></a>Const-Vergleichsoperatoren für assoziative Container
+
+Der Code für die Suche und das Einfügen in [Menge](../standard-library/set-class.md), [Zuordnung](../standard-library/map-class.md), [Multimenge](../standard-library/multiset-class.md), und [Mehrfachzuordnung](../standard-library/multimap-class.md) wurde zusammengeführt, um die Codegröße zu reduzieren. Auf die gleiche Weise wie bei den Suchvorgängen zuvor bezeichnen Einfügevorgänge nun den „Kleiner als“-Vergleich auf einem `const`-Vergleichsfunktor. Der folgende Code wird in Visual Studio 2019 Version 16.1 und früher kompiliert, erzeugt jedoch C3848 in Visual Studio 2019 Version 16.2:
+
+```cpp
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+struct K
+{
+   int a;
+   string b = "label";
+};
+
+struct Comparer  {
+   bool operator() (K a, K b) {
+      return a.a < b.a;
+   }
+};
+
+map<K, double, Comparer> m;
+
+K const s1{1};
+K const s2{2};
+K const s3{3};
+
+int main() {
+
+   m.emplace(s1, 1.08);
+   m.emplace(s2, 3.14);
+   m.emplace(s3, 5.21);
+
+}
+```
+
+Erstellen Sie den Vergleichsoperator `const`, um den Fehler zu vermeiden:
+
+```cpp
+struct Comparer  {
+   bool operator() (K a, K b) const {
+      return a.a < b.a;
+   }
+};
+
+```
+
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range="vs-2017"
 
-## <a name="improvements_150"></a> Verbesserungen in Visual Studio 2017 RTW (Version 15.0)
+## <a name="improvements_150"></a> Verbesserungen der Konformität in Visual Studio 2017 RTW (Version 15.0)
 
 Der Microsoft C++-Compiler in Visual Studio 2017 ist mit Unterstützung für generalisierte `constexpr`-Elemente und die Initialisierung für nicht statische Datenelemente (NSDMI) für Aggregate für Funktionen, die im C++14-Standard hinzugefügt wurden, jetzt vollständig. Dem Compiler fehlen jedoch noch einige Funktionen der C++11- und C++98-Standards. Eine Tabelle mit dem aktuellen Compilerstatus finden Sie unter [Visual C++-Sprachkonformität](../visual-cpp-language-conformance.md).
 
@@ -541,7 +738,7 @@ Ein Aggregat ist ein Array oder eine Klasse ohne einen vom Benutzer bereitgestel
 
 Ausdrücke, die als `constexpr` deklariert sind, dürfen jetzt bestimmte Arten von Deklarationen, if- und switch-Anweisungen, Schleifenanweisungen und Mutationen der Objekte enthalten, deren Lebensdauer in der Auswertung von constexpr-Ausdrücken begonnen hat. Darüber hinaus ist es nicht mehr erforderlich, dass eine nicht statische Memberfunktion von `constexpr` implizit `const` ist. Weitere Informationen finden Sie unter [Relaxing constraints on constexpr functions (Lockerung der Einschränkungen auf constexpr-Funktionen)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html).
 
-### <a name="c17-terse-staticassert"></a>C++17: Nicht ausführliche `static_assert`
+### <a name="c17-terse-static_assert"></a>C++17: Nicht ausführliche `static_assert`
 
 der Meldungsparameter für `static_assert` ist optional. Weitere Informationen finden Sie unter [Extending static_assert, v2 (Erweitern des static_assert, v2)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf).
 
@@ -553,7 +750,7 @@ Im **/std:c++17**-Modus kann das `[[fallthrough]]`-Attribut im Kontext von switc
 
 Bereichsbezogene for-Schleifen erfordern nicht mehr, dass `begin()` und `end()` Objekte des gleichen Typs zurückgeben. Diese Änderung ermöglicht `end()` die Rückgabe eines Sentinels wie von Bereichen in [range-v3](https://github.com/ericniebler/range-v3) verwendet und die Einhaltung der abgeschlossenen, jedoch noch nicht ganz veröffentlichten technische Spezifikation zu Bereichen. Weitere Informationen finden Sie unter [Generalizing the Range-Based For Loop (Generalisieren einer bereichsbasierten for-Schleife)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html).
 
-## <a name="improvements_153"></a> Verbesserungen in Visual Studio 2017 Version 15.3
+## <a name="improvements_153"></a> Verbesserungen der Konformität in 15.3
 
 ### <a name="constexpr-lambdas"></a>constexpr-Lambdas
 
@@ -567,7 +764,7 @@ Eine Funktionsvorlage kann `if constexpr`-Anweisungen zum Branchen zur Kompilier
 
 Eine `if`-Anweisung kann einen Initialisierer enthalten, der im Blockbereich innerhalb der Anweisung selbst eine Variable einführt. Weitere Informationen finden Sie unter [if statements with initializer (if-Anweisungen mit Initialisierer)](../cpp/if-else-statement-cpp.md#if_with_init).
 
-### <a name="maybeunused-and-nodiscard-attributes"></a>`[[maybe_unused]]`- und `[[nodiscard]]`-Attribute
+### <a name="maybe_unused-and-nodiscard-attributes"></a>`[[maybe_unused]]`- und `[[nodiscard]]`-Attribute
 
 Ein neues `[[maybe_unused]]`-Attribut schaltet Warnungen aus, wenn eine Entität nicht verwendet wird. Das `[[nodiscard]]`-Attribut generiert eine Warnung, wenn der Rückgabewert eines Funktionsaufrufs verworfen wird. Weitere Informationen finden Sie unter [Attribute in C++](../cpp/attributes.md).
 
@@ -595,7 +792,7 @@ Das `*this`-Objekt in einem Lambdaausdruck kann jetzt anhand des Werts erfasst w
 
 Das Schlüsselwort `register`, das als veraltet gekennzeichnet wurde (und vom Visual C++-Compiler ignoriert wurde), wurde jetzt aus der Sprache entfernt. Weitere Informationen finden Sie unter [Remove Deprecated Use of the register Keyword](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html) (Entfernen der Verwendung des veralteten register-Schlüsselworts).
 
-## <a name="improvements_155"></a> Verbesserungen in Visual Studio 2017 Version 15.5
+## <a name="improvements_155"></a> Verbesserungen der Konformität in 15.5
 
 Features, die mit \[14] markiert sind, stehen bedingungslos auch im **/std:c++14**-Modus zur Verfügung.
 
@@ -611,7 +808,7 @@ In früheren Versionen von Visual Studio hat der Compiler immer eine interne `co
 
 [P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) `not_fn` ersetzt `not1` und `not2`.
 
-### <a name="rewording-enablesharedfromthis"></a>Umformulieren von `enable_shared_from_this`
+### <a name="rewording-enable_shared_from_this"></a>Umformulieren von `enable_shared_from_this`
 
 [P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this` wurde in C++11 hinzugefügt. Der C++17-Standard aktualisiert die Spezifikation, um bestimmte Ausnahmefälle besser zu verarbeiten. [14]
 
@@ -627,19 +824,19 @@ In früheren Versionen von Visual Studio hat der Compiler immer eine interne `co
 
 [P0302R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html) Vor C++17 besaß die Klassenvorlage `std::function` mehrere Konstruktoren, die ein Zuweisungsargument angenommen haben. Allerdings war die Verwendung von Zuweisungen in diesem Kontext problematisch, und die Semantik war unklar. Die problematischen Konstruktoren wurden entfernt.
 
-### <a name="fixes-for-notfn"></a>Korrekturen für `not_fn()`
+### <a name="fixes-for-not_fn"></a>Korrekturen für `not_fn()`
 
 [P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html) Neue Formulierungen für `std::not_fn` bieten Unterstützung für die Weitergabe der Wertkategorie bei einem Wrapperaufruf.
 
-### <a name="sharedptrt-sharedptrtn"></a>`shared_ptr<T[]>`, `shared_ptr<T[N]>`
+### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`, `shared_ptr<T[N]>`
 
 [P0414R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html) Zusammenführen von `shared_ptr`-Änderungen aus Library Fundamentals in C++17. [14]
 
-### <a name="fixing-sharedptr-for-arrays"></a>Korrigieren von `shared_ptr` für Arrays
+### <a name="fixing-shared_ptr-for-arrays"></a>Korrigieren von `shared_ptr` für Arrays
 
 [P0497R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html) Korrekturen an der shared_ptr-Unterstützung für Arrays. [14]
 
-### <a name="clarifying-insertreturntype"></a>Erklärung zu `insert_return_type`
+### <a name="clarifying-insert_return_type"></a>Erklärung zu `insert_return_type`
 
 [P0508R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html) Die assoziativen Container mit eindeutigen Schlüsseln und die ungeordneten Container mit eindeutigen Schlüsseln besitzen die Memberfunktion `insert`, die einen geschachtelten `insert_return_type`-Typ zurückgibt. Dieser Rückgabetyp ist nun als Spezialisierung eines Typs definiert, der für den Iterator und NodeType des Containers parametrisiert ist.
 
@@ -659,7 +856,7 @@ Die Standardbibliothek verwendet jetzt intern Variablenvorlagen.
 
 Die Standardbibliothek wurde als Reaktion auf C++17-Compileränderungen aktualisiert, einschließlich der Hinzufügung von `noexcept` im Typsystem und der Entfernung von dynamic-exception-Spezifikationen.
 
-## <a name="improvements_156"></a> Verbesserungen in Visual Studio 2017 Version 15.6
+## <a name="improvements_156"></a> Verbesserungen der Konformität in 15.6
 
 ### <a name="c17-library-fundamentals-v1"></a>C++17-Bibliotheksgrundlagen V1
 
@@ -669,7 +866,7 @@ Die Standardbibliothek wurde als Reaktion auf C++17-Compileränderungen aktualis
 
 [P0739R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html) Verschieben Sie `adopt_lock_t` für `scoped_lock` an den Anfang der Parameterliste, um die konsistente Verwendung von `scoped_lock` zu ermöglichen. Lassen Sie zu, dass der Konstruktor `std::variant` in mehreren Fällen Teil einer Überladungsauflösung ist, um die Kopierzuweisung zu ermöglichen.
 
-## <a name="improvements_157"></a> Verbesserungen in Visual Studio 2017 Version 15.7
+## <a name="improvements_157"></a> Verbesserungen der Konformität in 15.7
 
 ### <a name="c17-rewording-inheriting-constructors"></a>C++17: Umformulierung der Konstruktorvererbung
 
@@ -837,11 +1034,11 @@ void sample(A<0> *p)
 
 [P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) Verschieben Sie die elementaren Funktionen für die Zeichenfolgenkonvertierung von P0067R5 in einen neuen Header, \<charconv>, und führen Sie andere Verbesserungen durch, einschließlich der Fehlerbehandlung zur Verwendung von `std::errc` anstelle von `std::error_code`.
 
-### <a name="c17-constexpr-for-chartraits-partial"></a>C ++ 17: `constexpr` für `char_traits` (partiell)
+### <a name="c17-constexpr-for-char_traits-partial"></a>C ++ 17: `constexpr` für `char_traits` (partiell)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) Änderungen an den `std::traits_type`-Memberfunktionen `length`, `compare` und `find`, damit `std::string_view` in konstanten Ausdrücken verfügbar wird. (In Visual Studio 2017 Version 15.6 wird dies nur für Clang/LLVM unterstützt. In Version 15.7 Preview 2 ist die Unterstützung für CIXX ebenso fast vollständig.)
 
-## <a name="improvements_159"></a> Verbesserungen in Visual Studio 2017 Version 15.9
+## <a name="improvements_159"></a> Verbesserungen der Konformität in 15.9
 
 ### <a name="left-to-right-evaluation-order-for-operators-----and-"></a>Auswertungsreihenfolge von links nach rechts für die Operatoren `->*`, `[]`, `>>` und `<<`
 
@@ -1198,7 +1395,7 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-## <a name="update_153"></a> Fehlerbehebungen in Visual Studio 2017 Version 15.3
+## <a name="update_153"></a> Fehlerbehebungen in 15.3
 
 ### <a name="calls-to-deleted-member-templates"></a>Aufrufe gelöschter Membervorlagen
 
@@ -1460,7 +1657,7 @@ Um die Warnungen zu entfernen, können Sie die leeren Deklarationen auskommentie
 
 Die Warnung wird unter **/Wv:18** ausgeschlossen und ist auf der Warnstufe W2 standardmäßig aktiviert.
 
-### <a name="stdisconvertible-for-array-types"></a>`std::is_convertible` für Arraytypen
+### <a name="stdis_convertible-for-array-types"></a>`std::is_convertible` für Arraytypen
 
 Frühere Versionen des Compilers haben zu falschen Ergebnissen für [std::is_convertible](../standard-library/is-convertible-class.md) für Arraytypen geführt. Daher mussten Bibliotheksautoren bei der Verwendung der Typeigenschaft `std::is_convertible<...>` besondere Schreibweisen für den Microsoft C++-Compiler anwenden. Im folgenden Beispiel sind die statischen Assertionen in früheren Versionen von Visual Studio erfolgreich, jedoch nicht in Visual Studio 2017 Version 15.3:
 
@@ -1481,7 +1678,7 @@ static_assert(std::is_convertible<Array, Array&>::value, "");
    To test() { return std::declval<From>(); }
 ```
 
-### <a name="private-destructors-and-stdisconstructible"></a>Private Destruktoren und `std::is_constructible`
+### <a name="private-destructors-and-stdis_constructible"></a>Private Destruktoren und `std::is_constructible`
 
 Frühere Versionen des Compilers ignorieren, ob ein Destruktor privat war, wenn über das Ergebnis von [std::is_constructible](../standard-library/is-constructible-class.md) entschieden wird. Dies wird nun berücksichtigt. Im folgenden Beispiel sind die statischen Assertionen in früheren Versionen von Visual Studio erfolgreich, jedoch nicht in Visual Studio 2017 Version 15.3:
 
@@ -1570,7 +1767,7 @@ Um das Problem zu beheben, ordnen Sie die Initialisiererliste so an, dass die Re
 
 Diese Warnung ist standardmäßig deaktiviert und wirkt sich nur auf mit **/Wall** kompilierten Code aus.
 
-## <a name="update_155"></a>Fehlerkorrekturen und andere Verhaltensänderungen in Visual Studio 2017 Version 15.5
+## <a name="update_155"></a> Fehlerbehebungen und andere Verhaltensänderungen in 15.5
 
 ### <a name="partial-ordering-change"></a>Teilweise Änderung der Reihenfolge
 
@@ -1783,7 +1980,7 @@ Wenn der Code nicht abwärtskompatibel sein muss, können Sie die Warnung vermei
 /* single line comment */
 ```
 
-### <a name="declspec-attributes-with-extern-c-linkage"></a>`__declspec`-Attribute mit `extern "C"`-Verknüpfung
+### <a name="__declspec-attributes-with-extern-c-linkage"></a>`__declspec`-Attribute mit `extern "C"`-Verknüpfung
 
 In früheren Versionen von Visual Studio hat der Compiler `__declspec(...)`-Attribute ignoriert, wenn `__declspec(...)` vor der `extern "C"`-Verknüpfungsspezifikation angewendet wurde. Dieses Verhalten führte dazu, dass Code generiert wurde, den der Benutzer nicht beabsichtigt hatte (mit möglichen Auswirkungen auf die Laufzeit). Die Warnung wurde in Visual Studio Version 15.3 hinzugefügt, war aber standardmäßig deaktiviert. In Visual Studio 2017 Version 15.5 ist die Warnung standardmäßig aktiviert.
 
@@ -1848,7 +2045,7 @@ void f() { typeid(S); } //C2027 in 15.5
 error C2027: use of undefined type 'S'
 ```
 
-### <a name="stdisconvertible-target-type"></a>`std::is_convertible`-Zieltyp
+### <a name="stdis_convertible-target-type"></a>`std::is_convertible`-Zieltyp
 
 `std::is_convertible` erfordert, dass der Zieltyp ein gültiger Rückgabetyp ist. In früheren Versionen von Visual Studio ließ der Compiler fälschlicherweise abstrakte Typen zu, was zu falscher Überladungsauflösung und unbeabsichtigtem Laufzeitverhalten führen konnte.  Der folgende Code löst jetzt ordnungsgemäß c2338 aus:
 
@@ -1921,11 +2118,11 @@ struct X {
 const int X::size; // C5041
 ```
 
-### <a name="extern-c-declspec-warning-c4768-now-on-by-default"></a>`extern "C" __declspec(...)` Warnung C4768 jetzt standardmäßig aktiviert
+### <a name="extern-c-__declspec-warning-c4768-now-on-by-default"></a>`extern "C" __declspec(...)` Warnung C4768 jetzt standardmäßig aktiviert
 
 Die Warnung wurde in Visual Studio Version 2017 Version 15.3 hinzugefügt, war aber standardmäßig deaktiviert. In Visual Studio 2017 Version 15.5 ist die Warnung standardmäßig aktiviert. Weitere Informationen finden Sie unter [Neue Warnung zu \_\_-Attributen](#declspec).
 
-### <a name="defaulted-functions-and-declspecnothrow"></a>Standardfunktionen und `__declspec(nothrow)`
+### <a name="defaulted-functions-and-__declspecnothrow"></a>Standardfunktionen und `__declspec(nothrow)`
 
 Der Compiler erlaubte es bisher, Standardfunktionen mit `__declspec(nothrow)` zu deklarieren, wenn die entsprechenden Basis-/Memberfunktionen Ausnahmen zuließen. Dieses Verhalten steht im Widerspruch zum C++-Standard und kann zur Laufzeit zu undefiniertem Verhalten führen. Der Standard verlangt, dass solche Funktionen als gelöscht definiert werden, wenn es eine Abweichung von der Ausnahmespezifikation gibt.  Unter **/std:c++17** löst der folgende Code C2280 aus: *Es wurde versucht, auf eine gelöschte Funktion zu verweisen“. Funktion wurde implizit gelöscht, weil die explizite Ausnahmespezifikation mit der impliziten Deklaration nicht kompatibel ist.*
 
@@ -2029,7 +2226,7 @@ int main()
 }
 ```
 
-## <a name="update_157"></a>Fehlerkorrekturen und andere Verhaltensänderungen in Visual Studio 2017 Version 15.7
+## <a name="update_157"></a> Fehlerbehebungen und andere Verhaltensänderungen in 15.7
 
 ### <a name="c17-default-argument-in-the-primary-class-template"></a>C++17: Standardargument in der primären Klassenvorlage
 
@@ -2165,7 +2362,7 @@ int main() {
 }
 ```
 
-## <a name="update_158"></a>Fehlerkorrekturen und Verhaltensänderungen in Visual Studio 2017 Version 15.8
+## <a name="update_158"></a> Fehlerbehebungen und Verhaltensänderungen in 15.8
 
 Sämtliche Compileränderungen in Visual Studio 2017, Version 15.8, fallen unter in die Kategorie der Fehlerbehebungen und Verhaltensänderungen. Die Änderungen werden im Folgenden aufgeführt:
 
@@ -2180,7 +2377,7 @@ using  X = typename T;
 
 Ändern Sie die zweite Zeile in `using  X = T;`, um den Fehler zu beheben.
 
-### <a name="declspec-on-right-side-of-alias-template-definitions"></a>`__declspec()` auf der rechten Seite der Definitionen von Aliasvorlagen
+### <a name="__declspec-on-right-side-of-alias-template-definitions"></a>`__declspec()` auf der rechten Seite der Definitionen von Aliasvorlagen
 
 [__declspec](../cpp/declspec.md) ist auf der rechten Seite einer Aliasvorlagendefinition nicht mehr zulässig. Dieser Code wurde zuvor vom Compiler akzeptiert, jedoch vollständig ignoriert und resultierte nie in einer Veraltungswarnung, wenn der Alias verwendet wurde.
 
@@ -2372,7 +2569,7 @@ struct X : Base<T>
 };
 ```
 
-## <a name="update_159"></a>Fehlerbehebungen und Verhaltensänderungen in Visual Studio 2017 Version 15.9
+## <a name="update_159"></a> Fehlerbehebungen und Verhaltensänderungen in 15.9
 
 ### <a name="identifiers-in-member-alias-templates"></a>Bezeichner in Memberaliasvorlagen
 
@@ -2557,9 +2754,13 @@ Entfernen Sie den Qualifizierer `constexpr` aus der expliziten Instanziierungsan
 
 ::: moniker-end
 
+::: moniker range="vs-2015"
+
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Verbesserungen der C++-Konformität in Visual Studio 2015
 
 Eine vollständige Liste der Konformitätsverbesserungen bis zum Visual Studio 2015 Update 3 finden Sie unter [Visual C++ What's New 2003 through 2015 (Visual C++ – Neues von 2003 bis 2015)](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+
+::: moniker-end
 
 ## <a name="see-also"></a>Siehe auch
 
