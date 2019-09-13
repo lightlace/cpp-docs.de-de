@@ -1,14 +1,14 @@
 ---
 title: Linker-Eigenschaftenseiten
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 17880d50ae012b640cb83f3766883ab2b1bcbe73
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537598"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927707"
 ---
 # <a name="linker-property-pages"></a>Linker-Eigenschaftenseiten
 
@@ -48,7 +48,7 @@ Die Option [/nologo](nologo-suppress-startup-banner-linker.md) verhindert die An
 
 ### <a name="ignore-import-library"></a>Importbibliothek ignorieren
 
-Durch diese Eigenschaft wird der Linker angewiesen, keine während des aktuellen Builds erstellte LIB-Ausgabe mit einem abhängigen Projekt zu verknüpfen. Auf diese Weise kann das Projektsystem DLL-Dateien verarbeiten, durch die während der Erstellung keine LIB-Datei generiert wird. Wenn ein Projekt von einem anderen Projekt abhängt, das eine DLL generiert, verknüpft das Projektsystem automatisch die LIB-Datei, die von diesem untergeordneten Projekt erstellt wurde. Diese Verknüpfung ist für Projekte, die COM-DLLs oder reine Ressourcen-DLLs erstellen, u. U. nicht erforderlich. Diese DLLs exportieren keine wichtigen Daten. Wenn eine DLL über keine Exportdaten verfügt, wird vom Linker auch keine LIB-Datei erstellt. Wenn auf dem Datenträger keine LIB-Exportdatei vorhanden ist und der Linker vom Projektsystem angewiesen wird, eine Verknüpfung mit dieser (fehlenden) DLL zu erstellen, schlägt die Verknüpfung fehl. Verwenden Sie die Eigenschaft **Importbibliothek ignorieren**, um dieses Problem zu beheben. Wenn Sie **Ja** auswählen, ignoriert das Projektsystem das Vorhandensein bzw. das Fehlen der LIB-Datei, und jedes von diesem Projekt abhängige Projekt wird daran gehindert, eine Verknüpfung mit der nicht vorhandenen LIB-Datei zu erstellen.
+Durch diese Eigenschaft wird der Linker angewiesen, keine während des aktuellen Builds erstellte LIB-Ausgabe mit einem abhängigen Projekt zu verknüpfen. Sie ermöglicht es dem Projekt System, DLL-Dateien zu verarbeiten, die keine lib-Datei erstellen, wenn Sie erstellt werden. Wenn ein Projekt von einem anderen Projekt abhängt, das eine DLL generiert, verknüpft das Projektsystem automatisch die LIB-Datei, die von diesem untergeordneten Projekt erstellt wurde. Diese Eigenschaft ist möglicherweise unnötig in Projekten, die COM-DLLs oder reine Ressourcen-DLLs entwickeln, da diese DLLs keine sinnvollen Exporte aufweisen. Wenn eine DLL keine Exporte hat, generiert der Linker keine lib-Datei. Wenn keine Datei "Export. lib" vorhanden ist und das Projekt System den Linker anweist, mit der fehlenden DLL zu verknüpfen, schlägt die Verknüpfung fehl. Verwenden Sie die Eigenschaft **Importbibliothek ignorieren**, um dieses Problem zu beheben. Wenn diese Einstellung auf **Ja**festgelegt ist, ignoriert das Projekt System das vorhanden sein oder Fehlen der LIB-Datei und bewirkt, dass alle Projekte, die von diesem Projekt abhängen, nicht mit der nicht vorhandenen lib-Datei verknüpft werden.
 
 Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>.
 
@@ -60,7 +60,7 @@ Informationen zum programmgesteuerten Zugriff auf diese Eigenschaft finden Sie u
 
 ### <a name="per-user-redirection"></a>Umleitung pro Benutzer
 
-Die Registrierung in Visual Studio erfolgte herkömmlicherweise in HKEY_CLASSES_ROOT (HKCR). Unter Windows Vista und höheren Betriebssystemen müssen Sie Visual Studio im erweiterten Modus ausführen, um auf HKCR zugreifen zu können. Entwickler möchten die Software nicht immer im erhöhten Modus ausführen, müssen aber trotzdem mit der Registrierung arbeiten. Die Umleitung pro Benutzer ermöglicht Ihnen die Registrierung, ohne die Software in diesem Modus ausführen zu müssen.
+Die Registrierung in Visual Studio erfolgte herkömmlicherweise in HKEY_CLASSES_ROOT (HKCR). Unter Windows Vista und höheren Betriebssystemen müssen Sie Visual Studio im erweiterten Modus ausführen, um auf HKCR zugreifen zu können. Entwickler möchten nicht immer im erweiterten Modus ausgeführt werden, müssen aber trotzdem mit der Registrierung arbeiten. Die Umleitung pro Benutzer ermöglicht es Ihnen, sich zu registrieren, ohne dass Sie im erweiterten Modus ausgeführt werden müssen.
 
 Die Umleitung pro Benutzer erzwingt eine Umleitung aller Schreibvorgänge für HKCR zu HKEY\_CURRENT\_USER (HKCU). Wenn die Umleitung pro Benutzer deaktiviert ist, kann der [Projektbuildfehler PRJ0050](../../error-messages/tool-errors/project-build-error-prj0050.md) auftreten, wenn das Programm versucht, in HKCR zu schreiben.
 
@@ -70,13 +70,13 @@ Ermöglicht dem Benutzer das Überschreiben des umgebungsbedingten Bibliothekspf
 
 ### <a name="link-library-dependencies"></a>Bibliothekabhängigkeiten verknüpfen
 
-Gibt an, ob die LIB-Dateien verknüpft werden sollen, die von abhängigen Projekten erstellt wurden. In der Regel wird die Verknüpfung der LIB-Dateien empfohlen, jedoch ist dies für bestimmte DLLs nicht nötig.
+Gibt an, ob die LIB-Dateien verknüpft werden sollen, die von abhängigen Projekten erstellt wurden. In der Regel möchten Sie einen Link in den lib-Dateien durchsuchen, aber dies ist für bestimmte DLLs möglicherweise nicht der Fall.
 
-Sie können auch eine OBJ-Datei angeben, indem Sie den Dateinamen und den relativen Pfad angeben, z.B. ..\\..\MyLibProject\MyObjFile.obj. Wenn der Quellcode für die OBJ-Datei einen vorkompilierten Header enthält (z.B. „pch.h“), befindet sich die „pch.obj“-Datei im gleichen Ordner wie „MyObjFile.obj“. Dann müssen Sie auch „pch.obj“ als zusätzliche Abhängigkeit hinzufügen.
+Sie können auch eine OBJ-Datei angeben, indem Sie den Dateinamen und den relativen Pfad angeben, z.B. ..\\..\MyLibProject\MyObjFile.obj. Wenn der Quellcode für die OBJ-Datei einen vorkompilierten Header #includes, z. b. "PCH. h", befindet sich die Datei "PCH. obj" im selben Ordner wie "myobjfile. obj". Außerdem müssen Sie "PCH. obj" als zusätzliche Abhängigkeit hinzufügen.
 
 ### <a name="use-library-dependency-inputs"></a>Bibliothekabhängigkeitseingaben verwenden
 
-Gibt an, ob die Eingaben für das Bibliothekstool anstelle der Bibliotheksdatei selbst verwendet werden, wenn die Bibliotheks Ausgaben von Projekt Abhängigkeiten verknüpft werden. Wenn durch ein abhängiges Projekt in einem umfangreichen Projekt eine LIB-Datei generiert wird, werden inkrementelle Verknüpfungen deaktiviert. Wenn es viele abhängige Projekte gibt, durch die LIB-Dateien generiert werden, kann die Anwendungserstellung längere Zeit in Anspruch nehmen. Wenn diese Eigenschaft auf **Ja** festgelegt ist, erstellt das Projektsystem in den OBJ-Dateien Verknüpfungen für LIB-Dateien, die von abhängigen Projekten generiert wurden, sodass inkrementelle Verknüpfungen möglich sind.
+Gibt an, ob die Eingaben in das Bibliotheks Tool statt in die Bibliotheksdatei selbst verwendet werden sollen, wenn die Bibliotheks Ausgaben von Projekt Abhängigkeiten verknüpft werden. Wenn durch ein abhängiges Projekt in einem umfangreichen Projekt eine LIB-Datei generiert wird, werden inkrementelle Verknüpfungen deaktiviert. Wenn es viele abhängige Projekte gibt, durch die LIB-Dateien generiert werden, kann die Anwendungserstellung längere Zeit in Anspruch nehmen. Wenn diese Eigenschaft auf " **Ja**" festgelegt ist, verknüpft das Projekt System in den OBJ-Dateien für. lib, die von abhängigen Projekten erstellt werden, sodass inkrementelles Verknüpfen ermöglicht wird
 
 Weitere Informationen zum Zugreifen auf die Eigenschaften Seite " **Allgemein** " finden Sie [unter C++ Festlegen von Compiler-und Buildeigenschaften in Visual Studio](../working-with-project-properties.md).
 
@@ -84,7 +84,7 @@ Weitere Informationen zum Zugreifen auf die Eigenschaften Seite " **Allgemein** 
 
 Gibt an, ob der Linker eine Statusanzeige anzeigen soll, die anzeigt, welcher Prozentsatz des Links abgeschlossen ist. Standardmäßig werden diese Statusinformationen nicht angezeigt. ([/LTCG](ltcg-link-time-code-generation.md): STATUS | LTCG: NOSTATUS)
 
-### <a name="prevent-dll-binding"></a>Dll-Bindung verhindern
+### <a name="prevent-dll-binding"></a>DLL-Bindung verhindern
 
 [/ALLOWBIND](allowbind-prevent-dll-binding.md): No legt ein Bit im Header einer DLL fest, das BIND. exe angibt, dass das Image nicht gebunden werden darf. Möglicherweise möchten Sie nicht, dass eine DLL gebunden wird, wenn sie digital signiert wurde (die Bindung macht die Signatur ungültig).
 
@@ -94,12 +94,12 @@ Gibt an, ob der Linker eine Statusanzeige anzeigen soll, die anzeigt, welcher Pr
 
 ### <a name="force-file-output"></a>Dateiausgabe erzwingen
 
-Die [/Force](force-force-file-output.md) -Option weist den Linker an, eine exe-Datei oder dll zu erstellen, auch wenn auf ein Symbol verwiesen wird, aber nicht definiert oder multipliziert definiert ist. Möglicherweise wird eine ungültige exe-Datei erstellt.
+Die [/Force](force-force-file-output.md) -Option weist den Linker an, eine exe-Datei oder-dll zu erstellen, auch wenn auf ein Symbol verwiesen wird, aber nicht definiert oder die Multiplikation definiert ist. Möglicherweise wird eine ungültige exe-Datei erstellt.
 
 **Optionen**
 
 - **Aktiviert** -/Force ohne Argumente impliziert sowohl mehrfach als auch nicht aufgelöst.
-- **Nur mehrfach definiertes Symbol** verwenden: Verwenden Sie/Force: Multiple, um eine Ausgabedatei zu erstellen, unabhängig davon, ob Link mehr als eine Definition für ein Symbol findet oder nicht.
+- **Nur mehrfach definiertes Symbol** verwenden: Verwenden Sie/Force: Multiple, um eine Ausgabedatei zu erstellen, auch wenn der Link mehr als eine Definition für ein Symbol findet.
 - Nicht **definiertes Symbol** : Verwenden Sie/Force: nicht aufgelöst, um eine Ausgabedatei zu erstellen, unabhängig davon, ob Link ein nicht definiertes Symbol findet /Force: nicht aufgelöste wird ignoriert, wenn das Einstiegspunkt Symbol nicht aufgelöst wird.
 
 ### <a name="create-hot-patchable-image"></a>Erstellen eines hotpatchfähigen Images
@@ -129,7 +129,7 @@ Die [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) -Option weist den Linker a
 
 ### <a name="ignore-specific-default-libraries"></a>Bestimmte Standardbibliotheken ignorieren
 
-Gibt einen oder mehrere Namen von Standardbibliotheken an, die ignoriert werden sollen. Trennen Sie mehrere Bibliotheken durch Semikolons. (/NODEFAULTLIB: [Name, Name,...])
+Gibt einen oder mehrere Namen der zu ignorierenden Standardbibliotheken an. Trennen Sie mehrere Bibliotheken durch Semikolons. (/NODEFAULTLIB: [Name, Name,...])
 
 ### <a name="module-definition-file"></a>Modul Definitionsdatei
 
@@ -276,11 +276,11 @@ Die Option [/TSAWARE](tsaware-create-terminal-server-aware-application.md) legt 
 
 ### <a name="swap-run-from-cd"></a>Austauschen von CD ausführen
 
-Die Option [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) weist das Betriebssystem an, zuerst die Linkerausgabe in eine Auslagerungs Datei zu kopieren und dann das Abbild von dort aus auszuführen. Dies ist ein Feature von Windows NT 4,0 (und höher). Wenn **CD** angegeben wird, kopiert das Betriebssystem das Abbild auf einem Wechsel Datenträger in eine Auslagerungs Datei und lädt es dann.
+Die Option [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) weist das Betriebssystem an, zuerst die Linkerausgabe in eine Auslagerungs Datei zu kopieren und dann das Abbild von dort aus auszuführen. Bei dieser Option handelt es sich um eine Funktion von Windows NT 4,0 (und höher). Wenn **CD** angegeben wird, kopiert das Betriebssystem das Abbild auf einem Wechsel Datenträger in eine Auslagerungs Datei und lädt es dann.
 
 ### <a name="swap-run-from-network"></a>Austausch aus Netzwerk ausführen
 
-Die Option [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) weist das Betriebssystem an, zuerst die Linkerausgabe in eine Auslagerungs Datei zu kopieren und dann das Abbild von dort aus auszuführen. Dies ist ein Feature von Windows NT 4,0 (und höher). Wenn **net** angegeben wird, kopiert das Betriebssystem zuerst das binäre Abbild aus dem Netzwerk in eine Auslagerungs Datei und lädt es von dort. Diese Option ist nützlich für die Ausführung von Anwendungen über das Netzwerk.
+Die Option [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) weist das Betriebssystem an, zuerst die Linkerausgabe in eine Auslagerungs Datei zu kopieren und dann das Abbild von dort aus auszuführen. Bei dieser Option handelt es sich um eine Funktion von Windows NT 4,0 (und höher). Wenn **net** angegeben wird, kopiert das Betriebssystem zuerst das binäre Abbild aus dem Netzwerk in eine Auslagerungs Datei und lädt es von dort. Diese Option ist nützlich für die Ausführung von Anwendungen über das Netzwerk.
 
 ### <a name="driver"></a>Treiber
 
@@ -297,11 +297,11 @@ Verwenden Sie die Option [/Driver](driver-windows-nt-kernel-mode-driver.md) Link
 
 ### <a name="references"></a>Verweise
 
-[/Opt](opt-optimizations.md): Ref löscht Funktionen und/oder Daten, auf die nie verwiesen wird, während/OPT: NOREF die Funktionen und/oder Daten, auf die nie verwiesen wird, beibehält. 
+[/Opt](opt-optimizations.md): Ref löscht Funktionen und/oder Daten, auf die nie verwiesen wird, während/OPT: NOREF die Funktionen und/oder Daten, auf die nie verwiesen wird, beibehält.
 
 ### <a name="enable-comdat-folding"></a>COMDAT-Faltung aktivieren
 
-Verwenden Sie [/opt](opt-optimizations.md): ICF\[= Iterationen], um eine identische COMDAT-Faltung auszuführen. 
+Verwenden Sie [/opt](opt-optimizations.md): ICF\[= Iterationen], um eine identische COMDAT-Faltung auszuführen.
 
 ### <a name="function-order"></a>Funktions Reihenfolge
 

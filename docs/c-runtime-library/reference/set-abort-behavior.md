@@ -1,6 +1,6 @@
 ---
 title: _set_abort_behavior
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - _set_abort_behavior
 apilocation:
@@ -23,19 +23,19 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: 8b36a771a3694c6d01573d619990743c7ddc0f3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b72a485287684fc85f1e232e89774e07a5e3f42b
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356685"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927489"
 ---
-# <a name="setabortbehavior"></a>_set_abort_behavior
+# <a name="_set_abort_behavior"></a>_set_abort_behavior
 
 Gibt die Aktion an, die ausgeführt werden soll, wenn ein Programm nicht normal beendet wird.
 
 > [!NOTE]
-> Verwenden Sie nicht die [Abbrechen](abort.md) Funktion, um eine Microsoft Store-app, mit Ausnahme von Herunterfahren in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store Richtlinien](/legal/windows/agreements/store-policies). Weitere Informationen finden Sie unter [UWP-app-Lebenszyklus](/windows/uwp/launch-resume/app-lifecycle).
+> Verwenden Sie die [Abbruch](abort.md) -Funktion nicht zum Herunterfahren einer Microsoft Store-App, mit Ausnahme von Test-oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-App sind gemäß den [Microsoft Store Richtlinien](/legal/windows/agreements/store-policies)nicht zulässig. Weitere Informationen finden Sie unter [UWP-App-Lebenszyklus](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,10 +49,10 @@ unsigned int _set_abort_behavior(
 ### <a name="parameters"></a>Parameter
 
 *flags*<br/>
-Der neue Wert der die [Abbrechen](abort.md) Flags.
+Neuer Wert der [Abbruch](abort.md) -Flags.
 
-*mask*<br/>
-Maske für die [Abbrechen](abort.md) flags festzulegenden Bits.
+*chel*<br/>
+Maske für die festzulegenden [Abbruch](abort.md) -Flags-Bits.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -60,7 +60,7 @@ Der alte Wert der Flags.
 
 ## <a name="remarks"></a>Hinweise
 
-Es gibt zwei [Abbrechen](abort.md) Flags: **_WRITE_ABORT_MSG** und **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** bestimmt, ob eine informative textmeldung gedruckt wird, wenn ein Programm nicht normal beendet wird. Die Meldung besagt, dass die Anwendung aufgerufen hat die [Abbrechen](abort.md) Funktion. Beim Standardverhalten wird die Meldung ausgeben. **_CALL_REPORTFAULT**, sofern festgelegt, gibt an, dass ein Dr. Watson-Absturzabbild generiert und, wenn gemeldet [Abbrechen](abort.md) aufgerufen wird. Standardmäßig ist die Absturzabbildberichterstellung in den Nichtdebugversionen aktiviert.
+Es gibt zwei [Abbruch](abort.md) -Flags: **_WRITE_ABORT_MSG** und **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** bestimmt, ob eine hilfreiche Textnachricht gedruckt wird, wenn ein Programm nicht normal beendet wird. Die Meldung besagt, dass die Anwendung die [Abbruch](abort.md) -Funktion aufgerufen hat. Beim Standardverhalten wird die Meldung ausgeben. **_CALL_REPORTFAULT**, sofern festgelegt, gibt an, dass ein Watson-Absturz Abbild generiert und gemeldet wird, wenn [Abbruch](abort.md) aufgerufen wird. Standardmäßig ist die Absturzabbildberichterstellung in den Nichtdebugversionen aktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 

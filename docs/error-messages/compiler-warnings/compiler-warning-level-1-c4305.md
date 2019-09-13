@@ -1,28 +1,28 @@
 ---
 title: Compilerwarnung (Stufe 1) C4305
-ms.date: 1/17/2018
+ms.date: 01/17/2018
 f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: 3f9116b0e7bdd9ee13c42b48f44da4b090f41ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327469"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926120"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Compilerwarnung (Stufe 1) C4305
 
-> "*Kontext*': Verkürzung von '*type1*'to'*Typ2*"
+> '*context*': Abschneiden von '*Typ1*' zu '*Typ2*'
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Warnung wird ausgegeben, wenn ein Wert in einen kleineren Typ in einer Initialisierung oder als Konstruktorargument, was zu einem Verlust von Informationen konvertiert wird.
+Diese Warnung wird ausgegeben, wenn ein Wert in einer Initialisierung oder als Konstruktorargument in einen kleineren Typ konvertiert wird, was zu einem Verlust von Informationen führt.
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt zwei Möglichkeiten, die Sie möglicherweise diese Warnung angezeigt:
+Dieses Beispiel zeigt zwei Möglichkeiten, wie Sie diese Warnung sehen können:
 
 ```cpp
 // C4305.cpp
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-Um dieses Problem zu beheben, initialisieren Sie, indem Sie mit einem Wert den richtigen Typ aufweist, oder verwenden Sie eine explizite Umwandlung in den richtigen Typ. Beispielsweise verwenden eine **"float"** wie z. B. 2.71828f anstelle von literalen eine **doppelte** (dem Standardtyp für gleitkommaliterale) zum Initialisieren eine **"float"** Variable oder Übergabe an eine Konstruktor, eine **"float"** Argument.
+Um dieses Problem zu beheben, initialisieren Sie mit einem Wert des richtigen Typs, oder verwenden Sie eine explizite Umwandlung in den richtigen Typ. Verwenden Sie beispielsweise ein **float** -Literalformat wie z. b. 2.71828 f anstelle eines **Double** -Werts (der Standardtyp für Gleit Komma Literale), um eine **float** -Variable zu initialisieren oder an einen Konstruktor zu übergeben, der ein **float** -Argument annimmt.

@@ -1,6 +1,6 @@
 ---
 title: Befehlsrouting
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: ae9741a66e944b60dc38c1366353e43977e1ee7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165144"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907619"
 ---
 # <a name="command-routing"></a>Befehlsrouting
 
-Ihre Verantwortung bei der Arbeit mit Befehlen beschränkt sich auf das Erstellen von Meldungszuordnungsverbindungen zwischen Befehlen und ihren jeweiligen Handlerfunktionen, eine Aufgabe, für die Sie das Eigenschaftenfenster verwenden. Sie müssen außerdem die meisten Befehlshandler schreiben.
+Ihre Verantwortung bei der Arbeit mit Befehlen beschränkt sich auf das Erstellen von Meldungs Zuordnungs Verbindungen zwischen Befehlen und ihren Handlerfunktionen, eine Aufgabe, für die Sie den [MFC-Klassen-Assistenten](reference/mfc-class-wizard.md)verwenden. Außerdem müssen Sie den Code für die Befehls Handler schreiben.
 
 Windows-Meldungen werden in der Regel an das Hauptrahmenfenster gesendet, aber Befehlsmeldungen werden dann an andere Objekte weitergeleitet. Das Framework leitet Befehle durch eine Standardsequenz von Befehlszielobjekten, wobei vorausgesetzt wird, dass eines von ihnen einen Handler für den Befehl besitzt. Jedes Befehlszielobjekt überprüft seine Meldungszuordnung, um festzustellen, ob es die eingehende Meldung verarbeiten kann.
 
@@ -29,11 +29,11 @@ Verschiedene Befehlszielklassen überprüfen ihre eigenen Meldungszuordnungen zu
 
 1. An andere Befehlsziele.
 
-Wie aufwändig dieser Weiterleitungsmechanismus verglichen ist, um die Funktionsweise Ihres Handlers als Reaktion auf einen Befehl, ist der Aufwand für das routing gering. Beachten Sie, dass das Framework nur dann Befehle generiert, wenn der Benutzer mit einem Benutzeroberflächenobjekt interagiert.
+Wie teuer ist dieser Routing Mechanismus im Vergleich zu den Aktionen, die Ihr Handler als Reaktion auf einen Befehl durchführt, ist der Aufwand für das Routing gering. Beachten Sie, dass das Framework nur dann Befehle generiert, wenn der Benutzer mit einem Benutzeroberflächenobjekt interagiert.
 
 ### <a name="_core_standard_command_route"></a> Standardmäßige Befehlsweiterleitung
 
-|Wenn ein Objekt dieses Typs einen Befehl empfängt. sein. sein.|Es gibt sich selbst und anderen Befehlszielobjekten in der folgenden Reihenfolge eine Chance, den Befehl zu verarbeiten:|
+|Wenn ein Objekt dieses Typs einen Befehl empfängt. . .|Es gibt sich selbst und anderen Befehlszielobjekten in der folgenden Reihenfolge eine Chance, den Befehl zu verarbeiten:|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 |MDI-Rahmenfenster (`CMDIFrameWnd`)|1.  Aktiver `CMDIChildWnd`<br />2.  Dieses Rahmenfenster<br />3.  Anwendung (`CWinApp`-Objekt)|
 |Dokumentrahmenfenster (`CFrameWnd`, `CMDIChildWnd`)|1.  Aktive Ansicht<br />2.  Dieses Rahmenfenster<br />3.  Anwendung (`CWinApp`-Objekt)|

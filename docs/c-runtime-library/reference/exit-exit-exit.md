@@ -1,6 +1,6 @@
 ---
 title: exit, _Exit, _exit
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - _exit
 - exit
@@ -30,19 +30,19 @@ helpviewer_keywords:
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c16f306d745b96d8bc7c223213378140fdae14bb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339350"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927397"
 ---
-# <a name="exit-exit-exit"></a>exit, _Exit, _exit
+# <a name="exit-_exit-_exit"></a>exit, _Exit, _exit
 
-Beendet den aufrufenden Prozess. Die **beenden** Funktion beendet ihn nach der Bereinigung; **_exit** und **_Exit** beenden ihn sofort.
+Beendet den aufrufenden Prozess. Die **Exit** -Funktion beendet Sie nach der Bereinigung. **_exit** und **_exit** beenden Sie sofort.
 
 > [!NOTE]
-> Verwenden Sie diese Methode nicht, eine app (Universelle Windows Plattform) mit Ausnahme von Herunterfahren in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store Richtlinien](/legal/windows/agreements/store-policies). Weitere Informationen finden Sie unter [UWP-App-Lebenszyklus](/windows/uwp/launch-resume/app-lifecycle). Weitere Informationen zu Windows 10-Apps finden Sie unter [Anleitungen für Windows 10-Apps](https://developer.microsoft.com/windows/apps).
+> Verwenden Sie diese Methode nicht zum Herunterfahren einer universelle Windows-Plattform-app (UWP), mit Ausnahme von Test-oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-App sind gemäß den [Microsoft Store Richtlinien](/legal/windows/agreements/store-policies)nicht zulässig. Weitere Informationen finden Sie unter [UWP-App-Lebenszyklus](/windows/uwp/launch-resume/app-lifecycle). Weitere Informationen zu Windows 10-Apps finden Sie unter [Anleitungen für Windows 10-Apps](https://developer.microsoft.com/windows/apps).
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,11 +65,11 @@ Beendigungsstatuscode.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **beenden**, **_Exit** und **_exit** Funktionen beenden den aufrufenden Prozess. Die **beenden** Funktionsaufrufe Destruktoren für threadlokale Objekte und ruft dann – in der Reihenfolge von Last-in-First-Out (LIFO) – die Funktionen, die von registriert werden **von "atexit"** und **_onexit**, und klicken Sie dann alle Dateipuffer geleert, bevor der Prozess beendet wird. Die **_Exit** und **_exit** Funktionen wird der Prozess beendet, ohne threadlokale Objekte zu zerstören oder Verarbeitung **von "atexit"** oder **_onexit**-Funktionen und ohne den Streampuffer.
+Die Funktionen **Exit**, **_Exit** und **_Exit** beenden den aufrufenden Prozess. Die **Exit** -Funktion ruft Dekonstruktoren für Thread lokale Objekte auf und ruft dann – in LIFO-Reihenfolge (Last-in-First-Out) – die Funktionen auf, die von **atexit** und **_onexit**registriert werden, und leert alle Datei Puffer, bevor Sie beendet wird. ESS. Die **_Exit** -Funktion und die **_Exit** -Funktion beenden den Prozess, ohne Thread lokale Objekte zu zerstören oder **atexit** -oder **_onexit** -Funktionen zu verarbeiten, ohne Streampuffer zu leeren.
 
-Obwohl die **beenden**, **_Exit** und **_exit** Aufrufe geben einen Wert, der Wert in nicht zurück *Status* an die hostumgebung zur Verfügung gestellt wird oder aufrufende Prozess wartet, wenn nach des Prozesses beenden vorhanden. In der Regel der Aufrufer legt den *Status* Wert auf 0 zum Kennzeichnen einer normalen Beendigung oder auf einen anderen Wert einen Fehler an. Die *Status* -Wert steht dem Betriebssystem-Batchbefehl **ERRORLEVEL** und wird durch eine der beiden Konstanten repräsentiert: **EXIT_SUCCESS**, der einen Wert von 0 (null) darstellt oder **EXIT_FAILURE**, der einen Wert von 1 darstellt.
+Obwohl der **Exit**-, der **_Exit** -und der **_Exit** -Aufruf keinen Wert zurückgeben, wird der Wert in *Status* für die Host Umgebung verfügbar gemacht oder der aufrufende Prozess, sofern vorhanden, nachdem der Prozess beendet wurde. Normalerweise legt der Aufrufer den *Status* Wert auf 0 fest, um einen normalen Exit anzugeben, oder auf einen anderen Wert, um einen Fehler anzugeben. Der *Status* Wert ist für den Betriebssystem-Batch Befehl **ERRORLEVEL** verfügbar und wird durch eine von zwei Konstanten dargestellt: **EXIT_SUCCESS**, der den Wert 0 oder **EXIT_FAILURE**darstellt, der den Wert 1 darstellt.
 
-Die **beenden**, **_Exit**, **_exit**, **Quick_exit**, **_cexit**, und **_c_exit** Funktionen verhalten sich wie folgt.
+Die Funktionen **Exit**, **_Exit**, **_Exit**, **quick_exit**, **_cexit**und **_c_exit** Verhalten sich wie folgt.
 
 |Funktion|Beschreibung|
 |--------------|-----------------|
@@ -80,7 +80,7 @@ Die **beenden**, **_Exit**, **_exit**, **Quick_exit**, **_cexit**, und **_c_exit
 |**_cexit**|Führt vollständige C-Bibliotheksbeendigungsprozeduren aus und kehrt zum Aufrufer zurück. Der Prozess wird nicht beendet.|
 |**_c_exit**|Führt minimale C-Bibliotheksbeendigungsprozeduren aus und kehrt zum Aufrufer zurück. Der Prozess wird nicht beendet.|
 
-Beim Aufrufen der **beenden**, **_Exit** oder **_exit** -Funktion, die Destruktoren für jedes zum Zeitpunkt des Aufrufs vorhandene temporäre oder automatische Objekt nicht aufgerufen. Ein automatisches Objekt ist ein lokales nichtstatischen-Objekt in einer Funktion definiert. Ein temporäres Objekt ist ein Objekt, das durch den Compiler an, wie z. B. einen durch einen Funktionsaufruf zurückgegebenen Wert erstellt wird. Zum Zerstören eines automatischen Objekts vor dem Aufruf **beenden**, **_Exit**, oder **_exit**explizit rufen Sie den Destruktor für das Objekt an, wie hier gezeigt:
+Wenn Sie die Funktion **Exit**, **_Exit** oder **_Exit** aufrufen, werden die Dekonstruktoren für alle temporären oder automatischen Objekte, die zum Zeitpunkt des Aufrufs vorhanden sind, nicht aufgerufen. Ein automatisches Objekt ist ein nicht statisches lokales Objekt, das in einer Funktion definiert ist. Ein temporäres Objekt ist ein Objekt, das vom Compiler erstellt wird, z. b. ein von einem Funktions Aufrufwert zurückgegebener Wert. Zum Zerstören eines automatischen Objekts, bevor Sie **Exit**, **_Exit**oder **_Exit**aufzurufen, wird der Dekonstruktor für das Objekt explizit aufgerufen, wie hier gezeigt:
 
 ```cpp
 void last_fn() {}
@@ -91,7 +91,7 @@ void last_fn() {}
 }
 ```
 
-Verwenden Sie keine **DLL_PROCESS_ATTACH** aufzurufende **beenden** aus **DllMain**. Zum Beenden der **DLLMain** funktionieren, zurückgeben **"false"** aus **DLL_PROCESS_ATTACH**.
+Verwenden Sie **DLL_PROCESS_ATTACH** nicht, um **Exit** from **DllMain**aufzurufen. Wenn Sie die **DllMain** -Funktion beenden möchten, geben Sie **false** von **DLL_PROCESS_ATTACH**zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

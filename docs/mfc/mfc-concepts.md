@@ -1,14 +1,14 @@
 ---
 title: MFC-Konzepte
-ms.date: 1/09/2018
+ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 8d021350125acda52bb4ecf3919282cb7bbe52b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5617051dc700bb1dd594a13627c9e3d01ef9caa9
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239024"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927906"
 ---
 # <a name="mfc-concepts"></a>MFC-Konzepte
 
@@ -52,7 +52,7 @@ Erläutert die MFC-Klassen, die Internetprogrammierung unterstützen.
 Erläutert, wie Anwendungen Internetunterstützung hinzugefügt wird.
 
 [Unterstützung für Unicode- und Multibyte-Zeichensätze (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
-Erläutert, wie MFC und ATL-Unterstützung für Unicode- und multibyte-Zeichensätze verwenden.
+Erläutert die Verwendung von MFC-und ATL-Unterstützung für Unicode-und Multibytezeichen-Zeichensätze.
 
 [MFC COM](../mfc/mfc-com.md)<br/>
 Erläutert eine MFC-Teilmenge, die entworfen wurde, um COM zu unterstützen. Dagegen wurde der Großteil der Active Template Library (ATL) für die COM-Programmierung entworfen.

@@ -1,42 +1,42 @@
 ---
 title: /DISASM
-ms.date: 1/17/2018
+ms.date: 01/17/2018
 f1_keywords:
 - /disasm
 helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: 10e8187e896b3922438a8cf2dafa0aec4c91f904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb394b2266470e77c50ce5398aea961c37ac34fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272060"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927722"
 ---
 # <a name="disasm"></a>/DISASM
 
-Drucken Sie die Disassemblierung der Codeabschnitte in der Ausgabe von DUMPBIN.
+Druckt die Disassembly von Code Abschnitten in der dumpbin-Ausgabe.
 
 ## <a name="syntax"></a>Syntax
 
-> **/DISASM**{**:**\[**BYTES**|**NOBYTES**]}
+> **/DISASM**{ **:** \[**BYTES**|**NOBYTES**]}
 
 ### <a name="arguments"></a>Argumente
 
 **BYTES**<br/>
-Enthält die Anweisung Bytes zusammen mit den interpretierten Opcodes und die Argumente in der Disassembly-Ausgabe. Dies ist die Standardoption.
+Schließt die Anweisungs Bytes zusammen mit den interpretierten Opcodes und Argumenten in der disassemblyausgabe ein. Dies ist die Standardoption.
 
 **NOBYTES**<br/>
-Umfasst nicht die Bytes der Anweisung in der Disassembly-Ausgabe.
+Schließt die Anweisungs Bytes in der disassemblyausgabe nicht ein.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **DISASM** Option zeigt die Disassemblierung der Codeabschnitte in der Datei. Er verwendet die Debugsymbole, wenn sie in der Datei vorhanden sind.
+Die Option **/DISASM** zeigt die Disassemblierungscode Abschnitte in der Datei an. Sie verwendet Debugsymbole, wenn Sie in der Datei vorhanden sind.
 
-**/ DISASM** sollte nur für nicht verwaltete, native Images verwendet werden. Das entsprechende Tool für verwalteten Code ist [ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler).
+**/DISASM** sollte nur für Native, nicht verwaltete Images verwendet werden. Das äquivalente Tool für verwalteten Code ist [Ildasm](/dotnet/framework/tools/ildasm-exe-il-disassembler).
 
-Nur die [/Headers](headers.md) DUMPBIN-Option ist verfügbar für die Verwendung auf Dateien, die von der [/GL (Optimierung des ganzen Programms)](gl-whole-program-optimization.md) -Compileroption.
+Nur die Option [/Headers](headers.md) DUMPBIN ist für die Verwendung in Dateien verfügbar, die von der/GL-Compileroption [(gesamte Programm Optimierung)](gl-whole-program-optimization.md) erstellt werden.
 
 ## <a name="see-also"></a>Siehe auch
 

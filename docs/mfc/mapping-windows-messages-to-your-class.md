@@ -1,6 +1,6 @@
 ---
 title: Zuordnen von Windows-Meldungen zu einer Klasse
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - MFC dialog boxes [MFC], Windows messages
 - message maps [MFC], in dialog class
@@ -9,27 +9,28 @@ helpviewer_keywords:
 - mappings [MFC], messages to dialog class [MFC]
 - message maps [MFC], mapping Windows messages to classes
 - messages to dialog class [MFC], mapping
+- Class Wizard [MFC]
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
-ms.openlocfilehash: 7e15f52e41d4ac91a839629342258128db86e2d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49d1a888b148793f82cf214637956589d6b8ff07
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363842"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907474"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Zuordnen von Windows-Meldungen zu einer Klasse
 
-Bei Bedarf das Dialogfeld, um Windows-Meldungen zu verarbeiten, überschreiben Sie die entsprechenden Handler-Funktionen. Zu diesem Zweck verwenden Sie im Eigenschaftenfenster in [ordnen die Nachrichten](../mfc/reference/mapping-messages-to-functions.md) der Dialogfeld-Klasse. Schreibt einen meldungszuordnung Eintrag für jede Nachricht, und fügt die Meldungshandler-Memberfunktionen der Klasse hinzu. Verwenden Sie die Visual C++ Quellcode-Editor, um das Schreiben von Code in der Meldungshandler.
+Wenn Sie das Dialogfeld zum Verarbeiten von Windows-Meldungen benötigen, überschreiben Sie die entsprechenden Handlerfunktionen. Wählen Sie hierzu in **Projektmappen-Explorer**die Registerkarte **Klassenansicht** aus, klicken Sie mit der rechten Maustaste auf die Klasse, die das Dialogfeld darstellt, und wählen Sie [Klassen-Assistent](reference/mfc-class-wizard.md)aus. Verwenden Sie den Assistenten, um [die Nachrichten](../mfc/reference/mapping-messages-to-functions.md) der Dialogfeld Klasse zuzuordnen. Dadurch wird ein Meldungs Zuordnungs Eintrag für jede Nachricht geschrieben, und die Member der nachrichtenhandlermember werden der Klasse hinzugefügt. Verwenden Sie den Code-Editor, um Code in den Meldungs Handlern zu schreiben.
 
-Sie können auch festlegen, überschreiben Memberfunktionen der [CDialog](../mfc/reference/cdialog-class.md) und deren Basisklassen, vor allem [CWnd](../mfc/reference/cwnd-class.md).
+Sie können auch Member-Funktionen von [CDialog](../mfc/reference/cdialog-class.md) und deren Basisklassen überschreiben, insbesondere [CWnd](../mfc/reference/cwnd-class.md).
 
-## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren?
 
-- [Meldungsbehandlung und Zuordnung](../mfc/message-handling-and-mapping.md)
+- [Nachrichten Behandlung und-Zuordnung](../mfc/message-handling-and-mapping.md)
 
-- [Überschreibbare Memberfunktionen](../mfc/commonly-overridden-member-functions.md)
+- [Häufig überschriebene Element Funktionen](../mfc/commonly-overridden-member-functions.md)
 
-- [Häufig hinzugefügte Memberfunktionen](../mfc/commonly-added-member-functions.md)
+- [Häufig hinzugefügte Member-Funktionen](../mfc/commonly-added-member-functions.md)
 
 ## <a name="see-also"></a>Siehe auch
 

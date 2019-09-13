@@ -1,6 +1,6 @@
 ---
 title: CDialog-Klasse
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 f1_keywords:
 - CDialog
 - AFXWIN/CDialog
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d9969b7dd41dc7a67e21bb2735b1d716bd988d07
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b07190c70fb11950b25aff45fb10e850c0e81b24
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506889"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907609"
 ---
 # <a name="cdialog-class"></a>CDialog-Klasse
 
@@ -97,7 +97,7 @@ Dialog Felder haben zwei Typen: Modal und nicht modale. Ein modales Dialogfeld m
 
 Ein `CDialog` -Objekt ist eine Kombination aus einer Dialogfeld `CDialog`Vorlage und einer von abgeleiteten Klasse. Verwenden Sie den Dialog-Editor, um die Dialogfeld Vorlage zu erstellen und in einer Ressource zu speichern. verwenden Sie dann den Assistenten zum hinzu `CDialog`fügen von Klassen zum Erstellen einer von abgeleiteten Klasse.
 
-Ein Dialogfeld empfängt, wie ein beliebiges anderes Fenster, Meldungen von Windows. In einem Dialogfeld sind Sie besonders an der Verarbeitung von Benachrichtigungs Meldungen aus den Steuerelementen des Dialog Felds interessiert, da der Benutzer mit dem Dialogfeld interagiert. Verwenden Sie die Eigenschaftenfenster, um auszuwählen, welche Nachrichten Sie behandeln möchten, und fügen Sie der Klasse die entsprechenden Meldungs Zuordnungs Einträge und nachrichtenhandlermember-Funktionen hinzu. Sie müssen nur anwendungsspezifischen Code in den handlermember-Funktionen schreiben.
+Ein Dialogfeld empfängt, wie ein beliebiges anderes Fenster, Meldungen von Windows. In einem Dialogfeld sind Sie besonders an der Verarbeitung von Benachrichtigungs Meldungen aus den Steuerelementen des Dialog Felds interessiert, da der Benutzer mit dem Dialogfeld interagiert. Verwenden Sie den [Klassen-Assistenten](mfc-class-wizard.md) , um auszuwählen, welche Nachrichten Sie behandeln möchten, und fügt der Klasse die entsprechenden Meldungs Zuordnungs Einträge und nachrichtenhandlermember-Funktionen hinzu. Sie müssen nur anwendungsspezifischen Code in den handlermember-Funktionen schreiben.
 
 Wenn Sie möchten, können Sie Nachrichten Zuordnungs Einträge und Element Funktionen immer manuell schreiben.
 
@@ -462,7 +462,7 @@ Gibt an, ob die Anwendung den Eingabefokus auf eines der Steuerelemente im Dialo
 
 ### <a name="remarks"></a>Hinweise
 
-Windows sendet die `WM_INITDIALOG` Nachricht während der Aufrufe [Create](#create), [anateindirect](#createindirect)oder [DoModal](#domodal) an das Dialogfeld, die unmittelbar vor dem Anzeigen des Dialog Felds auftreten.
+Windows sendet die `WM_INITDIALOG` Nachricht während der Aufrufe [Create,](#create) [anateindirect](#createindirect)oder [DoModal](#domodal) an das Dialogfeld, die unmittelbar vor dem Anzeigen des Dialog Felds auftreten.
 
 Überschreiben Sie diese Methode, wenn Sie eine besondere Verarbeitung durchführen möchten, wenn das Dialogfeld initialisiert wird. In der überschriebenen Version wird zuerst die Basisklasse `OnInitDialog` aufgerufen, aber der Rückgabewert wird ignoriert. Sie werden in der `TRUE` Regel von der überschriebenen-Methode zurückgegeben.
 

@@ -1,27 +1,27 @@
 ---
 title: Compilerwarnung (Stufe 4) C4295
-ms.date: 1/09/2018
+ms.date: 01/09/2018
 f1_keywords:
 - C4295
 helpviewer_keywords:
 - C4295
 ms.assetid: 20dbff85-9f62-4ca3-8fe9-079d4512006d
-ms.openlocfilehash: ed31ea19f9c36a9c6fab7452a4bfc3843a151059
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e8b546e4eb4b60197db504382b3230e779b1dec
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400876"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70924850"
 ---
 # <a name="compiler-warning-level-4-c4295"></a>Compilerwarnung (Stufe 4) C4295
 
-> "*Array*": Array ist zu klein, um ein abschließendes Nullzeichen einzuschließen
+> "*Array*": das Array ist zu klein, um ein abschließendes NULL Zeichen einzuschließen.
 
-Das letzte Zeichen im Array wird es sich nicht um ein NULL-Wert, sondern ein Array initialisiert wurde. Zugreifen auf das Array als eine Zeichenfolge kann zu unerwarteten Ergebnissen führen.
+Ein Array wurde initialisiert, aber das letzte Zeichen im Array ist kein NULL-Wert. der Zugriff auf das Array als Zeichenfolge kann zu unerwarteten Ergebnissen führen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel wird C4295 generiert. Um dieses Problem zu beheben, Sie deklarieren die Array-Größe größer ist, zum Speichern ein abschließendes Nullzeichen aus der Initialisierer-Zeichenfolge, oder Sie können eine Initialisiererliste Array verwenden, um die beabsichtigte löschen, die sich dies ein Array von `char`, keine Null-terminierte Zeichenfolge.
+Im folgenden Beispiel wird C4295 generiert. Um dieses Problem zu beheben, können Sie die Array Größe vergrößern, um eine abschließende NULL aus der initialisiererzeichenfolge zu speichern, oder Sie können eine arrayinitialisiererliste verwenden, um die Absicht klar `char`zu machen, dass es sich um ein Array von handelt, nicht um eine auf NULL endende Zeichenfolge.
 
 ```C
 // C4295.c

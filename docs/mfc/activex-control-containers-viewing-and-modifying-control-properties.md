@@ -1,5 +1,5 @@
 ---
-title: 'ActiveX-Steuerelementcontainer: Anzeigen und Ändern von Steuerelementeigenschaften'
+title: 'ActiveX-Steuerelement Container: Anzeigen und Ändern von Steuerelement Eigenschaften'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - properties [MFC], viewing and modifying
@@ -8,36 +8,36 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: 0a03acfd880bcf63017eec9796315b98e5d5f4d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d42820efd06c2ae52f5d1b22b0bdfb6335c4a89
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394883"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907807"
 ---
-# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX-Steuerelementcontainer: Anzeigen und Ändern von Steuerelementeigenschaften
+# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX-Steuerelement Container: Anzeigen und Ändern von Steuerelement Eigenschaften
 
-Wenn Sie ein ActiveX-Steuerelement in ein Projekt einfügen, ist es hilfreich, anzeigen und Ändern der Eigenschaften, die vom ActiveX-Steuerelement unterstützt wird. In diesem Artikel wird erläutert, wie den Visual C++-Ressourcen-Editor zu diesem Zweck verwenden.
+Wenn Sie ein ActiveX-Steuerelement in ein-Projekt einfügen, ist es hilfreich, die Eigenschaften anzuzeigen und zu ändern, die vom ActiveX-Steuerelement unterstützt werden. In diesem Artikel wird erläutert, wie Sie C++ hierfür den visuellen Ressourcen-Editor verwenden.
 
-Wenn Ihr ActiveX-Steuerelementcontainer-Anwendung eingebettete Steuerelementen verwendet, können Sie anzeigen und ändern die Eigenschaften des Steuerelements im Ressourcen-Editor. Sie können auch den Ressourcen-Editor verwenden, können Sie während der Entwurfszeit festlegen. Der Ressourcen-Editor speichert dann automatisch diese Werte in Ressourcen-Datei des Projekts. Jede Instanz des Steuerelements müssen die Eigenschaften, die mit diesen Werten initialisiert.
+Wenn die Containeranwendung des ActiveX-Steuer Elements eingebettete Steuerelemente verwendet, können Sie die Eigenschaften des Steuer Elements im Ressourcen-Editor anzeigen und ändern. Sie können auch den Ressourcen-Editor verwenden, um Eigenschaftswerte während der Entwurfszeit festzulegen. Der Ressourcen-Editor speichert diese Werte dann automatisch in der Ressourcen Datei des Projekts. Für jede Instanz des Steuer Elements werden dann die Eigenschaften dieser Werte initialisiert.
 
-Dieses Verfahren setzt voraus, dass Sie ein Steuerelement in Ihrem Projekt eingefügt haben. Weitere Informationen finden Sie unter [ActiveX-Steuerelementcontainer: Einfügen eines Steuerelements in eine Steuerelementcontainer-Anwendung](../mfc/inserting-a-control-into-a-control-container-application.md).
+Bei diesem Verfahren wird davon ausgegangen, dass Sie ein-Steuerelement in Ihr Projekt eingefügt haben. Weitere Informationen finden [Sie unter ActiveX-Steuerelement Container: Einfügen eines Steuer Elements in eine Steuerelement](../mfc/inserting-a-control-into-a-control-container-application.md)Container-Anwendung.
 
-Der erste Schritt beim Anzeigen der Eigenschaften des Steuerelements ist eine Instanz des Steuerelements Dialogfeldvorlage des Projekts hinzu.
+Der erste Schritt beim Anzeigen der Eigenschaften des-Steuer Elements besteht darin, der Dialogfeld Vorlage des Projekts eine Instanz des-Steuer Elements hinzuzufügen.
 
-### <a name="to-view-the-properties-of-a-control"></a>Anzeigen die Eigenschaften eines Steuerelements
+### <a name="to-view-the-properties-of-a-control"></a>So zeigen Sie die Eigenschaften eines Steuer Elements an
 
-1. Öffnen Sie in der Ressourcenansicht den **Dialogfeld** Ordner.
+1. Öffnen Sie in Ressourcenansicht den **Dialog** Ordner.
 
-1. Öffnen Sie Ihre wichtigsten Dialogfeldvorlage.
+1. Öffnen Sie die Haupt Dialogfeld Vorlage.
 
-1. Fügen Sie ein ActiveX-Steuerelement mit dem **ActiveX-Steuerelement einfügen** Dialogfeld. Weitere Informationen finden Sie unter [anzeigen und Hinzufügen von ActiveX-Steuerelementen in einem Dialogfeld](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).
+1. Fügen Sie ein ActiveX-Steuerelement mit dem Dialogfeld **ActiveX-Steuerelement einfügen** ein. Weitere Informationen finden Sie unter [anzeigen und Hinzufügen von ActiveX-Steuerelementen zu einem Dialog Feld](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).
 
-1. Wählen Sie das ActiveX-Steuerelement im Dialogfeld ein.
+1. Wählen Sie das ActiveX-Steuerelement im Dialogfeld aus.
 
-1. Klicken Sie im Eigenschaftenfenster auf die **Eigenschaften** Schaltfläche.
+1. Klicken Sie im **Eigenschaften** Fenster auf die Schaltfläche **Eigenschaften** .
 
-Verwenden der **Eigenschaften** Dialogfelds ändern und neue Eigenschaften sofort testen.
+Verwenden Sie das Dialogfeld **Eigenschaften** , um neue Eigenschaften sofort zu ändern und zu testen.
 
 ## <a name="see-also"></a>Siehe auch
 

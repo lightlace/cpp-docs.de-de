@@ -1,17 +1,17 @@
 ---
 title: Virtuelle Funktionen
-ms.date: 11/04/2016
+ms.date: 09/10/2019
 helpviewer_keywords:
 - functions [C++], virtual functions
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 07dfd8a602dca93c89a078b2eb69e04cf9d4a7a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393843"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926088"
 ---
 # <a name="virtual-functions"></a>Virtuelle Funktionen
 
@@ -19,7 +19,7 @@ Eine virtuelle Funktion ist eine Memberfunktion, von der Sie erwarten, dass sie 
 
 Virtuelle Funktionen stellen sicher, dass die richtige Funktion für ein Objekt aufgerufen wird, und zwar unabhängig von dem Ausdruck, mit dem der Funktionsaufruf erfolgt.
 
-Angenommen, eine Basisklasse eine Funktion, die als deklariert enthält [virtuellen](../cpp/virtual-cpp.md) und eine abgeleitete Klasse definiert die gleiche Funktion. Die Funktion der abgeleiteten Klasse wird für Objekte der abgeleiteten Klasse aufgerufen, selbst wenn sie unter Verwendung eines Zeigers oder eines Verweises auf die Basisklasse aufgerufen wird. Das folgende Beispiel zeigt eine Basisklasse, die eine Implementierung von der Funktion `PrintBalance` sowie von zwei abgeleiteten Klassen bereitstellt.
+Angenommen, eine Basisklasse enthält eine Funktion, die als [virtuell](../cpp/virtual-cpp.md) deklariert ist, und eine abgeleitete Klasse definiert dieselbe Funktion. Die Funktion der abgeleiteten Klasse wird für Objekte der abgeleiteten Klasse aufgerufen, selbst wenn sie unter Verwendung eines Zeigers oder eines Verweises auf die Basisklasse aufgerufen wird. Das folgende Beispiel zeigt eine Basisklasse, die eine Implementierung von der Funktion `PrintBalance` sowie von zwei abgeleiteten Klassen bereitstellt.
 
 ```cpp
 // deriv_VirtualFunctions.cpp
@@ -30,6 +30,7 @@ using namespace std;
 class Account {
 public:
    Account( double d ) { _balance = d; }
+   virtual ~Account() {}
    virtual double GetBalance() { return _balance; }
    virtual void PrintBalance() { cerr << "Error. Balance not available for base type." << endl; }
 private:
@@ -50,15 +51,15 @@ public:
 
 int main() {
    // Create objects of type CheckingAccount and SavingsAccount.
-   CheckingAccount *pChecking = new CheckingAccount( 100.00 ) ;
-   SavingsAccount  *pSavings  = new SavingsAccount( 1000.00 );
+   CheckingAccount checking( 100.00 );
+   SavingsAccount  savings( 1000.00 );
 
    // Call PrintBalance using a pointer to Account.
-   Account *pAccount = pChecking;
+   Account *pAccount = &checking;
    pAccount->PrintBalance();
 
    // Call PrintBalance using a pointer to Account.
-   pAccount = pSavings;
+   pAccount = &savings;
    pAccount->PrintBalance();
 }
 ```
@@ -130,8 +131,6 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Output
-
 ```Output
 Derived::NameOf
 Invoked by Base
@@ -141,11 +140,11 @@ Invoked by Derived
 
 Beachten Sie, dass unabhängig davon, ob die `NameOf`-Funktion durch einen Zeiger auf `Base` oder einen Zeiger auf `Derived` aufgerufen wird, die Funktion für `Derived` aufgerufen wird. Dies ruft die Funktion für `Derived` auf, da `NameOf` eine virtuelle Funktion ist und sowohl `pBase` als auch `pDerived` auf ein Objekt vom Typ `Derived` zeigen.
 
-Da virtuelle Funktionen nur für Objekte von Klassentypen aufgerufen werden, kann nicht deklariert werden globale oder statische Funktionen als **virtuellen**.
+Da virtuelle Funktionen nur für Objekte von Klassentypen aufgerufen werden, können Sie keine globalen oder statischen Funktionen als **virtuell**deklarieren.
 
-Die **virtuellen** Schlüsselwort kann verwendet werden, wenn in einer abgeleiteten Klasse deklarieren überschreibender Funktionen, jedoch ist es nicht erforderlich, überschreibungen virtueller Funktionen immer virtuell sind.
+Das **Virtual** -Schlüsselwort kann beim Deklarieren von über schreibenden Funktionen in einer abgeleiteten Klasse verwendet werden, ist jedoch nicht erforderlich. über schreibungen virtueller Funktionen sind immer virtuell.
 
-Virtuelle Funktionen in einer Basisklasse müssen definiert werden, es sei denn, sie deklariert werden, mit der *pure-Specifier*. (Weitere Informationen über rein virtuelle Funktionen finden Sie unter [abstrakte Klassen](../cpp/abstract-classes-cpp.md).)
+Virtuelle Funktionen in einer Basisklasse müssen definiert werden, es sei denn, Sie werden mit dem *reinen-Spezifizierer*deklariert. (Weitere Informationen zu reinen virtuellen Funktionen finden Sie unter [abstrakte Klassen](../cpp/abstract-classes-cpp.md).)
 
 Der Mechanismus für den virtuellen Funktionsaufruf kann unterdrückt werden, indem Sie den Funktionsnamen explizit mithilfe des Bereichsauflösungsoperators (`::`) qualifizieren. Betrachten Sie das vorherige Beispiel, das die `Account`-Klasse enthält. Um `PrintBalance` in der Basisklasse aufrufen, verwenden Sie beispielsweise folgenden Code:
 

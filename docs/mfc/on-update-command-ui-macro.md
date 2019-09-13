@@ -1,6 +1,6 @@
 ---
 title: ON_UPDATE_COMMAND_UI Macro
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - ON_UPDATE_COMMAND_UI
 helpviewer_keywords:
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - command-handler macros
 - updating user-interface objects [MFC]
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
-ms.openlocfilehash: 986bc4f12223048a20f88da5d164b24dc1c08ace
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 467e130f3e6518cc4ec554f6574fb9fcbabaf1f3
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385351"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907950"
 ---
-# <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI Macro
+# <a name="on_update_command_ui-macro"></a>ON_UPDATE_COMMAND_UI Macro
 
-Verwenden der **Eigenschaften** Fenster aus, um die Verbindung mit Befehlsaktualisierungs Handler in einer Befehlszielobjekt ein Benutzeroberflächen-Objekt. Es wird automatisch verbinden die Benutzeroberflächen-ID des Objekts mit der ON_UPDATE_COMMAND_UI-Makro und erstellen Sie einen Ereignishandler in das Objekt, das Update behandelt wird. Finden Sie unter [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md) für Weitere Informationen.
+Öffnen Sie **Klassenansicht**, und klicken Sie dann mit der rechten Maustaste auf die Klasse, der der Handler hinzugefügt wird, und wählen Sie den **Klassen-Assistenten**aus, um ein Benutzeroberflächen Objekt mit einem Befehls Aktualisierungs Handler in einem Befehls Zielobjekt zu verbinden. Suchen Sie die ID des Benutzeroberflächen Objekts in der Liste auf der linken Seite, wählen Sie dann im rechten Bereich **UPDATE_COMMAND_UI** aus, und klicken Sie auf **Handler hinzufügen**. Dadurch wird eine Handlerfunktion in der-Klasse erstellt und der entsprechende Eintrag in der Meldungs Zuordnung hinzugefügt. Weitere Informationen finden [Sie unter Mapping messages to Functions](../mfc/reference/mapping-messages-to-functions.md) . Sie können zusätzliche Nachrichten angeben, die im Bereich **Meldungen** verarbeitet werden sollen. 
 
-Um einen Befehl alle Löschen Ihres Programms Menü "Bearbeiten" zu aktualisieren, verwenden Sie z. B. die **Eigenschaften** Fenster eine Meldungszuordnungseintrags in der ausgewählten Klasse eine Funktionsdeklaration für ein Befehlsaktualisierungshandler hinzufügen mit der Bezeichnung `OnUpdateEditClearAll` in der Klasse Deklaration und eine leere Funktion-Vorlage in der Implementierungsdatei der Klasse. Der Funktionsprototyp sieht folgendermaßen aus:
+Um z. b. den Befehl Clear All im Menü Bearbeiten des Programms zu aktualisieren, verwenden Sie den **Klassen-Assistenten** , um einen Meldungs Zuordnungs Eintrag in der ausgewählten Klasse hinzuzufügen, eine Funktionsdeklaration `OnUpdateEditClearAll` für einen Befehls Aktualisierungs Handler, der in der Klassen Deklaration aufgerufen wird, und einen leeren Funktions Vorlage in der Implementierungs Datei der Klasse. Der Funktionsprototyp sieht wie folgt aus:
 
 [!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/cpp/on-update-command-ui-macro_1.h)]
 
-Wie alle Handler, die Funktion zeigt die **Afx_msg** Schlüsselwort. Wie alle Handler zu aktualisieren, nimmt er ein Argument, ein Zeiger auf eine `CCmdUI` Objekt.
+Wie bei allen Handlern zeigt die Funktionsdeklaration das **afx_msg** -Schlüsselwort an. Wie bei allen Update Handlern benötigt es ein Argument, einen Zeiger auf ein `CCmdUI` -Objekt.
 
 ## <a name="see-also"></a>Siehe auch
 

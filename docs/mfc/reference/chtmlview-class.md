@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 2d00a7216778f4a9a40b9d503bce7d26982669e0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9643379136398de7ce4d98aaa9ab5f22fa488c0e
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506071"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927937"
 ---
 # <a name="chtmlview-class"></a>CHtmlView-Klasse
 
@@ -1194,7 +1194,7 @@ Ein Zeiger auf eine Zeichenfolge, die die URL, den UNC-Dateinamen oder eine PIDL
 
 Nicht jeder Frame löst dieses Ereignis aus, aber jeder Frame, der ein [ondownloadbegin](#ondownloadbegin) -Ereignis auslöst, löst `OnDocumentComplete` ein entsprechendes Ereignis aus.
 
-Die von *lpszurl* festgeschriebene URL kann sich von der URL unterscheiden, zu der der Browser navigiert hat, da diese URL die kanonisierte und qualifizierte URL ist. Wenn eine Anwendung z. b. die URL "www.Microsoft.com" in einem-Befehl von [Navigate](#navigate) oder [Navigate2](#navigate2)angibt, lautet die von `OnNavigateComplete2` über gegebene URL<http://www.microsoft.com/>"". Wenn der Server den Browser an eine andere URL umgeleitet hat, wird die umgeleitete URL hier widergespiegelt.
+Die von *lpszurl* festgeschriebene URL kann sich von der URL unterscheiden, zu der der Browser navigiert hat, da diese URL die kanonisierte und qualifizierte URL ist. Wenn eine Anwendung `"www.microsoft.com"` z `"<https://www.microsoft.com/>"`. b. eine URL von in einem- [Navigations](#navigate) -oder [Navigate2](#navigate2)-Befehl angibt, ist `OnNavigateComplete2` die von über gegebene URL. Wenn der Server den Browser an eine andere URL umgeleitet hat, wird die umgeleitete URL hier widergespiegelt.
 
 ##  <a name="ondocwindowactivate"></a>CHtmlView:: ondocwindowaktivierungs
 
@@ -1458,7 +1458,7 @@ Ein Zeichen folgen Ausdruck, der die URL, den UNC-Dateinamen oder die PIDL (eine
 
 Der URL-Parameter kann eine PIDL im Fall einer Shell-Namespace-Entität sein, für die keine URL-Darstellung vorhanden ist.
 
-Beachten Sie, dass sich die in " *strauurl* " enthaltene URL von der URL unterscheidet, zu der der Browser navigiert hat, weil diese URL die kanonisierte und qualifizierte URL ist. Wenn eine Anwendung z. b. die URL "www.Microsoft.com" in einem-Befehl von [Navigate](#navigate) oder [Navigate2](#navigate2)angibt, lautet die von `OnNavigateComplete2` über gegebene URL<http://www.microsoft.com/>"". Wenn der Server den Browser an eine andere URL umgeleitet hat, wird die umgeleitete URL hier widergespiegelt.
+Beachten Sie, dass sich die in " *strauurl* " enthaltene URL von der URL unterscheidet, zu der der Browser navigiert hat, weil diese URL die kanonisierte und qualifizierte URL ist. Wenn eine Anwendung `"www.microsoft.com"` z `"<https://www.microsoft.com/>"`. b. eine URL von in einem- [Navigations](#navigate) -oder [Navigate2](#navigate2)-Befehl angibt, ist `OnNavigateComplete2` die von über gegebene URL. Wenn der Server den Browser an eine andere URL umgeleitet hat, wird die umgeleitete URL hier widergespiegelt.
 
 ##  <a name="onnavigateerror"></a>CHtmlView:: onnavigateerror
 

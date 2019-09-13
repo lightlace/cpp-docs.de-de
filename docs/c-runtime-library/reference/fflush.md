@@ -1,6 +1,6 @@
 ---
 title: fflush
-ms.date: 11/04/2016
+ms.date: 09/11/2019
 apiname:
 - fflush
 apilocation:
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: d03d20ee5024915d0ca4c5a21db4159e8c4f876a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 73ef97306f573fba89ba3cdb8000de9db4d10bac
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333981"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927434"
 ---
 # <a name="fflush"></a>fflush
 
@@ -49,18 +49,18 @@ Zeiger auf die **FILE**-Struktur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Fflush** gibt 0 zurück, wenn der Puffer erfolgreich geleert wurde. Der Wert 0 wird auch dann zurückgegeben, wenn der angegebene Stream über keinen Puffer verfügt oder nur zum Lesen geöffnet wird. Der Rückgabewert **EOF** gibt einen Fehler an.
+**fflush** gibt 0 zurück, wenn der Puffer erfolgreich geleert wurde. Der Wert 0 wird auch dann zurückgegeben, wenn der angegebene Stream über keinen Puffer verfügt oder nur zum Lesen geöffnet wird. Der Rückgabewert von **EOF** weist auf einen Fehler hin.
 
 > [!NOTE]
-> Wenn **Fflush** gibt **EOF**, Daten war möglicherweise aufgrund eines Schreibfehlers verloren gehen. Bei der Einrichtung eines wichtigen fehlerhandlers ist es am sichersten, deaktivieren Sie Pufferung mit der **Setvbuf** Funktion oder e/a-Routine auf niedriger Ebene zu verwenden, z. B. **_open**, **_close**, und **_write** anstelle der Stream-e/a-Funktionen.
+> Wenn **fflush** **EOF**zurückgibt, sind die Daten möglicherweise aufgrund eines Schreibfehlers verloren gegangen. Beim Einrichten eines kritischen Fehler Handlers ist es am sichersten, die Pufferung mit der **setvbuf** -Funktion zu aktivieren oder e/a-Routinen auf niedriger Ebene, wie z. b. **_open**, **_close**und **_write** , anstelle der Stream-e/a-Funktionen zu verwenden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fflush** Funktion leert den Stream *Stream*. Wenn der Stream im Schreibmodus oder im Updatemodus geöffnet wurde und der letzte Vorgang ein Schreibvorgang war, werden die Inhalte des Streampuffers in die zugrunde liegende Datei bzw. das Gerät geschrieben, und der Puffer wird verworfen. Wenn der Stream im Lesemodus geöffnet wurde, oder der Stream besitzt kein Puffer, der Aufruf von **Fflush** hat keine Auswirkungen, und alle Puffer wird beibehalten. Ein Aufruf von **Fflush** negiert die Wirkung aller vorherigen Aufrufe von **Ungetc** für den Stream. Der Stream bleibt nach dem Aufruf geöffnet.
+Die **fflush** -Funktion leert den Stream- *Stream*. Wenn der Stream im Schreibmodus oder im Updatemodus geöffnet wurde und der letzte Vorgang ein Schreibvorgang war, werden die Inhalte des Streampuffers in die zugrunde liegende Datei bzw. das Gerät geschrieben, und der Puffer wird verworfen. Wenn der Stream im Lesemodus geöffnet wurde, oder wenn der Stream über keinen Puffer verfügt, hat der Befehl **fflush** keine Auswirkung, und jeder Puffer wird beibehalten. Ein-Befehl von **fflush** negiert die Auswirkung eines früheren Aufrufens von **ungetc** für den Datenstrom. Der Stream bleibt nach dem Aufruf geöffnet.
 
-Wenn *Stream* ist **NULL**, entspricht das Verhalten einem Aufruf von **Fflush** in allen geöffneten Streams. Alle im Schreibmodus geöffneten Streams und alle Streams im Updatemodus, in denen der letzte Vorgang ein Schreibvorgang war, werden geleert. Der Aufruf hat keine Auswirkungen auf andere Streams.
+Wenn der Stream **null**ist, ist das Verhalten mit dem Befehl " **fflush** " für jeden geöffneten Stream identisch. Alle im Schreibmodus geöffneten Streams und alle Streams im Updatemodus, in denen der letzte Vorgang ein Schreibvorgang war, werden geleert. Der Aufruf hat keine Auswirkungen auf andere Streams.
 
-Puffer werden normalerweise vom Betriebssystem verwaltet, das den optimalen Zeitpunkt bestimmt, zu dem Daten automatisch auf den Datenträger geschrieben werden: wenn ein Puffer voll ist, wenn ein Stream geschlossen wird oder wenn ein Programm normal beendet wird, ohne den Stream zu schließen. Mit der Datenträgercommitfunktion der Laufzeitbibliothek können Sie sicherstellen, dass wichtige Daten direkt auf den Datenträger anstatt in die Betriebssystempuffer geschrieben werden. Sie können diese Funktion aktivieren, ohne ein vorhandenes Programm umzuschreiben. Verknüpfen Sie hierzu die Objektdateien des Programms mit COMMODE.OBJ. In der resultierenden ausführbaren Datei Aufruf von **_flushall** den Inhalt aller Puffer auf Datenträger zu schreiben. Nur **_flushall** und **Fflush** werden von "commode.obj" beeinflusst.
+Puffer werden normalerweise vom Betriebssystem verwaltet, das den optimalen Zeitpunkt bestimmt, zu dem Daten automatisch auf den Datenträger geschrieben werden: wenn ein Puffer voll ist, wenn ein Stream geschlossen wird oder wenn ein Programm normal beendet wird, ohne den Stream zu schließen. Mit der Datenträgercommitfunktion der Laufzeitbibliothek können Sie sicherstellen, dass wichtige Daten direkt auf den Datenträger anstatt in die Betriebssystempuffer geschrieben werden. Sie können diese Funktion aktivieren, ohne ein vorhandenes Programm umzuschreiben. Verknüpfen Sie hierzu die Objektdateien des Programms mit COMMODE.OBJ. In der resultierenden ausführbaren Datei schreiben Aufrufe von **_flushall** den Inhalt aller Puffer auf den Datenträger. COMMODE. obj wirkt sich nur auf **_flushall** und **fflush** aus.
 
 Weitere Informationen zum Steuern der Datenträgercommitfunktion finden Sie unter [Stream-E/A](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) und [_fdopen](fdopen-wfdopen.md).
 
@@ -78,44 +78,50 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ```C
 // crt_fflush.c
+// Compile with: cl /W4 crt_fflush.c
+// This sample gets a number from the user, then writes it to a file.
+// It ensures the write isn't lost on crash by calling fflush.
 #include <stdio.h>
-#include <conio.h>
 
-int main( void )
+int * crash_the_program = 0;
+
+int main(void)
 {
-   int integer;
-   char string[81];
+    FILE * my_file;
+    errno_t err = fopen_s(&my_file, "myfile.txt", "w");
+    if (my_file && !err)
+    {
+        printf("Write a number: ");
 
-   // Read each word as a string.
-   printf( "Enter a sentence of four words with scanf: " );
-   for( integer = 0; integer < 4; integer++ )
-   {
-      scanf_s( "%s", string, sizeof(string) );
-      printf( "%s\n", string );
-   }
+        int my_number = 0;
+        scanf_s("%d", &my_number);
 
-   // You must flush the input buffer before using gets.
-   // fflush on input stream is an extension to the C standard
-   fflush( stdin );
-   printf( "Enter the same sentence with gets: " );
-   gets_s( string, sizeof(string) );
-   printf( "%s\n", string );
+        fprintf(my_file, "User selected %d\n", my_number);
+
+        // Write data to a file immediately instead of buffering.
+        fflush(my_file);
+    
+        if (my_number == 5)
+        {
+            // Without using fflush, no data was written to the file 
+            // prior to the crash, so the data is lost.
+            *crash_the_program = 5;
+        }
+
+        // Normally, fflush is not needed as closing the file will write the buffer.
+        // Note that files are automatically closed and flushed during normal termination.
+        fclose(my_file);
+    }
+    return 0;
 }
 ```
 
 ```Input
-This is a test
-This is a test
+5
 ```
 
-```Output
-Enter a sentence of four words with scanf: This is a test
-This
-is
-a
-test
-Enter the same sentence with gets: This is a test
-This is a test
+```myfile.txt
+User selected 5
 ```
 
 ## <a name="see-also"></a>Siehe auch

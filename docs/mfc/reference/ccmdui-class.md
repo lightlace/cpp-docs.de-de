@@ -1,6 +1,6 @@
 ---
 title: CCmdUI-Klasse
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - CCmdUI
 - AFXWIN/CCmdUI
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: c1d44638779f9b5caf052106ac172110d309b69f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42aec2937cd81ebbb50482321b8deae001723d3a
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206384"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907826"
 ---
 # <a name="ccmdui-class"></a>CCmdUI-Klasse
 
-Wird verwendet, nur innerhalb einer `ON_UPDATE_COMMAND_UI` Ereignishandler in einer `CCmdTarget`-abgeleitete Klasse.
+Wird nur innerhalb eines `ON_UPDATE_COMMAND_UI` -Handlers in einer `CCmdTarget`von abgeleiteten Klasse verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,43 +49,43 @@ class CCmdUI
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CCmdUI::ContinueRouting](#continuerouting)|Teilt den Befehlsrouting Mechanismus weiterhin Weiterleitung der aktuellen Nachricht der Vererbungskette von Handlern.|
-|[CCmdUI::Enable](#enable)|Aktiviert oder deaktiviert das Benutzeroberflächen-Element für diesen Befehl.|
-|[CCmdUI::SetCheck](#setcheck)|Legt den Aktivierungszustand des Elements Benutzeroberfläche für diesen Befehl fest.|
-|[CCmdUI::SetRadio](#setradio)|Wie die `SetCheck` Memberfunktion kann jedoch Optionsfeldgruppen.|
-|[CCmdUI::SetText](#settext)|Legt den Text für das Element der Benutzeroberfläche für diesen Befehl.|
+|[CCmdUI::ContinueRouting](#continuerouting)|Weist den Befehls Routing Mechanismus an, das Routing der aktuellen Nachricht weiter nach unten in der Kette von Handlern durchzuführen.|
+|[CCmdUI::Enable](#enable)|Aktiviert oder deaktiviert das Benutzeroberflächen Element für diesen Befehl.|
+|[CCmdUI::SetCheck](#setcheck)|Legt den Prüf Zustand des Benutzeroberflächen Elements für diesen Befehl fest.|
+|[CCmdUI::SetRadio](#setradio)|Wie die `SetCheck` -Member-Funktion, aber für Radiogruppen.|
+|[CCmdUI::SetText](#settext)|Legt den Text für das Benutzeroberflächen Element für diesen Befehl fest.|
 
 ### <a name="public-data-members"></a>Öffentliche Datenmember
 
 |Name|Beschreibung|
 |----------|-----------------|
-|[CCmdUI::m_nID](#m_nid)|Die ID des Benutzeroberflächen-Objekts.|
-|[CCmdUI::m_nIndex](#m_nindex)|Der Index des Benutzeroberflächen-Objekts.|
-|[CCmdUI::m_pMenu](#m_pmenu)|Verweist auf das Menü, dargestellt durch die `CCmdUI` Objekt.|
-|[CCmdUI::m_pOther](#m_pother)|Verweist auf das Fensterobjekt, das die Benachrichtigung gesendet.|
-|[CCmdUI::m_pSubMenu](#m_psubmenu)|Verweist auf die enthaltenen Untermenü dargestellt durch die `CCmdUI` Objekt.|
+|[CCmdUI::m_nID](#m_nid)|Die ID des Benutzeroberflächen Objekts.|
+|[CCmdUI::m_nIndex](#m_nindex)|Der Index des Benutzeroberflächen Objekts.|
+|[CCmdUI::m_pMenu](#m_pmenu)|Verweist auf das Menü, das durch `CCmdUI` das-Objekt dargestellt wird.|
+|[CCmdUI::m_pOther](#m_pother)|Verweist auf das Fenster Objekt, das die Benachrichtigung gesendet hat.|
+|[CCmdUI::m_pSubMenu](#m_psubmenu)|Verweist auf das enthaltene Untermenü, das durch das `CCmdUI` -Objekt dargestellt wird.|
 
 ## <a name="remarks"></a>Hinweise
 
-`CCmdUI` eine Basisklasse keinen.
+`CCmdUI`weist keine Basisklasse auf.
 
-Wenn ein Benutzer Ihrer Anwendung überträgt ein Menü, jede Menü Element muss wissen, ob es als aktiviert angezeigt werden sollen oder deaktiviert. Das Ziel eines Menübefehls stellt diese Informationen bereit, durch die Implementierung eines ON_UPDATE_COMMAND_UI-Handlers. Verwenden Sie für jeden Befehl Benutzeroberflächen-Objekte in Ihrer Anwendung die Fenster "Eigenschaften", um eine meldungszuordnung Eintrag und die Funktion der Prototyp für jeden Handler zu erstellen.
+Wenn ein Benutzer der Anwendung ein Menü abruft, muss jedes Menü Element wissen, ob es als aktiviert oder deaktiviert angezeigt werden soll. Das Ziel eines Menübefehls stellt diese Informationen bereit, indem ein ON_UPDATE_COMMAND_UI-Handler implementiert wird. Verwenden Sie für jeden der Befehls Benutzeroberflächen-Objekte in der Anwendung den [Klassen-Assistenten](mfc-class-wizard.md) oder das **Eigenschaften** Fenster (in **Klassenansicht**), um einen Nachrichten Zuordnungs Eintrag und einen Funktionsprototyp für jeden Handler zu erstellen.
 
-Wenn Sie im Menü heruntergeladen wird, das Framework sucht nach und ruft jede ON_UPDATE_COMMAND_UI-Handler ist, werden Aufrufe von jeder Handler `CCmdUI` Memberfunktionen wie `Enable` und `Check`, und das Framework zeigt dann entsprechend jedes Menüelement.
+Wenn das Menü heruntergeladen wird, sucht das Framework nach einem ON_UPDATE_COMMAND_UI-Handler und ruft jeden- `CCmdUI` Handler auf, wobei `Enable` jeder `Check`Handler Member-Funktionen wie und aufruft und das Framework dann die einzelnen Menü Elemente entsprechend anzeigt.
 
-Ein Menüelement kann durch eine Steuerleiste Schaltfläche oder ein anderes Objekt der Befehl-Benutzeroberfläche ersetzt werden, ohne den Code innerhalb der `ON_UPDATE_COMMAND_UI` Handler.
+Ein Menü Element kann durch eine Steuer leisten Schaltfläche oder ein anderes Befehls Benutzeroberflächen Objekt ersetzt werden, ohne den Code innerhalb `ON_UPDATE_COMMAND_UI` des Handlers zu ändern.
 
-In der folgende Tabelle werden die Auswirkungen zusammengefasst `CCmdUI`der Memberfunktionen, die auf verschiedene Befehls-UI-Elemente haben.
+In der folgenden Tabelle sind die `CCmdUI`Auswirkungen der Member-Funktionen auf verschiedene Befehls Benutzeroberflächen Elemente zusammengefasst.
 
-|Benutzeroberflächen-Element|Aktivieren|SetCheck|SetRadio|SetText|
+|Benutzeroberflächen Element|Aktivieren|Setcheck|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
-|Menüelement|Aktiviert oder deaktiviert|Aktiviert oder deaktiviert|Überprüft, die mit einem Punkt|Legt Element text|
-|Symbolleisten-Schaltfläche|Aktiviert oder deaktiviert|Auswählt, hebt die Auswahl, oder unbestimmten Zustand|Identisch mit `SetCheck`|(Nicht zutreffend)|
-|Statusleiste|Wird der Text sichtbar oder unsichtbar|Legt Popout- oder ein normaler Rahmen|Identisch mit `SetCheck`|Legt Bereich – text|
-|Normale Schaltfläche in `CDialogBar`|Aktiviert oder deaktiviert|Aktiviert oder deaktiviert das Kontrollkästchen|Identisch mit `SetCheck`|Legt Schaltfläche text|
-|Im normalen-Steuerelement `CDialogBar`|Aktiviert oder deaktiviert|(Nicht zutreffend)|(Nicht zutreffend)|Legt Fenstertext|
+|Menüelement|Aktiviert oder deaktiviert|Prüft oder nicht Überprüfungen|Überprüfungen mit einem Punkt|Legt Element Text fest.|
+|ToolBar-Schaltfläche|Aktiviert oder deaktiviert|SELECT, unselect oder unbestimmt|Identisch mit `SetCheck`|(Nicht zutreffend)|
+|Status Leistenbereich|Macht Text sichtbar oder unsichtbar|Legt ein Popup-oder einen normalen Rahmen fest.|Identisch mit `SetCheck`|Bereichs Text festlegen|
+|Normale Schaltfläche in`CDialogBar`|Aktiviert oder deaktiviert|Kontrollkästchen zum Überprüfen oder deaktivieren|Identisch mit `SetCheck`|Schaltflächen Text festlegen|
+|Normales Steuerelement in`CDialogBar`|Aktiviert oder deaktiviert|(Nicht zutreffend)|(Nicht zutreffend)|Legt Fenster Text fest.|
 
-Weitere Informationen zur Verwendung dieser Klasse finden Sie unter [wie Aktualisieren von Benutzeroberflächenobjekten](../../mfc/how-to-update-user-interface-objects.md).
+Weitere Informationen zur Verwendung dieser Klasse finden [Sie unter Aktualisieren von Benutzeroberflächen Objekten](../../mfc/how-to-update-user-interface-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
@@ -95,9 +95,9 @@ Weitere Informationen zur Verwendung dieser Klasse finden Sie unter [wie Aktuali
 
 **Header:** afxwin.h
 
-##  <a name="continuerouting"></a>  CCmdUI::ContinueRouting
+##  <a name="continuerouting"></a>CCmdUI:: continuerouting
 
-Rufen Sie diese Memberfunktion zum Befehlsrouting Mechanismus zum Fortsetzen die aktuelle Nachricht der Vererbungskette von Handlern routing zu informieren.
+Mit dieser Member-Funktion können Sie den Befehls Routing Mechanismus anweisen, das Routing der aktuellen Nachricht weiter unten in der Kette von Handlern durchzuführen.
 
 ```
 void ContinueRouting();
@@ -105,11 +105,11 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>Hinweise
 
-Dies ist eine erweiterte Memberfunktion, die in Verbindung mit einer ON_COMMAND_EX-Handler verwendet werden soll, die FALSE zurückgibt. Weitere Informationen finden Sie unter [technischen Hinweis 6](../../mfc/tn006-message-maps.md).
+Dabei handelt es sich um eine erweiterte Member-Funktion, die in Verbindung mit einem ON_COMMAND_EX-Handler verwendet werden sollte, der false zurückgibt. Weitere Informationen finden Sie unter [Technical Note 6](../../mfc/tn006-message-maps.md).
 
-##  <a name="enable"></a>  CCmdUI:: Enable auf
+##  <a name="enable"></a>CCmdUI:: enable
 
-Rufen Sie diese Memberfunktion zum Aktivieren oder deaktivieren das Element der Benutzeroberfläche für diesen Befehl.
+Mit dieser Member-Funktion können Sie das Benutzeroberflächen Element für diesen Befehl aktivieren bzw. deaktivieren.
 
 ```
 virtual void Enable(BOOL bOn = TRUE);
@@ -118,7 +118,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bOn*<br/>
-TRUE, wenn das Element "false" zu aktivieren, um ihn zu deaktivieren.
+TRUE, um das Element zu aktivieren, false, um es zu deaktivieren.
 
 ### <a name="example"></a>Beispiel
 
@@ -126,25 +126,25 @@ TRUE, wenn das Element "false" zu aktivieren, um ihn zu deaktivieren.
 
 [!code-cpp[NVC_MFCDocView#47](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]
 
-##  <a name="m_nid"></a>  CCmdUI::m_nID
+##  <a name="m_nid"></a>CCmdUI:: m_nID
 
-Die ID des Menüelements, Symbolleisten-Schaltfläche oder ein anderes Benutzeroberfläche-Objekt, das dargestellt durch die `CCmdUI` Objekt.
+Die ID des Menü Elements, der Symbolleisten-Schaltfläche oder eines anderen Benutzeroberflächen Objekts, `CCmdUI` das durch das-Objekt dargestellt wird.
 
 ```
 UINT m_nID;
 ```
 
-##  <a name="m_nindex"></a>  CCmdUI::m_nIndex
+##  <a name="m_nindex"></a>CCmdUI:: m_nIndex
 
-Der Index des Menüelements, Symbolleisten-Schaltfläche oder ein anderes Benutzeroberfläche-Objekt, das dargestellt durch die `CCmdUI` Objekt.
+Der Index des Menü Elements, der Symbolleisten-Schaltfläche oder eines anderen Benutzeroberflächen Objekts, `CCmdUI` das durch das-Objekt dargestellt wird.
 
 ```
 UINT m_nIndex;
 ```
 
-##  <a name="m_pmenu"></a>  CCmdUI::m_pMenu
+##  <a name="m_pmenu"></a>CCmdUI:: m_pMenu
 
-Zeiger (der `CMenu` Typ), klicken Sie im Menü, dargestellt durch die `CCmdUI` Objekt.
+Zeiger (vom `CMenu` Typ) auf das Menü, das durch `CCmdUI` das-Objekt dargestellt wird.
 
 ```
 CMenu* m_pMenu;
@@ -152,11 +152,11 @@ CMenu* m_pMenu;
 
 ### <a name="remarks"></a>Hinweise
 
-NULL, wenn das Element nicht um ein Menü befindet.
+NULL, wenn es sich bei dem Element nicht um ein Menü handelt.
 
-##  <a name="m_psubmenu"></a>  CCmdUI::m_pSubMenu
+##  <a name="m_psubmenu"></a>CCmdUI:: m_pSubMenu
 
-Zeiger (der `CMenu` Typ), enthalten im Untermenü durch dargestellt die `CCmdUI` Objekt.
+Zeiger (vom `CMenu` Typ) auf das enthaltene Untermenü, das durch das `CCmdUI` -Objekt dargestellt wird.
 
 ```
 CMenu* m_pSubMenu;
@@ -164,11 +164,11 @@ CMenu* m_pSubMenu;
 
 ### <a name="remarks"></a>Hinweise
 
-NULL, wenn das Element nicht um ein Menü befindet. Wenn das Sub-Menü ein Popupfenster wird *M_nID* enthält die ID des ersten Elements im Popup-Menü. Weitere Informationen finden Sie unter [technischen Hinweis 21](../../mfc/tn021-command-and-message-routing.md).
+NULL, wenn es sich bei dem Element nicht um ein Menü handelt. Wenn das Untermenü ein Popup-Element ist, enthält *m_nID* die ID des ersten Elements im Popupmenü. Weitere Informationen finden Sie unter [Technical Note 21](../../mfc/tn021-command-and-message-routing.md).
 
-##  <a name="m_pother"></a>  CCmdUI::m_pOther
+##  <a name="m_pother"></a>CCmdUI:: m_pOther
 
-Zeiger (vom Typ `CWnd`) auf das Fensterobjekt, z. B. ein Tool oder der Statusleiste, die die Benachrichtigung gesendet.
+Zeiger (vom Typ `CWnd`) auf das Fenster Objekt, z. b. ein Tool oder eine Statusleiste, das die Benachrichtigung gesendet hat.
 
 ```
 CWnd* m_pOther;
@@ -176,11 +176,11 @@ CWnd* m_pOther;
 
 ### <a name="remarks"></a>Hinweise
 
-NULL, wenn das Element ein Menü oder einer nicht - `CWnd` Objekt.
+NULL, wenn das Element ein Menü oder ein nicht- `CWnd` -Objekt ist.
 
-##  <a name="setcheck"></a>  CCmdUI::SetCheck
+##  <a name="setcheck"></a>CCmdUI:: setcheck
 
-Rufen Sie diese Memberfunktion, um das Element der Benutzeroberfläche für diesen Befehl auf den entsprechenden Aktivierungszustand festgelegt.
+Mit dieser Member-Funktion wird das Benutzeroberflächen Element für diesen Befehl auf den entsprechenden Prüf Zustand festgelegt.
 
 ```
 virtual void SetCheck(int nCheck = 1);
@@ -189,15 +189,15 @@ virtual void SetCheck(int nCheck = 1);
 ### <a name="parameters"></a>Parameter
 
 *nCheck*<br/>
-Gibt an, dessen Aktivierungszustand festgelegt. Wenn 0 (null) deaktiviert; Wenn 1, überprüft. und 2, legt fest, wenn unbestimmt.
+Gibt den festzulegenden Prüf Zustand an. Wenn 0, wird die Prüfung nicht durchgeführt. bei 1 wird überprüft. und bei 2 wird unbestimmt festgelegt.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion funktioniert für Menüelemente und Symbolleisten-Schaltflächen. Unbestimmte Zustand gilt nur für Schaltflächen der Symbolleiste.
+Diese Member-Funktion funktioniert für Menü Elemente und Symbolleisten Schaltflächen. Der Status "unbestimmt" gilt nur für Symbolleisten Schaltflächen.
 
-##  <a name="setradio"></a>  CCmdUI::SetRadio
+##  <a name="setradio"></a>CCmdUI:: abtradio
 
-Rufen Sie diese Memberfunktion, um das Element der Benutzeroberfläche für diesen Befehl auf den entsprechenden Aktivierungszustand festgelegt.
+Mit dieser Member-Funktion wird das Benutzeroberflächen Element für diesen Befehl auf den entsprechenden Prüf Zustand festgelegt.
 
 ```
 virtual void SetRadio(BOOL bOn = TRUE);
@@ -206,15 +206,15 @@ virtual void SetRadio(BOOL bOn = TRUE);
 ### <a name="parameters"></a>Parameter
 
 *bOn*<br/>
-True, um das Element zu aktivieren. andernfalls "false".
+TRUE, wenn das Element aktiviert werden soll. andernfalls false.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion funktioniert wie `SetCheck`, außer dass sie Elementen der Benutzeroberfläche, die Teil einer Optionsfeldgruppe verwendet. Deaktivieren die anderen Elemente in der Gruppe erfolgt nicht automatisch, es sei denn, die Elemente selbst die Optionsfeldgruppe Verhalten beibehalten.
+Diese Member-Funktion verhält `SetCheck`sich wie, mit der Ausnahme, dass Sie auf Benutzeroberflächen Elementen angewendet wird, die als Teil einer Radiogruppe fungieren. Das Deaktivieren der anderen Elemente in der Gruppe erfolgt nicht automatisch, es sei denn, die Elemente selbst behalten das Verhalten der funkgruppe bei.
 
-##  <a name="settext"></a>  CCmdUI::SetText
+##  <a name="settext"></a>CCmdUI:: SetText
 
-Rufen Sie diese Memberfunktion um den Text des Benutzeroberflächen-Elements für diesen Befehl festzulegen.
+Mit dieser Member-Funktion wird der Text des Benutzeroberflächen Elements für diesen Befehl festgelegt.
 
 ```
 virtual void SetText(LPCTSTR lpszText);
@@ -223,7 +223,7 @@ virtual void SetText(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parameter
 
 *lpszText*<br/>
-Ein Zeiger auf eine Textzeichenfolge.
+Ein Zeiger auf eine Text Zeichenfolge.
 
 ### <a name="example"></a>Beispiel
 
@@ -231,6 +231,6 @@ Ein Zeiger auf eine Textzeichenfolge.
 
 ## <a name="see-also"></a>Siehe auch
 
-[MDI MFC-Beispiel](../../overview/visual-cpp-samples.md)<br/>
+[MFC-Beispiel-MDI](../../overview/visual-cpp-samples.md)<br/>
 [Hierarchiediagramm](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget-Klasse](../../mfc/reference/ccmdtarget-class.md)

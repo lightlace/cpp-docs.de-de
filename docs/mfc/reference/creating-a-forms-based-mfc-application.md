@@ -1,18 +1,18 @@
 ---
 title: Erstellen einer formularbasierten MFC-Anwendung
-ms.date: 08/19/2019
+ms.date: 09/09/2019
 f1_keywords:
 - vc.appwiz.mfcforms.project
 helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-ms.openlocfilehash: 95c7f6061933245b2eb2b796e7a678e1e6b010a6
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 1dbbc5c29f85ced846cb3e07a02a5d6a55c94b20
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108463"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908058"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Erstellen einer formularbasierten MFC-Anwendung
 
@@ -30,7 +30,7 @@ Jede auf Dialogfeldern basierende Anwendung ist per Definition auch formularbasi
 
 Die Basisklasse für Formular basierte Anwendungen ist [CFormView](cformview-class.md). Wenn die Anwendung Datenbankunterstützung bietet, können Sie auch eine beliebige, von `CFormView` abgeleitete Klasse auswählen. Ein Formular ist ein beliebiges Fenster, das von `CFormView` oder von einer Klasse abgeleitet ist, die von `CFormView` erbt.
 
-Auch wenn Sie eine Basisklasse, z. b. [CView](cview-class.md), verwenden, können Sie Ihre Anwendungen zu einem späteren Zeitpunkt erstellen, indem Sie eine `CFormView` von abgeleitete [MFC-Klasse hinzufügen](adding-an-mfc-class.md) und im [MFC-Klassen-Assistenten](document-template-strings-mfc-add-class-wizard.md)das Kontrollkästchen **DocTemplate-Ressourcen generieren** aktivieren.
+Auch wenn Sie eine Basisklasse, z. b. [CView](cview-class.md), verwenden, können Sie Ihre Anwendungen zu einem späteren Zeitpunkt erstellen, indem Sie eine `CFormView`von abgeleitete [MFC-Klasse hinzufügen](adding-an-mfc-class.md) .
 
 Nachdem Sie die Arbeit mit dem Assistenten beendet haben, wird das Projekt geöffnet. Bei Auswahl von `CFormView` (oder einer Klasse, die von `CFormView` erbt) bzw. beim Erstellen einer auf Dialogfeldern basierenden Anwendung wird zusätzlich der Dialog-Editor in Visual C++ geöffnet. Zu diesem Zeitpunkt können Sie Ihr erstes Formular entwerfen.
 
