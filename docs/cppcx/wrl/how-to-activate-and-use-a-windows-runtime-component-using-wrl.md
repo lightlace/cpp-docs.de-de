@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Aktivieren und Verwenden einer Windows-Runtime Komponent
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 9e15886e9045f15adb929678ba45023ce80fb084
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 59a031968933ab151dc97a8089aff629026f5ea5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498394"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926065"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Vorgehensweise: Aktivieren und Verwenden einer Windows-Runtime Komponente mithilfe von WRL
 
@@ -42,13 +42,13 @@ In den folgenden Schritten wird `Windows::Foundation::IUriRuntimeClass` die-Schn
 
    In der zweiten Anweisung gibt der [roinitializewrapper:: HRESULT](roinitializewrapper-class.md#hresult) -Operator den `HRESULT` `Windows::Foundation::Initialize`aus dem-Befehl zurück.
 
-3. Erstellen Sie eine aktivierungsfactory `ABI::Windows::Foundation::IUriRuntimeClassFactory` für die-Schnittstelle.
+3. Erstellen Sie eine *aktivierungsfactory* für die `ABI::Windows::Foundation::IUriRuntimeClassFactory` -Schnittstelle.
 
    [!code-cpp[wrl-consume-component#4](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_3.cpp)]
 
    Der Windows-Runtime verwendet voll qualifizierte Namen, um Typen zu identifizieren. Der `RuntimeClass_Windows_Foundation_Uri` -Parameter ist eine Zeichenfolge, die vom Windows-Runtime bereitgestellt wird und den erforderlichen Lauf Zeit Klassennamen enthält.
 
-4. Initialisieren Sie eine [Microsoft:: WRL:: Wrappers:: hstring](hstring-class.md) -Variable, die `"http://www.microsoft.com"`den URI darstellt.
+4. Initialisieren Sie eine [Microsoft:: WRL:: Wrappers:: hstring](hstring-class.md) -Variable, die `"https://www.microsoft.com"`den URI darstellt.
 
    [!code-cpp[wrl-consume-component#6](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]
 

@@ -1,6 +1,6 @@
 ---
 title: raise
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - raise
 apilocation:
@@ -23,19 +23,19 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: 68d1cc653b955e607648e4d30562d2b77e3520e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1354c76207d6cd59249f6c06df88ae23fe69b1e0
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358052"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927421"
 ---
 # <a name="raise"></a>raise
 
 Sendet ein Signal an das ausführende Programm.
 
 > [!NOTE]
-> Verwenden Sie diese Methode nicht, eine Microsoft Store-app, mit Ausnahme von Herunterfahren in Test- oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-app sind nicht zulässig, gemäß der [Microsoft Store Richtlinien](/legal/windows/agreements/store-policies). Weitere Informationen finden Sie unter [UWP-app-Lebenszyklus](/windows/uwp/launch-resume/app-lifecycle).
+> Verwenden Sie diese Methode nicht zum Herunterfahren einer Microsoft Store-App, mit Ausnahme von Test-oder Debugszenarien. Programmgesteuerte oder UI-Methoden zum Schließen einer Store-App sind gemäß den [Microsoft Store Richtlinien](/legal/windows/agreements/store-policies)nicht zulässig. Weitere Informationen finden Sie unter [UWP-App-Lebenszyklus](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ Bei Erfolg gibt **raise** 0 zurück . Andernfalls gibt es einen Wert ungleich 0 
 
 Die **raise**-Funktion sendet *sig* an das ausführende Programm. Wenn ein vorheriger Aufruf von **signal** eine Signalverarbeitungsfunktion für *sig* installiert hat, führt **raise** diese Funktion aus. Wenn keine Handlerfunktion installiert wurde, wird die dem Signalwert *sig* zugeordnete Standardaktion wie folgt ausgeführt.
 
-|Signal|Bedeutung|Standard|
+|Signal|Bedeutung|Default|
 |------------|-------------|-------------|
 |**SIGABRT**|Nicht ordnungsgemäße Beendigung|Beendet das aufrufende Programm mit Exitcode 3|
 |**SIGFPE**|Gleitkommafehler|Beendet das aufrufende Programm|
@@ -67,7 +67,7 @@ Die **raise**-Funktion sendet *sig* an das ausführende Programm. Wenn ein vorhe
 |**SIGSEGV**|Ungültiger Speicherzugriff|Beendet das aufrufende Programm|
 |**SIGTERM**|An das Programm gesendete Beendigungsanforderung|Ignoriert das Signal|
 
-Wenn das Argument kein gültiges Signal gemäß den oberen Angaben ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Die Funktion legt fest, wenn nicht behandelt, **Errno** zu **EINVAL** und gibt einen Wert ungleich NULL zurück.
+Wenn das Argument kein gültiges Signal gemäß den oberen Angaben ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md) beschrieben. Wenn keine Behandlung erfolgt, legt die Funktion **errno** auf **EINVAL** fest und gibt einen Wert ungleich 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,26 +1,26 @@
 ---
 title: Hinzufügen eines MFC-Meldungshandlers
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.codewiz.adding.mfc.msghandler
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: 90d7f843c91956b679fe794c68adab12d85122b7
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: cf46c4f388c4607dbb8fb0e7f439603e5964ea03
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741747"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907662"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Hinzufügen eines MFC-Meldungshandlers
 
-Sie können [verwenden Sie das Fenster "Eigenschaften", um einen Meldungshandler hinzufügen](../../mfc/reference/mapping-messages-to-functions.md) (eine Memberfunktion, die Windows-Meldungen behandelt) zu einer Klasse und Zuordnung Windows von Nachrichten an den Meldungshandler. Sie können auch hinzufügen [einen Ereignishandler für beliebige Dialogfenster-Steuerelemente](../../windows/adding-event-handlers-for-dialog-box-controls.md).
+Mit dem Klassen- [Assistenten](mfc-class-wizard.md) oder dem **Eigenschaften** Fenster in der **Klassen Ansicht** können Sie einer Klasse einen Meldungs Handler (eine Member-Funktion, die Windows-Meldungen verarbeitet) hinzufügen und Windows-Meldungen dem Nachrichten Handler zuordnen. Sie können auch [einen Ereignishandler für ein beliebiges Dialogfeld-Steuer](../../windows/adding-event-handlers-for-dialog-box-controls.md)Element hinzufügen. 
 
-Verwenden Sie das Fenster "Eigenschaften", um Meldung und Ereignisbehandlung Funktionen zu definieren, können Sie automatisch die nachrichtenverteilung Tabelle (oder eine meldungszuordnung) aktualisieren und der Headerdatei.
+Wenn Sie den **Klassen-Assistenten** oder das **Eigenschaften** Fenster (in **Klassenansicht**) zum Definieren von Funktionen zum Verarbeiten von Nachrichten und Ereignissen verwenden, können Sie die Nachrichten-Dispatch-Tabelle (oder Meldungs Zuordnung) und die Klassen Header Datei automatisch aktualisieren.
 
 > [!NOTE]
->  Sie können eine ATL-Klasse, die im Eigenschaftenfenster einen Meldungshandler hinzufügen; Einige Ergebnisse können jedoch variieren. Weitere Informationen finden Sie im ATL-Thema [Hinzufügen eines ATL-Meldungshandlers](../../atl/adding-an-atl-message-handler.md).
+>  Mit dem Klassen-Assistenten können Sie einer ATL-Klasse einen Meldungs Handler hinzufügen. einige Ergebnisse können jedoch variieren. Weitere Informationen finden Sie im ATL-Thema [Hinzufügen eines ATL-Nachrichten Handlers](../../atl/adding-an-atl-message-handler.md).
 
 ## <a name="see-also"></a>Siehe auch
 

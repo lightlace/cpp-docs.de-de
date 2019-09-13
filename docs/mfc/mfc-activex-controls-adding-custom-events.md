@@ -1,5 +1,5 @@
 ---
-title: 'MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Ereignissen'
+title: 'MFC-ActiveX-Steuerelemente: Hinzufügen benutzerdefinierter Ereignisse'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events [MFC]
@@ -15,121 +15,119 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-ms.openlocfilehash: 48c5ddbc8a3bcf6f74c251820e83cdebcef05bc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d22eb6016635c509d6b8bb2068f00125d0227ca2
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400733"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907312"
 ---
-# <a name="mfc-activex-controls-adding-custom-events"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Ereignissen
+# <a name="mfc-activex-controls-adding-custom-events"></a>MFC-ActiveX-Steuerelemente: Hinzufügen benutzerdefinierter Ereignisse
 
-Benutzerdefinierte Ereignisse unterscheiden sich von vordefinierten Ereignissen, da sie nicht automatisch von-Klasse ausgelöst wurden `COleControl`. Ein benutzerdefiniertes Ereignis erkennt, eine bestimmte Aktion, der vom Entwickler Steuerelements als Ereignis bestimmt wird. Der Ereignis-Zuordnungseinträge für benutzerdefinierte Ereignisse werden durch das EVENT_CUSTOM-Makro dargestellt. Im folgende Abschnitt implementiert ein benutzerdefiniertes Ereignis für ein ActiveX-Steuerelement, das mit dem ActiveX-Steuerelement-Assistenten erstellt wurde.
+Benutzerdefinierte Ereignisse unterscheiden sich von Aktien Ereignissen darin, dass Sie nicht automatisch `COleControl`von der-Klasse ausgelöst werden. Ein benutzerdefiniertes Ereignis erkennt eine bestimmte Aktion, die vom Steuerelement Entwickler als Ereignis festgelegt wird. Die Ereignis Zuordnungs Einträge für benutzerdefinierte Ereignisse werden durch das EVENT_CUSTOM-Makro dargestellt. Der folgende Abschnitt implementiert ein benutzerdefiniertes Ereignis für ein ActiveX-Steuerelement Projekt, das mit dem ActiveX-Steuerelement-Assistenten erstellt wurde.
 
-##  <a name="_core_adding_a_custom_event_with_classwizard"></a> Hinzufügen eines benutzerdefinierten Ereignisses mit der Ereignis-Assistent zum Hinzufügen von
+##  <a name="_core_adding_a_custom_event_with_classwizard"></a>Hinzufügen eines benutzerdefinierten Ereignisses mit dem Assistenten zum Hinzufügen von Ereignissen
 
-Das folgende Verfahren fügt ein bestimmtes benutzerdefiniertes Ereignis ClickIn hinzu. Sie können dieses Verfahren verwenden, andere benutzerdefinierte Ereignisse hinzufügen. Ersetzen Sie den Namen Ihres benutzerdefinierten Ereignis und seine Parameter für den Namen der ClickIn-Ereignis und Parameter.
+Im folgenden Verfahren wird ein bestimmtes benutzerdefiniertes Ereignis, ClickIn, hinzugefügt. Mit diesem Verfahren können Sie weitere benutzerdefinierte Ereignisse hinzufügen. Ersetzen Sie den benutzerdefinierten Ereignis Namen und die zugehörigen Parameter für den Namen und die Parameter des ClickIn-Ereignisses.
 
-#### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>Das benutzerdefinierte ClickIn-Ereignis mithilfe des Assistenten zum Hinzufügen von Ereignis hinzufügen
+#### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>So fügen Sie das benutzerdefinierte ClickIn-Ereignis mithilfe des Assistenten zum Hinzufügen von Ereignissen
 
 1. Laden Sie das Steuerelementprojekt.
 
-1. In der Klassenansicht mit der rechten Maustaste der ActiveX-Steuerelementklasse, um das Kontextmenü zu öffnen.
+1. Klicken Sie in **Klassenansicht**mit der rechten Maustaste auf Ihre ActiveX-Steuerelement Klasse, um das Kontextmenü zu öffnen.
 
-1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Ereignis hinzufügen**.
+1. Klicken Sie im Kontextmenü auf **Hinzufügen** , und klicken Sie dann auf **Ereignis hinzufügen**.
 
-   Daraufhin den Assistenten zum Hinzufügen eines Ereignisses.
+   Daraufhin wird der Assistent zum Hinzufügen von Ereignissen geöffnet.
 
-1. In der **Ereignisnamen** , zunächst wählen Sie ein vorhandenes Ereignis, und klicken Sie dann auf die **benutzerdefinierte** Radio Schaltfläche, und geben Sie *ClickIn*.
+1. Wählen Sie im Feld **Ereignis Name** zunächst ein vorhandenes Ereignis aus, klicken Sie dann auf das Optionsfeld **Benutzer** definiert, und geben Sie dann *ClickIn*ein.
 
-1. In der **interner Name** geben den Namen des Ereignisses ausgelöst-Funktion. In diesem Beispiel verwenden Sie den Standardwert, der durch den Assistenten zum Hinzufügen eines Ereignisses angegeben (`FireClickIn`).
+1. Geben Sie im Feld **interner Name** den Namen der auslösenden Funktion des Ereignisses ein. Verwenden Sie für dieses Beispiel den Standardwert, der vom Assistenten zum Hinzufügen`FireClickIn`von Ereignissen () bereitgestellt wird.
 
-1. Fügen Sie einen Parameter namens *xCoord* (Typ *OLE_XPOS_PIXELS*) unter Verwendung der **Parametername** und **Parametertyp** Steuerelemente.
+1. Fügen Sie einen Parameter mit dem Namen *xcoord* (Type *OLE_XPOS_PIXELS*) hinzu, indem Sie die **Parameter Name** und **Parametertyp** verwenden.
 
-1. Hinzufügen einen zweiten Parameter mit *dem Namen yCoord* (Typ *OLE_YPOS_PIXELS*).
+1. Fügen Sie einen zweiten Parameter namens *yCoord* (Type *OLE_YPOS_PIXELS*) hinzu.
 
-1. Klicken Sie auf **Fertig stellen** das Ereignis erstellt.
+1. Klicken Sie auf **Fertig** stellen, um das Ereignis zu erstellen.
 
-##  <a name="_core_classwizard_changes_for_custom_events"></a> Terminänderungen-Assistenten für benutzerdefinierte Ereignisse hinzufügen
+##  <a name="_core_classwizard_changes_for_custom_events"></a>Hinzufügen von Ereignis-Assistenten Änderungen für benutzerdefinierte Ereignisse
 
-Wenn Sie ein benutzerdefiniertes Ereignis hinzufügen, ändert den Assistenten zum Hinzufügen eines Ereignisses die Control-Klasse. H. CPP, und. IDL-Dateien. Die folgenden Codebeispiele gelten für das ClickIn-Ereignis zur Verfügung.
+Wenn Sie ein benutzerdefiniertes Ereignis hinzufügen, nimmt der Assistent zum Hinzufügen von Ereignissen Änderungen an der Steuerelement Klasse vor H,. Cpp und. IDL-Dateien. Die folgenden Codebeispiele sind spezifisch für das ClickIn-Ereignis.
 
-Die folgenden Zeilen werden hinzugefügt, auf den Header (. H)-Datei der Steuerelementklasse:
+Die folgenden Zeilen werden dem-Header hinzugefügt (. H) der Steuerelement Klasse:
 
 [!code-cpp[NVC_MFC_AxUI#7](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_1.h)]
 
-Dieser Code deklariert eine Inlinefunktion aufgerufen `FireClickIn` aufruft, [COleControl::](../mfc/reference/colecontrol-class.md#fireevent) mit den ClickIn-Ereignis und den Parametern Sie definiert mithilfe des Assistenten zum Hinzufügen eines Ereignisses.
+Dieser Code deklariert eine Inline Funktion mit `FireClickIn` dem Namen, die [COleControl:: FireEvent](../mfc/reference/colecontrol-class.md#fireevent) mit dem ClickIn-Ereignis und Parametern aufruft, die Sie mithilfe des Assistenten zum Hinzufügen von Ereignissen definiert haben.
 
-Darüber hinaus wird die folgende Zeile hinzugefügt, um die ereigniszuordnung für das Steuerelement befindet sich in der Implementierung (. Der Steuerelementklasse CPP)-Datei:
+Außerdem wird die folgende Zeile der Ereignis Zuordnung für das-Steuerelement hinzugefügt, das sich in der-Implementierung befindet (. Cpp-Datei Ihrer Steuerelement Klasse:
 
 [!code-cpp[NVC_MFC_AxUI#8](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_2.cpp)]
 
-Dieser Code ordnet das ClickIn Inlinefunktion `FireClickIn`, übergeben die Parameter, die Sie mit den Assistenten zum Hinzufügen von Ereignis definiert.
+Mit diesem Code wird das Ereignis mit der Funktion `FireClickIn`"Inline" versehen und die Parameter übergeben, die Sie mithilfe des Assistenten zum Hinzufügen von Ereignissen definiert haben.
 
-Schließlich wird die folgende Zeile des Steuerelements hinzugefügt. IDL-Datei:
+Zum Schluss wird die folgende Zeile zum-Steuerelement hinzugefügt. IDL-Datei:
 
 [!code-cpp[NVC_MFC_AxUI#9](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_3.idl)]
 
-Diese Zeile weist dem ClickIn-Ereignis eine bestimmte ID-Nummer, von der Position des Ereignisses in der Liste der Assistent zum Hinzufügen von Ereignis-Ereignis. Der Eintrag in der Ereignisliste können einen Container für das Ereignis zu erwarten. Beispielsweise kann es Handlercode bereitstellen, wird ausgeführt, wenn das Ereignis ausgelöst wird.
+Diese Zeile weist das ClickIn-Ereignis einer bestimmten ID-Nummer zu, die aus der Position des Ereignisses in der Ereignisliste Ereignis-Assistent hinzufügen entnommen wurde. Der Eintrag in der Ereignisliste ermöglicht einem Container das Vorhersagen des Ereignisses. Beispielsweise kann er Handlercode bereitstellen, der ausgeführt werden soll, wenn das Ereignis ausgelöst wird.
 
-##  <a name="_core_calling_fireclickin"></a> FireClickIn aufrufen
+##  <a name="_core_calling_fireclickin"></a>Aufrufen von "freclickin"
 
-Nun, da Sie das benutzerdefinierte ClickIn-Ereignis mithilfe des Assistenten zum Hinzufügen von Ereignis hinzugefügt haben, müssen Sie entscheiden, wenn dieses Ereignis wird ausgelöst. Rufen Sie dazu `FireClickIn` Wenn die entsprechende Aktion ausgeführt wird. Für den Rahmen dieser Erläuterung verwendet das Steuerelement die `InCircle` Funktion innerhalb eines WM_LBUTTONDOWN-meldungshandlers, klickt ein Benutzer in einer kreisförmigen oder elliptischen Bereich das ClickIn-Ereignis auszulösen. Das folgende Verfahren wird die WM_LBUTTONDOWN-Handler hinzugefügt.
+Nachdem Sie das benutzerdefinierte ClickIn-Ereignis mithilfe des Assistenten zum Hinzufügen von Ereignissen hinzugefügt haben, müssen Sie entscheiden, wann dieses Ereignis ausgelöst werden soll. Dies erfolgt durch Aufrufen `FireClickIn` von, wenn die entsprechende Aktion ausgeführt wird. Für diese Erörterung verwendet das-Steuer `InCircle` Element die- `WM_LBUTTONDOWN` Funktion innerhalb eines Meldungs Handlers, um das ClickIn-Ereignis auszulösen, wenn ein Benutzer in einem kreisförmigen oder elliptischen Bereich klickt. Mit dem folgenden Verfahren wird `WM_LBUTTONDOWN` der-Handler hinzugefügt.
 
-#### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>Zum Hinzufügen einer Nachricht mit dem Assistenten zum Hinzufügen von Ereignis
+#### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>So fügen Sie mit dem Assistenten zum Hinzufügen von Ereignissen einen Nachrichten Handler hinzu
 
 1. Laden Sie das Steuerelementprojekt.
 
-1. Wählen Sie in der Klassenansicht die ActiveX-Steuerelementklasse.
+1. Wählen Sie in **Klassenansicht**ihre ActiveX-Steuerelement Klasse aus.
 
-1. Klicken Sie im Eigenschaftenfenster auf die **Nachrichten** Schaltfläche.
+1. Im Fenster **Eigenschaften** sehen Sie eine Liste der Meldungen, die vom ActiveX-Steuerelement verarbeitet werden können. Jeder in Fett gezeigten Meldung wird bereits eine Handlerfunktion zugewiesen.
 
-   Das Fenster "Eigenschaften" zeigt eine Liste der Nachrichten, die von der ActiveX-Steuerelement behandelt werden können. Jede Nachricht, die bereits fett formatiert dargestellte hat es sich um eine Handlerfunktion zugewiesen.
+1. Wählen Sie die Nachricht aus, die Sie behandeln möchten. Wählen Sie `WM_LBUTTONDOWN`in diesem Beispiel aus.
 
-1. Wählen Sie im Eigenschaftenfenster die Nachricht, die Sie behandeln möchten. Wählen Sie in diesem Beispiel WM_LBUTTONDOWN.
+1. Wählen Sie  **\<** im Dropdown-Listenfeld auf der rechten Seite > OnLButtonDown hinzufügen aus.
 
-1. Wählen Sie aus dem Dropdown-Listenfeld auf der rechten Seite,  **\<hinzufügen > OnLButtonDown**.
+1. Doppelklicken Sie in **Klassenansicht** auf die neue Handlerfunktion, um zum Meldungshandlercode in der-Implementierung zu springen (. Cpp-Datei des ActiveX-Steuer Elements.
 
-1. Doppelklicken Sie auf die neue Handlerfunktion in der Klassenansicht springen zu den Meldungshandlercode in der Implementierung (. CPP)-Datei des ActiveX-Steuerelements.
-
-Der folgende code Beispiel ruft die `InCircle` Funktion jedes Mal, wenn die linke Maustaste in das Fenster des Steuerelements geklickt wird. In diesem Beispiel finden Sie in der Handlerfunktion WM_LBUTTONDOWN, `OnLButtonDown`in die [für CIRC](../overview/visual-cpp-samples.md) abstrakt.
+Im folgenden Codebeispiel wird die `InCircle` -Funktion jedes Mal aufgerufen, wenn im Steuerelement Fenster auf die linke Maustaste geklickt wird. Dieses Beispiel finden Sie in `WM_LBUTTONDOWN` der `OnLButtonDown`Handlerfunktion in der [CIRC-Beispiel](../overview/visual-cpp-samples.md) Abstraktion.
 
 [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]
 
 > [!NOTE]
->  Wenn den Assistenten zum Hinzufügen einer Event Message-Handler für die Aktionen der Maus erstellt wird, wird ein Aufruf an den gleichen Meldungshandler der Basisklasse automatisch hinzugefügt. Entfernen Sie diesen Aufruf nicht. Wenn das Steuerelement eine der vordefinierten Maus Nachrichten verwendet, müssen die Message-Handler in der Basisklasse aufgerufen werden, um sicherzustellen, dass die Erfassung von Mauseingaben ordnungsgemäß verarbeitet wird.
+>  Wenn der Assistent zum Hinzufügen von Ereignissen Meldungs Handler für Maustasten Aktionen erstellt, wird automatisch ein aufzurufende Nachrichten Handler der Basisklasse hinzugefügt. Entfernen Sie diesen-Befehl nicht. Wenn das Steuerelement eine der Stock Maus Nachrichten verwendet, müssen die Meldungs Handler in der Basisklasse aufgerufen werden, um sicherzustellen, dass die Maus Aufzeichnung ordnungsgemäß verarbeitet wird.
 
-Im folgenden Beispiel wird das Ereignis ausgelöst, nur bei der Klick innerhalb einer kreisförmigen oder elliptischen Region innerhalb des Steuerelements ausgelöst. Um dieses Verhalten zu erreichen, können Sie platzieren die `InCircle` Funktion des Steuerelements-Implementierung (. CPP)-Datei:
+Im folgenden Beispiel wird das-Ereignis nur ausgelöst, wenn der Klick innerhalb eines Zirkel förmigen oder elliptischen Bereichs innerhalb des-Steuer Elements auftritt. Um dieses Verhalten zu erreichen, können Sie die `InCircle` -Funktion in der Implementierung des-Steuer Elements platzieren (. Cpp-Datei:
 
 [!code-cpp[NVC_MFC_AxUI#11](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_5.cpp)]
 
-Sie müssen auch die folgende Deklaration hinzufügen der `InCircle` Funktion des Steuerelements-Header (. H)-Datei:
+Sie müssen auch die folgende Deklaration `InCircle` der-Funktion zum-Header Ihres Steuer Elements hinzufügen (. H):
 
 [!code-cpp[NVC_MFC_AxUI#12](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_6.h)]
 
-##  <a name="_core_custom_events_with_stock_names"></a> Benutzerdefinierter Ereignisse mit vordefinierten Namen
+##  <a name="_core_custom_events_with_stock_names"></a>Benutzerdefinierte Ereignisse mit Aktien Namen
 
-Sie können benutzerdefinierte Ereignisse mit dem gleichen Namen wie die vordefinierten Ereignissen erstellen, aber Sie nicht beide auf dasselbe Steuerelement implementieren können. Beispielsweise empfiehlt es sich zum Erstellen eines benutzerdefinierten Ereignisses aufgerufen, klicken Sie auf, die nicht ausgelöst wird, wenn das Ereignis auf normalerweise auslösen würde. Sie können das Click-Ereignis klicken Sie dann zu einem beliebigen Zeitpunkt auslösen, durch Aufrufen der Funktion auslösen.
+Sie können benutzerdefinierte Ereignisse mit dem gleichen Namen wie Aktien Ereignisse erstellen, aber Sie können nicht beide Elemente im selben Steuerelement implementieren. Beispielsweise können Sie ein benutzerdefiniertes Ereignis mit dem Namen Click erstellen, das nicht ausgelöst wird, wenn beim Klicken auf das Kurs Ereignis normalerweise ein Trigger ausgelöst wird. Sie können das Click-Ereignis dann jederzeit auslösen, indem Sie die auslösende Funktion aufrufen.
 
-Das folgende Verfahren fügt eine benutzerdefinierte auf Ereignis.
+Im folgenden Verfahren wird ein benutzerdefiniertes Click-Ereignis hinzugefügt.
 
-#### <a name="to-add-a-custom-event-that-uses-a-stock-event-name"></a>Zum Hinzufügen eines benutzerdefinierten Ereignisses verwendet, die den Namen einer vordefinierten Ereignisses
+#### <a name="to-add-a-custom-event-that-uses-a-stock-event-name"></a>So fügen Sie ein benutzerdefiniertes Ereignis hinzu, das einen Aktien Ereignis Namen verwendet
 
 1. Laden Sie das Steuerelementprojekt.
 
-1. In der Klassenansicht mit der rechten Maustaste der ActiveX-Steuerelementklasse, um das Kontextmenü zu öffnen.
+1. Klicken Sie in **Klassenansicht**mit der rechten Maustaste auf Ihre ActiveX-Steuerelement Klasse, um das Kontextmenü zu öffnen.
 
-1. Klicken Sie im Kontextmenü auf **hinzufügen** , und klicken Sie dann auf **Ereignis hinzufügen**.
+1. Klicken Sie im Kontextmenü auf **Hinzufügen** , und klicken Sie dann auf **Ereignis hinzufügen**.
 
-   Daraufhin den Assistenten zum Hinzufügen eines Ereignisses.
+   Daraufhin wird der Assistent zum Hinzufügen von Ereignissen geöffnet.
 
-1. In der **Ereignisnamen** Dropdown-Liste, wählen Sie einen Ereignis-Namen. Wählen Sie für dieses Beispiel **klicken Sie auf**.
+1. Wählen Sie in der Dropdown Liste **Ereignis Name** den Namen eines Aktien Ereignisses aus. Wählen Sie für dieses Beispiel die Option **Klicken**aus.
 
-1. Für **Ereignistyp**Option **benutzerdefinierte**.
+1. Wählen Sie für **Ereignistyp**die Option **Benutzer**definiert aus.
 
-1. Klicken Sie auf **Fertig stellen** das Ereignis erstellt.
+1. Klicken Sie auf **Fertig** stellen, um das Ereignis zu erstellen.
 
-1. Rufen Sie `FireClick` an geeigneten Stellen in Ihrem Code.
+1. An `FireClick` den entsprechenden Stellen im Code aufzurufen.
 
 ## <a name="see-also"></a>Siehe auch
 

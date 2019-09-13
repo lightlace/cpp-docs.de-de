@@ -1,6 +1,6 @@
 ---
 title: Überschreibbare Memberfunktionen
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - CDialog class [MFC], members
 - OnInitDialog function
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-ms.openlocfilehash: 26a1527dbdac4b2a9deb57fb13481f8d2f9cb5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f63dd6079b96181305f3207d4a1ef823df8d8ba4
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152025"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907686"
 ---
 # <a name="commonly-overridden-member-functions"></a>Überschreibbare Memberfunktionen
 
-Die folgende Tabelle enthält die wahrscheinlichste Memberfunktionen überschreiben Sie in Ihrem `CDialog`-abgeleitete Klasse.
+In der folgenden Tabelle sind die wahrscheinlichsten Element Funktionen aufgelistet, die `CDialog`in der von abgeleiteten Klasse überschrieben werden müssen.
 
-### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Überschreibbare Memberfunktionen der CDialog-Klasse
+### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Häufig überschriebene Member-Funktionen der CDialog-Klasse
 
-|Member-Funktion|Nachricht, die reagiert werden soll|Zweck der Außerkraftsetzung|
+|Member-Funktion|Meldung, auf die reagiert wird|Zweck der außer Kraft Setzung|
 |---------------------|----------------------------|-----------------------------|
-|`OnInitDialog`|**WM_INITDIALOG**|Initialisieren Sie das Dialogfeld-Steuerelemente.|
-|`OnOK`|**BN_CLICKED** für Schaltfläche **IDOK**|Reagieren Sie, wenn der Benutzer die Schaltfläche "OK" klickt.|
-|`OnCancel`|**BN_CLICKED** für Schaltfläche **IDCANCEL**|Reagieren Sie, wenn der Benutzer die Schaltfläche "Abbrechen" klickt.|
+|`OnInitDialog`|**WM_INITDIALOG**|Initialisieren Sie die Steuerelemente des Dialog Felds.|
+|`OnOK`|**BN_CLICKED** für Schaltfläche **IDOK**|Reagiert, wenn der Benutzer auf die Schaltfläche "OK" klickt.|
+|`OnCancel`|**BN_CLICKED** für Schaltfläche **IDCANCEL**|Reagiert, wenn der Benutzer auf die Schaltfläche Abbrechen klickt.|
 
-`OnInitDialog`, `OnOK`, und `OnCancel` sind virtuelle Funktionen. Um sie zu überschreiben, deklarieren Sie eine überschreibende-Funktion in der Klasse abgeleiteten Dialogfeld mit den [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).
+`OnInitDialog`, `OnOK` und`OnCancel` sind virtuelle Funktionen. Um diese zu überschreiben, deklarieren Sie mithilfe des [MFC-Klassen-Assistenten](reference/mfc-class-wizard.md)eine über schreibende Funktion in der abgeleiteten Dialog Klasse.
 
-`OnInitDialog` wird aufgerufen, kurz bevor das Dialogfeld angezeigt wird. Müssen Sie die Standardeinstellung Aufrufen `OnInitDialog` -Handler aus der Außerkraftsetzung, in der Regel als die erste Aktion in den Handler. In der Standardeinstellung `OnInitDialog` gibt **"true"** um anzugeben, dass der Fokus auf das erste Steuerelement im Dialogfeld festgelegt werden soll.
+`OnInitDialog`wird aufgerufen, kurz bevor das Dialogfeld angezeigt wird. Sie müssen den Standard `OnInitDialog` Handler von ihrer Überschreibungs – (in der Regel als erste Aktion im-Handler) aufzurufen. Standardmäßig `OnInitDialog` gibt **true** zurück, um anzugeben, dass der Fokus auf das erste Steuerelement im Dialogfeld festgelegt werden soll.
 
-`OnOK` wird für nicht modale, jedoch nicht modale Dialogfelder in der Regel überschrieben. Wenn Sie diese Handler für ein modales Dialogfeld überschreiben, rufen Sie die Basisklassenversion Ihre Überschreibung – um sicherzustellen, dass `EndDialog` aufgerufen wird, oder rufen Sie `EndDialog` selbst.
+`OnOK`wird in der Regel für nicht modale, aber keine modale Dialogfelder überschrieben. Wenn Sie diesen Handler für ein modales Dialogfeld außer Kraft setzen, müssen Sie die Basisklassen Version von ihrer Überschreibungs – aufrufen, um `EndDialog` sicherzustellen, dass `EndDialog` – aufgerufen wird, oder selbst aufrufen.
 
-`OnCancel` wird in der Regel für nicht modale Dialogfelder überschrieben werden.
+`OnCancel`wird in der Regel für nicht modlose Dialogfelder überschrieben.
 
-Weitere Informationen zu diesen Memberfunktionen finden Sie unter Klasse [CDialog](../mfc/reference/cdialog-class.md) in die *MFC-Referenz* und der Diskussion auf [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md).
+Weitere Informationen zu diesen Element Funktionen finden Sie unter Class [CDialog](../mfc/reference/cdialog-class.md) in der *MFC-Referenz* und in der Diskussion über den [Lebenszyklus eines Dialog](../mfc/life-cycle-of-a-dialog-box.md)Felds.
 
 ## <a name="see-also"></a>Siehe auch
 

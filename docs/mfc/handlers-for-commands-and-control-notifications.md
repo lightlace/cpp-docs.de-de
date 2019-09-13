@@ -10,30 +10,30 @@ helpviewer_keywords:
 - notifications [MFC], handlers for control
 - handlers [MFC], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
-ms.openlocfilehash: 6c92660c67fa91c27bb094111cebfef57904cdc7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43b6a517b680a5f6ff092337fbf3d90dd0115dd7
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358993"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907970"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Handler für Befehle und Steuerelementbenachrichtigungen
 
-Es gibt keine Standardhandler für Befehle oder Steuerelemente-benachrichtigungsmeldungen aus. Aus diesem Grund sind Sie nur gemäß der Konvention, bei der Benennung Ihrer Handler für diese Kategorien von Nachrichten gebunden. Wenn Sie die Benachrichtigung Befehl oder das Steuerelement einen Handler zuordnen, schlägt im Eigenschaftenfenster einen Namen basierend auf den Befehlscode-ID oder Steuerelement-Benachrichtigung. Sie können akzeptieren den vorgeschlagenen Namen, ändern oder Ersetzen Sie ihn.
+Es sind keine Standard Handler für Befehle oder Steuerelement Benachrichtigungs Meldungen vorhanden. Daher sind Sie nur nach Konvention gebunden, wenn Sie Ihre Handler für diese Nachrichten Kategorien benennen. Wenn Sie den Befehl oder die Steuerelement Benachrichtigung einem Handler zuordnen, schlägt der [Klassen-Assistent](reference/mfc-class-wizard.md) auf der Grundlage der Befehls-ID oder des Steuerelement Benachrichtigungs Codes einen Namen vor. Sie können den vorgeschlagenen Namen akzeptieren, ändern oder ersetzen.
 
-Konvention legt nahe, dass Sie Handler in beiden Kategorien für das Objekt für die Benutzeroberflächen-Namen, die sie darstellen. Daher könnte ein Handler für den Befehl "Ausschneiden", auf das Menü "Bearbeiten" genannt werden
+Die Konvention schlägt vor, dass Sie Handler in beiden Kategorien für das Benutzeroberflächen Objekt benennen, das Sie darstellen. Daher kann ein Handler für den Befehl "Ausschneiden" im Menü "Bearbeiten" benannt werden.
 
 [!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]
 
-Da der Befehl "Ausschneiden" so häufig in Anwendungen implementiert wird, wird das Framework verfügt über vordefinierte die Befehls-ID für den Befehl "Ausschneiden" als **ID_EDIT_CUT**. Eine Liste mit allen vordefinierten Befehls-IDs finden Sie in der Datei AFXRES. H. Weitere Informationen finden Sie unter [Standardbefehle](../mfc/standard-commands.md).
+Da der Befehl "Ausschneiden" in Anwendungen so häufig implementiert ist, definiert das Framework die Befehls-ID für den Befehl "Ausschneiden" als " **ID_EDIT_CUT**". Eine Liste aller vordefinierten Befehls-IDs finden Sie in der Datei "AFXRES". Micha. Weitere Informationen finden Sie unter [Standard Befehle](../mfc/standard-commands.md).
 
-Darüber hinaus empfiehlt Konvention einen Handler für die **BN_CLICKED** Benachrichtigung von der Schaltfläche "Meine Schaltfläche" den Namen
+Außerdem schlägt die Konvention vor, dass ein Handler für die **BN_CLICKED** -Benachrichtigungs Meldung von einer Schaltfläche mit der Bezeichnung "Meine Schaltfläche" den Namen hat.
 
 [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]
 
-Sie können mit diesem Befehl ID zuweisen **IDC_MY_BUTTON** , da es eine anwendungsspezifische Benutzeroberflächen-Objekt entspricht.
+Sie können diesen Befehl der ID **IDC_MY_BUTTON** zuweisen, da er einem anwendungsspezifischen Benutzerschnittstellen Objekt entspricht.
 
-Beide Kategorien von Nachrichten akzeptieren keine Argumente und gibt keinen Wert zurück.
+Beide Nachrichten Kategorien akzeptieren keine Argumente und geben keinen Wert zurück.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,51 +1,47 @@
 ---
 title: Definieren eines Meldungshandlers für eine reflektierte Meldung
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 f1_keywords:
 - vc.codewiz.defining.msg.msghandler
 helpviewer_keywords:
 - messages [MFC], reflected
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
-ms.openlocfilehash: 970dd7072cb8391d76d39536e442d5aab8e0f61d
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 1e38c63464cacf445688a1d431a65af21eac86f4
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741602"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907932"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definieren eines Meldungshandlers für eine reflektierte Meldung
 
-Nachdem Sie eine neue Klasse von MFC-Steuerelements erstellt haben, können Sie Meldungshandler dafür definieren. Reflektierte Meldung-Handler können eine Klasse, eine eigene Nachrichten zu verarbeiten, bevor die Nachricht vom übergeordneten Element empfangen wird. Sie können die MFC-Bibliothek verwenden [Funktion CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) Funktion zum Senden von Nachrichten über das Steuerelement für ein übergeordnetes Fenster.
+Nachdem Sie eine neue MFC-Steuerelement Klasse erstellt haben, können Sie Meldungs Handler dafür definieren. Reflektierte Meldungs Handler ermöglichen es ihrer Steuerelement Klasse, ihre eigenen Nachrichten zu verarbeiten, bevor die Nachricht vom übergeordneten Element empfangen wird. Sie können die MFC [CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) -Funktion verwenden, um Nachrichten von Ihrem Steuerelement an ein übergeordnetes Fenster zu senden.
 
-Erstellen Sie mit dieser Funktionalität, Sie z. B. könnten, ein Listenfeld, die gezeichnet wird, statt Sie zu der das übergeordnete Fenster, ist dies der Fall ist (Ownerdrawn). Weitere Informationen zu reflektierter Meldungen, finden Sie unter [wiedergegeben Nachrichten behandeln](../../mfc/handling-reflected-messages.md).
+Mit dieser Funktion können Sie z. b. ein Listenfeld erstellen, das sich selbst neu zeichnet, anstatt sich auf das übergeordnete Fenster zu verlassen (der Besitzer wird gezeichnet). Weitere Informationen zu reflektierten Meldungen finden Sie unter [Behandeln reflektierter Nachrichten](../../mfc/handling-reflected-messages.md).
 
-Zum Erstellen einer [ActiveX-Steuerelement](../../mfc/activex-controls-on-the-internet.md) mit derselben Funktionalität, müssen Sie ein Projekt für das ActiveX-Steuerelement erstellen.
+Zum Erstellen eines [ActiveX-Steuer](../../mfc/activex-controls-on-the-internet.md) Elements mit der gleichen Funktionalität müssen Sie ein Projekt für das ActiveX-Steuerelement erstellen.
 
 > [!NOTE]
->  Sie können keine reflektierte Meldung hinzufügen (OCM*Nachricht*) mithilfe des Eigenschaftenfensters für ein ActiveX-steuern, wie unten beschrieben. Sie müssen diese Nachrichten manuell hinzufügen.
+>  Mit dem Klassen-Assistenten können Sie keine reflektierte Nachricht (OCM_-*Meldung*) für ein ActiveX-Steuerelement hinzufügen, wie unten beschrieben. Sie müssen diese Nachrichten manuell hinzufügen.
 
-### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>Zum Definieren eines meldungshandlers für eine reflektierte Meldung aus dem Fenster "Eigenschaften"
+### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-class-wizard"></a>So definieren Sie einen Meldungs Handler für eine reflektierte Nachricht vom Klassen-Assistenten
 
-1. Fügen Sie ein Steuerelement, z. B. eine Liste, einem Grundleisten-Steuerelement, einer Symbolleiste oder ein Strukturansicht-Steuerelement zu einem MFC-Projekt hinzu.
+1. Fügen Sie Ihrem MFC-Projekt ein Steuerelement hinzu, z. b. eine Liste, ein Grund leisten-Steuerelement, eine Symbolleiste oder ein Struktur Steuerelement.
 
-1. Klicken Sie in der Klassenansicht auf den Namen der Steuerelementklasse.
+1. Klicken Sie in Klassenansicht auf den Namen der Steuerelement Klasse.
 
-1. In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), Klassennamen des Steuerelements angezeigt wird, der **Klassenname** Liste.
+1. Im [Klassen-Assistenten](mfc-class-wizard.md)wird der Name der Steuerelement Klasse in der Liste **Klassenname** angezeigt.
 
-1. Klicken Sie auf die **Nachrichten** Schaltfläche zur Anzeige der Windows-Meldungen, die auf dem Steuerelement hinzugefügt.
+1. Klicken Sie auf die Registerkarte **Meldungen** , um die dem Steuerelement hinzu zufügenden Windows-Meldungen anzuzeigen.
 
-1. Bildlauf nach unten in der Liste der Nachrichten im Fenster Eigenschaften, bis Sie sehen, dass die Überschrift **reflektiert**. Klicken Sie alternativ auf die **Kategorien** Schaltfläche, und reduzieren Sie die Ansicht finden Sie unter den **reflektiert** Überschrift.
+1. Wählen Sie die reflektierte Meldung aus, für die Sie einen Handler definieren möchten. Reflektierte Nachrichten werden mit einem Gleichheitszeichen (=) markiert.
 
-1. Wählen Sie die reflektierte Meldung, die für die Sie einen Ereignishandler definieren möchten. Reflektierte Meldungen werden mit einem Gleichheitszeichen (=) markiert.
+1. Klicken Sie in der rechten Spalte des Klassen-Assistenten auf die Zelle, um den vorgeschlagenen Namen des Handlers als \<Add >*HandlerName*anzuzeigen. (Beispielsweise schlägt \<der **= WM_CTLCOLOR** -Meldungs Handler Add >**CtlColor**) vor.
 
-1. Klicken Sie auf die Zelle in der rechten Spalte im Fenster Eigenschaften den vorgeschlagenen Namen des Handlers als anzuzeigende \<hinzufügen >*HandlerName*. (Z. B. die **= WM_CTLCOLOR** Meldungshandler schlägt \<hinzufügen >**CtlColor vor**).
+1. Klicken Sie auf den vorgeschlagenen Namen, um ihn zu akzeptieren. Der Handler wird dem Projekt hinzugefügt.
 
-1. Klicken Sie auf den vorgeschlagenen Namen zu akzeptieren. Der Handler wird dem Projekt hinzugefügt.
-
-   Handler für Namen, die Sie hinzugefügt haben, werden in der rechten Spalte des Fensters reflektierter Meldungen angezeigt.
-
-9. Zum Bearbeiten oder Löschen eines meldungshandlers, wiederholen Sie die Schritte 4 bis 7. Klicken Sie auf die Zelle mit dem Namen des Handlers bearbeiten oder löschen, und klicken Sie auf die entsprechende Aufgabe.
+1. Wiederholen Sie die Schritte 4 bis 7, um einen Meldungs Handler zu bearbeiten oder zu löschen. Klicken Sie auf die Zelle mit dem Namen des Handlers, um Sie zu bearbeiten oder zu löschen.
 
 ## <a name="see-also"></a>Siehe auch
 

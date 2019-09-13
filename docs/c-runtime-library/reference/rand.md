@@ -1,6 +1,6 @@
 ---
 title: rand
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - rand
 apilocation:
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 868c6239ac1b86dfc9ac72cc8cc83d1ba3002b4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 407640c5f00ae54c43450abcbbe8c2e3ba0fcf95
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357771"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927527"
 ---
 # <a name="rand"></a>rand
 
-Generiert eine pseudozufällige Zahl mithilfe eines Algorithmus sehr bekannten und vollständig reproduziert werden kann. Eine weitere programmgesteuert sichere Version dieser Funktion ist verfügbar. finden Sie unter [Rand_s](rand-s.md). Anzahl von generierten **Rand** sind nicht kryptografisch sicher. Für kryptografische Zufallszahlen generieren sicherer, verwenden Sie [Rand_s](rand-s.md) oder die Funktionen deklariert werden, der C++ Standardbibliothek in [ \<random >](../../standard-library/random.md).
+Generiert eine Pseudo Zufalls-Zahl mithilfe eines bekannten und vollständig reproduzierbaren Algorithmus. Eine Programm gesteuert sichere Version dieser Funktion ist verfügbar. siehe [rand_s](rand-s.md). Die von **Rand** generierten Zahlen sind nicht kryptografisch sicher. Verwenden Sie zum Generieren einer kryptografisch sicheren Zufallszahlengenerierung [rand_s](rand-s.md) oder die Funktionen, die C++ in der Standard Bibliothek in [ \<Random >](../../standard-library/random.md)deklariert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,13 +45,13 @@ int rand( void );
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Rand** gibt eine pseudozufällige Zahl ist, wie oben beschrieben. Es gibt keine Fehlerrückgabe.
+**Rand** gibt eine Pseudo Zufallszahl zurück, wie oben beschrieben. Es gibt keine Fehlerrückgabe.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Rand** Funktion gibt eine pseudozufällige Ganzzahl im Bereich von 0 bis **RAND_MAX** (32767). Verwenden der [Srand](srand.md) Funktion die Pseudozufallszahl vor dem Aufruf ein Seeding **Rand**.
+Die **Rand** -Funktion gibt eine Pseudo Zufalls-Ganzzahl im Bereich von 0 bis **RAND_MAX** (32767) zurück. Verwenden Sie die [srand](srand.md) -Funktion, um einen Ausgangswert für den Pseudozufallszahlen-Generator zu verwenden, bevor Sie **Rand**aufrufen.
 
-Die **Rand** -Funktion generiert eine bekannte Folge und ist nicht geeignet für die Verwendung als einer kryptografischen Funktion. Für kryptografische Zufallszahlen generieren sicherer, verwenden Sie [Rand_s](rand-s.md) oder die Funktionen deklariert werden, der C++ Standardbibliothek in [ \<random >](../../standard-library/random.md). Informationen, was falsch ist **Rand** und wie \<random > behandelt diese Mängel, finden Sie in diesem Video berechtigt [Rand als schädlich](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+Die **Rand** -Funktion generiert eine bekannte Sequenz und ist nicht für die Verwendung als Kryptografiefunktion geeignet. Verwenden Sie zum Generieren einer kryptografisch sicheren Zufallszahlengenerierung [rand_s](rand-s.md) oder die Funktionen, die C++ in der Standard Bibliothek in [ \<Random >](../../standard-library/random.md)deklariert werden. Informationen dazu, was bei **Rand** falsch ist und wie \<Random > diese Mängel behandelt, finden Sie in diesem Video, das [als schädlich angesehen](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)wird.
 
 ## <a name="requirements"></a>Anforderungen
 

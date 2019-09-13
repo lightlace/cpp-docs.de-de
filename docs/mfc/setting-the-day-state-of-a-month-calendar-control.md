@@ -8,42 +8,42 @@ helpviewer_keywords:
 - MCN_GETDAYSTATE notification [MFC]
 - month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
-ms.openlocfilehash: c75b560509738e071accdc3dba31dfdea35a14aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a91c8b0c3bdef9256628b9226c5f3ff154ed7d
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307756"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907526"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Einstellen des Tagesstatus für ein Monatskalender-Steuerelement
 
-Eines der Attribute von einem Monatskalender-Steuerelement ist die Möglichkeit zum Speichern von Informationen, die als des tagesstatus für das Steuerelement, für jeden Tag des Monats bezeichnet. Diese Informationen werden verwendet, um bestimmte Datumsangaben für den derzeit angezeigten Monat hervorzuheben.
+Eines der Attribute eines Monatskalender-Steuer Elements ist die Möglichkeit, Informationen, die für jeden Tag des Monats als Tageszustand des Steuer Elements bezeichnet werden, zu speichern. Diese Informationen werden verwendet, um bestimmte Datumsangaben für den aktuell angezeigten Monat hervorzuheben.
 
 > [!NOTE]
->  Die `CMonthCalCtrl` Objekt muss den MCS_DAYSTATE-Stil zum Anzeigen von Statusinformationen für Tag aufweisen.
+>  Das `CMonthCalCtrl` Objekt muss den MCS_DAYSTATE-Stil aufweisen, um die Tages Zustandsinformationen anzuzeigen.
 
-Zustandsinformationen Tag wird als 32-Bit-Datentyp, ausgedrückt **MONTHDAYSTATE**. Jedes bit in einem **MONTHDAYSTATE** Bitfeld (1 bis 31) stellt den Zustand eines Tages in einem Monat dar. Wenn eine Bit aktiviert ist, wird der entsprechenden Tag angezeigt werden fett; Andernfalls wird es mit keine Hervorhebung angezeigt.
+Die Tages Zustandsinformationen werden als 32-Bit-Datentyp **MONTHDAYSTATE**ausgedrückt. Jedes Bit in einem **MONTHDAYSTATE** -Bitfeld (1 bis 31) stellt den Status eines Tags in einem Monat dar. Wenn ein Bit ist, wird der entsprechende Tag fett angezeigt. Andernfalls wird Sie ohne Betonung angezeigt.
 
-Es gibt zwei Methoden zum Einstellen des tagesstatus, der im Monatskalender-Steuerelement: explizit mit einem Aufruf von [CMonthCalCtrl:: SetDayState](../mfc/reference/cmonthcalctrl-class.md#setdaystate) oder durch Behandeln der MCN_GETDAYSTATE-Benachrichtigung.
+Es gibt zwei Methoden, um den Tageszustand des Monatskalender-Steuer Elements festzulegen: explizit mit einem [CMonthCalCtrl:: SetDayState-CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md#setdaystate) -Befehl oder mit der MCN_GETDAYSTATE-Benachrichtigungs Meldung.
 
-## <a name="handling-the-mcngetdaystate-notification-message"></a>Behandeln der MCN_GETDAYSTATE-Benachrichtigung
+## <a name="handling-the-mcn_getdaystate-notification-message"></a>Verarbeiten der MCN_GETDAYSTATE-Benachrichtigungs Meldung
 
-Die MCN_GETDAYSTATE-Nachricht wird vom Steuerelement gesendet, um zu bestimmen, wie die Tage der sichtbaren Monate angezeigt werden soll.
+Die MCN_GETDAYSTATE-Nachricht wird vom-Steuerelement gesendet, um zu bestimmen, wie die Tage innerhalb der sichtbaren Monate angezeigt werden sollen.
 
 > [!NOTE]
->  Da das Steuerelement die vorherigen und folgenden Monaten in Bezug auf den sichtbaren Monat zwischenspeichert erhalten Sie diese Benachrichtigung jedes Mal, wenn ein neuer Monat ausgewählt ist.
+>  Da das Steuerelement die vorherigen und die folgenden Monate in Bezug auf den sichtbaren Monat zwischenspeichert, erhalten Sie diese Benachrichtigung jedes Mal, wenn ein neuer Monat ausgewählt wird.
 
-Um diese Nachricht richtig behandeln zu können, müssen Sie bestimmen, wie viele Monate Tageszustandsinformationen wird für angefordert wird, Initialisieren eines Arrays von **MONTHDAYSTATE** Strukturen mit der richtigen Werte, und Initialisieren der zugehörigen Strukturmember mit den neuen Informationen. Das folgende Verfahren, mit Details zu die erforderlichen Schritten wird vorausgesetzt, dass Sie eine `CMonthCalCtrl` Objekt mit dem Namen *M_monthcal* und ein Array von **MONTHDAYSTATE** Objekte *MdState*.
+Um diese Nachricht ordnungsgemäß zu verarbeiten, müssen Sie bestimmen, für wie viele Monate Zustandsinformationen angefordert werden, ein Array von **MONTHDAYSTATE** -Strukturen mit den richtigen Werten initialisieren und den zugehörigen Strukturmember mit dem neuen initialisieren. Informationen. In der folgenden Prozedur, in der die erforderlichen Schritte erläutert werden, wird `CMonthCalCtrl` davon ausgegangen, dass Sie ein-Objekt namens *m_monthcal* und ein Array von **MONTHDAYSTATE** -Objekten, *mdState*, besitzen.
 
-#### <a name="to-handle-the-mcngetdaystate-notification-message"></a>Um die MCN_GETDAYSTATE-Benachrichtigung zu verarbeiten.
+#### <a name="to-handle-the-mcn_getdaystate-notification-message"></a>So verarbeiten Sie die MCN_GETDAYSTATE-Benachrichtigungs Meldung
 
-1. Das Fenster "Eigenschaften", hinzufügen einen Benachrichtigungshandler für die MCN_GETDAYSTATE-Nachricht an die *M_monthcal* Objekt (finden Sie unter [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md)).
+1. Fügen Sie dem *m_monthcal* -Objekt mithilfe des [Klassen-Assistenten](reference/mfc-class-wizard.md)einen Benachrichtigungs Handler für die MCN_GETDAYSTATE-Nachricht hinzu (siehe [Mapping von Nachrichten zu Funktionen](../mfc/reference/mapping-messages-to-functions.md)).
 
 1. Fügen Sie im Text des Handlers den folgenden Code hinzu:
 
    [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
 
-   Im Beispiel wird die *pNMHDR* Zeiger auf den richtigen Typ, dann bestimmt, wie viele Monate Informationen angefordert werden (`pDayState->cDayState`). Für jeden Monat, den aktuellen Bitfeld (`pDayState->prgDayState[i]`) wird mit 0 (null), und klicken Sie dann die erforderliche initialisiert Datumsangaben (in diesem Fall dem 15. jedes Monats) festgelegt sind.
+   Im Beispiel wird der *pNMHDR* -Zeiger in den richtigen Typ konvertiert und dann bestimmt, wie viele Monate Informationen angefordert werden`pDayState->cDayState`(). Für jeden Monat wird das aktuelle Bitfeld (`pDayState->prgDayState[i]`) mit 0 (null) initialisiert, und anschließend werden die benötigten Datumsangaben festgelegt (in diesem Fall der 15. jedes Monats).
 
 ## <a name="see-also"></a>Siehe auch
 

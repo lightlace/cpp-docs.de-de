@@ -1,15 +1,15 @@
 ---
 title: Ereigniszuordnungen
-ms.date: 06/20/2018
+ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef730574b26a4c3619df886b72770ce7e035a40e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916465"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907895"
 ---
 # <a name="event-maps"></a>Ereigniszuordnungen
 
@@ -21,7 +21,7 @@ Der Microsoft Foundation Class-Bibliothek bietet ein für das Auslösen von Erei
 
 Das `EVENT_STOCK_CLICK` -Makro gibt an, dass das Steuerelement jedes Mal, wenn ein Mausklick entdeckt wird, ein geklickclick-Ereignis auslöst. Eine ausführlichere Auflistung von anderen Aktien Ereignissen finden Sie im Artikel [ActiveX-Steuerelemente: Ereignisse](../../mfc/mfc-activex-controls-events.md). Makros sind auch verfügbar, um benutzerdefinierte Ereignisse anzugeben.
 
-Obwohl ereigniszuordnungs-Makros wichtig sind, fügen Sie Sie in der Regel nicht direkt ein. Dies liegt daran, dass der Eigenschaftenfenster automatisch Ereignis Zuordnungs Einträge in den Quelldateien erstellt, wenn Sie ihn verwenden, um Ereignis auslösenden Funktionen Ereignissen zuzuordnen. Wenn Sie einen Ereignis Zuordnungs Eintrag bearbeiten oder hinzufügen möchten, können Sie die Eigenschaftenfenster verwenden.
+Obwohl ereigniszuordnungs-Makros wichtig sind, fügen Sie Sie in der Regel nicht direkt ein. Dies liegt daran, dass das **Eigenschaften** Fenster (in **Klassenansicht**) automatisch Ereignis Zuordnungs Einträge in den Quelldateien erstellt, wenn Sie es verwenden, um Ereignis auslösenden Funktionen Ereignissen zuzuordnen. Jedes Mal, wenn Sie einen Ereignis Zuordnungs Eintrag bearbeiten oder hinzufügen möchten, können Sie das **Eigenschaften** Fenster verwenden.
 
 Um Ereignis Zuordnungen zu unterstützen, stellt MFC die folgenden Makros bereit:
 

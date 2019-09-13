@@ -1,6 +1,6 @@
 ---
 title: Erstellen eigener Dialogfeldklassen
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], creating
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: bacedc49fcdabdd5dc7fb0f392a66afd3baadd06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 424d18196063456245e2a4841b42e6e447bded17
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241757"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907328"
 ---
 # <a name="creating-your-dialog-class"></a>Erstellen eigener Dialogfeldklassen
 
-Erstellen Sie eine neue Dialogfeldklasse, mit der Dialogfeldressource arbeiten, für jede im Dialogfeld in Ihrem Programm.
+Erstellen Sie für jedes Dialogfeld in Ihrem Programm eine neue Dialogfeld Klasse, um mit der Dialogfeld Ressource zu arbeiten.
 
-[Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md) wird erläutert, wie zum Erstellen einer neuen Dialogfeldklasse. Beim Erstellen einer Dialogfeldklasse mit den Assistenten zum Hinzufügen einer Klasse, schreibt es die folgenden Elemente in der. H und. CPP-Dateien, die Sie angeben:
+Durch das [Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md) wird erläutert, wie eine neue Dialogfeld Klasse erstellt wird. Wenn Sie eine Dialogfeld Klasse mit dem [Klassen-Assistenten](reference/mfc-class-wizard.md)erstellen, werden die folgenden Elemente in die von Ihnen angegebenen h-und CPP-Dateien geschrieben:
 
-In der. H-Datei:
+In der. h-Datei:
 
-- Eine Klassendeklaration für die Dialogfeldklasse. Die abgeleitete Klasse wird von [CDialog](../mfc/reference/cdialog-class.md).
+- Eine Klassen Deklaration für die Dialogfeld Klasse. Die-Klasse wird von [CDialog](../mfc/reference/cdialog-class.md)abgeleitet.
 
-In der. CPP-Datei:
+In der CPP-Datei:
 
-- Eine meldungszuordnung für die Klasse.
+- Eine Meldungs Zuordnung für die-Klasse.
 
-- Ein standard-Konstruktor für das Dialogfeld.
+- Ein Standardkonstruktor für das Dialogfeld.
 
-- Eine Überschreibung von der [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) Member-Funktion. Bearbeiten Sie diese Funktion. Es wird zum Dialogfeld Data Dialogdatenaustausch und-Validierung-Funktionen verwendet, wie weiter unten im Abschnitt [Dialogdatenaustausch und-Validierung](../mfc/dialog-data-exchange-and-validation.md).
+- Eine außer Kraft setzung der [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) -Member-Funktion. Bearbeiten Sie diese Funktion. Sie wird für Dialog Datenaustausch und Validierungs Funktionen verwendet, die weiter unten unter [Dialog Datenaustausch und Validierung](../mfc/dialog-data-exchange-and-validation.md)beschrieben werden.
 
 ## <a name="see-also"></a>Siehe auch
 

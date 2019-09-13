@@ -11,67 +11,67 @@ helpviewer_keywords:
 - panes, status bar
 - status bars [MFC], updating
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
-ms.openlocfilehash: baf5013e34f262dd3bfed82941697ab9ca21e637
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20cd519f15fa9b218bca3dd1348659cfd0d5e473
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180784"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907640"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aktualisieren des Textes in der Statusleiste
 
-In diesem Artikel wird erläutert, wie zum Ändern des Texts, die in einer MFC-Statusleistenbereich angezeigt wird. Eine Statusleiste, ein Window-Objekt der Klasse [CStatusBar](../mfc/reference/cstatusbar-class.md) – enthält verschiedene "Bereiche". Jeder Bereich ist ein rechteckiger Bereich der Statusleiste für die Sie verwenden können, um Informationen anzuzeigen. Viele Anwendungen werden z. B. den Status der FESTSTELLTASTE, NUM- und andere Schlüssel in den Bereichen ganz rechts angezeigt. Anwendungen auch häufig informative Text in der ganz linke Bereich (Bereich 0) bezeichnet die "Bereich"Meldung "." angezeigt. Beispielsweise verwendet die standardmäßigen MFC-Statusleiste den Bereich "Meldung", um eine Zeichenfolge, die erläutert, der aktuell ausgewähltes oder eine Symbolleisten-Schaltfläche anzuzeigen. In der Abbildung in [Statusleisten](../mfc/status-bar-implementation-in-mfc.md) zeigt eine Statusleiste, die von einer Anwendungs-Assistenten erstellten MFC-Anwendung.
+In diesem Artikel wird erläutert, wie Sie den Text ändern, der in einem MFC-Status Leistenbereich angezeigt wird. Eine Statusleiste – ein Fenster Objekt der Klasse [CStatusBar](../mfc/reference/cstatusbar-class.md) – enthält mehrere Bereiche. Jeder Bereich ist ein rechteckiger Bereich der Statusleiste, der zum Anzeigen von Informationen verwendet werden kann. Viele Anwendungen zeigen z. b. den Status der FESTSTELL Sperre, der NUM-Sperre und anderer Schlüssel in den äußersten rechten Bereichen an. Anwendungen zeigen auch häufig informativen Text im linken Bereich an (Bereich 0), der manchmal auch als "Nachrichtenbereich" bezeichnet wird. Beispielsweise verwendet die Standard-MFC-Statusleiste den Bereich Meldung, um eine Zeichenfolge anzuzeigen, die das aktuell ausgewählte Menü Element oder die Symbolleisten Schaltfläche erläutert. Die Abbildung in [Status leisten](../mfc/status-bar-implementation-in-mfc.md) zeigt eine Status Leiste von einer vom Anwendungs-Assistenten erstellten MFC-Anwendung an.
 
-MFC wird standardmäßig nicht aktiviert eine `CStatusBar` Bereich, wenn es sich um den Bereich erstellt. Um einen Bereich zu aktivieren, müssen Sie verwenden die ON_UPDATE_COMMAND_UI-Makro für jeden Bereich auf der Statusleiste und aktualisieren die Bereiche. Da Bereiche nicht WM_COMMAND-Meldungen senden (was nicht wie Schaltflächen der Symbolleiste), müssen Sie den Code manuell eingeben.
+Standardmäßig aktiviert MFC einen `CStatusBar` Bereich nicht, wenn er den Bereich erstellt. Um einen Bereich zu aktivieren, müssen Sie das ON_UPDATE_COMMAND_UI-Makro für jeden Bereich in der Statusleiste verwenden und die Bereiche aktualisieren. Da Bereiche keine WM_COMMAND-Nachrichten senden (Sie sind nicht wie Symbolleisten-Schaltflächen), müssen Sie den Code manuell eingeben.
 
-Nehmen wir beispielsweise an, die einen Bereich hat `ID_INDICATOR_PAGE` als die Befehls-ID, und dass sie die aktuelle Seitenzahl in einem Dokument enthält. Das folgende Verfahren beschreibt, wie erstellen Sie einen neuen Bereich in der Statusleiste angezeigt wird.
+Nehmen wir beispielsweise an, dass `ID_INDICATOR_PAGE` ein Bereich als Befehls Bezeichner und die aktuelle Seitenzahl in einem Dokument enthält. Im folgenden Verfahren wird beschrieben, wie ein neuer Bereich in der Statusleiste erstellt wird.
 
-### <a name="to-make-a-new-pane"></a>Um einen neuen Bereich zu machen.
+### <a name="to-make-a-new-pane"></a>So erstellen Sie einen neuen Bereich
 
-1. Definieren Sie im Bereich der Befehls-ID.
+1. Definieren Sie die Befehls-ID des Bereichs.
 
-   Auf der **Ansicht** Menü klicken Sie auf **Ressourcenansicht**. Mit der rechten Maustaste der Projektressource ein, und klicken Sie auf **Ressourcensymbole**. Klicken Sie in das Dialogfeld "Ressourcensymbole" `New`. Geben Sie einen Namen der Befehls-ID: z.B. `ID_INDICATOR_PAGE`. Geben Sie einen Wert für die ID, oder übernehmen Sie den Wert, der im Dialogfeld "Ressourcensymbole" empfohlen. Beispielsweise `ID_INDICATOR_PAGE`, übernehmen Sie den Standardwert. Schließen Sie das Dialogfeld "Ressourcensymbole".
+   Klicken Sie im Menü **Ansicht** auf **Ressourcenansicht**. Klicken Sie mit der rechten Maustaste auf die Projekt Ressource und dann auf **Ressourcen Symbole**. Klicken Sie im Dialogfeld Ressourcen Symbole auf `New`. Geben Sie einen Befehls-ID-Namen ein `ID_INDICATOR_PAGE`, z. b. Geben Sie einen Wert für die ID an, oder übernehmen Sie den Wert, der im Dialogfeld Ressourcen Symbole vorgeschlagen wird. Nehmen Sie z. `ID_INDICATOR_PAGE`b. für den Standardwert an. Schließen Sie das Dialogfeld Ressourcen Symbole.
 
-1. Definieren Sie eine Standardzeichenfolge, die im Bereich angezeigt.
+1. Definieren Sie eine Standard Zeichenfolge, die im Bereich angezeigt werden soll.
 
-   Ressourcenansicht öffnen, und doppelklicken Sie auf **Zeichenfolgentabelle** im Fenster, in der Ressourcentypen, die für Ihre Anwendung aufgeführt. Mit der **Zeichenfolgentabelle** Editor geöffnet ist, wählen Sie **neue Zeichenfolge** aus der **einfügen** Menü. Wählen Sie im Fenster Eigenschaften die Befehls-ID des Bereichs (z. B. `ID_INDICATOR_PAGE`), und geben Sie einen Standardwert, wie z. B. "Page". Die Zeichenfolgen-Editor zu schließen. (Sie benötigen eine Standardzeichenfolge aus, um einen Compilerfehler zu vermeiden.)
+   Wenn Ressourcenansicht geöffnet ist, doppelklicken Sie in dem Fenster, in dem die Ressourcentypen für die Anwendung aufgelistet werden, auf **Zeichen folgen Tabelle** . Wählen Sie im geöffneten Zeichen folgen- **Tabellen** -Editor im Menü **Einfügen** die Option **neue Zeichenfolge** aus. Wählen Sie die Befehls-ID Ihres Bereichs (z `ID_INDICATOR_PAGE`. b.) aus, und geben Sie einen Standard Zeichen folgen Wert ein, z.b. "page". Schließen Sie den Zeichen folgen-Editor. (Sie benötigen eine Standard Zeichenfolge, um einen Compilerfehler zu vermeiden.)
 
-1. Fügen Sie den Bereich, um die *Indikatoren* Array.
+1. Fügen Sie dem *Indikator* Array den Bereich hinzu.
 
-   In der Datei MAINFRM. CPP, suchen Sie die *Indikatoren* Array. Dieses Array enthält Befehls-IDs für alle Indikatoren für die Statusleiste, in der Reihenfolge von links nach rechts. Geben Sie an der entsprechenden Stelle im Array, Befehls-ID des Bereichs, wie hier gezeigt für `ID_INDICATOR_PAGE`:
+   In Datei-MainFrm. Cpp: Suchen Sie das Array " *Indikatoren* ". Dieses Array listet die Befehls-IDs für alle Indikatoren der Statusleiste in der Reihenfolge von links nach rechts auf. Geben Sie an der entsprechenden Stelle im Array die Befehls-ID Ihres Bereichs ein, wie hier `ID_INDICATOR_PAGE`gezeigt:
 
    [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
 
-Die empfohlene Methode zum Anzeigen von Text in einem Bereich wird zum Aufrufen der `SetText` Memberfunktion der Klasse `CCmdUI` in einer Update-Handler-Funktion für den Bereich. Angenommen, Sie möchten eine ganzzahlige Variable einrichten *M_nPage* , enthält die aktuelle Seitenzahl und die Verwendung `SetText` auf eine Zeichenfolgenversion der diese Zahl im Bereich des Texts fest.
+Die empfohlene Vorgehensweise zum Anzeigen von Text in einem Bereich besteht darin `SetText` , die Member- `CCmdUI` Funktion der-Klasse in einer Update Handler-Funktion für den Bereich aufzurufen. Beispielsweise können Sie eine ganzzahlige Variable *m_nPage* einrichten, die die aktuelle Seitenzahl enthält, und verwenden `SetText` , um den Text des Bereichs auf eine Zeichen folgen Version dieser Zahl festzulegen.
 
 > [!NOTE]
->  Die `SetText` Ansatz wird empfohlen. Es ist möglich, führen Sie hierzu eine etwas niedrigere Ebene durch Aufrufen der `CStatusBar` Memberfunktion `SetPaneText`. Trotzdem benötigen Sie weiterhin einen updatehandler. Ohne einen solchen Handler für den Bereich deaktiviert MFC automatisch im Bereich sein Inhalt gelöscht.
+>  Der `SetText` Ansatz wird empfohlen. Es ist möglich, diese Aufgabe auf etwas niedrigerer Ebene durch Aufrufen der `CStatusBar` Member-Funktion `SetPaneText`auszuführen. Trotzdem benötigen Sie trotzdem einen Update Handler. Ohne diesen Handler deaktiviert MFC automatisch den Bereich und löscht seinen Inhalt.
 
-Das folgende Verfahren zeigt, wie eine Update-Handler-Funktion, die zum Anzeigen von Text in einem Bereich verwendet wird.
+Im folgenden Verfahren wird gezeigt, wie Sie eine Update Handler-Funktion verwenden, um Text in einem Bereich anzuzeigen.
 
-#### <a name="to-make-a-pane-display-text"></a>Um einen Bereich, Anzeigen von Text zu machen.
+#### <a name="to-make-a-pane-display-text"></a>So machen Sie einen Fenster Anzeige Text
 
-1. Fügen Sie ein Update-Befehlshandler für den Befehl hinzu.
+1. Fügen Sie einen Befehls Aktualisierungs Handler für den Befehl hinzu.
 
-   Fügen Sie einen Prototyp für den Handler, manuell hinzu, wie hier gezeigt für `ID_INDICATOR_PAGE` (in MAINFRM. H):
+   Fügen Sie manuell einen Prototyp für den Handler hinzu, wie hier `ID_INDICATOR_PAGE` für (in mainfrm) gezeigt. H):
 
    [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
 
-1. In den entsprechenden. CPP hinzufügen. der Handler die Definition wie folgt für `ID_INDICATOR_PAGE` (in MAINFRM. CPP):
+1. In der entsprechenden. Cpp-Datei, fügen Sie die Definition des Handlers hinzu, `ID_INDICATOR_PAGE` wie hier für (in mainfrm) gezeigt. Cpp):
 
    [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
 
-   Die letzten drei Zeilen von diesem Handler werden der Code, der den Text wird angezeigt.
+   Die letzten drei Zeilen dieses Handlers sind der Code, der Ihren Text anzeigt.
 
-1. Fügen Sie in der entsprechenden meldungszuordnung, die ON_UPDATE_COMMAND_UI-Makro wie folgt für `ID_INDICATOR_PAGE` (in MAINFRM. CPP):
+1. Fügen Sie in der entsprechenden Meldungs Zuordnung das ON_UPDATE_COMMAND_UI-Makro hinzu, wie `ID_INDICATOR_PAGE` hier für (in mainfrm) gezeigt. Cpp):
 
    [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
 
-Nachdem Sie den Wert des definiert die *M_nPage* Membervariable (Klasse `CMainFrame`), dieses Verfahren führt dazu, dass die Nummer der Seite im Bereich während der Verarbeitung von im Leerlauf auf die gleiche Weise angezeigt werden, dass die Anwendung andere Indikatoren aktualisiert. Wenn *M_nPage* Änderungen, die anzeigeänderungen, während der nächsten Leerlaufschleife.
+Wenn Sie den Wert der *m_nPage* -Element Variablen (der-Klasse `CMainFrame`) definieren, bewirkt dieses Verfahren, dass die Seitenzahl im Bereich während der Leerlauf Verarbeitung auf die gleiche Weise angezeigt wird, wie die Anwendung andere Indikatoren aktualisiert. Wenn *m_nPage* geändert wird, ändert sich die Anzeige während der nächsten Leerlauf Schleife.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren
+### <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren?
 
-- [Aktualisieren von Benutzeroberflächenobjekten (Gewusst wie: Aktualisieren von Symbolleisten-Schaltflächen und Menüelemente als Programm Bedingungen sich ändern)](../mfc/how-to-update-user-interface-objects.md)
+- [Aktualisieren von Benutzeroberflächen Objekten (Aktualisieren von Symbolleisten-Schaltflächen und Menü Elementen als Programmbedingungen ändern)](../mfc/how-to-update-user-interface-objects.md)
 
 ## <a name="see-also"></a>Siehe auch
 

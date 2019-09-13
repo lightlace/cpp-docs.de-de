@@ -6,10 +6,10 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/11/2019
 ms.locfileid: "70220486"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Standardmäßig deaktivierte Compilerwarnungen
@@ -70,7 +70,7 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höheren Versionen standa
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (Stufe 4)|dynamic_cast from virtual base '*Class1*' to '*Klasse2*' kann in einigen Kontexten fehlschlagen|
 |C4444 (Stufe 3)|Höchste Ebene '__unaligned' ist in diesem Kontext nicht implementiert|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (Stufe 4)|relativer Includepfad enthält '.. '|
-|[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md) (Stufe 4)|eine vorwärts Deklaration einer Enumeration ohne Bereichs Einschränkung muss über einen zugrunde liegenden Typ verfügen (int <sup></sup> wird angenommen).|
+|[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md) (Stufe 4)|eine vorwärts Deklaration einer Enumeration ohne Bereichs Einschränkung muss über einen zugrunde liegenden Typ verfügen (int wird <sup>angenommen).</sup>|
 |C4472 generiert (Stufe 1)|'*Identifier*' ist eine systemeigene Enumeration: Fügen Sie einen Zugriffsspezifizierer (privat/öffentlich) hinzu, um eine verwaltete Enumeration zu deklarieren|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (Stufe 4)|"*Funktion*": nicht referenzierte Inline Funktion wurde entfernt.|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) (Stufe 4)|' Typname ': der Typname überschreitet das Metadatenlimit von '*Limit*'-Zeichen.|
@@ -89,8 +89,8 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höheren Versionen standa
 |C4587 (Stufe 1)|"*anonymous_structure*": Behavior Change: der Konstruktor wird nicht mehr implizit aufgerufen.|
 |C4588 (Stufe 1)|"*anonymous_structure*": Behavior Change: der Dekonstruktor wird nicht mehr implizit aufgerufen.|
 |[C4596](../error-messages/compiler-warnings/c4596.md) (Stufe 4)|'*Identifier*': Ungültiger qualifizierter Name in der Mitglieds Deklaration <sup>14,3</sup> <sup>Perm</sup>|
-|C4598 (Ebene 1 und Ebene 3)|' #include '-*Header*' ': die Header Nummer in der vorkompilierten Kopfzeile stimmt nicht mit der aktuellen Kompilierung an dieser Position <sup>14,3</sup>|
-|C4599 (Stufe 3)|'*options* *Pfad*': die Nummer der Befehlszeilen Argument-Nummer stimmt nicht mit dem vorkompilierten Header <sup>14,3</sup> überein.|
+|C4598 (Ebene 1 und Ebene 3)|' #include '-*Header*' ': die Header *Nummer in der* vorkompilierten Kopfzeile stimmt nicht mit der aktuellen Kompilierung an dieser Position <sup>14,3</sup>|
+|C4599 (Stufe 3)|'*options* *Pfad*': die Nummer der Befehlszeilenargument- *Nummer stimmt nicht* mit dem vorkompilierten Header <sup>14,3</sup> überein.|
 |C4605 (Stufe 1)|"/D*Macro*" wurde in der aktuellen Befehlszeile angegeben, wurde jedoch beim Erstellen des vorkompilierten Headers nicht angegeben.|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (Stufe 3)|"*union_member*" wurde bereits von einem anderen Union-Member in der Initialisiererliste initialisiert, "*union_member*" <sup>Perm</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (Stufe 3)|#pragma Warnung: die Warnungs Nummer '*Number*' ist nicht vorhanden.|
@@ -116,7 +116,7 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höheren Versionen standa
 |C4777 (Stufe 4)|"*Function*": die Format Zeichenfolge "*String*" erfordert ein Argument vom Typ "*Typ1*", die Variadic-Argument *Nummer* weist jedoch den Typ "*Typ2*" auf.|
 |C4786 (Stufe 3)|'*Symbol*': der Objektname wurde in den Debuginformationen auf '*Number*'-Zeichen gekürzt.|
 | [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (Stufe 4) | Implizite Konvertierung von '*Type*' in bool. Möglicher Informationsverlust <sup>16,0</sup> |
-|[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (Stufe 4)|Byte-Auffüll Zeichen werden nach dem Konstrukt "*MEMBER_NAME*" hinzugefügt.|
+|[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (Stufe 4)|Byte *-* Auffüll Zeichen werden nach dem Konstrukt "*MEMBER_NAME*" hinzugefügt.|
 | [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) (Stufe 1) | "*Member*": die Member-Funktion der lokalen Klasse weist keinen Text auf. |
 |C4826 (Stufe 2)|Die Konvertierung von '*Typ1*' in '*Typ2*' ist mit der Signatur erweitert. Dies kann zu unerwartetem Laufzeitverhalten führen.|
 |C4837 (Stufe 4)|'?? ' gefunden? *Zeichen*"ersetzt durch"*Zeichen*"|
@@ -142,7 +142,7 @@ Die folgenden Warnungen sind in Visual Studio 2015 und höheren Versionen standa
 |C5029 (Stufe 4)|nicht dem Standard entsprechende Erweiterung: Ausrichtungs C++ Attribute in gelten nur für Variablen, Datenmember und Tagtypen.|
 |C5031 (Stufe 4)|#pragma Warnung (Pop): wahrscheinliche fehl Übereinstimmung, pping-Warn Status in anderer Datei <sup>14,1</sup>|
 |C5032 (Stufe 4)|#pragma Warnung (Push) ohne entsprechende #pragma Warnung (Pop) <sup>14,1</sup> erkannt|
-|C5034|die Verwendung der Systeminternen ' intrinsischen ' bewirkt, dass die Funktions *Funktion* als gastcode <sup>15,3</sup> kompiliert wird.|
+|C5034|die Verwendung der systeminternen '*intrinsischen*' bewirkt, dass die Funktions *Funktion* als gastcode <sup>15,3</sup> kompiliert wird.|
 |C5035|die Verwendung der Funktion "*Feature*" bewirkt, dass die Funktions *Funktion* als gastcode <sup>15,3</sup> kompiliert wird.|
 |C5036 (Stufe 1)|VarArgs-Funktionszeiger Konvertierung bei der Kompilierung mit/Hybrid: x86arm64 '*Typ1*' in '*Typ2*' <sup>15,3</sup>|
 |[C5038](../error-messages/compiler-warnings/c5038.md) (Stufe 4)|der Datenmember "*Member1*" wird nach dem Datenmember "*member2* <sup>15,3</sup> " initialisiert.|

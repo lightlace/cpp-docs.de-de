@@ -1,6 +1,6 @@
 ---
 title: srand
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - srand
 apilocation:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 6545d4eba6c17fd55bb2b8cf23fb0319d1c96bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d74ae4cbec5a76df48bb2b56acab7329e6cf8aa5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354885"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927402"
 ---
 # <a name="srand"></a>srand
 
-Legt den Startwert für den pseudozufallszahlengenerator ein, die die **Rand** Funktion.
+Legt den Startwert für den von der **Rand** -Funktion verwendeten Pseudo Zufalls Number-Generator fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ void srand(
 
 ### <a name="parameters"></a>Parameter
 
-*seed*<br/>
+*säen*<br/>
 Startwert für die Pseudozufallszahlengenerierung
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Srand** Funktion legt den Ausgangspunkt für das Generieren von pseudozufallsganzzahlen im aktuellen Thread fest. Aufrufen, um den Generators zum Erstellen der gleichen Reihenfolge der Ergebnisse erneut zu initialisieren, die **Srand** Funktion, und verwenden Sie den gleichen *Ausgangswert* -Argument erneut. Jeder andere Wert für *Ausgangswert* des Generators auf einen anderen Startpunkt in der pseudozufallssequenz festgelegt. **Rand** Ruft ab, der Pseudozufallszahlen, die generiert werden. Aufrufen von **Rand** vor dem Aufruf **Srand** generiert die gleiche Sequenz wie das Aufrufen **Srand** mit *Ausgangswert* übergeben als 1.
+Die **srand** -Funktion legt den Ausgangspunkt für das Erstellen einer Reihe von Pseudo Zufalls-Ganzzahlen im aktuellen Thread fest. Um den Generator erneut zu initialisieren, um dieselbe Sequenz von Ergebnissen zu erstellen, rufen Sie die **srand** -Funktion auf, und verwenden Sie das gleiche *Seed* -Argument erneut. Jeder andere Wert für *Seed* legt den Generator auf einen anderen Startpunkt in der Pseudo Zufalls-Sequenz fest. **Rand** Ruft die zu Generier baren Pseudo Zufalls-Zahlen ab. Der Aufruf von **Rand** vor jedem Aufruf von **srand** generiert dieselbe Sequenz wie der *Aufruf von* **srand** mit einem als 1 bestandenen Ausgangswerten.
 
 ## <a name="requirements"></a>Anforderungen
 
