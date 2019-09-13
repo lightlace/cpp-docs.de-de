@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 58c7fed2d6e95967101e98589a13c114fe2e9a8a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 525fc01247053a1e2bc993398978cb332262a1a5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496642"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927770"
 ---
 # <a name="composite-control-global-functions"></a>Globale Funktionen des zusammengesetzten Steuer Elements
 
@@ -156,18 +156,18 @@ ATLAPI AtlAxCreateControl(
 *Wert*<br/>
 Ein Zeiger auf eine Zeichenfolge, die an das-Steuerelement übermittelt werden soll. Muss auf eine der folgenden Arten formatiert werden:
 
-- Eine ProgID wie "mscal". Calendar. 7 "
+- Eine ProgID, z. b.`"MSCAL.Calendar.7"`
 
-- Eine CLSID, z. b. "{8e27c92b-1264-101C-8a2f -040224009c02}"
+- Eine CLSID, z. b.`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Eine URL, z.<http://www.microsoft.com>b. ""
+- Eine URL wie`"<https://www.microsoft.com>"`
 
-- Ein Verweis auf ein aktives Dokument, z. b\\. "file://\documents\mydoc.doc"
+- Ein Verweis auf ein aktives Dokument, z. b.`"file://\\\Documents\MyDoc.doc"`
 
-- Ein HTML-Fragment, z. b. "MSHTML\<:\<HTML > Body > dies\<ist eine Textzeile, die >\</HTML >"
+- Ein Fragment von HTML, z. b.`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" muss dem HTML-Fragment vorangestellt sein, damit es als MSHTML-Stream festgelegt ist.
+   > `"MSHTML:"`muss dem HTML-Fragment vorangestellt sein, damit es als MSHTML-Stream festgelegt ist.
 
 *hWnd*<br/>
 in Handle für das Fenster, an das das Steuerelement angefügt wird.
@@ -208,18 +208,18 @@ ATLAPI AtlAxCreateControlEx(
 *Wert*<br/>
 Ein Zeiger auf eine Zeichenfolge, die an das-Steuerelement übermittelt werden soll. Muss auf eine der folgenden Arten formatiert werden:
 
-- Eine ProgID wie "mscal". Calendar. 7 "
+- Eine ProgID, z. b.`"MSCAL.Calendar.7"`
 
-- Eine CLSID, z. b. "{8e27c92b-1264-101C-8a2f -040224009c02}"
+- Eine CLSID, z. b.`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Eine URL, z.<http://www.microsoft.com>b. ""
+- Eine URL wie`"<https://www.microsoft.com>"`
 
-- Ein Verweis auf ein aktives Dokument, z. b\\. "file://\documents\mydoc.doc"
+- Ein Verweis auf ein aktives Dokument, z. b.`"file://\\\Documents\MyDoc.doc"`
 
-- Ein HTML-Fragment, z. b. "MSHTML\<:\<HTML > Body > dies\<ist eine Textzeile, die >\</HTML >"
+- Ein Fragment von HTML, z. b.`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" muss dem HTML-Fragment vorangestellt sein, damit es als MSHTML-Stream festgelegt ist.
+   > `"MSHTML:"`muss dem HTML-Fragment vorangestellt sein, damit es als MSHTML-Stream festgelegt ist.
 
 *hWnd*<br/>
 in Handle für das Fenster, an das das Steuerelement angefügt wird.
@@ -267,18 +267,18 @@ ATLAPI AtlAxCreateControlLic(
 *Wert*<br/>
 Ein Zeiger auf eine Zeichenfolge, die an das-Steuerelement übermittelt werden soll. Muss auf eine der folgenden Arten formatiert werden:
 
-- Eine ProgID wie "mscal". Calendar. 7 "
+- Eine ProgID, z. b.`"MSCAL.Calendar.7"`
 
-- Eine CLSID, z. b. "{8e27c92b-1264-101C-8a2f -040224009c02}"
+- Eine CLSID, z. b.`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Eine URL, z.<http://www.microsoft.com>b. ""
+- Eine URL wie`"<https://www.microsoft.com>"`
 
-- Ein Verweis auf ein aktives Dokument, z. b\\. "file://\documents\mydoc.doc"
+- Ein Verweis auf ein aktives Dokument, z. b.`"file://\\\Documents\MyDoc.doc"`
 
-- Ein HTML-Fragment, z. b. "MSHTML\<:\<HTML > Body > dies\<ist eine Textzeile, die >\</HTML >"
+- Ein Fragment von HTML, z. b.`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" muss dem HTML-Fragment vorangestellt sein, damit es als MSHTML-Stream festgelegt ist.
+   > `"MSHTML:"`muss dem HTML-Fragment vorangestellt sein, damit es als MSHTML-Stream festgelegt ist.
 
 *hWnd*<br/>
 Handle für das Fenster, an das das Steuerelement angefügt wird.
@@ -321,18 +321,18 @@ ATLAPI AtlAxCreateControlLicEx(
 *Wert*<br/>
 Ein Zeiger auf eine Zeichenfolge, die an das-Steuerelement übermittelt werden soll. Muss auf eine der folgenden Arten formatiert werden:
 
-- Eine ProgID wie "mscal". Calendar. 7 "
+- Eine ProgID, z. b.`"MSCAL.Calendar.7"`
 
-- Eine CLSID, z. b. "{8e27c92b-1264-101C-8a2f -040224009c02}"
+- Eine CLSID, z. b.`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- Eine URL, z.<http://www.microsoft.com>b. ""
+- Eine URL wie`"<https://www.microsoft.com>"`
 
-- Ein Verweis auf ein aktives Dokument, z. b\\. "file://\documents\mydoc.doc"
+- Ein Verweis auf ein aktives Dokument, z. b.`"file://\\\Documents\MyDoc.doc"`
 
-- Ein HTML-Fragment, z. b. "MSHTML\<:\<HTML > Body > dies\<ist eine Textzeile, die >\</HTML >"
+- Ein Fragment von HTML, z. b.`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" muss dem HTML-Fragment vorangestellt sein, damit es als MSHTML-Stream festgelegt ist.
+   > `"MSHTML:"`muss dem HTML-Fragment vorangestellt sein, damit es als MSHTML-Stream festgelegt ist.
 
 *hWnd*<br/>
 Handle für das Fenster, an das das Steuerelement angefügt wird.
