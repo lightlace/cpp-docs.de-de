@@ -1,11 +1,11 @@
 ---
 title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscat
 - wcscat
 - strcat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscat
 - _ftcscat
@@ -40,19 +43,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: 629b66a5c9dded3a910919f5e302a97c4f731240
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 973c54c18e941b29526cb3e9b1cadb98f6582c4a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354339"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958275"
 ---
-# <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
+# <a name="strcat-wcscat-_mbscat"></a>strcat, wcscat, _mbscat
 
 Fügt eine Zeichenfolge an. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md).
 
 > [!IMPORTANT]
-> **_mbscat_s** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** kann nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -96,16 +99,16 @@ Mit NULL endende Quellzeichenfolge.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Jede dieser Funktionen gibt die Zielzeichenfolge zurück (*StrDestination*). Kein Rückgabewert ist zur Fehleranzeige reserviert.
+Jede dieser Funktionen gibt die Ziel Zeichenfolge ("*stredestination*") zurück. Kein Rückgabewert ist zur Fehleranzeige reserviert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Strcat** -Funktion fügt *StrSource* zu *StrDestination* und beendet die Ergebniszeichenfolge mit einem Null-Zeichen. Das erste Zeichen von *StrSource* überschreibt das abschließende Nullzeichen von *StrDestination*. Das Verhalten der **Strcat** ist undefiniert, wenn die Quell- und Zielzeichenfolgen überlappen.
+Die " **straucat** "-Funktion fügt " *stresource* " an " *stredestination* " an und beendet die resultierende Zeichenfolge mit einem NULL Zeichen. Das Anfangs Zeichen von " *grasource* " überschreibt das abschließende Null-Zeichen von " *straudestination*". Das Verhalten von **strcat** ist nicht definiert, wenn sich die Quell-und Ziel Zeichenfolgen überlappen.
 
 > [!IMPORTANT]
-> Da **Strcat** überprüft nicht auf genügend Speicherplatz *StrDestination* vor dem Anfügen *StrSource*, es ist eine mögliche Ursache von Pufferüberläufen. Verwenden Sie stattdessen [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
+> Da der Wert von " **strincat** " *nicht vor dem* Anfügen von " *strausource*" auf ausreichenden Speicherplatz überprüft wird, ist dies eine mögliche Ursache von Pufferüberläufen. Verwenden Sie stattdessen [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
 
-**Wcscat** und **_mbscat** sind Breitzeichen- und multibytezeichenversionen von Versionen von **Strcat**. Die Argumente und der Rückgabewert von **Wcscat** sind Breitzeichen-Zeichenfolgen, die von **_mbscat** sind Multibyte Zeichenfolgen. Diese drei Funktionen verhalten sich andernfalls identisch.
+**wcscat** und **_mbscat** sind breit Zeichen-und multibytezeichenversionen von " **strincat**". Die Argumente und der Rückgabewert von **wcscat** sind Zeichen folgen mit breit Zeichen. bei den **_mbscat** handelt es sich um Multibyte-Zeichen folgen. Diese drei Funktionen verhalten sich andernfalls identisch.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

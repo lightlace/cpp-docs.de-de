@@ -1,14 +1,14 @@
 ---
 title: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbslen
 - _mbslen_l
 - _mbstrlen
 - wcslen
 - _mbstrlen_l
 - strlen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstrlen
 - wcslen
@@ -49,12 +52,12 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 7736e1e7889642c41a5e3853ac13221ab22f6d03
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5b1d3f7483ec96cbcda7c72178613d81747c8060
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500922"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947578"
 ---
 # <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
@@ -102,7 +105,7 @@ Jede dieser Funktionen gibt die Anzahl der Zeichen in *Str*zurück, ohne das Ter
 
 ## <a name="remarks"></a>Hinweise
 
-die Zeichenfolge wird von der Zeichenfolge als Einzel Byte-Zeichenfolge interpretiert, sodass der Rückgabewert immer der Anzahl von Bytes entspricht, selbst wenn die Zeichenfolge Multibytezeichen enthält. **wcslen** ist eine breit Zeichen Version von **strinlen**. Das Argument von **wcslen** ist eine Zeichenfolge mit breit Zeichen, und die Anzahl der Zeichen ist breit Zeichen (zwei Byte). **wcslen** und **Straume** Verhalten sich andernfalls identisch.
+die Zeichenfolge wird von der Zeichenfolge als Einzel Byte-Zeichen **Folge interpretiert,** sodass der Rückgabewert immer der Anzahl von Bytes entspricht, selbst wenn die Zeichenfolge Multibytezeichen enthält. **wcslen** ist eine breit Zeichen Version von **strinlen**. Das Argument von **wcslen** ist eine Zeichenfolge mit breit Zeichen, und die Anzahl der Zeichen ist breit Zeichen (zwei Byte). **wcslen** und **Straume** Verhalten sich andernfalls identisch.
 
 **Sicherheitshinweis**: Diese Funktionen stellen eine mögliche Bedrohung aufgrund eines Pufferüberlaufproblems dar. Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/win32/SecBP/avoiding-buffer-overruns).
 

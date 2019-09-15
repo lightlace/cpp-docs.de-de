@@ -1,9 +1,9 @@
 ---
 title: mbrtowc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbrtowc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbrtowc
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: bd719e7b336333f6e06a1db9b1e34784575a1602
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4c68ae8df9821d862b9f742d8a8ef7ace19c981
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331524"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952448"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -46,7 +49,7 @@ size_t mbrtowc(
 ### <a name="parameters"></a>Parameter
 
 *wchar*<br/>
-Adresse eines Breitzeichens für die konvertierten Breitzeichenfolge (Typ **"wchar_t"**). Dieser Wert kann ein NULL-Zeiger sein, wenn keine Rückgabebreitzeichen erforderlich ist.
+Adresse eines breit Zeichens, das die konvertierte Zeichenfolge mit breit Zeichen (Type **wchar_t**) empfangen soll. Dieser Wert kann ein NULL-Zeiger sein, wenn keine Rückgabebreitzeichen erforderlich ist.
 
 *mbchar*<br/>
 Adresse einer Sequenz von Bytes (ein Multibytezeichen).
@@ -55,31 +58,31 @@ Adresse einer Sequenz von Bytes (ein Multibytezeichen).
 Anzahl zu überprüfender Bytes.
 
 *mbstate*<br/>
-Zeiger auf das Konvertierungzustandsobjekt. Wenn dieser Wert ein NULL-Zeiger ist, verwendet die Funktion ein statisches internes Konvertierungszustandsobjekt. Da das interne **Mbstate_t** Objekt nicht threadsicher, es wird empfohlen, dass Sie immer Ihren eigenen übergeben *Mbstate* Argument.
+Zeiger auf das Konvertierungzustandsobjekt. Wenn dieser Wert ein NULL-Zeiger ist, verwendet die Funktion ein statisches internes Konvertierungszustandsobjekt. Da das interne **mbstate_t** -Objekt nicht Thread sicher ist, wird empfohlen, immer Ihr eigenes *mbstate* -Argument zu übergeben.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Einer der folgenden Werte:
 
-0 die nächste *Anzahl* oder weniger Bytes schließen das Multibytezeichen, die die null-Breitzeichen darstellt, die in gespeichert ist *Wchar*, wenn *Wchar* ist kein null-Zeiger.
+0 die nächste *Anzahl* oder weniger Bytes vervollständigen das Multibytezeichen, das das NULL-breit Zeichen darstellt, das in *WCHAR*gespeichert wird, wenn *WCHAR* kein NULL-Zeiger ist.
 
-1 bis *Anzahl*(einschließlich) der nächsten *Anzahl* oder weniger Bytes schließen ein gültiges Multibytezeichen handelt. Der zurückgegebene Wert ist die Anzahl der Bytes, die das Multybytezeichen abschließen. Das entsprechende Breitzeichen befindet sich in *Wchar*, wenn *Wchar* ist kein null-Zeiger.
+1 zum *zählen*, einschließlich der nächsten *Anzahl* oder weniger Bytes, vervollständigen Sie ein gültiges Multibytezeichen. Der zurückgegebene Wert ist die Anzahl der Bytes, die das Multybytezeichen abschließen. Die Entsprechung für breit Zeichen wird in *WCHAR*gespeichert, wenn *WCHAR* kein NULL-Zeiger ist.
 
-("size_t") (-1) Es ist ein Codierungsfehler aufgetreten. Die nächste *Anzahl* oder weniger Bytes tragen nicht in einer vollständigen und gültigen Multibytezeichen. In diesem Fall **Errno** nastaven NA hodnotu EILSEQ und der konvertierungsumwandlungszustand in *Mbstate* ist nicht angegeben.
+(size_t) (-1) Codierungsfehler. Die nächste *Anzahl* oder weniger Bytes tragen nicht zu einem kompletten und gültigen Multibytezeichen bei. In diesem Fall wird **errno** auf EILSEQ festgelegt, und der Konvertierungs Verschiebungs Zustand in *mbstate* ist nicht angegeben.
 
-("size_t") (-2) Die nächste *Anzahl* Bytes tragen zu einem unvollständigen, jedoch Möglicherweisen gültigen Multibytezeichen und alle *Anzahl* Bytes wurden verarbeitet. Kein Wert befindet sich in *Wchar*, aber *Mbstate* wird aktualisiert, um die Funktion neu gestartet.
+(size_t) (-2) Die nächsten *Anzahl* Bytes tragen zu einem unvollständigen, aber potenziell gültigen Multibytezeichen bei, und alle *Anzahl* Bytes wurden verarbeitet. In *WCHAR*ist kein Wert gespeichert, aber *mbstate* wird aktualisiert, um die Funktion neu zu starten.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn *Mbchar* ist ein null-Zeiger entspricht der Aufruf die Funktion:
+Wenn *mbchar* ein NULL-Zeiger ist, entspricht die Funktion dem-Befehl:
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-In diesem Fall wird der Wert der Argumente *Wchar* und *Anzahl* werden ignoriert.
+In diesem Fall werden der Wert der Argumente " *WCHAR* " und " *count* " ignoriert.
 
-Wenn *Mbchar* ist kein null-Zeiger, die Funktion überprüft *Anzahl* Bytes vom *Mbchar* um die erforderliche Anzahl von Bytes zu bestimmen, die erforderlich sind, um die nächste abzuschließen Multibytezeichen. Wenn das nächste Zeichen gültig ist, befindet sich das entsprechende Multibytezeichen in *Wchar* Wenn es sich nicht um einen null-Zeiger ist. Wenn das Zeichen ist das entsprechende null-Breitzeichen-Zeichen, den resultierenden Status der *Mbstate* wird der ursprüngliche konvertierungszustand.
+Wenn *mbchar* kein NULL-Zeiger ist, untersucht die Funktion *count* Bytes aus *mbchar* , um die erforderliche Anzahl von Bytes zu bestimmen, die zum Vervollständigen des nächsten multibytezeichens erforderlich sind. Wenn das nächste Zeichen gültig ist, wird das entsprechende Multibytezeichen in *WCHAR* gespeichert, wenn es kein NULL-Zeiger ist. Wenn das Zeichen das entsprechende Breite Null-Zeichen ist, ist der resultierende Zustand von *mbstate* der anfängliche Konvertierungs Zustand.
 
-Die **Mbrtowc** Funktion unterscheidet sich von [Mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) durch die neustartmöglichkeit. Der konvertierungszustand befindet sich in *Mbstate* für nachfolgende Aufrufe der gleichen oder anderer erneut startbaren Funktionen. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Z. B. eine Anwendung verwendet soll **Wcsrlen** anstelle von **Wcslen** Wenn ein nachfolgender Aufruf von **Wcsrtombs** anstelle **Wcstombs**.
+Die **mbrtowc** -Funktion unterscheidet [sich von mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) durch die Neustart Fähigkeit. Der Konvertierungs Zustand wird für nachfolgende Aufrufe der gleichen oder anderer Neu startbarer Funktionen in *mbstate* gespeichert. Wenn sowohl Funktionen, die neu gestartet werden können, als auch Funktionen, die nicht neu gestartet werden könnnen, verwendet werden, sind die Ergebnisse undefiniert.  Beispielsweise sollte eine Anwendung **wcsrlen** anstelle von **wcslen** verwenden, wenn ein nachfolgender **wcsr-** aufrufsausdruck anstelle von **wcstomb**verwendet wird.
 
 ## <a name="example"></a>Beispiel
 

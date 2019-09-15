@@ -1,14 +1,14 @@
 ---
 title: _strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsset_s
 - _wcsset_s_l
 - _strset_s
 - _mbsset_s_l
 - _strset_s_l
 - _mbsset_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcsset_s_l
 - strset_s
@@ -58,19 +61,19 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: 031678f75dacd8112ac897053066216e7b3b2450
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d959a1b8856fda6abc17c77e0c0f8c0679883a7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368791"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946777"
 ---
-# <a name="strsets-strsetsl-wcssets-wcssetsl-mbssets-mbssetsl"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
+# <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
 Legt Zeichen einer Zeichenfolge auf ein Zeichen fest. Diese Versionen von [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) enthalten Sicherheitsverbesserungen, wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
 > [!IMPORTANT]
-> **_mbsset_s** und **_mbsset_s_l** kann nicht verwendet werden, in Anwendungen, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsset_s** und **_mbsset_s_l** können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden. Weitere Informationen finden Sie im Artikel [CRT functions not supported in Universal Windows Platform apps (In Apps für die universelle Windows-Plattform nicht unterstützte CRT-Funktionen)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -116,7 +119,7 @@ errno_t _mbsset_s_l(
 Festzulegende mit NULL endende Zeichenfolge.
 
 *numberOfElements*<br/>
-Die Größe der *str* Puffer.
+Die Größe des *Str* -Puffers.
 
 *c*<br/>
 Zeicheneinstellung.
@@ -128,11 +131,11 @@ Zu verwendendes Gebietsschema.
 
 Null, wenn erfolgreich, andernfalls ein Fehlercode.
 
-Diese Funktionen überprüfen ihre Argumente. Wenn *str* ein null-Zeiger ist oder die *NumberOfElements* -Argument ist kleiner als oder gleich 0 (null) oder den Block übergeben wird, nicht Null-terminierte, und der Handler für ungültige Parameter aufgerufen, siehe [ Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EINVAL** und **Errno** zu **EINVAL**.
+Diese Funktionen überprüfen ihre Argumente. Wenn *Str* ein NULL-Zeiger ist, oder wenn das " *zahlofelements* "-Argument kleiner oder gleich 0 ist oder der übergebenen Block nicht auf NULL endet, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, geben diese Funktionen " **EINVAL** " zurück und legen " **errno** " auf " **EINVAL**" fest.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_strset_s** -Funktion legt fest, die alle Zeichen des *str* zu *c* (konvertiert **Char**), mit Ausnahme des abschließenden Zeichens Null. **_wcsset_s** und **_mbsset_s** sind Breitzeichen- und multibytezeichenversionen von Versionen von **_strset_s**. Die Datentypen der Argumente und Rückgabewerte unterscheiden sich entsprechend. Anderenfalls verhalten sich diese Funktionen identisch.
+Die **_strset_s** -Funktion legt alle Zeichen von *Str* auf *c* (konvertiert in **char**), mit Ausnahme des abschließenden NULL-Zeichens fest. **_wcsset_s** und **_mbsset_s** sind breit Zeichen-und multibytezeichenversionen von **_strset_s**. Die Datentypen der Argumente und Rückgabewerte unterscheiden sich entsprechend. Anderenfalls verhalten sich diese Funktionen identisch.
 
 Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l**-Suffix verwenden das aktuelle Gebietsschema für dieses vom Gebietsschema abhängige Verhalten; die Versionen mit dem **_l**-Suffix sind beinahe identisch, verwenden jedoch stattdessen den ihnen übergebenen Gebietsschemaparameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 

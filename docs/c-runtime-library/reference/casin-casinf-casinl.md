@@ -1,11 +1,11 @@
 ---
 title: casin, casinf, casinl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - casin
 - casinf
 - casinl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - casin
 - casinf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3ae944c9808fd0fc6e8d1ffbd02da2a69454cc6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335593"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943394"
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 
-Ruft den Arkussinus einer komplexen Zahl mit achsenabschnitten außerhalb des Intervalls [-1, + 1] auf der reellen Achse ab.
+Ruft den Arkus Sinus einer komplexen Zahl mit Verzweigungs Schnitten außerhalb des Intervalls [-1, + 1] auf der reellen Achse ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,11 +71,11 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Arkussinus von *z*, im Bogenmaß zurück. Das Ergebnis ist unbegrenzt, auf der imaginären Achse, und klicken Sie im Intervall [-π/2 + π/2] auf der reellen Achse.
+Der Arkus Sinus von *z*im Bogenmaße. Das Ergebnis wird an der imaginären Achse und im Intervall [-y/2, +./2] entlang der reellen Achse gebunden.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Casin** verwenden und zurückgeben **_Fcomplex** und **_Lcomplex** Werte. In einem C-Programm **Casin** immer Double und gibt eine **_Dcomplex** Wert.
+Da C++ das überladen zulässt, können Sie über Ladungen von **Casin** aufzurufen, die **_Fcomplex** -und **_Lcomplex** -Werte verwenden und zurückgeben. In einem C-Programm nimmt **Casin** immer einen **_Dcomplex** -Wert an und gibt diesen zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

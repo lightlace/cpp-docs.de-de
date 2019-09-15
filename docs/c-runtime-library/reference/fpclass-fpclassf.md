@@ -1,10 +1,10 @@
 ---
 title: _fpclass, _fpclassf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpclass
 - _fpclassf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fpclass
 - _fpclass
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 987c87cc7a03f4a24e47654ae52e8a2416a15184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333221"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957041"
 ---
-# <a name="fpclass-fpclassf"></a>_fpclass, _fpclassf
+# <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
 Gibt einen Wert zurück, der die Gleitkommaklassifizierung des Arguments angibt.
 
@@ -60,16 +63,16 @@ Der zu testende Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **_fpclass** und **_fpclassf** Funktionen zurück, einen ganzzahliger Wert, der die gleitkommaklassifizierung des Arguments angibt *x*. Die Klassifizierung weist möglicherweise einen der folgenden, in \<float.h> definierten Werte auf.
+Die **_fpclass** -Funktion und die **_fpclassf** -Funktion geben einen ganzzahligen Wert zurück, der die Gleit Komma Klassifizierung des Arguments *x*angibt. Die Klassifizierung weist möglicherweise einen der folgenden, in \<float.h> definierten Werte auf.
 
 |Wert|Beschreibung|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|Signalisierender NaN|
 |**_FPCLASS_QNAN**|Stiller NaN|
-|**_FPCLASS_NINF**|Negativ unendlich (-INF)|
+|**_FPCLASS_NINF**|Minus unendlich (-INF)|
 |**_FPCLASS_NN**|Negativ normalisierter ungleich null-Wert|
 |**_FPCLASS_ND**|Negativ denormalisiert|
-|**_FPCLASS_NZ**|Negative 0 (null) (– 0)|
+|**_FPCLASS_NZ**|Negatives NULL-Wert (-0)|
 |**_FPCLASS_PZ**|Positiv 0 (+0)|
 |**_FPCLASS_PD**|Positiv denormalisiert|
 |**_FPCLASS_PN**|Positiv normalisierter ungleich null-Wert|
@@ -77,7 +80,7 @@ Die **_fpclass** und **_fpclassf** Funktionen zurück, einen ganzzahliger Wert, 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_fpclass** und **_fpclassf** Funktionen sind Microsoft-spezifisch. Sie ähneln [fpclassify](fpclassify.md), geben jedoch detaillierte Informationen über das Argument zurück. Die **_fpclassf** Funktion ist nur verfügbar, wenn die X64 Plattform.
+Die Funktionen **_fpclass** und **_fpclassf** sind Microsoft-spezifisch. Sie ähneln [fpclassify](fpclassify.md), geben jedoch detaillierte Informationen über das Argument zurück. Die **_fpclassf** -Funktion ist nur verfügbar, wenn Sie für die x64-Plattform kompiliert ist.
 
 ## <a name="requirements"></a>Anforderungen
 

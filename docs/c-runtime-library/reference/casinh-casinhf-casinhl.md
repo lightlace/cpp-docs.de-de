@@ -1,11 +1,11 @@
 ---
 title: casinh, casinhf, casinhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - casinh
 - casinhl
 - casinhf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - casinh
 - casinhf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6deec85dc980a7bd421de87349f512564912d98c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340676"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943375"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
-Ruft den umgekehrten hyperbolischen Sinus einer komplexen Zahl mit achsenabschnitten außerhalb des Intervalls [-i + ich] auf der imaginären Achse.
+Ruft den umgekehrten hyperbolischen Sinus einer komplexen Zahl mit Verzweigungs Schnitten außerhalb des Intervalls [-i, + i] entlang der imaginären Achse ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,11 +71,11 @@ Eine komplexe Zahl, die einen Winkel als Bogenmaß darstellt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der umgekehrte hyperbolische Sinus von *z*, im Bogenmaß zurück. Das Ergebnis wird aufgehoben, auf der reellen Achse, und klicken Sie im Intervall [-Iπ/2 + Iπ/2] auf der imaginären Achse.
+Der umgekehrte hyperbolische Sinus von *z*im Bogenmaße. Das Ergebnis wird an der realen Achse und im Intervall [-ID/2, + iy/2] entlang der imaginären Achse aufgehoben.
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Casinh** verwenden und zurückgeben **_Fcomplex** und **_Lcomplex** Werte. In einem C-Programm **Casinh** immer Double und gibt eine **_Dcomplex** Wert.
+Da C++ das überladen zulässt, können Sie über Ladungen von **casinh** aufzurufen, die **_Fcomplex** -und **_Lcomplex** -Werte verwenden und zurückgeben. In einem C-Programm nimmt **casinh** immer einen **_Dcomplex** -Wert an und gibt diesen zurück.
 
 ## <a name="requirements"></a>Anforderungen
 

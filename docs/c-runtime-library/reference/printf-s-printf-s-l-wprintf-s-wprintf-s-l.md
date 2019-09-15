@@ -1,12 +1,12 @@
 ---
 title: printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _printf_s_l
 - wprintf_s
 - _wprintf_s_l
 - printf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wprintf_s
 - printf_s
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-ms.openlocfilehash: 6b07fd90e0390d5c39bc8f5885f5744de20eeb79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8b324b5f3c23b324bdcd43e3529ad3a3d4d6847
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232000"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950185"
 ---
-# <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
+# <a name="printf_s-_printf_s_l-wprintf_s-_wprintf_s_l"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 
 Druckt eine formatierte Ausgabe an den Standardausgabestream. Diese Versionen von [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md) enthalten Sicherheitserweiterungen, wie unter [Sicherheitserweiterungen in der CRT](../../c-runtime-library/security-features-in-the-crt.md) beschrieben.
 
@@ -87,17 +90,17 @@ Gibt die Anzahl gedruckter Zeichen oder einen negativen Wert zurück, wenn ein F
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Printf_s** -Funktion formatiert und gibt eine Reihe von Zeichen und Werten in den Standardausgabestream **"stdout"**. Wenn Argumente der *Format* Zeichenfolge, die *Format* Zeichenfolge muss Spezifikationen enthalten, die das Ausgabeformat für die Argumente bestimmen.
+Die **printf_s** -Funktion formatiert und druckt eine Reihe von Zeichen und Werten für den **Standardausgabestream "stdout**". Wenn Argumente der *Format* Zeichenfolge folgen, muss die *Format* Zeichenfolge Spezifikationen enthalten, die das Ausgabeformat für die Argumente bestimmen.
 
-Der Hauptunterschied zwischen **Printf_s** und **Printf** ist, die **Printf_s** die Formatzeichenfolge auf gültige Formatierungszeichen überprüft, während **Printf**  überprüft nur, wenn die Zeichenfolge ein null-Zeiger ist. Wenn bei einer der beiden Überprüfungen ein Fehler auftritt, wird der ungültige Parameterhandler gerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, die Funktion gibt-1 zurück und legt **Errno** zu **EINVAL**.
+Der Hauptunterschied zwischen **printf_s** und **printf** besteht darin, dass **printf_s** die Format Zeichenfolge auf gültige Formatierungszeichen überprüft, während **printf** nur überprüft, ob die Format Zeichenfolge ein NULL-Zeiger ist. Wenn bei einer der beiden Überprüfungen ein Fehler auftritt, wird der ungültige Parameterhandler gerufen, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md)beschrieben. Wenn die weitere Ausführung zugelassen wird, gibt die Funktion-1 zurück und legt **errno** auf **EINVAL**fest.
 
-Informationen zum **Errno** und Fehlercodes finden Sie unter [_doserrno, Errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Weitere Informationen zu **errno** und Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**Printf_s** und **Fprintf_s** Verhalten sich identisch, außer dass **Printf_s** schreibt die Ausgabe zu **"stdout"** anstelle eines Ziels vom Typ **Datei**. Weitere Informationen finden Sie unter [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
+**printf_s** und **fprintf_s** Verhalten sich identisch, mit dem Unterschied, dass **printf_s** die Ausgabe in **stdout** und nicht in ein Ziel vom Typ **File**schreibt. Weitere Informationen finden Sie unter [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
 
-**Wprintf_s** ist eine Breitzeichen-Version von **Printf_s**; *Format* ist eine Breitzeichen-Zeichenfolge. **Wprintf_s** und **Printf_s** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Printf_s** unterstützt derzeit keine Ausgabe in eine UNICODE-Stream.
+**wprintf_s** ist eine breit Zeichen Version von **printf_s**. *Format* ist eine Zeichenfolge mit breit Zeichen. **wprintf_s** und **printf_s** Verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **printf_s** unterstützt derzeit nicht die Ausgabe in einen Unicode-Stream.
 
-Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
+Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebiets Schema Parameter, der anstelle des aktuellen Thread Gebiets Schemas übergeben wurde.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -106,7 +109,7 @@ Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, a
 |**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
 |**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
 
-Die *Format* Argument besteht aus normalen Zeichen, Escapesequenzen und (wenn Argumente folgen *Format*) Formatspezifikationen. Normale Zeichen und Escapesequenzen werden in kopiert **"stdout"** in der Reihenfolge ihrer Darstellung. Beispiel: Die Zeile
+Das *Format* -Argument besteht aus normalen Zeichen, Escapesequenzen und (wenn Argumente den *Format*Spezifikationen folgen). Die normalen Zeichen und Escapesequenzen werden in der Reihenfolge ihrer Darstellung in **stdout** kopiert. Beispiel: Die Zeile
 
 ```C
 printf_s("Line one\n\t\tLine two\n");
@@ -119,7 +122,7 @@ Line one
         Line two
 ```
 
-[Formatspezifikationen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) beginnen immer mit einem Prozentzeichen (**%**) und werden von links nach rechts gelesen. Wenn **Printf_s** erkennt die erste Formatspezifikation, (sofern vorhanden), konvertiert Sie den Wert des ersten Arguments *Format* und gibt ihn entsprechend. Mit der zweiten Formatspezifikation wird das zweite Argument konvertiert und ausgegeben, usw. Wenn es mehrere Argumente als Formatspezifikationen gibt, werden die zusätzlichen Argumente ignoriert. Die Ergebnisse sind nicht definiert, wenn nicht genügend Argumente für alle Formatspezifikationen vorhanden sind.
+[Format Spezifikationen](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) beginnen immer mit einem Prozentzeichen ( **%** ) und werden von links nach rechts gelesen. Wenn **printf_s** die erste Format Spezifikation (falls vorhanden) trifft, konvertiert Sie den Wert des ersten Arguments nach *Format* und gibt Sie entsprechend aus. Mit der zweiten Formatspezifikation wird das zweite Argument konvertiert und ausgegeben, usw. Wenn es mehrere Argumente als Formatspezifikationen gibt, werden die zusätzlichen Argumente ignoriert. Die Ergebnisse sind nicht definiert, wenn nicht genügend Argumente für alle Formatspezifikationen vorhanden sind.
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist.
@@ -131,7 +134,7 @@ Line one
 |**printf_s**, **_printf_s_l**|\<stdio.h>|
 |**wprintf_s**, **_wprintf_s_l**|\<stdio.h> oder \<wchar.h>|
 
-Die Konsole wird in apps für universelle Windows-Plattform (UWP) nicht unterstützt. Standardstreamhandles, die mit der Konsole verknüpft sind **Stdin**, **"stdout"**, und **"stderr"**, müssen umgeleitet werden, bevor sie C-Laufzeitfunktionen in UWP-apps verwenden können . Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
+Die-Konsole wird in universelle Windows-Plattform-Apps (UWP) nicht unterstützt. Die Standarddaten Strom Handles, die der Konsole, **stdin**, **stdout**und **stderr**zugeordnet sind, müssen umgeleitet werden, bevor Sie von C-Lauf Zeitfunktionen in UWP-Apps verwendet werden können. Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Beispiel
 

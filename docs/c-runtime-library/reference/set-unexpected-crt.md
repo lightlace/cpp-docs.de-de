@@ -1,9 +1,9 @@
 ---
 title: set_unexpected (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - set_unexpected
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_unexpected
 helpviewer_keywords:
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-ms.openlocfilehash: 6c38421e447ca7b3f263148f51f0ade5c59e2804
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77c8f0ae8c64423a656a2ebbe1fe3ef6dbe1b794
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356392"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948301"
 ---
-# <a name="setunexpected-crt"></a>set_unexpected (CRT)
+# <a name="set_unexpected-crt"></a>set_unexpected (CRT)
 
 Installiert Ihre eigene Beendigungsfunktion, die von **unexpected** aufgerufen werden soll.
 
@@ -42,29 +45,29 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 ### <a name="parameters"></a>Parameter
 
 *unexpFunction*<br/>
-Zeiger auf eine Funktion, die Sie schreiben, um das Ersetzen der **unerwartete** Funktion.
+Zeiger auf eine Funktion, die Sie schreiben, um die **unerwartete** Funktion zu ersetzen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein Zeiger auf die vorherige Beendigungsfunktion registriert **_set_unexpected** , damit die vorherige Funktion später wiederhergestellt werden kann. Wenn keine vorherige Funktion festgelegt wurde, kann der Rückgabewert verwendet werden, um das Standardverhalten wiederherzustellen; Dieser Wert möglicherweise **NULL**.
+Gibt einen Zeiger auf die vorherige Beendigungs Funktion zurück, die von **_set_unexpected** registriert wurde, sodass die vorherige Funktion später wieder hergestellt werden kann. Wenn keine vorherige Funktion festgelegt wurde, kann der Rückgabewert verwendet werden, um das Standardverhalten wiederherzustellen. Dieser Wert kann **null**sein.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Set_unexpected** -Funktion installiert *UnexpFunction* wie die Funktion wird aufgerufen, indem **unerwartete**. **Unerwarteter** wird in der aktuellen C++-ausnahmebehandlungsimplementierung nicht verwendet. Die **Unexpected_function** Typ in der EH definiert ist. H als Zeiger auf eine benutzerdefinierte unerwartete Funktion, *UnexpFunction* zurückgibt **"void"**. Die benutzerdefinierte *UnexpFunction* Funktion sollte nicht an den Aufrufer zurückgeben.
+Die **Set_unexpected** -Funktion installiert *unexpFunction* als die Funktion, die von **unerwartetem**aufgerufen wurde. **unerwartetes** wird in der aktuellen C++ Ausnahme Behandlungs Implementierung nicht verwendet. Der **unexpected_function** -Typ ist in eh definiert. H als Zeiger auf eine benutzerdefinierte unerwartete Funktion, *unexpFunction* , die **void**zurückgibt. Die benutzerdefinierte *unexpFunction* -Funktion sollte nicht an ihren Aufrufer zurückgegeben werden.
 
 ```cpp
 typedef void ( *unexpected_function )( );
 ```
 
-In der Standardeinstellung **unerwartete** Aufrufe **beenden**. Sie können dieses Standardverhalten ändern, indem Sie Ihre eigene Beendigungsfunktion schreiben und Aufrufen **Set_unexpected** mit dem Namen Ihrer Funktion als Argument. **Unerwarteter** Ruft die letzte Funktion, die als Argument an **Set_unexpected**.
+Standardmäßig werden **unerwartete** Aufrufe **beendet**. Sie können dieses Standardverhalten ändern, indem Sie eine eigene Beendigungs Funktion schreiben und **Set_unexpected** mit dem Namen ihrer Funktion als Argument aufrufen. **unerwartete** Aufrufe der letzten Funktion, die als Argument für **Set_unexpected**angegeben wurde.
 
-Im Gegensatz zu die benutzerdefinierte Funktion, die durch einen Aufruf von installiert **Set_terminate**, eine Ausnahme können aus *UnexpFunction*.
+Anders als die benutzerdefinierte Beendigungs Funktion, die durch einen **Set_terminate**-Aufrufe installiert wird, kann eine Ausnahme von innerhalb von *unexpFunction*ausgelöst werden.
 
 In einer Multithreadumgebung werden unerwartete Funktionen für jeden Thread separat verwaltet. Jeder neue Thread muss eine eigene unerwartete Funktion installieren. Daher ist jeder Thread für die eigene unerwartete Behandlung verantwortlich.
 
-In der aktuellen Microsoft-Implementierung der C++-Ausnahmebehandlung **unerwartete** Aufrufe **beenden** standardmäßig und nie von der Laufzeitbibliothek für die Ausnahmebehandlung aufgerufen wird. Es gibt keinen besonderen Vorteil Aufrufen **unerwartete** statt **beenden**.
+In der aktuellen Microsoft-Implementierung C++ der Ausnahmebehandlung werden **unerwartete** Aufrufe standardmäßig **beendet** und nie von der Ausnahme Behandlungs Lauf Zeit Bibliothek aufgerufen. Es gibt keinen besonderen Vorteil beim Aufrufen eines **unerwarteten** anstelle von " **Beenden**".
 
-Es gibt einen einzigen **Set_unexpected** Handler für alle dynamisch verknüpften DLLs oder EXEs; auch wenn Sie aufgerufen **Set_unexpected** Ihr Handler möglicherweise durch einen anderen ersetzt, oder, die Sie ersetzen einen Handler, die festlegen, indem einer anderen DLL oder EXE-Datei.
+Es gibt einen einzelnen **Set_unexpected** -Handler für alle dynamisch verknüpften DLLs oder EXEs. auch wenn Sie **Set_unexpected** aufzurufen, wird der Handler möglicherweise durch einen anderen ersetzt, oder Sie ersetzen einen Handler, der von einer anderen DLL oder exe festgelegt wurde.
 
 ## <a name="requirements"></a>Anforderungen
 

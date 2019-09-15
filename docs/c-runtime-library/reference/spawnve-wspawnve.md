@@ -1,10 +1,10 @@
 ---
 title: _spawnve, _wspawnve
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _spawnve
 - _wspawnve
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wspawnve
 - _spawnve
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: 3e3a8d3cf476dfff7c74007ec371c39f5128bbe7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37ff1358e8639d49992b8cfafb76b2ddac079889
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355119"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947535"
 ---
-# <a name="spawnve-wspawnve"></a>_spawnve, _wspawnve
+# <a name="_spawnve-_wspawnve"></a>_spawnve, _wspawnve
 
 Erstellt einen neuen Prozess und führt ihn aus.
 
@@ -71,19 +74,19 @@ Ausführungsmodus für einen aufrufenden Prozess.
 Pfad der auszuführenden Datei.
 
 *argv*<br/>
-Array von Zeigern zu Argumenten. Das Argument *Argv*[0] ist normalerweise ein Zeiger auf einen Pfad im Echtzeitmodus oder auf den Programmnamen im geschützten Modus und *Argv*[1] bis *Argv*[**n**] sind Zeiger auf die Zeichenfolgen, die die neue Argumentliste bilden. Das Argument *Argv*[**n** + 1] muss eine **NULL** Zeiger auf das Ende der Argumentliste zu markieren.
+Array von Zeigern zu Argumenten. Das Argument *argv*[0] ist normalerweise ein Zeiger auf einen Pfad im echt Modus oder auf den Programmnamen im geschützten Modus, und *argv*[1] über *argv*[**n**] sind Zeiger auf die Zeichen folgen, die die neue Argumentliste bilden. Das Argument *argv*[**n** + 1] muss ein **null** -Zeiger sein, um das Ende der Argumentliste zu markieren.
 
 *envp*<br/>
 Array von Zeigern zu Umgebungseinstellungen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert eines synchronen **_spawnve** oder **_wspawnve** (**_P_WAIT** für *Modus*) ist der Beendigungsstatus des neuen Prozesses . Der Rückgabewert eines asynchronen **_spawnve** oder **_wspawnve** (**_P_NOWAIT** oder **_P_NOWAITO** für  *Modus*) ist das Prozesshandle. Der Beendigungsstatus ist 0, wenn der Prozess ordnungsgemäß beendet wurde. Sie können den Beendigungsstatus auf einen Wert ungleich Null festlegen, wenn der gestartete Prozess speziell aufruft der **beenden** Routine mit einem Argument ungleich. Wenn der neue Prozess nicht explizit einen positiven Beendigungsstatus eingestellt hat, weist ein positiver Beendigungsstatus auf eine abnormale Beendigung mit einem Abbruch oder einer Unterbrechung hin. Der Rückgabewert-1 gibt an, ein Fehler (der neue Prozess wird nicht gestartet). In diesem Fall **Errno** auf einen der folgenden Werte festgelegt ist.
+Der Rückgabewert eines synchronen **_spawnve** oder **_wspawnve** ( **_P_WAIT** angegeben für- *Modus*) ist der Beendigungs Status des neuen Prozesses. Der Rückgabewert eines asynchronen **_spawnve** oder **_wspawnve** ( **_P_NOWAIT** oder **_P_NOWAITO** , der für den- *Modus*angegeben ist) ist das Prozess handle. Der Beendigungsstatus ist 0, wenn der Prozess ordnungsgemäß beendet wurde. Sie können den Beendigungs Status auf einen Wert ungleich 0 (null) festlegen, wenn der erzeugte Prozess speziell die **Exit** -Routine mit einem Argument ungleich 0 aufruft. Wenn der neue Prozess nicht explizit einen positiven Beendigungsstatus eingestellt hat, weist ein positiver Beendigungsstatus auf eine abnormale Beendigung mit einem Abbruch oder einer Unterbrechung hin. Der Rückgabewert-1 gibt einen Fehler an (der neue Prozess wird nicht gestartet). In diesem Fall wird **errno** auf einen der folgenden Werte festgelegt.
 
 |||
 |-|-|
 | **E2BIG** | Argumentliste umfasst mehr als 1024 Byte. |
-| **EINVAL** | *Modus* Argument ist ungültig. |
+| **EINVAL** | Das *Mode* -Argument ist ungültig. |
 | **ENOENT** | Datei oder Pfad nicht gefunden. |
 | **ENOEXEC** | Die angegebene Datei ist nicht ausführbar oder hat ein ungültiges Format für eine ausführbare Datei. |
 | **ENOMEM** | Es ist nicht genügend Arbeitsspeicher verfügbar, um den neuen Prozess auszuführen. |
@@ -94,7 +97,7 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [_do
 
 Jede dieser Funktionen erstellt einen neuen Prozess, führt diesen aus und übergibt ein Array von Zeigern auf Befehlszeilenargumente und ein Array von Zeigern auf die Umgebungseinstellungen.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn entweder *Cmdname* oder *Argv* ein null-Zeiger ist oder wenn *Argv* null-Zeiger zeigt oder *Argv*[0] ist eine leere Zeichenfolge, die ungültig parameterhandler wird aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** zu **EINVAL**, und geben-1 zurück. Es wird kein neuer Prozess erzeugt.
+Diese Funktionen überprüfen ihre Parameter. Wenn entweder *cmdname* oder *argv* ein NULL-Zeiger ist oder *argv* auf einen NULL-Zeiger zeigt, oder *argv*[0] eine leere Zeichenfolge ist, wird der Handler für ungültige Parameter aufgerufen, wie in [Parameter Validation (Parameter](../../c-runtime-library/parameter-validation.md)Überprüfung) beschrieben. Wenn die weitere Ausführung zugelassen wird, legen diese Funktionen **errno** auf **EINVAL**fest und geben-1 zurück. Es wird kein neuer Prozess erzeugt.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,10 +1,10 @@
 ---
 title: system, _wsystem
 ms.date: 11/04/2016
-apiname:
+api_name:
 - system
 - _wsystem
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tsystem
 - _wsystem
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259091"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957675"
 ---
-# <a name="system-wsystem"></a>system, _wsystem
+# <a name="system-_wsystem"></a>system, _wsystem
 
 Führt einen Befehl aus.
 
@@ -61,7 +64,7 @@ Der Befehl, der ausgeführt werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn *Befehl* ist **NULL** und der Befehlsinterpreter gefunden wird, gibt einen Wert ungleich NULL zurück. Wenn nicht der Befehlsinterpreter gefunden wird, gibt 0 zurück und legt **Errno** zu **ENOENT**. Wenn *Befehl* nicht **NULL**, **System** gibt den Wert zurück, die von den Befehlsinterpreter zurückgegeben wird. Gibt den Wert 0 nur zurück, wenn der Befehlsinterpreter den Wert 0 zurückgibt. Ein Rückgabewert von – 1 gibt einen Fehler, und **Errno** auf einen der folgenden Werte festgelegt:
+Wenn *Command* **null** ist und der Befehls Interpreter gefunden wird, gibt einen Wert ungleich 0 (null) zurück. Wenn der Befehls Interpreter nicht gefunden wird, gibt 0 zurück und legt **errno** auf **ENOENT**fest. Wenn der *Befehl* nicht **null**ist, gibt **System** den vom Befehls Interpreter zurückgegebenen Wert zurück. Gibt den Wert 0 nur zurück, wenn der Befehlsinterpreter den Wert 0 zurückgibt. Der Rückgabewert-1 weist auf einen Fehler hin, und **errno** wird auf einen der folgenden Werte festgelegt:
 
 |||
 |-|-|
@@ -74,11 +77,11 @@ Weitere Informationen zu diesen Rückgabecodes finden Sie unter [_doserrno, errn
 
 ## <a name="remarks"></a>Hinweise
 
-Die **System** -Funktion übergibt *Befehl* an den Befehlsinterpreter, der die Zeichenfolge als Betriebssystem-Befehl ausgeführt wird. **System** verwendet die **COMSPEC** und **Pfad** Umgebungsvariablen zum Suchen des Befehlsinterpreters befehlsinterpreterdatei CMD.exe zu suchen. Wenn *Befehl* ist **NULL**, überprüft die Funktion lediglich, ob der Befehlsinterpreter vorhanden ist.
+Die **System** Funktion übergibt den *Befehl* an den Befehls Interpreter, der die Zeichenfolge als Betriebssystem Befehl ausführt. Das **System** verwendet die **COMSPEC** -und **path** -Umgebungsvariablen, um die Befehls Interpreterdatei "cmd. exe" zu suchen. Wenn der Befehl **null**ist, überprüft die Funktion nur, ob der Befehls Interpreter vorhanden ist.
 
-Sie müssen explizit leeren, mithilfe von [Fflush](fflush.md) oder [_flushall](flushall.md), oder schließen ein Streams, vor dem Aufruf **System**.
+Sie müssen mit [fflush](fflush.md) oder [_flushall](flushall.md)explizit leeren oder einen beliebigen Stream schließen, bevor Sie **System**aufgerufen haben.
 
-**_wsystem** ist eine Breitzeichen-Version von **System**; die *Befehl* Argument **_wsystem** ist eine Breitzeichen-Zeichenfolge. Anderenfalls verhalten sich diese Funktionen identisch.
+**_wsystem** ist eine breit Zeichen Version von **System**. Das *Befehls* Argument für **_wsystem** ist eine Zeichenfolge mit breit Zeichen. Anderenfalls verhalten sich diese Funktionen identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -97,7 +100,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel verwendet **System** zum Eingeben einer Textdatei.
+In diesem Beispiel wird **System** verwendet, um eine Textdatei einzugeben.
 
 ```C
 // crt_system.c
@@ -110,14 +113,14 @@ int main( void )
 }
 ```
 
-### <a name="input-crtsystemtxt"></a>Input: crt_system.txt
+### <a name="input-crt_systemtxt"></a>Input: crt_system.txt
 
 ```Input
 Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Ausgabe
 
 ```Output
 Line one.

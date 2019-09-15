@@ -1,9 +1,9 @@
 ---
 title: _heapchk
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapchk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapchk
 - heapchk
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331713"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954809"
 ---
-# <a name="heapchk"></a>_heapchk
+# <a name="_heapchk"></a>_heapchk
 
 Führt Konsistenzüberprüfungen auf dem Heap aus.
 
@@ -45,7 +48,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_heapchk** gibt einen der folgenden ganzzahligen Manifestkonstanten in Malloc.h definiert sind.
+**_heapchk** gibt eine der folgenden ganzzahligen Manifest-Konstanten zurück, die in malloc. h definiert sind.
 
 |Rückgabewert|Bedingung|
 |-|-|
@@ -55,11 +58,11 @@ int _heapchk( void );
 | **_HEAPEMPTY** | Der Heap wurde noch nicht initialisiert. |
 | **_HEAPOK** | Der Heap scheint konsistent zu sein. |
 
-Darüber hinaus, wenn ein Fehler auftritt **_heapchk** legt **Errno** zu **ENOSYS**.
+Wenn ein Fehler auftritt, legt **_heapchk** außerdem **errno** auf **enosys**fest.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_heapchk** -Funktion hilft, Heap-bezogene Probleme zu debuggen, indem auf minimale Konsistenz des Heaps überprüfen. Wenn das Betriebssystem nicht unterstützt **_heapchk**(z. B. Windows 98), die Funktion gibt **_HEAPOK** und **Errno** zu **ENOSYS**.
+Die **_heapchk** -Funktion unterstützt das Debuggen von Heap bezogenen Problemen durch die Überprüfung auf minimale Konsistenz des Heaps. Wenn das Betriebssystem **_heapchk**nicht unterstützt (z. b. Windows 98), gibt die Funktion **_HEAPOK** zurück und legt **errno** auf **enosys**fest.
 
 ## <a name="requirements"></a>Anforderungen
 
